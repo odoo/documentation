@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,6 +60,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:57
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:79
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:209
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:87
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:69
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:128
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:316
@@ -140,6 +141,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:241
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:336
 #: ../../content/applications/finance/fiscal_localizations/france.rst:92
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:138
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:111
 msgid "Reporting"
 msgstr ""
@@ -738,6 +740,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1434
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1741
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1869
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:115
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:215
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:88
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:759
@@ -747,7 +750,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:6
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:46
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:201
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:237
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:257
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:8
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:35
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:696
@@ -1437,79 +1440,97 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
-msgid "When money is transferred from one bank or cash account to another, that amount appears as two transactions on the corresponding journals, whether the transactions are created manually, via import, or via :doc:`bank synchronization <bank_synchronization>`. When :ref:`reconciling the transaction <accounting/reconciliation/reconcile>`, select the :guilabel:`Internal Transfers` :doc:`reconciliation model <reconciliation_models>` button. This action writes the transaction off to the :guilabel:`Internal Transfer` account."
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid "For the sake of clarity, this process is explained with the incoming :doc:`transaction <transactions>` being reconciled with the :guilabel:`Internal Transfers` reconciliation model button and the outgoing transaction then being reconciled with the journal item of the incoming transaction. It is possible to switch which transaction is reconciled with the :guilabel:`Internal Transfers` reconciliation model button without any negative implications."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
-msgid "Remember to reconcile both the outgoing transaction (on the journal that sends the payment) and the incoming transaction (on the journal that receives the payment) with the internal transfers account using the :guilabel:`Internal Transfers` reconciliation model button."
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
+msgid "When money is transferred from one bank or cash account to another, that amount appears as one incoming :doc:`transaction <transactions>` and one outgoing transaction in their corresponding journals, whether the transactions are created manually, via import, or via :doc:`bank synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
-msgid "Once each bank journal's transaction is reconciled using the :guilabel:`Internal Transfers` reconciliation model, the internal transfer account is balanced, and the balances of both bank accounts are updated to reflect the transfer."
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
+msgid "Reconcile the incoming transaction by selecting the :guilabel:`Internal Transfers` :doc:`reconciliation model <reconciliation_models>` button. This action writes the transaction off to the :guilabel:`Internal Transfers` account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
-msgid "When transferring $1,000 from Bank Account A to Bank Account B, each of the two bank journals has one journal entry:"
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
+msgid "Reconcile the outgoing transaction with the journal item of the incoming transaction:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid "In the :guilabel:`Search: Journal Items to Match` popup, click the journal item of the incoming transaction. This action balances the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
+msgid "When transferring $1,000 from Bank Account A to Bank Account B, each of the two bank journals has one journal entry:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ""
 
@@ -1938,11 +1959,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:274
 msgid "Select the journal items that debit or credit the account receivable and account payable and represent the debts to be netted."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
@@ -5651,8 +5667,9 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:133
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:135
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:137
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:222
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:230
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:223
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:232
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:245
 msgid "Sales"
 msgstr ""
 
@@ -6613,6 +6630,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:9
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:179
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1238
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:78
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:55
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:69
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:81
@@ -7090,6 +7108,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:25
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:29
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:56
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:18
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:36
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:18
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:80
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:18
@@ -8596,7 +8616,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:28
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:24
 msgid "Profit & Loss"
 msgstr ""
 
@@ -11491,6 +11510,7 @@ msgid ":ref:`Access the bank journal's reconciliation view <accounting/reconcili
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:182
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:177
 msgid "SEPA Credit Transfer"
 msgstr ""
 
@@ -14233,7 +14253,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:212
 #: ../../content/applications/finance/accounting/vendor_bills.rst:145
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:172
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:173
 msgid "Click the :guilabel:`New` button."
 msgstr ""
 
@@ -20494,6 +20514,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:8
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:8
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:19
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:8
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:8
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:8
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:13
@@ -20541,6 +20562,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:23
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:27
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:54
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:16
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:34
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:16
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:16
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:21
@@ -20588,6 +20611,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:24
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:28
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:55
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:17
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:35
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:17
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:17
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:22
@@ -20688,6 +20713,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:38
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:37
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:102
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:58
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:38
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:34
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:37
@@ -20985,6 +21011,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:61
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:198
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:139
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:95
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:49
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:81
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:37
@@ -29623,8 +29650,9 @@ msgid ":doc:`../accounting/customer_invoices/electronic_invoicing`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:307
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:223
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:231
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:224
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:233
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:246
 msgid "Withholding"
 msgstr ""
 
@@ -40151,32 +40179,227 @@ msgstr ""
 msgid "The :guilabel:`Customs Number` field should follow the pattern `xx xx xxxx xxxxxxx`. For example, use `15 48 3009 0001235` with **two** spaces between text."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:6
-msgid ":doc:`Documentation on e-invoicing’s legality and compliance in the Netherlands <../accounting/customer_invoices/electronic_invoicing/netherlands>`"
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:10
-msgid "XAF Export"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:12
-msgid "With the Dutch accounting localization installed, you will be able to export all your accounting entries in XAF format. For this, you have to go in :menuselection:`Accounting --> Reporting --> General Ledger`, you define the entries you want to export using the filters (period, journals, ...) and then you click on the button **EXPORT (XAF)**."
+msgid "The following modules are installed automatically with the Dutch localization:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:19
-msgid "Dutch Accounting Reports"
+msgid ":guilabel:`Netherlands - Accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:20
+msgid "`l10n_nl`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:21
-msgid "If you install the Dutch accounting localization, you will have access to some reports that are specific to the Netherlands such as :"
+msgid "Base Dutch :ref:`fiscal localization <fiscal_localizations/packages>` complete with the Dutch chart of accounts, taxes, financial reports, and fiscal positions"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:23
+msgid ":guilabel:`Netherlands - Accounting Reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:24
+msgid "`l10n_nl_reports`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:25
-msgid "Tax Report (Aangifte omzetbelasting)"
+msgid "Dutch-specific tax and profit-and-loss reporting"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:26
-msgid "Intrastat Report (ICP)"
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:27
+msgid "Additionally, the following modules must be manually :ref:`installed <general/install>` to use SBR reporting, Dutch-specific payroll features, and Intrastat reporting:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:37
+msgid ":guilabel:`Netherlands - Payroll`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:38
+msgid "`l10n_nl_hr_payroll`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:39
+msgid "Dutch-specific payroll rules including employee details, passport-based contracts, etc."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:40
+msgid ":guilabel:`Netherlands - Payroll with Accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:41
+msgid "`l10n_nl_hr_payroll_account`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:42
+msgid "Accounting data for Netherlands payroll rules"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:43
+msgid ":guilabel:`Netherlands Intrastat Declaration`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:44
+msgid "`l10n_nl_intrastat`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:45
+msgid "Generates Netherlands Intrastat report for declarations based on invoices"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:48
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:31
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:32
+msgid "In some cases, such as when upgrading to a version with additional modules, modules may not be installed automatically. Any missing modules can be manually :ref:`installed <general/install>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:52
+msgid ":doc:`Documentation on e-invoicing’s legality and compliance in the Netherlands <../accounting/customer_invoices/electronic_invoicing/netherlands>`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:60
+msgid "The Netherlands localization package ensures compliance with Dutch fiscal and accounting regulations. It includes tools for managing taxes, fiscal positions, reporting, and a predefined chart of accounts tailored to Dutch standards."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:64
+msgid "The Dutch localization package provides the following key features:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:66
+msgid ":ref:`Chart of accounts <localizations/netherlands/chart-of-accounts>`: a predefined structure tailored to Dutch accounting standards."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:68
+msgid ":ref:`Taxes <localizations/netherlands/taxes>`: pre-configured tax rates, including standard VAT, zero-rated, and exempt options."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:70
+msgid ":doc:`Fiscal positions (tax and account mapping) <../accounting/taxes/fiscal_positions>`: automated tax adjustments based on customer or supplier registration status."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:72
+msgid ":ref:`Electronic document solutions <localizations/netherlands/sbr>`: integration with SBR reporting to meet electronic document regulations."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:80
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:83
+msgid "In the :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>`, accounts are automatically mapped to their corresponding taxes and default accounts payable and accounts receivable fields."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:89
+msgid ":ref:`Taxes <localizations/netherlands/taxes>` are automatically created and configured when the Netherlands localization is installed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:97
+msgid "To use all the features of this fiscal localization, the following fields are the minimum required on the company record. You can access these by going to :menuselection:`Settings --> Users & Companies --> Companies`:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:101
+msgid ":guilabel:`Company Name`: The name of the company based in the Netherlands."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:102
+msgid ":guilabel:`Country`: Set to `Netherlands` for the company."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:103
+msgid ":guilabel:`VAT`: The tax identification number of the company."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:105
+msgid "You can fill out the remaining fields as needed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:110
+msgid "SBR Integration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:118
+msgid "`PKIoverheid <https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:119
+msgid "`Requesting a certificate <https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/pkioverheidcertificaat-aanvragen>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:121
+msgid ":abbr:`SBR (Standard Business Reporting)` electronic reporting is integrated within Odoo and allows you to send your reports directly to the Dutch tax authorities. To use SBR reporting, ensure that the :ref:`Netherlands - SBR <localizations/netherlands/modules>` module is installed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:125
+msgid "To set up SBR reporting, open the **Accounting** app, go to :menuselection:`Configuration --> Settings`, and scroll down to the :guilabel:`Dutch Localization` section. Click the :guilabel:`Digipoort Certificate` field, enter a name for the certificate, and click :guilabel:`Create and edit...`. In the pop-up window, fill out the following fields:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:130
+msgid ":guilabel:`Name`: enter the name previously specified (you can modify it if desired)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:131
+msgid ":guilabel:`Certificate`: click :guilabel:`Upload your file` to upload the certificate file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:132
+msgid ":guilabel:`Certificate Password`: enter the password for your certificate file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:133
+msgid "Click :guilabel:`Save & Close`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:140
+msgid "Once :ref:`enabled <localizations/netherlands/sbr-configuration>`, you can establish an XBRL connection with the Dutch tax authorities by navigating to :menuselection:`Reporting --> Tax Report` in the **Accounting** app, clicking the :icon:`fa-cog` :guilabel:`(gear)` icon, and selecting :guilabel:`XBRL`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:145
+msgid "In the pop-up window, fill out the following fields:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:147
+msgid ":guilabel:`Contact Initials`: The initials of the contact person creating the SBR file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:148
+msgid ":guilabel:`Contact Last Name`: The last name of the contact person."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:149
+msgid ":guilabel:`Contact Name Infix`: The prefix or middle name of the contact person."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:150
+msgid ":guilabel:`Contact Phone`: The phone number of the contact person."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:151
+msgid ":guilabel:`Contact Type`: Select :guilabel:`Taxpayer (BPL)` if you are filing the turnover tax return for your own business, or :guilabel:`Intermediary (INT)` if the return is filed by a tax professional."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:154
+msgid ":guilabel:`Tax Consultant Number`: If you selected :guilabel:`Intermediary (INT)`, enter the 6-digit tax advisor registration number (*Beconnummer*)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:156
+msgid ":guilabel:`Tax Consultant Order`: If applicable, enter the membership or registration number for your professional tax association (e.g., NOB, RB, NBA, etc.)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:158
+msgid ":guilabel:`Is Test`: Tick this box to submit the file to a pre-production environment. A valid PKIoverheid certificate is required, and :doc:`developer mode <../../general/developer_mode>` must be enabled."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:162
+msgid "Click :guilabel:`Download` to save the `.XBRL` file to your computer, or click :guilabel:`Send` to transmit the SBR tax report directly to the Dutch tax authorities."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:168
+msgid "XAF Export"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:170
+msgid "To export accounting entries in XAF format, open the **Accounting** app and go to :menuselection:`Reporting --> General Ledger`. Use the filters to select the range of entries to export, click the :icon:`fa-cog` :guilabel:`(gear)` icon, and then click :guilabel:`XAF`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:179
+msgid "To enable SEPA Credit Transfer as a payment method, follow :ref:`these steps <accounting/sepa_payments/sct>` and enter `Belastingdienst` as the :guilabel:`Issuer`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:3
@@ -42138,11 +42361,6 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:28
 msgid "This module includes the features required to enable the PCHC check format."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:31
-#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:32
-msgid "In some cases, such as when upgrading to a version with additional modules, modules may not be installed automatically. Any missing modules can be manually :ref:`installed <general/install>`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:39
@@ -45277,10 +45495,6 @@ msgstr ""
 msgid ":ref:`localizations/turkiye/eds`: integration with Nilvera to meet electronic document regulations"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:83
-msgid "In the :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>`, accounts are automatically mapped to their corresponding taxes and default accounts payable and accounts receivable fields."
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:88
 msgid "The Türkiye chart of accounts is based on the Turkish Revenue Administration's (Gelir İdaresi Başkanlığı's (GİB)) 7/A accounts, which provide a baseline of the necessary accounts. 7/B accounts are archived and can be unarchived if required."
 msgstr ""
@@ -45350,7 +45564,7 @@ msgid ":guilabel:`Country`: Registered country"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:142
-msgid ":guilabel:`Tags`: Enter the Mersis number as a tag and set the :guilabel:`Category` to :guilabel:`MERSISNO`."
+msgid ":guilabel:`Tags`: Enter the Mersis number as a tag and set the :guilabel:`Category` to :guilabel:`MERSISNO`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:144
@@ -45358,478 +45572,609 @@ msgid ":guilabel:`eInvoice format`: Türkiye (UBL TR 1.2)"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:145
-msgid ":guilabel:`Alias`: Alias acquired from Nilvera"
+msgid ":guilabel:`eInvoice Alias`: Acquired from Nilvera"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:148
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:146
+msgid ":guilabel:`eDispatch Alias`: Acquired from Nilvera"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:149
 msgid "The :guilabel:`eInvoice format` is set automatically based on the contact's country. To edit this field, enable :ref:`developer mode <developer-mode>` to display the field and then manually adjust it."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:151
-msgid "The :guilabel:`Alias` field is only visible once the company's :guilabel:`Nilvera Status` is :guilabel:`E-Invoice`."
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:152
+msgid "The :guilabel:`eInvoice Alias` and :guilabel:`eDispatch Alias` fields are only visible once the company's :guilabel:`Nilvera Status` is :guilabel:`E-Invoice`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:154
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:155
 msgid "For each customer and vendor:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:156
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:157
 msgid "Ensure the :guilabel:`Address`, :guilabel:`City`, :guilabel:`State`, :guilabel:`Country`, :guilabel:`Tax ID`, and :guilabel:`eInvoice format` are configured."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:158
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:159
 msgid "If the partner is not registered for e-invoicing, Odoo automatically defaults to e-Archive."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:163
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:164
 msgid "Tax creation"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:166
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:167
 msgid "Create exception reasons"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:168
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:169
 msgid "To create additional exception reasons, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:170
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:171
 msgid "Enable :ref:`developer mode <developer-mode>` and navigate to :menuselection:`Accounting --> Configuration --> GIB Codes`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:173
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:174
 msgid "Enter a :guilabel:`Reason` and a :guilabel:`Reason Code` that match the values in `Nilvera's documentation <https://developer.nilvera.com/kod-listeleri>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:175
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:176
 msgid "Select the corresponding code type:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:177
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:178
 msgid ":guilabel:`Withholding` for withholding tax reasons"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:178
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:179
 msgid ":guilabel:`Exception` for tax-exempt reasons"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:179
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:180
 msgid ":guilabel:`Export exception` for export exception reasons"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:180
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:181
 msgid ":guilabel:`Export registration` for export-registered reasons"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:181
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:182
 msgid "For :guilabel:`Withholding` reasons, enter the corresponding percentage."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:184
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:185
 msgid "Create withholding taxes"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:186
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:187
 msgid "Navigate to :menuselection:`Accounting --> Configuration --> Taxes`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:187
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:188
 msgid "Click the :guilabel:`New` button to first create the base tax."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:188
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:189
 msgid "Set the :doc:`Tax Computation <../accounting/taxes/tax_computation>` to :guilabel:`Percentage`, and set the :guilabel:`Withholding Tax Reason` field that appears for taxes of this type."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:190
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:191
 msgid "Complete the other mandatory fields of the form (:guilabel:`Tax Name`, :guilabel:`Tax Type`, :guilabel:`Amount`, etc.)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:192
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:193
 msgid "Create additional taxes with :doc:`Tax Computation <../accounting/taxes/tax_computation>` set to :guilabel:`Group of Taxes`. These group taxes should be composed of the base tax created in the previous steps and additional percentage taxes."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:197
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:198
 msgid "The :guilabel:`WH 20%` tax illustrates this configuration. To use a different withholding reason, duplicate the base tax, update the reason, and replace the old base tax in duplicated group taxes."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:204
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:205
 msgid "Nilvera integration"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:206
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:207
 msgid "Odoo integrates with Nilvera, a |GİB|-approved electronic document intermediary, to manage e-invoice, e-archive, e-dispatch, and e-ledger processes."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:209
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:210
 msgid "The integration handles:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:211
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:212
 msgid "XML data generation in a |GİB|-compliant format"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:212
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:213
 msgid "secure transmission to Nilvera"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:213
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:214
 msgid "synchronization of documents and statuses within Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:216
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:217
 msgid "Supported document types"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:218
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:219
 msgid "e-Invoice"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:220
-msgid "Basic scenario and public scenario"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:224
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:232
-msgid "Registered for export"
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:221
+msgid "Basic scenario"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:225
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:233
-msgid "Tax exempt"
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:247
+msgid "Registered for export"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:226
-msgid "Export scenario"
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:234
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:248
+msgid "Tax exempt"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:227
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:249
+msgid "Return"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:228
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:250
+msgid "Withholding Return"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:230
+msgid "Public Scenario"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:236
+msgid "Export Scenario"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:237
+msgid "Commercial Scenario - Sales - Withholding - Registered for export - Tax exempt"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:243
 msgid "e-Archive invoice"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:234
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:251
 msgid "e-Dispatch note"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:239
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:254
+msgid "Return invoices can only be sent via credit notes."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:259
 msgid "The `Nilvera documentation <https://test-setup.obs.tr-west-1.myhuaweicloud.com/odoo/Nilvera_Odoo_Integration_Information.pdf>`_ provides instructions for accessing the sandbox and generating the API credentials."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:242
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:262
 msgid "To configure the Nilvera integration with your database, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:244
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:264
 msgid "Make sure the :guilabel:`Türkiye - Nilvera` module is :ref:`installed <general/install>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:245
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:265
 msgid "Navigate to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the :guilabel:`Türkiye Electronic Integrations` section."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:247
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:267
 msgid "Configure:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:249
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:269
 msgid ":guilabel:`Nilvera API credentials` (generated in Nilvera)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:250
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:270
 msgid ":guilabel:`Incoming Invoices Journal` (i.e., :guilabel:`Purchases`)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:252
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:272
 msgid "To configure your customer contact records to be able to send them e-invoices via Nilvera, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:255
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:275
 msgid "Navigate to :menuselection:`Accounting --> Customers --> Customers`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:256
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:276
 msgid "Remove the :guilabel:`Customer Invoices` filter (if necessary), and select the partner to contact via Nilvera."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:258
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:278
 msgid "Open the :guilabel:`Accounting` tab and click :guilabel:`Verify` next to :guilabel:`Nilvera Status`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:264
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:284
 msgid "Send e-Invoices via Nilvera"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:266
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:286
 msgid "e-Invoice/e-Archive is a government-approved digital invoice system that replaces traditional paper invoices, allowing businesses to issue, transmit, and store invoices electronically in compliance with Turkish tax regulations. While e-Invoices are for customers who are registered with the |GİB|, e-Archives can be sent to customers who are not registered with the |GİB|, ensuring senders can comply with government regulations even when dealing with foreign customers or B2C workflows."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:272
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:292
 msgid "To send an e-Invoice/e-Archive, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:274
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:294
 msgid "When :ref:`creating a customer invoice <accounting/invoice/creation>`, after selecting a :guilabel:`Customer`,"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:277
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:297
 msgid "if the customer's :guilabel:`Nilvera Status` is :guilabel:`e-Archive`, two fields will appear:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:279
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:299
 msgid ":guilabel:`Is GIB Export`: used for product export invoices to partners outside of Türkiye"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:280
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:300
 msgid ":guilabel:`Invoice Type`: determines the type of invoice"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:281
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:301
 msgid "if the customer's :guilabel:`Nilvera Status` is :guilabel:`e-Invoice`, the :guilabel:`Invoice Scenario` field will appear: Select the scenario of the invoice to be sent to the |GİB|."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:284
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:304
 msgid ":ref:`Send <accounting/invoice/sending>` the invoice, and ensure :guilabel:`by Nilvera` is selected to issue an e-invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:290
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:310
 msgid "Receive e-Invoices via Nilvera"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:293
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:313
 msgid "Update Nilvera status"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:295
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:315
 msgid "To update the :guilabel:`Nilvera Status` of invoices in Odoo, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:297
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:324
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:317
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:344
 msgid "Open the :guilabel:`Accounting Dashboard`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:298
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:318
 msgid "Click on the :guilabel:`Sales` journal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:299
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:319
 msgid "Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then click :guilabel:`Refresh e-Invoices Status`. This action updates the :guilabel:`Nilvera Status` field on each invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:305
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:325
 msgid "Fetch e-invoice PDFs"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:307
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:327
 msgid "There are two methods to fetch PDFs of e-invoices:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:309
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:329
 msgid "From the invoice list view:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:311
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:331
 msgid "Go to :menuselection:`Accounting --> Customers --> Invoices`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:312
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:332
 msgid "Select one or multiple invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:313
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:333
 msgid "Click the :guilabel:`Fetch Nilvera PDF`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:314
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:334
 msgid "From an invoice form view: Once the :guilabel:`Nilvera Status` is :guilabel:`Successful`, click the :guilabel:`Fetch Nilvera PDF` button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:320
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:340
 msgid "Receive purchase e-invoices"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:322
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:342
 msgid "To fetch e-invoices generated in Nilvera and received by your company:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:325
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:345
 msgid "Click on the :guilabel:`Purchase` journal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:326
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:346
 msgid "Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then click :guilabel:`Fetch e-invoices`. The received e-invoices are created as vendor bills in :guilabel:`Draft` status."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:332
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:352
 msgid "Fetch PDFs of bills generated in Odoo"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:334
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:354
 msgid "For vendor bills that were created in Odoo, PDF retrieval works the same way as for customer invoices:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:337
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:357
 msgid "Go to :menuselection:`Accounting --> Vendors --> Bills`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:338
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:358
 msgid "Select one or multiple vendor bills."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:339
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:359
 msgid "Click the :guilabel:`Fetch Nilvera PDF` button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:344
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:364
 msgid "Generate e-Ledger"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:346
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:366
 msgid "The e-Ledger is an electronic system that enables businesses to digitally store and submit their accounting records to the government for tax and regulatory compliance. In Odoo, users can generate the e-Ledger as a zipped CSV file and report company records seamlessly through the Nilvera integration."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:351
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:371
 msgid "Navigate to :menuselection:`Accounting --> Reporting --> General Ledger`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:352
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:372
 msgid "Click the :icon:`fa-cog` (:guilabel:`Actions`) icon."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:353
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:373
 msgid "Click :guilabel:`Generate e-Ledger` to generate the file and download it to your computer."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:358
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:378
 msgid "Manage e-Dispatch files"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:361
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:381
 msgid "Generate e-Dispatch files"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:363
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:383
 msgid "The e-Dispatch is an electronic document that replaces traditional paper delivery notes, allowing businesses to digitally issue, transmit, and track shipment details for goods in transit. In Odoo, users can generate e-Dispatch documents as XML and upload them through the Nilvera integration, ensuring compliant and traceable delivery operations."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:368
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:388
 msgid "Navigate to :menuselection:`Inventory --> Operations --> Deliveries`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:369
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:389
 msgid "Open an existing delivery order or create a new one."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:370
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:390
 msgid "Once a :guilabel:`Delivery Address` is selected, fill in the necessary information in the :guilabel:`e-Dispatch` tab that appears."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:372
-msgid "#. Once the delivery order is validated, click the :guilabel:`Generate GİB e-Dispatch (XML)` button that appears to generate the XML file."
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:392
+msgid "Once the delivery order is validated, click the :guilabel:`Send GİB e-Dispatch (XML)` button that appears to send the XML file. To generate the file without sending it, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then click :guilabel:`Generate GIB e-Dispatch (XML)`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:374
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:395
 msgid "Download the generated file attached to the delivery order and upload it to Nilvera for processing."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:378
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:399
 msgid "Upload e-Dispatch files"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:380
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:401
 msgid "Download the received e-Dispatch XML from Nilvera."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:381
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:402
 msgid "Navigate to :menuselection:`Inventory --> Operations --> Receipts`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:382
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:403
 msgid "Click the :guilabel:`Upload e-Receipt (XML)` button and select the downloaded file."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:385
-msgid "Mandatory compliance information"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:387
-msgid "The following rules are mandatory for all users of the Türkiye localization integration. Compliance with these requirements is essential for the legal validity of e-Documents issued through the |GİB| via Nilvera."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:392
-msgid "Document numbering structure"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:394
-msgid "All generated invoices and dispatch documents must follow a specific numbering structure: `three alphanumeric characters` + `document year` + `sequential number`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:398
-msgid "INV/2025/00001"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:400
-msgid "The numbering must be unique, sequential, and continuous. Each document must have a distinct identifier."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:402
-msgid "Once a file has been submitted, even if it returns an error, the same sequence number cannot be used; a new document must be created."
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:406
-msgid ":doc:`../accounting/customer_invoices/sequence`"
+msgid "Manage e-Receipt files"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:407
-msgid ":doc:`../accounting/vendor_bills/sequence`"
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:408
+msgid "Stock moves can be updated from their relative **Order Receipts** using the XML file. To do so:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:410
-msgid "Sequential number gaps"
+msgid "Open the **Inventory** app, and go to :menuselection:`Operations --> Receipts`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:412
-msgid "If a sequence number is skipped, the previous missing numbers must be issued within 7 days."
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:411
+msgid "Open a receipt order, click the :guilabel:`e-Dispatch` tab, and select the XML corresponding to the order receipt from the :guilabel:`e-Dispatch XML` field. Then, click :guilabel:`Update from GIB e-Dispatch (XML)` to: - Update your stock according to the stock moves stored in the XML file. - Update both the :guilabel:`Operations` and :guilabel:`e-Dispatch` tab with info such as :guilabel:`Product`, :guilabel:`Carrier`, :guilabel:`Delivery Notes`, etc. - Log the corresponding e-Receipt PDF file in the chatter."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:415
-msgid "If INV/2025/00002 is issued before INV/2025/00001, INV/2025/00001 must be issued within 7 days."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:418
-msgid "No sequence number can remain unissued beyond this period."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:421
-msgid "Discount rules"
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:420
+msgid "The system auto-fetches XML receipts through a CRON every 12 hours."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:423
-msgid "Global discounts (discounts shown as a separate invoice line) cannot be issued."
+msgid "Mandatory compliance information"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:424
-msgid "All discounts must be applied at the product line level within the invoice."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:427
-msgid "e-Ledger compliance"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:429
-msgid "The first issued invoice must represent the opening balance for the accounting period."
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:425
+msgid "The following rules are mandatory for all users of the Türkiye localization integration. Compliance with these requirements is essential for the legal validity of e-Documents issued through the |GİB| via Nilvera."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:430
-msgid "All subsequent invoices must follow the sequential numbering pattern:"
+msgid "Document numbering structure"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:433
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:432
+msgid "All generated invoices and dispatch documents must follow a specific numbering structure: `three alphanumeric characters` + `document year` + `sequential number`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:436
+msgid "INV/2025/00001"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:438
+msgid "The numbering must be unique, sequential, and continuous. Each document must have a distinct identifier."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:441
+msgid "Once a file has been submitted, even if it returns an error, the same sequence number cannot be used; a new document must be created."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:445
+msgid ":doc:`../accounting/customer_invoices/sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:446
+msgid ":doc:`../accounting/vendor_bills/sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:449
+msgid "e-Dispatch numbering structure"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:451
+msgid "To access the e-Dispatch numbering structure, navigate to :menuselection:`Inventory --> Configuration --> Operation Types`, then select an operation matching the :guilabel:`Delivery Orders` type."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:455
+msgid "An arbitrary alphanumerical :guilabel:`Sequence Prefix` can be set. The system uses only the last three characters of that prefix. The prefix must contain at least three characters; any shorter prefix is automatically denied by the system."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:460
+msgid "In the sequence WH/OUT/948224, the system will only send **224**."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:463
+msgid "You can preview the sequence by going to :menuselection:`Inventory --> Configuration --> Operation Types --> Delivery Orders`. Once the sequencing is configured, the banner at the top shows a preview:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:0
+msgid "Banner preview of sequencing of e-Dispatch."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:471
+msgid "Sequential number gaps"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:473
+msgid "If a sequence number is skipped, the previous missing numbers must be issued within 7 days."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:476
+msgid "If INV/2025/00002 is issued before INV/2025/00001, INV/2025/00001 must be issued within 7 days."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:478
+msgid "No sequence number can remain unissued beyond this period."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:481
+msgid "Discount rules"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:483
+msgid "Global discounts (discounts shown as a separate invoice line) cannot be issued. All discounts must be applied at the product line level within the invoice."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:487
+msgid "e-Ledger compliance"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:489
+msgid "The first issued invoice must represent the opening balance for the accounting period. All subsequent invoices must follow the sequential numbering pattern."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:493
 msgid "INV/2025/00001, INV/2025/00002, INV/2025/00003, etc."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:435
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:495
 msgid "Sequential numbering must be maintained consistently across the e-Ledger to ensure data integrity and compliance."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:499
+msgid "Nilvera e-Invoice subscriptions"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:502
+msgid "Turkish e-Invoice law permits only one date range per invoice, at the header level, not per individual line item. Therefore, items with different subscription date ranges cannot be mixed on the same invoice. However, an item with a subscription date range can be mixed with items that that have no date range at all."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:507
+msgid "If the invoice is generated from the subscription order in the :doc:`Subscriptions <../../sales/subscriptions>` app, the subscription order's date is used as the invoice's date, at the header level."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:511
+msgid "Subscription dates must match across lines."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:514
+msgid "Manage Commercial Invoices"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:516
+msgid "Commercial invoice scenarios are managed in the **Accounting** app through :menuselection:`Customers --> Invoices` for outgoing invoices and :menuselection:`Vendors --> Bills` for incoming vendor bills."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:521
+msgid "Outgoing commercial invoices"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:523
+msgid "On a draft (non-posted) invoice, select a scenario from the :guilabel:`Invoice Scenario` field and specify the type in the :guilabel:`Is` field. Depending on the selection, the :guilabel:`Exemption Reason` field may become available. If applicable, enter an exemption reason."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:527
+msgid "Once a commercial scenario invoice is confirmed and sent, its :guilabel:`Nilvera Status` changes to :guilabel:`Waiting`. The customer must then accept or reject the invoice on their end."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:530
+msgid "If the customer rejects the invoice, the rejection reason is logged in the invoice chatter."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:533
+msgid "|GİB| automatically accepts an invoice if the recipient does not accept or reject it within **8 days** of reception."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:535
+msgid "Accepted invoices display one of two statuses: - **Accepted**: Manually accepted by the customer. - **Accepted Automatically**: Automatically acknowledged by |GİB| under the 8-day rule."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:540
+msgid "Incoming commercial bills"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:542
+msgid "The system automatically fetches incoming commercial bills from Nilvera and creates corresponding draft bills in Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:545
+msgid "A status banner appears at the top of fetched bills with options to :guilabel:`Accept` or :guilabel:`Reject`:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:548
+msgid ":guilabel:`Accept`: Validates the bill."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:549
+msgid ":guilabel:`Reject`: Opens a pop-up window requiring a rejection reason. After clicking :guilabel:`Proceed`, the rejection response is sent to Nilvera. **This action cannot be undone.**"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:3
