@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 20:25+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -205,7 +205,7 @@ msgstr "Bảng điều khiển Barcode với kiểm kê đã được gán."
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:26
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:52
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:18
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:22
@@ -8263,12 +8263,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:51
 msgid ""
 "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "
-"recognized `code managed by GS1 <https://www.unspsc.org/>`_, that **must** "
-"be purchased in order to use."
+"recognized `code managed by UNDP <https://www.undp.org/unspsc>`_."
 msgstr ""
-"Nếu có, hãy nhập :guilabel:`Danh mục UNSPSC`, đây là `mã được công nhận trên "
-"toàn cầu do GS1 <https://www.unspsc.org/>`_ quản lý, **phải** mua mã này để "
-"sử dụng."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:54
 msgid ""
@@ -19063,6 +19059,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:39
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:120
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:109
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -30235,177 +30232,186 @@ msgstr ""
 "đến :menuselection:`Ứng dụng Tồn kho --> Hoạt động --> Kiểm kê vật lý`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "In stock products listed on the Inventory adjustments page."
-msgstr "Sản phẩm có sẵn trong kho được liệt kê trên trang Điều chỉnh tồn kho."
+msgid "Products listed on the Inventory adjustments page."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:23
 msgid ""
-"The :guilabel:`Inventory Adjustments` page lists all products that are "
-"currently in stock."
+"On the *Inventory Adjustments* page, all products with stock history are "
+"listed, even if the quantity in stock is less than zero."
 msgstr ""
-"Trang :guilabel:`Điều chỉnh tồn kho` liệt kê tất cả sản phẩm hiện đang có "
-"trong kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:27
 msgid ""
-"Only products with a quantity greater than zero are listed on "
-"the :guilabel:`Inventory Adjustments` page. To view product lines with zero "
-"current quantity, go to :menuselection:`Inventory app --> Reporting --> "
-"Stock`."
+"Products without a stock history do not appear on the *Inventory "
+"Adjustments* page."
 msgstr ""
-"Chỉ những sản phẩm có số lượng lớn hơn 0 mới được liệt kê trên "
-"trang :guilabel:`Điều chỉnh tồn kho`. Để xem các dòng sản phẩm có số lượng "
-"hiện tại bằng 0, truy cập :menuselection:`Ứng dụng Tồn kho --> Báo cáo --> "
-"Tồn kho`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:30
-msgid "For each product line, the following information is listed:"
-msgstr "Đối với mỗi dòng sản phẩm, các thông tin sau được liệt kê:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:29
+msgid "Each product line contains the following information:"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:31
 msgid ""
-":guilabel:`Location`: the specific location in the warehouse where a product "
+":guilabel:`Location`: The specific location in the warehouse where a product "
 "is stored. This column is **only** visible if :doc:`Storage Locations "
 "<use_locations>` are enabled."
 msgstr ""
-":guilabel:`Vị trí`: vị trí cụ thể trong kho nơi sản phẩm được lưu trữ. Cột "
-"này **chỉ** hiển thị nếu :doc:`vị trí lưu kho <use_locations>`được bật."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:33
+msgid ""
+":guilabel:`Product`: The product whose quantity is listed on the inventory "
+"adjustment line."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:34
-msgid ":guilabel:`Favorite`: identifies products that have been favorited."
+msgid ""
+":guilabel:`On Hand Quantity`: The quantity of the product currently recorded "
+"in the database."
 msgstr ""
-":guilabel:`Yêu thích`: xác định các sản phẩm đã được đánh dấu yêu thích."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:35
 msgid ""
-":guilabel:`Product`: the product whose quantity is listed on the inventory "
-"adjustment line."
-msgstr ""
-":guilabel:`Sản phẩm`: sản phẩm có số lượng được liệt kê trên dòng điều chỉnh "
-"tồn kho."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:36
-msgid ""
-":guilabel:`Lot/Serial Number`: the tracking identifier assigned to the "
+":guilabel:`Lot/Serial Number`: The tracking identifier assigned to the "
 "specific product listed. It can contain letters, numbers, or a combination "
 "of both."
 msgstr ""
-":guilabel:`Số lô/sê-ri`: mã định danh theo dõi được gán cho sản phẩm cụ thể "
-"được liệt kê. Nó có thể chứa các chữ cái, con số, hoặc kết hợp cả hai."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:39
 msgid ""
 "If a specific product has a quantity of more than `1.00` in stock, and more "
-"than one serial number, or lot number, assigned to it, each uniquely-"
+"than one serial number or lot number assigned to it, each uniquely-"
 "identified product is displayed on its own product line with its own lot/"
 "serial number, displayed under the :guilabel:`Lot/Serial Number` column."
 msgstr ""
-"Nếu một sản phẩm cụ thể có số lượng lớn hơn `1` trong kho, và có nhiều hơn "
-"một số sê-ri, hoặc số lô, được gán cho nó, mỗi sản phẩm được xác định duy "
-"nhất sẽ được hiển thị trên dòng sản phẩm riêng của nó với số lô/sê-ri riêng, "
-"được hiển thị dưới cột :guilabel:`Số lô/sê-ri`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:44
 msgid ""
-":guilabel:`Expiration Date`: the date on which the goods with this serial "
-"number are due to expire."
+":guilabel:`UoM`: The :doc:`unit of measure <../../product_management/"
+"configure/uom>` in which the product is measured. Unless otherwise specified "
+"(e.g., in :guilabel:`Pounds` or :guilabel:`Ounces`), the default :abbr:`UoM "
+"(Unit of Measure)` is :guilabel:`Units`."
 msgstr ""
-":guilabel:`Ngày hết hạn`: ngày mà hàng hóa với số sê-ri này sẽ hết hạn."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:47
-msgid ":guilabel:`Last Count Date`: the last time the quantity was updated."
-msgstr ":guilabel:`Ngày đếm gần nhất`: lần cuối cùng số lượng được cập nhật."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:48
-msgid ":guilabel:`Package`: the package containing the quantity listed."
-msgstr ":guilabel:`Kiện hàng`: kiện hàng chứa số lượng được liệt kê."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:49
 msgid ""
-":guilabel:`On Hand Quantity`: the quantity of the product currently recorded "
-"in the database."
-msgstr ""
-":guilabel:`Số lượng Tồn kho`: số lượng sản phẩm hiện đang được ghi nhận "
-"trong cơ sở dữ liệu."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:50
-msgid ""
-":guilabel:`Unit`: the *unit of measure* in which the product is measured. "
-"Unless otherwise specified (e.g., in :guilabel:`Pounds` "
-"or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` "
-"is :guilabel:`Units`."
-msgstr ""
-":guilabel:`Đơn vị`: *đơn vị đo lường* dùng để đo sản phẩm. Trừ khi được chỉ "
-"định khác (ví dụ: :guilabel:`Pound` hoặc :guilabel:`Ounce`), :abbr:`ĐVĐ (Đơn "
-"vị đo lường)` mặc định là :guilabel:`Đơn vị`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:53
-msgid ""
-":guilabel:`Counted Quantity`: the real quantity counted during an inventory "
+":guilabel:`Counted Quantity`: The real quantity counted during an inventory "
 "count. This field is left blank by default but can be changed, depending on "
 "if it matches the :guilabel:`On Hand Quantity` or not."
 msgstr ""
-":guilabel:`Số lượng đã kiểm`: số lượng thực tế được kiểm trong lần kiểm kê. "
-"Trường này để trống theo mặc định nhưng có thể thay đổi, tùy thuộc vào việc "
-"có khớp với :guilabel:`Số lượng trong kho` hay không."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:50
 msgid ""
-":guilabel:`Difference`: the difference between the :guilabel:`On Hand "
+":guilabel:`Difference`: The difference between the :guilabel:`On Hand "
 "Quantity` and :guilabel:`Counted Quantity`, once an inventory adjustment is "
 "made. The difference is automatically calculated after every inventory "
 "adjustment."
 msgstr ""
-":guilabel:`Chênh lệch`: chênh lệch giữa :guilabel:`Số lượng trong kho` "
-"và :guilabel:`Số lượng đã kiểm` sau khi thực hiện điều chỉnh tồn kho. Chênh "
-"lệch được tự động tính toán sau mỗi lần điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:53
 msgid ""
-":guilabel:`Scheduled Date`: the date at which a count should be made. If not "
+":guilabel:`Scheduled Date`: The date at which a count should be made. If not "
 "otherwise specified, this date will default to the 31st of December of the "
 "current year."
 msgstr ""
-":guilabel:`Ngày lên lịch`: ngày cần thực hiện kiểm kê. Nếu không được chỉ "
-"định khác, ngày này sẽ mặc định là ngày 31 tháng 12 của năm hiện tại."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:55
 msgid ""
-":guilabel:`User`: the person assigned to the count in the database. This can "
+":guilabel:`User`: The person assigned to the count in the database. This can "
 "either be the person physically counting the inventory, or applying the "
 "count in the database."
 msgstr ""
-":guilabel:`Người dùng`: người được gán cho lần đếm trong cơ sở dữ liệu. "
-"Người này có thể là người trực tiếp kiểm đếm hàng tồn kho hoặc người nhập "
-"kết quả kiểm đếm vào cơ sở dữ liệu."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:58
+msgid ""
+"The following columns are also available, depending on the configuration of "
+"the database:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:60
+msgid ""
+":guilabel:`Owner`: If :doc:`Consignment <../../shipping_receiving/"
+"daily_operations/owned_stock>` is enabled, the product's *owner* is listed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:62
+msgid ""
+":guilabel:`Storage Category`: Identifies the :doc:`storage category <../../"
+"shipping_receiving/daily_operations/storage_category>` the product belongs "
+"to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:64
+msgid ""
+":guilabel:`Inventory Frequency`: The frequency, in days, for inventory "
+"counts. The default value of this field is set to `0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:66
+msgid ":guilabel:`Favorite`: Identifies products that have been favorited."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:67
+msgid ""
+":guilabel:`Product Category`: The category assigned internally to a specific "
+"product. Unless otherwise specified (i.e., as :guilabel:`Consumable` "
+"or :guilabel:`Rental`), the default :guilabel:`Product Category` is set "
+"to :guilabel:`All`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:70
+msgid ""
+":guilabel:`Expiration Date`: The date on which the goods with this lot or "
+"serial number are due to expire."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:72
+msgid ""
+":guilabel:`Last Count Date`: The last time the quantity was counted or "
+"updated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:73
+msgid ""
+":guilabel:`Available Quantity`: The quantity of a specific product that is "
+"currently available, based on any outstanding/uncompleted sales orders, "
+"purchase orders, or manufacturing orders that might change the available "
+"quantity once fulfilled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:76
+msgid ""
+":guilabel:`Accounting Date`: The date on which the adjustments will be "
+"accounted for in the Odoo **Accounting** app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:78
+msgid ""
+":guilabel:`Company`: The company whose database these inventory adjustments "
+"are being made on. The company is listed in the top corner of the database, "
+"next to the user currently logged in."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:82
 msgid ""
 "Additional columns are hidden by default. To reveal these columns, click "
 "the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right of "
-"the form's top row, and reveal any desired column by ticking the checkbox "
+"the form's top row, and reveal any desired column by selecting the checkbox "
 "next to that option."
 msgstr ""
-"Các cột bổ sung được ẩn theo mặc định. Để hiển thị các cột này, nhấp vào "
-"biểu tượng :icon:`oi-settings-adjust` :guilabel:`(điều chỉnh)` ở bên phải "
-"của hàng trên cùng của biểu mẫu và hiển thị bất kỳ cột mong muốn nào bằng "
-"cách đánh dấu vào ô chọn bên cạnh tùy chọn đó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:89
 msgid "Create an inventory adjustment"
 msgstr "Tạo một điều chỉnh tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:91
 msgid ""
-"To create a new inventory adjustment from the :menuselection:`Inventory "
-"Adjustments` page, click :guilabel:`New`. Doing so creates a new, blank "
-"inventory adjustment line at the bottom of the page."
+"To create a new inventory adjustment from the *Inventory Adjustments* page, "
+"click :guilabel:`New`. Doing so creates a new, blank inventory adjustment "
+"line at the bottom of the page."
 msgstr ""
-"Để tạo điều chỉnh tồn kho mới từ trang :menuselection:`Điều chỉnh tồn kho`, "
-"nhấp :guilabel:`Mới`. Thao tác này sẽ tạo một dòng điều chỉnh tồn kho trống "
-"mới ở cuối trang."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:95
 msgid ""
 "|Ia| can also be created from the :guilabel:`Forecasted Report` on an "
 "individual product record. To open the report, navigate to a product record "
@@ -30421,7 +30427,7 @@ msgstr ""
 msgid "The Update Quantities button on a Forecast report in the Inventory app."
 msgstr "Nút Cập nhật số lượng trên báo cáo Dự báo trong ứng dụng Tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:102
 msgid ""
 "On this blank inventory adjustment line, click the drop-down menu under "
 "the :guilabel:`Product` column, and select a product. If the selected "
@@ -30434,7 +30440,7 @@ msgstr ""
 "theo dõi bằng lô hoặc số sê-ri, cần chọn lô hoặc số sê-ri mong muốn từ menu "
 "thả xuống dưới cột :guilabel:`Lô/Số sê-ri`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:108
 msgid ""
 "The inventory adjustment line can also be used to create or record lots and "
 "serial numbers."
@@ -30442,7 +30448,7 @@ msgstr ""
 "Dòng điều chỉnh tồn kho cũng có thể được sử dụng để tạo hoặc ghi nhận các lô "
 "và số sê-ri."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:110
 msgid ""
 "Next, set the value in the :guilabel:`Counted Quantity` column to the "
 "quantity counted for that product during the inventory adjustment process."
@@ -30450,7 +30456,7 @@ msgstr ""
 "Tiếp theo, đặt giá trị trong cột :guilabel:`Số lượng đã kiểm` thành số lượng "
 "đã kiểm cho sản phẩm đó trong quá trình điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:113
 msgid ""
 "To the right of the :guilabel:`Counted Quantity` column, "
 "the :guilabel:`Scheduled Date` and :guilabel:`User` can also be changed via "
@@ -30465,38 +30471,28 @@ msgstr ""
 "lý điều chỉnh tồn kho và chọn :guilabel:`Người dùng` chịu trách nhiệm sẽ gán "
 "người dùng cho điều chỉnh tồn kho cụ thể nhằm mục đích truy xuất nguồn gốc."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:119
 msgid ""
 "Once all changes have been made to the new inventory adjustment line, click "
-"away from the line. Doing so saves the adjustment, and moves the line to the "
+"away from the line. Doing so saves the adjustment and moves the line to the "
 "top of the page."
 msgstr ""
-"Sau khi thực hiện xong tất cả thay đổi cho dòng điều chỉnh tồn kho mới, nhấp "
-"ra ngoài dòng đó. Thao tác này sẽ lưu điều chỉnh và di chuyển dòng lên đầu "
-"trang."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:122
 msgid ""
 "If the :guilabel:`Counted Quantity` is greater than the :guilabel:`On Hand "
-"Quantity`, the value in the :guilabel:`Difference` column is **green**. If "
+"Quantity`, the value in the :guilabel:`Difference` column is green. If "
 "the :guilabel:`Counted Quantity` is less than the :guilabel:`On Hand "
-"Quantity`, the value in the :guilabel:`Difference` column is **red**. If the "
+"Quantity`, the value in the :guilabel:`Difference` column is red. If the "
 "quantities match, and have not been changed at all, no value appears in "
 "the :guilabel:`Difference` column."
 msgstr ""
-"Nếu :guilabel:`Số lượng đã đếm` lớn hơn :guilabel:`Số lượng hiện có`, thì "
-"giá trị trong cột :guilabel:`Chênh lệch` sẽ hiển thị màu **xanh lá**. "
-"Nếu :guilabel:`Số lượng đã đếm` nhỏ hơn :guilabel:`Số lượng hiện có`, giá "
-"trị trong cột :guilabel:`Chênh lệch` sẽ hiển thị màu **đỏ**. Nếu số lượng "
-"khớp nhau và không có thay đổi nào, thì không có giá trị nào xuất hiện trong "
-"cột :guilabel:`Chênh lệch`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "Difference column on inventory adjustments page."
 msgstr "Cột Chênh lệch trên trang điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:131
 msgid ""
 "At this stage, the count (:dfn:`inventory adjustment`) is recorded, but not "
 "yet applied. This means that the quantity on hand before the adjustment has "
@@ -30506,42 +30502,33 @@ msgstr ""
 "nhưng chưa được áp dụng. Điều này có nghĩa là số lượng trong kho trước khi "
 "điều chỉnh vẫn chưa được cập nhật để khớp với số lượng thực tế mới đã kiểm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:138
 msgid "Apply adjusted count"
 msgstr "Áp dụng kiểm đếm được điều chỉnh"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:140
 msgid ""
 "|Ia| can be completed in several ways. The first way is to click "
 "the :guilabel:`Apply` button on the line at the far right of the page. The "
-"second way is to tick the checkbox on the far left of the line. Doing so "
+"second way is to select the checkbox on the far side of the line. Doing so "
 "reveals new button options at the top of the page, one of which is "
-"an :guilabel:`Apply` button. Clicking this button instead causes "
-"an :guilabel:`Inventory Adjustment` pop-up window to appear."
+"an :guilabel:`Apply` button. Clicking this button instead causes an "
+"*Inventory Adjustment* pop-up window to appear."
 msgstr ""
-"|Ia| có thể được hoàn thành theo nhiều cách. Cách đầu tiên là nhấp vào "
-"nút :guilabel:`Áp dụng` ở cuối dòng bên phải trang. Cách thứ hai là tích vào "
-"ô chọn ở phía bên trái của dòng. Thao tác này sẽ hiển thị các nút tùy chọn "
-"mới ở đầu trang, trong đó có nút :guilabel:`Áp dụng`. Nhấp vào nút này sẽ "
-"hiển thị cửa sổ bật lên :guilabel:`Điều chỉnh tồn kho`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:146
 msgid ""
 "From this pop-up menu, a reference or reason can be assigned to the "
 "inventory adjustment. By default, the :guilabel:`Inventory Reason` field is "
-"pre-populated with today's date, the date the adjustment is being made on, "
-"but can be changed to reflect whatever reference or reason is desired."
+"populated with the current date, but can be changed to reflect whatever "
+"reference or reason is desired."
 msgstr ""
-"Từ menu bật lên này, có thể gán tham chiếu hoặc lý do cho điều chỉnh tồn "
-"kho. Theo mặc định, trường :guilabel:`Lý do điều chỉnh` được điền sẵn với "
-"ngày hôm nay, ngày thực hiện điều chỉnh, nhưng có thể thay đổi để phản ánh "
-"bất kỳ tham chiếu hoặc lý do mong muốn nào."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:150
 msgid "Once ready, click :guilabel:`Apply` to apply the inventory adjustment."
 msgstr "Khi sẵn sàng, nhấp :guilabel:`Áp dụng` để áp dụng điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:153
 msgid ""
 "Applying an inventory adjustment simultaneously creates a :doc:`stock move "
 "line (SML) <../reporting/moves_history>` in the *Moves History* report for "
@@ -30557,43 +30544,39 @@ msgid ""
 msgstr ""
 "Tùy chọn Áp dụng tất cả sẽ áp dụng điều chỉnh tồn kho sau khi chỉ định lý do."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:160
 msgid "Relocate products"
 msgstr "Di chuyển sản phẩm"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:162
 msgid ""
 "|Ia| can also be used to relocate products to different storage locations, "
-"or to different packages. To relocate a product, tick the checkbox at the "
+"or to different packages. To relocate a product, click the checkbox at the "
 "far left of the line for the desired product. At the top of the page, click "
 "the :guilabel:`Relocate` button. Doing so opens a pop-up."
 msgstr ""
-"|Ia| cũng có thể được sử dụng để chuyển sản phẩm đến các vị trí lưu trữ khác "
-"nhau hoặc đến các gói hàng khác nhau. Để chuyển sản phẩm, đánh dấu vào ô "
-"chọn ở bên trái của dòng cho sản phẩm mong muốn. Ở đầu trang, nhấp "
-"nút :guilabel:`Chuyển vị trí`. Thao tác này sẽ mở một cửa sổ bật lên."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "The Relocate products pop-up on the Inventory Adjustments page."
 msgstr "Cửa sổ bật lên Chuyển vị trí sản phẩm trên trang Điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:169
 msgid "On the resulting pop-up, enter the following information:"
 msgstr "Trong cửa sổ pop-up hiện ra, nhập các thông tin sau:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:171
 msgid ":guilabel:`To Location`: the new location for the products."
 msgstr ":guilabel:`Đến vị trí`: vị trí mới cho các sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:172
 msgid ":guilabel:`To Package`: the new package for the products."
 msgstr ":guilabel:`Đến gói hàng`: gói hàng mới cho các sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:173
 msgid ":guilabel:`Reason for relocation`: the reason for the move."
 msgstr ":guilabel:`Lý do di chuyển`: lý do thực hiện việc di chuyển."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:176
 msgid ""
 "Product relocations **only** work on internal locations. Products **cannot** "
 "be moved between companies."
@@ -30601,37 +30584,36 @@ msgstr ""
 "Việc di chuyển sản phẩm **chỉ** hoạt động trên các vị trí nội bộ. Sản phẩm "
 "**không thể** được di chuyển giữa các công ty."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:164
-msgid "Only users with *Administrator* rights can perform product relocations."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:179
+msgid ""
+"Product relocations **only** work on *internal* locations. Products "
+"**cannot** be moved between companies."
 msgstr ""
-"Chỉ những người dùng có quyền *Quản trị viên* mới có thể thực hiện việc di "
-"chuyển sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:182
+msgid "Only users with administrator rights can perform product relocations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:185
 msgid "Set to zero"
 msgstr "Đặt thành 0"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:187
 msgid ""
-"|Ia| can also be used to clear inventory counts by setting the quantity to "
-"zero. To do this, tick the checkbox at the far left of the line for the "
-"desired product. At the top of the page, click the :icon:`fa-"
-"gear` :guilabel:`Actions` button to open a drop-down menu. "
+":icon:`fa-gear` :guilabel:`Actions` button to open a drop-down menu. "
+"Click :guilabel:`Set to 0`. |Ia| can also be used to clear inventory counts "
+"by setting the quantity to zero. To do this, click the checkbox at the far "
+"left of the line for the desired product. At the top of the page, click "
+"the :icon:`fa-gear` :guilabel:`Actions` button to open a drop-down menu. "
 "Click :guilabel:`Set to 0`. Once this is complete, :ref:`apply <inventory/"
 "apply-adjustment>` the adjusted count."
 msgstr ""
-"|Ia| cũng có thể được sử dụng để xóa số lượng tồn kho bằng cách đặt số lượng "
-"về 0. Để thực hiện, tích vào hộp kiểm ở phía ngoài cùng bên trái của dòng "
-"sản phẩm mong muốn. Ở phía trên cùng của trang, nhấp vào nút :icon:`fa-"
-"gear` :guilabel:`Tác vụ` để mở menu thả xuống. Chọn :guilabel:`Đặt là 0`. "
-"Sau khi hoàn tất, hãy :ref:`áp dụng <inventory/apply-adjustment>` số lượng "
-"đã điều chỉnh."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:194
 msgid "Count products"
 msgstr "Đếm sản phẩm"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:196
 msgid ""
 "Counting products is a recurring activity in a warehouse. Once a count is "
 "complete, go to :menuselection:`Inventory app --> Operations --> Physical "
@@ -30642,7 +30624,7 @@ msgstr ""
 "truy cập :menuselection:`ứng dụng Tồn kho --> Hoạt động --> Kiểm kê thực tế` "
 "để cập nhật cột :guilabel:`Số lượng đã kiểm` cho từng dòng sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:200
 msgid ""
 "On each product line, identify whether the value in the :guilabel:`On Hand "
 "Quantity` column recorded in the database matches the newly-counted value. "
@@ -30654,7 +30636,7 @@ msgstr ""
 "không. Nếu giá trị đã ghi và giá trị đã kiểm khớp nhau, nhấp vào biểu "
 "tượng :icon:`fa-bullseye` :guilabel:`Đặt` ở phía bên phải của dòng sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:204
 msgid ""
 "Doing so copies the value from the :guilabel:`On Hand Quantity` column over "
 "to the :guilabel:`Counted Quantity` column, and sets the value of "
@@ -30672,7 +30654,7 @@ msgstr ""
 msgid "Zero count inventory adjustment move."
 msgstr "Điều chỉnh tồn kho với số lượng kiểm đếm bằng 0."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:212
 msgid ""
 "If the newly-counted value for a given product does **not** match the value "
 "in the :guilabel:`On Hand Quantity` recorded in the database, instead of "
@@ -30684,7 +30666,7 @@ msgstr ""
 "nhấp vào biểu tượng :icon:`fa-bullseye` :guilabel:`Đặt`, hãy ghi giá trị "
 "thực tế vào trường trong cột :guilabel:`Số lượng đã kiểm`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:216
 msgid ""
 "To do so, click the field in the :guilabel:`Counted Quantity` column on the "
 "specific inventory adjustment line for the product whose count is being "
@@ -30694,7 +30676,7 @@ msgstr ""
 "dòng điều chỉnh tồn kho cụ thể cho sản phẩm đang được thay đổi số lượng "
 "kiểm. Thao tác này tự động gán :guilabel:`Số lượng đã kiểm` là `0.00`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:220
 msgid ""
 "To change this value, type in a new value that matches the real, newly-"
 "counted value. Then, click away from the line. Doing so saves the "
@@ -30705,7 +30687,23 @@ msgstr ""
 "đếm. Sau đó, nhấn ra ngoài dòng. Thao tác này sẽ lưu điều chỉnh và tự động "
 "cập nhật giá trị trong cột :guilabel:`Chênh lệch`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:224
+msgid ""
+"If the :guilabel:`Counted Quantity` is greater than the :guilabel:`On Hand "
+"Quantity`, the value in the :guilabel:`Difference` column is **green**. If "
+"the :guilabel:`Counted Quantity` is less than the :guilabel:`On Hand "
+"Quantity`, the value in the :guilabel:`Difference` column is **red**. If the "
+"quantities match, and have not been changed at all, no value appears in "
+"the :guilabel:`Difference` column."
+msgstr ""
+"Nếu :guilabel:`Số lượng đã đếm` lớn hơn :guilabel:`Số lượng hiện có`, thì "
+"giá trị trong cột :guilabel:`Chênh lệch` sẽ hiển thị màu **xanh lá**. "
+"Nếu :guilabel:`Số lượng đã đếm` nhỏ hơn :guilabel:`Số lượng hiện có`, giá "
+"trị trong cột :guilabel:`Chênh lệch` sẽ hiển thị màu **đỏ**. Nếu số lượng "
+"khớp nhau và không có thay đổi nào, thì không có giá trị nào xuất hiện trong "
+"cột :guilabel:`Chênh lệch`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:230
 msgid ""
 "Subsequently, once applied, a move with the difference between "
 "the :guilabel:`On Hand Quantity` and the :guilabel:`Counted Quantity` is "
@@ -30723,7 +30721,7 @@ msgstr ""
 "Bảng điều khiển Lịch sử điều chỉnh tồn kho liệt kê chi tiết các điều chuyển "
 "sản phẩm trước đó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:236
 msgid ""
 "The :guilabel:`Actions` menu appears when one or more products' checkboxes "
 "are selected. The :guilabel:`Actions` menu includes the option "
@@ -30742,28 +30740,22 @@ msgstr ""
 msgid "Inventory Adjustments Actions menu."
 msgstr "Menu Thao tác của Điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:226
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:335
 msgid ""
-"Sometimes a count occurs, but cannot be applied in the database right away. "
+"Sometimes a count occurs but cannot be applied in the database right away. "
 "In the time between the actual count and applying the inventory adjustment, "
 "product moves can occur. In that case, the on-hand quantity in the database "
 "can change and no longer be consistent with the counted quantity. As an "
 "extra precaution, Odoo asks for confirmation before applying the inventory "
 "adjustment."
 msgstr ""
-"Đôi khi việc kiểm kê được thực hiện nhưng không thể áp dụng ngay vào cơ sở "
-"dữ liệu. Trong khoảng thời gian giữa kiểm kê thực tế và khi thực hiện điều "
-"chỉnh tồn kho, các điều chuyển hàng hóa có thể xảy ra. Khi đó, số lượng tồn "
-"kho hiện có trong cơ sở dữ liệu có thể thay đổi và không còn khớp với số "
-"lượng đã kiểm kê. Để đảm bảo độ chính xác, Odoo sẽ yêu cầu xác nhận trước "
-"khi áp dụng điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:252
 msgid "Revert an inventory adjustment"
 msgstr "Hoàn tác một điều chỉnh tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:254
 msgid ""
 "To revert the changes made in an inventory adjustment, navigate "
 "to :menuselection:`Inventory --> Reporting --> Moves History`."
@@ -30771,17 +30763,14 @@ msgstr ""
 "Để hoàn tác các thay đổi đã thực hiện trong một điều chỉnh tồn kho, đi "
 "tới :menuselection:`Tồn kho --> Báo cáo --> Lịch sử điều chuyển`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:257
 msgid ""
-"Tick the checkbox at the far left of the line for the desired product. At "
+"Click the checkbox at the far left of the line for the desired product. At "
 "the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button to "
 "open a drop-down menu, and click :guilabel:`Revert Inventory Adjustment`."
 msgstr ""
-"Đánh dấu vào hộp kiểm ở phía bên trái của dòng sản phẩm mong muốn. Ở đầu "
-"trang, nhấp vào nút :icon:`fa-gear` :guilabel:`Thao tác` để mở menu thả "
-"xuống, và nhấp vào :guilabel:`Hoàn tác điều chỉnh tồn kho`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:262
 msgid ""
 "After an inventory adjustment is reverted, the line is not removed from "
 "the :guilabel:`Moves History` report. Instead, an additional line is added, "
@@ -30798,11 +30787,11 @@ msgid "The reference fields on the Moves History report in the Inventory app."
 msgstr ""
 "Trường tham chiếu trên báo cáo Lịch sử điều chuyển trong ứng dụng Tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:270
 msgid "Change inventory count frequency"
 msgstr "Thay đổi tần suất kiểm đếm tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:272
 msgid ""
 "By default, the *scheduled date* for |ia| are always scheduled for the 31st "
 "of December of the current year. However, for some companies, it is crucial "
@@ -30814,7 +30803,7 @@ msgstr ""
 "kiểm đếm tồn kho chính xác mọi lúc là rất quan trọng. Trong những trường hợp "
 "này, ngày dự kiến mặc định có thể được chỉnh sửa."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:257
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:276
 msgid ""
 "To modify the default scheduled date, go to :menuselection:`Inventory app --"
 "> Configuration --> Settings`. Then, in the :guilabel:`Operations` section, "
@@ -30834,7 +30823,7 @@ msgstr ""
 "Điều chỉnh ngày kiểm đếm tồn kho tiếp theo bằng thiết lập Ngày và tháng kiểm "
 "kê hàng năm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:283
 msgid ""
 "To change the day, click the `31`, enter a number from `1-31`, depending on "
 "the desired month of the year."
@@ -30842,7 +30831,7 @@ msgstr ""
 "Để thay đổi ngày, nhấn vào số `31`, rồi nhập một số từ `1-31`, tùy thuộc vào "
 "ngày mong muốn trong tháng."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:286
 msgid ""
 "Then, to change the month, click :guilabel:`December` to reveal the drop-"
 "down menu, and select the desired month."
@@ -30850,7 +30839,7 @@ msgstr ""
 "Sau đó, để thay đổi tháng, nhấn vào :guilabel:`Tháng 12` để mở menu thả "
 "xuống, rồi chọn tháng mong muốn."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:289
 msgid ""
 "Once all desired changes have been made, click :guilabel:`Save` to save all "
 "changes."
@@ -30858,11 +30847,11 @@ msgstr ""
 "Khi tất cả thay đổi mong muốn đã được thực hiện, nhấn :guilabel:`Lưu` để lưu "
 "lại mọi thay đổi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:294
 msgid "Plan big inventory counts"
 msgstr "Lập kế hoạch kiểm đếm kho lớn"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:296
 msgid ""
 "To plan big inventory counts, such as a full count of everything currently "
 "in stock, first navigate to :menuselection:`Inventory app --> Operations --> "
@@ -30872,29 +30861,24 @@ msgstr ""
 "hiện có, trước tiên hãy đi tới :menuselection:`Ứng dụng Tồn kho --> Hoạt "
 "động --> Kiểm kê thực tế`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:299
 msgid ""
-"Then, select the desired products to be counted by ticking the checkbox on "
+"Then, select the desired products to be counted by clicking the checkbox on "
 "the far left of each product line."
 msgstr ""
-"Tiếp theo, chọn các sản phẩm muốn kiểm đếm bằng cách đánh dấu vào ô checkbox "
-"ở bên trái mỗi dòng sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:303
 msgid ""
-"To request a count of **all** products currently in stock, tick the checkbox "
-"at the top of the table, in the header row next to the :guilabel:`Location` "
-"label. This selects **all** product lines."
+"To request a count of **all** products currently in stock, click the "
+"checkbox at the top of the table in the header row next to "
+"the :guilabel:`Location` label. This selects **all** product lines."
 msgstr ""
-"Để yêu cầu kiểm đếm **tất cả** sản phẩm hiện đang có trong kho, đánh dấu vào "
-"hộp kiểm ở đầu bảng, trong hàng tiêu đề bên cạnh nhãn :guilabel:`Vị trí`. "
-"Thao tác này chọn **tất cả** các dòng sản phẩm."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "Request a count pop-up on inventory adjustments page."
 msgstr "Cửa sổ bật lên Yêu cầu kiểm đếm trên trang điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:310
 msgid ""
 "Once all desired products have been selected, click the :guilabel:`Request a "
 "Count` button at the top of the page. Doing so opens the :guilabel:`Request "
@@ -30904,34 +30888,29 @@ msgstr ""
 "kiểm đếm` ở đầu trang. Thao tác này mở cửa sổ bật lên :guilabel:`Yêu cầu "
 "kiểm đếm`, nơi có thể điền các thông tin sau:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:295
-msgid ":guilabel:`Inventory Date`: the planned date of the count."
-msgstr ":guilabel:`Ngày kiểm kê`: ngày dự kiến thực hiện kiểm đếm."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:314
+msgid ":guilabel:`Inventory Date`: The planned date of the count."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:296
-msgid ":guilabel:`User`: the user responsible for the count."
-msgstr ":guilabel:`Người dùng`: người dùng chịu trách nhiệm về việc kiểm đếm."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:315
+msgid ":guilabel:`User`: The user responsible for the count."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:297
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:316
 msgid ""
-":guilabel:`Accounting Date`: the date at which the inventory adjustment will "
+":guilabel:`Accounting Date`: The date at which the inventory adjustment will "
 "be accounted."
 msgstr ""
-":guilabel:`Ngày hạch toán`: ngày mà điều chỉnh tồn kho sẽ được hạch toán."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:298
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:317
 msgid ""
-":guilabel:`Count`: to leave the on-hand quantity of each product line blank, "
+":guilabel:`Count`: To leave the on-hand quantity of each product line blank, "
 "select :guilabel:`Leave Empty`. To pre-fill the on-hand quantity of each "
 "product line with the current value recorded in the database, "
 "select :guilabel:`Set Current Value`."
 msgstr ""
-":guilabel:`Kiểm đếm`: để để trống số lượng tồn kho của từng dòng sản phẩm, "
-"chọn :guilabel:`Để trống`. Để điền sẵn số lượng tồn kho của từng dòng sản "
-"phẩm với giá trị hiện tại được ghi trong cơ sở dữ liệu, chọn :guilabel:`Đặt "
-"giá trị hiện tại`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:322
 msgid ""
 "The :guilabel:`Leave Empty` option forces the employee conducting the audit "
 "to manually type in the number they counted, while the :guilabel:`Set "
@@ -30943,7 +30922,7 @@ msgstr ""
 "hiện tại` chỉ yêu cầu nhân viên *xác minh* số lượng đã kiểm và "
 "nhấp :guilabel:`Áp dụng`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:326
 msgid "Finally, once ready, click :guilabel:`Confirm` to request the count."
 msgstr ""
 "Cuối cùng, khi đã sẵn sàng, nhấn :guilabel:`Xác nhận` để gửi yêu cầu kiểm "
@@ -30953,7 +30932,7 @@ msgstr ""
 msgid "Request a count popup on inventory adjustments page."
 msgstr "Cửa sổ bật lên Yêu cầu kiểm đếm trên trang điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:313
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:332
 msgid ""
 "In the Odoo **Barcode** app, users can only view inventory counts that are "
 "assigned to *them*, and are scheduled for *today* or *earlier*."
@@ -30962,60 +30941,47 @@ msgstr ""
 "đếm tồn kho được giao cho *họ*, và được lên lịch vào *hôm nay* hoặc *trước "
 "đó*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:323
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:342
 msgid "Adjustment history"
 msgstr "Lịch sử điều chỉnh"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:344
 msgid ""
-"Details regarding inventory adjustment can be viewed by clicking "
-"the :icon:`fa-history` :guilabel:`History` icon."
+"Details regarding inventory adjustment can be viewed by clicking :icon:`fa-"
+"history` :guilabel:`History`."
 msgstr ""
-"Chi tiết về điều chỉnh tồn kho có thể được xem bằng cách nhấn vào biểu "
-"tượng :icon:`fa-history` :guilabel:`Lịch sử`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:328
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:347
 msgid ""
-"The user who performed the count is listed in parenthesis in "
+"The user who performed the count is listed in parentheses in "
 "the :guilabel:`Reference` field, while the user who applied the count is "
-"listed in the :guilabel:`Done By`."
+"listed in the :guilabel:`Done By` field."
 msgstr ""
-"Người dùng thực hiện kiểm đếm được liệt kê trong ngoặc đơn ở "
-"trường :guilabel:`Tham chiếu`, trong khi người dùng áp dụng kết quả kiểm đếm "
-"được liệt kê ở trường :guilabel:`Hoàn tất bởi`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "The history record for an inventory adjustment."
 msgstr "Bản ghi lịch sử của một điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:354
 msgid "Inventory audit"
 msgstr "Kiểm kê tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:356
 msgid ""
-"An inventory audit can be accessed from the :guilabel:`Inventory Adjustment` "
-"page. This audit includes an inventory record both before and after a count "
-"is completed, to track what changed."
+"An inventory audit can be accessed from the *Inventory Adjustments* page. "
+"This audit includes an inventory record both before and after a count is "
+"completed, to track what changed."
 msgstr ""
-"Có thể truy cập kiểm toán tồn kho từ trang :guilabel:`Điều chỉnh tồn kho`. "
-"Kiểm toán này bao gồm bản ghi tồn kho cả trước và sau khi hoàn tất kiểm đếm, "
-"để theo dõi những gì đã thay đổi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:359
 msgid ""
-"On the :guilabel:`Inventory Adjustment` page, tick the checkbox at the top-"
-"left of the page to select all of the lines. Then click "
-"the :guilabel:`Request a Count` button. On the pop-up, set :guilabel:`Count` "
-"to :guilabel:`Set Current Value`, then click :guilabel:`Confirm`."
+"On the *Inventory Adjustments* page, click the checkbox at the top corner of "
+"the page to select all of the lines. Then click the :guilabel:`Request a "
+"Count` button. On the pop-up, set :guilabel:`Count` to :guilabel:`Set "
+"Current Value`, then click :guilabel:`Confirm`."
 msgstr ""
-"Trên trang :guilabel:`Điều chỉnh tồn kho`, đánh dấu vào hộp kiểm ở góc trên "
-"bên trái của trang để chọn tất cả các dòng. Sau đó nhấp vào "
-"nút :guilabel:`Yêu cầu kiểm đếm`. Trên cửa sổ bật lên, đặt :guilabel:`Kiểm "
-"đếm` thành :guilabel:`Đặt giá trị hiện tại`, sau đó nhấp :guilabel:`Xác "
-"nhận`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:344
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:363
 msgid ""
 "After returning to the :guilabel:`Inventory Adjustment` page, select all of "
 "the lines again. Click :menuselection:`Print --> Count Sheet`. "
@@ -31025,7 +30991,7 @@ msgstr ""
 "dòng. Nhấp vào :menuselection:`In --> Phiếu kiểm kê`. :guilabel:`Phiếu kiểm "
 "kê` sẽ được xuất dưới dạng PDF."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:348
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:367
 msgid ":doc:`cycle_counts`"
 msgstr ":doc:`cycle_counts`"
 
@@ -31740,6 +31706,7 @@ msgid "The Reception Report Page in Odoo."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:161
 msgid "Allocate units"
 msgstr ""
 
@@ -31809,6 +31776,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:156
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:211
 msgid ""
 "Finally, click :guilabel:`Validate` to confirm that the products have been "
 "delivered to the customer."
@@ -31825,6 +31793,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:166
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:225
 msgid ""
 "Two |SOs| are created for separate customers. Customer A orders 75 units of "
 "a *Chair*. Customer B also orders 75 units of the same product but needs "
@@ -31865,11 +31834,12 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:190
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:125
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:247
 msgid "Print labels"
 msgstr "In nhãn"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:192
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:249
 msgid ""
 "Users can print labels for allocated products to ensure that they are "
 "correctly designated to the appropriate customer."
@@ -44908,278 +44878,397 @@ msgstr "Báo cáo phân bổ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:11
 msgid ""
-"When fulfilling sales orders (SOs), or sourcing components for manufacturing "
-"orders (MOs), it is sometimes necessary to prioritize one |SO| or |MO| over "
-"another. In situations where there is insufficient stock on-hand to fulfill "
-"every |SO| or |MO|, ensuring that products and components are reserved for "
-"priority orders is essential."
+"In Odoo **Manufacturing**, users can use allocation reports to reserve units "
+"of manufactured products from manufacturing orders (MOs) for outgoing "
+"demands, such as sales orders (SOs) or components on other |MOs|."
 msgstr ""
-"Khi thực hiện đơn bán hàng (SO) hoặc tìm nguồn linh kiện cho lệnh sản xuất "
-"(MO), đôi khi cần ưu tiên một |SO| hoặc |MO| hơn cái khác. Trong các tình "
-"huống mà không có đủ hàng tồn kho để thực hiện mọi |SO| hoặc |MO|, việc đảm "
-"bảo sản phẩm và linh kiện được dành riêng cho các đơn hàng ưu tiên là điều "
-"cần thiết."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:16
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:15
 msgid ""
-"In Odoo *Manufacturing*, allocation reports are used on |MOs| to assign "
-"products to specific sales orders |SOs|, or components to specific |MOs|. "
-"This ensures the products or components are available for those orders, and "
-"are not used by mistake."
+"While Odoo normally automatically reserves existing stock for outgoing "
+"demands, users may sometimes need to manually prioritize specific outgoing "
+"orders over competing demands, especially when existing stock for a product "
+"does not adequately fulfill those demands."
 msgstr ""
-"Trong Odoo *Sản xuất*, báo cáo phân bổ được sử dụng trên |MOs| để chỉ định "
-"sản phẩm cho các đơn bán hàng cụ thể |SOs|, hoặc linh kiện cho các |MOs| cụ "
-"thể. Điều này đảm bảo sản phẩm hoặc linh kiện có sẵn cho các đơn hàng đó và "
-"không bị sử dụng nhầm."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:19
+msgid ""
+"The following documentation covers the process of using an allocation report "
+"to manually assign planned units of a product from a confirmed |MO| to "
+"fulfill either an |SO| containing the purchased product or an |MO| with the "
+"product as a component."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:28
 msgid ""
 "To use allocation reports, the *Allocation Report for Manufacturing Orders* "
 "feature **must** be enabled. To do so, navigate "
 "to :menuselection:`Manufacturing app --> Configuration --> Settings`, and "
-"tick the checkbox next to :guilabel:`Allocation Report for Manufacturing "
+"select the checkbox next to :guilabel:`Allocation Report for Manufacturing "
 "Orders`. Then, click :guilabel:`Save`."
 msgstr ""
-"Để sử dụng báo cáo phân bổ, tính năng *Báo cáo phân bổ cho lệnh sản xuất* "
-"**phải** được kích hoạt. Để làm điều này, vào :menuselection:`Ứng dụng Sản "
-"xuất --> Cấu hình --> Cài đặt`, và đánh dấu vào ô bên cạnh :guilabel:`Báo "
-"cáo phân bổ cho lệnh sản xuất`. Sau đó, nhấp :guilabel:`Lưu`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:33
 msgid ""
-"For products that are sold, it is also necessary to configure them so they "
-"can be included in |SOs|. To do so, begin by navigating "
-"to :menuselection:`Inventory --> Products --> Products`, and select a "
-"product. Under the :guilabel:`Product Name` field on the product form, make "
-"sure that the :guilabel:`Can Be Sold` checkbox is ticked."
+"Enabling this feature automatically displays the option to view an "
+"allocation report on a confirmed |MO|."
 msgstr ""
-"Đối với sản phẩm được bán, cần cấu hình để chúng có thể được đưa vào |SO|. "
-"Để thực hiện, hãy bắt đầu bằng cách đi đến :menuselection:`Tồn kho --> Sản "
-"phẩm --> Sản phẩm` và chọn một sản phẩm. Dưới trường :guilabel:`Tên sản "
-"phẩm` trên biểu mẫu sản phẩm, đảm bảo rằng hộp kiểm :guilabel:`Có thể bán` "
-"được chọn."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:34
-msgid "Allocate products"
-msgstr "Phân bổ sản phẩm"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:41
 msgid ""
-"To allocate products or components from an |MO| to an |SO|, or to a "
-"different |MO|, begin by navigating to :menuselection:`Manufacturing app --> "
-"Operations --> Manufacturing Orders`. Click :guilabel:`New` to create a new |"
-"MO|."
+"To use allocation reports, users must first confirm customer demand from "
+"existing |SOs| or component demand from existing |MOs|, then replenish the "
+"necessary stock through an |MO|. After confirming this replenishment order, "
+"users can access the allocation report and reserve units from the |MO| to "
+"fulfill those demands."
 msgstr ""
-"Để phân bổ sản phẩm hoặc linh kiện từ một |MO| cho một |SO|, hoặc cho một |"
-"MO| khác, bắt đầu bằng cách vào :menuselection:`Ứng dụng Sản xuất --> Hoạt "
-"động --> Lệnh sản xuất`. Nhấp :guilabel:`Mới` để tạo một |MO| mới."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:40
-msgid ""
-"On the |MO| form, select a product in the :guilabel:`Product` field, and "
-"specify the quantity to be produced in the :guilabel:`Quantity` field. "
-"Finally, click :guilabel:`Confirm` to confirm the |MO|."
-msgstr ""
-"Trên biểu mẫu |MO|, chọn một sản phẩm trong trường :guilabel:`Sản phẩm`, và "
-"chỉ định số lượng cần sản xuất trong trường :guilabel:`Số lượng`. Cuối cùng, "
-"nhấp :guilabel:`Xác nhận` để xác nhận |MO|."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:43
-msgid ""
-"The rest of the allocation workflow depends on the current on-hand quantity "
-"of the product being manufactured, and whether or not there are any |SOs| or "
-"|MOs| which require the product, but have not already been allocated units."
-msgstr ""
-"Phần còn lại của quy trình phân bổ phụ thuộc vào số lượng hiện có trong kho "
-"của sản phẩm đang được sản xuất, và liệu có bất kỳ |SOs| hoặc |MOs| nào yêu "
-"cầu sản phẩm nhưng chưa được phân bổ đơn vị hay không."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:47
 msgid ""
-"If there **are** existing |SOs| and |MOs| that require the product, **and** "
-"there are too few units of the product on-hand to fulfill those orders, then "
-"an :icon:`fa-list` :guilabel:`Allocation` smart button appears at the top of "
-"the page as soon as the |MO| is confirmed."
+"|SOs|/|MOs| with products that can be fulfilled with existing on-hand stock "
+"do **not** appear in reception reports."
 msgstr ""
-"Nếu **có** các |SOs| và |MOs| hiện có yêu cầu sản phẩm, **và** có quá ít đơn "
-"vị sản phẩm trong kho để thực hiện các đơn hàng đó, thì nút thông "
-"minh :icon:`fa-list` :guilabel:`Phân bổ` sẽ xuất hiện ở đầu trang ngay sau "
-"khi |MO| được xác nhận."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:50
 msgid ""
-"If there **are** existing |SOs| and |MOs| that require the product, **and** "
-"there are enough units of the product on-hand to fulfill those orders, then "
-"the :icon:`fa-list` :guilabel:`Allocation` smart button only appears at the "
-"top of the page once the |MO| has been marked as done, by "
-"clicking :guilabel:`Produce All`."
+"The following process outlines the necessary steps for allocating units of a "
+"manufactured product using allocation reports:"
 msgstr ""
-"Nếu **có** các |SOs| và |MOs| hiện có yêu cầu sản phẩm, **và** có đủ đơn vị "
-"sản phẩm trong kho để thực hiện các đơn hàng đó, thì nút thông "
-"minh :icon:`fa-list` :guilabel:`Phân bổ` chỉ xuất hiện ở đầu trang sau khi |"
-"MO| được đánh dấu là hoàn thành, bằng cách nhấp :guilabel:`Sản xuất tất cả`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:None
-msgid "The Allocation smart button at the top of an MO."
-msgstr "Nút thông minh Phân bổ ở đầu một MO."
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:53
+msgid ""
+"Verify that demand exists for the product in one or more originating |SOs|/|"
+"MOs|. If not, :ref:`create them <manufacturing/allocation_report/workflow/"
+"confirm-demand>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:55
+msgid ""
+"If existing stock cannot fulfill the demand, :ref:`create and confirm an MO "
+"<manufacturing/allocation_report/workflow/confirm-mo>` for the demand "
+"products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:57
+msgid ""
+"Open the confirmed |MO| and :ref:`use the allocation report <manufacturing/"
+"allocation_report/workflow/report>` to allocate units."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:59
+msgid ""
+":ref:`Validate the replenished units <manufacturing/allocation_report/"
+"workflow/validate-replenishment>` into stock."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:61
 msgid ""
-"If there **are not** any existing |SOs| and |MOs| that require the product, "
-"the :icon:`fa-list` :guilabel:`Allocation` smart button does not appear, "
-"even when the |MO| has been marked as done."
+":ref:`Validate the outgoing units <manufacturing/allocation_report/workflow/"
+"validate-outgoing>` to fulfill the original demand."
 msgstr ""
-"Nếu **không có** bất kỳ |SOs| và |MOs| hiện có nào yêu cầu sản phẩm, nút "
-"thông minh :icon:`fa-list` :guilabel:`Phân bổ` sẽ không xuất hiện, ngay cả "
-"khi |MO| đã được đánh dấu là hoàn thành."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:64
 msgid ""
-"Click the :icon:`fa-list` :guilabel:`Allocation` smart button to open "
-"the :guilabel:`MRP Reception Report` for the |MO|. This report lists open "
-"delivery orders or |MOs|, depending on the type of product produced in the "
-"original |MO|."
+"The process begins by ensuring that an outstanding demand for the product "
+"exists. Confirming an |MO| manufactures the stock necessary to meet the "
+"demand in the originating |SO|/|MO|."
 msgstr ""
-"Nhấp vào nút thông minh :icon:`fa-list` :guilabel:`Phân bổ` để "
-"mở :guilabel:`Báo cáo tiếp nhận MRP` cho |MO|. Báo cáo này liệt kê các đơn "
-"giao hàng đang mở hoặc |MOs|, tùy thuộc vào loại sản phẩm được sản xuất "
-"trong |MO| ban đầu."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:69
-msgid "Allocate to delivery order"
-msgstr "Phân bổ cho đơn giao hàng"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:71
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:67
 msgid ""
-"If the |MO| contains a finished product, the report lists any open delivery "
-"orders for which quantities of the product have yet to be reserved."
+"On the confirmed |MO|, users can open the allocation report, which displays "
+"the incoming product. Next to the product is a list of all applicable "
+"outgoing transfers (i.e., originating |SOs|/|MOs| containing the product) to "
+"which the manufactured units can be assigned. Assigning these units does not "
+"move any inventory but instead allows the user to flexibly choose which "
+"demands to prioritize before fulfilling them."
 msgstr ""
-"Nếu |MO| chứa một sản phẩm hoàn thiện, báo cáo sẽ liệt kê bất kỳ đơn giao "
-"hàng đang mở nào mà số lượng sản phẩm chưa được dành riêng."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:74
 msgid ""
-"An |MO| is created to produce three units of a *rocking chair*. Clicking "
-"the :guilabel:`Allocation` smart button on the |MO| opens an allocation "
-"report that lists open delivery orders that require one or more rocking "
-"chairs."
+"If multiple products are manufactured through the |MO|, the allocation "
+"report lists all products with originating |SOs|/|MOs| available for "
+"reservation."
 msgstr ""
-"Một |MO| được tạo để sản xuất ba đơn vị *ghế bập bênh*. Nhấp vào nút thông "
-"minh :guilabel:`Phân bổ` trên |MO| sẽ mở một báo cáo phân bổ liệt kê các đơn "
-"giao hàng đang mở yêu cầu một hoặc nhiều ghế bập bênh."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:79
-msgid ""
-"Click the :guilabel:`Assign All` button to the right of a specific order to "
-"assign products for each quantity required to fulfill that order."
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:80
+msgid "Create and confirm demand"
 msgstr ""
-"Nhấp vào nút :guilabel:`Chỉ định tất cả` ở bên phải của một đơn hàng cụ thể "
-"để chỉ định sản phẩm cho mỗi số lượng cần thiết để thực hiện đơn hàng đó."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:82
 msgid ""
-"If an order requires one quantity of four units of the product, and one "
-"quantity of one unit of the product, clicking :guilabel:`Assign All` assigns "
-"five units of the product to fulfill both quantities."
+"Manufactured stock can only be reserved through an allocation report for "
+"previously confirmed |SOs| or |MOs| where the product is used as a "
+"component. If no such record exists, create it."
 msgstr ""
-"Nếu đơn hàng yêu cầu một số lượng bốn đơn vị sản phẩm và một số lượng một "
-"đơn vị sản phẩm, việc nhấp vào :guilabel:`Phân bổ tất cả` sẽ phân bổ năm đơn "
-"vị sản phẩm để hoàn thành cả hai số lượng."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:86
 msgid ""
-"Alternatively, click :guilabel:`Assign` next to a specific quantity to only "
-"assign products to that quantity, and not any others in the order."
+"To ensure that Odoo can properly create allocations, verify that the product "
+"has the :guilabel:`Track Inventory` option enabled on the product form as "
+"well as a :doc:`bill of materials <../basic_setup/bill_configuration>` "
+"configured."
 msgstr ""
-"Ngoài ra, nhấp vào :guilabel:`Phân bổ` bên cạnh một số lượng cụ thể để chỉ "
-"phân bổ sản phẩm cho số lượng đó và không phân bổ cho bất kỳ số lượng nào "
-"khác trong đơn hàng."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:91
-msgid ""
-"If an order requires one quantity of four units of the product, and one "
-"quantity of one unit of the product, clicking :guilabel:`Assign` next to the "
-"quantity of one unit assigns a product to that quantity, but leaves the "
-"quantity of four units without any products assigned."
+msgid "Create |SOs|"
 msgstr ""
-"Nếu đơn hàng yêu cầu một số lượng bốn đơn vị sản phẩm và một số lượng một "
-"đơn vị sản phẩm, việc nhấp vào :guilabel:`Phân bổ` bên cạnh số lượng một đơn "
-"vị sẽ phân bổ sản phẩm cho số lượng đó, nhưng để số lượng bốn đơn vị không "
-"có bất kỳ sản phẩm nào được phân bổ."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:93
+msgid ""
+"If no confirmed |SO| exists for the product, :doc:`create it <../../../sales/"
+"sales/sales_quotations/create_quotations>` by opening a new sales quotation "
+"form. In the order lines, ensure that the requested :guilabel:`Product` and "
+"its :guilabel:`Quantity` are specified. Then, confirm the quotation by "
+"clicking :guilabel:`Confirm Order`. This turns the quotation into a "
+"confirmed |SO| and generates a delivery order, accessible via the :icon:`fa-"
+"truck` :guilabel:`Delivery` smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:100
+msgid ""
+"Repeat this process if there are multiple customers demanding the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:103
+msgid "Create |MOs|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:105
+msgid ""
+"If there is no confirmed |MO| with the product as a component, create it by "
+"opening a new |MO| form. In the component lines, add the "
+"requested :guilabel:`Product` and the quantity :guilabel:`To Consume`, then "
+"confirm the |MO| by clicking :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:109
+msgid ""
+"Repeat this process if there are multiple |MOs| requiring the component."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:114
+msgid "Create and confirm |MO|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:116
+msgid ""
+"After confirming existing demand for the product, replenish the necessary "
+"stock by manufacturing it through an |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:119
+msgid ""
+"To do so, navigate to :menuselection:`Manufacturing app --> Operations --> "
+"Manufacturing Orders`. Then, click :guilabel:`New` to open a new |MO| form. "
+"Select the :guilabel:`Product`, the :guilabel:`Quantity` to replenish, and "
+"the :guilabel:`Bill of Materials`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:123
+msgid "Finally, :guilabel:`Confirm` the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:128
+msgid "Allocate using the report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:130
+msgid ""
+"After confirming the |MO| for the product, open the allocation report to "
+"assign the replenishment to any available originating |SOs|/|MOs| requiring "
+"the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:133
+msgid ""
+"The :icon:`fa-list` :guilabel:`Allocation` smart button appears directly at "
+"the top of the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:136
+msgid ""
+"The :icon:`fa-list` :guilabel:`Allocation` smart button also appears on an "
+"unconfirmed |MO|. However, units cannot be assigned unless the |MO| is "
+"confirmed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:142
+msgid "Allocation report dashboard"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:144
+msgid ""
+"The *MRP Reception Report* page displays a list of products to which the "
+"units on this |MO| can be allocated, grouped by the |SOs|/|MOs| on which "
+"they appear. A link to each |SO|/|MO| is included, along with "
+"its :guilabel:`Expected Delivery`, and an option to assign all units to it. "
+"Under each |SO|/|MO| header is a list of its products, including its name, "
+"quantity, and the option to assign the quantity of units to this specific "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:151
+msgid ""
+"|SOs|/|MOs| in the allocation report are listed in chronological order of "
+"their associated delivery or scheduled date (i.e., the |SO| with the oldest "
+"delivery order or the |MO| with the oldest scheduled date appears first)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:None
 msgid "The MRP Reception Report for an MO containing finished products."
 msgstr "Báo cáo nhận hàng MRP cho MO chứa thành phẩm."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:100
-msgid "Allocate to MO"
-msgstr "Phân bổ cho MO"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:102
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:163
 msgid ""
-"If the |MO| contains a component, the report lists any open |MOs| for which "
-"quantities of the component have yet to be reserved."
+"To allocate units for a product in an |SO|/|MO|, click :guilabel:`Assign` in "
+"the product's corresponding row. To undo allocation, "
+"click :guilabel:`Unassign`."
 msgstr ""
-"Nếu |MO| chứa một linh kiện, báo cáo sẽ liệt kê bất kỳ |MOs| đang mở nào mà "
-"số lượng linh kiện vẫn chưa được dự trữ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:166
 msgid ""
-"An |MO| is created to produce three units of *wood*, which is used as a "
-"component for the *rocking chair* product. Clicking "
-"the :guilabel:`Allocation` smart button on the |MO| opens an allocation "
-"report that lists open rocking chair |MOs| that require one or more pieces "
-"of wood."
+"Alternatively, to allocate all available units for all products in an |SO|/|"
+"MO|, click :guilabel:`Assign All` in the corresponding row of the |SO|/|MO|. "
+"To assign all available units across all |SOs|/|MOs|, "
+"click :guilabel:`Assign All` at the top."
 msgstr ""
-"Một |MO| được tạo để sản xuất ba đơn vị *wood*, được sử dụng làm linh kiện "
-"cho sản phẩm *rocking chair*. Nhấp vào nút thông minh :guilabel:`Phân bổ` "
-"trên |MO| sẽ mở báo cáo phân bổ liệt kê các |MOs| rocking chair đang mở yêu "
-"cầu một hoặc nhiều miếng gỗ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:170
 msgid ""
-"Click the :guilabel:`Assign All` or :guilabel:`Assign` button to the right "
-"of a specific |MO| to assign components to that |MO|."
+"The quantity of reservable units for each product is automatically "
+"calculated in order, starting from the oldest |SO|/|MO|. This allows users "
+"to allocate as many units as available on the |MO| to fulfill the quantity "
+"specified on the |SO|/|MO|."
 msgstr ""
-"Nhấp vào nút :guilabel:`Phân bổ tất cả` hoặc :guilabel:`Phân bổ` ở bên phải "
-"một |MO| cụ thể để phân bổ linh kiện cho |MO| đó."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:174
+msgid ""
+"After allocation, originating |SOs| with allocated units are automatically "
+"linked to the replenishing |MO|. Users can access this directly from the |"
+"SO| via the :icon:`fa-wrench` :guilabel:`Manufacturing` smart button. "
+"Similarly, the linked |SO| can also be accessed from the |MO| via "
+"the :icon:`fa-dollar` :guilabel:`Sale` smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:182
+msgid "Validate replenished units"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:184
+msgid ""
+"After allocating the desired units, navigate to the replenishing |MO| and "
+"click :guilabel:`Produce All` to produce the finished product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:187
+msgid ""
+"Finished products from completed |MOs| become directly available in stock in "
+"the case of :doc:`one-step <../basic_setup/one_step_manufacturing>` "
+"or :doc:`two-step <../basic_setup/two_step_manufacturing>` manufacturing. "
+"For :doc:`three-step <../basic_setup/three_step_manufacturing>` "
+"manufacturing, however, additional transfer moves must be made to transfer "
+"the product from the manufacturing location to inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:193
+msgid ""
+"To validate the incoming transfer on the |MO|, click the :icon:`fa-"
+"truck` :guilabel:`Transfers` smart button at the top. Then, open the "
+"relevant order and click :guilabel:`Validate` to receive the product into "
+"stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:200
+msgid "Validate outgoing move"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:202
+msgid ""
+"After validating the incoming stock (if applicable), fulfill the original |"
+"SO|/|MO| demand."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:205
+msgid "Fulfill |SO| order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:207
+msgid ""
+"To fulfill the demand on an |SO|, navigate to the |SO|, then click :icon:`fa-"
+"truck` :guilabel:`Delivery` to open the delivery order. Note that the "
+"*Operations* tab is populated with a line showing the "
+"allocated :guilabel:`Product` and its allocated :guilabel:`Quantity`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:215
+msgid "Fulfill |MO| order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:217
+msgid ""
+"To fulfill a component demand on an |MO|, navigate to the |MO|. The "
+"replenished components in the previous step are now marked "
+"as :guilabel:`Available` for production on this |MO|. "
+"Click :guilabel:`Produce` to manufacture the final product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:222
+msgid ""
+"The following example demonstrates how an allocation report is used to "
+"assign stock for a customer |SO| of higher priority."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:228
+msgid ""
+"No stock exists for the *Chair*, so the company creates and confirms |MO| A "
+"to manufacture the product. Only 100 units of the *Chair* can be produced "
+"this week. So, another |MO| B is created to replenish the remaining 50 units "
+"next week."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:232
+msgid ""
+"After confirming the |MOs|, the company uses the allocation reports for each "
+"|MO|. |MO| A's report lists the |SO| for Customer A with 75 reservable "
+"units, then Customer B's |SO| with 25 reservable units. |MO| B's report "
+"lists the |SO| for Customer A with 50 reservable units."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:236
+msgid ""
+"Because the company wants to prioritize Customer B's order, they want to "
+"ensure Customer B receives 75 units from |MO| A, which can guarantee faster "
+"delivery. To do so, they first open |MO| B's allocation report and assign 50 "
+"units to Customer A's |SO|. Odoo then recalculates |MO| A's allocation "
+"report, updating Customer A's previous quantity of 75 units to 25 units and "
+"Customer B's quantity to 75 units."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:242
+msgid ""
+"The user can now assign all 75 units from |MO| A to fulfill Customer B's "
+"delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:252
+msgid ""
+"After allocating the desired units, click :guilabel:`Print` at the top to "
+"download a PDF of the allocation report for the allocated units. The report "
+"includes a scannable barcode at the top for the receipt or |MO|."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:None
-msgid "The MRP Reception Report for an MO containing components."
-msgstr "Báo cáo nhận hàng MRP cho MO chứa linh kiện."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:118
-msgid "Unassign products"
-msgstr "Hủy phân bổ sản phẩm"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:120
-msgid ""
-"After assigning products to a quantity within a delivery order, or "
-"components to an |MO|, the :guilabel:`Assign` button turns into "
-"an :guilabel:`Unassign` button. Click :guilabel:`Unassign` to unreserve the "
-"assigned products from that quantity, making them available for other "
-"quantities."
+msgid "The printed report from an allocation report."
 msgstr ""
-"Sau khi phân bổ sản phẩm cho một số lượng trong lệnh giao hàng hoặc linh "
-"kiện cho một |MO|, nút :guilabel:`Phân bổ` sẽ chuyển thành "
-"nút :guilabel:`Hủy phân bổ`. Nhấp vào :guilabel:`Hủy phân bổ` để hủy dự trữ "
-"các sản phẩm đã phân bổ khỏi số lượng đó, giúp chúng có sẵn cho các số lượng "
-"khác."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:259
 msgid ""
-"After clicking :guilabel:`Assign All` or :guilabel:`Assign`, "
-"the :guilabel:`Print Labels` or :guilabel:`Print Label` button to the right "
-"of either button becomes selectable. Selecting either button generates and "
-"downloads a PDF document with one label for each product that was assigned. "
-"These labels are used to designate each product as being reserved for that "
-"specific order."
+"If products are allocated to specific orders, users can also "
+"click :guilabel:`Print Labels` to print an individual label for each unit of "
+"the allocated products. Each label displays the name of the product, its "
+"associated |SO|/|MO| number, and its customer (for |SOs|)."
 msgstr ""
-"Sau khi nhấp :guilabel:`Chỉ định tất cả` hoặc :guilabel:`Chỉ định`, "
-"nút :guilabel:`In nhãn` ở bên phải sẽ khả dụng. Việc chọn nút này sẽ tạo và "
-"tải xuống tài liệu PDF chứa nhãn cho từng sản phẩm đã được gán. Những nhãn "
-"này được sử dụng để đánh dấu từng sản phẩm là đã được dự trữ cho đơn hàng cụ "
-"thể đó."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:None
 msgid ""
@@ -61596,6 +61685,584 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "
+#~ "recognized `code managed by GS1 <https://www.unspsc.org/>`_, that "
+#~ "**must** be purchased in order to use."
+#~ msgstr ""
+#~ "Nếu có, hãy nhập :guilabel:`Danh mục UNSPSC`, đây là `mã được công nhận "
+#~ "trên toàn cầu do GS1 <https://www.unspsc.org/>`_ quản lý, **phải** mua mã "
+#~ "này để sử dụng."
+
+#~ msgid "In stock products listed on the Inventory adjustments page."
+#~ msgstr ""
+#~ "Sản phẩm có sẵn trong kho được liệt kê trên trang Điều chỉnh tồn kho."
+
+#~ msgid ""
+#~ "The :guilabel:`Inventory Adjustments` page lists all products that are "
+#~ "currently in stock."
+#~ msgstr ""
+#~ "Trang :guilabel:`Điều chỉnh tồn kho` liệt kê tất cả sản phẩm hiện đang có "
+#~ "trong kho."
+
+#~ msgid ""
+#~ "Only products with a quantity greater than zero are listed on "
+#~ "the :guilabel:`Inventory Adjustments` page. To view product lines with "
+#~ "zero current quantity, go to :menuselection:`Inventory app --> Reporting "
+#~ "--> Stock`."
+#~ msgstr ""
+#~ "Chỉ những sản phẩm có số lượng lớn hơn 0 mới được liệt kê trên "
+#~ "trang :guilabel:`Điều chỉnh tồn kho`. Để xem các dòng sản phẩm có số "
+#~ "lượng hiện tại bằng 0, truy cập :menuselection:`Ứng dụng Tồn kho --> Báo "
+#~ "cáo --> Tồn kho`."
+
+#~ msgid "For each product line, the following information is listed:"
+#~ msgstr "Đối với mỗi dòng sản phẩm, các thông tin sau được liệt kê:"
+
+#~ msgid ""
+#~ ":guilabel:`Location`: the specific location in the warehouse where a "
+#~ "product is stored. This column is **only** visible if :doc:`Storage "
+#~ "Locations <use_locations>` are enabled."
+#~ msgstr ""
+#~ ":guilabel:`Vị trí`: vị trí cụ thể trong kho nơi sản phẩm được lưu trữ. "
+#~ "Cột này **chỉ** hiển thị nếu :doc:`vị trí lưu kho <use_locations>`được "
+#~ "bật."
+
+#~ msgid ":guilabel:`Favorite`: identifies products that have been favorited."
+#~ msgstr ""
+#~ ":guilabel:`Yêu thích`: xác định các sản phẩm đã được đánh dấu yêu thích."
+
+#~ msgid ""
+#~ ":guilabel:`Product`: the product whose quantity is listed on the "
+#~ "inventory adjustment line."
+#~ msgstr ""
+#~ ":guilabel:`Sản phẩm`: sản phẩm có số lượng được liệt kê trên dòng điều "
+#~ "chỉnh tồn kho."
+
+#~ msgid ""
+#~ ":guilabel:`Lot/Serial Number`: the tracking identifier assigned to the "
+#~ "specific product listed. It can contain letters, numbers, or a "
+#~ "combination of both."
+#~ msgstr ""
+#~ ":guilabel:`Số lô/sê-ri`: mã định danh theo dõi được gán cho sản phẩm cụ "
+#~ "thể được liệt kê. Nó có thể chứa các chữ cái, con số, hoặc kết hợp cả hai."
+
+#~ msgid ""
+#~ "If a specific product has a quantity of more than `1.00` in stock, and "
+#~ "more than one serial number, or lot number, assigned to it, each uniquely-"
+#~ "identified product is displayed on its own product line with its own lot/"
+#~ "serial number, displayed under the :guilabel:`Lot/Serial Number` column."
+#~ msgstr ""
+#~ "Nếu một sản phẩm cụ thể có số lượng lớn hơn `1` trong kho, và có nhiều "
+#~ "hơn một số sê-ri, hoặc số lô, được gán cho nó, mỗi sản phẩm được xác định "
+#~ "duy nhất sẽ được hiển thị trên dòng sản phẩm riêng của nó với số lô/sê-ri "
+#~ "riêng, được hiển thị dưới cột :guilabel:`Số lô/sê-ri`."
+
+#~ msgid ""
+#~ ":guilabel:`Expiration Date`: the date on which the goods with this serial "
+#~ "number are due to expire."
+#~ msgstr ""
+#~ ":guilabel:`Ngày hết hạn`: ngày mà hàng hóa với số sê-ri này sẽ hết hạn."
+
+#~ msgid ":guilabel:`Last Count Date`: the last time the quantity was updated."
+#~ msgstr ""
+#~ ":guilabel:`Ngày đếm gần nhất`: lần cuối cùng số lượng được cập nhật."
+
+#~ msgid ":guilabel:`Package`: the package containing the quantity listed."
+#~ msgstr ":guilabel:`Kiện hàng`: kiện hàng chứa số lượng được liệt kê."
+
+#~ msgid ""
+#~ ":guilabel:`On Hand Quantity`: the quantity of the product currently "
+#~ "recorded in the database."
+#~ msgstr ""
+#~ ":guilabel:`Số lượng Tồn kho`: số lượng sản phẩm hiện đang được ghi nhận "
+#~ "trong cơ sở dữ liệu."
+
+#~ msgid ""
+#~ ":guilabel:`Unit`: the *unit of measure* in which the product is measured. "
+#~ "Unless otherwise specified (e.g., in :guilabel:`Pounds` "
+#~ "or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` "
+#~ "is :guilabel:`Units`."
+#~ msgstr ""
+#~ ":guilabel:`Đơn vị`: *đơn vị đo lường* dùng để đo sản phẩm. Trừ khi được "
+#~ "chỉ định khác (ví dụ: :guilabel:`Pound` "
+#~ "hoặc :guilabel:`Ounce`), :abbr:`ĐVĐ (Đơn vị đo lường)` mặc định "
+#~ "là :guilabel:`Đơn vị`."
+
+#~ msgid ""
+#~ ":guilabel:`Counted Quantity`: the real quantity counted during an "
+#~ "inventory count. This field is left blank by default but can be changed, "
+#~ "depending on if it matches the :guilabel:`On Hand Quantity` or not."
+#~ msgstr ""
+#~ ":guilabel:`Số lượng đã kiểm`: số lượng thực tế được kiểm trong lần kiểm "
+#~ "kê. Trường này để trống theo mặc định nhưng có thể thay đổi, tùy thuộc "
+#~ "vào việc có khớp với :guilabel:`Số lượng trong kho` hay không."
+
+#~ msgid ""
+#~ ":guilabel:`Difference`: the difference between the :guilabel:`On Hand "
+#~ "Quantity` and :guilabel:`Counted Quantity`, once an inventory adjustment "
+#~ "is made. The difference is automatically calculated after every inventory "
+#~ "adjustment."
+#~ msgstr ""
+#~ ":guilabel:`Chênh lệch`: chênh lệch giữa :guilabel:`Số lượng trong kho` "
+#~ "và :guilabel:`Số lượng đã kiểm` sau khi thực hiện điều chỉnh tồn kho. "
+#~ "Chênh lệch được tự động tính toán sau mỗi lần điều chỉnh tồn kho."
+
+#~ msgid ""
+#~ ":guilabel:`Scheduled Date`: the date at which a count should be made. If "
+#~ "not otherwise specified, this date will default to the 31st of December "
+#~ "of the current year."
+#~ msgstr ""
+#~ ":guilabel:`Ngày lên lịch`: ngày cần thực hiện kiểm kê. Nếu không được chỉ "
+#~ "định khác, ngày này sẽ mặc định là ngày 31 tháng 12 của năm hiện tại."
+
+#~ msgid ""
+#~ ":guilabel:`User`: the person assigned to the count in the database. This "
+#~ "can either be the person physically counting the inventory, or applying "
+#~ "the count in the database."
+#~ msgstr ""
+#~ ":guilabel:`Người dùng`: người được gán cho lần đếm trong cơ sở dữ liệu. "
+#~ "Người này có thể là người trực tiếp kiểm đếm hàng tồn kho hoặc người nhập "
+#~ "kết quả kiểm đếm vào cơ sở dữ liệu."
+
+#~ msgid ""
+#~ "Additional columns are hidden by default. To reveal these columns, click "
+#~ "the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right "
+#~ "of the form's top row, and reveal any desired column by ticking the "
+#~ "checkbox next to that option."
+#~ msgstr ""
+#~ "Các cột bổ sung được ẩn theo mặc định. Để hiển thị các cột này, nhấp vào "
+#~ "biểu tượng :icon:`oi-settings-adjust` :guilabel:`(điều chỉnh)` ở bên phải "
+#~ "của hàng trên cùng của biểu mẫu và hiển thị bất kỳ cột mong muốn nào bằng "
+#~ "cách đánh dấu vào ô chọn bên cạnh tùy chọn đó."
+
+#~ msgid ""
+#~ "To create a new inventory adjustment from the :menuselection:`Inventory "
+#~ "Adjustments` page, click :guilabel:`New`. Doing so creates a new, blank "
+#~ "inventory adjustment line at the bottom of the page."
+#~ msgstr ""
+#~ "Để tạo điều chỉnh tồn kho mới từ trang :menuselection:`Điều chỉnh tồn "
+#~ "kho`, nhấp :guilabel:`Mới`. Thao tác này sẽ tạo một dòng điều chỉnh tồn "
+#~ "kho trống mới ở cuối trang."
+
+#~ msgid ""
+#~ "Once all changes have been made to the new inventory adjustment line, "
+#~ "click away from the line. Doing so saves the adjustment, and moves the "
+#~ "line to the top of the page."
+#~ msgstr ""
+#~ "Sau khi thực hiện xong tất cả thay đổi cho dòng điều chỉnh tồn kho mới, "
+#~ "nhấp ra ngoài dòng đó. Thao tác này sẽ lưu điều chỉnh và di chuyển dòng "
+#~ "lên đầu trang."
+
+#~ msgid ""
+#~ "|Ia| can be completed in several ways. The first way is to click "
+#~ "the :guilabel:`Apply` button on the line at the far right of the page. "
+#~ "The second way is to tick the checkbox on the far left of the line. Doing "
+#~ "so reveals new button options at the top of the page, one of which is "
+#~ "an :guilabel:`Apply` button. Clicking this button instead causes "
+#~ "an :guilabel:`Inventory Adjustment` pop-up window to appear."
+#~ msgstr ""
+#~ "|Ia| có thể được hoàn thành theo nhiều cách. Cách đầu tiên là nhấp vào "
+#~ "nút :guilabel:`Áp dụng` ở cuối dòng bên phải trang. Cách thứ hai là tích "
+#~ "vào ô chọn ở phía bên trái của dòng. Thao tác này sẽ hiển thị các nút tùy "
+#~ "chọn mới ở đầu trang, trong đó có nút :guilabel:`Áp dụng`. Nhấp vào nút "
+#~ "này sẽ hiển thị cửa sổ bật lên :guilabel:`Điều chỉnh tồn kho`."
+
+#~ msgid ""
+#~ "From this pop-up menu, a reference or reason can be assigned to the "
+#~ "inventory adjustment. By default, the :guilabel:`Inventory Reason` field "
+#~ "is pre-populated with today's date, the date the adjustment is being made "
+#~ "on, but can be changed to reflect whatever reference or reason is desired."
+#~ msgstr ""
+#~ "Từ menu bật lên này, có thể gán tham chiếu hoặc lý do cho điều chỉnh tồn "
+#~ "kho. Theo mặc định, trường :guilabel:`Lý do điều chỉnh` được điền sẵn với "
+#~ "ngày hôm nay, ngày thực hiện điều chỉnh, nhưng có thể thay đổi để phản "
+#~ "ánh bất kỳ tham chiếu hoặc lý do mong muốn nào."
+
+#~ msgid ""
+#~ "|Ia| can also be used to relocate products to different storage "
+#~ "locations, or to different packages. To relocate a product, tick the "
+#~ "checkbox at the far left of the line for the desired product. At the top "
+#~ "of the page, click the :guilabel:`Relocate` button. Doing so opens a pop-"
+#~ "up."
+#~ msgstr ""
+#~ "|Ia| cũng có thể được sử dụng để chuyển sản phẩm đến các vị trí lưu trữ "
+#~ "khác nhau hoặc đến các gói hàng khác nhau. Để chuyển sản phẩm, đánh dấu "
+#~ "vào ô chọn ở bên trái của dòng cho sản phẩm mong muốn. Ở đầu trang, nhấp "
+#~ "nút :guilabel:`Chuyển vị trí`. Thao tác này sẽ mở một cửa sổ bật lên."
+
+#~ msgid ""
+#~ "Only users with *Administrator* rights can perform product relocations."
+#~ msgstr ""
+#~ "Chỉ những người dùng có quyền *Quản trị viên* mới có thể thực hiện việc "
+#~ "di chuyển sản phẩm."
+
+#~ msgid ""
+#~ "|Ia| can also be used to clear inventory counts by setting the quantity "
+#~ "to zero. To do this, tick the checkbox at the far left of the line for "
+#~ "the desired product. At the top of the page, click the :icon:`fa-"
+#~ "gear` :guilabel:`Actions` button to open a drop-down menu. "
+#~ "Click :guilabel:`Set to 0`. Once this is complete, :ref:`apply <inventory/"
+#~ "apply-adjustment>` the adjusted count."
+#~ msgstr ""
+#~ "|Ia| cũng có thể được sử dụng để xóa số lượng tồn kho bằng cách đặt số "
+#~ "lượng về 0. Để thực hiện, tích vào hộp kiểm ở phía ngoài cùng bên trái "
+#~ "của dòng sản phẩm mong muốn. Ở phía trên cùng của trang, nhấp vào "
+#~ "nút :icon:`fa-gear` :guilabel:`Tác vụ` để mở menu thả xuống. "
+#~ "Chọn :guilabel:`Đặt là 0`. Sau khi hoàn tất, hãy :ref:`áp dụng <inventory/"
+#~ "apply-adjustment>` số lượng đã điều chỉnh."
+
+#~ msgid ""
+#~ "Sometimes a count occurs, but cannot be applied in the database right "
+#~ "away. In the time between the actual count and applying the inventory "
+#~ "adjustment, product moves can occur. In that case, the on-hand quantity "
+#~ "in the database can change and no longer be consistent with the counted "
+#~ "quantity. As an extra precaution, Odoo asks for confirmation before "
+#~ "applying the inventory adjustment."
+#~ msgstr ""
+#~ "Đôi khi việc kiểm kê được thực hiện nhưng không thể áp dụng ngay vào cơ "
+#~ "sở dữ liệu. Trong khoảng thời gian giữa kiểm kê thực tế và khi thực hiện "
+#~ "điều chỉnh tồn kho, các điều chuyển hàng hóa có thể xảy ra. Khi đó, số "
+#~ "lượng tồn kho hiện có trong cơ sở dữ liệu có thể thay đổi và không còn "
+#~ "khớp với số lượng đã kiểm kê. Để đảm bảo độ chính xác, Odoo sẽ yêu cầu "
+#~ "xác nhận trước khi áp dụng điều chỉnh tồn kho."
+
+#~ msgid ""
+#~ "Tick the checkbox at the far left of the line for the desired product. At "
+#~ "the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button "
+#~ "to open a drop-down menu, and click :guilabel:`Revert Inventory "
+#~ "Adjustment`."
+#~ msgstr ""
+#~ "Đánh dấu vào hộp kiểm ở phía bên trái của dòng sản phẩm mong muốn. Ở đầu "
+#~ "trang, nhấp vào nút :icon:`fa-gear` :guilabel:`Thao tác` để mở menu thả "
+#~ "xuống, và nhấp vào :guilabel:`Hoàn tác điều chỉnh tồn kho`."
+
+#~ msgid ""
+#~ "Then, select the desired products to be counted by ticking the checkbox "
+#~ "on the far left of each product line."
+#~ msgstr ""
+#~ "Tiếp theo, chọn các sản phẩm muốn kiểm đếm bằng cách đánh dấu vào ô "
+#~ "checkbox ở bên trái mỗi dòng sản phẩm."
+
+#~ msgid ""
+#~ "To request a count of **all** products currently in stock, tick the "
+#~ "checkbox at the top of the table, in the header row next to "
+#~ "the :guilabel:`Location` label. This selects **all** product lines."
+#~ msgstr ""
+#~ "Để yêu cầu kiểm đếm **tất cả** sản phẩm hiện đang có trong kho, đánh dấu "
+#~ "vào hộp kiểm ở đầu bảng, trong hàng tiêu đề bên cạnh nhãn :guilabel:`Vị "
+#~ "trí`. Thao tác này chọn **tất cả** các dòng sản phẩm."
+
+#~ msgid ":guilabel:`Inventory Date`: the planned date of the count."
+#~ msgstr ":guilabel:`Ngày kiểm kê`: ngày dự kiến thực hiện kiểm đếm."
+
+#~ msgid ":guilabel:`User`: the user responsible for the count."
+#~ msgstr ""
+#~ ":guilabel:`Người dùng`: người dùng chịu trách nhiệm về việc kiểm đếm."
+
+#~ msgid ""
+#~ ":guilabel:`Accounting Date`: the date at which the inventory adjustment "
+#~ "will be accounted."
+#~ msgstr ""
+#~ ":guilabel:`Ngày hạch toán`: ngày mà điều chỉnh tồn kho sẽ được hạch toán."
+
+#~ msgid ""
+#~ ":guilabel:`Count`: to leave the on-hand quantity of each product line "
+#~ "blank, select :guilabel:`Leave Empty`. To pre-fill the on-hand quantity "
+#~ "of each product line with the current value recorded in the database, "
+#~ "select :guilabel:`Set Current Value`."
+#~ msgstr ""
+#~ ":guilabel:`Kiểm đếm`: để để trống số lượng tồn kho của từng dòng sản "
+#~ "phẩm, chọn :guilabel:`Để trống`. Để điền sẵn số lượng tồn kho của từng "
+#~ "dòng sản phẩm với giá trị hiện tại được ghi trong cơ sở dữ liệu, "
+#~ "chọn :guilabel:`Đặt giá trị hiện tại`."
+
+#~ msgid ""
+#~ "Details regarding inventory adjustment can be viewed by clicking "
+#~ "the :icon:`fa-history` :guilabel:`History` icon."
+#~ msgstr ""
+#~ "Chi tiết về điều chỉnh tồn kho có thể được xem bằng cách nhấn vào biểu "
+#~ "tượng :icon:`fa-history` :guilabel:`Lịch sử`."
+
+#~ msgid ""
+#~ "The user who performed the count is listed in parenthesis in "
+#~ "the :guilabel:`Reference` field, while the user who applied the count is "
+#~ "listed in the :guilabel:`Done By`."
+#~ msgstr ""
+#~ "Người dùng thực hiện kiểm đếm được liệt kê trong ngoặc đơn ở "
+#~ "trường :guilabel:`Tham chiếu`, trong khi người dùng áp dụng kết quả kiểm "
+#~ "đếm được liệt kê ở trường :guilabel:`Hoàn tất bởi`."
+
+#~ msgid ""
+#~ "An inventory audit can be accessed from the :guilabel:`Inventory "
+#~ "Adjustment` page. This audit includes an inventory record both before and "
+#~ "after a count is completed, to track what changed."
+#~ msgstr ""
+#~ "Có thể truy cập kiểm toán tồn kho từ trang :guilabel:`Điều chỉnh tồn "
+#~ "kho`. Kiểm toán này bao gồm bản ghi tồn kho cả trước và sau khi hoàn tất "
+#~ "kiểm đếm, để theo dõi những gì đã thay đổi."
+
+#~ msgid ""
+#~ "On the :guilabel:`Inventory Adjustment` page, tick the checkbox at the "
+#~ "top-left of the page to select all of the lines. Then click "
+#~ "the :guilabel:`Request a Count` button. On the pop-up, "
+#~ "set :guilabel:`Count` to :guilabel:`Set Current Value`, then "
+#~ "click :guilabel:`Confirm`."
+#~ msgstr ""
+#~ "Trên trang :guilabel:`Điều chỉnh tồn kho`, đánh dấu vào hộp kiểm ở góc "
+#~ "trên bên trái của trang để chọn tất cả các dòng. Sau đó nhấp vào "
+#~ "nút :guilabel:`Yêu cầu kiểm đếm`. Trên cửa sổ bật lên, "
+#~ "đặt :guilabel:`Kiểm đếm` thành :guilabel:`Đặt giá trị hiện tại`, sau đó "
+#~ "nhấp :guilabel:`Xác nhận`."
+
+#~ msgid ""
+#~ "When fulfilling sales orders (SOs), or sourcing components for "
+#~ "manufacturing orders (MOs), it is sometimes necessary to prioritize one |"
+#~ "SO| or |MO| over another. In situations where there is insufficient stock "
+#~ "on-hand to fulfill every |SO| or |MO|, ensuring that products and "
+#~ "components are reserved for priority orders is essential."
+#~ msgstr ""
+#~ "Khi thực hiện đơn bán hàng (SO) hoặc tìm nguồn linh kiện cho lệnh sản "
+#~ "xuất (MO), đôi khi cần ưu tiên một |SO| hoặc |MO| hơn cái khác. Trong các "
+#~ "tình huống mà không có đủ hàng tồn kho để thực hiện mọi |SO| hoặc |MO|, "
+#~ "việc đảm bảo sản phẩm và linh kiện được dành riêng cho các đơn hàng ưu "
+#~ "tiên là điều cần thiết."
+
+#~ msgid ""
+#~ "In Odoo *Manufacturing*, allocation reports are used on |MOs| to assign "
+#~ "products to specific sales orders |SOs|, or components to specific |MOs|. "
+#~ "This ensures the products or components are available for those orders, "
+#~ "and are not used by mistake."
+#~ msgstr ""
+#~ "Trong Odoo *Sản xuất*, báo cáo phân bổ được sử dụng trên |MOs| để chỉ "
+#~ "định sản phẩm cho các đơn bán hàng cụ thể |SOs|, hoặc linh kiện cho các |"
+#~ "MOs| cụ thể. Điều này đảm bảo sản phẩm hoặc linh kiện có sẵn cho các đơn "
+#~ "hàng đó và không bị sử dụng nhầm."
+
+#~ msgid ""
+#~ "To use allocation reports, the *Allocation Report for Manufacturing "
+#~ "Orders* feature **must** be enabled. To do so, navigate "
+#~ "to :menuselection:`Manufacturing app --> Configuration --> Settings`, and "
+#~ "tick the checkbox next to :guilabel:`Allocation Report for Manufacturing "
+#~ "Orders`. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Để sử dụng báo cáo phân bổ, tính năng *Báo cáo phân bổ cho lệnh sản xuất* "
+#~ "**phải** được kích hoạt. Để làm điều này, vào :menuselection:`Ứng dụng "
+#~ "Sản xuất --> Cấu hình --> Cài đặt`, và đánh dấu vào ô bên "
+#~ "cạnh :guilabel:`Báo cáo phân bổ cho lệnh sản xuất`. Sau đó, "
+#~ "nhấp :guilabel:`Lưu`."
+
+#~ msgid ""
+#~ "For products that are sold, it is also necessary to configure them so "
+#~ "they can be included in |SOs|. To do so, begin by navigating "
+#~ "to :menuselection:`Inventory --> Products --> Products`, and select a "
+#~ "product. Under the :guilabel:`Product Name` field on the product form, "
+#~ "make sure that the :guilabel:`Can Be Sold` checkbox is ticked."
+#~ msgstr ""
+#~ "Đối với sản phẩm được bán, cần cấu hình để chúng có thể được đưa vào |"
+#~ "SO|. Để thực hiện, hãy bắt đầu bằng cách đi đến :menuselection:`Tồn kho --"
+#~ "> Sản phẩm --> Sản phẩm` và chọn một sản phẩm. Dưới trường :guilabel:`Tên "
+#~ "sản phẩm` trên biểu mẫu sản phẩm, đảm bảo rằng hộp kiểm :guilabel:`Có thể "
+#~ "bán` được chọn."
+
+#~ msgid "Allocate products"
+#~ msgstr "Phân bổ sản phẩm"
+
+#~ msgid ""
+#~ "To allocate products or components from an |MO| to an |SO|, or to a "
+#~ "different |MO|, begin by navigating to :menuselection:`Manufacturing app "
+#~ "--> Operations --> Manufacturing Orders`. Click :guilabel:`New` to create "
+#~ "a new |MO|."
+#~ msgstr ""
+#~ "Để phân bổ sản phẩm hoặc linh kiện từ một |MO| cho một |SO|, hoặc cho một "
+#~ "|MO| khác, bắt đầu bằng cách vào :menuselection:`Ứng dụng Sản xuất --> "
+#~ "Hoạt động --> Lệnh sản xuất`. Nhấp :guilabel:`Mới` để tạo một |MO| mới."
+
+#~ msgid ""
+#~ "On the |MO| form, select a product in the :guilabel:`Product` field, and "
+#~ "specify the quantity to be produced in the :guilabel:`Quantity` field. "
+#~ "Finally, click :guilabel:`Confirm` to confirm the |MO|."
+#~ msgstr ""
+#~ "Trên biểu mẫu |MO|, chọn một sản phẩm trong trường :guilabel:`Sản phẩm`, "
+#~ "và chỉ định số lượng cần sản xuất trong trường :guilabel:`Số lượng`. Cuối "
+#~ "cùng, nhấp :guilabel:`Xác nhận` để xác nhận |MO|."
+
+#~ msgid ""
+#~ "The rest of the allocation workflow depends on the current on-hand "
+#~ "quantity of the product being manufactured, and whether or not there are "
+#~ "any |SOs| or |MOs| which require the product, but have not already been "
+#~ "allocated units."
+#~ msgstr ""
+#~ "Phần còn lại của quy trình phân bổ phụ thuộc vào số lượng hiện có trong "
+#~ "kho của sản phẩm đang được sản xuất, và liệu có bất kỳ |SOs| hoặc |MOs| "
+#~ "nào yêu cầu sản phẩm nhưng chưa được phân bổ đơn vị hay không."
+
+#~ msgid ""
+#~ "If there **are** existing |SOs| and |MOs| that require the product, "
+#~ "**and** there are too few units of the product on-hand to fulfill those "
+#~ "orders, then an :icon:`fa-list` :guilabel:`Allocation` smart button "
+#~ "appears at the top of the page as soon as the |MO| is confirmed."
+#~ msgstr ""
+#~ "Nếu **có** các |SOs| và |MOs| hiện có yêu cầu sản phẩm, **và** có quá ít "
+#~ "đơn vị sản phẩm trong kho để thực hiện các đơn hàng đó, thì nút thông "
+#~ "minh :icon:`fa-list` :guilabel:`Phân bổ` sẽ xuất hiện ở đầu trang ngay "
+#~ "sau khi |MO| được xác nhận."
+
+#~ msgid ""
+#~ "If there **are** existing |SOs| and |MOs| that require the product, "
+#~ "**and** there are enough units of the product on-hand to fulfill those "
+#~ "orders, then the :icon:`fa-list` :guilabel:`Allocation` smart button only "
+#~ "appears at the top of the page once the |MO| has been marked as done, by "
+#~ "clicking :guilabel:`Produce All`."
+#~ msgstr ""
+#~ "Nếu **có** các |SOs| và |MOs| hiện có yêu cầu sản phẩm, **và** có đủ đơn "
+#~ "vị sản phẩm trong kho để thực hiện các đơn hàng đó, thì nút thông "
+#~ "minh :icon:`fa-list` :guilabel:`Phân bổ` chỉ xuất hiện ở đầu trang sau "
+#~ "khi |MO| được đánh dấu là hoàn thành, bằng cách nhấp :guilabel:`Sản xuất "
+#~ "tất cả`."
+
+#~ msgid "The Allocation smart button at the top of an MO."
+#~ msgstr "Nút thông minh Phân bổ ở đầu một MO."
+
+#~ msgid ""
+#~ "If there **are not** any existing |SOs| and |MOs| that require the "
+#~ "product, the :icon:`fa-list` :guilabel:`Allocation` smart button does not "
+#~ "appear, even when the |MO| has been marked as done."
+#~ msgstr ""
+#~ "Nếu **không có** bất kỳ |SOs| và |MOs| hiện có nào yêu cầu sản phẩm, nút "
+#~ "thông minh :icon:`fa-list` :guilabel:`Phân bổ` sẽ không xuất hiện, ngay "
+#~ "cả khi |MO| đã được đánh dấu là hoàn thành."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-list` :guilabel:`Allocation` smart button to open "
+#~ "the :guilabel:`MRP Reception Report` for the |MO|. This report lists open "
+#~ "delivery orders or |MOs|, depending on the type of product produced in "
+#~ "the original |MO|."
+#~ msgstr ""
+#~ "Nhấp vào nút thông minh :icon:`fa-list` :guilabel:`Phân bổ` để "
+#~ "mở :guilabel:`Báo cáo tiếp nhận MRP` cho |MO|. Báo cáo này liệt kê các "
+#~ "đơn giao hàng đang mở hoặc |MOs|, tùy thuộc vào loại sản phẩm được sản "
+#~ "xuất trong |MO| ban đầu."
+
+#~ msgid "Allocate to delivery order"
+#~ msgstr "Phân bổ cho đơn giao hàng"
+
+#~ msgid ""
+#~ "If the |MO| contains a finished product, the report lists any open "
+#~ "delivery orders for which quantities of the product have yet to be "
+#~ "reserved."
+#~ msgstr ""
+#~ "Nếu |MO| chứa một sản phẩm hoàn thiện, báo cáo sẽ liệt kê bất kỳ đơn giao "
+#~ "hàng đang mở nào mà số lượng sản phẩm chưa được dành riêng."
+
+#~ msgid ""
+#~ "An |MO| is created to produce three units of a *rocking chair*. Clicking "
+#~ "the :guilabel:`Allocation` smart button on the |MO| opens an allocation "
+#~ "report that lists open delivery orders that require one or more rocking "
+#~ "chairs."
+#~ msgstr ""
+#~ "Một |MO| được tạo để sản xuất ba đơn vị *ghế bập bênh*. Nhấp vào nút "
+#~ "thông minh :guilabel:`Phân bổ` trên |MO| sẽ mở một báo cáo phân bổ liệt "
+#~ "kê các đơn giao hàng đang mở yêu cầu một hoặc nhiều ghế bập bênh."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Assign All` button to the right of a specific order "
+#~ "to assign products for each quantity required to fulfill that order."
+#~ msgstr ""
+#~ "Nhấp vào nút :guilabel:`Chỉ định tất cả` ở bên phải của một đơn hàng cụ "
+#~ "thể để chỉ định sản phẩm cho mỗi số lượng cần thiết để thực hiện đơn hàng "
+#~ "đó."
+
+#~ msgid ""
+#~ "If an order requires one quantity of four units of the product, and one "
+#~ "quantity of one unit of the product, clicking :guilabel:`Assign All` "
+#~ "assigns five units of the product to fulfill both quantities."
+#~ msgstr ""
+#~ "Nếu đơn hàng yêu cầu một số lượng bốn đơn vị sản phẩm và một số lượng một "
+#~ "đơn vị sản phẩm, việc nhấp vào :guilabel:`Phân bổ tất cả` sẽ phân bổ năm "
+#~ "đơn vị sản phẩm để hoàn thành cả hai số lượng."
+
+#~ msgid ""
+#~ "Alternatively, click :guilabel:`Assign` next to a specific quantity to "
+#~ "only assign products to that quantity, and not any others in the order."
+#~ msgstr ""
+#~ "Ngoài ra, nhấp vào :guilabel:`Phân bổ` bên cạnh một số lượng cụ thể để "
+#~ "chỉ phân bổ sản phẩm cho số lượng đó và không phân bổ cho bất kỳ số lượng "
+#~ "nào khác trong đơn hàng."
+
+#~ msgid ""
+#~ "If an order requires one quantity of four units of the product, and one "
+#~ "quantity of one unit of the product, clicking :guilabel:`Assign` next to "
+#~ "the quantity of one unit assigns a product to that quantity, but leaves "
+#~ "the quantity of four units without any products assigned."
+#~ msgstr ""
+#~ "Nếu đơn hàng yêu cầu một số lượng bốn đơn vị sản phẩm và một số lượng một "
+#~ "đơn vị sản phẩm, việc nhấp vào :guilabel:`Phân bổ` bên cạnh số lượng một "
+#~ "đơn vị sẽ phân bổ sản phẩm cho số lượng đó, nhưng để số lượng bốn đơn vị "
+#~ "không có bất kỳ sản phẩm nào được phân bổ."
+
+#~ msgid "Allocate to MO"
+#~ msgstr "Phân bổ cho MO"
+
+#~ msgid ""
+#~ "If the |MO| contains a component, the report lists any open |MOs| for "
+#~ "which quantities of the component have yet to be reserved."
+#~ msgstr ""
+#~ "Nếu |MO| chứa một linh kiện, báo cáo sẽ liệt kê bất kỳ |MOs| đang mở nào "
+#~ "mà số lượng linh kiện vẫn chưa được dự trữ."
+
+#~ msgid ""
+#~ "An |MO| is created to produce three units of *wood*, which is used as a "
+#~ "component for the *rocking chair* product. Clicking "
+#~ "the :guilabel:`Allocation` smart button on the |MO| opens an allocation "
+#~ "report that lists open rocking chair |MOs| that require one or more "
+#~ "pieces of wood."
+#~ msgstr ""
+#~ "Một |MO| được tạo để sản xuất ba đơn vị *wood*, được sử dụng làm linh "
+#~ "kiện cho sản phẩm *rocking chair*. Nhấp vào nút thông "
+#~ "minh :guilabel:`Phân bổ` trên |MO| sẽ mở báo cáo phân bổ liệt kê các |"
+#~ "MOs| rocking chair đang mở yêu cầu một hoặc nhiều miếng gỗ."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Assign All` or :guilabel:`Assign` button to the "
+#~ "right of a specific |MO| to assign components to that |MO|."
+#~ msgstr ""
+#~ "Nhấp vào nút :guilabel:`Phân bổ tất cả` hoặc :guilabel:`Phân bổ` ở bên "
+#~ "phải một |MO| cụ thể để phân bổ linh kiện cho |MO| đó."
+
+#~ msgid "The MRP Reception Report for an MO containing components."
+#~ msgstr "Báo cáo nhận hàng MRP cho MO chứa linh kiện."
+
+#~ msgid "Unassign products"
+#~ msgstr "Hủy phân bổ sản phẩm"
+
+#~ msgid ""
+#~ "After assigning products to a quantity within a delivery order, or "
+#~ "components to an |MO|, the :guilabel:`Assign` button turns into "
+#~ "an :guilabel:`Unassign` button. Click :guilabel:`Unassign` to unreserve "
+#~ "the assigned products from that quantity, making them available for other "
+#~ "quantities."
+#~ msgstr ""
+#~ "Sau khi phân bổ sản phẩm cho một số lượng trong lệnh giao hàng hoặc linh "
+#~ "kiện cho một |MO|, nút :guilabel:`Phân bổ` sẽ chuyển thành "
+#~ "nút :guilabel:`Hủy phân bổ`. Nhấp vào :guilabel:`Hủy phân bổ` để hủy dự "
+#~ "trữ các sản phẩm đã phân bổ khỏi số lượng đó, giúp chúng có sẵn cho các "
+#~ "số lượng khác."
+
+#~ msgid ""
+#~ "After clicking :guilabel:`Assign All` or :guilabel:`Assign`, "
+#~ "the :guilabel:`Print Labels` or :guilabel:`Print Label` button to the "
+#~ "right of either button becomes selectable. Selecting either button "
+#~ "generates and downloads a PDF document with one label for each product "
+#~ "that was assigned. These labels are used to designate each product as "
+#~ "being reserved for that specific order."
+#~ msgstr ""
+#~ "Sau khi nhấp :guilabel:`Chỉ định tất cả` hoặc :guilabel:`Chỉ định`, "
+#~ "nút :guilabel:`In nhãn` ở bên phải sẽ khả dụng. Việc chọn nút này sẽ tạo "
+#~ "và tải xuống tài liệu PDF chứa nhãn cho từng sản phẩm đã được gán. Những "
+#~ "nhãn này được sử dụng để đánh dấu từng sản phẩm là đã được dự trữ cho đơn "
+#~ "hàng cụ thể đó."
 
 #~ msgid ""
 #~ "In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "

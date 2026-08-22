@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 13:22+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -10462,17 +10462,16 @@ msgstr ""
 msgid ""
 "Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
 "database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
-"and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+"and ACME protocol <https://letsencrypt.org/how-it-works/>`_. Any CAA records "
+"configured for the domain must `allow Let's Encrypt <https://letsencrypt.org/"
+"docs/caa/>`_, otherwise certificate generation may fail."
 msgstr ""
-"Odoo에서는 각 도메인에 대해 별도의 SSL 인증서를 생성하여 :ref:`데이터베이스"
-"에 매핑 <domain-name/db-map>` 하며 `Let's Encrypt 인증 기관 및 ACME 프로토콜 "
-"<https://letsencrypt.org/how-it-works/>`_ 을 사용합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:373
+#: ../../content/applications/websites/website/configuration/domain_names.rst:374
 msgid "Certificate generation may take up to 24 hours."
 msgstr "인증서 생성에는 최대 24시간까지 걸릴 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:374
+#: ../../content/applications/websites/website/configuration/domain_names.rst:375
 msgid ""
 "Several attempts to validate your certificate are made for five days after "
 "you map your domain name to your database."
@@ -10480,12 +10479,12 @@ msgstr ""
 "데이터베이스에 도메인 주소가 매핑되면 5일 동안 수 차례에 걸쳐 인증서 유효성 "
 "검사를 시도합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:376
+#: ../../content/applications/websites/website/configuration/domain_names.rst:377
 msgid "If you use another service, you can keep using it or change to Odoo's."
 msgstr ""
 "다른 서비스를 사용 중인 경우에는 계속 사용하거나 Odoo로 변경할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:379
+#: ../../content/applications/websites/website/configuration/domain_names.rst:380
 msgid ""
 "No SSL certificate is generated for naked domains :dfn:`(domain names "
 "without any subdomains or prefixes)`."
@@ -10493,11 +10492,11 @@ msgstr ""
 "네이키드 도메인인 :dfn:`(하위 도메인이나 접두사가 없는 도메인 주소)` 에 대해"
 "서는 SSL 인증서가 생성되지 않습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:385
+#: ../../content/applications/websites/website/configuration/domain_names.rst:386
 msgid "Web base URL of a database"
 msgstr "데이터베이스의 웹 기본 URL"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:388
+#: ../../content/applications/websites/website/configuration/domain_names.rst:389
 msgid ""
 "If the Website app is installed on your database, skip this section and "
 "continue from the :ref:`Map a domain name to a website <domain-name/website-"
@@ -10507,7 +10506,7 @@ msgstr ""
 "웹사이트에 도메인 주소 매핑하기 <domain-name/website-map>` 섹션부터 계속합니"
 "다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:391
+#: ../../content/applications/websites/website/configuration/domain_names.rst:392
 msgid ""
 "The *web base URL* or root URL of a database affects your main website "
 "address and all the links sent to your customers (e.g., quotations, portal "
@@ -10516,7 +10515,7 @@ msgstr ""
 "데이터베이스의 *웹 기본 URL* 또는 루트 URL은 기본 웹사이트 주소와 고객에게 전"
 "송되는 모든 링크 (예: 견적서, 포털 링크 등)에 영향을 미칩니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:394
+#: ../../content/applications/websites/website/configuration/domain_names.rst:395
 msgid ""
 "To make your custom domain name the *web base URL* of your database, access "
 "your database using your custom domain name and log in as an "
@@ -10527,7 +10526,7 @@ msgstr ""
 "정 도메인 주소로 데이터베이스에 액세스하려 관리자 :dfn:`(관리자 아래의 설정 "
 "액세스 권한 그룹에 속한 사용자)` 로 로그인합니다"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:399
+#: ../../content/applications/websites/website/configuration/domain_names.rst:400
 msgid ""
 "If you access your database with the original Odoo address (e.g., "
 "`mycompany.odoo.com`), the *web base URL* of your database will be updated "
@@ -10544,7 +10543,7 @@ msgstr ""
 "매개변수 --> 새로 만들기` 를 선택하고 :guilabel:`키` 로 "
 "`web.base.url.freeze` 를 입력한 다음 :guilabel:`값` 으로 `예` 를 입력합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:406
+#: ../../content/applications/websites/website/configuration/domain_names.rst:407
 msgid ""
 "You can also set the web base URL manually. To do so, activate "
 "the :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --"
@@ -10560,11 +10559,11 @@ msgstr ""
 "는 프로토콜 `https://` (또는 `http://`) 이 포함되어 있어야 하며 슬래시 (`/`)"
 "로 끝나지 *않아야* 합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:415
+#: ../../content/applications/websites/website/configuration/domain_names.rst:416
 msgid "Map a domain name to an Odoo website"
 msgstr "Odoo 웹사이트에 도메인 주소 매핑하기"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:417
+#: ../../content/applications/websites/website/configuration/domain_names.rst:418
 msgid ""
 "Mapping your domain name to your website is different than mapping it to "
 "your database:"
@@ -10572,7 +10571,7 @@ msgstr ""
 "도메인 주소를 웹사이트에 매핑하는 것은 데이터베이스에 매핑하는 것과는 다릅니"
 "다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:419
+#: ../../content/applications/websites/website/configuration/domain_names.rst:420
 msgid ""
 "It defines your domain name as the main one for your website, helping search "
 "engines to index your website correctly."
@@ -10580,7 +10579,7 @@ msgstr ""
 "도메인 주소가 웹사이트의 기본 주소로 지정되어 검색 엔진에서 웹사이트를 정확하"
 "게 색인화할 수 있게 됩니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:421
+#: ../../content/applications/websites/website/configuration/domain_names.rst:422
 msgid ""
 "It defines your domain name as the base URL for your database, including "
 "portal links sent by email to your customers."
@@ -10588,14 +10587,14 @@ msgstr ""
 "고객에게 이메일로 전송되는 포털 링크를 포함하여, 도메인 주소를 데이터베이스 "
 "기본 URL로 지정합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:423
+#: ../../content/applications/websites/website/configuration/domain_names.rst:424
 msgid ""
 "If you have multiple websites, it maps your domain name to the appropriate "
 "website."
 msgstr ""
 "웹사이트가 여러 개 있는 경우에는 도메인 주소를 알맞은 웹사이트에 매핑합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:425
+#: ../../content/applications/websites/website/configuration/domain_names.rst:426
 msgid ""
 "Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
 "multiple websites, select the one you want to configure. In "
@@ -10607,7 +10606,7 @@ msgstr ""
 "사이트 주소 (예: `https://www.yourdomain.com`)를 입력하고 :guilabel:`저장` "
 "을 클릭합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:430
+#: ../../content/applications/websites/website/configuration/domain_names.rst:431
 msgid ""
 "Mapping your domain name to your Odoo website prevents Google Search from "
 "indexing your original database address (e.g., `mycompany.odoo.com`)."
@@ -10615,7 +10614,7 @@ msgstr ""
 "도메인 주소를 Odoo 웹사이트에 매핑하면, 이전의 데이터베이스 주소 (예: "
 "`mycompany.odoo.com`)가 Google 검색에 색인화되는 것을 방지할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:433
+#: ../../content/applications/websites/website/configuration/domain_names.rst:434
 msgid ""
 "If both addresses are already indexed, it may take some time before the "
 "indexation of the second address is removed from Google Search. You can use "
@@ -10627,7 +10626,7 @@ msgstr ""
 "search.google.com/search-console/welcome>`_ 을 활용하여 문제를 해결할 수 있습"
 "니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:438
+#: ../../content/applications/websites/website/configuration/domain_names.rst:439
 msgid ""
 "If you have multiple websites and companies on your database, make sure to "
 "select the right :guilabel:`Company` under :menuselection:`Website --> "
@@ -12198,31 +12197,20 @@ msgstr ""
 "는 :ref:`analytics/google-analytics` 를 사용할 수 있습니다. 개인정보를 보호하"
 "며 가볍고 사용하기 쉬운 Plausible.io를 사용하는 것을 추천합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:12
-msgid ""
-"The Plausible Analytics dashboard is also integrated into Odoo and can be "
-"accessed via :menuselection:`Website --> Reporting --> Analytics`."
-msgstr ""
-"Plausible Analytics\\ 현황판은\\ Odoo에 통합되어 있으며\\ :menuselection:`웹"
-"사이트 --> 보고 --> Analytics`\\ 를 통해 접근할 수 있습니다."
-
-#: ../../content/applications/websites/website/reporting/analytics.rst:18
+#: ../../content/applications/websites/website/reporting/analytics.rst:15
 msgid "Plausible.io"
 msgstr "Plausible.io"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:20
+#: ../../content/applications/websites/website/reporting/analytics.rst:17
 msgid ""
 "Odoo hosts its own Plausible.io server and provides a free and ready-to-use "
-"Plausible.io solution for **Odoo Online** databases that use the odoo.com "
-"domain. Odoo automatically creates and sets up your account. Start using it "
-"by going to :menuselection:`Website --> Reporting --> Analytics`."
+"Plausible.io solution for **Odoo Online** databases. Odoo automatically "
+"creates and sets up your account. The Plausible Analytics dashboard is also "
+"integrated into Odoo and can be accessed via :menuselection:`Website --> "
+"Reporting --> Analytics`."
 msgstr ""
-"Odoo는 자체 Plausible.io 서버를 호스팅하고 있으며, odoo.com 도메인을 사용 중"
-"인 **Odoo 온라인** 데이터베이스에서 즉시 사용 가능한 무료 Plausible.io 솔루션"
-"을 제공합니다. Odoo 계정은 자동으로 생성 및 설정됩니다. :menuselection:`웹사"
-"이트 --> 보고 --> 분석` 으로 이동하여 시작해 보세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:26
+#: ../../content/applications/websites/website/reporting/analytics.rst:23
 msgid ""
 "If you use a custom :doc:`domain name <../configuration/domain_names>` "
 "(e.g., `example.com`), you need to create your own Plausible.io account and "
@@ -12231,7 +12219,7 @@ msgstr ""
 "맞춤\\ :doc:`도메인 이름 <../configuration/domain_names>`\\ 을 사용하는 경우 "
 "(예: `example.com`), 자체\\ Plausible.io 계정과 구독을 생성해야 합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:28
+#: ../../content/applications/websites/website/reporting/analytics.rst:25
 msgid ""
 "**If you already have a Plausible.io account** and you want to connect it to "
 "your Odoo Online database, you must create two `ir.config.parameters` to use "
@@ -12247,37 +12235,37 @@ msgstr ""
 "템 매개변수` 로 이동합니다. :guilabel:`신규` 를 클릭한 다음 :guilabel:`키` "
 "및 :guilabel:`값` 필드에 세부 정보를 입력합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:37
+#: ../../content/applications/websites/website/reporting/analytics.rst:34
 msgid "Key"
 msgstr "키"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:38
+#: ../../content/applications/websites/website/reporting/analytics.rst:35
 msgid "Value"
 msgstr "금액"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:39
+#: ../../content/applications/websites/website/reporting/analytics.rst:36
 msgid "`website.plausible_script`"
 msgstr "`website.plausible_script`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:40
+#: ../../content/applications/websites/website/reporting/analytics.rst:37
 msgid "`https://plausible.io/js/plausible.js`"
 msgstr "`https://plausible.io/js/plausible.js`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:41
+#: ../../content/applications/websites/website/reporting/analytics.rst:38
 msgid "`website.plausible_server`"
 msgstr "`website.plausible_server`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:42
+#: ../../content/applications/websites/website/reporting/analytics.rst:39
 msgid "`https://plausible.io`"
 msgstr "`https://plausible.io`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:44
+#: ../../content/applications/websites/website/reporting/analytics.rst:41
 msgid ""
 "Then, follow the steps below to connect your existing account with "
 "Plausible.io servers."
 msgstr "그런 다음 아래 단계에 따라 기존 계정을 Plausible.io 서버에 연결합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:47
+#: ../../content/applications/websites/website/reporting/analytics.rst:44
 msgid ""
 "Deactivating the free Plausible.io account linked to your **Odoo Online** "
 "database will also remove the existing keys. As a result, new keys will be "
@@ -12291,7 +12279,7 @@ msgstr ""
 "당 데이터에 대한 액세스를 유지할 수 있도록 기존 키를 저장하는 것이 바람직합니"
 "다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:52
+#: ../../content/applications/websites/website/reporting/analytics.rst:49
 msgid ""
 "If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish "
 "to use your own Plausible.io account, proceed as follows:"
@@ -12299,7 +12287,7 @@ msgstr ""
 "자체 Plausible.io 계정을 연결하거나 데이터베이스가 **Odoo.sh** 또는 **온프레"
 "미스**에서 호스팅되는 경우 다음과 같이 하세요:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:55
+#: ../../content/applications/websites/website/reporting/analytics.rst:52
 msgid ""
 "Create or sign in to a Plausible.io account using the following link: "
 "`<https://plausible.io/register>`_."
@@ -12307,7 +12295,7 @@ msgstr ""
 "다음 링크를 사용하여\\ Plausible.io 계정을 생성하거나 로그인하세요: "
 "`<https://plausible.io/register>`_."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:56
+#: ../../content/applications/websites/website/reporting/analytics.rst:53
 msgid ""
 "If you are creating a new account, go through the registration and "
 "activation steps. On the :guilabel:`Add website info` page, add "
@@ -12324,7 +12312,7 @@ msgstr ""
 "다. :guilabel:`수동 설치` 지침은 무시하고 :guilabel:`데이터 수집 시작` 을 클"
 "릭합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:61
+#: ../../content/applications/websites/website/reporting/analytics.rst:58
 msgid ""
 "Once done, click the Plausible.io logo in the upper-left part of the page to "
 "access your `list of websites <https://plausible.io/sites>`_, then click "
@@ -12340,7 +12328,7 @@ msgstr ""
 msgid "Click the gear icon in the list of websites."
 msgstr "웹사이트 목록에서 톱니바퀴 모양 아이콘을 클릭합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:69
+#: ../../content/applications/websites/website/reporting/analytics.rst:66
 msgid ""
 "In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add "
 "Shared link`."
@@ -12348,7 +12336,7 @@ msgstr ""
 "사이드바에서 :guilabel:`표시 여부` 를 선택한 다음 :guilabel:`공유 링크 추가` "
 "를 클릭합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:70
+#: ../../content/applications/websites/website/reporting/analytics.rst:67
 msgid ""
 "Enter a :guilabel:`Name`, leave the :guilabel:`Password (optional)` field "
 "empty, as the Plausible analytics dashboard integration in Odoo does not "
@@ -12358,7 +12346,7 @@ msgstr ""
 "원하지 않으므로\\ :guilabel:`비밀번호 (선택사항)`\\ 필드는 비워둔 다음"
 "\\ :guilabel:`공유 링크 생성`\\ 을 클릭하세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:74
+#: ../../content/applications/websites/website/reporting/analytics.rst:71
 msgid "Copy the shared link."
 msgstr "공유 링크를 복사합니다."
 
@@ -12366,13 +12354,13 @@ msgstr "공유 링크를 복사합니다."
 msgid "Copy the shared link URL from Plausible.io"
 msgstr "Plausible.io에서 공유 링크 URL을 복사합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:79
-#: ../../content/applications/websites/website/reporting/analytics.rst:124
+#: ../../content/applications/websites/website/reporting/analytics.rst:76
+#: ../../content/applications/websites/website/reporting/analytics.rst:121
 msgid "In Odoo, go to :menuselection:`Website --> Configuration --> Settings`."
 msgstr ""
 "Odoo에서 :menuselection:`웹사이트 --> 환경설정 --> 설정`으로 이동합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:80
+#: ../../content/applications/websites/website/reporting/analytics.rst:77
 msgid ""
 "In the :guilabel:`SEO` section, enable :guilabel:`Plausible Analytics`, then "
 "paste the :guilabel:`Shared Link Auth` and click :guilabel:`Save`."
@@ -12381,7 +12369,7 @@ msgstr ""
 "음\\ :guilabel:`공유 링크 인증`\\ 을 붙여넣고\\ :guilabel:`저장`\\ 을 클릭하"
 "세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:84
+#: ../../content/applications/websites/website/reporting/analytics.rst:81
 msgid ""
 "If you have :doc:`multiple websites <../configuration/multi_website>`, add "
 "your websites to your Plausible.io account by going to `<https://"
@@ -12396,26 +12384,26 @@ msgstr ""
 "정** 페이지 상단의 :guilabel:`웹사이트 설정` 필드에서 웹사이트를 선택한 "
 "후 :guilabel:`공유 링크` 를 붙여넣어야 합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:91
+#: ../../content/applications/websites/website/reporting/analytics.rst:88
 msgid ""
 "Odoo automatically pushes two custom goals: `Lead Generation` and `Shop`."
 msgstr ""
 "Odoo는 두 가지 맞춤 목표를 자동으로 푸시합니다:  `잠재고객 생성` 및 `쇼핑하기"
 "`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:94
+#: ../../content/applications/websites/website/reporting/analytics.rst:91
 msgid "`Plausible Analytics documentation <https://plausible.io/docs>`_"
 msgstr "`Plausible 애널리틱스 문서 <https://plausible.io/docs>`_"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:99
+#: ../../content/applications/websites/website/reporting/analytics.rst:96
 msgid "Google Analytics"
 msgstr "구글 웹로그 분석"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:101
+#: ../../content/applications/websites/website/reporting/analytics.rst:98
 msgid "To follow your Odoo website's traffic with Google Analytics:"
 msgstr "Google 애널리틱스를 사용하여 Odoo 웹사이트의 트래픽을 추적합니다:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:103
+#: ../../content/applications/websites/website/reporting/analytics.rst:100
 msgid ""
 "Create or sign in to a Google account using the following link: `<https://"
 "analytics.google.com>`_."
@@ -12423,7 +12411,7 @@ msgstr ""
 "다음 링크를 사용하여 Google 계정을 만들거나 로그인합니다: `<https://"
 "analytics.google.com>`_."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:104
+#: ../../content/applications/websites/website/reporting/analytics.rst:101
 msgid ""
 "If you are setting up Google Analytics for the first time, "
 "click :guilabel:`Start measuring` and go through the account creation step."
@@ -12431,7 +12419,7 @@ msgstr ""
 "Google 애널리틱스를 처음 설정하는 경우 :guilabel:`측정 시작`을 클릭하고 계정 "
 "생성 절차에 따라 진행합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:106
+#: ../../content/applications/websites/website/reporting/analytics.rst:103
 msgid ""
 "If you already have a Google Analytics account, sign in and click "
 "the :icon:`fa-cog` icon in the bottom-left corner of the page to access the "
@@ -12443,7 +12431,7 @@ msgstr ""
 "음\\ :guilabel:`+ 생성`\\ 을 클릭하고 드롭다운 메뉴에서\\ :guilabel:`속성`\\ "
 "을 선택하세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:110
+#: ../../content/applications/websites/website/reporting/analytics.rst:107
 msgid ""
 "Complete the next steps: `property creation <https://support.google.com/"
 "analytics/answer/9304153?hl=en/"
@@ -12455,7 +12443,7 @@ msgstr ""
 "&visit_id=638278591144564289-3612494643&rd=2#property>`_, 비즈니스 세부정보 "
 "및 비즈니스 목표."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:112
+#: ../../content/applications/websites/website/reporting/analytics.rst:109
 msgid ""
 "When you reach the **Data collection** step, choose the :guilabel:`Web` "
 "platform."
@@ -12465,7 +12453,7 @@ msgstr "**데이터 수집** 단계에 도달하면 :guilabel:`웹` 플랫폼을
 msgid "Choose a platform for your Google Analytics property."
 msgstr "Google 애널리틱스 자산을 위한 플랫폼을 선택합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:117
+#: ../../content/applications/websites/website/reporting/analytics.rst:114
 msgid ""
 "Set up your data stream: Specify your :guilabel:`Website URL` and "
 "a :guilabel:`Stream name`, then click :guilabel:`Create & continue`."
@@ -12473,7 +12461,7 @@ msgstr ""
 "데이터 스트림을 설정하세요: :guilabel:`웹사이트 URL`과 :guilabel:`스트림 이름"
 "`을 지정한 다음 :guilabel:`만들기 및 계속`을 클릭하세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:119
+#: ../../content/applications/websites/website/reporting/analytics.rst:116
 msgid "Copy the :guilabel:`Measurement ID`."
 msgstr ":guilabel:`측정 ID`를 복사합니다."
 
@@ -12481,7 +12469,7 @@ msgstr ":guilabel:`측정 ID`를 복사합니다."
 msgid "Measurement ID in Google Analytics."
 msgstr "구글 애널리틱스의 측정 ID."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:125
+#: ../../content/applications/websites/website/reporting/analytics.rst:122
 msgid ""
 "In the :guilabel:`SEO` section, enable :guilabel:`Google Analytics`, then "
 "paste the :guilabel:`Measurement ID` and click :guilabel:`Save`."
@@ -12489,7 +12477,7 @@ msgstr ""
 ":guilabel:`SEO` 섹션에서 :guilabel:`Google 애널리틱스`를 활성화하"
 "고 :guilabel:`측정 ID`를 붙여넣은 다음 :guilabel:`저장`을 클릭합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:129
+#: ../../content/applications/websites/website/reporting/analytics.rst:126
 msgid ""
 "If you have :doc:`multiple websites <../configuration/multi_website>` with "
 "separate domains, it is recommended to create `one property <https://"
@@ -12506,7 +12494,7 @@ msgstr ""
 "습니다. Odoo의 **웹사이트 설정** 페이지 상단의 :guilabel:`웹사이트 설정` 필드"
 "에서 웹사이트를 선택한 후 :guilabel:`측정 ID` 를 붙여넣으세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:136
+#: ../../content/applications/websites/website/reporting/analytics.rst:133
 msgid ""
 "`Google documentation on setting up Analytics for a website <https://"
 "support.google.com/analytics/answer/1008015?hl=en/>`_"
@@ -12514,11 +12502,11 @@ msgstr ""
 "`웹사이트용 애널리틱스 설정에 대한 Google 문서 <https://support.google.com/"
 "analytics/answer/1008015?hl=en/>`_"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:142
+#: ../../content/applications/websites/website/reporting/analytics.rst:139
 msgid "Google Tag Manager"
 msgstr "Google 태그 관리자"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:144
+#: ../../content/applications/websites/website/reporting/analytics.rst:141
 msgid ""
 "Google Tag Manager is a tag management system that allows you to easily "
 "update measurement codes and related code fragments, collectively known as "
@@ -12527,7 +12515,7 @@ msgstr ""
 "Google 태그 관리자는 보통 태그라고 지칭하는 측정 코드 및 관련된 일부 코드를 "
 "코드 인젝터를 통해 쉽게 직접 업데이트할 수 있는 태그 관리 시스템입니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:149
+#: ../../content/applications/websites/website/reporting/analytics.rst:146
 msgid ""
 ":abbr:`GTM (Google Tag Manager)` is not an analytics tool and does not offer "
 "reporting features; it is used to collect data and works alongside Google "
@@ -12539,7 +12527,7 @@ msgstr ""
 "연동하여 심층적인 인사이트를 제공합니다. GTM을 효율적으로 이용하기 위해서는 "
 "Google 애널리틱스 설정을 병행하는 것이 좋습니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:153
+#: ../../content/applications/websites/website/reporting/analytics.rst:150
 msgid ""
 "For more information refer to the `documentation on linking Google Analytics "
 "and Google Tag Manager <https://support.google.com/tagmanager/answer/9442095?"
@@ -12548,7 +12536,7 @@ msgstr ""
 "자세한 내용은 `Google Analytics와 Google Tag Manager 연결에 대한 문서 "
 "<https://support.google.com/tagmanager/answer/9442095?hl=en>`_를 참조하세요."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:157
+#: ../../content/applications/websites/website/reporting/analytics.rst:154
 msgid ""
 "Some GTM tags use data layers (e.g., advanced eCommerce tracking data "
 "layers) to retrieve variables and send them to Google Analytics. Data layers "
@@ -12558,18 +12546,18 @@ msgstr ""
 "용하여 변수를 검색한 후 Google 애널리틱스로 전송합니다. 데이터 레이어는 현재 "
 "Odoo에서 관리되지 않습니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:159
+#: ../../content/applications/websites/website/reporting/analytics.rst:156
 msgid ""
 "Google Tag Manager may not be compliant with local data protection "
 "regulations."
 msgstr ""
 "Google 태그 관리자는 현지 데이터 보호 규정에 부합하지 않을 수 있습니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:161
+#: ../../content/applications/websites/website/reporting/analytics.rst:158
 msgid "To configure GTM, proceed as follows:"
 msgstr "GTM 설정을 하려면 다음과 같이 진행하세요:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:163
+#: ../../content/applications/websites/website/reporting/analytics.rst:160
 msgid ""
 "Create or sign in to a Google account by going to https://"
 "tagmanager.google.com/."
@@ -12577,17 +12565,17 @@ msgstr ""
 "https://tagmanager.google.com/ 으로 이동하여 Google 계정을 새로 만들거나 로그"
 "인합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:165
+#: ../../content/applications/websites/website/reporting/analytics.rst:162
 msgid "In the :guilabel:`Accounts` tab, click :guilabel:`Create Account`."
 msgstr ":guilabel:`계정` 탭에서 :guilabel:`계정 만들기`를 클릭합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:167
+#: ../../content/applications/websites/website/reporting/analytics.rst:164
 msgid ""
 "Enter an :guilabel:`Account Name` and select the "
 "account's :guilabel:`Country`."
 msgstr ":guilabel:`계정 이름`을 입력하고 계정 :guilabel:`국가`를 선택합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:169
+#: ../../content/applications/websites/website/reporting/analytics.rst:166
 msgid ""
 "Enter your website's URL in the :guilabel:`Container name` field and select "
 "the :guilabel:`Target platform`."
@@ -12595,11 +12583,11 @@ msgstr ""
 ":guilabel:`컨테이너 이름` 필드에 웹사이트 URL을 입력하고 :guilabel:`대상 플랫"
 "폼`을 선택합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:172
+#: ../../content/applications/websites/website/reporting/analytics.rst:169
 msgid "Click :guilabel:`Create` and agree to the Terms of Service."
 msgstr ":guilabel:`만들기`를 클릭하고 서비스 약관에 동의합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:174
+#: ../../content/applications/websites/website/reporting/analytics.rst:171
 msgid ""
 "Copy the `<head>` and `<body>` codes from the popup window. Then, go to your "
 "website, click :guilabel:`Edit`, go to the :guilabel:`Theme` tab, scroll "
@@ -12617,7 +12605,7 @@ msgstr ""
 msgid "Install Google Tag Manager"
 msgstr "Google 태그 관리자 설치하기"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:183
+#: ../../content/applications/websites/website/reporting/analytics.rst:180
 msgid ""
 "The data is collected in the marketing tools used to monitor the website "
 "(e.g., Google Analytics, Plausible, Facebook Pixel), not in Odoo."
@@ -12625,7 +12613,7 @@ msgstr ""
 "Odoo가 아닌 다른 웹사이트 모니터링에 사용하는 마케팅 도구 (예: Google "
 "Analytics, Plausible, Facebook Pixel)에서 데이터를 수집합니다."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:187
+#: ../../content/applications/websites/website/reporting/analytics.rst:184
 msgid ""
 "`Setting up click triggers on Google <https://support.google.com/tagmanager/"
 "answer/7679320?hl=en&ref_topic=7679108&sjid=17684856364781654579-EU>`_"
@@ -16310,6 +16298,35 @@ msgid ""
 "Blocks and elements with custom visibility settings displayed at the bottom "
 "of the editor"
 msgstr "편집기 하단에 표시되는 사용자 지정 가시성 설정이 있는 블록 및 요소"
+
+#~ msgid ""
+#~ "Odoo generates a separate SSL certificate for each domain :ref:`mapped to "
+#~ "a database <domain-name/db-map>` using `Let's Encrypt's certificate "
+#~ "authority and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+#~ msgstr ""
+#~ "Odoo에서는 각 도메인에 대해 별도의 SSL 인증서를 생성하여 :ref:`데이터베이"
+#~ "스에 매핑 <domain-name/db-map>` 하며 `Let's Encrypt 인증 기관 및 ACME 프로"
+#~ "토콜 <https://letsencrypt.org/how-it-works/>`_ 을 사용합니다."
+
+#~ msgid ""
+#~ "The Plausible Analytics dashboard is also integrated into Odoo and can be "
+#~ "accessed via :menuselection:`Website --> Reporting --> Analytics`."
+#~ msgstr ""
+#~ "Plausible Analytics\\ 현황판은\\ Odoo에 통합되어 있으며\\ :menuselection:`"
+#~ "웹사이트 --> 보고 --> Analytics`\\ 를 통해 접근할 수 있습니다."
+
+#~ msgid ""
+#~ "Odoo hosts its own Plausible.io server and provides a free and ready-to-"
+#~ "use Plausible.io solution for **Odoo Online** databases that use the "
+#~ "odoo.com domain. Odoo automatically creates and sets up your account. "
+#~ "Start using it by going to :menuselection:`Website --> Reporting --> "
+#~ "Analytics`."
+#~ msgstr ""
+#~ "Odoo는 자체 Plausible.io 서버를 호스팅하고 있으며, odoo.com 도메인을 사용 "
+#~ "중인 **Odoo 온라인** 데이터베이스에서 즉시 사용 가능한 무료 Plausible.io "
+#~ "솔루션을 제공합니다. Odoo 계정은 자동으로 생성 및 설정됩니"
+#~ "다. :menuselection:`웹사이트 --> 보고 --> 분석` 으로 이동하여 시작해 보세"
+#~ "요."
 
 #~ msgid ""
 #~ "You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as "

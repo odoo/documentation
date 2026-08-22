@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-08-17 08:10+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -10587,9 +10587,9 @@ msgid ""
 "to :ref:`route incoming emails directly to your Odoo database via DNS "
 "records <dns_record_setup>`."
 msgstr ""
-"Crea un sottodominio dedicato (ad esempio, ``mail.mydomain.com``) per "
-":ref:`indirizzare le e-mail in arrivo direttamente verso il database Odoo "
-"tramite record DNS <dns_record_setup>`."
+"Crea un sottodominio dedicato (ad esempio, ``mail.mydomain.com``) "
+"per :ref:`indirizzare le e-mail in arrivo direttamente verso il database "
+"Odoo tramite record DNS <dns_record_setup>`."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:111
 msgid "Use an external email provider"
@@ -11246,17 +11246,16 @@ msgstr ""
 msgid ""
 "Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
 "database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
-"and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+"and ACME protocol <https://letsencrypt.org/how-it-works/>`_. Any CAA records "
+"configured for the domain must `allow Let's Encrypt <https://letsencrypt.org/"
+"docs/caa/>`_, otherwise certificate generation may fail."
 msgstr ""
-"Odoo genera un certificato SSL separato per ogni dominio :ref:`mappato in un "
-"database <domain-name/db-map>` utilizzando il `protocollo Let's Encrypt's "
-"certificate authority and ACME <https://letsencrypt.org/how-it-works/>`_."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:373
+#: ../../content/applications/websites/website/configuration/domain_names.rst:374
 msgid "Certificate generation may take up to 24 hours."
 msgstr "La generazione di un certificato potrebbe impiegare fino a 24 ore."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:374
+#: ../../content/applications/websites/website/configuration/domain_names.rst:375
 msgid ""
 "Several attempts to validate your certificate are made for five days after "
 "you map your domain name to your database."
@@ -11264,13 +11263,13 @@ msgstr ""
 "Dopo aver mappato il nome di dominio nel database, verranno effettuati vari "
 "tentativi per convalidare il certificato nell'arco di cinque giorni."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:376
+#: ../../content/applications/websites/website/configuration/domain_names.rst:377
 msgid "If you use another service, you can keep using it or change to Odoo's."
 msgstr ""
 "Se utilizzi un altro servizio, è possibile continuare ad utilizzarlo o "
 "modificarlo con Odoo."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:379
+#: ../../content/applications/websites/website/configuration/domain_names.rst:380
 msgid ""
 "No SSL certificate is generated for naked domains :dfn:`(domain names "
 "without any subdomains or prefixes)`."
@@ -11278,11 +11277,11 @@ msgstr ""
 "Non viene generato nessun certificato SSL per domini semplici :dfn:`(nomi di "
 "dominio senza sottodomini o prefissi)`."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:385
+#: ../../content/applications/websites/website/configuration/domain_names.rst:386
 msgid "Web base URL of a database"
 msgstr "URL base web di un database"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:388
+#: ../../content/applications/websites/website/configuration/domain_names.rst:389
 msgid ""
 "If the Website app is installed on your database, skip this section and "
 "continue from the :ref:`Map a domain name to a website <domain-name/website-"
@@ -11292,7 +11291,7 @@ msgstr ""
 "dalla sezione :ref:`Mappa un nome di dominio in un sito web <domain-name/"
 "website-map>`. "
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:391
+#: ../../content/applications/websites/website/configuration/domain_names.rst:392
 msgid ""
 "The *web base URL* or root URL of a database affects your main website "
 "address and all the links sent to your customers (e.g., quotations, portal "
@@ -11302,7 +11301,7 @@ msgstr ""
 "del sito web principale e su tutti i link inviati ai clienti (ad es., "
 "preventivi, link portale, ecc.)."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:394
+#: ../../content/applications/websites/website/configuration/domain_names.rst:395
 msgid ""
 "To make your custom domain name the *web base URL* of your database, access "
 "your database using your custom domain name and log in as an "
@@ -11314,7 +11313,7 @@ msgstr ""
 "personalizzato e accedi come amministratore :dfn:`(un utente appartenente al "
 "gruppo di diritti di accesso Impostazioni in Amministrazione)`."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:399
+#: ../../content/applications/websites/website/configuration/domain_names.rst:400
 msgid ""
 "If you access your database with the original Odoo address (e.g., "
 "`mycompany.odoo.com`), the *web base URL* of your database will be updated "
@@ -11332,7 +11331,7 @@ msgstr ""
 "Tecnico --> Parametri sistema --> Nuovo` e inserisci `web.base.url.freeze` "
 "come :guilabel:`Chiave` e `Vero` come :guilabel:`Valore`.    "
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:406
+#: ../../content/applications/websites/website/configuration/domain_names.rst:407
 msgid ""
 "You can also set the web base URL manually. To do so, activate "
 "the :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --"
@@ -11349,11 +11348,11 @@ msgstr ""
 "www.yourdomain.com`). L'URL deve includere il protocollo `https://` (or "
 "`http://`) e *non* deve terminare con uno slash (`/`)."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:415
+#: ../../content/applications/websites/website/configuration/domain_names.rst:416
 msgid "Map a domain name to an Odoo website"
 msgstr "Mappare un nome di dominio in un sito web Odoo"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:417
+#: ../../content/applications/websites/website/configuration/domain_names.rst:418
 msgid ""
 "Mapping your domain name to your website is different than mapping it to "
 "your database:"
@@ -11361,7 +11360,7 @@ msgstr ""
 "La mappatura del nome di dominio nel tuo sito web è diversa rispetto alla "
 "mappatura nel database:"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:419
+#: ../../content/applications/websites/website/configuration/domain_names.rst:420
 msgid ""
 "It defines your domain name as the main one for your website, helping search "
 "engines to index your website correctly."
@@ -11369,7 +11368,7 @@ msgstr ""
 "Definisce il nome di dominio come principale per il tuo sito web così da "
 "aiutare i motori di ricerca a indicizzare il sito web correttamente."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:421
+#: ../../content/applications/websites/website/configuration/domain_names.rst:422
 msgid ""
 "It defines your domain name as the base URL for your database, including "
 "portal links sent by email to your customers."
@@ -11377,7 +11376,7 @@ msgstr ""
 "Definisce il nome di dominio come l'URL base per il tuo database, inclusi "
 "link al portale inviate via e-mail ai clienti."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:423
+#: ../../content/applications/websites/website/configuration/domain_names.rst:424
 msgid ""
 "If you have multiple websites, it maps your domain name to the appropriate "
 "website."
@@ -11385,7 +11384,7 @@ msgstr ""
 "Se possiedi diversi siti web, mappa il nome di dominio nel sito web "
 "appropriato."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:425
+#: ../../content/applications/websites/website/configuration/domain_names.rst:426
 msgid ""
 "Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
 "multiple websites, select the one you want to configure. In "
@@ -11397,7 +11396,7 @@ msgstr ""
 "campo :guilabel:`Dominio`, inserisci l'indirizzo del tuo sito web (ad es., "
 "`https://www.yourdomain.com`) e :guilabel:`Salva`."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:430
+#: ../../content/applications/websites/website/configuration/domain_names.rst:431
 msgid ""
 "Mapping your domain name to your Odoo website prevents Google Search from "
 "indexing your original database address (e.g., `mycompany.odoo.com`)."
@@ -11406,7 +11405,7 @@ msgstr ""
 "di indicizzare il tuo indirizzo di database originale (ad es., "
 "`mycompany.odoo.com`)."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:433
+#: ../../content/applications/websites/website/configuration/domain_names.rst:434
 msgid ""
 "If both addresses are already indexed, it may take some time before the "
 "indexation of the second address is removed from Google Search. You can use "
@@ -11418,7 +11417,7 @@ msgstr ""
 "da Google Search. Puoi utilizzare la `Console Google Search <https://"
 "search.google.com/search-console/welcome>`_ per risolvere il problema."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:438
+#: ../../content/applications/websites/website/configuration/domain_names.rst:439
 msgid ""
 "If you have multiple websites and companies on your database, make sure to "
 "select the right :guilabel:`Company` under :menuselection:`Website --> "
@@ -13082,32 +13081,20 @@ msgstr ""
 "Consigliamo di utilizzare Plausible.io in quanto rispetta la privacy, è "
 "leggero e facile da usare."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:12
-msgid ""
-"The Plausible Analytics dashboard is also integrated into Odoo and can be "
-"accessed via :menuselection:`Website --> Reporting --> Analytics`."
-msgstr ""
-"La dashboard di Plausible Analytics è anche integrata in Odoo e può essere "
-"accessibile tramite :menuselection:`Sito web --> Reportistica --> Analytics`."
-
-#: ../../content/applications/websites/website/reporting/analytics.rst:18
+#: ../../content/applications/websites/website/reporting/analytics.rst:15
 msgid "Plausible.io"
 msgstr "Plausible.io"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:20
+#: ../../content/applications/websites/website/reporting/analytics.rst:17
 msgid ""
 "Odoo hosts its own Plausible.io server and provides a free and ready-to-use "
-"Plausible.io solution for **Odoo Online** databases that use the odoo.com "
-"domain. Odoo automatically creates and sets up your account. Start using it "
-"by going to :menuselection:`Website --> Reporting --> Analytics`."
+"Plausible.io solution for **Odoo Online** databases. Odoo automatically "
+"creates and sets up your account. The Plausible Analytics dashboard is also "
+"integrated into Odoo and can be accessed via :menuselection:`Website --> "
+"Reporting --> Analytics`."
 msgstr ""
-"Odoo ospita il proprio server Plausible.io e fornisce una soluzione "
-"Plausible.io gratuita e pronta all'uso per i database **Odoo Online** che "
-"utilizzano il dominio odoo.com. Odoo crea e configura automaticamente il tuo "
-"account. Inizia a utilizzarlo andando su :menuselection:`Sito web --> "
-"Reportistica --> Analytics`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:26
+#: ../../content/applications/websites/website/reporting/analytics.rst:23
 msgid ""
 "If you use a custom :doc:`domain name <../configuration/domain_names>` "
 "(e.g., `example.com`), you need to create your own Plausible.io account and "
@@ -13117,7 +13104,7 @@ msgstr ""
 "personalizzato (ad esempio, `example.com`), devi creare il tuo account e "
 "abbonamento Plausible.io."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:28
+#: ../../content/applications/websites/website/reporting/analytics.rst:25
 msgid ""
 "**If you already have a Plausible.io account** and you want to connect it to "
 "your Odoo Online database, you must create two `ir.config.parameters` to use "
@@ -13133,31 +13120,31 @@ msgstr ""
 "Parametri di sistema`. Fai clic su :guilabel:`Nuovo` e compila i seguenti "
 "campi :guilabel:`Chiave` e :guilabel:`Valore`:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:37
+#: ../../content/applications/websites/website/reporting/analytics.rst:34
 msgid "Key"
 msgstr "Chiave"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:38
+#: ../../content/applications/websites/website/reporting/analytics.rst:35
 msgid "Value"
 msgstr "Valore"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:39
+#: ../../content/applications/websites/website/reporting/analytics.rst:36
 msgid "`website.plausible_script`"
 msgstr "`website.plausible_script`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:40
+#: ../../content/applications/websites/website/reporting/analytics.rst:37
 msgid "`https://plausible.io/js/plausible.js`"
 msgstr "`https://plausible.io/js/plausible.js`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:41
+#: ../../content/applications/websites/website/reporting/analytics.rst:38
 msgid "`website.plausible_server`"
 msgstr "`website.plausible_server`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:42
+#: ../../content/applications/websites/website/reporting/analytics.rst:39
 msgid "`https://plausible.io`"
 msgstr "`https://plausible.io`"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:44
+#: ../../content/applications/websites/website/reporting/analytics.rst:41
 msgid ""
 "Then, follow the steps below to connect your existing account with "
 "Plausible.io servers."
@@ -13165,7 +13152,7 @@ msgstr ""
 "Quindi, segui i passaggi seguenti per collegare il tuo account esistente con "
 "i server Plausible.io."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:47
+#: ../../content/applications/websites/website/reporting/analytics.rst:44
 msgid ""
 "Deactivating the free Plausible.io account linked to your **Odoo Online** "
 "database will also remove the existing keys. As a result, new keys will be "
@@ -13180,7 +13167,7 @@ msgstr ""
 "l'account, è consigliabile salvare le chiavi esistenti per preservare "
 "l'accesso a tali dati."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:52
+#: ../../content/applications/websites/website/reporting/analytics.rst:49
 msgid ""
 "If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish "
 "to use your own Plausible.io account, proceed as follows:"
@@ -13188,7 +13175,7 @@ msgstr ""
 "Se il tuo database è ospitato su **Odoo.sh** o **On-premise**, o se desideri "
 "utilizzare il tuo account Plausible.io, procedi come segue:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:55
+#: ../../content/applications/websites/website/reporting/analytics.rst:52
 msgid ""
 "Create or sign in to a Plausible.io account using the following link: "
 "`<https://plausible.io/register>`_."
@@ -13196,7 +13183,7 @@ msgstr ""
 "Crea o accedi a un account Plausible.io utilizzando il seguente link: "
 "`<https://plausible.io/register>`_."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:56
+#: ../../content/applications/websites/website/reporting/analytics.rst:53
 msgid ""
 "If you are creating a new account, go through the registration and "
 "activation steps. On the :guilabel:`Add website info` page, add "
@@ -13215,7 +13202,7 @@ msgstr ""
 "di :guilabel:`Installazione manuale` e fai clic su :guilabel:`Inizia a "
 "raccogliere dati`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:61
+#: ../../content/applications/websites/website/reporting/analytics.rst:58
 msgid ""
 "Once done, click the Plausible.io logo in the upper-left part of the page to "
 "access your `list of websites <https://plausible.io/sites>`_, then click "
@@ -13232,7 +13219,7 @@ msgstr ""
 msgid "Click the gear icon in the list of websites."
 msgstr "Fai clic sull'icona ingranaggio nell'elenco dei siti web."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:69
+#: ../../content/applications/websites/website/reporting/analytics.rst:66
 msgid ""
 "In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add "
 "Shared link`."
@@ -13240,7 +13227,7 @@ msgstr ""
 "Nella barra laterale, seleziona :guilabel:`Visibilità`, quindi fai clic "
 "su :guilabel:`Aggiungi link condiviso`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:70
+#: ../../content/applications/websites/website/reporting/analytics.rst:67
 msgid ""
 "Enter a :guilabel:`Name`, leave the :guilabel:`Password (optional)` field "
 "empty, as the Plausible analytics dashboard integration in Odoo does not "
@@ -13250,7 +13237,7 @@ msgstr ""
 "(opzionale)`, poiché l'integrazione della dashboard di analisi Plausible in "
 "Odoo non la supporta, quindi fai clic su :guilabel:`Crea link condiviso`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:74
+#: ../../content/applications/websites/website/reporting/analytics.rst:71
 msgid "Copy the shared link."
 msgstr "Copia il link condiviso."
 
@@ -13258,14 +13245,14 @@ msgstr "Copia il link condiviso."
 msgid "Copy the shared link URL from Plausible.io"
 msgstr "Copiare l'URL del link condiviso da Plausible.io"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:79
-#: ../../content/applications/websites/website/reporting/analytics.rst:124
+#: ../../content/applications/websites/website/reporting/analytics.rst:76
+#: ../../content/applications/websites/website/reporting/analytics.rst:121
 msgid "In Odoo, go to :menuselection:`Website --> Configuration --> Settings`."
 msgstr ""
 "In Odoo, andare su :menuselection:`Sito web --> Configurazione --> "
 "Impostazioni`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:80
+#: ../../content/applications/websites/website/reporting/analytics.rst:77
 msgid ""
 "In the :guilabel:`SEO` section, enable :guilabel:`Plausible Analytics`, then "
 "paste the :guilabel:`Shared Link Auth` and click :guilabel:`Save`."
@@ -13274,7 +13261,7 @@ msgstr ""
 "quindi incolla il :guilabel:`Shared Link Auth` e fai clic "
 "su :guilabel:`Salva`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:84
+#: ../../content/applications/websites/website/reporting/analytics.rst:81
 msgid ""
 "If you have :doc:`multiple websites <../configuration/multi_website>`, add "
 "your websites to your Plausible.io account by going to `<https://"
@@ -13290,26 +13277,26 @@ msgstr ""
 "campo :guilabel:`Impostazioni del sito web` nella parte superiore della "
 "pagina prima di incollare il :guilabel:`Link condiviso`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:91
+#: ../../content/applications/websites/website/reporting/analytics.rst:88
 msgid ""
 "Odoo automatically pushes two custom goals: `Lead Generation` and `Shop`."
 msgstr ""
 "Odoo inserisce automaticamente due obiettivi personalizzati: `Lead "
 "Generation` e `Shop`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:94
+#: ../../content/applications/websites/website/reporting/analytics.rst:91
 msgid "`Plausible Analytics documentation <https://plausible.io/docs>`_"
 msgstr "`Documentazione Plausible Analytics <https://plausible.io/docs>`_"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:99
+#: ../../content/applications/websites/website/reporting/analytics.rst:96
 msgid "Google Analytics"
 msgstr "Google Analytics"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:101
+#: ../../content/applications/websites/website/reporting/analytics.rst:98
 msgid "To follow your Odoo website's traffic with Google Analytics:"
 msgstr "Per monitorare il traffico del sito web Odoo con Google Analytics:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:103
+#: ../../content/applications/websites/website/reporting/analytics.rst:100
 msgid ""
 "Create or sign in to a Google account using the following link: `<https://"
 "analytics.google.com>`_."
@@ -13317,7 +13304,7 @@ msgstr ""
 "Creare un account Google o accedere a un account esistente utilizzando il "
 "seguente link: `<https://analytics.google.com>`_."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:104
+#: ../../content/applications/websites/website/reporting/analytics.rst:101
 msgid ""
 "If you are setting up Google Analytics for the first time, "
 "click :guilabel:`Start measuring` and go through the account creation step."
@@ -13326,7 +13313,7 @@ msgstr ""
 "su :guilabel:`Inizia a misurare` e procedere con la fase di creazione "
 "dell'account."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:106
+#: ../../content/applications/websites/website/reporting/analytics.rst:103
 msgid ""
 "If you already have a Google Analytics account, sign in and click "
 "the :icon:`fa-cog` icon in the bottom-left corner of the page to access the "
@@ -13338,7 +13325,7 @@ msgstr ""
 "accedere alla pagina **Admin**. Quindi, fai clic su :guilabel:`+ Crea` e "
 "seleziona :guilabel:`Proprietà` dal menu a discesa."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:110
+#: ../../content/applications/websites/website/reporting/analytics.rst:107
 msgid ""
 "Complete the next steps: `property creation <https://support.google.com/"
 "analytics/answer/9304153?hl=en/"
@@ -13350,7 +13337,7 @@ msgstr ""
 "&visit_id=638278591144564289-3612494643&rd=2#property>`_, dettagli aziendali "
 "e obiettivi aziendali."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:112
+#: ../../content/applications/websites/website/reporting/analytics.rst:109
 msgid ""
 "When you reach the **Data collection** step, choose the :guilabel:`Web` "
 "platform."
@@ -13362,7 +13349,7 @@ msgstr ""
 msgid "Choose a platform for your Google Analytics property."
 msgstr "Scegliere una piattaforma per la proprietà Google Analytics."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:117
+#: ../../content/applications/websites/website/reporting/analytics.rst:114
 msgid ""
 "Set up your data stream: Specify your :guilabel:`Website URL` and "
 "a :guilabel:`Stream name`, then click :guilabel:`Create & continue`."
@@ -13371,7 +13358,7 @@ msgstr ""
 "un :guilabel:`Nome del flusso`, quindi fare clic su :guilabel:`Crea e "
 "continua`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:119
+#: ../../content/applications/websites/website/reporting/analytics.rst:116
 msgid "Copy the :guilabel:`Measurement ID`."
 msgstr "Copiare l':guilabel:`ID di misurazione`."
 
@@ -13379,7 +13366,7 @@ msgstr "Copiare l':guilabel:`ID di misurazione`."
 msgid "Measurement ID in Google Analytics."
 msgstr "ID di misurazione in Google Analytics."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:125
+#: ../../content/applications/websites/website/reporting/analytics.rst:122
 msgid ""
 "In the :guilabel:`SEO` section, enable :guilabel:`Google Analytics`, then "
 "paste the :guilabel:`Measurement ID` and click :guilabel:`Save`."
@@ -13387,7 +13374,7 @@ msgstr ""
 "Nella sezione :guilabel:`SEO`, abilita :guilabel:`Google Analytics`, quindi "
 "incolla il :guilabel:`Measurement ID` e fai clic su :guilabel:`Salva`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:129
+#: ../../content/applications/websites/website/reporting/analytics.rst:126
 msgid ""
 "If you have :doc:`multiple websites <../configuration/multi_website>` with "
 "separate domains, it is recommended to create `one property <https://"
@@ -13405,7 +13392,7 @@ msgstr ""
 "selezionare il sito web nel campo :guilabel:`Impostazioni del sito web` in "
 "cima alla pagina prima di incollare il :guilabel:`Measurement ID`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:136
+#: ../../content/applications/websites/website/reporting/analytics.rst:133
 msgid ""
 "`Google documentation on setting up Analytics for a website <https://"
 "support.google.com/analytics/answer/1008015?hl=en/>`_"
@@ -13413,11 +13400,11 @@ msgstr ""
 "`Documentazione Google sulla configurazione di Analytics per un sito web "
 "<https://support.google.com/analytics/answer/1008015?hl=en/>`_"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:142
+#: ../../content/applications/websites/website/reporting/analytics.rst:139
 msgid "Google Tag Manager"
 msgstr "Google Tag Manager"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:144
+#: ../../content/applications/websites/website/reporting/analytics.rst:141
 msgid ""
 "Google Tag Manager is a tag management system that allows you to easily "
 "update measurement codes and related code fragments, collectively known as "
@@ -13428,7 +13415,7 @@ msgstr ""
 "codice, noti collettivamente come tag sul sito web o sull'app mobile, "
 "direttamente tramite l'iniettore di codice."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:149
+#: ../../content/applications/websites/website/reporting/analytics.rst:146
 msgid ""
 ":abbr:`GTM (Google Tag Manager)` is not an analytics tool and does not offer "
 "reporting features; it is used to collect data and works alongside Google "
@@ -13441,7 +13428,7 @@ msgstr ""
 "dettagliate. Per utilizzare correttamente GTM, si consiglia di configurare "
 "anche Google Analytics."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:153
+#: ../../content/applications/websites/website/reporting/analytics.rst:150
 msgid ""
 "For more information refer to the `documentation on linking Google Analytics "
 "and Google Tag Manager <https://support.google.com/tagmanager/answer/9442095?"
@@ -13451,7 +13438,7 @@ msgstr ""
 "tra Google Analytics e Google Tag Manager <https://support.google.com/"
 "tagmanager/answer/9442095?hl=en>`_."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:157
+#: ../../content/applications/websites/website/reporting/analytics.rst:154
 msgid ""
 "Some GTM tags use data layers (e.g., advanced eCommerce tracking data "
 "layers) to retrieve variables and send them to Google Analytics. Data layers "
@@ -13461,7 +13448,7 @@ msgstr ""
 "monitoraggio e-commerce avanzato) per recuperare variabili e inviarle a "
 "Google Analytics. I livelli di dati attualmente non sono gestiti in Odoo."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:159
+#: ../../content/applications/websites/website/reporting/analytics.rst:156
 msgid ""
 "Google Tag Manager may not be compliant with local data protection "
 "regulations."
@@ -13469,11 +13456,11 @@ msgstr ""
 "Google Tag Manager potrebbe non essere conforme alle normative locali sulla "
 "protezione dei dati."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:161
+#: ../../content/applications/websites/website/reporting/analytics.rst:158
 msgid "To configure GTM, proceed as follows:"
 msgstr "Per configurare GTM, procedere come segue:"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:163
+#: ../../content/applications/websites/website/reporting/analytics.rst:160
 msgid ""
 "Create or sign in to a Google account by going to https://"
 "tagmanager.google.com/."
@@ -13481,12 +13468,12 @@ msgstr ""
 "Creare un account Google o accedere a un account esistente andando su "
 "https://tagmanager.google.com/."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:165
+#: ../../content/applications/websites/website/reporting/analytics.rst:162
 msgid "In the :guilabel:`Accounts` tab, click :guilabel:`Create Account`."
 msgstr ""
 "Nella scheda :guilabel:`Account`, fare clic su :guilabel:`Crea account`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:167
+#: ../../content/applications/websites/website/reporting/analytics.rst:164
 msgid ""
 "Enter an :guilabel:`Account Name` and select the "
 "account's :guilabel:`Country`."
@@ -13494,7 +13481,7 @@ msgstr ""
 "Inserisci un :guilabel:`nome account` e seleziona il :guilabel:`Paese` "
 "dell'account."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:169
+#: ../../content/applications/websites/website/reporting/analytics.rst:166
 msgid ""
 "Enter your website's URL in the :guilabel:`Container name` field and select "
 "the :guilabel:`Target platform`."
@@ -13502,11 +13489,11 @@ msgstr ""
 "Inserisci l'URL del tuo sito web nel campo :guilabel:`Nome contenitore` e "
 "seleziona la :guilabel:`Piattaforma di destinazione`."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:172
+#: ../../content/applications/websites/website/reporting/analytics.rst:169
 msgid "Click :guilabel:`Create` and agree to the Terms of Service."
 msgstr "Fai clic su :guilabel:`Crea` e accetta i Termini di servizio."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:174
+#: ../../content/applications/websites/website/reporting/analytics.rst:171
 msgid ""
 "Copy the `<head>` and `<body>` codes from the popup window. Then, go to your "
 "website, click :guilabel:`Edit`, go to the :guilabel:`Theme` tab, scroll "
@@ -13525,7 +13512,7 @@ msgstr ""
 msgid "Install Google Tag Manager"
 msgstr "Installa Google Tag Manager"
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:183
+#: ../../content/applications/websites/website/reporting/analytics.rst:180
 msgid ""
 "The data is collected in the marketing tools used to monitor the website "
 "(e.g., Google Analytics, Plausible, Facebook Pixel), not in Odoo."
@@ -13534,7 +13521,7 @@ msgstr ""
 "monitorare il sito web (ad esempio Google Analytics, Plausible, Facebook "
 "Pixel), non in Odoo."
 
-#: ../../content/applications/websites/website/reporting/analytics.rst:187
+#: ../../content/applications/websites/website/reporting/analytics.rst:184
 msgid ""
 "`Setting up click triggers on Google <https://support.google.com/tagmanager/"
 "answer/7679320?hl=en&ref_topic=7679108&sjid=17684856364781654579-EU>`_"
@@ -17449,6 +17436,37 @@ msgid ""
 msgstr ""
 "Blocchi ed elementi con impostazioni di visibilità personalizzate "
 "visualizzati in fondo all'editor"
+
+#~ msgid ""
+#~ "Odoo generates a separate SSL certificate for each domain :ref:`mapped to "
+#~ "a database <domain-name/db-map>` using `Let's Encrypt's certificate "
+#~ "authority and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+#~ msgstr ""
+#~ "Odoo genera un certificato SSL separato per ogni dominio :ref:`mappato in "
+#~ "un database <domain-name/db-map>` utilizzando il `protocollo Let's "
+#~ "Encrypt's certificate authority and ACME <https://letsencrypt.org/how-it-"
+#~ "works/>`_."
+
+#~ msgid ""
+#~ "The Plausible Analytics dashboard is also integrated into Odoo and can be "
+#~ "accessed via :menuselection:`Website --> Reporting --> Analytics`."
+#~ msgstr ""
+#~ "La dashboard di Plausible Analytics è anche integrata in Odoo e può "
+#~ "essere accessibile tramite :menuselection:`Sito web --> Reportistica --> "
+#~ "Analytics`."
+
+#~ msgid ""
+#~ "Odoo hosts its own Plausible.io server and provides a free and ready-to-"
+#~ "use Plausible.io solution for **Odoo Online** databases that use the "
+#~ "odoo.com domain. Odoo automatically creates and sets up your account. "
+#~ "Start using it by going to :menuselection:`Website --> Reporting --> "
+#~ "Analytics`."
+#~ msgstr ""
+#~ "Odoo ospita il proprio server Plausible.io e fornisce una soluzione "
+#~ "Plausible.io gratuita e pronta all'uso per i database **Odoo Online** che "
+#~ "utilizzano il dominio odoo.com. Odoo crea e configura automaticamente il "
+#~ "tuo account. Inizia a utilizzarlo andando su :menuselection:`Sito web --> "
+#~ "Reportistica --> Analytics`."
 
 #~ msgid ""
 #~ "You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as "
