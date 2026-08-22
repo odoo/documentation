@@ -1,5 +1,5 @@
 ===================================
-Manufacturing product configuration
+Configuração do produto de fabricação
 ===================================
 
 .. _manufacturing/management/configure-manufacturing-product:
