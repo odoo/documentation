@@ -68,7 +68,7 @@ product form:
   whether and how Odoo tracks inventory for this product.
 - *Inventory* tab: From here, :doc:`purchasing and manufacturing routes
   <../../shipping_receiving/daily_operations/use_routes>`, as well as product logistics such as
-  product weight and customer lead time, can be specified.
+  product weight and delivery time, can be specified.
 - Smart buttons: Some smart buttons appear above the form when :guilabel:`Goods` is selected;
   others appear when :guilabel:`Track Inventory` is selected. For example, the :guilabel:`Forecasted
   Report` button displays when :guilabel:`Track Inventory` is selected. In general, most smart

@@ -58,8 +58,8 @@ added to products that plan to be sold with this method.
 To do that, navigate to :menuselection:`Inventory app --> Products --> Products` and select the
 desired product to configure.
 
-On the product form, open the *Inventory* tab. Under the *Logistics* section, change the value in
-the :guilabel:`Delivery Time` field.
+On the product form, click the :guilabel:`Inventory` tab, and under the :guilabel:`Logistics`
+section, change the value in the :guilabel:`Delivery Time` field.
 
 For this example workflow, change it to `5` days.
 
@@ -67,7 +67,7 @@ This sets the scheduled delivery date for this specific product to five days aft
 of the sales order.
 
 .. image:: before_scheduled_date/before-scheduled-date-delivery-time.png
-   :alt: Product form with delivery lead time set in Inventory tab.
+   :alt: Product form with delivery time set in Inventory tab.
 
 Workflow
 ========
@@ -75,9 +75,9 @@ Workflow
 To see the *Before scheduled date* reservation method in action, create a new |SO| by opening the
 :menuselection:`Sales app` and clicking :guilabel:`New`.
 
-Add a customer in the :guilabel:`Customer` field. In the *Order Lines* tab, click :guilabel:`Add
-Line`, then select a product from the drop-down menu that has a configured *delivery time* to add to
-the quotation form.
+Add a customer in the :guilabel:`Customer` field, then, in the :guilabel:`Order Lines` tab, click
+:guilabel:`Add a product`, and select a product from the drop-down menu that has a configured
+*delivery time*, to add to the quotation form.
 
 Finally, in the :guilabel:`Quantity` column, adjust the desired quantity of the product to sell.
 
