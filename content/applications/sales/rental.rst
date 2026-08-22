@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page explains the Rental Orders dashboard, how to browse rentable products,
+                 and how Odoo computes rental prices by selecting the cheapest applicable price
+                 line.
+
 :nosearch:
 :show-content:
 :show-toc:
@@ -16,6 +21,43 @@ returned, and invoice customers from this single platform.
    - `Odoo Tutorials: Rental <https://www.odoo.com/slides/rental-48>`_
 
 .. cards::
+
+   .. card:: Product types
+      :target: rental/configure_products/product_type
+      :large:
+
+      Learn about the different rental product types, general configuration, and possible app
+      integrations.
+
+   .. card:: Physical rental products
+      :target: rental/configure_products/products
+      :large:
+
+      Learn how to create a physical rental product.
+
+   .. card:: Physical service rental products
+      :target: rental/configure_products/service_products
+      :large:
+
+      Learn how to create a physical service rental product.
+
+   .. card:: Labor service rental products
+      :target: rental/configure_products/labor_service_products
+      :large:
+
+      Learn how to create a labor service rental product.
+
+   .. card:: Create a rental order
+      :target: rental/rental_orders/create_rental_order
+      :large:
+
+      Learn how to create a rental order.
+
+   .. card:: Pick up and return rental products
+      :target: rental/rental_orders/pickup_return
+      :large:
+
+      Learn how to pick up and return rental products.
 
    .. card:: Manage deposits
       :target: rental/rental_orders/manage_deposits
@@ -50,56 +92,10 @@ applicable).
 .. seealso::
    :doc:`rental/rental_orders/manage_deposits`
 
-.. _rental/pricing:
+.. _rental/price-computing:
 
-Rental pricing
-==============
-
-To adjust the rental pricing on a product, go to the :guilabel:`Products` page in the **Rental**
-app, then select the desired product or click :guilabel:`New` to create a new product from scratch.
-
-On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the
-:guilabel:`Rental prices` tab.
-
-.. image:: rental/rental/rental-prices-tab.png
-   :alt: How the Settings page appears in the Odoo Rental application.
-
-Pricing
--------
-
-Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, designate custom rental
-prices and rental periods for the product.
-
-To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a *pricing period*
-(:dfn:`the unit of duration of the rental`) in the :guilabel:`Period` column, or create a new
-pricing period by typing in the name and clicking :guilabel:`Create`.
-
-Next, decide whether or not to apply this custom rental price to a specific :guilabel:`Pricelist`.
-
-Lastly, enter the desired :guilabel:`Price` for that specific :guilabel:`Period`.
-
-.. note::
-   No limit exists on how many pricing lines can be added. Multiple pricing options for rental
-   products are typically used to give discounts for customers who agree to longer rental durations.
-
-.. note::
-    Remember when considering pricing that renting for a day is usually limited to operating hours,
-    not 24 hours. When determining pricing, keep in mind that a rental day typically refers to
-    operating hours, not a full 24-hour period.
-
-Reservations
-------------
-
-Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` tab, there is the option
-to configure additional fines for any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the
-customer takes to return a rental.
-
-Also, there is the option to set the :guilabel:`Reserve product` time, expressed in hours, to make
-the rental product temporarily unavailable between two rental orders. Such a feature may prove
-useful if maintenance or cleaning is required between rentals.
-
-Price computing
----------------
+Rental price computing
+======================
 
 Odoo always uses two rules to compute the price of a product when a rental order is created:
 
@@ -123,5 +119,3 @@ Odoo always uses two rules to compute the price of a product when a rental order
 
    rental/configure_products
    rental/rental_orders
-
-

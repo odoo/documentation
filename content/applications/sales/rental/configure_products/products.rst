@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page explains how to create and configure a new physical rental product
+                 (Goods), including initial setup, rental periods and pricing, variants, and product
+                 tracking by serial number.
+
 ========================
 Physical rental products
 ========================
@@ -8,13 +13,13 @@ pickup and drop-off locations and track rental products by serial number.
 
 .. _rental/products/default-settings:
 
-Settings
-========
+Configuration
+=============
 
 The **Rental** app offers many app-integration features. Depending on the installed Odoo apps,
 specific settings are available. To learn more about the default setting for rental products, refer
-to the :ref:`Settings <rental/product_type/settings>` section of the *Rental product type* page. The
-following configurations assume the **Rental** and **Inventory** apps are installed.
+to the :ref:`Settings <rental/product_type/configuration>` section of the *Rental product type*
+page. The following configurations assume the **Rental** and **Inventory** apps are installed.
 
 Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and configure the
 :guilabel:`Default Delay Costs` in the *Rental* section for late fees. Optionally, configure the
@@ -56,48 +61,61 @@ or create a new category by typing in the name and clicking :guilabel:`Create`.
 .. image:: products/new-product.png
    :alt: The new product view in the Rental app.
 
-.. _rental/products/variants:
+.. _rental/products/rental-periods-prices:
 
-Optional: specify rental variants
----------------------------------
+Configuring rental periods and prices
+-------------------------------------
 
-.. important::
-   The *Variant* feature in the **Inventory** app must be enabled for this tab to display.
+No limit exists on how many rental prices can be added to a product. Multiple pricing options for
+rental products are typically used to give discounts for customers who agree to longer rental
+durations. When creating multiple pricing options for a rental product remember the **Rental** app's
+:ref:`price computing logic <rental/price-computing>`.
 
-In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values
-<products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful
-for keeping the product library manageable, tracking and differentiating the inventory, and
-providing more detailed reports. Examples of rental variants for a *Goods* product are size,
-brand, color, and material.
+To set rental rates for the product, click the :guilabel:`Rental prices` tab, in the *Pricing*
+section, click :guilabel:`Add a price`. To enter a new rental rate:
 
-.. _rental/products/rental-periods-prices-reservations:
+#. Select a :guilabel:`rental period` (:dfn:`the unit of duration of the rental`) from the
+   :guilabel:`Period` column.
+#. (Optional) Select a pricelist option from the :guilabel:`Pricelist` column. This adds the new
+   rental rate to the assigned pricelist.
+#. Enter the price for that specific :guilabel:`Period`.
 
-Set rental periods, prices, and reservations
---------------------------------------------
+.. tip::
+   Remember when considering pricing that renting for a day is usually limited to operating hours,
+   not 24 hours. When determining pricing, keep in mind that a rental day typically refers to
+   operating hours, not a full 24-hour period.
 
-Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` section, click :guilabel:`Add
-a price` to enter a new rental rate. Choose a *pricing period* (:dfn:`the unit of duration of the
-rental`) in the :guilabel:`Period` column, or create a new pricing period by typing in the name and
-clicking :guilabel:`Create and edit`.
+In the *Reservations* section, are the delay costs and padding time that when configured are
+automatically populated from the *Default Delay Costs* section, provided they have been configured
+in the :menuselection:`Rental app --> Configuration --> Settings`. If configured on the product
+form, the settings override the settings in the *Default Delay Costs* section.
 
-.. note::
-   Creating a new pricing period opens a pop-up *Create period* window. Fill in the
-   :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and click :guilabel:`Save`. The new
-   pricing period automatically applies.
+- :guilabel:`Hourly Fine`: The price per hour charged when the rental product is returned after the
+  scheduled time.
+- :guilabel:`Daily Fine`: The price per day charged when the rental product is returned after the
+  scheduled time.
+- :guilabel:`Reserve product`: The time the rental product is temporarily unavailable between two
+  rental orders. Useful if maintenance or cleaning is required between rentals.
 
-   .. image:: products/new-rental-period.png
-      :alt: Sample of a New Period view in the Rental app.
+.. _rental/products/rental-period:
 
-Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To apply the configured
-rental rate to an existing pricelist, click in the :guilabel:`Pricelist` column and select the
-desired list from the drop-down menu.
+Creating a rental period
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly Fine`, :guilabel:`Daily
-Fine`, and the :guilabel:`Reserve product` time. These values are automatically populated from the
-:guilabel:`Default Delay Costs` section, provided they have been configured in the
-:menuselection:`Rental app --> Configuration --> Settings`.
+The **Rental** app allows users to create custom rental periods to use in the *Rental Prices* tab.
+This is helpful when renting services with special pricing for a set amount of time, such as
+offering a four hour photo shoot for $100 when the hourly rate is $30.
 
-Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save.
+To create a new rental period go to :menuselection:`Rental app --> Configuration --> Rental
+periods`. The *Periods* page displays and lists all the default rental periods in the **Rental**
+app. Click :guilabel:`New` and on the period form filling the following fields:
+
+- :guilabel:`Name`: The assigned name displays in the  :guilabel:`Period` drop-down list on the
+  *Rental Prices* tab.
+- :guilabel:`Duration`: The minimum amount of time to trigger the pricing rule. If set to `0` it
+  represents a fixed price.
+- :guilabel:`Unit`: The time unit the :guilabel:`Duration` is based on. If :guilabel:`Nightly` is
+  selected for the unit then the :guilabel:`Check-in` and :guilabel:`Check-out` fields display.
 
 .. example::
    A bike rental business rents tandem bikes for two hours at the local park. The hourly rental rate
@@ -113,6 +131,20 @@ Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top 
 
    .. image:: products/rental-prices-tab-with-rental-period.png
       :alt: Sample of a rental product with the custom rental period applied.
+
+.. _rental/products/variants:
+
+Optional: specify rental variants
+---------------------------------
+
+.. important::
+   The *Variant* feature in the **Inventory** app must be enabled for this tab to display.
+
+In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values
+<products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful
+for keeping the product library manageable, tracking and differentiating the inventory, and
+providing more detailed reports. Examples of rental variants for a *Goods* product are size, brand,
+color, and material.
 
 .. _rental/products/configure-product-tracking:
 
@@ -135,8 +167,8 @@ checkbox and select :guilabel:`By Unique Serial Number` from the drop-down menu.
 
 For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
 category by typing in the name and clicking :guilabel:`Create`. Configure rental rates on the
-:ref:`Rental prices <rental/products/rental-periods-prices-reservations>` tab. Click the
-:icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save.
+:ref:`Rental prices <rental/products/rental-periods-prices>` tab. Click the :icon:`fa-cloud-upload`
+:guilabel:`(Save manually)` icon near the top to save.
 
 .. _rental/products/rental-transfer-feature:
 
@@ -185,9 +217,9 @@ For multi-location management and rental item transfer tracking, navigate to the
 :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the
 :guilabel:`Rental Transfers` checkbox.
 
-Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the
-*Warehouse* section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to
-apply the changes.
+Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the *Warehouse*
+section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply the
+changes.
 
 To configure new locations, navigate to :menuselection:`Inventory app --> Configuration -->
 Locations`. Click :guilabel:`New` to configure a new internal location.
@@ -204,64 +236,28 @@ manually` icon near the top to save.
    Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental
    Transfers` in the **Rental** app and :guilabel:`Storage Locations` in the **Inventory** app.
 
-   Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location
    Next, go to the :menuselection:`Inventory app --> Configuration --> Locations`. Create a new
    location for each storefront.
 
    .. image:: products/configured-locations.png
       :alt: Sample of internal inventory locations that represent different rental store locations.
 
-.. _rental/products/pickup-products:
+.. _rental/products/ecommerce:
 
-Pickup products
-===============
+eCommerce features
+------------------
 
-When a customer picks up products, navigate to the appropriate rental order, click
-:guilabel:`Pickup`. The **Rental** app displays a warehouse delivery form listing the reserved
-rental products. Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage.
+.. important::
+   The *Ecommerce* sections are only available if the :guilabel:`eCommerce` module is installed.
 
-.. image:: products/pickup-page.png
-   :alt: Sample of a Pickup page in the Rental app.
-
-Doing so places a :guilabel:`Pickedup` status banner on the rental order.
-
-.. _rental/return-products:
-
-Return products
-===============
-
-When a customer returns products, navigate to the desired rental order and click :guilabel:`Return`.
-The **Rental** app displays a warehouse receipt form listing the checked-out rental products.
-
-Enter the same number of products the customer returned in the :guilabel:`Quantity` column. If any
-of the products have serial numbers, enter them into the :guilabel:`Serial Numbers` column.
-
-.. image:: products/return-page.png
-   :alt: Sample of the Return page in the Rental app.
-
-Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. A :guilabel:`Returned`
-status banner appears on the rental order.
-
-.. _rental/products/print-receipts:
-
-Print pickup and return receipts
-================================
-
-Pickup and return receipts can be printed for customers when they pick up and return rental
-products.
-
-To print pickup and/or return receipts, navigate to the appropriate rental order, click the
-:icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu.
-
-.. image:: products/print-pickup-return-receipt.png
-   :alt: The pickup and return receipt print option in the Odoo Rental application.
-
-From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select
-:guilabel:`Pickup and Return Receipt`.
-
-Odoo generates and downloads a PDF detailing all information about the current status of the rented
-items.
+The :guilabel:`Sales` tab has the following sections that configure the product page on the website:
+*Ecommerce shop*, *Ecommerce media*, and *Ecommerce description*. Refer to the :ref:`Product
+visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
+<ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
+instructions.
 
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory`
+   - :doc:`../rental_orders/create_rental_order`
+   - :doc:`../rental_orders/pickup_return`
    - `Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?si=kWfYEOTd2nT_ASp9>`_
