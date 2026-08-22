@@ -14,7 +14,7 @@ From there, customers can access their :guilabel:`quotations`, :guilabel:`orders
 
 .. note::
    Customers can only have an account if the :ref:`sign in/up at checkout <checkout-sign>` option
-   allows for accounts creation.
+   allows for account creation. Additionally, you must ensure :guilabel:`Free sign up` is enabled under :menuselection:`Website --> Privacy --> Customer Account`.
 
 .. tip::
    Similarly to the rest of the website, the customer account page can be customized with **content
