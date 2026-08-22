@@ -23,10 +23,9 @@ process. The following lead times can be configured in Odoo:
 .. image:: lead_times/all-lead-times.png
    :alt: A diagram breaking down the different types of lead times in the fulfillment process.
 
-- :ref:`Customer lead time <inventory/warehouses_storage/sales-customer-lt>`: The number of days
+- :ref:`Delivery time <inventory/warehouses_storage/sales-delivery-time-lt>`: The number of days
   from the sales order (SO) confirmation date and the date the order is shipped from the warehouse.
-  This is the expected time frame for customer order fulfillment, also known as *delivery lead
-  time*.
+  This is the expected time frame for customer order fulfillment.
 
 - :ref:`Sales security lead time <inventory/warehouses_storage/sales-security-lt>`: Moves the
   *scheduled delivery date* forward by a specified number of days. This serves as a buffer to
@@ -71,7 +70,7 @@ process. The following lead times can be configured in Odoo:
 Sales lead times
 ================
 
-*Customer lead times* and *sales security lead times* can be configured to automatically compute an
+*Delivery times* and *sales security lead times* can be configured to automatically compute an
 *expected delivery date* on a :abbr:`SO (Sales Order)`. The expected delivery date ensures a
 realistic *delivery dates* setting for shipments from the warehouse.
 
@@ -80,30 +79,29 @@ not be feasible to fulfill the order by that time, which would impact other ware
 
 .. example::
    A :abbr:`SO (sales order)` containing a `Coconut-scented candle` is confirmed on March 4. The
-   product has a customer lead time of 14 days, and the business uses a sales security lead time of
-   1 day. Based on the lead time inputs, Odoo suggests a delivery date in 15 days, on March 19.
+   product has a delivery time of 14 days, and the business uses a sales security lead time of 1
+   day. Based on the lead time inputs, Odoo suggests a delivery date in 15 days, on March 19.
 
    .. image:: lead_times/scheduled-date.png
       :alt: Set Delivery Date in a sales order. Enables delivery lead times feature.
 
-.. _inventory/warehouses_storage/sales-customer-lt:
+.. _inventory/warehouses_storage/sales-delivery-time-lt:
 
-Customer lead time
-------------------
+Delivery time
+-------------
 
-The *customer lead time* is manually assigned for each individual product. To set the customer lead
-time for a product, navigate to :menuselection:`Sales app --> Products --> Products`. Select the
-desired product, and switch to the :guilabel:`Inventory` tab. In the :guilabel:`Customer Lead Time`
-field, enter the number of calendar days required to fulfill the delivery order from start to
-finish.
+The *delivery time* is manually assigned for each individual product. To set the delivery time for a
+product, navigate to :menuselection:`Sales app --> Products --> Products`. Select the desired
+product, and switch to the :guilabel:`Inventory` tab. In the :guilabel:`Delivery Time` field, enter
+the number of calendar days required to fulfill the delivery order from start to finish.
 
 .. example::
-   Set a 14-day customer lead time for the `Coconut-scented candle` by navigating to its product
-   form. Then, in the :guilabel:`Inventory` tab, type `14.00` days into the :guilabel:`Customer Lead
-   Time` field.
+   Set a 14-day delivery time for the `Coconut-scented candle` by navigating to its product form.
+   Then, in the :guilabel:`Inventory` tab, type `14.00` days into the :guilabel:`Delivery Time`
+   field.
 
-   .. image:: lead_times/customer.png
-      :alt: Assign a Customer Lead Time in the product form.
+   .. image:: lead_times/delivery-time.png
+      :alt: Assign a Delivery Time in the product form.
 
 .. _inventory/warehouses_storage/sales-security-lt:
 
@@ -221,8 +219,8 @@ Days to prepare manufacturing order
 
 Configuring the days required to gather the components for a manufactured product ensures there is
 enough time to either replenish components or manufacture semi-finished products. This can be used
-as an extra figure to cross-check and confirm that the order can be completed within the customer
-lead time.
+as an extra figure to cross-check and confirm that the order can be completed within the delivery
+time.
 
 Go to :menuselection:`Manufacturing app --> Products --> Bills of Materials` and select the desired
 |BoM|. In the :guilabel:`Miscellaneous` tab of the |BoM|, specify the calendar days needed to obtain
