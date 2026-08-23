@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block title %}{% if custody %}تعديل العهدة - {{ custody.number }}{% else %}عهدة جديدة{% endif %} - نظام إدارة الخزينة{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">
+        <i class="bi bi-briefcase me-2"></i>
+        {% if custody %}تعديل العهدة: {{ custody.number }}{% else %}عهدة جديدة{% endif %}
+    </h4>
+    <a href="{{ url_for('custody.index') }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-right me-1"></i>العودة للقائمة
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form method="POST"
+              action="{% if custody %}{{ url_for('custody.edit', id=custody.id) }}{% else %}{{ url_for('custody.new') }}{% endif %}"
+              novalidate>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+            <div class="row g-3">
+                <!-- Employee -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="employee">
+                        الموظف <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="employee" name="employee"
+                           value="{{ custody.employee if custody else '' }}"
+                           required placeholder="اسم الموظف">
+                    <div class="invalid-feedback">يرجى إدخال اسم الموظف.</div>
+                </div>
+
+                <!-- Department -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="department">القسم / الإدارة</label>
+                    <input type="text" class="form-control" id="department" name="department"
+                           value="{{ custody.department if custody else '' }}"
+                           placeholder="القسم أو الإدارة">
+                </div>
+
+                <!-- Treasury -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="treasury_id">الخزينة</label>
+                    <select class="form-select" id="treasury_id" name="treasury_id">
+                        <option value="">-- اختر الخزينة --</option>
+                        {% for t in treasuries %}
+                        <option value="{{ t.id }}"
+                            {% if custody and custody.treasury_id == t.id %}selected{% endif %}>
+                            {{ t.name }} ({{ t.balance | currency }})
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Date -->
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold" for="date">تاريخ العهدة</label>
+                    <input type="date" class="form-control" id="date" name="date"
+                           value="{{ custody.date | string if custody else today }}">
+                </div>
+
+                <!-- Due Date -->
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold" for="due_date">تاريخ الاستحقاق</label>
+                    <input type="date" class="form-control" id="due_date" name="due_date"
+                           value="{{ custody.due_date | string if custody and custody.due_date else '' }}">
+                </div>
+
+                <!-- Amount -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="amount">المبلغ</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="amount" name="amount"
+                               value="{{ custody.amount if custody else '' }}"
+                               step="0.01" min="0" placeholder="0.00">
+                        <span class="input-group-text">ر.س</span>
+                    </div>
+                </div>
+
+                <!-- Purpose -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="purpose">
+                        الغرض / السبب <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="purpose" name="purpose"
+                           value="{{ custody.purpose if custody else '' }}"
+                           required placeholder="الغرض من العهدة">
+                    <div class="invalid-feedback">يرجى إدخال غرض العهدة.</div>
+                </div>
+
+                <!-- Notes -->
+                <div class="col-12">
+                    <label class="form-label fw-semibold" for="notes">ملاحظات</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="3"
+                              placeholder="أي ملاحظات إضافية...">{{ custody.notes if custody else '' }}</textarea>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-flex gap-2 justify-content-end">
+                <a href="{{ url_for('custody.index') }}" class="btn btn-outline-secondary">
+                    <i class="bi bi-x-circle me-1"></i>إلغاء
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-floppy me-1"></i>حفظ العهدة
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    'use strict';
+    var forms = document.querySelectorAll('form[novalidate]');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
+</script>
+{% endblock %}

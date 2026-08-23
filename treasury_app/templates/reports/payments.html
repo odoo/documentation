@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}تقرير السندات{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between mb-3">
+  <h5 class="mb-0"><i class="bi bi-bar-chart me-2 text-success"></i>تقرير السندات</h5>
+  <button onclick="window.print()" class="btn btn-outline-secondary btn-sm no-print"><i class="bi bi-printer me-1"></i>طباعة</button>
+</div>
+<div class="card border-0 shadow-sm mb-3 no-print">
+  <div class="card-body">
+    <form method="GET" class="row g-2 align-items-end">
+      <div class="col-md-2"><label class="form-label small">من تاريخ</label><input type="date" name="date_from" class="form-control form-control-sm" value="{{ date_from or '' }}"></div>
+      <div class="col-md-2"><label class="form-label small">إلى تاريخ</label><input type="date" name="date_to" class="form-control form-control-sm" value="{{ date_to or '' }}"></div>
+      <div class="col-md-2"><label class="form-label small">الخزينة</label><select name="treasury_id" class="form-select form-select-sm"><option value="">الكل</option>{% for t in treasuries %}<option value="{{ t.id }}" {{ 'selected' if treasury_id == t.id }}>{{ t.name }}</option>{% endfor %}</select></div>
+      <div class="col-md-2"><label class="form-label small">النوع</label><select name="type" class="form-select form-select-sm"><option value="">الكل</option><option value="outbound" {{ 'selected' if ptype == 'outbound' }}>صرف</option><option value="inbound" {{ 'selected' if ptype == 'inbound' }}>قبض</option></select></div>
+      <div class="col-md-2"><button type="submit" class="btn btn-primary btn-sm w-100">بحث</button></div>
+    </form>
+  </div>
+</div>
+<div class="row g-3 mb-3">
+  <div class="col-md-4"><div class="card border-0 shadow-sm text-center py-3"><div class="text-muted small">إجمالي الصرف</div><div class="fs-4 fw-bold text-danger">{{ total_out | currency }}</div></div></div>
+  <div class="col-md-4"><div class="card border-0 shadow-sm text-center py-3"><div class="text-muted small">إجمالي القبض</div><div class="fs-4 fw-bold text-success">{{ total_in | currency }}</div></div></div>
+  <div class="col-md-4"><div class="card border-0 shadow-sm text-center py-3"><div class="text-muted small">الصافي</div><div class="fs-4 fw-bold {{ 'text-success' if total_in > total_out else 'text-danger' }}">{{ (total_in - total_out) | currency }}</div></div></div>
+</div>
+<div class="card border-0 shadow-sm">
+  <div class="table-responsive">
+    <table class="table table-sm table-hover mb-0">
+      <thead class="table-light"><tr><th>الرقم</th><th>النوع</th><th>التاريخ</th><th>الخزينة</th><th>المستفيد</th><th>الطريقة</th><th class="text-end">المبلغ</th></tr></thead>
+      <tbody>
+        {% for p in payments %}
+        <tr><td><a href="{{ url_for('payments.show', id=p.id) }}">{{ p.number }}</a></td><td><span class="badge bg-{{ 'danger' if p.payment_type == 'outbound' else 'success' }}">{{ p.type_label }}</span></td><td>{{ p.date | ar_date }}</td><td>{{ p.treasury.name if p.treasury else '-' }}</td><td>{{ p.beneficiary or '-' }}</td><td>{{ p.method_label }}</td><td class="text-end fw-bold {{ 'text-danger' if p.payment_type == 'outbound' else 'text-success' }}">{{ p.amount | currency }}</td></tr>
+        {% else %}
+        <tr><td colspan="7" class="text-center text-muted py-3">لا توجد نتائج</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
