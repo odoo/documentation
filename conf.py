@@ -250,6 +250,7 @@ versions_names = {
 # The labels used in the language switcher to show the languages provided with the `languages`
 # config option. If a provided language code has no label, the upper-cased code is used as label.
 languages_names = {
+    'ar': 'AR',
     'de': 'DE',
     'en': 'EN',
     'es': 'ES',
