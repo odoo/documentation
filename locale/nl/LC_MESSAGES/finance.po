@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-21 17:32+0000\n"
-"PO-Revision-Date: 2026-08-19 14:14+0000\n"
+"PO-Revision-Date: 2026-08-24 10:10+0000\n"
 "Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19-doc/"
 "finance/nl/>\n"
@@ -105,7 +105,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:245
 #: ../../content/applications/finance/fiscal_localizations/uzbekistan.rst:48
 msgid "Taxes"
-msgstr "Btw"
+msgstr "Belastingen"
 
 #: ../../content/applications/finance/accounting.rst:23
 msgid "Taxes, fiscal positions, and integrations"
@@ -27604,7 +27604,7 @@ msgstr "Odoo berekent automatisch een btw-bedrag voor de btw van 21%."
 
 #: ../../content/applications/finance/accounting/taxes.rst:53
 msgid "Automatic generation of tax journal items"
-msgstr "Automatische generatie van btw-boekingsregels"
+msgstr "Automatische generatie van boekingsregels voor belastingen"
 
 #: ../../content/applications/finance/accounting/taxes.rst:55
 msgid ""
@@ -27613,7 +27613,7 @@ msgid ""
 "with the tax amount. This keeps track of the tax debit or credit associated "
 "with the transaction."
 msgstr ""
-"Bij het toepassen van btw op een :doc:`factuur <customer_invoices>` "
+"Bij het toepassen van belastingen op een :doc:`factuur <customer_invoices>` "
 "of :doc:`leveranciersfactuur <vendor_bills>` wordt automatisch een te "
 "betalen btw-boekingsregel gegenereerd met het btw-bedrag. Dit houdt het btw-"
 "debet of -credit bij dat aan de transactie is gekoppeld."
@@ -27719,7 +27719,7 @@ msgstr ""
 msgid ""
 "Activate any needed :ref:`pre-configured taxes <taxes/list_activation>`."
 msgstr ""
-"Activeer alle benodigde :ref:`vooraf geconfigureerde btw <taxes/"
+"Activeer alle benodigde :ref:`vooraf geconfigureerde btw's <taxes/"
 "list_activation>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:101
@@ -27736,15 +27736,14 @@ msgid ""
 "Configuration --> Settings` and scroll down to :guilabel:`Taxes`."
 msgstr ""
 "Ga naar :menuselection:`Boekhouding --> Configuratie --> Instellingen` en "
-"scroll naar beneden naar :guilabel:`btw` om toegang te krijgen tot deze "
-"configuratieopties."
+"scrol naar :guilabel:`btw` om toegang te krijgen tot deze configuratieopties."
 
 #: ../../content/applications/finance/accounting/taxes.rst:116
 msgid ""
 "The default :guilabel:`Sales Tax` and :guilabel:`Purchase Tax` are "
 "automatically set on products when creating new products."
 msgstr ""
-"De standaard :guilabel:`Verkoopbtw` en :guilabel:`Inkoopbtw` worden "
+"De standaard :guilabel:`Btw verkoop` en :guilabel:`Btw inkoop` worden "
 "automatisch ingesteld op producten bij het aanmaken van nieuwe producten."
 
 #: ../../content/applications/finance/accounting/taxes.rst:119
@@ -27784,7 +27783,8 @@ msgid ""
 "other EU countries to apply local VAT rates."
 msgstr ""
 "Activeer deze optie als je gevestigd bent in de EU en verkoopt aan "
-"consumenten in andere EU-landen om lokale btw-tarieven toe te passen."
+"consumenten in andere EU-landen om lokale btw-tarieven van die landen toe te "
+"passen."
 
 #: ../../content/applications/finance/accounting/taxes.rst:135
 msgid ":doc:`EU intra-community distance selling<taxes/eu_distance_selling>`"
@@ -27793,7 +27793,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:138
 msgid "Cash basis"
-msgstr "kasbasis"
+msgstr "Kasbasis"
 
 #: ../../content/applications/finance/accounting/taxes.rst:140
 msgid ""
@@ -27802,11 +27802,10 @@ msgid ""
 "this option will be activated by default by the :doc:`fiscal localization "
 "package <../fiscal_localizations>`."
 msgstr ""
-"Activeer deze optie als btw op kasbasis in plaats van op basis van "
-"toegerekende inkomsten moet worden verantwoord. Sommige landen schrijven "
-"boekhouding op kasbasis voor; in dat geval wordt deze optie standaard "
-"geactiveerd door het :doc:`fiscale lokalisatiepakket <../"
-"fiscal_localizations>`."
+"Activeer deze optie als btw volgens kasstelsel in plaats van factuurstelsel "
+"moet worden verantwoord. In sommige landen is boekhouding volgens het "
+"kasstelsel verplicht. In dat geval wordt deze optie standaard geactiveerd "
+"door het :doc:`fiscale lokalisatiepakket <../fiscal_localizations>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:145
 msgid ":doc:`Cash basis <taxes/cash_basis>`"
@@ -27821,8 +27820,8 @@ msgid ""
 "The list of taxes can be accessed by going to :menuselection:`Accounting --> "
 "Configuration --> Taxes`."
 msgstr ""
-"De lijst met btw-tarieven is toegankelijk via :menuselection:`Boekhouding --"
-"> Configuratie --> Btw`."
+"De lijst met btw-tarieven is toegankelijk via "
+":menuselection:`Boekhouding --> Configuratie --> Btw`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:155
 msgid ""
@@ -27839,7 +27838,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:162
 msgid "Assign taxes on products"
-msgstr "Wijs btw toe aan producten"
+msgstr "Btw toewijzen aan producten"
 
 #: ../../content/applications/finance/accounting/taxes.rst:164
 msgid ""
@@ -27851,19 +27850,19 @@ msgid ""
 "order, or point of sale order."
 msgstr ""
 "Ga naar :menuselection:`Boekhouding --> Klanten --> Producten` om de btw-"
-"tarieven voor elk product te configureren, selecteer het te configureren "
-"product en vul de velden :guilabel:`Verkoopbtw` en :guilabel:`Inkoopbtw` in. "
-"Deze btw-tarieven worden automatisch toegepast bij het toevoegen van het "
+"tarieven voor elk product te configureren. Selecteer het te configureren "
+"product en vul de velden :guilabel:`Btw verkoop` en :guilabel:`Btw inkoop` "
+"in. Deze btw-tarieven worden automatisch toegepast bij het toevoegen van het "
 "product aan een verkoopfactuur, leveranciersfactuur, verkooporder, "
-"inkooporder of kassasysteem-order."
+"inkooporder of kassaorder."
 
 #: ../../content/applications/finance/accounting/taxes.rst:170
 msgid ""
 "Use the :ref:`Default Taxes <taxes/default>` company-wide setting to "
 "automatically fill these fields on new products."
 msgstr ""
-"Gebruik de instelling :ref:`Standaard btw <taxes/default>` op bedrijfsniveau "
-"om deze velden automatisch in te vullen bij nieuwe producten."
+"Gebruik de bedrijfsbrede instelling :ref:`Standaard btw <taxes/default>` om "
+"deze velden automatisch in te vullen bij nieuwe producten."
 
 #: ../../content/applications/finance/accounting/taxes.rst:176
 msgid "Advanced tax configuration"
@@ -27899,7 +27898,7 @@ msgid ""
 "How to configure the tax to :ref:`replace <taxes/tax-mapping>` other taxes "
 "according to :doc:`fiscal positions <taxes/fiscal_positions>`."
 msgstr ""
-"Hoe de btw te configureren om andere btw te :ref:`vervangen <taxes/tax-"
+"Hoe je de btw configureert om andere btw te :ref:`vervangen <taxes/tax-"
 "mapping>` volgens :doc:`fiscale posities <taxes/fiscal_positions>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:187
@@ -27933,9 +27932,9 @@ msgid ""
 "field in :doc:`sales orders <../../sales/sales>`, :doc:`invoices "
 "<customer_invoices>`, product forms, etc."
 msgstr ""
-"De :guilabel:`Btw-naam` verschijnt voor backendgebruikers in het "
-"veld :guilabel:`Btw` in :doc:`verkooporders <../../sales/"
-"sales>`, :doc:`verkoopfacturen <customer_invoices>`, productformulieren, enz."
+"De :guilabel:`Btw-naam` verschijnt voor backendgebruikers in het veld "
+":guilabel:`Btw` in :doc:`verkooporders <../../sales/sales>`, "
+":doc:`verkoopfacturen <customer_invoices>`, productformulieren, enz."
 
 #: ../../content/applications/finance/accounting/taxes.rst:208
 msgid "Tax type"
@@ -27965,7 +27964,7 @@ msgid ""
 "Taxes <taxes/computation>` but that you do not want to list along with other "
 "sales or purchase taxes."
 msgstr ""
-"Gebruik :guilabel:`Geen` voor btw die je wilt opnemen in een :ref:`Groep btw "
+"Gebruik :guilabel:`Geen` voor btw die je wilt opnemen in een :ref:`Btw-groep "
 "<taxes/computation>` maar die je niet wilt vermelden bij andere verkoop- of "
 "inkoopbtw."
 
@@ -27978,7 +27977,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:228
 msgid "Configure how the tax appears to customers"
-msgstr "Configureer hoe de btw verschijnt voor klanten"
+msgstr "Configureren hoe de btw verschijnt voor klanten"
 
 #: ../../content/applications/finance/accounting/taxes.rst:233
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:79
@@ -27992,16 +27991,16 @@ msgid ""
 "The :guilabel:`Label on Invoices` appears on invoice lines in invoice PDFs "
 "and on the customer portal."
 msgstr ""
-"Het :guilabel:`Label op facturen` verschijnt op factuurregels in factuur-"
-"PDF's en op het klantportaal."
+"Het :guilabel:`Label op facturen` verschijnt op factuurregels in pdf-"
+"facturen en op het klantportaal."
 
 #: ../../content/applications/finance/accounting/taxes.rst:None
 msgid ""
 "The Label on Invoice shows on the invoice line when viewed in the customer "
 "portal."
 msgstr ""
-"Het label op factuur wordt weergegeven op de factuurregel wanneer deze wordt "
-"bekeken in het klantportaal."
+"Het 'Label op factuur' wordt weergegeven op de factuurregel wanneer deze "
+"wordt bekeken in het klantportaal."
 
 #: ../../content/applications/finance/accounting/taxes.rst:244
 msgid "Tax group"
@@ -28014,7 +28013,7 @@ msgid ""
 "same tax group are aggregated together into a single tax amount."
 msgstr ""
 "De :guilabel:`Btw-groep` wordt weergegeven in het totaalgedeelte van de "
-"factuur, in factuur-PDF's en op het klantportaal. Meerdere btw die tot "
+"factuur, in pdf-facturen en op het klantportaal. Meerdere btw die tot "
 "dezelfde btw-groep behoren, worden samengevoegd tot één btw-bedrag."
 
 #: ../../content/applications/finance/accounting/taxes.rst:None
@@ -28026,7 +28025,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:256
 msgid "Configure how tax journal items are created"
-msgstr "Configureer hoe btw-boekingsregels worden aangemaakt"
+msgstr "Configureren hoe btw-boekingsregels worden aangemaakt"
 
 #: ../../content/applications/finance/accounting/taxes.rst:258
 msgid ""
@@ -28036,12 +28035,11 @@ msgid ""
 "grids <accounting/tax-returns/tax-grids>` are set on invoice lines when this "
 "tax is applied."
 msgstr ""
-"De secties :guilabel:`Verdeling/Kostenplaatsverdeling voor verkoopfacturen` "
-"en :guilabel:`Verdeling/Kostenplaatsverdeling voor creditnota's` bepalen het "
-"aanmaken van te betalen btw-boekingsregels in verkoopfacturen en "
-"creditnota's. Ze bepalen ook welke :ref:`btw-rubrieken <accounting/tax-"
-"returns/tax-grids>` worden ingesteld op factuurregels wanneer deze btw wordt "
-"toegepast."
+"De secties :guilabel:`Verdeling voor facturen` en :guilabel:`Verdeling voor "
+"terugbetalingen` bepalen het aanmaken van te betalen btw-boekingsregels in "
+"verkoopfacturen en creditnota's. Ze bepalen ook welke :ref:`btw-rubrieken "
+"<accounting/tax-returns/tax-grids>` worden ingesteld op factuurregels "
+"wanneer deze btw wordt toegepast."
 
 #: ../../content/applications/finance/accounting/taxes.rst:263
 msgid ""
@@ -28050,10 +28048,10 @@ msgid ""
 "two 50% lines), and optionally, one or more :guilabel:`% of tax` lines "
 "amounting to -100.00%."
 msgstr ""
-"Elk van deze secties moet één :guilabel:`Basis`-regel bevatten, één of "
-"meer :guilabel:`% van btw`-regels die optellen tot 100% (bv. één regel van "
-"100%, of twee regels van 50%), en optioneel één of meer :guilabel:`% van "
-"btw`-regels die optellen tot -100,00%."
+"Elk van deze secties moet één :guilabel:`Basis`-regel bevatten, één of meer "
+":guilabel:`% van btw`-regels die optellen tot 100% (bv. één regel van 100%, "
+"of twee regels van 50%), en optioneel één of meer :guilabel:`% van btw`-"
+"regels die optellen tot -100,00%."
 
 #: ../../content/applications/finance/accounting/taxes.rst:267
 msgid ""
@@ -28076,14 +28074,14 @@ msgstr ""
 "De :guilabel:`% van btw`-regels bepalen het aanmaken van te betalen btw-"
 "boekingsregels. Het btw-bedrag wordt verdeeld volgens de percentages op deze "
 "regels, en elke regel wordt vervolgens gebruikt als sjabloon om een te "
-"betalen btw-boekingsregel aan te maken met dezelfde :guilabel:`Rekening` "
-"en :guilabel:`btw-rubrieken`. Als de :guilabel:`Rekening` niet is opgegeven, "
+"betalen btw-boekingsregel aan te maken met dezelfde :guilabel:`Rekening` en "
+":guilabel:`btw-rubrieken`. Als de :guilabel:`Rekening` niet is opgegeven, "
 "wordt standaard de rekening van de oorspronkelijke factuurregel gebruikt "
 "waarop de btw wordt toegepast."
 
 #: ../../content/applications/finance/accounting/taxes.rst:276
 msgid "Typical cases include:"
-msgstr "Typische gevallen zijn:"
+msgstr "Typische voorbeelden zijn:"
 
 #: ../../content/applications/finance/accounting/taxes.rst:278
 msgid ""
@@ -28122,15 +28120,11 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:None
 msgid "The Distribution for Invoices of a 21% VAT tax."
-msgstr ""
-"De Verdeling/Kostenplaatsverdeling voor verkoopfacturen van een btw-tarief "
-"van 21%."
+msgstr "De Verdeling voor facturen van een btw-tarief van 21%."
 
 #: ../../content/applications/finance/accounting/taxes.rst:None
 msgid "The Distribution for Refunds of a 21% VAT tax."
-msgstr ""
-"De Verdeling/Kostenplaatsverdeling voor creditnota's van een btw-tarief van "
-"21%."
+msgstr "De Verdeling voor creditnota's van een btw-tarief van 21%."
 
 #: ../../content/applications/finance/accounting/taxes.rst:297
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:388
@@ -28138,7 +28132,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:62
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:65
 msgid "Tax mapping"
-msgstr "Btw-code-toewijzing"
+msgstr "Btw-toewijzing"
 
 #: ../../content/applications/finance/accounting/taxes.rst:299
 msgid ""
@@ -28146,10 +28140,10 @@ msgid ""
 "to map taxes to each other so that the correct tax is applied based on the "
 "customer's or vendor's location and business type."
 msgstr ""
-"Btw kan gecombineerd worden met :doc:`fiscale posities <taxes/"
-"fiscal_positions>` om btw-codes aan elkaar toe te wijzen, zodat de juiste "
-"btw wordt toegepast op basis van de locatie en het bedrijfstype van de klant "
-"of leverancier."
+"Btw's kunnen gecombineerd worden met :doc:`fiscale posities <taxes/"
+"fiscal_positions>` om btw's aan elkaar toe te wijzen, zodat de juiste btw "
+"wordt toegepast op basis van de locatie en het bedrijfstype van de klant of "
+"leverancier."
 
 #: ../../content/applications/finance/accounting/taxes.rst:303
 msgid ""
@@ -28163,18 +28157,17 @@ msgstr ""
 "Laat bij het configureren van een btw het veld :guilabel:`Fiscale positie` "
 "leeg om de btw direct beschikbaar te maken voor alle fiscale posities, of "
 "selecteer specifieke fiscale posities waar deze btw moet worden gebruikt om "
-"andere btw-codes te vervangen. Als één of meer fiscale posities zijn "
-"geselecteerd, gebruik dan het veld :guilabel:`Vervangt` om alle btw-codes te "
-"selecteren die deze btw moet vervangen voor de geselecteerde fiscale "
-"positie(s)."
+"andere btw te vervangen. Als één of meer fiscale posities zijn geselecteerd, "
+"gebruik dan het veld :guilabel:`Vervangt` om alle btw's te selecteren die "
+"deze btw moet vervangen voor de geselecteerde fiscale positie(s)."
 
 #: ../../content/applications/finance/accounting/taxes.rst:309
 msgid ""
 "To replace one tax with multiple other taxes, configure each of the "
 "replacement taxes to replace the default product tax."
 msgstr ""
-"Configureer elke vervangende btw-code om de standaard product-btw te "
-"vervangen als je één btw-code wilt vervangen door meerdere andere btw-codes."
+"Configureer elke vervangende btw om de standaard product-btw te vervangen "
+"als je één btw wilt vervangen door meerdere andere btw's."
 
 #: ../../content/applications/finance/accounting/taxes.rst:313
 msgid ""
@@ -28183,15 +28176,15 @@ msgid ""
 "On those records, any time that the :guilabel:`15%` tax would be used, "
 "the :guilabel:`0% Exports` tax is used instead."
 msgstr ""
-"Als omzetbelasting is de btw-code :guilabel:`0% Export` van toepassing op "
-"offertes, verkooporders en verkoopfacturen die de fiscale "
-"positie :guilabel:`Buitenlandse handel` gebruiken. Op die documenten wordt, "
-"telkens wanneer de btw-code :guilabel:`15%` gebruikt zou worden, in plaats "
-"daarvan de btw-code :guilabel:`0% Export` gebruikt."
+"Als omzetbelasting is de btw :guilabel:`0% Export` van toepassing op "
+"offertes, verkooporders en verkoopfacturen die de fiscale positie "
+":guilabel:`Buitenlandse handel` gebruiken. Op die documenten wordt, telkens "
+"wanneer de btw :guilabel:`15%` gebruikt zou worden, in plaats daarvan de btw "
+":guilabel:`0% Export` gebruikt."
 
 #: ../../content/applications/finance/accounting/taxes.rst:0
 msgid "The **0% Exports** tax record"
-msgstr "De btw-code **0% Export**"
+msgstr "De btw **0% Export**"
 
 #: ../../content/applications/finance/accounting/taxes.rst:321
 msgid ""
@@ -28199,10 +28192,10 @@ msgid ""
 "default, the taxes set on products are expected to be used with that fiscal "
 "position, so the :guilabel:`Replaces` field is not displayed on it."
 msgstr ""
-"Omdat de eerste fiscale positie in de volgorde als de standaard van het "
-"bedrijf wordt beschouwd, wordt verwacht dat de btw-codes die op producten "
-"ingesteld zijn, met die fiscale positie gebruikt worden. Daarom wordt het "
-"veld :guilabel:`Vervangt` daar niet weergegeven."
+"Omdat de eerste fiscale positie in de reeks als de standaard van het bedrijf "
+"wordt beschouwd, wordt verwacht dat de btw's die op producten ingesteld "
+"zijn, met die fiscale positie gebruikt worden. Daarom wordt het veld "
+":guilabel:`Vervangt` daar niet weergegeven."
 
 #: ../../content/applications/finance/accounting/taxes.rst:326
 msgid ""
@@ -28210,9 +28203,9 @@ msgid ""
 "adjust` :guilabel:`adjust settings` in the taxes list view and display "
 "the :guilabel:`Replaces` field."
 msgstr ""
-"Gebruik de :icon:`oi-settings-adjust` :guilabel:`instellingen aanpassen` in "
-"de btw-lijstweergave en geef het veld :guilabel:`Vervangt` weer om "
-"gemakkelijker te zien welke btw-codes vervangen worden."
+"Gebruik :icon:`oi-settings-adjust` :guilabel:`instellingen aanpassen` in de "
+"btw-lijstweergave en geef het veld :guilabel:`Vervangt` weer om "
+"gemakkelijker te zien welke btw's vervangen worden."
 
 #: ../../content/applications/finance/accounting/taxes.rst:0
 msgid "The **Replaces** field shown in the list view"
@@ -28222,12 +28215,11 @@ msgstr "Het veld **Vervangt** in de lijstweergave"
 msgid ""
 "Tax mapping only works with :ref:`active <taxes/list_activation>` taxes."
 msgstr ""
-"btw-code-toewijzing werkt alleen met :ref:`actieve <taxes/list_activation>` "
-"btw-codes."
+"Btw-toewijzing werkt alleen met :ref:`actieve <taxes/list_activation>` btw's."
 
 #: ../../content/applications/finance/accounting/taxes.rst:336
 msgid "Extra taxes"
-msgstr "Extra btw"
+msgstr "Extra belastingen"
 
 #: ../../content/applications/finance/accounting/taxes.rst:338
 msgid ""
@@ -28236,10 +28228,10 @@ msgid ""
 "**luxury** taxes, **environmental** taxes, **import** or **export duties** "
 "taxes, etc."
 msgstr ""
-"\"Extra btw\" is een brede term die verwijst naar aanvullende belastingen "
-"bovenop de standaard of basisbelastingen opgelegd door overheden. Deze extra "
-"belastingen kunnen **luxe**belastingen, **milieu**belastingen, **import**- "
-"of **export**heffingen zijn, enz."
+"'Extra belastingen' is een brede term die verwijst naar aanvullende "
+"belastingen bovenop de standaard of basisbelastingen opgelegd door "
+"overheden. Deze extra belastingen kunnen **luxebelastingen**, "
+"**milieubelastingen**, **invoerrechten** of **uitvoerrechten** zijn, enz."
 
 #: ../../content/applications/finance/accounting/taxes.rst:343
 msgid ""
@@ -28259,12 +28251,12 @@ msgid ""
 "enable :guilabel:`Affect Base of Subsequent Taxes`. Then, drag and drop the "
 "taxes in the :ref:`order they should be computed <taxes/base-subsequent>`."
 msgstr ""
-"Om een extra btw te berekenen in Odoo, :ref:`maak een btw aan <taxes/"
+"Zo bereken je een extra belasting in Odoo: :ref:`Maak een btw aan <taxes/"
 "configuration>`, voer een btw-naam in, selecteer een :ref:`Btw-berekening "
 "<taxes/configuration>`, stel een :guilabel:`Bedrag` in, en schakel in het "
-"tabblad :guilabel:`Geavanceerde opties` de optie :guilabel:`Van invloed op "
-"basis van daaropvolgende btw` in. Sleep en zet vervolgens de btw-codes in "
-"de :ref:`volgorde waarin ze moeten worden berekend <taxes/base-subsequent>`."
+"tabblad :guilabel:`Geavanceerde opties` de optie :guilabel:`Grondslag van "
+"daaropvolgende btw beïnvloeden` in. Sleep en zet vervolgens de btw's in de "
+":ref:`volgorde waarin ze moeten worden berekend <taxes/base-subsequent>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:352
 msgid ""
@@ -28273,8 +28265,8 @@ msgid ""
 "come *before* the sales tax in the computation sequence."
 msgstr ""
 "In België is de formule om een milieubelasting te berekenen: `(productprijs "
-"+ milieubelasting) x btw`. Daarom moet onze milieubelasting *vóór* de btw "
-"komen in de berekeningsvolgorde."
+"+ milieubelasting) x btw`. Daarom moet onze milieubelasting *vóór* de "
+"verkoopbtw komen in de berekeningsvolgorde."
 
 #: ../../content/applications/finance/accounting/taxes.rst:355
 msgid ""
@@ -31267,7 +31259,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:3
 msgid "Fiscal positions (tax and account mapping)"
-msgstr "Fiscale posities (btw- en rekeningtoewijzing)"
+msgstr "Fiscale posities (belasting- en rekeningtoewijzing)"
 
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:5
 msgid ""
@@ -31580,7 +31572,7 @@ msgstr "factuurregels met btw"
 #: ../../content/applications/finance/accounting/taxes/tax_computation.rst:8
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:413
 msgid "Tax computation"
-msgstr "Btw-berekening"
+msgstr "Berekening belastingen"
 
 #: ../../content/applications/finance/accounting/taxes/tax_computation.rst:10
 msgid ""
