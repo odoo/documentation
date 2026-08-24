@@ -1,0 +1,208 @@
+<div class="journal-entries-cheat-sheet">
+    <div class="entries-control" id="entries-control">
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="company-incorporation" checked>
+            {{ _("Company Incorporation") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="customer-invoice-100-tax">
+            {{ _("Customer Invoice ($100 + 9% tax)") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="customer-payment">
+            {{ _("Customer payment") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="supplier-bill-50-52">
+            {{ _("Supplier Bill (Purchase Order $50 but Invoice $52)") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="supplier-goods-received-50">
+            {{ _("Supplier Goods Received (Purchase Order: $50)") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="buy-asset-300000">
+            {{ _("Buy an asset ($300,000 - no tax)") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="pay-supplier-invoice">
+            {{ _("Pay supplier invoice") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="cash-sale-sales-receipt">
+            {{ _("Cash sale (Sales Receipt)") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="customer-pays-invoice-rebate">
+            {{ _("Customer pays invoice, 5% early payment rebate") }}
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="entries-control" data-entry-id="fiscal-year-closing">
+            {{ _("Fiscal year closing - positive earnings and 50% dividends") }}
+        </label>
+    </div>
+
+    <div class="entries-panels">
+        <div class="entries-panel" data-entry-id="company-incorporation">
+            <table class="table table-sm d-c-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>{{ _("Debit") }}</th>
+                        <th>{{ _("Credit") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ _("Assets: Cash") }}</td>
+                        <td>1000</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{{ _("Equity: Common Stock") }}</td>
+                        <td></td>
+                        <td>1000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="entries-listing">
+                <h4>{{ _("Explanation") }}:</h4>
+                <ul>
+                    <li>{{ _("The company receives $1,000 in cash") }}</li>
+                    <li>{{ _("Shares worth of $1,000 belong to the founders") }}</li>
+                </ul>
+                <p>{{ _("The initial capital can be cash, but could also be intellectual property, goodwill from a previous company, licences, know how, etc...") }}</p>
+                <p>{{ _("Sometimes, capital is not released immediately, accounts for \"capital to be released\" may be necessary.") }}</p>
+            </div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="customer-invoice-100-tax" hidden>
+            <table class="table table-sm d-c-table">
+                <thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead>
+                <tbody>
+                    <tr><td>{{ _("Revenue: Goods") }}</td><td></td><td>100</td></tr>
+                    <tr><td>{{ _("Liabilities: Deferred Tax Liabilities") }}</td><td></td><td>9</td></tr>
+                    <tr><td>{{ _("Assets: Accounts Receivable") }}</td><td>109</td><td></td></tr>
+                    <tr><td>{{ _("Assets: Inventory") }}</td><td></td><td>50</td></tr>
+                    <tr><td>{{ _("Expenses: Cost of Goods Sold") }}</td><td>50</td><td></td></tr>
+                </tbody>
+            </table>
+            <div class="entries-listing">
+                <h4>{{ _("Explanation") }}:</h4>
+                <ul>
+                    <li>{{ _("Revenues increase by $100") }}</li>
+                    <li>{{ _("A tax to pay at the end of the month of $9") }}</li>
+                    <li>{{ _("The customer owes $109") }}</li>
+                    <li>{{ _("The inventory is decreased by $50 (shipping of the goods)") }}</li>
+                    <li>{{ _("The cost of goods sold decreases the gross profit by $50") }}</li>
+                </ul>
+            </div>
+            <div class="entries-listing">
+                <h4>{{ _("Configuration") }}:</h4>
+                <ul>
+                    <li>{{ _("Revenue: defined on the product, or the product category if not on the product, field Income Account") }}</li>
+                    <li>{{ _("Deferred Tax Liabilities: defined on the tax used on the invoice line") }}</li>
+                    <li>{{ _("Accounts Receivable: defined on the customer (property)") }}</li>
+                    <li>{{ _("Inventory: defined on the category of the related product (property)") }}</li>
+                    <li>{{ _("Expenses: defined on the product, or the category of product (property)") }}</li>
+                </ul>
+                <p>{{ _("The fiscal position used on the invoice may have a rule that replaces the Income Account or the tax defined on the product by another one.") }}</p>
+            </div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="customer-payment" hidden>
+            <table class="table table-sm d-c-table">
+                <thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead>
+                <tbody>
+                    <tr><td>{{ _("Assets: Cash") }}</td><td>109</td><td></td></tr>
+                    <tr><td>{{ _("Assets: Accounts Receivable") }}</td><td></td><td>109</td></tr>
+                </tbody>
+            </table>
+            <div class="entries-listing">
+                <h4>{{ _("Explanation") }}:</h4>
+                <ul>
+                    <li>{{ _("The company receives $109 in cash") }}</li>
+                    <li>{{ _("The receivable held against the client is reduced by $109") }}</li>
+                </ul>
+            </div>
+            <div class="entries-listing">
+                <h4>{{ _("Configuration") }}:</h4>
+                <ul>
+                    <li>{{ _("Cash: defined on the journal used when registering the payment, fields Default Credit Account and Default Debit Account") }}</li>
+                    <li>{{ _("Accounts Receivable: defined on the customer (property)") }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="supplier-bill-50-52" hidden>
+            <table class="table table-sm d-c-table">
+                <thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead>
+                <tbody>
+                    <tr><td>{{ _("Assets: Uninvoiced Inventory") }}</td><td>50</td><td></td></tr>
+                    <tr><td>{{ _("Assets: Deferred Tax Assets") }}</td><td>4.68</td><td></td></tr>
+                    <tr><td>{{ _("Expenses: Price Difference") }}</td><td>2</td><td></td></tr>
+                    <tr><td>{{ _("Liabilities: Accounts Payable") }}</td><td></td><td>56.68</td></tr>
+                </tbody>
+            </table>
+            <div class="entries-listing">
+                <h4>{{ _("Explanation") }}:</h4>
+                <ul>
+                    <li>{{ _("A temporary account is used to note goods to receive") }}</li>
+                    <li>{{ _("The purchase order provides prices of goods, the actual invoice may include extra costs such as shipping") }}</li>
+                    <li>{{ _("The company still needs to pay the vendor (traded an asset against a liability)") }}</li>
+                </ul>
+            </div>
+            <div class="entries-listing">
+                <h4>{{ _("Configuration") }}:</h4>
+                <ul>
+                    <li>{{ _("Uninvoiced Inventory: defined on the product or the category of related product, field: Stock Input Account") }}</li>
+                    <li>{{ _("Deferred Tax Assets: defined on the tax used on the purchase order line") }}</li>
+                    <li>{{ _("Accounts Payable: defined on the supplier related to the bill") }}</li>
+                </ul>
+                <p>{{ _("In this scenario, the purchase order was $50 but the company received an invoice for $52 as there were extra shipping costs") }}</p>
+            </div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="supplier-goods-received-50" hidden>
+            <table class="table table-sm d-c-table">
+                <thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead>
+                <tbody>
+                    <tr><td>{{ _("Assets: Inventory") }}</td><td>50</td><td></td></tr>
+                    <tr><td>{{ _("Assets: Uninvoiced Inventory") }}</td><td></td><td>50</td></tr>
+                </tbody>
+            </table>
+            <div class="entries-listing"><h4>{{ _("Explanation") }}:</h4><ul><li>{{ _("Inventory is increased by $50, the expected amount coming from the purchase order") }}</li><li>{{ _("A temporary account is used for the counterpart and will be cleared when receiving the invoice") }}</li></ul></div>
+            <div class="entries-listing"><h4>{{ _("Configuration") }}:</h4><ul><li>{{ _("Uninvoiced Inventory: defined on the product or the category of related product, field: Stock Input Account") }}</li><li>{{ _("Inventory: defined on the product category, field: Stock Valuation") }}</li></ul></div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="buy-asset-300000" hidden>
+            <table class="table table-sm d-c-table"><thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead><tbody><tr><td>{{ _("Assets: Buildings") }}</td><td>300000</td><td></td></tr><tr><td>{{ _("Liabilities: Accounts Payable") }}</td><td></td><td>300000</td></tr></tbody></table>
+            <div class="entries-listing"><h4>{{ _("Explanation") }}:</h4><ul><li>{{ _("The company gets an asset worth of $300,000") }}</li><li>{{ _("The company needs to pay $300,000 to the vendor (traded an asset against a liability)") }}</li></ul></div>
+            <div class="entries-listing"><h4>{{ _("Configuration") }}:</h4><ul><li>{{ _("Buildings: Defined on the Asset category selected on the supplier bill line") }}</li><li>{{ _("Accounts Payable: defined on the supplier related to the bill (property)") }}</li></ul></div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="pay-supplier-invoice" hidden>
+            <table class="table table-sm d-c-table"><thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead><tbody><tr><td>{{ _("Liabilities: Accounts Payable") }}</td><td>300000</td><td></td></tr><tr><td>{{ _("Assets: Cash") }}</td><td></td><td>300000</td></tr></tbody></table>
+            <div class="entries-listing"><h4>{{ _("Explanation") }}:</h4><ul><li>{{ _("The company owns $300,000 less to the supplier (liabilities are settled)") }}</li><li>{{ _("The company's cash is reduced by $300,000 (reduction of asset)") }}</li></ul></div>
+            <div class="entries-listing"><h4>{{ _("Configuration") }}:</h4><ul><li>{{ _("Accounts Payable: defined on the supplier you pay (property)") }}</li><li>{{ _("Cash: defined on the journal related to the payment method") }}</li></ul></div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="cash-sale-sales-receipt" hidden>
+            <table class="table table-sm d-c-table"><thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead><tbody><tr><td>{{ _("Assets: Cash") }}</td><td>109</td><td></td></tr><tr><td>{{ _("Revenue: Goods") }}</td><td></td><td>100</td></tr><tr><td>{{ _("Liabilities: Deferred Tax Liabilities") }}</td><td></td><td>9</td></tr></tbody></table>
+            <div class="entries-listing"><h4>{{ _("Explanation") }}:</h4><ul><li>{{ _("Company's cash is increased by $109") }}</li><li>{{ _("Revenues increase by $100") }}</li><li>{{ _("A tax of $9 has to be paid") }}</li></ul></div>
+            <div class="entries-listing"><h4>{{ _("Configuration") }}:</h4><ul><li>{{ _("Cash: Payment method defined on the Sales Receipt") }}</li><li>{{ _("Sales: Defined on the product used in the sales receipt, or the category of product if empty") }}</li><li>{{ _("Deferred Tax Liabilities: Defined on the tax used in the sales receipt (coming from the product)") }}</li></ul></div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="customer-pays-invoice-rebate" hidden>
+            <table class="table table-sm d-c-table"><thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead><tbody><tr><td>{{ _("Assets: Cash") }}</td><td>950</td><td></td></tr><tr><td>{{ _("Revenue: Sales Discount") }}</td><td>50</td><td></td></tr><tr><td>{{ _("Assets: Accounts Receivable") }}</td><td></td><td>1000</td></tr></tbody></table>
+            <div class="entries-listing"><h4>{{ _("Explanation") }}:</h4><ul><li>{{ _("Company's cash is increased by $950") }}</li><li>{{ _("Sales discounts lowering effective revenues by $50") }}</li><li>{{ _("The customer owns $1000 less to the company") }}</li></ul></div>
+            <div class="entries-listing"><h4>{{ _("Configuration") }}:</h4><ul><li>{{ _("Cash: is defined on the journal related to the payment / bank statement") }}</li><li>{{ _("Sales Discount: is selected during the payment matching process") }}</li><li>{{ _("Accounts Receivable: is defined on the customer associated to the payment") }}</li></ul></div>
+        </div>
+
+        <div class="entries-panel" data-entry-id="fiscal-year-closing" hidden>
+            <table class="table table-sm d-c-table"><thead><tr><th></th><th>{{ _("Debit") }}</th><th>{{ _("Credit") }}</th></tr></thead><tbody><tr><td>{{ _("Net Profit") }}</td><td>1000</td><td></td></tr><tr><td>{{ _("Equity: Retained Earnings") }}</td><td></td><td>500</td></tr><tr><td>{{ _("Liabilities: Dividend Payable") }}</td><td></td><td>500</td></tr></tbody></table>
+            <div class="entries-listing"><h4>{{ _("Explanation") }}:</h4><ul><li>{{ _("The P&L is cleared (net profit)") }}</li><li>{{ _("50% is transferred to retained earnings") }}</li><li>{{ _("50% will be paid to shareholders as dividends") }}</li></ul></div>
+            <div class="entries-listing"><h4>{{ _("Configuration") }}:</h4><ul><li>{{ _("This transaction is recorded by the advisor before closing the fiscal year, depending on how the company uses its net profit.") }}</li></ul></div>
+        </div>
+    </div>
+</div>
