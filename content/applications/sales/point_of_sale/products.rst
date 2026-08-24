@@ -149,9 +149,51 @@ the :guilabel:`Attributes & Variants` tab.
    mode <extra/self_order>` can select product variants when :ref:`adding items to the cart
    <pos/use/sell>`.
 
-     .. image:: products/product_variants_kiosk.png
+     .. image:: products/product-variants-kiosk.png
         :alt: Example of product variants in self-ordering mode.
         :scale: 60%
+
+.. _pos/products/ref-price:
+
+Product reference price
+-----------------------
+
+To display a reference price per :doc:`Unit of Measure (UoM)
+<../../inventory_and_mrp/inventory/product_management/configure/uom>` (e.g., `$20.00/kg`) alongside
+the sales price on product forms and printed :ref:`product labels
+<inventory/shipping_receiving/product-labels>`, go to :menuselection:`Point of Sale
+--> Configuration --> Settings`, scroll down to the :guilabel:`Pricing` section, and enable
+:guilabel:`Product Reference Price`.
+
+Then, specify the product's reference price as follows:
+
+#. Go to :menuselection:`Point of Sale --> Products --> Products` and click the relevant product.
+#. Ensure the :guilabel:`Sales Price` is defined.
+#. Locate the :guilabel:`Reference Unit` field:
+
+   - In the field with the :guilabel:`Specify unit` placeholder, enter or select the reference UoM
+     (e.g., `kg`, `unit`, `can`).
+   - In the adjacent numerical field, enter the quantity of that reference unit contained in the
+     product.
+
+.. image:: products/product-ref-unit.png
+   :alt: Product Reference Price configuration on product forms
+
+.. example::
+
+   - **By weight:** A butter croissant weighs 60 g and sells for $1.20 per unit. To display its
+     reference price per kilogram, set the :guilabel:`Reference Unit` to `0.06 kg` (since 60 g =
+     0.06 kg). The reference price calculates automatically as `$20.00/kg`.
+   - **By pack quantity:** A 6-pack of soda sells for $5.00. Set the :guilabel:`Reference
+     Unit` to `6 cans`. The reference price calculates automatically as `$0.83/can`.
+
+.. note::
+   When configuring :ref:`attributes and variants <pos/products/variants>` for a product, the
+   reference price must be set manually for each product variant.
+
+.. seealso::
+   - :doc:`../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra`
+   - :ref:`inventory/shipping_receiving/product-labels`
 
 .. _pos/products/tags:
 
@@ -187,7 +229,7 @@ the :guilabel:`Extra info` section, add as many :guilabel:`Tags` as needed.
    register <pos/use/open-register>`. Customers can view the tags and tag descriptions by clicking
    the :icon:`fa-info` :guilabel:`(info)` icon next to the product name.
 
-   .. image:: products/tag_kiosk.png
+   .. image:: products/tag-kiosk.png
       :alt: Example of product tags in self-ordering mode.
       :scale: 60%
 
