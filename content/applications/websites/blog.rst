@@ -27,22 +27,47 @@ Customize blog posts
 --------------------
 
 To customize the layout of all blog posts, open one and click :menuselection:`Edit --> Style`.
-Under the :guilabel:`Blog page` section, different options can be used to customize the posts:
+Under the :guilabel:`Blog Page` section, different categories of options can be used to customize
+the posts:
 
-- :guilabel:`Layout`: display the title inside or above the cover.
-- :guilabel:`Increase Readability`: adjust or not the posts' formatting for better reading comfort.
-- :guilabel:`Sidebar`: display or hide a sidebar that can contain several elements:
-
-  - :guilabel:`Archive`: allow visitors to view all posts from a specific month by selecting it.
-  - :guilabel:`Author`: display the post author.
-  - :guilabel:`Blog List`: display links to all :ref:`blog pages <blog/blog-pages>`.
-  - :guilabel:`Share Links`: add clickable icons that link to your social network profiles and a
-    subscription field for your newsletter.
-  - :guilabel:`Tags`: create or select existing :ref:`tags <blog/tags>` and display them on the post.
+:guilabel:`Layout`:
 
 - :guilabel:`Breadcrumb`: display the breadcrumb trail.
-- :guilabel:`Bottom`: click the :guilabel:`Next Article` to hide or display the next post at the
-  end of the page, and click :guilabel:`Comments` to enable or disable visitors' comments.
+- :guilabel:`Style`: choose how the post's title and cover are arranged:
+
+  - :guilabel:`Title Above Cover`: display the title above the cover. Enable
+    :guilabel:`Full Width Cover` to make the cover use the page's full width.
+  - :guilabel:`Split Cover`: display the title on the left and the cover on the right.
+  - :guilabel:`Title Inside Cover`: display the title over the cover.
+
+  Then, select the elements to display in the post's header: :guilabel:`Tags`,
+  :guilabel:`Author`, and :guilabel:`Share Links`.
+
+- :guilabel:`Container Size`: choose the width of the post's content: :guilabel:`Small`,
+  :guilabel:`Regular`, or :guilabel:`Full`. The :guilabel:`Small` size is not available with the
+  :guilabel:`Split Cover` style.
+
+:guilabel:`Content`:
+
+- :guilabel:`Share Links`: add clickable icons that link to your social network profiles.
+- :guilabel:`Tags`: create or select existing :ref:`tags <blog/tags>` and display them on the post.
+- :guilabel:`Comments`: allow visitors to comment.
+- :guilabel:`Bottom`: display another post at the end of the page. The
+  :guilabel:`Recommended Post` field shows which one: by default, the next post of the same blog.
+  Select another post in the field to promote it instead.
+
+:guilabel:`Sidebar`:
+
+- :guilabel:`Author`: display the post author.
+- :guilabel:`Table of Contents`: display a table of contents for the post.
+- :guilabel:`Share Links`: add clickable icons that link to your social network profiles and a
+  subscription field for your newsletter.
+- :guilabel:`Tags`: create or select existing :ref:`tags <blog/tags>` and display them on the post.
+- :guilabel:`Blogs List`: display links to all :ref:`blog pages <blog/blog-pages>`.
+- :guilabel:`Archive`: allow visitors to view all posts from a specific month by selecting it.
+
+.. note::
+   The sidebar is only displayed if at least one of its options is enabled.
 
 To add tags or customize the cover of a specific post, click the cover and use the following
 settings under the :guilabel:`Blog Post Cover` section:
@@ -126,29 +151,55 @@ To customize the blog landing pages, go to :menuselection:`Edit --> Style` and u
 options as desired.
 
 .. note::
-   If you use multiple blogs, settings configured on the main blog landing page or on a specific
-   blog landing page will be applied to all other pages.
+   The settings are shared by the page listing the posts of all blogs (``/blog``) and the page of
+   each individual blog. Only two options differ: :guilabel:`Top Banner` is available on the page
+   of an individual blog, and :guilabel:`Show Title` on the page listing all blogs.
 
-- :guilabel:`Top Banner`: display or hide the page's banner:
+:guilabel:`Layout`:
 
-  - :guilabel:`Full-width`: make the banner use the page's full-width or display a condensed banner.
-- :guilabel:`Layout`: display blog posts as a grid or as a list.
-- :guilabel:`Cards`: display blog posts with or without the *card* effect.
-- :guilabel:`Increase Readability`: enlarge or not the blog posts' size for better reading comfort .
-- :guilabel:`Sidebar`: display or hide a sidebar that contains an *about us* section, and, depending
-  on the options selected:
+- :guilabel:`Top Banner`: display the blog's cover image and subtitle at the top of the page:
 
-  - :guilabel:`Archives`: allow visitors to view all posts from a specific month by selecting it.
-  - :guilabel:`Follow Us`: add clickable icons that link to your social network profiles and a
-    subscription field for your newsletter.
-  - :ref:`Tags List <blog/tags>`: allow visitors to view all blog posts that share a specific tag by
-    selecting it.
+  - :guilabel:`Full Width`: make the banner use the page's full width.
 
-- :guilabel:`Posts List`: select :guilabel:`Cover` to display the posts' covers or select
-  :guilabel:`No Cover` to hide them.
+- :guilabel:`Show Title`: display the title at the top of the page.
+- :guilabel:`Style`: choose how the posts are listed:
+
+  - :guilabel:`Thumbnails`: display the posts in a grid. Two additional options are available:
+
+    - :guilabel:`Promote Last`: emphasize the most recent post by displaying it in a larger size.
+    - :guilabel:`Cards Design`: display the posts with the *card* effect.
+
+  - :guilabel:`Grid`: display the posts in a grid with borders around each post.
+  - :guilabel:`Split`: display the latest post in a fixed column on the left and the other posts
+    in a scrollable grid on the right.
+  - :guilabel:`Minimal`: display the posts in a list showing only their title and date.
+  - :guilabel:`Compact`: display the posts in a list showing only their date, title, and tags.
+  - :guilabel:`Regular`: display the posts in a list with all their information.
+  - :guilabel:`Large`: display the posts in a larger list with all their information.
+
+  With the :guilabel:`Grid` style, or the :guilabel:`Thumbnails` style when :guilabel:`Promote
+  Last` is disabled, use :guilabel:`Size` to choose the number of columns.
+
+- :guilabel:`Content Width`: choose whether the page's content should be :guilabel:`Regular` or
+  :guilabel:`Full`.
+
+:guilabel:`Text & Content`:
+
+- :guilabel:`Cover Image`: display the posts' covers.
+- :guilabel:`Teaser`: display the posts' first sentences.
+- :guilabel:`Tags`: create or select existing :ref:`tags <blog/tags>` and display them on the post.
+- :guilabel:`Stats`: display the number of comments and views for each post.
 - :guilabel:`Author`: display the posts' authors.
-- :guilabel:`Comments/Views Stats`: display or hide the number of comments and views for each post.
-- :guilabel:`Teaser & Tags`: display the posts' first sentences and tags.
+- :guilabel:`Date`: display the posts' publication date.
+
+:guilabel:`Sidebar`:
+
+- :guilabel:`About Us`: display an *about us* section.
+- :guilabel:`Follow Us`: add clickable icons that link to your social network profiles and a
+  subscription field for your newsletter.
+- :ref:`Tags List <blog/tags>`: allow visitors to view all blog posts that share a specific tag by
+  selecting it.
+- :guilabel:`Archives`: allow visitors to view all posts from a specific month by selecting it.
 
 After applying the desired changes, click :guilabel:`Save`.
 
