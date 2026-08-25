@@ -51,7 +51,7 @@ and reduce technical debt.
 
 .. note::
    You can find information on the changes between versions in the `Release Notes
-   <https:/odoo.com/page/release-notes>`_.
+   <https://odoo.com/page/release-notes>`_.
 
 .. _upgrade_custom/request_upgrade:
 
