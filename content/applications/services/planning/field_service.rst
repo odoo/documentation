@@ -220,7 +220,7 @@ occurs when:
   <planning/field-service/employee-service>` assigned as the shift's :guilabel:`Resources`.
 
 .. seealso::
-   - :ref:`Invoice a sales order <accounting/inv-process/so>`
+   - :ref:`Invoice a sales order <accounting/invoice/invoice-from-sales>`
    - :doc:`Odoo Sales documentation </applications/sales/sales>`
 
 Time-based invoicing
