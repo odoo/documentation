@@ -23,22 +23,5 @@ Create a PayU account with Odoo
    information has been submitted, you are then redirected to Odoo, and the payment provider is
    :guilabel:`Enabled`.
 
-.. _payment_providers/payu/webhook-input:
-
-Webhook configuration
-=====================
-
-#. Log into the `PayU Dashboard <https://onboarding.payu.in/app/account/>`_.
-#. Click :guilabel:`Developer` in the left menu, then, select :guilabel:`Webhooks`.
-#. Click :guilabel:`Create Webhook`.
-#. Select :guilabel:`Payments` as the type.
-#. Select :guilabel:`Successful` as the event.
-#. | Enter your Odoo database URL followed by `/payment/payu/webhook` in the :guilabel:`Webhook URL`
-     field.
-   | For example: https://example.odoo.com/payment/payu/webhook.
-#. Click :guilabel:`Create` to create the webhook.
-#. Repeat the same steps to create another webhook, but select :guilabel:`Failed` as the event
-   instead of :guilabel:`Successful`.
-
 .. seealso::
    :doc:`../payment_providers`
