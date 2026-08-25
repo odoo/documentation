@@ -1304,6 +1304,79 @@ Supported positions: ``attributes``, ``inside``, ``before``, ``after``, ``replac
 expressions (``<xpath expr="..." position="...">``) work as well. Chained inheritance
 (grandchild blueprints) is supported; circular inheritance is detected and rejected.
 
+.. _reference/populate/advanced/imports:
+
+Importing blueprints
+--------------------
+
+While :ref:`blueprint inheritance <reference/populate/advanced/inheritance>` extends one
+blueprint, ``<import/>`` composes several independent XML blueprints into a new scenario. The
+imported operation blocks are inserted where the import appears and become ordinary jobs of the
+caller's session:
+
+.. example::
+
+   .. code-block:: xml
+
+      <create model="sale.order" count="500" id="orders">
+          <!-- ... -->
+      </create>
+
+      <import ref="product.fake_product_demo" as="catalog"/>
+
+      <create model="sale.order.line" count="2000">
+          <field name="order_id" ref="orders"/>
+          <field name="product_id"
+                 ref="catalog/product_templates.product_variant_ids"/>
+      </create>
+
+The ``ref`` attribute must contain the fully qualified external ID of another
+``populate.blueprint`` record. An ``<import/>`` must be a direct child of the blueprint's
+``<data/>`` root.
+
+The optional ``as`` attribute adds a namespace to every ``id`` declared by the imported
+blueprint and to its internal references. This avoids conflicts when a scenario imports multiple
+blueprints with the same IDs, or imports the same blueprint more than once. Without ``as``, IDs
+are left unchanged and must not conflict with IDs in the caller or another import.
+
+The slash (``/``) separates namespace components, while the dot (``.``) keeps its existing
+meaning of :ref:`traversing a relational field
+<reference/populate/generators/relational/ref>`. For example, in
+``catalog/product_templates.product_variant_ids``, ``catalog/product_templates`` is the populate
+reference and ``product_variant_ids`` is the relational field path.
+
+Customize an import without modifying its source blueprint by adding the same inheritance
+specifications supported by ``inherit_id`` as children of ``<import/>``:
+
+.. example::
+
+   .. code-block:: xml
+
+      <import ref="product.fake_product_demo" as="catalog">
+          <xpath expr="//create[@id='product_templates']" position="attributes">
+              <attribute name="count">250</attribute>
+          </xpath>
+          <xpath expr="//create[@id='product_supplier_info']" position="replace"/>
+      </import>
+
+The XPath expressions target the source blueprint's original IDs because the specifications are
+applied before the namespace. Inheritance applied to the composed blueprint instead sees the
+namespaced IDs, such as ``catalog/product_templates``.
+
+Imports are resolved recursively, so their namespaces compose. For example, importing a
+``catalog`` namespace under a ``sales`` namespace produces references such as
+``sales/catalog/products``. Recursive combinations of imports and inheritance are rejected.
+
+.. important::
+   Imports are only supported by XML blueprints; a JSON-only blueprint cannot be imported. The
+   caller's module must depend on the module that provides the imported blueprint. When both are
+   in the same module, the imported blueprint must be defined earlier in the module's populate
+   data files.
+
+Imports are resolved when a session is created. New sessions use the latest blueprint definitions,
+whereas an existing session keeps the jobs instantiated from the definitions available at its
+creation.
+
 .. _reference/populate/advanced/sessions:
 
 Sessions and resuming
