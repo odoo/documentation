@@ -1543,7 +1543,7 @@ adding it to the action registry.
 
     import { registry } from "@web/core/registry";
     class MyClientAction extends Component { ... }
-    registry.category("actions").add("my-custom-action", ClientAction);
+    registry.category("actions").add("my-custom-action", MyClientAction);
 
 Then, to use the client action in the web client, we need to create a client
 action record (a record of the model ``ir.actions.client``) with the proper
