@@ -404,6 +404,8 @@ Info
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISERROR(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
+   * - ISFORMULA(cell_reference)
+     - `Excel ISFORMULA article <https://support.microsoft.com/en-us/excel/functions/isformula-function>`_
    * - ISLOGICAL(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISNA(value)
@@ -1009,6 +1011,8 @@ Misc
      - Returns the value from a list (not compatible with Excel)
    * - ODOO.LIST.HEADER(list_id, field_name)
      - Returns the header of a list (not compatible with Excel)
+   * - ODOO.SURVEY(survey_id)
+     - Returns the results of an Odoo survey (not compatible with Excel)
 
 Operators
 ~~~~~~~~~
