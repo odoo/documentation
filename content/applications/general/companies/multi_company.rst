@@ -175,6 +175,62 @@ Inter-company transaction settings can also be accessed and modified by going to
    - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
    - :doc:`../../finance/accounting/get_started/multi_currency`
 
+.. _general/multi-company/interco-clearing:
+
+Inter-company clearing
+----------------------
+
+The **Intercompany clearing** feature automates accounting entries when one company receives a
+payment for an invoice issued by another company within the same database.
+
+When a payment is processed by a secondary company, Odoo automatically reconciles the customer's
+open invoice in the issuing company and creates balancing intercompany entries between the two
+companies. This automation eliminates manual spreadsheet tracking and keeps intercompany accounts
+balanced in real time.
+
+.. example::
+   **Company A** issues a customer invoice for $100.
+
+   The customer pays via the customer portal belonging to **Company B**.
+
+   Upon receiving the payment, Odoo:
+
+   #. Settles the customer receivable in **Companies A and B**.
+   #. Reclassifies Company A's receivable as a claim against **Company B**.
+   #. Records Company B's received funds as a payable owed to **Company A**.
+
+Configuration
+~~~~~~~~~~~~~
+
+.. important::
+   The :guilabel:`Intercompany Payment - Account` (`account_payment_interco`) module must be
+   :ref:`installed <general/install>`, and the :guilabel:`Inter-Company Transactions` feature must be
+   enabled **in each company** that is involved for the :guilabel:`Intercompany Clearing` fields to
+   appear in the Accounting settings.
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Default Accounts` section.
+#. Under :guilabel:`Intercompany Clearing`, define the following fields for company that is
+   currently active:
+
+   - :guilabel:`Journal`: The dedicated journal used to log cross-entity clearing transfers.
+   - :guilabel:`Account Payable`: The clearing payable account used to record debts owed to other
+     companies within the database.
+   - :guilabel:`Account Receivable`: The clearing receivable account used to record claims against
+     other companies within the database.
+
+#. Switch to other companies involved using the company selector in the top right menu and repeat
+   the process for each one.
+
+.. note::
+   The payment method that is used to register the customer payment must use an :ref:`outstanding
+   receipts account <accounting/journals/outstanding-accounts>` so that a journal entry is created.
+
+.. tip::
+   :ref:`Create <chart-of-account/create>` unique payable and receivable clearing accounts that are
+   separate from the payable and receivable accounts used for general transactions, and enable the
+   :guilabel:`Non Trade` option on these accounts.
+
 .. _general/multi-company/use-cases:
 
 Use cases
