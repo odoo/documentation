@@ -253,7 +253,7 @@ Inactivity timeout
 ~~~~~~~~~~~~~~~~~~
 
 *Inactivity timeout* controls whether users are automatically logged out after a period of
-inactivity.
+content/applications/general/users.rstinactivity.
 
 To enable inactivity timeout, click the *Timeouts* tab and select the :guilabel:`Inactivity`
 checkbox. Next, choose either :guilabel:`Screen lock` or :guilabel:`Screen lock with two-factor
