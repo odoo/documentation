@@ -18,14 +18,13 @@ Configuration
 
 To configure the control policy for a product, navigate to :menuselection:`Purchase app --> Products
 --> Products`, then click on a product record to open it. Click to the :guilabel:`Purchase` tab.
-Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, tick the radio
+Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, enable the radio
 button for either :guilabel:`On ordered quantities` or :guilabel:`On recieved quantities`.
 
 - :guilabel:`On ordered quantities`: Creates a vendor bill as soon as a |PO| is confirmed. The
   products and quantities in the |PO| are used to generate a draft bill.
 - :guilabel:`On received quantities`: A bill is created only *after* part of the total order has
-  been received. The products and quantities received are used to generate a draft bill. An error
-  message appears if creation of a vendor bill is attempted without receiving anything.
+  been received. The products and quantities received are used to generate a draft bill.
 
 The default control policy for a product is determined by the :guilabel:`Product Type`:
 
@@ -39,7 +38,7 @@ The *3-way matching* feature ensures vendor bills are only paid once some, or al
 included in the |PO| have been received.
 
 To activate *3-way matching*, navigate to :menuselection:`Purchase app --> Configuration -->
-Settings`, and scroll down to the :guilabel:`Invoicing` section. Then, tick the checkbox for
+Settings`, and scroll down to the :guilabel:`Invoicing` section. Then, enable the checkbox for
 :guilabel:`3-way matching` to enable the feature, and click :guilabel:`Save`.
 
 .. image:: control_bills/control-bills-three-way-matching.png
