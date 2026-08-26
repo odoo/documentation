@@ -14,6 +14,8 @@ Odoo version 20.0
 - Simplifying translation manipulation.
   See `#272177 <https://github.com/odoo/odoo/pull/272177>`_.
 - New ``populate`` script to generate fake data for testing.
+- Storing manifest terms in modules' own translation files instead of ``base``.
+  See `#264363 <https://github.com/odoo/odoo/pull/264363>`_.
 
 Odoo Online version 19.4
 ========================
