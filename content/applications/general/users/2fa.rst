@@ -49,22 +49,21 @@ Two-factor authentication setup
 ===============================
 
 After selecting an authenticator, log in to Odoo, then click the profile avatar in the upper-right
-corner, and select :guilabel:`My Profile` from the resulting drop-down menu.
+corner, and select :guilabel:`My Preferences` from the resulting drop-down menu.
 
-Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-Factor Authentication`
-toggle to *active*.
+Click the *Security* tab, then click :guilabel:`Enable 2FA`.
 
 .. image:: 2fa/account-security.png
    :alt: The account secuirty tab in a user profile.
 
-This generates a :guilabel:`Security Control` pop-up window that requires password confirmation to
-continue. Enter the appropriate password, then click :guilabel:`Confirm Password`. Next, a
-:guilabel:`Two-Factor Authentication Activation` pop-up window appears, with a |QR|.
+This generates an *Access Control* pop-up window that requires password confirmation to continue.
+Enter the Odoo account password, then click :guilabel:`Confirm Password`. Next, a *Two-Factor
+Authentication Activation* pop-up window appears, with a |QR|.
 
 .. figure:: 2fa/qr-code.png
    :alt: The 2fa authentication QR code in Odoo.
 
-   Using the desired authenticator application, scan the |QR| when prompted.
+   Using the desired authenticator application, scan the |QR| code.
 
 .. tip::
    If scanning the screen is not possible (e.g., the setup is being completed on the *same* device
@@ -79,7 +78,8 @@ Afterwards, the authenticator should display a *verification code*.
 .. image:: 2fa/authenticator.png
    :alt: A view of the Google authenticator app with the six digit code for 2fa.
 
-Enter the code into the :guilabel:`Verification Code` field, then click :guilabel:`Activate`.
+Enter the code into the :guilabel:`Verification code` field, then click :guilabel:`Enable Two-Factor
+Authentication`.
 
 .. image:: 2fa/2fa-enabled.png
    :alt: The success message that appears in a user profile when 2fa is successfully enabled.
