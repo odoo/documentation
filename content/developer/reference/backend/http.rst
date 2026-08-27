@@ -91,7 +91,7 @@ Session
 -------
 
 .. autoclass:: odoo.http.Session
-    :members:
+    :members: authenticate, finalize
     :member-order: bysource
 
 .. autoclass:: odoo.http.JsonRPCDispatcher
