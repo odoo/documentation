@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page covers creating a rental order in Odoo Rental, from generating a quote
+                 and requesting a customer signature to tracking service tasks and timesheets. It
+                 also explains finalizing and confirming the invoice for payment.
+
 =====================
 Create a rental order
 =====================
@@ -16,34 +21,26 @@ Create a rental quote
 To create a rental quote, navigate to :menuselection:`Rental app --> Orders --> Orders`, and click
 :guilabel:`New`. Doing so reveals a blank rental order form.
 
-Start by adding a :guilabel:`Customer`, then set the desired rental duration in the
-:guilabel:`Rental period` fields. To adjust the rental duration, click the first date in the
-:guilabel:`Rental period` field, and select the range of dates and times to represent the rental
-duration from the pop-up calendar form that appears. Once complete, click :guilabel:`Apply` in the
-calendar pop-up form.
+Start by adding a :guilabel:`Customer`. In the *Order Lines* tab, add a rental product by clicking
+:guilabel:`Add a product` or :guilabel:`Catalog`, and select the desired rental product. Once a
+product rental product is added, the :guilabel:`Rental period` field displays, allowing users to
+select the desired rental duration via the pop-up calendar.
 
 .. important::
    There can only be one rental period per rental order. Multiple rental product orders with
    different rental periods require a rental order for each rental period.
 
-Next, add a rental product in the :guilabel:`Order Lines` tab by clicking :guilabel:`Add a product`
-and selecting the desired rental product to add to the form.
-
-.. note::
-   If a rental product is added *before* the :guilabel:`Rental period` field is properly configured,
-   the user can still adjust it accordingly.
-
-   Select the desired date range to represent the rental duration, then click :icon:`fa-refresh`
-   :guilabel:`Update Rental Prices` next to the :guilabel:`Pricelist` field.
-
-   Doing so reveals a :guilabel:`Confirmation` pop-up window. If everything is correct, click
-   :guilabel:`Ok`, and Odoo recalculates the rental price accordingly.
+As long as the rental quotation isn't confirmed, the user can change the :guilabel:`Rental period`.
+A :icon:`fa-refresh` :guilabel:`Update Rental Prices` icon appears after a rental period change.
+Click the icon, and the rental quotation auto-calculates the new :guilabel:`Unit Prices`,
+:guilabel:`Amount`, and quotation :guilabel:`Total`.
 
 Once all the information has been entered correctly on the rental order form, click :guilabel:`Send`
 to send the quotation to the customer. When the customer confirms the quotation, click
-:guilabel:`Confirm` to finalize the order. A :guilabel:`Booked` banner displays on the rental order.
+:guilabel:`Confirm` to finalize the order. A :guilabel:`Booked` badge displays on the rental order.
 
-When a rental order is confirmed, the following smart buttons appear at the top of the form:
+When a rental order is confirmed, smart buttons may appear at the top of the form, depending on the
+:ref:`app integrations <rental/product_type/app-integration>`:
 
 - :icon:`fa-puzzle-piece` :guilabel:`Tasks`: Linked to the **Projects** app and shows any projects
   or tasks related to the rental order.
@@ -53,12 +50,6 @@ When a rental order is confirmed, the following smart buttons appear at the top 
   related to the rental order.
 - :icon:`fa-truck` :guilabel:`Delivery`: Linked to the **Inventory** app and shows any delivery and
   receipt orders related to the rental order.
-
-.. important::
-   For the appropriate smart buttons to display, the **Project**, **Timesheet**, **Planning**, and
-   **Inventory** apps are needed. The selected service product on the rental order must be a
-   properly configured :doc:`../configure_products/service_products` or
-   :doc:`../configure_products/labor_service_products` to integrate with the recommended apps.
 
 .. image:: create_rental_order/rental-order-form.png
    :alt: Sample of a filled out rental order available in the Odoo Rental application.
@@ -158,12 +149,12 @@ rental order. The total hours worked appear in the :guilabel:`Recorded Time` fie
 Create an invoice
 =================
 
-Navigate to the desired invoice in the **Rental** app. On the :guilabel:`Rental Orders` dashboard,
-in the *Invoice Status* section, click :guilabel:`To Invoice` to view all rental orders that need to
-be sent.
+Navigate to the desired invoice by opening the **Rental** app to display the :guilabel:`Rental
+Orders` dashboard. In the *Invoice Status* section, click :guilabel:`To Invoice` to view all rental
+orders that need invoices.
 
 Click the desired rental order, then click :guilabel:`Create Invoice`. Select :guilabel:`Regular
-invoice` from the :guilabel:`Create invoice(s)` window and click :guilabel:`Create Draft`.
+invoice` from the *Create invoice(s)* window and click :guilabel:`Create Draft`.
 
 Finalize time for physical service products
 -------------------------------------------
