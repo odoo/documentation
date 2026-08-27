@@ -54,6 +54,8 @@ Transfers` checkbox enables automatic creation of delivery and return receipts f
 
 Click :guilabel:`Save` to apply the changes.
 
+.. _rental/product_type/app-integration:
+
 App integration configuration
 =============================
 
