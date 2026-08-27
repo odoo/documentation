@@ -1,6 +1,6 @@
-================
-Delivery methods
-================
+==========
+Deliveries
+==========
 
 Odoo eCommerce allows you to configure various delivery methods, enabling customers to choose their
 preferred option at :ref:`checkout <ecommerce/checkout/steps>`. These methods include integrations
@@ -74,8 +74,8 @@ Upon :ref:`configuring <inventory/shipping_receiving/delivery-product>` a delive
 - Use the :guilabel:`Availability` tab to define :ref:`conditions
   <inventory/shipping_receiving/availability>` for the delivery method based on the order's content
   or destination.
-- Enable the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>` option
-  so customers can pay upon delivery.
+- Enable the :ref:`Cash on Delivery <ecommerce/payments/cash-on-delivery>` option so customers can
+  pay upon delivery.
 - Add a :guilabel:`Tracking Link` to allow customer to track their order via the customer portal.
 - Use the :guilabel:`eCommerce` tab to:
 
@@ -136,9 +136,9 @@ To allow customers to reserve products online and collect them in-store, follow 
      assigned to the website on which the delivery method is used. If the companies differ, the
      pickup location cannot be selected.
    - The :guilabel:`Click & Collect` option is not available for services.
-   - By default, the :ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>` payment
-     method is :ref:`enabled and published <payment_providers/add_new>` when the :guilabel:`Click &
-     Collect` feature is activated.
+   - By default, the :ref:`Pay on Site <ecommerce/payments/pay-on-site>` payment method is
+     :ref:`enabled and published <payment_providers/add_new>` when the :guilabel:`Click & Collect`
+     feature is activated.
 
 .. seealso::
    :ref:`ecommerce/products/stock-management`

@@ -30,7 +30,6 @@ Online payments
    payment_providers/worldline
    payment_providers/xendit
    payment_providers/bank_payments
-   payment_providers/inperson_payments
 
 Odoo embeds several **payment providers** that enable customers to pay online through *customer
 portals* or *eCommerce websites*. Customers pay for sales orders, invoices, or subscriptions with
@@ -218,10 +217,13 @@ Online payment providers
    provider allows you to test business flows involving online payments. No credentials are required
    as the demo payments are dummy payments.
 
-.. _payment_providers/bank_payments:
+.. _payment_providers/alternatives:
 
-Bank payments
--------------
+Alternative payment methods
+===========================
+
+Some payment methods do not rely on an external payment provider. These methods are still
+installed and configured as payment providers in Odoo, and include the following:
 
 - | :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`
   | Odoo displays your payment information with a payment reference. You have to approve the payment
@@ -229,14 +231,12 @@ Bank payments
 - | :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`
   | Customers can make a bank transfer to register a SEPA Direct Debit mandate and allow their
     account to be charged directly for future payments.
-
-In-person payments
-------------------
-
-- | :ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>`
-  | Customers can reserve products online and pay when collecting their orders in store.
-- | :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>`
-  | Customers can pay for their orders upon delivery.
+- | :ref:`Pay on Site <ecommerce/payments/pay-on-site>`
+  | Customers reserve products online and pay when collecting their orders in store.
+- | :ref:`Cash on Delivery <ecommerce/payments/cash-on-delivery>`
+  | Customers pay for their orders upon delivery.
+- | :ref:`Pay on Invoice <ecommerce/payments/pay-on-invoice>`
+  | Customers pay for their orders later, after receiving an invoice.
 
 .. _payment_providers/add_new:
 
@@ -486,6 +486,8 @@ adding or removing a payment provider's supported currencies or countries is pos
      remains available, even though it is possible the payment will be refused at a later stage
      should the country or currency not be supported.
 
+.. _payment_providers/pricelists:
+
 Pricelists
 ----------
 
@@ -546,5 +548,5 @@ payments from other payments.
    - :doc:`payment_providers/worldline`
    - :doc:`payment_providers/xendit`
    - :doc:`payment_providers/bank_payments`
-   - :doc:`payment_providers/inperson_payments`
+   - :doc:`E-commerce payments </applications/websites/ecommerce/payments>`
    - :doc:`accounting/bank`

@@ -73,6 +73,7 @@ ordering and checkout processes, set up delivery methods, handle orders, and ana
    ecommerce/ecommerce_design
    ecommerce/checkout
    ecommerce/shipping
+   ecommerce/payments
    ecommerce/order_handling
    ecommerce/performance
    ecommerce/google_merchant_center
