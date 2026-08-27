@@ -62,6 +62,8 @@ return receipts for a rental product.
 
 Click :guilabel:`Save` to apply the changes.
 
+.. _rental/product_type/app-integration:
+
 App integration configuration
 =============================
 
