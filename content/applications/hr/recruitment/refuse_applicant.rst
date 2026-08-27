@@ -104,7 +104,7 @@ Then, two fields appear below the selected refusal reason: :guilabel:`Send Email
 :guilabel:`Email Template`.
 
 .. image:: refuse_applicant/refuse-pop-up.png
-   :alt: The Refuse Reason pop-up window that appears when refusing an applicant.
+   :alt: The Refuse Reason pop-up window which appears when refusing an applicant.
 
 The applicant's email address automatically populates the :guilabel:`Send Email` field; additional
 email recipients **cannot** be added.
@@ -121,7 +121,7 @@ refusal email is sent to the applicant, and a red :guilabel:`Refused` banner app
 applicant's card in the top-right corner.
 
 .. image:: refuse_applicant/refuse.png
-   :alt: An applicant's card with the refused banner appearing in the top-right corner in red.
+   :alt: An applicant's card with a refused banner appearing in the top-right corner in red.
 
 View refused applicants
 =======================
