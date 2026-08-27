@@ -44,8 +44,8 @@ a form to provide details about the shipping provider, including:
   <inventory/shipping/fixed>` or :ref:`based on rules <inventory/shipping/rules>` options, refer to
   their respective sections below.
 - :guilabel:`Cash on Delivery`: allow customers to choose the :ref:`Cash on Delivery
-  <payment_providers/inperson_payments/cash_on_delivery>` payment method when selecting this
-  delivery option on the ecommerce website.
+  <ecommerce/payments/cash-on-delivery>` payment method when selecting this delivery option on the
+  ecommerce website.
 - :guilabel:`Company`: If the shipping method should apply to a specific company, select it from the
   drop-down menu. Leave the field blank to apply the method to all companies. This field only
   appears in multi-company databases.
