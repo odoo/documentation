@@ -25,6 +25,7 @@ Online payments
    payment_providers/payu
    payment_providers/razorpay
    payment_providers/redsys
+   payment_providers/sslcommerz
    payment_providers/stripe
    payment_providers/tosspayments
    payment_providers/worldline
@@ -171,6 +172,12 @@ Online payment providers
      - Full and partial
      -
    * - :doc:`Redsys <payment_providers/redsys>`
+     - The provider's website
+     -
+     -
+     -
+     -
+   * - :doc:`SSLCOMMERZ <payment_providers/sslcommerz>`
      - The provider's website
      -
      -
