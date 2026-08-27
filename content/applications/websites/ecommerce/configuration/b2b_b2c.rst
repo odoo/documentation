@@ -122,6 +122,10 @@ can be automated if (and when) the online payment is :ref:`confirmed <ecommerce/
 To automate invoicing, enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting. If
 this feature has not been enabled, the customer only receives an order confirmation.
 
+.. tip::
+   The :ref:`Pay on Invoice <ecommerce/payments/pay-on-invoice>` payment method allows customers
+   to place an order without upfront payment and pay after they receive the invoice.
+
 .. _ecommerce/b2b_b2c/b2b-fields:
 
 B2B fields at checkout

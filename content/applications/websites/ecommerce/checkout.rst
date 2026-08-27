@@ -266,26 +266,12 @@ At the :guilabel:`Payment` step, customers can choose a :guilabel:`Payment metho
 payment details, and click :guilabel:`Pay now`.
 
 .. note::
-   - The :guilabel:`Pay now` button label can be customized using the :doc:`website editor
-     <../website/web_design>`.
-   - When the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>` payment
-     option is enabled, the customer must click the :guilabel:`Confirm` button and pay upon
-     delivery.
+   The :guilabel:`Pay now` button label can be customized using the :doc:`website editor
+   <../website/web_design>`.
 
-To make payment methods available to customers, configure and enable one or more :doc:`payment
-provider(s) </applications/finance/payment_providers>`. To do so, go to :menuselection:`Website -->
-Configuration --> Payment Providers`, :guilabel:`Activate` the relevant payment provider, and
-:ref:`configure <payment_providers/add_new>` it.
-
-.. tip::
-   The options displayed at checkout depend on the active payment providers, the enabled
-   :ref:`payment methods <payment_providers/payment_methods>`, the :ref:`customer’s country and
-   currency <payment_providers/currencies_countries>`, and, optionally, the :ref:`maximum amount
-   <payment_providers/maximum_amount>` set for the provider.
-
-   To display an :ref:`availability <payment_providers/availability>` report for payment providers
-   and payment methods and help diagnose potential availability issues on the payment form, enable
-   the :ref:`developer mode <developer-mode>`, and click the :icon:`fa-bug` (:guilabel:`bug)` icon.
+.. seealso::
+   - :doc:`E-commerce payments <payments>`
+   - :doc:`Online payment providers </applications/finance/payment_providers>`
 
 Terms and conditions
 ~~~~~~~~~~~~~~~~~~~~
