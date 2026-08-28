@@ -113,25 +113,35 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
 
 
 def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
-    """ Implement an `icon` role for Odoo and Font Awesome icons. """
+    """ Implement an `icon` role for Material Symbols, Odoo Icons, Font Awesome, and Spreadsheet icons.
+
+    Syntax:
+      :icon:`fa-check`         → Font Awesome icon
+      :icon:`oi-odoo`          → Odoo UI (custom) icon (legacy class)
+      :icon:`os-see-records`   → Odoo Spreadsheet icon (SVG)
+      :icon:`check`            → Material Symbols icon (no prefix)
+      :icon:`settings`         → Another Material Symbols example
+    """
     for icon_class in text.split():
-        if not (icon_class.startswith('fa-') or icon_class.startswith('oi-') \
-            or icon_class.startswith('os-')):
-            report_error = inliner.reporter.error(
-                f"'{icon_class}' is not a valid icon formatting class.", lineno=lineno
-            )
-            error_node = inliner.problematic(rawtext, rawtext, report_error)
-            return [error_node], [report_error]
-    if text.startswith('oi-'):
-        icon_html = f'<i class="oi {text}"></i>'
-    elif text.startswith('fa-'):
+        # Material Symbols icons have no prefix; fa-, oi-, os- are optional prefixes
+        # No validation error needed—all single words are valid icon names
+        pass
+
+    if text.startswith('fa-'):
+        # Font Awesome legacy icon
         icon_html = f'<i class="fa {text}"></i>'
+    elif text.startswith('oi-'):
+        # Odoo UI icon (legacy class style)
+        icon_html = f'<i class="oi {text}"></i>'
     elif text.startswith('os-'):
+        # Odoo Spreadsheet icon (SVG)
         icon_html = (
             '<svg class="os-icon" aria-hidden="true" role="img">'
-                f'<use href="#{text[3:]}" />' # [3:] strips 'os-' specifier from svg id
-             '</svg>'                         # see ../static/img/odoo-spreadsheets-icons.svg
+                f'<use href="#{text[3:]}" />'  # [3:] strips 'os-' specifier from svg id
+             '</svg>'                          # see ../static/img/odoo-spreadsheets-icons.svg
         )
     else:
-        icon_html = f'<i class="{text}"></i>'
+        # Material Symbols icon (no prefix) — render as text content with font class
+        icon_html = f'<span class="material-symbols-outlined">{text}</span>'
+
     return [nodes.raw('', icon_html, format='html')], []
