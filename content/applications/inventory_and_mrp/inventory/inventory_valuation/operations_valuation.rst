@@ -5,9 +5,9 @@
 .. |FIFO| replace:: :abbr:`FIFO (First In First Out)`
 .. |AVCO| replace:: :abbr:`AVCO (Average Costing)`
 
-=========================================
-How inventory operations affect valuation
-=========================================
+=====================================================
+Valuation of stock movements and inventory operations
+=====================================================
 
 The **Inventory** app maintains a real-time valuation of stock based on the physical movement of
 goods. Every time an operation moves goods in or out of the company's stock, the value that came in
@@ -179,8 +179,20 @@ Each product has two key reporting figures calculated using the value from *stoc
 
 - :guilabel:`Total Value`: The total value of goods on hand. Sums the :guilabel:`Remaining Value` of
   inbound moves that still have a :guilabel:`Remaining Quantity`.
-- :guilabel:`Unit Cost`: The unit cost of a product. Calculated based on the :ref:`costing method
-  <inventory/cheat_sheet/accounting-methods>` set for the product group.
+- :guilabel:`Unit Cost`: The unit cost of a product, specific to each stock movement. Calculated
+  based on the :ref:`costing method <costing-methods>` set for the product group.
+
+.. important::
+
+   The :guilabel:`Unit Cost` on a stock movement is distinct from the *Cost* field in the *product
+   form*. The *Cost* field displays the average price of the product, even if the product group is
+   configured to use the |FIFO| costing method. As a result, the *Cost* field on the product form is
+   affected by outbound stock movements when using the |FIFO| costing method.
+
+   The value in the *Cost* field is used as the unit price for
+   :ref:`inventory/operations_valuation/inventory-adjustments`, even when using the |FIFO| costing
+   method.
+
 
 .. _inventory/operations_valuation/stock-movement-operations:
 
@@ -304,14 +316,18 @@ Inventory adjustments
 ---------------------
 
 Discrepancies between the recorded quantity and counted quantity can be reconciled through inventory
-adjustments. The difference is applied as a move to or from a virtual *Inventory Loss* location,
-which is outside stock, so the adjustment changes inventory value as well as quantity. Adjustments
-increase or decrease value based on the current unit cost of the product:
+adjustments. The difference is applied as a move to or from a virtual *Inventory adjustment*
+location, which is outside stock, so the adjustment changes inventory value as well as quantity.
+Adjustments increase or decrease value based on the difference between the counted quantity and the
+expected quantity:
 
 - A counted quantity **higher** than expected produces an *inbound* move and *increases* inventory
   value.
 - A counted quantity **lower** than expected produces an *outbound* move and *decreases* inventory
   value.
+
+Inventory adjustments use the product's current averaged cost as the :ref:`unit cost
+<inventory/operations_valuation/stock-movement-reported-values>` for the stock movement.
 
 .. seealso::
    :doc:`../warehouses_storage/inventory_management/count_products`
