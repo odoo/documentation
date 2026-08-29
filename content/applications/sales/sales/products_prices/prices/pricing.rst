@@ -44,6 +44,8 @@ modified at any time.
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
    website visitors to choose a pricelist when shopping in your **eCommerce** website.
 
+.. _sales/pricing/create-edit-pricelists:
+
 Creating and editing pricelists
 -------------------------------
 

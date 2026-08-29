@@ -38,7 +38,8 @@ Collect deposits from an optional product
 On the rental product's form, go to the :guilabel:`Sales` tab and add the :ref:`deposit service
 product <rental/manage_deposits/config>` to the :guilabel:`Optional Products`.
 
-Be sure to configure the rental product's prices on the :ref:`Rental prices <rental/pricing>` tab.
+Be sure to configure the rental product's prices on the :ref:`Rental prices
+<rental/products/rental-periods-prices>` tab.
 
 With the above configuration, a :doc:`rental order <create_rental_order>` can be created.
 

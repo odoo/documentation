@@ -23,7 +23,7 @@ Configuration
 
 Configuration requirements differ depending on the type of service product. To learn more about the
 default settings for rental products, refer to the :ref:`Configuration
-<rental/product_type/settings>` section on the *Rental product type* page.
+<rental/product_type/configuration>` section on the *Rental product type* page.
 
 To access the **Rental** app's settings, navigate to :menuselection:`Rental app --> Configuration
 --> Settings`.
@@ -84,7 +84,7 @@ Configuring rental periods and prices
 No limit exists on how many rental prices can be added to a product. Multiple pricing options for
 rental products are typically used to give discounts for customers who agree to longer rental
 durations. When creating multiple pricing options for a rental product, remember the **Rental**
-app's :ref:`price computing logic <rental/pricing>`.
+app's :ref:`price computing logic <rental/price-computing>`.
 
 To set rental rates for the product, click the *Rental prices* tab. Then, in the *Pricing* section,
 click :guilabel:`Add a price` to enter a new rental rate:
@@ -120,9 +120,9 @@ Creating a rental period
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **Rental** app allows users to :ref:`create custom rental periods
-<rental/products/rental-periods-prices-reservations>` to use in the *Rental prices* tab. This is
-helpful when renting services with special pricing for a set amount of time, such as offering a
-four-hour photo shoot for $100 when the hourly rate is $30.
+<rental/products/rental-period>` to use in the *Rental prices* tab. This is helpful when renting
+services with special pricing for a set amount of time, such as offering a four-hour photo shoot for
+$100 when the hourly rate is $30.
 
 To create a new rental period, go to :menuselection:`Rental app --> Configuration --> Rental
 periods`.
