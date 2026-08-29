@@ -1,3 +1,9 @@
+.. meta::
+   :description: This page explains the Goods and Services product types available in the Rental app
+                 and their configuration settings, app integrations, and search options. It also
+                 covers rental periods, including the default Nightly period with check-in and
+                 check-out fields.
+
 .. _configure-rental-product: https://youtu.be/CE-SahTUC9A?si=Gae5tLAZk6wt70TW
 
 ===================
@@ -8,20 +14,20 @@ Odoo allows for two :ref:`product types <inventory/product_management/goods-or-s
 configuring a rental product: Goods or Services.
 
 A rental *Goods* product is a physical item, such as a computer, vehicle, bike, camera, or an item
-of clothing. Goods are removed from the company’s stock, delivered to the customer, and then
+of clothing. Goods are removed from the company's stock, delivered to the customer, and then
 returned to the company.
 
 A rental *Service* can be labor or something non-physical, such as installation, photography, or a
-deposit. It can also be a physical item that never leaves the company’s stock, such as a hotel room,
+deposit. It can also be a physical item that never leaves the company's stock, such as a hotel room,
 work station, or storage unit.
 
 The following sections detail basic settings and app integration configurations for Goods and
 Services.
 
-.. _rental/product_type/settings:
+.. _rental/product_type/configuration:
 
-Settings
-========
+Configuration
+=============
 
 .. important::
    For the :guilabel:`Default Padding time` and :guilabel:`Rental Transfers` settings, the
@@ -41,7 +47,7 @@ rental products, fill in the:
 - :guilabel:`Per Hour`: The late fee amount is applied each hour the rental product is past due.
 - :guilabel:`Per Day`: The late fee amount is applied each day the rental product is past due.
 - :guilabel:`Apply after`: The number of hours necessary to trigger a late fee.
-- :guilabel:`Product`: Limit the default delay costs setting to one product from the field’s
+- :guilabel:`Product`: Limit the default delay costs setting to one product from the field's
   drop-down list. Leave the :guilabel:`Product` field blank if the defaults apply to all products.
 
 If the **Inventory** app is installed, the *Default Padding Time* section displays. The time
@@ -62,6 +68,8 @@ for a rental product. This feature also needs the **Inventory** app to be instal
    Customer/Rental upon rental, and back upon return). **Do not** modify this location to avoid
    corrupting inventory tracking.
 
+.. _rental/product_type/ecommerce-settings:
+
 If the **eCommerce** module is installed, the *Rent Online* section is available to configure. The
 *Minimal time of rental* section contains:
 
@@ -71,6 +79,8 @@ If the **eCommerce** module is installed, the *Rent Online* section is available
   or returns.
 
 Click :guilabel:`Save` to apply the changes.
+
+.. _rental/product_type/app-integration:
 
 App integration configuration
 =============================
