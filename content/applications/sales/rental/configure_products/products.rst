@@ -241,57 +241,6 @@ manually` icon near the top to save.
    .. image:: products/configured-locations.png
       :alt: Sample of internal inventory locations that represent different rental store locations.
 
-.. _rental/products/pickup-products:
-
-Pickup products
-===============
-
-When a customer picks up products, navigate to the appropriate rental order, click
-:guilabel:`Pickup`. The **Rental** app displays a warehouse delivery form listing the reserved
-rental products. Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage.
-
-.. image:: products/pickup-page.png
-   :alt: Sample of a Pickup page in the Rental app.
-
-Doing so places a :guilabel:`Pickedup` status banner on the rental order.
-
-.. _rental/return-products:
-
-Return products
-===============
-
-When a customer returns products, navigate to the desired rental order and click :guilabel:`Return`.
-The **Rental** app displays a warehouse receipt form listing the checked-out rental products.
-
-Enter the same number of products the customer returned in the :guilabel:`Quantity` column. If any
-of the products have serial numbers, enter them into the :guilabel:`Serial Numbers` column.
-
-.. image:: products/return-page.png
-   :alt: Sample of the Return page in the Rental app.
-
-Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. A :guilabel:`Returned`
-status banner appears on the rental order.
-
-.. _rental/products/print-receipts:
-
-Print pickup and return receipts
-================================
-
-Pickup and return receipts can be printed for customers when they pick up and return rental
-products.
-
-To print pickup and/or return receipts, navigate to the appropriate rental order, click the
-:icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu.
-
-.. image:: products/print-pickup-return-receipt.png
-   :alt: The pickup and return receipt print option in the Odoo Rental application.
-
-From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select
-:guilabel:`Pickup and Return Receipt`.
-
-Odoo generates and downloads a PDF detailing all information about the current status of the rented
-items.
-
 .. _rental/products/ecommerce:
 
 eCommerce features
@@ -309,4 +258,5 @@ instructions.
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory`
    - :doc:`../rental_orders/create_rental_order`
+   - :doc:`../rental_orders/pickup_return`
    - `Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?si=kWfYEOTd2nT_ASp9>`_
