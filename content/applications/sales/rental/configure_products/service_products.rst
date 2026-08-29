@@ -1,193 +1,214 @@
-=======================
-Service rental products
-=======================
+.. meta::
+   :description: This page explains how to configure physical service rental products, including
+                 Planning app materials and roles, product creation, rental periods and pricing,
+                 variants, and eCommerce settings.
 
-The **Rental** app is a comprehensive tool that enables users to manage the scheduling, pricing, and
-inventory for both physical goods (products) and non-physical goods (services) within a single
-platform.
+================================
+Physical service rental products
+================================
 
-This flexibility allows for combining products and services like bike rentals with guided tours, or
-booking a studio with a photographer.
+There are two types of service products in the **Rental** app that require different configurations:
+physical and non-physical (labor). This document focuses on the configuration of physical rental
+service products. A physical rental service product is a physical product that doesn't require any
+stock movements. Some examples are:
 
-This document covers how to configure a rental service to automatically sync with staff shifts,
-track time sheet hours, and set up and link project tasks based on a rental order.
-
-Settings
-========
-
-To configure default settings on rental products, navigate to :menuselection:`Rental app -->
-Configuration --> Settings`.
-
-.. image:: service_products/rental-settings.png
-   :alt: Sample of Rental app configuration settings.
-
-In the :guilabel:`Rental` section, under the :guilabel:`Default Delay Costs` subsection, fill in the
-:guilabel:`Apply after` field.
-
-.. note::
-   For finer control, configure the costs of late returns for the :guilabel:`Per Hour` and
-   :guilabel:`Per Day` fields at the product level. If the defaults apply to all products, leave the
-   :guilabel:`Product` field blank.
-
-In the :guilabel:`Default Padding Time` section, fill in the :guilabel:`Padding` field.
-
-Next, enable :guilabel:`Rental Transfers`. In the :guilabel:`Rent Online` section, fill in the
-:guilabel:`Minimal Rental Duration` field and designate :guilabel:`Unavailability days`. Click
-:guilabel:`Save` to apply the changes.
-
-App integration configuration
-=============================
-
-The following apps are essential for workflow efficiency and automation when creating a service
-product and rental order:
-
- - **Sales** app: Enables the use of online payments and utilizes quotation templates within the
-   **Rental** app.
- - **Sign** app: Allows for the upload and customization of different rental and service agreements.
-   These documents are used to facilitate the :guilabel:`Request Signature` feature.
- - **Project** and **Planning** apps: Integrate with the Rental app to automatically match purchased
-   products and services with employees based on availability.
-
-.. seealso::
-   - :doc:`../../sales/sales_quotations/quote_template`
-   - :doc:`../../sales/sales_quotations/get_paid_to_validate`
-   - :doc:`../../../services/project/project_management`
-   - :doc:`../../../services/planning`
-   - :doc:`../../../productivity/sign`
-
-Rental services
-===============
-
-To view all products that can be rented in the database, navigate to :menuselection:`Rentals app -->
-Products`. By default, the :guilabel:`Rental` filter appears in the search bar, and the view is
-Kanban. Remove the filter, then click the search bar. From the preset filters, select
-:guilabel:`Services`. All the configured services appear.
-
-Each Kanban card displays the name and rental price of the service.
+- Hotel rooms
+- Conference rooms
+- Work stations
+- Storage units
 
 .. _rental/service_products/service:
+.. _rental/service_products/configuration:
+
+Configuration
+=============
+
+Configuration requirements differ depending on the type of service product. To learn more about the
+default settings for rental products, refer to the :ref:`Configuration
+<rental/product_type/settings>` section on the *Rental product type* page.
+
+To access the **Rental** app's settings, navigate to :menuselection:`Rental app --> Configuration
+--> Settings`.
+
+The following configurations assume the **Rental**, **Planning**, and **Sales** apps are installed.
+
+.. _rental/service_products/materials-and-roles:
+
+Configure materials and a role for the physical service product
+===============================================================
+
+Before creating a service product in the **Rental** app, configure :ref:`materials
+<planning/materials>` and :ref:`create a role <planning/roles>` in the **Planning** app for the
+physical rental products (such as storage units or conference rooms).
+
+This allows the **Planning** app to create and assign shifts for the physical rental product, and
+the *Role* links the rental materials to the rental service. Whenever the service is added to a
+rental order, the **Rental** app syncs with the **Planning** app to check and update the material
+shift availability.
+
+.. tip::
+   It's recommended to name the role after the service.
+
+.. example::
+   Shady Grove needs to add a new room tier to the **Rental** app, the *Deluxe Room*. There are five
+   rooms that belong in this tier. Create a new *Role* by navigating to the :menuselection:`Planning
+   app --> Configuration --> Roles`. Click :guilabel:`New` and create the :guilabel:`Deluxe Room`
+   role.
+
+   .. image:: service_products/example-planning-role-room.png
+      :alt: Example of configured role for the Deluxe Room.
+
+   To add the five rooms as a resource for the *Role*, navigate to :menuselection:`Planning app -->
+   Configuration --> Materials`. Click :guilabel:`New`, enter the room number, and select
+   :guilabel:`Deluxe Room` for the :guilabel:`Role` column. Repeat that process for all five rooms.
+
+   .. image:: service_products/example-planning-materials.png
+      :alt: Example of configured materials for the Deluxe Room.
+
+   Create the :guilabel:`Deluxe Room` as a new *Service* product type by navigating to
+   :menuselection:`Rental app --> Products`. Click :guilabel:`New`, then configure the Deluxe Room
+   as a :guilabel:`Service` type product with the :guilabel:`Plan Services` checkbox enabled and the
+   :guilabel:`Deluxe Room` role assigned.
+
+   .. image:: service_products/plan-services-field-room.png
+      :alt: Example of the Plan Services field configured to the Deluxe Room role.
+
+.. _rental/service_products/new-service:
 
 Create a new service product
 ============================
 
-.. important::
-
-   The **Project** and the **Sales** apps must be installed for the following options to be
-   available:
-
-   - :guilabel:`Create on Order`
-   - :guilabel:`Project Template`
-   - :guilabel:`Invoicing Policy`
-   - :guilabel:`Project & Task`
-
-   Ticking the :guilabel:`Sales` checkbox displays the :guilabel:`Create on Order` and
-   :guilabel:`Invoicing Policy`.
-
-To set up a new rental service, go to the :menuselection:`Rental app --> Products` and then click
-:guilabel:`New`. In the new product window, the :guilabel:`Rental` checkbox is already ticked by
+To set up a new rental service, go to :menuselection:`Rental app --> Products --> Products` and then
+click :guilabel:`New`. The new product form displays with the *General Information* tab open by
 default.
 
-Tick the :guilabel:`Sales` checkbox. Select the :guilabel:`Product Type` as a :guilabel:`Service`.
-In the :guilabel:`Create on Order` drop-down menu, select :guilabel:`Project & Task`. In the
-:guilabel:`Invoicing Policy` drop-down menu, select :guilabel:`Based on Timesheets`.
+Initial product configuration
+-----------------------------
 
-Tick the :guilabel:`Plan Services` checkbox and either create a new role or select a pre-existing
-one. To create a new role, type in the name of the role in the blank field and click
-:guilabel:`Create and edit` that appears.
+.. important::
+   The **Sales** and **Planning** apps must be installed for the following fields to become
+   available:
 
-.. image:: service_products/service-product.png
-   :alt: Sample of a configured service product in the Rental app.
+   - :guilabel:`Invoicing Policy` field.
+   - :guilabel:`Prepaid/Fixed Price` option of the :guilabel:`Invoicing Policy` field.
+   - :guilabel:`Plan Services` field.
 
-In the :guilabel:`Create Planning Role` pop-up window, enter the role's name. Select an option for
-the :guilabel:`Services` and :guilabel:`Resources`, and click :guilabel:`Save`.
+In the new product window, select the :guilabel:`Sales` checkbox. Select :guilabel:`Service` as the
+:guilabel:`Product Type`. In the :guilabel:`Invoicing Policy` drop-down menu, select
+:guilabel:`Prepaid/Fixed Price`. Enable the :guilabel:`Plan Services` checkbox and either
+:ref:`create a new role <planning/roles>` or select a pre-existing one.
 
-.. image:: service_products/create-planning-role-window.png
-   :alt: Sample of the Create Planning Role window for a service product in the Rental app.
+.. image:: service_products/physical-service-product-form.png
+   :alt: Example of a configured physical service product in the Rental app.
 
-Configure rental price
-----------------------
+Click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon to open the product's *Role* page.
+Enable the :guilabel:`Sync Shifts and Rental Orders` checkbox.
 
-Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` section, click :guilabel:`Add
-a price` to enter a new rental rate. Choose a *pricing period* (:dfn:`the unit of duration of the
-rental`) in the :guilabel:`Period` column, or create a new pricing period by typing in the name and
-clicking Create and edit.
+.. image:: service_products/rental-role-page.png
+   :alt: Example of a configured Role page for the Deluxe Room in the Rental app.
 
 .. tip::
-   Customize rental rate time periods by navigating to :menuselection:`Rental app --> Configuration
-   --> Rental periods`.
+   Assign a :guilabel:`Category` for room booking. It separates rooms from other services and can be
+   used for reports on room occupancy.
 
-   .. image:: service_products/new-rental-period.png
-      :alt: Sample of a Create Period pop up window in the Rental app.
+.. _rental/service_products/rental-periods-prices:
 
-Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To apply the configured
-rental rate to an existing pricelist, click in the :guilabel:`Pricelist` column and select the
-desired list from the drop-down menu.
+Configuring rental periods and prices
+-------------------------------------
 
-In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly Fine`, :guilabel:`Daily
-Fine`, and the :guilabel:`Reserve product` time. These values are automatically populated from the
-:guilabel:`Default Delay Costs` section, provided they have been configured in the
-:menuselection:`Rental app --> Configuration --> Settings`.
+No limit exists on how many rental prices can be added to a product. Multiple pricing options for
+rental products are typically used to give discounts for customers who agree to longer rental
+durations. When creating multiple pricing options for a rental product, remember the **Rental**
+app's :ref:`price computing logic <rental/pricing>`.
 
-Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save.
+To set rental rates for the product, click the *Rental prices* tab. In the *Pricing* section, click
+:guilabel:`Add a price`. To enter a new rental rate:
+
+#. Select a :guilabel:`rental period` (:dfn:`the unit of duration of the rental`) from the
+   :guilabel:`Period` column.
+#. (Optional) Select a pricelist option from the :guilabel:`Pricelist` column. This adds the new
+   rental rate to the assigned pricelist.
+#. Enter the price for that specific :guilabel:`Period`.
+
+.. tip::
+   Remember when considering pricing that renting for a day is usually limited to operating hours,
+   not 24 hours.
+
+The *Reservations* section contains the delay costs and padding time fields that are automatically
+populated from the *Default Delay Costs* section, provided they have been configured in
+:menuselection:`Rental app --> Configuration --> Settings`. If configured on the product form, the
+settings override the settings in the *Default Delay Costs* section.
+
+- :guilabel:`Hourly Fine`: The price per hour charged when the rental product is returned after the
+  scheduled time.
+- :guilabel:`Daily Fine`: The price per day charged when the rental product is returned after the
+  scheduled time.
+- :guilabel:`Reserve product`: The time the rental product is temporarily unavailable between two
+  rental orders. Useful if maintenance or cleaning is required between rentals.
+
+.. image:: service_products/rental-prices-tab.png
+   :alt: Example of a configured Rental Prices tab on the Rental product.
+
+.. _rental/service_products/rental-period:
+
+Creating a rental period
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The **Rental** app allows users to :ref:`create custom rental periods
+<rental/products/rental-periods-prices-reservations>` to use in the *Rental Prices* tab. This is
+helpful when renting rooms with special pricing for a set amount of time, such as offering a cheaper
+nightly room rate for a standard hotel room if the guests check out early.
+
+To create a new rental period, go to :menuselection:`Rental app --> Configuration --> Rental
+periods`.
+
+.. image:: service_products/rental-period-form-nightly.png
+   :alt: Example of the default Nightly rental period form.
+
+.. _rental/service_products/variants:
+
+Optional: specify rental variants
+---------------------------------
+
+.. important::
+   The *Variants* feature must be enabled for this tab to display.
+
+In the *Attributes & Variants* tab, click :guilabel:`Add a line`, then select or create an option
+from the :guilabel:`Attribute` drop-down menu. To create a new one, enter the name and click
+:guilabel:`Create and edit` to :ref:`configure the attribute and values
+<products/variants/attributes>`.
 
 .. example::
-   A photography studio rents out its photographers on an hourly and daily basis. They want to add a
-   new four hour package for $750.
+   Shady Grove has a list of amenities they want to configure for their Deluxe Room. The room has
+   two types of bed configurations: one king or two double. The maximum occupancy per room is two
+   adults or two adults and a child. The hotel also offers breakfast and internet.
 
-   All reservations require 24-hour notice to reserve a photographer, but they do not charge a fine
-   if the reservations go over the agreed time. Instead, they default to their hourly fee.
+   Navigate to the :menuselection:`Rental app --> Products` and click :guilabel:`New` to create a
+   new product. On the :guilabel:`Attributes & Variants` tab, click :guilabel:`Add a line` and
+   select the :guilabel:`Bed` as an :guilabel:`Attribute`. In the :guilabel:`Values` column, add
+   :guilabel:`1 King` and :guilabel:`2 Double`. Repeat these steps until all amenities have been
+   configured.
 
-   Create a new pricing period by navigating to :menuselection:`Rental app --> Configuration -->
-   Rental periods`. Click :guilabel:`New` and configure the period for four hours.
+   .. image:: service_products/example-room-variants.png
+      :alt: Example of the Attribute & Variants tab configured for a hotel room.
 
-   Navigate to the :guilabel:`Photographer` service product and in the :guilabel:`Rental prices`
-   tab, add the four hour period set at $750. Manually save to apply changes.
+.. _rental/service_products/ecommerce:
 
-   .. image:: service_products/example-4hrs-rental-period.png
-      :alt: Sample of the Rental prices tab of service product in the Rental app.
+eCommerce features
+------------------
 
-Pickup products
-===============
+.. important::
+   The *Ecommerce* sections are only available if the :guilabel:`eCommerce` module is installed.
 
-When time is entered on the :guilabel:`Timesheets` tab of an associated task, the rental order
-status automatically changes to :guilabel:`Picked-up`. This happens even if time is entered before
-the physical product ordered with the service is picked up.
+The :guilabel:`Sales` tab has the following sections that configure the product page on the website:
+*Ecommerce shop*, *Ecommerce media*, and *Ecommerce description*. Refer to the :ref:`Product
+visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
+<ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
+instructions.
 
-If a product is rented alongside a service, it is advised to pick it up before entering time on the
-associated task. The :guilabel:`Pickup` button is still available on the rental order if time is
-entered before picking up the product.
-
-When a customer picks up the product, navigate to the appropriate rental order, click
-:guilabel:`Pickup`, and then click :guilabel:`Validate` in the :guilabel:`Validate a pickup` pop-up
-form that appears.
-
-.. image:: service_products/pickup-popup.png
-   :alt: Sample of a service product pick up pop-up window in the Rental.
-
-Doing so places a :guilabel:`Picked-up` status banner on the rental order.
-
-Return products
-===============
-
-Regardless if there is a product rented along with a service, the service or product must be
-returned on the rental order.
-
-When a customer returns the products or when the service has been completed, navigate to the
-appropriate rental order and click :guilabel:`Return`. Validate the return by clicking
-:guilabel:`Validate` in the :guilabel:`Validate a return` pop-up form that appears.
-
-.. image:: service_products/validate-a-return-window.png
-   :alt: Sample of returning a service product in the Rental app.
-
-Doing so places a :guilabel:`Returned` status banner on the rental order.
-
-.. example::
-   The photography studio had a customer who wanted to rent one of their photographers and banner
-   decorations for a home photo shoot. The booking was for two hours.
-
-   On the :guilabel:`Validate a return` form the rental order, the banner line item matches number
-   of banners picked up and the photographer line item matches the number of hours submitted on the
-   :guilabel:`Timesheets` tab on the related task.
-
-   .. image:: service_products/return-form-example-product-service.png
-      :alt: Sample of a Validate a return form with a rental product and service listed.
+.. seealso::
+   - :doc:`products`
+   - :doc:`../../../services/planning`
+   - :doc:`../../sales/products_prices/prices/pricing`
+   - :doc:`../../sales/products_prices/products/variants`
+   - :doc:`../rental_orders/create_rental_order`

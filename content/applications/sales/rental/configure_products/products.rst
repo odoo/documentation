@@ -67,8 +67,8 @@ Optional: specify rental variants
 In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values
 <products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful
 for keeping the product library manageable, tracking and differentiating the inventory, and
-providing more detailed reports. Examples of rental variants for a *Goods* product are size,
-brand, color, and material.
+providing more detailed reports. Examples of rental variants for a *Goods* product are size, brand,
+color, and material.
 
 .. _rental/products/rental-periods-prices-reservations:
 
@@ -185,9 +185,9 @@ For multi-location management and rental item transfer tracking, navigate to the
 :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the
 :guilabel:`Rental Transfers` checkbox.
 
-Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the
-*Warehouse* section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to
-apply the changes.
+Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the *Warehouse*
+section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply the
+changes.
 
 To configure new locations, navigate to :menuselection:`Inventory app --> Configuration -->
 Locations`. Click :guilabel:`New` to configure a new internal location.
