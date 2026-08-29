@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:31+0000\n"
+"POT-Creation-Date: 2026-08-28 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -647,6 +647,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:26
 #: ../../content/applications/productivity/ai/document_sort.rst:16
+#: ../../content/applications/productivity/ai/mcp_server.rst:56
 #: ../../content/applications/productivity/ai/support_operations.rst:66
 #: ../../content/applications/productivity/appointments/create-opps.rst:13
 #: ../../content/applications/productivity/appointments/google_reserve.rst:12
@@ -918,6 +919,7 @@ msgid "Dynamic placeholders reference specific fields within the database to pro
 msgstr ""
 
 #: ../../content/applications/productivity/ai/email-templates.rst:54
+#: ../../content/applications/productivity/ai/mcp_server.rst:294
 msgid "Example use cases"
 msgstr ""
 
@@ -976,7 +978,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/fields.rst:36
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:798
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1068
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1070
 #: ../../content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:174
 #: ../../content/applications/productivity/whatsapp.rst:635
 msgid "Text"
@@ -1490,6 +1492,747 @@ msgstr ""
 #: ../../content/applications/productivity/ai/live-chat.rst:116
 #: ../../content/applications/productivity/ai/support_operations.rst:133
 msgid ":doc:`AI Agents <agents>`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:3
+msgid "AI MCP server"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:9
+msgid "Model Context Protocol (MCP) is an open-source standard that allows large language models (LLMs) to securely interact with external applications and access their data. In Odoo **AI**, users can connect an external |AI| agent directly to their Odoo database through an Odoo |MCP| server in order to read or modify the database using their own local |AI| workflows."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:14
+msgid "The following documentation provides an overview of Odoo |MCP| servers, how to connect |AI| agents to them, and how to read or write data through the server."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:18
+msgid "This documentation uses the following terms with some flexibility and may differ from their proper technical usage, either in Odoo or externally:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:21
+msgid "*Client*: Refers broadly to the |AI| application with which the user interacts. For example, the |LLM| prompted by the user is also referred to as the *client*."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:27
+msgid "MCP workflow"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:29
+msgid "In the |MCP| workflow, an Odoo database acts as a remote |MCP| *server* that communicates with the |MCP| *client* (the user's external |AI| agent) to execute :doc:`tools <server-actions>` such as reading data or editing records in the database. This process occurs internally and is invisible to the user, who interacts with the |MCP| client **only** by prompting it with specific tasks."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:34
+msgid "The following sequence outlines the |MCP| workflow in Odoo:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:36
+msgid "The user :ref:`configures the client <ai/mcp/configuration>` with server details and an authentication key. Once connected, the client automatically makes an initial request to the server for any available :ref:`AI tools <ai/mcp/available-tools>` (or *Server Actions*) exposed to it in the database. If successful, the client caches the tools for the remainder of the session."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:41
+msgid "The user prompts the client in plain language. A list of :ref:`example prompts <ai/mcp/use-cases>` is provided in this documentation."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:43
+msgid "The client requests that the server invoke the correct tools."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:44
+msgid "After executing the tool, the server returns the results to the client."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:45
+msgid "The client responds to the user's prompt in plain language."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:None
+msgid "Client-server interaction diagram for Odoo AI MCP."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:51
+msgid "See the :doc:`server-actions` documentation for more information about tools in Odoo."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:58
+msgid "The configuration process includes the following steps:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:60
+msgid ":ref:`Set up authentication <ai/mcp/authentication>` via API key."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:61
+msgid ":ref:`Configure the MCP server details <ai/mcp/server-settings>` and connect via the client."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:62
+msgid ":ref:`Expose server actions <ai/mcp/expose-tools>` to the client from Odoo."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:65
+msgid "Before configuring the AI client settings in step two, ensure that the following are installed:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:67
+msgid "An |MCP|-compatible AI agent (e.g., *Claude Code*, *Antigravity*, *Codex*)"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:68
+msgid "`Node.js <https://nodejs.org/en/download>`_ (required to run the `npx` command)"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:73
+msgid "Set up authentication"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:75
+msgid "To connect the |MCP| client to the server, users must first set up authentication to the server via a static API key. Every time the |MCP| client sends a request to the server, it uses the key to authenticate the user's identity and permissions in the Odoo database."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:79
+msgid "To generate the API key, click the user icon in the upper corner, then select :guilabel:`My Preferences`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:None
+msgid "Security tab of the user preferences window."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:85
+msgid "On the *Change my Preferences* pop-up window, open the *Security* tab. Then, click :guilabel:`Add API Key`. On the *Access Control* pop-up window, confirm the database password."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:88
+msgid "After confirming the password, configure the API key in the *New API Key* pop-up window. To start, in the *Name your key* section, enter a brief name or descriptor for the key."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:91
+msgid "Next, in the *Select a scope* section, select the :guilabel:`MCP` scope from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:93
+msgid "In the *Give a duration for the key's validity* section, select the period of time for which this key is valid (e.g., `1 Month`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:96
+msgid "Finally, click :guilabel:`Generate key` to create the key."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:99
+msgid "Be sure to save the key elsewhere. Once generated, the key is only shown to the user once and remains hidden thereafter."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:None
+msgid "Add New Key pop-up window in Odoo."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:108
+msgid "Configure server settings"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:110
+msgid "After generating an authentication key in Odoo, the user must properly configure their client with the following:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:113
+msgid "The API key generated in the previous section"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:114
+msgid "The server URL, or *endpoint*, to which the client connects. This URL is formed by taking the user's database URL and concatenating `/mcp` (e.g., `https://example.odoo.com/mcp`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:118
+msgid "Be sure to replace the following placeholders with the appropriate values:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:120
+msgid "`server_name`: Enter a custom name to identify the |MCP| server."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:121
+msgid "`database_url`: Enter the URL of the Odoo database."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:122
+msgid "`API_KEY`: Enter the API key generated in the previous section."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:126
+msgid "Claude"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:128
+msgid "Connecting to Odoo |MCP| with Claude can be done either via *Claude Desktop* or *Claude Code* CLI."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:131
+msgid "**Via Claude Desktop**"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:133
+msgid "Open *Claude Desktop*. Navigate to :menuselection:`Settings --> Developer`. The *Local MCP Servers* section lists all configured |MCP| servers along with their statuses."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:136
+msgid "To add a new server, click :guilabel:`Edit Config`. In the file explorer, open `claude_desktop_config.json` and paste the following JSON snippet between the outermost ellipses:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:159
+msgid "After saving the configuration file, the newly added server should appear in the *Local MCP Servers* section along with its connection status."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:162
+msgid "**Via Claude Code CLI**"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:164
+#: ../../content/applications/productivity/ai/mcp_server.rst:241
+msgid "In the terminal, paste the following command to add the |MCP| server:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:171
+msgid "To add the server to the system's global (user-wide) configuration (i.e., the server is accessible for all projects), include the `--scope user` flag in the command above."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:174
+msgid "Finally, run ``claude mcp list`` to check the connection status of the newly added server."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:176
+msgid "Antigravity"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:178
+msgid "Connecting to Odoo |MCP| with Google Antigravity can be done through *Antigravity 2.0* or *Antigravity CLI*."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:181
+msgid "**Configure via Antigravity 2.0**"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:183
+msgid "Open *Antigravity 2.0*. Navigate to :menuselection:`Settings --> Customizations`. The *Installed MCP Servers* section lists all configured |MCP| servers along with their statuses."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:186
+msgid "To add a new server, click :guilabel:`Open MCP Config`. In the file explorer, open `mcp_config.json` and paste the following JSON snippet between the outermost ellipses:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:208
+msgid "After saving the configuration file, the newly added server should appear in the *Installed MCP Servers* section along with its connection status."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:211
+msgid "**Connect via Antigravity CLI**"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:213
+msgid "Before connecting using *Antigravity CLI*, configure the server in *Antigravity 2.0*."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:215
+msgid "To check the connection status, run ``agy`` in the terminal to start *Antigravity*. Then, run ``/mcp``. The newly added server should appear along with its connection status."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:218
+msgid "Codex"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:220
+msgid "Configuring an Odoo |MCP| server in *Codex* can be done either by directly editing the configuration file or via the *Codex CLI*."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:223
+msgid "**Via config file**"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:225
+msgid "Open the `config.toml` file, located in the root directory (`~/.codex/config.toml`). Then, paste the following into the configuration file:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:235
+msgid "While the `config.toml` is located globally in the system's root directory, it can also be created for trusted, local projects by configuring a `.codex/config.toml` file in the directory."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:239
+msgid "**Via Codex CLI**"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:247
+msgid "To check the connection status, run ``codex`` in the terminal to start *Codex*. Then, run ``/mcp``. The newly added server should appear."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:251
+msgid "See the following documentation for more information about configuring clients:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:253
+msgid "`Connect to MCP servers using Claude Code <https://code.claude.com/docs/en/mcp-quickstart>`_"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:254
+msgid "`Connect to MCP servers using Antigravity <https://antigravity.google/docs/mcp/>`_"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:255
+msgid "`Connect to MCP servers using Codex <https://learn.chatgpt.com/docs/extend/mcp?surface=cli>`_"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:260
+msgid "Expose tools to client"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:262
+msgid "After connecting to the server, the |MCP| client reads and writes data to the Odoo database by invoking the appropriate tool according to the user's query."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:265
+msgid "These tools are accessed by turning on developer mode, then navigating to :menuselection:`Settings --> Technical --> Server Actions` to open the dashboard of server actions, or tools."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:268
+msgid "By default, an Odoo database exposes the following tools to the client:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:270
+#: ../../content/applications/productivity/ai/mcp_server.rst:385
+msgid "`AI Tool: Get Fields`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:271
+#: ../../content/applications/productivity/ai/mcp_server.rst:381
+msgid "`AI Tool: Get Models`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:272
+#: ../../content/applications/productivity/ai/mcp_server.rst:363
+msgid "`AI Tool: MCP Retrieve initial context`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:273
+#: ../../content/applications/productivity/ai/mcp_server.rst:396
+msgid "`AI Tool: Search`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:274
+#: ../../content/applications/productivity/ai/mcp_server.rst:399
+msgid "`AI Tool: Read group`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:276
+msgid "The remaining tools are hidden from the client and must be manually exposed to be invoked."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:278
+msgid "To expose a tool, click on the tool entry. In the *Usage* tab of the server action form, select the checkbox next to :guilabel:`Available in MCP`. Optionally, select the checkbox next to :guilabel:`Readonly Tool` to mark that the tool does not write or modify existing data and can be automatically invoked without user approval."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:284
+msgid "Enabling the :guilabel:`Readonly Tool` checkbox does not \"hide\" the tool from the AI client. It only advises the client that the tool is safe to invoke without explicit user approval."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:288
+msgid "See the :ref:`available tools <ai/mcp/available-tools>` section for a full list of available tools in the database."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:296
+msgid "An Odoo |MCP| server can be used to complete the following use cases, including example user prompts."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:300
+msgid "Data analysis and reporting"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:305
+#: ../../content/applications/productivity/ai/mcp_server.rst:322
+#: ../../content/applications/productivity/ai/mcp_server.rst:337
+msgid "Use case"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:306
+#: ../../content/applications/productivity/ai/mcp_server.rst:323
+#: ../../content/applications/productivity/ai/mcp_server.rst:338
+msgid "Example prompt"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:307
+msgid "Sales pipeline review"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:308
+msgid "\"Show me my open opportunities grouped by stage, then chart the pipeline value by salesperson.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:310
+msgid "Manufacturing/inventory planning"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:311
+msgid "\"Which products on my Master Production Schedule have no forecast data, and what's my total forecasted demand this month?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:313
+msgid "Historical reporting"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:314
+msgid "\"How much did we invoice last quarter compared to this quarter?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:317
+msgid "Navigation and UI interaction"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:324
+msgid "Bulk record creation"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:325
+msgid "\"Create contacts for these five leads I'm pasting in.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:326
+msgid "Filtering and grouping open views"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:327
+msgid "\"Filter this current view to my team and group by month instead.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:328
+msgid "Data lookup and edit"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:329
+msgid "\"Does Azure Interior have a Tax ID on file? If not, set it to XX0123456789.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:332
+msgid "Custom styling"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:339
+msgid "Website content editing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:340
+msgid "\"Add a banner to my homepage announcing our summer sale, using a stock photo of a beach.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:341
+msgid "Custom site styling"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:342
+msgid "\"Round the corners on all my product images site-wide.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:343
+msgid "AI image generation"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:344
+msgid "\"Generate an image of a mountain at dusk and put it in the hero section.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:349
+msgid "Available tools"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:351
+msgid "The following AI tools are supported by the Odoo |MCP| server. Each tool is listed below with its name, description, and suggested *Readonly* status."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:355
+msgid "Setup/context retrieval"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:360
+#: ../../content/applications/productivity/ai/mcp_server.rst:378
+#: ../../content/applications/productivity/ai/mcp_server.rst:417
+#: ../../content/applications/productivity/ai/mcp_server.rst:456
+#: ../../content/applications/productivity/ai/mcp_server.rst:479
+#: ../../content/applications/productivity/ai/mcp_server.rst:499
+msgid "Tool"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:361
+#: ../../content/applications/productivity/ai/mcp_server.rst:379
+#: ../../content/applications/productivity/ai/mcp_server.rst:418
+#: ../../content/applications/productivity/ai/mcp_server.rst:457
+#: ../../content/applications/productivity/ai/mcp_server.rst:480
+#: ../../content/applications/productivity/ai/mcp_server.rst:500
+#: ../../content/applications/productivity/data_cleaning.rst:31
+#: ../../content/applications/productivity/phone.rst:204
+msgid "Description"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:362
+#: ../../content/applications/productivity/ai/mcp_server.rst:380
+#: ../../content/applications/productivity/ai/mcp_server.rst:419
+#: ../../content/applications/productivity/ai/mcp_server.rst:458
+#: ../../content/applications/productivity/ai/mcp_server.rst:481
+#: ../../content/applications/productivity/ai/mcp_server.rst:501
+msgid "Readonly"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:364
+msgid "Returns context about the currently authenticated user's database, including the user, timezone, active company, and available companies."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:366
+#: ../../content/applications/productivity/ai/mcp_server.rst:384
+#: ../../content/applications/productivity/ai/mcp_server.rst:387
+#: ../../content/applications/productivity/ai/mcp_server.rst:391
+#: ../../content/applications/productivity/ai/mcp_server.rst:395
+#: ../../content/applications/productivity/ai/mcp_server.rst:398
+#: ../../content/applications/productivity/ai/mcp_server.rst:402
+#: ../../content/applications/productivity/ai/mcp_server.rst:422
+#: ../../content/applications/productivity/ai/mcp_server.rst:425
+#: ../../content/applications/productivity/ai/mcp_server.rst:429
+#: ../../content/applications/productivity/ai/mcp_server.rst:432
+#: ../../content/applications/productivity/ai/mcp_server.rst:435
+#: ../../content/applications/productivity/ai/mcp_server.rst:439
+#: ../../content/applications/productivity/ai/mcp_server.rst:442
+#: ../../content/applications/productivity/ai/mcp_server.rst:445
+#: ../../content/applications/productivity/ai/mcp_server.rst:448
+#: ../../content/applications/productivity/ai/mcp_server.rst:462
+#: ../../content/applications/productivity/ai/mcp_server.rst:465
+#: ../../content/applications/productivity/ai/mcp_server.rst:488
+#: ../../content/applications/productivity/ai/mcp_server.rst:491
+#: ../../content/applications/productivity/ai/mcp_server.rst:504
+#: ../../content/applications/productivity/ai/mcp_server.rst:507
+msgid "True"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:369
+msgid "`AI Tool: MCP Retrieve initial context` runs automatically at the beginning of a user's session and is **only** invoked by the client."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:373
+msgid "Data querying"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:382
+msgid "Lists every Odoo model the current user can access, including their technical names and descriptions."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:386
+msgid "Lists the searchable and usable fields on a given model, including type and relations."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:388
+msgid "`AI Tool: Get Menus`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:389
+msgid "Lists every menu the current user can access, with its linked action, model, and available view types."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:392
+msgid "`AI Tool: Get Menu Details`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:393
+msgid "Returns detailed information for specific menu IDs, such as action, domain, default filters and groupings, and searchable fields."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:397
+msgid "Searches records on a model using a domain and returns the requested fields."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:400
+msgid "Groups records by one or more fields and computes aggregates (sums, counts, averages, etc.) over them."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:403
+msgid "`AI Tool: Update Records`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:404
+msgid "Updates one or more existing records matching a domain with new field values."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:405
+#: ../../content/applications/productivity/ai/mcp_server.rst:409
+#: ../../content/applications/productivity/ai/mcp_server.rst:468
+#: ../../content/applications/productivity/ai/mcp_server.rst:471
+#: ../../content/applications/productivity/ai/mcp_server.rst:485
+msgid "False"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:406
+msgid "`AI Tool: Create Records`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:407
+msgid "Creates new records on a model with specified fields, optionally linking a preview menu to show the result."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:412
+#: ../../content/applications/productivity/phone/phone_widget.rst:15
+msgid "Navigation"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:420
+msgid "`AI Tool: Open Menu List`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:421
+msgid "Redirects the UI to a menu's List view, optionally filtered and grouped."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:423
+msgid "`AI Tool: Open Menu Kanban`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:424
+msgid "Redirects the UI to a menu's Kanban view, optionally filtered and grouped."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:426
+msgid "`AI Tool: Open Menu Graph`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:427
+msgid "Redirects the UI to a menu's Graph view with a chosen measure, chart mode, grouping, and sorting options."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:430
+msgid "`AI Tool: Open Menu Pivot`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:431
+msgid "Redirects the UI to a menu's Pivot view with row and column groupings and measures."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:433
+msgid "`AI Tool: Run view action`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:434
+msgid "Opens client or report actions (e.g., Discuss, printed reports) tied to a menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:436
+msgid "`AI Tool: Compute Report Measures`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:437
+msgid "Returns the measures available for aggregation on a given model or action. This tool is meant to be called before opening a pivot or graph view."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:440
+msgid "`AI Tool: Prepare Record Previews`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:441
+msgid "Prepares metadata so that specific records render as rich preview cards in the Odoo Chat."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:443
+msgid "`AI Tool: Adjust Search`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:444
+msgid "Adjusts the search filters, groupings, active measures, or view type of the current view."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:446
+msgid "`AI Tool: Compute Date`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:447
+msgid "Computes an exact date or datetime from a relative expression (e.g., \"start of last week\")."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:451
+msgid "Website styling"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:459
+msgid "`AI Tool: Get Snippets`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:460
+msgid "Fetches the HTML markup for named website-builder snippets so they can be edited and inserted into a page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:463
+msgid "`AI Tool: Read Custom CSS`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:464
+msgid "Reads the current contents of the website's custom SCSS rules."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:466
+msgid "`AI Tool: Write Custom CSS`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:467
+msgid "Overwrites the website's custom SCSS rules with new styling."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:469
+msgid "`AI Tool: Apply HTML to Page`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:470
+msgid "Applies HTML edits (e.g., replace, insert) to a specific website page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:474
+msgid "Media generation"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:482
+msgid "`AI Tool: Generate an Image`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:483
+msgid "Generates a new image from a text prompt. This tool is **only** invoked on explicit user request."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:486
+msgid "`AI Tool: Search Images`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:487
+msgid "Searches *Unsplash* for stock photos matching a query."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:489
+msgid "`AI Tool: Get user image URLs`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:490
+msgid "Converts uploaded chat attachment IDs into permanent Odoo image URLs for use in content."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:494
+msgid "Additional tools"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:502
+msgid "`AI Tool: Web Search`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:503
+msgid "Delegates a factual question or research task to a web search agent."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:505
+msgid "`AI Tool: Load Skills`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:506
+msgid "Loads detailed instructions and tools for specific registered AI skills by ID."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:510
+msgid ":doc:`server-actions`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/server-actions.rst:3
@@ -4168,11 +4911,6 @@ msgstr ""
 
 #: ../../content/applications/productivity/data_cleaning.rst:0
 msgid "`Technical name`"
-msgstr ""
-
-#: ../../content/applications/productivity/data_cleaning.rst:31
-#: ../../content/applications/productivity/phone.rst:204
-msgid "Description"
 msgstr ""
 
 #: ../../content/applications/productivity/data_cleaning.rst:0
@@ -10329,10 +11067,6 @@ msgstr ""
 
 #: ../../content/applications/productivity/phone/phone_widget.rst:7
 msgid "The **Phone** widget is a companion to the **Phone** app that can be used to :ref:`handle calls <phone/phone_widget/handle-calls>` and :ref:`manage related records <phone/phone_widget/manage-related-records>`. The widget stays open when navigating other Odoo apps, turning voice communication into a seamless part of the Odoo workflow."
-msgstr ""
-
-#: ../../content/applications/productivity/phone/phone_widget.rst:15
-msgid "Navigation"
 msgstr ""
 
 #: ../../content/applications/productivity/phone/phone_widget.rst:17
@@ -18254,9 +18988,9 @@ msgstr ""
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:965
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:981
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:996
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1012
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1050
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1074
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1014
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1052
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1076
 msgid "Name and arguments"
 msgstr ""
 
@@ -18281,9 +19015,9 @@ msgstr ""
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:966
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:982
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:997
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1013
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1051
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1075
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1015
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1053
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1077
 msgid "Description or link"
 msgstr ""
 
@@ -19631,7 +20365,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:472
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:968
-msgid "Creates a pivot table (not compatible with Excel)"
+msgid "Re-inserts a dynamic Odoo pivot table (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:473
@@ -19641,7 +20375,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:474
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:970
-msgid "Returns the header of a pivot table (not compatible with Excel)"
+msgid "Returns a header from an inserted pivot table (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:475
@@ -19651,7 +20385,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:476
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:972
-msgid "Returns the value from a pivot table (not compatible with Excel)"
+msgid "Returns a value from an inserted pivot table (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:477
@@ -20172,17 +20906,17 @@ msgid "`Excel TRUNC article <https://support.microsoft.com/office/trunc-function
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:621
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1006
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1008
 msgid "Operators"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:629
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1014
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1016
 msgid "ADD(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:630
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1015
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1017
 msgid "Sum of two numbers (not compatible with Excel)"
 msgstr ""
 
@@ -20195,132 +20929,132 @@ msgid "`Excel CONCAT article <https://support.microsoft.com/office/concat-functi
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:633
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1016
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1018
 msgid "DIVIDE(dividend, divisor)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:634
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1017
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1019
 msgid "One number divided by another (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:635
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1018
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1020
 msgid "EQ(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:636
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1019
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1021
 msgid "Equal (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:637
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1020
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1022
 msgid "GT(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:638
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1021
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1023
 msgid "Strictly greater than (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:639
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1022
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1024
 msgid "GTE(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:640
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1023
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1025
 msgid "Greater than or equal to (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:641
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1024
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1026
 msgid "LT(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:642
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1025
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1027
 msgid "Less than (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:643
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1026
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1028
 msgid "LTE(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:644
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1027
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1029
 msgid "Less than or equal to (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:645
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1028
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1030
 msgid "MINUS(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:646
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1029
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1031
 msgid "Difference of two numbers (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:647
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1030
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1032
 msgid "MULTIPLY(factor1, factor2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:648
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1031
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1033
 msgid "Product of two numbers (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:649
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1032
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1034
 msgid "NE(value1, value2)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:650
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1033
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1035
 msgid "Not equal (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:651
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1034
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1036
 msgid "POW(base, exponent)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:652
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1035
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1037
 msgid "A number raised to a power (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:653
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1036
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1038
 msgid "UMINUS(value)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:654
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1037
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1039
 msgid "A number with the sign reversed (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:655
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1038
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1040
 msgid "UNARY.PERCENT(percentage)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:656
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1039
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1041
 msgid "Value interpreted as a percentage (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:657
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1040
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1042
 msgid "UPLUS(value)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:658
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1041
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1043
 msgid "A specified number, unchanged (not compatible with Excel)"
 msgstr ""
 
@@ -20337,7 +21071,7 @@ msgid "`Excel CONVERT article <https://support.microsoft.com/office/convert-func
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:677
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1044
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1046
 msgid "Statistical"
 msgstr ""
 
@@ -20382,12 +21116,12 @@ msgid "`Excel AVERAGEIFS article <https://support.microsoft.com/office/averageif
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:696
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1052
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1054
 msgid "AVERAGE.WEIGHTED(values, weights, [additional_values, ...], [additional_weights, ...])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:697
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1053
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1055
 msgid "Weighted average (not compatible with Excel)"
 msgstr ""
 
@@ -20448,12 +21182,12 @@ msgid "`Excel FORECAST article <https://support.microsoft.com/office/forecast-an
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:712
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1054
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1056
 msgid "GROWTH(known_data_y, [known_data_x], [new_data_x], [b])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:713
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1055
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1057
 msgid "Fits points to exponential growth trend (not compatible with Excel)"
 msgstr ""
 
@@ -20490,12 +21224,12 @@ msgid "`Excel LOGEST article <https://support.microsoft.com/office/logest-functi
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:722
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1056
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1058
 msgid "MATTHEWS(data_x, data_y)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:723
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1057
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1059
 msgid "Computes the Matthews correlation coefficient of a dataset (not compatible with Excel)"
 msgstr ""
 
@@ -20588,22 +21322,22 @@ msgid "`Excel PERCENTILE.INC article <https://support.microsoft.com/office/perce
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:746
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1058
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1060
 msgid "POLYFIT.COEFFS(data_y, data_x, order, [intercept])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:747
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1059
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1061
 msgid "Computes the coefficients of polynomial regression of the dataset (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:748
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1060
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1062
 msgid "POLYFIT.FORECAST(x, data_y, data_x, order, [intercept])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:749
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1061
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1063
 msgid "Predicts value by computing a polynomial regression of the dataset (not compatible with Excel)"
 msgstr ""
 
@@ -20664,12 +21398,12 @@ msgid "`Excel SMALL article <https://support.microsoft.com/office/small-function
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:764
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1062
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1064
 msgid "SPEARMAN(data_y, data_x)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:765
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1063
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1065
 msgid "Computes the Spearman rank correlation coefficient of a dataset (not compatible with Excel)"
 msgstr ""
 
@@ -20730,12 +21464,12 @@ msgid "`Excel STEYX article <https://support.microsoft.com/office/steyx-function
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:780
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1064
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1066
 msgid "TREND(known_data_y, [known_data_x], [new_data_x], [b])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:781
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1065
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1067
 msgid "Fits points to linear trend derived via least-squares (not compatible with Excel)"
 msgstr ""
 
@@ -20836,12 +21570,12 @@ msgid "`Excel FIND article <https://support.microsoft.com/office/find-findb-func
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:818
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1076
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1078
 msgid "JOIN(delimiter, value_or_array1, [value_or_array2, ...])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:819
-#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1077
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1079
 msgid "Concatenates elements of arrays with delimiter (not compatible with Excel)"
 msgstr ""
 
@@ -21046,11 +21780,11 @@ msgid "Applies a large number format (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1000
-msgid "ODOO.LIST(list_id, index, field_name)"
+msgid "ODOO.LIST(list_id, [row count])"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1001
-msgid "Returns the value from a list (not compatible with Excel)"
+msgid "Re-inserts a dynamic Odoo list (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1002
@@ -21058,7 +21792,15 @@ msgid "ODOO.LIST.HEADER(list_id, field_name)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1003
-msgid "Returns the header of a list (not compatible with Excel)"
+msgid "Returns a header from an inserted Odoo list (not compatible with Excel)"
+msgstr ""
+
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1004
+msgid "ODOO.LIST.VALUE(list_id, index, field_name)"
+msgstr ""
+
+#: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:1005
+msgid "Returns a value from an inserted Odoo list (not compatible with Excel)"
 msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:3

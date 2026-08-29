@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:31+0000\n"
+"POT-Creation-Date: 2026-08-28 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4700,7 +4700,7 @@ msgid "Adjusting the value of a move"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:337
-msgid "When a move was valued incorrectly at the time of the operation, the value recorded on the completed move can be corrected using the :guilabel:`Adjust Valuation` action in the :guilabel:`Moves Analysis` report. The correction takes a new value and a description explaining the reason, and applies to that move alone."
+msgid "When a move was valued incorrectly at the time of the operation, the value recorded on the completed move can be corrected using the :guilabel:`Adjust Valuation` action in the :ref:`Moves Analysis <inventory/operations_valuation/moves-analysis>` report. The correction takes a new value and a description explaining the reason, and applies to that move alone."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:347
@@ -4716,23 +4716,19 @@ msgid "Moves Analysis"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:359
-msgid "The Moves Analysis report lists moves with their source location, destination location, quantity, :guilabel:`Value`, :guilabel:`Remaining Quantity`, and :guilabel:`Remaining Value`. Dividing a move's value by its quantity gives the unit value that was applied to it."
+msgid "The :doc:`../warehouses_storage/reporting/moves_analysis` lists moves with their source location, destination location, quantity, and value, along with the :guilabel:`Remaining Quantity` and :guilabel:`Remaining Value` still in stock. The value of an individual move can also be corrected from this report, as described in :ref:`inventory/operations_valuation/adjust-valuation`. It also includes an :guilabel:`Aging Report` favorite for tracking remaining quantity and value by month."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:363
-msgid "Use this report to investigate the details for a particular operation, e.g., what a delivery was valued at, how much of a receipt is still in stock, or what a manufacturing order added. The value of an individual move can be corrected through this report, as described in :ref:`inventory/operations_valuation/adjust-valuation`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:371
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:368
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:3
 msgid "Stock report"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:373
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:370
 msgid "The :doc:`../warehouses_storage/reporting/stock` lists products with the quantity on hand. It also displays :guilabel:`Unit Cost`, and :guilabel:`Total Value`, which can be clicked for more details. The value of stock at an earlier date can be viewed using the :guilabel:`Inventory at Date` option."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:378
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:375
 msgid "The default *Stock* report view calculates values across the entire company, even when product stock is spread across multiple warehouses. To view the inventory valuation for a specific warehouse, select the warehouse using the :guilabel:`Warehouses` filter in the side panel."
 msgstr ""
 
@@ -4770,6 +4766,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:25
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:12
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:31
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:34
 msgid "Enable settings"
 msgstr ""
@@ -5201,7 +5198,7 @@ msgid "Packages"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:44
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:271
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:269
 msgid "Purpose"
 msgstr ""
 
@@ -6239,7 +6236,7 @@ msgid ":ref:`Tracking <inventory/product_management/tracking-inventory>` field: 
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:69
-msgid "*Inventory* tab: From here, :doc:`purchasing and manufacturing routes <../../shipping_receiving/daily_operations/use_routes>`, as well as product logistics such as product weight and customer lead time, can be specified."
+msgid "*Inventory* tab: From here, :doc:`purchasing and manufacturing routes <../../shipping_receiving/daily_operations/use_routes>`, as well as product logistics such as product weight and delivery time, can be specified."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:72
@@ -6549,7 +6546,7 @@ msgid ":doc:`Moves History report <../../warehouses_storage/reporting/moves_hist
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:349
-msgid ":guilabel:`Moves Analysis`: This report provides a pivot table view of inventory transfers by operation type."
+msgid ":doc:`Moves Analysis report <../../warehouses_storage/reporting/moves_analysis>`: This report provides a pivot table view of stock moves, including quantity and value data, by operation type. To access it, go to :menuselection:`Inventory app --> Reporting --> Moves Analysis`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:3
@@ -6753,7 +6750,7 @@ msgid "Create custom units of measure by going to :menuselection:`Inventory app 
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:188
-msgid "To create a new unit, click the :guilabel:`New` button. Specify a unit name. If you want to convert between units, specify a quantity and a reference unit of measure to convert between. If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by GS1 <https://www.unspsc.org/>`_, that **must** be purchased in order to use."
+msgid "To create a new unit, click the :guilabel:`New` button. Specify a unit name. If you want to convert between units, specify a quantity and a reference unit of measure to convert between. If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by UNDP <https://www.undp.org/unspsc>`_."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:194
@@ -8117,7 +8114,7 @@ msgid ":doc:`../../warehouses_storage/reporting/moves_history`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:374
-msgid ":guilabel:`Moves Analysis` report"
+msgid ":doc:`../../warehouses_storage/reporting/moves_analysis`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:377
@@ -8461,14 +8458,22 @@ msgid "Dropshipping is an order fulfillment strategy that allows sellers to have
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:14
+msgid "Because dropshipped products are not stored in the company's inventory, these products are *not* reflected in the *Locations* report and *Aging Report*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:17
+msgid "This differs from :doc:`consignment <owned_stock>`, which is stored in an internal location (and stored in *Location* report and *Moves Analysis*), but is excluded from *Stock Valuation* reports."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:22
 msgid "Configure products to be dropshipped"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:24
 msgid "To use dropshipping as a fulfillment strategy, navigate to the :menuselection:`Purchase` app and select :menuselection:`Configuration --> Settings`. Under the :guilabel:`Logistics` heading, click the :guilabel:`Dropshipping` checkbox, and :guilabel:`Save` to finish."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:28
 msgid "Next, go to the :menuselection:`Sales` app, click :menuselection:`Products --> Products` and choose an existing product or select :guilabel:`Create` to configure a new one. On the :guilabel:`Product` page, make sure that the :guilabel:`Can be Sold` and :guilabel:`Can be Purchased` checkboxes are enabled."
 msgstr ""
 
@@ -8476,15 +8481,15 @@ msgstr ""
 msgid "Enable the \"Can be Sold\" and \"Can be Purchased\" checkboxes on the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:29
-msgid "Click on the :guilabel:`Purchase` tab and specify a vendor and the price that they sell the product for. Multiple vendors can be added, but the vendor at the top of the list will be the one automatically selected for purchase orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:36
+msgid "Click on the :guilabel:`Purchase` tab and specify a vendor and the price that they sell the product for. Multiple vendors can be added, but the vendor at the top of the list is automatically selected for purchase orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:None
 msgid "The product form with a vendor specified."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:43
 msgid "Finally, select the :guilabel:`Inventory` tab and enable the :guilabel:`Dropship` checkbox in the :guilabel:`Routes` section."
 msgstr ""
 
@@ -8492,31 +8497,31 @@ msgstr ""
 msgid "Enable the Dropship option in the product inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:50
 msgid "While it is not necessary to enable the :guilabel:`Buy` route in addition to the :guilabel:`Dropship` route, enabling both provides the option of dropshipping the product or purchasing it directly."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:55
 msgid "Fulfill orders using dropshipping"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:52
-msgid "When a sales order is created for a dropshipped product, an associated request for quotation (RfQ) is automatically generated to purchase the product from the vendor. Sales orders can be viewed in the :menuselection:`Sales` app by selecting :menuselection:`Orders --> Orders`. Click the :guilabel:`Purchase` smart button at the top right of a sales order to view the associated :abbr:`RFQ (Request for Quotation)`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:57
+msgid "When a sales order is created for a dropshipped product, an associated request for quotation (RfQ) is automatically generated to purchase the product from the vendor. Sales orders can be viewed in the :menuselection:`Sales` app by selecting :menuselection:`Orders --> Orders`. Click the :guilabel:`Purchase` smart button at the top of a sales order to view the associated :abbr:`RFQ (Request for Quotation)`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:None
-msgid "A dropship sales order with the Purchase smart button in the top right corner."
+msgid "A dropship sales order with the Purchase smart button in the top-right corner."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:66
 msgid "Once the :abbr:`RFQ (Request for Quotation)` is confirmed, it becomes a purchase order, and a dropship receipt is created and linked to it. The receipt can be viewed by clicking the :guilabel:`Dropship` smart button in the top-right corner of the purchase order form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:None
-msgid "A dropship purchase order with the Receipt smart button in the top right corner."
+msgid "A dropship purchase order with the Receipt smart button in the top-right corner."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:73
 msgid "The dropship receipt displays :guilabel:`Partners/Vendors` in the :guilabel:`Source Location` field, and :guilabel:`Partners/Customers` in the :guilabel:`Destination Location` field. Upon delivery of the product to the customer, click on the :guilabel:`Validate` button at the top-left of the dropship receipt to confirm the delivered quantity."
 msgstr ""
 
@@ -8524,8 +8529,8 @@ msgstr ""
 msgid "Validate the dropship receipt after delivery."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:79
-msgid "To view all dropship orders, simply navigate to the :menuselection:`Inventory` :guilabel:`Overview` dashboard and click the teal :guilabel:`# TO PROCESS` button on the :guilabel:`Dropship` card."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:81
+msgid "To view all dropship orders, navigate to the :menuselection:`Inventory` :guilabel:`Overview` dashboard and click the teal :guilabel:`# TO PROCESS` button on the :guilabel:`Dropship` card."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.rst:None
@@ -8541,7 +8546,7 @@ msgid "Most of the time, products stored in a company's warehouse are either pur
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:10
-msgid "Consignment is a useful method for suppliers to launch new products, and easily deliver to their customers. It's also a great way for the company storing the products (the consignee) to earn something back for their efforts. Consignees can even charge a fee for the convenience of storing products they don't actually own."
+msgid "Consignment is a useful method for suppliers to launch new products, and easily deliver to their customers. It is also a great way for the company storing the products (the consignee) to earn something back for their efforts. Consignees can even charge a fee for the convenience of storing products they do not actually own."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:16
@@ -8556,27 +8561,27 @@ msgstr ""
 msgid "Enabled Consignment setting in Inventory configuration."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:27
 msgid "Receive (and store) consignment stock"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:29
 msgid "With the feature enabled in Odoo, consignment stock can now be received into a warehouse. From the main :menuselection:`Inventory` dashboard, click into the :guilabel:`Receipts` section. Then, click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:34
 msgid "Consignment stock is not actually purchased from the vendor; it is simply received and stored. Because of this, there are no quotations or purchase orders involved in receiving consignment stock. So, *every* receipt of consignment stock will start by creating manual receipts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:38
 msgid "Choose a vendor to enter in the :guilabel:`Receive From` field, and then choose the same vendor to enter in the :guilabel:`Assign Owner` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:42
 msgid "Since the products received from the vendor will be owned by the same vendor, the :guilabel:`Receive From` and :guilabel:`Assign Owner` fields must match."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:45
 msgid "Once the vendor-related fields are set, enter products into the :guilabel:`Product` lines, and set the quantities to be received into the warehouse under the :guilabel:`Done` column. If the :guilabel:`Units of Measure` feature is enabled, the :abbr:`UoM (Units of Measure)` can be changed, as well. Once all the consignment stock has been received, :guilabel:`Validate` the receipt."
 msgstr ""
 
@@ -8584,23 +8589,23 @@ msgstr ""
 msgid "Matching vendor fields in consignment Receipt creation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:54
 msgid "Sell and deliver consignment stock"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:56
 msgid "Once consignment stock has been received into the warehouse, it can be sold the same as any other in-stock product that has the :guilabel:`Can Be Sold` option enabled on the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:59
 msgid "To create a sales order, navigate to the :menuselection:`Sales` app, and from the :guilabel:`Quotations` overview, click :guilabel:`Create`. Next, choose a customer to enter into the :guilabel:`Customer` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:64
 msgid "The :guilabel:`Customer` *must* be different from the :guilabel:`Vendor` that supplied the consignment stock received (and stored) in the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:67
 msgid "Add the consignment product under the :guilabel:`Product` column in the order lines, set the :guilabel:`Quantity`, and fill out any other pertinent product details on the form. Once the quotation is complete, click :guilabel:`Confirm`."
 msgstr ""
 
@@ -8608,35 +8613,45 @@ msgstr ""
 msgid "Sales order of consignment stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:74
 msgid "Once the quotation has been confirmed, it becomes a sales order. From here, the products can be delivered by clicking on the :guilabel:`Delivery` smart button, and selecting :guilabel:`Validate` to validate the delivery."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:79
 msgid "Traceability and reporting of consignment stock"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:81
 msgid "Although consignment stock is owned by the vendor who supplied it, and not by the company storing it in their warehouse, consignment products will *still* appear in certain inventory reports."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:104
 msgid "To find inventory reports, go to :menuselection:`Inventory --> Reporting`, and choose a report to view."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:91
-msgid "Since the consignee does not actually own consignment stock, these products are *not* reflected in the :guilabel:`Stock Valuation` report, and have no impact on the consignee's inventory valuation."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:88
+msgid "Because the consignee does not actually own consignment stock, these products are *not* reflected in the :guilabel:`Stock Valuation` report or :guilabel:`Aging Report`, and have no impact on the in their warehouse. However, consignment products will *still* appear in certain inventory reports, such as *Moves History* and *Locations*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:96
-msgid "Product moves report"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:93
+msgid "Tracking what is physically stored in a location does not depend on who owns it. Warehouse operations (picking, replenishment, cycle counts) need to keep track of consignment products and quantities the same as any other product, since it occupies space and moves through the warehouse like other products."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:98
+msgid "Valuation and accounting, on the other hand, is excluded because the company (the consignee) does not actually own consignment stock. Since the consignee never purchased the consignment stock, and owes the vendor nothing for it until it is sold, these products are *not* reflected in the *Stock Valuation* report or *Aging report*. Only the vendor, who retains ownership until the sale, records its value as inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:3
+msgid "Moves history report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:110
 msgid "To view all information about on-hand stock moves, navigate to the :guilabel:`Product Moves` dashboard by going to :menuselection:`Inventory --> Reporting --> Product Moves`. For consignment products, the information in this report is the same as any other product: the history of its product moves can be reviewed; the :guilabel:`Quantity Done` and :guilabel:`Reference` document are available; and its :guilabel:`Locations` are available, as well. The consignment stock will originate from :guilabel:`Partner Location/Vendors`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:118
 msgid "To view a consignment product's moves by ownership, select the :guilabel:`Group By` filter, choose the :guilabel:`Add Custom Group` parameter, and then select :guilabel:`From Owner`, and :guilabel:`Apply` to finish."
 msgstr ""
 
@@ -8644,16 +8659,16 @@ msgstr ""
 msgid "Consignment stock moves history."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:126
 msgid "To see forecasted units of consignment stock, go to :menuselection:`Inventory --> Reporting --> Forecasted Inventory`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:119
-msgid "Stock on hand report"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:130
+msgid "Locations report"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:121
-msgid "View the :guilabel:`Stock On Hand` dashboard by navigating to :menuselection:`Inventory --> Reporting --> Inventory Report`. From this report, the :guilabel:`Locations` of all stock on-hand are displayed, in addition to the quantities per location. For consignment products, the :guilabel:`Owner` column will be populated with the owner of those products, or the original vendor who supplied the products in the first place."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:132
+msgid "View the :guilabel:`Stock On Hand` dashboard by navigating to :menuselection:`Inventory --> Reporting --> Inventory Report`. From this report, the :guilabel:`Locations` of all stock on-hand are displayed, in addition to the quantities per location. For consignment products, the :guilabel:`Owner` column is populated with the owner of those products, or the original vendor who supplied the products in the first place."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:5
@@ -11891,7 +11906,7 @@ msgid "To do that, navigate to :menuselection:`Inventory app --> Products --> Pr
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:61
-msgid "On the product form, open the *Inventory* tab. Under the *Logistics* section, change the value in the :guilabel:`Delivery Time` field."
+msgid "On the product form, click the :guilabel:`Inventory` tab, and under the :guilabel:`Logistics` section, change the value in the :guilabel:`Delivery Time` field."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:64
@@ -11903,7 +11918,7 @@ msgid "This sets the scheduled delivery date for this specific product to five d
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:None
-msgid "Product form with delivery lead time set in Inventory tab."
+msgid "Product form with delivery time set in Inventory tab."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:75
@@ -11911,7 +11926,7 @@ msgid "To see the *Before scheduled date* reservation method in action, create a
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:78
-msgid "Add a customer in the :guilabel:`Customer` field. In the *Order Lines* tab, click :guilabel:`Add Line`, then select a product from the drop-down menu that has a configured *delivery time* to add to the quotation form."
+msgid "Add a customer in the :guilabel:`Customer` field, then, in the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select a product from the drop-down menu that has a configured *delivery time*, to add to the quotation form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:82
@@ -18945,90 +18960,90 @@ msgid "A diagram breaking down the different types of lead times in the fulfillm
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:26
-msgid ":ref:`Customer lead time <inventory/warehouses_storage/sales-customer-lt>`: The number of days from the sales order (SO) confirmation date and the date the order is shipped from the warehouse. This is the expected time frame for customer order fulfillment, also known as *delivery lead time*."
+msgid ":ref:`Delivery time <inventory/warehouses_storage/sales-delivery-time-lt>`: The number of days from the sales order (SO) confirmation date and the date the order is shipped from the warehouse. This is the expected time frame for customer order fulfillment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:30
 msgid ":ref:`Sales security lead time <inventory/warehouses_storage/sales-security-lt>`: Moves the *scheduled delivery date* forward by a specified number of days. This serves as a buffer to account for potential delays in the fulfillment process and ensures ample time to prepare the outgoing shipment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:35
 msgid ":ref:`Shipping policy lead time <inventory/warehouses_storage/sales-shipping-policy-lt>`: The shipping policy lead time determines how the scheduled delivery date is set for orders with multiple products, based on the lead times of the products in the order. This provides flexibility to choose between multiple shipments delivered as soon as products are ready, or one consolidated shipment when all products are ready."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:41
 msgid ":ref:`Manufacturing lead time <inventory/warehouses_storage/manufacturing-lt>`: The number of days needed to complete a manufacturing order (MO) from the date of confirmation, including weekends (non-working hours in Odoo). This is used to forecast an approximate production date for a finished good."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:46
 msgid ":ref:`Days to prepare manufacturing order <inventory/warehouses_storage/days-to-prepare-mo-lt>`: The number of days needed to replenish components, or manufacture sub-assemblies of the product. Either set one directly on the bill of materials (BoM), or click *Compute* to sum up purchase and manufacturing lead times of components in the |BoM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:51
 msgid ":ref:`Vendor lead time <inventory/warehouses_storage/purchase-vendor-lt>`: The number of days from the confirmation of a purchase order (PO) to the receipt of products. This provides insight on the time it takes for products to arrive at the warehouse, facilitating effective scheduling and planning of supplier deliveries."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:56
 msgid ":ref:`Days to purchase <inventory/warehouses_storage/days-to-purchase-lt>`: The number of days needed for the vendor to receive a request for quotation (RFQ) and confirm it. This advances the deadline to schedule a |RFQ| by a specified number of days."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:61
 msgid "Lead times are calculated in the order provided above, working backward from the delivery deadline using :doc:`just-in-time (JIT) logic <just_in_time>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:64
 msgid "The manual replenishment timeline can be further extended by increasing the forecasted date on the replenishment report. See :ref:`horizon days <inventory/warehouses_storage/horizon-days>` to learn more."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:71
 msgid "Sales lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:74
-msgid "*Customer lead times* and *sales security lead times* can be configured to automatically compute an *expected delivery date* on a :abbr:`SO (Sales Order)`. The expected delivery date ensures a realistic *delivery dates* setting for shipments from the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:73
+msgid "*Delivery times* and *sales security lead times* can be configured to automatically compute an *expected delivery date* on a :abbr:`SO (Sales Order)`. The expected delivery date ensures a realistic *delivery dates* setting for shipments from the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:77
 msgid "Odoo issues a warning message if the set delivery date is earlier than the expected date, as it may not be feasible to fulfill the order by that time, which would impact other warehouse operations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:82
-msgid "A :abbr:`SO (sales order)` containing a `Coconut-scented candle` is confirmed on March 4. The product has a customer lead time of 14 days, and the business uses a sales security lead time of 1 day. Based on the lead time inputs, Odoo suggests a delivery date in 15 days, on March 19."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:81
+msgid "A :abbr:`SO (sales order)` containing a `Coconut-scented candle` is confirmed on March 4. The product has a delivery time of 14 days, and the business uses a sales security lead time of 1 day. Based on the lead time inputs, Odoo suggests a delivery date in 15 days, on March 19."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:0
 msgid "Set Delivery Date in a sales order. Enables delivery lead times feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:92
-msgid "Customer lead time"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:91
+msgid "Delivery time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:94
-msgid "The *customer lead time* is manually assigned for each individual product. To set the customer lead time for a product, navigate to :menuselection:`Sales app --> Products --> Products`. Select the desired product, and switch to the :guilabel:`Inventory` tab. In the :guilabel:`Customer Lead Time` field, enter the number of calendar days required to fulfill the delivery order from start to finish."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:93
+msgid "The *delivery time* is manually assigned for each individual product. To set the delivery time for a product, navigate to :menuselection:`Sales app --> Products --> Products`. Select the desired product, and switch to the :guilabel:`Inventory` tab. In the :guilabel:`Delivery Time` field, enter the number of calendar days required to fulfill the delivery order from start to finish."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:101
-msgid "Set a 14-day customer lead time for the `Coconut-scented candle` by navigating to its product form. Then, in the :guilabel:`Inventory` tab, type `14.00` days into the :guilabel:`Customer Lead Time` field."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:99
+msgid "Set a 14-day delivery time for the `Coconut-scented candle` by navigating to its product form. Then, in the :guilabel:`Inventory` tab, type `14.00` days into the :guilabel:`Delivery Time` field."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:0
-msgid "Assign a Customer Lead Time in the product form."
+msgid "Assign a Delivery Time in the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:109
 msgid "Sales security lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:111
 msgid "The *sales security lead time* applies to all sales orders for the company. To set the sales security lead time, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll down to the :guilabel:`Advanced Scheduling` section near the end of the page. Check the box for :guilabel:`Security Lead Time for Sales` to enable the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:116
 msgid "Next, enter the desired number of calendar days. This security lead time is a buffer notifying the team to prepare for outgoing shipments earlier than the scheduled date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:120
 msgid "Setting the :guilabel:`Security Lead Time for Sales` to `1.00` day, pushes the :guilabel:`Scheduled Date` of a delivery order (DO) forward by one day. In that case, if a product is initially scheduled for delivery on April 6th, but with a one-day security lead time, the new scheduled date for the delivery order would be April 5th."
 msgstr ""
 
@@ -19036,19 +19051,19 @@ msgstr ""
 msgid "View of the security lead time for sales configuration from the sales settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:131
 msgid "Shipping policy"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:133
 msgid "For orders that include multiple products with different lead times, the lead times can be configured directly from the quotation itself. On a quotation, click the :guilabel:`Other Info` tab and set the :guilabel:`Shipping Policy` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:137
 msgid ":guilabel:`As soon as possible`: Deliver products as soon as they are ready. The :guilabel:`Scheduled Date` of the :abbr:`DO (Delivery Order)` is determined by adding today's date to the shortest lead time among the products in the order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:141
 msgid ":guilabel:`When all products are ready` to wait to fulfill the entire order at once. The :guilabel:`Scheduled Date` of the :abbr:`DO (Delivery Order)` is determined by adding today's date to the longest lead time among the products in the order."
 msgstr ""
 
@@ -19056,23 +19071,23 @@ msgstr ""
 msgid "Show *Shipping Policy* field in the *Other Info* tab of a quotation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:149
 msgid "In a quotation containing 2 products, `Yoga mat` and `Resistance band,` the products have a lead time of 8 days and 5 days, respectively. Today's date is April 2nd."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:152
 msgid "When the :guilabel:`Shipping Policy` is set to :guilabel:`As soon as possible`, the scheduled delivery date is 5 days from today: April 7th. On the other hand, selecting :guilabel:`When all products are ready` configures the scheduled date to be 8 days from today: April 10th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:159
 msgid "Manufacturing lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:161
 msgid "Lead times can help simplify the procurement process for consumable materials and components used in manufactured products with bills of materials (BoMs)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:164
 msgid "The |MO| deadline, which is the deadline to begin the manufacturing process to complete the product by the scheduled delivery date, can be determined by configuring the manufacturing lead times and manufacturing security lead times."
 msgstr ""
 
@@ -19080,19 +19095,19 @@ msgstr ""
 msgid "Visualization of the determination of planned MO date manufacturing lead times."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:174
 msgid "Manufacturing lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:176
 msgid "Manufacturing lead times for products are configured from a product's bill of materials (BoM) form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:178
 msgid "To add a lead time to a |BoM|, navigate to :menuselection:`Manufacturing app --> Products --> Bills of Materials`, and select the desired |BoM| to edit."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:181
 msgid "On the |BoM| form, click the :guilabel:`Miscellaneous` tab. Change the value (in days) in the :guilabel:`Manuf. Lead Time` field to specify the calendar days needed to manufacture the product."
 msgstr ""
 
@@ -19100,132 +19115,132 @@ msgstr ""
 msgid "Manuf. Lead Time value specified on a product's Bill of Material form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:188
 msgid "If the selected |BoM| is a multi-level |BoM|, the manufacturing lead times of the components are added."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:191
 msgid "If the |BoM| product is subcontracted, the :guilabel:`Manuf. Lead Time` can be used to determine the date at which components should be sent to the subcontractor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:194
 msgid "Establish a |MO| deadline, based on the *expected delivery date*, indicated in the :guilabel:`Scheduled Date` field of the :abbr:`DO (Delivery Order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:197
 msgid "The |MO| deadline, which is the :guilabel:`Scheduled Date` field on the |MO|, is calculated as the *expected delivery date* subtracted by the manufacturing lead time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:202
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:200
 msgid "This ensures the manufacturing process begins on time, in order to meet the delivery date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:202
 msgid "However, it is important to note that lead times are based on calendar days. Lead times do **not** consider weekends, holidays, or *work center capacity* (:dfn:`the number of operations that can be performed at the work center simultaneously`)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:207
 msgid ":doc:`Manufacturing planning <../../../manufacturing/workflows/use_mps>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:208
 msgid ":doc:`Schedule MOs with reordering rules <reordering_rules>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:211
 msgid "A product's scheduled shipment date on the :abbr:`DO (Delivery Order)` is August 15th. The product requires 14 days to manufacture. So, the latest date to start the :abbr:`MO (Manufacturing Order)` to meet the commitment date is August 1st."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:218
 msgid "Days to prepare manufacturing order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:222
-msgid "Configuring the days required to gather the components for a manufactured product ensures there is enough time to either replenish components or manufacture semi-finished products. This can be used as an extra figure to cross-check and confirm that the order can be completed within the customer lead time."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:220
+msgid "Configuring the days required to gather the components for a manufactured product ensures there is enough time to either replenish components or manufacture semi-finished products. This can be used as an extra figure to cross-check and confirm that the order can be completed within the delivery time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:225
 msgid "Go to :menuselection:`Manufacturing app --> Products --> Bills of Materials` and select the desired |BoM|. In the :guilabel:`Miscellaneous` tab of the |BoM|, specify the calendar days needed to obtain components of the product in the :guilabel:`Days to prepare Manufacturing Order` field, or click :guilabel:`Compute` next to the :guilabel:`Days to prepare Manufacturing Order` field to automatically fill in the longest lead time among all the components listed on the |BoM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:234
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:232
 msgid "A |BoM| has two components: one has a manufacturing lead time of two days, and the other has a purchase lead time of four days. The :guilabel:`Days to prepare Manufacturing Order` is four days."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:241
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:266
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:264
 msgid "Purchase lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:241
 msgid "Automatically scheduling supplier orders streamlines procurement by showing users exactly when to confirm a request for quotation (RFQ) and when to expect the goods."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:246
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:244
 msgid "Key dates on an RFQ / PO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:248
 msgid "Field"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:249
 msgid "Description"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:250
 msgid "Order Deadline"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:251
 msgid "Last calendar day to confirm the |RFQ| and convert it to a |PO|"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:254
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:252
 msgid "Expected Arrival"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:253
 msgid "Arrival date of the products. Calculated by *Order Deadline* + *Vendor Lead Time*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:256
 msgid "A |PO| is marked late if the *Expected Arrival* date has passed. Late |POs| appear in the *Late* box on the **Purchase** app's dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:259
 msgid "In addition, Odoo has purchase lead times, which act as buffers to widen the :doc:`just-in-time <just_in_time>` (JIT) forecast window. These lead times affect replenishment methods that use :doc:`pull rules <../../shipping_receiving/daily_operations/use_routes>`—for example :doc:`reordering rules <reordering_rules>` or :doc:`make to order (MTO) <mto>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:268
 msgid "Buffer"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:272
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:270
 msgid "Impact on dates"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:273
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:271
 msgid ":ref:`Days to purchase <inventory/warehouses_storage/days-to-purchase-lt>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:274
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:272
 msgid "Days the vendor needs to review an |RFQ| after it is sent."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:273
 msgid "No effect on the |RFQ|/|PO|; adds buffer days in the :ref:`JIT forecast window <inventory/warehouses_storage/forecasted-date>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:275
 msgid ":ref:`Vendor lead time <inventory/warehouses_storage/purchase-vendor-lt>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:276
 msgid "Days from the confirmation of a purchase order (PO) to the receipt of products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:279
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:277
 msgid "Affects the |RFQ|/|PO|, adds buffer days in the :ref:`JIT forecast window <inventory/warehouses_storage/forecasted-date>`."
 msgstr ""
 
@@ -19233,55 +19248,55 @@ msgstr ""
 msgid "Timeline of days to purchase and vendor lead time between the PO deadline and receipt date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:286
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:284
 msgid "To tie the purchase dates and lead times together, consider this:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:288
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:286
 msgid "*Today's date*: April 21"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:287
 msgid ":guilabel:`Vendor Lead Time`: 1 day"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:290
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:288
 msgid ":guilabel:`Days to Purchase`: 2 days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:292
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:290
 msgid "Days from today = 1 + 2 = 3"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:294
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:292
 msgid "Forecasted date = April 24"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:297
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:295
 msgid "If an |RFQ| is created today, the following fields show:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:299
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:297
 msgid ":guilabel:`Order Deadline`: April 23 (:math:`\\text{Today} + 2`)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:300
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:298
 msgid ":guilabel:`Expected Arrival`: April 24 (:math:`\\text{Order Deadline} + 1`)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:305
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:303
 msgid "Vendor lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:305
 msgid "To set a vendor lead time for orders arriving in the warehouse from a vendor location, navigate to :menuselection:`Purchase app --> Products --> Products`. Select the desired product, and switch to the :guilabel:`Purchase` tab. In the editable vendor :guilabel:`Purchase` tab to add a pricelist. Click the :guilabel:`Add a line` button to add vendor details, such as the :guilabel:`Vendor` name, :guilabel:`Unit Price` offered for the product, and lastly, the :guilabel:`Lead Time`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:314
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:312
 msgid "Multiple vendors and lead times can be added to the vendor pricelist. The default vendor and lead time selected is the entry at the top of the list."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:316
 msgid "On the vendor pricelist of the product form, the :guilabel:`Lead Time` for the selected vendor is set to `10 days.`"
 msgstr ""
 
@@ -19289,43 +19304,43 @@ msgstr ""
 msgid "Add lead times in the Purchase tab of a product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:327
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:325
 msgid "Days to purchase"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:329
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:327
 msgid "*Days to purchase* affects **only** replenishment methods that use :doc:`pull rules <../../shipping_receiving/daily_operations/use_routes>`—for example :doc:`reordering rules <reordering_rules>` or :doc:`make to order (MTO) <mto>`. It does not change the interval between *Order Deadline* and *Expected Arrival*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:334
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:332
 msgid "To set it up, go to :menuselection:`Inventory app --> Configuration --> Settings`. Under the :guilabel:`Advanced Scheduling` section, in the :guilabel:`Days to Purchase` field, specify the number of days required for the vendor to confirm a |RFQ| after receiving it from the company."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:341
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:339
 msgid "Global example"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:343
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:341
 msgid "See the following example to understand how all the lead times work together to ensure timely order fulfillment:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:346
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:344
 msgid "**Sales security lead time**: 1 day"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:347
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:345
 msgid "**Manufacturing lead time**: 3 days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:348
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:346
 msgid "**Vendor lead time**: 4 days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:349
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:347
 msgid "**Days to purchase**: 1 day"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:351
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:349
 msgid "The customer places an order for a manufactured product on August 1, and the scheduled delivery date from the warehouse is on August 11. Odoo uses lead times and automated reordering rules to schedule the necessary operations, based on the outgoing shipment delivery date of August 11:"
 msgstr ""
 
@@ -19333,27 +19348,27 @@ msgstr ""
 msgid "Show timeline of how lead times work together to schedule warehouse operations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:358
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:356
 msgid "**August 1**: Sales order created, confirmed by salesperson."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:360
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:358
 msgid "**August 2**: Deadline to order components to ensure they arrive in time when manufacturing begins (4-day supplier lead time)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:363
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:361
 msgid "**August 7**: Scheduled date of receipt for components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:365
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:363
 msgid "**August 7**: Deadline to begin manufacturing. Calculated by subtracting the manufacturing lead time of 3 days from the expected delivery date of August 10."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:368
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:366
 msgid "**August 10**: :guilabel:`Scheduled Date` on the delivery order form indicates the updated expected delivery date. Originally set as August 11, but the sales security lead time pushes the date forward by a day."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:372
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:370
 msgid "Odoo's replenishment planning maps a business' order fulfillment process, setting pre-determined deadlines and raw material order dates, including buffer days for potential delays. This ensures products are delivered on time."
 msgstr ""
 
@@ -21433,17 +21448,358 @@ msgstr ""
 msgid "This can be an indication to either expedite the current shipment, if possible, or reschedule the delivery date for the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:3
-msgid "Moves history report"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:1
+msgid "The Moves Analysis report provides a planned-versus-actual comparison of stock movements, available in Pivot, List, Graph, and Kanban views. A pre-configured Aging Report favorite tracks remaining quantity and value by product, month over month, to identify slow-moving stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:9
+msgid "Moves analysis report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:11
+msgid "The *Moves Analysis* report provides a planned-versus-actual comparison of stock movements, which enables the analysis of movement-related inventory operations. Unlike the :doc:`moves_history`, :doc:`stock`, and :doc:`detailed_stock`, which only show quantities that were actually moved or are currently on hand, *Moves Analysis* displays both the :guilabel:`Demand` and :guilabel:`Quantity` of each stock movement."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:17
+msgid "This serves as a tool to check for under- or over-deliveries, partial fulfillments, or manufacturing orders that consumed more or less than expected. The value of an individual move can also be corrected through this report, as described in :ref:`inventory/operations_valuation/adjust-valuation`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:22
+msgid "To access the moves analysis report, go to :menuselection:`Inventory app --> Reporting --> Moves Analysis`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:9
+msgid "The reporting feature is only accessible to users with :doc:`admin access <../../../../general/users/access_rights>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:65
+msgid "Search options"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:34
+msgid "Use the following search options to customize the :guilabel:`Moves Analysis` report to display relevant information."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:39
+msgid ":icon:`fa-filter` Filters"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:41
+msgid "The :guilabel:`Filters` section allows users to search among pre-made and custom filters to find specific stock movement records."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:44
+msgid ":guilabel:`Ready`: Moves that are ready to be processed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:45
+msgid ":guilabel:`To Do`: Moves that are still in progress."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:46
+msgid ":guilabel:`Done`: Completed stock moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:47
+msgid ":guilabel:`Incoming`: Inbound moves entering inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:48
+msgid ":guilabel:`Outgoing`: Outbound moves leaving inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:49
+msgid ":guilabel:`Inventory`: Internal move records, such as inventory adjustments."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:50
+msgid ":guilabel:`Remaining`: Moves that still have a remaining quantity in stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:51
+msgid ":guilabel:`Scrapped`: Moves where products have been scrapped."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:52
+msgid ":guilabel:`Date`: Access various date filter options and view stock moves from a specific month, quarter, or year."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:54
+msgid ":guilabel:`Custom Filter...`: Create a :ref:`custom filter <search/custom-filters>` to search for specific stock moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:57
+msgid ":icon:`oi-group` Group By"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:72
+msgid "The :guilabel:`Group By` section allows users to add pre-made and custom groupings to the search."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:62
+msgid ":guilabel:`Product`: Group records by product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:63
+msgid ":guilabel:`Operation Type`: Group records by operation type, e.g. :guilabel:`Receipts` or :guilabel:`Delivery Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:65
+msgid ":guilabel:`Picking`: Group records by the operation they belong to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:66
+msgid ":guilabel:`Source Location`: Group records by the source location of the stock move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:67
+msgid ":guilabel:`Destination Location`: Group records by the destination location of the stock move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:69
+msgid ":guilabel:`Status`: Group records by status."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:70
+msgid ":guilabel:`Date`: Group records by :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, or :guilabel:`Day`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:72
+msgid ":guilabel:`Custom Group`: Group records by a specific field on the model. See :ref:`search/group`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:75
+msgid ":icon:`fa-star` Favorites"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:77
+msgid ":guilabel:`Moves Analysis`: The default view of the report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:78
+msgid ":guilabel:`Aging Report`: A pre-configured pivot view to track how :guilabel:`Remaining Quantity` and :guilabel:`Remaining Value` evolve month over month for each product. See :ref:`Aging Report <inventory/warehouses_storage/moves-analysis-aging-report>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:81
+msgid ":guilabel:`Save current search`: Saves the current applied filters and groups for easy access. Tick the :guilabel:`Default filter` checkbox to make this current view the default filter when opening the :guilabel:`Moves Analysis` report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:134
+msgid ":doc:`../../../../essentials/search`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:24
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:30
+msgid "Measures"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:93
+msgid "The following :ref:`measures <reporting/choosing-measures>` can be selected to quantify the data in the :ref:`pivot <inventory/warehouses_storage/moves-analysis-pivot-view>` and :ref:`graph <inventory/warehouses_storage/moves-analysis-graph-view>` views:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:97
+msgid ":guilabel:`Cost Share (%)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:98
+msgid ":guilabel:`Demand`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:99
+msgid ":guilabel:`Number of SN/Lots`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:100
+msgid ":guilabel:`Packaging Quantity`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:101
+msgid ":guilabel:`Price Unit`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:102
+msgid ":guilabel:`Quantity`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:103
+msgid ":guilabel:`Remaining Quantity`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:104
+msgid ":guilabel:`Remaining Value`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:105
+msgid ":guilabel:`Unit Factor`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:106
+msgid ":guilabel:`Value`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:107
+msgid ":guilabel:`Weight`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:108
+msgid ":guilabel:`Count`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:113
+msgid "Report views"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:115
+msgid "The report is available in four views, each suited to a different kind of analysis: :ref:`Pivot <inventory/warehouses_storage/moves-analysis-pivot-view>`, :ref:`List <inventory/warehouses_storage/moves-analysis-list-view>`, :ref:`Graph <inventory/warehouses_storage/moves-analysis-graph-view>`, and :ref:`Kanban <inventory/warehouses_storage/moves-analysis-kanban-view>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:124
+msgid ":icon:`oi-view-pivot` Pivot"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:126
+msgid "The :ref:`pivot view <reporting/using-pivot>` displays the selected :ref:`Measures <inventory/warehouses_storage/moves-analysis-measures>` in a table with two axes, which makes it most suitable for comparing quantities and values by time period, product, category, or location. This is the view used by the :ref:`Aging report <inventory/warehouses_storage/moves-analysis-aging-report>` in :guilabel:`Favorites`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:132
+msgid "By default, rows are grouped by month and columns are grouped by operation type. Click the :icon:`fa-plus-square` :guilabel:`Total` icon on a row or column header to select a different :ref:`grouping <inventory/warehouses_storage/moves-analysis-search-options>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:None
+msgid "The Moves Analysis report in the pivot view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:142
+msgid ":icon:`oi-view-list` List"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:144
+msgid "The list view shows one row per move, and is best suited to searching for the details of individual operations. The :guilabel:`Moves Analysis` list view displays the following columns:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:147
+msgid ":guilabel:`Date`: Date and time of the stock move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:148
+msgid ":guilabel:`Reference`: Description of the reason for the stock move, such as an operation reference (e.g. `WH/OUT/00012`) or an inventory adjustment reason."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:150
+msgid ":guilabel:`Product`: Name of the product involved in the move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:151
+msgid ":guilabel:`From`: Source location of the moved product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:152
+msgid ":guilabel:`To`: Destination location of the moved product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:153
+msgid ":guilabel:`Demand`: Quantity initially planned for the move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:154
+msgid ":guilabel:`Quantity`: Quantity of products actually moved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:155
+msgid ":guilabel:`Unit`: Unit of measure of the products moved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:156
+msgid ":guilabel:`Company`: Company the move belongs to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:157
+msgid ":guilabel:`Status`: Indicates the move status, which can be :guilabel:`Done`, :guilabel:`Available` (ready for action), or :guilabel:`Partially Available` (insufficient quantities to complete the operation)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:161
+msgid "Additional columns for :guilabel:`Contact`, :guilabel:`Owner`, :guilabel:`Value`, :guilabel:`Remaining Quantity`, and :guilabel:`Remaining Value` can be displayed by clicking the :icon:`oi-settings-adjust` :guilabel:`(Settings)` button at the end of the column headers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:None
+msgid "The Moves Analysis report in the list view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:169
+msgid "The :guilabel:`Quantity` and :guilabel:`Value` of inbound moves are displayed in green, while the :guilabel:`Quantity` and :guilabel:`Value` of outbound moves are displayed in red."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:175
+msgid ":icon:`fa-area-chart` Graph"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:177
+msgid "The :ref:`graph view <reporting/using-graph>` plots a single measure at a time, making it most suitable for visualizing a trend or comparing values across one dimension at a glance. Select the measure to plot from the :ref:`Measures <inventory/warehouses_storage/moves-analysis-measures>` drop-down in the top-left corner, then choose one of the chart types next to it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:None
+msgid "The Moves Analysis report in the graph view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:188
+msgid ":icon:`oi-view-kanban` Kanban"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:190
+msgid "The Kanban view displays one card per move, with the associated product, :guilabel:`Quantity`, and :guilabel:`Demand`. It offers the least analytical depth of the four views, but is useful for browsing recent moves without configuring a list, pivot, or graph."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:None
+msgid "The Moves Analysis report in the Kanban view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:200
+msgid "Aging report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:202
+msgid "The :guilabel:`Aging Report` is a :ref:`Favorites <inventory/warehouses_storage/moves-analysis-search-options>` filter that pre-configures the :guilabel:`Moves Analysis` pivot view to track :guilabel:`Remaining Quantity` and :guilabel:`Remaining Value` month over month for each product. This can help identify slow-moving or aging stock, such as perishable goods approaching the end of their shelf life."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:None
+msgid "Select the Aging Report favorite filter from the Moves Analysis search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:211
+msgid "Applying this filter configures the pivot view as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:213
+msgid "Rows are grouped by :guilabel:`Product Category`, then by :guilabel:`Product`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:214
+msgid "Columns are grouped by :guilabel:`Month`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:215
+msgid "Measures are set to :guilabel:`Remaining Quantity` and :guilabel:`Remaining Value`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:None
+msgid "The Aging Report pivot table, grouped by product category and product, with months as\n"
+"columns."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:222
+msgid "Because :doc:`consignment <../../shipping_receiving/daily_operations/owned_stock>` and :doc:`dropshipping <../../shipping_receiving/daily_operations/dropshipping>` products are not included in inventory valuation, their stock movements do not appear in the :guilabel:`Aging Report` filter."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:5
 msgid "The *Moves History* report in Odoo **Inventory** provides a detailed record of product movements (containing past and current locations), lot numbers, and reasons for movement. Reports can be generated for any time frame, making this report essential for analyzing stock levels, monitoring inventory turnover, and identifying any discrepancies in inventory."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:11
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:9
-msgid "The reporting feature is only accessible to users with :doc:`admin access <../../../../general/users/access_rights>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:14
@@ -21492,11 +21848,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:38
 msgid ":guilabel:`Status`: indicates the move status, which can be :guilabel:`Done`, :guilabel:`Available` (ready for action), or :guilabel:`Partially Available` (insufficient quantities to complete the operation)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:43
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:65
-msgid "Search options"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:45
@@ -21560,10 +21911,6 @@ msgstr ""
 msgid "Group By"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:72
-msgid "The :guilabel:`Group By` section allows users to add pre-made and custom groupings to the search."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:75
 msgid ":guilabel:`Product`: group records by product."
 msgstr ""
@@ -21608,11 +21955,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:98
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:131
 msgid "Lastly, click the :guilabel:`Save` button."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:101
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:134
-msgid ":doc:`../../../../essentials/search`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:5
@@ -26111,13 +26453,8 @@ msgid "The :guilabel:`Production Analysis` report is one of many reports availab
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:20
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:21
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:26
 msgid "For a full overview of the basic features available in most Odoo reports, see the documentation on :doc:`reporting essentials <../../../essentials/reporting>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:24
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:25
-msgid "Measures"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:26
@@ -26197,7 +26534,7 @@ msgid ":guilabel:`Count`: the total count of |MOs| created for the product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:69
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:51
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:56
 msgid "Only one measure can be selected at a time when one of the :icon:`fa-area-chart` :guilabel:`(graph view)` options is enabled. However, multiple measures, and varying group-by criteria (on the x and y axes), can be selected when using the :icon:`oi-view-pivot` :guilabel:`(pivot table)`."
 msgstr ""
 
@@ -27909,6 +28246,206 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:246
 msgid "Using the Odoo platform, Wood Hut has implemented an end-to-end product improvement process. Since the essential elements of this process (customer feedback, quality control, etc.) are always functioning, it can be reused to continuously update products and processes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:3
+msgid "Continuous production"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:9
+msgid "Continuous production lets manufacturers process work orders in partial quantities. When enabled on a bill of materials, registering production on a work order automatically unblocks the next work order, making the next dependent work order ready before the full quantity of the previous is finished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:14
+msgid "If the manufacturing order (MO) is closed before the full demand is produced, Odoo's normal backorder flow handles the remaining quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:17
+msgid "The standard |MO| flow is sequential, meaning each work order waits for the previous work order to finish the full quantity before the next work order can start. That works for simple cases, but it can create unnecessary idle time when manufactured goods move through an assembly line from one machine or work station to the next. In those environments, products are often produced in batches, waves, or a steady line, rather than as one single finished block."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:23
+msgid "Continuous production changes that behavior by letting a completed partial quantity advance to the next operation before the full |MO| is done. For example, if the first operation has finished 20 units out of 100, those 20 units can start the next operation while the first work center continues producing the remaining 80."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:28
+msgid "The quantities produced enter stock after the |MO| is complete."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:33
+msgid "Navigate to :menuselection:`Manufacturing app --> Configuration --> Settings`. In the *Operations* section, select the :guilabel:`Work Orders` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:None
+msgid "Enable Work Orders in the Manufacturing configuration settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:40
+msgid "Set up BOM"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:42
+msgid "Next:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:44
+msgid ":doc:`Set up a bill of materials (BOM) <../basic_setup/bill_configuration>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:45
+msgid ":ref:`Enable continuous production on a product <manufacturing/continuous_production/enable-cp>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:50
+msgid "Enable continuous production"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:52
+msgid "Continuous production for a product is set up through its |BOM|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:54
+msgid "To set up continuous production for a product, navigate to :menuselection:`Manufacturing app --> Products --> Bills of Materials`, then open the |BOM|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:58
+msgid "Alternatively, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders` and open a manufacturing order. Then, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon next to the :guilabel:`Bill of Material` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:62
+msgid "If using this method, save the changes, then update the |BOM| in the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:64
+msgid "In the *Miscellaneous* tab of the |BOM|, select the :guilabel:`Continuous Production` checkbox. This setting ensures that when production is registered on a work order, the next work order is unblocked to allow production to continue on what is produced."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:None
+msgid "Select the Continuous Production checkbox in the Miscellaneous tab of a BOM."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:72
+msgid "Continuous production on |MOs|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:74
+msgid "After enabling continuous production on a |BOM|, work orders can proceed as components become available, allowing work centers to remain active while components are unavailable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:77
+msgid "First, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`. Then, create a manufacturing order for a product under continuous production."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:80
+msgid "Continuous production can be registered from a work order, ideally from the *Shop Floor* module."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:82
+msgid "Shop Floor can be opened one of two ways:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:84
+msgid "**From the MO**: Navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`, and open or create an |MO|. In the |MO| form, click the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button. The *Overview* opens, displaying the first work order of the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:88
+msgid "**From the main Odoo dashboard**: From the main Odoo dashboard, open the :menuselection:`Shop Floor` module. The *Overview* opens, displaying work orders for all |MOs|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:92
+msgid "Registering partial production"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:94
+msgid "To process a work order where only a partial quantity is produced, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon on the work order card. Then, click :icon:`fa-plus` :guilabel:`Register Quantity / Lot` button to open the *Register Production* window."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:98
+msgid "In the :guilabel:`Quantity Produced` field, enter the quantity produced, then click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:None
+msgid "Specify how many products are being produced."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:104
+msgid "The registered units can move on to the next work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:107
+msgid "Example"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:109
+msgid "A company produces `20 fl. oz Soda` using three work orders:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:111
+msgid "Mixing"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:112
+msgid "Bottling and sealing"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:113
+msgid "Pasteurization"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:115
+msgid "Four components make up each completed soda:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:117
+msgid "`16.7` `fluid ounces` of `Carbonated Water` (consumed during the mixing stage)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:118
+msgid "`3.3` `fluid ounces` of `Soda Syrup` (consumed during the mixing stage)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:119
+msgid "`1` `unit` of `Soda Bottle` (consumed during the bottling and sealing stage)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:120
+msgid "`1` `unit` of `Soda Bottle Cap` (consumed during the bottling and sealing work order)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:122
+msgid "The production facility aims to make 20,000 bottles of soda per day."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:None
+msgid "Most components are available to manufacture the brackets."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:127
+msgid "The company's five soda mixing machines can only contain 200 liters of water and syrup. They are producing close to 12,000 liters per day. They need to be able to continuously produce soda to meet the daily quota, so they have :ref:`enabled continuous production <manufacturing/continuous_production/enable-cp>` on their soda |BOM| to allow soda to be bottled and sealed as soon as it's mixed, then pasteurized."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:133
+msgid "Arthur is responsible for the first work order, mixing. He oversees the addition of the proper amounts of carbonated water and soda syrup to each of the mixing machines. After five minutes, mixing is complete, and Arthur registers production of each 200-liter batch in *Shop Floor*, using a conversion from liters to fluid ounces."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:138
+msgid "He sends the mixed soda to the bottling machines. Marvin monitors the filling machine to ensure sodas are bottled safely and accurately. Soda is pumped into bottles, which are then immediately capped tightly as the sodas leave the machine. Marvin uses *Shop Floor* to register production for every 250 bottles made."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:None
+msgid "Enter 250 as the Quantity Produced and click Validate in the Register Production window."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:146
+msgid "The sodas leave via conveyor belt to enter the tunnel pasteurization machine. The bottles are slowly heated to pasteurization temperature, then gradually cooled as they work their way through the machine. Using *Shop Floor*, Bart registers production for every 250 bottles as they exit the machine."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:None
+msgid "250 bottles are registered in the Shop Floor app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:154
+msgid "From there, the bottles can move on to packaging and then shipment."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:3
@@ -30069,115 +30606,119 @@ msgstr ""
 msgid "Advanced"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:3
-msgid "Purchase Analysis report"
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:1
+msgid "Explains the Purchase Analysis report, which provides statistics about products purchased through the Purchase app, and describes the measures, or datasets, that can be displayed to examine key metrics about purchase orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:8
-msgid "The *Purchase Analysis* report provides statistics about products purchased using Odoo's **Purchase** app. This data is useful for gaining a deeper understanding of key metrics related to purchase orders (POs), including the quantity of products ordered and received, the amount of time it takes to receive purchased products, and more."
+msgid "Purchase Analysis report"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:13
+msgid "The *Purchase Analysis* report provides statistics about products purchased using Odoo's **Purchase** app. This data is useful for gaining a deeper understanding of key metrics related to purchase orders (POs), including the quantity of products ordered and received, the amount of time it takes to receive purchased products, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:18
 msgid "To open the Purchase Analysis report, navigate to :menuselection:`Purchase app --> Reporting --> Purchase`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:17
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:22
 msgid "The :guilabel:`Purchase Analysis` report is one of many reports available across the Odoo app suite. This documentation only covers the measures specific to the :guilabel:`Purchase Analysis` report, along with a few use case examples."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:27
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:32
 msgid "*Measures* refer to the various datasets that can be displayed on the :guilabel:`Purchase Analysis` report, with each dataset representing a key statistic about |POs| or products. To choose a measure, click the :guilabel:`Measures` :icon:`fa-caret-down` button, and select one of the options from the drop-down menu:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:32
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:37
 msgid ":guilabel:`# of Lines`: The number of |PO| order lines, across all |POs|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:33
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:38
 msgid ":guilabel:`Average Cost`: The average cost of |POs|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:34
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:39
 msgid ":guilabel:`Days to Confirm`: The number of days it takes to confirm a |PO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:35
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:40
 msgid ":guilabel:`Days to Receive`: The number of days it takes to receive the products in a |PO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:36
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:41
 msgid ":guilabel:`Gross Weight`: The total weight of purchased products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:37
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:42
 msgid ":guilabel:`Qty Billed`: The quantity of a product (or products) for which the vendor has already been billed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:39
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:44
 msgid ":guilabel:`Qty Ordered`: The quantity of a product (or products) ordered."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:40
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:45
 msgid ":guilabel:`Qty Received`: The quantity of an ordered product (or products) received."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:41
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:46
 msgid ":guilabel:`Qty to be Billed`: The quantity of an ordered product (or products) for which the vendor has yet to be billed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:43
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:48
 msgid ":guilabel:`Total`: The total amount spent, including tax."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:44
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:49
 msgid ":guilabel:`Untaxed Total`: The total amount spent, excluding tax. This measure is selected by default."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:46
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:51
 msgid ":guilabel:`Volume`: The total volume of ordered products, for products which are measured by volume."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:48
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:53
 msgid ":guilabel:`Count`: The total count of |POs|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:59
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:64
 msgid "Use case: determine days to receive products from each vendor"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:61
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:66
 msgid "One possible use case for the :guilabel:`Purchase Analysis` report is determining how long each vendor takes to deliver purchased items. This allows companies to make better informed decisions about which vendors they want to purchase from."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:66
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:71
 msgid "A local bike shop, *Bike Haus*, sells high-quality unicycles, bicycles, tricycles, and all the accessories needed to ride and maintain them. They purchase their inventory from a few different vendors, and then sell those products on to customers through their storefront."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:70
-msgid "Recently, Bike Haus has decided to have their purchasing manager, David, look into how long it has taken each of their vendors to deliver the items they've purchased during the current year, 2024."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:75
+msgid "Recently, Bike Haus has decided to have their purchasing manager, David, look into how long it has taken each of their vendors to deliver the items they've purchased during the current year."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:74
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:78
 msgid "David starts by navigating to :menuselection:`Purchase app --> Reporting --> Purchase`, and selecting the :icon:`fa-bar-chart` (bar chart) graph type at the top of the report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:77
-msgid "Next, he clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` filter section, he makes sure that **only** the :guilabel:`2024` filter is enabled. Then, he selects the :guilabel:`Vendor` option in the :guilabel:`Group By` section, before clicking away from the drop-down menu to close it."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:83
-msgid "Finally, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu, and selects the :guilabel:`Days to Receive` option."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:81
+msgid "Next, he clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` filter section, he makes sure that **only** the year filter is enabled. Then, he selects the :guilabel:`Vendor` option in the :guilabel:`Group By` section, before clicking away from the drop-down menu to close it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:86
+msgid "Finally, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu, and selects the :guilabel:`Days to Receive` option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:89
 msgid "With all of these options enabled, the :guilabel:`Purchase Analysis` report shows a bar chart, with one bar for each vendor, representing the average number of days it takes to receive products purchased from the vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:90
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:93
 msgid "Using this data, David can see that it takes Bike Friends over 4.5 days, on average, to deliver purchased products. This is more than four times the amount of time it takes any other vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:93
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:96
 msgid "Based on these findings, David makes the decision to reduce the quantity of products purchased from Bike Friends."
 msgstr ""
 
@@ -30185,52 +30726,44 @@ msgstr ""
 msgid "The Purchase report, showing the average days to receive products from vendors."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:101
-msgid "Use case: compare vendor POs for two time periods"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:103
-msgid "Another use for the :guilabel:`Purchase Analysis` report is to compare key statistics about |POs| for two different time periods, for a specific vendor. By doing so, it is easy to understand how purchases from the vendor have increased or decreased."
+msgid "Use case: examine vendor POs for a specific time frame"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:108
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:105
+msgid "Another use for the :guilabel:`Purchase Analysis` report is to examine key statistics about |POs| for a specific vendor. By doing so, it is easy to understand how many products have been purchased from a specific vendor in a given time frame."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:110
 msgid "Following the :ref:`previous example <purchase/purchase-analysis-example>`, it has been one month since Bike Haus decided to reduce the quantity of products purchased from Bike Friends, one of their retailers. Bike Haus' purchasing manager, David, wants to understand the impact this decision has had on the amount of money they have spent on Bike Friends products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:113
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:115
 msgid "David starts by navigating to :menuselection:`Purchase app --> Reporting --> Purchase`. Then, he selects the :icon:`oi-view-pivot` :guilabel:`(pivot table)` option at the top of the screen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:116
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:118
 msgid "In the search bar, he types `Bike Friends`, and clicks :guilabel:`Enter`, so the report only shows data for purchases from Bike Friends."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:119
-msgid "Then, David clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` field, he leaves the :guilabel:`June` and :guilabel:`2024` filters enabled. He also selects :guilabel:`Confirmation Date: Previous Period` in the :guilabel:`Comparison` section, before clicking away from the drop-down menu to close it."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:121
+msgid "Then, David clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` field, he selects *Year* and *Month*."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:125
-msgid "Next, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu. He leaves the :guilabel:`Total` and :guilabel:`Untaxed Total` datasets enabled, and disables the :guilabel:`Order` and :guilabel:`Count` datasets."
+msgid "Next, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu and leaves the :guilabel:`Total` and :guilabel:`Untaxed Total` datasets enabled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:129
-msgid "Finally, David clicks the :icon:`fa-minus-square-o` :guilabel:`Total` button above the rows on the pivot table, and selects the :guilabel:`Product` option."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:128
+msgid "Finally, David clicks the unexpanded :icon:`fa-plus-square` :guilabel:`Total` button above the rows on the pivot table, and selects the :guilabel:`Product` option."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:132
-msgid "With all of these options configured, the :guilabel:`Purchase Analysis` report shows a pivot table comparing purchase data for the current month, June, with the previous month, May."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:131
+msgid "With all of these options configured, the :guilabel:`Purchase Analysis` report shows a pivot table with purchase data for the current month."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:135
-msgid "The pivot table is broken down into two main columns: one for the untaxed total spent, and one for the taxed total spent. These columns are further broken down into three smaller columns: the amount spent in May, the amount spent in June, and the variation between the two months, represented as a percentage."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:140
-msgid "On the left side of the pivot table, one row is shown for each product purchased from Bike Friends during June. Using this report, David is able to see that Bike Haus has spent much less money on products purchased from Bike Friends, compared to the previous month."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:0
-msgid "The Purchase report, comparing the amount spent at a vendor."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:134
+msgid "The pivot table features a column for each product that meets the criteria. These columns are further broken down into three smaller columns: the count for each product sold, the untaxed total spent on the product, and the taxed total spent on the product. There are also three columns at the end of the table that show the grand totals for all products."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:3
@@ -31241,7 +31774,7 @@ msgid "The control policy is selected on the *Product* record."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:19
-msgid "To configure the control policy for a product, navigate to :menuselection:`Purchase app --> Products --> Products`, then click on a product record to open it. Click to the :guilabel:`Purchase` tab. Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, tick the radio button for either :guilabel:`On ordered quantities` or :guilabel:`On recieved quantities`."
+msgid "To configure the control policy for a product, navigate to :menuselection:`Purchase app --> Products --> Products`, then click on a product record to open it. Click to the :guilabel:`Purchase` tab. Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, enable the radio button for either :guilabel:`On ordered quantities` or :guilabel:`On recieved quantities`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:24
@@ -31249,46 +31782,46 @@ msgid ":guilabel:`On ordered quantities`: Creates a vendor bill as soon as a |PO
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:26
-msgid ":guilabel:`On received quantities`: A bill is created only *after* part of the total order has been received. The products and quantities received are used to generate a draft bill. An error message appears if creation of a vendor bill is attempted without receiving anything."
+msgid ":guilabel:`On received quantities`: A bill is created only *after* part of the total order has been received. The products and quantities received are used to generate a draft bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:30
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:29
 msgid "The default control policy for a product is determined by the :guilabel:`Product Type`:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:32
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:31
 msgid "**Services**: The default control policy is *On ordered quantities*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:33
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:32
 msgid "**Goods**: The default control policy is *On delivered quantities*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:36
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:35
 msgid "Pay vendor bills with 3-way matching"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:38
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:37
 msgid "The *3-way matching* feature ensures vendor bills are only paid once some, or all, of the products included in the |PO| have been received."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:41
-msgid "To activate *3-way matching*, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll down to the :guilabel:`Invoicing` section. Then, tick the checkbox for :guilabel:`3-way matching` to enable the feature, and click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:40
+msgid "To activate *3-way matching*, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll down to the :guilabel:`Invoicing` section. Then, enable the checkbox for :guilabel:`3-way matching` to enable the feature, and click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:None
 msgid "Enabled 3-way matching feature in Purchase app settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:48
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:47
 msgid "When *3-way matching* is enabled, vendor bills display a :guilabel:`Should Be Paid` field under the :guilabel:`Other Info` tab. When a new vendor bill is created, the field is set to :guilabel:`Yes`, since a bill **cannot** be created until at least some of the products included in a |PO| have been received."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:53
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:52
 msgid "To create a vendor bill from a |PO|, navigate to :menuselection:`Purchase app --> Orders --> Purchase Orders`. From the :guilabel:`Purchase Orders` page, select the desired |PO| from the list. Then, click :guilabel:`Create Bill`. Doing so opens a new draft :guilabel:`Vendor Bill` form, in the :guilabel:`Draft` stage. Click the :guilabel:`Other Info` tab, and locate the :guilabel:`Should Be Paid` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:60
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:59
 msgid "The |PO| selected from the list **must not** be billed yet, or an :guilabel:`Invalid Operation` pop-up window appears."
 msgstr ""
 
@@ -31296,7 +31829,7 @@ msgstr ""
 msgid "Invalid Operation pop-up window for billed Purchase Order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:66
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:65
 msgid "Click the drop-down menu next to :guilabel:`Should Be Paid` to view the available options: :guilabel:`Yes`, :guilabel:`No`, and :guilabel:`Exception`."
 msgstr ""
 
@@ -31304,47 +31837,47 @@ msgstr ""
 msgid "Should Be Paid field status on draft vendor bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:73
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:72
 msgid "If the total quantity of products from a |PO| has not been received, Odoo only includes the products that *have* been received in the draft vendor bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:76
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:75
 msgid "Draft vendor bills can be edited to increase the billed quantity, change the price of the products in the bill, and add additional products to the bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:79
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:78
 msgid "If the draft bill's information is changed, the :guilabel:`Should Be Paid` field status is set to :guilabel:`Exception`. This means that Odoo notices the discrepancy, but does not block the changes or display an error message, since there might be a valid reason for making changes to the draft bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:84
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:83
 msgid "To process the vendor bill, select a date in the :guilabel:`Bill Date` field, and click :guilabel:`Confirm`, followed by :guilabel:`Register Payment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:87
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:86
 msgid "This opens a :guilabel:`Register Payment` pop-up window. From this window, accounting information is pre-populated based on the database's accounting settings. Click :guilabel:`Create Payment` to process the vendor bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:91
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:90
 msgid "Once payment has been registered for a vendor bill, and the bill displays the green :guilabel:`Paid` banner, the :guilabel:`Should Be Paid` field status is set to :guilabel:`No`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:95
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:94
 msgid "The :guilabel:`Should Be Paid` status on bills is automatically set by Odoo. However, the status can be manually changed by clicking the field's drop-down menu inside the :guilabel:`Other Info` tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:100
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:99
 msgid "View a purchase order's billing status"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:102
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:101
 msgid "Once a |PO| is confirmed, its :guilabel:`Billing Status` can be viewed under the :guilabel:`Other Information` tab on the |PO| form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:105
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:104
 msgid "To view the :guilabel:`Billing Status` of a |PO|, navigate to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select a |PO| to view."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:108
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:107
 msgid "Click the :guilabel:`Other Information` tab, and locate the :guilabel:`Billing Status` field."
 msgstr ""
 
@@ -31352,59 +31885,59 @@ msgstr ""
 msgid "Billing status field on a purchase order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:113
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:112
 msgid "The table below details the different values the :guilabel:`Billing Status` field could read, and when they are displayed, depending on the *Bill Control* policy used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:120
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:119
 msgid "Billing Status"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:121
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:120
 msgid "On received quantities"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:122
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:121
 msgid "On ordered quantities"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:123
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:122
 msgid "Nothing to Bill"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:124
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:123
 msgid "PO confirmed; no products received"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:125
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:124
 msgid "*Not applicable*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:126
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:125
 msgid "Waiting Bills"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:127
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:126
 msgid "All/some products received; bill not created"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:128
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:127
 msgid "PO confirmed"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:129
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:128
 msgid "Fully Billed"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:130
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:129
 msgid "All/some products received; draft bill created"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:131
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:130
 msgid "Draft bill created"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:134
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:133
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:230
 msgid ":doc:`manage`"
 msgstr ""
@@ -33774,278 +34307,258 @@ msgstr ""
 msgid "Odoo *Repairs* assists companies in creating and processing repairs for damaged products returned by customers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:3
-msgid "Process repair orders"
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:1
+msgid "Repair orders track the repair of a damaged product. Learn how to create a repair order with Parts, Services, and Repair Notes tabs, then process the repair order and return the repaired product to the customer via the original sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:10
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:8
+msgid "Repair orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:14
 msgid "Sometimes, products delivered to customers can break or be damaged in transit, and need to be returned for a refund, delivery of a replacement product, or repairs."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:13
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:17
 msgid "In Odoo, repairs for products returned by customers can be tracked in the **Repairs** app. Once repaired, products can be redelivered to the customer."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:16
-msgid "The return and repair process for damaged products typically follows the below steps:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:18
-msgid ":ref:`Process return order for damaged product <repairs/repair_orders/return-order>`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:19
-msgid ":ref:`Create repair order for returned product <repairs/repair_orders/repair>`"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:20
-msgid ":ref:`Return repaired product to customer <repairs/repair_orders/return-customer>`"
+msgid "The repair process for damaged products typically follows the steps below:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:25
-msgid "Return order"
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:22
+msgid ":ref:`Create a repair order <repairs/repair_orders/create-ro>` for the returned product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:23
+msgid ":ref:`Process the repair <repairs/repair_orders/process-repair>` for the |RO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:24
+msgid ":ref:`Return the repaired product <repairs/repair_orders/return-to-customer>` to the customer."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:27
-msgid "Returns can be processed in Odoo via *reverse transfers*, created directly from a sales order (SO) once products have been delivered to a customer."
+msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:30
-msgid "To create a return, navigate to the :menuselection:`Sales app`, and click into an |SO| from which a product should be returned. Then, from the |SO| form, click the :guilabel:`Delivery` smart button. Doing so opens the delivery order (DO) form."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:32
+msgid "Create a repair order"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:34
-msgid "From this form, click :guilabel:`Return`. This opens a :guilabel:`Reverse Transfer` pop-up window."
+msgid "When a damaged product is returned, its repair can be tracked by creating a repair order (RO). To create a new |RO|, navigate to the **Repairs** app and click :guilabel:`New`, then fill in the following form fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
-msgid "Reverse transfer pop-up window on delivery order form."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:38
+msgid ":guilabel:`Customer`: The customer requesting the repair."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:39
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:196
-msgid "This pop-up lists the :guilabel:`Product` included in the order, the :guilabel:`Quantity` delivered to the customer, and the :guilabel:`Unit of Measure` the product was in."
+msgid ":guilabel:`Product to Repair`: The product that needs repair. If the product is tracked by lot or serial number, an additional :guilabel:`Lot/Serial` field appears to specify the lot or serial number of the repair product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:42
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:199
-msgid "Click the value in the :guilabel:`Quantity` field to change the quantity of the product to be returned, if necessary."
+msgid ":guilabel:`Under Warranty`: Select this checkbox if the product being repaired is covered by a warranty. The :guilabel:`Customer` is not charged for |RO| parts covered under warranty."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:45
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:202
-msgid "Click the :guilabel:`🗑️ (trash)` icon at the far-right of the product line to remove it from the return, if necessary."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:48
-msgid "Once ready, click :guilabel:`Return` to confirm the return. This creates a new receipt for the returned products."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:51
-msgid "Once the product has been returned to the warehouse, receipt of the return can be registered in the database by clicking :guilabel:`Validate` from the reverse transfer form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:55
-msgid "Once a reverse transfer for a return is validated, the value in the :guilabel:`Delivered` column on the original |SO| updates to reflect the difference between the original :guilabel:`Quantity` ordered, and the :guilabel:`Quantity` returned by the customer."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:0
-msgid "Delivered and Quantity columns on sales order after return."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:65
-msgid "Create repair order"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:67
-msgid "Once products have been returned, their repairs can be tracked by creating a repair order (RO)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:70
-msgid "Repair form configuration"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:72
-msgid "To create a new |RO|, navigate to :menuselection:`Repairs app`, and click :guilabel:`New`. This opens a blank |RO| form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
-msgid "Repair order form in Odoo Repairs."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:78
-msgid "On this form, begin by selecting a :guilabel:`Customer` to whom the order should be invoiced and delivered."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:81
-msgid "In the :guilabel:`Product to Repair` field, click the drop-down menu to select the product that needs repair. If the product chosen is tracked by lot or serial number, an additional :guilabel:`Lot/Serial` field appears for the user to specify the lot or serial number of the repair product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:86
-msgid "Next, tick the :guilabel:`Under Warranty` checkbox, if the product being repaired is covered by a warranty. If ticked, the :guilabel:`Customer` is not charged for all the parts used in the repair order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:90
 msgid "After specifying details about the customer's repair, fill in the following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:92
-msgid ":guilabel:`Scheduled Date`: Specific date to start the repair."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:47
+msgid ":guilabel:`Scheduled Date`: The date to start the repair."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:93
-msgid ":guilabel:`Responsible`: Specific user in the database responsible for the repair."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:48
+msgid ":guilabel:`Responsible`: The user in the database responsible for the repair."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:94
-msgid ":guilabel:`Company`: Specific company this |RO| belongs to, if in a multi-company environment. This field is automatically populated and non-modifiable."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:49
+msgid ":guilabel:`Company`: The company this |RO| belongs to, if in a multi-company environment. This field is automatically populated and non-modifiable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:96
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:51
 msgid ":guilabel:`Tags`: Relevant tags to apply to this |RO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:99
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
+msgid "Repair order form in the Repairs app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:59
 msgid "Parts tab"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:101
-msgid "The :guilabel:`Parts` tab allows users to specify parts to add, remove, or recycle during the repair. To specify a part, click :guilabel:`Add a line`."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:61
+msgid "The *Parts* tab tracks parts to add, remove, or recycle during the repair. To specify a part, click :guilabel:`Add a line`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:104
-msgid "In the :guilabel:`Type` column, click the box to reveal three options to choose from:"
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:64
+msgid ":guilabel:`Product`: The part to be added, removed, or recycled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:106
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:65
+msgid ":guilabel:`Type`: Select one of three options from the drop-down:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:67
 msgid ":guilabel:`Add`: Add this component for use during the repair."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:107
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:68
 msgid ":guilabel:`Remove`: Remove this component from the product being repaired."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:108
-msgid ":guilabel:`Recycle`: Recycle this component during the repair, saving it for later use in the warehouse."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:69
+msgid ":guilabel:`Recycle`: Save this component for later use in the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:111
-msgid "Next, configure information about the part in the remaining columns:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:113
-msgid ":guilabel:`Product`: Select which part should be added, removed, or recycled."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:114
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:71
 msgid ":guilabel:`Demand`: Specify the quantity of this part to be used in the repair, if necessary."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:115
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:72
 msgid ":guilabel:`Quantity`: Automatically updated with the number of parts actually used. This field can be manually changed, if needed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:117
-msgid ":guilabel:`Unit`: Select the |UoM| for the part."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:74
+msgid ":guilabel:`Unit`: Select the :doc:`unit of measure <../inventory/product_management/configure/uom>` for the part."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:120
-msgid "To add additional columns to the line, click the :icon:`oi-settings-adjust` :guilabel:`(optional columns drop-down)` icon in the header row. Select the desired options to add to the line."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
+msgid "Parts tab on the repair order form with parts to be added, recycled, and removed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:124
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:82
+msgid "To add additional columns to the line, click the :icon:`oi-settings-adjust` :guilabel:`(optional columns drop-down)` icon in the header row. Select the desired options to add to the line, such as the :guilabel:`Deadline` field and :guilabel:`Serial Numbers` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:89
+msgid "Services tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:91
+msgid "The *Services* tab tracks service-type products for the |RO|, such as labor or diagnostics, for traceability and invoicing purposes. To add a service, click :guilabel:`Add a line`, then select a service product from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:95
+msgid "Set the :guilabel:`Quantity` and :guilabel:`Unit` of the service, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
+msgid "Services tab on the repair order form with a service line added."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:103
 msgid "Repair Notes tab"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:126
-msgid "Click the :guilabel:`Repair Notes` tab to add internal notes about this specific |RO| (e.g., anything the user performing the repair might need to know)."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:105
+msgid "The *Repair Notes* tab is used to internally document important information about the repair. Repair notes should be added whenever information needs to be recorded for reference, clarification, or documentation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:130
-msgid "Initiate repair"
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:110
+msgid "Repair notes can be used to document:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:132
-msgid "Once all desired configurations have been made on the |RO| form, click :guilabel:`Confirm Repair`. This moves the |RO| to the :guilabel:`Confirmed` stage and reserves the necessary components needed for the repair. A :guilabel:`Component Status` also appears on the |RO| form, indicating whether the repair order is *Available* or *Not Available* based on the availability of the parts."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:112
+msgid "Visible damage that may show the repair is not covered under warranty."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:137
-msgid "Once ready, click :guilabel:`Start Repair`. This moves the |RO| to the :guilabel:`Under Repair` stage. If the |RO| should be cancelled instead, click :guilabel:`Cancel Repair`."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:113
+msgid "The condition of the product before and after the repair."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:140
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:114
+msgid "Instructions for the repair process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:115
+msgid "Specific customer requests."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:120
+msgid "Process a repair order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:122
+msgid "Once all desired configurations have been made on the |RO| form, click :guilabel:`Confirm Repair`. This moves the |RO| to the :guilabel:`Confirmed` stage and reserves the necessary components needed for the repair. Once confirmed, a :guilabel:`Component Status` field appears on the |RO| form, indicating whether the repair order is *Available* or *Not Available* based on the availability of the parts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:128
+msgid "Once ready, click :guilabel:`Start Repair`. This moves the |RO| to the :guilabel:`Under Repair` stage. If the |RO| should be canceled instead, click :guilabel:`Cancel`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:131
 msgid "Once all products have been successfully repaired, the |RO| is completed. To register this in the database, click :guilabel:`End Repair`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:144
-msgid "If all parts added to the |RO| were not used, clicking :guilabel:`End Repair` causes a :guilabel:`Confirmation` pop-up window to appear. The pop-up window informs the user that there is a difference between the initial demand and the actual quantity used for the repair order."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:135
+msgid "When the quantity consumed for a part or service differs from the initial demand, click :guilabel:`End Repair`, and a *Consumption Warning* pop-up window appears, listing the expected (:guilabel:`To Consume`) and actual (:guilabel:`Consumed`) quantity for each affected product. Select one of three options to continue:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:140
+msgid ":guilabel:`Confirm`: Validate the |RO| with the quantities as they currently are."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:141
+msgid ":guilabel:`Set Quantities & Validate`: Update the demand of each line to match the quantity consumed before validating."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:143
+msgid ":guilabel:`Discard`: Close the pop-up window without ending the repair."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:0
+msgid "Consumption Warning wizard comparing expected and consumed quantities."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:148
-msgid "To validate, click :guilabel:`Ok`. Otherwise, click :guilabel:`Cancel`."
+msgid "Ending the repair moves the |RO| to the :guilabel:`Repaired` stage. If the repair recorded any product moves, a :guilabel:`Product Moves` smart button also appears above the form. This smart button does not appear if the |RO| is canceled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:150
-msgid "Ending the repair moves the |RO| to the :guilabel:`Repaired` stage. A :guilabel:`Product Moves` smart button also appears above the form."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:152
+msgid "Click the :guilabel:`Product Moves` smart button to view the product's :guilabel:`Inventory Moves` history during and after the repair process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:153
-msgid "Click the :guilabel:`Product Moves` smart button to view the product's moves history during and after the repair process."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:158
+msgid "Return a product to the customer"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
-msgid "Moves history of product included in the repair order."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:160
+msgid "To return a repaired product to the customer, navigate to the **Sales** app and select the original |SO| from which the initial return was processed. Then, click the :guilabel:`Delivery` smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:162
-msgid "Return product to customer"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:164
-msgid "If the product is under warranty, it can be returned to the customer after the repair."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:166
-msgid "However, if the product is not under warranty, click :guilabel:`Create Quotation`. This opens a new |SO| form, pre-populated with the parts used in the |RO|, with the total cost of the repair calculated."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
-msgid "Pre-populated new quotation for parts included in repair order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:173
-msgid "If this |SO| should be sent to the customer, click :guilabel:`Confirm`, and proceed to invoice the customer for the repair."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:177
-msgid "If the customer should be charged for a repair service, a service type product can be created and added to the |SO| for a repaired product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:180
-msgid "To return the product to the customer, navigate to the :menuselection:`Sales app`, and select the original |SO| from which the initial return was processed. Then, click the :guilabel:`Delivery` smart button."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:184
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:163
 msgid "From the resulting list of operations, click the reverse transfer, indicated by the :guilabel:`Source Document`, which should read `Return of WH/OUT/XXXXX`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:187
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:166
 msgid "This opens the return form. At the top of this form, a :guilabel:`Repair Orders` smart button now appears, linking this return to the completed |RO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:190
-msgid "Click :guilabel:`Return` at the top of the form. This opens a :guilabel:`Reverse Transfer` pop-up window."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:169
+msgid "Click :guilabel:`Return` at the top of the form. This opens a *Reverse Transfer* pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:205
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:171
+msgid "This pop-up lists the :guilabel:`Product` included in the order, the :guilabel:`Quantity` delivered to the customer, and the :guilabel:`Unit of Measure` the product was in."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:174
+msgid "Click the value in the :guilabel:`Quantity` field to change the quantity of the product to be returned, if necessary."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:177
+msgid "Click the :icon:`fa-trash-o` :guilabel:`(trash)` icon at the far-right of the product line to remove it from the return, if necessary."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:180
 msgid "Once ready, click :guilabel:`Return` to confirm the return. This creates a new delivery for the returned products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:208
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:183
 msgid "When the delivery has been processed and the product has been returned to the customer, click :guilabel:`Validate` to validate the delivery."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
-msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ""
