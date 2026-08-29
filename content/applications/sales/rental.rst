@@ -2,6 +2,9 @@
 :show-content:
 :show-toc:
 
+.. _rental-products: https://youtu.be/CE-SahTUC9A?si=tqT3luHRHEuYReoH
+.. _hotel-booking: https://youtu.be/2AyqLK4LFyo?si=19wPiF9WFOOKUy-V
+
 ======
 Rental
 ======
@@ -12,10 +15,30 @@ Send quotations, confirm orders, schedule rentals, register products when they a
 returned, and invoice customers from this single platform.
 
 .. seealso::
-   - `Odoo Rental: product page <https://www.odoo.com/app/rental>`_
-   - `Odoo Tutorials: Rental <https://www.odoo.com/slides/rental-48>`_
+   - `Odoo Rental: Product page <https://www.odoo.com/app/rental>`_
+   - `Odoo Tutorials: Configuring Rental Products <rental-products_>`_
+   - `Odoo Tutorials: Hotel booking <hotel-booking_>`_
 
 .. cards::
+
+   .. card:: Product types
+      :target: rental/configure_products/product_type
+      :large:
+
+      Learn learn about the different rental product types, general configuration, and possible app
+      integrations.
+
+   .. card:: Physical rental products
+      :target: rental/configure_products/products
+      :large:
+
+      Explore how to create and manage a physical rental product.
+
+   .. card:: Physical service rental products
+      :target: rental/configure_products/service_products
+      :large:
+
+      Discover how to create and manage a physical service rental product.
 
    .. card:: Manage deposits
       :target: rental/rental_orders/manage_deposits
