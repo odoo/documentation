@@ -58,9 +58,10 @@ When a rental order is confirmed, the following smart buttons appear at the top 
 
 .. important::
    For the appropriate smart buttons to display, the **Project**, **Timesheet**, **Planning**, and
-   **Inventory** apps are needed. The selected service product on the rental order must be
-   :ref:`properly configured <rental/service_products/service>` to integrate with the recommended
-   apps.
+   **Inventory** apps are needed. The selected :ref:`physical
+   <rental/service_products/configuration>` or :ref:`labor
+   <rental/labor_service_products/configuration>` service product on the rental order must be
+   properly configured to integrate with the recommended apps.
 
 .. image:: create_rental_order/rental-order.png
    :alt: Sample of a filled out rental order available in the Odoo Rental application.

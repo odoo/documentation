@@ -25,20 +25,20 @@ returned, and invoice customers from this single platform.
       :target: rental/configure_products/product_type
       :large:
 
-      Learn learn about the different rental product types, general configuration, and possible app
+      Learn about the different rental product types, general configuration, and possible app
       integrations.
-
-   .. card:: Physical rental products
-      :target: rental/configure_products/products
-      :large:
-
-      Explore how to create and manage a physical rental product.
 
    .. card:: Physical service rental products
       :target: rental/configure_products/service_products
       :large:
 
       Discover how to create and manage a physical service rental product.
+
+   .. card:: Labor service rental products
+      :target: rental/configure_products/labor_service_products
+      :large:
+
+      Learn how to create a labor service rental product.
 
    .. card:: Manage deposits
       :target: rental/rental_orders/manage_deposits
