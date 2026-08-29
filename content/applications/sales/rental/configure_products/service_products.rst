@@ -212,3 +212,4 @@ instructions.
    - :doc:`../../sales/products_prices/prices/pricing`
    - :doc:`../../sales/products_prices/products/variants`
    - :doc:`../rental_orders/create_rental_order`
+   - :doc:`../rental_orders/pickup_return`

@@ -45,6 +45,18 @@ returned, and invoice customers from this single platform.
 
       Learn how to create a labor service rental product.
 
+   .. card:: Create a rental order
+      :target: rental/rental_orders/create_rental_order
+      :large:
+
+      Learn how to create a rental order.
+
+   .. card:: Pick up and return rental products
+      :target: rental/rental_orders/pickup_return
+      :large:
+
+      Learn how to pick up and return rental products.
+
    .. card:: Manage deposits
       :target: rental/rental_orders/manage_deposits
       :large:
