@@ -17,7 +17,6 @@ stock movements. Some examples are:
 - Work stations
 - Storage units
 
-.. _rental/service_products/service:
 .. _rental/service_products/configuration:
 
 Configuration
@@ -207,6 +206,7 @@ visibility <ecommerce/products/publish-products>` and :ref:`Product configuratio
 instructions.
 
 .. seealso::
+   - :doc:`labor_service_products`
    - :doc:`products`
    - :doc:`../../../services/planning`
    - :doc:`../../sales/products_prices/prices/pricing`
