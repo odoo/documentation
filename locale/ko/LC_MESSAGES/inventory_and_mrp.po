@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:32+0000\n"
+"POT-Creation-Date: 2026-08-28 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 15:16+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -36709,7 +36709,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:70
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:318
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
 msgid "Filters"
 msgstr "필터"
 
@@ -49605,55 +49605,90 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:197
 msgid ""
-"If no minimum or maximum replenishment limits are set, the |MPS| suggests "
-"the replenishment quantity needed to reach the :guilabel:`Safety Stock "
-"Target` while accounting for the starting stock and forecasted demand. In "
-"other words, the suggested quantity in the replenishment row is calculated "
-"by the following relation:"
+"By default, the |MPS| suggests the replenishment quantity needed to reach "
+"the :guilabel:`Safety Stock Target` while accounting for the starting stock "
+"and forecasted demand. In other words, the suggested quantity in the "
+"replenishment row is calculated by the following relation:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:201
 msgid ""
 "\\begin{align}\n"
 "\\text{Replenishment} &= \\text{Safety Stock Target} \\\\\n"
 "&- \\text{Starting Stock} \\\\\n"
-"&- \\text{Forecasted Demand} \\\\\n"
-"&- \\text{Indirect Demand Forecast}\n"
+"&+ \\text{Forecasted Demand} \\\\\n"
+"&+ \\text{Indirect Demand Forecast}\n"
 "\\end{align}"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:210
 msgid ""
-"If minimum or maximum limits are set, the suggested replenishment quantity "
-"is always bounded by these limits, regardless of the needed quantity to "
-"reach the :guilabel:`Safety Stock Target`."
+"Additionally, the following rules are applied to the suggested "
+"`Replenishment` quantity above if minimum/maximum limits are set:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:215
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:213
+msgid "If ``Replenishment > Maximum to Replenish``, it remains at the maximum."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:214
+msgid ""
+"If ``0 < Replenishment < Minimum to Replenish``, the suggestion is the "
+"minimum quantity. If ``Replenishment ≤ 0``, it defaults to `0`. However, if "
+"the suggestion already meets or exceeds the minimum, it remains as-is."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:219
+msgid ""
+"A *Chair* product has a starting stock of `60` units for the current period "
+"and a forecasted demand of `75` units. The following replenishment options "
+"are set:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
+msgid ":guilabel:`Safety Stock Target`: `10` units"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:223
+msgid ":guilabel:`Minimum to Replenish`: `5` units"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+msgid ":guilabel:`Maximum to Replenish`: `20` units"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:226
+msgid ""
+"While the default suggested replenishment quantity (``10 - 60 + 75``) is "
+"`25` units of the *Chair*, it exceeds the configured maximum of `20` units. "
+"Therefore the final suggested replenishment quantity is `20`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Specify replenishment trigger"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:233
 msgid ""
 "Finally, in the :guilabel:`Replenishment Trigger` field, specify how the "
 "product should be replenished:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:237
 msgid ""
 ":guilabel:`Automatic`: Automatically schedule a replenishment order for the "
 "product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:238
 msgid ":guilabel:`Never`: Never replenish the product from the |MPS|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
 msgid ""
 "Click :guilabel:`Save` to add the product to the |MPS|. The product now "
 "appears on the |MPS| page, along with any components (if applicable)."
@@ -49663,34 +49698,34 @@ msgstr ""
 msgid "The Add a Product pop-up window in the MPS."
 msgstr "품목 추가 팝업 창이 MPS에 나타나 있는 모습입니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:247
 msgid "Edit a product"
 msgstr "품목 수정하기"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:233
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:249
 msgid ""
 "To edit the planning schedule for a product on the |MPS|, click "
 "the :icon:`fa-pencil` :guilabel:`(Forecasted)` button next to the product's "
 "header row."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
 msgid ""
 "In the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
 "modifications. Then, click :guilabel:`Save` to save the changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:256
 msgid ""
 "The :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
 "edited."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:243
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:259
 msgid "Remove a product"
 msgstr "품목 제거하기"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:261
 msgid ""
 "To remove a product from the |MPS|, select the checkbox next to its name. "
 "Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
@@ -49698,27 +49733,27 @@ msgid ""
 "the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:268
 msgid "Replenishing products with |MPS|"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
 msgid "Products in the |MPS| can be replenished in one of three ways:"
 msgstr "|MPS| 에서 다음 세 가지 방법 중 하나로 품목을 보충할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:272
 msgid ""
 "To replenish every product for the current time period, click "
 "the :guilabel:`Order` button at the top."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:258
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:274
 msgid ""
 "To replenish a specific product, click the :guilabel:`Order` button next to "
 "the :guilabel:`+ Replenishment` row of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:260
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:276
 msgid ""
 "To select and replenish multiple products, select the checkbox next to one "
 "or more products' header rows. Then, click the :icon:`fa-"
@@ -49726,21 +49761,21 @@ msgid ""
 "the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:280
 msgid ""
 "The type of replenishment order generated is determined by the route "
 "selected on the *Add a Product* pop-up window when :ref:`adding a product "
 "<manufacturing/mps/add-product>` to the |MPS|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:267
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
 msgid ""
 "If the *Buy* route is selected, an |RfQ| is generated to purchase the "
 "product. Generated |RfQs| can be located by navigating "
 "to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:286
 msgid ""
 "If the *Manufacture* route is selected, an |MO| is generated to manufacture "
 "the product. Generated |MOs| can be located by navigating "
@@ -49748,87 +49783,87 @@ msgid ""
 "Orders`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:277
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
 msgid "Replenishment status indicators"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:279
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
 msgid ""
 "The :guilabel:`+ Replenishment` cells in the |MPS| are displayed using the "
 "following highlights, depending on whether the replenished quantities match "
 "the suggested quantities:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:282
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:298
 msgid ":guilabel:`Green`: The quantity is ready to be replenished."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:299
 msgid ""
 ":guilabel:`Gray`: A replenishment order has already been generated, and its "
 "ordered quantity matches the suggested quantity for the time period."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:285
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:301
 msgid ""
 ":guilabel:`Yellow`: A replenishment order has already been generated, but "
 "its ordered quantity is below the suggested quantity for the time period."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:287
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:303
 msgid ""
 ":guilabel:`Red`: A replenishment order has already been generated, but its "
 "ordered quantity exceeds the suggested quantity for the time period."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
 msgid "Additional rows and filters"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
 msgid ""
 "With the :guilabel:`Search...` bar drop-down menu, users may further "
 "customize the |MPS| by configuring additional rows for products or by "
 "filtering existing records based on specific criteria."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:300
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:316
 msgid "Rows"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:302
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:318
 msgid ""
 "The following rows can be added to the |MPS| in addition to the default rows "
 "shown on the :ref:`dashboard <manufacturing/mps/dashboard>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:321
 msgid ""
 ":guilabel:`Actual Demand`: Changes the :guilabel:`- Forecasted Demand` row "
 "to :guilabel:`- Actual / Forecasted Demand`, comparing the product's "
 "confirmed demand and its forecasted demand."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:307
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
 msgid ""
 ":guilabel:`Actual Demand Y-1`: Displays the :guilabel:`Actual Demand` one "
 "year before the current time period."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
 msgid ""
 ":guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two "
 "years before the current time period."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:327
 msgid ""
 ":guilabel:`Actual Replenishment`: Changes the :guilabel:`+ Replenishment` "
 "row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
 "replenished quantity and its suggested quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:313
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
 msgid ""
 ":guilabel:`Available to Promise`: Changes the :guilabel:`= Forecasted Stock` "
 "row to :guilabel:`= ATP / Forecasted Stock`, comparing the product's "
@@ -49836,57 +49871,57 @@ msgid ""
 "forecasted stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:320
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
 msgid ""
 "Users can filter records from the |MPS| based on the following criteria:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:322
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:338
 msgid ""
 ":guilabel:`To Forecast`: Filter by products that are manually or "
 "automatically replenished."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:339
 msgid ""
 ":guilabel:`To Replenish`: Filter by products that are ready to be "
 "replenished (i.e., with at least one :guilabel:`+ Replenishment` cell "
 "highlighted in green)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:341
 msgid ""
 ":guilabel:`Indirect Demand`: Filter by products configured with the "
 "*Indirect Demand* option."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:326
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:342
 msgid ""
 ":guilabel:`Replenishment Too Low`: Filter by products with a replenished "
 "quantity below the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in yellow)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:345
 msgid ""
 ":guilabel:`Replenishment Too High`: Filter by products with a replenished "
 "quantity above the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in red)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:332
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:348
 msgid ""
 ":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
 "Trigger* set to *Manual*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:350
 msgid ""
 ":guilabel:`Automatically Replenished`: Filter by products with the "
 "*Replenishment Trigger* set to *Automatic*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:352
 msgid ""
 ":guilabel:`Not Replenished from MPS`: Filter by products with the "
 "*Replenishment Trigger* set to *Never*."
