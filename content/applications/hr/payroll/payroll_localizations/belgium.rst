@@ -834,9 +834,38 @@ triggers the necessary actions to update the dimona status accordingly.
 Technical configuration (outside Odoo)
 **************************************
 
-Regarding the technical configuration, everything is described in the module information with all
-the technical prerequisites. If your customer or partner need further assistance with that, they
-need to contact their IT department or representatives as this is not part of Odoo configuration.
+Regarding the technical configuration, here are the technical prerequisites needed to enable the
+automated Dimona declarations:
+
+- A Belgian government-compliant digital certificate, delivered by GlobalSign. See the `Belgian
+  government services <https://shop.globalsign.com/en/belgian-government-services>`_ page.
+- Certificate files generated from the SSL certificate (:file:`.pfx` file), needed to create a
+  technical user (:file:`.cer` file) and to authenticate remotely with the ONSS (:file:`.pem`
+  file). On a UNIX system, the following commands can be used:
+
+  - PFX → CRT: :command:`openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys -clcerts`
+  - CRT → CER: :command:`openssl x509 -inform pem -in my_cert.crt -outform der -out my_cert.cer`
+  - PFX → PEM: :command:`openssl pkcs12 -in my_cert.pfx -out my_cert.pem -nodes`
+
+- Before the social security REST web service can be used, an account must be created for the
+  company or its client, and the security must be configured. The full procedure is described on
+  the `Dimona web service introduction
+  <https://www.socialsecurity.be/site_fr/employer/applics/dimona/introduction/webservice.htm>`_
+  page, which points to the `REST Documentation <https://www.rest-documentation.socialsecurity.be/>`_
+  portal.
+
+  - User account management: see the `Gestion d'accès pour Entreprises et Organisations
+    <https://www.socialsecurity.be/site_fr/general/helpcentre/lexique/applic_acces.htm>`_ online
+    service.
+  - Creating a technical user and activating the web service channel is now done through Chaman.
+    See `Créer le canal webservice
+    <https://www.socialsecurity.be/site_fr/general/helpcentre/soa/local_manager_activate_channel.htm>`_.
+
+- At the end of the procedure, an "ONSS Expeditor Number" is received. It can be entered in the
+  Payroll settings, along with the :file:`.pem` file and its related passphrase, if any.
+
+If your customer or partner needs further assistance with this, they should contact their IT
+department or representatives, as this is not part of Odoo's configuration.
 
 Functional configuration (within Odoo)
 **************************************
