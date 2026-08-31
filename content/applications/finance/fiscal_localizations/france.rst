@@ -26,7 +26,7 @@ The following modules are installed automatically with the French localization:
        territories).
    * - :guilabel:`France - Accounting Reports`
      - `l10n_fr_reports`
-     - Export of the French VAT report, which can be sent to DGFiP, an OGA, or a professional
+     - Export of the French VAT report, which can be sent to the DGFiP, an OGA, or a professional
        accountant.
    * - :guilabel:`France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)`
      - `l10n_fr_pos_cert`
@@ -160,7 +160,7 @@ subject to VAT. To submit the EDI DAS2 report, follow these steps:
 #. In the :guilabel:`DAS2 Report` view, click the :icon:`fa-cog` (:guilabel:`gear`) icon, and select
    :guilabel:`EDI DAS2`.
 #. In the :guilabel:`DAS2 Report Generation` window, update the :guilabel:`Point of Contact` field
-   if necessary by selecting the contact responsible for directly sending the report to |DGFiP|.
+   if necessary by selecting the contact responsible for directly sending the report to the |DGFiP|.
 #. Click :guilabel:`Send DAS2 Report`.
 
 .. tip::
@@ -186,9 +186,9 @@ subject to VAT. To submit the EDI DAS2 report, follow these steps:
       :guilabel:`DAS2 Report` item.
    #. Click :guilabel:`Validate` to complete the :guilabel:`Review` step; the DAS2 report PDF is
       then available in the chatter.
-   #. Click :guilabel:`Submit` to submit the DAS2 Report to |DGFiP|.
+   #. Click :guilabel:`Submit` to submit the DAS2 Report to the |DGFiP|.
    #. In the :guilabel:`DAS2 Report` window, update the :guilabel:`Point of Contact` field if
-      necessary, select the contact responsible for directly sending the report to |DGFiP|, and
+      necessary, select the contact responsible for directly sending the report to the |DGFiP|, and
       click :guilabel:`Send DAS2 Report`.
 
 .. _localizations/france/reporting-fiscal-declaration:
@@ -219,7 +219,7 @@ The fiscal declaration includes various sections, such as :guilabel:`2033 - A` a
 Submit
 ******
 
-To submit the fiscal declaration directly to |DGFiP| through Odoo, follow these steps:
+To submit the fiscal declaration directly to the |DGFiP| through Odoo, follow these steps:
 
 #. Go to :menuselection:`Accounting --> Reporting --> Fiscal Declaration` and click
    :guilabel:`Returns`.
@@ -240,12 +240,12 @@ To submit the fiscal declaration directly to |DGFiP| through Odoo, follow these 
    :guilabel:`Fiscal Declaration` item.
 #. Click :guilabel:`Validate` to complete the :guilabel:`Review` step; the fiscal declaration PDF is
    then available in the chatter.
-#. Click :guilabel:`Submit` to submit the fiscal declaration to |DGFiP|.
+#. Click :guilabel:`Submit` to submit the fiscal declaration to the |DGFiP|.
 #. In the :guilabel:`Fiscal Declaration` window, select the :guilabel:`Type of tax`, indicate
    whether it's a :guilabel:`Transfer/cessation of business or special circumstances`, choose the
    reports that must be sent, and click :guilabel:`Send Fiscal Declaration`.
 
-The fiscal declaration is then submitted to |DGFiP| through ASPOne.
+The fiscal declaration is then submitted to the |DGFiP| through ASPOne.
 
 .. _localizations/france/accounting:
 
@@ -940,7 +940,7 @@ financial activities and determines corporate taxes.
 
 `Teledec <https://www.teledec.fr>`_ is a platform used to prepare and submit tax declaration using
 data from accounting records. To synchronize your accounting data stored in Odoo with Teledec and
-electronically send your company's *liasse fiscale* to |DGFiP|, follow these steps:
+electronically send your company's *liasse fiscale* to the |DGFiP|, follow these steps:
 
 #. :ref:`localization/france/teledec-account`
 #. :ref:`localization/france/teledec-registration`
@@ -1040,50 +1040,53 @@ EDI tax return
 .. note::
    A valid Odoo Enterprise subscription is required to use this service.
 
-The EDI tax return (VAT report) can be submitted directly to |DGFiP| through Odoo. To do so, follow
-these steps:
+The EDI tax return (VAT report) can be submitted directly to the |DGFiP| through Odoo. To do so,
+follow these steps:
 
-#. :ref:`Review and validate <accounting/tax-returns/vat-return-review>` the tax return (VAT
-   report).
-#. Click :guilabel:`Submit`, or in the :guilabel:`Tax Return` view, click the :guilabel:`Tax Report
-   (FR)` button, then the :icon:`fa-cog` (:guilabel:`gear`) icon, and select :guilabel:`EDI VAT`.
-#. In the :guilabel:`EDI VAT` window, make sure a valid VAT :guilabel:`ROF` (Référence d’Obligation
-   Fiscale) is entered.
-#. If needed, enable the :guilabel:`Add express mention` option and include a comment.
-#. - If payment to |DGFiP| is required:
+#. Make sure a valid VAT :guilabel:`ROF` (*Référence d’Obligation Fiscale*) is entered on the
+   :doc:`company record </applications/general/companies>`.
+#. Go to :menuselection:`Accounting --> Accounting --> Tax returns`, then :ref:`review and validate
+   <accounting/tax-returns/vat-return-review>` the tax return (VAT report).
+#. Click :guilabel:`Submit`.
+#. - If payment to the |DGFiP| is required:
 
-     - Click :guilabel:`Add a line` in the :guilabel:`IBAN` column to enter an IBAN account number
-       and BIC for the payment.
-     - In the :guilabel:`Amount` field, enter the total :guilabel:`VAT to pay`; the
-       :guilabel:`Amount to pay` field updates automatically.
+     - If needed, enable :guilabel:`Partial amount` and set the desired amount to pay.
 
-     .. tip::
-        A yellow banner appears if the entered amount does not match the required payment, as
-        partial payments are not allowed.
+       .. tip::
+          A yellow banner informs that the entered amount does not match the required payment. If
+          proceeding without matching the :guilabel:`VAT Due` amount, the difference will be carried
+          over to the next period.
 
-   - If reimbursement from |DGFiP| is expected:
+     - Update the :guilabel:`Bank Partner` account number if needed and make sure the corresponding
+       :guilabel:`BIC` reference is set.
 
-     - Enable the :guilabel:`Add reimbursement comment` option and include a comment if needed.
-     - Click :guilabel:`Add the line` in the :guilabel:`IBAN` column to enter an IBAN account number
-       and BIC for the payment.
+   - If reimbursement from the |DGFiP| is expected:
+
+     - Enable :guilabel:`Ask reimbursement` to ask for the reimbursement of the
+       :guilabel:`VAT Credit`. Proceeding without enabling this option will carry over the
+       reimbursement to the next period.
+     - Enable the :guilabel:`Partial amount` option and set the desired amount to be received.
+
+       .. tip::
+          A yellow banner appears if the amount does not match the amount that needs to be
+          received. If proceeding without matching the :guilabel:`VAT Credit` amount, the
+          difference will be carried over to the next period.
+
+     - Update the :guilabel:`Bank Partner` account number if needed and make sure the
+       corresponding :guilabel:`BIC` reference is set.
      - Select the :guilabel:`Reimbursement type`:
 
        - :guilabel:`First asking`: Select the company's creation :guilabel:`Date`.
        - :guilabel:`Assignment, cessation, death, entry into a VAT group`: Update the
          :guilabel:`Date` accordingly.
 
-     - In the :guilabel:`Amount` field, enter the total or partial :guilabel:`Amount` to be
-       received; the :guilabel:`Amount to receive` field updates automatically.
+     - Include a :guilabel:`Reimbursement Comment` if needed.
 
-     .. tip::
-        A yellow banner appears if the amount does not match the amount that needs to be received.
-        If proceeding without matching the VAT amount, the difference will be carried over to the
-        next period.
-
-#. Click :guilabel:`Send VAT Report` to submit the tax return (VAT report) to |DGFiP|.
+#. If needed, enable the :guilabel:`Express mention` option and include a comment.
+#. Click :guilabel:`Send VAT` to submit the tax return (VAT report) to the |DGFiP|.
 
 The :guilabel:`Submit` action step turns orange, and a submission message appears in the chatter,
-then turns green when |DGFiP| confirms reception.
+then turns green when the |DGFiP| confirms reception.
 
 .. note::
    To access the tax report XML file, go to :menuselection:`Accounting --> Reporting --> EDI
