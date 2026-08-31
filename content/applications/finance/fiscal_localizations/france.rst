@@ -182,8 +182,7 @@ To activate the e-invoicing and e-reporting features, follow these configuration
 #. In the :guilabel:`Send via French electronic invoicing` window, click :guilabel:`Refresh`.
 #. Verify that the :guilabel:`Identifier` field is filled in with your :abbr:`SIREN (Système
    d'identification du répertoire des entreprises, Business Directory Identification System)`
-   number, enable the :guilabel:`Pilot Phase` option if you are configuring electronic invoicing
-   before September 1, 2026, and click :guilabel:`Validate Registration`.
+   number and click :guilabel:`Validate Registration`.
 #. Your French e-invoicing ID is now ready to send and receive e-invoices and credit notes. Enable
    the following options, as needed:
 
@@ -191,12 +190,6 @@ To activate the e-invoicing and e-reporting features, follow these configuration
    - :guilabel:`Enable e-reporting & sending of invoices to the PPF`: Enable this option if
      e-reporting and e-invoicing are :ref:`required for your company
      <localizations/france/b2b-b2c>`.
-   - :guilabel:`Participate in the pilot phase`: This option should only be enabled until the pilot
-     phase ends on September 1, 2026.
-
-     .. note::
-        Changes to enable or disable this option will take effect the following day.
-
    - :guilabel:`E-Reporting Periodicity`: Set the periodicity of the :ref:`e-reporting
      <localizations/france/e-invoicing-fac-elec-reporting>`.
 
