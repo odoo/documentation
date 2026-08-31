@@ -831,12 +831,33 @@ Scheduled action
 Finally, the cron checks every day, for all contracts that have the status dimona waiting and
 triggers the necessary actions to update the dimona status accordingly.
 
+.. _payroll/l10n_be/dimona_technical:
+
 Technical configuration (outside Odoo)
 **************************************
 
-Regarding the technical configuration, everything is described in the module information with all
-the technical prerequisites. If your customer or partner need further assistance with that, they
-need to contact their IT department or representatives as this is not part of Odoo configuration.
+Regarding the technical configuration, here are the technical prerequisites needed to enable the
+automated Dimona declarations:
+
+- You need a Belgian Government Compliant Digital Certificate, delivered by Global
+  Sign. See: https://shop.globalsign.com/en/belgian-government-services
+- Generate certificate files from your SSL certificate (.pfx file) that are needed to create
+  a technical user (.cer file) and to authenticate remotely to the ONSS (.pem) file. On a UNIX
+  system, you may use the following commands:
+
+  - PFX → CRT: ``openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys -clcerts``
+  - CRT → CER: ``openssl x509 -inform pem -in my_cert.crt -outform der -out my_cert.cer``
+  - PFX → PEM: ``openssl pkcs12 -in my_cert.pfx -out my_cert.pem -nodes``
+
+- Before you can use the social security REST web service, you must create an account
+  for yourself or for your client and configure the security. (The whole procedure is
+  available at https://www.rest-documentation.socialsecurity.be/)
+
+- At the end of the procedure, you should receive a "ONSS Expeditor Number", you may
+  encode it in the payroll Settings, with the .pem file and the related password, if any.
+
+If your customer or partner needs further assistance with this, they should contact their IT
+department or representatives, as this is not part of Odoo's configuration.
 
 Functional configuration (within Odoo)
 **************************************
@@ -848,10 +869,9 @@ the following:
 - :guilabel:`ONSS Company ID`: VAT Number of the Company
 - :guilabel:`Registration Number`: 9 digits code received from the NSSO (ONSS - RSZ)
 - :guilabel:`DMFA Employer Class`: 3 digits code received from the NSSO (ONSS - RSZ)
-- :guilabel:`Expeditor Number ONSS`: Not Mandatory (see technical documentation of the module for
-  more information)
-- :guilabel:`PEM Certificate`, :guilabel:`PEM Passphare`, :guilabel:`KEY file`: check the module
-  information for explanation
+- :guilabel:`Expeditor Number ONSS`: Not Mandatory (see :ref:`payroll/l10n_be/dimona_technical`)
+- :guilabel:`PEM Certificate`, :guilabel:`PEM Passphare`, :guilabel:`KEY file`: see
+  :ref:`payroll/l10n_be/dimona_technical`
 
 .. _payroll/l10n_be/dmfa:
 
@@ -995,6 +1015,48 @@ Work entry type
 A DmfA code should be defined for each work entry type that is declared. Under
 :menuselection:`Payroll app --> Configuration --> Work Entries --> Work Entry Types`, specify the
 :guilabel:`DMFA code`.
+
+Automatic DmfA signature
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To send the DmfA automatically, the following technical prerequisites are needed:
+
+- A Belgian Government Compliant Digital Certificate, delivered by Global Sign. See:
+  https://shop.globalsign.com/en/belgian-government-services
+- The certificate files generated from the SSL certificate (.pfx file), to create a technical user
+  (.cer file) and to authenticate remotely to the ONSS (.pem and .key files). On a UNIX system, use
+  the following commands:
+
+  - PFX → CRT: ``openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys -clcerts``
+  - CRT → CER: ``openssl x509 -inform pem -in my_cert.crt -outform der -out my_cert.cer``
+  - PFX → PEM: ``openssl pkcs12 -in my_cert.pfx -out my_cert.pem -nodes``
+  - PFX → KEY: ``openssl pkcs12 -in my_cert.pfx -out my_cert.key -nocerts``
+
+- An account on the social security SFTP service, with its security configured. The whole procedure
+  is available at
+  https://www.socialsecurity.be/site_fr/general/helpcentre/batch/sftp/previewstep.htm:
+
+  - Create a technical user and activate an SFTP channel in the Access management online service.
+    Follow this procedure: https://www.rest-documentation.socialsecurity.be/
+  - Configure the SFTP client:
+    https://www.socialsecurity.be/site_fr/employer/applics/dmfa/batch/home.htm
+  - At the end of the procedure, an :guilabel:`ONSS Expeditor Number` is received. Encode it in the
+    payroll settings, with the .pem file and the related password, if any.
+
+- The .pfx certificate set in the payroll configuration.
+
+Synchronize DmfA to ONSS portal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Odoo synchronizes the DmfA declarations with the official Belgian SFTP portal:
+
+- The FO, FS, and GO files are uploaded to the folder of the selected ONSS environment (IN, INTEST,
+  INTEST-S).
+- The OUT folders (OUT, OUTTEST, OUTTEST-S) are polled for the returned files.
+- The received files are linked to the corresponding declarations and employees, when applicable.
+
+The connection uses the private key and the technical user credentials. The ACRF and notification
+files are parsed, and missing directories or malformed files are logged as errors.
 
 Potential configuration errors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
