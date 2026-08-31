@@ -35,15 +35,17 @@ against, the appropriate database :doc:`fields </applications/studio/fields>`.
      preparing the initial list, pivot table, or chart for insertion into a :doc:`spreadsheet
      <../insert>` or :ref:`dashboard
      <dashboards/customize-dashboard/edit-spreadsheet-new-odoo-data>`.
-   - Setting default filter va^plues, where relevant, ensures that the spreadsheet or dashboard loads
+   - Setting default filter values, where relevant, ensures that the spreadsheet or dashboard loads
      quickly and provides a useful initial view that can be further customized if needed. For
      example, a :guilabel:`Date` filter could be set to show data from the last 30 days by default,
-     rather than  showing all historical data.
+     rather than showing all historical data. It is also possible to use operators such as,
+     :guilabel:`contains` or :guilabel:`is set` when setting default filter values.
 
 .. important::
    Only users with :doc:`Editor rights to an Odoo spreadsheet <../share_collaborate>` can configure,
-   manage, and apply global filters in that spreadsheet. Any user with :ref:`access to
-   an Odoo dashboard <dashboards/access-and-sharing>` can apply global filters configured for that
+   and manage global filters in that spreadsheet. Any user with access to
+   :ref:`an Odoo spreadsheet <spreadsheet/collaboration/access-sharing>` or :ref:` Odoo dashboard
+   <dashboards/access-and-sharing>` can apply global filters configured for that spreadsheet or
    dashboard.
 
 .. _spreadsheet/global-filters/configure:
@@ -68,6 +70,7 @@ To configure global filters in a spreadsheet:
    related fields.
 
 .. note::
+   - Fields are presorted by type to simplify global filter creation.
    - Depending on the data source(s) connected to the spreadsheet, suggested global filters may be
      automatically proposed in the :guilabel:`Suggestions` section of the :guilabel:`Filters` panel.
      While these filters are pre-configured for immediate use, it is still possible to add a default
@@ -277,13 +280,17 @@ matching` section of the :guilabel:`Filter properties` allows you to determine, 
 filter should match against.
 
 .. note::
-   If a selected matching field is not one of the allowed field types for the :ref:`type of global
-   filter <spreadsheet/global-filters/create-types>`, the field name is shown in red on a red
-   background to indicate an error. A global filter cannot be saved if a disallowed matching field
-   is selected.
+   - Potential matching fields are presorted by :ref:`field type <studio/fields/field-types>`, based
+     on the :ref:`type of filter <spreadsheet/global-filters/create-types>` being created. For
+     example, when creating a date filter, the model's date fields are presented first.
+   - If a selected matching field is not one of the allowed field types for the :ref:`type of global
+     filter <spreadsheet/global-filters/create-types>`, the field name is shown in red on a red
+     background to indicate an error. A global filter cannot be saved if a disallowed matching field
+     is selected.
 
-   .. image:: global_filters/field-matching-error.png
-      :alt: Incorrect matching field shown in red on red background
+     .. image:: global_filters/field-matching-error.png
+        :alt: Incorrect matching field shown in red on red background
+        :scale: 80%
 
 .. _spreadsheet/global-filters/manage:
 
