@@ -66,7 +66,7 @@ To view or modify any listed quotation from the :guilabel:`Quotations` dashboard
 desired quotation line from the list, and Odoo reveals the specific form for that selected
 quotation.
 
-.. _sales_quotations/create_quotations/create-quotation:
+.. _sales/create_quotations/create-quotation:
 
 Create a quotation
 ==================
