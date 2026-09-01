@@ -67,7 +67,7 @@ Configure the following fields in the *Configuration* section of the form:
     month.
 
 .. image:: accrual_plans/accrual-plan-form.png
-   :alt: An accrual plan form filled out for a Seniority Plan.
+   :alt: An accrual plan form filled out for the Seniority Plan.
 
 Milestones
 ----------
