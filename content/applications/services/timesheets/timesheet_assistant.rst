@@ -212,9 +212,10 @@ To install the extension from Odoo, follow these steps:
    :guilabel:`Add to Firefox`, then :guilabel:`Add` for Firefox.
 
 .. note::
-   ActivityWatch browser extensions are only available for Google Chrome and Mozilla Firefox. The
-   `Firefox <https://addons.mozilla.org/en-US/firefox/addon/aw-watcher-web/>`_ and
-   `Chrome <https://chromewebstore.google.com/detail/activitywatch-web-watcher/nglaklhklhcoonedhgnpgddginnjdadi>`_
+   The Timesheets Assistant browser extension is only available for Google Chrome and Mozilla
+   Firefox. The
+   `Firefox <https://addons.mozilla.org/en-US/firefox/addon/timesheets-assistant/>`_ and
+   `Chrome <https://chromewebstore.google.com/detail/timesheets-assistant/bmgldglijgnaohjpjkieijkkjfacifdj>`_
    extensions can also be installed from their respective store pages.
 
  .. _timesheets/timesheet-assistant/assistant-rules:
