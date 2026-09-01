@@ -300,7 +300,7 @@ activated in the :guilabel:`Field Service` section, then enable :guilabel:`Quota
 
 To create a quotation from a shift, click the :guilabel:`Quotations` smart button on the shift form,
 then click :guilabel:`New` and :ref:`fill in the fields
-<sales_quotations/create_quotations/create-quotation>`.
+<sales/create_quotations/create-quotation>`.
 
 .. _planning/field-service/customer-report:
 
