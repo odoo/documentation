@@ -33,6 +33,13 @@ orders:
 .. seealso::
    :doc:`restaurant/urban_piper`
 
+   .. card:: APAC food delivery integrations
+      :target: restaurant/APAC_food_delivery
+      :large:
+
+      Integrate with popular APAC food delivery platforms, allowing for synchronizing orders,
+      updating menus, managing store details directly from the POS.
+
 .. _pos/restaurant/default:
 
 Default start screen
@@ -259,6 +266,7 @@ To process an order from the POS register, follow these steps:
 .. seealso::
    - :doc:`extra/preparation`
    - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`Ordermangement for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -479,3 +487,4 @@ after payment, follow these steps:
    :titlesonly:
 
    restaurant/urban_piper
+   restaurant/APAC_food_delivery
