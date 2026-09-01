@@ -86,7 +86,7 @@ specific to the US fiscal localization:
    * - :ref:`Avatax <l10n_us/taxes-avatax>`
      - `account_avatax`
      - Module for the :doc:`AvaTax integration <../accounting/taxes/avatax>` with Odoo.
-   * - :ref:`United States - Payroll <l10n_us/payroll>`
+   * - :doc:`United States - Payroll <../../hr/payroll/payroll_localizations/united_states>`
      - `l10n_us_hr_payroll`
      - Includes the necessary rules for United States payroll, including:
 
@@ -98,12 +98,15 @@ specific to the US fiscal localization:
        - Employee Payslip
        - Integration with Leaves Management
 
-   * - :ref:`United States - Payroll with Accounting <l10n_us/payroll>`
+   * - :guilabel:`United States - Payroll with Accounting`
      - `l10n_us_hr_payroll_account`
      - Contains the necessary accounting data for the United States payroll rules.
-   * - :ref:`United States - Payroll - Export to ADP <l10n_us/adp>`
+   * - :ref:`United States - Payroll - Export to ADP <payroll/united_states/adp>`
      - `l10n_us_hr_payroll_adp`
      - Export Work Entries to the ADP payroll software.
+
+.. seealso::
+   :doc:`United States payroll localization <../../hr/payroll/payroll_localizations/united_states>`
 
 .. _l10n_us/coa:
 
@@ -489,180 +492,6 @@ Once all check configurations are complete, :guilabel:`Save` the settings.
 
 .. seealso::
    :doc:`../accounting/payments/pay_checks`
-
-.. _l10n_us/payroll:
-
-Payroll
-=======
-
-The **Payroll** app is responsible for calculating an employee's pay, taking into account all work,
-vacation, and sick time, benefits, and deductions. The **Payroll** app pulls information from the
-**Attendances**, **Timesheets**, **Time Off**, **Employees** and **Expenses** apps, to calculate the
-worked hours and compensation for each employee.
-
-When using an external payroll provider, such as *ADP*, it is necessary to export the various
-payroll-related data, such as work entries, repayment of expenses, taxes, commissions, and any other
-relevant data, so the data can be uploaded into the payroll provider, who then issues the actual
-paychecks or directly deposits the funds into an employee's bank account.
-
-In order to export the payroll data, the work entries must first be validated and correct. Refer to
-the :doc:`work entries <../../hr/payroll/work_entries>` documentation for more information regarding
-validating work entries.
-
-Once work entries are validated, the information can be :ref:`exported to ADP <l10n_us/adp>`.
-
-After payments have been issued to employees, payslips can be processed into batches, validated, and
-posted to the corresponding accounting journals to keep all financial records in Odoo current.
-
-Required information
---------------------
-
-It is important to have the **Employees** app installed, and all employee information populated.
-Several fields in both the :ref:`employee records <l10n_us/payroll-employee-records>`, as well as in
-an :ref:`employee contracts <l10n_us/payroll-employee-contracts>`, are necessary to properly process
-the employee's pay. Ensure the following fields are filled out in their respective places.
-
-.. _l10n_us/payroll-employee-records:
-
-Employee records
-~~~~~~~~~~~~~~~~
-
-In each employee record, there is various information the **Payroll** app requires to properly
-process payslips, including various banking, tax, and work information.
-
-Navigate to the :menuselection:`Employees app` and select an employee record to view the sections of
-the employee form that directly affect *Payroll*:
-
-- :guilabel:`Work Information` tab:
-
-  - :guilabel:`Work Address`: indicates where the employee is located, including the state, which
-    affects the tax calculations.
-  - :guilabel:`Working Hours`: determines how pay is calculated, and determines if an employee earns
-    overtime.
-
-- :guilabel:`Private Information` tab:
-
-  - :guilabel:`SSN No`: the last four digits of the employee's Social Security Number (SSN) appears
-    on payslips.
-  - :guilabel:`Bank Account Number`: the bank account associated with the NACHA payment file.
-
-- :guilabel:`HR Settings` tab:
-
-  - :guilabel:`Federal Tax Filing Status`: the tax status an employee uses for Payroll tax
-    calculations, which can be different from their state status.
-  - :guilabel:`State Tax Filing Status`: the tax status an employee uses for their state portion of
-    the Payroll tax calculation.
-  - :guilabel:`W-2 Form`: a US tax form indicating the summary of wages, taxes, and benefits paid to
-    an employee during a tax period (typically one year).
-  - :guilabel:`W-4 Form`: an IRS form that helps outline the amount of federal taxes to withhold for
-    an employee, which is paid to the IRS by the company.
-
-.. _l10n_us/payroll-employee-contracts:
-
-Employee contracts
-~~~~~~~~~~~~~~~~~~
-
-Additionally, there is information that is found in an employee contract that also affects the
-**Payroll** app.
-
-Navigate to the :menuselection:`Employees app --> Employees --> Contracts` and select a contract
-record to view the sections of a contract that directly affect *Payroll*:
-
-- :guilabel:`General Information`:
-
-  - :guilabel:`Salary Structure Type: United States: Employee`: defines when the employee is paid,
-    their working schedule, and the work entry type.
-  - :guilabel:`Work Entry source`: determines how work entries are calculated.
-
-- :guilabel:`Salary Information` tab:
-
-  - :guilabel:`SSN No`: the last four digits of the employee's Social Security Number (SSN) appears
-    on payslips.
-  - :guilabel:`Wage type`: determines how the employee is paid, wether a Fixed wage (salary) or
-    Hourly wage.
-  - :guilabel:`Schedule Pay`: defines how often the employee is paid, either :guilabel:`Annually`,
-    :guilabel:`Semi-annually`, :guilabel:`Quarterly`, :guilabel:`Bi-monthly`, :guilabel:`Monthly`,
-    :guilabel:`Semi-monthly`, :guilabel:`Bi-weekly`, :guilabel:`Weekly`, or :guilabel:`Daily`. In
-    the US, Semi-monthly (24 payments a year) or bi-weekly (26 payments a year) are the most common.
-  - :guilabel:`Wage, Yearly, and Monthly cost`: used to show the total cost of an employee. It is
-    recommended to populate the :guilabel:`Yearly` wage first, as it auto-populates the other
-    fields.
-  - :guilabel:`Pre-tax benefits`: populate this section according to the employee's selections.
-    Pre-tax benefits decrease the gross wage, which lowers the base amount that is taxed. These are
-    displayed at the beginning of the payslip.
-  - :guilabel:`Post-tax benefits`: these benefits are deductions made *after* taxes are calculated.
-    These appear towards the end of the payslip before the net amount is displayed.
-
-.. seealso::
-   :doc:`Employees documentation <../../hr/employees/new_employee>`
-
-.. _l10n_us/adp:
-
-Export work entries to ADP
---------------------------
-
-Requirements
-~~~~~~~~~~~~
-
-In order to create a report that can be uploaded to ADP, there are some initial configuration steps
-that must be completed first.
-
-First, ensure the *United States - Payroll - Export to ADP* (`l10n_us_hr_payroll_adp`) module is
-:ref:`installed <general/install>`.
-
-Then, the company **must** have an *ADP Code* entered in the company settings. To do so, navigate to
-:menuselection:`Payroll app --> Configuration --> Settings`. Enter the :guilabel:`ADP Code` in the
-:guilabel:`US Localization` section.
-
-Next, work entry types **must** have the correct ADP code listed in the *External Code* field for
-each work entry type that is being referenced.
-
-Lastly, every employee **must** have an *ADP Code* entered on their employee form. To do so,
-navigate to :menuselection:`Employees app`, select an employee record, and open the :guilabel:`HR
-Settings` tab. Enter the :guilabel:`ADP Code` in the :guilabel:`ADP Information` section.
-
-The :guilabel:`ADP Code` code is how ADP identifies that particular employee, and is typically a
-six-digit number.
-
-.. seealso::
-   - :ref:`payroll/new-work-entry`
-   - :doc:`../../hr/employees/new_employee`
-
-Export data
-~~~~~~~~~~~
-
-Once :doc:`work entries <../../hr/payroll/work_entries>` have been verified, the information can be
-exported to a CSV file, which can then be uploaded into ADP.
-
-To export the data, navigate to :menuselection:`Payroll app --> Reporting --> United States: ADP
-Export`, then click :guilabel:`New`. Next, enter the :guilabel:`Start Date` and :guilabel:`End Date`
-for the work entries using the calendar pop-over.
-
-Then, enter a :guilabel:`Batch ID` in the corresponding field. The recommendation for this field is
-to enter the date in a `YY-MM-DD` format, followed by any other characters to distinguish that
-specific batch, such as a department name, or any other defining characteristics for the batch.
-
-Enter a :guilabel:`Batch Description` in the corresponding field. This should be short and
-descriptive, but distinct from the :guilabel:`Batch Name`.
-
-Ensure the correct company populates the :guilabel:`Company` field. Change the selected company with
-the drop-down menu, if needed.
-
-Lastly, add the employee's work entry information to the list. Click :guilabel:`Add a line` and an
-:guilabel:`Add: Employee` pop-up window loads. The list can be :doc:`filtered
-<../../essentials/search>` to find the employees to add to the list.
-
-.. tip::
-   Process the data export in multiple groups instead of in one large group that contains all
-   employees. This helps to meaningfully differentiate the batches and makes processing more
-   tenable, overall. The most common ways to group employees is by department, or by wage type
-   (hourly or salaried).
-
-Select the employees to add to the list by ticking the box to the left of their name. Once all
-desired employees have been selected, click the :guilabel:`Select` button in the lower-left corner,
-and the employees appear in the list.
-
-To create the CSV file, click the :guilabel:`Generate` button in the top-left corner.
 
 .. _l10n_us/ach-electronic-transfers:
 
