@@ -324,6 +324,7 @@ Refer to the following pages for detailed, country-specific information:
 - :doc:`Chile <electronic_invoicing/chile>`
 - :doc:`Colombia <electronic_invoicing/colombia>`
 - :doc:`Croatia <electronic_invoicing/croatia>`
+- :doc:`Denmark <electronic_invoicing/denmark>`
 - :doc:`Ecuador <electronic_invoicing/ecuador>`
 - :doc:`Egypt <electronic_invoicing/egypt>`
 - :doc:`Estonia <electronic_invoicing/estonia>`
