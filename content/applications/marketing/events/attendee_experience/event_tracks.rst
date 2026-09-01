@@ -2,39 +2,38 @@
 Event tracks
 ============
 
-Odoo **Events** provides users the ability to create, schedule, and manage *tracks*, which are
-talks, lectures, presentations, etc.
+Odoo **Events** provides users the ability to create, schedule, and manage talks, lectures,
+presentations, and other similar sub-events (known in Odoo as *tracks*).
 
 Configuration
 =============
 
 To enable tracks in Odoo, navigate to :menuselection:`Events app --> Configuration --> Settings`,
-and tick the checkbox beside the :guilabel:`Schedule & Tracks` setting.
+and enable the checkbox for :guilabel:`Schedule & Tracks`.
 
 .. image:: event_tracks/track-settings.png
-   :alt: The Schedule and Tracks setting in the Odoo Events app, along with corresponding options.
 
-Once the setting is selected, two additional configuration options appear beneath it:
+Once enabled, two additional options appear beneath it:
 
 - :guilabel:`Live Broadcast`: :ref:`Broadcast tracks online
   <events/additional-configs/live-broadcasting>` through a *YouTube* integration.
 - :guilabel:`Event Gamification`: :ref:`Share quizzes with attendees
   <events/additional-configs/event-gamification>` after a track concludes.
 
-Once all desired settings have been enabled, click the :guilabel:`Save` button in the upper-left
-corner of the :guilabel:`Settings` page.
+Once all desired settings have been enabled, click the :guilabel:`Save` button in the corner of the
+:guilabel:`Settings` page.
 
 .. _events/tracks-dashboard:
 
 Event tracks dashboard
 ======================
 
-To access, modify, and/or create tracks for an event, navigate to :menuselection:`Events app`, and
-either select an existing event from the :guilabel:`Events` dashboard or :doc:`create a new one
+To access, modify, or create tracks for an event, open the :menuselection:`Events app` and either
+select an existing event from the :guilabel:`Events` dashboard or :doc:`create a new one
 <../event_setup/create_events>`.
 
-On the selected event form, click the :guilabel:`Tracks` smart button at the top to land on the
-:guilabel:`Event Tracks` page, which presents all the tracks (both scheduled and proposed) for the
+On the selected event form, click the :icon:`fa-microphone` :guilabel:`Tracks` smart button at the
+top to land on the *Event Tracks* page, which presents all scheduled and proposed tracks for the
 event.
 
 .. _events/tracks-dashboard/views:
@@ -182,10 +181,8 @@ The :guilabel:`Group By` column has the following options:
 Create event track
 ==================
 
-New event tracks are created from the :guilabel:`Event Tracks` page.
-
-To create a new event track, click :guilabel:`New` in the upper-left corner to reveal a blank event
-track form.
+To create a new event track, click :guilabel:`New` in the corner to reveal a blank *Event Track*
+form.
 
 .. image:: event_tracks/event-track-form.png
    :alt: Typical event track form in the Odoo Events application.
@@ -196,9 +193,9 @@ Optionally, upload an image for the track to be displayed on the track's webpage
 
 Next, enter details for the track in the following fields:
 
-- :guilabel:`Track Date`: Specify the date of the track.
-- :guilabel:`Location`: Specify the location of the track.
-- :guilabel:`Duration`: Specify the duration of the track (in minutes).
+- :guilabel:`Track Date`: Using the calendar pop-over, specify the date and time of the track.
+- :guilabel:`Location`: Using the drop-down menu, specify the track location.
+- :guilabel:`Duration`: Enter the duration of the track in a `HH:MM` format.
 - :guilabel:`Always Wishlisted`: Specify whether to automatically set the track as favorite for each
   registered attendee.
 - :guilabel:`Responsible`: Select the database user responsible for managing the track. By default,
@@ -206,10 +203,14 @@ Next, enter details for the track in the following fields:
 - :guilabel:`Event`: Select the track's associated event. By default, this field is already
   populated with the event from the *Event Tracks* page.
 - :guilabel:`Tags`: Select one or multiple tags for the track to add as filters on the *Talks*
-  webpage.
+- :guilabel:`Tags`: Select any relevant tags for the track to add as filters on the *Talks* webpage.
 - :guilabel:`Agenda Color`: Select a color to represent the track on the *Agenda* webpage.
 
 .. tip::
+   Locations can be used to designate names to physical areas (e.g., conference rooms, building
+   levels) of an event venue, allowing users to :ref:`display track locations
+   <events/additional-configs/location-display>` at in-person events.
+
    To access a complete list of locations for event tracks, which can be modified (and added to) at
    any time, navigate to :menuselection:`Events app --> Configuration --> Track Locations`.
 
@@ -218,35 +219,35 @@ Next, enter details for the track in the following fields:
 Speaker tab
 -----------
 
-The :guilabel:`Speaker` tab on an event track form contains various fields to configure information
-about the track host or speaker.
+The *Speaker* tab on an event track form contains various fields to configure information about the
+track host or speaker.
 
 .. image:: event_tracks/speaker-tab.png
    :alt: The Speaker tab on an event track form in the Odoo Events application.
 
-Contact Details section
+Contact details section
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Contact Details` section, click the :guilabel:`Contact` drop-down field to select
-an existing contact from the database as the main point of contact for the talk.
+In the *Contact Details* section, click the :guilabel:`Contact` drop-down field to select an
+existing contact from the database as the main point of contact for the talk.
 
 If this contact is not yet in the database, type in the name of the contact, and click
-:guilabel:`Create` to create and edit the contact form later, or click :guilabel:`Create and
-edit...` to be taken to that new contact's contact form for immediate configuration.
+:guilabel:`Create` to create and edit the contact form later. Or, click :guilabel:`Create and
+edit...` to add the contact and configure the rest of the contact details.
 
-The :guilabel:`Contact Email` and :guilabel:`Contact Phone` fields are greyed-out and populated with
-the information found on the chosen contact's form. These fields are not modifiable once the
-:guilabel:`Contact` field is selected.
+Click the event track breadcrumb to return to the *Event Track* form. The :guilabel:`Contact Email`
+and :guilabel:`Contact Phone` fields are populated with the information on the selected contact
+form. These fields **cannot** be modified.
 
-Speaker Bio section
+Speaker bio section
 ~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Speaker Bio` section, enter any information related to the specific speaker
-scheduled to conduct/host the track.
+In the *Speaker Bio* section, enter any information related to the specific speaker scheduled to
+conduct or host the track.
 
-If the chosen contact in the :guilabel:`Contact Details` section is properly configured, the
-:guilabel:`Name`, :guilabel:`Email`, and :guilabel:`Phone` fields are automatically populated.
-Otherwise, manually enter the information.
+If the chosen contact in the *Contact Details* section is properly configured, the :guilabel:`Name`,
+:guilabel:`Email`, and :guilabel:`Phone` fields are automatically populated. Otherwise, manually
+enter the information.
 
 .. note::
    This information appears on the front-end of the event website, on the specific track webpage,
@@ -257,37 +258,36 @@ Optionally, upload an image to appear alongside the speaker biography on the eve
 Then, enter a :guilabel:`Job Position` for the designated speaker, followed by the
 :guilabel:`Company Name` associated with the speaker.
 
-In the :guilabel:`Biography` field, proceed to enter a custom biography with any speaker-related
-information.
+In the :guilabel:`Biography` field, proceed to enter a custom biography with any speaker-related In
+the :guilabel:`Biography` field, enter a custom biography with any speaker-related information.
 
 .. _events/track-description-tab:
 
 Description tab
 ---------------
 
-The :guilabel:`Description` tab of an event track form contains a blank text field to enter any
-additional information about the track. This information appears on the specific track page on the
-event website.
+The *Description* tab of an event track form contains a blank text field to enter any additional
+information about the track. This information appears on the specific track page on the event
+website.
 
 .. _events/track-interactivity-tab:
 
 Interactivity tab
 -----------------
 
-The :guilabel:`Interactivity` tab of the track form provides users the option to display an
-interactive button for additional attendee engagement.
-
+The *Interactivity* tab of the track form provides users with the option to display an interactive
+button for additional attendee engagement.
 
 .. image:: event_tracks/interactivity-tab.png
    :alt: The Interactivity tab on an event track form in the Odoo Events application.
 
-When the :guilabel:`Magic Button` checkbox is ticked, Odoo displays a *call to action* button to
+When the :guilabel:`Magic Button` checkbox is enabled, Odoo displays a *call to action* button for
 attendees on the sidebar of the track webpage while the track is taking place.
 
-With that checkbox ticked, three more options appear below to configure the button:
+When enabled, three more options appear below to configure the button:
 
-- :guilabel:`Button Title`: Enter a title to appear on the button for attendees.
-- :guilabel:`Button Target URL`: Enter a URL that leads attendees to a specific page.
+- :guilabel:`Button Title`: Enter a name for the button.
+- :guilabel:`Button Target URL`: Enter the URL the button navigates to.
 - :guilabel:`Show Button`: Enter how many :guilabel:`minutes after Track start` the button should
   appear.
 
@@ -297,27 +297,28 @@ With that checkbox ticked, three more options appear below to configure the butt
 Publish event track
 ===================
 
-Once all the desired configurations are complete on an event track form, publish the track on the
-event website by clicking the :guilabel:`Published` stage in the upper-right corner.
+Once all the desired configurations are complete on an event track form, publish the track in one of
+three ways:
 
-.. note::
-   The stage of a track can also be changed from the :guilabel:`Event Tracks` page, where the
-   desired track card can be dragged-and-dropped into the appropriate Kanban stage.
-
-An event track can also be published by opening the desired event track form and clicking the
-:guilabel:`Go to Website` smart button. Then, toggle the :icon:`fa-toggle-off`
-:guilabel:`Unpublished` button at the top of the page to :icon:`fa-toggle-on` :guilabel:`Published`.
+- On the individual *Track* page. Click the :guilabel:`Published` stage above the form.
+- On the main *Event Tracks* dashboard. Drag-and-drop the Kanban card to the :guilabel:`Published`
+  stage.
+- On the *Event Track* webpage. On the *Event Track* form, click the :icon:`fa-globe` :guilabel:`Go
+  to Website` smart button. Then, toggle the :guilabel:`Unpublished` :icon:`fa-toggle-off` button at
+  the top of the page. The button changes to :guilabel:`Published` :icon:`fa-toggle-on` and the
+  event is published. event website by clicking the :guilabel:`Published` stage in the upper corner.
 
 .. image:: event_tracks/published-toggle.png
    :alt: The track-related event submenu options on an event website built with Odoo Events.
 
 .. _events/additional-configs:
 
-Additional track configurations
-===============================
+Additional configurations
+=========================
 
-The :guilabel:`Schedule & Tracks` setting in the **Events** configuration page provides additional
-configuration options for users to enable live broadcasting and gamification for tracks.
+Users can configure additional options on specific tracks, including live broadcasting,
+gamification,  and displaying track schedules for specific events on physical screens at in-person
+venues.
 
 .. _events/additional-configs/live-broadcasting:
 
@@ -332,8 +333,8 @@ add a corresponding link in the :guilabel:`YouTube Video Link` field appears in 
 Event gamification
 ------------------
 
-If the :guilabel:`Event Gamification` setting is enabled, an :guilabel:`Add Quiz` button appears on
-the top-left of a track form, allowing the user to create a quiz for attendees to complete after the
+If the :guilabel:`Event Gamification` setting is enabled, an :guilabel:`Add Quiz` button appears at
+the top of a track form, allowing the user to create a quiz for attendees to complete after the
 track ends.
 
 Track quiz form
@@ -378,6 +379,49 @@ Once all desired answer options are completed, click :guilabel:`Save & Close` to
 close the pop-up window, and return to the track quiz form. Or, click :guilabel:`Save & New` to save
 this question and instantly start creating another question on a new :guilabel:`Create Questions`
 pop-up form.
+
+.. _events/additional-configs/location-display:
+
+Track location display
+----------------------
+
+When a :guilabel:`Location` is specified on a :ref:`track form <events/event_tracks/create-track>`,
+Odoo generates a display page showing all scheduled tracks at the specified location, starting from
+the user's current date and time. This page can be left open on a screen or kiosk at the physical
+location.
+
+Configuration
+~~~~~~~~~~~~~
+
+To begin, ensure that the *Event Location Display* module is installed in Odoo **Apps**.
+
+Additionally, to ensure that a track appears on the display page, verify that the following options
+are configured:
+
+- The :guilabel:`Showcase Tracks` option is enabled for the track's respective event.
+  :doc:`Developer mode <../../../general/developer_mode>` **must** be enabled to access this setting
+  on an event form.
+- Both the event website **and** the track must be published.
+
+Access location displays
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To access track location pages, click the :icon:`fa-map-marker` :guilabel:`Track Locations` smart
+button at the top of an event form. This opens the *Event Locations* dashboard, which lists each
+:guilabel:`Location` and its :guilabel:`Location Display Link`.
+
+.. image:: event_tracks/event-locations.png
+   :alt: Event Locations page in Odoo Events.
+
+Click the :guilabel:`Location Display Link` to open the location's display page. The date and
+location name are displayed at the upper corner. Upcoming tracks are displayed below, including
+their scheduled time, title, and speaker name.
+
+.. note::
+   Track location display pages are **only** accessible to database users or administrators.
+
+.. image:: event_tracks/track-location-display.png
+   :alt: Track location display for an event location.
 
 .. seealso::
    - :doc:`../event_setup/create_events`
