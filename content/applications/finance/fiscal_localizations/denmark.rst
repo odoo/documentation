@@ -2,111 +2,201 @@
 Denmark
 =======
 
-Compliance with Danish bookkeeping requirements: data retention and integrity
-=============================================================================
+.. _localizations_denmark/configuration/modules:
 
-This page outlines how Odoo complies with the Danish Bookkeeping Act,
-specifically regarding the storage and integrity of financial transactions and receipts.
-Odoo recognizes the importance of adhering to Danish regulations and has implemented robust
-measures to ensure clients' data is secure and compliant.
+Modules
+=======
 
-.. important::
-   Odoo’s registration as a digital bookkeeping system has been confirmed by the Danish Business
-   Authority under registration numbers `fob585505` and `fob441967`. Customers must meet certain
-   conditions to benefit from it, as outlined below.
+The following modules are installed automatically with the Danish localization:
 
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
 
-Key requirements of the Danish Bookkeeping Act
-----------------------------------------------
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Denmark - Accounting`
+     - `l10n_dk`
+     - Danish :ref:`fiscal localization package <fiscal_localizations/packages>`, complete with
+       the Danish chart of accounts, taxes, tax report, and fiscal positions
+   * - :guilabel:`Denmark - Accounting Reports`
+     - `l10n_dk_reports`
+     - Module providing Danish accounting reports
+   * - :guilabel:`Denmark - E-invoicing`
+     - `l10n_dk_oioubl`
+     - Module providing e-Invoicing support for Denmark
+   * - :guilabel:`Denmark EDI - Nemhandel`
+     - `l10n_dk_nemhandel`
+     - Send and receive documents via Nemhandel network in OIOUBL 2.1 format
+   * - :guilabel:`Denmark - Nemhandel Business Response`
+     - `l10n_dk_nemhandel_response`
+     - Enables the rejection and approval of sent and received documents
+   * - :guilabel:`Denmark - FIK Number`
+     - `l10n_dk_fik`
+     - Support Danish FIK number as payment references on customer invoices
 
-The Danish Bookkeeping Act (DBA) outlines the `requirements for digital bookkeping systems
-<https://danishbusinessauthority.dk/requirements-digital-bookkeeping-systems>`_:
+Additionally, the following modules must be manually :ref:`installed <general/install>`:
 
-- **Retain transactional data and receipts:** Store all recorded transactions and receipts
-  covered by § 3 for a minimum of five years from the end of the financial year to which they pertain.
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
 
-- **Ensure data integrity:** Prevent the customer from changing, backdating, or deleting recorded transactions.
-
-- **Maintain data accessibility:** Store all recorded transactions in a structured and machine-readable format
-  for the required five-year period, regardless of customer relationship status, bankruptcy, or dissolution.
-
-- **Provide decryption capabilities:** Ensure that encrypted bookkeeping data and receipts can be decrypted
-  into a structured and readable format.
-
-Odoo Compliance
----------------
-
-Odoo's registration as digital standard bookkeeping systems with the Danish Business Authority
-confirms that Odoo meets the applicable criteria for digital bookkeeping systems in Denmark,
-in accordance with the requirements of the :abbr:`DBA (Danish Bookkeeping Act)`.
-
-However, to benefit from all the required guarantees for digital bookkeeping systems in Denmark,
-customers must meet a few conditions.
-
-Conditions for full DBA compliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- The customer uses Odoo Accounting on the Odoo SaaS platform (Odoo Online);
-- The customer has an active Odoo subscription (e.g., Standard or Custom Plan), or their database is
-  managed by an officially registered `Odoo Accounting Firm <https://www.odoo.com/accounting-firms>`_;
-- The customer refrains from customizations or actions intended to undermine the system’s immutability,
-  traceability, or security controls.
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Denmark - Intrastat`
+     - `l10n_dk_intrastat`
+     - Enables the Intrastat report
+   * - :guilabel:`Denmark - RSU`
+     - `l10n_dk_rsu`
+     - Enables submitting your tax reports to the Danish tax authorities
+   * - :guilabel:`Denmark - SAF-T Import`
+     - `l10n_dk_saft_import`
+     - Enables the import of SAF-T files
 
 .. note::
-  Customers using Odoo products outside these conditions are responsible for ensuring their own
-  compliance with the DBA.
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually
+   :ref:`installed <general/install>`.
 
-When the above conditions are met, the requirements of the DBA are fulfilled through features and
-processes described in the following sections.
+.. seealso::
+   :doc:`Documentation on e-invoicing's legality and compliance in Denmark
+   <../accounting/customer_invoices/electronic_invoicing/denmark>`
 
-Immutable transaction records
+.. _denmark/configuration:
+
+Configuration
+=============
+
+The Danish localization package ensures compliance with Danish fiscal and accounting regulations. It
+includes tools for managing taxes, fiscal positions, reporting, and a predefined chart of accounts
+tailored to Denmark's standards.
+
+The Danish localization package provides the following key features to ensure compliance with local
+fiscal and accounting regulations:
+
+- :doc:`../accounting/get_started/chart_of_accounts`: a predefined structure tailored to Danish
+  accounting standards
+- :ref:`localizations/denmark/taxes`: pre-configured tax rates, including standard VAT, zero-rated,
+  and exempt options
+- :doc:`../accounting/taxes/fiscal_positions`: automated tax adjustments based on customer or
+  supplier registration status
+- :ref:`localizations/denmark/eds`: integration with NemHandel and Peppol to meet electronic
+  document regulations
+
+.. _localizations/denmark/coa:
+
+Chart of accounts
+-----------------
+
+In the :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>`, accounts are
+automatically mapped to their corresponding taxes and default accounts payable and accounts
+receivable fields.
+
+.. _localizations/denmark/taxes:
+
+Taxes
+-----
+
+:doc:`Taxes <../accounting/taxes>` are automatically created and configured when the Danish
+localization is installed.
+
+.. _localizations/denmark/eds:
+
+Electronic document solutions
 -----------------------------
 
-- Once transactions are recorded, they cannot be deleted through the user interface.
-- All modifications are logged, providing a complete audit trail.
-- While historically dated entries can be made, Odoo records the creation date and time of the entry.
+The Danish localization ensures compliance with the `Danish Digital Bookkeeping Act
+<electronic_invoicing/denmark/dba-compliance>`_ and `Danish Executive Order on Electronic Invoicing
+<https://www.retsinformation.dk/>`_.
 
-Secure document storage
------------------------
+Through the NemHandel and Peppol integration, Odoo enables the automated transmission, reception,
+and management of e-documents in accordance with the :abbr:`DBA (Danish Bookkeeping Act)` and Danish
+Executive Order on Electronic Invoicing. The main functionalities of the integration include:
 
-- Receipts and digital vouchers are stored as attachments and integrated into the database, ensuring they
-  are included in backups.
-- Posted documents cannot be deleted.
-- We fully support the storage of mandatory digital vouchers as defined by Danish regulations.
+- sending and receiving electronic invoices and digital vouchers directly through the NemHandel and
+  Peppol networks
 
-Continuous data availability
-----------------------------
+- maintaining immutable, traceable transaction records and prohibiting deletion of posted entries
+  and attachments
 
-- Clients with active subscriptions can access all transactions and digital vouchers through Odoo.
-- Regardless of customer relations, bankruptcy, or dissolution, Odoo can provide access to transaction
-  and digital voucher details to former clients for six years (see :ref:`localizations/denmark/data-lifecycle`).
+- retaining transactional data and mandatory digital vouchers in encrypted storage for a minimum of
+  five years (extended to six years of cloud backup retention upon subscription termination)
 
-Automated data export and secure storage
-----------------------------------------
+- exporting transaction history and attached documents at any time in decrypted, machine-readable
+  formats (SQL dumps and ZIP archives)
 
-- Odoo Accounting implements no automatic deletion or archival of recorded transactions, so if a customer has
-  been recording transactions for six years, the six years of history are preserved in the Odoo Accounting database.
-- As described in the `Odoo Cloud Hosting SLA <https://www.odoo.com/cloud-sla>`_ and
-  `Odoo Privacy Policy <https://www.odoo.com/privacy>`_, the Odoo Cloud relies on immutable daily snapshot
-  backups, which cannot be individually altered or deleted, even at the customer's request, ensuring their integrity.
-- All documents and receipts stored in a database backup are available as a standard ZIP archive accompanying
-  the SQL dump.
+.. _denmark/nemhandel:
 
-.. _localizations/denmark/data-lifecycle:
+NemHandel integration
+=====================
 
-Data lifecycle management
--------------------------
+To activate NemHandel E-Delivery, go to :menuselection:`Accounting --> Configuration --> Settings`,
+scroll down to the :guilabel:`Nemhandel E-Delivery` section and click :guilabel:`Start sending via
+Nemhandel`. Then, fill out the following fields:
 
-- Odoo database backups are available in standard SQL dump formats at all times and include all recorded
-  transactions.
-- The `Odoo Cloud Hosting SLA <https://www.odoo.com/cloud-sla>`_ guarantees three months of backup history to all
-  active customers. As a special guarantee for Danish customers subject to the DBA and meeting the conditions
-  highlighted above the last Odoo Cloud backup retention gets increased to six years as soon as they decide to
-  terminate their Odoo Cloud subscription, in order to comply with the requirements of Annex 1, 4 of Executive Order 97.
+- :guilabel:`CVR`, :guilabel:`EAN/GLN`, :guilabel:`IBAN`, or :guilabel:`SE`: Select one of the
+  options and enter the related number.
+- :guilabel:`Email`: Enter your company's email.
+- :guilabel:`Phone`: Enter your company's phone number.
 
-Decryption
-----------
+When done, click :guilabel:`Activate Nemhandel`.
 
-Odoo Accounting customer data on the Odoo Cloud is always stored in encrypted form (encryption at rest at
-storage level). When backups are retrieved, they are automatically decrypted and provided in decrypted form in
-standard formats for the user: SQL dumps + ZIP archive of all attached documents (file store).
+Updating contact details
+------------------------
+
+To update NemHandel contact details, go to the :ref:`Nemhandel section <denmark/nemhandel>`. Select
+an :guilabel:`Incoming Invoices Journal` and :guilabel:`Contact Email` of your choice, and then
+click :guilabel:`Update contact details`.
+
+To deregister your Odoo database from the NemHandel system, click :guilabel:`Deregister`.
+
+.. note::
+   Your **NemHandel ID** is found in this section.
+
+.. _denmark/peppol:
+
+PEPPOL Electronic Invoicing
+===========================
+
+To activate PEPPOL Electronic Invoicing, go to :menuselection:`Accounting --> Configuration -->
+Settings`, scroll down to the :guilabel:`PEPPOL Electronic Invoicing` section and click
+:guilabel:`Activate Electronic Invoicing`. Then, fill out the following fields:
+
+- :guilabel:`Denmark P`, :guilabel:`Denmark CVR`, or :guilabel:`Denmark SE`: Select one of the
+  options and enter the related number.
+- :guilabel:`Email`: Enter your company's email.
+- :guilabel:`Phone`: Enter your company's phone number.
+
+When done, click :guilabel:`Activate Peppol`.
+
+Updating contact details
+------------------------
+
+To update PEPPOL contact details, go to the :ref:`PEPPOL Electronic Invoicing section
+<denmark/peppol>`. Select an :guilabel:`Incoming Invoices Journal` and
+:guilabel:`Primary contact Email` of your choice, and then click :guilabel:`Update`.
+
+To remove your Odoo database from the PEPPOL system, click :guilabel:`Remove from Peppol`.
+
+.. tip::
+   To disable the reception of documents through PEPPOL but maintain the ability to send customer
+   invoices, click :guilabel:`Disable the reception`. To re-enable it, click :guilabel:`Allow
+   reception`.
+
+.. note::
+   Your **PEPPOL ID** is found in this section.
+
+SAF-T import
+============
+
+To import your data into Odoo, :doc:`install <../../general/apps_modules>` the module
+:guilabel:`Denmark - SAF-T import`. Then, go to :menuselection:`Accounting --> Configuration -->
+Settings`. Under the :guilabel:`Accounting Import` section, click :icon:`oi-arrow-right`
+:guilabel:`Import` and click :guilabel:`SAF-T`.
+
+Check :guilabel:`Import account opening balances` if you wish to import account opening balances,
+then click :guilabel:`Upload your file` and select the SAF-T file to import.
+
+Once redy, click :guilabel:`Import` to import your data into Odoo.
