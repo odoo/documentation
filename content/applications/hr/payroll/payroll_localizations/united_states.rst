@@ -640,8 +640,10 @@ third party for e-filing.
 .. image:: united_states/940.png
    :alt: The 940 report screen, with the file to download in the top half.
 
-Export data to third-party apps
--------------------------------
+.. _payroll/united_states/adp:
+
+Export data to ADP
+------------------
 
 The *ADP Export* report generates a CSV file that can be submitted to ADP, which then makes payments
 to the employees.
@@ -656,3 +658,59 @@ and may require some changes, the data is there to be fed to ADP to run payroll 
 .. important::
    To access the ADP Export report, the `United States - Payroll - Export to ADP` module **must** be
    :ref:`installed <general/install>`.
+
+Setup
+~~~~~
+
+To export data to ADP, the company **must** have an ADP code configured in the company settings.
+Navigate to :menuselection:`Payroll app --> Configuration --> Settings`. In the *US Localization*
+section, enter the :guilabel:`ADP Code` in the corresponding field.
+
+Next, work entry types **must** have the correct ADP code listed in the :ref:`External Code field
+<payroll/new-work-entry-type>` for each work entry type that is being referenced.
+
+Lastly, every employee **must** have an ADP code entered on their employee form. To add this code,
+open the :menuselection:`Employees` app, click an employee record, and click into the *Payroll* tab.
+In the *ADP Information* section, enter the :guilabel:`ADP Code` in the corresponding field.
+
+The :guilabel:`ADP Code` is how ADP identifies that particular employee, and is typically a
+six-digit number.
+
+Export data
+~~~~~~~~~~~
+
+Once :doc:`work entries <../work_entries>` have been verified, the information is exported to a CSV
+file, which is uploaded into ADP.
+
+To export the data, navigate to :menuselection:`Payroll app --> Reporting --> ADP Export`, then
+click :guilabel:`New`. Next, enter the :guilabel:`Start Date` and :guilabel:`End Date` for the work
+entries using the calendar pop-over.
+
+Then, enter a :guilabel:`Batch ID` in the corresponding field. The recommendation for this field is
+to enter the date in a `YY-MM-DD` format, followed by any other characters to distinguish that
+specific pay run, such as a department name.
+
+Enter a :guilabel:`Batch Description` in the corresponding field. This should be short and
+descriptive, but distinct from the name of the pay run.
+
+Ensure the correct company populates the :guilabel:`Company` field. Change the selected company with
+the drop-down menu, if needed.
+
+Lastly, add the employee's work entry information to the list. Click :guilabel:`Add a line` and an
+*Add: Employee* pop-up window loads. The list can be :doc:`filtered <../../../essentials/search>` to
+find the employees to add to the list.
+
+.. tip::
+   Process the data export in multiple groups instead of in one large group that contains all
+   employees. This helps to meaningfully differentiate the batches and makes processing more
+   tenable, overall. The most common ways to group employees is by department, or by wage type
+   (hourly or salaried).
+
+Select the employees to add to the list by clicking the box to the left of their name. Once all
+desired employees have been selected, click the :guilabel:`Select` button in the corner, and the
+employees appear in the list.
+
+To create the CSV file, click the :guilabel:`Generate` button.
+
+.. seealso::
+   :ref:`ACH - electronic transfers <l10n_us/ach-electronic-transfers>`
