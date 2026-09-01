@@ -156,9 +156,9 @@ Once enabled, the pickup point selection is available through:
    button.
 
 To add a :guilabel:`Pickup point` to a sales quote, :ref:`create a quotation
-<sales/create_quotations/create-quotation>` and click the :guilabel:`Add shipping`
-button. The *Add a delivery method* pop-up displays. Select :guilabel:`Sendcloud MR` (Sendcloud
-Mondial Relay) for the :guilabel:`Delivery Method` and then click :guilabel:`Get Rate`.
+<sales/create_quotations/create-quotation>` and click the :guilabel:`Add shipping` button. The *Add
+a delivery method* pop-up displays. Select :guilabel:`Sendcloud MR` (Sendcloud Mondial Relay) for
+the :guilabel:`Delivery Method` and then click :guilabel:`Get Rate`.
 
 Click the :icon:`fa-pencil` :guilabel:`pencil` icon next to the :guilabel:`Pickup Point` field and
 the *Choose a pick-up point* pop-up displays. Enter a zip code and select a location from the
