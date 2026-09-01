@@ -10,9 +10,11 @@ electronic signatures in China.
 Legal framework for electronic signatures in China
 ==================================================
 
-In China, electronic signatures are regulated under the Electronic Signature Law (ESL) of the
-People's Republic of China, enacted in 2005 and amended in 2015. The law provides the foundation for
-the use and legal recognition of electronic signatures. The key points of the ESL include:
+In China, electronic signatures are regulated under the `Electronic Signature Law of the PRC 2004 (as amended 2019) <http://www.npc.gov.cn/zgrdw/englishnpc/Law/2007-12/05/content_1381960.htm>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +71,5 @@ not be suitable or legally recognized in China:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*
+
