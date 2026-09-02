@@ -2,40 +2,44 @@
 Connect a printer
 =================
 
-Printer installation can be done in a few easy steps. The printer can be used to print receipts,
-labels, orders, or even reports from the different Odoo apps. In addition, printer actions can be
-assigned as an *action on a trigger* during the manufacturing process, or added onto a quality
-control point or a quality check.
-
-.. warning::
-   The **only** way to connect a printer directly to an Odoo database is through the use of an IoT
-   system. Without an IoT system, printing can still occur, but it is managed through the printer
-   itself, which is not the recommended process.
+Connect a printer to Odoo to automatically print receipts, product labels, orders, and other reports
+directly from Odoo applications.
 
 Connection
 ==========
 
-IoT systems support printers connected through USB or network connection.
-`Supported printers <https://www.odoo.com/page/iot-hardware>`_ are detected automatically, and
-appear in the :guilabel:`Devices` list of the IoT app.
+IoT systems support printers connected through USB or network connections.
+`Supported printers <https://www.odoo.com/page/iot-hardware>`_ are detected automatically and appear
+in :menuselection:`IoT --> Devices`.
+
+After :doc:`connecting an IoT system to Odoo <../connect>`, connect a printer using one of these
+methods:
+
+- **USB printer**: Plug the printer directly into the IoT system with a USB cable.
+- **Network printer**: Connect the printer to the *same* local network as the IoT system through
+  Ethernet or Wi-Fi.
 
 .. image:: printer/printer-detected.png
    :alt: The printer as it would appear in the IoT app devices list.
 
-.. important::
-   Printers connecting to the IoT system via the network must be on the **same network** as the IoT
-   system.
+.. tip::
+   To ensure a USB printer is detected during the IoT system's boot process, plug the printer into
+   the IoT system *before* powering on the IoT system.
+
+To print a test page and confirm a printer is set up correctly, follow these steps:
+
+#. Go to the :guilabel:`IoT` app.
+#. Select the relevant IoT system.
+#. Select the printer from the :guilabel:`Devices` tab.
+#. Click :guilabel:`Test`.
 
 .. note::
-   Printers can take up to two minutes to appear in the IoT app's :guilabel:`Devices` list.
+   - It is possible to use specific :doc:`POS receipt printers
+     <../../../sales/point_of_sale/hardware_network/receipt_printers>` without an IoT system.
+   - Printers can take up to two minutes to appear in the IoT app's :guilabel:`Devices` list.
 
-.. tip::
-   To test the printer, open the IoT app, click the :ref:`IoT system's card <iot/connect/IoT-form>`,
-   select the printer device, then click :guilabel:`Test`. A successful test prints a test page. If
-   no page is printed, ensure the printer is powered on and the connection is correct.
-
-Link a printer
-==============
+Use cases
+=========
 
 Link work orders to a printer
 -----------------------------
@@ -121,8 +125,26 @@ device. Click the :guilabel:`Unlink` button next to each report to remove the li
 .. seealso::
    :ref:`POS Order Printing <pos/restaurant/orders-printing>`
 
-Potential issues
-================
+Troubleshooting
+===============
+
+General guidelines
+------------------
+
+The following operations can solve many printer issues:
+
+#. Ensure everything is connected to a power source.
+#. Check that all cables are connected correctly.
+#. Turn every device off, then back on.
+#. Connect the printer to the IoT system before powering on the IoT system.
+#. Restart the IoT system from its homepage.
+#. Ensure the paper is loaded correctly.
+#. Make sure everything is on the same local network, and the signal is strong if you are using a
+   network printer.
+#. Remove the printer from the IoT system and add the printer again from the IoT homepage.
+#. Install the latest printer firmware updates.
+
+The following sections provide solutions to specific issues:
 
 The printer is not detected
 ---------------------------
@@ -460,6 +482,9 @@ corresponding template.
 .. seealso::
    `Zebra's instructions on printing ZPL files
    <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer>`_
+
+.. todo::
+   Move the barcode section to a new document.
 
 Barcode scanner issues
 ======================
