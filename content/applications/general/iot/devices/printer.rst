@@ -2,169 +2,221 @@
 Connect a printer
 =================
 
-Printer installation can be done in a few easy steps. The printer can be used to print receipts,
-labels, orders, or even reports from the different Odoo apps. In addition, printer actions can be
-assigned as an *action on a trigger* during the manufacturing process, or added onto a quality
-control point or a quality check.
+Connect a printer to the IoT system to automatically print receipts, product labels, orders, and
+other reports directly from Odoo applications.
 
-.. warning::
-   The **only** way to connect a printer directly to an Odoo database is through the use of an IoT
-   system. Without an IoT system, printing can still occur, but it is managed through the printer
-   itself, which is not the recommended process.
+.. _iot/printer/connection:
 
 Connection
 ==========
 
-IoT systems support printers connected through USB or network connection.
-`Supported printers <https://www.odoo.com/page/iot-hardware>`_ are detected automatically, and
-appear in the :guilabel:`Devices` list of the IoT app.
+IoT systems support both USB and network printers. Office printers, receipt printers, and `supported
+label printers <https://www.odoo.com/page/iot-hardware>`_ are automatically detected and appear in
+:menuselection:`IoT --> Devices`.
+
+To connect a printer to an IoT system, follow these steps:
+
+#. :doc:`Connect the IoT system to Odoo. <../connect>`
+#. :ref:`Grant Google Chrome local network access. <pos/lna/browser-permission>`
+#. Link the printer using one of these methods:
+
+   - **USB printer:** Plug the printer directly into the IoT system with a USB cable.
+   - **Network printer:** Connect the printer to the **same** local network as the IoT system
+     through Ethernet or Wi-Fi.
+
+After establishing a connection to the IoT system, the printer automatically prints a connection
+status report.
 
 .. image:: printer/printer-detected.png
    :alt: The printer as it would appear in the IoT app devices list.
 
-.. important::
-   Printers connecting to the IoT system via the network must be on the **same network** as the IoT
-   system.
+.. tip::
+   To ensure a USB printer is detected during the IoT system's boot process, plug the printer into
+   the IoT system *before* powering on the IoT system.
+
+To print a test page and confirm a printer is set up correctly, follow these steps:
+
+#. Go to the :guilabel:`IoT` app.
+#. Select the relevant IoT system.
+#. Select the printer in the :guilabel:`Devices` tab.
+#. Click :guilabel:`Test`.
 
 .. note::
-   Printers can take up to two minutes to appear in the IoT app's :guilabel:`Devices` list.
+   - It is possible to use supported :doc:`point of sale receipt printers
+     <../../../sales/point_of_sale/hardware_network/receipt_printers>` without an IoT system.
+   - Printers might take up to five minutes to appear in the IoT app's :guilabel:`Devices` list.
+
+Use cases
+=========
+
+.. _iot/printer/automatic-printing:
+
+Automatic printing
+------------------
+
+To automatically print reports (invoices, quotations, product labels, etc.) on a specific printer,
+follow these steps:
+
+#. Go to :menuselection:`IoT --> Devices` and select the printer.
+#. Go to the :guilabel:`Reports to Auto-Print` tab and click :guilabel:`Add a line`.
+#. In the pop-up, select the reports to assign to the printer, then click :guilabel:`Select`.
+
+The first time a linked report is selected for printing, a :guilabel:`Select Printers` pop-up
+appears. In the :guilabel:`Printers` field, select the desired printer. If needed, select
+:guilabel:`Do not ask me again` to automatically print the report from the current browser on the
+selected printer for future printings, then click :guilabel:`Print`.
 
 .. tip::
-   To test the printer, open the IoT app, click the :ref:`IoT system's card <iot/connect/IoT-form>`,
-   select the printer device, then click :guilabel:`Test`. A successful test prints a test page. If
-   no page is printed, ensure the printer is powered on and the connection is correct.
+   Alternatively, to assign a report to a printer, :ref:`activate developer mode <developer-mode>`,
+   go to :menuselection:`Settings --> Technical --> Reports`, select the report, and select the
+   printer in the :guilabel:`IoT Devices` field.
 
-Link a printer
-==============
+To prevent printing errors, ensure the assigned report format matches the printer type:
 
-Link work orders to a printer
------------------------------
+- Office printers can only print :doc:`QWeb (PDF) reports
+  <../../../../developer/reference/backend/reports>`.
+- `Supported label printers <https://www.odoo.com/page/iot-hardware>`_ can only print :doc:`Zebra
+  Programming Language (ZPL)
+  <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra>` reports.
+- Receipt printers *cannot* be used to automatically print reports, as they are :doc:`only used
+  directly by the point of sale <../../../sales/point_of_sale/hardware_network/receipt_printers>`.
 
-Work orders can be linked to printers, via a quality control point, to print labels for
-manufactured products.
+To customize a report, create a :ref:`new inherited view <reference/view_records/inheritance>`.
 
-In the :doc:`Quality app </applications/inventory_and_mrp/quality>`, a device can be set up on a
-quality control point. To do so, go to the :menuselection:`Quality --> Quality Control --> Control
-Points`, and open the desired control point.
+.. _iot/printer/reset-saved-printer-preferences:
 
-.. important::
-   A manufacturing operation and work order operation need to be attached to a quality control
-   point before the :guilabel:`Type` field allows for the :guilabel:`Print Label` option to be
-   selected.
+Reset saved printer preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From here, edit the control point by selecting the :guilabel:`Type` field, and selecting
-:guilabel:`Print Label` from the dropdown menu of options. Doing so reveals the :guilabel:`Device`
-field, where the attached device can be selected.
+The user's printer selections remain stored in the browser cache. Accessing a database with
+different accounts, browsers, or devices creates separate printer preferences that automatically
+target different printers.
 
-The printer can now be used with the selected quality control point. When the quality control point
-is reached during the manufacturing process, the database presents the option to print labels for a
-specific product.
-
-.. tip::
-   Quality control points can also be accessed by navigating to :menuselection:`IoT -->
-   Devices`, then selecting the device. Go to the :guilabel:`Quality Control Points` tab to add them
-   to the device.
-
-.. note::
-   On a :doc:`quality check form
-   </applications/inventory_and_mrp/quality/quality_management/quality_checks>`, the
-   :guilabel:`Type` of check can also be set to :guilabel:`Print Label`.
-
-.. seealso::
-   - :doc:`/applications/inventory_and_mrp/quality/quality_management/quality_control_points`
-   - :doc:`/applications/inventory_and_mrp/quality/quality_management/quality_alerts`
-
-.. _iot/link-printer:
-
-Link reports to a printer
--------------------------
-
-It is possible to link report types to a specific printer. To do so:
-
-#. Go to :menuselection:`IoT --> Devices` and select the desired printer.
-#. Go to the :guilabel:`Printer Reports` tab and click :guilabel:`Add a line`.
-#. In the pop-up that opens, select the types of reports to be linked to the printer and click
-   :guilabel:`Select`.
-
-.. image:: printer/printer-reports.png
-   :alt: The list of reports assigned to a printer in the IoT app.
-
-.. tip::
-   Reports can also be configured by :ref:`enabling the developer mode <developer-mode>` and going
-   to :menuselection:`Settings --> Technical --> Reports`. Select the desired report from the list
-   and set an :guilabel:`IoT Device`.
-
-The first time a linked report is selected to print, a :guilabel:`Select Printers` pop-up window
-appears. Tick the checkbox next to the correct printer for the report, and click :guilabel:`Print`.
-At that point, the report is linked to the printer.
-
-Clear device printer cache
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-After a printer is linked to print a report, the setting is saved in a browser's cache. This means
-a user can have different devices saved in their cache for different reports, based on the device
-they use to access Odoo. It also means different users can have a report automatically printed from
-different printers, based on their preferences.
-
-To unlink a report from a printer, navigate to :menuselection:`IoT --> Configuration --> Reset
-Linked Printers`. This generates a list of reports that are linked to a printer on the current
-device. Click the :guilabel:`Unlink` button next to each report to remove the link.
-
-.. important::
-   This step **only** prevents the report from automatically printing to the listed printer from
-   the current browser. The report is still :ref:`linked <iot/link-printer>` on the device, under
-   the :guilabel:`Printer Reports` tab.
+To unlink a report from all linked printers on the current browser, navigate to :menuselection:`IoT
+--> Configuration --> Reset Linked Printers`, then click :guilabel:`Reset Linked Printers` next to
+the report.
 
 .. image:: printer/clear-reports.png
    :alt: A list of reports currently linked to a printer in the IoT app.
 
+.. important::
+   This action only prevents the current browser from automatically printing the report on the
+   selected printers. The report is still :ref:`linked <iot/printer/automatic-printing>` to the
+   selected printers, and the :guilabel:`Select Printers` pop-up will appear the next time a report
+   is printed.
+
+Manufacturing quality check printing
+------------------------------------
+
+To print a label during a manufacturing :doc:`quality check
+<../../../inventory_and_mrp/quality/quality_management/quality_checks>`, assign a printer to a
+:doc:`quality control point
+<../../../inventory_and_mrp/quality/quality_management/quality_control_points>` as follows:
+
+#. Go to :menuselection:`Quality --> Quality Control --> Control Points` and select the control
+   point.
+#. Select :guilabel:`Operations` configured with :guilabel:`Manufacturing` as the :guilabel:`Type of
+   Operation`.
+#. Select the :guilabel:`Work Order Operation`.
+#. Select :guilabel:`Print Label` as the :guilabel:`Type`.
+#. Select the printer in the :guilabel:`Device` field.
+#. Select the required format in :guilabel:`Report Type`.
+
+When the quality check, created by the quality control point, is reached during manufacturing, a
+:guilabel:`Select Printers` pop-up appears. In the :guilabel:`Printers` field, select the desired
+printer. If needed, select :guilabel:`Do not ask me again` to automatically print the labels from
+the current browser on the selected printer for future printings, then click :guilabel:`Print`.
+
+The user's printer selections remain stored in the browser cache. Refer to the instructions for
+:ref:`resetting saved printer preferences <iot/printer/reset-saved-printer-preferences>` to restore
+the selections.
+
+.. tip::
+   Alternatively, to link a printer with a quality control point, go to :menuselection:`IoT -->
+   Devices` and select the printer. In the :guilabel:`Quality Control Points` tab, add the quality
+   control point. Only quality control points with the correct :guilabel:`Operations`,
+   :guilabel:`Work Order Operation`, and :guilabel:`Type` values appear.
+
 .. seealso::
-   :ref:`POS Order Printing <pos/restaurant/orders-printing>`
+   :doc:`/applications/inventory_and_mrp/quality`
 
-Potential issues
-================
+Troubleshooting
+===============
 
-The printer is not detected
----------------------------
+General guidelines
+------------------
 
-If a printer does not appear in the devices list, go to the :ref:`IoT box's <iot/iot-box/homepage>`
-or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage, click :guilabel:`Show` in
-the :guilabel:`Devices` section, and make sure the printer is listed.
+Perform these checks to resolve common printer problems:
 
-If the printer does not appear on the IoT system's homepage, click :guilabel:`Printer Server`, then
-:guilabel:`Administration`, and :guilabel:`Add Printer`. If the printer is not in the list, it is
-likely not connected properly.
+- Verify power to all devices and check physical connections (power, USB, Ethernet).
+- Connect the printer to the IoT system before powering on the IoT system.
+- Turn every device off, then back on.
+- Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT
+  <iot/windows_iot/restart>`.
+- Ensure the paper is loaded correctly in the printer.
+- Confirm that the printer and the IoT system are on the same local network, and check Wi-Fi signal
+  strength for network printers.
+- Install available printer firmware updates.
 
-The printer outputs random text
--------------------------------
+The following sections provide solutions to specific issues:
 
-For most printers, the correct driver should be automatically detected and selected. However, in
-some cases, the automatic detection mechanism might not be enough, and if no driver is found, the
-printer might print random characters.
+Printer not detected
+--------------------
 
-The solution is to manually select the corresponding driver. On the IoT system's homepage, click
-:guilabel:`Printer Server`, then :guilabel:`Printers`, and select the printer in the list.
-In the :guilabel:`Administration` dropdown menu, click :guilabel:`Modify Printer`. Follow the steps
-and select the printer's *make* and *model*.
+If a connected printer does not appear in :menuselection:`IoT --> Devices`, add the printer manually
+through the printer server interface:
+
+#. Go to the :ref:`IoT box homepage <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT
+   homepage <iot/windows-iot/homepage>`.
+#. Navigate to :menuselection:`Printer Server --> Administration --> Add Printer`.
+#. Select the printer and click :guilabel:`Continue`.
+
+   .. note::
+      If the printer is not in the list, it is likely :ref:`not connected correctly
+      <iot/printer/connection>`.
+
+#. Change the printer :guilabel:`Name`, if desired, then click :guilabel:`Continue`.
+#. Select the printer :guilabel:`Model`, then click :guilabel:`Add Printer`.
+
+.. image:: printer/iot-homepage.png
+   :alt: IoT box homepage
+
+Printer detected but not functioning as expected
+------------------------------------------------
+
+If a printer appears in :menuselection:`IoT --> Devices` but is not functioning as expected, select
+the printer in :menuselection:`IoT --> Devices`, and set the printer :guilabel:`Subtype` to
+:guilabel:`Receipt Printer`, :guilabel:`Label Printer`, or :guilabel:`Office Printer`.
+
+The printer prints random characters
+------------------------------------
+
+For most printers, the IoT system automatically detects and selects the correct driver. However, if
+no driver or the wrong driver is selected, the printer might print random characters.
+
+To manually select the correct driver for a printer, follow these steps:
+
+#. Go to the :ref:`IoT box homepage <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT
+   homepage <iot/windows-iot/homepage>`.
+#. Navigate to :menuselection:`Printer Server --> Printers` and select the printer.
+#. Click the :guilabel:`Administration` drop-down menu and select :guilabel:`Modify Printer`.
+#. Confirm printer selection, then click :guilabel:`Continue`.
+#. Change the printer :guilabel:`Description`, if desired, then click :guilabel:`Continue`.
+#. Select the printer :guilabel:`Make`, then click :guilabel:`Continue`.
+#. Select the printer :guilabel:`Model`, then click :guilabel:`Modify Printer`.
 
 .. image:: printer/modify-printer.png
    :scale: 75%
-   :alt: Edit the printer connected to the IoT system.
+   :alt: Printer driver selection in the IoT printer server
 
 .. note::
-   Epson receipt printers and Zebra label printers do not need a driver to work. Make sure that no
-   driver is selected for those printers.
-
-The printer is detected but is not recognized correctly
--------------------------------------------------------
-
-If Odoo and the IoT system do not recognize the printer correctly, go to :menuselection:`IoT
---> Devices`, click the device's card to access its form, and set the :guilabel:`Subtype` field to
-the appropriate option: :guilabel:`Receipt Printer`, :guilabel:`Label Printer`, or :guilabel:`Office
-Printer`.
+   Epson receipt printers (ESC/POS) and Zebra label printers (ZPL) parse raw command streams
+   directly from Odoo. To select a generic driver in the :guilabel:`Printer Server`, choose
+   :guilabel:`Generic` as the :guilabel:`Make` and :guilabel:`Generic Text-Only Printer (en)` as the
+   :guilabel:`Model`.
 
 Epson configuration special case
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 Most Epson printers support printing receipts in Odoo Point of Sale using the `GS v 0` command.
 However, the following Epson printer models do not support this command:
@@ -448,18 +500,8 @@ To resolve the delay issue after modifying the driver, reinstall the printer:
 #. Click the :guilabel:`Maintenance` dropdown list and select :guilabel:`Print Test Page` to print
    a test label. The test label should print out immediately, or after one or two seconds.
 
-The Zebra printer does not print anything
------------------------------------------
-
-Zebra printers are quite sensitive to the format of the printed Zebra Programming Language (ZPL)
-code. If nothing comes out of the printer or blank labels are printed, try changing the format
-of the report sent to the printer. To do so, activate the :ref:`developer mode <developer-mode>`, go
-to :menuselection:`Settings --> Technical --> User Interface --> Views`, and search for the
-corresponding template.
-
-.. seealso::
-   `Zebra's instructions on printing ZPL files
-   <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer>`_
+.. todo::
+   Move the barcode section to a new document.
 
 Barcode scanner issues
 ======================
