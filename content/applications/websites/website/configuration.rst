@@ -8,6 +8,7 @@ Configuration
    :titlesonly:
 
    configuration/domain_names
+   configuration/cloudflare
    configuration/address_autocomplete
    configuration/google_search_console
    configuration/cookies_bar
