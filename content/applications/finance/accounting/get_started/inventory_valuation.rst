@@ -111,9 +111,16 @@ The :guilabel:`Variation account` is used to record inventory variations for the
 the :ref:`stock closing process <accounting/inventory-valuation/closing-entry>` and can be updated
 during :ref:`configuration <accounting/inventory-valuation/configuration>`:
 
-- Continental :guilabel:`Periodic (at closing)`: Expense account (specific for variation recording).
-- Anglo-Saxon :guilabel:`Perpetual (at invoicing)`: Current asset account (recommended for interim
-  tracking) or expense account (optional).
+- Continental :guilabel:`Periodic (at closing)`: Expense account, which is a localization-specific
+  account used to record inventory variations during the stock closing process.
+- Anglo-Saxon :guilabel:`Perpetual (at invoicing)`:
+
+  - Current asset account type: Provides interim tracking of inventory value changes throughout the
+    fiscal period. Inventory movements become immediately visible on the Balance Sheet once the
+    closing entry is generated.
+  - Expense account type: Offers simpler configuration with fewer interim accounting entries.
+    Recommended if interim tracking is not required and a simpler period-end closing process is
+    preferred.
 
   .. note::
      - Stock variations resulting from product receipts and deliveries are displayed in the
