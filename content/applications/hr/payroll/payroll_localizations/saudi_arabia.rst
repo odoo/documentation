@@ -681,16 +681,16 @@ Configure the following fields on the payslip:
 
 - :guilabel:`Structure`: Using the drop-down menu, select :guilabel:`SA Salary Advance And Loan
   Structure`.
+- :guilabel:`Period`: Set the start and end date for the payslip in the two corresponding fields
+  using the calendar selectors.
 
-Next, click :guilabel:`Add a line` in the :guilabel:`Salary Inputs` tab. Select :guilabel:`Salary
-Advance` for the :guilabel:`Type`. Next, enter any relevant description in the :guilabel:`Notes`
-field, such as `Advance for auto repair`. Last, enter the amount being advanced in the
-:guilabel:`Amount` field.
+Next, click into the *Salary Inputs* tab, and in the *Inputs* section, enter the amount being
+advanced in the :guilabel:`Salary Advance` field.
 
-Once these fields have been configured, click :guilabel:`Compute Sheet`, then click
-:guilabel:`Create Draft Entry`, and click :guilabel:`OK` in the confirmation pop-up window. Click
-:guilabel:`Pay` to mark the payment as paid, then click :guilabel:`Create Payment Report` to
-:ref:`generate the WPS report <payroll/reports_saudi>`.
+Once the payslip is configured, click :guilabel:`Compute Sheet`, then click :guilabel:`Create Draft
+Entry`, and click :guilabel:`OK` in the confirmation pop-up window. Click :guilabel:`Pay` to mark
+the payment as paid, then click :guilabel:`Create Payment Report` to :ref:`generate the WPS report
+<payroll/reports_saudi>`.
 
 .. image:: saudi_arabia/advance.png
    :alt: A configured loan payslip.
