@@ -253,8 +253,8 @@ redirect a naked domain with a secure HTTPS connection. If you encounter any iss
 
 .. _domain-name/naked/cloudflare:
 
-Using Cloudflare to secure and redirect a naked domain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using Cloudflare to secure and redirect a domain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. `Sign up and log in to Cloudflare <https://dash.cloudflare.com/sign-up>`_.
 #. Enter your domain name on `Cloudflare's dashboard <https://dash.cloudflare.com/login>`_ and
@@ -273,13 +273,13 @@ Using Cloudflare to secure and redirect a naked domain
    .. image:: domain_names/cloudflare-cname-www.png
       :alt: Adding a CNAME DNS record to Cloudflare to redirect a naked domain to a www subdomain
 
-#. Add another second CNAME record to redirect the `www` subdomain (e.g., `www.yourdomain.com`) to
+#. Add a second CNAME record to redirect the `www` subdomain (e.g., `www.yourdomain.com`) to
    your database address (e.g., `mycompany.odoo.com`) using the following configuration:
 
    - :guilabel:`Type`: CNAME
-   - :guilabel:`Name`: e.g., `www.yourdomain.com`
+   - :guilabel:`Name`: `www`
    - :guilabel:`Target`: e.g., `mycompany.odoo.com`
-   - :guilabel:`Proxy status`: DNS only
+   - :guilabel:`Proxy status`: Proxied (or toggle to DNS-only to disable Cloudflare's protection services)
 
    .. image:: domain_names/cloudflare-cname-db.png
       :alt: Adding a CNAME DNS record to Cloudflare to redirect a www subdomain to an Odoo database
@@ -306,10 +306,11 @@ Using Cloudflare to secure and redirect a naked domain
    .. image:: domain_names/cloudflare-redirect-rule.png
       :alt: Defining a Cloudflare redirect rule to create a permanent redirect (301)
 
-#. Go to :guilabel:`SSL/TLS` and set the encryption mode to :guilabel:`Full`.
-
-   .. image:: domain_names/cloudflare-encryption.png
-      :alt: Setting the encryption mode to full on Cloudflare
+#. By default, a new free Cloudflare account will allow the
+   `HTTP-01 ACME challenge <https://letsencrypt.org/docs/challenge-types/#http-01-challenge>`_ that's required to
+   generate a SSL certificate for the domain. If more restrictive settings are in use, ensure calls to
+   `http://www.yourdomain.com/.well-known/acme-challenge/<TOKEN>` are allowed, for example by defining a custom security
+   rule.
 
 .. _domain-name/db-map:
 
