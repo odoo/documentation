@@ -10,8 +10,8 @@ outstanding bills to help ensure timely payment of the correct amounts.
 
 .. seealso::
    - Tutorial `Registering a vendor bill <https://www.odoo.com/slides/slide/register-a-vendor-bill-6582>`_
-   - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
-   - :doc:`../accounting/customer_invoices/credit_notes`
+   - :doc:`../../inventory_and_mrp/purchase/manage_deals/manage`
+   - :doc:`customer_invoices/credit_notes`
 
 .. _accounting/vendor_bills/creation:
 
@@ -50,7 +50,7 @@ Vendor bills can be automatically created by sending an email to an :ref:`email 
      <accounting/bill-digitization/vendor-bills-matching-po>` to replace OCR-detected data with the
      existing purchase order's details.
    - Services such as digitizing scanned or PDF vendor bills in Odoo require :doc:`In-App
-     Purchase (IAP) </applications/essentials/in_app_purchase>` credits.
+     Purchase (IAP) <../../essentials/in_app_purchase>` credits.
 
 To automatically post bills from selected vendors, go to :menuselection:`Accounting --> Vendors -->
 Vendors` and select the relevant vendor. In the :guilabel:`Accounting` tab, under the
@@ -62,8 +62,7 @@ options:
 - :guilabel:`Never`
 
 .. seealso::
-   :ref:`Vendor bills matching with purchase orders
-   <accounting/bill-digitization/vendor-bills-matching-po>`
+   :doc:`Document digitization <vendor_bills/invoice_digitization>`
 
 .. _accounting/vendor_bills/bill-completion:
 
@@ -105,6 +104,83 @@ In the :guilabel:`Invoice Lines` tab:
    Multiple bills for the same purchase order may be issued if the vendor is on back-order and sends
    invoices as products are shipped or if the vendor sends partial bills or requests a deposit. In
    this case, multiple bills may have the same :guilabel:`Bill Reference`.
+
+.. _accounting/vendor_bills/vendor-bills-matching-po:
+
+Purchase order matching
+=======================
+
+Matching a purchase order (PO) with a vendor bill verifies that billed quantities and prices align
+with the original order, ensuring payment accuracy.
+
+.. tip::
+   To display the :guilabel:`Purchase Order` column in a vendor bill, click the
+   :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon and enable :guilabel:`Purchase
+   Order`.
+
+If a purchase order exists for the :ref:`created vendor bill <accounting/vendor_bills/creation>`,
+use one of the following methods:
+
+- To automatically fill in the bill lines using all lines from the selected purchase order, click
+  the :guilabel:`Auto-Complete` field and select the relevant purchase order:
+
+  - A smart button displaying the purchase order number appears at the top of the vendor bill.
+  - All bill lines are automatically populated to reflect the matched purchase order.
+  - The corresponding purchase order number appears in the :guilabel:`Purchase Order` column of
+    the vendor bill.
+
+- To match a vendor bill with specific purchase order lines, follow these steps:
+
+  #. Click the :guilabel:`PO Matching` smart button to access the :guilabel:`Purchase Matching` list
+     view, which displays all purchase order lines linked to the vendor on the bill.
+
+     .. note::
+        Only received products from purchase order lines appear in the :guilabel:`Purchase matching`
+        list view.
+
+  #. Select the relevant purchase order lines and the draft vendor bill (shown in grey).
+
+     .. tip::
+        If needed, update the :guilabel:`Quantity` and :guilabel:`Price` in the purchase order
+        lines. This will also update the corresponding purchase order.
+
+  #. Click :guilabel:`Match`.
+
+  Back in the vendor bill:
+
+  - The :guilabel:`PO Matching` smart button displays the matching percentage with the corresponding
+    purchase order.
+  - A smart button displaying the purchase order number appears at the top of the vendor bill.
+  - The bill lines are updated to reflect the matched purchase order lines.
+  - The corresponding purchase order number appears in the :guilabel:`Purchase Order` column of the
+    vendor bill.
+
+.. note::
+   If quantities or prices on the vendor bill differ from the purchase order, these changes are
+   highlighted in the :guilabel:`Purchase Order` column:
+
+   - An :icon:`fa-exclamation-triangle` :guilabel:`(exclamation triangle)` icon indicates a change
+     in quantity.
+   - A downward arrow appears if the vendor bill price is lower than the purchase order price, while
+     an upward arrow indicates a higher price.
+
+If no purchase order exists for the vendor bill, follow these steps:
+
+#. Once the vendor bill is :ref:`created <accounting/vendor_bills/creation>` and :ref:`completed
+   <accounting/vendor_bills/bill-completion>`, click the :guilabel:`PO Matching` smart button.
+#. Select the draft vendor bill from the list (shown in grey), and click :guilabel:`Add
+   to PO`.
+#. In the :guilabel:`Add to Purchase Order` window, click :guilabel:`Add Products` to create a new
+   purchase order directly from the vendor bill lines.
+#. In the new purchase order, click :guilabel:`Receive`, then :guilabel:`Validate`.
+#. Use the breadcrumbs to return to the new purchase order, then click the :guilabel:`Vendor Bills`
+   smart button to go back to the draft vendor bill:
+
+   - The :guilabel:`PO Matching` smart button displays the matching percentage with the
+     corresponding purchase order.
+   - A smart button displaying the purchase order number appears at the top of the vendor bill.
+   - The corresponding purchase order number appears in the :guilabel:`Purchase Order` column of the
+     vendor bill.
 
 .. _accounting/vendor_bills/bill-confirmation:
 
