@@ -180,11 +180,8 @@ create the payslip.
 Then, a confirmation pop-up window appears, asking :guilabel:`Are you sure you want to proceed?`.
 Click :guilabel:`OK` to confirm.
 
-The chatter is automatically updated to show the email sent to the employee, along with a PDF copy
-of the payslip.
-
-.. note::
-   The database may need to be refreshed for the payslip and email to appear.
+Refresh the page, and the chatter is updated to show the email sent to the employee. If the screen
+is wide enough, a copy of the PDF payslip appears in the sidebar.
 
 To print the payslip, click the :guilabel:`Print` button. To cancel the payslip, click the
 :guilabel:`Cancel` button.
