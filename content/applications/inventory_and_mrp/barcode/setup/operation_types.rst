@@ -106,7 +106,7 @@ operation type required.
 
 Next, click the :icon:`fa-print` :guilabel:`Print` button and select either :guilabel:`Operation
 type (PDF)` to download a PDF with the operation barcodes, or :guilabel:`Operation type (ZPL)` to
-send the print job to a :ref:`ZPL-enabled printer <iot/link-printer>`.
+send the print job to a :ref:`ZPL-enabled printer <iot/printer/automatic-printing>`.
 
 .. note::
    The :icon:`fa-print` :guilabel:`Print` button does not appear until at least one operation type
