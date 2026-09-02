@@ -10,8 +10,8 @@ outstanding bills to help ensure timely payment of the correct amounts.
 
 .. seealso::
    - Tutorial `Registering a vendor bill <https://www.odoo.com/slides/slide/register-a-vendor-bill-6582>`_
-   - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
-   - :doc:`../accounting/customer_invoices/credit_notes`
+   - :doc:`../../inventory_and_mrp/purchase/manage_deals/manage`
+   - :doc:`customer_invoices/credit_notes`
 
 .. _accounting/vendor_bills/creation:
 
@@ -50,7 +50,7 @@ Vendor bills can be automatically created by sending an email to an :ref:`email 
      <accounting/bill-digitization/vendor-bills-matching-po>` to replace OCR-detected data with the
      existing purchase order's details.
    - Services such as digitizing scanned or PDF vendor bills in Odoo require :doc:`In-App
-     Purchase (IAP) </applications/essentials/in_app_purchase>` credits.
+     Purchase (IAP) <../../essentials/in_app_purchase>` credits.
 
 To automatically post bills from selected vendors, go to :menuselection:`Accounting --> Vendors -->
 Vendors` and select the relevant vendor. In the :guilabel:`Accounting` tab, under the
@@ -60,10 +60,6 @@ following options:
 - :guilabel:`Always`
 - :guilabel:`Ask after 3 validations without edits`
 - :guilabel:`Never`
-
-.. seealso::
-   :ref:`Vendor bills matching with purchase orders
-   <accounting/bill-digitization/vendor-bills-matching-po>`
 
 .. _accounting/vendor_bills/bill-completion:
 
@@ -103,7 +99,7 @@ In the :guilabel:`Invoice Lines` tab:
    linking it to a product.
 
 To access the product catalog and view all items in an organized display, click :doc:`Catalog
-</applications/essentials/product_catalog>`. When the products and quantities are selected, click
+<../../essentials/product_catalog>`. When the products and quantities are selected, click
 :guilabel:`Back to Bill` to return to the vendor bill; the selected catalog items will appear in the
 vendor bill lines.
 
@@ -111,6 +107,48 @@ vendor bill lines.
    Multiple bills for the same purchase order may be issued if the vendor is on back-order and sends
    invoices as products are shipped or if the vendor sends partial bills or requests a deposit. In
    this case, multiple bills may have the same :guilabel:`Bill Reference`.
+
+.. _accounting/vendor_bills/vendor-bills-matching-po:
+
+Purchase order matching
+=======================
+
+To match a vendor bill to the corresponding purchase order, follow these steps:
+
+#. Once a vendor bill has been :ref:`created <accounting/vendor_bills/creation>`, :ref:`completed
+   <accounting/vendor_bills/bill-completion>`, and saved, click the :guilabel:`Purchase matching`
+   smart button to access the :guilabel:`Purchase matching` list view, displaying all purchase order
+   lines linked to the vendor assigned to the vendor bill.
+
+   .. note::
+      Only received products from the purchase order lines are displayed in the :guilabel:`Purchase
+      matching` list view.
+
+#. Select the relevant purchase order lines and the draft vendor bill (shown in grey).
+
+   .. tip::
+      Update the :guilabel:`Quantity` and :guilabel:`Price` in the purchase order lines, if
+      necessary.
+
+#. Click :guilabel:`Match`, then :guilabel:`Draft Bill` to go back to the vendor bill. A smart
+   button displaying the purchase order number appears at the top of the vendor bill.
+
+If there is no existing purchase order related to the vendor bill, follow these steps:
+
+#. Once the vendor bill is :ref:`created <accounting/vendor_bills/creation>`, :ref:`completed
+   <accounting/vendor_bills/bill-completion>`, and saved, click the :guilabel:`Purchase matching`
+   smart button.
+#. Select the draft vendor bill from the list (shown in grey), and click :guilabel:`Add
+   to PO`.
+#. In the :guilabel:`Add to Purchase Order` window, click :guilabel:`Add Products` to create a new
+   purchase order directly from the vendor bill lines.
+#. In the new purchase order, click :guilabel:`Receive Products`, then :guilabel:`Validate`.
+#. Use the breadcrumbs to return to the new purchase order, then click the :guilabel:`Vendor Bills`
+   smart button to go back to the draft vendor bill.
+
+.. tip::
+   Alternatively, the :ref:`Auto-complete <accounting/vendor_bills/bill-completion>` feature can
+   transfer information from the purchase order to the vendor bill.
 
 .. _accounting/vendor_bills/bill-confirmation:
 
