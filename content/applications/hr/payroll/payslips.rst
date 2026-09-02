@@ -300,11 +300,7 @@ Print a payslip
 ===============
 
 To print a payslip, click the :guilabel:`Print` button in the upper-left corner of the individual
-payslip record. A PDF file is downloaded, and the payslip appears in the chatter, and the file is
-attached to the payslip record.
-
-.. image:: payslips/payslip-chatter.png
-   :alt: The new payslip is emailed to the employee and the email appears in the chatter.
+payslip record, and the PDF file is downloaded.
 
 .. _payroll/all-payslips:
 
