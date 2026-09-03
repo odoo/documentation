@@ -86,7 +86,7 @@ notification stating `Badge assigned successfully!` appears in the upper-right c
 *Onboarding* dashboard.
 
 The new badge number appears in the *RFID/Badge Number* field in the *Settings* tab on the
-:ref:`employee's form <employees/hr-attn-pos>`.
+:ref:`employee's form <employees/new_employee/hr-attn-pos>`.
 
 .. image:: attendance_onboarding/new-barcode.png
    :alt: A barcode set-up pop-up window with a new barcode entered.
