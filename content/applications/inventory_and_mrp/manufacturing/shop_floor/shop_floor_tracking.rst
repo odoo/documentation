@@ -48,8 +48,8 @@ to the *Shop Floor* module.
 .. seealso::
    Each employee can be assigned a PIN, which must be entered when signing in to the *Shop Floor*
    module. Badges can also be generated and printed for checking in and out with *Kiosk Mode* in the
-   **Attendances** app. See the :ref:`employee settings section <employees/hr-attn-pos>` to learn
-   more.
+   **Attendances** app. See the :ref:`employee settings section
+   <employees/new_employee/hr-attn-pos>` to learn more.
 
 Remove an operator
 ------------------

@@ -726,7 +726,7 @@ the employee can be assigned in the **Planning** app.
   drop-down menu. If the :guilabel:`Default Role` is selected before the :guilabel:`Roles` field is
   configured, the selected role is automatically added to the list of :guilabel:`Roles`.
 
-.. _employees/hr-attn-pos:
+.. _employees/new_employee/hr-attn-pos:
 
 Attendance/Point of Sale/Manufacturing
 --------------------------------------
@@ -747,5 +747,7 @@ This section determines how employees sign in to the **Attendances**, **Point Of
   If the employee uses an RFID token or already has an ID badge issued with a barcode, click
   :guilabel:`Read a badge` and the system allows the barcode or RFID token to be read. Once read,
   the number populates the :guilabel:`RFID/Badge Number` field.
+- :guilabel:`ZKTeco Employee ID`: If the :guilabel:`Attendances ZKTeco BioTime` module is installed,
+  this field appears. Enter the ZKTeco BioTime employee ID in this field.
 - :guilabel:`Overtime Ruleset`: Select the overtime rules to be used when calculating overtime for
   the employee using the drop-down menu.
