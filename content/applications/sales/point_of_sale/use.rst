@@ -432,6 +432,64 @@ Difference` field.
 Once configured, if a discrepancy exceeds this limit, the pop-up window displays the authorized
 threshold and instructs the user to contact a manager to approve the closing.
 
+Offline POS
+===========
+
+During an internet outage, the POS switches to *offline mode*. This mode keeps order creation and
+management functional even when backend-dependent features are unavailable. When a :ref:`POS session
+starts <pos/use/open-register>`, essential data, such as products and customers, are loaded into the
+browser cache so that the data remain accessible offline. Orders created offline are stored in the
+browser cache and synced to the backend when the connection is restored.
+
+.. important::
+   To avoid losing any data created while offline, do not close or reload the browser, and do not
+   clear the browser cache until the POS is back online and synced with the backend.
+
+.. tip::
+   The :icon:`fa-chain-broken` (:guilabel:`offline mode`) icon appears in the POS interface header
+   when the system is offline.
+
+Many POS features rely on backend information and, therefore, are not available offline. These
+features include:
+
+- :doc:`Generating invoices. <use/pos_invoices>`
+- :ref:`Registering customers. <pos/use/customers>`
+- :ref:`Accessing detailed product information. <pos/products/information-display>`
+- :ref:`Synchronizing stock in real-time. <pos/products/stock-management>`
+- :ref:`Using payment terminals. <pos/terminals/terminal-use>`
+- Loading data on demand.
+
+Devices connected to the :doc:`local network <hardware_network/pos_lna>`, such as :doc:`printers <hardware_network/receipt_printers>`
+and :doc:`scales <hardware_network/scale>`, continue to work offline, but it is important not to
+make any changes to the local network. Connected payment terminals will not work, as they rely on an
+active internet connection.
+
+.. note::
+   - Invoices can be requested while offline, and they are automatically generated after the
+     connection is restored.
+   - If a feature is not available offline, a popover with the message :guilabel:`Connection Lost`
+     appears. To use the offline POS without that feature, click :guilabel:`Continue with limited
+     functionality`.
+
+Cached data
+-----------
+
+Each time a customer or product is used in the POS, new data are added to the browser cache, along
+with the data loaded at the beginning of a session. If frequent internet outages occur, increasing
+the amount of data loaded into the POS at the start of the session can ensure that when the POS goes
+offline, all necessary data remain available. To determine the amount of data initialized in the
+POS, activate :ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings -->
+Technical --> System Parameters`. The following system parameters are available:
+
+- **limited_customer_count**: Number of :ref:`customers <pos/use/customers>` loaded. Customers with
+  the most orders are loaded into the POS up to the parameter value.
+- **limited_product_count**: Number of :doc:`products <products>` loaded. First, favorite products
+  are selected, then services, and lastly, the most recently updated products.
+
+.. note::
+   Increasing the amount of data initialized in the POS also increases the time it takes to open the
+   register.
+
 .. seealso::
    - :doc:`shop`
    - :doc:`restaurant`
