@@ -204,6 +204,10 @@ is used in the Field Service app to plan an itinerary between different tasks.
 - To have a route suggested between the different records, tick :guilabel:`Enable Routing` and
   select which field should be used to sort records for the routing.
 
+  .. note::
+     A :ref:`MapBox token <general/integrations/geolocation-routes>` must be configured to use the
+     routing.
+
 .. example::
 
    .. image:: views/map-task.png
