@@ -1665,9 +1665,9 @@ Next, create a sales order and confirm it. Click the :guilabel:`Delivery` smart 
 appears, and carefully review the assigned lots/serial numbers to make sure they are the desired
 values, after that :guilabel:`Validate` the delivery order.
 
-Finally, :ref:`create an invoice from the sales order <accounting/inv-process/so>`, and confirm it.
-The invoice lines are created according to the distribution of the delivery order, in cases where
-more than one customs number were selected, Odoo will split the invoice lines by quantity and
+Finally, :ref:`create an invoice from the sales order <accounting/inv-process/sales>`, and confirm
+it. The invoice lines are created according to the distribution of the delivery order, in cases
+where more than one customs number were selected, Odoo will split the invoice lines by quantity and
 customs numbers.
 
 .. image:: mexico/mx-landing-invoice.png
