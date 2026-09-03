@@ -12,7 +12,10 @@ Odoo version 20.0
 - Removing ``Model._table_query`` in
   `#281202 <https://github.com/odoo/odoo/pull/281202>`_.
 - Simplifying translation manipulation.
-  See `#272177 <https://github.com/odoo/odoo/pull/272177>`_.
+  Fields have now a copy function and it defaults to a function that adds
+  "(copy)" for char fields named "name".
+  See `#272177 <https://github.com/odoo/odoo/pull/272177>`_
+  and `#284881 <https://github.com/odoo/odoo/pull/284881>`_.
 - New ``populate`` script to generate fake data for testing.
 - Storing manifest terms in modules' own translation files instead of ``base``.
   See `#264363 <https://github.com/odoo/odoo/pull/264363>`_.
