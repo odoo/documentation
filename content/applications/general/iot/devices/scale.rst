@@ -26,6 +26,8 @@ Once the scale is connected to the IoT system, :doc:`configure it in the POS set
    :doc:`Connect an IoT system to a POS
    </applications/sales/point_of_sale/hardware_network/pos_iot>`
 
+.. _iot/scale/ariva-s:
+
 Ariva S scales
 ==============
 
@@ -40,13 +42,12 @@ specific setting must be modified, and a dedicated Mettler USB-to-proprietary RJ
 To configure the Ariva S scale for IoT system recognition, refer to page 17 of `Mettler's Setup
 Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow these steps:
 
-#. Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears.
+#. Hold the **>T<** button until :guilabel:`CONF` appears.
 #. Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm.
-#. At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports) by
-   pressing **>T<** to cycle through the options.
-#. Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next step).
-#. At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO))
-   by pressing **>T<** to cycle through the options.
+#. At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports).
+   Press **>T<** to cycle through the options.
+#. Press **>0<** until :guilabel:`3.6` and make sure the value is set to :guilabel:`3` (8217
+   Mettler-Toledo (WO)).
 #. Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears.
 #. Press **>T<** until :guilabel:`EXIT` appears.
 
@@ -55,5 +56,8 @@ Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and
 
 #. Press **>0<**.
 #. Press **>0<** again to :guilabel:`SAVE`; the scale restarts.
-#. Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`.
-   The scale should then appear as `Toledo 8217`.
+
+.. tip::
+   Reboot the :doc:`IoT box <../../../../applications/general/iot/iot_box>` or :ref:`restart the
+   Windows virtual IoT service <iot/windows_iot/restart>`. The scale should then appear as `Toledo
+   8217`.
