@@ -102,8 +102,8 @@ Assets
 ~~~~~~
 
 Account types of :guilabel:`Fixed Assets` and :guilabel:`Non-current Assets` can **automate** the
-creation of :ref:`asset <assets-automation>` entries. To **automate** entries, click
-:guilabel:`View` on an account line and go to the :guilabel:`Automation` tab.
+creation of :ref:`asset <assets/account>` entries. To **automate** entries, click :guilabel:`View`
+on an account line and go to the :guilabel:`Automation` tab.
 
 There are three options for the :guilabel:`Automation` tab:
 
