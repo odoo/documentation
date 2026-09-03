@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-28 17:32+0000\n"
-"PO-Revision-Date: 2026-08-24 15:17+0000\n"
+"PO-Revision-Date: 2026-09-03 12:40+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-doc/"
 "inventory_and_mrp/it/>\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
 msgid "Supply Chain"
@@ -54663,6 +54663,11 @@ msgid ""
 "and forecasted demand. In other words, the suggested quantity in the "
 "replenishment row is calculated by the following relation:"
 msgstr ""
+"Per impostazione predefinita, il piano generale di produzione suggerisce la "
+"quantità di rifornimento necessaria per raggiungere :guilabel:`l’obiettivo "
+"di scorta di sicurezza` tenendo conto delle scorte iniziali e della domanda "
+"prevista. In altre parole, la quantità suggerita nella riga di rifornimento "
+"viene calcolata in base alla seguente relazione:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:201
 msgid ""
@@ -54673,16 +54678,24 @@ msgid ""
 "&+ \\text{Indirect Demand Forecast}\n"
 "\\end{align}"
 msgstr ""
+"\\begin{align}\n"
+"\\text{Rifornimento} &= \\text{Obiettivo giacenza di sicurezza} \\\\\n"
+"&- \\text{Scorte iniziali} \\\\\n"
+"&+ \\text{Domanda prevista} \\\\\n"
+"&+ \\text{Domanda indiretta prevista}\n"
+"\\end{align}"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:210
 msgid ""
 "Additionally, the following rules are applied to the suggested "
 "`Replenishment` quantity above if minimum/maximum limits are set:"
 msgstr ""
+"Inoltre, se sono stati impostati limiti minimi/massimi, alla quantità di "
+"`Rifornimento` suggerita sopra indicata vengono applicate le seguenti regole:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:213
 msgid "If ``Replenishment > Maximum to Replenish``, it remains at the maximum."
-msgstr ""
+msgstr "se ``Rifornimento > Massimo da rifornire``, rimane al minimo;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:214
 msgid ""
@@ -54690,6 +54703,9 @@ msgid ""
 "minimum quantity. If ``Replenishment ≤ 0``, it defaults to `0`. However, if "
 "the suggestion already meets or exceeds the minimum, it remains as-is."
 msgstr ""
+"se ``0 < Rifornimento < Minimo da rifornire``, il suggerimento corrisponde "
+"alla quantità minima. Se ``Rifornimento ≤ 0``, il valore predefinito è `0`. "
+"Tuttavia, se la proposta corrisponde o supera il minimo rimane come è."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:219
 msgid ""
@@ -54697,18 +54713,21 @@ msgid ""
 "and a forecasted demand of `75` units. The following replenishment options "
 "are set:"
 msgstr ""
+"Il prodotto *Sedia* ha uno stock iniziale di `60` unità per il periodo "
+"corrente e una domanda prevista di `75` unità. Sono impostate le seguenti "
+"opzioni di rifornimento:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
 msgid ":guilabel:`Safety Stock Target`: `10` units"
-msgstr ""
+msgstr ":guilabel:`Obiettivo per giacenza di sicurezza`: `10` unità"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:223
 msgid ":guilabel:`Minimum to Replenish`: `5` units"
-msgstr ""
+msgstr ":guilabel:`Minimo da rifornire`: `5` unità"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
 msgid ":guilabel:`Maximum to Replenish`: `20` units"
-msgstr ""
+msgstr ":guilabel:`Massimo da rifornire`: `20` unità"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:226
 msgid ""
@@ -54716,6 +54735,9 @@ msgid ""
 "`25` units of the *Chair*, it exceeds the configured maximum of `20` units. "
 "Therefore the final suggested replenishment quantity is `20`."
 msgstr ""
+"Sebbene la quantità di rifornimento suggerita predefinita (``10 - 60 + 75``) "
+"sia di `25` unità, essa supera il massimo configurato di `20` unità. "
+"Pertanto, la quantità di rifornimento suggerita finale è `20`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Specify replenishment trigger"
