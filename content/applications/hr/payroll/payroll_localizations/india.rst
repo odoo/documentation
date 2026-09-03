@@ -476,9 +476,12 @@ including:
 - :ref:`Salary Register <payroll/in_salary_register>`
 - :ref:`EPF Report <payroll/in_epf_report>`
 - :ref:`ESI Report <payroll/in_esi_report>`
-- :ref:`Labour Wlefare Fund Report <payroll/in_lwf_report>`
+- :ref:`TDS Challan <payroll/in_tds_challan_report>`
+- :ref:`Form 138 <payroll/in_form_138_report>`
+- :ref:`Labour Welfare Fund Report <payroll/in_lwf_report>`
 - :ref:`Salary Statement Report <payroll/in_salary_statement_report>`
 - :ref:`Yearly Salary by Employee <payroll/in_yearly_salary_report>`
+- :ref:`Gratuity Calculation Report <payroll/in_gratuity_calculation_report>`
 
 .. _payroll/in_salary_register:
 
@@ -535,6 +538,70 @@ as per the need and click on :guilabel:`Export XLSX File`.
 .. image:: india/in-esi-report.png
       :alt: ESI Report
 
+.. _payroll/in_tds_challan_report:
+
+TDS Challan
+-----------
+
+**Tax Deducted at Source (TDS)** is a mechanism where the employer deducts tax from an employee's salary
+when applicable and deposits the deducted amount with the Central Government.
+
+A **TDS Challan** is used to record and deposit the TDS deducted from employees' salaries.
+The challan is prepared for the relevant period based on the payslips for which TDS has been deducted.
+
+The TDS Challan contains the details required for recording the TDS payment,
+including the **challan number** and **BSR code**. Payslips with TDS deductions can
+be added to the challan so that the deducted amounts can be included in the challan records.
+
+To create a TDS Challan, navigate to :menuselection:`Payroll app --> Reporting --> TDS Challans`.
+Click on :guilabel:`New` and set the required **Date**, **Challan Number**, and **BSR Code**.
+Click on :guilabel:`Import Payslips` to select the relevant payslips.
+Select the payslips and click on :guilabel:`Add to Challan`.
+
+The paid payslips that have a TDS deduction are added to the challan lines.
+Review the challan details and click on :guilabel:`Mark as Done` to complete the TDS Challan.
+
+.. image:: india/in-tds-challan-form-view.png
+      :alt: TDS Challan Report
+
+.. _payroll/in_form_138_report:
+
+Form 138
+--------
+
+**Form 138**, earlier known as **Form 24Q**, is a quarterly statement used by employers to
+report TDS deducted from salaries paid to employees.
+The Form 138 report uses the TDS challan information to report the tax deposited during the respective quarter.
+Form 138 should be prepared at the end of each quarter to report the TDS deducted from employees'
+salaries during that quarter.
+
+Before creating Form 138, configure the company's TDS details in the Indian Localization settings.
+Navigate to :menuselection:`Payroll app --> Configuration --> Settings`, and configure the
+**Tax Deducted at Source (TDS)** section with the required company details, including the
+:guilabel:`TAN No.`, :guilabel:`PAN No.`, :guilabel:`Deductor Type`, and
+:guilabel:`Responsible Person`.
+
+These details are required when generating the Form 138 report.
+
+.. image:: india/in-tds-configuration.png
+   :alt: TDS Configuration
+
+To create Form 138, navigate to :menuselection:`Payroll app --> Reporting --> Form 138`.
+Click on :guilabel:`New` to create a Form 138 for an individual quarter.
+Alternatively, click on :guilabel:`Generate for Current FY` to automatically create Form 138 records
+for all four quarters of the current financial year.
+
+.. image:: india/in-form-138-kanban.png
+      :alt: Form 138 Kanban
+
+Click on :guilabel:`Details` to open the required Form 138 record. Add the TDS challans applicable to that quarter
+in the :guilabel:`Challans` section. After adding the required challans, click on :guilabel:`Mark as Done`.
+
+Once the Form 138 is completed, generate the **text file** required for the filing process.
+
+.. image:: india/in-form-138-form-view.png
+      :alt: Form 138 form view
+
 .. _payroll/in_lwf_report:
 
 Labour Welfare Fund (LWF) Report
@@ -584,3 +651,31 @@ Click on :guilabel:`Print` to download Yearly Salary by Employee Report.
 
 .. image:: india/in-yearly-salary-by-employee.png
       :alt: Yearly Salary by Employee Report
+
+.. _payroll/in_gratuity_calculation_report:
+
+Gratuity Calculation Report
+---------------------------
+
+The **Gratuity Calculation Report** provides the gratuity calculation for each employee and clearly
+shows whether the employee is eligible for gratuity. As per the applicable government rules, an
+employee is generally eligible for gratuity after completing **5 years** of continuous service.
+
+Gratuity is calculated using the following formula:
+
+.. math::
+
+   \text{Gratuity Amount} = \left(\text{Last Drawn Salary (Basic + DA)} \times \frac{15}{26}\right) \times \text{Years of Calculation}
+
+.. note::
+   If the service period in the final year exceeds 6 months, it is rounded up to a full additional year
+   for the calculation.
+
+To generate the report, navigate to :menuselection:`Payroll app --> Reporting --> Gratuity Calculation Report`.
+A :guilabel:`Gratuity Calculation` pop-up window will appear. Choose the :guilabel:`Selection Mode`
+(:guilabel:`By Employee`, :guilabel:`By Department`, :guilabel:`By Job Position`,
+:guilabel:`By Salary Structure`, or :guilabel:`By Employee Tag`) to filter the employees.
+Click :guilabel:`Export XLSX` to download the Gratuity Calculation Report.
+
+.. image:: india/in-gratuity-calculation-report.png
+   :alt: Gratuity Calculation Report
