@@ -8,16 +8,22 @@ directly from Odoo applications.
 Connection
 ==========
 
-IoT systems support printers connected through USB or network connections.
-`Supported printers <https://www.odoo.com/page/iot-hardware>`_ are detected automatically and appear
-in :menuselection:`IoT --> Devices`.
+IoT systems support both USB and network-connected printers. Document printers and `supported label
+printers <https://www.odoo.com/page/iot-hardware>`_ are automatically detected and appear in
+:menuselection:`IoT --> Devices`.
 
 After :doc:`connecting an IoT system to Odoo <../connect>`, connect a printer using one of these
 methods:
 
-- **USB printer**: Plug the printer directly into the IoT system with a USB cable.
-- **Network printer**: Connect the printer to the *same* local network as the IoT system through
+- **USB printer:** Plug the printer directly into the IoT system with a USB cable.
+- **Network printer:** Connect the printer to the **same** local network as the IoT system through
   Ethernet or Wi-Fi.
+
+The (todo: ZPL only?) printer will be print a test page automatically when the connection with the
+IoT system has been established.
+
+.. todo::
+   Update the image.
 
 .. image:: printer/printer-detected.png
    :alt: The printer as it would appear in the IoT app devices list.
@@ -30,11 +36,11 @@ To print a test page and confirm a printer is set up correctly, follow these ste
 
 #. Go to the :guilabel:`IoT` app.
 #. Select the relevant IoT system.
-#. Select the printer from the :guilabel:`Devices` tab.
+#. Select the printer in the :guilabel:`Devices` tab.
 #. Click :guilabel:`Test`.
 
 .. note::
-   - It is possible to use specific :doc:`POS receipt printers
+   - It is possible to use supported :doc:`POS receipt printers
      <../../../sales/point_of_sale/hardware_network/receipt_printers>` without an IoT system.
    - Printers can take up to two minutes to appear in the IoT app's :guilabel:`Devices` list.
 
@@ -78,29 +84,34 @@ specific product.
    - :doc:`/applications/inventory_and_mrp/quality/quality_management/quality_control_points`
    - :doc:`/applications/inventory_and_mrp/quality/quality_management/quality_alerts`
 
-.. _iot/link-printer:
+.. _iot/automatic-printing:
 
-Link reports to a printer
--------------------------
+Automatic printing
+------------------
 
-It is possible to link report types to a specific printer. To do so:
+To automatically print reports (invoices, quotations, product labels, etc.) on a specific printer,
+follow these steps:
 
 #. Go to :menuselection:`IoT --> Devices` and select the desired printer.
-#. Go to the :guilabel:`Printer Reports` tab and click :guilabel:`Add a line`.
-#. In the pop-up that opens, select the types of reports to be linked to the printer and click
+#. Go to the :guilabel:`Reports to Auto-Print` tab and click :guilabel:`Add a line`.
+#. In the pop-up that opens, select the reports to assign to the printer and click
    :guilabel:`Select`.
+
+.. todo::
+   Update the image.
 
 .. image:: printer/printer-reports.png
    :alt: The list of reports assigned to a printer in the IoT app.
 
-.. tip::
-   Reports can also be configured by :ref:`enabling the developer mode <developer-mode>` and going
-   to :menuselection:`Settings --> Technical --> Reports`. Select the desired report from the list
-   and set an :guilabel:`IoT Device`.
-
 The first time a linked report is selected to print, a :guilabel:`Select Printers` pop-up window
-appears. Tick the checkbox next to the correct printer for the report, and click :guilabel:`Print`.
-At that point, the report is linked to the printer.
+appears. Select the desired printer in the :guilabel:`Printers` field, then click `Print`. To
+permanently assign a printer to a report for the current browser, tick the :guilabel:`Do not ask me
+again` checkbox.
+
+.. tip::
+   Alternatively, to assign a report to a printer, :ref:`enable developer mode <developer-mode>` and
+   go to :menuselection:`Settings --> Technical --> Reports`. Select the desired report and select
+   the printer in the :guilabel:`IoT Devices` field.
 
 Clear device printer cache
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,11 +148,12 @@ The following operations can solve many printer issues:
 #. Check that all cables are connected correctly.
 #. Turn every device off, then back on.
 #. Connect the printer to the IoT system before powering on the IoT system.
-#. Restart the IoT system from its homepage.
-#. Ensure the paper is loaded correctly.
+#. Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service
+   <iot/windows_iot/restart>`.
+#. Ensure the paper is loaded correctly in the printer.
 #. Make sure everything is on the same local network, and the signal is strong if you are using a
    network printer.
-#. Remove the printer from the IoT system and add the printer again from the IoT homepage.
+#. Remove the printer from the IoT system and add the printer again from the IoT homepage. (todo: explain how?)
 #. Install the latest printer firmware updates.
 
 The following sections provide solutions to specific issues:
