@@ -139,10 +139,22 @@ This command is the default one: you can omit it, and it will be chosen anyway.
 
 .. option:: -c <config>, --config <config>
 
-    path to an alternate :ref:`configuration file <reference/cmdline/config>`.
-    If not defined, Odoo checks ``ODOO_RC`` environmental variable
-    and default location :file:`{$HOME}/.odoorc`.
-    See configuration file section :ref:`below <reference/cmdline/config>`.
+    path to an alternate :ref:`configuration file <reference/cmdline/config>`,
+    can also be set via the ``ODOO_RC`` environment variable. When neither is
+    set, it lookups the following places:
+
+    Posix:
+
+    * :file:`/home/$USER/.config/odoo/odoo.conf`
+    * :file:`/etc/xdg/xdg-cinnamon/odoo` (XDG site, can vary)
+    * :file:`/home/$USER/.odoorc`
+    
+    Windows:
+
+    * :file:`C:\Users\%USERNAME%\AppData\Local\odoo\odoo\odoo.conf`
+    * :file:`C:\ProgramData\odoo\odoo\odoo.conf`
+    * :file:`odoo.conf` file next to the ``odoo-bin`` executable
+    * :file:`C:\Users\%USERNAME%\.odoorc`
 
 .. option:: -D <data-dir-path>, --data-dir <data-dir-path>
 
@@ -155,8 +167,8 @@ This command is the default one: you can omit it, and it will be chosen anyway.
 .. option:: -s, --save
 
     saves the server configuration to the current configuration file
-    (:file:`{$HOME}/.odoorc` by default, and can be overridden using
-    :option:`-c`).
+    (:option:`-c`). It uses the same lookup order as :option:`-c` when no
+    configuration file exists, stopping at the first folder that exists.
 
 .. option:: --with-demo
 
