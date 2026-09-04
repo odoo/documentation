@@ -220,23 +220,22 @@ Online payment providers
 .. _payment_providers/alternatives:
 
 Alternative payment methods
-===========================
+---------------------------
 
 Some payment methods do not rely on an external payment provider. These methods are still
 installed and configured as payment providers in Odoo, and include the following:
 
-- | :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`
-  | Odoo displays your payment information with a payment reference. You have to approve the payment
-    manually once it has been received in your bank account.
-- | :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`
-  | Customers can make a bank transfer to register a SEPA Direct Debit mandate and allow their
-    account to be charged directly for future payments.
-- | :ref:`Pay on Site <ecommerce/payments/pay-on-site>`
-  | Customers reserve products online and pay when collecting their orders in store.
-- | :ref:`Cash on Delivery <ecommerce/payments/cash-on-delivery>`
-  | Customers pay for their orders upon delivery.
-- | :ref:`Pay on Invoice <ecommerce/payments/pay-on-invoice>`
-  | Customers pay for their orders later, after receiving an invoice.
+- :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`: Customers make a bank
+  transfer using your payment information and a payment reference.
+- :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`: Customers make a bank transfer to
+  register a SEPA Direct Debit mandate, allowing their account to be charged directly for future
+  payments.
+- :ref:`Pay on Site <ecommerce/payments/pay-on-site>`: Customers reserve products online and pay
+  when collecting their orders in store.
+- :ref:`Cash on Delivery <ecommerce/payments/cash-on-delivery>`: Customers pay for their orders
+  upon delivery.
+- :ref:`Pay on Invoice <ecommerce/payments/pay-on-invoice>`: Customers pay for their orders later,
+  after receiving an invoice.
 
 .. _payment_providers/add_new:
 
