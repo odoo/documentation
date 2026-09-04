@@ -159,22 +159,123 @@ box, click :guilabel:`Delete`.
 Web services
 ============
 
-To retrieve a list of all databases displayed under the `database manager
-<https://www.odoo.com/my/databases>`_ programmatically, call the `list` method of the
-`odoo.database` model via an :doc:`external JSON-2 API <../developer/reference/external_api>` call.
+Databases list
+--------------
 
-.. example::
-   .. code:: python
+To retrieve a list of all databases displayed under the :ref:`database manager
+<odoo-online/database-manager>` programmatically, call the `list` method of the `odoo.database` model
+via the :doc:`external JSON-2 API <../developer/reference/external_api>`.
 
-      import requests
+.. tabs::
 
-      APIKEY = "your_apikey"
+  .. tab:: Python
 
-      requests.post(
-          "https://www.odoo.com/json/2/odoo.database/list",
-          headers={
-              "Authorization": f"bearer {APIKEY}",
-              "X-Odoo-Database": "openerp",
-          },
-          json={},
-      )
+     .. code-block:: python
+
+        import requests
+
+        API_KEY = "your_api_key"
+
+        response = requests.post(
+            "https://www.odoo.com/json/2/odoo.database/list",
+            headers={
+                "Authorization": f"bearer {API_KEY}",
+            },
+            json={},
+        )
+        response.raise_for_status()
+        databases = response.json()
+
+  .. tab:: cURL
+
+     .. code-block:: console
+
+        curl -X POST \
+          'https://www.odoo.com/json/2/odoo.database/list' \
+          -H 'Authorization: bearer <API_KEY>' \
+          -H 'Content-Type: application/json' \
+          -d '{}'
+
+Audit logs
+----------
+
+To retrieve the admin activity logs of an Odoo Online database, call the `get_audit_logs` method of the
+`odoo.database` model via the :doc:`external JSON-2 API <../developer/reference/external_api>`.
+
+The request must provide either `db_uuid` or `subscription_code`. If `db_uuid` is provided, the logs for
+that database are returned. Otherwise, `subscription_code` can be used to retrieve logs for all databases
+and projects belonging to the subscription.
+
+The optional `cursor` is an opaque value returned by a previous request. When provided, only logs more
+recent than the cursor are returned.
+
+Audit log retrieval is subject to rate limits and must not be performed more than once every 5 minutes.
+
+.. tabs::
+
+  .. tab:: Python
+
+     .. code-block:: python
+
+        import requests
+
+        API_KEY = "your_api_key"
+
+        response = requests.post(
+            "https://www.odoo.com/json/2/odoo.database/get_audit_logs",
+            headers={"Authorization": f"bearer {API_KEY}"},
+            json={"db_uuid": "<DB_UUID>"},
+        )
+        response.raise_for_status()
+        result = response.json()
+
+  .. tab:: cURL
+
+     .. code-block:: console
+
+        curl -X POST \
+          'https://www.odoo.com/json/2/odoo.database/get_audit_logs' \
+          -H 'Authorization: bearer <API_KEY>' \
+          -H 'Content-Type: application/json' \
+          -d '{"db_uuid": "<DB_UUID>"}'
+
+The response is a JSON object containing the logs and an opaque
+cursor for retrieving the next batch:
+
+.. code-block:: json
+
+   {
+      "logs": [
+         {
+            "date": "2026-09-04 12:13:14",
+            "user": "John Doe [Odoo: Foo]",
+            "database": "my-database",
+            "subscription": "sub-code",
+            "ip": "1.2.3.4",
+            "action": "Connect as",
+            "details": "Connected as Admin",
+            "authorized": true
+         }
+      ],
+      "next_cursor": "opaque-cursor-value"
+   }
+
+The request parameters are:
+
+* `db_uuid` (string): the UUID of the database. If provided, `subscription_code` is ignored.
+* `subscription_code` (string): the subscription code. Used when `db_uuid` is not provided.
+* `cursor` (string): an opaque cursor returned by a previous request. When provided, only logs
+  more recent than the cursor are returned.
+
+Each log entry contains:
+
+* `date` (string): the log date and time in UTC.
+* `user` (string): the user who performed the action
+* `database` (string): the database concerned by the action, when applicable.
+* `subscription` (string): the subscription code.
+* `ip` (string): the IP address from which the action was performed.
+* `action` (string): the type of action.
+* `details` (string): additional information about the action.
+* `authorized` (boolean): whether the action was authorized.
+
+The `next_cursor` value is an opaque cursor that can be provided as `cursor` in a subsequent request.
