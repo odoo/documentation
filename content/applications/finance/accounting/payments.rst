@@ -92,8 +92,8 @@ payment method.
 
 .. _finance/accounting/register-payment-invoice-bill:
 
-Registering payment from an invoice or bill
-===========================================
+Registering payments from an invoice or bill
+============================================
 
 To register a payment for an invoice or a bill, follow these steps:
 
