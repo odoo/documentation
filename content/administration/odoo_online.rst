@@ -159,53 +159,129 @@ box, click :guilabel:`Delete`.
 Web services
 ============
 
-To retrieve a list of all databases displayed under the `database manager
-<https://www.odoo.com/my/databases>`_ programmatically, call the `list` method of the
-`odoo.database` model via an :doc:`web service <../developer/howtos/web_services>` call.
+Databases list
+--------------
 
-To retrieve this list with the `xmlrpc.client` library:
+To retrieve a list of all databases displayed under the :ref:`database manager
+<odoo-online/database-manager>` programmatically, call the `list` method of the `odoo.database` model
+via the :doc:`external JSON-2 API <../developer/reference/external_api>`.
 
-.. code:: python
+.. example::
+.. tabs::
 
-   import xmlrpc.client
+```
+  .. tab:: Python
 
-   USER = 'user@domain.tld'
-   APIKEY = 'your_apikey'
+     .. code-block:: python
 
-   root = 'https://www.odoo.com/xmlrpc/'
-   uid = xmlrpc.client.ServerProxy(root + 'common').login('openerp', USER, APIKEY)
-   sock = xmlrpc.client.ServerProxy(root + 'object')
-   databases_list = sock.execute('openerp', uid, APIKEY, 'odoo.database', 'list')
+        import requests
 
-The equivalent example with JSON-RPC:
+        API_KEY = "your_api_key"
 
-.. code:: python
+        response = requests.post(
+            "https://www.odoo.com/json/2/odoo.database/list",
+            headers={
+                "Authorization": f"bearer {API_KEY}",
+            },
+            json={},
+        )
+        response.raise_for_status()
+        databases = response.json()
 
-   import json
-   import random
-   import urllib.request
+  .. tab:: cURL
 
-   USER = 'user@domain.tld'
-   APIKEY = 'your_apikey'
+     .. code-block:: console
 
-   def json_rpc(url, method, params):
-       data = {
-           'jsonrpc': '2.0',
-           'method': method,
-           'params': params,
-           'id': random.randint(0, 1000000000),
-       }
-       req = urllib.request.Request(url=url, data=json.dumps(data).encode(), headers={
-           "Content-Type": "application/json",
-       })
-       reply = json.loads(urllib.request.urlopen(req).read().decode('UTF-8'))
-       if reply.get('error'):
-           raise Exception(reply['error'])
-       return reply['result']
+        curl -X POST \
+          'https://www.odoo.com/json/2/odoo.database/list' \
+          -H 'Authorization: bearer <API_KEY>' \
+          -H 'Content-Type: application/json' \
+          -d '{}'
+```
 
-   def call(url, service, method, *args):
-       return json_rpc(url, 'call', {'service': service, 'method': method, 'args': args})
+Audit logs
+----------
 
-   url = 'https://www.odoo.com/jsonrpc'
-   uid = call(url, 'common', 'login', 'openerp', USER, APIKEY)
-   databases_list = call(url, 'object', 'execute', 'openerp', uid, APIKEY, 'odoo.database', 'list')
+To retrieve the admin activity logs of an Odoo Online database, call the `get_audit_logs` method of the
+`odoo.database` model via the :doc:`external JSON-2 API <../developer/reference/external_api>`.
+
+The request must provide either `db_uuid` or `subscription_code`. If `db_uuid` is provided, the logs for
+that database are returned. Otherwise, `subscription_code` can be used to retrieve logs for all databases
+and projects belonging to the subscription.
+
+The optional `cursor` is an opaque value returned by a previous request. When provided, only logs more
+recent than the cursor are returned.
+
+Audit log retrieval is subject to rate limits and must not be performed more than once every 5 minutes.
+
+.. example::
+.. tabs::
+
+```
+  .. tab:: Python
+
+     .. code-block:: python
+
+        import requests
+
+        API_KEY = "your_api_key"
+
+        response = requests.post(
+            "https://www.odoo.com/json/2/odoo.database/get_audit_logs",
+            headers={"Authorization": f"bearer {API_KEY}"},
+            json={"db_uuid": "<DB_UUID>"},
+        )
+        response.raise_for_status()
+        result = response.json()
+
+  .. tab:: cURL
+
+     .. code-block:: console
+
+        curl -X POST \
+          'https://www.odoo.com/json/2/odoo.database/get_audit_logs' \
+          -H 'Authorization: bearer <API_KEY>' \
+          -H 'Content-Type: application/json' \
+          -d '{"db_uuid": "<DB_UUID>"}'
+```
+
+The response is a JSON object containing the logs and an opaque
+cursor for retrieving the next batch:
+
+.. code-block:: json
+
+{
+"logs": [
+{
+"date": "2026-09-04 12:13:14",
+"user": "John Doe [Odoo: Foo]",
+"database": "my-database",
+"subscription": "sub-code",
+"ip": "1.2.3.4",
+"action": "Connect as",
+"details": "Connected as Admin",
+"authorized": true
+}
+],
+"next_cursor": "opaque-cursor-value"
+}
+
+The request parameters are:
+
+* `db_uuid` (string): the UUID of the database. If provided, `subscription_code` is ignored.
+* `subscription_code` (string): the subscription code. Used when `db_uuid` is not provided.
+* `cursor` (string): an opaque cursor returned by a previous request. When provided, only logs
+   more recent than the cursor are returned.
+
+Each log entry contains:
+
+* `date` (string): the log date and time in UTC.
+* `user` (string): the user who performed the action
+* `database` (string): the database concerned by the action, when applicable.
+* `subscription` (string): the subscription code.
+* `ip` (string): the IP address from which the action was performed.
+* `action` (string): the type of action.
+* `details` (string): additional information about the action.
+* `authorized` (boolean): whether the action was authorized.
+
+The `next_cursor` value is an opaque cursor that can be provided as `cursor` in a subsequent request. 
