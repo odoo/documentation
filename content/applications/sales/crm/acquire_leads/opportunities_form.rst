@@ -115,4 +115,4 @@ record.
    - :doc:`../pipeline/manage_sales_teams`
    - :doc:`convert`
    - :doc:`../track_leads/lead_scoring`
-   - :ref:`Website forms <website/building_blocks/form>`
+   - :doc:`Website forms </applications/websites/website/web_design/building_blocks/forms>`
