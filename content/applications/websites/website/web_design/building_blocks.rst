@@ -4,9 +4,14 @@
 Building blocks
 ===============
 
-You can design your website by :ref:`dragging and dropping building blocks
-<website/building_blocks/add>`, then :ref:`editing them <website/building_blocks/edit>` to fit your
-content and layout needs.
+Design website pages by :ref:`dragging and dropping building blocks <website/building_blocks/add>`,
+then :ref:`arrange <website/building_blocks/move_duplicate_delete>` and :ref:`edit
+<website/building_blocks/edit>` them to fit your content and layout needs. It is also possible to
+create :ref:`custom building blocks <website/building_blocks/custom>` or :ref:`anchor links
+<website/building_blocks/anchor>`.
+
+Building blocks can be added and customized using the website editor. To open it, go to the
+relevant page and click :guilabel:`Edit` in the upper-right corner.
 
 .. seealso::
    `Odoo Tutorial: Design your website: text and colors <https://www.odoo.com/slides/slide/design-your-website-text-and-colors-6930?fullscreen=1>`_
@@ -16,285 +21,220 @@ content and layout needs.
 Add a building block
 ====================
 
-To add a block to a :doc:`website page <../structure/pages>`, access the page, click
-:guilabel:`Edit`, then drag and drop the desired building block into the appropriate location. Two
-types of building blocks are available: :guilabel:`Categories` and :guilabel:`Inner Content`.
-:guilabel:`Inner Content` building blocks can only be added into :guilabel:`Categories` building
-blocks.
+To add a building block to a :doc:`website page <../structure/pages>`, access the page, then drag
+and drop the desired building block from the :icon:`fa-plus` :guilabel:`Blocks` tab to the
+appropriate location.
 
-When clicking a category block, a popup appears, allowing you to select between multiple
-templates for each category.
+Two types of building blocks are available:
+
+- Categorical building blocks provide templates for different content categories.
+- :guilabel:`Inner Content` building blocks allow for adding elements, such as :ref:`videos
+  <website/elements/videos>`, :ref:`images <website/elements/images>`, :ref:`buttons
+  <website/elements/buttons>`, and more, to pre-existing categorical blocks as well as :doc:`headers
+  and footers <../structure/header_footer>`.
+
+When adding a categorical block, a pop-up window appears, allowing you to choose from multiple
+templates for different categories. Once the block is placed, drag and drop :guilabel:`Inner
+Content` blocks into it.
 
 .. tip::
-   Search for a specific block in the :guilabel:`Insert a block` popup using the search bar.
+   Use the search bar in the :guilabel:`Insert a block` pop-up window to quickly find a specific
+   block.
 
   .. image:: building_blocks/insert-a-block.png
       :alt: Pop-up block selection
+      :scale: 75%
 
-Once the category block is placed, you can drag and drop :guilabel:`Inner content` blocks
-within it. The :guilabel:`Inner content` blocks allow you to add elements, such as videos, images,
-social media buttons, etc., into pre-existing category blocks.
+.. tip::
+   Building blocks can also be added to the login page. To access it, navigate to the website's
+   homepage, add `/web/login` to the URL, and press `Enter`.
 
 .. note::
-   - You can also add a building block on the login page. To do so, navigate to the website's
-     homepage, add `/web/login` to the URL and press `Enter`.
-   - Access to certain blocks requires installing their respective application or module
-     (e.g., eCommerce for the :guilabel:`Products` block).
+   Some building blocks require their corresponding application or module to be installed (e.g.,
+   the **Appointments** app for the :guilabel:`Appointments` block).
 
 .. example::
-   Add all your social media accounts in one place with the inner content :guilabel:`Social Media`
-   block. Toggle the switch on or off next to the desired platform and copy/paste your account URL.
+   Use the :guilabel:`Social Media` :guilabel:`Inner Content` building block to display links to
+   your social media accounts. Toggle the desired platforms on or off, then enter the corresponding
+   account URLs.
 
    .. image:: building_blocks/social-media-inner-content-block.png
       :alt: Social Media inner content block
-
-.. _website/building_blocks/form:
-
-Form
-----
-
-The :guilabel:`Form` block is used to collect information from website visitors and, if applicable,
-create records in your database. To add a form to a website page, drag and drop the
-:guilabel:`Contact & Forms` category block, then select a block in the popup.
-
-.. image:: building_blocks/form-block.png
-   :alt: Example of a form block
-
-.. _website/building_blocks/action:
-
-Action
-~~~~~~
-
-By default, when the form is submitted, an email containing the information entered by the visitor
-is automatically sent. Depending on the apps installed on your database, additional actions that can
-automatically create records may become available. To choose a different action, click
-:guilabel:`Edit`, click the form, navigate to the :guilabel:`Style` tab, and select the desired
-:guilabel:`Action`:
-
-- :guilabel:`Apply for a Job` (:doc:`Recruitment </applications/hr/recruitment>`)
-- :guilabel:`Create a Customer` (:doc:`eCommerce <../../ecommerce>`)
-- :guilabel:`Create a Ticket` (:doc:`Helpdesk </applications/services/helpdesk>`)
-- :guilabel:`Create an Opportunity` (:doc:`CRM </applications/sales/crm>`)
-- :guilabel:`Subscribe to Newsletter` (:doc:`Email Marketing </applications/marketing/email_marketing>`)
-- :guilabel:`Create a Task` (:doc:`Project </applications/services/project>`)
-- :guilabel:`More models`: to generate other types of records
-
-By default, submitting the form redirects visitors to a *Thank you* page. Use the :guilabel:`URL`
-field to send them to a different page. Alternatively, you can choose not to redirect and keep
-them on the form's page by selecting :guilabel:`Nothing` or :guilabel:`Show Message` in the
-:guilabel:`On Success` field.
-
-.. _website/building_blocks/fields:
-
-Fields
-~~~~~~
-
-To add a new field to the form, navigate to the :guilabel:`Style` tab and click the
-:guilabel:`+ Field` button next to the :guilabel:`Form` or :guilabel:`Field` section. To modify any
-field on the form, select the field, then use the options available in the :guilabel:`Field`
-section of the :guilabel:`Style` tab. For example, you can:
-
-- Change the field :guilabel:`Type`.
-
-  .. tip::
-     It is also possible to select an :guilabel:`Existing Field` from the database and use the data
-     it contains. The fields available depend on the selected action. Property fields added to the
-     database can also be used.
-
-  .. spoiler:: Click here to preview all field types.
-
-     .. image:: building_blocks/all-types-of-field.png
-        :alt: All types of form fields
-
-     Some fields are visually similar, but the data entered must follow a specific format.
-
-- Edit the field's :guilabel:`Label` and adapt its :guilabel:`Position`.
-- Enable a field :guilabel:`Description`. Toggle the switch on and click the default description on
-  the form to modify it.
-- Add a :guilabel:`Placeholder` or :guilabel:`Default value`.
-- Specify if the field is :guilabel:`Required`.
-- Edit the field's :doc:`visibility <visibility>` settings.
-- Add an :ref:`animation <website/elements/animations>`.
-
-Once you have made the desired changes, click :guilabel:`Save`.
-
-Add an Odoo contact form on a non-Odoo website
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can display an Odoo contact form on another website using an iframe. To do so, follow these
-steps:
-
-#. **Prepare the Odoo form:** Create a contact form on a page in Odoo Website and remove the
-   :ref:`header and footer <website/header_footer/design>`. Make sure only the contact form
-   remains on the page.
-#. **Generate an embeddable code:** Copy the URL of the Odoo form page and paste it into an iframe
-   generator, such as `La Digitale.dev <https://ladigitale.dev/digitools/generateur-iframe>`_ or
-   `iFrame Generator <https://www.iframe-generator.com/>`_ . Adjust the width and height for proper
-   display.
-#. **Add the embedded code to the non-Odoo website:** Open the relevant page’s HTML (in the code
-   editor or CMS) and insert the embedded code where the form should be displayed.
-
-.. example::
-   Example of an embedded code:
-
-   .. code-block:: html
-
-       <iframe src="https://example.com/odoo-form"
-               style="border:0;"
-               name="odooForm"
-               scrolling="no"
-               frameborder="0"
-               marginheight="0"
-               marginwidth="0"
-               height="400px"
-               width="600px"
-               allowfullscreen>
-        </iframe>
+      :scale: 75%
 
 .. _website/building_blocks/embed_code:
 
 Embed code
 ----------
 
-Embedding code allows you to integrate content from third-party services into a page, such as videos
-from YouTube, maps from Google Maps, social media posts from Instagram, etc.
+Embedding code allows you to integrate content from third-party services, such as YouTube videos,
+Google Maps, and Instagram posts.
 
 After dragging and dropping the :guilabel:`Embed Code` block from the :guilabel:`Inner Content`
-section into a page, click the block, then go to the :guilabel:`Style` tab and click
-:guilabel:`Edit`. Replace the placeholder code with your custom embed code.
+section onto a page, click the block, then go to the :guilabel:`Style` tab. Scroll down to the
+:guilabel:`Embed Code` section, and, next to :guilabel:`Code`, click :guilabel:`Edit`. Replace the
+placeholder code with the custom embed code.
 
 .. image:: building_blocks/embed-code-pop-up.png
-   :alt: Add the link to the embedded code you want to point to
+   :alt: Add the link to the embedded code you want to point to.
+   :scale: 60%
 
 .. warning::
-   Do not copy/paste code you do not understand, as it could put your data at risk.
+   Only use embed code from sources you trust. Copying and pasting code you do not understand could
+   put your data at risk.
 
-.. _website/building_blocks/move_switch_delete:
+.. _website/building_blocks/move_duplicate_delete:
 
-Move, switch, duplicate or delete a building block
-==================================================
+Move, duplicate, or delete a building block
+===========================================
 
-Pull the turquoise borders on the block to reduce or increase the space at the top or bottom of it.
+To adjust the position and size of a building block, use the following options:
 
-Change the block order by clicking :icon:`fa-chevron-up` (:guilabel:`chevron up`) or
-:icon:`fa-chevron-down` (:guilabel:`chevron down`) and move the block on the page by clicking
-:icon:`fa-arrows` (:guilabel:`arrows`). When you have multiple :ref:`columns
-<website/building_blocks/cols>`, move a column to the left or right by clicking
-:icon:`fa-chevron-left` (:guilabel:`chevron left`) or :icon:`fa-chevron-right`
-(:guilabel:`chevron right`).
+- Drag the turquoise borders on the block to increase or decrease the space at the top or bottom.
+- Click the :icon:`fa-chevron-up` (:guilabel:`Move up`) or :icon:`fa-chevron-down` (:guilabel:`Move
+  down`) icons to change the block's order.
+- Click the :icon:`fa-arrows` (:guilabel:`Drag and move`) icon to move the block on the page.
+- When a block contains multiple :ref:`columns <website/building_blocks/columns>`, move a column to
+  the left or right by clicking :icon:`fa-chevron-left` (:guilabel:`Move left`) or
+  :icon:`fa-chevron-right` (:guilabel:`Move right`).
+- Click :icon:`fa-clone` (:guilabel:`Duplicate`) to create a copy of the block. The duplicate is
+  added below the original.
+- Click :icon:`fa-trash` (:guilabel:`Remove`) to delete the block.
 
-To duplicate a building block, click :icon:`fa-clone` (:guilabel:`duplicate`). Once duplicated, the
-new block appears on the page beneath the original one.
+  .. image:: building_blocks/padding-building-block.png
+     :alt: Building block options to move, duplicate , or remove it.
 
 .. tip::
-   Alternatively, click the :icon:`fa-clone` (:guilabel:`duplicate`) icon at the top of the
-   :guilabel:`Style` tab to duplicate the selected block.
+   Alternatively, click the block, go to the :guilabel:`Style` tab, and click the :icon:`fa-clone`
+   (:guilabel:`Duplicate this block`) or :icon:`fa-trash` (:guilabel:`Remove this block`) icon at
+   the top of the tab.
 
-To delete a block, click :icon:`fa-trash` (:guilabel:`trash`).
+.. example::
+   To resize a block, click and drag the dots around its edges to adjust it as needed.
 
-   .. image:: building_blocks/padding-building-block.png
-      :alt: Extend margins on building block
+   .. image:: building_blocks/adapt-block-size.png
+      :alt: Adapt block size
+      :scale: 80%
 
 .. _website/building_blocks/edit:
 
 Edit a building block
 =====================
 
-To edit the content of a building block, click it and go to the :guilabel:`Style` tab.
-Available customization options vary depending on the type of block selected.
+To customize a building block, click it and go to the :guilabel:`Style` tab. Available
+customization options vary depending on the type of block selected. Most blocks provide options to
+customize the :ref:`background <website/building_blocks/background>`, :ref:`layout
+<website/building_blocks/layout>`, and :ref:`content dimensions
+<website/building_blocks/content-layout>`.
 
 .. seealso::
    - :doc:`Web design elements <elements>`
    - :doc:`Visibility <visibility>`
+   - :doc:`General theme <themes>`
+
+.. _website/building_blocks/background:
 
 Background
 ----------
 
-To modify the background of a building block, select the block, go to the :guilabel:`Style` tab,
-and click the color dot or another :guilabel:`Background` option. You can change the
-color and/or add an image, video, and/or shape. Once you've selected a shape, new fields appear to
-allow you to customize the shape.
+To customize the background of a building block, click the color dot or another
+:guilabel:`Background` option. Depending on the selected option, you can change the background
+:ref:`color <website/themes/theme-colors>` and/or add an :ref:`image <website/elements/images>`,
+:ref:`video <website/elements/videos>`, and/or shape. After selecting an option, additional options
+are available to customize it.
 
 .. tip::
-   - Position an element (image, text, etc.) behind or in front of another one by using the
-     :guilabel:`Send to back` or :guilabel:`Bring to front` icons.
+   In the :ref:`Grid <website/building_blocks/grid>` layout, use the :guilabel:`Send to back` or
+   :guilabel:`Bring to front` icons to position elements, such as images and text, behind or in
+   front of other elements.
 
-     .. image:: building_blocks/change-block-position.png
-        :alt: Change block position
+   .. image:: building_blocks/change-block-position.png
+      :alt: Move a building block to the back or front.
+      :scale: 80%
 
-   - To resize a block, click and drag the dots around its edges to adjust it as needed.
+.. _website/building_blocks/layout:
 
-     .. image:: building_blocks/adapt-block-size.png
-       :alt: Adapt block size
+Layout
+------
 
-.. seealso::
-   :doc:`General theme <themes>`
-
-Layout: grid and columns
-------------------------
-
-For most building blocks, you can choose between two layout styles: :ref:`grid
-<website/building_blocks/grid>` or :ref:`columns (cols) <website/building_blocks/cols>`. To change
-the default layout style, click the block, go to the :guilabel:`Style` tab, and set the
-:guilabel:`Layout` field to :guilabel:`Grid` or :guilabel:`Cols`.
+Most building blocks support two layout styles: :ref:`grid <website/building_blocks/grid>` and
+:ref:`column <website/building_blocks/columns>`. To change the default layout, click the block, go
+to the :guilabel:`Style` tab, and set the :guilabel:`Layout` field to :guilabel:`Grid` or
+:guilabel:`Column`.
 
 .. _website/building_blocks/grid:
 
 Grid
 ~~~~
 
-The :guilabel:`Grid` layout allows you to reposition and resize elements, such as images or text, by
-dragging and dropping them. When :guilabel:`Grid` is selected, additional options are available to
-:guilabel:`Add Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`.
+The :guilabel:`Grid` layout allows you to reposition and resize elements by dragging and dropping
+them. Once this layout type is selected, additional options are available to :guilabel:`Add
+Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`. Adjust their
+position and size using the :guilabel:`Spacing (Y, X)` options.
 
-.. image:: building_blocks/grid-layout.png
-   :alt: When the grid layout is selected, choose an image and drag and drop it where needed.
+.. _website/building_blocks/columns:
 
-.. _website/building_blocks/cols:
+Column
+~~~~~~
 
-Cols
-~~~~
-
-Choosing the :guilabel:`Cols` layout allows you to determine the number of elements per line within
-the block. To do so, select the block to modify, click the dropdown next to the :guilabel:`Cols`
-field, and adjust the number. You can then modify a specific column's settings using the options in
-the :guilabel:`Column` section of the :guilabel:`Style` tab.
+The :guilabel:`Column` layout allows you to specify the number of elements per line in the block.
+To do so, select the block to modify, click the dropdown next to the :guilabel:`Column` field, and
+adjust the number. You can then modify a specific column's settings using the options in the
+:guilabel:`Column` section of the :guilabel:`Style` tab.
 
 .. note::
    By default, :doc:`on mobile devices <visibility>`, only one element (column) is visible per line
-   to ensure that content remains easily readable and accessible on smaller screens. To adjust
-   the value, click the :icon:`fa-mobile` (:guilabel:`mobile icon`) at the top of the website editor
-   and adapt the number of columns. Shapes are hidden by default on mobiles.
+   to ensure that content remains easy to read and accessible on smaller screens. To adjust this
+   value, click the :icon:`fa-mobile` (:guilabel:`Mobile Preview`) at the top of the website
+   editor and adapt the number of columns. Shapes are hidden by default on mobile devices.
+
+.. _website/building_blocks/content-layout:
+
+Content dimensions
+------------------
+
+To adjust the content dimensions of a building block:
+
+- Use the :guilabel:`Content Width` options to make the content fill the entire width of the page or
+  add spacing around it.
+- Set the :guilabel:`Auto` :guilabel:`Height` to :guilabel:`50%` or :guilabel:`100%`.
 
 .. _website/building_blocks/custom:
 
 Save a custom building block
 ============================
 
-You can save a customized building block to reuse it elsewhere. To do so, select it, navigate to
-the :guilabel:`Style` tab, and click the :icon:`fa-floppy-o` (:guilabel:`floppy disk`) icon.
-Click the :guilabel:`Save` button in the popup to confirm saving your custom block.
+Save a customized building block to reuse on other pages. To do so, select it, navigate to
+the :guilabel:`Style` tab, and click the :icon:`fa-floppy-o` (:guilabel:`Save this block to use it
+elsewhere`) icon. Click the :guilabel:`Save` button in the pop-up window to confirm.
 
-To add a saved building block to the page, navigate to the :guilabel:`Blocks` tab and drag and drop
-the :guilabel:`Custom` block from the :guilabel:`Categories` section. In the popup that opens, click
+To add a saved building block to the page, navigate to the :icon:`fa-plus` :guilabel:`Blocks` tab
+and drag and drop the :guilabel:`Custom` categorical block. In the pop-up window that opens, click
 the desired block in the :guilabel:`Custom` category.
 
 .. tip::
-   In the :guilabel:`Insert a block` popup, click :icon:`fa-pencil` (:guilabel:`edit`) to rename the
-   custom block or :icon:`fa-trash` (:guilabel:`delete`) to delete it.
+   In the :guilabel:`Insert a block` pop-up window, click :icon:`fa-pencil` (:guilabel:`edit`) to
+   rename the custom block or :icon:`fa-trash` (:guilabel:`remove`) to delete it.
 
 .. _website/building_blocks/anchor:
 
 Create an anchor link
 =====================
 
-Anchor links are hyperlinks that direct users to a **specific section** of a page. To create an
-anchor link for a block, follow these steps:
+Anchor links are hyperlinks that direct users to a specific section of a page. To create an anchor
+link for a block, follow these steps:
 
 #. Click :guilabel:`Edit` and select the block you want to link to.
-#. Click :icon:`fa-link` (:guilabel:`link`) at the top of the :guilabel:`Style` tab.
-#. To edit the default anchor name, click :guilabel:`Edit` in the green popup message that opens.
-#. Replace the anchor name and click :guilabel:`Save & copy`.
+#. At the top of the :guilabel:`Style` tab, click :icon:`fa-link` (:guilabel:`Create and copy a link
+   targeting this block or edit it`).
+#. To edit the default anchor name, click :guilabel:`Edit` in the green pop-up message that opens in
+   the upper-right corner.
+#. Replace the anchor name and click :guilabel:`Save & Copy`.
 
 Once the anchor is saved, you can :ref:`link to it <website/elements/links>` from anywhere on your
 website.
+
+.. toctree::
+   :titlesonly:
+
+   building_blocks/forms
