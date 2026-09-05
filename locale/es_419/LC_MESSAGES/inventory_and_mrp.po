@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:33+0000\n"
 "PO-Revision-Date: 2026-08-31 20:09+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
@@ -6975,7 +6975,7 @@ msgid "Journal Entries Configuration"
 msgstr "Configuración de los asientos de diario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:356
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:345
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:361
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:360
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting.rst:5
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting.rst:3
@@ -7669,8 +7669,8 @@ msgstr ""
 "existencias con los métodos de costo PEPS y AVCO."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:10
-msgid "How inventory operations affect valuation"
-msgstr "Cómo afectan las operaciones de inventario a la valuación"
+msgid "Valuation of stock movements and inventory operations"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:12
 msgid ""
@@ -8138,23 +8138,36 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:182
 msgid ""
-":guilabel:`Unit Cost`: The unit cost of a product. Calculated based on "
-"the :ref:`costing method <inventory/cheat_sheet/accounting-methods>` set for "
-"the product group."
+":guilabel:`Unit Cost`: The unit cost of a product, specific to each stock "
+"movement. Calculated based on the :ref:`costing method <costing-methods>` "
+"set for the product group."
 msgstr ""
-":guilabel:`Costo unitario`: El costo unitario de un producto. Se calcula con "
-"base en el :ref:`método de costo <inventory/cheat_sheet/accounting-methods>` "
-"definido para el grupo de productos."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:187
+msgid ""
+"The :guilabel:`Unit Cost` on a stock movement is distinct from the *Cost* "
+"field in the *product form*. The *Cost* field displays the average price of "
+"the product, even if the product group is configured to use the |FIFO| "
+"costing method. As a result, the *Cost* field on the product form is "
+"affected by outbound stock movements when using the |FIFO| costing method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:192
+msgid ""
+"The value in the *Cost* field is used as the unit price for :ref:`inventory/"
+"operations_valuation/inventory-adjustments`, even when using the |FIFO| "
+"costing method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:200
 msgid "Stock movement operations"
 msgstr "Operaciones de movimiento de existencias"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:205
 msgid "Receipts"
 msgstr "Recepciones"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:195
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:207
 msgid ""
 "A validated receipt moves goods from the *vendor* location into stock. Its "
 "value is the quantity received multiplied by the unit price on the source "
@@ -8167,7 +8180,7 @@ msgstr ""
 "convertido a la moneda de la empresa. Si no hay una orden de compra "
 "relacionada, se usa el costo actual del producto."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:211
 msgid ""
 "Additional costs attached to a receipt, such as freight or duties, raise the "
 "value of goods already received without changing their quantity."
@@ -8176,15 +8189,15 @@ msgstr ""
 "aranceles, aumentan el valor de los productos que ya se recibieron sin "
 "cambiar su cantidad."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:215
 msgid ":doc:`landed_costs`"
 msgstr ":doc:`landed_costs`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:220
 msgid "Finished goods"
 msgstr "Productos terminados"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:222
 msgid ""
 "Finished goods move from the *production* location into stock, which adds "
 "value."
@@ -8192,7 +8205,7 @@ msgstr ""
 "Los productos terminados pasan de la ubicación de *producción* a las "
 "existencias, lo que agrega valor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:212
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:224
 msgid ""
 "The value of the finished good includes the cost of the components consumed, "
 "valued by their own costing methods, plus the labor cost of the work centers "
@@ -8212,7 +8225,7 @@ msgstr ""
 "configura una cuenta de :ref:`accounting/inventory-valuation/cost-of-"
 "production`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:232
 msgid ""
 "A manufacturing order consumes three components valued at $78.00, $180.00, "
 "and $20.00, and records $200.00 of labor. The finished good enters stock "
@@ -8222,11 +8235,11 @@ msgstr ""
 "$180.00 y $20.00, y registra $200.00 de mano de obra. El producto terminado "
 "entra en las existencias con un valor de $478.00."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:226
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:238
 msgid "Customer returns"
 msgstr "Devoluciones de clientes"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:240
 msgid ""
 "A return brings goods back from the *customer* location into stock, so it "
 "increases value. When the return is created from the original delivery, the "
@@ -8239,11 +8252,11 @@ msgstr ""
 "unitario con el que salieron, lo que revierte la entrega en lugar de volver "
 "a valuar los productos según el costo actual."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:247
 msgid "Deliveries"
 msgstr "Entregas"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:237
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:249
 msgid ""
 "A validated delivery moves goods from stock to the *customer* location. The "
 "quantity is derived from the delivery order, and the unit cost is calculated "
@@ -8255,11 +8268,11 @@ msgstr ""
 "unitario se calcula según el :ref:`método de costo <inventory/cheat_sheet/"
 "accounting-methods>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:256
 msgid "Component consumption"
 msgstr "Consumo de componentes"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:246
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:258
 msgid ""
 "Components consumed by a manufacturing order are moved from inventory to the "
 "*production* location, and their value is removed at the cost determined by "
@@ -8272,7 +8285,7 @@ msgstr ""
 "terminado <inventory/operations_valuation/finished-goods>`, como describimos "
 "antes."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:264
 msgid ""
 "Components sent to a subcontractor remain company-owned: the subcontracting "
 "location is an internal location, so shipping components there does not "
@@ -8282,7 +8295,7 @@ msgstr ""
 "empresa: la ubicación de subcontratación es una ubicación interna, por lo "
 "que enviar componentes allí no cambia el valor del inventario."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:267
 msgid ""
 "The finished good arrives through a receipt, which is where value changes. "
 "Its value combines the components consumed by the subcontractor and the "
@@ -8292,11 +8305,11 @@ msgstr ""
 "valor. Su valor combina los componentes consumidos por el subcontratista y "
 "el precio del servicio de subcontratación de la orden de compra."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:263
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:275
 msgid "Vendor returns"
 msgstr "Devoluciones a proveedores"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:265
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:277
 msgid ""
 "Returning goods to a vendor moves them from stock back to the vendor "
 "location, and removes their value on the same basis as any other outbound "
@@ -8309,19 +8322,19 @@ msgstr ""
 "consultar los costos de compra con mayor detalle, activa la valuación por "
 "lotes o números de serie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:282
 msgid ":doc:`../../../finance/accounting/get_started/avg_price_valuation`"
 msgstr ":doc:`../../../finance/accounting/get_started/avg_price_valuation`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:271
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:283
 msgid ":doc:`valuation_by_lots`"
 msgstr ":doc:`valuation_by_lots`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:289
 msgid "Scrap"
 msgstr "Desechos"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:279
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:291
 msgid ""
 "Scrapping a product decreases inventory value, following the same costing "
 "rules as any other outbound move."
@@ -8329,15 +8342,15 @@ msgstr ""
 "Desechar un producto disminuye el valor del inventario y sigue las mismas "
 "reglas de costo que cualquier otro movimiento de salida."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:283
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:295
 msgid ":doc:`scrapped_inventory_valuation`"
 msgstr ":doc:`scrapped_inventory_valuation`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:288
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:300
 msgid "Other operations"
 msgstr "Otras operaciones"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:290
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:302
 msgid ""
 "Several inventory operations change quantity or value without creating a "
 "stock move:"
@@ -8345,11 +8358,11 @@ msgstr ""
 "Varias operaciones de inventario cambian la cantidad o el valor sin crear un "
 "movimiento de existencias:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:295
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:307
 msgid "Updating product costs"
 msgstr "Actualización de los costos de los productos"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:297
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:309
 msgid ""
 "Manually changing the cost of a product revalues the quantity currently on "
 "hand. The value increases or decreases based on the difference between the "
@@ -8361,27 +8374,22 @@ msgstr ""
 "anterior y el nuevo costo, multiplicada por la cantidad a la mano. La "
 "cantidad no cambia."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:304
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:316
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:3
 msgid "Inventory adjustments"
 msgstr "Ajustes de inventario"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:318
 msgid ""
 "Discrepancies between the recorded quantity and counted quantity can be "
 "reconciled through inventory adjustments. The difference is applied as a "
-"move to or from a virtual *Inventory Loss* location, which is outside stock, "
-"so the adjustment changes inventory value as well as quantity. Adjustments "
-"increase or decrease value based on the current unit cost of the product:"
+"move to or from a virtual *Inventory adjustment* location, which is outside "
+"stock, so the adjustment changes inventory value as well as quantity. "
+"Adjustments increase or decrease value based on the difference between the "
+"counted quantity and the expected quantity:"
 msgstr ""
-"Puedes conciliar las discrepancias entre la cantidad registrada y la "
-"cantidad contada a través de los ajustes de inventario. La diferencia se "
-"aplica como un movimiento hacia o desde una ubicación virtual de *pérdida de "
-"inventario*, que se encuentra fuera de las existencias, por lo que el ajuste "
-"cambia tanto el valor como la cantidad del inventario. Los ajustes aumentan "
-"o disminuyen el valor con base en el costo unitario actual del producto:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:311
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:324
 msgid ""
 "A counted quantity **higher** than expected produces an *inbound* move and "
 "*increases* inventory value."
@@ -8389,7 +8397,7 @@ msgstr ""
 "Una cantidad contada **mayor** que la esperada genera un movimiento de "
 "*entrada* y *aumenta* el valor del inventario."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:313
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:326
 msgid ""
 "A counted quantity **lower** than expected produces an *outbound* move and "
 "*decreases* inventory value."
@@ -8397,15 +8405,22 @@ msgstr ""
 "Una cantidad contada **menor** que la esperada genera un movimiento de "
 "*salida* y *disminuye* el valor del inventario."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:317
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:329
+msgid ""
+"Inventory adjustments use the product's current averaged cost as "
+"the :ref:`unit cost <inventory/operations_valuation/stock-movement-reported-"
+"values>` for the stock movement."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:333
 msgid ":doc:`../warehouses_storage/inventory_management/count_products`"
 msgstr ":doc:`../warehouses_storage/inventory_management/count_products`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:322
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:338
 msgid "Negative stock"
 msgstr "Inventario negativo"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:324
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:340
 msgid ""
 "When goods are sold before their receipt has been recorded, stock goes "
 "negative and there is no inbound move for the outbound move to draw from. "
@@ -8421,7 +8436,7 @@ msgstr ""
 "inventory-valuation/inventory-valuation-report>` en la aplicación "
 "**Contabilidad**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:329
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:345
 msgid ""
 "The negative value is resolved once the receipt is recorded. If the units "
 "that arrive are acquired at a different price, Odoo modifies the value of "
@@ -8431,11 +8446,11 @@ msgstr ""
 "unidades que llegan se adquieren a un precio diferente, Odoo modifica el "
 "valor del movimiento de salida para que coincida con el costo real."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:351
 msgid "Adjusting the value of a move"
 msgstr "Ajustar el valor de un movimiento"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:353
 msgid ""
 "When a move was valued incorrectly at the time of the operation, the value "
 "recorded on the completed move can be corrected using the :guilabel:`Adjust "
@@ -8450,7 +8465,7 @@ msgstr ""
 "valor y una descripción que explique el motivo, y se aplica solo a ese "
 "movimiento."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:347
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:363
 msgid ""
 "Stock movements and related valuation impacts can be found in "
 "the :ref:`Moves Analysis <inventory/operations_valuation/moves-analysis>` "
@@ -8463,15 +8478,15 @@ msgstr ""
 "<inventory/operations_valuation/stock-report>` de la aplicación "
 "**Inventario**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:352
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:368
 msgid ":ref:`changes-in-19`"
 msgstr ":ref:`changes-in-19`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:357
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:373
 msgid "Moves Analysis"
 msgstr "Análisis de movimientos"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:359
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:375
 msgid ""
 "The Moves Analysis report lists moves with their source location, "
 "destination location, quantity, :guilabel:`Value`, :guilabel:`Remaining "
@@ -8484,7 +8499,7 @@ msgstr ""
 "y :guilabel:`valor restante`. Al dividir el valor de un movimiento entre su "
 "cantidad, obtienes el valor unitario que se le aplicó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:363
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:379
 msgid ""
 "Use this report to investigate the details for a particular operation, e.g., "
 "what a delivery was valued at, how much of a receipt is still in stock, or "
@@ -8498,12 +8513,12 @@ msgstr ""
 "corregir el valor de un movimiento individual desde este reporte, como se "
 "describe en :ref:`inventory/operations_valuation/adjust-valuation`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:371
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:387
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:3
 msgid "Stock report"
 msgstr "Reporte de existencias"
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:373
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:389
 msgid ""
 "The :doc:`../warehouses_storage/reporting/stock` lists products with the "
 "quantity on hand. It also displays :guilabel:`Unit Cost`, "
@@ -8517,7 +8532,7 @@ msgstr ""
 "detalles. Puedes consultar el valor del inventario en una fecha anterior "
 "mediante la opción :guilabel:`Inventario a la fecha`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:378
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:394
 msgid ""
 "The default *Stock* report view calculates values across the entire company, "
 "even when product stock is spread across multiple warehouses. To view the "
@@ -13112,7 +13127,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:191
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:181
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -35595,11 +35610,11 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "Visualización de la función Ubicaciones de almacenamiento."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:27
 msgid "Create new location"
 msgstr "Crear una nueva ubicación"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:29
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
 "Configuration --> Locations`."
@@ -35611,7 +35626,7 @@ msgstr ""
 msgid "List of internal locations."
 msgstr "Lista de ubicaciones internas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
 msgid ""
 "On this page, click :guilabel:`New`. The new location form can then be "
 "configured as follows:"
@@ -35619,12 +35634,12 @@ msgstr ""
 "Haga clic en :guilabel:`Nuevo` en esta página y después configure el "
 "formulario de la nueva ubicación con la siguiente información:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
 msgid ":guilabel:`Location Name`: recognizable name of the location."
 msgstr ""
 ":guilabel:`Nombre de la ubicación`: el nombre para identificar la ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
 msgid ""
 ":guilabel:`Parent Location`: the location within which the new location "
 "exists. After the location is created, it is listed on "
@@ -35636,7 +35651,7 @@ msgstr ""
 "página :guilabel:`Ubicaciones` dentro de una *jerarquía* que describe en que "
 "parte se encuentra dentro de áreas más grandes del almacén."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
 msgid ""
 "In `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the location name, "
 "`Zone A` is the parent location, and everything before it is the path "
@@ -35647,11 +35662,11 @@ msgstr ""
 "aparece antes muestra la ruta que indica dónde está este lugar dentro del "
 "almacén."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
 msgid "Additional Information section"
 msgstr "Sección de información adicional"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -35660,7 +35675,7 @@ msgstr ""
 "campos de ubicación para asegurarse de que la ubicación cumpla con su "
 "propósito en la base de datos:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
 msgid ""
 ":guilabel:`Location Type`: from the drop-down menu, "
 "choose :guilabel:`Vendor`, :guilabel:`Virtual`, :guilabel:`Internal`, :guilabel:`Customer`, :guilabel:`Inventory "
@@ -35675,7 +35690,7 @@ msgstr ""
 "<inventory/warehouses_storage/location-type>` para obtener más información "
 "sobre cada tipo de ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
 msgid ""
 ":guilabel:`Storage Category`: only available with the :doc:`Storage "
 "Categories <../../shipping_receiving/daily_operations/storage_category>` "
@@ -35687,11 +35702,11 @@ msgstr ""
 "daily_operations/storage_category>` está habilitada "
 "en :menuselection:`Inventario --> Configuración --> Ajustes`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
 msgid ":guilabel:`Company`: the company the location belongs to."
 msgstr ":guilabel:`Empresa`: La empresa a la que pertenece la ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
 msgid ""
 ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
 "to :ref:`identify actions <barcode/setup/location>` at this location when "
@@ -35701,7 +35716,7 @@ msgstr ""
 "barras*, ingrese el código de barras que :ref:`identificará acciones "
 "<barcode/setup/location>` en esta ubicación cuando se escanee."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
 msgid ""
 ":guilabel:`Replenishments`: used for :doc:`configuring routes <../../"
 "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
@@ -35721,7 +35736,7 @@ msgstr ""
 "Sección de información adicional del formulario de creación de nueva "
 "ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
 msgid ""
 "In the :guilabel:`Cyclic Counting` section, change the value in "
 "the :guilabel:`Inventory Frequency` field from the default `0`, if necessary."
@@ -35735,7 +35750,7 @@ msgid "Cyclic Counting section of new location creation form."
 msgstr ""
 "Sección de conteo cíclico del formulario de creación de nueva ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:78
 msgid ""
 "When different than `0`, the inventory count dates for products stored at "
 "this location are automatically set at the defined frequency."
@@ -35744,7 +35759,7 @@ msgstr ""
 "almacenados en esta ubicación se establecerán con la frecuencia definida en "
 "automático."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
 "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
 "field, click the drop-down menu and select the :doc:`removal strategy <../../"
@@ -35757,11 +35772,11 @@ msgstr ""
 "removal_strategies>` para especificar cómo deben retirarse los artículos de "
 "esta ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:88
 msgid "Cyclic Counting section"
 msgstr "Sección de conteo cíclico"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:90
 msgid ""
 "To schedule regular inventory counts at this location, set "
 "the :guilabel:`Inventory Frequency` field to the desired interval. By "
@@ -35771,7 +35786,7 @@ msgstr ""
 "el campo :guilabel:`Frecuencia de inventario` con el intervalo deseado, ya "
 "que usa `0` (sin conteos programados) de forma predeterminada."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:93
 msgid ""
 "For example, setting this field to `30` schedules a count every thirty days. "
 "For more specifics on setting up and using this feature, refer to "
@@ -35782,7 +35797,7 @@ msgstr ""
 "conteos cíclicos <cycle_counts>` para obtener detalles específicos sobre "
 "cómo configurar y usar esta función."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
 msgid ""
 "The :guilabel:`Last Inventory` field displays the date the last inventory "
 "count at this location occurred. When scheduled inventory counts are "
@@ -35794,7 +35809,7 @@ msgstr ""
 "campo :guilabel:`Siguiente esperado` muestra la fecha del próximo conteo de "
 "inventario."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
 "With inventory counts scheduled to occur every `30` days, and "
 "the :guilabel:`Last Inventory` count occurring on November 13, "
@@ -35809,11 +35824,11 @@ msgid "Show Cyclic Count section of the locations form."
 msgstr ""
 "Visualización de la sección de conteo cíclico del formulario de ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
 msgid "Logistics section"
 msgstr "Sección de logística"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:110
 msgid ""
 "In the :guilabel:`Logistics` section of the locations form, optionally "
 "select a :guilabel:`Removal Strategy` to determine the order and priority of "
@@ -35830,11 +35845,11 @@ msgstr ""
 "(UEPS)`, :guilabel:`Ubicación más cercana`, :guilabel:`Menos paquetes` "
 "y :guilabel:`Primero en expirar, primero en salir (FEFO)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
 msgid "Current stock at location"
 msgstr "Inventaario actual en la ubicación"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:121
 msgid ""
 "To view the current stock at a single location, go "
 "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
@@ -35843,7 +35858,7 @@ msgstr ""
 "Ve a :menuselection:`Inventario --> Configuración --> Ubicaciones` y elija "
 "una ubicación para ver sus existencias."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:124
 msgid ""
 "Next, click the :guilabel:`Products` smart button to get a list of all "
 "products at the location."
@@ -35851,7 +35866,7 @@ msgstr ""
 "Luego haz clic en el botón inteligente :guilabel:`Productos` para ver la "
 "lista de todos los productos en la ubicación."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
 msgid ""
 "A list of current stock at `Shelf 2` consists of `90` cable management boxes."
 msgstr ""
@@ -59258,9 +59273,9 @@ msgid ""
 "down menu and leaves the :guilabel:`Total` and :guilabel:`Untaxed Total` "
 "datasets enabled."
 msgstr ""
-"A continuación, David hace clic en el menú desplegable :guilabel:`Medidas` "
-":icon:`fa-caret-down` y deja activos los conjuntos de datos "
-":guilabel:`Total` y :guilabel:`Total sin impuestos`."
+"A continuación, David hace clic en el menú "
+"desplegable :guilabel:`Medidas` :icon:`fa-caret-down` y deja activos los "
+"conjuntos de datos :guilabel:`Total` y :guilabel:`Total sin impuestos`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:128
 msgid ""
@@ -59268,9 +59283,9 @@ msgid ""
 "square` :guilabel:`Total` button above the rows on the pivot table, and "
 "selects the :guilabel:`Product` option."
 msgstr ""
-"Por último, David hace clic en el botón :icon:`fa-plus-square` "
-":guilabel:`Total` sin expandir que se encuentra sobre las filas de la tabla "
-"dinámica y selecciona la opción :guilabel:`Producto`."
+"Por último, David hace clic en el botón :icon:`fa-plus-"
+"square` :guilabel:`Total` sin expandir que se encuentra sobre las filas de "
+"la tabla dinámica y selecciona la opción :guilabel:`Producto`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:131
 msgid ""
@@ -61562,11 +61577,11 @@ msgid ""
 "enable the radio button for either :guilabel:`On ordered quantities` "
 "or :guilabel:`On recieved quantities`."
 msgstr ""
-"Para configurar la política de control de un producto, ve a "
-":menuselection:`Compras --> Productos --> Productos` y haz clic en su "
-"registro para abrirlo. Abre la pestaña :guilabel:`Compras`, busca la sección "
-":guilabel:`Facturas de proveedor` y luego selecciona la opción "
-":guilabel:`Sobre cantidades ordenadas` o :guilabel:`Sobre cantidades "
+"Para configurar la política de control de un producto, ve "
+"a :menuselection:`Compras --> Productos --> Productos` y haz clic en su "
+"registro para abrirlo. Abre la pestaña :guilabel:`Compras`, busca la "
+"sección :guilabel:`Facturas de proveedor` y luego selecciona la "
+"opción :guilabel:`Sobre cantidades ordenadas` o :guilabel:`Sobre cantidades "
 "recibidas` en el campo :guilabel:`Política de control`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:24
@@ -61629,11 +61644,11 @@ msgid ""
 "section. Then, enable the checkbox for :guilabel:`3-way matching` to enable "
 "the feature, and click :guilabel:`Save`."
 msgstr ""
-"Para activar la *conciliación de tres vías*, ve a "
-":menuselection:`Compras --> Configuración --> Ajustes` y dirígete a la "
-"sección :guilabel:`Facturación`. Después, selecciona la casilla "
-":guilabel:`Conciliación de tres vías` para habilitar la función y haz clic "
-"en :guilabel:`Guardar`."
+"Para activar la *conciliación de tres vías*, ve a :menuselection:`Compras --"
+"> Configuración --> Ajustes` y dirígete a la "
+"sección :guilabel:`Facturación`. Después, selecciona la "
+"casilla :guilabel:`Conciliación de tres vías` para habilitar la función y "
+"haz clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:None
 msgid "Enabled 3-way matching feature in Purchase app settings."
@@ -67567,6 +67582,34 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "How inventory operations affect valuation"
+#~ msgstr "Cómo afectan las operaciones de inventario a la valuación"
+
+#~ msgid ""
+#~ ":guilabel:`Unit Cost`: The unit cost of a product. Calculated based on "
+#~ "the :ref:`costing method <inventory/cheat_sheet/accounting-methods>` set "
+#~ "for the product group."
+#~ msgstr ""
+#~ ":guilabel:`Costo unitario`: El costo unitario de un producto. Se calcula "
+#~ "con base en el :ref:`método de costo <inventory/cheat_sheet/accounting-"
+#~ "methods>` definido para el grupo de productos."
+
+#~ msgid ""
+#~ "Discrepancies between the recorded quantity and counted quantity can be "
+#~ "reconciled through inventory adjustments. The difference is applied as a "
+#~ "move to or from a virtual *Inventory Loss* location, which is outside "
+#~ "stock, so the adjustment changes inventory value as well as quantity. "
+#~ "Adjustments increase or decrease value based on the current unit cost of "
+#~ "the product:"
+#~ msgstr ""
+#~ "Puedes conciliar las discrepancias entre la cantidad registrada y la "
+#~ "cantidad contada a través de los ajustes de inventario. La diferencia se "
+#~ "aplica como un movimiento hacia o desde una ubicación virtual de *pérdida "
+#~ "de inventario*, que se encuentra fuera de las existencias, por lo que el "
+#~ "ajuste cambia tanto el valor como la cantidad del inventario. Los ajustes "
+#~ "aumentan o disminuyen el valor con base en el costo unitario actual del "
+#~ "producto:"
 
 #~ msgid ""
 #~ "Recently, Bike Haus has decided to have their purchasing manager, David, "

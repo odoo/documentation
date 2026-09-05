@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:33+0000\n"
 "PO-Revision-Date: 2026-08-27 15:46+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -7376,7 +7376,7 @@ msgid "Resumé tab"
 msgstr "简历选项卡"
 
 #: ../../content/applications/hr/employees/new_employee.rst:162
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:35
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:35
 msgid "Resumé"
 msgstr "简历"
 
@@ -10375,7 +10375,7 @@ msgid "In Odoo's **Fleet** app, there are four default service stages:"
 msgstr "在 Odoo 的 **车队管理** 应用程序中，默认有四个服务阶段："
 
 #: ../../content/applications/hr/fleet/accidents.rst:103
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:18
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:18
 msgid "New"
 msgstr "新建"
 
@@ -38039,17 +38039,17 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "940报告屏幕，上半部分是要下载的文件。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
-msgid "Export data to third-party apps"
-msgstr "将数据导出到第三方应用程序"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
+msgid "Export data to ADP"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:648
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
 msgstr "*ADP导出*报告生成一个CSV文件，可以提交给ADP，然后ADP向员工付款。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:651
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -38058,7 +38058,7 @@ msgstr ""
 "CSV文件汇总了员工在指定时间段内的工作小时数，与其工资或小时工资相对应。该报告"
 "是在确认任何休息时间*之后*从\\ :doc:`工作条目 <../work_entries>`\\ 生成的。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:655
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -38067,13 +38067,116 @@ msgstr ""
 "导出格式旨在与ADP格式匹配。由于公司可以自定义其门户网站并可能需要进行一些更"
 "改，因此数据可以提供给ADP以在其中运行工资单。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:659
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
 msgstr ""
 "要访问ADP导出报告，**必须**\\ :ref:`安装 <general/install>`\\ `United States "
 "- Payroll - Export to ADP`模块。"
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:663
+msgid "Setup"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:665
+msgid ""
+"To export data to ADP, the company **must** have an ADP code configured in "
+"the company settings. Navigate to :menuselection:`Payroll app --> "
+"Configuration --> Settings`. In the *US Localization* section, enter "
+"the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:669
+msgid ""
+"Next, work entry types **must** have the correct ADP code listed in "
+"the :ref:`External Code field <payroll/new-work-entry-type>` for each work "
+"entry type that is being referenced."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:672
+msgid ""
+"Lastly, every employee **must** have an ADP code entered on their employee "
+"form. To add this code, open the :menuselection:`Employees` app, click an "
+"employee record, and click into the *Payroll* tab. In the *ADP Information* "
+"section, enter the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:676
+msgid ""
+"The :guilabel:`ADP Code` is how ADP identifies that particular employee, and "
+"is typically a six-digit number."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:680
+msgid "Export data"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:682
+msgid ""
+"Once :doc:`work entries <../work_entries>` have been verified, the "
+"information is exported to a CSV file, which is uploaded into ADP."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:685
+msgid ""
+"To export the data, navigate to :menuselection:`Payroll app --> Reporting --"
+"> ADP Export`, then click :guilabel:`New`. Next, enter the :guilabel:`Start "
+"Date` and :guilabel:`End Date` for the work entries using the calendar pop-"
+"over."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:689
+msgid ""
+"Then, enter a :guilabel:`Batch ID` in the corresponding field. The "
+"recommendation for this field is to enter the date in a `YY-MM-DD` format, "
+"followed by any other characters to distinguish that specific pay run, such "
+"as a department name."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:693
+msgid ""
+"Enter a :guilabel:`Batch Description` in the corresponding field. This "
+"should be short and descriptive, but distinct from the name of the pay run."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:696
+msgid ""
+"Ensure the correct company populates the :guilabel:`Company` field. Change "
+"the selected company with the drop-down menu, if needed."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:699
+msgid ""
+"Lastly, add the employee's work entry information to the list. "
+"Click :guilabel:`Add a line` and an *Add: Employee* pop-up window loads. The "
+"list can be :doc:`filtered <../../../essentials/search>` to find the "
+"employees to add to the list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:704
+msgid ""
+"Process the data export in multiple groups instead of in one large group "
+"that contains all employees. This helps to meaningfully differentiate the "
+"batches and makes processing more tenable, overall. The most common ways to "
+"group employees is by department, or by wage type (hourly or salaried)."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:709
+msgid ""
+"Select the employees to add to the list by clicking the box to the left of "
+"their name. Once all desired employees have been selected, click "
+"the :guilabel:`Select` button in the corner, and the employees appear in the "
+"list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:713
+msgid "To create the CSV file, click the :guilabel:`Generate` button."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:716
+msgid ":ref:`ACH - electronic transfers <l10n_us/ach-electronic-transfers>`"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payslips.rst:5
 msgid ""
@@ -42461,7 +42564,7 @@ msgstr ""
 "子邮件将显示在讨论区中。"
 
 #: ../../content/applications/hr/recruitment.rst:None
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:None
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
 msgid ""
 "Send a custom survey, also referred to as an interview form, to an applicant "
 "using a\n"
@@ -42477,34 +42580,38 @@ msgid ":doc:`recruitment/post_job`"
 msgstr ":doc:`recruitment/post_job`"
 
 #: ../../content/applications/hr/recruitment.rst:366
-msgid ":doc:`recruitment/add_applicants`"
+msgid ":doc:`recruitment/recruitment_flow`"
 msgstr ""
 
 #: ../../content/applications/hr/recruitment.rst:367
+msgid ":doc:`recruitment/add_applicants`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:368
 msgid ":doc:`recruitment/schedule_interviews`"
 msgstr ":doc:`recruitment/schedule_interviews`"
 
-#: ../../content/applications/hr/recruitment.rst:368
+#: ../../content/applications/hr/recruitment.rst:369
 msgid ":doc:`recruitment/offer_job_positions`"
 msgstr ":doc:`recruitment/offer_job_positions`"
 
-#: ../../content/applications/hr/recruitment.rst:369
+#: ../../content/applications/hr/recruitment.rst:370
 msgid ":doc:`recruitment/refuse_applicant`"
 msgstr ":doc:`recruitment/refuse_applicant`"
 
-#: ../../content/applications/hr/recruitment.rst:370
-msgid ":doc:`recruitment/applicant_analysis`"
-msgstr ":doc:`recruitment/applicant_analysis`"
-
 #: ../../content/applications/hr/recruitment.rst:371
+msgid ":doc:`recruitment/application_analysis`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:372
 msgid ":doc:`recruitment/source_analysis`"
 msgstr ":doc:`recruitment/source_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:372
+#: ../../content/applications/hr/recruitment.rst:373
 msgid ":doc:`recruitment/velocity_analysis`"
 msgstr ":doc:`recruitment/velocity_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:373
+#: ../../content/applications/hr/recruitment.rst:374
 msgid ":doc:`recruitment/team_performance`"
 msgstr ":doc:`recruitment/team_performance`"
 
@@ -42893,207 +43000,180 @@ msgstr ""
 msgid "The applicant's skills as compared to the job requirements."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:3
-msgid "Applicant analysis"
-msgstr "申请人分析"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:5
-msgid ""
-"The *Applicant Analysis* report allows recruiting departments to see which "
-"job positions have the most applicants, which have the most referrals, and "
-"how long it takes for applicants to move through the pipeline."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:3
+msgid "Application analysis"
 msgstr ""
-"\\ *申请人分析*\\ 报告可让招聘部门了解哪些职位的申请人最多、哪些职位的推荐最"
-"多，以及申请人在招聘流程中推进需要多长时间。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:9
+#: ../../content/applications/hr/recruitment/application_analysis.rst:5
 msgid ""
-"Knowing how many applicants each specific job position has, along with "
-"statistics about how many are hired and refused, can provide valuable "
-"insights. This information can assist the recruiting team to pivot their "
-"strategies to acquire the most desirable candidates."
+"The *Application Analysis* report allows recruiting departments to see the "
+"total number of applications submitted for the past 365 days. Along with the "
+"total, the number of hired applicants, refused applicants, and those still "
+"in the pipeline are displayed."
 msgstr ""
-"了解每个特定职位有多少应聘者，以及有多少人被录用和拒绝，可以提供有价值的见"
-"解。这些信息可以帮助招聘团队调整策略，以获得最理想的应聘者。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:14
-msgid "Applicant analysis report"
-msgstr "申请人分析报告"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:16
+#: ../../content/applications/hr/recruitment/application_analysis.rst:9
 msgid ""
-"Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
-"Applicant Analysis`. This presents a line chart of all applicants for the "
-"last year."
+"This information can help the recruiting team see how the various rates "
+"align with their hiring goals and pivot their strategies to acquire more "
+"desirable candidates."
 msgstr ""
-"首先导航至\\ :menuselection:`招聘应用 --> 报告 --> 申请人分析`\\ 。这将显示过"
-"去一年所有申请人的折线图。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:19
-msgid ""
-"Three separate color-coded metrics are presented: :guilabel:`In "
-"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:13
+msgid "Application Analysis report"
 msgstr ""
-"三个不同颜色的指标分别是：:guilabel:`进行中`、:guilabel:`已聘用` "
-"和:guilabel:`已拒绝`。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:22
+#: ../../content/applications/hr/recruitment/application_analysis.rst:15
 msgid ""
-"Hover the cursor over a month of the chart, and a pop-up window appears, "
-"displaying the specific numbers for that month."
-msgstr "将光标移至图表中的某个月份，就会弹出一个窗口，显示该月份的具体数字。"
+"To view the *Application Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Application Analysis`. "
+"This presents a line chart of all applicants for the last 365 days."
+msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid "The default Applicant Analysis report."
-msgstr "默认的申请人分析报告。"
+#: ../../content/applications/hr/recruitment/application_analysis.rst:18
+msgid ""
+"Three separate color-coded metrics are presented: :guilabel:`In Progress` "
+"appears in blue, :guilabel:`Hired` appears in red, and :guilabel:`Refused` "
+"appears in green."
+msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:29
+#: ../../content/applications/hr/recruitment/application_analysis.rst:21
+msgid ""
+"Hover the cursor over a month of the chart, and an *Applications* pop-up "
+"window appears, displaying the specific numbers for that month."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
+msgid "The default Application Analysis report."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:30
 #: ../../content/applications/hr/recruitment/team_performance.rst:30
 msgid "Pivot table view"
 msgstr "数据透视表视图"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:31
+#: ../../content/applications/hr/recruitment/application_analysis.rst:32
 msgid ""
-"For a more detailed view of the information in the :guilabel:`Applicant "
-"Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon "
-"in the top-right corner. This displays all the information in a pivot table."
+"For a more detailed view of the information in the *Application Analysis* "
+"report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the "
+"corner. This displays all the information in a pivot table."
 msgstr ""
-"要更详细地查看\\ :guilabel:`申请人分析`\\ 报告中的信息，请点击右上角的"
-"\\ :icon:`oi-view-pivot`\\ :guilabel:`（透视表）`\\ 图标。这将以透视表形式显"
-"示所有信息。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:35
+#: ../../content/applications/hr/recruitment/application_analysis.rst:36
 msgid ""
-"In this view, the job positions are displayed in the rows, and the columns "
-"display the total numbers of applicants, including how many of those "
-"applicants were hired or refused, and who is still in the recruitment "
-"process. The displayed information can be modified, if desired."
+"In this default view, the months are displayed in the rows, with each job "
+"position nested beneath them. The columns display the various stages of the "
+"recruitment pipeline, further divided by how many applicants were hired, "
+"refused, or still in process while in that stage. The displayed information "
+"can be modified, if desired."
 msgstr ""
-"在此视图中，行显示职位，列显示申请人总数，包括已聘用、已拒绝以及仍在招聘流程"
-"中的申请人数量。如有需要，可以修改显示的信息。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:39
-msgid ""
-"In this example, there are 18 total applicants. Out of that, six have been "
-"hired, two have been refused, and ten are still in the recruitment pipeline. "
-"The :guilabel:`Experienced Developer` position has six total applicants, "
-"three of which were hired, one refused, and two still in progress."
-msgstr ""
-"在此示例中，共有18名申请人。其中，6人已聘用，2人已拒绝，10人仍在招聘流程中。"
-"\\ :guilabel:`经验丰富的开发人员`\\ 职位共有6名申请人，其中3人已聘用，1人已拒"
-"绝，2人仍在进行中。"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 #: ../../content/applications/hr/recruitment/team_performance.rst:None
 msgid "The detailed pivot table view."
 msgstr "详细的数据透视表视图。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:48
+#: ../../content/applications/hr/recruitment/application_analysis.rst:45
+msgid ""
+"To only view the total number of applicants in each stage, click :icon:`fa-"
+"minus-square-o` :guilabel:`Total` in the top row. All the stages collapse, "
+"displaying only the total number of applications that are :guilabel:`In "
+"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`, along with the totals "
+"for all three in the :guilabel:`Applications` column. These numbers are "
+"organized by month, then job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:51
+msgid ""
+"In this example, of the fourteen newly hired employees, "
+"the :guilabel:`Furniture Assembler` position had the most new hires, with a "
+"total of four."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:0
+msgid "The pivot table showing only the totals in the columns."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:58
 msgid "Use case: applicants with referrals"
 msgstr "使用案例：有内部推荐的申请人"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:50
+#: ../../content/applications/hr/recruitment/application_analysis.rst:60
 msgid ""
 "To get a better understanding of how effective the company's :doc:`referral "
-"program <../referrals>` is, the :guilabel:`Applicant Analysis` report can be "
+"program <../referrals>` is, the *Application Analysis* report can be "
 "modified to show how many applicants were referred by current employees."
 msgstr ""
-"为了更好地了解公司\\ :doc:`推荐计划 <../referrals>`\\ 的有效性，可以修改"
-"\\ :guilabel:`申请人分析`\\ 报告，以显示有多少申请人是由现有员工推荐的。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:54
+#: ../../content/applications/hr/recruitment/application_analysis.rst:64
 msgid ""
-"From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
-"the :guilabel:`Applicant Analysis` report, first click "
-"the :guilabel:`Measures` button to reveal a drop-down menu of options."
+"From the :ref:`pivot table view <recruitment/application_analysis/pivot>` of "
+"the *Application Analysis* report, first click "
+"the :guilabel:`Measures` :icon:`fa-caret-down` button to reveal a drop-down "
+"menu of options."
 msgstr ""
-"在\\ :guilabel:`申请人分析`\\ 报告的\\ :icon:`oi-view-pivot`\\ :guilabel:`"
-"（透视表）`\\ 视图中，首先点击\\ :guilabel:`度量`\\ 按钮，显示选项下拉菜单。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:57
+#: ../../content/applications/hr/recruitment/application_analysis.rst:68
 msgid ""
-"Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate those "
+"Click both :guilabel:`Has Referrer` and :guilabel:`Count` to activate those "
 "two measures. Then, "
-"click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
-"and :guilabel:`Refused` to deactivate those default measures."
+"click :guilabel:`Applications`, :guilabel:`Hired`, :guilabel:`In Progress`, "
+"and :guilabel:`Refused` to deactivate those default measures. Click away "
+"from the drop-down window to close it. Then click :icon:`fa-minus-square-"
+"o` :guilabel:`Total` above the columns to condense all the displayed values."
 msgstr ""
-"点击\\ :guilabel:`有推荐人`\\ 和\\ :guilabel:`计数`\\ ，以激活这两个度量。然"
-"后，点击\\ :guilabel:`申请人`\\ 、:guilabel:`已聘用`\\ 、:guilabel:`进行中"
-"`\\ 和\\ :guilabel:`已拒绝`\\ ，以停用这些默认度量。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:61
+#: ../../content/applications/hr/recruitment/application_analysis.rst:73
 msgid ""
-"Now, the column displays the number of applicants that came from a referral "
+"Now, the columns display the number of applicants that came from a referral "
 "in the :guilabel:`Has Referrer` column, and the total number of applicants "
 "in the :guilabel:`Count` column."
 msgstr ""
-"现在，该列中的 :guilabel:`有推荐人` 列会显示来自推荐的申请人人数，"
-"而 :guilabel:`数量` 列会显示申请人总数。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:76
+msgid ""
+"In this example, the :guilabel:`Furniture Assembler` job position has the "
+"most referrals, and almost 25% of all applications were submitted through a "
+"referral."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 msgid ""
 "The detailed pivot table view displaying the number of referrals and the "
 "total applicants."
 msgstr "详细数据透视表显示推荐人数和申请人总数。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:67
-msgid ""
-"In this example, the :guilabel:`Experienced Developer` "
-"and :guilabel:`Interior Designer` job positions both have applicants from "
-"referrals, while the rest do not have any referrals."
-msgstr ""
-"在此示例中，\\ :guilabel:`经验丰富的开发人员`\\ 和\\ :guilabel:`室内设计师"
-"`\\ 职位都有来自推荐的申请人，而其余职位没有任何推荐。"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:71
+#: ../../content/applications/hr/recruitment/application_analysis.rst:83
 msgid "Hired through referrals"
 msgstr "通过内部推荐聘用"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:73
+#: ../../content/applications/hr/recruitment/application_analysis.rst:85
 msgid ""
 "It is possible to modify this report even further to see how many referred "
 "applicants end up being hired."
 msgstr "还可以进一步修改该报告，查看有多少被推荐的申请人最终被聘用。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:76
+#: ../../content/applications/hr/recruitment/application_analysis.rst:88
 msgid ""
-"To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
-"position]` row, which reveals a drop-down menu. Then, "
+"To view this data, click on a :icon:`fa-plus-square` :guilabel:`(job "
+"position)` row, which reveals a drop-down menu. Then, "
 "click :guilabel:`State` to show the various states applicants are currently "
 "in."
 msgstr ""
-"要查看这些数据，请点击 :icon:`fa-plus-square`:guilabel:`[职位]` 行，显示一个"
-"下拉菜单。然后，点击 :guilabel:`州/省` 以显示申请人目前所在地。"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:81
+#: ../../content/applications/hr/recruitment/application_analysis.rst:92
+msgid ""
+"To expand the other rows and display the various states, click on "
+"the :icon:`fa-plus-square` :guilabel:`(job position)` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:96
 msgid ""
 "Only states that have applicants in them are shown for each job position. If "
 "a state does **not** have any applicants, it does not appear in the list."
 msgstr ""
 "每个职位只显示有申请人的州/省。如果某个州/省**没有**任何申请人，则不会出现在"
 "列表中。"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:84
-msgid ""
-"To expand the other rows, and display the various states, click on "
-"the :icon:`fa-plus-square` :guilabel:`[job position]` button."
-msgstr ""
-"要展开其他行并显示各种状态，请点击 :icon:`fa-plus-square` :guilabel:`[工作位"
-"置]`按钮。"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid ""
-"The detailed pivot table view displaying applicants hired through referrals."
-msgstr "显示通过推荐聘用的申请人的详细数据透视表视图。"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:90
-msgid ""
-"Both the :guilabel:`Experienced Developer` and :guilabel:`Interior Designer` "
-"roles yielded one referral hire each, confirming that developers and "
-"designers generate the highest-success referrals."
-msgstr ""
-"\\ :guilabel:`经验丰富的开发人员`\\ 和\\ :guilabel:`室内设计师`\\ 职位各产生"
-"了一名推荐聘用，证实开发人员和设计师产生的推荐成功率最高。"
 
 #: ../../content/applications/hr/recruitment/new_job.rst:3
 msgid "Job positions"
@@ -43526,7 +43606,7 @@ msgstr ""
 "装 <general/install>`\\ *Salary Configurator* 模块。"
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:18
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:190
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:190
 msgid "Contract proposal"
 msgstr "合同提案"
 
@@ -43805,7 +43885,7 @@ msgstr ""
 "需要签名。"
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:154
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:200
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:200
 msgid "Contract signed"
 msgstr "已签署合同"
 
@@ -44196,11 +44276,11 @@ msgstr "点击任何看板卡片以查看特定工作委员会列表的详细信
 msgid "All job positions posted to a job board."
 msgstr "所有发布到工作委员会的职位。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:3
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:3
 msgid "Recruitment flow"
 msgstr "招聘流程"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:5
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:5
 msgid ""
 "When a prospective employee applies for a job in Odoo, there is a "
 "preconfigured process from the :ref:`initial inquiry <recruitment/"
@@ -44209,14 +44289,14 @@ msgid ""
 "default recruitment process for Odoo's **Recruitment** application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:11
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:11
 msgid ""
 "The following is based on Odoo's *default* recruitment pipeline. Be advised "
 "that if :ref:`modifications are made <recruitment/customize-stages>` to the "
 "pipeline, the process differs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:20
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:20
 msgid ""
 "At the start of the process, all applicants appear in the :guilabel:`New` "
 "stage on the *Applications* page, whether they submitted through the company "
@@ -44224,14 +44304,14 @@ msgid ""
 "by a recruiter <add_applicants>`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:24
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:24
 msgid ""
 "The :guilabel:`Applicant`, :guilabel:`Email`, and :guilabel:`Phone` number "
 "on the applicant's card are filled as soon as it is created. By default, "
 "these details are required for every job position."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:28
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:28
 msgid ""
 "If the website application form is modified, different fields may be "
 "populated, based on what information is required on the website."
@@ -44239,21 +44319,21 @@ msgstr ""
 "如果修改了网站申请表单，则可能会填充不同的字段，具体取决于网站上需要什么信"
 "息。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:31
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:31
 msgid ""
 "Anything typed in the *Short Introduction* section appears in the "
 "applicant's chatter as a note from :guilabel:`OdooBot`, labeled *Other "
 "Information*."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:37
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:37
 msgid ""
 "If a resumé was attached to the online application, it appears in the "
 "*Files* section of the chatter, and is also stored in the **Documents** "
 "application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:40
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:40
 msgid ""
 "To find the recruitment documents, navigate to the "
 "main :menuselection:`Documents` app dashboard, and click "
@@ -44261,7 +44341,7 @@ msgid ""
 "are stored within that folder."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:45
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:45
 msgid ""
 "Depending on the browser zoom level, or size of the browser screen, the "
 "resumé may appear below the main applicant card information as a PDF link, "
@@ -44270,11 +44350,11 @@ msgstr ""
 "根据浏览器的缩放级别或浏览器屏幕的大小，简历可能会作为 PDF 链接显示在主要应聘"
 "者卡片信息下方，或者作为图像显示在右侧。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:49
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:49
 msgid "Send interview"
 msgstr "发送面试"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:51
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:51
 msgid ""
 "At any point in the hiring process, an interview can be sent to the "
 "applicant to obtain more information. These interviews are custom-made, and "
@@ -44283,21 +44363,21 @@ msgstr ""
 "在招聘过程中的任何时候，都可以向应聘者发送面试通知，以获取更多信息。这些面试"
 "的形式可以定制。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:54
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:54
 msgid ""
 "The **Surveys** application is required to send interviews to an applicant, "
 "so it **must** be installed."
 msgstr ""
 "**网上调查**\\ 应用程序是向应聘者发送面试所必需的，因此\\ **必须**\\ 安装。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:57
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:57
 msgid ""
 "Odoo uses the term *interview*, but these can be thought of as "
 "questionnaires, surveys, tests, certifications, etc. :doc:`Custom interviews "
 "<new_job>` can be formatted to suit each individual job position's needs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:62
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:62
 msgid ""
 "A job position for a computer programmer could have an interview in the form "
 "of a programming quiz to determine the skill level of the applicant. A job "
@@ -44309,7 +44389,7 @@ msgstr ""
 "务员的职位如果希望应聘者周末晚上也能上班，那么可以通过问卷调查来了解应聘者的"
 "意向工作时间。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:67
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:67
 msgid ""
 "To send an interview to an applicant, first open the applicant's card from "
 "the *Applications* page to view the detailed applicant information. In the "
@@ -44317,21 +44397,21 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:71
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:71
 msgid ""
 "If the applicant's card has an email address on file, a *Send an interview* "
 "pop-up window appears, with the :guilabel:`Recipients`, :guilabel:`Subject`, "
 "and email body populated."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:75
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:75
 msgid ""
 "To send an email to an applicant, there **must** be an :guilabel:`Email` "
 "address on the applicant's card."
 msgstr ""
 "要向申请人发送电子邮件，申请人的卡片上**必须**有 :guilabel:`电子邮件`地址。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:78
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:78
 msgid ""
 "If an email address is missing on the applicant's card, when "
 "the :guilabel:`Send Interview` button is clicked and the *Send an interview* "
@@ -44341,13 +44421,13 @@ msgid ""
 "address. Once entered, click :guilabel:`Set Email`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:84
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:84
 msgid ""
 "The email address entered is only used to send the interview, and does "
 "**not** appear on the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:87
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:87
 msgid ""
 "Sometimes, preconfigured :doc:`email templates <../../general/companies/"
 "email_template>` in Odoo use dynamic placeholders, which are automatically "
@@ -44356,7 +44436,7 @@ msgid ""
 "name of the applicant in the email."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:92
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:92
 msgid ""
 "Add the email addresses of any additional recipients for the survey in "
 "the :guilabel:`Additional emails` field, if more people should receive the "
@@ -44366,7 +44446,7 @@ msgid ""
 "add their email address in the :guilabel:`Additional emails` field."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:98
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:98
 msgid ""
 "If any attachments need to be added, click the :icon:`fa-"
 "paperclip` :guilabel:`Attachments` button, and a file explorer window "
@@ -44378,7 +44458,7 @@ msgstr ""
 "会出现一个文件资源管理器窗口。导航到所需文件，然后点击 :guilabel:`打开` 将其"
 "附加到电子邮件。附件加载完毕，并列在 :icon:`fa-paperclip`:`附件`按钮上方。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:103
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:103
 msgid ""
 "The :guilabel:`Answer deadline` field specifies when the interview form must "
 "be completed by, and is populated with a date and time two weeks in the "
@@ -44388,7 +44468,7 @@ msgid ""
 "desired new deadline."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:108
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:108
 msgid ""
 "The :guilabel:`Mail Template` field is pre-populated based on the "
 "configuration for the interview. A different template can be chosen from the "
@@ -44396,24 +44476,24 @@ msgid ""
 "template loads in the email body."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:112
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:112
 msgid ""
 "To send the email with the interview link to the applicant, "
 "click :guilabel:`Send` at the bottom of the *Send an interview* pop-up "
 "window."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:122
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:122
 msgid "Qualification"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:124
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:124
 msgid ""
 "If an applicant is determined to be a good potential candidate, they are "
 "moved to the :guilabel:`Qualification` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:127
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:127
 msgid ""
 "This stage exists to sort candidates that have potential from those that do "
 "not meet the requirements. No automatic actions, such as emails, are set for "
@@ -44421,7 +44501,7 @@ msgid ""
 "phone call or an interview with the candidate."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:132
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:132
 msgid ""
 "In order to move an applicant's card from one stage to another, the "
 "applicant's card can either be dragged and dropped in the Kanban view of the "
@@ -44429,51 +44509,51 @@ msgid ""
 "the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:136
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:136
 msgid ""
 "To change the stage on the applicant's card, first click the desired "
 "applicant's card from the *Applications* page. The current stage for the "
 "card is highlighted at the top on a status bar, above the card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:140
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:140
 msgid ""
 "Click the desired stage for the card, and the stage changes. A log note "
 "indicating the stage change appears in the chatter, as well."
 msgstr "点击卡所需的阶段，阶段就会更改。聊天记录中也会显示阶段更改的日志说明。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:0
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:0
 msgid ""
 "Change the stage of an applicant by clicking on the desired stage at the top "
 "of the\n"
 "applicant's card."
 msgstr "点击申请人卡片顶部的所需阶段，更改申请人的阶段。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:150
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:150
 msgid "First interview"
 msgstr "首轮面试"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:152
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:152
 msgid ""
 "After an applicant has passed the :guilabel:`Qualification` stage, they can "
 "be manually moved to the :guilabel:`First Interview` stage on the "
 "*Applications* page, while in Kanban view."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:155
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:155
 msgid ""
 "To move the applicant to the next stage, drag and drop the applicant's card "
 "to the :guilabel:`First Interview` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:158
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:158
 msgid ""
 "Alternatively, open the desired applicant's card from the *Applications* "
 "page, and click the :guilabel:`First Interview` stage on the status bar at "
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:162
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:162
 msgid ""
 "The :guilabel:`First Interview` stage can be modified, so when the "
 "applicant's card moves to the :guilabel:`First Interview` stage, an email "
@@ -44485,18 +44565,18 @@ msgstr ""
 "一次面试`\\ 阶段时，可以自动向应聘者发送电子邮件，说明已请求面试。在此预配置"
 "的电子邮件模板中，会显示招聘团队日历的链接，允许应聘者安排面试。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:167
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:167
 msgid ""
 ":ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, "
 "and select the :guilabel:`Recruitment: Schedule Interview` option in "
 "the :guilabel:`Email Template` field to automate this action."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:174
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:174
 msgid "Second interview"
 msgstr "第二次面试"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:176
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:176
 msgid ""
 "After an applicant has passed the :guilabel:`First Interview` stage, they "
 "can be moved to the :guilabel:`Second Interview` stage. To move the "
@@ -44506,7 +44586,7 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:182
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:182
 msgid ""
 "When the applicant's card moves to the :guilabel:`Second Interview` stage, "
 "there are no automatic activities or emails configured for this stage, by "
@@ -44519,7 +44599,7 @@ msgstr ""
 "schedule_interviews/recruitment-scheduled>` 与申请人进行第二次面试，流程与首"
 "轮面试相同。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:192
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:192
 msgid ""
 "After the applicant has completed the various interview processes, the next "
 "step is to :doc:`send the job offer <offer_job_positions>`."
@@ -44527,7 +44607,7 @@ msgstr ""
 "应聘者完成各种面试程序后，下一步就是 :doc:`发送聘用通知"
 "<offer_job_positions>`。"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:195
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:195
 msgid ""
 "Once the offer has been sent, drag and drop the applicant's card to "
 "the :guilabel:`Contract Proposal` stage from the Kanban view of the "
@@ -44535,14 +44615,14 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:202
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:202
 msgid ""
 "Once the contract has been fully signed by all parties, and the applicant "
 "has been hired, the applicant's card moves to the :guilabel:`Contract "
 "Signed` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:205
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:205
 msgid ""
 "The :guilabel:`Contract Signed` is folded by default on the *Applications* "
 "page, and must be expanded before the applicant's card can be manually "
@@ -44554,11 +44634,11 @@ msgid ""
 "applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:213
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:213
 msgid "Refused"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:215
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
 "At any point in the recruitment process, a candidate can be :doc:`refused "
 "<refuse_applicant>`."
@@ -44584,6 +44664,14 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:10
 msgid ""
+"Open the main *Job Positions* dashboard by navigating "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`. "
+"Next, click on the desired job position card, then click on the individual "
+"applicant card from the *Applications* page."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
+msgid ""
 "Navigate to :menuselection:`Recruitment app --> Applications --> All "
 "Applications`. In the :guilabel:`Applications` list, click anywhere on the "
 "desired applicant's line to open that specific applicant's card."
@@ -44591,17 +44679,6 @@ msgstr ""
 "导航至 :menuselection:`招聘应用程序 --> 申请人 --> 所有应用程序`。"
 "在 :guilabel:`应用程序` 列表中，点击所需申请人行的任意位置，打开该申请人的卡"
 "片。"
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
-msgid ""
-"Navigate to the main *Job Positions* dashboard by navigating "
-"to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
-"Next, click on the desired job position card, then click on the individual "
-"applicant card from the :guilabel:`Applications` page."
-msgstr ""
-"通过导航到\\ :menuselection:`招聘应用程序 --> 申请 --> 按职位`\\ 导航到主\\ *"
-"职位*\\ 仪表板。接下来，点击所需的职位卡片，然后从\\ :guilabel:`申请`\\ 页面"
-"点击单个应聘者卡片。"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:17
 msgid ""
@@ -44623,15 +44700,15 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:28
 msgid ""
-"Clicking :guilabel:`Refuse` on an applicant's form makes "
-"the :guilabel:`Refuse Reason` pop-up window appear."
-msgstr "点击申请人表单上的 :guilabel:`拒绝` 会弹出 :guilabel:`拒绝理由` 窗口。"
+"Clicking :guilabel:`Refuse` on an applicant's form makes the *Refuse Reason* "
+"pop-up window appear."
+msgstr ""
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:31
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:30
 msgid ""
-"The default refuse reasons in Odoo, and their corresponding email templates, "
-"are:"
-msgstr "Odoo 中的默认拒绝原因及其相应的电子邮件模板是："
+"The default refuse reasons in Odoo, and their corresponding :ref:`refusal "
+"email <recruitment/refuse_applicant/send-refusal-email>` templates, are:"
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:37
 msgid "Email Template"
@@ -44676,44 +44753,29 @@ msgstr ":guilabel:`应聘者拒绝：薪资`"
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:48
 msgid ""
 "Additional refusal reasons :ref:`can be created, and existing ones can be "
-"modified (or deleted) <recruitment/new-refuse>`."
+"modified (or deleted) <recruitment/refuse_applicant/new-refuse>`."
 msgstr ""
-"可以\\ :ref:`创建其他拒绝原因，并修改（或删除）现有原因 <recruitment/new-"
-"refuse>`\\ 。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:51
-msgid ""
-"Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
-"refusal-email>`."
-msgstr ""
-"选择拒绝原因以\\ :ref:`发送拒绝邮件 <recruitment/send-refusal-email>`\\ 。"
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:54
 msgid "Create or modify refuse reasons"
 msgstr "创建或修改拒绝原因"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:58
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
 msgid ""
 "To view and configure refuse reasons, navigate "
 "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
-"Doing so reveals the :guilabel:`Refuse Reasons` page, where all the existing "
-"refusal reasons are listed."
+"Doing so reveals the *Refuse Reasons* page, where all the existing refusal "
+"reasons are listed."
 msgstr ""
-"要查看和配置拒绝原因，请转到\\ :menuselection:`招聘应用 --> 配置 --> 拒绝原因"
-"`\\ 。这样做会显示\\ :guilabel:`拒绝原因`\\ 页面，其中列出了所有现有的拒绝原"
-"因。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:62
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:60
 msgid ""
-"To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
-"click the :guilabel:`New` button in the top-left corner. A blank line "
-"appears at the bottom of the list, with an empty field present in "
-"the :guilabel:`Description` column."
+"To create a new refuse reason from the *Refuse Reasons* page, click "
+"the :guilabel:`New` button. A blank line appears at the bottom of the list, "
+"with an empty field present in the :guilabel:`Description` column."
 msgstr ""
-"要在 :guilabel:`拒绝原因` 页面创建新的拒绝原因，请点击左上角的 :guilabel:`新"
-"建` 按钮。列表底部会出现一行空白，其中 :guilabel:`说明` 栏为空字段。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:66
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:64
 msgid ""
 "Type in the new refuse reason in the field. It is recommended to enter a "
 "reason that is short and concise, such as `Offer expired` or `Withdrew "
@@ -44722,52 +44784,43 @@ msgstr ""
 "在字段中输入新的拒绝原因。建议输入简短的理由，如 `聘用通知过期` 或 `撤回申请"
 "`。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:69
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:67
 msgid ""
-"Then, in the :guilabel:`Email Template` field, click on the field to reveal "
-"a drop-down menu. Select an :guilabel:`Email Template` from the list to be "
-"used when this refuse reason is selected."
+"Then, click in the :guilabel:`Email Template` field to reveal a drop-down "
+"menu. Select the desired email template from the list to be used when the "
+"new refuse reason is selected."
 msgstr ""
-"然后，在 :guilabel:`电子邮件模板` 字段中点击该字段以显示下拉菜单。从列表中选"
-"择一个:guilabel:`电子邮件模板`，以便在选择此拒绝原因时使用。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:72
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:70
 msgid ""
-"If a new :guilabel:`Email Template` is desired, type in the name for the new "
-"template in the field. Then, click :guilabel:`Create and edit...`, and "
-"a :guilabel:`Create Email Template` form pop-up window appears."
+"If a new email template is desired, type in the name for the new template in "
+"the field. Then, click :guilabel:`Create and edit...`, and a *Create Email "
+"Template* pop-up window appears."
 msgstr ""
-"如果需要新的 :guilabel:`电子邮件模板`，请在字段中键入新模板的名称。然后，点"
-"击 :guilabel:`创建和编辑...`，弹出 :guilabel:`创建电子邮件模板` 表单窗口。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:76
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:73
 msgid ""
-"In the :guilabel:`Create Email Template` pop-up window, enter "
-"a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
-"corresponding fields."
+"The :guilabel:`Template Name` field is populated with the name entered in "
+"the :guilabel:`Email Template` column by default, but can be modified if "
+"desired. Enter the email :guilabel:`Subject` in the corresponding field, and "
+"add the email content in the *Body* tab. To include attachments, click the "
+"*Options* tab, and add the attachment using the :icon:`fa-"
+"paperclip` :guilabel:`Attachments` button. To assign an :guilabel:`Owner` "
+"for the template, select a user in the drop-down menu. Enter "
+"a :guilabel:`Template Description` in the corresponding field."
 msgstr ""
-"在弹出的 :guilabel:`创建电子邮件模板` 窗口中，为表单输入 :guilabel:`名称`，并"
-"在相应字段中输入电子邮件 :guilabel:`主题`。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:79
-msgid ""
-"Enter the desired email content in the :guilabel:`Content` tab. Proceed to "
-"make any other modifications to the template in the :guilabel:`Email "
-"Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save & "
-"Close` to save the template. Upon clicking that, Odoo returns to "
-"the :guilabel:`Refuse Reasons` list."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:80
+msgid "Click :guilabel:`Save`, and Odoo returns to the *Refuse Reasons* list."
 msgstr ""
-"在 :guilabel:`内容` 选项卡中输入所需的电子邮件内容。继续在 :guilabel:`电子邮"
-"件配置` 和 :guilabel:`设置` 选项卡中对模板进行其他修改，然后点击 :guilabel:`"
-"保存并关闭` 保存模板。点击后，Odoo 将返回到 :guilabel:`拒绝原因` 列表。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:84
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:82
 msgid ""
 "The new template appears in the new refuse reason :guilabel:`Email Template` "
 "field."
 msgstr "新模板会出现在新的拒绝原因 :guilabel:`电子邮件模板` 字段中。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:87
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:85
 msgid ""
 "Pre-configured recruitment refusal email templates in Odoo use dynamic "
 "placeholders, which are personalized placeholders that populate data from "
@@ -44776,16 +44829,14 @@ msgstr ""
 "Odoo 中预设的招聘拒绝电子邮件模板使用动态占位符，这是一种个性化占位符，可将申"
 "请人记录中的数据填充到电子邮件正文中。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:90
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:88
 msgid ""
-"For example, if the applicant's name is a used in a dynamic placeholder, the "
+"For example, if the applicant's name is used in a dynamic placeholder, the "
 "applicant's name appears anytime that dynamic placeholder appears on the "
 "email template."
 msgstr ""
-"例如，如果申请人的姓名用在动态占位符中，那么只要该动态占位符出现在电子邮件模"
-"板上，申请人的姓名就会出现。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:93
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:91
 msgid ""
 "For more detailed information on email templates, refer to the :doc:`../../"
 "general/companies/email_template` documentation."
@@ -44793,117 +44844,152 @@ msgstr ""
 "有关电子邮件模板的详细信息，请参阅 :doc:`../../general/companies/"
 "email_template` 文档。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:97
 msgid "Send refusal email"
 msgstr "发送拒绝电子邮件"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:101
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
 msgid ""
 "After clicking the :guilabel:`Refuse` button on an applicant form, "
-"a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
-"the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear below "
-"the selected refusal reason: :guilabel:`Send Email` and :guilabel:`Email "
-"Template`."
+"a :ref:`refuse reason <recruitment/refuse-reasons>` is selected from the "
+"*Refuse Reason* pop-up window."
 msgstr ""
-"在应聘者表单上点击\\ :guilabel:`拒绝`\\ 按钮后，在\\ :guilabel:`拒绝原因`\\ "
-"弹出窗口中选择\\ :ref:`拒绝原因 <recruitment/refuse-reasons>`\\ 。然后，在所"
-"选拒绝原因下方会出现两个字段：\\ :guilabel:`发送电子邮件`\\ 和\\ :guilabel:`"
-"电子邮件模板`\\ 。"
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:102
+msgid ""
+"The applicant's email address automatically populates "
+"the :guilabel:`Applicant` field. The :guilabel:`Subject` and email body are "
+"populated according to the corresponding email template."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:105
+msgid ""
+"To send the refusal email to the applicant, click :guilabel:`Refuse` at the "
+"bottom of the *Refuse Reason* pop-up window. The refusal email is sent to "
+"the applicant, and a red :guilabel:`Refused` banner appears on the "
+"applicant's card in the corner."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:110
+msgid ""
+"If an application should be refused but an email should **not** be sent (if, "
+"for example, the application was spam), click the :guilabel:`Send Email` "
+"toggle to deactivate it, and click :guilabel:`Refuse` at the bottom of the "
+"*Refuse Reason* pop-up window."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
 msgid ""
-"The Refuse Reason pop-up window that appears when refusing an applicant."
-msgstr "拒绝申请人时弹出的 “拒绝原因” 窗口。"
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:109
-msgid ""
-"The applicant's email address automatically populates the :guilabel:`Send "
-"Email` field; additional email recipients **cannot** be added."
+"The refuse reason pop-up window, with the email subject and body populated."
 msgstr ""
-"申请人的电子邮件地址会自动填入 :guilabel:`发送电子邮件 ` 字段；**不能** 添加"
-"其他电子邮件收件人。"
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:112
-msgid ""
-"If an email should **not** be sent to the applicant, uncheck "
-"the :guilabel:`Send Email` checkbox."
-msgstr ""
-"如果不应向申请人发送电子邮件，请取消选中 :guilabel:`发送电子邮件` 复选框。"
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:114
-msgid ""
-"The email template associated with the refusal reason populates "
-"the :guilabel:`Email Template` field. If a different email template is "
-"desired, select a different template from the :guilabel:`Email Template` "
-"drop-down menu."
-msgstr ""
-"与拒绝原因相关联的电子邮件模板将填充 :guilabel:`电子邮件模板` 字段。如果需要"
-"不同的电子邮件模板，请从 :guilabel:`电子邮件模板` 下拉菜单中选择不同的模板。"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:118
-msgid ""
-"To send the refusal email to the applicant, ensure the :guilabel:`Send "
-"Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
-"the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
-"the applicant, and a red :guilabel:`Refused` banner appears on the "
-"applicant's card in the top-right corner."
+msgid "Refuse duplicate applicant"
 msgstr ""
-"要向申请人发送拒绝电子邮件，请确保已勾选 :guilabel:`发送电子邮件` 复选框，然"
-"后点击弹出的 :guilabel:`拒绝` 窗口底部的 :guilabel:`拒绝原因`。拒绝电子邮件将"
-"发送给申请人，申请人的卡片右上角会出现红色的 :guilabel:`已拒绝` 横幅。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:120
 msgid ""
-"An applicant's card with the refused banner appearing in the top-right "
-"corner in red."
-msgstr "申请人的卡片，右上角有红色的拒绝横幅。"
+"Occasionally, applicants apply multiple times for the same job position. "
+"When this occurs, it is possible to refuse all their applications at once, "
+"instead of individually."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:123
+msgid ""
+"In this situation, a :guilabel:`Refuse Duplicate Applications` toggle "
+"appears on the *Refuse Reason* pop-up window. Enable the toggle, and "
+"a :guilabel:`Duplicate Applications` field appears beneath it, listing the "
+"applicant's name for each duplicate application in the system."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:127
-msgid "View refused applicants"
-msgstr "查看已拒绝申请"
+msgid ""
+"To refuse *all* applications for that applicant, click "
+"the :guilabel:`Refuse` button."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:129
 msgid ""
-"After refusal, the applicant's card is no longer visible in the job "
-"position's Kanban view. However, it is still possible to view applicants who "
-"have been refused."
+"The applicant is only sent one email, and all their applications for the job "
+"position are marked as *Refused*."
 msgstr ""
-"拒绝后，申请人的卡片在职位看板视图中将不再可见。但是，仍然可以查看被拒绝的申"
-"请人。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:132
-msgid ""
-"To view only the refused applicants, go to :menuselection:`Recruitment app --"
-"> Applications --> By Job Positions`, or :menuselection:`Recruitment app --> "
-"Applications --> All Applications`. Both methods navigate to "
-"the :guilabel:`Applications` dashboard, the only difference is :guilabel:`By "
-"Job Positions` displays applicants in a Kanban view, while :guilabel:`All "
-"Applications` displays applicants in a list view."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "Duplicate applications refused in one email."
 msgstr ""
-"要仅查看被拒绝的应聘者，请转到\\ :menuselection:`招聘应用 --> 应聘 --> 按职位"
-"`\\ ，或\\ :menuselection:`招聘应用 --> 应聘 --> 所有应聘`\\ 。这两种方法都会"
-"转到\\ :guilabel:`应聘`\\ 仪表板，唯一的区别是\\ :guilabel:`按职位`\\ 以看板"
-"视图显示应聘者，而\\ :guilabel:`所有应聘`\\ 以列表视图显示应聘者。"
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:136
+msgid "View refused applicants"
+msgstr "查看已拒绝申请"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:138
 msgid ""
-"On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
-"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
-"click :guilabel:`Refused`, located under the :icon:`fa-"
-"funnel` :guilabel:`Filters` section."
+"After refusal, the applicant's card is hidden by default. However, it is "
+"still possible to view applicants who have been refused :ref:`by job "
+"position <recruitment/refuse_applicant/job-refused>`, or view :ref:`all "
+"refused applicants <recruitment/refuse_applicant/all-refused>`."
 msgstr ""
-"在\\ :guilabel:`应聘`\\ 页面上，点击搜索栏中的\\ :icon:`fa-caret-"
-"down` :guilabel:`（切换搜索面板）`\\ 按钮，然后点击\\ :icon:`fa-"
-"funnel` :guilabel:`筛选`\\ 部分下的\\ :guilabel:`已拒绝`\\ 。"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:142
-msgid ""
-"All applicants that have been refused for the job position appear on "
-"the :guilabel:`Applications` page for that position, organized by the stage "
-"they were in when they were refused."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:145
+msgid "By job position"
 msgstr ""
-"所有申请职位被拒的申请人都会出现在该职位的 :guilabel:`申请` 页面上，并按他们"
-"被拒时所处的阶段排列。"
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:147
+msgid ""
+"To view the refused applicants for a specific job position, navigate "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`, "
+"then click the desired job position Kanban card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:150
+msgid ""
+"On the *Applications* page, click the :icon:`fa-caret-"
+"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+"click :guilabel:`Refused` in the :icon:`fa-filter` :guilabel:`Filters` "
+"column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:154
+msgid ""
+"All applicants that have been refused for the job position appear in the "
+"stage they were in when they were refused, and all other applicants are "
+"hidden."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for a job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:163
+msgid "All refused applicants"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:165
+msgid ""
+"To view all refused applicants across all job positions, navigate "
+"to :menuselection:`Recruitment app --> Applications --> All Applications`. "
+"Every applicant record is displayed in a default list view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:168
+msgid ""
+"Click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in "
+"the search bar, then click :guilabel:`Refused` in the :icon:`fa-"
+"funnel` :guilabel:`Filters` column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:171
+msgid ""
+"All applicants that have been refused appear, with the text in red. Along "
+"with the applicant's :guilabel:`Name`, the date they :guilabel:`Applied on`, "
+"the :guilabel:`Job Position`, :guilabel:`Stage` they were in when refused, "
+"their :guilabel:`Matching` percentage, any :guilabel:`Tags`, and "
+"the :guilabel:`Recruiter` responsible for the job position are listed."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for all job positions."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:3
 msgid "Schedule interviews"
@@ -45359,8 +45445,8 @@ msgid "The confirmation page with all the details for the interview displayed."
 msgstr "确认页面显示面试的所有详细信息。"
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:3
-msgid "Source analysis reporting"
-msgstr "来源分析报告"
+msgid "Source analysis"
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:5
 msgid ""
@@ -45395,127 +45481,89 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:19
 msgid ""
-"This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
-"Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
-"showing the amount of applicants by :guilabel:`Source`, and further "
-"separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+"This presents the data for the last 365 days in a default :icon:`fa-"
+"database` :guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)` "
+"view. It shows the amount of applicants by source and separated by status "
+"(:guilabel:`In Progress`, :guilabel:`Hired`, and :guilabel:`Refused`),"
 msgstr ""
-"这会在默认 :icon:`fa-area-chart` :guilabel:`（图表）` 视图中显示 :icon:`fa-"
-"filter` :guilabel:`过去 365 天申请人`的数据，并显示按 :guilabel:`来源` 划分申"
-"请人数，并按阶段（:guilabel:`进行中`和 :guilabel:`已录用`）进一步区分。"
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:23
 msgid ""
-"Hover the cursor over any column to view the specific numbers fort that "
-"column."
-msgstr "将光标悬停在任何列上可查看该列的具体数字。"
+"Hover the cursor over any color-coded section of a column to view the "
+"specific numbers for that status column."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
 msgid "The default bar chart of the source analysis information."
 msgstr "来源分析信息的默认条形图。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:29
+#: ../../content/applications/hr/recruitment/source_analysis.rst:30
 msgid "Source effectiveness report"
 msgstr "来源效果报告"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:31
+#: ../../content/applications/hr/recruitment/source_analysis.rst:32
 msgid ""
 "To identify which sources (e.g., job boards, social media, employee "
 "referrals, company website) produce the most hires, the pivot table view of "
-"the :guilabel:`Source Analysis` report can be configured to display further "
-"details."
+"the *Source Analysis* report can be configured to display further details."
 msgstr ""
-"要确定哪些来源（如招聘网站、社交媒体、员工推荐、公司网站）产生的招聘人数最"
-"多，可对 :guilabel:`来源分析` 报告的透视表视图进行配置，以显示更多详细信息。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:35
+#: ../../content/applications/hr/recruitment/source_analysis.rst:36
 msgid ""
-"To view the :guilabel:`Source Analysis` report in a pivot table, click "
-"the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner. "
-"The data is presented in a pivot table, with rows populated by job "
-"positions, and columns populated by stages."
+"To view the *Source Analysis* report in a pivot table, click the :icon:`oi-"
+"view-pivot` :guilabel:`(Pivot)` icon in the corner. The data is presented in "
+"a pivot table, with rows populated by sources, and columns populated by "
+"stages."
 msgstr ""
-"要以数据透视表形式查看\\ :guilabel:`来源分析`\\ 报告，请点击右上角的"
-"\\ :icon:`oi-view-pivot`\\ :guilabel:`（数据透视表）`\\ 图标。数据以数据透视"
-"表形式呈现，行按职位填充，列按阶段填充。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:39
+#: ../../content/applications/hr/recruitment/source_analysis.rst:40
 msgid ""
-"To expand this chart to show what specific sources the applicants came from, "
-"click the :icon:`fa-plus-square` :guilabel:`Total` box above the columns, to "
-"reveal a drop-down menu, and click :guilabel:`Source`."
+"To expand this chart to show what specific job positions the applicants "
+"applied to from each source, click the :icon:`fa-plus-"
+"square` :guilabel:`Total` box above the columns to reveal a drop-down menu, "
+"and click :guilabel:`Job Position`."
 msgstr ""
-"要展开此图表以显示申请人的具体来源，请点击列上方的 :icon:`fa-plus-square`:`总"
-"计` 框，显示一个下拉菜单，然后单击 :guilabel:`来源`。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:43
+#: ../../content/applications/hr/recruitment/source_analysis.rst:44
 msgid ""
-"Each column is then grouped by the source, such as: :guilabel:`Search "
-"engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
-"displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
-"and :guilabel:`Refused`."
+"Each column is then grouped by the job position, such as *Accountant* or "
+"*Carpenter*. Each job position displays a separate count for "
+"applications :guilabel:`In Progress`, :guilabel:`Refused`, "
+"or :guilabel:`Hired`, and an :guilabel:`Applications` column which displays "
+"the total count of all statuses."
 msgstr ""
-"然后每列按来源分组，例如：:guilabel:`搜索引擎"
-"`、:guilabel:`Facebook`、:guilabel:`LinkedIn`\\ 等。每个来源分别显示"
-"\\ :guilabel:`应聘者`、:guilabel:`已录用`\\ 和\\ :guilabel:`已拒绝`\\ 的计"
-"数。"
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:47
-msgid ""
-"This information, as presented, makes it difficult to view the specific "
-"numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
-"axis)` icon, to swap the information. After that, the rows represent the "
-"source, and the columns represent the job positions, further divided by "
-"stage."
-msgstr ""
-"所提供的这些信息使我们难以查看每个来源的具体数字。点击 :icon:`fa-"
-"exchange` :guilabel:`(翻转轴)` 图标，交换信息。之后，行代表来源，列代表职位，"
-"进一步按阶段划分。"
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The axes flipped in the source analysis report, in pivot table view."
-msgstr "来源分析报告中轴线翻转的数据透视表视图。"
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:54
 msgid ""
-"In this view, the total number of applicants, hired employees, and refused "
-"applicants, are displayed for each source, as well as for each stage by job "
-"position."
+"The pivot table view displaying each job position and its source and stage."
 msgstr ""
-"在此视图中，显示每个来源以及每个职位各阶段的应聘者总数、已录用员工数和已拒绝"
-"应聘者数。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:58
+#: ../../content/applications/hr/recruitment/source_analysis.rst:53
 msgid "Medium"
 msgstr "媒介"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:60
+#: ../../content/applications/hr/recruitment/source_analysis.rst:55
 msgid ""
 "Viewing the medium for the applicants can be beneficial to see which "
 "specific medium is more successful."
 msgstr "查看应聘者的媒介有助于了解哪种特定媒介更成功。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:63
+#: ../../content/applications/hr/recruitment/source_analysis.rst:58
 msgid ""
 "*Mediums* are the specific methods the applicant used to discover and then "
-"apply for job positions, such as organic search, paid search, social media "
-"ad, email, etc."
+"apply for job positions, such as a search engine, social media ad, email, "
+"banner, etc."
 msgstr ""
-"*媒介*是应聘者用来发现并申请职位的具体方法，例如自然搜索、付费搜索、社交媒体"
-"广告、电子邮件等。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:66
+#: ../../content/applications/hr/recruitment/source_analysis.rst:61
 msgid ""
 "To further group the results by medium, click into one of the :icon:`fa-plus-"
-"square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the resulting "
-"drop-down menu. The row presents the specific mediums, relevant to that "
-"specific source."
+"square` :guilabel:`(Source)` rows then click :guilabel:`Medium` in the "
+"resulting drop-down menu. The row presents the individual mediums relevant "
+"to that specific source."
 msgstr ""
-"要进一步按媒介对结果进行分组，请点击 :icon:`fa-plus-square`:guilabel:`[来"
-"源]` 行中的一行。点击下拉菜单中的 :guilabel:`媒介`。该行将显示与特定来源相关"
-"的特定媒介。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:70
+#: ../../content/applications/hr/recruitment/source_analysis.rst:65
 msgid ""
 "Once :guilabel:`Medium` is selected for one source, clicking into another "
 "row automatically reveals the specific metrics for the mediums for that "
@@ -45524,26 +45572,24 @@ msgstr ""
 "一旦为一个来源选择了 :guilabel:`媒介`，点击另一行就会自动显示该来源的媒介的具"
 "体指标。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The sources rows, expanded to also show the medium for each source."
-msgstr "来源行，扩展后还显示每个来源的媒介。"
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:77
+#: ../../content/applications/hr/recruitment/source_analysis.rst:69
 msgid ""
-"The only mediums that appear for a source, are mediums that have been set on "
+"The only mediums that appear for a source are mediums that have been set on "
 "an applicant's form. If a medium has **not** been set for any applicants, "
 "the medium does not appear in the drop-down rows beneath the source."
 msgstr ""
-"只有在申请人的表格中设置的媒介才会出现在信息源中。如果 **未** 为任何申请人设"
-"置媒介，则该媒介不会出现在来源下方的下拉行中。"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:81
+#: ../../content/applications/hr/recruitment/source_analysis.rst:73
 msgid ""
 "For example, if no applicants applied with the medium *Google Adwords*, that "
 "medium does **not** appear beneath the *Search engine* source row."
 msgstr ""
 "例如，如果没有申请人使用 *Google Adwords* 媒介申请，则该媒介 **不会** 出现在 "
 "*搜索引擎* 来源行下方。"
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:None
+msgid "The source rows, expanded to also show the medium for each source."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/team_performance.rst:3
 msgid "Team performance"
@@ -50834,6 +50880,469 @@ msgstr ":guilabel:`封面图片`：选择要在 **休假** 应用程序仪表板
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "休息时间类型表单的下半部分，已选择颜色和图标。"
+
+#~ msgid "Export data to third-party apps"
+#~ msgstr "将数据导出到第三方应用程序"
+
+#~ msgid ":doc:`recruitment/applicant_analysis`"
+#~ msgstr ":doc:`recruitment/applicant_analysis`"
+
+#~ msgid "Applicant analysis"
+#~ msgstr "申请人分析"
+
+#~ msgid ""
+#~ "The *Applicant Analysis* report allows recruiting departments to see "
+#~ "which job positions have the most applicants, which have the most "
+#~ "referrals, and how long it takes for applicants to move through the "
+#~ "pipeline."
+#~ msgstr ""
+#~ "\\ *申请人分析*\\ 报告可让招聘部门了解哪些职位的申请人最多、哪些职位的推荐"
+#~ "最多，以及申请人在招聘流程中推进需要多长时间。"
+
+#~ msgid ""
+#~ "Knowing how many applicants each specific job position has, along with "
+#~ "statistics about how many are hired and refused, can provide valuable "
+#~ "insights. This information can assist the recruiting team to pivot their "
+#~ "strategies to acquire the most desirable candidates."
+#~ msgstr ""
+#~ "了解每个特定职位有多少应聘者，以及有多少人被录用和拒绝，可以提供有价值的见"
+#~ "解。这些信息可以帮助招聘团队调整策略，以获得最理想的应聘者。"
+
+#~ msgid "Applicant analysis report"
+#~ msgstr "申请人分析报告"
+
+#~ msgid ""
+#~ "Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
+#~ "Applicant Analysis`. This presents a line chart of all applicants for the "
+#~ "last year."
+#~ msgstr ""
+#~ "首先导航至\\ :menuselection:`招聘应用 --> 报告 --> 申请人分析`\\ 。这将显"
+#~ "示过去一年所有申请人的折线图。"
+
+#~ msgid ""
+#~ "Three separate color-coded metrics are presented: :guilabel:`In "
+#~ "Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "三个不同颜色的指标分别是：:guilabel:`进行中`、:guilabel:`已聘用` "
+#~ "和:guilabel:`已拒绝`。"
+
+#~ msgid ""
+#~ "Hover the cursor over a month of the chart, and a pop-up window appears, "
+#~ "displaying the specific numbers for that month."
+#~ msgstr ""
+#~ "将光标移至图表中的某个月份，就会弹出一个窗口，显示该月份的具体数字。"
+
+#~ msgid "The default Applicant Analysis report."
+#~ msgstr "默认的申请人分析报告。"
+
+#~ msgid ""
+#~ "For a more detailed view of the information in the :guilabel:`Applicant "
+#~ "Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` "
+#~ "icon in the top-right corner. This displays all the information in a "
+#~ "pivot table."
+#~ msgstr ""
+#~ "要更详细地查看\\ :guilabel:`申请人分析`\\ 报告中的信息，请点击右上角的"
+#~ "\\ :icon:`oi-view-pivot`\\ :guilabel:`（透视表）`\\ 图标。这将以透视表形式"
+#~ "显示所有信息。"
+
+#~ msgid ""
+#~ "In this view, the job positions are displayed in the rows, and the "
+#~ "columns display the total numbers of applicants, including how many of "
+#~ "those applicants were hired or refused, and who is still in the "
+#~ "recruitment process. The displayed information can be modified, if "
+#~ "desired."
+#~ msgstr ""
+#~ "在此视图中，行显示职位，列显示申请人总数，包括已聘用、已拒绝以及仍在招聘流"
+#~ "程中的申请人数量。如有需要，可以修改显示的信息。"
+
+#~ msgid ""
+#~ "In this example, there are 18 total applicants. Out of that, six have "
+#~ "been hired, two have been refused, and ten are still in the recruitment "
+#~ "pipeline. The :guilabel:`Experienced Developer` position has six total "
+#~ "applicants, three of which were hired, one refused, and two still in "
+#~ "progress."
+#~ msgstr ""
+#~ "在此示例中，共有18名申请人。其中，6人已聘用，2人已拒绝，10人仍在招聘流程"
+#~ "中。\\ :guilabel:`经验丰富的开发人员`\\ 职位共有6名申请人，其中3人已聘用，"
+#~ "1人已拒绝，2人仍在进行中。"
+
+#~ msgid ""
+#~ "To get a better understanding of how effective the "
+#~ "company's :doc:`referral program <../referrals>` is, "
+#~ "the :guilabel:`Applicant Analysis` report can be modified to show how "
+#~ "many applicants were referred by current employees."
+#~ msgstr ""
+#~ "为了更好地了解公司\\ :doc:`推荐计划 <../referrals>`\\ 的有效性，可以修改"
+#~ "\\ :guilabel:`申请人分析`\\ 报告，以显示有多少申请人是由现有员工推荐的。"
+
+#~ msgid ""
+#~ "From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
+#~ "the :guilabel:`Applicant Analysis` report, first click "
+#~ "the :guilabel:`Measures` button to reveal a drop-down menu of options."
+#~ msgstr ""
+#~ "在\\ :guilabel:`申请人分析`\\ 报告的\\ :icon:`oi-view-pivot`\\ :guilabel:`"
+#~ "（透视表）`\\ 视图中，首先点击\\ :guilabel:`度量`\\ 按钮，显示选项下拉菜"
+#~ "单。"
+
+#~ msgid ""
+#~ "Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate "
+#~ "those two measures. Then, "
+#~ "click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
+#~ "and :guilabel:`Refused` to deactivate those default measures."
+#~ msgstr ""
+#~ "点击\\ :guilabel:`有推荐人`\\ 和\\ :guilabel:`计数`\\ ，以激活这两个度量。"
+#~ "然后，点击\\ :guilabel:`申请人`\\ 、:guilabel:`已聘用`\\ 、:guilabel:`进行"
+#~ "中`\\ 和\\ :guilabel:`已拒绝`\\ ，以停用这些默认度量。"
+
+#~ msgid ""
+#~ "Now, the column displays the number of applicants that came from a "
+#~ "referral in the :guilabel:`Has Referrer` column, and the total number of "
+#~ "applicants in the :guilabel:`Count` column."
+#~ msgstr ""
+#~ "现在，该列中的 :guilabel:`有推荐人` 列会显示来自推荐的申请人人数，"
+#~ "而 :guilabel:`数量` 列会显示申请人总数。"
+
+#~ msgid ""
+#~ "In this example, the :guilabel:`Experienced Developer` "
+#~ "and :guilabel:`Interior Designer` job positions both have applicants from "
+#~ "referrals, while the rest do not have any referrals."
+#~ msgstr ""
+#~ "在此示例中，\\ :guilabel:`经验丰富的开发人员`\\ 和\\ :guilabel:`室内设计师"
+#~ "`\\ 职位都有来自推荐的申请人，而其余职位没有任何推荐。"
+
+#~ msgid ""
+#~ "To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
+#~ "position]` row, which reveals a drop-down menu. Then, "
+#~ "click :guilabel:`State` to show the various states applicants are "
+#~ "currently in."
+#~ msgstr ""
+#~ "要查看这些数据，请点击 :icon:`fa-plus-square`:guilabel:`[职位]` 行，显示一"
+#~ "个下拉菜单。然后，点击 :guilabel:`州/省` 以显示申请人目前所在地。"
+
+#~ msgid ""
+#~ "To expand the other rows, and display the various states, click on "
+#~ "the :icon:`fa-plus-square` :guilabel:`[job position]` button."
+#~ msgstr ""
+#~ "要展开其他行并显示各种状态，请点击 :icon:`fa-plus-square` :guilabel:`[工作"
+#~ "位置]`按钮。"
+
+#~ msgid ""
+#~ "The detailed pivot table view displaying applicants hired through "
+#~ "referrals."
+#~ msgstr "显示通过推荐聘用的申请人的详细数据透视表视图。"
+
+#~ msgid ""
+#~ "Both the :guilabel:`Experienced Developer` and :guilabel:`Interior "
+#~ "Designer` roles yielded one referral hire each, confirming that "
+#~ "developers and designers generate the highest-success referrals."
+#~ msgstr ""
+#~ "\\ :guilabel:`经验丰富的开发人员`\\ 和\\ :guilabel:`室内设计师`\\ 职位各产"
+#~ "生了一名推荐聘用，证实开发人员和设计师产生的推荐成功率最高。"
+
+#~ msgid ""
+#~ "Navigate to the main *Job Positions* dashboard by navigating "
+#~ "to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
+#~ "Next, click on the desired job position card, then click on the "
+#~ "individual applicant card from the :guilabel:`Applications` page."
+#~ msgstr ""
+#~ "通过导航到\\ :menuselection:`招聘应用程序 --> 申请 --> 按职位`\\ 导航到主"
+#~ "\\ *职位*\\ 仪表板。接下来，点击所需的职位卡片，然后从\\ :guilabel:`申请"
+#~ "`\\ 页面点击单个应聘者卡片。"
+
+#~ msgid ""
+#~ "Clicking :guilabel:`Refuse` on an applicant's form makes "
+#~ "the :guilabel:`Refuse Reason` pop-up window appear."
+#~ msgstr ""
+#~ "点击申请人表单上的 :guilabel:`拒绝` 会弹出 :guilabel:`拒绝理由` 窗口。"
+
+#~ msgid ""
+#~ "The default refuse reasons in Odoo, and their corresponding email "
+#~ "templates, are:"
+#~ msgstr "Odoo 中的默认拒绝原因及其相应的电子邮件模板是："
+
+#~ msgid ""
+#~ "Additional refusal reasons :ref:`can be created, and existing ones can be "
+#~ "modified (or deleted) <recruitment/new-refuse>`."
+#~ msgstr ""
+#~ "可以\\ :ref:`创建其他拒绝原因，并修改（或删除）现有原因 <recruitment/new-"
+#~ "refuse>`\\ 。"
+
+#~ msgid ""
+#~ "Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
+#~ "refusal-email>`."
+#~ msgstr ""
+#~ "选择拒绝原因以\\ :ref:`发送拒绝邮件 <recruitment/send-refusal-email>`\\ 。"
+
+#~ msgid ""
+#~ "To view and configure refuse reasons, navigate "
+#~ "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
+#~ "Doing so reveals the :guilabel:`Refuse Reasons` page, where all the "
+#~ "existing refusal reasons are listed."
+#~ msgstr ""
+#~ "要查看和配置拒绝原因，请转到\\ :menuselection:`招聘应用 --> 配置 --> 拒绝"
+#~ "原因`\\ 。这样做会显示\\ :guilabel:`拒绝原因`\\ 页面，其中列出了所有现有的"
+#~ "拒绝原因。"
+
+#~ msgid ""
+#~ "To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
+#~ "click the :guilabel:`New` button in the top-left corner. A blank line "
+#~ "appears at the bottom of the list, with an empty field present in "
+#~ "the :guilabel:`Description` column."
+#~ msgstr ""
+#~ "要在 :guilabel:`拒绝原因` 页面创建新的拒绝原因，请点击左上角的 :guilabel:`"
+#~ "新建` 按钮。列表底部会出现一行空白，其中 :guilabel:`说明` 栏为空字段。"
+
+#~ msgid ""
+#~ "Then, in the :guilabel:`Email Template` field, click on the field to "
+#~ "reveal a drop-down menu. Select an :guilabel:`Email Template` from the "
+#~ "list to be used when this refuse reason is selected."
+#~ msgstr ""
+#~ "然后，在 :guilabel:`电子邮件模板` 字段中点击该字段以显示下拉菜单。从列表中"
+#~ "选择一个:guilabel:`电子邮件模板`，以便在选择此拒绝原因时使用。"
+
+#~ msgid ""
+#~ "If a new :guilabel:`Email Template` is desired, type in the name for the "
+#~ "new template in the field. Then, click :guilabel:`Create and edit...`, "
+#~ "and a :guilabel:`Create Email Template` form pop-up window appears."
+#~ msgstr ""
+#~ "如果需要新的 :guilabel:`电子邮件模板`，请在字段中键入新模板的名称。然后，"
+#~ "点击 :guilabel:`创建和编辑...`，弹出 :guilabel:`创建电子邮件模板` 表单窗"
+#~ "口。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Create Email Template` pop-up window, enter "
+#~ "a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
+#~ "corresponding fields."
+#~ msgstr ""
+#~ "在弹出的 :guilabel:`创建电子邮件模板` 窗口中，为表单输入 :guilabel:`名称"
+#~ "`，并在相应字段中输入电子邮件 :guilabel:`主题`。"
+
+#~ msgid ""
+#~ "Enter the desired email content in the :guilabel:`Content` tab. Proceed "
+#~ "to make any other modifications to the template in the :guilabel:`Email "
+#~ "Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save "
+#~ "& Close` to save the template. Upon clicking that, Odoo returns to "
+#~ "the :guilabel:`Refuse Reasons` list."
+#~ msgstr ""
+#~ "在 :guilabel:`内容` 选项卡中输入所需的电子邮件内容。继续在 :guilabel:`电子"
+#~ "邮件配置` 和 :guilabel:`设置` 选项卡中对模板进行其他修改，然后点"
+#~ "击 :guilabel:`保存并关闭` 保存模板。点击后，Odoo 将返回到 :guilabel:`拒绝"
+#~ "原因` 列表。"
+
+#~ msgid ""
+#~ "For example, if the applicant's name is a used in a dynamic placeholder, "
+#~ "the applicant's name appears anytime that dynamic placeholder appears on "
+#~ "the email template."
+#~ msgstr ""
+#~ "例如，如果申请人的姓名用在动态占位符中，那么只要该动态占位符出现在电子邮件"
+#~ "模板上，申请人的姓名就会出现。"
+
+#~ msgid ""
+#~ "After clicking the :guilabel:`Refuse` button on an applicant form, "
+#~ "a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
+#~ "the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear "
+#~ "below the selected refusal reason: :guilabel:`Send Email` "
+#~ "and :guilabel:`Email Template`."
+#~ msgstr ""
+#~ "在应聘者表单上点击\\ :guilabel:`拒绝`\\ 按钮后，在\\ :guilabel:`拒绝原因"
+#~ "`\\ 弹出窗口中选择\\ :ref:`拒绝原因 <recruitment/refuse-reasons>`\\ 。然"
+#~ "后，在所选拒绝原因下方会出现两个字段：\\ :guilabel:`发送电子邮件`\\ 和"
+#~ "\\ :guilabel:`电子邮件模板`\\ 。"
+
+#~ msgid ""
+#~ "The Refuse Reason pop-up window that appears when refusing an applicant."
+#~ msgstr "拒绝申请人时弹出的 “拒绝原因” 窗口。"
+
+#~ msgid ""
+#~ "The applicant's email address automatically populates the :guilabel:`Send "
+#~ "Email` field; additional email recipients **cannot** be added."
+#~ msgstr ""
+#~ "申请人的电子邮件地址会自动填入 :guilabel:`发送电子邮件 ` 字段；**不能** 添"
+#~ "加其他电子邮件收件人。"
+
+#~ msgid ""
+#~ "If an email should **not** be sent to the applicant, uncheck "
+#~ "the :guilabel:`Send Email` checkbox."
+#~ msgstr ""
+#~ "如果不应向申请人发送电子邮件，请取消选中 :guilabel:`发送电子邮件` 复选框。"
+
+#~ msgid ""
+#~ "The email template associated with the refusal reason populates "
+#~ "the :guilabel:`Email Template` field. If a different email template is "
+#~ "desired, select a different template from the :guilabel:`Email Template` "
+#~ "drop-down menu."
+#~ msgstr ""
+#~ "与拒绝原因相关联的电子邮件模板将填充 :guilabel:`电子邮件模板` 字段。如果需"
+#~ "要不同的电子邮件模板，请从 :guilabel:`电子邮件模板` 下拉菜单中选择不同的模"
+#~ "板。"
+
+#~ msgid ""
+#~ "To send the refusal email to the applicant, ensure the :guilabel:`Send "
+#~ "Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
+#~ "the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
+#~ "the applicant, and a red :guilabel:`Refused` banner appears on the "
+#~ "applicant's card in the top-right corner."
+#~ msgstr ""
+#~ "要向申请人发送拒绝电子邮件，请确保已勾选 :guilabel:`发送电子邮件` 复选框，"
+#~ "然后点击弹出的 :guilabel:`拒绝` 窗口底部的 :guilabel:`拒绝原因`。拒绝电子"
+#~ "邮件将发送给申请人，申请人的卡片右上角会出现红色的 :guilabel:`已拒绝` 横"
+#~ "幅。"
+
+#~ msgid ""
+#~ "An applicant's card with the refused banner appearing in the top-right "
+#~ "corner in red."
+#~ msgstr "申请人的卡片，右上角有红色的拒绝横幅。"
+
+#~ msgid ""
+#~ "After refusal, the applicant's card is no longer visible in the job "
+#~ "position's Kanban view. However, it is still possible to view applicants "
+#~ "who have been refused."
+#~ msgstr ""
+#~ "拒绝后，申请人的卡片在职位看板视图中将不再可见。但是，仍然可以查看被拒绝的"
+#~ "申请人。"
+
+#~ msgid ""
+#~ "To view only the refused applicants, go to :menuselection:`Recruitment "
+#~ "app --> Applications --> By Job Positions`, "
+#~ "or :menuselection:`Recruitment app --> Applications --> All "
+#~ "Applications`. Both methods navigate to the :guilabel:`Applications` "
+#~ "dashboard, the only difference is :guilabel:`By Job Positions` displays "
+#~ "applicants in a Kanban view, while :guilabel:`All Applications` displays "
+#~ "applicants in a list view."
+#~ msgstr ""
+#~ "要仅查看被拒绝的应聘者，请转到\\ :menuselection:`招聘应用 --> 应聘 --> 按"
+#~ "职位`\\ ，或\\ :menuselection:`招聘应用 --> 应聘 --> 所有应聘`\\ 。这两种"
+#~ "方法都会转到\\ :guilabel:`应聘`\\ 仪表板，唯一的区别是\\ :guilabel:`按职位"
+#~ "`\\ 以看板视图显示应聘者，而\\ :guilabel:`所有应聘`\\ 以列表视图显示应聘"
+#~ "者。"
+
+#~ msgid ""
+#~ "On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
+#~ "down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+#~ "click :guilabel:`Refused`, located under the :icon:`fa-"
+#~ "funnel` :guilabel:`Filters` section."
+#~ msgstr ""
+#~ "在\\ :guilabel:`应聘`\\ 页面上，点击搜索栏中的\\ :icon:`fa-caret-"
+#~ "down` :guilabel:`（切换搜索面板）`\\ 按钮，然后点击\\ :icon:`fa-"
+#~ "funnel` :guilabel:`筛选`\\ 部分下的\\ :guilabel:`已拒绝`\\ 。"
+
+#~ msgid ""
+#~ "All applicants that have been refused for the job position appear on "
+#~ "the :guilabel:`Applications` page for that position, organized by the "
+#~ "stage they were in when they were refused."
+#~ msgstr ""
+#~ "所有申请职位被拒的申请人都会出现在该职位的 :guilabel:`申请` 页面上，并按他"
+#~ "们被拒时所处的阶段排列。"
+
+#~ msgid "Source analysis reporting"
+#~ msgstr "来源分析报告"
+
+#~ msgid ""
+#~ "This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
+#~ "Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
+#~ "showing the amount of applicants by :guilabel:`Source`, and further "
+#~ "separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+#~ msgstr ""
+#~ "这会在默认 :icon:`fa-area-chart` :guilabel:`（图表）` 视图中显"
+#~ "示 :icon:`fa-filter` :guilabel:`过去 365 天申请人`的数据，并显示"
+#~ "按 :guilabel:`来源` 划分申请人数，并按阶段（:guilabel:`进行中`"
+#~ "和 :guilabel:`已录用`）进一步区分。"
+
+#~ msgid ""
+#~ "Hover the cursor over any column to view the specific numbers fort that "
+#~ "column."
+#~ msgstr "将光标悬停在任何列上可查看该列的具体数字。"
+
+#~ msgid ""
+#~ "To identify which sources (e.g., job boards, social media, employee "
+#~ "referrals, company website) produce the most hires, the pivot table view "
+#~ "of the :guilabel:`Source Analysis` report can be configured to display "
+#~ "further details."
+#~ msgstr ""
+#~ "要确定哪些来源（如招聘网站、社交媒体、员工推荐、公司网站）产生的招聘人数最"
+#~ "多，可对 :guilabel:`来源分析` 报告的透视表视图进行配置，以显示更多详细信"
+#~ "息。"
+
+#~ msgid ""
+#~ "To view the :guilabel:`Source Analysis` report in a pivot table, click "
+#~ "the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right "
+#~ "corner. The data is presented in a pivot table, with rows populated by "
+#~ "job positions, and columns populated by stages."
+#~ msgstr ""
+#~ "要以数据透视表形式查看\\ :guilabel:`来源分析`\\ 报告，请点击右上角的"
+#~ "\\ :icon:`oi-view-pivot`\\ :guilabel:`（数据透视表）`\\ 图标。数据以数据透"
+#~ "视表形式呈现，行按职位填充，列按阶段填充。"
+
+#~ msgid ""
+#~ "To expand this chart to show what specific sources the applicants came "
+#~ "from, click the :icon:`fa-plus-square` :guilabel:`Total` box above the "
+#~ "columns, to reveal a drop-down menu, and click :guilabel:`Source`."
+#~ msgstr ""
+#~ "要展开此图表以显示申请人的具体来源，请点击列上方的 :icon:`fa-plus-"
+#~ "square`:`总计` 框，显示一个下拉菜单，然后单击 :guilabel:`来源`。"
+
+#~ msgid ""
+#~ "Each column is then grouped by the source, such as: :guilabel:`Search "
+#~ "engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
+#~ "displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
+#~ "and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "然后每列按来源分组，例如：:guilabel:`搜索引擎"
+#~ "`、:guilabel:`Facebook`、:guilabel:`LinkedIn`\\ 等。每个来源分别显示"
+#~ "\\ :guilabel:`应聘者`、:guilabel:`已录用`\\ 和\\ :guilabel:`已拒绝`\\ 的计"
+#~ "数。"
+
+#~ msgid ""
+#~ "This information, as presented, makes it difficult to view the specific "
+#~ "numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
+#~ "axis)` icon, to swap the information. After that, the rows represent the "
+#~ "source, and the columns represent the job positions, further divided by "
+#~ "stage."
+#~ msgstr ""
+#~ "所提供的这些信息使我们难以查看每个来源的具体数字。点击 :icon:`fa-"
+#~ "exchange` :guilabel:`(翻转轴)` 图标，交换信息。之后，行代表来源，列代表职"
+#~ "位，进一步按阶段划分。"
+
+#~ msgid "The axes flipped in the source analysis report, in pivot table view."
+#~ msgstr "来源分析报告中轴线翻转的数据透视表视图。"
+
+#~ msgid ""
+#~ "In this view, the total number of applicants, hired employees, and "
+#~ "refused applicants, are displayed for each source, as well as for each "
+#~ "stage by job position."
+#~ msgstr ""
+#~ "在此视图中，显示每个来源以及每个职位各阶段的应聘者总数、已录用员工数和已拒"
+#~ "绝应聘者数。"
+
+#~ msgid ""
+#~ "*Mediums* are the specific methods the applicant used to discover and "
+#~ "then apply for job positions, such as organic search, paid search, social "
+#~ "media ad, email, etc."
+#~ msgstr ""
+#~ "*媒介*是应聘者用来发现并申请职位的具体方法，例如自然搜索、付费搜索、社交媒"
+#~ "体广告、电子邮件等。"
+
+#~ msgid ""
+#~ "To further group the results by medium, click into one of the :icon:`fa-"
+#~ "plus-square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the "
+#~ "resulting drop-down menu. The row presents the specific mediums, relevant "
+#~ "to that specific source."
+#~ msgstr ""
+#~ "要进一步按媒介对结果进行分组，请点击 :icon:`fa-plus-square`:guilabel:`[来"
+#~ "源]` 行中的一行。点击下拉菜单中的 :guilabel:`媒介`。该行将显示与特定来源相"
+#~ "关的特定媒介。"
+
+#~ msgid "The sources rows, expanded to also show the medium for each source."
+#~ msgstr "来源行，扩展后还显示每个来源的媒介。"
+
+#~ msgid ""
+#~ "The only mediums that appear for a source, are mediums that have been set "
+#~ "on an applicant's form. If a medium has **not** been set for any "
+#~ "applicants, the medium does not appear in the drop-down rows beneath the "
+#~ "source."
+#~ msgstr ""
+#~ "只有在申请人的表格中设置的媒介才会出现在信息源中。如果 **未** 为任何申请人"
+#~ "设置媒介，则该媒介不会出现在来源下方的下拉行中。"
 
 #~ msgid ""
 #~ ":guilabel:`Make Vehicle Available`: Click the checkbox if the vehicle can "

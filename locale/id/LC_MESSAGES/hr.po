@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:33+0000\n"
 "PO-Revision-Date: 2026-08-27 16:38+0000\n"
 "Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -8208,7 +8208,7 @@ msgid "Resumé tab"
 msgstr "Tab Resume"
 
 #: ../../content/applications/hr/employees/new_employee.rst:162
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:35
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:35
 msgid "Resumé"
 msgstr "Resume"
 
@@ -11528,7 +11528,7 @@ msgid "In Odoo's **Fleet** app, there are four default service stages:"
 msgstr "Di aplikasi **Armada** Odoo, terdapat empat tahapan layanan default:"
 
 #: ../../content/applications/hr/fleet/accidents.rst:103
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:18
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:18
 msgid "New"
 msgstr "Baru"
 
@@ -42294,11 +42294,11 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "Layar laporan 940, dengan file yang akan diunduh di bagian atas."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
-msgid "Export data to third-party apps"
-msgstr "Ekspor data ke aplikasi pihak ketiga"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
+msgid "Export data to ADP"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:648
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -42306,7 +42306,7 @@ msgstr ""
 "Laporan *ADP Export* menghasilkan file CSV yang dapat dikirimkan ke ADP, "
 "yang kemudian melakukan pembayaran kepada karyawan."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:651
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -42316,7 +42316,7 @@ msgstr ""
 "berkorelasi dengan gaji atau upah per jam mereka. Laporan dibuat "
 "dari :doc:`work entry <../work_entries>` *setelah* cuti dikonfirmasi."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:655
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -42326,13 +42326,116 @@ msgstr ""
 "dapat menyesuaikan portal mereka dan mungkin memerlukan beberapa perubahan, "
 "data tersedia untuk dimasukkan ke ADP untuk menjalankan payroll di dalamnya."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:659
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
 msgstr ""
 "Untuk mengakses laporan ADP Export, modul `United States - Payroll - Export "
 "to ADP` **harus** :ref:`diinstal <general/install>`."
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:663
+msgid "Setup"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:665
+msgid ""
+"To export data to ADP, the company **must** have an ADP code configured in "
+"the company settings. Navigate to :menuselection:`Payroll app --> "
+"Configuration --> Settings`. In the *US Localization* section, enter "
+"the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:669
+msgid ""
+"Next, work entry types **must** have the correct ADP code listed in "
+"the :ref:`External Code field <payroll/new-work-entry-type>` for each work "
+"entry type that is being referenced."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:672
+msgid ""
+"Lastly, every employee **must** have an ADP code entered on their employee "
+"form. To add this code, open the :menuselection:`Employees` app, click an "
+"employee record, and click into the *Payroll* tab. In the *ADP Information* "
+"section, enter the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:676
+msgid ""
+"The :guilabel:`ADP Code` is how ADP identifies that particular employee, and "
+"is typically a six-digit number."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:680
+msgid "Export data"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:682
+msgid ""
+"Once :doc:`work entries <../work_entries>` have been verified, the "
+"information is exported to a CSV file, which is uploaded into ADP."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:685
+msgid ""
+"To export the data, navigate to :menuselection:`Payroll app --> Reporting --"
+"> ADP Export`, then click :guilabel:`New`. Next, enter the :guilabel:`Start "
+"Date` and :guilabel:`End Date` for the work entries using the calendar pop-"
+"over."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:689
+msgid ""
+"Then, enter a :guilabel:`Batch ID` in the corresponding field. The "
+"recommendation for this field is to enter the date in a `YY-MM-DD` format, "
+"followed by any other characters to distinguish that specific pay run, such "
+"as a department name."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:693
+msgid ""
+"Enter a :guilabel:`Batch Description` in the corresponding field. This "
+"should be short and descriptive, but distinct from the name of the pay run."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:696
+msgid ""
+"Ensure the correct company populates the :guilabel:`Company` field. Change "
+"the selected company with the drop-down menu, if needed."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:699
+msgid ""
+"Lastly, add the employee's work entry information to the list. "
+"Click :guilabel:`Add a line` and an *Add: Employee* pop-up window loads. The "
+"list can be :doc:`filtered <../../../essentials/search>` to find the "
+"employees to add to the list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:704
+msgid ""
+"Process the data export in multiple groups instead of in one large group "
+"that contains all employees. This helps to meaningfully differentiate the "
+"batches and makes processing more tenable, overall. The most common ways to "
+"group employees is by department, or by wage type (hourly or salaried)."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:709
+msgid ""
+"Select the employees to add to the list by clicking the box to the left of "
+"their name. Once all desired employees have been selected, click "
+"the :guilabel:`Select` button in the corner, and the employees appear in the "
+"list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:713
+msgid "To create the CSV file, click the :guilabel:`Generate` button."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:716
+msgid ":ref:`ACH - electronic transfers <l10n_us/ach-electronic-transfers>`"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payslips.rst:5
 msgid ""
@@ -47248,7 +47351,7 @@ msgstr ""
 "pelamar. Email tersebut kemudian muncul di chatter."
 
 #: ../../content/applications/hr/recruitment.rst:None
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:None
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
 msgid ""
 "Send a custom survey, also referred to as an interview form, to an applicant "
 "using a\n"
@@ -47266,34 +47369,38 @@ msgid ":doc:`recruitment/post_job`"
 msgstr ":doc:`recruitment/post_job`"
 
 #: ../../content/applications/hr/recruitment.rst:366
-msgid ":doc:`recruitment/add_applicants`"
+msgid ":doc:`recruitment/recruitment_flow`"
 msgstr ""
 
 #: ../../content/applications/hr/recruitment.rst:367
+msgid ":doc:`recruitment/add_applicants`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:368
 msgid ":doc:`recruitment/schedule_interviews`"
 msgstr ":doc:`recruitment/schedule_interviews`"
 
-#: ../../content/applications/hr/recruitment.rst:368
+#: ../../content/applications/hr/recruitment.rst:369
 msgid ":doc:`recruitment/offer_job_positions`"
 msgstr ":doc:`recruitment/offer_job_positions`"
 
-#: ../../content/applications/hr/recruitment.rst:369
+#: ../../content/applications/hr/recruitment.rst:370
 msgid ":doc:`recruitment/refuse_applicant`"
 msgstr ":doc:`recruitment/refuse_applicant`"
 
-#: ../../content/applications/hr/recruitment.rst:370
-msgid ":doc:`recruitment/applicant_analysis`"
-msgstr ":doc:`recruitment/applicant_analysis`"
-
 #: ../../content/applications/hr/recruitment.rst:371
+msgid ":doc:`recruitment/application_analysis`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:372
 msgid ":doc:`recruitment/source_analysis`"
 msgstr ":doc:`recruitment/source_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:372
+#: ../../content/applications/hr/recruitment.rst:373
 msgid ":doc:`recruitment/velocity_analysis`"
 msgstr ":doc:`recruitment/velocity_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:373
+#: ../../content/applications/hr/recruitment.rst:374
 msgid ":doc:`recruitment/team_performance`"
 msgstr ":doc:`recruitment/team_performance`"
 
@@ -47690,163 +47797,144 @@ msgstr ""
 msgid "The applicant's skills as compared to the job requirements."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:3
-msgid "Applicant analysis"
-msgstr "Analisis pelamar"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:5
-msgid ""
-"The *Applicant Analysis* report allows recruiting departments to see which "
-"job positions have the most applicants, which have the most referrals, and "
-"how long it takes for applicants to move through the pipeline."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:3
+msgid "Application analysis"
 msgstr ""
-"Laporan *Analisis Pelamar* memungkinkan departemen perekrutan untuk melihat "
-"posisi pekerjaan mana yang memiliki pelamar terbanyak, mana yang memiliki "
-"referensi terbanyak, dan berapa lama waktu yang diperlukan pelamar untuk "
-"bergerak melalui pipeline."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:9
+#: ../../content/applications/hr/recruitment/application_analysis.rst:5
 msgid ""
-"Knowing how many applicants each specific job position has, along with "
-"statistics about how many are hired and refused, can provide valuable "
-"insights. This information can assist the recruiting team to pivot their "
-"strategies to acquire the most desirable candidates."
+"The *Application Analysis* report allows recruiting departments to see the "
+"total number of applications submitted for the past 365 days. Along with the "
+"total, the number of hired applicants, refused applicants, and those still "
+"in the pipeline are displayed."
 msgstr ""
-"Mengetahui berapa banyak pelamar untuk setiap posisi pekerjaan tertentu, "
-"bersama dengan statistik tentang berapa banyak yang dipekerjakan dan "
-"ditolak, dapat memberikan wawasan berharga. Informasi ini dapat membantu tim "
-"perekrutan untuk mengubah strategi mereka dalam mendapatkan kandidat yang "
-"paling diinginkan."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:14
-msgid "Applicant analysis report"
-msgstr "Laporan analisis pelamar"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:16
+#: ../../content/applications/hr/recruitment/application_analysis.rst:9
 msgid ""
-"Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
-"Applicant Analysis`. This presents a line chart of all applicants for the "
-"last year."
+"This information can help the recruiting team see how the various rates "
+"align with their hiring goals and pivot their strategies to acquire more "
+"desirable candidates."
 msgstr ""
-"Mulailah dengan membuka :menuselection:`aplikasi Perekrutan --> Pelaporan --"
-"> Analisis Pelamar`. Ini menampilkan grafik garis dari semua pelamar selama "
-"satu tahun terakhir."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:19
+#: ../../content/applications/hr/recruitment/application_analysis.rst:13
+msgid "Application Analysis report"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:15
 msgid ""
-"Three separate color-coded metrics are presented: :guilabel:`In "
-"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+"To view the *Application Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Application Analysis`. "
+"This presents a line chart of all applicants for the last 365 days."
 msgstr ""
-"Tiga metrik terpisah dengan kode warna ditampilkan: :guilabel:`Dalam "
-"Proses`, :guilabel:`Dipekerjakan`, dan :guilabel:`Ditolak`."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:22
+#: ../../content/applications/hr/recruitment/application_analysis.rst:18
 msgid ""
-"Hover the cursor over a month of the chart, and a pop-up window appears, "
-"displaying the specific numbers for that month."
+"Three separate color-coded metrics are presented: :guilabel:`In Progress` "
+"appears in blue, :guilabel:`Hired` appears in red, and :guilabel:`Refused` "
+"appears in green."
 msgstr ""
-"Arahkan kursor ke bulan pada grafik, dan jendela pop-up muncul yang "
-"menampilkan angka spesifik untuk bulan tersebut."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid "The default Applicant Analysis report."
-msgstr "Laporan Analisis Pelamar default."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:21
+msgid ""
+"Hover the cursor over a month of the chart, and an *Applications* pop-up "
+"window appears, displaying the specific numbers for that month."
+msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:29
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
+msgid "The default Application Analysis report."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:30
 #: ../../content/applications/hr/recruitment/team_performance.rst:30
 msgid "Pivot table view"
 msgstr "Tampilan tabel pivot"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:31
+#: ../../content/applications/hr/recruitment/application_analysis.rst:32
 msgid ""
-"For a more detailed view of the information in the :guilabel:`Applicant "
-"Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon "
-"in the top-right corner. This displays all the information in a pivot table."
+"For a more detailed view of the information in the *Application Analysis* "
+"report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the "
+"corner. This displays all the information in a pivot table."
 msgstr ""
-"Untuk tampilan yang lebih detail dari informasi dalam "
-"laporan :guilabel:`Analisis Pelamar`, klik ikon :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` di sudut kanan atas. Ini menampilkan semua "
-"informasi dalam tabel pivot."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:35
+#: ../../content/applications/hr/recruitment/application_analysis.rst:36
 msgid ""
-"In this view, the job positions are displayed in the rows, and the columns "
-"display the total numbers of applicants, including how many of those "
-"applicants were hired or refused, and who is still in the recruitment "
-"process. The displayed information can be modified, if desired."
+"In this default view, the months are displayed in the rows, with each job "
+"position nested beneath them. The columns display the various stages of the "
+"recruitment pipeline, further divided by how many applicants were hired, "
+"refused, or still in process while in that stage. The displayed information "
+"can be modified, if desired."
 msgstr ""
-"Dalam tampilan ini, posisi pekerjaan ditampilkan dalam baris, dan kolom "
-"menampilkan jumlah total pelamar, termasuk berapa banyak dari pelamar "
-"tersebut yang dipekerjakan atau ditolak, dan siapa yang masih dalam proses "
-"perekrutan. Informasi yang ditampilkan dapat dimodifikasi jika diinginkan."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:39
-msgid ""
-"In this example, there are 18 total applicants. Out of that, six have been "
-"hired, two have been refused, and ten are still in the recruitment pipeline. "
-"The :guilabel:`Experienced Developer` position has six total applicants, "
-"three of which were hired, one refused, and two still in progress."
-msgstr ""
-"Dalam contoh ini, terdapat 18 total pelamar. Dari jumlah tersebut, enam "
-"telah dipekerjakan, dua telah ditolak, dan sepuluh masih dalam pipeline "
-"perekrutan. Posisi :guilabel:`Developer Berpengalaman` memiliki enam total "
-"pelamar, tiga di antaranya dipekerjakan, satu ditolak, dan dua masih dalam "
-"proses."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 #: ../../content/applications/hr/recruitment/team_performance.rst:None
 msgid "The detailed pivot table view."
 msgstr "Tampilan tabel pivot terperinci."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:48
+#: ../../content/applications/hr/recruitment/application_analysis.rst:45
+msgid ""
+"To only view the total number of applicants in each stage, click :icon:`fa-"
+"minus-square-o` :guilabel:`Total` in the top row. All the stages collapse, "
+"displaying only the total number of applications that are :guilabel:`In "
+"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`, along with the totals "
+"for all three in the :guilabel:`Applications` column. These numbers are "
+"organized by month, then job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:51
+msgid ""
+"In this example, of the fourteen newly hired employees, "
+"the :guilabel:`Furniture Assembler` position had the most new hires, with a "
+"total of four."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:0
+msgid "The pivot table showing only the totals in the columns."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:58
 msgid "Use case: applicants with referrals"
 msgstr "Kasus penggunaan: pelamar dengan referensi"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:50
+#: ../../content/applications/hr/recruitment/application_analysis.rst:60
 msgid ""
 "To get a better understanding of how effective the company's :doc:`referral "
-"program <../referrals>` is, the :guilabel:`Applicant Analysis` report can be "
+"program <../referrals>` is, the *Application Analysis* report can be "
 "modified to show how many applicants were referred by current employees."
 msgstr ""
-"Untuk mendapatkan pemahaman yang lebih baik tentang seberapa "
-"efektif :doc:`program referensi <../referrals>` perusahaan, "
-"laporan :guilabel:`Analisis Pelamar` dapat dimodifikasi untuk menunjukkan "
-"berapa banyak pelamar yang direferensikan oleh karyawan saat ini."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:54
+#: ../../content/applications/hr/recruitment/application_analysis.rst:64
 msgid ""
-"From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
-"the :guilabel:`Applicant Analysis` report, first click "
-"the :guilabel:`Measures` button to reveal a drop-down menu of options."
+"From the :ref:`pivot table view <recruitment/application_analysis/pivot>` of "
+"the *Application Analysis* report, first click "
+"the :guilabel:`Measures` :icon:`fa-caret-down` button to reveal a drop-down "
+"menu of options."
 msgstr ""
-"Dari tampilan :icon:`oi-view-pivot` :guilabel:`Pivot` "
-"laporan :guilabel:`Analisis Pelamar`, pertama klik "
-"tombol :guilabel:`Measures` untuk menampilkan menu tarik-turun berisi "
-"pilihan."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:57
+#: ../../content/applications/hr/recruitment/application_analysis.rst:68
 msgid ""
-"Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate those "
+"Click both :guilabel:`Has Referrer` and :guilabel:`Count` to activate those "
 "two measures. Then, "
-"click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
-"and :guilabel:`Refused` to deactivate those default measures."
+"click :guilabel:`Applications`, :guilabel:`Hired`, :guilabel:`In Progress`, "
+"and :guilabel:`Refused` to deactivate those default measures. Click away "
+"from the drop-down window to close it. Then click :icon:`fa-minus-square-"
+"o` :guilabel:`Total` above the columns to condense all the displayed values."
 msgstr ""
-"Klik :guilabel:`Has Referrer` dan :guilabel:`Count` untuk mengaktifkan kedua "
-"ukuran tersebut. Kemudian, "
-"klik :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress`, "
-"dan :guilabel:`Refused` untuk menonaktifkan ukuran bawaan tersebut."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:61
+#: ../../content/applications/hr/recruitment/application_analysis.rst:73
 msgid ""
-"Now, the column displays the number of applicants that came from a referral "
+"Now, the columns display the number of applicants that came from a referral "
 "in the :guilabel:`Has Referrer` column, and the total number of applicants "
 "in the :guilabel:`Count` column."
 msgstr ""
-"Sekarang, kolom menampilkan jumlah pelamar yang berasal dari rujukan pada "
-"kolom :guilabel:`Has Referrer`, dan jumlah total pelamar pada "
-"kolom :guilabel:`Count`."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:76
+msgid ""
+"In this example, the :guilabel:`Furniture Assembler` job position has the "
+"most referrals, and almost 25% of all applications were submitted through a "
+"referral."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 msgid ""
 "The detailed pivot table view displaying the number of referrals and the "
 "total applicants."
@@ -47854,21 +47942,11 @@ msgstr ""
 "Tampilan tabel pivot terperinci yang menampilkan jumlah rujukan dan total "
 "pelamar."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:67
-msgid ""
-"In this example, the :guilabel:`Experienced Developer` "
-"and :guilabel:`Interior Designer` job positions both have applicants from "
-"referrals, while the rest do not have any referrals."
-msgstr ""
-"Dalam contoh ini, posisi pekerjaan :guilabel:`Experienced Developer` "
-"dan :guilabel:`Interior Designer` sama-sama memiliki pelamar dari rujukan, "
-"sedangkan yang lainnya tidak memiliki rujukan."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:71
+#: ../../content/applications/hr/recruitment/application_analysis.rst:83
 msgid "Hired through referrals"
 msgstr "Dipekerjakan melalui rujukan"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:73
+#: ../../content/applications/hr/recruitment/application_analysis.rst:85
 msgid ""
 "It is possible to modify this report even further to see how many referred "
 "applicants end up being hired."
@@ -47876,19 +47954,21 @@ msgstr ""
 "Dimungkinkan untuk memodifikasi laporan ini lebih lanjut untuk melihat "
 "berapa banyak pelamar rujukan yang akhirnya dipekerjakan."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:76
+#: ../../content/applications/hr/recruitment/application_analysis.rst:88
 msgid ""
-"To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
-"position]` row, which reveals a drop-down menu. Then, "
+"To view this data, click on a :icon:`fa-plus-square` :guilabel:`(job "
+"position)` row, which reveals a drop-down menu. Then, "
 "click :guilabel:`State` to show the various states applicants are currently "
 "in."
 msgstr ""
-"Untuk melihat data ini, klik pada baris :icon:`fa-plus-"
-"square` :guilabel:`[posisi pekerjaan]`, yang akan menampilkan menu tarik-"
-"turun. Kemudian, klik :guilabel:`State` untuk menampilkan berbagai status "
-"pelamar saat ini."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:81
+#: ../../content/applications/hr/recruitment/application_analysis.rst:92
+msgid ""
+"To expand the other rows and display the various states, click on "
+"the :icon:`fa-plus-square` :guilabel:`(job position)` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:96
 msgid ""
 "Only states that have applicants in them are shown for each job position. If "
 "a state does **not** have any applicants, it does not appear in the list."
@@ -47896,32 +47976,6 @@ msgstr ""
 "Hanya status yang memiliki pelamar di dalamnya yang ditampilkan untuk setiap "
 "posisi pekerjaan. Jika suatu status **tidak** memiliki pelamar, status "
 "tersebut tidak muncul dalam daftar."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:84
-msgid ""
-"To expand the other rows, and display the various states, click on "
-"the :icon:`fa-plus-square` :guilabel:`[job position]` button."
-msgstr ""
-"Untuk memperluas baris lainnya dan menampilkan berbagai status, klik "
-"tombol :icon:`fa-plus-square` :guilabel:`[posisi pekerjaan]`."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid ""
-"The detailed pivot table view displaying applicants hired through referrals."
-msgstr ""
-"Tampilan tabel pivot terperinci yang menampilkan pelamar yang dipekerjakan "
-"melalui rujukan."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:90
-msgid ""
-"Both the :guilabel:`Experienced Developer` and :guilabel:`Interior Designer` "
-"roles yielded one referral hire each, confirming that developers and "
-"designers generate the highest-success referrals."
-msgstr ""
-"Peran :guilabel:`Experienced Developer` dan :guilabel:`Interior Designer` "
-"sama-sama menghasilkan satu perekrutan rujukan, mengonfirmasi bahwa "
-"pengembang dan desainer menghasilkan rujukan dengan tingkat keberhasilan "
-"tertinggi."
 
 #: ../../content/applications/hr/recruitment/new_job.rst:3
 msgid "Job positions"
@@ -48375,7 +48429,7 @@ msgstr ""
 "untuk mengirim penawaran menggunakan tombol :guilabel:`Generate Offer`."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:18
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:190
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:190
 msgid "Contract proposal"
 msgstr "Proposal kontrak"
 
@@ -48659,7 +48713,7 @@ msgstr ""
 "peringatan aktivitas bahwa tanda tangan mereka diminta di aplikasi **Sign**."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:154
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:200
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:200
 msgid "Contract signed"
 msgstr "Kontrak ditandatangani"
 
@@ -49060,11 +49114,11 @@ msgstr ""
 msgid "All job positions posted to a job board."
 msgstr "Semua posisi pekerjaan yang diposting ke job board."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:3
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:3
 msgid "Recruitment flow"
 msgstr "Alur perekrutan"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:5
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:5
 msgid ""
 "When a prospective employee applies for a job in Odoo, there is a "
 "preconfigured process from the :ref:`initial inquiry <recruitment/"
@@ -49073,14 +49127,14 @@ msgid ""
 "default recruitment process for Odoo's **Recruitment** application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:11
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:11
 msgid ""
 "The following is based on Odoo's *default* recruitment pipeline. Be advised "
 "that if :ref:`modifications are made <recruitment/customize-stages>` to the "
 "pipeline, the process differs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:20
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:20
 msgid ""
 "At the start of the process, all applicants appear in the :guilabel:`New` "
 "stage on the *Applications* page, whether they submitted through the company "
@@ -49088,14 +49142,14 @@ msgid ""
 "by a recruiter <add_applicants>`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:24
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:24
 msgid ""
 "The :guilabel:`Applicant`, :guilabel:`Email`, and :guilabel:`Phone` number "
 "on the applicant's card are filled as soon as it is created. By default, "
 "these details are required for every job position."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:28
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:28
 msgid ""
 "If the website application form is modified, different fields may be "
 "populated, based on what information is required on the website."
@@ -49103,21 +49157,21 @@ msgstr ""
 "Jika formulir lamaran website dimodifikasi, bidang yang berbeda mungkin "
 "terisi, berdasarkan informasi apa yang diperlukan di website."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:31
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:31
 msgid ""
 "Anything typed in the *Short Introduction* section appears in the "
 "applicant's chatter as a note from :guilabel:`OdooBot`, labeled *Other "
 "Information*."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:37
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:37
 msgid ""
 "If a resumé was attached to the online application, it appears in the "
 "*Files* section of the chatter, and is also stored in the **Documents** "
 "application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:40
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:40
 msgid ""
 "To find the recruitment documents, navigate to the "
 "main :menuselection:`Documents` app dashboard, and click "
@@ -49125,7 +49179,7 @@ msgid ""
 "are stored within that folder."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:45
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:45
 msgid ""
 "Depending on the browser zoom level, or size of the browser screen, the "
 "resumé may appear below the main applicant card information as a PDF link, "
@@ -49135,11 +49189,11 @@ msgstr ""
 "mungkin muncul di bawah informasi kartu pelamar utama sebagai tautan PDF, "
 "atau di sisi kanan sebagai gambar."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:49
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:49
 msgid "Send interview"
 msgstr "Kirim wawancara"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:51
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:51
 msgid ""
 "At any point in the hiring process, an interview can be sent to the "
 "applicant to obtain more information. These interviews are custom-made, and "
@@ -49149,7 +49203,7 @@ msgstr ""
 "pelamar untuk mendapatkan informasi lebih lanjut. Wawancara ini dibuat "
 "khusus dan dapat diformat dalam berbagai cara."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:54
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:54
 msgid ""
 "The **Surveys** application is required to send interviews to an applicant, "
 "so it **must** be installed."
@@ -49157,14 +49211,14 @@ msgstr ""
 "Aplikasi **Survei** diperlukan untuk mengirim wawancara ke pelamar, jadi "
 "aplikasi ini **harus** diinstal."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:57
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:57
 msgid ""
 "Odoo uses the term *interview*, but these can be thought of as "
 "questionnaires, surveys, tests, certifications, etc. :doc:`Custom interviews "
 "<new_job>` can be formatted to suit each individual job position's needs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:62
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:62
 msgid ""
 "A job position for a computer programmer could have an interview in the form "
 "of a programming quiz to determine the skill level of the applicant. A job "
@@ -49178,7 +49232,7 @@ msgstr ""
 "menanyakan tentang ketersediaan pelamar, jika pelamar yang diinginkan harus "
 "tersedia pada malam akhir pekan."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:67
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:67
 msgid ""
 "To send an interview to an applicant, first open the applicant's card from "
 "the *Applications* page to view the detailed applicant information. In the "
@@ -49186,14 +49240,14 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:71
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:71
 msgid ""
 "If the applicant's card has an email address on file, a *Send an interview* "
 "pop-up window appears, with the :guilabel:`Recipients`, :guilabel:`Subject`, "
 "and email body populated."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:75
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:75
 msgid ""
 "To send an email to an applicant, there **must** be an :guilabel:`Email` "
 "address on the applicant's card."
@@ -49201,7 +49255,7 @@ msgstr ""
 "Untuk mengirim email ke pelamar, **harus** ada alamat :guilabel:`Email` pada "
 "kartu pelamar."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:78
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:78
 msgid ""
 "If an email address is missing on the applicant's card, when "
 "the :guilabel:`Send Interview` button is clicked and the *Send an interview* "
@@ -49211,13 +49265,13 @@ msgid ""
 "address. Once entered, click :guilabel:`Set Email`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:84
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:84
 msgid ""
 "The email address entered is only used to send the interview, and does "
 "**not** appear on the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:87
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:87
 msgid ""
 "Sometimes, preconfigured :doc:`email templates <../../general/companies/"
 "email_template>` in Odoo use dynamic placeholders, which are automatically "
@@ -49226,7 +49280,7 @@ msgid ""
 "name of the applicant in the email."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:92
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:92
 msgid ""
 "Add the email addresses of any additional recipients for the survey in "
 "the :guilabel:`Additional emails` field, if more people should receive the "
@@ -49236,7 +49290,7 @@ msgid ""
 "add their email address in the :guilabel:`Additional emails` field."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:98
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:98
 msgid ""
 "If any attachments need to be added, click the :icon:`fa-"
 "paperclip` :guilabel:`Attachments` button, and a file explorer window "
@@ -49250,7 +49304,7 @@ msgstr ""
 "email. Lampiran dimuat, dan tercantum di atas tombol :icon:`fa-"
 "paperclip` :guilabel:`Lampiran`."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:103
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:103
 msgid ""
 "The :guilabel:`Answer deadline` field specifies when the interview form must "
 "be completed by, and is populated with a date and time two weeks in the "
@@ -49260,7 +49314,7 @@ msgid ""
 "desired new deadline."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:108
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:108
 msgid ""
 "The :guilabel:`Mail Template` field is pre-populated based on the "
 "configuration for the interview. A different template can be chosen from the "
@@ -49268,24 +49322,24 @@ msgid ""
 "template loads in the email body."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:112
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:112
 msgid ""
 "To send the email with the interview link to the applicant, "
 "click :guilabel:`Send` at the bottom of the *Send an interview* pop-up "
 "window."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:122
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:122
 msgid "Qualification"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:124
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:124
 msgid ""
 "If an applicant is determined to be a good potential candidate, they are "
 "moved to the :guilabel:`Qualification` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:127
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:127
 msgid ""
 "This stage exists to sort candidates that have potential from those that do "
 "not meet the requirements. No automatic actions, such as emails, are set for "
@@ -49293,7 +49347,7 @@ msgid ""
 "phone call or an interview with the candidate."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:132
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:132
 msgid ""
 "In order to move an applicant's card from one stage to another, the "
 "applicant's card can either be dragged and dropped in the Kanban view of the "
@@ -49301,14 +49355,14 @@ msgid ""
 "the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:136
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:136
 msgid ""
 "To change the stage on the applicant's card, first click the desired "
 "applicant's card from the *Applications* page. The current stage for the "
 "card is highlighted at the top on a status bar, above the card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:140
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:140
 msgid ""
 "Click the desired stage for the card, and the stage changes. A log note "
 "indicating the stage change appears in the chatter, as well."
@@ -49316,7 +49370,7 @@ msgstr ""
 "Klik tahap yang diinginkan untuk kartu, dan tahap berubah. Catatan log yang "
 "menunjukkan perubahan tahap juga muncul di chatter."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:0
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:0
 msgid ""
 "Change the stage of an applicant by clicking on the desired stage at the top "
 "of the\n"
@@ -49325,31 +49379,31 @@ msgstr ""
 "Ubah tahap pelamar dengan mengklik tahap yang diinginkan di bagian atas "
 "kartu pelamar."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:150
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:150
 msgid "First interview"
 msgstr "Wawancara pertama"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:152
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:152
 msgid ""
 "After an applicant has passed the :guilabel:`Qualification` stage, they can "
 "be manually moved to the :guilabel:`First Interview` stage on the "
 "*Applications* page, while in Kanban view."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:155
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:155
 msgid ""
 "To move the applicant to the next stage, drag and drop the applicant's card "
 "to the :guilabel:`First Interview` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:158
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:158
 msgid ""
 "Alternatively, open the desired applicant's card from the *Applications* "
 "page, and click the :guilabel:`First Interview` stage on the status bar at "
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:162
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:162
 msgid ""
 "The :guilabel:`First Interview` stage can be modified, so when the "
 "applicant's card moves to the :guilabel:`First Interview` stage, an email "
@@ -49364,18 +49418,18 @@ msgstr ""
 "tim perekrutan muncul, memungkinkan pelamar untuk menjadwalkan wawancara "
 "mereka."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:167
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:167
 msgid ""
 ":ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, "
 "and select the :guilabel:`Recruitment: Schedule Interview` option in "
 "the :guilabel:`Email Template` field to automate this action."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:174
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:174
 msgid "Second interview"
 msgstr "Wawancara kedua"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:176
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:176
 msgid ""
 "After an applicant has passed the :guilabel:`First Interview` stage, they "
 "can be moved to the :guilabel:`Second Interview` stage. To move the "
@@ -49385,7 +49439,7 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:182
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:182
 msgid ""
 "When the applicant's card moves to the :guilabel:`Second Interview` stage, "
 "there are no automatic activities or emails configured for this stage, by "
@@ -49399,7 +49453,7 @@ msgstr ""
 "<recruitment/schedule_interviews/recruitment-scheduled>` dengan pelamar, "
 "mengikuti proses yang sama seperti wawancara pertama."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:192
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:192
 msgid ""
 "After the applicant has completed the various interview processes, the next "
 "step is to :doc:`send the job offer <offer_job_positions>`."
@@ -49407,7 +49461,7 @@ msgstr ""
 "Setelah pelamar menyelesaikan berbagai proses wawancara, langkah selanjutnya "
 "adalah :doc:`mengirim tawaran pekerjaan <offer_job_positions>`."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:195
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:195
 msgid ""
 "Once the offer has been sent, drag and drop the applicant's card to "
 "the :guilabel:`Contract Proposal` stage from the Kanban view of the "
@@ -49415,14 +49469,14 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:202
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:202
 msgid ""
 "Once the contract has been fully signed by all parties, and the applicant "
 "has been hired, the applicant's card moves to the :guilabel:`Contract "
 "Signed` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:205
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:205
 msgid ""
 "The :guilabel:`Contract Signed` is folded by default on the *Applications* "
 "page, and must be expanded before the applicant's card can be manually "
@@ -49434,11 +49488,11 @@ msgid ""
 "applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:213
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:213
 msgid "Refused"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:215
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
 "At any point in the recruitment process, a candidate can be :doc:`refused "
 "<refuse_applicant>`."
@@ -49468,6 +49522,14 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:10
 msgid ""
+"Open the main *Job Positions* dashboard by navigating "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`. "
+"Next, click on the desired job position card, then click on the individual "
+"applicant card from the *Applications* page."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
+msgid ""
 "Navigate to :menuselection:`Recruitment app --> Applications --> All "
 "Applications`. In the :guilabel:`Applications` list, click anywhere on the "
 "desired applicant's line to open that specific applicant's card."
@@ -49475,19 +49537,6 @@ msgstr ""
 "Buka :menuselection:`Aplikasi Perekrutan --> Lamaran --> Semua Lamaran`. "
 "Dalam daftar :guilabel:`Lamaran`, klik di mana saja pada baris pelamar yang "
 "diinginkan untuk membuka kartu pelamar tersebut."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
-msgid ""
-"Navigate to the main *Job Positions* dashboard by navigating "
-"to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
-"Next, click on the desired job position card, then click on the individual "
-"applicant card from the :guilabel:`Applications` page."
-msgstr ""
-"Buka dashboard *Posisi Pekerjaan* utama dengan "
-"membuka :menuselection:`Aplikasi Perekrutan --> Lamaran --> Berdasarkan "
-"Posisi Pekerjaan`. Selanjutnya, klik pada kartu posisi pekerjaan yang "
-"diinginkan, lalu klik pada kartu pelamar individual dari "
-"halaman :guilabel:`Lamaran`."
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:17
 msgid ""
@@ -49512,18 +49561,15 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:28
 msgid ""
-"Clicking :guilabel:`Refuse` on an applicant's form makes "
-"the :guilabel:`Refuse Reason` pop-up window appear."
+"Clicking :guilabel:`Refuse` on an applicant's form makes the *Refuse Reason* "
+"pop-up window appear."
 msgstr ""
-"Mengklik :guilabel:`Tolak` pada formulir pelamar akan memunculkan jendela "
-"pop-up :guilabel:`Alasan Penolakan`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:31
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:30
 msgid ""
-"The default refuse reasons in Odoo, and their corresponding email templates, "
-"are:"
+"The default refuse reasons in Odoo, and their corresponding :ref:`refusal "
+"email <recruitment/refuse_applicant/send-refusal-email>` templates, are:"
 msgstr ""
-"Alasan penolakan default di Odoo, dan template email yang sesuai, adalah:"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:37
 msgid "Email Template"
@@ -49568,48 +49614,29 @@ msgstr ":guilabel:`Ditolak oleh pelamar: gaji`"
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:48
 msgid ""
 "Additional refusal reasons :ref:`can be created, and existing ones can be "
-"modified (or deleted) <recruitment/new-refuse>`."
+"modified (or deleted) <recruitment/refuse_applicant/new-refuse>`."
 msgstr ""
-"Alasan penolakan tambahan :ref:`dapat dibuat, dan alasan yang ada dapat "
-"dimodifikasi (atau dihapus) <recruitment/new-refuse>`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:51
-msgid ""
-"Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
-"refusal-email>`."
-msgstr ""
-"Pilih alasan penolakan untuk :ref:`mengirim email penolakan <recruitment/"
-"send-refusal-email>`."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:54
 msgid "Create or modify refuse reasons"
 msgstr "Buat atau ubah alasan penolakan"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:58
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
 msgid ""
 "To view and configure refuse reasons, navigate "
 "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
-"Doing so reveals the :guilabel:`Refuse Reasons` page, where all the existing "
-"refusal reasons are listed."
+"Doing so reveals the *Refuse Reasons* page, where all the existing refusal "
+"reasons are listed."
 msgstr ""
-"Untuk melihat dan mengonfigurasi alasan penolakan, "
-"buka :menuselection:`aplikasi Perekrutan --> Konfigurasi --> Alasan "
-"Penolakan`. Tindakan ini akan menampilkan halaman :guilabel:`Alasan "
-"Penolakan`, di mana semua alasan penolakan yang ada akan tercantum."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:62
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:60
 msgid ""
-"To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
-"click the :guilabel:`New` button in the top-left corner. A blank line "
-"appears at the bottom of the list, with an empty field present in "
-"the :guilabel:`Description` column."
+"To create a new refuse reason from the *Refuse Reasons* page, click "
+"the :guilabel:`New` button. A blank line appears at the bottom of the list, "
+"with an empty field present in the :guilabel:`Description` column."
 msgstr ""
-"Untuk membuat alasan penolakan baru dari halaman :guilabel:`Alasan "
-"Penolakan`, klik tombol :guilabel:`Baru` di pojok kiri atas. Baris kosong "
-"akan muncul di bagian bawah daftar, dengan kolom kosong pada "
-"kolom :guilabel:`Deskripsi`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:66
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:64
 msgid ""
 "Type in the new refuse reason in the field. It is recommended to enter a "
 "reason that is short and concise, such as `Offer expired` or `Withdrew "
@@ -49619,50 +49646,37 @@ msgstr ""
 "alasan yang singkat dan ringkas, seperti `Penawaran kedaluwarsa` atau "
 "`Menarik aplikasi`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:69
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:67
 msgid ""
-"Then, in the :guilabel:`Email Template` field, click on the field to reveal "
-"a drop-down menu. Select an :guilabel:`Email Template` from the list to be "
-"used when this refuse reason is selected."
+"Then, click in the :guilabel:`Email Template` field to reveal a drop-down "
+"menu. Select the desired email template from the list to be used when the "
+"new refuse reason is selected."
 msgstr ""
-"Kemudian, di kolom :guilabel:`Template Email`, klik pada kolom untuk "
-"menampilkan menu drop-down. Pilih :guilabel:`Template Email` dari daftar "
-"untuk digunakan ketika alasan penolakan ini dipilih."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:72
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:70
 msgid ""
-"If a new :guilabel:`Email Template` is desired, type in the name for the new "
-"template in the field. Then, click :guilabel:`Create and edit...`, and "
-"a :guilabel:`Create Email Template` form pop-up window appears."
+"If a new email template is desired, type in the name for the new template in "
+"the field. Then, click :guilabel:`Create and edit...`, and a *Create Email "
+"Template* pop-up window appears."
 msgstr ""
-"Jika :guilabel:`Template Email` baru diperlukan, ketik nama untuk template "
-"baru di kolom tersebut. Kemudian, klik :guilabel:`Buat dan edit...`, dan "
-"jendela pop-up formulir :guilabel:`Buat Template Email` akan muncul."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:76
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:73
 msgid ""
-"In the :guilabel:`Create Email Template` pop-up window, enter "
-"a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
-"corresponding fields."
+"The :guilabel:`Template Name` field is populated with the name entered in "
+"the :guilabel:`Email Template` column by default, but can be modified if "
+"desired. Enter the email :guilabel:`Subject` in the corresponding field, and "
+"add the email content in the *Body* tab. To include attachments, click the "
+"*Options* tab, and add the attachment using the :icon:`fa-"
+"paperclip` :guilabel:`Attachments` button. To assign an :guilabel:`Owner` "
+"for the template, select a user in the drop-down menu. Enter "
+"a :guilabel:`Template Description` in the corresponding field."
 msgstr ""
-"Di jendela pop-up :guilabel:`Buat Template Email`, masukkan :guilabel:`Nama` "
-"untuk formulir, dan :guilabel:`Subjek` email di kolom yang sesuai."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:79
-msgid ""
-"Enter the desired email content in the :guilabel:`Content` tab. Proceed to "
-"make any other modifications to the template in the :guilabel:`Email "
-"Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save & "
-"Close` to save the template. Upon clicking that, Odoo returns to "
-"the :guilabel:`Refuse Reasons` list."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:80
+msgid "Click :guilabel:`Save`, and Odoo returns to the *Refuse Reasons* list."
 msgstr ""
-"Masukkan konten email yang diinginkan di tab :guilabel:`Konten`. Lanjutkan "
-"untuk membuat modifikasi lain pada template di tab :guilabel:`Konfigurasi "
-"Email` dan :guilabel:`Pengaturan`, kemudian klik :guilabel:`Simpan & Tutup` "
-"untuk menyimpan template. Setelah mengklik itu, Odoo akan kembali ke "
-"daftar :guilabel:`Alasan Penolakan`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:84
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:82
 msgid ""
 "The new template appears in the new refuse reason :guilabel:`Email Template` "
 "field."
@@ -49670,7 +49684,7 @@ msgstr ""
 "Template baru muncul di kolom :guilabel:`Template Email` alasan penolakan "
 "baru."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:87
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:85
 msgid ""
 "Pre-configured recruitment refusal email templates in Odoo use dynamic "
 "placeholders, which are personalized placeholders that populate data from "
@@ -49680,17 +49694,14 @@ msgstr ""
 "Odoo menggunakan placeholder dinamis, yaitu placeholder yang dipersonalisasi "
 "yang mengisi data dari catatan pelamar di badan email."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:90
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:88
 msgid ""
-"For example, if the applicant's name is a used in a dynamic placeholder, the "
+"For example, if the applicant's name is used in a dynamic placeholder, the "
 "applicant's name appears anytime that dynamic placeholder appears on the "
 "email template."
 msgstr ""
-"Misalnya, jika nama pelamar digunakan dalam placeholder dinamis, nama "
-"pelamar akan muncul setiap kali placeholder dinamis tersebut muncul di "
-"template email."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:93
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:91
 msgid ""
 "For more detailed information on email templates, refer to the :doc:`../../"
 "general/companies/email_template` documentation."
@@ -49698,131 +49709,152 @@ msgstr ""
 "Untuk informasi lebih rinci tentang template email, lihat "
 "dokumentasi :doc:`../../general/companies/email_template`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:97
 msgid "Send refusal email"
 msgstr "Kirim email penolakan"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:101
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
 msgid ""
 "After clicking the :guilabel:`Refuse` button on an applicant form, "
-"a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
-"the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear below "
-"the selected refusal reason: :guilabel:`Send Email` and :guilabel:`Email "
-"Template`."
+"a :ref:`refuse reason <recruitment/refuse-reasons>` is selected from the "
+"*Refuse Reason* pop-up window."
 msgstr ""
-"Setelah mengklik tombol :guilabel:`Tolak` pada formulir "
-"pelamar, :ref:`Alasan Penolakan <recruitment/refuse-reasons>` kemudian "
-"dipilih dari jendela pop-up :guilabel:`Alasan Penolakan`. Kemudian, dua "
-"kolom muncul di bawah alasan penolakan yang dipilih: :guilabel:`Kirim Email` "
-"dan :guilabel:`Template Email`."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:102
+msgid ""
+"The applicant's email address automatically populates "
+"the :guilabel:`Applicant` field. The :guilabel:`Subject` and email body are "
+"populated according to the corresponding email template."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:105
+msgid ""
+"To send the refusal email to the applicant, click :guilabel:`Refuse` at the "
+"bottom of the *Refuse Reason* pop-up window. The refusal email is sent to "
+"the applicant, and a red :guilabel:`Refused` banner appears on the "
+"applicant's card in the corner."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:110
+msgid ""
+"If an application should be refused but an email should **not** be sent (if, "
+"for example, the application was spam), click the :guilabel:`Send Email` "
+"toggle to deactivate it, and click :guilabel:`Refuse` at the bottom of the "
+"*Refuse Reason* pop-up window."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
 msgid ""
-"The Refuse Reason pop-up window that appears when refusing an applicant."
-msgstr "Jendela pop-up Alasan Penolakan yang muncul ketika menolak pelamar."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:109
-msgid ""
-"The applicant's email address automatically populates the :guilabel:`Send "
-"Email` field; additional email recipients **cannot** be added."
+"The refuse reason pop-up window, with the email subject and body populated."
 msgstr ""
-"Alamat email pelamar secara otomatis mengisi kolom :guilabel:`Kirim Email`; "
-"penerima email tambahan **tidak dapat** ditambahkan."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:112
-msgid ""
-"If an email should **not** be sent to the applicant, uncheck "
-"the :guilabel:`Send Email` checkbox."
-msgstr ""
-"Jika email **tidak** boleh dikirim ke pelamar, hapus centang pada kotak "
-"centang :guilabel:`Kirim Email`."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:114
-msgid ""
-"The email template associated with the refusal reason populates "
-"the :guilabel:`Email Template` field. If a different email template is "
-"desired, select a different template from the :guilabel:`Email Template` "
-"drop-down menu."
-msgstr ""
-"Template email yang terkait dengan alasan penolakan mengisi "
-"kolom :guilabel:`Template Email`. Jika template email yang berbeda "
-"diperlukan, pilih template yang berbeda dari menu drop-"
-"down :guilabel:`Template Email`."
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:118
-msgid ""
-"To send the refusal email to the applicant, ensure the :guilabel:`Send "
-"Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
-"the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
-"the applicant, and a red :guilabel:`Refused` banner appears on the "
-"applicant's card in the top-right corner."
+msgid "Refuse duplicate applicant"
 msgstr ""
-"Untuk mengirim email penolakan ke pelamar, pastikan kotak "
-"centang :guilabel:`Kirim Email` dicentang, kemudian klik :guilabel:`Tolak` "
-"di bagian bawah jendela pop-up :guilabel:`Alasan Penolakan`. Email penolakan "
-"dikirim ke pelamar, dan banner merah :guilabel:`Ditolak` muncul di kartu "
-"pelamar di pojok kanan atas."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:120
 msgid ""
-"An applicant's card with the refused banner appearing in the top-right "
-"corner in red."
+"Occasionally, applicants apply multiple times for the same job position. "
+"When this occurs, it is possible to refuse all their applications at once, "
+"instead of individually."
 msgstr ""
-"Kartu pelamar dengan banner ditolak muncul di sudut kanan atas berwarna "
-"merah."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:123
+msgid ""
+"In this situation, a :guilabel:`Refuse Duplicate Applications` toggle "
+"appears on the *Refuse Reason* pop-up window. Enable the toggle, and "
+"a :guilabel:`Duplicate Applications` field appears beneath it, listing the "
+"applicant's name for each duplicate application in the system."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:127
-msgid "View refused applicants"
-msgstr "Lihat pelamar yang ditolak"
+msgid ""
+"To refuse *all* applications for that applicant, click "
+"the :guilabel:`Refuse` button."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:129
 msgid ""
-"After refusal, the applicant's card is no longer visible in the job "
-"position's Kanban view. However, it is still possible to view applicants who "
-"have been refused."
+"The applicant is only sent one email, and all their applications for the job "
+"position are marked as *Refused*."
 msgstr ""
-"Setelah penolakan, kartu pelamar tidak lagi terlihat di tampilan Kanban "
-"posisi pekerjaan. Namun, masih dimungkinkan untuk melihat pelamar yang telah "
-"ditolak."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:132
-msgid ""
-"To view only the refused applicants, go to :menuselection:`Recruitment app --"
-"> Applications --> By Job Positions`, or :menuselection:`Recruitment app --> "
-"Applications --> All Applications`. Both methods navigate to "
-"the :guilabel:`Applications` dashboard, the only difference is :guilabel:`By "
-"Job Positions` displays applicants in a Kanban view, while :guilabel:`All "
-"Applications` displays applicants in a list view."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "Duplicate applications refused in one email."
 msgstr ""
-"Untuk melihat hanya pelamar yang ditolak, buka :menuselection:`aplikasi "
-"Perekrutan --> Lamaran --> Berdasarkan Posisi Pekerjaan`, "
-"atau :menuselection:`aplikasi Perekrutan --> Lamaran --> Semua Lamaran`. "
-"Kedua metode mengarah ke dashboard :guilabel:`Lamaran`, satu-satunya "
-"perbedaan adalah :guilabel:`Berdasarkan Posisi Pekerjaan` menampilkan "
-"pelamar dalam tampilan Kanban, sedangkan :guilabel:`Semua Lamaran` "
-"menampilkan pelamar dalam tampilan daftar."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:136
+msgid "View refused applicants"
+msgstr "Lihat pelamar yang ditolak"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:138
 msgid ""
-"On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
-"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
-"click :guilabel:`Refused`, located under the :icon:`fa-"
-"funnel` :guilabel:`Filters` section."
+"After refusal, the applicant's card is hidden by default. However, it is "
+"still possible to view applicants who have been refused :ref:`by job "
+"position <recruitment/refuse_applicant/job-refused>`, or view :ref:`all "
+"refused applicants <recruitment/refuse_applicant/all-refused>`."
 msgstr ""
-"Pada halaman :guilabel:`Lamaran`, klik tombol :icon:`fa-caret-"
-"down` :guilabel:`Alihkan Panel Pencarian` di bilah pencarian, kemudian "
-"klik :guilabel:`Ditolak`, yang terletak di bawah bagian :icon:`fa-"
-"funnel` :guilabel:`Filter`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:142
-msgid ""
-"All applicants that have been refused for the job position appear on "
-"the :guilabel:`Applications` page for that position, organized by the stage "
-"they were in when they were refused."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:145
+msgid "By job position"
 msgstr ""
-"Semua pelamar yang telah ditolak untuk posisi pekerjaan muncul di "
-"halaman :guilabel:`Lamaran` untuk posisi tersebut, diatur berdasarkan tahap "
-"di mana mereka berada ketika ditolak."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:147
+msgid ""
+"To view the refused applicants for a specific job position, navigate "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`, "
+"then click the desired job position Kanban card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:150
+msgid ""
+"On the *Applications* page, click the :icon:`fa-caret-"
+"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+"click :guilabel:`Refused` in the :icon:`fa-filter` :guilabel:`Filters` "
+"column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:154
+msgid ""
+"All applicants that have been refused for the job position appear in the "
+"stage they were in when they were refused, and all other applicants are "
+"hidden."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for a job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:163
+msgid "All refused applicants"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:165
+msgid ""
+"To view all refused applicants across all job positions, navigate "
+"to :menuselection:`Recruitment app --> Applications --> All Applications`. "
+"Every applicant record is displayed in a default list view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:168
+msgid ""
+"Click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in "
+"the search bar, then click :guilabel:`Refused` in the :icon:`fa-"
+"funnel` :guilabel:`Filters` column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:171
+msgid ""
+"All applicants that have been refused appear, with the text in red. Along "
+"with the applicant's :guilabel:`Name`, the date they :guilabel:`Applied on`, "
+"the :guilabel:`Job Position`, :guilabel:`Stage` they were in when refused, "
+"their :guilabel:`Matching` percentage, any :guilabel:`Tags`, and "
+"the :guilabel:`Recruiter` responsible for the job position are listed."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for all job positions."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:3
 msgid "Schedule interviews"
@@ -50286,8 +50318,8 @@ msgid "The confirmation page with all the details for the interview displayed."
 msgstr "Halaman konfirmasi dengan semua detail wawancara ditampilkan."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:3
-msgid "Source analysis reporting"
-msgstr "Pelaporan analisis sumber"
+msgid "Source analysis"
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:5
 msgid ""
@@ -50326,114 +50358,68 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:19
 msgid ""
-"This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
-"Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
-"showing the amount of applicants by :guilabel:`Source`, and further "
-"separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+"This presents the data for the last 365 days in a default :icon:`fa-"
+"database` :guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)` "
+"view. It shows the amount of applicants by source and separated by status "
+"(:guilabel:`In Progress`, :guilabel:`Hired`, and :guilabel:`Refused`),"
 msgstr ""
-"Ini menampilkan data untuk :icon:`fa-filter` :guilabel:`Pelamar 365 Hari "
-"Terakhir`, dalam tampilan :icon:`fa-area-chart` :guilabel:`(Grafik)` "
-"default, menampilkan jumlah pelamar berdasarkan :guilabel:`Sumber`, dan "
-"lebih lanjut dipisahkan berdasarkan tahap (:guilabel:`Dalam Proses` "
-"dan :guilabel:`Dipekerjakan`)"
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:23
 msgid ""
-"Hover the cursor over any column to view the specific numbers fort that "
-"column."
+"Hover the cursor over any color-coded section of a column to view the "
+"specific numbers for that status column."
 msgstr ""
-"Arahkan kursor ke kolom mana pun untuk melihat angka spesifik untuk kolom "
-"tersebut."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
 msgid "The default bar chart of the source analysis information."
 msgstr "Grafik batang default dari informasi analisis sumber."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:29
+#: ../../content/applications/hr/recruitment/source_analysis.rst:30
 msgid "Source effectiveness report"
 msgstr "Laporan efektivitas sumber"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:31
+#: ../../content/applications/hr/recruitment/source_analysis.rst:32
 msgid ""
 "To identify which sources (e.g., job boards, social media, employee "
 "referrals, company website) produce the most hires, the pivot table view of "
-"the :guilabel:`Source Analysis` report can be configured to display further "
-"details."
+"the *Source Analysis* report can be configured to display further details."
 msgstr ""
-"Untuk mengidentifikasi sumber mana (misalnya, papan lowongan kerja, media "
-"sosial, rujukan karyawan, website perusahaan) yang menghasilkan paling "
-"banyak perekrutan, tampilan tabel pivot dari laporan :guilabel:`Analisis "
-"Sumber` dapat dikonfigurasi untuk menampilkan detail lebih lanjut."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:35
+#: ../../content/applications/hr/recruitment/source_analysis.rst:36
 msgid ""
-"To view the :guilabel:`Source Analysis` report in a pivot table, click "
-"the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner. "
-"The data is presented in a pivot table, with rows populated by job "
-"positions, and columns populated by stages."
+"To view the *Source Analysis* report in a pivot table, click the :icon:`oi-"
+"view-pivot` :guilabel:`(Pivot)` icon in the corner. The data is presented in "
+"a pivot table, with rows populated by sources, and columns populated by "
+"stages."
 msgstr ""
-"Untuk melihat laporan :guilabel:`Analisis Sumber` dalam tabel pivot, klik "
-"ikon :icon:`oi-view-pivot` :guilabel:`(Pivot)` di sudut kanan atas. Data "
-"disajikan dalam tabel pivot, dengan baris diisi oleh posisi pekerjaan, dan "
-"kolom diisi oleh tahap."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:39
+#: ../../content/applications/hr/recruitment/source_analysis.rst:40
 msgid ""
-"To expand this chart to show what specific sources the applicants came from, "
-"click the :icon:`fa-plus-square` :guilabel:`Total` box above the columns, to "
-"reveal a drop-down menu, and click :guilabel:`Source`."
+"To expand this chart to show what specific job positions the applicants "
+"applied to from each source, click the :icon:`fa-plus-"
+"square` :guilabel:`Total` box above the columns to reveal a drop-down menu, "
+"and click :guilabel:`Job Position`."
 msgstr ""
-"Untuk memperluas grafik ini untuk menampilkan sumber spesifik asal pelamar, "
-"klik kotak :icon:`fa-plus-square` :guilabel:`Total` di atas kolom, untuk "
-"menampilkan menu drop-down, dan klik :guilabel:`Sumber`."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:43
+#: ../../content/applications/hr/recruitment/source_analysis.rst:44
 msgid ""
-"Each column is then grouped by the source, such as: :guilabel:`Search "
-"engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
-"displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
-"and :guilabel:`Refused`."
+"Each column is then grouped by the job position, such as *Accountant* or "
+"*Carpenter*. Each job position displays a separate count for "
+"applications :guilabel:`In Progress`, :guilabel:`Refused`, "
+"or :guilabel:`Hired`, and an :guilabel:`Applications` column which displays "
+"the total count of all statuses."
 msgstr ""
-"Setiap kolom kemudian dikelompokkan berdasarkan sumber, "
-"seperti: :guilabel:`Mesin "
-"pencari`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, dll. Setiap sumber "
-"menampilkan hitungan terpisah "
-"untuk :guilabel:`Pelamar`, :guilabel:`Dipekerjakan`, dan :guilabel:`Ditolak`."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:47
-msgid ""
-"This information, as presented, makes it difficult to view the specific "
-"numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
-"axis)` icon, to swap the information. After that, the rows represent the "
-"source, and the columns represent the job positions, further divided by "
-"stage."
-msgstr ""
-"Informasi ini, sebagaimana disajikan, membuat sulit untuk melihat angka "
-"spesifik untuk setiap sumber. Klik ikon :icon:`fa-"
-"exchange` :guilabel:`(Balik sumbu)`, untuk menukar informasi. Setelah itu, "
-"baris mewakili sumber, dan kolom mewakili posisi pekerjaan, lebih lanjut "
-"dibagi berdasarkan tahap."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The axes flipped in the source analysis report, in pivot table view."
-msgstr ""
-"Sumbu dibalik dalam laporan analisis sumber, dalam tampilan tabel pivot."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:54
 msgid ""
-"In this view, the total number of applicants, hired employees, and refused "
-"applicants, are displayed for each source, as well as for each stage by job "
-"position."
+"The pivot table view displaying each job position and its source and stage."
 msgstr ""
-"Dalam tampilan ini, jumlah total pelamar, karyawan yang dipekerjakan, dan "
-"pelamar yang ditolak, ditampilkan untuk setiap sumber, serta untuk setiap "
-"tahap berdasarkan posisi pekerjaan."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:58
+#: ../../content/applications/hr/recruitment/source_analysis.rst:53
 msgid "Medium"
 msgstr "Media"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:60
+#: ../../content/applications/hr/recruitment/source_analysis.rst:55
 msgid ""
 "Viewing the medium for the applicants can be beneficial to see which "
 "specific medium is more successful."
@@ -50441,29 +50427,22 @@ msgstr ""
 "Melihat medium untuk pelamar dapat bermanfaat untuk melihat medium spesifik "
 "mana yang lebih berhasil."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:63
+#: ../../content/applications/hr/recruitment/source_analysis.rst:58
 msgid ""
 "*Mediums* are the specific methods the applicant used to discover and then "
-"apply for job positions, such as organic search, paid search, social media "
-"ad, email, etc."
+"apply for job positions, such as a search engine, social media ad, email, "
+"banner, etc."
 msgstr ""
-"*Medium* adalah metode spesifik yang digunakan pelamar untuk menemukan dan "
-"kemudian melamar posisi pekerjaan, seperti pencarian organik, pencarian "
-"berbayar, iklan media sosial, email, dll."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:66
+#: ../../content/applications/hr/recruitment/source_analysis.rst:61
 msgid ""
 "To further group the results by medium, click into one of the :icon:`fa-plus-"
-"square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the resulting "
-"drop-down menu. The row presents the specific mediums, relevant to that "
-"specific source."
+"square` :guilabel:`(Source)` rows then click :guilabel:`Medium` in the "
+"resulting drop-down menu. The row presents the individual mediums relevant "
+"to that specific source."
 msgstr ""
-"Untuk lebih lanjut mengelompokkan hasil berdasarkan medium, klik ke salah "
-"satu baris :icon:`fa-plus-square` :guilabel:`[Sumber]`. "
-"Klik :guilabel:`Medium` di menu drop-down yang muncul. Baris menampilkan "
-"medium spesifik, yang relevan dengan sumber spesifik tersebut."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:70
+#: ../../content/applications/hr/recruitment/source_analysis.rst:65
 msgid ""
 "Once :guilabel:`Medium` is selected for one source, clicking into another "
 "row automatically reveals the specific metrics for the mediums for that "
@@ -50473,23 +50452,14 @@ msgstr ""
 "secara otomatis menampilkan metrik spesifik untuk medium dari sumber "
 "tersebut."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The sources rows, expanded to also show the medium for each source."
-msgstr ""
-"Baris sumber, diperluas untuk juga menampilkan medium untuk setiap sumber."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:77
+#: ../../content/applications/hr/recruitment/source_analysis.rst:69
 msgid ""
-"The only mediums that appear for a source, are mediums that have been set on "
+"The only mediums that appear for a source are mediums that have been set on "
 "an applicant's form. If a medium has **not** been set for any applicants, "
 "the medium does not appear in the drop-down rows beneath the source."
 msgstr ""
-"Satu-satunya medium yang muncul untuk sebuah sumber, adalah medium yang "
-"telah diatur pada formulir pelamar. Jika sebuah medium **tidak** diatur "
-"untuk pelamar mana pun, medium tersebut tidak muncul di baris drop-down di "
-"bawah sumber."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:81
+#: ../../content/applications/hr/recruitment/source_analysis.rst:73
 msgid ""
 "For example, if no applicants applied with the medium *Google Adwords*, that "
 "medium does **not** appear beneath the *Search engine* source row."
@@ -50497,6 +50467,10 @@ msgstr ""
 "Misalnya, jika tidak ada pelamar yang melamar dengan medium *Google "
 "Adwords*, medium tersebut **tidak** muncul di bawah baris sumber *Mesin "
 "pencari*."
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:None
+msgid "The source rows, expanded to also show the medium for each source."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/team_performance.rst:3
 msgid "Team performance"
@@ -56365,6 +56339,535 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "Bagian bawah formulir jenis cuti, dengan warna dan ikon yang dipilih."
+
+#~ msgid "Export data to third-party apps"
+#~ msgstr "Ekspor data ke aplikasi pihak ketiga"
+
+#~ msgid ":doc:`recruitment/applicant_analysis`"
+#~ msgstr ":doc:`recruitment/applicant_analysis`"
+
+#~ msgid "Applicant analysis"
+#~ msgstr "Analisis pelamar"
+
+#~ msgid ""
+#~ "The *Applicant Analysis* report allows recruiting departments to see "
+#~ "which job positions have the most applicants, which have the most "
+#~ "referrals, and how long it takes for applicants to move through the "
+#~ "pipeline."
+#~ msgstr ""
+#~ "Laporan *Analisis Pelamar* memungkinkan departemen perekrutan untuk "
+#~ "melihat posisi pekerjaan mana yang memiliki pelamar terbanyak, mana yang "
+#~ "memiliki referensi terbanyak, dan berapa lama waktu yang diperlukan "
+#~ "pelamar untuk bergerak melalui pipeline."
+
+#~ msgid ""
+#~ "Knowing how many applicants each specific job position has, along with "
+#~ "statistics about how many are hired and refused, can provide valuable "
+#~ "insights. This information can assist the recruiting team to pivot their "
+#~ "strategies to acquire the most desirable candidates."
+#~ msgstr ""
+#~ "Mengetahui berapa banyak pelamar untuk setiap posisi pekerjaan tertentu, "
+#~ "bersama dengan statistik tentang berapa banyak yang dipekerjakan dan "
+#~ "ditolak, dapat memberikan wawasan berharga. Informasi ini dapat membantu "
+#~ "tim perekrutan untuk mengubah strategi mereka dalam mendapatkan kandidat "
+#~ "yang paling diinginkan."
+
+#~ msgid "Applicant analysis report"
+#~ msgstr "Laporan analisis pelamar"
+
+#~ msgid ""
+#~ "Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
+#~ "Applicant Analysis`. This presents a line chart of all applicants for the "
+#~ "last year."
+#~ msgstr ""
+#~ "Mulailah dengan membuka :menuselection:`aplikasi Perekrutan --> Pelaporan "
+#~ "--> Analisis Pelamar`. Ini menampilkan grafik garis dari semua pelamar "
+#~ "selama satu tahun terakhir."
+
+#~ msgid ""
+#~ "Three separate color-coded metrics are presented: :guilabel:`In "
+#~ "Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "Tiga metrik terpisah dengan kode warna ditampilkan: :guilabel:`Dalam "
+#~ "Proses`, :guilabel:`Dipekerjakan`, dan :guilabel:`Ditolak`."
+
+#~ msgid ""
+#~ "Hover the cursor over a month of the chart, and a pop-up window appears, "
+#~ "displaying the specific numbers for that month."
+#~ msgstr ""
+#~ "Arahkan kursor ke bulan pada grafik, dan jendela pop-up muncul yang "
+#~ "menampilkan angka spesifik untuk bulan tersebut."
+
+#~ msgid "The default Applicant Analysis report."
+#~ msgstr "Laporan Analisis Pelamar default."
+
+#~ msgid ""
+#~ "For a more detailed view of the information in the :guilabel:`Applicant "
+#~ "Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` "
+#~ "icon in the top-right corner. This displays all the information in a "
+#~ "pivot table."
+#~ msgstr ""
+#~ "Untuk tampilan yang lebih detail dari informasi dalam "
+#~ "laporan :guilabel:`Analisis Pelamar`, klik ikon :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` di sudut kanan atas. Ini menampilkan semua "
+#~ "informasi dalam tabel pivot."
+
+#~ msgid ""
+#~ "In this view, the job positions are displayed in the rows, and the "
+#~ "columns display the total numbers of applicants, including how many of "
+#~ "those applicants were hired or refused, and who is still in the "
+#~ "recruitment process. The displayed information can be modified, if "
+#~ "desired."
+#~ msgstr ""
+#~ "Dalam tampilan ini, posisi pekerjaan ditampilkan dalam baris, dan kolom "
+#~ "menampilkan jumlah total pelamar, termasuk berapa banyak dari pelamar "
+#~ "tersebut yang dipekerjakan atau ditolak, dan siapa yang masih dalam "
+#~ "proses perekrutan. Informasi yang ditampilkan dapat dimodifikasi jika "
+#~ "diinginkan."
+
+#~ msgid ""
+#~ "In this example, there are 18 total applicants. Out of that, six have "
+#~ "been hired, two have been refused, and ten are still in the recruitment "
+#~ "pipeline. The :guilabel:`Experienced Developer` position has six total "
+#~ "applicants, three of which were hired, one refused, and two still in "
+#~ "progress."
+#~ msgstr ""
+#~ "Dalam contoh ini, terdapat 18 total pelamar. Dari jumlah tersebut, enam "
+#~ "telah dipekerjakan, dua telah ditolak, dan sepuluh masih dalam pipeline "
+#~ "perekrutan. Posisi :guilabel:`Developer Berpengalaman` memiliki enam "
+#~ "total pelamar, tiga di antaranya dipekerjakan, satu ditolak, dan dua "
+#~ "masih dalam proses."
+
+#~ msgid ""
+#~ "To get a better understanding of how effective the "
+#~ "company's :doc:`referral program <../referrals>` is, "
+#~ "the :guilabel:`Applicant Analysis` report can be modified to show how "
+#~ "many applicants were referred by current employees."
+#~ msgstr ""
+#~ "Untuk mendapatkan pemahaman yang lebih baik tentang seberapa "
+#~ "efektif :doc:`program referensi <../referrals>` perusahaan, "
+#~ "laporan :guilabel:`Analisis Pelamar` dapat dimodifikasi untuk menunjukkan "
+#~ "berapa banyak pelamar yang direferensikan oleh karyawan saat ini."
+
+#~ msgid ""
+#~ "From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
+#~ "the :guilabel:`Applicant Analysis` report, first click "
+#~ "the :guilabel:`Measures` button to reveal a drop-down menu of options."
+#~ msgstr ""
+#~ "Dari tampilan :icon:`oi-view-pivot` :guilabel:`Pivot` "
+#~ "laporan :guilabel:`Analisis Pelamar`, pertama klik "
+#~ "tombol :guilabel:`Measures` untuk menampilkan menu tarik-turun berisi "
+#~ "pilihan."
+
+#~ msgid ""
+#~ "Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate "
+#~ "those two measures. Then, "
+#~ "click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
+#~ "and :guilabel:`Refused` to deactivate those default measures."
+#~ msgstr ""
+#~ "Klik :guilabel:`Has Referrer` dan :guilabel:`Count` untuk mengaktifkan "
+#~ "kedua ukuran tersebut. Kemudian, "
+#~ "klik :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress`, "
+#~ "dan :guilabel:`Refused` untuk menonaktifkan ukuran bawaan tersebut."
+
+#~ msgid ""
+#~ "Now, the column displays the number of applicants that came from a "
+#~ "referral in the :guilabel:`Has Referrer` column, and the total number of "
+#~ "applicants in the :guilabel:`Count` column."
+#~ msgstr ""
+#~ "Sekarang, kolom menampilkan jumlah pelamar yang berasal dari rujukan pada "
+#~ "kolom :guilabel:`Has Referrer`, dan jumlah total pelamar pada "
+#~ "kolom :guilabel:`Count`."
+
+#~ msgid ""
+#~ "In this example, the :guilabel:`Experienced Developer` "
+#~ "and :guilabel:`Interior Designer` job positions both have applicants from "
+#~ "referrals, while the rest do not have any referrals."
+#~ msgstr ""
+#~ "Dalam contoh ini, posisi pekerjaan :guilabel:`Experienced Developer` "
+#~ "dan :guilabel:`Interior Designer` sama-sama memiliki pelamar dari "
+#~ "rujukan, sedangkan yang lainnya tidak memiliki rujukan."
+
+#~ msgid ""
+#~ "To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
+#~ "position]` row, which reveals a drop-down menu. Then, "
+#~ "click :guilabel:`State` to show the various states applicants are "
+#~ "currently in."
+#~ msgstr ""
+#~ "Untuk melihat data ini, klik pada baris :icon:`fa-plus-"
+#~ "square` :guilabel:`[posisi pekerjaan]`, yang akan menampilkan menu tarik-"
+#~ "turun. Kemudian, klik :guilabel:`State` untuk menampilkan berbagai status "
+#~ "pelamar saat ini."
+
+#~ msgid ""
+#~ "To expand the other rows, and display the various states, click on "
+#~ "the :icon:`fa-plus-square` :guilabel:`[job position]` button."
+#~ msgstr ""
+#~ "Untuk memperluas baris lainnya dan menampilkan berbagai status, klik "
+#~ "tombol :icon:`fa-plus-square` :guilabel:`[posisi pekerjaan]`."
+
+#~ msgid ""
+#~ "The detailed pivot table view displaying applicants hired through "
+#~ "referrals."
+#~ msgstr ""
+#~ "Tampilan tabel pivot terperinci yang menampilkan pelamar yang "
+#~ "dipekerjakan melalui rujukan."
+
+#~ msgid ""
+#~ "Both the :guilabel:`Experienced Developer` and :guilabel:`Interior "
+#~ "Designer` roles yielded one referral hire each, confirming that "
+#~ "developers and designers generate the highest-success referrals."
+#~ msgstr ""
+#~ "Peran :guilabel:`Experienced Developer` dan :guilabel:`Interior Designer` "
+#~ "sama-sama menghasilkan satu perekrutan rujukan, mengonfirmasi bahwa "
+#~ "pengembang dan desainer menghasilkan rujukan dengan tingkat keberhasilan "
+#~ "tertinggi."
+
+#~ msgid ""
+#~ "Navigate to the main *Job Positions* dashboard by navigating "
+#~ "to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
+#~ "Next, click on the desired job position card, then click on the "
+#~ "individual applicant card from the :guilabel:`Applications` page."
+#~ msgstr ""
+#~ "Buka dashboard *Posisi Pekerjaan* utama dengan "
+#~ "membuka :menuselection:`Aplikasi Perekrutan --> Lamaran --> Berdasarkan "
+#~ "Posisi Pekerjaan`. Selanjutnya, klik pada kartu posisi pekerjaan yang "
+#~ "diinginkan, lalu klik pada kartu pelamar individual dari "
+#~ "halaman :guilabel:`Lamaran`."
+
+#~ msgid ""
+#~ "Clicking :guilabel:`Refuse` on an applicant's form makes "
+#~ "the :guilabel:`Refuse Reason` pop-up window appear."
+#~ msgstr ""
+#~ "Mengklik :guilabel:`Tolak` pada formulir pelamar akan memunculkan jendela "
+#~ "pop-up :guilabel:`Alasan Penolakan`."
+
+#~ msgid ""
+#~ "The default refuse reasons in Odoo, and their corresponding email "
+#~ "templates, are:"
+#~ msgstr ""
+#~ "Alasan penolakan default di Odoo, dan template email yang sesuai, adalah:"
+
+#~ msgid ""
+#~ "Additional refusal reasons :ref:`can be created, and existing ones can be "
+#~ "modified (or deleted) <recruitment/new-refuse>`."
+#~ msgstr ""
+#~ "Alasan penolakan tambahan :ref:`dapat dibuat, dan alasan yang ada dapat "
+#~ "dimodifikasi (atau dihapus) <recruitment/new-refuse>`."
+
+#~ msgid ""
+#~ "Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
+#~ "refusal-email>`."
+#~ msgstr ""
+#~ "Pilih alasan penolakan untuk :ref:`mengirim email penolakan <recruitment/"
+#~ "send-refusal-email>`."
+
+#~ msgid ""
+#~ "To view and configure refuse reasons, navigate "
+#~ "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
+#~ "Doing so reveals the :guilabel:`Refuse Reasons` page, where all the "
+#~ "existing refusal reasons are listed."
+#~ msgstr ""
+#~ "Untuk melihat dan mengonfigurasi alasan penolakan, "
+#~ "buka :menuselection:`aplikasi Perekrutan --> Konfigurasi --> Alasan "
+#~ "Penolakan`. Tindakan ini akan menampilkan halaman :guilabel:`Alasan "
+#~ "Penolakan`, di mana semua alasan penolakan yang ada akan tercantum."
+
+#~ msgid ""
+#~ "To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
+#~ "click the :guilabel:`New` button in the top-left corner. A blank line "
+#~ "appears at the bottom of the list, with an empty field present in "
+#~ "the :guilabel:`Description` column."
+#~ msgstr ""
+#~ "Untuk membuat alasan penolakan baru dari halaman :guilabel:`Alasan "
+#~ "Penolakan`, klik tombol :guilabel:`Baru` di pojok kiri atas. Baris kosong "
+#~ "akan muncul di bagian bawah daftar, dengan kolom kosong pada "
+#~ "kolom :guilabel:`Deskripsi`."
+
+#~ msgid ""
+#~ "Then, in the :guilabel:`Email Template` field, click on the field to "
+#~ "reveal a drop-down menu. Select an :guilabel:`Email Template` from the "
+#~ "list to be used when this refuse reason is selected."
+#~ msgstr ""
+#~ "Kemudian, di kolom :guilabel:`Template Email`, klik pada kolom untuk "
+#~ "menampilkan menu drop-down. Pilih :guilabel:`Template Email` dari daftar "
+#~ "untuk digunakan ketika alasan penolakan ini dipilih."
+
+#~ msgid ""
+#~ "If a new :guilabel:`Email Template` is desired, type in the name for the "
+#~ "new template in the field. Then, click :guilabel:`Create and edit...`, "
+#~ "and a :guilabel:`Create Email Template` form pop-up window appears."
+#~ msgstr ""
+#~ "Jika :guilabel:`Template Email` baru diperlukan, ketik nama untuk "
+#~ "template baru di kolom tersebut. Kemudian, klik :guilabel:`Buat dan "
+#~ "edit...`, dan jendela pop-up formulir :guilabel:`Buat Template Email` "
+#~ "akan muncul."
+
+#~ msgid ""
+#~ "In the :guilabel:`Create Email Template` pop-up window, enter "
+#~ "a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
+#~ "corresponding fields."
+#~ msgstr ""
+#~ "Di jendela pop-up :guilabel:`Buat Template Email`, "
+#~ "masukkan :guilabel:`Nama` untuk formulir, dan :guilabel:`Subjek` email di "
+#~ "kolom yang sesuai."
+
+#~ msgid ""
+#~ "Enter the desired email content in the :guilabel:`Content` tab. Proceed "
+#~ "to make any other modifications to the template in the :guilabel:`Email "
+#~ "Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save "
+#~ "& Close` to save the template. Upon clicking that, Odoo returns to "
+#~ "the :guilabel:`Refuse Reasons` list."
+#~ msgstr ""
+#~ "Masukkan konten email yang diinginkan di tab :guilabel:`Konten`. "
+#~ "Lanjutkan untuk membuat modifikasi lain pada template di "
+#~ "tab :guilabel:`Konfigurasi Email` dan :guilabel:`Pengaturan`, kemudian "
+#~ "klik :guilabel:`Simpan & Tutup` untuk menyimpan template. Setelah "
+#~ "mengklik itu, Odoo akan kembali ke daftar :guilabel:`Alasan Penolakan`."
+
+#~ msgid ""
+#~ "For example, if the applicant's name is a used in a dynamic placeholder, "
+#~ "the applicant's name appears anytime that dynamic placeholder appears on "
+#~ "the email template."
+#~ msgstr ""
+#~ "Misalnya, jika nama pelamar digunakan dalam placeholder dinamis, nama "
+#~ "pelamar akan muncul setiap kali placeholder dinamis tersebut muncul di "
+#~ "template email."
+
+#~ msgid ""
+#~ "After clicking the :guilabel:`Refuse` button on an applicant form, "
+#~ "a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
+#~ "the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear "
+#~ "below the selected refusal reason: :guilabel:`Send Email` "
+#~ "and :guilabel:`Email Template`."
+#~ msgstr ""
+#~ "Setelah mengklik tombol :guilabel:`Tolak` pada formulir "
+#~ "pelamar, :ref:`Alasan Penolakan <recruitment/refuse-reasons>` kemudian "
+#~ "dipilih dari jendela pop-up :guilabel:`Alasan Penolakan`. Kemudian, dua "
+#~ "kolom muncul di bawah alasan penolakan yang dipilih: :guilabel:`Kirim "
+#~ "Email` dan :guilabel:`Template Email`."
+
+#~ msgid ""
+#~ "The Refuse Reason pop-up window that appears when refusing an applicant."
+#~ msgstr "Jendela pop-up Alasan Penolakan yang muncul ketika menolak pelamar."
+
+#~ msgid ""
+#~ "The applicant's email address automatically populates the :guilabel:`Send "
+#~ "Email` field; additional email recipients **cannot** be added."
+#~ msgstr ""
+#~ "Alamat email pelamar secara otomatis mengisi kolom :guilabel:`Kirim "
+#~ "Email`; penerima email tambahan **tidak dapat** ditambahkan."
+
+#~ msgid ""
+#~ "If an email should **not** be sent to the applicant, uncheck "
+#~ "the :guilabel:`Send Email` checkbox."
+#~ msgstr ""
+#~ "Jika email **tidak** boleh dikirim ke pelamar, hapus centang pada kotak "
+#~ "centang :guilabel:`Kirim Email`."
+
+#~ msgid ""
+#~ "The email template associated with the refusal reason populates "
+#~ "the :guilabel:`Email Template` field. If a different email template is "
+#~ "desired, select a different template from the :guilabel:`Email Template` "
+#~ "drop-down menu."
+#~ msgstr ""
+#~ "Template email yang terkait dengan alasan penolakan mengisi "
+#~ "kolom :guilabel:`Template Email`. Jika template email yang berbeda "
+#~ "diperlukan, pilih template yang berbeda dari menu drop-"
+#~ "down :guilabel:`Template Email`."
+
+#~ msgid ""
+#~ "To send the refusal email to the applicant, ensure the :guilabel:`Send "
+#~ "Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
+#~ "the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
+#~ "the applicant, and a red :guilabel:`Refused` banner appears on the "
+#~ "applicant's card in the top-right corner."
+#~ msgstr ""
+#~ "Untuk mengirim email penolakan ke pelamar, pastikan kotak "
+#~ "centang :guilabel:`Kirim Email` dicentang, kemudian "
+#~ "klik :guilabel:`Tolak` di bagian bawah jendela pop-up :guilabel:`Alasan "
+#~ "Penolakan`. Email penolakan dikirim ke pelamar, dan banner "
+#~ "merah :guilabel:`Ditolak` muncul di kartu pelamar di pojok kanan atas."
+
+#~ msgid ""
+#~ "An applicant's card with the refused banner appearing in the top-right "
+#~ "corner in red."
+#~ msgstr ""
+#~ "Kartu pelamar dengan banner ditolak muncul di sudut kanan atas berwarna "
+#~ "merah."
+
+#~ msgid ""
+#~ "After refusal, the applicant's card is no longer visible in the job "
+#~ "position's Kanban view. However, it is still possible to view applicants "
+#~ "who have been refused."
+#~ msgstr ""
+#~ "Setelah penolakan, kartu pelamar tidak lagi terlihat di tampilan Kanban "
+#~ "posisi pekerjaan. Namun, masih dimungkinkan untuk melihat pelamar yang "
+#~ "telah ditolak."
+
+#~ msgid ""
+#~ "To view only the refused applicants, go to :menuselection:`Recruitment "
+#~ "app --> Applications --> By Job Positions`, "
+#~ "or :menuselection:`Recruitment app --> Applications --> All "
+#~ "Applications`. Both methods navigate to the :guilabel:`Applications` "
+#~ "dashboard, the only difference is :guilabel:`By Job Positions` displays "
+#~ "applicants in a Kanban view, while :guilabel:`All Applications` displays "
+#~ "applicants in a list view."
+#~ msgstr ""
+#~ "Untuk melihat hanya pelamar yang ditolak, buka :menuselection:`aplikasi "
+#~ "Perekrutan --> Lamaran --> Berdasarkan Posisi Pekerjaan`, "
+#~ "atau :menuselection:`aplikasi Perekrutan --> Lamaran --> Semua Lamaran`. "
+#~ "Kedua metode mengarah ke dashboard :guilabel:`Lamaran`, satu-satunya "
+#~ "perbedaan adalah :guilabel:`Berdasarkan Posisi Pekerjaan` menampilkan "
+#~ "pelamar dalam tampilan Kanban, sedangkan :guilabel:`Semua Lamaran` "
+#~ "menampilkan pelamar dalam tampilan daftar."
+
+#~ msgid ""
+#~ "On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
+#~ "down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+#~ "click :guilabel:`Refused`, located under the :icon:`fa-"
+#~ "funnel` :guilabel:`Filters` section."
+#~ msgstr ""
+#~ "Pada halaman :guilabel:`Lamaran`, klik tombol :icon:`fa-caret-"
+#~ "down` :guilabel:`Alihkan Panel Pencarian` di bilah pencarian, kemudian "
+#~ "klik :guilabel:`Ditolak`, yang terletak di bawah bagian :icon:`fa-"
+#~ "funnel` :guilabel:`Filter`."
+
+#~ msgid ""
+#~ "All applicants that have been refused for the job position appear on "
+#~ "the :guilabel:`Applications` page for that position, organized by the "
+#~ "stage they were in when they were refused."
+#~ msgstr ""
+#~ "Semua pelamar yang telah ditolak untuk posisi pekerjaan muncul di "
+#~ "halaman :guilabel:`Lamaran` untuk posisi tersebut, diatur berdasarkan "
+#~ "tahap di mana mereka berada ketika ditolak."
+
+#~ msgid "Source analysis reporting"
+#~ msgstr "Pelaporan analisis sumber"
+
+#~ msgid ""
+#~ "This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
+#~ "Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
+#~ "showing the amount of applicants by :guilabel:`Source`, and further "
+#~ "separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+#~ msgstr ""
+#~ "Ini menampilkan data untuk :icon:`fa-filter` :guilabel:`Pelamar 365 Hari "
+#~ "Terakhir`, dalam tampilan :icon:`fa-area-chart` :guilabel:`(Grafik)` "
+#~ "default, menampilkan jumlah pelamar berdasarkan :guilabel:`Sumber`, dan "
+#~ "lebih lanjut dipisahkan berdasarkan tahap (:guilabel:`Dalam Proses` "
+#~ "dan :guilabel:`Dipekerjakan`)"
+
+#~ msgid ""
+#~ "Hover the cursor over any column to view the specific numbers fort that "
+#~ "column."
+#~ msgstr ""
+#~ "Arahkan kursor ke kolom mana pun untuk melihat angka spesifik untuk kolom "
+#~ "tersebut."
+
+#~ msgid ""
+#~ "To identify which sources (e.g., job boards, social media, employee "
+#~ "referrals, company website) produce the most hires, the pivot table view "
+#~ "of the :guilabel:`Source Analysis` report can be configured to display "
+#~ "further details."
+#~ msgstr ""
+#~ "Untuk mengidentifikasi sumber mana (misalnya, papan lowongan kerja, media "
+#~ "sosial, rujukan karyawan, website perusahaan) yang menghasilkan paling "
+#~ "banyak perekrutan, tampilan tabel pivot dari laporan :guilabel:`Analisis "
+#~ "Sumber` dapat dikonfigurasi untuk menampilkan detail lebih lanjut."
+
+#~ msgid ""
+#~ "To view the :guilabel:`Source Analysis` report in a pivot table, click "
+#~ "the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right "
+#~ "corner. The data is presented in a pivot table, with rows populated by "
+#~ "job positions, and columns populated by stages."
+#~ msgstr ""
+#~ "Untuk melihat laporan :guilabel:`Analisis Sumber` dalam tabel pivot, klik "
+#~ "ikon :icon:`oi-view-pivot` :guilabel:`(Pivot)` di sudut kanan atas. Data "
+#~ "disajikan dalam tabel pivot, dengan baris diisi oleh posisi pekerjaan, "
+#~ "dan kolom diisi oleh tahap."
+
+#~ msgid ""
+#~ "To expand this chart to show what specific sources the applicants came "
+#~ "from, click the :icon:`fa-plus-square` :guilabel:`Total` box above the "
+#~ "columns, to reveal a drop-down menu, and click :guilabel:`Source`."
+#~ msgstr ""
+#~ "Untuk memperluas grafik ini untuk menampilkan sumber spesifik asal "
+#~ "pelamar, klik kotak :icon:`fa-plus-square` :guilabel:`Total` di atas "
+#~ "kolom, untuk menampilkan menu drop-down, dan klik :guilabel:`Sumber`."
+
+#~ msgid ""
+#~ "Each column is then grouped by the source, such as: :guilabel:`Search "
+#~ "engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
+#~ "displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
+#~ "and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "Setiap kolom kemudian dikelompokkan berdasarkan sumber, "
+#~ "seperti: :guilabel:`Mesin "
+#~ "pencari`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, dll. Setiap sumber "
+#~ "menampilkan hitungan terpisah "
+#~ "untuk :guilabel:`Pelamar`, :guilabel:`Dipekerjakan`, "
+#~ "dan :guilabel:`Ditolak`."
+
+#~ msgid ""
+#~ "This information, as presented, makes it difficult to view the specific "
+#~ "numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
+#~ "axis)` icon, to swap the information. After that, the rows represent the "
+#~ "source, and the columns represent the job positions, further divided by "
+#~ "stage."
+#~ msgstr ""
+#~ "Informasi ini, sebagaimana disajikan, membuat sulit untuk melihat angka "
+#~ "spesifik untuk setiap sumber. Klik ikon :icon:`fa-"
+#~ "exchange` :guilabel:`(Balik sumbu)`, untuk menukar informasi. Setelah "
+#~ "itu, baris mewakili sumber, dan kolom mewakili posisi pekerjaan, lebih "
+#~ "lanjut dibagi berdasarkan tahap."
+
+#~ msgid "The axes flipped in the source analysis report, in pivot table view."
+#~ msgstr ""
+#~ "Sumbu dibalik dalam laporan analisis sumber, dalam tampilan tabel pivot."
+
+#~ msgid ""
+#~ "In this view, the total number of applicants, hired employees, and "
+#~ "refused applicants, are displayed for each source, as well as for each "
+#~ "stage by job position."
+#~ msgstr ""
+#~ "Dalam tampilan ini, jumlah total pelamar, karyawan yang dipekerjakan, dan "
+#~ "pelamar yang ditolak, ditampilkan untuk setiap sumber, serta untuk setiap "
+#~ "tahap berdasarkan posisi pekerjaan."
+
+#~ msgid ""
+#~ "*Mediums* are the specific methods the applicant used to discover and "
+#~ "then apply for job positions, such as organic search, paid search, social "
+#~ "media ad, email, etc."
+#~ msgstr ""
+#~ "*Medium* adalah metode spesifik yang digunakan pelamar untuk menemukan "
+#~ "dan kemudian melamar posisi pekerjaan, seperti pencarian organik, "
+#~ "pencarian berbayar, iklan media sosial, email, dll."
+
+#~ msgid ""
+#~ "To further group the results by medium, click into one of the :icon:`fa-"
+#~ "plus-square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the "
+#~ "resulting drop-down menu. The row presents the specific mediums, relevant "
+#~ "to that specific source."
+#~ msgstr ""
+#~ "Untuk lebih lanjut mengelompokkan hasil berdasarkan medium, klik ke salah "
+#~ "satu baris :icon:`fa-plus-square` :guilabel:`[Sumber]`. "
+#~ "Klik :guilabel:`Medium` di menu drop-down yang muncul. Baris menampilkan "
+#~ "medium spesifik, yang relevan dengan sumber spesifik tersebut."
+
+#~ msgid "The sources rows, expanded to also show the medium for each source."
+#~ msgstr ""
+#~ "Baris sumber, diperluas untuk juga menampilkan medium untuk setiap sumber."
+
+#~ msgid ""
+#~ "The only mediums that appear for a source, are mediums that have been set "
+#~ "on an applicant's form. If a medium has **not** been set for any "
+#~ "applicants, the medium does not appear in the drop-down rows beneath the "
+#~ "source."
+#~ msgstr ""
+#~ "Satu-satunya medium yang muncul untuk sebuah sumber, adalah medium yang "
+#~ "telah diatur pada formulir pelamar. Jika sebuah medium **tidak** diatur "
+#~ "untuk pelamar mana pun, medium tersebut tidak muncul di baris drop-down "
+#~ "di bawah sumber."
 
 #~ msgid ""
 #~ ":guilabel:`Make Vehicle Available`: Click the checkbox if the vehicle can "

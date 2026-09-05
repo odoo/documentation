@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:33+0000\n"
 "PO-Revision-Date: 2026-08-27 16:41+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/hr/ko/"
@@ -7847,7 +7847,7 @@ msgid "Resumé tab"
 msgstr "이력서 탭"
 
 #: ../../content/applications/hr/employees/new_employee.rst:162
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:35
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:35
 msgid "Resumé"
 msgstr "경력 사항"
 
@@ -11039,7 +11039,7 @@ msgstr ""
 "Odoo **차량 관리** 앱에는 기본 서비스가 네 가지 단계로 나누어져 있습니다:"
 
 #: ../../content/applications/hr/fleet/accidents.rst:103
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:18
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:18
 msgid "New"
 msgstr "신규"
 
@@ -40383,11 +40383,11 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "상단에 다운로드할 파일이 있는 940 보고서 화면."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
-msgid "Export data to third-party apps"
-msgstr "데이터를 외부 앱으로 내보내기"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
+msgid "Export data to ADP"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:648
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -40395,7 +40395,7 @@ msgstr ""
 "\\ *ADP 내보내기*\\ 보고서는 ADP에 제출할 수 있는 CSV 파일을 생성하며, ADP는 "
 "이를 통해 임직원에게 지급합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:651
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -40405,7 +40405,7 @@ msgstr ""
 "간을 요약합니다. 보고서는 휴가가 확정된\\ *후*\\ :doc:`근무 입력 <../"
 "work_entries>`\\ 에서 생성됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:655
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -40415,13 +40415,116 @@ msgstr ""
 "정할 수 있고 일부 변경이 필요할 수 있으므로, 데이터는 ADP에 제공되어 급여를 "
 "실행하는 데 사용됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:659
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
 msgstr ""
 "ADP 내보내기 보고서에 액세스하려면 `United States - Payroll - Export to ADP` "
 "모듈이\\ **반드시**\\ :ref:`설치 <general/install>`\\ 되어 있어야 합니다."
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:663
+msgid "Setup"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:665
+msgid ""
+"To export data to ADP, the company **must** have an ADP code configured in "
+"the company settings. Navigate to :menuselection:`Payroll app --> "
+"Configuration --> Settings`. In the *US Localization* section, enter "
+"the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:669
+msgid ""
+"Next, work entry types **must** have the correct ADP code listed in "
+"the :ref:`External Code field <payroll/new-work-entry-type>` for each work "
+"entry type that is being referenced."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:672
+msgid ""
+"Lastly, every employee **must** have an ADP code entered on their employee "
+"form. To add this code, open the :menuselection:`Employees` app, click an "
+"employee record, and click into the *Payroll* tab. In the *ADP Information* "
+"section, enter the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:676
+msgid ""
+"The :guilabel:`ADP Code` is how ADP identifies that particular employee, and "
+"is typically a six-digit number."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:680
+msgid "Export data"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:682
+msgid ""
+"Once :doc:`work entries <../work_entries>` have been verified, the "
+"information is exported to a CSV file, which is uploaded into ADP."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:685
+msgid ""
+"To export the data, navigate to :menuselection:`Payroll app --> Reporting --"
+"> ADP Export`, then click :guilabel:`New`. Next, enter the :guilabel:`Start "
+"Date` and :guilabel:`End Date` for the work entries using the calendar pop-"
+"over."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:689
+msgid ""
+"Then, enter a :guilabel:`Batch ID` in the corresponding field. The "
+"recommendation for this field is to enter the date in a `YY-MM-DD` format, "
+"followed by any other characters to distinguish that specific pay run, such "
+"as a department name."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:693
+msgid ""
+"Enter a :guilabel:`Batch Description` in the corresponding field. This "
+"should be short and descriptive, but distinct from the name of the pay run."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:696
+msgid ""
+"Ensure the correct company populates the :guilabel:`Company` field. Change "
+"the selected company with the drop-down menu, if needed."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:699
+msgid ""
+"Lastly, add the employee's work entry information to the list. "
+"Click :guilabel:`Add a line` and an *Add: Employee* pop-up window loads. The "
+"list can be :doc:`filtered <../../../essentials/search>` to find the "
+"employees to add to the list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:704
+msgid ""
+"Process the data export in multiple groups instead of in one large group "
+"that contains all employees. This helps to meaningfully differentiate the "
+"batches and makes processing more tenable, overall. The most common ways to "
+"group employees is by department, or by wage type (hourly or salaried)."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:709
+msgid ""
+"Select the employees to add to the list by clicking the box to the left of "
+"their name. Once all desired employees have been selected, click "
+"the :guilabel:`Select` button in the corner, and the employees appear in the "
+"list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:713
+msgid "To create the CSV file, click the :guilabel:`Generate` button."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:716
+msgid ":ref:`ACH - electronic transfers <l10n_us/ach-electronic-transfers>`"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payslips.rst:5
 msgid ""
@@ -45133,7 +45236,7 @@ msgstr ""
 "됩니다. 그런 다음 이메일이 채터에 나타납니다."
 
 #: ../../content/applications/hr/recruitment.rst:None
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:None
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
 msgid ""
 "Send a custom survey, also referred to as an interview form, to an applicant "
 "using a\n"
@@ -45151,34 +45254,38 @@ msgid ":doc:`recruitment/post_job`"
 msgstr ":doc:`recruitment/post_job`"
 
 #: ../../content/applications/hr/recruitment.rst:366
-msgid ":doc:`recruitment/add_applicants`"
+msgid ":doc:`recruitment/recruitment_flow`"
 msgstr ""
 
 #: ../../content/applications/hr/recruitment.rst:367
+msgid ":doc:`recruitment/add_applicants`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:368
 msgid ":doc:`recruitment/schedule_interviews`"
 msgstr ":doc:`recruitment/schedule_interviews`"
 
-#: ../../content/applications/hr/recruitment.rst:368
+#: ../../content/applications/hr/recruitment.rst:369
 msgid ":doc:`recruitment/offer_job_positions`"
 msgstr ":doc:`recruitment/offer_job_positions`"
 
-#: ../../content/applications/hr/recruitment.rst:369
+#: ../../content/applications/hr/recruitment.rst:370
 msgid ":doc:`recruitment/refuse_applicant`"
 msgstr ":doc:`recruitment/refuse_applicant`"
 
-#: ../../content/applications/hr/recruitment.rst:370
-msgid ":doc:`recruitment/applicant_analysis`"
-msgstr ":doc:`recruitment/applicant_analysis`"
-
 #: ../../content/applications/hr/recruitment.rst:371
+msgid ":doc:`recruitment/application_analysis`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:372
 msgid ":doc:`recruitment/source_analysis`"
 msgstr ":doc:`recruitment/source_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:372
+#: ../../content/applications/hr/recruitment.rst:373
 msgid ":doc:`recruitment/velocity_analysis`"
 msgstr ":doc:`recruitment/velocity_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:373
+#: ../../content/applications/hr/recruitment.rst:374
 msgid ":doc:`recruitment/team_performance`"
 msgstr ":doc:`recruitment/team_performance`"
 
@@ -45572,174 +45679,155 @@ msgstr ""
 msgid "The applicant's skills as compared to the job requirements."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:3
-msgid "Applicant analysis"
-msgstr "지원자 분석"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:5
-msgid ""
-"The *Applicant Analysis* report allows recruiting departments to see which "
-"job positions have the most applicants, which have the most referrals, and "
-"how long it takes for applicants to move through the pipeline."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:3
+msgid "Application analysis"
 msgstr ""
-"*지원자 분석* 보고서를 통해 채용 부서는 어떤 직무에 지원자가 가장 많은지, 어"
-"떤 직무에 추천이 가장 많은지, 지원자가 파이프라인을 통과하는 데 얼마나 걸리는"
-"지 확인할 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:9
+#: ../../content/applications/hr/recruitment/application_analysis.rst:5
 msgid ""
-"Knowing how many applicants each specific job position has, along with "
-"statistics about how many are hired and refused, can provide valuable "
-"insights. This information can assist the recruiting team to pivot their "
-"strategies to acquire the most desirable candidates."
+"The *Application Analysis* report allows recruiting departments to see the "
+"total number of applications submitted for the past 365 days. Along with the "
+"total, the number of hired applicants, refused applicants, and those still "
+"in the pipeline are displayed."
 msgstr ""
-"채용 부문별 지원자 숫자 및 채용 합격 및 불합격된 지원자 수에 대해 통계를 파악"
-"함으로써 깊이 있는 이해를 할 수 있습니다. 이와 같은 정보는 채용팀에서 가장 이"
-"상적인 인재를 확보하기 위해 다양한 전략을 수립하는 데 많은 도움이 될 수 있습"
-"니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:14
-msgid "Applicant analysis report"
-msgstr "지원자 분석 보고서"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:16
+#: ../../content/applications/hr/recruitment/application_analysis.rst:9
 msgid ""
-"Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
-"Applicant Analysis`. This presents a line chart of all applicants for the "
-"last year."
+"This information can help the recruiting team see how the various rates "
+"align with their hiring goals and pivot their strategies to acquire more "
+"desirable candidates."
 msgstr ""
-"\\ :menuselection:`채용 앱 --> 보고 --> 지원자 분석`\\ 으로 이동하십시오. 지"
-"난 1년간 모든 지원자의 꺾은선형 차트가 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:19
+#: ../../content/applications/hr/recruitment/application_analysis.rst:13
+msgid "Application Analysis report"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:15
 msgid ""
-"Three separate color-coded metrics are presented: :guilabel:`In "
-"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+"To view the *Application Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Application Analysis`. "
+"This presents a line chart of all applicants for the last 365 days."
 msgstr ""
-"세 개의 별도 색상으로 지표가 구분되어 :guilabel:`진행 중`, :guilabel:`고용됨"
-"`, :guilabel:`거부됨` 으로 표시됩니다.."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:22
+#: ../../content/applications/hr/recruitment/application_analysis.rst:18
 msgid ""
-"Hover the cursor over a month of the chart, and a pop-up window appears, "
-"displaying the specific numbers for that month."
+"Three separate color-coded metrics are presented: :guilabel:`In Progress` "
+"appears in blue, :guilabel:`Hired` appears in red, and :guilabel:`Refused` "
+"appears in green."
 msgstr ""
-"차트의 월 위에 커서를 올려 놓으면 해당 월의 구체적인 수치를 표시하는 팝업 창"
-"이 나타납니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid "The default Applicant Analysis report."
-msgstr "지원자 기본 분석 보고서,"
+#: ../../content/applications/hr/recruitment/application_analysis.rst:21
+msgid ""
+"Hover the cursor over a month of the chart, and an *Applications* pop-up "
+"window appears, displaying the specific numbers for that month."
+msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:29
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
+msgid "The default Application Analysis report."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:30
 #: ../../content/applications/hr/recruitment/team_performance.rst:30
 msgid "Pivot table view"
 msgstr "피벗 테이블 보기"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:31
+#: ../../content/applications/hr/recruitment/application_analysis.rst:32
 msgid ""
-"For a more detailed view of the information in the :guilabel:`Applicant "
-"Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon "
-"in the top-right corner. This displays all the information in a pivot table."
+"For a more detailed view of the information in the *Application Analysis* "
+"report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the "
+"corner. This displays all the information in a pivot table."
 msgstr ""
-"\\ :guilabel:`지원자 분석`\\ 보고서의 정보를 더 자세히 보려면 오른쪽 상단의"
-"\\ :icon:`oi-view-pivot` :guilabel:`(피벗)`\\ 아이콘을 클릭하십시오. 모든 정"
-"보가 피벗 테이블로 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:35
+#: ../../content/applications/hr/recruitment/application_analysis.rst:36
 msgid ""
-"In this view, the job positions are displayed in the rows, and the columns "
-"display the total numbers of applicants, including how many of those "
-"applicants were hired or refused, and who is still in the recruitment "
-"process. The displayed information can be modified, if desired."
+"In this default view, the months are displayed in the rows, with each job "
+"position nested beneath them. The columns display the various stages of the "
+"recruitment pipeline, further divided by how many applicants were hired, "
+"refused, or still in process while in that stage. The displayed information "
+"can be modified, if desired."
 msgstr ""
-"이 보기에서 행에는 직무가 표시되고 열에는 총 지원자 수가 표시되며, 여기에는 "
-"지원자 중 합격 혹은 불합격된 지원자 수와 아직 채용 절차가 진행 중인 지원자 수"
-"가 포함되어 있습니다. 필요한 경우 표시된 내용을 수정할 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:39
-msgid ""
-"In this example, there are 18 total applicants. Out of that, six have been "
-"hired, two have been refused, and ten are still in the recruitment pipeline. "
-"The :guilabel:`Experienced Developer` position has six total applicants, "
-"three of which were hired, one refused, and two still in progress."
-msgstr ""
-"이 예시에서 지원자 수는 총 18명입니다. 그중 합격자 수는 6명이고, 2명은 불합격"
-"되었으며, 10명에 대해서는은 계속 채용 절차가 진행 중입니다. :guilabel:`개발 "
-"경력자` 직무에서 지원자 수는 총 6명이며, 그중 합격자 수는 3명이고, 1명은 불합"
-"격했으며, 1명에 대해서는 아직 채용 진행 중입니다."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 #: ../../content/applications/hr/recruitment/team_performance.rst:None
 msgid "The detailed pivot table view."
 msgstr "자세한 피벗 테이블 보기입니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:48
+#: ../../content/applications/hr/recruitment/application_analysis.rst:45
+msgid ""
+"To only view the total number of applicants in each stage, click :icon:`fa-"
+"minus-square-o` :guilabel:`Total` in the top row. All the stages collapse, "
+"displaying only the total number of applications that are :guilabel:`In "
+"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`, along with the totals "
+"for all three in the :guilabel:`Applications` column. These numbers are "
+"organized by month, then job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:51
+msgid ""
+"In this example, of the fourteen newly hired employees, "
+"the :guilabel:`Furniture Assembler` position had the most new hires, with a "
+"total of four."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:0
+msgid "The pivot table showing only the totals in the columns."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:58
 msgid "Use case: applicants with referrals"
 msgstr "사례: 추천을 통한 지원자"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:50
+#: ../../content/applications/hr/recruitment/application_analysis.rst:60
 msgid ""
 "To get a better understanding of how effective the company's :doc:`referral "
-"program <../referrals>` is, the :guilabel:`Applicant Analysis` report can be "
+"program <../referrals>` is, the *Application Analysis* report can be "
 "modified to show how many applicants were referred by current employees."
 msgstr ""
-"회사의\\ :doc:`추천 프로그램 <../referrals>`\\ 이 얼마나 효과적인지 더 잘 이"
-"해하기 위해\\ :guilabel:`지원자 분석`\\ 보고서를 수정하여 현재 임직원이 추천"
-"한 지원자 수를 표시할 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:54
+#: ../../content/applications/hr/recruitment/application_analysis.rst:64
 msgid ""
-"From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
-"the :guilabel:`Applicant Analysis` report, first click "
-"the :guilabel:`Measures` button to reveal a drop-down menu of options."
+"From the :ref:`pivot table view <recruitment/application_analysis/pivot>` of "
+"the *Application Analysis* report, first click "
+"the :guilabel:`Measures` :icon:`fa-caret-down` button to reveal a drop-down "
+"menu of options."
 msgstr ""
-"\\ :guilabel:`지원자 분석`\\ 보고서의\\ :icon:`oi-view-pivot` :guilabel:`(피"
-"벗)`\\ 보기에서 먼저\\ :guilabel:`측정`\\ 버튼을 클릭하여 옵션의 드롭다운 메"
-"뉴를 표시하십시오."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:57
+#: ../../content/applications/hr/recruitment/application_analysis.rst:68
 msgid ""
-"Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate those "
+"Click both :guilabel:`Has Referrer` and :guilabel:`Count` to activate those "
 "two measures. Then, "
-"click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
-"and :guilabel:`Refused` to deactivate those default measures."
+"click :guilabel:`Applications`, :guilabel:`Hired`, :guilabel:`In Progress`, "
+"and :guilabel:`Refused` to deactivate those default measures. Click away "
+"from the drop-down window to close it. Then click :icon:`fa-minus-square-"
+"o` :guilabel:`Total` above the columns to condense all the displayed values."
 msgstr ""
-"\\ :guilabel:`추천인 있음`\\ 및\\ :guilabel:`카운트`\\ 를 모두 클릭하여 두 측"
-"정을 활성화하십시오. 그런 다음\\ :guilabel:`지원자`\\ , :guilabel:`채용됨"
-"`\\ , :guilabel:`진행 중`\\ 및\\ :guilabel:`거부됨`\\ 을 클릭하여 기본 측정"
-"을 비활성화하십시오."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:61
+#: ../../content/applications/hr/recruitment/application_analysis.rst:73
 msgid ""
-"Now, the column displays the number of applicants that came from a referral "
+"Now, the columns display the number of applicants that came from a referral "
 "in the :guilabel:`Has Referrer` column, and the total number of applicants "
 "in the :guilabel:`Count` column."
 msgstr ""
-"이제 열에는 추천을 통해 지원하게 된 지원자 수가 :guilabel:`추천인 있음` 열에 "
-"표시되고 총 지원자 수가 :guilabel:`개수` 열에 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:76
+msgid ""
+"In this example, the :guilabel:`Furniture Assembler` job position has the "
+"most referrals, and almost 25% of all applications were submitted through a "
+"referral."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 msgid ""
 "The detailed pivot table view displaying the number of referrals and the "
 "total applicants."
 msgstr ""
 "세부 피벗 테이블 보기에 추천 수와 총 지원자 수가 표시되어 있는 모습입니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:67
-msgid ""
-"In this example, the :guilabel:`Experienced Developer` "
-"and :guilabel:`Interior Designer` job positions both have applicants from "
-"referrals, while the rest do not have any referrals."
-msgstr ""
-"이 예에서\\ :guilabel:`경력 개발자`\\ 및\\ :guilabel:`인테리어 디자이너`\\ 직"
-"무는 모두 추천에서 지원자가 있지만 나머지는 추천이 없습니다."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:71
+#: ../../content/applications/hr/recruitment/application_analysis.rst:83
 msgid "Hired through referrals"
 msgstr "추천을 통한 채용"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:73
+#: ../../content/applications/hr/recruitment/application_analysis.rst:85
 msgid ""
 "It is possible to modify this report even further to see how many referred "
 "applicants end up being hired."
@@ -45747,47 +45835,27 @@ msgstr ""
 "이 보고서를 더욱 수정하여 추천된 지원자 중 몇 명이 채용되었는지 확인할 수 있"
 "습니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:76
+#: ../../content/applications/hr/recruitment/application_analysis.rst:88
 msgid ""
-"To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
-"position]` row, which reveals a drop-down menu. Then, "
+"To view this data, click on a :icon:`fa-plus-square` :guilabel:`(job "
+"position)` row, which reveals a drop-down menu. Then, "
 "click :guilabel:`State` to show the various states applicants are currently "
 "in."
 msgstr ""
-"이 데이터를 보려면 :icon:`fa-plus-square` :guilabel:`[직무]` 행을 클릭하여 드"
-"롭다운 메뉴를 표시합니다. 그런 다음 :guilabel:`상태` 를 클릭하면 현재 지원자"
-"가 속한 여러 가지 상태가 나타납니다."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:81
+#: ../../content/applications/hr/recruitment/application_analysis.rst:92
+msgid ""
+"To expand the other rows and display the various states, click on "
+"the :icon:`fa-plus-square` :guilabel:`(job position)` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:96
 msgid ""
 "Only states that have applicants in them are shown for each job position. If "
 "a state does **not** have any applicants, it does not appear in the list."
 msgstr ""
 "지원자가 있을 경우에만 직무가 표시됩니다. 채용 부문에 지원자가 **없는** 경우"
 "에는 목록에 나타나지 않습니다."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:84
-msgid ""
-"To expand the other rows, and display the various states, click on "
-"the :icon:`fa-plus-square` :guilabel:`[job position]` button."
-msgstr ""
-"다른 행을 확장하고 다양한 상태를 표시하려면\\ :icon:`fa-plus-"
-"square` :guilabel:`[직무]`\\ 버튼을 클릭하십시오."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid ""
-"The detailed pivot table view displaying applicants hired through referrals."
-msgstr "추천을 통해 채용된 지원자가 표시된 세부적인 피벗 테이블 보기입니다."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:90
-msgid ""
-"Both the :guilabel:`Experienced Developer` and :guilabel:`Interior Designer` "
-"roles yielded one referral hire each, confirming that developers and "
-"designers generate the highest-success referrals."
-msgstr ""
-"\\ :guilabel:`경력 개발자`\\ 및\\ :guilabel:`인테리어 디자이너`\\ 직무 모두 "
-"각각 추천 채용 1명을 발생시켜 개발자와 디자이너가 가장 성공적인 추천을 생성함"
-"을 확인합니다."
 
 #: ../../content/applications/hr/recruitment/new_job.rst:3
 msgid "Job positions"
@@ -46231,7 +46299,7 @@ msgstr ""
 "듈이 **반드시**\\ :ref:`설치 <general/install>`\\ 되어 있어야 합니다."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:18
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:190
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:190
 msgid "Contract proposal"
 msgstr "계약 제안"
 
@@ -46514,7 +46582,7 @@ msgstr ""
 "활동 알림을 받습니다."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:154
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:200
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:200
 msgid "Contract signed"
 msgstr "계약서 서명 완료"
 
@@ -46911,11 +46979,11 @@ msgstr ""
 msgid "All job positions posted to a job board."
 msgstr "구인 게시판에 게시된 모든 직무 포지션."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:3
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:3
 msgid "Recruitment flow"
 msgstr "채용 흐름"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:5
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:5
 msgid ""
 "When a prospective employee applies for a job in Odoo, there is a "
 "preconfigured process from the :ref:`initial inquiry <recruitment/"
@@ -46924,14 +46992,14 @@ msgid ""
 "default recruitment process for Odoo's **Recruitment** application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:11
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:11
 msgid ""
 "The following is based on Odoo's *default* recruitment pipeline. Be advised "
 "that if :ref:`modifications are made <recruitment/customize-stages>` to the "
 "pipeline, the process differs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:20
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:20
 msgid ""
 "At the start of the process, all applicants appear in the :guilabel:`New` "
 "stage on the *Applications* page, whether they submitted through the company "
@@ -46939,14 +47007,14 @@ msgid ""
 "by a recruiter <add_applicants>`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:24
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:24
 msgid ""
 "The :guilabel:`Applicant`, :guilabel:`Email`, and :guilabel:`Phone` number "
 "on the applicant's card are filled as soon as it is created. By default, "
 "these details are required for every job position."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:28
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:28
 msgid ""
 "If the website application form is modified, different fields may be "
 "populated, based on what information is required on the website."
@@ -46954,21 +47022,21 @@ msgstr ""
 "웹사이트 지원 양식이 수정된 경우 웹사이트에서 요구하는 정보에 따라 다른 필드"
 "가 채워질 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:31
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:31
 msgid ""
 "Anything typed in the *Short Introduction* section appears in the "
 "applicant's chatter as a note from :guilabel:`OdooBot`, labeled *Other "
 "Information*."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:37
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:37
 msgid ""
 "If a resumé was attached to the online application, it appears in the "
 "*Files* section of the chatter, and is also stored in the **Documents** "
 "application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:40
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:40
 msgid ""
 "To find the recruitment documents, navigate to the "
 "main :menuselection:`Documents` app dashboard, and click "
@@ -46976,7 +47044,7 @@ msgid ""
 "are stored within that folder."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:45
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:45
 msgid ""
 "Depending on the browser zoom level, or size of the browser screen, the "
 "resumé may appear below the main applicant card information as a PDF link, "
@@ -46985,11 +47053,11 @@ msgstr ""
 "브라우저 확대/축소 수준 또는 브라우저 화면 크기에 따라 이력서가 주요 지원자 "
 "카드 정보 아래에 PDF 링크로 표시되거나 오른쪽에 이미지로 표시될 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:49
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:49
 msgid "Send interview"
 msgstr "면접 보내기"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:51
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:51
 msgid ""
 "At any point in the hiring process, an interview can be sent to the "
 "applicant to obtain more information. These interviews are custom-made, and "
@@ -46998,7 +47066,7 @@ msgstr ""
 "채용 과정에서 언제든 지원자에게 면접 요청을 보내어 많은 정보를 확인할 수 있습"
 "니다. 면접은 맞춤형으로 제작되며 다양한 방식으로 형식을 구성할 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:54
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:54
 msgid ""
 "The **Surveys** application is required to send interviews to an applicant, "
 "so it **must** be installed."
@@ -47006,14 +47074,14 @@ msgstr ""
 "지원자에게 인터뷰를 보내려면 **설문 조사** 애플리케이션이 필요하므로 **반드시"
 "** 설치해야 합니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:57
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:57
 msgid ""
 "Odoo uses the term *interview*, but these can be thought of as "
 "questionnaires, surveys, tests, certifications, etc. :doc:`Custom interviews "
 "<new_job>` can be formatted to suit each individual job position's needs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:62
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:62
 msgid ""
 "A job position for a computer programmer could have an interview in the form "
 "of a programming quiz to determine the skill level of the applicant. A job "
@@ -47026,7 +47094,7 @@ msgstr ""
 "에는 주말 저녁에 대한 근무를 할 수 있는 사람이 필요하므로 지원자의 근무 가능 "
 "여부를 설문을 통해서 질의하게 될 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:67
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:67
 msgid ""
 "To send an interview to an applicant, first open the applicant's card from "
 "the *Applications* page to view the detailed applicant information. In the "
@@ -47034,14 +47102,14 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:71
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:71
 msgid ""
 "If the applicant's card has an email address on file, a *Send an interview* "
 "pop-up window appears, with the :guilabel:`Recipients`, :guilabel:`Subject`, "
 "and email body populated."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:75
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:75
 msgid ""
 "To send an email to an applicant, there **must** be an :guilabel:`Email` "
 "address on the applicant's card."
@@ -47049,7 +47117,7 @@ msgstr ""
 "지원자에게 이메일을 보내려면 지원자의 카드에\\ :guilabel:`이메일`\\ 주소가 **"
 "반드시** 있어야 합니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:78
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:78
 msgid ""
 "If an email address is missing on the applicant's card, when "
 "the :guilabel:`Send Interview` button is clicked and the *Send an interview* "
@@ -47059,13 +47127,13 @@ msgid ""
 "address. Once entered, click :guilabel:`Set Email`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:84
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:84
 msgid ""
 "The email address entered is only used to send the interview, and does "
 "**not** appear on the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:87
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:87
 msgid ""
 "Sometimes, preconfigured :doc:`email templates <../../general/companies/"
 "email_template>` in Odoo use dynamic placeholders, which are automatically "
@@ -47074,7 +47142,7 @@ msgid ""
 "name of the applicant in the email."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:92
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:92
 msgid ""
 "Add the email addresses of any additional recipients for the survey in "
 "the :guilabel:`Additional emails` field, if more people should receive the "
@@ -47084,7 +47152,7 @@ msgid ""
 "add their email address in the :guilabel:`Additional emails` field."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:98
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:98
 msgid ""
 "If any attachments need to be added, click the :icon:`fa-"
 "paperclip` :guilabel:`Attachments` button, and a file explorer window "
@@ -47097,7 +47165,7 @@ msgstr ""
 "열기` 를 클릭하면 이메일에 첨부됩니다. 첨부 파일이 로드되고 :icon:`fa-"
 "paperclip` :guilabel:`첨부 파일` 버튼 위에 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:103
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:103
 msgid ""
 "The :guilabel:`Answer deadline` field specifies when the interview form must "
 "be completed by, and is populated with a date and time two weeks in the "
@@ -47107,7 +47175,7 @@ msgid ""
 "desired new deadline."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:108
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:108
 msgid ""
 "The :guilabel:`Mail Template` field is pre-populated based on the "
 "configuration for the interview. A different template can be chosen from the "
@@ -47115,24 +47183,24 @@ msgid ""
 "template loads in the email body."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:112
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:112
 msgid ""
 "To send the email with the interview link to the applicant, "
 "click :guilabel:`Send` at the bottom of the *Send an interview* pop-up "
 "window."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:122
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:122
 msgid "Qualification"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:124
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:124
 msgid ""
 "If an applicant is determined to be a good potential candidate, they are "
 "moved to the :guilabel:`Qualification` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:127
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:127
 msgid ""
 "This stage exists to sort candidates that have potential from those that do "
 "not meet the requirements. No automatic actions, such as emails, are set for "
@@ -47140,7 +47208,7 @@ msgid ""
 "phone call or an interview with the candidate."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:132
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:132
 msgid ""
 "In order to move an applicant's card from one stage to another, the "
 "applicant's card can either be dragged and dropped in the Kanban view of the "
@@ -47148,14 +47216,14 @@ msgid ""
 "the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:136
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:136
 msgid ""
 "To change the stage on the applicant's card, first click the desired "
 "applicant's card from the *Applications* page. The current stage for the "
 "card is highlighted at the top on a status bar, above the card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:140
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:140
 msgid ""
 "Click the desired stage for the card, and the stage changes. A log note "
 "indicating the stage change appears in the chatter, as well."
@@ -47163,7 +47231,7 @@ msgstr ""
 "카드의 원하는 단계를 클릭하면 단계가 변경됩니다. 단계 변경을 나타내는 로그 노"
 "트가 채터에도 나타납니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:0
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:0
 msgid ""
 "Change the stage of an applicant by clicking on the desired stage at the top "
 "of the\n"
@@ -47172,31 +47240,31 @@ msgstr ""
 "지원자 카드 상단에 있는 단계 중 원하는 단계를 클릭하여 지원자의 단계를\n"
 "변경합니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:150
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:150
 msgid "First interview"
 msgstr "1차 면접"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:152
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:152
 msgid ""
 "After an applicant has passed the :guilabel:`Qualification` stage, they can "
 "be manually moved to the :guilabel:`First Interview` stage on the "
 "*Applications* page, while in Kanban view."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:155
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:155
 msgid ""
 "To move the applicant to the next stage, drag and drop the applicant's card "
 "to the :guilabel:`First Interview` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:158
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:158
 msgid ""
 "Alternatively, open the desired applicant's card from the *Applications* "
 "page, and click the :guilabel:`First Interview` stage on the status bar at "
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:162
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:162
 msgid ""
 "The :guilabel:`First Interview` stage can be modified, so when the "
 "applicant's card moves to the :guilabel:`First Interview` stage, an email "
@@ -47209,18 +47277,18 @@ msgstr ""
 "록 설정할 수 있습니다. 이메일 템플릿에 사전 설정으로 채용 팀의 캘린더에 대한 "
 "링크가 삽입되어 지원자가 면접 일정을 예약할 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:167
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:167
 msgid ""
 ":ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, "
 "and select the :guilabel:`Recruitment: Schedule Interview` option in "
 "the :guilabel:`Email Template` field to automate this action."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:174
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:174
 msgid "Second interview"
 msgstr "2차 면접"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:176
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:176
 msgid ""
 "After an applicant has passed the :guilabel:`First Interview` stage, they "
 "can be moved to the :guilabel:`Second Interview` stage. To move the "
@@ -47230,7 +47298,7 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:182
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:182
 msgid ""
 "When the applicant's card moves to the :guilabel:`Second Interview` stage, "
 "there are no automatic activities or emails configured for this stage, by "
@@ -47243,7 +47311,7 @@ msgstr ""
 "한 절차에 따라 지원자와 :ref:`2차 면접 스케줄 <recruitment/"
 "schedule_interviews/recruitment-scheduled>` 을 예약할 수 있습니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:192
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:192
 msgid ""
 "After the applicant has completed the various interview processes, the next "
 "step is to :doc:`send the job offer <offer_job_positions>`."
@@ -47251,7 +47319,7 @@ msgstr ""
 "지원자가 다양한 면접 과정을 완료한 후 다음 단계는\\ :doc:`채용 제안 보내기 "
 "<offer_job_positions>`\\ 입니다."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:195
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:195
 msgid ""
 "Once the offer has been sent, drag and drop the applicant's card to "
 "the :guilabel:`Contract Proposal` stage from the Kanban view of the "
@@ -47259,14 +47327,14 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:202
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:202
 msgid ""
 "Once the contract has been fully signed by all parties, and the applicant "
 "has been hired, the applicant's card moves to the :guilabel:`Contract "
 "Signed` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:205
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:205
 msgid ""
 "The :guilabel:`Contract Signed` is folded by default on the *Applications* "
 "page, and must be expanded before the applicant's card can be manually "
@@ -47278,11 +47346,11 @@ msgid ""
 "applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:213
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:213
 msgid "Refused"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:215
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
 "At any point in the recruitment process, a candidate can be :doc:`refused "
 "<refuse_applicant>`."
@@ -47311,6 +47379,14 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:10
 msgid ""
+"Open the main *Job Positions* dashboard by navigating "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`. "
+"Next, click on the desired job position card, then click on the individual "
+"applicant card from the *Applications* page."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
+msgid ""
 "Navigate to :menuselection:`Recruitment app --> Applications --> All "
 "Applications`. In the :guilabel:`Applications` list, click anywhere on the "
 "desired applicant's line to open that specific applicant's card."
@@ -47318,17 +47394,6 @@ msgstr ""
 ":menuselection:`채용 앱 --> 지원서 --> 모든 지원서` 로 이동합니"
 "다. :guilabel:`지원서` 목록에서 원하는 지원자의 내역에 있는 아무 곳이나 클릭"
 "하면 지원자 카드가 열립니다."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
-msgid ""
-"Navigate to the main *Job Positions* dashboard by navigating "
-"to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
-"Next, click on the desired job position card, then click on the individual "
-"applicant card from the :guilabel:`Applications` page."
-msgstr ""
-":menuselection:`채용 앱 --> 지원 --> 채용 공고별`\\ 로 이동하여 기본 *채용 공"
-"고* 현황판으로 이동합니다. 그런 다음 원하는 채용 공고 카드를 클릭한 후"
-"\\ :guilabel:`지원`\\ 페이지에서 개별 지원자 카드를 클릭합니다."
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:17
 msgid ""
@@ -47352,17 +47417,15 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:28
 msgid ""
-"Clicking :guilabel:`Refuse` on an applicant's form makes "
-"the :guilabel:`Refuse Reason` pop-up window appear."
+"Clicking :guilabel:`Refuse` on an applicant's form makes the *Refuse Reason* "
+"pop-up window appear."
 msgstr ""
-"지원자 양식에서 :guilabel:`불합격` 을 클릭하면 :guilabel:`불합격 사유` 팝업 "
-"창이 나타납니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:31
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:30
 msgid ""
-"The default refuse reasons in Odoo, and their corresponding email templates, "
-"are:"
-msgstr "Odoo에서 기본 불합격 사유와 해당하는 이메일 템플릿은 다음과 같습니다."
+"The default refuse reasons in Odoo, and their corresponding :ref:`refusal "
+"email <recruitment/refuse_applicant/send-refusal-email>` templates, are:"
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:37
 msgid "Email Template"
@@ -47407,46 +47470,29 @@ msgstr ":guilabel:`지원자 측 거절: 급여`"
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:48
 msgid ""
 "Additional refusal reasons :ref:`can be created, and existing ones can be "
-"modified (or deleted) <recruitment/new-refuse>`."
+"modified (or deleted) <recruitment/refuse_applicant/new-refuse>`."
 msgstr ""
-"추가로 불합격 사유를 :ref:`생성할 수 있으며, 기존 불합격 사유를 수정 (또는 삭"
-"제)할 수 있습니다 <recruitment/new-refuse>`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:51
-msgid ""
-"Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
-"refusal-email>`."
-msgstr ""
-"불합격 사유를 선택하여 :ref:`불합격 이메일을 발송합니다 <recruitment/send-"
-"refusal-email>`."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:54
 msgid "Create or modify refuse reasons"
 msgstr "불합격 사유 생성 또는 수정하기"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:58
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
 msgid ""
 "To view and configure refuse reasons, navigate "
 "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
-"Doing so reveals the :guilabel:`Refuse Reasons` page, where all the existing "
-"refusal reasons are listed."
+"Doing so reveals the *Refuse Reasons* page, where all the existing refusal "
+"reasons are listed."
 msgstr ""
-"거절 사유를 보고 구성하려면\\ :menuselection:`채용 앱 --> 구성 --> 거절 사유"
-"`\\ 로 이동합니다. 그러면 기존의 모든 거절 사유가 나열된\\ :guilabel:`거절 사"
-"유`\\ 페이지가 나타납니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:62
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:60
 msgid ""
-"To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
-"click the :guilabel:`New` button in the top-left corner. A blank line "
-"appears at the bottom of the list, with an empty field present in "
-"the :guilabel:`Description` column."
+"To create a new refuse reason from the *Refuse Reasons* page, click "
+"the :guilabel:`New` button. A blank line appears at the bottom of the list, "
+"with an empty field present in the :guilabel:`Description` column."
 msgstr ""
-":guilabel:`불합격 사유` 페이지에 새로운 불합격 사유를 생성하려면 왼쪽 상단에 "
-"있는 :guilabel:`새로 만들기` 버튼을 클릭합니다. :guilabel:`설명` 열 하단에 "
-"빈 필드가 있는 빈 줄이 나타납니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:66
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:64
 msgid ""
 "Type in the new refuse reason in the field. It is recommended to enter a "
 "reason that is short and concise, such as `Offer expired` or `Withdrew "
@@ -47455,56 +47501,44 @@ msgstr ""
 "해당 필드에 새로운 불합격 사유를 입력합니다. '오퍼 만료', '지원 철회' 등 짧"
 "고 간결하게 사유를 입력하는 것이 좋습니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:69
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:67
 msgid ""
-"Then, in the :guilabel:`Email Template` field, click on the field to reveal "
-"a drop-down menu. Select an :guilabel:`Email Template` from the list to be "
-"used when this refuse reason is selected."
+"Then, click in the :guilabel:`Email Template` field to reveal a drop-down "
+"menu. Select the desired email template from the list to be used when the "
+"new refuse reason is selected."
 msgstr ""
-"그런 다음 :guilabel:`이메일 템플릿` 필드에서 해당 필드를 클릭하면 드롭다운 메"
-"뉴가 나타납니다. 불합격 사유를 선택했을 때 사용할 :guilabel:`이메일 템플릿` "
-"을 목록에서 선택합니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:72
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:70
 msgid ""
-"If a new :guilabel:`Email Template` is desired, type in the name for the new "
-"template in the field. Then, click :guilabel:`Create and edit...`, and "
-"a :guilabel:`Create Email Template` form pop-up window appears."
+"If a new email template is desired, type in the name for the new template in "
+"the field. Then, click :guilabel:`Create and edit...`, and a *Create Email "
+"Template* pop-up window appears."
 msgstr ""
-"새로운 :guilabel:`이메일 템플릿` 을 만들려면, 필드에 새 템플릿 이름을 입력합"
-"니다. 그런 다음 :guilabel:`만들기 및 편집...` 을 클릭하면 :guilabel:`이메일 "
-"템플릿 만들기` 양식 팝업 창이 나타납니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:76
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:73
 msgid ""
-"In the :guilabel:`Create Email Template` pop-up window, enter "
-"a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
-"corresponding fields."
+"The :guilabel:`Template Name` field is populated with the name entered in "
+"the :guilabel:`Email Template` column by default, but can be modified if "
+"desired. Enter the email :guilabel:`Subject` in the corresponding field, and "
+"add the email content in the *Body* tab. To include attachments, click the "
+"*Options* tab, and add the attachment using the :icon:`fa-"
+"paperclip` :guilabel:`Attachments` button. To assign an :guilabel:`Owner` "
+"for the template, select a user in the drop-down menu. Enter "
+"a :guilabel:`Template Description` in the corresponding field."
 msgstr ""
-":guilabel:`이메일 템플릿 만들기` 팝업 창에서 양식 :guilabel:`이름` 을 입력하"
-"고 해당 필드에 이메일 :guilabel:`제목` 을 입력합니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:79
-msgid ""
-"Enter the desired email content in the :guilabel:`Content` tab. Proceed to "
-"make any other modifications to the template in the :guilabel:`Email "
-"Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save & "
-"Close` to save the template. Upon clicking that, Odoo returns to "
-"the :guilabel:`Refuse Reasons` list."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:80
+msgid "Click :guilabel:`Save`, and Odoo returns to the *Refuse Reasons* list."
 msgstr ""
-":guilabel:`콘텐츠` 탭에 원하는 이메일 콘텐츠를 입력합니다. :guilabel:`이메일 "
-"환경 설정` 및 :guilabel:`설정` 탭에서 템플릿을 다른 방식으로 수정한 다"
-"음 :guilabel:`저장 및 닫기` 를 클릭하여 템플릿을 저장합니다. 해당 내용을 클릭"
-"하면 Odoo에서는 :guilabel:`불합격 사유` 목록으로 돌아갑니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:84
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:82
 msgid ""
 "The new template appears in the new refuse reason :guilabel:`Email Template` "
 "field."
 msgstr ""
 "새 불합격 사유 :guilabel:`이메일 템플릿` 필드에 새 템플릿이 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:87
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:85
 msgid ""
 "Pre-configured recruitment refusal email templates in Odoo use dynamic "
 "placeholders, which are personalized placeholders that populate data from "
@@ -47514,16 +47548,14 @@ msgstr ""
 "기록에 개인화된 자리 표시자인 동적 자리 표시자를 사용하여 데이터가 입력됩니"
 "다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:90
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:88
 msgid ""
-"For example, if the applicant's name is a used in a dynamic placeholder, the "
+"For example, if the applicant's name is used in a dynamic placeholder, the "
 "applicant's name appears anytime that dynamic placeholder appears on the "
 "email template."
 msgstr ""
-"예를 들어, 지원자 이름을 동적 자리 표시자에 사용할 경우 이메일 템플릿에 동적 "
-"자리 표시자가 표시될 때마다 지원자의 이름이 나타납니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:93
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:91
 msgid ""
 "For more detailed information on email templates, refer to the :doc:`../../"
 "general/companies/email_template` documentation."
@@ -47531,122 +47563,152 @@ msgstr ""
 "이메일 템플릿에 대한 자세한 내용은 :doc:`../../general/companies/"
 "email_template` 문서를 참조하세요."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:97
 msgid "Send refusal email"
 msgstr "불합격 이메일 보내기"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:101
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
 msgid ""
 "After clicking the :guilabel:`Refuse` button on an applicant form, "
-"a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
-"the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear below "
-"the selected refusal reason: :guilabel:`Send Email` and :guilabel:`Email "
-"Template`."
+"a :ref:`refuse reason <recruitment/refuse-reasons>` is selected from the "
+"*Refuse Reason* pop-up window."
 msgstr ""
-"지원자 양식에서\\ :guilabel:`거절`\\ 버튼을 클릭하면\\ :guilabel:`거절 사유"
-"`\\ 팝업 창에서\\ :ref:`거절 사유 <recruitment/refuse-reasons>`\\ 를 선택합니"
-"다. 그러면 선택한 거절 사유 아래에\\ :guilabel:`이메일 보내기`\\ 및"
-"\\ :guilabel:`이메일 템플릿`\\ 두 필드가 나타납니다."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:102
+msgid ""
+"The applicant's email address automatically populates "
+"the :guilabel:`Applicant` field. The :guilabel:`Subject` and email body are "
+"populated according to the corresponding email template."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:105
+msgid ""
+"To send the refusal email to the applicant, click :guilabel:`Refuse` at the "
+"bottom of the *Refuse Reason* pop-up window. The refusal email is sent to "
+"the applicant, and a red :guilabel:`Refused` banner appears on the "
+"applicant's card in the corner."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:110
+msgid ""
+"If an application should be refused but an email should **not** be sent (if, "
+"for example, the application was spam), click the :guilabel:`Send Email` "
+"toggle to deactivate it, and click :guilabel:`Refuse` at the bottom of the "
+"*Refuse Reason* pop-up window."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
 msgid ""
-"The Refuse Reason pop-up window that appears when refusing an applicant."
-msgstr "지원자가 불합격되었을 때 표시하는 불합격 사유 팝업 창"
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:109
-msgid ""
-"The applicant's email address automatically populates the :guilabel:`Send "
-"Email` field; additional email recipients **cannot** be added."
+"The refuse reason pop-up window, with the email subject and body populated."
 msgstr ""
-"지원자의 이메일 주소가 :guilabel:`이메일 보내기` 필드에 자동으로 입력되며, 추"
-"가로 이메일 수신자를 추가할 수 **없습니다**."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:112
-msgid ""
-"If an email should **not** be sent to the applicant, uncheck "
-"the :guilabel:`Send Email` checkbox."
-msgstr ""
-"지원자에게 이메일을 보내지 **않으려면**, :guilabel:`이메일 보내기` 확인란을 "
-"선택 해제합니다."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:114
-msgid ""
-"The email template associated with the refusal reason populates "
-"the :guilabel:`Email Template` field. If a different email template is "
-"desired, select a different template from the :guilabel:`Email Template` "
-"drop-down menu."
-msgstr ""
-"불합격 사유와 관련된 이메일 템플릿이 :guilabel:`이메일 템플릿` 필드에 입력됩"
-"니다. 다른 이메일 템플릿이 필요한 경우에는 :guilabel:`이메일 템플릿` 드롭다"
-"운 메뉴에서 다른 템플릿을 선택하세요."
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:118
-msgid ""
-"To send the refusal email to the applicant, ensure the :guilabel:`Send "
-"Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
-"the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
-"the applicant, and a red :guilabel:`Refused` banner appears on the "
-"applicant's card in the top-right corner."
+msgid "Refuse duplicate applicant"
 msgstr ""
-"지원자에게 불합격 이메일을 보내려면 :guilabel:`이메일 보내기` 확인란에 표시"
-"가 되어 있는지 확인한 다음 :guilabel:`불합격 사유` 팝업 창 하단에 있"
-"는 :guilabel:`불합격` 을 클릭합니다. 불합격 이메일이 지원자에게 전송되며, 지"
-"원자 카드 오른쪽 상단에 빨간색 :guilabel:`불합격` 배너가 나타납니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:120
 msgid ""
-"An applicant's card with the refused banner appearing in the top-right "
-"corner in red."
-msgstr "오른쪽 상단에 빨간색으로 불합격 배너가 표시된 지원자 카드"
+"Occasionally, applicants apply multiple times for the same job position. "
+"When this occurs, it is possible to refuse all their applications at once, "
+"instead of individually."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:123
+msgid ""
+"In this situation, a :guilabel:`Refuse Duplicate Applications` toggle "
+"appears on the *Refuse Reason* pop-up window. Enable the toggle, and "
+"a :guilabel:`Duplicate Applications` field appears beneath it, listing the "
+"applicant's name for each duplicate application in the system."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:127
-msgid "View refused applicants"
-msgstr "불합격한 지원자 보기"
+msgid ""
+"To refuse *all* applications for that applicant, click "
+"the :guilabel:`Refuse` button."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:129
 msgid ""
-"After refusal, the applicant's card is no longer visible in the job "
-"position's Kanban view. However, it is still possible to view applicants who "
-"have been refused."
+"The applicant is only sent one email, and all their applications for the job "
+"position are marked as *Refused*."
 msgstr ""
-"불합격한 후에는 지원자 카드가 더 이상 채용 부문의 칸반 보기에 표시되지 않습니"
-"다. 다만, 불합격한 지원자를 계속 조회하는 것은 가능합니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:132
-msgid ""
-"To view only the refused applicants, go to :menuselection:`Recruitment app --"
-"> Applications --> By Job Positions`, or :menuselection:`Recruitment app --> "
-"Applications --> All Applications`. Both methods navigate to "
-"the :guilabel:`Applications` dashboard, the only difference is :guilabel:`By "
-"Job Positions` displays applicants in a Kanban view, while :guilabel:`All "
-"Applications` displays applicants in a list view."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "Duplicate applications refused in one email."
 msgstr ""
-"불합격된 지원자만 보려면 :menuselection:`채용 앱 --> 지원서 --> 직무별` 또"
-"는 :menuselection:`채용 앱 --> 지원서 --> 모든 지원서` 로 이동합니다. 두 방"
-"법 모두 클릭 시 :guilabel:`지원` 현황판으로 이동하며, 유일한 차이점"
-"은 :guilabel:`직무별` 은 지원자가 칸반 보기로 표시되는 반면, :guilabel:`모든 "
-"지원서` 는 지원자가 목록 보기로 표시된다는 점입니다."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:136
+msgid "View refused applicants"
+msgstr "불합격한 지원자 보기"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:138
 msgid ""
-"On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
-"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
-"click :guilabel:`Refused`, located under the :icon:`fa-"
-"funnel` :guilabel:`Filters` section."
+"After refusal, the applicant's card is hidden by default. However, it is "
+"still possible to view applicants who have been refused :ref:`by job "
+"position <recruitment/refuse_applicant/job-refused>`, or view :ref:`all "
+"refused applicants <recruitment/refuse_applicant/all-refused>`."
 msgstr ""
-":guilabel:`지원`\\ 페이지의 검색 표시줄에서\\ :icon:`fa-caret-"
-"down`\\ :guilabel:`검색 패널 토글`\\ 버튼을 클릭한 다음\\ :icon:`fa-"
-"funnel`\\ :guilabel:`필터`\\ 섹션 아래에 있는\\ :guilabel:`거절됨`\\ 을 클릭"
-"합니다."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:142
-msgid ""
-"All applicants that have been refused for the job position appear on "
-"the :guilabel:`Applications` page for that position, organized by the stage "
-"they were in when they were refused."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:145
+msgid "By job position"
 msgstr ""
-"채용 부문에 대해 불합격 처리가 된 지원자는 모두 해당 부문의 :guilabel:`지원` "
-"페이지에 표시되며 불합격한 단계별로 정리됩니다."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:147
+msgid ""
+"To view the refused applicants for a specific job position, navigate "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`, "
+"then click the desired job position Kanban card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:150
+msgid ""
+"On the *Applications* page, click the :icon:`fa-caret-"
+"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+"click :guilabel:`Refused` in the :icon:`fa-filter` :guilabel:`Filters` "
+"column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:154
+msgid ""
+"All applicants that have been refused for the job position appear in the "
+"stage they were in when they were refused, and all other applicants are "
+"hidden."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for a job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:163
+msgid "All refused applicants"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:165
+msgid ""
+"To view all refused applicants across all job positions, navigate "
+"to :menuselection:`Recruitment app --> Applications --> All Applications`. "
+"Every applicant record is displayed in a default list view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:168
+msgid ""
+"Click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in "
+"the search bar, then click :guilabel:`Refused` in the :icon:`fa-"
+"funnel` :guilabel:`Filters` column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:171
+msgid ""
+"All applicants that have been refused appear, with the text in red. Along "
+"with the applicant's :guilabel:`Name`, the date they :guilabel:`Applied on`, "
+"the :guilabel:`Job Position`, :guilabel:`Stage` they were in when refused, "
+"their :guilabel:`Matching` percentage, any :guilabel:`Tags`, and "
+"the :guilabel:`Recruiter` responsible for the job position are listed."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for all job positions."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:3
 msgid "Schedule interviews"
@@ -48105,8 +48167,8 @@ msgid "The confirmation page with all the details for the interview displayed."
 msgstr "면접에 대한 모든 세부 내용이 표시되어 있는 확인 페이지입니다."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:3
-msgid "Source analysis reporting"
-msgstr "출처 분석 보고"
+msgid "Source analysis"
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:5
 msgid ""
@@ -48144,106 +48206,68 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:19
 msgid ""
-"This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
-"Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
-"showing the amount of applicants by :guilabel:`Source`, and further "
-"separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+"This presents the data for the last 365 days in a default :icon:`fa-"
+"database` :guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)` "
+"view. It shows the amount of applicants by source and separated by status "
+"(:guilabel:`In Progress`, :guilabel:`Hired`, and :guilabel:`Refused`),"
 msgstr ""
-"여기에는 :icon:`fa-filter` :guilabel:`지난 1년간의 지원자` 에 대한 데이터가 "
-"기본 :icon:`fa-area-chart` :guilabel:`(그래프)` 보기로 표시되어, 지원자 수"
-"가 :guilabel:`출처` 별로 나타나고, 나아가 단계별로 (:guilabel:`진행 중` "
-"및 :guilabel:`채용됨`) 구분하여 표시됩니다."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:23
 msgid ""
-"Hover the cursor over any column to view the specific numbers fort that "
-"column."
-msgstr "커서를 열 위로 가져가면 해당 열에 있는 숫자를 볼 수 있습니다."
+"Hover the cursor over any color-coded section of a column to view the "
+"specific numbers for that status column."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
 msgid "The default bar chart of the source analysis information."
 msgstr "출처 분석 정보의 기본 막대그래프입니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:29
+#: ../../content/applications/hr/recruitment/source_analysis.rst:30
 msgid "Source effectiveness report"
 msgstr "출처 효과 보고서"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:31
+#: ../../content/applications/hr/recruitment/source_analysis.rst:32
 msgid ""
 "To identify which sources (e.g., job boards, social media, employee "
 "referrals, company website) produce the most hires, the pivot table view of "
-"the :guilabel:`Source Analysis` report can be configured to display further "
-"details."
+"the *Source Analysis* report can be configured to display further details."
 msgstr ""
-"어떤 경로로 입사 지원을 할 경우에 합격률이 높은지 파악할 수 있도록 (예: 구인 "
-"게시판, 소셜 미디어, 직원 추천, 회사 웹사이트) :guilabel:`출처 분석` 보고서"
-"에 피벗 테이블 보기에 대한 설정을 하면 더욱 자세하게 세부 정보가 나타나게 됩"
-"니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:35
+#: ../../content/applications/hr/recruitment/source_analysis.rst:36
 msgid ""
-"To view the :guilabel:`Source Analysis` report in a pivot table, click "
-"the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner. "
-"The data is presented in a pivot table, with rows populated by job "
-"positions, and columns populated by stages."
+"To view the *Source Analysis* report in a pivot table, click the :icon:`oi-"
+"view-pivot` :guilabel:`(Pivot)` icon in the corner. The data is presented in "
+"a pivot table, with rows populated by sources, and columns populated by "
+"stages."
 msgstr ""
-"피벗 테이블에서 :guilabel:`출처 분석` 보고서를 보려면 오른쪽 상단"
-"의 :icon:`oi-view-pivot` :guilabel:`(피벗)` 아이콘을 클릭합니다. 피벗 테이블"
-"에 데이터가 표시되며, 행에는 직무가, 열에는 단계가 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:39
+#: ../../content/applications/hr/recruitment/source_analysis.rst:40
 msgid ""
-"To expand this chart to show what specific sources the applicants came from, "
-"click the :icon:`fa-plus-square` :guilabel:`Total` box above the columns, to "
-"reveal a drop-down menu, and click :guilabel:`Source`."
+"To expand this chart to show what specific job positions the applicants "
+"applied to from each source, click the :icon:`fa-plus-"
+"square` :guilabel:`Total` box above the columns to reveal a drop-down menu, "
+"and click :guilabel:`Job Position`."
 msgstr ""
-"이 그래프를 확장하여 지원자의 출처가 표시되게 하려면 열 위에 있는 :icon:`fa-"
-"plus-square` :guilabel:`총계` 상자를 클릭하여 드롭다운 메뉴를 표시한 "
-"후 :guilabel:`출처` 를 클릭합니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:43
+#: ../../content/applications/hr/recruitment/source_analysis.rst:44
 msgid ""
-"Each column is then grouped by the source, such as: :guilabel:`Search "
-"engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
-"displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
-"and :guilabel:`Refused`."
+"Each column is then grouped by the job position, such as *Accountant* or "
+"*Carpenter*. Each job position displays a separate count for "
+"applications :guilabel:`In Progress`, :guilabel:`Refused`, "
+"or :guilabel:`Hired`, and an :guilabel:`Applications` column which displays "
+"the total count of all statuses."
 msgstr ""
-"그런 다음 각 열은 다음과 같은 소스별로 그룹화됩니다:\\ :guilabel:`Search "
-"engine`,\\ :guilabel:`Facebook`,\\ :guilabel:`LinkedIn`\\ 등. 각 소스는"
-"\\ :guilabel:`Applicant`,\\ :guilabel:`Hired`\\ 및\\ :guilabel:`Refused`\\ "
-"에 대한 별도의 개수를 표시합니다."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:47
-msgid ""
-"This information, as presented, makes it difficult to view the specific "
-"numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
-"axis)` icon, to swap the information. After that, the rows represent the "
-"source, and the columns represent the job positions, further divided by "
-"stage."
-msgstr ""
-"여기 있는 내용만으로는 각 출처에 대한 구체적인 숫자를 확인하기가 어렵습니"
-"다. :icon:`fa-exchange` :guilabel:`(축 뒤집기)` 아이콘을 클릭하여 내용을 전환"
-"합니다. 그러면 행에는 출처가 나타나고 열에는 직무가 나타나며 단계별로 더욱 세"
-"분화됩니다."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The axes flipped in the source analysis report, in pivot table view."
-msgstr "피벗 테이블 보기에서 출처 분석 보고서의 축이 전환되어 있는 모습입니다."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:54
 msgid ""
-"In this view, the total number of applicants, hired employees, and refused "
-"applicants, are displayed for each source, as well as for each stage by job "
-"position."
+"The pivot table view displaying each job position and its source and stage."
 msgstr ""
-"이 보기에서는 지원자 수, 채용된 직원 수, 불합격한 지원자의 총 숫자가 각 출처 "
-"및 직무별 각 단계에 대해 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:58
+#: ../../content/applications/hr/recruitment/source_analysis.rst:53
 msgid "Medium"
 msgstr "중간"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:60
+#: ../../content/applications/hr/recruitment/source_analysis.rst:55
 msgid ""
 "Viewing the medium for the applicants can be beneficial to see which "
 "specific medium is more successful."
@@ -48251,28 +48275,22 @@ msgstr ""
 "지원자의 매체를 보는 것은 어떤 특정 매체가 더 성공적인지 확인하는 데 유용할 "
 "수 있습니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:63
+#: ../../content/applications/hr/recruitment/source_analysis.rst:58
 msgid ""
 "*Mediums* are the specific methods the applicant used to discover and then "
-"apply for job positions, such as organic search, paid search, social media "
-"ad, email, etc."
+"apply for job positions, such as a search engine, social media ad, email, "
+"banner, etc."
 msgstr ""
-"*매체* 는 지원자가 직무를 찾아내어 지원하게 되는 일정한 방법을 의미하며 예를 "
-"들어 자연 검색, 유료 검색, 소셜 미디어 광고, 이메일 등이 있습니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:66
+#: ../../content/applications/hr/recruitment/source_analysis.rst:61
 msgid ""
 "To further group the results by medium, click into one of the :icon:`fa-plus-"
-"square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the resulting "
-"drop-down menu. The row presents the specific mediums, relevant to that "
-"specific source."
+"square` :guilabel:`(Source)` rows then click :guilabel:`Medium` in the "
+"resulting drop-down menu. The row presents the individual mediums relevant "
+"to that specific source."
 msgstr ""
-"결과를 매체별로 자세히 그룹으로 만드려면 :icon:`fa-plus-"
-"square` :guilabel:`[출처]` 행 중 하나를 클릭합니다. 드롭다운 메뉴가 나타나"
-"면 :guilabel:`매체` 를 클릭합니다. 이 행에는 특정 출처와 관련된 매체가 표시되"
-"어 있습니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:70
+#: ../../content/applications/hr/recruitment/source_analysis.rst:65
 msgid ""
 "Once :guilabel:`Medium` is selected for one source, clicking into another "
 "row automatically reveals the specific metrics for the mediums for that "
@@ -48281,28 +48299,24 @@ msgstr ""
 "한 소스에 대해\\ :guilabel:`Medium`\\ 이 선택되면 다른 행을 클릭하면 해당 소"
 "스의 매체에 대한 특정 메트릭이 자동으로 표시됩니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The sources rows, expanded to also show the medium for each source."
-msgstr ""
-"출처 행에서, 행이 확장되어 각 출처에 대한 매체도 표시되어 있는 모습입니다."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:77
+#: ../../content/applications/hr/recruitment/source_analysis.rst:69
 msgid ""
-"The only mediums that appear for a source, are mediums that have been set on "
+"The only mediums that appear for a source are mediums that have been set on "
 "an applicant's form. If a medium has **not** been set for any applicants, "
 "the medium does not appear in the drop-down rows beneath the source."
 msgstr ""
-"지원자 양식에 설정되어 있는 매체만 유일하게 매체중에서 출처로 확인할 수 있습"
-"니다.지원자에 대해 매체를 설정하지 **않은** 경우에는 출처 하단에 있는 드롭다"
-"운 행에 매체가 나타나지 않습니다."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:81
+#: ../../content/applications/hr/recruitment/source_analysis.rst:73
 msgid ""
 "For example, if no applicants applied with the medium *Google Adwords*, that "
 "medium does **not** appear beneath the *Search engine* source row."
 msgstr ""
 "예를 들어 지원자가\\ *Google Adwords*\\ 매체로 지원하지 않은 경우 해당 매체는"
 "\\ *Search engine*\\ 소스 행 아래에 표시되지\\ **않습니다**."
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:None
+msgid "The source rows, expanded to also show the medium for each source."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/team_performance.rst:3
 msgid "Team performance"
@@ -53904,6 +53918,493 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "색상과 아이콘이 선택된 휴가 유형 양식의 하단 부분."
+
+#~ msgid "Export data to third-party apps"
+#~ msgstr "데이터를 외부 앱으로 내보내기"
+
+#~ msgid ":doc:`recruitment/applicant_analysis`"
+#~ msgstr ":doc:`recruitment/applicant_analysis`"
+
+#~ msgid "Applicant analysis"
+#~ msgstr "지원자 분석"
+
+#~ msgid ""
+#~ "The *Applicant Analysis* report allows recruiting departments to see "
+#~ "which job positions have the most applicants, which have the most "
+#~ "referrals, and how long it takes for applicants to move through the "
+#~ "pipeline."
+#~ msgstr ""
+#~ "*지원자 분석* 보고서를 통해 채용 부서는 어떤 직무에 지원자가 가장 많은지, "
+#~ "어떤 직무에 추천이 가장 많은지, 지원자가 파이프라인을 통과하는 데 얼마나 "
+#~ "걸리는지 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "Knowing how many applicants each specific job position has, along with "
+#~ "statistics about how many are hired and refused, can provide valuable "
+#~ "insights. This information can assist the recruiting team to pivot their "
+#~ "strategies to acquire the most desirable candidates."
+#~ msgstr ""
+#~ "채용 부문별 지원자 숫자 및 채용 합격 및 불합격된 지원자 수에 대해 통계를 "
+#~ "파악함으로써 깊이 있는 이해를 할 수 있습니다. 이와 같은 정보는 채용팀에서 "
+#~ "가장 이상적인 인재를 확보하기 위해 다양한 전략을 수립하는 데 많은 도움이 "
+#~ "될 수 있습니다."
+
+#~ msgid "Applicant analysis report"
+#~ msgstr "지원자 분석 보고서"
+
+#~ msgid ""
+#~ "Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
+#~ "Applicant Analysis`. This presents a line chart of all applicants for the "
+#~ "last year."
+#~ msgstr ""
+#~ "\\ :menuselection:`채용 앱 --> 보고 --> 지원자 분석`\\ 으로 이동하십시오. "
+#~ "지난 1년간 모든 지원자의 꺾은선형 차트가 표시됩니다."
+
+#~ msgid ""
+#~ "Three separate color-coded metrics are presented: :guilabel:`In "
+#~ "Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "세 개의 별도 색상으로 지표가 구분되어 :guilabel:`진행 중`, :guilabel:`고용"
+#~ "됨`, :guilabel:`거부됨` 으로 표시됩니다.."
+
+#~ msgid ""
+#~ "Hover the cursor over a month of the chart, and a pop-up window appears, "
+#~ "displaying the specific numbers for that month."
+#~ msgstr ""
+#~ "차트의 월 위에 커서를 올려 놓으면 해당 월의 구체적인 수치를 표시하는 팝업 "
+#~ "창이 나타납니다."
+
+#~ msgid "The default Applicant Analysis report."
+#~ msgstr "지원자 기본 분석 보고서,"
+
+#~ msgid ""
+#~ "For a more detailed view of the information in the :guilabel:`Applicant "
+#~ "Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` "
+#~ "icon in the top-right corner. This displays all the information in a "
+#~ "pivot table."
+#~ msgstr ""
+#~ "\\ :guilabel:`지원자 분석`\\ 보고서의 정보를 더 자세히 보려면 오른쪽 상단"
+#~ "의\\ :icon:`oi-view-pivot` :guilabel:`(피벗)`\\ 아이콘을 클릭하십시오. 모"
+#~ "든 정보가 피벗 테이블로 표시됩니다."
+
+#~ msgid ""
+#~ "In this view, the job positions are displayed in the rows, and the "
+#~ "columns display the total numbers of applicants, including how many of "
+#~ "those applicants were hired or refused, and who is still in the "
+#~ "recruitment process. The displayed information can be modified, if "
+#~ "desired."
+#~ msgstr ""
+#~ "이 보기에서 행에는 직무가 표시되고 열에는 총 지원자 수가 표시되며, 여기에"
+#~ "는 지원자 중 합격 혹은 불합격된 지원자 수와 아직 채용 절차가 진행 중인 지"
+#~ "원자 수가 포함되어 있습니다. 필요한 경우 표시된 내용을 수정할 수 있습니다."
+
+#~ msgid ""
+#~ "In this example, there are 18 total applicants. Out of that, six have "
+#~ "been hired, two have been refused, and ten are still in the recruitment "
+#~ "pipeline. The :guilabel:`Experienced Developer` position has six total "
+#~ "applicants, three of which were hired, one refused, and two still in "
+#~ "progress."
+#~ msgstr ""
+#~ "이 예시에서 지원자 수는 총 18명입니다. 그중 합격자 수는 6명이고, 2명은 불"
+#~ "합격되었으며, 10명에 대해서는은 계속 채용 절차가 진행 중입니"
+#~ "다. :guilabel:`개발 경력자` 직무에서 지원자 수는 총 6명이며, 그중 합격자 "
+#~ "수는 3명이고, 1명은 불합격했으며, 1명에 대해서는 아직 채용 진행 중입니다."
+
+#~ msgid ""
+#~ "To get a better understanding of how effective the "
+#~ "company's :doc:`referral program <../referrals>` is, "
+#~ "the :guilabel:`Applicant Analysis` report can be modified to show how "
+#~ "many applicants were referred by current employees."
+#~ msgstr ""
+#~ "회사의\\ :doc:`추천 프로그램 <../referrals>`\\ 이 얼마나 효과적인지 더 잘 "
+#~ "이해하기 위해\\ :guilabel:`지원자 분석`\\ 보고서를 수정하여 현재 임직원이 "
+#~ "추천한 지원자 수를 표시할 수 있습니다."
+
+#~ msgid ""
+#~ "From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
+#~ "the :guilabel:`Applicant Analysis` report, first click "
+#~ "the :guilabel:`Measures` button to reveal a drop-down menu of options."
+#~ msgstr ""
+#~ "\\ :guilabel:`지원자 분석`\\ 보고서의\\ :icon:`oi-view-"
+#~ "pivot` :guilabel:`(피벗)`\\ 보기에서 먼저\\ :guilabel:`측정`\\ 버튼을 클릭"
+#~ "하여 옵션의 드롭다운 메뉴를 표시하십시오."
+
+#~ msgid ""
+#~ "Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate "
+#~ "those two measures. Then, "
+#~ "click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
+#~ "and :guilabel:`Refused` to deactivate those default measures."
+#~ msgstr ""
+#~ "\\ :guilabel:`추천인 있음`\\ 및\\ :guilabel:`카운트`\\ 를 모두 클릭하여 "
+#~ "두 측정을 활성화하십시오. 그런 다음\\ :guilabel:`지원자`\\ , :guilabel:`채"
+#~ "용됨`\\ , :guilabel:`진행 중`\\ 및\\ :guilabel:`거부됨`\\ 을 클릭하여 기"
+#~ "본 측정을 비활성화하십시오."
+
+#~ msgid ""
+#~ "Now, the column displays the number of applicants that came from a "
+#~ "referral in the :guilabel:`Has Referrer` column, and the total number of "
+#~ "applicants in the :guilabel:`Count` column."
+#~ msgstr ""
+#~ "이제 열에는 추천을 통해 지원하게 된 지원자 수가 :guilabel:`추천인 있음` 열"
+#~ "에 표시되고 총 지원자 수가 :guilabel:`개수` 열에 표시됩니다."
+
+#~ msgid ""
+#~ "In this example, the :guilabel:`Experienced Developer` "
+#~ "and :guilabel:`Interior Designer` job positions both have applicants from "
+#~ "referrals, while the rest do not have any referrals."
+#~ msgstr ""
+#~ "이 예에서\\ :guilabel:`경력 개발자`\\ 및\\ :guilabel:`인테리어 디자이너"
+#~ "`\\ 직무는 모두 추천에서 지원자가 있지만 나머지는 추천이 없습니다."
+
+#~ msgid ""
+#~ "To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
+#~ "position]` row, which reveals a drop-down menu. Then, "
+#~ "click :guilabel:`State` to show the various states applicants are "
+#~ "currently in."
+#~ msgstr ""
+#~ "이 데이터를 보려면 :icon:`fa-plus-square` :guilabel:`[직무]` 행을 클릭하"
+#~ "여 드롭다운 메뉴를 표시합니다. 그런 다음 :guilabel:`상태` 를 클릭하면 현"
+#~ "재 지원자가 속한 여러 가지 상태가 나타납니다."
+
+#~ msgid ""
+#~ "To expand the other rows, and display the various states, click on "
+#~ "the :icon:`fa-plus-square` :guilabel:`[job position]` button."
+#~ msgstr ""
+#~ "다른 행을 확장하고 다양한 상태를 표시하려면\\ :icon:`fa-plus-"
+#~ "square` :guilabel:`[직무]`\\ 버튼을 클릭하십시오."
+
+#~ msgid ""
+#~ "The detailed pivot table view displaying applicants hired through "
+#~ "referrals."
+#~ msgstr "추천을 통해 채용된 지원자가 표시된 세부적인 피벗 테이블 보기입니다."
+
+#~ msgid ""
+#~ "Both the :guilabel:`Experienced Developer` and :guilabel:`Interior "
+#~ "Designer` roles yielded one referral hire each, confirming that "
+#~ "developers and designers generate the highest-success referrals."
+#~ msgstr ""
+#~ "\\ :guilabel:`경력 개발자`\\ 및\\ :guilabel:`인테리어 디자이너`\\ 직무 모"
+#~ "두 각각 추천 채용 1명을 발생시켜 개발자와 디자이너가 가장 성공적인 추천을 "
+#~ "생성함을 확인합니다."
+
+#~ msgid ""
+#~ "Navigate to the main *Job Positions* dashboard by navigating "
+#~ "to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
+#~ "Next, click on the desired job position card, then click on the "
+#~ "individual applicant card from the :guilabel:`Applications` page."
+#~ msgstr ""
+#~ ":menuselection:`채용 앱 --> 지원 --> 채용 공고별`\\ 로 이동하여 기본 *채"
+#~ "용 공고* 현황판으로 이동합니다. 그런 다음 원하는 채용 공고 카드를 클릭한 "
+#~ "후\\ :guilabel:`지원`\\ 페이지에서 개별 지원자 카드를 클릭합니다."
+
+#~ msgid ""
+#~ "Clicking :guilabel:`Refuse` on an applicant's form makes "
+#~ "the :guilabel:`Refuse Reason` pop-up window appear."
+#~ msgstr ""
+#~ "지원자 양식에서 :guilabel:`불합격` 을 클릭하면 :guilabel:`불합격 사유` 팝"
+#~ "업 창이 나타납니다."
+
+#~ msgid ""
+#~ "The default refuse reasons in Odoo, and their corresponding email "
+#~ "templates, are:"
+#~ msgstr ""
+#~ "Odoo에서 기본 불합격 사유와 해당하는 이메일 템플릿은 다음과 같습니다."
+
+#~ msgid ""
+#~ "Additional refusal reasons :ref:`can be created, and existing ones can be "
+#~ "modified (or deleted) <recruitment/new-refuse>`."
+#~ msgstr ""
+#~ "추가로 불합격 사유를 :ref:`생성할 수 있으며, 기존 불합격 사유를 수정 (또"
+#~ "는 삭제)할 수 있습니다 <recruitment/new-refuse>`."
+
+#~ msgid ""
+#~ "Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
+#~ "refusal-email>`."
+#~ msgstr ""
+#~ "불합격 사유를 선택하여 :ref:`불합격 이메일을 발송합니다 <recruitment/send-"
+#~ "refusal-email>`."
+
+#~ msgid ""
+#~ "To view and configure refuse reasons, navigate "
+#~ "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
+#~ "Doing so reveals the :guilabel:`Refuse Reasons` page, where all the "
+#~ "existing refusal reasons are listed."
+#~ msgstr ""
+#~ "거절 사유를 보고 구성하려면\\ :menuselection:`채용 앱 --> 구성 --> 거절 사"
+#~ "유`\\ 로 이동합니다. 그러면 기존의 모든 거절 사유가 나열된\\ :guilabel:`거"
+#~ "절 사유`\\ 페이지가 나타납니다."
+
+#~ msgid ""
+#~ "To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
+#~ "click the :guilabel:`New` button in the top-left corner. A blank line "
+#~ "appears at the bottom of the list, with an empty field present in "
+#~ "the :guilabel:`Description` column."
+#~ msgstr ""
+#~ ":guilabel:`불합격 사유` 페이지에 새로운 불합격 사유를 생성하려면 왼쪽 상단"
+#~ "에 있는 :guilabel:`새로 만들기` 버튼을 클릭합니다. :guilabel:`설명` 열 하"
+#~ "단에 빈 필드가 있는 빈 줄이 나타납니다."
+
+#~ msgid ""
+#~ "Then, in the :guilabel:`Email Template` field, click on the field to "
+#~ "reveal a drop-down menu. Select an :guilabel:`Email Template` from the "
+#~ "list to be used when this refuse reason is selected."
+#~ msgstr ""
+#~ "그런 다음 :guilabel:`이메일 템플릿` 필드에서 해당 필드를 클릭하면 드롭다"
+#~ "운 메뉴가 나타납니다. 불합격 사유를 선택했을 때 사용할 :guilabel:`이메일 "
+#~ "템플릿` 을 목록에서 선택합니다."
+
+#~ msgid ""
+#~ "If a new :guilabel:`Email Template` is desired, type in the name for the "
+#~ "new template in the field. Then, click :guilabel:`Create and edit...`, "
+#~ "and a :guilabel:`Create Email Template` form pop-up window appears."
+#~ msgstr ""
+#~ "새로운 :guilabel:`이메일 템플릿` 을 만들려면, 필드에 새 템플릿 이름을 입력"
+#~ "합니다. 그런 다음 :guilabel:`만들기 및 편집...` 을 클릭하면 :guilabel:`이"
+#~ "메일 템플릿 만들기` 양식 팝업 창이 나타납니다."
+
+#~ msgid ""
+#~ "In the :guilabel:`Create Email Template` pop-up window, enter "
+#~ "a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
+#~ "corresponding fields."
+#~ msgstr ""
+#~ ":guilabel:`이메일 템플릿 만들기` 팝업 창에서 양식 :guilabel:`이름` 을 입력"
+#~ "하고 해당 필드에 이메일 :guilabel:`제목` 을 입력합니다."
+
+#~ msgid ""
+#~ "Enter the desired email content in the :guilabel:`Content` tab. Proceed "
+#~ "to make any other modifications to the template in the :guilabel:`Email "
+#~ "Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save "
+#~ "& Close` to save the template. Upon clicking that, Odoo returns to "
+#~ "the :guilabel:`Refuse Reasons` list."
+#~ msgstr ""
+#~ ":guilabel:`콘텐츠` 탭에 원하는 이메일 콘텐츠를 입력합니다. :guilabel:`이메"
+#~ "일 환경 설정` 및 :guilabel:`설정` 탭에서 템플릿을 다른 방식으로 수정한 다"
+#~ "음 :guilabel:`저장 및 닫기` 를 클릭하여 템플릿을 저장합니다. 해당 내용을 "
+#~ "클릭하면 Odoo에서는 :guilabel:`불합격 사유` 목록으로 돌아갑니다."
+
+#~ msgid ""
+#~ "For example, if the applicant's name is a used in a dynamic placeholder, "
+#~ "the applicant's name appears anytime that dynamic placeholder appears on "
+#~ "the email template."
+#~ msgstr ""
+#~ "예를 들어, 지원자 이름을 동적 자리 표시자에 사용할 경우 이메일 템플릿에 동"
+#~ "적 자리 표시자가 표시될 때마다 지원자의 이름이 나타납니다."
+
+#~ msgid ""
+#~ "After clicking the :guilabel:`Refuse` button on an applicant form, "
+#~ "a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
+#~ "the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear "
+#~ "below the selected refusal reason: :guilabel:`Send Email` "
+#~ "and :guilabel:`Email Template`."
+#~ msgstr ""
+#~ "지원자 양식에서\\ :guilabel:`거절`\\ 버튼을 클릭하면\\ :guilabel:`거절 사"
+#~ "유`\\ 팝업 창에서\\ :ref:`거절 사유 <recruitment/refuse-reasons>`\\ 를 선"
+#~ "택합니다. 그러면 선택한 거절 사유 아래에\\ :guilabel:`이메일 보내기`\\ 및"
+#~ "\\ :guilabel:`이메일 템플릿`\\ 두 필드가 나타납니다."
+
+#~ msgid ""
+#~ "The Refuse Reason pop-up window that appears when refusing an applicant."
+#~ msgstr "지원자가 불합격되었을 때 표시하는 불합격 사유 팝업 창"
+
+#~ msgid ""
+#~ "The applicant's email address automatically populates the :guilabel:`Send "
+#~ "Email` field; additional email recipients **cannot** be added."
+#~ msgstr ""
+#~ "지원자의 이메일 주소가 :guilabel:`이메일 보내기` 필드에 자동으로 입력되"
+#~ "며, 추가로 이메일 수신자를 추가할 수 **없습니다**."
+
+#~ msgid ""
+#~ "If an email should **not** be sent to the applicant, uncheck "
+#~ "the :guilabel:`Send Email` checkbox."
+#~ msgstr ""
+#~ "지원자에게 이메일을 보내지 **않으려면**, :guilabel:`이메일 보내기` 확인란"
+#~ "을 선택 해제합니다."
+
+#~ msgid ""
+#~ "The email template associated with the refusal reason populates "
+#~ "the :guilabel:`Email Template` field. If a different email template is "
+#~ "desired, select a different template from the :guilabel:`Email Template` "
+#~ "drop-down menu."
+#~ msgstr ""
+#~ "불합격 사유와 관련된 이메일 템플릿이 :guilabel:`이메일 템플릿` 필드에 입력"
+#~ "됩니다. 다른 이메일 템플릿이 필요한 경우에는 :guilabel:`이메일 템플릿` 드"
+#~ "롭다운 메뉴에서 다른 템플릿을 선택하세요."
+
+#~ msgid ""
+#~ "To send the refusal email to the applicant, ensure the :guilabel:`Send "
+#~ "Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
+#~ "the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
+#~ "the applicant, and a red :guilabel:`Refused` banner appears on the "
+#~ "applicant's card in the top-right corner."
+#~ msgstr ""
+#~ "지원자에게 불합격 이메일을 보내려면 :guilabel:`이메일 보내기` 확인란에 표"
+#~ "시가 되어 있는지 확인한 다음 :guilabel:`불합격 사유` 팝업 창 하단에 있"
+#~ "는 :guilabel:`불합격` 을 클릭합니다. 불합격 이메일이 지원자에게 전송되며, "
+#~ "지원자 카드 오른쪽 상단에 빨간색 :guilabel:`불합격` 배너가 나타납니다."
+
+#~ msgid ""
+#~ "An applicant's card with the refused banner appearing in the top-right "
+#~ "corner in red."
+#~ msgstr "오른쪽 상단에 빨간색으로 불합격 배너가 표시된 지원자 카드"
+
+#~ msgid ""
+#~ "After refusal, the applicant's card is no longer visible in the job "
+#~ "position's Kanban view. However, it is still possible to view applicants "
+#~ "who have been refused."
+#~ msgstr ""
+#~ "불합격한 후에는 지원자 카드가 더 이상 채용 부문의 칸반 보기에 표시되지 않"
+#~ "습니다. 다만, 불합격한 지원자를 계속 조회하는 것은 가능합니다."
+
+#~ msgid ""
+#~ "To view only the refused applicants, go to :menuselection:`Recruitment "
+#~ "app --> Applications --> By Job Positions`, "
+#~ "or :menuselection:`Recruitment app --> Applications --> All "
+#~ "Applications`. Both methods navigate to the :guilabel:`Applications` "
+#~ "dashboard, the only difference is :guilabel:`By Job Positions` displays "
+#~ "applicants in a Kanban view, while :guilabel:`All Applications` displays "
+#~ "applicants in a list view."
+#~ msgstr ""
+#~ "불합격된 지원자만 보려면 :menuselection:`채용 앱 --> 지원서 --> 직무별` 또"
+#~ "는 :menuselection:`채용 앱 --> 지원서 --> 모든 지원서` 로 이동합니다. 두 "
+#~ "방법 모두 클릭 시 :guilabel:`지원` 현황판으로 이동하며, 유일한 차이점"
+#~ "은 :guilabel:`직무별` 은 지원자가 칸반 보기로 표시되는 반면, :guilabel:`모"
+#~ "든 지원서` 는 지원자가 목록 보기로 표시된다는 점입니다."
+
+#~ msgid ""
+#~ "On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
+#~ "down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+#~ "click :guilabel:`Refused`, located under the :icon:`fa-"
+#~ "funnel` :guilabel:`Filters` section."
+#~ msgstr ""
+#~ ":guilabel:`지원`\\ 페이지의 검색 표시줄에서\\ :icon:`fa-caret-"
+#~ "down`\\ :guilabel:`검색 패널 토글`\\ 버튼을 클릭한 다음\\ :icon:`fa-"
+#~ "funnel`\\ :guilabel:`필터`\\ 섹션 아래에 있는\\ :guilabel:`거절됨`\\ 을 클"
+#~ "릭합니다."
+
+#~ msgid ""
+#~ "All applicants that have been refused for the job position appear on "
+#~ "the :guilabel:`Applications` page for that position, organized by the "
+#~ "stage they were in when they were refused."
+#~ msgstr ""
+#~ "채용 부문에 대해 불합격 처리가 된 지원자는 모두 해당 부문의 :guilabel:`지"
+#~ "원` 페이지에 표시되며 불합격한 단계별로 정리됩니다."
+
+#~ msgid "Source analysis reporting"
+#~ msgstr "출처 분석 보고"
+
+#~ msgid ""
+#~ "This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
+#~ "Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
+#~ "showing the amount of applicants by :guilabel:`Source`, and further "
+#~ "separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+#~ msgstr ""
+#~ "여기에는 :icon:`fa-filter` :guilabel:`지난 1년간의 지원자` 에 대한 데이터"
+#~ "가 기본 :icon:`fa-area-chart` :guilabel:`(그래프)` 보기로 표시되어, 지원"
+#~ "자 수가 :guilabel:`출처` 별로 나타나고, 나아가 단계별로 (:guilabel:`진행 "
+#~ "중` 및 :guilabel:`채용됨`) 구분하여 표시됩니다."
+
+#~ msgid ""
+#~ "Hover the cursor over any column to view the specific numbers fort that "
+#~ "column."
+#~ msgstr "커서를 열 위로 가져가면 해당 열에 있는 숫자를 볼 수 있습니다."
+
+#~ msgid ""
+#~ "To identify which sources (e.g., job boards, social media, employee "
+#~ "referrals, company website) produce the most hires, the pivot table view "
+#~ "of the :guilabel:`Source Analysis` report can be configured to display "
+#~ "further details."
+#~ msgstr ""
+#~ "어떤 경로로 입사 지원을 할 경우에 합격률이 높은지 파악할 수 있도록 (예: 구"
+#~ "인 게시판, 소셜 미디어, 직원 추천, 회사 웹사이트) :guilabel:`출처 분석` 보"
+#~ "고서에 피벗 테이블 보기에 대한 설정을 하면 더욱 자세하게 세부 정보가 나타"
+#~ "나게 됩니다."
+
+#~ msgid ""
+#~ "To view the :guilabel:`Source Analysis` report in a pivot table, click "
+#~ "the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right "
+#~ "corner. The data is presented in a pivot table, with rows populated by "
+#~ "job positions, and columns populated by stages."
+#~ msgstr ""
+#~ "피벗 테이블에서 :guilabel:`출처 분석` 보고서를 보려면 오른쪽 상단"
+#~ "의 :icon:`oi-view-pivot` :guilabel:`(피벗)` 아이콘을 클릭합니다. 피벗 테이"
+#~ "블에 데이터가 표시되며, 행에는 직무가, 열에는 단계가 표시됩니다."
+
+#~ msgid ""
+#~ "To expand this chart to show what specific sources the applicants came "
+#~ "from, click the :icon:`fa-plus-square` :guilabel:`Total` box above the "
+#~ "columns, to reveal a drop-down menu, and click :guilabel:`Source`."
+#~ msgstr ""
+#~ "이 그래프를 확장하여 지원자의 출처가 표시되게 하려면 열 위에 있"
+#~ "는 :icon:`fa-plus-square` :guilabel:`총계` 상자를 클릭하여 드롭다운 메뉴"
+#~ "를 표시한 후 :guilabel:`출처` 를 클릭합니다."
+
+#~ msgid ""
+#~ "Each column is then grouped by the source, such as: :guilabel:`Search "
+#~ "engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
+#~ "displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
+#~ "and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "그런 다음 각 열은 다음과 같은 소스별로 그룹화됩니다:\\ :guilabel:`Search "
+#~ "engine`,\\ :guilabel:`Facebook`,\\ :guilabel:`LinkedIn`\\ 등. 각 소스는"
+#~ "\\ :guilabel:`Applicant`,\\ :guilabel:`Hired`\\ 및"
+#~ "\\ :guilabel:`Refused`\\ 에 대한 별도의 개수를 표시합니다."
+
+#~ msgid ""
+#~ "This information, as presented, makes it difficult to view the specific "
+#~ "numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
+#~ "axis)` icon, to swap the information. After that, the rows represent the "
+#~ "source, and the columns represent the job positions, further divided by "
+#~ "stage."
+#~ msgstr ""
+#~ "여기 있는 내용만으로는 각 출처에 대한 구체적인 숫자를 확인하기가 어렵습니"
+#~ "다. :icon:`fa-exchange` :guilabel:`(축 뒤집기)` 아이콘을 클릭하여 내용을 "
+#~ "전환합니다. 그러면 행에는 출처가 나타나고 열에는 직무가 나타나며 단계별로 "
+#~ "더욱 세분화됩니다."
+
+#~ msgid "The axes flipped in the source analysis report, in pivot table view."
+#~ msgstr ""
+#~ "피벗 테이블 보기에서 출처 분석 보고서의 축이 전환되어 있는 모습입니다."
+
+#~ msgid ""
+#~ "In this view, the total number of applicants, hired employees, and "
+#~ "refused applicants, are displayed for each source, as well as for each "
+#~ "stage by job position."
+#~ msgstr ""
+#~ "이 보기에서는 지원자 수, 채용된 직원 수, 불합격한 지원자의 총 숫자가 각 출"
+#~ "처 및 직무별 각 단계에 대해 표시됩니다."
+
+#~ msgid ""
+#~ "*Mediums* are the specific methods the applicant used to discover and "
+#~ "then apply for job positions, such as organic search, paid search, social "
+#~ "media ad, email, etc."
+#~ msgstr ""
+#~ "*매체* 는 지원자가 직무를 찾아내어 지원하게 되는 일정한 방법을 의미하며 예"
+#~ "를 들어 자연 검색, 유료 검색, 소셜 미디어 광고, 이메일 등이 있습니다."
+
+#~ msgid ""
+#~ "To further group the results by medium, click into one of the :icon:`fa-"
+#~ "plus-square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the "
+#~ "resulting drop-down menu. The row presents the specific mediums, relevant "
+#~ "to that specific source."
+#~ msgstr ""
+#~ "결과를 매체별로 자세히 그룹으로 만드려면 :icon:`fa-plus-"
+#~ "square` :guilabel:`[출처]` 행 중 하나를 클릭합니다. 드롭다운 메뉴가 나타나"
+#~ "면 :guilabel:`매체` 를 클릭합니다. 이 행에는 특정 출처와 관련된 매체가 표"
+#~ "시되어 있습니다."
+
+#~ msgid "The sources rows, expanded to also show the medium for each source."
+#~ msgstr ""
+#~ "출처 행에서, 행이 확장되어 각 출처에 대한 매체도 표시되어 있는 모습입니다."
+
+#~ msgid ""
+#~ "The only mediums that appear for a source, are mediums that have been set "
+#~ "on an applicant's form. If a medium has **not** been set for any "
+#~ "applicants, the medium does not appear in the drop-down rows beneath the "
+#~ "source."
+#~ msgstr ""
+#~ "지원자 양식에 설정되어 있는 매체만 유일하게 매체중에서 출처로 확인할 수 있"
+#~ "습니다.지원자에 대해 매체를 설정하지 **않은** 경우에는 출처 하단에 있는 드"
+#~ "롭다운 행에 매체가 나타나지 않습니다."
 
 #~ msgid ""
 #~ ":guilabel:`Make Vehicle Available`: Click the checkbox if the vehicle can "

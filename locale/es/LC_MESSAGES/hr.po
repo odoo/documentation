@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:33+0000\n"
 "PO-Revision-Date: 2026-08-27 15:30+0000\n"
 "Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-19-doc/hr/"
@@ -8407,7 +8407,7 @@ msgid "Resumé tab"
 msgstr "Pestaña de currículo"
 
 #: ../../content/applications/hr/employees/new_employee.rst:162
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:35
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:35
 msgid "Resumé"
 msgstr "Currículum"
 
@@ -11819,7 +11819,7 @@ msgstr ""
 "predeterminadas:"
 
 #: ../../content/applications/hr/fleet/accidents.rst:103
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:18
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:18
 msgid "New"
 msgstr "Nuevo"
 
@@ -43277,11 +43277,11 @@ msgstr ""
 "La pantalla del informe 940, con el archivo para descargar en la mitad "
 "superior."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
-msgid "Export data to third-party apps"
-msgstr "Exportar datos a aplicaciones de terceros"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
+msgid "Export data to ADP"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:648
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -43289,7 +43289,7 @@ msgstr ""
 "El informe *Exportación ADP* genera un archivo CSV que se puede enviar a "
 "ADP, que luego realiza los pagos a los empleados."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:651
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -43300,7 +43300,7 @@ msgstr ""
 "El informe se genera a partir de :doc:`entradas de trabajo <../"
 "work_entries>` *después* de que se confirme cualquier ausencia."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:655
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -43311,13 +43311,116 @@ msgstr ""
 "algunos cambios, los datos están ahí para alimentar a ADP y ejecutar la "
 "nómina en él."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:659
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
 msgstr ""
 "Para acceder al informe de Exportación ADP, el módulo `United States - "
 "Payroll - Export to ADP` **debe** estar :ref:`instalado <general/install>`."
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:663
+msgid "Setup"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:665
+msgid ""
+"To export data to ADP, the company **must** have an ADP code configured in "
+"the company settings. Navigate to :menuselection:`Payroll app --> "
+"Configuration --> Settings`. In the *US Localization* section, enter "
+"the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:669
+msgid ""
+"Next, work entry types **must** have the correct ADP code listed in "
+"the :ref:`External Code field <payroll/new-work-entry-type>` for each work "
+"entry type that is being referenced."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:672
+msgid ""
+"Lastly, every employee **must** have an ADP code entered on their employee "
+"form. To add this code, open the :menuselection:`Employees` app, click an "
+"employee record, and click into the *Payroll* tab. In the *ADP Information* "
+"section, enter the :guilabel:`ADP Code` in the corresponding field."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:676
+msgid ""
+"The :guilabel:`ADP Code` is how ADP identifies that particular employee, and "
+"is typically a six-digit number."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:680
+msgid "Export data"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:682
+msgid ""
+"Once :doc:`work entries <../work_entries>` have been verified, the "
+"information is exported to a CSV file, which is uploaded into ADP."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:685
+msgid ""
+"To export the data, navigate to :menuselection:`Payroll app --> Reporting --"
+"> ADP Export`, then click :guilabel:`New`. Next, enter the :guilabel:`Start "
+"Date` and :guilabel:`End Date` for the work entries using the calendar pop-"
+"over."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:689
+msgid ""
+"Then, enter a :guilabel:`Batch ID` in the corresponding field. The "
+"recommendation for this field is to enter the date in a `YY-MM-DD` format, "
+"followed by any other characters to distinguish that specific pay run, such "
+"as a department name."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:693
+msgid ""
+"Enter a :guilabel:`Batch Description` in the corresponding field. This "
+"should be short and descriptive, but distinct from the name of the pay run."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:696
+msgid ""
+"Ensure the correct company populates the :guilabel:`Company` field. Change "
+"the selected company with the drop-down menu, if needed."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:699
+msgid ""
+"Lastly, add the employee's work entry information to the list. "
+"Click :guilabel:`Add a line` and an *Add: Employee* pop-up window loads. The "
+"list can be :doc:`filtered <../../../essentials/search>` to find the "
+"employees to add to the list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:704
+msgid ""
+"Process the data export in multiple groups instead of in one large group "
+"that contains all employees. This helps to meaningfully differentiate the "
+"batches and makes processing more tenable, overall. The most common ways to "
+"group employees is by department, or by wage type (hourly or salaried)."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:709
+msgid ""
+"Select the employees to add to the list by clicking the box to the left of "
+"their name. Once all desired employees have been selected, click "
+"the :guilabel:`Select` button in the corner, and the employees appear in the "
+"list."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:713
+msgid "To create the CSV file, click the :guilabel:`Generate` button."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:716
+msgid ":ref:`ACH - electronic transfers <l10n_us/ach-electronic-transfers>`"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payslips.rst:5
 msgid ""
@@ -48391,7 +48494,7 @@ msgstr ""
 "correo se enviará al candidato. El correo electrónico aparece en el chatter."
 
 #: ../../content/applications/hr/recruitment.rst:None
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:None
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
 msgid ""
 "Send a custom survey, also referred to as an interview form, to an applicant "
 "using a\n"
@@ -48409,34 +48512,38 @@ msgid ":doc:`recruitment/post_job`"
 msgstr ":doc:`recruitment/post_job`"
 
 #: ../../content/applications/hr/recruitment.rst:366
-msgid ":doc:`recruitment/add_applicants`"
+msgid ":doc:`recruitment/recruitment_flow`"
 msgstr ""
 
 #: ../../content/applications/hr/recruitment.rst:367
+msgid ":doc:`recruitment/add_applicants`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:368
 msgid ":doc:`recruitment/schedule_interviews`"
 msgstr ":doc:`recruitment/schedule_interviews`"
 
-#: ../../content/applications/hr/recruitment.rst:368
+#: ../../content/applications/hr/recruitment.rst:369
 msgid ":doc:`recruitment/offer_job_positions`"
 msgstr ":doc:`recruitment/offer_job_positions`"
 
-#: ../../content/applications/hr/recruitment.rst:369
+#: ../../content/applications/hr/recruitment.rst:370
 msgid ":doc:`recruitment/refuse_applicant`"
 msgstr ":doc:`recruitment/refuse_applicant`"
 
-#: ../../content/applications/hr/recruitment.rst:370
-msgid ":doc:`recruitment/applicant_analysis`"
-msgstr ":doc:`recruitment/applicant_analysis`"
-
 #: ../../content/applications/hr/recruitment.rst:371
+msgid ":doc:`recruitment/application_analysis`"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment.rst:372
 msgid ":doc:`recruitment/source_analysis`"
 msgstr ":doc:`recruitment/source_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:372
+#: ../../content/applications/hr/recruitment.rst:373
 msgid ":doc:`recruitment/velocity_analysis`"
 msgstr ":doc:`recruitment/velocity_analysis`"
 
-#: ../../content/applications/hr/recruitment.rst:373
+#: ../../content/applications/hr/recruitment.rst:374
 msgid ":doc:`recruitment/team_performance`"
 msgstr ":doc:`recruitment/team_performance`"
 
@@ -48840,160 +48947,144 @@ msgstr ""
 msgid "The applicant's skills as compared to the job requirements."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:3
-msgid "Applicant analysis"
-msgstr "Análisis de candidatos"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:5
-msgid ""
-"The *Applicant Analysis* report allows recruiting departments to see which "
-"job positions have the most applicants, which have the most referrals, and "
-"how long it takes for applicants to move through the pipeline."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:3
+msgid "Application analysis"
 msgstr ""
-"El informe *Análisis de candidatos* permite a los departamentos de "
-"reclutamiento ver qué posiciones de trabajo tienen más candidatos, cuáles "
-"tienen más referencias y cuánto tiempo tardan los candidatos en avanzar por "
-"el proceso."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:9
+#: ../../content/applications/hr/recruitment/application_analysis.rst:5
 msgid ""
-"Knowing how many applicants each specific job position has, along with "
-"statistics about how many are hired and refused, can provide valuable "
-"insights. This information can assist the recruiting team to pivot their "
-"strategies to acquire the most desirable candidates."
+"The *Application Analysis* report allows recruiting departments to see the "
+"total number of applications submitted for the past 365 days. Along with the "
+"total, the number of hired applicants, refused applicants, and those still "
+"in the pipeline are displayed."
 msgstr ""
-"Saber cuántos postulantes tiene cada puesto de trabajo específico y cuántos "
-"de ellos son contratados o rechazados puede proporcionarle información muy "
-"valiosa que le ayudará al equipo de reclutamiento a orientar sus estrategias "
-"para contratar solo a los mejores."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:14
-msgid "Applicant analysis report"
-msgstr "Informe de análisis de candidatos"
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:16
+#: ../../content/applications/hr/recruitment/application_analysis.rst:9
 msgid ""
-"Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
-"Applicant Analysis`. This presents a line chart of all applicants for the "
-"last year."
+"This information can help the recruiting team see how the various rates "
+"align with their hiring goals and pivot their strategies to acquire more "
+"desirable candidates."
 msgstr ""
-"Comienza navegando a :menuselection:`aplicación Reclutamiento --> Informes --"
-"> Análisis de candidatos`. Esto presenta un gráfico de líneas de todos los "
-"candidatos del último año."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:19
+#: ../../content/applications/hr/recruitment/application_analysis.rst:13
+msgid "Application Analysis report"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:15
 msgid ""
-"Three separate color-coded metrics are presented: :guilabel:`In "
-"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+"To view the *Application Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Application Analysis`. "
+"This presents a line chart of all applicants for the last 365 days."
 msgstr ""
-"Hay tres métricas codificadas por colores: :guilabel:`En "
-"progreso`, :guilabel:`Contratado` y :guilabel:`Rechazado`."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:22
+#: ../../content/applications/hr/recruitment/application_analysis.rst:18
 msgid ""
-"Hover the cursor over a month of the chart, and a pop-up window appears, "
-"displaying the specific numbers for that month."
+"Three separate color-coded metrics are presented: :guilabel:`In Progress` "
+"appears in blue, :guilabel:`Hired` appears in red, and :guilabel:`Refused` "
+"appears in green."
 msgstr ""
-"Pase el cursor por encima de un mes en el gráfico, aparecerá una ventana "
-"emergente con los números específicos de ese mes."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid "The default Applicant Analysis report."
-msgstr "El informe de Análisis de candidatos predeterminado."
+#: ../../content/applications/hr/recruitment/application_analysis.rst:21
+msgid ""
+"Hover the cursor over a month of the chart, and an *Applications* pop-up "
+"window appears, displaying the specific numbers for that month."
+msgstr ""
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:29
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
+msgid "The default Application Analysis report."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:30
 #: ../../content/applications/hr/recruitment/team_performance.rst:30
 msgid "Pivot table view"
 msgstr "Vista de tabla dinámica"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:31
+#: ../../content/applications/hr/recruitment/application_analysis.rst:32
 msgid ""
-"For a more detailed view of the information in the :guilabel:`Applicant "
-"Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon "
-"in the top-right corner. This displays all the information in a pivot table."
+"For a more detailed view of the information in the *Application Analysis* "
+"report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the "
+"corner. This displays all the information in a pivot table."
 msgstr ""
-"Para una vista más detallada de la información en el "
-"informe :guilabel:`Análisis de candidatos`, haz clic en el icono :icon:`oi-"
-"view-pivot` :guilabel:`(Tabla dinámica)` en la esquina superior derecha. "
-"Esto muestra toda la información en una tabla dinámica."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:35
+#: ../../content/applications/hr/recruitment/application_analysis.rst:36
 msgid ""
-"In this view, the job positions are displayed in the rows, and the columns "
-"display the total numbers of applicants, including how many of those "
-"applicants were hired or refused, and who is still in the recruitment "
-"process. The displayed information can be modified, if desired."
+"In this default view, the months are displayed in the rows, with each job "
+"position nested beneath them. The columns display the various stages of the "
+"recruitment pipeline, further divided by how many applicants were hired, "
+"refused, or still in process while in that stage. The displayed information "
+"can be modified, if desired."
 msgstr ""
-"En esta vista, las posiciones de trabajo se muestran en las filas, y las "
-"columnas muestran los números totales de candidatos, incluyendo cuántos de "
-"esos candidatos fueron contratados o rechazados, y quién sigue en el proceso "
-"de reclutamiento. La información mostrada se puede modificar, si se desea."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:39
-msgid ""
-"In this example, there are 18 total applicants. Out of that, six have been "
-"hired, two have been refused, and ten are still in the recruitment pipeline. "
-"The :guilabel:`Experienced Developer` position has six total applicants, "
-"three of which were hired, one refused, and two still in progress."
-msgstr ""
-"En este ejemplo, hay 18 candidatos en total. De esos, seis han sido "
-"contratados, dos han sido rechazados y diez todavía están en el proceso de "
-"reclutamiento. La posición :guilabel:`Experienced Developer` tiene seis "
-"candidatos en total, tres de los cuales fueron contratados, uno rechazado y "
-"dos aún en proceso."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 #: ../../content/applications/hr/recruitment/team_performance.rst:None
 msgid "The detailed pivot table view."
 msgstr "La vista detallada de tabla dinámica."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:48
+#: ../../content/applications/hr/recruitment/application_analysis.rst:45
+msgid ""
+"To only view the total number of applicants in each stage, click :icon:`fa-"
+"minus-square-o` :guilabel:`Total` in the top row. All the stages collapse, "
+"displaying only the total number of applications that are :guilabel:`In "
+"Progress`, :guilabel:`Hired`, and :guilabel:`Refused`, along with the totals "
+"for all three in the :guilabel:`Applications` column. These numbers are "
+"organized by month, then job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:51
+msgid ""
+"In this example, of the fourteen newly hired employees, "
+"the :guilabel:`Furniture Assembler` position had the most new hires, with a "
+"total of four."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:0
+msgid "The pivot table showing only the totals in the columns."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:58
 msgid "Use case: applicants with referrals"
 msgstr "Caso de uso: postulantes con referencias"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:50
+#: ../../content/applications/hr/recruitment/application_analysis.rst:60
 msgid ""
 "To get a better understanding of how effective the company's :doc:`referral "
-"program <../referrals>` is, the :guilabel:`Applicant Analysis` report can be "
+"program <../referrals>` is, the *Application Analysis* report can be "
 "modified to show how many applicants were referred by current employees."
 msgstr ""
-"Para comprender mejor la efectividad del :doc:`programa de referencias <../"
-"referrals>` de la empresa, el informe :guilabel:`Análisis de candidatos` se "
-"puede modificar para mostrar cuántos candidatos fueron referidos por "
-"empleados actuales."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:54
+#: ../../content/applications/hr/recruitment/application_analysis.rst:64
 msgid ""
-"From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
-"the :guilabel:`Applicant Analysis` report, first click "
-"the :guilabel:`Measures` button to reveal a drop-down menu of options."
+"From the :ref:`pivot table view <recruitment/application_analysis/pivot>` of "
+"the *Application Analysis* report, first click "
+"the :guilabel:`Measures` :icon:`fa-caret-down` button to reveal a drop-down "
+"menu of options."
 msgstr ""
-"Desde la vista :icon:`oi-view-pivot` :guilabel:`(Tabla dinámica)` del "
-"informe :guilabel:`Análisis de candidatos`, primero haz clic en el "
-"botón :guilabel:`Medidas` para revelar un menú desplegable de opciones."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:57
+#: ../../content/applications/hr/recruitment/application_analysis.rst:68
 msgid ""
-"Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate those "
+"Click both :guilabel:`Has Referrer` and :guilabel:`Count` to activate those "
 "two measures. Then, "
-"click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
-"and :guilabel:`Refused` to deactivate those default measures."
+"click :guilabel:`Applications`, :guilabel:`Hired`, :guilabel:`In Progress`, "
+"and :guilabel:`Refused` to deactivate those default measures. Click away "
+"from the drop-down window to close it. Then click :icon:`fa-minus-square-"
+"o` :guilabel:`Total` above the columns to condense all the displayed values."
 msgstr ""
-"Haz clic tanto en :guilabel:`Tiene referente` como en :guilabel:`Recuento`, "
-"para activar esas dos medidas. Luego, haz clic "
-"en :guilabel:`Candidato`, :guilabel:`Contratado`, :guilabel:`En progreso` "
-"y :guilabel:`Rechazado` para desactivar esas medidas predeterminadas."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:61
+#: ../../content/applications/hr/recruitment/application_analysis.rst:73
 msgid ""
-"Now, the column displays the number of applicants that came from a referral "
+"Now, the columns display the number of applicants that came from a referral "
 "in the :guilabel:`Has Referrer` column, and the total number of applicants "
 "in the :guilabel:`Count` column."
 msgstr ""
-"La columna :guilabel:`Tiene referido` mostrará el número de postulantes y la "
-"columna :guilabel:`Número` mostrará el número total de postulantes."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
+#: ../../content/applications/hr/recruitment/application_analysis.rst:76
+msgid ""
+"In this example, the :guilabel:`Furniture Assembler` job position has the "
+"most referrals, and almost 25% of all applications were submitted through a "
+"referral."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:None
 msgid ""
 "The detailed pivot table view displaying the number of referrals and the "
 "total applicants."
@@ -49001,21 +49092,11 @@ msgstr ""
 "La vista detallada de tabla dinámica que muestra el número de referidos y el "
 "total de postulantes."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:67
-msgid ""
-"In this example, the :guilabel:`Experienced Developer` "
-"and :guilabel:`Interior Designer` job positions both have applicants from "
-"referrals, while the rest do not have any referrals."
-msgstr ""
-"En este ejemplo, las posiciones de trabajo :guilabel:`Experienced Developer` "
-"e :guilabel:`Interior Designer` tienen candidatos de referencias, mientras "
-"que el resto no tiene ninguna referencia."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:71
+#: ../../content/applications/hr/recruitment/application_analysis.rst:83
 msgid "Hired through referrals"
 msgstr "Contrataciones por referencias"
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:73
+#: ../../content/applications/hr/recruitment/application_analysis.rst:85
 msgid ""
 "It is possible to modify this report even further to see how many referred "
 "applicants end up being hired."
@@ -49023,50 +49104,27 @@ msgstr ""
 "Es posible hacer más modificaciones en este informe para ver cuántos "
 "postulantes referidos fueron contratados."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:76
+#: ../../content/applications/hr/recruitment/application_analysis.rst:88
 msgid ""
-"To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
-"position]` row, which reveals a drop-down menu. Then, "
+"To view this data, click on a :icon:`fa-plus-square` :guilabel:`(job "
+"position)` row, which reveals a drop-down menu. Then, "
 "click :guilabel:`State` to show the various states applicants are currently "
 "in."
 msgstr ""
-"Haga clic en una de las filas :icon:`fa-plus-square` :guilabel:`[puesto de "
-"trabajo]` para ver estos datos. Esta acción abrirá un menú desplegable, haga "
-"clic en :guilabel:`Estado` para ver en los que se encuentran los postulantes "
-"en ese momento."
 
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:81
+#: ../../content/applications/hr/recruitment/application_analysis.rst:92
+msgid ""
+"To expand the other rows and display the various states, click on "
+"the :icon:`fa-plus-square` :guilabel:`(job position)` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/application_analysis.rst:96
 msgid ""
 "Only states that have applicants in them are shown for each job position. If "
 "a state does **not** have any applicants, it does not appear in the list."
 msgstr ""
 "En los puestos de trabajo solo aparecen los estados que tienen postulantes. "
 "Los estados no aparecerán en la lista si **no** tienen postulantes."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:84
-msgid ""
-"To expand the other rows, and display the various states, click on "
-"the :icon:`fa-plus-square` :guilabel:`[job position]` button."
-msgstr ""
-"Haga clic en el botón :icon:`fa-plus-square` :guilabel:`[puesto de trabajo]` "
-"para abrir las demás filas y mostrar sus estados."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:None
-msgid ""
-"The detailed pivot table view displaying applicants hired through referrals."
-msgstr ""
-"La vista de tabla dinámica detallada que muestra a los postulantes "
-"contratados mediante referencias."
-
-#: ../../content/applications/hr/recruitment/applicant_analysis.rst:90
-msgid ""
-"Both the :guilabel:`Experienced Developer` and :guilabel:`Interior Designer` "
-"roles yielded one referral hire each, confirming that developers and "
-"designers generate the highest-success referrals."
-msgstr ""
-"Tanto los roles :guilabel:`Experienced Developer` como :guilabel:`Interior "
-"Designer` generaron una contratación por referencia cada uno, confirmando "
-"que desarrolladores y diseñadores generan las referencias de mayor éxito."
 
 #: ../../content/applications/hr/recruitment/new_job.rst:3
 msgid "Job positions"
@@ -49526,7 +49584,7 @@ msgstr ""
 "install>` para enviar una oferta usando el botón :guilabel:`Generate Offer`."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:18
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:190
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:190
 msgid "Contract proposal"
 msgstr "Propuesta de contrato"
 
@@ -49812,7 +49870,7 @@ msgstr ""
 "indicando que se solicita su firma en la aplicación **Firma electrónica**."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:154
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:200
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:200
 msgid "Contract signed"
 msgstr "Contrato firmado"
 
@@ -50219,11 +50277,11 @@ msgstr ""
 msgid "All job positions posted to a job board."
 msgstr "Todas las posiciones de trabajo publicadas en un portal de empleo."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:3
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:3
 msgid "Recruitment flow"
 msgstr "Flujo de reclutamiento"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:5
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:5
 msgid ""
 "When a prospective employee applies for a job in Odoo, there is a "
 "preconfigured process from the :ref:`initial inquiry <recruitment/"
@@ -50232,14 +50290,14 @@ msgid ""
 "default recruitment process for Odoo's **Recruitment** application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:11
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:11
 msgid ""
 "The following is based on Odoo's *default* recruitment pipeline. Be advised "
 "that if :ref:`modifications are made <recruitment/customize-stages>` to the "
 "pipeline, the process differs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:20
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:20
 msgid ""
 "At the start of the process, all applicants appear in the :guilabel:`New` "
 "stage on the *Applications* page, whether they submitted through the company "
@@ -50247,14 +50305,14 @@ msgid ""
 "by a recruiter <add_applicants>`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:24
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:24
 msgid ""
 "The :guilabel:`Applicant`, :guilabel:`Email`, and :guilabel:`Phone` number "
 "on the applicant's card are filled as soon as it is created. By default, "
 "these details are required for every job position."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:28
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:28
 msgid ""
 "If the website application form is modified, different fields may be "
 "populated, based on what information is required on the website."
@@ -50262,21 +50320,21 @@ msgstr ""
 "Si se modifica el formulario de solicitud del sitio web, pueden completarse "
 "diferentes campos, según la información que se requiera en el sitio web."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:31
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:31
 msgid ""
 "Anything typed in the *Short Introduction* section appears in the "
 "applicant's chatter as a note from :guilabel:`OdooBot`, labeled *Other "
 "Information*."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:37
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:37
 msgid ""
 "If a resumé was attached to the online application, it appears in the "
 "*Files* section of the chatter, and is also stored in the **Documents** "
 "application."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:40
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:40
 msgid ""
 "To find the recruitment documents, navigate to the "
 "main :menuselection:`Documents` app dashboard, and click "
@@ -50284,7 +50342,7 @@ msgid ""
 "are stored within that folder."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:45
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:45
 msgid ""
 "Depending on the browser zoom level, or size of the browser screen, the "
 "resumé may appear below the main applicant card information as a PDF link, "
@@ -50295,11 +50353,11 @@ msgstr ""
 "de la tarjeta del solicitante como un enlace PDF, o en el lado derecho como "
 "una imagen."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:49
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:49
 msgid "Send interview"
 msgstr "Enviar entrevista"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:51
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:51
 msgid ""
 "At any point in the hiring process, an interview can be sent to the "
 "applicant to obtain more information. These interviews are custom-made, and "
@@ -50309,7 +50367,7 @@ msgstr ""
 "proceso de contratación para obtener más información. Estas entrevistas son "
 "personalizadas y pueden tener distintos formatos."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:54
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:54
 msgid ""
 "The **Surveys** application is required to send interviews to an applicant, "
 "so it **must** be installed."
@@ -50317,14 +50375,14 @@ msgstr ""
 "La aplicación **Encuestas** es necesaria para enviar entrevistas a un "
 "solicitante, por lo que **debe** estar instalada."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:57
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:57
 msgid ""
 "Odoo uses the term *interview*, but these can be thought of as "
 "questionnaires, surveys, tests, certifications, etc. :doc:`Custom interviews "
 "<new_job>` can be formatted to suit each individual job position's needs."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:62
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:62
 msgid ""
 "A job position for a computer programmer could have an interview in the form "
 "of a programming quiz to determine the skill level of the applicant. A job "
@@ -50339,7 +50397,7 @@ msgstr ""
 "la disponibilidad del candidato, por si es necesario que esté disponible los "
 "fines de semana por las tardes."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:67
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:67
 msgid ""
 "To send an interview to an applicant, first open the applicant's card from "
 "the *Applications* page to view the detailed applicant information. In the "
@@ -50347,14 +50405,14 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:71
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:71
 msgid ""
 "If the applicant's card has an email address on file, a *Send an interview* "
 "pop-up window appears, with the :guilabel:`Recipients`, :guilabel:`Subject`, "
 "and email body populated."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:75
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:75
 msgid ""
 "To send an email to an applicant, there **must** be an :guilabel:`Email` "
 "address on the applicant's card."
@@ -50362,7 +50420,7 @@ msgstr ""
 "Para enviarle un mensaje por correo a un postulante este **debe** tener una "
 "dirección de :guilabel:`correo electrónico` en su tarjeta."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:78
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:78
 msgid ""
 "If an email address is missing on the applicant's card, when "
 "the :guilabel:`Send Interview` button is clicked and the *Send an interview* "
@@ -50372,13 +50430,13 @@ msgid ""
 "address. Once entered, click :guilabel:`Set Email`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:84
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:84
 msgid ""
 "The email address entered is only used to send the interview, and does "
 "**not** appear on the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:87
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:87
 msgid ""
 "Sometimes, preconfigured :doc:`email templates <../../general/companies/"
 "email_template>` in Odoo use dynamic placeholders, which are automatically "
@@ -50387,7 +50445,7 @@ msgid ""
 "name of the applicant in the email."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:92
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:92
 msgid ""
 "Add the email addresses of any additional recipients for the survey in "
 "the :guilabel:`Additional emails` field, if more people should receive the "
@@ -50397,7 +50455,7 @@ msgid ""
 "add their email address in the :guilabel:`Additional emails` field."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:98
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:98
 msgid ""
 "If any attachments need to be added, click the :icon:`fa-"
 "paperclip` :guilabel:`Attachments` button, and a file explorer window "
@@ -50412,7 +50470,7 @@ msgstr ""
 "adjunto se cargará y aparecerá arriba del botón :icon:`fa-"
 "paperclip` :guilabel:`Archivos adjuntos`."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:103
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:103
 msgid ""
 "The :guilabel:`Answer deadline` field specifies when the interview form must "
 "be completed by, and is populated with a date and time two weeks in the "
@@ -50422,7 +50480,7 @@ msgid ""
 "desired new deadline."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:108
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:108
 msgid ""
 "The :guilabel:`Mail Template` field is pre-populated based on the "
 "configuration for the interview. A different template can be chosen from the "
@@ -50430,24 +50488,24 @@ msgid ""
 "template loads in the email body."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:112
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:112
 msgid ""
 "To send the email with the interview link to the applicant, "
 "click :guilabel:`Send` at the bottom of the *Send an interview* pop-up "
 "window."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:122
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:122
 msgid "Qualification"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:124
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:124
 msgid ""
 "If an applicant is determined to be a good potential candidate, they are "
 "moved to the :guilabel:`Qualification` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:127
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:127
 msgid ""
 "This stage exists to sort candidates that have potential from those that do "
 "not meet the requirements. No automatic actions, such as emails, are set for "
@@ -50455,7 +50513,7 @@ msgid ""
 "phone call or an interview with the candidate."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:132
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:132
 msgid ""
 "In order to move an applicant's card from one stage to another, the "
 "applicant's card can either be dragged and dropped in the Kanban view of the "
@@ -50463,14 +50521,14 @@ msgid ""
 "the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:136
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:136
 msgid ""
 "To change the stage on the applicant's card, first click the desired "
 "applicant's card from the *Applications* page. The current stage for the "
 "card is highlighted at the top on a status bar, above the card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:140
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:140
 msgid ""
 "Click the desired stage for the card, and the stage changes. A log note "
 "indicating the stage change appears in the chatter, as well."
@@ -50478,7 +50536,7 @@ msgstr ""
 "Haga clic en la etapa deseada para la tarjeta. La etapa cambiará y en el "
 "chatter también aparecerá una nota de registro que indica este cambio."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:0
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:0
 msgid ""
 "Change the stage of an applicant by clicking on the desired stage at the top "
 "of the\n"
@@ -50488,31 +50546,31 @@ msgstr ""
 "parte superior de\n"
 "su tarjeta."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:150
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:150
 msgid "First interview"
 msgstr "Primera entrevista"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:152
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:152
 msgid ""
 "After an applicant has passed the :guilabel:`Qualification` stage, they can "
 "be manually moved to the :guilabel:`First Interview` stage on the "
 "*Applications* page, while in Kanban view."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:155
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:155
 msgid ""
 "To move the applicant to the next stage, drag and drop the applicant's card "
 "to the :guilabel:`First Interview` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:158
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:158
 msgid ""
 "Alternatively, open the desired applicant's card from the *Applications* "
 "page, and click the :guilabel:`First Interview` stage on the status bar at "
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:162
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:162
 msgid ""
 "The :guilabel:`First Interview` stage can be modified, so when the "
 "applicant's card moves to the :guilabel:`First Interview` stage, an email "
@@ -50527,18 +50585,18 @@ msgstr ""
 "electrónico preconfigurada, aparece un enlace al calendario del equipo de "
 "reclutamiento, permitiendo al solicitante programar su entrevista."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:167
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:167
 msgid ""
 ":ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, "
 "and select the :guilabel:`Recruitment: Schedule Interview` option in "
 "the :guilabel:`Email Template` field to automate this action."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:174
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:174
 msgid "Second interview"
 msgstr "Segunda entrevista"
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:176
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:176
 msgid ""
 "After an applicant has passed the :guilabel:`First Interview` stage, they "
 "can be moved to the :guilabel:`Second Interview` stage. To move the "
@@ -50548,7 +50606,7 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:182
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:182
 msgid ""
 "When the applicant's card moves to the :guilabel:`Second Interview` stage, "
 "there are no automatic activities or emails configured for this stage, by "
@@ -50563,7 +50621,7 @@ msgstr ""
 "con el postulante, solo debe seguir el mismo proceso que usó para la primera "
 "entrevista."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:192
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:192
 msgid ""
 "After the applicant has completed the various interview processes, the next "
 "step is to :doc:`send the job offer <offer_job_positions>`."
@@ -50571,7 +50629,7 @@ msgstr ""
 "El siguiente paso después de que el postulante completó todos los procesos "
 "de entrevista es :doc:`enviar la oferta de trabajo <offer_job_positions>`."
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:195
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:195
 msgid ""
 "Once the offer has been sent, drag and drop the applicant's card to "
 "the :guilabel:`Contract Proposal` stage from the Kanban view of the "
@@ -50579,14 +50637,14 @@ msgid ""
 "the top of the individual applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:202
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:202
 msgid ""
 "Once the contract has been fully signed by all parties, and the applicant "
 "has been hired, the applicant's card moves to the :guilabel:`Contract "
 "Signed` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:205
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:205
 msgid ""
 "The :guilabel:`Contract Signed` is folded by default on the *Applications* "
 "page, and must be expanded before the applicant's card can be manually "
@@ -50598,11 +50656,11 @@ msgid ""
 "applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:213
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:213
 msgid "Refused"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/recruitment-flow.rst:215
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
 "At any point in the recruitment process, a candidate can be :doc:`refused "
 "<refuse_applicant>`."
@@ -50633,6 +50691,14 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:10
 msgid ""
+"Open the main *Job Positions* dashboard by navigating "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`. "
+"Next, click on the desired job position card, then click on the individual "
+"applicant card from the *Applications* page."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
+msgid ""
 "Navigate to :menuselection:`Recruitment app --> Applications --> All "
 "Applications`. In the :guilabel:`Applications` list, click anywhere on the "
 "desired applicant's line to open that specific applicant's card."
@@ -50640,19 +50706,6 @@ msgstr ""
 "Vaya a :menuselection:`Reclutamiento --> Postulaciones --> Todas las "
 "postulaciones`. En la lista de :guilabel:`postulaciones`, haga clic en "
 "cualquier parte de la línea del postulante para abrir su tarjeta."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:13
-msgid ""
-"Navigate to the main *Job Positions* dashboard by navigating "
-"to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
-"Next, click on the desired job position card, then click on the individual "
-"applicant card from the :guilabel:`Applications` page."
-msgstr ""
-"Navega al tablero principal *Puestos de trabajo* yendo "
-"a :menuselection:`aplicación Reclutamiento --> Solicitudes --> Por puesto de "
-"trabajo`. A continuación, haz clic en la tarjeta del puesto de trabajo "
-"deseado, luego haz clic en la tarjeta del solicitante individual desde la "
-"página :guilabel:`Solicitudes`."
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:17
 msgid ""
@@ -50677,19 +50730,15 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:28
 msgid ""
-"Clicking :guilabel:`Refuse` on an applicant's form makes "
-"the :guilabel:`Refuse Reason` pop-up window appear."
+"Clicking :guilabel:`Refuse` on an applicant's form makes the *Refuse Reason* "
+"pop-up window appear."
 msgstr ""
-"Al hacer clic en :guilabel:`Rechazar` en el formulario de un postulante "
-"aparece la ventana emergente :guilabel:`Motivo de rechazo`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:31
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:30
 msgid ""
-"The default refuse reasons in Odoo, and their corresponding email templates, "
-"are:"
+"The default refuse reasons in Odoo, and their corresponding :ref:`refusal "
+"email <recruitment/refuse_applicant/send-refusal-email>` templates, are:"
 msgstr ""
-"Los motivos de rechazo predeterminados en Odoo, y sus respectivas plantillas "
-"de correo electrónico, son los siguientes:"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:37
 msgid "Email Template"
@@ -50734,48 +50783,29 @@ msgstr ":guilabel:`Rechazado por candidato: salario`"
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:48
 msgid ""
 "Additional refusal reasons :ref:`can be created, and existing ones can be "
-"modified (or deleted) <recruitment/new-refuse>`."
+"modified (or deleted) <recruitment/refuse_applicant/new-refuse>`."
 msgstr ""
-"Es posible :ref:`crear motivos adicionales de rechazo y modificar (o "
-"eliminar) los existentes <recruitment/new-refuse>`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:51
-msgid ""
-"Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
-"refusal-email>`."
-msgstr ""
-"Seleccione el motivo adecuado para :ref:`enviar el correo electrónico de "
-"rechazo <recruitment/send-refusal-email>`."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:54
 msgid "Create or modify refuse reasons"
 msgstr "Crear o modificar motivos de rechazo"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:58
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:56
 msgid ""
 "To view and configure refuse reasons, navigate "
 "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
-"Doing so reveals the :guilabel:`Refuse Reasons` page, where all the existing "
-"refusal reasons are listed."
+"Doing so reveals the *Refuse Reasons* page, where all the existing refusal "
+"reasons are listed."
 msgstr ""
-"Para ver y configurar motivos de rechazo, ve a :menuselection:`aplicación "
-"Reclutamiento --> Configuración --> Motivos de rechazo`. Esto muestra la "
-"página :guilabel:`Motivos de rechazo`, donde se listan todos los motivos de "
-"rechazo existentes."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:62
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:60
 msgid ""
-"To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
-"click the :guilabel:`New` button in the top-left corner. A blank line "
-"appears at the bottom of the list, with an empty field present in "
-"the :guilabel:`Description` column."
+"To create a new refuse reason from the *Refuse Reasons* page, click "
+"the :guilabel:`New` button. A blank line appears at the bottom of the list, "
+"with an empty field present in the :guilabel:`Description` column."
 msgstr ""
-"Para crear un nuevo motivo de rechazo desde la página de :guilabel:`Motivos "
-"de rechazo` haga clic en el botón :guilabel:`Nuevo` situado en la esquina "
-"superior izquierda. Aparecerá una línea vacía en la parte inferior de la "
-"lista con un campo en blanco en la columna :guilabel:`Descripción`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:66
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:64
 msgid ""
 "Type in the new refuse reason in the field. It is recommended to enter a "
 "reason that is short and concise, such as `Offer expired` or `Withdrew "
@@ -50785,54 +50815,37 @@ msgstr ""
 "proporcione un motivo corto y conciso como `la oferta caducó` o `el "
 "candidato retiró su postulación`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:69
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:67
 msgid ""
-"Then, in the :guilabel:`Email Template` field, click on the field to reveal "
-"a drop-down menu. Select an :guilabel:`Email Template` from the list to be "
-"used when this refuse reason is selected."
+"Then, click in the :guilabel:`Email Template` field to reveal a drop-down "
+"menu. Select the desired email template from the list to be used when the "
+"new refuse reason is selected."
 msgstr ""
-"Después haga clic en el campo :guilabel:`Plantilla de correo electrónico` "
-"para mostrar un menú desplegable. De la lista seleccione "
-"la :guilabel:`Plantilla de correo electrónico` seleccione la que quiere usar "
-"cuando se seleccione este motivo de rechazo."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:72
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:70
 msgid ""
-"If a new :guilabel:`Email Template` is desired, type in the name for the new "
-"template in the field. Then, click :guilabel:`Create and edit...`, and "
-"a :guilabel:`Create Email Template` form pop-up window appears."
+"If a new email template is desired, type in the name for the new template in "
+"the field. Then, click :guilabel:`Create and edit...`, and a *Create Email "
+"Template* pop-up window appears."
 msgstr ""
-"Si desea seleccionar una nueva :guilabel:`plantilla de correo electrónico`, "
-"escriba el nombre adecuado en el campo y después haga clic "
-"en :guilabel:`Crear y editar...`, esta acción abre la ventana "
-"emergente :guilabel:`Crear plantilla de correo electrónico`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:76
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:73
 msgid ""
-"In the :guilabel:`Create Email Template` pop-up window, enter "
-"a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
-"corresponding fields."
+"The :guilabel:`Template Name` field is populated with the name entered in "
+"the :guilabel:`Email Template` column by default, but can be modified if "
+"desired. Enter the email :guilabel:`Subject` in the corresponding field, and "
+"add the email content in the *Body* tab. To include attachments, click the "
+"*Options* tab, and add the attachment using the :icon:`fa-"
+"paperclip` :guilabel:`Attachments` button. To assign an :guilabel:`Owner` "
+"for the template, select a user in the drop-down menu. Enter "
+"a :guilabel:`Template Description` in the corresponding field."
 msgstr ""
-"En la ventana emergente :guilabel:`Crear plantilla de correo electrónico` "
-"escriba el :guilabel:`nombre` del formulario y un :guilabel:`asunto` para el "
-"correo en los campos correspondientes."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:79
-msgid ""
-"Enter the desired email content in the :guilabel:`Content` tab. Proceed to "
-"make any other modifications to the template in the :guilabel:`Email "
-"Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save & "
-"Close` to save the template. Upon clicking that, Odoo returns to "
-"the :guilabel:`Refuse Reasons` list."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:80
+msgid "Click :guilabel:`Save`, and Odoo returns to the *Refuse Reasons* list."
 msgstr ""
-"Ingrese el contenido del correo electrónico deseado en la "
-"pestaña :guilabel:`Contenido` y haga las modificaciones correspondientes en "
-"las pestañas :guilabel:`Configuración del correo electrónico` "
-"y :guilabel:`Ajustes`, después haga clic en :guilabel:`Guardar y cerrar` "
-"para guardar la plantilla. Al hacer clic allí, Odoo regresa a la lista "
-"de :guilabel:`motivos de rechazo`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:84
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:82
 msgid ""
 "The new template appears in the new refuse reason :guilabel:`Email Template` "
 "field."
@@ -50840,7 +50853,7 @@ msgstr ""
 "La nueva plantilla aparece en el campo :guilabel:`Plantilla de correo "
 "electrónico` del nuevo motivo de rechazo."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:87
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:85
 msgid ""
 "Pre-configured recruitment refusal email templates in Odoo use dynamic "
 "placeholders, which are personalized placeholders that populate data from "
@@ -50850,16 +50863,14 @@ msgstr ""
 "marcadores dinámicos, estos toman los datos del registro del postulante para "
 "completar el cuerpo del mensaje."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:90
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:88
 msgid ""
-"For example, if the applicant's name is a used in a dynamic placeholder, the "
+"For example, if the applicant's name is used in a dynamic placeholder, the "
 "applicant's name appears anytime that dynamic placeholder appears on the "
 "email template."
 msgstr ""
-"Por ejemplo, si usa el nombre del postulante como marcador dinámico, este "
-"aparecerá cada que ese marcador aparezca en la plantilla de correo."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:93
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:91
 msgid ""
 "For more detailed information on email templates, refer to the :doc:`../../"
 "general/companies/email_template` documentation."
@@ -50867,134 +50878,152 @@ msgstr ""
 "Consulte :doc:`../../general/companies/email_template` para obtener "
 "información más detallada sobre las plantillas de correo electrónico."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:97
 msgid "Send refusal email"
 msgstr "Enviar correos de rechazo"
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:101
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:99
 msgid ""
 "After clicking the :guilabel:`Refuse` button on an applicant form, "
-"a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
-"the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear below "
-"the selected refusal reason: :guilabel:`Send Email` and :guilabel:`Email "
-"Template`."
+"a :ref:`refuse reason <recruitment/refuse-reasons>` is selected from the "
+"*Refuse Reason* pop-up window."
 msgstr ""
-"Después de hacer clic en el botón :guilabel:`Rechazar` en el formulario de "
-"un candidato, se selecciona un :ref:`motivo de rechazo <recruitment/refuse-"
-"reasons>` desde la ventana emergente :guilabel:`Motivo de rechazo`. "
-"Entonces, aparecen dos campos debajo del motivo de rechazo "
-"seleccionado: :guilabel:`Enviar correo` y :guilabel:`Plantilla de correo`."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:102
+msgid ""
+"The applicant's email address automatically populates "
+"the :guilabel:`Applicant` field. The :guilabel:`Subject` and email body are "
+"populated according to the corresponding email template."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:105
+msgid ""
+"To send the refusal email to the applicant, click :guilabel:`Refuse` at the "
+"bottom of the *Refuse Reason* pop-up window. The refusal email is sent to "
+"the applicant, and a red :guilabel:`Refused` banner appears on the "
+"applicant's card in the corner."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:110
+msgid ""
+"If an application should be refused but an email should **not** be sent (if, "
+"for example, the application was spam), click the :guilabel:`Send Email` "
+"toggle to deactivate it, and click :guilabel:`Refuse` at the bottom of the "
+"*Refuse Reason* pop-up window."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
 msgid ""
-"The Refuse Reason pop-up window that appears when refusing an applicant."
+"The refuse reason pop-up window, with the email subject and body populated."
 msgstr ""
-"La ventana emergente de motivo  de rechazo que aparece al rechazar a un "
-"postulante."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:109
-msgid ""
-"The applicant's email address automatically populates the :guilabel:`Send "
-"Email` field; additional email recipients **cannot** be added."
-msgstr ""
-"La dirección de correo electrónico del postulante se completa en automático "
-"en el campo :guilabel:`Enviar correo electrónico` y no es posible agregar "
-"más destinatarios."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:112
-msgid ""
-"If an email should **not** be sent to the applicant, uncheck "
-"the :guilabel:`Send Email` checkbox."
-msgstr ""
-"Desmarque la casilla :guilabel:`Enviar correo electrónico` si no es "
-"necesario enviarle un correo electrónico al postulante."
-
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:114
-msgid ""
-"The email template associated with the refusal reason populates "
-"the :guilabel:`Email Template` field. If a different email template is "
-"desired, select a different template from the :guilabel:`Email Template` "
-"drop-down menu."
-msgstr ""
-"La plantilla de correo electrónico asociada con el motivo de rechazo aparece "
-"en el campo :guilabel:`Plantilla de correo electrónico`. Si desea utilizar "
-"una plantilla distinta, selecciónela en el menú desplegable antes mencionado."
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:118
-msgid ""
-"To send the refusal email to the applicant, ensure the :guilabel:`Send "
-"Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
-"the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
-"the applicant, and a red :guilabel:`Refused` banner appears on the "
-"applicant's card in the top-right corner."
+msgid "Refuse duplicate applicant"
 msgstr ""
-"Asegúrese de que la casilla :guilabel:`Enviar correo electrónico` esté "
-"seleccionada para enviarle el correo de rechazo al solicitante, después haga "
-"clic en :guilabel:`Rechazar` en la parte inferior de la ventana "
-"emergente :guilabel:`Motivo de rechazo`. El correo se enviará al postulante "
-"y en la esquina superior derecha de su tarjeta aparecerá el "
-"mensaje :guilabel:`Rechazado`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:120
 msgid ""
-"An applicant's card with the refused banner appearing in the top-right "
-"corner in red."
+"Occasionally, applicants apply multiple times for the same job position. "
+"When this occurs, it is possible to refuse all their applications at once, "
+"instead of individually."
 msgstr ""
-"Una tarjeta del empleado con el listón rechazado en la esquina superior "
-"derecha."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:123
+msgid ""
+"In this situation, a :guilabel:`Refuse Duplicate Applications` toggle "
+"appears on the *Refuse Reason* pop-up window. Enable the toggle, and "
+"a :guilabel:`Duplicate Applications` field appears beneath it, listing the "
+"applicant's name for each duplicate application in the system."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:127
-msgid "View refused applicants"
-msgstr "Visualizar los postulantes rechazados"
+msgid ""
+"To refuse *all* applications for that applicant, click "
+"the :guilabel:`Refuse` button."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:129
 msgid ""
-"After refusal, the applicant's card is no longer visible in the job "
-"position's Kanban view. However, it is still possible to view applicants who "
-"have been refused."
+"The applicant is only sent one email, and all their applications for the job "
+"position are marked as *Refused*."
 msgstr ""
-"La tarjeta del postulante ya no es visible en la vista de kanban del puesto "
-"de trabajo después de rechazarlo, pero aún es posible ver a los postulantes "
-"que han sido rechazados."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:132
-msgid ""
-"To view only the refused applicants, go to :menuselection:`Recruitment app --"
-"> Applications --> By Job Positions`, or :menuselection:`Recruitment app --> "
-"Applications --> All Applications`. Both methods navigate to "
-"the :guilabel:`Applications` dashboard, the only difference is :guilabel:`By "
-"Job Positions` displays applicants in a Kanban view, while :guilabel:`All "
-"Applications` displays applicants in a list view."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "Duplicate applications refused in one email."
 msgstr ""
-"Para ver solo los candidatos rechazados, ve a :menuselection:`aplicación "
-"Reclutamiento --> Candidaturas --> Por puesto de trabajo`, "
-"o :menuselection:`aplicación Reclutamiento --> Candidaturas --> Todas las "
-"candidaturas`. Ambos métodos llevan al tablero :guilabel:`Candidaturas`, la "
-"única diferencia es que :guilabel:`Por puesto de trabajo` muestra candidatos "
-"en vista kanban, mientras que :guilabel:`Todas las candidaturas` muestra "
-"candidatos en vista de lista."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:136
+msgid "View refused applicants"
+msgstr "Visualizar los postulantes rechazados"
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:138
 msgid ""
-"On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
-"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
-"click :guilabel:`Refused`, located under the :icon:`fa-"
-"funnel` :guilabel:`Filters` section."
+"After refusal, the applicant's card is hidden by default. However, it is "
+"still possible to view applicants who have been refused :ref:`by job "
+"position <recruitment/refuse_applicant/job-refused>`, or view :ref:`all "
+"refused applicants <recruitment/refuse_applicant/all-refused>`."
 msgstr ""
-"En la página :guilabel:`Candidaturas`, haz clic en el botón :icon:`fa-caret-"
-"down` :guilabel:`Alternar panel de búsqueda` en la barra de búsqueda, luego "
-"haz clic en :guilabel:`Rechazado`, ubicado bajo la sección :icon:`fa-"
-"funnel` :guilabel:`Filtros`."
 
-#: ../../content/applications/hr/recruitment/refuse_applicant.rst:142
-msgid ""
-"All applicants that have been refused for the job position appear on "
-"the :guilabel:`Applications` page for that position, organized by the stage "
-"they were in when they were refused."
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:145
+msgid "By job position"
 msgstr ""
-"Todos los solicitantes que han sido rechazados del puesto aparecen en la "
-"página :guilabel:`Postulaciones` para esa posición y están organizados por "
-"la etapa en la que estaban cuando fueron rechazados."
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:147
+msgid ""
+"To view the refused applicants for a specific job position, navigate "
+"to :menuselection:`Recruitment app --> Applications --> By Job Positions`, "
+"then click the desired job position Kanban card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:150
+msgid ""
+"On the *Applications* page, click the :icon:`fa-caret-"
+"down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+"click :guilabel:`Refused` in the :icon:`fa-filter` :guilabel:`Filters` "
+"column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:154
+msgid ""
+"All applicants that have been refused for the job position appear in the "
+"stage they were in when they were refused, and all other applicants are "
+"hidden."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for a job position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:163
+msgid "All refused applicants"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:165
+msgid ""
+"To view all refused applicants across all job positions, navigate "
+"to :menuselection:`Recruitment app --> Applications --> All Applications`. "
+"Every applicant record is displayed in a default list view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:168
+msgid ""
+"Click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in "
+"the search bar, then click :guilabel:`Refused` in the :icon:`fa-"
+"funnel` :guilabel:`Filters` column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:171
+msgid ""
+"All applicants that have been refused appear, with the text in red. Along "
+"with the applicant's :guilabel:`Name`, the date they :guilabel:`Applied on`, "
+"the :guilabel:`Job Position`, :guilabel:`Stage` they were in when refused, "
+"their :guilabel:`Matching` percentage, any :guilabel:`Tags`, and "
+"the :guilabel:`Recruiter` responsible for the job position are listed."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/refuse_applicant.rst:None
+msgid "All applicants refused for all job positions."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:3
 msgid "Schedule interviews"
@@ -51463,8 +51492,8 @@ msgstr ""
 "La página de confirmación con todos los detalles de la entrevista a la vista."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:3
-msgid "Source analysis reporting"
-msgstr "Informe de análisis de origen"
+msgid "Source analysis"
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:5
 msgid ""
@@ -51505,116 +51534,69 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:19
 msgid ""
-"This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
-"Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
-"showing the amount of applicants by :guilabel:`Source`, and further "
-"separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+"This presents the data for the last 365 days in a default :icon:`fa-"
+"database` :guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)` "
+"view. It shows the amount of applicants by source and separated by status "
+"(:guilabel:`In Progress`, :guilabel:`Hired`, and :guilabel:`Refused`),"
 msgstr ""
-"Esto muestra los datos para :icon:`fa-filter` :guilabel:`Candidatos en los "
-"últimos 365 días` en la vista predeterminada :icon:`fa-area-chart` "
-"de :guilabel:`gráfico`. Aparece el número de postulantes "
-"por :guilabel:`origen` y están separados por etapa (:guilabel:`En progreso` "
-"y :guilabel:`Contratado`)."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:23
 msgid ""
-"Hover the cursor over any column to view the specific numbers fort that "
-"column."
+"Hover the cursor over any color-coded section of a column to view the "
+"specific numbers for that status column."
 msgstr ""
-"Pase el cursor por encima de cualquier columna para ver sus respectivos "
-"números."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
 msgid "The default bar chart of the source analysis information."
 msgstr ""
 "El gráfico de barras predeterminado de la información del análisis de origen."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:29
+#: ../../content/applications/hr/recruitment/source_analysis.rst:30
 msgid "Source effectiveness report"
 msgstr "Informe de eficacia del origen"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:31
+#: ../../content/applications/hr/recruitment/source_analysis.rst:32
 msgid ""
 "To identify which sources (e.g., job boards, social media, employee "
 "referrals, company website) produce the most hires, the pivot table view of "
-"the :guilabel:`Source Analysis` report can be configured to display further "
-"details."
+"the *Source Analysis* report can be configured to display further details."
 msgstr ""
-"Es posible configurar la vista de tabla dinámica del "
-"informe :guilabel:`análisis del origen` para visualizar detalles adicionales "
-"e identificar las fuentes (por ejemplo, bolsas de trabajo, redes sociales, "
-"referencias de empleados, sitio web de la empresa) que producen la mayor "
-"cantidad de contrataciones."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:35
+#: ../../content/applications/hr/recruitment/source_analysis.rst:36
 msgid ""
-"To view the :guilabel:`Source Analysis` report in a pivot table, click "
-"the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner. "
-"The data is presented in a pivot table, with rows populated by job "
-"positions, and columns populated by stages."
+"To view the *Source Analysis* report in a pivot table, click the :icon:`oi-"
+"view-pivot` :guilabel:`(Pivot)` icon in the corner. The data is presented in "
+"a pivot table, with rows populated by sources, and columns populated by "
+"stages."
 msgstr ""
-"Para ver el informe :guilabel:`Análisis de fuentes` en una tabla dinámica, "
-"haz clic en el icono :icon:`oi-view-pivot` :guilabel:`(Dinámica)` en la "
-"esquina superior derecha. Los datos se presentan en una tabla dinámica, con "
-"filas pobladas por puestos de trabajo y columnas pobladas por etapas."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:39
+#: ../../content/applications/hr/recruitment/source_analysis.rst:40
 msgid ""
-"To expand this chart to show what specific sources the applicants came from, "
-"click the :icon:`fa-plus-square` :guilabel:`Total` box above the columns, to "
-"reveal a drop-down menu, and click :guilabel:`Source`."
+"To expand this chart to show what specific job positions the applicants "
+"applied to from each source, click the :icon:`fa-plus-"
+"square` :guilabel:`Total` box above the columns to reveal a drop-down menu, "
+"and click :guilabel:`Job Position`."
 msgstr ""
-"Para abrir este gráfico y visualizar el origen específico del que provienen "
-"los postulantes haga clic en la casilla :icon:`fa-plus-"
-"square` :guilabel:`Total` que se encuentra arriba de las columnas. Esta "
-"acción abrirá un menú desplegable, haga clic en :guilabel:`Origen`."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:43
+#: ../../content/applications/hr/recruitment/source_analysis.rst:44
 msgid ""
-"Each column is then grouped by the source, such as: :guilabel:`Search "
-"engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
-"displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
-"and :guilabel:`Refused`."
+"Each column is then grouped by the job position, such as *Accountant* or "
+"*Carpenter*. Each job position displays a separate count for "
+"applications :guilabel:`In Progress`, :guilabel:`Refused`, "
+"or :guilabel:`Hired`, and an :guilabel:`Applications` column which displays "
+"the total count of all statuses."
 msgstr ""
-"Cada columna se agrupa luego por la fuente, como: :guilabel:`Motor de "
-"búsqueda`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Cada fuente "
-"muestra un recuento separado "
-"para :guilabel:`Candidato`, :guilabel:`Contratado`, y :guilabel:`Rechazado`."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:47
-msgid ""
-"This information, as presented, makes it difficult to view the specific "
-"numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
-"axis)` icon, to swap the information. After that, the rows represent the "
-"source, and the columns represent the job positions, further divided by "
-"stage."
-msgstr ""
-"Visualizar la información tal como se presenta dificulta conocer cuáles son "
-"los números específicos de cada fuente. Haga clic en el icono :icon:`fa-"
-"exchange` :guilabel:`(Invertir eje)` para intercambiar la información. "
-"Después de eso, las filas representarán el origen y las columnas "
-"representarán los puestos de trabajo divididos por etapa."
 
 #: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The axes flipped in the source analysis report, in pivot table view."
-msgstr ""
-"Los ejes invertidos en el informe de análisis del origen en la vista de "
-"tabla dinámica."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:54
 msgid ""
-"In this view, the total number of applicants, hired employees, and refused "
-"applicants, are displayed for each source, as well as for each stage by job "
-"position."
+"The pivot table view displaying each job position and its source and stage."
 msgstr ""
-"En esta vista aparece el número total de postulantes, empleados contratados "
-"y rechazados por origen, así como cada etapa por puesto de trabajo."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:58
+#: ../../content/applications/hr/recruitment/source_analysis.rst:53
 msgid "Medium"
 msgstr "Medio"
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:60
+#: ../../content/applications/hr/recruitment/source_analysis.rst:55
 msgid ""
 "Viewing the medium for the applicants can be beneficial to see which "
 "specific medium is more successful."
@@ -51622,29 +51604,22 @@ msgstr ""
 "Es muy útil saber cuál es el medio por el que los postulantes encuentran un "
 "puesto, ya que así sabrá cual de ellos tiene más éxito."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:63
+#: ../../content/applications/hr/recruitment/source_analysis.rst:58
 msgid ""
 "*Mediums* are the specific methods the applicant used to discover and then "
-"apply for job positions, such as organic search, paid search, social media "
-"ad, email, etc."
+"apply for job positions, such as a search engine, social media ad, email, "
+"banner, etc."
 msgstr ""
-"Los *medios* son los métodos específicos que utiliza el postulante para "
-"encontrar y luego aplicar a puestos de trabajo, como una búsqueda orgánica, "
-"búsqueda de pago, anuncio en redes sociales, correo electrónico, etc."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:66
+#: ../../content/applications/hr/recruitment/source_analysis.rst:61
 msgid ""
 "To further group the results by medium, click into one of the :icon:`fa-plus-"
-"square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the resulting "
-"drop-down menu. The row presents the specific mediums, relevant to that "
-"specific source."
+"square` :guilabel:`(Source)` rows then click :guilabel:`Medium` in the "
+"resulting drop-down menu. The row presents the individual mediums relevant "
+"to that specific source."
 msgstr ""
-"Haga clic en una de las filas :icon:`fa-plus-square` :guilabel:`[Origen]` "
-"para agrupar los resultados por medio. Haga clic en :guilabel:`Medio` en el "
-"menú desplegable y la fila mostrará los medios específicos relevantes para "
-"esa opción en particular."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:70
+#: ../../content/applications/hr/recruitment/source_analysis.rst:65
 msgid ""
 "Once :guilabel:`Medium` is selected for one source, clicking into another "
 "row automatically reveals the specific metrics for the mediums for that "
@@ -51653,28 +51628,24 @@ msgstr ""
 "Una vez que selecciona un :guilabel:`medio`, al hacer clic en otra fila, "
 "aparecerán las métricas específicas para el mismo."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:None
-msgid "The sources rows, expanded to also show the medium for each source."
-msgstr "Las filas de cada origen abiertas para mostrar su medio."
-
-#: ../../content/applications/hr/recruitment/source_analysis.rst:77
+#: ../../content/applications/hr/recruitment/source_analysis.rst:69
 msgid ""
-"The only mediums that appear for a source, are mediums that have been set on "
+"The only mediums that appear for a source are mediums that have been set on "
 "an applicant's form. If a medium has **not** been set for any applicants, "
 "the medium does not appear in the drop-down rows beneath the source."
 msgstr ""
-"Los únicos medios que aparecen son los que están configurados en el "
-"formulario de un postulante. Si un medio **no** ha sido configurado para "
-"ningún postulante, este no aparecerá en las filas desplegables abajo del "
-"origen."
 
-#: ../../content/applications/hr/recruitment/source_analysis.rst:81
+#: ../../content/applications/hr/recruitment/source_analysis.rst:73
 msgid ""
 "For example, if no applicants applied with the medium *Google Adwords*, that "
 "medium does **not** appear beneath the *Search engine* source row."
 msgstr ""
 "Por ejemplo, si ningún postulante aplicó con el medio *Google Adwords*, ese "
 "medio **no** aparecerá abajo de la fila de origen de *motor de búsqueda*."
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:None
+msgid "The source rows, expanded to also show the medium for each source."
+msgstr ""
 
 #: ../../content/applications/hr/recruitment/team_performance.rst:3
 msgid "Team performance"
@@ -57701,6 +57672,542 @@ msgid ""
 msgstr ""
 "La mitad inferior del formulario de tipo de ausencia, con el color y el "
 "icono seleccionados."
+
+#~ msgid "Export data to third-party apps"
+#~ msgstr "Exportar datos a aplicaciones de terceros"
+
+#~ msgid ":doc:`recruitment/applicant_analysis`"
+#~ msgstr ":doc:`recruitment/applicant_analysis`"
+
+#~ msgid "Applicant analysis"
+#~ msgstr "Análisis de candidatos"
+
+#~ msgid ""
+#~ "The *Applicant Analysis* report allows recruiting departments to see "
+#~ "which job positions have the most applicants, which have the most "
+#~ "referrals, and how long it takes for applicants to move through the "
+#~ "pipeline."
+#~ msgstr ""
+#~ "El informe *Análisis de candidatos* permite a los departamentos de "
+#~ "reclutamiento ver qué posiciones de trabajo tienen más candidatos, cuáles "
+#~ "tienen más referencias y cuánto tiempo tardan los candidatos en avanzar "
+#~ "por el proceso."
+
+#~ msgid ""
+#~ "Knowing how many applicants each specific job position has, along with "
+#~ "statistics about how many are hired and refused, can provide valuable "
+#~ "insights. This information can assist the recruiting team to pivot their "
+#~ "strategies to acquire the most desirable candidates."
+#~ msgstr ""
+#~ "Saber cuántos postulantes tiene cada puesto de trabajo específico y "
+#~ "cuántos de ellos son contratados o rechazados puede proporcionarle "
+#~ "información muy valiosa que le ayudará al equipo de reclutamiento a "
+#~ "orientar sus estrategias para contratar solo a los mejores."
+
+#~ msgid "Applicant analysis report"
+#~ msgstr "Informe de análisis de candidatos"
+
+#~ msgid ""
+#~ "Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
+#~ "Applicant Analysis`. This presents a line chart of all applicants for the "
+#~ "last year."
+#~ msgstr ""
+#~ "Comienza navegando a :menuselection:`aplicación Reclutamiento --> "
+#~ "Informes --> Análisis de candidatos`. Esto presenta un gráfico de líneas "
+#~ "de todos los candidatos del último año."
+
+#~ msgid ""
+#~ "Three separate color-coded metrics are presented: :guilabel:`In "
+#~ "Progress`, :guilabel:`Hired`, and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "Hay tres métricas codificadas por colores: :guilabel:`En "
+#~ "progreso`, :guilabel:`Contratado` y :guilabel:`Rechazado`."
+
+#~ msgid ""
+#~ "Hover the cursor over a month of the chart, and a pop-up window appears, "
+#~ "displaying the specific numbers for that month."
+#~ msgstr ""
+#~ "Pase el cursor por encima de un mes en el gráfico, aparecerá una ventana "
+#~ "emergente con los números específicos de ese mes."
+
+#~ msgid "The default Applicant Analysis report."
+#~ msgstr "El informe de Análisis de candidatos predeterminado."
+
+#~ msgid ""
+#~ "For a more detailed view of the information in the :guilabel:`Applicant "
+#~ "Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` "
+#~ "icon in the top-right corner. This displays all the information in a "
+#~ "pivot table."
+#~ msgstr ""
+#~ "Para una vista más detallada de la información en el "
+#~ "informe :guilabel:`Análisis de candidatos`, haz clic en el "
+#~ "icono :icon:`oi-view-pivot` :guilabel:`(Tabla dinámica)` en la esquina "
+#~ "superior derecha. Esto muestra toda la información en una tabla dinámica."
+
+#~ msgid ""
+#~ "In this view, the job positions are displayed in the rows, and the "
+#~ "columns display the total numbers of applicants, including how many of "
+#~ "those applicants were hired or refused, and who is still in the "
+#~ "recruitment process. The displayed information can be modified, if "
+#~ "desired."
+#~ msgstr ""
+#~ "En esta vista, las posiciones de trabajo se muestran en las filas, y las "
+#~ "columnas muestran los números totales de candidatos, incluyendo cuántos "
+#~ "de esos candidatos fueron contratados o rechazados, y quién sigue en el "
+#~ "proceso de reclutamiento. La información mostrada se puede modificar, si "
+#~ "se desea."
+
+#~ msgid ""
+#~ "In this example, there are 18 total applicants. Out of that, six have "
+#~ "been hired, two have been refused, and ten are still in the recruitment "
+#~ "pipeline. The :guilabel:`Experienced Developer` position has six total "
+#~ "applicants, three of which were hired, one refused, and two still in "
+#~ "progress."
+#~ msgstr ""
+#~ "En este ejemplo, hay 18 candidatos en total. De esos, seis han sido "
+#~ "contratados, dos han sido rechazados y diez todavía están en el proceso "
+#~ "de reclutamiento. La posición :guilabel:`Experienced Developer` tiene "
+#~ "seis candidatos en total, tres de los cuales fueron contratados, uno "
+#~ "rechazado y dos aún en proceso."
+
+#~ msgid ""
+#~ "To get a better understanding of how effective the "
+#~ "company's :doc:`referral program <../referrals>` is, "
+#~ "the :guilabel:`Applicant Analysis` report can be modified to show how "
+#~ "many applicants were referred by current employees."
+#~ msgstr ""
+#~ "Para comprender mejor la efectividad del :doc:`programa de referencias "
+#~ "<../referrals>` de la empresa, el informe :guilabel:`Análisis de "
+#~ "candidatos` se puede modificar para mostrar cuántos candidatos fueron "
+#~ "referidos por empleados actuales."
+
+#~ msgid ""
+#~ "From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of "
+#~ "the :guilabel:`Applicant Analysis` report, first click "
+#~ "the :guilabel:`Measures` button to reveal a drop-down menu of options."
+#~ msgstr ""
+#~ "Desde la vista :icon:`oi-view-pivot` :guilabel:`(Tabla dinámica)` del "
+#~ "informe :guilabel:`Análisis de candidatos`, primero haz clic en el "
+#~ "botón :guilabel:`Medidas` para revelar un menú desplegable de opciones."
+
+#~ msgid ""
+#~ "Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate "
+#~ "those two measures. Then, "
+#~ "click :guilabel:`Applicant`, :guilabel:`Hired`, :guilabel:`In Progress` "
+#~ "and :guilabel:`Refused` to deactivate those default measures."
+#~ msgstr ""
+#~ "Haz clic tanto en :guilabel:`Tiene referente` como "
+#~ "en :guilabel:`Recuento`, para activar esas dos medidas. Luego, haz clic "
+#~ "en :guilabel:`Candidato`, :guilabel:`Contratado`, :guilabel:`En progreso` "
+#~ "y :guilabel:`Rechazado` para desactivar esas medidas predeterminadas."
+
+#~ msgid ""
+#~ "Now, the column displays the number of applicants that came from a "
+#~ "referral in the :guilabel:`Has Referrer` column, and the total number of "
+#~ "applicants in the :guilabel:`Count` column."
+#~ msgstr ""
+#~ "La columna :guilabel:`Tiene referido` mostrará el número de postulantes y "
+#~ "la columna :guilabel:`Número` mostrará el número total de postulantes."
+
+#~ msgid ""
+#~ "In this example, the :guilabel:`Experienced Developer` "
+#~ "and :guilabel:`Interior Designer` job positions both have applicants from "
+#~ "referrals, while the rest do not have any referrals."
+#~ msgstr ""
+#~ "En este ejemplo, las posiciones de trabajo :guilabel:`Experienced "
+#~ "Developer` e :guilabel:`Interior Designer` tienen candidatos de "
+#~ "referencias, mientras que el resto no tiene ninguna referencia."
+
+#~ msgid ""
+#~ "To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
+#~ "position]` row, which reveals a drop-down menu. Then, "
+#~ "click :guilabel:`State` to show the various states applicants are "
+#~ "currently in."
+#~ msgstr ""
+#~ "Haga clic en una de las filas :icon:`fa-plus-square` :guilabel:`[puesto "
+#~ "de trabajo]` para ver estos datos. Esta acción abrirá un menú "
+#~ "desplegable, haga clic en :guilabel:`Estado` para ver en los que se "
+#~ "encuentran los postulantes en ese momento."
+
+#~ msgid ""
+#~ "To expand the other rows, and display the various states, click on "
+#~ "the :icon:`fa-plus-square` :guilabel:`[job position]` button."
+#~ msgstr ""
+#~ "Haga clic en el botón :icon:`fa-plus-square` :guilabel:`[puesto de "
+#~ "trabajo]` para abrir las demás filas y mostrar sus estados."
+
+#~ msgid ""
+#~ "The detailed pivot table view displaying applicants hired through "
+#~ "referrals."
+#~ msgstr ""
+#~ "La vista de tabla dinámica detallada que muestra a los postulantes "
+#~ "contratados mediante referencias."
+
+#~ msgid ""
+#~ "Both the :guilabel:`Experienced Developer` and :guilabel:`Interior "
+#~ "Designer` roles yielded one referral hire each, confirming that "
+#~ "developers and designers generate the highest-success referrals."
+#~ msgstr ""
+#~ "Tanto los roles :guilabel:`Experienced Developer` "
+#~ "como :guilabel:`Interior Designer` generaron una contratación por "
+#~ "referencia cada uno, confirmando que desarrolladores y diseñadores "
+#~ "generan las referencias de mayor éxito."
+
+#~ msgid ""
+#~ "Navigate to the main *Job Positions* dashboard by navigating "
+#~ "to :menuselection:`Recruitment app --> Applications --> By Job Position`. "
+#~ "Next, click on the desired job position card, then click on the "
+#~ "individual applicant card from the :guilabel:`Applications` page."
+#~ msgstr ""
+#~ "Navega al tablero principal *Puestos de trabajo* yendo "
+#~ "a :menuselection:`aplicación Reclutamiento --> Solicitudes --> Por puesto "
+#~ "de trabajo`. A continuación, haz clic en la tarjeta del puesto de trabajo "
+#~ "deseado, luego haz clic en la tarjeta del solicitante individual desde la "
+#~ "página :guilabel:`Solicitudes`."
+
+#~ msgid ""
+#~ "Clicking :guilabel:`Refuse` on an applicant's form makes "
+#~ "the :guilabel:`Refuse Reason` pop-up window appear."
+#~ msgstr ""
+#~ "Al hacer clic en :guilabel:`Rechazar` en el formulario de un postulante "
+#~ "aparece la ventana emergente :guilabel:`Motivo de rechazo`."
+
+#~ msgid ""
+#~ "The default refuse reasons in Odoo, and their corresponding email "
+#~ "templates, are:"
+#~ msgstr ""
+#~ "Los motivos de rechazo predeterminados en Odoo, y sus respectivas "
+#~ "plantillas de correo electrónico, son los siguientes:"
+
+#~ msgid ""
+#~ "Additional refusal reasons :ref:`can be created, and existing ones can be "
+#~ "modified (or deleted) <recruitment/new-refuse>`."
+#~ msgstr ""
+#~ "Es posible :ref:`crear motivos adicionales de rechazo y modificar (o "
+#~ "eliminar) los existentes <recruitment/new-refuse>`."
+
+#~ msgid ""
+#~ "Select a refusal reason to :ref:`send a refusal email <recruitment/send-"
+#~ "refusal-email>`."
+#~ msgstr ""
+#~ "Seleccione el motivo adecuado para :ref:`enviar el correo electrónico de "
+#~ "rechazo <recruitment/send-refusal-email>`."
+
+#~ msgid ""
+#~ "To view and configure refuse reasons, navigate "
+#~ "to :menuselection:`Recruitment app --> Configuration --> Refuse Reasons`. "
+#~ "Doing so reveals the :guilabel:`Refuse Reasons` page, where all the "
+#~ "existing refusal reasons are listed."
+#~ msgstr ""
+#~ "Para ver y configurar motivos de rechazo, ve a :menuselection:`aplicación "
+#~ "Reclutamiento --> Configuración --> Motivos de rechazo`. Esto muestra la "
+#~ "página :guilabel:`Motivos de rechazo`, donde se listan todos los motivos "
+#~ "de rechazo existentes."
+
+#~ msgid ""
+#~ "To create a new refuse reason from the :guilabel:`Refuse Reasons` page, "
+#~ "click the :guilabel:`New` button in the top-left corner. A blank line "
+#~ "appears at the bottom of the list, with an empty field present in "
+#~ "the :guilabel:`Description` column."
+#~ msgstr ""
+#~ "Para crear un nuevo motivo de rechazo desde la página "
+#~ "de :guilabel:`Motivos de rechazo` haga clic en el botón :guilabel:`Nuevo` "
+#~ "situado en la esquina superior izquierda. Aparecerá una línea vacía en la "
+#~ "parte inferior de la lista con un campo en blanco en la "
+#~ "columna :guilabel:`Descripción`."
+
+#~ msgid ""
+#~ "Then, in the :guilabel:`Email Template` field, click on the field to "
+#~ "reveal a drop-down menu. Select an :guilabel:`Email Template` from the "
+#~ "list to be used when this refuse reason is selected."
+#~ msgstr ""
+#~ "Después haga clic en el campo :guilabel:`Plantilla de correo electrónico` "
+#~ "para mostrar un menú desplegable. De la lista seleccione "
+#~ "la :guilabel:`Plantilla de correo electrónico` seleccione la que quiere "
+#~ "usar cuando se seleccione este motivo de rechazo."
+
+#~ msgid ""
+#~ "If a new :guilabel:`Email Template` is desired, type in the name for the "
+#~ "new template in the field. Then, click :guilabel:`Create and edit...`, "
+#~ "and a :guilabel:`Create Email Template` form pop-up window appears."
+#~ msgstr ""
+#~ "Si desea seleccionar una nueva :guilabel:`plantilla de correo "
+#~ "electrónico`, escriba el nombre adecuado en el campo y después haga clic "
+#~ "en :guilabel:`Crear y editar...`, esta acción abre la ventana "
+#~ "emergente :guilabel:`Crear plantilla de correo electrónico`."
+
+#~ msgid ""
+#~ "In the :guilabel:`Create Email Template` pop-up window, enter "
+#~ "a :guilabel:`Name` for the form, and an email :guilabel:`Subject` in the "
+#~ "corresponding fields."
+#~ msgstr ""
+#~ "En la ventana emergente :guilabel:`Crear plantilla de correo electrónico` "
+#~ "escriba el :guilabel:`nombre` del formulario y un :guilabel:`asunto` para "
+#~ "el correo en los campos correspondientes."
+
+#~ msgid ""
+#~ "Enter the desired email content in the :guilabel:`Content` tab. Proceed "
+#~ "to make any other modifications to the template in the :guilabel:`Email "
+#~ "Configuration` and :guilabel:`Settings` tabs, then click :guilabel:`Save "
+#~ "& Close` to save the template. Upon clicking that, Odoo returns to "
+#~ "the :guilabel:`Refuse Reasons` list."
+#~ msgstr ""
+#~ "Ingrese el contenido del correo electrónico deseado en la "
+#~ "pestaña :guilabel:`Contenido` y haga las modificaciones correspondientes "
+#~ "en las pestañas :guilabel:`Configuración del correo electrónico` "
+#~ "y :guilabel:`Ajustes`, después haga clic en :guilabel:`Guardar y cerrar` "
+#~ "para guardar la plantilla. Al hacer clic allí, Odoo regresa a la lista "
+#~ "de :guilabel:`motivos de rechazo`."
+
+#~ msgid ""
+#~ "For example, if the applicant's name is a used in a dynamic placeholder, "
+#~ "the applicant's name appears anytime that dynamic placeholder appears on "
+#~ "the email template."
+#~ msgstr ""
+#~ "Por ejemplo, si usa el nombre del postulante como marcador dinámico, este "
+#~ "aparecerá cada que ese marcador aparezca en la plantilla de correo."
+
+#~ msgid ""
+#~ "After clicking the :guilabel:`Refuse` button on an applicant form, "
+#~ "a :ref:`Refuse Reason <recruitment/refuse-reasons>` is then selected from "
+#~ "the :guilabel:`Refuse Reason` pop-up window. Then, two fields appear "
+#~ "below the selected refusal reason: :guilabel:`Send Email` "
+#~ "and :guilabel:`Email Template`."
+#~ msgstr ""
+#~ "Después de hacer clic en el botón :guilabel:`Rechazar` en el formulario "
+#~ "de un candidato, se selecciona un :ref:`motivo de rechazo <recruitment/"
+#~ "refuse-reasons>` desde la ventana emergente :guilabel:`Motivo de "
+#~ "rechazo`. Entonces, aparecen dos campos debajo del motivo de rechazo "
+#~ "seleccionado: :guilabel:`Enviar correo` y :guilabel:`Plantilla de correo`."
+
+#~ msgid ""
+#~ "The Refuse Reason pop-up window that appears when refusing an applicant."
+#~ msgstr ""
+#~ "La ventana emergente de motivo  de rechazo que aparece al rechazar a un "
+#~ "postulante."
+
+#~ msgid ""
+#~ "The applicant's email address automatically populates the :guilabel:`Send "
+#~ "Email` field; additional email recipients **cannot** be added."
+#~ msgstr ""
+#~ "La dirección de correo electrónico del postulante se completa en "
+#~ "automático en el campo :guilabel:`Enviar correo electrónico` y no es "
+#~ "posible agregar más destinatarios."
+
+#~ msgid ""
+#~ "If an email should **not** be sent to the applicant, uncheck "
+#~ "the :guilabel:`Send Email` checkbox."
+#~ msgstr ""
+#~ "Desmarque la casilla :guilabel:`Enviar correo electrónico` si no es "
+#~ "necesario enviarle un correo electrónico al postulante."
+
+#~ msgid ""
+#~ "The email template associated with the refusal reason populates "
+#~ "the :guilabel:`Email Template` field. If a different email template is "
+#~ "desired, select a different template from the :guilabel:`Email Template` "
+#~ "drop-down menu."
+#~ msgstr ""
+#~ "La plantilla de correo electrónico asociada con el motivo de rechazo "
+#~ "aparece en el campo :guilabel:`Plantilla de correo electrónico`. Si desea "
+#~ "utilizar una plantilla distinta, selecciónela en el menú desplegable "
+#~ "antes mencionado."
+
+#~ msgid ""
+#~ "To send the refusal email to the applicant, ensure the :guilabel:`Send "
+#~ "Email` checkbox is ticked, then click :guilabel:`Refuse` at the bottom of "
+#~ "the :guilabel:`Refuse Reason` pop-up window. The refusal email is sent to "
+#~ "the applicant, and a red :guilabel:`Refused` banner appears on the "
+#~ "applicant's card in the top-right corner."
+#~ msgstr ""
+#~ "Asegúrese de que la casilla :guilabel:`Enviar correo electrónico` esté "
+#~ "seleccionada para enviarle el correo de rechazo al solicitante, después "
+#~ "haga clic en :guilabel:`Rechazar` en la parte inferior de la ventana "
+#~ "emergente :guilabel:`Motivo de rechazo`. El correo se enviará al "
+#~ "postulante y en la esquina superior derecha de su tarjeta aparecerá el "
+#~ "mensaje :guilabel:`Rechazado`."
+
+#~ msgid ""
+#~ "An applicant's card with the refused banner appearing in the top-right "
+#~ "corner in red."
+#~ msgstr ""
+#~ "Una tarjeta del empleado con el listón rechazado en la esquina superior "
+#~ "derecha."
+
+#~ msgid ""
+#~ "After refusal, the applicant's card is no longer visible in the job "
+#~ "position's Kanban view. However, it is still possible to view applicants "
+#~ "who have been refused."
+#~ msgstr ""
+#~ "La tarjeta del postulante ya no es visible en la vista de kanban del "
+#~ "puesto de trabajo después de rechazarlo, pero aún es posible ver a los "
+#~ "postulantes que han sido rechazados."
+
+#~ msgid ""
+#~ "To view only the refused applicants, go to :menuselection:`Recruitment "
+#~ "app --> Applications --> By Job Positions`, "
+#~ "or :menuselection:`Recruitment app --> Applications --> All "
+#~ "Applications`. Both methods navigate to the :guilabel:`Applications` "
+#~ "dashboard, the only difference is :guilabel:`By Job Positions` displays "
+#~ "applicants in a Kanban view, while :guilabel:`All Applications` displays "
+#~ "applicants in a list view."
+#~ msgstr ""
+#~ "Para ver solo los candidatos rechazados, ve a :menuselection:`aplicación "
+#~ "Reclutamiento --> Candidaturas --> Por puesto de trabajo`, "
+#~ "o :menuselection:`aplicación Reclutamiento --> Candidaturas --> Todas las "
+#~ "candidaturas`. Ambos métodos llevan al tablero :guilabel:`Candidaturas`, "
+#~ "la única diferencia es que :guilabel:`Por puesto de trabajo` muestra "
+#~ "candidatos en vista kanban, mientras que :guilabel:`Todas las "
+#~ "candidaturas` muestra candidatos en vista de lista."
+
+#~ msgid ""
+#~ "On the :guilabel:`Applications` page, click the :icon:`fa-caret-"
+#~ "down` :guilabel:`(Toggle Search Panel)` button in the search bar, then "
+#~ "click :guilabel:`Refused`, located under the :icon:`fa-"
+#~ "funnel` :guilabel:`Filters` section."
+#~ msgstr ""
+#~ "En la página :guilabel:`Candidaturas`, haz clic en el botón :icon:`fa-"
+#~ "caret-down` :guilabel:`Alternar panel de búsqueda` en la barra de "
+#~ "búsqueda, luego haz clic en :guilabel:`Rechazado`, ubicado bajo la "
+#~ "sección :icon:`fa-funnel` :guilabel:`Filtros`."
+
+#~ msgid ""
+#~ "All applicants that have been refused for the job position appear on "
+#~ "the :guilabel:`Applications` page for that position, organized by the "
+#~ "stage they were in when they were refused."
+#~ msgstr ""
+#~ "Todos los solicitantes que han sido rechazados del puesto aparecen en la "
+#~ "página :guilabel:`Postulaciones` para esa posición y están organizados "
+#~ "por la etapa en la que estaban cuando fueron rechazados."
+
+#~ msgid "Source analysis reporting"
+#~ msgstr "Informe de análisis de origen"
+
+#~ msgid ""
+#~ "This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
+#~ "Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
+#~ "showing the amount of applicants by :guilabel:`Source`, and further "
+#~ "separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+#~ msgstr ""
+#~ "Esto muestra los datos para :icon:`fa-filter` :guilabel:`Candidatos en "
+#~ "los últimos 365 días` en la vista predeterminada :icon:`fa-area-chart` "
+#~ "de :guilabel:`gráfico`. Aparece el número de postulantes "
+#~ "por :guilabel:`origen` y están separados por etapa (:guilabel:`En "
+#~ "progreso` y :guilabel:`Contratado`)."
+
+#~ msgid ""
+#~ "Hover the cursor over any column to view the specific numbers fort that "
+#~ "column."
+#~ msgstr ""
+#~ "Pase el cursor por encima de cualquier columna para ver sus respectivos "
+#~ "números."
+
+#~ msgid ""
+#~ "To identify which sources (e.g., job boards, social media, employee "
+#~ "referrals, company website) produce the most hires, the pivot table view "
+#~ "of the :guilabel:`Source Analysis` report can be configured to display "
+#~ "further details."
+#~ msgstr ""
+#~ "Es posible configurar la vista de tabla dinámica del "
+#~ "informe :guilabel:`análisis del origen` para visualizar detalles "
+#~ "adicionales e identificar las fuentes (por ejemplo, bolsas de trabajo, "
+#~ "redes sociales, referencias de empleados, sitio web de la empresa) que "
+#~ "producen la mayor cantidad de contrataciones."
+
+#~ msgid ""
+#~ "To view the :guilabel:`Source Analysis` report in a pivot table, click "
+#~ "the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right "
+#~ "corner. The data is presented in a pivot table, with rows populated by "
+#~ "job positions, and columns populated by stages."
+#~ msgstr ""
+#~ "Para ver el informe :guilabel:`Análisis de fuentes` en una tabla "
+#~ "dinámica, haz clic en el icono :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Dinámica)` en la esquina superior derecha. Los datos "
+#~ "se presentan en una tabla dinámica, con filas pobladas por puestos de "
+#~ "trabajo y columnas pobladas por etapas."
+
+#~ msgid ""
+#~ "To expand this chart to show what specific sources the applicants came "
+#~ "from, click the :icon:`fa-plus-square` :guilabel:`Total` box above the "
+#~ "columns, to reveal a drop-down menu, and click :guilabel:`Source`."
+#~ msgstr ""
+#~ "Para abrir este gráfico y visualizar el origen específico del que "
+#~ "provienen los postulantes haga clic en la casilla :icon:`fa-plus-"
+#~ "square` :guilabel:`Total` que se encuentra arriba de las columnas. Esta "
+#~ "acción abrirá un menú desplegable, haga clic en :guilabel:`Origen`."
+
+#~ msgid ""
+#~ "Each column is then grouped by the source, such as: :guilabel:`Search "
+#~ "engine`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Each source "
+#~ "displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, "
+#~ "and :guilabel:`Refused`."
+#~ msgstr ""
+#~ "Cada columna se agrupa luego por la fuente, como: :guilabel:`Motor de "
+#~ "búsqueda`, :guilabel:`Facebook`, :guilabel:`LinkedIn`, etc. Cada fuente "
+#~ "muestra un recuento separado "
+#~ "para :guilabel:`Candidato`, :guilabel:`Contratado`, "
+#~ "y :guilabel:`Rechazado`."
+
+#~ msgid ""
+#~ "This information, as presented, makes it difficult to view the specific "
+#~ "numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
+#~ "axis)` icon, to swap the information. After that, the rows represent the "
+#~ "source, and the columns represent the job positions, further divided by "
+#~ "stage."
+#~ msgstr ""
+#~ "Visualizar la información tal como se presenta dificulta conocer cuáles "
+#~ "son los números específicos de cada fuente. Haga clic en el "
+#~ "icono :icon:`fa-exchange` :guilabel:`(Invertir eje)` para intercambiar la "
+#~ "información. Después de eso, las filas representarán el origen y las "
+#~ "columnas representarán los puestos de trabajo divididos por etapa."
+
+#~ msgid "The axes flipped in the source analysis report, in pivot table view."
+#~ msgstr ""
+#~ "Los ejes invertidos en el informe de análisis del origen en la vista de "
+#~ "tabla dinámica."
+
+#~ msgid ""
+#~ "In this view, the total number of applicants, hired employees, and "
+#~ "refused applicants, are displayed for each source, as well as for each "
+#~ "stage by job position."
+#~ msgstr ""
+#~ "En esta vista aparece el número total de postulantes, empleados "
+#~ "contratados y rechazados por origen, así como cada etapa por puesto de "
+#~ "trabajo."
+
+#~ msgid ""
+#~ "*Mediums* are the specific methods the applicant used to discover and "
+#~ "then apply for job positions, such as organic search, paid search, social "
+#~ "media ad, email, etc."
+#~ msgstr ""
+#~ "Los *medios* son los métodos específicos que utiliza el postulante para "
+#~ "encontrar y luego aplicar a puestos de trabajo, como una búsqueda "
+#~ "orgánica, búsqueda de pago, anuncio en redes sociales, correo "
+#~ "electrónico, etc."
+
+#~ msgid ""
+#~ "To further group the results by medium, click into one of the :icon:`fa-"
+#~ "plus-square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the "
+#~ "resulting drop-down menu. The row presents the specific mediums, relevant "
+#~ "to that specific source."
+#~ msgstr ""
+#~ "Haga clic en una de las filas :icon:`fa-plus-square` :guilabel:`[Origen]` "
+#~ "para agrupar los resultados por medio. Haga clic en :guilabel:`Medio` en "
+#~ "el menú desplegable y la fila mostrará los medios específicos relevantes "
+#~ "para esa opción en particular."
+
+#~ msgid "The sources rows, expanded to also show the medium for each source."
+#~ msgstr "Las filas de cada origen abiertas para mostrar su medio."
+
+#~ msgid ""
+#~ "The only mediums that appear for a source, are mediums that have been set "
+#~ "on an applicant's form. If a medium has **not** been set for any "
+#~ "applicants, the medium does not appear in the drop-down rows beneath the "
+#~ "source."
+#~ msgstr ""
+#~ "Los únicos medios que aparecen son los que están configurados en el "
+#~ "formulario de un postulante. Si un medio **no** ha sido configurado para "
+#~ "ningún postulante, este no aparecerá en las filas desplegables abajo del "
+#~ "origen."
 
 #~ msgid ""
 #~ ":guilabel:`Make Vehicle Available`: Click the checkbox if the vehicle can "
