@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 12:17+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -1143,278 +1143,196 @@ msgstr ""
 "니다. 웹 셸, 모듈 종속성, 지속적 통합 및 SSH 액세스와 같은 다양한 기능을 제공"
 "합니다."
 
-#: ../../content/administration/odoo_sh/advanced.rst:5
-msgid "Advanced"
-msgstr "고급"
+#: ../../content/administration/odoo_sh/advanced.rst:3
+msgid "Advanced topics"
+msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:4
+#: ../../content/administration/odoo_sh/advanced.rst:5
+msgid ""
+"This section covers advanced features of Odoo.sh related to :ref:`containers "
+"<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
+"submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
 msgstr "컨테이너"
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:7
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:9
-#: ../../content/administration/odoo_sh/getting_started/builds.rst:14
-msgid "Overview"
-msgstr "전체보기"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:9
+#: ../../content/administration/odoo_sh/advanced.rst:14
 msgid ""
-"Each build is isolated within its own container (Linux namespaced container)."
+"Each build is isolated in its own container (Linux namespace container). The "
+"base is an Ubuntu-based system on which all of Odoo's required dependencies, "
+"as well as common, useful packages, are installed."
 msgstr ""
-"각 빌드는 자체 컨테이너 (Linux 네임스페이스 컨테이너) 내에 별도 보관되어 있습"
-"니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:11
+#: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
-"The base is an Ubuntu system, where all of Odoo's required dependencies, as "
-"well as common useful packages, are installed."
+"If your project requires :ref:`additional Python dependencies <odoo-sh/"
+"module/library>` or more recent releases, you can define "
+"a :file:`requirements.txt` file at the root of your branches that lists "
+"them. The platform will ensure these dependencies are installed in your "
+"containers."
 msgstr ""
-"Ubuntu 시스템을 기준으로 하며, 여기에는 Odoo의 모든 필수 종속 요소과 일반적으"
-"로 사용되는 유용한 패키지가 설치되어 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:14
+#: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
-"If your project requires additional Python dependencies, or more recent "
-"releases, you can define a :file:`requirements.txt` file in the root of your "
-"branches listing them. The platform will take care to install these "
-"dependencies in your containers. `The pip requirements specifiers <https://"
-"pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_ "
-"documentation can help you write a :file:`requirements.txt` file. To have a "
-"concrete example, check out the `requirements.txt file of Odoo <https://"
-"github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
+"For a concrete example, check out the Odoo Community `requirements.txt file "
+"<https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 msgstr ""
-"프로젝트에 추가적으로 Python 종속성이나 최신 릴리즈가 필요한 경우 브랜치의 루"
-"트에 해당 내용이 표시된 :file:`requirements.txt` 파일을 지정할 수 있습니다. "
-"플랫폼에서 컨테이너에 이러한 종속된 항목을 설치합니다. `pip 요구 사항 지정자 "
-"<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
-"specifiers>`_ 문서를 :file:`requirements.txt` 파일 작성 시 참조하세요. 구체적"
-"인 예시는 `Odoo requirements.txt 파일 <https://github.com/odoo/odoo/blob/"
-"18.0/requirements.txt>`_ 을 확인하세요."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:22
+#: ../../content/administration/odoo_sh/advanced.rst:25
 msgid ""
-"The :file:`requirements.txt` files of submodules are taken into account as "
-"well. The platform looks for :file:`requirements.txt` files in each folder "
-"containing Odoo modules: Not in the module folder itself, but in their "
-"parent folder."
+"`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
+"reference/requirement-specifiers/>`_"
 msgstr ""
-"하위 모듈의 :file:`requirements.txt` 파일도 고려합니다. 플랫폼에서는 Odoo 모"
-"듈이 포함된 각 폴더에서 :file:`requirements.txt` 파일을 찾습니다. 모듈 폴더 "
-"자체가 아니라 해당 상위 폴더에서 파일을 찾습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:27
+#: ../../content/administration/odoo_sh/advanced.rst:29
+msgid ""
+"The :file:`requirements.txt` files of :ref:`submodules <odoo-sh/advanced/"
+"submodules>` are also taken into account. The platform looks for such files "
+"in the parent folder of each folder containing an Odoo module."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
 msgstr "디렉토리 구조"
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:29
+#: ../../content/administration/odoo_sh/advanced.rst:38
 msgid ""
-"As the containers are Ubuntu based, their directory structure follows the "
-"linux Filesystem Hierarchy Standard. `Ubuntu's filesystem tree overview "
-"<https://help.ubuntu.com/community/"
-"LinuxFilesystemTreeOverview#Main_directories>`_ explains the main "
-"directories."
+"As the containers are Ubuntu-based, their directory structure follows the "
+"`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_."
 msgstr ""
-"컨테이너는 Ubuntu를 기준으로 하며, 디렉토리 구조는 Linux 파일 시스템 계층 표"
-"준을 따릅니다. `Ubuntu의 파일 시스템 트리 전체보기 <https://help.ubuntu.com/"
-"community/LinuxFilesystemTreeOverview#Main_directories>`_ 에서 주요 디렉토리"
-"에 대해 설명합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:33
-msgid "Here are the Odoo.sh pertinent directories:"
-msgstr "Odoo.sh 관련 디렉토리는 다음과 같습니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:73
-msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
-msgstr "Python 2.7과 3.5 모두를 컨테이너에 설치합니다. 다만:"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:75
+#: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
-"If your project is configured to use Odoo 10.0, the Odoo server runs with "
-"Python 2.7."
+"`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
+"LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
-"프로젝트에서 Odoo 10.0을 사용하도록 설정되어 있는 경우 Python 2.7로 Odoo 서버"
-"를 실행합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:76
-msgid ""
-"If your project is configured to use Odoo 11.0 or above, the Odoo server "
-"runs with Python 3.5."
+#: ../../content/administration/odoo_sh/advanced.rst:44
+msgid "The directories relevant to Odoo.sh are the following:"
 msgstr ""
-"프로젝트에서 Odoo 11.0 이상을 사용하도록 설정되어 있는 경우 Python 3.5로 "
-"Odoo 서버를 실행합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:79
+#: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
 msgstr "데이터베이스 쉘"
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:81
+#: ../../content/administration/odoo_sh/advanced.rst:83
 msgid ""
 "While accessing a container with the shell, you can access the database "
-"using *psql*."
+"using the `psql` command."
 msgstr ""
-"셸을 사용하여 컨테이너에 액세스할 경우 *psql*을 사용하여 데이터베이스에 액세"
-"스할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:92
+#: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
-"**Be careful !** `Use transactions <https://www.postgresql.org/docs/current/"
-"static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) for every *sql* "
-"statements leading to changes (*UPDATE*, *DELETE*, *ALTER*, ...), especially "
-"for your production database."
+"Always use `transactions <https://www.postgresql.org/docs/current/static/sql-"
+"begin.html>`_ (e.g., `BEGIN` (...) `COMMIT` / `ROLLBACK`) when an SQL "
+"statement leads to changes (e.g., `UPDATE`, `DELETE`, `ALTER`, etc.) , "
+"especially for your production database. The transaction mechanism is your "
+"safety net in case of a mistake. You simply have to rollback your changes to "
+"revert your database to its previous state."
 msgstr ""
-"**주의하세요!** `특히 프로덕션 데이터베이스의 경우 변경되는 (*업데이트*, *삭"
-"제*, *변경*, ...)모든 *sql* 구문에 트랜잭션 <https://www.postgresql.org/docs/"
-"current/static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) 을 사용하도록 합"
-"니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:97
+#: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
-"The transaction mechanism is your safety net in case of mistake. You simply "
-"have to rollback your changes to revert your database to its previous state."
+"Do not forget to commit or roll back transactions. Open transactions may "
+"lock records in your tables, and a running database may wait for them to be "
+"released, causing a server to hang indefinitely."
 msgstr ""
-"트랜젝션 매커니즘은 실수에 대비하는 안전망입니다. 변경 사항을 롤백하기만 하"
-"면 데이터베이스를 이전 상태로 되돌릴 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:100
+#: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
-"For example, it may happen that you forget to set your *WHERE* condition."
+"In addition, use your staging databases to test your statements first. It "
+"gives you an extra safety net."
 msgstr ""
-"예를 들어 *WHERE* 조건을 설정하는 것을 잊어버리는 경우가 발생할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:111
+#: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
-"In such a case, you can rollback to revert the unwanted changes that you "
-"just mistakenly did, and rewrite the statement:"
+"You forgot to set your `WHERE` condition. In such a case, you can rollback "
+"to revert the unwanted change:"
 msgstr ""
-"이러한 경우에는 실수로 수행된 원치 않는 변경 사항을 롤백을 통해서 되돌리고 구"
-"문을 다시 작성할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:122
-msgid ""
-"However, do not forget to either commit or rollback your transaction after "
-"having done it. Open transactions may lock records in your tables and your "
-"running database may wait for them to be released. It can cause a server to "
-"hang indefinitely."
+#: ../../content/administration/odoo_sh/advanced.rst:120
+msgid "Then, rewrite the statement and commit the change:"
 msgstr ""
-"다만 트랜잭션을 완료한 후에는 커밋하거나 롤백하는 것을 잊지 않도록 합니다. 트"
-"랜잭션이 계속 진행 중으로 있으면 표에서 레코드를 잠글 수 있으며 실행 중인 데"
-"이터베이스는 해당 레코드가 해제될 때까지 기다리게 됩니다. 이로 인해 서버가 무"
-"기한 중단될 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:126
-msgid ""
-"In addition, when possible, use your staging databases to test your "
-"statements first. It gives you an extra safety net."
-msgstr ""
-"또한 가능하면 스테이징 데이터베이스로 구문을 먼저 테스트하세요. 이를 통해 추"
-"가적인 안전망을 둘 수 있습니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:129
+#: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
 msgstr "Odoo 서버 실행하기"
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:131
+#: ../../content/administration/odoo_sh/advanced.rst:136
 msgid ""
 "You can start an Odoo server instance from a container shell. You won't be "
-"able to access it from the outside world with a browser, but you can for "
-"instance:"
+"able to access it from the outside world with a web browser, but you can, "
+"for example:"
 msgstr ""
-"컨테이너 셸에서 Odoo 서버 인스턴스를 시작할 수 있습니다. 외부에서 브라우저를 "
-"사용하여 액세스할 수는 없으나 다음과 같이 진행할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:134
-msgid "use the Odoo shell,"
-msgstr "Odoo 쉘을 사용하여,"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:146
-msgid "install a module,"
-msgstr "모듈을 설치하고,"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:152
-msgid "update a module,"
-msgstr "모듈을 업데이트하고,"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:158
-msgid "run the tests for a module,"
-msgstr "모듈에 대한 테스트를 실행하고,"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:164
-msgid "In the above commands, the argument:"
-msgstr "위 명령에서 인수는 다음과 같습니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:166
-msgid "``--without-demo=all`` prevents demo data to be loaded for all modules"
+#: ../../content/administration/odoo_sh/advanced.rst:139
+msgid "Use the Odoo shell:"
 msgstr ""
-"``--without-demo=all``은 모든 모듈에 데모 데이터가 로드되지 않도록 합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:167
+#: ../../content/administration/odoo_sh/advanced.rst:151
+msgid "Install a module:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
-"``--stop-after-init`` will immediately shutdown the server instance after it "
-"completed the operations you asked."
+"The argument `--without-demo=all` prevents demo data from being loaded for "
+"all modules."
 msgstr ""
-"``--stop-after-init`` 은 요청한 작업을 완료한 후 서버 인스턴스를 즉시 종료합"
-"니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:169
+#: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
-"More options are available and detailed in the :doc:`CLI documentation </"
-"developer/reference/cli>`."
+"The argument `--stop-after-init` immediately shutdowns the server instance "
+"after the operation is completed."
 msgstr ""
-"더 많은 항목을 선택할 수 있으며 자세한 내용은 :doc:`CLI 문서 </developer/"
-"reference/cli>` 를 참조하세요."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:172
+#: ../../content/administration/odoo_sh/advanced.rst:162
+msgid "Update a module:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:168
+msgid "Run the tests for a module:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:175
+msgid ":doc:`CLI documentation </developer/reference/cli>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
-"You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh "
-"to run your server. Look for \"*odoo: addons paths*\":"
+"To find the addons path used by Odoo.sh to run your server, look for "
+"\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
-"Odoo.sh에서 서버를 시작하는 데 사용하는 로그온 정보를 로그 (*~/logs/"
-"odoo.log*)에서 찾을 수 있습니다. \"*odoo: 애드온 경로*\" 를 찾아 보세요."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:181
+#: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
-"**Be careful**, especially with your production database. Operations that "
-"you perform running this Odoo server instance are not isolated: Changes will "
-"be effective in the database. Always, make your tests in your staging "
-"databases."
+"Operations you perform on an Odoo server instance are not isolated; changes "
+"will be reflected in the database. Remember to always carry out tests in "
+"your staging databases."
 msgstr ""
-"특히 프로덕션 데이터베이스의 경우 **주의하세요**. 이 Odoo 서버 인스턴스를 실"
-"행 중에 수행하는 작업은 별도로 격리되지 않습니다. 변경 사항은 데이터베이스에 "
-"적용됩니다. 항상 스테이징 데이터베이스에서 테스트하시기 바랍니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:186
+#: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
 msgstr "Odoo.sh에서 디버깅하기"
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:188
+#: ../../content/administration/odoo_sh/advanced.rst:196
 msgid ""
-"Debugging an Odoo.sh build is not really different than another Python app. "
-"This article only explains the specificities and limitations of the Odoo.sh "
-"platform, and assumes that you already know how to use a debugger."
+"Debugging an Odoo.sh build is not really different from debugging another "
+"Python app. As such, the goal of this section is to cover the specificities "
+"and limitations of the Odoo.sh platform, and assumes that you already know "
+"how to use a debugger."
 msgstr ""
-"Odoo.sh 빌드 디버깅은 사실 다른 Python 앱과 큰 차이가 없습니다. 이 문서에서"
-"는 Odoo.sh 플랫폼의 특수성과 한계에 대해서만 설명하고 사용자가 디버거 사용법"
-"을 이미 알고 있는 것으로 가정합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:190
+#: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
-"If you don't know how to debug a Python application yet, there are multiple "
-"introductory courses that can be easily found on the Internet."
+"You can use `pdb`, `pudb`, or `ipdb` to debug code on Odoo.sh. Since the "
+"server runs outside a shell, you cannot launch the debugger directly from "
+"your Odoo backend, as it requires a shell to operate."
 msgstr ""
-"아직 Python 애플리케이션을 디버깅하는 방법을 모르는 경우에는 인터넷에서 여러 "
-"가지 입문 과정을 쉽게 찾아볼 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:192
-msgid ""
-"You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh. As "
-"the server is run outside a shell, you cannot launch the debugger directly "
-"from your Odoo instance backend as the debugger needs a shell to operate."
-msgstr ""
-"``pdb``, ``pudb`` 또는 ``ipdb`` 를 사용하여 Odoo.sh에서 코드를 디버깅할 수 있"
-"습니다. 서버가 셸 외부에서 실행되기 때문에 디버거를 작동하려면 셸이 필요하므"
-"로 Odoo 인스턴스 백엔드에서 직접 디버거를 시작할 수 없습니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:195
+#: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
 "`pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default "
 "in every container."
@@ -1422,298 +1340,121 @@ msgstr ""
 "`pdb <https://docs.python.org/3/library/pdb.html>`_ 는 모든 컨테이너에 기본적"
 "으로 설치됩니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:197
+#: ../../content/administration/odoo_sh/advanced.rst:207
 msgid ""
-"If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb "
-"<https://pypi.org/project/ipdb/>`_ you have to install it before."
+"To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
+"project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
-"`pudb <https://pypi.org/project/pudb/>`_ 또는 `ipdb <https://pypi.org/"
-"project/ipdb/>`_ 를 사용하려면 먼저 설치를 해야 합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:199
-msgid "To do so, you have two options:"
-msgstr "진행하려면 다음 두 가지 중에서 선택합니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:201
-msgid "temporary (only in the current build):"
-msgstr "임시로 (현재 빌드에서만):"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:207
-msgid "or"
-msgstr "또는"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:213
+#: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
-"permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` "
-"file."
+"permanently by adding `pudb` or `ipdb` to your "
+"project's :file:`requirements.txt` file, or"
 msgstr ""
-"영구적으로: 프로젝트 ``requirements.txt`` 파일에 ``pudb`` 또는 ``ipdb``를 추"
-"가합니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:216
-msgid "Then edit the code where you want to trigger the debugger and add this:"
-msgstr "그런 다음 디버거를 트리거하는 코드를 편집하고 다음 내용을 추가합니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:224
+#: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
-"The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you "
-"run Odoo from a shell."
+"temporarily (only in the current build) by running the relevant command:"
 msgstr ""
-":code:`sys.__stdin__.isatty()` 조건으로 쉘에서 Odoo를 실행하는지 감지할 수 있"
-"습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:226
-msgid "Save the file and then run the Odoo Shell:"
-msgstr "파일을 저장한 다음 Odoo 셸을 실행합니다."
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:232
-msgid ""
-"Finally, *via* the Odoo Shell, you can trigger the piece of code/function/"
-"method you want to debug."
+#: ../../content/administration/odoo_sh/advanced.rst:221
+msgid "To trigger the debugger, add this to the code you want to debug:"
 msgstr ""
-"마지막으로 Odoo 셸을 *통하여* 디버깅하려는 코드/함수/메서드 항목을 트리거할 "
-"수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:None
-msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
-msgstr "Odoo.sh 셸에서 실행되는 ``pdb``가 나타나 있는 콘솔 스크린샷"
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:6
-msgid "Frequent Technical Questions"
-msgstr "자주 묻는 기술적인 질문"
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:9
-msgid "\"Scheduled actions do not run at the exact time they were expected\""
-msgstr "\"예약된 작업이 예상 시간에 정확하게 실행되지 않음\""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:11
+#: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
-"On the Odoo.sh platform, we cannot guarantee an exact running time for "
-"scheduled actions."
+"The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
+"you are running Odoo from a shell."
 msgstr ""
-"Odoo.sh 플랫폼에서는 예약된 작업에 대한 정확한 실행 시간을 보장해 드릴 수 없"
-"습니다."
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:13
-msgid ""
-"This is due to the fact that there might be multiple customers on the same "
-"server, and we must guarantee a fair share of the server for every customer. "
-"Scheduled actions are therefore implemented slightly differently than on a "
-"regular Odoo server, and are run on a *best effort* policy."
+#: ../../content/administration/odoo_sh/advanced.rst:233
+msgid "Next, save the file and run the Odoo shell:"
 msgstr ""
-"이는 동일한 서버에 고객이 여러 명 있을 수 있기 때문이며 모든 고객이 공평하게 "
-"서버를 공유할 수 있도록 보장해야 합니다. 따라서 예약 작업은 일반 Odoo 서버와 "
-"약간 다르게 구현되며 *최선의 노력* 을 하는 정책에 따라 실행됩니다."
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:16
-msgid ""
-"Do not expect any scheduled action to be run more often than every 5 min."
-msgstr "예약 작업의 실행 빈도는 5분 미만으로 설정할 수 없습니다."
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
-msgid "Are there \"best practices\" regarding scheduled actions?"
-msgstr "예약된 작업과 관련된 \"모범 사례\" 가 있나요?"
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:21
-msgid ""
-"**Odoo.sh always limits the execution time of scheduled actions (*aka* "
-"crons).** Therefore, you must keep this fact in mind when developing your "
-"own crons."
+#: ../../content/administration/odoo_sh/advanced.rst:239
+msgid "Use the Odoo shell to trigger the code you want to debug."
 msgstr ""
-"**Odoo.sh에서 예약 작업 (*일명* 크론)의 실행 시간은 항상 제한되어 있습니다. "
-"따라서 자체 크론을 개발할 때 이 내용을 염두에 두어야 합니다."
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:24
-msgid "We advise that:"
-msgstr "권장 사항으로는:"
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:26
-msgid "Your scheduled actions should work on small batches of records."
-msgstr "예약 작업이 소량의 레코드 배치에서 동작하도록 합니다."
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:27
-msgid ""
-"Your scheduled actions should commit their work after processing each batch; "
-"this way, if they get interrupted by the time-limit, there is no need to "
-"start over."
+#: ../../content/administration/odoo_sh/advanced.rst:0
+msgid "pdb running in an Odoo.sh shell"
 msgstr ""
-"예약 작업에서 각 배치를 처리한 후에 작업을 커밋하도록 해야 시간 제한 때문에 "
-"중단되더라도 다시 시작할 필요가 없게 됩니다."
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
-msgid ""
-"Your scheduled actions should be `idempotent <https://stackoverflow.com/a/"
-"1077421/3332416>`_: they must not cause side-effects if they are started "
-"more often than expected."
-msgstr ""
-"예약된 작업은 `멱등성 <https://stackoverflow.com/a/1077421/3332416>`_ 이 있어"
-"야 합니다. 예정보다 자주 실행되더라도 부작용이 있어서는 안 됩니다."
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
-msgid "How can I automate tasks when an IP address change occurs?"
-msgstr "IP 주소가 변경되었을 경우에는 작업을 어떻게 자동화할 수 있나요?"
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
-msgid ""
-"**Odoo.sh notifies project administrators of IP address changes.** "
-"Additionally, when the IP address of a production instance changes, an HTTP "
-"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
-"address included as a query string parameter (`new`), along with the "
-"previous IP address as an additional parameter (`old`)."
-msgstr ""
-"**Odoo.sh에서 IP 주소가 변경되었다는 사실을 프로젝트 관리자에게 알립니다.** "
-"또한 프로덕션 인스턴스의 IP 주소가 변경되면 HTTP `GET` 요청이 `/_odoo.sh/ip-"
-"change` 경로에서 실행되어 새로운 IP 주소가 쿼리 문자열 매개변수 (`new`)가 표"
-"시되며 이전 IP 주소가 추가 매개변수 (`old`)와 같이 제공됩니다."
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
-msgid ""
-"This mechanism allows custom actions to be applied in response to the IP "
-"address change (e.g., sending an email, contacting a firewall API, "
-"configuring database objects, etc.)"
-msgstr ""
-"이 메커니즘을 통해 IP 주소가 변경될 경우 사용자 지정 작업을 실행할 수 있습니"
-"다 (예: 이메일 전송, 방화벽 API에 연결, 데이터베이스 개체 구성 등)."
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
-msgid ""
-"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-"internally by the platform itself and returns a `403` response if accessed "
-"through any other means."
-msgstr ""
-"보안상의 이유로 '/_odoo.sh/ip-change' 경로는 내부적으로 플랫폼에서만 액세스"
-"할 수 있으며 다른 수단을 통해 액세스할 경우에는 '403' 응답을 반환합니다."
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
-msgid "Here is a pseudo-implementation example:"
-msgstr "다음은 가상 구현의 예시입니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:6
+#: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
 msgid "Submodules"
 msgstr "하위 모듈"
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:11
+#: ../../content/administration/odoo_sh/advanced.rst:249
 msgid ""
-"A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
-"allows you to integrate other Git projects into your code, without the need "
-"to copy-paste all their code."
+"`Git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ let "
+"you link external repositories directly into your project without copy-"
+"pasting code, streamlining deployment by cloning dependencies alongside your "
+"main codebase. You maintain precise version control by choosing exact "
+"branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
-"`Git 하위 모듈 <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ 을 사"
-"용하면 전체 코드를 복사하여 붙여넣을 필요 없이 다른 Git 프로젝트를 내 코드에 "
-"통합할 수 있습니다. ."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:14
+#: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
-"Indeed, your custom modules can depend on modules from other repositories. "
-"Regarding Odoo, this feature allows you to add modules from other Git "
-"repositories into the branches of your repository. Adding these dependencies "
-"in your branch through submodules makes the deployment of your code and "
-"servers easier, as you can clone the repositories added as submodules at the "
-"same time you clone your own repository."
+"On Odoo.sh, the platform automatically detects submodules and adds them to "
+"your addons path for database installation, provided you :ref:`configure a "
+"deploy key in your project and repository settings <odoo-sh/settings/"
+"submodules>` when integrating private repositories."
 msgstr ""
-"실제로 사용자 지정 모듈은 다른 저장소의 모듈에 의존할 수 있습니다. Odoo의 경"
-"우에는 이 기능을 사용하면 다른 Git 저장소의 모듈을 저장소 브랜치에 추가할 수 "
-"있습니다. 하위 모듈을 통해 브랜치에 이와 같은 종속성을 추가하면 자체 저장소"
-"를 복제하는 동시에 하위 모듈로 추가된 저장소를 복제할 수 있으므로 코드 및 서"
-"버 배포를 더 쉽게 할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:19
-msgid ""
-"Besides, you can choose the branch of the repository added as submodule and "
-"you have the control of the revision you want. It's up to you to decide "
-"whether you want to pin the submodule to a specific revision and when you "
-"want to update to a newer revision."
-msgstr ""
-"또한 하위 모듈로 추가된 저장소에 브랜치를 선택할 수 있으며 원하는 버전으로 제"
-"어할 수 있습니다. 하위 모듈을 특정 버전으로 계속 둘 지 여부 및 최신 버전으로 "
-"업데이트하는 시기는 사용자가 지정할 수 있습니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:24
-msgid ""
-"In Odoo.sh, the submodules give you the possibility to use and depend on "
-"modules available in other repositories. The platform will detect that you "
-"added modules through submodules in your branches and add them to your "
-"addons path automatically so you can install them in your databases."
-msgstr ""
-"Odoo.sh에서 하위 모듈을 통해 다른 저장소에서 사용할 수 있는 모듈을 사용하고 "
-"의존할 수 있게 됩니다. 플랫폼에서 브랜치의 하위 모듈을 통해 모듈 추가를 감지"
-"하고 데이터베이스에 설치할 수 있도록 자동으로 애드온 경로에 추가합니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:28
-msgid ""
-"If you add private repositories as submodules in your branches, you need to "
-"configure a deploy key in your Odoo.sh project settings and in your "
-"repository settings. Otherwise Odoo.sh won't be allowed to download them. "
-"The procedure is detailed in the chapter :ref:`Settings > Submodules <odoo-"
-"sh/settings/submodules>`."
-msgstr ""
-"브랜치에 비공개 리포지토리를 서브모듈로 추가하는 경우, Odoo.sh 프로젝트 설정"
-"과 리포지토리 설정에서 배포 키를 구성해야 합니다. 그렇지 않으면 Odoo.sh가 다"
-"운로드할 수 없습니다. 절차는 :ref:`설정 > 서브모듈 <odoo-sh/settings/"
-"submodules>` 장에 자세히 설명되어 있습니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:34
+#: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
 msgstr "하위 모듈 추가하기"
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:37
-msgid "With Odoo.sh (simple)"
-msgstr "Odoo.sh 사용 (기본)"
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:40
-msgid ""
-"For now it is not possible to add **private** repositories with this method. "
-"You can nevertheless do so :ref:`with Git <odoo-sh/settings/submodules>`."
+#: ../../content/administration/odoo_sh/advanced.rst:265
+msgid "With Odoo.sh"
 msgstr ""
-"현재 이 방법으로 **비공개** 리포지토리를 추가할 수 없습니다. 그러나 :ref:`Git"
-"으로 <odoo-sh/settings/submodules>` 추가할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:43
+#: ../../content/administration/odoo_sh/advanced.rst:268
 msgid ""
-"On Odoo.sh, in the branches view of your project, choose the branch in which "
-"you want to add a submodule."
+"Currently, it is not possible to add **private** repositories with Odoo.sh. "
+"You can nevertheless do so with Git."
 msgstr ""
-"Odoo.sh의 프로젝트의 브랜치 보기에서 하위 모듈을 추가하려는 브랜치를 선택합니"
-"다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:45
+#: ../../content/administration/odoo_sh/advanced.rst:271
 msgid ""
-"In the upper right corner, click on the *Submodule* button, and then on "
-"*Run*."
+"From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh "
+"project, choose the branch in which you want to add a submodule."
 msgstr ""
-"오른쪽 상단에 있는 *하위 모듈* 버튼을 클릭한 다음 *실행* 을 클릭합니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:50
-msgid "A dialog with a form is shown. Fill the inputs as follows:"
-msgstr "대화 상자에서 양식이 표시됩니다. 다음과 같이 입력합니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:52
-msgid "Repository URL: The SSH URL of the repository."
-msgstr "저장소 URL: 저장소의 SSH URL입니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:53
-msgid "Branch: The branch you want to use."
-msgstr "브랜치: 사용하려는 브랜치입니다.."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:54
+#: ../../content/administration/odoo_sh/advanced.rst:273
 msgid ""
-"Path: The folder in which you want to add this submodule in your branch."
-msgstr "경로: 이 하위 모듈을 추가하려는 브랜치의 폴더입니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:59
-msgid ""
-"On Github, you can get the repository URL with the *Clone or download* "
-"button of the repository. Make sure to *use SSH*."
+"In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
+"on Odoo.sh`."
 msgstr ""
-"Github에서는 저장소에 있는 *복제 또는 다운로드* 버튼을 사용하여 저장소 URL을 "
-"확보할 수 있습니다. 반드시 *SSH를 사용* 하세요."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:67
+#: ../../content/administration/odoo_sh/advanced.rst:274
+msgid "In the dialog box, fill in the following:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:276
+msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:279
+msgid ""
+"On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:284
+msgid ":guilabel:`Branch`: the specific branch that should be used"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:285
+msgid ""
+":guilabel:`Path`: the folder in which the submodule should be added to in "
+"your branch"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
 msgstr "Git 사용 (고급)"
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:69
+#: ../../content/administration/odoo_sh/advanced.rst:292
 msgid ""
 "In a terminal, in the folder where your Git repository is cloned, checkout "
 "the branch in which you want to add a submodule:"
@@ -1721,83 +1462,90 @@ msgstr ""
 "터미널 내 Git 저장소가 복제되어 있는 폴더에서 하위 모듈을 추가하려는 브랜치"
 "를 체크아웃합니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:76
-msgid "Then, add the submodule using the command below:"
-msgstr "그런 다음 아래 명령어를 사용하여 하위 모듈을 추가합니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:82
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:94
-msgid "Replace"
-msgstr "대체"
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:84
-msgid ""
-"*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the "
-"repository you want to add as submodule,"
+#: ../../content/administration/odoo_sh/advanced.rst:299
+msgid "Add the submodule:"
 msgstr ""
-"*<git@yourprovider.com>: <username/repository.git>* 를 이용하여 하위 모듈로 "
-"추가하려는 저장소의 SSH URL로,"
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:85
-msgid "*<branch>* by the branch you want to use in the above repository,"
-msgstr "*<branch>* 위 저장소에서 사용하려는 브랜치별로,"
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:86
-msgid "*<path>* by the folder in which you want to add this submodule."
-msgstr "*<path>* 이 하위 모듈을 추가하려는 폴더별로."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:88
-msgid "Commit and push your changes:"
-msgstr "변경 사항을 커밋 및 푸시합니다."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:96
+#: ../../content/administration/odoo_sh/advanced.rst:305
 msgid ""
-"<remote> by the repository on which you want to push your changes. For a "
+"*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the "
+"repository you want to add as a submodule"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:307
+msgid "*<branch>*: the branch you want to use in the above repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:308
+msgid "*<path>*: the folder in which you want to add this submodule"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:310
+msgid "Commit and push the changes:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:316
+msgid ""
+"*<remote>*: the repository on which you want to push your changes. On a "
 "standard Git setup, this is *origin*."
 msgstr ""
-"<remote> 변경 사항을 푸시하려는 저장소를 기준으로 합니다. 표준 Git 설정의 경"
-"우 이는 *원 위치* 입니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:97
+#: ../../content/administration/odoo_sh/advanced.rst:318
 msgid ""
-"<branch> by the branch on which you want to push your changes. Most likely "
-"the branch you used :code:`git checkout` on in the first step."
+"*<branch>*: the branch on which you want to push your changes. Most likely, "
+"the branch you checked out in the first step."
 msgstr ""
-"<branch> 변경 사항을 푸시하려는 브랜치입니다. 첫 번째 단계에서 :code:`git 체"
-"크아웃` 을 실행한 브랜치일 가능성이 높습니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:100
+#: ../../content/administration/odoo_sh/advanced.rst:322
 msgid ""
-"You can read the `git-scm.com documentation <https://git-scm.com/book/en/v2/"
-"Git-Tools-Submodules>`_ for more details about the Git submodules. For "
-"instance, if you would like to update your submodules to have their latest "
-"revision, you can follow the chapter `Pulling in Upstream changes <https://"
-"git-scm.com/book/en/v2/Git-Tools-"
-"Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
+"When adding a repository that contains many modules, you may want to ignore "
+"some of them if any are installed automatically.  To do so, prefix your "
+"submodule folder with a :code:`.` (e.g. `.folder`). The platform will ignore "
+"this folder, and you can hand-pick the modules by creating `symbolic links "
+"<https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
-"Git 하위 모듈에 대한 자세한 내용은 `git-scm.com 문서 <https://git-scm.com/"
-"book/en/v2/Git-Tools-Submodules>`_ 를 참조하세요. 예를 들어, 하위 모듈을 최"
-"신 버전으로 업데이트하려면 '업스트림 변경 사항 가져오기 <https://git-scm.com/"
-"book/en/v2/Git-Tools-"
-"Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_ 에 안내"
-"된 내용에 따라 진행합니다."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:107
-msgid "Ignore modules"
-msgstr "모듈 무시하기"
+#: ../../content/administration/odoo_sh/advanced.rst:330
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:80
+msgid "Scheduled actions"
+msgstr "예약된 활동"
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:109
+#: ../../content/administration/odoo_sh/advanced.rst:332
 msgid ""
-"If you're adding a repository that contains a lot of modules, you may want "
-"to ignore some of them in case there are any that are installed "
-"automatically. To do so, you can prefix your submodule folder with "
-"a :code:`.`. The platform will ignore this folder and you can hand pick your "
-"modules by creating symlinks to them from another folder."
+"On the Odoo.sh platform, scheduled actions are implemented slightly "
+"differently from a regular Odoo server and are run on a best-effort basis. "
+"This is because there might be multiple customers on the same server, and "
+"each customer is guaranteed a fair share of the server's resources. "
+"Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
-"추가하려는 저장소에 많은 모듈이 포함되어 있는 경우, 자동으로 설치되는 모듈 일"
-"부를 무시할 수 있습니다. 설치되지 않게 하려면 하위 모듈 폴더 앞에 :코드:`.` "
-"를 붙이면 됩니다. 플랫폼은 이 폴더를 무시하며 다른 폴더에서 해당 모듈에 대한 "
-"링크 심볼을 생성하여 모듈을 직접 선택할 수 있습니다."
+
+#: ../../content/administration/odoo_sh/advanced.rst:338
+msgid ""
+"Do not expect any scheduled action to be run more often than every five "
+"minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:340
+msgid ""
+"As the execution time of scheduled actions is limited, it is advised to "
+"ensure your scheduled actions:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:343
+msgid "Work on small batches of records."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:344
+msgid ""
+"Commit their work after processing each batch so that if they are "
+"interrupted by the time limit, they do not need to start over."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:346
+msgid ""
+"Are idempotent, i.e, they must not cause side effects if they are started "
+"more often than expected."
+msgstr ""
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2250,8 +1998,8 @@ msgid "Open the :file:`views/views.xml` file and after:"
 msgstr ":file:`views/views.xml`\\ 파일을 열고 다음 뒤에:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:306
-#: ../../content/administration/odoo_sh/create_module.rst:377
-#: ../../content/administration/odoo_sh/create_module.rst:389
+#: ../../content/administration/odoo_sh/create_module.rst:379
+#: ../../content/administration/odoo_sh/create_module.rst:391
 msgid "add:"
 msgstr "추가:"
 
@@ -2304,11 +2052,11 @@ msgstr ""
 "지 않으면 앱 목록에서 수동으로\\ :ref:`모듈을 업데이트 <odoo-sh/module/"
 "deploy/install>`\\ 할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/create_module.rst:343
+#: ../../content/administration/odoo_sh/create_module.rst:345
 msgid "Use an external Python library"
 msgstr "외부 Python 라이브러리 사용"
 
-#: ../../content/administration/odoo_sh/create_module.rst:345
+#: ../../content/administration/odoo_sh/create_module.rst:347
 msgid ""
 "If you would like to use an external Python library that is not installed by "
 "default, you can define a :file:`requirements.txt` file listing the external "
@@ -2320,7 +2068,7 @@ msgstr ""
 "니다. 플랫폼은 이 파일을 사용하여 프로젝트에 필요한 Python 라이브러리를 자동"
 "으로 설치합니다."
 
-#: ../../content/administration/odoo_sh/create_module.rst:350
+#: ../../content/administration/odoo_sh/create_module.rst:352
 msgid ""
 "It is not possible to install or upgrade system packages on Odoo.sh "
 "databases (e.g., apt packages). However, under specific conditions, "
@@ -2333,7 +2081,7 @@ msgstr ""
 "www.odoo.sh/faq#install_dependencies>`_. 이는 컴파일을 위해 시스템 패키지가 "
 "필요한 Python 모듈과 타사 Odoo 모듈에도 적용됩니다."
 
-#: ../../content/administration/odoo_sh/create_module.rst:354
+#: ../../content/administration/odoo_sh/create_module.rst:356
 msgid ""
 "PostgreSQL extensions are not supported on Odoo.sh hence it is not possible "
 "to install extensions (such as PostGIS, ltree, ...) in Odoo.sh databases."
@@ -2341,7 +2089,7 @@ msgstr ""
 "PostgreSQL 확장은 Odoo.sh에서 지원되지 않으므로 Odoo.sh 데이터베이스에 확장"
 "(예: PostGIS, ltree 등)을 설치할 수 없습니다."
 
-#: ../../content/administration/odoo_sh/create_module.rst:357
+#: ../../content/administration/odoo_sh/create_module.rst:359
 msgid ""
 "For example, to use the `Unidecode library <https://pypi.org/project/"
 "Unidecode>`_ in your module:"
@@ -2349,12 +2097,12 @@ msgstr ""
 "예를 들어 모듈에서 `Unidecode 라이브러리<https://pypi.org/project/"
 "Unidecode>`_\\ 를 사용하려면:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:359
+#: ../../content/administration/odoo_sh/create_module.rst:361
 msgid ""
 "Create a file :file:`requirements.txt` in the root folder of your repository:"
 msgstr "저장소의 루트 폴더에\\ :file:`requirements.txt`\\ 파일을 생성하십시오:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:361
+#: ../../content/administration/odoo_sh/create_module.rst:363
 msgid ""
 "From the Odoo.sh editor, create and open the file :file:`~/src/user/"
 "requirements.txt`."
@@ -2362,7 +2110,7 @@ msgstr ""
 "Odoo.sh 편집기에서\\ :file:`~/src/user/requirements.txt`\\ 파일을 생성하고 여"
 "십시오."
 
-#: ../../content/administration/odoo_sh/create_module.rst:362
+#: ../../content/administration/odoo_sh/create_module.rst:364
 msgid ""
 "From your computer, create nd open the file :file:`~/src/odoo-addons/"
 "requirements.txt`."
@@ -2370,11 +2118,11 @@ msgstr ""
 "컴퓨터에서\\ :file:`~/src/odoo-addons/requirements.txt`\\ 파일을 생성하고 여"
 "십시오."
 
-#: ../../content/administration/odoo_sh/create_module.rst:364
+#: ../../content/administration/odoo_sh/create_module.rst:366
 msgid "Add to the file:"
 msgstr "파일에 추가:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:370
+#: ../../content/administration/odoo_sh/create_module.rst:372
 msgid ""
 "You can now use the library in your module, for instance, to remove accents "
 "from characters in the name field of your model. To do so, open "
@@ -2384,11 +2132,11 @@ msgstr ""
 "서 문자의 악센트를 제거할 수 있습니다. 이렇게 하려면\\ :file:`models/"
 "models.py`\\ 파일을 열고 다음 앞에:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:383
+#: ../../content/administration/odoo_sh/create_module.rst:385
 msgid "After:"
 msgstr "다음 뒤:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:404
+#: ../../content/administration/odoo_sh/create_module.rst:406
 msgid ""
 "Increase the module version to install the Python dependency by editing "
 "the :ref:`module's manifest <odoo-sh/module/add/"
@@ -2398,13 +2146,13 @@ msgstr ""
 "manifest>`\\ :file:`__manifest__.py`\\ 를 편집하여 Python 종속성을 설치하도"
 "록 모듈 버전을 증가시키십시오."
 
-#: ../../content/administration/odoo_sh/create_module.rst:407
+#: ../../content/administration/odoo_sh/create_module.rst:409
 msgid "Then, :ref:`push the changes <odoo-sh/module/push-development>`."
 msgstr ""
 "그런 다음\\ :ref:`변경 사항을 푸시 <odoo-sh/module/push-development>`\\ 하십"
 "시오."
 
-#: ../../content/administration/odoo_sh/create_module.rst:410
+#: ../../content/administration/odoo_sh/create_module.rst:412
 msgid ""
 "Stage the :file:`requirements.txt` file by running `git add "
 "requirements.txt`."
@@ -2416,76 +2164,105 @@ msgstr ""
 msgid "Getting started"
 msgstr "시작하기"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:8
+#: ../../content/administration/odoo_sh/getting_started.rst:10
 msgid "Main components"
 msgstr "주요 구성 내용"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:10
+#: ../../content/administration/odoo_sh/getting_started.rst:12
 msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
-"involved. While they are all interconnected, each one plays a distinct role "
-"in the development and deployment of Odoo applications:"
+"involved:"
 msgstr ""
-"Odoo.sh로 작업할 때 관련된 주요 구성 요소를 이해하는 것이 중요합니다. 모두 상"
-"호 연결되어 있지만 각각은 Odoo 애플리케이션의 개발 및 배포에서 고유한 역할을 "
-"수행합니다:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
+msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:15
+msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:16
+msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
-"**GitHub repository**: a version-controlled space where the Odoo "
+"While they are all interconnected, each one plays a distinct role in the "
+"development and deployment of Odoo applications. Together, they form a "
+"cohesive pipeline from code development to a live business use."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:25
+msgid "GitHub repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:27
+msgid ""
+"A GitHub repository is like a folder on your computer that contains all the "
+"files and folders for a specific project. The difference is that it's stored "
+"on GitHub and can be accessed and edited by multiple people on different "
+"computers."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:31
+msgid ""
+"In other words, a GitHub repository is a place where you can store your "
+"project's files and share them with others, so they can collaborate with "
+"you, make changes, and contribute to your project. It also tracks all "
+"changes to your project over time, so you can easily roll back to a previous "
+"version if needed."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:36
+msgid ""
+"Additionally, GitHub offers many features to help you manage your project, "
+"such as issue tracking, pull requests, and code reviews. It's a powerful "
+"tool for managing and collaborating on software projects, and is widely used "
+"by developers around the world. a version-controlled space where the Odoo "
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
-"**GitHub 저장소**: Odoo 애플리케이션의 소스 코드가 저장되는 버전 제어 공간입"
-"니다. 모든 변경 사항을 추적하고 협업을 지원하며 공개 또는 비공개로 설정할 수 "
-"있습니다."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
+#: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
 msgstr "GitHub 저장소 예시"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:20
+#: ../../content/administration/odoo_sh/getting_started.rst:48
+msgid "Odoo.sh project"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
-"**Odoo.sh project**: a Platform as a Service (PaaS) that integrates with "
+"An Odoo.sh project is a *Platform as a Service* (PaaS) that integrates with "
 "GitHub and enables streamlined development, testing, and deployment of Odoo "
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
-"**Odoo.sh 프로젝트**: GitHub와 통합되어 Odoo 애플리케이션의 간소화된 개발, 테"
-"스트 및 배포를 가능하게 하는 PaaS(Platform as a Service)입니다. 자동 백업, 스"
-"테이징 환경 및 지속적 통합 파이프라인과 같은 도구가 포함되어 있습니다."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
+#: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
 msgstr "Odoo.sh 프로젝트 예시"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:27
-msgid ""
-"**Odoo database**: a database stores all the operational data used and "
-"generated by Odoo applications, such as business records, configurations, "
-"and user data."
+#: ../../content/administration/odoo_sh/getting_started.rst:60
+msgid "Odoo database"
 msgstr ""
-"**Odoo 데이터베이스**: 비즈니스 레코드, 구성 및 사용자 데이터와 같이 Odoo 애"
-"플리케이션에서 사용하고 생성하는 모든 운영 데이터를 저장하는 데이터베이스입니"
-"다."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
+#: ../../content/administration/odoo_sh/getting_started.rst:62
+msgid ""
+"An Odoo database stores all the operational data used and generated by Odoo "
+"applications, such as business records, configurations, and user data."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
 msgstr "Odoo 데이터베이스 예시"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:33
-msgid ""
-"Together, they form a cohesive pipeline from code development to a live "
-"business use."
-msgstr ""
-"이들은 함께 코드 개발에서 실제 비즈니스 사용까지 응집력 있는 파이프라인을 형"
-"성합니다."
-
-#: ../../content/administration/odoo_sh/getting_started.rst:36
+#: ../../content/administration/odoo_sh/getting_started.rst:71
 msgid "User types"
 msgstr "사용자 유형"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:38
+#: ../../content/administration/odoo_sh/getting_started.rst:73
 msgid ""
 "Odoo.sh involves different types of users, each with a specific role in the "
 "project lifecycle:"
@@ -2493,33 +2270,143 @@ msgstr ""
 "Odoo.sh에는 프로젝트 수명 주기에서 각각 특정 역할을 가진 다양한 유형의 사용자"
 "가 있습니다:"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:40
+#: ../../content/administration/odoo_sh/getting_started.rst:75
 msgid ""
-"GitHub users: developers with access to the GitHub repository linked to the "
-"Odoo.sh project. Access to the repository does not automatically make "
+"**GitHub users**: developers with access to the GitHub repository linked to "
+"the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
-"GitHub 사용자: Odoo.sh 프로젝트에 연결된 GitHub 저장소에 액세스할 수 있는 개"
-"발자입니다. 저장소에 대한 액세스가 자동으로 Odoo.sh 프로젝트의 협력자가 되는 "
-"것은 아닙니다."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:44
+#: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
-"Odoo.sh collaborators: individuals managing the Odoo.sh project. Each "
+"**Odoo.sh collaborators**: individuals managing the Odoo.sh project. Each "
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
-"Odoo.sh 협력자: Odoo.sh 프로젝트를 관리하는 개인입니다. 각 협력자는 GitHub 사"
-"용자와 연결되어야 합니다. 그러나 협력자는 데이터베이스 사용자와 동일하지 않습"
-"니다."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:47
+#: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
-"Database users: end-users of the deployed Odoo database. They interact with "
-"the live system but are not involved in development or project management."
+"**Database users**: end-users of the deployed Odoo database. They interact "
+"with the live system but are not involved in development or project "
+"management."
 msgstr ""
-"데이터베이스 사용자: 배포된 Odoo 데이터베이스의 최종 사용자입니다. 라이브 시"
-"스템과 상호 작용하지만 개발이나 프로젝트 관리에는 관여하지 않습니다."
+
+#: ../../content/administration/odoo_sh/getting_started.rst:86
+msgid "Technical concepts"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:88
+msgid ""
+"When working with Odoo.sh, it is also important to understand several "
+"technical concepts:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:90
+msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:91
+msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:92
+msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:97
+msgid "Forking a repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:99
+msgid ""
+"Forking a repository on GitHub is when you create a copy of someone else's "
+"repository on your own account. This allows you to make changes to the "
+"repository without affecting the original version."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:102
+msgid ""
+"When you fork a repository, you create your own copy of the repository, "
+"complete with all the files and folders in the original repository. You can "
+"then make changes to the files in your copy of the repository and commit "
+"them, just like you would with any other repository."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:106
+msgid ""
+"The benefit of forking a repository is that you can make changes to the code "
+"without affecting the original version, which is useful when you want to "
+"experiment with new features or fix bugs in someone else's code. You can "
+"also use the forked repository as a starting point for your project, making "
+"changes as needed."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:111
+msgid ""
+"Once you have made changes to the forked repository, you can submit a pull "
+"request to the original repository owner, asking them to merge your changes "
+"back into their repository. This is a common approach for open-source "
+"projects to accept contributions from other developers, and it can be a "
+"great way to get involved in the community and improve your coding skills."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:119
+msgid "Pushing a commit"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:121
+msgid ""
+"When you make changes to a file or multiple files in a Git repository on "
+"your local computer, those changes are considered *uncommitted*. In other "
+"words, Git knows that changes have been made, but they haven't been "
+"officially saved or recorded yet."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:125
+msgid ""
+"To save those changes and add them to the Git repository, you need to create "
+"a *commit*. A commit is a snapshot of the changes you made to the files at a "
+"specific point in time. It records what changes were made, who made them, "
+"and when."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:129
+msgid ""
+"Once you've created a commit, you can then *push* it to a remote repository, "
+"such as one hosted on GitHub. Pushing a commit means sending the changes "
+"you've made in the commit from your local repository to the remote "
+"repository so that others can see and use them."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:133
+msgid ""
+"To summarize, pushing a commit means sending the changes you have made to "
+"the files in your Git repository from your local computer to a remote "
+"repository. It is a way to share your changes with others and collaborate on "
+"a project."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:140
+msgid "Merging a branch"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:142
+msgid ""
+"Merging a branch into another is the process of combining the changes made "
+"in one branch into the other. For example, let's say you created a new "
+"branch called `feature-branch` to work on a new feature for your project. "
+"Once you've finished making changes to this branch, you can merge those "
+"changes back into the main branch (often called the `master` or `main` "
+"branch)."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:147
+msgid ""
+"When you merge a branch, Git examines the changes in both branches and "
+"attempts to combine them. If there are any conflicts between the changes "
+"made in the two branches, Git will prompt you to resolve them before "
+"completing the merge (code-wise)."
+msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -2703,10 +2590,6 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:78
 msgid "The neutralization disables:"
 msgstr "중립화 시 비활성화 대상:"
-
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:80
-msgid "Scheduled actions"
-msgstr "예약된 활동"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:83
 msgid ""
@@ -3817,12 +3700,9 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:597
 msgid ""
 ":guilabel:`Install only my modules (does not include submodules)`: only "
-"installs the branch's modules, excluding :doc:`submodules <../advanced/"
+"installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
-":guilabel:`Install only my modules (does not include submodules)`: 브랜치의 "
-"모듈만 설치하고 :doc:`하위 모듈 <../advanced/submodules>`은 제외합니다. 이것"
-"은 기본 옵션입니다."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4226,8 +4106,8 @@ msgstr ""
 "사용됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
-msgid ":doc:`Submodules documentation <../advanced/submodules>`"
-msgstr ":doc:`하위 모듈 참고 문서 <../advanced/submodules>`"
+msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
+msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -4309,6 +4189,10 @@ msgstr ""
 "enterprise <https://github.com/odoo/enterprise>`_)에 의해 로드된 데이터베이스"
 "입니다. 빌드의 목적은 해당 리비전과 관련된 서버, 데이터베이스 및 기능의 올바"
 "른 동작을 테스트하는 것입니다."
+
+#: ../../content/administration/odoo_sh/getting_started/builds.rst:14
+msgid "Overview"
+msgstr "전체보기"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
 msgid "Overiew of the builds"
@@ -4793,10 +4677,8 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/create.rst:93
 msgid ""
 "For publicly available community modules, you may also consider "
-"using :doc:`submodules <../advanced/submodules>`."
+"using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
-"공개적으로 사용 가능한 커뮤니티 모듈의 경우 :doc:`서브모듈 <../advanced/"
-"submodules>` 사용을 고려할 수도 있습니다."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -5127,10 +5009,6 @@ msgid "Push your changes."
 msgstr "변경 사항을 푸시하세요."
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:119
-msgid "In this command:"
-msgstr "이 명령에서:"
-
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid ""
 "`https` is the name of your *HTTPS* GitHub remote repository (e.g., `https://"
 "github.com/username/repository.git`)."
@@ -5138,11 +5016,11 @@ msgstr ""
 "`https`는 *HTTPS* GitHub 원격 저장소의 이름입니다(예: `https://github.com/"
 "username/repository.git`)."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:123
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid "`HEAD` is the reference to the latest revision you committed."
 msgstr "`HEAD` 는 커밋된 최신 리비전을 나타냅니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:124
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:122
 msgid ""
 "`<branch>` must be replaced by the name of the branch to which you want to "
 "push the changes, most likely the current branch if you work on a "
@@ -5151,7 +5029,7 @@ msgstr ""
 "`<branch>`는 변경 사항을 푸시할 브랜치 이름으로 교체해야 하며, 개발 빌드에서 "
 "작업하는 경우 대부분 현재 브랜치일 것입니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:127
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:125
 msgid ""
 "You will be prompted to input your GitHub username and password. After "
 "inputting your credentials, press enter."
@@ -5163,7 +5041,7 @@ msgstr ""
 msgid "The commands to commit and push changes"
 msgstr "변경 사항을 커밋하고 푸시하는 명령어"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:134
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:132
 msgid ""
 "If you activate two-factor authentication for your GitHub account, you can "
 "create a `personal access token <https://docs.github.com/en/authentication/"
@@ -5182,7 +5060,7 @@ msgstr ""
 "features/repository-access-and-collaboration/inviting-collaborators-to-a-"
 "personal-repository>`_로 충분합니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:140
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:138
 msgid ""
 "It is not possible to authenticate yourself using SSH, as your private SSH "
 "key is not hosted in your build containers for security reasons, nor "
@@ -5193,7 +5071,7 @@ msgstr ""
 "를 통해 에디터에 액세스하므로 SSH 에이전트를 통해 전달되지도 않기 때문에 SSH"
 "를 사용하여 인증할 수 없습니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:143
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:141
 msgid ""
 "The source folder `~/src/user` is not checked out on a branch but rather on "
 "a detached revision. This is because builds work on specific revisions "
@@ -5204,7 +5082,7 @@ msgstr ""
 "는 브랜치가 아닌 특정 리비전에서 작동하므로 동일한 브랜치에서 서로 다른 리비"
 "전으로 여러 빌드를 가질 수 있습니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:147
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:145
 msgid ""
 "Once your changes are pushed, according to your :ref:`branch push behavior "
 "<odoo-sh/branches/tabs/settings>`, a new build may be created. You can "
@@ -5217,11 +5095,11 @@ msgstr ""
 "다. 생성된 새 빌드와 동일한 리비전을 가지고 있기 때문입니다. 그러나 항상 브랜"
 "치의 최신 리비전을 사용하는 빌드의 에디터에 있는지 확인하십시오."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:153
 msgid "Consoles"
 msgstr "콘솔"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:157
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
 msgid ""
 "You can open Python consoles, which are `IPython interactive shells <https://"
 "ipython.readthedocs.io/en/stable/interactive/tutorial.html>`_. Using these "
@@ -5235,7 +5113,7 @@ msgstr ""
 "ipython.readthedocs.io/en/stable/config/integrating.html#rich-display>`_을 활"
 "용하여 객체를 HTML로 표시할 수 있습니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:164
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:162
 msgid "The :code:`Pretty` class displays lists in a legible way."
 msgstr ":code:`Pretty` 클래스는 목록을 더욱 읽기 쉽게 나타냅니다."
 
@@ -5243,7 +5121,7 @@ msgstr ":code:`Pretty` 클래스는 목록을 더욱 읽기 쉽게 나타냅니�
 msgid "Pretty class example"
 msgstr "클래스 예시"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:170
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:168
 msgid ""
 "Using `pandas <https://pandas.pydata.org/pandas-docs/stable/getting_started/"
 "tutorials.html>`_ you can display:"
@@ -5251,7 +5129,7 @@ msgstr ""
 "`pandas <https://pandas.pydata.org/pandas-docs/stable/getting_started/"
 "tutorials.html>`_ 를 활용하여 다음과 같이 표시합니다:"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:173
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:171
 msgid "Cells of a CSV file"
 msgstr "CSV 파일에 있는 셀"
 
@@ -5259,7 +5137,7 @@ msgstr "CSV 파일에 있는 셀"
 msgid "pandas CSV example"
 msgstr "pandas CSV 예시"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:178
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:176
 msgid "Graphs"
 msgstr "그래프"
 
@@ -5267,7 +5145,7 @@ msgstr "그래프"
 msgid "pandas graph example"
 msgstr "pandas 그래프 예시"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:183
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:181
 msgid ""
 "You can open Odoo shell consoles to experiment with the Odoo registry and "
 "model methods of your database. You can also read or write directly on your "
@@ -5276,7 +5154,7 @@ msgstr ""
 "Odoo 셸 콘솔을 열어 데이터베이스의 Odoo 레지스트리 및 모델 메서드를 실험할 "
 "수 있습니다. 레코드에 직접 읽거나 쓸 수도 있습니다."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:187
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:185
 msgid ""
 "In an Odoo shell console, transactions are automatically committed. This "
 "means that changes made to records are applied to the database. For example, "
@@ -5288,7 +5166,7 @@ msgstr ""
 "에서도 업데이트됩니다. 따라서 프로덕션 데이터베이스에서는 Odoo 셸 콘솔을 신중"
 "하게 사용하십시오."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:192
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:190
 msgid ""
 "You can use `env` to invoke models of your database registry, "
 "e.g., :code:`env['res.users']`."
@@ -10489,6 +10367,629 @@ msgstr ":doc:`Odoo.sh 참고 문서 <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`지원되는 Odoo 버전 <standard_extended_support>`"
+
+#~ msgid "Advanced"
+#~ msgstr "고급"
+
+#~ msgid ""
+#~ "Each build is isolated within its own container (Linux namespaced "
+#~ "container)."
+#~ msgstr ""
+#~ "각 빌드는 자체 컨테이너 (Linux 네임스페이스 컨테이너) 내에 별도 보관되어 "
+#~ "있습니다."
+
+#~ msgid ""
+#~ "The base is an Ubuntu system, where all of Odoo's required dependencies, "
+#~ "as well as common useful packages, are installed."
+#~ msgstr ""
+#~ "Ubuntu 시스템을 기준으로 하며, 여기에는 Odoo의 모든 필수 종속 요소과 일반"
+#~ "적으로 사용되는 유용한 패키지가 설치되어 있습니다."
+
+#~ msgid ""
+#~ "If your project requires additional Python dependencies, or more recent "
+#~ "releases, you can define a :file:`requirements.txt` file in the root of "
+#~ "your branches listing them. The platform will take care to install these "
+#~ "dependencies in your containers. `The pip requirements specifiers "
+#~ "<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+#~ "specifiers>`_ documentation can help you write a :file:`requirements.txt` "
+#~ "file. To have a concrete example, check out the `requirements.txt file of "
+#~ "Odoo <https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
+#~ msgstr ""
+#~ "프로젝트에 추가적으로 Python 종속성이나 최신 릴리즈가 필요한 경우 브랜치"
+#~ "의 루트에 해당 내용이 표시된 :file:`requirements.txt` 파일을 지정할 수 있"
+#~ "습니다. 플랫폼에서 컨테이너에 이러한 종속된 항목을 설치합니다. `pip 요구 "
+#~ "사항 지정자 <https://pip.pypa.io/en/stable/reference/pip_install/"
+#~ "#requirement-specifiers>`_ 문서를 :file:`requirements.txt` 파일 작성 시 참"
+#~ "조하세요. 구체적인 예시는 `Odoo requirements.txt 파일 <https://github.com/"
+#~ "odoo/odoo/blob/18.0/requirements.txt>`_ 을 확인하세요."
+
+#~ msgid ""
+#~ "The :file:`requirements.txt` files of submodules are taken into account "
+#~ "as well. The platform looks for :file:`requirements.txt` files in each "
+#~ "folder containing Odoo modules: Not in the module folder itself, but in "
+#~ "their parent folder."
+#~ msgstr ""
+#~ "하위 모듈의 :file:`requirements.txt` 파일도 고려합니다. 플랫폼에서는 Odoo "
+#~ "모듈이 포함된 각 폴더에서 :file:`requirements.txt` 파일을 찾습니다. 모듈 "
+#~ "폴더 자체가 아니라 해당 상위 폴더에서 파일을 찾습니다."
+
+#~ msgid ""
+#~ "As the containers are Ubuntu based, their directory structure follows the "
+#~ "linux Filesystem Hierarchy Standard. `Ubuntu's filesystem tree overview "
+#~ "<https://help.ubuntu.com/community/"
+#~ "LinuxFilesystemTreeOverview#Main_directories>`_ explains the main "
+#~ "directories."
+#~ msgstr ""
+#~ "컨테이너는 Ubuntu를 기준으로 하며, 디렉토리 구조는 Linux 파일 시스템 계층 "
+#~ "표준을 따릅니다. `Ubuntu의 파일 시스템 트리 전체보기 <https://"
+#~ "help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_ "
+#~ "에서 주요 디렉토리에 대해 설명합니다."
+
+#~ msgid "Here are the Odoo.sh pertinent directories:"
+#~ msgstr "Odoo.sh 관련 디렉토리는 다음과 같습니다."
+
+#~ msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
+#~ msgstr "Python 2.7과 3.5 모두를 컨테이너에 설치합니다. 다만:"
+
+#~ msgid ""
+#~ "If your project is configured to use Odoo 10.0, the Odoo server runs with "
+#~ "Python 2.7."
+#~ msgstr ""
+#~ "프로젝트에서 Odoo 10.0을 사용하도록 설정되어 있는 경우 Python 2.7로 Odoo "
+#~ "서버를 실행합니다."
+
+#~ msgid ""
+#~ "If your project is configured to use Odoo 11.0 or above, the Odoo server "
+#~ "runs with Python 3.5."
+#~ msgstr ""
+#~ "프로젝트에서 Odoo 11.0 이상을 사용하도록 설정되어 있는 경우 Python 3.5로 "
+#~ "Odoo 서버를 실행합니다."
+
+#~ msgid ""
+#~ "While accessing a container with the shell, you can access the database "
+#~ "using *psql*."
+#~ msgstr ""
+#~ "셸을 사용하여 컨테이너에 액세스할 경우 *psql*을 사용하여 데이터베이스에 액"
+#~ "세스할 수 있습니다."
+
+#~ msgid ""
+#~ "**Be careful !** `Use transactions <https://www.postgresql.org/docs/"
+#~ "current/static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) for every "
+#~ "*sql* statements leading to changes (*UPDATE*, *DELETE*, *ALTER*, ...), "
+#~ "especially for your production database."
+#~ msgstr ""
+#~ "**주의하세요!** `특히 프로덕션 데이터베이스의 경우 변경되는 (*업데이트*, *"
+#~ "삭제*, *변경*, ...)모든 *sql* 구문에 트랜잭션 <https://www.postgresql.org/"
+#~ "docs/current/static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) 을 사용"
+#~ "하도록 합니다."
+
+#~ msgid ""
+#~ "The transaction mechanism is your safety net in case of mistake. You "
+#~ "simply have to rollback your changes to revert your database to its "
+#~ "previous state."
+#~ msgstr ""
+#~ "트랜젝션 매커니즘은 실수에 대비하는 안전망입니다. 변경 사항을 롤백하기만 "
+#~ "하면 데이터베이스를 이전 상태로 되돌릴 수 있습니다."
+
+#~ msgid ""
+#~ "For example, it may happen that you forget to set your *WHERE* condition."
+#~ msgstr ""
+#~ "예를 들어 *WHERE* 조건을 설정하는 것을 잊어버리는 경우가 발생할 수 있습니"
+#~ "다."
+
+#~ msgid ""
+#~ "In such a case, you can rollback to revert the unwanted changes that you "
+#~ "just mistakenly did, and rewrite the statement:"
+#~ msgstr ""
+#~ "이러한 경우에는 실수로 수행된 원치 않는 변경 사항을 롤백을 통해서 되돌리"
+#~ "고 구문을 다시 작성할 수 있습니다."
+
+#~ msgid ""
+#~ "However, do not forget to either commit or rollback your transaction "
+#~ "after having done it. Open transactions may lock records in your tables "
+#~ "and your running database may wait for them to be released. It can cause "
+#~ "a server to hang indefinitely."
+#~ msgstr ""
+#~ "다만 트랜잭션을 완료한 후에는 커밋하거나 롤백하는 것을 잊지 않도록 합니"
+#~ "다. 트랜잭션이 계속 진행 중으로 있으면 표에서 레코드를 잠글 수 있으며 실"
+#~ "행 중인 데이터베이스는 해당 레코드가 해제될 때까지 기다리게 됩니다. 이로 "
+#~ "인해 서버가 무기한 중단될 수 있습니다."
+
+#~ msgid ""
+#~ "In addition, when possible, use your staging databases to test your "
+#~ "statements first. It gives you an extra safety net."
+#~ msgstr ""
+#~ "또한 가능하면 스테이징 데이터베이스로 구문을 먼저 테스트하세요. 이를 통해 "
+#~ "추가적인 안전망을 둘 수 있습니다."
+
+#~ msgid ""
+#~ "You can start an Odoo server instance from a container shell. You won't "
+#~ "be able to access it from the outside world with a browser, but you can "
+#~ "for instance:"
+#~ msgstr ""
+#~ "컨테이너 셸에서 Odoo 서버 인스턴스를 시작할 수 있습니다. 외부에서 브라우저"
+#~ "를 사용하여 액세스할 수는 없으나 다음과 같이 진행할 수 있습니다."
+
+#~ msgid "use the Odoo shell,"
+#~ msgstr "Odoo 쉘을 사용하여,"
+
+#~ msgid "install a module,"
+#~ msgstr "모듈을 설치하고,"
+
+#~ msgid "update a module,"
+#~ msgstr "모듈을 업데이트하고,"
+
+#~ msgid "run the tests for a module,"
+#~ msgstr "모듈에 대한 테스트를 실행하고,"
+
+#~ msgid "In the above commands, the argument:"
+#~ msgstr "위 명령에서 인수는 다음과 같습니다."
+
+#~ msgid ""
+#~ "``--without-demo=all`` prevents demo data to be loaded for all modules"
+#~ msgstr ""
+#~ "``--without-demo=all``은 모든 모듈에 데모 데이터가 로드되지 않도록 합니다."
+
+#~ msgid ""
+#~ "``--stop-after-init`` will immediately shutdown the server instance after "
+#~ "it completed the operations you asked."
+#~ msgstr ""
+#~ "``--stop-after-init`` 은 요청한 작업을 완료한 후 서버 인스턴스를 즉시 종료"
+#~ "합니다."
+
+#~ msgid ""
+#~ "More options are available and detailed in the :doc:`CLI documentation </"
+#~ "developer/reference/cli>`."
+#~ msgstr ""
+#~ "더 많은 항목을 선택할 수 있으며 자세한 내용은 :doc:`CLI 문서 </developer/"
+#~ "reference/cli>` 를 참조하세요."
+
+#~ msgid ""
+#~ "You can find in the logs (*~/logs/odoo.log*) the addons path used by "
+#~ "Odoo.sh to run your server. Look for \"*odoo: addons paths*\":"
+#~ msgstr ""
+#~ "Odoo.sh에서 서버를 시작하는 데 사용하는 로그온 정보를 로그 (*~/logs/"
+#~ "odoo.log*)에서 찾을 수 있습니다. \"*odoo: 애드온 경로*\" 를 찾아 보세요."
+
+#~ msgid ""
+#~ "**Be careful**, especially with your production database. Operations that "
+#~ "you perform running this Odoo server instance are not isolated: Changes "
+#~ "will be effective in the database. Always, make your tests in your "
+#~ "staging databases."
+#~ msgstr ""
+#~ "특히 프로덕션 데이터베이스의 경우 **주의하세요**. 이 Odoo 서버 인스턴스를 "
+#~ "실행 중에 수행하는 작업은 별도로 격리되지 않습니다. 변경 사항은 데이터베이"
+#~ "스에 적용됩니다. 항상 스테이징 데이터베이스에서 테스트하시기 바랍니다."
+
+#~ msgid ""
+#~ "Debugging an Odoo.sh build is not really different than another Python "
+#~ "app. This article only explains the specificities and limitations of the "
+#~ "Odoo.sh platform, and assumes that you already know how to use a debugger."
+#~ msgstr ""
+#~ "Odoo.sh 빌드 디버깅은 사실 다른 Python 앱과 큰 차이가 없습니다. 이 문서에"
+#~ "서는 Odoo.sh 플랫폼의 특수성과 한계에 대해서만 설명하고 사용자가 디버거 사"
+#~ "용법을 이미 알고 있는 것으로 가정합니다."
+
+#~ msgid ""
+#~ "If you don't know how to debug a Python application yet, there are "
+#~ "multiple introductory courses that can be easily found on the Internet."
+#~ msgstr ""
+#~ "아직 Python 애플리케이션을 디버깅하는 방법을 모르는 경우에는 인터넷에서 여"
+#~ "러 가지 입문 과정을 쉽게 찾아볼 수 있습니다."
+
+#~ msgid ""
+#~ "You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh. "
+#~ "As the server is run outside a shell, you cannot launch the debugger "
+#~ "directly from your Odoo instance backend as the debugger needs a shell to "
+#~ "operate."
+#~ msgstr ""
+#~ "``pdb``, ``pudb`` 또는 ``ipdb`` 를 사용하여 Odoo.sh에서 코드를 디버깅할 "
+#~ "수 있습니다. 서버가 셸 외부에서 실행되기 때문에 디버거를 작동하려면 셸이 "
+#~ "필요하므로 Odoo 인스턴스 백엔드에서 직접 디버거를 시작할 수 없습니다."
+
+#~ msgid ""
+#~ "If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb "
+#~ "<https://pypi.org/project/ipdb/>`_ you have to install it before."
+#~ msgstr ""
+#~ "`pudb <https://pypi.org/project/pudb/>`_ 또는 `ipdb <https://pypi.org/"
+#~ "project/ipdb/>`_ 를 사용하려면 먼저 설치를 해야 합니다."
+
+#~ msgid "To do so, you have two options:"
+#~ msgstr "진행하려면 다음 두 가지 중에서 선택합니다."
+
+#~ msgid "temporary (only in the current build):"
+#~ msgstr "임시로 (현재 빌드에서만):"
+
+#~ msgid "or"
+#~ msgstr "또는"
+
+#~ msgid ""
+#~ "permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` "
+#~ "file."
+#~ msgstr ""
+#~ "영구적으로: 프로젝트 ``requirements.txt`` 파일에 ``pudb`` 또는 ``ipdb``를 "
+#~ "추가합니다."
+
+#~ msgid ""
+#~ "Then edit the code where you want to trigger the debugger and add this:"
+#~ msgstr ""
+#~ "그런 다음 디버거를 트리거하는 코드를 편집하고 다음 내용을 추가합니다."
+
+#~ msgid ""
+#~ "The condition :code:`sys.__stdin__.isatty()` is a hack that detects if "
+#~ "you run Odoo from a shell."
+#~ msgstr ""
+#~ ":code:`sys.__stdin__.isatty()` 조건으로 쉘에서 Odoo를 실행하는지 감지할 "
+#~ "수 있습니다."
+
+#~ msgid "Save the file and then run the Odoo Shell:"
+#~ msgstr "파일을 저장한 다음 Odoo 셸을 실행합니다."
+
+#~ msgid ""
+#~ "Finally, *via* the Odoo Shell, you can trigger the piece of code/function/"
+#~ "method you want to debug."
+#~ msgstr ""
+#~ "마지막으로 Odoo 셸을 *통하여* 디버깅하려는 코드/함수/메서드 항목을 트리거"
+#~ "할 수 있습니다."
+
+#~ msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
+#~ msgstr "Odoo.sh 셸에서 실행되는 ``pdb``가 나타나 있는 콘솔 스크린샷"
+
+#~ msgid "Frequent Technical Questions"
+#~ msgstr "자주 묻는 기술적인 질문"
+
+#~ msgid ""
+#~ "\"Scheduled actions do not run at the exact time they were expected\""
+#~ msgstr "\"예약된 작업이 예상 시간에 정확하게 실행되지 않음\""
+
+#~ msgid ""
+#~ "On the Odoo.sh platform, we cannot guarantee an exact running time for "
+#~ "scheduled actions."
+#~ msgstr ""
+#~ "Odoo.sh 플랫폼에서는 예약된 작업에 대한 정확한 실행 시간을 보장해 드릴 수 "
+#~ "없습니다."
+
+#~ msgid ""
+#~ "This is due to the fact that there might be multiple customers on the "
+#~ "same server, and we must guarantee a fair share of the server for every "
+#~ "customer. Scheduled actions are therefore implemented slightly "
+#~ "differently than on a regular Odoo server, and are run on a *best effort* "
+#~ "policy."
+#~ msgstr ""
+#~ "이는 동일한 서버에 고객이 여러 명 있을 수 있기 때문이며 모든 고객이 공평하"
+#~ "게 서버를 공유할 수 있도록 보장해야 합니다. 따라서 예약 작업은 일반 Odoo "
+#~ "서버와 약간 다르게 구현되며 *최선의 노력* 을 하는 정책에 따라 실행됩니다."
+
+#~ msgid ""
+#~ "Do not expect any scheduled action to be run more often than every 5 min."
+#~ msgstr "예약 작업의 실행 빈도는 5분 미만으로 설정할 수 없습니다."
+
+#~ msgid "Are there \"best practices\" regarding scheduled actions?"
+#~ msgstr "예약된 작업과 관련된 \"모범 사례\" 가 있나요?"
+
+#~ msgid ""
+#~ "**Odoo.sh always limits the execution time of scheduled actions (*aka* "
+#~ "crons).** Therefore, you must keep this fact in mind when developing your "
+#~ "own crons."
+#~ msgstr ""
+#~ "**Odoo.sh에서 예약 작업 (*일명* 크론)의 실행 시간은 항상 제한되어 있습니"
+#~ "다. 따라서 자체 크론을 개발할 때 이 내용을 염두에 두어야 합니다."
+
+#~ msgid "We advise that:"
+#~ msgstr "권장 사항으로는:"
+
+#~ msgid "Your scheduled actions should work on small batches of records."
+#~ msgstr "예약 작업이 소량의 레코드 배치에서 동작하도록 합니다."
+
+#~ msgid ""
+#~ "Your scheduled actions should commit their work after processing each "
+#~ "batch; this way, if they get interrupted by the time-limit, there is no "
+#~ "need to start over."
+#~ msgstr ""
+#~ "예약 작업에서 각 배치를 처리한 후에 작업을 커밋하도록 해야 시간 제한 때문"
+#~ "에 중단되더라도 다시 시작할 필요가 없게 됩니다."
+
+#~ msgid ""
+#~ "Your scheduled actions should be `idempotent <https://stackoverflow.com/a/"
+#~ "1077421/3332416>`_: they must not cause side-effects if they are started "
+#~ "more often than expected."
+#~ msgstr ""
+#~ "예약된 작업은 `멱등성 <https://stackoverflow.com/a/1077421/3332416>`_ 이 "
+#~ "있어야 합니다. 예정보다 자주 실행되더라도 부작용이 있어서는 안 됩니다."
+
+#~ msgid "How can I automate tasks when an IP address change occurs?"
+#~ msgstr "IP 주소가 변경되었을 경우에는 작업을 어떻게 자동화할 수 있나요?"
+
+#~ msgid ""
+#~ "**Odoo.sh notifies project administrators of IP address changes.** "
+#~ "Additionally, when the IP address of a production instance changes, an "
+#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
+#~ "IP address included as a query string parameter (`new`), along with the "
+#~ "previous IP address as an additional parameter (`old`)."
+#~ msgstr ""
+#~ "**Odoo.sh에서 IP 주소가 변경되었다는 사실을 프로젝트 관리자에게 알립니"
+#~ "다.** 또한 프로덕션 인스턴스의 IP 주소가 변경되면 HTTP `GET` 요청이 `/"
+#~ "_odoo.sh/ip-change` 경로에서 실행되어 새로운 IP 주소가 쿼리 문자열 매개변"
+#~ "수 (`new`)가 표시되며 이전 IP 주소가 추가 매개변수 (`old`)와 같이 제공됩니"
+#~ "다."
+
+#~ msgid ""
+#~ "This mechanism allows custom actions to be applied in response to the IP "
+#~ "address change (e.g., sending an email, contacting a firewall API, "
+#~ "configuring database objects, etc.)"
+#~ msgstr ""
+#~ "이 메커니즘을 통해 IP 주소가 변경될 경우 사용자 지정 작업을 실행할 수 있습"
+#~ "니다 (예: 이메일 전송, 방화벽 API에 연결, 데이터베이스 개체 구성 등)."
+
+#~ msgid ""
+#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+#~ "internally by the platform itself and returns a `403` response if "
+#~ "accessed through any other means."
+#~ msgstr ""
+#~ "보안상의 이유로 '/_odoo.sh/ip-change' 경로는 내부적으로 플랫폼에서만 액세"
+#~ "스할 수 있으며 다른 수단을 통해 액세스할 경우에는 '403' 응답을 반환합니다."
+
+#~ msgid "Here is a pseudo-implementation example:"
+#~ msgstr "다음은 가상 구현의 예시입니다."
+
+#~ msgid ""
+#~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
+#~ "allows you to integrate other Git projects into your code, without the "
+#~ "need to copy-paste all their code."
+#~ msgstr ""
+#~ "`Git 하위 모듈 <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ 을 "
+#~ "사용하면 전체 코드를 복사하여 붙여넣을 필요 없이 다른 Git 프로젝트를 내 코"
+#~ "드에 통합할 수 있습니다. ."
+
+#~ msgid ""
+#~ "Indeed, your custom modules can depend on modules from other "
+#~ "repositories. Regarding Odoo, this feature allows you to add modules from "
+#~ "other Git repositories into the branches of your repository. Adding these "
+#~ "dependencies in your branch through submodules makes the deployment of "
+#~ "your code and servers easier, as you can clone the repositories added as "
+#~ "submodules at the same time you clone your own repository."
+#~ msgstr ""
+#~ "실제로 사용자 지정 모듈은 다른 저장소의 모듈에 의존할 수 있습니다. Odoo의 "
+#~ "경우에는 이 기능을 사용하면 다른 Git 저장소의 모듈을 저장소 브랜치에 추가"
+#~ "할 수 있습니다. 하위 모듈을 통해 브랜치에 이와 같은 종속성을 추가하면 자"
+#~ "체 저장소를 복제하는 동시에 하위 모듈로 추가된 저장소를 복제할 수 있으므"
+#~ "로 코드 및 서버 배포를 더 쉽게 할 수 있습니다."
+
+#~ msgid ""
+#~ "Besides, you can choose the branch of the repository added as submodule "
+#~ "and you have the control of the revision you want. It's up to you to "
+#~ "decide whether you want to pin the submodule to a specific revision and "
+#~ "when you want to update to a newer revision."
+#~ msgstr ""
+#~ "또한 하위 모듈로 추가된 저장소에 브랜치를 선택할 수 있으며 원하는 버전으"
+#~ "로 제어할 수 있습니다. 하위 모듈을 특정 버전으로 계속 둘 지 여부 및 최신 "
+#~ "버전으로 업데이트하는 시기는 사용자가 지정할 수 있습니다."
+
+#~ msgid ""
+#~ "In Odoo.sh, the submodules give you the possibility to use and depend on "
+#~ "modules available in other repositories. The platform will detect that "
+#~ "you added modules through submodules in your branches and add them to "
+#~ "your addons path automatically so you can install them in your databases."
+#~ msgstr ""
+#~ "Odoo.sh에서 하위 모듈을 통해 다른 저장소에서 사용할 수 있는 모듈을 사용하"
+#~ "고 의존할 수 있게 됩니다. 플랫폼에서 브랜치의 하위 모듈을 통해 모듈 추가"
+#~ "를 감지하고 데이터베이스에 설치할 수 있도록 자동으로 애드온 경로에 추가합"
+#~ "니다."
+
+#~ msgid ""
+#~ "If you add private repositories as submodules in your branches, you need "
+#~ "to configure a deploy key in your Odoo.sh project settings and in your "
+#~ "repository settings. Otherwise Odoo.sh won't be allowed to download them. "
+#~ "The procedure is detailed in the chapter :ref:`Settings > Submodules "
+#~ "<odoo-sh/settings/submodules>`."
+#~ msgstr ""
+#~ "브랜치에 비공개 리포지토리를 서브모듈로 추가하는 경우, Odoo.sh 프로젝트 설"
+#~ "정과 리포지토리 설정에서 배포 키를 구성해야 합니다. 그렇지 않으면 Odoo.sh"
+#~ "가 다운로드할 수 없습니다. 절차는 :ref:`설정 > 서브모듈 <odoo-sh/settings/"
+#~ "submodules>` 장에 자세히 설명되어 있습니다."
+
+#~ msgid "With Odoo.sh (simple)"
+#~ msgstr "Odoo.sh 사용 (기본)"
+
+#~ msgid ""
+#~ "For now it is not possible to add **private** repositories with this "
+#~ "method. You can nevertheless do so :ref:`with Git <odoo-sh/settings/"
+#~ "submodules>`."
+#~ msgstr ""
+#~ "현재 이 방법으로 **비공개** 리포지토리를 추가할 수 없습니다. 그러"
+#~ "나 :ref:`Git으로 <odoo-sh/settings/submodules>` 추가할 수 있습니다."
+
+#~ msgid ""
+#~ "On Odoo.sh, in the branches view of your project, choose the branch in "
+#~ "which you want to add a submodule."
+#~ msgstr ""
+#~ "Odoo.sh의 프로젝트의 브랜치 보기에서 하위 모듈을 추가하려는 브랜치를 선택"
+#~ "합니다."
+
+#~ msgid ""
+#~ "In the upper right corner, click on the *Submodule* button, and then on "
+#~ "*Run*."
+#~ msgstr ""
+#~ "오른쪽 상단에 있는 *하위 모듈* 버튼을 클릭한 다음 *실행* 을 클릭합니다."
+
+#~ msgid "A dialog with a form is shown. Fill the inputs as follows:"
+#~ msgstr "대화 상자에서 양식이 표시됩니다. 다음과 같이 입력합니다."
+
+#~ msgid "Repository URL: The SSH URL of the repository."
+#~ msgstr "저장소 URL: 저장소의 SSH URL입니다."
+
+#~ msgid "Branch: The branch you want to use."
+#~ msgstr "브랜치: 사용하려는 브랜치입니다.."
+
+#~ msgid ""
+#~ "Path: The folder in which you want to add this submodule in your branch."
+#~ msgstr "경로: 이 하위 모듈을 추가하려는 브랜치의 폴더입니다."
+
+#~ msgid ""
+#~ "On Github, you can get the repository URL with the *Clone or download* "
+#~ "button of the repository. Make sure to *use SSH*."
+#~ msgstr ""
+#~ "Github에서는 저장소에 있는 *복제 또는 다운로드* 버튼을 사용하여 저장소 URL"
+#~ "을 확보할 수 있습니다. 반드시 *SSH를 사용* 하세요."
+
+#~ msgid "Then, add the submodule using the command below:"
+#~ msgstr "그런 다음 아래 명령어를 사용하여 하위 모듈을 추가합니다."
+
+#~ msgid "Replace"
+#~ msgstr "대체"
+
+#~ msgid ""
+#~ "*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the "
+#~ "repository you want to add as submodule,"
+#~ msgstr ""
+#~ "*<git@yourprovider.com>: <username/repository.git>* 를 이용하여 하위 모듈"
+#~ "로 추가하려는 저장소의 SSH URL로,"
+
+#~ msgid "*<branch>* by the branch you want to use in the above repository,"
+#~ msgstr "*<branch>* 위 저장소에서 사용하려는 브랜치별로,"
+
+#~ msgid "*<path>* by the folder in which you want to add this submodule."
+#~ msgstr "*<path>* 이 하위 모듈을 추가하려는 폴더별로."
+
+#~ msgid "Commit and push your changes:"
+#~ msgstr "변경 사항을 커밋 및 푸시합니다."
+
+#~ msgid ""
+#~ "<remote> by the repository on which you want to push your changes. For a "
+#~ "standard Git setup, this is *origin*."
+#~ msgstr ""
+#~ "<remote> 변경 사항을 푸시하려는 저장소를 기준으로 합니다. 표준 Git 설정의 "
+#~ "경우 이는 *원 위치* 입니다."
+
+#~ msgid ""
+#~ "<branch> by the branch on which you want to push your changes. Most "
+#~ "likely the branch you used :code:`git checkout` on in the first step."
+#~ msgstr ""
+#~ "<branch> 변경 사항을 푸시하려는 브랜치입니다. 첫 번째 단계에서 :code:`git "
+#~ "체크아웃` 을 실행한 브랜치일 가능성이 높습니다."
+
+#~ msgid ""
+#~ "You can read the `git-scm.com documentation <https://git-scm.com/book/en/"
+#~ "v2/Git-Tools-Submodules>`_ for more details about the Git submodules. For "
+#~ "instance, if you would like to update your submodules to have their "
+#~ "latest revision, you can follow the chapter `Pulling in Upstream changes "
+#~ "<https://git-scm.com/book/en/v2/Git-Tools-"
+#~ "Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
+#~ msgstr ""
+#~ "Git 하위 모듈에 대한 자세한 내용은 `git-scm.com 문서 <https://git-scm.com/"
+#~ "book/en/v2/Git-Tools-Submodules>`_ 를 참조하세요. 예를 들어, 하위 모듈을 "
+#~ "최신 버전으로 업데이트하려면 '업스트림 변경 사항 가져오기 <https://git-"
+#~ "scm.com/book/en/v2/Git-Tools-"
+#~ "Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_ 에 안"
+#~ "내된 내용에 따라 진행합니다."
+
+#~ msgid "Ignore modules"
+#~ msgstr "모듈 무시하기"
+
+#~ msgid ""
+#~ "If you're adding a repository that contains a lot of modules, you may "
+#~ "want to ignore some of them in case there are any that are installed "
+#~ "automatically. To do so, you can prefix your submodule folder with "
+#~ "a :code:`.`. The platform will ignore this folder and you can hand pick "
+#~ "your modules by creating symlinks to them from another folder."
+#~ msgstr ""
+#~ "추가하려는 저장소에 많은 모듈이 포함되어 있는 경우, 자동으로 설치되는 모"
+#~ "듈 일부를 무시할 수 있습니다. 설치되지 않게 하려면 하위 모듈 폴더 앞에 :코"
+#~ "드:`.` 를 붙이면 됩니다. 플랫폼은 이 폴더를 무시하며 다른 폴더에서 해당 모"
+#~ "듈에 대한 링크 심볼을 생성하여 모듈을 직접 선택할 수 있습니다."
+
+#~ msgid ""
+#~ "When working with Odoo.sh, it is important to understand the main "
+#~ "components involved. While they are all interconnected, each one plays a "
+#~ "distinct role in the development and deployment of Odoo applications:"
+#~ msgstr ""
+#~ "Odoo.sh로 작업할 때 관련된 주요 구성 요소를 이해하는 것이 중요합니다. 모"
+#~ "두 상호 연결되어 있지만 각각은 Odoo 애플리케이션의 개발 및 배포에서 고유"
+#~ "한 역할을 수행합니다:"
+
+#~ msgid ""
+#~ "**GitHub repository**: a version-controlled space where the Odoo "
+#~ "applications' source code is stored. It tracks every change, supports "
+#~ "collaboration, and can be either public or private."
+#~ msgstr ""
+#~ "**GitHub 저장소**: Odoo 애플리케이션의 소스 코드가 저장되는 버전 제어 공간"
+#~ "입니다. 모든 변경 사항을 추적하고 협업을 지원하며 공개 또는 비공개로 설정"
+#~ "할 수 있습니다."
+
+#~ msgid ""
+#~ "**Odoo.sh project**: a Platform as a Service (PaaS) that integrates with "
+#~ "GitHub and enables streamlined development, testing, and deployment of "
+#~ "Odoo applications. It includes tools such as automated backups, staging "
+#~ "environments, and continuous integration pipelines."
+#~ msgstr ""
+#~ "**Odoo.sh 프로젝트**: GitHub와 통합되어 Odoo 애플리케이션의 간소화된 개"
+#~ "발, 테스트 및 배포를 가능하게 하는 PaaS(Platform as a Service)입니다. 자"
+#~ "동 백업, 스테이징 환경 및 지속적 통합 파이프라인과 같은 도구가 포함되어 있"
+#~ "습니다."
+
+#~ msgid ""
+#~ "**Odoo database**: a database stores all the operational data used and "
+#~ "generated by Odoo applications, such as business records, configurations, "
+#~ "and user data."
+#~ msgstr ""
+#~ "**Odoo 데이터베이스**: 비즈니스 레코드, 구성 및 사용자 데이터와 같이 Odoo "
+#~ "애플리케이션에서 사용하고 생성하는 모든 운영 데이터를 저장하는 데이터베이"
+#~ "스입니다."
+
+#~ msgid ""
+#~ "Together, they form a cohesive pipeline from code development to a live "
+#~ "business use."
+#~ msgstr ""
+#~ "이들은 함께 코드 개발에서 실제 비즈니스 사용까지 응집력 있는 파이프라인을 "
+#~ "형성합니다."
+
+#~ msgid ""
+#~ "GitHub users: developers with access to the GitHub repository linked to "
+#~ "the Odoo.sh project. Access to the repository does not automatically make "
+#~ "someone a collaborator on the Odoo.sh project."
+#~ msgstr ""
+#~ "GitHub 사용자: Odoo.sh 프로젝트에 연결된 GitHub 저장소에 액세스할 수 있는 "
+#~ "개발자입니다. 저장소에 대한 액세스가 자동으로 Odoo.sh 프로젝트의 협력자가 "
+#~ "되는 것은 아닙니다."
+
+#~ msgid ""
+#~ "Odoo.sh collaborators: individuals managing the Odoo.sh project. Each "
+#~ "collaborator must be linked to a GitHub user. However, collaborators are "
+#~ "not the same as database users."
+#~ msgstr ""
+#~ "Odoo.sh 협력자: Odoo.sh 프로젝트를 관리하는 개인입니다. 각 협력자는 "
+#~ "GitHub 사용자와 연결되어야 합니다. 그러나 협력자는 데이터베이스 사용자와 "
+#~ "동일하지 않습니다."
+
+#~ msgid ""
+#~ "Database users: end-users of the deployed Odoo database. They interact "
+#~ "with the live system but are not involved in development or project "
+#~ "management."
+#~ msgstr ""
+#~ "데이터베이스 사용자: 배포된 Odoo 데이터베이스의 최종 사용자입니다. 라이브 "
+#~ "시스템과 상호 작용하지만 개발이나 프로젝트 관리에는 관여하지 않습니다."
+
+#~ msgid ""
+#~ ":guilabel:`Install only my modules (does not include submodules)`: only "
+#~ "installs the branch's modules, excluding :doc:`submodules <../advanced/"
+#~ "submodules>`. This is the default option."
+#~ msgstr ""
+#~ ":guilabel:`Install only my modules (does not include submodules)`: 브랜치"
+#~ "의 모듈만 설치하고 :doc:`하위 모듈 <../advanced/submodules>`은 제외합니"
+#~ "다. 이것은 기본 옵션입니다."
+
+#~ msgid ":doc:`Submodules documentation <../advanced/submodules>`"
+#~ msgstr ":doc:`하위 모듈 참고 문서 <../advanced/submodules>`"
+
+#~ msgid ""
+#~ "For publicly available community modules, you may also consider "
+#~ "using :doc:`submodules <../advanced/submodules>`."
+#~ msgstr ""
+#~ "공개적으로 사용 가능한 커뮤니티 모듈의 경우 :doc:`서브모듈 <../advanced/"
+#~ "submodules>` 사용을 고려할 수도 있습니다."
+
+#~ msgid "In this command:"
+#~ msgstr "이 명령에서:"
 
 #~ msgid ""
 #~ "The purpose of manual backups is to create a specific snapshot of "

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 12:17+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -1157,579 +1157,316 @@ msgstr ""
 "من الميزات مثل الواجهة الطرفية عبر الويب، وتبعيات الوحدات، والتكامل المستمر، "
 "والوصول عبر SSH."
 
-#: ../../content/administration/odoo_sh/advanced.rst:5
-msgid "Advanced"
-msgstr "متقدم"
+#: ../../content/administration/odoo_sh/advanced.rst:3
+msgid "Advanced topics"
+msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:4
+#: ../../content/administration/odoo_sh/advanced.rst:5
+msgid ""
+"This section covers advanced features of Odoo.sh related to :ref:`containers "
+"<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
+"submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
 msgstr "الحاويات "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:7
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:9
-#: ../../content/administration/odoo_sh/getting_started/builds.rst:14
-msgid "Overview"
-msgstr "نظرة عامة"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:9
+#: ../../content/administration/odoo_sh/advanced.rst:14
 msgid ""
-"Each build is isolated within its own container (Linux namespaced container)."
-msgstr "يتم عزل كل بناء داخل الحاوية الخاصة به (حاوية مساحة الاسم Linux). "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:11
-msgid ""
-"The base is an Ubuntu system, where all of Odoo's required dependencies, as "
-"well as common useful packages, are installed."
+"Each build is isolated in its own container (Linux namespace container). The "
+"base is an Ubuntu-based system on which all of Odoo's required dependencies, "
+"as well as common, useful packages, are installed."
 msgstr ""
-"الأساس هو نظام Ubuntu، حيث يتم تثبيت كافة التبعيات المطلوبة في أودو، "
-"بالإضافة إلى الحزم المفيدة الشائعة. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:14
+#: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
-"If your project requires additional Python dependencies, or more recent "
-"releases, you can define a :file:`requirements.txt` file in the root of your "
-"branches listing them. The platform will take care to install these "
-"dependencies in your containers. `The pip requirements specifiers <https://"
-"pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_ "
-"documentation can help you write a :file:`requirements.txt` file. To have a "
-"concrete example, check out the `requirements.txt file of Odoo <https://"
-"github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
+"If your project requires :ref:`additional Python dependencies <odoo-sh/"
+"module/library>` or more recent releases, you can define "
+"a :file:`requirements.txt` file at the root of your branches that lists "
+"them. The platform will ensure these dependencies are installed in your "
+"containers."
 msgstr ""
-"إذا كان مشروعك يتطلب تبعيات إضافية لـ Python، أو إصدارات أحدث، فيمكنك تحديد "
-"ملف :file:`requirements.txt` في جذر فروعك التي تدرجها. ستقوم المنصة بتثبيت "
-"تلك التبعيات في حاوياتك. يمكن أن تساعدك `محددات متطلبات pip <https://"
-"pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_ على "
-"كتابة ملف :file:`requirements.txt`. لرؤية مثال ملموس، ألقِ نظرة على ملف "
-"`requirements.txt الخاص بأودو <https://github.com/odoo/odoo/blob/18.0/"
-"requirements.txt>`_. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:22
+#: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
-"The :file:`requirements.txt` files of submodules are taken into account as "
-"well. The platform looks for :file:`requirements.txt` files in each folder "
-"containing Odoo modules: Not in the module folder itself, but in their "
-"parent folder."
+"For a concrete example, check out the Odoo Community `requirements.txt file "
+"<https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 msgstr ""
-"يتم أيضاً اعتبار ملفات :file:`requirements.txt` الخاصة بالتطبيقات الفرعية. "
-"تبحث المنصة عن ملفات :file:`requirements.txt` في كل مجلد يحتوي على تطبيقات "
-"أودو: ليس في مجلد التطبيق نفسه، ولكن في المجلد الأصلي الخاص به. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:27
+#: ../../content/administration/odoo_sh/advanced.rst:25
+msgid ""
+"`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
+"reference/requirement-specifiers/>`_"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:29
+msgid ""
+"The :file:`requirements.txt` files of :ref:`submodules <odoo-sh/advanced/"
+"submodules>` are also taken into account. The platform looks for such files "
+"in the parent folder of each folder containing an Odoo module."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
 msgstr "بنية الدليل "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:29
+#: ../../content/administration/odoo_sh/advanced.rst:38
 msgid ""
-"As the containers are Ubuntu based, their directory structure follows the "
-"linux Filesystem Hierarchy Standard. `Ubuntu's filesystem tree overview "
-"<https://help.ubuntu.com/community/"
-"LinuxFilesystemTreeOverview#Main_directories>`_ explains the main "
-"directories."
+"As the containers are Ubuntu-based, their directory structure follows the "
+"`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_."
 msgstr ""
-"بما أن الحاويات تعتمد على نظام Ubuntu، فإن بنية الدليل الخاصة بها تتبع معيار "
-"التسلسل الهرمي لنظام ملفات Linux. `نظرة عامة على شجرة نظام ملفات Ubuntu "
-"<https://help.ubuntu.com/community/"
-"LinuxFilesystemTreeOverview#Main_directories>`_ تشرح الدلائل الرئيسية. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:33
-msgid "Here are the Odoo.sh pertinent directories:"
-msgstr "فيما يلي دلائل Odoo.sh ذات الصلة: "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:73
-msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
-msgstr "تم تثبيت كل من Python 2.7 و3.5 في الحاويات، ولكن: "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:75
+#: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
-"If your project is configured to use Odoo 10.0, the Odoo server runs with "
-"Python 2.7."
+"`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
+"LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
-"إذا تمت تهيئة مشروعك لاستخدام أودو 10.0، فسيعمل خادم أودو مع Python 2.7. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:76
-msgid ""
-"If your project is configured to use Odoo 11.0 or above, the Odoo server "
-"runs with Python 3.5."
+#: ../../content/administration/odoo_sh/advanced.rst:44
+msgid "The directories relevant to Odoo.sh are the following:"
 msgstr ""
-"إذا تمت تهيئة مشروعك لاستخدام أودو 11.0 أو أعلى، فسيعمل خادم أودو مع Python "
-"3.5. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:79
+#: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
 msgstr "shell قاعدة البيانات "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:81
+#: ../../content/administration/odoo_sh/advanced.rst:83
 msgid ""
 "While accessing a container with the shell, you can access the database "
-"using *psql*."
+"using the `psql` command."
 msgstr ""
-"عند الوصول إلى حاوية باستخدام shell، يمكنك الوصول إلى قاعدة البيانات عن طريق "
-"*psql*. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:92
+#: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
-"**Be careful !** `Use transactions <https://www.postgresql.org/docs/current/"
-"static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) for every *sql* "
-"statements leading to changes (*UPDATE*, *DELETE*, *ALTER*, ...), especially "
-"for your production database."
+"Always use `transactions <https://www.postgresql.org/docs/current/static/sql-"
+"begin.html>`_ (e.g., `BEGIN` (...) `COMMIT` / `ROLLBACK`) when an SQL "
+"statement leads to changes (e.g., `UPDATE`, `DELETE`, `ALTER`, etc.) , "
+"especially for your production database. The transaction mechanism is your "
+"safety net in case of a mistake. You simply have to rollback your changes to "
+"revert your database to its previous state."
 msgstr ""
-"**كن حذراً!** `استخدم المعاملات <https://www.postgresql.org/docs/current/"
-"static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) لكل بيانات *sql * التي "
-"تؤدي إلى تغييرات (*UPDATE*، *DELETE*، *ALTER*، ...)، خاصة لقاعدة بيانات "
-"الإنتاج الخاصة بك. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:97
+#: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
-"The transaction mechanism is your safety net in case of mistake. You simply "
-"have to rollback your changes to revert your database to its previous state."
+"Do not forget to commit or roll back transactions. Open transactions may "
+"lock records in your tables, and a running database may wait for them to be "
+"released, causing a server to hang indefinitely."
 msgstr ""
-"آلية المعاملة هي شبكة الأمان الخاصة بك في حالة وقوع خطأ. كل ما عليك فعله هو "
-"التراجع عن تغييراتك لإعادة قاعدة بياناتك إلى حالتها السابقة. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:100
+#: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
-"For example, it may happen that you forget to set your *WHERE* condition."
-msgstr "على سبيل المثال، قد يحدث أنك نسيت تعيين شرط *WHERE*. "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:111
-msgid ""
-"In such a case, you can rollback to revert the unwanted changes that you "
-"just mistakenly did, and rewrite the statement:"
+"In addition, use your staging databases to test your statements first. It "
+"gives you an extra safety net."
 msgstr ""
-"في مثل هذه الحالة، يمكنك العودة للتراجع عن التغييرات غير المرغوب بها التي "
-"قمت بها عن طريق الخطأ، وإعادة الكتابة: "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:122
+#: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
-"However, do not forget to either commit or rollback your transaction after "
-"having done it. Open transactions may lock records in your tables and your "
-"running database may wait for them to be released. It can cause a server to "
-"hang indefinitely."
+"You forgot to set your `WHERE` condition. In such a case, you can rollback "
+"to revert the unwanted change:"
 msgstr ""
-"ومع ذلك، لا تنس الالتزام بمعاملتك أو التراجع عنها بعد الانتهاء منها. قد تؤدي "
-"المعاملات المفتوحة إلى قفل السجلات في جداولك وقد تضطر قاعدة بياناتك الجارية "
-"إلى الانتظار حتى يتم إصدارها. يمكن أن يتسبب ذلك في تعليق الخادم إلى أجل غير "
-"مسمى. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:126
-msgid ""
-"In addition, when possible, use your staging databases to test your "
-"statements first. It gives you an extra safety net."
+#: ../../content/administration/odoo_sh/advanced.rst:120
+msgid "Then, rewrite the statement and commit the change:"
 msgstr ""
-"بالإضافة إلى ذلك، عندما يكون ذلك ممكناً، استخدم قواعد بياناتك التجريبية "
-"لاختبار بياناتك أولاً. يمنحك ذلك شبكة أمان إضافية. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:129
+#: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
 msgstr "تشغيل خادم أودو "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:131
+#: ../../content/administration/odoo_sh/advanced.rst:136
 msgid ""
 "You can start an Odoo server instance from a container shell. You won't be "
-"able to access it from the outside world with a browser, but you can for "
-"instance:"
+"able to access it from the outside world with a web browser, but you can, "
+"for example:"
 msgstr ""
-"يمكنك بدء مثيل خادم أودو من shell الحاوية. لن تتمكن من الوصول إليه من الخارج "
-"باستخدام المتصفح، ولكن يمكنك على سبيل المثال: "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:134
-msgid "use the Odoo shell,"
-msgstr "استخدم shell أودو، "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:146
-msgid "install a module,"
-msgstr "قم بتثبيت تطبيق، "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:152
-msgid "update a module,"
-msgstr "قم بتحديث تطبيق، "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:158
-msgid "run the tests for a module,"
-msgstr "أجرِ الاختبارات على التطبيق، "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:164
-msgid "In the above commands, the argument:"
-msgstr "في الأوامر أعلاه، الوسيط: "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:166
-msgid "``--without-demo=all`` prevents demo data to be loaded for all modules"
+#: ../../content/administration/odoo_sh/advanced.rst:139
+msgid "Use the Odoo shell:"
 msgstr ""
-"``--without-demo=all`` يمنع البيانات التجريبية من أن يتم تحميلها لكافة "
-"التطبيقات "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:167
+#: ../../content/administration/odoo_sh/advanced.rst:151
+msgid "Install a module:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
-"``--stop-after-init`` will immediately shutdown the server instance after it "
-"completed the operations you asked."
+"The argument `--without-demo=all` prevents demo data from being loaded for "
+"all modules."
 msgstr ""
-"``--stop-after-init`` سوف يقوم بإيقاف تشغيل مثيل الخادم على الفور بعد إكمال "
-"العمليات التي طلبتها. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:169
+#: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
-"More options are available and detailed in the :doc:`CLI documentation </"
-"developer/reference/cli>`."
+"The argument `--stop-after-init` immediately shutdowns the server instance "
+"after the operation is completed."
 msgstr ""
-"ستجد المزيد من الخيارات المتاحة والموضحة في :doc:`وثائق CLI </developer/"
-"reference/cli>`. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:172
+#: ../../content/administration/odoo_sh/advanced.rst:162
+msgid "Update a module:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:168
+msgid "Run the tests for a module:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:175
+msgid ":doc:`CLI documentation </developer/reference/cli>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
-"You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh "
-"to run your server. Look for \"*odoo: addons paths*\":"
+"To find the addons path used by Odoo.sh to run your server, look for "
+"\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
-"ستجد في السجلات (*~/logs/odoo.log*) مسار الوظائف الإضافية المستخدم من قِبَل "
-"Odoo.sh لتشغيل الخادم الخاص بك. ابحث عن \"*أودو: مسارات الوظائف الإضافية*\": "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:181
+#: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
-"**Be careful**, especially with your production database. Operations that "
-"you perform running this Odoo server instance are not isolated: Changes will "
-"be effective in the database. Always, make your tests in your staging "
-"databases."
+"Operations you perform on an Odoo server instance are not isolated; changes "
+"will be reflected in the database. Remember to always carry out tests in "
+"your staging databases."
 msgstr ""
-"**كن حذراً**، خاصة فيما يتعلق بقاعدة بيانات الإنتاج لديك. العمليات التي تقوم "
-"بها عند تشغيل مثيل خادم أودو ليست معزولة: ستكون التغييرات سارية وفعالة في "
-"قاعدة البيانات. قم دائماً بإجراء اختباراتك في قواعد بياناتك التجريبية. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:186
+#: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
 msgstr "تصحيح الأخطاء في Odoo.sh "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:188
+#: ../../content/administration/odoo_sh/advanced.rst:196
 msgid ""
-"Debugging an Odoo.sh build is not really different than another Python app. "
-"This article only explains the specificities and limitations of the Odoo.sh "
-"platform, and assumes that you already know how to use a debugger."
+"Debugging an Odoo.sh build is not really different from debugging another "
+"Python app. As such, the goal of this section is to cover the specificities "
+"and limitations of the Odoo.sh platform, and assumes that you already know "
+"how to use a debugger."
 msgstr ""
-"لا تختلف عملية تصحيح الأخطاء لإصدار Odoo.sh في الواقع عن تطبيق Python آخر. "
-"تشرح هذه المقالة فقط خصوصيات وقيود منصة Odoo.sh، وتفترض أنك تعرف بالفعل "
-"كيفية استخدام أداة تصحيح الأخطاء. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:190
+#: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
-"If you don't know how to debug a Python application yet, there are multiple "
-"introductory courses that can be easily found on the Internet."
+"You can use `pdb`, `pudb`, or `ipdb` to debug code on Odoo.sh. Since the "
+"server runs outside a shell, you cannot launch the debugger directly from "
+"your Odoo backend, as it requires a shell to operate."
 msgstr ""
-"إذا كنت لا تعرف كيفية تصحيح أخطاء تطبيق Python حتى الآن، فهناك العديد من "
-"الدورات التدريبية التمهيدية التي يمكن العثور عليها بسهولة على الإنترنت. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:192
-msgid ""
-"You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh. As "
-"the server is run outside a shell, you cannot launch the debugger directly "
-"from your Odoo instance backend as the debugger needs a shell to operate."
-msgstr ""
-"يمكنك استخدام ``pdb`` أو ``pudb`` أو ``ipdb`` لتصحيح الكود الخاص بك على "
-"Odoo.sh. نظراً لأن الخادم يتم تشغيله خارج shell، فلا يمكنك تشغيل أداة تصحيح "
-"الأخطاء مباشرة من الواجهة الخلفية لمثيل أودو الخاص بك، حيث تحتاج أداة تصحيح "
-"الأخطاء إلى shell لتعمل. "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:195
+#: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
 "`pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default "
 "in every container."
 msgstr "`pdb <https://docs.python.org/3/library/pdb.html>`_ مثبت في كل حاوية. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:197
+#: ../../content/administration/odoo_sh/advanced.rst:207
 msgid ""
-"If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb "
-"<https://pypi.org/project/ipdb/>`_ you have to install it before."
+"To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
+"project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
-"إذا كنت ترغب في تثبيت `pudb <https://pypi.org/project/pudb/>`_ أو `ipdb "
-"<https://pypi.org/project/ipdb/>`_ عليك تثبيته أولاً. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:199
-msgid "To do so, you have two options:"
-msgstr "للقيام بذلك، لديك خياران: "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:201
-msgid "temporary (only in the current build):"
-msgstr "مؤقَّت (فقط في البنية الحالية): "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:207
-msgid "or"
-msgstr "أو"
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:213
+#: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
-"permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` "
-"file."
+"permanently by adding `pudb` or `ipdb` to your "
+"project's :file:`requirements.txt` file, or"
 msgstr ""
-"دائم: قم بإضافة ``pudb`` أو ``ipdb`` إلى ملف ``requirements.txt`` لمشروعك. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:216
-msgid "Then edit the code where you want to trigger the debugger and add this:"
+#: ../../content/administration/odoo_sh/advanced.rst:211
+msgid ""
+"temporarily (only in the current build) by running the relevant command:"
 msgstr ""
-"ثم قم بتحرير الكود الذي ترغب في تشغيل أداة تصحيح الأخطاء فيه وأضف ما يلي: "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:224
-msgid ""
-"The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you "
-"run Odoo from a shell."
+#: ../../content/administration/odoo_sh/advanced.rst:221
+msgid "To trigger the debugger, add this to the code you want to debug:"
 msgstr ""
-"الشرط :code:`sys.__stdin__.isatty()` هو عبارة عن وسيلة لاكتشاف ما إذا كنت "
-"تقوم بتشغيل أودو من shell. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:226
-msgid "Save the file and then run the Odoo Shell:"
-msgstr "احفظ الملف ثم قم بتشغيل shell أودو: "
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:232
+#: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
-"Finally, *via* the Odoo Shell, you can trigger the piece of code/function/"
-"method you want to debug."
+"The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
+"you are running Odoo from a shell."
 msgstr ""
-"وأخيراً، *عن طريق* Shell أودو، يمكنك تشغيل الجزء من الكود/الوظيفة/الطريقة "
-"التي تريد تصحيح الأخطاء فيها. "
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:None
-msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
-msgstr "لقطة شاشة لوحدة التحكم توضح تشغيل ``pdb`` في Odoo.sh Shell. "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:6
-msgid "Frequent Technical Questions"
-msgstr "الأسئلة التقنية الشائعة "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:9
-msgid "\"Scheduled actions do not run at the exact time they were expected\""
-msgstr "\"لا تعمل الإجراءات المجدولة في الوقت المحدد المتوقع عملها فيه\" "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:11
-msgid ""
-"On the Odoo.sh platform, we cannot guarantee an exact running time for "
-"scheduled actions."
-msgstr "على منصة Odoo.sh، لا يمكننا ضمان وقت تشغيل محدد للإجراءات المجدولة. "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:13
-msgid ""
-"This is due to the fact that there might be multiple customers on the same "
-"server, and we must guarantee a fair share of the server for every customer. "
-"Scheduled actions are therefore implemented slightly differently than on a "
-"regular Odoo server, and are run on a *best effort* policy."
+#: ../../content/administration/odoo_sh/advanced.rst:233
+msgid "Next, save the file and run the Odoo shell:"
 msgstr ""
-"ويرجع ذلك إلى حقيقة أنه قد يكون هناك العديد من العملاء على نفس الخادم، ويجب "
-"علينا ضمان حصة عادلة من الخادم لكل عميل. ولذلك يتم تنفيذ الإجراءات المجدولة "
-"بشكل مختلف قليلاً عن خادم أودو العادي، ويتم تشغيلها وفقاً لسياسة *أفضل "
-"الجهود*. "
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:16
-msgid ""
-"Do not expect any scheduled action to be run more often than every 5 min."
-msgstr "لا تتوقع أن يتم تشغيل أي إجراء مجدول لأكثر من كل 5 دقائق. "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
-msgid "Are there \"best practices\" regarding scheduled actions?"
-msgstr "هل هناك \"أفضل الممارسات\" فيما يتعلق بالإجراءات المجدولة؟ "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:21
-msgid ""
-"**Odoo.sh always limits the execution time of scheduled actions (*aka* "
-"crons).** Therefore, you must keep this fact in mind when developing your "
-"own crons."
+#: ../../content/administration/odoo_sh/advanced.rst:239
+msgid "Use the Odoo shell to trigger the code you want to debug."
 msgstr ""
-"**يقوم Odoo.sh دائماً بتقييد وقت تنفيذ الإجراءات المجدولة (*المعروف أيضاً "
-"باسم* crons).** لذلك، يجب أن تضع ذلك بعين الاعتبار عند تطوير crons الخاصة "
-"بك. "
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:24
-msgid "We advise that:"
-msgstr "نوصي بـ: "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:26
-msgid "Your scheduled actions should work on small batches of records."
-msgstr "من المفترض أن تعمل إجراءاتك المجدولة على مجموعات صغيرة من السجلات. "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:27
-msgid ""
-"Your scheduled actions should commit their work after processing each batch; "
-"this way, if they get interrupted by the time-limit, there is no need to "
-"start over."
+#: ../../content/administration/odoo_sh/advanced.rst:0
+msgid "pdb running in an Odoo.sh shell"
 msgstr ""
-"يجب أن تلتزم إجراءاتك المجدولة بعملها بعد معالجة كل دفعة؛ بهذه الطريقة، إذا "
-"تمت مقاطعتها خلال المهلة الزمنية، فلن تكون هناك حاجة للبدء من جديد. "
 
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
-msgid ""
-"Your scheduled actions should be `idempotent <https://stackoverflow.com/a/"
-"1077421/3332416>`_: they must not cause side-effects if they are started "
-"more often than expected."
-msgstr ""
-"يجب أن تكون إجراءاتك المجدولة عاجزة <https://stackoverflow.com/a/"
-"1077421/3332416>`_: يجب ألا تتسبب في أي آثار جانبية إذا تم تشغيلها بوتيرة "
-"أكبر من المتوقع. "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
-msgid "How can I automate tasks when an IP address change occurs?"
-msgstr "كيف يمكنني أتمتة المهام عندما يطرأ تغيير في عنوان IP؟ "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
-msgid ""
-"**Odoo.sh notifies project administrators of IP address changes.** "
-"Additionally, when the IP address of a production instance changes, an HTTP "
-"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
-"address included as a query string parameter (`new`), along with the "
-"previous IP address as an additional parameter (`old`)."
-msgstr ""
-"** يقوم Odoo.sh بإخطار مسؤولي المشروع بالتغيرات التي تطرأ على عنوان IP.** "
-"إضافةً إلى ذلك، عندما يتغير عنوان IP لمثيل لقاعدة بيانات الإنتاج، يتم إرسال "
-"طلب `HTTP `GET إلى المسار `/_odoo.sh/ip-change` مع تضمين عنوان IP الجديد "
-"كمعامل لسلسلة الاستعلام (`جديد`)، إلى جانب عنوان IP السابق كمعامل إضافي "
-"(`قديم`). "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
-msgid ""
-"This mechanism allows custom actions to be applied in response to the IP "
-"address change (e.g., sending an email, contacting a firewall API, "
-"configuring database objects, etc.)"
-msgstr ""
-"تتيح لك هذه الآلية تطبيق إجراءات مخصصة للاستجابة لتغيير عنوان IP (على سبيل "
-"المثال، إرسال بريد إلكتروني، أو الاتصال بالواجهة البرمجية لجدار الحماية، أو "
-"تهيئة كائنات قاعدة البيانات، إلخ). "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
-msgid ""
-"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-"internally by the platform itself and returns a `403` response if accessed "
-"through any other means."
-msgstr ""
-"لأسباب أمنية، يمكن الوصول إلى مسار `/_odoo.sh/ip-change` داخلياً فقط من خلال "
-"المنصة نفسها، وينتج عنه رد `403` إذا تم الوصول إليه بأي طريقة أخرى. "
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
-msgid "Here is a pseudo-implementation example:"
-msgstr "فيما يلي مثال تنفيذ زائف: "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:6
+#: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
 msgid "Submodules"
 msgstr "التطبيقات الفرعية "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:11
+#: ../../content/administration/odoo_sh/advanced.rst:249
 msgid ""
-"A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
-"allows you to integrate other Git projects into your code, without the need "
-"to copy-paste all their code."
+"`Git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ let "
+"you link external repositories directly into your project without copy-"
+"pasting code, streamlining deployment by cloning dependencies alongside your "
+"main codebase. You maintain precise version control by choosing exact "
+"branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
-"يتيح لك `تطبيق Git الفرعي <https://git-scm.com/book/en/v2/Git-Tools-"
-"Submodules>`_ دمج مشاريع Git الأخرى في الكود الخاص بك، دون الحاجة إلى نسخ "
-"ولصق الكود الخاص به بأكمله. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:14
+#: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
-"Indeed, your custom modules can depend on modules from other repositories. "
-"Regarding Odoo, this feature allows you to add modules from other Git "
-"repositories into the branches of your repository. Adding these dependencies "
-"in your branch through submodules makes the deployment of your code and "
-"servers easier, as you can clone the repositories added as submodules at the "
-"same time you clone your own repository."
+"On Odoo.sh, the platform automatically detects submodules and adds them to "
+"your addons path for database installation, provided you :ref:`configure a "
+"deploy key in your project and repository settings <odoo-sh/settings/"
+"submodules>` when integrating private repositories."
 msgstr ""
-"في الواقع، يمكن أن تعتمد تطبيقاتك المخصصة على تطبيقات من مستودعات أخرى. فيما "
-"يتعلق بأودو، تتيح لك هذه الخاصية إضافة تطبيقات من مستودعات Git الأخرى إلى "
-"فروع مستودعك. إن إضافة هذه التبعيات في فرعك من خلال التطبيقات الفرعية يجعل "
-"من استخدام الكود والخوادم الخاصة بك أسهل، حيث يمكنك استنساخ المستودعات التي "
-"قد تمت إضافتها كتطبيقات فرعية في نفس الوقت الذي تقوم فيه باستنساخ مستودعك "
-"الخاص. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:19
-msgid ""
-"Besides, you can choose the branch of the repository added as submodule and "
-"you have the control of the revision you want. It's up to you to decide "
-"whether you want to pin the submodule to a specific revision and when you "
-"want to update to a newer revision."
-msgstr ""
-"علاوة على ذلك، يمكنك اختيار فرع المستودع الذي قد تمت إضافته كتطبيق فرعي "
-"ويمكنك التحكم في المراجعة التي تريدها. الأمر بيدك تماماً لتقرر ما إذا كنت "
-"ترغب في تثبيت التطبيق الفرعي بمراجعة معينة أم لا، ومتى تريد التحديث إلى "
-"مراجعة أحدث. "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:24
-msgid ""
-"In Odoo.sh, the submodules give you the possibility to use and depend on "
-"modules available in other repositories. The platform will detect that you "
-"added modules through submodules in your branches and add them to your "
-"addons path automatically so you can install them in your databases."
-msgstr ""
-"في Odoo.sh، تتيح لك التطبيقات الفرعية استخدام التطبيقات المتوفرة في مستودعات "
-"أخرى والاعتماد عليها. ستتمكن المنصة من رصد أنك قمت بإضافة تطبيقات من خلال "
-"تطبيقات فرعية في فروعك وستقوم بإضافتها تلقائياً إلى مسار المكونات الإضافية "
-"الخاص بك حتى تتمكن من تثبيتها في قواعد البيانات الخاصة بك. "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:28
-msgid ""
-"If you add private repositories as submodules in your branches, you need to "
-"configure a deploy key in your Odoo.sh project settings and in your "
-"repository settings. Otherwise Odoo.sh won't be allowed to download them. "
-"The procedure is detailed in the chapter :ref:`Settings > Submodules <odoo-"
-"sh/settings/submodules>`."
-msgstr ""
-"إذا أضفت مستودعات خاصة كوحدات فرعية في فروعك، فأنت بحاجة إلى تكوين مفتاح نشر "
-"في إعدادات مشروع Odoo.sh وفي إعدادات مستودعك. وإلا فلن يُسمح لـ Odoo.sh "
-"بتنزيلها. الإجراء موضح بالتفصيل في الفصل :ref:`الإعدادات > الوحدات الفرعية "
-"<odoo-sh/settings/submodules>`."
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:34
+#: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
 msgstr "إضافة تطبيق فرعي "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:37
-msgid "With Odoo.sh (simple)"
-msgstr "مع Odoo.sh (بسيط) "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:40
-msgid ""
-"For now it is not possible to add **private** repositories with this method. "
-"You can nevertheless do so :ref:`with Git <odoo-sh/settings/submodules>`."
+#: ../../content/administration/odoo_sh/advanced.rst:265
+msgid "With Odoo.sh"
 msgstr ""
-"في الوقت الحالي، لا يمكن إضافة مستودعات **خاصة** بهذه الطريقة. ومع ذلك، "
-"يمكنك القيام بذلك :ref:`باستخدام Git <odoo-sh/settings/submodules>`."
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:43
+#: ../../content/administration/odoo_sh/advanced.rst:268
 msgid ""
-"On Odoo.sh, in the branches view of your project, choose the branch in which "
-"you want to add a submodule."
+"Currently, it is not possible to add **private** repositories with Odoo.sh. "
+"You can nevertheless do so with Git."
 msgstr ""
-"في Odoo.sh، في عرض الفروع لمشروعك، اختر الفرع الذي ترغب في إضافة تطبيق فرعي "
-"إليه. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:45
+#: ../../content/administration/odoo_sh/advanced.rst:271
 msgid ""
-"In the upper right corner, click on the *Submodule* button, and then on "
-"*Run*."
+"From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh "
+"project, choose the branch in which you want to add a submodule."
 msgstr ""
-"في الزاوية العليا إلى اليمين، اضغط على زر *تطبيق فرعي*، ثم على *تشغيل*. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:50
-msgid "A dialog with a form is shown. Fill the inputs as follows:"
-msgstr "يتم عرض مربع حوار مع استمارة. قم بتعبئة المدخلات على النحو التالي: "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:52
-msgid "Repository URL: The SSH URL of the repository."
-msgstr "عنوان URL للمستودع: عنوان URL لـ SSH للمستودع. "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:53
-msgid "Branch: The branch you want to use."
-msgstr "الفرع: الفرع الذي ترغب في استخدامه. "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:54
+#: ../../content/administration/odoo_sh/advanced.rst:273
 msgid ""
-"Path: The folder in which you want to add this submodule in your branch."
-msgstr "المسار: المجلد الذي ترغب في إضافة هذا التطبيق الفرعي إليه في فرعك. "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:59
-msgid ""
-"On Github, you can get the repository URL with the *Clone or download* "
-"button of the repository. Make sure to *use SSH*."
+"In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
+"on Odoo.sh`."
 msgstr ""
-"في Github، يمكنك الحصول على عنوان URL للمستودع باستخدام زر *نسخ أو تنزيل* "
-"الخاص بالمستودع. تأكد من *استخدام SSH*. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:67
+#: ../../content/administration/odoo_sh/advanced.rst:274
+msgid "In the dialog box, fill in the following:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:276
+msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:279
+msgid ""
+"On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:284
+msgid ":guilabel:`Branch`: the specific branch that should be used"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:285
+msgid ""
+":guilabel:`Path`: the folder in which the submodule should be added to in "
+"your branch"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
 msgstr "مع Git (متقدم) "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:69
+#: ../../content/administration/odoo_sh/advanced.rst:292
 msgid ""
 "In a terminal, in the folder where your Git repository is cloned, checkout "
 "the branch in which you want to add a submodule:"
@@ -1737,82 +1474,90 @@ msgstr ""
 "في الأداة الطرفية، في المجلد الذي تم استنساخ مستودع Git الخاص بك فيه، قم "
 "بالتحقق من الفرع الذي ترغب في إضافة تطبيق فرعي إليه: "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:76
-msgid "Then, add the submodule using the command below:"
-msgstr "بعد ذلك، قم بإضافة التطبيق الفرعي باستخدام الأمر أدناه: "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:82
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:94
-msgid "Replace"
-msgstr "استبدال"
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:84
-msgid ""
-"*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the "
-"repository you want to add as submodule,"
+#: ../../content/administration/odoo_sh/advanced.rst:299
+msgid "Add the submodule:"
 msgstr ""
-"*<git@yourprovider.com>:<username/repository.git>* عن طريق عنوان URL لـ SSH "
-"للمستودع الذي ترغب في إضافته كتطبيق فرعي، "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:85
-msgid "*<branch>* by the branch you want to use in the above repository,"
-msgstr "*<branch>* عن طريق الفرع الذي ترغب في استخدامه في المستودع أعلاه، "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:86
-msgid "*<path>* by the folder in which you want to add this submodule."
-msgstr "*<path>* عن طريق المجلد الذي ترغب في إضافة هذا التطبيق الفرعي فيه. "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:88
-msgid "Commit and push your changes:"
-msgstr "قم بالتحديث وفرض تغييراتك: "
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:96
+#: ../../content/administration/odoo_sh/advanced.rst:305
 msgid ""
-"<remote> by the repository on which you want to push your changes. For a "
+"*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the "
+"repository you want to add as a submodule"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:307
+msgid "*<branch>*: the branch you want to use in the above repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:308
+msgid "*<path>*: the folder in which you want to add this submodule"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:310
+msgid "Commit and push the changes:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:316
+msgid ""
+"*<remote>*: the repository on which you want to push your changes. On a "
 "standard Git setup, this is *origin*."
 msgstr ""
-"<remote> بواسطة المستودع الذي ترغب في تطبيق التغييرات فيه. هذا هو *الأصل* "
-"بالنسبة لإعدادات Git قياسية. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:97
+#: ../../content/administration/odoo_sh/advanced.rst:318
 msgid ""
-"<branch> by the branch on which you want to push your changes. Most likely "
-"the branch you used :code:`git checkout` on in the first step."
+"*<branch>*: the branch on which you want to push your changes. Most likely, "
+"the branch you checked out in the first step."
 msgstr ""
-"<branch> بواسطة الفرع الذي ترغب في تطبيق تغييراتك فيه. غالباً ما يكون الفرع "
-"الذي قمت باستخدام  :code:`git checkout` فيه، في الخطوة الأولى. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:100
+#: ../../content/administration/odoo_sh/advanced.rst:322
 msgid ""
-"You can read the `git-scm.com documentation <https://git-scm.com/book/en/v2/"
-"Git-Tools-Submodules>`_ for more details about the Git submodules. For "
-"instance, if you would like to update your submodules to have their latest "
-"revision, you can follow the chapter `Pulling in Upstream changes <https://"
-"git-scm.com/book/en/v2/Git-Tools-"
-"Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
+"When adding a repository that contains many modules, you may want to ignore "
+"some of them if any are installed automatically.  To do so, prefix your "
+"submodule folder with a :code:`.` (e.g. `.folder`). The platform will ignore "
+"this folder, and you can hand-pick the modules by creating `symbolic links "
+"<https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
-"يمكنك قراءة وثائق `git-scm.com <https://git-scm.com/book/en/v2/Git-Tools-"
-"Submodules>`_  للمزيد من التفاصيل حول تطبيقات Git الفرعية. على سبيل المثال، "
-"إذا كنت ترغب في تحديث تطبيقاتك الفرعية للحصول على أحدث مراجعة لها، فيمكنك "
-"متابعة الفصل `سحب التغييرات الأولية <https://git-scm.com/book/en/v2/Git-"
-"Tools-Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_. "
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:107
-msgid "Ignore modules"
-msgstr "تجاهل التطبيقات "
+#: ../../content/administration/odoo_sh/advanced.rst:330
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:80
+msgid "Scheduled actions"
+msgstr "الإجراءات المجدولة"
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:109
+#: ../../content/administration/odoo_sh/advanced.rst:332
 msgid ""
-"If you're adding a repository that contains a lot of modules, you may want "
-"to ignore some of them in case there are any that are installed "
-"automatically. To do so, you can prefix your submodule folder with "
-"a :code:`.`. The platform will ignore this folder and you can hand pick your "
-"modules by creating symlinks to them from another folder."
+"On the Odoo.sh platform, scheduled actions are implemented slightly "
+"differently from a regular Odoo server and are run on a best-effort basis. "
+"This is because there might be multiple customers on the same server, and "
+"each customer is guaranteed a fair share of the server's resources. "
+"Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
-"إذا كنت تقوم بإضافة مستودع يحتوي على الكثير من التطبيقات، فقد ترغب في تجاهل "
-"بعضها في حالة وجود أي منها تم تثبيته تلقائياً. للقيام بذلك، يمكنك إضافة بادئة "
-"إلى مجلد تطبيقك الفرعي باستخدام :code:`.`. ستتجاهل المنصة هذا المجلد ويمكنك "
-"اختيار تطبيقاتك عن طريق إنشاء روابط رمزية لها من مجلد آخر. "
+
+#: ../../content/administration/odoo_sh/advanced.rst:338
+msgid ""
+"Do not expect any scheduled action to be run more often than every five "
+"minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:340
+msgid ""
+"As the execution time of scheduled actions is limited, it is advised to "
+"ensure your scheduled actions:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:343
+msgid "Work on small batches of records."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:344
+msgid ""
+"Commit their work after processing each batch so that if they are "
+"interrupted by the time limit, they do not need to start over."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:346
+msgid ""
+"Are idempotent, i.e, they must not cause side effects if they are started "
+"more often than expected."
+msgstr ""
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2255,8 +2000,8 @@ msgid "Open the :file:`views/views.xml` file and after:"
 msgstr "افتح ملف :file:`views/views.xml` وبعد:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:306
-#: ../../content/administration/odoo_sh/create_module.rst:377
-#: ../../content/administration/odoo_sh/create_module.rst:389
+#: ../../content/administration/odoo_sh/create_module.rst:379
+#: ../../content/administration/odoo_sh/create_module.rst:391
 msgid "add:"
 msgstr "أضف:"
 
@@ -2307,11 +2052,11 @@ msgstr ""
 "يمكنك :ref:`تحديث الوحدة <odoo-sh/module/deploy/install>` يدويًا ضمن قائمة "
 "التطبيقات."
 
-#: ../../content/administration/odoo_sh/create_module.rst:343
+#: ../../content/administration/odoo_sh/create_module.rst:345
 msgid "Use an external Python library"
 msgstr "استخدم مكتبة Python خارجية "
 
-#: ../../content/administration/odoo_sh/create_module.rst:345
+#: ../../content/administration/odoo_sh/create_module.rst:347
 msgid ""
 "If you would like to use an external Python library that is not installed by "
 "default, you can define a :file:`requirements.txt` file listing the external "
@@ -2322,7 +2067,7 @@ msgstr ""
 "ملف :file:`requirements.txt` يسرد المكتبات الخارجية التي تعتمد عليها وحداتك. "
 "ستستخدم المنصة هذا الملف لتثبيت مكتبات Python التي يحتاجها مشروعك تلقائيًا."
 
-#: ../../content/administration/odoo_sh/create_module.rst:350
+#: ../../content/administration/odoo_sh/create_module.rst:352
 msgid ""
 "It is not possible to install or upgrade system packages on Odoo.sh "
 "databases (e.g., apt packages). However, under specific conditions, "
@@ -2335,7 +2080,7 @@ msgstr ""
 "faq#install_dependencies>`_. ينطبق هذا أيضًا على وحدات Python التي تتطلب حزم "
 "نظام للتجميع وعلى وحدات Odoo التابعة لجهات خارجية."
 
-#: ../../content/administration/odoo_sh/create_module.rst:354
+#: ../../content/administration/odoo_sh/create_module.rst:356
 msgid ""
 "PostgreSQL extensions are not supported on Odoo.sh hence it is not possible "
 "to install extensions (such as PostGIS, ltree, ...) in Odoo.sh databases."
@@ -2343,7 +2088,7 @@ msgstr ""
 "امتدادات PostgreSQL غير مدعومة على Odoo.sh، وبالتالي لا يمكن تثبيت "
 "الامتدادات (مثل PostGIS وltree وما إلى ذلك) في قواعد بيانات Odoo.sh."
 
-#: ../../content/administration/odoo_sh/create_module.rst:357
+#: ../../content/administration/odoo_sh/create_module.rst:359
 msgid ""
 "For example, to use the `Unidecode library <https://pypi.org/project/"
 "Unidecode>`_ in your module:"
@@ -2351,18 +2096,18 @@ msgstr ""
 "على سبيل المثال، لاستخدام `مكتبة Unidecode <https://pypi.org/project/"
 "Unidecode>`_ في وحدتك:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:359
+#: ../../content/administration/odoo_sh/create_module.rst:361
 msgid ""
 "Create a file :file:`requirements.txt` in the root folder of your repository:"
 msgstr "أنشئ ملف :file:`requirements.txt` في المجلد الجذر لمستودعك:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:361
+#: ../../content/administration/odoo_sh/create_module.rst:363
 msgid ""
 "From the Odoo.sh editor, create and open the file :file:`~/src/user/"
 "requirements.txt`."
 msgstr "من محرر Odoo.sh، أنشئ وافتح الملف :file:`~/src/user/requirements.txt`."
 
-#: ../../content/administration/odoo_sh/create_module.rst:362
+#: ../../content/administration/odoo_sh/create_module.rst:364
 msgid ""
 "From your computer, create nd open the file :file:`~/src/odoo-addons/"
 "requirements.txt`."
@@ -2370,11 +2115,11 @@ msgstr ""
 "من جهاز الكمبيوتر الخاص بك، أنشئ وافتح الملف :file:`~/src/odoo-addons/"
 "requirements.txt`."
 
-#: ../../content/administration/odoo_sh/create_module.rst:364
+#: ../../content/administration/odoo_sh/create_module.rst:366
 msgid "Add to the file:"
 msgstr "أضف إلى الملف:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:370
+#: ../../content/administration/odoo_sh/create_module.rst:372
 msgid ""
 "You can now use the library in your module, for instance, to remove accents "
 "from characters in the name field of your model. To do so, open "
@@ -2384,11 +2129,11 @@ msgstr ""
 "الأحرف في حقل الاسم لنموذجك. للقيام بذلك، افتح ملف :file:`models/models.py` "
 "وقبل:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:383
+#: ../../content/administration/odoo_sh/create_module.rst:385
 msgid "After:"
 msgstr "بعد:"
 
-#: ../../content/administration/odoo_sh/create_module.rst:404
+#: ../../content/administration/odoo_sh/create_module.rst:406
 msgid ""
 "Increase the module version to install the Python dependency by editing "
 "the :ref:`module's manifest <odoo-sh/module/add/"
@@ -2397,11 +2142,11 @@ msgstr ""
 "قم بزيادة إصدار الوحدة لتثبيت تبعية Python عن طريق تحرير :ref:`ملف الوحدة "
 "البياني <odoo-sh/module/add/manifest>` :file:`__manifest__.py`."
 
-#: ../../content/administration/odoo_sh/create_module.rst:407
+#: ../../content/administration/odoo_sh/create_module.rst:409
 msgid "Then, :ref:`push the changes <odoo-sh/module/push-development>`."
 msgstr "ثم، :ref:`ادفع التغييرات <odoo-sh/module/push-development>`."
 
-#: ../../content/administration/odoo_sh/create_module.rst:410
+#: ../../content/administration/odoo_sh/create_module.rst:412
 msgid ""
 "Stage the :file:`requirements.txt` file by running `git add "
 "requirements.txt`."
@@ -2412,74 +2157,105 @@ msgstr ""
 msgid "Getting started"
 msgstr "البدء"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:8
+#: ../../content/administration/odoo_sh/getting_started.rst:10
 msgid "Main components"
 msgstr "المكونات الرئيسية"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:10
+#: ../../content/administration/odoo_sh/getting_started.rst:12
 msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
-"involved. While they are all interconnected, each one plays a distinct role "
-"in the development and deployment of Odoo applications:"
+"involved:"
 msgstr ""
-"عند العمل مع Odoo.sh، من المهم فهم المكونات الرئيسية المعنية. على الرغم من "
-"أنها جميعًا مترابطة، إلا أن كل منها يلعب دورًا مميزًا في تطوير ونشر تطبيقات "
-"Odoo:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
+msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:15
+msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:16
+msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
-"**GitHub repository**: a version-controlled space where the Odoo "
+"While they are all interconnected, each one plays a distinct role in the "
+"development and deployment of Odoo applications. Together, they form a "
+"cohesive pipeline from code development to a live business use."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:25
+msgid "GitHub repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:27
+msgid ""
+"A GitHub repository is like a folder on your computer that contains all the "
+"files and folders for a specific project. The difference is that it's stored "
+"on GitHub and can be accessed and edited by multiple people on different "
+"computers."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:31
+msgid ""
+"In other words, a GitHub repository is a place where you can store your "
+"project's files and share them with others, so they can collaborate with "
+"you, make changes, and contribute to your project. It also tracks all "
+"changes to your project over time, so you can easily roll back to a previous "
+"version if needed."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:36
+msgid ""
+"Additionally, GitHub offers many features to help you manage your project, "
+"such as issue tracking, pull requests, and code reviews. It's a powerful "
+"tool for managing and collaborating on software projects, and is widely used "
+"by developers around the world. a version-controlled space where the Odoo "
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
-"**مستودع GitHub**: مساحة خاضعة لتحكم الإصدارات حيث يتم تخزين الكود المصدري "
-"لتطبيقات Odoo. يتتبع كل تغيير، ويدعم التعاون، ويمكن أن يكون عامًا أو خاصًا."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
+#: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
 msgstr "مثال على مستودع GitHub"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:20
+#: ../../content/administration/odoo_sh/getting_started.rst:48
+msgid "Odoo.sh project"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
-"**Odoo.sh project**: a Platform as a Service (PaaS) that integrates with "
+"An Odoo.sh project is a *Platform as a Service* (PaaS) that integrates with "
 "GitHub and enables streamlined development, testing, and deployment of Odoo "
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
-"**مشروع Odoo.sh**: منصة كخدمة (PaaS) تتكامل مع GitHub وتتيح تطويرًا واختبارًا "
-"ونشرًا مبسطًا لتطبيقات Odoo. يتضمن أدوات مثل النسخ الاحتياطية التلقائية وبيئات "
-"التجهيز وخطوط التكامل المستمر."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
+#: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
 msgstr "مثال على مشروع Odoo.sh"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:27
-msgid ""
-"**Odoo database**: a database stores all the operational data used and "
-"generated by Odoo applications, such as business records, configurations, "
-"and user data."
+#: ../../content/administration/odoo_sh/getting_started.rst:60
+msgid "Odoo database"
 msgstr ""
-"**قاعدة بيانات Odoo**: قاعدة بيانات تخزن جميع البيانات التشغيلية المستخدمة "
-"والمُنشأة بواسطة تطبيقات Odoo، مثل السجلات التجارية والتكوينات وبيانات "
-"المستخدم."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
+#: ../../content/administration/odoo_sh/getting_started.rst:62
+msgid ""
+"An Odoo database stores all the operational data used and generated by Odoo "
+"applications, such as business records, configurations, and user data."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
 msgstr "مثال على قاعدة بيانات Odoo"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:33
-msgid ""
-"Together, they form a cohesive pipeline from code development to a live "
-"business use."
-msgstr ""
-"معًا، تشكل خط أنابيب متماسكًا من تطوير الكود إلى الاستخدام التجاري المباشر."
-
-#: ../../content/administration/odoo_sh/getting_started.rst:36
+#: ../../content/administration/odoo_sh/getting_started.rst:71
 msgid "User types"
 msgstr "أنواع المستخدمين"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:38
+#: ../../content/administration/odoo_sh/getting_started.rst:73
 msgid ""
 "Odoo.sh involves different types of users, each with a specific role in the "
 "project lifecycle:"
@@ -2487,31 +2263,143 @@ msgstr ""
 "يتضمن Odoo.sh أنواعًا مختلفة من المستخدمين، كل منهم له دور محدد في دورة حياة "
 "المشروع:"
 
-#: ../../content/administration/odoo_sh/getting_started.rst:40
+#: ../../content/administration/odoo_sh/getting_started.rst:75
 msgid ""
-"GitHub users: developers with access to the GitHub repository linked to the "
-"Odoo.sh project. Access to the repository does not automatically make "
+"**GitHub users**: developers with access to the GitHub repository linked to "
+"the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
-"مستخدمو GitHub: مطورون لديهم حق الوصول إلى مستودع GitHub المرتبط بمشروع "
-"Odoo.sh. الوصول إلى المستودع لا يجعل شخصًا تلقائيًا متعاونًا في مشروع Odoo.sh."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:44
+#: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
-"Odoo.sh collaborators: individuals managing the Odoo.sh project. Each "
+"**Odoo.sh collaborators**: individuals managing the Odoo.sh project. Each "
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
-"متعاونو Odoo.sh: أفراد يديرون مشروع Odoo.sh. يجب أن يكون كل متعاون مرتبطًا "
-"بمستخدم GitHub. ومع ذلك، المتعاونون ليسوا نفس مستخدمي قاعدة البيانات."
 
-#: ../../content/administration/odoo_sh/getting_started.rst:47
+#: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
-"Database users: end-users of the deployed Odoo database. They interact with "
-"the live system but are not involved in development or project management."
+"**Database users**: end-users of the deployed Odoo database. They interact "
+"with the live system but are not involved in development or project "
+"management."
 msgstr ""
-"مستخدمو قاعدة البيانات: المستخدمون النهائيون لقاعدة بيانات Odoo المنشورة. "
-"يتفاعلون مع النظام المباشر ولكنهم غير مشاركين في التطوير أو إدارة المشروع."
+
+#: ../../content/administration/odoo_sh/getting_started.rst:86
+msgid "Technical concepts"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:88
+msgid ""
+"When working with Odoo.sh, it is also important to understand several "
+"technical concepts:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:90
+msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:91
+msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:92
+msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:97
+msgid "Forking a repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:99
+msgid ""
+"Forking a repository on GitHub is when you create a copy of someone else's "
+"repository on your own account. This allows you to make changes to the "
+"repository without affecting the original version."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:102
+msgid ""
+"When you fork a repository, you create your own copy of the repository, "
+"complete with all the files and folders in the original repository. You can "
+"then make changes to the files in your copy of the repository and commit "
+"them, just like you would with any other repository."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:106
+msgid ""
+"The benefit of forking a repository is that you can make changes to the code "
+"without affecting the original version, which is useful when you want to "
+"experiment with new features or fix bugs in someone else's code. You can "
+"also use the forked repository as a starting point for your project, making "
+"changes as needed."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:111
+msgid ""
+"Once you have made changes to the forked repository, you can submit a pull "
+"request to the original repository owner, asking them to merge your changes "
+"back into their repository. This is a common approach for open-source "
+"projects to accept contributions from other developers, and it can be a "
+"great way to get involved in the community and improve your coding skills."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:119
+msgid "Pushing a commit"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:121
+msgid ""
+"When you make changes to a file or multiple files in a Git repository on "
+"your local computer, those changes are considered *uncommitted*. In other "
+"words, Git knows that changes have been made, but they haven't been "
+"officially saved or recorded yet."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:125
+msgid ""
+"To save those changes and add them to the Git repository, you need to create "
+"a *commit*. A commit is a snapshot of the changes you made to the files at a "
+"specific point in time. It records what changes were made, who made them, "
+"and when."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:129
+msgid ""
+"Once you've created a commit, you can then *push* it to a remote repository, "
+"such as one hosted on GitHub. Pushing a commit means sending the changes "
+"you've made in the commit from your local repository to the remote "
+"repository so that others can see and use them."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:133
+msgid ""
+"To summarize, pushing a commit means sending the changes you have made to "
+"the files in your Git repository from your local computer to a remote "
+"repository. It is a way to share your changes with others and collaborate on "
+"a project."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:140
+msgid "Merging a branch"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:142
+msgid ""
+"Merging a branch into another is the process of combining the changes made "
+"in one branch into the other. For example, let's say you created a new "
+"branch called `feature-branch` to work on a new feature for your project. "
+"Once you've finished making changes to this branch, you can merge those "
+"changes back into the main branch (often called the `master` or `main` "
+"branch)."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:147
+msgid ""
+"When you merge a branch, Git examines the changes in both branches and "
+"attempts to combine them. If there are any conflicts between the changes "
+"made in the two branches, Git will prompt you to resolve them before "
+"completing the merge (code-wise)."
+msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -2694,10 +2582,6 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:78
 msgid "The neutralization disables:"
 msgstr "يعطل التحييد ما يلي:"
-
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:80
-msgid "Scheduled actions"
-msgstr "الإجراءات المجدولة"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:83
 msgid ""
@@ -3827,12 +3711,9 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:597
 msgid ""
 ":guilabel:`Install only my modules (does not include submodules)`: only "
-"installs the branch's modules, excluding :doc:`submodules <../advanced/"
+"installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
-":guilabel:`تثبيت وحداتي فقط (لا يشمل الوحدات الفرعية)`: يثبّت وحدات الفرع "
-"فقط، باستثناء :doc:`الوحدات الفرعية <../advanced/submodules>`. هذا هو الخيار "
-"الافتراضي."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4232,8 +4113,8 @@ msgstr ""
 "يُستخدم أمر submodule لإضافة فرع من مستودع آخر إلى فرعك الحالي كوحدة فرعية."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
-msgid ":doc:`Submodules documentation <../advanced/submodules>`"
-msgstr ":doc:`توثيق الوحدات الفرعية <../advanced/submodules>`"
+msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
+msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -4313,6 +4194,10 @@ msgstr ""
 "enterprise>`_) يعمل على مراجعة محددة من مستودع مشروعك في بيئة حاوية. الغرض "
 "منه هو اختبار السلوك الصحيح للخادم وقاعدة البيانات والميزات المرتبطة بتلك "
 "المراجعة."
+
+#: ../../content/administration/odoo_sh/getting_started/builds.rst:14
+msgid "Overview"
+msgstr "نظرة عامة"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
 msgid "Overiew of the builds"
@@ -4790,10 +4675,8 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/create.rst:93
 msgid ""
 "For publicly available community modules, you may also consider "
-"using :doc:`submodules <../advanced/submodules>`."
+"using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
-"بالنسبة للوحدات المجتمعية المتاحة للعامة، يمكنك أيضاً التفكير في "
-"استخدام :doc:`الوحدات الفرعية <../advanced/submodules>`."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -5124,10 +5007,6 @@ msgid "Push your changes."
 msgstr "ارفع تغييراتك."
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:119
-msgid "In this command:"
-msgstr "في هذا الأمر:"
-
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid ""
 "`https` is the name of your *HTTPS* GitHub remote repository (e.g., `https://"
 "github.com/username/repository.git`)."
@@ -5135,11 +5014,11 @@ msgstr ""
 "`https` هو اسم مستودع GitHub البعيد باستخدام *HTTPS* (مثل `https://"
 "github.com/username/repository.git`)."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:123
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid "`HEAD` is the reference to the latest revision you committed."
 msgstr "`HEAD` هو المرجع لأحدث مراجعة قمت بتثبيتها."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:124
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:122
 msgid ""
 "`<branch>` must be replaced by the name of the branch to which you want to "
 "push the changes, most likely the current branch if you work on a "
@@ -5148,7 +5027,7 @@ msgstr ""
 "يجب استبدال `<branch>` باسم الفرع الذي تريد رفع التغييرات إليه، على الأرجح "
 "الفرع الحالي إذا كنت تعمل على نسخة تطوير."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:127
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:125
 msgid ""
 "You will be prompted to input your GitHub username and password. After "
 "inputting your credentials, press enter."
@@ -5160,7 +5039,7 @@ msgstr ""
 msgid "The commands to commit and push changes"
 msgstr "أوامر تثبيت التغييرات ورفعها"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:134
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:132
 msgid ""
 "If you activate two-factor authentication for your GitHub account, you can "
 "create a `personal access token <https://docs.github.com/en/authentication/"
@@ -5179,7 +5058,7 @@ msgstr ""
 "features/repository-access-and-collaboration/inviting-collaborators-to-a-"
 "personal-repository>`_ يكفي."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:140
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:138
 msgid ""
 "It is not possible to authenticate yourself using SSH, as your private SSH "
 "key is not hosted in your build containers for security reasons, nor "
@@ -5190,7 +5069,7 @@ msgstr ""
 "حاويات النسخ الخاصة بك لأسباب أمنية، ولا يتم إعادة توجيهه عبر وكيل SSH، حيث "
 "تصل إلى المحرر من خلال متصفح الويب."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:143
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:141
 msgid ""
 "The source folder `~/src/user` is not checked out on a branch but rather on "
 "a detached revision. This is because builds work on specific revisions "
@@ -5201,7 +5080,7 @@ msgstr ""
 "النسخ تعمل على مراجعات محددة بدلاً من الفروع، مما يعني أنه يمكن أن يكون لديك "
 "نسخ متعددة على نفس الفرع، ولكن على مراجعات مختلفة."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:147
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:145
 msgid ""
 "Once your changes are pushed, according to your :ref:`branch push behavior "
 "<odoo-sh/branches/tabs/settings>`, a new build may be created. You can "
@@ -5214,11 +5093,11 @@ msgstr ""
 "رفعت منه، حيث سيكون له نفس المراجعة التي تم إنشاء النسخة الجديدة عليها. ومع "
 "ذلك، تأكد دائمًا من أن تكون في محرر نسخة تستخدم أحدث مراجعة لفرعك."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:153
 msgid "Consoles"
 msgstr "أدوات التحكم "
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:157
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
 msgid ""
 "You can open Python consoles, which are `IPython interactive shells <https://"
 "ipython.readthedocs.io/en/stable/interactive/tutorial.html>`_. Using these "
@@ -5232,7 +5111,7 @@ msgstr ""
 "`إمكانيات العرض الغنية <https://ipython.readthedocs.io/en/stable/config/"
 "integrating.html#rich-display>`_ لعرض الكائنات بتنسيق HTML."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:164
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:162
 msgid "The :code:`Pretty` class displays lists in a legible way."
 msgstr "فئة :code:`Pretty` تعرض القوائم بطريقة واضحة."
 
@@ -5240,7 +5119,7 @@ msgstr "فئة :code:`Pretty` تعرض القوائم بطريقة واضحة."
 msgid "Pretty class example"
 msgstr "مثال على فئة Pretty"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:170
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:168
 msgid ""
 "Using `pandas <https://pandas.pydata.org/pandas-docs/stable/getting_started/"
 "tutorials.html>`_ you can display:"
@@ -5248,7 +5127,7 @@ msgstr ""
 "باستخدام `pandas <https://pandas.pydata.org/pandas-docs/stable/"
 "getting_started/tutorials.html>`_ يمكنك عرض:"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:173
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:171
 msgid "Cells of a CSV file"
 msgstr "خلايا من ملف CSV"
 
@@ -5256,7 +5135,7 @@ msgstr "خلايا من ملف CSV"
 msgid "pandas CSV example"
 msgstr "مثال pandas لـ CSV"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:178
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:176
 msgid "Graphs"
 msgstr "الرسوم البيانية"
 
@@ -5264,7 +5143,7 @@ msgstr "الرسوم البيانية"
 msgid "pandas graph example"
 msgstr "مثال على رسم بياني pandas"
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:183
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:181
 msgid ""
 "You can open Odoo shell consoles to experiment with the Odoo registry and "
 "model methods of your database. You can also read or write directly on your "
@@ -5273,7 +5152,7 @@ msgstr ""
 "يمكنك فتح وحدات تحكم Odoo shell لتجربة سجل Odoo وطرق النموذج الخاصة بقاعدة "
 "بياناتك. يمكنك أيضًا القراءة أو الكتابة مباشرة على سجلاتك."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:187
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:185
 msgid ""
 "In an Odoo shell console, transactions are automatically committed. This "
 "means that changes made to records are applied to the database. For example, "
@@ -5285,7 +5164,7 @@ msgstr ""
 "إذا قمت بتغيير اسم مستخدم، فسيتم تحديثه في قاعدة البيانات أيضًا. لذلك، استخدم "
 "وحدات تحكم Odoo shell بحذر على قواعد البيانات الإنتاجية."
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:192
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:190
 msgid ""
 "You can use `env` to invoke models of your database registry, "
 "e.g., :code:`env['res.users']`."
@@ -10504,6 +10383,631 @@ msgstr ":doc:`وثائق Odoo.sh <odoo_sh>` "
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`إصدارات Odoo المدعومة <standard_extended_support>`"
+
+#~ msgid "Advanced"
+#~ msgstr "متقدم"
+
+#~ msgid ""
+#~ "Each build is isolated within its own container (Linux namespaced "
+#~ "container)."
+#~ msgstr "يتم عزل كل بناء داخل الحاوية الخاصة به (حاوية مساحة الاسم Linux). "
+
+#~ msgid ""
+#~ "The base is an Ubuntu system, where all of Odoo's required dependencies, "
+#~ "as well as common useful packages, are installed."
+#~ msgstr ""
+#~ "الأساس هو نظام Ubuntu، حيث يتم تثبيت كافة التبعيات المطلوبة في أودو، "
+#~ "بالإضافة إلى الحزم المفيدة الشائعة. "
+
+#~ msgid ""
+#~ "If your project requires additional Python dependencies, or more recent "
+#~ "releases, you can define a :file:`requirements.txt` file in the root of "
+#~ "your branches listing them. The platform will take care to install these "
+#~ "dependencies in your containers. `The pip requirements specifiers "
+#~ "<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+#~ "specifiers>`_ documentation can help you write a :file:`requirements.txt` "
+#~ "file. To have a concrete example, check out the `requirements.txt file of "
+#~ "Odoo <https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
+#~ msgstr ""
+#~ "إذا كان مشروعك يتطلب تبعيات إضافية لـ Python، أو إصدارات أحدث، فيمكنك "
+#~ "تحديد ملف :file:`requirements.txt` في جذر فروعك التي تدرجها. ستقوم المنصة "
+#~ "بتثبيت تلك التبعيات في حاوياتك. يمكن أن تساعدك `محددات متطلبات pip "
+#~ "<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+#~ "specifiers>`_ على كتابة ملف :file:`requirements.txt`. لرؤية مثال ملموس، "
+#~ "ألقِ نظرة على ملف `requirements.txt الخاص بأودو <https://github.com/odoo/"
+#~ "odoo/blob/18.0/requirements.txt>`_. "
+
+#~ msgid ""
+#~ "The :file:`requirements.txt` files of submodules are taken into account "
+#~ "as well. The platform looks for :file:`requirements.txt` files in each "
+#~ "folder containing Odoo modules: Not in the module folder itself, but in "
+#~ "their parent folder."
+#~ msgstr ""
+#~ "يتم أيضاً اعتبار ملفات :file:`requirements.txt` الخاصة بالتطبيقات الفرعية. "
+#~ "تبحث المنصة عن ملفات :file:`requirements.txt` في كل مجلد يحتوي على "
+#~ "تطبيقات أودو: ليس في مجلد التطبيق نفسه، ولكن في المجلد الأصلي الخاص به. "
+
+#~ msgid ""
+#~ "As the containers are Ubuntu based, their directory structure follows the "
+#~ "linux Filesystem Hierarchy Standard. `Ubuntu's filesystem tree overview "
+#~ "<https://help.ubuntu.com/community/"
+#~ "LinuxFilesystemTreeOverview#Main_directories>`_ explains the main "
+#~ "directories."
+#~ msgstr ""
+#~ "بما أن الحاويات تعتمد على نظام Ubuntu، فإن بنية الدليل الخاصة بها تتبع "
+#~ "معيار التسلسل الهرمي لنظام ملفات Linux. `نظرة عامة على شجرة نظام ملفات "
+#~ "Ubuntu <https://help.ubuntu.com/community/"
+#~ "LinuxFilesystemTreeOverview#Main_directories>`_ تشرح الدلائل الرئيسية. "
+
+#~ msgid "Here are the Odoo.sh pertinent directories:"
+#~ msgstr "فيما يلي دلائل Odoo.sh ذات الصلة: "
+
+#~ msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
+#~ msgstr "تم تثبيت كل من Python 2.7 و3.5 في الحاويات، ولكن: "
+
+#~ msgid ""
+#~ "If your project is configured to use Odoo 10.0, the Odoo server runs with "
+#~ "Python 2.7."
+#~ msgstr ""
+#~ "إذا تمت تهيئة مشروعك لاستخدام أودو 10.0، فسيعمل خادم أودو مع Python 2.7. "
+
+#~ msgid ""
+#~ "If your project is configured to use Odoo 11.0 or above, the Odoo server "
+#~ "runs with Python 3.5."
+#~ msgstr ""
+#~ "إذا تمت تهيئة مشروعك لاستخدام أودو 11.0 أو أعلى، فسيعمل خادم أودو مع "
+#~ "Python 3.5. "
+
+#~ msgid ""
+#~ "While accessing a container with the shell, you can access the database "
+#~ "using *psql*."
+#~ msgstr ""
+#~ "عند الوصول إلى حاوية باستخدام shell، يمكنك الوصول إلى قاعدة البيانات عن "
+#~ "طريق *psql*. "
+
+#~ msgid ""
+#~ "**Be careful !** `Use transactions <https://www.postgresql.org/docs/"
+#~ "current/static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) for every "
+#~ "*sql* statements leading to changes (*UPDATE*, *DELETE*, *ALTER*, ...), "
+#~ "especially for your production database."
+#~ msgstr ""
+#~ "**كن حذراً!** `استخدم المعاملات <https://www.postgresql.org/docs/current/"
+#~ "static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) لكل بيانات *sql * "
+#~ "التي تؤدي إلى تغييرات (*UPDATE*، *DELETE*، *ALTER*، ...)، خاصة لقاعدة "
+#~ "بيانات الإنتاج الخاصة بك. "
+
+#~ msgid ""
+#~ "The transaction mechanism is your safety net in case of mistake. You "
+#~ "simply have to rollback your changes to revert your database to its "
+#~ "previous state."
+#~ msgstr ""
+#~ "آلية المعاملة هي شبكة الأمان الخاصة بك في حالة وقوع خطأ. كل ما عليك فعله "
+#~ "هو التراجع عن تغييراتك لإعادة قاعدة بياناتك إلى حالتها السابقة. "
+
+#~ msgid ""
+#~ "For example, it may happen that you forget to set your *WHERE* condition."
+#~ msgstr "على سبيل المثال، قد يحدث أنك نسيت تعيين شرط *WHERE*. "
+
+#~ msgid ""
+#~ "In such a case, you can rollback to revert the unwanted changes that you "
+#~ "just mistakenly did, and rewrite the statement:"
+#~ msgstr ""
+#~ "في مثل هذه الحالة، يمكنك العودة للتراجع عن التغييرات غير المرغوب بها التي "
+#~ "قمت بها عن طريق الخطأ، وإعادة الكتابة: "
+
+#~ msgid ""
+#~ "However, do not forget to either commit or rollback your transaction "
+#~ "after having done it. Open transactions may lock records in your tables "
+#~ "and your running database may wait for them to be released. It can cause "
+#~ "a server to hang indefinitely."
+#~ msgstr ""
+#~ "ومع ذلك، لا تنس الالتزام بمعاملتك أو التراجع عنها بعد الانتهاء منها. قد "
+#~ "تؤدي المعاملات المفتوحة إلى قفل السجلات في جداولك وقد تضطر قاعدة بياناتك "
+#~ "الجارية إلى الانتظار حتى يتم إصدارها. يمكن أن يتسبب ذلك في تعليق الخادم "
+#~ "إلى أجل غير مسمى. "
+
+#~ msgid ""
+#~ "In addition, when possible, use your staging databases to test your "
+#~ "statements first. It gives you an extra safety net."
+#~ msgstr ""
+#~ "بالإضافة إلى ذلك، عندما يكون ذلك ممكناً، استخدم قواعد بياناتك التجريبية "
+#~ "لاختبار بياناتك أولاً. يمنحك ذلك شبكة أمان إضافية. "
+
+#~ msgid ""
+#~ "You can start an Odoo server instance from a container shell. You won't "
+#~ "be able to access it from the outside world with a browser, but you can "
+#~ "for instance:"
+#~ msgstr ""
+#~ "يمكنك بدء مثيل خادم أودو من shell الحاوية. لن تتمكن من الوصول إليه من "
+#~ "الخارج باستخدام المتصفح، ولكن يمكنك على سبيل المثال: "
+
+#~ msgid "use the Odoo shell,"
+#~ msgstr "استخدم shell أودو، "
+
+#~ msgid "install a module,"
+#~ msgstr "قم بتثبيت تطبيق، "
+
+#~ msgid "update a module,"
+#~ msgstr "قم بتحديث تطبيق، "
+
+#~ msgid "run the tests for a module,"
+#~ msgstr "أجرِ الاختبارات على التطبيق، "
+
+#~ msgid "In the above commands, the argument:"
+#~ msgstr "في الأوامر أعلاه، الوسيط: "
+
+#~ msgid ""
+#~ "``--without-demo=all`` prevents demo data to be loaded for all modules"
+#~ msgstr ""
+#~ "``--without-demo=all`` يمنع البيانات التجريبية من أن يتم تحميلها لكافة "
+#~ "التطبيقات "
+
+#~ msgid ""
+#~ "``--stop-after-init`` will immediately shutdown the server instance after "
+#~ "it completed the operations you asked."
+#~ msgstr ""
+#~ "``--stop-after-init`` سوف يقوم بإيقاف تشغيل مثيل الخادم على الفور بعد "
+#~ "إكمال العمليات التي طلبتها. "
+
+#~ msgid ""
+#~ "More options are available and detailed in the :doc:`CLI documentation </"
+#~ "developer/reference/cli>`."
+#~ msgstr ""
+#~ "ستجد المزيد من الخيارات المتاحة والموضحة في :doc:`وثائق CLI </developer/"
+#~ "reference/cli>`. "
+
+#~ msgid ""
+#~ "You can find in the logs (*~/logs/odoo.log*) the addons path used by "
+#~ "Odoo.sh to run your server. Look for \"*odoo: addons paths*\":"
+#~ msgstr ""
+#~ "ستجد في السجلات (*~/logs/odoo.log*) مسار الوظائف الإضافية المستخدم من قِبَل "
+#~ "Odoo.sh لتشغيل الخادم الخاص بك. ابحث عن \"*أودو: مسارات الوظائف "
+#~ "الإضافية*\": "
+
+#~ msgid ""
+#~ "**Be careful**, especially with your production database. Operations that "
+#~ "you perform running this Odoo server instance are not isolated: Changes "
+#~ "will be effective in the database. Always, make your tests in your "
+#~ "staging databases."
+#~ msgstr ""
+#~ "**كن حذراً**، خاصة فيما يتعلق بقاعدة بيانات الإنتاج لديك. العمليات التي "
+#~ "تقوم بها عند تشغيل مثيل خادم أودو ليست معزولة: ستكون التغييرات سارية "
+#~ "وفعالة في قاعدة البيانات. قم دائماً بإجراء اختباراتك في قواعد بياناتك "
+#~ "التجريبية. "
+
+#~ msgid ""
+#~ "Debugging an Odoo.sh build is not really different than another Python "
+#~ "app. This article only explains the specificities and limitations of the "
+#~ "Odoo.sh platform, and assumes that you already know how to use a debugger."
+#~ msgstr ""
+#~ "لا تختلف عملية تصحيح الأخطاء لإصدار Odoo.sh في الواقع عن تطبيق Python "
+#~ "آخر. تشرح هذه المقالة فقط خصوصيات وقيود منصة Odoo.sh، وتفترض أنك تعرف "
+#~ "بالفعل كيفية استخدام أداة تصحيح الأخطاء. "
+
+#~ msgid ""
+#~ "If you don't know how to debug a Python application yet, there are "
+#~ "multiple introductory courses that can be easily found on the Internet."
+#~ msgstr ""
+#~ "إذا كنت لا تعرف كيفية تصحيح أخطاء تطبيق Python حتى الآن، فهناك العديد من "
+#~ "الدورات التدريبية التمهيدية التي يمكن العثور عليها بسهولة على الإنترنت. "
+
+#~ msgid ""
+#~ "You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh. "
+#~ "As the server is run outside a shell, you cannot launch the debugger "
+#~ "directly from your Odoo instance backend as the debugger needs a shell to "
+#~ "operate."
+#~ msgstr ""
+#~ "يمكنك استخدام ``pdb`` أو ``pudb`` أو ``ipdb`` لتصحيح الكود الخاص بك على "
+#~ "Odoo.sh. نظراً لأن الخادم يتم تشغيله خارج shell، فلا يمكنك تشغيل أداة "
+#~ "تصحيح الأخطاء مباشرة من الواجهة الخلفية لمثيل أودو الخاص بك، حيث تحتاج "
+#~ "أداة تصحيح الأخطاء إلى shell لتعمل. "
+
+#~ msgid ""
+#~ "If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb "
+#~ "<https://pypi.org/project/ipdb/>`_ you have to install it before."
+#~ msgstr ""
+#~ "إذا كنت ترغب في تثبيت `pudb <https://pypi.org/project/pudb/>`_ أو `ipdb "
+#~ "<https://pypi.org/project/ipdb/>`_ عليك تثبيته أولاً. "
+
+#~ msgid "To do so, you have two options:"
+#~ msgstr "للقيام بذلك، لديك خياران: "
+
+#~ msgid "temporary (only in the current build):"
+#~ msgstr "مؤقَّت (فقط في البنية الحالية): "
+
+#~ msgid "or"
+#~ msgstr "أو"
+
+#~ msgid ""
+#~ "permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` "
+#~ "file."
+#~ msgstr ""
+#~ "دائم: قم بإضافة ``pudb`` أو ``ipdb`` إلى ملف ``requirements.txt`` "
+#~ "لمشروعك. "
+
+#~ msgid ""
+#~ "Then edit the code where you want to trigger the debugger and add this:"
+#~ msgstr ""
+#~ "ثم قم بتحرير الكود الذي ترغب في تشغيل أداة تصحيح الأخطاء فيه وأضف ما يلي: "
+
+#~ msgid ""
+#~ "The condition :code:`sys.__stdin__.isatty()` is a hack that detects if "
+#~ "you run Odoo from a shell."
+#~ msgstr ""
+#~ "الشرط :code:`sys.__stdin__.isatty()` هو عبارة عن وسيلة لاكتشاف ما إذا كنت "
+#~ "تقوم بتشغيل أودو من shell. "
+
+#~ msgid "Save the file and then run the Odoo Shell:"
+#~ msgstr "احفظ الملف ثم قم بتشغيل shell أودو: "
+
+#~ msgid ""
+#~ "Finally, *via* the Odoo Shell, you can trigger the piece of code/function/"
+#~ "method you want to debug."
+#~ msgstr ""
+#~ "وأخيراً، *عن طريق* Shell أودو، يمكنك تشغيل الجزء من الكود/الوظيفة/الطريقة "
+#~ "التي تريد تصحيح الأخطاء فيها. "
+
+#~ msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
+#~ msgstr "لقطة شاشة لوحدة التحكم توضح تشغيل ``pdb`` في Odoo.sh Shell. "
+
+#~ msgid "Frequent Technical Questions"
+#~ msgstr "الأسئلة التقنية الشائعة "
+
+#~ msgid ""
+#~ "\"Scheduled actions do not run at the exact time they were expected\""
+#~ msgstr "\"لا تعمل الإجراءات المجدولة في الوقت المحدد المتوقع عملها فيه\" "
+
+#~ msgid ""
+#~ "On the Odoo.sh platform, we cannot guarantee an exact running time for "
+#~ "scheduled actions."
+#~ msgstr ""
+#~ "على منصة Odoo.sh، لا يمكننا ضمان وقت تشغيل محدد للإجراءات المجدولة. "
+
+#~ msgid ""
+#~ "This is due to the fact that there might be multiple customers on the "
+#~ "same server, and we must guarantee a fair share of the server for every "
+#~ "customer. Scheduled actions are therefore implemented slightly "
+#~ "differently than on a regular Odoo server, and are run on a *best effort* "
+#~ "policy."
+#~ msgstr ""
+#~ "ويرجع ذلك إلى حقيقة أنه قد يكون هناك العديد من العملاء على نفس الخادم، "
+#~ "ويجب علينا ضمان حصة عادلة من الخادم لكل عميل. ولذلك يتم تنفيذ الإجراءات "
+#~ "المجدولة بشكل مختلف قليلاً عن خادم أودو العادي، ويتم تشغيلها وفقاً لسياسة "
+#~ "*أفضل الجهود*. "
+
+#~ msgid ""
+#~ "Do not expect any scheduled action to be run more often than every 5 min."
+#~ msgstr "لا تتوقع أن يتم تشغيل أي إجراء مجدول لأكثر من كل 5 دقائق. "
+
+#~ msgid "Are there \"best practices\" regarding scheduled actions?"
+#~ msgstr "هل هناك \"أفضل الممارسات\" فيما يتعلق بالإجراءات المجدولة؟ "
+
+#~ msgid ""
+#~ "**Odoo.sh always limits the execution time of scheduled actions (*aka* "
+#~ "crons).** Therefore, you must keep this fact in mind when developing your "
+#~ "own crons."
+#~ msgstr ""
+#~ "**يقوم Odoo.sh دائماً بتقييد وقت تنفيذ الإجراءات المجدولة (*المعروف أيضاً "
+#~ "باسم* crons).** لذلك، يجب أن تضع ذلك بعين الاعتبار عند تطوير crons الخاصة "
+#~ "بك. "
+
+#~ msgid "We advise that:"
+#~ msgstr "نوصي بـ: "
+
+#~ msgid "Your scheduled actions should work on small batches of records."
+#~ msgstr "من المفترض أن تعمل إجراءاتك المجدولة على مجموعات صغيرة من السجلات. "
+
+#~ msgid ""
+#~ "Your scheduled actions should commit their work after processing each "
+#~ "batch; this way, if they get interrupted by the time-limit, there is no "
+#~ "need to start over."
+#~ msgstr ""
+#~ "يجب أن تلتزم إجراءاتك المجدولة بعملها بعد معالجة كل دفعة؛ بهذه الطريقة، "
+#~ "إذا تمت مقاطعتها خلال المهلة الزمنية، فلن تكون هناك حاجة للبدء من جديد. "
+
+#~ msgid ""
+#~ "Your scheduled actions should be `idempotent <https://stackoverflow.com/a/"
+#~ "1077421/3332416>`_: they must not cause side-effects if they are started "
+#~ "more often than expected."
+#~ msgstr ""
+#~ "يجب أن تكون إجراءاتك المجدولة عاجزة <https://stackoverflow.com/a/"
+#~ "1077421/3332416>`_: يجب ألا تتسبب في أي آثار جانبية إذا تم تشغيلها بوتيرة "
+#~ "أكبر من المتوقع. "
+
+#~ msgid "How can I automate tasks when an IP address change occurs?"
+#~ msgstr "كيف يمكنني أتمتة المهام عندما يطرأ تغيير في عنوان IP؟ "
+
+#~ msgid ""
+#~ "**Odoo.sh notifies project administrators of IP address changes.** "
+#~ "Additionally, when the IP address of a production instance changes, an "
+#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
+#~ "IP address included as a query string parameter (`new`), along with the "
+#~ "previous IP address as an additional parameter (`old`)."
+#~ msgstr ""
+#~ "** يقوم Odoo.sh بإخطار مسؤولي المشروع بالتغيرات التي تطرأ على عنوان IP.** "
+#~ "إضافةً إلى ذلك، عندما يتغير عنوان IP لمثيل لقاعدة بيانات الإنتاج، يتم "
+#~ "إرسال طلب `HTTP `GET إلى المسار `/_odoo.sh/ip-change` مع تضمين عنوان IP "
+#~ "الجديد كمعامل لسلسلة الاستعلام (`جديد`)، إلى جانب عنوان IP السابق كمعامل "
+#~ "إضافي (`قديم`). "
+
+#~ msgid ""
+#~ "This mechanism allows custom actions to be applied in response to the IP "
+#~ "address change (e.g., sending an email, contacting a firewall API, "
+#~ "configuring database objects, etc.)"
+#~ msgstr ""
+#~ "تتيح لك هذه الآلية تطبيق إجراءات مخصصة للاستجابة لتغيير عنوان IP (على "
+#~ "سبيل المثال، إرسال بريد إلكتروني، أو الاتصال بالواجهة البرمجية لجدار "
+#~ "الحماية، أو تهيئة كائنات قاعدة البيانات، إلخ). "
+
+#~ msgid ""
+#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+#~ "internally by the platform itself and returns a `403` response if "
+#~ "accessed through any other means."
+#~ msgstr ""
+#~ "لأسباب أمنية، يمكن الوصول إلى مسار `/_odoo.sh/ip-change` داخلياً فقط من "
+#~ "خلال المنصة نفسها، وينتج عنه رد `403` إذا تم الوصول إليه بأي طريقة أخرى. "
+
+#~ msgid "Here is a pseudo-implementation example:"
+#~ msgstr "فيما يلي مثال تنفيذ زائف: "
+
+#~ msgid ""
+#~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
+#~ "allows you to integrate other Git projects into your code, without the "
+#~ "need to copy-paste all their code."
+#~ msgstr ""
+#~ "يتيح لك `تطبيق Git الفرعي <https://git-scm.com/book/en/v2/Git-Tools-"
+#~ "Submodules>`_ دمج مشاريع Git الأخرى في الكود الخاص بك، دون الحاجة إلى نسخ "
+#~ "ولصق الكود الخاص به بأكمله. "
+
+#~ msgid ""
+#~ "Indeed, your custom modules can depend on modules from other "
+#~ "repositories. Regarding Odoo, this feature allows you to add modules from "
+#~ "other Git repositories into the branches of your repository. Adding these "
+#~ "dependencies in your branch through submodules makes the deployment of "
+#~ "your code and servers easier, as you can clone the repositories added as "
+#~ "submodules at the same time you clone your own repository."
+#~ msgstr ""
+#~ "في الواقع، يمكن أن تعتمد تطبيقاتك المخصصة على تطبيقات من مستودعات أخرى. "
+#~ "فيما يتعلق بأودو، تتيح لك هذه الخاصية إضافة تطبيقات من مستودعات Git "
+#~ "الأخرى إلى فروع مستودعك. إن إضافة هذه التبعيات في فرعك من خلال التطبيقات "
+#~ "الفرعية يجعل من استخدام الكود والخوادم الخاصة بك أسهل، حيث يمكنك استنساخ "
+#~ "المستودعات التي قد تمت إضافتها كتطبيقات فرعية في نفس الوقت الذي تقوم فيه "
+#~ "باستنساخ مستودعك الخاص. "
+
+#~ msgid ""
+#~ "Besides, you can choose the branch of the repository added as submodule "
+#~ "and you have the control of the revision you want. It's up to you to "
+#~ "decide whether you want to pin the submodule to a specific revision and "
+#~ "when you want to update to a newer revision."
+#~ msgstr ""
+#~ "علاوة على ذلك، يمكنك اختيار فرع المستودع الذي قد تمت إضافته كتطبيق فرعي "
+#~ "ويمكنك التحكم في المراجعة التي تريدها. الأمر بيدك تماماً لتقرر ما إذا كنت "
+#~ "ترغب في تثبيت التطبيق الفرعي بمراجعة معينة أم لا، ومتى تريد التحديث إلى "
+#~ "مراجعة أحدث. "
+
+#~ msgid ""
+#~ "In Odoo.sh, the submodules give you the possibility to use and depend on "
+#~ "modules available in other repositories. The platform will detect that "
+#~ "you added modules through submodules in your branches and add them to "
+#~ "your addons path automatically so you can install them in your databases."
+#~ msgstr ""
+#~ "في Odoo.sh، تتيح لك التطبيقات الفرعية استخدام التطبيقات المتوفرة في "
+#~ "مستودعات أخرى والاعتماد عليها. ستتمكن المنصة من رصد أنك قمت بإضافة "
+#~ "تطبيقات من خلال تطبيقات فرعية في فروعك وستقوم بإضافتها تلقائياً إلى مسار "
+#~ "المكونات الإضافية الخاص بك حتى تتمكن من تثبيتها في قواعد البيانات الخاصة "
+#~ "بك. "
+
+#~ msgid ""
+#~ "If you add private repositories as submodules in your branches, you need "
+#~ "to configure a deploy key in your Odoo.sh project settings and in your "
+#~ "repository settings. Otherwise Odoo.sh won't be allowed to download them. "
+#~ "The procedure is detailed in the chapter :ref:`Settings > Submodules "
+#~ "<odoo-sh/settings/submodules>`."
+#~ msgstr ""
+#~ "إذا أضفت مستودعات خاصة كوحدات فرعية في فروعك، فأنت بحاجة إلى تكوين مفتاح "
+#~ "نشر في إعدادات مشروع Odoo.sh وفي إعدادات مستودعك. وإلا فلن يُسمح لـ "
+#~ "Odoo.sh بتنزيلها. الإجراء موضح بالتفصيل في الفصل :ref:`الإعدادات > "
+#~ "الوحدات الفرعية <odoo-sh/settings/submodules>`."
+
+#~ msgid "With Odoo.sh (simple)"
+#~ msgstr "مع Odoo.sh (بسيط) "
+
+#~ msgid ""
+#~ "For now it is not possible to add **private** repositories with this "
+#~ "method. You can nevertheless do so :ref:`with Git <odoo-sh/settings/"
+#~ "submodules>`."
+#~ msgstr ""
+#~ "في الوقت الحالي، لا يمكن إضافة مستودعات **خاصة** بهذه الطريقة. ومع ذلك، "
+#~ "يمكنك القيام بذلك :ref:`باستخدام Git <odoo-sh/settings/submodules>`."
+
+#~ msgid ""
+#~ "On Odoo.sh, in the branches view of your project, choose the branch in "
+#~ "which you want to add a submodule."
+#~ msgstr ""
+#~ "في Odoo.sh، في عرض الفروع لمشروعك، اختر الفرع الذي ترغب في إضافة تطبيق "
+#~ "فرعي إليه. "
+
+#~ msgid ""
+#~ "In the upper right corner, click on the *Submodule* button, and then on "
+#~ "*Run*."
+#~ msgstr ""
+#~ "في الزاوية العليا إلى اليمين، اضغط على زر *تطبيق فرعي*، ثم على *تشغيل*. "
+
+#~ msgid "A dialog with a form is shown. Fill the inputs as follows:"
+#~ msgstr "يتم عرض مربع حوار مع استمارة. قم بتعبئة المدخلات على النحو التالي: "
+
+#~ msgid "Repository URL: The SSH URL of the repository."
+#~ msgstr "عنوان URL للمستودع: عنوان URL لـ SSH للمستودع. "
+
+#~ msgid "Branch: The branch you want to use."
+#~ msgstr "الفرع: الفرع الذي ترغب في استخدامه. "
+
+#~ msgid ""
+#~ "Path: The folder in which you want to add this submodule in your branch."
+#~ msgstr "المسار: المجلد الذي ترغب في إضافة هذا التطبيق الفرعي إليه في فرعك. "
+
+#~ msgid ""
+#~ "On Github, you can get the repository URL with the *Clone or download* "
+#~ "button of the repository. Make sure to *use SSH*."
+#~ msgstr ""
+#~ "في Github، يمكنك الحصول على عنوان URL للمستودع باستخدام زر *نسخ أو تنزيل* "
+#~ "الخاص بالمستودع. تأكد من *استخدام SSH*. "
+
+#~ msgid "Then, add the submodule using the command below:"
+#~ msgstr "بعد ذلك، قم بإضافة التطبيق الفرعي باستخدام الأمر أدناه: "
+
+#~ msgid "Replace"
+#~ msgstr "استبدال"
+
+#~ msgid ""
+#~ "*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the "
+#~ "repository you want to add as submodule,"
+#~ msgstr ""
+#~ "*<git@yourprovider.com>:<username/repository.git>* عن طريق عنوان URL لـ "
+#~ "SSH للمستودع الذي ترغب في إضافته كتطبيق فرعي، "
+
+#~ msgid "*<branch>* by the branch you want to use in the above repository,"
+#~ msgstr "*<branch>* عن طريق الفرع الذي ترغب في استخدامه في المستودع أعلاه، "
+
+#~ msgid "*<path>* by the folder in which you want to add this submodule."
+#~ msgstr "*<path>* عن طريق المجلد الذي ترغب في إضافة هذا التطبيق الفرعي فيه. "
+
+#~ msgid "Commit and push your changes:"
+#~ msgstr "قم بالتحديث وفرض تغييراتك: "
+
+#~ msgid ""
+#~ "<remote> by the repository on which you want to push your changes. For a "
+#~ "standard Git setup, this is *origin*."
+#~ msgstr ""
+#~ "<remote> بواسطة المستودع الذي ترغب في تطبيق التغييرات فيه. هذا هو *الأصل* "
+#~ "بالنسبة لإعدادات Git قياسية. "
+
+#~ msgid ""
+#~ "<branch> by the branch on which you want to push your changes. Most "
+#~ "likely the branch you used :code:`git checkout` on in the first step."
+#~ msgstr ""
+#~ "<branch> بواسطة الفرع الذي ترغب في تطبيق تغييراتك فيه. غالباً ما يكون "
+#~ "الفرع الذي قمت باستخدام  :code:`git checkout` فيه، في الخطوة الأولى. "
+
+#~ msgid ""
+#~ "You can read the `git-scm.com documentation <https://git-scm.com/book/en/"
+#~ "v2/Git-Tools-Submodules>`_ for more details about the Git submodules. For "
+#~ "instance, if you would like to update your submodules to have their "
+#~ "latest revision, you can follow the chapter `Pulling in Upstream changes "
+#~ "<https://git-scm.com/book/en/v2/Git-Tools-"
+#~ "Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
+#~ msgstr ""
+#~ "يمكنك قراءة وثائق `git-scm.com <https://git-scm.com/book/en/v2/Git-Tools-"
+#~ "Submodules>`_  للمزيد من التفاصيل حول تطبيقات Git الفرعية. على سبيل "
+#~ "المثال، إذا كنت ترغب في تحديث تطبيقاتك الفرعية للحصول على أحدث مراجعة "
+#~ "لها، فيمكنك متابعة الفصل `سحب التغييرات الأولية <https://git-scm.com/book/"
+#~ "en/v2/Git-Tools-"
+#~ "Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_. "
+
+#~ msgid "Ignore modules"
+#~ msgstr "تجاهل التطبيقات "
+
+#~ msgid ""
+#~ "If you're adding a repository that contains a lot of modules, you may "
+#~ "want to ignore some of them in case there are any that are installed "
+#~ "automatically. To do so, you can prefix your submodule folder with "
+#~ "a :code:`.`. The platform will ignore this folder and you can hand pick "
+#~ "your modules by creating symlinks to them from another folder."
+#~ msgstr ""
+#~ "إذا كنت تقوم بإضافة مستودع يحتوي على الكثير من التطبيقات، فقد ترغب في "
+#~ "تجاهل بعضها في حالة وجود أي منها تم تثبيته تلقائياً. للقيام بذلك، يمكنك "
+#~ "إضافة بادئة إلى مجلد تطبيقك الفرعي باستخدام :code:`.`. ستتجاهل المنصة هذا "
+#~ "المجلد ويمكنك اختيار تطبيقاتك عن طريق إنشاء روابط رمزية لها من مجلد آخر. "
+
+#~ msgid ""
+#~ "When working with Odoo.sh, it is important to understand the main "
+#~ "components involved. While they are all interconnected, each one plays a "
+#~ "distinct role in the development and deployment of Odoo applications:"
+#~ msgstr ""
+#~ "عند العمل مع Odoo.sh، من المهم فهم المكونات الرئيسية المعنية. على الرغم "
+#~ "من أنها جميعًا مترابطة، إلا أن كل منها يلعب دورًا مميزًا في تطوير ونشر "
+#~ "تطبيقات Odoo:"
+
+#~ msgid ""
+#~ "**GitHub repository**: a version-controlled space where the Odoo "
+#~ "applications' source code is stored. It tracks every change, supports "
+#~ "collaboration, and can be either public or private."
+#~ msgstr ""
+#~ "**مستودع GitHub**: مساحة خاضعة لتحكم الإصدارات حيث يتم تخزين الكود "
+#~ "المصدري لتطبيقات Odoo. يتتبع كل تغيير، ويدعم التعاون، ويمكن أن يكون عامًا "
+#~ "أو خاصًا."
+
+#~ msgid ""
+#~ "**Odoo.sh project**: a Platform as a Service (PaaS) that integrates with "
+#~ "GitHub and enables streamlined development, testing, and deployment of "
+#~ "Odoo applications. It includes tools such as automated backups, staging "
+#~ "environments, and continuous integration pipelines."
+#~ msgstr ""
+#~ "**مشروع Odoo.sh**: منصة كخدمة (PaaS) تتكامل مع GitHub وتتيح تطويرًا "
+#~ "واختبارًا ونشرًا مبسطًا لتطبيقات Odoo. يتضمن أدوات مثل النسخ الاحتياطية "
+#~ "التلقائية وبيئات التجهيز وخطوط التكامل المستمر."
+
+#~ msgid ""
+#~ "**Odoo database**: a database stores all the operational data used and "
+#~ "generated by Odoo applications, such as business records, configurations, "
+#~ "and user data."
+#~ msgstr ""
+#~ "**قاعدة بيانات Odoo**: قاعدة بيانات تخزن جميع البيانات التشغيلية "
+#~ "المستخدمة والمُنشأة بواسطة تطبيقات Odoo، مثل السجلات التجارية والتكوينات "
+#~ "وبيانات المستخدم."
+
+#~ msgid ""
+#~ "Together, they form a cohesive pipeline from code development to a live "
+#~ "business use."
+#~ msgstr ""
+#~ "معًا، تشكل خط أنابيب متماسكًا من تطوير الكود إلى الاستخدام التجاري المباشر."
+
+#~ msgid ""
+#~ "GitHub users: developers with access to the GitHub repository linked to "
+#~ "the Odoo.sh project. Access to the repository does not automatically make "
+#~ "someone a collaborator on the Odoo.sh project."
+#~ msgstr ""
+#~ "مستخدمو GitHub: مطورون لديهم حق الوصول إلى مستودع GitHub المرتبط بمشروع "
+#~ "Odoo.sh. الوصول إلى المستودع لا يجعل شخصًا تلقائيًا متعاونًا في مشروع "
+#~ "Odoo.sh."
+
+#~ msgid ""
+#~ "Odoo.sh collaborators: individuals managing the Odoo.sh project. Each "
+#~ "collaborator must be linked to a GitHub user. However, collaborators are "
+#~ "not the same as database users."
+#~ msgstr ""
+#~ "متعاونو Odoo.sh: أفراد يديرون مشروع Odoo.sh. يجب أن يكون كل متعاون مرتبطًا "
+#~ "بمستخدم GitHub. ومع ذلك، المتعاونون ليسوا نفس مستخدمي قاعدة البيانات."
+
+#~ msgid ""
+#~ "Database users: end-users of the deployed Odoo database. They interact "
+#~ "with the live system but are not involved in development or project "
+#~ "management."
+#~ msgstr ""
+#~ "مستخدمو قاعدة البيانات: المستخدمون النهائيون لقاعدة بيانات Odoo المنشورة. "
+#~ "يتفاعلون مع النظام المباشر ولكنهم غير مشاركين في التطوير أو إدارة المشروع."
+
+#~ msgid ""
+#~ ":guilabel:`Install only my modules (does not include submodules)`: only "
+#~ "installs the branch's modules, excluding :doc:`submodules <../advanced/"
+#~ "submodules>`. This is the default option."
+#~ msgstr ""
+#~ ":guilabel:`تثبيت وحداتي فقط (لا يشمل الوحدات الفرعية)`: يثبّت وحدات الفرع "
+#~ "فقط، باستثناء :doc:`الوحدات الفرعية <../advanced/submodules>`. هذا هو "
+#~ "الخيار الافتراضي."
+
+#~ msgid ":doc:`Submodules documentation <../advanced/submodules>`"
+#~ msgstr ":doc:`توثيق الوحدات الفرعية <../advanced/submodules>`"
+
+#~ msgid ""
+#~ "For publicly available community modules, you may also consider "
+#~ "using :doc:`submodules <../advanced/submodules>`."
+#~ msgstr ""
+#~ "بالنسبة للوحدات المجتمعية المتاحة للعامة، يمكنك أيضاً التفكير في "
+#~ "استخدام :doc:`الوحدات الفرعية <../advanced/submodules>`."
+
+#~ msgid "In this command:"
+#~ msgstr "في هذا الأمر:"
 
 #~ msgid ""
 #~ "The purpose of manual backups is to create a specific snapshot of "
