@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:32+0000\n"
+"POT-Creation-Date: 2026-09-04 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -706,380 +706,294 @@ msgstr ""
 msgid "Odoo.sh is the official cloud platform for hosting and managing Odoo applications. It offers a range of features such as web shell, module dependencies, continuous integration, and SSH access."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced.rst:5
-msgid "Advanced"
+#: ../../content/administration/odoo_sh/advanced.rst:3
+msgid "Advanced topics"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:4
+#: ../../content/administration/odoo_sh/advanced.rst:5
+msgid "This section covers advanced features of Odoo.sh related to :ref:`containers <odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:7
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:9
-#: ../../content/administration/odoo_sh/getting_started/builds.rst:14
-msgid "Overview"
+#: ../../content/administration/odoo_sh/advanced.rst:14
+msgid "Each build is isolated in its own container (Linux namespace container). The base is an Ubuntu-based system on which all of Odoo's required dependencies, as well as common, useful packages, are installed."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:9
-msgid "Each build is isolated within its own container (Linux namespaced container)."
+#: ../../content/administration/odoo_sh/advanced.rst:18
+msgid "If your project requires :ref:`additional Python dependencies <odoo-sh/module/library>` or more recent releases, you can define a :file:`requirements.txt` file at the root of your branches that lists them. The platform will ensure these dependencies are installed in your containers."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:11
-msgid "The base is an Ubuntu system, where all of Odoo's required dependencies, as well as common useful packages, are installed."
+#: ../../content/administration/odoo_sh/advanced.rst:23
+msgid "For a concrete example, check out the Odoo Community `requirements.txt file <https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:14
-msgid "If your project requires additional Python dependencies, or more recent releases, you can define a :file:`requirements.txt` file in the root of your branches listing them. The platform will take care to install these dependencies in your containers. `The pip requirements specifiers <https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_ documentation can help you write a :file:`requirements.txt` file. To have a concrete example, check out the `requirements.txt file of Odoo <https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
+#: ../../content/administration/odoo_sh/advanced.rst:25
+msgid "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/reference/requirement-specifiers/>`_"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:22
-msgid "The :file:`requirements.txt` files of submodules are taken into account as well. The platform looks for :file:`requirements.txt` files in each folder containing Odoo modules: Not in the module folder itself, but in their parent folder."
+#: ../../content/administration/odoo_sh/advanced.rst:29
+msgid "The :file:`requirements.txt` files of :ref:`submodules <odoo-sh/advanced/submodules>` are also taken into account. The platform looks for such files in the parent folder of each folder containing an Odoo module."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:27
+#: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:29
-msgid "As the containers are Ubuntu based, their directory structure follows the linux Filesystem Hierarchy Standard. `Ubuntu's filesystem tree overview <https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_ explains the main directories."
+#: ../../content/administration/odoo_sh/advanced.rst:38
+msgid "As the containers are Ubuntu-based, their directory structure follows the `Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:33
-msgid "Here are the Odoo.sh pertinent directories:"
+#: ../../content/administration/odoo_sh/advanced.rst:42
+msgid "`Ubuntu main directories documentation <https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:73
-msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
+#: ../../content/administration/odoo_sh/advanced.rst:44
+msgid "The directories relevant to Odoo.sh are the following:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:75
-msgid "If your project is configured to use Odoo 10.0, the Odoo server runs with Python 2.7."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:76
-msgid "If your project is configured to use Odoo 11.0 or above, the Odoo server runs with Python 3.5."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:79
+#: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:81
-msgid "While accessing a container with the shell, you can access the database using *psql*."
+#: ../../content/administration/odoo_sh/advanced.rst:83
+msgid "While accessing a container with the shell, you can access the database using the `psql` command."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:92
-msgid "**Be careful !** `Use transactions <https://www.postgresql.org/docs/current/static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) for every *sql* statements leading to changes (*UPDATE*, *DELETE*, *ALTER*, ...), especially for your production database."
+#: ../../content/administration/odoo_sh/advanced.rst:94
+msgid "Always use `transactions <https://www.postgresql.org/docs/current/static/sql-begin.html>`_ (e.g., `BEGIN` (...) `COMMIT` / `ROLLBACK`) when an SQL statement leads to changes (e.g., `UPDATE`, `DELETE`, `ALTER`, etc.) , especially for your production database. The transaction mechanism is your safety net in case of a mistake. You simply have to rollback your changes to revert your database to its previous state."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:97
-msgid "The transaction mechanism is your safety net in case of mistake. You simply have to rollback your changes to revert your database to its previous state."
+#: ../../content/administration/odoo_sh/advanced.rst:100
+msgid "Do not forget to commit or roll back transactions. Open transactions may lock records in your tables, and a running database may wait for them to be released, causing a server to hang indefinitely."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:100
-msgid "For example, it may happen that you forget to set your *WHERE* condition."
+#: ../../content/administration/odoo_sh/advanced.rst:104
+msgid "In addition, use your staging databases to test your statements first. It gives you an extra safety net."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:111
-msgid "In such a case, you can rollback to revert the unwanted changes that you just mistakenly did, and rewrite the statement:"
+#: ../../content/administration/odoo_sh/advanced.rst:108
+msgid "You forgot to set your `WHERE` condition. In such a case, you can rollback to revert the unwanted change:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:122
-msgid "However, do not forget to either commit or rollback your transaction after having done it. Open transactions may lock records in your tables and your running database may wait for them to be released. It can cause a server to hang indefinitely."
+#: ../../content/administration/odoo_sh/advanced.rst:120
+msgid "Then, rewrite the statement and commit the change:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:126
-msgid "In addition, when possible, use your staging databases to test your statements first. It gives you an extra safety net."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:129
+#: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:131
-msgid "You can start an Odoo server instance from a container shell. You won't be able to access it from the outside world with a browser, but you can for instance:"
+#: ../../content/administration/odoo_sh/advanced.rst:136
+msgid "You can start an Odoo server instance from a container shell. You won't be able to access it from the outside world with a web browser, but you can, for example:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:134
-msgid "use the Odoo shell,"
+#: ../../content/administration/odoo_sh/advanced.rst:139
+msgid "Use the Odoo shell:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:146
-msgid "install a module,"
+#: ../../content/administration/odoo_sh/advanced.rst:151
+msgid "Install a module:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:152
-msgid "update a module,"
+#: ../../content/administration/odoo_sh/advanced.rst:158
+msgid "The argument `--without-demo=all` prevents demo data from being loaded for all modules."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:158
-msgid "run the tests for a module,"
+#: ../../content/administration/odoo_sh/advanced.rst:159
+msgid "The argument `--stop-after-init` immediately shutdowns the server instance after the operation is completed."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:164
-msgid "In the above commands, the argument:"
+#: ../../content/administration/odoo_sh/advanced.rst:162
+msgid "Update a module:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:166
-msgid "``--without-demo=all`` prevents demo data to be loaded for all modules"
+#: ../../content/administration/odoo_sh/advanced.rst:168
+msgid "Run the tests for a module:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:167
-msgid "``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked."
+#: ../../content/administration/odoo_sh/advanced.rst:175
+msgid ":doc:`CLI documentation </developer/reference/cli>`"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:169
-msgid "More options are available and detailed in the :doc:`CLI documentation </developer/reference/cli>`."
+#: ../../content/administration/odoo_sh/advanced.rst:177
+msgid "To find the addons path used by Odoo.sh to run your server, look for \"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:172
-msgid "You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server. Look for \"*odoo: addons paths*\":"
+#: ../../content/administration/odoo_sh/advanced.rst:187
+msgid "Operations you perform on an Odoo server instance are not isolated; changes will be reflected in the database. Remember to always carry out tests in your staging databases."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:181
-msgid "**Be careful**, especially with your production database. Operations that you perform running this Odoo server instance are not isolated: Changes will be effective in the database. Always, make your tests in your staging databases."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:186
+#: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:188
-msgid "Debugging an Odoo.sh build is not really different than another Python app. This article only explains the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger."
+#: ../../content/administration/odoo_sh/advanced.rst:196
+msgid "Debugging an Odoo.sh build is not really different from debugging another Python app. As such, the goal of this section is to cover the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:190
-msgid "If you don't know how to debug a Python application yet, there are multiple introductory courses that can be easily found on the Internet."
+#: ../../content/administration/odoo_sh/advanced.rst:200
+msgid "You can use `pdb`, `pudb`, or `ipdb` to debug code on Odoo.sh. Since the server runs outside a shell, you cannot launch the debugger directly from your Odoo backend, as it requires a shell to operate."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:192
-msgid "You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh. As the server is run outside a shell, you cannot launch the debugger directly from your Odoo instance backend as the debugger needs a shell to operate."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:195
+#: ../../content/administration/odoo_sh/advanced.rst:204
 msgid "`pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default in every container."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:197
-msgid "If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_ you have to install it before."
+#: ../../content/administration/odoo_sh/advanced.rst:207
+msgid "To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:199
-msgid "To do so, you have two options:"
+#: ../../content/administration/odoo_sh/advanced.rst:210
+msgid "permanently by adding `pudb` or `ipdb` to your project's :file:`requirements.txt` file, or"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:201
-msgid "temporary (only in the current build):"
+#: ../../content/administration/odoo_sh/advanced.rst:211
+msgid "temporarily (only in the current build) by running the relevant command:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:207
-msgid "or"
+#: ../../content/administration/odoo_sh/advanced.rst:221
+msgid "To trigger the debugger, add this to the code you want to debug:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:213
-msgid "permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` file."
+#: ../../content/administration/odoo_sh/advanced.rst:230
+msgid "The condition `sys.__stdin__.isatty()` is a workaround for detecting whether you are running Odoo from a shell."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:216
-msgid "Then edit the code where you want to trigger the debugger and add this:"
+#: ../../content/administration/odoo_sh/advanced.rst:233
+msgid "Next, save the file and run the Odoo shell:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:224
-msgid "The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you run Odoo from a shell."
+#: ../../content/administration/odoo_sh/advanced.rst:239
+msgid "Use the Odoo shell to trigger the code you want to debug."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:226
-msgid "Save the file and then run the Odoo Shell:"
+#: ../../content/administration/odoo_sh/advanced.rst:0
+msgid "pdb running in an Odoo.sh shell"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/containers.rst:232
-msgid "Finally, *via* the Odoo Shell, you can trigger the piece of code/function/method you want to debug."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/containers.rst:None
-msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:6
-msgid "Frequent Technical Questions"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:9
-msgid "\"Scheduled actions do not run at the exact time they were expected\""
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:11
-msgid "On the Odoo.sh platform, we cannot guarantee an exact running time for scheduled actions."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:13
-msgid "This is due to the fact that there might be multiple customers on the same server, and we must guarantee a fair share of the server for every customer. Scheduled actions are therefore implemented slightly differently than on a regular Odoo server, and are run on a *best effort* policy."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:16
-msgid "Do not expect any scheduled action to be run more often than every 5 min."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
-msgid "Are there \"best practices\" regarding scheduled actions?"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:21
-msgid "**Odoo.sh always limits the execution time of scheduled actions (*aka* crons).** Therefore, you must keep this fact in mind when developing your own crons."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:24
-msgid "We advise that:"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:26
-msgid "Your scheduled actions should work on small batches of records."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:27
-msgid "Your scheduled actions should commit their work after processing each batch; this way, if they get interrupted by the time-limit, there is no need to start over."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
-msgid "Your scheduled actions should be `idempotent <https://stackoverflow.com/a/1077421/3332416>`_: they must not cause side-effects if they are started more often than expected."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
-msgid "How can I automate tasks when an IP address change occurs?"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
-msgid "**Odoo.sh notifies project administrators of IP address changes.** Additionally, when the IP address of a production instance changes, an HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new IP address included as a query string parameter (`new`), along with the previous IP address as an additional parameter (`old`)."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
-msgid "This mechanism allows custom actions to be applied in response to the IP address change (e.g., sending an email, contacting a firewall API, configuring database objects, etc.)"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
-msgid "For security reasons, the `/_odoo.sh/ip-change` route is accessible only internally by the platform itself and returns a `403` response if accessed through any other means."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
-msgid "Here is a pseudo-implementation example:"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:6
+#: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
 msgid "Submodules"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:11
-msgid "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ allows you to integrate other Git projects into your code, without the need to copy-paste all their code."
+#: ../../content/administration/odoo_sh/advanced.rst:249
+msgid "`Git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ let you link external repositories directly into your project without copy-pasting code, streamlining deployment by cloning dependencies alongside your main codebase. You maintain precise version control by choosing exact branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:14
-msgid "Indeed, your custom modules can depend on modules from other repositories. Regarding Odoo, this feature allows you to add modules from other Git repositories into the branches of your repository. Adding these dependencies in your branch through submodules makes the deployment of your code and servers easier, as you can clone the repositories added as submodules at the same time you clone your own repository."
+#: ../../content/administration/odoo_sh/advanced.rst:254
+msgid "On Odoo.sh, the platform automatically detects submodules and adds them to your addons path for database installation, provided you :ref:`configure a deploy key in your project and repository settings <odoo-sh/settings/submodules>` when integrating private repositories."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:19
-msgid "Besides, you can choose the branch of the repository added as submodule and you have the control of the revision you want. It's up to you to decide whether you want to pin the submodule to a specific revision and when you want to update to a newer revision."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:24
-msgid "In Odoo.sh, the submodules give you the possibility to use and depend on modules available in other repositories. The platform will detect that you added modules through submodules in your branches and add them to your addons path automatically so you can install them in your databases."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:28
-msgid "If you add private repositories as submodules in your branches, you need to configure a deploy key in your Odoo.sh project settings and in your repository settings. Otherwise Odoo.sh won't be allowed to download them. The procedure is detailed in the chapter :ref:`Settings > Submodules <odoo-sh/settings/submodules>`."
-msgstr ""
-
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:34
+#: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:37
-msgid "With Odoo.sh (simple)"
+#: ../../content/administration/odoo_sh/advanced.rst:265
+msgid "With Odoo.sh"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:40
-msgid "For now it is not possible to add **private** repositories with this method. You can nevertheless do so :ref:`with Git <odoo-sh/settings/submodules>`."
+#: ../../content/administration/odoo_sh/advanced.rst:268
+msgid "Currently, it is not possible to add **private** repositories with Odoo.sh. You can nevertheless do so with Git."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:43
-msgid "On Odoo.sh, in the branches view of your project, choose the branch in which you want to add a submodule."
+#: ../../content/administration/odoo_sh/advanced.rst:271
+msgid "From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh project, choose the branch in which you want to add a submodule."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:45
-msgid "In the upper right corner, click on the *Submodule* button, and then on *Run*."
+#: ../../content/administration/odoo_sh/advanced.rst:273
+msgid "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run on Odoo.sh`."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:50
-msgid "A dialog with a form is shown. Fill the inputs as follows:"
+#: ../../content/administration/odoo_sh/advanced.rst:274
+msgid "In the dialog box, fill in the following:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:52
-msgid "Repository URL: The SSH URL of the repository."
+#: ../../content/administration/odoo_sh/advanced.rst:276
+msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:53
-msgid "Branch: The branch you want to use."
+#: ../../content/administration/odoo_sh/advanced.rst:279
+msgid "On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:54
-msgid "Path: The folder in which you want to add this submodule in your branch."
+#: ../../content/administration/odoo_sh/advanced.rst:284
+msgid ":guilabel:`Branch`: the specific branch that should be used"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:59
-msgid "On Github, you can get the repository URL with the *Clone or download* button of the repository. Make sure to *use SSH*."
+#: ../../content/administration/odoo_sh/advanced.rst:285
+msgid ":guilabel:`Path`: the folder in which the submodule should be added to in your branch"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:67
+#: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:69
+#: ../../content/administration/odoo_sh/advanced.rst:292
 msgid "In a terminal, in the folder where your Git repository is cloned, checkout the branch in which you want to add a submodule:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:76
-msgid "Then, add the submodule using the command below:"
+#: ../../content/administration/odoo_sh/advanced.rst:299
+msgid "Add the submodule:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:82
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:94
-msgid "Replace"
+#: ../../content/administration/odoo_sh/advanced.rst:305
+msgid "*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the repository you want to add as a submodule"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:84
-msgid "*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the repository you want to add as submodule,"
+#: ../../content/administration/odoo_sh/advanced.rst:307
+msgid "*<branch>*: the branch you want to use in the above repository"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:85
-msgid "*<branch>* by the branch you want to use in the above repository,"
+#: ../../content/administration/odoo_sh/advanced.rst:308
+msgid "*<path>*: the folder in which you want to add this submodule"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:86
-msgid "*<path>* by the folder in which you want to add this submodule."
+#: ../../content/administration/odoo_sh/advanced.rst:310
+msgid "Commit and push the changes:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:88
-msgid "Commit and push your changes:"
+#: ../../content/administration/odoo_sh/advanced.rst:316
+msgid "*<remote>*: the repository on which you want to push your changes. On a standard Git setup, this is *origin*."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:96
-msgid "<remote> by the repository on which you want to push your changes. For a standard Git setup, this is *origin*."
+#: ../../content/administration/odoo_sh/advanced.rst:318
+msgid "*<branch>*: the branch on which you want to push your changes. Most likely, the branch you checked out in the first step."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:97
-msgid "<branch> by the branch on which you want to push your changes. Most likely the branch you used :code:`git checkout` on in the first step."
+#: ../../content/administration/odoo_sh/advanced.rst:322
+msgid "When adding a repository that contains many modules, you may want to ignore some of them if any are installed automatically.  To do so, prefix your submodule folder with a :code:`.` (e.g. `.folder`). The platform will ignore this folder, and you can hand-pick the modules by creating `symbolic links <https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:100
-msgid "You can read the `git-scm.com documentation <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ for more details about the Git submodules. For instance, if you would like to update your submodules to have their latest revision, you can follow the chapter `Pulling in Upstream changes <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
+#: ../../content/administration/odoo_sh/advanced.rst:330
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:80
+msgid "Scheduled actions"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:107
-msgid "Ignore modules"
+#: ../../content/administration/odoo_sh/advanced.rst:332
+msgid "On the Odoo.sh platform, scheduled actions are implemented slightly differently from a regular Odoo server and are run on a best-effort basis. This is because there might be multiple customers on the same server, and each customer is guaranteed a fair share of the server's resources. Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/advanced/submodules.rst:109
-msgid "If you're adding a repository that contains a lot of modules, you may want to ignore some of them in case there are any that are installed automatically. To do so, you can prefix your submodule folder with a :code:`.`. The platform will ignore this folder and you can hand pick your modules by creating symlinks to them from another folder."
+#: ../../content/administration/odoo_sh/advanced.rst:338
+msgid "Do not expect any scheduled action to be run more often than every five minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:340
+msgid "As the execution time of scheduled actions is limited, it is advised to ensure your scheduled actions:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:343
+msgid "Work on small batches of records."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:344
+msgid "Commit their work after processing each batch so that if they are interrupted by the time limit, they do not need to start over."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:346
+msgid "Are idempotent, i.e, they must not cause side effects if they are started more often than expected."
 msgstr ""
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
@@ -1390,8 +1304,8 @@ msgid "Open the :file:`views/views.xml` file and after:"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/create_module.rst:306
-#: ../../content/administration/odoo_sh/create_module.rst:377
-#: ../../content/administration/odoo_sh/create_module.rst:389
+#: ../../content/administration/odoo_sh/create_module.rst:379
+#: ../../content/administration/odoo_sh/create_module.rst:391
 msgid "add:"
 msgstr ""
 
@@ -1415,59 +1329,59 @@ msgstr ""
 msgid "Once you have :ref:`tested your changes <odoo-sh/module/test-module>`, you can merge them into the production branch, for instance, by dragging and dropping the branch onto the production branch in the Odoo.sh interface. Since you increased the module version in the manifest, the platform will automatically update the module, and your new field will be available immediately. Otherwise, you can manually :ref:`update the module <odoo-sh/module/deploy/install>` within the apps list."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:343
+#: ../../content/administration/odoo_sh/create_module.rst:345
 msgid "Use an external Python library"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:345
+#: ../../content/administration/odoo_sh/create_module.rst:347
 msgid "If you would like to use an external Python library that is not installed by default, you can define a :file:`requirements.txt` file listing the external libraries your modules depend on. The platform will use this file to automatically install the Python libraries your project needs."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:350
+#: ../../content/administration/odoo_sh/create_module.rst:352
 msgid "It is not possible to install or upgrade system packages on Odoo.sh databases (e.g., apt packages). However, under specific conditions, `packages can be considered for installation <https://www.odoo.sh/faq#install_dependencies>`_. This also applies to Python modules that require system packages for compilation and to third-party Odoo modules."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:354
+#: ../../content/administration/odoo_sh/create_module.rst:356
 msgid "PostgreSQL extensions are not supported on Odoo.sh hence it is not possible to install extensions (such as PostGIS, ltree, ...) in Odoo.sh databases."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:357
+#: ../../content/administration/odoo_sh/create_module.rst:359
 msgid "For example, to use the `Unidecode library <https://pypi.org/project/Unidecode>`_ in your module:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:359
+#: ../../content/administration/odoo_sh/create_module.rst:361
 msgid "Create a file :file:`requirements.txt` in the root folder of your repository:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:361
+#: ../../content/administration/odoo_sh/create_module.rst:363
 msgid "From the Odoo.sh editor, create and open the file :file:`~/src/user/requirements.txt`."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:362
+#: ../../content/administration/odoo_sh/create_module.rst:364
 msgid "From your computer, create nd open the file :file:`~/src/odoo-addons/requirements.txt`."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:364
+#: ../../content/administration/odoo_sh/create_module.rst:366
 msgid "Add to the file:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:370
+#: ../../content/administration/odoo_sh/create_module.rst:372
 msgid "You can now use the library in your module, for instance, to remove accents from characters in the name field of your model. To do so, open the :file:`models/models.py` file and before:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:383
+#: ../../content/administration/odoo_sh/create_module.rst:385
 msgid "After:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:404
+#: ../../content/administration/odoo_sh/create_module.rst:406
 msgid "Increase the module version to install the Python dependency by editing the :ref:`module's manifest <odoo-sh/module/add/manifest>` :file:`__manifest__.py`."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:407
+#: ../../content/administration/odoo_sh/create_module.rst:409
 msgid "Then, :ref:`push the changes <odoo-sh/module/push-development>`."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/create_module.rst:410
+#: ../../content/administration/odoo_sh/create_module.rst:412
 msgid "Stage the :file:`requirements.txt` file by running `git add requirements.txt`."
 msgstr ""
 
@@ -1475,60 +1389,164 @@ msgstr ""
 msgid "Getting started"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:8
+#: ../../content/administration/odoo_sh/getting_started.rst:10
 msgid "Main components"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:10
-msgid "When working with Odoo.sh, it is important to understand the main components involved. While they are all interconnected, each one plays a distinct role in the development and deployment of Odoo applications:"
+#: ../../content/administration/odoo_sh/getting_started.rst:12
+msgid "When working with Odoo.sh, it is important to understand the main components involved:"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
-msgid "**GitHub repository**: a version-controlled space where the Odoo applications' source code is stored. It tracks every change, supports collaboration, and can be either public or private."
+msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
-msgid "Example of a GitHub repository"
+#: ../../content/administration/odoo_sh/getting_started.rst:15
+msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:20
-msgid "**Odoo.sh project**: a Platform as a Service (PaaS) that integrates with GitHub and enables streamlined development, testing, and deployment of Odoo applications. It includes tools such as automated backups, staging environments, and continuous integration pipelines."
+#: ../../content/administration/odoo_sh/getting_started.rst:16
+msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
-msgid "Example of an Odoo.sh project"
+#: ../../content/administration/odoo_sh/getting_started.rst:18
+msgid "While they are all interconnected, each one plays a distinct role in the development and deployment of Odoo applications. Together, they form a cohesive pipeline from code development to a live business use."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:25
+msgid "GitHub repository"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
-msgid "**Odoo database**: a database stores all the operational data used and generated by Odoo applications, such as business records, configurations, and user data."
+msgid "A GitHub repository is like a folder on your computer that contains all the files and folders for a specific project. The difference is that it's stored on GitHub and can be accessed and edited by multiple people on different computers."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:0
-msgid "Example of an Odoo database"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/getting_started.rst:33
-msgid "Together, they form a cohesive pipeline from code development to a live business use."
+#: ../../content/administration/odoo_sh/getting_started.rst:31
+msgid "In other words, a GitHub repository is a place where you can store your project's files and share them with others, so they can collaborate with you, make changes, and contribute to your project. It also tracks all changes to your project over time, so you can easily roll back to a previous version if needed."
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
+msgid "Additionally, GitHub offers many features to help you manage your project, such as issue tracking, pull requests, and code reviews. It's a powerful tool for managing and collaborating on software projects, and is widely used by developers around the world. a version-controlled space where the Odoo applications' source code is stored. It tracks every change, supports collaboration, and can be either public or private."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:None
+msgid "Example of a GitHub repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:48
+msgid "Odoo.sh project"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:50
+msgid "An Odoo.sh project is a *Platform as a Service* (PaaS) that integrates with GitHub and enables streamlined development, testing, and deployment of Odoo applications. It includes tools such as automated backups, staging environments, and continuous integration pipelines."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:None
+msgid "Example of an Odoo.sh project"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:60
+msgid "Odoo database"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:62
+msgid "An Odoo database stores all the operational data used and generated by Odoo applications, such as business records, configurations, and user data."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:None
+msgid "Example of an Odoo database"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:71
 msgid "User types"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:38
+#: ../../content/administration/odoo_sh/getting_started.rst:73
 msgid "Odoo.sh involves different types of users, each with a specific role in the project lifecycle:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:40
-msgid "GitHub users: developers with access to the GitHub repository linked to the Odoo.sh project. Access to the repository does not automatically make someone a collaborator on the Odoo.sh project."
+#: ../../content/administration/odoo_sh/getting_started.rst:75
+msgid "**GitHub users**: developers with access to the GitHub repository linked to the Odoo.sh project. Access to the repository does not automatically make someone a collaborator on the Odoo.sh project."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:44
-msgid "Odoo.sh collaborators: individuals managing the Odoo.sh project. Each collaborator must be linked to a GitHub user. However, collaborators are not the same as database users."
+#: ../../content/administration/odoo_sh/getting_started.rst:78
+msgid "**Odoo.sh collaborators**: individuals managing the Odoo.sh project. Each collaborator must be linked to a GitHub user. However, collaborators are not the same as database users."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started.rst:47
-msgid "Database users: end-users of the deployed Odoo database. They interact with the live system but are not involved in development or project management."
+#: ../../content/administration/odoo_sh/getting_started.rst:80
+msgid "**Database users**: end-users of the deployed Odoo database. They interact with the live system but are not involved in development or project management."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:86
+msgid "Technical concepts"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:88
+msgid "When working with Odoo.sh, it is also important to understand several technical concepts:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:90
+msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:91
+msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:92
+msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:97
+msgid "Forking a repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:99
+msgid "Forking a repository on GitHub is when you create a copy of someone else's repository on your own account. This allows you to make changes to the repository without affecting the original version."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:102
+msgid "When you fork a repository, you create your own copy of the repository, complete with all the files and folders in the original repository. You can then make changes to the files in your copy of the repository and commit them, just like you would with any other repository."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:106
+msgid "The benefit of forking a repository is that you can make changes to the code without affecting the original version, which is useful when you want to experiment with new features or fix bugs in someone else's code. You can also use the forked repository as a starting point for your project, making changes as needed."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:111
+msgid "Once you have made changes to the forked repository, you can submit a pull request to the original repository owner, asking them to merge your changes back into their repository. This is a common approach for open-source projects to accept contributions from other developers, and it can be a great way to get involved in the community and improve your coding skills."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:119
+msgid "Pushing a commit"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:121
+msgid "When you make changes to a file or multiple files in a Git repository on your local computer, those changes are considered *uncommitted*. In other words, Git knows that changes have been made, but they haven't been officially saved or recorded yet."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:125
+msgid "To save those changes and add them to the Git repository, you need to create a *commit*. A commit is a snapshot of the changes you made to the files at a specific point in time. It records what changes were made, who made them, and when."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:129
+msgid "Once you've created a commit, you can then *push* it to a remote repository, such as one hosted on GitHub. Pushing a commit means sending the changes you've made in the commit from your local repository to the remote repository so that others can see and use them."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:133
+msgid "To summarize, pushing a commit means sending the changes you have made to the files in your Git repository from your local computer to a remote repository. It is a way to share your changes with others and collaborate on a project."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:140
+msgid "Merging a branch"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:142
+msgid "Merging a branch into another is the process of combining the changes made in one branch into the other. For example, let's say you created a new branch called `feature-branch` to work on a new feature for your project. Once you've finished making changes to this branch, you can merge those changes back into the main branch (often called the `master` or `main` branch)."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started.rst:147
+msgid "When you merge a branch, Git examines the changes in both branches and attempts to combine them. If there are any conflicts between the changes made in the two branches, Git will prompt you to resolve them before completing the merge (code-wise)."
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
@@ -1632,10 +1650,6 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:78
 msgid "The neutralization disables:"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:80
-msgid "Scheduled actions"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:83
@@ -2324,7 +2338,7 @@ msgid "To change the default behavior, untick the :guilabel:`Use Default` option
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:597
-msgid ":guilabel:`Install only my modules (does not include submodules)`: only installs the branch's modules, excluding :doc:`submodules <../advanced/submodules>`. This is the default option."
+msgid ":guilabel:`Install only my modules (does not include submodules)`: only installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/submodules>`. This is the default option."
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
@@ -2552,7 +2566,7 @@ msgid "The submodule command is used to add a branch from another repository to 
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
-msgid ":doc:`Submodules documentation <../advanced/submodules>`"
+msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
@@ -2593,6 +2607,10 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:5
 msgid "In Odoo.sh, a build is a database loaded by an Odoo server (`odoo/odoo <https://github.com/odoo/odoo>`_ and `odoo/enterprise <https://github.com/odoo/enterprise>`_) running on a specific revision of your project repository in a containerized environment. Its purpose is to test the proper behavior of the server, the database, and the features associated with that revision."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/builds.rst:14
+msgid "Overview"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
@@ -2864,7 +2882,7 @@ msgid "Odoo.sh automatically detects folders containing Odoo modules. You can or
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:93
-msgid "For publicly available community modules, you may also consider using :doc:`submodules <../advanced/submodules>`."
+msgid "For publicly available community modules, you may also consider using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
@@ -3085,22 +3103,18 @@ msgid "Push your changes."
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:119
-msgid "In this command:"
-msgstr ""
-
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid "`https` is the name of your *HTTPS* GitHub remote repository (e.g., `https://github.com/username/repository.git`)."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:123
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid "`HEAD` is the reference to the latest revision you committed."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:124
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:122
 msgid "`<branch>` must be replaced by the name of the branch to which you want to push the changes, most likely the current branch if you work on a development build."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:127
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:125
 msgid "You will be prompted to input your GitHub username and password. After inputting your credentials, press enter."
 msgstr ""
 
@@ -3108,31 +3122,31 @@ msgstr ""
 msgid "The commands to commit and push changes"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:134
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:132
 msgid "If you activate two-factor authentication for your GitHub account, you can create a `personal access token <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token>`_ and use it as a password. `Granting the repo permission <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository>`_ suffices."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:140
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:138
 msgid "It is not possible to authenticate yourself using SSH, as your private SSH key is not hosted in your build containers for security reasons, nor forwarded through an SSH agent, as you access the editor through a web browser."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:143
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:141
 msgid "The source folder `~/src/user` is not checked out on a branch but rather on a detached revision. This is because builds work on specific revisions rather than branches, meaning you can have multiple builds on the same branch, but on different revisions."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:147
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:145
 msgid "Once your changes are pushed, according to your :ref:`branch push behavior <odoo-sh/branches/tabs/settings>`, a new build may be created. You can continue to work in the editor you pushed from, as it will have the same revision as the new build that was created. However, always make sure to be in the editor of a build using the latest revision of your branch."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:153
 msgid "Consoles"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:157
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
 msgid "You can open Python consoles, which are `IPython interactive shells <https://ipython.readthedocs.io/en/stable/interactive/tutorial.html>`_. Using these Python consoles (rather than IPython shells within a terminal) allows you to utilize their `rich display capabilities <https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-display>`_ to display objects in HTML."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:164
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:162
 msgid "The :code:`Pretty` class displays lists in a legible way."
 msgstr ""
 
@@ -3140,11 +3154,11 @@ msgstr ""
 msgid "Pretty class example"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:170
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:168
 msgid "Using `pandas <https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html>`_ you can display:"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:173
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:171
 msgid "Cells of a CSV file"
 msgstr ""
 
@@ -3152,7 +3166,7 @@ msgstr ""
 msgid "pandas CSV example"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:178
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:176
 msgid "Graphs"
 msgstr ""
 
@@ -3160,15 +3174,15 @@ msgstr ""
 msgid "pandas graph example"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:183
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:181
 msgid "You can open Odoo shell consoles to experiment with the Odoo registry and model methods of your database. You can also read or write directly on your records."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:187
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:185
 msgid "In an Odoo shell console, transactions are automatically committed. This means that changes made to records are applied to the database. For example, if you change a user's name, it will be updated in your database as well. Therefore, use Odoo shell consoles carefully on production databases."
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:192
+#: ../../content/administration/odoo_sh/getting_started/online_editor.rst:190
 msgid "You can use `env` to invoke models of your database registry, e.g., :code:`env['res.users']`."
 msgstr ""
 
