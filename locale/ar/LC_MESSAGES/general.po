@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:33+0000\n"
-"PO-Revision-Date: 2026-08-27 16:29+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-09-07 16:11+0000\n"
+"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/ar/>\n"
 "Language: ar\n"
@@ -4275,6 +4275,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"بالنسبة لـ**قواعد البيانات المستضافة ذاتياً**، تتطلب طريقتا إعادة التوجيه "
+"وسجل DNS أيضاً تهيئة :doc:`نص برمجي لبوابة البريد الإلكتروني <../../../../"
+"administration/on_premise/email_gateway>`. يتطلب اتباع هذا النص البرمجي "
+"**معرفة تقنية وبنية تحتية متقدمة**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4526,7 +4530,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "سجلات DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4535,6 +4539,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"يتمثل الخيار الثالث في استخدام نطاق فرعي مخصص (على سبيل المثال، "
+"`mail.mydomain.com`) وتهيئة سجلات DNS الخاصة به بحيث تتم معالجة الرسائل "
+"الإلكترونية المرسلة إلى عناوين على هذا النطاق الفرعي بواسطة Odoo مباشرة داخل "
+"قاعدة البيانات الخاصة بك."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4542,6 +4550,8 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"بالنسبة لـ Odoo Online وOdoo.sh، لا يُدعم التوجيه القائم على CNAME إلا عند "
+"استخدام نطاق فرعي مخصص. لا يمكن تهيئته على النطاق الجذري (مثل `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4549,12 +4559,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"لاحظ أن هذا النطاق الفرعي سيكون مخصصاً لحركة مرور البريد الإلكتروني فقط. في حال "
+"الوصول إليه عبر متصفح الويب، سيتم إعادة توجيه المستخدمين إلى أول موقع "
+"إلكتروني تمت تهيئته على قاعدة البيانات (إن وُجد)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"بما أنه يتم تهيئة نطاق فرعي جديد للبريد الوارد، يجب أيضاً :doc:`إعداد سجلات "
+"DNS الخاصة به للبريد الصادر <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4564,7 +4579,7 @@ msgstr "أودو أونلاين"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "الوصول إلى إعدادات DNS الخاصة بك"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4572,34 +4587,38 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"إذا كان نطاقك مستضافاً لدى مسجّل خارجي (مثل GoDaddy أو Namecheap أو Cloudflare)"
+"، قم بتسجيل الدخول إلى المسجّل وافتح منطقة إدارة DNS الخاصة بنطاقك."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "إذا كانت Odoo تدير DNS الخاص بك:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "افتح `مدير قاعدة البيانات <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"انقر على أيقونة :icon:`fa-gear` (:guilabel:`الترس`) بجانب قاعدة البيانات، ثم "
+"اختر :icon:`fa-globe` :guilabel:`أسماء النطاقات`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "انقر على :guilabel:`DNS`، ثم :guilabel:`إضافة سجل DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "إنشاء سجل CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**الاسم / المضيف:** النطاق الفرعي الذي تريد استخدامه (مثل `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4607,10 +4626,11 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**المحتوى / الهدف:** النطاق الجذري لقاعدة بياناتك (مثل `dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "إضافة النطاق الفرعي إلى بوابة Odoo الخاصة بك"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4618,6 +4638,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"في `مدير قاعدة البيانات <https://www.odoo.com/my/databases>`_، انقر على "
+"أيقونة :icon:`fa-gear` (:guilabel:`الترس`) الخاصة بقاعدة بياناتك، ثم حدد "
+":icon:`fa-globe` :guilabel:`أسماء النطاقات`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4625,6 +4648,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"انقر على :guilabel:`استخدام نطاقي الخاص`، ثم أدخل النطاق الفرعي كاملاً (مثل "
+"`mail.mydomain.com`). عند نجاح التحقق، انقر على :guilabel:`أؤكد، لقد تم "
+"الأمر`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4634,11 +4660,15 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"إذا فشل التحقق، تأكد من أن هدف CNAME ينتهي بنقطة (مثل `dbname.odoo.com.`)، "
+"حيث يتطلب بعض مزوّدي DNS ذلك. كما يجب الانتظار بعض الوقت لانتشار تغييرات DNS، "
+"إذ قد يستغرق ذلك من بضع دقائق إلى 48 ساعة حسب المزوّد الخاص بك. بمجرد اكتمال "
+"الانتشار، حاول التحقق مرة أخرى."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "إضافة نطاق الاسم المستعار إلى قاعدة البيانات"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
@@ -14145,6 +14175,10 @@ msgid ""
 "click :guilabel:`Confirm Password`. Next, a *Two-Factor Authentication "
 "Activation* pop-up window appears, with a |QR|."
 msgstr ""
+"يؤدي هذا إلى ظهور نافذة منبثقة بعنوان *التحكم في الوصول* تتطلب تأكيد كلمة "
+"المرور للمتابعة. أدخل كلمة مرور حساب Odoo، ثم انقر على :guilabel:`تأكيد كلمة "
+"المرور`. بعد ذلك، تظهر نافذة منبثقة بعنوان *تفعيل المصادقة الثنائية* تحتوي "
+"على |QR|."
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "The 2fa authentication QR code in Odoo."
@@ -14152,7 +14186,7 @@ msgstr "رمز الاستجابة السريعة للمصادقة الثنائي
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "Using the desired authenticator application, scan the |QR| code."
-msgstr ""
+msgstr "باستخدام تطبيق المصادقة المطلوب، امسح رمز |QR|."
 
 #: ../../content/applications/general/users/2fa.rst:69
 msgid ""
@@ -14182,6 +14216,8 @@ msgid ""
 "Enter the code into the :guilabel:`Verification code` field, then "
 "click :guilabel:`Enable Two-Factor Authentication`."
 msgstr ""
+"أدخل الرمز في حقل :guilabel:`رمز التحقق`، ثم انقر على :guilabel:`تفعيل "
+"المصادقة الثنائية`."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid ""
@@ -14916,6 +14952,10 @@ msgid ""
 "drop-down menu. This determines whether the user must complete 2FA "
 "verification when logging back in."
 msgstr ""
+"لتفعيل مهلة عدم النشاط، انقر على علامة التبويب *المهلات* وحدد خانة الاختيار "
+":guilabel:`عدم النشاط`. بعد ذلك، اختر إما :guilabel:`قفل الشاشة` أو "
+":guilabel:`قفل الشاشة مع المصادقة الثنائية` من القائمة المنسدلة. يحدد هذا ما "
+"إذا كان يجب على المستخدم إتمام التحقق بخطوتين عند تسجيل الدخول مرة أخرى."
 
 #: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
