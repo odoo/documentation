@@ -295,3 +295,8 @@ mind:
 
 - **Cells and characters per cell**: There is no fixed limit on the number of cells a sheet can
   contain, nor on the number of characters within a cell.
+
+.. seealso::
+
+   :ref:`Identify performance issues <spreadsheet/functions/troubleshooting-performance-analysis>`
+
