@@ -113,6 +113,8 @@ Optional attributes can be added to the root element `form` to customize the vie
    :type: bool
    :default: `False`
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 .. _reference/view_architectures/form/semantic:
 
 Semantic components
@@ -1307,6 +1309,8 @@ Optional attributes can be added to the root element `list` to customize the vie
    :default: `False`
 
 .. include:: view_architectures/root_attribute_sample.rst
+
+.. include:: view_architectures/root_attribute_dialog_size.rst
 
 .. _reference/view_architectures/list/components:
 
@@ -2648,6 +2652,8 @@ Optional attributes can be added to the root element `kanban` to customize the v
 
 .. include:: view_architectures/root_attribute_sample.rst
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 .. _reference/view_architectures/kanban/components:
 
 Components
@@ -3240,6 +3246,8 @@ attributes:
 
 .. include:: view_architectures/root_attribute_sample.rst
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 The only allowed element within a graph view is ``field`` which can have the
 following attributes:
 
@@ -3348,6 +3356,8 @@ following attributes:
   such as fields in different units, e.g. € and $).
 
 .. include:: view_architectures/root_attribute_sample.rst
+
+.. include:: view_architectures/root_attribute_dialog_size.rst
 
 The measures are automatically generated from the model fields; only the
 aggregatable fields are used. Those measures are also alphabetically
@@ -3607,6 +3617,8 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
 
 .. include:: view_architectures/root_attribute_string.rst
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 .. _reference/view_architectures/calendar/components:
 
 Components
@@ -3767,6 +3779,8 @@ attributes:
 ``string`` (mandatory)
     A title, which should describe the view
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 Possible children of the view element are:
 
 .. rst-class:: o-definition-list
@@ -3890,6 +3904,8 @@ attributes:
 
 .. include:: view_architectures/root_attribute_sample.rst
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 .. _reference/view_architectures/grid:
 
 Grid
@@ -3955,6 +3971,10 @@ view architecture is:
         set to true to hide total line (default false)
       ``hide_column_total``
         set to true to hide total column (default false)
+
+    * optional ``dialog_size`` attribute
+
+      .. include:: view_architectures/root_attribute_dialog_size.rst
 
     * optional ``barchart_total`` attribute
 
@@ -4364,6 +4384,8 @@ The root element of gantt views is ``<gantt/>``. It can take the following attri
 
 .. include:: view_architectures/root_attribute_sample.rst
 
+.. include:: view_architectures/root_attribute_dialog_size.rst
+
 Components
 ----------
 
@@ -4451,6 +4473,8 @@ The view's root element is ``<map>``. It can have the following attributes:
     if ``1`` hide the address from the pin's popup (default: ``0``).
 ``limit``
     Maximum number of records to fetch (default: ``80``). It must be a positive integer.
+
+.. include:: view_architectures/root_attribute_dialog_size.rst
 
 The ``<map>`` element accepts two kinds of child elements: ``<field>`` and :ref:`popover
 <reference/view_architectures/map/popover>`.
