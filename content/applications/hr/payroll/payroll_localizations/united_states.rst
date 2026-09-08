@@ -30,8 +30,16 @@ The states included in this localization are:
      - (IL)
    * - Iowa
      - (IA)
+   * - Kansas
+     - (KA)
+   * - Kentucky
+     - (KY)
+   * - Michigan
+     - (MI)
    * - Mississippi
      - (MS)
+   * - Missouri
+     - (MO)
    * - Nevada
      - (NV)
    * - New Jersey
@@ -42,8 +50,12 @@ The states included in this localization are:
      - (NC)
    * - Oregon
      - (OR)
+   * - South Carolina
+     - (SC)
    * - Texas
      - (TX)
+   * - Utah
+     - (UT)
    * - Vermont
      - (VT)
    * - Virginia
@@ -56,7 +68,8 @@ The states included in this localization are:
 .. note::
    Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, and Unemployment) for
    both employees and employers are covered by default in the Odoo U.S. Payroll localization.
-   Additional states will be added over time, so check back for updates.
+
+   Additional states may be added over time, so check back for updates.
 
 Before configuring the United States localization, refer to the general :doc:`payroll
 <../../payroll>` documentation, which includes the basic information for all localizations, as well
@@ -134,8 +147,7 @@ employee record. On the employee form, configure the required fields in the rela
 Work tab
 --------
 
-Enter the :guilabel:`Work Address` for the employee in the :guilabel:`Location` section of the
-:guilabel:`Work` tab.
+Enter the :guilabel:`Work Address` for the employee in the *Location* section of the *Work* tab.
 
 .. important::
    The state selected in this address determines which salary rules Odoo applies when calculating
@@ -234,18 +246,18 @@ withholding, which the employer remits directly to the :abbr:`IRS (Internal Reve
 
 Configure any relevant fields for the employee in this section.
 
-State filing section
-~~~~~~~~~~~~~~~~~~~~
+Tax filing section
+~~~~~~~~~~~~~~~~~~
 
 An employee's marital status impacts their payroll taxes. Configure the following fields regarding
 their status and withholdings.
 
-- :guilabel:`Status`: Using the drop-down menu, select the employee's *federal* filing status. The
-  options are :guilabel:`Single`, :guilabel:`Married/RDP filing jointly`, :guilabel:`Married/RDP
-  filing separately`, :guilabel:`Head of household`, or :guilabel:`Qualifying surviving spouse/RDP
-  with child`. This typically comes from the employee's W-4 form.
-- :guilabel:`Tax Status`: Using the drop-down menu, select the employee's *state* filing status, if
-  applicable.
+- :guilabel:`Federal Tax Status`: Using the drop-down menu, select the employee's *federal* filing
+  status. The options are :guilabel:`Single`, :guilabel:`Married/RDP filing jointly`,
+  :guilabel:`Married/RDP filing separately`, :guilabel:`Head of household`, or :guilabel:`Qualifying
+  surviving spouse/RDP with child`. This typically comes from the employee's W-4 form.
+- :guilabel:`State Tax Status`: Using the drop-down menu, select the employee's *state* filing
+  status, if applicable.
 
   .. tip::
      The federal and state statuses do **not** need to match.
@@ -253,8 +265,8 @@ their status and withholdings.
   .. note::
      As of 2025, these states do **not** collect state income tax: Alaska, Florida, Nevada, New
      Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. If a payroll localization
-     exists for these states, there are **no** corresponding state options in the :guilabel:`Tax
-     Status` field. Leave it blank.
+     exists for these states, there are **no** corresponding state options in the :guilabel:`State
+     Tax Status` field, and it can be left blank.
 
 - :guilabel:`Withholding Allowance`: Enter the total annual amount to be withheld from the
   employee's pay for the year, for state taxes. Only fill this out if the employee lives in a state
@@ -263,8 +275,8 @@ their status and withholdings.
   :guilabel:`Withholding Allowance` amount) to be withheld from the employee's pay for the year, for
   state taxes, if the employee lives in a state with state income tax.
 
-.. image:: united_states/state-filing.png
-   :alt: The state filing section of the employee form, filled out.
+.. image:: united_states/tax-filing.png
+   :alt: The tax filing section of the employee form, filled out.
 
 Common benefits
 ~~~~~~~~~~~~~~~
@@ -404,9 +416,8 @@ follows:
   .. image:: united_states/post-tax.png
      :alt: The post-tax rules for the US localization.
 
-- The :guilabel:`Other Inputs` tab contains anything else affecting payroll. This includes items to
-  be added to the payslip, such as :guilabel:`Tips`, and other deductions, such as :guilabel:`Child
-  Support`.
+- The *Other Inputs* tab contains anything else affecting payroll. This includes items to be added
+  to the payslip, such as :guilabel:`Tips`, and other deductions, such as :guilabel:`Child Support`.
 
   .. image:: united_states/other-inputs.png
      :alt: The other inputs for the US localization.
@@ -503,6 +514,13 @@ everything is correct, click :guilabel:`Validate`.
 .. image:: united_states/check-payslips.png
    :alt: The worked days tab of a payslip.
 
+.. important::
+   In the United States, payroll taxes and wage reporting are generally based on the date wages are
+   *paid*, **not** when the work was performed. For this reason, Odoo uses the payment date as the
+   reference date for U.S. Payroll when calculating salary rules, applying tax parameters and annual
+   limits, and determining year-to-date amounts. This helps ensure payroll calculations align with
+   U.S. tax and reporting requirements.
+
 Accounting check
 ----------------
 
@@ -582,8 +600,8 @@ The *W2 Report* provides a CSV file that allows employees to e-file their W2 rep
 software. To access this report, navigate to :menuselection:`Payroll -> Reporting -> United States
 -> W2`.
 
-To create a W2 form, click :guilabel:`New`, and a blank :guilabel:`Create W2 Form` page loads. Set
-the :guilabel:`Start Date` and :guilabel:`End Date` (typically a calendar year), and select the
+To create a W2 form, click :guilabel:`New`, and a blank *Create W2 Form* page loads. Set the
+:guilabel:`Start Date` and :guilabel:`End Date` (typically a calendar year), and select the
 :guilabel:`Company`, if in a multi-company database.
 
 All pay runs for the time period appear in a list view. To add any missing pay runs, click
