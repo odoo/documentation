@@ -11,4 +11,4 @@ Configure products
    configure_products/product_types
    configure_products/products
    configure_products/service_products
-
+   configure_products/labor_service_products
