@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-07-28 07:09+0000\n"
-"Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
+"PO-Revision-Date: 2026-09-08 16:11+0000\n"
+"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18-doc/"
 "general/id/>\n"
 "Language: id\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/applications/general.rst:3
 msgid "General settings"
@@ -2621,11 +2621,19 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Untuk email masuk, setelah menambahkan domain Anda sendiri, :ref:`balasan "
+"dari pelanggan akan kembali ke domain Anda <email-inbound-custom-domain>`, "
+"dan Anda perlu menggunakan salah satu dari tiga cara yang memungkinkan untuk "
+"mendapatkan email tersebut kembali ke dalam Odoo (menggunakan :ref:`server "
+"email masuk <email-inbound-custom-domain-incoming-server>`, :ref:`redireksi/"
+"penerusan <email-inbound-custom-domain-redirections>` atau :ref:`menggunakan "
+"subdomain <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Mengelola pesan masuk <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3615,6 +3623,12 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"Saat mengirim email, server email Odoo menyertakan tanda tangan unik "
+":abbr:`DKIM (DomainKeys Identified Mail)` di header. Server penerima "
+"mendekripsi tanda tangan ini menggunakan catatan DKIM di nama domain "
+"database. Jika tanda tangan dan kunci yang terdapat dalam catatan tersebut "
+"cocok, ini membuktikan bahwa pesan tersebut asli dan tidak diubah selama "
+"pengiriman."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3629,6 +3643,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Untuk mengaktifkan DKIM, tambahkan catatan :abbr:`CNAME (Canonical Name)` ke "
+"zona :abbr:`DNS (Domain Name System)` dari nama domain tersebut:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3636,6 +3652,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Jika nama domainnya adalah `company-name.com`, pastikan untuk membuat "
+"subdomain `odoo._domainkey.company-name.com` yang canonical name-nya adalah "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3654,6 +3673,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Periksa apakah catatan DKIM valid menggunakan alat seperti `MXToolbox DKIM "
+"Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Masukkan "
+"`example.com:odoo` di alat pencarian DKIM, dengan menentukan bahwa selector "
+"yang diuji adalah `odoo` untuk domain khusus `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3773,6 +3796,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`Catatan CNAME GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4132,6 +4157,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Untuk informasi lebih lanjut tentang konfigurasi catatan DNS untuk "
+"subdomain, lihat :ref:`pengaturan catatan DNS <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4240,7 +4267,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Catatan DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4259,6 +4286,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Untuk **database on-premise**, metode redireksi dan catatan DNS juga "
+"memerlukan konfigurasi :doc:`skrip mail gateway <../../../../administration/"
+"on_premise/email_gateway>`. Menjalankan skrip ini memerlukan **pengetahuan "
+"teknis dan infrastruktur tingkat lanjut**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4483,7 +4514,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid "DNS records"
-msgstr ""
+msgstr "Catatan DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:296
 msgid ""
@@ -4492,6 +4523,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Opsi ketiga adalah menggunakan subdomain khusus (misalnya, "
+"`mail.mydomain.com`) dan mengonfigurasi catatan DNS-nya sehingga email yang "
+"dikirim ke alamat pada subdomain tersebut ditangani oleh Odoo dan diproses "
+"langsung di dalam database Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:300
 msgid ""
@@ -4499,6 +4534,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Untuk Odoo Online dan Odoo.sh, routing berbasis CNAME hanya didukung saat "
+"menggunakan subdomain khusus. Ini tidak dapat dikonfigurasi pada domain "
+"utama Anda (misalnya, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
@@ -4506,12 +4544,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Perlu diketahui bahwa subdomain ini akan dikhususkan untuk lalu lintas "
+"email. Jika diakses melalui browser web, pengguna akan diarahkan ke website "
+"pertama yang dikonfigurasi pada database (jika berlaku)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Karena subdomain baru sedang dikonfigurasi untuk email masuk, :doc:`catatan "
+"DNS-nya juga harus disiapkan untuk email keluar <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4521,7 +4564,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Akses pengaturan DNS Anda"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4529,6 +4572,9 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Jika domain Anda di-hosting oleh registrar pihak ketiga (misalnya, GoDaddy, "
+"Namecheap, Cloudflare), masuklah ke registrar tersebut dan buka zona "
+"manajemen DNS untuk domain Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid "If Odoo manages your DNS:"
@@ -4640,6 +4686,7 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:371
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+":doc:`Mengonfigurasi rekaman DNS untuk mengirim email di Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4651,26 +4698,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Masuk ke registrar pihak ketiga Anda (misalnya, GoDaddy, Namecheap, "
+"Cloudflare) dan buka zona manajemen DNS untuk domain Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Tambahkan subdomain ke pengaturan Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Masuk ke platform Odoo.sh dan buka proyek Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:387
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Pilih cabang produksi, buka tab :guilabel:`Pengaturan`, dan cari bagian "
+"**Domain kustom**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:389
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Masukkan subdomain lengkap (misalnya, `mail.mydomain.com`) dan klik "
+":guilabel:`Tambahkan domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4682,6 +4735,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Sebagai alternatif dari rekaman CNAME, Anda dapat membuat rekaman MX untuk "
+"subdomain Anda (misalnya, `mail`), yang mengarah ke `dbname.odoo.com.` "
+"dengan prioritas `10`. Langkah konfigurasi lainnya tetap sama."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
 msgid ""
@@ -4689,6 +4745,10 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Perlu diperhatikan bahwa berbeda dengan CNAME, rekaman MX tidak mewarisi SPF "
+"atau rekaman DNS lain dari domain target, sehingga Anda mungkin perlu "
+"mengonfigurasinya secara terpisah agar email keluar dapat diautentikasi "
+"dengan benar."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:416
 msgid "Infinite email loops"
@@ -5100,6 +5160,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Rekaman DNS <email-inbound-custom-domain-dns>` (memerlukan pengetahuan "
+"teknis lanjutan)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6227,6 +6289,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Untuk informasi lebih lanjut tentang cron saat menggunakan Odoo.sh, lihat "
+":ref:`dokumentasi Odoo.sh dan tindakan terjadwal <odoo-sh/advanced/scheduled>"
+"`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -7894,11 +7959,11 @@ msgstr ":guilabel:`Allowed methods`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -11134,6 +11199,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Printer DYMO Series 5 tidak kompatibel dengan :doc:`IoT box <../iot_box>` "
+"dan memerlukan penyandingan dengan :doc:`Windows virtual IoT <../windows_iot>"
+"`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "DYMO LabelWriter not printing"

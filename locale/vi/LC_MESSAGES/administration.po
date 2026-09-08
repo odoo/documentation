@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-07-06 12:19+0000\n"
+"PO-Revision-Date: 2026-09-08 16:12+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/vi/>\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/administration.rst:8
 msgid "Database management"
@@ -1176,7 +1176,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:3
 msgid "Advanced topics"
-msgstr ""
+msgstr "Chủ đề nâng cao"
 
 #: ../../content/administration/odoo_sh/advanced.rst:5
 msgid ""
@@ -1184,6 +1184,10 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
+"Phần này trình bày các tính năng nâng cao của Odoo.sh liên quan đến "
+":ref:`container <odoo-sh/advanced/containers>`, :ref:`mô-đun con Git <odoo-"
+"sh/advanced/submodules>` và :ref:`tác vụ theo lịch <odoo-sh/advanced/"
+"scheduled>`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
@@ -1195,6 +1199,9 @@ msgid ""
 "base is an Ubuntu-based system on which all of Odoo's required dependencies, "
 "as well as common, useful packages, are installed."
 msgstr ""
+"Mỗi bản dựng được cách ly trong container riêng (container không gian tên "
+"Linux). Container này dựa trên hệ thống nền Ubuntu, trên đó cài đặt tất cả "
+"các phụ thuộc bắt buộc của Odoo cũng như các gói phổ biến, hữu ích khác."
 
 #: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
@@ -1204,18 +1211,26 @@ msgid ""
 "them. The platform will ensure these dependencies are installed in your "
 "containers."
 msgstr ""
+"Nếu dự án của bạn cần :ref:`các phụ thuộc Python bổ sung <odoo-sh/module/"
+"library>` hoặc phiên bản mới hơn, bạn có thể định nghĩa một tệp "
+":file:`requirements.txt` ở thư mục gốc của các nhánh để liệt kê chúng. Nền "
+"tảng sẽ đảm bảo các phụ thuộc này được cài đặt trong container của bạn."
 
 #: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
 "For a concrete example, check out the Odoo Community `requirements.txt file "
 "<https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 msgstr ""
+"Để xem ví dụ cụ thể, hãy tham khảo `tệp requirements.txt <https://github.com/"
+"odoo/odoo/blob/18.0/requirements.txt>`_ của Odoo Community."
 
 #: ../../content/administration/odoo_sh/advanced.rst:25
 msgid ""
 "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
 "reference/requirement-specifiers/>`_"
 msgstr ""
+"`Tài liệu về requirements specifiers của PyPA <https://pip.pypa.io/en/stable/"
+"reference/requirement-specifiers/>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:29
 msgid ""
@@ -1223,6 +1238,9 @@ msgid ""
 "submodules>` are also taken into account. The platform looks for such files "
 "in the parent folder of each folder containing an Odoo module."
 msgstr ""
+"Các tệp :file:`requirements.txt` của :ref:`mô-đun con <odoo-sh/advanced/"
+"submodules>` cũng được tính đến. Nền tảng sẽ tìm các tệp này trong thư mục "
+"cha của mỗi thư mục chứa một mô-đun Odoo."
 
 #: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
@@ -1234,16 +1252,21 @@ msgid ""
 "`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 msgstr ""
+"Vì các container dựa trên nền Ubuntu, cấu trúc thư mục của chúng tuân theo "
+"`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_."
 
 #: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
 "`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
 "LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
+"`Tài liệu về các thư mục chính của Ubuntu <https://help.ubuntu.com/community/"
+"LinuxFilesystemTreeOverview#Main_directories>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:44
 msgid "The directories relevant to Odoo.sh are the following:"
-msgstr ""
+msgstr "Các thư mục liên quan đến Odoo.sh gồm:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
@@ -1254,6 +1277,8 @@ msgid ""
 "While accessing a container with the shell, you can access the database "
 "using the `psql` command."
 msgstr ""
+"Khi truy cập container qua shell, bạn có thể truy cập cơ sở dữ liệu bằng "
+"lệnh `psql`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
@@ -1264,6 +1289,12 @@ msgid ""
 "safety net in case of a mistake. You simply have to rollback your changes to "
 "revert your database to its previous state."
 msgstr ""
+"Luôn sử dụng `transactions <https://www.postgresql.org/docs/current/static/"
+"sql-begin.html>`_ (ví dụ: `BEGIN` (...) `COMMIT` / `ROLLBACK`) khi một câu "
+"lệnh SQL dẫn đến thay đổi (ví dụ: `UPDATE`, `DELETE`, `ALTER`, v.v.), đặc "
+"biệt là với cơ sở dữ liệu chính thức của bạn. Cơ chế transaction chính là "
+"lưới an toàn của bạn trong trường hợp xảy ra sai sót. Bạn chỉ cần rollback "
+"thay đổi để đưa cơ sở dữ liệu trở về trạng thái trước đó."
 
 #: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
@@ -1271,22 +1302,29 @@ msgid ""
 "lock records in your tables, and a running database may wait for them to be "
 "released, causing a server to hang indefinitely."
 msgstr ""
+"Đừng quên commit hoặc rollback các transaction. Các transaction đang mở có "
+"thể khóa bản ghi trong bảng của bạn, khiến cơ sở dữ liệu đang chạy phải chờ "
+"chúng được giải phóng, làm cho máy chủ bị treo vô thời hạn."
 
 #: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
 "In addition, use your staging databases to test your statements first. It "
 "gives you an extra safety net."
 msgstr ""
+"Ngoài ra, hãy sử dụng cơ sở dữ liệu thử nghiệm để kiểm tra các câu lệnh "
+"trước. Điều này mang lại cho bạn một lớp an toàn bổ sung."
 
 #: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
 "You forgot to set your `WHERE` condition. In such a case, you can rollback "
 "to revert the unwanted change:"
 msgstr ""
+"Bạn đã quên đặt điều kiện `WHERE`. Trong trường hợp này, bạn có thể rollback "
+"để hoàn tác thay đổi không mong muốn:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:120
 msgid "Then, rewrite the statement and commit the change:"
-msgstr ""
+msgstr "Sau đó, viết lại câu lệnh và commit thay đổi:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
@@ -1298,6 +1336,9 @@ msgid ""
 "able to access it from the outside world with a web browser, but you can, "
 "for example:"
 msgstr ""
+"Bạn có thể khởi động một phiên bản máy chủ Odoo từ shell của container. Bạn "
+"sẽ không thể truy cập nó từ bên ngoài bằng trình duyệt web, nhưng bạn có "
+"thể, ví dụ:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
@@ -3605,6 +3646,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"Mục đích của sao lưu thủ công là tạo ra một bản chụp nhanh cụ thể của cơ sở "
+"dữ liệu chính thức hoặc thử nghiệm (không khả dụng cho môi trường phát triển)"
+". Các bản sao lưu này vẫn khả dụng trong ba ngày. Tuy nhiên, mỗi ngày chỉ "
+"được tạo tối đa năm bản sao lưu thủ công."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -4812,6 +4857,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"Đối với các phân hệ cộng đồng có sẵn công khai, bạn cũng có thể cân nhắc sử "
+"dụng :ref:`mô-đun con <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -9374,7 +9421,7 @@ msgstr "Kết thúc hỗ trợ tiêu chuẩn"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -9395,7 +9442,7 @@ msgstr "N/A"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "July 2026"
-msgstr ""
+msgstr "Tháng 7 năm 2026"
 
 #: ../../content/administration/standard_extended_support.rst:41
 msgid "Odoo SaaS 19.3"
