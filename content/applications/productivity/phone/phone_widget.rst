@@ -20,7 +20,7 @@ a contact's phone number to initiate a call.
 
 Click the :icon:`oi-voip` :guilabel:`(Hide Softphone)` icon again to close the widget.
 
-The **Phone** widget contains four tabs:
+The **Phone** widget contains three tabs:
 
 - :icon:`fa-history` :guilabel:`Recent`: Lists recent :ref:`inbound calls
   <phone/phone_widget/inbound-call>` and :ref:`outbound calls <phone/phone_widget/outbound-call>` on
