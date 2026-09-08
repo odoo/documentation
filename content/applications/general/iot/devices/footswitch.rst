@@ -47,4 +47,4 @@ manufacturing work order.
      successfully connected to the footswitch.
 
 .. seealso::
-   :ref:`workcenter_iot`
+   :ref:`manufacturing/using_work_centers/workcenter-iot`
