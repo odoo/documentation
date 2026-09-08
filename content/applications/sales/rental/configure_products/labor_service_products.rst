@@ -1,0 +1,247 @@
+.. meta::
+   :description: Explains how to configure labor (non-physical) service products in the Rental app,
+                 covering employee role setup in the Planning app, creating the service product, and
+                 defining base and additional rental prices.
+
+=============================
+Labor service rental products
+=============================
+
+The **Rental** app offers two types of service products that require different configurations:
+:doc:`physical <service_products>` and non-physical (labor). This document focuses on the
+configuration of non-physical rental service products and refers to them as labor services going
+forward. A labor service is an intangible good that sometimes requires an employee to execute. Some
+examples are:
+
+- Rental insurance or a warrantees
+- Housekeeping
+- Catering services like bartending or wait staffing for events
+
+Configuration
+=============
+
+Configuration requirements differ depending on the type of service product offered. To learn more
+about the default settings for rental products, refer to the :ref:`Configuration
+<rental/product_types/configuration>` section on the *Rental product types* page.
+
+To access the **Rental** app's settings, navigate to :menuselection:`Rental app --> Configuration
+--> Settings`.
+
+.. note::
+   The available configurations and fields may vary depending on the installed apps. To access all
+   the following configurations, ensure the **Rental**, **Planning**, **Timesheets**, and **Sales**
+   apps are installed.
+
+.. _rental/labor_service_products/configure-employee-roles:
+
+Configure employee roles
+========================
+
+Before creating a labor service product in the **Rental** app, first :ref:`create <planning/roles>`
+and :ref:`assign <planning/employees>` employee roles in the **Planning** app to enable employee
+shift planning. Employees are linked to the labor service product through their assigned role.
+Whenever the service is added to a rental order, the **Rental** app syncs with the **Planning** app
+to update the employee shift availability.
+
+.. example::
+   Sneak Peak Studio has a new Outdoor Photography service and two dedicated employees. Add the new
+   employees by navigating to the :menuselection:`Planning app --> Configuration --> Employees`.
+   Click :guilabel:`New` and enter the necessary information for the employee. Repeat those steps
+   for all employees.
+
+   To configure this in the database, first create a *Photographer* role in the **Planning** app.
+   Navigate to the :menuselection:`Planning app --> Configuration --> Roles`. Click :guilabel:`New`,
+   enter `Outdoor Photographer` for the :guilabel:`Role`, and assign the two employees as
+   :guilabel:`Resources`.
+
+   Next, create the new outdoor photography service product by navigating to the
+   :menuselection:`Rental app --> Products --> Products`. Click :guilabel:`New`, then enter `Outdoor
+   Photography` in the :guilabel:`Name` field, and set the :guilabel:`Product Type` to
+   :guilabel:`Service`. Enable the :guilabel:`Plan Services` checkbox, which reveals an
+   :guilabel:`as (role)` field. Using the drop-down menu, select :guilabel:`Outdoor Photography` for
+   the role.
+
+Create a new service product
+============================
+
+To set up a new rental service, go to :menuselection:`Rental app --> Products --> Products` and then
+click :guilabel:`New`, and a blank *Product* form loads. Enter the following information on the
+form:
+
+Initial product configuration
+-----------------------------
+
+.. important::
+   The **Sales**, **Planning**, and **Timesheets** apps must be installed for the following fields
+   to be available:
+
+   - :guilabel:`Based on Timesheets` option of the *Invoicing Policy* field.
+   - :guilabel:`Plan Services`.
+
+Enter the :guilabel:`Name` of the service product, and ensure the :guilabel:`Sales` checkbox is
+selected. Set the :guilabel:`Product Type` to :guilabel:`Service`. In the :guilabel:`Invoicing
+Policy` drop-down menu, select :guilabel:`Based on Timesheets`. Enable the :guilabel:`Plan Services`
+checkbox and select the desired role, or create a new one.
+
+.. image:: labor_service_products/rental-service-product-form.png
+   :alt: Example of a configured Photography service product form in the Rental app.
+
+Hover over the selected role in the :guilabel:`Plan Services` line to reveal an
+:icon:`oi-arrow-right` :guilabel:`(Internal link)` icon. Click it to open the product's *Role* page,
+and enable the :guilabel:`Sync Shifts and Rental Orders` checkbox.
+
+.. image:: labor_service_products/rental-sync-shifts-and-rental-orders.png
+   :alt: Example of role page with the Sync Shifts and Rental Orders checkbox enabled.
+
+Set a base rental period and price
+----------------------------------
+
+Set the base rental price by entering the lowest rental price in the :guilabel:`Sales Price` field.
+Next, click the *Sales* tab, then configure the following *Rental* section fields where applicable:
+
+- :guilabel:`Periodicity`: The unit of time the product uses for rental prices. The options are
+  :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Nights`, and :guilabel:`Weeks`.
+- :guilabel:`Padding Time`: Blocks a rental product from being available for reservations. The
+  setting is set to an hourly unit. This is available only if :guilabel:`Hours` is selected in the
+  :guilabel:`Periodicity` field.
+- :guilabel:`Pickup`: The earliest time the customer can pick up the product to begin the rental
+  period.
+- :guilabel:`Return`: The latest time the customer can return the product.
+
+Optional: specify rental variants
+---------------------------------
+
+.. important::
+   The *Variant* feature in the **Sales** app must be enabled for this tab to display.
+
+To add any optional variants for the service product, click into the *Attributes & Variants* tab.
+Click :guilabel:`Add a line`, then select or create an option from the :guilabel:`Attribute`
+drop-down menu. To create a new one, enter the name and click :guilabel:`Create and edit` to
+:ref:`configure the attribute and values <products/variants/attributes>`.
+
+.. example::
+   A moving company rates their services based on distance. Any move within San Francisco uses the
+   flat rate of $165 per hour. Depending on the distance the customer is moving outside of San
+   Francisco, the company adds an additional fee.
+
+   To configure this, go to the :menuselection:`Rental app --> Products --> Products` and click
+   :guilabel:`New` to create a new product. Configure the base rental price and period using the
+   *General Information* and *Sales* tabs.
+
+   On the *Attributes & Variants* tab, click :guilabel:`Add a line` and select `Distance` as an
+   :guilabel:`Attribute`. In the :guilabel:`Values` column, add `50 mi`, `100 mi`, and `200 mi`.
+
+   .. image:: labor_service_products/example-rental-service-variants.png
+      :alt: Example of service variants in the Attributes & Variants tab.
+
+Add multiple rental prices
+--------------------------
+
+Configure additional rental rates in the **Rental** app using either the :ref:`Pricelists
+<rental/labor_service_products/pricelists-method>` or the :ref:`Prices
+<rental/labor_service_products/prices-tab>` tab.
+
+.. _rental/labor_service_products/pricelists-method:
+
+Using the Pricelists method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Creating a :ref:`new pricelist <sales/products/create-edit-pricelists>` allows for better
+customization when applying rental rates to specific time periods, products, or customers using
+*Pricelist Rules*. It is a separate form that users can apply to quotations or select on the rental
+product form to add new price rules to. To create a new pricelist, go to :menuselection:`Rental app
+--> Products --> Pricelists` and click :guilabel:`New`, and configure the new pricelist.
+
+.. _rental/labor_service_products/pricelists-example:
+
+.. example::
+   **Part 1**
+
+   A photography studio rents out its photographers on an hourly and daily basis. The hourly rate is
+   $30, but the studio offers a 20% discount for all-day sessions (eight hours or more). All
+   reservations require a 24-hour notice to reserve a photographer. Navigate to
+   :menuselection:`Rental app --> Products --> Products` and click the desired product.
+
+   Enter the :guilabel:`Sales Price` and then click the *Sales* tab to configure the
+   :guilabel:`Periodicity` as :guilabel:`Hours` and enter `24` for the :guilabel:`Padding Time`.
+
+   .. image:: labor_service_products/example-rental-service-periodicity.png
+      :alt: Example of Periodicity configuration on the Sales tab.
+
+   Using the Pricelist method, navigate to :menuselection:`Rental app --> Products --> Pricelists`
+   and click :guilabel:`New`. Configure :guilabel:`Pricelist Rules` for the daily rate with the
+   following settings:
+
+   - :guilabel:`Apply To`: Select :guilabel:`Product`
+   - :guilabel:`Product`: Select :guilabel:`Photographer`
+   - :guilabel:`Price Type`: Select :guilabel:`Discount` and enter `20`
+   - :guilabel:`Min Qty`: Enter `8`
+
+   .. image:: labor_service_products/example-pricelist-rules.png
+      :alt: Example of a configured Pricelist Rules form.
+
+.. _rental/labor_service_products/prices-tab:
+
+Using the Prices tab method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   The :ref:`Pricelists <sales/products/pricelist-configuration>` feature must be enabled for this
+   tab to display.
+
+Rental rates can also be configured as a new price rule for an existing pricelist using the *Prices*
+tab on the product form. If no pricelist is configured beforehand, the *Default* pricelist is
+selected.
+
+.. tip::
+   It is recommended to create a new pricelist first instead of using the *Default* pricelist.
+   Keeping the *Default* pricelist blank ensures there is a clean pricelist for the base rental
+   rate.
+
+Navigate to :menuselection:`Rental app --> Products --> Products`, then click the desired product.
+Click the *Prices* tab and click :guilabel:`Add a price`.
+
+Select the desired :guilabel:`Pricelist`, then enter the minimum time required for the price change
+to trigger in the :guilabel:`Min. Quantity` column. The :guilabel:`Min. Quantity` column is based on
+the :guilabel:`Periodicity` field in the *Sales* tab.
+
+Lastly, enter the :guilabel:`Price` rate.
+
+.. tip::
+   Add a date range in the :guilabel:`Validity` column to restrict when the pricelist can be
+   applied. To make the :guilabel:`Validity` column visible, click the :icon:`oi-settings-adjust`
+   :guilabel:`(Settings)` icon and enable :guilabel:`Validity`.
+
+.. example::
+   **Part 2**
+
+   Using the same scenario in the :ref:`Pricelists method example
+   <rental/labor_service_products/pricelists-example>`, use the *Prices* tab method by navigating to
+   :menuselection:`Rental app --> Products --> Products` and click the desired product to configure.
+   Click the *Prices* tab and select the :guilabel:`Photographer (USD)` option for the
+   :guilabel:`Pricelist` column. Enter `8` in the :guilabel:`Min. Quantity` column and enter `24`
+   for the :guilabel:`Price` column.
+
+   .. image:: labor_service_products/example-prices-tab.png
+      :alt: Sample of the Prices tab of service product in the Rental app.
+
+eCommerce features
+------------------
+
+.. important::
+   This tab is only available if the :guilabel:`eCommerce` module is installed.
+
+The *eCommerce* tab determines how the product page appears on the website. Refer to the
+:ref:`Product visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
+<ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
+instructions.
+
+Any selected days in the *Unavailability days* section in the :ref:`Rental app's settings
+<rental/product_types/configuration>` are only applied to online booking. If the product isn't
+published to the website then the setting does not go into effect.
+
+.. seealso::
+   - :doc:`service_products`
+   - :doc:`../../../services/planning`
+   - :doc:`../../sales/products_prices/prices/pricing`
+   - :doc:`../../sales/products_prices/products/variants`
