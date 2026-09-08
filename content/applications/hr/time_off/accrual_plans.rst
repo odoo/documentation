@@ -29,20 +29,20 @@ Configuration section
 
 Configure the following fields in the *Configuration* section of the form:
 
-- :guilabel:`When the time is accrued?`: Select when the employee begins to accrue time off, either
+- :guilabel:`When the time is accrued`: Select when the employee begins to accrue time off, either
   :guilabel:`At the start of the accrual period` or :guilabel:`At the end of the accrual period`.
-- :guilabel:`It is based on worked time?`: Select how time off accrual is determined. The options
+- :guilabel:`It is based on worked time`: Select how time off accrual is determined. The options
   are:
 
-  - :guilabel:`Yes, consider the worked hours, excluding any time off taken during that period.`:
+  - :guilabel:`Yes, consider the worked hours, excluding any time off taken during that period`:
     Days **not** considered as *worked time* do **not** contribute to the accrual plan in Odoo.
-  - :guilabel:`No, always consider the entire accrual period (whole calendar days).`: Every day is
+  - :guilabel:`No, always consider the entire accrual period (whole calendar days)`: Every day is
     calculated when determining worked time, with no exclusions.
 
   .. example::
      An employee is granted time off from an accrual plan configured to accrue one day of vacation
      for every five days worked. The accrual plan is based on the employee's worked time (the
-     :guilabel:`Yes, consider the worked hours, excluding any time off taken during that period.`
+     :guilabel:`Yes, consider the worked hours, excluding any time off taken during that period`
      option is selected), which means they **only** earn vacation time for the five weekdays they
      work, *not* the entire seven-day week period.
 
@@ -55,8 +55,11 @@ Configure the following fields in the *Configuration* section of the form:
 
      As a result, the employee accrues only three vacation days that month instead of four.
 
-- :guilabel:`Do you need a carry-over of the accrued days from one year to another?`: Select when
-  the employee receives previously earned time. The options are:
+- :guilabel:`What should happen to the unused accrued time`: Select what happens to the unused
+  accrued time. The options are either :guilabel:`They should be carried over` or :guilabel:`They
+  should be lost (reset)`.
+- :guilabel:`When should unused accrued time be reset/carried over`: Select when the employee
+  receives previously accrued time. The options are:
 
   - :guilabel:`At the start of the year`: Select this if the accrual rolls over on January 1 of the
     upcoming year.
@@ -65,6 +68,10 @@ Configure the following fields in the *Configuration* section of the form:
   - :guilabel:`Custom date`: Select this option if neither of the other two options is applicable.
     Once selected, set the date using the two drop-down menus, one for the day and one for the
     month.
+
+- :guilabel:`Switch employees to the new accrual level:` Select when the employee moves to the next
+  accrual level. The options are either :guilabel:`Immediately` or :guilabel:`After this accrual's
+  period`.
 
 .. image:: accrual_plans/accrual-plan-form.png
    :alt: An accrual plan form filled out for a Seniority Plan.
@@ -75,16 +82,14 @@ Milestones
 Milestones must be created for employees to accrue time off from the accrual plan. Each milestone
 determines when and how much time off the employee earns.
 
-To create a new milestone, click the :guilabel:`Create a milestone` button and a *New Milestone*
-pop-up window loads. Then fill out the following sections on the form.
+To create the first milestone, click the :guilabel:`Create a milestone` button, or to create
+*additional* milestones, click the :guilabel:`Add a milestone` button. Both options open a *New
+Milestone* pop-up window. Fill out the following sections on the form.
 
 .. tip::
    Once milestones have been configured, click on a milestone to make edits, click the
    :icon:`fa-trash-o` :guilabel:`(Delete)` icon to delete it, or click :guilabel:`Add a milestone`
    to create additional milestones.
-
-.. image:: accrual_plans/accrual-plan-form.png
-   :alt: An accrual plan form with all the entries filled out.
 
 Accrual level options section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,7 +136,7 @@ This section determines how much the employee earns, and when.
   to earn the time off. The options are:
 
   - :guilabel:`At allocation creation`: The time off starts accruing immediately.
-  - :guilabel:`After (#) (Time) from the start of the allocation.`: Use the first two fields to set
+  - :guilabel:`After (#) (Time) from the start of the allocation`: Use the first two fields to set
     the time period the employee achieves the milestone. Enter a number in the first field, then set
     the middle field to either :guilabel:`Days`, :guilabel:`Months`, or :guilabel:`Years`.
 
@@ -144,15 +149,15 @@ Carry over options section
 This section determines what happens to any unused time off at the end of the year. Configure the
 following field:
 
-- :guilabel:`After a year, unused time off will be:`: Select :guilabel:`Lost` if any unused time off
+- :guilabel:`After a year, unused time off will be`: Select :guilabel:`Lost` if any unused time off
   is lost, and does **not** carry over to the following year. Select :guilabel:`Carried over` if
   time off is rolled over to the next year. When this option is selected, two additional sections
   appear:
 
-  - :guilabel:`How much time can be carried over:`: Select :guilabel:`Unlimited` if *all* time off
+  - :guilabel:`How much time can be carried over`: Select :guilabel:`Unlimited` if *all* time off
     can be carried over. Select :guilabel:`Up to (#) Day(s)` if there *is* a limit. Enter the total
     number of days the employee can carry over from one year to the next in the blank field.
-  - :guilabel:`Define a carry over validity?`: If there is an expiration date for the carried over
+  - :guilabel:`Define a carry over validity`: If there is an expiration date for the carried over
     time off, enable this option. When enabled, the following appears: :guilabel:`The days carried
     over will be effective for (#) (Days or Months)`. Enter a number in the first field, then set
     the second field to either :guilabel:`Days` or :guilabel:`Months`.
@@ -165,11 +170,11 @@ Cap options section
 
 This section sets limits on total time off earned.
 
-- :guilabel:`Define a yearly cap?`: Enable this option to set a limit on the total amount of time
+- :guilabel:`Define a yearly cap`: Enable this option to set a limit on the total amount of time
   that can be accrued every calendar year. When enabled, the following line appears:
   :guilabel:`Accrual will stop until next carry-over date if accrued time's reach (#) Day(s).` Enter
   the maximum number of days the employee can earn in the number field.
-- :guilabel:`Define a balance cap?`: If there is a maximum amount of time the employee can accrue
+- :guilabel:`Define a balance cap`: If there is a maximum amount of time the employee can accrue
   with this plan, enable this option. When enabled, the following line appears: :guilabel:`The plan
   will be on hold if the balance reach (#) Day(s) of available time.` Enter the maximum number of
   days the employee can have at any given time in the number field. Any time off beyond this
