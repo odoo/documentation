@@ -2,339 +2,428 @@
 Routes and push/pull rules
 ==========================
 
+.. |SO| replace:: :abbr:`SO (Sales Order)`
+.. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
+.. |SUBC| replace:: `Physical Locations/Subcontracting Location`
+.. |VEND| replace:: `Partners/Vendors`
+.. |PROD| replace:: `Virtual Locations/Production`
+.. |CUST| replace:: `Partners/Customers`
+.. |ST| replace:: `<WH>/Stock`
+.. |QC| replace:: `<WH>/Quality Control`
+.. |IN| replace:: `<WH>/Input`
+.. |OUT| replace:: `<WH>/Output`
+.. |PACK| replace:: `<WH>/Packing Zone`
+
 *Routes* in Odoo control the movement of products between different locations, whether internal or
-external, using push and pull rules. Once set up, these rules help automate the logistics of product
-movement based on specific conditions.
+external, using a combination of push and pull rules. These rules help automate the movement of
+products based on specific conditions. They can be configured to create advanced use cases such as:
+
+- Managing product manufacturing chains.
+- Managing default locations per product.
+- Defining routes within the stock warehouse according to business needs, such as quality control,
+  after-sales services, or supplier returns.
+- Helping rental management by generating automated return moves for rented products.
 
 .. seealso::
    - `Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_
    - :doc:`Standard routes in Odoo <../daily_operations>`
 
-.. note::
-   Routes are applicable on products, product categories, shipping methods, :ref:`packagings
-   <inventory/product_management/route-on-packaging>`, and on the sales order line.
-
-About routes and terminology
-============================
-
-In a generic warehouse, there are receiving docks, a quality control area, storage locations,
-picking and packing areas, and shipping docks. All products go through all these locations. As the
-products move through the locations, each location triggers the products' specified route and
-rules.
-
-.. image:: use_routes/stock-example.png
-   :align: center
-   :alt: View of a generic warehouse with stock and quality control area.
-
-In this example, vendor trucks unload pallets of ordered products at the receiving docks. Operators
-then scan the products in the receiving area. Depending on the product's route and rules, some of
-these products are sent to a quality control area (for example, products that are components used
-in the manufacturing process), while others are directly stored in their respective locations.
-
-.. image:: use_routes/push-to-rule-example.png
-   :align: center
-   :alt: View of a generic push to rule when receiving products.
-
-Here is an example of a fulfillment route. In the morning, items are picked for all the orders that
-need to be prepared during the day. These items are picked from storage locations and moved to the
-picking area, close to where the orders are packed. Then, the orders are packed in their respective
-boxes, and conveyor belts bring them to the shipping docks, ready to be delivered to customers.
-
-.. image:: use_routes/pull-from-rule-example.png
-   :align: center
-   :alt: View of a generic pull from rule when preparing deliveries.
-
-Push rules
-----------
-
-Push rules are used to *supply products into a storage locations* as soon as they arrive at a
-specific receiving location.
-
-.. note::
-   Push rules can only be triggered if there are no pull rules that have already generated the
-   product transfers.
-
-In a :doc:`one-step receipt route <receipts_delivery_one_step>`, which uses one push rule, when a
-product arrives in the warehouse, a push rule can automatically transfer it to the *Storage
-Location*. Different push rules can be applied to different products, allowing for customized
-storage locations.
-
-.. figure:: use_routes/push-rule.png
-   :align: center
-   :alt: Rule for a Receive in one step route.
-
-   Push rule for the 'Receive in one step' route.
-
-For more information about configuring rules, skip to the :ref:`Configure rules section
-<inventory/shipping_receiving/configure-rules>`.
-
-Pull rules
-----------
-
-Pull rules trigger product moves on demand, such as a sales order or a :doc:`need to restock
-<../../warehouses_storage/replenishment/reordering_rules>`.
-
-Pull rules work backward from the demand location. For example, in a :ref:`two-step delivery
-<inventory/shipping_receiving/two-step-delivery>` route, where items move from *Stock* to *Output*
-before being delivered to the *Customer Location*, the pull rule first creates a transfer from
-*Output* to the customer. If the product is not at *Output*, another pull rule creates a transfer
-from *Stock* to *Output*. The warehouse workers then process these transfers in the reverse order:
-picking, then shipping.
-
-.. figure:: use_routes/pull-rule.png
-   :align: center
-   :alt: Example pull rule.
-
-   Pull rules for the 'Deliver in two steps' route.
-
-For more information about configuring rules, skip to the :ref:`Configure rules section
-<inventory/shipping_receiving/configure-rules>`.
-
-.. _use-routes/routes-rules:
+.. _inventory/routes/config:
 
 Configuration
 =============
 
-Since *Routes* are a collection of *Push and Pull Rules*, Odoo helps you manage advanced route
-configurations such as:
-
-- Manage product manufacturing chains.
-- Manage default locations per product.
-- Define routes within the stock warehouse according to business needs, such as quality control,
-  after-sales services, or supplier returns.
-- Help rental management by generating automated return moves for rented products.
-
-To configure a route for a product, first, open the :guilabel:`Inventory` application and go to
-:menuselection:`Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, enable the
-:guilabel:`Multi-Step Routes` feature and click :guilabel:`Save`.
-
-.. image:: use_routes/multi-steps-routes-feature.png
-   :align: center
-   :alt: Activate the Multi-Step Routes feature in Odoo Inventory.
-
-.. note::
-   The :guilabel:`Storage Locations` feature is automatically activated with the
-   :guilabel:`Multi-Step Routes` feature.
-
-Once this first step is completed, the user can use pre-configured routes that come with Odoo, or
-they can create custom routes.
-
-Pre-configured routes
----------------------
-
-To access Odoo's pre-configured routes, go to :menuselection:`Inventory --> Configuration -->
-Warehouses`. Then, open a warehouse form. In the :guilabel:`Warehouse Configuration` tab, the user
-can view the warehouse's pre-configured routes for :guilabel:`Incoming Shipments` and
-:guilabel:`Outgoing Shipments`.
-
-.. image:: use_routes/example-preconfigured-warehouse.png
-   :align: center
-   :alt: A pre-configured warehouse in Odoo Inventory.
-
-Some more advanced routes, such as pick-pack-ship, are also available. The user can select the
-route that best fits their business needs. Once the :guilabel:`Incoming Shipments` and
-:guilabel:`Outgoing Shipments` routes are set, head to :menuselection:`Inventory --> Configuration
---> Routes` to see the specific routes that Odoo generated.
-
-.. image:: use_routes/preconfigured-routes.png
-   :align: center
-   :alt: View of all the preconfigured routes Odoo offers.
-
-On the :guilabel:`Routes` page, click on a route to open the route form. In the route form, the
-user can view which places the route is :guilabel:`Applicable On`. The user can also set the route
-to only apply on a specific :guilabel:`Company`. This is useful for multi-company environments; for
-example, a user can have a company and warehouse in Country A and a second company and warehouse in
-Country B.
-
-.. seealso::
-   :ref:`Applicable on packagings <inventory/product_management/packaging-route>`
-
-.. image:: use_routes/routes-example.png
-   :align: center
-   :alt: View of a route example applicable on product categories and warehouses.
-
-At the bottom of the route form, the user can view the specific :guilabel:`Rules` for the route.
-Each :guilabel:`Rule` has an :guilabel:`Action`, a :guilabel:`Source Location`, and a
-:guilabel:`Destination Location`.
-
-.. image:: use_routes/rules-example.png
-   :align: center
-   :alt: An example of rules with push & pull actions in Odoo Inventory.
-
-Custom Routes
--------------
-
-To create a custom route, go to :menuselection:`Inventory --> Configuration --> Routes`, and click
-on :guilabel:`Create`. Next, choose the places where this route can be selected. A route can be
-applicable on a combination of places.
-
-.. image:: use_routes/advanced-custom-route.png
-   :align: center
-   :alt: View of a pick-pack-ship route.
-
-Each place has a different behavior, so it is important to tick only the useful ones and adapt each
-route accordingly. Then, configure the :guilabel:`Rules` of the route.
-
-If the route is applicable on a product category, the route still needs to be manually set on the
-product category form by going to :menuselection:`Inventory --> Configuration --> Product
-Categories`. Then, select the product category and open the form. Next, click :guilabel:`Edit` and
-under the :guilabel:`Logistics` section, set the :guilabel:`Routes`.
-
-When applying the route on a product category, all the rules configured in the route are applied to
-**every** product in the category. This can be helpful if the business uses the dropshipping
-process for all the products from the same category.
-
-.. image:: use_routes/routes-logistic-section.png
-   :align: center
-   :alt: View of a route applied to the "all" product category.
-
-The same behavior applies to the warehouses. If the route can apply to :guilabel:`Warehouses`, all
-the transfers occurring inside the chosen warehouse that meet the conditions of the route's rules
-will then follow that route.
-
-.. image:: use_routes/applicable-on-warehouse.png
-   :align: center
-   :alt: View of the warehouse drop-down menu when selecting applicable on warehouse.
-
-If the route is applicable on :guilabel:`Sales Order Lines`, it is more or less the opposite. The
-route must be manually chosen when creating a quotation. This is useful if some products go through
-different routes.
-
-Remember to toggle the visibility of the :guilabel:`Route` column on the quotation/sales order.
-Then, the route can be chosen on each line of the quotation/sales order.
-
-.. image:: use_routes/add-routes-to-sales-lines.png
-   :align: center
-   :alt: View of the menu allowing to add new lines to sales orders.
-
-Finally, there are routes that can be applied to products. Those work more or less like the product
-categories: once selected, the route must be manually set on the product form.
-
-To set a route on a product, go to :menuselection:`Inventory --> Products --> Products` and select
-the desired product. Then, go to the :guilabel:`Inventory` tab and under the :guilabel:`Operations`
-section, select the :guilabel:`Routes`.
-
-.. image:: use_routes/on-product-route.png
-   :align: center
-   :alt: View of a product form, where the route must be selected.
+To access routes and select them on products, ensure that the *Multi-Step Routes* feature is
+enabled. To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`. Then,
+in the :guilabel:`Warehouse` section, enable the :guilabel:`Multi-Step Routes` feature and click
+:guilabel:`Save`.
 
 .. important::
-   Rules must be set on the route in order for the route to work.
+   Enabling the :guilabel:`Multi-Step Routes` feature also enables :guilabel:`Storage Locations`.
+   These features are both **required** when using routes.
 
-.. _inventory/shipping_receiving/configure-rules:
+Additionally, routes are generated depending on the warehouse's reception and delivery
+configurations. To access these settings, navigate to :menuselection:`Inventory app -->
+Configuration --> Warehouses`. On the *Warehouses* page, click the relevant warehouse. In the
+*Warehouse Configuration* tab, enable the desired inbound and outbound flows in the
+:guilabel:`Incoming Shipments` and :guilabel:`Outgoing Shipments` fields.
 
-Rules
-~~~~~
+.. seealso::
+   See the :doc:`../../warehouses_storage/inventory_management/warehouses` documentation for
+   information about configuring warehouses.
 
-The rules are defined on the route form. First, go to :menuselection:`Inventory --> Configuration
---> Routes` and open the desired route form. Next, click :guilabel:`Edit` and in the
-:guilabel:`Rules` section, click on :guilabel:`Add a line`.
+.. _inventory/routes/overview:
 
-.. image:: use_routes/add-new-rules.png
-   :align: center
-   :alt: View of the rules menu, where it is possible to add new rules.
+Conceptual overview
+===================
 
-The available rules trigger various actions. If Odoo offers *Push* and *Pull* rules, others are
-also available. Each rule has an :guilabel:`Action`:
+*Routes* are combinations of :ref:`push <inventory/routes/overview/push-rules>` and :ref:`pull
+<inventory/routes/overview/pull-rules>` rules that determine how products move between locations,
+whether they are internal or external to the warehouse. These routes are applied to products to
+automatically trigger their movement between locations.
 
-- :guilabel:`Pull From`: this rule is triggered by a need for the product in a specific location.
-  The need can come from a sales order being validated or from a manufacturing order requiring a
-  specific component. When the need appears in the destination location, Odoo generates a picking to
-  fulfill this need.
-- :guilabel:`Push To`: this rule is triggered by the arrival of some products in the defined source
-  location. In the case of the user moving products to the source location, Odoo generates a picking
-  to move those products to the destination location.
-- :guilabel:`Pull & Push`: this rule allows the generation of pickings in the two situations
-  explained above. This means that when products are required at a specific location, a transfer is
-  created from the previous location to fulfill that need. This creates a need in the previous
-  location and a rule is triggered to fulfill it. Once the second need is fulfilled, the products
-  are pushed to the destination location and all the needs are fulfilled.
-- :guilabel:`Buy`: when products are needed at the destination location, a request for quotation is
+Within a warehouse, products typically move through the following locations: receiving docks, a
+quality control area, storage locations, picking and packing areas, and shipping docks. Locations
+also exist outside of the warehouse such as customers, vendors, and subcontractors.
+
+.. seealso::
+   See the :doc:`../../warehouses_storage/inventory_management/use_locations` documentation for
+   information about locations in Odoo.
+
+.. image:: use_routes/stock-example.png
+   :alt: View of a generic warehouse with stock and quality control area.
+
+.. _inventory/routes/overview/push-rules:
+
+Push rules
+----------
+
+Push rules move products from a source location to a destination location. These rules are triggered
+as soon as products arrive at the source location.
+
+In the following example, different products arrive from *Vendors* at the *Receiving Area*. Push
+rules are configured on some products to move directly to the *Storage Locations* as soon as they
+arrive at the *Receiving Area*, while other products are pushed to *Quality Control*.
+
+.. important::
+   Push rules can only be triggered once a product transfer has already been generated by a pull
+   rule or otherwise.
+
+.. image:: use_routes/push-to-rule-example.png
+   :alt: View of a generic push to rule when receiving products.
+
+.. _inventory/routes/overview/pull-rules:
+
+Pull rules
+----------
+
+Pull rules define product transfer flows from a source location to a destination location. These
+rules are demand-driven, triggered only when demand (e.g., sales orders or reordering needs) is
+confirmed at the destination location.
+
+However, for multi-step routes, pull rules are often used along with push rules. When there are
+multiple locations in the transfer flow, the pull rule specifies the final destination of the
+product and generates the first transfer in the route. Push rules are required to move the product
+through the rest of the transfer flow.
+
+For example, a warehouse is configured with a 3-step delivery route. A pull rule is configured to
+move products from the *Storage Locations* as soon as they are needed at the *Shipping Docks*. The
+rule also creates the first transfer in the flow, moving products from the *Storage Locations* to
+the *Picking Area*. Then, push rules move the products from the *Picking Area* to the *Packing
+Area*, then finally to the *Shipping Docks*.
+
+.. image:: use_routes/pull-from-rule-example.png
+   :alt: View of a generic pull from rule when preparing deliveries.
+
+.. _inventory/routes/manage:
+
+Managing routes
+===============
+
+After enabling the *Multi-Step Routes* feature, users can access a dashboard of routes by navigating
+to :menuselection:`Inventory --> Configuration --> Routes`. This opens the *Routes* page, displaying
+a list of all available routes across all warehouses.
+
+.. tip::
+   To access a specific warehouse's routes, navigate to :menuselection:`Configuration -->
+   Warehouses`. Select the warehouse, then click the :icon:`fa-refresh` :guilabel:`Routes` smart
+   button.
+
+Users can use the :ref:`default routes <inventory/routes/default-routes>` to automate replenishment
+strategies such as Replenish on Order (MTO). These default routes are optionally applied by the user
+and are shared across all warehouses in the user's company.
+
+In addition to the default global routes, Odoo also automatically generates :ref:`warehouse routes
+<inventory/routes/warehouse-routes>` depending on the user's configured warehouse settings. These
+routes are automatically triggered by Odoo to move products through locations inside of a warehouse.
+
+To view additional settings, click the desired route on the list. This opens the route's form.
+
+.. image:: use_routes/route-form.png
+   :alt: Route form in Odoo Inventory.
+
+.. _inventory/routes/manage/visibility:
+
+Define route visibility
+-----------------------
+
+The :guilabel:`Company` field allows users to restrict the route to specific companies (if using a
+multi-company environment.)
+
+In the *Applicable On* section, specify any forms on which the route can be made selectable via the
+following options:
+
+- :guilabel:`Product Categories`: Allow routes to be selectable on a *Product Categories* form. When
+  configured with a route, every product in the category inherits the route's rules.
+- :guilabel:`Products`: Allow routes to be selectable on a *Products* form. The configured product
+  inherits the route's rules.
+- :guilabel:`Packagings`: Allow routes to be selectable on a *Product Packaging* form. When
+  configured with a packaging, all orders with the chosen packaging inherit the route's rules.
+- :guilabel:`Shipping Methods`: Allow routes to be selectable on a *Delivery Methods* form. When
+  applied on a carrier, all orders with the chosen shipping method inherit the route's rules.
+- :guilabel:`Warehouses`: Select the warehouses for which this route should be used as the default
+  route.
+- :guilabel:`Sales Order Lines`: Allow routes to be selectable on sales order lines. When applied
+  on individual sales order lines, the chosen routes override the corresponding product's routes for
+  the specific order **only**.
+
+.. seealso::
+   See the :ref:`Applying routes <inventory/routes/apply>` section to see how routes are applied on
+   these forms.
+
+.. _inventory/routes/manage/view-rules:
+
+Viewing rules
+-------------
+
+The *Rules* section lists any rules defining the route.
+
+.. warning::
+   Modifying Odoo's default rules may cause unexpected errors in the database and is therefore
+   **not** recommended.
+
+Each rule has an :guilabel:`Action`, a :guilabel:`Source Location`, and a :guilabel:`Destination
+Location`.
+
+The following actions are defined in Odoo:
+
+- `Pull From`: When demand (e.g., from sales or manufacturing orders) appears at the *Destination
+  Location*, a picking of the specified *Operation Type* is created from the *Source Location* to
+  fulfill the demand.
+- `Push To`: When products arrive at the *Source Location*, a picking of the specified *Operation
+  Type* is created to send them to the *Destination Location*.
+- `Manufacture`: When products are needed at the *Destination Location*, a manufacturing order (MO)
+  is created to fulfill the demand, taking any required components from the *Source Location*.
+- `Buy`: When products are needed at the *Destination Location*, a request for quotation (RfQ) is
   created to fulfill the need.
-- :guilabel:`Manufacture`: when products are needed in the source location, a manufacturing order
-  is created to fulfill the need.
 
-.. image:: use_routes/pull-from-rule-stock-to-packing.png
-   :align: center
-   :alt: Overview of a "Pull From" rule that creates a transfer between the stock and the packing
-         zone.
+.. seealso::
+   See the following documentation for a reference of *Operation Types* and *Locations*:
 
-The :guilabel:`Operation Type` must also be defined on the rule. This defines which kind of picking
-is created from the rule.
+   - :doc:`../../warehouses_storage/inventory_management/operation_type`
+   - :doc:`../../warehouses_storage/inventory_management/use_locations`
 
-If the rule's :guilabel:`Action` is set to :guilabel:`Pull From` or :guilabel:`Pull & Push`, a
-:guilabel:`Supply Method` must be set. The :guilabel:`Supply Method` defines what happens at the
-source location:
+.. _inventory/routes/apply:
 
-- :guilabel:`Take From Stock`: the products are taken from the available stock of the source
-  location.
-- :guilabel:`Trigger Another Rule`: the system tries to find a stock rule to bring the products to
-  the source location. The available stock is ignored.
-- :guilabel:`Take From Stock, if Unavailable, Trigger Another Rule`: the products are taken from
-  the available stock of the source location. If there is no stock available, the system tries to
-  find a rule to bring the products to the source location.
+Applying routes
+===============
+
+:ref:`Default routes <inventory/routes/default-routes>` can be assigned to products, product
+categories, shipping methods, and sales order lines.
+
+.. important::
+   In order to apply routes on these forms, they must first be :ref:`made selectable
+   <inventory/routes/manage/visibility>`.
+
+On products
+-----------
+
+To assign routes directly to a product, navigate to :menuselection:`Products --> Products` and
+select the product. On the product form, select the *Inventory* tab, then select one or more
+:guilabel:`Routes` in the *Operations* section.
+
+.. image:: use_routes/route-product.png
+   :alt: Routes on a product form.
+
+On product categories
+---------------------
+
+To assign routes to a product category, navigate to :menuselection:`Configuration --> Product
+Categories` and select the product category. On the category form, select one or more
+:guilabel:`Routes` in the *Logistics* section.
+
+.. image:: use_routes/route-category.png
+   :alt: Routes on a product category form.
+
+On product packagings
+---------------------
+
+To assign routes to a product packaging, navigate to :menuselection:`Products --> Products` and
+select the product. On the product form, select the *Inventory* tab. In the *Packaging* section,
+existing packagings are listed. By default, the route column is hidden. To enable it, click the
+:icon:`oi-settings-adjust` (Optional Columns) icon, then select :guilabel:`Routes`.
+
+In the newly-added column, select one or more routes on a packaging line.
+
+.. seealso::
+   See the :ref:`inventory/product_management/packaging-route` section for information about
+   enabling and setting routes on product packagings.
+
+On shipping methods
+-------------------
+
+To assign routes to a shipping method, navigate to :menuselection:`Configuration --> Delivery
+Methods` and select the shipping method. On the form, select one or more :guilabel:`Routes`.
+
+.. image:: use_routes/route-delivery.png
+   :alt: Routes on a delivery method form.
+
+.. seealso::
+   See the :ref:`inventory/shipping_receiving/shipping-route` section for information about setting
+   routes on shipping methods.
+
+On sales order lines
+--------------------
+
+To assign routes to a sales order line, open the **Sales** app and select the sales quotation.
+Existing lines are listed in the *Order Lines* tab. By default, the route column is hidden. To
+enable it, click the :icon:`oi-settings-adjust` (Optional Columns) icon, then select
+:guilabel:`Route`.
+
+In the newly-added column, select one or more routes on an order line.
+
+.. image:: use_routes/route-so-line.png
+   :alt: Routes on a sales order line.
+
+.. _inventory/routes/example:
 
 Example flow
 ============
 
-In this example, let's use a custom *Pick - Pack - Ship* route to try a full flow with an advanced
-custom route.
+In this example, a fulfillment flow is completed using a custom *Pick, Pack, and Ship* route.
 
-First, a quick look at the route's rules and their supply methods. There are three rules, all
-:guilabel:`Pull From` rules. The :guilabel:`Supply Methods` for each rule are the following:
+First, three :guilabel:`Pull From` rules are configured:
 
-- :guilabel:`Take From Stock`: When products are needed in the :guilabel:`WH/Packing Zone`, *picks*
-  (internal transfers from :guilabel:`WH/Stock` to :guilabel:`WH/Packing Zone`) are created from
-  :guilabel:`WH/Stock` to fulfill the need.
-- :guilabel:`Trigger Another Rule`: When products are needed in :guilabel:`WH/Output`, *packs*
-  (internal transfers from :guilabel:`WH/Packing Zone` to :guilabel:`WH/Output`) are created from
-  :guilabel:`WH/Packing Zone` to fulfill the need.
-- :guilabel:`Trigger Another Rule`: When products are needed in :guilabel:`Partner
-  Locations/Customers`, *delivery orders* are created from :guilabel:`WH/Output` to fulfill the
-  need.
+.. list-table::
+   :header-rows: 1
 
-.. image:: use_routes/transfers-overview.png
-   :align: center
-   :alt: Overview of all the transfers created by the pick - pack - ship route.
+   * - Rule
+     - Source Location
+     - Destination Location
+     - Description
+   * - `Pull From`
+     - WH/Stock
+     - Partners/Customers
+     - Products are *picked* at |ST| to fulfill the need in |CUST|.
+   * - `Push To`
+     - WH/Packing Zone
+     - WH/Output
+     - Products are *packed* at |PACK| to fulfill the need at |OUT|.
+   * - `Push To`
+     - WH/Output
+     - Partners/Customers
+     - Products are *shipped* at |OUT| to fulfill the need in |CUST|.
 
-This means that, when a customer orders products that have a *pick - pack - ship* route set on it,
-a delivery order is created to fulfill the order.
+These rules are triggered in the following sequence:
 
-.. image:: use_routes/operations-on-transfers.png
-   :align: center
-   :alt: View of the operations created by a pull from transfer.
+#. When a customer orders a product configured with a *Pick, Pack and Ship* route, the product is
+   picked to fulfill the customer demand. A transfer is created to move it the *Packing Area*.
+#. After landing at the *Packing Area*, the product is validated. Another transfer is created to
+   move the product to the *Output*.
+#. Finally, after landing at the *Output*, the product is validated and the last transfer is created
+   to ship the product to the *Customer*.
 
-.. note::
-   If the source document for multiple tranfers is the same sales order, the status is not the same.
-   The status will be :guilabel:`Waiting Another Operation` if the previous transfer in the list is
-   not done yet.
+.. _inventory/routes/reference:
 
-.. image:: use_routes/waiting-status.png
-   :align: center
-   :alt: View of the transfers' various statuses at the beginning of the process.
+Available routes
+================
 
-To prepare the delivery order, packed products are needed at the output area, so an internal
-transfer is requested from the packing zone.
+The following section provides a full list of available routes in Odoo.
 
-.. image:: use_routes/detailed-operations-2.png
-   :align: center
-   :alt: View of the detailed operations for a transfer between the packing and output zones.
+.. _inventory/routes/default-routes:
 
-Obviously, the packing zone needs products ready to be packed. So, an internal transfer is
-requested to the stock and employees can gather the required products from the warehouse.
+Default routes
+--------------
 
-.. image:: use_routes/detailed-operations-transfer.png
-   :align: center
-   :alt: View of the detailed operations for a transfer between the stock and packing zones.
+The following table lists available default routes in Odoo, along with a description of their rules.
 
-As explained in the introduction of the documentation, the last step in the process (for this
-route, the delivery order) is the first to be triggered, which then triggers other rules until we
-reach the first step in the process (here, the internal transfer from the stock to the packing
-area). Now, everything is ready to be processed so the customer can get the ordered items.
+.. list-table::
+   :width: 100 %
+   :widths: 30 70
+   :header-rows: 1
 
-In this example, the product is delivered to the customer when all the rules have been triggered and
-the transfers are done.
+   * - Route
+     - Rules
+   * - Replenish on Order (MTO)
+     - #. `Pull From` |ST| to |CUST|: If products are needed by a customer, create a *Delivery
+          Order*.
+       #. `Pull From` |ST| to |PROD|: If components are needed in production, create an |MO|.
+       #. `Pull From` |ST| to |SUBC|: If products are subcontracted, supply the components directly
+          from stock.
+       #. `Pull From` |ST| to |SUBC|: If components are needed in a repair, create an |MO|.
+   * - Buy
+     - `Buy` to |ST|: If products are needed at the warehouse, create an |RfQ| to replenish them.
+       Often used together with the Replenish on Order (MTO) route.
+   * - Manufacture
+     - `Manufacture` to |ST|: If products are needed at the warehouse, create an |MO| to replenish
+       them. Often used together with the Replenish on Order (MTO) route.
+   * - Dropship
+     - `Buy` from |VEND| to |CUST|: If products are needed by a customer, create a dropship order to
+       fulfill the demand.
+   * - Resupply Subcontractor on Order
+     - `Pull From` |SUBC| to |PROD|: If components are needed in production, send them from the
+       subcontractor.
+   * - Dropship Subcontractor on Order
+     - #. `Buy` from |VEND| to |SUBC|: If products are subcontracted, create an |RfQ| to replenish
+          the components directly through a vendor.
+       #. `Pull From` |SUBC| to |PROD|: If components are needed in production, send them from the
+          subcontractor.
 
-.. image:: use_routes/transfers-status.png
-   :align: center
-   :alt: View of the transfers' statuses when the route is completed.
+.. _inventory/routes/warehouse-routes:
+
+Warehouse routes
+----------------
+
+The following tables list automatically generated warehouse routes in Odoo, depending on the user's
+warehouse reception and delivery configurations.
+
+Multi-step reception
+~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :width: 100 %
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Route
+     - Rules
+   * - Receive in 1 step (stock)
+     - `Pull From` |VEND| to |ST|: Handled by the *Buy* route.
+   * - Receive in 2 steps (input + stock)
+     - `Push To` |IN| to |ST|: At warehouse input, receive products and move to stock.
+   * - Receive in 3 steps (input + quality + stock)
+     - #. `Push To` |IN| to |QC|: At warehouse input, receive products and move to quality control
+          area.
+       #. `Push To` |QC| to |ST|: At quality control, check products and move to stock.
+
+Multi-step delivery
+~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :width: 100 %
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Route
+     - Rules
+   * - Deliver in 1 step (ship)
+     - `Pull From` |ST| to |CUST|: Create delivery order from stock to the customer.
+   * - Deliver in 2 steps (pick + ship)
+     - #. `Pull From` |ST| to |CUST|: Pick from stock according to customer demand.
+       #. `Push To` |OUT| to |CUST|: At warehouse output, deliver products to the customer.
+   * - Deliver in 3 steps (pick + pack + ship)
+     - #. `Pull From` |ST| to |CUST|: Pick from stock according to customer demand.
+       #. `Push To` |PACK| to |OUT|: At packing zone, pack products and move to warehouse output.
+       #. `Push To` |OUT| to |CUST|: At warehouse output, deliver products to the customer.
+
+Other routes
+~~~~~~~~~~~~
+
+.. list-table::
+   :width: 100 %
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Route
+     - Rules
+   * - Cross-Dock
+     - `Push To` |IN| to |OUT|: At warehouse input, move products to warehouse output.
+   * - Resupply Subcontractor
+     - `Pull From` |ST| to |SUBC|: Upon confirming demand, resupply the subcontractor with
+       components from stock.
+
+.. seealso::
+   - :ref:`Applicable on packagings <inventory/product_management/packaging-route>`
+   - :doc:`../../../manufacturing/subcontracting/subcontracting_resupply`
+   - :doc:`../../../manufacturing/subcontracting/subcontracting_dropship`
