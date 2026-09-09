@@ -22,7 +22,7 @@ Product catalog mapping
 =======================
 
 It is recommended to create products, also referred to as *Offerings*, in Odoo externally (for
-example, by importing the catalog, or using any other preferred method), and to make sure that
+example, by importing the catalog or using any other preferred method), and to make sure that
 categories and sales taxes are properly configured for accurate results. Refer to the following
 instructions for adding products to the **Sales** app.
 
@@ -38,7 +38,7 @@ When an order sync or a *Fetch Products* action is done, Odoo goes through the f
 match Shopify and Odoo products:
 
 - When an offer is pulled with the same SKU as the internal reference, it is automatically mapped.
-- If an SKU exists in Shopify but not in Odoo, it is linked to the default product Ecommerce-Sale
+- If an SKU exists in Shopify but not in Odoo, it is linked to the default E-commerce Sale product
   (archived). The product's category and taxes must be configured manually afterward.
 - Shopify product variants are **not** created using Odoo attribute lines; they are created as
   independent products.
@@ -50,15 +50,15 @@ match Shopify and Odoo products:
 New Odoo users with no existing products
 ----------------------------------------
 
-To import a Shopify product catalog into an empty Odoo database, sign into the Shopify store admin
+To import a Shopify product catalog into an empty Odoo database, sign in to the Shopify store admin
 account. Go to the :menuselection:`Products` page and click :guilabel:`Export`. The *Export
 products* pop-up window displays.
 
 Refer to Shopify's `exporting products instructions <shopify-export-products_>`_ to complete the
 export action and then edit the export document to comply with Odoo's recommended :ref:`import data
 guidelines <essentials/export_import_data/import-data>`. Ensure that all product variants have their
-own SKU. Refer to the :ref:`product matching logic <shopify/manage/product-matching>` the Shopify
-connector uses for more guidance.
+own SKU. For more guidance, refer to the :ref:`product matching logic
+<shopify/manage/product-matching>` used by the Shopify connector.
 
 .. _shopify/manage/existing-odoo-users:
 
@@ -104,36 +104,35 @@ are fetched.
    after closing the pop-up and clicking :icon:`fa-refresh` :guilabel:`Fetch Products`.
 
 .. example::
-   There are 100 products in the **Sales** app, and 20 of them were created or updated after January
-   1st. There are five sales orders created in the month of January, containing eight products in
-   their sales order lines.
+   There are 100 products in the **Sales** app, and 20 of them were created or updated after
+   January 1. Five sales orders were created in January, containing eight products in their sales
+   order lines.
 
    To update all products, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts`
-   and select the desired Shopify account form. In the *Operations* tab, click next to
-   :guilabel:`Created/Updated between` field (also referred to as the *Last Products Sync*) and in
+   and select the desired Shopify account form. In the *Operations* tab, click next to the
+   :guilabel:`Created/Updated after` field (also referred to as the *Last Products Sync*), and in
    the calendar pop-up, select `January 1` and click :guilabel:`Apply`. Click :icon:`fa-refresh`
-   :guilabel:`Fetch Products` and all 20 products created or updated after January 1st are pulled in
-   to Odoo.
+   :guilabel:`Fetch Products`, and all 20 products created or updated after January 1 are pulled
+   into Odoo.
 
    .. image:: manage/example-fetch-products.png
-      :alt: Example the Last Products Sync field configured for January 1st got Fetch Products.
+      :alt: Example of the Last Products Sync field configured to January 1 for Fetch Products.
 
    To update products via sales orders, go to :menuselection:`Sales app --> Configuration -->
-   Shopify: Accounts` and select the desired Shopify account form. On the *Opertaions* tab, next to
-   :guilabel:`Created/Updated between` field (also referred to as the *Last Products Sync*), click
-   and set the date range to `January 1` - `January 31` in the calendar pop-up, then click
-   :guilabel:`Apply`.
+   Shopify: Accounts` and select the desired Shopify account form. On the *Operations* tab, click
+   next to the :guilabel:`Created/Updated between` (Order sync) field and set the date range to
+   `January 1` - `January 31` in the calendar pop-up, then click :guilabel:`Apply`.
 
    Click :icon:`fa-refresh` :guilabel:`Fetch Orders`. This pulls the five sales orders along with
    their sales order lines, and the eight products referenced by those lines, regardless of when
    those products were last synced.
 
    .. image:: manage/example-fetch-orders.png
-      :alt: Example of Fetch Orders configured for January 1 to 30 date range.
+      :alt: Example of Fetch Orders configured for the January 1 to January 31 date range.
 
    In both cases, the :guilabel:`Create Products` setting determines whether those fetched products
-   should be created along with the offers and automatically mapped, or only the offers should be
-   created and the default product used.
+   are created along with the offers and automatically mapped, or whether only the offers are
+   created and the default product is used.
 
 .. seealso::
    :ref:`shopify/manage/auto-create-taxes`
@@ -147,28 +146,31 @@ Syncing existing products in Shopify and the **Sales** app
    Refer to the :ref:`Shopify connector's product matching logic <shopify/manage/product-matching>`
    when matching existing **Sales** app products to Shopify products.
 
-To manually map existing **Sales** app products to Shopify products, use the :guilabel:`Fetch
-products` action. Go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select
-the desired Shopify account form.
+To manually map existing **Sales** app products to Shopify products, use the :icon:`fa-refresh`
+:guilabel:`Fetch Products` action.
 
-In the *Operations* tab, ensure the timestamp of the *Last Products Sync* is set to the end of the
-day or the next day. Only products created or updated after that timestamp are fetched. Click
-:icon:`fa-refresh` :guilabel:`Fetch Products` button to pull product data from Shopify to Odoo.
+Go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired
+Shopify account form. In the *Operations* tab, ensure the timestamp of the *Last Products Sync* is
+set to the end of the day or the next day. Only products created or updated after that timestamp
+are fetched. Click the :icon:`fa-refresh` :guilabel:`Fetch Products` button to pull product data
+from Shopify to Odoo.
 
 .. note::
    Products are also synced during the scheduled order sync, which occurs every 10 minutes.
 
-Then click the :guilabel:`Offers` smart button. The *Offers* page, displays the following product
+Then, click the :guilabel:`Offers` smart button. The *Offers* page displays the following product
 matching information:
 
 - :guilabel:`Title`: Shopify product
-- :guilabel:`SKU`: Shopify internal refer number.
+- :guilabel:`SKU`: Shopify internal reference number.
 - :guilabel:`Matched Product`: Odoo product
 - :guilabel:`E-commerce Account`: The Shopify store the product was pulled from.
-- :guilabel:`Stock Synchronization`: When enabled it syncs exactly which inventory is synced back to
-  Shopify or pulled from Shopify.
+- :guilabel:`Stock Synchronization`: When enabled, it controls exactly which inventory is synced
+  back to Shopify or pulled from Shopify.
+- :icon:`fa-external-link` :guilabel:`View on E-commerce`: Clicking this button redirects to the
+  associated product's page on Shopify.
 
-To edit a product mapping, click a :guilabel:`Matched product` entry and select a Odoo product from
+To edit a product mapping, click a :guilabel:`Matched Product` entry and select an Odoo product from
 the drop-down menu.
 
 .. image:: manage/shopify-offer-mapping.png
@@ -193,7 +195,7 @@ data into the **Sales** app:
 - :ref:`Inventory <shopify/manage/inventory-sync>`
 
 Only orders that have been confirmed in Shopify are imported into the **Sales** app. If an order is
-canceled in Shopify, it's also canceled in the **Sales** app when the order sync occurs.
+canceled in Shopify, it is also canceled in the **Sales** app when the order sync occurs.
 
 .. note::
    If cancellation occurs after the delivery has been created, a log note is added for manual
@@ -209,8 +211,8 @@ Manual synchronization
 
 To manually pull orders into the **Sales** app, go to :menuselection:`Sales app --> Configuration
 --> Shopify: Accounts` and select the desired Shopify account form. In the *Operations* tab, click
-:icon:`fa-refresh` :guilabel:`Fetch Orders` button in the *Actions* section. Users can customize the
-date range by selecting dates in the :guilabel:`Created/Updated between` fields.
+the :icon:`fa-refresh` :guilabel:`Fetch Orders` button in the *Actions* section. Users can
+customize the date range by selecting dates in the :guilabel:`Created/Updated between` fields.
 
 .. image:: manage/fetch-orders-action.png
    :alt: The Fetch Orders action with a date range in the Operations tab of a Shopify account.
@@ -221,9 +223,9 @@ specific order using its Shopify order reference.
 
 .. example::
 
-   Michelle Admin noticed the latest order from her Shopify store failed to import in to the
+   Michelle Admin noticed the latest order from her Shopify store failed to import into the
    **Sales** app. In Odoo, she goes to :menuselection:`Sales app --> Configuration -->
-   Shopify:Accounts` and selects the desired Shopify account form. She clicks the :icon:`fa-cog`
+   Shopify: Accounts` and selects the desired Shopify account form. She clicks the :icon:`fa-cog`
    :guilabel:`Actions` icon and selects :guilabel:`Recover Order`.
 
    .. image:: manage/shopify-recover-order.png
@@ -233,13 +235,18 @@ specific order using its Shopify order reference.
    field. To find the *Ecommerce Order Reference* number, in a different browser tab she logs in to
    the admin Shopify account, goes to :guilabel:`Orders`, and selects the desired sales order.
 
-   She copies the series of numbers after the `orders/` of the sales order URL. In Odoo, she pastes
+   She copies the series of numbers after `orders/` in the sales order URL. In Odoo, she pastes
    it in the :guilabel:`Ecommerce Order Reference` field and clicks :guilabel:`Recover`.
 
    **Shopify sales order URL**: `admin.shopify.com/store/shopify-store-name/orders/123456789`
 
    .. image:: manage/recover-order-window.png
       :alt: Example of the Ecommerce Order Reference number in the Recover Order window.
+
+.. tip::
+   After fetching orders, each order imported into Odoo has a :icon:`fa-external-link`
+   :guilabel:`Visit` button next to the *E-commerce Order ID* field on the order form. Clicking
+   this button redirects to the associated order's page in Shopify.
 
 .. _shopify/manage/customer-matching:
 
@@ -258,7 +265,7 @@ is created. The billing and shipping addresses are created as child contacts.
 Price and tax mapping
 ---------------------
 
-The **Sales** app automatically detects a currency type from the Shopify order. :doc:`Fiscal
+The **Sales** app automatically detects the currency from the Shopify order. :doc:`Fiscal
 positions <../../../finance/accounting/taxes/fiscal_positions>` handle tax mapping from products in
 Odoo.
 
@@ -284,18 +291,17 @@ description only when they differ from the final imported price (or when a disco
 Enable auto-create taxes
 ------------------------
 
-The :guilabel:`Create Taxes` feature allows Odoo to create taxes when importing orders from Shopify
-automatically. When enabled (default behavior), Odoo tries to find a matching tax and creates one if
+The :guilabel:`Create Taxes` feature allows Odoo to automatically create taxes when importing orders
+from Shopify. When enabled (default behavior), Odoo tries to find a matching tax and creates one if
 no match exists. When disabled, taxes are determined using the order's fiscal position and the
 product's configured taxes in Odoo.
 
 To enable the :guilabel:`Create Taxes` feature, go to :menuselection:`Sales app --> Configuration
---> Shopify: Accounts` to select the desired Shopify account form. Click :guilabel:`Disconnect` and
-on the *Configuration* tab, enable the :guilabel:`Create Taxes` checkbox.
+--> Shopify: Accounts` to select the desired Shopify account form. On the *Configuration* tab,
+enable the :guilabel:`Create Taxes` checkbox.
 
-Then :ref:`reconnect the Shopify account form <shopify/setup/connect-shopify-to-odoo>` and either
-wait for the scheduled order sync (occurs every 10 minutes) or manually sync products by clicking
-:icon:`fa-refresh` :guilabel:`Fetch products` button on the *Operations* tab.
+Then either wait for the scheduled order sync (occurs every 10 minutes) or manually sync orders by
+clicking the :icon:`fa-refresh` :guilabel:`Fetch Orders` button on the *Operations* tab.
 
 .. _shopify/manage/inventory-sync:
 
@@ -356,24 +362,23 @@ Odoo pulls inventory data from Shopify using the following logic:
 Configure multi-location support
 --------------------------------
 
-The Shopify connector supports multi-location support from Odoo to Shopify. To do this, Shopify
-locations must be mapped to Odoo stock locations. Odoo pushes the quantity available from the mapped
-location to the corresponding Shopify location.
+The Shopify connector supports multi-location inventory management from Odoo to Shopify. To use it,
+Shopify locations must be mapped to Odoo stock locations. Odoo pushes the quantity available from
+the mapped location to the corresponding Shopify location.
 
-To configure Odoo locations to Shopify to keep track of stock, navigate to :menuselection:`Sales app
---> Configurations --> Shopify: Account`. Select the desired Shopify account. If the account is
-connected, click :guilabel:`Disconnect` and click the :guilabel:`Configuration` tab. In the *Stock*
-section, select an existing location or click :guilabel:`Search more` and click :guilabel:`New` to
-create a :ref:`new location <inventory/use_locations/create-new-locations>`.
+To map Odoo locations to Shopify locations and keep track of stock, navigate to
+:menuselection:`Sales app --> Configuration --> Shopify: Accounts`. Select the desired Shopify
+account. Click the :guilabel:`Configuration` tab. In the *Stock* section, select an existing
+location or click :guilabel:`Search more` and click :guilabel:`New` to create a
+:ref:`new location <inventory/use_locations/create-new-locations>`.
 
 .. image:: manage/stock-location-drop-down-menu.png
    :alt: Example of the Stock Location field in the Configuration tab of the Shopify account form.
 
-:ref:`Reconnect to Shopify <shopify/setup/connect-shopify-to-odoo>`, and after the next scheduled
-*Fetch Orders* action, a :guilabel:`Locations` smart button displays. To change the *Stock
-Location*, click the :guilabel:`Locations` smart button and the *Locations* page displays all the
-Shopify locations in the :guilabel:`Name` column and the **Inventory** app locations in the
-:guilabel:`Stock Location` column.
+After the next scheduled *Fetch Orders* action, a :guilabel:`Locations` smart button displays. To
+change the *Stock Location*, click the :guilabel:`Locations` smart button. The *Locations* page
+displays all the Shopify locations in the :guilabel:`Name` column and the **Inventory** app
+locations in the :guilabel:`Stock Location` column.
 
 To sync the two locations together, enable the :guilabel:`Stock Synchronization` checkbox. This
 controls exactly which inventory is synced back to Shopify or pulled from Shopify. The
@@ -450,7 +455,6 @@ The *Creation Details* section lists the :guilabel:`Created On`, :guilabel:`Crea
 :guilabel:`Database Name`. The *Logging Details* section lists the :guilabel:`Type`,
 :guilabel:`Name`, :guilabel:`Level`, :guilabel:`Path`, :guilabel:`Line`, :guilabel:`Function`, and
 :guilabel:`Message`. The :guilabel:`Message` is a detailed description of the error.
-
 
 Email notifications
 -------------------
