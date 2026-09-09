@@ -89,4 +89,4 @@ be added to trigger the action.
    correctly connected to the measurement tool.
 
 .. seealso::
-   :ref:`workcenter_iot`
+   :ref:`manufacturing/using_work_centers/workcenter-iot`
