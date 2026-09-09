@@ -112,6 +112,8 @@ To plan a work order directly from a work order form, navigate to :menuselection
 In the work order form, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select
 :guilabel:`Plan`.
 
+.. _manufacturing/work_order_dependencies/planning-views:
+
 Planning views
 --------------
 
