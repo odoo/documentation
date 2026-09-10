@@ -58,8 +58,8 @@ A product must be configured correctly to use reordering rules. Begin by navigat
 :menuselection:`Inventory app --> Products --> Products`, then select an existing product, or create
 a new one by clicking :guilabel:`New`.
 
-On the product form, under the :guilabel:`General Information` tab, set the :guilabel:`Product Type`
-to :guilabel:`Goods`, and make sure the :guilabel:`Track Inventory` checkbox is ticked. This is
+On the product form, under the *General Information* tab, set the :guilabel:`Product Type` to
+:guilabel:`Goods`, and make sure the :guilabel:`Track Inventory` checkbox is ticked. This is
 necessary for Odoo to track the product's stock levels and trigger reordering rules.
 
 .. image:: reordering_rules/product-type.png
@@ -73,9 +73,9 @@ Replenishment method
 Next, configure the replenishment method (e.g. buy or manufacture).
 
 If the product is purchased, :ref:`install <general/install>` the **Purchase** app, and confirm that
-the :guilabel:`Purchase` checkbox is enabled under the product name. In the :guilabel:`Purchase`
-tab, add at least one vendor to the :doc:`vendor pricelist <../../../purchase/products/pricelist>`.
-Odoo uses the vendor at the top of the list to generate |RFQs| when reordering rules are triggered.
+the :guilabel:`Purchase` checkbox is enabled under the product name. In the *Purchase* tab, add at
+least one vendor to the :doc:`vendor pricelist <../../../purchase/products/pricelist>`. Odoo uses
+the vendor at the top of the list to generate |RFQs| when reordering rules are triggered.
 
 .. seealso::
    :doc:`Vendor pricelist <../../../purchase/products/pricelist>`
@@ -104,9 +104,8 @@ rule line item:
 
 - :guilabel:`Product`: The product that is replenished by the rule.
 - :guilabel:`Location`: The location where the product is stored.
-- :guilabel:`Min`: The minimum quantity that can be forecasted without the rule being
-  triggered. When forecasted stock falls below this number, a replenishment order for the product is
-  created.
+- :guilabel:`Min`: The minimum quantity that can be forecasted without the rule being triggered.
+  When forecasted stock falls below this number, a replenishment order for the product is created.
 - :guilabel:`Max`: The maximum quantity at which the stock is replenished.
 
 .. figure:: reordering_rules/reordering-rule-form.png
@@ -130,7 +129,6 @@ For advanced usage, learn about the following reordering rule fields:
 - :ref:`Vendor <inventory/warehouses_storage/set-vendor>`
 - :ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`
 - :ref:`Multiple <inventory/warehouses_storage/multiple>`
-- :ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`
 
 .. note::
    The fields above are not available by default, and must be enabled by selecting the |adjust| in
@@ -165,7 +163,7 @@ To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app -->
 Products`, and select a product.
 
 At the top of the product's page, click the :icon:`fa-refresh` :guilabel:`Reordering Rules` smart
-button to open the :guilabel:`Reordering Rules` page for the product. On the resulting page, click
+button to open the *Reordering Rules* page for the product. On the resulting page, click
 :guilabel:`New` to begin configuring a new reordering rule.
 
 In the :guilabel:`Location` field of the new reordering rule, select the location in which
@@ -272,8 +270,8 @@ navigate to :menuselection:`Purchase app --> Orders --> Requests for Quotation`.
 If the :guilabel:`Manufacture` route is selected, then an |MO| is generated. To view and manage
 |MOs|, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`.
 
-When no route is selected, Odoo selects the :guilabel:`Route` specified in the :guilabel:`Inventory`
-tab of the product form.
+When no route is selected, Odoo selects the :guilabel:`Route` specified in the *Inventory* tab of
+the product form.
 
 .. tip::
    The scheduler is set to run once a day, by default.
@@ -319,10 +317,9 @@ generates the purchase or manufacturing order with the specified amounts :guilab
 Route
 =====
 
-Odoo allows for multiple routes to be selected as replenishment methods under the
-:guilabel:`Inventory` tab on each product form. For instance, it is possible to select both
-:guilabel:`Buy` and :guilabel:`Manufacture`, indicating to Odoo that the product can be bought or
-manufactured.
+Odoo allows for multiple routes to be selected as replenishment methods under the *Inventory* tab on
+each product form. For instance, it is possible to select both :guilabel:`Buy` and
+:guilabel:`Manufacture`, indicating to Odoo that the product can be bought or manufactured.
 
 .. seealso::
    :ref:`Set route on product form <inventory/warehouses_storage/set-method>`
@@ -365,57 +362,6 @@ advanced configurations of reordering rules. Consider the following:
 - :guilabel:`Bill of Materials`: When the :guilabel:`Route` is set to :guilabel:`Manufacture`, and
   there are multiple |BoMs| in use, specifying the desired |BoM| in the replenishment report, draft
   manufacturing orders are created with this |BoM| in use.
-
-.. _inventory/warehouses_storage/procurement-grp:
-
-- :guilabel:`Procurement Group`: This is a way to group related |POs| or |MOs| that are tied to
-  fulfilling a specific demand, like an |SO| or a project. It helps organize and track which orders
-  are linked to a particular demand.
-
-  .. note::
-     Procurement groups link replenishment methods to demand, making smart buttons to appear —
-     similar to how smart buttons appear when using the :doc:`MTO route <mto>`.
-
-     .. figure:: reordering_rules/po-smartbutton.png
-        :alt: Showing smart button to PO.
-
-        Sales order (demand) with a smart button linking to the related purchase order
-        (replenishment method).
-
-  In the context of reordering rules:
-
-  - Reordering rules do not automatically assign a procurement group, which is why there are no
-    smart buttons that link |SOs| to |POs|, unlike the :abbr:`MTO (Make to Order)` route.
-  - To enable smart buttons for products replenished by reordering rules (not :abbr:`MTO (Make to
-    Order)`), with specific quantities linked to specific demands (e.g. |SOs|), assign a procurement
-    group.
-  - Without a procurement group, demands for the same product can be combined into a single |RFQ|,
-    even if the reordering rule is executed multiple times for those demands. This allows for more
-    efficient procurement by consolidating demands into fewer orders.
-
-  Selecting a procurement group in the :guilabel:`Procurement Group` field on the replenishment
-  report ensures that all linked orders are grouped under the same demand, based on the defined
-  route.
-
-  .. exercise::
-     How can you set the *Procurement Group*, *Vendor*, and *Route* fields on the replenishment
-     report to generate a single |RFQ| for five different products in sales order SO35, given they
-     share the same vendor, Azure Interior, and ensure other demands for these products are handled
-     separately?
-
-     .. spoiler:: View the answer
-
-        #. Set the :guilabel:`Procurement Group` to `SO35`, in the reordering rule for all five
-           products. This groups the demands for `SO35` in the same |RFQ| or |MO|.
-        #. Set the :guilabel:`Vendor` to `Azure Interior` to ensure the |RFQ| is created for the
-           same supplier.
-        #. Set the :guilabel:`Route` to :guilabel:`Buy` to generate an |RFQ|.
-        #. Click the :guilabel:`Order` button to generate a single |RFQ| for the five products tied
-           to `SO35`.
-
-        | After placing the order, remove `SO35` from the :guilabel:`Procurement Group` field of the
-          five products' reordering rules. This ensures future demands for these products are
-          managed separately and assigned to different |RFQs| (the usual behavior).
 
 .. seealso::
    :doc:`Just-in-time logic <just_in_time>`
