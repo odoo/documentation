@@ -1,6 +1,5 @@
 :code-column:
 :custom-css: accounting.css
-:custom-js: accounts.js,chart-of-accounts.js,entries.js,misc.js,reconciliation.js
 
 ======================
 Accounting cheat sheet
@@ -69,7 +68,7 @@ A difference is made between **assets** and **expenses**:
 
 .. h:div:: doc-aside accounts-table
 
-   .. placeholder
+   .. odoo-dynamic-example:: accounting/accounts
 
 .. rst-class:: doc-aside
 
@@ -125,9 +124,7 @@ Example
 
    .. highlights:: Balance = Debit - Credit
 
-   .. h:div:: chart-of-accounts
-
-      .. placeholder
+   .. odoo-dynamic-example:: accounting/chart_of_accounts
 
 .. _cheat_sheet/journals:
 
@@ -142,7 +139,7 @@ credits.
 
 .. h:div:: doc-aside journal-entries
 
-   examples of accounting entries for various transactions. (see entries.js)
+   .. odoo-dynamic-example:: accounting/journal_entries
 
 .. _accounting/reconciliation:
 
@@ -186,6 +183,8 @@ Reconciliation is performed automatically by the system when:
    |Total to pay             |50                       |                       |
    +-------------------------+-------------------------+-----------------------+
 
+   .. odoo-dynamic-example:: accounting/reconciliation
+
 Bank Reconciliation
 ===================
 
@@ -212,6 +211,8 @@ There are two approaches to managing checks and internal wire transfers:
 
 - Two journal entries and a reconciliation
 - One journal entry and a bank reconciliation
+
+.. odoo-dynamic-example:: accounting/checks_handling
 
 .. h:div:: doc-aside
 
