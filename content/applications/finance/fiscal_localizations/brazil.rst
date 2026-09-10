@@ -11,10 +11,8 @@ Brazil
 
    - `Onboarding checklist for new users
      <https://docs.google.com/document/d/e/2PACX-1vSNYTYVnR_BzvQKL3kn5YdVzPjjHc-WHw_U3udk5tz_dJXo69woj9QrTMinH_siyOX2rLGjvspvc8AF/pub>`_.
-   - `YouTube playlist - Brazil (Localization)
-     <https://youtube.com/playlist?list=PL1-aSABtP6ADqexw4YNCbKPmpFggajxlX&si=RgmZR3Jco3223Np4>`_.
-   - `YouTube playlist - Tutoriais Odoo em Português
-     <https://youtube.com/playlist?list=PL1-aSABtP6ACGOW2UREePGjHQ2Bgdy-UZ&si=j6tiI36eB7BoKVQB>`_.
+   - `YouTube playlist - Localização Brasil - Tutoriais Odoo em Português
+     <https://www.youtube.com/playlist?list=PLhTWY8W20NercYNrae-L2MacH0dMpQLTi>`_.
    - :doc:`Documentation on e-invoicing's legality and compliance in Brazil
      <../accounting/customer_invoices/electronic_invoicing/brazil>`
 
@@ -23,11 +21,11 @@ Brazil
 Modules
 =======
 
-The following modules related to the Brazilian localization are available:
+The following modules are installed automatically with the Brazilian localization:
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 50
+   :widths: 25 30 50
 
    * - Name
      - Technical name
@@ -40,38 +38,58 @@ The following modules related to the Brazilian localization are available:
    * - :guilabel:`Brazil - Accounting Reports`
      - `l10n_br_reports`
      - Accounting reports for Brazil.
-   * - :guilabel:`AvaTax Brazil`, :guilabel:`Avatax Brazil Sale` & :guilabel:`Test SOs for the
-       Brazilian Avatax`
-     - `l10n_br_avatax`, `l10n_br_avatax_sale` & `l10n_br_test_avatax_sale`
-     - Goods and Services tax computation through Avalara.
-   * - :guilabel:`Brazilian Accounting EDI`
-     - `l10n_br_edi`
-     - Provides electronic invoicing through Avatax.
-   * - :guilabel:`Brazilian Accounting EDI For Sale`
-     - `l10n_br_edi_sale`
-     - Adds some fields to sale orders that are carried over the invoice.
-   * - :guilabel:`Brazilian Accounting EDI for POS`
-     - `l10n_br_edi_pos`
-     - Provides electronic invoicing through Avatax in the POS.
-   * - :guilabel:`Brazilian Accounting EDI for eCommerce`
-     - `l10n_br_edi_website_sale`
-     - Allows tax calculation and EDI for eCommerce users.
-   * - :guilabel:`Brazilian Accounting EDI for stock`
-     - `l10n_br_edi_stock`
-     - Adds delivery-related information to the NF-e.
-   * - :guilabel:`Brazil - Website Sale`
-     - `l10n_br_website_sale`
-     - Allows tax calculation and EDI for eCommerce users.
    * - :guilabel:`Brazil - Sale`
      - `l10n_br_sales`
      - Sale modifications for Brazil
    * - :guilabel:`Brazil - Sale Subscription`
      - `l10n_br_sale_subscription`
-     - Sale subscription modifications for Brazil
+     - Subscriptions modifications for Brazil
+   * - :guilabel:`Brazil - Website Sale`
+     - `l10n_br_website_sale`
+     - Allows tax calculation and EDI for eCommerce users.
+
+Additionally, the following modules must be manually :ref:`installed <general/install>`:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 30 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Avatax Brazil`, :guilabel:`Avatax Brazil Sale` & :guilabel:`Test SOs for the
+       Brazilian Avatax`
+     - `l10n_br_avatax`, `l10n_br_avatax_sale` & `l10n_br_test_avatax_sale`
+     - Goods and Services tax computation through Avalara.
+   * - :guilabel:`Avatax Brazil Fiscal Reform`
+     - `l10n_br_edi_fiscal_reform`
+     - Avatax modifications for fiscal reform.
+   * - :guilabel:`Avatax Brazil eCommerce Fiscal Reform`
+     - `l10n_br_website_sale_fiscal_reform`
+     - eCommerce Avatax modifications for fiscal reform.
+   * - :guilabel:`Avatax Brazil Sale Fiscal Reform`
+     - `l10n_br_edi_sale_fiscal_reform`
+     - Sales Avatax modifications for fiscal reform
+   * - :guilabel:`Brazilian Accounting EDI`
+     - `l10n_br_edi`
+     - Provides electronic invoicing through Avatax.
+   * - :guilabel:`Brazilian Accounting EDI for eCommerce`
+     - `l10n_br_edi_website_sale`
+     - Allows tax calculation and EDI for eCommerce users.
+   * - :guilabel:`Brazilian Accounting EDI for POS`
+     - `l10n_br_edi_pos`
+     - Provides electronic invoicing through Avatax in the POS.
+   * - :guilabel:`Brazilian Accounting EDI For Sale`
+     - `l10n_br_edi_sale`
+     - Adds fields to sales orders that are carried over to the invoice.
+   * - :guilabel:`Brazilian Accounting EDI for stock`
+     - `l10n_br_edi_stock`
+     - Adds delivery-related information to the NF-e.
 
 .. note::
-   The localization's core modules are installed automatically with the localization. The rest can
-   be manually :doc:`installed </applications/general/apps_modules>`.
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually :doc:`installed
+   <../../general/apps_modules>`.
 
 .. _localizations/brazil/loc-review:
 
@@ -91,6 +109,11 @@ local fiscal and accounting regulations:
   zero-rated, and exempt options.
 - :doc:`Payroll </applications/hr/payroll>`
 - :doc:`Reporting <../accounting/reporting>`
+
+.. note::
+   To comply with the 2026 Tax Reform regulations, structural adjustments were made to support
+   the new dual VAT system, which includes IBS (Imposto sobre Bens e Serviços) and CBS (Contribuição
+   sobre Bens e Serviços), as well as IS (Imposto Seletivo) and the corresponding transition rules.
 
 .. _localizations/brazil/chart-of-accounts:
 
@@ -126,6 +149,35 @@ the city where the service is offered.
    used to register the tax must be reconfigured in the tax's :guilabel:`Definition` tab, under
    the :guilabel:`Distribution for invoices` and :guilabel:`Distribution for refunds` sections.
 
+.. _localizations/brazil/products:
+
+Products
+--------
+
+Accurate fiscal classification of goods and services is essential for tax calculation and electronic
+invoice issuance in compliance with Brazilian regulations and the 2026 Tax Reform.
+
+.. note::
+   `Brazil` must be specified in the :guilabel:`Country` field of the :ref:`company form
+   <localizations/brazil/company-and-contacts>` to display the required fields for the fiscal
+   reform.
+
+The following information, specific to the fiscal reform, is required on the :guilabel:`Sales` tab
+of the products form:
+
+- :guilabel:`Legal Unit of Measure`: Select the conversion factor between the commercial unit and
+  the taxable unit for taxes applied by quantity (ad rem).
+- :guilabel:`IS taxable`: Enable this option if the product is subject to Selective Tax (Imposto
+  Seletivo or IS).
+- :guilabel:`Special Customs Regime` (optional): Select the applicable special customs regime if the
+  transaction involving capital goods falls under such a regime.
+- :guilabel:`L10N Br Transaction Usage` (optional): Define the tax classification indicating how the
+  good or service is used in the transaction, as this can affect tax calculation and invoice
+  issuance.
+
+If the selected :guilabel:`Product Type` is :guilabel:`Service`, select the :guilabel:`NBS Code`
+(Nomenclatura Brasileira de Serviços) necessary for tax classification.
+
 .. _localizations/brazil/company-and-contacts:
 
 Company and contacts
@@ -150,22 +202,51 @@ To use all the features of this fiscal localization, the following fields are re
 - :guilabel:`Phone`
 - :guilabel:`Email`
 
-Configure the :guilabel:`Fiscal Information` within the :guilabel:`Sales and Purchase` tab:
+.. tip::
+   To update your company's complete record, open the Contacts app and access the relevant record.
+
+Configure the :guilabel:`Fiscal Information` within the :guilabel:`Sales & Purchase` tab:
 
    - Add the :ref:`Fiscal Position <localizations/brazil/fiscal-positions>` for AvaTax Brazil.
-   - :guilabel:`Tax Regime`: Federal Tax Regime
+   - :guilabel:`Tax Regime`: Federal tax regime
    - :guilabel:`ICMS Taxpayer Type`: indicates :guilabel:`ICMS regime`, :guilabel:`Exempt status`,
      or :guilabel:`Non-Taxpayer`
    - :guilabel:`Main Activity Sector`
 
+2026 tax reform fields:
+
+- :guilabel:`Tax Regime`: For the :guilabel:`simplified` tax regime (:guilabel:`Simples Nacional`),
+  set up the additional fields specific to the fiscal reform:
+
+  - :guilabel:`CBS/IBS Normal`: Enable the option for :guilabel:`Regime Normal` (:guilabel:`Regime
+    Regular`) regime or disable for :guilabel:`Hybrid Simples Nacional` (:guilabel:`Regime Hibrido`)
+    regime. For :guilabel:`Hybrid Simples Nacional` (:guilabel:`Regime Hibrido`) tax regime,
+    configure the following additional fields:
+
+    - :guilabel:`CBS Presumed Credit (%)`: Specify the percentage of presumed CBS credit available
+      for entities under the :guilabel:`Hybrid Simples Nacional` tax model.
+    - :guilabel:`IBS Presumed Credit (%)`: Specify the percentage of presumed IBS credit available
+      for entities under the :guilabel:`Hybrid Simples Nacional` tax model.
+
+  - :guilabel:`ISS Simplified Rate`: Indicate the specific municipal service tax rate applicable to
+    the simplified tax regime.
+
+- :guilabel:`Entity Type`: Select the legal classification.
+- :guilabel:`CBS/IBS Taxpayer`: Enable the option if the entity is subject to :abbr:`CBS
+  (Contribuição sobre Bens e Serviços)` or :abbr:`IBS (Imposto sobre Bens e Serviços)`. Disable it
+  for exempt entities or those operating under special non-taxable regimes.
+
 Configure the following extra :guilabel:`Fiscal Information` to issue NFS-e:
 
    - Add the :ref:`Fiscal Position <localizations/brazil/fiscal-positions>` for AvaTax Brazil.
-   - :guilabel:`COFINS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
-     Suspended`
-   - :guilabel:`PIS Details` :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
-     Suspended`
-   - :guilabel:`CSLL Taxable` if the company is subject to CSLL or not
+   - :guilabel:`COFINS Details`: When a transaction is exempt from COFINS even though all parties
+     and items are taxable, this attribute identifies the exemption scenario and applies the
+     override accordingly. Select the appropriate option.
+   - :guilabel:`PIS Details`: When a transaction is exempt from PIS even though all parties
+     and items are taxable, this attribute identifies the exemption scenario and applies the
+     override accordingly. Select the appropriate option.
+   - :guilabel:`CSLL Taxable`: Enable the option if the company is subject to :abbr:`CSLL
+     (Contribuição Social sobre o Lucro Líquido)`.
 
 .. tip::
    If it is a simplified regime, the ICMS rate must be configured. To do so, go to
@@ -216,9 +297,9 @@ Configuration
 Credentials
 ~~~~~~~~~~~
 
-:ref:`Activate AvaTax in Odoo <accounting/avatax/credentials>` and, in the :guilabel:`AvaTax Brazil`
-section, add the administrator's email address for the AvaTax portal in the :guilabel:`AvaTax Portal
-Email` field, then click :icon:`fa-plug` :guilabel:`Create account`.
+:ref:`Connect AvaTax <accounting/avatax/credentials>` in the :guilabel:`AvaTax Brazil` section, add
+the administrator's email address for the AvaTax portal in the :guilabel:`AvaTax Portal Email`
+field, then click :icon:`fa-plug` :guilabel:`Create account`.
 
 .. warning::
    When **testing** or **creating a production** :guilabel:`AvaTax Portal Email` integration in a
@@ -245,7 +326,7 @@ After the account is created from Odoo, go to the Avalara Portal to set up the p
 #. Add the email address used in Odoo to create the Avalara/AvaTax account, and click
    :guilabel:`Solicitar Senha`.
 #. An email will then be received with a token and a link to create a password. Click this link
-   and copy-paste the token to allocate the desired password.
+   and copy-paste the token to set the desired password.
 
 .. tip::
    If you use AvaTax in Odoo for tax computation **only**, setting a password or accessing the
@@ -256,6 +337,21 @@ After the account is created from Odoo, go to the Avalara Portal to set up the p
 .. note::
    |API| credentials can be transferred. This option should be used only when an account has already
    been created in another Odoo instance and must be reused.
+
+.. _localizations/brazil/avatax-tax-reform:
+
+Fiscal reform
+~~~~~~~~~~~~~
+
+To enable the sending of the new attributes of the 2026 tax reform, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the
+   :guilabel:`Taxes` section.
+#. Under :guilabel:`AvaTax Brazil`, enable the :guilabel:`Enable Brazilian fiscal reform` option.
+
+.. tip::
+   If inconsistencies occur when submitting fiscal reform information, disable the :guilabel:`Enable
+   Brazilian fiscal reform` option to revert to the previous communication model.
 
 .. _localizations/brazil/certificate-upload:
 
@@ -288,7 +384,7 @@ To set up the :guilabel:`Automatic Tax Mapping (Avalara Brazil)` :ref:`fiscal po
 .. seealso::
    :doc:`Fiscal positions <../accounting/taxes/fiscal_positions>`
 
-.. _localizations/brazil/products:
+.. _localizations/brazil/avatax-products:
 
 Products
 ~~~~~~~~
@@ -340,8 +436,8 @@ E-invoices for goods (NF-e)
 
 - :guilabel:`CEST Code`: tax classification code identifying goods and products subject to tax
   substitution under ICMS regulations, and helps determine the applicable tax treatment and
-  procedures for specific items. The product's applicability to this requirement can be verified at
-  https://www.codigocest.com.br/.
+  procedures for specific items. The product's applicability to this requirement can be verified on
+  the `Código CEST website <https://www.codigocest.com.br>`_.
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
 - :guilabel:`Source of Origin`: origin of the product, which can be foreign or domestic, among other
   possible options, depending on the specific use case
@@ -353,7 +449,7 @@ E-invoices for goods (NF-e)
    sales. These are named :guilabel:`Freight`, :guilabel:`Insurance`, and :guilabel:`Other Costs`
    and are already configured. If more need to be created, duplicate and use the same configuration:
 
-   - :guilabel:`Product Type` :guilabel:`Service`
+   - :guilabel:`Product Type`: :guilabel:`Service`
    - :guilabel:`Transportation Cost Type`: :guilabel:`Insurance`, :guilabel:`Freight`, or
      :guilabel:`Other Costs`
 
@@ -473,37 +569,55 @@ Configuration
 ~~~~~~~~~~~~~
 
 A *series* number is linked to a sequence number range for electronic invoices. To configure the
-series number on a sales journal, go to :menuselection:`Accounting --> Configuration --> Journals`
-and set it in the :guilabel:`Series` field. If more than one series is needed, a new sales journal
-must be created, and a new series number must be assigned for each series.
+series number on a sales journal, follow these steps:
 
-Enable the :guilabel:`Use Documents?` option as the :guilabel:`Series` field will only be displayed
-if the :guilabel:`Use Documents?` option is selected on the journal.
+#. Go to :menuselection:`Accounting --> Configuration --> Journals` and open the sales journal.
+#. Enable the :guilabel:`Use Documents?` option to display the :guilabel:`Series` field.
+#. Set the series number in the :guilabel:`Series` field.
+
+.. tip::
+   - If more than one series is needed, a new sales journal must be created, and a new series number
+     must be assigned for each series.
+   - When creating the new sales journal, ensure the :guilabel:`Dedicated Credit Note Sequence`
+     field in the :guilabel:`Accounting Information` section is unchecked, as in Brazil, sequences
+     between invoices, credit notes, and debit notes are shared per series number, which means per
+     journal.
 
 When issuing electronic and non-electronic invoices, the :guilabel:`Type` field selects the document
 type used when creating the invoice.
-
-.. note::
-   When creating the journal, ensure the :guilabel:`Dedicated Credit Note Sequence` field in the
-   :guilabel:`Accounting Information` section is unchecked, as in Brazil, sequences between
-   invoices, credit notes, and debit notes are shared per series number, which means per journal.
 
 .. _localizations/brazil/customer-invoices:
 
 Customer invoices
 ~~~~~~~~~~~~~~~~~
 
-To process an electronic invoice for goods (NF-e) or services (NFS-e), the invoice must be confirmed
-and taxes must be computed by Avalara. The following fields must be filled out:
+To process an electronic invoice for goods (NF-e) or services (NFS-e), the invoice must be
+confirmed, and taxes must be computed by Avalara. The following fields must be filled out:
 
 - :guilabel:`Customer`, with all customer information
-- :guilabel:`Payment Method: Brazil`: Specify the expected payment method.
+- :guilabel:`Operation type`: Select the operation type related to the transaction to identify how
+  taxes are computed
 - :guilabel:`Document Type`: Select :guilabel:`(55) Electronic Invoice (NF-e)` or :guilabel:`(SE)
   Electronic Service Invoice (NFS-e)`.
+- :guilabel:`Payment Method: Brazil`: Specify the expected payment method.
+- :guilabel:`Presence`: Indicate whether the buyer was physically present during the transaction,
+  which affects tax calculation and location.
+- :guilabel:`Service Operation Indicator`: Select the specific operation indicator code for the
+  service (e.g., 050101). This code is sent to Avalara for tax calculation and invoice generation.
+  If the field is left empty, Avalara's automatic calculation may be used, but specific municipal
+  validation may require a manual definition.
 
 :guilabel:`Other Info` tab:
 
-- :guilabel:`Fiscal Position` set as :guilabel:`Automatic Tax Mapping (Avalara Brazil)`.
+- In the :guilabel:`Invoice` section:
+
+  - :guilabel:`CNAE Code`: Select the company's :abbr:`CNAE (Classificação Nacional de Atividades
+    Econômicas)` code for tax calculation and EDI.
+  - :guilabel:`Purpose of Use` (optional): Select it to override the purpose of use for all products
+    sold in this invoice.
+
+- In the :guilabel:`Accounting` section: Set the :guilabel:`Fiscal Position` as :guilabel:`Automatic
+  Tax Mapping (Avalara Brazil)`.
 
 Some optional fields depend on the nature of the transaction. These fields in the :guilabel:`Other
 Info` tab are not required, so in most cases, leaving them blank will not result in errors from the
@@ -512,14 +626,18 @@ government when the invoice is submitted:
 - :guilabel:`Freight Model` determines how the goods are planned to be transported - domestic.
 - :guilabel:`Transporter Brazil` determines who is doing the transportation.
 
-Then, click :guilabel:`Send`. In the pop-up window, click :guilabel:`Process
-e-invoice` and any other options, such as :guilabel:`Download` or :guilabel:`Email`. Finally, click
-:guilabel:`Send` to process the invoice with the government.
+Then, click :guilabel:`Send`. In the :guilabel:`Print & Send` window, enable :guilabel:`e-invoice
+(Brazil)` and any other options, if needed. Finally, click :guilabel:`Send` to process the invoice
+with the government.
 
 .. note::
    All fields available on the invoice used to issue an electronic invoice are also available on the
    sales order, if needed. When creating the first invoice, the :guilabel:`Document Number` field is
    displayed and allocated as the first number to be used sequentially for subsequent invoices.
+
+.. tip::
+   - The CBS/IBS tax rate can be found in the invoice XML file.
+   - Tax information related to the invoice is displayed in the chatter.
 
 .. _localizations/brazil/credit-notes:
 
@@ -628,8 +746,8 @@ These Brazilian-specific fields are:
 - :guilabel:`Payment Method: Brazil`: Specify the expected payment method.
 - :guilabel:`Document Type`: used by the vendor
 - :guilabel:`Document Number`: the invoice number from the supplier
-- :guilabel:`Freight Model`: **NF-e specific** how goods are planned to be transported - domestic
-- :guilabel:`Transporter Brazil`: **NF-e specific** who is doing the transportation.
+- :guilabel:`Freight Model` (NF-e specific): how goods are planned to be transported - domestic
+- :guilabel:`Transporter Brazil` (NF-e specific): who is doing the transportation.
 
 .. _localizations/brazil/pos:
 
