@@ -150,8 +150,7 @@ To update your Peppol contact details, go to :menuselection:`Accounting --> Conf
 Settings`. Select an :guilabel:`Incoming Invoices Journal` and :guilabel:`Primary contact Email` of
 your choice, and then click :guilabel:`Update`.
 
-To :ref:`deregister <accounting/e-invoicing/peppol-deregister>` from the Peppol system, click
-:guilabel:`Remove from Peppol`.
+To deregister from the Peppol system, click :guilabel:`Remove from Peppol`.
 
 .. tip::
    To disable the reception of documents through Peppol but maintain the ability to send customer
