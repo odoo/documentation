@@ -135,7 +135,7 @@ Online payment providers
      -
    * - :doc:`Mollie <payment_providers/mollie>`
      - The provider's website
-     -
+     - |V|
      -
      -
      -
@@ -171,7 +171,7 @@ Online payment providers
      -
    * - :doc:`Redsys <payment_providers/redsys>`
      - The provider's website
-     -
+     - |V|
      -
      -
      -
