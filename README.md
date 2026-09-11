@@ -63,5 +63,9 @@ repositories if their version matches the documentation's version.
 For contributions to the content of the documentation, see the
 [Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
 
+## Usage
+To run this project, follow the instructions provided in the documentation and ensure all dependencies are installed.
+
+
 To report a content issue, request new content, or ask a question, use the
 [issue tracker](https://github.com/odoo/documentation/issues).
