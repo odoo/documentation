@@ -104,6 +104,8 @@ Duration` field of the work order that precedes it.
    operation is scheduled to begin immediately. Since the Cut operation has an expected duration of
    60 minutes, the Assemble operation is scheduled to begin at 2:30 pm.
 
+.. _manufacturing/work_order_dependencies/planning-views:
+
 Planning views
 --------------
 
