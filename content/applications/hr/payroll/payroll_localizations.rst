@@ -125,6 +125,13 @@ Payroll localization modules are available for the countries listed below.
 
       Payroll localization
 
+   .. card:: Oman
+      :target: payroll_localizations/oman
+      :image: payroll_localizations/om.png
+      :alt: Oman
+
+      Payroll localization
+
    .. card:: Pakistan
       :target: payroll_localizations
       :image: payroll_localizations/pk.png
@@ -239,6 +246,7 @@ documentation, which covers how to set up companies.
    payroll_localizations/jordan
    payroll_localizations/kenya
    payroll_localizations/mexico
+   payroll_localizations/oman
    payroll_localizations/saudi_arabia
    payroll_localizations/turkey
    payroll_localizations/united_arab_emirates
