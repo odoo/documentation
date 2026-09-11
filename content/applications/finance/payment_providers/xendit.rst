@@ -37,13 +37,35 @@ Configuration on the Xendit Dashboard
    the webhook token.
 #. Under :guilabel:`Webhook verification token`, click :guilabel:`View Webhook Verification Token`,
    then confirm your password to display the token. Save it for later.
-#. In the :guilabel:`Webhook URL` section, enter your Odoo database's URL, followed by
-   `/payment/xendit/webhook` (e.g., `https://example.odoo.com/payment/xendit/webhook`) in the field
-   :guilabel:`Invoices paid` and click the :guilabel:`Test and save` button next to it.
+#. In that same section, configure the webhook fields as described in
+   :ref:`payment_providers/xendit/configure_webhooks` below.
 #. To allow recurring payments for credit cards, go to :menuselection:`Configuration: Payment
    Channels` in the left part of the application page. Then, hover your mouse over the
    :guilabel:`Visa, Mastercard, JCB, Amex` channel, click :guilabel:`View Details`, and enable
    :guilabel:`Recurring Payments` by toggling the related switch.
+
+.. _payment_providers/xendit/configure_webhooks:
+
+Configure webhooks
+==================
+
+.. important::
+   Xendit replaced its previous single, per-event webhook field with separate v3 event groups. If
+   your Xendit account was connected to Odoo before this change, **Odoo no longer receives payment
+   and card token status updates** until you add the new fields described below.
+
+Log in to the `Xendit Dashboard <https://dashboard.xendit.co>`_ and navigate to
+:menuselection:`Configuration: Settings`. In the :guilabel:`Developers` section, click
+`Webhooks <https://dashboard.xendit.co/settings/developers#webhooks>`_. Enter your Odoo database's
+URL, followed by `/payment/xendit/webhook` (e.g., `https://example.odoo.com/payment/xendit/webhook`)
+in **both** of the following fields, then click :guilabel:`Test and save` next to each one:
+
+- :guilabel:`Payment tokens v3` (`/v3/payment_tokens`): the :guilabel:`Payment Token Status` field
+- :guilabel:`Payment requests v3` (`/v3/payment_requests`): the :guilabel:`Payment Status` field
+
+.. note::
+   Both fields must point to the same webhook URL: Odoo uses a single endpoint to process
+   notifications for both token and payment status updates.
 
 Configuration on Odoo
 =====================
