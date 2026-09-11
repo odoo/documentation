@@ -4,7 +4,8 @@ Prices
 
 Odoo offers multiple options for configuring prices in e-commerce. For example, you can apply
 :ref:`prices per unit <ecommerce/prices/price-per-unit>`, offer :ref:`discounts
-<ecommerce/prices/discounts>`, and set up :ref:`pricelists <ecommerce/prices/pricelists>`.
+<ecommerce/prices/discounts>`, and set up :ref:`pricelists <ecommerce/prices/pricelists>`. You can
+also :ref:`prevent direct sales and hide prices <ecommerce/prices/hide-prices>`.
 
 .. _ecommerce/prices/taxes:
 
@@ -47,30 +48,39 @@ section, and under :guilabel:`Display Product Prices` select between:
 Price per unit
 ==============
 
-To display a :doc:`price per unit
+To display a :doc:`price per unit of measure
 </applications/inventory_and_mrp/inventory/product_management/configure/uom>` alongside the sales
 price on the product page, follow these steps:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
 #. Enable the :guilabel:`Product Reference Price` checkbox in the :guilabel:`eCommerce` section.
 #. :ref:`Navigate to the product form <ecommerce/products/product-creation>`.
-#. Set the product's :guilabel:`Sales Price` and select the unit (e.g., :guilabel:`Units`).
-#. In the :guilabel:`Base Unit Count` field, enter the number of units in the product.
-#. Select the relevant unit from the drop-down list.
+#. Set the product's :guilabel:`Sales Price` and select the unit of measure (e.g.,
+   :guilabel:`Units`).
+#. In the :guilabel:`Reference Unit` field, enter the number of units the product contains, and, if
+   needed, select a different unit of measure.
 
 .. example::
    Imagine you want to sell a 2-liter bucket of paint for $60, i.e., $30 per liter.
 
-   .. image:: prices/prices-per-unit.png
+   .. image:: prices/price-per-unit.png
       :alt: Cost per unit pricing on the product form.
 
-   The price per unit, in this case per liter, is shown next to the sales price on the product page.
+   The price per unit of measure, in this case per liter, is shown below the sales price on the
+   :doc:`shop <../ecommerce_design/catalog>` and :doc:`product <../ecommerce_design/product_page>`
+   pages and on :guilabel:`Catalog` :doc:`building blocks
+   <../../website/web_design/building_blocks>` featuring products.
 
    .. image:: prices/price-cost-per-unit-page.png
       :alt: Unit pricing on the product page.
 
 .. note::
-   The price per unit may be mandatory in some countries.
+   - This setting is website-specific and can therefore be configured independently for every
+     website in the database.
+   - The price per unit of measure may be mandatory in some countries.
+   - For products with :ref:`variants <ecommerce/categories_variants/product-variants>`, specify the
+     reference unit on each variant's form. If the feature is enabled before the variants are
+     created, all variants inherit the reference unit of the main product.
 
 .. seealso::
    :doc:`/applications/inventory_and_mrp/inventory/product_management/configure/uom`
@@ -159,7 +169,7 @@ the appropriate :guilabel:`Country Groups`. Create or edit as many pricelists fo
 as needed. For instance, select :guilabel:`European Union` to apply the pricelist to all EU member
 states.
 
-To create a new country group, click :guilabel:`Search more` in the drop-down list, then
+To create a new country group, click :guilabel:`Search more...` in the drop-down list, then
 :guilabel:`Create New`. Add a :guilabel:`Group Name` and select the relevant :guilabel:`Countries`.
 Use :ref:`Custom filters <search/custom-filters>` if needed.
 
