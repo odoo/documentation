@@ -135,6 +135,8 @@ orders and invoices can be automatically generated and synchronized.
    including :doc:`fiscal positions <../../finance/accounting/taxes/fiscal_positions>` and
    :doc:`localizations <../../finance/fiscal_localizations>`.
 
+.. _general/multi-company/interco-transactions-enable:
+
 To activate inter-company transactions, select the relevant company in the :ref:`company selector
 <general/multi-company/company-selector>`, open the **Settings** app, navigate to the
 :guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and click
@@ -174,6 +176,61 @@ Inter-company transaction settings can also be accessed and modified by going to
 .. seealso::
    - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
    - :doc:`../../finance/accounting/get_started/multi_currency`
+
+.. _general/multi-company/interco-clearing:
+
+Inter-company clearing
+----------------------
+
+The **Intercompany clearing** feature automates accounting entries when one company receives a
+payment for an invoice issued by another company within the same database.
+
+When a payment is processed by a secondary company, the customer's open invoice is reconciled
+automatically in the issuing company, and balancing intercompany entries are created between the
+two companies. This automation eliminates the need for manual spreadsheet tracking and keeps
+intercompany accounts balanced in real time.
+
+.. example::
+   **Company A** issues a customer invoice for $100.
+
+   The customer pays through the customer portal of **Company B**.
+
+   Upon receiving the payment:
+
+   #. The customer receivable is settled in **Companies A and B**.
+   #. **Company A**'s receivable is reclassified as a claim against **Company B**.
+   #. **Company B**'s received funds are recorded as a payable owed to **Company A**.
+
+To configure the accounts and journal used for inter-company clearing, follow these steps:
+
+.. important::
+   The :guilabel:`Inter-Company Transactions` feature must be :ref:`enabled
+   <general/multi-company/interco-transactions-enable>` **for each company** involved.
+
+#. :ref:`Install <general/install>` the :guilabel:`Intercompany Payment - Account`
+   (`account_payment_interco`) module.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Default Accounts` section.
+#. Under :guilabel:`Intercompany Clearing`, define the following fields:
+
+   - :guilabel:`Journal`: The dedicated journal used to log cross-entity clearing transfers.
+   - :guilabel:`Account Payable`: The clearing payable account used to record debts owed to other
+     companies within the database.
+   - :guilabel:`Account Receivable`: The clearing receivable account used to record claims against
+     other companies within the database.
+
+#. Switch to the other companies involved using the :ref:`company selector
+   <general/multi-company/company-selector>` and repeat the process for each one.
+
+.. note::
+   The payment method that is used to register the customer payment must use an :ref:`outstanding
+   receipts account <accounting/journals/outstanding-accounts>` so that a journal entry is created.
+
+.. tip::
+   To keep these accounts clearly organized across accounting reports, :ref:`create
+   <chart-of-account/create>` unique payable and receivable clearing accounts that are separate from
+   the payable and receivable accounts used for general transactions, and enable the
+   :guilabel:`Non Trade` option on these accounts.
 
 .. _general/multi-company/use-cases:
 
