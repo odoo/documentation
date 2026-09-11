@@ -191,12 +191,16 @@ If you need to link an existing bank account to a contact:
 
 1. Open an app with contact access (such as **Accounting** or **Contacts**).
 2. Select a contact and open the :guilabel:`Accounting` tab.
-3. In the :guilabel:`Bank Accounts` section, click :guilabel:`Add a line` and provide the:
+3. Click the :guilabel:`Bank accounts` field and either select a bank account from the drop-down
+   menu, or click :guilabel:`Create...`.
+
+If creating a new bank account, fill out the fields:
 
    - :guilabel:`Account Number`,
-   - :guilabel:`Bank`,
-   - :guilabel:`Account Holder Name`,
+   - :guilabel:`Clearing Number`,
    - :guilabel:`Account Holder`,
+   - :guilabel:`Account Holder Name`,
+   - :guilabel:`Bank`,
    - :guilabel:`Company` and :guilabel:`Currency` (if applicable).
 
 4. Toggle :guilabel:`Send Money` to mark the account as :guilabel:`Trusted`.
