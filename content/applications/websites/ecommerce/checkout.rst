@@ -226,8 +226,8 @@ Extra info
 You can add an :guilabel:`Extra Info` step in the checkout process to collect additional customer
 information through an online form, which is then included in the :ref:`sales order
 <ecommerce/handling/sales>`. To do so, :ref:`enable <ecommerce/checkout/customize_steps>` the
-:guilabel:`Extra Step` option in the website editor. The form can be :ref:`customized
-<website/building_blocks/form>` as needed.
+:guilabel:`Extra Step` option in the website editor. The form can be :doc:`customized
+<../website/web_design/building_blocks/forms>` as needed.
 
 .. _ecommerce/checkout/payment:
 

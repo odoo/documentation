@@ -46,8 +46,9 @@ web shop and make it available for :ref:`logged-in users <ecommerce/customer_acc
 only. To prevent anyone from signing up freely, set the :ref:`Customer Account
 <ecommerce/customer_accounts/account-creation>` setting option to :guilabel:`On invitation`.
 To create a page where customers request access, open the :doc:`website editor
-</applications/websites/website/web_design>`, :ref:`create a form <website/building_blocks/form>`,
-customize it, and in the :guilabel:`Action` field, select :guilabel:`Create a customer`.
+</applications/websites/website/web_design>`, :doc:`create a form
+<../../website/web_design/building_blocks/forms>`, customize it, and in the :guilabel:`Action`
+field, select :guilabel:`Create a customer`.
 
 .. tip::
    You can assign tags created on a contact form under :menuselection:`Website --> Configuration
