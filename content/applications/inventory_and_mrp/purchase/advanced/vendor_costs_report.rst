@@ -1,3 +1,10 @@
+.. meta::
+   :description: Explains how to build a vendor costs report from the Purchase app's Purchase
+                 Analysis dashboard by switching to pivot view and applying filters, groupings, and
+                 measures. This makes it easy to track vendor cost fluctuations over time and
+                 identify the most expensive vendors. Results can be viewed as a pivot table,
+                 exported to a spreadsheet, or displayed as a graph.
+
 ===================
 Vendor costs report
 ===================
@@ -17,9 +24,9 @@ To create a vendor costs report, first navigate to :menuselection:`Purchase app 
 Purchase` to open the :guilabel:`Purchase Analysis` dashboard. By default, the dashboard displays a
 line chart overview of the :guilabel:`Untaxed Total` of POs (Purchase Orders) with a
 :guilabel:`Confirmation Date` for the current month, or of RFQs (Requests for Quotation) with a
-status of *Draft*, *Sent, or *Cancelled*.
+status of *Draft*, *Sent*, or *Cancelled*.
 
-.. _purchase/vender-cost-report-filters:
+.. _purchase/vendor_costs_report/filters-groups:
 
 Add filters and groups
 ----------------------
@@ -43,32 +50,21 @@ Next, under the :guilabel:`Group by` column, select :guilabel:`Vendor`. Then, se
 :guilabel:`Product`, which is also located in the :guilabel:`Group By` column.
 
 .. note::
-   Selecting :guilabel:`Product` is **not** required for this report. However, it is recommended, as
-   it provides additional insight into the performance of individual vendors. Additional selections
-   can be made under the :guilabel:`Group by` heading as well, including :guilabel:`Product
-   Category`, :guilabel:`Status`, and :guilabel:`Purchase Representative`.
-
    To ensure the report is generated correctly, make sure that :guilabel:`Vendor` is the **first**
-   selection made under the :guilabel:`Group By` column.
-
-Next, make a selection under the :guilabel:`Comparison` heading. These options are only available
-after the date range is selected under the :guilabel:`Filters` column, and vary based on that range.
-:guilabel:`Previous Period` adds a comparison to the previous period, such as the last month or
-quarter. :guilabel:`Previous Year` compares the same time period from the previous year.
-
-.. note::
-   While multiple time-based filters can be added at once, only one comparison can be selected at a
-   time.
+   selection made under the :guilabel:`Group By` column. Selecting :guilabel:`Product` is **not**
+   required for this report. However, it is recommended, as it provides additional insight into the
+   performance of individual vendors. Additional selections can be made under the :guilabel:`Group
+   by` heading as well, including :guilabel:`Product Category`, :guilabel:`Status`, and
+   :guilabel:`Buyer`.
 
 .. image:: vendor_costs_report/filters-groups.png
-   :align: center
-   :alt: The drop-down menu of filters, group by and comparison options for the vendor costs report.
+   :alt: The drop-down menu of filters and group by options for the vendor costs report.
 
 Add measures
 ------------
 
-After selecting the :guilabel:`Filters`, :guilabel:`Group by`, and :guilabel:`Comparison` settings,
-click out of the drop-down menu.
+After selecting the :guilabel:`Filters` and :guilabel:`Group by` settings, click out of the
+drop-down menu.
 
 By default, the report displays with the following measures: :guilabel:`Order`, :guilabel:`Total`,
 :guilabel:`Untaxed Total`, and :guilabel:`Count`. Click :guilabel:`Measures` at the top-left to open
@@ -85,7 +81,7 @@ View results
 ============
 
 After all of the :ref:`filters and measures have been selected
-<purchase/vender-cost-report-filters>`, the report generates in the pivot view. Click
+<purchase/vendor_costs_report/filters-groups>`, the report generates in the pivot view. Click
 :guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet format within
 the *Documents* app.
 
@@ -94,7 +90,6 @@ the *Documents* app.
    module is installed.
 
 .. image:: vendor_costs_report/sample-vendor-report.png
-   :align: center
    :alt: A sample of a vendor costs report with the measures set as total and average costs.
 
 .. note::
