@@ -5,8 +5,8 @@ RST guidelines and cheat sheet
 ==============================
 
 .. important::
-   We strongly recommend reading the :doc:`content_guidelines` and main :doc:`../documentation`
-   pages before contributing.
+   Please read the :doc:`content_guidelines` and main :doc:`../documentation` page before
+   contributing.
 
 General guidelines
 ==================
@@ -75,22 +75,16 @@ for bulleted lists, for example.
 ---------------------
 
 In RST, it is possible to break a line without forcing a line break on the rendered HTML. Make use
-of this feature to write **lines of maximum 100 characters**. It is not necessary to leave a
-trailing whitespace at the end of a line to separate words.
+of this feature to write **lines of maximum 100 characters**. Do not leave a trailing whitespace at
+the end of a line to separate words.
 
 .. tip::
-   - You can safely break a line on any space, even inside markups such as `menuselection` and
-     `doc`.
+   - Breaking a line on any space is safe, even inside markups such as ``:menuselection:`` and
+     ``:doc:``.
    - Some external hyperlinks may exceed 100 characters, but leaving them on a single line is
      acceptable.
-
-.. example::
-
-   .. code-block:: rst
-
-      To register your seller account in Odoo, go to :menuselection:`Sales --> Configuration -->
-      Settings --> Amazon Connector --> Amazon Accounts` and click :guilabel:`Create`. You can find
-      the **Seller ID** under the link :guilabel:`Your Merchant Token`.
+   - Most :abbr:`IDEs (integrated development environment)` offer a setting to wrap text or display
+     visual guides at a specified character limit.
 
 .. _contributing/rst/headings:
 
@@ -227,12 +221,15 @@ Use the `abbr` markup to write a self-defining abbreviation that is displayed as
           Odoo uses :abbr:`OCR (optical character recognition)` and artificial intelligence
           technologies to recognize the content of the documents.
 
+.. tip::
+   Use :ref:`substitutions <contributing/content/substitutions>` for recurring abbreviations.
+
 .. _contributing/rst/guilabel:
 
 :abbr:`GUI (graphical user interface)` element
 ----------------------------------------------
 
-Use the `guilabel` markup to identify any text of the interactive user interface (e.g., labels).
+Use the `guilabel` markup to identify any text in the user interface, such as labels.
 
 .. list-table::
    :class: o-showcase-table
@@ -330,19 +327,40 @@ Use the `command` markup to highlight a command.
 Icons
 -----
 
+<<<<<<< 6397d548bb0498c9f7a7f12e104e58200f613c65
 Use the `icon` markup to add the class name of an icon. There are three icon sets used in Odoo:
 `FontAwesome4 <https://fontawesome.com/v4/icons/>`_ (`fa-*`), :ref:`Odoo UI <ui/odoo-ui-icons>`
 (`oi-*`) and :ref:`Odoo Spreadsheet <ui/odoo-spreadsheet-icons>` (`os-*`) icons.
 
 Follow the icon with its name as a :ref:`contributing/rst/guilabel` in brackets as a descriptor.
+||||||| 6eb1c1142ba194f8dc9c8e1f3b1fed2908941f35
+Use the `icon` markup to add the class name of an icon. There are two icon sets used in Odoo:
+`FontAwesome4 <https://fontawesome.com/v4/icons/>`_ and :doc:`Odoo UI
+</developer/reference/user_interface/icons>`. Follow the icon with its name as a
+:ref:`contributing/rst/guilabel` in brackets as a descriptor.
+=======
+Use the `icon` markup to add the class name of an icon. Two icon sets are used in Odoo:
+`FontAwesome4 <https://fontawesome.com/v4/icons/>`_ and :doc:`Odoo UI
+</developer/reference/user_interface/icons>`. Follow the icon with its tooltip (when possible) or
+its name as a :ref:`contributing/rst/guilabel` in brackets as a descriptor.
+>>>>>>> a61b5271f4371474d60f450afb9d4ed6f4af7a1c
 
 .. list-table::
    :class: o-showcase-table
 
+<<<<<<< 6397d548bb0498c9f7a7f12e104e58200f613c65
    * - The graph view is represented by the :icon:`fa-area-chart` :guilabel:`(area chart)` icon.
+||||||| 6eb1c1142ba194f8dc9c8e1f3b1fed2908941f35
+  * - The graph view is represented by the :icon:`fa-area-chart` :guilabel:`(area chart)` icon. The
+      pivot view is represented by the :icon:`oi-view-pivot` icon.
+=======
+  * - The graph view is represented by the :icon:`fa-area-chart` (:guilabel:`Graph`) icon. The
+      pivot view is represented by the :icon:`oi-view-pivot` (:guilabel:`Pivot`) icon.
+>>>>>>> a61b5271f4371474d60f450afb9d4ed6f4af7a1c
 
        The pivot view is represented by the :icon:`oi-view-pivot` :guilabel:`(pivot table)` icon.
 
+<<<<<<< 6397d548bb0498c9f7a7f12e104e58200f613c65
        Use :icon:`os-global-filters` :guilabel:`(global filters)` in Odoo **Spreadsheet**.
 
    * - .. code-block:: text
@@ -352,6 +370,13 @@ Follow the icon with its name as a :ref:`contributing/rst/guilabel` in brackets 
           The pivot view is represented by the :icon:`oi-view-pivot` icon.
 
           Use :icon:`os-global-filters` :guilabel:`(global filters)` in Odoo **Spreadsheet**.
+||||||| 6eb1c1142ba194f8dc9c8e1f3b1fed2908941f35
+         The graph view is represented by the :icon:`fa-area-chart` :guilabel:`(area chart)` icon.
+         The pivot view is represented by the :icon:`oi-view-pivot` icon.
+=======
+         The graph view is represented by the :icon:`fa-area-chart` (:guilabel:`Graph`) icon.
+         The pivot view is represented by the :icon:`oi-view-pivot` (:guilabel:`Pivot`) icon.
+>>>>>>> a61b5271f4371474d60f450afb9d4ed6f4af7a1c
 
 .. _contributing/rst/lists:
 
@@ -395,15 +420,14 @@ Numbered list
 .. list-table::
    :class: o-showcase-table
 
-   * - 6. Use this format to start the numbering
-          with a number other than one.
-       #. The numbering is automatic from there.
+   * - a. Use this format to start the numbering with a different marker or a number other than one.
+       #. The numbering is automatic from here.
 
    * - .. code-block:: text
 
-          6. Use this format to start the numbering
-             with a number other than one.
-          #. The numbering is automatic from there.
+          a. Use this format to start the numbering with a different marker or a number other than
+             one.
+          #. The numbering is automatic from here.
 
 .. tip::
    Prefer the use of autonumbered lists with `#.` instead of `1.`, `2.`, etc. for better code
@@ -446,10 +470,10 @@ Hyperlinks
    .. example::
 
      | **Good example (descriptive label):**
-     | Please refer to the :doc:`Accounting documentation <../../../applications/finance/accounting>`.
+     | Refer to the :doc:`Accounting documentation <../../../applications/finance/accounting>`.
 
      | **Bad example (non-descriptive label):**
-     | Please refer to :doc:`this page <../../../applications/finance/accounting>`.
+     | Refer to :doc:`this page <../../../applications/finance/accounting>`.
 
 .. _contributing/rst/external-hyperlinks:
 
@@ -511,11 +535,10 @@ Internal documentation links
 Relative links
 ~~~~~~~~~~~~~~
 
-If you need to reference an :ref:`internal documentation page <contributing/rst/doc-hyperlinks>`
-or a :ref:`file <contributing/rst/file>` that is not located in the same directory as the current
-page, always use *relative file paths* instead of *absolute file paths*. This ensures that links
-remain valid even with version updates, folder name changes, and directory structure
-reorganizations.
+When referencing an :ref:`internal documentation page <contributing/rst/doc-hyperlinks>` or a
+:ref:`file <contributing/rst/file>` that is not located in the same directory as the current
+page, use *relative file paths* instead of *absolute file paths*. This ensures that links remain
+valid even with version updates, folder name changes, and directory structure reorganizations.
 
 An absolute file path indicates the target's location from the root directory. A relative file path
 uses smart notations (such as `../` that redirects to the parent folder) to indicate the target's
@@ -979,10 +1002,9 @@ Content tabs
 .. warning::
    The `tabs` markup may not work well in some situations. In particular:
 
-   - The tabs' headers cannot be translated.
-   - A tab cannot contain :ref:`headings <contributing/rst/headings>`.
-   - An :ref:`alert block <contributing/rst/alert-blocks>` cannot contain tabs.
-   - A tab cannot contain :ref:`custom anchors <contributing/rst/custom-anchors>`.
+   - Tabs cannot contain :ref:`headings <contributing/rst/headings>`.
+   - Tabs cannot contain :ref:`custom anchors <contributing/rst/custom-anchors>`.
+   - :ref:`Alert blocks <contributing/rst/alert-blocks>` cannot contain tabs.
 
 .. _contributing/rst/basic-tabs:
 
@@ -1102,9 +1124,10 @@ Tabs can be nested inside one another.
 Group tabs
 ----------
 
-Group tabs are special tabs that synchronize based on a group label. The last selected group is
-remembered and automatically selected when the user returns to the page or visits another page with
-the tabs group. The `group-tab` markup is used to define group tabs.
+Group tabs synchronize based on a shared group label: selecting a tab in one group automatically
+selects the corresponding tab in every other group with that label. The last selected group
+is remembered and automatically reselected when the page reloads or when navigating to another
+page containing the same tab group. Use the `group-tab` markup to define group tabs.
 
 .. list-table::
    :class: o-showcase-table
@@ -1341,6 +1364,35 @@ listed in the directive. All RST files must be included in a TOC tree, unless th
            website/reporting
            website/mail_groups
 
+.. _contributing/content/substitutions:
+
+Substitutions
+=============
+
+When including recurring :ref:`abbreviations <contributing/rst/abbreviations>` or longer official
+names (such as those of governmental agencies) throughout the RST file, it can be helpful to
+use substitution definitions. Substitution definitions are composed of a reusable substitution
+reference and its replacement text. When the substitution reference is used in inline text, it is
+replaced by the replacement text in the rendered HTML.
+
+Insert the substitution definition near the top of the file using the following syntax:
+`.. |substitution reference| replace:: replacement text`.
+
+.. |sdd| replace:: :abbr:`SDD (SEPA Direct Debit)`
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Once a mandate is active, it is reused for all subsequent payments made with the |sdd|
+       payment method.
+
+   * - .. code-block:: text
+
+          .. |sdd| replace:: :abbr:`SDD (SEPA Direct Debit)`
+
+          Once a mandate is active, it is reused for all subsequent payments made with the |sdd|
+          payment method.
+
 .. _contributing/rst/document-metadata:
 
 Document metadata
@@ -1371,7 +1423,7 @@ metadata markups that specify a behavior for the entire page. They must be place
 | `code-column`   |  | Show a dynamic side column that can be used to display interactive          |
 |                 |    tutorials or code excerpts.                                                 |
 |                 |  | For example, see                                                            |
-|                 |    :doc:`/applications/finance/accounting/get_started/cheat_sheet`.            |
+|                 |    :doc:`../../../applications/finance/accounting/get_started/cheat_sheet`.    |
 +-----------------+--------------------------------------------------------------------------------+
 | `custom-css`    | Link CSS files (comma-separated) to the file.                                  |
 +-----------------+--------------------------------------------------------------------------------+
