@@ -2,159 +2,109 @@
 Invoicing processes
 ===================
 
-Depending on your business and the application you use, there are
-different ways to automate the customer invoice creation in Odoo.
-Usually, draft invoices are created by the system (with information
-coming from other documents like sales order or contracts) and
-accountant just have to validate draft invoices and send the invoices in
-batch (by regular mail or email).
+Automation of customer invoice creation in Odoo varies based on business needs and the applications
+in use. Typically, the system generates draft invoices using information from other documents, such
+as sales orders.
 
-Depending on your business, you may opt for one of the following way to
-create draft invoices:
+Select one of the following methods to create draft invoices based on specific business needs:
+
+- :ref:`Sales <accounting/inv-process/sales>`
+- :ref:`Subscriptions <accounting/inv-process/subscriptions>`
+- :ref:`eCommerce <accounting/inv-process/ecommerce>`
+- :ref:`Point of sale <accounting/inv-process/pos>`
+
+.. seealso::
+   :doc:`/applications/finance/accounting/customer_invoices`
+
+.. _accounting/inv-process/sales:
 
 Sales
 =====
 
-.. _accounting/inv-process/so:
+Standard sales workflows convert approved quotations into sales orders, which subsequently generate
+draft invoices. The different invoicing options are:
 
-Sales Order ‣ Invoice
----------------------
+-  Invoicing manually: Manually create draft invoices directly from the sales order using the
+   :guilabel:`Create Invoice` button.
+-  Depending on the :doc:`invoicing policy configured
+   <../../../sales/sales/invoicing/invoicing_policy>`:
 
-In most companies, salespeople create quotations that become sales order
-once they are validated. Then, draft invoices are created based on the
-sales order. You have different options like:
-
--  Invoice manually: use a button on the sale order to trigger the draft
-   invoice
-
--  Invoice before delivery: invoice the full order before triggering the
-   delivery order
-
--  Invoice based on delivery order: see next section
-
-Invoice before delivery is usually used by the eCommerce application
-when the customer pays at the order and we deliver afterwards.
-(pre-paid)
-
-For most other use cases, it's recommended to invoice manually. It
-allows the salesperson to trigger the invoice on demand with options:
-invoice the whole order, invoice a percentage (advance), invoice some
-lines, invoice a fixed advance.
-
-This process is good for both services and physical products.
-
-.. seealso::
-   - :doc:`/applications/sales/sales/invoicing/proforma`
+   - :guilabel:`Ordered quantities` invoicing (before delivery): This is the standard practice for
+     prepaid eCommerce transactions, where the customer pays upfront, and delivery occurs later.
+   - :guilabel:`Delivered quantities` invoicing: Commonly used in retail and e-commerce, this method
+     manages discrepancies between the quantities ordered and delivered, such as for weighted items
+     like food. Partial shipments generate invoices only for the items delivered, and backorders
+     generate separate invoices for each delivery.
 
 .. note::
-    Invoices can also be generated from sales orders created in the :doc:`Repairs
-    app </applications/inventory_and_mrp/repairs>` for invoicing after-sales
-    services.
+   - It's recommended to invoice manually. It allows the salesperson to generate invoices on demand,
+     with several options: invoicing the entire order, invoicing a percentage as an advance,
+     invoicing specific lines, or invoicing a fixed advance amount. It can be applied to both
+     services and physical products.
+   - Invoices can also be generated from sales orders created in the :doc:`Repairs app
+     </applications/inventory_and_mrp/repairs>` for invoicing after-sales services.
 
-Sales Order ‣ Delivery Order ‣ Invoice
---------------------------------------
+.. tip::
+   To create a consolidated invoice for all sales orders linked to the same customer, follow these
+   steps:
 
-Retailers and eCommerce usually invoice based on delivery orders,
-instead of sales order. This approach is suitable for businesses where
-the quantities you deliver may differs from the ordered quantities:
-foods (invoice based on actual Kg).
-
-This way, if you deliver a partial order, you only invoice for what you
-really delivered. If you do back orders (deliver partially and the rest
-later), the customer will receive two invoices, one for each delivery
-order.
+   #. Go to :menuselection:`Sales --> Orders --> Orders`, and use the search bar to
+      :guilabel:`Group By` :guilabel:`Customer`.
+   #. Click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to expand the list of sales
+      orders for the desired customer.
+   #. Select the relevant sales orders with :guilabel:`Invoice Status` set to :guilabel:`To
+      Invoice`, ensuring all selected orders share the same invoicing address and the same delivery
+      address.
+   #. Click :guilabel:`Create Invoices`.
+   #. In the :guilabel:`Create invoice(s)` window, keep the :guilabel:`Consolidated Billing` option
+      enabled, and set the :guilabel:`Timesheets Period`, if needed.
+   #. Click :guilabel:`Create Draft`.
 
 .. seealso::
-   - :doc:`/applications/sales/sales/invoicing/invoicing_policy`
+   - :doc:`../../../sales/sales/invoicing/proforma`
 
-eCommerce Order ‣ Invoice
--------------------------
-
-An eCommerce order will also trigger the creation of the order when it
-is fully paid. If you allow paying orders by check or wire transfer,
-Odoo only creates an order and the invoice will be triggered once the
-payment is received.
+.. _accounting/inv-process/contracts:
 
 Contracts
+---------
+
+Under the terms of a contract with a customer, invoices can be generated periodically or at the end
+of the contract based on the following:
+
+- :doc:`Time and materials <../../../sales/sales/invoicing/time_materials>`: Based on recorded hours
+  and materials used, as documented in timesheets or purchase records.
+- Fixed products/services: Based on predefined products or services as outlined in a sales order
+  linked to the contract.
+
+.. note::
+   This invoicing method is commonly used by service companies that bill primarily on a
+   time-and-materials basis. In contrast, service companies that invoice at a fixed price typically
+   follow a :ref:`standard sales order process <accounting/inv-process/sales>`.
+
+.. seealso::
+   :doc:`../../../sales/sales/invoicing/milestone`
+
+.. _accounting/inv-process/subscriptions:
+
+Subscriptions
+=============
+
+Invoices for :doc:`subscriptions <../../../sales/subscriptions>` or recurring contracts are
+generated automatically at regular intervals. The billing period and specific services or products
+included are defined in the configured recurring plans.
+
+.. _accounting/inv-process/ecommerce:
+
+eCommerce
 =========
 
-Regular Contracts ‣ Invoices
-----------------------------
+:ref:`eCommerce orders generate invoices <ecommerce/handling/invoices>` once the order has been
+fully paid.
 
-If you use contracts, you can trigger invoice based on time and material
-spent, expenses or fixed lines of services/products. Every month, the
-salesperson will trigger invoice based on activities on the contract.
+.. _accounting/inv-process/pos:
 
-Activities can be:
+Point of sale
+=============
 
--  fixed products/services, coming from a sale order linked to this contract
--  materials purchased (that you will re-invoice)
--  time and material based on timesheets or purchases (subcontracting)
--  expenses like travel and accommodation that you re-invoice to the customer
-
-You can invoice at the end of the contract or trigger intermediate
-invoices. This approach is used by services companies that invoice
-mostly based on time and material. For services companies that invoice
-on fix price, they use a regular sales order.
-
-.. seealso::
-   - :doc:`/applications/sales/sales/invoicing/time_materials`
-   - :doc:`/applications/finance/accounting/customer_invoices/overview`
-   - :doc:`/applications/sales/sales/invoicing/milestone`
-
-Recurring Contracts ‣ Invoices
-------------------------------
-
-For subscriptions, an invoice is triggered periodically, automatically.
-The frequency of the invoicing and the services/products invoiced are
-defined on the contract.
-
-.. seealso::
-   - :doc:`/applications/sales/subscriptions`
-
-Others
-======
-
-Creating an invoice manually
-----------------------------
-
-Users can also create invoices manually without using contracts or a
-sales order. It's a recommended approach if you do not need to manage
-the sales process (quotations), or the delivery of the products or
-services.
-
-Even if you generate the invoice from a sales order, you may need to
-create invoices manually in exceptional use cases:
-
--  if you need to create a refund
-
--  If you need to give a discount
-
--  if you need to change an invoice created from a sales order
-
--  if you need to invoice something not related to your core business
-
-Resequencing of the invoices
-----------------------------
-
-It remains possible to resequence the invoices but with some restrictions:
-
-#. The feature does not work when entries are previous to a lock date.
-#. The feature does not work if the sequence is inconsistent with the month of the entry.
-#. It does not work if the sequence leads to a duplicate.
-#. The order of the invoice remains unchanged.
-#. It is useful for people who use a numbering from another software and who want to continue the
-   current year without starting over from the beginning.
-
-Invoice digitization with optical character recognition (OCR)
--------------------------------------------------------------
-
-**Invoice digitization** is the process of automatically encoding traditional paper invoices into
-invoices forms in your accounting.
-
-Odoo uses OCR and artificial intelligence technologies to recognize the content of the documents.
-Vendor bills and customer invoices forms are automatically created and populated based on scanned
-invoices.
-
-.. seealso::
-   - :doc:`/applications/finance/accounting/vendor_bills/invoice_digitization`
+Point of Sale allows for :doc:`creating invoices <../../../sales/point_of_sale/use/pos_invoices>`
+for :ref:`registered customers <pos/use/customers>`.
