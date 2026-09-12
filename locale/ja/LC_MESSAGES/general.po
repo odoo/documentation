@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:33+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: 2026-09-07 18:12+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -6242,13 +6242,10 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/faq.rst:253
 msgid ""
-"For more information about crons when using Odoo.sh, check out :doc:`Odoo.sh "
-"frequent technical questions <../../../administration/odoo_sh/advanced/"
-"frequent_technical_questions>`."
+"For more information about crons when using Odoo.sh, check out "
+"the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
+"scheduled>`."
 msgstr ""
-"Odoo.shを使用する際のクロンの情報について詳しくは :doc:`Odoo.shよくある技術的"
-"な質問 <../../../administration/odoo_sh/advanced/"
-"frequent_technical_questions>` をご覧下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -7489,7 +7486,7 @@ msgid "Address autocomplete on the contact form."
 msgstr "連絡先フォームでの住所自動入力。"
 
 #: ../../content/applications/general/integrations/address_autocomplete.rst:14
-#: ../../content/applications/general/integrations/geolocation.rst:31
+#: ../../content/applications/general/integrations/geolocation.rst:52
 msgid ""
 "Using the Google Places API could require `payment to Google <https://"
 "mapsplatform.google.com/pricing/>`_."
@@ -7696,6 +7693,7 @@ msgstr ""
 "<address_autocomplete/generate_api_key>`を専用フィールドに貼り付けます。"
 
 #: ../../content/applications/general/integrations/address_autocomplete.rst:96
+#: ../../content/applications/general/integrations/geolocation.rst:85
 msgid "Click :guilabel:`Save`."
 msgstr ":guilabel:`保存`をクリックします。"
 
@@ -8330,62 +8328,89 @@ msgid "Geolocation"
 msgstr "位置情報"
 
 #: ../../content/applications/general/integrations/geolocation.rst:5
-msgid "You can locate contacts or places and generate routes on a map in Odoo."
-msgstr ""
-"Odooでは、連絡先や場所を検索し、地図上にルートを表示することができます。"
-
-#: ../../content/applications/general/integrations/geolocation.rst:None
-msgid "Map displaying a contact's location."
-msgstr "連絡先の位置を表示する地図。"
-
-#: ../../content/applications/general/integrations/geolocation.rst:10
 msgid ""
-"To use the feature, open the :guilabel:`Settings` app, and, under "
-"the :guilabel:`Integrations`, section, activate :guilabel:`Geo "
-"Localization`. Then, choose between using the OpenStreetMap or Google Places "
-"API."
+"Odoo provides geolocation integrations that allow you to locate contacts or "
+"places and generate routes on a map."
 msgstr ""
-"この機能を使用するには、:guilabel:`設定` アプリを開き、:guilabel:`統合` セク"
-"ションで:guilabel:`ジオロカリゼーション` を有効化します。次に、OpenStreetMap"
-"またはGoogleプレイスAPIの使用を選択します。"
 
-#: ../../content/applications/general/integrations/geolocation.rst:14
-msgid "**OpenStreetMap**"
-msgstr "**OpenStreetMap**"
-
-#: ../../content/applications/general/integrations/geolocation.rst:16
+#: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
-"OpenStreetMap is a free, open geographic database updated and maintained by "
-"volunteers. To use it, select :guilabel:`Open Street Map`."
+"The :ref:`Map <studio/views/multiple-records/map>` view is available by "
+"default. No configuration is required to access it."
 msgstr ""
-"OpenStreetMapは、ボランティアによって更新・管理されている無料かつオープンな地"
-"理データベースです。これを使用するには、:guilabel:`Open Street Map` を選択し"
-"ます。"
+
+#: ../../content/applications/general/integrations/geolocation.rst:15
+msgid "Geolocate contacts and places"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:17
+msgid ""
+"The :guilabel:`Geolocation` feature generates latitude and longitude "
+"coordinates to pinpoint locations. It can be used to:"
+msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
-"OpenStreetMap might not always be accurate. You can `join the OpenStreetMap "
-"community <https://www.openstreetmap.org/fixthemap>`_ to fix any issues "
-"encountered."
+"Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
+"details>` in the **Attendances** app;"
 msgstr ""
-"OpenStreetMapは常に正確であるとは限りません。 `OpenStreetMapコミュニティに参"
-"加 <https://www.openstreetmap.org/fixthemap>`_ して、発生した問題を修正するこ"
-"とができます。"
+
+#: ../../content/applications/general/integrations/geolocation.rst:22
+msgid ""
+"Display the pickup location when using the :ref:`pickup on-site delivery "
+"method <ecommerce/shipping/instore-pickup>`;"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:24
+msgid ""
+":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
+msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
-msgid "**Google Places API map**"
-msgstr "**Google Places API マップ**"
-
-#: ../../content/applications/general/integrations/geolocation.rst:27
 msgid ""
-"The Google Places API map provides detailed info on places, businesses, and "
-"points of interest. It supports location-based features like search, "
-"navigation, and recommendations."
+"Validate addresses with the :ref:`Avatax address validation <accounting/"
+"avatax/address-validation>` feature."
 msgstr ""
-"Google Places API マップは、場所、ビジネス、興味深い場所の詳細な情報を提供し"
-"ます。検索、ナビゲーション、推奨などの位置情報に基づく機能に対応しています。"
 
-#: ../../content/applications/general/integrations/geolocation.rst:34
+#: ../../content/applications/general/integrations/geolocation.rst:28
+msgid ""
+"To enable the :guilabel:`Geolocation` feature, navigate "
+"to :menuselection:`Settings --> General Settings`, scroll down to "
+"the :guilabel:`Integrations` section, and activate :guilabel:`Geolocation`. "
+"Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
+"Map` or :guilabel:`Google Place Map`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:37
+msgid "OpenStreetMap"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:39
+msgid ""
+"OpenStreetMap is a free, open geographic database updated and maintained by "
+"volunteers. No additional configuration is required to use :guilabel:`Open "
+"Street Map`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:43
+msgid ""
+"OpenStreetMap data may not always be accurate. You can `join the "
+"OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
+"report and correct any issues you encounter."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:46
+msgid "Google Places API"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:48
+msgid ""
+"The Google Places API provides detailed information about places, "
+"businesses, and points of interest. It supports location-based features like "
+"search, navigation, and recommendations."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
 "To use it, select :guilabel:`Google Place Map` and enter your :ref:`API Key "
 "<address_autocomplete/generate_api_key>`."
@@ -8393,13 +8418,73 @@ msgstr ""
 "これを使用するには :guilabel:`Google Place Map` を選択して :ref:`APIキー "
 "<address_autocomplete/generate_api_key>` を入力して下さい。"
 
-#: ../../content/applications/general/integrations/geolocation.rst:None
-msgid "Google Places API key"
-msgstr "Google Places API キー"
-
-#: ../../content/applications/general/integrations/geolocation.rst:41
+#: ../../content/applications/general/integrations/geolocation.rst:59
 msgid ":doc:`address_autocomplete`"
 msgstr ":doc:`address_autocomplete`"
+
+#: ../../content/applications/general/integrations/geolocation.rst:64
+msgid "Map routes"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:66
+msgid ""
+"Map routes are useful for providing itineraries and locations to :doc:`field "
+"service technicians </applications/services/field_service/"
+"planning_itinerary>` and delivery routes to drivers in a :doc:`dispatch "
+"management system </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:71
+msgid "To create routes, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:73
+msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:74
+msgid ""
+"`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:75
+msgid ""
+"Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
+"tokens/>`_ and copy your token to the clipboard."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:79
+msgid ""
+"Mapbox displays secret tokens only once upon creation and hides them "
+"permanently after leaving the :guilabel:`Access Token` page. Make sure to "
+"save the token."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:82
+msgid ""
+"In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
+"to the :guilabel:`Integrations` section."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:84
+msgid ""
+"Under :guilabel:`Map Routes`, paste the Mapbox access token into "
+"the :guilabel:`Token` field."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:88
+msgid ""
+"`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
+"dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:90
+msgid ""
+"`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
+msgstr ""
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -15056,11 +15141,11 @@ msgid ""
 "drop-down menu. This determines whether the user must complete 2FA "
 "verification when logging back in."
 msgstr ""
-"非アクティブタイムアウトを有効にするには、*Timeouts*タブをクリックし"
-"、:guilabel:`非アクティブ`　チェックボックスを選択します。次に、"
-"ドロップダウンメニューから:guilabel:`画面ロック`　または:guilabel:`二要素認証"
-"付き画面ロック`　を選択します。これにより、再ログイン時にユーザーが2FA認証を"
-"完了する必要があるかどうかが決まります。"
+"非アクティブタイムアウトを有効にするには、*Timeouts*タブをクリック"
+"し、:guilabel:`非アクティブ`　チェックボックスを選択します。次に、ドロップダ"
+"ウンメニューから:guilabel:`画面ロック`　または:guilabel:`二要素認証付き画面"
+"ロック`　を選択します。これにより、再ログイン時にユーザーが2FA認証を完了する"
+"必要があるかどうかが決まります。"
 
 #: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
@@ -16989,6 +17074,68 @@ msgstr ":doc:`アクセス権 </applications/general/users/access_rights>`"
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`ポータルアクセスのドキュメント <portal_access>`"
+
+#~ msgid ""
+#~ "For more information about crons when using Odoo.sh, check "
+#~ "out :doc:`Odoo.sh frequent technical questions <../../../administration/"
+#~ "odoo_sh/advanced/frequent_technical_questions>`."
+#~ msgstr ""
+#~ "Odoo.shを使用する際のクロンの情報について詳しくは :doc:`Odoo.shよくある技"
+#~ "術的な質問 <../../../administration/odoo_sh/advanced/"
+#~ "frequent_technical_questions>` をご覧下さい。"
+
+#~ msgid ""
+#~ "You can locate contacts or places and generate routes on a map in Odoo."
+#~ msgstr ""
+#~ "Odooでは、連絡先や場所を検索し、地図上にルートを表示することができます。"
+
+#~ msgid "Map displaying a contact's location."
+#~ msgstr "連絡先の位置を表示する地図。"
+
+#~ msgid ""
+#~ "To use the feature, open the :guilabel:`Settings` app, and, under "
+#~ "the :guilabel:`Integrations`, section, activate :guilabel:`Geo "
+#~ "Localization`. Then, choose between using the OpenStreetMap or Google "
+#~ "Places API."
+#~ msgstr ""
+#~ "この機能を使用するには、:guilabel:`設定` アプリを開き、:guilabel:`統合` セ"
+#~ "クションで:guilabel:`ジオロカリゼーション` を有効化します。次に、"
+#~ "OpenStreetMapまたはGoogleプレイスAPIの使用を選択します。"
+
+#~ msgid "**OpenStreetMap**"
+#~ msgstr "**OpenStreetMap**"
+
+#~ msgid ""
+#~ "OpenStreetMap is a free, open geographic database updated and maintained "
+#~ "by volunteers. To use it, select :guilabel:`Open Street Map`."
+#~ msgstr ""
+#~ "OpenStreetMapは、ボランティアによって更新・管理されている無料かつオープン"
+#~ "な地理データベースです。これを使用するには、:guilabel:`Open Street Map` を"
+#~ "選択します。"
+
+#~ msgid ""
+#~ "OpenStreetMap might not always be accurate. You can `join the "
+#~ "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
+#~ "fix any issues encountered."
+#~ msgstr ""
+#~ "OpenStreetMapは常に正確であるとは限りません。 `OpenStreetMapコミュニティに"
+#~ "参加 <https://www.openstreetmap.org/fixthemap>`_ して、発生した問題を修正"
+#~ "することができます。"
+
+#~ msgid "**Google Places API map**"
+#~ msgstr "**Google Places API マップ**"
+
+#~ msgid ""
+#~ "The Google Places API map provides detailed info on places, businesses, "
+#~ "and points of interest. It supports location-based features like search, "
+#~ "navigation, and recommendations."
+#~ msgstr ""
+#~ "Google Places API マップは、場所、ビジネス、興味深い場所の詳細な情報を提供"
+#~ "します。検索、ナビゲーション、推奨などの位置情報に基づく機能に対応していま"
+#~ "す。"
+
+#~ msgid "Google Places API key"
+#~ msgstr "Google Places API キー"
 
 #~ msgid ""
 #~ "After selecting an authenticator, log in to Odoo, then click the profile "

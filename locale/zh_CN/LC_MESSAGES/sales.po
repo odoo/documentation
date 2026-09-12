@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:33+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: 2026-08-27 15:28+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -122,8 +122,11 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:29
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:22
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:30
+#: ../../content/applications/sales/rental/configure_products/products.rst:17
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:23
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:14
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:27
 #: ../../content/applications/sales/sales/commissions.rst:14
 #: ../../content/applications/sales/sales/gelato.rst:15
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
@@ -757,7 +760,6 @@ msgstr "新潜在客户的聊天线程。"
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:81
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:80
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:47
-#: ../../content/applications/sales/rental.rst:91
 msgid "Pricing"
 msgstr "价格"
 
@@ -2343,7 +2345,7 @@ msgid ":doc:`../../../sales/sales/products_prices/prices/pricing`"
 msgstr ":doc:`../../../sales/sales/products_prices/prices/pricing`"
 
 #: ../../content/applications/sales/crm/optimize/member_partner_module.rst:49
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:103
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:113
 msgid ":doc:`../../../websites/ecommerce`"
 msgstr ":doc:`../../../websites/ecommerce`"
 
@@ -20133,12 +20135,12 @@ msgstr ""
 "点。"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:44
-#: ../../content/applications/sales/point_of_sale/use.rst:436
+#: ../../content/applications/sales/point_of_sale/use.rst:497
 msgid ":doc:`shop`"
 msgstr ":doc:`shop`"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:45
-#: ../../content/applications/sales/point_of_sale/use.rst:437
+#: ../../content/applications/sales/point_of_sale/use.rst:498
 msgid ":doc:`restaurant`"
 msgstr ":doc:`restaurant`"
 
@@ -21033,6 +21035,128 @@ msgstr ""
 "配置完成后，如果差异超过此限额，弹出窗口将显示授权阈值并指示用户联系经理以批"
 "准结账。"
 
+#: ../../content/applications/sales/point_of_sale/use.rst:436
+msgid "Offline POS"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:438
+msgid ""
+"During an internet outage, the POS switches to *offline mode*. This mode "
+"keeps order creation and management functional even when backend-dependent "
+"features are unavailable. When a :ref:`POS session starts <pos/use/open-"
+"register>`, essential data, such as products and customers, is loaded into "
+"the browser cache so that the data remains accessible offline. Orders "
+"created offline are stored in the browser cache and synced to the backend "
+"when the connection is restored."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:445
+msgid ""
+"To avoid losing any data created while offline, do not close or reload the "
+"browser, and do not clear the browser cache until the POS is back online and "
+"synced with the backend."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:449
+msgid ""
+"The POS offline mode refers only to Point of Sale-specific functionality. A "
+"separate :doc:`offline mode <../../general/offline_mode>` feature covers the "
+"rest of Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:452
+msgid ""
+"Many POS features rely on backend information and, therefore, are not "
+"available offline. These features include:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:455
+msgid ""
+":doc:`Generating invoices <use/pos_invoices>`: Invoices requested while "
+"offline are generated automatically after the connection is restored."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:457
+msgid ":ref:`Registering customers <pos/use/customers>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:458
+msgid ""
+":ref:`Accessing detailed product information <pos/products/information-"
+"display>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:459
+msgid ":ref:`Synchronizing stock in real time <pos/products/stock-management>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:460
+msgid ":ref:`Using payment terminals <pos/terminals/terminal-use>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:461
+msgid "Loading data on demand"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:463
+msgid ""
+"Devices connected to the :doc:`local network <hardware_network/pos_lna>`, "
+"such as :doc:`printers <hardware_network/receipt_printers>` and :doc:`scales "
+"<hardware_network/scale>`, continue to work offline, as long as no changes "
+"are made to the local network. Connected payment terminals rely on an active "
+"internet connection and do not work offline."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:469
+msgid ""
+"The :icon:`fa-chain-broken` (:guilabel:`offline mode`) icon appears in the "
+"POS interface header when the system is offline."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:471
+msgid ""
+"If a feature is not available offline, a popover with the "
+"message :guilabel:`Connection Lost` appears. To use the offline POS without "
+"that feature, click :guilabel:`Continue with limited functionality`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:476
+msgid "Cached data"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:478
+msgid ""
+"Each time a customer or product is used in the POS, new data is added to the "
+"browser cache, along with the data loaded at the beginning of a session. If "
+"frequent internet outages occur, increasing the amount of data loaded into "
+"the POS at the start of the session can ensure that when the POS goes "
+"offline, all necessary data remains available. To do so, "
+"activate :ref:`developer mode <developer-mode>`, then go "
+"to :menuselection:`Settings --> Technical --> System Parameters` and adapt "
+"the :guilabel:`Value` of the following system parameters:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:485
+msgid ""
+":guilabel:`point_of_sale.limited_customer_count`: Number of :ref:`customers "
+"<pos/use/customers>` loaded into the POS. Customers with the highest order "
+"counts are loaded first, up to the specified value."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:488
+msgid ""
+":guilabel:`point_of_sale.limited_product_count`: Number of :doc:`products "
+"<products>` loaded into the POS. Favorite products are loaded first, "
+"followed by services, then by the most recently updated products, up to the "
+"specified value."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:493
+msgid ""
+"Increasing the amount of data initialized in the POS also increases the time "
+"required to open the register."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:5
 msgid "Invoices"
 msgstr "发票"
@@ -21524,17 +21648,24 @@ msgid ""
 "browser's print function."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:10
+#: ../../content/applications/sales/rental.rst:1
+msgid ""
+"This page explains the Rental Orders dashboard, how to browse rentable "
+"products, and how Odoo computes rental prices by selecting the cheapest "
+"applicable price line."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:15
 msgid "Rental"
 msgstr "出租"
 
-#: ../../content/applications/sales/rental.rst:12
+#: ../../content/applications/sales/rental.rst:17
 msgid ""
 "The Odoo **Rental** application provides comprehensive solutions to "
 "configure and manage rentals."
 msgstr "Odoo **租赁**应用程序提供全面的解决方案来配置和管理租赁业务。"
 
-#: ../../content/applications/sales/rental.rst:14
+#: ../../content/applications/sales/rental.rst:19
 msgid ""
 "Send quotations, confirm orders, schedule rentals, register products when "
 "they are picked up and returned, and invoice customers from this single "
@@ -21543,60 +21674,78 @@ msgstr ""
 "在此单一平台上发送报价单、确认订单、安排租赁、在取货和退货时登记产品，并向客"
 "户开具发票。"
 
-#: ../../content/applications/sales/rental.rst:18
+#: ../../content/applications/sales/rental.rst:23
 msgid "`Odoo Rental: Product page <https://www.odoo.com/app/rental>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:19
+#: ../../content/applications/sales/rental.rst:24
 msgid "`Odoo Tutorials: Configuring Rental Products <rental-products_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:20
+#: ../../content/applications/sales/rental.rst:25
 msgid "`Odoo Tutorials: Hotel booking <hotel-booking_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:24
+#: ../../content/applications/sales/rental.rst:29
 msgid "Product types"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:24
+#: ../../content/applications/sales/rental.rst:29
 msgid ""
 "Learn about the different rental product types, general configuration, and "
 "possible app integrations."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:31
+#: ../../content/applications/sales/rental.rst:36
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:8
 msgid "Physical service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:31
+#: ../../content/applications/sales/rental.rst:36
 msgid "Discover how to create and manage a physical service rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:37
+#: ../../content/applications/sales/rental.rst:42
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:7
 msgid "Labor service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:37
+#: ../../content/applications/sales/rental.rst:42
 msgid "Learn how to create a labor service rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:43
+#: ../../content/applications/sales/rental.rst:48
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:3
+msgid "Create a rental order"
+msgstr "创建出租订单"
+
+#: ../../content/applications/sales/rental.rst:48
+msgid "Learn how to create a rental order."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:54
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:7
+msgid "Pick up and return rental products"
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:54
+msgid "Learn how to pick up and return rental products."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:60
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:3
 msgid "Manage deposits"
 msgstr "管理押金"
 
-#: ../../content/applications/sales/rental.rst:43
+#: ../../content/applications/sales/rental.rst:60
 msgid "Learn how to create a refundable deposit for rental products."
 msgstr "了解如何为出租产品创建可退还押金。"
 
-#: ../../content/applications/sales/rental.rst:50
+#: ../../content/applications/sales/rental.rst:67
 msgid "Dashboard"
 msgstr "仪表板"
 
-#: ../../content/applications/sales/rental.rst:52
+#: ../../content/applications/sales/rental.rst:69
 msgid ""
 "Upon opening the **Rental** application, the :guilabel:`Rental Orders` "
 "dashboard is revealed."
@@ -21608,7 +21757,7 @@ msgid ""
 "application."
 msgstr "Odoo 租赁应用程序中的租赁订单仪表板示例。"
 
-#: ../../content/applications/sales/rental.rst:57
+#: ../../content/applications/sales/rental.rst:74
 msgid ""
 "In the default Kanban view, all rentals are visible. Each rental card "
 "displays the customer name, the price of the rental, the related sales order "
@@ -21617,7 +21766,7 @@ msgstr ""
 "在默认的看板视图中，所有租赁订单均可见。每张租赁卡片显示客户名称、租赁价格、"
 "相关销售订单编号以及租赁状态。"
 
-#: ../../content/applications/sales/rental.rst:60
+#: ../../content/applications/sales/rental.rst:77
 msgid ""
 "On the left sidebar, the :guilabel:`Rental Status` for each rental can be "
 "found. Beneath that, the :guilabel:`Invoice Status` of the rentals is "
@@ -21628,11 +21777,11 @@ msgstr ""
 "的 :guilabel:`发票状态`。单击左侧边栏中的任何选项都可以筛选仪表板上显示的租赁"
 "信息。"
 
-#: ../../content/applications/sales/rental.rst:65
+#: ../../content/applications/sales/rental.rst:82
 msgid "Rental products"
 msgstr "租赁产品"
 
-#: ../../content/applications/sales/rental.rst:67
+#: ../../content/applications/sales/rental.rst:84
 msgid ""
 "To view all products that can rented in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
@@ -21641,158 +21790,57 @@ msgstr ""
 "要查看数据库中所有可租赁的产品，请导航至\\ :menuselection:`出租应用 --> 产品"
 "`。默认情况下，搜索栏中会显示\\ :guilabel:`租赁`\\ 搜索筛选条件。"
 
-#: ../../content/applications/sales/rental.rst:70
+#: ../../content/applications/sales/rental.rst:87
 msgid ""
 "Each product Kanban card displays that product's name, rental price, and "
 "product image (if applicable)."
 msgstr "每个产品看板卡都会显示该产品的名称、租赁价格和产品图片（如适用）。"
 
-#: ../../content/applications/sales/rental.rst:74
+#: ../../content/applications/sales/rental.rst:91
 msgid ":doc:`rental/rental_orders/manage_deposits`"
 msgstr ":doc:`rental/rental_orders/manage_deposits`"
 
-#: ../../content/applications/sales/rental.rst:79
-msgid "Rental pricing"
-msgstr "租赁价格"
-
-#: ../../content/applications/sales/rental.rst:81
-msgid ""
-"To adjust the rental pricing on a product, go to the :guilabel:`Products` "
-"page in the **Rental** app, then select the desired product or "
-"click :guilabel:`New` to create a new product from scratch."
-msgstr ""
-"要調整產品的出租定價，請前往\\ **出租**\\ 應用程式中的\\ :guilabel:`產品`\\ "
-"頁面，然後選擇所需的產品或點擊\\ :guilabel:`新建`\\ 從頭建立新產品。"
-
-#: ../../content/applications/sales/rental.rst:84
-msgid ""
-"On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, "
-"open the :guilabel:`Rental prices` tab."
-msgstr ""
-"在產品表單上，確保勾選了\\ :guilabel:`出租`\\ 核取方塊。然後開啟"
-"\\ :guilabel:`出租價格`\\ 分頁。"
-
-#: ../../content/applications/sales/rental.rst:None
-msgid "How the Settings page appears in the Odoo Rental application."
-msgstr "设置页面在 Odoo租赁应用程序中的显示方式。"
-
-#: ../../content/applications/sales/rental.rst:93
-msgid ""
-"Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, "
-"designate custom rental prices and rental periods for the product."
-msgstr ""
-"在 :guilabel:`租赁价格` 标签的 :guilabel:`定价` 部分，指定产品的自定义租赁价"
-"格和租赁期。"
-
 #: ../../content/applications/sales/rental.rst:96
-msgid ""
-"To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a "
-"*pricing period* (:dfn:`the unit of duration of the rental`) in "
-"the :guilabel:`Period` column, or create a new pricing period by typing in "
-"the name and clicking :guilabel:`Create`."
+msgid "Rental price computing"
 msgstr ""
-"要为租赁添加定价，请单击 :guilabel:`添加价格`。然后，在:guilabel:`期间`栏中选"
-"择一个*定价期*（:dfn:`租期单位`），或输入名称并点击:guilabel:`创建`，以创建一"
-"个新的定价期。"
 
-#: ../../content/applications/sales/rental.rst:100
-msgid ""
-"Next, decide whether or not to apply this custom rental price to a "
-"specific :guilabel:`Pricelist`."
-msgstr "接下来，决定是否将此自定义租金价格应用到特定的 :guilabel:`价目表` 中。"
-
-#: ../../content/applications/sales/rental.rst:102
-msgid ""
-"Lastly, enter the desired :guilabel:`Price` for that "
-"specific :guilabel:`Period`."
-msgstr "最后，为特定的 :guilabel:`时期` 输入所需的 :guilabel:`价格`。"
-
-#: ../../content/applications/sales/rental.rst:105
-msgid ""
-"No limit exists on how many pricing lines can be added. Multiple pricing "
-"options for rental products are typically used to give discounts for "
-"customers who agree to longer rental durations."
-msgstr ""
-"可以新增的定價行數沒有限制。出租產品的多種定價選項通常用於為同意較長出租期限"
-"的客戶提供折扣。"
-
-#: ../../content/applications/sales/rental.rst:109
-msgid ""
-"Remember when considering pricing that renting for a day is usually limited "
-"to operating hours, not 24 hours. When determining pricing, keep in mind "
-"that a rental day typically refers to operating hours, not a full 24-hour "
-"period."
-msgstr ""
-"在考慮定價時請記住，租一天通常僅限於營業時間，而非24小時。在確定定價時，請記"
-"住出租日通常指的是營業時間，而非完整的24小時週期。"
-
-#: ../../content/applications/sales/rental.rst:114
-msgid "Reservations"
-msgstr "预留"
-
-#: ../../content/applications/sales/rental.rst:116
-msgid ""
-"Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` "
-"tab, there is the option to configure additional fines for "
-"any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the customer "
-"takes to return a rental."
-msgstr ""
-"在\\ :guilabel:`出租價格`\\ 分頁的\\ :guilabel:`預約`\\ 部分下，有選項可以為"
-"客戶退還出租時所產生的任何\\ :guilabel:`每小時罰款`\\ 或\\ :guilabel:`每日罰"
-"款`\\ 配置額外罰款。"
-
-#: ../../content/applications/sales/rental.rst:120
-msgid ""
-"Also, there is the option to set the :guilabel:`Reserve product` time, "
-"expressed in hours, to make the rental product temporarily unavailable "
-"between two rental orders. Such a feature may prove useful if maintenance or "
-"cleaning is required between rentals."
-msgstr ""
-"此外，還有選項可以設定\\ :guilabel:`保留產品`\\ 時間（以小時為單位），使出租"
-"產品在兩個出租訂單之間暫時不可用。如果需要在出租之間進行維護保養或清潔，此功"
-"能可能會很有用。"
-
-#: ../../content/applications/sales/rental.rst:125
-msgid "Price computing"
-msgstr "价格计算"
-
-#: ../../content/applications/sales/rental.rst:127
+#: ../../content/applications/sales/rental.rst:98
 msgid ""
 "Odoo always uses two rules to compute the price of a product when a rental "
 "order is created:"
 msgstr "在创建租赁订单时，Odoo 总是使用两种规则来计算产品价格："
 
-#: ../../content/applications/sales/rental.rst:129
+#: ../../content/applications/sales/rental.rst:100
 msgid "Only one price line is used."
 msgstr "仅使用一个价格行。"
 
-#: ../../content/applications/sales/rental.rst:130
+#: ../../content/applications/sales/rental.rst:101
 msgid "The cheapest line is selected."
 msgstr "选择最便宜的线路。"
 
-#: ../../content/applications/sales/rental.rst:133
+#: ../../content/applications/sales/rental.rst:104
 msgid "Consider the following rental pricing configuration for a product:"
 msgstr "考虑产品的以下租赁定价配置："
 
-#: ../../content/applications/sales/rental.rst:135
+#: ../../content/applications/sales/rental.rst:106
 msgid "1 day: $100"
 msgstr "1 天: $100"
 
-#: ../../content/applications/sales/rental.rst:136
+#: ../../content/applications/sales/rental.rst:107
 msgid "3 days: $250"
 msgstr "3 天: $250"
 
-#: ../../content/applications/sales/rental.rst:137
+#: ../../content/applications/sales/rental.rst:108
 msgid "1 week: $500"
 msgstr "1 周: $500"
 
-#: ../../content/applications/sales/rental.rst:139
+#: ../../content/applications/sales/rental.rst:110
 msgid ""
 "A customer wants to rent this product for eight days. What price will they "
 "pay?"
 msgstr "一位客户想租用该产品八天。他们将支出什么价格？"
 
-#: ../../content/applications/sales/rental.rst:141
+#: ../../content/applications/sales/rental.rst:112
 msgid ""
 "After an order is created, Odoo selects the second line as this is the "
 "cheapest option. The customer has to pay three times '3 days' to cover the "
@@ -21838,7 +21886,7 @@ msgstr ""
 msgid ""
 "Configuration requirements differ depending on the type of service product. "
 "To learn more about the default settings for rental products, refer to "
-"the :ref:`Configuration <rental/product_type/settings>` section on the "
+"the :ref:`Configuration <rental/product_type/configuration>` section on the "
 "*Rental product type* page."
 msgstr ""
 
@@ -21884,7 +21932,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:53
-#: ../../content/applications/sales/rental/configure_products/products.rst:47
+#: ../../content/applications/sales/rental/configure_products/products.rst:52
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:85
 msgid "Initial product configuration"
 msgstr ""
@@ -21941,18 +21989,19 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:82
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:116
 msgid "Configuring rental periods and prices"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:84
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:118
+#: ../../content/applications/sales/rental/configure_products/products.rst:69
 msgid ""
 "No limit exists on how many rental prices can be added to a product. "
 "Multiple pricing options for rental products are typically used to give "
 "discounts for customers who agree to longer rental durations. When creating "
 "multiple pricing options for a rental product, remember the **Rental** "
-"app's :ref:`price computing logic <rental/pricing>`."
+"app's :ref:`price computing logic <rental/price-computing>`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:89
@@ -21970,6 +22019,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:94
+#: ../../content/applications/sales/rental/configure_products/products.rst:79
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:128
 msgid ""
 "(Optional) Select a pricelist option from the :guilabel:`Pricelist` column. "
@@ -21981,6 +22031,7 @@ msgid "Enter the :guilabel:`Price` for the chosen :guilabel:`Period`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:133
 msgid ""
 "Remember when considering pricing that renting for a day is usually limited "
@@ -21997,6 +22048,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:92
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:141
 msgid ""
 ":guilabel:`Hourly Fine`: The price per hour charged when the rental product "
@@ -22004,6 +22056,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:109
+#: ../../content/applications/sales/rental/configure_products/products.rst:94
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:143
 msgid ""
 ":guilabel:`Daily Fine`: The price per day charged when the rental product is "
@@ -22011,6 +22064,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:111
+#: ../../content/applications/sales/rental/configure_products/products.rst:96
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:145
 msgid ""
 ":guilabel:`Reserve product`: The time the rental product is temporarily "
@@ -22023,6 +22077,7 @@ msgid "Example of a configured Rental prices tab on the Rental product."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:120
+#: ../../content/applications/sales/rental/configure_products/products.rst:102
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:154
 msgid "Creating a rental period"
 msgstr ""
@@ -22030,10 +22085,10 @@ msgstr ""
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:122
 msgid ""
 "The **Rental** app allows users to :ref:`create custom rental periods "
-"<rental/products/rental-periods-prices-reservations>` to use in the *Rental "
-"prices* tab. This is helpful when renting services with special pricing for "
-"a set amount of time, such as offering a four-hour photo shoot for $100 when "
-"the hourly rate is $30."
+"<rental/products/rental-period>` to use in the *Rental prices* tab. This is "
+"helpful when renting services with special pricing for a set amount of time, "
+"such as offering a four-hour photo shoot for $100 when the hourly rate is "
+"$30."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:127
@@ -22044,7 +22099,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:133
-#: ../../content/applications/sales/rental/configure_products/products.rst:62
+#: ../../content/applications/sales/rental/configure_products/products.rst:137
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Optional: specify rental variants"
 msgstr ""
@@ -22091,6 +22146,7 @@ msgid "Example of service variants in the Attributes & Variants tab."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:161
+#: ../../content/applications/sales/rental/configure_products/products.rst:247
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:197
 msgid "eCommerce features"
 msgstr ""
@@ -22112,18 +22168,18 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:173
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:120
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:130
 msgid ":doc:`service_products`"
 msgstr ":doc:`service_products`"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:174
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:119
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:129
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:210
 msgid ":doc:`products`"
 msgstr ":doc:`products`"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:175
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:99
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:109
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:211
 msgid ":doc:`../../../services/planning`"
 msgstr ":doc:`../../../services/planning`"
@@ -22133,11 +22189,19 @@ msgstr ":doc:`../../../services/planning`"
 msgid ":doc:`../../sales/products_prices/products/variants`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:5
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:1
+msgid ""
+"This page explains the Goods and Services product types available in the "
+"Rental app and their configuration settings, app integrations, and search "
+"options. It also covers rental periods, including the default Nightly period "
+"with check-in and check-out fields."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:11
 msgid "Rental product type"
 msgstr "出租产品类型"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:7
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:13
 msgid ""
 "Odoo allows for two :ref:`product types <inventory/product_management/goods-"
 "or-services>` when configuring a rental product: Goods or Services."
@@ -22145,41 +22209,28 @@ msgstr ""
 "Odoo 在配置出租产品时允许两种\\ :ref:`产品类型 <inventory/product_management/"
 "goods-or-services>`：商品或服务。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:10
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:16
 msgid ""
 "A rental *Goods* product is a physical item, such as a computer, vehicle, "
-"bike, camera, or an item of clothing. Goods are removed from the company’s "
+"bike, camera, or an item of clothing. Goods are removed from the company's "
 "stock, delivered to the customer, and then returned to the company."
 msgstr ""
-"出租\\ *商品*\\ 产品是实物物品，例如电脑、车辆、自行车、相机或服装。商品从公"
-"司库存中移除，交付给客户，然后退还给公司。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:14
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:20
 msgid ""
 "A rental *Service* can be labor or something non-physical, such as "
 "installation, photography, or a deposit. It can also be a physical item that "
-"never leaves the company’s stock, such as a hotel room, work station, or "
+"never leaves the company's stock, such as a hotel room, work station, or "
 "storage unit."
 msgstr ""
-"出租\\ *服务*\\ 可以是劳务或非实物的东西，例如安装、摄影或押金。它也可以是永"
-"远不会离开公司库存的实物物品，例如酒店房间、工作站或储物单元。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:18
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:24
 msgid ""
 "The following sections detail basic settings and app integration "
 "configurations for Goods and Services."
 msgstr "以下部分详细说明了商品和服务的基本设置和应用集成配置。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:24
-#: ../../content/applications/sales/rental/configure_products/products.rst:12
-#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
-#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
-msgid "Settings"
-msgstr "设置"
-
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:27
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:33
 msgid ""
 "For the :guilabel:`Default Padding time` and :guilabel:`Rental Transfers` "
 "settings, the **Inventory** app must be installed. For the *Rent Online "
@@ -22189,7 +22240,7 @@ msgstr ""
 "\\ **库存**\\ 应用。对于\"在线出租\"部分的设置，必须安装\\ **电子商务**\\ 模"
 "块。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:31
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:37
 msgid ""
 "To configure default settings on rental products, navigate "
 "to :menuselection:`Rental app --> Configuration --> Settings`."
@@ -22201,7 +22252,7 @@ msgstr ""
 msgid "The settings page of the Rental app with all the default values."
 msgstr "出租应用的设置页面，显示所有默认值。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:37
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:43
 msgid ""
 "In the *Rental* section, the *Default Delay Costs* subsection is used to set "
 "up late fees. These are the base settings that come with the **Rental** app "
@@ -22210,33 +22261,31 @@ msgstr ""
 "在\"出租\"部分，\"默认延迟费用\"子部分用于设置滞纳金。这些是\\ **出租**\\ 应"
 "用安装时附带的基本设置。要将延迟费用和时间应用于出租产品，请填写："
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:41
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:47
 msgid ""
 ":guilabel:`Per Hour`: The late fee amount is applied each hour the rental "
 "product is past due."
 msgstr ":guilabel:`每小时`：出租产品每逾期一小时应用的滞纳金金额。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:42
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:48
 msgid ""
 ":guilabel:`Per Day`: The late fee amount is applied each day the rental "
 "product is past due."
 msgstr ":guilabel:`每天`：出租产品每逾期一天应用的滞纳金金额。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:43
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:49
 msgid ""
 ":guilabel:`Apply after`: The number of hours necessary to trigger a late fee."
 msgstr ":guilabel:`应用于`：触发滞纳金所需的小时数。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:44
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:50
 msgid ""
 ":guilabel:`Product`: Limit the default delay costs setting to one product "
-"from the field’s drop-down list. Leave the :guilabel:`Product` field blank "
+"from the field's drop-down list. Leave the :guilabel:`Product` field blank "
 "if the defaults apply to all products."
 msgstr ""
-":guilabel:`产品`：将默认延迟费用设置限制为字段下拉列表中的一个产品。如果默认"
-"设置适用于所有产品，请将\\ :guilabel:`产品`\\ 字段留空。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:47
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:53
 msgid ""
 "If the **Inventory** app is installed, the *Default Padding Time* section "
 "displays. The time inputted into the :guilabel:`Padding` field blocks a "
@@ -22247,7 +22296,7 @@ msgstr ""
 "\\ :guilabel:`缓冲`\\ 字段中的时间会阻止出租产品可供预订。该设置以小时为单"
 "位。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:52
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:58
 msgid ""
 "For more control, configure the costs for late returns and padding time in "
 "the :guilabel:`Hourly Fine`, :guilabel:`Daily Fine`, and :guilabel:`Reserve "
@@ -22256,7 +22305,7 @@ msgstr ""
 "要获得更多控制，请在产品表单的\\ :guilabel:`每小时罚款`、:guilabel:`每日罚款"
 "`\\ 和\\ :guilabel:`预留产品`\\ 字段中配置延迟归还和缓冲时间的费用。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:55
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:61
 msgid ""
 "The :guilabel:`Rental Transfers` checkbox enables automatic creation of "
 "delivery and return receipts for a rental product. This feature also needs "
@@ -22265,7 +22314,7 @@ msgstr ""
 ":guilabel:`出租转移`\\ 复选框可为出租产品自动创建发货和退货收据。此功能还需要"
 "安装\\ **库存**\\ 应用。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:59
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:65
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the :guilabel:`Rental Transfers` feature is enabled. Odoo uses the new "
@@ -22278,7 +22327,7 @@ msgstr ""
 "置。Odoo使用新的默认位置\"客户/出租\"来跟踪出租期间的产品（出租时将它们从库存"
 "移至客户/出租，归还时移回）。**请勿**\\ 修改此位置以避免破坏库存跟踪。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:65
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:73
 msgid ""
 "If the **eCommerce** module is installed, the *Rent Online* section is "
 "available to configure. The *Minimal time of rental* section contains:"
@@ -22286,7 +22335,7 @@ msgstr ""
 "如果安装了\\ **电子商务**\\ 模块，则可配置\"在线出租\"部分。\"最短出租时间"
 "\"部分包含："
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:68
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:76
 msgid ""
 ":guilabel:`Minimal Rental Duration`: The minimum duration of time a rental "
 "product must be booked. The available units of time are: Hours, Days, Weeks, "
@@ -22295,22 +22344,22 @@ msgstr ""
 ":guilabel:`最短出租期限`：出租产品必须预订的最短时间。可用的时间单位包括：小"
 "时、天、周和月。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:70
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:78
 msgid ""
 ":guilabel:`Unavailability days`: Designated days that are not available for "
 "online rental pick ups or returns."
 msgstr ":guilabel:`不可用日期`：指定不可用于在线出租取货或退货的日期。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:73
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:81
+#: ../../content/applications/sales/rental/configure_products/products.rst:38
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr "点击\\ :guilabel:`保存`\\ 以应用更改。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:76
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:86
 msgid "App integration configuration"
 msgstr "应用集成配置"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:78
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:88
 msgid ""
 "The **Rental** app relies on additional Odoo app integrations to expand its "
 "settings and product configurations. The following apps are essential for "
@@ -22319,13 +22368,13 @@ msgstr ""
 "**出租**\\ 应用依赖于其他Odoo应用集成来扩展其设置和产品配置。以下应用对于创建"
 "产品和出租订单时的工作流效率和自动化至关重要："
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:82
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:92
 msgid ""
 "**Sales**: Enables online payments and signatures, uses quotation templates, "
 "variants, and PDF Quote Builder."
 msgstr "**销售**：启用在线支付和签名，使用报价模板、变体和PDF报价生成器。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:84
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:94
 msgid ""
 "**Sign**: Allows uploading and customization of various rental and service "
 "agreements. These documents are used to facilitate the *Request Signature* "
@@ -22334,7 +22383,7 @@ msgstr ""
 "**电子签名**：允许上传和自定义各种出租和服务协议。这些文档用于促进\"请求签名"
 "\"功能。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:86
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:96
 msgid ""
 "**Planning**: Integrates with the **Rental** app to automatically match "
 "service products with employees or materials based on availability. This "
@@ -22343,7 +22392,7 @@ msgstr ""
 "**计划**：与\\ **出租**\\ 应用集成，根据可用性自动将服务产品与员工或材料匹"
 "配。此设置在产品表单上配置。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:88
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:98
 msgid ""
 "**Project**: Integrates with the **Rental** app to automatically creation of "
 "a project, a task, or both when a rental quote that includes the configured "
@@ -22352,46 +22401,46 @@ msgstr ""
 "**项目**\\ ：与\\ **出租**\\ 应用集成，当确认包含已配置产品的租赁报价单时，自"
 "动创建项目、任务或两者。此设置在产品表单上配置。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:91
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:101
 msgid ""
 "**Inventory**: Enables warehouse delivery and return receipts, product "
 "tracking options, variants, and product downtime."
 msgstr ""
 "**库存**\\ ：启用仓库交付和退货收据、产品跟踪选项、变体和产品停机时间。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:93
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:103
 msgid ""
 "**eCommerce**: Allows product configuration for the online shop. This "
 "setting is configured on the product form."
 msgstr "**电子商务**\\ ：允许为在线商店配置产品。此设置在产品表单上配置。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:97
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:107
 msgid ":doc:`../../sales`"
 msgstr ":doc:`../../sales`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:98
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:108
 msgid ":doc:`../../sales/sales_quotations/pdf_quote_builder`"
 msgstr ":doc:`../../sales/sales_quotations/pdf_quote_builder`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:100
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:110
 msgid ":doc:`../../../productivity/sign`"
 msgstr ":doc:`../../../productivity/sign`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:101
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:111
 msgid ":doc:`../../../services/project`"
 msgstr ":doc:`../../../services/project`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:266
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:112
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ":doc:`../../../inventory_and_mrp/inventory`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:106
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:116
 msgid "Search for rental products"
 msgstr "搜索租赁产品"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:108
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:118
 msgid ""
 "To view all products available for rent in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
@@ -22404,7 +22453,7 @@ msgstr ""
 "图。删除筛选器，然后单击搜索栏。从预设筛选器中，选择\\ :guilabel:`货物`\\ 、"
 "\\ :guilabel:`服务`\\ 或两者。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:113
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:123
 msgid ""
 "All the selected options appear as Kanban cards. For *Goods*, the card "
 "displays the name, rental rate, and amount on hand. For *Services*, the card "
@@ -22414,15 +22463,15 @@ msgstr ""
 "所有选定的选项都显示为看板卡片。对于\\ *货物*\\ ，卡片显示名称、租赁费率和现"
 "有数量。对于\\ *服务*\\ ，卡片显示名称、变体数量（如果已配置）和租赁价格。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:121
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:131
 msgid "`Tutorial: Configuring a rental product <configure-rental-product_>`_"
 msgstr "`教程：配置租赁产品 <configure-rental-product_>`_"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:124
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:134
 msgid "Rental periods"
 msgstr "租赁期间"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:126
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:136
 msgid ""
 "A rental period is the unit of time used to calculate the rental rate. This "
 "setting is configured on the *Rental prices* tab on the product form. To "
@@ -22433,7 +22482,7 @@ msgstr ""
 "上配置。要编辑默认租赁费率，请导航至\\ :menuselection:`租赁应用 --> 配置 --> "
 "租赁期间`\\ 。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:130
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:140
 msgid ""
 "Select a rental period to open the *Period* form. With the exception of "
 "the :guilabel:`Nightly` rental period, all period forms have the following "
@@ -22442,11 +22491,11 @@ msgstr ""
 "选择一个租赁期间以打开\\ *期间*\\ 表单。除\\ :guilabel:`每晚`\\ 租赁期间外，"
 "所有期间表单都具有以下字段："
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:133
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:143
 msgid ":guilabel:`Name`: A short description or title for the period."
 msgstr ":guilabel:`名称`\\ ：期间的简短描述或标题。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:134
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:144
 msgid ""
 ":guilabel:`Duration`: The minimum amount of time before the rule is applied. "
 "Set to `0` to represent a fixed rental price."
@@ -22454,21 +22503,21 @@ msgstr ""
 ":guilabel:`持续时间`\\ ：应用规则之前的最短时间。设置为\\ `0`\\ 表示固定租赁"
 "价格。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:136
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:146
 msgid ""
 ":guilabel:`Unit`: A drop-down list of time periods the shortest being Hours "
 "and the longest is Years."
 msgstr ":guilabel:`单位`\\ ：时间段的下拉列表，最短为小时，最长为年。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:139
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:149
 msgid "To create a new rental period, click :guilabel:`New`."
 msgstr "要创建新的租赁期间，请单击\\ :guilabel:`新建`\\ 。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:142
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:152
 msgid "Nightly rental period"
 msgstr "每晚租赁期间"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:144
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:154
 msgid ""
 "The *Nightly* rental period form replaces the :guilabel:`Duration` field "
 "with two new fields :guilabel:`Check-in` and :guilabel:`Check-out`. Both "
@@ -22480,11 +22529,19 @@ msgstr ""
 "`\\ 替换了\\ :guilabel:`持续时间`\\ 字段。两个字段均使用 24 小时制设置时间。"
 "此设置建议用于需要特定时间开始和结束出租期间的空间或仓储出租。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:3
+#: ../../content/applications/sales/rental/configure_products/products.rst:1
+msgid ""
+"This page explains how to create and configure a new physical rental product "
+"(Goods), including initial setup, rental periods and pricing, variants, and "
+"product tracking by serial number."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:8
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:37
 msgid "Physical rental products"
 msgstr "實體出租產品"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:5
+#: ../../content/applications/sales/rental/configure_products/products.rst:10
 msgid ""
 "The Odoo **Rental** app allows users to customize scheduling, pricing, and "
 "inventory for physical rental products that require stock movement, "
@@ -22495,21 +22552,17 @@ msgstr ""
 "*）自定义排期、定价和库存。用户可以设置多个取货和还货地点，并通过序列号跟踪出"
 "租产品。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:14
+#: ../../content/applications/sales/rental/configure_products/products.rst:19
 msgid ""
 "The **Rental** app offers many app-integration features. Depending on the "
 "installed Odoo apps, specific settings are available. To learn more about "
-"the default setting for rental products, refer to the :ref:`Settings <rental/"
-"product_type/settings>` section of the *Rental product type* page. The "
-"following configurations assume the **Rental** and **Inventory** apps are "
-"installed."
+"the default settings for rental products, refer to the :ref:`Settings "
+"<rental/product_type/configuration>` section of the *Rental product type* "
+"page. The following configurations assume the **Rental** and **Inventory** "
+"apps are installed."
 msgstr ""
-"**出租**\\ 应用程序提供许多应用集成功能。根据已安装的 Odoo 应用程序，可使用特"
-"定设置。要了解有关出租产品默认设置的更多信息，请参阅*出租产品类型*页面的"
-"\\ :ref:`设置 <rental/product_type/settings>`\\ 部分。以下配置假定已安装\\ **"
-"出租**\\ 和\\ **库存**\\ 应用程序。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:19
+#: ../../content/applications/sales/rental/configure_products/products.rst:24
 msgid ""
 "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and "
 "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
@@ -22519,7 +22572,7 @@ msgid ""
 "it."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:25
+#: ../../content/applications/sales/rental/configure_products/products.rst:30
 msgid ""
 "In the **Rental** section, under the :guilabel:`Default Delay Costs` "
 "subsection, fill in the :guilabel:`Apply after` field."
@@ -22527,7 +22580,7 @@ msgstr ""
 "在\\ **出租**\\ 部分的\\ :guilabel:`預設延遲成本`\\ 小節下，填寫"
 "\\ :guilabel:`在以下時間後套用`\\ 欄位。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:29
+#: ../../content/applications/sales/rental/configure_products/products.rst:34
 msgid ""
 "For more control, configure the costs of late returns in the :guilabel:`Per "
 "Hour` and :guilabel:`Per Day` fields on the product form. If the defaults "
@@ -22543,11 +22596,11 @@ msgid ""
 "app."
 msgstr "出租应用程序中配置的默认延误费用和缓冲设置示例。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:41
+#: ../../content/applications/sales/rental/configure_products/products.rst:46
 msgid "Create a new physical product"
 msgstr "建立新的實體產品"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:43
+#: ../../content/applications/sales/rental/configure_products/products.rst:48
 msgid ""
 "To set up a new physical rental product, go to the :menuselection:`Rental "
 "app --> Products`, then click :guilabel:`New`. On the rental product form, "
@@ -22556,14 +22609,14 @@ msgstr ""
 "要设置新的实体出租产品，请转到\\ :menuselection:`出租应用 --> 产品`\\ ，然后"
 "点击\\ :guilabel:`新建`\\ 。在出租产品表单上，相应地填写各个标签页："
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:49
+#: ../../content/applications/sales/rental/configure_products/products.rst:54
 msgid ""
 "In the new product window, the :guilabel:`Rental` checkbox is already "
 "selected by default. Select the :guilabel:`Product Type` "
 "as :guilabel:`Goods`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:52
+#: ../../content/applications/sales/rental/configure_products/products.rst:57
 msgid ""
 "Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
 "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
@@ -22575,86 +22628,70 @@ msgstr ""
 msgid "The new product view in the Rental app."
 msgstr "出租應用程式中的新產品檢視。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:65
+#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:123
 msgid ""
-"The *Variant* feature in the **Inventory** app must be enabled for this tab "
-"to display."
-msgstr "必须在\\ **库存**\\ 应用中启用\\ *变体*\\ 功能，此标签页才会显示。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:67
-msgid ""
-"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
-"attribute and its values <products/variants/attributes>` by "
-"clicking :guilabel:`Add a line`. Attributes and values are useful for "
-"keeping the product library manageable, tracking and differentiating the "
-"inventory, and providing more detailed reports. Examples of rental variants "
-"for a *Goods* product are size, brand, color, and material."
+"To set rental rates for the product, click the *Rental prices* tab. In the "
+"*Pricing* section, click :guilabel:`Add a price`. To enter a new rental rate:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:76
-msgid "Set rental periods, prices, and reservations"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:78
+#: ../../content/applications/sales/rental/configure_products/products.rst:77
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid ""
-"Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
-"section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
-"*pricing period* (:dfn:`the unit of duration of the rental`) in "
-"the :guilabel:`Period` column, or create a new pricing period by typing in "
-"the name and clicking :guilabel:`Create and edit`."
+"Select a :guilabel:`rental period` (:dfn:`the unit of duration of the "
+"rental`) from the :guilabel:`Period` column."
 msgstr ""
-"點擊\\ :guilabel:`出租價格`\\ 分頁，在\\ :guilabel:`定價`\\ 部分中點擊"
-"\\ :guilabel:`新增價格`\\ 以輸入新的出租費率。在\\ :guilabel:`期間`\\ 欄中選"
-"擇\\ *定價期間*（:dfn:`出租期間的單位`），或透過輸入名稱並點擊\\ :guilabel:`"
-"建立並編輯`\\ 來建立新的定價期間。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:84
+#: ../../content/applications/sales/rental/configure_products/products.rst:81
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:130
+msgid "Enter the price for that specific :guilabel:`Period`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:87
 msgid ""
-"Creating a new pricing period opens a pop-up *Create period* window. Fill in "
-"the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
-"click :guilabel:`Save`. The new pricing period automatically applies."
+"In the *Reservations* section are the delay costs and padding time that when "
+"configured are automatically populated from the *Default Delay Costs* "
+"section, provided they have been configured in the :menuselection:`Rental "
+"app --> Configuration --> Settings`. If configured on the product form, the "
+"settings override the settings in the *Default Delay Costs* section."
 msgstr ""
-"创建新定价周期会打开一个\\ *创建周期*\\ 弹出窗口。填写\\ :guilabel:`名称"
-"`\\ 、\\ :guilabel:`持续时间`\\ 和\\ :guilabel:`单位`\\ ，然后点击"
-"\\ :guilabel:`保存`\\ 。新定价周期将自动应用。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:0
-msgid "Sample of a New Period view in the Rental app."
-msgstr "出租應用程式中新期間檢視的範例。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
+#: ../../content/applications/sales/rental/configure_products/products.rst:104
 msgid ""
-"Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To "
-"apply the configured rental rate to an existing pricelist, click in "
-"the :guilabel:`Pricelist` column and select the desired list from the drop-"
-"down menu."
+"The **Rental** app allows users to create custom rental periods to use in "
+"the *Rental Prices* tab. This is helpful when renting services with special "
+"pricing for a set amount of time, such as offering a four-hour photo shoot "
+"for $100 when the hourly rate is $30."
 msgstr ""
-"接下來，為該特定\\ :guilabel:`期間`\\ 輸入\\ :guilabel:`價格`。要將配置的出租"
-"費率套用至現有價目表，請點擊\\ :guilabel:`價目表`\\ 欄並從下拉式選單中選擇所"
-"需的清單。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:95
+#: ../../content/applications/sales/rental/configure_products/products.rst:108
 msgid ""
-"In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
-"Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. "
-"These values are automatically populated from the :guilabel:`Default Delay "
-"Costs` section, provided they have been configured in "
-"the :menuselection:`Rental app --> Configuration --> Settings`."
+"To create a new rental period, go to :menuselection:`Rental app --> "
+"Configuration --> Rental periods`. The *Periods* page displays and lists all "
+"the default rental periods in the **Rental** app. Click :guilabel:`New`, and "
+"on the period form, fill in the following fields:"
 msgstr ""
-"在\\ :guilabel:`預約`\\ 部分，填寫\\ :guilabel:`每小時罰款`、:guilabel:`每日"
-"罰款`\\ 和\\ :guilabel:`保留產品`\\ 時間。這些值會自動從\\ :guilabel:`預設延"
-"遲成本`\\ 部分填入，前提是已在\\ :menuselection:`出租應用程式 --> 配置 --> 設"
-"定`\\ 中配置。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:100
+#: ../../content/applications/sales/rental/configure_products/products.rst:112
 msgid ""
-"Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the "
-"top to save."
+":guilabel:`Name`: The assigned name displays in the :guilabel:`Period` drop-"
+"down list on the *Rental Prices* tab."
 msgstr ""
-"點擊頂部附近的\\ :icon:`fa-cloud-upload` :guilabel:`（手動儲存）`\\ 圖示以儲"
-"存。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:103
+#: ../../content/applications/sales/rental/configure_products/products.rst:114
+msgid ""
+":guilabel:`Duration`: The minimum amount of time to trigger the pricing "
+"rule. If set to `0`, it represents a fixed price."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:116
+msgid ""
+":guilabel:`Unit`: The time unit the :guilabel:`Duration` is based on. "
+"If :guilabel:`Nightly` is selected for the unit, then the :guilabel:`Check-"
+"in` and :guilabel:`Check-out` fields display."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
 msgid ""
 "A bike rental business rents tandem bikes for two hours at the local park. "
 "The hourly rental rate for their tandem bikes is $20, but since tandem bikes "
@@ -22667,7 +22704,7 @@ msgstr ""
 "了确保企业能按时收回自行车，他们将延迟归还费用设定为每小时 20 美元，每天 160 "
 "美元（20 美元 x 8 小时）。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:108
+#: ../../content/applications/sales/rental/configure_products/products.rst:125
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New`, then configure the "
@@ -22676,7 +22713,7 @@ msgstr ""
 "通过转到\\ :menuselection:`出租应用 --> 配置 --> 出租周期`\\ 创建新的定价周"
 "期。点击\\ :guilabel:`新建`\\ ，然后为 `2` 小时配置周期。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:111
+#: ../../content/applications/sales/rental/configure_products/products.rst:128
 msgid ""
 "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab "
 "add the `2` hour period set at `$35`. Manually save to apply changes."
@@ -22688,53 +22725,68 @@ msgstr ""
 msgid "Sample of a rental product with the custom rental period applied."
 msgstr "套用自訂出租期間的出租產品範例。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:120
+#: ../../content/applications/sales/rental/configure_products/products.rst:140
+msgid ""
+"The *Variants* feature in the **Inventory** app must be enabled for this tab "
+"to display."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:142
+msgid ""
+"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
+"attribute and its values <products/variants/attributes>` by "
+"clicking :guilabel:`Add a line`. Attributes and values are useful for "
+"keeping the product library manageable, tracking and differentiating the "
+"inventory, and providing more detailed reports. Examples of rental variants "
+"for a *Goods* product are size, brand, color, and material."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:151
 msgid "Configure product tracking"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:123
+#: ../../content/applications/sales/rental/configure_products/products.rst:154
 msgid ""
 "To configure a physical rental product for product tracking, the "
 "**Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` "
 "must be enabled."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:126
+#: ../../content/applications/sales/rental/configure_products/products.rst:157
 msgid ""
 "For rental products, only :guilabel:`By Unique Serial Number` tracking can "
 "be used. Selecting :guilabel:`By Lots` instead results in an error message, "
 "since that setting doesn't apply to rentals."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:130
+#: ../../content/applications/sales/rental/configure_products/products.rst:161
 msgid ""
 "Go to the :menuselection:`Rental app --> Products`, then "
 "click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
 "checkbox is already selected by default."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:133
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
 msgid ""
 "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable "
 "the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique "
 "Serial Number` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:136
+#: ../../content/applications/sales/rental/configure_products/products.rst:167
 msgid ""
 "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-"
 "down menu or create a new category by typing in the name and "
 "clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental "
-"prices <rental/products/rental-periods-prices-reservations>` tab. Click "
-"the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to "
-"save."
+"prices <rental/products/rental-periods-prices>` tab. Click the :icon:`fa-"
+"cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:144
+#: ../../content/applications/sales/rental/configure_products/products.rst:175
 msgid "Rental Transfers feature"
 msgstr "出租转移功能"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:146
+#: ../../content/applications/sales/rental/configure_products/products.rst:177
 msgid ""
 "The *Rental Transfers* feature automatically creates a delivery receipt when "
 "the rental product is picked up and a return receipt when it is returned to "
@@ -22744,21 +22796,21 @@ msgstr ""
 "*出租转移*\\ 功能会在租赁产品被提取时自动创建交付收据，并在归还到库存时创建退"
 "货收据。记录库存移动可以创建清晰的书面记录，具有多种用途："
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:150
+#: ../../content/applications/sales/rental/configure_products/products.rst:181
 msgid "Tracking high-value products."
 msgstr "跟踪高价值产品。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:151
+#: ../../content/applications/sales/rental/configure_products/products.rst:182
 msgid "Tracking stock levels across multiple stores or warehouse locations."
 msgstr "跨多个商店或仓库位置跟踪库存水平。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:152
+#: ../../content/applications/sales/rental/configure_products/products.rst:183
 msgid ""
 "Tracking products between different store locations that allow pick up and "
 "returns."
 msgstr "在允许取货和退货的不同商店位置之间跟踪产品。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:154
+#: ../../content/applications/sales/rental/configure_products/products.rst:185
 msgid ""
 "To enable the :guilabel:`Rental Transfers` feature, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
@@ -22769,7 +22821,7 @@ msgstr ""
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr "启用出租转移的出租设置示例。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:164
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the *Rental Transfers* feature is enabled. Odoo uses the new default "
@@ -22783,18 +22835,18 @@ msgstr ""
 "从\\ :guilabel:`库存`\\ 移动到\\ :guilabel:`客户/出租`\\ ，归还时移回）。请勿"
 "修改以避免破坏库存跟踪。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:173
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid "Multi-location management and transfers"
 msgstr "多地點管理和調撥"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:176
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
 msgid ""
 "Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-"
 "note>` for information about internal location configuration and inventory "
 "tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:179
+#: ../../content/applications/sales/rental/configure_products/products.rst:210
 msgid ""
 "Tracking the location of high-value physical products between locations is "
 "essential. The **Rental** app helps with the *Rental Transfers* feature. "
@@ -22806,21 +22858,21 @@ msgstr ""
 "移动，这一点至关重要。激活出租转移意味着系统对待出租移动类似于销售，每次实物"
 "产品被出租或归还时都需要收货单和交货单。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:184
+#: ../../content/applications/sales/rental/configure_products/products.rst:215
 msgid ""
 "For multi-location management and rental item transfer tracking, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
 "*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:188
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid ""
 "Next, go to the :menuselection:`Inventory app --> Configuration --> "
 "Settings` and in the *Warehouse* section, enable the :guilabel:`Storage "
 "Locations` checkbox. Click :guilabel:`Save` to apply the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:192
+#: ../../content/applications/sales/rental/configure_products/products.rst:223
 msgid ""
 "To configure new locations, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Locations`. Click :guilabel:`New` to configure a new "
@@ -22829,7 +22881,7 @@ msgstr ""
 "要配置新位置，请导航到\\ :menuselection:`库存应用 --> 配置 --> 位置`\\ 。点击"
 "\\ :guilabel:`新建`\\ 以配置新的内部位置。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid ""
 "On the new location page, enter the :guilabel:`Location Name` and ensure "
 "the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click "
@@ -22840,7 +22892,7 @@ msgstr ""
 "`\\ 字段设置为\\ :guilabel:`WH`\\ 。点击顶部附近的\\ :icon:`fa-cloud-"
 "upload`\\ :guilabel:`手动保存`\\ 图标以保存。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:200
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 msgid ""
 "A bike rental business has two store locations within the same city. Both "
 "locations allow for pick-up and drop-off of their bikes. The company wants "
@@ -22849,18 +22901,17 @@ msgstr ""
 "一家自行车租赁公司在同一城市有两个门店位置。两个位置都允许取车和还车。公司希"
 "望准确跟踪每个位置的自行车。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:204
+#: ../../content/applications/sales/rental/configure_products/products.rst:235
 msgid ""
 "Ensure the **Rental** and **Inventory** apps are configured by "
 "enabling :guilabel:`Rental Transfers` in the **Rental** app "
 "and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:207
+#: ../../content/applications/sales/rental/configure_products/products.rst:238
 msgid ""
-"Next, go to the :menuselection:`Inventory app > Configuration > Locations`. "
-"Create a new location Next, go to the :menuselection:`Inventory app --> "
-"Configuration --> Locations`. Create a new location for each storefront."
+"Next, go to the :menuselection:`Inventory app --> Configuration --> "
+"Locations`. Create a new location for each storefront."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
@@ -22869,103 +22920,35 @@ msgid ""
 "locations."
 msgstr "代表不同出租店铺位置的内部库存库位示例。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:217
-msgid "Pickup products"
-msgstr "提货"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:219
-msgid ""
-"When a customer picks up products, navigate to the appropriate rental order, "
-"click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery "
-"form listing the reserved rental products. Click :guilabel:`Validate` to "
-"move the order to the :guilabel:`Done` stage."
-msgstr ""
-"当客户提货时，导航至相应的出租订单，点击\\ :guilabel:`提货`\\ 。**出租**\\ 应"
-"用程序会显示仓库交货单，列出预留的出租产品。点击\\ :guilabel:`验证`\\ 将订单"
-"移至\\ :guilabel:`完成`\\ 阶段。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "Sample of a Pickup page in the Rental app."
-msgstr "出租应用程序中提货页面的示例。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:226
-msgid ""
-"Doing so places a :guilabel:`Pickedup` status banner on the rental order."
-msgstr "这样做会在出租订单上放置一个\\ :guilabel:`已提货`\\ 状态横幅。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:231
-msgid "Return products"
-msgstr "退货产品"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:233
-msgid ""
-"When a customer returns products, navigate to the desired rental order and "
-"click :guilabel:`Return`. The **Rental** app displays a warehouse receipt "
-"form listing the checked-out rental products."
-msgstr ""
-"当客户退还产品时，导航至所需的出租订单并点击\\ :guilabel:`退货`\\ 。**出租"
-"**\\ 应用会显示一个仓库收货单，列出已借出的出租产品。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
-msgid ""
-"Enter the same number of products the customer returned in "
-"the :guilabel:`Quantity` column. If any of the products have serial numbers, "
-"enter them into the :guilabel:`Serial Numbers` column."
-msgstr ""
-"在\\ :guilabel:`数量`\\ 列中输入客户退还的相同数量产品。如果任何产品有序列"
-"号，请将其输入\\ :guilabel:`序列号`\\ 列。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "Sample of the Return page in the Rental app."
-msgstr "出租应用程序中退货页面的示例。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
-msgid ""
-"Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. "
-"A :guilabel:`Returned` status banner appears on the rental order."
-msgstr ""
-"点击\\ :guilabel:`验证`\\ 将订单移至\\ :guilabel:`完成`\\ 阶段。订单上会显示"
-"\\ :guilabel:`已退货`\\ 状态横幅。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:248
-msgid "Print pickup and return receipts"
-msgstr "打印取件和退货收据"
-
 #: ../../content/applications/sales/rental/configure_products/products.rst:250
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
 msgid ""
-"Pickup and return receipts can be printed for customers when they pick up "
-"and return rental products."
-msgstr "当客户取货和退还出租产品时，可以为其打印取货和退货收据。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
-msgid ""
-"To print pickup and/or return receipts, navigate to the appropriate rental "
-"order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-"
-"down menu."
+"The *Ecommerce* sections are only available if the :guilabel:`eCommerce` "
+"module is installed."
 msgstr ""
-"要打印提货和/或退货收据，导航至相应的出租订单，点击\\ :icon:`fa-"
-"cog`\\ :guilabel:`（操作）`\\ 图标以显示下拉菜单。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:252
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:202
 msgid ""
-"The pickup and return receipt print option in the Odoo Rental application."
-msgstr "Odoo 租赁应用程序中的取货和退货收据打印选项。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:259
-msgid ""
-"From this drop-down menu, hover over the :guilabel:`Print` option to reveal "
-"a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
+"The :guilabel:`Sales` tab has the following sections that configure the "
+"product page on the website: *Ecommerce shop*, *Ecommerce media*, and "
+"*Ecommerce description*. Refer to the :ref:`Product visibility <ecommerce/"
+"products/publish-products>` and :ref:`Product configuration <ecommerce/"
+"products/product-configuration>` sections for the **eCommerce** module for "
+"configuration instructions."
 msgstr ""
-"在下拉菜单中，将鼠标悬停在 :guilabel:`打印` 选项上，显示一个子菜单。然后选"
-"择 :guilabel:`取货和退货收据`。"
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
+msgid ":doc:`../rental_orders/create_rental_order`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:215
+msgid ":doc:`../rental_orders/pickup_return`"
+msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:262
-msgid ""
-"Odoo generates and downloads a PDF detailing all information about the "
-"current status of the rented items."
-msgstr "Odoo 生成并下载一个 PDF 文件，详细说明出租物品当前状态的所有信息。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid ""
 "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=kWfYEOTd2nT_ASp9>`_"
@@ -23122,20 +23105,13 @@ msgid ""
 "other services and can be used for reports on room occupancy."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:123
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:118
 msgid ""
-"To set rental rates for the product, click the *Rental prices* tab. In the "
-"*Pricing* section, click :guilabel:`Add a price`. To enter a new rental rate:"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
-msgid ""
-"Select a :guilabel:`rental period` (:dfn:`the unit of duration of the "
-"rental`) from the :guilabel:`Period` column."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:130
-msgid "Enter the price for that specific :guilabel:`Period`."
+"No limit exists on how many rental prices can be added to a product. "
+"Multiple pricing options for rental products are typically used to give "
+"discounts for customers who agree to longer rental durations. When creating "
+"multiple pricing options for a rental product remember the **Rental** "
+"app's :ref:`price computing logic <rental/price-computing>`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:136
@@ -23154,10 +23130,10 @@ msgstr ""
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:156
 msgid ""
 "The **Rental** app allows users to :ref:`create custom rental periods "
-"<rental/products/rental-periods-prices-reservations>` to use in the *Rental "
-"Prices* tab. This is helpful when renting rooms with special pricing for a "
-"set amount of time, such as offering a cheaper nightly room rate for a "
-"standard hotel room if the guests check out early."
+"<rental/products/rental-period>` to use in the *Rental Prices* tab. This is "
+"helpful when renting rooms with special pricing for a set amount of time, "
+"such as offering a cheaper nightly room rate for a standard hotel room for "
+"if the guests check out early."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:None
@@ -23190,37 +23166,13 @@ msgstr ""
 msgid "Example of the Attribute & Variants tab configured for a hotel room."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
-msgid ""
-"The *Ecommerce* sections are only available if the :guilabel:`eCommerce` "
-"module is installed."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:202
-msgid ""
-"The :guilabel:`Sales` tab has the following sections that configure the "
-"product page on the website: *Ecommerce shop*, *Ecommerce media*, and "
-"*Ecommerce description*. Refer to the :ref:`Product visibility <ecommerce/"
-"products/publish-products>` and :ref:`Product configuration <ecommerce/"
-"products/product-configuration>` sections for the **eCommerce** module for "
-"configuration instructions."
-msgstr ""
-
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:209
 msgid ":doc:`labor_service_products`"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
-msgid ":doc:`../rental_orders/create_rental_order`"
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders.rst:5
 msgid "Rental orders"
 msgstr "租赁订单"
-
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:3
-msgid "Create a rental order"
-msgstr "创建出租订单"
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:5
 msgid ""
@@ -23384,11 +23336,11 @@ msgid ""
 "Sample of a filled out rental order available in the Odoo Rental application."
 msgstr "Odoo 租赁应用程序中提供的已填写租赁订单示例。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:70
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:72
 msgid "Request a customer signature"
 msgstr "请求客户签名"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:72
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:74
 msgid ""
 "Odoo can request the customer sign a rental agreement, outlining the "
 "arrangement between the company and customer, *before* they pick up the "
@@ -23398,7 +23350,7 @@ msgstr ""
 "Odoo 可以在客户提取出租产品\\ *之前*\\ 请求客户签署出租协议，概述公司与客户之"
 "间的安排。此类文档可以确保所有物品按时归还且保持原状。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:77
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:79
 msgid ""
 "Requesting a signature can be done during any stage of the order. This "
 "feature also requires the :doc:`Sign <../../../productivity/sign>` app."
@@ -23406,7 +23358,7 @@ msgstr ""
 "可以在订单的任何阶段请求签名。此功能还需要\\ :doc:`电子签名 <../../../"
 "productivity/sign>`\\ 应用程序。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:80
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:82
 msgid ""
 "If signatures are required, go to the **Rental** app and from the "
 "default :guilabel:`Rental Orders` dashboard, select the desired rental "
@@ -23417,7 +23369,7 @@ msgstr ""
 "表板中选择所需的出租订单。转到\\ :icon:`fa-cog`\\ （:guilabel:`操作`）图标，"
 "然后点击\\ :icon:`fa-file-text`\\ :guilabel:`请求签名`。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:84
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:86
 msgid ""
 "In the *New Signature Request* pop-up window, either :ref:`select an "
 "existing document template <sign/request-signatures/template-odoo-record>` "
@@ -23431,15 +23383,15 @@ msgstr ""
 "signatures/one-off-record>`。发送请求后，签名请求的链接将出现在记录的聊天记录"
 "中。客户可以通过客户门户或电子邮件访问该文档。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:91
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:93
 msgid "`Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_"
 msgstr "`Odoo 教程: 签署 <https://www.odoo.com/slides/sign-61>`_"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:94
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:96
 msgid "Manage employee shifts for rental services"
 msgstr "管理出租服务的员工班次"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:96
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:98
 msgid ""
 "Confirmed rental orders containing :doc:`service products <../"
 "configure_products/service_products>` trigger the automatic creation of "
@@ -23452,7 +23404,7 @@ msgstr ""
 "租订单会触发自动创建班次。当可用性与指定的出租期间匹配时，会为分配的员工角色"
 "生成这些班次。此自动化通过与\\ **计划**\\ 应用的集成以及配置服务产品来实现。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:101
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:103
 msgid ""
 "Click the :icon:`fa-tasks` :guilabel:`Planned` smart button to open the "
 "*Schedule by Resource* page. The page defaults to a *Gantt* view of all the "
@@ -23464,7 +23416,7 @@ msgstr ""
 "面。该页面默认为所有开放班次的\"甘特图\"视图，以及出租订单的出租期间内可用的"
 "相关角色班次。根据需要\\ :ref:`自定义班次 <planning/shifts>`。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:107
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:109
 msgid ""
 "Project templates allow for automated task assignment. When integrated with "
 "the **Planning** app, the system automatically schedules and publishes an "
@@ -23481,11 +23433,11 @@ msgid ""
 "The Schedule by Resource page with a photographer shift in the Rental app."
 msgstr "出租应用中按资源排程页面，显示摄影师班次。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:116
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:118
 msgid "Manage a project created from a rental order"
 msgstr "管理从出租订单创建的项目"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:118
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:120
 msgid ""
 "Click the :icon:`fa-puzzle-piece` :guilabel:`Tasks` smart button on the top "
 "of the rental order to display a Kanban view of all the tasks automatically "
@@ -23500,7 +23452,7 @@ msgstr ""
 msgid "Photography task generated from the rental order."
 msgstr "从出租订单生成的摄影任务。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:126
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:128
 msgid ""
 "Configuring the use of :doc:`../../../services/project/project_management/"
 "project_templates` on the product form creates new projects with predefined "
@@ -23509,11 +23461,11 @@ msgstr ""
 "在产品表单上配置使用\\ :doc:`../../../services/project/project_management/"
 "project_templates`\\ 会创建具有预定义任务、优先级和分配员工的新项目。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:131
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:133
 msgid "Enter the time for the rental service task"
 msgstr "输入出租服务任务的时间"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:133
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:135
 msgid ""
 "To enter time worked on a :doc:`service product <../configure_products/"
 "service_products>`, select the respective service task, then click "
@@ -23523,32 +23475,32 @@ msgstr ""
 "间，请选择相应的服务任务，然后点击\\ :guilabel:`工时单`\\ 选项卡。点击"
 "\\ :guilabel:`添加一行`\\ 以输入："
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:137
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:139
 msgid ":guilabel:`Date`: The date the work was performed."
 msgstr ":guilabel:`日期`：执行工作的日期。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:138
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:140
 msgid ":guilabel:`Employee`: The employee who performed the work."
 msgstr ":guilabel:`员工`：执行工作的员工。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:139
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:141
 msgid ":guilabel:`Description`: A brief description of the work performed."
 msgstr ":guilabel:`描述`：对所执行工作的简要描述。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:140
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:142
 msgid ""
 ":guilabel:`Time Spent`: The number of hours worked on the task for that "
 "entry."
 msgstr ":guilabel:`花费时间`：该条目在任务上工作的小时数。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:142
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:144
 msgid ""
 "Click the :icon:`fa-dollar` :guilabel:`Sales Order` smart button to return "
 "to the rental order."
 msgstr ""
 "点击\\ :icon:`fa-dollar`\\ :guilabel:`销售订单`\\ 智能按钮返回到出租订单。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:145
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:147
 msgid ""
 "Once time is added in the :guilabel:`Timesheets` tab of a task, the rental "
 "order status is automatically changed to :guilabel:`Picked-up`, and "
@@ -23561,11 +23513,11 @@ msgstr ""
 msgid "Sample of a task Timesheet tab for a rental order in the Rental app."
 msgstr "出租应用中租赁订单任务工时单选项卡的示例。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:152
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:154
 msgid "Track delivered time on a rental order"
 msgstr "跟踪出租订单上的交付时间"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:154
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:156
 msgid ""
 "When time is entered on the :guilabel:`Timesheets` tab of an associated "
 "task, the delivered time is automatically tracked on the rental order. To "
@@ -23579,11 +23531,11 @@ msgstr ""
 "的\\ :icon:`fa-clock-o`\\ :guilabel:`已记录`\\ 智能按钮。总工作小时数会显示在"
 "\\ :guilabel:`已记录时间`\\ 字段中。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:160
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:162
 msgid "Create an invoice"
 msgstr "创建发票"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:162
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:164
 msgid ""
 "Navigate to the desired invoice in the **Rental** app. On "
 "the :guilabel:`Rental Orders` dashboard, in the *Invoice Status* section in "
@@ -23594,7 +23546,7 @@ msgstr ""
 "上，在左侧导航栏的\\ *发票状态*\\ 部分，点击\\ :guilabel:`待开票`\\ 以查看所"
 "有需要发送的出租订单。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:166
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:168
 msgid ""
 "Click the desired rental order, then click :guilabel:`Create Invoice`. "
 "Select :guilabel:`Regular invoice` from the :guilabel:`Create invoice(s)` "
@@ -23603,11 +23555,11 @@ msgstr ""
 "点击所需的出租订单，然后点击\\ :guilabel:`创建发票`。从\\ :guilabel:`创建发票"
 "`\\ 窗口中选择\\ :guilabel:`常规发票`，然后点击\\ :guilabel:`创建草稿`。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:170
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:172
 msgid "Finalize time for physical service products"
 msgstr "最终确定实体服务产品的时间"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:172
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:174
 msgid ""
 "For physical service products, such as hotel rooms, workstations, and "
 "conference rooms, a final adjustment to the time may be needed on the "
@@ -23616,7 +23568,7 @@ msgstr ""
 "对于实体服务产品（如酒店房间、工作站和会议室），可能需要在发票上对时间进行最"
 "终调整。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:175
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:177
 msgid ""
 "Enter the amount in the :guilabel:`Quantity` column. If new charges were "
 "accrued during the rental period, click :guilabel:`Add a line` to include "
@@ -23625,11 +23577,11 @@ msgstr ""
 "在\\ :guilabel:`数量`\\ 列中输入金额。如果在出租期间产生了新费用，点击"
 "\\ :guilabel:`添加行`\\ 将其包含在发票草稿中。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:179
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:181
 msgid "Confirm and pay"
 msgstr "确认和付款"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:181
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:183
 msgid ""
 "If all the details are correct on the invoice draft, either "
 "click :guilabel:`Confirm` and click :guilabel:`Send` to email the invoice to "
@@ -23642,7 +23594,7 @@ msgstr ""
 "\\ :guilabel:`打印`\\ 然后点击\\ :guilabel:`付款`。在\\ :guilabel:`付款`\\ 弹"
 "出窗口中，选择一个\\ :guilabel:`日记账`\\ 并点击\\ :guilabel:`创建付款`。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:186
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:188
 msgid ""
 "Click the :guilabel:`Payments` smart button that appears at the top of the "
 "rental order. Click :guilabel:`Validate` on the Payment page."
@@ -23650,7 +23602,7 @@ msgstr ""
 "点击出租订单顶部显示的\\ :guilabel:`付款`\\ 智能按钮。在付款页面上点击"
 "\\ :guilabel:`验证`。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:190
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:192
 msgid ""
 "`Odoo Tutorials: Create a Rental Order <https://youtu.be/hpQHu6U_IKk?"
 "si=Fy_Z82kzQNPBrD8v>`_"
@@ -23658,7 +23610,7 @@ msgstr ""
 "`Odoo 教程：创建出租订单\\ <https://youtu.be/hpQHu6U_IKk?"
 "si=Fy_Z82kzQNPBrD8v>`_"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:191
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:193
 msgid ""
 "`Odoo Tutorials: Configuring a Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=ur6ci-SlKJSvQY5Q>`_"
@@ -23746,17 +23698,16 @@ msgstr ""
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:41
 msgid ""
 "Be sure to configure the rental product's prices on the :ref:`Rental prices "
-"<rental/pricing>` tab."
+"<rental/products/rental-periods-prices>` tab."
 msgstr ""
-"务必在\\ :ref:`出租价格 <rental/pricing>`\\ 选项卡上配置出租产品的价格。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:43
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:44
 msgid ""
 "With the above configuration, a :doc:`rental order <create_rental_order>` "
 "can be created."
 msgstr "通过上述配置，可以创建\\ :doc:`出租订单 <create_rental_order>`。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:46
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:47
 msgid ""
 "After selecting the rental product in the :guilabel:`Order Lines` tab, be "
 "sure to :icon:`fa-plus` :guilabel:`Add` the deposit service product in "
@@ -23765,14 +23716,14 @@ msgstr ""
 "在\\ :guilabel:`订单行`\\ 选项卡中选择出租产品后，务必在\\ :guilabel:`配置您"
 "的产品`\\ 弹出窗口中\\ :icon:`fa-plus`\\ :guilabel:`添加`\\ 押金服务产品。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:49
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:50
 msgid ""
 "The :guilabel:`Configure your product` pop-up only appears if the optional "
 "product is set on the rental product."
 msgstr ""
 ":guilabel:`配置您的产品`\\ 弹出窗口仅在出租产品上设置了可选产品时才会显示。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:53
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:54
 msgid ""
 "If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add "
 "an :guilabel:`Ecommerce Description` stating the deposit is required in the "
@@ -23782,7 +23733,7 @@ msgstr ""
 "\\ :guilabel:`销售`\\ 选项卡中添加\\ :guilabel:`电子商务描述`，说明需要支付押"
 "金。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:56
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:57
 msgid ""
 "When a customer adds the rental product to their cart, "
 "a :guilabel:`Configure your product` pop-up displays the deposit service "
@@ -23791,7 +23742,7 @@ msgstr ""
 "当客户将出租产品添加到购物车时，:guilabel:`配置您的产品`\\ 弹出窗口会在"
 "\\ :guilabel:`可用选项`\\ 下显示押金服务产品。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:59
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:60
 msgid ""
 "Once the customer clicks :icon:`fa-shopping-cart` :guilabel:`Add` the rental "
 "product and the deposit service product are added to their cart."
@@ -23803,20 +23754,344 @@ msgstr ""
 msgid "A deposit service product listed in the rental quotation."
 msgstr "出租报价单中列出的押金服务产品。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:68
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:69
 msgid "Refund deposits upon return"
 msgstr "退货时退还押金"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:70
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:71
 msgid ""
-"Once a customer :ref:`returns the rented product <rental/return-products>`, "
-"reimburse their deposit with a :doc:`credit note <../../../finance/"
-"accounting/customer_invoices/credit_notes>` from the invoice, and change the "
-"*delivered quantity* to `0` on the linked sales order."
+"Once a customer :doc:`returns the rented product <../rental_orders/"
+"pickup_return>`, reimburse their deposit with a :doc:`credit note <../../../"
+"finance/accounting/customer_invoices/credit_notes>` from the invoice, and "
+"change the *delivered quantity* to `0` on the linked sales order."
 msgstr ""
-"客户\\ :ref:`退还租赁产品 <rental/return-products>`\\ 后，使用发票中的"
-"\\ :doc:`信用票 <../../../finance/accounting/customer_invoices/"
-"credit_notes>`\\ 退还押金，并将关联销售订单上的*交付数量*更改为 `0`。"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:1
+msgid ""
+"This document explains how to pick up and return rental Goods (physical "
+"products) and Services."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:9
+msgid ""
+"This document focuses on the pickup and return of both rental *Goods* "
+"(physical products) such as clothes, computer equipment, and bicycles, and "
+"*Services* (physical and non-physical) such as photographer sessions, hotel "
+"rooms, and catering."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:13
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:84
+msgid ""
+"For rental businesses that rent out locations with no stock movement, such "
+"as hotel rooms, meeting rooms, and storage spaces, the pickup (check-in) and "
+"return (check-out) processes are the same."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:16
+msgid ""
+"Once a rental order is confirmed, the reserved rental products are available "
+"for pickup. If company policy requires a signed rental "
+"contract, :ref:`request the customer's signature <rental/create_rental_order/"
+"customer-signature>` before the rental product is picked up."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:22
+msgid ":doc:`../configure_products/product_type`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:29
+msgid "Two basic configurations cover the rental product types:"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:31
+msgid ":ref:`rental/pickup_return/physical-rental-products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:32
+msgid ":ref:`rental/pickup_return/service-rental-products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:39
+msgid ""
+"Refer to the physical rental products :ref:`settings <rental/products/"
+"default-settings>` to see the apps required. If :ref:`product tracking "
+"<rental/products/configure-product-tracking>` is enabled, the pickup and "
+"return process requires additional steps."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:44
+msgid ":ref:`rental/pickup_return/pickup-physical-rental-with-tracking`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:45
+msgid ":ref:`rental/pickup_return/return-physical-product-with-tracking`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:50
+msgid "Service rental products"
+msgstr "服务出租产品"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:52
+msgid ""
+"Configuration for service rental products, both physical and non-physical, "
+"requires the **Rental**, **Planning**, and **Sales** apps to be installed. "
+"For physical service products, configure the :ref:`materials and roles "
+"<rental/service_products/materials-and-roles>` in the **Planning** app "
+"before creating the product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:57
+msgid ""
+"Non-physical service products also require the **Timesheets** app to "
+"accurately track services that use time-based pricing rates. For non-"
+"physical service products, :ref:`configure employee roles <rental/"
+"labor_service_products/configure-employee-roles>` in the **Planning** app "
+"before creating the product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:62
+msgid ""
+"If the business wants to sell service rental products on an online shop, "
+"refer to the :ref:`Configure pickup and return availability for eCommerce "
+"products <rental/pickup_return/ecommerce-products>` section."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:69
+msgid "Configure pickup and return availability for eCommerce products"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:71
+msgid ""
+"The Rental app supports :ref:`eCommerce configuration at the app <rental/"
+"product_type/ecommerce-settings>` and product level when the **Website** app "
+"and the **eCommerce** module are installed. Using the *Unavailability days* "
+"setting restricts the days the rental website allows pickup and returns to "
+"be scheduled. To configure the rental product page in the online store, "
+"refer to the :ref:`Product configuration <ecommerce/products/product-"
+"configuration>` section for the **eCommerce** module."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:81
+msgid "Pick up a rental product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:88
+msgid ""
+"To process a pickup of a rental product, go to :menuselection:`Rental app --"
+"> Orders --> Orders` and select the desired rental order. "
+"Click :guilabel:`Pickup`, and a *Validate a pickup* pop-up window displays, "
+"listing the reserved rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Reserved`, and :guilabel:`Picked-up` "
+"columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a pickup page in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:96
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:123
+msgid ""
+"To confirm the list, click :guilabel:`Validate`. The action updates the "
+"rental order with a :guilabel:`Picked-up` badge and updates "
+"the :guilabel:`Delivered` column. The action is also recorded in the rental "
+"order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of a rental order once the rental product is picked up in the Rental "
+"app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:106
+msgid "Pick up a physical rental product with tracking enabled"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:109
+msgid ""
+"This process requires that the *Lots & Serial Numbers* feature in the "
+"**Inventory** app be enabled and that the *Tracking* field be set to *By "
+"Unique Serial Number* on the rental product form."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:113
+msgid ""
+"To process a pickup of a physical rental product with tracking enabled, go "
+"to :menuselection:`Rental app --> Orders --> Orders` and select the desired "
+"rental order. Click :guilabel:`Pickup`, and the *Validate a pickup* pop-up "
+"window displays, listing the reserved rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Reserved`, :guilabel:`Serial Numbers`, "
+"and :guilabel:`Picked-up` columns. Check the rental product's serial number "
+"and then click in the :guilabel:`Serial Numbers` column and select the "
+"product's serial number from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of a Validate a pickup page with product tracking enabled in the "
+"Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order with a Picked-up badge in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:133
+msgid "Pick up a rental product and a rental service"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:136
+msgid ""
+"Refer to the :ref:`physical and service rental configuration requirements "
+"<rental/pickup_return/configuration>` to see the necessary app installations "
+"and settings."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:139
+msgid ""
+"When a physical rental product is rented alongside a service, it is advised "
+"to pick it up before entering time on the associated task (if applicable)."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:142
+msgid ""
+"If time is entered on the *Timesheets* tab of an associated task before the "
+"physical rental product is picked up, the rental order automatically "
+"displays a :guilabel:`Picked-up` badge. However, the :guilabel:`Pickup` "
+"button remains available on the rental order."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:149
+msgid "Return a rental product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:152
+msgid ""
+"Regardless of whether a physical rental product is rented along with a "
+"service rental product, both must be returned on the rental order. Returning "
+"a rental service is the same process as returning a physical rental product "
+"without tracking enabled."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:156
+msgid ""
+"When a customer returns the rental product, go to :menuselection:`Rental app "
+"--> Orders --> Orders` and select the desired rental order. "
+"Click :guilabel:`Return`, and the *Validate a return* pop-up window "
+"displays, listing the returning rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Picked-up`, and :guilabel:`Returned` "
+"columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a return page in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:164
+msgid ""
+"To confirm the list, click :guilabel:`Validate`. The action applies "
+"a :guilabel:`Returned` badge to the rental order and updates "
+"the :guilabel:`Returned` column. The action is also recorded in the rental "
+"order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of the rental order once the rental product is returned in the "
+"Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:174
+msgid "Return a physical rental product with tracking enabled"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:176
+msgid ""
+"When a customer returns the product, go to :menuselection:`Rental app --> "
+"Orders --> Orders` and select the desired rental order. "
+"Click :guilabel:`Return`, and the *Validate a return* pop-up window "
+"displays, listing the returning rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Picked-up`, :guilabel:`Serial Numbers`, "
+"and :guilabel:`Returned` columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of a Validate a return page with product tracking enabled in the "
+"Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:184
+msgid ""
+"Verify that the returned rental product has the same serial number as the "
+"one listed in the :guilabel:`Serial Numbers` column. If the serial numbers "
+"don't match, click into the :guilabel:`Serial Numbers` column and select the "
+"correct serial number from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:188
+msgid ""
+"Once the rental product's quantity and serial number match, "
+"click :guilabel:`Validate`. The action applies a :guilabel:`Returned` badge "
+"to the rental order and updates the :guilabel:`Returned` column. The action "
+"is also recorded in the rental order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order with a Returned badge in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:198
+msgid "Print pickup and return receipts"
+msgstr "打印取件和退货收据"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:200
+msgid ""
+"Pickup and return receipts can be created and downloaded for customers when "
+"they pick up or return rental products."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:203
+msgid ""
+"To create pickup and return receipts, navigate to the desired rental order "
+"and click the :icon:`fa-cog` :guilabel:`(Actions)` icon to open the drop-"
+"down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"The pickup and return receipt print option in the Odoo Rental application."
+msgstr "Odoo 租赁应用程序中的取货和退货收据打印选项。"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:209
+msgid ""
+"Hover over the :icon:`fa-print` :guilabel:`Print` option, then "
+"select :guilabel:`Pickup and Return Receipt`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:212
+msgid ""
+"Odoo downloads a PDF of the receipt with the current status of the rented "
+"items."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:215
+msgid ":doc:`create_rental_order`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:216
+msgid ":doc:`manage_deposits`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:217
+msgid ":doc:`../configure_products/products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:218
+msgid ":doc:`../configure_products/service_products`"
+msgstr ""
 
 #: ../../content/applications/sales/sales.rst:10
 msgid ""
@@ -23899,6 +24174,13 @@ msgid ""
 msgstr ""
 "此设置不追踪用于销售的特定批次或唯一序列号。它仅确保\\ |FBA|\\ 订单可以在没有"
 "同步失败的情况下处理。"
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
+#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
+msgid "Settings"
+msgstr "设置"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:36
 msgid "The following apps are essential for the product kit workflow:"
@@ -25854,11 +26136,19 @@ msgstr ""
 msgid "Invoicing Method"
 msgstr "开票方式"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:3
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:1
+msgid ""
+"A down payment is an up-front payment collected when confirming a sales "
+"order. This page covers invoicing fixed and percentage-based down payments "
+"through the Create Invoice option, with examples, and modifying the income "
+"account used for down payment invoices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:9
 msgid "Down payments"
 msgstr "首付"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:5
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:11
 msgid ""
 "A down payment is an initial up-front payment made during the confirmation "
 "of a sales transaction. With a down payment, the buyer pays a portion of the "
@@ -25871,7 +26161,7 @@ msgstr ""
 "部分，同时同意在以后的日期支付剩余金额。反过来，卖方在接受预付款时或之后向买"
 "方提供商品或服务，相信剩余金额将在以后支付。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:10
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:16
 msgid ""
 "In the Odoo **Sales** app, down payments can be customized to fit the needs "
 "of each individual sales transaction."
@@ -25879,7 +26169,7 @@ msgstr ""
 "在 Odoo **销售**应用程式中，可以自订订金的安排，以配合每笔销售交易的个别需"
 "求。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:14
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
 msgid ""
 "Down payment invoices are **not** the same as payment terms or installment "
 "plans. If a single invoice issued for a sales order requires multiple "
@@ -25891,79 +26181,69 @@ msgstr ""
 "次分期付款，则该发票使用\\ :doc:`带有分期付款计划的付款条件 <../../../"
 "finance/accounting/customer_invoices/payment_terms>`\\ 。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:26
 msgid "Create invoices"
 msgstr "创建发票"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:22
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:28
 msgid ""
 "When a sales order is confirmed, the option to create an invoice becomes "
-"available via the :guilabel:`Create Invoice` button. When clicked, "
-"a :guilabel:`Create invoice(s)` pop-up appears."
+"available via the :guilabel:`Create Invoice` button. When clicked, a *Create "
+"invoice(s)* pop-up appears."
 msgstr ""
-"当确认销售订单后，可以通过\\ :guilabel:`创建发票`\\ 按钮创建发票。点击后会出"
-"现\\ :guilabel:`创建发票`\\ 弹出窗口。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Create invoice(s) pop-up form that appears in Odoo Sales."
 msgstr "在 Odoo 销售中出现的创建发票弹出表单。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
 msgid ""
 "Invoices are automatically created as drafts so they can be reviewed before "
 "validation."
 msgstr "发票会自动创建为草稿，以便在验证前进行审查。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:31
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:37
 msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up, there are three options to "
-"choose from in the :guilabel:`Create Invoice` field:"
+"On the *Create invoice(s)* pop-up, there are three options to choose from in "
+"the :guilabel:`Create Invoice` field:"
 msgstr ""
-"在\\ :guilabel:`创建发票`\\ 弹出窗口中，\\ :guilabel:`创建发票`\\ 字段有三个"
-"选项可供选择："
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:34
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:40
 msgid ":guilabel:`Regular invoice`"
 msgstr ":guilabel:`一般发票`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
 msgid ":guilabel:`Down payment (percentage)`"
 msgstr ":guilabel:`预付款（百分比）`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:36
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:44
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:42
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:50
 msgid ":guilabel:`Down payment (fixed amount)`"
 msgstr ":guilabel:`首期付款（固定金额）`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:39
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:45
 msgid "Initial down payment request"
 msgstr "初次首期付款请求"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
-msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up window, the down payment options "
-"are:"
-msgstr "在 :guilabel:`创建发票` 弹出窗口中，首付款选项有："
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:47
+msgid "On the *Create invoice(s)* pop-up window, the down payment options are:"
+msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:46
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:52
 msgid ""
 "Select a down payment option and set the desired payment, either as a "
-"percentage or a fixed amount, in the :guilabel:`Down Payment Amount` field."
+"percentage or a fixed amount, in the :guilabel:`Down Payment` field."
 msgstr ""
-"选择首付款选项并在\\ :guilabel:`首付款金额`\\ 字段中设置所需的付款，可以是百"
-"分比或固定金额。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:55
 msgid ""
 "Once all fields are filled in, click the :guilabel:`Create Draft` button. "
-"Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice "
+"Upon clicking this button, Odoo brings up the :guilabel:`Customer Invoice "
 "Draft`."
 msgstr ""
-"填写完所有字段后，点击 :guilabel:`创建草稿` 按钮。点击后，Odoo 将显"
-"示 :guilabel:`客户发票草稿` 页面。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:53
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:59
 msgid ""
 "If an :guilabel:`Invalid Operation` error appears, double-check that "
 "the :doc:`invoicing policy <invoicing_policy>` is configured correctly. In "
@@ -25974,73 +26254,64 @@ msgstr ""
 "<invoicing_policy>`\\ 是否配置正确。例如，在某些情况下，发票政策配置为需要在"
 "发送发票之前交付。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:57
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:63
 msgid ""
-"In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice "
-"Draft`, the down payment that was configured in the *Create invoice(s)* pop-"
-"up form appears under a new :guilabel:`Down Payments` section."
+"In the *Invoice Lines* tab of the :guilabel:`Customer Invoice Draft`, the "
+"down payment that was configured in the *Create invoice(s)* pop-up form "
+"appears as a :guilabel:`Down Payment` line item. After "
+"clicking :guilabel:`Confirm` to apply the down payment to the sales order, "
+"the down payment appears in a new :guilabel:`Down Payments` section."
 msgstr ""
-"在\\ :guilabel:`客户发票草稿`\\ 的\\ :guilabel:`发票行`\\ 选项卡中，在*创建发"
-"票*弹出窗口表单中配置的预付款显示在新的\\ :guilabel:`预付款`\\ 部分下。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:71
 msgid "Types of down payments"
 msgstr "预付款类型"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:66
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:73
 msgid ""
-"Odoo offers both fixed amounts and partial down payments (such as 30% of an "
-"order's total)."
-msgstr "Odoo 提供固定金额和部分预付款（例如订单总额的 30%）。"
+"Odoo offers both fixed dollar amounts and partial percentage down payments "
+"(such as 30% of an order's total)."
+msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:68
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
 msgid ""
 "A 100% down payment is possible and differs from a full payment of the sales "
 "order. A sales order paid through the regular invoice process does not allow "
 "any additional invoices to be generated and does not display "
-"the :guilabel:`Create Invoice` button on the sales order."
+"the :guilabel:`Create Invoice` button on the sales order. With a 100% down "
+"payment, the :guilabel:`Create Invoice` button is still displayed on the "
+"sales order because the system requires that another invoice be created in "
+"order to complete the sales order."
 msgstr ""
-"100% 预付款是可能的，与销售订单的全额付款不同。通过常规发票流程支付的销售订单"
-"不允许生成任何其他发票，并且不会在销售订单上显示\\ :guilabel:`创建发票`\\ 按"
-"钮。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:72
-msgid ""
-"With a 100% down payment, the :guilabel:`Create Invoice` button is still "
-"displayed on the sales Order because the system expects another invoice to "
-"be created after the down payment to complete payment of the sales order."
-msgstr ""
-"对于 100% 预付款，\\ :guilabel:`创建发票`\\ 按钮仍显示在销售订单上，因为系统"
-"期望在预付款后创建另一张发票以完成销售订单的付款。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:82
 msgid "The following are two examples of down payment amounts:"
 msgstr "以下是两个预付款金额的示例："
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:78
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
 msgid ""
 ":ref:`Example 1: 50% down payment <sales/invoicing/50-percent-down-payments>`"
 msgstr ""
 "\\ :ref:`示例 1：50% 预付款 <sales/invoicing/50-percent-down-payments>`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:79
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:85
 msgid ""
 ":ref:`Example 2: 100% down payment <sales/invoicing/100-percent-down-"
 "payments>`"
 msgstr ""
 "\\ :ref:`示例 2：100% 预付款 <sales/invoicing/100-percent-down-payments>`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:90
 msgid "Example 1: 50% down payment"
 msgstr "示例 1：50% 预付款"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:87
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
 msgid ""
 "This flow is also possible with the :guilabel:`Down payment (fixed amount)` "
 "option."
 msgstr "此流程也可以使用\\ :guilabel:`预付款（固定金额）`\\ 选项。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:89
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:95
 msgid ""
 "A customer is buying a luxury cabinet from a furniture store. The furniture "
 "store has configured the cabinet with an *Invoicing Policy* of *Ordered "
@@ -26050,7 +26321,7 @@ msgstr ""
 "客户从家具店购买豪华橱柜。家具店已将橱柜配置为*已订购数量*的*开票政策*。该店"
 "要求对其所有家具产品支付 50% 的预付款。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:99
 msgid ""
 "Navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation "
 "<sales/create-quotation>` for the cabinet. Once the order is confirmed (via "
@@ -26067,62 +26338,47 @@ msgid ""
 "application."
 msgstr "带门橱柜销售订单已在 Odoo 销售应用程序中确认。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:101
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:107
 msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up window that appears, "
+"On the *Create invoice(s)* pop-up window that appears, "
 "select :guilabel:`Down payment (percentage)`, and type `50` in "
 "the :guilabel:`Down Payment` field."
 msgstr ""
-"在出现的\\ :guilabel:`创建发票`\\ 弹出窗口中，选择\\ :guilabel:`预付款（百分"
-"比）`\\ ，并在\\ :guilabel:`预付款`\\ 字段中输入 `50`。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:111
 msgid ""
 "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` can "
 "be changed. For more information, check out the documentation "
 "on :ref:`income account modification on down payments <sales/invoicing/"
-"income-account-modification>`. A :guilabel:`Down payment Account` can also "
-"be set on a product category. If set, this account is prioritized for future "
-"down payments."
+"income-account-modification>`."
 msgstr ""
-"附加到\\ :guilabel:`预付款`\\ 的\\ :guilabel:`收入科目`\\ 可以更改。有关更多"
-"信息，请查看有关\\ :ref:`预付款收入科目修改 <sales/invoicing/income-account-"
-"modification>`\\ 的文档。也可以在产品类别上设置\\ :guilabel:`预付款科目`\\ 。"
-"如果设置，此科目将优先用于未来的预付款。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:110
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:115
 msgid ""
 "Lastly, click :guilabel:`Create Draft` to create and view the invoice draft, "
-"which includes the down payment under the :guilabel:`Down Payments` section "
-"of the :guilabel:`Invoice Lines` tab. Click :guilabel:`Confirm` and the "
-"invoice's status changes from :guilabel:`Draft` to :guilabel:`Posted`. It "
-"also reveals a new series of buttons at the top of the page."
+"which includes the down payment as a line item under the *Invoice Lines* "
+"tab. Click :guilabel:`Confirm` and the invoice's status changes "
+"from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new set of "
+"buttons at the top of the page."
 msgstr ""
-"最后，点击\\ :guilabel:`创建草稿`\\ 以创建并查看发票草稿，其中包括"
-"\\ :guilabel:`发票明细`\\ 标签页的\\ :guilabel:`预付款`\\ 部分下的预付款。点"
-"击\\ :guilabel:`确认`，发票状态将从\\ :guilabel:`草稿`\\ 更改为\\ :guilabel:`"
-"已过账`。这也会在页面顶部显示一系列新按钮。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
 msgstr "Odoo 销售中提及的首付款发票草稿样本。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:118
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:123
 msgid ""
-"To begin the payment process, click :guilabel:`Pay`. A :guilabel:`Pay` pop-"
-"up form displays with auto-populated information. Confirm the information "
-"provided is correct and make any necessary adjustments. When ready, click "
+"To begin the payment process, click :guilabel:`Pay`. A *Pay* pop-up form "
+"displays with auto-populated information. Confirm the information provided "
+"is correct and make any necessary adjustments. When ready, click "
 "the :guilabel:`Create Payment` button."
 msgstr ""
-"要开始付款流程，点击\\ :guilabel:`付款`。将显示一个\\ :guilabel:`付款`\\ 弹窗"
-"表单，其中包含自动填充的信息。确认提供的信息正确无误，并进行必要的调整。准备"
-"就绪后，点击\\ :guilabel:`创建付款`\\ 按钮。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Showcase of the Pay pop-up window with create payment button."
 msgstr "显示带有创建付款按钮的付款弹出窗口的展示。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:125
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:130
 msgid ""
 "The customer invoice changes status with a green :guilabel:`In Payment` "
 "or :guilabel:`Paid` banner in the upper-right corner, depending on how the "
@@ -26137,108 +26393,69 @@ msgid ""
 "Customer Invoice with a green Paid banner located in the upper-right corner."
 msgstr "右上角带有绿色已付款横幅的客户发票。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:132
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:137
 msgid ""
 "On the sales order, a new :guilabel:`Down Payments` section is present in "
-"the :guilabel:`Order Lines` tab, along with the down payment that was just "
-"invoiced and posted. When the customer wants to pay the remaining amount of "
-"the order, another invoice must be created."
+"the *Order Lines* tab, along with the down payment that was just invoiced "
+"and posted. When the customer wants to pay the remaining amount of the "
+"order, another invoice must be created."
 msgstr ""
-"在销售订单上，:guilabel:`订单明细`\\ 选项卡中会出现一个新的\\ :guilabel:`预付"
-"款`\\ 部分，以及刚刚开票并过账的预付款。当客户想要支付订单的剩余金额时，必须"
-"创建另一张发票。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The down payments section in the order lines tab of a sales order."
 msgstr "销售订单的订单行选项卡中的首付款部分。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:139
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:144
 msgid ""
-"Click the :guilabel:`Create Invoice` button. On the :guilabel:`Create "
-"invoice(s)` pop-up window, there is a new field: :guilabel:`Already "
-"invoiced` and :guilabel:`Amount to invoice`."
+"Click the :guilabel:`Create Invoice` button. On the *Create invoice(s)* pop-"
+"up window, there is a new field: :guilabel:`Already invoiced`."
 msgstr ""
-"点击\\ :guilabel:`创建发票`\\ 按钮。在\\ :guilabel:`创建发票`\\ 弹窗中，有一"
-"个新字段：:guilabel:`已开票金额`\\ 和\\ :guilabel:`待开票金额`。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
 "The deduct down payment option on the Create invoice(s) pop up in Odoo Sales."
 msgstr "Odoo 销售中创建发票弹出窗口上的扣除预付款选项。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:145
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:150
 msgid ""
-"Select the :guilabel:`Regular Invoice` option. Odoo creates an invoice for "
-"the exact amount needed to complete the total payment, as shown in "
-"the :guilabel:`Amount to invoice` field."
+"Select the :guilabel:`Regular invoice` option to begin creating an invoice "
+"for the exact amount needed to complete the total payment. This amount is "
+"reflected in the :guilabel:`Amount Due` field on the invoice draft."
 msgstr ""
-"选择\\ :guilabel:`常规发票`\\ 选项。Odoo 会创建一张金额恰好为完成总付款所需金"
-"额的发票，如\\ :guilabel:`待开票金额`\\ 字段所示。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:148
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:154
 msgid ""
-"Click :guilabel:`Create Draft` to create a :guilabel:`Customer Invoice "
-"Draft` page. The draft lists all the invoices for that specific sales order "
-"in the :guilabel:`Invoice Lines` tab. Each invoice line item displays all "
-"the necessary information related to each invoice."
-msgstr ""
-"点击\\ :guilabel:`创建草稿`\\ 以创建\\ :guilabel:`客户发票草稿`\\ 页面。草稿"
-"在\\ :guilabel:`发票明细`\\ 标签页中列出该特定销售订单的所有发票。每个发票明"
-"细项显示与每张发票相关的所有必要信息。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:152
-msgid ""
-"To complete the flow, click :guilabel:`Confirm` to change the status of the "
+"Click :guilabel:`Create Draft` to create a *Customer Invoice Draft*. To "
+"complete the flow, click :guilabel:`Confirm` to change the status of the "
 "invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, "
-"click :guilabel:`Pay`. The :guilabel:`Pay` form appears, with all fields "
-"auto-populated with the necessary information, including the remaining "
-"amount left to be paid on the order."
+"click :guilabel:`Pay`. The *Pay* form appears, with all fields auto-"
+"populated with the necessary information, including the remaining amount "
+"left to be paid on the order."
 msgstr ""
-"要完成流程，点击\\ :guilabel:`确认`\\ 将发票状态从\\ :guilabel:`草稿`\\ 更改"
-"为\\ :guilabel:`已过账`\\ 。然后，点击\\ :guilabel:`付款`\\ 。将出现"
-"\\ :guilabel:`付款`\\ 表单，所有字段都自动填充了必要的信息，包括订单剩余待付"
-"金额。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The second Pay pop-up form in Odoo sales."
 msgstr "Odoo 销售中的第二个付款弹出表单。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:160
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:163
 msgid ""
 "After confirming that information, click :guilabel:`Create Payment`. Doing "
 "so reveals the final :guilabel:`Customer Invoice` with a green :guilabel:`In "
 "Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on "
-"how the database has configured and if manual confirmation of payments is "
-"required. Upon returning to the sales order, both down payments are present "
-"in the :guilabel:`Order Lines` tab."
+"how the database is configured and if manual confirmation of payments is "
+"required. At this point, the flow is complete."
 msgstr ""
-"确认该信息后，点击\\ :guilabel:`创建付款`\\ 。这样做会显示最终的"
-"\\ :guilabel:`客户发票`\\ ，右上角带有绿色的\\ :guilabel:`付款中`\\ 或"
-"\\ :guilabel:`已付款`\\ 横幅，具体取决于数据库的配置方式以及是否需要手动确认"
-"付款。返回销售订单后，两笔预付款都会出现在\\ :guilabel:`订单明细`\\ 选项卡"
-"中。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
-msgid "The second down payment invoice with Paid banner in Odoo Sales."
-msgstr "Odoo 销售中带有已付款横幅的第二笔预付款发票。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:169
-msgid "At this point, the flow is complete."
-msgstr "至此，流程已完成。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:172
 msgid ""
 "If a down payment is used with a product that has a :guilabel:`Delivered "
 "quantities` invoicing policy, and the cost of the product exceeds the 50% "
 "down payment, a regular invoice is created. However, for products that cost "
-"less than the 50% down payment, the down payments will not be able to be "
-"deducted when it comes time to invoice the customer."
+"less than the 50% down payment, the down payments cannot be deducted when it "
+"comes time to invoice the customer."
 msgstr ""
-"如果预付款用于具有\\ :guilabel:`已交付数量`\\ 开票策略的产品，并且产品成本超"
-"过 50% 的预付款，则会创建常规发票。但是，对于成本低于 50% 预付款的产品，在向"
-"客户开票时将无法扣除预付款。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:177
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:174
 msgid ""
 "This is because the product(s) would have to be delivered *before* creating "
 "the final invoice due to Odoo not allowing negative totals for invoices. If "
@@ -26249,7 +26466,7 @@ msgstr ""
 "额。如果没有任何交付，将创建一张\\ :guilabel:`信用凭证`，用于取消在预付款后创"
 "建的发票草稿。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:182
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:179
 msgid ""
 "To utilize the :guilabel:`Credit Note` option, the **Inventory** application "
 "must be installed in order to confirm the delivery. Otherwise, the delivered "
@@ -26258,11 +26475,11 @@ msgstr ""
 "要使用\\ :guilabel:`贷项通知单`\\ 选项，必须安装\\ **库存**\\ 应用程序才能确"
 "认交付。否则，可以直接在销售订单上手动输入已交付数量。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:189
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:186
 msgid "Example 2: 100% down payment"
 msgstr "示例 2：100% 预付款"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:191
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:188
 msgid ""
 "A solar panel company sells an installation service for residential homes. "
 "All installation services require a 100% down payment to cover labor costs. "
@@ -26272,22 +26489,16 @@ msgstr ""
 "一家太阳能电池板公司为住宅提供安装服务。所有安装服务都需要 100% 的预付款来支"
 "付人工成本。该公司更倾向于预付款，因为客户经常需要对服务进行定制化附加。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:195
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:192
 msgid ""
 "To configure a 100% down payment, navigate to :menuselection:`Sales app --> "
 "New`, and :ref:`create a quotation <sales/create-quotation>` for the "
 "product. Upon clicking the :guilabel:`Confirm` button, the quotation turns "
 "into a sales order. At that point, an invoice can now be created by "
-"clicking :guilabel:`Create Invoice` in the top-left corner. On "
-"the :guilabel:`Create invoice(s)` pop-up window that appears, "
-"select :guilabel:`Down payment (percentage)`, and type `100` in "
-"the :guilabel:`Down Payment` field."
+"clicking :guilabel:`Create Invoice` in the top-left corner. On the *Create "
+"invoice(s)* pop-up window that appears, select :guilabel:`Down payment "
+"(percentage)`, and type `100` in the :guilabel:`Down Payment` field."
 msgstr ""
-"要配置 100% 的预付款，导航至\\ :menuselection:`销售应用 --> 新建`，并为产品"
-"\\ :ref:`创建报价单 <sales/create-quotation>`。点击\\ :guilabel:`确认`\\ 按钮"
-"后，报价单将转换为销售订单。此时，可以通过点击左上角的\\ :guilabel:`创建发票"
-"`\\ 来创建发票。在出现的\\ :guilabel:`创建发票`\\ 弹窗中，选择\\ :guilabel:`"
-"预付款（百分比）`，并在\\ :guilabel:`预付款`\\ 字段中输入 `100`。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -26295,73 +26506,55 @@ msgid ""
 "Payment."
 msgstr "选择了预付款（百分比）选项，预付款设置为100%。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:205
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:202
 msgid ""
-"Next, click :guilabel:`Create Draft` to create an invoice draft. This will "
-"also bring the draft invoice into view, which includes the :guilabel:`Down "
-"payment` under the :guilabel:`Down Payments` section of "
-"the :guilabel:`Invoice Lines` tab. The invoice can now be confirmed and "
-"posted by clicking :guilabel:`Confirm`. Confirming the invoice changes the "
-"status from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new "
-"series of buttons at the top of the page."
+"Next, click :guilabel:`Create Draft` to create an invoice draft. This also "
+"brings the draft invoice into view, which includes the :guilabel:`Down "
+"payment` as a line item under the *Invoice Lines* tab. The invoice can now "
+"be confirmed and posted by clicking :guilabel:`Confirm`. Confirming the "
+"invoice changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It "
+"also reveals a new series of buttons at the top of the page."
 msgstr ""
-"接下来，点击\\ :guilabel:`创建草稿`\\ 以创建发票草稿。这也会显示发票草稿，其"
-"中包括\\ :guilabel:`发票明细`\\ 标签页的\\ :guilabel:`预付款`\\ 部分下的"
-"\\ :guilabel:`预付款`。现在可以通过点击\\ :guilabel:`确认`\\ 来确认并过账发"
-"票。确认发票会将状态从\\ :guilabel:`草稿`\\ 更改为\\ :guilabel:`已过账`。这也"
-"会在页面顶部显示一系列新按钮。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:211
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:208
 msgid ""
 "The payment can be registered by clicking the :guilabel:`Pay` button. This "
-"brings up the :guilabel:`Pay` pop-up form, which is auto-populated with the "
-"necessary information. When ready, click the :guilabel:`Create Payment` "
-"button."
+"brings up the *Pay* pop-up form, which is auto-populated with the necessary "
+"information. When ready, click the :guilabel:`Create Payment` button."
 msgstr ""
-"可以通过点击\\ :guilabel:`支付`\\ 按钮来登记付款。这将打开\\ :guilabel:`支付"
-"`\\ 弹出表单，该表单会自动填充必要的信息。准备好后，点击\\ :guilabel:`创建付"
-"款`\\ 按钮。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:215
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:212
 msgid ""
 "After clicking :guilabel:`Create Payment`, Odoo reveals the customer "
 "invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` banner "
-"in the upper-right corner, depending on how the database has configured and "
+"in the upper-right corner, depending on how the database is configured and "
 "if manual confirmation of payments is required. The process is now complete, "
 "and the 100% down payment has been successfully applied."
 msgstr ""
-"点击\\ :guilabel:`创建付款`\\ 后，Odoo会显示客户发票，现在右上角显示绿色的"
-"\\ :guilabel:`支付中`\\ 或\\ :guilabel:`已支付`\\ 横幅，具体取决于数据库的配"
-"置方式以及是否需要手动确认付款。流程现已完成，100%预付款已成功应用。"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:220
+msgid "Income account modification on draft down payments"
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:223
-msgid "Income account modification on down payments"
-msgstr "预付款的收入科目修改"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:226
 msgid ""
 "To change or adjust the income account attached to down payments, the "
 "**Accounting** app must be installed. With the **Accounting** app installed, "
-"the :guilabel:`Accounting` column becomes available on the draft invoice."
+"the :guilabel:`Account` column becomes available on the draft invoice. "
+"Please note, the income account on posted down payments **cannot** be "
+"modified."
 msgstr ""
-"要更改或调整附加到预付款的收入科目，必须安装\\ **会计**\\ 应用。安装\\ **会计"
-"**\\ 应用后，发票草稿上将显示\\ :guilabel:`会计`\\ 列。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:230
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:228
 msgid ""
 "Navigate to the invoice to be modified by going to :menuselection:`Sales app "
 "--> Orders --> Orders`. Open an order, then click the :guilabel:`Invoices` "
 "smart button. Open an invoice, click the drop-down arrow on the entry in "
 "the :guilabel:`Account` column and click :guilabel:`Search more...` to bring "
-"up the :guilabel:`Search: Account` form. In this form, a different account "
-"can be chosen from the list of pre-existing accounts. A new account can also "
-"be created by clicking the :guilabel:`New` button."
+"up the *Search: Account* form. In this form, a different account can be "
+"chosen from the list of pre-existing accounts. A new account can also be "
+"created by clicking the :guilabel:`New` button."
 msgstr ""
-"要修改发票，请导航至\\ :menuselection:`销售应用 --> 订单 --> 订单`\\ 。打开订"
-"单，然后点击\\ :guilabel:`发票`\\ 智能按钮。打开发票，点击\\ :guilabel:`科目"
-"`\\ 列中条目的下拉箭头，然后点击\\ :guilabel:`搜索更多...`\\ 以打开"
-"\\ :guilabel:`搜索：科目`\\ 表单。在此表单中，可以从现有科目列表中选择其他科"
-"目。也可以通过点击\\ :guilabel:`新建`\\ 按钮创建新科目。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -26370,14 +26563,14 @@ msgid ""
 "account."
 msgstr "\"搜索：科目\"表单，显示现有科目和一个用于创建新科目的按钮。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:242
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:240
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:114
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
 msgstr ":doc:`invoicing_policy`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:243
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:241
 msgid ":doc:`../../../finance/accounting/customer_invoices/payment_terms`"
 msgstr ":doc:`../../../finance/accounting/customer_invoices/payment_terms`"
 
@@ -30321,11 +30514,11 @@ msgstr ""
 ":guilabel:`可选`\\ 列仅适用于 Odoo\\ **电子商务**。此选项允许网站访客在您的"
 "\\ **电子商务**\\ 网站购物时选择价格表。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:48
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:50
 msgid "Creating and editing pricelists"
 msgstr "创建和编辑价格表"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:50
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:52
 msgid ""
 "From the :guilabel:`Pricelists` page, either select the pricelist to edit, "
 "or click :guilabel:`New` to create a new pricelist, which reveals a blank "
@@ -30339,7 +30532,7 @@ msgstr ""
 msgid "How the pricelist detail form looks in Odoo Sales."
 msgstr "价格表详情表单在 Odoo 销售中的显示方式。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:57
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:59
 msgid ""
 "When creating a new pricelist, start by adding a name for the pricelist at "
 "the blank field at top of the form. Next, select which :guilabel:`Currency` "
@@ -30348,7 +30541,7 @@ msgstr ""
 "创建新价格表时，首先在表单顶部的空白字段中为价格表添加名称。接下来，选择应使"
 "用的\\ :guilabel:`货币`\\ 。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:60
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:62
 msgid ""
 "If working in a multi-company environment, select which company this "
 "pricelist should apply to in the :guilabel:`Company` field. If this field is "
@@ -30358,7 +30551,7 @@ msgstr ""
 "如果在多公司环境中工作，请在\\ :guilabel:`公司`\\ 字段中选择此价格表应适用于"
 "哪个公司。如果此字段留空，价格表将自动应用于数据库中的所有公司。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:64
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:66
 msgid ""
 "If working in a multinational company, select the countries where this "
 "pricelist will apply under the :guilabel:`Country Groups` column."
@@ -30366,11 +30559,11 @@ msgstr ""
 "如果在跨国公司工作，请在\\ :guilabel:`国家组`\\ 列下选择此价格表将适用的国"
 "家。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:70
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:72
 msgid "Price Rules tab"
 msgstr "价格规则标签页"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:72
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:74
 msgid ""
 "In the :guilabel:`Price Rules` tab, each line creates a new record that will "
 "implement customized pricing to the sales order where the pricelist is "
@@ -30381,7 +30574,7 @@ msgstr ""
 "用价格表的销售订单实施定制定价。这可用于创建复杂的定价结构，例如在购买更多数"
 "量的产品时提供累进折扣。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:77
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:79
 msgid ""
 "To create a new price rule, click on :guilabel:`Add a line`, which opens a "
 "new pricelist rules form. Then, select whether to apply this set of rules to "
@@ -30391,11 +30584,11 @@ msgstr ""
 "则表单。然后，选择是将这组规则应用于\\ :guilabel:`产品`\\ 还是\\ :guilabel:`"
 "类别`\\ 。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:80
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
 msgid "From here, there are several configuration options:"
 msgstr "在此处有多个配置选项："
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
 msgid ""
 ":guilabel:`Product`: If selected in the :guilabel:`Apply To` field, use this "
 "field to choose one or more products to which this pricelist will apply."
@@ -30403,13 +30596,13 @@ msgstr ""
 ":guilabel:`产品`\\ ：如果在\\ :guilabel:`应用于`\\ 字段中选择，使用此字段选择"
 "此价格表将应用于的一个或多个产品。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:86
 msgid ""
 ":guilabel:`Category`: Select one or more product categories to which this "
 "pricelist will apply."
 msgstr ":guilabel:`类别`\\ ：选择此价格表将应用于的一个或多个产品类别。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:85
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:87
 msgid ""
 ":guilabel:`Price Type`: Select whether the specialized pricing will fall "
 "under :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. "
@@ -30420,7 +30613,7 @@ msgstr ""
 "\\ :guilabel:`公式`\\ 或\\ :guilabel:`固定价格`\\ 。根据价格类型，将有关于如"
 "何应用价格表的其他配置。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:89
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:91
 msgid ""
 ":guilabel:`Discount`: Enter the percentage to be discounted. A mark-up can "
 "be configured by using a negative value in this field."
@@ -30428,7 +30621,7 @@ msgstr ""
 ":guilabel:`折扣`\\ ：输入要折扣的百分比。可以通过在此字段中使用负值来配置加"
 "价。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:93
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:95
 msgid ""
 "If a pricelist is applied to a sales quotation with the "
 "discount :guilabel:`Price Type` set as :guilabel:`Discount`, the discount "
@@ -30446,19 +30639,19 @@ msgid ""
 "How a pricelist rule using Price Type: Discount appears on customer preview."
 msgstr "使用价格类型：折扣的价格表规则在客户预览中的显示方式。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:102
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:104
 msgid ""
 ":guilabel:`Formula`: Calculate the pricelist rules based the following "
 "configuration:"
 msgstr ":guilabel:`公式`\\ ：根据以下配置计算价格表规则："
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:104
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:106
 msgid ""
 ":guilabel:`Discount`: Percentage discount to be applied. Negative values can "
 "be entered to increase prices."
 msgstr ":guilabel:`折扣`\\ ：要应用的折扣百分比。可以输入负值以提高价格。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:108
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:110
 msgid ""
 "If a pricelist is applied to a sales quotation with the "
 "discount :guilabel:`Price Type` set as :guilabel:`Formula`, the discount "
@@ -30467,7 +30660,7 @@ msgstr ""
 "如果价格表应用于销售报价单，且折扣\\ :guilabel:`价格类型`\\ 设置为"
 "\\ :guilabel:`公式`\\ ，折扣将\\ *不*\\ 对客户可见。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:111
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:113
 msgid ""
 ":guilabel:`Round off to`: Numerical value to act as round-off multiple, to "
 "be applied after discount. The rounding method sets the price so that it is "
@@ -30476,11 +30669,11 @@ msgstr ""
 ":guilabel:`四舍五入至`\\ ：作为四舍五入倍数的数值，在折扣后应用。舍入方法将价"
 "格设置为此字段中值的倍数。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:116
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:118
 msgid "Rounding is applied *after* the discount and *before* the extra fee."
 msgstr "舍入在折扣\\ *之后*\\ 和额外费用\\ *之前*\\ 应用。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:118
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
 msgid ""
 ":guilabel:`Extra Fee`: Fixed amount to be added or subtracted "
 "once :guilabel:`Discount` and :guilabel:`Round off to` have been applied."
@@ -30488,7 +30681,7 @@ msgstr ""
 ":guilabel:`额外费用`：在应用了\\ :guilabel:`折扣`\\ 和\\ :guilabel:`四舍五入"
 "到`\\ 之后要加上或减去的固定金额。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:122
 msgid ""
 ":guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, "
 "all product lines in the quotation form will be updated to this price."
@@ -30496,19 +30689,19 @@ msgstr ""
 ":guilabel:`固定价格`：为此价格表输入固定价格。应用后，报价单中的所有产品行都"
 "将更新为此价格。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:123
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:125
 msgid ""
 ":guilabel:`Min Qty`: Specify the minimum quantity of selected products for "
 "this pricelist to apply."
 msgstr ":guilabel:`最小数量`：指定应用此价格表所需的所选产品的最小数量。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:125
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:127
 msgid ""
 ":guilabel:`Validity Period`: Specify the start and end date during which "
 "this pricelist can be applied to quotations."
 msgstr ":guilabel:`有效期`：指定此价格表可应用于报价单的开始和结束日期。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:129
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:131
 msgid ""
 "To formulate a 100% markup (or two times the price of the product), with a "
 "$5 minimum margin, set the :guilabel:`Based price` field to :guilabel:`Sales "
@@ -30525,7 +30718,7 @@ msgid ""
 "Sales."
 msgstr "在 Odoo 销售中制定最低利润为 5 美元的加价成本的外观。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:137
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:139
 msgid ""
 "To apply 20% discounts, with prices rounded up to 9.99, set "
 "the :guilabel:`Based on` field to :guilabel:`Sales Price`, "
@@ -30540,7 +30733,7 @@ msgstr ""
 msgid "Example of a 20% discount with prices rounded to 9.99 in Odoo Sales."
 msgstr "在 Odoo 销售中将价格四舍五入为 9.99 的 20% 折扣示例。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:145
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:147
 msgid ""
 "To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` "
 "and the :guilabel:`Extra Fee` to `-0.01`."
@@ -30548,11 +30741,11 @@ msgstr ""
 "要使价格以 9.99 结尾，请将 :guilabel:`四舍五入法` 设为 `10`，将 :guilabel:`额"
 "外费用` 设为 `-0.01`。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:149
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:151
 msgid "Recurring Prices tab"
 msgstr "周期性价格选项卡"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:151
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:153
 msgid ""
 "Time-based rules are used specifically with subscription products. Be sure "
 "to check out the Odoo :doc:`Subscriptions </applications/sales/"
@@ -30561,7 +30754,7 @@ msgstr ""
 "基于时间的规则专门用于订阅产品。请务必查看 Odoo\\ :doc:`订阅 </applications/"
 "sales/subscriptions>`\\ 文档以获取更多信息。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:154
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:156
 msgid ""
 "In the :guilabel:`Recurring Prices` tab, pricelists are configured with the "
 "same options as in the :guilabel:`Price Rules` tab, with additional columns "
@@ -30571,7 +30764,7 @@ msgstr ""
 "规则`\\ 选项卡中的选项相同，并带有\\ :guilabel:`产品变体`\\ 和\\ :guilabel:`"
 "周期性计划`\\ 的附加列。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:158
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:160
 msgid ""
 ":guilabel:`Product Variants` are configured under products that have one or "
 "more values, such as color, size, etc. Once a product has been selected "
@@ -30582,7 +30775,7 @@ msgstr ""
 "\\ :guilabel:`产品选项卡`\\ 下选择产品后，如果适用，请选择要包含在价格规则中"
 "的所需产品变体。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:162
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:164
 msgid ""
 "Then, select the blank field in the :guilabel:`Recurring Plan` column to "
 "reveal a drop-down menu of pre-designated recurrence periods (e.g. "
@@ -30595,7 +30788,7 @@ msgstr ""
 msgid "The recurring prices tab in a pricelist configuration form."
 msgstr "价格表配置表单中的周期性价格选项卡。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:168
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:170
 msgid ""
 "New recurrence periods can also be created from this column. To do so, type "
 "in the name for the new :guilabel:`Recurring Plan`, then "
@@ -30618,22 +30811,22 @@ msgstr ""
 msgid "Custom time period pop-up form in Odoo Sales."
 msgstr "Odoo 销售中的自定义时间周期弹出表单。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:179
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:181
 msgid ""
 "Lastly, add the desired price for this recurring price rule in "
 "the :guilabel:`Recurring Price` column."
 msgstr ""
 "最后，在\\ :guilabel:`周期性价格`\\ 列中添加此周期性价格规则所需的价格。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:183
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:185
 msgid ":doc:`../../../subscriptions`"
 msgstr ":doc:`../../../subscriptions`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:186
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
 msgid "Rental rules tab"
 msgstr "出租规则选项卡"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:190
 msgid ""
 "Price rules can be configured for :doc:`rental products <../../../rental>` "
 "under the :guilabel:`Rental rules` tab, using the same methodology as "
@@ -30643,7 +30836,7 @@ msgstr ""
 "rental>`\\ 配置价格规则，使用与\\ :guilabel:`价格规则`\\ 和\\ :guilabel:`周期"
 "性价格`\\ 选项卡相同的方法。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:192
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:194
 msgid ""
 "To add a rental rule, click :guilabel:`Add a line`, and select a desired "
 "product in the :guilabel:`Products` column. Then, select any "
@@ -30652,14 +30845,14 @@ msgstr ""
 "要添加出租规则，请点击\\ :guilabel:`添加一行`，然后在\\ :guilabel:`产品`\\ 列"
 "中选择所需的产品。然后，如有必要，选择任何特定的\\ :guilabel:`变体`。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:195
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
 msgid ""
 "Next, designate a :guilabel:`Period` of time for the rental rule (e.g. "
 "`Daily`, `Hourly`, etc.)."
 msgstr ""
 "接下来，为出租规则指定一个\\ :guilabel:`周期`（例如 `Daily`、`Hourly` 等）。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:199
 msgid ""
 "Lastly, configure a :guilabel:`Price` for the rental rule in the respective "
 "column."
@@ -30669,7 +30862,7 @@ msgstr "最后，在相应的列中为出租规则配置\\ :guilabel:`价格`\\ 
 msgid "The rental tab in a pricelist configuration form."
 msgstr "价格表配置表单中的出租选项卡。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:203
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:205
 msgid ""
 ":doc:`Ecommerce price configuration </applications/websites/ecommerce/"
 "configuration/prices>`"
@@ -30677,11 +30870,11 @@ msgstr ""
 ":doc:`电子商务价格配置 </applications/websites/ecommerce/configuration/"
 "prices>`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:208
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
 msgid "Customer pricelist application"
 msgstr "客户价格表应用"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:212
 msgid ""
 "While the default pricelist applied to any customer is the :guilabel:`Public "
 "Pricelist`, Odoo provides the opportunity to directly apply a different "
@@ -30690,7 +30883,7 @@ msgstr ""
 "虽然应用于任何客户的默认价格表是\\ :guilabel:`公开价格表`\\ ，但Odoo提供了直"
 "接在客户联系人表单上为其应用不同价格表的机会。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:213
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:215
 msgid ""
 "To do that, open the desired customer's contact form, either by navigating "
 "to :menuselection:`Sales app --> Orders --> Customers` and selecting the "
@@ -30705,7 +30898,7 @@ msgstr ""
 msgid "Sample customer detail form in Odoo Sales."
 msgstr "Odoo销售中的客户详细信息表单示例。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:220
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:222
 msgid ""
 "On the desired customer's contact form, under the :guilabel:`Sales & "
 "Purchase` tab, in the :guilabel:`Sales` section, designate what pricelist "
@@ -30720,7 +30913,7 @@ msgstr ""
 msgid "The pricelist field in a customer detail form in Odoo Sales."
 msgstr "Odoo销售中客户详细信息表单中的价格表字段。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:228
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:230
 msgid ""
 "When a customer is added to the database, the default pricelist is "
 "automatically applied to them. There is **no way** to have a blank "
@@ -30730,7 +30923,7 @@ msgstr ""
 "将客户添加到数据库时，默认价格表会自动应用于他们。**无法**在联系人表单上留空*"
 "价格表*字段。即使该字段留空，再次打开该联系人表单时也会显示默认价格表。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:232
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:234
 msgid ""
 "However, when that contact is added to a quotation, and the *Pricelist* "
 "field is auto-populated (based on the information from their contact form), "
@@ -30742,47 +30935,47 @@ msgstr ""
 "的信息），可以从*价格表*字段中删除该预设价格表，并且仍可以确认报价单，随后将"
 "其转换为销售订单。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:238
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
 msgid "Conditions"
 msgstr "条件"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:242
 msgid ""
 "At the bottom of the :guilabel:`Create Pricelist Rules` pop-up form is "
 "the :guilabel:`Conditions` section."
 msgstr "在 :guilabel:`创建价格表规则` 弹出窗体的底部是 :guilabel:`条件` 部分。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:243
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:245
 msgid ""
 "Here, start by selecting one of the options in the :guilabel:`Apply On` "
 "field:"
 msgstr "首先，在 :guilabel:`应用于` 字段中选择一个选项："
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:245
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:247
 msgid ""
 ":guilabel:`All Products`: the advanced pricelist rule will be applied to all "
 "products."
 msgstr ":guilabel:`所有产品`：高级价格表规则将应用于所有产品。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:246
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:248
 msgid ""
 ":guilabel:`Product Category`: the advanced pricelist rule will be applied to "
 "a specific category of products."
 msgstr ":guilabel:`产品类别`：高级价格表规则将应用于特定的产品类别。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:248
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:250
 msgid ""
 ":guilabel:`Product`: the advanced pricelist rule will be applied to a "
 "specific product."
 msgstr ":guilabel:`产品`：高级价格表规则将应用于特定产品。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:249
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:251
 msgid ""
 ":guilabel:`Product Variant`: the advanced pricelist rule will be applied to "
 "a specific product variant."
 msgstr ":guilabel:`产品变体`：高级价格表规则将应用于特定的产品变体。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:252
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:254
 msgid ""
 "If any of those options, apart from :guilabel:`All Products`, are selected, "
 "a new option-specific field appears, in which the "
@@ -30793,7 +30986,7 @@ msgstr ""
 "段，必须在其中选择特定的 :guilabel:`产品类别`、:guilabel:`产品` "
 "或 :guilabel:`产品变体`。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:256
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:258
 msgid ""
 "Then, select a minimum quantity to be applied to the advanced pricelist rule "
 "in the :guilabel:`Min. Quantity` field. Lastly, select a range of dates for "
@@ -30802,7 +30995,7 @@ msgstr ""
 "然后，选择 :guilabel:`最小数量`字段。最后，在 :guilabel:`有效性`字段中选择价"
 "格表项目验证的日期范围。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:260
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:262
 msgid ""
 "Once all configurations are complete, either click :guilabel:`Save & Close` "
 "to save the advanced pricelist rule, or click :guilabel:`Save & New` to "
@@ -30811,7 +31004,7 @@ msgstr ""
 "完成所有配置后，点击 :guilabel:`保存并关闭` 保存高级价目表规则，或点"
 "击 :guilabel:`保存并关闭` 立即在新表单上创建另一个高级价目表规则。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:265
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:267
 msgid ""
 "If a price rule is set for a particular product, and another one for its "
 "product category, Odoo takes the rule of the product itself."
@@ -30819,11 +31012,11 @@ msgstr ""
 "如果为某一特定产品设置了价格规则，同时又为其产品类别设置了另一价格规则，Odoo "
 "将采用产品本身的规则。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:269
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:271
 msgid ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 msgstr ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:270
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:272
 msgid ":doc:`/applications/websites/ecommerce/configuration/prices`"
 msgstr ":doc:`/applications/websites/ecommerce/configuration/prices`"
 
@@ -42425,6 +42618,560 @@ msgstr ""
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
 
+#~ msgid "Rental pricing"
+#~ msgstr "租赁价格"
+
+#~ msgid ""
+#~ "To adjust the rental pricing on a product, go to the :guilabel:`Products` "
+#~ "page in the **Rental** app, then select the desired product or "
+#~ "click :guilabel:`New` to create a new product from scratch."
+#~ msgstr ""
+#~ "要調整產品的出租定價，請前往\\ **出租**\\ 應用程式中的\\ :guilabel:`產品"
+#~ "`\\ 頁面，然後選擇所需的產品或點擊\\ :guilabel:`新建`\\ 從頭建立新產品。"
+
+#~ msgid ""
+#~ "On the product form, ensure the :guilabel:`Rental` checkbox is ticked. "
+#~ "Then, open the :guilabel:`Rental prices` tab."
+#~ msgstr ""
+#~ "在產品表單上，確保勾選了\\ :guilabel:`出租`\\ 核取方塊。然後開啟"
+#~ "\\ :guilabel:`出租價格`\\ 分頁。"
+
+#~ msgid "How the Settings page appears in the Odoo Rental application."
+#~ msgstr "设置页面在 Odoo租赁应用程序中的显示方式。"
+
+#~ msgid ""
+#~ "Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` "
+#~ "tab, designate custom rental prices and rental periods for the product."
+#~ msgstr ""
+#~ "在 :guilabel:`租赁价格` 标签的 :guilabel:`定价` 部分，指定产品的自定义租赁"
+#~ "价格和租赁期。"
+
+#~ msgid ""
+#~ "To add pricing for a rental, click :guilabel:`Add a price`. Then, choose "
+#~ "a *pricing period* (:dfn:`the unit of duration of the rental`) in "
+#~ "the :guilabel:`Period` column, or create a new pricing period by typing "
+#~ "in the name and clicking :guilabel:`Create`."
+#~ msgstr ""
+#~ "要为租赁添加定价，请单击 :guilabel:`添加价格`。然后，在:guilabel:`期间`栏"
+#~ "中选择一个*定价期*（:dfn:`租期单位`），或输入名称并点击:guilabel:`创建`，"
+#~ "以创建一个新的定价期。"
+
+#~ msgid ""
+#~ "Next, decide whether or not to apply this custom rental price to a "
+#~ "specific :guilabel:`Pricelist`."
+#~ msgstr ""
+#~ "接下来，决定是否将此自定义租金价格应用到特定的 :guilabel:`价目表` 中。"
+
+#~ msgid ""
+#~ "Lastly, enter the desired :guilabel:`Price` for that "
+#~ "specific :guilabel:`Period`."
+#~ msgstr "最后，为特定的 :guilabel:`时期` 输入所需的 :guilabel:`价格`。"
+
+#~ msgid ""
+#~ "No limit exists on how many pricing lines can be added. Multiple pricing "
+#~ "options for rental products are typically used to give discounts for "
+#~ "customers who agree to longer rental durations."
+#~ msgstr ""
+#~ "可以新增的定價行數沒有限制。出租產品的多種定價選項通常用於為同意較長出租期"
+#~ "限的客戶提供折扣。"
+
+#~ msgid ""
+#~ "Remember when considering pricing that renting for a day is usually "
+#~ "limited to operating hours, not 24 hours. When determining pricing, keep "
+#~ "in mind that a rental day typically refers to operating hours, not a full "
+#~ "24-hour period."
+#~ msgstr ""
+#~ "在考慮定價時請記住，租一天通常僅限於營業時間，而非24小時。在確定定價時，請"
+#~ "記住出租日通常指的是營業時間，而非完整的24小時週期。"
+
+#~ msgid "Reservations"
+#~ msgstr "预留"
+
+#~ msgid ""
+#~ "Under the :guilabel:`Reservations` section of the :guilabel:`Rental "
+#~ "prices` tab, there is the option to configure additional fines for "
+#~ "any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the customer "
+#~ "takes to return a rental."
+#~ msgstr ""
+#~ "在\\ :guilabel:`出租價格`\\ 分頁的\\ :guilabel:`預約`\\ 部分下，有選項可以"
+#~ "為客戶退還出租時所產生的任何\\ :guilabel:`每小時罰款`\\ 或\\ :guilabel:`每"
+#~ "日罰款`\\ 配置額外罰款。"
+
+#~ msgid ""
+#~ "Also, there is the option to set the :guilabel:`Reserve product` time, "
+#~ "expressed in hours, to make the rental product temporarily unavailable "
+#~ "between two rental orders. Such a feature may prove useful if maintenance "
+#~ "or cleaning is required between rentals."
+#~ msgstr ""
+#~ "此外，還有選項可以設定\\ :guilabel:`保留產品`\\ 時間（以小時為單位），使出"
+#~ "租產品在兩個出租訂單之間暫時不可用。如果需要在出租之間進行維護保養或清潔，"
+#~ "此功能可能會很有用。"
+
+#~ msgid "Price computing"
+#~ msgstr "价格计算"
+
+#~ msgid ""
+#~ "A rental *Goods* product is a physical item, such as a computer, vehicle, "
+#~ "bike, camera, or an item of clothing. Goods are removed from the "
+#~ "company’s stock, delivered to the customer, and then returned to the "
+#~ "company."
+#~ msgstr ""
+#~ "出租\\ *商品*\\ 产品是实物物品，例如电脑、车辆、自行车、相机或服装。商品从"
+#~ "公司库存中移除，交付给客户，然后退还给公司。"
+
+#~ msgid ""
+#~ "A rental *Service* can be labor or something non-physical, such as "
+#~ "installation, photography, or a deposit. It can also be a physical item "
+#~ "that never leaves the company’s stock, such as a hotel room, work "
+#~ "station, or storage unit."
+#~ msgstr ""
+#~ "出租\\ *服务*\\ 可以是劳务或非实物的东西，例如安装、摄影或押金。它也可以是"
+#~ "永远不会离开公司库存的实物物品，例如酒店房间、工作站或储物单元。"
+
+#~ msgid ""
+#~ ":guilabel:`Product`: Limit the default delay costs setting to one product "
+#~ "from the field’s drop-down list. Leave the :guilabel:`Product` field "
+#~ "blank if the defaults apply to all products."
+#~ msgstr ""
+#~ ":guilabel:`产品`：将默认延迟费用设置限制为字段下拉列表中的一个产品。如果默"
+#~ "认设置适用于所有产品，请将\\ :guilabel:`产品`\\ 字段留空。"
+
+#~ msgid ""
+#~ "The **Rental** app offers many app-integration features. Depending on the "
+#~ "installed Odoo apps, specific settings are available. To learn more about "
+#~ "the default setting for rental products, refer to the :ref:`Settings "
+#~ "<rental/product_type/settings>` section of the *Rental product type* "
+#~ "page. The following configurations assume the **Rental** and "
+#~ "**Inventory** apps are installed."
+#~ msgstr ""
+#~ "**出租**\\ 应用程序提供许多应用集成功能。根据已安装的 Odoo 应用程序，可使"
+#~ "用特定设置。要了解有关出租产品默认设置的更多信息，请参阅*出租产品类型*页面"
+#~ "的\\ :ref:`设置 <rental/product_type/settings>`\\ 部分。以下配置假定已安装"
+#~ "\\ **出租**\\ 和\\ **库存**\\ 应用程序。"
+
+#~ msgid ""
+#~ "The *Variant* feature in the **Inventory** app must be enabled for this "
+#~ "tab to display."
+#~ msgstr "必须在\\ **库存**\\ 应用中启用\\ *变体*\\ 功能，此标签页才会显示。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
+#~ "section, click :guilabel:`Add a price` to enter a new rental rate. Choose "
+#~ "a *pricing period* (:dfn:`the unit of duration of the rental`) in "
+#~ "the :guilabel:`Period` column, or create a new pricing period by typing "
+#~ "in the name and clicking :guilabel:`Create and edit`."
+#~ msgstr ""
+#~ "點擊\\ :guilabel:`出租價格`\\ 分頁，在\\ :guilabel:`定價`\\ 部分中點擊"
+#~ "\\ :guilabel:`新增價格`\\ 以輸入新的出租費率。在\\ :guilabel:`期間`\\ 欄中"
+#~ "選擇\\ *定價期間*（:dfn:`出租期間的單位`），或透過輸入名稱並點擊"
+#~ "\\ :guilabel:`建立並編輯`\\ 來建立新的定價期間。"
+
+#~ msgid ""
+#~ "Creating a new pricing period opens a pop-up *Create period* window. Fill "
+#~ "in the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
+#~ "click :guilabel:`Save`. The new pricing period automatically applies."
+#~ msgstr ""
+#~ "创建新定价周期会打开一个\\ *创建周期*\\ 弹出窗口。填写\\ :guilabel:`名称"
+#~ "`\\ 、\\ :guilabel:`持续时间`\\ 和\\ :guilabel:`单位`\\ ，然后点击"
+#~ "\\ :guilabel:`保存`\\ 。新定价周期将自动应用。"
+
+#~ msgid "Sample of a New Period view in the Rental app."
+#~ msgstr "出租應用程式中新期間檢視的範例。"
+
+#~ msgid ""
+#~ "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. "
+#~ "To apply the configured rental rate to an existing pricelist, click in "
+#~ "the :guilabel:`Pricelist` column and select the desired list from the "
+#~ "drop-down menu."
+#~ msgstr ""
+#~ "接下來，為該特定\\ :guilabel:`期間`\\ 輸入\\ :guilabel:`價格`。要將配置的"
+#~ "出租費率套用至現有價目表，請點擊\\ :guilabel:`價目表`\\ 欄並從下拉式選單中"
+#~ "選擇所需的清單。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
+#~ "Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. "
+#~ "These values are automatically populated from the :guilabel:`Default "
+#~ "Delay Costs` section, provided they have been configured in "
+#~ "the :menuselection:`Rental app --> Configuration --> Settings`."
+#~ msgstr ""
+#~ "在\\ :guilabel:`預約`\\ 部分，填寫\\ :guilabel:`每小時罰款`、:guilabel:`每"
+#~ "日罰款`\\ 和\\ :guilabel:`保留產品`\\ 時間。這些值會自動從\\ :guilabel:`預"
+#~ "設延遲成本`\\ 部分填入，前提是已在\\ :menuselection:`出租應用程式 --> 配"
+#~ "置 --> 設定`\\ 中配置。"
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near "
+#~ "the top to save."
+#~ msgstr ""
+#~ "點擊頂部附近的\\ :icon:`fa-cloud-upload` :guilabel:`（手動儲存）`\\ 圖示以"
+#~ "儲存。"
+
+#~ msgid "Pickup products"
+#~ msgstr "提货"
+
+#~ msgid ""
+#~ "When a customer picks up products, navigate to the appropriate rental "
+#~ "order, click :guilabel:`Pickup`. The **Rental** app displays a warehouse "
+#~ "delivery form listing the reserved rental products. "
+#~ "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` "
+#~ "stage."
+#~ msgstr ""
+#~ "当客户提货时，导航至相应的出租订单，点击\\ :guilabel:`提货`\\ 。**出租"
+#~ "**\\ 应用程序会显示仓库交货单，列出预留的出租产品。点击\\ :guilabel:`验证"
+#~ "`\\ 将订单移至\\ :guilabel:`完成`\\ 阶段。"
+
+#~ msgid "Sample of a Pickup page in the Rental app."
+#~ msgstr "出租应用程序中提货页面的示例。"
+
+#~ msgid ""
+#~ "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
+#~ msgstr "这样做会在出租订单上放置一个\\ :guilabel:`已提货`\\ 状态横幅。"
+
+#~ msgid "Return products"
+#~ msgstr "退货产品"
+
+#~ msgid ""
+#~ "When a customer returns products, navigate to the desired rental order "
+#~ "and click :guilabel:`Return`. The **Rental** app displays a warehouse "
+#~ "receipt form listing the checked-out rental products."
+#~ msgstr ""
+#~ "当客户退还产品时，导航至所需的出租订单并点击\\ :guilabel:`退货`\\ 。**出租"
+#~ "**\\ 应用会显示一个仓库收货单，列出已借出的出租产品。"
+
+#~ msgid ""
+#~ "Enter the same number of products the customer returned in "
+#~ "the :guilabel:`Quantity` column. If any of the products have serial "
+#~ "numbers, enter them into the :guilabel:`Serial Numbers` column."
+#~ msgstr ""
+#~ "在\\ :guilabel:`数量`\\ 列中输入客户退还的相同数量产品。如果任何产品有序列"
+#~ "号，请将其输入\\ :guilabel:`序列号`\\ 列。"
+
+#~ msgid "Sample of the Return page in the Rental app."
+#~ msgstr "出租应用程序中退货页面的示例。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` "
+#~ "stage. A :guilabel:`Returned` status banner appears on the rental order."
+#~ msgstr ""
+#~ "点击\\ :guilabel:`验证`\\ 将订单移至\\ :guilabel:`完成`\\ 阶段。订单上会显"
+#~ "示\\ :guilabel:`已退货`\\ 状态横幅。"
+
+#~ msgid ""
+#~ "Pickup and return receipts can be printed for customers when they pick up "
+#~ "and return rental products."
+#~ msgstr "当客户取货和退还出租产品时，可以为其打印取货和退货收据。"
+
+#~ msgid ""
+#~ "To print pickup and/or return receipts, navigate to the appropriate "
+#~ "rental order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to "
+#~ "reveal a drop-down menu."
+#~ msgstr ""
+#~ "要打印提货和/或退货收据，导航至相应的出租订单，点击\\ :icon:`fa-"
+#~ "cog`\\ :guilabel:`（操作）`\\ 图标以显示下拉菜单。"
+
+#~ msgid ""
+#~ "From this drop-down menu, hover over the :guilabel:`Print` option to "
+#~ "reveal a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
+#~ msgstr ""
+#~ "在下拉菜单中，将鼠标悬停在 :guilabel:`打印` 选项上，显示一个子菜单。然后选"
+#~ "择 :guilabel:`取货和退货收据`。"
+
+#~ msgid ""
+#~ "Odoo generates and downloads a PDF detailing all information about the "
+#~ "current status of the rented items."
+#~ msgstr "Odoo 生成并下载一个 PDF 文件，详细说明出租物品当前状态的所有信息。"
+
+#~ msgid ""
+#~ "Be sure to configure the rental product's prices on the :ref:`Rental "
+#~ "prices <rental/pricing>` tab."
+#~ msgstr ""
+#~ "务必在\\ :ref:`出租价格 <rental/pricing>`\\ 选项卡上配置出租产品的价格。"
+
+#~ msgid ""
+#~ "Once a customer :ref:`returns the rented product <rental/return-"
+#~ "products>`, reimburse their deposit with a :doc:`credit note <../../../"
+#~ "finance/accounting/customer_invoices/credit_notes>` from the invoice, and "
+#~ "change the *delivered quantity* to `0` on the linked sales order."
+#~ msgstr ""
+#~ "客户\\ :ref:`退还租赁产品 <rental/return-products>`\\ 后，使用发票中的"
+#~ "\\ :doc:`信用票 <../../../finance/accounting/customer_invoices/"
+#~ "credit_notes>`\\ 退还押金，并将关联销售订单上的*交付数量*更改为 `0`。"
+
+#~ msgid ""
+#~ "When a sales order is confirmed, the option to create an invoice becomes "
+#~ "available via the :guilabel:`Create Invoice` button. When clicked, "
+#~ "a :guilabel:`Create invoice(s)` pop-up appears."
+#~ msgstr ""
+#~ "当确认销售订单后，可以通过\\ :guilabel:`创建发票`\\ 按钮创建发票。点击后会"
+#~ "出现\\ :guilabel:`创建发票`\\ 弹出窗口。"
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoice(s)` pop-up, there are three options to "
+#~ "choose from in the :guilabel:`Create Invoice` field:"
+#~ msgstr ""
+#~ "在\\ :guilabel:`创建发票`\\ 弹出窗口中，\\ :guilabel:`创建发票`\\ 字段有三"
+#~ "个选项可供选择："
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoice(s)` pop-up window, the down payment "
+#~ "options are:"
+#~ msgstr "在 :guilabel:`创建发票` 弹出窗口中，首付款选项有："
+
+#~ msgid ""
+#~ "Select a down payment option and set the desired payment, either as a "
+#~ "percentage or a fixed amount, in the :guilabel:`Down Payment Amount` "
+#~ "field."
+#~ msgstr ""
+#~ "选择首付款选项并在\\ :guilabel:`首付款金额`\\ 字段中设置所需的付款，可以是"
+#~ "百分比或固定金额。"
+
+#~ msgid ""
+#~ "Once all fields are filled in, click the :guilabel:`Create Draft` button. "
+#~ "Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice "
+#~ "Draft`."
+#~ msgstr ""
+#~ "填写完所有字段后，点击 :guilabel:`创建草稿` 按钮。点击后，Odoo 将显"
+#~ "示 :guilabel:`客户发票草稿` 页面。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice "
+#~ "Draft`, the down payment that was configured in the *Create invoice(s)* "
+#~ "pop-up form appears under a new :guilabel:`Down Payments` section."
+#~ msgstr ""
+#~ "在\\ :guilabel:`客户发票草稿`\\ 的\\ :guilabel:`发票行`\\ 选项卡中，在*创"
+#~ "建发票*弹出窗口表单中配置的预付款显示在新的\\ :guilabel:`预付款`\\ 部分"
+#~ "下。"
+
+#~ msgid ""
+#~ "Odoo offers both fixed amounts and partial down payments (such as 30% of "
+#~ "an order's total)."
+#~ msgstr "Odoo 提供固定金额和部分预付款（例如订单总额的 30%）。"
+
+#~ msgid ""
+#~ "A 100% down payment is possible and differs from a full payment of the "
+#~ "sales order. A sales order paid through the regular invoice process does "
+#~ "not allow any additional invoices to be generated and does not display "
+#~ "the :guilabel:`Create Invoice` button on the sales order."
+#~ msgstr ""
+#~ "100% 预付款是可能的，与销售订单的全额付款不同。通过常规发票流程支付的销售"
+#~ "订单不允许生成任何其他发票，并且不会在销售订单上显示\\ :guilabel:`创建发票"
+#~ "`\\ 按钮。"
+
+#~ msgid ""
+#~ "With a 100% down payment, the :guilabel:`Create Invoice` button is still "
+#~ "displayed on the sales Order because the system expects another invoice "
+#~ "to be created after the down payment to complete payment of the sales "
+#~ "order."
+#~ msgstr ""
+#~ "对于 100% 预付款，\\ :guilabel:`创建发票`\\ 按钮仍显示在销售订单上，因为系"
+#~ "统期望在预付款后创建另一张发票以完成销售订单的付款。"
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoice(s)` pop-up window that appears, "
+#~ "select :guilabel:`Down payment (percentage)`, and type `50` in "
+#~ "the :guilabel:`Down Payment` field."
+#~ msgstr ""
+#~ "在出现的\\ :guilabel:`创建发票`\\ 弹出窗口中，选择\\ :guilabel:`预付款（百"
+#~ "分比）`\\ ，并在\\ :guilabel:`预付款`\\ 字段中输入 `50`。"
+
+#~ msgid ""
+#~ "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` "
+#~ "can be changed. For more information, check out the documentation "
+#~ "on :ref:`income account modification on down payments <sales/invoicing/"
+#~ "income-account-modification>`. A :guilabel:`Down payment Account` can "
+#~ "also be set on a product category. If set, this account is prioritized "
+#~ "for future down payments."
+#~ msgstr ""
+#~ "附加到\\ :guilabel:`预付款`\\ 的\\ :guilabel:`收入科目`\\ 可以更改。有关更"
+#~ "多信息，请查看有关\\ :ref:`预付款收入科目修改 <sales/invoicing/income-"
+#~ "account-modification>`\\ 的文档。也可以在产品类别上设置\\ :guilabel:`预付"
+#~ "款科目`\\ 。如果设置，此科目将优先用于未来的预付款。"
+
+#~ msgid ""
+#~ "Lastly, click :guilabel:`Create Draft` to create and view the invoice "
+#~ "draft, which includes the down payment under the :guilabel:`Down "
+#~ "Payments` section of the :guilabel:`Invoice Lines` tab. "
+#~ "Click :guilabel:`Confirm` and the invoice's status changes "
+#~ "from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new "
+#~ "series of buttons at the top of the page."
+#~ msgstr ""
+#~ "最后，点击\\ :guilabel:`创建草稿`\\ 以创建并查看发票草稿，其中包括"
+#~ "\\ :guilabel:`发票明细`\\ 标签页的\\ :guilabel:`预付款`\\ 部分下的预付款。"
+#~ "点击\\ :guilabel:`确认`，发票状态将从\\ :guilabel:`草稿`\\ 更改为"
+#~ "\\ :guilabel:`已过账`。这也会在页面顶部显示一系列新按钮。"
+
+#~ msgid ""
+#~ "To begin the payment process, click :guilabel:`Pay`. A :guilabel:`Pay` "
+#~ "pop-up form displays with auto-populated information. Confirm the "
+#~ "information provided is correct and make any necessary adjustments. When "
+#~ "ready, click the :guilabel:`Create Payment` button."
+#~ msgstr ""
+#~ "要开始付款流程，点击\\ :guilabel:`付款`。将显示一个\\ :guilabel:`付款`\\ "
+#~ "弹窗表单，其中包含自动填充的信息。确认提供的信息正确无误，并进行必要的调"
+#~ "整。准备就绪后，点击\\ :guilabel:`创建付款`\\ 按钮。"
+
+#~ msgid ""
+#~ "On the sales order, a new :guilabel:`Down Payments` section is present in "
+#~ "the :guilabel:`Order Lines` tab, along with the down payment that was "
+#~ "just invoiced and posted. When the customer wants to pay the remaining "
+#~ "amount of the order, another invoice must be created."
+#~ msgstr ""
+#~ "在销售订单上，:guilabel:`订单明细`\\ 选项卡中会出现一个新的\\ :guilabel:`"
+#~ "预付款`\\ 部分，以及刚刚开票并过账的预付款。当客户想要支付订单的剩余金额"
+#~ "时，必须创建另一张发票。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Create Invoice` button. On the :guilabel:`Create "
+#~ "invoice(s)` pop-up window, there is a new field: :guilabel:`Already "
+#~ "invoiced` and :guilabel:`Amount to invoice`."
+#~ msgstr ""
+#~ "点击\\ :guilabel:`创建发票`\\ 按钮。在\\ :guilabel:`创建发票`\\ 弹窗中，有"
+#~ "一个新字段：:guilabel:`已开票金额`\\ 和\\ :guilabel:`待开票金额`。"
+
+#~ msgid ""
+#~ "Select the :guilabel:`Regular Invoice` option. Odoo creates an invoice "
+#~ "for the exact amount needed to complete the total payment, as shown in "
+#~ "the :guilabel:`Amount to invoice` field."
+#~ msgstr ""
+#~ "选择\\ :guilabel:`常规发票`\\ 选项。Odoo 会创建一张金额恰好为完成总付款所"
+#~ "需金额的发票，如\\ :guilabel:`待开票金额`\\ 字段所示。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Create Draft` to create a :guilabel:`Customer Invoice "
+#~ "Draft` page. The draft lists all the invoices for that specific sales "
+#~ "order in the :guilabel:`Invoice Lines` tab. Each invoice line item "
+#~ "displays all the necessary information related to each invoice."
+#~ msgstr ""
+#~ "点击\\ :guilabel:`创建草稿`\\ 以创建\\ :guilabel:`客户发票草稿`\\ 页面。草"
+#~ "稿在\\ :guilabel:`发票明细`\\ 标签页中列出该特定销售订单的所有发票。每个发"
+#~ "票明细项显示与每张发票相关的所有必要信息。"
+
+#~ msgid ""
+#~ "To complete the flow, click :guilabel:`Confirm` to change the status of "
+#~ "the invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, "
+#~ "click :guilabel:`Pay`. The :guilabel:`Pay` form appears, with all fields "
+#~ "auto-populated with the necessary information, including the remaining "
+#~ "amount left to be paid on the order."
+#~ msgstr ""
+#~ "要完成流程，点击\\ :guilabel:`确认`\\ 将发票状态从\\ :guilabel:`草稿`\\ 更"
+#~ "改为\\ :guilabel:`已过账`\\ 。然后，点击\\ :guilabel:`付款`\\ 。将出现"
+#~ "\\ :guilabel:`付款`\\ 表单，所有字段都自动填充了必要的信息，包括订单剩余待"
+#~ "付金额。"
+
+#~ msgid ""
+#~ "After confirming that information, click :guilabel:`Create Payment`. "
+#~ "Doing so reveals the final :guilabel:`Customer Invoice` with a "
+#~ "green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-"
+#~ "right corner, depending on how the database has configured and if manual "
+#~ "confirmation of payments is required. Upon returning to the sales order, "
+#~ "both down payments are present in the :guilabel:`Order Lines` tab."
+#~ msgstr ""
+#~ "确认该信息后，点击\\ :guilabel:`创建付款`\\ 。这样做会显示最终的"
+#~ "\\ :guilabel:`客户发票`\\ ，右上角带有绿色的\\ :guilabel:`付款中`\\ 或"
+#~ "\\ :guilabel:`已付款`\\ 横幅，具体取决于数据库的配置方式以及是否需要手动确"
+#~ "认付款。返回销售订单后，两笔预付款都会出现在\\ :guilabel:`订单明细`\\ 选项"
+#~ "卡中。"
+
+#~ msgid "The second down payment invoice with Paid banner in Odoo Sales."
+#~ msgstr "Odoo 销售中带有已付款横幅的第二笔预付款发票。"
+
+#~ msgid "At this point, the flow is complete."
+#~ msgstr "至此，流程已完成。"
+
+#~ msgid ""
+#~ "If a down payment is used with a product that has a :guilabel:`Delivered "
+#~ "quantities` invoicing policy, and the cost of the product exceeds the 50% "
+#~ "down payment, a regular invoice is created. However, for products that "
+#~ "cost less than the 50% down payment, the down payments will not be able "
+#~ "to be deducted when it comes time to invoice the customer."
+#~ msgstr ""
+#~ "如果预付款用于具有\\ :guilabel:`已交付数量`\\ 开票策略的产品，并且产品成本"
+#~ "超过 50% 的预付款，则会创建常规发票。但是，对于成本低于 50% 预付款的产品，"
+#~ "在向客户开票时将无法扣除预付款。"
+
+#~ msgid ""
+#~ "To configure a 100% down payment, navigate to :menuselection:`Sales app --"
+#~ "> New`, and :ref:`create a quotation <sales/create-quotation>` for the "
+#~ "product. Upon clicking the :guilabel:`Confirm` button, the quotation "
+#~ "turns into a sales order. At that point, an invoice can now be created by "
+#~ "clicking :guilabel:`Create Invoice` in the top-left corner. On "
+#~ "the :guilabel:`Create invoice(s)` pop-up window that appears, "
+#~ "select :guilabel:`Down payment (percentage)`, and type `100` in "
+#~ "the :guilabel:`Down Payment` field."
+#~ msgstr ""
+#~ "要配置 100% 的预付款，导航至\\ :menuselection:`销售应用 --> 新建`，并为产"
+#~ "品\\ :ref:`创建报价单 <sales/create-quotation>`。点击\\ :guilabel:`确认"
+#~ "`\\ 按钮后，报价单将转换为销售订单。此时，可以通过点击左上角的"
+#~ "\\ :guilabel:`创建发票`\\ 来创建发票。在出现的\\ :guilabel:`创建发票`\\ 弹"
+#~ "窗中，选择\\ :guilabel:`预付款（百分比）`，并在\\ :guilabel:`预付款`\\ 字"
+#~ "段中输入 `100`。"
+
+#~ msgid ""
+#~ "Next, click :guilabel:`Create Draft` to create an invoice draft. This "
+#~ "will also bring the draft invoice into view, which includes "
+#~ "the :guilabel:`Down payment` under the :guilabel:`Down Payments` section "
+#~ "of the :guilabel:`Invoice Lines` tab. The invoice can now be confirmed "
+#~ "and posted by clicking :guilabel:`Confirm`. Confirming the invoice "
+#~ "changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It also "
+#~ "reveals a new series of buttons at the top of the page."
+#~ msgstr ""
+#~ "接下来，点击\\ :guilabel:`创建草稿`\\ 以创建发票草稿。这也会显示发票草稿，"
+#~ "其中包括\\ :guilabel:`发票明细`\\ 标签页的\\ :guilabel:`预付款`\\ 部分下的"
+#~ "\\ :guilabel:`预付款`。现在可以通过点击\\ :guilabel:`确认`\\ 来确认并过账"
+#~ "发票。确认发票会将状态从\\ :guilabel:`草稿`\\ 更改为\\ :guilabel:`已过账"
+#~ "`。这也会在页面顶部显示一系列新按钮。"
+
+#~ msgid ""
+#~ "The payment can be registered by clicking the :guilabel:`Pay` button. "
+#~ "This brings up the :guilabel:`Pay` pop-up form, which is auto-populated "
+#~ "with the necessary information. When ready, click the :guilabel:`Create "
+#~ "Payment` button."
+#~ msgstr ""
+#~ "可以通过点击\\ :guilabel:`支付`\\ 按钮来登记付款。这将打开\\ :guilabel:`支"
+#~ "付`\\ 弹出表单，该表单会自动填充必要的信息。准备好后，点击\\ :guilabel:`创"
+#~ "建付款`\\ 按钮。"
+
+#~ msgid ""
+#~ "After clicking :guilabel:`Create Payment`, Odoo reveals the customer "
+#~ "invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` "
+#~ "banner in the upper-right corner, depending on how the database has "
+#~ "configured and if manual confirmation of payments is required. The "
+#~ "process is now complete, and the 100% down payment has been successfully "
+#~ "applied."
+#~ msgstr ""
+#~ "点击\\ :guilabel:`创建付款`\\ 后，Odoo会显示客户发票，现在右上角显示绿色的"
+#~ "\\ :guilabel:`支付中`\\ 或\\ :guilabel:`已支付`\\ 横幅，具体取决于数据库的"
+#~ "配置方式以及是否需要手动确认付款。流程现已完成，100%预付款已成功应用。"
+
+#~ msgid "Income account modification on down payments"
+#~ msgstr "预付款的收入科目修改"
+
+#~ msgid ""
+#~ "To change or adjust the income account attached to down payments, the "
+#~ "**Accounting** app must be installed. With the **Accounting** app "
+#~ "installed, the :guilabel:`Accounting` column becomes available on the "
+#~ "draft invoice."
+#~ msgstr ""
+#~ "要更改或调整附加到预付款的收入科目，必须安装\\ **会计**\\ 应用。安装\\ **"
+#~ "会计**\\ 应用后，发票草稿上将显示\\ :guilabel:`会计`\\ 列。"
+
+#~ msgid ""
+#~ "Navigate to the invoice to be modified by going to :menuselection:`Sales "
+#~ "app --> Orders --> Orders`. Open an order, then click "
+#~ "the :guilabel:`Invoices` smart button. Open an invoice, click the drop-"
+#~ "down arrow on the entry in the :guilabel:`Account` column and "
+#~ "click :guilabel:`Search more...` to bring up the :guilabel:`Search: "
+#~ "Account` form. In this form, a different account can be chosen from the "
+#~ "list of pre-existing accounts. A new account can also be created by "
+#~ "clicking the :guilabel:`New` button."
+#~ msgstr ""
+#~ "要修改发票，请导航至\\ :menuselection:`销售应用 --> 订单 --> 订单`\\ 。打"
+#~ "开订单，然后点击\\ :guilabel:`发票`\\ 智能按钮。打开发票，点击"
+#~ "\\ :guilabel:`科目`\\ 列中条目的下拉箭头，然后点击\\ :guilabel:`搜索更"
+#~ "多...`\\ 以打开\\ :guilabel:`搜索：科目`\\ 表单。在此表单中，可以从现有科"
+#~ "目列表中选择其他科目。也可以通过点击\\ :guilabel:`新建`\\ 按钮创建新科目。"
+
 #~ msgid ""
 #~ "Presets can be used in the :ref:`kiosk of the self-ordering mode <extra/"
 #~ "self_order/usage-guidelines>`. Once the customer taps "
@@ -42717,9 +43464,6 @@ msgstr ":doc:`../sales/products_prices/prices/discounts`"
 
 #~ msgid "`Odoo Tutorials: Rental <https://www.odoo.com/slides/rental-48>`_"
 #~ msgstr "`Odoo 教程：租赁<https://www.odoo.com/slides/rental-48>`_"
-
-#~ msgid "Service rental products"
-#~ msgstr "服务出租产品"
 
 #~ msgid ""
 #~ "The **Rental** app is a comprehensive tool that enables users to manage "

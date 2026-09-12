@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:33+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: 2026-08-27 17:21+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -97,8 +97,11 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:29
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:22
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:30
+#: ../../content/applications/sales/rental/configure_products/products.rst:17
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:23
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:14
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:27
 #: ../../content/applications/sales/sales/commissions.rst:14
 #: ../../content/applications/sales/sales/gelato.rst:15
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
@@ -783,7 +786,6 @@ msgstr "新しく生成されたリードのチャタースレッドです。"
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:81
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:80
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:47
-#: ../../content/applications/sales/rental.rst:91
 msgid "Pricing"
 msgstr "価格設定"
 
@@ -2536,7 +2538,7 @@ msgid ":doc:`../../../sales/sales/products_prices/prices/pricing`"
 msgstr ":doc:`../../../sales/sales/products_prices/prices/pricing`"
 
 #: ../../content/applications/sales/crm/optimize/member_partner_module.rst:49
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:103
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:113
 msgid ":doc:`../../../websites/ecommerce`"
 msgstr ":doc:`../../../websites/ecommerce`"
 
@@ -21657,12 +21659,12 @@ msgstr ""
 "のPOSまで追跡可能になります。"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:44
-#: ../../content/applications/sales/point_of_sale/use.rst:436
+#: ../../content/applications/sales/point_of_sale/use.rst:497
 msgid ":doc:`shop`"
 msgstr ":doc:`shop`"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:45
-#: ../../content/applications/sales/point_of_sale/use.rst:437
+#: ../../content/applications/sales/point_of_sale/use.rst:498
 msgid ":doc:`restaurant`"
 msgstr ":doc:`restaurant`"
 
@@ -22622,6 +22624,128 @@ msgstr ""
 "れた閾値が表示され、ユーザに対して期末処理の承認をマネジャーに連絡するよう指"
 "示します。"
 
+#: ../../content/applications/sales/point_of_sale/use.rst:436
+msgid "Offline POS"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:438
+msgid ""
+"During an internet outage, the POS switches to *offline mode*. This mode "
+"keeps order creation and management functional even when backend-dependent "
+"features are unavailable. When a :ref:`POS session starts <pos/use/open-"
+"register>`, essential data, such as products and customers, is loaded into "
+"the browser cache so that the data remains accessible offline. Orders "
+"created offline are stored in the browser cache and synced to the backend "
+"when the connection is restored."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:445
+msgid ""
+"To avoid losing any data created while offline, do not close or reload the "
+"browser, and do not clear the browser cache until the POS is back online and "
+"synced with the backend."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:449
+msgid ""
+"The POS offline mode refers only to Point of Sale-specific functionality. A "
+"separate :doc:`offline mode <../../general/offline_mode>` feature covers the "
+"rest of Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:452
+msgid ""
+"Many POS features rely on backend information and, therefore, are not "
+"available offline. These features include:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:455
+msgid ""
+":doc:`Generating invoices <use/pos_invoices>`: Invoices requested while "
+"offline are generated automatically after the connection is restored."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:457
+msgid ":ref:`Registering customers <pos/use/customers>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:458
+msgid ""
+":ref:`Accessing detailed product information <pos/products/information-"
+"display>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:459
+msgid ":ref:`Synchronizing stock in real time <pos/products/stock-management>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:460
+msgid ":ref:`Using payment terminals <pos/terminals/terminal-use>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:461
+msgid "Loading data on demand"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:463
+msgid ""
+"Devices connected to the :doc:`local network <hardware_network/pos_lna>`, "
+"such as :doc:`printers <hardware_network/receipt_printers>` and :doc:`scales "
+"<hardware_network/scale>`, continue to work offline, as long as no changes "
+"are made to the local network. Connected payment terminals rely on an active "
+"internet connection and do not work offline."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:469
+msgid ""
+"The :icon:`fa-chain-broken` (:guilabel:`offline mode`) icon appears in the "
+"POS interface header when the system is offline."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:471
+msgid ""
+"If a feature is not available offline, a popover with the "
+"message :guilabel:`Connection Lost` appears. To use the offline POS without "
+"that feature, click :guilabel:`Continue with limited functionality`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:476
+msgid "Cached data"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:478
+msgid ""
+"Each time a customer or product is used in the POS, new data is added to the "
+"browser cache, along with the data loaded at the beginning of a session. If "
+"frequent internet outages occur, increasing the amount of data loaded into "
+"the POS at the start of the session can ensure that when the POS goes "
+"offline, all necessary data remains available. To do so, "
+"activate :ref:`developer mode <developer-mode>`, then go "
+"to :menuselection:`Settings --> Technical --> System Parameters` and adapt "
+"the :guilabel:`Value` of the following system parameters:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:485
+msgid ""
+":guilabel:`point_of_sale.limited_customer_count`: Number of :ref:`customers "
+"<pos/use/customers>` loaded into the POS. Customers with the highest order "
+"counts are loaded first, up to the specified value."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:488
+msgid ""
+":guilabel:`point_of_sale.limited_product_count`: Number of :doc:`products "
+"<products>` loaded into the POS. Favorite products are loaded first, "
+"followed by services, then by the most recently updated products, up to the "
+"specified value."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:493
+msgid ""
+"Increasing the amount of data initialized in the POS also increases the time "
+"required to open the register."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:5
 msgid "Invoices"
 msgstr "請求書"
@@ -23142,11 +23266,18 @@ msgid ""
 "browser's print function."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:10
+#: ../../content/applications/sales/rental.rst:1
+msgid ""
+"This page explains the Rental Orders dashboard, how to browse rentable "
+"products, and how Odoo computes rental prices by selecting the cheapest "
+"applicable price line."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:15
 msgid "Rental"
 msgstr "レンタル"
 
-#: ../../content/applications/sales/rental.rst:12
+#: ../../content/applications/sales/rental.rst:17
 msgid ""
 "The Odoo **Rental** application provides comprehensive solutions to "
 "configure and manage rentals."
@@ -23154,7 +23285,7 @@ msgstr ""
 "Odoo\\ **レンタル**\\ アプリケーションは、レンタルを設定および管理するための"
 "包括的なソリューションを入力されます。"
 
-#: ../../content/applications/sales/rental.rst:14
+#: ../../content/applications/sales/rental.rst:19
 msgid ""
 "Send quotations, confirm orders, schedule rentals, register products when "
 "they are picked up and returned, and invoice customers from this single "
@@ -23163,60 +23294,78 @@ msgstr ""
 "見積書の送付、オーダの確認、レンタルの予約、プロダクトの引取・返却時の登録、"
 "顧客への請求書発行などをこのプラットフォーム1つで行うことができます。"
 
-#: ../../content/applications/sales/rental.rst:18
+#: ../../content/applications/sales/rental.rst:23
 msgid "`Odoo Rental: Product page <https://www.odoo.com/app/rental>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:19
+#: ../../content/applications/sales/rental.rst:24
 msgid "`Odoo Tutorials: Configuring Rental Products <rental-products_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:20
+#: ../../content/applications/sales/rental.rst:25
 msgid "`Odoo Tutorials: Hotel booking <hotel-booking_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:24
+#: ../../content/applications/sales/rental.rst:29
 msgid "Product types"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:24
+#: ../../content/applications/sales/rental.rst:29
 msgid ""
 "Learn about the different rental product types, general configuration, and "
 "possible app integrations."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:31
+#: ../../content/applications/sales/rental.rst:36
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:8
 msgid "Physical service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:31
+#: ../../content/applications/sales/rental.rst:36
 msgid "Discover how to create and manage a physical service rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:37
+#: ../../content/applications/sales/rental.rst:42
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:7
 msgid "Labor service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:37
+#: ../../content/applications/sales/rental.rst:42
 msgid "Learn how to create a labor service rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:43
+#: ../../content/applications/sales/rental.rst:48
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:3
+msgid "Create a rental order"
+msgstr "レンタルオーダを作成"
+
+#: ../../content/applications/sales/rental.rst:48
+msgid "Learn how to create a rental order."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:54
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:7
+msgid "Pick up and return rental products"
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:54
+msgid "Learn how to pick up and return rental products."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:60
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:3
 msgid "Manage deposits"
 msgstr "デポジットの管理"
 
-#: ../../content/applications/sales/rental.rst:43
+#: ../../content/applications/sales/rental.rst:60
 msgid "Learn how to create a refundable deposit for rental products."
 msgstr "レンタルプロダクトの返金可能なデポジットを作成する方法を学びます。"
 
-#: ../../content/applications/sales/rental.rst:50
+#: ../../content/applications/sales/rental.rst:67
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
-#: ../../content/applications/sales/rental.rst:52
+#: ../../content/applications/sales/rental.rst:69
 msgid ""
 "Upon opening the **Rental** application, the :guilabel:`Rental Orders` "
 "dashboard is revealed."
@@ -23231,7 +23380,7 @@ msgid ""
 msgstr ""
 "Odooレンタルアプリケーションで利用可能なレンタルオーダーダッシュボードの例。"
 
-#: ../../content/applications/sales/rental.rst:57
+#: ../../content/applications/sales/rental.rst:74
 msgid ""
 "In the default Kanban view, all rentals are visible. Each rental card "
 "displays the customer name, the price of the rental, the related sales order "
@@ -23241,7 +23390,7 @@ msgstr ""
 "カードには、顧客名、レンタル価格、関連する販売オーダ番号、およびレンタルのス"
 "テータスが表示されます。"
 
-#: ../../content/applications/sales/rental.rst:60
+#: ../../content/applications/sales/rental.rst:77
 msgid ""
 "On the left sidebar, the :guilabel:`Rental Status` for each rental can be "
 "found. Beneath that, the :guilabel:`Invoice Status` of the rentals is "
@@ -23253,11 +23402,11 @@ msgstr ""
 "ドバーのオプションをクリックすると、ダッシュボードに表示されるレンタルがフィ"
 "ルタリングされます。"
 
-#: ../../content/applications/sales/rental.rst:65
+#: ../../content/applications/sales/rental.rst:82
 msgid "Rental products"
 msgstr "レンタルプロダクト"
 
-#: ../../content/applications/sales/rental.rst:67
+#: ../../content/applications/sales/rental.rst:84
 msgid ""
 "To view all products that can rented in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
@@ -23267,7 +23416,7 @@ msgstr ""
 "\\ :menuselection:`レンタルアプリ --> プロダクト`\\ に移動します。デフォルト"
 "では、検索バーに\\ :guilabel:`レンタル`\\ 検索フィルターが表示されます。"
 
-#: ../../content/applications/sales/rental.rst:70
+#: ../../content/applications/sales/rental.rst:87
 msgid ""
 "Each product Kanban card displays that product's name, rental price, and "
 "product image (if applicable)."
@@ -23275,154 +23424,46 @@ msgstr ""
 "各プロダクトのかんばんカードには、そのプロダクトの名前、レンタル価格、および"
 "プロダクト画像 (該当する場合) が表示されます。"
 
-#: ../../content/applications/sales/rental.rst:74
+#: ../../content/applications/sales/rental.rst:91
 msgid ":doc:`rental/rental_orders/manage_deposits`"
 msgstr ":doc:`rental/rental_orders/manage_deposits`"
 
-#: ../../content/applications/sales/rental.rst:79
-msgid "Rental pricing"
-msgstr "レンタル価格"
-
-#: ../../content/applications/sales/rental.rst:81
-msgid ""
-"To adjust the rental pricing on a product, go to the :guilabel:`Products` "
-"page in the **Rental** app, then select the desired product or "
-"click :guilabel:`New` to create a new product from scratch."
-msgstr ""
-"プロダクトのレンタル価格を調整するには、\\ **レンタル**\\ アプリの"
-"\\ :guilabel:`プロダクト`\\ ページに移動し、目的のプロダクトを選択するか、"
-"\\ :guilabel:`新規`\\ をクリックして新しいプロダクトをゼロから作成します。"
-
-#: ../../content/applications/sales/rental.rst:84
-msgid ""
-"On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, "
-"open the :guilabel:`Rental prices` tab."
-msgstr ""
-"プロダクトフォームで、\\ :guilabel:`レンタル`\\ チェックボックスがオンになっ"
-"ていることを確認します。次に、\\ :guilabel:`レンタル価格`\\ タブを開きます。"
-
-#: ../../content/applications/sales/rental.rst:None
-msgid "How the Settings page appears in the Odoo Rental application."
-msgstr "Odooレンタルの設定画面の表示方法"
-
-#: ../../content/applications/sales/rental.rst:93
-msgid ""
-"Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, "
-"designate custom rental prices and rental periods for the product."
-msgstr ""
-":guilabel:`レンタル価格` タブの :guilabel:`価格` セクションで、プロダクトのカ"
-"スタムレンタル価格とレンタル期間を指定します。"
-
 #: ../../content/applications/sales/rental.rst:96
-msgid ""
-"To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a "
-"*pricing period* (:dfn:`the unit of duration of the rental`) in "
-"the :guilabel:`Period` column, or create a new pricing period by typing in "
-"the name and clicking :guilabel:`Create`."
+msgid "Rental price computing"
 msgstr ""
-"レンタルの価格を追加するには、 :guilabel:`価格の追加` をクリックします。次"
-"に、:guilabel:`機関` カラムで *価格設定期間* (:dfn:`レンタル期間の単位`) を選"
-"択するか、名前を入力して:guilabel:`作成` をクリックして新しい価格設定期間を作"
-"成します。"
 
-#: ../../content/applications/sales/rental.rst:100
-msgid ""
-"Next, decide whether or not to apply this custom rental price to a "
-"specific :guilabel:`Pricelist`."
-msgstr ""
-"次に、このカスタムレンタル価格を特定の :guilabel:`価格表` に適用するかどうか"
-"を決定します。"
-
-#: ../../content/applications/sales/rental.rst:102
-msgid ""
-"Lastly, enter the desired :guilabel:`Price` for that "
-"specific :guilabel:`Period`."
-msgstr "最後に、その特定の :guilabel:`期間` の :guilabel:`価格` を入力します。"
-
-#: ../../content/applications/sales/rental.rst:105
-msgid ""
-"No limit exists on how many pricing lines can be added. Multiple pricing "
-"options for rental products are typically used to give discounts for "
-"customers who agree to longer rental durations."
-msgstr ""
-"追加できる価格設定行の数に制限はありません。レンタルプロダクトの複数の価格設"
-"定オプションは、通常、長期レンタル期間に同意した顧客に割引を提供するために使"
-"用されます。"
-
-#: ../../content/applications/sales/rental.rst:109
-msgid ""
-"Remember when considering pricing that renting for a day is usually limited "
-"to operating hours, not 24 hours. When determining pricing, keep in mind "
-"that a rental day typically refers to operating hours, not a full 24-hour "
-"period."
-msgstr ""
-"価格設定を検討する際は、1日のレンタルは通常24時間ではなく営業時間に制限される"
-"ことを覚えておいてください。価格設定を決定する際は、レンタル日は通常、24時間"
-"ではなく営業時間を指すことに留意してください。"
-
-#: ../../content/applications/sales/rental.rst:114
-msgid "Reservations"
-msgstr "在庫引当"
-
-#: ../../content/applications/sales/rental.rst:116
-msgid ""
-"Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` "
-"tab, there is the option to configure additional fines for "
-"any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the customer "
-"takes to return a rental."
-msgstr ""
-":guilabel:`レンタル価格`\\ タブの\\ :guilabel:`予約`\\ セクションの下には、顧"
-"客がレンタルを返却するのにかかる\\ :guilabel:`時間単位の罰金`\\ または"
-"\\ :guilabel:`日単位の罰金`\\ に対して追加の罰金を設定するオプションがありま"
-"す。"
-
-#: ../../content/applications/sales/rental.rst:120
-msgid ""
-"Also, there is the option to set the :guilabel:`Reserve product` time, "
-"expressed in hours, to make the rental product temporarily unavailable "
-"between two rental orders. Such a feature may prove useful if maintenance or "
-"cleaning is required between rentals."
-msgstr ""
-"また\\ :guilabel:`プロダクト予約`\\ 時間（時間単位で表記）を設定し、2つのレン"
-"タルオーダ間でレンタルプロダクトを一時的に利用不可にするオプションもありま"
-"す。この機能は、レンタルの合間に整備やクリーニングが必要な場合に便利です。"
-
-#: ../../content/applications/sales/rental.rst:125
-msgid "Price computing"
-msgstr "価格計算"
-
-#: ../../content/applications/sales/rental.rst:127
+#: ../../content/applications/sales/rental.rst:98
 msgid ""
 "Odoo always uses two rules to compute the price of a product when a rental "
 "order is created:"
 msgstr ""
 "Odooはレンタルオーダを作成する際、常に2つの規則でプロダクト価格を計算します:"
 
-#: ../../content/applications/sales/rental.rst:129
+#: ../../content/applications/sales/rental.rst:100
 msgid "Only one price line is used."
 msgstr "1つの価格明細のみ使用されます。"
 
-#: ../../content/applications/sales/rental.rst:130
+#: ../../content/applications/sales/rental.rst:101
 msgid "The cheapest line is selected."
 msgstr "最も安価な明細が選択されます。"
 
-#: ../../content/applications/sales/rental.rst:133
+#: ../../content/applications/sales/rental.rst:104
 msgid "Consider the following rental pricing configuration for a product:"
 msgstr "あるプロダクトについて、次のようなレンタル価格設定を考えてみましょう:"
 
-#: ../../content/applications/sales/rental.rst:135
+#: ../../content/applications/sales/rental.rst:106
 msgid "1 day: $100"
 msgstr "1 日: $100"
 
-#: ../../content/applications/sales/rental.rst:136
+#: ../../content/applications/sales/rental.rst:107
 msgid "3 days: $250"
 msgstr "3 日: $250"
 
-#: ../../content/applications/sales/rental.rst:137
+#: ../../content/applications/sales/rental.rst:108
 msgid "1 week: $500"
 msgstr "1 週間: $500"
 
-#: ../../content/applications/sales/rental.rst:139
+#: ../../content/applications/sales/rental.rst:110
 msgid ""
 "A customer wants to rent this product for eight days. What price will they "
 "pay?"
@@ -23430,7 +23471,7 @@ msgstr ""
 "ある顧客がこのプロダクトを8日間レンタルしたい場合、料金はいくらになるでしょう"
 "か？"
 
-#: ../../content/applications/sales/rental.rst:141
+#: ../../content/applications/sales/rental.rst:112
 msgid ""
 "After an order is created, Odoo selects the second line as this is the "
 "cheapest option. The customer has to pay three times '3 days' to cover the "
@@ -23476,7 +23517,7 @@ msgstr ""
 msgid ""
 "Configuration requirements differ depending on the type of service product. "
 "To learn more about the default settings for rental products, refer to "
-"the :ref:`Configuration <rental/product_type/settings>` section on the "
+"the :ref:`Configuration <rental/product_type/configuration>` section on the "
 "*Rental product type* page."
 msgstr ""
 
@@ -23522,7 +23563,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:53
-#: ../../content/applications/sales/rental/configure_products/products.rst:47
+#: ../../content/applications/sales/rental/configure_products/products.rst:52
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:85
 msgid "Initial product configuration"
 msgstr ""
@@ -23579,18 +23620,19 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:82
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:116
 msgid "Configuring rental periods and prices"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:84
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:118
+#: ../../content/applications/sales/rental/configure_products/products.rst:69
 msgid ""
 "No limit exists on how many rental prices can be added to a product. "
 "Multiple pricing options for rental products are typically used to give "
 "discounts for customers who agree to longer rental durations. When creating "
 "multiple pricing options for a rental product, remember the **Rental** "
-"app's :ref:`price computing logic <rental/pricing>`."
+"app's :ref:`price computing logic <rental/price-computing>`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:89
@@ -23608,6 +23650,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:94
+#: ../../content/applications/sales/rental/configure_products/products.rst:79
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:128
 msgid ""
 "(Optional) Select a pricelist option from the :guilabel:`Pricelist` column. "
@@ -23619,6 +23662,7 @@ msgid "Enter the :guilabel:`Price` for the chosen :guilabel:`Period`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:133
 msgid ""
 "Remember when considering pricing that renting for a day is usually limited "
@@ -23635,6 +23679,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:92
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:141
 msgid ""
 ":guilabel:`Hourly Fine`: The price per hour charged when the rental product "
@@ -23642,6 +23687,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:109
+#: ../../content/applications/sales/rental/configure_products/products.rst:94
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:143
 msgid ""
 ":guilabel:`Daily Fine`: The price per day charged when the rental product is "
@@ -23649,6 +23695,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:111
+#: ../../content/applications/sales/rental/configure_products/products.rst:96
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:145
 msgid ""
 ":guilabel:`Reserve product`: The time the rental product is temporarily "
@@ -23661,6 +23708,7 @@ msgid "Example of a configured Rental prices tab on the Rental product."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:120
+#: ../../content/applications/sales/rental/configure_products/products.rst:102
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:154
 msgid "Creating a rental period"
 msgstr ""
@@ -23668,10 +23716,10 @@ msgstr ""
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:122
 msgid ""
 "The **Rental** app allows users to :ref:`create custom rental periods "
-"<rental/products/rental-periods-prices-reservations>` to use in the *Rental "
-"prices* tab. This is helpful when renting services with special pricing for "
-"a set amount of time, such as offering a four-hour photo shoot for $100 when "
-"the hourly rate is $30."
+"<rental/products/rental-period>` to use in the *Rental prices* tab. This is "
+"helpful when renting services with special pricing for a set amount of time, "
+"such as offering a four-hour photo shoot for $100 when the hourly rate is "
+"$30."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:127
@@ -23682,7 +23730,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:133
-#: ../../content/applications/sales/rental/configure_products/products.rst:62
+#: ../../content/applications/sales/rental/configure_products/products.rst:137
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Optional: specify rental variants"
 msgstr ""
@@ -23729,6 +23777,7 @@ msgid "Example of service variants in the Attributes & Variants tab."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:161
+#: ../../content/applications/sales/rental/configure_products/products.rst:247
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:197
 msgid "eCommerce features"
 msgstr ""
@@ -23750,18 +23799,18 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:173
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:120
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:130
 msgid ":doc:`service_products`"
 msgstr ":doc:`service_products`"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:174
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:119
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:129
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:210
 msgid ":doc:`products`"
 msgstr ":doc:`products`"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:175
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:99
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:109
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:211
 msgid ":doc:`../../../services/planning`"
 msgstr ":doc:`../../../services/planning`"
@@ -23771,11 +23820,19 @@ msgstr ":doc:`../../../services/planning`"
 msgid ":doc:`../../sales/products_prices/products/variants`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:5
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:1
+msgid ""
+"This page explains the Goods and Services product types available in the "
+"Rental app and their configuration settings, app integrations, and search "
+"options. It also covers rental periods, including the default Nightly period "
+"with check-in and check-out fields."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:11
 msgid "Rental product type"
 msgstr "レンタルプロダクトタイプ"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:7
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:13
 msgid ""
 "Odoo allows for two :ref:`product types <inventory/product_management/goods-"
 "or-services>` when configuring a rental product: Goods or Services."
@@ -23784,28 +23841,22 @@ msgstr ""
 "<inventory/product_management/goods-or-services>`\\ が使用できます：商品また"
 "はサービスです。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:10
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:16
 msgid ""
 "A rental *Goods* product is a physical item, such as a computer, vehicle, "
-"bike, camera, or an item of clothing. Goods are removed from the company’s "
+"bike, camera, or an item of clothing. Goods are removed from the company's "
 "stock, delivered to the customer, and then returned to the company."
 msgstr ""
-"レンタル\\ *商品*\\ プロダクトは、コンピューター、車両、自転車、カメラ、衣類"
-"などの物理的なアイテムです。商品は会社の在庫から取り出され、顧客に配達され、"
-"その後会社に返却されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:14
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:20
 msgid ""
 "A rental *Service* can be labor or something non-physical, such as "
 "installation, photography, or a deposit. It can also be a physical item that "
-"never leaves the company’s stock, such as a hotel room, work station, or "
+"never leaves the company's stock, such as a hotel room, work station, or "
 "storage unit."
 msgstr ""
-"\\ :dfn:`レンタル`\\ サービスは、労働力または非物理的なもの（設置、写真、デポ"
-"ジットなど）を指します。また、会社の在庫から出ることのない物理的なアイテム"
-"（ホテルの部屋、作業ステーション、保管ユニットなど）も含まれます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:18
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:24
 msgid ""
 "The following sections detail basic settings and app integration "
 "configurations for Goods and Services."
@@ -23813,16 +23864,7 @@ msgstr ""
 "以下のセクションでは、商品とサービスの基本設定とアプリ統合設定について詳しく"
 "説明します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:24
-#: ../../content/applications/sales/rental/configure_products/products.rst:12
-#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
-#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
-msgid "Settings"
-msgstr "管理設定"
-
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:27
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:33
 msgid ""
 "For the :guilabel:`Default Padding time` and :guilabel:`Rental Transfers` "
 "settings, the **Inventory** app must be installed. For the *Rent Online "
@@ -23833,7 +23875,7 @@ msgstr ""
 "レンタル*\\ セクションの設定には、\\ **eコマース**\\ モジュールがインストール"
 "されている必要があります。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:31
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:37
 msgid ""
 "To configure default settings on rental products, navigate "
 "to :menuselection:`Rental app --> Configuration --> Settings`."
@@ -23845,7 +23887,7 @@ msgstr ""
 msgid "The settings page of the Rental app with all the default values."
 msgstr "すべてのデフォルト値を含むレンタルアプリの設定ページ。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:37
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:43
 msgid ""
 "In the *Rental* section, the *Default Delay Costs* subsection is used to set "
 "up late fees. These are the base settings that come with the **Rental** app "
@@ -23856,7 +23898,7 @@ msgstr ""
 "付属する課税標準設定です。レンタルプロダクトに遅延コストと時間を適用するに"
 "は、次の項目を入力します:"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:41
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:47
 msgid ""
 ":guilabel:`Per Hour`: The late fee amount is applied each hour the rental "
 "product is past due."
@@ -23864,7 +23906,7 @@ msgstr ""
 ":guilabel:`1時間あたり`: レンタルプロダクトが返済期日を過ぎた時間ごとに延滞料"
 "金の付与数が適用されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:42
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:48
 msgid ""
 ":guilabel:`Per Day`: The late fee amount is applied each day the rental "
 "product is past due."
@@ -23872,22 +23914,19 @@ msgstr ""
 ":guilabel:`1日あたり`: レンタルプロダクトが返済期日を過ぎた日ごとに延滞料金の"
 "付与数が適用されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:43
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:49
 msgid ""
 ":guilabel:`Apply after`: The number of hours necessary to trigger a late fee."
 msgstr ":guilabel:`適用開始`: 延滞料金を発生させるために必要な時間数。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:44
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:50
 msgid ""
 ":guilabel:`Product`: Limit the default delay costs setting to one product "
-"from the field’s drop-down list. Leave the :guilabel:`Product` field blank "
+"from the field's drop-down list. Leave the :guilabel:`Product` field blank "
 "if the defaults apply to all products."
 msgstr ""
-":guilabel:`プロダクト`: フィールドのドロップダウンリストから1つのプロダクトに"
-"デフォルトの遅延コスト設定を制限します。デフォルトがすべてのプロダクトに適用"
-"される場合は、:guilabel:`プロダクト`フィールドを空白のままにします。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:47
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:53
 msgid ""
 "If the **Inventory** app is installed, the *Default Padding Time* section "
 "displays. The time inputted into the :guilabel:`Padding` field blocks a "
@@ -23899,7 +23938,7 @@ msgstr ""
 "間は、レンタルプロダクトを予約に対応可能な状態から除外します。この設定は時間"
 "単位で設定されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:52
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:58
 msgid ""
 "For more control, configure the costs for late returns and padding time in "
 "the :guilabel:`Hourly Fine`, :guilabel:`Daily Fine`, and :guilabel:`Reserve "
@@ -23909,7 +23948,7 @@ msgstr ""
 "`、:guilabel:`日単位の罰金`、および:guilabel:`プロダクトの予約`フィールドで、"
 "返却遅延のコストとパディング時間を設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:55
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:61
 msgid ""
 "The :guilabel:`Rental Transfers` checkbox enables automatic creation of "
 "delivery and return receipts for a rental product. This feature also needs "
@@ -23919,7 +23958,7 @@ msgstr ""
 "配送および返却レシートが自動的に作成されます。この機能には\\ **在庫**\\ アプ"
 "リのインストールも必要です。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:59
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:65
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the :guilabel:`Rental Transfers` feature is enabled. Odoo uses the new "
@@ -23934,7 +23973,7 @@ msgstr ""
 "時に在庫から顧客/レンタルへ移動し、返却時に戻します）。在庫追跡の破損を避ける"
 "ため、このロケーションを変更\\ **しないでください**。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:65
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:73
 msgid ""
 "If the **eCommerce** module is installed, the *Rent Online* section is "
 "available to configure. The *Minimal time of rental* section contains:"
@@ -23943,7 +23982,7 @@ msgstr ""
 "タル*\\ セクションが設定可能になります。\\ *最小レンタル時間*\\ セクションに"
 "は以下が含まれます:"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:68
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:76
 msgid ""
 ":guilabel:`Minimal Rental Duration`: The minimum duration of time a rental "
 "product must be booked. The available units of time are: Hours, Days, Weeks, "
@@ -23952,7 +23991,7 @@ msgstr ""
 ":guilabel:`最小レンタル期間`: レンタルプロダクトを予約しなければならない最小"
 "期間。対応可能な時間単位は、時間、日、週、月です。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:70
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:78
 msgid ""
 ":guilabel:`Unavailability days`: Designated days that are not available for "
 "online rental pick ups or returns."
@@ -23960,16 +23999,16 @@ msgstr ""
 ":guilabel:`利用不可日`: オンラインレンタルの受け取りまたは返却が利用できない"
 "指定日。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:73
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:81
+#: ../../content/applications/sales/rental/configure_products/products.rst:38
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr ":guilabel:`保存`をクリックして変更を適用します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:76
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:86
 msgid "App integration configuration"
 msgstr "アプリ統合設定"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:78
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:88
 msgid ""
 "The **Rental** app relies on additional Odoo app integrations to expand its "
 "settings and product configurations. The following apps are essential for "
@@ -23979,7 +24018,7 @@ msgstr ""
 "統合に依存しています。プロダクトとレンタルオーダを作成する際のワークフロー効"
 "率と自動化には、以下のアプリが不可欠です:"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:82
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:92
 msgid ""
 "**Sales**: Enables online payments and signatures, uses quotation templates, "
 "variants, and PDF Quote Builder."
@@ -23987,7 +24026,7 @@ msgstr ""
 "**販売**: オンライン決済と署名を有効化し、見積もりテンプレート、バリアント、"
 "PDF見積もりビルダーを使用します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:84
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:94
 msgid ""
 "**Sign**: Allows uploading and customization of various rental and service "
 "agreements. These documents are used to facilitate the *Request Signature* "
@@ -23997,7 +24036,7 @@ msgstr ""
 "可能にします。これらのドキュメントは\\ *署名を申請*\\ 機能を促進するために使"
 "用されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:86
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:96
 msgid ""
 "**Planning**: Integrates with the **Rental** app to automatically match "
 "service products with employees or materials based on availability. This "
@@ -24007,7 +24046,7 @@ msgstr ""
 "ビスプロダクトを従業員または資材と自動的にマッチングします。この管理設定はプ"
 "ロダクトフォームで構成されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:88
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:98
 msgid ""
 "**Project**: Integrates with the **Rental** app to automatically creation of "
 "a project, a task, or both when a rental quote that includes the configured "
@@ -24017,7 +24056,7 @@ msgstr ""
 "トを含むレンタル引用が確認されたときに、プロジェクト、タスク、またはその両方"
 "を自動的に作成します。この管理設定はプロダクトフォームで構成されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:91
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:101
 msgid ""
 "**Inventory**: Enables warehouse delivery and return receipts, product "
 "tracking options, variants, and product downtime."
@@ -24025,7 +24064,7 @@ msgstr ""
 "\\ **在庫**\\ ：倉庫の配送および返却レシート、プロダクトトラッキングオプショ"
 "ン、バリエーション、およびプロダクトのダウンタイムを有効にします。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:93
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:103
 msgid ""
 "**eCommerce**: Allows product configuration for the online shop. This "
 "setting is configured on the product form."
@@ -24033,33 +24072,33 @@ msgstr ""
 "\\ **eコマース**\\ ：オンラインショップのプロダクト構成を許可します。この管理"
 "設定はプロダクトフォームで構成されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:97
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:107
 msgid ":doc:`../../sales`"
 msgstr ":doc:`../../sales`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:98
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:108
 msgid ":doc:`../../sales/sales_quotations/pdf_quote_builder`"
 msgstr ":doc:`../../sales/sales_quotations/pdf_quote_builder`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:100
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:110
 msgid ":doc:`../../../productivity/sign`"
 msgstr ":doc:`../../../productivity/sign`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:101
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:111
 msgid ":doc:`../../../services/project`"
 msgstr ":doc:`../../../services/project`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:266
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:112
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ":doc:`../../../inventory_and_mrp/inventory`"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:106
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:116
 msgid "Search for rental products"
 msgstr "レンタルプロダクトを検索"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:108
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:118
 msgid ""
 "To view all products available for rent in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
@@ -24074,7 +24113,7 @@ msgstr ""
 "ターから、\\ :guilabel:`商品`\\ 、\\ :guilabel:`サービス`\\ 、または両方を選"
 "択します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:113
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:123
 msgid ""
 "All the selected options appear as Kanban cards. For *Goods*, the card "
 "displays the name, rental rate, and amount on hand. For *Services*, the card "
@@ -24086,16 +24125,16 @@ msgstr ""
 "サービス*\\ の場合、カードには名前、構成されている場合はバリエーションの数、"
 "およびレンタル価格が表示されます。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:121
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:131
 msgid "`Tutorial: Configuring a rental product <configure-rental-product_>`_"
 msgstr ""
 "`チュートリアル: レンタルプロダクトの構成 <configure-rental-product_>`_"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:124
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:134
 msgid "Rental periods"
 msgstr "レンタル期間"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:126
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:136
 msgid ""
 "A rental period is the unit of time used to calculate the rental rate. This "
 "setting is configured on the *Rental prices* tab on the product form. To "
@@ -24107,7 +24146,7 @@ msgstr ""
 "ルトのレンタル料金を編集するには、\\ :menuselection:`レンタルアプリ --> 管理"
 "設定 --> レンタル期間`\\ に移動します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:130
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:140
 msgid ""
 "Select a rental period to open the *Period* form. With the exception of "
 "the :guilabel:`Nightly` rental period, all period forms have the following "
@@ -24116,11 +24155,11 @@ msgstr ""
 "レンタル期間を選択して\\ *期間*\\ フォームを開きます。\\ :guilabel:`宿泊単位"
 "`\\ レンタル期間を除き、すべての期間フォームには次のフィールドがあります:"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:133
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:143
 msgid ":guilabel:`Name`: A short description or title for the period."
 msgstr "\\ :guilabel:`名前`\\ ：期間の短い説明またはタイトル。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:134
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:144
 msgid ""
 ":guilabel:`Duration`: The minimum amount of time before the rule is applied. "
 "Set to `0` to represent a fixed rental price."
@@ -24128,7 +24167,7 @@ msgstr ""
 "\\ :guilabel:`期間`\\ ：ルールが適用される前の最小時間。固定レンタル価格を表"
 "すには `0` に設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:136
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:146
 msgid ""
 ":guilabel:`Unit`: A drop-down list of time periods the shortest being Hours "
 "and the longest is Years."
@@ -24136,17 +24175,17 @@ msgstr ""
 "\\ :guilabel:`単位`\\ ：最短が時間、最長が年の時間期間のドロップダウンリス"
 "ト。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:139
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:149
 msgid "To create a new rental period, click :guilabel:`New`."
 msgstr ""
 "新しいレンタル期間を作成するには、\\ :guilabel:`新規作成`\\ をクリックしま"
 "す。"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:142
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:152
 msgid "Nightly rental period"
 msgstr "夜間レンタル期間"
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:144
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:154
 msgid ""
 "The *Nightly* rental period form replaces the :guilabel:`Duration` field "
 "with two new fields :guilabel:`Check-in` and :guilabel:`Check-out`. Both "
@@ -24160,11 +24199,19 @@ msgstr ""
 "定は、レンタル期間の開始と終了に特定の時刻が必要なスペースや保管レンタルに推"
 "奨されます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:3
+#: ../../content/applications/sales/rental/configure_products/products.rst:1
+msgid ""
+"This page explains how to create and configure a new physical rental product "
+"(Goods), including initial setup, rental periods and pricing, variants, and "
+"product tracking by serial number."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:8
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:37
 msgid "Physical rental products"
 msgstr "物理的なレンタルプロダクト"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:5
+#: ../../content/applications/sales/rental/configure_products/products.rst:10
 msgid ""
 "The Odoo **Rental** app allows users to customize scheduling, pricing, and "
 "inventory for physical rental products that require stock movement, "
@@ -24176,23 +24223,17 @@ msgstr ""
 "す。複数の受取および返却場所を設定し、レンタルプロダクトをシリアル番号で追跡"
 "できます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:14
+#: ../../content/applications/sales/rental/configure_products/products.rst:19
 msgid ""
 "The **Rental** app offers many app-integration features. Depending on the "
 "installed Odoo apps, specific settings are available. To learn more about "
-"the default setting for rental products, refer to the :ref:`Settings <rental/"
-"product_type/settings>` section of the *Rental product type* page. The "
-"following configurations assume the **Rental** and **Inventory** apps are "
-"installed."
+"the default settings for rental products, refer to the :ref:`Settings "
+"<rental/product_type/configuration>` section of the *Rental product type* "
+"page. The following configurations assume the **Rental** and **Inventory** "
+"apps are installed."
 msgstr ""
-"**レンタル**\\ アプリは、多くのアプリ統合機能を提供します。インストールされて"
-"いるOdooアプリに応じて、特定の設定が利用可能です。レンタルプロダクトのデフォ"
-"ルト設定の詳細については、*レンタルプロダクトタイプ*ページの\\ :ref:`管理設"
-"定 <rental/product_type/settings>`\\ セクションを参照してください。以下の設定"
-"は、\\ **レンタル**\\ および\\ **在庫**\\ アプリがインストールされていること"
-"を前提としています。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:19
+#: ../../content/applications/sales/rental/configure_products/products.rst:24
 msgid ""
 "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and "
 "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
@@ -24202,7 +24243,7 @@ msgid ""
 "it."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:25
+#: ../../content/applications/sales/rental/configure_products/products.rst:30
 msgid ""
 "In the **Rental** section, under the :guilabel:`Default Delay Costs` "
 "subsection, fill in the :guilabel:`Apply after` field."
@@ -24210,7 +24251,7 @@ msgstr ""
 "**レンタル**\\ セクションの\\ :guilabel:`デフォルト遅延コスト`\\ サブセクショ"
 "ンで、:guilabel:`適用期限`\\ フィールドに入力します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:29
+#: ../../content/applications/sales/rental/configure_products/products.rst:34
 msgid ""
 "For more control, configure the costs of late returns in the :guilabel:`Per "
 "Hour` and :guilabel:`Per Day` fields on the product form. If the defaults "
@@ -24229,11 +24270,11 @@ msgstr ""
 "\\ :guilabel:`レンタル`\\ アプリの\\ :guilabel:`デフォルト遅延コスト`\\ と"
 "\\ :guilabel:`パディング`\\ の設定例。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:41
+#: ../../content/applications/sales/rental/configure_products/products.rst:46
 msgid "Create a new physical product"
 msgstr "新しい物理的プロダクトを作成"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:43
+#: ../../content/applications/sales/rental/configure_products/products.rst:48
 msgid ""
 "To set up a new physical rental product, go to the :menuselection:`Rental "
 "app --> Products`, then click :guilabel:`New`. On the rental product form, "
@@ -24243,14 +24284,14 @@ msgstr ""
 "リ --> プロダクト`に移動し、:guilabel:`新規`をクリックします。レンタルプロダ"
 "クトフォームで、各タブを適切に入力します："
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:49
+#: ../../content/applications/sales/rental/configure_products/products.rst:54
 msgid ""
 "In the new product window, the :guilabel:`Rental` checkbox is already "
 "selected by default. Select the :guilabel:`Product Type` "
 "as :guilabel:`Goods`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:52
+#: ../../content/applications/sales/rental/configure_products/products.rst:57
 msgid ""
 "Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
 "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
@@ -24262,89 +24303,70 @@ msgstr ""
 msgid "The new product view in the Rental app."
 msgstr "レンタルアプリの新しいプロダクトビュー。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:65
+#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:123
 msgid ""
-"The *Variant* feature in the **Inventory** app must be enabled for this tab "
-"to display."
+"To set rental rates for the product, click the *Rental prices* tab. In the "
+"*Pricing* section, click :guilabel:`Add a price`. To enter a new rental rate:"
 msgstr ""
-"このタブを表示するには、**在庫**アプリの*バリアント*機能を有効にする必要があ"
-"ります。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:67
+#: ../../content/applications/sales/rental/configure_products/products.rst:77
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid ""
-"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
-"attribute and its values <products/variants/attributes>` by "
-"clicking :guilabel:`Add a line`. Attributes and values are useful for "
-"keeping the product library manageable, tracking and differentiating the "
-"inventory, and providing more detailed reports. Examples of rental variants "
-"for a *Goods* product are size, brand, color, and material."
+"Select a :guilabel:`rental period` (:dfn:`the unit of duration of the "
+"rental`) from the :guilabel:`Period` column."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:76
-msgid "Set rental periods, prices, and reservations"
+#: ../../content/applications/sales/rental/configure_products/products.rst:81
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:130
+msgid "Enter the price for that specific :guilabel:`Period`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:78
+#: ../../content/applications/sales/rental/configure_products/products.rst:87
 msgid ""
-"Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
-"section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
-"*pricing period* (:dfn:`the unit of duration of the rental`) in "
-"the :guilabel:`Period` column, or create a new pricing period by typing in "
-"the name and clicking :guilabel:`Create and edit`."
+"In the *Reservations* section are the delay costs and padding time that when "
+"configured are automatically populated from the *Default Delay Costs* "
+"section, provided they have been configured in the :menuselection:`Rental "
+"app --> Configuration --> Settings`. If configured on the product form, the "
+"settings override the settings in the *Default Delay Costs* section."
 msgstr ""
-":guilabel:`レンタル価格`\\ タブをクリックし、:guilabel:`価格設定`\\ セクショ"
-"ンで\\ :guilabel:`価格を追加`\\ をクリックして新しいレンタル料金を入力しま"
-"す。:guilabel:`期間`\\ 列で\\ *価格設定期間*\\ （:dfn:`レンタル期間の単位`）"
-"を選択するか、名前を入力して\\ :guilabel:`作成して編集`\\ をクリックして新し"
-"い価格設定期間を作成します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:84
+#: ../../content/applications/sales/rental/configure_products/products.rst:104
 msgid ""
-"Creating a new pricing period opens a pop-up *Create period* window. Fill in "
-"the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
-"click :guilabel:`Save`. The new pricing period automatically applies."
+"The **Rental** app allows users to create custom rental periods to use in "
+"the *Rental Prices* tab. This is helpful when renting services with special "
+"pricing for a set amount of time, such as offering a four-hour photo shoot "
+"for $100 when the hourly rate is $30."
 msgstr ""
-"新しい価格期間を作成すると、*期間を作成*ポップアップウィンドウが開きま"
-"す。:guilabel:`名前`、:guilabel:`期間`、:guilabel:`単位`を入力し、:guilabel:`"
-"保存`をクリックします。新しい価格期間が自動的に適用されます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:0
-msgid "Sample of a New Period view in the Rental app."
-msgstr "レンタルアプリの新しい期間ビューのサンプル。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
+#: ../../content/applications/sales/rental/configure_products/products.rst:108
 msgid ""
-"Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To "
-"apply the configured rental rate to an existing pricelist, click in "
-"the :guilabel:`Pricelist` column and select the desired list from the drop-"
-"down menu."
+"To create a new rental period, go to :menuselection:`Rental app --> "
+"Configuration --> Rental periods`. The *Periods* page displays and lists all "
+"the default rental periods in the **Rental** app. Click :guilabel:`New`, and "
+"on the period form, fill in the following fields:"
 msgstr ""
-"次に、その特定の\\ :guilabel:`期間`\\ の\\ :guilabel:`価格`\\ を入力します。"
-"設定したレンタル料金を既存の価格表に適用するには、:guilabel:`価格表`\\ 列をク"
-"リックし、ドロップダウンメニューから目的のリストを選択します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:95
+#: ../../content/applications/sales/rental/configure_products/products.rst:112
 msgid ""
-"In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
-"Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. "
-"These values are automatically populated from the :guilabel:`Default Delay "
-"Costs` section, provided they have been configured in "
-"the :menuselection:`Rental app --> Configuration --> Settings`."
+":guilabel:`Name`: The assigned name displays in the :guilabel:`Period` drop-"
+"down list on the *Rental Prices* tab."
 msgstr ""
-":guilabel:`予約`\\ セクションで、:guilabel:`時間超過料金`\\ 、:guilabel:`日超"
-"過料金`\\ 、および\\ :guilabel:`プロダクト予約`\\ 時間を入力します。これらの"
-"値は、:menuselection:`レンタルアプリ --> 設定 --> 設定`\\ で設定されている場"
-"合、:guilabel:`デフォルト遅延コスト`\\ セクションから自動的に入力されます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:100
+#: ../../content/applications/sales/rental/configure_products/products.rst:114
 msgid ""
-"Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the "
-"top to save."
+":guilabel:`Duration`: The minimum amount of time to trigger the pricing "
+"rule. If set to `0`, it represents a fixed price."
 msgstr ""
-"上部の\\ :icon:`fa-cloud-upload`\\ :guilabel:`(手動で保存)`\\ アイコンをク"
-"リックして保存します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:103
+#: ../../content/applications/sales/rental/configure_products/products.rst:116
+msgid ""
+":guilabel:`Unit`: The time unit the :guilabel:`Duration` is based on. "
+"If :guilabel:`Nightly` is selected for the unit, then the :guilabel:`Check-"
+"in` and :guilabel:`Check-out` fields display."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
 msgid ""
 "A bike rental business rents tandem bikes for two hours at the local park. "
 "The hourly rental rate for their tandem bikes is $20, but since tandem bikes "
@@ -24358,7 +24380,7 @@ msgstr ""
 "りに返却されるように、遅延返却料金を1時間あたり20ドル、1日あたり160ドル（20ド"
 "ル×8時間）に設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:108
+#: ../../content/applications/sales/rental/configure_products/products.rst:125
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New`, then configure the "
@@ -24367,7 +24389,7 @@ msgstr ""
 ":menuselection:`レンタルアプリ --> 設定 --> レンタル期間`に移動して、新しい価"
 "格期間を作成します。:guilabel:`新規`をクリックし、`2`時間の期間を設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:111
+#: ../../content/applications/sales/rental/configure_products/products.rst:128
 msgid ""
 "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab "
 "add the `2` hour period set at `$35`. Manually save to apply changes."
@@ -24379,53 +24401,68 @@ msgstr ""
 msgid "Sample of a rental product with the custom rental period applied."
 msgstr "カスタムレンタル期間を適用したレンタルプロダクトのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:120
+#: ../../content/applications/sales/rental/configure_products/products.rst:140
+msgid ""
+"The *Variants* feature in the **Inventory** app must be enabled for this tab "
+"to display."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:142
+msgid ""
+"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
+"attribute and its values <products/variants/attributes>` by "
+"clicking :guilabel:`Add a line`. Attributes and values are useful for "
+"keeping the product library manageable, tracking and differentiating the "
+"inventory, and providing more detailed reports. Examples of rental variants "
+"for a *Goods* product are size, brand, color, and material."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:151
 msgid "Configure product tracking"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:123
+#: ../../content/applications/sales/rental/configure_products/products.rst:154
 msgid ""
 "To configure a physical rental product for product tracking, the "
 "**Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` "
 "must be enabled."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:126
+#: ../../content/applications/sales/rental/configure_products/products.rst:157
 msgid ""
 "For rental products, only :guilabel:`By Unique Serial Number` tracking can "
 "be used. Selecting :guilabel:`By Lots` instead results in an error message, "
 "since that setting doesn't apply to rentals."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:130
+#: ../../content/applications/sales/rental/configure_products/products.rst:161
 msgid ""
 "Go to the :menuselection:`Rental app --> Products`, then "
 "click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
 "checkbox is already selected by default."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:133
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
 msgid ""
 "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable "
 "the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique "
 "Serial Number` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:136
+#: ../../content/applications/sales/rental/configure_products/products.rst:167
 msgid ""
 "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-"
 "down menu or create a new category by typing in the name and "
 "clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental "
-"prices <rental/products/rental-periods-prices-reservations>` tab. Click "
-"the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to "
-"save."
+"prices <rental/products/rental-periods-prices>` tab. Click the :icon:`fa-"
+"cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:144
+#: ../../content/applications/sales/rental/configure_products/products.rst:175
 msgid "Rental Transfers feature"
 msgstr "レンタル転送機能"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:146
+#: ../../content/applications/sales/rental/configure_products/products.rst:177
 msgid ""
 "The *Rental Transfers* feature automatically creates a delivery receipt when "
 "the rental product is picked up and a return receipt when it is returned to "
@@ -24436,21 +24473,21 @@ msgstr ""
 "自動的に作成し、在庫に返却されたときに返却受領書を作成します。在庫の移動を文"
 "書化することで、明確な証跡が作成され、さまざまな用途があります："
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:150
+#: ../../content/applications/sales/rental/configure_products/products.rst:181
 msgid "Tracking high-value products."
 msgstr "高額商品の追跡。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:151
+#: ../../content/applications/sales/rental/configure_products/products.rst:182
 msgid "Tracking stock levels across multiple stores or warehouse locations."
 msgstr "複数の店舗または倉庫ロケーション全体での在庫レベルの追跡。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:152
+#: ../../content/applications/sales/rental/configure_products/products.rst:183
 msgid ""
 "Tracking products between different store locations that allow pick up and "
 "returns."
 msgstr "受取と返却が可能な異なる店舗ロケーション間でのプロダクトの追跡。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:154
+#: ../../content/applications/sales/rental/configure_products/products.rst:185
 msgid ""
 "To enable the :guilabel:`Rental Transfers` feature, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
@@ -24461,7 +24498,7 @@ msgstr ""
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr "レンタル移動が有効になっているレンタル設定のサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:164
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the *Rental Transfers* feature is enabled. Odoo uses the new default "
@@ -24476,18 +24513,18 @@ msgstr ""
 "す（レンタル時に:guilabel:`在庫`から:guilabel:`顧客/レンタル`に移動し、返却時"
 "に戻します）。在庫追跡の破損を避けるため、変更しないでください。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:173
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid "Multi-location management and transfers"
 msgstr "複数拠点管理と転送"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:176
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
 msgid ""
 "Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-"
 "note>` for information about internal location configuration and inventory "
 "tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:179
+#: ../../content/applications/sales/rental/configure_products/products.rst:210
 msgid ""
 "Tracking the location of high-value physical products between locations is "
 "essential. The **Rental** app helps with the *Rental Transfers* feature. "
@@ -24500,21 +24537,21 @@ msgstr ""
 "と、システムはレンタルの移動を販売と同様に扱い、物理的なプロダクトがレンタル"
 "または返却されるたびに受領と出荷オーダが必要になります。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:184
+#: ../../content/applications/sales/rental/configure_products/products.rst:215
 msgid ""
 "For multi-location management and rental item transfer tracking, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
 "*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:188
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid ""
 "Next, go to the :menuselection:`Inventory app --> Configuration --> "
 "Settings` and in the *Warehouse* section, enable the :guilabel:`Storage "
 "Locations` checkbox. Click :guilabel:`Save` to apply the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:192
+#: ../../content/applications/sales/rental/configure_products/products.rst:223
 msgid ""
 "To configure new locations, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Locations`. Click :guilabel:`New` to configure a new "
@@ -24524,7 +24561,7 @@ msgstr ""
 "ケーション`に移動します。:guilabel:`新規`をクリックして新しい内部ロケーション"
 "を設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid ""
 "On the new location page, enter the :guilabel:`Location Name` and ensure "
 "the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click "
@@ -24536,7 +24573,7 @@ msgstr ""
 "にある:icon:`fa-cloud-upload`\\ :guilabel:`手動保存`アイコンをクリックして保"
 "存します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:200
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 msgid ""
 "A bike rental business has two store locations within the same city. Both "
 "locations allow for pick-up and drop-off of their bikes. The company wants "
@@ -24546,18 +24583,17 @@ msgstr ""
 "方のロケーションで自転車の受け取りと返却が可能です。会社は各ロケーションで自"
 "転車を正確に追跡したいと考えています。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:204
+#: ../../content/applications/sales/rental/configure_products/products.rst:235
 msgid ""
 "Ensure the **Rental** and **Inventory** apps are configured by "
 "enabling :guilabel:`Rental Transfers` in the **Rental** app "
 "and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:207
+#: ../../content/applications/sales/rental/configure_products/products.rst:238
 msgid ""
-"Next, go to the :menuselection:`Inventory app > Configuration > Locations`. "
-"Create a new location Next, go to the :menuselection:`Inventory app --> "
-"Configuration --> Locations`. Create a new location for each storefront."
+"Next, go to the :menuselection:`Inventory app --> Configuration --> "
+"Locations`. Create a new location for each storefront."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
@@ -24566,116 +24602,35 @@ msgid ""
 "locations."
 msgstr "異なるレンタル店舗ロケーションを表す内部在庫ロケーションのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:217
-msgid "Pickup products"
-msgstr "プロダクト貸出"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:219
-msgid ""
-"When a customer picks up products, navigate to the appropriate rental order, "
-"click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery "
-"form listing the reserved rental products. Click :guilabel:`Validate` to "
-"move the order to the :guilabel:`Done` stage."
-msgstr ""
-"顧客がプロダクトを受け取る際は、該当するレンタルオーダに移動して"
-"\\ :guilabel:`受取`\\ をクリックします。**レンタル**\\ アプリには、引当済レン"
-"タルプロダクトがリストされた倉庫配送フォームが表示されます。:guilabel:`確認"
-"`\\ をクリックして、オーダを\\ :guilabel:`完了`\\ ステージに移動します。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "Sample of a Pickup page in the Rental app."
-msgstr "レンタルアプリの受取ページのサンプル。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:226
-msgid ""
-"Doing so places a :guilabel:`Pickedup` status banner on the rental order."
-msgstr ""
-"これにより、レンタルオーダに\\ :guilabel:`集荷済`\\ ステータスバナーが表示さ"
-"れます。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:231
-msgid "Return products"
-msgstr "プロダクト返却"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:233
-msgid ""
-"When a customer returns products, navigate to the desired rental order and "
-"click :guilabel:`Return`. The **Rental** app displays a warehouse receipt "
-"form listing the checked-out rental products."
-msgstr ""
-"顧客がプロダクトを返却する際は、目的のレンタルオーダに移動し、\\ :guilabel:`"
-"返却`\\ をクリックします。**レンタル**\\ アプリには、チェックアウトされたレン"
-"タルプロダクトをリストした倉庫入庫フォームが表示されます。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
-msgid ""
-"Enter the same number of products the customer returned in "
-"the :guilabel:`Quantity` column. If any of the products have serial numbers, "
-"enter them into the :guilabel:`Serial Numbers` column."
-msgstr ""
-"顧客が返却したプロダクトと同じ数を\\ :guilabel:`数量`\\ 列に入力します。プロ"
-"ダクトにシリアル番号がある場合は、\\ :guilabel:`シリアル番号`\\ 列にそれらを"
-"入力します。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "Sample of the Return page in the Rental app."
-msgstr ""
-"\\ :guilabel:`レンタル`\\ アプリの\\ :guilabel:`返却`\\ ページのサンプル。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
-msgid ""
-"Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. "
-"A :guilabel:`Returned` status banner appears on the rental order."
-msgstr ""
-":guilabel:`確認`\\ をクリックして、オーダを\\ :guilabel:`完了`\\ ステージに移"
-"動します。レンタルオーダに\\ :guilabel:`返却済み`\\ ステータスバナーが表示さ"
-"れます。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:248
-msgid "Print pickup and return receipts"
-msgstr "貸出・返却領収書を印刷する"
-
 #: ../../content/applications/sales/rental/configure_products/products.rst:250
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
 msgid ""
-"Pickup and return receipts can be printed for customers when they pick up "
-"and return rental products."
+"The *Ecommerce* sections are only available if the :guilabel:`eCommerce` "
+"module is installed."
 msgstr ""
-"顧客がレンタルプロダクトを受取および返却する際に、受取および返却レシートを印"
-"刷できます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
+#: ../../content/applications/sales/rental/configure_products/products.rst:252
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:202
 msgid ""
-"To print pickup and/or return receipts, navigate to the appropriate rental "
-"order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-"
-"down menu."
+"The :guilabel:`Sales` tab has the following sections that configure the "
+"product page on the website: *Ecommerce shop*, *Ecommerce media*, and "
+"*Ecommerce description*. Refer to the :ref:`Product visibility <ecommerce/"
+"products/publish-products>` and :ref:`Product configuration <ecommerce/"
+"products/product-configuration>` sections for the **eCommerce** module for "
+"configuration instructions."
 msgstr ""
-"受取および/または返却レシートを印刷するには、該当するレンタルオーダに移動"
-"し、:icon:`fa-cog`\\ :guilabel:`（アクション）`\\ アイコンをクリックしてド"
-"ロップダウンメニューを表示します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid ""
-"The pickup and return receipt print option in the Odoo Rental application."
-msgstr "Odooレンタルアプリケーションの貸出・返却レシート印刷オプション。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:259
-msgid ""
-"From this drop-down menu, hover over the :guilabel:`Print` option to reveal "
-"a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
+msgid ":doc:`../rental_orders/create_rental_order`"
 msgstr ""
-"このドロップダウンメニューから :guilabel:`印刷` オプションにカーソルを合わせ"
-"るとサブメニューが表示されます。次に :guilabel:`貸出・返却領収書` を選択しま"
-"す。"
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:215
+msgid ":doc:`../rental_orders/pickup_return`"
+msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:262
-msgid ""
-"Odoo generates and downloads a PDF detailing all information about the "
-"current status of the rented items."
-msgstr ""
-"Odooは、レンタル中の件の現在の状態に関するすべての情報を詳述したPDFを生成して"
-"ダウンロードします。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid ""
 "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=kWfYEOTd2nT_ASp9>`_"
@@ -24832,20 +24787,13 @@ msgid ""
 "other services and can be used for reports on room occupancy."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:123
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:118
 msgid ""
-"To set rental rates for the product, click the *Rental prices* tab. In the "
-"*Pricing* section, click :guilabel:`Add a price`. To enter a new rental rate:"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
-msgid ""
-"Select a :guilabel:`rental period` (:dfn:`the unit of duration of the "
-"rental`) from the :guilabel:`Period` column."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:130
-msgid "Enter the price for that specific :guilabel:`Period`."
+"No limit exists on how many rental prices can be added to a product. "
+"Multiple pricing options for rental products are typically used to give "
+"discounts for customers who agree to longer rental durations. When creating "
+"multiple pricing options for a rental product remember the **Rental** "
+"app's :ref:`price computing logic <rental/price-computing>`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:136
@@ -24864,10 +24812,10 @@ msgstr ""
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:156
 msgid ""
 "The **Rental** app allows users to :ref:`create custom rental periods "
-"<rental/products/rental-periods-prices-reservations>` to use in the *Rental "
-"Prices* tab. This is helpful when renting rooms with special pricing for a "
-"set amount of time, such as offering a cheaper nightly room rate for a "
-"standard hotel room if the guests check out early."
+"<rental/products/rental-period>` to use in the *Rental Prices* tab. This is "
+"helpful when renting rooms with special pricing for a set amount of time, "
+"such as offering a cheaper nightly room rate for a standard hotel room for "
+"if the guests check out early."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:None
@@ -24900,37 +24848,13 @@ msgstr ""
 msgid "Example of the Attribute & Variants tab configured for a hotel room."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
-msgid ""
-"The *Ecommerce* sections are only available if the :guilabel:`eCommerce` "
-"module is installed."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:202
-msgid ""
-"The :guilabel:`Sales` tab has the following sections that configure the "
-"product page on the website: *Ecommerce shop*, *Ecommerce media*, and "
-"*Ecommerce description*. Refer to the :ref:`Product visibility <ecommerce/"
-"products/publish-products>` and :ref:`Product configuration <ecommerce/"
-"products/product-configuration>` sections for the **eCommerce** module for "
-"configuration instructions."
-msgstr ""
-
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:209
 msgid ":doc:`labor_service_products`"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
-msgid ":doc:`../rental_orders/create_rental_order`"
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders.rst:5
 msgid "Rental orders"
 msgstr "レンタルオーダ"
-
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:3
-msgid "Create a rental order"
-msgstr "レンタルオーダを作成"
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:5
 msgid ""
@@ -25104,11 +25028,11 @@ msgid ""
 "Sample of a filled out rental order available in the Odoo Rental application."
 msgstr "Odooレンタルアプリケーションで利用可能なレンタルオーダーの記入例。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:70
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:72
 msgid "Request a customer signature"
 msgstr "顧客の署名を要求"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:72
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:74
 msgid ""
 "Odoo can request the customer sign a rental agreement, outlining the "
 "arrangement between the company and customer, *before* they pick up the "
@@ -25119,7 +25043,7 @@ msgstr ""
 "取り決めを概説したレンタル契約書への署名を要求できます。このようなドキュメン"
 "トにより、すべてが期限内に元の状態で返却されることを保証できます。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:77
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:79
 msgid ""
 "Requesting a signature can be done during any stage of the order. This "
 "feature also requires the :doc:`Sign <../../../productivity/sign>` app."
@@ -25127,7 +25051,7 @@ msgstr ""
 "署名の申請は、オーダのどのステージでも実行できます。この機能には\\ :doc:`署"
 "名 <../../../productivity/sign>`\\ アプリも必要です。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:80
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:82
 msgid ""
 "If signatures are required, go to the **Rental** app and from the "
 "default :guilabel:`Rental Orders` dashboard, select the desired rental "
@@ -25139,7 +25063,7 @@ msgstr ""
 "択します。\\ :icon:`fa-cog`\\ \\ :guilabel:`(アクション)`\\ アイコンに移動"
 "し、\\ :icon:`fa-file-text`\\ \\ :guilabel:`署名を要求`\\ をクリックします。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:84
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:86
 msgid ""
 "In the *New Signature Request* pop-up window, either :ref:`select an "
 "existing document template <sign/request-signatures/template-odoo-record>` "
@@ -25155,15 +25079,15 @@ msgstr ""
 "トへのリンクが表示されます。ドキュメントは、顧客ポータルまたはメールを介して"
 "顧客がアクセスできます。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:91
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:93
 msgid "`Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_"
 msgstr "`Odooチュートリアル: 署名 <https://www.odoo.com/slides/sign-61>`_"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:94
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:96
 msgid "Manage employee shifts for rental services"
 msgstr "レンタルサービスの従業員シフトを管理"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:96
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:98
 msgid ""
 "Confirmed rental orders containing :doc:`service products <../"
 "configure_products/service_products>` trigger the automatic creation of "
@@ -25178,7 +25102,7 @@ msgstr ""
 "ルに対して生成されます。この自動化は、\\ **計画**\\ アプリとの統合およびサー"
 "ビスプロダクトの設定によって実現されます。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:101
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:103
 msgid ""
 "Click the :icon:`fa-tasks` :guilabel:`Planned` smart button to open the "
 "*Schedule by Resource* page. The page defaults to a *Gantt* view of all the "
@@ -25192,7 +25116,7 @@ msgstr ""
 "ロールのシフトの\\ *ガントビュー*\\ を表示します。必要に応じて\\ :ref:`シフト"
 "をカスタマイズ <planning/shifts>`\\ します。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:107
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:109
 msgid ""
 "Project templates allow for automated task assignment. When integrated with "
 "the **Planning** app, the system automatically schedules and publishes an "
@@ -25213,11 +25137,11 @@ msgstr ""
 "レンタルアプリのリソース別スケジュールページに表示されたフォトグラファーのシ"
 "フト。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:116
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:118
 msgid "Manage a project created from a rental order"
 msgstr "レンタルオーダから作成されたプロジェクトを管理"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:118
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:120
 msgid ""
 "Click the :icon:`fa-puzzle-piece` :guilabel:`Tasks` smart button on the top "
 "of the rental order to display a Kanban view of all the tasks automatically "
@@ -25234,7 +25158,7 @@ msgstr ""
 msgid "Photography task generated from the rental order."
 msgstr "レンタルオーダから生成された写真タスク。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:126
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:128
 msgid ""
 "Configuring the use of :doc:`../../../services/project/project_management/"
 "project_templates` on the product form creates new projects with predefined "
@@ -25244,11 +25168,11 @@ msgstr ""
 "project_templates`\\ を使用するように設定すると、事前定義されたタスク、優先度"
 "レベル、割り当てられた従業員を含む新しいプロジェクトが作成されます。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:131
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:133
 msgid "Enter the time for the rental service task"
 msgstr "レンタルサービスタスクの時間を入力"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:133
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:135
 msgid ""
 "To enter time worked on a :doc:`service product <../configure_products/"
 "service_products>`, select the respective service task, then click "
@@ -25259,25 +25183,25 @@ msgstr ""
 "ムシート`\\ タブをクリックします。\\ :guilabel:`行を追加`\\ をクリックして、"
 "次の内容を入力します："
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:137
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:139
 msgid ":guilabel:`Date`: The date the work was performed."
 msgstr "\\ :guilabel:`日付`\\ ：作業が実施された日付。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:138
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:140
 msgid ":guilabel:`Employee`: The employee who performed the work."
 msgstr "\\ :guilabel:`従業員`\\ ：作業を実施した従業員。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:139
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:141
 msgid ":guilabel:`Description`: A brief description of the work performed."
 msgstr "\\ :guilabel:`説明`\\ ：実施した作業の簡単な説明。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:140
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:142
 msgid ""
 ":guilabel:`Time Spent`: The number of hours worked on the task for that "
 "entry."
 msgstr "\\ :guilabel:`費やした時間`\\ ：そのエントリのタスクに費やした時間数。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:142
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:144
 msgid ""
 "Click the :icon:`fa-dollar` :guilabel:`Sales Order` smart button to return "
 "to the rental order."
@@ -25285,7 +25209,7 @@ msgstr ""
 "\\ :icon:`fa-dollar`\\ :guilabel:`販売オーダ`\\ スマートボタンをクリックし"
 "て、レンタルオーダに戻ります。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:145
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:147
 msgid ""
 "Once time is added in the :guilabel:`Timesheets` tab of a task, the rental "
 "order status is automatically changed to :guilabel:`Picked-up`, and "
@@ -25300,11 +25224,11 @@ msgid "Sample of a task Timesheet tab for a rental order in the Rental app."
 msgstr ""
 "Rental\\ アプリ内のレンタルオーダのタスク「タイムシート」タブのサンプル。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:152
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:154
 msgid "Track delivered time on a rental order"
 msgstr "レンタルオーダで配達済時間を追跡"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:154
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:156
 msgid ""
 "When time is entered on the :guilabel:`Timesheets` tab of an associated "
 "task, the delivered time is automatically tracked on the rental order. To "
@@ -25319,11 +25243,11 @@ msgstr ""
 "clock-o`\\ :guilabel:`記録済`\\ スマートボタンをクリックします。作業した合計"
 "時間が\\ :guilabel:`記録時間`\\ フィールドに表示されます。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:160
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:162
 msgid "Create an invoice"
 msgstr "請求書を作成"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:162
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:164
 msgid ""
 "Navigate to the desired invoice in the **Rental** app. On "
 "the :guilabel:`Rental Orders` dashboard, in the *Invoice Status* section in "
@@ -25335,7 +25259,7 @@ msgstr ""
 "で、\\ :guilabel:`請求対象`\\ をクリックして、送信する必要があるすべてのレン"
 "タルオーダを表示します。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:166
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:168
 msgid ""
 "Click the desired rental order, then click :guilabel:`Create Invoice`. "
 "Select :guilabel:`Regular invoice` from the :guilabel:`Create invoice(s)` "
@@ -25345,11 +25269,11 @@ msgstr ""
 "ます。\\ :guilabel:`請求書を作成`\\ ウィンドウから\\ :guilabel:`通常の請求書"
 "`\\ を選択し、\\ :guilabel:`ドラフトを作成`\\ をクリックします。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:170
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:172
 msgid "Finalize time for physical service products"
 msgstr "物理的サービスプロダクトの時間を確定"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:172
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:174
 msgid ""
 "For physical service products, such as hotel rooms, workstations, and "
 "conference rooms, a final adjustment to the time may be needed on the "
@@ -25358,7 +25282,7 @@ msgstr ""
 "ホテルの部屋、ワークステーション、会議室などの物理的サービスプロダクトの場"
 "合、請求書で時間の最終調整が必要になる場合があります。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:175
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:177
 msgid ""
 "Enter the amount in the :guilabel:`Quantity` column. If new charges were "
 "accrued during the rental period, click :guilabel:`Add a line` to include "
@@ -25368,11 +25292,11 @@ msgstr ""
 "した場合は、\\ :guilabel:`行を追加`\\ をクリックして請求書ドラフトに含めま"
 "す。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:179
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:181
 msgid "Confirm and pay"
 msgstr "確定と支払い"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:181
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:183
 msgid ""
 "If all the details are correct on the invoice draft, either "
 "click :guilabel:`Confirm` and click :guilabel:`Send` to email the invoice to "
@@ -25387,7 +25311,7 @@ msgstr ""
 "\\ :guilabel:`仕訳帳`\\ を選択し、\\ :guilabel:`支払いを作成`\\ をクリックし"
 "ます。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:186
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:188
 msgid ""
 "Click the :guilabel:`Payments` smart button that appears at the top of the "
 "rental order. Click :guilabel:`Validate` on the Payment page."
@@ -25395,7 +25319,7 @@ msgstr ""
 "レンタルオーダの上部に表示される\\ :guilabel:`支払`\\ スマートボタンをクリッ"
 "クします。支払ページで\\ :guilabel:`確認`\\ をクリックします。"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:190
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:192
 msgid ""
 "`Odoo Tutorials: Create a Rental Order <https://youtu.be/hpQHu6U_IKk?"
 "si=Fy_Z82kzQNPBrD8v>`_"
@@ -25403,7 +25327,7 @@ msgstr ""
 "`Odoo チュートリアル:レンタルオーダの作成 <https://youtu.be/hpQHu6U_IKk?"
 "si=Fy_Z82kzQNPBrD8v>`_"
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:191
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:193
 msgid ""
 "`Odoo Tutorials: Configuring a Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=ur6ci-SlKJSvQY5Q>`_"
@@ -25499,12 +25423,10 @@ msgstr ""
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:41
 msgid ""
 "Be sure to configure the rental product's prices on the :ref:`Rental prices "
-"<rental/pricing>` tab."
+"<rental/products/rental-periods-prices>` tab."
 msgstr ""
-"\\ :ref:`レンタル価格 <rental/pricing>`\\ タブでレンタルプロダクトの価格を設"
-"定してください。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:43
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:44
 msgid ""
 "With the above configuration, a :doc:`rental order <create_rental_order>` "
 "can be created."
@@ -25512,7 +25434,7 @@ msgstr ""
 "上記の設定により、\\ :doc:`レンタルオーダ <create_rental_order>`\\ を作成でき"
 "ます。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:46
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:47
 msgid ""
 "After selecting the rental product in the :guilabel:`Order Lines` tab, be "
 "sure to :icon:`fa-plus` :guilabel:`Add` the deposit service product in "
@@ -25522,7 +25444,7 @@ msgstr ""
 "\\ :icon:`fa-plus`\\ :guilabel:`追加`\\ を使用して\\ :guilabel:`プロダクトを"
 "設定`\\ ポップアップでデポジットサービスプロダクトを追加してください。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:49
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:50
 msgid ""
 "The :guilabel:`Configure your product` pop-up only appears if the optional "
 "product is set on the rental product."
@@ -25530,7 +25452,7 @@ msgstr ""
 "\\ :guilabel:`プロダクトを設定`\\ ポップアップは、レンタルプロダクトにオプ"
 "ションプロダクトが設定されている場合にのみ表示されます。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:53
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:54
 msgid ""
 "If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add "
 "an :guilabel:`Ecommerce Description` stating the deposit is required in the "
@@ -25540,7 +25462,7 @@ msgstr ""
 "は、レンタルプロダクトの\\ :guilabel:`販売`\\ タブにデポジットが必要であるこ"
 "とを示す\\ :guilabel:`Ecommerce Description`\\ を追加します。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:56
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:57
 msgid ""
 "When a customer adds the rental product to their cart, "
 "a :guilabel:`Configure your product` pop-up displays the deposit service "
@@ -25550,7 +25472,7 @@ msgstr ""
 "`\\ ポップアップが表示され、\\ :guilabel:`対応可能なオプション`\\ の下にデポ"
 "ジットサービスプロダクトが表示されます。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:59
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:60
 msgid ""
 "Once the customer clicks :icon:`fa-shopping-cart` :guilabel:`Add` the rental "
 "product and the deposit service product are added to their cart."
@@ -25562,21 +25484,344 @@ msgstr ""
 msgid "A deposit service product listed in the rental quotation."
 msgstr "レンタル見積もりに記載されたデポジットサービスプロダクト。"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:68
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:69
 msgid "Refund deposits upon return"
 msgstr "返却時にデポジットを返金"
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:70
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:71
 msgid ""
-"Once a customer :ref:`returns the rented product <rental/return-products>`, "
-"reimburse their deposit with a :doc:`credit note <../../../finance/"
-"accounting/customer_invoices/credit_notes>` from the invoice, and change the "
-"*delivered quantity* to `0` on the linked sales order."
+"Once a customer :doc:`returns the rented product <../rental_orders/"
+"pickup_return>`, reimburse their deposit with a :doc:`credit note <../../../"
+"finance/accounting/customer_invoices/credit_notes>` from the invoice, and "
+"change the *delivered quantity* to `0` on the linked sales order."
 msgstr ""
-"顧客が\\ :ref:`レンタル製品を返却 <rental/return-products>`\\ したら、請求書"
-"から\\ :doc:`クレジットノート <../../../finance/accounting/customer_invoices/"
-"credit_notes>`\\ でデポジットを払い戻し、リンクされた販売オーダの*配達済数量*"
-"を`0`に変更します。"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:1
+msgid ""
+"This document explains how to pick up and return rental Goods (physical "
+"products) and Services."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:9
+msgid ""
+"This document focuses on the pickup and return of both rental *Goods* "
+"(physical products) such as clothes, computer equipment, and bicycles, and "
+"*Services* (physical and non-physical) such as photographer sessions, hotel "
+"rooms, and catering."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:13
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:84
+msgid ""
+"For rental businesses that rent out locations with no stock movement, such "
+"as hotel rooms, meeting rooms, and storage spaces, the pickup (check-in) and "
+"return (check-out) processes are the same."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:16
+msgid ""
+"Once a rental order is confirmed, the reserved rental products are available "
+"for pickup. If company policy requires a signed rental "
+"contract, :ref:`request the customer's signature <rental/create_rental_order/"
+"customer-signature>` before the rental product is picked up."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:22
+msgid ":doc:`../configure_products/product_type`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:29
+msgid "Two basic configurations cover the rental product types:"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:31
+msgid ":ref:`rental/pickup_return/physical-rental-products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:32
+msgid ":ref:`rental/pickup_return/service-rental-products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:39
+msgid ""
+"Refer to the physical rental products :ref:`settings <rental/products/"
+"default-settings>` to see the apps required. If :ref:`product tracking "
+"<rental/products/configure-product-tracking>` is enabled, the pickup and "
+"return process requires additional steps."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:44
+msgid ":ref:`rental/pickup_return/pickup-physical-rental-with-tracking`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:45
+msgid ":ref:`rental/pickup_return/return-physical-product-with-tracking`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:50
+msgid "Service rental products"
+msgstr "サービスレンタルプロダクト"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:52
+msgid ""
+"Configuration for service rental products, both physical and non-physical, "
+"requires the **Rental**, **Planning**, and **Sales** apps to be installed. "
+"For physical service products, configure the :ref:`materials and roles "
+"<rental/service_products/materials-and-roles>` in the **Planning** app "
+"before creating the product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:57
+msgid ""
+"Non-physical service products also require the **Timesheets** app to "
+"accurately track services that use time-based pricing rates. For non-"
+"physical service products, :ref:`configure employee roles <rental/"
+"labor_service_products/configure-employee-roles>` in the **Planning** app "
+"before creating the product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:62
+msgid ""
+"If the business wants to sell service rental products on an online shop, "
+"refer to the :ref:`Configure pickup and return availability for eCommerce "
+"products <rental/pickup_return/ecommerce-products>` section."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:69
+msgid "Configure pickup and return availability for eCommerce products"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:71
+msgid ""
+"The Rental app supports :ref:`eCommerce configuration at the app <rental/"
+"product_type/ecommerce-settings>` and product level when the **Website** app "
+"and the **eCommerce** module are installed. Using the *Unavailability days* "
+"setting restricts the days the rental website allows pickup and returns to "
+"be scheduled. To configure the rental product page in the online store, "
+"refer to the :ref:`Product configuration <ecommerce/products/product-"
+"configuration>` section for the **eCommerce** module."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:81
+msgid "Pick up a rental product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:88
+msgid ""
+"To process a pickup of a rental product, go to :menuselection:`Rental app --"
+"> Orders --> Orders` and select the desired rental order. "
+"Click :guilabel:`Pickup`, and a *Validate a pickup* pop-up window displays, "
+"listing the reserved rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Reserved`, and :guilabel:`Picked-up` "
+"columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a pickup page in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:96
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:123
+msgid ""
+"To confirm the list, click :guilabel:`Validate`. The action updates the "
+"rental order with a :guilabel:`Picked-up` badge and updates "
+"the :guilabel:`Delivered` column. The action is also recorded in the rental "
+"order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of a rental order once the rental product is picked up in the Rental "
+"app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:106
+msgid "Pick up a physical rental product with tracking enabled"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:109
+msgid ""
+"This process requires that the *Lots & Serial Numbers* feature in the "
+"**Inventory** app be enabled and that the *Tracking* field be set to *By "
+"Unique Serial Number* on the rental product form."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:113
+msgid ""
+"To process a pickup of a physical rental product with tracking enabled, go "
+"to :menuselection:`Rental app --> Orders --> Orders` and select the desired "
+"rental order. Click :guilabel:`Pickup`, and the *Validate a pickup* pop-up "
+"window displays, listing the reserved rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Reserved`, :guilabel:`Serial Numbers`, "
+"and :guilabel:`Picked-up` columns. Check the rental product's serial number "
+"and then click in the :guilabel:`Serial Numbers` column and select the "
+"product's serial number from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of a Validate a pickup page with product tracking enabled in the "
+"Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order with a Picked-up badge in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:133
+msgid "Pick up a rental product and a rental service"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:136
+msgid ""
+"Refer to the :ref:`physical and service rental configuration requirements "
+"<rental/pickup_return/configuration>` to see the necessary app installations "
+"and settings."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:139
+msgid ""
+"When a physical rental product is rented alongside a service, it is advised "
+"to pick it up before entering time on the associated task (if applicable)."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:142
+msgid ""
+"If time is entered on the *Timesheets* tab of an associated task before the "
+"physical rental product is picked up, the rental order automatically "
+"displays a :guilabel:`Picked-up` badge. However, the :guilabel:`Pickup` "
+"button remains available on the rental order."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:149
+msgid "Return a rental product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:152
+msgid ""
+"Regardless of whether a physical rental product is rented along with a "
+"service rental product, both must be returned on the rental order. Returning "
+"a rental service is the same process as returning a physical rental product "
+"without tracking enabled."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:156
+msgid ""
+"When a customer returns the rental product, go to :menuselection:`Rental app "
+"--> Orders --> Orders` and select the desired rental order. "
+"Click :guilabel:`Return`, and the *Validate a return* pop-up window "
+"displays, listing the returning rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Picked-up`, and :guilabel:`Returned` "
+"columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a return page in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:164
+msgid ""
+"To confirm the list, click :guilabel:`Validate`. The action applies "
+"a :guilabel:`Returned` badge to the rental order and updates "
+"the :guilabel:`Returned` column. The action is also recorded in the rental "
+"order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of the rental order once the rental product is returned in the "
+"Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:174
+msgid "Return a physical rental product with tracking enabled"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:176
+msgid ""
+"When a customer returns the product, go to :menuselection:`Rental app --> "
+"Orders --> Orders` and select the desired rental order. "
+"Click :guilabel:`Return`, and the *Validate a return* pop-up window "
+"displays, listing the returning rental product and quantity "
+"in :guilabel:`Product`, :guilabel:`Picked-up`, :guilabel:`Serial Numbers`, "
+"and :guilabel:`Returned` columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"Example of a Validate a return page with product tracking enabled in the "
+"Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:184
+msgid ""
+"Verify that the returned rental product has the same serial number as the "
+"one listed in the :guilabel:`Serial Numbers` column. If the serial numbers "
+"don't match, click into the :guilabel:`Serial Numbers` column and select the "
+"correct serial number from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:188
+msgid ""
+"Once the rental product's quantity and serial number match, "
+"click :guilabel:`Validate`. The action applies a :guilabel:`Returned` badge "
+"to the rental order and updates the :guilabel:`Returned` column. The action "
+"is also recorded in the rental order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order with a Returned badge in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:198
+msgid "Print pickup and return receipts"
+msgstr "貸出・返却領収書を印刷する"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:200
+msgid ""
+"Pickup and return receipts can be created and downloaded for customers when "
+"they pick up or return rental products."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:203
+msgid ""
+"To create pickup and return receipts, navigate to the desired rental order "
+"and click the :icon:`fa-cog` :guilabel:`(Actions)` icon to open the drop-"
+"down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid ""
+"The pickup and return receipt print option in the Odoo Rental application."
+msgstr "Odooレンタルアプリケーションの貸出・返却レシート印刷オプション。"
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:209
+msgid ""
+"Hover over the :icon:`fa-print` :guilabel:`Print` option, then "
+"select :guilabel:`Pickup and Return Receipt`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:212
+msgid ""
+"Odoo downloads a PDF of the receipt with the current status of the rented "
+"items."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:215
+msgid ":doc:`create_rental_order`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:216
+msgid ":doc:`manage_deposits`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:217
+msgid ":doc:`../configure_products/products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:218
+msgid ":doc:`../configure_products/service_products`"
+msgstr ""
 
 #: ../../content/applications/sales/sales.rst:10
 msgid ""
@@ -25666,6 +25911,13 @@ msgid ""
 msgstr ""
 "この設定では、販売に使用された特定のロットまたは一意のシリアル番号は追跡され"
 "ません。|FBA|\\ オーダが同期の失敗なしで処理できることのみを保証します。"
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
+#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
+msgid "Settings"
+msgstr "管理設定"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:36
 msgid "The following apps are essential for the product kit workflow:"
@@ -27763,11 +28015,19 @@ msgstr ""
 msgid "Invoicing Method"
 msgstr "請求方法"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:3
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:1
+msgid ""
+"A down payment is an up-front payment collected when confirming a sales "
+"order. This page covers invoicing fixed and percentage-based down payments "
+"through the Create Invoice option, with examples, and modifying the income "
+"account used for down payment invoices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:9
 msgid "Down payments"
 msgstr "前受金"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:5
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:11
 msgid ""
 "A down payment is an initial up-front payment made during the confirmation "
 "of a sales transaction. With a down payment, the buyer pays a portion of the "
@@ -27781,7 +28041,7 @@ msgstr ""
 "返りとして、販売者は前払金を受け取った時点または受け取った後に、残りの金額が"
 "後で支払われることを信頼して、購入者に商品またはサービスを提供します。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:10
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:16
 msgid ""
 "In the Odoo **Sales** app, down payments can be customized to fit the needs "
 "of each individual sales transaction."
@@ -27789,7 +28049,7 @@ msgstr ""
 "Odoo\\ の\\ **販売**\\ アプリでは、各販売取引のニーズに合わせて前払金をカスタ"
 "マイズできます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:14
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
 msgid ""
 "Down payment invoices are **not** the same as payment terms or installment "
 "plans. If a single invoice issued for a sales order requires multiple "
@@ -27802,83 +28062,69 @@ msgstr ""
 "割払い計画付きの支払条件 <../../../finance/accounting/customer_invoices/"
 "payment_terms>`\\ を使用します。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:26
 msgid "Create invoices"
 msgstr "請求書作成"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:22
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:28
 msgid ""
 "When a sales order is confirmed, the option to create an invoice becomes "
-"available via the :guilabel:`Create Invoice` button. When clicked, "
-"a :guilabel:`Create invoice(s)` pop-up appears."
+"available via the :guilabel:`Create Invoice` button. When clicked, a *Create "
+"invoice(s)* pop-up appears."
 msgstr ""
-"販売オーダが確定されると、:guilabel:`請求書作成`\\ ボタンから請求書を作成する"
-"オプションが利用可能になります。クリックすると、:guilabel:`請求書作成`\\ ポッ"
-"プアップが表示されます。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Create invoice(s) pop-up form that appears in Odoo Sales."
 msgstr "Odoo Sales\\ に表示される「請求書作成」ポップアップフォーム。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
 msgid ""
 "Invoices are automatically created as drafts so they can be reviewed before "
 "validation."
 msgstr "請求書は自動的に下書きとして作成されるため、最終確定前に確認できます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:31
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:37
 msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up, there are three options to "
-"choose from in the :guilabel:`Create Invoice` field:"
+"On the *Create invoice(s)* pop-up, there are three options to choose from in "
+"the :guilabel:`Create Invoice` field:"
 msgstr ""
-":guilabel:`請求書の作成`\\ ポップアップの\\ :guilabel:`請求書の作成`\\ フィー"
-"ルドには、次の3つのオプションがあります："
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:34
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:40
 msgid ":guilabel:`Regular invoice`"
 msgstr ":guilabel:`通常請求書`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
 msgid ":guilabel:`Down payment (percentage)`"
 msgstr ":guilabel:`前受金 (パーセンテージ)`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:36
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:44
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:42
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:50
 msgid ":guilabel:`Down payment (fixed amount)`"
 msgstr ":guilabel:`前受金 (固定金額)`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:39
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:45
 msgid "Initial down payment request"
 msgstr "初回前受金要求"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
-msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up window, the down payment options "
-"are:"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:47
+msgid "On the *Create invoice(s)* pop-up window, the down payment options are:"
 msgstr ""
-":guilabel:`請求書を作成`\\ ポップアップウィンドウには、以下の前払金オプション"
-"があります:"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:46
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:52
 msgid ""
 "Select a down payment option and set the desired payment, either as a "
-"percentage or a fixed amount, in the :guilabel:`Down Payment Amount` field."
+"percentage or a fixed amount, in the :guilabel:`Down Payment` field."
 msgstr ""
-":guilabel:`内金金額`\\ フィールドで、パーセンテージまたは固定金額として、希望"
-"する支払いを設定します。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:55
 msgid ""
 "Once all fields are filled in, click the :guilabel:`Create Draft` button. "
-"Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice "
+"Upon clicking this button, Odoo brings up the :guilabel:`Customer Invoice "
 "Draft`."
 msgstr ""
-"すべてのフィールドに入力したら、:guilabel:`ドラフト作成`\\ ボタンをクリックし"
-"ます。このボタンをクリックすると、Odoo は\\ :guilabel:`顧客請求書ドラフト`\\ "
-"を表示します。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:53
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:59
 msgid ""
 "If an :guilabel:`Invalid Operation` error appears, double-check that "
 "the :doc:`invoicing policy <invoicing_policy>` is configured correctly. In "
@@ -27890,75 +28136,63 @@ msgstr ""
 "請求ポリシーが請求書の送信前に配送を必要とするように設定されている場合があり"
 "ます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:57
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:63
 msgid ""
-"In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice "
-"Draft`, the down payment that was configured in the *Create invoice(s)* pop-"
-"up form appears under a new :guilabel:`Down Payments` section."
+"In the *Invoice Lines* tab of the :guilabel:`Customer Invoice Draft`, the "
+"down payment that was configured in the *Create invoice(s)* pop-up form "
+"appears as a :guilabel:`Down Payment` line item. After "
+"clicking :guilabel:`Confirm` to apply the down payment to the sales order, "
+"the down payment appears in a new :guilabel:`Down Payments` section."
 msgstr ""
-":guilabel:`顧客請求書ドラフト`\\ の\\ :guilabel:`請求書明細`\\ タブでは、*請"
-"求書の作成*ポップアップフォームで設定した前払金が、新しい\\ :guilabel:`前払金"
-"`\\ セクションの下に表示されます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:71
 msgid "Types of down payments"
 msgstr "前払金の種類"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:66
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:73
 msgid ""
-"Odoo offers both fixed amounts and partial down payments (such as 30% of an "
-"order's total)."
+"Odoo offers both fixed dollar amounts and partial percentage down payments "
+"(such as 30% of an order's total)."
 msgstr ""
-"Odoは固定金額と部分的な前払金（オーダ総額の30%など）の両方を提供しています。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:68
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
 msgid ""
 "A 100% down payment is possible and differs from a full payment of the sales "
 "order. A sales order paid through the regular invoice process does not allow "
 "any additional invoices to be generated and does not display "
-"the :guilabel:`Create Invoice` button on the sales order."
+"the :guilabel:`Create Invoice` button on the sales order. With a 100% down "
+"payment, the :guilabel:`Create Invoice` button is still displayed on the "
+"sales order because the system requires that another invoice be created in "
+"order to complete the sales order."
 msgstr ""
-"100%前払金は可能であり、販売オーダの全額支払いとは異なります。通常の請求プロ"
-"セスで支払われた販売オーダは、追加の請求書を生成できず、販売オーダに"
-"\\ :guilabel:`請求書の作成`\\ ボタンが表示されません。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:72
-msgid ""
-"With a 100% down payment, the :guilabel:`Create Invoice` button is still "
-"displayed on the sales Order because the system expects another invoice to "
-"be created after the down payment to complete payment of the sales order."
-msgstr ""
-"100%前払金の場合、システムは販売オーダの支払いを完了するために前払金の後に別"
-"の請求書が作成されることを想定しているため、販売オーダに\\ :guilabel:`請求書"
-"の作成`\\ ボタンがまだ表示されます。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:82
 msgid "The following are two examples of down payment amounts:"
 msgstr "以下は前払金額の2つの例です："
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:78
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
 msgid ""
 ":ref:`Example 1: 50% down payment <sales/invoicing/50-percent-down-payments>`"
 msgstr ":ref:`例1：50%前払金 <sales/invoicing/50-percent-down-payments>`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:79
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:85
 msgid ""
 ":ref:`Example 2: 100% down payment <sales/invoicing/100-percent-down-"
 "payments>`"
 msgstr ":ref:`例2：100%前払金 <sales/invoicing/100-percent-down-payments>`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:90
 msgid "Example 1: 50% down payment"
 msgstr "例1：50%前払金"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:87
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
 msgid ""
 "This flow is also possible with the :guilabel:`Down payment (fixed amount)` "
 "option."
 msgstr ""
 "このフローは、\\ :guilabel:`前払金（固定金額）`\\ オプションでも可能です。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:89
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:95
 msgid ""
 "A customer is buying a luxury cabinet from a furniture store. The furniture "
 "store has configured the cabinet with an *Invoicing Policy* of *Ordered "
@@ -27969,7 +28203,7 @@ msgstr ""
 "ポリシー*を*注文数量*で設定しています。この店舗では、すべての家具プロダクトに"
 "50%の前払金を要求しています。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:99
 msgid ""
 "Navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation "
 "<sales/create-quotation>` for the cabinet. Once the order is confirmed (via "
@@ -27988,66 +28222,47 @@ msgid ""
 msgstr ""
 "「扉付きキャビネット」の販売オーダが Odoo の販売アプリで確認されました。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:101
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:107
 msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up window that appears, "
+"On the *Create invoice(s)* pop-up window that appears, "
 "select :guilabel:`Down payment (percentage)`, and type `50` in "
 "the :guilabel:`Down Payment` field."
 msgstr ""
-"表示される\\ :guilabel:`請求書の作成`\\ ポップアップウィンドウで、"
-"\\ :guilabel:`前払金（パーセンテージ）`\\ を選択し、\\ :guilabel:`前払金`\\ "
-"フィールドに`50`と入力します。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:111
 msgid ""
 "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` can "
 "be changed. For more information, check out the documentation "
 "on :ref:`income account modification on down payments <sales/invoicing/"
-"income-account-modification>`. A :guilabel:`Down payment Account` can also "
-"be set on a product category. If set, this account is prioritized for future "
-"down payments."
+"income-account-modification>`."
 msgstr ""
-":guilabel:`内金`\\ に付与された\\ :guilabel:`収益アカウント`\\ は変更できま"
-"す。詳細については、:ref:`内金の収益アカウント変更 <sales/invoicing/income-"
-"account-modification>`\\ に関するドキュメントを参照してください。:guilabel:`"
-"内金アカウント`\\ はプロダクトカテゴリにも設定できます。設定されている場合、"
-"このアカウントは今後の内金に優先されます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:110
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:115
 msgid ""
 "Lastly, click :guilabel:`Create Draft` to create and view the invoice draft, "
-"which includes the down payment under the :guilabel:`Down Payments` section "
-"of the :guilabel:`Invoice Lines` tab. Click :guilabel:`Confirm` and the "
-"invoice's status changes from :guilabel:`Draft` to :guilabel:`Posted`. It "
-"also reveals a new series of buttons at the top of the page."
+"which includes the down payment as a line item under the *Invoice Lines* "
+"tab. Click :guilabel:`Confirm` and the invoice's status changes "
+"from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new set of "
+"buttons at the top of the page."
 msgstr ""
-"最後に、:guilabel:`下書きを作成`をクリックして請求書の下書きを作成して表示し"
-"ます。下書きには、:guilabel:`請求書行`タブの:guilabel:`頭金`セクションに頭金"
-"が含まれています。:guilabel:`確定`をクリックすると、請求書のステータス"
-"が:guilabel:`ドラフト`から:guilabel:`転記済`に変わります。また、ページ上部に"
-"新しい一連のボタンが表示されます。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
 msgstr "Odoo販売に記載されている前受金のある請求書のサンプルです。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:118
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:123
 msgid ""
-"To begin the payment process, click :guilabel:`Pay`. A :guilabel:`Pay` pop-"
-"up form displays with auto-populated information. Confirm the information "
-"provided is correct and make any necessary adjustments. When ready, click "
+"To begin the payment process, click :guilabel:`Pay`. A *Pay* pop-up form "
+"displays with auto-populated information. Confirm the information provided "
+"is correct and make any necessary adjustments. When ready, click "
 "the :guilabel:`Create Payment` button."
 msgstr ""
-"支払処理を開始するには、:guilabel:`支払`をクリックします。:guilabel:`支払`"
-"ポップアップフォームが表示され、情報が自動入力されます。入力された情報が正し"
-"いことを確認し、必要に応じて調整を行います。準備ができたら、:guilabel:`支払を"
-"作成`ボタンをクリックします。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Showcase of the Pay pop-up window with create payment button."
 msgstr "支払いの作成ボタンがある支払ポップアップウィンドウの表示。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:125
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:130
 msgid ""
 "The customer invoice changes status with a green :guilabel:`In Payment` "
 "or :guilabel:`Paid` banner in the upper-right corner, depending on how the "
@@ -28062,113 +28277,69 @@ msgid ""
 "Customer Invoice with a green Paid banner located in the upper-right corner."
 msgstr "右上隅に緑色の支払済バナーがある顧客請求書。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:132
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:137
 msgid ""
 "On the sales order, a new :guilabel:`Down Payments` section is present in "
-"the :guilabel:`Order Lines` tab, along with the down payment that was just "
-"invoiced and posted. When the customer wants to pay the remaining amount of "
-"the order, another invoice must be created."
+"the *Order Lines* tab, along with the down payment that was just invoiced "
+"and posted. When the customer wants to pay the remaining amount of the "
+"order, another invoice must be created."
 msgstr ""
-"販売オーダの\\ :guilabel:`注文明細行`\\ タブには、新しい\\ :guilabel:`内金"
-"`\\ セクションが表示され、請求書が作成されて転記された内金が記載されます。顧"
-"客が注文の残額を支払いたい場合は、別の請求書を作成する必要があります。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The down payments section in the order lines tab of a sales order."
 msgstr "販売オーダの注文明細タブにある前受金セクション。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:139
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:144
 msgid ""
-"Click the :guilabel:`Create Invoice` button. On the :guilabel:`Create "
-"invoice(s)` pop-up window, there is a new field: :guilabel:`Already "
-"invoiced` and :guilabel:`Amount to invoice`."
+"Click the :guilabel:`Create Invoice` button. On the *Create invoice(s)* pop-"
+"up window, there is a new field: :guilabel:`Already invoiced`."
 msgstr ""
-":guilabel:`請求書を作成`ボタンをクリックします。:guilabel:`請求書を作成`ポッ"
-"プアップウィンドウには、新しいフィールドがあります::guilabel:`既請求`およ"
-"び:guilabel:`請求予定金額`。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
 "The deduct down payment option on the Create invoice(s) pop up in Odoo Sales."
 msgstr "Odoo販売の請求書作成ポップアップにある内金控除オプション。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:145
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:150
 msgid ""
-"Select the :guilabel:`Regular Invoice` option. Odoo creates an invoice for "
-"the exact amount needed to complete the total payment, as shown in "
-"the :guilabel:`Amount to invoice` field."
+"Select the :guilabel:`Regular invoice` option to begin creating an invoice "
+"for the exact amount needed to complete the total payment. This amount is "
+"reflected in the :guilabel:`Amount Due` field on the invoice draft."
 msgstr ""
-":guilabel:`通常請求書`オプションを選択します。Odooは、:guilabel:`請求予定金額"
-"`フィールドに表示されているように、合計支払を完了するために必要な正確な金額の"
-"請求書を作成します。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:148
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:154
 msgid ""
-"Click :guilabel:`Create Draft` to create a :guilabel:`Customer Invoice "
-"Draft` page. The draft lists all the invoices for that specific sales order "
-"in the :guilabel:`Invoice Lines` tab. Each invoice line item displays all "
-"the necessary information related to each invoice."
-msgstr ""
-":guilabel:`下書きを作成`をクリックして、:guilabel:`顧客請求書下書き`ページを"
-"作成します。下書きには、:guilabel:`請求書行`タブにその特定の販売オーダに対す"
-"るすべての請求書が一覧表示されます。各請求書行項目には、各請求書に関連するす"
-"べての必要な情報が表示されます。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:152
-msgid ""
-"To complete the flow, click :guilabel:`Confirm` to change the status of the "
+"Click :guilabel:`Create Draft` to create a *Customer Invoice Draft*. To "
+"complete the flow, click :guilabel:`Confirm` to change the status of the "
 "invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, "
-"click :guilabel:`Pay`. The :guilabel:`Pay` form appears, with all fields "
-"auto-populated with the necessary information, including the remaining "
-"amount left to be paid on the order."
+"click :guilabel:`Pay`. The *Pay* form appears, with all fields auto-"
+"populated with the necessary information, including the remaining amount "
+"left to be paid on the order."
 msgstr ""
-"フローを完了するには、:guilabel:`確定`\\ をクリックして、請求書のステータスを"
-"\\ :guilabel:`ドラフト`\\ から\\ :guilabel:`転記済`\\ に変更します。次"
-"に、:guilabel:`支払`\\ をクリックします。:guilabel:`支払`\\ フォームが表示さ"
-"れ、すべてのフィールドに必要な情報が自動入力されます。これには、注文で支払わ"
-"れるべき残額も含まれます。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The second Pay pop-up form in Odoo sales."
 msgstr "Odoo販売の2つ目の支払ポップアップフォーム。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:160
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:163
 msgid ""
 "After confirming that information, click :guilabel:`Create Payment`. Doing "
 "so reveals the final :guilabel:`Customer Invoice` with a green :guilabel:`In "
 "Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on "
-"how the database has configured and if manual confirmation of payments is "
-"required. Upon returning to the sales order, both down payments are present "
-"in the :guilabel:`Order Lines` tab."
+"how the database is configured and if manual confirmation of payments is "
+"required. At this point, the flow is complete."
 msgstr ""
-"その情報を確認した後、\\ :guilabel:`支払いを作成`\\ をクリックします。そうす"
-"ると、最終的な\\ :guilabel:`顧客請求書`\\ が表示され、右上に緑色の"
-"\\ :guilabel:`支払中`\\ または\\ :guilabel:`支払済`\\ バナーが表示されます。"
-"これはデータベースの設定や支払いの手動確認が必要かどうかによって異なります。"
-"販売オーダに戻ると、\\ :guilabel:`注文明細`\\ タブに両方の頭金が表示されま"
-"す。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
-msgid "The second down payment invoice with Paid banner in Odoo Sales."
-msgstr "Odoo販売における支払済バナーが表示された2回目の頭金請求書。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:169
-msgid "At this point, the flow is complete."
-msgstr "この時点で、フローは完了です。"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:172
 msgid ""
 "If a down payment is used with a product that has a :guilabel:`Delivered "
 "quantities` invoicing policy, and the cost of the product exceeds the 50% "
 "down payment, a regular invoice is created. However, for products that cost "
-"less than the 50% down payment, the down payments will not be able to be "
-"deducted when it comes time to invoice the customer."
+"less than the 50% down payment, the down payments cannot be deducted when it "
+"comes time to invoice the customer."
 msgstr ""
-":guilabel:`完了済数量`請求ポリシーを持つプロダクトで頭金が使用され、プロダク"
-"トのコストが50%頭金を超える場合、通常請求書が作成されます。ただし、50%頭金よ"
-"りも安いプロダクトの場合、顧客への請求時に頭金を控除できません。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:177
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:174
 msgid ""
 "This is because the product(s) would have to be delivered *before* creating "
 "the final invoice due to Odoo not allowing negative totals for invoices. If "
@@ -28180,7 +28351,7 @@ msgstr ""
 "レジットノート`が作成され、頭金後に作成された下書き請求書がキャンセルされま"
 "す。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:182
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:179
 msgid ""
 "To utilize the :guilabel:`Credit Note` option, the **Inventory** application "
 "must be installed in order to confirm the delivery. Otherwise, the delivered "
@@ -28190,11 +28361,11 @@ msgstr ""
 "**在庫**アプリケーションをインストールする必要があります。それ以外の場合は、"
 "販売オーダで直接配達数量を手動で入力できます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:189
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:186
 msgid "Example 2: 100% down payment"
 msgstr "例2:100%頭金"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:191
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:188
 msgid ""
 "A solar panel company sells an installation service for residential homes. "
 "All installation services require a 100% down payment to cover labor costs. "
@@ -28205,23 +28376,16 @@ msgstr ""
 "サービスには、人件費をカバーするために100%頭金が必要です。顧客がサービスのカ"
 "スタマイズアドオンをしばしば要求するため、会社は頭金を好みます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:195
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:192
 msgid ""
 "To configure a 100% down payment, navigate to :menuselection:`Sales app --> "
 "New`, and :ref:`create a quotation <sales/create-quotation>` for the "
 "product. Upon clicking the :guilabel:`Confirm` button, the quotation turns "
 "into a sales order. At that point, an invoice can now be created by "
-"clicking :guilabel:`Create Invoice` in the top-left corner. On "
-"the :guilabel:`Create invoice(s)` pop-up window that appears, "
-"select :guilabel:`Down payment (percentage)`, and type `100` in "
-"the :guilabel:`Down Payment` field."
+"clicking :guilabel:`Create Invoice` in the top-left corner. On the *Create "
+"invoice(s)* pop-up window that appears, select :guilabel:`Down payment "
+"(percentage)`, and type `100` in the :guilabel:`Down Payment` field."
 msgstr ""
-"100%頭金を設定するには、:menuselection:`販売アプリ --> 新規`に移動し、プロダ"
-"クトの:ref:`見積もりを作成 <sales/create-quotation>`します。:guilabel:`確定`"
-"ボタンをクリックすると、見積もりは販売オーダに変わります。その時点で、左上隅"
-"の:guilabel:`請求書を作成`をクリックして請求書を作成できます。表示され"
-"る:guilabel:`請求書を作成`ポップアップウィンドウで、:guilabel:`頭金(パーセン"
-"テージ)`を選択し、:guilabel:`頭金`フィールドに`100`と入力します。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -28231,78 +28395,55 @@ msgstr ""
 "前払金(パーセンテージ)オプションが選択され、前払金として 100% が設定されてい"
 "ます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:205
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:202
 msgid ""
-"Next, click :guilabel:`Create Draft` to create an invoice draft. This will "
-"also bring the draft invoice into view, which includes the :guilabel:`Down "
-"payment` under the :guilabel:`Down Payments` section of "
-"the :guilabel:`Invoice Lines` tab. The invoice can now be confirmed and "
-"posted by clicking :guilabel:`Confirm`. Confirming the invoice changes the "
-"status from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new "
-"series of buttons at the top of the page."
+"Next, click :guilabel:`Create Draft` to create an invoice draft. This also "
+"brings the draft invoice into view, which includes the :guilabel:`Down "
+"payment` as a line item under the *Invoice Lines* tab. The invoice can now "
+"be confirmed and posted by clicking :guilabel:`Confirm`. Confirming the "
+"invoice changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It "
+"also reveals a new series of buttons at the top of the page."
 msgstr ""
-"次に、:guilabel:`下書きを作成`をクリックして請求書の下書きを作成します。これ"
-"により、下書き請求書も表示されます。これには、:guilabel:`請求書行`タブ"
-"の:guilabel:`頭金`セクションに:guilabel:`頭金`が含まれています。:guilabel:`確"
-"定`をクリックして、請求書を確定して転記できます。請求書を確定すると、ステータ"
-"スが:guilabel:`ドラフト`から:guilabel:`転記済`に変わります。また、ページ上部"
-"に新しい一連のボタンが表示されます。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:211
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:208
 msgid ""
 "The payment can be registered by clicking the :guilabel:`Pay` button. This "
-"brings up the :guilabel:`Pay` pop-up form, which is auto-populated with the "
-"necessary information. When ready, click the :guilabel:`Create Payment` "
-"button."
+"brings up the *Pay* pop-up form, which is auto-populated with the necessary "
+"information. When ready, click the :guilabel:`Create Payment` button."
 msgstr ""
-":guilabel:`支払`\\ ボタンをクリックして支払いを登録できます。これにより、必要"
-"な情報が自動入力された\\ :guilabel:`支払`\\ ポップアップフォームが表示されま"
-"す。準備ができたら、\\ :guilabel:`支払いを作成`\\ ボタンをクリックします。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:215
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:212
 msgid ""
 "After clicking :guilabel:`Create Payment`, Odoo reveals the customer "
 "invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` banner "
-"in the upper-right corner, depending on how the database has configured and "
+"in the upper-right corner, depending on how the database is configured and "
 "if manual confirmation of payments is required. The process is now complete, "
 "and the 100% down payment has been successfully applied."
 msgstr ""
-":guilabel:`支払いを作成`\\ をクリックすると、Odooは顧客請求書を表示し、右上に"
-"緑色の\\ :guilabel:`支払中`\\ または\\ :guilabel:`支払済`\\ バナーが表示され"
-"ます。これはデータベースの設定や支払いの手動確認が必要かどうかによって異なり"
-"ます。プロセスは完了し、100%の頭金が正常に適用されました。"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:220
+msgid "Income account modification on draft down payments"
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:223
-msgid "Income account modification on down payments"
-msgstr "前受金における収益勘定変更"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:226
 msgid ""
 "To change or adjust the income account attached to down payments, the "
 "**Accounting** app must be installed. With the **Accounting** app installed, "
-"the :guilabel:`Accounting` column becomes available on the draft invoice."
+"the :guilabel:`Account` column becomes available on the draft invoice. "
+"Please note, the income account on posted down payments **cannot** be "
+"modified."
 msgstr ""
-"頭金に関連付けられた収益アカウントを変更または調整するには、**会計**アプリを"
-"インストールする必要があります。**会計**アプリをインストールすると、請求書(下"
-"書き)で\\ :guilabel:`会計`\\ 列が使用できるようになります。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:230
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:228
 msgid ""
 "Navigate to the invoice to be modified by going to :menuselection:`Sales app "
 "--> Orders --> Orders`. Open an order, then click the :guilabel:`Invoices` "
 "smart button. Open an invoice, click the drop-down arrow on the entry in "
 "the :guilabel:`Account` column and click :guilabel:`Search more...` to bring "
-"up the :guilabel:`Search: Account` form. In this form, a different account "
-"can be chosen from the list of pre-existing accounts. A new account can also "
-"be created by clicking the :guilabel:`New` button."
+"up the *Search: Account* form. In this form, a different account can be "
+"chosen from the list of pre-existing accounts. A new account can also be "
+"created by clicking the :guilabel:`New` button."
 msgstr ""
-":menuselection:`販売アプリ --> オーダ --> オーダ`\\ に移動して、変更する請求"
-"書に移動します。オーダを開き、\\ :guilabel:`請求書`\\ スマートボタンをクリッ"
-"クします。請求書を開き、\\ :guilabel:`アカウント`\\ 列のエントリのドロップダ"
-"ウン矢印をクリックし、\\ :guilabel:`さらに検索...`\\ をクリックして"
-"\\ :guilabel:`検索: アカウント`\\ フォームを表示します。このフォームでは、既"
-"存のアカウントのリストから別のアカウントを選択できます。\\ :guilabel:`新規"
-"`\\ ボタンをクリックして新しいアカウントを作成することもできます。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -28313,14 +28454,14 @@ msgstr ""
 "既存のアカウントと新しいアカウントを作成するボタンが表示された検索:アカウント"
 "フォーム。"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:242
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:240
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:114
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
 msgstr ":doc:`invoicing_policy`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:243
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:241
 msgid ":doc:`../../../finance/accounting/customer_invoices/payment_terms`"
 msgstr ":doc:`../../../finance/accounting/customer_invoices/payment_terms`"
 
@@ -32566,11 +32707,11 @@ msgstr ""
 "のオプションを使用すると、\\ **eコマース**\\ ウェブサイトで買い物をするウェブ"
 "サイト訪問者が価格表を選択できます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:48
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:50
 msgid "Creating and editing pricelists"
 msgstr "価格表の作成と編集"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:50
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:52
 msgid ""
 "From the :guilabel:`Pricelists` page, either select the pricelist to edit, "
 "or click :guilabel:`New` to create a new pricelist, which reveals a blank "
@@ -32584,7 +32725,7 @@ msgstr ""
 msgid "How the pricelist detail form looks in Odoo Sales."
 msgstr "Odoo販売での価格表の詳細フォームの見え方。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:57
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:59
 msgid ""
 "When creating a new pricelist, start by adding a name for the pricelist at "
 "the blank field at top of the form. Next, select which :guilabel:`Currency` "
@@ -32594,7 +32735,7 @@ msgstr ""
 "前を追加することから始めます。次に、使用する\\ :guilabel:`通貨`\\ を選択しま"
 "す。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:60
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:62
 msgid ""
 "If working in a multi-company environment, select which company this "
 "pricelist should apply to in the :guilabel:`Company` field. If this field is "
@@ -32605,7 +32746,7 @@ msgstr ""
 "この価格表を適用する会社を選択します。このフィールドを空白のままにすると、価"
 "格表はデータベース内のすべての会社に自動的に適用されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:64
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:66
 msgid ""
 "If working in a multinational company, select the countries where this "
 "pricelist will apply under the :guilabel:`Country Groups` column."
@@ -32613,11 +32754,11 @@ msgstr ""
 "多国籍企業で作業している場合は、\\ :guilabel:`国グループ`\\ 列の下で、この価"
 "格表が適用される国を選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:70
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:72
 msgid "Price Rules tab"
 msgstr "価格ルールタブ"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:72
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:74
 msgid ""
 "In the :guilabel:`Price Rules` tab, each line creates a new record that will "
 "implement customized pricing to the sales order where the pricelist is "
@@ -32629,7 +32770,7 @@ msgstr ""
 "入数量が多いほど割引率が高くなるような複雑な価格構造を作成するために使用でき"
 "ます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:77
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:79
 msgid ""
 "To create a new price rule, click on :guilabel:`Add a line`, which opens a "
 "new pricelist rules form. Then, select whether to apply this set of rules to "
@@ -32639,11 +32780,11 @@ msgstr ""
 "い価格表ルールフォームが開きます。次に、このルールセットを:guilabel:`プロダク"
 "ト`\\ または:guilabel:`カテゴリ`\\ のどちらに適用するかを選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:80
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
 msgid "From here, there are several configuration options:"
 msgstr "ここから、いくつかの設定オプションがあります："
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
 msgid ""
 ":guilabel:`Product`: If selected in the :guilabel:`Apply To` field, use this "
 "field to choose one or more products to which this pricelist will apply."
@@ -32651,7 +32792,7 @@ msgstr ""
 "\\ :guilabel:`プロダクト`\\ ：\\ :guilabel:`適用先`\\ フィールドで選択した場"
 "合、この価格表を適用する1つ以上のプロダクトを選択するために使用します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:86
 msgid ""
 ":guilabel:`Category`: Select one or more product categories to which this "
 "pricelist will apply."
@@ -32659,7 +32800,7 @@ msgstr ""
 "\\ :guilabel:`カテゴリ`\\ ：この価格表を適用する1つ以上のプロダクトカテゴリを"
 "選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:85
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:87
 msgid ""
 ":guilabel:`Price Type`: Select whether the specialized pricing will fall "
 "under :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. "
@@ -32670,7 +32811,7 @@ msgstr ""
 "\\ :guilabel:`数式`\\ 、または\\ :guilabel:`固定価格`\\ のいずれにするかを選"
 "択します。価格タイプに応じて、価格表の適用方法に関する追加設定があります。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:89
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:91
 msgid ""
 ":guilabel:`Discount`: Enter the percentage to be discounted. A mark-up can "
 "be configured by using a negative value in this field."
@@ -32678,7 +32819,7 @@ msgstr ""
 "\\ :guilabel:`割引`\\ ：割引するパーセンテージを入力します。このフィールドに"
 "負の値を使用すると、値上げを設定できます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:93
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:95
 msgid ""
 "If a pricelist is applied to a sales quotation with the "
 "discount :guilabel:`Price Type` set as :guilabel:`Discount`, the discount "
@@ -32697,13 +32838,13 @@ msgid ""
 msgstr ""
 "価格タイプ: 割引を使用した価格表ルールが顧客プレビューに表示される方法。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:102
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:104
 msgid ""
 ":guilabel:`Formula`: Calculate the pricelist rules based the following "
 "configuration:"
 msgstr "\\ :guilabel:`数式`\\ ：以下の設定に基づいて価格表ルールを計算します:"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:104
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:106
 msgid ""
 ":guilabel:`Discount`: Percentage discount to be applied. Negative values can "
 "be entered to increase prices."
@@ -32711,7 +32852,7 @@ msgstr ""
 "\\ :guilabel:`割引`\\ ：適用する割引のパーセンテージ。負の値を入力すると価格"
 "を上げることができます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:108
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:110
 msgid ""
 "If a pricelist is applied to a sales quotation with the "
 "discount :guilabel:`Price Type` set as :guilabel:`Formula`, the discount "
@@ -32720,7 +32861,7 @@ msgstr ""
 "価格表が見積もりに適用され、割引\\ :guilabel:`価格タイプ`\\ が\\ :guilabel:`"
 "数式`\\ に設定されている場合、割引は顧客に表示*されません*。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:111
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:113
 msgid ""
 ":guilabel:`Round off to`: Numerical value to act as round-off multiple, to "
 "be applied after discount. The rounding method sets the price so that it is "
@@ -32729,11 +32870,11 @@ msgstr ""
 "\\ :guilabel:`端数処理`\\ ：割引適用後に端数処理の倍数として機能する数値。端"
 "数処理方法は、このフィールドの値の倍数になるように価格を設定します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:116
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:118
 msgid "Rounding is applied *after* the discount and *before* the extra fee."
 msgstr "端数処理は割引の*後*、追加料金の*前*に適用されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:118
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
 msgid ""
 ":guilabel:`Extra Fee`: Fixed amount to be added or subtracted "
 "once :guilabel:`Discount` and :guilabel:`Round off to` have been applied."
@@ -32741,7 +32882,7 @@ msgstr ""
 "\\ :guilabel:`追加料金`\\ ：\\ :guilabel:`割引`\\ と\\ :guilabel:`端数処理"
 "`\\ が適用された後に加算または減算される固定金額。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:122
 msgid ""
 ":guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, "
 "all product lines in the quotation form will be updated to this price."
@@ -32749,7 +32890,7 @@ msgstr ""
 "\\ :guilabel:`固定価格`\\ ：この価格表の固定価格を入力します。適用すると、見"
 "積もりフォームのすべてのプロダクト行がこの価格に更新されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:123
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:125
 msgid ""
 ":guilabel:`Min Qty`: Specify the minimum quantity of selected products for "
 "this pricelist to apply."
@@ -32757,7 +32898,7 @@ msgstr ""
 "\\ :guilabel:`最小数量`\\ ：この価格表を適用するために選択したプロダクトの最"
 "小数量を指定します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:125
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:127
 msgid ""
 ":guilabel:`Validity Period`: Specify the start and end date during which "
 "this pricelist can be applied to quotations."
@@ -32765,7 +32906,7 @@ msgstr ""
 "\\ :guilabel:`有効期間`\\ ：この価格表を見積もりに適用できる開始日と終了日を"
 "指定します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:129
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:131
 msgid ""
 "To formulate a 100% markup (or two times the price of the product), with a "
 "$5 minimum margin, set the :guilabel:`Based price` field to :guilabel:`Sales "
@@ -32784,7 +32925,7 @@ msgid ""
 msgstr ""
 "Odoo販売で最低マージン＄5のマークアップ原価を設定するとどのように見えるか。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:137
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:139
 msgid ""
 "To apply 20% discounts, with prices rounded up to 9.99, set "
 "the :guilabel:`Based on` field to :guilabel:`Sales Price`, "
@@ -32800,7 +32941,7 @@ msgstr ""
 msgid "Example of a 20% discount with prices rounded to 9.99 in Odoo Sales."
 msgstr "Odoo販売で、20％値引で、価格を9.99に丸めした例。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:145
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:147
 msgid ""
 "To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` "
 "and the :guilabel:`Extra Fee` to `-0.01`."
@@ -32808,11 +32949,11 @@ msgstr ""
 "9.99で終わる価格を設定するには、 :guilabel:`丸め方法` を `10` "
 "に、 :guilabel:`追加料金` を `-0.01` に設定します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:149
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:151
 msgid "Recurring Prices tab"
 msgstr "定期価格タブ"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:151
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:153
 msgid ""
 "Time-based rules are used specifically with subscription products. Be sure "
 "to check out the Odoo :doc:`Subscriptions </applications/sales/"
@@ -32822,7 +32963,7 @@ msgstr ""
 "Odoo\\ :doc:`サブスクリプション </applications/sales/subscriptions>`\\ のド"
 "キュメントを必ずご確認ください。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:154
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:156
 msgid ""
 "In the :guilabel:`Recurring Prices` tab, pricelists are configured with the "
 "same options as in the :guilabel:`Price Rules` tab, with additional columns "
@@ -32832,7 +32973,7 @@ msgstr ""
 "プションで価格表を設定し、\\ :guilabel:`プロダクトバリエーション`\\ と"
 "\\ :guilabel:`定期プラン`\\ の追加列があります。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:158
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:160
 msgid ""
 ":guilabel:`Product Variants` are configured under products that have one or "
 "more values, such as color, size, etc. Once a product has been selected "
@@ -32844,7 +32985,7 @@ msgstr ""
 "を選択した後、該当する場合は、価格ルールに含める希望のプロダクトバリエーショ"
 "ンを選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:162
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:164
 msgid ""
 "Then, select the blank field in the :guilabel:`Recurring Plan` column to "
 "reveal a drop-down menu of pre-designated recurrence periods (e.g. "
@@ -32858,7 +32999,7 @@ msgstr ""
 msgid "The recurring prices tab in a pricelist configuration form."
 msgstr "価格表設定フォーム内の定期価格タブ。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:168
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:170
 msgid ""
 "New recurrence periods can also be created from this column. To do so, type "
 "in the name for the new :guilabel:`Recurring Plan`, then "
@@ -32883,7 +33024,7 @@ msgstr ""
 msgid "Custom time period pop-up form in Odoo Sales."
 msgstr "Odoo販売で期間をカスタムするポップアップフォーム。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:179
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:181
 msgid ""
 "Lastly, add the desired price for this recurring price rule in "
 "the :guilabel:`Recurring Price` column."
@@ -32891,15 +33032,15 @@ msgstr ""
 "最後に、\\ :guilabel:`定期価格`\\ 列にこの定期価格ルールの希望価格を追加しま"
 "す。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:183
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:185
 msgid ":doc:`../../../subscriptions`"
 msgstr ":doc:`../../../subscriptions`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:186
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
 msgid "Rental rules tab"
 msgstr "レンタルルールタブ"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:190
 msgid ""
 "Price rules can be configured for :doc:`rental products <../../../rental>` "
 "under the :guilabel:`Rental rules` tab, using the same methodology as "
@@ -32909,7 +33050,7 @@ msgstr ""
 "\\ :guilabel:`レンタルルール`\\ タブの下で、\\ :guilabel:`価格ルール`\\ およ"
 "び\\ :guilabel:`定期価格`\\ タブと同じ方法で設定できます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:192
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:194
 msgid ""
 "To add a rental rule, click :guilabel:`Add a line`, and select a desired "
 "product in the :guilabel:`Products` column. Then, select any "
@@ -32919,7 +33060,7 @@ msgstr ""
 "\\ :guilabel:`プロダクト`\\ 列で希望のプロダクトを選択します。次に、必要に応"
 "じて特定の\\ :guilabel:`バリエーション`\\ を選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:195
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
 msgid ""
 "Next, designate a :guilabel:`Period` of time for the rental rule (e.g. "
 "`Daily`, `Hourly`, etc.)."
@@ -32927,7 +33068,7 @@ msgstr ""
 "次に、レンタルルールの\\ :guilabel:`期間`\\ （`Daily`、`Hourly`など）を指定し"
 "ます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:199
 msgid ""
 "Lastly, configure a :guilabel:`Price` for the rental rule in the respective "
 "column."
@@ -32938,7 +33079,7 @@ msgstr ""
 msgid "The rental tab in a pricelist configuration form."
 msgstr "価格表設定フォーム内のレンタルタブ。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:203
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:205
 msgid ""
 ":doc:`Ecommerce price configuration </applications/websites/ecommerce/"
 "configuration/prices>`"
@@ -32946,11 +33087,11 @@ msgstr ""
 ":doc:`eコマース価格設定 </applications/websites/ecommerce/configuration/"
 "prices>`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:208
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
 msgid "Customer pricelist application"
 msgstr "顧客価格表アプリケーション"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:212
 msgid ""
 "While the default pricelist applied to any customer is the :guilabel:`Public "
 "Pricelist`, Odoo provides the opportunity to directly apply a different "
@@ -32959,7 +33100,7 @@ msgstr ""
 "どの顧客にも適用されるデフォルトの価格表は :guilabel:`公開価格表` ですが、"
 "Odooでは連絡先フォームの顧客に直接別の価格表を適用することができます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:213
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:215
 msgid ""
 "To do that, open the desired customer's contact form, either by navigating "
 "to :menuselection:`Sales app --> Orders --> Customers` and selecting the "
@@ -32974,7 +33115,7 @@ msgstr ""
 msgid "Sample customer detail form in Odoo Sales."
 msgstr "Odoo販売の顧客詳細フォームのサンプル。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:220
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:222
 msgid ""
 "On the desired customer's contact form, under the :guilabel:`Sales & "
 "Purchase` tab, in the :guilabel:`Sales` section, designate what pricelist "
@@ -32989,7 +33130,7 @@ msgstr ""
 msgid "The pricelist field in a customer detail form in Odoo Sales."
 msgstr "Odoo販売の顧客詳細フォームの価格表フィールド。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:228
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:230
 msgid ""
 "When a customer is added to the database, the default pricelist is "
 "automatically applied to them. There is **no way** to have a blank "
@@ -33001,7 +33142,7 @@ msgstr ""
 "フィールドを空白のままにしても、その連絡先フォームを再度開くと、デフォルトの"
 "価格表が表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:232
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:234
 msgid ""
 "However, when that contact is added to a quotation, and the *Pricelist* "
 "field is auto-populated (based on the information from their contact form), "
@@ -33014,11 +33155,11 @@ msgstr ""
 "フィールドから削除しても、見積もりを確定し、その後販売オーダに変換することが"
 "できます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:238
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
 msgid "Conditions"
 msgstr "条件"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:242
 msgid ""
 "At the bottom of the :guilabel:`Create Pricelist Rules` pop-up form is "
 "the :guilabel:`Conditions` section."
@@ -33026,14 +33167,14 @@ msgstr ""
 ":guilabel:`価格表規則の作成` ポップアップフォームの一番下には、 :guilabel:`条"
 "件` セクションがあります。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:243
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:245
 msgid ""
 "Here, start by selecting one of the options in the :guilabel:`Apply On` "
 "field:"
 msgstr ""
 "ここで、まず :guilabel:`適用` フィールドのオプションの一つを選択します:"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:245
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:247
 msgid ""
 ":guilabel:`All Products`: the advanced pricelist rule will be applied to all "
 "products."
@@ -33041,7 +33182,7 @@ msgstr ""
 ":guilabel:`全てのプロダクト`: 高度な価格表規則は全てのプロダクトに適用されま"
 "す。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:246
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:248
 msgid ""
 ":guilabel:`Product Category`: the advanced pricelist rule will be applied to "
 "a specific category of products."
@@ -33049,14 +33190,14 @@ msgstr ""
 ":guilabel:`プロダクトカテゴリ`: 高度な価格表規則は、プロダクトの特定のカテゴ"
 "リに適用されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:248
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:250
 msgid ""
 ":guilabel:`Product`: the advanced pricelist rule will be applied to a "
 "specific product."
 msgstr ""
 ":guilabel:`プロダクト`: 高度な価格表規則は特定のプロダクトに適用されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:249
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:251
 msgid ""
 ":guilabel:`Product Variant`: the advanced pricelist rule will be applied to "
 "a specific product variant."
@@ -33064,7 +33205,7 @@ msgstr ""
 ":guilabel:`プロダクトバリアント`: 高度な価格表ルールは特定のプロダクトバリ"
 "エーションに適用されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:252
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:254
 msgid ""
 "If any of those options, apart from :guilabel:`All Products`, are selected, "
 "a new option-specific field appears, in which the "
@@ -33076,7 +33217,7 @@ msgstr ""
 "`、 :guilabel:`プロダクト`、 :guilabel:`プロダクトバリエーション` を選択する"
 "必要があります。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:256
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:258
 msgid ""
 "Then, select a minimum quantity to be applied to the advanced pricelist rule "
 "in the :guilabel:`Min. Quantity` field. Lastly, select a range of dates for "
@@ -33086,7 +33227,7 @@ msgstr ""
 "選択します。最後に、 :guilabel:`有効期間` フィールドで価格表アイテムが有効な"
 "日付範囲を選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:260
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:262
 msgid ""
 "Once all configurations are complete, either click :guilabel:`Save & Close` "
 "to save the advanced pricelist rule, or click :guilabel:`Save & New` to "
@@ -33096,7 +33237,7 @@ msgstr ""
 "表規則を保存するか、 :guilabel:`保存して新規作成` をクリックして新しいフォー"
 "ムに別の高度な価格表規則をすぐに作成します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:265
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:267
 msgid ""
 "If a price rule is set for a particular product, and another one for its "
 "product category, Odoo takes the rule of the product itself."
@@ -33104,11 +33245,11 @@ msgstr ""
 "特定のプロダクトに価格ルールが設定され、そのプロダクトカテゴリに別の価格ルー"
 "ルが設定されている場合、Odooはプロダクト自体のルールを適用します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:269
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:271
 msgid ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 msgstr ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:270
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:272
 msgid ":doc:`/applications/websites/ecommerce/configuration/prices`"
 msgstr ":doc:`/applications/websites/ecommerce/configuration/prices`"
 
@@ -45559,6 +45700,619 @@ msgstr ""
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
 
+#~ msgid "Rental pricing"
+#~ msgstr "レンタル価格"
+
+#~ msgid ""
+#~ "To adjust the rental pricing on a product, go to the :guilabel:`Products` "
+#~ "page in the **Rental** app, then select the desired product or "
+#~ "click :guilabel:`New` to create a new product from scratch."
+#~ msgstr ""
+#~ "プロダクトのレンタル価格を調整するには、\\ **レンタル**\\ アプリの"
+#~ "\\ :guilabel:`プロダクト`\\ ページに移動し、目的のプロダクトを選択するか、"
+#~ "\\ :guilabel:`新規`\\ をクリックして新しいプロダクトをゼロから作成します。"
+
+#~ msgid ""
+#~ "On the product form, ensure the :guilabel:`Rental` checkbox is ticked. "
+#~ "Then, open the :guilabel:`Rental prices` tab."
+#~ msgstr ""
+#~ "プロダクトフォームで、\\ :guilabel:`レンタル`\\ チェックボックスがオンに"
+#~ "なっていることを確認します。次に、\\ :guilabel:`レンタル価格`\\ タブを開き"
+#~ "ます。"
+
+#~ msgid "How the Settings page appears in the Odoo Rental application."
+#~ msgstr "Odooレンタルの設定画面の表示方法"
+
+#~ msgid ""
+#~ "Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` "
+#~ "tab, designate custom rental prices and rental periods for the product."
+#~ msgstr ""
+#~ ":guilabel:`レンタル価格` タブの :guilabel:`価格` セクションで、プロダクト"
+#~ "のカスタムレンタル価格とレンタル期間を指定します。"
+
+#~ msgid ""
+#~ "To add pricing for a rental, click :guilabel:`Add a price`. Then, choose "
+#~ "a *pricing period* (:dfn:`the unit of duration of the rental`) in "
+#~ "the :guilabel:`Period` column, or create a new pricing period by typing "
+#~ "in the name and clicking :guilabel:`Create`."
+#~ msgstr ""
+#~ "レンタルの価格を追加するには、 :guilabel:`価格の追加` をクリックします。次"
+#~ "に、:guilabel:`機関` カラムで *価格設定期間* (:dfn:`レンタル期間の単位`) "
+#~ "を選択するか、名前を入力して:guilabel:`作成` をクリックして新しい価格設定"
+#~ "期間を作成します。"
+
+#~ msgid ""
+#~ "Next, decide whether or not to apply this custom rental price to a "
+#~ "specific :guilabel:`Pricelist`."
+#~ msgstr ""
+#~ "次に、このカスタムレンタル価格を特定の :guilabel:`価格表` に適用するかどう"
+#~ "かを決定します。"
+
+#~ msgid ""
+#~ "Lastly, enter the desired :guilabel:`Price` for that "
+#~ "specific :guilabel:`Period`."
+#~ msgstr ""
+#~ "最後に、その特定の :guilabel:`期間` の :guilabel:`価格` を入力します。"
+
+#~ msgid ""
+#~ "No limit exists on how many pricing lines can be added. Multiple pricing "
+#~ "options for rental products are typically used to give discounts for "
+#~ "customers who agree to longer rental durations."
+#~ msgstr ""
+#~ "追加できる価格設定行の数に制限はありません。レンタルプロダクトの複数の価格"
+#~ "設定オプションは、通常、長期レンタル期間に同意した顧客に割引を提供するため"
+#~ "に使用されます。"
+
+#~ msgid ""
+#~ "Remember when considering pricing that renting for a day is usually "
+#~ "limited to operating hours, not 24 hours. When determining pricing, keep "
+#~ "in mind that a rental day typically refers to operating hours, not a full "
+#~ "24-hour period."
+#~ msgstr ""
+#~ "価格設定を検討する際は、1日のレンタルは通常24時間ではなく営業時間に制限さ"
+#~ "れることを覚えておいてください。価格設定を決定する際は、レンタル日は通常、"
+#~ "24時間ではなく営業時間を指すことに留意してください。"
+
+#~ msgid "Reservations"
+#~ msgstr "在庫引当"
+
+#~ msgid ""
+#~ "Under the :guilabel:`Reservations` section of the :guilabel:`Rental "
+#~ "prices` tab, there is the option to configure additional fines for "
+#~ "any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the customer "
+#~ "takes to return a rental."
+#~ msgstr ""
+#~ ":guilabel:`レンタル価格`\\ タブの\\ :guilabel:`予約`\\ セクションの下に"
+#~ "は、顧客がレンタルを返却するのにかかる\\ :guilabel:`時間単位の罰金`\\ また"
+#~ "は\\ :guilabel:`日単位の罰金`\\ に対して追加の罰金を設定するオプションがあ"
+#~ "ります。"
+
+#~ msgid ""
+#~ "Also, there is the option to set the :guilabel:`Reserve product` time, "
+#~ "expressed in hours, to make the rental product temporarily unavailable "
+#~ "between two rental orders. Such a feature may prove useful if maintenance "
+#~ "or cleaning is required between rentals."
+#~ msgstr ""
+#~ "また\\ :guilabel:`プロダクト予約`\\ 時間（時間単位で表記）を設定し、2つの"
+#~ "レンタルオーダ間でレンタルプロダクトを一時的に利用不可にするオプションもあ"
+#~ "ります。この機能は、レンタルの合間に整備やクリーニングが必要な場合に便利で"
+#~ "す。"
+
+#~ msgid "Price computing"
+#~ msgstr "価格計算"
+
+#~ msgid ""
+#~ "A rental *Goods* product is a physical item, such as a computer, vehicle, "
+#~ "bike, camera, or an item of clothing. Goods are removed from the "
+#~ "company’s stock, delivered to the customer, and then returned to the "
+#~ "company."
+#~ msgstr ""
+#~ "レンタル\\ *商品*\\ プロダクトは、コンピューター、車両、自転車、カメラ、衣"
+#~ "類などの物理的なアイテムです。商品は会社の在庫から取り出され、顧客に配達さ"
+#~ "れ、その後会社に返却されます。"
+
+#~ msgid ""
+#~ "A rental *Service* can be labor or something non-physical, such as "
+#~ "installation, photography, or a deposit. It can also be a physical item "
+#~ "that never leaves the company’s stock, such as a hotel room, work "
+#~ "station, or storage unit."
+#~ msgstr ""
+#~ "\\ :dfn:`レンタル`\\ サービスは、労働力または非物理的なもの（設置、写真、"
+#~ "デポジットなど）を指します。また、会社の在庫から出ることのない物理的なアイ"
+#~ "テム（ホテルの部屋、作業ステーション、保管ユニットなど）も含まれます。"
+
+#~ msgid ""
+#~ ":guilabel:`Product`: Limit the default delay costs setting to one product "
+#~ "from the field’s drop-down list. Leave the :guilabel:`Product` field "
+#~ "blank if the defaults apply to all products."
+#~ msgstr ""
+#~ ":guilabel:`プロダクト`: フィールドのドロップダウンリストから1つのプロダク"
+#~ "トにデフォルトの遅延コスト設定を制限します。デフォルトがすべてのプロダクト"
+#~ "に適用される場合は、:guilabel:`プロダクト`フィールドを空白のままにします。"
+
+#~ msgid ""
+#~ "The **Rental** app offers many app-integration features. Depending on the "
+#~ "installed Odoo apps, specific settings are available. To learn more about "
+#~ "the default setting for rental products, refer to the :ref:`Settings "
+#~ "<rental/product_type/settings>` section of the *Rental product type* "
+#~ "page. The following configurations assume the **Rental** and "
+#~ "**Inventory** apps are installed."
+#~ msgstr ""
+#~ "**レンタル**\\ アプリは、多くのアプリ統合機能を提供します。インストールさ"
+#~ "れているOdooアプリに応じて、特定の設定が利用可能です。レンタルプロダクトの"
+#~ "デフォルト設定の詳細については、*レンタルプロダクトタイプ*ページの"
+#~ "\\ :ref:`管理設定 <rental/product_type/settings>`\\ セクションを参照してく"
+#~ "ださい。以下の設定は、\\ **レンタル**\\ および\\ **在庫**\\ アプリがインス"
+#~ "トールされていることを前提としています。"
+
+#~ msgid ""
+#~ "The *Variant* feature in the **Inventory** app must be enabled for this "
+#~ "tab to display."
+#~ msgstr ""
+#~ "このタブを表示するには、**在庫**アプリの*バリアント*機能を有効にする必要が"
+#~ "あります。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
+#~ "section, click :guilabel:`Add a price` to enter a new rental rate. Choose "
+#~ "a *pricing period* (:dfn:`the unit of duration of the rental`) in "
+#~ "the :guilabel:`Period` column, or create a new pricing period by typing "
+#~ "in the name and clicking :guilabel:`Create and edit`."
+#~ msgstr ""
+#~ ":guilabel:`レンタル価格`\\ タブをクリックし、:guilabel:`価格設定`\\ セク"
+#~ "ションで\\ :guilabel:`価格を追加`\\ をクリックして新しいレンタル料金を入力"
+#~ "します。:guilabel:`期間`\\ 列で\\ *価格設定期間*\\ （:dfn:`レンタル期間の"
+#~ "単位`）を選択するか、名前を入力して\\ :guilabel:`作成して編集`\\ をクリッ"
+#~ "クして新しい価格設定期間を作成します。"
+
+#~ msgid ""
+#~ "Creating a new pricing period opens a pop-up *Create period* window. Fill "
+#~ "in the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
+#~ "click :guilabel:`Save`. The new pricing period automatically applies."
+#~ msgstr ""
+#~ "新しい価格期間を作成すると、*期間を作成*ポップアップウィンドウが開きま"
+#~ "す。:guilabel:`名前`、:guilabel:`期間`、:guilabel:`単位`を入力"
+#~ "し、:guilabel:`保存`をクリックします。新しい価格期間が自動的に適用されま"
+#~ "す。"
+
+#~ msgid "Sample of a New Period view in the Rental app."
+#~ msgstr "レンタルアプリの新しい期間ビューのサンプル。"
+
+#~ msgid ""
+#~ "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. "
+#~ "To apply the configured rental rate to an existing pricelist, click in "
+#~ "the :guilabel:`Pricelist` column and select the desired list from the "
+#~ "drop-down menu."
+#~ msgstr ""
+#~ "次に、その特定の\\ :guilabel:`期間`\\ の\\ :guilabel:`価格`\\ を入力しま"
+#~ "す。設定したレンタル料金を既存の価格表に適用するには、:guilabel:`価格表"
+#~ "`\\ 列をクリックし、ドロップダウンメニューから目的のリストを選択します。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
+#~ "Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. "
+#~ "These values are automatically populated from the :guilabel:`Default "
+#~ "Delay Costs` section, provided they have been configured in "
+#~ "the :menuselection:`Rental app --> Configuration --> Settings`."
+#~ msgstr ""
+#~ ":guilabel:`予約`\\ セクションで、:guilabel:`時間超過料金`\\ 、:guilabel:`"
+#~ "日超過料金`\\ 、および\\ :guilabel:`プロダクト予約`\\ 時間を入力します。こ"
+#~ "れらの値は、:menuselection:`レンタルアプリ --> 設定 --> 設定`\\ で設定され"
+#~ "ている場合、:guilabel:`デフォルト遅延コスト`\\ セクションから自動的に入力"
+#~ "されます。"
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near "
+#~ "the top to save."
+#~ msgstr ""
+#~ "上部の\\ :icon:`fa-cloud-upload`\\ :guilabel:`(手動で保存)`\\ アイコンをク"
+#~ "リックして保存します。"
+
+#~ msgid "Pickup products"
+#~ msgstr "プロダクト貸出"
+
+#~ msgid ""
+#~ "When a customer picks up products, navigate to the appropriate rental "
+#~ "order, click :guilabel:`Pickup`. The **Rental** app displays a warehouse "
+#~ "delivery form listing the reserved rental products. "
+#~ "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` "
+#~ "stage."
+#~ msgstr ""
+#~ "顧客がプロダクトを受け取る際は、該当するレンタルオーダに移動して"
+#~ "\\ :guilabel:`受取`\\ をクリックします。**レンタル**\\ アプリには、引当済"
+#~ "レンタルプロダクトがリストされた倉庫配送フォームが表示されま"
+#~ "す。:guilabel:`確認`\\ をクリックして、オーダを\\ :guilabel:`完了`\\ ス"
+#~ "テージに移動します。"
+
+#~ msgid "Sample of a Pickup page in the Rental app."
+#~ msgstr "レンタルアプリの受取ページのサンプル。"
+
+#~ msgid ""
+#~ "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
+#~ msgstr ""
+#~ "これにより、レンタルオーダに\\ :guilabel:`集荷済`\\ ステータスバナーが表示"
+#~ "されます。"
+
+#~ msgid "Return products"
+#~ msgstr "プロダクト返却"
+
+#~ msgid ""
+#~ "When a customer returns products, navigate to the desired rental order "
+#~ "and click :guilabel:`Return`. The **Rental** app displays a warehouse "
+#~ "receipt form listing the checked-out rental products."
+#~ msgstr ""
+#~ "顧客がプロダクトを返却する際は、目的のレンタルオーダに移動し、"
+#~ "\\ :guilabel:`返却`\\ をクリックします。**レンタル**\\ アプリには、チェッ"
+#~ "クアウトされたレンタルプロダクトをリストした倉庫入庫フォームが表示されま"
+#~ "す。"
+
+#~ msgid ""
+#~ "Enter the same number of products the customer returned in "
+#~ "the :guilabel:`Quantity` column. If any of the products have serial "
+#~ "numbers, enter them into the :guilabel:`Serial Numbers` column."
+#~ msgstr ""
+#~ "顧客が返却したプロダクトと同じ数を\\ :guilabel:`数量`\\ 列に入力します。プ"
+#~ "ロダクトにシリアル番号がある場合は、\\ :guilabel:`シリアル番号`\\ 列にそれ"
+#~ "らを入力します。"
+
+#~ msgid "Sample of the Return page in the Rental app."
+#~ msgstr ""
+#~ "\\ :guilabel:`レンタル`\\ アプリの\\ :guilabel:`返却`\\ ページのサンプル。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` "
+#~ "stage. A :guilabel:`Returned` status banner appears on the rental order."
+#~ msgstr ""
+#~ ":guilabel:`確認`\\ をクリックして、オーダを\\ :guilabel:`完了`\\ ステージ"
+#~ "に移動します。レンタルオーダに\\ :guilabel:`返却済み`\\ ステータスバナーが"
+#~ "表示されます。"
+
+#~ msgid ""
+#~ "Pickup and return receipts can be printed for customers when they pick up "
+#~ "and return rental products."
+#~ msgstr ""
+#~ "顧客がレンタルプロダクトを受取および返却する際に、受取および返却レシートを"
+#~ "印刷できます。"
+
+#~ msgid ""
+#~ "To print pickup and/or return receipts, navigate to the appropriate "
+#~ "rental order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to "
+#~ "reveal a drop-down menu."
+#~ msgstr ""
+#~ "受取および/または返却レシートを印刷するには、該当するレンタルオーダに移動"
+#~ "し、:icon:`fa-cog`\\ :guilabel:`（アクション）`\\ アイコンをクリックしてド"
+#~ "ロップダウンメニューを表示します。"
+
+#~ msgid ""
+#~ "From this drop-down menu, hover over the :guilabel:`Print` option to "
+#~ "reveal a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
+#~ msgstr ""
+#~ "このドロップダウンメニューから :guilabel:`印刷` オプションにカーソルを合わ"
+#~ "せるとサブメニューが表示されます。次に :guilabel:`貸出・返却領収書` を選択"
+#~ "します。"
+
+#~ msgid ""
+#~ "Odoo generates and downloads a PDF detailing all information about the "
+#~ "current status of the rented items."
+#~ msgstr ""
+#~ "Odooは、レンタル中の件の現在の状態に関するすべての情報を詳述したPDFを生成"
+#~ "してダウンロードします。"
+
+#~ msgid ""
+#~ "Be sure to configure the rental product's prices on the :ref:`Rental "
+#~ "prices <rental/pricing>` tab."
+#~ msgstr ""
+#~ "\\ :ref:`レンタル価格 <rental/pricing>`\\ タブでレンタルプロダクトの価格を"
+#~ "設定してください。"
+
+#~ msgid ""
+#~ "Once a customer :ref:`returns the rented product <rental/return-"
+#~ "products>`, reimburse their deposit with a :doc:`credit note <../../../"
+#~ "finance/accounting/customer_invoices/credit_notes>` from the invoice, and "
+#~ "change the *delivered quantity* to `0` on the linked sales order."
+#~ msgstr ""
+#~ "顧客が\\ :ref:`レンタル製品を返却 <rental/return-products>`\\ したら、請求"
+#~ "書から\\ :doc:`クレジットノート <../../../finance/accounting/"
+#~ "customer_invoices/credit_notes>`\\ でデポジットを払い戻し、リンクされた販"
+#~ "売オーダの*配達済数量*を`0`に変更します。"
+
+#~ msgid ""
+#~ "When a sales order is confirmed, the option to create an invoice becomes "
+#~ "available via the :guilabel:`Create Invoice` button. When clicked, "
+#~ "a :guilabel:`Create invoice(s)` pop-up appears."
+#~ msgstr ""
+#~ "販売オーダが確定されると、:guilabel:`請求書作成`\\ ボタンから請求書を作成"
+#~ "するオプションが利用可能になります。クリックすると、:guilabel:`請求書作成"
+#~ "`\\ ポップアップが表示されます。"
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoice(s)` pop-up, there are three options to "
+#~ "choose from in the :guilabel:`Create Invoice` field:"
+#~ msgstr ""
+#~ ":guilabel:`請求書の作成`\\ ポップアップの\\ :guilabel:`請求書の作成`\\ "
+#~ "フィールドには、次の3つのオプションがあります："
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoice(s)` pop-up window, the down payment "
+#~ "options are:"
+#~ msgstr ""
+#~ ":guilabel:`請求書を作成`\\ ポップアップウィンドウには、以下の前払金オプ"
+#~ "ションがあります:"
+
+#~ msgid ""
+#~ "Select a down payment option and set the desired payment, either as a "
+#~ "percentage or a fixed amount, in the :guilabel:`Down Payment Amount` "
+#~ "field."
+#~ msgstr ""
+#~ ":guilabel:`内金金額`\\ フィールドで、パーセンテージまたは固定金額として、"
+#~ "希望する支払いを設定します。"
+
+#~ msgid ""
+#~ "Once all fields are filled in, click the :guilabel:`Create Draft` button. "
+#~ "Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice "
+#~ "Draft`."
+#~ msgstr ""
+#~ "すべてのフィールドに入力したら、:guilabel:`ドラフト作成`\\ ボタンをクリッ"
+#~ "クします。このボタンをクリックすると、Odoo は\\ :guilabel:`顧客請求書ドラ"
+#~ "フト`\\ を表示します。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice "
+#~ "Draft`, the down payment that was configured in the *Create invoice(s)* "
+#~ "pop-up form appears under a new :guilabel:`Down Payments` section."
+#~ msgstr ""
+#~ ":guilabel:`顧客請求書ドラフト`\\ の\\ :guilabel:`請求書明細`\\ タブでは、*"
+#~ "請求書の作成*ポップアップフォームで設定した前払金が、新しい\\ :guilabel:`"
+#~ "前払金`\\ セクションの下に表示されます。"
+
+#~ msgid ""
+#~ "Odoo offers both fixed amounts and partial down payments (such as 30% of "
+#~ "an order's total)."
+#~ msgstr ""
+#~ "Odoは固定金額と部分的な前払金（オーダ総額の30%など）の両方を提供していま"
+#~ "す。"
+
+#~ msgid ""
+#~ "A 100% down payment is possible and differs from a full payment of the "
+#~ "sales order. A sales order paid through the regular invoice process does "
+#~ "not allow any additional invoices to be generated and does not display "
+#~ "the :guilabel:`Create Invoice` button on the sales order."
+#~ msgstr ""
+#~ "100%前払金は可能であり、販売オーダの全額支払いとは異なります。通常の請求プ"
+#~ "ロセスで支払われた販売オーダは、追加の請求書を生成できず、販売オーダに"
+#~ "\\ :guilabel:`請求書の作成`\\ ボタンが表示されません。"
+
+#~ msgid ""
+#~ "With a 100% down payment, the :guilabel:`Create Invoice` button is still "
+#~ "displayed on the sales Order because the system expects another invoice "
+#~ "to be created after the down payment to complete payment of the sales "
+#~ "order."
+#~ msgstr ""
+#~ "100%前払金の場合、システムは販売オーダの支払いを完了するために前払金の後に"
+#~ "別の請求書が作成されることを想定しているため、販売オーダに\\ :guilabel:`請"
+#~ "求書の作成`\\ ボタンがまだ表示されます。"
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoice(s)` pop-up window that appears, "
+#~ "select :guilabel:`Down payment (percentage)`, and type `50` in "
+#~ "the :guilabel:`Down Payment` field."
+#~ msgstr ""
+#~ "表示される\\ :guilabel:`請求書の作成`\\ ポップアップウィンドウで、"
+#~ "\\ :guilabel:`前払金（パーセンテージ）`\\ を選択し、\\ :guilabel:`前払金"
+#~ "`\\ フィールドに`50`と入力します。"
+
+#~ msgid ""
+#~ "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` "
+#~ "can be changed. For more information, check out the documentation "
+#~ "on :ref:`income account modification on down payments <sales/invoicing/"
+#~ "income-account-modification>`. A :guilabel:`Down payment Account` can "
+#~ "also be set on a product category. If set, this account is prioritized "
+#~ "for future down payments."
+#~ msgstr ""
+#~ ":guilabel:`内金`\\ に付与された\\ :guilabel:`収益アカウント`\\ は変更でき"
+#~ "ます。詳細については、:ref:`内金の収益アカウント変更 <sales/invoicing/"
+#~ "income-account-modification>`\\ に関するドキュメントを参照してくださ"
+#~ "い。:guilabel:`内金アカウント`\\ はプロダクトカテゴリにも設定できます。設"
+#~ "定されている場合、このアカウントは今後の内金に優先されます。"
+
+#~ msgid ""
+#~ "Lastly, click :guilabel:`Create Draft` to create and view the invoice "
+#~ "draft, which includes the down payment under the :guilabel:`Down "
+#~ "Payments` section of the :guilabel:`Invoice Lines` tab. "
+#~ "Click :guilabel:`Confirm` and the invoice's status changes "
+#~ "from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new "
+#~ "series of buttons at the top of the page."
+#~ msgstr ""
+#~ "最後に、:guilabel:`下書きを作成`をクリックして請求書の下書きを作成して表示"
+#~ "します。下書きには、:guilabel:`請求書行`タブの:guilabel:`頭金`セクションに"
+#~ "頭金が含まれています。:guilabel:`確定`をクリックすると、請求書のステータス"
+#~ "が:guilabel:`ドラフト`から:guilabel:`転記済`に変わります。また、ページ上部"
+#~ "に新しい一連のボタンが表示されます。"
+
+#~ msgid ""
+#~ "To begin the payment process, click :guilabel:`Pay`. A :guilabel:`Pay` "
+#~ "pop-up form displays with auto-populated information. Confirm the "
+#~ "information provided is correct and make any necessary adjustments. When "
+#~ "ready, click the :guilabel:`Create Payment` button."
+#~ msgstr ""
+#~ "支払処理を開始するには、:guilabel:`支払`をクリックします。:guilabel:`支払`"
+#~ "ポップアップフォームが表示され、情報が自動入力されます。入力された情報が正"
+#~ "しいことを確認し、必要に応じて調整を行います。準備ができたら、:guilabel:`"
+#~ "支払を作成`ボタンをクリックします。"
+
+#~ msgid ""
+#~ "On the sales order, a new :guilabel:`Down Payments` section is present in "
+#~ "the :guilabel:`Order Lines` tab, along with the down payment that was "
+#~ "just invoiced and posted. When the customer wants to pay the remaining "
+#~ "amount of the order, another invoice must be created."
+#~ msgstr ""
+#~ "販売オーダの\\ :guilabel:`注文明細行`\\ タブには、新しい\\ :guilabel:`内金"
+#~ "`\\ セクションが表示され、請求書が作成されて転記された内金が記載されます。"
+#~ "顧客が注文の残額を支払いたい場合は、別の請求書を作成する必要があります。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Create Invoice` button. On the :guilabel:`Create "
+#~ "invoice(s)` pop-up window, there is a new field: :guilabel:`Already "
+#~ "invoiced` and :guilabel:`Amount to invoice`."
+#~ msgstr ""
+#~ ":guilabel:`請求書を作成`ボタンをクリックします。:guilabel:`請求書を作成`"
+#~ "ポップアップウィンドウには、新しいフィールドがあります::guilabel:`既請求`"
+#~ "および:guilabel:`請求予定金額`。"
+
+#~ msgid ""
+#~ "Select the :guilabel:`Regular Invoice` option. Odoo creates an invoice "
+#~ "for the exact amount needed to complete the total payment, as shown in "
+#~ "the :guilabel:`Amount to invoice` field."
+#~ msgstr ""
+#~ ":guilabel:`通常請求書`オプションを選択します。Odooは、:guilabel:`請求予定"
+#~ "金額`フィールドに表示されているように、合計支払を完了するために必要な正確"
+#~ "な金額の請求書を作成します。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Create Draft` to create a :guilabel:`Customer Invoice "
+#~ "Draft` page. The draft lists all the invoices for that specific sales "
+#~ "order in the :guilabel:`Invoice Lines` tab. Each invoice line item "
+#~ "displays all the necessary information related to each invoice."
+#~ msgstr ""
+#~ ":guilabel:`下書きを作成`をクリックして、:guilabel:`顧客請求書下書き`ページ"
+#~ "を作成します。下書きには、:guilabel:`請求書行`タブにその特定の販売オーダに"
+#~ "対するすべての請求書が一覧表示されます。各請求書行項目には、各請求書に関連"
+#~ "するすべての必要な情報が表示されます。"
+
+#~ msgid ""
+#~ "To complete the flow, click :guilabel:`Confirm` to change the status of "
+#~ "the invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, "
+#~ "click :guilabel:`Pay`. The :guilabel:`Pay` form appears, with all fields "
+#~ "auto-populated with the necessary information, including the remaining "
+#~ "amount left to be paid on the order."
+#~ msgstr ""
+#~ "フローを完了するには、:guilabel:`確定`\\ をクリックして、請求書のステータ"
+#~ "スを\\ :guilabel:`ドラフト`\\ から\\ :guilabel:`転記済`\\ に変更します。次"
+#~ "に、:guilabel:`支払`\\ をクリックします。:guilabel:`支払`\\ フォームが表示"
+#~ "され、すべてのフィールドに必要な情報が自動入力されます。これには、注文で支"
+#~ "払われるべき残額も含まれます。"
+
+#~ msgid ""
+#~ "After confirming that information, click :guilabel:`Create Payment`. "
+#~ "Doing so reveals the final :guilabel:`Customer Invoice` with a "
+#~ "green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-"
+#~ "right corner, depending on how the database has configured and if manual "
+#~ "confirmation of payments is required. Upon returning to the sales order, "
+#~ "both down payments are present in the :guilabel:`Order Lines` tab."
+#~ msgstr ""
+#~ "その情報を確認した後、\\ :guilabel:`支払いを作成`\\ をクリックします。そう"
+#~ "すると、最終的な\\ :guilabel:`顧客請求書`\\ が表示され、右上に緑色の"
+#~ "\\ :guilabel:`支払中`\\ または\\ :guilabel:`支払済`\\ バナーが表示されま"
+#~ "す。これはデータベースの設定や支払いの手動確認が必要かどうかによって異なり"
+#~ "ます。販売オーダに戻ると、\\ :guilabel:`注文明細`\\ タブに両方の頭金が表示"
+#~ "されます。"
+
+#~ msgid "The second down payment invoice with Paid banner in Odoo Sales."
+#~ msgstr "Odoo販売における支払済バナーが表示された2回目の頭金請求書。"
+
+#~ msgid "At this point, the flow is complete."
+#~ msgstr "この時点で、フローは完了です。"
+
+#~ msgid ""
+#~ "If a down payment is used with a product that has a :guilabel:`Delivered "
+#~ "quantities` invoicing policy, and the cost of the product exceeds the 50% "
+#~ "down payment, a regular invoice is created. However, for products that "
+#~ "cost less than the 50% down payment, the down payments will not be able "
+#~ "to be deducted when it comes time to invoice the customer."
+#~ msgstr ""
+#~ ":guilabel:`完了済数量`請求ポリシーを持つプロダクトで頭金が使用され、プロダ"
+#~ "クトのコストが50%頭金を超える場合、通常請求書が作成されます。ただし、50%頭"
+#~ "金よりも安いプロダクトの場合、顧客への請求時に頭金を控除できません。"
+
+#~ msgid ""
+#~ "To configure a 100% down payment, navigate to :menuselection:`Sales app --"
+#~ "> New`, and :ref:`create a quotation <sales/create-quotation>` for the "
+#~ "product. Upon clicking the :guilabel:`Confirm` button, the quotation "
+#~ "turns into a sales order. At that point, an invoice can now be created by "
+#~ "clicking :guilabel:`Create Invoice` in the top-left corner. On "
+#~ "the :guilabel:`Create invoice(s)` pop-up window that appears, "
+#~ "select :guilabel:`Down payment (percentage)`, and type `100` in "
+#~ "the :guilabel:`Down Payment` field."
+#~ msgstr ""
+#~ "100%頭金を設定するには、:menuselection:`販売アプリ --> 新規`に移動し、プロ"
+#~ "ダクトの:ref:`見積もりを作成 <sales/create-quotation>`します。:guilabel:`"
+#~ "確定`ボタンをクリックすると、見積もりは販売オーダに変わります。その時点"
+#~ "で、左上隅の:guilabel:`請求書を作成`をクリックして請求書を作成できます。表"
+#~ "示される:guilabel:`請求書を作成`ポップアップウィンドウで、:guilabel:`頭金"
+#~ "(パーセンテージ)`を選択し、:guilabel:`頭金`フィールドに`100`と入力します。"
+
+#~ msgid ""
+#~ "Next, click :guilabel:`Create Draft` to create an invoice draft. This "
+#~ "will also bring the draft invoice into view, which includes "
+#~ "the :guilabel:`Down payment` under the :guilabel:`Down Payments` section "
+#~ "of the :guilabel:`Invoice Lines` tab. The invoice can now be confirmed "
+#~ "and posted by clicking :guilabel:`Confirm`. Confirming the invoice "
+#~ "changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It also "
+#~ "reveals a new series of buttons at the top of the page."
+#~ msgstr ""
+#~ "次に、:guilabel:`下書きを作成`をクリックして請求書の下書きを作成します。こ"
+#~ "れにより、下書き請求書も表示されます。これには、:guilabel:`請求書行`タブ"
+#~ "の:guilabel:`頭金`セクションに:guilabel:`頭金`が含まれていま"
+#~ "す。:guilabel:`確定`をクリックして、請求書を確定して転記できます。請求書を"
+#~ "確定すると、ステータスが:guilabel:`ドラフト`から:guilabel:`転記済`に変わり"
+#~ "ます。また、ページ上部に新しい一連のボタンが表示されます。"
+
+#~ msgid ""
+#~ "The payment can be registered by clicking the :guilabel:`Pay` button. "
+#~ "This brings up the :guilabel:`Pay` pop-up form, which is auto-populated "
+#~ "with the necessary information. When ready, click the :guilabel:`Create "
+#~ "Payment` button."
+#~ msgstr ""
+#~ ":guilabel:`支払`\\ ボタンをクリックして支払いを登録できます。これにより、"
+#~ "必要な情報が自動入力された\\ :guilabel:`支払`\\ ポップアップフォームが表示"
+#~ "されます。準備ができたら、\\ :guilabel:`支払いを作成`\\ ボタンをクリックし"
+#~ "ます。"
+
+#~ msgid ""
+#~ "After clicking :guilabel:`Create Payment`, Odoo reveals the customer "
+#~ "invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` "
+#~ "banner in the upper-right corner, depending on how the database has "
+#~ "configured and if manual confirmation of payments is required. The "
+#~ "process is now complete, and the 100% down payment has been successfully "
+#~ "applied."
+#~ msgstr ""
+#~ ":guilabel:`支払いを作成`\\ をクリックすると、Odooは顧客請求書を表示し、右"
+#~ "上に緑色の\\ :guilabel:`支払中`\\ または\\ :guilabel:`支払済`\\ バナーが表"
+#~ "示されます。これはデータベースの設定や支払いの手動確認が必要かどうかによっ"
+#~ "て異なります。プロセスは完了し、100%の頭金が正常に適用されました。"
+
+#~ msgid "Income account modification on down payments"
+#~ msgstr "前受金における収益勘定変更"
+
+#~ msgid ""
+#~ "To change or adjust the income account attached to down payments, the "
+#~ "**Accounting** app must be installed. With the **Accounting** app "
+#~ "installed, the :guilabel:`Accounting` column becomes available on the "
+#~ "draft invoice."
+#~ msgstr ""
+#~ "頭金に関連付けられた収益アカウントを変更または調整するには、**会計**アプリ"
+#~ "をインストールする必要があります。**会計**アプリをインストールすると、請求"
+#~ "書(下書き)で\\ :guilabel:`会計`\\ 列が使用できるようになります。"
+
+#~ msgid ""
+#~ "Navigate to the invoice to be modified by going to :menuselection:`Sales "
+#~ "app --> Orders --> Orders`. Open an order, then click "
+#~ "the :guilabel:`Invoices` smart button. Open an invoice, click the drop-"
+#~ "down arrow on the entry in the :guilabel:`Account` column and "
+#~ "click :guilabel:`Search more...` to bring up the :guilabel:`Search: "
+#~ "Account` form. In this form, a different account can be chosen from the "
+#~ "list of pre-existing accounts. A new account can also be created by "
+#~ "clicking the :guilabel:`New` button."
+#~ msgstr ""
+#~ ":menuselection:`販売アプリ --> オーダ --> オーダ`\\ に移動して、変更する請"
+#~ "求書に移動します。オーダを開き、\\ :guilabel:`請求書`\\ スマートボタンをク"
+#~ "リックします。請求書を開き、\\ :guilabel:`アカウント`\\ 列のエントリのド"
+#~ "ロップダウン矢印をクリックし、\\ :guilabel:`さらに検索...`\\ をクリックし"
+#~ "て\\ :guilabel:`検索: アカウント`\\ フォームを表示します。このフォームで"
+#~ "は、既存のアカウントのリストから別のアカウントを選択できます。"
+#~ "\\ :guilabel:`新規`\\ ボタンをクリックして新しいアカウントを作成することも"
+#~ "できます。"
+
 #~ msgid ""
 #~ "Presets can be used in the :ref:`kiosk of the self-ordering mode <extra/"
 #~ "self_order/usage-guidelines>`. Once the customer taps "
@@ -45881,9 +46635,6 @@ msgstr ":doc:`../sales/products_prices/prices/discounts`"
 #~ msgid "`Odoo Tutorials: Rental <https://www.odoo.com/slides/rental-48>`_"
 #~ msgstr ""
 #~ "`Odooチュートリアル: レンタル <https://www.odoo.com/slides/rental-48>`_"
-
-#~ msgid "Service rental products"
-#~ msgstr "サービスレンタルプロダクト"
 
 #~ msgid ""
 #~ "The **Rental** app is a comprehensive tool that enables users to manage "
