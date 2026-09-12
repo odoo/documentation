@@ -1,3 +1,8 @@
+.. meta::
+   :description: Reusable quotation and section templates are configured and created in Odoo's Sales
+                 app, covering template lines, terms and conditions, and settings, along with
+                 applying templates to quotes and mass cancelling quotations or sales orders.
+
 .. _quote-calculator: https://youtu.be/W_0-gUc87WI?si=GMIuIMXP9-lOPtob
 
 =============================
@@ -202,8 +207,8 @@ Enter the name of the template in :guilabel:`Template` field and set the :guilab
    template.
 
 To create a section template from a sales quote, navigate to :menuselection:`Sales app --> Orders
---> Quotations` and :ref:`create a new quote <sales/create_quotations/create-quotation>`
-or select an existing one.
+--> Quotations` and :ref:`create a new quote <sales/create_quotations/create-quotation>` or select
+an existing one.
 
 Add section and any products in the :guilabel:`Order Lines` tab, then click the
 :icon:`fa-ellipsis-v` :guilabel:`Ellipsis` icon on the right side of the order line. Select the
@@ -224,9 +229,8 @@ the search bar, delete the :guilabel:`Quotation Templates filter` to display all
 Use templates
 =============
 
-When :ref:`creating a quote <sales/create_quotations/create-quotation>`
-(:menuselection:`Sales app --> New`), choose a preconfigured template in the :guilabel:`Quotation
-Template` field.
+When :ref:`creating a quote <sales/create_quotations/create-quotation>` (:menuselection:`Sales app
+--> New`), choose a preconfigured template from the drop-down menu of the :guilabel:`New` button.
 
 .. note::
    The order of the templates in the :guilabel:`Quotation Template` field is determined by the order
@@ -246,7 +250,7 @@ portal.
 When all blocks and customizations are complete, click the :guilabel:`Save` button to save the
 configuration.
 
-The blue banner located at the top of the quotation template preview can be used to quickly return
+The blue banner located at the top of the quotation template preview can be used to return
 :icon:`fa-arrow-right` :guilabel:`Back to edit mode`. When clicked, Odoo returns to the quotation
 form in the back-end of the *Sales* application.
 
@@ -265,18 +269,17 @@ Then, with the desired quotations (or sales orders) selected from the list view 
 :guilabel:`Quotations` page, click the :icon:`fa-cog` :guilabel:`Actions` button to reveal a
 drop-down menu.
 
-From this drop-down menu, select :guilabel:`Cancel quotations`.
+From this drop-down menu, select :guilabel:`Cancel`.
 
 .. image:: quote_template/cancel-quotations.png
-   :alt: The Cancel quotations option on the Actions drop-down menu in the Odoo Sales application.
+   :alt: The Cancel option on the Actions drop-down menu in the Odoo Sales application.
 
 .. note::
    This action can be performed for quotations in *any* stage, even if it is confirmed as a sales
    order.
 
-Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel quotations`
-confirmation pop-up window appears. To complete the cancellation, click the :guilabel:`Cancel
-quotations` button.
+Upon selecting the :guilabel:`Cancel` option, a *Cancel* pop-up window appears. To complete the
+cancellation, click :guilabel:`Cancel`.
 
 .. note::
    An error pop-up message appears when attempting to cancel an order for an ongoing subscription
