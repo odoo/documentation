@@ -79,4 +79,4 @@ Now, the camera device can be linked to the :guilabel:`Action` column drop-down 
    correctly connected to the camera.
 
 .. seealso::
-   :ref:`workcenter_iot`
+   :ref:`manufacturing/using_work_centers/workcenter-iot`
