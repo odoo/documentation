@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:33+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,8 +77,11 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:29
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:22
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:30
+#: ../../content/applications/sales/rental/configure_products/products.rst:17
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:23
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:14
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:27
 #: ../../content/applications/sales/sales/commissions.rst:14
 #: ../../content/applications/sales/sales/gelato.rst:15
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
@@ -458,7 +461,6 @@ msgstr ""
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:81
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:80
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:47
-#: ../../content/applications/sales/rental.rst:91
 msgid "Pricing"
 msgstr ""
 
@@ -1318,7 +1320,7 @@ msgid ":doc:`../../../sales/sales/products_prices/prices/pricing`"
 msgstr ""
 
 #: ../../content/applications/sales/crm/optimize/member_partner_module.rst:49
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:103
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:113
 msgid ":doc:`../../../websites/ecommerce`"
 msgstr ""
 
@@ -12133,12 +12135,12 @@ msgid "Assign a dedicated :doc:`cash payment method and a cash journal <../point
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:44
-#: ../../content/applications/sales/point_of_sale/use.rst:436
+#: ../../content/applications/sales/point_of_sale/use.rst:497
 msgid ":doc:`shop`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:45
-#: ../../content/applications/sales/point_of_sale/use.rst:437
+#: ../../content/applications/sales/point_of_sale/use.rst:498
 msgid ":doc:`restaurant`"
 msgstr ""
 
@@ -12702,6 +12704,82 @@ msgstr ""
 msgid "Once configured, if a discrepancy exceeds this limit, the pop-up window displays the authorized threshold and instructs the user to contact a manager to approve the closing."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/use.rst:436
+msgid "Offline POS"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:438
+msgid "During an internet outage, the POS switches to *offline mode*. This mode keeps order creation and management functional even when backend-dependent features are unavailable. When a :ref:`POS session starts <pos/use/open-register>`, essential data, such as products and customers, is loaded into the browser cache so that the data remains accessible offline. Orders created offline are stored in the browser cache and synced to the backend when the connection is restored."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:445
+msgid "To avoid losing any data created while offline, do not close or reload the browser, and do not clear the browser cache until the POS is back online and synced with the backend."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:449
+msgid "The POS offline mode refers only to Point of Sale-specific functionality. A separate :doc:`offline mode <../../general/offline_mode>` feature covers the rest of Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:452
+msgid "Many POS features rely on backend information and, therefore, are not available offline. These features include:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:455
+msgid ":doc:`Generating invoices <use/pos_invoices>`: Invoices requested while offline are generated automatically after the connection is restored."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:457
+msgid ":ref:`Registering customers <pos/use/customers>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:458
+msgid ":ref:`Accessing detailed product information <pos/products/information-display>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:459
+msgid ":ref:`Synchronizing stock in real time <pos/products/stock-management>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:460
+msgid ":ref:`Using payment terminals <pos/terminals/terminal-use>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:461
+msgid "Loading data on demand"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:463
+msgid "Devices connected to the :doc:`local network <hardware_network/pos_lna>`, such as :doc:`printers <hardware_network/receipt_printers>` and :doc:`scales <hardware_network/scale>`, continue to work offline, as long as no changes are made to the local network. Connected payment terminals rely on an active internet connection and do not work offline."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:469
+msgid "The :icon:`fa-chain-broken` (:guilabel:`offline mode`) icon appears in the POS interface header when the system is offline."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:471
+msgid "If a feature is not available offline, a popover with the message :guilabel:`Connection Lost` appears. To use the offline POS without that feature, click :guilabel:`Continue with limited functionality`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:476
+msgid "Cached data"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:478
+msgid "Each time a customer or product is used in the POS, new data is added to the browser cache, along with the data loaded at the beginning of a session. If frequent internet outages occur, increasing the amount of data loaded into the POS at the start of the session can ensure that when the POS goes offline, all necessary data remains available. To do so, activate :ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings --> Technical --> System Parameters` and adapt the :guilabel:`Value` of the following system parameters:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:485
+msgid ":guilabel:`point_of_sale.limited_customer_count`: Number of :ref:`customers <pos/use/customers>` loaded into the POS. Customers with the highest order counts are loaded first, up to the specified value."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:488
+msgid ":guilabel:`point_of_sale.limited_product_count`: Number of :doc:`products <products>` loaded into the POS. Favorite products are loaded first, followed by services, then by the most recently updated products, up to the specified value."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:493
+msgid "Increasing the amount of data initialized in the POS also increases the time required to open the register."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:5
 msgid "Invoices"
 msgstr ""
@@ -13019,70 +13097,92 @@ msgstr ""
 msgid "If a receipt printer is not configured, clicking :icon:`fa-print` :guilabel:`Print Full Receipt` on the receipt screen triggers the browser's print function."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:10
+#: ../../content/applications/sales/rental.rst:1
+msgid "This page explains the Rental Orders dashboard, how to browse rentable products, and how Odoo computes rental prices by selecting the cheapest applicable price line."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:15
 msgid "Rental"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:12
+#: ../../content/applications/sales/rental.rst:17
 msgid "The Odoo **Rental** application provides comprehensive solutions to configure and manage rentals."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:14
+#: ../../content/applications/sales/rental.rst:19
 msgid "Send quotations, confirm orders, schedule rentals, register products when they are picked up and returned, and invoice customers from this single platform."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:18
+#: ../../content/applications/sales/rental.rst:23
 msgid "`Odoo Rental: Product page <https://www.odoo.com/app/rental>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:19
+#: ../../content/applications/sales/rental.rst:24
 msgid "`Odoo Tutorials: Configuring Rental Products <rental-products_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:20
+#: ../../content/applications/sales/rental.rst:25
 msgid "`Odoo Tutorials: Hotel booking <hotel-booking_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:24
+#: ../../content/applications/sales/rental.rst:29
 msgid "Product types"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:24
+#: ../../content/applications/sales/rental.rst:29
 msgid "Learn about the different rental product types, general configuration, and possible app integrations."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:31
+#: ../../content/applications/sales/rental.rst:36
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:8
 msgid "Physical service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:31
+#: ../../content/applications/sales/rental.rst:36
 msgid "Discover how to create and manage a physical service rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:37
+#: ../../content/applications/sales/rental.rst:42
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:7
 msgid "Labor service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:37
+#: ../../content/applications/sales/rental.rst:42
 msgid "Learn how to create a labor service rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:43
+#: ../../content/applications/sales/rental.rst:48
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:3
+msgid "Create a rental order"
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:48
+msgid "Learn how to create a rental order."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:54
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:7
+msgid "Pick up and return rental products"
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:54
+msgid "Learn how to pick up and return rental products."
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:60
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:3
 msgid "Manage deposits"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:43
+#: ../../content/applications/sales/rental.rst:60
 msgid "Learn how to create a refundable deposit for rental products."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:50
+#: ../../content/applications/sales/rental.rst:67
 msgid "Dashboard"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:52
+#: ../../content/applications/sales/rental.rst:69
 msgid "Upon opening the **Rental** application, the :guilabel:`Rental Orders` dashboard is revealed."
 msgstr ""
 
@@ -13090,119 +13190,67 @@ msgstr ""
 msgid "Example of the Rental Orders dashboard available in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:57
+#: ../../content/applications/sales/rental.rst:74
 msgid "In the default Kanban view, all rentals are visible. Each rental card displays the customer name, the price of the rental, the related sales order number, along with the status of the rental."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:60
+#: ../../content/applications/sales/rental.rst:77
 msgid "On the left sidebar, the :guilabel:`Rental Status` for each rental can be found. Beneath that, the :guilabel:`Invoice Status` of the rentals is accessible. Clicking any option in the left sidebar filters the displayed rentals on the dashboard."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:65
+#: ../../content/applications/sales/rental.rst:82
 msgid "Rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:67
+#: ../../content/applications/sales/rental.rst:84
 msgid "To view all products that can rented in the database, navigate to :menuselection:`Rentals app --> Products`. By default, the :guilabel:`Rental` search filter appears in the search bar."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:70
+#: ../../content/applications/sales/rental.rst:87
 msgid "Each product Kanban card displays that product's name, rental price, and product image (if applicable)."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:74
+#: ../../content/applications/sales/rental.rst:91
 msgid ":doc:`rental/rental_orders/manage_deposits`"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:79
-msgid "Rental pricing"
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:81
-msgid "To adjust the rental pricing on a product, go to the :guilabel:`Products` page in the **Rental** app, then select the desired product or click :guilabel:`New` to create a new product from scratch."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:84
-msgid "On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the :guilabel:`Rental prices` tab."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:None
-msgid "How the Settings page appears in the Odoo Rental application."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:93
-msgid "Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, designate custom rental prices and rental periods for the product."
-msgstr ""
-
 #: ../../content/applications/sales/rental.rst:96
-msgid "To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a *pricing period* (:dfn:`the unit of duration of the rental`) in the :guilabel:`Period` column, or create a new pricing period by typing in the name and clicking :guilabel:`Create`."
+msgid "Rental price computing"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:100
-msgid "Next, decide whether or not to apply this custom rental price to a specific :guilabel:`Pricelist`."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:102
-msgid "Lastly, enter the desired :guilabel:`Price` for that specific :guilabel:`Period`."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:105
-msgid "No limit exists on how many pricing lines can be added. Multiple pricing options for rental products are typically used to give discounts for customers who agree to longer rental durations."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:109
-msgid "Remember when considering pricing that renting for a day is usually limited to operating hours, not 24 hours. When determining pricing, keep in mind that a rental day typically refers to operating hours, not a full 24-hour period."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:114
-msgid "Reservations"
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:116
-msgid "Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` tab, there is the option to configure additional fines for any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the customer takes to return a rental."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:120
-msgid "Also, there is the option to set the :guilabel:`Reserve product` time, expressed in hours, to make the rental product temporarily unavailable between two rental orders. Such a feature may prove useful if maintenance or cleaning is required between rentals."
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:125
-msgid "Price computing"
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:127
+#: ../../content/applications/sales/rental.rst:98
 msgid "Odoo always uses two rules to compute the price of a product when a rental order is created:"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:129
+#: ../../content/applications/sales/rental.rst:100
 msgid "Only one price line is used."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:130
+#: ../../content/applications/sales/rental.rst:101
 msgid "The cheapest line is selected."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:133
+#: ../../content/applications/sales/rental.rst:104
 msgid "Consider the following rental pricing configuration for a product:"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:135
+#: ../../content/applications/sales/rental.rst:106
 msgid "1 day: $100"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:136
+#: ../../content/applications/sales/rental.rst:107
 msgid "3 days: $250"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:137
+#: ../../content/applications/sales/rental.rst:108
 msgid "1 week: $500"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:139
+#: ../../content/applications/sales/rental.rst:110
 msgid "A customer wants to rent this product for eight days. What price will they pay?"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:141
+#: ../../content/applications/sales/rental.rst:112
 msgid "After an order is created, Odoo selects the second line as this is the cheapest option. The customer has to pay three times '3 days' to cover the rental's eight days, for a total of $750."
 msgstr ""
 
@@ -13232,7 +13280,7 @@ msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:24
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:25
-msgid "Configuration requirements differ depending on the type of service product. To learn more about the default settings for rental products, refer to the :ref:`Configuration <rental/product_type/settings>` section on the *Rental product type* page."
+msgid "Configuration requirements differ depending on the type of service product. To learn more about the default settings for rental products, refer to the :ref:`Configuration <rental/product_type/configuration>` section on the *Rental product type* page."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:28
@@ -13263,7 +13311,7 @@ msgid "To set up a new rental service, go to :menuselection:`Rental app --> Prod
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:53
-#: ../../content/applications/sales/rental/configure_products/products.rst:47
+#: ../../content/applications/sales/rental/configure_products/products.rst:52
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:85
 msgid "Initial product configuration"
 msgstr ""
@@ -13306,13 +13354,14 @@ msgid "Example of role page with the Sync Shifts and Rental Orders checkbox enab
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:82
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:116
 msgid "Configuring rental periods and prices"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:84
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:118
-msgid "No limit exists on how many rental prices can be added to a product. Multiple pricing options for rental products are typically used to give discounts for customers who agree to longer rental durations. When creating multiple pricing options for a rental product, remember the **Rental** app's :ref:`price computing logic <rental/pricing>`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:69
+msgid "No limit exists on how many rental prices can be added to a product. Multiple pricing options for rental products are typically used to give discounts for customers who agree to longer rental durations. When creating multiple pricing options for a rental product, remember the **Rental** app's :ref:`price computing logic <rental/price-computing>`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:89
@@ -13324,6 +13373,7 @@ msgid "Select a :ref:`rental period <rental/labor_service_products/rental-period
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:94
+#: ../../content/applications/sales/rental/configure_products/products.rst:79
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:128
 msgid "(Optional) Select a pricelist option from the :guilabel:`Pricelist` column. This adds the new rental rate to the assigned pricelist."
 msgstr ""
@@ -13333,6 +13383,7 @@ msgid "Enter the :guilabel:`Price` for the chosen :guilabel:`Period`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:133
 msgid "Remember when considering pricing that renting for a day is usually limited to operating hours, not 24 hours."
 msgstr ""
@@ -13342,16 +13393,19 @@ msgid "The *Reservations* section contains the delay costs and padding time that
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:92
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:141
 msgid ":guilabel:`Hourly Fine`: The price per hour charged when the rental product is returned after the scheduled time."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:109
+#: ../../content/applications/sales/rental/configure_products/products.rst:94
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:143
 msgid ":guilabel:`Daily Fine`: The price per day charged when the rental product is returned after the scheduled time."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:111
+#: ../../content/applications/sales/rental/configure_products/products.rst:96
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:145
 msgid ":guilabel:`Reserve product`: The time the rental product is temporarily unavailable between two rental orders. Useful if maintenance or cleaning is required between rentals."
 msgstr ""
@@ -13361,12 +13415,13 @@ msgid "Example of a configured Rental prices tab on the Rental product."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:120
+#: ../../content/applications/sales/rental/configure_products/products.rst:102
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:154
 msgid "Creating a rental period"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:122
-msgid "The **Rental** app allows users to :ref:`create custom rental periods <rental/products/rental-periods-prices-reservations>` to use in the *Rental prices* tab. This is helpful when renting services with special pricing for a set amount of time, such as offering a four-hour photo shoot for $100 when the hourly rate is $30."
+msgid "The **Rental** app allows users to :ref:`create custom rental periods <rental/products/rental-period>` to use in the *Rental prices* tab. This is helpful when renting services with special pricing for a set amount of time, such as offering a four-hour photo shoot for $100 when the hourly rate is $30."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:127
@@ -13375,7 +13430,7 @@ msgid "To create a new rental period, go to :menuselection:`Rental app --> Confi
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:133
-#: ../../content/applications/sales/rental/configure_products/products.rst:62
+#: ../../content/applications/sales/rental/configure_products/products.rst:137
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Optional: specify rental variants"
 msgstr ""
@@ -13406,6 +13461,7 @@ msgid "Example of service variants in the Attributes & Variants tab."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:161
+#: ../../content/applications/sales/rental/configure_products/products.rst:247
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:197
 msgid "eCommerce features"
 msgstr ""
@@ -13419,18 +13475,18 @@ msgid "The *Sales* tab has the following sections that configure the product pag
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:173
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:120
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:130
 msgid ":doc:`service_products`"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:174
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:119
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:129
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:210
 msgid ":doc:`products`"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:175
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:99
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:109
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:211
 msgid ":doc:`../../../services/planning`"
 msgstr ""
@@ -13440,40 +13496,35 @@ msgstr ""
 msgid ":doc:`../../sales/products_prices/products/variants`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:5
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:1
+msgid "This page explains the Goods and Services product types available in the Rental app and their configuration settings, app integrations, and search options. It also covers rental periods, including the default Nightly period with check-in and check-out fields."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:11
 msgid "Rental product type"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:7
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:13
 msgid "Odoo allows for two :ref:`product types <inventory/product_management/goods-or-services>` when configuring a rental product: Goods or Services."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:10
-msgid "A rental *Goods* product is a physical item, such as a computer, vehicle, bike, camera, or an item of clothing. Goods are removed from the company’s stock, delivered to the customer, and then returned to the company."
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:16
+msgid "A rental *Goods* product is a physical item, such as a computer, vehicle, bike, camera, or an item of clothing. Goods are removed from the company's stock, delivered to the customer, and then returned to the company."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:14
-msgid "A rental *Service* can be labor or something non-physical, such as installation, photography, or a deposit. It can also be a physical item that never leaves the company’s stock, such as a hotel room, work station, or storage unit."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:18
-msgid "The following sections detail basic settings and app integration configurations for Goods and Services."
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:20
+msgid "A rental *Service* can be labor or something non-physical, such as installation, photography, or a deposit. It can also be a physical item that never leaves the company's stock, such as a hotel room, work station, or storage unit."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:24
-#: ../../content/applications/sales/rental/configure_products/products.rst:12
-#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
-#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
-msgid "Settings"
+msgid "The following sections detail basic settings and app integration configurations for Goods and Services."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:27
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:33
 msgid "For the :guilabel:`Default Padding time` and :guilabel:`Rental Transfers` settings, the **Inventory** app must be installed. For the *Rent Online section* settings, the **eCommerce** module must be installed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:31
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:37
 msgid "To configure default settings on rental products, navigate to :menuselection:`Rental app --> Configuration --> Settings`."
 msgstr ""
 
@@ -13481,186 +13532,191 @@ msgstr ""
 msgid "The settings page of the Rental app with all the default values."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:37
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:43
 msgid "In the *Rental* section, the *Default Delay Costs* subsection is used to set up late fees. These are the base settings that come with the **Rental** app installation. To apply delay costs and times to rental products, fill in the:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:41
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:47
 msgid ":guilabel:`Per Hour`: The late fee amount is applied each hour the rental product is past due."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:42
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:48
 msgid ":guilabel:`Per Day`: The late fee amount is applied each day the rental product is past due."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:43
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:49
 msgid ":guilabel:`Apply after`: The number of hours necessary to trigger a late fee."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:44
-msgid ":guilabel:`Product`: Limit the default delay costs setting to one product from the field’s drop-down list. Leave the :guilabel:`Product` field blank if the defaults apply to all products."
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:50
+msgid ":guilabel:`Product`: Limit the default delay costs setting to one product from the field's drop-down list. Leave the :guilabel:`Product` field blank if the defaults apply to all products."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:47
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:53
 msgid "If the **Inventory** app is installed, the *Default Padding Time* section displays. The time inputted into the :guilabel:`Padding` field blocks a rental product from being available for reservations. The setting is set to an hourly unit."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:52
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:58
 msgid "For more control, configure the costs for late returns and padding time in the :guilabel:`Hourly Fine`, :guilabel:`Daily Fine`, and :guilabel:`Reserve product` fields on the product form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:55
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:61
 msgid "The :guilabel:`Rental Transfers` checkbox enables automatic creation of delivery and return receipts for a rental product. This feature also needs the **Inventory** app to be installed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:59
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:65
 msgid "The **Inventory** app automatically creates an internal default location once the :guilabel:`Rental Transfers` feature is enabled. Odoo uses the new default location, `Customer/Rental`, to track products during the rental period (moving them from Stock to Customer/Rental upon rental, and back upon return). **Do not** modify this location to avoid corrupting inventory tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:65
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:73
 msgid "If the **eCommerce** module is installed, the *Rent Online* section is available to configure. The *Minimal time of rental* section contains:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:68
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:76
 msgid ":guilabel:`Minimal Rental Duration`: The minimum duration of time a rental product must be booked. The available units of time are: Hours, Days, Weeks, and Months."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:70
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:78
 msgid ":guilabel:`Unavailability days`: Designated days that are not available for online rental pick ups or returns."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:73
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:81
+#: ../../content/applications/sales/rental/configure_products/products.rst:38
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:76
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:86
 msgid "App integration configuration"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:78
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:88
 msgid "The **Rental** app relies on additional Odoo app integrations to expand its settings and product configurations. The following apps are essential for workflow efficiency and automation when creating a product and rental order:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:82
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:92
 msgid "**Sales**: Enables online payments and signatures, uses quotation templates, variants, and PDF Quote Builder."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:84
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:94
 msgid "**Sign**: Allows uploading and customization of various rental and service agreements. These documents are used to facilitate the *Request Signature* feature."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:86
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:96
 msgid "**Planning**: Integrates with the **Rental** app to automatically match service products with employees or materials based on availability. This setting is configured on the product form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:88
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:98
 msgid "**Project**: Integrates with the **Rental** app to automatically creation of a project, a task, or both when a rental quote that includes the configured product is confirmed. This setting is configured on the product form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:91
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:101
 msgid "**Inventory**: Enables warehouse delivery and return receipts, product tracking options, variants, and product downtime."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:93
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:103
 msgid "**eCommerce**: Allows product configuration for the online shop. This setting is configured on the product form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:97
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:107
 msgid ":doc:`../../sales`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:98
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:108
 msgid ":doc:`../../sales/sales_quotations/pdf_quote_builder`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:100
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:110
 msgid ":doc:`../../../productivity/sign`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:101
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:111
 msgid ":doc:`../../../services/project`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:266
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:112
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:106
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:116
 msgid "Search for rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:108
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:118
 msgid "To view all products available for rent in the database, navigate to :menuselection:`Rentals app --> Products`. By default, the :guilabel:`Rental` filter appears in the search bar, and the view is Kanban. Remove the filter, then click the search bar. From the preset filters, select :guilabel:`Goods`, :guilabel:`Services`, or both."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:113
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:123
 msgid "All the selected options appear as Kanban cards. For *Goods*, the card displays the name, rental rate, and amount on hand. For *Services*, the card displays the name, the number of variants if configured, and the rental price."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:121
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:131
 msgid "`Tutorial: Configuring a rental product <configure-rental-product_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:124
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:134
 msgid "Rental periods"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:126
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:136
 msgid "A rental period is the unit of time used to calculate the rental rate. This setting is configured on the *Rental prices* tab on the product form. To edit a default rental rate, navigate to :menuselection:`Rental app --> Configuration --> Rental Periods`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:130
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:140
 msgid "Select a rental period to open the *Period* form. With the exception of the :guilabel:`Nightly` rental period, all period forms have the following fields:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:133
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:143
 msgid ":guilabel:`Name`: A short description or title for the period."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:134
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:144
 msgid ":guilabel:`Duration`: The minimum amount of time before the rule is applied. Set to `0` to represent a fixed rental price."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:136
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:146
 msgid ":guilabel:`Unit`: A drop-down list of time periods the shortest being Hours and the longest is Years."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:139
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:149
 msgid "To create a new rental period, click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:142
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:152
 msgid "Nightly rental period"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/product_type.rst:144
+#: ../../content/applications/sales/rental/configure_products/product_type.rst:154
 msgid "The *Nightly* rental period form replaces the :guilabel:`Duration` field with two new fields :guilabel:`Check-in` and :guilabel:`Check-out`. Both fields use a 24-hour clock to set the time. This setting is recommended for space or storage rentals that require specific times to begin and end the rental period."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:3
+#: ../../content/applications/sales/rental/configure_products/products.rst:1
+msgid "This page explains how to create and configure a new physical rental product (Goods), including initial setup, rental periods and pricing, variants, and product tracking by serial number."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:8
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:37
 msgid "Physical rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:5
+#: ../../content/applications/sales/rental/configure_products/products.rst:10
 msgid "The Odoo **Rental** app allows users to customize scheduling, pricing, and inventory for physical rental products that require stock movement, otherwise known as *Goods*. Users can set up multiple pickup and drop-off locations and track rental products by serial number."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:14
-msgid "The **Rental** app offers many app-integration features. Depending on the installed Odoo apps, specific settings are available. To learn more about the default setting for rental products, refer to the :ref:`Settings <rental/product_type/settings>` section of the *Rental product type* page. The following configurations assume the **Rental** and **Inventory** apps are installed."
+#: ../../content/applications/sales/rental/configure_products/products.rst:19
+msgid "The **Rental** app offers many app-integration features. Depending on the installed Odoo apps, specific settings are available. To learn more about the default settings for rental products, refer to the :ref:`Settings <rental/product_type/configuration>` section of the *Rental product type* page. The following configurations assume the **Rental** and **Inventory** apps are installed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:19
+#: ../../content/applications/sales/rental/configure_products/products.rst:24
 msgid "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and configure the :guilabel:`Default Delay Costs` in the *Rental* section for late fees. Optionally, configure the :guilabel:`Default Padding Time` to make rentals unavailable for booking. Refer to the :ref:`rental/products/rental-transfer-feature` section to learn what it does and how to configure it."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:25
+#: ../../content/applications/sales/rental/configure_products/products.rst:30
 msgid "In the **Rental** section, under the :guilabel:`Default Delay Costs` subsection, fill in the :guilabel:`Apply after` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:29
+#: ../../content/applications/sales/rental/configure_products/products.rst:34
 msgid "For more control, configure the costs of late returns in the :guilabel:`Per Hour` and :guilabel:`Per Day` fields on the product form. If the defaults apply to all products, leave the :guilabel:`Product` field blank."
 msgstr ""
 
@@ -13668,19 +13724,19 @@ msgstr ""
 msgid "Example of configured Default Delay Cost and Padding settings in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:41
+#: ../../content/applications/sales/rental/configure_products/products.rst:46
 msgid "Create a new physical product"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:43
+#: ../../content/applications/sales/rental/configure_products/products.rst:48
 msgid "To set up a new physical rental product, go to the :menuselection:`Rental app --> Products`, then click :guilabel:`New`. On the rental product form, fill out each tab accordingly:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:49
+#: ../../content/applications/sales/rental/configure_products/products.rst:54
 msgid "In the new product window, the :guilabel:`Rental` checkbox is already selected by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:52
+#: ../../content/applications/sales/rental/configure_products/products.rst:57
 msgid "Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Quantity` from the drop-down menu. For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`."
 msgstr ""
 
@@ -13688,51 +13744,54 @@ msgstr ""
 msgid "The new product view in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:65
-msgid "The *Variant* feature in the **Inventory** app must be enabled for this tab to display."
+#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:123
+msgid "To set rental rates for the product, click the *Rental prices* tab. In the *Pricing* section, click :guilabel:`Add a price`. To enter a new rental rate:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:67
-msgid "In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values <products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful for keeping the product library manageable, tracking and differentiating the inventory, and providing more detailed reports. Examples of rental variants for a *Goods* product are size, brand, color, and material."
+#: ../../content/applications/sales/rental/configure_products/products.rst:77
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
+msgid "Select a :guilabel:`rental period` (:dfn:`the unit of duration of the rental`) from the :guilabel:`Period` column."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:76
-msgid "Set rental periods, prices, and reservations"
+#: ../../content/applications/sales/rental/configure_products/products.rst:81
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:130
+msgid "Enter the price for that specific :guilabel:`Period`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:78
-msgid "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` section, click :guilabel:`Add a price` to enter a new rental rate. Choose a *pricing period* (:dfn:`the unit of duration of the rental`) in the :guilabel:`Period` column, or create a new pricing period by typing in the name and clicking :guilabel:`Create and edit`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:87
+msgid "In the *Reservations* section are the delay costs and padding time that when configured are automatically populated from the *Default Delay Costs* section, provided they have been configured in the :menuselection:`Rental app --> Configuration --> Settings`. If configured on the product form, the settings override the settings in the *Default Delay Costs* section."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:84
-msgid "Creating a new pricing period opens a pop-up *Create period* window. Fill in the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and click :guilabel:`Save`. The new pricing period automatically applies."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:0
-msgid "Sample of a New Period view in the Rental app."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
-msgid "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To apply the configured rental rate to an existing pricelist, click in the :guilabel:`Pricelist` column and select the desired list from the drop-down menu."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:95
-msgid "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. These values are automatically populated from the :guilabel:`Default Delay Costs` section, provided they have been configured in the :menuselection:`Rental app --> Configuration --> Settings`."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:100
-msgid "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:103
-msgid "A bike rental business rents tandem bikes for two hours at the local park. The hourly rental rate for their tandem bikes is $20, but since tandem bikes are popular, they want to set a new price of $35. To ensure the business gets their bikes returned on time, they set the late return fee as $20 per hour and $160 per day ($20 x 8 hrs)."
+#: ../../content/applications/sales/rental/configure_products/products.rst:104
+msgid "The **Rental** app allows users to create custom rental periods to use in the *Rental Prices* tab. This is helpful when renting services with special pricing for a set amount of time, such as offering a four-hour photo shoot for $100 when the hourly rate is $30."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:108
+msgid "To create a new rental period, go to :menuselection:`Rental app --> Configuration --> Rental periods`. The *Periods* page displays and lists all the default rental periods in the **Rental** app. Click :guilabel:`New`, and on the period form, fill in the following fields:"
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:112
+msgid ":guilabel:`Name`: The assigned name displays in the :guilabel:`Period` drop-down list on the *Rental Prices* tab."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:114
+msgid ":guilabel:`Duration`: The minimum amount of time to trigger the pricing rule. If set to `0`, it represents a fixed price."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:116
+msgid ":guilabel:`Unit`: The time unit the :guilabel:`Duration` is based on. If :guilabel:`Nightly` is selected for the unit, then the :guilabel:`Check-in` and :guilabel:`Check-out` fields display."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
+msgid "A bike rental business rents tandem bikes for two hours at the local park. The hourly rental rate for their tandem bikes is $20, but since tandem bikes are popular, they want to set a new price of $35. To ensure the business gets their bikes returned on time, they set the late return fee as $20 per hour and $160 per day ($20 x 8 hrs)."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:125
 msgid "Create a new pricing period by navigating to :menuselection:`Rental app --> Configuration --> Rental periods`. Click :guilabel:`New`, then configure the period for `2` hours."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:111
+#: ../../content/applications/sales/rental/configure_products/products.rst:128
 msgid "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab add the `2` hour period set at `$35`. Manually save to apply changes."
 msgstr ""
 
@@ -13740,51 +13799,59 @@ msgstr ""
 msgid "Sample of a rental product with the custom rental period applied."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:120
-msgid "Configure product tracking"
+#: ../../content/applications/sales/rental/configure_products/products.rst:140
+msgid "The *Variants* feature in the **Inventory** app must be enabled for this tab to display."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:123
-msgid "To configure a physical rental product for product tracking, the **Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` must be enabled."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:126
-msgid "For rental products, only :guilabel:`By Unique Serial Number` tracking can be used. Selecting :guilabel:`By Lots` instead results in an error message, since that setting doesn't apply to rentals."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:130
-msgid "Go to the :menuselection:`Rental app --> Products`, then click :guilabel:`New`. In the new product window, the :guilabel:`Rental` checkbox is already selected by default."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:133
-msgid "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique Serial Number` from the drop-down menu."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:136
-msgid "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental prices <rental/products/rental-periods-prices-reservations>` tab. Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:144
-msgid "Rental Transfers feature"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:146
-msgid "The *Rental Transfers* feature automatically creates a delivery receipt when the rental product is picked up and a return receipt when it is returned to stock. Documenting stock movement creates a clean paper trail and has a variety of uses:"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:150
-msgid "Tracking high-value products."
+#: ../../content/applications/sales/rental/configure_products/products.rst:142
+msgid "In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values <products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful for keeping the product library manageable, tracking and differentiating the inventory, and providing more detailed reports. Examples of rental variants for a *Goods* product are size, brand, color, and material."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:151
-msgid "Tracking stock levels across multiple stores or warehouse locations."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:152
-msgid "Tracking products between different store locations that allow pick up and returns."
+msgid "Configure product tracking"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:154
+msgid "To configure a physical rental product for product tracking, the **Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` must be enabled."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:157
+msgid "For rental products, only :guilabel:`By Unique Serial Number` tracking can be used. Selecting :guilabel:`By Lots` instead results in an error message, since that setting doesn't apply to rentals."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:161
+msgid "Go to the :menuselection:`Rental app --> Products`, then click :guilabel:`New`. In the new product window, the :guilabel:`Rental` checkbox is already selected by default."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
+msgid "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique Serial Number` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:167
+msgid "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental prices <rental/products/rental-periods-prices>` tab. Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:175
+msgid "Rental Transfers feature"
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:177
+msgid "The *Rental Transfers* feature automatically creates a delivery receipt when the rental product is picked up and a return receipt when it is returned to stock. Documenting stock movement creates a clean paper trail and has a variety of uses:"
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:181
+msgid "Tracking high-value products."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:182
+msgid "Tracking stock levels across multiple stores or warehouse locations."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:183
+msgid "Tracking products between different store locations that allow pick up and returns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:185
 msgid "To enable the :guilabel:`Rental Transfers` feature, navigate to the :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
 
@@ -13792,115 +13859,75 @@ msgstr ""
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:164
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid "The **Inventory** app automatically creates an internal default location once the *Rental Transfers* feature is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`, to track products during the rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` upon rental, and back upon return). Do not modify to avoid corrupting inventory tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:173
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid "Multi-location management and transfers"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:176
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
 msgid "Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-note>` for information about internal location configuration and inventory tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:179
+#: ../../content/applications/sales/rental/configure_products/products.rst:210
 msgid "Tracking the location of high-value physical products between locations is essential. The **Rental** app helps with the *Rental Transfers* feature. Activating rental transfers means the system treats rental movements similarly to sales, requiring a receipt and a delivery order every time a physical product is rented or returned."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:184
+#: ../../content/applications/sales/rental/configure_products/products.rst:215
 msgid "For multi-location management and rental item transfer tracking, navigate to the :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:188
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid "Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the *Warehouse* section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:192
+#: ../../content/applications/sales/rental/configure_products/products.rst:223
 msgid "To configure new locations, navigate to :menuselection:`Inventory app --> Configuration --> Locations`. Click :guilabel:`New` to configure a new internal location."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid "On the new location page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click the :icon:`fa-cloud-upload` :guilabel:`Save manually` icon near the top to save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:200
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 msgid "A bike rental business has two store locations within the same city. Both locations allow for pick-up and drop-off of their bikes. The company wants to track its bikes accurately at each location."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:204
+#: ../../content/applications/sales/rental/configure_products/products.rst:235
 msgid "Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental Transfers` in the **Rental** app and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:207
-msgid "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location Next, go to the :menuselection:`Inventory app --> Configuration --> Locations`. Create a new location for each storefront."
+#: ../../content/applications/sales/rental/configure_products/products.rst:238
+msgid "Next, go to the :menuselection:`Inventory app --> Configuration --> Locations`. Create a new location for each storefront."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid "Sample of internal inventory locations that represent different rental store locations."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:217
-msgid "Pickup products"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:219
-msgid "When a customer picks up products, navigate to the appropriate rental order, click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery form listing the reserved rental products. Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "Sample of a Pickup page in the Rental app."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:226
-msgid "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:231
-msgid "Return products"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:233
-msgid "When a customer returns products, navigate to the desired rental order and click :guilabel:`Return`. The **Rental** app displays a warehouse receipt form listing the checked-out rental products."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
-msgid "Enter the same number of products the customer returned in the :guilabel:`Quantity` column. If any of the products have serial numbers, enter them into the :guilabel:`Serial Numbers` column."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "Sample of the Return page in the Rental app."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
-msgid "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. A :guilabel:`Returned` status banner appears on the rental order."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:248
-msgid "Print pickup and return receipts"
-msgstr ""
-
 #: ../../content/applications/sales/rental/configure_products/products.rst:250
-msgid "Pickup and return receipts can be printed for customers when they pick up and return rental products."
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
+msgid "The *Ecommerce* sections are only available if the :guilabel:`eCommerce` module is installed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
-msgid "To print pickup and/or return receipts, navigate to the appropriate rental order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu."
+#: ../../content/applications/sales/rental/configure_products/products.rst:252
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:202
+msgid "The :guilabel:`Sales` tab has the following sections that configure the product page on the website: *Ecommerce shop*, *Ecommerce media*, and *Ecommerce description*. Refer to the :ref:`Product visibility <ecommerce/products/publish-products>` and :ref:`Product configuration <ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration instructions."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:None
-msgid "The pickup and return receipt print option in the Odoo Rental application."
+#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
+msgid ":doc:`../rental_orders/create_rental_order`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:259
-msgid "From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:215
+msgid ":doc:`../rental_orders/pickup_return`"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:262
-msgid "Odoo generates and downloads a PDF detailing all information about the current status of the rented items."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?si=kWfYEOTd2nT_ASp9>`_"
 msgstr ""
 
@@ -14004,16 +14031,8 @@ msgstr ""
 msgid "Assign a :guilabel:`Category` for room booking. It separates rooms from other services and can be used for reports on room occupancy."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:123
-msgid "To set rental rates for the product, click the *Rental prices* tab. In the *Pricing* section, click :guilabel:`Add a price`. To enter a new rental rate:"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
-msgid "Select a :guilabel:`rental period` (:dfn:`the unit of duration of the rental`) from the :guilabel:`Period` column."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:130
-msgid "Enter the price for that specific :guilabel:`Period`."
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:118
+msgid "No limit exists on how many rental prices can be added to a product. Multiple pricing options for rental products are typically used to give discounts for customers who agree to longer rental durations. When creating multiple pricing options for a rental product remember the **Rental** app's :ref:`price computing logic <rental/price-computing>`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:136
@@ -14025,7 +14044,7 @@ msgid "Example of a configured Rental Prices tab on the Rental product."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:156
-msgid "The **Rental** app allows users to :ref:`create custom rental periods <rental/products/rental-periods-prices-reservations>` to use in the *Rental Prices* tab. This is helpful when renting rooms with special pricing for a set amount of time, such as offering a cheaper nightly room rate for a standard hotel room if the guests check out early."
+msgid "The **Rental** app allows users to :ref:`create custom rental periods <rental/products/rental-period>` to use in the *Rental Prices* tab. This is helpful when renting rooms with special pricing for a set amount of time, such as offering a cheaper nightly room rate for a standard hotel room for if the guests check out early."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:None
@@ -14048,28 +14067,12 @@ msgstr ""
 msgid "Example of the Attribute & Variants tab configured for a hotel room."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
-msgid "The *Ecommerce* sections are only available if the :guilabel:`eCommerce` module is installed."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:202
-msgid "The :guilabel:`Sales` tab has the following sections that configure the product page on the website: *Ecommerce shop*, *Ecommerce media*, and *Ecommerce description*. Refer to the :ref:`Product visibility <ecommerce/products/publish-products>` and :ref:`Product configuration <ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration instructions."
-msgstr ""
-
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:209
 msgid ":doc:`labor_service_products`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
-msgid ":doc:`../rental_orders/create_rental_order`"
-msgstr ""
-
 #: ../../content/applications/sales/rental/rental_orders.rst:5
 msgid "Rental orders"
-msgstr ""
-
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:3
-msgid "Create a rental order"
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:5
@@ -14148,43 +14151,43 @@ msgstr ""
 msgid "Sample of a filled out rental order available in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:70
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:72
 msgid "Request a customer signature"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:72
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:74
 msgid "Odoo can request the customer sign a rental agreement, outlining the arrangement between the company and customer, *before* they pick up the rental products. Such documents can ensure everything is returned on time and in its original condition."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:77
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:79
 msgid "Requesting a signature can be done during any stage of the order. This feature also requires the :doc:`Sign <../../../productivity/sign>` app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:80
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:82
 msgid "If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders` dashboard, select the desired rental order. Go to the :icon:`fa-cog` :guilabel:`(Actions)` icon, and click :icon:`fa-file-text` :guilabel:`Request Signature`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:84
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:86
 msgid "In the *New Signature Request* pop-up window, either :ref:`select an existing document template <sign/request-signatures/template-odoo-record>` or :ref:`create a new one <sign/request-signatures/one-off-record>`. After sending the request, a link to the signature request appears in the record's chatter. The document is accessible to the customer via the customer portal or email."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:91
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:93
 msgid "`Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:94
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:96
 msgid "Manage employee shifts for rental services"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:96
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:98
 msgid "Confirmed rental orders containing :doc:`service products <../configure_products/service_products>` trigger the automatic creation of shifts. These shifts are generated for the assigned employee role when the availability matches the designated rental period. This automation is made possible by the integration with the **Planning** app and by configuring the service product."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:101
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:103
 msgid "Click the :icon:`fa-tasks` :guilabel:`Planned` smart button to open the *Schedule by Resource* page. The page defaults to a *Gantt* view of all the open shifts and shifts for the associated role that are available for the rental period of the rental order. :ref:`Customize the shifts <planning/shifts>` as needed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:107
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:109
 msgid "Project templates allow for automated task assignment. When integrated with the **Planning** app, the system automatically schedules and publishes an employee’s shift if their availability matches the rental period. Priority is given to employees with the relevant :ref:`roles <planning/planning-roles>` if applicable."
 msgstr ""
 
@@ -14192,11 +14195,11 @@ msgstr ""
 msgid "The Schedule by Resource page with a photographer shift in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:116
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:118
 msgid "Manage a project created from a rental order"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:118
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:120
 msgid "Click the :icon:`fa-puzzle-piece` :guilabel:`Tasks` smart button on the top of the rental order to display a Kanban view of all the tasks automatically created when confirming the rental order. :doc:`Customize the project's tasks <../../../services/project/tasks/task_creation>` as needed."
 msgstr ""
 
@@ -14204,39 +14207,39 @@ msgstr ""
 msgid "Photography task generated from the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:126
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:128
 msgid "Configuring the use of :doc:`../../../services/project/project_management/project_templates` on the product form creates new projects with predefined tasks, priority levels, and assigned employees."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:131
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:133
 msgid "Enter the time for the rental service task"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:133
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:135
 msgid "To enter time worked on a :doc:`service product <../configure_products/service_products>`, select the respective service task, then click the :guilabel:`Timesheets` tab. Click :guilabel:`Add a line` to enter the:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:137
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:139
 msgid ":guilabel:`Date`: The date the work was performed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:138
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:140
 msgid ":guilabel:`Employee`: The employee who performed the work."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:139
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:141
 msgid ":guilabel:`Description`: A brief description of the work performed."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:140
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:142
 msgid ":guilabel:`Time Spent`: The number of hours worked on the task for that entry."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:142
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:144
 msgid "Click the :icon:`fa-dollar` :guilabel:`Sales Order` smart button to return to the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:145
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:147
 msgid "Once time is added in the :guilabel:`Timesheets` tab of a task, the rental order status is automatically changed to :guilabel:`Picked-up`, and the :guilabel:`Return` button appears."
 msgstr ""
 
@@ -14244,55 +14247,55 @@ msgstr ""
 msgid "Sample of a task Timesheet tab for a rental order in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:152
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:154
 msgid "Track delivered time on a rental order"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:154
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:156
 msgid "When time is entered on the :guilabel:`Timesheets` tab of an associated task, the delivered time is automatically tracked on the rental order. To view the delivered time, navigate to the desired rental order and click the :icon:`fa-clock-o` :guilabel:`Recorded` smart button at the top of the rental order. The total hours worked appear in the :guilabel:`Recorded Time` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:160
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:162
 msgid "Create an invoice"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:162
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:164
 msgid "Navigate to the desired invoice in the **Rental** app. On the :guilabel:`Rental Orders` dashboard, in the *Invoice Status* section in the left navigation bar, click :guilabel:`To Invoice` to view all rental orders that need to be sent."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:166
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:168
 msgid "Click the desired rental order, then click :guilabel:`Create Invoice`. Select :guilabel:`Regular invoice` from the :guilabel:`Create invoice(s)` window and click :guilabel:`Create Draft`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:170
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:172
 msgid "Finalize time for physical service products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:172
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:174
 msgid "For physical service products, such as hotel rooms, workstations, and conference rooms, a final adjustment to the time may be needed on the invoice."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:175
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:177
 msgid "Enter the amount in the :guilabel:`Quantity` column. If new charges were accrued during the rental period, click :guilabel:`Add a line` to include them in the invoice draft."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:179
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:181
 msgid "Confirm and pay"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:181
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:183
 msgid "If all the details are correct on the invoice draft, either click :guilabel:`Confirm` and click :guilabel:`Send` to email the invoice to the customer, or click :guilabel:`Print` and then click :guilabel:`Pay` if the customer is in person. In the :guilabel:`Pay` pop-up window, select a :guilabel:`Journal` and click :guilabel:`Create Payment`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:186
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:188
 msgid "Click the :guilabel:`Payments` smart button that appears at the top of the rental order. Click :guilabel:`Validate` on the Payment page."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:190
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:192
 msgid "`Odoo Tutorials: Create a Rental Order <https://youtu.be/hpQHu6U_IKk?si=Fy_Z82kzQNPBrD8v>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:191
+#: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:193
 msgid "`Odoo Tutorials: Configuring a Rental Product <https://youtu.be/CE-SahTUC9A?si=ur6ci-SlKJSvQY5Q>`_"
 msgstr ""
 
@@ -14337,30 +14340,30 @@ msgid "On the rental product's form, go to the :guilabel:`Sales` tab and add the
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:41
-msgid "Be sure to configure the rental product's prices on the :ref:`Rental prices <rental/pricing>` tab."
+msgid "Be sure to configure the rental product's prices on the :ref:`Rental prices <rental/products/rental-periods-prices>` tab."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:43
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:44
 msgid "With the above configuration, a :doc:`rental order <create_rental_order>` can be created."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:46
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:47
 msgid "After selecting the rental product in the :guilabel:`Order Lines` tab, be sure to :icon:`fa-plus` :guilabel:`Add` the deposit service product in the :guilabel:`Configure your product` pop-up."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:49
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:50
 msgid "The :guilabel:`Configure your product` pop-up only appears if the optional product is set on the rental product."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:53
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:54
 msgid "If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add an :guilabel:`Ecommerce Description` stating the deposit is required in the rental product's :guilabel:`Sales` tab."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:56
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:57
 msgid "When a customer adds the rental product to their cart, a :guilabel:`Configure your product` pop-up displays the deposit service product under :guilabel:`Available options`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:59
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:60
 msgid "Once the customer clicks :icon:`fa-shopping-cart` :guilabel:`Add` the rental product and the deposit service product are added to their cart."
 msgstr ""
 
@@ -14368,12 +14371,226 @@ msgstr ""
 msgid "A deposit service product listed in the rental quotation."
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:68
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:69
 msgid "Refund deposits upon return"
 msgstr ""
 
-#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:70
-msgid "Once a customer :ref:`returns the rented product <rental/return-products>`, reimburse their deposit with a :doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` from the invoice, and change the *delivered quantity* to `0` on the linked sales order."
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:71
+msgid "Once a customer :doc:`returns the rented product <../rental_orders/pickup_return>`, reimburse their deposit with a :doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` from the invoice, and change the *delivered quantity* to `0` on the linked sales order."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:1
+msgid "This document explains how to pick up and return rental Goods (physical products) and Services."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:9
+msgid "This document focuses on the pickup and return of both rental *Goods* (physical products) such as clothes, computer equipment, and bicycles, and *Services* (physical and non-physical) such as photographer sessions, hotel rooms, and catering."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:13
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:84
+msgid "For rental businesses that rent out locations with no stock movement, such as hotel rooms, meeting rooms, and storage spaces, the pickup (check-in) and return (check-out) processes are the same."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:16
+msgid "Once a rental order is confirmed, the reserved rental products are available for pickup. If company policy requires a signed rental contract, :ref:`request the customer's signature <rental/create_rental_order/customer-signature>` before the rental product is picked up."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:22
+msgid ":doc:`../configure_products/product_type`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:29
+msgid "Two basic configurations cover the rental product types:"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:31
+msgid ":ref:`rental/pickup_return/physical-rental-products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:32
+msgid ":ref:`rental/pickup_return/service-rental-products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:39
+msgid "Refer to the physical rental products :ref:`settings <rental/products/default-settings>` to see the apps required. If :ref:`product tracking <rental/products/configure-product-tracking>` is enabled, the pickup and return process requires additional steps."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:44
+msgid ":ref:`rental/pickup_return/pickup-physical-rental-with-tracking`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:45
+msgid ":ref:`rental/pickup_return/return-physical-product-with-tracking`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:50
+msgid "Service rental products"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:52
+msgid "Configuration for service rental products, both physical and non-physical, requires the **Rental**, **Planning**, and **Sales** apps to be installed. For physical service products, configure the :ref:`materials and roles <rental/service_products/materials-and-roles>` in the **Planning** app before creating the product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:57
+msgid "Non-physical service products also require the **Timesheets** app to accurately track services that use time-based pricing rates. For non-physical service products, :ref:`configure employee roles <rental/labor_service_products/configure-employee-roles>` in the **Planning** app before creating the product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:62
+msgid "If the business wants to sell service rental products on an online shop, refer to the :ref:`Configure pickup and return availability for eCommerce products <rental/pickup_return/ecommerce-products>` section."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:69
+msgid "Configure pickup and return availability for eCommerce products"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:71
+msgid "The Rental app supports :ref:`eCommerce configuration at the app <rental/product_type/ecommerce-settings>` and product level when the **Website** app and the **eCommerce** module are installed. Using the *Unavailability days* setting restricts the days the rental website allows pickup and returns to be scheduled. To configure the rental product page in the online store, refer to the :ref:`Product configuration <ecommerce/products/product-configuration>` section for the **eCommerce** module."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:81
+msgid "Pick up a rental product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:88
+msgid "To process a pickup of a rental product, go to :menuselection:`Rental app --> Orders --> Orders` and select the desired rental order. Click :guilabel:`Pickup`, and a *Validate a pickup* pop-up window displays, listing the reserved rental product and quantity in :guilabel:`Product`, :guilabel:`Reserved`, and :guilabel:`Picked-up` columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a pickup page in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:96
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:123
+msgid "To confirm the list, click :guilabel:`Validate`. The action updates the rental order with a :guilabel:`Picked-up` badge and updates the :guilabel:`Delivered` column. The action is also recorded in the rental order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order once the rental product is picked up in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:106
+msgid "Pick up a physical rental product with tracking enabled"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:109
+msgid "This process requires that the *Lots & Serial Numbers* feature in the **Inventory** app be enabled and that the *Tracking* field be set to *By Unique Serial Number* on the rental product form."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:113
+msgid "To process a pickup of a physical rental product with tracking enabled, go to :menuselection:`Rental app --> Orders --> Orders` and select the desired rental order. Click :guilabel:`Pickup`, and the *Validate a pickup* pop-up window displays, listing the reserved rental product and quantity in :guilabel:`Product`, :guilabel:`Reserved`, :guilabel:`Serial Numbers`, and :guilabel:`Picked-up` columns. Check the rental product's serial number and then click in the :guilabel:`Serial Numbers` column and select the product's serial number from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a pickup page with product tracking enabled in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order with a Picked-up badge in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:133
+msgid "Pick up a rental product and a rental service"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:136
+msgid "Refer to the :ref:`physical and service rental configuration requirements <rental/pickup_return/configuration>` to see the necessary app installations and settings."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:139
+msgid "When a physical rental product is rented alongside a service, it is advised to pick it up before entering time on the associated task (if applicable)."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:142
+msgid "If time is entered on the *Timesheets* tab of an associated task before the physical rental product is picked up, the rental order automatically displays a :guilabel:`Picked-up` badge. However, the :guilabel:`Pickup` button remains available on the rental order."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:149
+msgid "Return a rental product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:152
+msgid "Regardless of whether a physical rental product is rented along with a service rental product, both must be returned on the rental order. Returning a rental service is the same process as returning a physical rental product without tracking enabled."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:156
+msgid "When a customer returns the rental product, go to :menuselection:`Rental app --> Orders --> Orders` and select the desired rental order. Click :guilabel:`Return`, and the *Validate a return* pop-up window displays, listing the returning rental product and quantity in :guilabel:`Product`, :guilabel:`Picked-up`, and :guilabel:`Returned` columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a return page in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:164
+msgid "To confirm the list, click :guilabel:`Validate`. The action applies a :guilabel:`Returned` badge to the rental order and updates the :guilabel:`Returned` column. The action is also recorded in the rental order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of the rental order once the rental product is returned in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:174
+msgid "Return a physical rental product with tracking enabled"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:176
+msgid "When a customer returns the product, go to :menuselection:`Rental app --> Orders --> Orders` and select the desired rental order. Click :guilabel:`Return`, and the *Validate a return* pop-up window displays, listing the returning rental product and quantity in :guilabel:`Product`, :guilabel:`Picked-up`, :guilabel:`Serial Numbers`, and :guilabel:`Returned` columns."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a Validate a return page with product tracking enabled in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:184
+msgid "Verify that the returned rental product has the same serial number as the one listed in the :guilabel:`Serial Numbers` column. If the serial numbers don't match, click into the :guilabel:`Serial Numbers` column and select the correct serial number from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:188
+msgid "Once the rental product's quantity and serial number match, click :guilabel:`Validate`. The action applies a :guilabel:`Returned` badge to the rental order and updates the :guilabel:`Returned` column. The action is also recorded in the rental order's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "Example of a rental order with a Returned badge in the Rental app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:198
+msgid "Print pickup and return receipts"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:200
+msgid "Pickup and return receipts can be created and downloaded for customers when they pick up or return rental products."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:203
+msgid "To create pickup and return receipts, navigate to the desired rental order and click the :icon:`fa-cog` :guilabel:`(Actions)` icon to open the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:None
+msgid "The pickup and return receipt print option in the Odoo Rental application."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:209
+msgid "Hover over the :icon:`fa-print` :guilabel:`Print` option, then select :guilabel:`Pickup and Return Receipt`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:212
+msgid "Odoo downloads a PDF of the receipt with the current status of the rented items."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:215
+msgid ":doc:`create_rental_order`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:216
+msgid ":doc:`manage_deposits`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:217
+msgid ":doc:`../configure_products/products`"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/pickup_return.rst:218
+msgid ":doc:`../configure_products/service_products`"
 msgstr ""
 
 #: ../../content/applications/sales/sales.rst:10
@@ -14414,6 +14631,13 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:30
 msgid "This setup does not track the specific lot or unique serial number used for the sale. It only ensures that the |FBA| order can be processed without synchronization failures."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
+#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
+msgid "Settings"
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:36
@@ -15560,121 +15784,121 @@ msgstr ""
 msgid "Invoicing Method"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:3
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:1
+msgid "A down payment is an up-front payment collected when confirming a sales order. This page covers invoicing fixed and percentage-based down payments through the Create Invoice option, with examples, and modifying the income account used for down payment invoices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:9
 msgid "Down payments"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:5
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:11
 msgid "A down payment is an initial up-front payment made during the confirmation of a sales transaction. With a down payment, the buyer pays a portion of the total amount owed while agreeing to pay the remaining amount at a later date. In turn, the seller provides goods or services to the buyer upon or after accepting the down payment, trusting that the remaining amount is paid later on."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:10
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:16
 msgid "In the Odoo **Sales** app, down payments can be customized to fit the needs of each individual sales transaction."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:14
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
 msgid "Down payment invoices are **not** the same as payment terms or installment plans. If a single invoice issued for a sales order requires multiple payment installments, that invoice uses a :doc:`payment term with an installment plan <../../../finance/accounting/customer_invoices/payment_terms>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:26
 msgid "Create invoices"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:22
-msgid "When a sales order is confirmed, the option to create an invoice becomes available via the :guilabel:`Create Invoice` button. When clicked, a :guilabel:`Create invoice(s)` pop-up appears."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:28
+msgid "When a sales order is confirmed, the option to create an invoice becomes available via the :guilabel:`Create Invoice` button. When clicked, a *Create invoice(s)* pop-up appears."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Create invoice(s) pop-up form that appears in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
 msgid "Invoices are automatically created as drafts so they can be reviewed before validation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:31
-msgid "On the :guilabel:`Create invoice(s)` pop-up, there are three options to choose from in the :guilabel:`Create Invoice` field:"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:37
+msgid "On the *Create invoice(s)* pop-up, there are three options to choose from in the :guilabel:`Create Invoice` field:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:34
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:40
 msgid ":guilabel:`Regular invoice`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
 msgid ":guilabel:`Down payment (percentage)`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:36
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:44
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:42
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:50
 msgid ":guilabel:`Down payment (fixed amount)`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:39
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:45
 msgid "Initial down payment request"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
-msgid "On the :guilabel:`Create invoice(s)` pop-up window, the down payment options are:"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:47
+msgid "On the *Create invoice(s)* pop-up window, the down payment options are:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:46
-msgid "Select a down payment option and set the desired payment, either as a percentage or a fixed amount, in the :guilabel:`Down Payment Amount` field."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:52
+msgid "Select a down payment option and set the desired payment, either as a percentage or a fixed amount, in the :guilabel:`Down Payment` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
-msgid "Once all fields are filled in, click the :guilabel:`Create Draft` button. Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice Draft`."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:55
+msgid "Once all fields are filled in, click the :guilabel:`Create Draft` button. Upon clicking this button, Odoo brings up the :guilabel:`Customer Invoice Draft`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:53
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:59
 msgid "If an :guilabel:`Invalid Operation` error appears, double-check that the :doc:`invoicing policy <invoicing_policy>` is configured correctly. In some cases, for example, the invoicing policy is configured to require delivery before sending an invoice."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:57
-msgid "In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice Draft`, the down payment that was configured in the *Create invoice(s)* pop-up form appears under a new :guilabel:`Down Payments` section."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:63
+msgid "In the *Invoice Lines* tab of the :guilabel:`Customer Invoice Draft`, the down payment that was configured in the *Create invoice(s)* pop-up form appears as a :guilabel:`Down Payment` line item. After clicking :guilabel:`Confirm` to apply the down payment to the sales order, the down payment appears in a new :guilabel:`Down Payments` section."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:71
 msgid "Types of down payments"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:66
-msgid "Odoo offers both fixed amounts and partial down payments (such as 30% of an order's total)."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:68
-msgid "A 100% down payment is possible and differs from a full payment of the sales order. A sales order paid through the regular invoice process does not allow any additional invoices to be generated and does not display the :guilabel:`Create Invoice` button on the sales order."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:72
-msgid "With a 100% down payment, the :guilabel:`Create Invoice` button is still displayed on the sales Order because the system expects another invoice to be created after the down payment to complete payment of the sales order."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:73
+msgid "Odoo offers both fixed dollar amounts and partial percentage down payments (such as 30% of an order's total)."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
+msgid "A 100% down payment is possible and differs from a full payment of the sales order. A sales order paid through the regular invoice process does not allow any additional invoices to be generated and does not display the :guilabel:`Create Invoice` button on the sales order. With a 100% down payment, the :guilabel:`Create Invoice` button is still displayed on the sales order because the system requires that another invoice be created in order to complete the sales order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:82
 msgid "The following are two examples of down payment amounts:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:78
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
 msgid ":ref:`Example 1: 50% down payment <sales/invoicing/50-percent-down-payments>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:79
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:85
 msgid ":ref:`Example 2: 100% down payment <sales/invoicing/100-percent-down-payments>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:90
 msgid "Example 1: 50% down payment"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:87
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
 msgid "This flow is also possible with the :guilabel:`Down payment (fixed amount)` option."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:89
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:95
 msgid "A customer is buying a luxury cabinet from a furniture store. The furniture store has configured the cabinet with an *Invoicing Policy* of *Ordered quantities*. The store requires a 50% down payment on all of its furniture products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:99
 msgid "Navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation <sales/create-quotation>` for the cabinet. Once the order is confirmed (via the :guilabel:`Confirm` button), the quotation turns into a sales order. Create an invoice by clicking :guilabel:`Create Invoice`."
 msgstr ""
 
@@ -15682,31 +15906,31 @@ msgstr ""
 msgid "Cabinet with doors sales order that's been confirmed in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:101
-msgid "On the :guilabel:`Create invoice(s)` pop-up window that appears, select :guilabel:`Down payment (percentage)`, and type `50` in the :guilabel:`Down Payment` field."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:107
+msgid "On the *Create invoice(s)* pop-up window that appears, select :guilabel:`Down payment (percentage)`, and type `50` in the :guilabel:`Down Payment` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
-msgid "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` can be changed. For more information, check out the documentation on :ref:`income account modification on down payments <sales/invoicing/income-account-modification>`. A :guilabel:`Down payment Account` can also be set on a product category. If set, this account is prioritized for future down payments."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:111
+msgid "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` can be changed. For more information, check out the documentation on :ref:`income account modification on down payments <sales/invoicing/income-account-modification>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:110
-msgid "Lastly, click :guilabel:`Create Draft` to create and view the invoice draft, which includes the down payment under the :guilabel:`Down Payments` section of the :guilabel:`Invoice Lines` tab. Click :guilabel:`Confirm` and the invoice's status changes from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new series of buttons at the top of the page."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:115
+msgid "Lastly, click :guilabel:`Create Draft` to create and view the invoice draft, which includes the down payment as a line item under the *Invoice Lines* tab. Click :guilabel:`Confirm` and the invoice's status changes from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new set of buttons at the top of the page."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:118
-msgid "To begin the payment process, click :guilabel:`Pay`. A :guilabel:`Pay` pop-up form displays with auto-populated information. Confirm the information provided is correct and make any necessary adjustments. When ready, click the :guilabel:`Create Payment` button."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:123
+msgid "To begin the payment process, click :guilabel:`Pay`. A *Pay* pop-up form displays with auto-populated information. Confirm the information provided is correct and make any necessary adjustments. When ready, click the :guilabel:`Create Payment` button."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Showcase of the Pay pop-up window with create payment button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:125
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:130
 msgid "The customer invoice changes status with a green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on how the database is configured and if manual confirmation of payments is required."
 msgstr ""
 
@@ -15714,100 +15938,88 @@ msgstr ""
 msgid "Customer Invoice with a green Paid banner located in the upper-right corner."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:132
-msgid "On the sales order, a new :guilabel:`Down Payments` section is present in the :guilabel:`Order Lines` tab, along with the down payment that was just invoiced and posted. When the customer wants to pay the remaining amount of the order, another invoice must be created."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:137
+msgid "On the sales order, a new :guilabel:`Down Payments` section is present in the *Order Lines* tab, along with the down payment that was just invoiced and posted. When the customer wants to pay the remaining amount of the order, another invoice must be created."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The down payments section in the order lines tab of a sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:139
-msgid "Click the :guilabel:`Create Invoice` button. On the :guilabel:`Create invoice(s)` pop-up window, there is a new field: :guilabel:`Already invoiced` and :guilabel:`Amount to invoice`."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:144
+msgid "Click the :guilabel:`Create Invoice` button. On the *Create invoice(s)* pop-up window, there is a new field: :guilabel:`Already invoiced`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The deduct down payment option on the Create invoice(s) pop up in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:145
-msgid "Select the :guilabel:`Regular Invoice` option. Odoo creates an invoice for the exact amount needed to complete the total payment, as shown in the :guilabel:`Amount to invoice` field."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:150
+msgid "Select the :guilabel:`Regular invoice` option to begin creating an invoice for the exact amount needed to complete the total payment. This amount is reflected in the :guilabel:`Amount Due` field on the invoice draft."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:148
-msgid "Click :guilabel:`Create Draft` to create a :guilabel:`Customer Invoice Draft` page. The draft lists all the invoices for that specific sales order in the :guilabel:`Invoice Lines` tab. Each invoice line item displays all the necessary information related to each invoice."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:152
-msgid "To complete the flow, click :guilabel:`Confirm` to change the status of the invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, click :guilabel:`Pay`. The :guilabel:`Pay` form appears, with all fields auto-populated with the necessary information, including the remaining amount left to be paid on the order."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:154
+msgid "Click :guilabel:`Create Draft` to create a *Customer Invoice Draft*. To complete the flow, click :guilabel:`Confirm` to change the status of the invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, click :guilabel:`Pay`. The *Pay* form appears, with all fields auto-populated with the necessary information, including the remaining amount left to be paid on the order."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The second Pay pop-up form in Odoo sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:160
-msgid "After confirming that information, click :guilabel:`Create Payment`. Doing so reveals the final :guilabel:`Customer Invoice` with a green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on how the database has configured and if manual confirmation of payments is required. Upon returning to the sales order, both down payments are present in the :guilabel:`Order Lines` tab."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
-msgid "The second down payment invoice with Paid banner in Odoo Sales."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:163
+msgid "After confirming that information, click :guilabel:`Create Payment`. Doing so reveals the final :guilabel:`Customer Invoice` with a green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on how the database is configured and if manual confirmation of payments is required. At this point, the flow is complete."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:169
-msgid "At this point, the flow is complete."
+msgid "If a down payment is used with a product that has a :guilabel:`Delivered quantities` invoicing policy, and the cost of the product exceeds the 50% down payment, a regular invoice is created. However, for products that cost less than the 50% down payment, the down payments cannot be deducted when it comes time to invoice the customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:172
-msgid "If a down payment is used with a product that has a :guilabel:`Delivered quantities` invoicing policy, and the cost of the product exceeds the 50% down payment, a regular invoice is created. However, for products that cost less than the 50% down payment, the down payments will not be able to be deducted when it comes time to invoice the customer."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:177
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:174
 msgid "This is because the product(s) would have to be delivered *before* creating the final invoice due to Odoo not allowing negative totals for invoices. If nothing has been delivered, a :guilabel:`Credit Note` is created, which cancels the draft invoice that was created after the down payment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:182
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:179
 msgid "To utilize the :guilabel:`Credit Note` option, the **Inventory** application must be installed in order to confirm the delivery. Otherwise, the delivered quantity can be entered manually directly on the sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:189
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:186
 msgid "Example 2: 100% down payment"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:191
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:188
 msgid "A solar panel company sells an installation service for residential homes. All installation services require a 100% down payment to cover labor costs. The company prefers down payments as customers often require customization add-ons for the service."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:195
-msgid "To configure a 100% down payment, navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation <sales/create-quotation>` for the product. Upon clicking the :guilabel:`Confirm` button, the quotation turns into a sales order. At that point, an invoice can now be created by clicking :guilabel:`Create Invoice` in the top-left corner. On the :guilabel:`Create invoice(s)` pop-up window that appears, select :guilabel:`Down payment (percentage)`, and type `100` in the :guilabel:`Down Payment` field."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:192
+msgid "To configure a 100% down payment, navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation <sales/create-quotation>` for the product. Upon clicking the :guilabel:`Confirm` button, the quotation turns into a sales order. At that point, an invoice can now be created by clicking :guilabel:`Create Invoice` in the top-left corner. On the *Create invoice(s)* pop-up window that appears, select :guilabel:`Down payment (percentage)`, and type `100` in the :guilabel:`Down Payment` field."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "The Down payment (percentage) option selected with 100% set as the Down Payment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:205
-msgid "Next, click :guilabel:`Create Draft` to create an invoice draft. This will also bring the draft invoice into view, which includes the :guilabel:`Down payment` under the :guilabel:`Down Payments` section of the :guilabel:`Invoice Lines` tab. The invoice can now be confirmed and posted by clicking :guilabel:`Confirm`. Confirming the invoice changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new series of buttons at the top of the page."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:202
+msgid "Next, click :guilabel:`Create Draft` to create an invoice draft. This also brings the draft invoice into view, which includes the :guilabel:`Down payment` as a line item under the *Invoice Lines* tab. The invoice can now be confirmed and posted by clicking :guilabel:`Confirm`. Confirming the invoice changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new series of buttons at the top of the page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:211
-msgid "The payment can be registered by clicking the :guilabel:`Pay` button. This brings up the :guilabel:`Pay` pop-up form, which is auto-populated with the necessary information. When ready, click the :guilabel:`Create Payment` button."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:208
+msgid "The payment can be registered by clicking the :guilabel:`Pay` button. This brings up the *Pay* pop-up form, which is auto-populated with the necessary information. When ready, click the :guilabel:`Create Payment` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:215
-msgid "After clicking :guilabel:`Create Payment`, Odoo reveals the customer invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on how the database has configured and if manual confirmation of payments is required. The process is now complete, and the 100% down payment has been successfully applied."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:212
+msgid "After clicking :guilabel:`Create Payment`, Odoo reveals the customer invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` banner in the upper-right corner, depending on how the database is configured and if manual confirmation of payments is required. The process is now complete, and the 100% down payment has been successfully applied."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:220
+msgid "Income account modification on draft down payments"
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:223
-msgid "Income account modification on down payments"
+msgid "To change or adjust the income account attached to down payments, the **Accounting** app must be installed. With the **Accounting** app installed, the :guilabel:`Account` column becomes available on the draft invoice. Please note, the income account on posted down payments **cannot** be modified."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:226
-msgid "To change or adjust the income account attached to down payments, the **Accounting** app must be installed. With the **Accounting** app installed, the :guilabel:`Accounting` column becomes available on the draft invoice."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:230
-msgid "Navigate to the invoice to be modified by going to :menuselection:`Sales app --> Orders --> Orders`. Open an order, then click the :guilabel:`Invoices` smart button. Open an invoice, click the drop-down arrow on the entry in the :guilabel:`Account` column and click :guilabel:`Search more...` to bring up the :guilabel:`Search: Account` form. In this form, a different account can be chosen from the list of pre-existing accounts. A new account can also be created by clicking the :guilabel:`New` button."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:228
+msgid "Navigate to the invoice to be modified by going to :menuselection:`Sales app --> Orders --> Orders`. Open an order, then click the :guilabel:`Invoices` smart button. Open an invoice, click the drop-down arrow on the entry in the :guilabel:`Account` column and click :guilabel:`Search more...` to bring up the *Search: Account* form. In this form, a different account can be chosen from the list of pre-existing accounts. A new account can also be created by clicking the :guilabel:`New` button."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
@@ -15815,14 +16027,14 @@ msgid "The Search:Account form with existing accounts displayed and a button to 
 "account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:242
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:240
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:114
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:243
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:241
 msgid ":doc:`../../../finance/accounting/customer_invoices/payment_terms`"
 msgstr ""
 
@@ -18010,11 +18222,11 @@ msgstr ""
 msgid "The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows website visitors to choose a pricelist when shopping in your **eCommerce** website."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:48
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:50
 msgid "Creating and editing pricelists"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:50
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:52
 msgid "From the :guilabel:`Pricelists` page, either select the pricelist to edit, or click :guilabel:`New` to create a new pricelist, which reveals a blank pricelist form that can be configured in a number of different ways."
 msgstr ""
 
@@ -18022,51 +18234,51 @@ msgstr ""
 msgid "How the pricelist detail form looks in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:57
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:59
 msgid "When creating a new pricelist, start by adding a name for the pricelist at the blank field at top of the form. Next, select which :guilabel:`Currency` should be used."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:60
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:62
 msgid "If working in a multi-company environment, select which company this pricelist should apply to in the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically applied to all companies in the database."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:64
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:66
 msgid "If working in a multinational company, select the countries where this pricelist will apply under the :guilabel:`Country Groups` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:70
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:72
 msgid "Price Rules tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:72
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:74
 msgid "In the :guilabel:`Price Rules` tab, each line creates a new record that will implement customized pricing to the sales order where the pricelist is applied. This can be used to create complex pricing structures, such as progressive discounts when greater quantities of a product are purchased."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:77
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:79
 msgid "To create a new price rule, click on :guilabel:`Add a line`, which opens a new pricelist rules form. Then, select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:80
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
 msgid "From here, there are several configuration options:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
 msgid ":guilabel:`Product`: If selected in the :guilabel:`Apply To` field, use this field to choose one or more products to which this pricelist will apply."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:86
 msgid ":guilabel:`Category`: Select one or more product categories to which this pricelist will apply."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:85
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:87
 msgid ":guilabel:`Price Type`: Select whether the specialized pricing will fall under :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. Depending on the price type, there will be additional configurations on how to apply the pricelist."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:89
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:91
 msgid ":guilabel:`Discount`: Enter the percentage to be discounted. A mark-up can be configured by using a negative value in this field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:93
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:95
 msgid "If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set as :guilabel:`Discount`, the discount will visible to the customer."
 msgstr ""
 
@@ -18078,43 +18290,43 @@ msgstr ""
 msgid "How a pricelist rule using Price Type: Discount appears on customer preview."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:102
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:104
 msgid ":guilabel:`Formula`: Calculate the pricelist rules based the following configuration:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:104
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:106
 msgid ":guilabel:`Discount`: Percentage discount to be applied. Negative values can be entered to increase prices."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:108
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:110
 msgid "If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set as :guilabel:`Formula`, the discount will *not* be visible to the customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:111
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:113
 msgid ":guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after discount. The rounding method sets the price so that it is a multiple of the value in this field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:116
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:118
 msgid "Rounding is applied *after* the discount and *before* the extra fee."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:118
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
 msgid ":guilabel:`Extra Fee`: Fixed amount to be added or subtracted once :guilabel:`Discount` and :guilabel:`Round off to` have been applied."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:122
 msgid ":guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, all product lines in the quotation form will be updated to this price."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:123
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:125
 msgid ":guilabel:`Min Qty`: Specify the minimum quantity of selected products for this pricelist to apply."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:125
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:127
 msgid ":guilabel:`Validity Period`: Specify the start and end date during which this pricelist can be applied to quotations."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:129
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:131
 msgid "To formulate a 100% markup (or two times the price of the product), with a $5 minimum margin, set the :guilabel:`Based price` field to :guilabel:`Sales Price` and the :guilabel:`Discount` to `-100`. This is often seen in retail situations."
 msgstr ""
 
@@ -18122,7 +18334,7 @@ msgstr ""
 msgid "How it looks to formulate a markup cost with 5 dollar minimum margin in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:137
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:139
 msgid "To apply 20% discounts, with prices rounded up to 9.99, set the :guilabel:`Based on` field to :guilabel:`Sales Price`, the :guilabel:`Discount` field to `20`, the :guilabel:`Extra Fee` field to `-0.01`, and the :guilabel:`Rounding Method` field to `10`."
 msgstr ""
 
@@ -18130,27 +18342,27 @@ msgstr ""
 msgid "Example of a 20% discount with prices rounded to 9.99 in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:145
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:147
 msgid "To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` and the :guilabel:`Extra Fee` to `-0.01`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:149
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:151
 msgid "Recurring Prices tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:151
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:153
 msgid "Time-based rules are used specifically with subscription products. Be sure to check out the Odoo :doc:`Subscriptions </applications/sales/subscriptions>` documentation for more information."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:154
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:156
 msgid "In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the :guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` and :guilabel:`Recurring Plan`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:158
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:160
 msgid ":guilabel:`Product Variants` are configured under products that have one or more values, such as color, size, etc. Once a product has been selected under the :guilabel:`Products Tab`, if applicable, select the desired product variants to be included in the price rule."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:162
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:164
 msgid "Then, select the blank field in the :guilabel:`Recurring Plan` column to reveal a drop-down menu of pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.)."
 msgstr ""
 
@@ -18158,7 +18370,7 @@ msgstr ""
 msgid "The recurring prices tab in a pricelist configuration form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:168
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:170
 msgid "New recurrence periods can also be created from this column. To do so, type in the name for the new :guilabel:`Recurring Plan`, then select :guilabel:`Create` from the resulting drop-down menu to create the time period, which can be edited later. Alternatively, select :guilabel:`Create and edit...` to reveal a :guilabel:`Create Recurring Plan` pop-up form. From this pop-up form, the new recurrence period can be configured, with specific :guilabel:`Details`, :guilabel:`Self-Service`, and :guilabel:`Pricing` options. When the configurations are complete, click the :guilabel:`Save & Close` button."
 msgstr ""
 
@@ -18166,31 +18378,31 @@ msgstr ""
 msgid "Custom time period pop-up form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:179
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:181
 msgid "Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:183
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:185
 msgid ":doc:`../../../subscriptions`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:186
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
 msgid "Rental rules tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:190
 msgid "Price rules can be configured for :doc:`rental products <../../../rental>` under the :guilabel:`Rental rules` tab, using the same methodology as the :guilabel:`Price Rules` and :guilabel:`Recurring Prices` tabs."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:192
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:194
 msgid "To add a rental rule, click :guilabel:`Add a line`, and select a desired product in the :guilabel:`Products` column. Then, select any specific :guilabel:`Variants`, if necessary."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:195
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
 msgid "Next, designate a :guilabel:`Period` of time for the rental rule (e.g. `Daily`, `Hourly`, etc.)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:199
 msgid "Lastly, configure a :guilabel:`Price` for the rental rule in the respective column."
 msgstr ""
 
@@ -18198,19 +18410,19 @@ msgstr ""
 msgid "The rental tab in a pricelist configuration form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:203
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:205
 msgid ":doc:`Ecommerce price configuration </applications/websites/ecommerce/configuration/prices>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:208
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
 msgid "Customer pricelist application"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:212
 msgid "While the default pricelist applied to any customer is the :guilabel:`Public Pricelist`, Odoo provides the opportunity to directly apply a different pricelist to customers on their contact form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:213
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:215
 msgid "To do that, open the desired customer's contact form, either by navigating to :menuselection:`Sales app --> Orders --> Customers` and selecting the customer from the main :guilabel:`Customers` page, or by clicking on the customer's name on a sales order."
 msgstr ""
 
@@ -18218,7 +18430,7 @@ msgstr ""
 msgid "Sample customer detail form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:220
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:222
 msgid "On the desired customer's contact form, under the :guilabel:`Sales & Purchase` tab, in the :guilabel:`Sales` section, designate what pricelist should be applied to this specific customer from the drop-down menu in the :guilabel:`Pricelist` field."
 msgstr ""
 
@@ -18226,63 +18438,63 @@ msgstr ""
 msgid "The pricelist field in a customer detail form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:228
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:230
 msgid "When a customer is added to the database, the default pricelist is automatically applied to them. There is **no way** to have a blank *Pricelist* field on a contact form. Even if that field is left blank, the default pricelist appears when that contact form is opened again."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:232
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:234
 msgid "However, when that contact is added to a quotation, and the *Pricelist* field is auto-populated (based on the information from their contact form), that predetermined pricelist can be removed from the *Pricelist* field, and the quotation can still be confirmed, and subsequently, turned into a sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:238
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
 msgid "Conditions"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:242
 msgid "At the bottom of the :guilabel:`Create Pricelist Rules` pop-up form is the :guilabel:`Conditions` section."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:243
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:245
 msgid "Here, start by selecting one of the options in the :guilabel:`Apply On` field:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:245
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:247
 msgid ":guilabel:`All Products`: the advanced pricelist rule will be applied to all products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:246
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:248
 msgid ":guilabel:`Product Category`: the advanced pricelist rule will be applied to a specific category of products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:248
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:250
 msgid ":guilabel:`Product`: the advanced pricelist rule will be applied to a specific product."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:249
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:251
 msgid ":guilabel:`Product Variant`: the advanced pricelist rule will be applied to a specific product variant."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:252
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:254
 msgid "If any of those options, apart from :guilabel:`All Products`, are selected, a new option-specific field appears, in which the specific :guilabel:`Product Category`, :guilabel:`Product`, or :guilabel:`Product Variant` must be chosen."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:256
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:258
 msgid "Then, select a minimum quantity to be applied to the advanced pricelist rule in the :guilabel:`Min. Quantity` field. Lastly, select a range of dates for the pricelist item validation in the :guilabel:`Validity` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:260
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:262
 msgid "Once all configurations are complete, either click :guilabel:`Save & Close` to save the advanced pricelist rule, or click :guilabel:`Save & New` to immediately create another advanced pricelist rule on a fresh form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:265
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:267
 msgid "If a price rule is set for a particular product, and another one for its product category, Odoo takes the rule of the product itself."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:269
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:271
 msgid ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:270
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:272
 msgid ":doc:`/applications/websites/ecommerce/configuration/prices`"
 msgstr ""
 
