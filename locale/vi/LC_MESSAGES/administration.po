@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:12+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/vi/>\n"
@@ -1136,25 +1136,157 @@ msgstr "Sau khi xóa, tên cơ sở dữ liệu sẽ có sẵn cho bất kỳ ai
 msgid "Web services"
 msgstr "Dịch vụ web"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "Danh sách cơ sở dữ liệu"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"Để lấy danh sách tất cả cơ sở dữ liệu hiển thị trong `trình quản lý cơ sở dữ "
-"liệu <https://www.odoo.com/my/databases>`_ theo chương trình, hãy gọi phương "
-"thức `list` của mô hình `odoo.database` thông qua lệnh gọi :doc:`dịch vụ web "
-"<../developer/howtos/web_services>`."
+"Để truy xuất danh sách tất cả cơ sở dữ liệu được hiển thị trong :ref:`trình "
+"quản lý cơ sở dữ liệu <odoo-online/database-manager>` theo phương pháp lập "
+"trình, hãy gọi phương thức `list` của mô hình `odoo.database` thông qua "
+":doc:`API JSON-2 bên ngoài <../developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Để lấy danh sách này với thư viện `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "Ví dụ tương đương với JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "Nhật ký kiểm toán"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"Để truy xuất nhật ký hoạt động của quản trị viên trên một cơ sở dữ liệu Odoo "
+"Online, hãy gọi phương thức `get_audit_logs` của mô hình `odoo.database` "
+"thông qua :doc:`API JSON-2 bên ngoài <../developer/reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"Yêu cầu phải cung cấp `db_uuid` hoặc `subscription_code`. Nếu `db_uuid` được "
+"cung cấp, nhật ký của cơ sở dữ liệu đó sẽ được trả về. Nếu không, "
+"`subscription_code` có thể được dùng để truy xuất nhật ký của tất cả cơ sở "
+"dữ liệu và dự án thuộc gói đăng ký đó."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` là một tham số tùy chọn, chứa giá trị không thể diễn giải được trả "
+"về từ một yêu cầu trước đó. Khi được cung cấp, chỉ những nhật ký mới hơn con "
+"trỏ đó mới được trả về."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"Việc truy xuất nhật ký kiểm toán bị giới hạn tốc độ và không được thực hiện "
+"quá một lần trong mỗi 5 phút."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"Phản hồi là một đối tượng JSON chứa các nhật ký và một con trỏ không thể "
+"diễn giải để truy xuất lô tiếp theo:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "Các tham số yêu cầu là:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (chuỗi): UUID của cơ sở dữ liệu. Nếu được cung cấp, "
+"`subscription_code` sẽ bị bỏ qua."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (chuỗi): mã đăng ký. Được sử dụng khi `db_uuid` không "
+"được cung cấp."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (chuỗi): con trỏ không thể diễn giải được trả về từ một yêu cầu "
+"trước đó. Khi được cung cấp, chỉ những nhật ký mới hơn con trỏ đó mới được "
+"trả về."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "Mỗi mục nhật ký chứa:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (chuỗi): ngày và giờ ghi nhật ký theo UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (chuỗi): người dùng đã thực hiện hành động"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr "`database` (chuỗi): cơ sở dữ liệu liên quan đến hành động, nếu có."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (chuỗi): mã đăng ký."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (chuỗi): địa chỉ IP mà từ đó hành động được thực hiện."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (chuỗi): loại hành động."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (chuỗi): thông tin bổ sung về hành động."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (boolean): liệu hành động có được ủy quyền hay không."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"Giá trị `next_cursor` là một con trỏ không minh bạch (opaque cursor) có thể "
+"được cung cấp dưới dạng `cursor` trong yêu cầu tiếp theo."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1184,9 +1316,9 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
-"Phần này trình bày các tính năng nâng cao của Odoo.sh liên quan đến "
-":ref:`container <odoo-sh/advanced/containers>`, :ref:`mô-đun con Git <odoo-"
-"sh/advanced/submodules>` và :ref:`tác vụ theo lịch <odoo-sh/advanced/"
+"Phần này trình bày các tính năng nâng cao của Odoo.sh liên quan "
+"đến :ref:`container <odoo-sh/advanced/containers>`, :ref:`mô-đun con Git "
+"<odoo-sh/advanced/submodules>` và :ref:`tác vụ theo lịch <odoo-sh/advanced/"
 "scheduled>`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:12
@@ -1212,9 +1344,9 @@ msgid ""
 "containers."
 msgstr ""
 "Nếu dự án của bạn cần :ref:`các phụ thuộc Python bổ sung <odoo-sh/module/"
-"library>` hoặc phiên bản mới hơn, bạn có thể định nghĩa một tệp "
-":file:`requirements.txt` ở thư mục gốc của các nhánh để liệt kê chúng. Nền "
-"tảng sẽ đảm bảo các phụ thuộc này được cài đặt trong container của bạn."
+"library>` hoặc phiên bản mới hơn, bạn có thể định nghĩa một "
+"tệp :file:`requirements.txt` ở thư mục gốc của các nhánh để liệt kê chúng. "
+"Nền tảng sẽ đảm bảo các phụ thuộc này được cài đặt trong container của bạn."
 
 #: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
@@ -1342,41 +1474,46 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
-msgstr ""
+msgstr "Sử dụng Odoo shell:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:151
 msgid "Install a module:"
-msgstr ""
+msgstr "Cài đặt phân hệ:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
 "The argument `--without-demo=all` prevents demo data from being loaded for "
 "all modules."
 msgstr ""
+"Đối số `--without-demo=all` ngăn dữ liệu demo được tải cho tất cả phân hệ."
 
 #: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
 "The argument `--stop-after-init` immediately shutdowns the server instance "
 "after the operation is completed."
 msgstr ""
+"Đối số `--stop-after-init` sẽ ngay lập tức tắt phiên bản máy chủ sau khi "
+"thao tác hoàn tất."
 
 #: ../../content/administration/odoo_sh/advanced.rst:162
 msgid "Update a module:"
-msgstr ""
+msgstr "Cập nhật phân hệ:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:168
 msgid "Run the tests for a module:"
-msgstr ""
+msgstr "Chạy kiểm thử cho phân hệ:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:175
 msgid ":doc:`CLI documentation </developer/reference/cli>`"
-msgstr ""
+msgstr ":doc:`Tài liệu CLI </developer/reference/cli>`"
 
 #: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
 "To find the addons path used by Odoo.sh to run your server, look for "
 "\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
+"Để tìm đường dẫn addons mà Odoo.sh sử dụng để chạy máy chủ của bạn, hãy tìm "
+"\"*odoo: addons paths*\" trong nhật ký (:file:`~/logs/odoo.log`)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
@@ -1384,6 +1521,9 @@ msgid ""
 "will be reflected in the database. Remember to always carry out tests in "
 "your staging databases."
 msgstr ""
+"Các thao tác bạn thực hiện trên một phiên bản máy chủ Odoo không được tách "
+"biệt; các thay đổi sẽ được phản ánh trong cơ sở dữ liệu. Hãy luôn nhớ thực "
+"hiện kiểm thử trong cơ sở dữ liệu staging của bạn."
 
 #: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
@@ -1396,6 +1536,10 @@ msgid ""
 "and limitations of the Odoo.sh platform, and assumes that you already know "
 "how to use a debugger."
 msgstr ""
+"Gỡ lỗi một bản build Odoo.sh không thực sự khác với việc gỡ lỗi một ứng dụng "
+"Python khác. Vì vậy, mục tiêu của phần này là trình bày những đặc thù và "
+"giới hạn của nền tảng Odoo.sh, với giả định rằng bạn đã biết cách sử dụng "
+"công cụ gỡ lỗi."
 
 #: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
@@ -1403,6 +1547,9 @@ msgid ""
 "server runs outside a shell, you cannot launch the debugger directly from "
 "your Odoo backend, as it requires a shell to operate."
 msgstr ""
+"Bạn có thể sử dụng `pdb`, `pudb`, hoặc `ipdb` để gỡ lỗi mã trên Odoo.sh. Vì "
+"máy chủ chạy bên ngoài shell, bạn không thể khởi chạy trình gỡ lỗi trực tiếp "
+"từ backend Odoo, do nó cần một shell để hoạt động."
 
 #: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
@@ -1417,39 +1564,45 @@ msgid ""
 "To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
 "project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
+"Để sử dụng `pudb <https://pypi.org/project/pudb/>`_ hoặc `ipdb <https://"
+"pypi.org/project/ipdb/>`_, bạn cần cài đặt chúng bằng một trong hai cách:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
+"vĩnh viễn, bằng cách thêm `pudb` hoặc `ipdb` vào tệp "
+":file:`requirements.txt` của dự án, hoặc"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
 "temporarily (only in the current build) by running the relevant command:"
-msgstr ""
+msgstr "tạm thời (chỉ trong bản build hiện tại) bằng cách chạy lệnh phù hợp:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:221
 msgid "To trigger the debugger, add this to the code you want to debug:"
-msgstr ""
+msgstr "Để kích hoạt trình gỡ lỗi, hãy thêm đoạn sau vào mã bạn muốn gỡ lỗi:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
 "The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
 "you are running Odoo from a shell."
 msgstr ""
+"Điều kiện `sys.__stdin__.isatty()` là một giải pháp tạm thời để phát hiện "
+"xem bạn có đang chạy Odoo từ một shell hay không."
 
 #: ../../content/administration/odoo_sh/advanced.rst:233
 msgid "Next, save the file and run the Odoo shell:"
-msgstr ""
+msgstr "Tiếp theo, lưu tệp và chạy Odoo shell:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:239
 msgid "Use the Odoo shell to trigger the code you want to debug."
-msgstr ""
+msgstr "Sử dụng Odoo shell để kích hoạt đoạn mã bạn muốn gỡ lỗi."
 
 #: ../../content/administration/odoo_sh/advanced.rst:0
 msgid "pdb running in an Odoo.sh shell"
-msgstr ""
+msgstr "pdb đang chạy trong Odoo.sh shell"
 
 #: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
@@ -1464,6 +1617,12 @@ msgid ""
 "main codebase. You maintain precise version control by choosing exact "
 "branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
+"`Git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ cho "
+"phép bạn liên kết trực tiếp các kho lưu trữ bên ngoài vào dự án của mình mà "
+"không cần sao chép mã, giúp đơn giản hóa việc triển khai bằng cách nhân bản "
+"các thành phần phụ thuộc cùng với mã nguồn chính của bạn. Bạn duy trì khả "
+"năng kiểm soát phiên bản chính xác bằng cách chọn nhánh cụ thể và ghim các "
+"bản sửa đổi commit cụ thể để cập nhật bất cứ khi nào bạn muốn."
 
 #: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
@@ -2377,29 +2536,32 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
-msgstr ""
+msgstr "Khái niệm kỹ thuật"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:88
 msgid ""
 "When working with Odoo.sh, it is also important to understand several "
 "technical concepts:"
 msgstr ""
+"Khi làm việc với Odoo.sh, điều quan trọng là cũng cần hiểu một số khái niệm "
+"kỹ thuật sau:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:90
 msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
 msgstr ""
+":ref:`Tạo bản sao kho lưu trữ (fork) <odoo-sh/getting-started/concepts/fork>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:91
 msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
-msgstr ""
+msgstr ":ref:`Đẩy một commit <odoo-sh/getting-started/concepts/commit>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:92
 msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
-msgstr ""
+msgstr ":ref:`Hợp nhất một nhánh <odoo-sh/getting-started/concepts/merge>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:97
 msgid "Forking a repository"
-msgstr ""
+msgstr "Tạo bản sao kho lưu trữ (fork)"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:99
 msgid ""
@@ -2407,6 +2569,9 @@ msgid ""
 "repository on your own account. This allows you to make changes to the "
 "repository without affecting the original version."
 msgstr ""
+"Fork một kho lưu trữ trên GitHub là việc tạo một bản sao của kho lưu trữ của "
+"người khác trên tài khoản của riêng bạn. Điều này cho phép bạn thực hiện "
+"thay đổi trên kho lưu trữ mà không ảnh hưởng đến phiên bản gốc."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:102
 msgid ""
@@ -2415,6 +2580,10 @@ msgid ""
 "then make changes to the files in your copy of the repository and commit "
 "them, just like you would with any other repository."
 msgstr ""
+"Khi bạn fork một kho lưu trữ, bạn tạo ra bản sao riêng của kho lưu trữ đó, "
+"bao gồm đầy đủ tất cả các tệp và thư mục có trong kho lưu trữ gốc. Sau đó, "
+"bạn có thể thực hiện thay đổi trên các tệp trong bản sao kho lưu trữ của "
+"mình và commit chúng, giống như bạn làm với bất kỳ kho lưu trữ nào khác."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:106
 msgid ""
@@ -2424,6 +2593,11 @@ msgid ""
 "also use the forked repository as a starting point for your project, making "
 "changes as needed."
 msgstr ""
+"Lợi ích của việc fork một kho lưu trữ là bạn có thể thực hiện thay đổi trên "
+"mã nguồn mà không ảnh hưởng đến phiên bản gốc. Điều này hữu ích khi bạn muốn "
+"thử nghiệm các tính năng mới hoặc sửa lỗi trong mã nguồn của người khác. Bạn "
+"cũng có thể sử dụng kho lưu trữ đã fork làm điểm khởi đầu cho dự án của "
+"mình, thực hiện các thay đổi khi cần."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:111
 msgid ""
@@ -2433,10 +2607,16 @@ msgid ""
 "projects to accept contributions from other developers, and it can be a "
 "great way to get involved in the community and improve your coding skills."
 msgstr ""
+"Sau khi đã thực hiện thay đổi trên kho lưu trữ đã fork, bạn có thể gửi một "
+"pull request đến chủ sở hữu kho lưu trữ gốc, yêu cầu họ hợp nhất các thay "
+"đổi của bạn vào kho lưu trữ của họ. Đây là cách tiếp cận phổ biến để các dự "
+"án mã nguồn mở chấp nhận đóng góp từ các nhà phát triển khác, và đây có thể "
+"là cách tuyệt vời để tham gia vào cộng đồng cũng như cải thiện kỹ năng lập "
+"trình của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:119
 msgid "Pushing a commit"
-msgstr ""
+msgstr "Đẩy một commit"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:121
 msgid ""
@@ -2445,6 +2625,10 @@ msgid ""
 "words, Git knows that changes have been made, but they haven't been "
 "officially saved or recorded yet."
 msgstr ""
+"Khi bạn thực hiện thay đổi trên một hoặc nhiều tệp trong kho lưu trữ Git "
+"trên máy tính cục bộ, những thay đổi đó được coi là *chưa commit*. Nói cách "
+"khác, Git biết rằng đã có thay đổi được thực hiện, nhưng chúng chưa được lưu "
+"hoặc ghi nhận chính thức."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:125
 msgid ""
@@ -2453,6 +2637,10 @@ msgid ""
 "specific point in time. It records what changes were made, who made them, "
 "and when."
 msgstr ""
+"Để lưu những thay đổi đó và thêm chúng vào kho lưu trữ Git, bạn cần tạo một "
+"*commit*. Commit là bản chụp nhanh các thay đổi bạn đã thực hiện trên các "
+"tệp tại một thời điểm cụ thể. Nó ghi lại những thay đổi nào đã được thực "
+"hiện, ai đã thực hiện và khi nào."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:129
 msgid ""
@@ -2461,6 +2649,10 @@ msgid ""
 "you've made in the commit from your local repository to the remote "
 "repository so that others can see and use them."
 msgstr ""
+"Sau khi đã tạo một commit, bạn có thể *đẩy* (push) nó đến một kho lưu trữ từ "
+"xa, chẳng hạn như kho lưu trữ được lưu trữ trên GitHub. Đẩy một commit nghĩa "
+"là gửi các thay đổi bạn đã thực hiện trong commit từ kho lưu trữ cục bộ của "
+"bạn đến kho lưu trữ từ xa để người khác có thể xem và sử dụng chúng."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:133
 msgid ""
@@ -2469,10 +2661,14 @@ msgid ""
 "repository. It is a way to share your changes with others and collaborate on "
 "a project."
 msgstr ""
+"Tóm lại, đẩy một commit nghĩa là gửi các thay đổi bạn đã thực hiện trên các "
+"tệp trong kho lưu trữ Git từ máy tính cục bộ của bạn đến kho lưu trữ từ xa. "
+"Đây là cách để chia sẻ các thay đổi của bạn với người khác và cộng tác trên "
+"một dự án."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:140
 msgid "Merging a branch"
-msgstr ""
+msgstr "Hợp nhất một nhánh"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:142
 msgid ""
@@ -2483,6 +2679,12 @@ msgid ""
 "changes back into the main branch (often called the `master` or `main` "
 "branch)."
 msgstr ""
+"Hợp nhất một nhánh vào nhánh khác là quá trình kết hợp các thay đổi được "
+"thực hiện trong một nhánh vào nhánh còn lại. Ví dụ: giả sử bạn đã tạo một "
+"nhánh mới có tên `feature-branch` để phát triển một tính năng mới cho dự án "
+"của mình. Sau khi hoàn tất việc thực hiện thay đổi trên nhánh này, bạn có "
+"thể hợp nhất các thay đổi đó trở lại nhánh chính (thường được gọi là nhánh "
+"`master` hoặc `main`)."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:147
 msgid ""
@@ -2491,6 +2693,10 @@ msgid ""
 "made in the two branches, Git will prompt you to resolve them before "
 "completing the merge (code-wise)."
 msgstr ""
+"Khi bạn hợp nhất một nhánh, Git sẽ kiểm tra các thay đổi trong cả hai nhánh "
+"và cố gắng kết hợp chúng. Nếu có bất kỳ xung đột nào giữa các thay đổi được "
+"thực hiện trong hai nhánh, Git sẽ nhắc bạn giải quyết chúng trước khi hoàn "
+"tất việc hợp nhất (về mặt mã nguồn)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -3647,9 +3853,9 @@ msgid ""
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
 "Mục đích của sao lưu thủ công là tạo ra một bản chụp nhanh cụ thể của cơ sở "
-"dữ liệu chính thức hoặc thử nghiệm (không khả dụng cho môi trường phát triển)"
-". Các bản sao lưu này vẫn khả dụng trong ba ngày. Tuy nhiên, mỗi ngày chỉ "
-"được tạo tối đa năm bản sao lưu thủ công."
+"dữ liệu chính thức hoặc thử nghiệm (không khả dụng cho môi trường phát "
+"triển). Các bản sao lưu này vẫn khả dụng trong ba ngày. Tuy nhiên, mỗi ngày "
+"chỉ được tạo tối đa năm bản sao lưu thủ công."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -3854,6 +4060,9 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
+":guilabel:`Chỉ cài đặt phân hệ của tôi (không bao gồm phân hệ con)`: chỉ cài "
+"đặt các phân hệ của nhánh, không bao gồm :ref:`phân hệ con <odoo-sh/advanced/"
+"submodules>`. Đây là tùy chọn mặc định."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4264,7 +4473,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
 msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
-msgstr ""
+msgstr ":ref:`Tài liệu về phân hệ con <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -8566,10 +8775,6 @@ msgstr ""
 "trong một thư mục cụ thể. Cần phải sao chép cả kho lưu trữ Community và "
 "Enterprise để bản cài đặt Odoo Enterprise hoạt động."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo yêu cầu **Python 3.10** trở lên để có thể hoạt động."
@@ -10669,6 +10874,23 @@ msgstr ":doc:`Tài liệu Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Các phiên bản Odoo được hỗ trợ <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Để lấy danh sách tất cả cơ sở dữ liệu hiển thị trong `trình quản lý cơ sở "
+#~ "dữ liệu <https://www.odoo.com/my/databases>`_ theo chương trình, hãy gọi "
+#~ "phương thức `list` của mô hình `odoo.database` thông qua lệnh "
+#~ "gọi :doc:`dịch vụ web <../developer/howtos/web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Để lấy danh sách này với thư viện `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "Ví dụ tương đương với JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "Nâng cao"

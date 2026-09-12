@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hebrew <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/he/>\n"
@@ -1098,25 +1098,148 @@ msgstr "לאחר המחיקה, שם מסד הנתונים יהיה זמין לכ
 msgid "Web services"
 msgstr "שירותי אינטרנט"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "רשימת מסדי נתונים"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"כדי לאחזר רשימה של כל מסדי הנתונים המוצגים תחת `מנהל מסדי הנתונים <https://"
-"www.odoo.com/my/databases>`_ באופן תכנותי, קרא למתודה `list` של מודל "
-"`odoo.database` באמצעות קריאה ל-:doc:`שירות אינטרנט <../developer/howtos/"
-"web_services>`."
+"כדי לאחזר רשימה של כל מסדי הנתונים המוצגים תחת :ref:`מנהל מסד הנתונים <odoo-"
+"online/database-manager>` באופן פרוגרמטי, יש לקרוא לשיטה `list` של המודל "
+"`odoo.database` דרך :doc:`API חיצוני של JSON-2 <../developer/reference/"
+"external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "כדי לאחזר רשימה זו עם ספריית `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "הדוגמה המקבילה עם JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "יומני ביקורת"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"כדי לאחזר את יומני פעילות המנהל של מסד נתונים ב-Odoo Online, יש לקרוא לשיטה "
+"`get_audit_logs` של המודל `odoo.database` דרך :doc:`API חיצוני של JSON-2 <../"
+"developer/reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"הבקשה חייבת לספק את `db_uuid` או את `subscription_code`. אם `db_uuid` סופק, "
+"יוחזרו היומנים של אותו מסד נתונים. אחרת, ניתן להשתמש ב-`subscription_code` "
+"כדי לאחזר יומנים עבור כל מסדי הנתונים והפרויקטים השייכים למינוי."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"הפרמטר האופציונלי `cursor` הוא ערך אטום המוחזר על ידי בקשה קודמת. כאשר הוא "
+"מסופק, יוחזרו רק יומנים מאוחרים יותר מהסמן."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"אחזור יומני ביקורת כפוף למגבלות קצב, ואין לבצע אותו יותר מפעם אחת כל 5 דקות."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr "התגובה היא אובייקט JSON המכיל את היומנים וסמן אטום לאחזור האצווה הבאה:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "פרמטרי הבקשה הם:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (מחרוזת): ה-UUID של מסד הנתונים. אם הוא סופק, המערכת מתעלמת מ-"
+"`subscription_code`."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (מחרוזת): קוד המינוי. משמש כאשר `db_uuid` אינו מסופק."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (מחרוזת): סמן אטום המוחזר על ידי בקשה קודמת. כאשר הוא מסופק, יוחזרו "
+"רק יומנים מאוחרים יותר מהסמן."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "כל רשומת יומן מכילה:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (מחרוזת): תאריך ושעת היומן ב-UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (מחרוזת): המשתמש שביצע את הפעולה"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr "`database` (מחרוזת): מסד הנתונים הרלוונטי לפעולה, כאשר ישים."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (מחרוזת): קוד המינוי."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (מחרוזת): כתובת ה-IP שממנה בוצעה הפעולה."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (מחרוזת): סוג הפעולה."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (מחרוזת): מידע נוסף על הפעולה."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (בוליאני): האם הפעולה אושרה."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr "הערך `next_cursor` הוא סמן אטום שניתן לספק כ-`cursor` בבקשה הבאה."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -2357,8 +2480,8 @@ msgid ""
 "you've made in the commit from your local repository to the remote "
 "repository so that others can see and use them."
 msgstr ""
-"לאחר יצירת קומיט, תוכל *לדחוף* (push) אותו למאגר מרוחק, כגון מאגר המתארח ב-"
-"GitHub. דחיפת קומיט משמעה שליחת השינויים שביצעת בקומיט מהמאגר המקומי שלך "
+"לאחר יצירת קומיט, תוכל *לדחוף* (push) אותו למאגר מרוחק, כגון מאגר המתארח "
+"ב-GitHub. דחיפת קומיט משמעה שליחת השינויים שביצעת בקומיט מהמאגר המקומי שלך "
 "למאגר המרוחק, כך שאחרים יוכלו לראות אותם ולהשתמש בהם."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:133
@@ -8208,10 +8331,6 @@ msgstr ""
 "לתיקייה עם מהדורת Enterprise. נדרש לשכפל גם את מאגרי הקהילה וגם את מאגרי "
 "Enterprise כדי לקבל התקנת Odoo Enterprise עובדת."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo דורש **Python 3.10** או גרסה מאוחרת יותר כדי לפעול."
@@ -10221,6 +10340,23 @@ msgstr ":doc:`תיעוד Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`גרסאות Odoo נתמכות <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "כדי לאחזר רשימה של כל מסדי הנתונים המוצגים תחת `מנהל מסדי הנתונים "
+#~ "<https://www.odoo.com/my/databases>`_ באופן תכנותי, קרא למתודה `list` של "
+#~ "מודל `odoo.database` באמצעות קריאה ל-:doc:`שירות אינטרנט <../developer/"
+#~ "howtos/web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "כדי לאחזר רשימה זו עם ספריית `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "הדוגמה המקבילה עם JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "מתקדם"

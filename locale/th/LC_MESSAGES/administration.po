@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:12+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/th/>\n"
@@ -1081,24 +1081,131 @@ msgstr "หลังจากลบแล้ว ชื่อของฐาน�
 msgid "Web services"
 msgstr "บริการเว็บ"
 
-#: ../../content/administration/odoo_online.rst:162
-msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
 msgstr ""
-"เพื่อดึงรายการฐานข้อมูลทั้งหมดที่แสดงภายใต้ `ตัวจัดการฐานข้อมูล <https://www.odoo.com/my/"
-"databases>`_ ด้วยโปรแกรม ให้เรียกเมธอด `list` ของโมเดล `odoo.database` "
-"ผ่านการเรียก:doc:`เว็บเซอร์วิส <../developer/howtos/web_services>`"
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "เพื่อดึงรายการนี้ด้วย Library `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:165
+msgid ""
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
+msgstr ""
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "ตัวอย่างที่เทียบเท่ากับ JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
+
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string): ข้อมูลเพิ่มเติมเกี่ยวกับการดำเนินการ"
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (boolean): ระบุว่าการดำเนินการได้รับอนุญาตหรือไม่"
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"ค่า `next_cursor` เป็นเคอร์เซอร์แบบทึบที่สามารถระบุเป็น `cursor` ในคำขอครั้งถัดไปได้"
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1505,22 +1612,27 @@ msgid ""
 "As the execution time of scheduled actions is limited, it is advised to "
 "ensure your scheduled actions:"
 msgstr ""
+"เนื่องจากเวลาในการทำงานของแอ็คชั่นตามกำหนดการมีจำกัด จึงแนะนำให้ตรวจสอบว่าแอ็คชั่นตามกำหนด"
+"การของคุณ:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:343
 msgid "Work on small batches of records."
-msgstr ""
+msgstr "ทำงานกับข้อมูลชุดเล็ก ๆ"
 
 #: ../../content/administration/odoo_sh/advanced.rst:344
 msgid ""
 "Commit their work after processing each batch so that if they are "
 "interrupted by the time limit, they do not need to start over."
 msgstr ""
+"ยืนยันการทำงานหลังจากประมวลผลแต่ละชุดเสร็จแล้ว เพื่อว่าหากถูกขัดจังหวะด้วยข้อจำกัดด้านเวลา จะไ"
+"ม่ต้องเริ่มต้นใหม่"
 
 #: ../../content/administration/odoo_sh/advanced.rst:346
 msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+"มีคุณสมบัติ idempotent กล่าวคือต้องไม่ก่อให้เกิดผลข้างเคียง หากถูกเรียกใช้งานบ่อยกว่าที่คาดไว้"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2111,18 +2223,19 @@ msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
 "involved:"
 msgstr ""
+"เมื่อทำงานกับ Odoo.sh สิ่งสำคัญคือต้องเข้าใจส่วนประกอบหลักที่เกี่ยวข้อง:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
 msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
-msgstr ""
+msgstr ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:15
 msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
-msgstr ""
+msgstr ":ref:`โปรเจกต์ Odoo.sh <odoo-sh/getting-started/components/project>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
-msgstr ""
+msgstr ":ref:`ฐานข้อมูล Odoo <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2130,10 +2243,13 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
+"แม้ว่าทั้งหมดนี้จะเชื่อมโยงกัน แต่แต่ละส่วนก็มีบทบาทที่แตกต่างกันในการพัฒนาและการนำแอปพลิเคชัน "
+"Odoo ไปใช้งาน เมื่อรวมกันแล้วจะกลายเป็นไปป์ไลน์ที่เชื่อมโยงกัน ตั้งแต่การพัฒนาโค้ดไปจนถึงการใช้งา"
+"นจริงทางธุรกิจ"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
-msgstr ""
+msgstr "GitHub repository"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
 msgid ""
@@ -2142,6 +2258,9 @@ msgid ""
 "on GitHub and can be accessed and edited by multiple people on different "
 "computers."
 msgstr ""
+"GitHub repository เปรียบเสมือนโฟลเดอร์บนคอมพิวเตอร์ของคุณที่มีไฟล์และโฟลเดอร์ทั้งหมดสำหรับโ"
+"ปรเจกต์หนึ่ง ๆ ความแตกต่างคือมันถูกจัดเก็บไว้บน GitHub และสามารถเข้าถึงและแก้ไขได้โดยผู้คนหลา"
+"ยคนบนคอมพิวเตอร์ที่แตกต่างกัน"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:31
 msgid ""
@@ -2151,6 +2270,10 @@ msgid ""
 "changes to your project over time, so you can easily roll back to a previous "
 "version if needed."
 msgstr ""
+"กล่าวอีกนัยหนึ่ง GitHub repository คือสถานที่ที่คุณสามารถจัดเก็บไฟล์ของโปรเจกต์และแบ่งปันให้ผู้อื่น"
+"ได้ เพื่อให้พวกเขาสามารถทำงานร่วมกับคุณ แก้ไข และมีส่วนร่วมในโปรเจกต์ของคุณ นอกจากนี้ยังติดตาม"
+"การเปลี่ยนแปลงทั้งหมดของโปรเจกต์ตลอดเวลา ทำให้คุณสามารถย้อนกลับไปยังเวอร์ชั่นก่อนหน้าได้อย่างง่"
+"ายดายหากจำเป็น"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2161,6 +2284,11 @@ msgid ""
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
+"นอกจากนี้ GitHub ยังมีฟีเจอร์มากมายที่ช่วยให้คุณจัดการโปรเจกต์ของคุณได้ เช่น การติดตามปัญหา "
+"(issue tracking) คำขอดึงข้อมูล (pull requests) และการตรวจสอบโค้ด (code reviews) เ"
+"ป็นเครื่องมือที่ทรงพลังสำหรับการจัดการและทำงานร่วมกันในโปรเจกต์ซอฟต์แวร์ และถูกใช้งานอย่างแพร่ห"
+"ลายโดยนักพัฒนาทั่วโลก เป็นพื้นที่ที่มีการควบคุมเวอร์ชั่นซึ่งเก็บซอร์สโค้ดของแอปพลิเคชัน Odoo ไว้ โดยจ"
+"ะติดตามการเปลี่ยนแปลงทุกครั้ง รองรับการทำงานร่วมกัน และสามารถเป็นแบบสาธารณะหรือส่วนตัวก็ได้"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2168,7 +2296,7 @@ msgstr "ตัวอย่าง Github repository"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:48
 msgid "Odoo.sh project"
-msgstr ""
+msgstr "โปรเจกต์ Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
@@ -2177,6 +2305,10 @@ msgid ""
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
+"โปรเจกต์ Odoo.sh คือ *Platform as a Service* (PaaS) ที่เชื่อมต่อกับ GitHub และช่วยให้กา"
+"รพัฒนา ทดสอบ และนำแอปพลิเคชัน Odoo ไปใช้งานเป็นไปอย่างราบรื่น โดยมีเครื่องมือต่าง ๆ เช่น กา"
+"รสำรองข้อมูลอัตโนมัติ สภาพแวดล้อมสำหรับทดสอบ (staging) และไปป์ไลน์การรวมโค้ดอย่างต่อเนื่อง "
+"(continuous integration)"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
@@ -2184,13 +2316,15 @@ msgstr "ตัวอย่างโปรเจกต์ Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:60
 msgid "Odoo database"
-msgstr ""
+msgstr "ฐานข้อมูล Odoo"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:62
 msgid ""
 "An Odoo database stores all the operational data used and generated by Odoo "
 "applications, such as business records, configurations, and user data."
 msgstr ""
+"ฐานข้อมูล Odoo จัดเก็บข้อมูลการดำเนินงานทั้งหมดที่แอปพลิเคชัน Odoo ใช้และสร้างขึ้น เช่น ข้อมูลทาง"
+"ธุรกิจ การกำหนดค่าต่าง ๆ และข้อมูลผู้ใช้"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
@@ -2213,6 +2347,9 @@ msgid ""
 "the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
+"**ผู้ใช้ GitHub**: นักพัฒนาที่มีสิทธิ์เข้าถึง GitHub repository ที่เชื่อมโยงกับโปรเจกต์ Odoo.sh "
+"การมีสิทธิ์เข้าถึง repository ไม่ได้ทำให้บุคคลนั้นกลายเป็นผู้ทำงานร่วม (collaborator) ในโปรเจ"
+"กต์ Odoo.sh โดยอัตโนมัติ"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
@@ -2220,6 +2357,8 @@ msgid ""
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
+"**ผู้ทำงานร่วมใน Odoo.sh**: บุคคลที่จัดการโปรเจกต์ Odoo.sh ผู้ทำงานร่วมแต่ละคนต้องเชื่อมโยงกั"
+"บผู้ใช้ GitHub อย่างไรก็ตาม ผู้ทำงานร่วมไม่ใช่สิ่งเดียวกันกับผู้ใช้ฐานข้อมูล"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
@@ -2227,6 +2366,8 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
+"**ผู้ใช้ฐานข้อมูล**: ผู้ใช้งานปลายทางของฐานข้อมูล Odoo ที่นำไปใช้งานจริง พวกเขาโต้ตอบกับระบบที่"
+"ใช้งานจริง แต่ไม่ได้มีส่วนเกี่ยวข้องกับการพัฒนาหรือการจัดการโปรเจกต์"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
@@ -8117,10 +8258,6 @@ msgstr ""
 "ไปยังโฟลเดอร์ที่มีรุ่นองค์กร จำเป็นต้องโคลนทั้งที่เก็บข้อมูลคอมมูนิตี้และองค์กร เพื่อให้มีการติดตั้ง Odoo "
 "องค์กรที่ใช้งานได้"
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo ต้องใช้ **Python 3.10** หรือใหม่กว่าจึงจะทำงานได้"
@@ -10100,6 +10237,22 @@ msgstr ":doc:`เอกสาร Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Odoo เวอร์ชันที่รองรับ <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "เพื่อดึงรายการฐานข้อมูลทั้งหมดที่แสดงภายใต้ `ตัวจัดการฐานข้อมูล <https://www.odoo.com/"
+#~ "my/databases>`_ ด้วยโปรแกรม ให้เรียกเมธอด `list` ของโมเดล `odoo.database` "
+#~ "ผ่านการเรียก:doc:`เว็บเซอร์วิส <../developer/howtos/web_services>`"
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "เพื่อดึงรายการนี้ด้วย Library `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "ตัวอย่างที่เทียบเท่ากับ JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "ระดับสูง"

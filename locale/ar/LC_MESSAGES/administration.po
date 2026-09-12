@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/ar/>\n"
@@ -1119,25 +1119,151 @@ msgstr "بعد الحذف، يصبح اسم قاعدة البيانات متاح
 msgid "Web services"
 msgstr "خدمات الويب"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "قائمة قواعد البيانات"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"لاسترجاع قائمة بجميع قواعد البيانات المعروضة ضمن `مدير قاعدة البيانات "
-"<https://www.odoo.com/my/databases>`_ برمجيًا، قم باستدعاء طريقة `list` من "
-"نموذج `odoo.database` عبر استدعاء :doc:`خدمة ويب <../developer/howtos/"
-"web_services>`."
+"لاسترجاع قائمة بجميع قواعد البيانات المعروضة ضمن :ref:`مدير قاعدة البيانات "
+"<odoo-online/database-manager>` برمجيًا، استدعِ الطريقة `list` الخاصة بالنموذج "
+"`odoo.database` عبر :doc:`واجهة برمجة التطبيقات الخارجية JSON-2 <../"
+"developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "لاسترجاع هذه القائمة باستخدام مكتبة `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "المثال المكافئ باستخدام JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "سجلات التدقيق"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"لاسترجاع سجلات نشاط المسؤول لقاعدة بيانات Odoo Online، استدعِ الطريقة "
+"`get_audit_logs` الخاصة بالنموذج `odoo.database` عبر :doc:`واجهة برمجة "
+"التطبيقات الخارجية JSON-2 <../developer/reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"يجب أن يوفر الطلب إما `db_uuid` أو `subscription_code`. إذا تم توفير "
+"`db_uuid`، يتم إرجاع سجلات قاعدة البيانات تلك. وإلا، يمكن استخدام "
+"`subscription_code` لاسترجاع سجلات جميع قواعد البيانات والمشاريع التابعة "
+"للاشتراك."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"المعامل الاختياري `cursor` هو قيمة غير شفافة يتم إرجاعها من طلب سابق. عند "
+"توفيره، يتم إرجاع السجلات الأحدث من المؤشر فقط."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"يخضع استرجاع سجلات التدقيق لحدود المعدل، ولا يجب تنفيذه أكثر من مرة واحدة كل 5 "
+"دقائق."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"الاستجابة هي كائن JSON يحتوي على السجلات ومؤشر غير شفاف لاسترجاع الدفعة التالية:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "معاملات الطلب هي:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (نص): المعرف الفريد لقاعدة البيانات. إذا تم توفيره، يتم تجاهل "
+"`subscription_code`."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (نص): رمز الاشتراك. يُستخدم عند عدم توفير `db_uuid`."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (نص): مؤشر غير شفاف يتم إرجاعه من طلب سابق. عند توفيره، يتم إرجاع "
+"السجلات الأحدث من المؤشر فقط."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "يحتوي كل إدخال سجل على:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (نص): تاريخ ووقت السجل بالتوقيت العالمي المنسق (UTC)."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (نص): المستخدم الذي قام بالإجراء"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr "`database` (نص): قاعدة البيانات المعنية بالإجراء، عند الاقتضاء."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (نص): رمز الاشتراك."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (نص): عنوان IP الذي تم تنفيذ الإجراء منه."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (نص): نوع الإجراء."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (سلسلة نصية): معلومات إضافية حول الإجراء."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (قيمة منطقية): ما إذا كان الإجراء مصرحًا به أم لا."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr "قيمة `next_cursor` هي مؤشر معتم يمكن تقديمه كـ `cursor` في طلب لاحق."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1332,8 +1458,8 @@ msgid ""
 "your staging databases."
 msgstr ""
 "العمليات التي تقوم بها على مثيل خادم Odoo ليست معزولة؛ ستنعكس التغييرات في "
-"قاعدة البيانات. تذكر دائمًا إجراء الاختبارات في قواعد بيانات الاختبار (staging) "
-"الخاصة بك."
+"قاعدة البيانات. تذكر دائمًا إجراء الاختبارات في قواعد بيانات الاختبار "
+"(staging) الخاصة بك."
 
 #: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
@@ -1346,9 +1472,9 @@ msgid ""
 "and limitations of the Odoo.sh platform, and assumes that you already know "
 "how to use a debugger."
 msgstr ""
-"لا يختلف تصحيح أخطاء بناء Odoo.sh كثيرًا عن تصحيح أخطاء تطبيق Python آخر. لذلك"
-"، يهدف هذا القسم إلى تغطية خصائص وقيود منصة Odoo.sh، ويفترض أنك تعرف بالفعل "
-"كيفية استخدام أداة تصحيح الأخطاء (debugger)."
+"لا يختلف تصحيح أخطاء بناء Odoo.sh كثيرًا عن تصحيح أخطاء تطبيق Python آخر. "
+"لذلك، يهدف هذا القسم إلى تغطية خصائص وقيود منصة Odoo.sh، ويفترض أنك تعرف "
+"بالفعل كيفية استخدام أداة تصحيح الأخطاء (debugger)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
@@ -1424,11 +1550,11 @@ msgid ""
 "main codebase. You maintain precise version control by choosing exact "
 "branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
-"تتيح لك `Git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>"
-"`_ ربط المستودعات الخارجية مباشرة بمشروعك دون نسخ ولصق الكود، مما يبسّط عملية "
-"النشر عن طريق استنساخ التبعيات جنبًا إلى جنب مع الكود الأساسي لمشروعك. كما "
-"تحافظ على تحكم دقيق في الإصدارات من خلال اختيار الفروع المحددة وتثبيت مراجعات "
-"التزام معينة لتحديثها متى شئت."
+"تتيح لك `Git submodules <https://git-scm.com/book/en/v2/Git-Tools-"
+"Submodules>`_ ربط المستودعات الخارجية مباشرة بمشروعك دون نسخ ولصق الكود، مما "
+"يبسّط عملية النشر عن طريق استنساخ التبعيات جنبًا إلى جنب مع الكود الأساسي "
+"لمشروعك. كما تحافظ على تحكم دقيق في الإصدارات من خلال اختيار الفروع المحددة "
+"وتثبيت مراجعات التزام معينة لتحديثها متى شئت."
 
 #: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
@@ -1471,8 +1597,8 @@ msgid ""
 "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
 "on Odoo.sh`."
 msgstr ""
-"في الزاوية اليمنى العلوية، انقر على :guilabel:`وحدة فرعية`، ثم "
-":guilabel:`تشغيل على Odoo.sh`."
+"في الزاوية اليمنى العلوية، انقر على :guilabel:`وحدة فرعية`، "
+"ثم :guilabel:`تشغيل على Odoo.sh`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:274
 msgid "In the dialog box, fill in the following:"
@@ -2271,9 +2397,9 @@ msgid ""
 "version if needed."
 msgstr ""
 "بعبارة أخرى، مستودع GitHub هو مكان يمكنك فيه تخزين ملفات مشروعك ومشاركتها مع "
-"الآخرين، حتى يتمكنوا من التعاون معك، وإجراء تعديلات، والمساهمة في مشروعك. كما "
-"يتتبع جميع التغييرات التي تطرأ على مشروعك بمرور الوقت، مما يتيح لك العودة "
-"بسهولة إلى نسخة سابقة عند الحاجة."
+"الآخرين، حتى يتمكنوا من التعاون معك، وإجراء تعديلات، والمساهمة في مشروعك. "
+"كما يتتبع جميع التغييرات التي تطرأ على مشروعك بمرور الوقت، مما يتيح لك "
+"العودة بسهولة إلى نسخة سابقة عند الحاجة."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2287,8 +2413,8 @@ msgstr ""
 "بالإضافة إلى ذلك، يوفر GitHub العديد من الميزات لمساعدتك على إدارة مشروعك، "
 "مثل تتبع المشكلات، وطلبات السحب، ومراجعات الكود. إنه أداة قوية لإدارة مشاريع "
 "البرمجيات والتعاون فيها، ويستخدمه المطورون على نطاق واسع حول العالم. وهو "
-"مساحة خاضعة للتحكم بالإصدارات يُخزَّن فيها الكود المصدري لتطبيقات Odoo. يتتبع كل "
-"تغيير، ويدعم التعاون، ويمكن أن يكون عاماً أو خاصاً."
+"مساحة خاضعة للتحكم بالإصدارات يُخزَّن فيها الكود المصدري لتطبيقات Odoo. يتتبع "
+"كل تغيير، ويدعم التعاون، ويمكن أن يكون عاماً أو خاصاً."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2413,8 +2539,8 @@ msgid ""
 "them, just like you would with any other repository."
 msgstr ""
 "عند تفريع مستودع، تُنشئ نسختك الخاصة منه، متضمنة جميع الملفات والمجلدات "
-"الموجودة في المستودع الأصلي. يمكنك بعد ذلك إجراء تغييرات على الملفات في نسختك "
-"من المستودع وتأكيدها، تماماً كما تفعل مع أي مستودع آخر."
+"الموجودة في المستودع الأصلي. يمكنك بعد ذلك إجراء تغييرات على الملفات في "
+"نسختك من المستودع وتأكيدها، تماماً كما تفعل مع أي مستودع آخر."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:106
 msgid ""
@@ -2425,9 +2551,9 @@ msgid ""
 "changes as needed."
 msgstr ""
 "تكمن فائدة تفريع مستودع في إمكانية إجراء تغييرات على الكود دون التأثير على "
-"النسخة الأصلية، وهو أمر مفيد عند رغبتك في تجربة ميزات جديدة أو إصلاح أخطاء في "
-"كود شخص آخر. يمكنك أيضاً استخدام المستودع المُفرَّع كنقطة انطلاق لمشروعك، وإجراء "
-"التغييرات حسب الحاجة."
+"النسخة الأصلية، وهو أمر مفيد عند رغبتك في تجربة ميزات جديدة أو إصلاح أخطاء "
+"في كود شخص آخر. يمكنك أيضاً استخدام المستودع المُفرَّع كنقطة انطلاق لمشروعك، "
+"وإجراء التغييرات حسب الحاجة."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:111
 msgid ""
@@ -2505,8 +2631,8 @@ msgid ""
 msgstr ""
 "دمج فرع في فرع آخر هو عملية جمع التغييرات التي أُجريت في أحد الفروع مع الفرع "
 "الآخر. على سبيل المثال، لنفترض أنك أنشأت فرعاً جديداً باسم `feature-branch` "
-"للعمل على ميزة جديدة لمشروعك. بمجرد الانتهاء من إجراء التغييرات على هذا الفرع"
-"، يمكنك دمج هذه التغييرات مرة أخرى في الفرع الرئيسي (الذي يُسمى غالباً "
+"للعمل على ميزة جديدة لمشروعك. بمجرد الانتهاء من إجراء التغييرات على هذا "
+"الفرع، يمكنك دمج هذه التغييرات مرة أخرى في الفرع الرئيسي (الذي يُسمى غالباً "
 "`master` أو `main`)."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:147
@@ -3833,9 +3959,9 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
-":guilabel:`تثبيت وحداتي فقط (لا يشمل الوحدات الفرعية)`: يُثبّت فقط وحدات الفرع، "
-"باستثناء :ref:`الوحدات الفرعية <odoo-sh/advanced/submodules>`. هذا هو الخيار "
-"الافتراضي."
+":guilabel:`تثبيت وحداتي فقط (لا يشمل الوحدات الفرعية)`: يُثبّت فقط وحدات "
+"الفرع، باستثناء :ref:`الوحدات الفرعية <odoo-sh/advanced/submodules>`. هذا هو "
+"الخيار الافتراضي."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4799,8 +4925,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
-"بالنسبة للتطبيقات المجتمعية المتاحة للجميع، يمكنك أيضًا التفكير في استخدام "
-":ref:`الوحدات الفرعية <odoo-sh/advanced/submodules>`"
+"بالنسبة للتطبيقات المجتمعية المتاحة للجميع، يمكنك أيضًا التفكير في "
+"استخدام :ref:`الوحدات الفرعية <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -8447,10 +8573,6 @@ msgstr ""
 "للمؤسسات. يلزم استنساخ مستودعات كلا الإصدارين أودو المجتمعي وأودو للمؤسسات "
 "حتى تتم عملية تثبيت إصدار أودو للمؤسسات بشكل فعال. "
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "يتطلب أودو إصدار **Python 3.10** أو إصدار أحدث للتشغيل. "
@@ -10507,6 +10629,23 @@ msgstr ":doc:`وثائق Odoo.sh <odoo_sh>` "
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`إصدارات Odoo المدعومة <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "لاسترجاع قائمة بجميع قواعد البيانات المعروضة ضمن `مدير قاعدة البيانات "
+#~ "<https://www.odoo.com/my/databases>`_ برمجيًا، قم باستدعاء طريقة `list` من "
+#~ "نموذج `odoo.database` عبر استدعاء :doc:`خدمة ويب <../developer/howtos/"
+#~ "web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "لاسترجاع هذه القائمة باستخدام مكتبة `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "المثال المكافئ باستخدام JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "متقدم"

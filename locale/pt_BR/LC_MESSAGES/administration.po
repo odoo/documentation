@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:12+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
 "18-doc/administration/pt_BR/>\n"
@@ -1159,25 +1159,157 @@ msgstr ""
 msgid "Web services"
 msgstr "Serviços web"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "Lista de bases de dados"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"Para recuperar uma lista de todos os bancos de dados exibidos no "
-"`gerenciador de banco de dados <https://www.odoo.com/my/databases>`_ "
-"programaticamente, chame o método `list` do modelo `odoo.database` através "
-"de uma chamada de :doc:`serviço web <../developer/howtos/web_services>`."
+"Para obter uma lista de todas as bases de dados exibidas em "
+":ref:`gerenciador de bases de dados <odoo-online/database-manager>` de forma "
+"programática, chame o método `list` do modelo `odoo.database` por meio da "
+":doc:`API externa JSON-2 <../developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Para recuperar esta lista com a biblioteca `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "O exemplo equivalente com JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "Logs de auditoria"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"Para obter os logs de atividade de administrador de uma base de dados do "
+"Odoo Online, chame o método `get_audit_logs` do modelo `odoo.database` por "
+"meio da :doc:`API externa JSON-2 <../developer/reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"A solicitação deve fornecer `db_uuid` ou `subscription_code`. Se `db_uuid` "
+"for fornecido, os logs dessa base de dados são retornados. Caso contrário, "
+"`subscription_code` pode ser usado para obter os logs de todas as bases de "
+"dados e projetos pertencentes à assinatura."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"O parâmetro opcional `cursor` é um valor opaco retornado por uma solicitação "
+"anterior. Quando fornecido, apenas os logs mais recentes que o cursor são "
+"retornados."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"A obtenção de logs de auditoria está sujeita a limites de taxa e não deve "
+"ser realizada mais de uma vez a cada 5 minutos."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"A resposta é um objeto JSON contendo os logs e um cursor opaco para obter o "
+"próximo lote:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "Os parâmetros da solicitação são:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (string): o UUID da base de dados. Se fornecido, "
+"`subscription_code` é ignorado."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (string): o código da assinatura. Usado quando `db_uuid` "
+"não é fornecido."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (string): um cursor opaco retornado por uma solicitação anterior. "
+"Quando fornecido, apenas os logs mais recentes que o cursor são retornados."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "Cada entrada de log contém:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (string): a data e hora do log em UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (string): o usuário que realizou a ação"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+"`database` (string): a base de dados envolvida na ação, quando aplicável."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (string): o código da assinatura."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (string): o endereço IP a partir do qual a ação foi realizada."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (string): o tipo de ação."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string): informações adicionais sobre a ação."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (booleano): indica se a ação foi autorizada."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"O valor `next_cursor` é um cursor opaco que pode ser fornecido como `cursor` "
+"em uma solicitação subsequente."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1424,8 +1556,8 @@ msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
-"permanentemente, adicionando `pudb` ou `ipdb` ao arquivo "
-":file:`requirements.txt` do seu projeto, ou"
+"permanentemente, adicionando `pudb` ou `ipdb` ao "
+"arquivo :file:`requirements.txt` do seu projeto, ou"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
@@ -1486,6 +1618,11 @@ msgid ""
 "deploy key in your project and repository settings <odoo-sh/settings/"
 "submodules>` when integrating private repositories."
 msgstr ""
+"No Odoo.sh, a plataforma detecta automaticamente os submódulos e os adiciona "
+"ao seu caminho de complementos para instalação do banco de dados, desde que "
+"você :ref:`configure uma chave de implantação nas configurações do seu "
+"projeto e repositório <odoo-sh/settings/submodules>` ao integrar "
+"repositórios privados."
 
 #: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
@@ -1493,48 +1630,58 @@ msgstr "Adicionar um submódulo"
 
 #: ../../content/administration/odoo_sh/advanced.rst:265
 msgid "With Odoo.sh"
-msgstr ""
+msgstr "Com o Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced.rst:268
 msgid ""
 "Currently, it is not possible to add **private** repositories with Odoo.sh. "
 "You can nevertheless do so with Git."
 msgstr ""
+"Atualmente, não é possível adicionar repositórios **privados** com o "
+"Odoo.sh. No entanto, você pode fazer isso com o Git."
 
 #: ../../content/administration/odoo_sh/advanced.rst:271
 msgid ""
 "From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh "
 "project, choose the branch in which you want to add a submodule."
 msgstr ""
+"Na visualização :doc:`Ramificações <getting_started/branches>` do seu "
+"projeto Odoo.sh, escolha a ramificação na qual deseja adicionar um submódulo."
 
 #: ../../content/administration/odoo_sh/advanced.rst:273
 msgid ""
 "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
 "on Odoo.sh`."
 msgstr ""
+"No canto superior direito, clique em :guilabel:`Submódulo` e, em seguida, em "
+":guilabel:`Executar no Odoo.sh`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:274
 msgid "In the dialog box, fill in the following:"
-msgstr ""
+msgstr "Na caixa de diálogo, preencha o seguinte:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:276
 msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
-msgstr ""
+msgstr ":guilabel:`URL do repositório`: o URL SSH do repositório"
 
 #: ../../content/administration/odoo_sh/advanced.rst:279
 msgid ""
 "On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
 msgstr ""
+"No GitHub, clique em :guilabel:`Clone`, selecione :guilabel:`SSH` e copie o "
+"URL."
 
 #: ../../content/administration/odoo_sh/advanced.rst:284
 msgid ":guilabel:`Branch`: the specific branch that should be used"
-msgstr ""
+msgstr ":guilabel:`Ramificação`: a ramificação específica que deve ser usada"
 
 #: ../../content/administration/odoo_sh/advanced.rst:285
 msgid ""
 ":guilabel:`Path`: the folder in which the submodule should be added to in "
 "your branch"
 msgstr ""
+":guilabel:`Caminho`: a pasta na qual o submódulo deve ser adicionado em sua "
+"ramificação"
 
 #: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
@@ -1550,37 +1697,44 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:299
 msgid "Add the submodule:"
-msgstr ""
+msgstr "Adicione o submódulo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:305
 msgid ""
 "*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the "
 "repository you want to add as a submodule"
 msgstr ""
+"*<git@yourprovider.com>:<username/repository.git>*: o URL SSH do repositório "
+"que você deseja adicionar como submódulo"
 
 #: ../../content/administration/odoo_sh/advanced.rst:307
 msgid "*<branch>*: the branch you want to use in the above repository"
-msgstr ""
+msgstr "*<branch>*: a ramificação que você deseja usar no repositório acima"
 
 #: ../../content/administration/odoo_sh/advanced.rst:308
 msgid "*<path>*: the folder in which you want to add this submodule"
-msgstr ""
+msgstr "*<path>*: a pasta na qual você deseja adicionar esse submódulo"
 
 #: ../../content/administration/odoo_sh/advanced.rst:310
 msgid "Commit and push the changes:"
-msgstr ""
+msgstr "Faça o commit e o push das alterações:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:316
 msgid ""
 "*<remote>*: the repository on which you want to push your changes. On a "
 "standard Git setup, this is *origin*."
 msgstr ""
+"*<remote>*: o repositório no qual você deseja fazer o push de suas "
+"alterações. Em uma configuração padrão do Git, esse é o *origin*."
 
 #: ../../content/administration/odoo_sh/advanced.rst:318
 msgid ""
 "*<branch>*: the branch on which you want to push your changes. Most likely, "
 "the branch you checked out in the first step."
 msgstr ""
+"*<branch>*: a ramificação na qual você deseja fazer o push de suas "
+"alterações. Provavelmente, a ramificação que você fez checkout na primeira "
+"etapa."
 
 #: ../../content/administration/odoo_sh/advanced.rst:322
 msgid ""
@@ -1590,6 +1744,12 @@ msgid ""
 "this folder, and you can hand-pick the modules by creating `symbolic links "
 "<https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
+"Ao adicionar um repositório que contém muitos módulos, talvez você queira "
+"ignorar alguns deles, caso sejam instalados automaticamente. Para fazer "
+"isso, adicione um :code:`.` como prefixo na pasta do seu submódulo (por "
+"exemplo, `.pasta`). A plataforma ignorará essa pasta, e você poderá "
+"selecionar manualmente os módulos criando `links simbólicos <https://"
+"en.wikipedia.org/wiki/Symbolic_link>`_ para eles a partir de outra pasta."
 
 #: ../../content/administration/odoo_sh/advanced.rst:330
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:80
@@ -1604,12 +1764,20 @@ msgid ""
 "each customer is guaranteed a fair share of the server's resources. "
 "Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
+"Na plataforma Odoo.sh, as ações agendadas são implementadas de forma um "
+"pouco diferente de um servidor Odoo comum e são executadas com base no "
+"melhor esforço. Isso ocorre porque pode haver vários clientes no mesmo "
+"servidor, e cada cliente tem garantida uma parte justa dos recursos do "
+"servidor. Portanto, não é possível garantir um horário exato de execução "
+"para as ações agendadas."
 
 #: ../../content/administration/odoo_sh/advanced.rst:338
 msgid ""
 "Do not expect any scheduled action to be run more often than every five "
 "minutes."
 msgstr ""
+"Não espere que nenhuma ação agendada seja executada com mais frequência do "
+"que a cada cinco minutos."
 
 #: ../../content/administration/odoo_sh/advanced.rst:340
 msgid ""
@@ -8815,10 +8983,6 @@ msgstr ""
 "repositórios Community e Enterprise para ter uma instalação funcional do "
 "Odoo Enterprise."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "O Odoo requer **Python 3.10** ou posterior para ser executado."
@@ -10974,6 +11138,24 @@ msgstr ":doc:`Documentação do Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Versões suportadas do Odoo <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Para recuperar uma lista de todos os bancos de dados exibidos no "
+#~ "`gerenciador de banco de dados <https://www.odoo.com/my/databases>`_ "
+#~ "programaticamente, chame o método `list` do modelo `odoo.database` "
+#~ "através de uma chamada de :doc:`serviço web <../developer/howtos/"
+#~ "web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Para recuperar esta lista com a biblioteca `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "O exemplo equivalente com JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "Avançado"

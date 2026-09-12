@@ -30,8 +30,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:12+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-18-doc/administration/zh_Hans/>\n"
@@ -1060,24 +1060,130 @@ msgstr "删除后，任何人都可以使用数据库名称。"
 msgid "Web services"
 msgstr "网络服务"
 
-#: ../../content/administration/odoo_online.rst:162
-msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
 msgstr ""
-"要通过编程方式检索数据库管理器\\ `database manager <https://www.odoo.com/my/"
-"databases>`_\\ 下显示的所有数据库列表，请通过\\ :doc:`web 服务 <../developer/"
-"howtos/web_services>`\\ 调用\\ `odoo.database`\\ 模型的\\ `list`\\ 方法。"
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "要使用\\ `xmlrpc.client`\\ 库检索此列表："
+#: ../../content/administration/odoo_online.rst:165
+msgid ""
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
+msgstr ""
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "使用 JSON-RPC 的等效示例："
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
+
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details`\\ （字符串）：关于该操作的附加信息。"
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized`\\ （布尔值）：该操作是否已获授权。"
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr "`next_cursor`\\ 值是一个不透明的游标，可作为\\ `cursor`\\ 在后续请求中提供。"
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -2098,8 +2204,8 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
-"虽然它们彼此互联，但每个组件在 Odoo 应用程序的开发和部署中都扮演着不同的角色"
-"。它们共同构成了一个从代码开发到实际业务使用的完整流程。"
+"虽然它们彼此互联，但每个组件在 Odoo 应用程序的开发和部署中都扮演着不同的角"
+"色。它们共同构成了一个从代码开发到实际业务使用的完整流程。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
@@ -2214,8 +2320,8 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
-"**数据库用户**：已部署的\\ Odoo\\ 数据库的最终用户。他们与实际运行的系统交互"
-"，但不参与开发或项目管理。"
+"**数据库用户**：已部署的\\ Odoo\\ 数据库的最终用户。他们与实际运行的系统交"
+"互，但不参与开发或项目管理。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
@@ -3569,8 +3675,8 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
-":guilabel:`仅安装我的模块（不包括子模块）`：只安装该分支的模块，不包"
-"括:ref:`子模块 <odoo-sh/advanced/submodules>`。这是默认选项。"
+":guilabel:`仅安装我的模块（不包括子模块）`：只安装该分支的模块，不包括:ref:`"
+"子模块 <odoo-sh/advanced/submodules>`。这是默认选项。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -7911,10 +8017,6 @@ msgstr ""
 "器代码位于社区版中。运行企业版意味着从社区版运行服务器，并将组件路径选项设置"
 "为具有企业版的文件夹。要进行Odoo 企业版安装，您需要克隆社区版和企业版储存库。"
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo 需要**Python 3.10**或更高版本才能运行。"
@@ -9827,6 +9929,23 @@ msgstr ":doc:`Odoo.sh documentation <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`已支持的 Odoo 版本 <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "要通过编程方式检索数据库管理器\\ `database manager <https://www.odoo.com/"
+#~ "my/databases>`_\\ 下显示的所有数据库列表，请通过\\ :doc:`web 服务 <../"
+#~ "developer/howtos/web_services>`\\ 调用\\ `odoo.database`\\ 模型的\\ "
+#~ "`list`\\ 方法。"
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "要使用\\ `xmlrpc.client`\\ 库检索此列表："
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "使用 JSON-RPC 的等效示例："
 
 #~ msgid "Advanced"
 #~ msgstr "高级"
