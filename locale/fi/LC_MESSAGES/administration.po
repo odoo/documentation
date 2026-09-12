@@ -27,8 +27,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:32+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-17-doc/"
 "administration/fi/>\n"
@@ -1147,26 +1147,132 @@ msgstr "Poistamisen jälkeen tietokannan nimi tulee kenen tahansa saataville."
 msgid "Web services"
 msgstr "Verkkopalvelut"
 
-#: ../../content/administration/odoo_online.rst:162
-msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
 msgstr ""
-"Hakeaksesi luettelon kaikista tietokannoista, jotka näkyvät "
-"`tietokantahallinnassa <https://www.odoo.com/my/databases>`_ "
-"ohjelmallisesti, kutsu `list`-metodia `odoo.database`-"
-"mallista :doc:`verkkopalvelukutsun <../developer/howtos/web_services>` "
-"kautta."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Tämän luettelon hakeminen `xmlrpc.client`-kirjastolla:"
+#: ../../content/administration/odoo_online.rst:165
+msgid ""
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
+msgstr ""
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "Vastaava esimerkki JSON-RPC:llä:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
+
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (merkkijono): toiminnon tyyppi."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (merkkijono): lisätietoja toiminnosta."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (totuusarvo): oliko toiminto valtuutettu."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"Arvo `next_cursor` on läpinäkymätön kursori, joka voidaan antaa parametrina "
+"`cursor` seuraavassa pyynnössä."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1443,6 +1549,10 @@ msgid ""
 "deploy key in your project and repository settings <odoo-sh/settings/"
 "submodules>` when integrating private repositories."
 msgstr ""
+"Odoo.sh-alustalla alialimoduulit tunnistetaan automaattisesti ja lisätään "
+"tietokannan asennusta varten lisäosien polkuun, kunhan olet "
+":ref:`määrittänyt käyttöönottoavaimen projektin ja tietovaraston asetuksissa "
+"<odoo-sh/settings/submodules>` yksityisiä tietovarastoja integroitaessa."
 
 #: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
@@ -1450,48 +1560,56 @@ msgstr "Alimoduulin lisääminen"
 
 #: ../../content/administration/odoo_sh/advanced.rst:265
 msgid "With Odoo.sh"
-msgstr ""
+msgstr "Odoo.sh:n kanssa"
 
 #: ../../content/administration/odoo_sh/advanced.rst:268
 msgid ""
 "Currently, it is not possible to add **private** repositories with Odoo.sh. "
 "You can nevertheless do so with Git."
 msgstr ""
+"Tällä hetkellä **yksityisten** tietovarastojen lisääminen ei ole mahdollista "
+"Odoo.sh:ssa. Voit kuitenkin tehdä sen Gitin avulla."
 
 #: ../../content/administration/odoo_sh/advanced.rst:271
 msgid ""
 "From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh "
 "project, choose the branch in which you want to add a submodule."
 msgstr ""
+"Valitse Odoo.sh-projektisi :doc:`Haarat <getting_started/branches>`-"
+"näkymässä haara, johon haluat lisätä alimoduulin."
 
 #: ../../content/administration/odoo_sh/advanced.rst:273
 msgid ""
 "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
 "on Odoo.sh`."
 msgstr ""
+"Napsauta oikeassa yläkulmassa :guilabel:`Alimoduuli` ja sitten "
+":guilabel:`Suorita Odoo.sh:ssa`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:274
 msgid "In the dialog box, fill in the following:"
-msgstr ""
+msgstr "Täytä valintaikkunassa seuraavat tiedot:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:276
 msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
-msgstr ""
+msgstr ":guilabel:`Tietovaraston URL-osoite`: tietovaraston SSH-osoite"
 
 #: ../../content/administration/odoo_sh/advanced.rst:279
 msgid ""
 "On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
 msgstr ""
+"Napsauta GitHubissa :guilabel:`Clone`, valitse :guilabel:`SSH` ja kopioi "
+"osoite."
 
 #: ../../content/administration/odoo_sh/advanced.rst:284
 msgid ":guilabel:`Branch`: the specific branch that should be used"
-msgstr ""
+msgstr ":guilabel:`Haara`: käytettävä haara"
 
 #: ../../content/administration/odoo_sh/advanced.rst:285
 msgid ""
 ":guilabel:`Path`: the folder in which the submodule should be added to in "
 "your branch"
-msgstr ""
+msgstr ":guilabel:`Polku`: kansio, johon alimoduuli lisätään haarassasi"
 
 #: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
@@ -1507,37 +1625,43 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:299
 msgid "Add the submodule:"
-msgstr ""
+msgstr "Lisää alimoduuli:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:305
 msgid ""
 "*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the "
 "repository you want to add as a submodule"
 msgstr ""
+"*<git@yourprovider.com>:<username/repository.git>*: sen tietovaraston SSH-"
+"osoite, jonka haluat lisätä alimoduuliksi"
 
 #: ../../content/administration/odoo_sh/advanced.rst:307
 msgid "*<branch>*: the branch you want to use in the above repository"
-msgstr ""
+msgstr "*<branch>*: haara, jota haluat käyttää yllä mainitussa tietovarastossa"
 
 #: ../../content/administration/odoo_sh/advanced.rst:308
 msgid "*<path>*: the folder in which you want to add this submodule"
-msgstr ""
+msgstr "*<path>*: kansio, johon haluat lisätä tämän alimoduulin"
 
 #: ../../content/administration/odoo_sh/advanced.rst:310
 msgid "Commit and push the changes:"
-msgstr ""
+msgstr "Vahvista ja lähetä muutokset:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:316
 msgid ""
 "*<remote>*: the repository on which you want to push your changes. On a "
 "standard Git setup, this is *origin*."
 msgstr ""
+"*<remote>*: tietovarasto, johon haluat lähettää muutoksesi. Tavallisessa Git-"
+"asennuksessa tämä on *origin*."
 
 #: ../../content/administration/odoo_sh/advanced.rst:318
 msgid ""
 "*<branch>*: the branch on which you want to push your changes. Most likely, "
 "the branch you checked out in the first step."
 msgstr ""
+"*<branch>*: haara, johon haluat lähettää muutoksesi. Todennäköisesti se "
+"haara, jonka valitsit ensimmäisessä vaiheessa."
 
 #: ../../content/administration/odoo_sh/advanced.rst:322
 msgid ""
@@ -1547,6 +1671,12 @@ msgid ""
 "this folder, and you can hand-pick the modules by creating `symbolic links "
 "<https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
+"Kun lisäät tietovaraston, joka sisältää useita moduuleja, saatat haluta "
+"jättää osan niistä huomiotta, jos jotkin asentuvat automaattisesti. Lisää "
+"tätä varten alimoduulin kansion nimen eteen :code:`.` (esim. `.folder`). "
+"Alusta jättää tämän kansion huomiotta, ja voit valita moduulit itse luomalla "
+"niihin `symbolisia linkkejä <https://en.wikipedia.org/wiki/Symbolic_link>`_ "
+"toisesta kansiosta."
 
 #: ../../content/administration/odoo_sh/advanced.rst:330
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:80
@@ -1561,12 +1691,20 @@ msgid ""
 "each customer is guaranteed a fair share of the server's resources. "
 "Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
+"Odoo.sh-alustalla ajastetut toiminnot toteutetaan hieman eri tavalla kuin "
+"tavallisella Odoo-palvelimella, ja ne suoritetaan parhaan mahdollisen "
+"palvelun periaatteella. Tämä johtuu siitä, että samalla palvelimella voi "
+"olla useita asiakkaita, ja jokaiselle asiakkaalle taataan oikeudenmukainen "
+"osuus palvelimen resursseista. Siksi ajastettujen toimintojen tarkkaa "
+"suoritusaikaa ei voida taata."
 
 #: ../../content/administration/odoo_sh/advanced.rst:338
 msgid ""
 "Do not expect any scheduled action to be run more often than every five "
 "minutes."
 msgstr ""
+"Älä oleta, että mikään ajastettu toiminto suoritettaisiin useammin kuin "
+"viiden minuutin välein."
 
 #: ../../content/administration/odoo_sh/advanced.rst:340
 msgid ""
@@ -3620,6 +3758,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"Manuaalisten varmuuskopioiden tarkoituksena on luoda tietty tilannevedos "
+"tuotanto- tai testausvaiheen tietokannoista (ei saatavilla kehitysvaiheen "
+"tietokannoille). Nämä säilyvät saatavilla kolme päivää. Päivittäisiä "
+"manuaalisia varmuuskopioita voi kuitenkin tehdä enintään viisi."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -8577,10 +8719,6 @@ msgstr ""
 "kansioon. Sekä Community- että Enterprise-repositorioiden kloonaus vaaditaan "
 "toimivan Odoo Enterprise -asennuksen saamiseksi."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo vaatii **Python 3.10** -version tai uudemman toimiakseen."
@@ -9442,7 +9580,7 @@ msgstr "Vakiotuen päättyminen"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -9463,7 +9601,7 @@ msgstr "Ei saatavilla"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "July 2026"
-msgstr ""
+msgstr "Heinäkuu 2026"
 
 #: ../../content/administration/standard_extended_support.rst:41
 msgid "Odoo SaaS 19.3"
@@ -10690,6 +10828,24 @@ msgstr ":doc:`Odoo.sh-dokumentaatio <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Tuetut Odoo-versiot <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Hakeaksesi luettelon kaikista tietokannoista, jotka näkyvät "
+#~ "`tietokantahallinnassa <https://www.odoo.com/my/databases>`_ "
+#~ "ohjelmallisesti, kutsu `list`-metodia `odoo.database`-"
+#~ "mallista :doc:`verkkopalvelukutsun <../developer/howtos/web_services>` "
+#~ "kautta."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Tämän luettelon hakeminen `xmlrpc.client`-kirjastolla:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "Vastaava esimerkki JSON-RPC:llä:"
 
 #~ msgid "Advanced"
 #~ msgstr "Edistyneet"

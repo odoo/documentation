@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-17-doc/administration/zh_Hant/>\n"
@@ -1047,25 +1047,143 @@ msgstr "刪除後，資料庫名稱將可供任何人使用。"
 msgid "Web services"
 msgstr "網頁服務"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "資料庫清單"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"若要以程式化方式擷取\\ `資料庫管理器\\ <https://www.odoo.com/my/"
-"databases>`_\\ 下顯示的所有資料庫清單，請透過\\ :doc:`網路服務 <../developer/"
-"howtos/web_services>`\\ 呼叫來呼叫\\ ``odoo.database``\\ 模型的\\ ``list``\\ "
-"方法。"
+"如要以程式設計方式，取得\\ :ref:`資料庫管理員 <odoo-online/database-manager>"
+"`\\ 下顯示的所有資料庫清單，請透過\\ :doc:`外部 JSON-2 API <../developer/"
+"reference/external_api>`\\ 呼叫 `odoo.database` 模型的 `list` 方法。"
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "若要使用\\ ``xmlrpc.client``\\ 程式庫擷取此清單："
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "使用 JSON-RPC 的等效範例："
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "稽核日誌"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"如要取得 Odoo 雲端版資料庫的管理員活動日誌，請透過\\ :doc:`外部 JSON-2 API "
+"<../developer/reference/external_api>`\\ 呼叫 `odoo.database` 模型的 "
+"`get_audit_logs` 方法。"
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"請求必須提供 `db_uuid` 或 `subscription_code` 其中之一。如果提供了 "
+"`db_uuid`，則會傳回該資料庫的日誌。否則，可以使用 `subscription_code` 來取得"
+"屬於該訂閱的所有資料庫和專案的日誌。"
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"選填的 `cursor` 是先前請求傳回的不透明值。如有提供，則只會傳回比該指標更新的"
+"日誌。"
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr "稽核日誌的擷取受速率限制約束，且每 5 分鐘不得執行超過一次。"
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr "回應是一個 JSON 物件，其中包含日誌和用於擷取下一批資料的不透明指標："
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "請求參數如下："
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr "`db_uuid`（字串）：資料庫的 UUID。如有提供，則會忽略 `subscription_code`。"
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr "`subscription_code`（字串）：訂閱代碼。在未提供 `db_uuid` 時使用。"
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor`（字串）：先前請求傳回的不透明指標。如有提供，則只會傳回比該指標更新"
+"的日誌。"
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "每個日誌項目包含："
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date`（字串）：日誌的 UTC 日期和時間。"
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user`（字串）：執行該動作的使用者"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr "`database`（字串）：該動作所涉及的資料庫（如適用）。"
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription`（字串）：訂閱代碼。"
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip`（字串）：執行該動作所使用的 IP 位址。"
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action`（字串）：動作的類型。"
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details`（字串）：關於此動作的其他資訊。"
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized`（布林值）：此動作是否已獲授權。"
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr "`next_cursor` 的值是一個不透明的指標，可在後續請求中作為 `cursor` 提供。"
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1468,23 +1586,23 @@ msgstr ""
 msgid ""
 "As the execution time of scheduled actions is limited, it is advised to "
 "ensure your scheduled actions:"
-msgstr ""
+msgstr "由於排程動作的執行時間有限，建議確保您的排程動作："
 
 #: ../../content/administration/odoo_sh/advanced.rst:343
 msgid "Work on small batches of records."
-msgstr ""
+msgstr "以小批次記錄進行處理。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:344
 msgid ""
 "Commit their work after processing each batch so that if they are "
 "interrupted by the time limit, they do not need to start over."
-msgstr ""
+msgstr "每處理完一批後即提交工作，這樣即使因時間限制而中斷，也不需要從頭開始。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:346
 msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
-msgstr ""
+msgstr "具有冪等性，即如果比預期更頻繁地啟動，也不應造成副作用。"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2065,19 +2183,19 @@ msgstr "主要元件"
 msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
 "involved:"
-msgstr ""
+msgstr "使用 Odoo.sh 時，了解其中涉及的主要元件十分重要："
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
 msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
-msgstr ""
+msgstr ":ref:`GitHub 儲存庫 <odoo-sh/getting-started/components/github>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:15
 msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
-msgstr ""
+msgstr ":ref:`Odoo.sh 專案 <odoo-sh/getting-started/components/project>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
-msgstr ""
+msgstr ":ref:`Odoo 資料庫 <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2085,10 +2203,12 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
+"雖然這些元件彼此相互關聯，但每個元件在 Odoo 應用程式的開發和部署過程中都扮演"
+"著不同的角色。它們共同組成一個從程式碼開發到實際商業應用的完整流程。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
-msgstr ""
+msgstr "GitHub 儲存庫"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
 msgid ""
@@ -2097,6 +2217,8 @@ msgid ""
 "on GitHub and can be accessed and edited by multiple people on different "
 "computers."
 msgstr ""
+"GitHub 儲存庫就像電腦中的一個資料夾，其中包含特定專案的所有檔案和資料夾。不同"
+"之處在於，它儲存在 GitHub 上，可供多台電腦上的多人存取和編輯。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:31
 msgid ""
@@ -2106,6 +2228,9 @@ msgid ""
 "changes to your project over time, so you can easily roll back to a previous "
 "version if needed."
 msgstr ""
+"換句話說，GitHub 儲存庫是您存放專案檔案的地方，您可以與他人分享這些檔案，讓他"
+"們與您協作、進行變更並貢獻於您的專案。它還會追蹤專案隨時間的所有變更，讓您在"
+"需要時能輕鬆回復到先前的版本。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2116,6 +2241,10 @@ msgid ""
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
+"此外，GitHub 還提供許多功能來協助您管理專案，例如問題追蹤、提取請求和程式碼審"
+"查。它是管理和協作軟體專案的強大工具，廣受全球開發人員使用。這是一個版本控制"
+"的空間，用於儲存 Odoo 應用程式的原始碼。它會追蹤每項變更，支援協作，且可設為"
+"公開或私人。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2123,7 +2252,7 @@ msgstr "GitHub 儲存庫範例"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:48
 msgid "Odoo.sh project"
-msgstr ""
+msgstr "Odoo.sh 專案"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
@@ -2132,6 +2261,8 @@ msgid ""
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
+"Odoo.sh 專案是一種與 GitHub 整合的 *平台即服務*（PaaS），可簡化 Odoo 應用程式"
+"的開發、測試和部署流程。它包含自動備份、暫存環境和持續整合流程等工具。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
@@ -2146,6 +2277,8 @@ msgid ""
 "An Odoo database stores all the operational data used and generated by Odoo "
 "applications, such as business records, configurations, and user data."
 msgstr ""
+"Odoo 資料庫儲存 Odoo 應用程式所使用及產生的所有營運資料，例如業務記錄、配置和"
+"使用者資料。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
@@ -2168,6 +2301,8 @@ msgid ""
 "the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
+"**GitHub 使用者**：擁有存取權限，可存取已連結至 Odoo.sh 專案之 GitHub 儲存庫"
+"的開發人員。擁有儲存庫的存取權限，並不代表自動成為 Odoo.sh 專案的協作者。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
@@ -2175,6 +2310,8 @@ msgid ""
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
+"**Odoo.sh 協作者**：管理 Odoo.sh 專案的人員。每位協作者都必須連結至一個 "
+"GitHub 使用者。但協作者與資料庫使用者並不相同。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
@@ -2182,6 +2319,8 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
+"**資料庫使用者**：已部署之 Odoo 資料庫的終端使用者。他們與正式系統互動，但不"
+"參與開發或專案管理工作。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
@@ -3323,6 +3462,8 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"手動備份的目的是為正式環境或測試環境的資料庫建立特定快照（開發環境不可用）。"
+"這些備份會保留三天。但是，每天最多只能建立五次手動備份。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -4426,6 +4567,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"對於公開可用的社群模組，您也可以考慮使用\\ :ref:`子模組 <odoo-sh/advanced/"
+"submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -7869,10 +8012,6 @@ msgstr ""
 "path` 選項設定為企業版資料夾。需要同時複製社群版和企業版版本庫才能擁有可運作"
 "的 Odoo 企業版安裝。"
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo 需要 **Python 3.10** 或更高版本才能執行。"
@@ -8657,7 +8796,7 @@ msgstr "標準支援結束"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -8678,7 +8817,7 @@ msgstr "不適用"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "July 2026"
-msgstr ""
+msgstr "2026 年 7 月"
 
 #: ../../content/administration/standard_extended_support.rst:41
 msgid "Odoo SaaS 19.3"
@@ -9784,6 +9923,23 @@ msgstr ":doc:`Odoo.sh 使用說明 <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`受支援的 Odoo 版本 <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "若要以程式化方式擷取\\ `資料庫管理器\\ <https://www.odoo.com/my/"
+#~ "databases>`_\\ 下顯示的所有資料庫清單，請透過\\ :doc:`網路服務 <../"
+#~ "developer/howtos/web_services>`\\ 呼叫來呼叫\\ ``odoo.database``\\ 模型的"
+#~ "\\ ``list``\\ 方法。"
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "若要使用\\ ``xmlrpc.client``\\ 程式庫擷取此清單："
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "使用 JSON-RPC 的等效範例："
 
 #~ msgid "Advanced"
 #~ msgstr "進階"

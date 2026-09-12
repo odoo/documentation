@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
 "17-doc/administration/pt_BR/>\n"
@@ -1158,25 +1158,157 @@ msgstr ""
 msgid "Web services"
 msgstr "Serviços web"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "Lista de bases de dados"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"Para recuperar uma lista de todos os bancos de dados exibidos no "
-"`gerenciador de banco de dados <https://www.odoo.com/my/databases>`_ "
-"programaticamente, chame o método `list` do modelo `odoo.database` através "
-"de uma chamada de :doc:`serviço web <../developer/howtos/web_services>`."
+"Para obter uma lista de todas as bases de dados exibidas em "
+":ref:`gerenciador de bases de dados <odoo-online/database-manager>` de forma "
+"programática, chame o método `list` do modelo `odoo.database` por meio da "
+":doc:`API externa JSON-2 <../developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Para recuperar esta lista com a biblioteca `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "O exemplo equivalente com JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "Logs de auditoria"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"Para obter os logs de atividade de administrador de uma base de dados do "
+"Odoo Online, chame o método `get_audit_logs` do modelo `odoo.database` por "
+"meio da :doc:`API externa JSON-2 <../developer/reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"A solicitação deve fornecer `db_uuid` ou `subscription_code`. Se `db_uuid` "
+"for fornecido, os logs dessa base de dados são retornados. Caso contrário, "
+"`subscription_code` pode ser usado para obter os logs de todas as bases de "
+"dados e projetos pertencentes à assinatura."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"O parâmetro opcional `cursor` é um valor opaco retornado por uma solicitação "
+"anterior. Quando fornecido, apenas os logs mais recentes que o cursor são "
+"retornados."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"A obtenção de logs de auditoria está sujeita a limites de taxa e não deve "
+"ser realizada mais de uma vez a cada 5 minutos."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"A resposta é um objeto JSON contendo os logs e um cursor opaco para obter o "
+"próximo lote:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "Os parâmetros da solicitação são:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (string): o UUID da base de dados. Se fornecido, "
+"`subscription_code` é ignorado."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (string): o código da assinatura. Usado quando `db_uuid` "
+"não é fornecido."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (string): um cursor opaco retornado por uma solicitação anterior. "
+"Quando fornecido, apenas os logs mais recentes que o cursor são retornados."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "Cada entrada de log contém:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (string): a data e hora do log em UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (string): o usuário que realizou a ação"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+"`database` (string): a base de dados envolvida na ação, quando aplicável."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (string): o código da assinatura."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (string): o endereço IP a partir do qual a ação foi realizada."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (string): o tipo de ação."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string): informações adicionais sobre a ação."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (booleano): indica se a ação foi autorizada."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"O valor `next_cursor` é um cursor opaco que pode ser fornecido como `cursor` "
+"em uma solicitação subsequente."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1323,41 +1455,48 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
-msgstr ""
+msgstr "Use o shell do Odoo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:151
 msgid "Install a module:"
-msgstr ""
+msgstr "Instale um módulo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
 "The argument `--without-demo=all` prevents demo data from being loaded for "
 "all modules."
 msgstr ""
+"O argumento `--without-demo=all` impede que dados de demonstração sejam "
+"carregados para todos os módulos."
 
 #: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
 "The argument `--stop-after-init` immediately shutdowns the server instance "
 "after the operation is completed."
 msgstr ""
+"O argumento `--stop-after-init` desliga imediatamente a instância do "
+"servidor após a conclusão da operação."
 
 #: ../../content/administration/odoo_sh/advanced.rst:162
 msgid "Update a module:"
-msgstr ""
+msgstr "Atualize um módulo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:168
 msgid "Run the tests for a module:"
-msgstr ""
+msgstr "Execute os testes de um módulo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:175
 msgid ":doc:`CLI documentation </developer/reference/cli>`"
-msgstr ""
+msgstr ":doc:`Documentação da CLI </developer/reference/cli>`"
 
 #: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
 "To find the addons path used by Odoo.sh to run your server, look for "
 "\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
+"Para encontrar o caminho dos addons usado pelo Odoo.sh para executar seu "
+"servidor, procure por \"*odoo: addons paths*\" nos registros (:file:`~/logs/"
+"odoo.log`)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
@@ -1365,6 +1504,9 @@ msgid ""
 "will be reflected in the database. Remember to always carry out tests in "
 "your staging databases."
 msgstr ""
+"As operações realizadas em uma instância do servidor Odoo não são isoladas; "
+"as alterações serão refletidas no banco de dados. Lembre-se de sempre "
+"realizar testes em suas bases de dados de teste."
 
 #: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
@@ -1377,6 +1519,10 @@ msgid ""
 "and limitations of the Odoo.sh platform, and assumes that you already know "
 "how to use a debugger."
 msgstr ""
+"Depurar uma compilação do Odoo.sh não é muito diferente de depurar outro "
+"aplicativo Python. Sendo assim, o objetivo desta seção é abordar as "
+"especificidades e limitações da plataforma Odoo.sh, partindo do princípio de "
+"que você já sabe como usar um depurador."
 
 #: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
@@ -1384,6 +1530,9 @@ msgid ""
 "server runs outside a shell, you cannot launch the debugger directly from "
 "your Odoo backend, as it requires a shell to operate."
 msgstr ""
+"Você pode usar `pdb`, `pudb` ou `ipdb` para depurar código no Odoo.sh. Como "
+"o servidor é executado fora de um shell, não é possível iniciar o depurador "
+"diretamente pelo backend do Odoo, pois ele requer um shell para funcionar."
 
 #: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
@@ -1398,39 +1547,48 @@ msgid ""
 "To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
 "project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
+"Para usar `pudb <https://pypi.org/project/pudb/>`_ ou `ipdb <https://"
+"pypi.org/project/ipdb/>`_, é necessário instalá-los:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
+"permanentemente, adicionando `pudb` ou `ipdb` ao arquivo "
+":file:`requirements.txt` do seu projeto, ou"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
 "temporarily (only in the current build) by running the relevant command:"
 msgstr ""
+"temporariamente (somente na compilação atual), executando o comando "
+"relevante:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:221
 msgid "To trigger the debugger, add this to the code you want to debug:"
 msgstr ""
+"Para acionar o depurador, adicione o seguinte ao código que deseja depurar:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
 "The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
 "you are running Odoo from a shell."
 msgstr ""
+"A condição `sys.__stdin__.isatty()` é uma solução alternativa para detectar "
+"se você está executando o Odoo a partir de um shell."
 
 #: ../../content/administration/odoo_sh/advanced.rst:233
 msgid "Next, save the file and run the Odoo shell:"
-msgstr ""
+msgstr "Em seguida, salve o arquivo e execute o shell do Odoo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:239
 msgid "Use the Odoo shell to trigger the code you want to debug."
-msgstr ""
+msgstr "Use o shell do Odoo para acionar o código que deseja depurar."
 
 #: ../../content/administration/odoo_sh/advanced.rst:0
 msgid "pdb running in an Odoo.sh shell"
-msgstr ""
+msgstr "pdb em execução em um shell do Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
@@ -1445,6 +1603,12 @@ msgid ""
 "main codebase. You maintain precise version control by choosing exact "
 "branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
+"`Submódulos do Git <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
+"permitem vincular repositórios externos diretamente ao seu projeto sem "
+"copiar e colar código, simplificando a implantação ao clonar as dependências "
+"junto com seu código-base principal. Você mantém um controle preciso de "
+"versões ao escolher ramos exatos e fixar revisões de commit específicas para "
+"atualizar quando desejar."
 
 #: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
@@ -1453,6 +1617,11 @@ msgid ""
 "deploy key in your project and repository settings <odoo-sh/settings/"
 "submodules>` when integrating private repositories."
 msgstr ""
+"No Odoo.sh, a plataforma detecta automaticamente os submódulos e os adiciona "
+"ao seu caminho de complementos para instalação do banco de dados, desde que "
+"você :ref:`configure uma chave de implantação nas configurações do seu "
+"projeto e repositório <odoo-sh/settings/submodules>` ao integrar "
+"repositórios privados."
 
 #: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
@@ -1460,48 +1629,58 @@ msgstr "Adicionar um submódulo"
 
 #: ../../content/administration/odoo_sh/advanced.rst:265
 msgid "With Odoo.sh"
-msgstr ""
+msgstr "Com o Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced.rst:268
 msgid ""
 "Currently, it is not possible to add **private** repositories with Odoo.sh. "
 "You can nevertheless do so with Git."
 msgstr ""
+"Atualmente, não é possível adicionar repositórios **privados** com o "
+"Odoo.sh. No entanto, você pode fazer isso com o Git."
 
 #: ../../content/administration/odoo_sh/advanced.rst:271
 msgid ""
 "From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh "
 "project, choose the branch in which you want to add a submodule."
 msgstr ""
+"Na visualização :doc:`Ramificações <getting_started/branches>` do seu "
+"projeto Odoo.sh, escolha a ramificação na qual deseja adicionar um submódulo."
 
 #: ../../content/administration/odoo_sh/advanced.rst:273
 msgid ""
 "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
 "on Odoo.sh`."
 msgstr ""
+"No canto superior direito, clique em :guilabel:`Submódulo` e, em seguida, em "
+":guilabel:`Executar no Odoo.sh`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:274
 msgid "In the dialog box, fill in the following:"
-msgstr ""
+msgstr "Na caixa de diálogo, preencha o seguinte:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:276
 msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
-msgstr ""
+msgstr ":guilabel:`URL do repositório`: o URL SSH do repositório"
 
 #: ../../content/administration/odoo_sh/advanced.rst:279
 msgid ""
 "On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
 msgstr ""
+"No GitHub, clique em :guilabel:`Clone`, selecione :guilabel:`SSH` e copie o "
+"URL."
 
 #: ../../content/administration/odoo_sh/advanced.rst:284
 msgid ":guilabel:`Branch`: the specific branch that should be used"
-msgstr ""
+msgstr ":guilabel:`Ramificação`: a ramificação específica que deve ser usada"
 
 #: ../../content/administration/odoo_sh/advanced.rst:285
 msgid ""
 ":guilabel:`Path`: the folder in which the submodule should be added to in "
 "your branch"
 msgstr ""
+":guilabel:`Caminho`: a pasta na qual o submódulo deve ser adicionado em sua "
+"ramificação"
 
 #: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
@@ -1517,37 +1696,44 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:299
 msgid "Add the submodule:"
-msgstr ""
+msgstr "Adicione o submódulo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:305
 msgid ""
 "*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the "
 "repository you want to add as a submodule"
 msgstr ""
+"*<git@yourprovider.com>:<username/repository.git>*: o URL SSH do repositório "
+"que você deseja adicionar como submódulo"
 
 #: ../../content/administration/odoo_sh/advanced.rst:307
 msgid "*<branch>*: the branch you want to use in the above repository"
-msgstr ""
+msgstr "*<branch>*: a ramificação que você deseja usar no repositório acima"
 
 #: ../../content/administration/odoo_sh/advanced.rst:308
 msgid "*<path>*: the folder in which you want to add this submodule"
-msgstr ""
+msgstr "*<path>*: a pasta na qual você deseja adicionar esse submódulo"
 
 #: ../../content/administration/odoo_sh/advanced.rst:310
 msgid "Commit and push the changes:"
-msgstr ""
+msgstr "Faça o commit e o push das alterações:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:316
 msgid ""
 "*<remote>*: the repository on which you want to push your changes. On a "
 "standard Git setup, this is *origin*."
 msgstr ""
+"*<remote>*: o repositório no qual você deseja fazer o push de suas "
+"alterações. Em uma configuração padrão do Git, esse é o *origin*."
 
 #: ../../content/administration/odoo_sh/advanced.rst:318
 msgid ""
 "*<branch>*: the branch on which you want to push your changes. Most likely, "
 "the branch you checked out in the first step."
 msgstr ""
+"*<branch>*: a ramificação na qual você deseja fazer o push de suas "
+"alterações. Provavelmente, a ramificação que você fez checkout na primeira "
+"etapa."
 
 #: ../../content/administration/odoo_sh/advanced.rst:322
 msgid ""
@@ -1557,6 +1743,12 @@ msgid ""
 "this folder, and you can hand-pick the modules by creating `symbolic links "
 "<https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
+"Ao adicionar um repositório que contém muitos módulos, talvez você queira "
+"ignorar alguns deles, caso sejam instalados automaticamente. Para fazer "
+"isso, adicione um :code:`.` como prefixo na pasta do seu submódulo (por "
+"exemplo, `.pasta`). A plataforma ignorará essa pasta, e você poderá "
+"selecionar manualmente os módulos criando `links simbólicos <https://"
+"en.wikipedia.org/wiki/Symbolic_link>`_ para eles a partir de outra pasta."
 
 #: ../../content/administration/odoo_sh/advanced.rst:330
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:80
@@ -1571,34 +1763,48 @@ msgid ""
 "each customer is guaranteed a fair share of the server's resources. "
 "Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
+"Na plataforma Odoo.sh, as ações agendadas são implementadas de forma um "
+"pouco diferente de um servidor Odoo comum e são executadas com base no "
+"melhor esforço. Isso ocorre porque pode haver vários clientes no mesmo "
+"servidor, e cada cliente tem garantida uma parte justa dos recursos do "
+"servidor. Portanto, não é possível garantir um horário exato de execução "
+"para as ações agendadas."
 
 #: ../../content/administration/odoo_sh/advanced.rst:338
 msgid ""
 "Do not expect any scheduled action to be run more often than every five "
 "minutes."
 msgstr ""
+"Não espere que nenhuma ação agendada seja executada com mais frequência do "
+"que a cada cinco minutos."
 
 #: ../../content/administration/odoo_sh/advanced.rst:340
 msgid ""
 "As the execution time of scheduled actions is limited, it is advised to "
 "ensure your scheduled actions:"
 msgstr ""
+"Como o tempo de execução das ações agendadas é limitado, é recomendável "
+"garantir que suas ações agendadas:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:343
 msgid "Work on small batches of records."
-msgstr ""
+msgstr "Trabalhem em pequenos lotes de registros."
 
 #: ../../content/administration/odoo_sh/advanced.rst:344
 msgid ""
 "Commit their work after processing each batch so that if they are "
 "interrupted by the time limit, they do not need to start over."
 msgstr ""
+"Confirmem o trabalho após processar cada lote, para que, se forem "
+"interrompidas pelo limite de tempo, não precisem recomeçar do zero."
 
 #: ../../content/administration/odoo_sh/advanced.rst:346
 msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+"Sejam idempotentes, ou seja, não devem causar efeitos colaterais caso sejam "
+"iniciadas com mais frequência do que o esperado."
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2248,18 +2454,22 @@ msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
 "involved:"
 msgstr ""
+"Ao trabalhar com o Odoo.sh, é importante entender os principais componentes "
+"envolvidos:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
 msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
 msgstr ""
+":ref:`Repositório do GitHub <odoo-sh/getting-started/components/github>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:15
 msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
-msgstr ""
+msgstr ":ref:`Projeto Odoo.sh <odoo-sh/getting-started/components/project>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
 msgstr ""
+":ref:`Banco de dados Odoo <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2267,10 +2477,14 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
+"Embora todos estejam interconectados, cada um desempenha um papel distinto "
+"no desenvolvimento e na implantação de aplicativos Odoo. Juntos, eles formam "
+"um pipeline coeso, do desenvolvimento do código até o uso em produção pela "
+"empresa."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
-msgstr ""
+msgstr "Repositório do GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
 msgid ""
@@ -2279,6 +2493,10 @@ msgid ""
 "on GitHub and can be accessed and edited by multiple people on different "
 "computers."
 msgstr ""
+"Um repositório do GitHub é como uma pasta no seu computador que contém todos "
+"os arquivos e pastas de um projeto específico. A diferença é que ele fica "
+"armazenado no GitHub e pode ser acessado e editado por várias pessoas em "
+"computadores diferentes."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:31
 msgid ""
@@ -2288,6 +2506,12 @@ msgid ""
 "changes to your project over time, so you can easily roll back to a previous "
 "version if needed."
 msgstr ""
+"Em outras palavras, um repositório do GitHub é um local onde você pode "
+"armazenar os arquivos do seu projeto e compartilhá-los com outras pessoas, "
+"para que elas possam colaborar com você, fazer alterações e contribuir com o "
+"projeto. Ele também rastreia todas as alterações feitas no projeto ao longo "
+"do tempo, permitindo reverter facilmente para uma versão anterior, se "
+"necessário."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2298,6 +2522,13 @@ msgid ""
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
+"Além disso, o GitHub oferece muitos recursos para ajudar a gerenciar o seu "
+"projeto, como rastreamento de problemas, pull requests e revisões de código. "
+"É uma ferramenta poderosa para gerenciar e colaborar em projetos de "
+"software, amplamente utilizada por desenvolvedores em todo o mundo: um "
+"espaço com controle de versão onde o código-fonte dos aplicativos Odoo é "
+"armazenado. Ele rastreia todas as alterações, oferece suporte à colaboração "
+"e pode ser público ou privado."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2305,7 +2536,7 @@ msgstr "Exemplo de um repositório GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:48
 msgid "Odoo.sh project"
-msgstr ""
+msgstr "Projeto Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
@@ -2314,6 +2545,10 @@ msgid ""
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
+"Um projeto Odoo.sh é uma *Plataforma como Serviço* (PaaS) que se integra ao "
+"GitHub e possibilita o desenvolvimento, os testes e a implantação "
+"simplificados de aplicativos Odoo. Ele inclui ferramentas como backups "
+"automatizados, ambientes de teste e pipelines de integração contínua."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
@@ -2328,6 +2563,9 @@ msgid ""
 "An Odoo database stores all the operational data used and generated by Odoo "
 "applications, such as business records, configurations, and user data."
 msgstr ""
+"Um banco de dados Odoo armazena todos os dados operacionais usados e gerados "
+"pelos aplicativos Odoo, como registros comerciais, configurações e dados de "
+"usuários."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
@@ -2351,6 +2589,9 @@ msgid ""
 "the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
+"**Usuários do GitHub**: desenvolvedores com acesso ao repositório do GitHub "
+"vinculado ao projeto Odoo.sh. Ter acesso ao repositório não torna "
+"automaticamente alguém um colaborador do projeto Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
@@ -2358,6 +2599,9 @@ msgid ""
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
+"**Colaboradores do Odoo.sh**: pessoas que gerenciam o projeto Odoo.sh. Cada "
+"colaborador deve estar vinculado a um usuário do GitHub. No entanto, os "
+"colaboradores não são o mesmo que usuários do banco de dados."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
@@ -2365,32 +2609,38 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
+"**Usuários do banco de dados**: usuários finais do banco de dados Odoo "
+"implantado. Eles interagem com o sistema em produção, mas não estão "
+"envolvidos no desenvolvimento ou no gerenciamento do projeto."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
-msgstr ""
+msgstr "Conceitos técnicos"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:88
 msgid ""
 "When working with Odoo.sh, it is also important to understand several "
 "technical concepts:"
 msgstr ""
+"Ao trabalhar com o Odoo.sh, também é importante entender vários conceitos "
+"técnicos:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:90
 msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
 msgstr ""
+":ref:`Fazer fork de um repositório <odoo-sh/getting-started/concepts/fork>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:91
 msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
-msgstr ""
+msgstr ":ref:`Enviar um commit <odoo-sh/getting-started/concepts/commit>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:92
 msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
-msgstr ""
+msgstr ":ref:`Mesclar uma branch <odoo-sh/getting-started/concepts/merge>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:97
 msgid "Forking a repository"
-msgstr ""
+msgstr "Fazer fork de um repositório"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:99
 msgid ""
@@ -2398,6 +2648,9 @@ msgid ""
 "repository on your own account. This allows you to make changes to the "
 "repository without affecting the original version."
 msgstr ""
+"Fazer fork de um repositório no GitHub significa criar uma cópia do "
+"repositório de outra pessoa em sua própria conta. Isso permite fazer "
+"alterações no repositório sem afetar a versão original."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:102
 msgid ""
@@ -2406,6 +2659,10 @@ msgid ""
 "then make changes to the files in your copy of the repository and commit "
 "them, just like you would with any other repository."
 msgstr ""
+"Ao fazer fork de um repositório, você cria sua própria cópia dele, com todos "
+"os arquivos e pastas do repositório original. Você pode então fazer "
+"alterações nos arquivos da sua cópia do repositório e enviá-las por commit, "
+"assim como faria em qualquer outro repositório."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:106
 msgid ""
@@ -2415,6 +2672,11 @@ msgid ""
 "also use the forked repository as a starting point for your project, making "
 "changes as needed."
 msgstr ""
+"A vantagem de fazer fork de um repositório é poder alterar o código sem "
+"afetar a versão original, o que é útil quando você quer experimentar novos "
+"recursos ou corrigir bugs no código de outra pessoa. Você também pode usar o "
+"repositório com fork como ponto de partida para o seu projeto, fazendo as "
+"alterações necessárias."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:111
 msgid ""
@@ -2424,10 +2686,16 @@ msgid ""
 "projects to accept contributions from other developers, and it can be a "
 "great way to get involved in the community and improve your coding skills."
 msgstr ""
+"Depois de fazer as alterações no repositório com fork, você pode enviar um "
+"pull request ao proprietário do repositório original, pedindo que ele mescle "
+"suas alterações de volta ao repositório dele. Essa é uma abordagem comum em "
+"projetos de código aberto para aceitar contribuições de outros "
+"desenvolvedores, e pode ser uma ótima maneira de se envolver com a "
+"comunidade e melhorar suas habilidades de programação."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:119
 msgid "Pushing a commit"
-msgstr ""
+msgstr "Enviar um commit"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:121
 msgid ""
@@ -2436,6 +2704,10 @@ msgid ""
 "words, Git knows that changes have been made, but they haven't been "
 "officially saved or recorded yet."
 msgstr ""
+"Quando você faz alterações em um arquivo ou em vários arquivos de um "
+"repositório Git no seu computador local, essas alterações são consideradas "
+"*não confirmadas*. Em outras palavras, o Git sabe que houve alterações, mas "
+"elas ainda não foram salvas ou registradas oficialmente."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:125
 msgid ""
@@ -2444,6 +2716,10 @@ msgid ""
 "specific point in time. It records what changes were made, who made them, "
 "and when."
 msgstr ""
+"Para salvar essas alterações e adicioná-las ao repositório Git, você precisa "
+"criar um *commit*. Um commit é um registro das alterações feitas nos "
+"arquivos em um momento específico. Ele indica quais alterações foram feitas, "
+"quem as fez e quando."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:129
 msgid ""
@@ -2452,6 +2728,10 @@ msgid ""
 "you've made in the commit from your local repository to the remote "
 "repository so that others can see and use them."
 msgstr ""
+"Depois de criar um commit, você pode *enviá-lo* (push) para um repositório "
+"remoto, como um hospedado no GitHub. Enviar um commit significa transmitir "
+"as alterações feitas no commit do seu repositório local para o repositório "
+"remoto, para que outras pessoas possam vê-las e utilizá-las."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:133
 msgid ""
@@ -2460,10 +2740,14 @@ msgid ""
 "repository. It is a way to share your changes with others and collaborate on "
 "a project."
 msgstr ""
+"Em resumo, enviar um commit significa transmitir as alterações feitas nos "
+"arquivos do seu repositório Git do computador local para um repositório "
+"remoto. É uma forma de compartilhar suas alterações com outras pessoas e "
+"colaborar em um projeto."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:140
 msgid "Merging a branch"
-msgstr ""
+msgstr "Mesclar uma branch"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:142
 msgid ""
@@ -2474,6 +2758,11 @@ msgid ""
 "changes back into the main branch (often called the `master` or `main` "
 "branch)."
 msgstr ""
+"Mesclar uma branch com outra é o processo de combinar as alterações feitas "
+"em uma branch com as da outra. Por exemplo, digamos que você criou uma nova "
+"branch chamada `feature-branch` para trabalhar em um novo recurso do seu "
+"projeto. Depois de terminar as alterações nessa branch, você pode mesclá-las "
+"de volta na branch principal (geralmente chamada de `master` ou `main`)."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:147
 msgid ""
@@ -2482,6 +2771,10 @@ msgid ""
 "made in the two branches, Git will prompt you to resolve them before "
 "completing the merge (code-wise)."
 msgstr ""
+"Ao mesclar uma branch, o Git examina as alterações em ambas as branches e "
+"tenta combiná-las. Se houver conflitos entre as alterações feitas nas duas "
+"branches, o Git solicitará que você os resolva antes de concluir a mesclagem "
+"(no nível do código)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -3663,6 +3956,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"O objetivo dos backups manuais é criar um instantâneo específico das bases "
+"de dados de produção ou de teste (não disponível para desenvolvimento). Eles "
+"ficam disponíveis por três dias. No entanto, há um limite de cinco backups "
+"manuais diários."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -3869,6 +4166,9 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
+":guilabel:`Instalar apenas meus módulos (não inclui submódulos)`: instala "
+"apenas os módulos da branch, excluindo :ref:`submódulos <odoo-sh/advanced/"
+"submodules>`. Esta é a opção padrão."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4292,7 +4592,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
 msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
-msgstr ""
+msgstr ":ref:`Documentação sobre submódulos <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -4889,6 +5189,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"Para módulos da comunidade disponíveis publicamente, você também pode "
+"considerar o uso de :ref:`submódulos <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -8681,10 +8983,6 @@ msgstr ""
 "repositórios Community e Enterprise para ter uma instalação funcional do "
 "Odoo Enterprise."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "O Odoo requer **Python 3.10** ou posterior para ser executado."
@@ -10840,6 +11138,24 @@ msgstr ":doc:`Documentação do Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Versões suportadas do Odoo <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Para recuperar uma lista de todos os bancos de dados exibidos no "
+#~ "`gerenciador de banco de dados <https://www.odoo.com/my/databases>`_ "
+#~ "programaticamente, chame o método `list` do modelo `odoo.database` "
+#~ "através de uma chamada de :doc:`serviço web <../developer/howtos/"
+#~ "web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Para recuperar esta lista com a biblioteca `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "O exemplo equivalente com JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "Avançado"

@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-17-doc/"
 "administration/nl/>\n"
@@ -1151,25 +1151,159 @@ msgstr ""
 msgid "Web services"
 msgstr "Webservices"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "Lijst met databases"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"Haal een lijst van alle databases die worden weergegeven onder de `database "
-"manager <https://www.odoo.com/my/databases>`_ programmatisch op door de "
-"`list`-methode van het `odoo.database`-model aan te roepen via "
-"een :doc:`webservice <../developer/howtos/web_services>`-oproep."
+"Om programmatisch een lijst van alle databases weer te geven onder de "
+":ref:`databasebeheerder <odoo-online/database-manager>`, roep je de `list`-"
+"methode van het model `odoo.database` aan via de :doc:`externe JSON-2 API "
+"<../developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Deze lijst ophalen met de `xmlrpc.client`-bibliotheek:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "Het equivalente voorbeeld met JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "Auditlogs"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"Om de activiteitenlogs van de beheerder van een Odoo Online-database op te "
+"halen, roep je de `get_audit_logs`-methode van het model `odoo.database` aan "
+"via de :doc:`externe JSON-2 API <../developer/reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"Het verzoek moet ofwel `db_uuid` ofwel `subscription_code` bevatten. Als "
+"`db_uuid` wordt opgegeven, worden de logs voor die database geretourneerd. "
+"Anders kan `subscription_code` worden gebruikt om logs op te halen voor alle "
+"databases en projecten die bij het abonnement horen."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"De optionele `cursor` is een ondoorzichtige waarde die door een eerder "
+"verzoek is geretourneerd. Als deze wordt opgegeven, worden alleen logs "
+"geretourneerd die recenter zijn dan de cursor."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"Het ophalen van auditlogs is onderworpen aan snelheidslimieten en mag niet "
+"vaker dan eens per 5 minuten worden uitgevoerd."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"Het antwoord is een JSON-object dat de logs bevat, samen met een "
+"ondoorzichtige cursor om de volgende batch op te halen:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "De parameters van het verzoek zijn:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (string): de UUID van de database. Als deze wordt opgegeven, wordt "
+"`subscription_code` genegeerd."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (string): de abonnementscode. Wordt gebruikt als "
+"`db_uuid` niet is opgegeven."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (string): een ondoorzichtige cursor die door een eerder verzoek is "
+"geretourneerd. Als deze wordt opgegeven, worden alleen logs geretourneerd "
+"die recenter zijn dan de cursor."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "Elke loginvoer bevat:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (string): de datum en tijd van de log in UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (string): de gebruiker die de actie heeft uitgevoerd"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+"`database` (string): de database waarop de actie betrekking heeft, indien "
+"van toepassing."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (string): de abonnementscode."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (string): het IP-adres van waaruit de actie werd uitgevoerd."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (string): het type actie."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string): extra informatie over de actie."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (boolean): of de actie geautoriseerd was."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"De waarde `next_cursor` is een ondoorzichtige cursor die je als `cursor` "
+"kunt opgeven in een volgend verzoek."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -3652,6 +3786,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"Handmatige back-ups zijn bedoeld om een specifieke snapshot te maken van "
+"productie- of stagingdatabases (niet beschikbaar voor ontwikkeling). Deze "
+"blijven drie dagen beschikbaar. Er geldt echter een limiet van vijf "
+"handmatige back-ups per dag."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -4884,6 +5022,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"Overweeg voor openbaar beschikbare community-modules ook het gebruik van "
+":ref:`submodules <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -8677,10 +8817,6 @@ msgstr ""
 "Community- als de Enterprise-repository te klonen om een werkende Odoo "
 "Enterprise-installatie te hebben."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo vereist **Python 3.10** of hoger om te kunnen werken."
@@ -10830,6 +10966,23 @@ msgstr ":doc:`Odoo.sh documentatie <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Ondersteunde Odoo-versies <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Haal een lijst van alle databases die worden weergegeven onder de "
+#~ "`database manager <https://www.odoo.com/my/databases>`_ programmatisch op "
+#~ "door de `list`-methode van het `odoo.database`-model aan te roepen via "
+#~ "een :doc:`webservice <../developer/howtos/web_services>`-oproep."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Deze lijst ophalen met de `xmlrpc.client`-bibliotheek:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "Het equivalente voorbeeld met JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "Geavanceerd"

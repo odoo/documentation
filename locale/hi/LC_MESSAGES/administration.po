@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:32+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-17-doc/"
 "administration/hi/>\n"
@@ -1100,24 +1100,132 @@ msgstr "मिटाने के बाद, डेटाबेस का ना
 msgid "Web services"
 msgstr "वेब सर्विस"
 
-#: ../../content/administration/odoo_online.rst:162
-msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
 msgstr ""
-"`डेटाबेस मैनेजर <https://www.odoo.com/my/databases>`_ के तहत प्रदर्शित सभी डेटाबेस की "
-"लिस्ट प्रोग्रामेटिकली प्राप्त करने के लिए, :doc:`वेब सर्विस <../developer/howtos/"
-"web_services>` कॉल के जरिए `odoo.database` मॉडल की `list` मेथड को कॉल करें।"
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "`xmlrpc.client` लाइब्रेरी के साथ यह लिस्ट प्राप्त करने के लिए:"
+#: ../../content/administration/odoo_online.rst:165
+msgid ""
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
+msgstr ""
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "JSON-RPC के साथ समकक्ष उदाहरण:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
+
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr ""
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string): ऐक्शन के बारे में अतिरिक्त जानकारी।"
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (boolean): क्या ऐक्शन को अधिकृत किया गया था।"
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"`next_cursor` वैल्यू एक अपारदर्शी कर्सर है, जिसे अगले अनुरोध में `cursor` के रूप में दिया "
+"जा सकता है।"
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -2275,29 +2383,30 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
-msgstr ""
+msgstr "टेक्निकल कॉन्सेप्ट्स"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:88
 msgid ""
 "When working with Odoo.sh, it is also important to understand several "
 "technical concepts:"
 msgstr ""
+"Odoo.sh के साथ काम करते समय, कई टेक्निकल कॉन्सेप्ट्स को समझना भी ज़रूरी है:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:90
 msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
-msgstr ""
+msgstr ":ref:`रिपॉज़िटरी फ़ोर्क करना <odoo-sh/getting-started/concepts/fork>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:91
 msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
-msgstr ""
+msgstr ":ref:`कमिट पुश करना <odoo-sh/getting-started/concepts/commit>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:92
 msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
-msgstr ""
+msgstr ":ref:`ब्रांच मर्ज करना <odoo-sh/getting-started/concepts/merge>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:97
 msgid "Forking a repository"
-msgstr ""
+msgstr "रिपॉज़िटरी फ़ोर्क करना"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:99
 msgid ""
@@ -2305,6 +2414,9 @@ msgid ""
 "repository on your own account. This allows you to make changes to the "
 "repository without affecting the original version."
 msgstr ""
+"GitHub पर किसी रिपॉज़िटरी को फ़ोर्क करने का मतलब है किसी और की रिपॉज़िटरी की कॉपी "
+"अपने खुद के अकाउंट पर बनाना। इससे आप ओरिजिनल वर्शन को प्रभावित किए बिना रिपॉज़िटरी में "
+"बदलाव कर सकते हैं।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:102
 msgid ""
@@ -2313,6 +2425,10 @@ msgid ""
 "then make changes to the files in your copy of the repository and commit "
 "them, just like you would with any other repository."
 msgstr ""
+"जब आप किसी रिपॉज़िटरी को फ़ोर्क करते हैं, तो आप रिपॉज़िटरी की अपनी खुद की कॉपी बनाते "
+"हैं, जिसमें ओरिजिनल रिपॉज़िटरी की सभी फ़ाइलें और फ़ोल्डर शामिल होते हैं। इसके बाद आप अपनी "
+"रिपॉज़िटरी की कॉपी में फ़ाइलों में बदलाव कर सकते हैं और उन्हें कमिट कर सकते हैं, बिल्कुल किसी "
+"भी अन्य रिपॉज़िटरी की तरह।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:106
 msgid ""
@@ -2322,6 +2438,11 @@ msgid ""
 "also use the forked repository as a starting point for your project, making "
 "changes as needed."
 msgstr ""
+"रिपॉज़िटरी को फ़ोर्क करने का फ़ायदा यह है कि आप ओरिजिनल वर्शन को प्रभावित किए बिना "
+"कोड में बदलाव कर सकते हैं, जो तब उपयोगी होता है जब आप नई सुविधाओं के साथ प्रयोग करना "
+"चाहते हैं या किसी और के कोड में बग ठीक करना चाहते हैं। आप फ़ोर्क की गई रिपॉज़िटरी को अपने "
+"प्रोजेक्ट के लिए एक शुरुआती बिंदु के रूप में भी इस्तेमाल कर सकते हैं और ज़रूरत के अनुसार बदलाव कर "
+"सकते हैं।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:111
 msgid ""
@@ -2331,10 +2452,15 @@ msgid ""
 "projects to accept contributions from other developers, and it can be a "
 "great way to get involved in the community and improve your coding skills."
 msgstr ""
+"फ़ोर्क की गई रिपॉज़िटरी में बदलाव करने के बाद, आप ओरिजिनल रिपॉज़िटरी के मालिक को पुल "
+"रिक्वेस्ट सबमिट कर सकते हैं, और उनसे आपके बदलावों को उनकी रिपॉज़िटरी में वापस मर्ज करने का "
+"अनुरोध कर सकते हैं। ओपन-सोर्स प्रोजेक्ट्स में अन्य डेवलपर्स से योगदान स्वीकार करने का यह एक "
+"आम तरीका है, और यह कम्यूनिटी में शामिल होने तथा अपनी कोडिंग स्किल्स सुधारने का एक "
+"बेहतरीन तरीका हो सकता है।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:119
 msgid "Pushing a commit"
-msgstr ""
+msgstr "कमिट पुश करना"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:121
 msgid ""
@@ -2343,6 +2469,9 @@ msgid ""
 "words, Git knows that changes have been made, but they haven't been "
 "officially saved or recorded yet."
 msgstr ""
+"जब आप अपने लोकल कंप्यूटर पर किसी Git रिपॉज़िटरी में किसी फ़ाइल या कई फ़ाइलों में बदलाव "
+"करते हैं, तो उन बदलावों को *अनकमिटेड* माना जाता है। दूसरे शब्दों में, Git को पता होता है "
+"कि बदलाव किए गए हैं, लेकिन उन्हें अभी आधिकारिक रूप से सेव या रिकॉर्ड नहीं किया गया है।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:125
 msgid ""
@@ -2351,6 +2480,9 @@ msgid ""
 "specific point in time. It records what changes were made, who made them, "
 "and when."
 msgstr ""
+"उन बदलावों को सेव करने और उन्हें Git रिपॉज़िटरी में जोड़ने के लिए, आपको एक *कमिट* बनाना "
+"होगा। कमिट किसी विशेष समय पर फ़ाइलों में किए गए बदलावों का एक स्नैपशॉट होता है। यह "
+"रिकॉर्ड करता है कि क्या बदलाव किए गए, किसने किए, और कब।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:129
 msgid ""
@@ -2359,6 +2491,10 @@ msgid ""
 "you've made in the commit from your local repository to the remote "
 "repository so that others can see and use them."
 msgstr ""
+"एक बार कमिट बना लेने के बाद, आप इसे किसी रिमोट रिपॉज़िटरी में *पुश* कर सकते हैं, जैसे कि "
+"GitHub पर होस्ट की गई रिपॉज़िटरी। कमिट पुश करने का मतलब है अपने लोकल रिपॉज़िटरी से "
+"कमिट में किए गए बदलावों को रिमोट रिपॉज़िटरी में भेजना ताकि अन्य लोग उन्हें देख और इस्तेमाल "
+"कर सकें।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:133
 msgid ""
@@ -2367,10 +2503,13 @@ msgid ""
 "repository. It is a way to share your changes with others and collaborate on "
 "a project."
 msgstr ""
+"संक्षेप में, कमिट पुश करने का मतलब है अपने Git रिपॉज़िटरी की फ़ाइलों में किए गए बदलावों को "
+"अपने लोकल कंप्यूटर से रिमोट रिपॉज़िटरी में भेजना। यह अपने बदलावों को दूसरों के साथ शेयर करने "
+"और किसी प्रोजेक्ट पर सहयोग करने का एक तरीका है।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:140
 msgid "Merging a branch"
-msgstr ""
+msgstr "ब्रांच मर्ज करना"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:142
 msgid ""
@@ -2381,6 +2520,11 @@ msgid ""
 "changes back into the main branch (often called the `master` or `main` "
 "branch)."
 msgstr ""
+"एक ब्रांच को दूसरी ब्रांच में मर्ज करना एक ब्रांच में किए गए बदलावों को दूसरी ब्रांच में मिलाने "
+"की प्रक्रिया है। उदाहरण के लिए, मान लीजिए कि आपने अपने प्रोजेक्ट के लिए एक नई सुविधा पर "
+"काम करने के लिए `feature-branch` नाम की एक नई ब्रांच बनाई। इस ब्रांच में बदलाव करना "
+"समाप्त करने के बाद, आप उन बदलावों को मुख्य ब्रांच (जिसे अक्सर `master` या `main` ब्रांच "
+"कहा जाता है) में वापस मर्ज कर सकते हैं।"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:147
 msgid ""
@@ -2389,6 +2533,10 @@ msgid ""
 "made in the two branches, Git will prompt you to resolve them before "
 "completing the merge (code-wise)."
 msgstr ""
+"जब आप कोई ब्रांच मर्ज करते हैं, तो Git दोनों ब्रांचों में किए गए बदलावों की जांच करता है और "
+"उन्हें मिलाने का प्रयास करता है। अगर दोनों ब्रांचों में किए गए बदलावों के बीच कोई टकराव "
+"होता है, तो Git मर्ज को (कोड के हिसाब से) पूरा करने से पहले उन्हें हल करने के लिए आपको "
+"प्रॉम्प्ट करेगा।"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -3476,6 +3624,9 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"मैन्युअल बैकअप का उद्देश्य प्रॉडक्शन या स्टेजिंग डेटाबेस का एक विशिष्ट स्नैपशॉट बनाना है "
+"(डेवलपमेंट के लिए उपलब्ध नहीं है)। ये तीन दिनों तक उपलब्ध रहते हैं। हालांकि, प्रतिदिन पांच "
+"मैन्युअल बैकअप की सीमा है।"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -3676,6 +3827,9 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
+":guilabel:`सिर्फ़ मेरे मॉड्यूल इंस्टॉल करें (सबमॉड्यूल शामिल नहीं हैं)`: सिर्फ़ ब्रांच के मॉड्यूल "
+"इंस्टॉल करता है, :ref:`सबमॉड्यूल <odoo-sh/advanced/submodules>` को छोड़कर। यह "
+"डिफ़ॉल्ट विकल्प है।"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4084,7 +4238,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
 msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
-msgstr ""
+msgstr ":ref:`सबमॉड्यूल दस्तावेज़ <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -4657,6 +4811,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"सार्वजनिक रूप से उपलब्ध कम्युनिटी मॉड्यूल के लिए, आप उपयोग करने पर भी विचार कर सकते हैं "
+":ref:`सबमॉड्यूल <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -8283,10 +8439,6 @@ msgstr ""
 "फ़ोल्डर पर सेट हो। काम करने वाले Odoo एंटरप्राइज़ इंस्टॉलेशन के लिए कम्युनिटी और एंटरप्राइज़ "
 "दोनों रिपॉज़िटरी को क्लोन करना ज़रूरी है।"
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo को चलाने के लिए **Python 3.10** या उसके बाद के वर्शन की ज़रूरत है।"
@@ -9114,7 +9266,7 @@ msgstr "स्टैंडर्ड समर्थन का अंत"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -9135,7 +9287,7 @@ msgstr "लागू नहीं"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "July 2026"
-msgstr ""
+msgstr "जुलाई 2026"
 
 #: ../../content/administration/standard_extended_support.rst:41
 msgid "Odoo SaaS 19.3"
@@ -10320,6 +10472,22 @@ msgstr ":doc:`Odoo.sh दस्तावेज़ <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`समर्थित Odoo संस्करण <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "`डेटाबेस मैनेजर <https://www.odoo.com/my/databases>`_ के तहत प्रदर्शित सभी डेटाबेस "
+#~ "की लिस्ट प्रोग्रामेटिकली प्राप्त करने के लिए, :doc:`वेब सर्विस <../developer/howtos/"
+#~ "web_services>` कॉल के जरिए `odoo.database` मॉडल की `list` मेथड को कॉल करें।"
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "`xmlrpc.client` लाइब्रेरी के साथ यह लिस्ट प्राप्त करने के लिए:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "JSON-RPC के साथ समकक्ष उदाहरण:"
 
 #~ msgid "Advanced"
 #~ msgstr "एडवांस"

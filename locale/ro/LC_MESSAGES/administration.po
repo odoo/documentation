@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-17-doc/"
 "administration/ro/>\n"
@@ -1159,25 +1159,158 @@ msgstr "După ștergere, numele bazei de date devine disponibil pentru oricine."
 msgid "Web services"
 msgstr "Servicii web"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "Lista bazelor de date"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"Pentru a prelua programatic o listă cu toate bazele de date afișate în "
-"`managerul de baze de date <https://www.odoo.com/my/databases>`_, apelați "
-"metoda `list` a modelului `odoo.database` printr-un apel de :doc:`serviciu "
-"web <../developer/howtos/web_services>`."
+"Pentru a prelua în mod programatic o listă a tuturor bazelor de date afișate "
+"în :ref:`managerul de baze de date <odoo-online/database-manager>`, apelați "
+"metoda `list` a modelului `odoo.database` prin intermediul :doc:`API-ului "
+"extern JSON-2 <../developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Pentru a prelua această listă cu biblioteca `xmlrpc.client`:"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "Exemplul echivalent cu JSON-RPC:"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "Jurnale de audit"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"Pentru a prelua jurnalele de activitate ale administratorului pentru o bază "
+"de date Odoo Online, apelați metoda `get_audit_logs` a modelului "
+"`odoo.database` prin intermediul :doc:`API-ului extern JSON-2 <../developer/"
+"reference/external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"Cererea trebuie să furnizeze fie `db_uuid`, fie `subscription_code`. Dacă "
+"este furnizat `db_uuid`, sunt returnate jurnalele pentru acea bază de date. "
+"În caz contrar, `subscription_code` poate fi utilizat pentru a prelua "
+"jurnalele pentru toate bazele de date și proiectele care aparțin "
+"abonamentului."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"Parametrul opțional `cursor` este o valoare opacă returnată de o cerere "
+"anterioară. Dacă este furnizat, sunt returnate doar jurnalele mai recente "
+"decât cursorul."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"Preluarea jurnalelor de audit este supusă unor limite de rată și nu trebuie "
+"efectuată mai mult de o dată la fiecare 5 minute."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"Răspunsul este un obiect JSON care conține jurnalele și un cursor opac "
+"pentru preluarea următorului lot:"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "Parametrii cererii sunt:"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (string): UUID-ul bazei de date. Dacă este furnizat, "
+"`subscription_code` este ignorat."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (string): codul abonamentului. Utilizat atunci când "
+"`db_uuid` nu este furnizat."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (string): un cursor opac returnat de o cerere anterioară. Dacă este "
+"furnizat, sunt returnate doar jurnalele mai recente decât cursorul."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "Fiecare intrare din jurnal conține:"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (string): data și ora jurnalului în UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (string): utilizatorul care a efectuat acțiunea"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr "`database` (string): baza de date vizată de acțiune, dacă este cazul."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (string): codul abonamentului."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr "`ip` (string): adresa IP de la care a fost efectuată acțiunea."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (string): tipul acțiunii."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string): informații suplimentare despre acțiune."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (boolean): indică dacă acțiunea a fost autorizată."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"Valoarea `next_cursor` este un cursor opac care poate fi furnizat ca "
+"`cursor` într-o cerere ulterioară."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1199,7 +1332,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:3
 msgid "Advanced topics"
-msgstr ""
+msgstr "Subiecte avansate"
 
 #: ../../content/administration/odoo_sh/advanced.rst:5
 msgid ""
@@ -1207,6 +1340,10 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
+"Această secțiune acoperă funcțiile avansate ale Odoo.sh legate de "
+":ref:`containere <odoo-sh/advanced/containers>`, :ref:`submodule Git <odoo-"
+"sh/advanced/submodules>` și :ref:`acțiuni programate <odoo-sh/advanced/"
+"scheduled>`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
@@ -1218,6 +1355,9 @@ msgid ""
 "base is an Ubuntu-based system on which all of Odoo's required dependencies, "
 "as well as common, useful packages, are installed."
 msgstr ""
+"Fiecare build este izolat în propriul container (container de tip Linux "
+"namespace). Baza este un sistem bazat pe Ubuntu pe care sunt instalate toate "
+"dependențele necesare Odoo, precum și pachete comune, utile."
 
 #: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
@@ -1227,6 +1367,11 @@ msgid ""
 "them. The platform will ensure these dependencies are installed in your "
 "containers."
 msgstr ""
+"Dacă proiectul dvs. necesită :ref:`dependențe Python suplimentare <odoo-sh/"
+"module/library>` sau versiuni mai recente, puteți defini un fișier "
+":file:`requirements.txt` la rădăcina ramurilor dvs. care le enumeră. "
+"Platforma se va asigura că aceste dependențe sunt instalate în containerele "
+"dvs."
 
 #: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
@@ -1239,6 +1384,8 @@ msgid ""
 "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
 "reference/requirement-specifiers/>`_"
 msgstr ""
+"`Documentația PyPA privind specificatorii de cerințe <https://pip.pypa.io/en/"
+"stable/reference/requirement-specifiers/>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:29
 msgid ""
@@ -1246,6 +1393,9 @@ msgid ""
 "submodules>` are also taken into account. The platform looks for such files "
 "in the parent folder of each folder containing an Odoo module."
 msgstr ""
+"Fișierele :file:`requirements.txt` ale :ref:`submodulelor <odoo-sh/advanced/"
+"submodules>` sunt de asemenea luate în considerare. Platforma caută astfel "
+"de fișiere în dosarul părinte al fiecărui dosar care conține un modul Odoo."
 
 #: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
@@ -1257,16 +1407,21 @@ msgid ""
 "`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 msgstr ""
+"Deoarece containerele sunt bazate pe Ubuntu, structura lor de directoare "
+"respectă `Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_."
 
 #: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
 "`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
 "LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
+"`Documentația principalelor directoare Ubuntu <https://help.ubuntu.com/"
+"community/LinuxFilesystemTreeOverview#Main_directories>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:44
 msgid "The directories relevant to Odoo.sh are the following:"
-msgstr ""
+msgstr "Directoarele relevante pentru Odoo.sh sunt următoarele:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
@@ -1277,6 +1432,8 @@ msgid ""
 "While accessing a container with the shell, you can access the database "
 "using the `psql` command."
 msgstr ""
+"Când accesați un container prin shell, puteți accesa baza de date folosind "
+"comanda `psql`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
@@ -1287,6 +1444,13 @@ msgid ""
 "safety net in case of a mistake. You simply have to rollback your changes to "
 "revert your database to its previous state."
 msgstr ""
+"Folosiți întotdeauna `tranzacții <https://www.postgresql.org/docs/current/"
+"static/sql-begin.html>`_ (de ex., `BEGIN` (...) `COMMIT` / `ROLLBACK`) "
+"atunci când o instrucțiune SQL duce la modificări (de ex., `UPDATE`, "
+"`DELETE`, `ALTER`, etc.), în special pentru baza de date de producție. "
+"Mecanismul de tranzacții este plasa dvs. de siguranță în caz de greșeală. "
+"Trebuie doar să faceți rollback la modificări pentru a readuce baza de date "
+"la starea anterioară."
 
 #: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
@@ -1294,22 +1458,30 @@ msgid ""
 "lock records in your tables, and a running database may wait for them to be "
 "released, causing a server to hang indefinitely."
 msgstr ""
+"Nu uitați să faceți commit sau rollback la tranzacții. Tranzacțiile deschise "
+"pot bloca înregistrări din tabelele dvs., iar o bază de date activă poate "
+"aștepta eliberarea acestora, ceea ce poate face ca un server să rămână "
+"blocat la nesfârșit."
 
 #: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
 "In addition, use your staging databases to test your statements first. It "
 "gives you an extra safety net."
 msgstr ""
+"În plus, folosiți bazele de date de testare pentru a testa mai \\u00entâi "
+"instrucțiunile dvs. Aceasta vă oferă o plasă de siguranță suplimentară."
 
 #: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
 "You forgot to set your `WHERE` condition. In such a case, you can rollback "
 "to revert the unwanted change:"
 msgstr ""
+"Ați uitat să setați condiția `WHERE`. În acest caz, puteți face rollback "
+"pentru a anula modificarea nedorită:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:120
 msgid "Then, rewrite the statement and commit the change:"
-msgstr ""
+msgstr "Apoi, rescrieți instrucțiunea și faceți commit la modificare:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
@@ -1321,44 +1493,52 @@ msgid ""
 "able to access it from the outside world with a web browser, but you can, "
 "for example:"
 msgstr ""
+"Puteți porni o instanță de server Odoo dintr-un shell de container. Nu veți "
+"putea să o accesați din exterior cu un browser web, dar puteți, de exemplu:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
-msgstr ""
+msgstr "Utilizați shell-ul Odoo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:151
 msgid "Install a module:"
-msgstr ""
+msgstr "Instalați un modul:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
 "The argument `--without-demo=all` prevents demo data from being loaded for "
 "all modules."
 msgstr ""
+"Argumentul `--without-demo=all` împiedică încărcarea datelor demonstrative "
+"pentru toate modulele."
 
 #: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
 "The argument `--stop-after-init` immediately shutdowns the server instance "
 "after the operation is completed."
 msgstr ""
+"Argumentul `--stop-after-init` oprește imediat instanța serverului după "
+"finalizarea operației."
 
 #: ../../content/administration/odoo_sh/advanced.rst:162
 msgid "Update a module:"
-msgstr ""
+msgstr "Actualizați un modul:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:168
 msgid "Run the tests for a module:"
-msgstr ""
+msgstr "Executați testele pentru un modul:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:175
 msgid ":doc:`CLI documentation </developer/reference/cli>`"
-msgstr ""
+msgstr ":doc:`Documentația CLI </developer/reference/cli>`"
 
 #: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
 "To find the addons path used by Odoo.sh to run your server, look for "
 "\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
+"Pentru a găsi calea addons utilizată de Odoo.sh pentru a rula serverul dvs., "
+"căutați „*odoo: addons paths*” în jurnale (:file:`~/logs/odoo.log`)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
@@ -1366,6 +1546,9 @@ msgid ""
 "will be reflected in the database. Remember to always carry out tests in "
 "your staging databases."
 msgstr ""
+"Operațiunile pe care le efectuați pe o instanță de server Odoo nu sunt "
+"izolate; modificările vor fi reflectate în baza de date. Nu uitați să "
+"efectuați întotdeauna testele în bazele de date de testare (staging)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
@@ -1378,6 +1561,10 @@ msgid ""
 "and limitations of the Odoo.sh platform, and assumes that you already know "
 "how to use a debugger."
 msgstr ""
+"Depanarea unei build Odoo.sh nu diferă cu adevărat de depanarea altei "
+"aplicații Python. Prin urmare, scopul acestei secțiuni este de a acoperi "
+"particularitățile și limitările platformei Odoo.sh și presupune că știți "
+"deja cum să folosiți un depanator (debugger)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
@@ -1385,6 +1572,10 @@ msgid ""
 "server runs outside a shell, you cannot launch the debugger directly from "
 "your Odoo backend, as it requires a shell to operate."
 msgstr ""
+"Puteți utiliza `pdb`, `pudb` sau `ipdb` pentru a depana codul pe Odoo.sh. "
+"Deoarece serverul rulează în afara unui shell, nu puteți lansa depanatorul "
+"direct din backend-ul Odoo, deoarece acesta necesită un shell pentru a "
+"funcționa."
 
 #: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
@@ -1399,39 +1590,49 @@ msgid ""
 "To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
 "project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
+"Pentru a utiliza `pudb <https://pypi.org/project/pudb/>`_ sau `ipdb <https://"
+"pypi.org/project/ipdb/>`_, este necesar să le instalați fie:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
+"permanent, adăugând `pudb` sau `ipdb` în fișierul :file:`requirements.txt` "
+"al proiectului dvs., sau"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
 "temporarily (only in the current build) by running the relevant command:"
-msgstr ""
+msgstr "temporar (doar în build-ul curent), executând comanda relevantă:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:221
 msgid "To trigger the debugger, add this to the code you want to debug:"
 msgstr ""
+"Pentru a declanșa depanatorul, adăugați acest lucru la codul pe care doriți "
+"să îl depanați:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
 "The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
 "you are running Odoo from a shell."
 msgstr ""
+"Condiția `sys.__stdin__.isatty()` este o soluție alternativă pentru a "
+"detecta dacă rulați Odoo dintr-un shell."
 
 #: ../../content/administration/odoo_sh/advanced.rst:233
 msgid "Next, save the file and run the Odoo shell:"
-msgstr ""
+msgstr "Apoi, salvați fișierul și rulați shell-ul Odoo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:239
 msgid "Use the Odoo shell to trigger the code you want to debug."
 msgstr ""
+"Utilizați shell-ul Odoo pentru a declanșa codul pe care doriți să îl "
+"depanați."
 
 #: ../../content/administration/odoo_sh/advanced.rst:0
 msgid "pdb running in an Odoo.sh shell"
-msgstr ""
+msgstr "pdb rulând într-un shell Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
@@ -1446,6 +1647,12 @@ msgid ""
 "main codebase. You maintain precise version control by choosing exact "
 "branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
+"`Git submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ vă "
+"permit să conectați repository-uri externe direct în proiectul dvs. fără a "
+"copia-lipi codul, simplificând implementarea prin clonarea dependențelor "
+"alături de codul dvs. principal. Mențineți un control precis al versiunilor "
+"alegând ramuri exacte și fixând anumite revizii de commit pentru a le "
+"actualiza ori de câte ori doriți."
 
 #: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
@@ -1584,22 +1791,28 @@ msgid ""
 "As the execution time of scheduled actions is limited, it is advised to "
 "ensure your scheduled actions:"
 msgstr ""
+"Deoarece timpul de execuție al acțiunilor programate este limitat, este "
+"recomandat să vă asigurați că acțiunile programate:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:343
 msgid "Work on small batches of records."
-msgstr ""
+msgstr "Lucrează cu loturi mici de înregistrări."
 
 #: ../../content/administration/odoo_sh/advanced.rst:344
 msgid ""
 "Commit their work after processing each batch so that if they are "
 "interrupted by the time limit, they do not need to start over."
 msgstr ""
+"Confirmă (commit) lucrul după procesarea fiecărui lot, astfel încât, dacă "
+"sunt întrerupte de limita de timp, să nu fie nevoite să o ia de la capăt."
 
 #: ../../content/administration/odoo_sh/advanced.rst:346
 msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+"Sunt idempotente, adică nu trebuie să provoace efecte secundare dacă sunt "
+"pornite mai des decât se așteaptă."
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2247,18 +2460,20 @@ msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
 "involved:"
 msgstr ""
+"Când lucrați cu Odoo.sh, este important să înțelegeți componentele "
+"principale implicate:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
 msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
-msgstr ""
+msgstr ":ref:`Repozitoriu GitHub <odoo-sh/getting-started/components/github>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:15
 msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
-msgstr ""
+msgstr ":ref:`Proiect Odoo.sh <odoo-sh/getting-started/components/project>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
-msgstr ""
+msgstr ":ref:`Bază de date Odoo <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2266,10 +2481,13 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
+"Deși sunt toate interconectate, fiecare joacă un rol distinct în dezvoltarea "
+"și implementarea aplicațiilor Odoo. Împreună, formează un flux coerent, de "
+"la dezvoltarea codului până la utilizarea efectivă în afaceri."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
-msgstr ""
+msgstr "Repozitoriu GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
 msgid ""
@@ -2278,6 +2496,10 @@ msgid ""
 "on GitHub and can be accessed and edited by multiple people on different "
 "computers."
 msgstr ""
+"Un repozitoriu GitHub este ca un dosar de pe computerul dvs. care conține "
+"toate fișierele și dosarele pentru un anumit proiect. Diferența este că "
+"acesta este stocat pe GitHub și poate fi accesat și editat de mai multe "
+"persoane, de pe computere diferite."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:31
 msgid ""
@@ -2287,6 +2509,12 @@ msgid ""
 "changes to your project over time, so you can easily roll back to a previous "
 "version if needed."
 msgstr ""
+"Cu alte cuvinte, un repozitoriu GitHub este un loc unde puteți stoca "
+"fișierele proiectului dvs. și le puteți partaja cu alții, astfel încât "
+"aceștia să poată colabora cu dvs., să facă modificări și să contribuie la "
+"proiect. De asemenea, urmărește toate modificările aduse proiectului dvs. de-"
+"a lungul timpului, astfel încât să puteți reveni cu ușurință la o versiune "
+"anterioară, dacă este necesar."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2297,6 +2525,13 @@ msgid ""
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
+"În plus, GitHub oferă multe funcționalități care vă ajută să vă gestionați "
+"proiectul, precum urmărirea problemelor, cererile de tip pull request și "
+"recenziile de cod. Este un instrument puternic pentru gestionarea și "
+"colaborarea la proiecte software și este utilizat pe scară largă de "
+"dezvoltatorii din întreaga lume. Este un spațiu cu control al versiunilor în "
+"care este stocat codul sursă al aplicațiilor Odoo. Urmărește fiecare "
+"modificare, susține colaborarea și poate fi public sau privat."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2304,7 +2539,7 @@ msgstr "Exemplu de repository GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:48
 msgid "Odoo.sh project"
-msgstr ""
+msgstr "Proiect Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
@@ -2313,6 +2548,10 @@ msgid ""
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
+"Un proiect Odoo.sh este o *platformă ca serviciu* (PaaS) care se integrează "
+"cu GitHub și permite dezvoltarea, testarea și implementarea simplificată a "
+"aplicațiilor Odoo. Include instrumente precum copii de rezervă automate, "
+"medii de testare (staging) și fluxuri de integrare continuă."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
@@ -2327,6 +2566,9 @@ msgid ""
 "An Odoo database stores all the operational data used and generated by Odoo "
 "applications, such as business records, configurations, and user data."
 msgstr ""
+"O bază de date Odoo stochează toate datele operaționale utilizate și "
+"generate de aplicațiile Odoo, precum înregistrările de afaceri, "
+"configurările și datele utilizatorilor."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
@@ -2350,6 +2592,9 @@ msgid ""
 "the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
+"**Utilizatori GitHub**: dezvoltatori cu acces la repozitoriul GitHub asociat "
+"proiectului Odoo.sh. Accesul la repozitoriu nu face automat din cineva un "
+"colaborator al proiectului Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
@@ -2357,6 +2602,9 @@ msgid ""
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
+"**Colaboratori Odoo.sh**: persoane care gestionează proiectul Odoo.sh. "
+"Fiecare colaborator trebuie să fie asociat unui utilizator GitHub. Totuși, "
+"colaboratorii nu sunt același lucru cu utilizatorii bazei de date."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
@@ -2364,32 +2612,39 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
+"**Utilizatori ai bazei de date**: utilizatorii finali ai bazei de date Odoo "
+"implementate. Aceștia interacționează cu sistemul live, dar nu sunt "
+"implicați în dezvoltare sau în gestionarea proiectului."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
-msgstr ""
+msgstr "Concepte tehnice"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:88
 msgid ""
 "When working with Odoo.sh, it is also important to understand several "
 "technical concepts:"
 msgstr ""
+"Când lucrați cu Odoo.sh, este important să înțelegeți și câteva concepte "
+"tehnice:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:90
 msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
 msgstr ""
+":ref:`Crearea unui fork al unui depozit <odoo-sh/getting-started/concepts/"
+"fork>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:91
 msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
-msgstr ""
+msgstr ":ref:`Trimiterea unui commit <odoo-sh/getting-started/concepts/commit>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:92
 msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
-msgstr ""
+msgstr ":ref:`Îmbinarea unei ramuri <odoo-sh/getting-started/concepts/merge>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:97
 msgid "Forking a repository"
-msgstr ""
+msgstr "Crearea unui fork al unui depozit"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:99
 msgid ""
@@ -2397,6 +2652,9 @@ msgid ""
 "repository on your own account. This allows you to make changes to the "
 "repository without affecting the original version."
 msgstr ""
+"Crearea unui fork al unui depozit pe GitHub înseamnă crearea unei copii a "
+"depozitului altcuiva în propriul cont. Acest lucru vă permite să faceți "
+"modificări depozitului fără a afecta versiunea originală."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:102
 msgid ""
@@ -2405,6 +2663,10 @@ msgid ""
 "then make changes to the files in your copy of the repository and commit "
 "them, just like you would with any other repository."
 msgstr ""
+"Când faceți fork la un depozit, creați propria copie a depozitului, completă "
+"cu toate fișierele și folderele din depozitul original. Puteți apoi să "
+"faceți modificări fișierelor din copia depozitului dumneavoastră și să le "
+"trimiteți printr-un commit, la fel ca la orice alt depozit."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:106
 msgid ""
@@ -2414,6 +2676,11 @@ msgid ""
 "also use the forked repository as a starting point for your project, making "
 "changes as needed."
 msgstr ""
+"Avantajul creării unui fork al unui depozit este că puteți face modificări "
+"codului fără a afecta versiunea originală, ceea ce este util atunci când "
+"doriți să experimentați funcționalități noi sau să reparați erori în codul "
+"altcuiva. De asemenea, puteți folosi depozitul creat prin fork ca punct de "
+"plecare pentru proiectul dumneavoastră, făcând modificările necesare."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:111
 msgid ""
@@ -2423,10 +2690,16 @@ msgid ""
 "projects to accept contributions from other developers, and it can be a "
 "great way to get involved in the community and improve your coding skills."
 msgstr ""
+"După ce ați făcut modificări în depozitul creat prin fork, puteți trimite o "
+"cerere de tip pull request către proprietarul depozitului original, cerându-"
+"i să îmbine modificările dumneavoastră înapoi în depozitul lor. Aceasta este "
+"o abordare comună pentru proiectele open-source, prin care se acceptă "
+"contribuții de la alți dezvoltatori, și poate fi o modalitate excelentă de a "
+"vă implica în comunitate și de a vă îmbunătăți abilitățile de programare."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:119
 msgid "Pushing a commit"
-msgstr ""
+msgstr "Trimiterea unui commit"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:121
 msgid ""
@@ -2435,6 +2708,10 @@ msgid ""
 "words, Git knows that changes have been made, but they haven't been "
 "officially saved or recorded yet."
 msgstr ""
+"Când faceți modificări la un fișier sau la mai multe fișiere dintr-un "
+"depozit Git de pe computerul dumneavoastră local, acele modificări sunt "
+"considerate *necomise*. Cu alte cuvinte, Git știe că au fost făcute "
+"modificări, dar acestea nu au fost încă salvate sau înregistrate oficial."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:125
 msgid ""
@@ -2443,6 +2720,10 @@ msgid ""
 "specific point in time. It records what changes were made, who made them, "
 "and when."
 msgstr ""
+"Pentru a salva aceste modificări și a le adăuga în depozitul Git, trebuie să "
+"creați un *commit*. Un commit este o instantanee a modificărilor pe care le-"
+"ați făcut fișierelor la un moment specific. Acesta înregistrează ce "
+"modificări au fost făcute, cine le-a făcut și când."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:129
 msgid ""
@@ -2451,6 +2732,11 @@ msgid ""
 "you've made in the commit from your local repository to the remote "
 "repository so that others can see and use them."
 msgstr ""
+"După ce ați creat un commit, îl puteți *trimite* (push) către un depozit la "
+"distanță, cum ar fi unul găzduit pe GitHub. Trimiterea unui commit înseamnă "
+"transmiterea modificărilor pe care le-ați făcut în commit din depozitul "
+"dumneavoastră local către depozitul la distanță, astfel încât ceilalți să le "
+"poată vedea și folosi."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:133
 msgid ""
@@ -2459,10 +2745,14 @@ msgid ""
 "repository. It is a way to share your changes with others and collaborate on "
 "a project."
 msgstr ""
+"Pe scurt, trimiterea unui commit înseamnă transmiterea modificărilor pe care "
+"le-ați făcut fișierelor din depozitul dumneavoastră Git, de pe computerul "
+"local către un depozit la distanță. Este o modalitate de a vă împărtăși "
+"modificările cu ceilalți și de a colabora la un proiect."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:140
 msgid "Merging a branch"
-msgstr ""
+msgstr "Îmbinarea unei ramuri"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:142
 msgid ""
@@ -2473,6 +2763,12 @@ msgid ""
 "changes back into the main branch (often called the `master` or `main` "
 "branch)."
 msgstr ""
+"Îmbinarea unei ramuri în alta este procesul de combinare a modificărilor "
+"făcute într-o ramură cu cealaltă. De exemplu, să presupunem că ați creat o "
+"ramură nouă numită `feature-branch` pentru a lucra la o funcționalitate nouă "
+"a proiectului dumneavoastră. După ce ați terminat de făcut modificări în "
+"această ramură, puteți îmbina acele modificări înapoi în ramura principală "
+"(deseori numită ramura `master` sau `main`)."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:147
 msgid ""
@@ -2481,6 +2777,10 @@ msgid ""
 "made in the two branches, Git will prompt you to resolve them before "
 "completing the merge (code-wise)."
 msgstr ""
+"Când îmbinați o ramură, Git examinează modificările din ambele ramuri și "
+"încearcă să le combine. Dacă există conflicte între modificările făcute în "
+"cele două ramuri, Git vă va cere să le rezolvați înainte de finalizarea "
+"îmbinării (din punct de vedere al codului)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -3656,6 +3956,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"Scopul copiilor de rezervă manuale este de a crea o instantanee specifică a "
+"bazelor de date de producție sau de testare (nu este disponibil pentru "
+"dezvoltare). Acestea rămân disponibile timp de trei zile. Cu toate acestea, "
+"există o limită de cinci copii de rezervă manuale zilnice."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -3862,6 +4166,9 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
+":guilabel:`Instalează doar modulele mele (nu include submodulele)`: "
+"instalează doar modulele ramurii, excluzând :ref:`submodulele <odoo-sh/"
+"advanced/submodules>`. Aceasta este opțiunea implicită."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4286,7 +4593,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
 msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
-msgstr ""
+msgstr ":ref:`Documentația despre submodule <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -4892,6 +5199,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"Pentru modulele comunitare disponibile public, puteți lua în considerare și "
+"utilizarea :ref:`submodulelor <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -8688,10 +8997,6 @@ msgstr ""
 "ediția Enterprise. Este necesar să clonați atât depozitele Community, cât și "
 "cele Enterprise pentru a avea o instalare Odoo Enterprise funcțională."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr "Odoo necesită **Python 3.10** sau o versiune ulterioară pentru a rula."
@@ -9570,7 +9875,7 @@ msgstr "Sfârșitul asistenței standard"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -9591,7 +9896,7 @@ msgstr "N/A"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "July 2026"
-msgstr ""
+msgstr "iulie 2026"
 
 #: ../../content/administration/standard_extended_support.rst:41
 msgid "Odoo SaaS 19.3"
@@ -10851,6 +11156,23 @@ msgstr ":doc:`Documentația Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Versiuni Odoo suportate <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Pentru a prelua programatic o listă cu toate bazele de date afișate în "
+#~ "`managerul de baze de date <https://www.odoo.com/my/databases>`_, apelați "
+#~ "metoda `list` a modelului `odoo.database` printr-un apel "
+#~ "de :doc:`serviciu web <../developer/howtos/web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Pentru a prelua această listă cu biblioteca `xmlrpc.client`:"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "Exemplul echivalent cu JSON-RPC:"
 
 #~ msgid "Advanced"
 #~ msgstr "Avansat"

@@ -27,8 +27,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-05 09:11+0000\n"
+"POT-Creation-Date: 2026-09-11 17:34+0000\n"
+"PO-Revision-Date: 2026-09-12 15:32+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-17-doc/"
 "administration/fr/>\n"
@@ -1186,25 +1186,161 @@ msgstr ""
 msgid "Web services"
 msgstr "Services web"
 
-#: ../../content/administration/odoo_online.rst:162
+#: ../../content/administration/odoo_online.rst:163
+msgid "Databases list"
+msgstr "Liste des bases de données"
+
+#: ../../content/administration/odoo_online.rst:165
 msgid ""
-"To retrieve a list of all databases displayed under the `database manager "
-"<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
-"method of the `odoo.database` model via an :doc:`web service <../developer/"
-"howtos/web_services>` call."
+"To retrieve a list of all databases displayed under the :ref:`database "
+"manager <odoo-online/database-manager>` programmatically, call the `list` "
+"method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
+"developer/reference/external_api>`."
 msgstr ""
-"Pour récupérer par programmation une liste de toutes les bases de données "
-"affichées sous le `gestionnaire de bases de données <https://www.odoo.com/my/"
-"databases>`_, appelez la méthode `list` du modèle `odoo.database` via un "
-"appel de :doc:`service web <../developer/howtos/web_services>`."
+"Pour récupérer par programmation la liste de toutes les bases de données "
+"affichées sous le :ref:`gestionnaire de bases de données <odoo-online/"
+"database-manager>`, appelez la méthode `list` du modèle `odoo.database` via "
+"l':doc:`API JSON-2 externe <../developer/reference/external_api>`."
 
-#: ../../content/administration/odoo_online.rst:166
-msgid "To retrieve this list with the `xmlrpc.client` library:"
-msgstr "Pour récupérer cette liste avec la bibliothèque `xmlrpc.client` :"
+#: ../../content/administration/odoo_online.rst:171
+#: ../../content/administration/odoo_online.rst:216
+#: ../../content/administration/on_premise/source.rst:119
+msgid "Python"
+msgstr "Python"
 
-#: ../../content/administration/odoo_online.rst:180
-msgid "The equivalent example with JSON-RPC:"
-msgstr "L'exemple équivalent avec JSON-RPC :"
+#: ../../content/administration/odoo_online.rst:189
+#: ../../content/administration/odoo_online.rst:232
+msgid "cURL"
+msgstr "cURL"
+
+#: ../../content/administration/odoo_online.rst:200
+msgid "Audit logs"
+msgstr "Journaux d'audit"
+
+#: ../../content/administration/odoo_online.rst:202
+msgid ""
+"To retrieve the admin activity logs of an Odoo Online database, call the "
+"`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
+"JSON-2 API <../developer/reference/external_api>`."
+msgstr ""
+"Pour récupérer les journaux d'activité de l'administrateur d'une base de "
+"données Odoo Online, appelez la méthode `get_audit_logs` du modèle "
+"`odoo.database` via l':doc:`API JSON-2 externe <../developer/reference/"
+"external_api>`."
+
+#: ../../content/administration/odoo_online.rst:205
+msgid ""
+"The request must provide either `db_uuid` or `subscription_code`. If "
+"`db_uuid` is provided, the logs for that database are returned. Otherwise, "
+"`subscription_code` can be used to retrieve logs for all databases and "
+"projects belonging to the subscription."
+msgstr ""
+"La requête doit fournir soit `db_uuid`, soit `subscription_code`. Si "
+"`db_uuid` est fourni, les journaux de cette base de données sont renvoyés. "
+"Sinon, `subscription_code` peut être utilisé pour récupérer les journaux de "
+"toutes les bases de données et projets appartenant à l'abonnement."
+
+#: ../../content/administration/odoo_online.rst:209
+msgid ""
+"The optional `cursor` is an opaque value returned by a previous request. "
+"When provided, only logs more recent than the cursor are returned."
+msgstr ""
+"Le paramètre facultatif `cursor` est une valeur opaque renvoyée par une "
+"requête précédente. Lorsqu'il est fourni, seuls les journaux plus récents "
+"que le curseur sont renvoyés."
+
+#: ../../content/administration/odoo_online.rst:212
+msgid ""
+"Audit log retrieval is subject to rate limits and must not be performed more "
+"than once every 5 minutes."
+msgstr ""
+"La récupération des journaux d'audit est soumise à des limites de fréquence "
+"et ne doit pas être effectuée plus d'une fois toutes les 5 minutes."
+
+#: ../../content/administration/odoo_online.rst:242
+msgid ""
+"The response is a JSON object containing the logs and an opaque cursor for "
+"retrieving the next batch:"
+msgstr ""
+"La réponse est un objet JSON contenant les journaux et un curseur opaque "
+"permettant de récupérer le lot suivant :"
+
+#: ../../content/administration/odoo_online.rst:263
+msgid "The request parameters are:"
+msgstr "Les paramètres de la requête sont :"
+
+#: ../../content/administration/odoo_online.rst:265
+msgid ""
+"`db_uuid` (string): the UUID of the database. If provided, "
+"`subscription_code` is ignored."
+msgstr ""
+"`db_uuid` (chaîne) : l'UUID de la base de données. S'il est fourni, "
+"`subscription_code` est ignoré."
+
+#: ../../content/administration/odoo_online.rst:266
+msgid ""
+"`subscription_code` (string): the subscription code. Used when `db_uuid` is "
+"not provided."
+msgstr ""
+"`subscription_code` (chaîne) : le code d'abonnement. Utilisé lorsque "
+"`db_uuid` n'est pas fourni."
+
+#: ../../content/administration/odoo_online.rst:267
+msgid ""
+"`cursor` (string): an opaque cursor returned by a previous request. When "
+"provided, only logs more recent than the cursor are returned."
+msgstr ""
+"`cursor` (chaîne) : un curseur opaque renvoyé par une requête précédente. "
+"Lorsqu'il est fourni, seuls les journaux plus récents que le curseur sont "
+"renvoyés."
+
+#: ../../content/administration/odoo_online.rst:270
+msgid "Each log entry contains:"
+msgstr "Chaque entrée de journal contient :"
+
+#: ../../content/administration/odoo_online.rst:272
+msgid "`date` (string): the log date and time in UTC."
+msgstr "`date` (chaîne) : la date et l'heure du journal en UTC."
+
+#: ../../content/administration/odoo_online.rst:273
+msgid "`user` (string): the user who performed the action"
+msgstr "`user` (chaîne) : l'utilisateur qui a effectué l'action"
+
+#: ../../content/administration/odoo_online.rst:274
+msgid ""
+"`database` (string): the database concerned by the action, when applicable."
+msgstr ""
+"`database` (chaîne) : la base de données concernée par l'action, le cas "
+"échéant."
+
+#: ../../content/administration/odoo_online.rst:275
+msgid "`subscription` (string): the subscription code."
+msgstr "`subscription` (chaîne) : le code d'abonnement."
+
+#: ../../content/administration/odoo_online.rst:276
+msgid "`ip` (string): the IP address from which the action was performed."
+msgstr ""
+"`ip` (chaîne) : l'adresse IP à partir de laquelle l'action a été effectuée."
+
+#: ../../content/administration/odoo_online.rst:277
+msgid "`action` (string): the type of action."
+msgstr "`action` (chaîne) : le type d'action."
+
+#: ../../content/administration/odoo_online.rst:278
+msgid "`details` (string): additional information about the action."
+msgstr "`details` (string) : informations supplémentaires sur l'action."
+
+#: ../../content/administration/odoo_online.rst:279
+msgid "`authorized` (boolean): whether the action was authorized."
+msgstr "`authorized` (boolean) : indique si l'action a été autorisée."
+
+#: ../../content/administration/odoo_online.rst:281
+msgid ""
+"The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
+"in a subsequent request."
+msgstr ""
+"La valeur `next_cursor` est un curseur opaque qui peut être fourni en tant "
+"que `cursor` dans une requête ultérieure."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:31
@@ -1351,41 +1487,48 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
-msgstr ""
+msgstr "Utiliser le shell Odoo :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:151
 msgid "Install a module:"
-msgstr ""
+msgstr "Installer un module :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
 "The argument `--without-demo=all` prevents demo data from being loaded for "
 "all modules."
 msgstr ""
+"L'argument `--without-demo=all` empêche le chargement des données de "
+"démonstration pour tous les modules."
 
 #: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
 "The argument `--stop-after-init` immediately shutdowns the server instance "
 "after the operation is completed."
 msgstr ""
+"L'argument `--stop-after-init` arrête immédiatement l'instance du serveur "
+"une fois l'opération terminée."
 
 #: ../../content/administration/odoo_sh/advanced.rst:162
 msgid "Update a module:"
-msgstr ""
+msgstr "Mettre à jour un module :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:168
 msgid "Run the tests for a module:"
-msgstr ""
+msgstr "Exécuter les tests d'un module :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:175
 msgid ":doc:`CLI documentation </developer/reference/cli>`"
-msgstr ""
+msgstr ":doc:`Documentation CLI </developer/reference/cli>`"
 
 #: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
 "To find the addons path used by Odoo.sh to run your server, look for "
 "\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
+"Pour trouver le chemin des addons utilisé par Odoo.sh pour exécuter votre "
+"serveur, recherchez « *odoo: addons paths* » dans les journaux (:file:`~/"
+"logs/odoo.log`)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
@@ -1393,6 +1536,10 @@ msgid ""
 "will be reflected in the database. Remember to always carry out tests in "
 "your staging databases."
 msgstr ""
+"Les opérations effectuées sur une instance de serveur Odoo ne sont pas "
+"isolées ; les modifications seront répercutées dans la base de données. "
+"N'oubliez pas de toujours effectuer les tests dans vos bases de données de "
+"transition."
 
 #: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
@@ -1405,6 +1552,10 @@ msgid ""
 "and limitations of the Odoo.sh platform, and assumes that you already know "
 "how to use a debugger."
 msgstr ""
+"Déboguer une build Odoo.sh n'est pas vraiment différent du débogage d'une "
+"autre application Python. Ainsi, l'objectif de cette section est de couvrir "
+"les spécificités et les limites de la plateforme Odoo.sh, en supposant que "
+"vous savez déjà utiliser un débogueur."
 
 #: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
@@ -1412,6 +1563,10 @@ msgid ""
 "server runs outside a shell, you cannot launch the debugger directly from "
 "your Odoo backend, as it requires a shell to operate."
 msgstr ""
+"Vous pouvez utiliser `pdb`, `pudb` ou `ipdb` pour déboguer le code sur "
+"Odoo.sh. Comme le serveur s'exécute en dehors d'un shell, vous ne pouvez pas "
+"lancer le débogueur directement depuis votre backend Odoo, car cela "
+"nécessite un shell pour fonctionner."
 
 #: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
@@ -1426,39 +1581,50 @@ msgid ""
 "To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
 "project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
+"Pour utiliser `pudb <https://pypi.org/project/pudb/>`_ ou `ipdb <https://"
+"pypi.org/project/ipdb/>`_, il est nécessaire de les installer soit :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
+"de façon permanente en ajoutant `pudb` ou `ipdb` au fichier "
+":file:`requirements.txt` de votre projet, ou"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
 "temporarily (only in the current build) by running the relevant command:"
 msgstr ""
+"de façon temporaire (uniquement dans la build actuelle) en exécutant la "
+"commande appropriée :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:221
 msgid "To trigger the debugger, add this to the code you want to debug:"
 msgstr ""
+"Pour déclencher le débogueur, ajoutez ceci au code que vous souhaitez "
+"déboguer :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
 "The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
 "you are running Odoo from a shell."
 msgstr ""
+"La condition `sys.__stdin__.isatty()` est une solution de contournement "
+"permettant de détecter si vous exécutez Odoo à partir d'un shell."
 
 #: ../../content/administration/odoo_sh/advanced.rst:233
 msgid "Next, save the file and run the Odoo shell:"
-msgstr ""
+msgstr "Ensuite, enregistrez le fichier et exécutez le shell Odoo :"
 
 #: ../../content/administration/odoo_sh/advanced.rst:239
 msgid "Use the Odoo shell to trigger the code you want to debug."
 msgstr ""
+"Utilisez le shell Odoo pour déclencher le code que vous souhaitez déboguer."
 
 #: ../../content/administration/odoo_sh/advanced.rst:0
 msgid "pdb running in an Odoo.sh shell"
-msgstr ""
+msgstr "pdb en cours d'exécution dans un shell Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
@@ -1473,6 +1639,13 @@ msgid ""
 "main codebase. You maintain precise version control by choosing exact "
 "branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
+"Les `sous-modules Git <https://git-scm.com/book/en/v2/Git-Tools-Submodules>"
+"`_ vous permettent de lier des dépôts externes directement à votre projet "
+"sans copier-coller de code, ce qui simplifie le déploiement en clonant les "
+"dépendances aux côtés de votre code source principal. Vous conservez un "
+"contrôle précis des versions en choisissant des branches exactes et en "
+"épinglant des révisions de commit spécifiques à mettre à jour quand vous le "
+"souhaitez."
 
 #: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
@@ -3731,6 +3904,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"L'objectif des sauvegardes manuelles est de créer un instantané spécifique "
+"des bases de données de production ou de staging (non disponible pour le "
+"développement). Elles restent disponibles pendant trois jours. Cependant, il "
+"existe une limite de cinq sauvegardes manuelles par jour."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -4980,6 +5157,9 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"Pour les modules communautaires disponibles publiquement, vous pouvez "
+"également envisager d'utiliser des :ref:`sous-modules <odoo-sh/advanced/"
+"submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -8835,10 +9015,6 @@ msgstr ""
 "version Enterprise. Vous devez cloner à la fois les dépôts Community et "
 "Enterprise pour avoir une installation Odoo Enterprise qui fonctionne."
 
-#: ../../content/administration/on_premise/source.rst:119
-msgid "Python"
-msgstr "Python"
-
 #: ../../content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.10** or later to run."
 msgstr ""
@@ -9732,7 +9908,7 @@ msgstr "Fin de l'assistance standard"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -9753,7 +9929,7 @@ msgstr "N/A"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "July 2026"
-msgstr ""
+msgstr "juillet 2026"
 
 #: ../../content/administration/standard_extended_support.rst:41
 msgid "Odoo SaaS 19.3"
@@ -11035,6 +11211,23 @@ msgstr ":doc:`Documentation Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Versions Odoo prises en charge <standard_extended_support>`"
+
+#~ msgid ""
+#~ "To retrieve a list of all databases displayed under the `database manager "
+#~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
+#~ "method of the `odoo.database` model via an :doc:`web service <../"
+#~ "developer/howtos/web_services>` call."
+#~ msgstr ""
+#~ "Pour récupérer par programmation une liste de toutes les bases de données "
+#~ "affichées sous le `gestionnaire de bases de données <https://www.odoo.com/"
+#~ "my/databases>`_, appelez la méthode `list` du modèle `odoo.database` via "
+#~ "un appel de :doc:`service web <../developer/howtos/web_services>`."
+
+#~ msgid "To retrieve this list with the `xmlrpc.client` library:"
+#~ msgstr "Pour récupérer cette liste avec la bibliothèque `xmlrpc.client` :"
+
+#~ msgid "The equivalent example with JSON-RPC:"
+#~ msgstr "L'exemple équivalent avec JSON-RPC :"
 
 #~ msgid "Advanced"
 #~ msgstr "Avancé"
