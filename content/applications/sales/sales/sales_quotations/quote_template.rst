@@ -1,3 +1,8 @@
+.. meta::
+   :description: Reusable quotation and section templates are configured and created in Odoo's Sales
+                 app, covering template lines, terms and conditions, and settings, along with
+                 applying templates to quotes and mass cancelling quotations or sales orders.
+
 .. _quote-calculator: https://youtu.be/W_0-gUc87WI?si=GMIuIMXP9-lOPtob
 
 =============================
@@ -10,37 +15,13 @@ services.
 By using these templates, quotations can be tailored and sent to customers at a quicker pace,
 without having to create new quotations from scratch every time a sales negotiation occurs.
 
-Configuration
-=============
-
-To use quotation and section templates, begin by activating the setting in :menuselection:`Sales app
---> Configuration --> Settings`, and scroll to the :guilabel:`Quotations &_Orders` heading.
-
-Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing so reveals a new
-:guilabel:`Default Template` field, in which a default quotation template can be chosen from the
-drop-down menu.
-
-.. image:: quote_template/quotations-templates-setting.png
-   :alt: How to enable quotation templates on Odoo Sales.
-
-Upon activating the :guilabel:`Quotation Templates` feature, an internal :icon:`fa-arrow-right`
-:guilabel:`Quotation Templates` link appears beneath the :guilabel:`Default Template` field.
-
-Clicking this link reveals the :guilabel:`Templates` page, from which templates can be created,
-viewed, and edited.
-
-Before leaving the :guilabel:`Settings` page, click the :guilabel:`Save` button to save all changes
-made during the session.
-
 .. _sales_quotations/quote_template/create-templates:
 
 Create quotation templates
 ==========================
 
-To create a quotation template, click the :guilabel:`Quotation Templates` link on the
-:guilabel:`Settings` page once :guilabel:`Quotation templates` are enabled, or navigate to
-:menuselection:`Sales app --> Configuration --> Templates`. Both options reveal the *Templates*
-page, where quotation templates can be created, viewed, and edited.
+To create a quotation template,  navigate to :menuselection:`Sales app --> Configuration -->
+Templates`. The *Templates* page displays from which templates can be created, viewed, and edited.
 
 .. image:: quote_template/quotation-templates-page.png
    :alt: Quotation templates page in the Odoo Sales application.
@@ -51,12 +32,11 @@ corner. Doing so reveals a blank quotation template form that can be customized.
 .. image:: quote_template/blank-quotation-form.png
    :alt: Create a new quotation template on Odoo Sales.
 
-Start by entering a name for the template in the :guilabel:`Template` field. If needed, create or
-select an existing spreadsheet to do complex calculations for the template in the :guilabel:`Quote
-calculator` field.
+Start by entering a name for the template in the :guilabel:`Template` field. Then select
+:guilabel:`Quotation` for the :guilabel:`Type` field. If needed, select an existing spreadsheet to
+do complex calculations for the template in the :guilabel:`Quote calculator` field.
 
 .. important::
-
    The :guilabel:`Quote calculator` field is only available for Quotation templates.
 
 Enable the :guilabel:`Share` checkbox to make the template accessible to specific sales teams.
@@ -143,18 +123,18 @@ In the *Confirmation* section, the :guilabel:`Quotation Validity` field designat
 quotation template is valid for, or leave the field on the default `0` to keep the template valid
 indefinitely.
 
-If either of the :guilabel:`Online Signature` or :guilabel:`Online Payment` features are activated
-in the :guilabel:`Settings` (:menuselection:`Sales app --> Configuration --> Settings`), toggles for
-each of them are available to activate on the quotation template.
+If either of the :guilabel:`Online Signature` feature is activated in the :guilabel:`Settings`
+(:menuselection:`Sales app --> Configuration --> Settings`), a toggle is available to activate on
+the quotation template.
 
 Enable the toggle for :guilabel:`Online Signature` to request an online signature from the customer
 to confirm an order.
 
-Enable the toggle for :guilabel:`Online Payment` to request an online payment from the customer to
-confirm an order. When :guilabel:`Online Payment` is checked, a new percentage field appears, in
-which a specific percentage of payment can be entered.
+If the or :guilabel:`Online Payment` feature is activated in the :guilabel:`Settings`
+(:menuselection:`Sales app --> Configuration --> Settings`), a percentage field displays, in which a
+specific percentage of payment can be entered.
 
-Both toggles, :guilabel:`Online Signature` and :guilabel:`Online Payment` can be enabled
+Both features, :guilabel:`Online Signature` and :guilabel:`Online Payment` can be enabled
 simultaneously, in which case the customer must provide **both** a signature **and** a payment to
 confirm an order.
 
@@ -202,8 +182,8 @@ Enter the name of the template in :guilabel:`Template` field and set the :guilab
    template.
 
 To create a section template from a sales quote, navigate to :menuselection:`Sales app --> Orders
---> Quotations` and :ref:`create a new quote <sales/create_quotations/create-quotation>`
-or select an existing one.
+--> Quotations` and :ref:`create a new quote <sales/create_quotations/create-quotation>` or select
+an existing one.
 
 Add section and any products in the :guilabel:`Order Lines` tab, then click the
 :icon:`fa-ellipsis-v` :guilabel:`Ellipsis` icon on the right side of the order line. Select the
@@ -224,9 +204,8 @@ the search bar, delete the :guilabel:`Quotation Templates filter` to display all
 Use templates
 =============
 
-When :ref:`creating a quote <sales/create_quotations/create-quotation>`
-(:menuselection:`Sales app --> New`), choose a preconfigured template in the :guilabel:`Quotation
-Template` field.
+When :ref:`creating a quote <sales/create_quotations/create-quotation>` (:menuselection:`Sales app
+--> New`), choose a preconfigured template from the drop-down menu of the :guilabel:`New` button.
 
 .. note::
    The order of the templates in the :guilabel:`Quotation Template` field is determined by the order
@@ -246,7 +225,7 @@ portal.
 When all blocks and customizations are complete, click the :guilabel:`Save` button to save the
 configuration.
 
-The blue banner located at the top of the quotation template preview can be used to quickly return
+The blue banner located at the top of the quotation template preview can be used to return
 :icon:`fa-arrow-right` :guilabel:`Back to edit mode`. When clicked, Odoo returns to the quotation
 form in the back-end of the *Sales* application.
 
@@ -265,18 +244,17 @@ Then, with the desired quotations (or sales orders) selected from the list view 
 :guilabel:`Quotations` page, click the :icon:`fa-cog` :guilabel:`Actions` button to reveal a
 drop-down menu.
 
-From this drop-down menu, select :guilabel:`Cancel quotations`.
+From this drop-down menu, select :guilabel:`Cancel`.
 
 .. image:: quote_template/cancel-quotations.png
-   :alt: The Cancel quotations option on the Actions drop-down menu in the Odoo Sales application.
+   :alt: The Cancel option on the Actions drop-down menu in the Odoo Sales application.
 
 .. note::
    This action can be performed for quotations in *any* stage, even if it is confirmed as a sales
    order.
 
-Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel quotations`
-confirmation pop-up window appears. To complete the cancellation, click the :guilabel:`Cancel
-quotations` button.
+Upon selecting the :guilabel:`Cancel` option, a *Cancel* pop-up window appears. To complete the
+cancellation, click :guilabel:`Cancel`.
 
 .. note::
    An error pop-up message appears when attempting to cancel an order for an ongoing subscription
