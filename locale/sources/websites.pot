@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -908,7 +908,7 @@ msgstr ""
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:54
 #: ../../content/applications/websites/ecommerce/order_handling.rst:100
 #: ../../content/applications/websites/ecommerce/order_handling.rst:129
-#: ../../content/applications/websites/ecommerce/order_handling.rst:233
+#: ../../content/applications/websites/ecommerce/order_handling.rst:252
 #: ../../content/applications/websites/ecommerce/shipping.rst:33
 #: ../../content/applications/websites/ecommerce/shipping.rst:112
 #: ../../content/applications/websites/website/configuration/multi_website.rst:80
@@ -2916,74 +2916,106 @@ msgid "Returns and refunds"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:200
-msgid "Customers can :doc:`return </applications/sales/sales/products_prices/returns>` products through the :doc:`customer portal </applications/general/users/user_portals>` by navigating to the :guilabel:`Your Orders` section, selecting the relevant order, and clicking the :guilabel:`Return` button. A return document is automatically generated."
+msgid "To allow customers to initiate :doc:`returns </applications/sales/sales/products_prices/returns>` through the :doc:`customer portal </applications/general/users/user_portals>`, go to :menuselection:`Inventory --> Configuration --> Settings`, scroll down to the :guilabel:`Operations` section, and enable :guilabel:`Allow Spontaneous Returns`. Then, specify how many :guilabel:`days after delivery` customers can return products, and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:None
-msgid "Return button in the portal."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:206
+msgid "Once enabled, click :icon:`fa-arrow-right` :guilabel:`Manage Return Reasons` to view all configured :guilabel:`Return Reasons`. To create a new reason, click :guilabel:`New` and enter the reason in the :guilabel:`Reason` field."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:208
-msgid "Once the returned items are received, initiate the :doc:`return and refund process </applications/sales/sales/products_prices/returns>` in the backend."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:211
+msgid "At least one return reason must exist to allow customers to complete the return process."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:212
-msgid ":doc:`Returning </applications/sales/sales/products_prices/returns>` products may not be possible depending on the :doc:`product type </applications/inventory_and_mrp/inventory/product_management/configure/type>`."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:213
+msgid "Customers can return a product by following these steps:"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:215
-msgid "To issue :doc:`refunds </applications/finance/accounting/customer_invoices/credit_notes>`, the payment must have been made through a :ref:`refund-compatible payment provider <payment_providers/supported_providers>`."
+msgid "Navigate to the :guilabel:`Your Orders` section of the portal."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:220
-msgid ":doc:`/applications/services/helpdesk/advanced/after_sales`"
+#: ../../content/applications/websites/ecommerce/order_handling.rst:216
+msgid "Select the relevant order."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:225
-msgid "Invoicing"
+#: ../../content/applications/websites/ecommerce/order_handling.rst:217
+msgid "Click the :icon:`fa-reply` :guilabel:`Return` button."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:0
+msgid "Return button in the portal."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:222
+msgid "In the :guilabel:`Request a return` pop-up window, specify the quantity of the product to return and select a :guilabel:`Return reason` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:224
+msgid "Click :guilabel:`Continue` and :guilabel:`Download Return Label` to view and print the return document."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:227
-msgid "The final step of an e-commerce order is generating and sending the :doc:`customer invoice </applications/finance/accounting/customer_invoices>`. Depending on your needs, invoices can be generated manually or automatically."
+msgid "Once the returned items are received, initiate the :doc:`return and refund process </applications/sales/sales/products_prices/returns>` in the backend."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:231
-msgid "To automate invoicing:"
+msgid ":doc:`Returning </applications/sales/sales/products_prices/returns>` products may not be possible depending on the :doc:`product type </applications/inventory_and_mrp/inventory/product_management/configure/type>`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:234
-msgid "In the :guilabel:`eCommerce` section, enable :guilabel:`Automatic Invoice`."
+msgid "To issue :doc:`refunds </applications/finance/accounting/customer_invoices/credit_notes>`, the payment must have been made through a :ref:`refund-compatible payment provider <payment_providers/supported_providers>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:235
-msgid "Select the relevant :guilabel:`Email Template`, then click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:236
-msgid "If needed, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) icon next to the template name to customize the :doc:`email template </applications/general/companies/email_template>`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:240
-msgid "Customers can view their invoices under :guilabel:`Your Invoices` in the :doc:`portal </applications/general/users/user_portals>`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:242
-msgid "Invoices are only sent automatically if (and when) the :doc:`payment </applications/finance/payment_providers>` is registered."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:239
+msgid ":doc:`/applications/services/helpdesk/advanced/after_sales`"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:244
-msgid "When automatic invoicing is disabled, and invoices are created manually, they appear as :doc:`pro-forma invoices </applications/sales/sales/invoicing/proforma>` in the customer portal until they are manually :ref:`sent to the customer <accounting/invoice/sending>`."
+msgid "Invoicing"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:249
-msgid ":doc:`/applications/finance/accounting/payments`"
+#: ../../content/applications/websites/ecommerce/order_handling.rst:246
+msgid "The final step of an e-commerce order is generating and sending the :doc:`customer invoice </applications/finance/accounting/customer_invoices>`. Depending on your needs, invoices can be generated manually or automatically."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:250
+msgid "To automate invoicing:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:253
+msgid "In the :guilabel:`eCommerce` section, enable :guilabel:`Automatic Invoice`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:254
+msgid "Select the relevant :guilabel:`Email Template`, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:255
+msgid "If needed, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) icon next to the template name to customize the :doc:`email template </applications/general/companies/email_template>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:259
+msgid "Customers can view their invoices under :guilabel:`Your Invoices` in the :doc:`portal </applications/general/users/user_portals>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:261
+msgid "Invoices are only sent automatically if (and when) the :doc:`payment </applications/finance/payment_providers>` is registered."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:263
+msgid "When automatic invoicing is disabled, and invoices are created manually, they appear as :doc:`pro-forma invoices </applications/sales/sales/invoicing/proforma>` in the customer portal until they are manually :ref:`sent to the customer <accounting/invoice/sending>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:268
+msgid ":doc:`/applications/finance/accounting/payments`"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:269
 msgid ":doc:`/applications/sales/sales/invoicing/invoicing_policy`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:251
+#: ../../content/applications/websites/ecommerce/order_handling.rst:270
 msgid "`Create a customer invoice from a sales order <https://www.youtube.com/watch?v=14AIEJ_B7rA>`_"
 msgstr ""
 

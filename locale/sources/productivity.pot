@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -647,7 +647,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:26
 #: ../../content/applications/productivity/ai/document_sort.rst:16
-#: ../../content/applications/productivity/ai/mcp_server.rst:56
+#: ../../content/applications/productivity/ai/mcp_server.rst:57
 #: ../../content/applications/productivity/ai/support_operations.rst:66
 #: ../../content/applications/productivity/appointments/create-opps.rst:13
 #: ../../content/applications/productivity/appointments/google_reserve.rst:12
@@ -919,7 +919,7 @@ msgid "Dynamic placeholders reference specific fields within the database to pro
 msgstr ""
 
 #: ../../content/applications/productivity/ai/email-templates.rst:54
-#: ../../content/applications/productivity/ai/mcp_server.rst:294
+#: ../../content/applications/productivity/ai/mcp_server.rst:295
 msgid "Example use cases"
 msgstr ""
 
@@ -1494,55 +1494,55 @@ msgstr ""
 msgid ":doc:`AI Agents <agents>`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:3
+#: ../../content/applications/productivity/ai/mcp_server.rst:5
 msgid "AI MCP server"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:9
+#: ../../content/applications/productivity/ai/mcp_server.rst:11
 msgid "Model Context Protocol (MCP) is an open-source standard that allows large language models (LLMs) to securely interact with external applications and access their data. In Odoo **AI**, users can connect an external |AI| agent directly to their Odoo database through an Odoo |MCP| server in order to read or modify the database using their own local |AI| workflows."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:14
+#: ../../content/applications/productivity/ai/mcp_server.rst:16
 msgid "The following documentation provides an overview of Odoo |MCP| servers, how to connect |AI| agents to them, and how to read or write data through the server."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:18
+#: ../../content/applications/productivity/ai/mcp_server.rst:20
 msgid "This documentation uses the following terms with some flexibility and may differ from their proper technical usage, either in Odoo or externally:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:21
+#: ../../content/applications/productivity/ai/mcp_server.rst:23
 msgid "*Client*: Refers broadly to the |AI| application with which the user interacts. For example, the |LLM| prompted by the user is also referred to as the *client*."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:27
+#: ../../content/applications/productivity/ai/mcp_server.rst:29
 msgid "MCP workflow"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:29
+#: ../../content/applications/productivity/ai/mcp_server.rst:31
 msgid "In the |MCP| workflow, an Odoo database acts as a remote |MCP| *server* that communicates with the |MCP| *client* (the user's external |AI| agent) to execute :doc:`tools <server-actions>` such as reading data or editing records in the database. This process occurs internally and is invisible to the user, who interacts with the |MCP| client **only** by prompting it with specific tasks."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:34
+#: ../../content/applications/productivity/ai/mcp_server.rst:36
 msgid "The following sequence outlines the |MCP| workflow in Odoo:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:36
-msgid "The user :ref:`configures the client <ai/mcp/configuration>` with server details and an authentication key. Once connected, the client automatically makes an initial request to the server for any available :ref:`AI tools <ai/mcp/available-tools>` (or *Server Actions*) exposed to it in the database. If successful, the client caches the tools for the remainder of the session."
+#: ../../content/applications/productivity/ai/mcp_server.rst:38
+msgid "The user :ref:`configures the client <ai/mcp/configuration>` with server details and an authentication key. Once connected, the client automatically makes an initial request to the server for any available :doc:`AI tools <mcp_server/mcp_tools>` (or *Server Actions*) exposed to it in the database. If successful, the client caches the tools for the remainder of the session."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:41
+#: ../../content/applications/productivity/ai/mcp_server.rst:42
 msgid "The user prompts the client in plain language. A list of :ref:`example prompts <ai/mcp/use-cases>` is provided in this documentation."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:43
+#: ../../content/applications/productivity/ai/mcp_server.rst:44
 msgid "The client requests that the server invoke the correct tools."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:44
+#: ../../content/applications/productivity/ai/mcp_server.rst:45
 msgid "After executing the tool, the server returns the results to the client."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:45
+#: ../../content/applications/productivity/ai/mcp_server.rst:46
 msgid "The client responds to the user's prompt in plain language."
 msgstr ""
 
@@ -1550,47 +1550,47 @@ msgstr ""
 msgid "Client-server interaction diagram for Odoo AI MCP."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:51
+#: ../../content/applications/productivity/ai/mcp_server.rst:52
 msgid "See the :doc:`server-actions` documentation for more information about tools in Odoo."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:58
+#: ../../content/applications/productivity/ai/mcp_server.rst:59
 msgid "The configuration process includes the following steps:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:60
+#: ../../content/applications/productivity/ai/mcp_server.rst:61
 msgid ":ref:`Set up authentication <ai/mcp/authentication>` via API key."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:61
+#: ../../content/applications/productivity/ai/mcp_server.rst:62
 msgid ":ref:`Configure the MCP server details <ai/mcp/server-settings>` and connect via the client."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:62
+#: ../../content/applications/productivity/ai/mcp_server.rst:63
 msgid ":ref:`Expose server actions <ai/mcp/expose-tools>` to the client from Odoo."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:65
+#: ../../content/applications/productivity/ai/mcp_server.rst:66
 msgid "Before configuring the AI client settings in step two, ensure that the following are installed:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:67
+#: ../../content/applications/productivity/ai/mcp_server.rst:68
 msgid "An |MCP|-compatible AI agent (e.g., *Claude Code*, *Antigravity*, *Codex*)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:68
+#: ../../content/applications/productivity/ai/mcp_server.rst:69
 msgid "`Node.js <https://nodejs.org/en/download>`_ (required to run the `npx` command)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:73
+#: ../../content/applications/productivity/ai/mcp_server.rst:74
 msgid "Set up authentication"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:75
+#: ../../content/applications/productivity/ai/mcp_server.rst:76
 msgid "To connect the |MCP| client to the server, users must first set up authentication to the server via a static API key. Every time the |MCP| client sends a request to the server, it uses the key to authenticate the user's identity and permissions in the Odoo database."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:79
+#: ../../content/applications/productivity/ai/mcp_server.rst:80
 msgid "To generate the API key, click the user icon in the upper corner, then select :guilabel:`My Preferences`."
 msgstr ""
 
@@ -1598,27 +1598,27 @@ msgstr ""
 msgid "Security tab of the user preferences window."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:85
+#: ../../content/applications/productivity/ai/mcp_server.rst:86
 msgid "On the *Change my Preferences* pop-up window, open the *Security* tab. Then, click :guilabel:`Add API Key`. On the *Access Control* pop-up window, confirm the database password."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:88
+#: ../../content/applications/productivity/ai/mcp_server.rst:89
 msgid "After confirming the password, configure the API key in the *New API Key* pop-up window. To start, in the *Name your key* section, enter a brief name or descriptor for the key."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:91
+#: ../../content/applications/productivity/ai/mcp_server.rst:92
 msgid "Next, in the *Select a scope* section, select the :guilabel:`MCP` scope from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:93
+#: ../../content/applications/productivity/ai/mcp_server.rst:94
 msgid "In the *Give a duration for the key's validity* section, select the period of time for which this key is valid (e.g., `1 Month`)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:96
+#: ../../content/applications/productivity/ai/mcp_server.rst:97
 msgid "Finally, click :guilabel:`Generate key` to create the key."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:99
+#: ../../content/applications/productivity/ai/mcp_server.rst:100
 msgid "Be sure to save the key elsewhere. Once generated, the key is only shown to the user once and remains hidden thereafter."
 msgstr ""
 
@@ -1626,613 +1626,621 @@ msgstr ""
 msgid "Add New Key pop-up window in Odoo."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:108
+#: ../../content/applications/productivity/ai/mcp_server.rst:109
 msgid "Configure server settings"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:110
+#: ../../content/applications/productivity/ai/mcp_server.rst:111
 msgid "After generating an authentication key in Odoo, the user must properly configure their client with the following:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:113
+#: ../../content/applications/productivity/ai/mcp_server.rst:114
 msgid "The API key generated in the previous section"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:114
+#: ../../content/applications/productivity/ai/mcp_server.rst:115
 msgid "The server URL, or *endpoint*, to which the client connects. This URL is formed by taking the user's database URL and concatenating `/mcp` (e.g., `https://example.odoo.com/mcp`)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:118
+#: ../../content/applications/productivity/ai/mcp_server.rst:119
 msgid "Be sure to replace the following placeholders with the appropriate values:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:120
+#: ../../content/applications/productivity/ai/mcp_server.rst:121
 msgid "`server_name`: Enter a custom name to identify the |MCP| server."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:121
+#: ../../content/applications/productivity/ai/mcp_server.rst:122
 msgid "`database_url`: Enter the URL of the Odoo database."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:122
+#: ../../content/applications/productivity/ai/mcp_server.rst:123
 msgid "`API_KEY`: Enter the API key generated in the previous section."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:126
+#: ../../content/applications/productivity/ai/mcp_server.rst:127
 msgid "Claude"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:128
+#: ../../content/applications/productivity/ai/mcp_server.rst:129
 msgid "Connecting to Odoo |MCP| with Claude can be done either via *Claude Desktop* or *Claude Code* CLI."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:131
+#: ../../content/applications/productivity/ai/mcp_server.rst:132
 msgid "**Via Claude Desktop**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:133
+#: ../../content/applications/productivity/ai/mcp_server.rst:134
 msgid "Open *Claude Desktop*. Navigate to :menuselection:`Settings --> Developer`. The *Local MCP Servers* section lists all configured |MCP| servers along with their statuses."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:136
+#: ../../content/applications/productivity/ai/mcp_server.rst:137
 msgid "To add a new server, click :guilabel:`Edit Config`. In the file explorer, open `claude_desktop_config.json` and paste the following JSON snippet between the outermost ellipses:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:159
+#: ../../content/applications/productivity/ai/mcp_server.rst:160
 msgid "After saving the configuration file, the newly added server should appear in the *Local MCP Servers* section along with its connection status."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:162
+#: ../../content/applications/productivity/ai/mcp_server.rst:163
 msgid "**Via Claude Code CLI**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:164
-#: ../../content/applications/productivity/ai/mcp_server.rst:241
+#: ../../content/applications/productivity/ai/mcp_server.rst:165
+#: ../../content/applications/productivity/ai/mcp_server.rst:242
 msgid "In the terminal, paste the following command to add the |MCP| server:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:171
+#: ../../content/applications/productivity/ai/mcp_server.rst:172
 msgid "To add the server to the system's global (user-wide) configuration (i.e., the server is accessible for all projects), include the `--scope user` flag in the command above."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:174
+#: ../../content/applications/productivity/ai/mcp_server.rst:175
 msgid "Finally, run ``claude mcp list`` to check the connection status of the newly added server."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:176
+#: ../../content/applications/productivity/ai/mcp_server.rst:177
 msgid "Antigravity"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:178
+#: ../../content/applications/productivity/ai/mcp_server.rst:179
 msgid "Connecting to Odoo |MCP| with Google Antigravity can be done through *Antigravity 2.0* or *Antigravity CLI*."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:181
+#: ../../content/applications/productivity/ai/mcp_server.rst:182
 msgid "**Configure via Antigravity 2.0**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:183
+#: ../../content/applications/productivity/ai/mcp_server.rst:184
 msgid "Open *Antigravity 2.0*. Navigate to :menuselection:`Settings --> Customizations`. The *Installed MCP Servers* section lists all configured |MCP| servers along with their statuses."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:186
+#: ../../content/applications/productivity/ai/mcp_server.rst:187
 msgid "To add a new server, click :guilabel:`Open MCP Config`. In the file explorer, open `mcp_config.json` and paste the following JSON snippet between the outermost ellipses:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:208
+#: ../../content/applications/productivity/ai/mcp_server.rst:209
 msgid "After saving the configuration file, the newly added server should appear in the *Installed MCP Servers* section along with its connection status."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:211
+#: ../../content/applications/productivity/ai/mcp_server.rst:212
 msgid "**Connect via Antigravity CLI**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:213
+#: ../../content/applications/productivity/ai/mcp_server.rst:214
 msgid "Before connecting using *Antigravity CLI*, configure the server in *Antigravity 2.0*."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:215
+#: ../../content/applications/productivity/ai/mcp_server.rst:216
 msgid "To check the connection status, run ``agy`` in the terminal to start *Antigravity*. Then, run ``/mcp``. The newly added server should appear along with its connection status."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:218
+#: ../../content/applications/productivity/ai/mcp_server.rst:219
 msgid "Codex"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:220
+#: ../../content/applications/productivity/ai/mcp_server.rst:221
 msgid "Configuring an Odoo |MCP| server in *Codex* can be done either by directly editing the configuration file or via the *Codex CLI*."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:223
+#: ../../content/applications/productivity/ai/mcp_server.rst:224
 msgid "**Via config file**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:225
+#: ../../content/applications/productivity/ai/mcp_server.rst:226
 msgid "Open the `config.toml` file, located in the root directory (`~/.codex/config.toml`). Then, paste the following into the configuration file:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:235
+#: ../../content/applications/productivity/ai/mcp_server.rst:236
 msgid "While the `config.toml` is located globally in the system's root directory, it can also be created for trusted, local projects by configuring a `.codex/config.toml` file in the directory."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:239
+#: ../../content/applications/productivity/ai/mcp_server.rst:240
 msgid "**Via Codex CLI**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:247
+#: ../../content/applications/productivity/ai/mcp_server.rst:248
 msgid "To check the connection status, run ``codex`` in the terminal to start *Codex*. Then, run ``/mcp``. The newly added server should appear."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:251
+#: ../../content/applications/productivity/ai/mcp_server.rst:252
 msgid "See the following documentation for more information about configuring clients:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:253
+#: ../../content/applications/productivity/ai/mcp_server.rst:254
 msgid "`Connect to MCP servers using Claude Code <https://code.claude.com/docs/en/mcp-quickstart>`_"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:254
+#: ../../content/applications/productivity/ai/mcp_server.rst:255
 msgid "`Connect to MCP servers using Antigravity <https://antigravity.google/docs/mcp/>`_"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:255
+#: ../../content/applications/productivity/ai/mcp_server.rst:256
 msgid "`Connect to MCP servers using Codex <https://learn.chatgpt.com/docs/extend/mcp?surface=cli>`_"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:260
+#: ../../content/applications/productivity/ai/mcp_server.rst:261
 msgid "Expose tools to client"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:262
+#: ../../content/applications/productivity/ai/mcp_server.rst:263
 msgid "After connecting to the server, the |MCP| client reads and writes data to the Odoo database by invoking the appropriate tool according to the user's query."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:265
+#: ../../content/applications/productivity/ai/mcp_server.rst:266
 msgid "These tools are accessed by turning on developer mode, then navigating to :menuselection:`Settings --> Technical --> Server Actions` to open the dashboard of server actions, or tools."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:268
+#: ../../content/applications/productivity/ai/mcp_server.rst:269
 msgid "By default, an Odoo database exposes the following tools to the client:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:270
-#: ../../content/applications/productivity/ai/mcp_server.rst:385
+#: ../../content/applications/productivity/ai/mcp_server.rst:271
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:39
 msgid "`AI Tool: Get Fields`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:271
-#: ../../content/applications/productivity/ai/mcp_server.rst:381
+#: ../../content/applications/productivity/ai/mcp_server.rst:272
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:35
 msgid "`AI Tool: Get Models`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:272
-#: ../../content/applications/productivity/ai/mcp_server.rst:363
+#: ../../content/applications/productivity/ai/mcp_server.rst:273
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:17
 msgid "`AI Tool: MCP Retrieve initial context`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:273
-#: ../../content/applications/productivity/ai/mcp_server.rst:396
+#: ../../content/applications/productivity/ai/mcp_server.rst:274
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:50
 msgid "`AI Tool: Search`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:274
-#: ../../content/applications/productivity/ai/mcp_server.rst:399
+#: ../../content/applications/productivity/ai/mcp_server.rst:275
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:53
 msgid "`AI Tool: Read group`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:276
+#: ../../content/applications/productivity/ai/mcp_server.rst:277
 msgid "The remaining tools are hidden from the client and must be manually exposed to be invoked."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:278
+#: ../../content/applications/productivity/ai/mcp_server.rst:279
 msgid "To expose a tool, click on the tool entry. In the *Usage* tab of the server action form, select the checkbox next to :guilabel:`Available in MCP`. Optionally, select the checkbox next to :guilabel:`Readonly Tool` to mark that the tool does not write or modify existing data and can be automatically invoked without user approval."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:284
+#: ../../content/applications/productivity/ai/mcp_server.rst:285
 msgid "Enabling the :guilabel:`Readonly Tool` checkbox does not \"hide\" the tool from the AI client. It only advises the client that the tool is safe to invoke without explicit user approval."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:288
-msgid "See the :ref:`available tools <ai/mcp/available-tools>` section for a full list of available tools in the database."
+#: ../../content/applications/productivity/ai/mcp_server.rst:289
+msgid "See the :doc:`available tools <mcp_server/mcp_tools>` page for a full list of available tools in the database."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:296
+#: ../../content/applications/productivity/ai/mcp_server.rst:297
 msgid "An Odoo |MCP| server can be used to complete the following use cases, including example user prompts."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:300
+#: ../../content/applications/productivity/ai/mcp_server.rst:301
 msgid "Data analysis and reporting"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/mcp_server.rst:305
-#: ../../content/applications/productivity/ai/mcp_server.rst:322
-#: ../../content/applications/productivity/ai/mcp_server.rst:337
-msgid "Use case"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/mcp_server.rst:306
 #: ../../content/applications/productivity/ai/mcp_server.rst:323
 #: ../../content/applications/productivity/ai/mcp_server.rst:338
-msgid "Example prompt"
+msgid "Use case"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/mcp_server.rst:307
-msgid "Sales pipeline review"
+#: ../../content/applications/productivity/ai/mcp_server.rst:324
+#: ../../content/applications/productivity/ai/mcp_server.rst:339
+msgid "Example prompt"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/mcp_server.rst:308
+msgid "Sales pipeline review"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:309
 msgid "\"Show me my open opportunities grouped by stage, then chart the pipeline value by salesperson.\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:310
+#: ../../content/applications/productivity/ai/mcp_server.rst:311
 msgid "Manufacturing/inventory planning"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:311
+#: ../../content/applications/productivity/ai/mcp_server.rst:312
 msgid "\"Which products on my Master Production Schedule have no forecast data, and what's my total forecasted demand this month?\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:313
+#: ../../content/applications/productivity/ai/mcp_server.rst:314
 msgid "Historical reporting"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:314
+#: ../../content/applications/productivity/ai/mcp_server.rst:315
 msgid "\"How much did we invoice last quarter compared to this quarter?\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:317
+#: ../../content/applications/productivity/ai/mcp_server.rst:318
 msgid "Navigation and UI interaction"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:324
+#: ../../content/applications/productivity/ai/mcp_server.rst:325
 msgid "Bulk record creation"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:325
+#: ../../content/applications/productivity/ai/mcp_server.rst:326
 msgid "\"Create contacts for these five leads I'm pasting in.\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:326
+#: ../../content/applications/productivity/ai/mcp_server.rst:327
 msgid "Filtering and grouping open views"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:327
+#: ../../content/applications/productivity/ai/mcp_server.rst:328
 msgid "\"Filter this current view to my team and group by month instead.\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:328
+#: ../../content/applications/productivity/ai/mcp_server.rst:329
 msgid "Data lookup and edit"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:329
+#: ../../content/applications/productivity/ai/mcp_server.rst:330
 msgid "\"Does Azure Interior have a Tax ID on file? If not, set it to XX0123456789.\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:332
+#: ../../content/applications/productivity/ai/mcp_server.rst:333
 msgid "Custom styling"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:339
+#: ../../content/applications/productivity/ai/mcp_server.rst:340
 msgid "Website content editing"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:340
+#: ../../content/applications/productivity/ai/mcp_server.rst:341
 msgid "\"Add a banner to my homepage announcing our summer sale, using a stock photo of a beach.\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:341
+#: ../../content/applications/productivity/ai/mcp_server.rst:342
 msgid "Custom site styling"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:342
+#: ../../content/applications/productivity/ai/mcp_server.rst:343
 msgid "\"Round the corners on all my product images site-wide.\""
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:343
+#: ../../content/applications/productivity/ai/mcp_server.rst:344
 msgid "AI image generation"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:344
+#: ../../content/applications/productivity/ai/mcp_server.rst:345
 msgid "\"Generate an image of a mountain at dusk and put it in the hero section.\""
 msgstr ""
 
+#: ../../content/applications/productivity/ai/mcp_server.rst:348
+msgid ":doc:`server-actions`"
+msgstr ""
+
 #: ../../content/applications/productivity/ai/mcp_server.rst:349
-msgid "Available tools"
+msgid ":doc:`mcp_server/mcp_tools`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:351
-msgid "The following AI tools are supported by the Odoo |MCP| server. Each tool is listed below with its name, description, and suggested *Readonly* status."
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:3
+msgid "Available MCP tools"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:355
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:5
+msgid "The following AI tools are supported by the :doc:`Odoo MCP server <../mcp_server>`. Each tool is listed below with its name, description, and suggested *Readonly* status."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:9
 msgid "Setup/context retrieval"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:360
-#: ../../content/applications/productivity/ai/mcp_server.rst:378
-#: ../../content/applications/productivity/ai/mcp_server.rst:417
-#: ../../content/applications/productivity/ai/mcp_server.rst:456
-#: ../../content/applications/productivity/ai/mcp_server.rst:479
-#: ../../content/applications/productivity/ai/mcp_server.rst:499
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:14
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:32
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:71
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:110
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:133
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:153
 msgid "Tool"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:361
-#: ../../content/applications/productivity/ai/mcp_server.rst:379
-#: ../../content/applications/productivity/ai/mcp_server.rst:418
-#: ../../content/applications/productivity/ai/mcp_server.rst:457
-#: ../../content/applications/productivity/ai/mcp_server.rst:480
-#: ../../content/applications/productivity/ai/mcp_server.rst:500
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:15
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:33
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:72
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:111
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:134
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:154
 #: ../../content/applications/productivity/data_cleaning.rst:31
 #: ../../content/applications/productivity/phone.rst:204
 msgid "Description"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:362
-#: ../../content/applications/productivity/ai/mcp_server.rst:380
-#: ../../content/applications/productivity/ai/mcp_server.rst:419
-#: ../../content/applications/productivity/ai/mcp_server.rst:458
-#: ../../content/applications/productivity/ai/mcp_server.rst:481
-#: ../../content/applications/productivity/ai/mcp_server.rst:501
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:16
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:34
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:73
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:112
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:135
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:155
 msgid "Readonly"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:364
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:18
 msgid "Returns context about the currently authenticated user's database, including the user, timezone, active company, and available companies."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:366
-#: ../../content/applications/productivity/ai/mcp_server.rst:384
-#: ../../content/applications/productivity/ai/mcp_server.rst:387
-#: ../../content/applications/productivity/ai/mcp_server.rst:391
-#: ../../content/applications/productivity/ai/mcp_server.rst:395
-#: ../../content/applications/productivity/ai/mcp_server.rst:398
-#: ../../content/applications/productivity/ai/mcp_server.rst:402
-#: ../../content/applications/productivity/ai/mcp_server.rst:422
-#: ../../content/applications/productivity/ai/mcp_server.rst:425
-#: ../../content/applications/productivity/ai/mcp_server.rst:429
-#: ../../content/applications/productivity/ai/mcp_server.rst:432
-#: ../../content/applications/productivity/ai/mcp_server.rst:435
-#: ../../content/applications/productivity/ai/mcp_server.rst:439
-#: ../../content/applications/productivity/ai/mcp_server.rst:442
-#: ../../content/applications/productivity/ai/mcp_server.rst:445
-#: ../../content/applications/productivity/ai/mcp_server.rst:448
-#: ../../content/applications/productivity/ai/mcp_server.rst:462
-#: ../../content/applications/productivity/ai/mcp_server.rst:465
-#: ../../content/applications/productivity/ai/mcp_server.rst:488
-#: ../../content/applications/productivity/ai/mcp_server.rst:491
-#: ../../content/applications/productivity/ai/mcp_server.rst:504
-#: ../../content/applications/productivity/ai/mcp_server.rst:507
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:20
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:38
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:41
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:45
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:49
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:52
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:56
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:76
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:79
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:83
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:86
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:89
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:93
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:96
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:99
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:102
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:116
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:119
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:142
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:145
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:158
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:161
 msgid "True"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:369
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:23
 msgid "`AI Tool: MCP Retrieve initial context` runs automatically at the beginning of a user's session and is **only** invoked by the client."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:373
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:27
 msgid "Data querying"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:382
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:36
 msgid "Lists every Odoo model the current user can access, including their technical names and descriptions."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:386
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:40
 msgid "Lists the searchable and usable fields on a given model, including type and relations."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:388
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:42
 msgid "`AI Tool: Get Menus`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:389
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:43
 msgid "Lists every menu the current user can access, with its linked action, model, and available view types."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:392
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:46
 msgid "`AI Tool: Get Menu Details`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:393
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:47
 msgid "Returns detailed information for specific menu IDs, such as action, domain, default filters and groupings, and searchable fields."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:397
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:51
 msgid "Searches records on a model using a domain and returns the requested fields."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:400
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:54
 msgid "Groups records by one or more fields and computes aggregates (sums, counts, averages, etc.) over them."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:403
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:57
 msgid "`AI Tool: Update Records`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:404
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:58
 msgid "Updates one or more existing records matching a domain with new field values."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:405
-#: ../../content/applications/productivity/ai/mcp_server.rst:409
-#: ../../content/applications/productivity/ai/mcp_server.rst:468
-#: ../../content/applications/productivity/ai/mcp_server.rst:471
-#: ../../content/applications/productivity/ai/mcp_server.rst:485
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:59
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:63
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:122
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:125
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:139
 msgid "False"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:406
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:60
 msgid "`AI Tool: Create Records`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:407
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:61
 msgid "Creates new records on a model with specified fields, optionally linking a preview menu to show the result."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:412
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:66
 #: ../../content/applications/productivity/phone/phone_widget.rst:15
 msgid "Navigation"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:420
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:74
 msgid "`AI Tool: Open Menu List`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:421
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:75
 msgid "Redirects the UI to a menu's List view, optionally filtered and grouped."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:423
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:77
 msgid "`AI Tool: Open Menu Kanban`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:424
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:78
 msgid "Redirects the UI to a menu's Kanban view, optionally filtered and grouped."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:426
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:80
 msgid "`AI Tool: Open Menu Graph`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:427
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:81
 msgid "Redirects the UI to a menu's Graph view with a chosen measure, chart mode, grouping, and sorting options."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:430
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:84
 msgid "`AI Tool: Open Menu Pivot`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:431
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:85
 msgid "Redirects the UI to a menu's Pivot view with row and column groupings and measures."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:433
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:87
 msgid "`AI Tool: Run view action`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:434
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:88
 msgid "Opens client or report actions (e.g., Discuss, printed reports) tied to a menu."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:436
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:90
 msgid "`AI Tool: Compute Report Measures`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:437
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:91
 msgid "Returns the measures available for aggregation on a given model or action. This tool is meant to be called before opening a pivot or graph view."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:440
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:94
 msgid "`AI Tool: Prepare Record Previews`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:441
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:95
 msgid "Prepares metadata so that specific records render as rich preview cards in the Odoo Chat."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:443
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:97
 msgid "`AI Tool: Adjust Search`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:444
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:98
 msgid "Adjusts the search filters, groupings, active measures, or view type of the current view."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:446
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:100
 msgid "`AI Tool: Compute Date`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:447
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:101
 msgid "Computes an exact date or datetime from a relative expression (e.g., \"start of last week\")."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:451
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:105
 msgid "Website styling"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:459
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:113
 msgid "`AI Tool: Get Snippets`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:460
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:114
 msgid "Fetches the HTML markup for named website-builder snippets so they can be edited and inserted into a page."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:463
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:117
 msgid "`AI Tool: Read Custom CSS`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:464
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:118
 msgid "Reads the current contents of the website's custom SCSS rules."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:466
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:120
 msgid "`AI Tool: Write Custom CSS`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:467
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:121
 msgid "Overwrites the website's custom SCSS rules with new styling."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:469
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:123
 msgid "`AI Tool: Apply HTML to Page`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:470
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:124
 msgid "Applies HTML edits (e.g., replace, insert) to a specific website page."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:474
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:128
 msgid "Media generation"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:482
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:136
 msgid "`AI Tool: Generate an Image`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:483
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:137
 msgid "Generates a new image from a text prompt. This tool is **only** invoked on explicit user request."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:486
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:140
 msgid "`AI Tool: Search Images`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:487
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:141
 msgid "Searches *Unsplash* for stock photos matching a query."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:489
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:143
 msgid "`AI Tool: Get user image URLs`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:490
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:144
 msgid "Converts uploaded chat attachment IDs into permanent Odoo image URLs for use in content."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:494
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:148
 msgid "Additional tools"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:502
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:156
 msgid "`AI Tool: Web Search`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:503
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:157
 msgid "Delegates a factual question or research task to a web search agent."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:505
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:159
 msgid "`AI Tool: Load Skills`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:506
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:160
 msgid "Loads detailed instructions and tools for specific registered AI skills by ID."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:510
-msgid ":doc:`server-actions`"
+#: ../../content/applications/productivity/ai/mcp_server/mcp_tools.rst:164
+msgid ":doc:`../mcp_server`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/server-actions.rst:3
@@ -11078,7 +11086,7 @@ msgid "Click the :icon:`oi-voip` :guilabel:`(Hide Softphone)` icon again to clos
 msgstr ""
 
 #: ../../content/applications/productivity/phone/phone_widget.rst:23
-msgid "The **Phone** widget contains four tabs:"
+msgid "The **Phone** widget contains three tabs:"
 msgstr ""
 
 #: ../../content/applications/productivity/phone/phone_widget.rst:25
