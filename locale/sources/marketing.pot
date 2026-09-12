@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5406,7 +5406,7 @@ msgid "The number of records that are displayed next to the campaign :guilabel:`
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation.rst:136
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:157
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:148
 msgid "Participants"
 msgstr ""
 
@@ -5800,7 +5800,6 @@ msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/target_audience.rst:82
 #: ../../content/applications/marketing/marketing_automation/testing_running.rst:153
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:50
 msgid ":doc:`workflow_activities`"
 msgstr ""
 
@@ -5988,118 +5987,147 @@ msgid "*Campaign metrics* are detailed statistics and analytics within a marketi
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:10
+msgid "It is **not** possible to track email campaigns with 100% accuracy as some email service providers have security restrictions that do not allow senders to know when recipients have received, opened, or answered an email. This is something that cannot be controlled by Odoo, and is expected for any email marketing tool."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:16
 msgid "Activity analytics"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:12
-msgid "In the :guilabel:`Workflow` section of a campaign detail form in the *Marketing Automation* app, where the various campaign activities are located, a collection of useful data can be found on every individual activity block, like number of communications :guilabel:`Sent`, percentage of messages that have been :guilabel:`Clicked`, and more."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:18
+msgid "To view the various metrics for a campaign, open the **Marketing Automation** app and click on the desired campaign Kanban card."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:21
+msgid "The default stages are :guilabel:`New`, :guilabel:`Running`, and :guilabel:`Stopped`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:23
+msgid "A campaign in the :guilabel:`New` stage will not have any metrics to display, whereas a campaign in the :guilabel:`Running` stage displays the currently available data. Campaigns in the :guilabel:`Stopped` stage display all metrics."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:27
+msgid "The :guilabel:`Workflow` section of the selected campaign form displays all the various campaign activities, the duration of time before each activity is triggered, and the various metrics for the activity."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:31
+msgid "Each activity displays the following information:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:33
+msgid ":icon:`fa-clock-o` :guilabel:`(Trigger Time)`: This indicates :doc:`when the activity starts <workflow_activities>` after the workflow begins. This is displayed in :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`. If the trigger time is dependent on another activity or triggering action (e.g. :guilabel:`Mail: Replied`) the time is displayed along with the necessary action for that activity to be triggered (e.g. `Replied after 2 Hours`)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:38
+msgid ":guilabel:`Activity Type Icon`: The type of activity being triggered is displayed in a purple icon. The activity icons are:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:41
+msgid ":icon:`fa-envelope-o` :guilabel:`(Email)`: This action sends an email."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:42
+msgid ":icon:`fa-mobile` :guilabel:`(SMS)` : This action sends an SMS message."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:43
+msgid ":icon:`fa-whatsapp` :guilabel:`(WhatsApp Message)`: This action sends a WhatsApp message. This option is only available if the **WhatsApp** app is installed."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:45
+msgid ":icon:`fa-cogs`:guilabel:`(Server Action)`: This action creates a :ref:`server action <marketing_automation/sa-activity-type>`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:48
+msgid ":guilabel:`Activity Block`: Each activity displays a detailed :ref:`activity block, <marketing_automation/activity_blocks>` with the :guilabel:`Activity Name` appearing at the top."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:52
+msgid "To delete an activity, click the :icon:`fa-trash` :guilabel:`(Delete)` icon to the right of the :guilabel:`Activity Name`. There is **no confirmation** pop-up window asking if the user wants to delete the activity. The activity is **immediately deleted**."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:59
+msgid "Activity blocks"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:61
+msgid "In every activity block, the :icon:`fa-pie-chart` :guilabel:`(Graph)` tab is open by default, displaying related metrics in a line graph. The success metrics are represented in green and the rejected metrics are represented in red."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:65
+msgid "Numerical representations of both :guilabel:`Success` and :guilabel:`Rejected` activities are shown to the right of the line graph."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:69
+msgid "Hovering over any point in the line graph of the activity block reveals a notated breakdown of data for that specific date."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:72
+msgid "For email, SMS, or WhatsApp activity blocks, a :icon:`fa-pie-chart` :guilabel:`Details` line appears beneath the graph, displaying the following metrics:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:75
+msgid ":guilabel:`Sent`: The number of messages or emails sent."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:76
+msgid ":guilabel:`Opened`: The percentage of recipients that opened the message or email."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:77
+msgid ":guilabel:`Clicked`: The percentage of recipients that clicked on a link inside the message or email."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:79
+msgid ":guilabel:`Replied`: The percentage of recipients that replied to the message or email."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:82
+msgid "Click any of the metrics on the :icon:`fa-pie-chart` :guilabel:`Details` line, and a separate page loads, containing the specific details for that particular data point."
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:None
 msgid "An activity block in the workflow section with useful analytical data in Odoo."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:21
-msgid "To the left of the activity block, the configured :doc:`trigger time <workflow_activities>` is displayed as a duration (either :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`) if it corresponds to period after the workflow begins."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:89
+msgid "Filter tab"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:26
-msgid "If the trigger time is dependent on another activity or triggering action (e.g. :guilabel:`Mail: Replied`, etc.) the time is displayed, along with the necessary action for that activity to be activated (e.g. `Replied after 2 Hours`)."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:91
+msgid "Click the :icon:`fa-filter` :guilabel:`(Filter)` tab, located next to the :icon:`fa-pie-chart` :guilabel:`(Graph)` tab, to reveal the specific filters set for campaign activity. This tab displays how many records in the database match the specific criteria."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:0
-msgid "Time trigger display when dependent on another activity in Odoo Marketing Automation."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:34
-msgid "In the activity block, an icon represents each activity type. An :guilabel:`✉️ (envelope)` icon means the activity is an email. Three tiny, interlocking :guilabel:`⚙️ (gear)` icons means the activity is an internal action. And, a small, basic :guilabel:`📱 (mobile)` icon means the activity is an SMS."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:40
-msgid "The activity type name is also displayed in smaller font below the activity title."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:42
-msgid "Beside the activity icon, at the top of the activity block, is the title of the activity. To the right of the activity title, there are :guilabel:`Edit` and :guilabel:`Delete` buttons."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:45
-msgid "Click :guilabel:`Edit` to open the :guilabel:`Open: Activities` pop-up form for that specific activity, in which that activity can be modified. Click the :guilabel:`Delete` button to completely delete that specific activity from the workflow."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:53
-msgid "Activity graph tab"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:55
-msgid "In every activity block, the :guilabel:`Graph (pie chart icon)` tab is open by default, displaying related metrics as a simple line graph. The success metrics are represented in `green` and the rejected metrics are represented in `red`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:59
-msgid "Numerical representations of both :guilabel:`Success` and :guilabel:`Rejected` activities are shown to the right of the line graph."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:63
-msgid "Hovering over any point in the line graph of the activity block reveals a notated breakdown of data for that specific date."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:0
-msgid "Hovering over any point in line graph reveals notated breakdown of data in Odoo."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:70
-msgid "Beneath the graph in the activity block, for *Email* or *SMS* activity types, a line of accessible data figures provide a bird's eye view of the campaign activity, including: :guilabel:`Sent` (numerical), :guilabel:`Clicked` (percentage), :guilabel:`Replied` (percentage), and :guilabel:`Bounced` (percentage)."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:76
-msgid "Clicking any of those stats on the :guilabel:`DETAILS` line, beneath the line graph, reveals a separate page containing every specific record for that particular data point."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:80
-msgid "Activity filter tab"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:82
-msgid "Next to the :guilabel:`Graph` tab on the activity block, there's the option to open a :guilabel:`Filter` tab (represented by a :guilabel:`filter/funnel` icon)."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:None
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:None
 msgid "What a campaign activity filter tab looks like in Odoo Marketing Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:89
-msgid "Clicking the :guilabel:`Filter` tab on an activity block, reveals what the specific filters are for that particular campaign activity, and how many records in the database match that specific criteria."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:99
+msgid "Click the :guilabel:`# record(s)` link next to the filter, and a :guilabel:`Selected records` pop-up window loads, containing a list of all the records that match that specific campaign activity rule."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:94
-msgid "Clicking the :guilabel:`records` link beneath the displayed filter reveals a separate pop-up window containing a list of all the records that match that specific campaign activity rule(s)."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:0
+msgid "A list of contacts that result from the active filter."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:98
-msgid "Link tracker"
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:107
+msgid "Link statistics"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:100
-msgid "Odoo tracks all URLs used in marketing campaigns. To access and analyze those URLs, navigate to :menuselection:`Marketing Automation app --> Reporting --> Link Tracker`. Doing so reveals a :guilabel:`Link Statistics` page, wherein all campaign-related URLs can be analyzed."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:109
+msgid "Odoo tracks all URLs used in marketing campaigns. These URLs are accessed by navigating to :menuselection:`Marketing Automation app --> Reporting --> Link Tracker`. This reveals a :guilabel:`Link Statistics` report, where all campaign-related URLs are displayed, by campaign."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:108
-msgid "The default view on the :guilabel:`Link Statistics` page is the :guilabel:`Bar Chart` view, but there are different view options available in the upper-left corner. There is the option to view the statistics as a :guilabel:`Line Chart` or :guilabel:`Pie Chart`."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:113
+msgid "The default view for the :guilabel:`Link Statistics` report is a :icon:`fa-database` :guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)`. The X-axis represents all the individual URLs being tracked, and the Y-axis represents the total :guilabel:`Number of Clicks`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:112
-msgid "Beside that, there is also the option to view the statistics as :guilabel:`Stacked`, and the data can be put into :guilabel:`Descending` or :guilabel:`Ascending` order."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:118
+msgid "In this example, the Facebook link had the most clicks, while the LinkedIn link had the fewest clicks. This indicates the Facebook link was the most successful in terms of clicks."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:115
-msgid "To the far-left of the view options, there is the :guilabel:`Measures` drop-down menu. When clicked, the options to view the :guilabel:`Number of Clicks` or total :guilabel:`Count` are available. And, to the right of the :guilabel:`Measures` drop-down menu, there's the ability to add any data to a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:120
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:152
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:179
-msgid "Also, in the upper-right corner of the :guilabel:`Link Statistics` page, to the far-right of the search bar, there are additional view options to choose from: the default :guilabel:`Graph` view, the :guilabel:`Pivot` table view, and the :guilabel:`List` view."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:0
+msgid "The link statistics in bar chart view, where Facebook is the most successful."
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:125
@@ -6107,47 +6135,55 @@ msgid "Traces"
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:127
-msgid "Odoo tracks all activities used in every marketing campaign. The data related to these activities can be accessed and analyzed in the :guilabel:`Traces` page, which can be found by navigating to :menuselection:`Marketing Automation app --> Reporting --> Traces`."
+msgid "All automated marketing activities, such as emails, text messages, or server actions, are tracked by Odoo, and are visible on the :guilabel:`Traces` report. These are accessed by navigating to :menuselection:`Marketing Automation app --> Reporting --> Traces`. This reveals a :guilabel:`Traces` report, where all actions are displayed in their own column."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:132
+msgid "The default view for the :guilabel:`Traces` report is a :icon:`fa-database` :guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)`. The X-axis represents all the individual scheduled actions, and the Y-axis represents the total :guilabel:`Count` for each action."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:136
+msgid "The actions are color-coded as follows:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:138
+msgid ":guilabel:`Orange`: Scheduled"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:139
+msgid ":guilabel:`Blue`: Processed"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:140
+msgid ":guilabel:`Red`: Error"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:141
+msgid ":guilabel:`Green`: Cancelled"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:142
+msgid ":guilabel:`Light Blue`: Rejected"
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:None
 msgid "The Traces page in the Odoo Marketing Automation application."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:135
-msgid "The default view on the :guilabel:`Traces` page is the :guilabel:`Bar Chart` view, but there are different view options available in the upper-left corner. There is the option to view the statistics as a :guilabel:`Line Chart` or :guilabel:`Pie Chart`."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:150
+msgid "Odoo tracks all participants related to every marketing campaign, which can be viewed in the :guilabel:`Participants` report. To view the :guilabel:`Participants` report, navigate to :menuselection:`Marketing Automation app --> Reporting --> Participants`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:139
-msgid "At the top of the graph, there's a color key, informing the user which activities have been :guilabel:`Processed`, :guilabel:`Scheduled`, and :guilabel:`Rejected`. There's also an outline indicator to inform users of the :guilabel:`Sum` of certain activities, as well."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:154
+msgid "The :guilabel:`Participants` report appears in a :icon:`fa-pie-chart` :guilabel:`(Pie Chart)` view, by default."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:143
-msgid "Beside the various view option in the upper-left corner of the :guilabel:`Traces` page, there is also the option to view the statistics as :guilabel:`Stacked`, and the data can be put into :guilabel:`Descending` or :guilabel:`Ascending` order."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:147
-msgid "To the far-left of the view options, there is the :guilabel:`Measures` drop-down menu. When clicked, the options to view the :guilabel:`Document ID` or total :guilabel:`Count` are available. And, to the right of the :guilabel:`Measures` drop-down menu, there's the ability to add any data to a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:159
-msgid "Odoo tracks all participants related to every marketing campaign. The data related to these participants can be accessed and analyzed in the :guilabel:`Participants` page, which can be found by navigating to :menuselection:`Marketing Automation app --> Reporting --> Participants`."
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:157
+msgid "A color key defines the types of participants in the graph. To hide any type of participant, click on the name of the group, and the information is hidden on the pie chart, and the name of the group is crossed out. Click on the name again to reveal the data."
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:None
 msgid "The Participants page in the Odoo Marketing Automation application."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:167
-msgid "The default view on the :guilabel:`Participants` page is the :guilabel:`Pie Chart` view, but there are different view options available in the upper-left corner. There is the option to view the statistics as a :guilabel:`Line Chart` or :guilabel:`Bar Chart`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:171
-msgid "At the top of the graph, there's a color key that describes the type of participants found in the graph."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:174
-msgid "To the far-left of the view options, there is the :guilabel:`Measures` drop-down menu. When clicked, the options to view the :guilabel:`Record ID` or total :guilabel:`Count` are available. And, to the right of the :guilabel:`Measures` drop-down menu, there's the ability to add any data to a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
 msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:3
