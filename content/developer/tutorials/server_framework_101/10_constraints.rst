@@ -125,4 +125,4 @@ improve it in the :doc:`next chapter <11_sprinkles>`.
 
 .. _PostgreSQL's documentation:
 .. _table_constraint:
-    https://www.postgresql.org/docs/12/ddl-constraints.html
+    https://www.postgresql.org/docs/15/ddl-constraints.html
