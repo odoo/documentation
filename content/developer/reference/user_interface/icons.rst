@@ -19,7 +19,7 @@ icon to render.
 Material Symbols
 ================
 
-`Material Symbols Rounded <https://fonts.google.com/icons>`_ is loaded in the Odoo webclient. Use
+A subset of `Material Symbols Outlined <https://fonts.google.com/icons?icon.style=Outlined>`_ is loaded in the Odoo webclient. Use
 it for any standard icon: actions, navigation, status indicators, and so on.
 
 Pass the icon's ligature name (as listed on `fonts.google.com/icons <https://fonts.google.com/icons>`_)
@@ -33,20 +33,20 @@ to the ``data-icon`` attribute:
       <i class="oi" data-icon="settings"/>
       <i class="oi" data-icon="arrow_forward"/>
 
+To browse and search for icons, go to the `Material Symbols library <https://fonts.google.com/icons>`_
+or open the Odoo Media Dialog (see below) to see the exact subset of icons available in Odoo.
 
-Use the `Material Symbols library <https://fonts.google.com/icons>`_ or the Odoo
-media library (see below) to browse and search available icons.
-
-.. note::
-   Odoo bundles only a subset of Material Symbols rather than the full library. The list of
-   supported icons is maintained in
-   `odoo/addons/web/tooling/icons/icons_wishlist.txt <{GITHUB_PATH}/addons/web/tooling/icons/icons_wishlist.txt>`_.
-
+.. tip::
+   In Odoo Editor, type ``/icons`` to open the Media Dialog directly inside the ``Icons``
+   tab through :ref:`the Powerbox <reference/frontend/odoo_editor/powerbox>`.
 
 .. image:: icons/media_lib.jpg
-   :alt: Odoo Media Library
+   :alt: Odoo Media Dialog
    :width: 630
 
+.. note::
+   The list of available icons in Odoo is maintained in
+   `icons_wishlist.txt <{GITHUB_PATH}/addons/web/tooling/icons/icons_wishlist.txt>`_.
 
 .. _ui/odoo-ui-icons:
 
@@ -66,7 +66,7 @@ attribute:
       <i class="oi" data-icon="oi_facebook"/>
 
 Like `Material Symbols library <https://fonts.google.com/icons>`_ , Odoo custom
-icons are available via Odoo media library.
+icons are available inside the Odoo Media Dialog.
 
 .. rubric:: Odoo
 
@@ -691,9 +691,9 @@ icons are available via Odoo media library.
 RTL adaptations
 ---------------
 
-Some OI view icons have :abbr:`RTL (right-to-left)` adaptations that flip the glyph 180° when an
+Some OI view icons have :abbr:`RTL (right-to-left)` adaptations that flip the glyph horizontally when an
 RTL language is active. Material Symbols directional icons (arrows, chevrons, etc.) also include RTL adaptations; refer to
-the ``$ms-rtl-icons`` list in ``icons.scss`` for the full set.
+`rtl_icons.scss <{GITHUB_PATH}/addons/web/static/src/webclient/icons_mappings/rtl_icons.scss>`_ for the full set.
 
 .. _ui/odoo-ui-icons/utility-classes:
 
@@ -740,7 +740,7 @@ The following utility classes can be combined with ``.oi``:
          <i class="oi oi-filled" data-icon="favorite"></i>
 
 Size classes
-   ``oi-lg``, ``oi-2x`` … ``oi-10x`` scale the icon relative to the current font size.
+   ``oi-sm``, ``oi-lg``, ``oi-2x``, ``oi-3x`` … ``oi-10x`` scale the icon relative to the current font size.
 
    .. example::
 
@@ -748,15 +748,19 @@ Size classes
 
          <i class="oi oi-2x" data-icon="check"></i>
 
-CSS variables
-   The icon rendering can be adjusted via CSS custom properties:
+   .. note::
+      The icon font size can also be adjusted through CSS by overriding the ``--oi-font-size`` variable:
 
-   - ``--oi-font-size`` — overrides the icon's font size.
+      .. code-block:: scss
+
+         .my-element {
+            --oi-font-size: 1.5em;
+         }
 
 Setting an icon from CSS
    To set the icon's glyph directly from CSS (rather than the ``data-icon`` attribute), use the
    icon's ligature name as the ``content`` value. To use the filled variant, append ``_f`` to the
-   name.
+   name or set the ``'FILL'`` ``font-variation-settings`` to ``1``.
 
    .. example::
 
@@ -767,44 +771,69 @@ Setting an icon from CSS
 
          /* Filled variant */
          .my-element::before { content: "favorite_f"; }
+         /* OR */
+         .my-element::before {
+               content: "favorite";
+               font-variation-settings: 'FILL' 1;
+         }
 
 .. _ui/migration-font-awesome:
 
 Migration from Font Awesome
 ===========================
 
-Font Awesome has been replaced by Material Symbols as the primary icon system. Temporary
-compatibility mappings translate legacy ``fa-*`` class names to their Material
-Symbols or OI equivalents, so existing code continues to render without immediate changes. See the
-`fa_to_ms.scss <https://github.com/odoo/odoo/blob/3e15a7be69/addons/web/static/src/webclient/icons_mappings/fa_to_ms.scss>`_
-and `oi_to_ms.scss <https://github.com/odoo/odoo/blob/3e15a7be69/addons/web/static/src/webclient/icons_mappings/oi_to_ms.scss>`_
-mapping files for the full set of equivalences.
+Odoo’s user interface used to render **Font Awesome** and **Odoo UI icons** with
+``fa-*`` and ``oi-*`` HTML class names.
 
-.. example::
+Since the introduction of **Material Symbols** and the *new* **Odoo UI icons**,
+these class names no longer work and must be replaced by their equivalent in the new icon system.
 
-   The following are equivalent after the compatibility mapping is applied:
+SCSS mappings were introduced to ease the icon migration and you may refer to
+them in order to help you switch to the new icon system.
 
-   .. code-block:: html
+- **Font Awesome** to **Material Symbols** mapping: `fa_to_ms.scss <https://github.com/odoo/odoo/blob/3e15a7be69/addons/web/static/src/webclient/icons_mappings/fa_to_ms.scss>`_
 
-      <!-- Legacy (Font Awesome) -->
-      <i class="fa fa-check"></i>
-
-      <!-- New system -->
-      <i class="oi" data-icon="check"></i>
+- **(Old) Odoo Custom Icons** to **Material Symbols** mapping: `oi_to_ms.scss <https://github.com/odoo/odoo/blob/3e15a7be69/addons/web/static/src/webclient/icons_mappings/oi_to_ms.scss>`_
 
 .. important::
 
-   The compatibility mapping is temporary and will be removed once the migration is complete.
-   Update usages to the new system as soon as possible.
+   The mappings are no longer included in the most recent version of the Odoo codebase.
 
 **Migration steps:**
 
 1. Replace ``class="fa fa-<name>"`` with ``class="oi" data-icon="<ms-name>"`` where ``<ms-name>``
    is the corresponding `Material Symbols ligature name <https://fonts.google.com/icons>`_.
-2. For icons not available in Material Symbols (brands, custom Odoo glyphs), use the OI library:
+2. For icons not available in **Material Symbols** (brands, custom Odoo glyphs),
+   use the **Odoo UI icon** library:
    ``class="oi" data-icon="oi_<name>"``.
-3. Remove any ``fa-*`` size classes (``fa-2x``, etc.) and replace them with the equivalent
-   ``oi-*`` size classes.
+3. Remove any ``fa-*`` sizing and formatting classes (``fa-2x``, etc.) and replace
+   them with their equivalent ``oi-*`` size classes.
+
+.. example::
+
+   Here are a few examples of equivalent icons in the old and the new icon system:
+
+   .. code-block:: html
+
+      <!-- Old system -->
+      <i class="fa fa-user"></i>
+      <!-- New system -->
+      <i class="oi oi-filled" data-icon="person"></i>
+
+      <!-- Old system -->
+      <i class="fa fa-github fa-2x"></i>
+      <!-- New system -->
+      <i class="oi oi-2x" data-icon="oi_github"></i>
+
+      <!-- Old system -->
+      <i class="oi oi-settings-adjust"></i>
+      <!-- New system -->
+      <i class="oi" data-icon="tune"></i>
+
+      <!-- Old system -->
+      <i class="oi oi-view-kanban"></i>
+      <!-- New system -->
+      <i class="oi" data-icon="oi_view-kanban"></i>
 
 .. _ui/odoo-spreadsheet-icons:
 
