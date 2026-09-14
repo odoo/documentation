@@ -57,7 +57,6 @@ To pay a vendor bill with a check, follow these steps:
    Once printed, several options are available:
 
    - :guilabel:`Void Check`: click to cancel the check payment.
-   - :guilabel:`Validate`: click to mark the payment as :guilabel:`Paid`.
    - :guilabel:`Reject`: click if the check was rejected. The payment status is then set to
      :guilabel:`Rejected`, and the related bill is no longer marked as :guilabel:`Paid`.
 
