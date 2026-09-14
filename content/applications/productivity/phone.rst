@@ -31,6 +31,13 @@ response times, helping businesses streamline external communication and track t
       Learn how to access the **Phone** widget from different devices (like phones) and apps (like
       Linphone).
 
+   .. card:: Call flows
+      :target: phone/call_flows
+      :large:
+
+      Design visual call flows to route incoming calls to users, groups, queues, menus, voicemail,
+      or external numbers.
+
 .. seealso::
    `Odoo Tutorials: Phone <https://www.odoo.com/slides/voip-voice-over-ip-315>`_
 
@@ -253,5 +260,6 @@ well. Click the cards below to learn about |VOIP| workflows in Odoo:
    phone/onsip
    phone/phone_widget
    phone/devices_integrations
+   phone/call_flows
    phone/sales_calls
    phone/support_calls
