@@ -130,7 +130,7 @@ There are two main ways to do so:
      pivot ID. To avoid confusion, delete the original static pivot table.
 
 The top-left cell of the new dynamic pivot table contains an :ref:`Odoo-specific array function that
-retrieves data <spreadsheet/insert-pivot-table/dynamic-function>` from your your database.
+retrieves data <spreadsheet/insert-pivot-table/dynamic-function>` from your database.
 
 .. _spreadsheet/insert-pivot-table/dynamic-function:
 
