@@ -355,7 +355,7 @@ statement line items correspond to the generic |P&L| statement line items as fol
    * - Generic P&L Statement
      - US P&L Statement
    * - Revenue
-     - Income
+     - Revenue
    * - Less Costs of Revenue
      - Cost of Sales
    * - Gross Profit
