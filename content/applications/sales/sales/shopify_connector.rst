@@ -19,7 +19,7 @@ Odoo.
    .. card:: Order management
       :target: shopify_connector/manage
 
-      Sync products, orders, available stock, prices and taxes.
+      Sync products, orders, available stock, prices, and taxes.
 
    .. card:: Fulfillment
       :target: shopify_connector/fulfillment
