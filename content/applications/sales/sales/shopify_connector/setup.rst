@@ -31,8 +31,8 @@ connector*, users need the following:
 - Odoo **Sales** app (this app auto-installs with the **Shopify connector** app)
 
 .. tip::
-   It's recommended to have the Odoo database and Shopify account dashboard in different tabs in the
-   same browser for the setup.
+   It is recommended to have the Odoo database and Shopify account dashboard in different tabs in
+   the same browser for the setup.
 
 .. _shopify/setup/create-account-form:
 
@@ -47,7 +47,7 @@ Shopify: Accounts`. Alternatively, from the Odoo home page, start typing `Shopif
 :menuselection:`Sales --> Configuration --> Shopify: Accounts` menu item. Then, click
 :guilabel:`New`.
 
-On the blank *Shopify account form* page, start by:
+On the blank *Shopify account form* page:
 
 #. Choose a name for the account (e.g., American Marketplace).
 #. Select :guilabel:`Shopify` for the :guilabel:`E-commerce Channel`.
@@ -70,7 +70,8 @@ In the *Credentials* tab of the Shopify account form, select an authentication m
 - :guilabel:`Self Access`: An admin API Access Token. Stores created before January 1, 2026 can use
   this method.
 
-If using the :guilabel:`Self Access` option, refer to Shopify's `access-tokens`_ page.
+If using the :guilabel:`Self Access` option, refer to Shopify's `access tokens documentation
+<access-tokens_>`_.
 
 If using the :guilabel:`Oauth` option, click the :guilabel:`Copy App URL` button.
 
@@ -79,22 +80,23 @@ If using the :guilabel:`Oauth` option, click the :guilabel:`Copy App URL` button
 
 .. _shopify/setup/administrative-settings:
 
-Configuring administrative settings
------------------------------------
+Configure administrative settings
+---------------------------------
 
 The *Configuration* tab settings can be changed anytime, even while the Shopify account is
 connected. All changes are logged in the account form's chatter. These settings control how data is
 imported and processed:
 
 - :guilabel:`Create Products`: Controls what happens when a Shopify product is pulled and no Odoo
-  product matches it. Odoo always looks for a product whose internal reference equals the Shopify
-  SKU.
+  product matches it.
 
-  When enabled, if no match is found, a new Odoo product is created from the Shopify data. Once an
-  offer is mapped, its title and Shopify identifiers are refreshed on every pull, regardless of this
-  setting. However, the mapped Odoo product itself is not updated afterward, since cost, weight,
-  barcode, and image are only read when the product is first created. When disabled, the offer is
-  mapped to the default :guilabel:`E-commerce Sale product` instead.
+  Odoo always looks for a product whose internal reference equals the Shopify SKU. When
+  :guilabel:`Create Products` is enabled, if no match is found, a new Odoo product is created from
+  the Shopify data. Once an offer is mapped, its title and Shopify identifiers are refreshed on
+  every pull, regardless of this setting. However, the mapped Odoo product itself is not updated
+  afterward, since cost, description, weight, barcode, and image are only read when the product is
+  first created. When :guilabel:`Create Products` is disabled, the offer is mapped to the default
+  :guilabel:`E-commerce Sale product` instead.
 
   .. important::
      A product must have a SKU in Shopify to be imported into Odoo.
@@ -137,10 +139,10 @@ development`.
    :alt: Example of using the search bar to find App development.
 
 Click :guilabel:`Build app in Dev Dashboard` to open a new tab for the dev dashboard. Click
-:guilabel:`Create app` and in the *Start from Dev Dashboard* option, enter the app name and click
+:guilabel:`Create app`, and in the *Start from Dev Dashboard* option, enter the app name and click
 :guilabel:`Create`.
 
-In the *Create Version* page, enter the following information for the listed fields:
+On the *Create Version* page, enter the following information in the listed fields:
 
 - :guilabel:`App URL`: Paste the copied URL from the :ref:`Credentials tab
   <shopify/setup/authentication>` of the Create a Shopify account form.
@@ -151,8 +153,8 @@ In the *Create Version* page, enter the following information for the listed fie
      Check the *Release Notes* page on the Shopify connector's app store page for the latest version
      of the Webhooks API.
 
-- In the *Access* section, ensure the *Scopes* tab is selected. Then copy the following code block
-  and paste it into the tab:
+- In the *API access* section, ensure the *Scopes* tab is selected. Then copy the following code
+  block and paste it into the tab:
   `read_assigned_fulfillment_orders,write_assigned_fulfillment_orders,read_customers,write_inventory,read_inventory,read_locations,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders,read_orders,read_products,read_third_party_fulfillment_orders,write_third_party_fulfillment_orders,read_fulfillments,write_fulfillments,read_returns`
 
 .. image:: setup/shopify-app-config.png
@@ -172,11 +174,12 @@ Connect Shopify to Odoo
 Navigate to the Shopify app's *Settings* page by clicking :guilabel:`Settings` in the navigation
 bar. Copy the :guilabel:`Client ID` and :guilabel:`Client Secret` from the *Credentials* section.
 
-Switch to the Odoo browser tab, paste these into the :guilabel:`Shopify Client Id` and
+Switch to the Odoo browser tab and paste these into the :guilabel:`Shopify Client Id` and
 :guilabel:`Shopify Client Secret` fields in the *Credentials* tab.
 
 Next, switch back to the Shopify browser tab and click the app's name. Click :guilabel:`Install
-app`, then on the new page select the Shopify store to link to Odoo, and click :guilabel:`Install`.
+app`, then, on the new page, select the Shopify store to link to Odoo, and click
+:guilabel:`Install`.
 
 After installing the app in the Shopify store, the page is automatically redirected to the Shopify
 account form in Odoo with the *Operations* tab open. Verify that the app is connected by checking
@@ -197,8 +200,8 @@ timestamps and configuration. All orders, products, and inventory are scoped per
 store. Multi-company environments are supported, with a separate configuration per company.
 
 The only exception is when the same internal Odoo location is synced with more than one Shopify
-store location: the inventory for those Shopify account forms is synced with the internal Odoo
-location.
+store location: the Shopify account forms share the same inventory from that Odoo location instead
+of having separate inventory scopes.
 
 .. seealso::
    - :doc:`../shopify_connector`
