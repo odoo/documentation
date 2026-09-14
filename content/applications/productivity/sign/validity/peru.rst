@@ -10,11 +10,14 @@ electronic signatures in Peru.
 Legal framework for electronic signatures in Peru
 =================================================
 
-In Peru, electronic signatures are regulated under the `Peruvian Civil Code, Law 27269 – Law of
-Digital Signatures and Certificates <https://webfiles-sc1.blackbaud.com/files/support/helpfiles/npoconnect/content/resources/attachments/peru-law-295-civil-code.pdf>`_,
-`Supreme Decree N° 052-2008-PCM – Regulation of the Law of Digital Signatures and Certificates <https://www.gob.pe/institucion/pcm/normas-legales/292462-052-2008-pcm>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In Peru, electronic signatures are regulated under the
+`Ley 27269 <https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/293376-27269>`_
+and the `DS 052-2008-PCM (Reglamento)
+<https://www.gob.pe/institucion/pcm/normas-legales/292874-052-2008-pcm>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -72,4 +75,4 @@ not be suitable or legally recognized in Peru:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

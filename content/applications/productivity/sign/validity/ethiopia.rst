@@ -10,9 +10,13 @@ electronic signatures in Ethiopia.
 Legal framework for electronic signatures in Ethiopia
 =====================================================
 
-In Ethiopia, electronic signatures are regulated under the `Electronic Signature Proclamation No. 1072/2018 <http://laws.eag.gov.et/Upload/CassationDecisionsDocument/fce05041-f22e-4930-a225-95748dd53c3e.pdf>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In Ethiopia, electronic signatures are regulated under the
+`Electronic Signature Proclamation No. 1072/2018 <https://www.insa.gov.et/>`_
+and the `Electronic Transactions Proclamation No. 1205/2020 <https://www.insa.gov.et/>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +73,4 @@ not be suitable or legally recognized in Ethiopia:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

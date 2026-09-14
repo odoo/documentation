@@ -10,9 +10,15 @@ electronic signatures in Pakistan.
 Legal framework for electronic signatures in Pakistan
 =====================================================
 
-In Pakistan, electronic signatures are regulated under the `Electronic Transactions Ordinance
-<https://www.pakistanlaw.com/eto.pdf>`_. The law governs the use of electronic records and
-signatures. The key points of the law include:
+In Pakistan, electronic signatures are regulated under the
+`Electronic Transactions Ordinance 2002
+<https://www.pta.gov.pk/en/telecom-act/electronic-transactions-ordinance>`_ and the
+`Prevention of Electronic Crimes Act 2016 (PECA)
+<http://www.na.gov.pk/uploads/documents/1472635250_246.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +76,4 @@ not be suitable or legally recognized in Pakistan:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

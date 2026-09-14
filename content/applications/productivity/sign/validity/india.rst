@@ -10,12 +10,15 @@ electronic signatures in India.
 Legal framework for electronic signatures in India
 ==================================================
 
-In India, electronic signatures are regulated under the `Information Technology Act (ITA) <https://eprocure.gov.in/cppp/rulesandprocs/kbadqkdlcswfjdelrquehwuxcfmijmuixngudufgbuubgubfugbububjxcgfvsbdihbgfGhdfgFHytyhRtMjk4NzY=>`_,
-the `Indian Contract Act (ICA)
-<https://www.indiacode.nic.in/bitstream/123456789/2187/2/A187209.pdf>`_ and the Electronic Signature
-or Electronic Authentication Technique and Procedure Rules (ESEATPR). The law provides the
-foundation for the use and legal recognition of electronic signatures. The key points of the law
-include:
+In India, electronic signatures are regulated under the
+`Information Technology Act 2000 <https://www.indiacode.nic.in/bitstream/123456789/1999/3/A2000-21.pdf>`_
+and the `IT (Certifying Authorities) Rules 2000 <https://www.meity.gov.in/content/certifying-authorities>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures. The IT Act
+recognises both standard electronic signatures and Section 3A Aadhaar-based signatures, with
+Schedule I listing excluded document types.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -73,4 +76,4 @@ not be suitable or legally recognized in India:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*

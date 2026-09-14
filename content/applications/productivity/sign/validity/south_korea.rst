@@ -10,10 +10,13 @@ electronic signatures in South Korea.
 Legal framework for electronic signatures in South Korea
 ========================================================
 
-In South Korea, electronic signatures are regulated under the `Digital Signature Act <https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=61440&type=part&key=28#:~:text=The%20purpose%20of%20this%20Act,infrastructure%20for%20facilitating%20the%20use>`_
-and the `Framework Act on Electronic Documents and Transactions of Korea <https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=61440&type=part&key=28#:~:text=The%20purpose%20of%20this%20Act,infrastructure%20for%20facilitating%20the%20use>`_.
-The law governs transactions performed through electronic means and the use of electronic
-signatures. The key points of the law include:
+In South Korea, electronic signatures are regulated under the
+`Digital Signature Act (amended 2020)
+<https://elaw.klri.re.kr/kor_service/lawView.do?hseq=56395&lang=ENG>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -72,4 +75,4 @@ not be suitable or legally recognized in South Korea:
    cases meet all legal requirements. Compliance with additional industry-specific regulations may
    also be necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*

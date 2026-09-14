@@ -10,9 +10,13 @@ electronic signatures in Egypt.
 Legal framework for electronic signatures in Egypt
 ==================================================
 
-In Egypt, electronic signatures are regulated under the `E-Signature Law
-<https://www.itida.gov.eg/English/Documents/4.pdf>`_. The law governs transactions performed through
-electronic means and the use of digital signatures. The key points of the law include:
+In Egypt, electronic signatures are regulated under the
+`Law No. 15/2004 on Electronic Signatures <https://www.itida.gov.eg/EN/Developers/Pages/ESignatureLaw.aspx>`_
+and the `Executive Regulations No. 361/2020 <https://www.itida.gov.eg/EN/Developers/Pages/ESignatureLaw.aspx>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +73,5 @@ not be suitable or legally recognized in Egypt:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*
+
