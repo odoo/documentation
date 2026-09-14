@@ -66,9 +66,6 @@ The widget stays open when navigating other Odoo apps.
 Assign user permissions
 -----------------------
 
-.. note::
-   As of Odoo 19.0, the **Phone** app has three access roles that can be assigned.
-
 By default, users can receive their own calls, and managers can receive calls for their team
 members. To grant additional **Phone** app permissions to a user, go to :menuselection:`Settings app
 --> Users \& Companies --> Users` and search for the user. Open the user's contact card and navigate
@@ -96,8 +93,7 @@ Connect to a VoIP provider
 
 Making calls through the **Phone** app also requires a |VOIP| service provider. Odoo supports three
 verified providers by default: :doc:`Axivox <phone/axivox>`, :doc:`DIDWW <phone/didww>`, and
-:doc:`OnSIP <phone/onsip>`. Click on the cards below to learn how to configure these service
-providers in the Odoo database:
+:doc:`OnSIP <phone/onsip>`.
 
 .. cards::
    .. card:: Axivox configuration
@@ -139,6 +135,19 @@ URL). Enter the domain created by the alternate provider in the :guilabel:`OnSIP
 For issues setting up the |VOIP| service provider in Odoo, follow the :ref:`relevant troubleshooting
 steps <phone/phone_widget/troubleshooting>`. For any other issues with the |VOIP| service provider,
 contact their support team directly.
+
+Configure PBX settings
+----------------------
+
+Configure a Private Branch Exchange (PBX) system for call routing directly in Odoo.
+
+.. cards::
+   .. card:: Call flows
+      :target: phone/configuration/call_flows
+      :large:
+
+      Design visual call flows to route incoming calls to users, groups, queues, menus, voicemail,
+      or external numbers.
 
 .. _productivity/phone/recording-transcription:
 
@@ -248,6 +257,7 @@ well. Click the cards below to learn about |VOIP| workflows in Odoo:
 .. toctree::
    :titlesonly:
 
+   phone/configuration
    phone/axivox
    phone/didww
    phone/onsip
