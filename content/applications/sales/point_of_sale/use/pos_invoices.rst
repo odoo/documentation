@@ -43,12 +43,21 @@ From the frontend
 During the ordering process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create and issue an invoice to the customer upon :ref:`payment <pos/use/sell>`, enable the
-:icon:`fa-file-text-o` :guilabel:`Invoice` checkbox, select a :doc:`payment method
-<../payment_methods>`, then click :guilabel:`Validate`.
+To create a customer's invoice upon :ref:`payment <pos/use/sell>`, enable the :icon:`fa-file-text-o`
+:guilabel:`Invoice` checkbox, select a :doc:`payment method <../payment_methods>`, then click
+:guilabel:`Validate`.
 
-The invoice is automatically issued and downloaded. To simultaneously send the receipt and the
-invoice from the payment confirmation screen, click :icon:`fa-paper-plane` :guilabel:`Send Receipt`.
+The invoice record is created immediately in Odoo, but the invoice PDF is generated later in the
+background. To simultaneously send the receipt and the invoice from the payment confirmation screen,
+click :icon:`fa-paper-plane` :guilabel:`Send Receipt`.
+
+.. note::
+   By default, invoice PDFs are generated later in the background, so that the POS register is not
+   blocked while validating an order.
+
+   To generate and download the invoice PDF immediately upon order validation, go to
+   :menuselection:`Point of Sale --> Configuration --> Settings`, scroll to the
+   :guilabel:`Accounting` section, and enable :guilabel:`Download Invoice`.
 
 .. seealso::
    :doc:`receipts`
@@ -58,16 +67,12 @@ invoice from the payment confirmation screen, click :icon:`fa-paper-plane` :guil
 After the ordering process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create and issue an invoice to the customer from the POS register after an order is processed,
-follow these steps:
+To create and issue, or reprint, an invoice to the customer from the POS register after an order is
+processed, follow these steps:
 
 #. Click :guilabel:`Orders` in the POS interface.
 #. Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`.
 #. Select the relevant order and click :icon:`fa-file-pdf-o` :guilabel:`Invoice` above the numpad.
-
-.. tip::
-   To reprint the invoice, select the relevant order and click :icon:`fa-file-pdf-o`
-   :guilabel:`Reprint Invoice` above the numpad.
 
 From the backend
 ----------------
@@ -93,7 +98,7 @@ invoiced (i.e., invoices with an :guilabel:`Invoice Status` set to :guilabel:`To
 these steps:
 
 #. Go to :menuselection:`Point of Sale --> Orders --> Orders`.
-#. Click the search bar and :guilabel:`Group By` :guilabel:`Customer`.
+#. Click the search bar and under :guilabel:`Group By` select :guilabel:`Customer`.
 #. Click the :icon:`fa-caret-right` (:guilabel:`caret`) icon next to the relevant customer and
    enable :guilabel:`Order Ref` in the column header or select the relevant orders.
 #. Click :guilabel:`Create Invoices`, keep the :guilabel:`Consolidated Billing` option enabled,
