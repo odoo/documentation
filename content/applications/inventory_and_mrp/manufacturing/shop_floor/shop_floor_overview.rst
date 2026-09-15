@@ -57,8 +57,15 @@ Navigation
 the top of the module:
 
 - :guilabel:`Overview`: *Shop Floor*'s main dashboard and displays information cards for |MOs|.
+<<<<<<< a73d1046e1125f890ba498d6f63ed8f3ea5c35fd
   Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview` Learn more about the
   Overview in the :ref:`manufacturing/shop_floor/overview` documentation.
+||||||| e58fccc43e87a4a2937b118974e474a943916b5e
+  Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview`
+  documentation.
+=======
+  Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview` documentation.
+>>>>>>> b681e2899ce932ab27f182e655ca067959fc653a
 - :guilabel:`My WO`: shows information cards for all work orders assigned to the employee whose
   profile is currently active in the operator panel on the left side of the module. This view
   functions largely the same as the views for each work center, but it only shows work orders
@@ -222,9 +229,17 @@ which opens a pop-up window with additional options for the work order:
 Operator panel
 --------------
 
+<<<<<<< a73d1046e1125f890ba498d6f63ed8f3ea5c35fd
 The operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
 operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
 panel displays the name and profile picture of every employee currently signed in across all
+||||||| e58fccc43e87a4a2937b118974e474a943916b5e
+The operator panel is used to manage the employees who are signed in to the *Shop Floor* module.
+The panel displays the name and profile picture of every employee currently signed in across all
+=======
+The operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
+panel displays the name and profile picture of every employee currently signed in across all
+>>>>>>> b681e2899ce932ab27f182e655ca067959fc653a
 database instances.
 
 To interact with *Shop Floor* as a specific employee, click the employee's name to activate their
