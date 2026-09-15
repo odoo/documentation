@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page covers the rental order workflow in Odoo **Rental**, from creating a
+                 quote and requesting a customer signature to tracking service time and finalizing
+                 the invoice for payment.
+
 =====================
 Create a rental order
 =====================
@@ -77,11 +82,11 @@ returned on time and in its original condition.
    :doc:`Sign <../../../productivity/sign>` app.
 
 If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
-dashboard, select the desired rental order. Go to the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
-click :icon:`fa-file-text` :guilabel:`Request Signature`.
+dashboard, select the desired rental order, then in the chatter section click :guilabel:`Activity`.
+In the *Schedule Activity* pop-up window, click :guilabel:`Request Signature`.
 
-In the *Sign Documents* pop-up window, either :ref:`select an existing document template
-<sign/request-signatures/template-odoo-record>` or :ref:`create a new one
+In the *Schedule Activity* pop-up window, either :ref:`select an existing document template
+<sign/request-signatures/template-odoo-record>` or :ref:`upload a new one
 <sign/request-signatures/one-off-record>`. After sending the request, a link to the signature
 request appears in the record's chatter. The document is accessible to the customer via the customer
 portal or email.
