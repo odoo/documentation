@@ -1,7 +1,7 @@
 .. meta::
-   :description: This page covers creating a rental order in Odoo Rental, from generating a quote
-                 and requesting a customer signature to tracking service tasks and timesheets. It
-                 also explains finalizing and confirming the invoice for payment.
+   :description: This page covers the rental order workflow in Odoo **Rental**, from creating a
+                 quote and requesting a customer signature to tracking service time and finalizing
+                 the invoice for payment.
 
 =====================
 Create a rental order
@@ -68,11 +68,11 @@ returned on time and in its original condition.
    :doc:`Sign <../../../productivity/sign>` app.
 
 If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
-dashboard, select the desired rental order. Go to the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
-click :icon:`fa-file-text` :guilabel:`Request Signature`.
+dashboard, select the desired rental order, then in the chatter section click :guilabel:`Activity`.
+In the *Schedule Activity* pop-up window, click :guilabel:`Request Signature`.
 
-In the *Sign Documents* pop-up window, either :ref:`select an existing document template
-<sign/request-signatures/template-odoo-record>` or :ref:`create a new one
+In the *Schedule Activity* pop-up window, either :ref:`select an existing document template
+<sign/request-signatures/template-odoo-record>` or :ref:`upload a new one
 <sign/request-signatures/one-off-record>`. After sending the request, a link to the signature
 request appears in the record's chatter. The document is accessible to the customer via the customer
 portal or email.
@@ -95,7 +95,7 @@ as needed.
 
 .. tip::
    Project templates allow for automated task assignment. When integrated with the **Planning** app,
-   the system automatically schedules and publishes an employee’s shift if their availability
+   the system automatically schedules and publishes an employee's shift if their availability
    matches the rental period. Priority is given to employees with the relevant :ref:`roles
    <planning/planning-roles>` if applicable.
 
@@ -169,7 +169,7 @@ Confirm and pay
 ---------------
 
 If all the details are correct on the invoice draft, either click :guilabel:`Confirm` and click
-:guilabel:`Send` to email the invoice to the customer, or  click :guilabel:`Print` and then click
+:guilabel:`Send` to email the invoice to the customer, or click :guilabel:`Print` and then click
 :guilabel:`Pay` if the customer is in person. In the :guilabel:`Pay` pop-up window, select a
 :guilabel:`Journal` and click :guilabel:`Create Payment`.
 
