@@ -86,22 +86,22 @@ Preferences`.
 On the *Change my Preferences* pop-up window, open the *Security* tab. Then, click :guilabel:`Add
 API Key`. On the *Access Control* pop-up window, confirm the database password.
 
-After confirming the password, configure the API key in the *New API Key* pop-up window. To start,
-in the *Name your key* section, enter a brief name or descriptor for the key.
+After confirming the password, configure the API key in the *New API Key* pop-up window.
 
-Next, in the *Select a scope* section, select the :guilabel:`MCP` scope from the drop-down menu.
+To start, for *Key Name*, enter a brief name or descriptor for the key.
 
-In the *Give a duration for the key's validity* section, select the period of time for which this
-key is valid (e.g., `1 Month`).
+Next, for *Scope*, select the :guilabel:`MCP` scope from the available options.
 
-Finally, click :guilabel:`Generate key` to create the key.
+For *Expires*, select the period of time for which this key should be valid (e.g., `1 Month`).
+
+Finally, click :guilabel:`Create key` to generate the key.
 
 .. important::
    Be sure to save the key elsewhere. Once generated, the key is only shown to the user once and
    remains hidden thereafter.
 
-.. image:: mcp_server/add-key-popup.png
-   :alt: Add New Key pop-up window in Odoo.
+.. image:: mcp_server/create-key-popup.png
+   :alt: Create New Key pop-up window in Odoo.
 
 .. _ai/mcp/server-settings:
 
