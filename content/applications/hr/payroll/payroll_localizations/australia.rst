@@ -640,14 +640,15 @@ from the assigned working schedule, attendance records, planning schedule, and a
 Any :ref:`discrepancies or conflicts <payroll/conflicts>` must be resolved, then the work entries
 can be :ref:`regenerated <payroll/regenerate-work-entries>`.
 
-Once everything is correct, draft payslips can be :ref:`created individually <payroll/process>` or
-in batches, referred to in the **Payroll** app as :ref:`pay runs
+Once everything is correct, draft payslips can be :ref:`created individually
+<payroll/payslips/process>` or in batches, referred to in the **Payroll** app as :ref:`pay runs
 <payroll/payroll_localizations/au_run>`.
 
 .. important::
-   In Australia, :ref:`individual payslips <payroll/process>` (not part of a pay run) are considered
-   *out-of-cycle* runs. The same payslip rules apply, but the way individual payslips are submitted
-   to the |ATO| in the framework of :abbr:`STP (Single Touch Payroll)` is slightly different.
+   In Australia, :ref:`individual payslips <payroll/payslips/process>` (not part of a pay run) are
+   considered *out-of-cycle* runs. The same payslip rules apply, but the way individual payslips are
+   submitted to the |ATO| in the framework of :abbr:`STP (Single Touch Payroll)` is slightly
+   different.
 
    Adding an out-of-cycle payslip to an existing batch is **not** recommended.
 

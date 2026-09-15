@@ -116,7 +116,8 @@ button in the upper-left corner, and the :guilabel:`Salary Computation` tab is p
 
 .. tip::
    The :guilabel:`Compute Sheet` button does not disappear from view after it is clicked, so the
-   payslip can be recalculated at any point prior to :ref:`processing it <payroll/process>`.
+   payslip can be recalculated at any point prior to :ref:`processing it
+   <payroll/payslips/process>`.
 
    If any changes need to be made to the :ref:`Worked Days & Inputs <payroll/worked-days-inputs>`
    tab, click the :guilabel:`Compute Sheet` button to recalculate the payslip.
@@ -150,7 +151,7 @@ If there are any additional notes or information needed for the payslip, add the
 .. image:: payslips/other-info-tab.png
    :alt: The fields filled out in the other info tab.
 
-.. _payroll/process:
+.. _payroll/payslips/process:
 
 Process a payslip
 =================
@@ -294,7 +295,7 @@ dashboard loads, with all refund payslips appearing in a list view.
    Since refunds are uncommon, typically only the one payslip being refunded appears in the list.
 
 By default, the refund payslip has a status of :guilabel:`Waiting`. This refund payslip is processed
-:ref:`in the same way a regular payslip is processed <payroll/process>`.
+:ref:`in the same way a regular payslip is processed <payroll/payslips/process>`.
 
 Print a payslip
 ===============
@@ -371,5 +372,5 @@ Wage`, :guilabel:`Gross Wage`, :guilabel:`Net Wage`, and the :guilabel:`Status` 
 
 Click on an individual payslip entry to view the details for that individual payslip.
 
-Process the payslips :ref:`in the same way a regular payslip is processed <payroll/process>`, or in
-a batch.
+Process the payslips :ref:`in the same way a regular payslip is processed
+<payroll/payslips/process>`, or in a batch.
