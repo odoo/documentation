@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-28 17:31+0000\n"
-"PO-Revision-Date: 2026-07-11 12:41+0000\n"
+"PO-Revision-Date: 2026-09-15 15:35+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-17-doc/"
 "finance/uk/>\n"
@@ -24,11 +24,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
-"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
-"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
-"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 2026.6.1\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
+"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
+"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
+"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/applications/finance.rst:5
 msgid "Finance"
@@ -2370,10 +2370,14 @@ msgid ""
 "journal entry by replacing the bank suspense account with the corresponding "
 "receivable, payable, or outstanding account."
 msgstr ""
+"Банківські транзакції проводяться на **транзитному рахунку журналу** до "
+"моменту звірки. Після звірки запис журналу транзакції змінюється: транзитний "
+"банківський рахунок замінюється на відповідний рахунок дебіторської, "
+"кредиторської заборгованості або рахунок очікування."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:94
 msgid "Match existing entries"
-msgstr ""
+msgstr "Зіставлення наявних записів"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:96
 msgid ""
@@ -2382,12 +2386,18 @@ msgid ""
 "on :doc:`reconciliation models <reconciliation_models>`, with suggested "
 "entries appearing first."
 msgstr ""
+"Ця вкладка містить записи для зіставлення, які Odoo автоматично попередньо "
+"вибирає відповідно до :doc:`моделей звірки <reconciliation_models>`. Порядок "
+"записів залежить від моделей звірки, при цьому запропоновані записи "
+"з'являються першими."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:101
 msgid ""
 "The search bar within the :guilabel:`Match Existing Entries` tab allows you "
 "to search for specific journal items."
 msgstr ""
+"Рядок пошуку у вкладці :guilabel:`Зіставлення наявних записів` дозволяє "
+"шукати конкретні елементи журналу."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:107
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
@@ -2405,7 +2415,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:117
 msgid "Manual operations"
-msgstr ""
+msgstr "Ручні операції"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:119
 msgid ""
@@ -2413,6 +2423,9 @@ msgid ""
 "instead wish to reconcile the transaction manually by choosing the correct "
 "account and amount. Then, complete any of the relevant optional fields."
 msgstr ""
+"Якщо немає наявного запису, що відповідає вибраній транзакції, ви можете "
+"звірити транзакцію вручну, вибравши правильний рахунок і суму. Потім "
+"заповніть усі відповідні необов'язкові поля."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:124
 msgid ""
@@ -2423,20 +2436,31 @@ msgid ""
 "the new line in the resulting entry section and selecting "
 "the :guilabel:`Account` to record the open balance."
 msgstr ""
+"Ви можете скористатися опцією :guilabel:`повністю оплачено`, щоб звірити "
+"платіж, навіть якщо отримано лише часткову оплату. У розділі результуючого "
+"запису з'явиться новий рядок, що відображає відкритий залишок, "
+"зареєстрований за замовчуванням на рахунку дебіторської заборгованості. Ви "
+"можете вибрати інший рахунок, натиснувши на новий рядок у розділі "
+"результуючого запису та вибравши :guilabel:`Рахунок` для запису відкритого "
+"залишку."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:131
 msgid ""
 "Lines are silently reconciled unless a write-off entry is required, which "
 "launches a reconciliation wizard."
 msgstr ""
+"Рядки звіряються без додаткових дій, якщо не потрібен запис списання, який "
+"запускає майстер звірки."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:0
 msgid "Click on fully paid to manually set an invoice as entirely paid."
 msgstr ""
+"Натисніть \"повністю оплачено\", щоб вручну позначити рахунок як повністю "
+"оплачений."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:140
 msgid "Reconciliation model buttons"
-msgstr ""
+msgstr "Кнопки моделей звірки"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:142
 msgid ""
@@ -2445,6 +2469,10 @@ msgid ""
 "quickly reconcile bank transactions manually and can also be used in "
 "combination with existing entries."
 msgstr ""
+"Використовуйте кнопку :doc:`моделі звірки <reconciliation_models>` для "
+"ручних операцій, які використовуються часто. Ці користувацькі кнопки "
+"дозволяють швидко звіряти банківські транзакції вручну, а також можуть "
+"використовуватися в поєднанні з наявними записами."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
@@ -2457,12 +2485,19 @@ msgid ""
 "recurring entries like bank fees. Reconciliation models can also be helpful "
 "in handling :doc:`cash discounts <../customer_invoices/cash_discounts>`."
 msgstr ""
+"Моделі звірки використовуються для автоматизації процесу :doc:`банківської "
+"звірки <reconciliation>`, що особливо зручно при роботі з повторюваними "
+"записами, такими як банківські комісії. Моделі звірки також можуть бути "
+"корисними для обробки :doc:`готівкових знижок <../customer_invoices/"
+"cash_discounts>`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:9
 msgid ""
 "Each model is created based on a :ref:`model type <models/type>` "
 "and :guilabel:`bank transaction conditions`."
 msgstr ""
+"Кожна модель створюється на основі :ref:`типу моделі <models/type>` та "
+":guilabel:`умов банківської транзакції`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:14
 msgid ""
@@ -2472,7 +2507,7 @@ msgstr "<https://www.odoo.com/slides/slide/reconciliation-models-6858>`_"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:19
 msgid "Reconciliation model types"
-msgstr ""
+msgstr "Типи моделей звірки"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:21
 msgid ""
@@ -2481,6 +2516,9 @@ msgid ""
 "Models`. For each reconciliation model, a :guilabel:`Type` must be set. "
 "Three types of models exist:"
 msgstr ""
+"Моделі звірки доступні в розділі :menuselection:`Бухоблік --> "
+"Налаштування --> Банки: Моделі звірки`. Для кожної моделі звірки необхідно "
+"встановити :guilabel:`Тип`. Існує три типи моделей:"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:25
 msgid ""
@@ -2491,6 +2529,11 @@ msgid ""
 "model determine the counterpart entry's account(s), amount(s), label(s), and "
 "analytic distribution;"
 msgstr ""
+":guilabel:`Кнопка для створення зустрічного запису`: у розділі результуючого "
+"запису подання банківської звірки створюється кнопка. При натисканні ця "
+"кнопка генерує зустрічний запис для звірки з активною транзакцією на основі "
+"правил, встановлених у моделі. Правила, зазначені в моделі, визначають "
+"рахунок(и), суму(и), мітку(и) та аналітичний розподіл зустрічного запису;"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:30
 msgid ""
@@ -2498,6 +2541,9 @@ msgid ""
 "transactions to match the transaction to a new entry based on conditions "
 "that must match the information on the transaction;"
 msgstr ""
+":guilabel:`Правило для пропозиції зустрічного запису`: використовується для "
+"повторюваних транзакцій, щоб зіставити транзакцію з новим записом на основі "
+"умов, які мають відповідати інформації про транзакцію;"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:32
 msgid ""
@@ -2505,6 +2551,9 @@ msgid ""
 "match the transaction to existing invoices, bills, or payments based on "
 "conditions that must match the information on the transaction."
 msgstr ""
+":guilabel:`Правило для зіставлення з рахунками`: використовується для "
+"повторюваних транзакцій, щоб зіставити транзакцію з наявними рахунками або "
+"платежами на основі умов, які мають відповідати інформації про транзакцію."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:37
 msgid "Default reconciliation models"
@@ -2516,6 +2565,9 @@ msgid ""
 "company's fiscal localization. These can be updated if needed. Users can "
 "also create their own reconciliation models by clicking :guilabel:`New`."
 msgstr ""
+"В Odoo за замовчуванням доступні різні моделі залежно від податкової "
+"локалізації компанії. За потреби їх можна оновити. Користувачі також можуть "
+"створювати власні моделі звірки, натиснувши :guilabel:`Новий`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:44
 msgid ""
@@ -2523,6 +2575,9 @@ msgid ""
 "*sequence* of models is applied. You can rearrange the order by dragging and "
 "dropping the handle next to the name."
 msgstr ""
+"Якщо запис відповідає кільком моделям звірки, застосовується перша модель у "
+"*послідовності* моделей. Ви можете змінити порядок, перетягуючи маркер поруч "
+"з назвою."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Rearrange the sequence of models in the list view."
@@ -2530,7 +2585,7 @@ msgstr "Змініть порядок моделей у поданні спис�
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:51
 msgid "Invoices/Bills perfect match"
-msgstr ""
+msgstr "Ідеальний збіг рахунків"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:53
 msgid ""
@@ -2538,10 +2593,13 @@ msgid ""
 "Odoo to suggest matching existing invoices or bills with a bank transaction "
 "based on set conditions."
 msgstr ""
+"Ця модель має бути на першому місці в *послідовності* моделей, оскільки вона "
+"дозволяє Odoo пропонувати зіставлення наявних рахунків з банківською "
+"транзакцією на основі встановлених умов."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:None
 msgid "Set rules to trigger the reconciliation."
-msgstr ""
+msgstr "Встановіть правила для запуску узгодження."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:59
 msgid ""
@@ -2552,10 +2610,16 @@ msgid ""
 "(as :guilabel:`Partner is set` is selected) to suggest the correct "
 "counterpart entry and reconcile the payment automatically."
 msgstr ""
+"Odoo автоматично узгоджує платіж, коли вибрано опцію "
+":guilabel:`Автопідтвердження` і умови моделі повністю виконано. У цьому разі "
+"очікується знайти в рядку банківської виписки посилання на рахунок/платіж "
+"(якщо вибрано :guilabel:`Мітка`) та ім'я партнера (якщо вибрано "
+":guilabel:`Партнера встановлено`), щоб запропонувати правильний зустрічний "
+"запис і автоматично узгодити платіж."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:66
 msgid "Invoices/Bills partial match if underpaid"
-msgstr ""
+msgstr "Часткова відповідність рахунків у разі недоплати"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:68
 msgid ""
@@ -2565,18 +2629,27 @@ msgid ""
 "reconciled with the account indicated in the :guilabel:`counterpart entries` "
 "tab."
 msgstr ""
+"Ця модель пропонує рахунок клієнта або постачальника, який частково "
+"відповідає платежу, коли отримана сума трохи менша за суму рахунку, "
+"наприклад у випадку **знижок за оплату готівкою**. Різниця узгоджується з "
+"рахунком, вказаним на вкладці :guilabel:`зустрічні записи`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:73
 msgid ""
 "The reconciliation model :guilabel:`Type` is :guilabel:`Rule to match "
 "invoices/bills`, and the :guilabel:`Payment tolerance` should be set."
 msgstr ""
+"Для моделі узгодження :guilabel:`Тип` встановлено :guilabel:`Правило "
+"зіставлення рахунків`, і слід задати :guilabel:`Допустиме відхилення "
+"платежу`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:80
 msgid ""
 "The :guilabel:`Payment tolerance` is only applicable to lower payments. It "
 "is disregarded when an overpayment is received."
 msgstr ""
+"Параметр :guilabel:`Допустиме відхилення платежу` застосовується лише до "
+"менших платежів. Він не враховується у разі отримання переплати."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:84
 msgid ":doc:`../customer_invoices/cash_discounts`"
@@ -2584,7 +2657,7 @@ msgstr ":doc:`../customer_invoices/cash_discounts`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:87
 msgid "Line with bank fees"
-msgstr ""
+msgstr "Рядок з банківськими комісіями"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:89
 msgid ""
@@ -2594,6 +2667,11 @@ msgid ""
 "can be used for example, to identify the information referring to "
 "the :guilabel:`Bank fees` in the label of the transaction."
 msgstr ""
+"Ця модель пропонує зустрічний запис відповідно до правил, встановлених у "
+"моделі. У цьому випадку модель узгодження :guilabel:`Тип` — "
+":guilabel:`Правило пропозиції зустрічного запису`, а :guilabel:`Мітку` можна "
+"використати, наприклад, щоб визначити інформацію, що стосується "
+":guilabel:`Банківських комісій` у мітці транзакції."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -2603,6 +2681,11 @@ msgid ""
 "so it's essential to use it judiciously and with a good understanding of the "
 "patterns you're working with."
 msgstr ""
+"`Регулярні вирази <https://regexone.com/>`_, часто скорочені як **Regex**, "
+"можна використовувати в Odoo різними способами для пошуку, перевірки та "
+"обробки даних у системі. Regex може бути потужним, але й складним, тому "
+"важливо використовувати його обережно і з добрим розумінням шаблонів, з "
+"якими ви працюєте."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:103
 msgid ""
@@ -2611,10 +2694,14 @@ msgid ""
 "expression. Odoo automatically retrieves the transactions that match your "
 "Regex expression and the conditions specified in your model."
 msgstr ""
+"Щоб використовувати регулярні вирази у ваших моделях узгодження, встановіть "
+"для :guilabel:`Типу транзакції` значення :guilabel:`Відповідність Regex` і "
+"додайте свій вираз. Odoo автоматично отримує транзакції, що відповідають "
+"вашому виразу Regex та умовам, зазначеним у вашій моделі."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Using Regex in Odoo"
-msgstr ""
+msgstr "Використання Regex в Odoo"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:111
 msgid "Partner mapping"
@@ -2644,10 +2731,13 @@ msgid ""
 "and enter the :guilabel:`Find Text in Label`, :guilabel:`Find Text in "
 "Notes`, and :guilabel:`Partner`."
 msgstr ""
+"Щоб створити правило зіставлення партнера, перейдіть на вкладку "
+":guilabel:`Зіставлення партнера` і введіть :guilabel:`Знайти текст у мітці`, "
+":guilabel:`Знайти текст у нотатках` та :guilabel:`Партнер`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:None
 msgid "defining partner mapping"
-msgstr ""
+msgstr "визначення зіставлення партнера"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
@@ -2672,16 +2762,21 @@ msgstr ""
 msgid ""
 ":ref:`Import bank transactions <transactions/import>` delivered by your bank;"
 msgstr ""
+":ref:`Імпорт банківських транзакцій <transactions/import>`, надані вашим "
+"банком;"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:12
 msgid ":ref:`Register bank transactions <transactions/register>` manually."
 msgstr ""
+":ref:`Реєстрація банківських транзакцій <transactions/register>` вручну."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:15
 msgid ""
 ":ref:`Grouping transactions by statement <transactions/statements>` is "
 "optional."
 msgstr ""
+":ref:`Групування транзакцій за випискою <transactions/statements>` є "
+"необов'язковим."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:20
 msgid "Import transactions"
@@ -2719,7 +2814,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:34
 msgid "Alternatively, you can also:"
-msgstr ""
+msgstr "Крім того, ви також можете:"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:36
 msgid ""
@@ -2737,7 +2832,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:42
 msgid "Next, select the file and upload it."
-msgstr ""
+msgstr "Далі виберіть файл і завантажте його."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:44
 msgid ""
@@ -4473,7 +4568,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:175
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:175
 msgid "In November"
-msgstr ""
+msgstr "У листопаді"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:164
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
@@ -4481,17 +4576,21 @@ msgid ""
 "At the end of November, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
+"Наприкінці листопада, після натискання кнопки :guilabel:`Створити записи`, "
+"маємо такі записи:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:167
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
 msgid "Entry 1 dated on the 30th November:"
-msgstr ""
+msgstr "Запис 1, датований 30 листопада:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:170
 msgid ""
 "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of invoice "
 "A and invoice B)"
 msgstr ""
+"Рядок 2: рахунок витрат 1100 + 550 = **1650** (визнання 11/12 рахунку-"
+"фактури A та рахунку-фактури B)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:172
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:172
@@ -4499,11 +4598,13 @@ msgid ""
 "Line 3: Deferred account 1800 - 1650 = **150** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
+"Рядок 3: рахунок відкладених сум 1800 - 1650 = **150** (сума, яку ще "
+"потрібно відкласти пізніше)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:175
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:175
 msgid "Entry 2 dated on the 1st December, the reversal of the previous entry."
-msgstr ""
+msgstr "Запис 2, датований 1 грудня, — сторнування попереднього запису."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:179
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:179
@@ -4515,6 +4616,8 @@ msgid ""
 "There is no need to generate entries in December. Indeed, if we do the "
 "computation for December, we have an amount of 0 to be deferred."
 msgstr ""
+"У грудні немає потреби створювати записи. Якщо зробити розрахунок для "
+"грудня, сума, яку потрібно відкласти, дорівнює 0."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:188
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:188
@@ -4528,7 +4631,7 @@ msgstr "Якщо ми все агрегуємо, отримаємо:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:184
 msgid "invoice A and invoice B"
-msgstr ""
+msgstr "рахунок-фактура A та рахунок-фактура B"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:185
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:185
@@ -4536,6 +4639,8 @@ msgid ""
 "two entries (one for the deferral and one for the reversal) for each month "
 "from January to November"
 msgstr ""
+"два записи (один для відкладення, інший для сторнування) за кожен місяць з "
+"січня по листопад"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:188
 msgid ""
@@ -5103,7 +5208,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid "Fetch invoice Peppol status"
-msgstr ""
+msgstr "Отримати статус Peppol рахунку-фактури"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:250
 msgid "Receive vendor bills"
@@ -5127,7 +5232,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid "Fetch bills from Peppol"
-msgstr ""
+msgstr "Отримати рахунки постачальників із Peppol"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:265
 msgid ""
@@ -7364,18 +7469,26 @@ msgid ""
 "valuation configuration <../../../inventory_and_mrp/inventory/"
 "product_management/inventory_valuation/inventory_valuation_config>` doc."
 msgstr ""
+"Цей документ розглядає конкретний випадок використання для теоретичних "
+"цілей. Інструкції з налаштування та використання |AVCO| наведено в документі "
+":doc:`налаштування оцінки складу <../../../inventory_and_mrp/inventory/"
+"product_management/inventory_valuation/inventory_valuation_config>`."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:33
 msgid ""
 ":doc:`Using inventory valuation <../../../inventory_and_mrp/inventory/"
 "product_management/inventory_valuation/using_inventory_valuation>`"
 msgstr ""
+":doc:`Використання оцінки складу <../../../inventory_and_mrp/inventory/"
+"product_management/inventory_valuation/using_inventory_valuation>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:35
 msgid ""
 ":ref:`Other inventory valuation methods <inventory/warehouses_storage/"
 "costing_methods>`"
 msgstr ""
+":ref:`Інші методи оцінки складу <inventory/warehouses_storage/"
+"costing_methods>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:40
 msgid ""
@@ -7396,6 +7509,8 @@ msgid ""
 ":doc:`Inventory valuation configuration <../../../inventory_and_mrp/"
 "inventory/product_management/inventory_valuation/inventory_valuation_config>`"
 msgstr ""
+":doc:`Налаштування оцінки складу <../../../inventory_and_mrp/inventory/"
+"product_management/inventory_valuation/inventory_valuation_config>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:50
 msgid "Using average cost valuation"
@@ -8038,6 +8153,8 @@ msgid ""
 ":ref:`Anglo-Saxon vs. Continental <inventory/warehouses_storage/accounting-"
 "types>`"
 msgstr ""
+":ref:`Англосаксонська проти континентальної системи <inventory/"
+"warehouses_storage/accounting-types>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:269
 msgid ""
@@ -8518,6 +8635,12 @@ msgid ""
 "regulations. You can use it directly or set it according to your company's "
 "needs."
 msgstr ""
+"Країна, яку ви обираєте під час створення бази даних (або додаткової "
+"компанії у вашій базі даних), визначає, який :doc:`пакет фіскальної "
+"локалізації <../../fiscal_localizations>` встановлюється за замовчуванням. "
+"Цей пакет включає стандартний план рахунків, уже налаштований відповідно до "
+"законодавства країни. Ви можете використовувати його безпосередньо або "
+"налаштувати відповідно до потреб вашої компанії."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:28
 msgid ""
@@ -8539,13 +8662,15 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:37
 msgid "Code and name"
-msgstr ""
+msgstr "Код і назва"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:39
 msgid ""
 "Each account is identified by its :guilabel:`Code` and :guilabel:`Name`, "
 "which also indicate the account's purpose."
 msgstr ""
+"Кожен рахунок ідентифікується своїм :guilabel:`Код` і :guilabel:`Назва`, які "
+"також вказують на призначення рахунку."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:45
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:56
@@ -8557,6 +8682,8 @@ msgid ""
 "Correctly configuring the **account type** is critical as it serves multiple "
 "purposes:"
 msgstr ""
+"Правильне налаштування **типу рахунку** є критично важливим, оскільки воно "
+"виконує кілька функцій:"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:49
 msgid "Information on the account's purpose and behavior"
@@ -10368,22 +10495,29 @@ msgid ""
 ":guilabel:`Payment Method`: the payment method used for the invoices' "
 "payments. Only payments matching the payment method selected will appear."
 msgstr ""
+":guilabel:`Спосіб оплати`: спосіб оплати, який використовується для оплати "
+"рахунків. Відображатимуться лише платежі, що відповідають обраному способу "
+"оплати."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:65
 msgid ":guilabel:`Date`: the batch's creation date."
-msgstr ""
+msgstr ":guilabel:`Дата`: дата створення пакету."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:66
 msgid ""
 ":guilabel:`Reference`: the reference of the batch. Leave it empty to "
 "generate it automatically."
 msgstr ""
+":guilabel:`Референс`: референс пакету. Залиште поле порожнім, щоб "
+"згенерувати його автоматично."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:67
 msgid ""
 ":guilabel:`Add a line`: click it to select the payments to include in the "
 "batch."
 msgstr ""
+":guilabel:`Додати рядок`: натисніть, щоб вибрати платежі для включення в "
+"пакет."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:69
 #: ../../content/applications/finance/accounting/payments/batch.rst:81
@@ -10391,12 +10525,16 @@ msgid ""
 "Once all desired payments are included, click :guilabel:`Validate` to "
 "finalize the batch."
 msgstr ""
+"Коли всі потрібні платежі включено, натисніть :guilabel:`Підтвердити`, щоб "
+"завершити створення пакету."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:71
 msgid ""
 "Alternatively, you can select the relevant payments and create a batch "
 "payment directly from them:"
 msgstr ""
+"Ви також можете вибрати відповідні платежі та створити пакетний платіж "
+"безпосередньо з них:"
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:75
 msgid ""
@@ -10404,12 +10542,17 @@ msgid ""
 "Payments` or :menuselection:`Vendors --> Payments` and select all payments "
 "to include in the batch."
 msgstr ""
+"Відкрийте застосунок **Бухоблік** і перейдіть до :menuselection:`Клієнти --> "
+"Платежі` або :menuselection:`Постачальники --> Платежі` і виберіть усі "
+"платежі, які потрібно включити в пакет."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:77
 msgid ""
 "Click :guilabel:`Create Batch`, *or* :icon:`fa-cog` :guilabel:`(Actions)`, "
 "and select :guilabel:`Create batch payment`."
 msgstr ""
+"Натисніть :guilabel:`Створити пакет`, *або* :icon:`fa-cog` :guilabel:`(Дії)"
+"`, і виберіть :guilabel:`Створити пакетний платіж`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:79
 msgid ""
@@ -10417,16 +10560,24 @@ msgid ""
 "are missing, click :guilabel:`Add a line`, then select the missing payments "
 "to include in the batch."
 msgstr ""
+"У формі перегляду перевірте вибрані платежі. Якщо якихось окремих платежів "
+"бракує, натисніть :guilabel:`Додати рядок`, а потім виберіть відсутні "
+"платежі для включення в пакет."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:83
 msgid ""
 "To view existing batch payments, go to :menuselection:`Customers --> Batch "
 "Payments` or :menuselection:`Vendors --> Batch Payments`."
 msgstr ""
+"Щоб переглянути наявні пакетні платежі, перейдіть до "
+":menuselection:`Клієнти --> Пакетні платежі` або "
+":menuselection:`Постачальники --> Пакетні платежі`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:87
 msgid "All payments in a batch *must* use the same payment method."
 msgstr ""
+"Усі платежі в пакеті *повинні* використовувати один і той самий спосіб "
+"оплати."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:88
 msgid ""
@@ -10434,18 +10585,25 @@ msgid ""
 "delete the batch if necessary by clicking :icon:`fa-"
 "cog` :guilabel:`(Actions)` and then :icon:`fa-trash-o` :guilabel:`(Delete)`."
 msgstr ""
+"Після підтвердження додаткові платежі не можна додати до пакету. За потреби "
+"ви можете видалити пакет, натиснувши :icon:`fa-cog` :guilabel:`(Дії)`, а "
+"потім :icon:`fa-trash-o` :guilabel:`(Видалити)`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:93
 msgid ""
 "Click :icon:`fa-print` :guilabel:`Print` to download a list of the included "
 "payments."
 msgstr ""
+"Натисніть :icon:`fa-print` :guilabel:`Друк`, щоб завантажити список "
+"включених платежів."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:94
 msgid ""
 "To filter payments by payment method, click on the :guilabel:`Payment "
 "Method` column header during the batch payment creation step."
 msgstr ""
+"Щоб відфільтрувати платежі за способом оплати, натисніть на заголовок "
+"стовпця :guilabel:`Спосіб оплати` на етапі створення пакетного платежу."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:102
 msgid ""
@@ -10453,6 +10611,9 @@ msgid ""
 "in your database, you can :ref:`reconcile them with the batch payment "
 "<reconciliation/batch-payments>`."
 msgstr ""
+"Після того, як :doc:`банківські транзакції <../bank/transactions>` будуть "
+"створені у вашій базі даних, ви можете :ref:`узгодити їх із пакетним "
+"платежем <reconciliation/batch-payments>`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:None
 msgid "Reconciling the batch payment with all its transactions"
@@ -53220,36 +53381,36 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:48
 msgid ":guilabel:`Spain - Modelo 130`"
-msgstr ""
+msgstr ":guilabel:`Іспанія - Modelo 130`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:49
 msgid "`l10n_es_reports_modelo130`"
-msgstr ""
+msgstr "`l10n_es_reports_modelo130`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:50
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:53
 msgid "Allows Modelo 130 Tax report specifications."
-msgstr ""
+msgstr "Дозволяє специфікації податкового звіту Modelo 130."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:51
 msgid ":guilabel:`Spain - Modelo 130 Tax report`"
-msgstr ""
+msgstr ":guilabel:`Іспанія - Податковий звіт Modelo 130`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:52
 msgid "`l10n_es_modelo130`"
-msgstr ""
+msgstr "`l10n_es_modelo130`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:54
 msgid ":guilabel:`Spain - Point of Sale`"
-msgstr ""
+msgstr ":guilabel:`Іспанія - Точка продажу`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:55
 msgid "`l10n_es_pos`"
-msgstr ""
+msgstr "`l10n_es_pos`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:56
 msgid "Spanish localization for Point of Sale."
-msgstr ""
+msgstr "Іспанська локалізація для Точки продажу."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:57
 msgid ":guilabel:`Spain - POS + TicketBAI`"
@@ -54584,11 +54745,11 @@ msgstr "Транзитний рахунок"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:75
 msgid "101002"
-msgstr ""
+msgstr "101002"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:78
 msgid "101003"
-msgstr ""
+msgstr "101003"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:79
 msgid "Outstanding Payments"
@@ -54596,23 +54757,23 @@ msgstr "Неузгоджені вихідні платежі"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:81
 msgid "104041"
-msgstr ""
+msgstr "104041"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:82
 msgid "VAT Input"
-msgstr ""
+msgstr "Вхідний ПДВ"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:84
 msgid "100103"
-msgstr ""
+msgstr "100103"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:85
 msgid "VAT Receivable"
-msgstr ""
+msgstr "ПДВ до відшкодування"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:87
 msgid "101001"
-msgstr ""
+msgstr "101001"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:88
 msgid "Bank Suspense Account"
@@ -54620,31 +54781,31 @@ msgstr "Кошти до з'ясування"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:90
 msgid "201017"
-msgstr ""
+msgstr "201017"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:91
 msgid "VAT Output"
-msgstr ""
+msgstr "Вихідний ПДВ"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:93
 msgid "202001"
-msgstr ""
+msgstr "202001"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:94
 msgid "End of Service Provision"
-msgstr ""
+msgstr "Резерв виплат при звільненні"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:96
 msgid "202003"
-msgstr ""
+msgstr "202003"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:97
 msgid "VAT Payable"
-msgstr ""
+msgstr "ПДВ до сплати"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:99
 msgid "999999"
-msgstr ""
+msgstr "999999"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:100
 msgid "Undistributed Profits/Losses"
@@ -54652,7 +54813,7 @@ msgstr "Нерозподілені доходи/витрати"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:102
 msgid "400003"
-msgstr ""
+msgstr "400003"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:103
 msgid "Basic Salary"
@@ -54660,23 +54821,23 @@ msgstr "Основна заробітна плата"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:105
 msgid "400004"
-msgstr ""
+msgstr "400004"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:106
 msgid "Housing Allowance"
-msgstr ""
+msgstr "Надбавка на житло"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:108
 msgid "400005"
-msgstr ""
+msgstr "400005"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:109
 msgid "Transportation Allowance"
-msgstr ""
+msgstr "Надбавка на транспорт"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:111
 msgid "400008"
-msgstr ""
+msgstr "400008"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:112
 msgid "End of Service Indemnity"
