@@ -67,6 +67,13 @@ To resolve the issue:
   These ports must be kept open even after registering a database, as the update notification runs
   once a week.
 
+  If your internal policies do not allow outbound connections on port `80`,
+  you can alternatively open port `443` **and** add the following line to your Odoo configuration file:
+
+.. code-block:: ini
+
+   publisher_warranty_url = https://services.odoo.com/publisher-warranty/
+
 Too many users error
 --------------------
 
