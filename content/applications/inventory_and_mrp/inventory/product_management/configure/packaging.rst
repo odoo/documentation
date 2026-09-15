@@ -130,10 +130,10 @@ On the product category's form, in the :guilabel:`Logistics` section, :guilabel:
 can be set to :guilabel:`Reserve Only Full Packagings` or :guilabel:`Reserve Partial Packagings`.
 
 .. important::
-   To see the :guilabel:`Reserve Packaging` field, the :guilabel:`Product Packaging` feature
-   **must** be enabled. To enable this feature, go to :menuselection:`Inventory app -->
+   To see the :guilabel:`Reserve Packagings` field, the :guilabel:`Units of Measure & Packagings`
+   feature **must** be enabled. To enable this feature, go to :menuselection:`Inventory app -->
    Configuration --> Settings`, scroll to the :guilabel:`Products` section, tick the
-   :guilabel:`Product Packagings` checkbox, and click :guilabel:`Save`.
+   :guilabel:`Units of Measure & Packagings` checkbox, and click :guilabel:`Save`.
 
 .. image:: packaging/reserve-packaging.png
    :alt: Show Reserve Packagings field on the product categories page.
