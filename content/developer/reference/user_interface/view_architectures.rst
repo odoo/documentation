@@ -2045,6 +2045,30 @@ The `filter` element can have the following attributes:
    :type: str
    :default: `''`
 
+.. attribute:: end_date
+   :noindex:
+
+   The name of the `date` or `datetime` field ending the period described by the records, to filter
+   on a date range instead of a single date.
+
+   The filter then matches the records whose range overlaps the searched period, i.e. the domain
+   `['&', (date, '<=', period_end), '|', (end_date, '>=', period_start), '&',
+   (end_date, '=', False), (date, '>=', period_start)]`. A record with no end date ends when it
+   starts.
+
+   As the filter spans two fields, the `string` attribute should be set: it otherwise falls back on
+   the label of the field in the `date` attribute.
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Period" name="filter_period" date="date_start" end_date="date_stop"/>
+
+   :requirement: Optional
+   :type: str
+   :default: `''`
+   :scope: Filters with a non-empty `date` attribute
+
 .. attribute:: default_period
    :noindex:
 
@@ -2056,6 +2080,8 @@ The `filter` element can have the following attributes:
    - `first_quarter`, `second_quarter`, `third_quarter` and `fourth_quarter`.
    - One of `month`, `month-1` and `month-2`.
    - One of `year`, `year-1` and `year-2`.
+   - One of the navigable relative periods `today`, `this_week`, `this_month`, `this_quarter` and
+     `this_year`.
    - The `name` of any custom filter defined within the filter, prepended with `custom_`.
 
    The filter must be in the default set of filters activated at the view initialization.
