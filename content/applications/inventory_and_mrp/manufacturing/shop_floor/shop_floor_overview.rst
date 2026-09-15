@@ -57,8 +57,7 @@ Navigation
 the top of the module:
 
 - :guilabel:`Overview`: *Shop Floor*'s main dashboard and displays information cards for |MOs|.
-  Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview` Learn more about the
-  Overview in the :ref:`manufacturing/shop_floor/overview` documentation.
+  Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview` documentation.
 - :guilabel:`My WO`: shows information cards for all work orders assigned to the employee whose
   profile is currently active in the operator panel on the left side of the module. This view
   functions largely the same as the views for each work center, but it only shows work orders
@@ -223,7 +222,6 @@ Operator panel
 --------------
 
 The operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
-operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
 panel displays the name and profile picture of every employee currently signed in across all
 database instances.
 
