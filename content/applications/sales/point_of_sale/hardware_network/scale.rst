@@ -26,7 +26,7 @@ To connect the scale with Point of Sale, follow these steps:
 
 #. Turn on the scale before starting the IoT system to ensure it is detected during setup.
 #. Connect the :doc:`scale to the IoT system </applications/general/iot/devices/scale>`.
-#. Connect the :ref:`IoT system to Odoo <iot/iot-odoo/connection>`.
+#. Connect the :ref:`IoT system to Odoo <iot/connect/connection>`.
 #. In the :guilabel:`Connect to a Point of Sale` popover, set the :guilabel:`Associated PoS` field
    to the relevant point of sale, then click :guilabel:`Continue`.
 #. Go to :menuselection:`Point of Sale --> Configuration --> Settings`.
@@ -39,7 +39,7 @@ To connect the scale with Point of Sale, follow these steps:
      following the setup guidelines <iot/scale/ariva-s>`. If the issue persists, restart the IoT
      system.
    - Alternatively, to connect the IoT system to the POS after it is :ref:`connected to the
-     database <iot/iot-odoo/connection>`, go to the :ref:`POS settings <pos/use/settings>`, scroll
+     database <iot/connect/connection>`, go to the :ref:`POS settings <pos/use/settings>`, scroll
      down to the :guilabel:`Connected Devices` section, and enable the :guilabel:`IoT Box` setting.
    - To enable and configure the :guilabel:`IoT Box` setting, click the :icon:`fa-ellipsis-v`
      (:guilabel:`Dropdown menu`) icon on a POS card, then click :guilabel:`Configure`.
