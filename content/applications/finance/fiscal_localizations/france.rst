@@ -1043,44 +1043,48 @@ EDI tax return
 The EDI tax return (VAT report) can be submitted directly to |DGFiP| through Odoo. To do so, follow
 these steps:
 
+#. Make sure a valid VAT :guilabel:`ROF` (*Référence d’Obligation Fiscale*) is entered on the
+   :doc:`company record </applications/general/companies>`.
 #. :ref:`Review and validate <accounting/tax-returns/vat-return-review>` the tax return (VAT
    report).
-#. Click :guilabel:`Submit`, or in the :guilabel:`Tax Return` view, click the :guilabel:`Tax Report
-   (FR)` button, then the :icon:`fa-cog` (:guilabel:`gear`) icon, and select :guilabel:`EDI VAT`.
-#. In the :guilabel:`EDI VAT` window, make sure a valid VAT :guilabel:`ROF` (Référence d’Obligation
-   Fiscale) is entered.
-#. If needed, enable the :guilabel:`Add express mention` option and include a comment.
+#. Click :guilabel:`Submit`.
 #. - If payment to |DGFiP| is required:
 
-     - Click :guilabel:`Add a line` in the :guilabel:`IBAN` column to enter an IBAN account number
-       and BIC for the payment.
-     - In the :guilabel:`Amount` field, enter the total :guilabel:`VAT to pay`; the
-       :guilabel:`Amount to pay` field updates automatically.
+     - If needed, enable the :guilabel:`Partial amount` option and set the desired amount to pay.
 
-     .. tip::
-        A yellow banner appears if the entered amount does not match the required payment, as
-        partial payments are not allowed.
+       .. tip::
+          A yellow banner informs that the entered amount does not match the required payment. If
+          proceeding without matching the :guilabel:`VAT Due` amount, the difference will be carried
+          over to the next period.
+
+     - Update the :guilabel:`Bank Partner` account number if needed and make sure the corresponding
+       :guilabel:`BIC` reference is set.
 
    - If reimbursement from |DGFiP| is expected:
 
-     - Enable the :guilabel:`Add reimbursement comment` option and include a comment if needed.
-     - Click :guilabel:`Add the line` in the :guilabel:`IBAN` column to enter an IBAN account number
-       and BIC for the payment.
-     - Select the :guilabel:`Reimbursement type`:
+     - Enable the :guilabel:`Ask reimbursement` option to ask for the reimbursement of the
+       :guilabel:`VAT Credit`. Proceeding without enabling this option will carry over the
+       reimbursement to the next period.
 
-       - :guilabel:`First asking`: Select the company's creation :guilabel:`Date`.
-       - :guilabel:`Assignment, cessation, death, entry into a VAT group`: Update the
-         :guilabel:`Date` accordingly.
+       - Enable the :guilabel:`Partial amount` option and set the desired amount to be received.
 
-     - In the :guilabel:`Amount` field, enter the total or partial :guilabel:`Amount` to be
-       received; the :guilabel:`Amount to receive` field updates automatically.
+        .. tip::
+           A yellow banner appears if the amount does not match the amount that needs to be
+           received. If proceeding without matching the :guilabel:`VAT Credit` amount, the
+           difference will be carried over to the next period.
 
-     .. tip::
-        A yellow banner appears if the amount does not match the amount that needs to be received.
-        If proceeding without matching the VAT amount, the difference will be carried over to the
-        next period.
+       - Update the :guilabel:`Bank Partner` account number if needed and make sure the
+         corresponding :guilabel:`BIC` reference is set.
+       - Select the :guilabel:`Reimbursement type`:
 
-#. Click :guilabel:`Send VAT Report` to submit the tax return (VAT report) to |DGFiP|.
+         - :guilabel:`First asking`: Select the company's creation :guilabel:`Date`.
+         - :guilabel:`Assignment, cessation, death, entry into a VAT group`: Update the
+           :guilabel:`Date` accordingly.
+
+       - Include a :guilabel:`Reimbursement Comment` if needed.
+
+#. If needed, enable the :guilabel:`Express mention` option and include a comment.
+#. Click :guilabel:`Send VAT` to submit the tax return (VAT report) to |DGFiP|.
 
 The :guilabel:`Submit` action step turns orange, and a submission message appears in the chatter,
 then turns green when |DGFiP| confirms reception.
