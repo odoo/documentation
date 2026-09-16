@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-08-01 12:12+0000\n"
+"PO-Revision-Date: 2026-09-16 15:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-17-doc/"
 "general/vi/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/applications/general.rst:3
 msgid "General settings"
@@ -2574,11 +2574,17 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Đối với email đến, sau khi thêm tên miền riêng, :ref:`các phản hồi từ khách "
+"hàng sẽ quay về tên miền của bạn <email-inbound-custom-domain>`, và bạn sẽ "
+"cần sử dụng một trong ba cách để đưa email trở lại Odoo (sử dụng :ref:`máy "
+"chủ mail đến <email-inbound-custom-domain-incoming-server>`, :ref:`chuyển "
+"hướng/chuyển tiếp <email-inbound-custom-domain-redirections>` hoặc :ref:`sử "
+"dụng tên miền phụ <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
-msgstr ""
+msgstr ":doc:`Quản lý tin nhắn đến <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3562,6 +3568,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Để bật DKIM, hãy thêm bản ghi :abbr:`CNAME (Tên chính tắc)` vào vùng "
+":abbr:`DNS (Hệ thống tên miền)` của tên miền:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3569,6 +3577,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Nếu tên miền là `company-name.com`, hãy đảm bảo tạo tên miền phụ "
+"`odoo._domainkey.company-name.com` có tên chính tắc là "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3587,6 +3598,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Kiểm tra xem bản ghi DKIM có hợp lệ hay không bằng một công cụ như "
+"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Nhập "
+"`example.com:odoo` vào công cụ tra cứu DKIM, chỉ định rằng bộ chọn đang được "
+"kiểm tra là `odoo` cho tên miền tùy chỉnh `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3703,6 +3718,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`Bản ghi CNAME của GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4063,6 +4080,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Để biết thêm thông tin về cách định cấu hình bản ghi DNS cho tên miền phụ, "
+"xem :ref:`thiết lập bản ghi DNS <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4173,7 +4192,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Bản ghi DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4191,6 +4210,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Đối với **cơ sở dữ liệu on-premise**, phương pháp chuyển hướng và bản ghi "
+"DNS cũng yêu cầu định cấu hình :doc:`tập lệnh mail gateway <../../../../"
+"administration/on_premise/email_gateway>`. Việc thực hiện tập lệnh này đòi "
+"hỏi **kiến thức kỹ thuật và hạ tầng nâng cao**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4372,6 +4395,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Tùy chọn thứ ba là sử dụng một tên miền phụ riêng (ví dụ: "
+"`mail.mydomain.com`) và định cấu hình bản ghi DNS của tên miền này để email "
+"gửi đến các địa chỉ trên tên miền phụ đó được Odoo xử lý và xử lý trực tiếp "
+"trong cơ sở dữ liệu của bạn."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:280
 msgid ""
@@ -4379,6 +4406,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Đối với Odoo Online và Odoo.sh, định tuyến dựa trên CNAME chỉ được hỗ trợ "
+"khi sử dụng tên miền phụ riêng. Không thể định cấu hình trên tên miền gốc "
+"của bạn (ví dụ: `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:283
 msgid ""
@@ -4386,12 +4416,18 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Lưu ý rằng tên miền phụ này sẽ được dành riêng cho lưu lượng email. Nếu truy "
+"cập tên miền này bằng trình duyệt web, người dùng sẽ được chuyển hướng đến "
+"trang web đầu tiên được định cấu hình trên cơ sở dữ liệu (nếu có)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:287
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Vì một tên miền phụ mới đang được định cấu hình cho email đến, nên :doc:`bản "
+"ghi DNS của tên miền đó cũng phải được thiết lập cho email đi <email_domain>"
+"`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:291
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4401,7 +4437,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:293
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:355
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Truy cập cài đặt DNS của bạn"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:295
 msgid ""
@@ -4409,10 +4445,13 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Nếu tên miền của bạn được lưu trữ với một nhà đăng ký bên thứ ba (ví dụ: "
+"GoDaddy, Namecheap, Cloudflare), hãy đăng nhập vào nhà đăng ký đó và mở khu "
+"vực quản lý DNS cho tên miền của bạn."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:298
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Nếu Odoo quản lý DNS của bạn:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:300
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
@@ -4423,20 +4462,22 @@ msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Nhấp vào biểu tượng :icon:`fa-gear` (:guilabel:`bánh răng`) bên cạnh cơ sở "
+"dữ liệu và chọn :icon:`fa-globe` :guilabel:`Tên miền`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "Nhấp vào :guilabel:`DNS`, sau đó nhấp vào :guilabel:`Thêm bản ghi DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Tạo bản ghi CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**Tên / Máy chủ:** tên miền phụ bạn muốn sử dụng (ví dụ: `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:362
@@ -4444,10 +4485,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Nội dung / Đích:** tên miền gốc của cơ sở dữ liệu của bạn (ví dụ: "
+"`dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Thêm tên miền phụ vào cổng thông tin Odoo của bạn"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:312
 msgid ""
@@ -4455,6 +4498,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Trong `trình quản lý cơ sở dữ liệu <https://www.odoo.com/my/databases>`_, "
+"nhấp vào biểu tượng :icon:`fa-gear` (:guilabel:`bánh răng`) cho cơ sở dữ "
+"liệu của bạn và chọn :icon:`fa-globe` :guilabel:`Tên miền`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4462,6 +4508,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Nhấp vào :guilabel:`Sử dụng miền của tôi`, nhập miền phụ đầy đủ (ví dụ: "
+"`mail.mydomain.com`). Khi xác minh thành công, nhấp vào :guilabel:`Tôi xác "
+"nhận, đã xong`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
 msgid ""
@@ -4471,16 +4520,21 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Nếu xác minh không thành công, hãy kiểm tra lại xem đích CNAME có kết thúc "
+"bằng dấu chấm ở cuối hay không (ví dụ: `dbname.odoo.com.`), vì một số nhà "
+"cung cấp DNS yêu cầu điều này. Ngoài ra, hãy chờ một khoảng thời gian để các "
+"thay đổi DNS được lan truyền — điều này có thể mất từ vài phút đến 48 giờ "
+"tùy theo nhà cung cấp. Sau khi lan truyền hoàn tất, hãy thử xác minh lại."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:376
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Thêm miền bí danh vào cơ sở dữ liệu"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:327
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:378
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "Đăng nhập vào cơ sở dữ liệu và mở ứng dụng :guilabel:`Cài đặt`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
@@ -4488,38 +4542,42 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"Trong trường :guilabel:`Miền bí danh`, nhập miền phụ đã cấu hình (ví dụ: "
+"`mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Thêm miền bí danh trong phần cài đặt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:337
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
-msgstr ""
+msgstr "Trong phần :guilabel:`Tên miền`, miền phụ sẽ hiển thị như sau:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Ví dụ về cấu hình bản ghi tên miền trong cổng thông tin Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:342
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "Trong phần :guilabel:`DNS`, các bản ghi sẽ hiển thị như sau:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Ví dụ về cấu hình bản ghi DNS trong cổng thông tin Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:348
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"Bản ghi thứ hai cho phép Odoo gửi email đã xác thực từ miền tùy chỉnh của "
+"bạn."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
-msgstr ""
+msgstr ":doc:`Cấu hình bản ghi DNS để gửi email trong Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:353
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4531,26 +4589,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Đăng nhập vào nhà đăng ký bên thứ ba của bạn (ví dụ: GoDaddy, Namecheap, "
+"Cloudflare) và mở khu vực quản lý DNS cho miền của bạn."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:364
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Thêm miền phụ vào cài đặt Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:366
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Đăng nhập vào nền tảng Odoo.sh và mở dự án của bạn."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:367
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Chọn nhánh sản xuất, vào tab :guilabel:`Cài đặt` và tìm phần **Miền tùy "
+"chỉnh**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:369
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Nhập miền phụ đầy đủ (ví dụ: `mail.mydomain.com`) và nhấp vào "
+":guilabel:`Thêm miền`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4562,6 +4626,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Thay vì tạo bản ghi CNAME, bạn cũng có thể tạo bản ghi MX cho miền phụ của "
+"mình (ví dụ: `mail`), trỏ đến `dbname.odoo.com.` với mức ưu tiên là `10`. "
+"Các bước cấu hình còn lại vẫn giữ nguyên."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid ""
@@ -4569,6 +4636,9 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Lưu ý rằng khác với CNAME, bản ghi MX không kế thừa SPF hoặc các bản ghi DNS "
+"khác từ miền đích, vì vậy bạn có thể cần cấu hình riêng các bản ghi này để "
+"email gửi đi được xác thực đúng cách."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:396
 msgid "Infinite email loops"
@@ -4972,6 +5042,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Bản ghi DNS <email-inbound-custom-domain-dns>` (yêu cầu kiến thức kỹ "
+"thuật nâng cao)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:100
 msgid ""
@@ -6091,6 +6163,8 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Để biết thêm thông tin về cron khi sử dụng Odoo.sh, hãy xem :ref:`tài liệu "
+"về Odoo.sh và các hành động đã lên lịch <odoo-sh/advanced/scheduled>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -10371,6 +10445,8 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Máy in DYMO dòng 5 không tương thích với :doc:`IoT box <../iot_box>` và cần "
+"được ghép nối với :doc:`IoT ảo trên Windows <../windows_iot>`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "DYMO LabelWriter not printing"
