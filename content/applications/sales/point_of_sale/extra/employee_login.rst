@@ -17,80 +17,309 @@ To configure access levels for a point of sale, follow these steps:
 #. Go to :menuselection:`Point of Sale --> Configuration --> Settings` and select the relevant
    :guilabel:`Point of Sale`.
 #. Scroll down to the :guilabel:`PoS Interface` section.
-#. Enable :guilabel:`Log in with Employees`.
-#. Click :guilabel:`Save`.
-#. Return to the :guilabel:`Log in with Employees` setting and complete the following fields:
+#. Enable :guilabel:`Log in with Employees` and add employees to the following categories, ordered
+   from least rights to most rights:
 
-   - :guilabel:`Advanced rights`: Add the employees with **extended POS functionality** access.
-   - :guilabel:`Basic rights`: Add the employees with **basic POS functionality** access.
-   - :guilabel:`Minimal rights`: Add the employees with **minimal POS functionality** access.
+   - :guilabel:`Supervised`
+   - :guilabel:`Restrictive`
+   - :guilabel:`Cashier`
+   - :guilabel:`Manager`
+
+#. Click :guilabel:`Save`.
 
 .. note::
-   - Leaving the :guilabel:`Minimal rights` and :guilabel:`Basic rights` fields empty allows all
-     employees to log in.
-   - Leaving the :guilabel:`Advanced rights` field empty grants extended rights to Odoo *users*
-     only.
+   - When :guilabel:`Log in with Employees` is enabled, only employees added to the
+     :guilabel:`Supervised`, :guilabel:`Restrictive`, :guilabel:`Cashier`, or :guilabel:`Manager`
+     categories can log in to the POS register.
+   - :ref:`POS managers <pos/use/access-rights>` can only be added to the :guilabel:`Manager`
+     category.
 
-.. tabs::
-   .. tab:: Minimal rights
+Permissions by employee category
+--------------------------------
 
-      Employees with minimal rights can perform the following POS-related actions:
+.. |yes| raw:: html
 
-      **Register management:**
+   <span class="text-success" role="img" aria-label="Yes" style="font-size: 28px; font-weight: bold; line-height: 28px; display: inline-block; vertical-align: middle;">✓</span>
 
-      - Lock and unlock an open POS register.
-      - Reload data.
-      - Generate, download and print :ref:`POS reports <pos/analytics>`.
-      - Enable :doc:`../hardware_network/pos_lna`.
-      - Access the :ref:`orders overview <pos/use/orders>` to search and filter orders.
-      - Print or reprint :doc:`invoices <../use/pos_invoices>` and :doc:`receipts <../use/receipts>`
-        in the orders overview.
+.. |no| raw:: html
 
-      **Sales transactions:**
+   <span class="text-danger" role="img" aria-label="No" style="font-size: 28px; font-weight: bold; line-height: 28px; display: inline-block; vertical-align: middle;">✕</span>
 
-      - :ref:`Process standard sales transactions <pos/use/sell>`.
-      - :ref:`Assign customers <pos/use/customers>`.
-      - :ref:`Add notes to orders <pos/use/notes>`.
+Register management
+~~~~~~~~~~~~~~~~~~~
 
-      **Pricing and discounts:**
+The following table lists actions that are performed in the POS header or in the POS launch screen:
 
-      - :ref:`Enter promotional codes <pos/pricing/loyalty/codes>`.
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 36 16 16 16 16
 
-   .. tab:: Basic rights
+   * - Action
+     - Supervised
+     - Restrictive
+     - Cashier
+     - Manager
+   * - Lock and unlock an open POS register
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Open the POS register <pos/use/open-register>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Perform cash-in and cash-out operations <pos/use/cash-register>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Close the current POS register <pos/use/register-close>`
+     - |no|
+     - |no|
+     - |no|
+     - |yes|
+   * - :ref:`Access the orders overview to search and filter orders <pos/use/orders>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Print or reprint invoices and receipts in the orders overview <pos/use/orders>`
+     - |no|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Edit the payments of paid orders in the orders overview <pos/use/orders>`
+     - |no|
+     - |no|
+     - |no|
+     - |yes|
+   * - Reload data
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :doc:`Enable Local Network Access <../hardware_network/pos_lna>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Open the customer display <pos/hardware_network/open-display>`
+     - |no|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - Install the POS Progressive Web App
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Create products <pos/products/creation>`
+     - |no|
+     - |no|
+     - |no|
+     - |yes|
+   * - Print POS session reports
+     - |no|
+     - |no|
+     - |no|
+     - |yes|
+   * - Access the Odoo backend interface
+     - |no|
+     - |no|
+     - |no|
+     - |yes|
 
-      In addition to the minimal rights, employees with basic rights can also:
+.. note::
+   Only the logged-in :ref:`database user <pos/use/access-rights>` can go to the backend from the
+   POS register.
 
-      **Register management:**
+Sales transactions
+~~~~~~~~~~~~~~~~~~
 
-      - :ref:`Open the POS register <pos/use/open-register>`.
-      - :ref:`Perform cash-in and cash-out operations <pos/use/cash-register>`.
+The following table lists actions related to sales transactions that are performed in the POS
+register:
 
-      **Sales transactions:**
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 36 16 16 16 16
 
-      - :ref:`Create customers <pos/use/customers>`.
-      - :ref:`Process refunds <pos/use/refund>`.
-      - :ref:`Settle sales orders <pos/shop/so>` from the POS interface.
-      - Cancel orders.
+   * - Action
+     - Supervised
+     - Restrictive
+     - Cashier
+     - Manager
+   * - :ref:`Apply presets to orders <extra/presets/apply-presets>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Add products to orders and set product quantities <pos/use/sell>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Add notes to orders <pos/use/notes>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Process standard sales transactions <pos/use/sell>`
+     - |no|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Assign customers <pos/use/customers>`
+     - |no|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Create and edit customers <pos/use/customers>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`View product information <pos/products/information-display>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Favorite products and view product margins and costs
+       <pos/products/information-display>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Reorganize the product selector <pos/use/open-register>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Edit products <pos/products/information-display>`
+     - |no|
+     - |no|
+     - |no|
+     - |yes|
+   * - :doc:`Update restaurant orders that have been sent to the kitchen <../restaurant>`
+     - |no|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Process refunds <pos/use/refund>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Settle sales orders from the POS interface <pos/shop/so>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - Cancel orders
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Generate invoices from the POS register <pos/invoices/generate-payment>`
+     - |no|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Split bills <pos/restaurant/bills/splitting>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :doc:`Use the Customer Account payment method <../payment_methods/customer_credit>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Scan barcodes <pos/shop/barcodes>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
 
-      **Pricing and discounts:**
+Pricing and discounts
+~~~~~~~~~~~~~~~~~~~~~
 
-      - Manually select another :ref:`pricelist <pos/pricing/pricelists>`.
-      - :ref:`Manually apply discounts <pos/pricing/discounts>`.
-      - Manually :ref:`change a product's price <pos/use/sell>`.
-      - :ref:`Give loyalty program's rewards <pos/pricing/loyalty>`.
-      - Switch between :ref:`fiscal positions <pos/pricing/taxes>`.
+The following table lists pricing-related actions that are performed in the POS register:
 
-   .. tab:: Advanced rights
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 36 16 16 16 16
 
-      In addition to the minimal and basic rights, employees with advanced rights can also:
+   * - Action
+     - Supervised
+     - Restrictive
+     - Cashier
+     - Manager
+   * - :ref:`Select a pricelist <pos/pricing/pricelists>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Apply discounts <pos/pricing/discounts>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Change a product's price <pos/use/sell>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Switch between fiscal positions <pos/pricing/taxes>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Give loyalty program's rewards <pos/pricing/loyalty>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
+   * - :ref:`Use gift cards and eWallets <pos/pricing/giftcards_ewallet>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
 
-      - :doc:`Create products <../products>`.
-      - Access the Odoo backend interface.
-      - :ref:`Close the current POS register <pos/use/register-close>`.
+.. note::
+   :ref:`Activate the Price Control setting <pos/use/sell>` to allow only :ref:`POS Managers
+   <pos/use/access-rights>` to change the price.
 
-      .. note::
-         An employee with advanced POS rights who is not a database user cannot access the backend
-         or create products.
+Bookings
+~~~~~~~~
+
+The following table lists actions related to bookings that are performed in the :guilabel:`Booking`
+POS interface:
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 36 16 16 16 16
+
+   * - Action
+     - Supervised
+     - Restrictive
+     - Cashier
+     - Manager
+   * - :ref:`Reschedule bookings and update booking stages
+       <pos/restaurant/floors/booking/management>`
+     - |yes|
+     - |yes|
+     - |yes|
+     - |yes|
+   * - :ref:`Create, edit, and cancel bookings <pos/restaurant/floors/booking/management>`
+     - |no|
+     - |no|
+     - |yes|
+     - |yes|
 
 .. seealso::
    :doc:`/applications/general/users/access_rights`
