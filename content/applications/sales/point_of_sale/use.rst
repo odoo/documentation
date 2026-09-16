@@ -15,6 +15,34 @@ transactions <pos/use/sell>`, :ref:`registering and assigning customers <pos/use
    - :doc:`use/receipts`
    - :doc:`use/pos_invoices`
 
+.. _pos/use/access-rights:
+
+Access rights
+=============
+
+The Point of Sale provides access rights levels that determine which actions a user can perform.
+Grant specific access levels to waiters, managers, and other POS employees to protect sensitive data
+and align permissions with daily employee responsibilities. The access rights levels work as
+follows:
+
+- **User:** Requires a :doc:`database user <../../general/users>` and is granted via the
+  :guilabel:`User` :ref:`access group <access-rights/user-permissions>` of the :guilabel:`Point of
+  Sale` category. The :guilabel:`User` access group grants access to most Point of Sale features,
+  including parts of the POS backend (such as the :guilabel:`Dashboard`, :guilabel:`Orders`, and
+  :guilabel:`Products` menus), and allows users to open, close, and operate the POS register. This
+  level does not grant access to the POS settings.
+- **Administrator:** Requires a :doc:`database user <../../general/users>` and is granted via the
+  :guilabel:`Administrator` :ref:`access group <access-rights/user-permissions>` of the
+  :guilabel:`Point of Sale` category. :guilabel:`Administrator` users can access all Point of Sale
+  features, including the :ref:`POS settings <pos/use/settings>`. Features that refer to the POS
+  **Manager** correspond to this access rights level.
+- **Employees:** Unlike the previous access rights levels, :doc:`employees <../../hr/employees>`
+  do not need to be :doc:`database users <../../general/users>`. This allows employees to perform
+  specific POS-related actions depending on the access level :doc:`granted through the POS settings
+  <extra/employee_login>`. Employee access levels are different and more fine-grained than the
+  previous :guilabel:`User` and :guilabel:`Administrator` levels. Employees without a linked
+  database user can use the POS register only after a database user opens the POS register.
+
 .. _pos/use/create-pos:
 
 Create a POS
@@ -128,6 +156,12 @@ Once payment is successful, the :doc:`receipt <use/receipts>` can be printed or 
 customer.
 
 To move on to the next order, click :guilabel:`New Order` on the receipt screen.
+
+.. note::
+   To allow only users with :guilabel:`Administrator` :ref:`access to the Point of Sale
+   <pos/use/access-rights>` to modify product prices in the POS register, navigate to the :ref:`POS
+   settings <pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, activate
+   :guilabel:`Price Control`, and click :guilabel:`Save`.
 
 .. seealso::
    :doc:`Issue invoices for registered customers <use/pos_invoices>`

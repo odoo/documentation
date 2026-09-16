@@ -76,7 +76,8 @@ To configure access levels for a point of sale, follow these steps:
 
       - Manually select another :ref:`pricelist <pos/pricing/pricelists>`.
       - :ref:`Manually apply discounts <pos/pricing/discounts>`.
-      - Manually :ref:`change a product's price <pos/use/sell>`.
+      - Manually :ref:`change a product's price <pos/use/sell>`. :ref:`Activate the Price Control
+        setting <pos/use/sell>` to allow only :guilabel:`Administrator` users to change the price.
       - :ref:`Give loyalty program's rewards <pos/pricing/loyalty>`.
       - Switch between :ref:`fiscal positions <pos/pricing/taxes>`.
 
