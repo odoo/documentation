@@ -51,9 +51,9 @@ easiest and most commonly used software. Some examples for free open source PDF 
 
 Refer to the following instructions to:
 
--  Find :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values`.
--  :ref:`sales/pdf_quote_builder/dynamic_text/Odoo-field-path`.
--  :ref:`sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields` in Odoo after uploading
+-  Find :ref:`sales/dynamic_text/common-dynamic-text-values`.
+-  :ref:`sales/dynamic_text/Odoo-field-path`.
+-  :ref:`sales/dynamic_text/custom-dynamic-form-fields` in Odoo after uploading
    the PDF.
 
 Adobe Acrobat Pro
@@ -82,7 +82,7 @@ If possible, configure the :guilabel:`Font Size`, :guilabel:`Font Choice`, and :
 Color` to match the template's existing text or branding. Click the :guilabel:`Options` tab and set
 the text alignment to match the template’s design.
 
-.. _sales/pdf_quote_builder/dynamic_text/map-PDF-to-Odoo:
+.. _sales/dynamic_text/map-PDF-to-Odoo:
 
 Map PDF form fields to Odoo
 ===========================
@@ -104,11 +104,11 @@ field*.
    :alt: Configured text form fields in the PDF quote builder.
 
 To edit, click the :guilabel:`Path` cell of the desired form field row and enter the Odoo field
-name. Refer to the :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` section
-for typical field names. Refer to the :ref:`sales/pdf_quote_builder/dynamic_text/Odoo-field-path`
+name. Refer to the :ref:`sales/dynamic_text/common-dynamic-text-values` section
+for typical field names. Refer to the :ref:`sales/dynamic_text/Odoo-field-path`
 section for instructions on how to find Odoo field names and paths.
 
-.. _sales/pdf_quote_builder/dynamic_text/Odoo-field-path:
+.. _sales/dynamic_text/Odoo-field-path:
 
 Find Odoo field names or paths
 ------------------------------
@@ -119,13 +119,13 @@ navigate to the :menuselection:`Settings --> Technical --> Email Templates` menu
 search for "Sales", then open a *Sales template* to see the :ref:`available dynamic form fields and
 their paths <email_template/dynamic-placeholders>`.
 
-.. _sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields:
+.. _sales/dynamic_text/custom-dynamic-form-fields:
 
 Configure custom dynamic form fields
 ------------------------------------
 
 To pull specific information from a sales order or a product that is not in the
-:ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` section, add a *dynamic form
+:ref:`sales/dynamic_text/common-dynamic-text-values` section, add a *dynamic form
 field* to the PDF with a unique name, then configure the :guilabel:`Path` to point to the desired
 information in Odoo.
 
@@ -153,7 +153,7 @@ follow their path from :guilabel:`sale_order_line`.
 
         Example of Odoo's Form Field Path for the customer's country from a product document.
 
-.. _sales/pdf_quote_builder/dynamic_text/custom-note:
+.. _sales/dynamic_text/custom-note:
 
 Create a custom note form field
 -------------------------------
@@ -172,7 +172,7 @@ shown when the PDF is built.
 
    The note field in the *Header* section in the :guilabel:`Quote Builder` tab on a quotation.
 
-.. _sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values:
+.. _sales/dynamic_text/common-dynamic-text-values:
 
 Common dynamic form fields
 ==========================
