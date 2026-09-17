@@ -32,7 +32,7 @@ viewed, and edited.
 Before leaving the :guilabel:`Settings` page, click the :guilabel:`Save` button to save all changes
 made during the session.
 
-.. _sales_quotations/quote_template/create-templates:
+.. _sales/quote_template/create_templates:
 
 Create quotation templates
 ==========================
@@ -64,7 +64,7 @@ Select which teams can access it in the :guilabel:`Sales Team` field. If working
 :doc:`multi-company environment <../../../general/companies/multi_company>`, use the
 :guilabel:`Company` field to designate to which company can access the template.
 
-.. _sales_quotations/quote_template/lines-tab:
+.. _sales/quote_template/lines-tab:
 
 Lines tab
 ---------
@@ -182,7 +182,7 @@ In the *Invoicing* section, the :guilabel:`Invoicing Journal` field designates a
 using this template are invoiced in the selected journal. If no journal is selected, the sales
 journal with the lowest sequence is used.
 
-.. _sales_quotations/quote_template/section-templates:
+.. _sales/quote_template/section-templates:
 
 Create section templates
 ========================
@@ -194,7 +194,7 @@ form displays.
 
 Enter the name of the template in :guilabel:`Template` field and set the :guilabel:`Type` field to
 :guilabel:`Section`. To add sections, products, or notes follow the instructions in the
-:ref:`sales_quotations/quote_template/lines-tab` section.
+:ref:`sales/quote_template/lines-tab` section.
 
 .. important::
    Only the :guilabel:`Lines` tab is available for section templates. Templates with the same name
@@ -219,7 +219,7 @@ template using the name given the section on the sales quote.
 To find a section template, navigate to :menuselection:`Sales --> Configuration --> Templates`. In
 the search bar, delete the :guilabel:`Quotation Templates filter` to display all template types.
 
-.. _sales_quotations/quote_template/use-templates:
+.. _sales/quote_template/use-templates:
 
 Use templates
 =============
