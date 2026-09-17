@@ -2,9 +2,9 @@
 Address autocomplete
 ====================
 
-Odoo integrates with the Google Places API to allow the autocompletion of addresses. As you begin
-typing an address, the system provides a list of suggested locations, reducing manual errors and
-saving time.
+Odoo integrates with the Google Places API to enable address autocompletion on contact forms. As
+you begin typing an address, the system provides a list of suggested locations, reducing manual
+errors and saving time.
 
 .. image:: address_autocomplete/address-autocomplete-example.png
    :alt: Address autocomplete on the contact form.
@@ -36,7 +36,7 @@ Enable the Google Places API
 To enable the Google Places API, follow these steps:
 
 #. Go to the `Google Cloud console <https://console.cloud.google.com/getting-started>`_.
-#. `Create <https://dash.cloudflare.com/sign-up>`_ or `sign in <https://dash.cloudflare.com/login>`_
+#. `Create <https://accounts.google.com/signup>`_ or `sign in <https://accounts.google.com/signin>`_
    to a Google account.
 #. In the upper-left corner, click :guilabel:`Select a project`. Then, in the :guilabel:`Select a
    resource` pop-up, create a :guilabel:`New Project`.
@@ -77,8 +77,8 @@ create API credentials. To do so, follow these steps:
 #. Click :guilabel:`Create`.
 
 .. note::
-   Under :guilabel:`Application restrictions`, the API key can be restricted to allow requests only
-   from specific websites, IP addresses, or apps.
+   Do not apply any :guilabel:`Application restrictions` to Odoo Online or Odoo.sh databases. For
+   on-premises databases, you can configure an IP address restriction if needed.
 
 .. important::
    Save your API key securely and never share it publicly.
@@ -96,5 +96,6 @@ Once the API key is generated, connect the Odoo database to the Google Places AP
 #. Click :guilabel:`Save`.
 
 .. seealso::
-   - :ref:`Address validation with Google Places API <ecommerce/checkout/address-validation>`
+   - :ref:`Address validation with the Google Places API during e-commerce checkout
+     <ecommerce/checkout/address-validation>`
    - :ref:`Geolocalization with Google Places API <geolocation/google-places-api>`
