@@ -6,7 +6,7 @@ The Odoo **Sales** app lets users add a custom PDF or URL to a *product template
 the PDF Quote builder. By attaching a PDF or a URL, users can include extra information or resources
 in their quotes, online product pages, or for manufacturing.
 
-.. _sales/pdf_quote_builder/add_pdf_products/add-pdf-to-product:
+.. _sales/add_pdf_products/add-pdf-to-product:
 
 Add a PDF or URL to a product template
 ======================================
@@ -23,13 +23,13 @@ Odoo. Odoo automatically creates a PDF document form from the uploaded PDF, with
 :guilabel:`Sales Visibility` set to :guilabel:`Hidden` and the :guilabel:`Publish on website` toggle
 disabled by default. Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the
 corner of the document card and select :guilabel:`Edit` to further :ref:`configure the PDF form
-<sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration>`.
+<sales/add_pdf_products/pdf-form-configuration>`.
 
 Click :guilabel:`New` to open a blank PDF form and manually :ref:`configure the document form
-<sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration>`.
+<sales/add_pdf_products/pdf-form-configuration>`.
 
 
-.. _sales/pdf_quote_builder/add_pdf_products/add-pdf-to-variant:
+.. _sales/add_pdf_products/add-pdf-to-variant:
 
 Add a PDF or URL to a product variant
 -------------------------------------
@@ -40,14 +40,14 @@ document form for the product variant is the same as the product template's docu
 
 To add a PDF to a product variant, navigate to the :menuselection:`Sales app --> Products -->
 Product Variants`, select the product variant, click the :guilabel:`Documents` smart button, and
-:ref:`upload the PDF <sales/pdf_quote_builder/add_pdf_products/add-pdf-to-product>`.
+:ref:`upload the PDF <sales/add_pdf_products/add-pdf-to-product>`.
 
 .. note::
    If the variant is added to a quotation, and there are documents on a product *and* on its
    variant, **only** the documents in the variant are shown in the *Quote Builder* tab of the
    quotation.
 
-.. _sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration:
+.. _sales/add_pdf_products/pdf-form-configuration:
 
 Document form configuration
 ===========================
@@ -81,9 +81,9 @@ Fill out the following information in the top section of the document form:
   URL link instead.
 - :guilabel:`Configure dynamic fields`: Click the link if the PDF document or URL has dynamic form
   fields that need to be :ref:`configured to Odoo fields
-  <sales/pdf_quote_builder/dynamic_text/map-PDF-to-Odoo>`. If the PDF document or URL has custom
+  <sales/dynamic_text/map-PDF-to-Odoo>`. If the PDF document or URL has custom
   dynamic form fields, refer to the
-  :ref:`sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields` for more information.
+  :ref:`sales/dynamic_text/custom-dynamic-form-fields` for more information.
 
 .. image:: add_pdf_products/document-form-uploaded-pdf.png
    :alt: A standard document form with an uploaded pdf in Odoo Sales.
@@ -134,7 +134,7 @@ Click the :guilabel:`Sale: Visible at` field and select one of the following opt
   product is manufactured. This option is best for assembly instructions and manufacturing
   specifications.
 
-.. _sales/pdf_quote_builder/add_pdf_products/find-pdfs-for-product:
+.. _sales/add_pdf_products/find-pdfs-for-product:
 
 View all configured PDFs or links for a product
 ===============================================

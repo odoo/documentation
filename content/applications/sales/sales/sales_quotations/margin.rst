@@ -18,7 +18,7 @@ Settings`. In the :guilabel:`Pricing` section, enable the :guilabel:`Margins` ch
 .. image:: margin/margins-checkbox.png
    :alt: Margins checkbox.
 
-.. _sales_quotations/margin/configure-price-and-cost:
+.. _sales/margin/configure-price-and-cost:
 
 Configure price and cost
 ------------------------
@@ -74,9 +74,9 @@ product on the :abbr:`SO (sales order)`. Both columns can be edited on the :abbr
 until an invoice is created.
 
 .. note::
-   The :guilabel:`Margin (%)` column becomes read-only when the line item cost is `0`. To change the
-   calculations for :guilabel:`Margin` and :guilabel:`Margin (%)` columns on the product form, refer
-   to the :ref:`sales_quotations/margin/configure-price-and-cost` section for more information.
+   The :guilabel:`Margin` and :guilabel:`Margin (%)` columns are not editable since they are
+   automatic calculations. To change the calculation, refer to :ref:`Configure price and cost
+   <sales/margin/configure-price-and-cost>` section for more information.
 
 Margin calculation with a pricelist
 ===================================
