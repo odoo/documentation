@@ -51,6 +51,8 @@ optional products at once when using this form by clicking their checkboxes and 
 .. image:: optional_products/search-optional-products-form.png
    :alt: The Search: Optional Products form accessed by clicking Search more...
 
+.. _sales/optional_products/optional-product-sections-in-quotations:
+
 Setting optional product sections in quotations
 ===============================================
 
