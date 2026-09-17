@@ -247,8 +247,8 @@ Shifts are created automatically from sales orders containing products configure
 - :guilabel:`Plan Services`: Enable the checkbox, then select the relevant :ref:`role
   <planning/roles>`.
 
-Once the sales order is :ref:`confirmed <sales/create_quotations/send-and-confirm>`,
-schedule the shift:
+Once the sales order is :ref:`confirmed <sales/create_quotations/send-and-confirm>`, schedule the
+shift:
 
 #. Click the :guilabel:`To Plan` smart button on the sales order form.
 #. Click the relevant day in the appropriate resource's schedule.
