@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page describes creating and configuring reusable quotation templates in Odoo
+                 **Sales**, applying a template when generating a new quotation, and mass cancelling
+                 quotations or sales orders.
+
 ===================
 Quotation templates
 ===================
@@ -96,6 +101,9 @@ Both options, :guilabel:`Online Signature` and :guilabel:`Online Payment` can be
 simultaneously, in which case the customer must provide **both** a signature **and** a payment to
 confirm an order.
 
+.. seealso::
+   - :doc:`pdf_quote_builder`
+
 Lines tab
 ---------
 
@@ -134,46 +142,20 @@ secure the section name.
 Then, drag and drop the section name to the desired position, via the :icon:`oi-apps`
 :guilabel:`(six squares)` icon, located to the left of each line item.
 
+.. note::
+   Users can :ref:`create an optional product section
+   <sales/optional_products/optional-product-sections-in-quotations>` in a quotation template and in
+   the quotation form.
+
 To add a note, which appears as a piece of text for the customer on the quotation, click
 :guilabel:`Add a note` in the :guilabel:`Lines` tab. When clicked, a blank field appears, in which
 the desired note can be typed. When the note has been entered, click away to secure the note.
 
-Then, drag and drop the note to the desired position, via the :icon:`oi-apps`
-:guilabel:`(six squares)` icon.
+Then, drag and drop the note to the desired position, via the :icon:`oi-apps` :guilabel:`(six
+squares)` icon.
 
 To delete any line item from the :guilabel:`Lines` tab (product, section, and/or note), click the
 :icon:`fa-trash` :guilabel:`(remove record)` icon on the far-right side of the line.
-
-Optional Products tab
----------------------
-
-Using *optional products* is a marketing strategy that involves the cross-selling of products along
-with a core product. The aim is to offer useful and related products to customers, which may result
-in an increased sale.
-
-.. example::
-   If a customer wants to buy a car, they have the choice to order massaging seats as
-   an additional product that compliments the car, or ignore the offer and buy the car alone.
-
-Optional products appear as a section on the bottom of sales orders and eCommerce pages. Customers
-can immediately add them to their online sales orders themselves, if desired.
-
-.. image:: quote_template/optional-products-on-sales-order.png
-   :alt: Optional products appearing on a typical sales order with Odoo Sales.
-
-In the :guilabel:`Optional Products` tab, :guilabel:`Add a line` for each cross-selling product
-related to the original items in the :guilabel:`Lines` tab, if applicable.
-
-Clicking :guilabel:`Add a line` reveals a blank field in the :guilabel:`Product` column.
-
-When clicked, a drop-down menu with products from the database appear. Select the desired product
-from the drop-down menu to add it as an optional product to the quotation template.
-
-To delete any line item from the :guilabel:`Optional Products` tab, click the :icon:`fa-trash`
-:guilabel:`(remove record)` icon.
-
-.. note::
-   Optional products are **not** required to create a quotation template.
 
 Terms & Conditions tab
 ----------------------
@@ -227,7 +209,7 @@ Then, with the desired quotations (or sales orders) selected from the list view 
 :guilabel:`Quotations` page, click the :icon:`fa-cog` :guilabel:`Actions` button to reveal a
 drop-down menu.
 
-From this drop-down menu, select :guilabel:`Cancel quotations`.
+From this drop-down menu, select :guilabel:`Cancel`.
 
 .. image:: quote_template/cancel-quotations.png
    :alt: The Cancel quotations option on the Actions drop-down menu in the Odoo Sales application.
@@ -236,9 +218,8 @@ From this drop-down menu, select :guilabel:`Cancel quotations`.
    This action can be performed for quotations in *any* stage, even if it is confirmed as a sales
    order.
 
-Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel quotations`
-confirmation pop-up window appears. To complete the cancellation, click the :guilabel:`Cancel
-quotations` button.
+Upon selecting the :guilabel:`Cancel` option, a :guilabel:`Cancel` confirmation pop-up window
+appears. To complete the cancellation, click the :guilabel:`Cancel` button.
 
 .. note::
    An error pop-up message appears when attempting to cancel an order for an ongoing subscription
