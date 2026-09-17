@@ -8,7 +8,7 @@ records, eliminating the need to record employee check-ins and check-outs manual
 **Attendances** app.
 
 .. important::
-   The integration is built for BioTime 8.5 and 9.0 APIs. This integration connects to the BioTime
+   The integration is built for *Biotime Cloud* **only**. This integration connects to the BioTime
    software, **not** to ZKTeco terminals. Device compatibility depends on BioTime itself. Check the
    official BioTime supported device list for the installed version before adding a new terminal.
 
