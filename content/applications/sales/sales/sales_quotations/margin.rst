@@ -18,7 +18,7 @@ Settings`. In the :guilabel:`Pricing` section, tick the :guilabel:`Margins` chec
 .. image:: margin/margins-checkbox.png
    :alt: Margins checkbox.
 
-.. _sales_quotations/margin/configure-price-and-cost:
+.. _sales/margin/configure-price-and-cost:
 
 Configure price and cost
 ------------------------
@@ -69,7 +69,7 @@ enabled, the columns appear on all new and existing quotations and :abbr:`SOs (s
 .. note::
    The :guilabel:`Margin` and :guilabel:`Margin (%)` columns are not editable since they are
    automatic calculations. To change the calculation, refer to :ref:`Configure price and cost
-   <sales_quotations/margin/configure-price-and-cost>` section for more information.
+   <sales/margin/configure-price-and-cost>` section for more information.
 
 Margin calculation with a pricelist
 ===================================

@@ -5,7 +5,7 @@ Create quotations
 In Odoo **Sales**, quotations can be created and sent to customers. Once a quotation has been
 confirmed, it officially turns into a *sales order*, which can then be invoiced and paid for.
 
-.. _sales/quotation-settings:
+.. _sales/create_quotations/quotation-settings:
 
 Quotation settings
 ==================
@@ -109,7 +109,7 @@ quotation. It should be noted that some additional fields may appear, depending 
 selected.
 
 The default date that appears in the :guilabel:`Expiration` field is based on the number configured
-in the :ref:`Default Quotation Validity setting <sales/quotation-settings>` (in
+in the :ref:`Default Quotation Validity setting <sales/create_quotations/quotation-settings>` (in
 :menuselection:`Sales app --> Configuration --> Settings`).
 
 .. tip::
@@ -286,7 +286,7 @@ Notes tab
 In the :guilabel:`Notes` tab of the quotation form, enter any specific internal notes about the
 quotation and/or customer, if desired.
 
-.. _sales/sales_quotations/send-and-confirm:
+.. _sales/create_quotations/send-and-confirm:
 
 Sending and confirming quotations
 =================================
