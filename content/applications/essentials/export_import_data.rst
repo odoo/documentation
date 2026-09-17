@@ -20,49 +20,110 @@ can aid in reporting on activities, although, Odoo provides a precise reporting 
 available application.
 
 With Odoo, the values can be exported from any field in any record. To do so, activate the list view
-:icon:`fa-list` :guilabel:`(List)` icon, on the items that need to be exported, and then select the
-records that should be exported. To select a record, tick the checkbox next to the corresponding
-record. Finally, click the :guilabel:`Action` button, and select :icon:`fa-upload`
-:guilabel:`Export`.
+with the :icon:`oi-view-list` :guilabel:`(List)` icon, on the items that need to be exported, and
+then select the records that should be exported. To select a record, tick the checkbox next to the
+corresponding record. Finally, click the :guilabel:`Actions` button, and select
+:icon:`fa-upload` :guilabel:`Export`.
 
 .. image:: export_import_data/list-view-export.png
    :alt: View of the different things to enable/click to export data.
 
-When clicking on :icon:`fa-upload` :guilabel:`Export`, a :guilabel:`Export Data` pop-over window
-appears, with several options for the data to export:
+When clicking on :icon:`fa-upload` :guilabel:`Export`, an :guilabel:`Export Data` pop-up window
+appears. The left side lists the :guilabel:`Available fields` of the records, and the right side the
+:guilabel:`Fields to export`, i.e., the columns of the generated file.
 
 .. image:: export_import_data/export-data-overview.png
    :alt: Overview of options to consider when exporting data in Odoo.
 
-#. With the :guilabel:`I want to update data (import-compatable export)` option ticked, the system
-   only shows the fields that can be imported. This is helpful in the case where the :ref:`existing
-   records need to be updated <essentials/update-data>`. This works like a filter. Leaving the box
-   unticked, gives many more field options because it shows all the fields, not only the ones that
+#. With the :guilabel:`Updatable fields only` switch enabled, only the fields that can be imported
+   back into Odoo are listed. This is helpful in the case where the :ref:`existing records need to
+   be updated <essentials/update-data>`. This works like a filter on the :guilabel:`Available
+   fields` list only; the :guilabel:`Fields to export` list is left untouched. Leaving the switch
+   disabled gives many more field options because it shows all the fields, not only the ones that
    can be imported.
-#. When exporting, there is the option to export in two formats: `.csv` and `.xls`. With `.csv`,
-   items are separated by a comma, while `.xls` holds information about all the worksheets in a
-   file, including both content and formatting.
+#. Use the :guilabel:`Search...` bar to find specific fields. Matching sub-fields are displayed as
+   well, with their parent field expanded automatically.
 #. These are the items that can be exported. Use the :icon:`fa-chevron-right` :guilabel:`(Show
-   sub-fields)` icon to display more sub-field options. Use the :guilabel:`Search` bar to find
-   specific fields. To use the :guilabel:`Search` option more efficiently, click on all the
-   :icon:`fa-chevron-right` :guilabel:`(Show sub-fields)` icon to display all fields.
-#. The :icon:`fa-plus` :guilabel:`(Select field)` icon button is present to add fields to the
-   :guilabel:`Fields to export` list.
-#. The :icon:`fa-sort` :guilabel:`(Sort)` icon to the left of the selected fields can be used to
-   move the fields up and down, to change the order in which they are displayed in the exported
-   file. Drag-and-drop using the :icon:`fa-sort` :guilabel:`(Sort)` icon.
-#. The :icon:`fa-trash` :guilabel:`(Remove field)` icon is used to remove fields. Click the
-   :icon:`fa-trash` :guilabel:`(Remove field)` icon to remove the field.
-#. For recurring reports, it is helpful to save export presets. Select all the needed fields, and
-   click on the template drop-down menu. Once there, click on :guilabel:`New template`, and give a
-   unique name to the export template. Click the :icon:`fa-floppy-o` :guilabel:`(floppy drive)` icon
-   to save the configuration. The next time the same list needs to be exported, select the related
-   template that was previously saved from the drop-down menu.
+   sub-fields)` icon to display more sub-field options. To add a field to the :guilabel:`Fields to
+   export` list, click the :icon:`fa-plus` :guilabel:`(Select field)` icon at the right of the
+   field, or double-click a field that has no sub-fields. The :icon:`fa-plus` :guilabel:`(Select
+   field)` icon is no longer displayed for fields that are already selected.
+#. Select the :guilabel:`Format` of the generated file: :guilabel:`Excel Workbook (.xlsx)`, which
+   holds information about all the worksheets in a file, including both content and formatting, or
+   :guilabel:`Plain Text (.csv)`, where items are separated by a comma.
+#. The :guilabel:`Fields to export` list holds the columns of the exported file, in order. Use the
+   :icon:`fa-sort` :guilabel:`(Sort)` icon at the left of a field to drag and drop it up or down,
+   changing the order in which the columns are displayed in the exported file. Click the
+   :icon:`fa-trash` :guilabel:`(Remove field)` icon to remove a field from the list.
+#. For recurring reports, save the current selection as an :ref:`export template
+   <essentials/export_import_data/export-templates>` and select it from the drop-down menu the next
+   time the same list needs to be exported.
+#. If the database has several languages installed and at least one selected field is translatable,
+   a :guilabel:`Languages` field is displayed to :ref:`export translations
+   <essentials/export_import_data/export-translations>`.
+
+Once everything is set, click :guilabel:`Export` to download the file.
 
 .. tip::
    It is helpful to know the field's external identifier. For example, :guilabel:`Related Company`
    in the export user interface is equal to *parent_id* (external identifier). This is helpful
    because then, the only data exported is what should be modified and re-imported.
+
+.. _essentials/export_import_data/export-templates:
+
+Export templates
+----------------
+
+Export templates save a set of fields, their order, and the :ref:`languages
+<essentials/export_import_data/export-translations>` to export, so that the same file structure can
+be reused later. They are saved per model, and are shared with the other users of the database.
+
+To create a template, select the needed fields, click the :icon:`fa-cloud-upload` :guilabel:`(Save
+as export template)` icon next to the template drop-down menu, type a unique name, and click the
+:icon:`fa-check` :guilabel:`(Apply changes)` icon. Press :kbd:`Enter` to save, or :kbd:`Escape` to
+discard.
+
+.. image:: export_import_data/export-template-edit.png
+   :alt: Naming an export template before saving it.
+
+To edit an existing template, select it from the drop-down menu, then click the :icon:`fa-pencil`
+:guilabel:`(Edit template name and/or fields)` icon. Its name, fields, field order, and languages
+can then all be changed, and are saved with the :icon:`fa-check` :guilabel:`(Apply changes)` icon.
+Click the :icon:`fa-times` :guilabel:`(Discard changes)` icon to leave the template as it was.
+
+.. image:: export_import_data/export-template.png
+   :alt: Buttons to edit or delete the selected export template.
+
+To delete a template, select it from the drop-down menu, click the :icon:`fa-trash`
+:guilabel:`(Delete the template)` icon, and confirm.
+
+.. note::
+   Changing the fields, their order, or the languages while a template is selected, but *not* being
+   edited, clears the template selection and keeps the current selection as an unsaved working set.
+   This makes it possible to build a new template on top of an existing one without altering it.
+
+.. _essentials/export_import_data/export-translations:
+
+Export translations
+-------------------
+
+When more than one language is installed on the database, and at least one field of the
+:guilabel:`Fields to export` list is translatable, a :guilabel:`Languages` field is displayed below
+that list. By default, no language is selected and translatable fields are exported in the user's
+own language.
+
+Click the :guilabel:`Languages` field and select one or several languages to export the translations
+of every translatable field in those languages. Each selected language is displayed as a tag, and
+can be removed by clicking the :icon:`fa-times` :guilabel:`(Remove)` icon on it.
+
+.. image:: export_import_data/export-languages.png
+   :alt: Two languages selected in the Languages field of the export dialog.
+
+In the generated file, every translatable field is then replaced by one column per selected
+language, named after the field and the language code, e.g., `Name@fr_FR`. This is the same
+convention as the one used by the :ref:`import <essentials/export_import_data/import-data>`, so an
+export made with the :guilabel:`Updatable fields only` switch enabled can be re-imported with its
+translations directly.
 
 .. _essentials/export_import_data/import-data:
 
@@ -527,15 +588,14 @@ To update data through an import, first navigate to the data to be updated, and 
 list, tick the checkbox for any record to be updated. Then, click :guilabel:`Actions` button, and
 select :icon:`fa-upload` :guilabel:`Export` from the drop-down menu.
 
-On the resulting :guilabel:`Export Data` pop-up window, tick the checkbox labeled, :guilabel:`I want
-to update data (import-compatible export)`. This automatically includes the *External ID* in the
-export. Additionally, it limits the :guilabel:`Fields to export` list to **only** include fields
-that are able to be imported.
+On the resulting :guilabel:`Export Data` pop-up window, enable the :guilabel:`Updatable fields only`
+switch. This automatically includes the *External ID* in the export. Additionally, it limits the
+:guilabel:`Available fields` list to **only** include fields that are able to be imported.
 
 .. note::
    The :guilabel:`External ID` field does **not** appear in the :guilabel:`Fields to export` list
-   unless it is manually added, but it is still included in the export. However, if the :guilabel:`I
-   want to update data (import-compatible export)` checkbox is ticked, it is included in the export.
+   unless it is manually added. However, if the :guilabel:`Updatable fields only` switch is enabled,
+   it is included in the export.
 
 Select the required fields to be included in the export using the :ref:`options
 <essentials/export_import_data/export-data>` on the pop-up window, then click :guilabel:`Export`.
