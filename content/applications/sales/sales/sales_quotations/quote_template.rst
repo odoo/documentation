@@ -29,7 +29,7 @@ created, viewed, and edited.
 Before leaving the :guilabel:`Settings` page, do not forget to click the :guilabel:`Save` button to
 save all changes made during the session.
 
-.. _sales/send_quotations/create_templates:
+.. _sales/quote_template/create_templates:
 
 Create quotation templates
 ==========================
