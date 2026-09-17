@@ -5,7 +5,7 @@ Create quotations
 In Odoo **Sales**, quotations can be created and sent to customers. Once a quotation has been
 confirmed, it officially turns into a *sales order*, which can then be invoiced and paid for.
 
-.. _sales/create_quotations/configuration:
+.. _sales/create_quotations/quotation-settings:
 
 Configuration
 =============
@@ -40,10 +40,6 @@ To activate any of these settings, click the checkbox beside the desired options
 :guilabel:`Save`. The values set in the :guilabel:`Online Signature`, :guilabel:`Online Payment`,
 :guilabel:`Default Quotation Validity`, and :guilabel:`Display Product Images` fields are
 company-specific. In a multi-company database, these must be set for each individual company.
-
-.. note::
-   The exact options available in this section may vary based on the apps and modules currently
-   installed in the database.
 
 .. _sales/create_quotations/quotations-dashboard:
 
@@ -114,7 +110,7 @@ quotation. It should be noted that some additional fields may appear, depending 
 selected.
 
 The default date that appears in the :guilabel:`Expiration` field is based on the number configured
-in the :ref:`Default Quotation Validity setting <sales/create_quotations/configuration>` (in
+in the :ref:`Default Quotation Validity setting <sales/create_quotations/quotation-settings>` (in
 :menuselection:`Sales app --> Configuration --> Settings`).
 
 .. tip::
@@ -162,9 +158,9 @@ catalog items can be found in the *Order Lines* tab.
 
 If multiple items should be presented in a more organized way on the quotation, click :guilabel:`Add
 a section`, enter a name for the section, and drag-and-drop that section heading in the desired
-location amongst the items in the *Order Lines* tab. The section heading appears in bold and a
-sub-total for all products in a section is displayed. Then, if desired, :ref:`add a Section Template
-<sales_quotations/quote_template/section-templates>` to this quotation.
+location amongst the items in the :guilabel:`Order Lines` tab. The section heading appears in bold
+and a sub-total for all products in a section is displayed. Then, if desired, :ref:`add a Section
+Template <sales/quote_template/section-templates>` to this quotation.
 
 If needed, click :guilabel:`Add a note` beneath a certain product line to add a custom note about
 that specific product. The note appears in italics. Then, if needed, proceed to drag-and-drop the
