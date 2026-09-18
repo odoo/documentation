@@ -90,6 +90,9 @@ Available manifest fields are:
 ``demo`` (``list(str)``)
     List of data files which are only installed or updated in *demonstration
     mode*
+``test_data`` (``list(str)``)
+    List of data files which are only installed or updated if the database is
+    created with :option:`--with-test-data <odoo-bin --with-test-data>`
 ``auto_install`` (``bool`` or ``list(str)``, default: ``False``)
     If ``True``, this module will automatically be installed if all of its
     dependencies are installed.
