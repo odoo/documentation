@@ -85,9 +85,22 @@ in each method::
 Running tests
 -------------
 
-Tests are automatically run when installing or updating modules if
-:option:`--test-enable <odoo-bin --test-enable>` was enabled when starting the
-Odoo server.
+Tests are automatically run if :option:`--test-enable <odoo-bin --test-enable>`
+was enabled when starting the Odoo server.
+
+If the database is created separately from running the tests, it must be
+created with :option:`--with-test-data <odoo-bin --with-test-data>` for the
+post-install tests to have their test data available
+(:option:`--test-enable <odoo-bin --test-enable>` implies it when creating a new
+database):
+
+.. code-block:: console
+
+    $ odoo-bin -d mydb -i account --with-test-data --stop-after-init
+    $ odoo-bin -d mydb --test-enable --test-tags -at_install,/account
+
+When writing tests, reusing the existing test data over creating new companies,
+users, ... will improve tests performances.
 
 .. _unittest documentation: https://docs.python.org/3/library/unittest.html
 

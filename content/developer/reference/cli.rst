@@ -167,6 +167,12 @@ This command is the default one: you can omit it, and it will be chosen anyway.
     don't install demo data nor in new databases nor when installing new
     modules in a database that uses demo data, this is the default.
 
+.. option:: --with-test-data
+
+    install test data in new databases. Implied by
+    :option:`--test-enable <odoo-bin --test-enable>` when combined with
+    :option:`-i <odoo-bin -i>`.
+
 .. option:: --skip-auto-install
 
    skips auto-installing modules when a new module installation is requested.
@@ -199,13 +205,17 @@ Testing
 
     runs tests after module installation
 
+    Implies :option:`--with-test-data <odoo-bin --with-test-data>` when
+    creating a new database.
+
 .. option:: --test-file <file>
 
     runs a python test file
 
 .. option:: --test-tags [-][tag][/module][:class][.method]
 
-    Comma-separated list of specs to filter which tests to execute. Enable unit tests if set.
+    Comma-separated list of specs to filter which tests to execute. Enable unit tests if set,
+    and implies :option:`--test-enable <odoo-bin --test-enable>`.
 
     Example: `--test-tags :TestClass.test_func,/test_module,external`
 
