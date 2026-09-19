@@ -37,10 +37,27 @@ You can choose between :guilabel:`QR menu`, :guilabel:`QR menu + Ordering`, and 
          as many QR codes as the number of available tables. In **shops**, it generates only one
          generic QR code.
 
+<<<<<<< f6dfffa2c36b9f2e11e83e4d1a7e154c953cfe26
       To customize QR codes, scan the relevant QR code to acquire its URL, then use a QR code
       generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_, `QR code generator
       <https://www.qr-code-generator.com>`_, or `JustMakeTheQRCode.com
       <https://justmaketheqrcode.com/>`_) to create a custom QR code.
+||||||| 3d523eeb66e2cc3cf0b01408024fca5ccaa1415b
+      .. tip::
+         To customize QR codes,
+
+         #. Scan the relevant QR code to acquire its URL.
+         #. Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_ or `QR
+            code generator <https://www.qr-code-generator.com>`_) to create a custom QR code.
+=======
+      .. tip::
+         To customize QR codes,
+
+         #. Scan the relevant QR code to acquire its URL.
+         #. Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_, `QR
+            code generator <https://www.qr-code-generator.com>`_, or `JustMakeTheQRCode.com
+            <https://justmaketheqrcode.com/>`_) to create a custom QR code.
+>>>>>>> 80fc7e64afa94fcf5938188a09c5fdeee882bbf9
 
    .. group-tab:: Kiosk
 
