@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"POT-Creation-Date: 2026-09-18 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -660,7 +660,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:26
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/basiq.rst:21
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/ponto.rst:20
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:16
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:18
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:12
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:17
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:27
@@ -675,7 +675,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:32
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:34
 #: ../../content/applications/finance/accounting/get_started/journals.rst:122
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:15
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:13
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:22
 #: ../../content/applications/finance/accounting/payments/batch.rst:28
 #: ../../content/applications/finance/accounting/payments/batch.rst:138
@@ -1274,119 +1274,119 @@ msgid "Manage a bank account in a foreign currency"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:5
-msgid "In Odoo, every transaction is recorded in the default currency of the company, and reports are all based on that default currency. When you have a bank account in a foreign currency, for every transaction, Odoo stores two values:"
+msgid "In Odoo, every transaction is recorded in the default currency of the company, and reports are all based on that default currency. With a bank account in a foreign currency, for every transaction, Odoo stores two values:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:9
-msgid "The debit/credit in the currency of the *company*;"
+msgid "The debit/credit in the currency of the company."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:10
-msgid "The debit/credit in the currency of the *bank account*."
+msgid "The debit/credit in the currency of the bank account."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:12
-msgid "Currency rates are updated automatically using the web services of a banking institution. By default, Odoo uses the European Central Bank's web services but other options are available."
+msgid "Currency rates are updated automatically using a banking institution's web services. By default, Odoo uses the European Central Bank's web services but other options are available."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:19
-msgid "Activate multi-currencies"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:21
-msgid "To work with multiple currencies, go to :menuselection:`Accounting --> Configuration --> Settings --> Currencies` and tick :guilabel:`Multi-Currencies`. Under :guilabel:`Post Exchange difference entries in:`, provide a :guilabel:`Journal`, a :guilabel:`Gain Account`, a :guilabel:`Loss Account`, and then click on :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:27
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:23
 msgid "Configure currencies"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:29
-msgid "Once Odoo is configured to support multiple currencies, they are all created by default, but not necessarily active. To activate the new currencies, click on :guilabel:`Activate Other Currencies` under the :guilabel:`Multi-Currencies` setting or go to :menuselection:`Accounting --> Configuration --> Accounting: Currencies`."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:25
+msgid "To work with multiple currencies, go to :menuselection:`Accounting --> Configuration --> Currencies`, then :doc:`activate and configure new currencies <../get_started/multi_currency>`. Set up manual or automatic :ref:`currency rate <multi-currency/config-rates>` updates and define the accounts and journals used to record gains or losses incurred on :ref:`exchange rate differences <multi-currency/config-exch-diff>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:34
-msgid "When the currencies are activated, you can choose to **automate** the currency rate update, or leave it on **manual**. To configure the rate update, go back to :menuselection:`Accounting --> Configuration --> Settings --> Currencies`, check :guilabel:`Automatic Currency Rates`, set :guilabel:`Interval` to your desired frequency, and then click on :guilabel:`Save`. You also have the option to choose the :guilabel:`Service` you wish to obtain currency rates from."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:33
+msgid ":doc:`Multi-currency system <../get_started/multi_currency>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:38
+msgid "Create bank journals and accounts in foreign currencies"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:40
-msgid "Click on the Update now button (:guilabel:`🗘`) besides the :guilabel:`Next Run` field to update the currency rates manually."
+msgid "To set up a bank account in a foreign currency, first :ref:`create a new bank journal <accounting/journals/bank>` via :menuselection:`Accounting --> Configuration --> Journals`. Set the journal's currency to the foreign currency, then create a new bank account:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:44
-msgid "Create a new bank account"
+msgid "In the :guilabel:`Bank Account` field of the journal, enter the name as it should appear in the chart of accounts."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:46
-msgid "In the accounting application, go to :menuselection:`Accounting --> Configuration --> Journals` and create a new one. Enter a :guilabel:`Journal Name` and set the :guilabel:`Type` to `Bank`. In the :guilabel:`Journal Entries` tab, enter a **short code**, a **currency**, and then finally click on the :guilabel:`Bank Account` field to create a new account. In the pop-up window of the account creation, enter a name, a code (ex.: 550007), set its type to `Bank and Cash`, set a currency type, and save. When you are back on the **journal**, click on the :guilabel:`Account Number` field, and in the pop-up window, fill out the :guilabel:`Account Number`, :guilabel:`Bank` of your account, and save."
+msgid "Click :guilabel:`Create and edit`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:None
-msgid "Example of a created bank journal."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:47
+msgid "In the resulting :guilabel:`Create Default Account` window, :ref:`configure the account <chart-of-account/create>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:59
-msgid "Upon creation of the journal, Odoo automatically links the bank account to the journal. It can be found under :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:49
+msgid "Optionally, set the :guilabel:`Currency` on the bank account to the desired foreign currency."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:63
-msgid "Vendor bill in a foreign currency"
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:51
+msgid "Setting a currency on an account in the chart of accounts restricts the journal items targeting the account to the selected currency."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:53
+msgid "Leaving the :guilabel:`Currency` field blank on an account in the chart of accounts allows journal items of any currency to target that account. In this case, journal items in the foreign currency bank journal are limited to the currency specified on the journal itself. To allow increased flexibility, leaving the :guilabel:`Currency` field blank is recommended."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:58
+#: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:96
+#: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:210
+#: ../../content/applications/finance/accounting/reporting/annual-report.rst:29
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:127
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:223
+#: ../../content/applications/finance/fiscal_localizations/jordan.rst:135
+#: ../../content/applications/finance/fiscal_localizations/vietnam.rst:130
+#: ../../content/applications/finance/payment_providers/iyzico.rst:20
+msgid "Click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:60
+msgid "On the journal, add a :ref:`Bank Account Number <accounting/batch/create-bank-account>` and :ref:`Bank <accounting/batch/create-bank>` if necessary (such as in the case of creating batch payment files)."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:65
-msgid "To pay a bill in a foreign currency, simply select the currency next to the :guilabel:`Journal` field and register the payment. Odoo automatically creates and posts the foreign **exchange gain or loss** as a new journal entry."
+msgid ":doc:`Journals <../get_started/journals>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:None
-msgid "How to set a bill currency."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:66
+msgid ":ref:`Manage bank and cash accounts <accounting/bank/manage>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:74
-msgid "Note that you can pay a foreign bill with another currency. In that case, Odoo automatically converts between the two currencies."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:71
+msgid "Unrealized Currencies report"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:78
-msgid "Unrealized Currency Gains/Losses Report"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:80
-msgid "This report gives an overview of all unrealized amounts in a foreign currency on your balance sheet, and allows you to adjust an entry or manually set an exchange rate. To access this report, go to :menuselection:`Reporting --> Management: Unrealized Currency Gains/Losses`. From here, you have access to all open entries in your **balance sheet**."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:73
+msgid "The :guilabel:`Unrealized Currencies` report gives an overview of all unrealized amounts in a foreign currency on the balance sheet, and allows  an exchange rate to be set manually or entries to be adjusted. To access the report, go to :menuselection:`Accounting --> Review --> Unrealized Currencies`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:None
 msgid "View of the Unrealized Gains/Losses journal."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:89
-msgid "If you wish to use a different currency rate than the one set in :menuselection:`Accounting --> Configuration --> Settings --> Currencies`, click the :guilabel:`Exchange Rates` button and change the rate of the foreign currencies in the report."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:81
+msgid "To use a different currency rate than the one set in :menuselection:`Accounting --> Configuration --> Currencies`, click the :guilabel:`Exchange Rates` button and change the rate of the foreign currencies in the report."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:None
-msgid "Menu to manually change exchange rates."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:85
+msgid "When manually changing exchange rates, a yellow banner appears allowing the rate to be reset to Odoo's rate. To do so, click :guilabel:`Reset to Odoo's Rate`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:97
-msgid "When manually changing **exchange rates**, a yellow banner appears allowing you to reset back to Odoo's rate. To do so, simply click on :guilabel:`Reset to Odoo's Rate`."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:88
+msgid "To update the balance sheet with the amount of the :guilabel:`Adjustment` column, click the :guilabel:`Adjustment Entry` button in the top-left corner. In the pop-up window, select a :guilabel:`Journal`, an :guilabel:`Expense Account` and an :guilabel:`Income Account` to calculate and process the unrealized gains and/or losses."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:None
-msgid "Banner to reset back to Odoo's rates."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:104
-msgid "In order to update your **balance sheet** with the amount of the :guilabel:`adjustment` column, click on the :guilabel:`Adjustment Entry` button. In the pop-up window, select a :guilabel:`Journal`, :guilabel:`Expense Account` and :guilabel:`Income Account` to calculate and process the **unrealized gains and losses**."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:109
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:93
 msgid "You can set the date of the report in the :guilabel:`Date` field. Odoo automatically reverses the booking entry to the date set in :guilabel:`Reversal Date`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:112
-msgid "Once posted, the :guilabel:`adjustment` column should indicate `0.00`, meaning all **unrealized gains/losses** have been adjusted."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:None
-msgid "Unrealized Currency Gains/Losses report once adjusted."
+#: ../../content/applications/finance/accounting/bank/foreign_currency.rst:96
+msgid "Once posted, the :guilabel:`Adjustment` column should indicate `0.00`, meaning all unrealized gains and/or losses have been adjusted."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:3
@@ -3539,17 +3539,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:93
 msgid ":doc:`Receive in Documents <../../../productivity/documents>`: Select a folder in the :guilabel:`Document Workspace` field if multiple purchase journals are used."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:96
-#: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:210
-#: ../../content/applications/finance/accounting/reporting/annual-report.rst:29
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:127
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:223
-#: ../../content/applications/finance/fiscal_localizations/jordan.rst:135
-#: ../../content/applications/finance/fiscal_localizations/vietnam.rst:130
-#: ../../content/applications/finance/payment_providers/iyzico.rst:20
-msgid "Click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:98
@@ -6604,7 +6593,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started.rst:107
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:79
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:92
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:90
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:78
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:72
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:98
@@ -6661,7 +6650,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:148
 #: ../../content/applications/finance/accounting/get_started/journals.rst:3
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:104
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:102
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:167
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:285
 #: ../../content/applications/finance/fiscal_localizations/france.rst:635
@@ -10022,26 +10011,22 @@ msgid "Multi-currency system"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:5
-msgid "Odoo allows you to issue invoices, receive bills, and record transactions in currencies other than the main currency configured for your company. You can also set up bank accounts in other currencies and run reports on your foreign currency activities."
+msgid "Odoo allows you to issue invoices, receive bills, and record transactions in currencies other than the main currency configured for your company. You can also :doc:`set up bank accounts in other currencies <../bank/foreign_currency>` and run :ref:`reports on your foreign currency activities <accounting/foreign_currency/report>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:10
-msgid ":doc:`../bank/foreign_currency`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:20
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:18
 msgid "Main currency"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:22
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:20
 msgid "The **main currency** is defined by default according to the company's country. You can change it by going to :menuselection:`Accounting --> Configuration --> Settings --> Currencies` and changing the currency in the :guilabel:`Main Currency` setting."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:29
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:27
 msgid "Enable foreign currencies"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:31
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:29
 msgid "Go to :menuselection:`Accounting --> Configuration --> Currencies`, and enable the currencies you wish to use by toggling the :guilabel:`Active` button."
 msgstr ""
 
@@ -10049,15 +10034,15 @@ msgstr ""
 msgid "Enable the currencies you wish to use."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:41
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:39
 msgid "Currency rates"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:46
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:44
 msgid "Manual update"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:48
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:46
 msgid "To manually create and set a currency rate, go to :menuselection:`Accounting --> Configuration --> Currencies`, click on the currency you wish to change the rate of, and under the :guilabel:`Rates` tab, click :guilabel:`Add a line` to create a new rate."
 msgstr ""
 
@@ -10065,47 +10050,47 @@ msgstr ""
 msgid "Create or modify the currency rate."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:59
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:57
 msgid "Automatic update"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:61
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:59
 msgid "When you activate a second currency for the first time, :guilabel:`Automatic Currency Rates` appears under :menuselection:`Accounting --> Configuration --> Settings` in the :guilabel:`Currencies` section. Click the :icon:`os-refresh-data` :guilabel:`(Update now)` icon to update the rates."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:65
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:63
 msgid "Rates can be updated at regular intervals automatically. To do so, change the :guilabel:`Interval` from :guilabel:`Manually` to :guilabel:`Daily`, :guilabel:`Weekly`, or :guilabel:`Monthly`. You can also select the web service from which you want to retrieve the latest currency rates by clicking the :guilabel:`Service` field."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:73
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:71
 msgid "Exchange difference entries"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:75
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:73
 msgid "Odoo automatically records exchange differences entries on dedicated accounts, in a dedicated journal."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:78
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:76
 msgid "To define which journal and accounts to use to post exchange difference entries, go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Default Accounts` section, and edit the :guilabel:`Journal`, the :guilabel:`Gain` and :guilabel:`Loss accounts`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:84
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:82
 msgid "If you receive a payment for a customer invoice one month after it was issued, the exchange rate has likely changed since. Therefore, this fluctuation implies some profit or loss due to the exchange difference, which Odoo automatically records in the default **Exchange Difference** journal."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:94
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:92
 msgid "Each account can have a set currency. By doing so, all moves relevant to the account are forced to have that account's currency."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:97
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:95
 msgid "To do so, go to :menuselection:`Accounting --> Configuration --> Charts of Accounts` and select a currency in the field :guilabel:`Currency`. If left empty, all active currencies are handled instead of just one."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:106
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:104
 msgid "If a currency is set on a **journal**, that journal only handles transactions in that currency."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:108
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:106
 msgid "To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open the journal you want to edit, and select a currency in the field :guilabel:`Currency`."
 msgstr ""
 
@@ -10113,15 +10098,15 @@ msgstr ""
 msgid "Select the currency for the journal to handle."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:118
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:116
 msgid "Multi-currency accounting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:123
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:121
 msgid "Invoices, bills, and other documents"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:125
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:123
 msgid "For all documents, you can select the currency and journal to use for the transaction on the document itself."
 msgstr ""
 
@@ -10129,11 +10114,11 @@ msgstr ""
 msgid "Select the currency and journal to use."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:135
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:133
 msgid "Payment registration"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:137
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:135
 msgid "To register a payment in a currency other than your company's main currency, click on the :guilabel:`Register Payment` payment button of your document and, in the pop-up window, select a **currency** in the :guilabel:`Amount` field."
 msgstr ""
 
@@ -10141,11 +10126,11 @@ msgstr ""
 msgid "Select the currency and journal to use before registering the payment."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:148
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:146
 msgid "Bank transactions"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:150
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:148
 msgid "When creating or importing bank transactions, the amount is in the company's main currency. To input a **foreign currency**, select a currency in the :guilabel:`Foreign Currency`. Once selected, enter the :guilabel:`Amount` in your main currency for it to automatically get converted in the foreign currency in the :guilabel:`Amount in Currency field`."
 msgstr ""
 
@@ -10153,15 +10138,15 @@ msgstr ""
 msgid "The extra fields related to foreign currencies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:159
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:157
 msgid "When reconciling, Odoo displays both the foreign currency amount and the equivalent amount in your company's main currency."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:165
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:163
 msgid "Exchange rate journal entries"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:167
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:165
 msgid "To see **exchange difference journal entries**, go to :menuselection:`Accounting --> Review --> Journal Items`. In the search bar, click the :icon:`fa-caret-down` :guilabel:`(down caret)` icon and, in the :guilabel:`Group By` column, select :guilabel:`Miscellaneous`."
 msgstr ""
 
