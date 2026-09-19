@@ -59,8 +59,11 @@ For every synchronized order, Odoo creates a sales order and a customer (contact
 customer hasn't been previously imported from Shopee or doesn't already exist in the database.
 
 .. note::
-   The principal of the synchronization is to *only fetch orders that needs to be shipped*
-   (i.e., `SHIPPED`, `CANCEL`, `UNPAID`, `COMPLETED`).
+   The order status will determine if the order is synchronized or ignored. 
+   For FBS (Fulfilled by Shopee), SHIPPED and COMPLETED orders will be synchronized.
+   For FBM (Fulfilled by Merchant), READY_TO_SHIP and PROCESSED orders will be synchronized. 
+   Other order statuses will be ignored.
+   For status CANCELLED, already synchronized orders will be cancelled.
 
 Force synchronization
 =====================
