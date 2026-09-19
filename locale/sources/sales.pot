@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"POT-Creation-Date: 2026-09-18 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:35
 #: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:13
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:30
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:20
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:18
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:39
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
@@ -89,7 +89,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:35
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:16
 #: ../../content/applications/sales/subscriptions/closing.rst:13
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:16
 msgid "Configuration"
@@ -4351,7 +4351,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:147
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:36
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:41
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:54
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:80
@@ -5505,6 +5505,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:287
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:32
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:149
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr ""
@@ -6173,7 +6174,6 @@ msgid "To open the customer display, follow these steps:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:75
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:87
 msgid ":ref:`Access the POS register <pos/use/open-register>`."
 msgstr ""
 
@@ -7295,24 +7295,15 @@ msgid "If the POS cannot connect to the printer, make sure the printer's IP addr
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:6
-msgid "In EU member states, `certification is legally required <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ to use a scale as an integrated device."
+msgid "In EU member states, `certification is legally required <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ for the use of a scale as an integrated device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:11
-msgid "Prerequisite"
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:9
+msgid "The **Mettler Toledo scale (Ariva S)** using protocol 8217 is recommended with Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:13
-msgid "Connecting a scale requires the use of an **IoT System**."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:16
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:347
-msgid ":doc:`/applications/general/iot/connect`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:17
-msgid ":doc:`/applications/general/iot/devices/scale`"
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:10
+msgid "Connecting a scale to Odoo requires setting up an :doc:`IoT system </applications/general/iot>`. For optimal reliability, it is recommended to use a :doc:`physical IoT system </applications/general/iot/iot_box>` rather than a :doc:`virtual one </applications/general/iot/windows_iot>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:23
@@ -7320,113 +7311,156 @@ msgid "Scale connection"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:25
-msgid ":ref:`Access the POS settings <pos/use/settings>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:26
-msgid "Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`IoT Box`."
+msgid "To connect the scale with Point of Sale, follow these steps:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:27
-msgid "Select the scale in the :guilabel:`Electronic Scale` field."
+msgid "Turn on the scale before starting the IoT system to ensure it is detected during setup."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:31
-msgid "Alternatively, click the :icon:`fa-ellipsis-v` (:guilabel:`Dropdown menu`) icon on a POS card and click :guilabel:`Edit` to access this setting."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
+msgid "Connect the :doc:`scale to the IoT system </applications/general/iot/devices/scale>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:35
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:29
+msgid "Connect the :ref:`IoT system to Odoo <iot/iot-odoo/connection>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:30
+msgid "In the :guilabel:`Connect to a Point of Sale` popover, set the :guilabel:`Associated PoS` field to the relevant point of sale, then click :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:33
+msgid "Scroll down to the :guilabel:`Connected Devices` section, then select the scale in the :guilabel:`Electronic Scale` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:38
+msgid "If the scale is not recognized by the IoT system, restart it or :ref:`reconfigure it by following the setup guidelines <iot/scale/ariva-s>`. If the issue persists, restart the IoT system."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:41
+msgid "Alternatively, to connect the IoT system to the POS after it is :ref:`connected to the database <iot/iot-odoo/connection>`, go to the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`Connected Devices` section, and enable the :guilabel:`IoT Box` setting."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:44
+msgid "To enable and configure the :guilabel:`IoT Box` setting, click the :icon:`fa-ellipsis-v` (:guilabel:`Dropdown menu`) icon on a POS card, then click :guilabel:`Configure`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:48
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:347
+msgid ":doc:`/applications/general/iot/connect`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:49
+msgid ":doc:`Connect a scale to an IoT system </applications/general/iot/devices/scale>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:50
+msgid "`Odoo Point of Sale: Scales (video) <https://www.youtube.com/watch?v=vGNe-PmulAA>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:55
 #: ../../content/applications/sales/point_of_sale/products.rst:80
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:37
 msgid "Product configuration"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:37
-msgid "In order to weigh products using an integrated scale, go to :menuselection:`Point of Sale --> Products --> Products`, create a product or open an existing product form, and configure it as follows:"
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:58
+msgid "Ensure the :guilabel:`Point of Sale` checkbox is activated on the product form to be able to enable the :guilabel:`To Weigh With Scale` option and make the product available in Point of Sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:41
-msgid "Ensure the :guilabel:`Point of Sale` checkbox is activated for the product to be available in POS."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:61
+msgid "To comply with :ref:`European regulations <pos/scale/eu-regulations>`, the unit of measure for weighable products must be set to `kg`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:43
-msgid "On the :guilabel:`General Information` tab, define a :guilabel:`Sales Price` per :guilabel:`kg`."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:64
+msgid "The following configuration is required to be able to weigh products and display their weight in the :ref:`POS register <pos/use/open-register>`:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:46
-msgid "This step requires to enable the :doc:`Units of Measure </applications/inventory_and_mrp/inventory/product_management/configure/uom>` feature. To activate it:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:50
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:67
 msgid "Go to :menuselection:`Inventory --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:51
-msgid "Scroll down to the :guilabel:`Products` section and activate :guilabel:`Units of Measure`."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:68
+msgid "Scroll down to the :guilabel:`Products` section, enable the :doc:`Units of Measure & Packagings </applications/inventory_and_mrp/inventory/product_management/configure/uom>` setting, and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:52
-msgid "Go to the :guilabel:`Point of Sale` tab and activate :guilabel:`To Weigh With Scale`. This enables the product to be weighed directly on the connected scale at the POS."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:71
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:209
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:223
+msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:56
-msgid "The selected unit of measure for weighable products must be :guilabel:`kg` to ensure compliance with **European regulations**."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:72
+msgid "Click an exisiting product or click :guilabel:`New` to :ref:`create a new one <pos/products/creation>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:60
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:74
+msgid "In the :guilabel:`General Information` tab, set the :guilabel:`Sales Price` to the relevant unit of mass."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:76
+msgid "Click the :guilabel:`Point of Sale` tab and enable :guilabel:`To Weigh With Scale` to be able to weigh the product directly on the connected scale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:80
 msgid ":doc:`/applications/inventory_and_mrp/inventory/product_management/configure/uom`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:63
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:85
 msgid "European regulations"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:65
-msgid "When using scales in commercial transactions, the database integrated with a scale must be configured to meet specific European requirements. This includes supporting at least three decimal places for accuracy and using proper rounding for units of measure, such as `kg` instead of generic `units`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:70
-msgid "If the database is not compliant, a red :icon:`fa-balance-scale` (:guilabel:`scale`) icon displays as a warning. Click this icon to view the reasons for non-compliance and then select :guilabel:`Apply changes` to automatically apply the necessary changes to the settings. Once the database meets all regulatory requirements, the :icon:`fa-balance-scale` (:guilabel:`scale`) icon turns green."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:79
-msgid "Additional guidelines"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:81
-msgid "Both the :doc:`customer <customer_display>` and POS displays must have a minimum diagonal size of 6 inches. For optimal readability, larger screens are recommended."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:85
-msgid "Using a scale in PoS"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:88
-msgid "Select the product to weigh on the order screen or scan its barcode."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:89
-msgid "Place the product on the scale and wait for the weight to be displayed in the popup window."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:90
-msgid "Once the weight is determined, the price is automatically computed."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:91
-msgid "Click :guilabel:`Order` :icon:`fa-angle-double-right` to add the product to the cart."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:87
+msgid "When using scales in commercial transactions, the database to which the scale is connected must be configured to comply with European requirements. This includes supporting at least three decimal places for accuracy and using proper rounding for units of measure, such as `kg` rather than generic `units`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:92
-msgid "Remove the previous product from the scale."
+msgid "If the database is not compliant, a red :icon:`fa-balance-scale` (:guilabel:`scale`) icon displays as a warning. Click this icon to view the reasons for non-compliance and then select :guilabel:`Apply changes` to automatically apply the necessary changes to the settings. Once the database meets all regulatory requirements, the :icon:`fa-balance-scale` (:guilabel:`scale`) icon turns green."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:101
+msgid "Additional guidelines"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:103
+msgid "Both the :doc:`customer <customer_display>` and POS displays must have a minimum diagonal size of 6 inches. For optimal readability, larger screens are recommended."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:109
+msgid "Product weighing"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:111
+msgid "To weigh a product in the :ref:`POS register <pos/use/open-register>` using the :ref:`connected scale <pos/scale/config-connection>`, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:114
+msgid "Select the relevant :ref:`product <pos/scale/config-product>` in the grid. A popover displays the product's name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:116
+msgid "Place the physical product on the scale. Once the weight is determined, the price is automatically computed in the popover."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:118
+msgid "Click :guilabel:`Order` :icon:`fa-angle-double-right` to add the product to the cart."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:119
+msgid "Remove the product from the scale and continue with the order."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:None
 msgid "weighing window"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:99
-msgid "Make sure the scale returns to `zero` before weighing a new product. If it does not, the :guilabel:`Order` :icon:`fa-angle-double-right` button remains unclickable until it is reset."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:126
+msgid "Make sure the scale returns to zero before weighing a new product. If it does not, the :guilabel:`Order` :icon:`fa-angle-double-right` button remains unclickable until it is reset."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:130
+msgid "Click :guilabel:`Tare` in the popover to reset the scale to zero and subtract the container's weight."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:7
@@ -11679,11 +11713,6 @@ msgstr ""
 msgid "To make products available individually,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:209
-#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:223
-msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:210
 msgid "Select any product to open its product form."
 msgstr ""
@@ -14969,8 +14998,8 @@ msgstr ""
 #: ../../content/applications/sales/sales/lazada_connector/manage.rst:158
 #: ../../content/applications/sales/sales/shopee_connector/features.rst:64
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:199
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:430
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:464
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:431
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:466
 #: ../../content/applications/sales/sales/tiktok_connector/features.rst:84
 #: ../../content/applications/sales/sales/tiktok_connector/manage.rst:135
 msgid ":doc:`setup`"
@@ -14982,8 +15011,8 @@ msgstr ""
 #: ../../content/applications/sales/sales/lazada_connector/setup.rst:161
 #: ../../content/applications/sales/sales/shopee_connector/features.rst:65
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:232
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:431
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:205
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:432
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:208
 #: ../../content/applications/sales/sales/tiktok_connector/features.rst:85
 #: ../../content/applications/sales/sales/tiktok_connector/setup.rst:125
 msgid ":doc:`manage`"
@@ -14996,7 +15025,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:6
 #: ../../content/applications/sales/sales/lazada_connector/manage.rst:41
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:48
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:180
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:181
 #: ../../content/applications/sales/sales/tiktok_connector/manage.rst:47
 msgid "Order synchronization"
 msgstr ""
@@ -19508,7 +19537,7 @@ msgid "Create, configure, and send quotations to customers."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:47
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:3
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:8
 msgid "Quotation templates"
 msgstr ""
 
@@ -19838,7 +19867,6 @@ msgid ":doc:`../../../essentials/product_catalog`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:171
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:148
 msgid "Optional Products tab"
 msgstr ""
 
@@ -20056,7 +20084,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:79
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:81
 msgid ":doc:`quote_template`"
 msgstr ""
 
@@ -20066,17 +20094,18 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:334
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:90
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:248
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:229
 msgid ":doc:`get_signature_to_validate`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:335
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:86
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:249
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:230
 msgid ":doc:`get_paid_to_validate`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:336
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:105
 msgid ":doc:`pdf_quote_builder`"
 msgstr ""
 
@@ -20669,11 +20698,11 @@ msgstr ""
 msgid "The Search: Optional Products form accessed by clicking Search more..."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:55
 msgid "Setting optional product sections in quotations"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:55
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:57
 msgid "When developing a quotation for customers, entire sections of the quotation can be set as optional products, even if they haven't been configured in the product form. To create a section, click the :guilabel:`Add a section` link and enter its desired name in the :guilabel:`Enter a description` field. Click the :icon:`fa-ellipsis-v` :guilabel:`(drop-down menu)` and choose :icon:`fa-list` :guilabel:`Set Optional`."
 msgstr ""
 
@@ -20681,11 +20710,11 @@ msgstr ""
 msgid "The dropdown menu with the \"Set Optional\" text highlighted."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:64
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:66
 msgid "Once a section is set to optional, the font color changes to reflect its status. All products within that section default to a quantity of `0`, ensuring they are not included in the total cost automatically. Both portal users (such as customers or vendors) and employees with access to create quotations and sales orders can update these quantities. Once a quantity is set to `1` or more, the product is added to the quote total."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:70
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:72
 msgid "Once an optional product section has been created in a quotation, users who have been :doc:`granted portal access <../../../general/users/user_portals/portal_access>` can interact with the quotation there. They can view the quotation and decide whether or not to add the optional products to their final sales order."
 msgstr ""
 
@@ -21448,19 +21477,23 @@ msgstr ""
 msgid "PDF quote being built using common dynamic placeholders."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:5
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:1
+msgid "This page describes creating and configuring reusable quotation templates in Odoo **Sales**, applying a template when generating a new quotation, and mass cancelling quotations or sales orders."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:10
 msgid "Reusable quotation templates can be made in Odoo's **Sales** app for common products or services."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:7
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:12
 msgid "By using these templates, quotations can be tailored and sent to customers at a quicker pace, without having to create new quotations from scratch every time a sales negotiation occurs."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:18
 msgid "To use quotation templates, begin by activating the setting in :menuselection:`Sales app --> Configuration --> Settings`, and scroll to the :guilabel:`Quotations &_Orders` heading."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:16
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:21
 msgid "Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing so reveals a new :guilabel:`Default Template` field, in which a default quotation template can be chosen from the drop-down menu."
 msgstr ""
 
@@ -21468,23 +21501,23 @@ msgstr ""
 msgid "How to enable quotation templates on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:23
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:28
 msgid "Upon activating the :guilabel:`Quotation Template` feature, an internal :icon:`fa-arrow-right` :guilabel:`Quotation Templates` link appears beneath the :guilabel:`Default Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:26
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:31
 msgid "Clicking this link reveals the :guilabel:`Quotation Templates` page, from which templates can be created, viewed, and edited."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:29
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:34
 msgid "Before leaving the :guilabel:`Settings` page, do not forget to click the :guilabel:`Save` button to save all changes made during the session."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:35
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:40
 msgid "Create quotation templates"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:37
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:42
 msgid "To create a quotation template, click the :guilabel:`Quotation Templates` link on the :guilabel:`Settings` page once :guilabel:`Quotation templates` are enabled, or navigate to :menuselection:`Sales app --> Configuration --> Quotation Templates`. Both options reveal the :guilabel:`Quotation Templates` page, where quotation templates can be created, viewed, and edited."
 msgstr ""
 
@@ -21492,7 +21525,7 @@ msgstr ""
 msgid "Quotation templates page in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:45
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:50
 msgid "To create a new quotation template, click the :guilabel:`New` button, located in the upper-left corner. Doing so reveals a blank quotation template form that can be customized."
 msgstr ""
 
@@ -21500,27 +21533,27 @@ msgstr ""
 msgid "Create a new quotation template on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:51
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:56
 msgid "Start by entering a name for the template in the :guilabel:`Quotation Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:58
 msgid "Then, in the :guilabel:`Quotation Validity` field, designate how many days the quotation template will remain valid for, or leave the field on the default `0` to keep the template valid indefinitely."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:57
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:62
 msgid "Next, in the :guilabel:`Confirmation Mail` field, click the blank drop-down menu to select a preconfigured email template to be sent to customers upon confirmation of an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:61
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:66
 msgid "To create a new email template directly from the :guilabel:`Confirmation Mail` field, start typing the name of the new email template in the field, and select either: :guilabel:`Create` or :guilabel:`Create and edit...` from the drop-down menu that appears."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:65
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:70
 msgid "Selecting :guilabel:`Create` creates the email template, which can be edited later."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:67
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:72
 msgid "Selecting :guilabel:`Create and edit...` creates the email template, and a :guilabel:`Create Confirmation Mail` pop-up window appears, in which the email template can be customized and configured immediately."
 msgstr ""
 
@@ -21528,151 +21561,119 @@ msgstr ""
 msgid "Create confirmation mail pop-up window from the quotation template form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:74
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:79
 msgid "When all modifications are complete, click :guilabel:`Save & Close` to save the email template and return to the quotation form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:82
 msgid "If working in a multi-company environment, use the :guilabel:`Company` field to designate to which company this quotation template applies."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:80
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:85
 msgid "If a journal is set in the :guilabel:`Invoicing Journal` field, all sales orders with this template will invoice in that specified journal. If no journal is set in this field, the sales journal with the lowest sequence is used."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:84
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:89
 msgid "If the :guilabel:`Online Signature` and/or :guilabel:`Online Payment` features are activated in the :guilabel:`Settings` (:menuselection:`Sales app --> Configuration --> Settings`), those options are available on quotation template forms."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:88
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:93
 msgid "Check the box beside :guilabel:`Online Signature` to request an online signature from the customer to confirm an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:91
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:96
 msgid "Check the box beside :guilabel:`Online Payment` to request an online payment from the customer to confirm an order. When :guilabel:`Online Payment` is checked, a new percentage field appears, in which a specific percentage of payment can be entered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:95
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:100
 msgid "Both options, :guilabel:`Online Signature` and :guilabel:`Online Payment` can be enabled simultaneously, in which case the customer must provide **both** a signature **and** a payment to confirm an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:100
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:108
 msgid "Lines tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:102
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:110
 msgid "In the :guilabel:`Lines` tab, products can be added to the quotation template by clicking :guilabel:`Add a product`, organized by clicking :guilabel:`Add a section` (and dragging/dropping section headers), and further explained with discretionary information (such as warranty details, terms, etc.) by clicking :guilabel:`Add a note`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:107
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:115
 msgid "To add a product to a quotation template, click :guilabel:`Add a product` in the :guilabel:`Lines` tab of a quotation template form. Doing so reveals a blank field in the :guilabel:`Product` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:110
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:118
 msgid "When clicked, a drop-down menu with existing products in the database appears. Select the desired product from the drop-down menu to add it to the quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:113
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:121
 msgid "If the desired product is not readily visible, type the name of the desired product in the :guilabel:`Product` field, and the option appears in the drop-down menu. Products can also be found by clicking :guilabel:`Search More...` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:118
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:126
 msgid "It is possible to add event-related products (booths and registrations) to quotation templates. To do so, click the :guilabel:`Product` field, type in `Event`, and select the desired event-related product from the resulting drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:123
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:131
 msgid "When a product is added to a quotation template, the default :guilabel:`Quantity` is `1`, but that can be edited at any time."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:126
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:134
 msgid "Then, drag and drop the product to the desired position, via the :guilabel:`six squares` icon, located to the left of each line item."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:129
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:137
 msgid "To add a *section*, which serves as a header to organize the lines of a sales order, click :guilabel:`Add a section` in the :guilabel:`Lines` tab. When clicked, a blank field appears, in which the desired name of the section can be typed. When the name has been entered, click away to secure the section name."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:134
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:142
 msgid "Then, drag and drop the section name to the desired position, via the :icon:`oi-apps` :guilabel:`(six squares)` icon, located to the left of each line item."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:137
-msgid "To add a note, which appears as a piece of text for the customer on the quotation, click :guilabel:`Add a note` in the :guilabel:`Lines` tab. When clicked, a blank field appears, in which the desired note can be typed. When the note has been entered, click away to secure the note."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:141
-msgid "Then, drag and drop the note to the desired position, via the :icon:`oi-apps` :guilabel:`(six squares)` icon."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:144
-msgid "To delete any line item from the :guilabel:`Lines` tab (product, section, and/or note), click the :icon:`fa-trash` :guilabel:`(remove record)` icon on the far-right side of the line."
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:146
+msgid "Users can :ref:`create an optional product section <sales/optional_products/optional-product-sections-in-quotations>` in a quotation template and in the quotation form."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:150
-msgid "Using *optional products* is a marketing strategy that involves the cross-selling of products along with a core product. The aim is to offer useful and related products to customers, which may result in an increased sale."
+msgid "To add a note, which appears as a piece of text for the customer on the quotation, click :guilabel:`Add a note` in the :guilabel:`Lines` tab. When clicked, a blank field appears, in which the desired note can be typed. When the note has been entered, click away to secure the note."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:155
-msgid "If a customer wants to buy a car, they have the choice to order massaging seats as an additional product that compliments the car, or ignore the offer and buy the car alone."
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:154
+msgid "Then, drag and drop the note to the desired position, via the :icon:`oi-apps` :guilabel:`(six squares)` icon."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:158
-msgid "Optional products appear as a section on the bottom of sales orders and eCommerce pages. Customers can immediately add them to their online sales orders themselves, if desired."
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:157
+msgid "To delete any line item from the :guilabel:`Lines` tab (product, section, and/or note), click the :icon:`fa-trash` :guilabel:`(remove record)` icon on the far-right side of the line."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:None
-msgid "Optional products appearing on a typical sales order with Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:164
-msgid "In the :guilabel:`Optional Products` tab, :guilabel:`Add a line` for each cross-selling product related to the original items in the :guilabel:`Lines` tab, if applicable."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:167
-msgid "Clicking :guilabel:`Add a line` reveals a blank field in the :guilabel:`Product` column."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
-msgid "When clicked, a drop-down menu with products from the database appear. Select the desired product from the drop-down menu to add it as an optional product to the quotation template."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:172
-msgid "To delete any line item from the :guilabel:`Optional Products` tab, click the :icon:`fa-trash` :guilabel:`(remove record)` icon."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:176
-msgid "Optional products are **not** required to create a quotation template."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:179
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:161
 msgid "Terms & Conditions tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:181
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:163
 msgid "The :guilabel:`Terms & Conditions` tab provides the opportunity to add terms and conditions to the quotation template. To add terms and conditions, type the desired terms and conditions in this tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:185
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:167
 msgid ":doc:`../../../finance/accounting/customer_invoices/terms_conditions`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:188
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:170
 msgid "Terms and conditions are **not** required to create a quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:191
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:173
 msgid "Use quotation templates"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:193
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:175
 msgid "When creating a quotation (:menuselection:`Sales app --> New`), choose a preconfigured template in the :guilabel:`Quotation Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:197
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:179
 msgid "The order of the templates in the :guilabel:`Quotation Template` field is determined by the order of the templates in the Quotation Templates form. The order of the quotations in the Quotation Templates form does **not** affect anything else."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:201
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:183
 msgid "To view what the customer will see, click the :guilabel:`Preview` button at the top of the page to see how the quotation template appears on the front-end of the website through Odoo's customer portal."
 msgstr ""
 
@@ -21680,47 +21681,47 @@ msgstr ""
 msgid "Customer preview of a quotation template in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:208
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:190
 msgid "When all blocks and customizations are complete, click the :guilabel:`Save` button to save the configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:211
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:193
 msgid "The blue banner located at the top of the quotation template preview can be used to quickly return :icon:`fa-arrow-right` :guilabel:`Back to edit mode`. When clicked, Odoo returns to the quotation form in the back-end of the *Sales* application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:216
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:198
 msgid "Mass cancel quotations/sales orders"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:218
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:200
 msgid "Cancel multiple quotations (or sales orders) by navigating to the :menuselection:`Sales app --> Orders --> Quotations` dashboard, landing, by default, in the list view. Then, on the left side of the table, tick the checkboxes for the quotations to be canceled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:223
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:205
 msgid "Select all records in the table by selecting the checkbox column header at the top-left of the table; the total number of selected items are displayed at the top of the page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:226
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:208
 msgid "Then, with the desired quotations (or sales orders) selected from the list view on the :guilabel:`Quotations` page, click the :icon:`fa-cog` :guilabel:`Actions` button to reveal a drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:230
-msgid "From this drop-down menu, select :guilabel:`Cancel quotations`."
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:212
+msgid "From this drop-down menu, select :guilabel:`Cancel`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:None
 msgid "The Cancel quotations option on the Actions drop-down menu in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:236
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:218
 msgid "This action can be performed for quotations in *any* stage, even if it is confirmed as a sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:239
-msgid "Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel quotations` confirmation pop-up window appears. To complete the cancellation, click the :guilabel:`Cancel quotations` button."
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:221
+msgid "Upon selecting the :guilabel:`Cancel` option, a :guilabel:`Cancel` confirmation pop-up window appears. To complete the cancellation, click the :guilabel:`Cancel` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:244
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:225
 msgid "An error pop-up message appears when attempting to cancel an order for an ongoing subscription that has an invoice."
 msgstr ""
 
@@ -22339,7 +22340,7 @@ msgid "Connect your Shopify store to Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector.rst:19
-msgid "Sync products, orders, available stock, prices and taxes."
+msgid "Sync products, orders, available stock, prices, and taxes."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector.rst:24
@@ -22572,7 +22573,7 @@ msgid "`Tutorial: Shopify connector delivery flow for Odoo 19 | Odoo.sh <shopify
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:35
-msgid "Configuring deliveries to be handled in Odoo is useful when a company's warehouse team are transitioning or already operating within Odoo."
+msgid "Configuring deliveries to be handled in Odoo is useful when a company's warehouse team is transitioning or already operating within Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:38
@@ -22584,15 +22585,15 @@ msgid "Click the :icon:`fa-dollar` :guilabel:`Orders` smart button to see all th
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:47
-msgid "The warehouse delivery form is created in the :guilabel:`Ready` state in Odoo. Click :guilabel:`Validate` to confirm the delivery. Once validated, a :guilabel:`Scheduled for Synchronization with E-commerce Platform` badge displays on the form. A scheduled action running every 10 minutes pushes the shipment to Shopify or click the :guilabel:`Update to E-commerce` to manually push the update."
+msgid "The warehouse delivery form is created in the :guilabel:`Ready` stage in Odoo. Click :guilabel:`Validate` to confirm the delivery. Once validated, a :guilabel:`Scheduled for Synchronization with E-commerce Platform` badge displays on the form. A scheduled action running every 10 minutes pushes the shipment to Shopify. Alternatively, click :guilabel:`Update to E-commerce` to push the update manually."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
-msgid "Example of a warehouse receipt when Odoo is configured to handle deliveries."
+msgid "Example of a warehouse transfer when Odoo is configured to handle deliveries."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:56
-msgid "If the delivery successfully updates to Shopify, a green :guilabel:`Synchronized with E-commerce Platform` badge displays and log note is added with success message on the delivery form. If the delivery fails to update, then a red :guilabel:`Synchronization with E-commerce Platform failed` badge displays and log note is added with failure message on the delivery form ."
+msgid "If the delivery successfully updates to Shopify, a green :guilabel:`Synchronized with E-commerce Platform` badge displays, and a log note with a success message is added to the delivery form. If the delivery fails to update, a red :guilabel:`Synchronization with E-commerce Platform failed` badge displays, and a log note with a failure message is added to the delivery form."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:61
@@ -22604,19 +22605,19 @@ msgid "If deliveries are handled in Odoo, returns initiated in Shopify do **not*
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:73
-msgid "Configuring deliveries to be handled in Shopify is useful when the orders are fulfilled entirely within Shopify or by a third-party logistic entity. When the Shopify account form is set to *Delivery Handled On: E-commerce Platform*, the Shopify connector automatically creates a warehouse delivery in Odoo for any pulled order tagged *Unfulfilled*. The form is created in the :guilabel:`Ready` stage and lists the associated sales order's products and their quantities as separate line items."
+msgid "Configuring deliveries to be handled in Shopify is useful when the orders are fulfilled entirely within Shopify or by a third-party logistics provider. When the Shopify account form is set to *Delivery Handled On: E-commerce Platform*, the Shopify connector automatically creates a warehouse delivery in Odoo for any pulled order tagged *Unfulfilled*. The form is created in the :guilabel:`Ready` stage and lists the associated sales order's products and their quantities as separate line items."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
-msgid "Example of a warehouse receipt when Shopify is configured to handle deliveries."
+msgid "Example of a warehouse transfer when Shopify is configured to handle deliveries."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:83
-msgid "Although the entire delivery process takes place in Shopify, the delivery details (carrier, tracking number, and quantities) are pulled into Odoo once an actual delivery is created on Shopify. When the delivered order is then pulled into Odoo, its warehouse delivery form updates to :guilabel:`Done` stage. Similarly, if a pulled order already has the *Fulfilled* tag, Odo creates its warehouse delivery form directly in the :guilabel:`Done` stage."
+msgid "Although the entire delivery process takes place in Shopify, the delivery details (carrier, tracking number, and quantities) are pulled into Odoo once an actual delivery is created on Shopify. When the delivered order is then pulled into Odoo, its warehouse delivery form updates to the :guilabel:`Done` stage. Similarly, if a pulled order already has the *Fulfilled* tag, Odoo creates its warehouse delivery form directly in the :guilabel:`Done` stage."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:89
-msgid "Corresponding warehouse delivery forms are created as a back order of the default picking, to reduce inventory if there is a difference between the actual :abbr:`SO (sales order)` request and the delivered quantity."
+msgid "Corresponding warehouse delivery forms are created as a backorder of the default picking, to reduce inventory if there is a difference between the actual :abbr:`SO (sales order)` request and the delivered quantity."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:94
@@ -22628,7 +22629,7 @@ msgid "Split fulfillments are fully supported and synchronized correctly. Multip
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:100
-msgid "Fulfillment from different locations."
+msgid "Fulfillments from different locations."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:101
@@ -22652,7 +22653,7 @@ msgid "Shipping synchronization"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:113
-msgid "When a Shopify order includes a shipping fee and carrier, Odoo adds the default product :guilabel:`E-commerce Shipping` to the invoice. The amount and the actual name of the delivery carrier selected by the customer (such as Sendcloud, Shiprocket, or FedEx) is added in the description of that line."
+msgid "When a Shopify order includes a shipping fee and carrier, Odoo adds the default :guilabel:`E-commerce Shipping` product to the invoice and order with the shipping fee. The actual name of the delivery carrier selected by the customer (such as Sendcloud, Shiprocket, or FedEx) is added to the description of that invoice or order line."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
@@ -22668,11 +22669,11 @@ msgid "The Shopify connector allows syncing Shopify stock locations to Odoo stoc
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:131
-msgid "To map a Shopify store's stock location to a Odoo stock location, refer to the :ref:`shopify/manage/configure-multi-location` section of the *Shopify order management* page."
+msgid "To map a Shopify store's stock location to an Odoo stock location, refer to the :ref:`shopify/manage/configure-multi-location` section of the *Shopify order management* page."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:134
-msgid "To view or edit mapped Shopify to Odoo stock locations, navigate to :menuselection:`Sales app --> Configurations --> Shopify: Locations` or click the :icon:`fa-cubes` :guilabel:`Locations` smart button on the Shopify account form. The :guilabel:`Locations` page displays the following:"
+msgid "To view or edit mapped Shopify to Odoo stock locations, navigate to :menuselection:`Sales app --> Configuration --> Shopify: Locations` or click the :icon:`fa-cubes` :guilabel:`Locations` smart button on the Shopify account form. The :guilabel:`Locations` page displays the following:"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:138
@@ -22684,12 +22685,12 @@ msgid ":guilabel:`Stock Location`: Odoo stock location."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:140
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:168
-msgid ":guilabel:`Stock Synchronization`: When enabled it syncs exactly which inventory is synced back to Shopify or pulled from Shopify."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:167
+msgid ":guilabel:`Stock Synchronization`: When enabled, it controls exactly which inventory is synced back to Shopify or pulled from Shopify."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:143
-msgid "To edit the stock location mapping, click in either the :guilabel:`Name` or :guilabel:`Stock location` fields and select an option in the drop-down menu."
+msgid "To edit the stock location mapping, click the :guilabel:`Stock Location` field and select an option in the drop-down menu."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
@@ -22701,11 +22702,11 @@ msgid "Syncing inventory with deliveries"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:154
-msgid "Shopify connector uses scheduled actions to sync orders, deliveries, and stock between Shopify and Odoo. Deliveries received from Shopify are processed using a backorder-based approach: partial fulfillments automatically generate the required backorders in Odoo, so fulfilled and remaining quantities are tracked correctly. Inventory syncs immediately after order syncing to minimize stock discrepancies between the two platforms."
+msgid "The Shopify connector uses scheduled actions to sync orders, deliveries, and stock between Shopify and Odoo. Deliveries received from Shopify are processed using a backorder-based approach: partial fulfillments automatically generate the required backorders in Odoo, so fulfilled and remaining quantities are tracked correctly. Inventory syncs immediately after order syncing to minimize stock discrepancies between the two platforms."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:160
-msgid "Refer to the :doc:`fulfillment` page for more information on order syncing. For information on inventory syncing with returns refer to :ref:`shopify/fulfillment/returns` section."
+msgid "Refer to the :doc:`manage` page for more information on order syncing. For information on inventory syncing with returns, refer to the :ref:`shopify/fulfillment/returns` section."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:166
@@ -22721,7 +22722,7 @@ msgid "Accounting and payments"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:177
-msgid "The Shopify connector offers a :guilabel:`Create Invoice` option is available on the :ref:`Configuration tab <shopify/setup/administrative-settings>` of the Shopify account form. This option controls whether invoices are automatically created when importing orders from Shopify."
+msgid "The :guilabel:`Create Invoice` option is available on the :ref:`Configuration tab <shopify/setup/administrative-settings>` of the Shopify account form. This option controls whether Odoo automatically creates invoices when importing orders from Shopify."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:181
@@ -22757,7 +22758,7 @@ msgid "An invoice automatically created and paid for a Shopify order in Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:196
-msgid "Also in the *Configuration* tab is the *Journals* section which allows configuration of accounting journals for payments and sales. Refer to :ref:`shopify/setup/administrative-settings` for more details."
+msgid "Also in the *Configuration* tab, there is a *Journals* section that allows configuring accounting journals for payments and sales. Refer to :ref:`shopify/setup/administrative-settings` for more details."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:203
@@ -22769,11 +22770,11 @@ msgid "If :ref:`deliveries are handled in Odoo <shopify/fulfillment/odoo-deliver
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:210
-msgid ":ref:`Returns <shopify/fulfillment/returns>` and :ref:`refunds <shopify/fulfillment/refunds>` start in the Shopify platform. When an order is pulled from Shopify using the scheduled action or *Fetch Orders*, the return and refund are created in Odoo along with the associated delivery record (if applicable). This sync is ongoing: if a return and refund is created on Shopify after the order has already been fetched, it is still synced when the order is fetched again."
+msgid ":ref:`Returns <shopify/fulfillment/returns>` and :ref:`refunds <shopify/fulfillment/refunds>` start in the Shopify platform. When an order is pulled from Shopify using the scheduled action or *Fetch Orders*, the return and refund are created in Odoo along with the associated delivery record (if applicable). This sync is ongoing: if a return or refund is created on Shopify after the order has already been fetched, it is still synced when the order is fetched again."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:216
-msgid "During the sync, Odoo first checks whether a return and refund already exists on the :abbr:`SO (sales order)` using the unique refund identifier provided by Shopify. Only returns and refunds that do not yet exist in Odoo are synced."
+msgid "During the sync, Odoo first checks whether a return or refund already exists on the :abbr:`SO (sales order)` using the unique identifiers provided by Shopify. Only returns and refunds that do not yet exist in Odoo are synced."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:223
@@ -22796,12 +22797,12 @@ msgstr ""
 msgid "Example of the Shipping options section on the Return form in Shopify."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:239
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:238
 msgid "The return is initially set as *Return in progress*, and is not synced to Odoo in this state. The return must be closed first to make it eligible for synchronization. Click :guilabel:`Process and refund` to continue the process."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:243
-msgid "On the *Process return* page, verify the return item information and select :guilabel:`Restock at` option. Then click :guilabel:`Process and refund` again to confirm and close the return in Shopify."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:242
+msgid "On the *Process return* page, verify the return item information and select a :guilabel:`Restock at` option. Then, click :guilabel:`Process and refund` again to confirm and close the return in Shopify."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
@@ -22825,11 +22826,11 @@ msgid "Returns with a :guilabel:`Canceled` status on Shopify are not synced. How
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:265
-msgid "In the Odoo, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account. Click :icon:`fa-refresh` :guilabel:`Fetch Orders` to manually pull data from Shopify. Click :guilabel:`Orders` and select the desired :abbr:`SO (sales order)`."
+msgid "In Odoo, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account. Click :icon:`fa-refresh` :guilabel:`Fetch Orders` to manually pull data from Shopify. Click :guilabel:`Orders` and select the desired :abbr:`SO (sales order)`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:269
-msgid "A return is created as a warehouse receipt form on the associated :abbr:`SO (sales order)`. Click the :icon:`fa-truck` :guilabel:`Delivery` smart button, to view the *Transfer* page that lists all the stock movements for the :abbr:`SO (sales order)`. Click on the warehouse receipt entry, it has `Return of WH/OUT/reference number` in the :guilabel:`Source Document` column."
+msgid "A return is created as a warehouse receipt form on the associated :abbr:`SO (sales order)`. Click the :icon:`fa-truck` :guilabel:`Delivery` smart button to view the *Transfers* page which lists all stock movements for the :abbr:`SO (sales order)`. Click the warehouse receipt entry with a `Return of WH/OUT/reference number` in the :guilabel:`Source Document` column."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
@@ -22837,7 +22838,7 @@ msgid "Example of the Transfers page for a Shopify SO in the Sales app."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:277
-msgid "The warehouse receipt is always created in the :guilabel:`Ready` state, so the user can review it before validation. On the form, the return date from Shopify is set as the :guilabel:`Scheduled Date` and a the :guilabel:`E-commerce Return Identifier` field displays the unique refund identifier number Shopify added for traceability and avoid duplication during synchronization. The warehouse receipt form lists the return products and its quantities on their own order lines. Click :guilabel:`Validate` when the return product is received. The status on the warehouse receipt form changes to :guilabel:`Done`."
+msgid "The warehouse receipt is always created in the :guilabel:`Ready` stage, so that the user can review it before validation. On the form, the return date from Shopify is set as the :guilabel:`Scheduled Date`. The :guilabel:`E-commerce Return Identifier` field displays the unique return identifier number that Shopify added for traceability and to avoid duplication during synchronization. The warehouse receipt form lists the return products and their quantities on their own order lines. Click :guilabel:`Validate` when the return product is received. The stage on the warehouse receipt form changes to :guilabel:`Done`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:286
@@ -22853,49 +22854,49 @@ msgid "Processing the refund for the return"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:295
-msgid "Go back to the :abbr:`SO (sales order)` by clicking the SO number in the breadcrumbs. Click :icon:`fa-pencil-square-o` :guilabel:`Invoices` and the credit note line item is highlighted in blue and shows a negative amount in the :guilabel:`Total` column. Click the credit note to open the form."
+msgid "Go back to the :abbr:`SO (sales order)` by clicking the SO number in the breadcrumbs. Click the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button. The credit note line item is highlighted in blue and shows a negative amount in the :guilabel:`Total` column. Click the credit note to open the form."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
 msgid "Example of the Invoices page for a Shopify return in the Sales app."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:302
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:367
-msgid "The credit note is always created in the :guilabel:`Draft` state to allow for user review. On the create note form the :guilabel:`Invoice Date` and a the :guilabel:`E-commerce Return Identifier` field displays the unique refund identifier number Shopify added for traceability and prevent duplication during synchronization."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:303
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:368
+msgid "The credit note is always created in the :guilabel:`Draft` stage to allow for user review. On the credit note form, Shopify sets the refund date as the :guilabel:`Invoice Date`. The :guilabel:`E-commerce Refund Identifier` field displays the unique refund identifier number that Shopify added for traceability and to prevent duplication during synchronization."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
 msgid "Example of a credit note draft for a Shopify return in the Sales app."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:310
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:372
-msgid "Verify the products and quantities are correct and click :guilabel:`Confirm` to process the credit note. The status is updated to :guilabel:`Posted`, click :guilabel:`Pay` and in the *Pay* pop-up window click :guilabel:`Create Payment` to complete the refund. The credit note form displays a :guilabel:`Paid` banner."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:311
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:373
+msgid "Verify the products and quantities are correct, and click :guilabel:`Confirm` to process the credit note. The status is updated to :guilabel:`Posted`. Then, click :guilabel:`Pay`, and in the *Pay* pop-up window, click :guilabel:`Create Payment` to complete the refund. The credit note form displays a :guilabel:`Paid` banner."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:316
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:378
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:317
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:379
 msgid "When Shopify creates a refund without associated return lines, Odoo generates a credit note containing a single line using the configured *Refund Adjustment Product* found in the Shopify account form's *Default Products* tab as *E-commerce Refund Adjustment*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:323
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:324
 msgid "Creating a refund"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:326
-msgid "Refunds created using a refund adjustment product are not visible via the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button on the sales order, since the button only shows credit notes made against a invoice line of the sales order. Refunds using the refund adjustment product apply to the whole invoice, rather than a specific invoice line. To view the refund, users must go :menuselection:`Invoicing app --> Customers --> Refunds`."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:327
+msgid "Refunds created using a refund adjustment product are not visible via the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button on the sales order, since the button only shows credit notes made against an invoice line of the sales order. Refunds using the refund adjustment product apply to the whole invoice, rather than a specific invoice line. To view the refund, users must go to :menuselection:`Invoicing app --> Customers --> Refunds`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:332
-msgid "The Shopify connector automatically syncs refund data for orders for Shopify accounts with :guilabel:`Create Invoice` enabled. It tracks refunds with returned products, or as manual refunds on the whole order. Refunds can be created partially or fully, depending on the products and quantities selected."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:333
+msgid "The Shopify connector automatically syncs refund data for orders in Shopify accounts with :guilabel:`Create Invoice` enabled. It tracks refunds with returned products, or as manual refunds on the whole order. Refunds can be created partially or fully, depending on the products and quantities selected."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:337
-msgid "Refunds are created only when the associated order has one invoice, and that invoice is in the *Posted* state. If these conditions are not met, the refund is skipped."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:338
+msgid "Refunds are created only when the associated order has one invoice, and that invoice is in the *Posted* stage. If these conditions are not met, the refund is skipped."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:340
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:341
 msgid "To create a refund without a product return, go to the desired order in Shopify and click :guilabel:`Refund`. On the *Refund* page, verify the refund products and quantities, then click :guilabel:`Refund` to confirm and close the refund."
 msgstr ""
 
@@ -22903,20 +22904,20 @@ msgstr ""
 msgid "Example of the Refund page in Shopify."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:348
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:349
 msgid "Syncing and processing a refund in Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:350
-msgid "In the Odoo, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account. Click :icon:`fa-refresh` :guilabel:`Fetch Orders` to manually pull data from Shopify. Click :icon:`fa-dollar` :guilabel:`Orders` and select the desired :abbr:`SO (sales order)`."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:351
+msgid "In Odoo, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account. Click :icon:`fa-refresh` :guilabel:`Fetch Orders` to manually pull data from Shopify. Click :icon:`fa-dollar` :guilabel:`Orders` and select the desired :abbr:`SO (sales order)`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:355
-msgid "On the :abbr:`SO (sales order)` there is a :icon:`fa-truck` :guilabel:`Delivery` and :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button. The :doc:`fiscal position <../../../finance/accounting/taxes/fiscal_positions>` from the original order is applied to both the invoice and the generated credit note, to ensure consistent tax treatment."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:356
+msgid "On the :abbr:`SO (sales order)`, there are :icon:`fa-truck` :guilabel:`Delivery` and :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart buttons. The :doc:`fiscal position <../../../finance/accounting/taxes/fiscal_positions>` from the original order is applied to both the invoice and the generated credit note, to ensure consistent tax treatment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:360
-msgid "Click the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button and the credit note line item is highlighted in blue and shows a negative amount in the :guilabel:`Total` column. Click the credit note to open the form."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:361
+msgid "Click the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button. The credit note line item is highlighted in blue and shows a negative amount in the :guilabel:`Total` column. Click the credit note to open the form."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:None
@@ -22927,65 +22928,65 @@ msgstr ""
 msgid "Example of a processed credit note in the Sales app."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:386
-msgid "Optional: Canceling a delivery associated to a refund"
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:387
+msgid "Optional: Canceling a delivery associated with a refund"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:388
-msgid "When a customer requests a refund before the order is shipped for delivery, then the order sync still generates a invoice and a warehouse delivery form in Odoo. Users must manually cancel the delivery form when processing the refund."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:389
+msgid "When a customer requests a refund before the order is shipped, the order sync still generates an invoice and a warehouse delivery form in Odoo. Users must manually cancel the delivery form when processing the refund."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:392
-msgid "Go to :menuselection:`Sales app --> Configuration -- > Accounts` and select the desired Shopify account. Click the :icon:`fa-dollar` :guilabel:`Orders` smart button and select the desired :abbr:`SO (sales order)`. Click the :icon:`fa-truck` :guilabel:`Delivery` smart button and on the warehouse delivery form click :guilabel:`Cancel`."
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:393
+msgid "Go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account. Click the :icon:`fa-dollar` :guilabel:`Orders` smart button and select the desired :abbr:`SO (sales order)`. Click the :icon:`fa-truck` :guilabel:`Delivery` smart button, then click :guilabel:`Cancel` on the warehouse delivery form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:397
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:398
 msgid "The warehouse delivery form's status changes to :guilabel:`Cancelled`. Since the products were never shipped to the customer, there is no need to do a manual stock adjustment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:401
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:402
 msgid "Refund amount reconciliation"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:403
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:404
 msgid "Shopify and Odoo may calculate refund totals differently due to rounding, taxes, or other adjustments. To maintain accounting accuracy:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:406
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:407
 msgid "Odoo compares the refund total received from Shopify with the amount computed from the generated credit note."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:408
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:409
 msgid "If a difference is detected, an additional adjustment line is automatically added using the configured *Adjustment Product*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:410
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:411
 msgid "This ensures that the final credit note total exactly matches the refund amount received from Shopify."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:414
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:415
 msgid "Special cases"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:416
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:417
 msgid "**Insufficient refund data**: If a refund does not contain enough information to be processed correctly, Odoo does not create the refund automatically. Instead, an activity is scheduled on the order to notify the user and allow manual review."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:419
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:420
 msgid "**Restocked items but missing returns**: If Shopify reports restocked items as part of a refund, but no corresponding return exists in Odoo, Odoo schedules an activity on the order. This prompts the user to manually verify and synchronize inventory movements, to maintain stock consistency."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:422
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:423
 msgid "**Refund deleted after synchronization**: If a refund that was previously fetched from Shopify is later deleted in Shopify, subsequent refunds for the same order are not synchronized, to avoid data inconsistency."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:425
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:426
 msgid "**Fulfillment scope**: Refunds associated with unsupported fulfillment flows are not processed automatically."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:429
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:463
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:204
+#: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:430
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:465
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:207
 msgid ":doc:`../shopify_connector`"
 msgstr ""
 
@@ -23002,7 +23003,7 @@ msgid "`Tutorial: Shopify connector account form overview <shopify-account-form-
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:24
-msgid "It is recommended to create products, also referred to as *Offerings*, in Odoo externally (for example, by importing the catalog, or using any other preferred method), and to make sure that categories and sales taxes are properly configured for accurate results. Refer to the following instructions for adding products to the **Sales** app."
+msgid "It is recommended to create products, also referred to as *Offerings*, in Odoo externally (for example, by importing the catalog or using another preferred method), and ensure that categories and sales taxes are properly configured for accurate results. Refer to the following instructions for adding products to the **Sales** app."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:29
@@ -23026,7 +23027,7 @@ msgid "When an offer is pulled with the same SKU as the internal reference, it i
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:41
-msgid "If an SKU exists in Shopify but not in Odoo, it is linked to the default product Ecommerce-Sale (archived). The product's category and taxes must be configured manually afterward."
+msgid "If an SKU exists in Shopify but not in Odoo, it is linked to the default E-commerce Sale product (archived). The product's category and taxes must be configured manually afterward."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:43
@@ -23042,11 +23043,11 @@ msgid "New Odoo users with no existing products"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:53
-msgid "To import a Shopify product catalog into an empty Odoo database, sign into the Shopify store admin account. Go to the :menuselection:`Products` page and click :guilabel:`Export`. The *Export products* pop-up window displays."
+msgid "To import a Shopify product catalog into an empty Odoo database, sign in to the Shopify store admin account. Go to the :menuselection:`Products` page and click :guilabel:`Export`. The *Export products* pop-up window displays."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:57
-msgid "Refer to Shopify's `exporting products instructions <shopify-export-products_>`_ to complete the export action and then edit the export document to comply with Odoo's recommended :ref:`import data guidelines <essentials/export_import_data/import-data>`. Ensure that all product variants have their own SKU. Refer to the :ref:`product matching logic <shopify/manage/product-matching>` the Shopify connector uses for more guidance."
+msgid "Refer to Shopify's `exporting products instructions <shopify-export-products_>`_ to complete the export action and then edit the export document to comply with Odoo's recommended :ref:`import data guidelines <essentials/export_import_data/import-data>`. Ensure that each product variant has its own SKU. For more guidance, refer to the :ref:`product matching logic <shopify/manage/product-matching>` used by the Shopify connector."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:66
@@ -23090,114 +23091,118 @@ msgid "After selecting a :guilabel:`Created/Updated after` date for the :icon:`f
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:107
-msgid "There are 100 products in the **Sales** app, and 20 of them were created or updated after January 1st. There are five sales orders created in the month of January, containing eight products in their sales order lines."
+msgid "There are 100 products in the **Sales** app, and 20 of them were created or updated after January 1. Five sales orders were created in January, containing eight products in their sales order lines."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:111
-msgid "To update all products, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account form. In the *Operations* tab, click next to :guilabel:`Created/Updated between` field (also referred to as the *Last Products Sync*) and in the calendar pop-up, select `January 1` and click :guilabel:`Apply`. Click :icon:`fa-refresh` :guilabel:`Fetch Products` and all 20 products created or updated after January 1st are pulled in to Odoo."
+msgid "To update all products, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account form. In the *Operations* tab, click next to the :guilabel:`Created/Updated after` field (also referred to as the *Last Products Sync*), and in the calendar pop-up, select `January 1` and click :guilabel:`Apply`. Click :icon:`fa-refresh` :guilabel:`Fetch Products`, and Odoo pulls all 20 products created or updated after January 1."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:None
-msgid "Example the Last Products Sync field configured for January 1st got Fetch Products."
+msgid "Example of the Last Products Sync field configured to January 1 for Fetch Products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:121
-msgid "To update products via sales orders, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account form. On the *Opertaions* tab, next to :guilabel:`Created/Updated between` field (also referred to as the *Last Products Sync*), click and set the date range to `January 1` - `January 31` in the calendar pop-up, then click :guilabel:`Apply`."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:120
+msgid "To update products via sales orders, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account form. On the *Operations* tab, click next to the :guilabel:`Created/Updated between` (Order sync) field and set the date range to `January 1` - `January 31` in the calendar pop-up, then click :guilabel:`Apply`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:127
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:125
 msgid "Click :icon:`fa-refresh` :guilabel:`Fetch Orders`. This pulls the five sales orders along with their sales order lines, and the eight products referenced by those lines, regardless of when those products were last synced."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:None
-msgid "Example of Fetch Orders configured for January 1 to 30 date range."
+msgid "Example of Fetch Orders configured for the January 1 to January 31 date range."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:134
-msgid "In both cases, the :guilabel:`Create Products` setting determines whether those fetched products should be created along with the offers and automatically mapped, or only the offers should be created and the default product used."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:132
+msgid "In both cases, the :guilabel:`Create Products` setting determines whether those fetched products are created along with the offers and automatically mapped, or whether only the offers are created and the default product is used."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:139
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:137
 msgid ":ref:`shopify/manage/auto-create-taxes`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:144
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:142
 msgid "Syncing existing products in Shopify and the **Sales** app"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:147
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:145
 msgid "Refer to the :ref:`Shopify connector's product matching logic <shopify/manage/product-matching>` when matching existing **Sales** app products to Shopify products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:150
-msgid "To manually map existing **Sales** app products to Shopify products, use the :guilabel:`Fetch products` action. Go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired Shopify account form."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:148
+msgid "To manually map existing **Sales** app products to Shopify products, use the :icon:`fa-refresh` :guilabel:`Fetch Products` action."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:154
-msgid "In the *Operations* tab, ensure the timestamp of the *Last Products Sync* is set to the end of the day or the next day. Only products created or updated after that timestamp are fetched. Click :icon:`fa-refresh` :guilabel:`Fetch Products` button to pull product data from Shopify to Odoo."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:151
+msgid "Go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired Shopify account form. In the *Operations* tab, ensure the timestamp of the *Last Products Sync* is set to the end of the day or the next day. Only products created or updated after that timestamp are fetched. Click the :icon:`fa-refresh` :guilabel:`Fetch Products` button to pull product data from Shopify to Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:159
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:158
 msgid "Products are also synced during the scheduled order sync, which occurs every 10 minutes."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:161
-msgid "Then click the :guilabel:`Offers` smart button. The *Offers* page, displays the following product matching information:"
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:160
+msgid "Then, click the :guilabel:`Offers` smart button. The *Offers* page displays the following product matching information:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:163
+msgid ":guilabel:`Title`: Shopify product."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:164
-msgid ":guilabel:`Title`: Shopify product"
+msgid ":guilabel:`SKU`: Shopify internal reference number."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:165
-msgid ":guilabel:`SKU`: Shopify internal refer number."
+msgid ":guilabel:`Matched Product`: Odoo product."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:166
-msgid ":guilabel:`Matched Product`: Odoo product"
-msgstr ""
-
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:167
 msgid ":guilabel:`E-commerce Account`: The Shopify store the product was pulled from."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:171
-msgid "To edit a product mapping, click a :guilabel:`Matched product` entry and select a Odoo product from the drop-down menu."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:169
+msgid ":icon:`fa-external-link` :guilabel:`View on E-commerce`: Clicking this button redirects to the associated product's page on Shopify."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:172
+msgid "To edit a product mapping, click a :guilabel:`Matched Product` entry and select an Odoo product from the drop-down menu."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:None
 msgid "A Shopify offer is mapped to an Odoo product through SKU matching."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:182
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:183
 msgid "Orders are automatically fetched from Shopify and synchronized in the **Sales** app at regular intervals (every 10 minutes). Go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts`, select the desired Shopify account form, and click the *Operations* tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:186
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:187
 msgid "The :guilabel:`Created/Updated after` field displays the timestamp for the last order sync in the *Order Synchronization* section. The Shopify connector relies on order syncs to pull the following data into the **Sales** app:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:190
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:191
 msgid ":ref:`Products <shopify/manage/sync-existing-products>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:191
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:192
 msgid ":ref:`Customer <shopify/manage/customer-matching>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:192
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:193
 msgid ":ref:`Pricing and taxes <shopify/manage/price-tax-mapping>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:193
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:194
 msgid ":ref:`Inventory <shopify/manage/inventory-sync>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:195
-msgid "Only orders that have been confirmed in Shopify are imported into the **Sales** app. If an order is canceled in Shopify, it's also canceled in the **Sales** app when the order sync occurs."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:196
+msgid "Only orders that have been confirmed in Shopify are imported into the **Sales** app. If an order is canceled in Shopify, it is also canceled in the **Sales** app when the order sync occurs."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:199
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:200
 msgid "If cancellation occurs after the delivery has been created, a log note is added for manual review."
 msgstr ""
 
@@ -23205,39 +23210,39 @@ msgstr ""
 msgid "The Order Synchronization section on the Operation tab of a Shopify account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:208
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:209
 msgid "Manual synchronization"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:210
-msgid "To manually pull orders into the **Sales** app, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account form. In the *Operations* tab, click :icon:`fa-refresh` :guilabel:`Fetch Orders` button in the *Actions* section. Users can customize the date range by selecting dates in the :guilabel:`Created/Updated between` fields."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:211
+msgid "To manually pull orders into the **Sales** app, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and select the desired Shopify account form. In the *Operations* tab, click the :icon:`fa-refresh` :guilabel:`Fetch Orders` button in the *Actions* section. Users can customize the date range by selecting dates in the :guilabel:`Created/Updated between` fields."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:None
 msgid "The Fetch Orders action with a date range in the Operations tab of a Shopify account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:218
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:219
 msgid "If an order import fails, recover the order manually using the :guilabel:`Recover Order` action from the cog menu (:icon:`fa-cog` :guilabel:`Actions`). The :guilabel:`Recover Order` action fetches a specific order using its Shopify order reference."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:224
-msgid "Michelle Admin noticed the latest order from her Shopify store failed to import in to the **Sales** app. In Odoo, she goes to :menuselection:`Sales app --> Configuration --> Shopify:Accounts` and selects the desired Shopify account form. She clicks the :icon:`fa-cog` :guilabel:`Actions` icon and selects :guilabel:`Recover Order`."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:225
+msgid "Michelle Admin noticed the latest order from her Shopify store failed to import into the **Sales** app. In Odoo, she goes to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` and selects the desired Shopify account form. She clicks the :icon:`fa-cog` :guilabel:`Actions` icon and selects :guilabel:`Recover Order`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:0
 msgid "The Recover Order action in the Actions drop-down menu of a Shopify account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:232
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:233
 msgid "A *Recover Order* pop-up window displays with a blank :guilabel:`Ecommerce Order Reference` field. To find the *Ecommerce Order Reference* number, in a different browser tab she logs in to the admin Shopify account, goes to :guilabel:`Orders`, and selects the desired sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:236
-msgid "She copies the series of numbers after the `orders/` of the sales order URL. In Odoo, she pastes it in the :guilabel:`Ecommerce Order Reference` field and clicks :guilabel:`Recover`."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:237
+msgid "She copies the series of numbers after `orders/` in the sales order URL. In Odoo, she pastes it in the :guilabel:`Ecommerce Order Reference` field and clicks :guilabel:`Recover`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:239
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:240
 msgid "**Shopify sales order URL**: `admin.shopify.com/store/shopify-store-name/orders/123456789`"
 msgstr ""
 
@@ -23245,139 +23250,143 @@ msgstr ""
 msgid "Example of the Ecommerce Order Reference number in the Recover Order window."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:247
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:246
+msgid "After fetching orders, each order imported into Odoo has a :icon:`fa-external-link` :guilabel:`Visit` button next to the *E-commerce Order ID* field on the order form. Clicking this button redirects to the associated order's page in Shopify."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:253
 msgid "Customer matching"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:249
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:255
 msgid "The **Sales** app matches Shopify customers with Odoo customers using the email and billing name configured on the :ref:`contact form <contacts/contact-form>`. If no match is found, a new customer is created. The billing and shipping addresses are created as child contacts."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:254
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:260
 msgid "If state or country mapping fails, an activity is created for manual correction."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:259
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:265
 msgid "Price and tax mapping"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:261
-msgid "The **Sales** app automatically detects a currency type from the Shopify order. :doc:`Fiscal positions <../../../finance/accounting/taxes/fiscal_positions>` handle tax mapping from products in Odoo."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:267
+msgid "The **Sales** app automatically detects the currency from the Shopify order. :doc:`Fiscal positions <../../../finance/accounting/taxes/fiscal_positions>` handle tax mapping from products in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:265
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:270
 msgid "Shipping is added as separate order lines using configurable default products. Discounts are directly deducted from product or shipping prices before subtotal calculation, to reduce rounding differences between Shopify and Odoo totals. Original Shopify product prices are shown in the line description only when they differ from the final imported price (or when a discount is applied)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:271
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:276
 msgid "The discrepancy check is performed only on the final total of the sales order, regardless of which taxes are applied on the order lines. Since Shopify may use different rounding methods, differences of a few cents (for example, 0.01) can occur between Shopify and Odoo due to rounding. Such rounding discrepancies are resolved by adding an adjustment line for the difference amount."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:278
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:283
 msgid "If the auto-invoice configuration on the account is enabled, invoices are generally created automatically for paid orders. However, for orders where a discrepancy adjustment is added, the invoice is **not** created automatically, even if the order is marked as paid in Shopify."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:285
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:290
 msgid "Enable auto-create taxes"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:287
-msgid "The :guilabel:`Create Taxes` feature allows Odoo to create taxes when importing orders from Shopify automatically. When enabled (default behavior), Odoo tries to find a matching tax and creates one if no match exists. When disabled, taxes are determined using the order's fiscal position and the product's configured taxes in Odoo."
-msgstr ""
-
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:292
-msgid "To enable the :guilabel:`Create Taxes` feature, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired Shopify account form. Click :guilabel:`Disconnect` and on the *Configuration* tab, enable the :guilabel:`Create Taxes` checkbox."
+msgid "The :guilabel:`Create Taxes` feature allows Odoo to automatically create taxes when importing orders from Shopify. When enabled (default behavior), Odoo tries to find a matching tax and creates one if no match exists. When disabled, taxes are determined using the order's fiscal position and the product's configured taxes in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:296
-msgid "Then :ref:`reconnect the Shopify account form <shopify/setup/connect-shopify-to-odoo>` and either wait for the scheduled order sync (occurs every 10 minutes) or manually sync products by clicking :icon:`fa-refresh` :guilabel:`Fetch products` button on the *Operations* tab."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:297
+msgid "To enable the :guilabel:`Create Taxes` feature, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired Shopify account form. On the *Configuration* tab, enable the :guilabel:`Create Taxes` checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:303
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:301
+msgid "Then either wait for the scheduled order sync (occurs every 10 minutes) or manually sync orders by clicking the :icon:`fa-refresh` :guilabel:`Fetch Orders` button on the *Operations* tab."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:307
 msgid "Inventory synchronization"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:308
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:312
 msgid "Push inventory to Shopify"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:310
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:314
 msgid "When :guilabel:`Update Inventory` is enabled, Odoo pushes stock to Shopify after orders are pulled (manually or automatically)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:313
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:317
 msgid "Only stock from the mapped Odoo location is pushed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:314
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:318
 msgid "The free quantity (*Quantity on Hand* minus *Reserved Quantity*) of the product at the mapped location is pushed to Shopify as the available quantity."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:316
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:320
 msgid "Only products that satisfy all inventory synchronization settings are considered for synchronization."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:320
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:324
 msgid "Odoo does not push the inventory of all products every time. Only the stock updated after the last inventory sync is pushed. When a product's quantity changes at the mapped location, Odoo detects it and automatically pushes that product's updated inventory in the next scheduled action."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:326
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:330
 msgid "Make sure the inventory levels on both platforms are in sync first, to avoid discrepancies during synchronization."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:329
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:333
 msgid "To push stock manually, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired Shopify account form. Click the :icon:`fa-refresh` :guilabel:`Push Inventory` button in the *Operations* tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:336
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:340
 msgid "Pull inventory from Shopify"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:339
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:343
 msgid "For a valid inventory sync, Odoo and Shopify must be fully synchronized with respect to products, locations, and the quantity of each product at the corresponding location."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:342
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:346
 msgid "To pull stock manually, go to :menuselection:`Sales app --> Configuration --> Shopify: Accounts` to select the desired Shopify account form. Click the :icon:`fa-refresh` :guilabel:`Fetch Inventory` button in the *Operations* tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:346
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:350
 msgid "Odoo pulls inventory data from Shopify using the following logic:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:348
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:352
 msgid "The stock is updated based on the mapped location and mapped offer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:349
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:353
 msgid "The on-hand quantity of a specific product at a specific location, fetched from Shopify, is updated in Odoo as the on-hand quantity."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:351
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:355
 msgid "If the location or the offer related to the inventory is not found in Odoo, that inventory record is ignored and not updated."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:357
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:361
 msgid "Configure multi-location support"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:359
-msgid "The Shopify connector supports multi-location support from Odoo to Shopify. To do this, Shopify locations must be mapped to Odoo stock locations. Odoo pushes the quantity available from the mapped location to the corresponding Shopify location."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:363
+msgid "The Shopify connector supports multi-location inventory management from Odoo to Shopify. To use it, Shopify locations must be mapped to Odoo stock locations. Odoo pushes the quantity available from the mapped location to the corresponding Shopify location."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:363
-msgid "To configure Odoo locations to Shopify to keep track of stock, navigate to :menuselection:`Sales app --> Configurations --> Shopify: Account`. Select the desired Shopify account. If the account is connected, click :guilabel:`Disconnect` and click the :guilabel:`Configuration` tab. In the *Stock* section, select an existing location or click :guilabel:`Search more` and click :guilabel:`New` to create a :ref:`new location <inventory/use_locations/create-new-locations>`."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:367
+msgid "To map Odoo locations to Shopify locations and keep track of stock, navigate to :menuselection:`Sales app --> Configuration --> Shopify: Accounts`. Select the desired Shopify account. Click the :guilabel:`Configuration` tab. In the *Stock* section, select an existing location or click :guilabel:`Search more` and click :guilabel:`New` to create a :ref:`new location <inventory/use_locations/create-new-locations>`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:None
 msgid "Example of the Stock Location field in the Configuration tab of the Shopify account form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:372
-msgid ":ref:`Reconnect to Shopify <shopify/setup/connect-shopify-to-odoo>`, and after the next scheduled *Fetch Orders* action, a :guilabel:`Locations` smart button displays. To change the *Stock Location*, click the :guilabel:`Locations` smart button and the *Locations* page displays all the Shopify locations in the :guilabel:`Name` column and the **Inventory** app locations in the :guilabel:`Stock Location` column."
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:376
+msgid "After the next scheduled *Fetch Orders* action, a :guilabel:`Locations` smart button displays. To change the *Stock Location*, click the :guilabel:`Locations` smart button. The *Locations* page displays all the Shopify locations in the :guilabel:`Name` column and the **Inventory** app locations in the :guilabel:`Stock Location` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:378
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:381
 msgid "To sync the two locations together, enable the :guilabel:`Stock Synchronization` checkbox. This controls exactly which inventory is synced back to Shopify or pulled from Shopify. The :guilabel:`Sync Stock` checkbox is available per offer, per location, per account, and on the individual product (:guilabel:`Track Inventory`)."
 msgstr ""
 
@@ -23385,43 +23394,43 @@ msgstr ""
 msgid "Shopify locations mapped to Odoo stock locations with the Sync Stock toggle."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:387
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:390
 msgid "`Tutorial: Warehouses & Locations | Odoo Inventory <create-location_>`_"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:392
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:395
 msgid "Manual operations summary"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:394
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:397
 msgid "The following manual operations are available under the :guilabel:`Operations` tab:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:396
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:399
 msgid ":icon:`fa-refresh` :guilabel:`Fetch Products`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:397
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:400
 msgid ":icon:`fa-refresh` :guilabel:`Fetch Orders` between any date range"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:398
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:401
 msgid ":icon:`fa-refresh` :guilabel:`Push Inventory`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:399
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:402
 msgid ":icon:`fa-refresh` :guilabel:`Fetch Locations`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:400
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:403
 msgid ":icon:`fa-refresh` :guilabel:`Fetch Inventory`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:401
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:404
 msgid ":icon:`fa-refresh` :guilabel:`Update Pickings` (in case delivery is handled in Odoo)"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:402
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:405
 msgid ":guilabel:`Recover Order` (recover a specific order)"
 msgstr ""
 
@@ -23429,80 +23438,80 @@ msgstr ""
 msgid "The manual operations available under the Operations tab of a Shopify account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:410
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:413
 msgid "Monitoring and troubleshooting"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:413
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:416
 msgid "Logging system"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:415
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:418
 msgid "The Shopify connector creates detailed API logs on the Shopify account form via the :guilabel:`Logs` smart button. Users **must** be in :ref:`developer mode <developer-mode>` for the :guilabel:`Logs` smart button to display."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:419
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:422
 msgid "The *Logs* page displays every log entry in list view and organizes them with the following columns:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:421
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:424
 msgid ":guilabel:`Created on`: The date and time the log entry was created."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:422
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:425
 msgid ":guilabel:`Created by`: OdooBot, which displays as `1`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:423
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:426
 msgid ":guilabel:`Database Name`: The name of the Odoo database where the entry was recorded."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:424
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:427
 msgid ":guilabel:`Type`: Displays either :guilabel:`Server` or :guilabel:`Client`. :guilabel:`Server` is used for entries raised while Odoo is exchanging data with Shopify through the API (fetching orders or products, pushing inventory or fulfillments). :guilabel:`Client` is used for entries raised while Odoo processes data it has already received, and for entries where a synchronization step was skipped."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:429
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:432
 msgid ":guilabel:`Name`: Identifies the e-commerce account the entry belongs to, in the form Account name-ID (for example, My Shopify Store-3), where ID is the database ID of the account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:431
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:434
 msgid ":guilabel:`Level`: Indicates whether the log is an :guilabel:`Error` or :guilabel:`Info`. :guilabel:`Error` means the action failed; the fetch, the record processing, or the update sent to Shopify did not complete. :guilabel:`Info` means the action completed without failing, but a step was deliberately skipped, for example an order ignored because of its Shopify status, or an invoice not created because the order has several payment transactions."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:436
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:439
 msgid ":guilabel:`Path`: The origin of the entry. Connector entries always display as :guilabel:`E-Commerce`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:438
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:441
 msgid ":guilabel:`Line`: The line number of the entry. Connector entries always display `1`, since the line is not tracked."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:440
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:443
 msgid ":guilabel:`Function`: Displays the function that is the source of the entry, such as `_sync_orders`, `_process_order_data`, or `_auto_create_credit_note`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:444
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:447
 msgid "Developer mode can be enabled using :kbd:`Ctrl` + :kbd:`K` and typing `debug`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:446
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:449
 msgid "To view the log entry form, click an entry. The form is comprised of two sections: *Creation Details* and *Logging Details*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:449
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:452
 msgid "The *Creation Details* section lists the :guilabel:`Created On`, :guilabel:`Created by`, and :guilabel:`Database Name`. The *Logging Details* section lists the :guilabel:`Type`, :guilabel:`Name`, :guilabel:`Level`, :guilabel:`Path`, :guilabel:`Line`, :guilabel:`Function`, and :guilabel:`Message`. The :guilabel:`Message` is a detailed description of the error."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:456
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:458
 msgid "Email notifications"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:458
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:460
 msgid "In case of critical failures (order import failure, stock update failure, or fulfillment failure), automated email notifications are sent to the assigned salesperson or administrator. This ensures immediate visibility and corrective action."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/manage.rst:465
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:206
+#: ../../content/applications/sales/sales/shopify_connector/manage.rst:467
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:209
 msgid ":doc:`fulfillment`"
 msgstr ""
 
@@ -23539,7 +23548,7 @@ msgid "Odoo **Sales** app (this app auto-installs with the **Shopify connector**
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:34
-msgid "It's recommended to have the Odoo database and Shopify account dashboard in different tabs in the same browser for the setup."
+msgid "It is recommended to have the Odoo database and Shopify account dashboard in different tabs in the same browser for the setup."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:40
@@ -23555,7 +23564,7 @@ msgid "To create a new Shopify account, navigate to :menuselection:`Sales app --
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:50
-msgid "On the blank *Shopify account form* page, start by:"
+msgid "On the blank *Shopify account form* page:"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:52
@@ -23591,10 +23600,10 @@ msgid ":guilabel:`Self Access`: An admin API Access Token. Stores created before
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:73
-msgid "If using the :guilabel:`Self Access` option, refer to Shopify's `access-tokens`_ page."
+msgid "If using the :guilabel:`Self Access` option, refer to Shopify's `access tokens documentation <access-tokens_>`_."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:75
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:76
 msgid "If using the :guilabel:`Oauth` option, click the :guilabel:`Copy App URL` button."
 msgstr ""
 
@@ -23602,47 +23611,47 @@ msgstr ""
 msgid "Example of a Shopify account form with Oauth option selected."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:83
-msgid "Configuring administrative settings"
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:84
+msgid "Configure administrative settings"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:85
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:86
 msgid "The *Configuration* tab settings can be changed anytime, even while the Shopify account is connected. All changes are logged in the account form's chatter. These settings control how data is imported and processed:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:89
-msgid ":guilabel:`Create Products`: Controls what happens when a Shopify product is pulled and no Odoo product matches it. Odoo always looks for a product whose internal reference equals the Shopify SKU."
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:90
+msgid ":guilabel:`Create Products`: Controls what happens when a Shopify product is pulled and no Odoo product matches it."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:93
-msgid "When enabled, if no match is found, a new Odoo product is created from the Shopify data. Once an offer is mapped, its title and Shopify identifiers are refreshed on every pull, regardless of this setting. However, the mapped Odoo product itself is not updated afterward, since cost, weight, barcode, and image are only read when the product is first created. When disabled, the offer is mapped to the default :guilabel:`E-commerce Sale product` instead."
-msgstr ""
-
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:100
-msgid "A product must have a SKU in Shopify to be imported into Odoo."
+msgid "Odoo always looks for a product whose internal reference equals the Shopify SKU. When :guilabel:`Create Products` is enabled, if no match is found, a new Odoo product is created from the Shopify data. Once an offer is mapped, its title and Shopify identifiers are refreshed on every pull, regardless of this setting. However, the mapped Odoo product itself is not updated afterward, since cost, description, weight, barcode, and image are only read when the product is first created. When :guilabel:`Create Products` is disabled, the offer is mapped to the default :guilabel:`E-commerce Sale` product instead."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:102
+msgid "A product must have a SKU in Shopify to be imported into Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:104
 msgid ":guilabel:`Stock Location`: A stock location must be defined and must belong to the selected company. If not configured, Odoo automatically creates a dedicated Shopify stock location. In a multi-location setup, complete the new Shopify account form and connect to Shopify. Click the :icon:`fa-refresh` :guilabel:`Fetch Locations` button in the *Operations* tab to pull all locations from Shopify. By default, they are all mapped to the defined default warehouse location, and the mapping can be changed as needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:108
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:110
 msgid ":guilabel:`Update Inventory`: When enabled, the scheduled action that pushes inventory from Odoo to Shopify runs for this account. If users do not want to push inventory from Odoo to Shopify, keep it disabled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:111
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:113
 msgid ":guilabel:`Payment Journal` and :guilabel:`Sales Journal`: Journals used to register payments and create sales orders during order synchronization. If no existing journal is found, Odoo automatically uses one of the journals of the current company."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:114
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:116
 msgid ":guilabel:`Sales Team` and :guilabel:`Salesperson`: The responsible team and user assigned to orders imported from Shopify. If no existing team is found, Odoo automatically creates one and assigns it to the account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:117
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:119
 msgid ":guilabel:`Create Taxes`: Import taxes from Shopify with the sales order. Odoo tries to find a matching tax and creates one if no match exists. If disabled, taxes are determined using the order's fiscal position and the product's configured taxes in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:120
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:122
 msgid ":guilabel:`Create Invoice`: Automatically create an invoice and register payment when importing paid orders from Shopify. If disabled, the user must manually create the invoice from the sales order."
 msgstr ""
 
@@ -23650,11 +23659,11 @@ msgstr ""
 msgid "The Shopify account configuration page in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:130
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:132
 msgid "Create a custom app in Shopify"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:132
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:134
 msgid "To create a custom app in Shopify, the user must sign in to an existing admin account or create a new one. From the Shopify homepage, open the :guilabel:`Settings` menu and select :guilabel:`App development`."
 msgstr ""
 
@@ -23662,63 +23671,63 @@ msgstr ""
 msgid "Example of using the search bar to find App development."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:139
-msgid "Click :guilabel:`Build app in Dev Dashboard` to open a new tab for the dev dashboard. Click :guilabel:`Create app` and in the *Start from Dev Dashboard* option, enter the app name and click :guilabel:`Create`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:143
-msgid "In the *Create Version* page, enter the following information for the listed fields:"
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:141
+msgid "Click :guilabel:`Build app in Dev Dashboard` to open a new tab for the dev dashboard. Click :guilabel:`Create app`, and in the *Start from Dev Dashboard* option, enter the app name and click :guilabel:`Create`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:145
-msgid ":guilabel:`App URL`: Paste the copied URL from the :ref:`Credentials tab <shopify/setup/authentication>` of the Create a Shopify account form."
+msgid "On the *Create Version* page, enter the following information in the listed fields:"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:147
+msgid ":guilabel:`App URL`: Paste the copied URL from the :ref:`Credentials tab <shopify/setup/authentication>` of the Create a Shopify account form."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:149
 msgid "Turn off the :guilabel:`Embed app in Shopify admin` checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:148
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:150
 msgid ":guilabel:`Webhooks API version`: 2026-01"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:151
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:153
 msgid "Check the *Release Notes* page on the Shopify connector's app store page for the latest version of the Webhooks API."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:154
-msgid "In the *Access* section, ensure the *Scopes* tab is selected. Then copy the following code block and paste it into the tab: `read_assigned_fulfillment_orders,write_assigned_fulfillment_orders,read_customers,write_inventory,read_inventory,read_locations,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders,read_orders,read_products,read_third_party_fulfillment_orders,write_third_party_fulfillment_orders,read_fulfillments,write_fulfillments,read_returns`"
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:156
+msgid "In the *API access* section, ensure the *Scopes* tab is selected. Then copy the following code block and paste it into the tab: `read_assigned_fulfillment_orders,write_assigned_fulfillment_orders,read_customers,write_inventory,read_inventory,read_locations,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders,read_orders,read_products,read_third_party_fulfillment_orders,write_third_party_fulfillment_orders,read_fulfillments,write_fulfillments,read_returns`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:None
 msgid "Example of a Shopify app with the recommended settings."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:161
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:163
 msgid "Click the :guilabel:`Release` button at the top of the page, then click :guilabel:`Release` again to release the app with the version name."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:167
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:169
 msgid "Connect Shopify to Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:170
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:172
 msgid "This process also applies to reconnecting a Shopify app to an existing Shopify account form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:172
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:174
 msgid "Navigate to the Shopify app's *Settings* page by clicking :guilabel:`Settings` in the navigation bar. Copy the :guilabel:`Client ID` and :guilabel:`Client Secret` from the *Credentials* section."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:175
-msgid "Switch to the Odoo browser tab, paste these into the :guilabel:`Shopify Client Id` and :guilabel:`Shopify Client Secret` fields in the *Credentials* tab."
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:177
+msgid "Switch to the Odoo browser tab and paste these into the :guilabel:`Shopify Client Id` and :guilabel:`Shopify Client Secret` fields in the *Credentials* tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:178
-msgid "Next, switch back to the Shopify browser tab and click the app's name. Click :guilabel:`Install app`, then on the new page select the Shopify store to link to Odoo, and click :guilabel:`Install`."
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:180
+msgid "Next, switch back to the Shopify browser tab and click the app's name. Click :guilabel:`Install app`, then, on the new page, select the Shopify store to link to Odoo, and click :guilabel:`Install`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:181
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:184
 msgid "After installing the app in the Shopify store, the page is automatically redirected to the Shopify account form in Odoo with the *Operations* tab open. Verify that the app is connected by checking the account connection status in the top-right corner. Click the :guilabel:`Credentials` tab and confirm that the access token has been fetched in the :guilabel:`Shopify Access Token` field."
 msgstr ""
 
@@ -23726,16 +23735,16 @@ msgstr ""
 msgid "Example of the Credentials tab when a Shopify account form is connected."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:192
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:195
 msgid "Multi-store and multi-company management"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:194
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:197
 msgid "The **Sales** app supports configuring multiple Shopify stores under the same Odoo company. Each Shopify store requires a Shopify account form and operates independently, with its own sync timestamps and configuration. All orders, products, and inventory are scoped per connected Shopify store. Multi-company environments are supported, with a separate configuration per company."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopify_connector/setup.rst:199
-msgid "The only exception is when the same internal Odoo location is synced with more than one Shopify store location: the inventory for those Shopify account forms is synced with the internal Odoo location."
+#: ../../content/applications/sales/sales/shopify_connector/setup.rst:202
+msgid "The only exception is when the same internal Odoo location is synced with more than one Shopify store location: the Shopify account forms share the same inventory from that Odoo location instead of having separate inventory scopes."
 msgstr ""
 
 #: ../../content/applications/sales/sales/tiktok_connector.rst:5
