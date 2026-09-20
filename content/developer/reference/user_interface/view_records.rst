@@ -297,16 +297,16 @@ specifies how the matched node should be modified.
 
 .. attribute:: replace
 
-   The content of the inheritance spec replaces the matched node. Any text node containing only `$0`
-   within the contents of the spec is replaced by a copy of the matched node, effectively wrapping
-   the matched node.
+   The content of the inheritance spec replaces the matched node. Any node with `t-replaced`
+   attribute within the contents of the spec is filled by a copy of the matched node, effectively
+   wrapping the matched node.
 
    .. example::
 
       .. code-block:: xml
 
          <xpath expr="//field[@name='x_field']" position="replace">
-             <div class="wrapper">$0</div>
+             <div class="wrapper" t-replaced=""/>
          </xpath>
 
 .. attribute:: attributes
