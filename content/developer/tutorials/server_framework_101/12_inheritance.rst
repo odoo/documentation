@@ -207,8 +207,8 @@ Instead of a single view, its ``arch`` field contains a number of
     ``inside``
         appends ``xpath``'s body to the end of the matched element
     ``replace``
-        replaces the matched element with the ``xpath``'s body, replacing any ``$0`` node occurrence
-        in the new body with the original element
+        replaces the matched element with the ``xpath``'s body, replacing any ``<replace-target/>``
+        node occurrence in the new body with the original element
     ``before``
         inserts the ``xpath``'s body as a sibling before the matched element
     ``after``
