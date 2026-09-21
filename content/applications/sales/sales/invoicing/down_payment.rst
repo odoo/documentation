@@ -81,10 +81,10 @@ requires that another invoice be created in order to complete the sales order.
 
 The following are two examples of down payment amounts:
 
-- :ref:`Example 1: 50% down payment <sales/invoicing/50-percent-down-payments>`
-- :ref:`Example 2: 100% down payment <sales/invoicing/100-percent-down-payments>`
+- :ref:`Example 1: 50% down payment <sales/down_payment/50-percent-down-payments>`
+- :ref:`Example 2: 100% down payment <sales/down_payment/100-percent-down-payments>`
 
-.. _sales/invoicing/50-percent-down-payments:
+.. _sales/down_payment/50-percent-down-payments:
 
 Example 1: 50% down payment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -180,7 +180,7 @@ payments is required. At this point, the flow is complete.
    order to confirm the delivery. Otherwise, the delivered quantity can be entered manually directly
    on the sales order.
 
-.. _sales/invoicing/100-percent-down-payments:
+.. _sales/down_payment/100-percent-down-payments:
 
 Example 2: 100% down payment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
