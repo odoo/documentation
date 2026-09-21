@@ -70,7 +70,7 @@ delivery order is complete.
    .. image:: multipack/packages-smart-button.png
       :alt: The Packages smart button on a delivery order.
 
-.. _inventory/shipping/backorders:
+.. _inventory/multipack/backorders:
 
 Create a backorder for items to be shipped later
 ================================================

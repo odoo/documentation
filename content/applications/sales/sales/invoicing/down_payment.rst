@@ -81,10 +81,10 @@ requires that another invoice be created in order to complete the sales order.
 
 The following are two examples of down payment amounts:
 
-- :ref:`Example 1: 50% down payment <sales/invoicing/50-percent-down-payments>`
-- :ref:`Example 2: 100% down payment <sales/invoicing/100-percent-down-payments>`
+- :ref:`Example 1: 50% down payment <sales/down_payment/50-percent-down-payments>`
+- :ref:`Example 2: 100% down payment <sales/down_payment/100-percent-down-payments>`
 
-.. _sales/invoicing/50-percent-down-payments:
+.. _sales/down_payment/50-percent-down-payments:
 
 Example 1: 50% down payment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,9 +97,9 @@ cabinet with an *Invoicing Policy* of *Ordered quantities*. The store requires a
 all of its furniture products.
 
 Navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation
-<sales/create-quotation>` for the cabinet. Once the order is confirmed (via the :guilabel:`Confirm`
-button), the quotation turns into a sales order. Create an invoice by clicking :guilabel:`Create
-Invoice`.
+<sales/create_quotations/create-quotation>` for the cabinet. Once the order is confirmed (via the
+:guilabel:`Confirm` button), the quotation turns into a sales order. Create an invoice by clicking
+:guilabel:`Create Invoice`.
 
 .. image:: down_payment/cabinet-sales-orders-confirmed.png
    :alt: Cabinet with doors sales order that's been confirmed in the Odoo Sales application.
@@ -180,7 +180,7 @@ payments is required. At this point, the flow is complete.
    order to confirm the delivery. Otherwise, the delivered quantity can be entered manually directly
    on the sales order.
 
-.. _sales/invoicing/100-percent-down-payments:
+.. _sales/down_payment/100-percent-down-payments:
 
 Example 2: 100% down payment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,11 +190,11 @@ require a 100% down payment to cover labor costs. The company prefers down payme
 often require customization add-ons for the service.
 
 To configure a 100% down payment, navigate to :menuselection:`Sales app --> New`, and :ref:`create a
-quotation <sales/create-quotation>` for the product. Upon clicking the :guilabel:`Confirm` button,
-the quotation turns into a sales order. At that point, an invoice can now be created by clicking
-:guilabel:`Create Invoice` in the top-left corner. On the *Create invoice(s)* pop-up window that
-appears, select :guilabel:`Down payment (percentage)`, and type `100` in the :guilabel:`Down
-Payment` field.
+quotation <sales/create_quotations/create-quotation>` for the product. Upon clicking the
+:guilabel:`Confirm` button, the quotation turns into a sales order. At that point, an invoice can
+now be created by clicking :guilabel:`Create Invoice` in the top-left corner. On the *Create
+invoice(s)* pop-up window that appears, select :guilabel:`Down payment (percentage)`, and type `100`
+in the :guilabel:`Down Payment` field.
 
 .. image:: down_payment/100p-down-payment-percentage.png
    :alt: The Down payment (percentage) option selected with 100% set as the Down Payment.
