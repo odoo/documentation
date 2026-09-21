@@ -1,3 +1,8 @@
+.. meta::
+   :description: Covers invoicing a sales order based on time and materials, including configuring
+                 service products for time spent, tracking and invoicing expenses, and invoicing
+                 purchases linked to the order.
+
 =====================================
 Invoicing based on time and materials
 =====================================
@@ -180,7 +185,7 @@ the :guilabel:`Apps` page, locate the :guilabel:`Expenses` app block, and click
 The page automatically refreshes and returns to the main Odoo dashboard, where the
 :guilabel:`Expenses` app is now available to access.
 
-.. _sales/invoicing/add-expenses-sales-order:
+.. _sales/time_materials/add-expenses-sales-order:
 
 Add expenses to sales order
 ===========================
@@ -236,9 +241,9 @@ Invoice expenses
 ================
 
 To invoice a customer for an :ref:`expense on a sales order
-<sales/invoicing/add-expenses-sales-order>`, navigate to the related sales order, either from the
-:menuselection:`Sales` app or from the expense report in the :menuselection:`Expenses` app. From the
-expense report, click the :guilabel:`Sales Orders` smart button at the top of the page.
+<sales/time_materials/add-expenses-sales-order>`, navigate to the related sales order, either from
+the :menuselection:`Sales` app or from the expense report in the :menuselection:`Expenses` app. From
+the expense report, click the :guilabel:`Sales Orders` smart button at the top of the page.
 
 If the expense report was linked to the sales order, the newly-configured expense now has its own
 line in the :guilabel:`Order Lines` tab, and can be invoiced to the customer.
@@ -269,7 +274,7 @@ Then, on the :guilabel:`Apps` page, locate the :guilabel:`Purchase` app block, a
 :guilabel:`Activate`. The page automatically refreshes and returns to the main Odoo dashboard, where
 the :guilabel:`Purchase` app is now available to access.
 
-.. _sales/invoicing/add-purchase-to-sales-order:
+.. _sales/time_materials/add-purchase-to-sales-order:
 
 Add purchase to sales order
 ===========================
@@ -347,8 +352,8 @@ Invoice purchase
 ================
 
 To invoice a customer for a purchase on a sales order, first :ref:`add the purchase to the sales
-order <sales/invoicing/add-purchase-to-sales-order>`, then navigate to the desired sales order in
-the :menuselection:`Sales` app.
+order <sales/time_materials/add-purchase-to-sales-order>`, then navigate to the desired sales order
+in the :menuselection:`Sales` app.
 
 On the sales order that was attached to the purchase order, the purchased product now has its own
 product line under the :guilabel:`Order Lines` tab, and it is ready to be invoiced.
