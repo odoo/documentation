@@ -1,3 +1,8 @@
+.. meta::
+   :description: Covers the two invoicing policies available for a product, Ordered quantities and
+                 Delivered quantities, how to configure them, and the sales order workflow each one
+                 follows.
+
 ==================
 Invoicing policies
 ==================
@@ -5,8 +10,8 @@ Invoicing policies
 Depending on business needs, it may be advantageous to choose whether to invoice customers based on
 the goods and services that they order or when those goods and services are delivered to them. To
 allow businesses maximum flexibility to best meet their needs, Odoo offers two invoicing policies
-that can be enabled in the **Sales** app: :ref:`invoice what is ordered
-<sales/invoicing_policy/invoice-on-order>` and :ref:`invoice what is delivered
+that can be enabled in the **Sales** app: :ref:`Invoice what is ordered
+<sales/invoicing_policy/invoice-on-order>` and :ref:`Invoice what is delivered
 <sales/invoicing_policy/invoice-on-delivery>`.
 
 .. _sales/invoicing_policy/configure-invoicing-policy:
@@ -92,8 +97,8 @@ In these cases, the ordered quantity may differ from the delivered quantity base
 availability. Once a quotation is confirmed, and the status changes from :guilabel:`Quotation sent`
 to :guilabel:`Sales order`, Odoo automatically adds both the delivered and invoiced quantities to
 the invoice and sales order. Both partial and complete deliveries are tracked. :ref:`Backorders
-<inventory/shipping/backorders>` can be created for partial orders that are completed at a later
-time.
+<inventory/multipack/backorders>` can be created for partial orders that will be completed at a
+later time.
 
 This invoicing policy has a minor impact on the sales flow because the delivered quantity of a
 product needs to be manually entered on the sales order.
