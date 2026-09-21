@@ -45,7 +45,7 @@ marked as :guilabel:`Reached` in the :menuselection:`Project --> Settings --> Mi
 also check the :guilabel:`Reached` box manually whenever the milestone is reached. Manual checking
 of the box will not impact the tasks linked to the milestone.
 
-.. _project/using-milestones:
+.. _project/project_milestones/using-milestones:
 
 Using milestones
 ================
