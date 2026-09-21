@@ -1,3 +1,8 @@
+.. meta::
+   :description: Describes the cross-app workflow for invoicing project milestones, from configuring
+                 a milestone-based service product to defining milestones and invoicing a completed
+                 milestone.
+
 ==========================
 Invoice project milestones
 ==========================
@@ -90,9 +95,9 @@ Invoicing a completed milestone
 ===============================
 
 Milestones can be tracked through the **Project** app (see :ref:`Using milestones
-<project/using-milestones>`). Additionally, a milestone can be marked complete by navigating to the
-|SO|, and clicking the :guilabel:`Milestones` smart button. On the *Milestones* page, enable the
-checkbox in the :guilabel:`Reached` column for the milestone.
+<project/project_milestones/using-milestones>`). Additionally, a milestone can be marked complete by
+navigating to the |SO|, and clicking the :guilabel:`Milestones` smart button. On the *Milestones*
+page, enable the checkbox in the :guilabel:`Reached` column for the milestone.
 
 Then, click :guilabel:`View Sales Order` or use the breadcrumbs to return to the |SO|. The
 :guilabel:`Delivered` column will be updated to reflect the *Delivered %* for the milestone reached.
