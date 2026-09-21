@@ -19,7 +19,7 @@ Task creation from a sales order
 ================================
 
 This feature allows for field service tasks to be automatically created from a sales order. When you
-create a quotation with the :ref:`service product <sales/invoicing/configured-service-product>`
+create a quotation with the :ref:`service product <sales/time_materials/configured-service-product>`
 and confirm it, a task is automatically created in your Field Service project. Click the
 :guilabel:`Tasks` smart button to access it from the sales order.
 

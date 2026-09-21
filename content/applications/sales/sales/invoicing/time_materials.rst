@@ -1,3 +1,8 @@
+.. meta::
+   :description: Covers invoicing a sales order based on time and materials, including configuring
+                 service products for time spent, tracking and invoicing expenses, and invoicing
+                 purchases linked to the order.
+
 =====================================
 Invoicing based on time and materials
 =====================================
@@ -46,7 +51,7 @@ Then, click :guilabel:`Save` to save all changes.
    :align: center
    :alt: What the Timesheets feature looks like on the Odoo Project settings page.
 
-.. _sales/invoicing/configured-service-product:
+.. _sales/time_materials/configured-service-product:
 
 Service product configuration
 =============================
@@ -89,7 +94,7 @@ Order* options, it is possible to add time spent to a sales order.
 To see that in action, navigate to :menuselection:`Sales app --> New` to open a blank quotation
 form. Then, proceed to add a :guilabel:`Customer`, and in the :guilabel:`Order Lines` tab, click
 :guilabel:`Add a product`, and select the properly :ref:`configured service product
-<sales/invoicing/configured-service-product>` from the drop-down menu.
+<sales/time_materials/configured-service-product>` from the drop-down menu.
 
 Next, click :guilabel:`Confirm` to confirm the order.
 
@@ -178,7 +183,7 @@ the :guilabel:`Apps` page, locate the :guilabel:`Expenses` app block, and click
 The page automatically refreshes and returns to the main Odoo dashboard, where the
 :guilabel:`Expenses` app is now available to access.
 
-.. _sales/invoicing/add-expenses-sales-order:
+.. _sales/time_materials/add-expenses-sales-order:
 
 Add expenses to sales order
 ===========================
@@ -234,9 +239,9 @@ Invoice expenses
 ================
 
 To invoice a customer for an :ref:`expense on a sales order
-<sales/invoicing/add-expenses-sales-order>`, navigate to the related sales order, either from the
-:menuselection:`Sales` app or from the expense report in the :menuselection:`Expenses` app. From the
-expense report, click the :guilabel:`Sales Orders` smart button at the top of the page.
+<sales/time_materials/add-expenses-sales-order>`, navigate to the related sales order, either from
+the :menuselection:`Sales` app or from the expense report in the :menuselection:`Expenses` app. From
+the expense report, click the :guilabel:`Sales Orders` smart button at the top of the page.
 
 If the expense report was linked to the sales order, the newly-configured expense now has its own
 line in the :guilabel:`Order Lines` tab, and can be invoiced to the customer.
@@ -267,7 +272,7 @@ Then, on the :guilabel:`Apps` page, locate the :guilabel:`Purchase` app block, a
 :guilabel:`Activate`. The page automatically refreshes and returns to the main Odoo dashboard, where
 the :guilabel:`Purchase` app is now available to access.
 
-.. _sales/invoicing/add-purchase-to-sales-order:
+.. _sales/time_materials/add-purchase-to-sales-order:
 
 Add purchase to sales order
 ===========================
@@ -345,8 +350,8 @@ Invoice purchase
 ================
 
 To invoice a customer for a purchase on a sales order, first :ref:`add the purchase to the sales
-order <sales/invoicing/add-purchase-to-sales-order>`, then navigate to the desired sales order in
-the :menuselection:`Sales` app.
+order <sales/time_materials/add-purchase-to-sales-order>`, then navigate to the desired sales order
+in the :menuselection:`Sales` app.
 
 On the sales order that was attached to the purchase order, the purchased product now has its own
 product line under the :guilabel:`Order Lines` tab, and it is ready to be invoiced.
