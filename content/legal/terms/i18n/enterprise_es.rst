@@ -35,6 +35,7 @@ Acuerdo de suscripción de Odoo Enterprise
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 .. v12: 7% increase is per year, not per Term
+.. v12.001ES: fix translations of User/Usuario
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -60,10 +61,10 @@ menos 30 días antes de la fecha de culminación del Acuerdo.
 ==============
 
 Usuario
-    El término usuario hace referencia a cualquier cuenta de usuario identificada como activa en el
-    Software, con potestates de creación y/o edición. No se consideran como Usuarios a las cuentas
-    desactivadas y aquellas cuentas utilizadas por personas (o sistemas) que solo tienen acceso
-    limitado al Software a través del portal del usuario.
+    Cualquier cuenta de usuario identificada como activa en el Software y con acceso a los modos de
+    creación y/o edición. Las cuentas de usuario desactivadas, así como las cuentas utilizadas por
+    personas o sistemas externos que solo tengan acceso limitado al Software a través de las
+    funcionalidades del portal (los «Usuarios del portal»), no se contabilizan como Usuarios.
 
 Aplicación
     Una ‘Aplicación’ es un grupo especializado de funciones disponibles para ser instaladas en el
