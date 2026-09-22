@@ -34,8 +34,8 @@ To enable and set presets for a POS, follow these steps:
 #. In the :guilabel:`Available` field:
 
     - If preconfigured presets are available, select the relevant one(s) or click :guilabel:`Search
-      more`, then :guilabel:`New` to create and :ref:`configure <pos/presets/preset-form>` a new
-      preset.
+      more`, then :guilabel:`Create New` to create and :ref:`configure <pos/presets/preset-form>` a
+      new preset.
     - If no preconfigured presets are available, click :guilabel:`Create ...`, then :ref:`configure
       <pos/presets/preset-form>` the preset.
 
@@ -121,7 +121,7 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
 
         - :guilabel:`Name`: Select an order name or enter a new one (only for :doc:`restaurant
           points of sale <../restaurant>`). To modify it, click the :icon:`fa-ellipsis-v`
-          (:guilabel:`Actions`) menu and select :icon:`fa-pencil-square-o` :guilabel:`Edit Order
+          (:guilabel:`Actions`) menu and select :icon:`fa-pencil-square-o` :guilabel:`Set Order
           Name`.
         - :guilabel:`Address`: Choose an existing customer or :guilabel:`Create` a new one, and make
           sure they have an address assigned. The customer's name is :ref:`displayed in the pad
@@ -133,11 +133,8 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
 
 
       - If the :guilabel:`Manage orders by time` option is enabled for the selected preset, select a
-        date and time (displayed in green). The selected time is displayed in the header of the POS
-        interface. Click it to modify the time.
-
-        .. image:: presets/select-time-date.png
-           :alt: Choose a time for a takeout order.
+        date and time. Only available time slots are shown. The selected time is displayed in the
+        POS interface header. Click it to modify the time.
 
       - If the :guilabel:`Guest` feature is enabled for the selected preset, a pop-up appears
         prompting you to enter the number of guests, and the amount per guest is displayed (the
@@ -167,8 +164,8 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
 
         - If :guilabel:`Identification` is required:
 
-          - :guilabel:`Name`: Customers must enter their :guilabel:`Name`. The :guilabel:`Phone`
-            field is optional.
+          - :guilabel:`Name`: Customers must enter their :guilabel:`Name` and :guilabel:`Phone`
+            number.
           - :guilabel:`Address`: Customers must enter their :guilabel:`Name`, :guilabel:`Phone`
             number, and address details.
 
