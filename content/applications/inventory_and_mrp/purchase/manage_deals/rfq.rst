@@ -65,6 +65,50 @@ be added (or removed) from the :guilabel:`Purchase` tab.
    the top-left corner. In the :guilabel:`Vendor` section of the pricelist form that appears, add
    the product information as it pertains to the vendor.
 
+.. _purchase/manage_deals/group-rfqs:
+
+Optional: Group |RFQs| by vendor
+--------------------------------
+
+With automatic :doc:`replenishment methods <../../inventory/warehouses_storage/replenishment>`, Odoo
+creates separate |RFQs| for each purchasing need. Alternatively, users may configure Odoo to
+automatically consolidate multiple separate purchases into a single |RFQ| for a specific vendor.
+This feature reduces the volume of smaller or unrelated purchase requests for the same vendor.
+
+.. note::
+   This feature does **not** group |RFQs| that are manually created.
+
+To configure grouping options, navigate to :menuselection:`Purchase app --> Orders --> Vendors` or
+:menuselection:`Contacts app`, then open a vendor's contact form. In the contact form, open the
+*Sales & Purchase* tab.
+
+In the *Purchase* section of the tab, the :guilabel:`Group RFQ` field provides the following options
+to group |RFQs| based on their expected arrival:
+
+- :guilabel:`On Order` (default): Replenishment needs are grouped by their originating demand. Needs
+  linked to the same order (e.g., a sales order generated using :doc:`MTO
+  <../../inventory/warehouses_storage/replenishment/mto>`) are grouped in the same |RFQ|. Needs
+  without an originating order (e.g., from :doc:`reordering rules
+  <../../inventory/warehouses_storage/replenishment/reordering_rules>`) are grouped in separate
+  |RFQs|.
+- :guilabel:`Daily`: All replenishment needs with the same expected arrival date are grouped in the
+  same |RFQ|.
+- :guilabel:`Weekly`: All replenishment needs are grouped by their expected arrival week. Set the
+  specific day in the :guilabel:`On` field to group all needs arriving on that day in the same
+  |RFQ|.
+- :guilabel:`Always`: All replenishment needs are grouped in the same |RFQ|, regardless of their
+  originating demands or expected arrival date.
+
+.. note::
+   Needs are always grouped in separate |RFQs| when either of the following is true:
+
+   - They are received in different warehouses or use different currencies.
+   - They originate from :doc:`dropship
+     <../../inventory/shipping_receiving/daily_operations/dropshipping>` orders.
+
+.. image:: rfq/group-rfq-setting.png
+   :alt: Group RFQ setting on a Contact form.
+
 .. _purchase/rfq/order-products:
 
 Order products
