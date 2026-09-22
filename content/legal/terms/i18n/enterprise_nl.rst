@@ -15,7 +15,7 @@ Odoo Enterprise Abonnementsovereenkomst
     De enige officiële referentie van de algemene voorwaarden van de "Odoo Enterprise Subscription Agreement"
     is :ref:`de originele Engelse versie <enterprise_agreement>`
 
-.. note:: Version 12 - 2025-12-19
+.. note:: Version 13 - 2026-09-24
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -34,6 +34,9 @@ Odoo Enterprise Abonnementsovereenkomst
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 .. v12: 7% increase is per year, not per Term
+.. v13: added "Light User" definition for versions where it exists ;
+        maintenance of Covered Extra Modules required on SaaS ;
+        non-solicitation clause wording adjusted to cover contractors.
 
 Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
 Odoo NV en haar dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
@@ -58,9 +61,16 @@ in kennis stelt van de beëindiging.
 2 Definities
 ============
 
+Lichte Gebruiker
+    Indien ondersteund door de versie van de Software die de Klant gebruikt, elke
+    gebruikersaccount die als actief is aangeduid en in de Software als een
+    "Lichte Gebruiker" is aangeduid, of elk actief werknemersrecord (in de
+    humanresources-App) die niet gekoppeld is aan een actieve gebruikersaccount
+    die geen portaalaccount is.
+
 Gebruiker
-    Elke actieve gebruikersaccount met toegang tot de Software in de
-    creatie- en/of bewerkingsmodus. Gedeactiveerde gebruikersaccounts en
+    Elke gebruikersaccount die in de Software als actief is aangeduid en geen
+    Lichte Gebruiker is. Gedeactiveerde gebruikersaccounts en
     accounts die worden gebruikt door externe personen (of systemen) die slechts
     beperkte toegang hebben tot de Software via de portaalfaciliteiten
     ("Portaalgebruikers") tellen niet mee als Gebruikers.
@@ -76,14 +86,15 @@ Odoo Partner
     te werken (mits voorafgaande kennisgeving).
 
 Extra Module
-    Een extra module is een map met broncode bestanden of een reeks op Python
+    Een Extra Module is een map met broncode bestanden of een reeks op Python
     gebaseerde aanpassingen die in een database zijn gemaakt (bijv. met Odoo Studio),
     die functies toevoegt of het standaardgedrag van de Software wijzigt.
     Het kan zijn ontwikkeld door een Klant, door Odoo NV, door een Odoo Partner
     namens de klant, of door derden.
 
 Ondersteunde Extra Module
-    Een Ondersteunde Extra Module is een extra module waarvoor de Klant ervoor
+    Een Ondersteunde Extra Module is een Extra Module die wordt gebruikt op
+    Odoo's SaaS-hostingplatform (Odoo Online), of waarvoor de Klant ervoor
     kiest een onderhoudsbijdrage te betalen om van ondersteunings-, upgrade- en
     bugfixingdiensten te genieten.
 
@@ -126,8 +137,8 @@ De Klant gaat ermee akkoord alle nodige maatregelen te nemen om de ongewijzigde
 uitvoering te waarborgen van het deel van de Software dat de geldigheid van het
 gebruik van de Odoo Enterprise Edition controleert en dat statistieken verzamelt
 voor dat doel, met inbegrip van, maar niet beperkt tot het uitvoeren van de
-Software, het aantal Gebruikers, de geïnstalleerde Apps en het aantal coderegels
-van de Ondersteunde Extra Modules.
+Software, het aantal Gebruikers en Lichte Gebruikers, de geïnstalleerde Apps
+en het aantal coderegels van de Ondersteunde Extra Modules.
 
 Odoo NV verbindt zich ertoe om individuele of persoonlijke cijfers niet bekend te
 maken aan derden zonder de toestemming van de Klant en om alle verzamelde
@@ -140,7 +151,7 @@ Edition Software en het Cloudplatform niet meer te gebruiken.
 
 Indien de Klant de voorwaarden van deze sectie schendt, gaat de Klant ermee
 akkoord om aan Odoo NV een extra vergoeding te betalen gelijk aan 300% van het
-toepasselijke tarief voor het werkelijke aantal Gebruikers.
+toepasselijke tarief voor het werkelijke aantal Gebruikers en Lichte Gebruikers.
 
 .. _services_nl:
 
@@ -315,28 +326,26 @@ wordt gehost op het Cloudplatform van Odoo.
 -------------------
 
 De standaardkosten voor het Odoo Enterprise-abonnement en de diensten zijn gebaseerd op het
-aantal Gebruikers en het Abonnementsplan die door de klant wordt gebruikt
-en schriftelijk wordt gespecificeerd bij het afsluiten van de
-Overeenkomst.
+aantal Gebruikers, het aantal Lichte Lichte Gebruikers en het Abonnementsplan die door de Klant
+wordt gebruikt en worden schriftelijk gespecificeerd bij het afsluiten van de Overeenkomst.
 
-Wanneer de Klant tijdens de Looptijd van de Overeenkomst meer Gebruikers of meer functies
-gebruikt waarvoor een ander Abonnementsplan nodig is dan dat gespecifieerd bij het
-afsluiten van deze Overeenkomst, gaat de Klant ermee akkoord om een extra vergoeding te betalen
-gelijk aan het toepasselijke tarief (op het moment van de afwijking van het opgegeven
-aantal Gebruikers of Abonnementsplan) voor de bijkomende Gebruikers of
-het vereiste Abonnementsplan, voor de rest van de Looptijd.
+Wanneer de Klant tijdens de Looptijd van de Overeenkomst meer Gebruikers, Lichte Gebruikers
+of meer functies gebruikt waarvoor een ander Abonnementsplan nodig is dan dat gespecifieerd
+bij het afsluiten van deze Overeenkomst, gaat de Klant ermee akkoord om een extra vergoeding
+te betalen gelijk aan het toepasselijke tarief (op het moment van de afwijking van het opgegeven
+aantal Gebruikers, Lichte Gebruikers of Abonnementsplan) voor de bijkomende Gebruikers, Lichte
+Gebruikers of het vereiste Abonnementsplan, voor de rest van de Looptijd.
 
 Eén keer per jaar, en niet eerder dan 6 maanden na de release van een nieuwe hoofdversie
 van de Software, gaat de Klant ermee akkoord om, indien de database van de Klant
 een versie ouder is dan de Ondersteunde Versies, een extra vergoeding te betalen gelijk
 aan 25% van de geannualiseerde prijs, berekend op basis van de huidige prijs per
-gebruiker en het aantal Gebruikers van de Klant.
+gebruiker en het aantal Gebruikers en Lichte Gebruikers van de Klant.
 
 Daarnaast worden de diensten voor Ondersteunde Extra Modules in rekening gebracht
-op basis van het aantal coderegels in deze modules. Wanneer de Klant kiest voor het onderhoud
-van de Ondersteunde Extra Modules, bedraagt het tarief de maandelijkse vergoeding per 100
-regels code (naar boven afgerond op honderdtallen), zoals schriftelijk gepreciseerd bij
-het afsluiten van de Overeenkomst. Coderegels worden geteld met het ``cloc``
+op basis van het aantal coderegels in deze modules. Het tarief bedraagt de maandelijkse
+vergoeding per 100 regels code (naar boven afgerond op honderdtallen), zoals schriftelijk
+gepreciseerd bij het afsluiten van de Overeenkomst. Coderegels worden geteld met het ``cloc``
 commando van de Software en omvatten alle tekstregels in de broncode van die modules, ongeacht
 de programmeertaal (Python, Javascript, XML, enz.), met uitzondering van lege regels,
 commentaarregels en bestanden die niet worden geladen bij het installeren of
@@ -384,8 +393,8 @@ De Klant gaat ermee akkoord om:
   betalen in overeenstemming met de betalingsvoorwaarden bepaald bij het afsluiten
   van deze Overeenkomst;
 - Odoo NV onmiddellijk op de hoogte te brengen wanneer het werkelijke aantal Gebruikers
-  de aantallen overschrijden die bij het afsluiten van de Overeenkomst werden bepaald,
-  en in dat geval de toepasselijke extra vergoeding te
+  of Lichte Gebruikers het respectieve aantal overschrijdt dat bij het afsluiten van de
+  Overeenkomst werd bepaald, en in dat geval de toepasselijke extra vergoeding te
   betalen zoals beschreven in de sectie :ref:`charges_standard_nl`;
 - alle nodige maatregelen te nemen om de ongewijzigde uitvoering te waarborgen van het deel
   van de Software dat de geldigheid van het gebruik van de Odoo Enterprise
@@ -415,19 +424,24 @@ Wanneer de Klant kiest voor de Self-Hosting optie, gaat de Klant ermee akkoord o
 
 .. _no_soliciting_nl:
 
-6.2 Niet benaderen of aanwerven
--------------------------------
+6.2 Niet-wervingsbeding
+-----------------------
 
 Behalve wanneer de andere partij schriftelijk haar toestemming daartoe
 verleent, gaan elke partij, haar dochterondernemingen en vertegenwoordigers
-ermee akkoord om geen werknemers te benaderen of aan te werven van de andere
-partij die betrokken zijn bij de uitvoering of het gebruik van de Diensten
-volgens deze Overeenkomst, voor de duur van de Overeenkomst en voor een periode
-van 12 maanden na de datum van beëindiging of afloop van deze Overeenkomst.
-In geval van een schending van de voorwaarden van deze sectie die leidt tot het
-ontslag van voornoemde werknemer gaat de inbreukmakende partij ermee akkoord
-om de andere partij een bedrag van (€) 30 000,00 euro (dertigduizend euro) te
-betalen.
+ermee akkoord om geen werknemer of individuele onafhankelijke opdrachtnemer van
+de andere partij die betrokken is bij de uitvoering of het gebruik van de
+Diensten volgens deze Overeenkomst te werven of een samenwerking aan te bieden,
+voor de duur van de Overeenkomst en gedurende 12 maanden na hetzij de
+beëindiging van deze Overeenkomst, hetzij het einde van de relatie van de
+betrokken werknemer of opdrachtnemer met de andere partij, afhankelijk van
+welke datum het laatst valt.
+
+In geval van een schending van de voorwaarden van deze sectie die ertoe leidt
+dat voornoemde werknemer of opdrachtnemer zijn relatie met de andere partij
+beëindigt, gaat de inbreukmakende partij ermee akkoord om de andere partij een
+bedrag van EUR (€) 30 000,00 (dertigduizend euro) te betalen.
+
 
 .. _publicity_nl:
 
@@ -549,8 +563,8 @@ na de vervaldatum die op de desbetreffende factuur vermeld wordt, en na minstens
 2 herinneringen.
 
 Overlevende bepalingen:
-    De secties ":ref:`confidentiality_nl`”, ":ref:`disclaimers_nl`”,
-    ":ref:`liability_nl`” en ":ref:`general_provisions_nl`”
+    De secties ":ref:`no_soliciting_nl`", ":ref:`confidentiality_nl`",
+    ":ref:`disclaimers_nl`", ":ref:`liability_nl`" en ":ref:`general_provisions_nl`"
     blijven geldig na de beëindiging of het afloop van deze
     Overeenkomst.
 

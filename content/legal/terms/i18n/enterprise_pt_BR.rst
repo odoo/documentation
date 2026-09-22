@@ -13,7 +13,7 @@ Contrato de Assinatura do Odoo Enterprise
     valor legal. A única referência oficial aos termos do Contrato “Odoo Enterprise Subscription Agreement”
     é a :ref:`versão original em inglês <enterprise_agreement>`.
 
-.. note:: Version 12 - 2025-12-19
+.. note:: Version 13 - 2026-09-24
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -34,6 +34,9 @@ Contrato de Assinatura do Odoo Enterprise
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 .. v12: 7% increase is per year, not per Term
+.. v13: added "Light User" definition for versions where it exists ;
+        maintenance of Covered Extra Modules required on SaaS ;
+        non-solicitation clause wording adjusted to cover contractors.
 
 Ao assinar os serviços do Odoo Enterprise (os "Serviços") fornecidos pela Odoo SA e suas
 afiliadas (coletivamente, "Odoo SA") em relação ao Odoo Enterprise Edition ou Odoo
@@ -56,10 +59,16 @@ escrito de rescisão para a outra parte, no mínimo 30 dias antes do final da Vi
 2 Definições
 ============
 
+Usuário Leve
+    Quando compatível com a versão do Software utilizada pelo Cliente, qualquer conta de usuário
+    indicada como ativa e designada como "Usuário Leve" no Software, ou qualquer registro de
+    funcionário ativo (no App de recursos humanos) que não esteja vinculado a uma conta de usuário
+    ativa que não seja uma conta do portal.
+
 Usuário
-    Qualquer conta de usuário indicada como ativa no Software, com acesso ao modo de criação e/ou edição.
+    Qualquer conta de usuário indicada como ativa no Software, que não seja um Usuário Leve.
     Contas de usuário desativadas e contas usadas por pessoas externas (ou sistemas)
-    que têm apenas acesso limitado ao Software por meio das instalações do portal (conhecidas como
+    que têm apenas acesso limitado ao Software por meio das funcionalidades do portal (conhecidas como
     "Usuários do Portal") não são consideradas como Usuários.
 
 App
@@ -79,8 +88,9 @@ Módulo Extra
     terceiros.
 
 Módulo Extra Coberto
-    Um Módulo Extra Coberto é um Módulo Extra pelo qual o Cliente escolhe pagar uma taxa de
-    manutenção para obter serviços de suporte, atualização e correção de bugs.
+    Um Módulo Extra Coberto é um Módulo Extra utilizado na plataforma de hospedagem SaaS da Odoo
+    (Odoo Online), ou pelo qual o Cliente escolhe pagar uma taxa de manutenção para obter serviços
+    de suporte, atualização e correção de bugs.
 
 Bug
     É considerado Bug qualquer falha do Software ou de um Módulo Extra Coberto que resulte em
@@ -115,17 +125,18 @@ Enterprise Edition, nos termos estabelecidos em :ref:`appendix_a_pt`.
 O Cliente concorda em tomar todas as medidas necessárias para garantir a execução inalterada
 da parte do Software que verifica a validade de uso do Odoo Enterprise Edition e coleta
 estatísticas para esse fim, incluindo, entre outros, a execução de uma instância, o número de
-Usuários, os Aplicativos instalados e o número de linhas de código dos Módulos Extras Cobertos.
+Usuários e Usuários Leves, os Aplicativos instalados e o número de linhas de código dos
+Módulos Extras Cobertos.
 
-A Odoo SA compromete-se a não divulgar figuras individuais ou nomeadas a terceiros sem o
-consentimento do Cliente, e a tratar todos os dados recolhidos em conformidade com a sua
+A Odoo SA compromete-se a não divulgar dados individuais ou identificáveis a terceiros sem o
+consentimento do Cliente, e a tratar todos os dados coletados em conformidade com a sua
 Política de Privacidade oficial, publicada em https://www.odoo.com/privacy.
 
 Após a expiração ou rescisão deste Contrato, esta licença é revogada imediatamente e o Cliente
 concorda em parar de usar o software Odoo Enterprise Edition e a Cloud Platform.
 
 Se o Cliente violar os termos desta seção, o Cliente concorda em pagar à Odoo SA uma taxa
-extra igual a 300% do preço de tabela aplicável ao número real de Usuários.
+extra igual a 300% do preço de tabela aplicável ao número real de Usuários e Usuários Leves.
 
 .. _services_pt:
 
@@ -291,32 +302,32 @@ Cloud Platform.
 
 .. _charges_standard_pt:
 
-5.1 Preços Padrões
-------------------
+5.1 Preços Padrão
+-----------------
 
-Os preços padrões para a assinatura do Odoo Enterprise e os Serviços são baseados no número
-de Usuários e no Plano de Assinatura usado pelo Cliente e especificados por escrito na
-celebração do Contrato.
+Os preços padrão para a assinatura do Odoo Enterprise e os Serviços são baseados no número
+de Usuários, no número de Usuários Leves e no Plano de Assinatura usado pelo Cliente
+e especificados por escrito na celebração do Contrato.
 
-Se durante a Vigência, o Cliente tiver mais Usuários ou usar recursos que exijam outro Plano de
-Assinatura do que o especificado no momento da celebração deste Contrato, o Cliente
-concorda em pagar uma taxa extra equivalente ao preço de tabela aplicável (no momento do
-desvio do número especificado de Usuários ou Plano de Assinatura) para os Usuários adicionais
-ou o Plano de Assinatura necessário, pelo restante da Vigência.
+Se durante a Vigência, o Cliente tiver mais Usuários ou Usuários Leves ou usar recursos que
+exijam outro Plano de Assinatura além do especificado no momento da celebração deste Contrato,
+o Cliente concorda em pagar uma taxa extra equivalente ao preço de tabela aplicável (no momento
+do desvio do número especificado de Usuários ou Usuários Leves ou do Plano de Assinatura) para
+os Usuários ou Usuários Leves adicionais ou o Plano de Assinatura necessário, pelo restante da
+Vigência.
 
 Uma vez por ano, e não antes de 6 meses após o lançamento de uma nova versão principal do Software,
 se a base de dados do Cliente estiver em uma versão mais antiga do que as Versões Cobertas,
 o Cliente concorda em pagar uma taxa extra equivalente a 25% do preço anualizado, calculada
-com base no preço atual por usuário e número de Usuários do Cliente.
+com base no preço atual por usuário e no número de Usuários e Usuários Leves do Cliente.
 
 Além disso, os serviços dos Módulos Extras Cobertos são cobrados com base no número de
-linhas de código nesses módulos. Quando o Cliente optar pela manutenção dos Módulos Extras
-Cobertos, a cobrança será mensal por 100 linhas de código (arredondadas para a próxima
-centena), conforme especificado por escrito na celebração do Contrato. As linhas de código
-serão contabilizadas com o comando ``cloc`` do Software, e incluirão todas as linhas de texto no
-código fonte desses módulos, independente da linguagem de programação (Python, Javascript,
-XML etc.), excluindo linhas em branco, linhas de comentário e arquivos que não são carregados
-durante a instalação ou execução do Software.
+linhas de código nesses módulos. A cobrança será mensal por 100 linhas de código (arredondadas
+para a próxima centena), conforme especificado por escrito na celebração do Contrato. As linhas
+de código serão contabilizadas com o comando ``cloc`` do Software e incluirão todas as linhas
+de texto no código-fonte desses módulos, independentemente da linguagem de programação
+(Python, Javascript, XML etc.), excluindo linhas em branco, linhas de comentário e arquivos que
+não são carregados durante a instalação ou execução do Software.
 
 Quando o Cliente solicitar uma atualização, para cada Módulo Extra Coberto que não tenha
 sido coberto por uma taxa de manutenção nos últimos 12 meses, a Odoo SA poderá cobrar
@@ -355,9 +366,9 @@ O Cliente concorda em:
 
 - pagar à Odoo SA quaisquer valores aplicáveis pelos Serviços do presente Contrato, de acordo
   com as condições de pagamento especificadas na assinatura deste contrato;
-- notificar imediatamente a Odoo SA quando seu número real de Usuários exceder o número
-  especificado no ato da celebração do Contrato e, nesse caso, pagar a taxa adicional aplicável,
-  conforme descrito na seção :ref:`charges_standard_pt`;
+- notificar imediatamente a Odoo SA quando seu número real de Usuários ou Usuários Leves exceder
+  o respectivo número especificado no ato da celebração do Contrato e, nesse caso, pagar a taxa
+  adicional aplicável, conforme descrito na seção :ref:`charges_standard_pt`;
 - tomar todas as medidas necessárias para garantir a execução inalterada da parte do Software
   que verifica a validade do uso do Odoo Enterprise Edition, conforme descrito
   em :ref:`enterprise_access_pt`;
@@ -382,16 +393,21 @@ Quando o cliente escolhe a opção de Hospedagem Própria, o cliente concorda ai
   Edition mediante solicitação (por exemplo, se a validação automática for considerada
   inoperante para o Cliente).
 
-6.2 Sem Aliciamento ou Contratações
------------------------------------
+.. _no_soliciting_pt:
+
+6.2 Não Aliciamento
+-------------------
 
 Exceto quando a outra parte der seu consentimento por escrito, cada parte, suas afiliadas e
-representantes concordam em não solicitar ou oferecer emprego a qualquer funcionário da
-outra parte que esteja envolvido na execução ou uso dos Serviços sob este Contrato, durante a
-vigência do Contrato e por um período de 12 meses a partir da data de rescisão ou vencimento
-deste Contrato. Em caso de descumprimento das condições desta seção que leve à demissão
-do referido funcionário para o efeito, a parte infratora obriga-se a pagar à outra parte um
-montante de 30 000,00 euros (€) (trinta mil euros).
+representantes concordam em não aliciar nem oferecer uma relação profissional a qualquer
+funcionário ou prestador de serviços independente individual da outra parte que esteja envolvido
+na execução ou uso dos Serviços sob este Contrato, durante a vigência do Contrato e por um
+período de 12 meses após a rescisão deste Contrato ou o término da relação do funcionário ou
+prestador em questão com a outra parte, o que ocorrer por último.
+
+Em caso de descumprimento das condições desta seção que leve o referido funcionário ou
+prestador a encerrar sua relação com a outra parte, a parte infratora obriga-se a pagar à outra
+parte um montante de EUR (€) 30 000,00 (trinta mil euros).
 
 
 .. _publicity_pt:
@@ -504,8 +520,8 @@ taxas aplicáveis pelos Serviços dentro de 21 dias após a data de vencimento e
 fatura correspondente e após no mínimo 3 lembretes.
 
 Cláusulas Subsistentes:
-  As seções ":ref:`confidentiality_pt`", “:ref:`disclaimers_pt`",   “:ref:`liability_pt`",
-  e “:ref:`general_provisions_pt`" subsistirão a qualquer rescisão ou expiração deste Contrato.
+  As seções ":ref:`no_soliciting_pt`", ":ref:`confidentiality_pt`", ":ref:`disclaimers_pt`", ":ref:`liability_pt`",
+  e ":ref:`general_provisions_pt`" subsistirão a qualquer rescisão ou expiração deste Contrato.
 
 
 .. _warranties_disclaimers_pt:

@@ -8,7 +8,7 @@ Odoo Enterprise Subscription Agreement
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement.pdf>`_
 
-.. note:: Version 12 - 2025-12-19
+.. note:: Version 13 - 2026-09-24
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -27,6 +27,9 @@ Odoo Enterprise Subscription Agreement
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 .. v12: 7% increase is per year, not per Term
+.. v13: added "Light User" definition for versions where it exists ;
+        maintenance of Covered Extra Modules required on SaaS ;
+        non-solicitation clause wording adjusted to cover contractors.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -49,8 +52,13 @@ termination minimum 30 days before the end of the Term to the other party.
 2 Definitions
 =============
 
+Light User
+    Where supported by the Customer’s version of the Software, any user account indicated as active
+    and designated as a “Light User” in the Software, or any active employee record (from the human
+    resources App) not linked to an active non-portal user account.
+
 User
-    Any user account indicated as active in the Software, with access to creation and/or edition mode.
+    Any user account indicated as active in the Software, that is not a Light User.
     Deactivated user accounts and accounts used by external people (or systems) who only have
     limited access to the Software through the portal facilities (known as "portal Users") are not
     counted as Users.
@@ -64,14 +72,15 @@ Odoo Partner
     with a different Odoo Partner, or to work with Odoo SA directly (subject to prior notice).
 
 Extra Module
-    An extra module is a directory of source code files, or a set of Python-based customizations
+    An Extra Module is a directory of source code files, or a set of Python-based customizations
     created in a database (e.g. with Odoo Studio), that adds features or changes the standard
     behavior of the Software. It may have been developed by the Customer, by Odoo SA, by an Odoo
     Partner on behalf of the Customer, or by third parties.
 
 Covered Extra Module
-    A Covered Extra Module is an Extra Module for which the Customer chooses to pay a maintenance
-    fee in order to get support, upgrade and bug fixing services.
+    A Covered Extra Module is an Extra Module used on Odoo's SaaS hosting platform (Odoo Online),
+    or for which the Customer chooses to pay a maintenance fee in order to get support, upgrade and
+    bug fixing services.
 
 Bug
     Is considered a Bug any failure of the Software or of a Covered Extra Module that results in
@@ -108,7 +117,8 @@ under the terms set forth in :ref:`appendix_a`.
 The Customer agrees to take all necessary measures to guarantee the unmodified execution of
 the part of the Software that verifies the validity of the Odoo Enterprise Edition usage and
 collects statistics for that purpose, including but not limited to the running of an instance,
-the number of Users, the installed Apps, and the number of lines of code of Covered Extra Modules.
+the number of Users, Light Users, the installed Apps, and the number of lines of code of Covered
+Extra Modules.
 
 Odoo SA commits not to disclose individual or named figures to third parties without the consent
 of the Customer, and to deal with all collected data in compliance with its official Privacy
@@ -118,7 +128,7 @@ Upon expiration or termination of this Agreement, this license is revoked immedi
 Customer agrees to stop using the Odoo Enterprise Edition software and the Cloud Platform.
 
 Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
-fee equal to 300% of the applicable list price for the actual number of Users.
+fee equal to 300% of the applicable list price for the actual number of Users and Light Users.
 
 
 .. _services:
@@ -284,14 +294,14 @@ are provided *if and only if* the Customer is hosted on the Odoo Cloud Platform.
 --------------------
 
 The standard charges for the Odoo Enterprise subscription and the Services are based on the number
-of Users and the Subscription Plan used by the Customer, and specified in writing
+of Users, Light Users and the Subscription Plan used by the Customer, and specified in writing
 at the conclusion of the Agreement.
 
-When during the Term, the Customer has more Users or uses features that require another
-Subscription Plan than specified at the time
-of conclusion of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
-list price (at the time of the deviation from the specified number of Users or Subscription Plan)
-for the additional Users or the required Subscription Plan, for the remainder of the Term.
+When during the Term, the Customer has more Users or Light Users, or uses features that require
+another Subscription Plan than specified at the time of conclusion of this Agreement, the Customer
+agrees to pay an extra fee equivalent to the applicable list price (at the time of the deviation
+from the specified number of Users, Light Users or Subscription Plan) for the additional Users or
+Light Users, or the required Subscription Plan, for the remainder of the Term.
 
 .. Non-covered versions: according to FP, this extra fee will be computed taking into account all
    permanent changes to the per-user price, such as the Plan or any "light user discount".
@@ -303,11 +313,10 @@ for the additional Users or the required Subscription Plan, for the remainder of
 Once per year, and no earlier than 6 months after the release of a new major version of the Software,
 if the Customer’s database is on a version older than the Covered Versions, the Customer agrees
 to pay an extra fee equal to 25% of the annualized price, calculated based on the Customer's
-current per-user price and number of Users.
+current per-user price and number of Users and Light Users.
 
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
-in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge
-is a monthly fee per 100 lines of code (rounded up to the next hundred), as
+in these modules. The charge is a monthly fee per 100 lines of code (rounded up to the next hundred), as
 specified in writing at the conclusion of the Agreement. Lines of code will be counted with the ``cloc``
 command of the Software, and include all text lines in the source code of those modules, regardless
 of the programming language (Python, Javascript, XML, etc.), excluding blank lines, comment lines
@@ -351,8 +360,8 @@ The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified at the signature of this contract ;
-- immediately notify Odoo SA when their actual number of Users exceeds the
-  number specified at the conclusion of the Agreement, and in this event, pay the applicable
+- immediately notify Odoo SA when their actual number of Users or Light Users exceeds the
+  respective number specified at the conclusion of the Agreement, and in this event, pay the applicable
   additional fee as described in section :ref:`charges_standard`;
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
   that verifies the validity of the Odoo Enterprise Edition usage, as described
@@ -379,16 +388,19 @@ When the Customer chooses the Self-Hosting option, the Customer further agrees t
 
 .. _no_soliciting:
 
-6.2 No Soliciting or Hiring
----------------------------
+6.2 Non-Solicitation
+--------------------
 
 Except where the other party gives its consent in writing, each party, its affiliates and
-representatives agree not to solicit or offer employment to any employee of the other party who is
-involved in performing or using the Services under this Agreement, for the duration of the Agreement
-and for a period of 12 months from the date of termination or expiration of this Agreement.
-In case of any breach of the conditions of this section that leads to the termination of said
-employee toward that end, the breaching party agrees to pay to the other party an amount of
-EUR (€) 30 000.00 (thirty thousand euros).
+representatives agree not to solicit or offer engagement to any employee or individual independent
+contractor of the other party who is involved in performing or using the Services under this
+Agreement, for the duration of the Agreement and for 12 months following either its termination or
+the end of the relevant employee's or contractor's relationship with the other party, whichever
+occurs later.
+
+In case of any breach of the conditions of this section that leads to said employee or contractor
+terminating their relationship with the other party, the breaching party agrees to pay to the other
+party an amount of EUR (€) 30 000.00 (thirty thousand euros).
 
 
 .. _publicity:
@@ -501,8 +513,8 @@ the applicable fees for the Services within 21 days following the due date speci
 corresponding invoice, and after minimum 3 reminders.
 
 Surviving Provisions:
-  The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
-  “:ref:`liability`”, and “:ref:`general_provisions`” will survive any termination or expiration of
+  The sections ":ref:`no_soliciting`", ":ref:`confidentiality`", ":ref:`disclaimers`",
+  ":ref:`liability`", and ":ref:`general_provisions`" will survive any termination or expiration of
   this Agreement.
 
 

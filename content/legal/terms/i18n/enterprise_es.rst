@@ -13,7 +13,7 @@ Acuerdo de suscripción de Odoo Enterprise
 .. in some countries where Odoo has subsidiaries. Care must be taken to make the translation
 .. as accurate as possible in its intent and effects.
 
-.. note:: Version 12 - 2025-12-19
+.. note:: Version 13 - 2026-09-24
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -36,6 +36,9 @@ Acuerdo de suscripción de Odoo Enterprise
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 .. v12: 7% increase is per year, not per Term
 .. v12.001ES: fix translations of User/Usuario
+.. v13: added "Light User" definition for versions where it exists ;
+        maintenance of Covered Extra Modules required on SaaS ;
+        non-solicitation clause wording adjusted to cover contractors.
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -60,9 +63,15 @@ menos 30 días antes de la fecha de culminación del Acuerdo.
 2 Definiciones
 ==============
 
+Usuario Ligero
+    Cuando sea compatible con la versión del Software utilizada por el Cliente, cualquier cuenta
+    de usuario identificada como activa y designada como «Usuario Ligero» en el Software, o cualquier
+    registro de empleado activo (en la App de recursos humanos) que no esté vinculado a una cuenta
+    de usuario activa que no sea una cuenta del portal.
+
 Usuario
-    Cualquier cuenta de usuario identificada como activa en el Software y con acceso a los modos de
-    creación y/o edición. Las cuentas de usuario desactivadas, así como las cuentas utilizadas por
+    Cualquier cuenta de usuario identificada como activa en el Software que no sea un Usuario
+    Ligero. Las cuentas de usuario desactivadas, así como las cuentas utilizadas por
     personas o sistemas externos que solo tengan acceso limitado al Software a través de las
     funcionalidades del portal (los «Usuarios del portal»), no se contabilizan como Usuarios.
 
@@ -84,7 +93,8 @@ Módulo Adicional
     en nombre del Cliente o por terceros.
 
 Módulo Adicional Cubierto
-    Un Módulo Adicional Cubierto es un Módulo Adicional por el cual el Cliente ha elegido
+    Un Módulo Adicional Cubierto es un Módulo Adicional utilizado en la plataforma de
+    alojamiento SaaS de Odoo (Odoo Online), o por el cual el Cliente ha elegido
     pagar un costo de mantenimiento con el fin de obtener servicios de soporte, actualizaciones y
     corrección de Bugs.
 
@@ -122,8 +132,9 @@ bajo los términos establecidos en el Anexo A: Licencia de la versión Enterpris
 
 El Cliente acepta tomar todas las medidas necesarias para garantizar que no se modificará la parte
 del Software que ejecuta y verifica el uso y la recolección de estadísticas válidas, incluyendo pero
-sin limitarse a la ejecución de una instancia, el número de usuarios, las aplicaciones instaladas y
-el número de líneas de códigos incluidas en los Módulos Adicionales Cubiertos.
+sin limitarse a la ejecución de una instancia, el número de Usuarios, Usuarios Ligeros,
+las aplicaciones instaladas y el número de líneas de códigos incluidas en los Módulos Adicionales
+Cubiertos.
 
 Odoo SA se compromete a no divulgar cifras individuales o mencionadas a terceros sin el
 consentimiento del Cliente, y a tratar todos los datos recopilados de conformidad con la Política de
@@ -135,7 +146,7 @@ Enterprise, y la plataforma en la nube.
 
 En caso de que exista algún incumplimiento por parte del Cliente a los términos de esta sección, el
 Cliente acuerda indemnizar a Odoo SA una cuota adicional equivalente al 300% del precio aplicable
-por el número actual de usuarios.
+por el número actual de Usuarios y Usuarios Ligeros.
 
 .. _services_es:
 
@@ -299,37 +310,37 @@ plataforma de la nube de Odoo.
 
 .. _charges_standard_es:
 
-5.1 Cargos estándares
----------------------
+5.1 Cargos Estándar
+-------------------
 
-Los cargos estándares de la suscripción de Odoo Enterprise y los Servicios están basados en la
-cantidad de Usuarios y el Plan de Suscripción utilizado por el Cliente, y se especifican por
-escrito al celebrar este Acuerdo.
+Los cargos estándar de la suscripción de Odoo Enterprise y los Servicios están basados en el
+número de Usuarios, Usuarios Ligeros y el Plan de Suscripción utilizado por el Cliente, y se
+especifican por escrito al celebrar este Acuerdo.
 
-Si durante el Plazo del Acuerdo, el Cliente tiene más Usuarios o utiliza funciones que requieren
-otro Plan de Suscripción diferente al especificado en el momento de la conclusión de este Acuerdo,
-el Cliente acepta pagar una tarifa adicional equivalente al precio aplicable de conformidad con
-la lista de precios (en el momento de la desviación del número especificado de Usuarios o del
-Plan de Suscripción) por los Usuarios adicionales o el Plan de Suscripción requerido,
-por el resto del Plazo.
+Si durante el Plazo del Acuerdo, el Cliente tiene más Usuarios, Usuarios Ligeros o utiliza funciones
+que requieren otro Plan de Suscripción diferente al especificado en el momento de la conclusión
+de este Acuerdo, el Cliente acepta pagar una tarifa adicional equivalente al precio aplicable de
+conformidad con la lista de precios (en el momento de la desviación del número especificado de
+Usuarios, Usuarios Ligeros o del Plan de Suscripción) por los Usuarios o Usuarios Ligeros
+adicionales, o por el Plan de Suscripción requerido, por el resto del Plazo.
 
 Una vez al año, y no antes de 6 meses después del lanzamiento de una nueva versión principal
 del Software, si la base de datos del Cliente se encuentra en una versión anterior a las
 Versiones Cubiertas, el Cliente acepta pagar una tarifa adicional equivalente al 25% del precio
-anualizado, calculado en función del precio por usuario y el número de Usuarios actuales del Cliente.
+anualizado, calculado en función del precio por usuario y del número de Usuarios y Usuarios
+Ligeros actuales del Cliente.
 
-Además, los servicios de los Módulos Adicionales Cubiertos se cobran en función al número de
-líneas de código de estos módulos. Cuando el cliente opta por el mantenimiento de Módulos
-Adicionales Cubiertos, el costo es una tarifa mensual de 16 € por 100 líneas de código
-(redondeadas a las siguientes 100), al menos que se especifique lo contrario por escrito al celebrar
-este Acuerdo. Las líneas de código serán contadas con el comando ‘cloc’ del Software, e incluyen
-todas las líneas de texto en el código fuente de esos módulos, independientemente del lenguaje de
-programación (Python, Javascript, XML, etc), excluyendo líneas en blanco, comentarios y archivos que
-no se cargan al instalar o ejecutar el software.
+Además, los servicios de los Módulos Adicionales Cubiertos se cobran en función del número de
+líneas de código de estos módulos. El costo es una tarifa mensual por 100 líneas de código
+(redondeadas al siguiente centenar), según se especifique por escrito al celebrar este Acuerdo.
+Las líneas de código serán contadas con el comando ``cloc`` del Software e incluyen todas las
+líneas de texto en el código fuente de esos módulos, independientemente del lenguaje de
+programación (Python, Javascript, XML, etc.), excluyendo las líneas en blanco, los comentarios
+y los archivos que no se cargan al instalar o ejecutar el Software.
 
 Cuando el Cliente solicita una actualización, por cada Módulo Adicional Cubierto que no haya
-sido cubierto por los costos de mantenimiento durante los últimos 12 meses, Odoo SA puede cobrar una
-tarifa adicional única, por cada mes faltante de cobertura.
+estado cubierto por los costos de mantenimiento durante los últimos 12 meses, Odoo SA puede cobrar
+una tarifa adicional única por cada mes de cobertura faltante.
 
 .. _charges_renewal_es:
 
@@ -367,8 +378,8 @@ El Cliente se compromete a:
   presente Acuerdo, según las condiciones de pago especificadas en la
   factura correspondiente;
 
-- Notificar inmediatamente a Odoo SA cuando su número real de Usuarios
-  exceda la cantidad especificada al momento de la celebración del Acuerdo,
+- Notificar inmediatamente a Odoo SA cuando su número real de Usuarios o Usuarios Ligeros
+  exceda el número respectivo especificado al momento de la celebración del Acuerdo,
   y en este caso, pagar la tarifa adicional
   aplicable como se describe en la sección :ref:`charges_standard_es`;
 
@@ -405,16 +416,21 @@ además:
 - Otorgar a Odoo SA el acceso necesario para verificar la validez de la Edición Enterprise de Odoo
   uso a solicitud (por ejemplo, si la validación automática no es válida para el Cliente).
 
-6.2 No solicitar o contratar
-----------------------------
+.. _no_soliciting_es:
 
-Excepto cuando la otra Parte de su consentimiento por escrito, cada una de las Partes, sus filiales
-y representantes acuerdan no solicitar u ofrecer empleo a ningún empleado de la otra Parte que esté
-involucrado en la prestación o el uso de los Servicios en virtud de este Acuerdo, durante la
-vigencia del Acuerdo y por un periodo de 12 meses a partir de la fecha de terminación o vencimiento
-de este Acuerdo. En caso que ocurra algún incumplimiento de las condiciones de esta sección, se dará
-por terminado el contrato con el empleado en cuestión y la Parte que ha incumplido esta prohibición
-acuerda indemnizar a la otra Parte la cifra de treinta mil euros 30.000 EUR (€).
+6.2 No captación
+----------------
+
+Excepto cuando la otra Parte dé su consentimiento por escrito, cada una de las Partes, sus filiales
+y representantes acuerdan no captar ni ofrecer una relación profesional a ningún empleado o
+contratista independiente individual de la otra Parte que esté involucrado en la prestación o el
+uso de los Servicios en virtud de este Acuerdo, durante la vigencia del Acuerdo y por un periodo
+de 12 meses a partir de la terminación de este Acuerdo o de la finalización de la relación del
+empleado o contratista en cuestión con la otra Parte, lo que ocurra más tarde.
+
+En caso de incumplimiento de las condiciones de esta sección que lleve a dicho empleado o
+contratista a poner fin a su relación con la otra Parte, la Parte que haya incumplido esta
+prohibición acuerda pagar a la otra Parte un importe de 30.000 EUR (€) (treinta mil euros).
 
 .. _publicity_es:
 
@@ -528,8 +544,8 @@ De igual manera, Odoo SA puede terminar el Acuerdo inmediatamente si el Cliente 
 obligación de pago del Servicio dentro de los 21 días siguientes a la fecha de la respectiva
 facturación, y después de haber emitido al menos 3 recordatorios de pago.
 
-Disposiciones supervivientes: Las secciones ":ref:`confidentiality_es`",
-“:ref:`disclaimers_es`",“:ref:`liability_es`", y “:ref:`general_provisions_es`” estarán vigentes
+Disposiciones supervivientes: Las secciones ":ref:`no_soliciting_es`", ":ref:`confidentiality_es`",
+":ref:`disclaimers_es`", ":ref:`liability_es`", y ":ref:`general_provisions_es`" estarán vigentes
 incluso después de cualquier terminación o vencimiento del presente Acuerdo.
 
 .. _warranties_disclaimers_es:

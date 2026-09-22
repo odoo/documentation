@@ -14,7 +14,7 @@ Contrat d'Abonnement Odoo Enterprise
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 12 - 2025-12-19
+.. note:: Version 13 - 2026-09-24
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -35,6 +35,9 @@ Contrat d'Abonnement Odoo Enterprise
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 .. v12: 7% increase is per year, not per Term
+.. v13: added "Light User" definition for versions where it exists ;
+        maintenance of Covered Extra Modules required on SaaS ;
+        non-solicitation clause wording adjusted to cover contractors.
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -57,9 +60,15 @@ reconduit pour une même durée, à moins que l'une des parties n’envoie à l'
 2 Définitions
 =============
 
+Utilisateur Léger
+    Lorsque la version du Logiciel utilisée par le Client le prend en charge, tout compte
+    utilisateur indiqué comme actif et désigné comme "Utilisateur Léger" dans le Logiciel, ou
+    toute fiche employé active (dans l'App ressources humaines) qui n'est pas liée à un compte
+    utilisateur actif autre qu'un compte portail.
+
 Utilisateur
-    Tout compte utilisateur indiqué comme actif dans le Logiciel et donnant accès au mode création et/ou édition.
-    Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieurs
+    Tout compte utilisateur indiqué comme actif dans le Logiciel et qui n'est pas un Utilisateur
+    Léger. Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieurs
     n'ayant qu'un accès limité au Logiciel via le portail ("Utilisateurs Portail") ne sont pas
     comptés comme Utilisateurs.
 
@@ -79,7 +88,8 @@ Module Supplémentaire
     par des tiers.
 
 Module Supplémentaire Couvert
-    Un Module Supplémentaire Couvert est un Module Supplémentaire pour lequel le Client choisit de
+    Un Module Supplémentaire Couvert est un Module Supplémentaire utilisé sur la plateforme
+    d'hébergement SaaS d'Odoo (Odoo Online), ou pour lequel le Client choisit de
     payer un abonnement de maintenance afin d'obtenir de l'assistance, des corrections de bugs et
     des migrations.
 
@@ -118,8 +128,8 @@ Odoo Enterprise Edition, conformément aux conditions énoncées à la section :
 Le Client accepte de prendre toutes les mesures nécessaires pour garantir l'exécution sans aucune
 modification de la partie du Logiciel qui vérifie la validité de l'utilisation d'Odoo Enterprise
 Edition et recueille des statistiques à cet effet, y compris mais sans s'y limiter, l'exécution
-du Logiciel, le nombre d'Utilisateurs, les Apps installées et le nombre de lignes de code des
-Modules Supplémentaires Couverts.
+du Logiciel, le nombre d'Utilisateurs, d'Utilisateurs Légers, les Apps installées et le nombre de
+lignes de code des Modules Supplémentaires Couverts.
 
 Odoo SA s'engage à ne pas divulguer à une tierce partie des informations chiffrées personnelles ou
 spécifiques sans le consentement du Client, et à traiter toutes les données recueillies en
@@ -132,7 +142,7 @@ Cloud.
 
 Si le Client devait enfreindre les dispositions de la présente section, il accepte de payer
 à Odoo SA des frais supplémentaires équivalents à 300 % du tarif en vigueur applicable
-correspondant au nombre réel d'Utilisateurs.
+correspondant au nombre réel d'Utilisateurs et d'Utilisateurs Légers.
 
 
 .. _services_fr:
@@ -307,25 +317,26 @@ la Plate-forme Cloud d'Odoo.
 5.1 Tarifs standards
 --------------------
 
-Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur le nombre
-d'Utilisateurs et la Formule d'Abonnement utilisés par le Client, et précisés par écrit à la conclusion du contrat.
+Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur
+le nombre d'Utilisateurs, le nombre d'Utilisateurs Légers et la Formule d'Abonnement utilisée par
+le Client, et précisés par écrit à la conclusion du contrat.
 
-Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou utilise des fonctionnalités
-qui requièrent une autre Formule d'Abonnement que celle précisée au moment
+Pendant la durée du contrat, si le Client a plus d'Utilisateurs, d'Utilisateurs Légers ou utilise des
+fonctionnalités qui requièrent une autre Formule d'Abonnement que celle précisée au moment
 de la conclusion du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
-en vigueur applicable (au moment de la divergence par rapport au nombre d'Utilisateurs ou de la
-Formule d'Abonnement spécifiés) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
-requise, pour le reste de la Durée.
+en vigueur applicable (au moment de la divergence par rapport au nombre d'Utilisateurs,
+d'Utilisateurs Légers ou de la Formule d'Abonnement spécifiés) pour les Utilisateurs ou
+Utilisateurs Légers supplémentaires ou la Formule d'Abonnement requise, pour le reste de la Durée.
 
 Une fois par an, et au plus tôt 6 mois après la sortie d'une nouvelle version majeure du Logiciel,
 si la base de données du Client utilise une version antérieure aux Versions Couvertes, le Client accepte de payer
 des frais supplémentaires équivalant à 25% du prix annualisé, calculés sur la base du prix par utilisateur
-et du nombre d'Utilisateurs actuels du Client.
+et du nombre d'Utilisateurs et d'Utilisateurs Légers actuels du Client.
 
 Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont facturés sur base
-du nombre de lignes de code dans ces modules. Lorsque le client opte pour l'abonnement de maintenance
-des Modules Supplémentaires Couverts, le coût mensuel est défini par 100 lignes de code (arrondi à la
-centaine supérieure), tel que spécifié par écrit à la conclusion du Contrat. Les lignes de code
+du nombre de lignes de code dans ces modules.
+Le coût mensuel est défini par 100 lignes de code (arrondi à la centaine supérieure),
+tel que spécifié par écrit à la conclusion du Contrat. Les lignes de code
 sont comptées avec la commande ``cloc`` du Logiciel, et comprennent toutes les lignes de texte du code
 source de ces modules, peu importe le langage de programmation (Python, Javascript, XML, etc.),
 à l'exclusion des lignes vides, des lignes de commentaires et des fichiers qui ne sont pas chargés
@@ -369,9 +380,9 @@ Le Client accepte de/d' :
 
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
   conformément aux conditions de paiement spécifiées à la souscription du présent Contrat ;
-- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs dépasse
-  le nombre spécifié à la conclusion du Contrat, et dans ce cas, de régler les frais
-  supplémentaires applicables telles que décrits à la section :ref:`charges_standard_fr`;
+- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs ou d'Utilisateurs Légers dépasse
+  le nombre respectif spécifié à la conclusion du Contrat, et dans ce cas, de régler les frais
+  supplémentaires applicables conformément à la section :ref:`charges_standard_fr`;
 - Prendre toutes les mesures nécessaires pour garantir l'exécution non modifiée de la partie du
   Logiciel qui vérifie la validité de l'utilisation de Odoo Enterprise Edition, comme décrit à la
   section :ref:`enterprise_access_fr`;
@@ -397,17 +408,21 @@ Lorsque le Client choisit l'Auto-Hébergement, il accepte aussi de:
   qu'Odoo SA ne peut être tenue responsable de toute perte de données ;
 
 
-6.2 Non solicitation ou embauche
---------------------------------
+.. _no_soliciting_fr:
+
+6.2 Non-sollicitation
+---------------------
 
 Sauf si l'autre partie donne son consentement par écrit, chaque partie, ses sociétés affiliées
-et ses représentants conviennent de ne pas solliciter ou offrir un emploi à tout employé de
-l'autre partie qui est impliqué dans l'exécution ou l'utilisation des Services
-en vertu du présent Contrat, pendant la Durée du Contrat et pendant une période de 12 mois
-à compter de la date de résiliation ou de l'expiration du présent Contrat. En cas de violation des
-conditions de la présente section qui conduirait à la démission dudit employé à cette fin, la
-partie ayant enfreint ces dispositions accepte de payer à l'autre partie un montant forfaitaire
-de 30 000,00 euros (€) (trente mille euros).
+et ses représentants conviennent de ne pas solliciter ou proposer un engagement à tout employé ou
+prestataire indépendant individuel de l'autre partie qui est impliqué dans l'exécution ou
+l'utilisation des Services en vertu du présent Contrat, pendant la Durée du Contrat et pendant
+une période de 12 mois suivant soit sa résiliation, soit la fin de la relation de l'employé ou du
+prestataire concerné avec l'autre partie, selon la date la plus tardive.
+
+En cas de violation des conditions de la présente section qui conduirait ledit employé ou
+prestataire à mettre fin à sa relation avec l'autre partie, la partie ayant enfreint ces dispositions
+accepte de payer à l'autre partie un montant forfaitaire de 30 000,00 euros (€) (trente mille euros).
 
 
 .. _publicity_fr:
@@ -527,8 +542,9 @@ Client ne paie pas les frais applicables pour les services dans les 21 jours sui
 indiquée sur la facture correspondante, après minimum 3 rappels.
 
 Durée de l'applicabilité des dispositions:
-  Les sections ":ref:`confidentiality_fr`", “:ref:`disclaimers_fr`",   “:ref:`liability_fr`",
-  et “:ref:`general_provisions_fr`" survivront la résiliation ou l'expiration du présent contrat.
+  Les sections ":ref:`no_soliciting_fr`", ":ref:`confidentiality_fr`", ":ref:`disclaimers_fr`",
+  ":ref:`liability_fr`", et ":ref:`general_provisions_fr`" survivront la résiliation ou
+  l'expiration du présent contrat.
 
 
 .. _warranties_disclaimers_fr:
