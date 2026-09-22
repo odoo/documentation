@@ -328,7 +328,6 @@ comerciales de EL COLABORADOR en comunicados de prensa, promociones u otros anun
 En concreto, EL COLABORADOR acepta que se le mencione, y que el logotipo y la marca comercial
 de EL COLABORADOR se use solo para este fin, en la lista oficial de socios de ODOO.
 
-.. _no_soliciting_es:
 
 8.2 No captación o contratación
 -------------------------------
