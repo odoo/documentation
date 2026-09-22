@@ -29,20 +29,21 @@ Configuration
 
 To enable and set presets for a POS, follow these steps:
 
-#. Go to the :ref:`POS settings <pos/use/settings>`.
+#. Go to the :ref:`POS settings <pos/use/settings>` and select the relevant :guilabel:`Point of
+   Sale`.
 #. Under :guilabel:`Point of Sale`, enable :guilabel:`Take out / Delivery / Members`.
 #. In the :guilabel:`Available` field:
 
     - If preconfigured presets are available, select the relevant one(s) or click :guilabel:`Search
-      more`, then :guilabel:`New` to create and :ref:`configure <pos/presets/preset-form>` a new
-      preset.
+      more...`, then :guilabel:`Create New` to create and :ref:`configure <pos/presets/preset-form>`
+      a new preset.
     - If no preconfigured presets are available, click :guilabel:`Create ...`, then :ref:`configure
       <pos/presets/preset-form>` the preset.
 
 #. Define a default preset in the :guilabel:`Default` field.
 #. Click :guilabel:`Save`.
-#. If necessary, click :icon:`oi-arrow-right` :guilabel:`Configure Presets`, then select the desired
-   preset and edit it, or click :guilabel:`New` to create a new one.
+#. If necessary, click :icon:`oi-arrow-right` :guilabel:`Configure Presets`, then click the desired
+   preset to edit it, or click :guilabel:`New` to create a new one.
 
 .. tip::
    - Once presets exist in the database, they can be accessed from :menuselection:`Point of Sale -->
@@ -77,12 +78,32 @@ On the relevant :guilabel:`Presets` form, apply or edit the following options:
   are entered as negative quantities.
 - :guilabel:`Color`: Define the preset button's color in the :ref:`register
   <pos/restaurant/orders>`.
-- In the :guilabel:`Self Ordering` tab, enable :guilabel:`Available in self` to display presets in
-  the :doc:`self-order interface <self_order>`. Then, select a service zone in the
-  :guilabel:`Service at` field and select or :doc:`configure an email template
-  </applications/general/companies/email_template>` in the :guilabel:`Email Confirmation` field.
-- In the :guilabel:`Options` tab, enable :guilabel:`Guest` to require users to enter the number of
-  guests when :ref:`taking an order <pos/restaurant/orders>`.
+- In the :guilabel:`Self Ordering` tab, click the :icon:`fa-toggle-on` :guilabel:`(toggle-on)` icon
+  to enable :guilabel:`Available in self` and display the preset in the :doc:`self-order interface
+  <self_order>`, then customize the fields as follows:
+
+  - Select a service zone in the :guilabel:`Service at` field.
+  - Select or :doc:`configure an email template </applications/general/companies/email_template>` in
+    the :guilabel:`Email Confirmation` field.
+
+- In the :guilabel:`Options` tab:
+
+  - Enable :guilabel:`Service Fee` to add an automatic service fee to orders, then customize the
+    fields as follows:
+
+    - :guilabel:`Service Fee Product`: Select a product to :ref:`determine the income account and
+      taxes <accounting/get_started/products>` for the service fee.
+    - Service fee :guilabel:`Type`: Choose either :guilabel:`Fixed Price` or :guilabel:`Percent` of
+      the order total. If set to :guilabel:`Percent`, specify whether the fee is :guilabel:`Based
+      on` the order total before or after discounts are applied.
+
+      .. note::
+         Discounts are applied through :ref:`discount and loyalty programs <pos/pricing/loyalty>`,
+         :ref:`global and line discounts <pos/pricing/discounts>`, and :ref:`pricelists
+         <pos/pricing/pricelists>`.
+
+  - Enable :guilabel:`Guest` to prompt users to enter the number of guests when :ref:`taking an
+    order <pos/restaurant/orders>`.
 
 .. tip::
    On the preset form, click the :icon:`fa-shopping-cart` :guilabel:`Order(s)` smart button to
@@ -94,7 +115,7 @@ Apply presets to POS orders
 ===========================
 
 Presets are available in both the :ref:`POS register <pos/restaurant/orders>` and the :doc:`kiosk
-<self_order>` (provided the :guilabel:`Available in self-order` feature is :ref:`enabled
+<self_order>` (provided the :guilabel:`Available in self` feature is :ref:`enabled
 <pos/presets/preset-form>`). The workflow varies based on the :ref:`preset configuration
 <pos/presets/preset-form>`.
 
@@ -119,25 +140,25 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
       - If :guilabel:`Identification` is required for the selected preset, you must enter specific
         information (depending on the selected option) before proceeding to checkout:
 
-        - :guilabel:`Name`: Select an order name or enter a new one (only for :doc:`restaurant
-          points of sale <../restaurant>`). To modify it, click the :icon:`fa-ellipsis-v`
-          (:guilabel:`Actions`) menu and select :icon:`fa-pencil-square-o` :guilabel:`Edit Order
-          Name`.
-        - :guilabel:`Address`: Choose an existing customer or :guilabel:`Create` a new one, and make
-          sure they have an address assigned. The customer's name is :ref:`displayed in the pad
-          <pos/use/customers>`. Click it to select a different customer or :ref:`edit
-          <pos/use/customers>` the :ref:`customer's details <contacts/contact-form>` if needed.
+        - :guilabel:`Name`: When creating a new order, after selecting the preset, select or enter
+          an order name (only for :doc:`restaurant points of sale <../restaurant>`).
+
+          .. tip::
+             To modify the order name, click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) menu
+             and select :icon:`fa-pencil-square-o` :guilabel:`Set Order Name`.
+
+        - :guilabel:`Address`: Ensure the selected or newly created customer has an address
+          assigned. Click the customer's name :ref:`in the pad <pos/use/customers>` to select a
+          different customer or :ref:`edit <pos/use/customers>` the :ref:`customer's details
+          <contacts/contact-form>` if needed.
 
           .. tip::
              Use the :icon:`fa-search` search bar to find a customer.
 
 
       - If the :guilabel:`Manage orders by time` option is enabled for the selected preset, select a
-        date and time (displayed in green). The selected time is displayed in the header of the POS
-        interface. Click it to modify the time.
-
-        .. image:: presets/select-time-date.png
-           :alt: Choose a time for a takeout order.
+        date and time. Time slots that reach :guilabel:`Preparation capacity` appear in red. Click
+        the selected time in the POS interface header to modify the time slot.
 
       - If the :guilabel:`Guest` feature is enabled for the selected preset, a pop-up appears
         prompting you to enter the number of guests, and the amount per guest is displayed (the
@@ -146,6 +167,14 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
         .. image:: presets/guest-count.png
            :alt: Enter the number of guests in the POS register.
            :scale: 70%
+      - If the :guilabel:`Service Fee` option is enabled for the selected preset, a service fee is
+        automatically added to the order:
+
+        - If the fee :guilabel:`Type` is :guilabel:`Percent`, the service fee order line cannot be
+          changed.
+        - If the fee :guilabel:`Type` is :guilabel:`Fixed Price`, the :ref:`quantity and price
+          <pos/use/sell>` of the service fee order line can be modified, for example, to increase
+          the fee if there are several guests.
 
    .. tab:: Kiosk
 
@@ -161,14 +190,15 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
       actions in the kiosk:
 
       - If the :guilabel:`Manage orders by time` option is enabled, customers must select a date and
-        time in the :guilabel:`Select an hour` pop-up.
+        time in the :guilabel:`Select an hour` pop-up. Time slots that reach :guilabel:`Preparation
+        capacity` are not selectable.
       - Customers may need to enter specific information in the :guilabel:`We need more info`
         pop-up:
 
         - If :guilabel:`Identification` is required:
 
-          - :guilabel:`Name`: Customers must enter their :guilabel:`Name`. The :guilabel:`Phone`
-            field is optional.
+          - :guilabel:`Name`: Customers must enter their :guilabel:`Name` and :guilabel:`Phone`
+            number.
           - :guilabel:`Address`: Customers must enter their :guilabel:`Name`, :guilabel:`Phone`
             number, and address details.
 
@@ -178,6 +208,8 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
       - If :guilabel:`Table` is selected in the :guilabel:`Service at` field for :guilabel:`Self
         ordering` mode, customers must enter their tracker number at the end of the ordering
         process.
+      - If the :guilabel:`Service Fee` option is enabled, a service fee is automatically added to
+        the order, and customers cannot modify it.
 
 .. seealso::
   - :doc:`preparation`
