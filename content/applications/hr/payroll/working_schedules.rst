@@ -9,7 +9,7 @@ configured in the database.
 
 .. note::
    In Odoo's **Payroll** app, *working schedules* are referred to as *working hours* in :ref:`salary
-   structures <payroll/structure-types>`.
+   structures <payroll/salaries/structure-types>`.
 
 To view the currently configured working schedules, navigate to :menuselection:`Payroll app -->
 Configuration --> Working Schedules`, and the :guilabel:`Working Schedules` dashboard loads.

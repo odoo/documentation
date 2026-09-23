@@ -121,8 +121,8 @@ configured:
 
   .. tip::
      Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type
-     <payroll/structure-types>` to configure employees in bulk. If needed, the default can be
-     overridden on individual employee records if exceptions are needed.
+     <payroll/salaries/structure-types>` to configure employees in bulk. If needed, the default can
+     be overridden on individual employee records.
 
 - :guilabel:`Wage`: Enter the monthly wage in this field, in :abbr:`JOD (Jordanian Dollars)`.
 - :guilabel:`Employee Type`: Select what kind of employee the contract is for, such as
