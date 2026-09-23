@@ -5,11 +5,23 @@ Shop Floor overview
 .. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |MOs| replace:: :abbr:`MOs (Manufacturing Orders)`
 
-The *Shop Floor* module is a companion module to the *Manufacturing* app. *Shop Floor* provides a
+The *Shop Floor* module is a companion module to the **Manufacturing** app. *Shop Floor* provides a
 visual interface for processing manufacturing orders (MOs) and work orders. It also allows
 manufacturing employees to track the amount of time spent working on manufacturing and work orders.
 
-The *Shop Floor* module is :ref:`installed <general/install>` alongside the *Manufacturing* app.
+The *Shop Floor* module is :ref:`installed <general/install>` alongside the **Manufacturing** app.
+
+.. note::
+   The **Manufacturing** app can only be accessed via a non-light-user account (standard users and
+   administrators).
+
+   The **Inventory**, **Quality**, **Maintenance**, and **Repair** apps are also hidden for light
+   users.
+
+   The *Shop Floor* module and the **Barcode** app remain available to light users.
+
+   Light users can still perform quality checks, create quality alerts, and request maintenance from
+   within the *Shop Floor* module.
 
 Access Shop Floor
 =================
@@ -137,6 +149,11 @@ which opens an *Options* pop-up window with additional options for the |MO|:
 - :guilabel:`Add By-product`: Add a product that is created as a byproduct of this work order. This
   displays when the :guilabel:`By-Products` setting is enabled in the **Manufacturing** app.
 - :guilabel:`Open Manufacturing Order`: opens the |MO| in the **Manufacturing** app.
+
+.. note::
+   Only users with standard or administrator accounts (non-light user accounts) can access the
+   **Manufacturing** app.
+
 - :guilabel:`Log Note`: Enter a note that is visible in the *Shop Floor* module and throughout all
   steps on the shop floor.
 
@@ -205,7 +222,12 @@ which opens a pop-up window with additional options for the work order:
   more about the scrap order form in :ref:`inventory/scrap-from-stock`.
 - :guilabel:`Modify Routing`: Move the work order to another work center or add another work order.
 - :guilabel:`Add Component`: Adds an additional component to the |MO|.
-- :guilabel:`Open Manufacturing Order`: Open the associated |MO| in the *Manufacturing* app.
+- :guilabel:`Open Manufacturing Order`: Open the associated |MO| in the **Manufacturing** app.
+
+.. note::
+   Only users with standard or administrator accounts (non-light user accounts) can access the
+   **Manufacturing** app.
+
 - :guilabel:`Update instructions`: Propose a change to the work order's instructions or steps.
 - :guilabel:`Create a Quality Alert`: Open a quality alert form that can be filled out to alert a
   quality team about a potential issue.
