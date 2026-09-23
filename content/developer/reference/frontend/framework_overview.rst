@@ -667,6 +667,21 @@ tooltips using some special data attributes:
 
     <button data-tooltip="This is a tooltip">Do something</button>
 
+Such a tooltip is only displayed when it brings something to the user: if its
+content is exactly the text displayed by the element, and if that text is
+entirely visible (i.e. neither truncated by an overflow nor clipped by an
+ancestor), the tooltip would only repeat what the user can already read, so it
+isn't displayed. This is typically used on a truncated text, to allow the user
+to read its full value:
+
+.. code-block:: xml
+
+    <span class="text-truncate" t-att-data-tooltip="record.name">
+      <t t-out="record.name"/>
+    </span>
+
+Note that this doesn't apply to tooltips using a template (see below), as their
+content can't be compared with a text.
 
 The ideal position of the tooltip can be specified thanks to the attribute
 `data-tooltip-position`. It should be one of the following strings: `top`, `bottom`,
