@@ -225,9 +225,9 @@ Specify fiscal positions in the :file:`data/template/account.fiscal.position-xx.
 The first fiscal position that matches the company's country is considered the domestic fiscal position.
 
 .. example::
-  `addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv <{GITHUB_PATH}/addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv>`_
+  `addons/l10n_es/data/template/account.fiscal.position-es_common.csv <{GITHUB_PATH}/addons/l10n_es/data/template/account.fiscal.position-es_common.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_es/data/template/account.fiscal.position-es_common.csv
     :condition: odoo_dir_in_path
     :language: csv
     :end-at: account.europe_vat","",""
