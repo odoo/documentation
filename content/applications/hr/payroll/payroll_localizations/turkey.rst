@@ -99,8 +99,8 @@ configured:
 
   .. tip::
      Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type
-     <payroll/structure-types>` to configure employees in bulk. If needed, the default can be
-     overridden on individual employee records if exceptions are needed.
+     <payroll/salaries/structure-types>` to configure employees in bulk. If needed, the default can
+     be overridden on individual employee records.
 
 - :guilabel:`Net to Gross`: Leave this box unchecked if the gross salary is based on a fixed gross
   and a dynamically computed net (Gross to Net). Activate this option if the gross salary is based
