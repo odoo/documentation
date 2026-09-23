@@ -177,8 +177,8 @@ configured:
 
   .. tip::
      Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type
-     <payroll/structure-types>` to configure employees in bulk. If needed, the default can be
-     overridden on individual employee records if exceptions are needed.
+     <payroll/salaries/structure-types>` to configure employees in bulk. If needed, the default can
+     be overridden on individual employee records.
 
 - :guilabel:`Contract Type`: Determines how the employee is paid and classified, such as
   :guilabel:`Salary-exempt`, :guilabel:`Salary-nonexempt`, :guilabel:`Hourly`.
