@@ -11,6 +11,11 @@ Barcode
 track inventory movements using those barcodes. By connecting a barcode scanner, certain inventory
 processes can be triggered by scanning barcodes.
 
+.. note::
+   The **Barcode** app is one of the apps available to light users. Light users can only access the
+   **Barcode** app (or other apps available to light users). Light users do not have access to the
+   **Inventory** app.
+
 .. seealso::
    `Odoo Tutorials: Barcode <https://www.odoo.com/slides/barcode-30>`_
 
