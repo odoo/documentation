@@ -32,11 +32,11 @@ in, and store credentials. Click :guilabel:`New Project`.
 Give the API project a clear name, like `Odoo Sync`, so it can be identified. Then click the
 :guilabel:`Create` button.
 
-Enable Google calendar API
+Enable Google Calendar API
 --------------------------
 
-Now, click on :guilabel:`Enabled APIs and Services` in the left menu. Select :guilabel:`Enabled APIs
-and Services` again if the :guilabel:`Search bar` does not appear.
+Now, click :guilabel:`Enable APIs and Services` in the side menu. If the search bar does not appear,
+click :guilabel:`Enable APIs and Services` again.
 
 .. image:: google/enable-apis-services.png
    :alt: Enable APIs and Services on the API Project.
@@ -68,8 +68,10 @@ Follow the proceeding steps, in order:
 #. In :guilabel:`Audience`, select :guilabel:`External`, then click the :guilabel:`Next` button.
 #. In :guilabel:`Contact Information`, enter the email again, then click the :guilabel:`Next`
    button.
-#. In :guilabel:`Finish`, tick the checkbox to agree to :guilabel:`Google API Services: User
-   Policy.` For the last step, click the :guilabel:`Create` button.
+#. In :guilabel:`Finish`, click the checkbox to agree to :guilabel:`Google API Services: User
+   Policy`, then click :guilabel:`Continue`.
+
+For the last step, click the :guilabel:`Create` button.
 
 Authorized domain setup
 -----------------------
@@ -92,11 +94,11 @@ Create credentials
 ------------------
 
 The *Client ID* and the *Client Secret* are both needed to connect Google Calendar to Odoo. This is
-the last step in the Google console. Begin by clicking :guilabel:`Clients` in the left menu.
-Then, click :guilabel:`Create Credentials`, and select :guilabel:`OAuth client ID`, Google will open
-a guide to create credentials.
+the last step in the Google console. Begin by clicking :guilabel:`Clients` in the left menu. Then,
+click :guilabel:`Create Credentials` and select :guilabel:`OAuth client ID`. This causes Google to
+open a guide to create the credentials.
 
-Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website application` for the
+On the *Create OAuth client ID* page, select :guilabel:`Web application` for the
 :guilabel:`Application Type` field, and type `My Odoo Database` for the :guilabel:`Name`.
 
 - Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and type
