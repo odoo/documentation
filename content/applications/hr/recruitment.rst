@@ -370,7 +370,7 @@ appears in the chatter.
    - :doc:`recruitment/refuse_applicant`
    - :doc:`recruitment/application_analysis`
    - :doc:`recruitment/source_analysis`
-   - :doc:`recruitment/velocity_analysis`
+   - :doc:`recruitment/hiring_velocity`
    - :doc:`recruitment/team_performance`
 
 .. toctree::
@@ -385,5 +385,5 @@ appears in the chatter.
    recruitment/refuse_applicant
    recruitment/application_analysis
    recruitment/source_analysis
-   recruitment/velocity_analysis
+   recruitment/hiring_velocity
    recruitment/team_performance
