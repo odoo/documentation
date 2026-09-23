@@ -285,8 +285,8 @@ Ensure the following fields are configured:
 
   .. tip::
      Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type
-     <payroll/structure-types>` to configure employees in bulk. If needed, the default can be
-     overridden on individual employee records if exceptions are needed.
+     <payroll/salaries/structure-types>` to configure employees in bulk. If needed, the default can
+     be overridden on individual employee records.
 
 - :guilabel:`Wage`: Enter the wage, and select the corresponding time period. The following options
   are the **only** pay run frequencies accepted by Australia: :guilabel:`Daily`, :guilabel:`Weekly`,
