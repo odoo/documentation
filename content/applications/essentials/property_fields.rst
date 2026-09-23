@@ -191,7 +191,7 @@ models. Once set, the property is shared by all records that are linked to the s
            :ref:`Payslip <payroll/new-payslip>`
          - :ref:`Company <employees/general-info>`
 
-           :ref:`Structure <payroll/structure-types>`
+           :ref:`Structure <payroll/salaries/structure-types>`
        * - :guilabel:`Planning`
          - :ref:`Shift <planning/roles>`
          - :ref:`Role <planning/roles>`

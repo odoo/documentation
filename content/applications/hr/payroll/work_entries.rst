@@ -7,8 +7,8 @@ account for all types of work and time off, such as :guilabel:`Attendance`, :gui
 Off`, :guilabel:`Training`, or :guilabel:`Public Holiday`.
 
 The **Payroll** app automatically creates work entries based on the employee's :ref:`salary
-structure type <payroll/structure-types>`, and from the **Planning**, **Attendances**, and **Time
-Off** applications. When needed, work entries can also be :ref:`created manually
+structure type <payroll/salaries/structure-types>`, and from the **Planning**, **Attendances**, and
+**Time Off** applications. When needed, work entries can also be :ref:`created manually
 <payroll/new-work-entry>`.
 
 Work entries provide the **Payroll** app with the worked hours used to compute employee paychecks,
