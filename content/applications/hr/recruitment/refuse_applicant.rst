@@ -100,7 +100,7 @@ After clicking the :guilabel:`Refuse` button on an applicant form, a :ref:`refus
 <recruitment/refuse-reasons>` is selected from the *Refuse Reason* pop-up window.
 
 The applicant's email address automatically populates the :guilabel:`Applicant` field. The
-:guilabel:`Subject` and email body are populated according to the corresponding email template.
+:guilabel:`Subject` and email body are populated according to the corresponding email
 
 To send the refusal email to the applicant, click :guilabel:`Refuse` at the bottom of the *Refuse
 Reason* pop-up window. The refusal email is sent to the applicant, and a red :guilabel:`Refused`
