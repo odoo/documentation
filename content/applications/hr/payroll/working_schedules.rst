@@ -15,7 +15,7 @@ Configuration --> Working Schedules`, and the *Working Schedules* dashboard load
 
 .. note::
    In Odoo's **Payroll** app, *working schedules* are referred to as *working hours* in :ref:`salary
-   structures <payroll/structure-types>`.
+   structures <payroll/salaries/structure-types>`.
 
 .. _payroll/new-working-schedule:
 
