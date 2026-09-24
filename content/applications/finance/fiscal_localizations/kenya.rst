@@ -36,7 +36,7 @@ Settings`, click :guilabel:`Update Info` in the :guilabel:`Companies` section, a
 
 To initialize the OSCU:
 
-#. Go to :menuselection:`Settings --> General Settings` and scroll down to the :guilabel:`Kenya
+#. Go to :menuselection:`Settings --> Accounting Settings` and scroll down to the :guilabel:`Kenya
    eTIMS Integration` section.
 #. Set the :guilabel:`eTIMS Server Mode` to :guilabel:`Test` for the initialization.
 #. Enter the :guilabel:`Serial Number` of the device and tick the two check boxes.
