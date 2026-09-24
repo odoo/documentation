@@ -22,9 +22,10 @@ Activities are the methods of communication or server actions, organized in a wo
 executed within a campaign; they are the building blocks of the campaign's workflow.
 
 A new activity can be added to the workflow on a campaign form by selecting an existing campaign or
-:ref:`creating a new campaign <marketing_automation/campaigns>` from the :menuselection:`Marketing
-Automation app --> Campaigns` dashboard, then clicking the :guilabel:`Add new activity` button in
-the :guilabel:`Workflow` section. Doing so opens the :guilabel:`Create Activities` pop-up window.
+:ref:`creating a new campaign <marketing_automation/marketing_automation/campaigns>` from the
+:menuselection:`Marketing Automation app --> Campaigns` dashboard, then clicking the :guilabel:`Add
+new activity` button in the :guilabel:`Workflow` section. Doing so opens the :guilabel:`Create
+Activities` pop-up window.
 
 First, define the name of the activity in the :guilabel:`Activity Name` field, and select the
 :ref:`type of activity <marketing_automation/activity-types>` to be executed from the
