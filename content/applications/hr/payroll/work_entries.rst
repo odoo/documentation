@@ -9,39 +9,34 @@ Off`, :guilabel:`Training`, or :guilabel:`Public Holiday`.
 The **Payroll** app automatically creates work entries based on the employee's :ref:`salary
 structure type <payroll/structure-types>`, and from the **Planning**, **Attendances**, and **Time
 Off** applications. When needed, work entries can also be :ref:`created manually
-<payroll/new-work-entry>`.
+<payroll/work-entries/new-work-entry>`.
 
 Work entries provide the **Payroll** app with the worked hours used to compute employee paychecks,
 if the employee's salary is based on work entries, as opposed to a salaried position.
 
 .. note::
    Odoo configures several work entry types by default, but :ref:`additional work entry types can be
-   created <payroll/work-entry-types>`, when necessary.
+   created <payroll/work-entries/work-entry-types>`, when necessary.
 
-.. _payroll/work-entry-dashboard:
+.. _payroll/work-entries/work-entry-dashboard:
 
 Work entry dashboard
 ====================
 
-The *Work Entries* dashboard of the **Payroll** app provides a visual overview of the individual
-work entries for every employee.
+The *Work Entry* dashboard of the **Payroll** app provides a visual overview of the individual work
+entries for every employee.
 
 To open the dashboard, navigate to :menuselection:`Payroll app --> Work Entries --> Work Entries`.
 
-On the :guilabel:`Work Entry` dashboard, work entries appear in alphabetical order, based on the
-first name of the employees. The entire month is displayed, with the current day highlighted in pale
-yellow.
-
-The :guilabel:`Work Entry` dashboard has a default :guilabel:`Conflicting` filter, which displays
-only work entries with :ref:`conflicts <payroll/conflicts>` to be resolved.
+On the *Work Entry* dashboard, work entries appear in alphabetical order, based on the first name of
+the employees. The entire month is displayed, with the current day highlighted in pale yellow. A
+default :guilabel:`Active` filter is set on the dashboard, which displays only work entries for
+current employees.
 
 .. image:: work_entries/work-entries-overview.png
-   :alt: Conflicts dashboard view showing all employee's conflicts in work entries.
+   :alt: Allcurrent employee work entries displayed on the dashboard.
 
-.. tip::
-   Remove the default :guilabel:`Conflicting` filter from the search bar to view *all* work entries.
-
-.. _payroll/new-work-entry:
+.. _payroll/work-entries/new-work-entry:
 
 Add a new work entry
 ====================
@@ -49,35 +44,27 @@ Add a new work entry
 If a work entry is missing, such as sick time, or if an employee forgot to clock in and out for a
 shift, a new work entry must be created for the missing shift.
 
-Click :guilabel:`New` on the :ref:`work entry dashboard <payroll/work-entry-dashboard>`, and a blank
-:guilabel:`Create` work entry pop-up form appears. Enter the following information on the form:
+.. important::
+   Work entries can **only** be created in the list view of the :ref:`work entry dashboard
+   <payroll/work-entries/work-entry-dashboard>`.
 
-- :guilabel:`Description`: Enter a short description for the work entry, such as `Sick Time`. The
-  default entry is `Attendance: (Employee)`.
-- :guilabel:`Employee`: Select the employee the work entry is for, using the drop-down menu.
+Click the :icon:`fa-list` :guilabel:`(List)` button on the :ref:`work entry dashboard
+<payroll/work-entries/work-entry-dashboard>`, then click the :guilabel:`New` button to load a
+blank work entry form. Enter the following information on the form:
+
+- :guilabel:`Description`: Enter a short description for the work entry, if desired. This is not
+  required, and can be left blank.
 - :guilabel:`Work Entry Type`: Select the :guilabel:`Work Entry Type` using the drop-down menu.
-- :guilabel:`From` and :guilabel:`To`: Enter the start (:guilabel:`From`) and end (:guilabel:`To`)
-  dates and times for the work entry.
-
-  First, click on either the :guilabel:`From` or :guilabel:`To` line to reveal a calendar pop-up
-  window. Select the date by navigating to the correct month, then click on the specific day to
-  select it.
-
-  Next, select the time, by clicking on either the hour or minute fields at the bottom of the
-  calendar, and set the desired time.
-
-  When the date and time for the entry are correct, click the :guilabel:`Apply` button.
-- :guilabel:`Duration`: This field displays the hours based on the :guilabel:`To` and
-  :guilabel:`From` entries. Modifying this field modifies the :guilabel:`To` field (the
-  :guilabel:`From` field does not change).
-
-Once the desired information is entered, click :guilabel:`Save & Close` to save the entry, and close
-the pop-up form.
+  :guilabel:`Attendance` populates this field by default.
+- :guilabel:`Employee`: Select the employee the work entry is for, using the drop-down menu.
+- :guilabel:`Date`: Using the calendar selector, select the date for the work entry.
+- :guilabel:`Duration`: Enter the number of hours the work entry is for. This field displays `08:00
+  Hours` by default.
 
 .. image:: work_entries/create.png
    :alt: Filling in the work entry Create form in Odoo.
 
-.. _payroll/conflicts:
+.. _payroll/work-entries/conflicts:
 
 Conflicts
 =========
@@ -118,7 +105,7 @@ work entry already exists, the time off request is entered in a :guilabel:`Time 
 Conflicts can be resolved either directly on the work entry or in the detailed time off request
 form.
 
-.. _payroll/time-off-work-entry:
+.. _payroll/work-entries/time-off-work-entry:
 
 Resolve on work entry
 ~~~~~~~~~~~~~~~~~~~~~
@@ -140,7 +127,7 @@ resolved.
    If the time off is approved, the status of the work entry conflict changes to
    :guilabel:`Cancelled`. If the time off is refused, the status changes to :guilabel:`Draft`.
 
-.. _payroll/time-off-request-form:
+.. _payroll/work-entries/time-off-request-form:
 
 Resolve on time off request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -171,7 +158,7 @@ Since the time off was approved in the time off window, click the :guilabel:`X` 
 corner to close the window. The conflict disappears from the :guilabel:`Work Entry` dashboard, since
 it has been resolved.
 
-.. _payroll/regenerate-work-entries:
+.. _payroll/work-entries/regenerate-work-entries:
 
 Regenerate work entries
 =======================
@@ -179,11 +166,11 @@ Regenerate work entries
 After conflicts are resolved, the affected work entries must be regenerated. This recreates the
 specified work entries, and overwrites the previously conflicting work entries.
 
-While :ref:`conflicts <payroll/conflicts>` *can* be resolved individually, if the conflicts are
-caused by another application, such as **Planning** or **Attendances**, it is best practice to
-correct the record in the application causing the conflict. The reason this method is recommended is
-because, if the issue in the related application is **not** resolved, when work entries are
-regenerated, the conflicts reappear.
+While :ref:`conflicts <payroll/work-entries/conflicts>` *can* be resolved individually, if the
+conflicts are caused by another application, such as **Planning** or **Attendances**, it is best
+practice to correct the record in the application causing the conflict. The reason this method is
+recommended is because, if the issue in the related application is **not** resolved, when work
+entries are regenerated, the conflicts reappear.
 
 First, ensure the issues are resolved in the specific applications that caused the work entry
 conflicts. Once the conflicts have been resolved in the corresponding apps, open the work entry
@@ -213,19 +200,19 @@ finished, the pop-up window closes.
    The **Payroll** app then pulls the new, corrected data form the **Planning** app, and recreates
    the correct work entries for that employee. All conflicts for that employee are now resolved.
 
-.. _payroll/work-entry-types:
+.. _payroll/work-entries/work-entry-types:
 
 Work entry types
 ================
 
-When :ref:`creating a work entry <payroll/new-work-entry>` in the **Payroll** application, or when a
+When :ref:`creating a work entry <payroll/work-entries/new-work-entry>` in the **Payroll** application, or when a
 new time off type is created in the **Time Off** application, a work entry *type* needs to be
 selected.
 
 The **Payroll** app comes with nine preconfigured work entry types, and depending on the installed
 :doc:`payroll localization <payroll_localizations>`, additional country-specific work entries may be
 configured. If there is a need for additional work entry types, they can be :ref:`created
-<payroll/new-work-entry-type>`.
+<payroll/work-entries/new-work-entry-type>`.
 
 To view the current work entry types available, navigate to :menuselection:`Payroll app -->
 Configuration --> Work Entries --> Work Entry Types`.
@@ -239,7 +226,7 @@ are correctly entered.
 .. image:: work_entries/work-entry-types.png
    :alt: List of all work entry types currently available for use, with the payroll code and color.
 
-.. _payroll/new-work-entry-type:
+.. _payroll/work-entries/new-work-entry-type:
 
 New work entry type
 -------------------
