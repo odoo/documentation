@@ -7,7 +7,7 @@ next step, we will customize a kanban view. This is a more complicated project t
 some non trivial aspects of the framework. The goal is to practice composing views, coordinating
 various aspects of the UI, and doing it in a maintainable way.
 
-Bafien had the greatest idea ever: a mix of a kanban view and a list view would be perfect for your
+Fabien had the greatest idea ever: a mix of a kanban view and a list view would be perfect for your
 needs! In a nutshell, he wants a list of customers on the left of the CRM kanban view. When you
 click on a customer on the left sidebar, the kanban view on the right is filtered to only display
 leads linked to that customer.
