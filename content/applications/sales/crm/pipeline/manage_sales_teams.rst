@@ -1,3 +1,8 @@
+.. meta::
+   :description: Learn how to create and manage multiple sales teams in the Odoo CRM app, including
+                 adding team members with or without rules-based assignment, enabling multi teams,
+                 using the sales team dashboard, and switching between teams in the CRM pipeline.
+
 ==================
 Manage sales teams
 ==================
@@ -6,6 +11,8 @@ The *Sales Teams* feature within Odoo's **CRM** app allows for the creation and 
 multiple sales teams, each with their own assignment rules, invoicing targets, and roster of
 salespeople. This in turn makes it easy to have different sales teams for different regions,
 different languages, different compensation structures, performance tracking purposes, and more.
+
+.. _crm/manage_sales_teams/create-sales-team:
 
 Create a sales team
 ===================
@@ -35,7 +42,7 @@ leads first.
    If the **Sales** app is installed on the database, an :guilabel:`Invoicing Target` field appears
    on the sales team form. This is the revenue target for the current month. The amount entered in
    this field is used to populate the invoicing progress bar on the :ref:`sales team dashboard
-   <crm/sales-team-dashboard>`.
+   <crm/manage_sales_teams/sales-team-dashboard>`.
 
 Add sales team members
 ----------------------
@@ -49,11 +56,10 @@ With rules-based assignment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add team members with rules-based assignment enabled, click the :guilabel:`Add Sales Team
-Members` link under the :guilabel:`Members` tab. This opens the :guilabel:`Create Sales Team
-Members` pop-up window. Assign a salesperson in the :guilabel:`Salesperson` field and adjust their
-lead assignment rules if desired under the :guilabel:`Lead Assignment` tab. Click the
-:guilabel:`Save & Close` button to finish, or click :guilabel:`Save & New` to open a blank form and
-keep adding sales team members.
+Members` link under the *Members* tab. This opens the *Create Sales Team Members* pop-up window.
+Assign a salesperson in the :guilabel:`Salesperson` field and adjust their lead assignment rules if
+desired under the *Lead Assignment* tab. Click the :guilabel:`Save & Close` button to finish, or
+click :guilabel:`Save & New` to open a blank form and keep adding sales team members.
 
 .. note::
    When using rules-based assignment, Odoo automatically limits the maximum number of leads an
@@ -78,7 +84,7 @@ assigned leads manually.
 The :guilabel:`Leads (30 days)` graphic on the sales team members' cards tracks how many leads a
 salesperson has been assigned in the past thirty days for this team relative to the maximum number
 that they should be assigned. A sales team member's maximum number of leads may be set on their
-:guilabel:`Open: Sales Team Members` form.
+*Open: Sales Team Members* form.
 
 .. tip::
    :doc:`Assignment rules <../track_leads/lead_scoring>` can be configured for individual
@@ -88,10 +94,9 @@ Without rules-based assignment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add team members without rules-based assignment enabled, click the :guilabel:`Add Salespersons`
-link under the :guilabel:`Members` tab. This opens the :guilabel:`Add: Salespersons` pop-up window.
-Tick the checkbox to the left of the salesperson to be added to the team, then click
-:guilabel:`Select`. New salespersons can be created from this window by clicking the :guilabel:`New`
-button, as well.
+link under the *Members* tab. This opens the *Add: Salespersons* pop-up window. Tick the checkbox to
+the left of the salesperson to be added to the team, then click :guilabel:`Select`. New salespersons
+can be created from this window by clicking the :guilabel:`New` button, as well.
 
    .. image:: manage_sales_teams/add-salespersons.png
       :alt: The Add: Salespersons pop-up window on a new sales team with Mitchell Admin selected.
@@ -105,12 +110,13 @@ Enable multi teams
 To allow salespeople to be assigned to more than one sales team, the *Multi Teams* setting needs to
 be enabled. First, navigate to :menuselection:`CRM app --> Configuration --> Settings`. Under the
 :guilabel:`CRM` section, tick the checkbox labeled :guilabel:`Multi Teams`. Then, click
-:guilabel:`Save` at the top-left of the page.
+:guilabel:`Save` at the top-left of the page. Salespeople may then be assigned to multiple teams at
+the same time without having to be manually moved between team pipelines.
 
 .. image:: manage_sales_teams/enable-multi-teams.png
    :alt: The settings page of the CRM app with the Multi Teams setting enabled.
 
-.. _crm/sales-team-dashboard:
+.. _crm/manage_sales_teams/sales-team-dashboard:
 
 Sales team dashboard
 ====================
@@ -124,6 +130,17 @@ user is a member of appears in the dashboard.
 Click on the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the top-right corner of
 team's card to open a drop-down menu. Then, to view or edit the team's settings, click
 :guilabel:`Configuration`.
+
+View teams in the pipeline
+--------------------------
+
+On the CRM pipeline, a dropdown labeled :guilabel:`All Teams` allows for rapidly switching between
+defined salesteams. Click the dropdown menu to choose from teams. Teams may be :ref:`created
+<crm/manage_sales_teams/create-sales-team>` or deleted from this dropdown by clicking
+:guilabel:`Manage Teams`.
+
+.. image:: manage_sales_teams/all-teams-dropdown.png
+   :alt: The expanded All Teams dropdown menu.
 
 .. seealso::
    - :doc:`../optimize/utilize_activities`
