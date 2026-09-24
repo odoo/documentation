@@ -146,7 +146,7 @@ models. Once set, the property is shared by all records that are linked to the s
          - Category
        * - :guilabel:`CRM`
          - :doc:`Lead/Opportunity </applications/sales/crm/acquire_leads/email_manual>`
-         - :ref:`Sales team <crm/sales-team-dashboard>`
+         - :ref:`Sales team <crm/manage_sales_teams/sales-team-dashboard>`
        * - :guilabel:`Employees`
          - :ref:`Employee <employees/general-info>`
          - :ref:`Company <employees/general-info>`
