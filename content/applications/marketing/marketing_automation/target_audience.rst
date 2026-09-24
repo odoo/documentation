@@ -17,8 +17,7 @@ the unique contact records in the database, and imported list, etc.).
   be avoided. Traditionally, the :guilabel:`Email` field is used, but any available field can be
   used.
 - :guilabel:`Filter`: contains an interactive form with configurable logic to further refine the
-  targeting parameters under the chosen :guilabel:`Target` model. See more details in the
-  :ref:`marketing_automation/defining-filters` section.
+  targeting parameters under the chosen :guilabel:`Target` model.
 - :guilabel:`Include archived`: allows or disallows the inclusion of archived records in the target
   audience.
 
