@@ -35,14 +35,39 @@ Manage roles
 database. Roles determine the level of access a user has, while the specific access rights
 associated with each role are defined by :ref:`groups <access-rights/groups>`.
 
-The four available roles are:
+The available internal roles are:
 
-- *Administrator*: An internal user with access to technical features, product creation, export, and
-  other advanced permissions.
 - *User*: An internal user that typically has access to the back end and can create and edit records
   but has less overall access than an administrator.
-- *Portal*: A customer or supplier who accesses their own data through the portal.
-- *Public*: A website visitor or other external user. They generally have the least access.
+- *Administrator*: An internal user with access to technical features, product creation, export, and
+  other advanced permissions.
+- *Light*: A user with limited access to essential Odoo features. A light user can be linked to an
+  employee record to provide limited access to the database, or can exist solely as an employee
+  record without login access. When login access is granted, light users can:
+
+   - Manage personal and employee-related information.
+   - Submit leave and expense requests.
+   - Access the **Planning** app and worksheets.
+   - Connect to **Point of Sale** sessions as an employee.
+   - Read **Knowledge** articles.
+   - Perform warehouse barcode scanning operations.
+
+  Light users do not have access to core business applications such as **Sales**, **Purchases**,
+  **Projects**, or **Accounting**, or to advanced features reserved for standard or custom users.
+
+.. important::
+   A *Light* user is automatically upgraded to a *User* role if they are granted access beyond their
+   default reduced permissions. See `Pricing Page <https://www.odoo.com/pricing>`_ for more details.
+
+Portal users
+------------
+
+The *Portal* role can be used for external users. It is assigned to a customer or supplier who
+accesses their own data through the portal.
+
+To grant portal access, navigate to the :menuselection:`Contacts` application, and select a record.
+Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then select :guilabel:`Grant
+portal access` from the drop-down.
 
 .. _access-rights/user-permissions:
 
