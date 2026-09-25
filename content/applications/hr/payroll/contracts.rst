@@ -111,7 +111,7 @@ Contract overview section
 - :guilabel:`Pay Category`: Select one of the default pay categories using the drop-down menu. The
   default pay categories are :guilabel:`Employee` or :guilabel:`Worker`, which are pulled from the
   configured *salary structures* in the **Payroll** app. A :ref:`new pay category
-  <payroll/new-structure-type>` can be created, if needed.
+  <payroll/salaries/new-structure-type>` can be created, if needed.
 
   .. note::
      In previous versions of Odoo, the :guilabel:`Pay category` was called :guilabel:`Salary
