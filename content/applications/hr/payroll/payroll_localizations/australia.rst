@@ -453,7 +453,7 @@ Salary adjustments tab
 
 If the employee has pay allowances (e.g., laundry allowance, travel allowance, cents per km
 allowance, transport allowance), :ref:`configure them in the Salary Adjustment tab
-<payroll/salary-adjustment/create>`.
+<payroll/salary_attachments/create>`.
 
 .. _payroll/payroll_localizations/stp:
 
