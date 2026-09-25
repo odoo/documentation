@@ -31,7 +31,7 @@ List
       :align: center
       :alt: List view
 
-List views, also called list views, display records in a tabular form.
+List views display records in a tabular form.
 
 Their root element is ``<list>``. The most basic version of this view simply
 lists all the fields to display in the table (where each field is a column):
