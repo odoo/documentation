@@ -952,7 +952,7 @@ a record).
 
       .. code-tab:: python
 
-         models.execute_kw(db, uid, password, 'res.partner', 'write', [[id], {'name': "Newer partner"}])
+         models.execute_kw(db, uid, password, 'res.partner', 'write', [id, {'name': "Newer partner"}])
          # get record name after having changed it
          models.execute_kw(db, uid, password, 'res.partner', 'read', [[id], ['display_name']])
 
