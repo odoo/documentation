@@ -1,0 +1,56 @@
+// ============================================================================
+// Icon Compatibility Layer — FA to MS / OI mappings
+// ============================================================================
+// This file generates CSS rules that translate legacy Font Awesome (`fa-*`)
+// and Odoo Icons (`oi-*`) class names to their Material Symbols or OI font
+// equivalents, so existing RST markup continues to work without changes.
+//
+// Vendored from: odoo/odoo@master addons/web/static/src/webclient/icons_mappings/
+// Last synced: 2026-08-20
+// ============================================================================
+
+// Import compatibility maps
+@import "icons_mappings/fa_to_ms";
+@import "icons_mappings/oi_to_ms";
+@import "icons_mappings/rtl_icons";
+
+// ============================================================================
+// Icon rendering via compatibility maps
+// ============================================================================
+// For each legacy icon name (fa-* or oi-*), apply the appropriate mixin
+// to render the icon via Material Symbols or OI font.
+
+$icon-bundles: (
+    "fa": $fa-icon-map,
+    "oi": $oi-icon-map
+);
+
+@each $prefix, $map in $icon-bundles {
+    @each $icon-slug, $config in $map {
+        .#{$prefix}-#{$icon-slug} {
+            @include oi-icon-base;
+
+            $type: nth($config, 1);
+            $icon-name: nth($config, 2);
+
+            @if $type == "oi" {
+                @include oi-icon($icon-name);
+            } @else if $type == "ms" {
+                $is-filled: length($config) >= 3 and nth($config, 3) == "filled";
+                @include ms-icon($icon-name, $is-filled);
+            }
+        }
+    }
+}
+
+// ============================================================================
+// RTL adaptations — flip directional Material Symbols icons
+// ============================================================================
+
+.o_rtl {
+    @each $icon in $ms-rtl-icons {
+        [data-icon="#{$icon}"] {
+            transform: rotateY(180deg);
+        }
+    }
+}
