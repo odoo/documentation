@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block title %}العهد - نظام إدارة الخزينة{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0"><i class="bi bi-briefcase me-2"></i>العهد</h4>
+    <a href="{{ url_for('custody.new') }}" class="btn btn-primary">
+        <i class="bi bi-plus-circle me-1"></i>عهدة جديدة
+    </a>
+</div>
+
+<!-- State Filter Buttons -->
+<div class="btn-group mb-3" role="group" aria-label="تصفية بالحالة">
+    <a href="{{ url_for('custody.index') }}"
+       class="btn btn-outline-secondary {% if not current_state %}active{% endif %}">
+        الكل
+    </a>
+    <a href="{{ url_for('custody.index', state='draft') }}"
+       class="btn btn-outline-secondary {% if current_state == 'draft' %}active{% endif %}">
+        <span class="badge bg-secondary me-1">مسودة</span>
+    </a>
+    <a href="{{ url_for('custody.index', state='confirmed') }}"
+       class="btn btn-outline-primary {% if current_state == 'confirmed' %}active{% endif %}">
+        <span class="badge bg-primary me-1">معتمدة</span>
+    </a>
+    <a href="{{ url_for('custody.index', state='paid') }}"
+       class="btn btn-outline-success {% if current_state == 'paid' %}active{% endif %}">
+        <span class="badge bg-success me-1">مصروفة</span>
+    </a>
+    <a href="{{ url_for('custody.index', state='cleared') }}"
+       class="btn btn-outline-info {% if current_state == 'cleared' %}active{% endif %}">
+        <span class="badge bg-info me-1">مسوّاة</span>
+    </a>
+    <a href="{{ url_for('custody.index', state='cancelled') }}"
+       class="btn btn-outline-danger {% if current_state == 'cancelled' %}active{% endif %}">
+        <span class="badge bg-danger me-1">ملغاة</span>
+    </a>
+</div>
+
+<!-- Custodies Table -->
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>الرقم</th>
+                        <th>الموظف</th>
+                        <th>القسم</th>
+                        <th>التاريخ</th>
+                        <th>تاريخ الاستحقاق</th>
+                        <th>الخزينة</th>
+                        <th class="text-end">المبلغ</th>
+                        <th class="text-end">المصروفات</th>
+                        <th class="text-end">المتبقي</th>
+                        <th class="text-center">الحالة</th>
+                        <th class="text-center">إجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for custody in custodies %}
+                    {% set remaining = custody.amount - custody.total_expenses %}
+                    <tr>
+                        <td>
+                            <a href="{{ url_for('custody.show', id=custody.id) }}"
+                               class="fw-semibold text-decoration-none">
+                                {{ custody.number }}
+                            </a>
+                        </td>
+                        <td>{{ custody.employee }}</td>
+                        <td>{{ custody.department or '-' }}</td>
+                        <td class="text-nowrap">{{ custody.date | ar_date }}</td>
+                        <td class="text-nowrap
+                            {% if custody.due_date and custody.due_date < today and custody.state not in ['cleared', 'cancelled'] %}
+                            text-danger fw-bold{% endif %}">
+                            {{ custody.due_date | ar_date if custody.due_date else '-' }}
+                        </td>
+                        <td>{{ custody.treasury.name if custody.treasury else '-' }}</td>
+                        <td class="text-end">{{ custody.amount | currency }}</td>
+                        <td class="text-end text-danger">
+                            {% if custody.total_expenses %}{{ custody.total_expenses | currency }}{% else %}-{% endif %}
+                        </td>
+                        <td class="text-end fw-bold
+                            {% if remaining < 0 %}text-danger{% elif remaining == 0 %}text-muted{% else %}text-success{% endif %}">
+                            {{ remaining | currency }}
+                        </td>
+                        <td class="text-center">
+                            {% if custody.state == 'draft' %}
+                                <span class="badge bg-secondary">مسودة</span>
+                            {% elif custody.state == 'confirmed' %}
+                                <span class="badge bg-primary">معتمدة</span>
+                            {% elif custody.state == 'paid' %}
+                                <span class="badge bg-success">مصروفة</span>
+                            {% elif custody.state == 'cleared' %}
+                                <span class="badge bg-info">مسوّاة</span>
+                            {% elif custody.state == 'cancelled' %}
+                                <span class="badge bg-danger">ملغاة</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <a href="{{ url_for('custody.show', id=custody.id) }}"
+                               class="btn btn-sm btn-outline-primary" title="عرض">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                            {% if custody.state == 'draft' %}
+                            <a href="{{ url_for('custody.edit', id=custody.id) }}"
+                               class="btn btn-sm btn-outline-secondary" title="تعديل">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="11" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-4 d-block mb-2"></i>
+                            لا توجد عهد مسجلة.
+                            <a href="{{ url_for('custody.new') }}">أضف عهدة جديدة</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% if custodies %}
+                <tfoot class="table-light fw-bold">
+                    <tr>
+                        <td colspan="6">الإجمالي</td>
+                        <td class="text-end">{{ custodies | sum(attribute='amount') | currency }}</td>
+                        <td class="text-end text-danger">{{ custodies | sum(attribute='total_expenses') | currency }}</td>
+                        <td class="text-end">
+                            {% set total_remaining = custodies | sum(attribute='amount') - custodies | sum(attribute='total_expenses') %}
+                            <span class="{% if total_remaining < 0 %}text-danger{% else %}text-success{% endif %}">
+                                {{ total_remaining | currency }}
+                            </span>
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                </tfoot>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Main Menu -->
+    <menuitem id="menu_treasury_root"
+              name="الخزينة والعهدة"
+              sequence="50"
+              web_icon="treasury_expense_management,static/src/img/icon.png"
+              groups="treasury_expense_management.group_treasury_user"/>
+
+    <!-- Treasury Sub Menu -->
+    <menuitem id="menu_treasury_main"
+              name="الخزائن"
+              parent="menu_treasury_root"
+              sequence="10"/>
+
+    <menuitem id="menu_treasury_list"
+              name="إدارة الخزائن"
+              parent="menu_treasury_main"
+              action="action_treasury"
+              sequence="10"
+              groups="treasury_expense_management.group_treasury_manager"/>
+
+    <menuitem id="menu_treasury_transactions"
+              name="حركات الخزينة"
+              parent="menu_treasury_main"
+              action="action_treasury_transactions"
+              sequence="20"/>
+
+    <!-- Custody Sub Menu -->
+    <menuitem id="menu_custody_main"
+              name="العهد"
+              parent="menu_treasury_root"
+              sequence="20"/>
+
+    <menuitem id="menu_custody_list"
+              name="العهد"
+              parent="menu_custody_main"
+              action="action_custody"
+              sequence="10"/>
+
+    <!-- Payment Claims Sub Menu -->
+    <menuitem id="menu_claims_main"
+              name="مطالبات السداد"
+              parent="menu_treasury_root"
+              sequence="30"/>
+
+    <menuitem id="menu_claims_vendor"
+              name="مطالبات الموردين"
+              parent="menu_claims_main"
+              action="action_payment_claim_vendor"
+              sequence="10"/>
+
+    <menuitem id="menu_claims_expense"
+              name="مطالبات المصاريف"
+              parent="menu_claims_main"
+              action="action_payment_claim_expense"
+              sequence="20"/>
+
+    <menuitem id="menu_claims_all"
+              name="كل المطالبات"
+              parent="menu_claims_main"
+              action="action_payment_claim_all"
+              sequence="30"/>
+
+    <!-- Payments Sub Menu -->
+    <menuitem id="menu_payments_main"
+              name="السداد"
+              parent="menu_treasury_root"
+              sequence="40"/>
+
+    <menuitem id="menu_payments_outbound"
+              name="سندات الصرف"
+              parent="menu_payments_main"
+              action="action_claim_payment_outbound"
+              sequence="10"/>
+
+    <menuitem id="menu_payments_inbound"
+              name="سندات القبض"
+              parent="menu_payments_main"
+              action="action_claim_payment_inbound"
+              sequence="20"/>
+
+    <menuitem id="menu_payments_all"
+              name="كل السندات"
+              parent="menu_payments_main"
+              action="action_claim_payment_all"
+              sequence="30"/>
+
+    <!-- Reports Sub Menu -->
+    <menuitem id="menu_reports_main"
+              name="التقارير"
+              parent="menu_treasury_root"
+              sequence="90"/>
+
+    <menuitem id="menu_report_payment_claim"
+              name="تقرير المطالبات"
+              parent="menu_reports_main"
+              action="action_report_payment_claims_list"
+              sequence="10"/>
+
+    <menuitem id="menu_report_payments"
+              name="تقرير السندات"
+              parent="menu_reports_main"
+              action="action_report_claim_payments_list"
+              sequence="20"/>
+
+    <!-- Configuration Sub Menu -->
+    <menuitem id="menu_config_main"
+              name="الإعدادات"
+              parent="menu_treasury_root"
+              sequence="100"
+              groups="treasury_expense_management.group_treasury_manager"/>
+
+    <menuitem id="menu_config_treasury"
+              name="إعداد الخزائن"
+              parent="menu_config_main"
+              action="action_treasury"
+              sequence="10"/>
+
+</odoo>

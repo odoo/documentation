@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Treasury Form View -->
+    <record id="view_treasury_form" model="ir.ui.view">
+        <field name="name">treasury.treasury.form</field>
+        <field name="model">treasury.treasury</field>
+        <field name="arch" type="xml">
+            <form string="الخزينة">
+                <header>
+                    <button name="action_open" string="فتح الخزينة" type="object"
+                            class="btn-primary" invisible="state == 'open'"/>
+                    <button name="action_close" string="إغلاق الخزينة" type="object"
+                            class="btn-danger" invisible="state == 'closed'"
+                            confirm="هل أنت متأكد من إغلاق الخزينة؟"/>
+                    <field name="state" widget="statusbar" statusbar_visible="open,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_payments" type="object" class="oe_stat_button" icon="fa-money">
+                            <field name="payment_count" widget="statinfo" string="مدفوعات"/>
+                        </button>
+                        <button name="action_view_custodies" type="object" class="oe_stat_button" icon="fa-briefcase">
+                            <field name="custody_count" widget="statinfo" string="عهد"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" string="الخزينة"/>
+                        <h1>
+                            <field name="name" placeholder="اسم الخزينة..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="معلومات الخزينة">
+                            <field name="code"/>
+                            <field name="treasury_type"/>
+                            <field name="currency_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="الحسابات والمسؤول">
+                            <field name="journal_id"/>
+                            <field name="account_id"/>
+                            <field name="responsible_id"/>
+                            <field name="max_amount"/>
+                        </group>
+                    </group>
+                    <group string="الرصيد">
+                        <field name="balance" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="ملاحظات..."/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Treasury List View -->
+    <record id="view_treasury_list" model="ir.ui.view">
+        <field name="name">treasury.treasury.list</field>
+        <field name="model">treasury.treasury</field>
+        <field name="arch" type="xml">
+            <list string="الخزائن" decoration-muted="state == 'closed'">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="treasury_type"/>
+                <field name="responsible_id"/>
+                <field name="currency_id"/>
+                <field name="balance"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'open'"
+                       decoration-danger="state == 'closed'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Treasury Search View -->
+    <record id="view_treasury_search" model="ir.ui.view">
+        <field name="name">treasury.treasury.search</field>
+        <field name="model">treasury.treasury</field>
+        <field name="arch" type="xml">
+            <search string="بحث في الخزائن">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="responsible_id"/>
+                <filter string="نقدي" name="cash" domain="[('treasury_type', '=', 'cash')]"/>
+                <filter string="بنكي" name="bank" domain="[('treasury_type', '=', 'bank')]"/>
+                <separator/>
+                <filter string="مفتوحة" name="open" domain="[('state', '=', 'open')]"/>
+                <filter string="مغلقة" name="closed" domain="[('state', '=', 'closed')]"/>
+                <group expand="0" string="تجميع حسب">
+                    <filter string="النوع" name="group_type" context="{'group_by': 'treasury_type'}"/>
+                    <filter string="الحالة" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Treasury Transactions List -->
+    <record id="view_treasury_transaction_list" model="ir.ui.view">
+        <field name="name">treasury.transaction.list</field>
+        <field name="model">treasury.transaction</field>
+        <field name="arch" type="xml">
+            <list string="حركات الخزينة" create="false" edit="false" delete="false"
+                  decoration-success="transaction_type == 'in'"
+                  decoration-danger="transaction_type == 'out'">
+                <field name="date"/>
+                <field name="treasury_id"/>
+                <field name="name"/>
+                <field name="reference"/>
+                <field name="transaction_type" widget="badge"
+                       decoration-success="transaction_type == 'in'"
+                       decoration-danger="transaction_type == 'out'"/>
+                <field name="amount"/>
+                <field name="balance_after"/>
+                <field name="user_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_treasury" model="ir.actions.act_window">
+        <field name="name">الخزائن</field>
+        <field name="res_model">treasury.treasury</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_treasury_transactions" model="ir.actions.act_window">
+        <field name="name">حركات الخزينة</field>
+        <field name="res_model">treasury.transaction</field>
+        <field name="view_mode">list</field>
+        <field name="context">{}</field>
+    </record>
+
+</odoo>

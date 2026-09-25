@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block title %}{{ payment.number }}{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h5 class="mb-0">
+    {{ payment.number }} — <span class="badge bg-{{ 'danger' if payment.payment_type == 'outbound' else 'success' }}">{{ payment.type_label }}</span>
+    <span class="badge bg-{{ payment.state_color }}">{{ payment.state_label }}</span>
+  </h5>
+  <div class="d-flex gap-2">
+    {% if payment.state == 'done' %}<a href="{{ url_for('payments.print_voucher', id=payment.id) }}" target="_blank" class="btn btn-outline-secondary btn-sm"><i class="bi bi-printer me-1"></i>طباعة</a>{% endif %}
+    <a href="{{ url_for('payments.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-right me-1"></i>رجوع</a>
+  </div>
+</div>
+
+<!-- Action buttons -->
+<div class="mb-3 d-flex flex-wrap gap-2">
+{% if payment.state == 'draft' %}
+  <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#confirmModal"><i class="bi bi-check me-1"></i>اعتماد</button>
+  <form method="POST" action="{{ url_for('payments.cancel', id=payment.id) }}" class="d-inline"><button class="btn btn-outline-danger btn-sm" onclick="return confirm('تأكيد الإلغاء؟')">إلغاء</button></form>
+{% elif payment.state == 'confirmed' %}
+  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#doneModal"><i class="bi bi-play-fill me-1"></i>تنفيذ السند</button>
+  <form method="POST" action="{{ url_for('payments.cancel', id=payment.id) }}" class="d-inline"><button class="btn btn-outline-danger btn-sm" onclick="return confirm('تأكيد الإلغاء؟')">إلغاء</button></form>
+{% endif %}
+</div>
+
+<div class="row g-3 justify-content-center">
+  <div class="col-lg-8">
+    <!-- Amount Box -->
+    <div class="card border-0 shadow-sm mb-3 border-{{ 'danger' if payment.payment_type == 'outbound' else 'success' }}" style="border-width:2px!important">
+      <div class="card-body text-center py-4">
+        <div class="text-muted mb-1">{{ payment.type_label }}</div>
+        <div class="display-5 fw-bold {{ 'text-danger' if payment.payment_type == 'outbound' else 'text-success' }}">{{ payment.amount | currency }}</div>
+        <div class="text-muted mt-2">{{ payment.date | ar_date }}</div>
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-4"><div class="text-muted small">الخزينة</div><div class="fw-semibold">{{ payment.treasury.name if payment.treasury else '-' }}</div></div>
+          <div class="col-md-4"><div class="text-muted small">المستفيد</div><div class="fw-semibold">{{ payment.beneficiary or '-' }}</div></div>
+          <div class="col-md-4"><div class="text-muted small">طريقة الدفع</div><div class="fw-semibold">{{ payment.method_label }}</div></div>
+          {% if payment.check_number %}<div class="col-md-4"><div class="text-muted small">رقم الشيك</div><div class="fw-semibold">{{ payment.check_number }}</div></div>{% endif %}
+          {% if payment.transfer_ref %}<div class="col-md-4"><div class="text-muted small">رقم التحويل</div><div class="fw-semibold">{{ payment.transfer_ref }}</div></div>{% endif %}
+          {% if payment.reference %}<div class="col-md-4"><div class="text-muted small">المرجع</div><div class="fw-semibold">{{ payment.reference }}</div></div>{% endif %}
+          {% if payment.claim %}<div class="col-md-6"><div class="text-muted small">المطالبة المرتبطة</div><div class="fw-semibold"><a href="{{ url_for('claims.show', id=payment.claim.id) }}">{{ payment.claim.number }}</a></div></div>{% endif %}
+          <div class="col-12"><div class="text-muted small">البيان</div><div class="fw-semibold">{{ payment.description }}</div></div>
+          {% if payment.notes %}<div class="col-12"><div class="text-muted small">ملاحظات</div><div>{{ payment.notes }}</div></div>{% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if payment.state in ('confirmed', 'done') %}
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white fw-bold small">معلومات التنفيذ</div>
+      <div class="card-body">
+        <div class="row g-2">
+          {% if payment.confirmed_by %}<div class="col-md-6"><div class="text-muted small">اعتمد بواسطة</div><div class="fw-semibold">{{ payment.confirmed_by }} — {{ payment.confirmed_at.strftime('%Y/%m/%d %H:%M') if payment.confirmed_at else '' }}</div></div>{% endif %}
+          {% if payment.done_by %}<div class="col-md-6"><div class="text-muted small">نُفِّذ بواسطة</div><div class="fw-semibold">{{ payment.done_by }} — {{ payment.done_at.strftime('%Y/%m/%d %H:%M') if payment.done_at else '' }}</div></div>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Confirm Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h6 class="modal-title">اعتماد السند</h6><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <form method="POST" action="{{ url_for('payments.confirm', id=payment.id) }}">
+        <div class="modal-body">
+          <label class="form-label">اسم المعتمِد</label>
+          <input type="text" name="confirmed_by" class="form-control" placeholder="المدير" required>
+        </div>
+        <div class="modal-footer"><button type="submit" class="btn btn-primary btn-sm">تأكيد الاعتماد</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Done Modal -->
+<div class="modal fade" id="doneModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h6 class="modal-title">تنفيذ السند</h6><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <form method="POST" action="{{ url_for('payments.done', id=payment.id) }}">
+        <div class="modal-body">
+          <label class="form-label">أمين الخزينة</label>
+          <input type="text" name="done_by" class="form-control" placeholder="أمين الخزينة" required>
+          <div class="alert alert-warning mt-2 small p-2">سيتم خصم المبلغ من الخزينة وإنشاء قيد محاسبي.</div>
+        </div>
+        <div class="modal-footer"><button type="submit" class="btn btn-success btn-sm">تأكيد التنفيذ</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

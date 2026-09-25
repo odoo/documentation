@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}السندات{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h5 class="mb-0"><i class="bi bi-receipt me-2 text-success"></i>سندات الصرف والقبض</h5>
+  <a href="{{ url_for('payments.new') }}" class="btn btn-success btn-sm"><i class="bi bi-plus-lg me-1"></i>سند جديد</a>
+</div>
+<div class="mb-3 d-flex gap-2">
+  <a href="{{ url_for('payments.index') }}" class="btn btn-sm {{ 'btn-dark' if not ptype else 'btn-outline-dark' }}">الكل</a>
+  <a href="{{ url_for('payments.index', type='outbound') }}" class="btn btn-sm {{ 'btn-danger' if ptype == 'outbound' else 'btn-outline-danger' }}">سندات الصرف</a>
+  <a href="{{ url_for('payments.index', type='inbound') }}" class="btn btn-sm {{ 'btn-success' if ptype == 'inbound' else 'btn-outline-success' }}">سندات القبض</a>
+</div>
+<div class="card border-0 shadow-sm">
+  <div class="table-responsive">
+    <table class="table table-hover mb-0">
+      <thead class="table-light">
+        <tr><th>الرقم</th><th>النوع</th><th>التاريخ</th><th>الخزينة</th><th>المستفيد</th><th>البيان</th><th>الطريقة</th><th class="text-end">المبلغ</th><th>الحالة</th><th>إجراءات</th></tr>
+      </thead>
+      <tbody>
+        {% for p in payments %}
+        <tr>
+          <td><a href="{{ url_for('payments.show', id=p.id) }}" class="fw-semibold text-decoration-none">{{ p.number }}</a></td>
+          <td><span class="badge bg-{{ 'danger' if p.payment_type == 'outbound' else 'success' }}">{{ p.type_label }}</span></td>
+          <td>{{ p.date | ar_date }}</td>
+          <td>{{ p.treasury.name if p.treasury else '-' }}</td>
+          <td>{{ p.beneficiary or '-' }}</td>
+          <td class="text-truncate" style="max-width:150px">{{ p.description }}</td>
+          <td>{{ p.method_label }}</td>
+          <td class="text-end fw-bold {{ 'text-danger' if p.payment_type == 'outbound' else 'text-success' }}">{{ p.amount | currency }}</td>
+          <td><span class="badge bg-{{ p.state_color }}">{{ p.state_label }}</span></td>
+          <td><a href="{{ url_for('payments.show', id=p.id) }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></a></td>
+        </tr>
+        {% else %}
+        <tr><td colspan="10" class="text-center text-muted py-4">لا توجد سندات</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
