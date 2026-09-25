@@ -157,7 +157,7 @@ situations, including:
 
 Recording payments in bank, cash, and credit card journals can create journal entries or not,
 depending on the journal's configuration. By default, no journal entries are created for payments.
-To configure a journal to create payments, set :ref:`outstanding payments accounts
+To configure a journal to create journal entries for payments, set :ref:`outstanding payments accounts
 <accounting/journals/outstanding-accounts>` on the journal's payment methods.
 
 .. _accounting/get_started/fiscal-positions:
