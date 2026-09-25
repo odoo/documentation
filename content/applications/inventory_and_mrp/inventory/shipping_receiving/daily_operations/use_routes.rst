@@ -280,8 +280,8 @@ Example flow
 In this example, let's use a custom *Pick - Pack - Ship* route to try a full flow with an advanced
 custom route.
 
-First, a quick look at the route's rules and their supply methods. There are three rules, all
-:guilabel:`Pull From` rules. The :guilabel:`Supply Methods` for each rule are the following:
+First, a quick look at the route's rules and their supply methods. There are three rules: 
+:guilabel:`one Pull From rule and two Push To rules`. The :guilabel:`Supply Methods` for each rule are the following:
 
 - :guilabel:`Take From Stock`: When products are needed in the :guilabel:`WH/Packing Zone`, *picks*
   (internal transfers from :guilabel:`WH/Stock` to :guilabel:`WH/Packing Zone`) are created from
