@@ -238,6 +238,24 @@ automatically by Odoo.
    accurate calculations based on the HSN Code and GST rate. This ensures a more straightforward and
    standardized representation in the E-invoice records.
 
+.. _india/price-adjustment-credit-debit-notes:
+
+Managing price adjustment credit/debit notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Customer credit and debit notes can be issued either to reflect a change in quantity, such as goods
+returned or additional goods supplied, or to adjust the amount only, with no change in quantity This distinction determines how the move is reported in e-Invoices and GST returns.
+
+When creating a credit or debit note, set the :guilabel:`Adjustment Type` field to one of the following options:
+
+- :guilabel:`Standard`: use it when the adjustment involves a change in quantity, such as goods
+  returned, cancelled service contracts, or additional goods supplied.
+- :guilabel:`Price Adjustment`: use it when the adjustment changes the amount only, with no change
+  in quantity, such as a discount, rebate, or price revision.
+
+When :guilabel:`Price Adjustment` is selected, the e-Invoice reports zero for both quantity and unit price, while keeping the taxable value and tax amounts unchanged. These moves are also excluded from the HSN quantity in the :ref:`GSTR-1 return <india/gstr-1>` and from the invoiced
+quantity of the related sales order, keeping the reported quantities accurate.
+
 .. _india/verify-e-invoice:
 
 GST e-Invoice verification
