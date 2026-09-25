@@ -18,14 +18,21 @@ Salary adjustment types
 =======================
 
 To view the currently configured salary adjustment types, navigate to :menuselection:`Payroll app
---> Configuration --> Other Input Types`. This displays *all* other salary inputs, not only the
-various salary adjustments.
+--> Configuration --> Salary Input Types`, and the *Salary Input Types* dashboard loads. This
+displays *all* other salary inputs, not only the various salary adjustments.
 
-The three default salary adjustment types that appear in this list are: :guilabel:`Attachment of
-Salary`, :guilabel:`Assignment of Salary`, and :guilabel:`Child Support`.
+The three default salary adjustment types and uses that appear in this list are:
 
-Each salary adjustment type displays the :guilabel:`Name` of the adjustment type, and the
-:guilabel:`Code` used when calculating payslips.
+- :guilabel:`Attachment of Salary`: Used primarily for voluntary regular payments from the
+  employee's wages, such as paying into a savings program, charity contributions, union dues, etc.
+- :guilabel:`Assignment of Salary`: Used primarily for legally enforceable orders requiring part of
+  an employee's wages to be paid to another party. This is typically used when repaying debts,
+  court-ordered judgements, etc.
+- :guilabel:`Child Support`: Used for any child support payments.
+
+Each salary adjustment type displays the :guilabel:`Description` of the adjustment type and the
+:guilabel:`Code` used when calculating payslips. If it is restricted to a specific salary structure,
+it is listed in the :guilabel:`Availability in Structure` column.
 
 .. image:: salary_attachments/adjustment-types.png
    :alt: The default salary adjustment types.
@@ -46,47 +53,65 @@ Create new salary adjustment types
    necessary. A salary adjustment type **must** be linked to a salary rule to be considered in the
    salary computation.
 
-To make a new type of salary adjustment, click the :guilabel:`New` button, and a blank
-:guilabel:`Payslip Other Input Types` form loads. Enter the :guilabel:`Description` for the new
-salary adjustment type in the corresponding field. Next, tick the :guilabel:`Available in
-adjustments` checkbox, indicating it is available to use as a salary adjustment. Enter the
-:guilabel:`Code` used in the salary rules to compute payslips. Lastly, if the salary adjustment type
-should **only** be used in a specific payroll structure, use the drop-down menu in the
-:guilabel:`Available in Structure` field, and select the specific structure.
+To make a new type of salary adjustment, click the :guilabel:`New` button on the *Salary Input
+Types* dashboard, and a blank *Salary Input Types* form loads. Configure the following fields on the
+form:
 
-.. _payroll/salary-adjustment/create:
+- :guilabel:`Description`: Enter a decription for the new salary adjustment type.
+- :guilabel:`Available in adjustments`: Enable this option to indicate the input type is available
+  to use as a *salary adjustment*.
+- :guilabel:`Is quantity?`: Leave this option unchecked, as it removes the ability to enter a set
+  monetary amount.
+- :guilabel:`No end date by default`: Enable this option if the adjustment is indefinite, such an
+  attachment to pay regular fees such as dues or licenses. Do not select this if the adjustment is
+  based on a total amount that must be reached, such as a court settlement repayment.
+- :guilabel:`Code`: Enter a code to be used in the salary rules to compute payslips.
+- :guilabel:`Available in Structure`: If the salary adjustment type should **only** be used in a
+  specific payroll structure, use the drop-down menu to select the structure.
 
-Create a salary adjustment
-==========================
+.. _payroll/salary-adjustment/dashboard:
 
-All salary adjustments must be configured separately for each employee, for each type of salary
-adjustment. To view the currently configured salary adjustments, navigate to :menuselection:`Payroll
-app --> Employees --> Salary Adjustments`.
+Salary adjustment dashboard
+===========================
 
-All salary adjustments appear in a default list view, and displays the name of the
+To view the currently configured salary adjustments, navigate to :menuselection:`Payroll app -->
+Employees --> Salary Adjustments`, and the *Salary Adjustment* dashboard loads.
+
+All salary adjustments appear in a list view, in chronological order by :guilabel:`Start Date`, with
+the most recent appearing at the top. Each salary adjustment displays the name of the
 :guilabel:`Employees`, the :guilabel:`Start Date`, a descriptive :guilabel:`Note`, the salary
 adjustment :guilabel:`Type`, and the :guilabel:`Amount`. An :guilabel:`Until` column appears as
 well, which details when the salary adjustment ends, either a monetary amount to be reached, or
 :guilabel:`Indefinite` if the adjustment has no end.
 
 At the end of each line is a status tag, with a green :guilabel:`Running` tag for active
-adjustments, or :guilabel:`Closed` for adjustments that have ended.
+adjustments, or a gray :guilabel:`Closed` tag for adjustments that have ended.
 
-To create a new salary adjustment, click the :guilabel:`New` button in the top-left corner, and a
-blank :guilabel:`Salary Adjustment` form loads. Enter the following information on the form:
+.. image:: salary_attachments/salary-adjust-dashboard.png
+   :alt: The salary adjustment dashboard with all running and closed adjustments.
 
-- :guilabel:`Employees`: Using the drop-down menu, select the desired employees. Multiple employees
-  can be listed in this field.
-- :guilabel:`Type`: Using the drop-down menu, select the specific :ref:`salary adjustment type
-  <payroll/salary-adjustment/types>`.
+.. _payroll/salary-adjustment/create:
+
+Create salary adjustments
+=========================
+
+To create a new salary adjustment, click the :guilabel:`New` button on the :ref:`Salary Adjustment
+dashboard <payroll/salary-adjustment/dashboard>` and a blank *Salary Adjustment* form loads. Enter
+the following information on the form:
+
+- :guilabel:`Employees`: Select the desired employees using the drop-down menu. Multiple employees
+  can be listed in this field **only** if all the other field values are identical.
+- :guilabel:`Type`: Select the specific :ref:`salary adjustment type
+  <payroll/salary-adjustment/types>` using the drop-down menu.
 - :guilabel:`Payslip Amount`: Enter the amount taken out of each paycheck in this field.
-- :guilabel:`Negative Amount`: Tick this checkbox if the salary adjustment is taken into account as
-  a negative value.
+- :guilabel:`Negative Amount`: Enable this checkbox if the salary adjustment is taken into account
+  as a negative value.
 - :guilabel:`Duration`: Select the length of time for the salary adjustment. The options are:
 
   - :guilabel:`One Time`: Only one payment is taken from the employee's paycheck.
   - :guilabel:`Limited`: The employee is paying a specific monetary amount in total, divided up
-    among multiple paychecks.
+    among multiple paychecks. The salary adjustment automatically ends once the specified total is
+    paid.
   - :guilabel:`Unlimited`: The employee is making recurring payments towards something with no end
     point, such as contributions to a retirement fund, or a donation to a charity.
   - :guilabel:`from`: Using the calendar selector, select the date the salary adjustment goes into
@@ -94,56 +119,37 @@ blank :guilabel:`Salary Adjustment` form loads. Enter the following information 
 
   .. note::
      If the :guilabel:`Duration` field is set to :guilabel:`Limited`, an :guilabel:`until (amount)
-     paid` field appears. Enter the monetary amount that must be reached, before the salary
-     adjustment ends.
+     paid` field appears. Enter the monetary amount that must be reached to end the salary
+     adjustment.
 
 - :guilabel:`Note`: Enter a short description of the salary adjustment.
 
 .. image:: salary_attachments/salary-adjustment-form.png
    :alt: The salary adjustment form with all fields filled out.
 
-Since the salary adjustment form auto-saves as the fields are populated, after making a salary
-adjustment for an individual employee, there is no further action required.
-
 If creating salary adjustments for multiple employees on a single salary adjustment form, after the
 form is filled out, click the :guilabel:`Create Individual Attachments` button. This creates
 separate salary adjustments for each of the employees listed in the :guilabel:`Employees` field.
 
-After the separate salary adjustments have been created, the screen returns to the :guilabel:`Salary
-Adjustment` dashboard, but with a :guilabel:`Note` filter, populated with the information filled in
-the :guilabel:`Note` field on the salary adjustment form. All the salary adjustments have a status
-of :guilabel:`Running`, since they are currently active. Clear the filter in the search box to view
-the default :guilabel:`Salary Adjustment` dashboard in its entirety.
+After the individual salary adjustments have been created for multiple employees, the screen loads
+a list view of the newly created individual salary adjustments. All the salary adjustments have a
+status of :guilabel:`Running`, since they are currently active.
 
 Manage salary adjustments
 =========================
 
-Salary adjustments can have one of two statuses, *Running* or *Closed*. To view the current status
-of all salary adjustments, navigate to :menuselection:`Payroll app --> Employees --> Salary
-Adjustments`.
+Salary adjustments that have a set amount due in total are automatically closed once the *Until*
+amount entered on the :ref:`salary adjustment form <payroll/salary-adjustment/create>` has been paid
+in full. For all other salary adjustments, it is necessary to manually close the adjustment to stop
+taking money out of future paychecks.
 
-All salary adjustments appear in chronological order, by :guilabel:`Start Date`, with the most
-recent appearing at the top. To view the salary adjustments by a particular metric, such as the
-:guilabel:`Status`, or :guilabel:`Type`, click on the column title to sort by that specific column.
+If a salary adjustment has been fulfilled or the employee no longer wishes to contribute voluntary
+funds, the record must be manually updated. To change the status, open the *Salary Adjustment*
+dashboard by opening the :ref:`Salary Adjustment dashboard <payroll/salary-adjustment/dashboard>`
 
-.. image:: salary_attachments/adjustments-list.png
-   :alt: All salary adjustments, organized by start date.
-
-Closed salary adjustments
--------------------------
-
-When a salary adjustment is created, it has a status of :guilabel:`Running`. Once the salary
-adjustment is finished (the *Until* amount entered on the :ref:`salary adjustment form
-<payroll/salary-adjustment/create>` has been paid in full), the status automatically changes to
-*Closed*, and the employee no longer has money taken out of future paychecks.
-
-If a salary adjustment has been fulfilled, but has not automatically changed to *Closed*, the record
-can be manually updated. To change the status, open the *Salary Adjustment* dashboard by navigating
-to :menuselection:`Payroll app --> Employees --> Salary Adjustments`.
-
-Click on the record to update, and the detailed :guilabel:`Salary Adjustment` form loads. On the
-individual :guilabel:`Salary Adjustment` record, click the :guilabel:`Mark as Completed` button in
-the upper-left corner, and the status changes to :guilabel:`Closed`.
+Click on the record to update, and the detailed *Salary Adjustment* form loads. On the individual
+record, click the :guilabel:`Mark as Completed` button in the corner, and the status changes to
+:guilabel:`Closed`.
 
 .. example::
    The following is an example of when a payroll manager may need to manually change a salary
