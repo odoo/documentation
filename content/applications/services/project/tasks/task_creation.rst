@@ -119,10 +119,10 @@ website to trigger the creation of tasks in a project.
    - :guilabel:`Action`: select :guilabel:`Create a Task`.
    - :guilabel:`Project`: choose the project that you want the new tasks to be created in.
 
-#. :ref:`Customize the form <website/building_blocks/form>`.
+#. :doc:`Customize the form </applications/websites/website/web_design/building_blocks/forms>`.
 
 When the form is submitted, it automatically creates a project task. The task's content is defined
 by the form's corresponding fields.
 
 .. seealso::
-   :ref:`Website forms <website/building_blocks/form>`
+   :doc:`Website forms </applications/websites/website/web_design/building_blocks/forms>`
