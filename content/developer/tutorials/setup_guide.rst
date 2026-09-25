@@ -47,7 +47,7 @@ will be part of the `addons-path` that references all directories containing Odo
             .. code-block:: console
 
                $ cd /TutorialsPath
-               $ git remote add dev git@github.com:<your_github_account>/tutorials.git
+               $ git remote add dev git@github.com:mohamedwsl/tutorials.git
 
       .. tab:: Link Git with odoo-dev
 
