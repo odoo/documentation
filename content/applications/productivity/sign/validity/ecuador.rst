@@ -10,9 +10,11 @@ electronic signatures in Ecuador.
 Legal framework for electronic signatures in Ecuador
 ====================================================
 
-In Ecuador, electronic signatures are regulated under the `Law on Electronic Commerce, Electronic
-Signatures and Data Messages <https://www.wipo.int/wipolex/en/legislation/details/18942>`_. The law
-establishes the legal basis for acknowledging electronic records, contracts, and digital signatures.
+In Ecuador, electronic signatures are regulated under the
+`Ley de Comercio Electrónico, Firmas Electrónicas y Mensajes de Datos (Ley 67/2002) <https://www.arcotel.gob.ec/wp-content/uploads/downloads/2013/07/ley_de_comercio_electronico_firmas_y_mensajes.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -70,4 +72,5 @@ not be suitable or legally recognized in Ecuador:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+

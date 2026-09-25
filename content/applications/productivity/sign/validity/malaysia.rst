@@ -10,9 +10,13 @@ electronic signatures in Malaysia.
 Legal framework for electronic signatures in Malaysia
 =====================================================
 
-In Malaysia, electronic signatures are regulated under the `Digital Signature Act 1997
-<http://www.commonlii.org/my/legis/consol_act/dsa1997181/>`_ and the `Electronic Commerce Act 2006 <https://aseanconsumer.org/file/post_image/Act%20658%20-%20Electronic%20Commerce%20Act%202006.pdf>`_.
-The law governs transactions performed through electronic means and the use of digital signatures.
+In Malaysia, electronic signatures are regulated under the
+`Digital Signature Act 1997 (Act 562)
+<https://www.agc.gov.my/agcportal/uploads/files/Publications/LOM/EN/Act%20562.pdf>`_ and the
+`Electronic Commerce Act 2006 (Act 658) <https://www.agc.gov.my/agcportal/uploads/files/Publications/LOM/EN/Act%20658.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -71,4 +75,4 @@ not be suitable or legally recognized in Malaysia:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

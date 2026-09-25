@@ -10,8 +10,12 @@ electronic signatures in Thailand.
 Legal framework for electronic signatures in Thailand
 =====================================================
 
-In Thailand, electronic signatures are regulated under the `Electronic Transaction Act B.E. 2544 <https://www.etda.or.th/getattachment/8faa736b-3235-49c8-8b01-d37ff53a9a45/ENG-Version.aspx>`_.
-The law governs transactions performed through electronic means and the use of digital signatures.
+In Thailand, electronic signatures are regulated under the
+`Electronic Transactions Act B.E. 2544 (2001)
+<https://www.etda.or.th/th/policy-and-standard/laws/etda-laws/Electronic-Transactions-Act.aspx>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -67,4 +71,4 @@ not be suitable or legally recognized in Thailand:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

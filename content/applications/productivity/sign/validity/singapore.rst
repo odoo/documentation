@@ -10,9 +10,13 @@ electronic signatures in Singapore.
 Legal framework for electronic signatures in Singapore
 ======================================================
 
-In Singapore, electronic signatures are regulated under the `Electronic Transactions Act <https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/acts-regulations/electronic-transactions-act.pdf>`_.
+In Singapore, electronic signatures are regulated under the
+`Electronic Transactions Act <https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/acts-regulations/electronic-transactions-act.pdf>`_.
+
 The law recognizes the use of electronic documents and electronic signatures for the execution of
-contracts and other transactions. The key points of the law include:
+contracts and other transactions.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -67,4 +71,4 @@ not be suitable or legally recognized in Singapore:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

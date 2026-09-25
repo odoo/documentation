@@ -10,10 +10,15 @@ electronic signatures in Canada.
 Legal framework for electronic signatures in Canada
 ===================================================
 
-In Canada, electronic signatures are regulated under the `Personal Information Protection and
-Electronic Documents Act (PIPEDA) <https://laws-lois.justice.gc.ca/pdf/p-8.6.pdf>`_ and local
-regulations. The law establishes electronic equivalents to paper-based documents and signatures at
-the federal level. The key points of the law include:
+In Canada, electronic signatures are regulated under the
+`PIPEDA Part 2 (federal) <https://laws-lois.justice.gc.ca/eng/acts/P-8.6/>`_, the
+`Uniform Electronic Commerce Act <https://www.ulcc.ca/en/uniform-acts-new-order/current-uniform-acts/652-electronic-commerce/1447-uniform-electronic-commerce-act>`_,
+and the `Quebec Act to Establish a Legal Framework for IT <https://www.legisquebec.gouv.qc.ca/en/document/cs/C-1.1>`_.
+
+The law establishes electronic equivalents to paper-based documents and signatures, with federal and
+provincial rules applying across Canada.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -72,4 +77,5 @@ not be suitable or legally recognized in Canada:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*
+

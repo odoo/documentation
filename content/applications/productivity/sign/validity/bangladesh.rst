@@ -10,10 +10,15 @@ electronic signatures in Bangladesh.
 Legal framework for electronic signatures in Bangladesh
 =======================================================
 
-In Bangladesh, electronic signatures are regulated under the `Information and Communication
-Technology Act <https://samsn.ifj.org/wp-content/uploads/2015/07/Bangladesh-ICT-Act-2006.pdf>`_. The
-law recognizes the use of electronic documents and electronic signatures for the execution of
-contracts and other transactions. The key points of the law include:
+In Bangladesh, electronic signatures are regulated under the
+`Information and Communication Technology Act 2006 <http://www.parliament.gov.bd/index.php/en/bills-and-acts/bills-acts-and-resolutions/acts-of-parliament/1028-the-information-and-communication-technology-act-2006>`_
+and the `IT (Certifying Authority) Rules 2010 <http://www.bcc.net.bd/>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+Higher-assurance secure digital signatures may rely on certificates issued by government-licensed
+certification authorities.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +75,4 @@ not be suitable or legally recognized in Bangladesh:
    use cases meet all legal requirements. Compliance with additional industry-specific regulations
    may also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

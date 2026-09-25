@@ -10,10 +10,13 @@ electronic signatures in the Dominican Republic.
 Legal framework for electronic signatures in the Dominican Republic
 ===================================================================
 
-In the Dominican Republic, electronic signatures are regulated under the `Law 126-02 on Electronic
-Commerce, Documents and Digital Signatures <https://dgii.gov.do/legislacion/leyesTributarias/Documents/Otras%20Leyes%20de%20Inter%C3%A9s/126-02.pdf>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In the Dominican Republic, electronic signatures are regulated under the
+`Ley 126-02 sobre Comercio Electrónico (INDOTEL) <https://www.indotel.gob.do/documentos/leyes/ley-126-02-sobre-comercio-electronico/>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
+
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +73,5 @@ not be suitable or legally recognized in the Dominican Republic:
    types and use cases meet all legal requirements. Compliance with additional industry-specific
    regulations may also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+

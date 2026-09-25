@@ -10,11 +10,17 @@ electronic signatures in Norway.
 Legal framework for electronic signatures in Norway
 ===================================================
 
-In Norway, electronic signatures are regulated under the Act on electronic trust services that
-incorporates Electronic Identification and Trust Services for Electronic Transactions in the
-Internal Market (eIDAS) and Regulation No. 910/2014 of the European Parliament and of the Council.
-The law governs transactions performed through electronic means and the use of electronic
-signatures. The key points of the law include:
+In Norway, electronic signatures are regulated under the
+`EU eIDAS Regulation 910/2014, as amended by eIDAS 2.0 (Regulation (EU) 2024/1183), applied in
+Norway via the EEA Agreement <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910>`_
+and the `Lov om elektroniske tillitstjenester (LOV-2018-06-15-44)
+<https://lovdata.no/dokument/NL/lov/2018-06-15-44>`_.
+
+The EU eIDAS framework, together with national trust-services legislation, governs electronic
+signatures and certification requirements. EU trust-services rules apply through the EEA Agreement,
+implemented by Norwegian electronic trust-services legislation.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -71,4 +77,4 @@ not be suitable or legally recognized in Norway:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

@@ -10,9 +10,12 @@ electronic signatures in Israel.
 Legal framework for electronic signatures in Israel
 ===================================================
 
-In Israel, electronic signatures are regulated under the Electronic Signature Law, and various
-electronic signature regulations. The law governs transactions performed through electronic means
-and the use of electronic signatures. The key points of the law include:
+In Israel, electronic signatures are regulated under the
+`Electronic Signature Law 5761-2001 (as amended 2018) <https://www.nevo.co.il/law_html/Law01/500_869.htm>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +72,5 @@ not be suitable or legally recognized in Israel:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+
