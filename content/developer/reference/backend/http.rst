@@ -77,6 +77,30 @@ the start of the request.
     :members:
     :member-order: bysource
 
+Request
+-------
+
+The request object is automatically set on :data:`odoo.http.request` at
+the start of the request.
+
+.. autoclass:: odoo.http.Request
+    :members:
+    :member-order: bysource
+
+Session
+-------
+
+.. autoclass:: odoo.http.Session
+    :members: authenticate, finalize
+    :member-order: bysource
+
+.. autoclass:: odoo.http.JsonRPCDispatcher
+    :members:
+    :member-order: bysource
+.. autoclass:: odoo.http.HttpDispatcher
+    :members:
+    :member-order: bysource
+
 Response
 --------
 
