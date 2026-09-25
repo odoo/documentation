@@ -44,7 +44,7 @@ Resource capacity
 ~~~~~~~~~~~~~~~~~
 
 When booking an appointment based on resource availability, the website only displays capacity up to
-`12`. This occurs even if the resource has a higher capacity. To avoid this, a new *System
+`20`. This occurs even if the resource has a higher capacity. To avoid this, a new *System
 Parameter* needs to be added to the database.
 
 First, ensure that :ref:`developer mode <developer-mode>` is enabled. Then, navigate to the
