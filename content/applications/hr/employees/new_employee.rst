@@ -594,7 +594,7 @@ Salary adjustments tab
 This *Salary Adjustments* tab houses all salary adjustments in a list view. Salary adjustments are
 wage garnishments or voluntary portions of an employee's payslip set aside each pay period.
 
-Add each individual :ref:`salary adjustment <payroll/salary-adjustment/create>` to this tab.
+Add each individual :ref:`salary adjustment <payroll/salary_attachments/create>` to this tab.
 
 .. _employees/hr-settings:
 
