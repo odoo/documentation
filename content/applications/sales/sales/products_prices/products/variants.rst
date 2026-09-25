@@ -116,8 +116,10 @@ Creation` mode cannot be edited.
 
 - :guilabel:`Instantly`: Creates all possible variants as soon as attributes and values are added to
   a product template.
-- :guilabel:`Dynamically`: Creates variants **only** when corresponding attributes and values are
-  added to a sales order.
+- :guilabel:`Dynamically`: Creates each variant **only** when its combination of attribute values
+  is first used: on a sales order, on a purchase order using the :guilabel:`Variant Grid Entry`
+  feature, in the **Point of Sale** app, or on the eCommerce product page. Inventory operations
+  do not create variants; they can only select variants that already exist.
 - :guilabel:`Never`: Prevents the automatic creation of purchaseable variants with this tag.
   Instead, this tag is treated as being informational. If more than one value is assigned to an
   attribute with this tag, all values are loaded when the product displays, since the creation of
