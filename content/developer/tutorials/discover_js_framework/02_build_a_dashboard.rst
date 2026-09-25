@@ -251,7 +251,7 @@ would prefer to do it only the first time, so we actually need to maintain some 
 .. seealso::
    - `Example: simple service <{GITHUB_PATH}/addons/web/static/src/core/network/http_service.js>`_
    - `Example: service with a dependency
-     <{GITHUB_PATH}/addons/web/static/src/core/user_service.js>`_
+     <{GITHUB_PATH}/addons/web/static/src/core/user.js>`_
 
 6. Display a pie chart
 ======================
