@@ -238,6 +238,45 @@ automatically by Odoo.
    accurate calculations based on the HSN Code and GST rate. This ensures a more straightforward and
    standardized representation in the E-invoice records.
 
+.. _india/price-adjustment-credit-debit-notes:
+
+Managing price adjustment credit/debit notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Customer credit <accounting/credit_notes/issue-credit-note>` and :ref:`debit notes
+<accounting/credit_notes/issue-debit-note>` can be issued either:
+
+- to change the quantity, such as when goods are returned, additional goods are supplied, or refunds
+  are issued.
+- to change the amount, without changing the quantity.
+
+.. important::
+   Under GST, these two cases must be reported differently. For price-only corrections, no reduction
+   or increase in quantity should be declared in e-Invoices or GST returns, since no goods were
+   actually moved.
+
+In the :guilabel:`Other Info` tab of the credit or debit note, select the appropriate
+:guilabel:`Adjustment Type`:
+
+- :guilabel:`Standard`: Select when the quantity changes.
+- :guilabel:`Price Adjustment`: Use when only the amount changes. Odoo automatically:
+
+  - reports both the quantity and unit price as zero in the e-Invoice, while the taxable value and
+    GST amounts are reported as usual;
+  - excludes the note's quantity from the HSN summary in the :ref:`GSTR-1 return <india/gstr-1>`;
+  - leaves the invoiced quantity of the related sales order unchanged.
+
+.. example::
+   A customer is invoiced for 10 units at ₹1,000 each, plus 18% GST.
+
+   - **Two units are returned**: Create a credit note for 2 units at ₹1,000 with the
+     :guilabel:`Standard` adjustment type. The e-Invoice reports a quantity of 2, the HSN quantity
+     in GSTR-1 is reduced by 2, and the sales order shows 8 units invoiced.
+   - **Post-sales discount of ₹500**: Create a credit note for ₹500 with the
+     :guilabel:`Price Adjustment` selected as the adjustment type. The e-Invoice reports both the
+     quantity and unit price as zero, with a taxable value of ₹500 and GST of ₹90. The HSN quantity
+     in GSTR-1 is not affected, and the sales order still shows 10 units invoiced.
+
 .. _india/verify-e-invoice:
 
 GST e-Invoice verification
