@@ -18,22 +18,27 @@ after a rental order is confirmed can rental products be picked up.
 Create a rental quote
 =====================
 
-To create a rental quote, navigate to :menuselection:`Rental app --> Orders --> Orders`, and click
-:guilabel:`New`. Doing so reveals a blank rental order form.
+To create a rental quote, open the **Rental** app and create one from the *Rental Orders dashboard*
+or navigate to :menuselection:`Rental app --> Orders --> Orders`, click :guilabel:`New` and select
+:guilabel:`New Quotation`. Doing so reveals a blank rental order form.
+
+.. tip::
+   Users can select a :doc:`quotation template <../../sales/sales_quotations/quote_template>` from
+   the :guilabel:`New` button drop-down menu.
 
 Start by adding a :guilabel:`Customer`. In the *Order Lines* tab, add a rental product by clicking
-:guilabel:`Add a product` or :guilabel:`Catalog`, and select the desired rental product. Once a
-product rental product is added, the :guilabel:`Rental period` field displays, allowing users to
-select the desired rental duration via the pop-up calendar.
+:guilabel:`Add Line` or :guilabel:`Catalog`, and select the desired rental product. Next, select the
+desired rental duration via the pop-up calendar by clicking the first field of the :guilabel:`Rental
+period`.
 
 .. important::
    There can only be one rental period per rental order. Multiple rental product orders with
    different rental periods require a rental order for each rental period.
 
-As long as the rental quotation isn't confirmed, the user can change the :guilabel:`Rental period`.
-A :icon:`fa-refresh` :guilabel:`Update Rental Prices` icon appears after a rental period change.
-Click the icon, and the rental quotation auto-calculates the new :guilabel:`Unit Prices`,
-:guilabel:`Amount`, and quotation :guilabel:`Total`.
+As long as the rental quotation isn't confirmed, the user can change the :guilabel:`Rental period`
+or :guilabel:`Pricelist`. The **Rental** app automatically updates the rental product's
+:guilabel:`Hours`, :guilabel:`Unit Price`, and :guilabel:`Amount` on the product line and the
+quotation :guilabel:`Total` after the change.
 
 Once all the information has been entered correctly on the rental order form, click :guilabel:`Send`
 to send the quotation to the customer. When the customer confirms the quotation, click
@@ -42,8 +47,8 @@ to send the quotation to the customer. When the customer confirms the quotation,
 When a rental order is confirmed, smart buttons may appear at the top of the form, depending on the
 :ref:`app integrations <rental/product_type/app-integration>`:
 
-- :icon:`fa-puzzle-piece` :guilabel:`Tasks`: Linked to the **Projects** app and shows any projects
-  or tasks related to the rental order.
+- :icon:`fa-check` :guilabel:`Tasks`: Linked to the **Projects** app and shows any projects or tasks
+  related to the rental order.
 - :icon:`fa-clock-o` :guilabel:`Recorded`: Linked to the **Timesheets** app and shows how many hours
   are related to the rental order.
 - :icon:`fa-tasks` :guilabel:`Planned`: Linked to the **Planning** app and shows how many shifts are
@@ -109,9 +114,6 @@ Click the :icon:`fa-puzzle-piece` :guilabel:`Tasks` smart button on top of the r
 display a Kanban view of all the tasks automatically created when confirming the rental order.
 :doc:`Customize the project's tasks <../../../services/project/tasks/task_creation>` as needed.
 
-.. image:: create_rental_order/rental-order-task-card.png
-   :alt: Photography task generated from the rental order.
-
 .. tip::
    Configuring the use of :doc:`../../../services/project/project_management/project_templates` on
    the product form creates new projects with predefined tasks, priority levels, and assigned
@@ -125,8 +127,8 @@ the respective service task, then click the :guilabel:`Timesheets` tab. Click :g
 to enter the:
 
 - :guilabel:`Date`: The date the work was performed.
-- :guilabel:`Employee`: The employee who performed the work. Description: A brief description of the
-  work performed.
+- :guilabel:`Employee`: The employee who performed the work.
+- :guilabel:`Description`: A brief description of the work performed.
 - :guilabel:`Time Spent`: The number of hours worked on the task for that entry.
 
 Click the :icon:`fa-dollar` :guilabel:`Sales Order` smart button to return to the rental order.
@@ -150,8 +152,8 @@ Create an invoice
 =================
 
 Navigate to the desired invoice by opening the **Rental** app to display the :guilabel:`Rental
-Orders` dashboard. In the *Invoice Status* section, click :guilabel:`To Invoice` to view all rental
-orders that need invoices.
+Orders` dashboard. Click the :guilabel:`To Invoice` smart button to view all rental orders that have
+no invoices created for them.
 
 Click the desired rental order, then click :guilabel:`Create Invoice`. Select :guilabel:`Regular
 invoice` from the *Create invoice(s)* window and click :guilabel:`Create Draft`.
