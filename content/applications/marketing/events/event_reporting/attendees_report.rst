@@ -158,7 +158,7 @@ The :guilabel:`Group By` column has the following options:
   :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of day, week, month, quarter, and
   year options.
 - :guilabel:`Campaign`: Group data based on marketing :ref:`campaigns
-  <marketing_automation/campaigns>`.
+  <marketing_automation/marketing_automation/campaigns>`.
 - :guilabel:`Add Custom Group`: Create a :ref:`custom group <search/group>` to organize data by
   additional fields. Click the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a drop-down
   of grouping options. Multiple selections can be made.
