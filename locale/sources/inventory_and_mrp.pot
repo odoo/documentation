@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,7 +125,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -6287,7 +6287,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ""
 
@@ -10087,7 +10086,7 @@ msgid "To configure location names, begin by navigating to :menuselection:`Inven
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:46
-msgid "Once the locations are named in alphabetical order, based on their proximity to the output or packing location, set the removal strategy on the :ref:`parent location <inventory/location-hierarchy>`."
+msgid "Once the locations are named in alphabetical order, based on their proximity to the output or packing location, set the removal strategy on the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
@@ -17175,14 +17174,18 @@ msgid "Scraps smart button showing all scrap orders from operation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
-msgid "A *location* is a specific space within a warehouse. This can be a shelf, room, aisle, etc."
+msgid "A *location* is a specific space within a warehouse (e.g., a shelf, room, aisle, etc.). Each location is categorized by a :ref:`location type <inventory/warehouses_storage/location-type>`, which determines the behavior of stock moves and valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
-msgid "To create specific storage locations, enable the *Storage Locations* feature by going to :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid "Users can create custom locations, track products at specific locations, and manage putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
+msgid "To create specific storage locations, enable the *Storage Locations* feature by going to :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section, select the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid "Typically, the :guilabel:`Storage Locations` feature is used with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/use_routes>`, which controls how products move between locations."
 msgstr ""
 
@@ -17190,158 +17193,184 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
-msgid "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> Configuration --> Locations`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
+msgid "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> Configuration --> Locations` to open a list of locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid "On this page, click :guilabel:`New`. The new location form can then be configured as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ":guilabel:`Parent Location`: the location within which the new location exists. After the location is created, it is listed on the :guilabel:`Locations` page using a *location hierarchy*, to describe how a specific location fits within larger areas of the warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location name, \"Zone A\" is the parent location, and everything before it is the path showing where this spot is within the warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
-msgid "Additional Information section"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
-msgid "In addition to the required fields above, configure the following location fields to ensure the location serves its intended purpose in the database:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
-msgid ":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal Location`, :guilabel:`Customer Location`, :guilabel:`Inventory Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize the location. For details on each location type, refer to the :ref:`Location Types section <inventory/warehouses_storage/location-type>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ":guilabel:`Storage Category`: only available with the :doc:`Storage Categories <../../shipping_receiving/daily_operations/storage_category>` feature enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
-msgid ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/damaged goods to be stored in this location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ":guilabel:`Is a Return Location?`: tick this checkbox to allow products to be returned to this location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
-msgid ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode to :ref:`identify actions <barcode/setup/location>` at this location when scanned."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
-msgid ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set the location as a destination for receiving products from *Buy*, *Manufacture*, or other procurement routes, ensuring products are correctly supplied to the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "Additional Information section of new location creation form."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ":guilabel:`Parent Location`: The new location's parent location, if applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid "In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the location name, and `Zone A` is the parent location. Both the location and the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
+msgid "Additional Information section"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
+msgid "In addition to the required fields above, configure the following location fields to ensure the location serves its intended purpose in the database:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
+msgid ":guilabel:`Location Type`: Select the :ref:`location type <inventory/warehouses_storage/location-type>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
+msgid ":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage Categories <../../shipping_receiving/daily_operations/storage_category>` feature **must** be enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
+msgid ":guilabel:`Company`: The company of the location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
+msgid ":guilabel:`Is a Scrap Location?`: Select this checkbox to allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
+msgid ":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if using :doc:`batch transfers <../../shipping_receiving/picking_methods/batch>`, select this checkbox to allow batches to be loaded at this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/setup/location>` at this location when scanned. The **Barcode** app **must** be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ":guilabel:`Replenish Location`: Select this checkbox to set the location as a destination for receiving products from *Buy*, *Manufacture*, or other :doc:`configured routes <../../shipping_receiving/daily_operations/use_routes>`."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid "Configure the remaining fields in the :guilabel:`Additional Information` section as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ":guilabel:`Company`: the company whose warehouse the location is inside of. Leave this field blank if this location is shared between companies."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ":guilabel:`Replenish Location`: tick this checkbox to get all quantities to replenish at this location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid "In the :guilabel:`Cyclic Counting` section, change the value in the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if necessary."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid "When different than `0`, the inventory count dates for products stored at this location are automatically set at the defined frequency."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` field, click the drop-down menu and select the :doc:`removal strategy <../../shipping_receiving/removal_strategies>` for how items should be removed from this location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
-msgid "To schedule regular inventory counts at this location, set the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By default, it is set to `0` (no scheduled counts)."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
+msgid "To schedule regular inventory counts at this location, set the :guilabel:`Inventory Frequency` field to the desired interval between inventory counts, in days. By default, it is set to `0` (no scheduled counts)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
-msgid "For example, setting this field to `30`, schedules a count every thirty days. For more specifics on setting up and using this feature, refer to the :doc:`Cycle Counts documentation <cycle_counts>`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
+msgid "The :guilabel:`Last Inventory` field displays the date of the last inventory count at this location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
-msgid "The :guilabel:`Last Effective Inventory` field displays the date the last inventory count at this location occurred. When scheduled inventory counts are enabled, the :guilabel:`Next Expected Inventory` field displays the date of the next inventory count."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
+msgid "After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next Expected` field automatically displays the date of the next inventory count."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
-msgid "With inventory counts scheduled to occur every `30` days, and the :guilabel:`Last Effective Inventory` count occurring on July 16, the :guilabel:`Next Expected Inventory` is August 15."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
+msgid "With inventory counts scheduled to occur every `30` days, the :guilabel:`Last Inventory` count occurred on September 24, and the :guilabel:`Next Expected` is October 24."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
-msgid "In the :guilabel:`Logistics` section of the locations form, optionally select a :guilabel:`Removal Strategy` to determine the order and priority of how products are picked from inventory. The options are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
+msgid "Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal strategy <../../shipping_receiving/removal_strategies>` to specify the order and priority for picking products from inventory. The options are:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
-msgid "To view the current stock at a single location, go to :menuselection:`Inventory app --> Configuration --> Locations`, and select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
-msgid "Next, click the :guilabel:`Current Stock` smart button to get a list of all products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
-msgid "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` desks."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
+msgid "The :guilabel:`Least Packages` option is only selectable if the :doc:`Packages feature <../../product_management/configure/package>` is enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
+msgid "See the :doc:`../../shipping_receiving/removal_strategies` documentation for details about each option listed in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+msgid "Users can also access lists of products, current stock, and putaway rules by location. To do so, open the location's form by navigating to :menuselection:`Inventory app --> Configuration --> Locations` and selecting the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid "In the location form, access each of these options by selecting its corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid "To view the current stock at the location, click the :icon:`fa-cubes` :guilabel:`Current Stock` smart button. This opens a list of all products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid "By default, current stock information is grouped by product. Additional :doc:`filters and grouping <../../../../essentials/search>` options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid "To view all products at the location, click the :icon:`fa-th-list` :guilabel:`Products` smart button. By default, this opens a list of all available products or products with outstanding demand. Additional filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid "To view all putaway rules of the location, click the :icon:`fa-random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway Rules <../../shipping_receiving/daily_operations/putaway>` page, where users can view, edit, or create additional rules."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
