@@ -224,7 +224,7 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
       import { registry } from "@web/core/registry";
       import { BeautifulController } from "./beautiful_controller";
       import { BeautifulArchParser } from "./beautiful_arch_parser";
-      import { BeautifylModel } from "./beautiful_model";
+      import { BeautifulModel } from "./beautiful_model";
       import { BeautifulRenderer } from "./beautiful_renderer";
 
       export const beautifulView = {
