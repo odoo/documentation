@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-08 20:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -25,10 +25,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
-"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
-"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
-"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
@@ -210,7 +210,7 @@ msgstr "Дашборд застосунку Штрихкод із признач
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11788,7 +11788,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -19421,12 +19420,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"Після того, як місця розташування буде названо в алфавітному порядку на "
-"основі їхньої близькості до місця видачі або пакування, встановіть стратегію "
-"вилучення для :ref:`батьківського місця розташування <inventory/location-"
-"hierarchy>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -32160,8 +32155,8 @@ msgid ""
 "enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
 "Цей розділ з'являється лише тоді, коли увімкнено :guilabel:`Пакетні, "
-"хвильові й кластерні переміщення` у :menuselection:`Склад --> "
-"Налаштування --> Налаштування`."
+"хвильові й кластерні переміщення` у :menuselection:`Склад --> Налаштування --"
+"> Налаштування`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:103
 msgid ""
@@ -32797,25 +32792,27 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"*Місце зберігання* — це конкретний простір на складі. Це може бути полиця, "
-"кімната, прохід тощо."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"Щоб створити конкретні місця зберігання, увімкніть функцію *Місця "
-"зберігання*, перейшовши до :menuselection:`Додаток Склад --> Налаштування --"
-"> Параметри`. У розділі :guilabel:`Склади` встановіть "
-"прапорець :guilabel:`Місця зберігання`. Потім натисніть :guilabel:`Зберегти`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -32829,58 +32826,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "Показати функцію «Місця зберігання»."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "Створити нове місце зберігання"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"Після ввімкнення *Місць зберігання* перейдіть до :menuselection:`Додаток "
-"Склад --> Налаштування --> Місця зберігання`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "Список внутрішніх розташувань."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
-msgstr ""
-"На цій сторінці натисніть :guilabel:`Створити`. Форму нового розташування "
-"можна налаштувати наступним чином:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`Назва розташування`: впізнавана назва розташування."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
-msgstr ""
-":guilabel:`Батьківське розташування`: розташування, в якому знаходиться нове "
-"розташування. Після створення розташування воно буде відображено на "
-"сторінці :guilabel:`Розташування` за допомогою *ієрархії розташувань*, щоб "
-"описати, як конкретне розташування вписується в більші зони складу."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "Розділ «Додаткова інформація» форми створення нового розташування."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "Розділ «Додаткова інформація»"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -32888,230 +32881,197 @@ msgstr ""
 "На додаток до обов'язкових полів вище налаштуйте наступні поля розташування, "
 "щоб переконатися, що розташування служить своїм призначенням у базі даних:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`Категорія зберігання`: доступно лише за умови увімкнення "
-"функції :doc:`Категорії зберігання <../../shipping_receiving/"
-"daily_operations/storage_category>` в :menuselection:`Програма «Склад» --> "
-"Конфігурація --> Налаштування`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`Компанія`: компанія, до якої належить розташування."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
-msgstr ""
-":guilabel:`Штрихкод`: використовується з програмою *Штрихкод*, введіть "
-"штрихкод для :ref:`ідентифікації дій <barcode/setup/location>` у цьому "
-"розташуванні при скануванні."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
-msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "Розділ «Додаткова інформація» форми створення нового розташування."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
+msgid ""
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`Штрих-код`: штрих-код, призначений місцю зберігання."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`Поповнити місце`: поставте прапорець, щоб отримати всі кількості "
-"для поповнення в цьому місці."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"У розділі :guilabel:`Циклічний підрахунок` змініть значення в "
-"полі :guilabel:`Частота інвентаризації (днів)` зі стандартного `0`, якщо "
-"необхідно."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "Розділ «Циклічний підрахунок» форми створення нового розташування."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"Якщо значення відрізняється від `0`, дати інвентаризації для продуктів, що "
-"зберігаються в цьому розташуванні, автоматично встановлюються з визначеною "
-"періодичністю."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"У розділі :guilabel:`Логістика` в полі :guilabel:`Стратегія вилучення` "
-"натисніть спадне меню та виберіть :doc:`стратегію вилучення <../../"
-"shipping_receiving/removal_strategies>`, яка визначає, як товари мають "
-"вилучатися з цього розташування."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "Розділ «Циклічний підрахунок»"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"Щоб запланувати регулярні інвентаризації в цьому місці, встановіть "
-"поле :guilabel:`Частота інвентаризації (днів)` на потрібний інтервал. За "
-"замовчуванням воно встановлено на `0` (без запланованих підрахунків)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"Наприклад, встановлення цього поля на `30` планує підрахунок кожні тридцять "
-"днів. Для більш детальної інформації про налаштування та використання цієї "
-"функції зверніться до :doc:`документації з циклічних підрахунків "
-"<cycle_counts>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"Поле :guilabel:`Остання фактична інвентаризація` відображає дату, коли "
-"відбулася остання інвентаризація в цьому місці. Коли увімкнено заплановані "
-"інвентаризації, поле :guilabel:`Наступна очікувана інвентаризація` "
-"відображає дату наступної інвентаризації."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"Якщо інвентаризації заплановані кожні `30` днів, а :guilabel:`Остання "
-"фактична інвентаризація` відбулася 16 липня, то :guilabel:`Наступна "
-"очікувана інвентаризація` буде 15 серпня."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "Відображення розділу «Циклічний підрахунок» форми розташувань."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "Розділ «Логістика»"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"У розділі :guilabel:`Логістика` форми місць зберігання за бажанням "
-"виберіть :guilabel:`Стратегію вилучення`, щоб визначити порядок і пріоритет "
-"вибірки товарів зі складу. Доступні варіанти: :guilabel:`Перший прийшов — "
-"перший вийшов (FIFO)`, :guilabel:`Останній прийшов — перший вийшов "
-"(LIFO)`, :guilabel:`Найближче місце` та :guilabel:`Перший закінчується — "
-"перший виходить (FEFO)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "Поточний запас у розташуванні"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
 msgstr ""
-"Щоб переглянути поточний запас в окремому розташуванні, перейдіть "
-"до :menuselection:`Програма «Склад» --> Конфігурація --> Розташування` та "
-"виберіть потрібне розташування."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
 msgstr ""
-"Далі натисніть розумну кнопку :guilabel:`Поточні запаси`, щоб отримати "
-"список усіх товарів у цьому місці."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
 msgstr ""
-"Список поточних запасів на `Полиці 1` складається з `266` шаф і `39` столів."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "Відображення запасу на полиці 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -62933,6 +62893,210 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "Після того, як місця розташування буде названо в алфавітному порядку на "
+#~ "основі їхньої близькості до місця видачі або пакування, встановіть "
+#~ "стратегію вилучення для :ref:`батьківського місця розташування <inventory/"
+#~ "location-hierarchy>`."
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "*Місце зберігання* — це конкретний простір на складі. Це може бути "
+#~ "полиця, кімната, прохід тощо."
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Щоб створити конкретні місця зберігання, увімкніть функцію *Місця "
+#~ "зберігання*, перейшовши до :menuselection:`Додаток Склад --> Налаштування "
+#~ "--> Параметри`. У розділі :guilabel:`Склади` встановіть "
+#~ "прапорець :guilabel:`Місця зберігання`. Потім "
+#~ "натисніть :guilabel:`Зберегти`."
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "Після ввімкнення *Місць зберігання* перейдіть до :menuselection:`Додаток "
+#~ "Склад --> Налаштування --> Місця зберігання`."
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "На цій сторінці натисніть :guilabel:`Створити`. Форму нового розташування "
+#~ "можна налаштувати наступним чином:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`Назва розташування`: впізнавана назва розташування."
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Батьківське розташування`: розташування, в якому знаходиться "
+#~ "нове розташування. Після створення розташування воно буде відображено на "
+#~ "сторінці :guilabel:`Розташування` за допомогою *ієрархії розташувань*, "
+#~ "щоб описати, як конкретне розташування вписується в більші зони складу."
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`Категорія зберігання`: доступно лише за умови увімкнення "
+#~ "функції :doc:`Категорії зберігання <../../shipping_receiving/"
+#~ "daily_operations/storage_category>` в :menuselection:`Програма «Склад» --"
+#~ "> Конфігурація --> Налаштування`."
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`Компанія`: компанія, до якої належить розташування."
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`Штрихкод`: використовується з програмою *Штрихкод*, введіть "
+#~ "штрихкод для :ref:`ідентифікації дій <barcode/setup/location>` у цьому "
+#~ "розташуванні при скануванні."
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`Штрих-код`: штрих-код, призначений місцю зберігання."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`Поповнити місце`: поставте прапорець, щоб отримати всі "
+#~ "кількості для поповнення в цьому місці."
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "У розділі :guilabel:`Циклічний підрахунок` змініть значення в "
+#~ "полі :guilabel:`Частота інвентаризації (днів)` зі стандартного `0`, якщо "
+#~ "необхідно."
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "Розділ «Циклічний підрахунок» форми створення нового розташування."
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "Якщо значення відрізняється від `0`, дати інвентаризації для продуктів, "
+#~ "що зберігаються в цьому розташуванні, автоматично встановлюються з "
+#~ "визначеною періодичністю."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "У розділі :guilabel:`Логістика` в полі :guilabel:`Стратегія вилучення` "
+#~ "натисніть спадне меню та виберіть :doc:`стратегію вилучення <../../"
+#~ "shipping_receiving/removal_strategies>`, яка визначає, як товари мають "
+#~ "вилучатися з цього розташування."
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "Щоб запланувати регулярні інвентаризації в цьому місці, встановіть "
+#~ "поле :guilabel:`Частота інвентаризації (днів)` на потрібний інтервал. За "
+#~ "замовчуванням воно встановлено на `0` (без запланованих підрахунків)."
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "Наприклад, встановлення цього поля на `30` планує підрахунок кожні "
+#~ "тридцять днів. Для більш детальної інформації про налаштування та "
+#~ "використання цієї функції зверніться до :doc:`документації з циклічних "
+#~ "підрахунків <cycle_counts>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "Поле :guilabel:`Остання фактична інвентаризація` відображає дату, коли "
+#~ "відбулася остання інвентаризація в цьому місці. Коли увімкнено "
+#~ "заплановані інвентаризації, поле :guilabel:`Наступна очікувана "
+#~ "інвентаризація` відображає дату наступної інвентаризації."
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "Якщо інвентаризації заплановані кожні `30` днів, а :guilabel:`Остання "
+#~ "фактична інвентаризація` відбулася 16 липня, то :guilabel:`Наступна "
+#~ "очікувана інвентаризація` буде 15 серпня."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "У розділі :guilabel:`Логістика` форми місць зберігання за бажанням "
+#~ "виберіть :guilabel:`Стратегію вилучення`, щоб визначити порядок і "
+#~ "пріоритет вибірки товарів зі складу. Доступні варіанти: :guilabel:`Перший "
+#~ "прийшов — перший вийшов (FIFO)`, :guilabel:`Останній прийшов — перший "
+#~ "вийшов (LIFO)`, :guilabel:`Найближче місце` та :guilabel:`Перший "
+#~ "закінчується — перший виходить (FEFO)`."
+
+#~ msgid "Current stock at location"
+#~ msgstr "Поточний запас у розташуванні"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "Щоб переглянути поточний запас в окремому розташуванні, перейдіть "
+#~ "до :menuselection:`Програма «Склад» --> Конфігурація --> Розташування` та "
+#~ "виберіть потрібне розташування."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "Далі натисніть розумну кнопку :guilabel:`Поточні запаси`, щоб отримати "
+#~ "список усіх товарів у цьому місці."
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr ""
+#~ "Список поточних запасів на `Полиці 1` складається з `266` шаф і `39` "
+#~ "столів."
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "Відображення запасу на полиці 1."
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

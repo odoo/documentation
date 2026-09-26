@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-14 06:32+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -202,7 +202,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11466,7 +11466,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -18800,11 +18799,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"出荷または梱包ロケーションからの近さに基づいて、ロケーションがアルファベット"
-"順に命名されたら、:ref:`親ロケーション <inventory/location-hierarchy>` の払出"
-"方針を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -31632,25 +31628,27 @@ msgstr "廃棄スマートボタンはオペレーションからの全ての廃
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"*ロケーション* とは、倉庫内の特定のスペースのことです。棚、部屋、通路などで"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"特定の保管場所を作成するには、 :menuselection:`在庫アプリ --> 設定 --> 管理設"
-"定` で *保管場所* 機能を有効にします。guilabel:`倉庫` セクション"
-"で :guilabel:`保管場所` チェックボックスにチェックを入れます。その"
-"後、 :guilabel:`保存` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -31664,61 +31662,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "保管場所機能を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "新規ロケーションを作成する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"*保管場所* を有効にした後、 :menuselection:`在庫アプリ --> 設定 --> ロケー"
-"ション` に進みます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "内部ロケーションのリスト。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"このページで :guilabel:`新規` をクリックして下さい。新規ロケーションフォーム"
-"は以下のように設定できます:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`ロケーション名`: ロケーションの分かりやすい名前。"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "新しいロケーション作成フォームの追加情報セクション。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-" :guilabel:`親ロケーション`: 新規ロケーションが所在するロケーションです。ロ"
-"ケーションが作成されると、そのロケーションは :guilabel:`ロケーション` ページ"
-"に *ロケーション階層* を使って表示され、特定の場所が、倉庫の大きなエリアの中"
-"でどのように位置づけられるかが分かります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"`WH/在庫/ゾーンA/冷蔵庫 1`では、\"冷蔵庫 1\" がロケーション名、\"ゾーン A\"が"
-"親ロケーションであり、それ以前のすべてが、この場所が倉庫内のどこにあるかを示"
-"すパスです。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "追加情報セクション"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -31726,238 +31717,197 @@ msgstr ""
 "上記の必須項目に加えて、以下のロケーション項目を設定し、データベース内でロ"
 "ケーションが適切に機能するようにして下さい:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`ロケーションタイプ`: ドロップダウンメニューから、:guilabel:`仕入先"
-"ロケーション`、:guilabel:`ビュー(照会)`、:guilabel:`内部ロケーション"
-"`、:guilabel:`顧客ロケーション`、:guilabel:`在庫損失`、:guilabel:`生産`、また"
-"は:guilabel:`積送ロケーション` を選択して、ロケーションを分類します。各ロケー"
-"ションタイプの詳細については、:ref:`ロケーションタイプセクション <inventory/"
-"warehouses_storage/location-type>` を参照して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`保管カテゴリ`: :doc:`保管カテゴリ <../../shipping_receiving/"
-"daily_operations/storage_category>` 機能が :menuselection:`在庫アプリ --> 設"
-"定 --> 管理設定` で有効になっている場合のみ利用可能です。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`会社`: ロケーションが属する会社"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`廃棄ロケーションか?`: このチェックボックスにチェックを入れると、こ"
-"のロケーションで廃棄/破損品の保管をすることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:返品ロケーションか?`: このチェックボックスにチェックを入れると、プ"
-"ロダクトをこのロケーションに返品することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`バーコード`: *バーコード* アプリで使用します。バーコードをスキャン"
-"すると、このロケーションでの :ref:`アクションを識別 <barcode/setup/"
-"location>` します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`補充ロケーション`: :doc:`設定ルート <../../shipping_receiving/"
-"daily_operations/use_routes>` で使用します。このチェックボックスをオンにする"
-"と、*購買*、*製造*、またはその他の調達ルートからプロダクトを受け取る先として"
-"ロケーションを設定でき、プロダクトが正しく倉庫に供給されるようになります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "新しいロケーション作成フォームの追加情報セクション。"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ""
-":guilabel:`追加情報` セクションの残りのフィールドを以下のように設定します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`会社`: このロケーションが所属する倉庫の会社。複数の会社で共有する"
-"場合は、このフィールドを空欄のままにして下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`バーコード`: ロケーションに割当られたバーコード。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`補充ロケーション`: このチェックボックスをオンにすると、このロケー"
-"ションで補充する全ての数量を取得できます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-":guilabel:`周期的カウンティング` セクションで、必要に応じて、:guilabel:`棚卸"
-"頻度(日)` フィールドの値をデフォルトの `0` から変更します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "新規ロケーション作成フォームのサイクルカウンティングセクション"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-" `0` 以外の値を設定すると、このロケーションに保管されているプロダクトの在庫棚"
-"卸日が指定された頻度で自動的に設定されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-":guilabel:`ロジスティクス` セクションの:guilabel:`払出方針` フィールドでド"
-"ロップダウンメニューをクリックし、このロケーションから商品をどのように払出す"
-"かを示す :doc:`払出方針 <../../shipping_receiving/removal_strategies>` を選択"
-"します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "サイクルカウントセクション"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"このロケーションで定期的な棚卸をスケジュールするには、:guilabel:`棚卸頻度(日"
-"数)` フィールドを希望する間隔に設定します。デフォルトでは、`0` (予定なし)に設"
-"定されています。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"例えば、このフィールドを `30` に設定すると、30日ごとに棚卸が実行されるように"
-"なります。この機能の設定および使用方法の詳細については、:doc:`周期的カウント "
-"<cycle_counts>`ドキュメントを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-":guilabel:`最終実在庫` フィールドには、このロケーションでの最後の棚卸日付が表"
-"示されます。棚卸が予定されている場合、:guilabel:`次回棚卸予定` フィールドに"
-"は、次の棚卸予定日が表示されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"在庫棚卸は `30` ごとに実施される予定で、7月16日に :guilabel:`最終実在庫`の棚"
-"卸が行われ、 :guilabel:`次回棚卸予定` は8月15日となります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "ロケーションフォームのサイクルカウント"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "ロジスティクスセクション"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"ロケーションフォームの :guilabel:`ロジスティクス` セクションで、オプションと"
-"して :guilabel:`払出方針` を選択し、在庫からプロダクトがピックされるオーダと"
-"優先順位を決定します。選択肢は :guilabel:`先入先出法(FIFO)`、:guilabel:`後入"
-"先出法(LIFO)`、 :guilabel:`最寄ロケーション`、　:guilabel:`先消費先出 "
-"(FEFO)` です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "ロケーションの現在庫"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
-msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
 msgstr ""
-"単一のロケーションの現在庫を確認するには、:menuselection:`在庫アプリ --> 設"
-"定 --> ロケーション` に移動し、希望のロケーションを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
-msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
 msgstr ""
-"次に、:guilabel:`現在庫` スマートボタンをクリックして、ロケーションにある全て"
-"のプロダクトのリストを表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
-msgstr "`棚1` の現在の在庫リストは、キャビネットが `266`、机が `39` です。"
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "棚1に在庫を表示します。"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
+msgid ""
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+msgid ""
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -50344,8 +50294,8 @@ msgid ""
 "and a forecasted demand of `75` units. The following replenishment options "
 "are set:"
 msgstr ""
-"*Chair* プロダクトは、当期の開始在庫数が`60`ユニットで、予測需要"
-"は`75`ユニットです。以下の補充オプションが設定されています："
+"*Chair* プロダクトは、当期の開始在庫数が`60`ユニットで、予測需要は`75`ユニッ"
+"トです。以下の補充オプションが設定されています："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
 msgid ":guilabel:`Safety Stock Target`: `10` units"
@@ -50366,8 +50316,8 @@ msgid ""
 "Therefore the final suggested replenishment quantity is `20`."
 msgstr ""
 "デフォルトの推奨補充数量（``10 - 60 + 75``）は*Chair*の`25`ユニットですが、設"
-"定された最大値`20`ユニットを超えています。そのため、最終的な推奨補充数量"
-"は`20`になります。"
+"定された最大値`20`ユニットを超えています。そのため、最終的な推奨補充数量は"
+"`20`になります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Specify replenishment trigger"
@@ -54743,10 +54693,10 @@ msgid ""
 "section. Then, tick the checkbox for :guilabel:`3-way matching` to enable "
 "the feature, and click :guilabel:`Save`."
 msgstr ""
-"*3点照合(発注・入荷・請求)* 機能を有効化するには、:menuselection:`購買"
-"アプリ --> 設定 --> 管理設定` に進み、 :guilabel:`請求` セクションに行きます"
-"。:guilabel:`3点照合(発注・入荷・請求)` のチェックボックスをクリックして "
-":guilabel:`保存` します。"
+"*3点照合(発注・入荷・請求)* 機能を有効化するには、:menuselection:`購買アプリ "
+"--> 設定 --> 管理設定` に進み、 :guilabel:`請求` セクションに行きま"
+"す。:guilabel:`3点照合(発注・入荷・請求)` のチェックボックスをクリックし"
+"て :guilabel:`保存` します。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:None
 msgid "Enabled 3-way matching feature in Purchase app settings."
@@ -54772,11 +54722,11 @@ msgid ""
 "created until at least some of the products included in a |PO| have been "
 "received."
 msgstr ""
-"*3点照合(発注・入荷・請求)* 機能が有効になっている場合、仕入先請求書には、 "
-":guilabel:`その他情報` タブの下に  :guilabel:`支払対象` フィールドが表示され"
-"ます。新しい仕入先請求書が作成されると、購買オーダに含まれるプロダクトの一部"
-"が少なくとも受領されるまで請求書を作成することはできないため、このフィールド"
-"は  :guilabel:`はい` に設定されます。"
+"*3点照合(発注・入荷・請求)* 機能が有効になっている場合、仕入先請求書に"
+"は、 :guilabel:`その他情報` タブの下に  :guilabel:`支払対象` フィールドが表示"
+"されます。新しい仕入先請求書が作成されると、購買オーダに含まれるプロダクトの"
+"一部が少なくとも受領されるまで請求書を作成することはできないため、このフィー"
+"ルドは  :guilabel:`はい` に設定されます。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:73
 msgid ""
@@ -55095,16 +55045,16 @@ msgid ""
 "To activate 3-way matching, navigate to :menuselection:`Purchase app --> "
 "Configuration --> Settings`, and scroll to the :guilabel:`Invoicing` section."
 msgstr ""
-"3点照合(発注・入荷・請求)を有効するには、:menuselection:`購買アプリ --> 設"
-"定 --> 管理設定` に行き、 :guilabel:`請求` セクションまでスクロールします。"
+"3点照合(発注・入荷・請求)を有効するには、:menuselection:`購買アプリ --> 設定 "
+"--> 管理設定` に行き、 :guilabel:`請求` セクションまでスクロールします。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:59
 msgid ""
 "Tick the checkbox next to :guilabel:`3-way matching`, and "
 "click :guilabel:`Save`."
 msgstr ""
-":guilabel:`3点照合(発注・入荷・請求)`にチェックを入れ、 :guilabel:`保存` を"
-"クリックします。"
+":guilabel:`3点照合(発注・入荷・請求)`にチェックを入れ、 :guilabel:`保存` をク"
+"リックします。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:62
 msgid ""
@@ -60595,6 +60545,264 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "出荷または梱包ロケーションからの近さに基づいて、ロケーションがアルファベッ"
+#~ "ト順に命名されたら、:ref:`親ロケーション <inventory/location-hierarchy>` "
+#~ "の払出方針を設定します。"
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "*ロケーション* とは、倉庫内の特定のスペースのことです。棚、部屋、通路など"
+#~ "です。"
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "特定の保管場所を作成するには、 :menuselection:`在庫アプリ --> 設定 --> 管"
+#~ "理設定` で *保管場所* 機能を有効にします。guilabel:`倉庫` セクション"
+#~ "で :guilabel:`保管場所` チェックボックスにチェックを入れます。その"
+#~ "後、 :guilabel:`保存` をクリックします。"
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "*保管場所* を有効にした後、 :menuselection:`在庫アプリ --> 設定 --> ロケー"
+#~ "ション` に進みます。"
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "このページで :guilabel:`新規` をクリックして下さい。新規ロケーションフォー"
+#~ "ムは以下のように設定できます:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`ロケーション名`: ロケーションの分かりやすい名前。"
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ " :guilabel:`親ロケーション`: 新規ロケーションが所在するロケーションです。"
+#~ "ロケーションが作成されると、そのロケーションは :guilabel:`ロケーション` "
+#~ "ページに *ロケーション階層* を使って表示され、特定の場所が、倉庫の大きなエ"
+#~ "リアの中でどのように位置づけられるかが分かります。"
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "`WH/在庫/ゾーンA/冷蔵庫 1`では、\"冷蔵庫 1\" がロケーション名、\"ゾーン "
+#~ "A\"が親ロケーションであり、それ以前のすべてが、この場所が倉庫内のどこにあ"
+#~ "るかを示すパスです。"
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`ロケーションタイプ`: ドロップダウンメニューから、:guilabel:`仕"
+#~ "入先ロケーション`、:guilabel:`ビュー(照会)`、:guilabel:`内部ロケーション"
+#~ "`、:guilabel:`顧客ロケーション`、:guilabel:`在庫損失`、:guilabel:`生産`、"
+#~ "または:guilabel:`積送ロケーション` を選択して、ロケーションを分類します。"
+#~ "各ロケーションタイプの詳細については、:ref:`ロケーションタイプセクション "
+#~ "<inventory/warehouses_storage/location-type>` を参照して下さい。"
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`保管カテゴリ`: :doc:`保管カテゴリ <../../shipping_receiving/"
+#~ "daily_operations/storage_category>` 機能が :menuselection:`在庫アプリ --> "
+#~ "設定 --> 管理設定` で有効になっている場合のみ利用可能です。"
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`会社`: ロケーションが属する会社"
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`廃棄ロケーションか?`: このチェックボックスにチェックを入れる"
+#~ "と、このロケーションで廃棄/破損品の保管をすることができます。"
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:返品ロケーションか?`: このチェックボックスにチェックを入れると、"
+#~ "プロダクトをこのロケーションに返品することができます。"
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`バーコード`: *バーコード* アプリで使用します。バーコードをス"
+#~ "キャンすると、このロケーションでの :ref:`アクションを識別 <barcode/setup/"
+#~ "location>` します。"
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`補充ロケーション`: :doc:`設定ルート <../../shipping_receiving/"
+#~ "daily_operations/use_routes>` で使用します。このチェックボックスをオンにす"
+#~ "ると、*購買*、*製造*、またはその他の調達ルートからプロダクトを受け取る先と"
+#~ "してロケーションを設定でき、プロダクトが正しく倉庫に供給されるようになりま"
+#~ "す。"
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr ""
+#~ ":guilabel:`追加情報` セクションの残りのフィールドを以下のように設定しま"
+#~ "す。"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`会社`: このロケーションが所属する倉庫の会社。複数の会社で共有す"
+#~ "る場合は、このフィールドを空欄のままにして下さい。"
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`バーコード`: ロケーションに割当られたバーコード。"
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`補充ロケーション`: このチェックボックスをオンにすると、このロ"
+#~ "ケーションで補充する全ての数量を取得できます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ ":guilabel:`周期的カウンティング` セクションで、必要に応じて、:guilabel:`棚"
+#~ "卸頻度(日)` フィールドの値をデフォルトの `0` から変更します。"
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "新規ロケーション作成フォームのサイクルカウンティングセクション"
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ " `0` 以外の値を設定すると、このロケーションに保管されているプロダクトの在"
+#~ "庫棚卸日が指定された頻度で自動的に設定されます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ ":guilabel:`ロジスティクス` セクションの:guilabel:`払出方針` フィールドでド"
+#~ "ロップダウンメニューをクリックし、このロケーションから商品をどのように払出"
+#~ "すかを示す :doc:`払出方針 <../../shipping_receiving/removal_strategies>` "
+#~ "を選択します。"
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "このロケーションで定期的な棚卸をスケジュールするには、:guilabel:`棚卸頻度"
+#~ "(日数)` フィールドを希望する間隔に設定します。デフォルトでは、`0` (予定な"
+#~ "し)に設定されています。"
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "例えば、このフィールドを `30` に設定すると、30日ごとに棚卸が実行されるよう"
+#~ "になります。この機能の設定および使用方法の詳細については、:doc:`周期的カウ"
+#~ "ント <cycle_counts>`ドキュメントを参照して下さい。"
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ ":guilabel:`最終実在庫` フィールドには、このロケーションでの最後の棚卸日付"
+#~ "が表示されます。棚卸が予定されている場合、:guilabel:`次回棚卸予定` フィー"
+#~ "ルドには、次の棚卸予定日が表示されます。"
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "在庫棚卸は `30` ごとに実施される予定で、7月16日に :guilabel:`最終実在庫`の"
+#~ "棚卸が行われ、 :guilabel:`次回棚卸予定` は8月15日となります。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "ロケーションフォームの :guilabel:`ロジスティクス` セクションで、オプション"
+#~ "として :guilabel:`払出方針` を選択し、在庫からプロダクトがピックされるオー"
+#~ "ダと優先順位を決定します。選択肢は :guilabel:`先入先出法"
+#~ "(FIFO)`、:guilabel:`後入先出法(LIFO)`、 :guilabel:`最寄ロケーション"
+#~ "`、　:guilabel:`先消費先出 (FEFO)` です。"
+
+#~ msgid "Current stock at location"
+#~ msgstr "ロケーションの現在庫"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "単一のロケーションの現在庫を確認するには、:menuselection:`在庫アプリ --> "
+#~ "設定 --> ロケーション` に移動し、希望のロケーションを選択します。"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "次に、:guilabel:`現在庫` スマートボタンをクリックして、ロケーションにある"
+#~ "全てのプロダクトのリストを表示します。"
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr "`棚1` の現在の在庫リストは、キャビネットが `266`、机が `39` です。"
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "棚1に在庫を表示します。"
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

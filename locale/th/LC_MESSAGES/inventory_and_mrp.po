@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-08 20:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -196,7 +196,7 @@ msgstr "แดชบอร์ดระบบบาร์โค้ดที่แ
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -10990,7 +10990,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -18124,11 +18123,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"เมื่อตั้งชื่อสถานที่ตามลำดับตัวอักษรแล้ว "
-"โดยพิจารณาจากความใกล้ชิดกับสถานที่ส่งออกหรือสถานที่บรรจุหีบห่อ "
-"ให้ตั้งค่ากลยุทธ์การเบิกที่ :ref:`สถานที่หลัก <inventory/location-hierarchy>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -30678,23 +30674,27 @@ msgstr "ปุ่มสมาร์ท Scraps แสดงคำสั่งต�
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
-msgstr "*สถานที่* คือพื้นที่เฉพาะภายในคลังสินค้า ซึ่งอาจเป็นชั้นวาง ห้อง ทางเดิน ฯลฯ"
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"เพื่อสร้างสถานที่จัดเก็บเฉพาะ ให้เปิดใช้งานฟีเจอร์ *สถานที่จัดเก็บ* "
-"โดยไปที่ :menuselection:`แอปคลังสินค้า --> การกำหนดค่า --> การตั้งค่า` "
-"ในส่วน :guilabel:`คลังสินค้า` ให้ทำเครื่องหมายที่ช่อง :guilabel:`สถานที่จัดเก็บ` "
-"จากนั้นคลิก :guilabel:`บันทึก`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -30708,57 +30708,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "แสดงฟีเจอร์สถานที่จัดเก็บ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "สร้างตำแหน่งใหม่"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"หลังจากเปิดใช้งาน *Storage Locations* ให้ไปที่ :menuselection:`แอปคลังสินค้า --> "
-"การกำหนดค่า --> ตำแหน่ง`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "รายการตำแหน่งภายใน"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
-msgstr "ในหน้านี้ ให้คลิก :guilabel:`สร้าง` จากนั้นสามารถกำหนดค่าแบบฟอร์มตำแหน่งใหม่ได้ดังนี้:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`ชื่อตำแหน่ง`: ชื่อที่จดจำได้ของตำแหน่ง"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-":guilabel:`ตำแหน่งหลัก`: ตำแหน่งที่ตำแหน่งใหม่อยู่ภายใน หลังจากสร้างตำแหน่งแล้ว "
-"จะแสดงรายการในหน้า :guilabel:`ตำแหน่ง` โดยใช้ *ลำดับชั้นตำแหน่ง* "
-"เพื่ออธิบายว่าตำแหน่งเฉพาะเจาะจงเหมาะสมอย่างไรภายในพื้นที่ที่ใหญ่กว่าของคลังสินค้า"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "ส่วนข้อมูลเพิ่มเติมของแบบฟอร์มการสร้างตำแหน่งใหม่"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-"ใน `WH/Stock/Zone A/Refrigerator 1` \"Refrigerator 1\" คือชื่อสถานที่ \"Zone A\" "
-"คือสถานที่หลัก และทุกอย่างก่อนหน้านั้นคือเส้นทางที่แสดงว่าจุดนี้อยู่ที่ใดภายในคลังสินค้า"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "ส่วนข้อมูลเพิ่มเติม"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -30766,235 +30763,197 @@ msgstr ""
 "นอกเหนือจากฟิลด์ที่จำเป็นข้างต้น "
 "ให้กำหนดค่าฟิลด์ตำแหน่งต่อไปนี้เพื่อให้แน่ใจว่าตำแหน่งมีวัตถุประสงค์ที่ตั้งใจไว้ในฐานข้อมูล:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`Location Type`: จากเมนูแบบเลื่อนลง เลือก :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production` หรือ :guilabel:`Transit Location` "
-"เพื่อจัดหมวดหมู่สถานที่ สำหรับรายละเอียดของแต่ละประเภทสถานที่ โปรดดูที่ :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`หมวดหมู่การจัดเก็บ`: "
-"ใช้งานได้เฉพาะเมื่อเปิดใช้งานคุณสมบัติ :doc:`หมวดหมู่การจัดเก็บ <../../shipping_receiving/"
-"daily_operations/storage_category>` ใน :menuselection:`แอปคลังสินค้า --> "
-"การกำหนดค่า --> การตั้งค่า`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`บริษัท`: บริษัทที่ตำแหน่งนี้สังกัด"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`Is a Scrap Location?`: ติ๊กช่องทำเครื่องหมายนี้เพื่ออนุญาตให้เก็บสินค้าตัดจำหน่าย/"
-"เสียหายในสถานที่นี้"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`Is a Return Location?`: "
-"ติ๊กช่องทำเครื่องหมายนี้เพื่ออนุญาตให้สินค้าสามารถส่งคืนไปยังสถานที่นี้ได้"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`บาร์โค้ด`: ใช้กับแอป *Barcode* ป้อนบาร์โค้ดเพื่อ :ref:`ระบุการดำเนินการ "
-"<barcode/setup/location>` ที่ตำแหน่งนี้เมื่อสแกน"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`Replenish Location`: ใช้สำหรับ :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>` "
-"ติ๊กช่องทำเครื่องหมายนี้เพื่อกำหนดสถานที่เป็นปลายทางสำหรับการรับสินค้าจาก *Buy*, "
-"*Manufacture* หรือเส้นทางการจัดซื้ออื่นๆ เพื่อให้มั่นใจว่าสินค้าถูกส่งมอบไปยังคลังสินค้าอย่างถูกต้อง"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "ส่วนข้อมูลเพิ่มเติมของแบบฟอร์มการสร้างตำแหน่งใหม่"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr "กำหนดค่าฟิลด์ที่เหลือในส่วน :guilabel:`Additional Information` ดังนี้:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`Company`: บริษัทที่มีคลังสินค้าที่สถานที่อยู่ภายใน "
-"ปล่อยฟิลด์นี้ว่างไว้หากสถานที่นี้ใช้ร่วมกันระหว่างบริษัท"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`Barcode`: บาร์โค้ดที่กำหนดให้กับสถานที่"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`Replenish Location`: ติ๊กช่องทำเครื่องหมายนี้เพื่อรับปริมาณทั้งหมดที่จะเติมที่สถานที่นี้"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"ในส่วน :guilabel:`Cyclic Counting` เปลี่ยนค่าในฟิลด์ :guilabel:`Inventory "
-"Frequency (Days)` จากค่าเริ่มต้น `0` หากจำเป็น"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "ส่วนการนับตามรอบของแบบฟอร์มการสร้างตำแหน่งใหม่"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"เมื่อแตกต่างจาก `0` "
-"วันที่นับสินค้าคงคลังสำหรับผลิตภัณฑ์ที่เก็บไว้ที่ตำแหน่งนี้จะถูกตั้งค่าโดยอัตโนมัติตามความถี่ที่กำหนด"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"ในส่วน :guilabel:`ลอจิสติกส์` ในฟิลด์ :guilabel:`กลยุทธ์การเบิก` "
-"ให้คลิกเมนูแบบเลื่อนลงและเลือก :doc:`กลยุทธ์การเบิก <../../shipping_receiving/"
-"removal_strategies>` สำหรับวิธีที่ควรนำสินค้าออกจากตำแหน่งนี้"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "ส่วนการนับตามรอบ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"หากต้องการกำหนดเวลาการนับสินค้าคงคลังเป็นประจำที่สถานที่นี้ "
-"ให้ตั้งค่าฟิลด์ :guilabel:`Inventory Frequency (Days)` เป็นช่วงเวลาที่ต้องการ "
-"ค่าเริ่มต้นจะถูกตั้งเป็น `0` (ไม่มีการนับตามกำหนดเวลา)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"ตัวอย่างเช่น การตั้งค่าฟิลด์นี้เป็น `30` จะกำหนดเวลาการนับทุก ๆ สามสิบวัน "
-"สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าและการใช้คุณสมบัตินี้ โปรดดูที่ :doc:`Cycle Counts "
-"documentation <cycle_counts>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"ฟิลด์ :guilabel:`Last Effective Inventory` "
-"แสดงวันที่ที่มีการนับสินค้าคงคลังครั้งล่าสุดที่สถานที่นี้ เมื่อเปิดใช้งานการนับสินค้าคงคลังตามกำหนดเวลา "
-"ฟิลด์ :guilabel:`Next Expected Inventory` จะแสดงวันที่ของการนับสินค้าคงคลังครั้งถัดไป"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"เมื่อกำหนดเวลาการนับสินค้าคงคลังให้เกิดขึ้นทุก ๆ `30` วัน และการนับ :guilabel:`Last "
-"Effective Inventory` เกิดขึ้นเมื่อวันที่ 16 กรกฎาคม :guilabel:`Next Expected "
-"Inventory` คือวันที่ 15 สิงหาคม"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "แสดงส่วนการนับตามรอบของแบบฟอร์มตำแหน่ง"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "ส่วนลอจิสติกส์"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"ในส่วน :guilabel:`Logistics` ของฟอร์มสถานที่ เลือก :guilabel:`Removal Strategy` "
-"เพื่อกำหนดลำดับและลำดับความสำคัญของวิธีการหยิบสินค้าจากสินค้าคงคลังได้ตามต้องการ "
-"ตัวเลือกคือ: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First "
-"Out (LIFO)`, :guilabel:`Closest Location` และ :guilabel:`First Expiry First "
-"Out (FEFO)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "สต็อกปัจจุบันที่ตำแหน่ง"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
-msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
 msgstr ""
-"หากต้องการดูสต็อกปัจจุบันที่ตำแหน่งเดียว ให้ไปที่ :menuselection:`แอปคลังสินค้า --> "
-"การกำหนดค่า --> ตำแหน่ง` และเลือกตำแหน่งที่ต้องการ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
-msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
 msgstr ""
-"ถัดไป คลิกปุ่ม Smart Button :guilabel:`สต็อกปัจจุบัน` เพื่อดูรายการสินค้าทั้งหมดที่ตำแหน่งนั้น"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
-msgstr "รายการสต็อกปัจจุบันที่ `Shelf 1` ประกอบด้วย `266` ตู้และ `39` โต๊ะ"
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "แสดงสต็อกที่ Shelf 1"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
+msgid ""
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+msgid ""
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -48880,8 +48839,8 @@ msgid ""
 "and a forecasted demand of `75` units. The following replenishment options "
 "are set:"
 msgstr ""
-"สินค้า *เก้าอี้* มีสต็อกเริ่มต้น `60` หน่วยสำหรับงวดปัจจุบัน และมีความต้องการที่คาดการณ์ไว้ `75` ห"
-"น่วย ตัวเลือกการเติมสินค้าต่อไปนี้ถูกตั้งค่าไว้:"
+"สินค้า *เก้าอี้* มีสต็อกเริ่มต้น `60` หน่วยสำหรับงวดปัจจุบัน และมีความต้องการที่คาดการณ์ไว้ `75` "
+"หน่วย ตัวเลือกการเติมสินค้าต่อไปนี้ถูกตั้งค่าไว้:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
 msgid ":guilabel:`Safety Stock Target`: `10` units"
@@ -48901,8 +48860,8 @@ msgid ""
 "`25` units of the *Chair*, it exceeds the configured maximum of `20` units. "
 "Therefore the final suggested replenishment quantity is `20`."
 msgstr ""
-"แม้ปริมาณการเติมสินค้าที่แนะนำโดยค่าเริ่มต้น (``10 - 60 + 75``) จะเท่ากับ `25` หน่วยของ *เก้"
-"าอี้* แต่ก็เกินค่าสูงสุดที่กำหนดไว้ที่ `20` หน่วย ดังนั้นปริมาณการเติมสินค้าที่แนะนำสุดท้ายคือ `20`"
+"แม้ปริมาณการเติมสินค้าที่แนะนำโดยค่าเริ่มต้น (``10 - 60 + 75``) จะเท่ากับ `25` หน่วยของ "
+"*เก้าอี้* แต่ก็เกินค่าสูงสุดที่กำหนดไว้ที่ `20` หน่วย ดังนั้นปริมาณการเติมสินค้าที่แนะนำสุดท้ายคือ `20`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Specify replenishment trigger"
@@ -58738,6 +58697,258 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "เมื่อตั้งชื่อสถานที่ตามลำดับตัวอักษรแล้ว "
+#~ "โดยพิจารณาจากความใกล้ชิดกับสถานที่ส่งออกหรือสถานที่บรรจุหีบห่อ "
+#~ "ให้ตั้งค่ากลยุทธ์การเบิกที่ :ref:`สถานที่หลัก <inventory/location-hierarchy>`"
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr "*สถานที่* คือพื้นที่เฉพาะภายในคลังสินค้า ซึ่งอาจเป็นชั้นวาง ห้อง ทางเดิน ฯลฯ"
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "เพื่อสร้างสถานที่จัดเก็บเฉพาะ ให้เปิดใช้งานฟีเจอร์ *สถานที่จัดเก็บ* "
+#~ "โดยไปที่ :menuselection:`แอปคลังสินค้า --> การกำหนดค่า --> การตั้งค่า` "
+#~ "ในส่วน :guilabel:`คลังสินค้า` ให้ทำเครื่องหมายที่ช่อง :guilabel:`สถานที่จัดเก็บ` "
+#~ "จากนั้นคลิก :guilabel:`บันทึก`"
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "หลังจากเปิดใช้งาน *Storage Locations* ให้ไปที่ :menuselection:`แอปคลังสินค้า --> "
+#~ "การกำหนดค่า --> ตำแหน่ง`"
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "ในหน้านี้ ให้คลิก :guilabel:`สร้าง` จากนั้นสามารถกำหนดค่าแบบฟอร์มตำแหน่งใหม่ได้ดังนี้:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`ชื่อตำแหน่ง`: ชื่อที่จดจำได้ของตำแหน่ง"
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`ตำแหน่งหลัก`: ตำแหน่งที่ตำแหน่งใหม่อยู่ภายใน หลังจากสร้างตำแหน่งแล้ว "
+#~ "จะแสดงรายการในหน้า :guilabel:`ตำแหน่ง` โดยใช้ *ลำดับชั้นตำแหน่ง* "
+#~ "เพื่ออธิบายว่าตำแหน่งเฉพาะเจาะจงเหมาะสมอย่างไรภายในพื้นที่ที่ใหญ่กว่าของคลังสินค้า"
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "ใน `WH/Stock/Zone A/Refrigerator 1` \"Refrigerator 1\" คือชื่อสถานที่ \"Zone "
+#~ "A\" คือสถานที่หลัก และทุกอย่างก่อนหน้านั้นคือเส้นทางที่แสดงว่าจุดนี้อยู่ที่ใดภายในคลังสินค้า"
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`Location Type`: จากเมนูแบบเลื่อนลง เลือก :guilabel:`Vendor "
+#~ "Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production` หรือ :guilabel:`Transit Location` "
+#~ "เพื่อจัดหมวดหมู่สถานที่ สำหรับรายละเอียดของแต่ละประเภทสถานที่ โปรดดูที่ :ref:`Location "
+#~ "Types section <inventory/warehouses_storage/location-type>`"
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`หมวดหมู่การจัดเก็บ`: "
+#~ "ใช้งานได้เฉพาะเมื่อเปิดใช้งานคุณสมบัติ :doc:`หมวดหมู่การจัดเก็บ <../../"
+#~ "shipping_receiving/daily_operations/storage_category>` "
+#~ "ใน :menuselection:`แอปคลังสินค้า --> การกำหนดค่า --> การตั้งค่า`"
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`บริษัท`: บริษัทที่ตำแหน่งนี้สังกัด"
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`Is a Scrap Location?`: "
+#~ "ติ๊กช่องทำเครื่องหมายนี้เพื่ออนุญาตให้เก็บสินค้าตัดจำหน่าย/เสียหายในสถานที่นี้"
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`Is a Return Location?`: "
+#~ "ติ๊กช่องทำเครื่องหมายนี้เพื่ออนุญาตให้สินค้าสามารถส่งคืนไปยังสถานที่นี้ได้"
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`บาร์โค้ด`: ใช้กับแอป *Barcode* ป้อนบาร์โค้ดเพื่อ :ref:`ระบุการดำเนินการ "
+#~ "<barcode/setup/location>` ที่ตำแหน่งนี้เมื่อสแกน"
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Replenish Location`: ใช้สำหรับ :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>` "
+#~ "ติ๊กช่องทำเครื่องหมายนี้เพื่อกำหนดสถานที่เป็นปลายทางสำหรับการรับสินค้าจาก *Buy*, "
+#~ "*Manufacture* หรือเส้นทางการจัดซื้ออื่นๆ "
+#~ "เพื่อให้มั่นใจว่าสินค้าถูกส่งมอบไปยังคลังสินค้าอย่างถูกต้อง"
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr "กำหนดค่าฟิลด์ที่เหลือในส่วน :guilabel:`Additional Information` ดังนี้:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`Company`: บริษัทที่มีคลังสินค้าที่สถานที่อยู่ภายใน "
+#~ "ปล่อยฟิลด์นี้ว่างไว้หากสถานที่นี้ใช้ร่วมกันระหว่างบริษัท"
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`Barcode`: บาร์โค้ดที่กำหนดให้กับสถานที่"
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`Replenish Location`: "
+#~ "ติ๊กช่องทำเครื่องหมายนี้เพื่อรับปริมาณทั้งหมดที่จะเติมที่สถานที่นี้"
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "ในส่วน :guilabel:`Cyclic Counting` เปลี่ยนค่าในฟิลด์ :guilabel:`Inventory "
+#~ "Frequency (Days)` จากค่าเริ่มต้น `0` หากจำเป็น"
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "ส่วนการนับตามรอบของแบบฟอร์มการสร้างตำแหน่งใหม่"
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "เมื่อแตกต่างจาก `0` "
+#~ "วันที่นับสินค้าคงคลังสำหรับผลิตภัณฑ์ที่เก็บไว้ที่ตำแหน่งนี้จะถูกตั้งค่าโดยอัตโนมัติตามความถี่ที่กำหนด"
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "ในส่วน :guilabel:`ลอจิสติกส์` ในฟิลด์ :guilabel:`กลยุทธ์การเบิก` "
+#~ "ให้คลิกเมนูแบบเลื่อนลงและเลือก :doc:`กลยุทธ์การเบิก <../../shipping_receiving/"
+#~ "removal_strategies>` สำหรับวิธีที่ควรนำสินค้าออกจากตำแหน่งนี้"
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "หากต้องการกำหนดเวลาการนับสินค้าคงคลังเป็นประจำที่สถานที่นี้ "
+#~ "ให้ตั้งค่าฟิลด์ :guilabel:`Inventory Frequency (Days)` เป็นช่วงเวลาที่ต้องการ "
+#~ "ค่าเริ่มต้นจะถูกตั้งเป็น `0` (ไม่มีการนับตามกำหนดเวลา)"
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "ตัวอย่างเช่น การตั้งค่าฟิลด์นี้เป็น `30` จะกำหนดเวลาการนับทุก ๆ สามสิบวัน "
+#~ "สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าและการใช้คุณสมบัตินี้ โปรดดูที่ :doc:`Cycle "
+#~ "Counts documentation <cycle_counts>`"
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "ฟิลด์ :guilabel:`Last Effective Inventory` "
+#~ "แสดงวันที่ที่มีการนับสินค้าคงคลังครั้งล่าสุดที่สถานที่นี้ "
+#~ "เมื่อเปิดใช้งานการนับสินค้าคงคลังตามกำหนดเวลา ฟิลด์ :guilabel:`Next Expected "
+#~ "Inventory` จะแสดงวันที่ของการนับสินค้าคงคลังครั้งถัดไป"
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "เมื่อกำหนดเวลาการนับสินค้าคงคลังให้เกิดขึ้นทุก ๆ `30` วัน และการนับ :guilabel:`Last "
+#~ "Effective Inventory` เกิดขึ้นเมื่อวันที่ 16 กรกฎาคม :guilabel:`Next Expected "
+#~ "Inventory` คือวันที่ 15 สิงหาคม"
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "ในส่วน :guilabel:`Logistics` ของฟอร์มสถานที่ เลือก :guilabel:`Removal "
+#~ "Strategy` "
+#~ "เพื่อกำหนดลำดับและลำดับความสำคัญของวิธีการหยิบสินค้าจากสินค้าคงคลังได้ตามต้องการ "
+#~ "ตัวเลือกคือ: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First "
+#~ "Out (LIFO)`, :guilabel:`Closest Location` และ :guilabel:`First Expiry "
+#~ "First Out (FEFO)`"
+
+#~ msgid "Current stock at location"
+#~ msgstr "สต็อกปัจจุบันที่ตำแหน่ง"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "หากต้องการดูสต็อกปัจจุบันที่ตำแหน่งเดียว ให้ไปที่ :menuselection:`แอปคลังสินค้า --> "
+#~ "การกำหนดค่า --> ตำแหน่ง` และเลือกตำแหน่งที่ต้องการ"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "ถัดไป คลิกปุ่ม Smart Button :guilabel:`สต็อกปัจจุบัน` เพื่อดูรายการสินค้าทั้งหมดที่ตำแหน่งนั้น"
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr "รายการสต็อกปัจจุบันที่ `Shelf 1` ประกอบด้วย `266` ตู้และ `39` โต๊ะ"
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "แสดงสต็อกที่ Shelf 1"
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

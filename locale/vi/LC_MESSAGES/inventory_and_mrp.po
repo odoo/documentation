@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-13 04:32+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -201,7 +201,7 @@ msgstr "Bảng điều khiển Barcode với kiểm kê đã được gán."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11525,7 +11525,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -19009,11 +19008,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"Sau khi các vị trí được đặt tên theo thứ tự bảng chữ cái, dựa trên độ gần "
-"với vị trí đầu ra hoặc vị trí đóng gói, hãy thiết lập chiến lược lấy hàng "
-"trên :ref:`vị trí cha <inventory/location-hierarchy>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -31421,8 +31417,8 @@ msgid ""
 "This section only appears if :guilabel:`Lots & Serial Numbers` is enabled "
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
-"Phần này chỉ xuất hiện nếu :guilabel:`Lô & số sê-ri` được bật trong "
-":menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Cài đặt`."
+"Phần này chỉ xuất hiện nếu :guilabel:`Lô & số sê-ri` được bật "
+"trong :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Cài đặt`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:58
 msgid "The following fields are available:"
@@ -32167,25 +32163,27 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"Một *vị trí* là một không gian cụ thể bên trong kho hàng. Nó có thể là một "
-"kệ, phòng, hàng, v.v."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"Để tạo các vị trí lưu kho cụ thể, hãy bật tính năng *Vị trí lưu kho* bằng "
-"cách truy cập :menuselection:`ứng dụng Tồn kho --> Cấu hình --> Cài đặt`. "
-"Trong phần :guilabel:`Kho hàng`, tích vào ô :guilabel:`Vị trí lưu kho`. Sau "
-"đó, nhấp vào :guilabel:`Lưu`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -32200,61 +32198,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "Hiển thị tính năng Vị trí lưu kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "Tạo vị trí mới"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"Sau khi bật *Vị trí lưu kho*, hãy vào :menuselection:`ứng dụng Tồn kho --> "
-"Cấu hình --> Vị trí`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "Danh sách các vị trí nội bộ."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"Tại trang này, nhấp vào :guilabel:`Mới`. Biểu mẫu vị trí mới có thể được cấu "
-"hình như sau:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`Tên vị trí`: tên dễ nhận biết của vị trí."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "Phần Thông tin bổ sung trong biểu mẫu tạo vị trí mới."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-":guilabel:`Vị trí chính`: Vị trí mà vị trí mới này nằm bên trong. Sau khi vị "
-"trí được tạo, nó sẽ được liệt kê trên trang :guilabel:`Vị trí` theo *hệ "
-"thống phân cấp vị trí*, mô tả cách một vị trí cụ thể khớp với các khu vực "
-"lớn hơn của kho hàng."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"Trong `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" là tên vị trí, "
-"\"Zone A\" là vị trí cha, và mọi thứ trước đó là đường dẫn cho biết vị trí "
-"này nằm ở đâu trong kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "Phần Thông tin bổ sung"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -32262,240 +32253,197 @@ msgstr ""
 "Bên cạnh các trường bắt buộc ở trên, cấu hình các trường vị trí sau để đảm "
 "bảo vị trí hoạt động đúng mục đích trong cơ sở dữ liệu:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`Loại vị trí`: từ menu thả xuống, chọn :guilabel:`Vị trí nhà cung "
-"cấp`, :guilabel:`Xem`, :guilabel:`Vị trí nội bộ`, :guilabel:`Vị trí khách "
-"hàng`, :guilabel:`Hao hụt tồn kho`, :guilabel:`Sản xuất`, hoặc :guilabel:`Vị "
-"trí trung chuyển` để phân loại vị trí. Để biết chi tiết về từng loại vị trí, "
-"hãy tham khảo :ref:`phần Loại vị trí <inventory/warehouses_storage/location-"
-"type>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`Danh mục lưu kho`: chỉ khả dụng khi tính năng :doc:`Danh mục lưu "
-"kho <../../shipping_receiving/daily_operations/storage_category>` được bật "
-"trong :menuselection:`ứng dụng Tồn kho--> Cấu hình --> Cài đặt`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`Công ty`: công ty mà vị trí này thuộc về."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`Có phải là vị trí thanh lý?`: đánh dấu vào hộp kiểm này để cho "
-"phép hàng hóa thanh lý/hư hỏng được lưu trữ tại vị trí này."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`Là Vị trí Trả hàng?`: đánh dấu hộp kiểm này để cho phép sản phẩm "
-"được trả về vị trí này."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`Mã vạch`: được sử dụng với ứng dụng *Mã vạch*, nhập mã vạch "
-"để :ref:`xác định các tác vụ <barcode/setup/location>` tại vị trí này khi "
-"quét."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`Bổ sung Vị trí`: được sử dụng để :doc:`cấu hình tuyến đường "
-"<../../shipping_receiving/daily_operations/use_routes>`, đánh dấu hộp kiểm "
-"này để đặt vị trí làm đích đến nhận sản phẩm từ *Mua*, *Sản xuất* hoặc các "
-"tuyến đường mua sắm khác, đảm bảo sản phẩm được cung cấp đúng cách cho kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "Phần Thông tin bổ sung trong biểu mẫu tạo vị trí mới."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ""
-"Cấu hình các trường còn lại trong phần :guilabel:`Thông tin Bổ sung` như sau:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`Công ty`: công ty mà vị trí nằm trong kho của công ty đó. Để "
-"trống trường này nếu vị trí được chia sẻ giữa các công ty."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`Mã vạch`: mã vạch được gán cho vị trí."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`Bổ sung Vị trí`: đánh dấu hộp kiểm này để lấy tất cả số lượng cần "
-"bổ sung tại vị trí này."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"Trong phần :guilabel:`Kiểm kê Tuần hoàn`, thay đổi giá trị trong "
-"trường :guilabel:`Tần suất Kiểm kê (Ngày)` từ mặc định `0`, nếu cần thiết."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "Phần Kiểm kho theo chu kỳ trong biểu mẫu tạo vị trí mới."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"Khi giá trị khác `0`, các ngày kiểm kho cho sản phẩm được lưu trữ tại vị trí "
-"này sẽ tự động được đặt theo tần suất đã định."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"Trong phần :guilabel:`Logistics`, ở trường :guilabel:`Chiến lược xuất kho`, "
-"nhấp vào menu thả xuống và chọn :doc:`chiến lược xuất kho <../../"
-"shipping_receiving/removal_strategies>` để xác định cách các mặt hàng nên "
-"được lấy ra khỏi vị trí này."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "Phần Kiểm kho theo chu kỳ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"Để lên lịch kiểm kê định kỳ tại vị trí này, đặt trường :guilabel:`Tần suất "
-"Kiểm kê (Ngày)` thành khoảng thời gian mong muốn. Theo mặc định, nó được đặt "
-"thành `0` (không có kiểm kê theo lịch)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"Ví dụ, đặt trường này thành `30` sẽ lên lịch kiểm kê cứ mỗi ba mươi ngày. Để "
-"biết thêm chi tiết về việc thiết lập và sử dụng tính năng này, tham "
-"khảo :doc:`tài liệu Kiểm kê Tuần hoàn <cycle_counts>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"Trường :guilabel:`Kiểm kê Hiệu quả Lần cuối` hiển thị ngày xảy ra kiểm kê "
-"lần cuối tại vị trí này. Khi kiểm kê theo lịch được kích hoạt, "
-"trường :guilabel:`Kiểm kê Dự kiến Tiếp theo` hiển thị ngày của lần kiểm kê "
-"tiếp theo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"Với kiểm kê được lên lịch xảy ra cứ mỗi `30` ngày và lần kiểm "
-"kê :guilabel:`Kiểm kê Hiệu quả Lần cuối` xảy ra vào ngày 16 tháng "
-"7, :guilabel:`Kiểm kê Dự kiến Tiếp theo` là ngày 15 tháng 8."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "Hiển thị phần Kiểm kho theo chu kỳ trong biểu mẫu vị trí."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "Phần logistics"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"Trong phần :guilabel:`Logistics` của biểu mẫu vị trí, tùy chọn chọn "
-"một :guilabel:`Chiến lược Lấy hàng` để xác định thứ tự và mức độ ưu tiên của "
-"cách lấy sản phẩm từ tồn kho. Các tùy chọn là: :guilabel:`Nhập trước Xuất "
-"trước (FIFO)`, :guilabel:`Nhập sau Xuất trước (LIFO)`, :guilabel:`Vị trí Gần "
-"nhất` và :guilabel:`Hết hạn trước Xuất trước (FEFO)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "Tồn kho hiện tại ở vị trí"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
-msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
 msgstr ""
-"Để xem tồn kho hiện tại tại một vị trí cụ thể, truy cập :menuselection:`ứng "
-"dụng Tồn kho --> Cấu hình --> Vị trí`, và chọn vị trí mong muốn."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
-msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
 msgstr ""
-"Tiếp theo, nhấp vào nút thông minh :guilabel:`Tồn kho Hiện tại` để lấy danh "
-"sách tất cả sản phẩm tại vị trí."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
-msgstr "Danh sách tồn kho hiện tại tại `Shelf 1` bao gồm `266` tủ và `39` bàn."
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "Hiện tồn kho tại Kệ 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
+msgid ""
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+msgid ""
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -49590,9 +49538,9 @@ msgid ""
 "to :menuselection:`Manufacturing app --> Configuration --> Settings`. In the "
 "*Operations* section, select the :guilabel:`By-Products` checkbox."
 msgstr ""
-"Để thiết lập Odoo tháo dỡ sản phẩm thành các sản phẩm phụ, vào "
-":menuselection:`Sản xuất --> Cấu hình --> Cài đặt`. Trong phần *Hoạt động*, "
-"chọn hộp kiểm :guilabel:`Sản phẩm phụ`."
+"Để thiết lập Odoo tháo dỡ sản phẩm thành các sản phẩm phụ, "
+"vào :menuselection:`Sản xuất --> Cấu hình --> Cài đặt`. Trong phần *Hoạt "
+"động*, chọn hộp kiểm :guilabel:`Sản phẩm phụ`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "Enable By-Products in the Manufacturing configuration settings."
@@ -49631,9 +49579,9 @@ msgid ""
 "|BoM| that define the components that will be entered into inventory as a "
 "result of an |MO|."
 msgstr ""
-":ref:`Thêm sản phẩm phụ <manufacturing/bill_configuration/by-products>` vào "
-"|BoM| để xác định các thành phần sẽ được nhập vào tồn kho khi hoàn tất một "
-"|MO|."
+":ref:`Thêm sản phẩm phụ <manufacturing/bill_configuration/by-products>` vào |"
+"BoM| để xác định các thành phần sẽ được nhập vào tồn kho khi hoàn tất một |"
+"MO|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "A Car bill of materials with parts listed as by-products."
@@ -61774,6 +61722,268 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "Sau khi các vị trí được đặt tên theo thứ tự bảng chữ cái, dựa trên độ gần "
+#~ "với vị trí đầu ra hoặc vị trí đóng gói, hãy thiết lập chiến lược lấy hàng "
+#~ "trên :ref:`vị trí cha <inventory/location-hierarchy>`."
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "Một *vị trí* là một không gian cụ thể bên trong kho hàng. Nó có thể là "
+#~ "một kệ, phòng, hàng, v.v."
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Để tạo các vị trí lưu kho cụ thể, hãy bật tính năng *Vị trí lưu kho* bằng "
+#~ "cách truy cập :menuselection:`ứng dụng Tồn kho --> Cấu hình --> Cài đặt`. "
+#~ "Trong phần :guilabel:`Kho hàng`, tích vào ô :guilabel:`Vị trí lưu kho`. "
+#~ "Sau đó, nhấp vào :guilabel:`Lưu`."
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "Sau khi bật *Vị trí lưu kho*, hãy vào :menuselection:`ứng dụng Tồn kho --"
+#~ "> Cấu hình --> Vị trí`."
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "Tại trang này, nhấp vào :guilabel:`Mới`. Biểu mẫu vị trí mới có thể được "
+#~ "cấu hình như sau:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`Tên vị trí`: tên dễ nhận biết của vị trí."
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Vị trí chính`: Vị trí mà vị trí mới này nằm bên trong. Sau khi "
+#~ "vị trí được tạo, nó sẽ được liệt kê trên trang :guilabel:`Vị trí` theo "
+#~ "*hệ thống phân cấp vị trí*, mô tả cách một vị trí cụ thể khớp với các khu "
+#~ "vực lớn hơn của kho hàng."
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "Trong `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" là tên vị trí, "
+#~ "\"Zone A\" là vị trí cha, và mọi thứ trước đó là đường dẫn cho biết vị "
+#~ "trí này nằm ở đâu trong kho."
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`Loại vị trí`: từ menu thả xuống, chọn :guilabel:`Vị trí nhà "
+#~ "cung cấp`, :guilabel:`Xem`, :guilabel:`Vị trí nội bộ`, :guilabel:`Vị trí "
+#~ "khách hàng`, :guilabel:`Hao hụt tồn kho`, :guilabel:`Sản xuất`, "
+#~ "hoặc :guilabel:`Vị trí trung chuyển` để phân loại vị trí. Để biết chi "
+#~ "tiết về từng loại vị trí, hãy tham khảo :ref:`phần Loại vị trí <inventory/"
+#~ "warehouses_storage/location-type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`Danh mục lưu kho`: chỉ khả dụng khi tính năng :doc:`Danh mục "
+#~ "lưu kho <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "được bật trong :menuselection:`ứng dụng Tồn kho--> Cấu hình --> Cài đặt`."
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`Công ty`: công ty mà vị trí này thuộc về."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`Có phải là vị trí thanh lý?`: đánh dấu vào hộp kiểm này để cho "
+#~ "phép hàng hóa thanh lý/hư hỏng được lưu trữ tại vị trí này."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`Là Vị trí Trả hàng?`: đánh dấu hộp kiểm này để cho phép sản "
+#~ "phẩm được trả về vị trí này."
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`Mã vạch`: được sử dụng với ứng dụng *Mã vạch*, nhập mã vạch "
+#~ "để :ref:`xác định các tác vụ <barcode/setup/location>` tại vị trí này khi "
+#~ "quét."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Bổ sung Vị trí`: được sử dụng để :doc:`cấu hình tuyến đường "
+#~ "<../../shipping_receiving/daily_operations/use_routes>`, đánh dấu hộp "
+#~ "kiểm này để đặt vị trí làm đích đến nhận sản phẩm từ *Mua*, *Sản xuất* "
+#~ "hoặc các tuyến đường mua sắm khác, đảm bảo sản phẩm được cung cấp đúng "
+#~ "cách cho kho."
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr ""
+#~ "Cấu hình các trường còn lại trong phần :guilabel:`Thông tin Bổ sung` như "
+#~ "sau:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`Công ty`: công ty mà vị trí nằm trong kho của công ty đó. Để "
+#~ "trống trường này nếu vị trí được chia sẻ giữa các công ty."
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`Mã vạch`: mã vạch được gán cho vị trí."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`Bổ sung Vị trí`: đánh dấu hộp kiểm này để lấy tất cả số lượng "
+#~ "cần bổ sung tại vị trí này."
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "Trong phần :guilabel:`Kiểm kê Tuần hoàn`, thay đổi giá trị trong "
+#~ "trường :guilabel:`Tần suất Kiểm kê (Ngày)` từ mặc định `0`, nếu cần thiết."
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "Phần Kiểm kho theo chu kỳ trong biểu mẫu tạo vị trí mới."
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "Khi giá trị khác `0`, các ngày kiểm kho cho sản phẩm được lưu trữ tại vị "
+#~ "trí này sẽ tự động được đặt theo tần suất đã định."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "Trong phần :guilabel:`Logistics`, ở trường :guilabel:`Chiến lược xuất "
+#~ "kho`, nhấp vào menu thả xuống và chọn :doc:`chiến lược xuất kho <../../"
+#~ "shipping_receiving/removal_strategies>` để xác định cách các mặt hàng nên "
+#~ "được lấy ra khỏi vị trí này."
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "Để lên lịch kiểm kê định kỳ tại vị trí này, đặt trường :guilabel:`Tần "
+#~ "suất Kiểm kê (Ngày)` thành khoảng thời gian mong muốn. Theo mặc định, nó "
+#~ "được đặt thành `0` (không có kiểm kê theo lịch)."
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "Ví dụ, đặt trường này thành `30` sẽ lên lịch kiểm kê cứ mỗi ba mươi ngày. "
+#~ "Để biết thêm chi tiết về việc thiết lập và sử dụng tính năng này, tham "
+#~ "khảo :doc:`tài liệu Kiểm kê Tuần hoàn <cycle_counts>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "Trường :guilabel:`Kiểm kê Hiệu quả Lần cuối` hiển thị ngày xảy ra kiểm kê "
+#~ "lần cuối tại vị trí này. Khi kiểm kê theo lịch được kích hoạt, "
+#~ "trường :guilabel:`Kiểm kê Dự kiến Tiếp theo` hiển thị ngày của lần kiểm "
+#~ "kê tiếp theo."
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "Với kiểm kê được lên lịch xảy ra cứ mỗi `30` ngày và lần kiểm "
+#~ "kê :guilabel:`Kiểm kê Hiệu quả Lần cuối` xảy ra vào ngày 16 tháng "
+#~ "7, :guilabel:`Kiểm kê Dự kiến Tiếp theo` là ngày 15 tháng 8."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "Trong phần :guilabel:`Logistics` của biểu mẫu vị trí, tùy chọn chọn "
+#~ "một :guilabel:`Chiến lược Lấy hàng` để xác định thứ tự và mức độ ưu tiên "
+#~ "của cách lấy sản phẩm từ tồn kho. Các tùy chọn là: :guilabel:`Nhập trước "
+#~ "Xuất trước (FIFO)`, :guilabel:`Nhập sau Xuất trước (LIFO)`, :guilabel:`Vị "
+#~ "trí Gần nhất` và :guilabel:`Hết hạn trước Xuất trước (FEFO)`."
+
+#~ msgid "Current stock at location"
+#~ msgstr "Tồn kho hiện tại ở vị trí"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "Để xem tồn kho hiện tại tại một vị trí cụ thể, truy "
+#~ "cập :menuselection:`ứng dụng Tồn kho --> Cấu hình --> Vị trí`, và chọn vị "
+#~ "trí mong muốn."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "Tiếp theo, nhấp vào nút thông minh :guilabel:`Tồn kho Hiện tại` để lấy "
+#~ "danh sách tất cả sản phẩm tại vị trí."
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr ""
+#~ "Danh sách tồn kho hiện tại tại `Shelf 1` bao gồm `266` tủ và `39` bàn."
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "Hiện tồn kho tại Kệ 1."
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

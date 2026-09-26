@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-08 18:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hebrew <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -208,7 +208,7 @@ msgstr "לוח בקרה של ברקוד עם ספירה מוקצית."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11118,7 +11118,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -18225,10 +18224,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"לאחר שהמיקומים נקראים בסדר אלפביתי, על סמך קרבתם למיקום הפלט או האריזה, יש "
-"להגדיר את אסטרטגיית הוצאה ב:ref:`מיקום אב <inventory/location-hierarchy>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -30158,8 +30155,8 @@ msgid ""
 "This section only appears if :guilabel:`Storage Locations` is enabled "
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
-"סעיף זה מופיע רק אם :guilabel:`מיקומי אחסון` מופעל ב-"
-":menuselection:`אפליקציית המלאי --> תצורה --> הגדרות`."
+"סעיף זה מופיע רק אם :guilabel:`מיקומי אחסון` מופעל "
+"ב-:menuselection:`אפליקציית המלאי --> תצורה --> הגדרות`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:75
 msgid "Specify the following locations for the operation type:"
@@ -30201,8 +30198,8 @@ msgid ""
 "To create repair orders from returns for this operation type, select "
 "the :guilabel:`Create Repair Orders from Returns` checkbox."
 msgstr ""
-"כדי ליצור הזמנות תיקון מהחזרות עבור סוג פעולה זה, בחר בתיבת הסימון "
-":guilabel:`יצירת הזמנות תיקון מהחזרות`."
+"כדי ליצור הזמנות תיקון מהחזרות עבור סוג פעולה זה, בחר בתיבת "
+"הסימון :guilabel:`יצירת הזמנות תיקון מהחזרות`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:98
 msgid "Batch & wave transfers"
@@ -30213,8 +30210,8 @@ msgid ""
 "This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is "
 "enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
-"סעיף זה מופיע רק אם :guilabel:`העברות אצווה, גל ואשכול` מופעל ב-"
-":menuselection:`אפליקציית המלאי --> תצורה --> הגדרות`."
+"סעיף זה מופיע רק אם :guilabel:`העברות אצווה, גל ואשכול` מופעל "
+"ב-:menuselection:`אפליקציית המלאי --> תצורה --> הגדרות`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:103
 msgid ""
@@ -30867,23 +30864,27 @@ msgstr "כפתור חכם פסולת המציג את כל הזמנות הפסי�
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
-msgstr "*מיקום* הוא מרחב ספציפי במחסן. זה יכול להיות מדף, חדר, מעבר וכו׳."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"כדי ליצור מיקומי אחסון ספציפיים, יש להפעיל את התכונה *מיקומי אחסון* על ידי "
-"מעבר אל :menuselection:`אפליקציה מלאי --> תצורה --> הגדרות`. "
-"בקטע :guilabel:`מחסנים`, יש לסמן את תיבת הסימון :guilabel:`מיקומי אחסון`. "
-"לאחר מכן, יש ללחוץ על :guilabel:`שמירה`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -30897,60 +30898,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "הצגת התכונה מיקומי אחסון."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "יצירת מיקום חדש"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"לאחר הפעלת *מיקומי אחסון*, יש לעבור אל :menuselection:`אפליקציה מלאי --> "
-"תצורה --> מיקומים`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "רשימת מיקומים פנימיים."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"בעמוד זה, יש ללחוץ על :guilabel:`חדש`. לאחר מכן ניתן להגדיר את טופס המיקום "
-"החדש באופן הבא:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`שם מיקום`: שם מזוהה של המיקום."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "קטע מידע נוסף בטופס יצירת מיקום חדש."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-":guilabel:`מיקום הורה`: המיקום שבתוכו נמצא המיקום החדש. לאחר יצירת המיקום, "
-"הוא מפורט בעמוד :guilabel:`מיקומים` תוך שימוש ב*היררכיית מיקומים*, לתיאור "
-"האופן שבו מיקום ספציפי משתלב באזורים גדולים יותר של המחסן."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"ב-`WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" הוא שם המיקום, \"Zone "
-"A\" הוא המיקום ההורה, וכל מה שלפניו הוא הנתיב המציג היכן נקודה זו נמצאת בתוך "
-"המחסן."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "קטע מידע נוסף"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -30958,234 +30953,197 @@ msgstr ""
 "בנוסף לשדות הנדרשים לעיל, יש להגדיר את שדות המיקום הבאים כדי להבטיח שהמיקום "
 "משרת את מטרתו המיועדת במסד הנתונים:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`סוג מיקום`: מהתפריט הנפתח, יש לבחור :guilabel:`מיקום "
-"ספק`, :guilabel:`תצוגה`, :guilabel:`מיקום פנימי`, :guilabel:`מיקום "
-"לקוח`, :guilabel:`אובדן מלאי`, :guilabel:`ייצור`, או :guilabel:`מיקום מעבר` "
-"כדי לסווג את המיקום. לפרטים על כל סוג מיקום, יש לעיין ב:ref:`סעיף סוגי מיקום "
-"<inventory/warehouses_storage/location-type>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`קטגוריית אחסון`: זמין רק כאשר התכונה :doc:`קטגוריות אחסון <../../"
-"shipping_receiving/daily_operations/storage_category>` מופעלת "
-"ב:menuselection:`אפליקציה מלאי --> תצורה --> הגדרות`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`חברה`: החברה שאליה שייך המיקום."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`האם מיקום פסולת?`: יש לסמן תיבת סימון זו כדי לאפשר אחסון סחורות "
-"פסולות/פגומות במיקום זה."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`האם מיקום החזרה?`: יש לסמן תיבת סימון זו כדי לאפשר החזרת מוצרים "
-"למיקום זה."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`ברקוד`: משמש עם אפליקציית *ברקוד*, יש להזין את הברקוד "
-"כדי :ref:`לזהות פעולות <barcode/setup/location>` במיקום זה בעת סריקה."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`מיקום חידוש`: משמש ל:doc:`הגדרת מסלולים <../../shipping_receiving/"
-"daily_operations/use_routes>`, יש לסמן תיבת סימון זו כדי להגדיר את המיקום "
-"כיעד לקבלת מוצרים מ*רכש*, *ייצור*, או מסלולי רכש אחרים, תוך הבטחה שהמוצרים "
-"מסופקים כראוי למחסן."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "קטע מידע נוסף בטופס יצירת מיקום חדש."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr "יש להגדיר את השדות הנותרים בסעיף :guilabel:`מידע נוסף` כדלקמן:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`חברה`: החברה שהמיקום נמצא במחסן שלה. יש להשאיר שדה זה ריק אם "
-"מיקום זה משותף בין חברות."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`ברקוד`: הברקוד המוקצה למיקום."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`חידוש מיקום`: יש לסמן תיבה זו כדי לקבל את כל הכמויות לחידוש "
-"במיקום זה."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"בקטע :guilabel:`ספירה מחזורית`, יש לשנות את הערך בשדה :guilabel:`תדירות מלאי "
-"(ימים)` מברירת המחדל `0`, במידת הצורך."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "קטע ספירה מחזורית בטופס יצירת מיקום חדש."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"כאשר שונה מ-`0`, תאריכי ספירת המלאי עבור מוצרים המאוחסנים במיקום זה מוגדרים "
-"אוטומטית בתדירות שהוגדרה."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"בקטע :guilabel:`לוגיסטיקה`, בשדה :guilabel:`אסטרטגיית הסרה`, יש ללחוץ על "
-"התפריט הנפתח ולבחור את :doc:`אסטרטגיית ההסרה <../../shipping_receiving/"
-"removal_strategies>` כיצד יש להסיר פריטים ממיקום זה."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "קטע ספירה מחזורית"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"כדי לתזמן ספירות מלאי קבועות במיקום זה, יש להגדיר את השדה :guilabel:`תדירות "
-"מלאי (ימים)` למרווח הרצוי. כברירת מחדל, הוא מוגדר ל-`0` (ללא ספירות "
-"מתוזמנות)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"לדוגמה, הגדרת שדה זה ל-`30` מתזמנת ספירה כל שלושים יום. לפרטים נוספים על "
-"הגדרה ושימוש בתכונה זו, יש לעיין ב:doc:`תיעוד ספירות מחזוריות "
-"<cycle_counts>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"השדה :guilabel:`מלאי אפקטיבי אחרון` מציג את התאריך שבו התרחשה ספירת המלאי "
-"האחרונה במיקום זה. כאשר ספירות מלאי מתוזמנות מופעלות, השדה :guilabel:`מלאי "
-"צפוי הבא` מציג את תאריך ספירת המלאי הבאה."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"עם ספירות מלאי המתוזמנות להתרחש כל `30` ימים, וספירת :guilabel:`מלאי אפקטיבי "
-"אחרון` שהתרחשה ב-16 ביולי, ה:guilabel:`מלאי צפוי הבא` הוא 15 באוגוסט."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "הצג את קטע הספירה המחזורית של טופס המיקומים."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "קטע לוגיסטיקה"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"בקטע :guilabel:`לוגיסטיקה` של טופס המיקומים, ניתן לבחור באופן "
-"אופציונלי :guilabel:`אסטרטגיית הסרה` כדי לקבוע את הסדר והעדיפות של איך "
-"מוצרים נאספים מהמלאי. האפשרויות הן: :guilabel:`ראשון נכנס ראשון יוצא "
-"(FIFO)`, :guilabel:`אחרון נכנס ראשון יוצא (LIFO)`, :guilabel:`המיקום הקרוב "
-"ביותר`, ו:guilabel:`תפוגה ראשונה יוצאת ראשונה (FEFO)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "מלאי נוכחי במיקום"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
-msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
 msgstr ""
-"כדי להציג את המלאי הנוכחי במיקום יחיד, יש לעבור ל-:menuselection:`אפליקציית "
-"מלאי --> תצורה --> מיקומים`, ולבחור את המיקום הרצוי."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
-msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
 msgstr ""
-"לאחר מכן, יש ללחוץ על כפתור החכם :guilabel:`מלאי נוכחי` כדי לקבל רשימה של כל "
-"המוצרים במיקום."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
-msgstr "רשימת המלאי הנוכחי ב-`Shelf 1` מורכבת מ-`266` ארונות ו-`39` שולחנות."
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "הצג מלאי במדף 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
+msgid ""
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+msgid ""
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -58909,6 +58867,259 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "לאחר שהמיקומים נקראים בסדר אלפביתי, על סמך קרבתם למיקום הפלט או האריזה, "
+#~ "יש להגדיר את אסטרטגיית הוצאה ב:ref:`מיקום אב <inventory/location-"
+#~ "hierarchy>`."
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr "*מיקום* הוא מרחב ספציפי במחסן. זה יכול להיות מדף, חדר, מעבר וכו׳."
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "כדי ליצור מיקומי אחסון ספציפיים, יש להפעיל את התכונה *מיקומי אחסון* על "
+#~ "ידי מעבר אל :menuselection:`אפליקציה מלאי --> תצורה --> הגדרות`. "
+#~ "בקטע :guilabel:`מחסנים`, יש לסמן את תיבת הסימון :guilabel:`מיקומי אחסון`. "
+#~ "לאחר מכן, יש ללחוץ על :guilabel:`שמירה`."
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "לאחר הפעלת *מיקומי אחסון*, יש לעבור אל :menuselection:`אפליקציה מלאי --> "
+#~ "תצורה --> מיקומים`."
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "בעמוד זה, יש ללחוץ על :guilabel:`חדש`. לאחר מכן ניתן להגדיר את טופס "
+#~ "המיקום החדש באופן הבא:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`שם מיקום`: שם מזוהה של המיקום."
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`מיקום הורה`: המיקום שבתוכו נמצא המיקום החדש. לאחר יצירת "
+#~ "המיקום, הוא מפורט בעמוד :guilabel:`מיקומים` תוך שימוש ב*היררכיית "
+#~ "מיקומים*, לתיאור האופן שבו מיקום ספציפי משתלב באזורים גדולים יותר של "
+#~ "המחסן."
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "ב-`WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" הוא שם המיקום, "
+#~ "\"Zone A\" הוא המיקום ההורה, וכל מה שלפניו הוא הנתיב המציג היכן נקודה זו "
+#~ "נמצאת בתוך המחסן."
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`סוג מיקום`: מהתפריט הנפתח, יש לבחור :guilabel:`מיקום "
+#~ "ספק`, :guilabel:`תצוגה`, :guilabel:`מיקום פנימי`, :guilabel:`מיקום "
+#~ "לקוח`, :guilabel:`אובדן מלאי`, :guilabel:`ייצור`, או :guilabel:`מיקום "
+#~ "מעבר` כדי לסווג את המיקום. לפרטים על כל סוג מיקום, יש לעיין ב:ref:`סעיף "
+#~ "סוגי מיקום <inventory/warehouses_storage/location-type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`קטגוריית אחסון`: זמין רק כאשר התכונה :doc:`קטגוריות אחסון "
+#~ "<../../shipping_receiving/daily_operations/storage_category>` מופעלת "
+#~ "ב:menuselection:`אפליקציה מלאי --> תצורה --> הגדרות`."
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`חברה`: החברה שאליה שייך המיקום."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`האם מיקום פסולת?`: יש לסמן תיבת סימון זו כדי לאפשר אחסון "
+#~ "סחורות פסולות/פגומות במיקום זה."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`האם מיקום החזרה?`: יש לסמן תיבת סימון זו כדי לאפשר החזרת "
+#~ "מוצרים למיקום זה."
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`ברקוד`: משמש עם אפליקציית *ברקוד*, יש להזין את הברקוד "
+#~ "כדי :ref:`לזהות פעולות <barcode/setup/location>` במיקום זה בעת סריקה."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`מיקום חידוש`: משמש ל:doc:`הגדרת מסלולים <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, יש לסמן תיבת סימון זו "
+#~ "כדי להגדיר את המיקום כיעד לקבלת מוצרים מ*רכש*, *ייצור*, או מסלולי רכש "
+#~ "אחרים, תוך הבטחה שהמוצרים מסופקים כראוי למחסן."
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr "יש להגדיר את השדות הנותרים בסעיף :guilabel:`מידע נוסף` כדלקמן:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`חברה`: החברה שהמיקום נמצא במחסן שלה. יש להשאיר שדה זה ריק אם "
+#~ "מיקום זה משותף בין חברות."
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`ברקוד`: הברקוד המוקצה למיקום."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`חידוש מיקום`: יש לסמן תיבה זו כדי לקבל את כל הכמויות לחידוש "
+#~ "במיקום זה."
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "בקטע :guilabel:`ספירה מחזורית`, יש לשנות את הערך בשדה :guilabel:`תדירות "
+#~ "מלאי (ימים)` מברירת המחדל `0`, במידת הצורך."
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "קטע ספירה מחזורית בטופס יצירת מיקום חדש."
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "כאשר שונה מ-`0`, תאריכי ספירת המלאי עבור מוצרים המאוחסנים במיקום זה "
+#~ "מוגדרים אוטומטית בתדירות שהוגדרה."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "בקטע :guilabel:`לוגיסטיקה`, בשדה :guilabel:`אסטרטגיית הסרה`, יש ללחוץ על "
+#~ "התפריט הנפתח ולבחור את :doc:`אסטרטגיית ההסרה <../../shipping_receiving/"
+#~ "removal_strategies>` כיצד יש להסיר פריטים ממיקום זה."
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "כדי לתזמן ספירות מלאי קבועות במיקום זה, יש להגדיר את "
+#~ "השדה :guilabel:`תדירות מלאי (ימים)` למרווח הרצוי. כברירת מחדל, הוא מוגדר "
+#~ "ל-`0` (ללא ספירות מתוזמנות)."
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "לדוגמה, הגדרת שדה זה ל-`30` מתזמנת ספירה כל שלושים יום. לפרטים נוספים על "
+#~ "הגדרה ושימוש בתכונה זו, יש לעיין ב:doc:`תיעוד ספירות מחזוריות "
+#~ "<cycle_counts>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "השדה :guilabel:`מלאי אפקטיבי אחרון` מציג את התאריך שבו התרחשה ספירת המלאי "
+#~ "האחרונה במיקום זה. כאשר ספירות מלאי מתוזמנות מופעלות, "
+#~ "השדה :guilabel:`מלאי צפוי הבא` מציג את תאריך ספירת המלאי הבאה."
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "עם ספירות מלאי המתוזמנות להתרחש כל `30` ימים, וספירת :guilabel:`מלאי "
+#~ "אפקטיבי אחרון` שהתרחשה ב-16 ביולי, ה:guilabel:`מלאי צפוי הבא` הוא 15 "
+#~ "באוגוסט."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "בקטע :guilabel:`לוגיסטיקה` של טופס המיקומים, ניתן לבחור באופן "
+#~ "אופציונלי :guilabel:`אסטרטגיית הסרה` כדי לקבוע את הסדר והעדיפות של איך "
+#~ "מוצרים נאספים מהמלאי. האפשרויות הן: :guilabel:`ראשון נכנס ראשון יוצא "
+#~ "(FIFO)`, :guilabel:`אחרון נכנס ראשון יוצא (LIFO)`, :guilabel:`המיקום "
+#~ "הקרוב ביותר`, ו:guilabel:`תפוגה ראשונה יוצאת ראשונה (FEFO)`."
+
+#~ msgid "Current stock at location"
+#~ msgstr "מלאי נוכחי במיקום"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "כדי להציג את המלאי הנוכחי במיקום יחיד, יש לעבור "
+#~ "ל-:menuselection:`אפליקציית מלאי --> תצורה --> מיקומים`, ולבחור את המיקום "
+#~ "הרצוי."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "לאחר מכן, יש ללחוץ על כפתור החכם :guilabel:`מלאי נוכחי` כדי לקבל רשימה של "
+#~ "כל המוצרים במיקום."
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr ""
+#~ "רשימת המלאי הנוכחי ב-`Shelf 1` מורכבת מ-`266` ארונות ו-`39` שולחנות."
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "הצג מלאי במדף 1."
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-08 20:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -210,7 +210,7 @@ msgstr "Nadzorna plošča Črtna koda z dodeljenim štetjem."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11649,7 +11649,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -19185,11 +19184,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"Jakmile jsou lokace pojmenovány v abecedním pořadí podle jejich blízkosti k "
-"výstupní nebo balicí lokaci, nastavte strategii odstranění "
-"na :ref:`nadřazené lokaci <inventory/location-hierarchy>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -32380,26 +32376,27 @@ msgstr "Pametni gumb Odpadki, ki prikazuje vse naloge za odpadke iz operacije."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"*Lokacija* je določen prostor znotraj skladišča. To je lahko polica, soba, "
-"hodnik itd."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"Za ustvarjanje specifičnih skladiščnih lokacij omogočite funkcijo "
-"*Skladiščne lokacije* tako, da greste na :menuselection:`aplikacija Zaloga --"
-"> Konfiguracija --> Nastavitve`. V razdelku :guilabel:`Skladišča` označite "
-"potrditveno polje :guilabel:`Skladiščne lokacije`. Nato "
-"kliknite :guilabel:`Shrani`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -32413,61 +32410,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "Prikaz funkcije Skladiščne lokacije."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "Ustvari novo lokacijo"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"Po omogočanju funkcije *Skladiščne lokacije* greste "
-"na :menuselection:`aplikacija Zaloga --> Konfiguracija --> Lokacije`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "Seznam notranjih lokacij."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"Na tej strani kliknite :guilabel:`Novo`. Obrazec nove lokacije lahko nato "
-"konfigurirate na naslednji način:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`Ime lokacije`: prepoznavno ime lokacije."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "Razdelek Dodatne informacije obrazca za ustvarjanje nove lokacije."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-":guilabel:`Nadrejena lokacija`: lokacija, znotraj katere obstaja nova "
-"lokacija. Po ustvarjanju lokacije je ta navedena na "
-"strani :guilabel:`Lokacije` z uporabo *hierarhije lokacij*, da opiše, kako "
-"se določena lokacija ujema z večjimi območji skladišča."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"V `WH/Stock/Cona A/Hladilnik 1` je \"Hladilnik 1\" ime lokacije, \"Cona A\" "
-"je nadrejena lokacija, vse pred tem pa je pot, ki prikazuje, kje se to mesto "
-"nahaja v skladišču."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "Razdelek Dodatne informacije"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -32476,246 +32466,197 @@ msgstr ""
 "lokacije, da zagotovite, da lokacija služi svojemu predvidenemu namenu v "
 "bazi podatkov:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`Vrsta lokacije`: iz spustnega menija izberite :guilabel:`Lokacija "
-"dobavitelja`, :guilabel:`Pogled`, :guilabel:`Interna "
-"lokacija`, :guilabel:`Lokacija stranke`, :guilabel:`Izguba "
-"zalog`, :guilabel:`Proizvodnja` ali :guilabel:`Tranzitna lokacija`, da "
-"kategorizirate lokacijo. Za podrobnosti o posameznih vrstah lokacij "
-"glejte :ref:`razdelek Vrste lokacij <inventory/warehouses_storage/location-"
-"type>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`Kategorija skladiščenja`: na voljo samo, če je "
-"funkcija :doc:`Kategorije skladiščenja <../../shipping_receiving/"
-"daily_operations/storage_category>` omogočena v :menuselection:`aplikacija "
-"Zaloga --> Konfiguracija --> Nastavitve`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`Podjetje`: podjetje, kateremu lokacija pripada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`Je lokacija odpadkov?`: označite to potrditveno polje, da "
-"omogočite shranjevanje odpisanega/poškodovanega blaga na tej lokaciji."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`Je lokacija vračil?`: označite to potrditveno polje, da omogočite "
-"vračanje izdelkov na to lokacijo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`Črtna koda`: uporablja se z aplikacijo *Črtna koda*, vnesite "
-"črtno kodo za :ref:`identifikacijo dejanj <barcode/setup/location>` na tej "
-"lokaciji ob skeniranju."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`Oskrbi lokacijo`: uporablja se za :doc:`konfiguracijo poti <../../"
-"shipping_receiving/daily_operations/use_routes>`, označite to potrditveno "
-"polje, da nastavite lokacijo kot cilj za prejemanje izdelkov iz poti "
-"*Nakup*, *Proizvodnja* ali drugih poti oskrbe, s čimer zagotovite, da so "
-"izdelki pravilno dobavljeni v skladišče."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "Razdelek Dodatne informacije obrazca za ustvarjanje nove lokacije."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ""
-"Konfigurirajte preostala polja v razdelku :guilabel:`Dodatne informacije` na "
-"naslednji način:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`Podjetje`: podjetje, v katerem skladišču se lokacija nahaja. To "
-"polje pustite prazno, če je lokacija skupna med podjetji."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`Črtna koda`: črtna koda, dodeljena lokaciji."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`Lokacija za dopolnjevanje`: označite to potrditveno polje, če "
-"želite pridobiti vse količine za dopolnitev na tej lokaciji."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"V razdelku :guilabel:`Ciklično štetje` po potrebi spremenite vrednost v "
-"polju :guilabel:`Pogostost inventure (dnevi)` iz privzete vrednosti `0`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "Razdelek Ciklično štetje obrazca za ustvarjanje nove lokacije."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"Če je različno od `0`, se datumi inventurnega štetja za izdelke, shranjene "
-"na tej lokaciji, samodejno nastavijo z določeno frekvenco."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"V razdelku :guilabel:`Logistika` v polju :guilabel:`Strategija odvzema` "
-"kliknite spustni meni in izberite :doc:`strategijo odvzema <../../"
-"shipping_receiving/removal_strategies>` za to, kako naj se izdelki odvzamejo "
-"s te lokacije."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "Razdelek Ciklično štetje"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"Če želite načrtovati redne inventurne popise na tej lokaciji, nastavite "
-"polje :guilabel:`Pogostost inventure (dnevi)` na želeni interval. Privzeto "
-"je nastavljeno na `0` (brez načrtovanih popisov)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"Na primer, če nastavite to polje na `30`, se štetje načrtuje vsakih trideset "
-"dni. Za več podrobnosti o nastavitvi in uporabi te funkcije "
-"glejte :doc:`dokumentacijo o cikličnih popisih <cycle_counts>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"Polje :guilabel:`Zadnja dejanska inventura` prikazuje datum, ko je bil "
-"izveden zadnji inventurni popis na tej lokaciji. Ko so načrtovani inventurni "
-"popisi omogočeni, polje :guilabel:`Naslednja pričakovana inventura` "
-"prikazuje datum naslednjega inventurnega popisa."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"Ko so inventurni popisi načrtovani vsakih `30` dni in je bil "
-"popis :guilabel:`Zadnja dejanska inventura` izveden 16. julija, "
-"je :guilabel:`Naslednja pričakovana inventura` 15. avgusta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "Prikaz razdelka Ciklično štetje obrazca lokacij."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "Razdelek logistike"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"V razdelku :guilabel:`Logistika` na obrazcu lokacij po želji "
-"izberite :guilabel:`Strategijo odvzema`, da določite vrstni red in prednost, "
-"kako se izdelki jemljejo iz zaloge. Možnosti so: :guilabel:`Prvi noter, prvi "
-"ven (FIFO)`, :guilabel:`Zadnji noter, prvi ven (LIFO)`, :guilabel:`Najbližja "
-"lokacija` in :guilabel:`Prvi poteče, prvi ven (FEFO)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "Trenutna zaloga na lokaciji"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
 msgstr ""
-"Za ogled trenutne zaloge na posamezni lokaciji pojdite "
-"na :menuselection:`Zaloga --> Konfiguracija --> Lokacije` in izberite želeno "
-"lokacijo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
 msgstr ""
-"Nato kliknite pametni gumb :guilabel:`Trenutna zaloga`, da dobite seznam "
-"vseh izdelkov na lokaciji."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
 msgstr ""
-"Seznam trenutne zaloge na `Shelf 1` sestavlja `266` omaric in `39` miz."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "Prikaži zalogo na Polici 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -62129,6 +62070,273 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "Jakmile jsou lokace pojmenovány v abecedním pořadí podle jejich blízkosti "
+#~ "k výstupní nebo balicí lokaci, nastavte strategii odstranění "
+#~ "na :ref:`nadřazené lokaci <inventory/location-hierarchy>`."
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "*Lokacija* je določen prostor znotraj skladišča. To je lahko polica, "
+#~ "soba, hodnik itd."
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Za ustvarjanje specifičnih skladiščnih lokacij omogočite funkcijo "
+#~ "*Skladiščne lokacije* tako, da greste na :menuselection:`aplikacija "
+#~ "Zaloga --> Konfiguracija --> Nastavitve`. V "
+#~ "razdelku :guilabel:`Skladišča` označite potrditveno "
+#~ "polje :guilabel:`Skladiščne lokacije`. Nato kliknite :guilabel:`Shrani`."
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "Po omogočanju funkcije *Skladiščne lokacije* greste "
+#~ "na :menuselection:`aplikacija Zaloga --> Konfiguracija --> Lokacije`."
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "Na tej strani kliknite :guilabel:`Novo`. Obrazec nove lokacije lahko nato "
+#~ "konfigurirate na naslednji način:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`Ime lokacije`: prepoznavno ime lokacije."
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Nadrejena lokacija`: lokacija, znotraj katere obstaja nova "
+#~ "lokacija. Po ustvarjanju lokacije je ta navedena na "
+#~ "strani :guilabel:`Lokacije` z uporabo *hierarhije lokacij*, da opiše, "
+#~ "kako se določena lokacija ujema z večjimi območji skladišča."
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "V `WH/Stock/Cona A/Hladilnik 1` je \"Hladilnik 1\" ime lokacije, \"Cona "
+#~ "A\" je nadrejena lokacija, vse pred tem pa je pot, ki prikazuje, kje se "
+#~ "to mesto nahaja v skladišču."
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`Vrsta lokacije`: iz spustnega menija "
+#~ "izberite :guilabel:`Lokacija "
+#~ "dobavitelja`, :guilabel:`Pogled`, :guilabel:`Interna "
+#~ "lokacija`, :guilabel:`Lokacija stranke`, :guilabel:`Izguba "
+#~ "zalog`, :guilabel:`Proizvodnja` ali :guilabel:`Tranzitna lokacija`, da "
+#~ "kategorizirate lokacijo. Za podrobnosti o posameznih vrstah lokacij "
+#~ "glejte :ref:`razdelek Vrste lokacij <inventory/warehouses_storage/"
+#~ "location-type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`Kategorija skladiščenja`: na voljo samo, če je "
+#~ "funkcija :doc:`Kategorije skladiščenja <../../shipping_receiving/"
+#~ "daily_operations/storage_category>` omogočena "
+#~ "v :menuselection:`aplikacija Zaloga --> Konfiguracija --> Nastavitve`."
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`Podjetje`: podjetje, kateremu lokacija pripada."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`Je lokacija odpadkov?`: označite to potrditveno polje, da "
+#~ "omogočite shranjevanje odpisanega/poškodovanega blaga na tej lokaciji."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`Je lokacija vračil?`: označite to potrditveno polje, da "
+#~ "omogočite vračanje izdelkov na to lokacijo."
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`Črtna koda`: uporablja se z aplikacijo *Črtna koda*, vnesite "
+#~ "črtno kodo za :ref:`identifikacijo dejanj <barcode/setup/location>` na "
+#~ "tej lokaciji ob skeniranju."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Oskrbi lokacijo`: uporablja se za :doc:`konfiguracijo poti "
+#~ "<../../shipping_receiving/daily_operations/use_routes>`, označite to "
+#~ "potrditveno polje, da nastavite lokacijo kot cilj za prejemanje izdelkov "
+#~ "iz poti *Nakup*, *Proizvodnja* ali drugih poti oskrbe, s čimer "
+#~ "zagotovite, da so izdelki pravilno dobavljeni v skladišče."
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr ""
+#~ "Konfigurirajte preostala polja v razdelku :guilabel:`Dodatne informacije` "
+#~ "na naslednji način:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`Podjetje`: podjetje, v katerem skladišču se lokacija nahaja. "
+#~ "To polje pustite prazno, če je lokacija skupna med podjetji."
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`Črtna koda`: črtna koda, dodeljena lokaciji."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`Lokacija za dopolnjevanje`: označite to potrditveno polje, če "
+#~ "želite pridobiti vse količine za dopolnitev na tej lokaciji."
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "V razdelku :guilabel:`Ciklično štetje` po potrebi spremenite vrednost v "
+#~ "polju :guilabel:`Pogostost inventure (dnevi)` iz privzete vrednosti `0`."
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "Razdelek Ciklično štetje obrazca za ustvarjanje nove lokacije."
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "Če je različno od `0`, se datumi inventurnega štetja za izdelke, "
+#~ "shranjene na tej lokaciji, samodejno nastavijo z določeno frekvenco."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "V razdelku :guilabel:`Logistika` v polju :guilabel:`Strategija odvzema` "
+#~ "kliknite spustni meni in izberite :doc:`strategijo odvzema <../../"
+#~ "shipping_receiving/removal_strategies>` za to, kako naj se izdelki "
+#~ "odvzamejo s te lokacije."
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "Če želite načrtovati redne inventurne popise na tej lokaciji, nastavite "
+#~ "polje :guilabel:`Pogostost inventure (dnevi)` na želeni interval. "
+#~ "Privzeto je nastavljeno na `0` (brez načrtovanih popisov)."
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "Na primer, če nastavite to polje na `30`, se štetje načrtuje vsakih "
+#~ "trideset dni. Za več podrobnosti o nastavitvi in uporabi te funkcije "
+#~ "glejte :doc:`dokumentacijo o cikličnih popisih <cycle_counts>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "Polje :guilabel:`Zadnja dejanska inventura` prikazuje datum, ko je bil "
+#~ "izveden zadnji inventurni popis na tej lokaciji. Ko so načrtovani "
+#~ "inventurni popisi omogočeni, polje :guilabel:`Naslednja pričakovana "
+#~ "inventura` prikazuje datum naslednjega inventurnega popisa."
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "Ko so inventurni popisi načrtovani vsakih `30` dni in je bil "
+#~ "popis :guilabel:`Zadnja dejanska inventura` izveden 16. julija, "
+#~ "je :guilabel:`Naslednja pričakovana inventura` 15. avgusta."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "V razdelku :guilabel:`Logistika` na obrazcu lokacij po želji "
+#~ "izberite :guilabel:`Strategijo odvzema`, da določite vrstni red in "
+#~ "prednost, kako se izdelki jemljejo iz zaloge. Možnosti "
+#~ "so: :guilabel:`Prvi noter, prvi ven (FIFO)`, :guilabel:`Zadnji noter, "
+#~ "prvi ven (LIFO)`, :guilabel:`Najbližja lokacija` in :guilabel:`Prvi "
+#~ "poteče, prvi ven (FEFO)`."
+
+#~ msgid "Current stock at location"
+#~ msgstr "Trenutna zaloga na lokaciji"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "Za ogled trenutne zaloge na posamezni lokaciji pojdite "
+#~ "na :menuselection:`Zaloga --> Konfiguracija --> Lokacije` in izberite "
+#~ "želeno lokacijo."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "Nato kliknite pametni gumb :guilabel:`Trenutna zaloga`, da dobite seznam "
+#~ "vseh izdelkov na lokaciji."
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr ""
+#~ "Seznam trenutne zaloge na `Shelf 1` sestavlja `266` omaric in `39` miz."
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "Prikaži zalogo na Polici 1."
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

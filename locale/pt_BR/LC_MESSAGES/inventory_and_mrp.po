@@ -22,11 +22,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-08 18:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
-"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
-"18-doc/inventory_and_mrp/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
+"odoo-18-doc/inventory_and_mrp/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -217,7 +217,7 @@ msgstr "O painel de Códigos de Barras com uma contagem atribuída."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -12051,7 +12051,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -19831,11 +19830,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"Depois que os locais forem nomeados em ordem alfabética, com base em sua "
-"proximidade com o local de saída ou de embalagem, defina a estratégia de "
-"remoção no :ref:`local principal <inventory/location-hierarchy>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -32665,8 +32661,8 @@ msgid ""
 "enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
 "Esta seção só aparece se :guilabel:`Transferências em lote, onda e cluster` "
-"estiver habilitado em :menuselection:`Aplicativo Inventário --> "
-"Configuração --> Definições`."
+"estiver habilitado em :menuselection:`Aplicativo Inventário --> Configuração "
+"--> Definições`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:103
 msgid ""
@@ -33346,26 +33342,27 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"Um *local* é um espaço específico em um armazém. Pode ser uma prateleira, "
-"uma sala, um corredor, etc."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"Para criar locais de armazenamento específicos, ative o recurso *Locais de "
-"armazenamento* acessando :menuselection:`app Inventário --> Configuração --> "
-"Definições`. Na seção :guilabel:`Armazéns`, marque a caixa de "
-"seleção :guilabel:`Locais de armazenamento`. Em seguida, clique "
-"em :guilabel:`Salvar`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -33379,61 +33376,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "Recurso Mostrar locais de armazenamento."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "Criar novo local"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"Depois de ativar *Locais de armazenamento*, vá para :menuselection:`app "
-"Inventário --> Configuração --> Locais`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "Lista de locais internos."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"Nessa página, clique em :guilabel:`Novo`. O novo formulário de localização "
-"pode então ser configurado da seguinte forma:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`Nome do local`: nome reconhecível do local."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "Seção Informações adicionais do formulário de criação de novo local."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-":guilabel:`Local principal`: o local dentro do qual o novo local existe. "
-"Depois que o local é criado, ele é listado na página :guilabel:`Locais` "
-"usando uma *hierarquia de locais*, para descrever como um local específico "
-"se encaixa em áreas maiores do armazém."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"Em `WH/Stock/Zona A/Refrigerador 1`, \"Refrigerador 1\" é o nome do local, "
-"\"Zona A\" é o local principal e tudo antes dele é o caminho que mostra onde "
-"esse local está dentro do armazém."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "Seção Informações adicionais"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -33441,250 +33431,197 @@ msgstr ""
 "Além dos campos obrigatórios acima, configure os seguintes campos de local "
 "para garantir que o local atenda à finalidade pretendida na base de dados:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`Tipo de local`: no menu suspenso, escolha :guilabel:`Local do "
-"fornecedor`, :guilabel:`Visualização`, :guilabel:`Local "
-"interno`, :guilabel:`Local do cliente`, :guilabel:`Perda de "
-"estoque`, :guilabel:`Produção` ou :guilabel:`Local do trânsito` para "
-"categorizar o local. Para obter detalhes sobre cada tipo de local, consulte "
-"a seção :ref:`Tipos de local <inventory/warehouses_storage/location-type>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`Categoria de armazenamento`: disponível apenas com o "
-"recurso :doc:`Categorias de armazenamento <../../shipping_receiving/"
-"daily_operations/storage_category>` ativado em :menuselection:`app "
-"Inventário --> Configuração --> Definições`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`Empresa`: a empresa à qual o local pertence."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`É um local de sucata?`: marque essa caixa de seleção para "
-"permitir que mercadorias sucateadas/danificadas sejam armazenadas nesse "
-"local."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`É um local de devolução?`: marque essa caixa de seleção para "
-"permitir que os produtos sejam devolvidos a esse local."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`Código de barras`: usado com o aplicativo *Código de barras*, "
-"insira o código de barras para :ref:`identificar ações <barcode/setup/"
-"location>` nesse local quando digitalizado."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`Local de reposição`: usado para :doc:`configurar rotas <.../.../"
-"shipping_receiving/daily_operations/use_routes>`, marque essa caixa de "
-"seleção para definir o local como destino para o recebimento de produtos de "
-"*Comprar*, *Fabricar* ou outras rotas de aquisição, garantindo que os "
-"produtos sejam fornecidos corretamente ao armazém."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "Seção Informações adicionais do formulário de criação de novo local."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ""
-"Configure os campos restantes na seção :guilabel:`Informações adicionais` da "
-"seguinte forma:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`Empresa`: a empresa em cujo armazém fica o local. Deixe esse "
-"campo em branco se esse local for compartilhado entre empresas."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`Código de barras`: o código de barras atribuído ao local."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`Local de reposição`: marque essa caixa de seleção para obter "
-"todas as quantidades a repor nesse local."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"Na seção :guilabel:`Contagem cíclica`, altere o valor no "
-"campo :guilabel:`Frequência de inventário (Dias)` do padrão `0`, se "
-"necessário."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "Seção de contagem cíclica do formulário de criação de novo local."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"Quando diferente de `0`, as datas de contagem de estoque dos produtos "
-"armazenados nesse local são automaticamente definidas na frequência definida."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"Na seção :guilabel:`Logística`, no campo :guilabel:`Estratégia de remoção`, "
-"clique no menu suspenso e selecione a :doc:`estratégia de remoção <../../"
-"shipping_receiving/removal_strategies>` para saber como os itens devem ser "
-"removidos desse local."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "Seção Contagem cíclica"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"Para programar contagens regulares de inventário nesse local, defina o "
-"campo :guilabel:`Frequência de inventário (Dias)` como o intervalo desejado. "
-"Por padrão, ele é definido como `0` (nenhuma contagem programada)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"Por exemplo, a definição desse campo como `30` programa uma contagem a cada "
-"trinta dias. Para obter mais detalhes sobre como configurar e usar esse "
-"recurso, consulte a documentação :doc:`Contagens de ciclos <cycle_counts>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"O campo :guilabel:`Último inventário efetivo` exibe a data em que ocorreu a "
-"última contagem de inventário nesse local. Quando as contagens de inventário "
-"programadas estão ativadas, o campo :guilabel:`Próximo inventário esperado` "
-"exibe a data da próxima contagem de inventário."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"Com as contagens de inventário programadas para ocorrer a cada `30` dias e a "
-"contagem do :guilabel:`Último inventário efetivo` ocorrendo em 16 de julho, "
-"o :guilabel:`Próximo inventário esperado` é 15 de agosto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "Mostrar a seção Contagem cíclica do formulário de locais."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "Seção Logística"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"Na seção :guilabel:`Logística` do formulário de locais, selecione "
-"opcionalmente uma :guilabel:`Estratégia de remoção` para determinar a ordem "
-"e a prioridade de como os produtos são retirados do estoque. As opções "
-"são: :guilabel:`Primeiro a entrar, primeiro a sair "
-"(PEPS)`, :guilabel:`Último a entrar, primeiro a sair "
-"(UEPS)`, :guilabel:`Local mais próximo` e :guilabel:`Primeiro a vencer, "
-"primeiro a sair (PVPS)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "Estoque atual no local"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
 msgstr ""
-"Para visualizar o estoque atual em um único local, vá "
-"para :menuselection:`app Inventário --> Configuração --> Locais` e selecione "
-"o local desejado."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
 msgstr ""
-"Em seguida, clique no botão inteligente :guilabel:`Estoque atual` para obter "
-"uma lista de todos os produtos no local."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
 msgstr ""
-"Uma lista do estoque atual na `Estante 1` consiste em `266` armários e `39` "
-"escrivaninhas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "Mostrar estoque da Prateleira 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -52956,8 +52893,8 @@ msgid ""
 "On the pop-up window, select the product to add in the :guilabel:`Product` "
 "drop-down menu."
 msgstr ""
-"Na janela pop-up, selecione o produto a ser adicionado no menu suspenso "
-":guilabel:`Produto`."
+"Na janela pop-up, selecione o produto a ser adicionado no menu "
+"suspenso :guilabel:`Produto`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:159
 msgid "Then, specify the following information about the product:"
@@ -52997,8 +52934,8 @@ msgid ""
 "field."
 msgstr ""
 ":guilabel:`Fornecedor`: Selecione o fornecedor do produto. Esse campo **só** "
-"aparece se a opção :guilabel:`Comprar` tiver sido selecionada no campo "
-":guilabel:`Rota`."
+"aparece se a opção :guilabel:`Comprar` tiver sido selecionada no "
+"campo :guilabel:`Rota`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:168
 msgid ""
@@ -53023,8 +52960,8 @@ msgid ""
 msgstr ""
 "Ao selecionar uma LM ao adicionar um produto, também são adicionados "
 "quaisquer componentes listados na LM ao |MPS|. Se não for necessário "
-"gerenciar o reabastecimento de componentes pelo |MPS|, deixe o campo "
-":guilabel:`Lista de materiais` em branco."
+"gerenciar o reabastecimento de componentes pelo |MPS|, deixe o "
+"campo :guilabel:`Lista de materiais` em branco."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:178
 msgid ""
@@ -53033,10 +52970,10 @@ msgid ""
 "Product` pop-up window to specify which warehouse the product is replenished "
 "to."
 msgstr ""
-"Se a base de dados estiver configurada com vários armazéns, um campo "
-":guilabel:`Armazém de produção` aparece na janela pop-up "
-":guilabel:`Adicionar um produto` para especificar em qual armazém o produto "
-"é reabastecido."
+"Se a base de dados estiver configurada com vários armazéns, um "
+"campo :guilabel:`Armazém de produção` aparece na janela pop-"
+"up :guilabel:`Adicionar um produto` para especificar em qual armazém o "
+"produto é reabastecido."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
 msgid "Enter product replenishment options"
@@ -53164,7 +53101,8 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
-msgstr ":guilabel:`Manual`: Reabasteça manualmente o produto a partir do |MPS|."
+msgstr ""
+":guilabel:`Manual`: Reabasteça manualmente o produto a partir do |MPS|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:237
 msgid ""
@@ -53184,8 +53122,8 @@ msgid ""
 "appears on the |MPS| page, along with any components (if applicable)."
 msgstr ""
 "Clique em :guilabel:`Salvar` para adicionar o produto ao |MPS|. O produto "
-"agora aparece na página |MPS|, junto com quaisquer componentes (se aplicável)"
-"."
+"agora aparece na página |MPS|, junto com quaisquer componentes (se "
+"aplicável)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Add a Product pop-up window in the MPS."
@@ -63888,6 +63826,280 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "Depois que os locais forem nomeados em ordem alfabética, com base em sua "
+#~ "proximidade com o local de saída ou de embalagem, defina a estratégia de "
+#~ "remoção no :ref:`local principal <inventory/location-hierarchy>`."
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "Um *local* é um espaço específico em um armazém. Pode ser uma prateleira, "
+#~ "uma sala, um corredor, etc."
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Para criar locais de armazenamento específicos, ative o recurso *Locais "
+#~ "de armazenamento* acessando :menuselection:`app Inventário --> "
+#~ "Configuração --> Definições`. Na seção :guilabel:`Armazéns`, marque a "
+#~ "caixa de seleção :guilabel:`Locais de armazenamento`. Em seguida, clique "
+#~ "em :guilabel:`Salvar`."
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "Depois de ativar *Locais de armazenamento*, vá para :menuselection:`app "
+#~ "Inventário --> Configuração --> Locais`."
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "Nessa página, clique em :guilabel:`Novo`. O novo formulário de "
+#~ "localização pode então ser configurado da seguinte forma:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`Nome do local`: nome reconhecível do local."
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Local principal`: o local dentro do qual o novo local existe. "
+#~ "Depois que o local é criado, ele é listado na página :guilabel:`Locais` "
+#~ "usando uma *hierarquia de locais*, para descrever como um local "
+#~ "específico se encaixa em áreas maiores do armazém."
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "Em `WH/Stock/Zona A/Refrigerador 1`, \"Refrigerador 1\" é o nome do "
+#~ "local, \"Zona A\" é o local principal e tudo antes dele é o caminho que "
+#~ "mostra onde esse local está dentro do armazém."
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de local`: no menu suspenso, escolha :guilabel:`Local do "
+#~ "fornecedor`, :guilabel:`Visualização`, :guilabel:`Local "
+#~ "interno`, :guilabel:`Local do cliente`, :guilabel:`Perda de "
+#~ "estoque`, :guilabel:`Produção` ou :guilabel:`Local do trânsito` para "
+#~ "categorizar o local. Para obter detalhes sobre cada tipo de local, "
+#~ "consulte a seção :ref:`Tipos de local <inventory/warehouses_storage/"
+#~ "location-type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`Categoria de armazenamento`: disponível apenas com o "
+#~ "recurso :doc:`Categorias de armazenamento <../../shipping_receiving/"
+#~ "daily_operations/storage_category>` ativado em :menuselection:`app "
+#~ "Inventário --> Configuração --> Definições`."
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`Empresa`: a empresa à qual o local pertence."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`É um local de sucata?`: marque essa caixa de seleção para "
+#~ "permitir que mercadorias sucateadas/danificadas sejam armazenadas nesse "
+#~ "local."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`É um local de devolução?`: marque essa caixa de seleção para "
+#~ "permitir que os produtos sejam devolvidos a esse local."
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`Código de barras`: usado com o aplicativo *Código de barras*, "
+#~ "insira o código de barras para :ref:`identificar ações <barcode/setup/"
+#~ "location>` nesse local quando digitalizado."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Local de reposição`: usado para :doc:`configurar rotas "
+#~ "<.../.../shipping_receiving/daily_operations/use_routes>`, marque essa "
+#~ "caixa de seleção para definir o local como destino para o recebimento de "
+#~ "produtos de *Comprar*, *Fabricar* ou outras rotas de aquisição, "
+#~ "garantindo que os produtos sejam fornecidos corretamente ao armazém."
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr ""
+#~ "Configure os campos restantes na seção :guilabel:`Informações adicionais` "
+#~ "da seguinte forma:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`Empresa`: a empresa em cujo armazém fica o local. Deixe esse "
+#~ "campo em branco se esse local for compartilhado entre empresas."
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ""
+#~ ":guilabel:`Código de barras`: o código de barras atribuído ao local."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`Local de reposição`: marque essa caixa de seleção para obter "
+#~ "todas as quantidades a repor nesse local."
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "Na seção :guilabel:`Contagem cíclica`, altere o valor no "
+#~ "campo :guilabel:`Frequência de inventário (Dias)` do padrão `0`, se "
+#~ "necessário."
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "Seção de contagem cíclica do formulário de criação de novo local."
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "Quando diferente de `0`, as datas de contagem de estoque dos produtos "
+#~ "armazenados nesse local são automaticamente definidas na frequência "
+#~ "definida."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "Na seção :guilabel:`Logística`, no campo :guilabel:`Estratégia de "
+#~ "remoção`, clique no menu suspenso e selecione a :doc:`estratégia de "
+#~ "remoção <../../shipping_receiving/removal_strategies>` para saber como os "
+#~ "itens devem ser removidos desse local."
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "Para programar contagens regulares de inventário nesse local, defina o "
+#~ "campo :guilabel:`Frequência de inventário (Dias)` como o intervalo "
+#~ "desejado. Por padrão, ele é definido como `0` (nenhuma contagem "
+#~ "programada)."
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "Por exemplo, a definição desse campo como `30` programa uma contagem a "
+#~ "cada trinta dias. Para obter mais detalhes sobre como configurar e usar "
+#~ "esse recurso, consulte a documentação :doc:`Contagens de ciclos "
+#~ "<cycle_counts>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "O campo :guilabel:`Último inventário efetivo` exibe a data em que ocorreu "
+#~ "a última contagem de inventário nesse local. Quando as contagens de "
+#~ "inventário programadas estão ativadas, o campo :guilabel:`Próximo "
+#~ "inventário esperado` exibe a data da próxima contagem de inventário."
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "Com as contagens de inventário programadas para ocorrer a cada `30` dias "
+#~ "e a contagem do :guilabel:`Último inventário efetivo` ocorrendo em 16 de "
+#~ "julho, o :guilabel:`Próximo inventário esperado` é 15 de agosto."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "Na seção :guilabel:`Logística` do formulário de locais, selecione "
+#~ "opcionalmente uma :guilabel:`Estratégia de remoção` para determinar a "
+#~ "ordem e a prioridade de como os produtos são retirados do estoque. As "
+#~ "opções são: :guilabel:`Primeiro a entrar, primeiro a sair "
+#~ "(PEPS)`, :guilabel:`Último a entrar, primeiro a sair "
+#~ "(UEPS)`, :guilabel:`Local mais próximo` e :guilabel:`Primeiro a vencer, "
+#~ "primeiro a sair (PVPS)`."
+
+#~ msgid "Current stock at location"
+#~ msgstr "Estoque atual no local"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "Para visualizar o estoque atual em um único local, vá "
+#~ "para :menuselection:`app Inventário --> Configuração --> Locais` e "
+#~ "selecione o local desejado."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "Em seguida, clique no botão inteligente :guilabel:`Estoque atual` para "
+#~ "obter uma lista de todos os produtos no local."
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr ""
+#~ "Uma lista do estoque atual na `Estante 1` consiste em `266` armários e "
+#~ "`39` escrivaninhas."
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "Mostrar estoque da Prateleira 1."
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-09-08 18:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -203,7 +203,7 @@ msgstr "Dashboard Barcode dengan penghitungan yang ditugaskan."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11788,7 +11788,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -19385,11 +19384,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"Setelah lokasi diberi nama dalam urutan abjad, berdasarkan kedekatan mereka "
-"dengan lokasi keluaran atau pengemasan, atur strategi pengambilan "
-"pada :ref:`lokasi induk <inventory/location-hierarchy>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -32635,25 +32631,27 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"*Lokasi* adalah ruang spesifik di dalam gudang. Ini dapat berupa rak, "
-"ruangan, lorong, dll."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"Untuk membuat lokasi penyimpanan tertentu, aktifkan fitur *Lokasi "
-"Penyimpanan* dengan membuka :menuselection:`aplikasi Inventaris --> "
-"Konfigurasi --> Pengaturan`. Di bagian :guilabel:`Gudang`, centang "
-"kotak :guilabel:`Lokasi Penyimpanan`. Kemudian, klik :guilabel:`Simpan`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -32667,61 +32665,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "Tampilkan fitur Lokasi Penyimpanan."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "Buat lokasi baru"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"Setelah mengaktifkan *Lokasi Penyimpanan*, buka :menuselection:`aplikasi "
-"Inventaris --> Konfigurasi --> Lokasi`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "Daftar lokasi internal."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"Pada halaman ini, klik :guilabel:`Baru`. Formulir lokasi baru kemudian dapat "
-"dikonfigurasi sebagai berikut:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`Nama Lokasi`: nama lokasi yang dapat dikenali."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "Bagian Informasi Tambahan dari formulir pembuatan lokasi baru."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-":guilabel:`Lokasi Induk`: lokasi di mana lokasi baru berada. Setelah lokasi "
-"dibuat, lokasi tersebut tercantum di halaman :guilabel:`Lokasi` menggunakan "
-"*hierarki lokasi*, untuk menggambarkan bagaimana lokasi tertentu cocok dalam "
-"area gudang yang lebih besar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"Dalam `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" adalah nama "
-"lokasi, \"Zone A\" adalah lokasi induk, dan semua yang sebelumnya adalah "
-"jalur yang menunjukkan di mana tempat ini berada di dalam gudang."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "Bagian Informasi Tambahan"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -32729,248 +32720,197 @@ msgstr ""
 "Selain bidang wajib di atas, konfigurasikan bidang lokasi berikut untuk "
 "memastikan lokasi melayani tujuan yang dimaksudkan dalam database:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`Location Type`: dari menu drop-down, pilih :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, atau :guilabel:`Transit Location` untuk "
-"mengategorikan lokasi. Untuk detail tentang setiap tipe lokasi, "
-"lihat :ref:`bagian Location Types <inventory/warehouses_storage/location-"
-"type>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`Kategori Penyimpanan`: hanya tersedia dengan fitur :doc:`Kategori "
-"Penyimpanan <../../shipping_receiving/daily_operations/storage_category>` "
-"diaktifkan di :menuselection:`Aplikasi Inventaris --> Konfigurasi --> "
-"Pengaturan`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`Perusahaan`: perusahaan tempat lokasi tersebut berada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`Is a Scrap Location?`: centang kotak ini untuk memungkinkan "
-"barang yang dibuang/rusak disimpan di lokasi ini."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`Is a Return Location?`: centang kotak ini untuk memungkinkan "
-"produk dikembalikan ke lokasi ini."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`Barcode`: digunakan dengan aplikasi *Barcode*, masukkan barcode "
-"untuk :ref:`mengidentifikasi tindakan <barcode/setup/location>` di lokasi "
-"ini saat dipindai."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`Replenish Location`: digunakan untuk :doc:`mengonfigurasi rute "
-"<../../shipping_receiving/daily_operations/use_routes>`, centang kotak ini "
-"untuk menetapkan lokasi sebagai tujuan penerimaan produk dari rute *Buy*, "
-"*Manufacture*, atau rute pengadaan lainnya, memastikan produk dipasok dengan "
-"benar ke gudang."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "Bagian Informasi Tambahan dari formulir pembuatan lokasi baru."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ""
-"Konfigurasikan bidang yang tersisa di bagian :guilabel:`Additional "
-"Information` sebagai berikut:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`Company`: perusahaan yang gudangnya menjadi tempat lokasi ini "
-"berada. Biarkan bidang ini kosong jika lokasi ini dibagikan antar perusahaan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`Barcode`: barcode yang ditetapkan untuk lokasi."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`Replenish Location`: centang kotak ini untuk mendapatkan semua "
-"jumlah yang akan diisi ulang di lokasi ini."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-"Di bagian :guilabel:`Cyclic Counting`, ubah nilai di "
-"bidang :guilabel:`Inventory Frequency (Days)` dari default `0`, jika "
-"diperlukan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "Bagian Penghitungan Siklis dari formulir pembuatan lokasi baru."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"Ketika berbeda dari `0`, tanggal penghitungan inventaris untuk produk yang "
-"disimpan di lokasi ini secara otomatis ditetapkan pada frekuensi yang "
-"ditentukan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-"Di bagian :guilabel:`Logistik`, di bidang :guilabel:`Strategi Pengambilan`, "
-"klik menu drop-down dan pilih :doc:`strategi pengambilan <../../"
-"shipping_receiving/removal_strategies>` untuk bagaimana item harus diambil "
-"dari lokasi ini."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "Bagian Penghitungan Siklis"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"Untuk menjadwalkan perhitungan inventaris rutin di lokasi ini, tetapkan "
-"bidang :guilabel:`Inventory Frequency (Days)` ke interval yang diinginkan. "
-"Secara default, diatur ke `0` (tidak ada perhitungan terjadwal)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"Misalnya, menetapkan bidang ini ke `30`, menjadwalkan perhitungan setiap "
-"tiga puluh hari. Untuk detail lebih lanjut tentang pengaturan dan penggunaan "
-"fitur ini, lihat :doc:`dokumentasi Cycle Counts <cycle_counts>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-"Bidang :guilabel:`Last Effective Inventory` menampilkan tanggal perhitungan "
-"inventaris terakhir di lokasi ini terjadi. Ketika perhitungan inventaris "
-"terjadwal diaktifkan, bidang :guilabel:`Next Expected Inventory` menampilkan "
-"tanggal perhitungan inventaris berikutnya."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"Dengan penghitungan inventaris yang dijadwalkan terjadi setiap `30` hari, "
-"dan penghitungan :guilabel:`Inventaris Efektif Terakhir` terjadi pada 16 "
-"Juli, :guilabel:`Inventaris Berikutnya yang Diharapkan` adalah 15 Agustus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "Tampilkan bagian Penghitungan Siklis dari formulir lokasi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "Bagian Logistik"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"Di bagian :guilabel:`Logistik` pada formulir lokasi, secara opsional "
-"pilih :guilabel:`Strategi Pengambilan` untuk menentukan urutan dan prioritas "
-"bagaimana produk diambil dari inventaris. Pilihannya "
-"adalah: :guilabel:`Masuk Pertama Keluar Pertama (FIFO)`, :guilabel:`Masuk "
-"Terakhir Keluar Pertama (LIFO)`, :guilabel:`Lokasi Terdekat`, "
-"dan :guilabel:`Kedaluwarsa Pertama Keluar Pertama (FEFO)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "Stok saat ini di lokasi"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
 msgstr ""
-"Untuk melihat stok saat ini di satu lokasi, buka :menuselection:`Aplikasi "
-"Inventaris --> Konfigurasi --> Lokasi`, dan pilih lokasi yang diinginkan."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
 msgstr ""
-"Selanjutnya, klik tombol pintar :guilabel:`Stok Saat Ini` untuk mendapatkan "
-"daftar semua produk di lokasi tersebut."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
 msgstr ""
-"Daftar stok saat ini di `Rak 1` terdiri dari `266` kabinet dan `39` meja."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "Tampilkan stok di Rak 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -52091,8 +52031,8 @@ msgid ""
 "calculates suggested replenishment quantities for each product. Enter the "
 "following information:"
 msgstr ""
-"Selanjutnya, tentukan opsi pengisian ulang produk untuk mengonfigurasi cara "
-"|MPS| menghitung jumlah pengisian ulang yang disarankan untuk setiap produk. "
+"Selanjutnya, tentukan opsi pengisian ulang produk untuk mengonfigurasi cara |"
+"MPS| menghitung jumlah pengisian ulang yang disarankan untuk setiap produk. "
 "Masukkan informasi berikut:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:188
@@ -52269,8 +52209,8 @@ msgid ""
 msgstr ""
 "Untuk menghapus produk dari |MPS|, pilih kotak centang di sebelah namanya. "
 "Kemudian, klik tombol :icon:`fa-cog` :guilabel:`Tindakan` di bagian atas "
-"layar, dan pilih :guilabel:`Hapus` dari menu drop-down. Pada jendela pop-up "
-":guilabel:`Konfirmasi`, klik :guilabel:`Ok`."
+"layar, dan pilih :guilabel:`Hapus` dari menu drop-down. Pada jendela pop-"
+"up :guilabel:`Konfirmasi`, klik :guilabel:`Ok`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:268
 msgid "Replenishing products with |MPS|"
@@ -52285,8 +52225,8 @@ msgid ""
 "To replenish every product for the current time period, click "
 "the :guilabel:`Order` button at the top."
 msgstr ""
-"Untuk mengisi ulang semua produk untuk periode waktu saat ini, klik tombol "
-":guilabel:`Pesan` di bagian atas."
+"Untuk mengisi ulang semua produk untuk periode waktu saat ini, klik "
+"tombol :guilabel:`Pesan` di bagian atas."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:274
 msgid ""
@@ -62740,6 +62680,275 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "Setelah lokasi diberi nama dalam urutan abjad, berdasarkan kedekatan "
+#~ "mereka dengan lokasi keluaran atau pengemasan, atur strategi pengambilan "
+#~ "pada :ref:`lokasi induk <inventory/location-hierarchy>`."
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "*Lokasi* adalah ruang spesifik di dalam gudang. Ini dapat berupa rak, "
+#~ "ruangan, lorong, dll."
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Untuk membuat lokasi penyimpanan tertentu, aktifkan fitur *Lokasi "
+#~ "Penyimpanan* dengan membuka :menuselection:`aplikasi Inventaris --> "
+#~ "Konfigurasi --> Pengaturan`. Di bagian :guilabel:`Gudang`, centang "
+#~ "kotak :guilabel:`Lokasi Penyimpanan`. Kemudian, klik :guilabel:`Simpan`."
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "Setelah mengaktifkan *Lokasi Penyimpanan*, buka :menuselection:`aplikasi "
+#~ "Inventaris --> Konfigurasi --> Lokasi`."
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "Pada halaman ini, klik :guilabel:`Baru`. Formulir lokasi baru kemudian "
+#~ "dapat dikonfigurasi sebagai berikut:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`Nama Lokasi`: nama lokasi yang dapat dikenali."
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Lokasi Induk`: lokasi di mana lokasi baru berada. Setelah "
+#~ "lokasi dibuat, lokasi tersebut tercantum di halaman :guilabel:`Lokasi` "
+#~ "menggunakan *hierarki lokasi*, untuk menggambarkan bagaimana lokasi "
+#~ "tertentu cocok dalam area gudang yang lebih besar."
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "Dalam `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" adalah nama "
+#~ "lokasi, \"Zone A\" adalah lokasi induk, dan semua yang sebelumnya adalah "
+#~ "jalur yang menunjukkan di mana tempat ini berada di dalam gudang."
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`Location Type`: dari menu drop-down, pilih :guilabel:`Vendor "
+#~ "Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, atau :guilabel:`Transit Location` untuk "
+#~ "mengategorikan lokasi. Untuk detail tentang setiap tipe lokasi, "
+#~ "lihat :ref:`bagian Location Types <inventory/warehouses_storage/location-"
+#~ "type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`Kategori Penyimpanan`: hanya tersedia dengan "
+#~ "fitur :doc:`Kategori Penyimpanan <../../shipping_receiving/"
+#~ "daily_operations/storage_category>` diaktifkan "
+#~ "di :menuselection:`Aplikasi Inventaris --> Konfigurasi --> Pengaturan`."
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`Perusahaan`: perusahaan tempat lokasi tersebut berada."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`Is a Scrap Location?`: centang kotak ini untuk memungkinkan "
+#~ "barang yang dibuang/rusak disimpan di lokasi ini."
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`Is a Return Location?`: centang kotak ini untuk memungkinkan "
+#~ "produk dikembalikan ke lokasi ini."
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`Barcode`: digunakan dengan aplikasi *Barcode*, masukkan "
+#~ "barcode untuk :ref:`mengidentifikasi tindakan <barcode/setup/location>` "
+#~ "di lokasi ini saat dipindai."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`Replenish Location`: digunakan untuk :doc:`mengonfigurasi rute "
+#~ "<../../shipping_receiving/daily_operations/use_routes>`, centang kotak "
+#~ "ini untuk menetapkan lokasi sebagai tujuan penerimaan produk dari rute "
+#~ "*Buy*, *Manufacture*, atau rute pengadaan lainnya, memastikan produk "
+#~ "dipasok dengan benar ke gudang."
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr ""
+#~ "Konfigurasikan bidang yang tersisa di bagian :guilabel:`Additional "
+#~ "Information` sebagai berikut:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`Company`: perusahaan yang gudangnya menjadi tempat lokasi ini "
+#~ "berada. Biarkan bidang ini kosong jika lokasi ini dibagikan antar "
+#~ "perusahaan."
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`Barcode`: barcode yang ditetapkan untuk lokasi."
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`Replenish Location`: centang kotak ini untuk mendapatkan semua "
+#~ "jumlah yang akan diisi ulang di lokasi ini."
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ "Di bagian :guilabel:`Cyclic Counting`, ubah nilai di "
+#~ "bidang :guilabel:`Inventory Frequency (Days)` dari default `0`, jika "
+#~ "diperlukan."
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "Bagian Penghitungan Siklis dari formulir pembuatan lokasi baru."
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "Ketika berbeda dari `0`, tanggal penghitungan inventaris untuk produk "
+#~ "yang disimpan di lokasi ini secara otomatis ditetapkan pada frekuensi "
+#~ "yang ditentukan."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ "Di bagian :guilabel:`Logistik`, di bidang :guilabel:`Strategi "
+#~ "Pengambilan`, klik menu drop-down dan pilih :doc:`strategi pengambilan "
+#~ "<../../shipping_receiving/removal_strategies>` untuk bagaimana item harus "
+#~ "diambil dari lokasi ini."
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "Untuk menjadwalkan perhitungan inventaris rutin di lokasi ini, tetapkan "
+#~ "bidang :guilabel:`Inventory Frequency (Days)` ke interval yang "
+#~ "diinginkan. Secara default, diatur ke `0` (tidak ada perhitungan "
+#~ "terjadwal)."
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "Misalnya, menetapkan bidang ini ke `30`, menjadwalkan perhitungan setiap "
+#~ "tiga puluh hari. Untuk detail lebih lanjut tentang pengaturan dan "
+#~ "penggunaan fitur ini, lihat :doc:`dokumentasi Cycle Counts "
+#~ "<cycle_counts>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ "Bidang :guilabel:`Last Effective Inventory` menampilkan tanggal "
+#~ "perhitungan inventaris terakhir di lokasi ini terjadi. Ketika perhitungan "
+#~ "inventaris terjadwal diaktifkan, bidang :guilabel:`Next Expected "
+#~ "Inventory` menampilkan tanggal perhitungan inventaris berikutnya."
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "Dengan penghitungan inventaris yang dijadwalkan terjadi setiap `30` hari, "
+#~ "dan penghitungan :guilabel:`Inventaris Efektif Terakhir` terjadi pada 16 "
+#~ "Juli, :guilabel:`Inventaris Berikutnya yang Diharapkan` adalah 15 Agustus."
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "Di bagian :guilabel:`Logistik` pada formulir lokasi, secara opsional "
+#~ "pilih :guilabel:`Strategi Pengambilan` untuk menentukan urutan dan "
+#~ "prioritas bagaimana produk diambil dari inventaris. Pilihannya "
+#~ "adalah: :guilabel:`Masuk Pertama Keluar Pertama (FIFO)`, :guilabel:`Masuk "
+#~ "Terakhir Keluar Pertama (LIFO)`, :guilabel:`Lokasi Terdekat`, "
+#~ "dan :guilabel:`Kedaluwarsa Pertama Keluar Pertama (FEFO)`."
+
+#~ msgid "Current stock at location"
+#~ msgstr "Stok saat ini di lokasi"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "Untuk melihat stok saat ini di satu lokasi, buka :menuselection:`Aplikasi "
+#~ "Inventaris --> Konfigurasi --> Lokasi`, dan pilih lokasi yang diinginkan."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "Selanjutnya, klik tombol pintar :guilabel:`Stok Saat Ini` untuk "
+#~ "mendapatkan daftar semua produk di lokasi tersebut."
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr ""
+#~ "Daftar stok saat ini di `Rak 1` terdiri dari `266` kabinet dan `39` meja."
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "Tampilkan stok di Rak 1."
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "

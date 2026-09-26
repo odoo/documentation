@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 14:29+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -191,7 +191,7 @@ msgstr "असाइन किए गए काउंट के साथ बा
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -11217,7 +11217,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:194
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:178
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -18480,11 +18479,8 @@ msgstr ""
 msgid ""
 "Once the locations are named in alphabetical order, based on their proximity "
 "to the output or packing location, set the removal strategy on "
-"the :ref:`parent location <inventory/location-hierarchy>`."
+"the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
-"एक बार जगहों को आउटपुट या पैकिंग जगह की निकटता के आधार पर वर्णमाला क्रम में नामित किए "
-"जाने के बाद, :ref:`पैरेंट जगह <inventory/location-hierarchy>` पर हटाने की रणनीति "
-"सेट करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -31202,24 +31198,27 @@ msgstr "ऑपरेशन से सभी स्क्रैप ऑर्ड�
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
-"A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc."
+"A *location* is a specific space within a warehouse (e.g., a shelf, room, "
+"aisle, etc.). Each location is categorized by a :ref:`location type "
+"<inventory/warehouses_storage/location-type>`, which determines the behavior "
+"of stock moves and valuation."
 msgstr ""
-"*जगह* वेयरहाउस के भीतर एक विशिष्ट स्थान है। यह एक शेल्फ, रूम, आइल आदि हो सकता है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid ""
+"Users can create custom locations, track products at specific locations, and "
+"manage putaway rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
-"विशिष्ट स्टोरेज जगहें बनाने के लिए, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन --"
-"> सेटिंग` पर जाकर *स्टोरेज लोकेशन* फ़ीचर को सक्षम करें। :guilabel:`वेयरहाउस` सेक्शन "
-"में, :guilabel:`स्टोरेज लोकेशन` चेकबॉक्स पर टिक करें। फिर, :guilabel:`सेव करें` पर क्लिक "
-"करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -31233,60 +31232,54 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "स्टोरेज लोकेशन फ़ीचर दिखाएं।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr "नई जगह बनाएं"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
+"Configuration --> Locations` to open a list of locations."
 msgstr ""
-"*स्टोरेज लोकेशन* सक्षम करने के बाद, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन --"
-"> लोकेशन` पर जाएं।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr "इंटरनल जगहों की सूची।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid ""
-"On this page, click :guilabel:`New`. The new location form can then be "
-"configured as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
-"इस पेज पर, :guilabel:`नया` पर क्लिक करें। नए लोकेशन फ़ॉर्म को फिर निम्नानुसार कॉन्फ़िगर "
-"किया जा सकता है:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ":guilabel:`जगह का नाम`: जगह का पहचानने योग्य नाम।"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Additional Information section of new location creation form."
+msgstr "नई लोकेशन क्रिएशन फ़ॉर्म का अतिरिक्त जानकारी सेक्शन।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ""
-":guilabel:`Parent Location`: the location within which the new location "
-"exists. After the location is created, it is listed on "
-"the :guilabel:`Locations` page using a *location hierarchy*, to describe how "
-"a specific location fits within larger areas of the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
-":guilabel:`पेरेंट लोकेशन`: वह जगह जिसके भीतर नई जगह मौजूद है। जगह बनाने के बाद, "
-"इसे :guilabel:`लोकेशन` पेज पर *लोकेशन हायरार्की* का उपयोग करके सूचीबद्ध किया जाता है, "
-"यह बताने के लिए कि वेयरहाउस के बड़े क्षेत्रों में कोई विशिष्ट जगह कैसे फ़िट होती है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid ""
-"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
-"name, \"Zone A\" is the parent location, and everything before it is the "
-"path showing where this spot is within the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
-"`WH/Stock/Zone A/Refrigerator 1` में, \"Refrigerator 1\" जगह का नाम है, \"Zone "
-"A\" पैरेंट जगह है, और इससे पहले की सभी चीज़ें पाथ है जो दिखाती है कि वेयरहाउस के भीतर यह "
-"स्पॉट कहां है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+":guilabel:`Parent Location`: The new location's parent location, if "
+"applicable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+"In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the "
+"location name, and `Zone A` is the parent location. Both the location and "
+"the parent location are organized hierarchically within `WH/Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
 msgstr "अतिरिक्त जानकारी सेक्शन"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
@@ -31294,235 +31287,197 @@ msgstr ""
 "आवश्यक फ़ील्ड के अलावा, डेटाबेस में लोकेशन का इच्छित उद्देश्य सुनिश्चित करने के लिए निम्नलिखित "
 "लोकेशन फ़ील्ड को कॉन्फ़िगर करें:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
-":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
-"Location`, :guilabel:`View`, :guilabel:`Internal "
-"Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
-"Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize "
-"the location. For details on each location type, refer to the :ref:`Location "
-"Types section <inventory/warehouses_storage/location-type>`."
+":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
+"warehouses_storage/location-type>`."
 msgstr ""
-":guilabel:`जगह टाइप`: ड्रॉप-डाउन मेन्यू से, जगह को वर्गीकृत करने के "
-"लिए :guilabel:`वेंडर जगह`, :guilabel:`देखें`, :guilabel:`इंटर्नल "
-"जगह`, :guilabel:`ग्राहक जगह`, :guilabel:`इन्वेंट्री लॉस`, :guilabel:`प्रॉडक्शन`, "
-"या :guilabel:`ट्रांज़िट जगह` चुनें। प्रत्येक जगह टाइप की जानकारी के लिए, :ref:`जगह "
-"टाइप सेक्शन <inventory/warehouses_storage/location-type>` देखें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ""
-":guilabel:`Storage Category`: only available with the :doc:`Storage "
-"Categories <../../shipping_receiving/daily_operations/storage_category>` "
-"feature enabled in :menuselection:`Inventory app --> Configuration --> "
-"Settings`."
-msgstr ""
-":guilabel:`स्टोरेज कैटेगरी`: सिर्फ़ :menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन --"
-"> सेटिंग` में :doc:`स्टोरेज कैटेगरी <../../shipping_receiving/daily_operations/"
-"storage_category>` फ़ीचर को एनेबल करने पर उपलब्ध है।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ":guilabel:`कंपनी`: वह कंपनी जिससे लोकेशन संबंधित है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
-":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
-"damaged goods to be stored in this location."
+":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature **must** be enabled."
 msgstr ""
-":guilabel:`क्या यह स्क्रैप जगह है?`: स्क्रैप/क्षतिग्रस्त सामान को इस जगह पर स्टोर करने की "
-"अनुमति देने के लिए इस चेकबॉक्स पर टिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
-msgid ""
-":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
-"be returned to this location."
+msgid ":guilabel:`Company`: The company of the location."
 msgstr ""
-":guilabel:`रिटर्न लोकेशन है?`: प्रॉडक्ट को इस जगह पर रिटर्न करने की अनुमति देने के लिए "
-"यह चेकबॉक्स टिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
-":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
-"to :ref:`identify actions <barcode/setup/location>` at this location when "
-"scanned."
+":guilabel:`Is a Scrap Location?`: Select this checkbox to "
+"allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
-":guilabel:`बारकोड`: *बारकोड* ऐप के साथ उपयोग किया जाता है, इस लोकेशन पर स्कैन करने "
-"पर :ref:`एक्शन की पहचान करने <barcode/setup/location>` के लिए बारकोड दर्ज करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
-":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
-"shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
-"the location as a destination for receiving products from *Buy*, "
-"*Manufacture*, or other procurement routes, ensuring products are correctly "
-"supplied to the warehouse."
+":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if "
+"using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
+"batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
-":guilabel:`रीप्लेनिश लोकेशन`: :doc:`रूट कॉन्फ़िगर करने <../../shipping_receiving/"
-"daily_operations/use_routes>` के लिए इस्तेमाल होता है, वेयरहाउस में प्रॉडक्ट की सही "
-"सप्लाई सुनिश्चित करते हुए, *बाय*, *मैन्युफ़ैक्चर*, या अन्य प्रोक्युरमन्ट रूट से प्रॉडक्ट रिसीव "
-"करने के लिए जगह को डेस्टिनेशन के रूप में सेट करने हेतु यह चेकबॉक्स टिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Additional Information section of new location creation form."
-msgstr "नई लोकेशन क्रिएशन फ़ॉर्म का अतिरिक्त जानकारी सेक्शन।"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ""
+":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/"
+"setup/location>` at this location when scanned. The **Barcode** app **must** "
+"be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
+msgid ""
+":guilabel:`Replenish Location`: Select this checkbox to set the location as "
+"a destination for receiving products from *Buy*, *Manufacture*, or "
+"other :doc:`configured routes <../../shipping_receiving/daily_operations/"
+"use_routes>`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
-msgid ""
-"Configure the remaining fields in the :guilabel:`Additional Information` "
-"section as follows:"
-msgstr ":guilabel:`अतिरिक्त जानकारी` सेक्शन में बाकी फ़ील्ड को इस तरह कॉन्फ़िगर करें:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
-msgid ""
-":guilabel:`Company`: the company whose warehouse the location is inside of. "
-"Leave this field blank if this location is shared between companies."
-msgstr ""
-":guilabel:`कंपनी`: वह कंपनी जिसके वेयरहाउस के अंदर यह जगह है। अगर यह जगह कंपनियों के "
-"बीच साझा है तो इस फ़ील्ड को खाली छोड़ दें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
-msgid ":guilabel:`Barcode`: the barcode assigned to the location."
-msgstr ":guilabel:`बारकोड`: जगह को असाइन किया गया बारकोड।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
-msgid ""
-":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
-"replenish at this location."
-msgstr ""
-":guilabel:`रीप्लेनिश लोकेशन`: इस जगह पर रीप्लेनिश करने के लिए सभी क्वांटिटी प्राप्त करने "
-"हेतु यह चेकबॉक्स टिक करें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
-msgid ""
-"In the :guilabel:`Cyclic Counting` section, change the value in "
-"the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
-"necessary."
-msgstr ""
-":guilabel:`साइक्लिक काउंटिंग` सेक्शन में, ज़रूरत हो तो :guilabel:`इन्वेंट्री फ़्रीक्वेंसी "
-"(दिन)` फ़ील्ड में डिफ़ॉल्ट `0` से वैल्यू बदलें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
-msgstr "नई लोकेशन क्रिएशन फ़ॉर्म का साइक्लिक काउंटिंग सेक्शन।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid ""
-"When different than `0`, the inventory count dates for products stored at "
-"this location are automatically set at the defined frequency."
-msgstr ""
-"जब `0` से अलग हो, तो इस लोकेशन पर स्टोर किए गए प्रॉडक्ट के लिए इन्वेंट्री काउंट की "
-"तारीखें ऑटोमैटिकली निर्धारित फ़्रीक्वेंसी पर सेट हो जाती हैं।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
-msgid ""
-"In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
-"field, click the drop-down menu and select the :doc:`removal strategy <../../"
-"shipping_receiving/removal_strategies>` for how items should be removed from "
-"this location."
-msgstr ""
-":guilabel:`लॉजिस्टिक्स` सेक्शन में, :guilabel:`रिमूवल स्ट्रेटेजी` फ़ील्ड में, ड्रॉप-डाउन मेन्यू "
-"को क्लिक करें और इस लोकेशन से आइटम कैसे हटाए जाने चाहिए, इसके लिए :doc:`रिमूवल स्ट्रेटेजी "
-"<../../shipping_receiving/removal_strategies>` को चुनें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "साइक्लिक काउंटिंग सेक्शन"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "To schedule regular inventory counts at this location, set "
-"the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
-"default, it is set to `0` (no scheduled counts)."
+"the :guilabel:`Inventory Frequency` field to the desired interval between "
+"inventory counts, in days. By default, it is set to `0` (no scheduled "
+"counts)."
 msgstr ""
-"इस जगह पर रेगुलर इन्वेंट्री काउंट शेड्यूल करने के लिए, :guilabel:`इन्वेंट्री फ़्रीक्वेंसी (दिन)` "
-"फ़ील्ड को इच्छित इंटरवल पर सेट करें। डिफ़ॉल्ट रूप से, यह `0` (कोई शेड्यूल काउंट नहीं) पर सेट "
-"है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
-"For example, setting this field to `30`, schedules a count every thirty "
-"days. For more specifics on setting up and using this feature, refer to "
-"the :doc:`Cycle Counts documentation <cycle_counts>`."
+"The :guilabel:`Last Inventory` field displays the date of the last inventory "
+"count at this location."
 msgstr ""
-"उदाहरण के लिए, इस फ़ील्ड को `30` पर सेट करने से हर तीस दिन में काउंट शेड्यूल होता है। इस "
-"फ़ीचर को सेट अप करने और इस्तेमाल करने के बारे में ज़्यादा जानकारी के लिए, :doc:`साइकल "
-"काउंट्स दस्तावेज़ <cycle_counts>` देखें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
-"The :guilabel:`Last Effective Inventory` field displays the date the last "
-"inventory count at this location occurred. When scheduled inventory counts "
-"are enabled, the :guilabel:`Next Expected Inventory` field displays the date "
-"of the next inventory count."
+"After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
+"Expected` field automatically displays the date of the next inventory count."
 msgstr ""
-":guilabel:`लास्ट इफ़ेक्टिव इन्वेंट्री` फ़ील्ड उस तारीख को दिखाता है जब इस जगह पर आखिरी "
-"इन्वेंट्री काउंट हुआ था। जब शेड्यूल इन्वेंट्री काउंट इनेबल होते हैं, तो :guilabel:`नेक्स्ट "
-"एक्सपेक्टेड इन्वेंट्री` फ़ील्ड अगले इन्वेंट्री काउंट की तारीख दिखाता है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
-"With inventory counts scheduled to occur every `30` days, and "
-"the :guilabel:`Last Effective Inventory` count occurring on July 16, "
-"the :guilabel:`Next Expected Inventory` is August 15."
+"With inventory counts scheduled to occur every `30` days, "
+"the :guilabel:`Last Inventory` count occurred on September 24, and "
+"the :guilabel:`Next Expected` is October 24."
 msgstr ""
-"हर `30` दिन में होने वाले इन्वेंट्री काउंट के शेड्यूल के साथ, और :guilabel:`लास्ट इफ़ेक्टिव "
-"इन्वेंट्री` काउंट 16 जुलाई को होने के कारण, :guilabel:`नेक्स्ट एक्सपेक्टेड इन्वेंट्री` 15 अगस्त "
-"है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr "लोकेशन फ़ॉर्म के साइक्लिक काउंट सेक्शन को दिखाएं।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
 msgstr "लॉजिस्टिक्स सेक्शन"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
 msgid ""
-"In the :guilabel:`Logistics` section of the locations form, optionally "
-"select a :guilabel:`Removal Strategy` to determine the order and priority of "
-"how products are picked from inventory. The options are: :guilabel:`First In "
-"First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest "
-"Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+"Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal "
+"strategy <../../shipping_receiving/removal_strategies>` to specify the order "
+"and priority for picking products from inventory. The options are:"
 msgstr ""
-"लोकेशन फ़ॉर्म के :guilabel:`लॉजिस्टिक्स` सेक्शन में, इन्वेंट्री से प्रॉडक्ट पिक किए जाने के "
-"ऑर्डर और प्राथमिकता निर्धारित करने के लिए वैकल्पिक रूप से :guilabel:`रिमूवल स्ट्रैटजी` "
-"चुनें। विकल्प हैं: :guilabel:`फ़र्स्ट इन फ़र्स्ट आउट (FIFO)`, :guilabel:`लास्ट इन फ़र्स्ट "
-"आउट (LIFO)`, :guilabel:`क्लोसेस्ट लोकेशन`, और :guilabel:`फ़र्स्ट एक्सपायरी फ़र्स्ट आउट "
-"(FEFO)`।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
-msgid "Current stock at location"
-msgstr "लोकेशन पर मौजूदा स्टॉक"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
-msgid ""
-"To view the current stock at a single location, go "
-"to :menuselection:`Inventory app --> Configuration --> Locations`, and "
-"select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
+msgid ":guilabel:`First In First Out (FIFO)`"
 msgstr ""
-"एक लोकेशन पर मौजूदा स्टॉक देखने के लिए, :menuselection:`इन्वेंट्री ऐप --> कॉन्फ़िगरेशन --"
-"> लोकेशन` पर जाएं, और इच्छित लोकेशन को चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
-msgid ""
-"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
-"products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid ":guilabel:`Last In First Out (LIFO)`"
 msgstr ""
-"अगला, जगह पर सभी प्रॉडक्ट की लिस्ट प्राप्त करने के लिए :guilabel:`करंट स्टॉक` स्मार्ट "
-"बटन को क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
-"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
-"desks."
-msgstr "`शेल्फ़ 1` पर करंट स्टॉक की लिस्ट में `266` कैबिनेट और `39` डेस्क हैं।"
+"The :guilabel:`Least Packages` option is only selectable if "
+"the :doc:`Packages feature <../../product_management/configure/package>` is "
+"enabled."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
-msgstr "शेल्फ़ 1 पर स्टॉक दिखाएं।"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
+msgid ""
+"See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
+"details about each option listed in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+msgid "Manage additional options at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
+msgid ""
+"Users can also access lists of products, current stock, and putaway rules by "
+"location. To do so, open the location's form by navigating "
+"to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"selecting the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
+msgid ""
+"In the location form, access each of these options by selecting its "
+"corresponding smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+msgid ""
+"To view the current stock at the location, click the :icon:`fa-"
+"cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
+"products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
+msgid ""
+"By default, current stock information is grouped by product. "
+"Additional :doc:`filters and grouping <../../../../essentials/search>` "
+"options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
+msgid ""
+"To view all products at the location, click the :icon:`fa-th-"
+"list` :guilabel:`Products` smart button. By default, this opens a list of "
+"all available products or products with outstanding demand. Additional "
+"filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
+msgid ""
+"To view all putaway rules of the location, click the :icon:`fa-"
+"random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway "
+"Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
+"can view, edit, or create additional rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -59817,6 +59772,258 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Once the locations are named in alphabetical order, based on their "
+#~ "proximity to the output or packing location, set the removal strategy on "
+#~ "the :ref:`parent location <inventory/location-hierarchy>`."
+#~ msgstr ""
+#~ "एक बार जगहों को आउटपुट या पैकिंग जगह की निकटता के आधार पर वर्णमाला क्रम में नामित "
+#~ "किए जाने के बाद, :ref:`पैरेंट जगह <inventory/location-hierarchy>` पर हटाने की "
+#~ "रणनीति सेट करें।"
+
+#~ msgid ""
+#~ "A *location* is a specific space within a warehouse. This can be a shelf, "
+#~ "room, aisle, etc."
+#~ msgstr ""
+#~ "*जगह* वेयरहाउस के भीतर एक विशिष्ट स्थान है। यह एक शेल्फ, रूम, आइल आदि हो सकता है।"
+
+#~ msgid ""
+#~ "To create specific storage locations, enable the *Storage Locations* "
+#~ "feature by going to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`. In the :guilabel:`Warehouses` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "विशिष्ट स्टोरेज जगहें बनाने के लिए, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन "
+#~ "--> सेटिंग` पर जाकर *स्टोरेज लोकेशन* फ़ीचर को सक्षम करें। :guilabel:`वेयरहाउस` सेक्शन "
+#~ "में, :guilabel:`स्टोरेज लोकेशन` चेकबॉक्स पर टिक करें। फिर, :guilabel:`सेव करें` पर "
+#~ "क्लिक करें।"
+
+#~ msgid ""
+#~ "After enabling *Storage Locations*, go to :menuselection:`Inventory app --"
+#~ "> Configuration --> Locations`."
+#~ msgstr ""
+#~ "*स्टोरेज लोकेशन* सक्षम करने के बाद, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> "
+#~ "कॉन्फ़िगरेशन --> लोकेशन` पर जाएं।"
+
+#~ msgid ""
+#~ "On this page, click :guilabel:`New`. The new location form can then be "
+#~ "configured as follows:"
+#~ msgstr ""
+#~ "इस पेज पर, :guilabel:`नया` पर क्लिक करें। नए लोकेशन फ़ॉर्म को फिर निम्नानुसार "
+#~ "कॉन्फ़िगर किया जा सकता है:"
+
+#~ msgid ":guilabel:`Location Name`: recognizable name of the location."
+#~ msgstr ":guilabel:`जगह का नाम`: जगह का पहचानने योग्य नाम।"
+
+#~ msgid ""
+#~ ":guilabel:`Parent Location`: the location within which the new location "
+#~ "exists. After the location is created, it is listed on "
+#~ "the :guilabel:`Locations` page using a *location hierarchy*, to describe "
+#~ "how a specific location fits within larger areas of the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`पेरेंट लोकेशन`: वह जगह जिसके भीतर नई जगह मौजूद है। जगह बनाने के बाद, "
+#~ "इसे :guilabel:`लोकेशन` पेज पर *लोकेशन हायरार्की* का उपयोग करके सूचीबद्ध किया जाता "
+#~ "है, यह बताने के लिए कि वेयरहाउस के बड़े क्षेत्रों में कोई विशिष्ट जगह कैसे फ़िट होती है।"
+
+#~ msgid ""
+#~ "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+#~ "name, \"Zone A\" is the parent location, and everything before it is the "
+#~ "path showing where this spot is within the warehouse."
+#~ msgstr ""
+#~ "`WH/Stock/Zone A/Refrigerator 1` में, \"Refrigerator 1\" जगह का नाम है, "
+#~ "\"Zone A\" पैरेंट जगह है, और इससे पहले की सभी चीज़ें पाथ है जो दिखाती है कि वेयरहाउस "
+#~ "के भीतर यह स्पॉट कहां है।"
+
+#~ msgid ""
+#~ ":guilabel:`Location Type`: from the drop-down menu, "
+#~ "choose :guilabel:`Vendor Location`, :guilabel:`View`, :guilabel:`Internal "
+#~ "Location`, :guilabel:`Customer Location`, :guilabel:`Inventory "
+#~ "Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to "
+#~ "categorize the location. For details on each location type, refer to "
+#~ "the :ref:`Location Types section <inventory/warehouses_storage/location-"
+#~ "type>`."
+#~ msgstr ""
+#~ ":guilabel:`जगह टाइप`: ड्रॉप-डाउन मेन्यू से, जगह को वर्गीकृत करने के "
+#~ "लिए :guilabel:`वेंडर जगह`, :guilabel:`देखें`, :guilabel:`इंटर्नल "
+#~ "जगह`, :guilabel:`ग्राहक जगह`, :guilabel:`इन्वेंट्री लॉस`, :guilabel:`प्रॉडक्शन`, "
+#~ "या :guilabel:`ट्रांज़िट जगह` चुनें। प्रत्येक जगह टाइप की जानकारी के लिए, :ref:`जगह "
+#~ "टाइप सेक्शन <inventory/warehouses_storage/location-type>` देखें।"
+
+#~ msgid ""
+#~ ":guilabel:`Storage Category`: only available with the :doc:`Storage "
+#~ "Categories <../../shipping_receiving/daily_operations/storage_category>` "
+#~ "feature enabled in :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`."
+#~ msgstr ""
+#~ ":guilabel:`स्टोरेज कैटेगरी`: सिर्फ़ :menuselection:`इन्वेंट्री ऐप्लिकेशन --> "
+#~ "कॉन्फ़िगरेशन --> सेटिंग` में :doc:`स्टोरेज कैटेगरी <../../shipping_receiving/"
+#~ "daily_operations/storage_category>` फ़ीचर को एनेबल करने पर उपलब्ध है।"
+
+#~ msgid ":guilabel:`Company`: the company the location belongs to."
+#~ msgstr ":guilabel:`कंपनी`: वह कंपनी जिससे लोकेशन संबंधित है।"
+
+#~ msgid ""
+#~ ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+#~ "scrapped/damaged goods to be stored in this location."
+#~ msgstr ""
+#~ ":guilabel:`क्या यह स्क्रैप जगह है?`: स्क्रैप/क्षतिग्रस्त सामान को इस जगह पर स्टोर करने "
+#~ "की अनुमति देने के लिए इस चेकबॉक्स पर टिक करें।"
+
+#~ msgid ""
+#~ ":guilabel:`Is a Return Location?`: tick this checkbox to allow products "
+#~ "to be returned to this location."
+#~ msgstr ""
+#~ ":guilabel:`रिटर्न लोकेशन है?`: प्रॉडक्ट को इस जगह पर रिटर्न करने की अनुमति देने के "
+#~ "लिए यह चेकबॉक्स टिक करें।"
+
+#~ msgid ""
+#~ ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
+#~ "to :ref:`identify actions <barcode/setup/location>` at this location when "
+#~ "scanned."
+#~ msgstr ""
+#~ ":guilabel:`बारकोड`: *बारकोड* ऐप के साथ उपयोग किया जाता है, इस लोकेशन पर स्कैन "
+#~ "करने पर :ref:`एक्शन की पहचान करने <barcode/setup/location>` के लिए बारकोड दर्ज "
+#~ "करें।"
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
+#~ "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to "
+#~ "set the location as a destination for receiving products from *Buy*, "
+#~ "*Manufacture*, or other procurement routes, ensuring products are "
+#~ "correctly supplied to the warehouse."
+#~ msgstr ""
+#~ ":guilabel:`रीप्लेनिश लोकेशन`: :doc:`रूट कॉन्फ़िगर करने <../../shipping_receiving/"
+#~ "daily_operations/use_routes>` के लिए इस्तेमाल होता है, वेयरहाउस में प्रॉडक्ट की "
+#~ "सही सप्लाई सुनिश्चित करते हुए, *बाय*, *मैन्युफ़ैक्चर*, या अन्य प्रोक्युरमन्ट रूट से प्रॉडक्ट "
+#~ "रिसीव करने के लिए जगह को डेस्टिनेशन के रूप में सेट करने हेतु यह चेकबॉक्स टिक करें।"
+
+#~ msgid ""
+#~ "Configure the remaining fields in the :guilabel:`Additional Information` "
+#~ "section as follows:"
+#~ msgstr ":guilabel:`अतिरिक्त जानकारी` सेक्शन में बाकी फ़ील्ड को इस तरह कॉन्फ़िगर करें:"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: the company whose warehouse the location is inside "
+#~ "of. Leave this field blank if this location is shared between companies."
+#~ msgstr ""
+#~ ":guilabel:`कंपनी`: वह कंपनी जिसके वेयरहाउस के अंदर यह जगह है। अगर यह जगह कंपनियों "
+#~ "के बीच साझा है तो इस फ़ील्ड को खाली छोड़ दें।"
+
+#~ msgid ":guilabel:`Barcode`: the barcode assigned to the location."
+#~ msgstr ":guilabel:`बारकोड`: जगह को असाइन किया गया बारकोड।"
+
+#~ msgid ""
+#~ ":guilabel:`Replenish Location`: tick this checkbox to get all quantities "
+#~ "to replenish at this location."
+#~ msgstr ""
+#~ ":guilabel:`रीप्लेनिश लोकेशन`: इस जगह पर रीप्लेनिश करने के लिए सभी क्वांटिटी प्राप्त "
+#~ "करने हेतु यह चेकबॉक्स टिक करें।"
+
+#~ msgid ""
+#~ "In the :guilabel:`Cyclic Counting` section, change the value in "
+#~ "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
+#~ "necessary."
+#~ msgstr ""
+#~ ":guilabel:`साइक्लिक काउंटिंग` सेक्शन में, ज़रूरत हो तो :guilabel:`इन्वेंट्री फ़्रीक्वेंसी "
+#~ "(दिन)` फ़ील्ड में डिफ़ॉल्ट `0` से वैल्यू बदलें।"
+
+#~ msgid "Cyclic Counting section of new location creation form."
+#~ msgstr "नई लोकेशन क्रिएशन फ़ॉर्म का साइक्लिक काउंटिंग सेक्शन।"
+
+#~ msgid ""
+#~ "When different than `0`, the inventory count dates for products stored at "
+#~ "this location are automatically set at the defined frequency."
+#~ msgstr ""
+#~ "जब `0` से अलग हो, तो इस लोकेशन पर स्टोर किए गए प्रॉडक्ट के लिए इन्वेंट्री काउंट की "
+#~ "तारीखें ऑटोमैटिकली निर्धारित फ़्रीक्वेंसी पर सेट हो जाती हैं।"
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
+#~ "field, click the drop-down menu and select the :doc:`removal strategy "
+#~ "<../../shipping_receiving/removal_strategies>` for how items should be "
+#~ "removed from this location."
+#~ msgstr ""
+#~ ":guilabel:`लॉजिस्टिक्स` सेक्शन में, :guilabel:`रिमूवल स्ट्रेटेजी` फ़ील्ड में, ड्रॉप-डाउन "
+#~ "मेन्यू को क्लिक करें और इस लोकेशन से आइटम कैसे हटाए जाने चाहिए, इसके लिए :doc:`रिमूवल "
+#~ "स्ट्रेटेजी <../../shipping_receiving/removal_strategies>` को चुनें।"
+
+#~ msgid ""
+#~ "To schedule regular inventory counts at this location, set "
+#~ "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. "
+#~ "By default, it is set to `0` (no scheduled counts)."
+#~ msgstr ""
+#~ "इस जगह पर रेगुलर इन्वेंट्री काउंट शेड्यूल करने के लिए, :guilabel:`इन्वेंट्री फ़्रीक्वेंसी "
+#~ "(दिन)` फ़ील्ड को इच्छित इंटरवल पर सेट करें। डिफ़ॉल्ट रूप से, यह `0` (कोई शेड्यूल काउंट "
+#~ "नहीं) पर सेट है।"
+
+#~ msgid ""
+#~ "For example, setting this field to `30`, schedules a count every thirty "
+#~ "days. For more specifics on setting up and using this feature, refer to "
+#~ "the :doc:`Cycle Counts documentation <cycle_counts>`."
+#~ msgstr ""
+#~ "उदाहरण के लिए, इस फ़ील्ड को `30` पर सेट करने से हर तीस दिन में काउंट शेड्यूल होता है। "
+#~ "इस फ़ीचर को सेट अप करने और इस्तेमाल करने के बारे में ज़्यादा जानकारी के "
+#~ "लिए, :doc:`साइकल काउंट्स दस्तावेज़ <cycle_counts>` देखें।"
+
+#~ msgid ""
+#~ "The :guilabel:`Last Effective Inventory` field displays the date the last "
+#~ "inventory count at this location occurred. When scheduled inventory "
+#~ "counts are enabled, the :guilabel:`Next Expected Inventory` field "
+#~ "displays the date of the next inventory count."
+#~ msgstr ""
+#~ ":guilabel:`लास्ट इफ़ेक्टिव इन्वेंट्री` फ़ील्ड उस तारीख को दिखाता है जब इस जगह पर "
+#~ "आखिरी इन्वेंट्री काउंट हुआ था। जब शेड्यूल इन्वेंट्री काउंट इनेबल होते हैं, "
+#~ "तो :guilabel:`नेक्स्ट एक्सपेक्टेड इन्वेंट्री` फ़ील्ड अगले इन्वेंट्री काउंट की तारीख दिखाता है।"
+
+#~ msgid ""
+#~ "With inventory counts scheduled to occur every `30` days, and "
+#~ "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
+#~ "the :guilabel:`Next Expected Inventory` is August 15."
+#~ msgstr ""
+#~ "हर `30` दिन में होने वाले इन्वेंट्री काउंट के शेड्यूल के साथ, और :guilabel:`लास्ट इफ़ेक्टिव "
+#~ "इन्वेंट्री` काउंट 16 जुलाई को होने के कारण, :guilabel:`नेक्स्ट एक्सपेक्टेड इन्वेंट्री` 15 "
+#~ "अगस्त है।"
+
+#~ msgid ""
+#~ "In the :guilabel:`Logistics` section of the locations form, optionally "
+#~ "select a :guilabel:`Removal Strategy` to determine the order and priority "
+#~ "of how products are picked from inventory. The options "
+#~ "are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out "
+#~ "(LIFO)`, :guilabel:`Closest Location`, and :guilabel:`First Expiry First "
+#~ "Out (FEFO)`."
+#~ msgstr ""
+#~ "लोकेशन फ़ॉर्म के :guilabel:`लॉजिस्टिक्स` सेक्शन में, इन्वेंट्री से प्रॉडक्ट पिक किए जाने के "
+#~ "ऑर्डर और प्राथमिकता निर्धारित करने के लिए वैकल्पिक रूप से :guilabel:`रिमूवल स्ट्रैटजी` "
+#~ "चुनें। विकल्प हैं: :guilabel:`फ़र्स्ट इन फ़र्स्ट आउट (FIFO)`, :guilabel:`लास्ट इन फ़र्स्ट "
+#~ "आउट (LIFO)`, :guilabel:`क्लोसेस्ट लोकेशन`, और :guilabel:`फ़र्स्ट एक्सपायरी फ़र्स्ट "
+#~ "आउट (FEFO)`।"
+
+#~ msgid "Current stock at location"
+#~ msgstr "लोकेशन पर मौजूदा स्टॉक"
+
+#~ msgid ""
+#~ "To view the current stock at a single location, go "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
+#~ "select the desired location."
+#~ msgstr ""
+#~ "एक लोकेशन पर मौजूदा स्टॉक देखने के लिए, :menuselection:`इन्वेंट्री ऐप --> कॉन्फ़िगरेशन "
+#~ "--> लोकेशन` पर जाएं, और इच्छित लोकेशन को चुनें।"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Current Stock` smart button to get a list of "
+#~ "all products at the location."
+#~ msgstr ""
+#~ "अगला, जगह पर सभी प्रॉडक्ट की लिस्ट प्राप्त करने के लिए :guilabel:`करंट स्टॉक` "
+#~ "स्मार्ट बटन को क्लिक करें।"
+
+#~ msgid ""
+#~ "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+#~ "desks."
+#~ msgstr "`शेल्फ़ 1` पर करंट स्टॉक की लिस्ट में `266` कैबिनेट और `39` डेस्क हैं।"
+
+#~ msgid "Show stock at Shelf 1."
+#~ msgstr "शेल्फ़ 1 पर स्टॉक दिखाएं।"
 
 #~ msgid ""
 #~ "If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally "
