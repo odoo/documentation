@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,7 +123,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:226
@@ -7020,7 +7020,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:191
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:181
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ""
 
@@ -10755,7 +10754,7 @@ msgid "Set the removal strategy"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:52
-msgid "Once the locations are named in alphabetical order, based on their proximity to the output or packing location, set the removal strategy on the :ref:`parent location <inventory/location-hierarchy>`."
+msgid "Once the locations are named in alphabetical order, based on their proximity to the output or packing location, set the removal strategy on the :ref:`parent location <inventory/use_locations/create-new-locations>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:56
@@ -18173,14 +18172,18 @@ msgid "After products have been scrapped from an operation, a :icon:`oi-arrows-v
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
-msgid "A *location* is a specific space within a warehouse. This can be a shelf, room, aisle, etc."
+msgid "A *location* is a specific space within a warehouse (e.g., a shelf, room, aisle, etc.). Each location is categorized by a :ref:`location type <inventory/warehouses_storage/location-type>`, which determines the behavior of stock moves and valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
-msgid "To create specific storage locations, enable the *Storage Locations* feature by going to :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
+msgid "Users can create custom locations, track products at specific locations, and manage putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
+msgid "To create specific storage locations, enable the *Storage Locations* feature by going to :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section, select the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid "Typically, the :guilabel:`Storage Locations` feature is used with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/use_routes>`, which controls how products move between locations."
 msgstr ""
 
@@ -18188,132 +18191,184 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
 msgid "Create new location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:29
-msgid "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> Configuration --> Locations`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
+msgid "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> Configuration --> Locations` to open a list of locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
-msgid "On this page, click :guilabel:`New`. The new location form can then be configured as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Location Name`: recognizable name of the location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
-msgid ":guilabel:`Parent Location`: the location within which the new location exists. After the location is created, it is listed on the :guilabel:`Locations` page using a *location hierarchy*, to describe how a specific location fits within larger areas of the warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
-msgid "In `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the location name, `Zone A` is the parent location, and everything before it is the path showing where this spot is within the warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
-msgid "Additional Information section"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
-msgid "In addition to the required fields above, configure the following location fields to ensure the location serves its intended purpose in the database:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
-msgid ":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor`, :guilabel:`Virtual`, :guilabel:`Internal`, :guilabel:`Customer`, :guilabel:`Inventory Loss`, :guilabel:`Production`, or :guilabel:`Transit` to categorize the location. For details on each location type, refer to the :ref:`Location Types section <inventory/warehouses_storage/location-type>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
-msgid ":guilabel:`Storage Category`: only available with the :doc:`Storage Categories <../../shipping_receiving/daily_operations/storage_category>` feature enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
-msgid ":guilabel:`Company`: the company the location belongs to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-msgid ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode to :ref:`identify actions <barcode/setup/location>` at this location when scanned."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
-msgid ":guilabel:`Replenishments`: used for :doc:`configuring routes <../../shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set the location as a destination for receiving products from *Buy*, *Manufacture*, or other procurement routes, ensuring products are correctly supplied to the warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "Additional Information section of new location creation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
-msgid "In the :guilabel:`Cyclic Counting` section, change the value in the :guilabel:`Inventory Frequency` field from the default `0`, if necessary."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+msgid "To start, enter the following details:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
-msgid "Cyclic Counting section of new location creation form."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:78
-msgid "When different than `0`, the inventory count dates for products stored at this location are automatically set at the defined frequency."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ":guilabel:`Parent Location`: The new location's parent location, if applicable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
-msgid "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` field, click the drop-down menu and select the :doc:`removal strategy <../../shipping_receiving/removal_strategies>` for how items should be removed from this location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid "In location `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the location name, and `Zone A` is the parent location. Both the location and the parent location are organized hierarchically within `WH/Stock`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
+msgid "Additional Information section"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
+msgid "In addition to the required fields above, configure the following location fields to ensure the location serves its intended purpose in the database:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
+msgid ":guilabel:`Location Type`: From the drop-down menu, select :guilabel:`Vendor`, :guilabel:`Virtual`, :guilabel:`Internal`, :guilabel:`Customer`, :guilabel:`Inventory Loss`, :guilabel:`Production`, or :guilabel:`Transit` to categorize the location. For details on each location type, refer to the :ref:`Location Types section <inventory/warehouses_storage/location-type>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
+msgid ":guilabel:`Storage Category`: Select the storage category. The :doc:`Storage Categories <../../shipping_receiving/daily_operations/storage_category>` feature **must** be enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
+msgid ":guilabel:`Company`: The company of the location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+msgid ":guilabel:`Is a Scrap Location?`: Select this checkbox to allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
+msgid ":guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if using :doc:`batch transfers <../../shipping_receiving/picking_methods/batch>`, select this checkbox to allow batches to be loaded at this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:73
+msgid ":guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/setup/location>` at this location when scanned. The **Barcode** app **must** be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:75
+msgid ":guilabel:`Replenish Location`: Select this checkbox to set the location as a destination for receiving products from *Buy*, *Manufacture*, or other :doc:`configured routes <../../shipping_receiving/daily_operations/use_routes>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:80
 msgid "Cyclic Counting section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:90
-msgid "To schedule regular inventory counts at this location, set the :guilabel:`Inventory Frequency` field to the desired interval. By default, it is set to `0` (no scheduled counts)."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:82
+msgid "To schedule regular inventory counts at this location, set the :guilabel:`Inventory Frequency` field to the desired interval between inventory counts, in days. By default, it is set to `0` (no scheduled counts)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:93
-msgid "For example, setting this field to `30` schedules a count every thirty days. For more specifics on setting up and using this feature, refer to the :doc:`Cycle Counts documentation <cycle_counts>`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
+msgid "The :guilabel:`Last Inventory` field displays the date of the last inventory count at this location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
-msgid "The :guilabel:`Last Inventory` field displays the date the last inventory count at this location occurred. When scheduled inventory counts are enabled, the :guilabel:`Next Expected` field displays the date of the next inventory count."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:88
+msgid "After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next Expected` field automatically displays the date of the next inventory count."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:101
-msgid "With inventory counts scheduled to occur every `30` days, and the :guilabel:`Last Inventory` count occurring on November 13, the :guilabel:`Next Expected` is December 13."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:92
+msgid "With inventory counts scheduled to occur every `30` days, the :guilabel:`Last Inventory` count occurred on September 24, and the :guilabel:`Next Expected` is October 24."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
+msgid ":doc:`Cycle Counts <cycle_counts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:102
 msgid "Logistics section"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:104
+msgid "Optionally, in the :guilabel:`Logistics` section, select a :doc:`removal strategy <../../shipping_receiving/removal_strategies>` to specify the order and priority for picking products from inventory. The options are:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ":guilabel:`First In First Out (FIFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+msgid ":guilabel:`Last In First Out (LIFO)`"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:110
-msgid "In the :guilabel:`Logistics` section of the locations form, optionally select a :guilabel:`Removal Strategy` to determine the order and priority of how products are picked from inventory. The options are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, :guilabel:`Closest Location`, :guilabel:`Least Packages`, and :guilabel:`First Expiry First Out (FEFO)`."
+msgid ":guilabel:`Closest Location`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+msgid ":guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
+msgid ":guilabel:`First Expiry First Out (FEFO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:115
+msgid "The :guilabel:`Least Packages` option is only selectable if the :doc:`Packages feature <../../product_management/configure/package>` is enabled."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
-msgid "Current stock at location"
+msgid "See the :doc:`../../shipping_receiving/removal_strategies` documentation for details about each option listed in this field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:121
-msgid "To view the current stock at a single location, go to :menuselection:`Inventory app --> Configuration --> Locations`, and select the desired location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:123
+msgid "Manage additional options at location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:124
-msgid "Next, click the :guilabel:`Products` smart button to get a list of all products at the location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:125
+msgid "Users can also access lists of products, current stock, and putaway rules by location. To do so, open the location's form by navigating to :menuselection:`Inventory app --> Configuration --> Locations` and selecting the desired location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
-msgid "A list of current stock at `Shelf 2` consists of `90` cable management boxes."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
+msgid "In the location form, access each of these options by selecting its corresponding smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
-msgid "Show stock at Shelf 1."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:134
+msgid "View current stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:136
+msgid "To view the current stock at the location, click the :icon:`fa-cubes` :guilabel:`Current Stock` smart button. This opens a list of all products at the location, including their :guilabel:`On Hand` quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
+msgid "By default, current stock information is grouped by product. Additional :doc:`filters and grouping <../../../../essentials/search>` options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
+msgid "Show stock at Shelf 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:149
+msgid "View products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:151
+msgid "To view all products at the location, click the :icon:`fa-th-list` :guilabel:`Products` smart button. By default, this opens a list of all available products or products with outstanding demand. Additional filters and grouping options can be applied via the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:158
+msgid "View putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:160
+msgid "To view all putaway rules of the location, click the :icon:`fa-random` :guilabel:`Putaway Rules` smart button. This opens the :doc:`Putaway Rules <../../shipping_receiving/daily_operations/putaway>` page, where users can view, edit, or create additional rules."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
@@ -29059,12 +29114,12 @@ msgid "By default, the dashboard displays a line chart overview of the :guilabel
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:27
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:25
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:32
 msgid "Add filters and groups"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:29
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:27
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:34
 msgid "On the top-right, click the :icon:`oi-view-pivot` :guilabel:`(pivot)` icon to switch to pivot view."
 msgstr ""
 
@@ -29073,12 +29128,12 @@ msgid "While the |per| can also be :ref:`viewed <purchase/view-results>` as a :i
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:37
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:29
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:36
 msgid "Remove any default filters from the :guilabel:`Search...` bar. Then, click the |caret| to open the drop-down menu that contains the :guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites` columns."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:42
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:34
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:41
 msgid "Unless otherwise specified, the report displays data from both |RFQs| and |POs|. This can be changed by selecting either :guilabel:`Requests for Quotation` or :guilabel:`Purchase Orders` under the :guilabel:`Filters` column."
 msgstr ""
 
@@ -29099,7 +29154,6 @@ msgid "Next, make a selection under the :guilabel:`Comparison` heading that appe
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:65
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:60
 msgid "While multiple time-based filters can be added at once, only one comparison can be selected at a time."
 msgstr ""
 
@@ -29113,12 +29167,11 @@ msgid "The filter for Q2, comparison for **Previous Period**, and group-by for *
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:77
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:68
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:64
 msgid "Add measures"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:79
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:70
 msgid "After selecting the :guilabel:`Filters`, :guilabel:`Group by`, and :guilabel:`Comparison` settings, click out of the drop-down menu."
 msgstr ""
 
@@ -29159,7 +29212,7 @@ msgid "After selecting all necessary measures, click out of the drop-down menu."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:106
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:85
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:81
 msgid "View results"
 msgstr ""
 
@@ -29184,7 +29237,7 @@ msgid "The |per| is also available in graph view. Click the :icon:`fa-area-chart
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:128
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:107
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:102
 msgid "To save this report as a *favorite*, see :ref:`search/favorites`."
 msgstr ""
 
@@ -29422,59 +29475,59 @@ msgstr ""
 msgid "Always review suggestions critically. Although the *Suggest* feature provides a baseline recommendation, keep in mind that market changes, sales promotions, and upcoming events can all affect actual demand."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:3
-msgid "Vendor costs report"
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:1
+msgid "Explains how to build a vendor costs report from the Purchase app's Purchase Analysis dashboard by switching to pivot view and applying filters, groupings, and measures. This makes it easy to track vendor cost fluctuations over time and identify the most expensive vendors. Results can be viewed as a pivot table, exported to a spreadsheet, or displayed as a graph."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:10
+msgid "Vendor costs report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:17
 msgid "With the *Purchase* application, users can track the fluctuation of vendor costs over time. This allows users to identify the most expensive vendors, and track seasonal changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:14
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:21
 msgid "Create vendor costs reports"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:16
-msgid "To create a vendor costs report, first navigate to :menuselection:`Purchase app --> Reporting --> Purchase` to open the :guilabel:`Purchase Analysis` dashboard. By default, the dashboard displays a line chart overview of the :guilabel:`Untaxed Total` of POs (Purchase Orders) with a :guilabel:`Confirmation Date` for the current month, or of RFQs (Requests for Quotation) with a status of *Draft*, *Sent, or *Cancelled*."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:23
+msgid "To create a vendor costs report, first navigate to :menuselection:`Purchase app --> Reporting --> Purchase` to open the :guilabel:`Purchase Analysis` dashboard. By default, the dashboard displays a line chart overview of the :guilabel:`Untaxed Total` of POs (Purchase Orders) with a :guilabel:`Confirmation Date` for the current month, or of RFQs (Requests for Quotation) with a status of *Draft*, *Sent*, or *Cancelled*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:38
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:45
 msgid "Under the :guilabel:`Filters` column, select a date range to use for comparison. The report can be filtered by either :guilabel:`Order Date` or :guilabel:`Confirmation Date`. Choose one from the list, and click the |caret| to specify the date range, either by month, quarter, or year."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:42
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:49
 msgid "Next, under the :guilabel:`Group by` column, select :guilabel:`Vendor`. Then, select :guilabel:`Product`, which is also located in the :guilabel:`Group By` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:46
-msgid "Selecting :guilabel:`Product` is **not** required for this report. However, it is recommended, as it provides additional insight into the performance of individual vendors. Additional selections can be made under the :guilabel:`Group by` heading as well, including :guilabel:`Product Category`, :guilabel:`Status`, and :guilabel:`Purchase Representative`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:51
-msgid "To ensure the report is generated correctly, make sure that :guilabel:`Vendor` is the **first** selection made under the :guilabel:`Group By` column."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:54
-msgid "Next, make a selection under the :guilabel:`Comparison` heading. These options are only available after the date range is selected under the :guilabel:`Filters` column, and vary based on that range. :guilabel:`Previous Period` adds a comparison to the previous period, such as the last month or quarter. :guilabel:`Previous Year` compares the same time period from the previous year."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:53
+msgid "To ensure the report is generated correctly, make sure that :guilabel:`Vendor` is the **first** selection made under the :guilabel:`Group By` column. Selecting :guilabel:`Product` is **not** required for this report. However, it is recommended, as it provides additional insight into the performance of individual vendors. Additional selections can be made under the :guilabel:`Group by` heading as well, including :guilabel:`Product Category`, :guilabel:`Status`, and :guilabel:`Buyer`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:None
-msgid "The drop-down menu of filters, group by and comparison options for the vendor costs report."
+msgid "The drop-down menu of filters and group by options for the vendor costs report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:73
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:66
+msgid "After selecting the :guilabel:`Filters` and :guilabel:`Group by` settings, click out of the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:69
 msgid "By default, the report displays with the following measures: :guilabel:`Order`, :guilabel:`Total`, :guilabel:`Untaxed Total`, and :guilabel:`Count`. Click :guilabel:`Measures` at the top-left to open the drop-down list of available measures. Click :guilabel:`Average Cost` to add it to the report. Select any additional measures to add to the report, or click on any of the already selected measures to remove them, if desired."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:80
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:76
 msgid "It is recommended to run the report with at least :guilabel:`Average Cost`, :guilabel:`Total`, or :guilabel:`Untaxed Total` selected from the :guilabel:`Measures` list. Additional measures, such as :guilabel:`Days to Receive`, can be added to provide additional insights."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:87
-msgid "After all of the :ref:`filters and measures have been selected <purchase/vender-cost-report-filters>`, the report generates in the pivot view. Click :guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet format within the *Documents* app."
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:83
+msgid "After all of the :ref:`filters and measures have been selected <purchase/vendor_costs_report/filters-groups>`, the report generates in the pivot view. Click :guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet format within the *Documents* app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:93
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:89
 msgid "The :guilabel:`Insert in Spreadsheet` option is only available if the *Documents Spreadsheet* module is installed."
 msgstr ""
 
@@ -29482,7 +29535,7 @@ msgstr ""
 msgid "A sample of a vendor costs report with the measures set as total and average costs."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:101
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:96
 msgid "The vendor costs report is also available in *graph* view. Click the :icon:`fa-area-chart` :guilabel:`(area chart)` icon to change to graph view. Click the corresponding icon at the top of the report to switch to a :icon:`fa-bar-chart` :guilabel:`(bar chart)`, :icon:`fa-line-chart` :guilabel:`(line chart)`, or :icon:`fa-pie-chart` :guilabel:`(pie chart)`."
 msgstr ""
 
