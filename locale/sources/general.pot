@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 20.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,6 +139,7 @@ msgstr ""
 #: ../../content/applications/general/companies.rst:17
 #: ../../content/applications/general/companies.rst:97
 #: ../../content/applications/general/companies/multi_company.rst:33
+#: ../../content/applications/general/companies/multi_company.rst:203
 #: ../../content/applications/general/users/azure.rst:22
 #: ../../content/applications/general/users/google.rst:24
 msgid "Configuration"
@@ -1380,34 +1381,110 @@ msgid ":doc:`../../finance/accounting/get_started/multi_currency`"
 msgstr ""
 
 #: ../../content/applications/general/companies/multi_company.rst:181
-msgid "Use cases"
+msgid "Inter-company clearing"
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:183
+msgid "The **Intercompany clearing** feature automates accounting entries when one company receives a payment for an invoice issued by another company within the same database."
 msgstr ""
 
 #: ../../content/applications/general/companies/multi_company.rst:186
-msgid "Multinational companies"
+msgid "When a payment is processed by a secondary company, Odoo automatically reconciles the customer's open invoice in the issuing company and creates balancing intercompany entries between the two companies. This automation eliminates manual spreadsheet tracking and keeps intercompany accounts balanced in real time."
 msgstr ""
 
-#: ../../content/applications/general/companies/multi_company.rst:188
-msgid "A multinational retail chain operating in the United States and Canada must manage transactions in USD and CAD."
-msgstr ""
-
-#: ../../content/applications/general/companies/multi_company.rst:191
-msgid "Since each country has its own tax laws and regulations, using Odoo's multi-company feature is highly beneficial."
+#: ../../content/applications/general/companies/multi_company.rst:192
+msgid "**Company A** issues a customer invoice for $100."
 msgstr ""
 
 #: ../../content/applications/general/companies/multi_company.rst:194
+msgid "The customer pays via the customer portal belonging to **Company B**."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:196
+msgid "Upon receiving the payment, Odoo:"
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:198
+msgid "Settles the customer receivable in **Companies A and B**."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:199
+msgid "Reclassifies Company A's receivable as a claim against **Company B**."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:200
+msgid "Records Company B's received funds as a payable owed to **Company A**."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:206
+msgid "The :guilabel:`Intercompany Payment - Account` (`account_payment_interco`) module must be :ref:`installed <general/install>`, and the :guilabel:`Inter-Company Transactions` feature must be enabled **in each company** that is involved for the :guilabel:`Intercompany Clearing` fields to appear in the Accounting settings."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:211
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:212
+msgid "Scroll down to the :guilabel:`Default Accounts` section."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:213
+msgid "Under :guilabel:`Intercompany Clearing`, define the following fields for company that is currently active:"
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:216
+msgid ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing transfers."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:217
+msgid ":guilabel:`Account Payable`: The clearing payable account used to record debts owed to other companies within the database."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:219
+msgid ":guilabel:`Account Receivable`: The clearing receivable account used to record claims against other companies within the database."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:222
+msgid "Switch to other companies involved using the company selector in the top right menu and repeat the process for each one."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:226
+msgid "The payment method that is used to register the customer payment must use an :ref:`outstanding receipts account <accounting/journals/outstanding-accounts>` so that a journal entry is created."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:230
+msgid ":ref:`Create <chart-of-account/create>` unique payable and receivable clearing accounts that are separate from the payable and receivable accounts used for general transactions, and enable the :guilabel:`Non Trade` option on these accounts."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:237
+msgid "Use cases"
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:242
+msgid "Multinational companies"
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:244
+msgid "A multinational retail chain operating in the United States and Canada must manage transactions in USD and CAD."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:247
+msgid "Since each country has its own tax laws and regulations, using Odoo's multi-company feature is highly beneficial."
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:250
 msgid "This setup allows for inter-company transactions, which is essential for managing cross-border inventory transfers. It also simplifies the sales process by enabling customers transactions in their local currency."
 msgstr ""
 
-#: ../../content/applications/general/companies/multi_company.rst:201
+#: ../../content/applications/general/companies/multi_company.rst:257
 msgid "Separate processes"
 msgstr ""
 
-#: ../../content/applications/general/companies/multi_company.rst:203
+#: ../../content/applications/general/companies/multi_company.rst:259
 msgid "A small furniture company is launching a new product line that requires separate procurement, inventory, and manufacturing workflows. These new products differ significantly from the existing catalog. To manage this efficiently, the company is considering using the multi-company feature to manage the new line as a separate business entity."
 msgstr ""
 
-#: ../../content/applications/general/companies/multi_company.rst:208
+#: ../../content/applications/general/companies/multi_company.rst:264
 msgid "However, creating a completely new company might add unnecessary complexity to the database. Instead, the company can leverage existing features such as :doc:`analytic accounting <../../finance/accounting/reporting/analytic_accounting>` and multiple warehouses to manage the new product line without complicating overall operations."
 msgstr ""
 
@@ -5025,7 +5102,7 @@ msgid "`Magic Sheet - Odoo Internet of Things [PDF] <https://drive.google.com/fi
 msgstr ""
 
 #: ../../content/applications/general/iot.rst:46
-#: ../../content/applications/general/iot/connect.rst:57
+#: ../../content/applications/general/iot/connect.rst:59
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:23
 #: ../../content/applications/general/iot/iot_box.rst:3
 msgid "IoT box"
@@ -5036,7 +5113,7 @@ msgid "Set up an IoT box."
 msgstr ""
 
 #: ../../content/applications/general/iot.rst:52
-#: ../../content/applications/general/iot/connect.rst:71
+#: ../../content/applications/general/iot/connect.rst:73
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:41
 #: ../../content/applications/general/iot/windows_iot.rst:3
 msgid "Windows virtual IoT"
@@ -5114,7 +5191,7 @@ msgstr ""
 msgid ":doc:`windows_iot`"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:24
+#: ../../content/applications/general/iot/connect.rst:26
 #: ../../content/applications/general/iot/devices/camera.rst:12
 #: ../../content/applications/general/iot/devices/footswitch.rst:14
 #: ../../content/applications/general/iot/devices/printer.rst:16
@@ -5122,196 +5199,196 @@ msgstr ""
 msgid "Connection"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:26
+#: ../../content/applications/general/iot/connect.rst:28
 msgid "To connect the IoT system to an Odoo database, open the IoT app and click :guilabel:`Connect`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:28
+#: ../../content/applications/general/iot/connect.rst:30
 msgid "The browser then scans the network to which the computer is connected for available IoT systems. If an IoT system is detected, it is connected automatically. If multiple IoT systems are found, select the appropriate one in the popup that opens, then click :guilabel:`Connect`. If no IoT system is detected automatically, try connecting it to the database using a :ref:`pairing code <iot/connect/pairing-code>` or a :ref:`connection token <iot/connect/token>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:35
+#: ../../content/applications/general/iot/connect.rst:37
 msgid "The IoT system’s name is composed of either the :doc:`IoT box <iot_box>` or the :doc:`Windows computer <windows_iot>`’s motherboard serial number, followed by its :ref:`pairing code <iot/connect/pairing-code>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:42
+#: ../../content/applications/general/iot/connect.rst:44
 msgid "Connection using a pairing code"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:45
+#: ../../content/applications/general/iot/connect.rst:47
 msgid "The pairing code is valid for up to 2 hours after the IoT system powers on. If the code is no longer valid, restart the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` to display another pairing code. Alternatively, connect the IoT system to the database using a :ref:`connection token <iot/connect/token>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:49
+#: ../../content/applications/general/iot/connect.rst:51
 msgid "The pairing code is not displayed if the IoT system is already connected to a database (e.g., a test database). If necessary, :ref:`disconnect the IoT system from the database <iot/connect/disconnect>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:53
+#: ../../content/applications/general/iot/connect.rst:55
 msgid "Retrieve the IoT system's pairing code:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:59
+#: ../../content/applications/general/iot/connect.rst:61
 msgid "Connect the IoT box to an external monitor or a USB printer. If the IoT box was already plugged prior to this, :ref:`restart it <iot/iot-box/homepage>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:62
+#: ../../content/applications/general/iot/connect.rst:64
 msgid "External monitor: The pairing code will be displayed on the screen after (re)starting the IoT box."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:64
+#: ../../content/applications/general/iot/connect.rst:66
 msgid "USB-connected printer: The pairing code should be printed automatically."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:67
+#: ../../content/applications/general/iot/connect.rst:69
 msgid "If no external monitor or printer is connected to the IoT box, access the :ref:`IoT box's homepage <iot/iot-box/homepage>`; the code is displayed in the :guilabel:`Pairing Code` section."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:73
+#: ../../content/applications/general/iot/connect.rst:75
 msgid "On the computer with the Windows virtual IoT installed, open the IoT system's homepage in a web browser by navigating to the URL `http://localhost:8069`. Then, scroll to the :guilabel:`Pairing Code` section."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:77
-#: ../../content/applications/general/iot/connect.rst:87
+#: ../../content/applications/general/iot/connect.rst:79
+#: ../../content/applications/general/iot/connect.rst:89
 msgid "In Odoo, open the IoT app and click :guilabel:`Connect`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:78
+#: ../../content/applications/general/iot/connect.rst:80
 msgid "In the :guilabel:`Searching for an IoT Box` popup that opens, click :guilabel:`Use Pairing Code`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:79
+#: ../../content/applications/general/iot/connect.rst:81
 msgid "Enter the :guilabel:`Pairing code` and click :guilabel:`Connect`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:84
+#: ../../content/applications/general/iot/connect.rst:86
 msgid "Connection using a connection token"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:86
+#: ../../content/applications/general/iot/connect.rst:88
 msgid ":ref:`Enable the developer mode <developer-mode>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:88
+#: ../../content/applications/general/iot/connect.rst:90
 msgid "In the :guilabel:`Searching for an IoT Box` popup that opens, click :guilabel:`Offline pairing`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:89
+#: ../../content/applications/general/iot/connect.rst:91
 msgid "In the :guilabel:`Pair an IoT Box offline` popup that opens, copy the :guilabel:`Token`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:90
-#: ../../content/applications/general/iot/connect.rst:142
+#: ../../content/applications/general/iot/connect.rst:92
+#: ../../content/applications/general/iot/connect.rst:144
 #: ../../content/applications/general/iot/devices/printer.rst:178
 msgid "Access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:92
+#: ../../content/applications/general/iot/connect.rst:94
 msgid "In the :icon:`fa-link` :guilabel:`Odoo database connected` section, click :guilabel:`Configure`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:93
+#: ../../content/applications/general/iot/connect.rst:95
 msgid "Paste the token into the :guilabel:`Server Token` field and click :guilabel:`Connect`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:96
+#: ../../content/applications/general/iot/connect.rst:98
 msgid "Once the IoT system is connected to a database:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:98
+#: ../../content/applications/general/iot/connect.rst:100
 msgid "If the :doc:`Point of Sale app </applications/sales/point_of_sale>` is installed, a popup appears to select the :doc:`POS the IoT system should be associated with </applications/sales/point_of_sale/hardware_network/pos_iot>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:101
+#: ../../content/applications/general/iot/connect.rst:103
 msgid "If using an :doc:`IoT box <iot_box>`, wait a few minutes for it to update before using the connected :doc:`devices <devices>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:103
+#: ../../content/applications/general/iot/connect.rst:105
 msgid "The IoT system automatically requests an :ref:`HTTPS certificate <iot/connect/https_certificate>` and its homepage is updated to a new HTTPS URL ending with `.odoo-iot.com` when it becomes available."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:108
+#: ../../content/applications/general/iot/connect.rst:110
 #: ../../content/applications/general/iot/iot_box.rst:14
 #: ../../content/applications/general/iot/windows_iot.rst:21
 msgid ":doc:`iot_advanced/troubleshooting`"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:113
+#: ../../content/applications/general/iot/connect.rst:115
 msgid "IoT system form"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:115
+#: ../../content/applications/general/iot/connect.rst:117
 msgid "Once the IoT system is connected to the Odoo database, it is displayed as a card in the IoT app. Click the card to access the IoT system's form, which allows to access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage and view the list of :doc:`devices <devices>` connected to the IoT system."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:121
+#: ../../content/applications/general/iot/connect.rst:123
 msgid "Enable the :ref:`developer mode <developer-mode>` to access the IoT system's :guilabel:`Technical Information`, such as its :guilabel:`Domain Address`, :guilabel:`Image Version`, and :ref:`SSL Certificate <iot/connect/https_certificate>` :guilabel:`End Date`. By default, drivers are automatically updated every time the IoT system is restarted."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:125
+#: ../../content/applications/general/iot/connect.rst:127
 msgid "On the :ref:`IoT system's form <iot/connect/IoT-form>`, click the :guilabel:`Test` button to test the connection between the IoT system and Odoo and assess the quality of the system's Internet connection."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:132
+#: ../../content/applications/general/iot/connect.rst:134
 msgid "Disconnecting an IoT system from a database"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:134
+#: ../../content/applications/general/iot/connect.rst:136
 msgid "To disconnect the IoT system from a database, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:136
+#: ../../content/applications/general/iot/connect.rst:138
 msgid "Open the IoT app and click the relevant IoT system's card."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:137
+#: ../../content/applications/general/iot/connect.rst:139
 msgid "Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and select :guilabel:`Delete`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:140
+#: ../../content/applications/general/iot/connect.rst:142
 msgid "Alternatively:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:144
+#: ../../content/applications/general/iot/connect.rst:146
 msgid "Click :guilabel:`Configure` in the :icon:`fa-link` :guilabel:`Odoo database connected` section."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:146
+#: ../../content/applications/general/iot/connect.rst:148
 msgid "Click :guilabel:`Disconnect` in the popup that opens."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:151
+#: ../../content/applications/general/iot/connect.rst:153
 msgid "HTTPS certificate"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:153
+#: ../../content/applications/general/iot/connect.rst:155
 msgid ":abbr:`HTTPS (Hypertext Transfer Protocol Secure)` is the secure, encrypted version of :abbr:`HTTP (Hypertext Transfer Protocol)`. It uses :abbr:`TLS (Transport Layer Security)` (previously :abbr:`SSL (Secure Sockets Layer)`) certificates to authenticate the server and protect the data exchanged between a browser and a website. Some network devices, such as payment terminals, require a valid HTTPS certificate to communicate with the IoT system; without it, they cannot interact properly."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:161
+#: ../../content/applications/general/iot/connect.rst:163
 msgid "In this documentation and throughout Odoo, the term *HTTPS certificate*  refers to a valid SSL certificate that allows an HTTPS connection."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:164
+#: ../../content/applications/general/iot/connect.rst:166
 msgid "When the IoT system is (re-)started and connected to a database, it automatically downloads the HTTPS certificate if the database meets the following eligibility criteria:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:169
+#: ../../content/applications/general/iot/connect.rst:171
 msgid "The database must be a **production** instance. The database instance should not be a copy, a duplicate, a staging, or a development environment."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:171
+#: ../../content/applications/general/iot/connect.rst:173
 msgid "The Odoo subscription must be ongoing (:guilabel:`In Progress` status)."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:173
+#: ../../content/applications/general/iot/connect.rst:175
 msgid "When the certificate has been received:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:175
+#: ../../content/applications/general/iot/connect.rst:177
 msgid "The IoT system's homepage address is updated to a new HTTPS URL ending with `.odoo-iot.com`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:176
+#: ../../content/applications/general/iot/connect.rst:178
 msgid "The :guilabel:`HTTPS certificate` banner displays the certificate's validity period. To view this information, click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right of the IoT system's homepage."
 msgstr ""
 
@@ -5319,7 +5396,7 @@ msgstr ""
 msgid "IoT box homepage with HTTPS certificate validity date."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:184
+#: ../../content/applications/general/iot/connect.rst:186
 msgid ":ref:`iot/troubleshooting/https_certificate`"
 msgstr ""
 
@@ -6224,64 +6301,60 @@ msgstr ""
 msgid ":doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/hardware_network/pos_iot>`"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:29
+#: ../../content/applications/general/iot/devices/scale.rst:31
 msgid "Ariva S scales"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:31
+#: ../../content/applications/general/iot/devices/scale.rst:33
 msgid "For Ariva S series scales (manufactured by Mettler-Toledo, LLC.) to function with IoT systems, a specific setting must be modified, and a dedicated Mettler USB-to-proprietary RJ45 cable is required."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:35
+#: ../../content/applications/general/iot/devices/scale.rst:37
 msgid "The official Mettler USB-to-RJ45 cable (Mettler part number 72256236) must be used. Contact Mettler or a partner to purchase an authentic cable. **No other** cable works for this configuration."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:39
-msgid "To configure the Ariva S scale for IoT system recognition, refer to page 17 of `Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow these steps:"
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:42
-msgid "Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:43
-msgid "Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm."
+#: ../../content/applications/general/iot/devices/scale.rst:41
+msgid "To configure the Ariva S scale for IoT system recognition, refer to the `Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
 
 #: ../../content/applications/general/iot/devices/scale.rst:44
-msgid "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports) by pressing **>T<** to cycle through the options."
+msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
+msgstr ""
+
+#: ../../content/applications/general/iot/devices/scale.rst:45
+msgid "Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm."
 msgstr ""
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
-msgid "Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next step)."
+msgid "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:47
-msgid "At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO)) by pressing **>T<** to cycle through the options."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:49
-msgid "Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears."
+#: ../../content/applications/general/iot/devices/scale.rst:48
+msgid "Press **>0<** until :guilabel:`3.6` and make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
 
 #: ../../content/applications/general/iot/devices/scale.rst:50
+msgid "Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears."
+msgstr ""
+
+#: ../../content/applications/general/iot/devices/scale.rst:51
 msgid "Press **>T<** until :guilabel:`EXIT` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:53
+#: ../../content/applications/general/iot/devices/scale.rst:54
 msgid "Do **not** make any other changes unless otherwise needed."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:55
+#: ../../content/applications/general/iot/devices/scale.rst:56
 msgid "Press **>0<**."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:56
+#: ../../content/applications/general/iot/devices/scale.rst:57
 msgid "Press **>0<** again to :guilabel:`SAVE`; the scale restarts."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:57
-msgid "Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`. The scale should then appear as `Toledo 8217`."
+#: ../../content/applications/general/iot/devices/scale.rst:58
+msgid "Reboot the :doc:`IoT box <../iot_box>` or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`. The scale should then appear as `Toledo 8217`."
 msgstr ""
 
 #: ../../content/applications/general/iot/devices/screen.rst:3

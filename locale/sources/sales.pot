@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 20.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 17:32+0000\n"
+"POT-Creation-Date: 2026-09-25 17:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:35
 #: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:13
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:32
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:20
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:16
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:39
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
@@ -4350,7 +4350,8 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:147
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:42
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:53
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:35
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:59
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:54
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:80
@@ -5513,6 +5514,8 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:292
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:40
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:31
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:56
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:140
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr ""
@@ -6025,6 +6028,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:22
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:3
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:46
 msgid "IoT system connection"
 msgstr ""
 
@@ -6189,7 +6193,6 @@ msgid "To open the customer display, follow these steps:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:75
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:87
 msgid ":ref:`Access the POS register <pos/use/open-register>`."
 msgstr ""
 
@@ -7340,138 +7343,200 @@ msgid "If the POS cannot connect to the printer, make sure the printer's IP addr
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:6
-msgid "In EU member states, `certification is legally required <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ to use a scale as an integrated device."
+msgid "In EU member states, `certification is legally required <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ for the use of a scale as an integrated device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:11
-msgid "Prerequisite"
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:9
+msgid "The **Mettler Toledo scale (Ariva S)** using protocol 8217 is recommended with Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:13
-msgid "Connecting a scale requires the use of an **IoT System**."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:10
+msgid "To connect the scale to Odoo, :ref:`link it directly via USB <pos/scale/usb-connection>` or :ref:`configure an IoT system <pos/scale/iot-connection>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:16
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:21
+msgid "Scale connection"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:26
+msgid "USB connection"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
+msgid "To connect the scale with Point of Sale via USB, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:30
+msgid "Connect the scale to the device running the Odoo database using a USB cable."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:32
+msgid "Scroll down to the :guilabel:`Connected Devices` section and click the :guilabel:`Connect USB Scale` button under the :guilabel:`USB Scale` setting."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:34
+msgid "Select the relevant scale in the popover, then click :guilabel:`Connect`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:38
+msgid "If you are running Odoo on a Linux device, clicking the :guilabel:`Connect USB Scale` button displays the error message `Your Scale is not compatible with Odoo`, which prevents you from connecting the scale to the database. To enable the connection, open the Linux terminal, type `666/dev/` followed by the scale port number, press `ENTER`, then enter the computer password."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:48
+msgid "To connect the scale with Point of Sale using an :doc:`IoT system </applications/general/iot>`, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:51
+msgid "Turn on the scale before starting the IoT system to ensure it is detected during setup."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:52
+msgid "Connect the :doc:`scale to the IoT system </applications/general/iot/devices/scale>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:53
+msgid "Connect the :ref:`IoT system to Odoo <iot/iot-odoo/connection>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:54
+msgid "In the :guilabel:`Connect to a Point of Sale` popover, set the :guilabel:`Associated PoS` field to the relevant point of sale, then click :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:57
+msgid "Scroll down to the :guilabel:`Connected Devices` section, then select the scale in the :guilabel:`Electronic Scale` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:62
+msgid "For optimal reliability, it is recommended to use a :doc:`physical IoT system </applications/general/iot/iot_box>` rather than a :doc:`virtual one </applications/general/iot/windows_iot>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:67
+msgid "If the scale is not recognized by the IoT system, restart it or :ref:`reconfigure it by following the setup guidelines <iot/scale/ariva-s>`. If the issue persists, restart the IoT system."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:70
+msgid "Alternatively, to connect the IoT system to the POS after it is :ref:`connected to the database <iot/iot-odoo/connection>`, go to the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`Connected Devices` section, and enable the :guilabel:`IoT Box` setting."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:73
+msgid "To enable and configure the :guilabel:`IoT Box` setting, click the :icon:`fa-ellipsis-v` (:guilabel:`Dropdown menu`) icon on a POS card, then click :guilabel:`Configure`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:77
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:433
 msgid ":doc:`/applications/general/iot/connect`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:17
-msgid ":doc:`/applications/general/iot/devices/scale`"
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:78
+msgid ":doc:`Connect a scale to an IoT system </applications/general/iot/devices/scale>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:23
-msgid "Scale connection"
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:79
+msgid "`Odoo Point of Sale: Scales (video) <https://www.youtube.com/watch?v=vGNe-PmulAA>`_"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:25
-msgid ":ref:`Access the POS settings <pos/use/settings>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:26
-msgid "Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`IoT Box`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:27
-msgid "Select the scale in the :guilabel:`Electronic Scale` field."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:31
-msgid "Alternatively, click the :icon:`fa-ellipsis-v` (:guilabel:`Dropdown menu`) icon on a POS card and click :guilabel:`Edit` to access this setting."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:35
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:84
 #: ../../content/applications/sales/point_of_sale/products.rst:88
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:33
 msgid "Product configuration"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:37
-msgid "In order to weigh products using an integrated scale, go to :menuselection:`Point of Sale --> Products --> Products`, create a product or open an existing product form, and configure it as follows:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:41
-msgid "Ensure the :guilabel:`Point of Sale` checkbox is activated for the product to be available in POS."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:43
-msgid "On the :guilabel:`General Information` tab, define a :guilabel:`Sales Price` per :guilabel:`kg`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:46
-msgid "This step requires to enable the :doc:`Units of Measure </applications/inventory_and_mrp/inventory/product_management/configure/uom>` feature. To activate it:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:50
-msgid "Go to :menuselection:`Inventory --> Configuration --> Settings`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:51
-msgid "Scroll down to the :guilabel:`Products` section and activate :guilabel:`Units of Measure`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:52
-msgid "Go to the :guilabel:`Point of Sale` tab and activate :guilabel:`To Weigh With Scale`. This enables the product to be weighed directly on the connected scale at the POS."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:56
-msgid "The selected unit of measure for weighable products must be :guilabel:`kg` to ensure compliance with **European regulations**."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:60
-msgid ":doc:`/applications/inventory_and_mrp/inventory/product_management/configure/uom`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:63
-msgid "European regulations"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:65
-msgid "When using scales in commercial transactions, the database integrated with a scale must be configured to meet specific European requirements. This includes supporting at least three decimal places for accuracy and using proper rounding for units of measure, such as `kg` instead of generic `units`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:70
-msgid "If the database is not compliant, a red :icon:`fa-balance-scale` (:guilabel:`scale`) icon displays as a warning. Click this icon to view the reasons for non-compliance and then select :guilabel:`Apply changes` to automatically apply the necessary changes to the settings. Once the database meets all regulatory requirements, the :icon:`fa-balance-scale` (:guilabel:`scale`) icon turns green."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:79
-msgid "Additional guidelines"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:81
-msgid "Both the :doc:`customer <customer_display>` and POS displays must have a minimum diagonal size of 6 inches. For optimal readability, larger screens are recommended."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:85
-msgid "Using a scale in PoS"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:88
-msgid "Select the product to weigh on the order screen or scan its barcode."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:89
-msgid "Place the product on the scale and wait for the weight to be displayed in the popup window."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:87
+msgid "Ensure the :guilabel:`Point of Sale` checkbox is activated on the product form to be able to enable the :guilabel:`To Weigh With Scale` option and make the product available in Point of Sale."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:90
-msgid "Once the weight is determined, the price is automatically computed."
+msgid "To comply with :ref:`European regulations <pos/scale/eu-regulations>`, the unit of measure for weighable products must be set to `kg`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:91
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:93
+msgid "The following configuration is required to be able to weigh products and display their weight in the :ref:`POS register <pos/use/open-register>`:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:96
+msgid "Go to :menuselection:`Invoicing --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:97
+msgid "Scroll down to the :guilabel:`Units & Packagings` section, enable the :doc:`Units of Measure & Packagings </applications/inventory_and_mrp/inventory/product_management/configure/uom>` setting, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:100
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:209
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:223
+msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:101
+msgid "Click an exisiting product or click :guilabel:`New` to :ref:`create a new one <pos/products/creation>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:103
+msgid "In the :guilabel:`General Information` tab, set the :guilabel:`Sales Price` to the relevant unit of mass."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:105
+msgid "Click the :guilabel:`Point of Sale` tab and enable :guilabel:`To Weigh` to be able to weigh the product directly on the connected scale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:109
+msgid ":doc:`/applications/inventory_and_mrp/inventory/product_management/configure/uom`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:114
+msgid "European regulations"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:116
+msgid "When using scales in commercial transactions, the database to which the scale is connected must be configured to comply with European requirements. This includes supporting at least three decimal places for accuracy and using proper rounding for units of measure, such as `kg` rather than generic `units`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:121
+msgid "If the database is not compliant, a red :icon:`fa-balance-scale` (:guilabel:`scale`) icon displays as a warning. Click this icon to view the reasons for non-compliance and then select :guilabel:`Apply changes` to automatically apply the necessary changes to the settings. Once the database meets all regulatory requirements, the :icon:`fa-balance-scale` (:guilabel:`scale`) icon turns green."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:130
+msgid "Additional guidelines"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:132
+msgid "Both the :doc:`customer <customer_display>` and POS displays must have a minimum diagonal size of 6 inches. For optimal readability, larger screens are recommended."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:138
+msgid "Product weighing"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:140
+msgid "To weigh a product in the :ref:`POS register <pos/use/open-register>` using the :ref:`connected scale <pos/scale/config-connection>`, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:143
+msgid "Select the relevant :ref:`product <pos/scale/config-product>` in the grid. A popover displays the product's name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:145
+msgid "Place the physical product on the scale. Once the weight is determined, the price is automatically computed in the popover."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:147
 msgid "Click :guilabel:`Order` :icon:`fa-angle-double-right` to add the product to the cart."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:92
-msgid "Remove the previous product from the scale."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:148
+msgid "Remove the product from the scale and continue with the order."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:None
 msgid "weighing window"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:99
-msgid "Make sure the scale returns to `zero` before weighing a new product. If it does not, the :guilabel:`Order` :icon:`fa-angle-double-right` button remains unclickable until it is reset."
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:155
+msgid "Make sure the scale returns to zero before weighing a new product. If it does not, the :guilabel:`Order` :icon:`fa-angle-double-right` button remains unclickable until it is reset."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:159
+msgid "Click :guilabel:`Tare` in the popover to reset the scale to zero and subtract the container's weight."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:7
@@ -11897,11 +11962,6 @@ msgstr ""
 msgid "To make products available individually,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:209
-#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:223
-msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:210
 msgid "Select any product to open its product form."
 msgstr ""
@@ -14474,7 +14534,7 @@ msgid "Rental orders"
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:1
-msgid "This page covers creating a rental order in Odoo Rental, from generating a quote and requesting a customer signature to tracking service tasks and timesheets. It also explains finalizing and confirming the invoice for payment."
+msgid "This page covers the rental order workflow in Odoo **Rental**, from creating a quote and requesting a customer signature to tracking service time and finalizing the invoice for payment."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:10
@@ -14482,7 +14542,7 @@ msgid "In Odoo **Rental**, quotations are created and sent to customers, similar
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:15
-msgid "To configure quotation settings, the **Sales** app **must** be installed. Refer to :ref:`sales/create_quotations/configuration` for detailed instructions."
+msgid "To configure quotation settings, the **Sales** app **must** be installed. Refer to :ref:`sales/create_quotations/quotation-settings` for detailed instructions."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:19
@@ -14546,11 +14606,11 @@ msgid "Requesting a signature can be done during any stage of the order. This fe
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:70
-msgid "If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders` dashboard, select the desired rental order. Go to the :icon:`fa-cog` :guilabel:`(Actions)` icon, and click :icon:`fa-file-text` :guilabel:`Request Signature`."
+msgid "If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders` dashboard, select the desired rental order, then in the chatter section click :guilabel:`Activity`. In the *Schedule Activity* pop-up window, click :guilabel:`Request Signature`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:74
-msgid "In the *Sign Documents* pop-up window, either :ref:`select an existing document template <sign/request-signatures/template-odoo-record>` or :ref:`create a new one <sign/request-signatures/one-off-record>`. After sending the request, a link to the signature request appears in the record's chatter. The document is accessible to the customer via the customer portal or email."
+msgid "In the *Schedule Activity* pop-up window, either :ref:`select an existing document template <sign/request-signatures/template-odoo-record>` or :ref:`upload a new one <sign/request-signatures/one-off-record>`. After sending the request, a link to the signature request appears in the record's chatter. The document is accessible to the customer via the customer portal or email."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:81
@@ -14570,7 +14630,7 @@ msgid "Click the :icon:`fa-tasks` :guilabel:`Planned` smart button to open the *
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:97
-msgid "Project templates allow for automated task assignment. When integrated with the **Planning** app, the system automatically schedules and publishes an employee’s shift if their availability matches the rental period. Priority is given to employees with the relevant :ref:`roles <planning/planning-roles>` if applicable."
+msgid "Project templates allow for automated task assignment. When integrated with the **Planning** app, the system automatically schedules and publishes an employee's shift if their availability matches the rental period. Priority is given to employees with the relevant :ref:`roles <planning/planning-roles>` if applicable."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:None
@@ -14662,7 +14722,7 @@ msgid "Confirm and pay"
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:171
-msgid "If all the details are correct on the invoice draft, either click :guilabel:`Confirm` and click :guilabel:`Send` to email the invoice to the customer, or  click :guilabel:`Print` and then click :guilabel:`Pay` if the customer is in person. In the :guilabel:`Pay` pop-up window, select a :guilabel:`Journal` and click :guilabel:`Create Payment`."
+msgid "If all the details are correct on the invoice draft, either click :guilabel:`Confirm` and click :guilabel:`Send` to email the invoice to the customer, or click :guilabel:`Print` and then click :guilabel:`Pay` if the customer is in person. In the :guilabel:`Pay` pop-up window, select a :guilabel:`Journal` and click :guilabel:`Create Payment`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/create_rental_order.rst:176
@@ -14795,7 +14855,7 @@ msgid "Using quotation templates helps tailor the product list to the customer w
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:112
-msgid ":ref:`Create a quotation template <sales_quotations/quote_template/create-templates>` that includes both the rental product and the rental product deposit, and save the template. Next, create a :doc:`create_rental_order`. Select the desired template in the :guilabel:`Quotation Template` field."
+msgid ":ref:`Create a quotation template <sales/quote_template/create_templates>` that includes both the rental product and the rental product deposit, and save the template. Next, create a :doc:`create_rental_order`. Select the desired template in the :guilabel:`Quotation Template` field."
 msgstr ""
 
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:117
@@ -20459,19 +20519,15 @@ msgstr ""
 msgid "To activate any of these settings, click the checkbox beside the desired options. Then, click :guilabel:`Save`. The values set in the :guilabel:`Online Signature`, :guilabel:`Online Payment`, :guilabel:`Default Quotation Validity`, and :guilabel:`Display Product Images` fields are company-specific. In a multi-company database, these must be set for each individual company."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:45
-msgid "The exact options available in this section may vary based on the apps and modules currently installed in the database."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:51
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:47
 msgid "Quotations dashboard"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:49
 msgid "The *Quotations* dashboard is the page that appears when the :menuselection:`Sales app` is opened."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:55
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:51
 msgid "By default, the :guilabel:`Quotations` dashboard displays all quotations in the database related to the current user, as indicated by the default :guilabel:`My Quotations` filter present in the search bar."
 msgstr ""
 
@@ -20479,31 +20535,31 @@ msgstr ""
 msgid "The Quotations dashboard present in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:63
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:59
 msgid "To view *all* quotations in the database, remove the :guilabel:`My Quotations` filter from the search bar."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:66
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:62
 msgid "Quotations on this page appear in a default list view, but can also be viewed in a :icon:`oi-view-kanban` :guilabel:`Kanban` view, :icon:`fa-calendar` :guilabel:`Calendar`, :icon:`oi-view-pivot` :guilabel:`Pivot` table, :icon:`fa-area-chart` :guilabel:`Graph`, or :icon:`fa-clock-o` :guilabel:`Activity` view."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:67
 msgid "To view or modify any listed quotation from the :guilabel:`Quotations` dashboard, click on the desired quotation line from the list, and Odoo reveals the specific form for that selected quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:78
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:74
 msgid "Create a quotation"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:80
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:76
 msgid "To create a quotation, open the :menuselection:`Sales app`, and click the :guilabel:`New` button, located in the upper-left corner of the main :guilabel:`Quotations` dashboard."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:84
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:80
 msgid "The :guilabel:`New` button is **only** present if the :guilabel:`Quotations` dashboard is in list or Kanban view."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:87
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:83
 msgid "Clicking the :guilabel:`New` button reveals a blank quotation form, with various fields and tabs to configure."
 msgstr ""
 
@@ -20511,59 +20567,59 @@ msgstr ""
 msgid "A typical quotation form in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:93
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:89
 msgid "Begin by entering the customer's name in the :guilabel:`Customer` field at the top of the form. This is a **required** field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:92
 msgid "If the customer's information is already in the database, the :guilabel:`Invoice Address` and :guilabel:`Delivery Address` fields auto-populate with the saved information for those respective fields, based on the data from that customer's contact record (found in the **Contacts** application)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:101
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:97
 msgid "If the customer was referred by another customer or contact, enter their name in the :guilabel:`Referrer` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:104
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:100
 msgid "If a :guilabel:`Referrer` is selected, a new field, :guilabel:`Commission Plan` appears, in which a commission can be selected from the drop-down menu. This commission is rewarded to the contact selected in the :guilabel:`Referrer` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:108
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:104
 msgid "Next, if they have not already been auto-populated with the customer's information, enter the appropriate addresses in the :guilabel:`Invoice Address` and :guilabel:`Delivery Address` fields. Both of these fields are **required**."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:112
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:108
 msgid "Then, if desired, choose a :guilabel:`Quotation Template` from the drop-down field to apply to this quotation. It should be noted that some additional fields may appear, depending on the template selected."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:116
-msgid "The default date that appears in the :guilabel:`Expiration` field is based on the number configured in the :ref:`Default Quotation Validity setting <sales/create_quotations/configuration>` (in :menuselection:`Sales app --> Configuration --> Settings`)."
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:112
+msgid "The default date that appears in the :guilabel:`Expiration` field is based on the number configured in the :ref:`Default Quotation Validity setting <sales/create_quotations/quotation-settings>` (in :menuselection:`Sales app --> Configuration --> Settings`)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:121
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:117
 msgid "When using a quotation template, the date in the :guilabel:`Expiration` field is based off the :guilabel:`Quotation Validity` figure on the template form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:124
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:120
 msgid "If the quotation is for a recurring product or subscription, select the desired :guilabel:`Recurring Plan` from that specific drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:127
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:123
 msgid "If desired, select a specific :guilabel:`Pricelist` to be applied to this quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:129
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:125
 msgid "Lastly, select any specific :guilabel:`Payment Terms` to be used for this quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:132
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:128
 msgid "Order Lines tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:134
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:130
 msgid "The first tab on the quotation form is the *Order Lines* tab. In this tab, products may be added to the quotation by the *Description* column or through the *Product Catalog*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:137
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:133
 msgid "To add a product using the *Description* column, type the product's name. If it exists in the database, it appears as an autocomplete option and can be clicked to configure as desired and added to the order. If the product does not exist in the database, enter the desired name and relevant information like quantity and price."
 msgstr ""
 
@@ -20572,11 +20628,11 @@ msgid "The Description column in a quotation with both a manually added product 
 "autocomplete open."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:147
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:143
 msgid "Products added to sales quotations by manually entering a name and price are **not** added to the database. They only exist on the quotation/sales order where they were typed into the *Description* column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:151
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:147
 msgid "To add a product through the *Product Catalog*, click :guilabel:`Catalog` to reveal a separate page showcasing every item and potential product variant in an organized catalog display. Items can be organized by :guilabel:`Product Category` and :guilabel:`Attributes`."
 msgstr ""
 
@@ -20584,72 +20640,72 @@ msgstr ""
 msgid "A product catalog accessible via a quotation in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:158
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:154
 msgid "From here, locate the desired items, click the :icon:`fa-shopping-cart` :guilabel:`Add` button on the product card, and adjust the quantity, if needed. When complete, click the :guilabel:`Back to Quotation` button in the upper-left corner to return to the quotation, where the newly-selected catalog items can be found in the *Order Lines* tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:163
-msgid "If multiple items should be presented in a more organized way on the quotation, click :guilabel:`Add a section`, enter a name for the section, and drag-and-drop that section heading in the desired location amongst the items in the *Order Lines* tab. The section heading appears in bold and a sub-total for all products in a section is displayed. Then, if desired, :ref:`add a Section Template <sales_quotations/quote_template/section-templates>` to this quotation."
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:159
+msgid "If multiple items should be presented in a more organized way on the quotation, click :guilabel:`Add a section`, enter a name for the section, and drag-and-drop that section heading in the desired location amongst the items in the :guilabel:`Order Lines` tab. The section heading appears in bold and a sub-total for all products in a section is displayed. Then, if desired, :ref:`add a Section Template <sales/quote_template/section-templates>` to this quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:169
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:165
 msgid "If needed, click :guilabel:`Add a note` beneath a certain product line to add a custom note about that specific product. The note appears in italics. Then, if needed, proceed to drag-and-drop the note beneath the desired product line."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:173
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:169
 msgid "Beneath the product lines, there are buttons that can be clicked to apply any of the following: :guilabel:`Coupon Code`, :guilabel:`Promotions`, :guilabel:`Discount`, and :guilabel:`Add shipping`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:177
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:173
 msgid ":doc:`../products_prices/ewallets_giftcards`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:178
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:174
 msgid ":doc:`../products_prices/loyalty_discount`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:179
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:175
 msgid ":doc:`../products_prices/prices/pricing`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:180
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:176
 msgid ":doc:`../../../essentials/product_catalog`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:183
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:179
 msgid "Optional Products tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:185
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:181
 msgid "Open the *Optional Products* tab to select related products that can be presented to the customer, which may result in an increased sale."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:188
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:184
 msgid "For example, if the customer wants to buy a car, an optional product that could be offered is a *Trailer Hitch*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:192
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:188
 msgid ":doc:`optional_products`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:195
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:191
 msgid "Other Info tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:197
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:193
 msgid "In the *Other Info* tab, there are various quotation-related configurations separated into four different sections: :guilabel:`Sales`, :guilabel:`Delivery`, :guilabel:`Invoicing`, and :guilabel:`Tracking`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:202
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:198
 msgid "Some fields **only** appear if specific settings and options have been configured."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:205
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:201
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:92
 msgid "Sales section"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:207
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:203
 msgid "In the :guilabel:`Sales` section of the *Other Info* tab, there are sales specific fields that can be configured."
 msgstr ""
 
@@ -20657,39 +20713,39 @@ msgstr ""
 msgid "The Sales section of the Other Info tab of a quotation form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:213
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:209
 msgid ":guilabel:`Salesperson`: Assign a salesperson from the drop-down menu to be associated with this quotation. The user who originally created the quotation is selected in this field, by default."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:215
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:211
 msgid ":guilabel:`Sales Team`: Assign a specific sales team to this quotation. If the selected :guilabel:`Salesperson` is a member of a sales team, that team is auto-populated in the field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:217
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:213
 msgid ":guilabel:`Company`: Select a company from the drop-down menu this quotation should be associated with. This field only appears when working in a multi-company environment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:219
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:215
 msgid ":guilabel:`Online signature`: Click this checkbox to request an online signature from the customer to confirm the order. This field only appears if the *Online Signature* setting has been enabled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:221
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:217
 msgid ":guilabel:`Online payment`: Click this checkbox and enter a desired percentage in the adjacent field, to request an online payment from the customer (for that designated percentage of the total amount) to confirm the order. This field only appears if the *Online Payment* setting has been enabled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:225
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:221
 msgid ":guilabel:`Customer Reference`: Enter a custom reference ID for this customer. The entered reference ID can contain letters, numbers, or a mix of both."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:227
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:223
 msgid ":guilabel:`Tags`: Add specific tags to the quotation for added organization and enhanced searchability in the Odoo **Sales** application. Multiple tags can be added, if necessary."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:231
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:227
 msgid "Delivery section"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:233
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:229
 msgid "In the :guilabel:`Delivery` section of the *Other Info* tab, there are delivery-specific fields that can be configured."
 msgstr ""
 
@@ -20697,31 +20753,31 @@ msgstr ""
 msgid "The Delivery section of the Other Info tab of a quotation form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:239
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:235
 msgid ":guilabel:`Shipping Weight`: Displays the weight of the items being shipped. This field is not modifiable. Product weight is configured on individual product forms."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:241
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:237
 msgid ":guilabel:`Incoterm`: Select an Incoterm (International Commercial Term) to use as predefined commercial terms for international transactions."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:243
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:239
 msgid ":guilabel:`Incoterm Location`: If an Incoterm is being used, enter the international location in this field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:245
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:241
 msgid ":guilabel:`Shipping Policy`: Select a desired shipping policy from the drop-down menu. If all products are delivered at once, the delivery order is scheduled, based on the greatest product lead time. Otherwise, it is based on the shortest lead time. The available options are: :guilabel:`As soon as possible` or :guilabel:`When all products are ready`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:249
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:245
 msgid ":guilabel:`Delivery Date`: Click into the empty field to reveal a calendar popover, from which a customer delivery date can be selected. If no custom date is required, refer to the :guilabel:`Expected` date listed to the right of that field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:254
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:250
 msgid "Invoicing section"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:256
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:252
 msgid "In the :guilabel:`Invoicing` section of the *Other Info* tab, there are invoicing specific fields that can be configured."
 msgstr ""
 
@@ -20729,19 +20785,19 @@ msgstr ""
 msgid "The Invoicing section of the Other Info tab of a quotation form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:262
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:258
 msgid ":guilabel:`Fiscal Position`: Select a fiscal position to be used to adapt taxes and accounts for particular customers or sales orders/invoices. The default value comes from the customer. If a selection is made in this field, an :icon:`fa-refresh` :guilabel:`Update Taxes` clickable link and icon appear. When clicked, the taxes for this particular customer and quotation are updated. A confirmation window appears, as well."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:267
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:263
 msgid ":guilabel:`Analytic Account`: Select an analytic account to apply to this customer/quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:270
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:266
 msgid "Tracking section"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:272
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:268
 msgid "In the :guilabel:`Tracking` section of the *Other Info* tab, there are tracking-specific fields that can be configured."
 msgstr ""
 
@@ -20749,88 +20805,88 @@ msgstr ""
 msgid "The Tracking section of the Other Info tab of a quotation form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:278
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:274
 msgid ":guilabel:`Source Document`: Enter the reference of the document that generated the quotation/sales order, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:280
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:276
 msgid ":guilabel:`Opportunity`: Select the specific opportunity (from the **CRM** app) related to this quotation, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:282
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:278
 msgid ":guilabel:`Campaign`: Select the marketing campaign related to this quotation, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:283
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:279
 msgid ":guilabel:`Medium`: Select the method by which this quotation originated (e.g. *Email*), if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:285
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:281
 msgid ":guilabel:`Source`: Select the source of the link used to generate this quotation (e.g. *Facebook*), if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:289
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:285
 msgid ":doc:`../../../websites/website/reporting/link_tracker`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:292
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:288
 msgid "Notes tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:294
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:290
 msgid "In the *Notes* tab of the quotation form, enter any specific internal notes about the quotation and customer, if desired."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:300
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:296
 msgid "Send and confirm a quotation"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:302
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:298
 msgid "Once all the necessary fields and tabs have been configured, it is time to send the quotation to the customer for confirmation. Upon confirmation, the quotation turns into an official sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:305
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:301
 msgid "At the top of the form, there is a series of buttons:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:307
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:303
 msgid ":guilabel:`Send by Email`: When clicked, a pop-up window appears with the customer's name and email address in the :guilabel:`Recipients` field, the quotation (and reference ID) in the :guilabel:`Subject` field, and a brief default message in the body of the email, which can be modified, if needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:312
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:320
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:308
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:316
 msgid "Below that, a PDF copy of the quotation is attached. When ready, click :guilabel:`Send` to send the quotation, via email, to the customer, so they can review and confirm it."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:314
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:310
 msgid ":guilabel:`Send PRO-FORMA Invoice`: This button **only** appears if the *Pro-Forma Invoice* setting has been enabled. When clicked, a pop-up window appears with the customer's name and email address in the :guilabel:`Recipients` field, the *Proforma* invoice (and reference ID) in the :guilabel:`Subject` field, and a brief default message in the body of the email, which can be modified, if needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:322
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:318
 msgid ":guilabel:`Confirm`: When clicked, the quotation is confirmed, and the status changes to :guilabel:`Sales Order`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:324
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:320
 msgid ":guilabel:`Preview`: When clicked, Odoo reveals a preview of the quotation the customer sees when they log into their customer portal. Click the :icon:`fa-arrow-right` :guilabel:`Back to edit mode` link at the top of the preview page, in the blue banner, to return to the quotation form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:327
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:323
 msgid ":guilabel:`Cancel`: When clicked, the quotation is canceled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:330
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:326
 msgid "If the *Lock Confirmed Sales* setting is enabled, the sales order becomes :guilabel:`Locked`, and is indicated as such on the sales order form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:333
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:329
 msgid "At this point, the quotation has been confirmed, turned into a sales order, and is now ready to be invoiced and paid for."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:336
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:332
 msgid "For more information about invoicing, refer to :doc:`Invoice based on delivered or ordered quantities <../invoicing/invoicing_policy>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:340
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:336
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
@@ -20838,27 +20894,27 @@ msgstr ""
 msgid ":doc:`quote_template`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:341
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:337
 msgid ":doc:`deadline`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:342
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:338
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:90
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:285
 msgid ":doc:`get_signature_to_validate`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:343
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:339
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:86
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:286
 msgid ":doc:`get_paid_to_validate`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:344
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:340
 msgid ":doc:`pdf_quote_builder`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:345
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:341
 msgid ":doc:`../invoicing/proforma`"
 msgstr ""
 
@@ -21263,11 +21319,15 @@ msgstr ""
 msgid "A *sales margin* is the profit gained from the sale of a product or service after all the costs related to it have been accounted for."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:14
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:11
+msgid "To activate the *Margins* feature, go to the :menuselection:`Sales app --> Configuration --> Settings`. In the :guilabel:`Pricing` section, enable the :guilabel:`Margins` checkbox. Then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:18
 msgid "Configure price and cost"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:16
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:20
 msgid "Each individual product must be configured to automatically calculate the sales margin on each quotation and :abbr:`SO (sales order)` line. To enable this feature, navigate to :menuselection:`Sales app --> Products --> Products`. Click :guilabel:`New` and on the product form fill out the :guilabel:`Sales Price` and :guilabel:`Cost` fields in the *General Information* tab."
 msgstr ""
 
@@ -21275,31 +21335,31 @@ msgstr ""
 msgid "Sales Price and Cost fields of a product form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:24
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:28
 msgid "Odoo calculates the margin with the following formula:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:26
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:30
 msgid "Sales~Margin = Sales~Price - Cost\n"
 "\n"
 ""
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:29
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:33
 msgid "The margin percentage is calculated with the following formula:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:31
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:35
 msgid "\\frac{Sales~Price - Cost~Price}{Sales~Price} \\times 100\n"
 "\n"
 ""
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:35
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:39
 msgid "Compute margins on sales orders"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:37
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:41
 msgid "To calculate the margins on a :abbr:`SO (sales order)`, navigate to :menuselection:`Sales app --> Orders --> Quotations` and :ref:`create a new quotation <sales/create_quotations/create-quotation>`. While adding products to the quotation, a new field, :guilabel:`Margin`, automatically appears at the bottom of the to the quotation. This field displays the order's total margin in the configured currency as well as the percentage."
 msgstr ""
 
@@ -21307,67 +21367,67 @@ msgstr ""
 msgid "Sales order with Margin field on the bottom."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:49
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:53
 msgid "Compute margins on sales order lines"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:51
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:55
 msgid "To display a product's margin and the margin percentage per line item, click the :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon in the :guilabel:`Order Lines` tab. Then, select the checkboxes for :guilabel:`Margin` and :guilabel:`Margin (%)`. The :guilabel:`Margin` and :guilabel:`Margin (%)` columns are not displayed by default, but once enabled, the columns appear on all new and existing quotations and :abbr:`SOs (sales orders)`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:57
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:61
 msgid "The :guilabel:`Margin` column shows the profit earned from the sale after accounting for all associated costs, in the configured currency value. The :guilabel:`Margin (%)` shows the margin value as a percentage. The margin for one unit is multiplied by the quantity to determine the margin for the entire line."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:62
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:66
 msgid "Editing the :guilabel:`Margin` column automatically recalculates the :guilabel:`Unit Price` of the product on the :abbr:`SO (sales order)`. Both columns can be edited on the :abbr:`SO (sales order)` until an invoice is created."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:67
-msgid "The :guilabel:`Margin (%)` column becomes read-only when the line item cost is `0`. To change the calculations for :guilabel:`Margin` and :guilabel:`Margin (%)` columns on the product form, refer to the :ref:`sales_quotations/margin/configure-price-and-cost` section for more information."
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:71
+msgid "The :guilabel:`Margin` and :guilabel:`Margin (%)` columns are not editable since they are automatic calculations. To change the calculation, refer to :ref:`Configure price and cost <sales/margin/configure-price-and-cost>` section for more information."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:72
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:76
 msgid "Margin calculation with a pricelist"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:74
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:78
 msgid "To calculate the margin with an applied pricelist, begin with configuring a pricelist for the product. Follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:81
 msgid "Go to :menuselection:`Sales app --> Products --> Pricelists` and click the :guilabel:`New` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:79
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:83
 msgid "Enter the name of the pricelist and click :guilabel:`Add a line` to :ref:`create a new pricelist rule <sales/products/price-rules>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:81
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:85
 msgid "Configure the pricelist and click :guilabel:`Save & Close` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:82
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:86
 msgid "Go to :menuselection:`Sales app --> Orders --> Quotations` and :ref:`create a quotation <sales/create_quotations/create-quotation>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:84
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:88
 msgid "In the :guilabel:`Pricelist` field, select the newly made pricelist."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:85
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:89
 msgid "Click on :guilabel:`Update Prices` to refresh the product price and margin."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:88
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:92
 msgid "Use case: Conditional discounts"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:90
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:94
 msgid "A clothing store wants to create a seasonal 5% discount on blue denim jeans. The discount requires a minimum of two pairs of jeans in an order and is valid only from October to the end of December."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:93
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:97
 msgid "First go to :menuselection:`Sales app --> Products --> Pricelists` and create a new pricelist for the seasonal discount. Click :guilabel:`Add a line` to configure a price rule for seasonal discount. Include the specific product it applies to, the type of discount, the minimum quantity needed to trigger the discount, and the date range the discount is active."
 msgstr ""
 
@@ -21375,7 +21435,7 @@ msgstr ""
 msgid "Pricelist Rules pop-up window."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:101
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:105
 msgid "After saving the pricelist, go to a :abbr:`SO (sales order)` containing blue denim jeans and select the newly created pricelist in the :guilabel:`Pricelist` field."
 msgstr ""
 
@@ -21383,11 +21443,11 @@ msgstr ""
 msgid "Sales order with a new pricelist selected."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:108
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:112
 msgid "The discount only applies if the :abbr:`SO (sales order)` meets both the date range and minimum quantity requirements."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:111
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:115
 msgid "After the changes are made, click :icon:`fa-refresh` :guilabel:`Update Prices` to update the :guilabel:`Margin`, :guilabel:`Margin (%)`, and :guilabel:`Amount`. The margin is recalculated based on the pricelist-adjusted product's sales price and cost."
 msgstr ""
 
@@ -21395,7 +21455,7 @@ msgstr ""
 msgid "Sales order with margins recalculated based on the pricelist adjustment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/margin.rst:119
+#: ../../content/applications/sales/sales/sales_quotations/margin.rst:123
 msgid "Another way to visualize the impact of margins on :abbr:`SOs (sales orders) is to view the quotations data as a graph or chart. Go to :menuselection:`Sales app --> Orders --> Quotations`, then click either the :icon:`fa-area-chart` :guilabel:`(Graph)` icon or the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon. Next, click the :guilabel:`Measures` drop-down button and deselect :guilabel:`Total` and select :guilabel:`Margin`. This presents all margin contributions across the customer base."
 msgstr ""
 
@@ -21773,11 +21833,11 @@ msgid "The Documents smart button on a Sales product form."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:21
-msgid "Click :guilabel:`Upload` to open the user's local file directory then select and upload a PDF to Odoo. Odoo automatically creates a PDF document form from the uploaded PDF, with the :guilabel:`Sales Visibility` set to :guilabel:`Hidden` and the :guilabel:`Publish on website` toggle disabled by default. Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the corner of the document card and select :guilabel:`Edit` to further :ref:`configure the PDF form <sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration>`."
+msgid "Click :guilabel:`Upload` to open the user's local file directory then select and upload a PDF to Odoo. Odoo automatically creates a PDF document form from the uploaded PDF, with the :guilabel:`Sales Visibility` set to :guilabel:`Hidden` and the :guilabel:`Publish on website` toggle disabled by default. Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the corner of the document card and select :guilabel:`Edit` to further :ref:`configure the PDF form <sales/add_pdf_products/pdf-form-configuration>`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:28
-msgid "Click :guilabel:`New` to open a blank PDF form and manually :ref:`configure the document form <sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration>`."
+msgid "Click :guilabel:`New` to open a blank PDF form and manually :ref:`configure the document form <sales/add_pdf_products/pdf-form-configuration>`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:35
@@ -21789,7 +21849,7 @@ msgid "A PDF document or URL can also be added to a product variant, rather than
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:41
-msgid "To add a PDF to a product variant, navigate to the :menuselection:`Sales app --> Products --> Product Variants`, select the product variant, click the :guilabel:`Documents` smart button, and :ref:`upload the PDF <sales/pdf_quote_builder/add_pdf_products/add-pdf-to-product>`."
+msgid "To add a PDF to a product variant, navigate to the :menuselection:`Sales app --> Products --> Product Variants`, select the product variant, click the :guilabel:`Documents` smart button, and :ref:`upload the PDF <sales/add_pdf_products/add-pdf-to-product>`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:46
@@ -21841,7 +21901,7 @@ msgid ":icon:`fa-trash` :guilabel:`(Delete)` icon: Click to remove the uploaded 
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:82
-msgid ":guilabel:`Configure dynamic fields`: Click the link if the PDF document or URL has dynamic form fields that need to be :ref:`configured to Odoo fields <sales/pdf_quote_builder/dynamic_text/map-PDF-to-Odoo>`. If the PDF document or URL has custom dynamic form fields, refer to the :ref:`sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields` for more information."
+msgid ":guilabel:`Configure dynamic fields`: Click the link if the PDF document or URL has dynamic form fields that need to be :ref:`configured to Odoo fields <sales/dynamic_text/map-PDF-to-Odoo>`. If the PDF document or URL has custom dynamic form fields, refer to the :ref:`sales/dynamic_text/custom-dynamic-form-fields` for more information."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
@@ -21938,7 +21998,7 @@ msgid "Navigate to :menuselection:`Sales app --> Quotations` and select the desi
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:20
-msgid "Select the additional PDFs to be merged into the final PDF. If a selected PDF contains :ref:`custom note form fields <sales/pdf_quote_builder/dynamic_text/custom-note>`, they appear as editable text boxes to be filled in."
+msgid "Select the additional PDFs to be merged into the final PDF. If a selected PDF contains :ref:`custom note form fields <sales/dynamic_text/custom-note>`, they appear as editable text boxes to be filled in."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
@@ -22063,15 +22123,15 @@ msgid "Refer to the following instructions to:"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:54
-msgid "Find :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values`."
+msgid "Find :ref:`sales/dynamic_text/common-dynamic-text-values`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:55
-msgid ":ref:`sales/pdf_quote_builder/dynamic_text/Odoo-field-path`."
+msgid ":ref:`sales/dynamic_text/Odoo-field-path`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:56
-msgid ":ref:`sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields` in Odoo after uploading the PDF."
+msgid ":ref:`sales/dynamic_text/custom-dynamic-form-fields` in Odoo after uploading the PDF."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:60
@@ -22123,7 +22183,7 @@ msgid "Configured text form fields in the PDF quote builder."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:106
-msgid "To edit, click the :guilabel:`Path` cell of the desired form field row and enter the Odoo field name. Refer to the :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` section for typical field names. Refer to the :ref:`sales/pdf_quote_builder/dynamic_text/Odoo-field-path` section for instructions on how to find Odoo field names and paths."
+msgid "To edit, click the :guilabel:`Path` cell of the desired form field row and enter the Odoo field name. Refer to the :ref:`sales/dynamic_text/common-dynamic-text-values` section for typical field names. Refer to the :ref:`sales/dynamic_text/Odoo-field-path` section for instructions on how to find Odoo field names and paths."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:114
@@ -22139,7 +22199,7 @@ msgid "Configure custom dynamic form fields"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:127
-msgid "To pull specific information from a sales order or a product that is not in the :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` section, add a *dynamic form field* to the PDF with a unique name, then configure the :guilabel:`Path` to point to the desired information in Odoo."
+msgid "To pull specific information from a sales order or a product that is not in the :ref:`sales/dynamic_text/common-dynamic-text-values` section, add a *dynamic form field* to the PDF with a unique name, then configure the :guilabel:`Path` to point to the desired information in Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:132
@@ -22495,7 +22555,7 @@ msgid "Section templates can be created on the *Templates* page or directly from
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:195
-msgid "Enter the name of the template in :guilabel:`Template` field and set the :guilabel:`Type` field to :guilabel:`Section`. To add sections, products, or notes follow the instructions in the :ref:`sales_quotations/quote_template/lines-tab` section."
+msgid "Enter the name of the template in :guilabel:`Template` field and set the :guilabel:`Type` field to :guilabel:`Section`. To add sections, products, or notes follow the instructions in the :ref:`sales/quote_template/lines-tab` section."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:200
