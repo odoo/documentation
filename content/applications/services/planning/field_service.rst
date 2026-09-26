@@ -299,8 +299,14 @@ activated in the :guilabel:`Field Service` section, then enable :guilabel:`Quota
 :guilabel:`Save`.
 
 To create a quotation from a shift, click the :guilabel:`Quotations` smart button on the shift form,
+<<<<<<< d65b7612b71c94dc658584a63ae553754d5cc756
 then click :guilabel:`New` and :ref:`fill in the fields
 <sales/create_quotations/create-quotation>`.
+||||||| c023921973919ad8d7359e5d6c66cb074a4c0967
+then click :guilabel:`New` and :ref:`fill in the fields <sales/create-quotation>`.
+=======
+then click :guilabel:`New` and :ref:`fill in the fields <sales/create_quotations/create-quotation>`.
+>>>>>>> 98be6e05513535b4082f07da266131323746fbbd
 
 .. _planning/field-service/customer-report:
 

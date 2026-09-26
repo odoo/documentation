@@ -1,3 +1,8 @@
+.. meta::
+   :description: Explains how to configure quotation settings, create a quotation and fill in its
+                 Order Lines, Optional Products, and Other Info tabs, and send it to a customer for
+                 confirmation.
+
 =================
 Create quotations
 =================
