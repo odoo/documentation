@@ -51,7 +51,7 @@ Set the removal strategy
 
 Once the locations are named in alphabetical order, based on their proximity to the output or
 packing location, set the removal strategy on the :ref:`parent location
-<inventory/location-hierarchy>`.
+<inventory/use_locations/create-new-locations>`.
 
 To do that, in the :guilabel:`Locations` list, select the parent location of the alphabetically
 named storage locations.
