@@ -63,11 +63,8 @@ Discount configuration
 ----------------------
 
 Discounts can be easily applied to upsold subscriptions to incentivize customers to purchase more
-expensive or additional subscriptions. To do this, the *Discounts* feature must be enabled.
-
-To activate the *Discounts* feature, navigate to :menuselection:`Sales app --> Configuration -->
-Settings`. Scroll to the :guilabel:`Pricing` section and tick the checkbox beside
-:guilabel:`Discounts`. Finally, click :guilabel:`Save`.
+expensive or additional subscriptions. To do so, enter the discount in the :guilabel:`Disc.%`
+column of the upsell order lines.
 
 Create alternative
 ------------------

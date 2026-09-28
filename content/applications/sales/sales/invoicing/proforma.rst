@@ -16,8 +16,8 @@ Configuration
 In order to utilize pro-forma invoices, the *Pro-Forma Invoice* feature **must** be activated.
 
 To enable this feature, navigate to :menuselection:`Sales app --> Configuration --> Settings`, and
-in the :guilabel:`Quotations \& Orders` section, click the checkbox next to :guilabel:`Pro-Forma
-Invoice`. Then, click :guilabel:`Save` to save all changes.
+in the :guilabel:`Quotations \& Orders` section, click the checkbox next to :guilabel:`Pro Forma`.
+Then, click :guilabel:`Save` to save all changes.
 
 .. image:: proforma/pro-forma-setting.png
    :align: center
@@ -26,8 +26,8 @@ Invoice`. Then, click :guilabel:`Save` to save all changes.
 Send pro-forma invoice
 ======================
 
-With the :guilabel:`Pro-Forma Invoice` feature activated, the option to send a pro-forma invoice is
-now available on any quotation or sales order, via the :guilabel:`Send Pro-Forma Invoice` button.
+With the :guilabel:`Pro Forma` feature activated, the option to send a pro-forma invoice is now
+available on any quotation or sales order, via the :guilabel:`Send Pro-Forma Invoice` button.
 
 .. image:: proforma/send-pro-forma-invoice-button.png
    :align: center
