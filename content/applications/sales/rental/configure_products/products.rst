@@ -261,8 +261,8 @@ Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` an
 section, select the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply the
 changes.
 
-Create a :ref:`new location <inventory/use_locations/new-location>` and on the new location page,
-enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent Location` field is set to
+Create a :ref:`new location <inventory/use_locations/create-new-locations>` and on the new location
+page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent Location` field is set to
 :guilabel:`WH`.
 
 .. example::
