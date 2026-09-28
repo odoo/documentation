@@ -216,6 +216,11 @@ accounting, including:
 - :guilabel:`Price Difference Account` (available only on product categories that use
   :guilabel:`Perpetual (at invoicing)` for their :guilabel:`Inventory Valuation`)
 
+.. important::
+   Product categories do **not** inherit these fields from their parent category. A new
+   subcategory is filled in with the company's default values, and changing a field on a parent
+   category afterwards has no effect on its subcategories.
+
 By default, products inherit their :guilabel:`Income Account` and :guilabel:`Expense Account` from
 their product category, but these accounts can be overridden on each product record. Other fields on
 the product form relate to accounting as well, including:

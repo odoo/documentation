@@ -7,9 +7,10 @@ Packaging
 In Odoo **Inventory**, *packaging* refers to disposable containers holding multiple units of a
 specific product.
 
-For example, different packages for cans of soda, such as a 6-pack, a 12-pack, or a case of 36,
-**must** be configured on the individual product form. This is because packagings are product
-specific, not generic.
+For example, different packages for cans of soda, such as a 6-pack, a 12-pack, or a case of 36, are
+units of measure. A packaging is created once and can be reused by any number of products, because
+the quantity it contains belongs to the unit itself, not to the product. Each product lists the
+packagings it can be bought and sold in; only the packaging barcode is product-specific.
 
 .. tip::
    Packaging can be used in conjunction with Odoo :doc:`Barcode <../../../barcode/setup/software>`.
@@ -129,10 +130,10 @@ On the product category's form, in the :guilabel:`Logistics` section, :guilabel:
 can be set to :guilabel:`Reserve Only Full Packagings` or :guilabel:`Reserve Partial Packagings`.
 
 .. important::
-   To see the :guilabel:`Reserve Packaging` field, the :guilabel:`Product Packaging` feature
-   **must** be enabled. To enable this feature, go to :menuselection:`Inventory app -->
+   To see the :guilabel:`Reserve Packagings` field, the :guilabel:`Units of Measure & Packagings`
+   feature **must** be enabled. To enable this feature, go to :menuselection:`Inventory app -->
    Configuration --> Settings`, scroll to the :guilabel:`Products` section, tick the
-   :guilabel:`Product Packagings` checkbox, and click :guilabel:`Save`.
+   :guilabel:`Units of Measure & Packagings` checkbox, and click :guilabel:`Save`.
 
 .. image:: packaging/reserve-packaging.png
    :alt: Show Reserve Packagings field on the product categories page.
