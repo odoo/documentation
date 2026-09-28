@@ -13,9 +13,9 @@ Users can create custom locations, track products at specific locations, and man
 Configuration
 =============
 
-To create specific storage locations, enable the *Storage Locations* feature by going to
-:menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section,
-select the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:`Save`.
+To create specific storage locations, navigate to :menuselection:`Inventory app --> Configuration
+--> Settings` and enable the *Storage Locations* feature. In the  *Warehouse* section, select the
+:guilabel:`Storage Locations` checkbox, then click :guilabel:`Save`.
 
 .. note::
    Typically, the :guilabel:`Storage Locations` feature is used with :doc:`Multi-Step Routes
@@ -36,7 +36,7 @@ Locations` to open a list of locations.
 .. image:: use_locations/locations.png
    :alt: List of internal locations.
 
-On this page, click :guilabel:`New` to open a new location form.
+On this page, click :guilabel:`New`. A blank *Location* form loads.
 
 .. image:: use_locations/location-form.png
    :alt: Additional Information section of new location creation form.
@@ -65,14 +65,9 @@ location serves its intended purpose in the database:
 - :guilabel:`Storage Category`: Select the storage category. The :doc:`Storage Categories
   <../../shipping_receiving/daily_operations/storage_category>` feature **must** be enabled.
 - :guilabel:`Company`: The company of the location.
-- :guilabel:`Is a Scrap Location?`: Select this checkbox to allow :doc:`scrapped goods
-  <scrap_inventory>` to be stored in this location.
-- :guilabel:`Is a Dock Location`: If the **Fleet** app is installed, and if using :doc:`batch
-  transfers <../../shipping_receiving/picking_methods/batch>`, select this checkbox to allow batches
-  to be loaded at this location.
 - :guilabel:`Barcode`: Enter the barcode to :ref:`identify actions <barcode/setup/location>` at this
   location when scanned. The **Barcode** app **must** be installed.
-- :guilabel:`Replenish Location`: Select this checkbox to set the location as a destination for
+- :guilabel:`Replenishments`: Select this checkbox to set the location as a destination for
   receiving products from *Buy*, *Manufacture*, or other :doc:`configured routes
   <../../shipping_receiving/daily_operations/use_routes>`.
 
@@ -83,14 +78,15 @@ To schedule regular inventory counts at this location, set the :guilabel:`Invent
 to the desired interval between inventory counts, in days. By default, it is set to `0` (no
 scheduled counts).
 
-The :guilabel:`Last Inventory` field displays the date of the last inventory count at this location.
+The :guilabel:`Last Inventory` field displays the date of the last inventory count at this location,
+and **cannot** be modified. If a count has never been done, this field remains blank.
 
 After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next Expected` field
 automatically displays the date of the next inventory count.
 
 .. example::
    With inventory counts scheduled to occur every `30` days, the :guilabel:`Last Inventory` count
-   occurred on September 24, and the :guilabel:`Next Expected` is October 24.
+   occurred on November 13, and the :guilabel:`Next Expected` count is December 13.
 
    .. image:: use_locations/scheduled-count.png
       :alt: Show Cyclic Count section of the locations form.
@@ -122,26 +118,21 @@ products from inventory. The options are:
 Manage additional options at location
 =====================================
 
-Users can also access lists of products, current stock, and putaway rules by location. To do so,
-open the location's form by navigating to :menuselection:`Inventory app --> Configuration -->
-Locations` and selecting the desired location.
+Users can also access lists of putaway rules and products by location. To do so, open the location's
+form by navigating to :menuselection:`Inventory app --> Configuration --> Locations` and selecting
+the desired location.
 
 In the location form, access each of these options by selecting its corresponding smart button.
 
-.. _inventory/use_locations/current-stock:
+.. _inventory/use_locations/putaway:
 
-View current stock
+View putaway rules
 ------------------
 
-To view the current stock at the location, click the :icon:`fa-cubes` :guilabel:`Current Stock`
-smart button. This opens a list of all products at the location, including their :guilabel:`On Hand`
-quantities.
-
-By default, current stock information is grouped by product. Additional :doc:`filters and grouping
-<../../../../essentials/search>` options can be applied via the search bar.
-
-.. image:: use_locations/current-stock.png
-   :alt: Show stock at Shelf 2.
+To view all putaway rules for the location, click the :icon:`fa-random` :guilabel:`Putaway Rules`
+smart button. This opens the :doc:`Putaway Rules
+<../../shipping_receiving/daily_operations/putaway>` page, where users can view, edit, or create
+additional rules.
 
 .. _inventory/use_locations/products:
 
@@ -151,13 +142,3 @@ View products
 To view all products at the location, click the :icon:`fa-th-list` :guilabel:`Products` smart
 button. By default, this opens a list of all available products or products with outstanding demand.
 Additional filters and grouping options can be applied via the search bar.
-
-.. _inventory/use_locations/putaway:
-
-View putaway rules
-------------------
-
-To view all putaway rules of the location, click the :icon:`fa-random` :guilabel:`Putaway Rules`
-smart button. This opens the :doc:`Putaway Rules
-<../../shipping_receiving/daily_operations/putaway>` page, where users can view, edit, or create
-additional rules.
