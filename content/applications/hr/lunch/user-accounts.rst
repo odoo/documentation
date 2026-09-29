@@ -26,7 +26,7 @@ lunch accounts are replenished.
    - Cash is handed to the **Lunch** app manager, who then updates the user's account.
    - Money is automatically deducted from the user's paychecks, then the **Lunch** app manager
      updates the account when paychecks are issued. This requires :ref:`adding a salary attachment
-     <payroll/worked-days-inputs>` for the user's payslip in the **Payroll** app.
+     <payroll/payslips/salary-inputs>` for the user's payslip in the **Payroll** app.
    - Companies can sell "lunch tickets" at a set price (for example, one ticket costs $5.00). Users
      can purchase tickets from a **Lunch** app manager, who then updates the user's account.
 
