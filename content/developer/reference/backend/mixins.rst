@@ -735,10 +735,9 @@ are records of the ``mail.activity`` class, which have a type (``mail.activity.t
 name, description, scheduled time (among others). Pending activities are visible
 above the message history in the chatter widget.
 
-You can integrate activities using the ``mail.activity.mixin`` class on your object
-and the specific widgets to display them (via the field ``activity_ids``) in the form
-view and kanban view of your records (``mail_activity`` and ``kanban_activity``
-widgets, respectively).
+You can integrate activities using the ``mail.activity.mixin`` class on your object.
+The chatter then displays them in the form view, and the ``kanban_activity`` widget
+can display them (via the field ``activity_ids``) in the kanban view of your records.
 
 .. example::
 
@@ -767,11 +766,7 @@ widgets, respectively).
             <field name="arch" type="xml">
                 <form string="Business Trip">
                     <!-- Your usual form view goes here -->
-                    <chatter>
-                        <field name="message_follower_ids" widget="mail_followers"/>
-                        <field name="activity_ids" widget="mail_activity"/>
-                        <field name="message_ids" widget="mail_thread"/>
-                    </chatter>
+                    <chatter/>
                 </form>
             </field>
         </record>
