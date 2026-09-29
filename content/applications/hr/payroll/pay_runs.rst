@@ -119,8 +119,8 @@ after it has been created.
 
 To add a new payslip, navigate to :menuselection:`Payroll app --> Payslips --> Payslips`. Click the
 :guilabel:`New Off-Cycle` button and a blank :guilabel:`Employee Payslips` form loads.
-:ref:`Configure the payslip form <payroll/new-payslip>`, and ensure the :guilabel:`Pay Run` field is
-populated.
+:ref:`Configure the payslip form <payroll/payslips/new-payslip>`, and ensure the :guilabel:`Pay Run`
+field is populated.
 
 Once the form is configured, click :guilabel:`Compute Sheet` to calculate the payslip and add it to
 the selected pay run.
