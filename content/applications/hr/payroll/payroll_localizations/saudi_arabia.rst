@@ -294,8 +294,9 @@ from the assigned working schedule, attendance records, planning schedule, and a
 Any :ref:`discrepancies or conflicts <payroll/conflicts>` must be resolved, then the work entries
 can be :ref:`regenerated <payroll/regenerate-work-entries>`.
 
-Once everything is correct, draft payslips can be :ref:`created individually <payroll/process>` or
-in :doc:`groups <../pay_runs>`, referred to in the **Payroll** app as *Pay Runs*.
+Once everything is correct, draft payslips can be :ref:`created individually
+<payroll/payslips/process>` or in :doc:`groups <../pay_runs>`, referred to in the **Payroll** app as
+*Pay Runs*.
 
 .. image:: saudi_arabia/work-entries-sa.png
    :alt: The work entries for a pay run, with some time off entered in the work entries.
