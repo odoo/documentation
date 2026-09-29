@@ -147,7 +147,6 @@ Once a localization has been installed, configure the following fields:
    - :doc:`payroll/payslips`
    - :doc:`payroll/pay_runs`
    - :doc:`payroll/commissions`
-   - :doc:`payroll/payroll_analysis`
    - :doc:`payroll/headcount`
    - :doc:`payroll/work_entry_analysis`
    - :doc:`payroll/payroll_localizations`
@@ -164,7 +163,6 @@ Once a localization has been installed, configure the following fields:
    payroll/payslips
    payroll/pay_runs
    payroll/commissions
-   payroll/payroll_analysis
    payroll/headcount
    payroll/work_entry_analysis
    payroll/payroll_localizations
