@@ -190,11 +190,6 @@ an :guilabel:`Agent Name`, then add a short description, if desired.
    writing out the :guilabel:`System Prompt`, and assigning the :guilabel:`Skills` and :guilabel:`AI
    Tools`.
 
-Use the radio buttons to select a :guilabel:`Provider` for this agent.
-
-.. note::
-   Odoo supports both ChatGPT (OpenAI) and Gemini (Google).
-
 Next, select a :guilabel:`Response Style`. This manages the overall tone the agent uses when
 responding to an inquiry. Choose from one of the following options:
 
