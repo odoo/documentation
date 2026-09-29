@@ -10,8 +10,8 @@ fields should be carefully selected, as they determine how to invoice and track 
 or services.
 
 To configure an existing product, go to :menuselection:`Inventory app --> Products --> Products`,
-and select the desired product from the list. Alternatively, from the :guilabel:`Products` page,
-click :guilabel:`New` to create a new product.
+and select the desired product from the list. Alternatively, from the *Products* page, click
+:guilabel:`New` to create a new product.
 
 .. _inventory/product_management/for-sale-or-purchase:
 
@@ -113,8 +113,7 @@ quickly, so stock (or inventory) does *not* need to be maintained. Non-inventory
 essential, but exact counts are unnecessary. Examples include: office supplies, packaging materials,
 or items used in production that do not need to be individually tracked.
 
-To mark a product as untracked, select the text in the :guilabel:`Tracking` field, delete it, then
-click outside of the field.
+To mark a product as untracked, select :guilabel:`None` in the :guilabel:`Tracking` field.
 
 .. tip::
    Select a :guilabel:`Tracking` option if it is necessary to track a product's stock at various
