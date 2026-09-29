@@ -473,8 +473,7 @@ Chatter widget
 The :ref:`chatter widget <reference/mixins/mail/chatter>` is the communication and log tool allowing
 to email colleagues and customers directly from a record (task, order, invoice, event, note...).
 
-It is added with a `div` element with the class `oe_chatter` when the model inherits the
-`mail.thread` mixin.
+It is added with a `chatter` element when the model inherits the `mail.thread` mixin.
 
 .. example::
    .. code-block:: xml
@@ -483,11 +482,7 @@ It is added with a `div` element with the class `oe_chatter` when the model inhe
           <sheet>
               ...
           </sheet>
-          <div class="oe_chatter">
-              <field name="message_follower_ids"/>
-              <field name="activity_ids"/>
-              <field name="message_ids" options="OPTIONS"/>
-          </div>
+          <chatter/>
       </form>
 
 .. _reference/view_architectures/form/attachment:
