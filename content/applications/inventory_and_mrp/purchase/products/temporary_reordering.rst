@@ -32,8 +32,8 @@ going to :menuselection:`Inventory app --> Products --> Products`, and click :gu
 On the product form, enter the product name, and ensure the :guilabel:`Sales` and
 :guilabel:`Purchase` options are enabled, located beneath the :guilabel:`Product Name` field.
 
-On the *General Information* tab, leave :guilabel:`Product Type` set to :guilabel:`Goods`, and
-ensure :guilabel:`Track Inventory` is checked, with :guilabel:`By Quantity` selected.
+On the *General Information* tab, leave :guilabel:`Product Type` set to :guilabel:`Goods`. In the
+:guilabel:`Tracking` field, select :guilabel:`By Quantity`.
 
 Next, click the *Purchase* tab, and under :guilabel:`Vendor`, click :guilabel:`Add a line` and
 select a vendor from the drop-down menu. Then, set a purchase price under :guilabel:`Unit Price`.
