@@ -39,7 +39,7 @@ endif
 
 #=== Standard rules ===#
 
-.PHONY: all help clean html latexpdf gettext fast static test review
+.PHONY: all help clean html latexpdf gettext fast static test review linkcheck
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -50,6 +50,7 @@ help:
 	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
 	@echo "  clean        to delete the build files"
 	@echo "  test         to run the guidelines tests"
+	@echo "  linkcheck    to check the external links of a file or folder"
 
 clean:
 	@echo "Cleaning build files..."
@@ -104,3 +105,30 @@ review:
 	if [ -z "$$line_length" ]; then line_length=100; fi; \
 	export REVIEW=1; \
 	python tests/main.py --max-line-length=$$line_length $(SOURCE_DIR)/$$path
+
+# Called manually by content writers to check the external links of a file or folder.
+linkcheck:
+	@read -p "Enter relative content path: " path; \
+	if [ -z "$$path" ]; then echo "Error: Path cannot be empty"; exit 1; fi; \
+	if echo $$path | grep -q 'content/'; then path=`echo $$path | sed 's|content/||'`; fi; \
+	files=`find $(SOURCE_DIR)/$$path -name '*.rst' 2>/dev/null`; \
+	if [ -z "$$files" ]; then echo "Error: No .rst files found at $$path"; exit 1; fi; \
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b linkcheck -q -j $(WORKERS) $(SOURCE_DIR) $(BUILD_DIR)/linkcheck $$files; \
+	if [ -t 1 ]; then \
+		bold=`printf '\033[1m'`; red=`printf '\033[31m'`; yellow=`printf '\033[33m'`; \
+		green=`printf '\033[32m'`; reset=`printf '\033[0m'`; \
+	fi; \
+	if [ -s $(BUILD_DIR)/linkcheck/output.txt ]; then \
+		echo ""; \
+		echo "----------------------------------------"; \
+		echo "$${bold}Links that need attention:$${reset}"; \
+		echo "----------------------------------------"; \
+		awk -v red="$$red" -v yellow="$$yellow" -v reset="$$reset" \
+			'/\[broken\]/ {print red "❌  " $$0 reset; next} /\[redirected/ {print yellow "⚠️  " $$0 reset; next} {print}' \
+			$(BUILD_DIR)/linkcheck/output.txt; \
+		echo ""; \
+		echo "Full results saved in $(BUILD_DIR)/linkcheck/output.txt"; \
+		echo "Note: This file is replaced each time make linkcheck is run."; \
+	else \
+		echo "$${green}✅ No broken or redirected links found.$${reset}"; \
+	fi
