@@ -327,8 +327,8 @@ Rule parameters
 Certain payroll calculations require specific rates or wage caps, and Rule Parameters
 provide values either as percentages or fixed amounts that can be referenced in salary rules.
 
-Rule parameters can be accessed via :menuselection:`Payroll app --> Configuration --> Rule Parameters`.
-All the Rule parameters will be listed here with the associated salary rules.
+Rule parameters can be accessed via :menuselection:`Payroll app --> Configuration --> Rule
+Parameters`. All the Rule parameters will be listed here with the associated salary rules.
 
 Rule parameters are used by salary rules for statutory calculations, ensuring that
 payslips stay compliant with national and state-level regulations.
@@ -353,7 +353,7 @@ Any :ref:`discrepancies or conflicts <payroll/conflicts>` must be resolved, then
 work entries can be :ref:`regenerated <payroll/regenerate-work-entries>`.
 
 Once everything is correct, draft payslips can be :ref:`created individually
-<payroll/payslips/process>` or in :doc:`groups <../pay_runs>`, referred to in the Payroll app as
+<payroll/payslips/process>` or in :doc:`groups <../pay_runs>`, referred to in the **Payroll** app as
 *Pay Runs*.
 
 .. image:: india/in-work-entries.png

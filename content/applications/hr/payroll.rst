@@ -28,8 +28,8 @@ etc.), :doc:`payslips <payroll/payslips>` can be created individually or in :doc
 apps. Any errors with work entries **must** be resolved *before* continuing to process payroll.
 
 After all issues or conflicts are resolved, payslips are :ref:`processed
-<payroll/payslips/process>`, and then :ref:`employees are paid <payroll/pay-employee>`, either with
-a wire transfer or a physical check.
+<payroll/payslips/process>`, and then :ref:`employees are paid <payroll/payslips/pay-employee>`,
+either with a wire transfer or a physical check.
 
 .. note::
    It is possible to pay employees with cash, but this is not recommended.
