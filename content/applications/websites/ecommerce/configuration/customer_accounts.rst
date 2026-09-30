@@ -65,7 +65,7 @@ instructions on setting a password and activating their account.
 
 .. tip::
    It is possible to configure a website form with a :guilabel:`Create a Customer` :ref:`action
-   <website/building_blocks/action>` to automatically create a customer record in the backend when
+   <building_blocks/forms/action>` to automatically create a customer record in the backend when
    filled in.
 
 .. _ecommerce/customer_accounts/access-restriction:
