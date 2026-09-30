@@ -10,10 +10,10 @@ Process receipts and deliveries with barcodes
 The **Barcode** app can be used to process receipts, deliveries, and other types of operations in
 real time using a barcode scanner or the Odoo mobile app.
 
-This allows operations on the warehouse floor to be processed in real time, rather than
-waiting to validate transfers from a computer. This real-time processing ensures barcodes are
-accurately assigned to the correct products, packages, packaging, transfers, locations, and more.
-This helps reduce errors and keeps inventory data in sync.
+This allows operations on the warehouse floor to be processed in real time, rather than waiting to
+validate transfers from a computer. This real-time processing ensures barcodes are accurately
+assigned to the correct products, packages, packaging, transfers, locations, and more. This helps
+reduce errors and keeps inventory data in sync.
 
 Enable Barcode app
 ==================
@@ -146,6 +146,43 @@ When ready, click :guilabel:`Confirm` to confirm the changes made to the product
 
    .. image:: receipts_deliveries/receipts-deliveries-product-line-editor.png
       :alt: Product line editor for individual transfer in Barcode app.
+
+Batch receipts
+--------------
+
+When receiving products from a vendor, scanning an item associated with a different open receipt
+prompts Odoo to suggest batching those orders together. This allows warehouse workers to combine
+multiple receipts from the same vendor into a single receiving operation.
+
+To find receipts to batch, open the :menuselection:`Barcode app`. The *Barcode Scanner* page opens.
+Click the :guilabel:`Operations` button to open the *Operations* page, then click
+:guilabel:`Receipts`. Open a receipt, or scan a transfer, product, lot, or packaging to filter
+records and find a receipt to open.
+
+Once in the receipt, scan a received product. If the product belongs to a different receipt, the
+*Batch Receipts from (vendor name)?* pop-up window opens. In this window, Odoo suggests batching the
+receipts.
+
+To batch the receipts, click :guilabel:`Batch Receipts`. To add the product to the current receipt
+as an additional product, click :guilabel:`Add Product`. To discard the scan, click
+:guilabel:`Discard`.
+
+Continue processing the receipts.
+
+.. example::
+   Stealthy Wood has multiple open purchase orders with Azure Interior. Two shipments arrive
+   together on the same day: receipt `WH/IN/00027` (containing office chairs) and a second receipt
+   containing corner desks (`WH/IN/00026`).
+
+   A warehouse worker scans an office chair barcode, opening receipt `WH/IN/00027`, and clicks
+   :guilabel:`+25` to process the full quantity. Next, he scans a corner desk barcode. Because the
+   desk belongs to the second open receipt from Azure Interior, Odoo prompts him to batch the
+   receipts. He clicks :guilabel:`Batch Receipts` to combine both orders into a single operation.
+
+   .. image:: receipts_deliveries/suggest-batch.png
+      :alt: Odoo suggests a receipt to batch.
+
+   From there, the warehouse worker can continue to process products in the two receipts.
 
 Validating the transfer
 -----------------------
