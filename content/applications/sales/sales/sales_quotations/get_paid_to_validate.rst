@@ -20,9 +20,9 @@ Settings`, scroll to the :guilabel:`Quotations \& Orders` heading, check the box
    :align: center
    :alt: The online payment setting in the Odoo Sales application.
 
-Beneath the :guilabel:`Online Payment` option on the *Sales* :guilabel:`Settings` page, there's a
-:guilabel:`Default Quotation Validity` field. In this field, there's the option to add a specific
-number of days for quotations to remain valid by default.
+In the same section of the *Sales* :guilabel:`Settings` page, there's a
+:guilabel:`Quotation Validity` field. In this field, there's the option to add a specific number of
+days for quotations to remain valid by default.
 
 To enable this feature on a standard quotation, click the checkbox for the :guilabel:`Payment`
 feature option, located in the :guilabel:`Online confirmation` field, on the :guilabel:`Other Info`

@@ -170,9 +170,9 @@ If no database product with a matching internal reference is found for a given
 :guilabel:`Shopee SKU`, then a default database product, *Shopee Item*.
 
 .. note::
-   To modify default products, activate the :ref:`developer mode <developer-mode>`, and navigate to
-   :menuselection:`Sales app --> Configuration --> Settings`. In the :guilabel:`Connectors` section,
-   under :guilabel:`Shopee Sync`, find the :guilabel:`Default Products`.
+   Default products are archived. To modify them, navigate to
+   :menuselection:`Sales app --> Products --> Products`, remove the :guilabel:`Sales` filter, add
+   the :guilabel:`Archived` filter, and search for `Shopee`.
 
 Product tax configuration
 =========================
