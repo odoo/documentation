@@ -418,9 +418,8 @@ EDI Elements
 ~~~~~~~~~~~~
 
 Once you have configured your master data, the invoices can be created from your sales order or
-manually. Additional to the basic invoice information described on :doc:`our page about the
-invoicing process <../accounting/customer_invoices/overview>`, there are a couple of
-fields required as part of the Peru EDI:
+manually. In addition to the :doc:`basic invoice information <../accounting/customer_invoices>`,
+there are a couple of fields required as part of the Peru EDI:
 
 - **Document type**: The default value is “Factura Electronica” but  you can manually change the
   document type if needed and select Boleta for example.

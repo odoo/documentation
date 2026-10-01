@@ -3,11 +3,9 @@ Delivery and invoice addresses
 ==============================
 
 Companies often have multiple locations, and it is common that a customer invoice should be sent to
-one address and the delivery should be sent to another. Odoo's **Customer Addresses** feature is
-designed to handle this scenario by making it easy to specify which address to use for each case.
-
-.. seealso::
-   :doc:`overview`
+one address and the delivery should be sent to another. Odoo's :doc:`Customer Addresses
+<../../../sales/sales/sales_quotations/different_addresses>` feature is designed to handle this
+scenario by making it easy to specify which address to use for each case.
 
 Configuration
 =============
