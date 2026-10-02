@@ -40,6 +40,9 @@ to the ``data-icon`` attribute:
    Type ``/icons`` in the Odoo Editor to open the :guilabel:`Icons` tab
    directly via the :ref:`Powerbox <reference/frontend/odoo_editor/powerbox>`.
 
+   You can also view the full list of supported icons in the
+   :doc:`material_symbols_odoo_subset` page.
+
 .. image:: icons/media_lib.jpg
    :alt: Odoo Media Dialog
    :width: 630
@@ -2408,3 +2411,8 @@ defined as `<svg>` elements and rendered using QWeb `templates
         </div>
 
    </section>
+
+.. toctree::
+   :titlesonly:
+
+   material_symbols_odoo_subset
