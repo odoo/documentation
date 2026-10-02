@@ -134,6 +134,7 @@ Fiscal localization modules are available for the countries listed below.
 - Slovakia
 - Slovenia
 - South Africa
+- :doc:`South Korea <fiscal_localizations/south_korea>`
 - :doc:`Spain <fiscal_localizations/spain>`
 - Sweden
 - :doc:`Switzerland <fiscal_localizations/switzerland>`
@@ -192,6 +193,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/romania
    fiscal_localizations/saudi_arabia
    fiscal_localizations/singapore
+   fiscal_localizations/south_korea
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/taiwan
