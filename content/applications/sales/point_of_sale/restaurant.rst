@@ -6,42 +6,54 @@ Restaurant features
 
 Odoo Point of Sale provides various features to manage a restaurant or a bar:
 
-- :ref:`Organizing the floor plan <pos/restaurant/floors>`;
-- :ref:`Managing orders <pos/restaurant/orders>`;
-- :ref:`Notifying the kitchen or bar through the POS <pos/restaurant/orders-printing>`;
-- :ref:`Printing and splitting bills <pos/restaurant/bills>`;
-- :ref:`Collecting tips <pos/restaurant/tips>`;
+- :ref:`Organizing the floor plan <pos/restaurant/floors>`.
+- :ref:`Managing orders <pos/restaurant/orders>`.
+- :ref:`Configuring a preparation printer <pos/restaurant/orders-printing>`.
+- :ref:`Splitting bills and printing receipts <pos/restaurant/bills>`.
+- :ref:`Collecting tips <pos/restaurant/tips>`.
 - :ref:`Setting different taxes for eat-in/take-out orders <pos/pricing/taxes>`.
 
 To :ref:`create a restaurant <pos/use/create-pos>` from scratch, go to the :ref:`POS settings
 <pos/use/settings>` and click :guilabel:`+ New Shop`. Enter a name and enable the :guilabel:`Is a
 Bar/Restaurant` setting, then click :guilabel:`Save`.
 
-Three main buttons in the POS interface allow for navigating between tables, the register, and
-orders:
+.. seealso::
+   :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
 
-- :guilabel:`Tables`: Access the :ref:`Floor plan <pos/restaurant/floors>` view to manage table
-  occupancy.
-- :guilabel:`Register`: Access the :ref:`POS register <pos/restaurant/orders>` to process orders.
-- :guilabel:`Orders`: Access the :ref:`overview of all orders <pos/use/orders>`.
+.. _pos/restaurant/interface:
+
+POS interface
+=============
+
+The POS interface opens when a :ref:`register is opened <pos/use/open-register>`. Three main buttons
+at the top of the screen allow navigation between views:
+
+- :guilabel:`Tables`: Opens the :ref:`floor plan <pos/restaurant/floors>` to manage table occupancy.
+- :guilabel:`Register`: Opens the :ref:`POS register <pos/restaurant/orders>` to take and process
+  orders.
+- :guilabel:`Orders`: Displays an :ref:`overview of all orders <pos/use/orders>`.
 
 .. note::
-   When :guilabel:`Booking` is enabled in the :ref:`POS settings <pos/use/settings>`, a
-   :ref:`Booking <pos/restaurant/floors/booking>` button appears in the POS interface to view
-   and manage bookings.
-
-.. seealso::
-   :doc:`restaurant/urban_piper`
+   If :guilabel:`Booking` is enabled in the :ref:`POS settings <pos/use/settings>`, a
+   :guilabel:`Booking` button also appears at the top of the interface to view and manage
+   :ref:`table reservations <pos/restaurant/floors/booking>`.
 
 .. _pos/restaurant/default:
 
 Default start screen
-====================
+--------------------
 
-To define the point of sale's default start screen, go to the :ref:`POS settings
-<pos/use/settings>`, scroll down to the :guilabel:`PoS Interface` section, and set the
-:guilabel:`Default Screen` setting to :guilabel:`Tables` (i.e., :ref:`Floor plan
-<pos/restaurant/floors>` view) or :ref:`Register <pos/restaurant/orders>`.
+The POS can be configured to open either the floor plan or the register directly. After an order
+is sent, users are automatically redirected back to this default view.
+
+To set the default view, go to the :ref:`POS settings <pos/use/settings>`, scroll down to the
+:guilabel:`PoS Interface` section, and select :guilabel:`Tables` (i.e., :ref:`floor plan
+<pos/restaurant/floors>`) or :ref:`Register <pos/restaurant/orders>` under the :guilabel:`Default
+Screen` setting.
+
+.. note::
+   When :guilabel:`Register` is set as the default screen, a new :ref:`direct sales order
+   <pos/restaurant/orders/process>` opens automatically after an order is sent.
 
 .. _pos/restaurant/floors:
 
@@ -50,9 +62,10 @@ Floors and tables
 
 Creating a restaurant from scratch creates a :guilabel:`Floor` in the :guilabel:`Floors & Tables
 Map` setting, under the :guilabel:`Point of Sale` section of the :ref:`POS settings
-<pos/use/settings>`, that is named after the database and automatically assigned to the restaurant.
+<pos/use/settings>`. This floor is named after the company and is automatically assigned to the
+restaurant.
 
-There are two alternatives to create a floor plan:
+There are two ways to create a floor plan:
 
   - Go to the :guilabel:`Point of Sale` section of the :ref:`POS settings <pos/use/settings>`.
     Under :guilabel:`Floors & Tables Map`, type the floor name in the :guilabel:`Floors` field, and
@@ -64,11 +77,12 @@ There are two alternatives to create a floor plan:
    To edit the names of automatically-created floor plans in the backend, go to
    :menuselection:`Point of Sale --> Configuration --> Floor Plans` and click the desired floor
    plan. In the :ref:`frontend <pos/restaurant/edit-floor>`, click the :icon:`fa-pencil`
-   (:guilabel:`Edit Floor`) icon.
+   (:guilabel:`Edit Floor Plan`) icon.
 
-The :guilabel:`Floor plan` view allows for managing restaurant floors and tables and monitoring
-table status in real time (occupancy, reservations, kitchen orders) using the following action
-buttons:
+To access the floor plan, :ref:`open the register <pos/use/open-register>` of a restaurant, and
+ensure you are on the :guilabel:`Tables` view. That view allows for managing restaurant floors and
+tables and monitoring table status in real time (occupancy, reservations, kitchen orders) using the
+following action buttons:
 
 - :icon:`fa-plus` :guilabel:`New Order`: :ref:`Create a direct sales order
   <pos/restaurant/orders/process>` that is not linked to any table. Take the order, click
@@ -84,16 +98,19 @@ buttons:
 .. note::
    - Following the onboarding by selecting the :guilabel:`Restaurant` card automatically creates
      and assigns the :guilabel:`Main Floor` and :guilabel:`Patio` floor plans to the restaurant.
-   - Selecting a table on the :guilabel:`Floor plan` view or accessing it through the
-     :guilabel:`Table Selector` automatically confirms the table's occupancy.
+   - Selecting a table on the floor plan or accessing it through the :guilabel:`Table
+     Selector` automatically confirms the table's occupancy.
+   - To merge tables for a large party, click and hold a table and drag it onto another table. The
+     linked tables share a single order and automatically separate back to their original positions
+     once the order is paid.
    - To order free physical QR codes adapted to the floor plan, activate the :doc:`QR menu
-     <extra/self_order>` setting, then click  :icon:`fa-qrcode` :guilabel:`Get QR Codes` in the
-     :guilabel:`Floor plan` view. This `offer <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_
-     is available worldwide and for all subscription types.
+     <extra/self_order>` setting, then click :guilabel:`Get QR Codes` on the floor plan. This `offer
+     <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_ is available worldwide and for
+     all subscription types.
 
 .. example::
    .. image:: restaurant/floor-plan.png
-      :alt: example of a floor plan view with visual keys to understand it.
+      :alt: example of a floor plan with visual keys to understand it.
       :scale: 90 %
 
    - **Table 1**: The table is occupied.
@@ -109,7 +126,7 @@ buttons:
 Floor plan configuration
 ------------------------
 
-To edit a floor plan from the frontend, open the POS register, access the :ref:`Floor plan view
+To edit a floor plan from the frontend, open the POS register, access the :ref:`Tables view
 <pos/restaurant/default>`, click the :icon:`fa-pencil-square-o` (:guilabel:`Edit Floor Plan`) icon
 in the top-right corner to open the :guilabel:`Floor plan editor`, then customize the plan using
 the relevant buttons:
@@ -118,11 +135,11 @@ the relevant buttons:
   to edit. Additionally, click :icon:`fa-plus` :guilabel:`Add Floor` to create a new one.
 - :guilabel:`Add Table`: Select the table shape among :guilabel:`Square`, :guilabel:`Rectangular`,
   :guilabel:`Round`, and :guilabel:`Oval`.
-- :guilabel:`Add Decor`: Customize the :guilabel:`Floor plan` with :guilabel:`Walls`,
-  :guilabel:`Images`, and :guilabel:`Shapes`.
+- :guilabel:`Add Decor`: Customize the floor plan with :guilabel:`Walls`, :guilabel:`Images`, and
+  :guilabel:`Shapes`.
 - :icon:`fa-pencil` (:guilabel:`Edit Floor`): Change the floor's :guilabel:`Name`, select a
   :guilabel:`Background`, or click :guilabel:`Set a Background Image` to upload your own. To delete
-  the :guilabel:`Floor plan`, click :guilabel:`Delete Floor`.
+  the floor, click :guilabel:`Delete Floor`.
 
 Click an existing table or decor to perform additional actions:
 
@@ -152,7 +169,7 @@ The following table and decor editing tools are available. To discard all change
          * - :guilabel:`Corner rounding` / :guilabel:`Size` / :guilabel:`Thickness`
            - Adjust the slider using the cursor.
          * - :guilabel:`Layers`
-           - Arrange the order within the :guilabel:`Floor plan`. Send backward or move forward.
+           - Arrange the order within the floor plan. Send backward or move forward.
          * - :guilabel:`Number of Seats`
            - Click :icon:`fa-plus` the (:guilabel:`plus`) or :icon:`fa-minus` (:guilabel:`minus`)
              icons to increase or decrease the number of seats.
@@ -168,17 +185,15 @@ The following table and decor editing tools are available. To discard all change
            - Enter a text and click :guilabel:`Apply`.
 
 .. warning::
-   Removing a :guilabel:`Table`, :guilabel:`Decor`, or the whole :guilabel:`Floor plan` is
-   permanent.
+   Removing a :guilabel:`Table`, :guilabel:`Decor`, or the whole floor plan is permanent.
 
 .. note::
    To revert the last change or reapply the last undone change, click the :icon:`fa-undo`
    (:guilabel:`undo`) or :icon:`fa-repeat` (:guilabel:`redo`) icons.
 
 .. tip::
-   To get a simpler :guilabel:`Floor plan` view, click the :icon:`fa-bars` (:guilabel:`hamburger`)
-   menu, then :guilabel:`Switch Floor View`. Repeat this action to get back to the customizable
-   view.
+   To get a simpler :guilabel:`Tables` view, click the :icon:`fa-bars` (:guilabel:`hamburger`) menu,
+   then :guilabel:`Switch Floor View`. Repeat this action to get back to the customizable view.
 
 .. _pos/restaurant/floors/booking:
 
@@ -211,13 +226,13 @@ To enable and configure bookings, follow these steps:
 .. important::
    To ensure that only existing resources can be booked for a specific point of sale, set the
    :guilabel:`Book` field to :guilabel:`Resources` in the :guilabel:`Appointment type` form and
-   select tables. Then, enable :guilabel:`Manage Capacities` to define the maximum amount each
-   resource can handle.
+   select tables. Then, enable :guilabel:`Group Bookings` to ensure the maximum capacity does
+   not exceed the combined capacity of the selected resources.
 
 .. tip::
    To accommodate a booking that exceeds the capacity of a single table, click the :icon:`fa-cubes`
    (:guilabel:`Resources`) icon in the :guilabel:`Appointment Type` form, select a table, and add
-   additional tables in the :guilabel:`Linked Resource` field to merge them.
+   additional tables in the :guilabel:`Linked Resource` field to merge them when necessary.
 
 .. seealso::
    :doc:`/applications/productivity/appointments`
@@ -229,16 +244,18 @@ Booking management
 
 To manage table bookings from the POS interface, click :guilabel:`Booking`, then:
 
-- Click :guilabel:`New` to create a booking. Add a name, the date and time, number of guests, phone
-  number, duration, :ref:`resources <appointments/resources>`, and comments, then click
-  :guilabel:`Save`.
-- Click a booking to :guilabel:`Edit` or :guilabel:`Delete` it. Click a stage name (e.g.,
-  :guilabel:`Booked`, :guilabel:`Checked-In`, or :guilabel:`No Show`), or drag the booking card to
-  the relevant stage.
+- Click :guilabel:`New` to create a booking. Fill in the booking details (booking name, date and
+  time, party size, :ref:`resources <appointments/resources>`), customer details (customer, phone
+  number), add the booking to the user's calendar, and any extra notes, then click :guilabel:`Save`.
+- Click an existing booking to :guilabel:`Edit` or :guilabel:`Delete` it, or to update its stage
+  (e.g., :guilabel:`Booked`, :guilabel:`Check In`, or :guilabel:`No Show`).
+- Alternatively, update a booking stage from the kanban view by clicking the :icon:`oi-view-kanban`
+  icon (:menuselection:`Kanban View`) and dragging the booking card to the relevant stage.
 
 .. tip::
-   To quickly edit a booking from the :ref:`Floor plan <pos/restaurant/floors>` view, click the
-   booking notification on the booked table.
+   To quickly reassign a booking from the :ref:`Tables <pos/restaurant/floors>` view, click and hold
+   the booking notification on the booked table, then select the new table. If a party exceeds
+   a single table's capacity, multiple tables can be selected to seat the entire group.
 
 .. _pos/restaurant/orders:
 
@@ -260,27 +277,23 @@ To process an order from the POS register, follow these steps:
 #. Define how the order is handled:
 
    - Click :guilabel:`Set Table` to link the order to a table. Enter a table number and click
-     :guilabel:`Assign`, or click :guilabel:`Plan` to return to the :guilabel:`Floor plan` view and
+     :guilabel:`Assign`, or click :guilabel:`Plan` to return to the :guilabel:`Tables` view and
      manually select a table.
    - Click :guilabel:`Set Tab` to enter the open order's name and click :guilabel:`Apply`.
 
 #. Click :guilabel:`Send` to validate the order.
 #. When ready, :ref:`process the order payment <pos/restaurant/bills/payment>`.
 
-.. note::
-   Clicking :guilabel:`Send` redirects to the :ref:`Floor plan <pos/restaurant/floors>` view if
-   :guilabel:`Tables` is selected as the :ref:`default start screen <pos/restaurant/default>`.
-
 .. tip::
-   - To cancel an order, click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then
-     :guilabel:`Cancel Order`. If an :ref:`order printer is configured
+   - To cancel an ongoing order, click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then
+     :icon:`fa-trash` :guilabel:`Cancel Order`. If an :ref:`order printer is configured
      <pos/restaurant/orders-printing>`, a cancellation ticket is automatically printed for an
      order sent to the kitchen.
-   - After selecting a table in the :ref:`Floor plan <pos/restaurant/floors>` view, click
+   - After selecting a table in the :ref:`Tables <pos/restaurant/floors>` view, click
      :guilabel:`Release table` in the cart to cancel the table's occupancy. This action is
      available when the cart is empty.
-   - :ref:`Configure a printer <pos/restaurant/orders-printing>` to send an order to the kitchen
-     printer when clicking :guilabel:`Send`.
+   - :ref:`Configure an order printer <pos/restaurant/orders-printing>` or a :doc:`preparation
+     display <extra/preparation>` to send an order to the kitchen when clicking :guilabel:`Send`.
    - Use :doc:`presets <extra/presets>` when offering different service types, e.g., :guilabel:`Dine
      In`, :guilabel:`Takeout`, or :guilabel:`Delivery`.
    - If the order is a direct sale not linked to any table, its name can be modified by clicking the
@@ -288,8 +301,7 @@ To process an order from the POS register, follow these steps:
      :guilabel:`Edit Order Name`.
 
 .. seealso::
-   - :doc:`extra/preparation`
-   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -297,8 +309,9 @@ Order transfer
 --------------
 
 To transfer an order to another table from the :ref:`POS register <pos/restaurant/orders>`, click
-the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then :guilabel:`Transfer/Merge`, and choose
-the target table in the :ref:`Floor plan <pos/restaurant/floors>` view:
+the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then :icon:`oi-arrow-right`
+:guilabel:`Transfer/Merge`, and choose the target table in the :ref:`Tables <pos/restaurant/floors>`
+view:
 
    - Select an available table to transfer customers and their orders.
    - Select an occupied table to merge customers and their orders.
@@ -445,7 +458,8 @@ Bill splitting
 
 To split a bill from the :ref:`POS register <pos/restaurant/orders>`, follow these steps:
 
-#. Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then :guilabel:`Split`.
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then :icon:`fa-files-o`
+   :guilabel:`Split`.
 #. Select at least one product and perform one of the following actions:
 
    - :guilabel:`Payment`: Process the direct payment for the selected product(s).
@@ -483,15 +497,18 @@ these steps:
 Receipt printing
 ----------------
 
-To allow receipt printing, go to :menuselection:`Point of Sale --> Configuration --> Settings`, and
-enable :guilabel:`Early Receipt Printing` under the :guilabel:`Point of Sale` section.
+To allow receipt printing for ongoing orders, go to :menuselection:`Point of Sale --> Configuration
+--> Settings`, and enable :guilabel:`Early Receipt Printing` under the :guilabel:`Point of Sale`
+section. Then, from the :ref:`POS register <pos/restaurant/orders>`, click the :icon:`fa-ellipsis-v`
+(:guilabel:`Actions`) icon and select :icon:`fa-print` :guilabel:`Bill` to print the pro forma
+receipt.
 
 After a successful :ref:`order payment <pos/restaurant/bills/payment>`, click :icon:`fa-print`
 :guilabel:`Print` to generate and print a bill.
 
 .. important::
-   If a printer is :doc:`configured and linked <hardware_network/receipt_printers>` to a point of sale,
-   the receipt is automatically printed upon payment confirmation.
+   If a printer is :doc:`configured and linked <hardware_network/receipt_printers>` to a point of
+   sale, the receipt is automatically printed upon payment confirmation.
 
 .. seealso::
    :doc:`use/receipts`
@@ -537,10 +554,11 @@ To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, follow th
 #. Click :guilabel:`Validate`.
 
 .. tip::
-   If the order and the tip are paid using different payment methods, select a :doc:`payment method
-   <payment_methods>` for the order first. Then, select a payment method for the tip, click
-   :icon:`fa-heart` :guilabel:`Tip`, add the tip amount, and click :guilabel:`Confirm`.
-   Finally, :guilabel:`Validate` the payment.
+   - The currency symbol reflects your company's configured currency.
+   - If the order and the tip are paid using different payment methods, select a :doc:`payment
+     method <payment_methods>` for the order first. Then, select a payment method for the tip, click
+     :icon:`fa-heart` :guilabel:`Tip`, add the tip amount, and click :guilabel:`Confirm`. Finally,
+     :guilabel:`Validate` the payment.
 
 .. _pos/restaurant/tips-after-payment:
 
