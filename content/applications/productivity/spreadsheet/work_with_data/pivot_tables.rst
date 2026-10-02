@@ -109,14 +109,9 @@ which can be edited:
 
 .. _spreadsheet/pivot-tables/properties-id:
 
-- :guilabel:`Pivot #`: the pivot table ID.
-
-  .. note::
-     A pivot table retains its ID for the lifetime of the spreadsheet. As well as being referenced
-     at the top of the properties panel, this ID also identifies the pivot table in the
-     :guilabel:`Data` menu. Pivot table IDs are assigned sequentially as additional pivot tables are
-     inserted into the spreadsheet.
-
+- :guilabel:`Pivot #`: the pivot table ID, which is used to identify the pivot table for the
+  lifetime of the spreadsheet. Pivot table IDs are assigned sequentially as additional pivot tables
+  are inserted into the spreadsheet.
 - :guilabel:`Name`: the name of the pivot table. Edit the name if needed. Note that editing the name
   in the pivot table properties does not modify the sheet name, and vice versa.
 - :guilabel:`Range`: for a pivot table created from a range of data, the range used. Edit the range
@@ -134,17 +129,17 @@ which can be edited:
   view or inserted directly from the spreadsheet, the rules used to determine which Odoo records
   are shown. Click :guilabel:`Edit domain` to add or edit rules.
 
-  .. note::
-     When referencing dynamic Odoo data in a pivot table and using :doc:`global filters
-     <global_filters>`, this domain is combined with the selected values of the global filter before
-     the data is loaded into the spreadsheet.
-
 To :ref:`prevent real-time updates <spreadsheet/pivot-tables/properties-defer-updates>` while
 building or manipulating a pivot table, enable :guilabel:`Defer updates`.
 
 To duplicate or delete *the data source* of a pivot table, click the :icon:`fa-cog`
 :guilabel:`(gear)` icon at the top of the properties panel, then :icon:`fa-clone`
 :guilabel:`Duplicate` or :icon:`fa-trash` :guilabel:`Delete` as relevant.
+
+  .. note::
+     When referencing dynamic Odoo data in a pivot table and using :doc:`global filters
+     <global_filters>`, this domain is combined with the selected values of the global filter before
+     the data is loaded into the spreadsheet.
 
 .. seealso::
    - :ref:`Duplicate a pivot table <spreadsheet/pivot-tables/duplicate>`
