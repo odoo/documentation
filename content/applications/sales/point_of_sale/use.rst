@@ -25,19 +25,22 @@ Grant specific access levels to waiters, managers, and other POS employees to pr
 and align permissions with daily employee responsibilities. The access rights levels work as
 follows:
 
-- **Employee** (without a :doc:`database user <../../general/users>`): Employees can perform
-  POS actions based on the access level :doc:`granted in the POS settings <extra/employee_login>`.
-  Employees can have :guilabel:`Minimal rights`, :guilabel:`Basic rights`, or :guilabel:`Advanced
-  rights`, with each level providing more access to the POS register. Employees without a linked
-  database user can use the POS register only after a database user opens the POS register.
+- **Employee** (without a :doc:`database user <../../general/users>` or :ref:`with a light database
+  user <access-rights/manage-roles>`): Employees can perform POS actions based on the access level
+  :doc:`granted in the POS settings <extra/employee_login>`. Employees can have
+  :guilabel:`Supervised`, :guilabel:`Restrictive`, :guilabel:`Cashier`, or :guilabel:`Manager`
+  access rights, with each level providing more access to the POS register. Employees without a
+  linked database user or with a linked light user can use the POS register only after a database
+  user opens the POS register.
 - **Employee** (with a :doc:`database user <../../general/users>`): Employees with a database user
-  have the same access rights as employees without a database user, unless they have been added to
-  the :guilabel:`User` :ref:`access group <access-rights/user-permissions>` of the :guilabel:`Point
-  of Sale` app. The :guilabel:`User` access group grants access to most POS features, including
-  parts of the POS backend (such as the :guilabel:`Dashboard`, :guilabel:`Orders`, and
-  :guilabel:`Products` menus), and allows users to open, close, and operate the POS register.
-  To restrict the POS register access of an employee who is part of the :guilabel:`User` access
-  group, add the employee to the appropriate :doc:`employee group <extra/employee_login>`.
+  have the same access rights as employees without a database user or employees with a light
+  database user, unless they have been added to the :guilabel:`User` :ref:`access group
+  <access-rights/user-permissions>` of the :guilabel:`Point of Sale` app. The :guilabel:`User`
+  access group grants access to most POS features, including parts of the POS backend (such as the
+  :guilabel:`Dashboard`, :guilabel:`Orders`, and :guilabel:`Products` menus), and allows users to
+  open, close, and operate the POS register. To restrict the POS register access of an employee who
+  is part of the :guilabel:`User` access group, add the employee to the appropriate :doc:`employee
+  group <extra/employee_login>`.
 - **Manager**: A manager is a :doc:`database user <../../general/users>` who has been added to the
   :guilabel:`Administrator` :ref:`access group <access-rights/user-permissions>` of the
   :guilabel:`Point of Sale` app. Managers can access all POS features, including the :ref:`POS
@@ -162,10 +165,9 @@ customer.
 To move on to the next order, click :guilabel:`New Order` on the payment confirmation screen.
 
 .. note::
-   To allow only users with :guilabel:`Administrator` :ref:`access to the Point of Sale
-   <pos/use/access-rights>` to modify product prices in the POS register, navigate to the :ref:`POS
-   settings <pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, activate
-   :guilabel:`Price Control`, and click :guilabel:`Save`.
+   To allow only :ref:`POS Managers <pos/use/access-rights>` to modify product prices in the POS
+   register, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the
+   :guilabel:`Pricing` section, activate :guilabel:`Price Control`, and click :guilabel:`Save`.
 
 .. seealso::
    :doc:`Issue invoices for registered customers <use/pos_invoices>`
