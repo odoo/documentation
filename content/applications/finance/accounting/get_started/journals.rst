@@ -26,11 +26,11 @@ click :guilabel:`Configuration`. Alternatively, go to :menuselection:`Accounting
 While different journal types have slightly different fields to configure, some fields are
 consistent across all the journal types:
 
-- :guilabel:`Short Code`: Each journal must have a unique code (from 1 to 5 characters long). The
-  short code is used as the prefix for all journal entries belonging to this journal.
-- :guilabel:`Currency`: If desired, set the currency of this journal. For bank and cash journals,
-  this is the currency of the journal's :doc:`transactions <../bank/transactions>`. This field is
-  only visible when :doc:`multiple currencies <multi_currency>` are enabled.
+- :guilabel:`Sequence Prefix`: Each journal must have a unique code (from 1 to 5 characters long).
+  The short code is used as the prefix for all journal entries belonging to this journal.
+- :guilabel:`Currency`: If no currency is selected, journal items of any currency can target this
+  account. Selecting a currency restricts the journal items targeting the account to that currency,
+  regardless of the currency used on the original invoice or payment request.
 
 The :guilabel:`Advanced Settings` tab contains more technical options:
 
