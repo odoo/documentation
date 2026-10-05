@@ -140,6 +140,7 @@ Once a localization has been installed, configure the following fields:
 .. seealso::
    - :doc:`payroll/contracts`
    - :doc:`payroll/salaries`
+   - :doc:`payroll/salary_rules`
    - :doc:`payroll/work_entries`
    - :doc:`payroll/working_schedules`
    - :doc:`payroll/time_off_to_report`
@@ -156,6 +157,7 @@ Once a localization has been installed, configure the following fields:
 
    payroll/contracts
    payroll/salaries
+   payroll/salary_rules
    payroll/work_entries
    payroll/working_schedules
    payroll/time_off_to_report
