@@ -8,8 +8,8 @@ begin only after the preceding tasks are completed.
 
 To use task dependencies in a project, go to :guilabel:`Project`, click the :icon:`fa-ellipsis-v`
 (:guilabel:`vertical ellipsis`) icon on one of your projects, and click on :guilabel:`Settings`.
-Click on the :guilabel:`Settings`. Click on the :guilabel:`Settings` tab, look for :guilabel:`Tasks
-Management` and make sure :guilabel:`Task Dependencies` is enabled.
+Click on the :guilabel:`Settings` tab, look for :guilabel:`Tasks Management` and make sure
+:guilabel:`Task Dependencies` is enabled.
 
 Set task dependencies
 =====================
