@@ -40,10 +40,6 @@ To link the printer with Point of Sale, follow the next steps:
 #. Type the printer's IP address in the dedicated field.
 #. Click :guilabel:`Save`.
 
-Enable :doc:`pos_lna` to allow Point of Sale to communicate directly with the printer on the
-same network. Alternatively, once the printer is connected to Odoo, ensure the connection is
-secure and reliable by generating a :ref:`self-signed certificate <pos/epos-ssc/certificate>`.
-
 .. note::
    Leave the IP address field empty if using an :ref:`iMin POS device
    <pos/epos-printers/imin-printer>`, as these devices do not provide an IP address.
@@ -69,6 +65,27 @@ compatible.
    - When using :doc:`Local Network Access (LNA) <pos_lna>`, the printer must have a **static
      IP address**; otherwise, it may become unreachable. The static IP should be configured
      through the router.
+
+.. _pos/epos-printers/lna:
+
+Local Network Access requisite
+------------------------------
+
+It is recommended to activate :doc:`pos_lna` instead of generating a :ref:`self-signed certificate
+<pos/epos-ssc/certificate>` to allow the communication between Odoo's web browser app and the
+printer. Before activating Local Network Access, follow these steps:
+
+#. Open the browser, type the printer's IP address in the search bar (e.g., `https://192.168.1.25`),
+   and press `Enter`.
+#. On the security warning page, click :guilabel:`Advanced`, then :guilabel:`Proceed to [IP address]
+   (unsafe)` to force the connection.
+#. On the EPSON platform, click :guilabel:`Advanced Settings`, then :guilabel:`Administrator Login`
+   to log in to the printer's homepage.
+#. Type the initial password located at the back of the printer in the :guilabel:`Current Password`
+   field, then press `Enter`.
+#. Go to :menuselection:`Print --> Secure Printing` and tick the :guilabel:`Disable` option.
+#. Go to :menuselection:`Network Security --> SSL/TLS --> Basic` and tick the :guilabel:`Disable`
+   option.
 
 .. _pos/epos-printers/imin-printer:
 
