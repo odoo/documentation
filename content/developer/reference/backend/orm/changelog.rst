@@ -4,6 +4,13 @@
 Changelog
 =========
 
+Odoo Online version 20.1
+========================
+
+- Refactor of ``unlink``. No more invalidation of everything. The ORM performs
+  ``ondelete`` to keep cache consistent in `#237614 <https://github.com/odoo/odoo/pull/237614>`_.
+  We even do it for ``Many2oneReference`` fields in `#292869 <https://github.com/odoo/odoo/pull/292869>`_.
+
 Odoo version 20.0
 =================
 
