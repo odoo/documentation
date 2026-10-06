@@ -50,8 +50,7 @@ Configuration for service rental products, both physical and non-physical, requi
 materials and roles <rental/service_products/materials-and-roles>` in the **Planning** app before
 creating the product.
 
-Non-physical service products also require the **Timesheets** app to accurately track services that
-use time-based pricing rates. For non-physical service products, :ref:`configure employee roles
+For non-physical service products, :ref:`configure employee roles
 <rental/labor_service_products/configure-employee-roles>` in the **Planning** app before creating
 the product.
 
@@ -122,11 +121,8 @@ Pick up a rental product and a rental service
    <rental/pickup_return/configuration>` to see the necessary app installations and settings.
 
 When a physical rental product is rented alongside a service, it is advised to pick it up before
-entering time on the associated task (if applicable).
-
-If time is entered on the *Timesheets* tab of an associated task before the physical rental product
-is picked up, the rental order automatically displays a :guilabel:`Picked-up` badge; however, the
-:guilabel:`Pickup` button remains available on the rental order.
+:ref:`entering time on the employee shift <rental/create_rental_order/time-for-employee-shift>`, if
+applicable.
 
 .. _rental/pickup_return/return:
 
