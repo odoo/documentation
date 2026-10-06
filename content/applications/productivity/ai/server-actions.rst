@@ -25,6 +25,8 @@ It interprets the |AI| prompt. And it decides which tool to call, and what argum
 The server action does not enforce business rules, modify records directly, or guarantee the
 correctness of the operation. Its role is limited to decision-making.
 
+.. _ai/server-actions/tools:
+
 AI tool: the worker
 ~~~~~~~~~~~~~~~~~~~
 
