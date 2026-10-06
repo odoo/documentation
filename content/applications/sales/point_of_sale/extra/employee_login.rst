@@ -19,30 +19,46 @@ To configure access levels for a point of sale, follow these steps:
 #. Scroll down to the :guilabel:`PoS Interface` section.
 #. Enable :guilabel:`Log in with Employees`.
 #. Click :guilabel:`Save`.
-#. Return to the :guilabel:`Log in with Employees` setting and complete the following fields:
+#. Return to the :guilabel:`Log in with Employees` setting and add employees to the following
+   fields:
 
-   - :guilabel:`Advanced rights`: Add the employees with **extended POS functionality** access.
-   - :guilabel:`Basic rights`: Add the employees with **basic POS functionality** access.
-   - :guilabel:`Minimal rights`: Add the employees with **minimal POS functionality** access.
-
-.. note::
-   - Leaving the :guilabel:`Minimal rights` and :guilabel:`Basic rights` fields empty allows all
-     employees to log in.
-   - Leaving the :guilabel:`Advanced rights` field empty grants extended rights to Odoo *users*
-     only.
+   - :guilabel:`Supervised`
+   - :guilabel:`Restrictive`
+   - :guilabel:`Cashier`
+   - :guilabel:`Manager`
 
 .. tabs::
-   .. tab:: Minimal rights
+   .. tab:: Supervised
 
-      Employees with minimal rights can perform the following POS-related actions:
+      Employees with supervised rights can perform the following POS-related actions:
 
       **Register management:**
 
       - Lock and unlock an open POS register.
       - Reload data.
-      - Generate, download and print :ref:`POS reports <pos/analytics>`.
       - Enable :doc:`../hardware_network/pos_lna`.
       - Access the :ref:`orders overview <pos/use/orders>` to search and filter orders.
+
+      **Sales transactions:**
+
+      - :ref:`Add products to orders and set product quantities <pos/use/sell>`.
+      - :ref:`Scan barcodes <pos/shop/barcodes>`.
+      - :ref:`Add notes to orders <pos/use/notes>`.
+      - :ref:`View product information <pos/products/information-display>`.
+      - :ref:`Apply presets to orders <extra/presets/apply-presets>`.
+
+      **Bookings:**
+
+      - :ref:`Reschedule bookings and update booking stages
+        <pos/restaurant/floors/booking/management>`.
+
+   .. tab:: Restrictive
+
+      In addition to the supervised rights, employees with restrictive rights can also:
+
+      **Register management:**
+
+      - :ref:`Open the customer display <pos/hardware_network/open-display>`.
       - Print or reprint :doc:`invoices <../use/pos_invoices>` and :doc:`receipts <../use/receipts>`
         in the orders overview.
 
@@ -50,24 +66,27 @@ To configure access levels for a point of sale, follow these steps:
 
       - :ref:`Process standard sales transactions <pos/use/sell>`.
       - :ref:`Assign customers <pos/use/customers>`.
-      - :ref:`Add notes to orders <pos/use/notes>`.
+      - :ref:`Generate invoices from the POS register <pos/invoices/generate-payment>`.
+      - :doc:`Update restaurant orders that have been sent to the kitchen <../restaurant>`.
 
-      **Pricing and discounts:**
+   .. tab:: Cashier
 
-      - :ref:`Enter promotional codes <pos/pricing/loyalty/codes>`.
-
-   .. tab:: Basic rights
-
-      In addition to the minimal rights, employees with basic rights can also:
+      In addition to the restrictive rights, employees with cashier rights can also:
 
       **Register management:**
 
       - :ref:`Open the POS register <pos/use/open-register>`.
       - :ref:`Perform cash-in and cash-out operations <pos/use/cash-register>`.
+      - Install the POS Progressive Web App.
 
       **Sales transactions:**
 
-      - :ref:`Create customers <pos/use/customers>`.
+      - :ref:`Create and edit customers <pos/use/customers>`.
+      - :doc:`Use the Customer Account payment method <../payment_methods/customer_credit>`.
+      - :ref:`Split bills <pos/restaurant/bills/splitting>`.
+      - :ref:`Favorite products and view product margins and costs
+        <pos/products/information-display>`.
+      - :ref:`Reorganize the product selector <pos/use/open-register>`.
       - :ref:`Process refunds <pos/use/refund>`.
       - :ref:`Settle sales orders <pos/shop/so>` from the POS interface.
       - Cancel orders.
@@ -76,21 +95,36 @@ To configure access levels for a point of sale, follow these steps:
 
       - Manually select another :ref:`pricelist <pos/pricing/pricelists>`.
       - :ref:`Manually apply discounts <pos/pricing/discounts>`.
-      - Manually :ref:`change a product's price <pos/use/sell>`.
+      - Manually :ref:`change a product's price <pos/use/sell>`. :ref:`Activate the Price Control
+        setting <pos/use/sell>` to allow only :ref:`POS Managers <pos/use/access-rights>` to change
+        the price.
       - :ref:`Give loyalty program's rewards <pos/pricing/loyalty>`.
+      - :ref:`Use gift cards and eWallets <pos/pricing/giftcards_ewallet>`.
       - Switch between :ref:`fiscal positions <pos/pricing/taxes>`.
 
-   .. tab:: Advanced rights
+      **Bookings:**
 
-      In addition to the minimal and basic rights, employees with advanced rights can also:
+      - :ref:`Create, edit, and cancel bookings <pos/restaurant/floors/booking/management>`.
 
-      - :doc:`Create products <../products>`.
+   .. tab:: Manager
+
+      In addition to the cashier rights, employees with manager rights can also:
+
+      - :doc:`Create and edit products <../products>`.
+      - Edit the payments of paid orders.
       - Access the Odoo backend interface.
       - :ref:`Close the current POS register <pos/use/register-close>`.
+      - Generate, download, and print :ref:`POS reports <pos/analytics>`.
 
       .. note::
-         An employee with advanced POS rights who is not a database user cannot access the backend
-         or create products.
+         An employee with :guilabel:`Manager` rights who is not a :ref:`database user
+         <pos/use/access-rights>` cannot access the backend, the reports, or create products.
+
+.. note::
+   - When :guilabel:`Log in with Employees` is enabled, only employees added to the
+     :guilabel:`Supervised`, :guilabel:`Restrictive`, :guilabel:`Cashier`, or :guilabel:`Manager`
+     fields can log in to the POS register.
+   - :ref:`POS managers <pos/use/access-rights>` can only be added to the :guilabel:`Manager` field.
 
 .. seealso::
    :doc:`/applications/general/users/access_rights`
