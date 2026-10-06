@@ -18,11 +18,14 @@ To create an automation rule with **Odoo Studio**:
 #. Give the automation rule a clear, meaningful name that identifies its purpose.
 #. Select the :ref:`Trigger <studio/automated-actions/trigger>` and, if necessary, fill in the
    fields that appear on the screen based on the chosen trigger.
-#. Click :ref:`Add an action <studio/automated-actions/action>` in the :guilabel:`Actions To Do`
-   tab.
-#. Select the :guilabel:`Type` of action and complete the relevant fields based on the chosen
-   action.
-#. Click :guilabel:`Save & Close` or, to define additional actions, :guilabel:`Save & New`.
+#. To define the actions to be executed:
+
+   - :ref:`add actions manually <studio/automated-actions/action>` via the :guilabel:`Add an action`
+     button in the :guilabel:`Actions To Do` tab; or
+   - select an :doc:`AI Agent <../../applications/productivity/ai/agents>`, then provide
+     :guilabel:`Instructions` that explain the desired action(s) to execute or outcome(s) to
+     achieve. To insert fields from the model in the instructions, type `/` to access the
+     :guilabel:`Field Selector`.
 
 .. example::
 
@@ -34,8 +37,10 @@ To create an automation rule with **Odoo Studio**:
       :scale: 90%
 
 .. tip::
-   - Use the :guilabel:`Notes` tab to document the purpose and functioning of automation rules. This
-     makes rules easier to maintain and facilitates collaboration between users.
+   - Use the :guilabel:`Notes` tab to document the overall purpose and functioning of an automation
+     rule. This makes rules easier to maintain and facilitates  collaboration between users.
+     Information about individual actions can also be added to an action's :guilabel:`Explanation`
+     tab.
    - To modify the :doc:`model <models_modules_apps>` targeted by the automation rule, switch models
      before clicking :guilabel:`Automations` in Studio, or :ref:`activate developer mode
      <developer-mode>`, create or edit an automation rule, and select the :guilabel:`Model` in the
@@ -282,23 +287,27 @@ defined, it needs to be implemented in the external system.
 Actions
 =======
 
-Once you have defined the automation rule's :ref:`trigger <studio/automated-actions/trigger>`,
-click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define the action(s) to be
-executed.
+Once you have defined the automation rule's :ref:`trigger <studio/automated-actions/trigger>`, add
+one or more actions to be executed as follows:
+
+#. Click :ref:`Add an action <studio/automated-actions/action>` in the :guilabel:`Actions To Do`
+   tab.
+#. Select the :guilabel:`Type` of action and complete the relevant fields based on the chosen
+   action.
+#. Click :guilabel:`Save & Close` or, to define additional actions, :guilabel:`Save & New`.
 
 .. tip::
-   - If no explicit name is entered, the name of the action will be automatically generated based
-     on the action you define; the name can be updated at any time.
-   - You can define multiple actions for the same automation rule. By default, actions are executed
-     in the order in which they were defined.
+   Multiple actions can be defined for the same automation rule. By default, actions are executed
+   in the order in which they were defined.
 
-     This means, for example, that if you define an :guilabel:`Update record` action and then a
-     :guilabel:`Send email` action where the email references the field that was updated, the email
-     uses the updated values. However, if the :guilabel:`Send email` action is defined before the
-     :guilabel:`Update record` action, the email uses the values set *before* the record is updated.
+   .. example::
+      If you define an :guilabel:`Update record` action and then a :guilabel:`Send email` action
+      where the email references the field that was updated, the email uses the updated values.
+      However, if the :guilabel:`Send email` action is defined before the :guilabel:`Update
+      record` action, the email uses the values set *before* the record is updated.
 
-     To change the order of defined actions, click the :icon:`oi-draggable` :guilabel:`(drag handle)`
-     icon beside an action and drag it to the desired position.
+   To change the order of defined actions, click the :icon:`oi-draggable` :guilabel:`(drag
+   handle)` icon beside an action and drag it to the desired position.
 
 .. _studio/automated-actions/action-update-record:
 
@@ -318,7 +327,7 @@ To define the action:
 
 #. With the :guilabel:`Update`, :guilabel:`Update with AI`, :guilabel:`Sequence` or
    :guilabel:`Compute` option selected, as relevant, select or search for the field to be updated or
-   computed. If needed, click the :icon:`oi-chevron-right` :guilabel:`(right arrow)` next to the
+   computed. If needed, click the :icon:`fa-chevron-right` :guilabel:`(right arrow)` next to the
    field name to access the list of related fields.
 #. Provide the relevant information based on the option selected.
 
@@ -347,6 +356,9 @@ Enter a prompt to instruct Odoo AI how to update the field. Type `/` to open the
 prompt tools`; use :guilabel:`Field Selector` to tell Odoo AI which related fields to check for
 context, and :guilabel:`Records Selector` to provide possible values for the updated field.
 
+Optionally, explain the rationale and/or functioning of the automation rule in the
+:guilabel:`Explanation` tab
+
 .. example::
    If you want the automation rule to update the :guilabel:`Assignees` field of a newly created
    task based on the employees' expertise, you can write a prompt to instruct Odoo AI to check
@@ -362,7 +374,7 @@ Sequence
 
 Select an existing sequence or, to create a new sequence:
 
-#. Click :guilabel:`Search more`, then click :guilabel:`New`.
+#. Click :guilabel:`Search more`, then click :guilabel:`Create New`.
 #. In the window that opens, enter the :guilabel:`Name` of the sequence.
 #. In the :guilabel:`Sequence` tab, configure the sequence:
 
@@ -386,7 +398,7 @@ Select an existing sequence or, to create a new sequence:
 #. Click :guilabel:`Save`.
 
 .. example::
-   If you want the automated action to create a sequential customer reference each time a new
+   To configure an automated action that creates a sequential customer reference each time a new
    customer is created, set the :guilabel:`Sequence` field to :guilabel:`Reference`, then, in the
    dropdown, click :guilabel:`Search more`. Click :guilabel:`New` to create a new sequence.
 
@@ -401,12 +413,12 @@ Select an existing sequence or, to create a new sequence:
 Compute
 ~~~~~~~
 
-Enter the code to be used for computing the field's value.
+Enter the Python expression to be used to compute the field's value.
 
 .. example::
-   If you want the automation rule to compute a custom :ref:`datetime field
+   To configure an automation rule to compute a custom :ref:`datetime field
    <studio/fields/simple-fields-date-time>`, :guilabel:`Escalated on`, when a task's priority is set
-   to `Very high` (three stars), you can define the trigger :guilabel:`Priority is set to` to `Very
+   to `Very high` (three stars), define the rule's trigger to :guilabel:`Priority is set to` to `Very
    High` and define the :guilabel:`Update Record` action as follows:
 
    .. image:: automated_actions/update-record-compute.png
@@ -437,7 +449,7 @@ To define the action:
    :ref:`many2one field <studio/fields/relational-fields-many2one>` on the target model.
 
 .. example::
-   If you want the automation rule to duplicate a project, e.g. a project template with predefined
+   To configure an automation rule to duplicate a project, e.g. a project template with predefined
    tasks, when an opportunity is set to `Won`, add a custom `Related opportunity` :ref:`many2one
    field <studio/fields/relational-fields-many2one>` field on the *Project* model and a custom
    `Related project` :ref:`one2many field <studio/fields/relational-fields-one2many>` field on the
@@ -448,35 +460,40 @@ To define the action:
       :scale: 80%
 
 .. tip::
-   You can create another automation rule with :ref:`studio/automated-actions/action-update-record`
-   actions to update the fields of the new or duplicated record if necessary. For example, you can
-   use a :guilabel:`Create Record` action to create a new project task and then assign it to a
-   specific user using an :guilabel:`Update Record` action.
+   Another automation rule with :ref:`studio/automated-actions/action-update-record`
+   actions can be created to update the fields of the new or duplicated record if necessary. For
+   example, you can use a :guilabel:`Create Record` action to create a new project task and then
+   assign it to a specific user using an :guilabel:`Update Record` action.
 
 .. _studio/automated-actions/action-create-activity:
 
 Create Activity
 ---------------
 
-This action is used to schedule a new activity linked to the record.
+This action is used to schedule a new activity or, where relevant, an :ref:`activity plan
+<crm/activity-plans>`, linked to the record.
 
 To define the action:
 
 #. With :guilabel:`Create Activity` selected as the :guilabel:`Type` of action, select the
-   appropriate :guilabel:`Activity Type` from the dropdown menu.
-#. Enter a :guilabel:`Title`.
+   appropriate :guilabel:`Activity Plan` or :guilabel:`Activity Type`.
 #. Indicate by when the activity should be completed by specifying a number of :guilabel:`Days`,
-   :guilabel:`Weeks`, or :guilabel:`Months` in the :guilabel:`Due Date In` field.
-#. Select a :guilabel:`User type`:
+   :guilabel:`Weeks`, or :guilabel:`Months` in the :guilabel:`Due In` field.
+#. For an :guilabel:`Activity Type`:
 
-   - To always assign the activity to the same user, select :guilabel:`Specific User`, then add the
-     user in the :guilabel:`Responsible` field.
-   - To target a user linked to the record dynamically, select :guilabel:`Dynamic User (based on
-     record)`. If needed, change the :guilabel:`User Field` by clicking on the placeholder field
-     name then selecting or searching for the user field in the list that appears. Clicking the
-     :icon:`oi-chevron-right` :guilabel:`(right arrow)` next to the field name allows you to access
-     related fields if needed.
-#. Optionally, add a :guilabel:`Note` to provide more information about the activity.
+   - In the :guilabel:`Summary` field, edit the title if desired.
+   - Assign the activity to a user:
+
+     - To always assign the activity to the same user, select :guilabel:`Specific User`, then select
+       the user from the dropdown.
+     - To assign the activity to a role, select :guilabel:`Specific Role`, then select the role from
+       the dropdown or, to create a new role, click :guilabel:`Search more`, then click
+       :guilabel:`Create New`.
+     - To target a user linked to the record dynamically, select :guilabel:`Dynamic User`. If
+       needed, change the default field by clicking on it, then selecting or searching for the field
+       in the field selector. Click the :icon:`fa-chevron-right` :guilabel:`(right arrow)` next to
+       the field name to access related fields, if needed.
+   - Optionally, :guilabel:`Log a note` to provide more information about the activity.
 
 .. example::
    After a proposition is sent to a opportunity with a high expected revenue, you want to create an
@@ -484,9 +501,8 @@ To define the action:
    of closing the deal.
 
    To do so, set the :guilabel:`Activity Type` to :guilabel:`Call` and the :guilabel:`User Type` to
-   :guilabel:`Dynamic User (based on record)`. Click on the placeholder field and select
-   :guilabel:`Sales Team`, then click the :icon:`oi-chevron-right` :guilabel:`(right arrow)` and
-   select :guilabel:`Team Leader`.
+   :guilabel:`Dynamic User`. Click on the placeholder field and select :guilabel:`Sales Team`, then
+   click the :icon:`oi-chevron-right` :guilabel:`(right arrow)` and select :guilabel:`Team Leader`.
 
    .. image:: automated_actions/create-activity-action.png
       :alt: Example of a Create Activity action
@@ -494,14 +510,14 @@ To define the action:
 
 .. _studio/automated-actions/action-send-email-sms:
 
-Send Email and Send SMS
------------------------
+Send Message and Send SMS
+-------------------------
 
 These actions are used to send an email or a text message to a contact linked to a specific record.
 
 To define the action:
 
-#. With :guilabel:`Send Email` or :guilabel:`Send SMS` selected as the :guilabel:`Type` of action,
+#. With :guilabel:`Send Message` or :guilabel:`Send SMS` selected as the :guilabel:`Type` of action,
    as relevant, select or create an :guilabel:`Email Template` or :guilabel:`SMS Template`.
 #. In the :guilabel:`Send Email As` or :guilabel:`Send SMS As` field, choose how you want to send the
    email or text message.
@@ -521,6 +537,13 @@ To define the action:
    - :guilabel:`SMS (with note)`: to send the message as a text message to the recipients of the
      :guilabel:`SMS template` and post it as an internal note in the chatter.
    - :guilabel:`Note only`: to only post the message as an internal note in the chatter.
+
+.. _studio/automated-actions/action-log-note:
+
+Log Note
+--------
+
+This action is used to post an :guilabel:`Internal Note` visible to internal users in the chatter.
 
 .. _studio/automated-actions/action-send-whatsapp:
 
@@ -630,10 +653,43 @@ To define the actions:
      or, to create additional actions, :guilabel:`Save & New` .
 #. Repeat as many times as needed.
 
-.. image:: automated_actions/multi-actions.png
-   :alt: Define multiple actions to be executed
+.. example::
+   When an opportunity with a value above $10,000 is set to :guilabel:`Won`, the following four
+   actions are scheduled to transition the customer smoothly from sales to onboarding: remove the
+   :guilabel:`Prospect` tag, schedule a kick-off call, send an onboarding email to the customer, and
+   post an internal note informing teams.
+
+   .. image:: automated_actions/multi-actions.png
+      :alt: Define multiple actions to be executed
 
 .. toctree::
    :titlesonly:
 
    automated_actions/webhooks
+
+.. _studio/automated-actions/action-ai:
+
+AI
+--
+
+The :guilabel:`AI` action allows you to provide :guilabel:`Instructions` to the AI about the desired
+action(s) to execute or outcome(s) to achieve. To insert fields from the model in the instructions,
+type `/` to access the :guilabel:`Field Selector`. Optionanlly, select :ref:`Tools
+<ai/server-actions/tools>` to provide the AI with standard server actions it can call to execute
+tasks or update records.
+
+.. _studio/automated-actions/action-request-signature:
+
+Request Signature
+-----------------
+
+This action is used to request the signature of a templated document.
+
+#. With :guilabel:`Request Signature` selected as the :guilabel:`Type` of action, select the
+   appropriate :guilabel:`Sign Template`.
+#. For each identified signer of the document, assign a user:
+
+   - To request the signature of the same user every time, select :guilabel:`Fixed Signer`, then
+     select or search for the user from the dropdown or create a new user.
+   - To request the signature of the user associated with a linked field on the model in question,
+     select :guilabel:`Linked Field` then select the relevant field.
