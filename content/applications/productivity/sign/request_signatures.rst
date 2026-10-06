@@ -239,17 +239,17 @@ From an Odoo record
 
 To send a signature request using a template from an Odoo record:
 
-#. With the relevant record open, click the :guilabel:`Activity` button at the top of the chatter.
-#. In the :guilabel:`Schedule Activity` popup, click :guilabel:`Request Signature`, then
-   select the relevant :guilabel:`Template` from the dropdown.
-#. Complete the relevant fields of the :ref:`New Signature Request
-   <sign/request-signatures/configure-request>` window.
-#. If you are:
+1. With the relevant record open, click the \ :guilabel:`Activity`\  button at the top of the chatter.
 
-   - one of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
-     then :ref:`complete and sign the document(s) <sign/sign-document/signature-request>`.
-   - not one of the signers or a signing order has been defined and you need to sign the document
-     *after* other signers, click :guilabel:`Send`.
+2. In the \ :guilabel:`Schedule Activity`\  popup, click \ :guilabel:`Request Signature`\ , then select the relevant \ :guilabel:`Template`\  from the drop-down.
+
+3. Complete the relevant fields of the \ :ref:`New Signature Request <sign/request-signatures/configure-request>`\  window.
+
+4. If you are:
+
+   * one of the signers and you are ready to sign the document directly, click \ :guilabel:`Sign Now`\ , then \ :ref:`complete and sign the document(s) <sign/sign-document/signature-request>`\ .
+
+   * not one of the signers or a signing order has been defined and you need to sign the document \ *after*\  other signers, click \ :guilabel:`Send`\ .
 
 .. tip::
    To set a default template, :ref:`access the Request Signature activity type form
