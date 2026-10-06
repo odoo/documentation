@@ -160,6 +160,12 @@ depending on the journal's configuration. By default, no journal entries are cre
 To configure a journal to create payments, set :ref:`outstanding payments accounts
 <accounting/journals/outstanding-accounts>` on the journal's payment methods.
 
+.. note::
+   To get started with electronic invoicing, follow the two setup links on the :guilabel:`Sales`
+   journal card located on the :guilabel:`Accounting` dashboard: configuring your company data and
+   activating the e-invoicing system. Note that specific requirements may vary depending on your
+   :doc:`fiscal localization <../fiscal_localizations>`.
+
 .. _accounting/get_started/fiscal-positions:
 
 Fiscal positions
