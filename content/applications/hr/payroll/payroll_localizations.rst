@@ -242,6 +242,7 @@ documentation, which covers how to set up companies.
    payroll_localizations/belgium
    payroll_localizations/egypt
    payroll_localizations/hong_kong
+   payroll_localizations/Indonesia
    payroll_localizations/india
    payroll_localizations/jordan
    payroll_localizations/kenya
