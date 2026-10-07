@@ -10,11 +10,15 @@ electronic signatures in Mexico.
 Legal framework for electronic signatures in Mexico
 ===================================================
 
-In Mexico, electronic signatures are regulated under the `Mexican Civil Code
-<https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf>`_ and the `Commercial Code
-<http://www.ordenjuridico.gob.mx/Publicaciones/pdf/L222.pdf>`_, as well as the civil codes of each
-state. The law governs transactions performed through electronic means and the use of electronic
-signatures. The key points of the law include:
+In Mexico, electronic signatures are regulated under the
+`Código de Comercio (Arts. 89-114) <https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf>`_, the
+`Ley de Firma Electrónica Avanzada (LFEA 2012) <https://www.diputados.gob.mx/LeyesBiblio/pdf/LFEA.pdf>`_,
+and the `NOM-151-SCFI-2016 <https://www.dof.gob.mx/nota_detalle.php?codigo=5472986&fecha=29/11/2016>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures. NOM-151
+sets rules for conserving data messages and timestamping electronic records in commercial use.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -72,4 +76,5 @@ not be suitable or legally recognized in Mexico:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*
+

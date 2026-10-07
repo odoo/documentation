@@ -10,10 +10,13 @@ electronic signatures in South Africa.
 Legal framework for electronic signatures in South Africa
 =========================================================
 
-In South Africa, electronic signatures are regulated under the `Electronic Communications and
-Transactions Act <https://www.gov.za/sites/default/files/gcis_document/201409/a25-02.pdf>`_. The law
-governs transactions performed through electronic means and the use of digital signatures. The key
-points of the law include:
+In South Africa, electronic signatures are regulated under the
+`Electronic Communications and Transactions Act No. 25/2002
+<https://www.gov.za/documents/electronic-communications-and-transactions-act>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +73,4 @@ not be suitable or legally recognized in South Africa:
    cases meet all legal requirements. Compliance with additional industry-specific regulations may
    also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

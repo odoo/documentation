@@ -10,9 +10,14 @@ electronic signatures in Hong Kong.
 Legal framework for electronic signatures in Hong Kong
 ======================================================
 
-In Hong Kong, electronic signatures are regulated under the `Electronic Transactions Ordinance
-<https://www.elegislation.gov.hk/hk/cap553>`_. The law establishes the legal basis for acknowledging
-electronic records, contracts, and signatures. The key points of the law include:
+In Hong Kong, electronic signatures are regulated under the
+`Electronic Transactions Ordinance (Cap. 553, as amended 2024) <https://www.elegislation.gov.hk/hk/cap553>`_.
+
+The law establishes the framework for recognition of electronic records and signatures, including
+recent amendments that expanded eligible document categories. 2024 amendments expanded the document
+types and government processes that may be completed electronically.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +74,4 @@ not be suitable or legally recognized in Hong Kong:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

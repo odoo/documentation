@@ -10,11 +10,13 @@ electronic signatures in Kazakhstan.
 Legal framework for electronic signatures in Kazakhstan
 =======================================================
 
-In Kazakhstan, electronic signatures are regulated under the `Civil Code
-<https://adilet.zan.kz/eng/docs/K940001000_>`_ and the `Law On Electronic Document and Electronic
-Digital Signature <https://wipolex-res.wipo.int/edocs/lexdocs/laws/en/kz/kz102en.pdf>`_. The law
-establishes the legal basis for acknowledging electronic records, contracts, and digital signatures.
+In Kazakhstan, electronic signatures are regulated under the
+`Law on Electronic Documents and Electronic Digital Signature 2003 <https://adilet.zan.kz/eng/docs/Z030000370_>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
+
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -71,4 +73,4 @@ not be suitable or legally recognized in Kazakhstan:
    use cases meet all legal requirements. Compliance with additional industry-specific regulations
    may also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

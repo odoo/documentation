@@ -10,11 +10,15 @@ electronic signatures in the United Arab Emirates.
 Legal framework for electronic signatures in the United Arab Emirates
 =====================================================================
 
-In the United Arab Emirates, electronic signatures are regulated under the `Federal Decree by Law
-No. 46 of 2021 on Electronic Transactions and Trust Services <https://tdra.gov.ae/-/media/About/Others/FEDERAL-DECREELAW-NO-46-OF-2021--English.ashx#:~:text=This%20Decree%2DLaw%20aims%20to,Electronic%20Transactions%20across%20all%20sectors.>`_,
-`ADGM Electronic Transactions Regulations 202 <https://adgmen.thomsonreuters.com/sites/default/files/net_file_store/ADGM1547_23197_VER2021.pdf>`_,
-`DIFC Law No. 2 of 2017 <https://www.difc.ae/business/laws-and-regulations/legal-database/difc-laws/electronic-transactions-law-difc-law-no-2-2017>`_.
-The law governs transactions performed through electronic means and the use of digital signatures.
+In the United Arab Emirates, electronic signatures are regulated under the
+`Federal Decree-Law No. 46/2021 on Electronic Transactions and Trust Services
+<https://u.ae/en/about-the-uae/digital-uae/regulatory-framework/electronic-transactions-and-trust-services-law>`_
+and the `Cabinet Decision No. 28/2023 (Executive Regulations)
+<https://tdra.gov.ae/en/About/tdra-sectors/information-and-digital-government/policy-and-programs-department/trust-services/laws-and-regulations>`_.
+
+A modernised electronic transactions framework has replaced earlier legislation. Executive
+regulations supplement the main statute on trust services and electronic transactions.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -72,4 +76,4 @@ not be suitable or legally recognized in the United Arab Emirates:
    and use cases meet all legal requirements. Compliance with additional industry-specific
    regulations may also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

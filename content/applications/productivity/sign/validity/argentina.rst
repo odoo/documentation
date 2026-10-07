@@ -10,11 +10,13 @@ electronic signatures in Argentina.
 Legal framework for electronic signatures in Argentina
 ======================================================
 
-In Argentina, electronic signatures are regulated under the `Digital Signature Law
-<https://www.argentina.gob.ar/normativa/nacional/70749/actualizacion>`_, and the `Civil and
-Commercial Code <https://www.wipo.int/wipolex/en/legislation/details/19085>`_. The law governs
-transactions performed through electronic means and the use of electronic signatures. The key points
-of the law include:
+In Argentina, electronic signatures are regulated under the
+`Ley 25.506 <https://servicios.infoleg.gob.ar/infolegInternet/anexos/70000-74999/70749/norma.htm>`_
+and the `Decreto 743/2024 (remote cert issuance) <https://www.argentina.gob.ar/normativa/nacional/decreto-743-2024>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -71,4 +73,4 @@ not be suitable or legally recognized in Argentina:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

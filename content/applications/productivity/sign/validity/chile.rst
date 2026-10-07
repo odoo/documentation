@@ -10,12 +10,10 @@ electronic signatures in Chile.
 Legal framework for electronic signatures in Chile
 ==================================================
 
-In Chile, electronic signatures are regulated under the `Law 19.799 on electronic documents,
-electronic signature and certification services of such signature
-<https://www.bcn.cl/leychile/navegar?idNorma=196640>`_, `Decree 181/2002
-<https://www.bcn.cl/leychile/navegar?idNorma=201668>`_ and `Law No. 21,180, on Digital
-Transformation of the State <https://www.bcn.cl/leychile/navegar?idNorma=1138479&tipoVersion=0>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and signatures.
+In Chile, electronic signatures are regulated under the `Ley 19.799 sobre Documentos Electrónicos (BCN) <https://www.bcn.cl/leychile/navegar?idNorma=196640>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -73,4 +71,5 @@ not be suitable or legally recognized in Chile:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+
