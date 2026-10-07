@@ -455,10 +455,11 @@ which can be accessed. Review the parameters associated with a rule by looking f
    needs editing, and edit the corresponding rate from the list.
 
 .. important::
-   Odoo adds updated rule parameters for the current calendar year. It is **not** recommended to
-   edit rule parameters **unless a federal or state parameter has changed**, and is different from
-   the rule parameters created by Odoo. Check with all local and national regulations *before*
-   making any changes to rule parameters.
+   **Annual Updates:** Odoo releases updated rule parameters annually. To get the latest parameters 
+   a **manual update** of the Payroll module is required at the beginning of the calendar year; 
+   to this first, navigate to the Apps dashboard, locate the l10n_us_hr_payroll module and update. 
+   
+   **It is not recommended to edit rule parameters** unless a federal or state parameter has changed.
 
 Run US payroll
 ==============
