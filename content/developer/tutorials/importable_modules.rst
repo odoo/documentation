@@ -924,6 +924,7 @@ A very minimal tour with a single step can be added by adding this file in `stat
         steps: () => [{
         trigger: '.o_app[data-menu-xmlid="estate.menu_root"]',
         content: 'Start selling your properties from this app!',
+        run: "click",
         }],
     });
 
