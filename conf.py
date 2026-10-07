@@ -86,7 +86,7 @@ extension_dir = Path('extensions')
 sys.path.insert(0, str(extension_dir.absolute()))
 
 # Search for the directory of odoo sources to know whether autodoc should be used on the dev doc
-odoo_sources_candidate_dirs = (Path('odoo'), Path('../odoo'))
+odoo_sources_candidate_dirs = (Path('odoo'), Path('../odoo'), Path('../odoo-security'))
 odoo_sources_dirs = [
     d for d in odoo_sources_candidate_dirs if d.is_dir() and (d / 'odoo-bin').exists()
 ]
