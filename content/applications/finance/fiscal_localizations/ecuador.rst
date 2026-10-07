@@ -437,8 +437,8 @@ Customer invoice
 ~~~~~~~~~~~~~~~~
 
 Customer invoices, electronic documents :doc:`created from sales orders or manually
-<../accounting/customer_invoices/overview>`, must contain the following data and, once validated,
-are sent to the SRI:
+<../accounting/customer_invoices>`, must contain the following data and, once validated, are sent to
+the SRI:
 
 - :guilabel:`Journal`: Select the option matching the customer invoice's printer point.
 - :guilabel:`Document Type`: Type the document type in this format: `(01) Invoice`.
