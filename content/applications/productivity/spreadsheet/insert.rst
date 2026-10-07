@@ -72,23 +72,17 @@ chart) numbered separately, and each new list, pivot table, or chart numbered se
 *List #1*, *List #2*, *Pivot #1*, etc.
 
 The properties of a data source can be accessed via the :guilabel:`Data` menu, where they are
-identified by their respective :icon:`oi-view-pivot` :guilabel:`(pivot table)`,
-:icon:`oi-view-list` :guilabel:`(list)` or :icon:`fa-bar-chart` :guilabel:`(chart)` icon, followed
-by their ID and name, e.g., :icon:`oi-view-pivot` *(#1) Sales Analysis by Product*.
-
-   .. image:: insert/list-deleted.png
-      :alt: Warning message about unused list
+grouped by source type, and then listed in ascending order by source ID. The name of the data source
+is displayed, e.g., :icon:`oi-view-pivot` *(#1) Sales Analysis by Product*.
 
 Clicking on a data source opens the related properties in a panel on the right of the spreadsheet.
 
 .. note::
    Deleting an inserted list or pivot table, or deleting the sheet into which it was inserted, does
-   not delete the underlying data source; this can only be deleted via the data source's properties.
-   Deleting an inserted chart, however, also deletes the underlying data source.
-
-   If an inserted list or pivot table is deleted, but not its data source, a warning appears beside
-   the data source in the :guilabel:`Data` menu indicating that the data is not currently being
-   used in the spreadsheet.
+   not delete the underlying data source; this can be done via the data source's properties. Unused
+   data sources from inserted lists or pivot tables can also be deleted via the :ref:`Data cleanup
+   <spreadsheet/insert/delete-unused-sources>` feature. Deleting an inserted chart deletes its
+   underlying data source.
 
 .. tip::
    - The properties panel can also be opened by right-clicking any cell of an inserted list or pivot
@@ -102,13 +96,28 @@ Clicking on a data source opens the related properties in a panel on the right o
    - To collapse the properties panel, click the :icon:`fa-angle-double-right` :guilabel:`(double
      chevron)` icon at the top of the panel.
    - To pin the properties panel and allow another panel, such as the :doc:`global filters
-     <work_with_data/global_filters>` panel, to open beside it, click the :icon:`fa-thumb-tack` :guilabel:`(pin)`
-     icon at the top of the panel.
+     <work_with_data/global_filters>` panel, to open beside it, click :menuselection:`View --> Pin
+     the side panel` from the menu bar. To unpin a panel, click the :icon:`fa-thumb-tack`
+     :guilabel:`(pin)` icon at the top right of the panel.
+
+.. _spreadsheet/insert/delete-unused-sources:
+
+Identify and delete unused data sources
+---------------------------------------
+
+To identify and delete unused data sources, i.e., data sources that are still connected to the
+spreadsheet but where the data has been deleted, follow these steps:
+
+#. Click :menuselection:`Data --> Data cleanup --> Remove unused data sources` from the menu bar.
+   The :guilabel:`Unused data sources` panel opens to the right of the spreadsheet. Unused pivot
+   tables and unused lists are displayed in their respective sections.
+#. Optionally, unselect any data sources that should not be deleted, then click :guilabel:`Delete
+   selected items`.
 
 .. _spreadsheet/insert/accessing-data:
 
-Accessing underlying data
-=========================
+Access underlying data
+======================
 
 The underlying data of an inserted list, pivot table, or chart can be accessed at any time. To view:
 
