@@ -71,33 +71,34 @@ To access a dashboard of marketing campaigns, navigate to :menuselection:`Market
 view, staged by *New*, *Running*, or *Stopped* campaigns.
 
 To create a campaign, navigate to the :menuselection:`Marketing Automation` application and click
-:guilabel:`New`. On the *Create a Marketing Automation Campaign* pop-up window, select a
-:ref:`campaign template <marketing_automation/marketing_automation/campaigns/campaign-templates>` or
-select :icon:`fa-paint-brush` :guilabel:`Start from scratch` to :ref:`create one from scratch
-<marketing_automation/marketing_automation/campaigns/create-campaign>`.
+:guilabel:`New`.
 
-Then, click :guilabel:`Create Campaign` to customize the campaign form.
+Start by entering a :guilabel:`Name` for the campaign.
 
-.. image:: marketing_automation/create-campaign.png
-   :alt: Create a campaign in Marketing Automation.
+Then, in the menu, select one of the following options:
+
+- :guilabel:`Define a Trigger`: :ref:`Create a new campaign
+  <marketing_automation/marketing_automation/campaigns/create-campaign>` from scratch.
+- :guilabel:`Load a Template`: Start by configuring a :ref:`campaign template
+  <marketing_automation/marketing_automation/campaigns/campaign-templates>`.
+- :guilabel:`Ask AI`: Create a campaign by entering an AI prompt.
 
 .. _marketing_automation/marketing_automation/campaigns/create-campaign:
 
 Create a campaign from scratch
 ------------------------------
 
-On the new campaign form, enter a :guilabel:`Name` for the campaign.
+Each workflow consists of exactly one *trigger*, a rule that initiates the campaign and decides when
+specific records (i.e., the target audience) become participants in the campaign.
 
-The :guilabel:`Target`, :guilabel:`Unicity based on`, and :guilabel:`Filter` can be modified to
-specify the target for the audience.
+On the *Define a Trigger* pop-up window, enter a name for the campaign, then configure the remaining
+:doc:`trigger options <marketing_automation/target_audience>` (i.e., the target, trigger type, and
+any additional filters).
 
-Finally, below the form, click :guilabel:`Add new activity` to add an activity in the campaign
-:ref:`workflow <marketing_automation/marketing_automation/workflow>`.
+Finally, click :guilabel:`Save` to add the trigger to the :ref:`workflow builder
+<marketing_automation/activities>`.
 
 .. seealso::
-   For specific information about defining target audiences and activities, see the following
-   documentation:
-
    - :doc:`marketing_automation/target_audience`
    - :doc:`marketing_automation/workflow_activities`
 
@@ -111,39 +112,32 @@ Odoo provides the following campaign templates to help users get started.
 Misc
 ~~~~
 
-- :icon:`fa-paint-brush` :ref:`Start from scratch
-  <marketing_automation/marketing_automation/campaigns/create-campaign>`: Design your own marketing
-  campaign from the ground up.
-- :icon:`fa-tag` :guilabel:`Tag Hot Contacts`: Send a welcome email to contacts and tag them when
-  they click it.
-- :icon:`fa-search` :guilabel:`Commercial prospection`: Send a free catalog and follow-up according
-  to reactions.
+- :guilabel:`Tag Hot Contacts`: Send a welcome email to contacts and tag them when they click it.
+- :guilabel:`Commercial prospection`: Send a free catalog and follow-up according to reactions.
 
 Marketing
 ~~~~~~~~~
 
-- :icon:`fa-hand-peace-o` :guilabel:`Welcome Flow`: Send a welcome email to new subscribers, and
-  remove the address that bounced.
-- :icon:`fa-check-square` :doc:`Double Opt-in
-  <marketing_automation/campaign_templates/double_optin>`: Send an email to new recipients to
-  confirm their consent.
+- :guilabel:`Welcome Flow`: Send a welcome email to new subscribers, and remove the address that
+  bounced.
+- :doc:`Double Opt-in <marketing_automation/campaign_templates/double_optin>`: Send an email to new
+  recipients to confirm their consent.
 
 CRM
 ~~~
 
-- :icon:`fa-phone` :guilabel:`Scheduled Calls`: If lead is created for an existing contact, schedule
-  a call with their salesperson.
-- :icon:`fa-star` :guilabel:`Prioritize Hot Leads`: Send an email to new leads and assign them a
-  high priority if they open it.
+- :guilabel:`Scheduled Calls`: If lead is created for an existing contact, schedule a call with
+  their salesperson.
+- :guilabel:`Prioritize Hot Leads`: Send an email to new leads and assign them a high priority if
+  they open it.
 
 eCommerce
 ~~~~~~~~~
 
-- :icon:`fa-birthday-cake` :guilabel:`Anniversary Discount`: Celebrate contacts that registered one
-  year ago.
-- :icon:`fa-shopping-cart` :guilabel:`Purchase Follow-up`: Send an email to customers that bought a
-  specific product after their purchase.
-- :icon:`fa-star` :guilabel:`Create Repeat Customers`: Turn one-time visitors into repeat buyers.
+- :guilabel:`Anniversary Discount`: Celebrate contacts that registered one year ago.
+- :guilabel:`Purchase Follow-up`: Send an email to customers that bought a specific product after
+  their purchase.
+- :guilabel:`Create Repeat Customers`: Turn one-time visitors into repeat buyers.
 
 .. _marketing_automation/marketing_automation/workflow:
 
@@ -166,8 +160,7 @@ To create one of the following activities, click :guilabel:`Add new activity` an
 activity.
 
 .. seealso::
-   See the :doc:`marketing_automation/workflow_activities` documentation for more information about
-   configuring activities.
+   :doc:`marketing_automation/workflow_activities`
 
 .. _marketing_automation/marketing_automation/testing-running:
 
@@ -181,8 +174,7 @@ After testing, the campaign can be launched to start engaging the target audienc
 also be launched *without* testing if the user is confident in the workflow.
 
 .. seealso::
-   See the :doc:`marketing_automation/testing_running` documentation for more information about
-   testing campaigns.
+   :doc:`marketing_automation/testing_running`
 
 .. _marketing_automation/marketing_automation/reporting:
 
@@ -199,8 +191,7 @@ A range of reporting metrics are available to measure the success of each campai
 Additionally, each activity within the workflow of a campaign displays its engagement metrics.
 
 .. seealso::
-   See the :doc:`marketing_automation/understanding_metrics` documentation for more information
-   about tracking campaign metrics.
+   :doc:`marketing_automation/understanding_metrics`
 
 .. toctree::
    :titlesonly:

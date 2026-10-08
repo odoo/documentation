@@ -42,8 +42,7 @@ Each activity displays the following information:
   - :icon:`fa-mobile` :guilabel:`(SMS)` : This action sends an SMS message.
   - :icon:`fa-whatsapp` :guilabel:`(WhatsApp Message)`: This action sends a WhatsApp message. This
     option is only available if the **WhatsApp** app is installed.
-  - :icon:`fa-cogs`:guilabel:`(Server Action)`: This action creates a :ref:`server action
-    <marketing_automation/sa-activity-type>`.
+  - :icon:`fa-cogs`:guilabel:`(Server Action)`: This action creates a server action.
 
 - :guilabel:`Activity Block`: Each activity displays a detailed :ref:`activity block,
   <marketing_automation/activity_blocks>` with the :guilabel:`Activity Name` appearing at the top.
