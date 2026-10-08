@@ -37,7 +37,7 @@ To sign a document prepared using Odoo Sign:
 
 #. Click on each field to enter the requested information, or, to be guided through the fields in
    order, click the :guilabel:`Click to start` arrow, click on the indicated field to enter the
-   requested information, then use the arrows to progress through the document.
+   requested information, then use the :guilabel:`Next` arrows to progress through the document.
 
    .. note::
       - Fields set to be auto-completed but *not* read-only are populated when clicked or when
@@ -51,13 +51,14 @@ To sign a document prepared using Odoo Sign:
 
    If there are :ref:`multiple documents <sign/request-signatures/create-envelope>` to sign, click
    :guilabel:`Next` at the bottom of the document, enter the requested information for the next and
-   any subsequent documents. Once all documents have been signed, click :guilabel:`Validate & Send
-   Completed Document`.
+   any subsequent documents. Once all documents have been signed, click the :guilabel:`Send it`
+   arrow or click :guilabel:`Validate & Send Completed Document`.
 
 After signing the document:
 
-- If other signers still need to sign the document, a message informs you of this. Click
-  :guilabel:`Next signatory`.
+- If other signers still need to sign the document, a message informs you of the next signer in
+  line. Click :guilabel:`Next signatory` to let them sign, or click :guilabel:`Send by email` to
+  send a signature request to them.
 - If you are the only or last signer, you can :guilabel:`Download` the document directly.
 - If you are an internal user, a list shows any other documents awaiting your signature; you
   can then :guilabel:`Sign` or :guilabel:`View` the documents.
