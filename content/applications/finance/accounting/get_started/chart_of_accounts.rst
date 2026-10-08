@@ -24,8 +24,8 @@ The country you select during the creation of your database (or additional compa
 determines which :doc:`fiscal localization package <../../fiscal_localizations>` is installed by
 default. This package adds a standard chart of accounts already configured according to the
 country's regulations, including expense accounts that may be :ref:`linked to default asset models
-<chart-of-account/assets>`. You can use the chart of accounts directly or modify it according to
-your company's needs.
+<accounting/chart-of-account/assets>`. You can use the chart of accounts directly or modify it
+according to your company's needs.
 
 To create a new account, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
 click :guilabel:`Create`, and fill in (at the minimum) the required fields (:guilabel:`Code, Account
@@ -96,13 +96,13 @@ corresponding type from the following list:
 | Other         | Other       | Off-Balance Sheet       | Transactions not displayed on the balance sheet or profit and loss report                                       |
 +---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
-.. _chart-of-account/assets:
+.. _accounting/chart-of-account/assets:
 
 Assets
 ~~~~~~
 
 Account types of :guilabel:`Fixed Assets` and :guilabel:`Non-current Assets` can **automate** the
-creation of :ref:`asset <assets-automation>` entries. To **automate** entries, click
+creation of :ref:`asset <accounting/assets/account>` entries. To **automate** entries, click
 :guilabel:`View` on an account line and go to the :guilabel:`Automation` tab.
 
 There are three options for the :guilabel:`Automation` tab:
