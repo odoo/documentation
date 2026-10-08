@@ -7,75 +7,84 @@ AI
 
 .. |AI| replace:: :abbr:`AI (artificial intelligence)`
 
-Artificial intelligence (AI) in Odoo enhances productivity across all apps by providing intelligent,
-context-aware assistance. It helps users work faster, make better decisions, and automate routine
-tasks, all while staying within the familiar Odoo interface.
+Odoo |AI| brings artificial intelligence into Odoo to help users work with information, complete
+tasks, and automate workflows.
 
-Ask AI
-======
+AI agents are at the core of Odoo AI. An agent can understand natural-language requests, access
+information, and perform tasks using the tools available to it. Agents can be configured for
+specific purposes and can also be triggered as part of automated workflows.
 
-The :guilabel:`Ask AI` feature allows users to receive assistance anywhere in an Odoo database. It
-understands natural language and can answer questions, open views, and improve content.
+Odoo AI can be used with Odoo's built-in AI services or connected to an external AI agent through an
+Odoo MCP server.
 
-To enter a prompt from anywhere in the database, enter :kbd:`Ctrl` + :kbd:`k` to open the command
-palette. From here, type in a prompt, then click the |AI| icon or hit enter. This opens a
-conversation window with the *Ask AI* agent.
+Access Odoo AI
+==============
+
+Odoo AI can be accessed from anywhere in the database:
+
+- Click the :guilabel:`AI` icon at the top of the screen.
+- Press :kbd:`Ctrl` + :kbd:`k` to open the command palette, enter a prompt, and select the
+  :guilabel:`AI` option.
 
 .. image:: ai/command-palatte.png
-   :alt: An open command palatte with a prompt.
-
-.. important::
-   The *Ask AI* agent is instructed not to display an error to a user. If it is unable to complete
-   the requested query, it responds that it is unable to complete the request at that time.
-
-After the agent has responded, hover over the response to do one of the following:
-
- - :guilabel:`Send as Message`: opens an email pop-up with the contents of the response in the body
-   of the message. The message can be edited before it is sent.
- - :guilabel:`Log as Note`: opens a chatter pop-up with the contents of the response. The note can
-   be edited before it is logged as a note.
- - :icon:`fa-copy` :guilabel:`(Copy)`: copies the contents of the response to the clipboard.
-
- .. image:: ai/response-options.png
-    :alt: A response from an agent with the send, log, and copy options visible.
-
-.. note::
-   These options are pre-configured *Default Prompts*. The default prompts can be edited, and new
-   prompts can be added through the **AI** application.
+   :alt: An open command palette with a prompt.
 
 .. tip::
    To open the conversation with the agent in the **Discuss** app, click on the header of the
    conversation window, then click :icon:`fa-expand` :guilabel:`Open in Discuss`.
 
-   .. image:: ai/open-in-discuss.png
-      :alt: The header of a conversation window with the open in discuss option visible.
+Use Odoo AI
+-----------
 
-AI button
----------
+Odoo provides AI features throughout the database, including:
 
-In addition to the command palette, the |AI| button can be utilized to open a conversation with the
-*Ask AI* agent as well. The |AI| button is located in the top-right corner of the screen and is
-available throughout the database regardless of what app the user is currently using.
+- :doc:`AI Fields <ai/fields>`: Generate field values based on information from the current record.
+- :doc:`AI in email templates <ai/email-templates>`: Generate personalized email content using
+  information from the current record.
+- :doc:`AI voice transcription <ai/voice>`: Transcribe recorded conversations and generate
+  summaries.
+- :doc:`AI image generation <ai/generate_images>`: Generate images from natural-language prompts.
+- :doc:`AI in Live Chat <ai/live-chat>`: Use an AI agent to respond to visitors, qualify
+  conversations, and create leads.
 
-After clicking the |AI| button, a conversation window opens with the *Ask AI* agent. Either type a
-request in the message field or click one of the preconfigured message prompts.
+See the related documentation for information about using these features.
 
-.. figure:: ai/ai-button.png
-   :alt: The AI button opens a window that includes suggested conversation prompts.
+AI agents
+=========
 
-   The AI button opens a window that includes suggested conversation prompts. The prompts vary based
-   on where in the database the button was clicked.
+AI agents are configurable virtual assistants that can understand natural language, perform tasks,
+and interact with Odoo tools.
 
-Common requests
-===============
+An *agent* is configured with a **System Prompt** that defines its purpose and behavior. **Skills**
+provide the instructions and tools the agent uses to complete tasks, while **Sources** provide
+information the agent can use.
 
-Below are some common requests that the *Ask AI* agent can assist with:
+.. seealso::
+   :doc:`AI agents <ai/agents>`
 
-- Translation: *Translate the most recent chatter message*
-- Summarize: *Summarize this chatter thread*
-- Text generation: *Generate a follow-up message*
-- Improve: *Improve this message draft*
-- Suggest: *Suggest next steps for the sales rep/support agent*
+AI and automation
+=================
+
+AI can also be used as part of automated Odoo workflows. AI server actions allow AI to evaluate a
+situation and select the appropriate tool to execute. AI agents can also be triggered by automated
+and scheduled actions.
+
+.. seealso::
+   - :doc:`AI server actions <ai/server-actions>`
+   - :doc:`AI document sort <ai/document_sort>`
+
+AI providers
+============
+
+Odoo AI uses Odoo's :doc:`In-App Purchase  <../essentials/in_app_purchase>` (IAP) service for AI
+requests. AI usage consumes IAP `credits <https://iap.odoo.com/iap/in-app-services/867>`_.
+
+Alternatively, an external AI agent can connect directly to an Odoo database through the Odoo MCP
+server (Model Context Protocol). This allows the external agent to access Odoo data and use tools
+exposed by the database.
+
+.. seealso::
+   :doc:`AI MCP server <ai/mcp_server>`
 
 .. toctree::
    :titlesonly:
