@@ -176,21 +176,27 @@ authentication via Aadhaar is required.
 Itsme®
 ------
 
-Itsme® authentication allows signers in **the European Union**, **the United Kingdom**, **Iceland**
-and **Norway** to prove their identity.
+Itsme® authentication allows signers in **the European Union**, **the United Kingdom**, **Iceland**,
+**Norway**, **Serbia** and **Moldova** to prove their identity.
 
 To enable authentication with itsme®, go to :menuselection:`Sign --> Configuration
---> Settings`, then enable :guilabel:`Identify with itsme®`.
+--> Settings`, then enable :guilabel:`Digital Identity & Qualified Signatures  with itsme®`.
 
 To require signer authentication via itsme®:
 
 #. With the document or document envelope open, in the left panel, click the :icon:`fa-ellipsis-v`
    :guilabel:`(vertical ellipsis)` icon next to the relevant signer.
-#. In the pop-up, select :guilabel:`Via itsme®` under :guilabel:`Authentication`.
+#. Click :guilabel:`Edit`.
+#. In the pop-up, select :guilabel:`Qualified Signature via itsme®` under
+   :guilabel:`Authentication`.
 #. Click :guilabel:`Save`.
 
 Upon signing the document, an extra :guilabel:`Final verification` page is displayed where
-authentication via itsme® is required.
+authentication via itsme® is required. Click :guilabel:`Identify with Itsme`, continue with your
+phone number, then :guilabel:`Confirm and sign with itsme`.
+
+The reference of the itsme signature appears at the bottom left of the page, detailing the name of
+the signer, the date and time of signature.
 
 .. _sign/security/cryptographic:
 
