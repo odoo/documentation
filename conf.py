@@ -273,6 +273,7 @@ languages_names = {
     'ja': 'JA',
     'ko': 'KR',
     'nl': 'NL',
+    'pl': 'PL',
     'pt_BR': 'PT',
     'ro': 'RO',
     'sv': 'SV',
