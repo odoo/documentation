@@ -2,17 +2,14 @@
 Request a signature
 ===================
 
-Via the Odoo Sign app or directly from an Odoo record, you can:
-
-- request the signature of one or more signers on :ref:`a one-off document or an envelope of
-  multiple one-off documents <sign/request-signatures/one-off>`
-- :ref:`use templates <sign/request-signatures/templates>` to request the signature of one or more
-  signers on frequently used documents
+Odoo sign enables you to create and send signature requests or use
+:ref:`templates <sign/request-signatures/templates>` to request signatures from one or more signers
+on frequently used documents.
 
 Once a document or :ref:`document envelope <sign/request-signatures/create-envelope>` has been fully
-signed, i.e., completed and signed by all signers, the signed document(s) and the :ref:`certificate
-of completion <sign/security/certificate-of-completion>` are sent via email to the requestor, and to
-any contacts added in :guilabel:`CC` when the signature request was :ref:`configured
+signed by all signers, the signed document(s) and the :ref:`certificate of completion
+<sign/security/certificate-of-completion>` are sent via email to the requestor, the signers and to
+any contacts added in :guilabel:`CC` during the :ref:`signature request configuration
 <sign/request-signatures/configure-request>`.
 
 .. _sign/request-signatures/one-off:
@@ -20,70 +17,69 @@ any contacts added in :guilabel:`CC` when the signature request was :ref:`config
 One-off documents
 =================
 
+Via the Odoo Sign app or directly from an Odoo record, you can request the signature of one or more
+signers for a one-off document.
+
+A one-off document is a single document uploaded to be prepared and sent for signature.
+It can be uploaded from your computer or imported from the Documents app.
+
 .. _sign/request-signatures/one-off-app:
 
 From the Sign app
 -----------------
 
-To request the signature of a one-off document or :ref:`document envelope
-<sign/request-signatures/create-envelope>` from the Sign app:
+To request the signature of a one-off document from the Sign app:
 
-#. Go to :menuselection:`Sign --> Documents --> My Documents` or :menuselection:`--> All Documents`,
-   click :guilabel:`Upload PDF`, then select and open the relevant `.pdf` document(s).
-   If the document needs to be imported from the :doc:`Documents <../documents>` app, click the
-   :icon:`fa-cog` :guilabel:`(Actions)` icon beside the name of the view, then
-   :menuselection:`Import from Documents`.
+#. Click :Guilabel:`Upload PDF` and select the relevant PDF document from your computer.
+#. :ref:`Prepare the document for signing <sign/request-signatures/prepare-document>` by adding
+   fields for the signer(s), adding additional signers, if relevant.
 
-   .. tip::
-      If you are creating a document envelope that includes one document saved in the Documents app,
-      import that document *before* :ref:`adding subsequent documents
-      <sign/request-signatures/create-envelope>`.
-
-#. :ref:`Prepare the document(s) for signing <sign/request-signatures/prepare-document>` by
-   adding the relevant fields; add additional signers and/or documents, if relevant.
-#. Click :guilabel:`Send`.
-#. Complete the relevant fields of the :ref:`New Signature Request
-   <sign/request-signatures/configure-request>` window.
 #. If you are:
 
-   - one of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
+   - One of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
      then :ref:`complete and sign the document(s) <sign/sign-document/signature-request>`.
-   - not one of the signers or a signing order has been defined and you need to sign the document
-     *after* other signers, click :guilabel:`Send`.
+   - Not one of the signers or a signing order has been defined and you need to sign the document
+     *after* other signers, click :guilabel:`Send` and complete the relevant fields of the
+     :ref:`New Signature Request <sign/request-signatures/configure-request>` window.
+
+.. note::
+
+   - Upload a document from the Documents app, click the :icon:`fa-cog` :guilabel:`(Actions)` icon
+     beside the name of the view, then :menuselection:`Import from Documents`. Select a document
+     and click :guilabel:`Import and Sign`.
+   - Once the document has been fully signed, the signed document and the certificate of completion
+     are sent to the requestor, the signer(s) and to any contact(s) added in *CC*.
 
 .. _sign/request-signatures/one-off-record:
 
 From an Odoo record
 -------------------
 
-To request the signature of a one-off document or :ref:`document envelope
-<sign/request-signatures/create-envelope>` from an Odoo record:
+To request the signature of a one-off document from an Odoo record:
 
-#. With the relevant record open, click the :guilabel:`Activity` button at the top of the chatter.
-#. In the :guilabel:`Schedule Activity` popup, click :guilabel:`Request Signature`, then
+#. Open the Odoo record, click the :guilabel:`Activity` button at the top of the chatter.
+#. In the :guilabel:`Schedule Activity` pop-up, click :guilabel:`Request Signature`, then
    :guilabel:`Upload PDF`.
-#. Select the relevant `.pdf` document(s), then click :guilabel:`Open`.
-#. :ref:`Prepare the document(s) for signing <sign/request-signatures/prepare-document>` by adding
-   the relevant fields; add additional signers and/or documents, if relevant.
-#. Click :guilabel:`Send`.
-#. Complete the relevant fields of the :ref:`New Signature Request
-   <sign/request-signatures/configure-request>` window.
-
-   .. note::
-      When sending a signature request from an Odoo record, the related customer (or the relevant
-      party) is automatically added as a signer.
-
+#. Select the `.pdf` document to sign, then click :guilabel:`Open`.
+#. :ref:`Prepare the document for signing <sign/request-signatures/prepare-document>` by adding
+   fields for the signer(s), adding additional signers, if relevant.
 #. If you are:
 
-   - one of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
-     then :ref:`complete and sign the document(s) <sign/sign-document/signature-request>`.
-   - not one of the signers or a signing order has been defined and you need to sign the document
-     *after* other signers, click :guilabel:`Send`.
+   - One of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
+     then :ref:`complete and sign the document <sign/sign-document/signature-request>`.
+   - Not one of the signers or a signing order has been defined and you need to sign the document
+     *after* other signers, click :guilabel:`Send` and complete the relevant fields of the
+     :ref:`New Signature Request <sign/request-signatures/configure-request>` window.
 
 .. note::
-   Once a document or :ref:`document envelope <sign/request-signatures/create-envelope>` has been
-   fully signed, the signed document(s) and the certificate of completion are also added to the
-   record's chatter.
+
+   - When sending a signature request from an Odoo record, the related customer's email (or the
+     relevant party's email) is automatically added as a signer if a signature field was added
+     while preparing the document for signing.
+   - Once the document has been fully signed, the signed document(s) and the certificate of
+     completion are also added to the attachments of the record's chatter.
+   - When the document is fully signed and sent to the requestor, it is added with the
+     certificate of completion in the attachments of the chatter.
 
 .. _sign/request-signatures/templates:
 
@@ -103,15 +99,15 @@ Create a template
 To create a template:
 
 #. Go to :menuselection:`Sign --> Templates`.
-#. Click :guilabel:`Upload PDF`, then select and open the relevant `.pdf` document(s). If the
+#. Click :guilabel:`Upload PDF`, then select and open the relevant `.pdf` document. If the
    document needs to be imported from the :doc:`Documents <../documents>` app, click the
-   :icon:`fa-cog` :guilabel:`(Actions)` icon beside the name of the view, then
-   :menuselection:`Import from Documents`.
+   :icon:`fa-cog` :guilabel:`(Actions)` icon beside the name of the view, then click
+   :guilabel:`Import from Documents`.
 
    .. tip::
-      If you need to upload multiple documents, i.e., create a :ref:`document envelope
+      If you need to upload multiple documents, or create a :ref:`document envelope
       <sign/request-signatures/create-envelope>`, and one of the documents is saved in the Documents
-      app, import that document *before* :ref:`adding subsequent documents
+      app, import that document *before* :ref:`adding any subsequent documents
       <sign/request-signatures/create-envelope>`.
 
 Once you have created the template, you can start :ref:`editing it
@@ -125,14 +121,14 @@ Edit a template
 A template can be edited at any time, provided it has *not yet been used* to send a signature
 request.
 
-To edit a template, go to :menuselection:`Sign --> Templates` and click on the relevant template to
+To edit a template, go to :menuselection:`Sign --> Templates` and click the relevant template to
 open it. Alternatively, hover over the template, click the :icon:`fa-ellipsis-v`
 :guilabel:`(vertical ellipsis)` icon in the top-right corner of the card, then click
 :guilabel:`Edit`.
 
 .. note::
-   When you open a template that has already been used to send a signature request, the template is
-   in :guilabel:`View only mode`. Click :icon:`fa-pencil` :guilabel:`Duplicate & Edit` to create a
+   A template that has already been used to send a signature request switches to
+   :guilabel:`View only mode`. Click :icon:`fa-pencil` :guilabel:`Duplicate & Edit` to create a
    copy of the template, which can then be edited.
 
    .. image:: request_signatures/visualization-mode.png
@@ -164,12 +160,12 @@ Edit the template:
 
 .. tip::
    To replace a document in the template, such as with an updated version, while preserving the
-   fields already added, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon next
-   to the relevant document, select :guilabel:`Replace document`, choose the new document, then
-   click :guilabel:`Replace document`.
+   fields already added, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon in the
+   document, next to the name of the relevant document, select :guilabel:`Replace document`, choose
+   the new document, then click :guilabel:`Replace document`.
 
    Each replacement creates a duplicate of the template with the fields placed at the same position
-   as in the original. If the new document has a different layout or added text, the fields may no
+   as in the original. If the new document has a different layout or added text, the fields may
    longer align correctly. :ref:`Reposition them <sign/request-signatures/add-fields-edit>` as
    needed.
 
@@ -182,6 +178,12 @@ Templates can be used when initiating a signature request :ref:`from the Sign ap
 <sign/request-signatures/template-sign-app>` or directly :ref:`from an Odoo record
 <sign/request-signatures/template-odoo-record>`.
 
+.. tip::
+   Define a default template for all Odoo records by going to the :guilabel:`Genaral settings` in
+   the :guilabel:`Discuss` section and clicking :ref:`activity type <activities/types>`. Then,
+   search for the :guilabel:`Request Signature` activity type and select a
+   :guilabel:`Default Signature Template`.
+
 .. _sign/request-signatures/template-sign-app:
 
 From the Sign app
@@ -189,15 +191,22 @@ From the Sign app
 
 When using a template, there are two ways a signature request can be sent from the Sign app:
 
-- **via direct email** to one or more specific signers; or
-- **via a shareable link**, provided the document or document envelope has *only one signer*. This
+- **Via direct email** to one or more specific signers; or
+- **Via a shareable link**, provided the document or document envelope has *only one signer*. This
   option is useful when multiple individuals need to sign a personal copy of a document that
   requires a single signature, e.g., a non-disclosure agreement.
 
 .. note::
-   Each time a template is used to send a signature request via direct email, and each time a
-   recipient of a link signs a document, a new document is created within Odoo Sign and appears in
-   :menuselection:`Sign --> All Documents`.
+
+   A new document is created within Odoo appearing in :menuselection:`Sign --> All Documents`
+   each time:
+
+   - A template is used to send a signature request via direct email.
+   - A link is shared.
+   - The recipient of a shared link has fully signed the document(s).
+
+   Once the link stops being shared manually or due to expiration, the related document that
+   was created is automatically deleted.
 
 To send a signature request using a template to one or more specific signers from the Sign app:
 
@@ -205,12 +214,12 @@ To send a signature request using a template to one or more specific signers fro
 #. From the Kanban or list view, click :guilabel:`Send` on the line of the relevant template.
    Alternatively, from the Kanban view, click on a template to open it, then click :guilabel:`Send`.
 #. Complete the relevant fields of the :ref:`New Signature Request
-   <sign/request-signatures/configure-request>` window.
+   <sign/request-signatures/configure-request>`
 #. If you are:
 
-   - one of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
+   - One of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
      then :ref:`complete and sign the document(s) <sign/sign-document/signature-request>`.
-   - not one of the signers or a signing order has been defined and you need to sign the document
+   - Not one of the signers or a signing order has been defined and you need to sign the document
      *after* other signers, click :guilabel:`Send`.
 
 To copy a link to a templated document or document envelope:
@@ -221,13 +230,15 @@ To copy a link to a templated document or document envelope:
    :guilabel:`Share`.
 #. Optionally, update the :guilabel:`Valid Until` date if the signature request link should expire;
    leave this blank if the signature request does not expire.
-#. Click :icon:`fa-clone` to copy the link to your clipboard.
+#. Click :icon:`fa-clone` next to the :guilabel:`Share Link` field, to copy the link to your
+   clipboard or click the :guilabel:`Copy link` button.
 
 .. tip::
    - After a link has been shared, a :guilabel:`Shared` tag appears on the card of the relevant
      template in the :guilabel:`Templates` Kanban view.
-   - To stop sharing a link, from the :guilabel:`Templates` Kanban view, click
-     :guilabel:`Share` on the line of the relevant template, then click :guilabel:`Stop sharing`.
+   - To stop sharing a link, from the :guilabel:`Templates` Kanban view,
+     click :guilabel:`Share` on the line of the relevant template, then click
+     :guilabel:`Stop sharing`.
      Alternatively, hover over the relevant template, click the :icon:`fa-ellipsis-v`
      :guilabel:`(vertical ellipsis)` icon in the top-right corner of the card, then click
      :guilabel:`Stop sharing`.
@@ -241,29 +252,36 @@ To send a signature request using a template from an Odoo record:
 
 #. With the relevant record open, click the :guilabel:`Activity` button at the top of the chatter.
 #. In the :guilabel:`Schedule Activity` popup, click :guilabel:`Request Signature`, then
-   select the relevant :guilabel:`Template` from the dropdown.
+   select the relevant :guilabel:`Template` from the dropdown, and click :guilabel:`Continue`.
 #. Complete the relevant fields of the :ref:`New Signature Request
    <sign/request-signatures/configure-request>` window.
 #. If you are:
 
-   - one of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
+   - One of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
      then :ref:`complete and sign the document(s) <sign/sign-document/signature-request>`.
-   - not one of the signers or a signing order has been defined and you need to sign the document
+   - Not one of the signers or a signing order has been defined and you need to sign the document
      *after* other signers, click :guilabel:`Send`.
-
-.. tip::
-   To set a default template, :ref:`access the Request Signature activity type form
-   <activities/types>`, then select the relevant template in the :guilabel:`Default Signature
-   Template` field.
 
 .. note::
    - Templates linked to the current :doc:`Odoo model <../../studio/models_modules_apps>` can be
      selected, as well as templates that are not linked to any model.
    - When sending a signature request from an Odoo record, the related customer (or the relevant
      party) is automatically added as a signer.
-   - Once a document or :ref:`document envelope <sign/request-signatures/create-envelope>` has been
-     fully signed, the signed document(s) and the certificate of completion are also added to the
-     record's chatter.
+
+The request appears in the :guilabel:`Planned activities`, showing the date of the sending, the
+user/contact who sent the request, the name of the template and the contact who received the
+request.
+
+- Click :guilabel:`View` to enter and see the document that needs to be signed.
+- Click :guilabel:`Resend` to send the signature request again to the relevant party.
+- Click :guilabel:`Sign now` to sign the document if you are the first signer in line or if you are
+  the only signer.
+- Click :guilabel:`Edit` to access the template and apply changes in its
+  :ref:`Signature request details <sign/request-signatures/manage-form>`.
+
+Once all the documents are fully signed and sent to the requestor, it appears in the chatter with
+the contact name of the signers who have fully signed, and the documents are added with the
+certificate of completion in the attachments of the chatter.
 
 .. _sign/request-signatures/manage-templates:
 
@@ -279,17 +297,20 @@ a Kanban view, with cards shown horizontally.
    - A panel on the left side allows the view to be filtered by :ref:`tag
      <sign/configuration/tags>` if the displayed templates have been assigned tags. Click the
      :icon:`oi-panel-right` icon to close or open the panel.
+   - The left panel also allows to filter the view by linked
+     :doc:`Odoo model <../../studio/models_modules_apps>` if the templates have been restricted to a
+     specific Odoo model.
 
 For each template, the following information is shown:
 
-- the name of the template
-- the month and year in which the template was created
-- the avatar of the template's :guilabel:`Owner`; by default, the owner is the user who created the
+- The name of the template
+- The month and year in which the template was created
+- The avatar of the template's :guilabel:`Owner`; by default, the owner is the user who created the
   template.
-- any tags assigned to the template
-- the number of documents created using the template for which a signature request is
+- Any tags assigned to the template
+- The number of documents created using the template for which a signature request is
   :guilabel:`In Progress`
-- the number of documents created using the template that have been fully :guilabel:`Signed`
+- The number of documents created using the template that have been fully :guilabel:`Signed`
 
 .. tip::
    Templates you created yourself are automatically marked as favorites for quicker access. To
@@ -309,37 +330,16 @@ icon in the top-right corner. Click the icon to:
 - Modify a template's :ref:`settings <sign/request-signatures/template-form>` by clicking
   :guilabel:`Configuration`.
 - Select a :guilabel:`Color` to add a colored bar to the left side of a card to visually
-  differentiate it.
-
-Export signer responses
-~~~~~~~~~~~~~~~~~~~~~~~
-
-If the :doc:`../documents` app is installed, all signer responses related to a specific template
-can be exported, which is useful, for example, for parental consent forms, petitions, etc. To do so,
-go to :menuselection:`Sign --> Templates`, click the relevant template's card, then click the
-:icon:`fa-cog` (:guilabel:`Actions`) icon and select :guilabel:`Export Answers`.
-
-Responses are exported to an :doc:`Odoo spreadsheet <../spreadsheet>`, with one column per
-:ref:`field <sign/request-signatures/add-fields>`, one line per
-:ref:`signer <sign/request-signatures/signers>`, and one tab per document for :ref:`document
-envelopes <sign/request-signatures/create-envelope>`.
-
-.. note::
-   The spreadsheet is saved in the :guilabel:`Sign Request Answers` folder in Documents, with the
-   template name referenced in the name of the spreadsheet.
+  differentiate it.sign/request-signatures/manage-form
 
 .. _sign/request-signatures/template-form:
 
 Template settings
 ~~~~~~~~~~~~~~~~~
 
-To access and modify a template's settings, go to :menuselection:`Sign --> Templates`, hover over
-the relevant template's card, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon,
-and select :guilabel:`Configuration`.
+The following fields are available when accessing the template configuration form:
 
-The following fields are available on the form:
-
-- the template's name
+- The template's name
 - :guilabel:`Available in`: Select the :doc:`Odoo model <../../studio/models_modules_apps>` to
   which the template is linked to restrict the template to :ref:`signature requests made from
   records of that model <sign/request-signatures/template-odoo-record>`. Leave the field empty to
@@ -360,6 +360,8 @@ The following fields are available on the form:
 
 - :guilabel:`Tags`: Add :ref:`tags <sign/configuration/tags>` to categorize the
   template.
+- :guilabel:`Documents folder`: Define in which :ref:`folder in the Documents app
+  <documents/folders>` the documents using this template should be saved once fully signed.
 - :guilabel:`Redirect Link`: Add a URL to redirect signers after signing the document, such as a
   *Thank you* page, or the website's homepage.
 - In the :guilabel:`Communication` tab, type a default text to include when a signature request
@@ -373,6 +375,25 @@ The following fields are available on the form:
    - Template settings can also be configured while :ref:`editing the template
      <sign/request-signatures/edit-template>`.
 
+.. _sign/request-signatures/export-responses:
+
+Export signer responses
+~~~~~~~~~~~~~~~~~~~~~~~
+
+If the :doc:`../documents` app is installed, all signer responses related to a specific template
+can be exported, which is useful, for example, for parental consent forms, petitions, etc. To do so,
+go to :menuselection:`Sign --> Templates`, click the relevant template's card, then click the
+:icon:`fa-cog` (:guilabel:`Actions`) icon and select :guilabel:`Export Answers`.
+
+Responses are exported to an :doc:`Odoo spreadsheet <../spreadsheet>`, with one column per
+:ref:`field <sign/request-signatures/add-fields>`, one line per
+:ref:`signer <sign/request-signatures/signers>`, and one tab per document for :ref:`document
+envelopes <sign/request-signatures/create-envelope>`.
+
+.. note::
+   The spreadsheet is saved in the :guilabel:`Sign Request Answers` folder in Documents, with the
+   template name referenced in the name of the spreadsheet.
+
 .. _sign/request-signatures/prepare-document:
 
 Prepare a document for signing
@@ -380,12 +401,6 @@ Prepare a document for signing
 
 To prepare any document for signing, :ref:`add the relevant fields
 <sign/request-signatures/add-fields>` for each signer.
-
-It is also possible to:
-
-- :ref:`add additional documents <sign/request-signatures/create-envelope>`
-- :ref:`configure and add signers <sign/request-signatures/signers>`
-- :ref:`add tags <sign/request-signatures/add-tags>`
 
 .. _sign/request-signatures/add-fields:
 
@@ -419,6 +434,11 @@ configuration when they are added to a document:
 
 .. _sign/request-signatures/add-fields-edit:
 
+Custom fields can be created directly from the document using the :icon:`oi-plus`
+:guilabel:`Add Field` button from the left panel. Then, they can be dragged and dropped into the
+document. If necessary, they can be further :ref:`edited <sign/configuration/create-edit-fields>`
+from the :guilabel:`Configuration` drop-down menu.
+
 Once a field has been added, it is possible to:
 
 - **Reposition the field**: Hover over the field until the :icon:`fa-hand-paper-o`
@@ -428,10 +448,10 @@ Once a field has been added, it is possible to:
      To reposition or duplicate multiple fields at once, select the fields by drawing a selection
      area around them with your mouse. Then:
 
-     - to reposition the fields, hover over one of the selected fields until the
+     - To reposition the fields, hover over one of the selected fields until the
        :icon:`fa-hand-paper-o` :guilabel:`(hand)` icon appears, then click and drag the fields to
        the desired position.
-     - to copy and paste the fields, use your regular keyboard shortcut to copy the fields, place
+     - To copy and paste the fields, use your regular keyboard shortcut to copy the fields, place
        your cursor where you want to paste the fields, then use your regular keyboard shortcut to
        paste them.
 
@@ -446,11 +466,11 @@ Once a field has been added, it is possible to:
   Depending on the :ref:`field type <sign/configuration/field-types>`, attributes that can be
   modified include:
 
-  - the :guilabel:`Placeholder` text, i.e., the temporary text the signer sees before starting to
+  - The :guilabel:`Placeholder` text, i.e., the temporary text the signer sees before starting to
     complete the field
-  - whether or not a field is a :guilabel:`Mandatory field`
-  - whether or not a field is :guilabel:`Read-only`
-  - the horizontal alignment of the text within the field
+  - Whether or not a field is a :guilabel:`Mandatory field`
+  - Whether or not a field is :guilabel:`Read-only`
+  - The horizontal alignment of the text within the field
 
   .. note::
      Any changes made to the attributes of a field after adding the field to a document apply *to
@@ -469,34 +489,30 @@ Once a field has been added, it is possible to:
 Document envelopes
 ------------------
 
-A document envelope allows for multiple documents to be signed at the same time or sent for signing
-in a single signature request. It is possible to create a one-off document envelope or a
-:ref:`template <sign/request-signatures/templates>` based on a document envelope.
+A document envelope is a collection of two or more one-off documents uploaded to be prepared and
+sent together for signing in a single signature request.
 
-To create a document envelope *during* the initial file upload, after clicking
-:guilabel:`Upload PDF`, select the relevant `.pdf` documents and click :guilabel:`Open`.
+Click :guilabel:`Upload PDF`, select multiple documents and click :guilabel:`Open`.
 
-.. tip::
-   If, when creating a document envelope via the Sign app, you need to include one document saved
-   in the Documents app, import that document *before* adding subsequent documents. To do so,
-   click the :icon:`fa-cog` :guilabel:`(Actions)` icon beside the name of the view, then
-   :guilabel:`Import from Documents`.
+      To add one or more documents on an existing document or envelop:
 
-To add one or more documents *after* the initial file upload:
+      #. Open the document or document envelope, then click :guilabel:`Add` in the
+         :guilabel:`Documents` section.
+      #. Select the relevant `.pdf` document(s), then click :guilabel:`Open`.
 
-#. Open the initial document or document envelope, then click :guilabel:`Add` in the
-   :guilabel:`Documents` section.
-#. Select the relevant `.pdf` document(s), then click :guilabel:`Open`.
+         .. tip::
 
-.. tip::
-   To change the order in which documents are presented to the signer, click the
-   :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon beside the relevant document in the
-   :guilabel:`Documents` section, then click :icon:`fa-arrow-up` :guilabel:`Move Up` or
-   :icon:`fa-arrow-down` :guilabel:`Move Down` as appropriate. To remove a document from the
-   envelope, click :icon:`fa-trash` :guilabel:`Delete`.
+            - To create a document envelope that includes one document saved in the Documents app,
+              import that document first *before* :ref:`adding subsequent documents
+              <sign/request-signatures/create-envelope>`.
+            - To change the order in which documents are presented to the signer, click the
+              :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon beside the relevant document in the
+              :guilabel:`Documents` section, then click :icon:`fa-arrow-up` :guilabel:`Move Up` or
+              :icon:`fa-arrow-down` :guilabel:`Move Down` as appropriate. To remove a document from the
+              envelope, click :icon:`fa-trash` :guilabel:`Delete`.
 
-   .. image:: request_signatures/multiple-documents.png
-      :alt: Document envelope with two documents
+              .. image:: request_signatures/multiple-documents.png
+                 :alt: Document envelope with two documents
 
 .. _sign/request-signatures/signers:
 
@@ -525,9 +541,9 @@ To add additional signers to a document or document envelope:
 .. tip::
    - Each signer is assigned a unique color and all fields associated with a specific signer have
      the same background color.
-   - When a document or document envelope has multiple signers, it is possible to define the
-     order in which signers receive and sign when :ref:`configuring the signature request
-     <sign/request-signatures/configure-request>`.
+   - When sending a document or document envelope with multiple signers,
+     :ref:`configuring the signature request <sign/request-signatures/configure-request>` allows you
+     to define the order in which signers receive and sign the documents.
 
 .. _sign/request-signatures/signer-settings:
 
@@ -537,12 +553,13 @@ Signer settings
 To define additional configuration for signers, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical
 ellipsis)` icon on the row of the signer. For each signer, the following options are available:
 
-- :guilabel:`Extra Authentication Step`: Require the signer to :ref:`authenticate using a specific
-  authentication method <sign/security/authentication>`.
+- :guilabel:`Extra Authentication Step`: Require the signer to :ref:`authenticate using a second
+  authentication method <sign/security/authentication>` selectable from the dropdown.
 - :guilabel:`Can delegate`: Allow the signer to :ref:`delegate their signature
   <sign/sign-document/delegate>` or :ref:`be replaced after the signature request has been sent
   <sign/request-signatures/change-signers>`.
-- :guilabel:`Assign to`: Assign a specific contact as signer by selecting them from the dropdown.
+- :guilabel:`Assign to`: Assign a specific contact as the default signer by selecting them from the
+  dropdown.
 
 .. _sign/request-signatures/add-tags:
 
@@ -561,13 +578,13 @@ Tags can also be added to, or removed from, a document :ref:`after a signature r
 Configure the signature request
 ===============================
 
-After :ref:`preparing a one-off document or document envelope for signing
+After :ref:`preparing document or document envelope for signing
 <sign/request-signatures/prepare-document>` or selecting a template, click :guilabel:`Send`, then
 configure the signature request in the :guilabel:`New Signature Request` window.
 
 For each signer, select a contact or type an email address. Optionally, enable :ref:`Signing Order
 <sign/request-signatures/signing-order>` to control the order in which the document or document
-envelope is signed.
+envelope is sent and signed.
 
 .. tip::
    A signer's email address can be :ref:`modified after the signature request has been sent
@@ -575,27 +592,27 @@ envelope is signed.
 
 It is also possible to:
 
-- :ref:`set a Valid Until date <sign/request-signatures/validity>` after which the signature request
-  expires
-- :ref:`set Reminders <sign/request-signatures/validity>` to be sent at fixed intervals
+- :ref:`Set a Validity date <sign/request-signatures/validity>` after which the signature request
+  expires.
+- :ref:`Set Reminders <sign/request-signatures/validity>` to be sent at fixed intervals.
 - enable :guilabel:`Hide certificate key on pages` to hide the :ref:`reference of the certificate
   of completion <sign/security/certificate-of-completion>` displayed by default on each page of the
-  document(s)
-- have one or more parties notified when the document is fully signed or :ref:`refused
+  document(s).
+- Have one or more parties notified when the document is fully signed or :ref:`refused
   <sign/sign-document/decline>` by adding the relevant contact(s) or email address(es) in the
-  :guilabel:`CC` field
-
-- add a message to the signature request email
+  :guilabel:`CC` field.
+- Add a message to the signature request email.
 
   .. tip::
      When :ref:`creating a template <sign/request-signatures/templates>`, it is
      possible to define a default message to be added to the signature request; this can still be
      edited before sending.
 
-- add attachments to the signature request via the :icon:`fa-paperclip` :guilabel:`(paperclip)` icon
-  at the bottom of the window, or, to add an attachment saved in the Documents app, click the
-  Documents app icon
-- schedule the sending of the signature request via the :icon:`fa-clock-o` :guilabel:`(clock)` icon
+- Add attachments to the signature request via the :icon:`fa-paperclip` :guilabel:`(paperclip)` icon
+  at the bottom of the window, or, add an attachment saved in the Documents app by clicking the
+  Documents app icon.
+- Click the :ref:`AI button <ai/ai_button>` to get assistance from the IA through chatbox.
+- Schedule the sending of the signature request via the :icon:`fa-clock-o` :guilabel:`(clock)` icon.
 
 .. _sign/request-signatures/signing-order:
 
@@ -604,8 +621,8 @@ Signing order
 
 When a document or document envelope needs to be signed by multiple parties, and the order of
 signing is important, it is possible to define the :guilabel:`Signing order` when configuring the
-signature request. This controls the order in which the recipients receive the document(s) for
-signature.
+signature request. This controls the order in which the recipients receive and sign the document(s)
+for signature.
 
 To define a signing order:
 
@@ -614,10 +631,10 @@ To define a signing order:
    first column.
 
 The signer indicated in position `1` receives the signature request first, and each recipient
-receives the request only once the previous recipient has signed the document.
+receives the request only once the previous recipient has signed and validated the document.
 
 .. example::
-   In the example, the AB & Co Legal contact will receive the signature request first, the AB & Co
+   In the example, the AB & Co Legal contact receives the signature request first, the AB & Co
    CEO second, and Mitchell Admin last.
 
    .. image:: request_signatures/signing-order.png
@@ -639,9 +656,9 @@ this date, the document is no longer accessible via the link in the signature re
 If the signature request does not expire, leave this field blank.
 
   .. note::
-     When using a :ref:`template <sign/request-signatures/templates>` for which a default validity
-     period has been defined, the :guilabel:`Valid Until` date is updated automatically in the
-     signature request email; this date can be changed if desired.
+     When using a :ref:`template <sign/request-signatures/templates>` with a default validity
+     period, the :guilabel:`Valid Until` date is updated automatically in the signature request
+     email; this date can be changed if desired.
 
 To set automatic reminders, enable :guilabel:`Reminders`, then define the interval, in days, at
 which reminders should be sent until the document has been signed by the signer.
@@ -657,11 +674,11 @@ Documents`. The list view and Kanban view offer different possibilities:
 In the list view:
 
 - See the overall :guilabel:`Status` of the signature request, e.g., :guilabel:`To Sign`,
-  :guilabel:`Signed`, :guilabel:`Cancelled`.
+  :guilabel:`Signed` or :guilabel:`Cancelled`.
 - :icon:`fa-refresh` :guilabel:`Resend` a signature request manually.
 - :icon:`fa-pencil-square-o` :guilabel:`Sign` a document or document envelope.
 - :icon:`fa-download` :guilabel:`Download` the fully signed document(s).
-- For a canceled signature request, click :icon:`fa-info` :guilabel:`Details` to see the
+- For a cancelled signature request, click :icon:`fa-info` :guilabel:`Details` to see the
   :ref:`details <sign/request-signatures/manage-form>` of the request.
 
 .. tip::
@@ -702,8 +719,9 @@ Signature request details
 To view the details of a signature request, go to :menuselection:`Sign --> Documents --> All
 Documents`, then:
 
-- click the relevant signature request in the list and click :guilabel:`Details`, or
-- switch to the Kanban view, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon on
+- Click the relevant signature request in the list, click the :icon:`fa-cog` :guilabel:`(Actions)`
+  icon and click :guilabel:`Details`, or
+- Switch to the Kanban view, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon on
   the relevant signature request's card, and select :guilabel:`Details`.
 
 Using the buttons at the top of the form, you can:
@@ -719,21 +737,21 @@ The following information is available on the form:
    Fully signed signature requests cannot be edited, except for their tags and the linked Odoo
    model and record, if applicable.
 
-- The overall :guilabel:`Status` of the signature request, i.e., :guilabel:`To Sign`,
-  :guilabel:`Signed`, or :guilabel:`Cancelled`
-- :guilabel:`Tags`: any :ref:`tags <sign/configuration/tags>` added to the signature request
+- The overall :guilabel:`Status` of the signature request at the top-right corner, i.e.,
+  :guilabel:`To Sign`, :guilabel:`Signed`, or :guilabel:`Cancelled`.
+- :guilabel:`Tags`: any :ref:`tags <sign/configuration/tags>` added to the signature request.
 - :guilabel:`Valid until`: the :ref:`expiration date <sign/request-signatures/validity>` of the
-  signature request
+  signature request.
 - :guilabel:`Reminder`: the :ref:`reminder settings <sign/request-signatures/validity>` of
-  the signature request
+  the signature request.
 - :guilabel:`Linked to`: the Odoo model and :ref:`record <sign/request-signatures/one-off-record>`
   linked to the signature request, if applicable.
 - :guilabel:`Signers`: the list of signers, including their :guilabel:`Role` (i.e., the name given
   to the signer when the document was being :ref:`prepared for signing
-  <sign/request-signatures/add-signers>`; by default, `Signer 1`, `Signer 2`, etc.), email
-  address, and signature status. Click :guilabel:`Resend` to manually resend the request to a signer.
+  <sign/request-signatures/add-signers>`; by default, `Signer 1`, `Signer 2`, etc.), email address,
+  and signature status. Click :guilabel:`Resend` to manually resend the request to a signer.
 - :guilabel:`Contacts in copy`: contacts added in the :guilabel:`CC` field when the signature
-  request was created
+  request was created.
 - :guilabel:`Activity Logs`: a complete log of actions performed on the signature request, such as
   its creation, views, downloads, signatures, or :ref:`refusals <sign/sign-document/decline>`.
 
@@ -748,8 +766,9 @@ replace a signer, click their name in the :guilabel:`Signers` tab, then click th
 and select the new signer.
 
 To update a signer's email address, click the signer's name twice or, if the :guilabel:`Can
-delegate` option was enabled for the signer, click the name, then click the :icon:`fa-arrow-right`
-:guilabel:`(Internal Link)` icon next to it and update the email address in the contact form.
+delegate` option was enabled for the signer, click the email and modify it or click the signer's
+name, then click the :icon:`fa-arrow-right` :guilabel:`(Internal Link)` icon next to it and update
+the email address in the contact form.
 
 The signature request is automatically sent to the new signer or email address upon saving or
 navigating away from the signature request or contact form.
