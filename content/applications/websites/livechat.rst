@@ -19,7 +19,7 @@ The **Live Chat** application can be installed multiple ways:
   team, and on the team's settings page, click the checkbox next to :guilabel:`Live Chat`, under the
   :guilabel:`Channels` section.
 - In the :menuselection:`Website` app, go to :menuselection:`Configuration --> Settings`, scroll to
-  the :guilabel:`Email & Marketing` section, check the box next to :guilabel:`Livechat`, and click
+  the :guilabel:`General` section, check the box next to :guilabel:`Livechat`, and click
   :guilabel:`Save`.
 
   .. image:: livechat/enable-setting.png
