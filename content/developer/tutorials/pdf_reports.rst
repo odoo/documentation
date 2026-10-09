@@ -42,7 +42,7 @@ Therefore, it is expected that your work tree will look something like this:
   │   ├── estate_property_templates.xml
   │   └── estate_property_reports.xml
   ├── security
-  │   └── ir.model.access.csv
+  │   └── ir.access.csv
   ├── views
   │   └── *.xml
   ├── __init__.py

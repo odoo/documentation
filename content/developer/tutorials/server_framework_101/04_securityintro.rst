@@ -67,58 +67,45 @@ Access Rights
 =============
 
 **Reference**: the documentation related to this topic can be found in
-:ref:`reference/security/acl`.
-
-.. note::
-
-    **Goal**: at the end of this section, the following warning should not appear anymore:
-
-    .. code-block:: text
-
-        WARNING rd-demo odoo.modules.loading: The models ['estate.property'] have no access rules...
+:ref:`reference/security/access`.
 
 When no access rights are defined on a model, Odoo determines that no users can access the data.
-It is even notified in the log:
 
-.. code-block:: text
-
-    WARNING rd-demo odoo.modules.loading: The models ['estate.property'] have no access rules in module estate, consider adding some, like:
-    id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-
-Access rights are defined as records of the model ``ir.model.access``. Each
-access right is associated with a model, a group (or no group for global
-access) and a set of permissions: create, read, write and unlink\ [#unlink]_. Such access
-rights are usually defined in a CSV file named
-``ir.model.access.csv``.
+Access rights are defined as records of the model ``ir.access``. Each access
+right is associated with a model, a group (or no group for restrictions), a set
+of operations (a subset of create, read, update and delete\ [#delete]_) and an
+optional domain.
+Such access rights are usually defined in a CSV file named ``ir.access.csv``.
 
 Here is an example for our previous `test_model`:
 
 .. code-block:: text
 
-    id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-    access_test_model,access_test_model,model_test_model,base.group_user,1,0,0,0
+    id,name,model_id,group_id/id,operation,domain
+    access_test_model,access_test_model,test_model,base.group_user,crud,
 
 - ``id`` is an :term:`external identifier`.
-- ``name`` is the name of the ``ir.model.access``.
-- ``model_id/id`` refers to the model which the access right applies to. The standard way to refer
-  to the model is ``model_<model_name>``, where ``<model_name>`` is the ``_name`` of the model
-  with the ``.`` replaced by ``_``. Seems cumbersome? Indeed it is...
+- ``name`` is the description of the ``ir.access``.
+- ``model_id`` refers to the model which the access right applies to. The standard way to refer
+  to the model is the ``_name`` of the model.
 - ``group_id/id`` refers to the group which the access right applies to.
-- ``perm_read,perm_write,perm_create,perm_unlink``: read, write, create and unlink permissions
+- ``operation``: specifies which operations on the model the access refers to
+  (create, read, update, delete).  For instance, the string ``ru`` refers to the
+  set {read, update}.
+- ``domain``: permits or restricts the access to the records that satisfy the domain.
+  If a group is given, the record provides permission to the users of the given group.
+  Otherwise, the record restricts access to the users that satisfy the domain for all users.
 
 .. exercise:: Add access rights.
 
-    Create the ``ir.model.access.csv`` file in the appropriate folder and define it in the
+    Create the ``ir.access.csv`` file in the appropriate folder and define it in the
     ``__manifest__.py`` file.
 
-    Give the read, write, create and unlink permissions to the group ``base.group_user``.
-
-    Tip: the warning message in the log gives you most of the solution ;-)
-
-Restart the server and the warning message should have disappeared!
+    Give the create, read, update and delete permissions to the group ``base.group_user``.
 
 It's now time to finally :doc:`interact with the UI <05_firstui>`!
 
 .. [#who] meaning which Odoo user (or group of users)
 
-.. [#unlink] 'unlink' is the equivalent of 'delete'
+.. [#delete] the 'update' and 'delete' operations correspond to ORM methods
+    ``write()`` and ``unlink()``, respectively.
