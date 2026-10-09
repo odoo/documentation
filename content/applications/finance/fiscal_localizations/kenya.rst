@@ -2,13 +2,15 @@
 Kenya
 =====
 
-.. _localization/kenya/configuration:
+.. _localizations/kenya/configuration:
 
 Configuration
 =============
 
 Install the 🇰🇪 **Kenyan** :ref:`fiscal localization package <fiscal_localizations/packages>` to get
 all the features of the Kenyan localization.
+
+.. _localizations/kenya/etims:
 
 eTIMS
 =====
@@ -25,7 +27,7 @@ The OSCU is used to validate, encrypt, sign, transmit, and store tax invoices.
    Make sure to :ref:`install <general/install>` the **Kenya eTIMS EDI** modules to use the OSCU
    device fully.
 
-.. _kenya/initialization:
+.. _localizations/kenya/initialization:
 
 OSCU device initialization
 --------------------------
@@ -36,8 +38,8 @@ Settings`, click :guilabel:`Update Info` in the :guilabel:`Companies` section, a
 
 To initialize the OSCU:
 
-#. Go to :menuselection:`Settings --> General Settings` and scroll down to the :guilabel:`Kenya
-   eTIMS Integration` section.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll down to the
+   :guilabel:`Kenya eTIMS Integration` section.
 #. Set the :guilabel:`eTIMS Server Mode` to :guilabel:`Test` for the initialization.
 #. Enter the :guilabel:`Serial Number` of the device and tick the two check boxes.
 #. Click :guilabel:`Initialize OSCU`.
@@ -56,11 +58,18 @@ To initialize the OSCU:
    enter the ID of the unit in the :guilabel:`Unit ID` field and the key obtained through a previous
    initialization in the :guilabel:`CMC Key` field. Click :guilabel:`Save` when done.
 
-Once the **OSCU module** has been :ref:`initialized <kenya/initialization>`, an OSCU serial number
-is generated for each company on that database with its **country** set to :guilabel:`Kenya`. The
-serial number is generated based on the VAT number of the company (regardless of its validity). It
-is a unique and sequential serial number starting with the prefix `ODOO` followed by the company's
-**VAT number** and a sequence of numbers.
+Once the **OSCU module** has been :ref:`initialized <localizations/kenya/initialization>`, an OSCU
+serial number is generated for each company on that database with its **country** set to
+:guilabel:`Kenya`. The serial number is generated based on the VAT number of the company (regardless
+of its validity). It is a unique and sequential serial number starting with the prefix `ODOO`
+followed by the company's **VAT number** and a sequence of numbers.
+
+.. tip::
+   If a :guilabel:`Device is already installed` or :guilabel:`The registration failed` error message
+   appears, either the change of solution request (relevant party) or the service request (KRA) has
+   not been approved yet. Contact the relevant parties in accordance.
+
+.. _localizations/kenya/etims-registration:
 
 Registering on eTIMS
 --------------------
@@ -92,6 +101,19 @@ If you do not have an account yet:
      using (17.0 or onwards).
    - Part 5: Check the mandatory boxes, enter a date, and sign.
 
+.. _localizations/kenya/tokens:
+
+Integration tokens
+------------------
+
+To obtain integration tokens for eTIMS, send a request to the email address `etims@mail.odoo.com`.
+In the email, include your eTIMS portal credentials (KRA pin and password) and your Odoo database.
+
+Your token will be sent via email on the same day. Once obtained, input the token in the
+:guilabel:`Integration Token` field to complete your service request.
+
+.. _localizations/kenya/etims-codes:
+
 eTIMS codes
 -----------
 
@@ -109,7 +131,7 @@ fetched OSCU codes.
 .. image:: kenya/oscu-codes.png
    :alt: List of fetched OSCU codes.
 
-.. _etims/unspsc:
+.. _localizations/kenya/unspsc-codes:
 
 UNSPSC codes
 ------------
@@ -125,6 +147,8 @@ fetched from the KRA eTIMS API servers every day. To fetch them manually, procee
 Go to the **product form**, and in the :guilabel:`Accounting` tab, click the :guilabel:`UNSPSC
 Category` field to view the complete list of fetched UNSPSC codes.
 
+.. _localizations/kenya/notices:
+
 Notices
 -------
 
@@ -139,10 +163,10 @@ Notices are **automatically** fetched from the KRA eTIMS API servers every day. 
 Go to :menuselection:`Accounting --> Configuration --> KE OSCU Notices` to view the complete list of
 fetched notices.
 
+.. _localizations/kenya/multi-company:
+
 Multi-company
 -------------
-
-.. _kenya/branch:
 
 .. seealso::
    :doc:`../../general/companies`
@@ -158,13 +182,16 @@ company** has a branch ID equal to `00` in a multi-company environment. Companie
 parent company have a branch ID other than `00` and are assigned an ID by the KRA.
 
 To fetch the **branch ID** from the KRA for your non-parent companies, ensure the parent company has
-a Kenyan :guilabel:`Tax ID` and the OSCU device has been :ref:`initialized <kenya/initialization>`.
-Then, go to the :guilabel:`Branches` tab and click :guilabel:`Populate from KRA`.
+a Kenyan :guilabel:`Tax ID` and the OSCU device has been
+:ref:`initialized <localizations/kenya/initialization>`. Then, go to the :guilabel:`Branches` tab
+and click :guilabel:`Populate from KRA`.
 
 .. note::
    - The KRA considers each **place of supply** as a separate branch (ID).
-   - The **OSCU** device must be :ref:`initialized independently <kenya/initialization>` for each
-     branch.
+   - The **OSCU** device must be
+     :ref:`initialized independently <localizations/kenya/initialization>` for each branch.
+
+.. _localizations/kenya/branch-id:
 
 Contact branch ID
 -----------------
@@ -174,6 +201,8 @@ tab, and enter the branch code in the :guilabel:`eTIMS Branch Code` field.
 
 .. note::
    By default, contacts' branch IDs are set to `OO`.
+
+.. _localizations/kenya/kra-sequences:
 
 KRA sequences
 -------------
@@ -200,11 +229,7 @@ per branch.
    - Creating an invoice on **branch 2**: INV/2024/00001;
    - Creating an invoice on the **parent company**: INV/2024/00001.
 
-Integration tokens
-------------------
-
-To obtain integration tokens for eTIMS, send a request to the following email address:
-etims@mail.odoo.com.
+.. _localizations/kenya/insurance:
 
 Insurance
 =========
@@ -215,7 +240,7 @@ Settings`, scroll to the :guilabel:`Kenya eTIMS Integration` section, and fill i
 :guilabel:`Code`, :guilabel:`Name`, and :guilabel:`Rate` fields. Click :guilabel:`Send Insurance
 Details` when done.
 
-.. _kenya/product-registration:
+.. _localizations/kenya/product-registration:
 
 Product registration
 ====================
@@ -232,7 +257,7 @@ registered, the following fields must be defined on the product form:
   - :guilabel:`Origin Country`;
   - :guilabel:`eTIMS Product Type`;
   - :guilabel:`Insurance Applicable`;
-  - :ref:`UNSPSC Category <etims/unspsc>`.
+  - :ref:`UNSPSC Category <localizations/kenya/unspsc-codes>`.
 
 If the elements above are defined, the product is automatically registered while sending the
 operation to the KRA. If not, you will be alerted by a yellow banner at the top of the screen
@@ -240,6 +265,8 @@ inviting you to check the missing elements.
 
 .. image:: kenya/product-registration.png
    :alt: Product registration template.
+
+.. _localizations/kenya/stock-movements:
 
 Stock movements
 ===============
@@ -257,9 +284,11 @@ eTIMS.
 
 .. note::
    - The stock move must be confirmed before sending the invoice to eTIMS.
-   - The product(s) must be :ref:`registered <kenya/product-registration>` for the stock move to be
-     sent to eTIMS. If the product has not been registered yet, a yellow banner will prompt the
-     products' registration.
+   - The product(s) must be :ref:`registered <localizations/kenya/product-registration>` for the
+     stock move to be sent to eTIMS. If the product has not been registered yet, a yellow banner
+     will prompt the products' registration.
+
+.. _localizations/kenya/purchases:
 
 Purchases
 =========
@@ -267,8 +296,6 @@ Purchases
 Odoo automatically fetches new vendor bills from eTIMS every day. You need to confirm the fetched
 vendor bills and send the confirmation to the KRA. To confirm a vendor bill, it must be linked to
 one or several confirmed purchase order line(s).
-
-.. _kenya/purchases:
 
 In the case of purchases (not customs imports), the steps to link purchase order lines with bills
 are the following:
@@ -300,6 +327,8 @@ are the following:
 .. image:: kenya/purchase-order-lines.png
    :alt: Bill registration steps.
 
+.. _localizations/kenya/invoicing:
+
 Invoicing
 =========
 
@@ -323,6 +352,18 @@ it:
 - The **KRA tax table**;
 - A unique **KRA QR code** for the signed invoice.
 
+.. tip::
+   If the error message :guilabel:`Invoice number already exists.` appears:
+
+   #. Go to your eTIMS portal and check the last invoice number used.
+   #. Open your Odoo database, activate :ref:`debug mode <developer-mode/activation>`, and go to
+      :menuselection:`Settings --> Technical --> Sequences` and search for :guilabel:`eTIMS
+      Customer Invoice Number`.
+   #. Click it and change the :guilabel:`Next Number` field to the next available sequence number
+      (for example, if the last invoice number on eTIMS was 31, set this field to 32).
+
+.. _localizations/kenya/imports:
+
 Imports
 =======
 
@@ -344,8 +385,8 @@ The following steps are required to send and have **customs imports** signed by 
    create a product if no related product exists).
 #. Set a vendor in the :guilabel:`Partner` field.
 #. Based on the partner, match the imported item with its related purchase order (see
-   :ref:`purchase steps <kenya/purchases>`). The stock must be correctly adjusted when the customs
-   import is approved.
+   :ref:`purchase steps <localizations/kenya/purchases>`). The stock must be correctly adjusted when
+   the customs import is approved.
 
    If no related purchase order exists, create one and :guilabel:`Confirm` it. Then, confirm the
    delivery by clicking :guilabel:`Receive Products`, then :guilabel:`Validate` on the purchase
@@ -357,17 +398,21 @@ The following steps are required to send and have **customs imports** signed by 
 .. note::
    The JSON file received from the KRA is attached to the chatter of the customs import.
 
+.. _localizations/kenya/bom:
+
 BOM
 ===
 
 The KRA requires all BOMs to be sent to them. To send BOMs to eTIMS, the product and its components
-*must* be :ref:`registered <kenya/product-registration>`. To access a product's BOM, click on the
-product and then click the :guilabel:`Bill of Materials` smart button.
+*must* be :ref:`registered <localizations/kenya/product-registration>`. To access a product's BOM,
+click on the product and then click the :guilabel:`Bill of Materials` smart button.
 
-Make sure the :ref:`KRA's required fields <kenya/product-registration>` are filled in the
-:guilabel:`KRA eTIMS details` section of the :guilabel:`Accounting` tab in the product form, and
+Make sure the :ref:`KRA's required fields <localizations/kenya/product-registration>` are filled in
+the :guilabel:`KRA eTIMS details` section of the :guilabel:`Accounting` tab in the product form, and
 click :guilabel:`Send to eTIMS`. The successful sending of the BOM is confirmed in the chatter,
 where you can also find the sent information in an attached JSON file.
+
+.. _localizations/kenya/credit-notes:
 
 Credit notes
 ============
