@@ -31,7 +31,7 @@ Post a JSON object at the ``/json/2/<model>/<method>`` URL.
 **HTTP Headers**
 
 :Host: Required, the hostname of the server.
-:Autorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
+:Authorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
 :Content-Type: Required, ``application/json``, a charset is recommended.
 :X-Odoo-Database: Optional, the name of the database to connect to.
 :User-Agent: Recommended, the name of your software.
@@ -519,7 +519,7 @@ The following examples showcase how to execute two of the :ref:`common ORM metho
                   ],
               }),
           };
-          const resSearch = await fetch(BASE_URL + "/res.partner/search_read", reqSearch);
+          const resSearch = await fetch(BASE_URL + "/res.partner/search", reqSearch);
           if (!resSearch.ok) throw new Error(resSearch.json());
           const ids = await resSearch.json();
 
@@ -532,7 +532,7 @@ The following examples showcase how to execute two of the :ref:`common ORM metho
                   fields: ["name"],
               }),
           };
-          const resRead = await fetch(BASE_URL + "/res.partner/search_read", reqRead);
+          const resRead = await fetch(BASE_URL + "/res.partner/read", reqRead);
           if (!resRead.ok) throw new Error(resRead.json());
           const names = await resRead.json();
           console.log(names);
@@ -715,15 +715,13 @@ context with ``execute_kw``, as it is extracted from the keyword argument named 
       object = ServerProxy(...)
       ids = [1, 2, 3]
       fields = ['name']
-      load = None
 
-      object.execute("database", 2, "admin", "res.partner", "read", ids, fields, load)
-      object.execute("database", 2, "admin", "res.partner", "search", [
+      object.execute_kw("database", 2, "admin", "res.partner", "read", [
           ids,
           fields,
       ], {
           "context": {"lang": "en_US"},
-          "load": load,
+          "load": None,
       })
 
 The JSON-2 API replaces the object service with a few differences. The database must only be
