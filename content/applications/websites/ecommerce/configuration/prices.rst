@@ -86,9 +86,8 @@ discounts based on currencies, time periods, purchase volumes, :ref:`customers' 
 
 To enable pricelists for eCommerce, go to :menuselection:`Website --> Configuration --> Settings`,
 scroll down to the :guilabel:`eCommerce` section, enable :guilabel:`Pricelists`, and
-:guilabel:`Save`. Then, click :icon:`fa-arrow-right` :guilabel:`Pricelists` or go to
-:menuselection:`Website --> eCommerce --> Pricelists` and :ref:`configure
-<sales/products/pricelist-configuration>` the relevant pricelists.
+:guilabel:`Save`. Then, go to :menuselection:`Website --> eCommerce --> Pricelists` and
+:ref:`configure <sales/products/pricelist-configuration>` the relevant pricelists.
 
 In the :guilabel:`Ecommerce` tab, configure options specific to online sales, such as assigning a
 :guilabel:`Website` to a pricelist, allowing customers to :ref:`select it

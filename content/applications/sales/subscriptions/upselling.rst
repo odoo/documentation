@@ -59,16 +59,6 @@ Status`.
 .. image:: upselling/sales-history-smartbutton.png
    :alt: The related sales order accessed from the Sales History smart button in Odoo Subscriptions.
 
-Discount configuration
-----------------------
-
-Discounts can be easily applied to upsold subscriptions to incentivize customers to purchase more
-expensive or additional subscriptions. To do this, the *Discounts* feature must be enabled.
-
-To activate the *Discounts* feature, navigate to :menuselection:`Sales app --> Configuration -->
-Settings`. Scroll to the :guilabel:`Pricing` section and tick the checkbox beside
-:guilabel:`Discounts`. Finally, click :guilabel:`Save`.
-
 Create alternative
 ------------------
 

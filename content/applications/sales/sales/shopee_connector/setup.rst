@@ -167,12 +167,12 @@ The selection of a database product for a sales order item is done by matching i
 with the Shopee *SKU*.
 
 If no database product with a matching internal reference is found for a given
-:guilabel:`Shopee SKU`, then a default database product, *Shopee Item*.
+:guilabel:`Shopee SKU`, then a default database product, *Shopee Sale*, is used.
 
 .. note::
-   To modify default products, activate the :ref:`developer mode <developer-mode>`, and navigate to
-   :menuselection:`Sales app --> Configuration --> Settings`. In the :guilabel:`Connectors` section,
-   under :guilabel:`Shopee Sync`, find the :guilabel:`Default Products`.
+   To modify default products, navigate to :menuselection:`Sales app --> Products --> Products`
+   and remove the :guilabel:`Sales` filter. The default products are *Shopee Sale*, *Shopee
+   Shipping*, *Shopee Amount Adjustment*, and *Shopee Order Discount*.
 
 Product tax configuration
 =========================
