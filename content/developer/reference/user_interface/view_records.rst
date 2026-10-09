@@ -297,7 +297,7 @@ specifies how the matched node should be modified.
 
 .. attribute:: replace
 
-   The content of the inheritance spec replaces the matched node. Any text node containing only `$0`
+   The content of the inheritance spec replaces the matched node. Any node with tag `replace-target`
    within the contents of the spec is replaced by a copy of the matched node, effectively wrapping
    the matched node.
 
@@ -306,7 +306,7 @@ specifies how the matched node should be modified.
       .. code-block:: xml
 
          <xpath expr="//field[@name='x_field']" position="replace">
-             <div class="wrapper">$0</div>
+             <div class="wrapper"><replace-target/></div>
          </xpath>
 
 .. attribute:: attributes
