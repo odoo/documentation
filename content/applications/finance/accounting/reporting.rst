@@ -169,6 +169,22 @@ this restrictive mode, navigate to :menuselection:`Accounting --> Settings --> C
 scroll down to the :guilabel:`Reporting` section, and tick the checkbox beside
 :guilabel:`Restrictive Audit Trail`.
 
+.. _accounting/reporting/bank-reconciliation:
+
+Bank reconciliation summary
+===========================
+
+The :guilabel:`Bank Reconciliation Summary` report provides a detailed overview of reconciled and
+unreconciled transactions, including transaction details and the calculations behind each reported
+balance.
+
+Designed for review and audit purposes, the report provides a complete reconciliation trail as of a
+selected end date. It reflects balances and reconciliation statuses as they existed at that point in
+time, rather than their current live status.
+
+To access the report, open the **Accounting** dashboard, click the :icon:`oi-ellipsis-v`
+:guilabel:`(Vertical ellipsis)` on the :guilabel:`Bank` journal, and then :guilabel:`Report`.
+
 .. _accounting/reporting/filters:
 
 Report filters and options
