@@ -9,14 +9,15 @@ There are two main ways to integrate live Odoo data into a :doc:`pivot table
   into an Odoo spreadsheet, Odoo dashboard, or quote calculator spreadsheet.
 
 - :ref:`Insert a pivot table that retrieves Odoo data directly from an Odoo spreadsheet
-  <spreadsheet/pivot-tables/create>`. This option allows you to pull data from any model, including
+  <spreadsheet/pivot-tables/create>`. This option allows data to be pulled from any model, including
   models for which no pivot view is available, e.g., the *Sales Order Line* model.
 
 In both cases, the pivot table is connected to the underlying database data thanks to its unique
-:ref:`data source <spreadsheet/insert/data-sources>`, which keeps the data up-to-date and allows you
-to :ref:`access the underlying data <spreadsheet/insert/accessing-data>` directly from the
-spreadsheet. However, it is important to understand the difference between :ref:`static and dynamic
-pivot tables <spreadsheet/insert-pivot-table/static-vs-dynamic>` in Odoo.
+:ref:`data source <spreadsheet/insert/data-sources>`, which keeps the data up-to-date and provides
+:ref:`access to the underlying data <spreadsheet/insert/accessing-data>` directly from the
+spreadsheet. However, whether or not the pivot table expands to accommodate new dimensions depends
+on whether it is a :ref:`static or dynamic pivot table
+<spreadsheet/insert-pivot-table/static-vs-dynamic>`.
 
 .. note::
    It is also possible to :ref:`create a pivot table from a range of data
@@ -130,7 +131,7 @@ There are two main ways to do so:
      pivot ID. To avoid confusion, delete the original static pivot table.
 
 The top-left cell of the new dynamic pivot table contains an :ref:`Odoo-specific array function that
-retrieves data <spreadsheet/insert-pivot-table/dynamic-function>` from your your database.
+retrieves data <spreadsheet/insert-pivot-table/dynamic-function>` from your database.
 
 .. _spreadsheet/insert-pivot-table/dynamic-function:
 
