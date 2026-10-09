@@ -133,7 +133,7 @@ Access Rights
 =============
 
 .. seealso:: The documentation related to this topic can be found at
-             :ref:`reference/security/acl`.
+             :ref:`reference/security/access`.
 
 .. admonition:: **Goal**
 
@@ -151,7 +151,7 @@ an access right to a group, then all users with that group will have the access.
 For instance we don't want real-estate agents to be able to modify what property
 types are available, so we would not link that access to the "user" group.
 
-Access rights can only give access, they can't remove it: when access is
+Access rights can only give access: when access is
 checked, the system looks to see if *any* access right associated with the user
 (via any group) grants that access.
 
@@ -168,9 +168,9 @@ while one with B and C will be able to read and update it, but not create or del
 
 .. note::
 
-    * The group of an access right can be omitted, this means the ACL applies
-      to *every user*, this is a useful but risky fallback as depending on the
-      applications installed it can grant even non-users access to the model.
+    * In order to make some access apply to *every user*, use the group
+      ``base.group_everyone``. Be careful, this is a bit risky as, depending on the
+      applications installed, it may grant even non-users access to the model.
     * If no access right applies to a user, they are not granted access
       (default-deny).
     * If a menu item points to a model to which a user doesn't have access and
@@ -187,18 +187,15 @@ while one with B and C will be able to read and update it, but not create or del
 
     .. warning::
 
-        Remember to give different xids to your ``ir.model.access`` records
+        Remember to give different xids to your ``ir.access`` records
         otherwise they will overwrite one another.
 
 Since the "demo" user was not made a real-estate agent or manager, they should
 not even be able to see the real-estate application. Use a private tab or window
 to check for this (the "demo" user has the password "demo").
 
-Record Rules
-============
-
-.. seealso:: The documentation related to this topic can be found at
-             :ref:`reference/security/rules`.
+Fine-Grained Access Rights
+--------------------------
 
 .. admonition:: **Goal**
 
@@ -210,34 +207,23 @@ Access rights can grant access to an entire model but often we need to be
 more specific: while an agent can interact with properties in general we may not
 want them to update or even see properties managed by one of their colleagues.
 
-Record *rules* provide that precision: they can grant or reject access to
-individual records:
+The *domain* of an access right provides that precision: they can grant or
+reject access to individual records:
 
-.. code-block:: xml
+.. code-block:: text
 
-    <record id="rule_id" model="ir.rule">
-        <field name="name">A description of the rule's role</field>
-        <field name="model_id" ref="model_to_manage"/>
-        <field name="perm_read" eval="False"/>
-        <field name="groups" eval="[Command.link(ref('base.group_user'))]"/>
-        <field name="domain_force">[
-            '|', ('user_id', '=', user.id),
-                 ('user_id', '=', False)
-        ]</field>
-    </record>
+    id,name,model_id,group_id/id,operation,domain
+    access_read,access_read,test.model,base.group_user,r,
+    access_other,access_other,test.model,base.group_user,cud,"[('user_id', 'in', [user.id, False])]"
 
-The :ref:`reference/orm/domains` is how access is managed: if the record passes
+The :ref:`domain <reference/orm/domains>` is how access is managed: if the record passes
 then access is granted, otherwise access is rejected.
 
-.. tip::
-
-    Because rules tends to be rather complex and not created in bulk, they're
-    usually created in XML rather than the CSV used for access rights.
-
-The rule above:
+The access right ``access_other`` above:
 
 * Only applies to the "create", "update" (write) and "delete" (unlink)
   operations: here we want every employee to be able to see other users' records
+  (see ``access_read`` above)
   but only the author / assignee can update a record.
 * Is :ref:`non-global <reference/security/rules/global>` so we can provide an
   additional rule for e.g. managers.
@@ -246,13 +232,14 @@ The rule above:
 
 .. note::
 
-    If no rule is defined or applies to a model and operation, then the
-    operation is allowed (*default-allow*), this can have odd effects
-    if access rights are not set up correctly (are too permissive).
+    If an access right is defined without domain and applies to a model and
+    operation, then the operation is allowed (*default-allow*) for all records
+    of the model. This can have odd effects if access rights are not set up
+    correctly (are too permissive).
 
 .. exercise::
 
-    Define a rule which limits agents to only being able to see or modify
+    Define or modify an access right which limits agents to only being able to see or modify
     properties which have no salesperson, or for which they are the salesperson.
 
     You may want to create a second real-estate agent user, or create a few
@@ -318,8 +305,8 @@ Programmatically checking security
     At the end of this section, the creation of the invoice should be resilient
     to security issues regardless to changes to ``estate``.
 
-In Odoo, access rights and record rules are only checked *when performing data
-access via the ORM* e.g. creating, reading, searching, writing, or unlinking a
+In Odoo, access rights are only checked *when performing data
+access via the ORM*, e.g., creating, reading, searching, writing, or unlinking a
 record via ORM methods. Other methods do *not* necessarily check against any
 sort of access rights.
 
@@ -336,7 +323,7 @@ right being checked:
 You should see ``reached`` in your Odoo log, followed by an access error.
 
 .. danger:: Just because you're already in Python code does not mean any access
-            right or rule has or will be checked.
+            right has or will be checked.
 
 *Currently* the accesses are implicitly checked by accessing data on ``self`` as
 well as calling ``super()`` (which does the same and *updates* ``self``),
@@ -408,7 +395,7 @@ As before, because this is based on non-trivial records it's easier for a user
 to relax rules than to tighten them so it makes sense to default to a
 relatively stronger security model.
 
-Multi-company rules are simply record rules based on the ``company_ids`` or
+Multi-company rules are simply access rights based on the ``company_ids`` or
 ``company_id`` fields:
 
 * ``company_ids`` is all the companies to which the current user has access
@@ -418,16 +405,13 @@ Multi-company rules are simply record rules based on the ``company_ids`` or
 Multi-company rules will *usually* use the former i.e. check if the record is
 associated with *one* of the companies the user has access to:
 
-.. code-block:: xml
+.. code-block:: text
 
-    <record model="ir.rule" id="hr_appraisal_plan_comp_rule">
-        <field name="name">Appraisal Plan multi-company</field>
-        <field name="model_id" ref="model_hr_appraisal_plan"/>
-        <field name="domain_force">[
-            '|', ('company_id', '=', False),
-                 ('company_id', 'in', company_ids)
-        ]</field>
-    </record>
+    id,name,model_id,group_id/id,operation,domain
+    hr_appraisal_plan_comp_rule,Appraisal Plan multi-company,hr.appraisal.plan,,crud,"[
+        '|', ('company_id', '=', False),
+             ('company_id', 'in', company_ids)
+    ]"
 
 .. danger::
 

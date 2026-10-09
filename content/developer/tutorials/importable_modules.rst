@@ -52,7 +52,7 @@ Therefore, it is expected that your work tree will look something like this:
    ├── models
    │   └── *.xml
    ├── security
-   │   └── ir.model.access.csv
+   │   └── ir.access.csv
    │   └── estate_security.xml
    ├── views
    │   └── *.xml
@@ -282,7 +282,7 @@ Refer to that tutorial for details.
 
 .. exercise::
 
-   #. Create the :file:`ir.model.access.csv` file in the appropriate folder and define it in the
+   #. Create the :file:`ir.access.csv` file in the appropriate folder and define it in the
       :file:`__manifest__.py` file.
 
    #. Give the read, write, create and unlink permissions to the group ``base.group_user``.
