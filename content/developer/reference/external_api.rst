@@ -31,7 +31,7 @@ Post a JSON object at the ``/json/2/<model>/<method>`` URL.
 **HTTP Headers**
 
 :Host: Required, the hostname of the server.
-:Autorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
+:Authorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
 :Content-Type: Required, ``application/json``, a charset is recommended.
 :X-Odoo-Database: Optional, the name of the database to connect to.
 :User-Agent: Recommended, the name of your software.
@@ -263,7 +263,7 @@ periods only for tightly controlled internal systems.
                  }),
              };
              const resSearch = await fetch("https://mycompany.example.com/json/2/res.users.apikeys/generate", reqSearch);
-             if (!resSearch.ok) throw new Error(resSearch.json());
+             if (!resSearch.ok) throw new Error(await resSearch.json());
              const new_apikey = await resSearch.json();
 
              // store the new key securely
@@ -343,7 +343,7 @@ The method accepts the following parameter:
                  }),
              };
              const resSearch = await fetch("https://mycompany.example.com/json/2/res.users.apikeys/revoke", reqSearch);
-             if (!resSearch.ok) throw new Error(resSearch.json());
+             if (!resSearch.ok) throw new Error(await resSearch.json());
          })();
 
       .. code-tab:: bash
@@ -519,8 +519,8 @@ The following examples showcase how to execute two of the :ref:`common ORM metho
                   ],
               }),
           };
-          const resSearch = await fetch(BASE_URL + "/res.partner/search_read", reqSearch);
-          if (!resSearch.ok) throw new Error(resSearch.json());
+          const resSearch = await fetch(BASE_URL + "/res.partner/search", reqSearch);
+          if (!resSearch.ok) throw new Error(await resSearch.json());
           const ids = await resSearch.json();
 
           const reqRead = {
@@ -532,8 +532,8 @@ The following examples showcase how to execute two of the :ref:`common ORM metho
                   fields: ["name"],
               }),
           };
-          const resRead = await fetch(BASE_URL + "/res.partner/search_read", reqRead);
-          if (!resRead.ok) throw new Error(resRead.json());
+          const resRead = await fetch(BASE_URL + "/res.partner/read", reqRead);
+          if (!resRead.ok) throw new Error(await resRead.json());
           const names = await resRead.json();
           console.log(names);
       })();
@@ -712,18 +712,16 @@ context with ``execute_kw``, as it is extracted from the keyword argument named 
    .. code:: python
 
       from xmlrpc.client import ServerProxy
-      object = ServerProxy(...)
+      object = ServerProxy(..., allow_none=True)
       ids = [1, 2, 3]
       fields = ['name']
-      load = None
 
-      object.execute("database", 2, "admin", "res.partner", "read", ids, fields, load)
-      object.execute("database", 2, "admin", "res.partner", "search", [
+      object.execute_kw("database", 2, "admin", "res.partner", "read", [
           ids,
           fields,
       ], {
           "context": {"lang": "en_US"},
-          "load": load,
+          "load": None,
       })
 
 The JSON-2 API replaces the object service with a few differences. The database must only be
