@@ -1,10 +1,145 @@
-=========
-Functions
-=========
+======================
+Formulas and functions
+======================
 
-**Odoo Spreadsheet** supports formulas and functions found in most spreadsheet solutions. This page
-presents the available functions by category. Odoo-specific functions are included both in the
-relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` category:
+**Odoo Spreadsheet** supports :ref:`functions <spreadsheet/functions/available-functions>` found in
+most spreadsheet solutions, allowing you to perform calculations, retrieve information, and
+manipulate data using :ref:`formulas <spreadsheet/functions/using-formulas>`. In addition, using
+:ref:`Odoo-specific functions <spreadsheet/functions/odoo>` allows you to work with live Odoo data
+from your database.
+
+To help ensure data accuracy, Odoo Spreadsheet offers various ways to :ref:`troubleshoot errors and
+inconsistencies <spreadsheet/functions/troubleshooting>` in formulas and functions.
+
+.. _spreadsheet/functions/using-formulas:
+
+Using formulas
+==============
+
+.. tip::
+   - Use `F2` to view the formula behind an active cell, and, if desired, edit it directly in the
+     cell.
+   - Complex or nested formulas are automatically split and indented onto separate lines to improve
+     readability.
+
+.. _spreadsheet/functions/arrays:
+
+Arrays
+------
+
+An array is any collection of spreadsheet values structured in rows or columns, or a combination of
+rows and columns, and processed as a single unit. An array can be:
+
+- a range of cells entered in a sheet, that can be edited individually, and that can be referenced
+  using cell coordinates, e.g., :guilabel:`A1:B3`;
+- a range of cells returned by an array function, that *cannot* be edited individually, and that can
+  be referenced using the :ref:`spill range operator
+  <spreadsheet/functions/spilled-range-operator>`, e.g., `A1#`;
+- a series of values entered between curly brackets (e.g., `{"A", 1; "B", 2}` ) that can be used
+  directly in formulas. This kind of array, which, unlike a range, is not stored separately on the
+  spreadsheet, is known as an :ref:`array literal <spreadsheet/functions/array-literals>` or array
+  constant.
+
+.. _spreadsheet/functions/array-literals:
+
+Array literals
+~~~~~~~~~~~~~~
+
+An array literal represents a collection of values by using commas (`,`) to separate values into
+columns, semi-colons (`;`) to separate values into rows, and curly brackets (`{` `}`) to enclose the
+entire array.
+
+For example, the array literal `{"A", 1; "B", 2}` represents a four-cell grid, with the values
+`A` and `1` in adjacent columns and `B` and `2` directly below.
+
+Practical uses for array literals include :ref:`populating cells
+<spreadsheet/functions/array-literals-populate>` or :ref:`creating self-contained lookup
+formulas <spreadsheet/functions/array-literals-lookup>`.
+
+.. _spreadsheet/functions/array-literals-populate:
+
+.. example::
+
+   **Populating cells**
+
+   In the example, entering the array `={"A", 1; "B", 2; "C", 3}` in cell :guilabel:`A1` creates a
+   six-cell grid in the range :guilabel:`A1:B3`.
+
+   .. image:: functions/array-literal-populate.gif
+      :alt: Using an array literal to populate cells
+
+.. _spreadsheet/functions/array-literals-lookup:
+
+.. example::
+
+   **Creating self-contained lookup formulas**
+
+   In the example, each ticket ID has been assigned a priority code `1`, `2` or `3`, which should be
+   mapped to the values `High`, `Medium`, and `Low`, respectively. Instead of having a reference
+   grid elsewhere in the spreadsheet, the array literal `{1, "High" ; 2, "Medium" ; 3, "Low"}` is
+   integrated directly within the lookup function.
+
+   .. image:: functions/array-literal-lookup.gif
+      :alt: Using a self-contained lookup formula
+
+   This approach eliminates spreadsheet clutter, and avoids the risk of a separate reference grid
+   being overwritten or accidentally deleted.
+
+.. _spreadsheet/functions/spilled-range-operator:
+
+Spilled range operator
+~~~~~~~~~~~~~~~~~~~~~~
+
+When a formula using a dynamic array function (e.g., `=SEQUENCE(1,5)` ) expands across multiple
+cells or when cells are populated using an :ref:`array literal
+<spreadsheet/functions/array-literals>` (e.g., `={1, 2, 3, 4, 5}` ), it is possible to reference the
+full dynamic spill range.
+
+To do so, in the formula that references the range in question, add the spill range operator, `#`,
+to the cell reference of the top-left cell of the range.
+
+Any change to the initial dynamic array function or array literal is then reflected automatically in
+the result of the second formula.
+
+.. example::
+
+   In the example, the formula `=SEQUENCE(5)` in cell :guilabel:`A1` creates a dynamic spill range.
+   When using the function **SUM** in cell :guilabel:`B1`, adding the spilled range operator allows
+   the full dynamic range to be included in the calculation.
+
+   When the initial formula is updated to `=SEQUENCE(7)`, the range expands for the new values and
+   cell `B1` updates automatically, displaying the sum of the new range.
+
+   .. image:: functions/spilled-range-operator.gif
+      :alt: Using a spilled range operator in a formula
+
+.. _spreadsheet/functions/manual-recalculation:
+
+Disable automatic recalculation
+-------------------------------
+
+By default, Odoo Spreadsheet automatically recalculates formulas when there is a change to a value
+a formula depends on. However, when updating large datasets, or those with formulas scanning
+large ranges, this automatic recalculation can result in temporary performance delays while editing.
+
+Disabling automatic recalculation allows you to edit data freely and recalculate formulas on
+demand.
+
+To disable automatic recalculation, click :menuselection:`Data -->` :icon:`fa-calculator`
+:menuselection:`Calculation --> Manual` from the menu bar. In manual calculation mode, press `F9` to
+update all formulas.
+
+To re-enable automatic recalculation, click :guilabel:`Re-enable` on the banner below the toolbar or
+click :menuselection:`Data -->` :icon:`fa-calculator` :menuselection:`Calculation --> Automatic`
+from the menu bar.
+
+.. _spreadsheet/functions/available-functions:
+
+Available functions
+===================
+
+This section presents the available functions by category. Odoo-specific functions are included both
+in the relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` category:
 
 - :ref:`Array <spreadsheet/functions/array>`
 - :ref:`Database <spreadsheet/functions/database>`
@@ -30,7 +165,7 @@ relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` ca
 .. _spreadsheet/functions/array:
 
 Array
-=====
+-----
 
 .. list-table::
    :header-rows: 1
@@ -83,7 +218,7 @@ Array
 .. _spreadsheet/functions/database:
 
 Database
-========
+--------
 
 .. list-table::
    :header-rows: 1
@@ -119,7 +254,7 @@ Database
 .. _spreadsheet/functions/date:
 
 Date
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -195,7 +330,7 @@ Date
 .. _spreadsheet/functions/engineering:
 
 Engineering
-===========
+-----------
 
 .. list-table::
    :header-rows: 1
@@ -209,7 +344,7 @@ Engineering
 .. _spreadsheet/functions/filter:
 
 Filter
-======
+------
 
 .. list-table::
    :header-rows: 1
@@ -219,6 +354,8 @@ Filter
      - Description or link
    * - FILTER(range, condition1, [condition2, ...])
      - `Excel FILTER article <https://support.microsoft.com/office/filter-function-f4f7cb66-82eb-4767-8f7c-4877ad80c759>`_
+   * - ODOO.FILTER.LABEL(filter_name)
+     - Returns the label of the current value of a spreadsheet filter (not compatible with Excel)
    * - ODOO.FILTER.VALUE(filter_name)
      - Returns the current value of a spreadsheet filter (not compatible with Excel)
    * - SORT(range, [sort_column, ...], [is_ascending, ...])
@@ -229,7 +366,7 @@ Filter
 .. _spreadsheet/functions/financial:
 
 Financial
-=========
+---------
 
 .. list-table::
    :header-rows: 1
@@ -370,7 +507,7 @@ Financial
 .. _spreadsheet/functions/info:
 
 Info
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -386,6 +523,8 @@ Info
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISERROR(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
+   * - ISFORMULA(cell_reference)
+     - `Excel ISFORMULA article <https://support.microsoft.com/en-us/excel/functions/isformula-function>`_
    * - ISLOGICAL(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISNA(value)
@@ -402,7 +541,7 @@ Info
 .. _spreadsheet/functions/logical:
 
 Logical
-=======
+-------
 
 .. list-table::
    :header-rows: 1
@@ -436,7 +575,7 @@ Logical
 .. _spreadsheet/functions/lookup:
 
 Lookup
-======
+------
 
 .. list-table::
    :header-rows: 1
@@ -488,7 +627,7 @@ Lookup
 .. _spreadsheet/functions/math:
 
 Math
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -618,7 +757,7 @@ Math
 .. _spreadsheet/functions/operators:
 
 Operators
-=========
+---------
 
 .. list-table::
    :header-rows: 1
@@ -660,7 +799,7 @@ Operators
 .. _spreadsheet/functions/parser:
 
 Parser
-======
+------
 
 .. list-table::
    :header-rows: 1
@@ -674,7 +813,7 @@ Parser
 .. _spreadsheet/functions/statistical:
 
 Statistical
-===========
+-----------
 
 .. list-table::
    :header-rows: 1
@@ -795,7 +934,7 @@ Statistical
 .. _spreadsheet/functions/text:
 
 Text
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -831,6 +970,10 @@ Text
      - `Excel REPLACE article <https://support.microsoft.com/office/replace-replaceb-functions-8d799074-2425-4a8a-84bc-82472868878a>`_
    * - REGEXEXTRACT(text, pattern, [return_mode], [case_sensitivity])
      - `Excel REGEXEXTRACT article <https://support.microsoft.com/en-us/office/regexextract-function-4b96c140-9205-4b6e-9fbe-6aa9e783ff57>`_
+   * - REGEXREPLACE(text, pattern, replacement, [occurrence], [case_sensitivity])
+     - `Excel REGEXREPLACE article <https://support.microsoft.com/en-us/excel/functions/regexreplace-function>`_
+   * - REGEXTEST(text, pattern, [case_sensitivity])
+     - `Excel REGEXTEST article <https://support.microsoft.com/en-us/excel/functions/regextest-function>`_
    * - RIGHT(text, [number_of_characters])
      - `Excel RIGHT article <https://support.microsoft.com/office/right-rightb-functions-240267ee-9afa-4639-a02b-f19e1786cf2f>`_
    * - SEARCH(search_for, text_to_search, [starting_at])
@@ -859,7 +1002,7 @@ Text
 .. _spreadsheet/functions/web:
 
 Web
-===
+---
 
 .. list-table::
    :header-rows: 1
@@ -873,12 +1016,12 @@ Web
 .. _spreadsheet/functions/odoo:
 
 Odoo-specific functions
-=======================
+-----------------------
 
 This section contains functions that interact directly with your Odoo database.
 
 Array
------
+~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -893,7 +1036,7 @@ Array
        Excel)
 
 Date
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -919,7 +1062,7 @@ Date
      - Exact number of years between two dates (not compatible with Excel)
 
 Financial
----------
+~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -956,7 +1099,7 @@ Financial
        Excel)
 
 Lookup
-------
+~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -972,7 +1115,7 @@ Lookup
      - Returns a value from an inserted pivot table (not compatible with Excel)
 
 Math
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -987,7 +1130,7 @@ Math
        Excel)
 
 Misc
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1003,9 +1146,11 @@ Misc
      - Returns a header from an inserted Odoo list (not compatible with Excel)
    * - ODOO.LIST.VALUE(list_id, index, field_name)
      - Returns a value from an inserted Odoo list (not compatible with Excel)
+   * - ODOO.SURVEY(survey_id)
+     - Returns the results of an Odoo survey (not compatible with Excel)
 
 Operators
----------
+~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1043,7 +1188,7 @@ Operators
      - A specified number, unchanged (not compatible with Excel)
 
 Statistical
------------
+~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1067,7 +1212,7 @@ Statistical
      - Fits points to linear trend derived via least-squares (not compatible with Excel)
 
 Text
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1077,3 +1222,110 @@ Text
      - Description or link
    * - JOIN(delimiter, value_or_array1, [value_or_array2, ...])
      - Concatenates elements of arrays with delimiter (not compatible with Excel)
+
+.. _spreadsheet/functions/troubleshooting:
+
+Troubleshooting
+===============
+
+.. _spreadsheet/functions/troubleshooting-error-messages:
+
+Understand errors
+-----------------
+
+When a formula is unable to return a value, the cell displays an error message that identifies the
+type of error. For example, `#N/A` indicates that a value is not found when using a lookup function,
+`#NAME?` indicates that a function name is misspelled or unrecognised, while `#BAD_EXPR` indicates
+an issue with the arguments of a function.
+
+Hovering over a cell with an error message reveals a card that provides more details about the
+error.
+
+.. tip::
+   - Use the **IFERROR** function to provide an alternative result when an error occurs. For
+     example, to avoid multiple `#N/A` errors when using a **VLOOKUP** function, the following
+     formula returns `Not Found` instead of `#N/A`: `=IFERROR(VLOOKUP(D1, A:B, 1, 0), "Not Found")`.
+   - In a large dataset, use the :ref:`Irregularity map
+     <spreadsheet/functions/troubleshooting-irregularity-map>` to visually highlight cells
+     whose formulas are not consistent with the pattern established by surrounding cells.
+
+.. _spreadsheet/functions/troubleshooting-irregularity-map:
+
+Detect formula inconsistencies
+------------------------------
+
+Issues with formulas, such as accidentally overwriting a formula with a fixed value, breaking a cell
+reference, or not respecting the arguments of a function, can result in incorrect values being
+displayed. In a large dataset, such errors can be particularly difficult to identify manually.
+
+Odoo Spreadsheet's **Irregularity map** analyzes formulas for patterns and highlights anomalies
+visually: cells whose formulas follow the same pattern share the same color, while anomalies are
+shown in a different color.
+
+To use the tool, click :menuselection:`View --> Irregularity map` from the menu bar, then check the
+spreadsheet for inconsistencies. To turn off the irregularity map, click :guilabel:`Irregularity
+map` or :guilabel:`Turn off` on the banner below the toolbar.
+
+.. example::
+   In the example (in which the formulas have been made visible by selecting :menuselection:`View
+   -->` :icon:`fa-eye` :menuselection:`Show --> Formulas` from the menu bar), column :guilabel:`D`
+   contains the amount of commission earned over the first and second quarters. This is calculated
+   by adding the sales of the two quarters, shown in columns :guilabel:`B` and :guilabel:`C`, then
+   multiplying it by the bonus rate in cell :guilabel:`G1`.
+
+   The irregularity map identifies the patterns in the formulas in column :guilabel:`D`. Cells that
+   follow the pattern of the initial formula used in cell :guilabel:`D2` have the same red color,
+   while the following anomalies are highlighted separately:
+
+   - **Cell D4**: This cell features a static value instead of the formula.
+   - **Cell D5**: The formula in this cell does not follow the pattern of the initial formula.
+   - **Cells D8 and D9**: Cell :guilabel:`D8` is missing the absolute reference (`$`) on `G1`; when
+     the formula is dragged to cell :guilabel:`D9`, this creates a referencing error because cell
+     :guilabel:`G2` is empty. As the formulas in the two cells follow the same pattern, they share
+     the same color.
+
+   .. image:: functions/irregularity-map.png
+      :alt: Irregularity map detecting two anomalies
+
+.. _spreadsheet/functions/troubleshooting-performance-analysis:
+
+Identify performance issues
+---------------------------
+
+Depending on the size of the spreadsheet and on the type and complexity of the formulas used,
+performance lags can occur when a spreadsheet is opened, refreshed, or when formulas are
+recalculated due to changes in values.
+
+.. note::
+   One of the most common causes of performance issues is formulas that create quadratic behavior,
+   where the execution time grows exponentially relative to the volume of data evaluated. For
+   example, unsorted lookups searching large ranges, repetitive conditional scans such as SUMIFS or
+   COUNTIFS scanning overlapping columns across thousands of rows, or heavily nested dynamic array
+   functions.
+
+Odoo Spreadsheet's :guilabel:`Performance` tool allows you to analyze a spreadsheet and identify any
+bottlenecks impacting performance.
+
+To use the tool, follow these steps:
+
+#. Open the relevant spreadsheet.
+#. Click :menuselection:`View --> Performance` from the menu bar. The :guilabel:`Performance` panel
+   opens on the right side of the screen.
+#. Click :guilabel:`Analyze performance`.
+
+The result shows the :guilabel:`Total time` taken to run the analysis, the number of
+:guilabel:`Cells` in the spreadsheet, and the number of :guilabel:`Function calls`. It also provides
+a breakdown per use of each function, showing the share of calculation time.
+
+.. example::
+
+   In the example, the use of the **RANK** function, where changing a single cell forces every
+   a full re-evaluatation of every cell in the ranking, accounts for 60% of the total recalculation
+   time.
+
+   .. image:: functions/performance-analysis.png
+      :alt: Result of running performance analysis tool
+
+.. tip::
+   To avoid unnecessary recalculations while editing a sheet, temporarily :ref:`disable automatic
+   recalculation <spreadsheet/functions/manual-recalculation>`.
