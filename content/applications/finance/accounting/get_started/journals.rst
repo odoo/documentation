@@ -28,9 +28,9 @@ consistent across all the journal types:
 
 - :guilabel:`Short Code`: Each journal must have a unique code (from 1 to 5 characters long). The
   short code is used as the prefix for all journal entries belonging to this journal.
-- :guilabel:`Currency`: If desired, set the currency of this journal. For bank and cash journals,
-  this is the currency of the journal's :doc:`transactions <../bank/transactions>`. This field is
-  only visible when :doc:`multiple currencies <multi_currency>` are enabled.
+- :guilabel:`Currency`: The currency used for this bank account. Choose a currency only if it
+  differs from the company’s base currency. All liquidity targeting this journal will process in
+  this currency, regardless of the payment instruction currency.
 
 The :guilabel:`Advanced Settings` tab contains more technical options:
 

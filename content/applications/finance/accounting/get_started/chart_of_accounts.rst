@@ -159,6 +159,13 @@ To display your **Trial Balance** report with your account groups, go to :menuse
 .. image:: chart_of_accounts/chart-of-accounts-groups.png
    :alt: Account Groups in the Trial Balance in Odoo Accounting
 
+Currency
+--------
+
+The :guilabel:`Currency` field allows only items using the selected currency to target this account.
+It is also a criterion to determine whether the items on this account are candidates for
+re-evaluation in the unrealized gain/loss adjustments.
+
 Allow reconciliation
 --------------------
 
