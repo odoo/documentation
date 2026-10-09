@@ -2,24 +2,89 @@
 Audience targeting
 ==================
 
-The :guilabel:`Target` and :guilabel:`Filter` fields on the campaign form, also referred to as the
-*domain*, contain the parameters used to define the target audience for the campaign's reach (i.e.,
-the unique contact records in the database, and imported list, etc.).
+In Odoo **Marketing Automation**, each campaign is initiated by a *trigger* that defines the
+campaign's target audience and how these target records become participants in the campaign.
 
-- :guilabel:`Target`: specifies the type of records available for use in the campaign, such as
-  :guilabel:`Lead/Opportunity`, :guilabel:`Event Registration`, :guilabel:`Contact`, The assigned
-  records model determines the fields that are available throughout the campaign, including the
-  fields available in the :guilabel:`Filter` section, and in dynamic placeholders.
-- :guilabel:`Save as Favorite Filter`: saves the current :guilabel:`Filter` for future use with the
-  current :guilabel:`Target` model, and can be managed from the :menuselection:`Marketing Automation
-  app --> Configuration --> Favorite Filters` menu.
-- :guilabel:`Unicity based on`: specifies the :guilabel:`Target` model field where duplicates should
-  be avoided. Traditionally, the :guilabel:`Email` field is used, but any available field can be
-  used.
-- :guilabel:`Filter`: contains an interactive form with configurable logic to further refine the
-  targeting parameters under the chosen :guilabel:`Target` model.
-- :guilabel:`Include archived`: allows or disallows the inclusion of archived records in the target
-  audience.
+A campaign consists of exactly one trigger. The following documentation covers the various
+configuration options for a trigger.
+
+Define a trigger
+================
+
+When creating a new campaign, click the :guilabel:`Define a Trigger` button to open the
+configuration window.
+
+.. note::
+   An existing campaign trigger can also be modified by clicking the first activity node in the
+   workflow view.
+
+On the *Define a Trigger* pop-up window, begin by entering a name for the campaign.
+
+Enrollment tab
+--------------
+
+The *Enrollment* tab provides options to define the target audience and campaign triggers.
+
+In the :guilabel:`Target` field, specify the model the participant comes from (e.g., Contact, Event
+Sponsor, Applicant).
+
+Then, select the :guilabel:`Trigger type` to specify when a record becomes a participant via one of
+the following options:
+
+- :guilabel:`Filter`: Add any record that matches the filter rules set in the :guilabel:`Dynamic
+  Lists` or :guilabel:`Filter` fields.
+- :guilabel:`Event`: Add a record when one of the following events occurs: :guilabel:`Subscribed to
+  List`, :guilabel:`Page Visited`, :guilabel:`Form Submitted`, :guilabel:`Product in Cart`, or
+  :guilabel:`Product Bought`. This option **only** applies to Contacts or Leads.
+- :guilabel:`Date`: Add a record at a specific time before or after a date. In the :guilabel:`Date
+  field`, specify the appropriate date on the chosen :guilabel:`Target`. In the :guilabel:`Delay`
+  field, choose a duration before or after which the record should be created.
+- :guilabel:`Anniversary`: Add a record at a specific time relative to its date, repeating every
+  year. In the :guilabel:`Date field`, specify the appropriate date on the chosen
+  :guilabel:`Target`. In the :guilabel:`Delay` field, choose a duration before or after which the
+  record should be created.
+- :guilabel:`Manual`: Add a record manually **only**.
+- :guilabel:`Webhook`: Add a record when an external app sends a request to a specified URL.
+
+.. _marketing_automation/defining-filters:
+
+Defining filters
+~~~~~~~~~~~~~~~~
+
+Use the *Extra Filter* section to further restrict the target audience:
+
+- :guilabel:`Dynamic Lists`: Select a filter rule saved as a template.
+- :guilabel:`Filter`: Define filter rules to restrict target records based on specific criteria.
+
+By default, the campaign :guilabel:`Filter` is set to :guilabel:`Match all records` (i.e., the
+campaign targets **all** records of the chosen :guilabel:`Target` model). The :guilabel:`#
+record(s)` link below opens a *Selected records* pop-up window listing the targeted records.
+
+To modify the filter, click the :guilabel:`Edit Domain` button to reveal a *Domain* pop-up window
+with configurable rule parameters.
+
+.. tip::
+   After a filter rule is modified, users can save it by clicking :guilabel:`Save as a Dynamic
+   List`. Saved filters can be managed from the :menuselection:`Marketing Automation app -->
+   Configuration --> Favorite Filters` page.
+
+.. seealso::
+   :ref:`Search, filter, and group records <search/custom-filters>`
+
+Options tab
+-----------
+
+The *Options* tab contains additional trigger settings:
+
+- :guilabel:`Participants can re-enroll`: Select the checkbox to allow records to re-enter the
+  activity workflow.
+- :guilabel:`Deduplication via`: Select the specific field of the chosen target model for which to
+  avoid duplicate records.
+- :guilabel:`Use Calendar`: If using a date-related trigger type, select a calendar by which to
+  calculate specific dates.
+
+Finally, click :guilabel:`Save` to add the trigger to the :ref:`workflow builder
+<marketing_automation/activities>`.
 
 .. tip::
    A :guilabel:`Responsible` user can be assigned to the campaign by activating
@@ -29,51 +94,23 @@ the unique contact records in the database, and imported list, etc.).
    Each activity in a campaign's workflow can target a subset of the target audience; see the
    :doc:`workflow_activities` documentation for more information.
 
-.. _marketing_automation/defining-filters:
-
-Defining filters
-================
-
-The default campaign :guilabel:`Filter` configuration is set to :guilabel:`Match all records`,
-indicating that the campaign is targeting **all** records of the :guilabel:`Target` model.
-
-To refine the :guilabel:`Filter` rules of a campaign, click the :guilabel:`➕ Add condition` button
-to reveal a new row with configurable rule parameters. See the :ref:`Search, filter, and group
-records <search/custom-filters>` documentation for more information on how to create filter rules.
-
-.. image:: target_audience/domain-filters.png
-   :align: center
-   :alt: A new filter rule row on the campaign form Filters.
-
-At the bottom of the filter rules is a :guilabel:`# record(s)` button, which indicates the total
-number of records targeted by this domain. Select the :guilabel:`# record(s)` button to open a
-:guilabel:`Selected records` pop-up window, in which the targeted records can be viewed.
-
-.. tip::
-   Activate :ref:`developer-mode` to reveal each field's technical name and data type, as well as
-   the :guilabel:`# Code editor` text area below the filter rules, to view and edit the domain
-   manually.
-
 .. example::
    To target all leads and opportunities from the *CRM* app that are in the *New* stage, and have an
-   expected revenue greater than $1,000, the following should be entered:
+   expected revenue greater than $1,000, the following trigger options should be entered:
 
-   - :guilabel:`Target`: `Lead/Opportunity`
-   - :guilabel:`Unicity based on`: `Email (Lead/Opportunity)`
-   - :guilabel:`Filter`: :guilabel:`Match` :guilabel:`all 🔽 (down arrow)` :guilabel:`of the
-     following rules:`
+   - :guilabel:`Target`: `Lead`
+   - :guilabel:`Trigger type`: `Filter`
+   - :guilabel:`Domain`: Match `all` of the following rules:
 
-     #. :guilabel:`Stage` :guilabel:`is in` :guilabel:`New`
-     #. :guilabel:`Expected Revenue` :guilabel:`>` `1,000`
-     #. :guilabel:`any 🔽 (down arrow)` :guilabel:`of:`
+     #. `Stage` `is equal to` `New`
+     #. `Expected Revenue` `greater than` `1,000`
 
-        - :guilabel:`Type` :guilabel:`=` :guilabel:`Lead`
-        - :guilabel:`Type` :guilabel:`=` :guilabel:`Opportunity`
+   Additionally, in the *Options* tab, duplicate records are removed by setting
+   :guilabel:`Deduplication via` to `Email (Lead)`.
 
-   With the above configuration, the campaign targets :guilabel:`157 record(s)`.
+   With the above configuration, the campaign targets :guilabel:`14 record(s)`.
 
    .. image:: target_audience/filter-scenario-one.png
-      :align: center
       :alt: A domain configuration in a Marketing Automation campaign.
 
 .. seealso::
