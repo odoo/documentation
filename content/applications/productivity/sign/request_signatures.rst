@@ -179,7 +179,7 @@ Templates can be used when initiating a signature request :ref:`from the Sign ap
 <sign/request-signatures/template-odoo-record>`.
 
 .. tip::
-   Define a default template for all Odoo records by going to the :guilabel:`Genaral settings` in
+   Define a default template for all Odoo records by going to the :guilabel:`General settings` in
    the :guilabel:`Discuss` section and clicking :ref:`activity type <activities/types>`. Then,
    search for the :guilabel:`Request Signature` activity type and select a
    :guilabel:`Default Signature Template`.
@@ -262,15 +262,20 @@ To send a signature request using a template from an Odoo record:
    - Not one of the signers or a signing order has been defined and you need to sign the document
      *after* other signers, click :guilabel:`Send`.
 
+.. tip::
+   Create automated signature request by using the automation feature.
+   For example, go to CRM app, click the gear icon next to a stage, and click :guilabel:`Automations`.
+
+
 .. note::
    - Templates linked to the current :doc:`Odoo model <../../studio/models_modules_apps>` can be
      selected, as well as templates that are not linked to any model.
    - When sending a signature request from an Odoo record, the related customer (or the relevant
      party) is automatically added as a signer.
 
-The request appears in the :guilabel:`Planned activities`, showing the date of the sending, the
-user/contact who sent the request, the name of the template and the contact who received the
-request.
+The request appears in the :guilabel:`Planned activities` section, showing the date of the request,
+the user/contact who sent it, the document that needs to be signed and the contact(s) who received
+the request.
 
 - Click :guilabel:`View` to enter and see the document that needs to be signed.
 - Click :guilabel:`Resend` to send the signature request again to the relevant party.
@@ -772,3 +777,50 @@ the email address in the contact form.
 
 The signature request is automatically sent to the new signer or email address upon saving or
 navigating away from the signature request or contact form.
+
+Additional information to place in the rst
+==========================================
+
+Odoo record
+-----------
+
+Through the chatter, send a message with an attached PDF. Click on the PDF, and click the :guilabel:
+`Sign` button at the top right of the page, prepare the document for signing then continue with the
+signing request process.
+
+
+Integrations
+============
+
+Automated signature requests
+----------------------------
+
+Sign features are integrated in other applications. Sush as CRM. Go to any stage and click the clog
+icon, then click :guilabel:`Automations`. Click :guilabel:`New', then :guilabel:`Add an action`.
+Click :guilabel:`Request Signature`, select a :guilabel:`Sign template` and define a
+:guilabel:`Fixed signer` to make sure the signer remains the same contact, or define a
+:guilabel:`Linked field` to make sure the signer is the contact defined in the selected field of
+the related record.
+
+Each time an opportunity goes to that stage, a request is automatically sent to the relevant party.
+
+Documents app
+-------------
+
+Multiselect PDF from the Documents app, by typing CTRL and clicking the PDF's to load them all in a
+single signature request.
+
+Mobile mode
+-----------
+
+In mobile mode.
+
+Qualified electronic signatures
+-------------------------------
+
+Odoo signatures made with a quali with itsme is fully legal and supported.
+
+To activate it, go to :menuselection:`Sign --> Configuration --> Settings` and search for
+`Digital Identity & Qualified Signatures` with itsme and check the box net to it to activate it.
+Purchase credit to be able to use it.
+
