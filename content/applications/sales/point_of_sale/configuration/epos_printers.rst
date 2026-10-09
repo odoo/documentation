@@ -28,19 +28,30 @@ The following ePOS printers are directly compatible with Odoo without needing an
 </applications/general/iot/devices/printer>`.
 
 - Epson TM-m30 i/ii/iii (Wi-Fi/Ethernet models only; Recommended)
+- Epson TM-m10/ m50/ m50ii/ m55
 - Epson TM-H6000IV-DT (Receipt printer only)
 - Epson TM-T70II-DT
-- Epson TM-T88V-DT
+- Epson TM-T88V-DT/ T88VI/ T88VII 
 - Epson TM-L90-i
+- Epson TM-T20III or later
 - Epson TM-T70-i
 - Epson TM-T82II-i
 - Epson TM-T83II-i
 - Epson TM-U220-i
 - Epson TM-m10
-- Epson TM-P20 (Wi-Fi® model)
-- Epson TM-P60II (Receipt: Wi-Fi® model)
-- Epson TM-P60II (Peeler: Wi-Fi® model)
-- Epson TM-P80 (Wi-Fi® model)
+- Epson TM-P20 (Wi-Fi® model only)
+- Epson TM-P60II (Receipt: Wi-Fi® model only)
+- Epson TM-P60II (Peeler: Wi-Fi® model only)
+- Epson TM-P80/ P80II (Wi-Fi® model only)
+
+The following ePOS printers require a supported Epson network interfaces (such as UB-E04 / UB-R04)
+along with the model's latest firmware.
+
+- Epson TM-T70/T70II
+- Epson TM-T88V
+- Epson TM-T90
+- Epson TM-L90
+- Epson TM-H6000IV or later
 
 ePOS printers with IoT system integration
 =========================================
@@ -48,9 +59,15 @@ ePOS printers with IoT system integration
 The following printers require an :doc:`IoT system </applications/general/iot/devices/printer>` to
 be compatible with Odoo:
 
+- Non-Epson-TM products
+- Epson TM-T88IV or older generation
+- Epson TM-P60 family
 - Epson TM-T20 family (incompatible ePOS software)
 - Epson TM-T88 family (incompatible ePOS software)
-- Epson TM-U220 family (incompatible ePOS software)
+- Epson TM-U220/ U330 family (incompatible ePOS software)
+- Epson TM-L100 family
+- Epson TM-T20X/ T82X, etc: most model number with an 'X' that comes after, or any Epson model in a
+serial/ parallel/ USB-only configuration.
 
 .. important::
    - Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK Javascript protocol
