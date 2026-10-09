@@ -65,7 +65,7 @@ Fiscal localization modules are available for the countries listed below.
 - Central African Republic
 - Chad
 - :doc:`Chile <fiscal_localizations/chile>`
-- China
+- :doc:`China <fiscal_localizations/china>`
 - :doc:`Colombia <fiscal_localizations/colombia>`
 - Comoros
 - Congo
@@ -163,6 +163,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/brazil
    fiscal_localizations/canada
    fiscal_localizations/chile
+   fiscal_localizations/china
    fiscal_localizations/colombia
    fiscal_localizations/croatia
    fiscal_localizations/denmark
