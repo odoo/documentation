@@ -50,8 +50,29 @@ Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
 Post an expense to the right account
 ------------------------------------
 
+<<<<<<< f47c4bcde8e74a96d66090fb4ed9e34e98f79aea
 Select the account on a draft bill
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+||||||| 69aa175cd0422cef48f1ae2b92e3a3a9cb9f7832
+      - :guilabel:`Type`: Select :guilabel:`Fixed Assets` or :guilabel:`Non-current Assets`.
+      - :ref:`Variation Account <accounting/inventory-valuation/variation-account>` (optional):
+        Select an account to register the inventory variation of the period into a specific account.
+        This field is only available if the account type is :guilabel:`Current Assets`.
+      - :guilabel:`Currency`: Select a currency to force all journal items in this account to use
+        that currency. Leave it empty for no restriction.
+      - :guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments
+        matching of journal items.
+      - :guilabel:`Active`: Activate or deactivate use of the account.
+      - :guilabel:`Companies`: Select the companies in which the account is available.
+=======
+      - :guilabel:`Type`: Select :guilabel:`Fixed Assets` or :guilabel:`Non-current Assets`.
+      - :guilabel:`Currency`: Select a currency to force all journal items in this account to use
+        that currency. Leave it empty for no restriction.
+      - :guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments
+        matching of journal items.
+      - :guilabel:`Active`: Activate or deactivate use of the account.
+      - :guilabel:`Companies`: Select the companies in which the account is available.
+>>>>>>> 25d3e0f0dc3c307e657017fdae0193cd75c6cd10
 
 On a draft bill, select the right account for all the assets you are buying.
 
