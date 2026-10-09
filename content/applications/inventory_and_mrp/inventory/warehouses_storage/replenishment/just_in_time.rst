@@ -1,5 +1,5 @@
 ==================
-Just in time logic
+Just-in-time logic
 ==================
 
 .. |SO| replace:: :abbr:`SO (Sales Order)`
@@ -34,8 +34,8 @@ these lead times, added to the current date, determines when Odoo checks for dem
 
 To view the forecasted date go to :menuselection:`Inventory app --> Operations --> Replenishment` to
 access the :doc:`replenishment report <report>`, then click the :icon:`fa-info-circle`
-:guilabel:`(info)` icon for the desired reordering rule. The :guilabel:`Replenishment Information`
-pop-up window displays the :guilabel:`Forecasted Date` and various lead times.
+:guilabel:`(Replenishment Information)` icon for the desired reordering rule. The *Replenishment
+Information* pop-up window displays the :guilabel:`Forecasted Date` and various lead times.
 
 The just-in-time logic ensures replenishment occurs only when required to meet forecasted demand,
 reducing the risk of overstocking.
@@ -57,14 +57,15 @@ ensuring that future demand is met on time.
 .. example::
    A manual reordering rule is set up with no minimum or maximum quantities.
 
-   - Vendor lead time is 4 days, and the days to purchase is 2 days.
-   - Today's date is October 2.
-   - These add up to 6 days, making the forecasted date, October 8.
+   - Vendor lead time is 15 days, and the days to purchase is 0 days.
+   - The time horizon is 7 days.
+   - Today's date is October 7.
+   - These add up to 22 days, making the forecasted date October 28.
 
-   A confirmed |SO| for 5 units has a delivery date of October 8th (6 days from today). This demand
-   will appear on the replenishment report today, in the :guilabel:`To Order` field.
+   A confirmed |SO| for 200 units has a delivery date of October 13 (6 days from today). This
+   demand will appear on the replenishment report today in the :guilabel:`To Order` field.
 
-   However, if the delivery date were later than October 8th, it would not yet appear on the report.
+   However, if the delivery date were later than October 28, it would not yet appear on the report.
    Odoo only displays quantities to replenish when they fall within the forecasted date window,
    ensuring orders are placed precisely when needed.
 

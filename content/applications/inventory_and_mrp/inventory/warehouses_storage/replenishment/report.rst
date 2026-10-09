@@ -53,13 +53,12 @@ cannot be triggered, because it is seen as *unnecessary*. However, there can be 
 product needs to be replenished even if it is not deemed *necessary*, such as when an order needs to
 be maximized to obtain better discounts, or to save on delivery costs.
 
-First, select one or more products by ticking the appropriate checkbox. Then, click the
-:guilabel:`Replenish` button and select :guilabel:`Order to Max`. Doing so creates a request for
-quotation (RFQ) for the first possible replenishment date for each product for the maximum specified
-in the reordering rule.
+First, select one or more products by selecting the appropriate checkbox. Then, click
+:guilabel:`Order`. Doing so creates a request for quotation (RFQ) for the first possible
+replenishment date for each product for the maximum specified in the reordering rule.
 
 .. image:: report/order-to-max.png
-   :alt: The Order to Max option on the replenishment dashboard.
+   :alt: Create orders for products on the replenishment dashboard.
 
 .. _inventory/warehouses_storage/horizon-days:
 
@@ -79,17 +78,17 @@ if no replenishment is needed today.
    to order in advance.
 
 To set horizon days, go to :menuselection:`Inventory app --> Operations --> Replenishment`, and
-click :icon:`fa-angle-double-right` :icon:`fa-folder` :guilabel:`Manual` in the left sidebar. In the
+click :icon:`oi-panel-right` :icon:`fa-folder` :guilabel:`Manual` in the left sidebar. In the
 menu that appears, set the number of :guilabel:`Horizon` days.
 
 .. example::
-   - Current date: Feb 18
+   - Current date: October 2
    - On hand quantity: 10
    - Reordering rule: Min: 5, Max 10
    - Vendor lead time: 1 day
 
-   8 units are needed for an |SO| on Feb 23. That means, on Feb 23, there will only be 2 units in
-   stock.
+   8 units are needed for an |SO| on October 8. That means, on October 8, there will only be 2 units
+   in stock.
 
    **Without horizon days**
 
@@ -106,12 +105,38 @@ menu that appears, set the number of :guilabel:`Horizon` days.
    .. image:: report/horizon-days.png
       :alt: Show forecasted date brought forward.
 
+Recalculate minimum and maximum based on order history
+------------------------------------------------------
+
+Use the *Suggest* button to update reordering rules based on previous order history.
+
+On the *Replenishment* report, select at least one product whose reordering rules should be
+recalculated. Click :guilabel:`Suggest` at the top of the screen.
+
+The *Suggest Min-Max* pop-up window opens. In this window, specify the time frame that Odoo should
+use to calculate the minimum and maximum. This can be a period of time (for example, the past 7
+days), the current month, a previous month, or a previous quarter. Click :guilabel:`Update`.
+
+.. image:: report/suggest-min-max.png
+   :alt: The minimum and maximum will be computed based on daily demands from the last three months.
+
+The minimum and maximum order amount is updated for each selected product.
+
 Replenishment information
 =========================
 
-In each line of the replenishment report, clicking the :icon:`fa-info-circle` :guilabel:`(info)`
-icon opens the :guilabel:`Replenishment Information` pop-up window, which displays the *lead times*
-and *forecasted date*.
+In each line of the replenishment report, clicking the :icon:`fa-info-circle`
+:guilabel:`(Replenishment Information)` icon opens the *Replenishment Information* pop-up window,
+which displays the *replenishment time* and *forecasted date*.
+
+Odoo also suggests a minimum and maximum order amount based on a specified period of time and a
+percentage that should be purchased (e.g., a 25% sales increase is expected, so the percentage is
+set to `125`%). The minimum (:guilabel:`Min`) quantity should be covered for the specified amount of
+:guilabel:`days`. The maximum (:guilabel:`Max`) shows the forecasted stock level when replenishing,
+along with the replenishment frequency, or number of days between replenishment requests.
+
+.. image:: report/replenishment-information.png
+   :alt: The replenishment time (15 days) and suggested minimum and maximum order amount are listed.
 
 For detailed information on how to use this feature for replenishment, go to the :doc:`just-in-time
 <just_in_time>` section.
@@ -121,12 +146,13 @@ Select a warehouse
 
 If a warehouse's replenishment method is :doc:`resupply from another warehouse
 <resupply_warehouses>`, check for available product quantities in other warehouses by opening the
-:guilabel:`Replenishment Information` pop-up window. Warehouses that can replenish the stock are
-listed under the :guilabel:`Warehouses` tab, and the :guilabel:`Available Quantity` shows the
-on-hand stock in each warehouse.
+*Replenishment Information* pop-up window. Warehouses that can replenish the stock are listed under
+the *Warehouses* tab, and the :guilabel:`Available Quantity` shows the on-hand stock in each
+warehouse.
 
-After selecting a sourcing warehouse, click :guilabel:`Select Route` :guilabel:`Order` button is
-clicked, the reordering rule will revert to its preferred route (Buy or Manufacture).
+After selecting a sourcing warehouse, click :guilabel:`Select Route`. When :guilabel:`Order` is
+clicked, the reordering rule will revert to its preferred route (Buy or Manufacture), and a transfer
+is created for the inter-warehouse move.
 
 .. image:: report/select-warehouse.png
    :alt: The warehouse tab on the Replenishment Information pop-up window.
