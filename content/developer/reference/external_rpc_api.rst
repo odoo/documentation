@@ -1129,7 +1129,7 @@ Provides information about Odoo models via its various fields.
     defined for the model
 ``access_ids``
     :class:`~odoo.fields.One2many` relation to the
-    :ref:`reference/security/acl` set on the model
+    :ref:`reference/security/access` set on the model
 
 ``ir.model`` can be used to
 
