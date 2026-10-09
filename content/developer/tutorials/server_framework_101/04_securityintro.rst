@@ -85,11 +85,11 @@ It is even notified in the log:
     WARNING rd-demo odoo.modules.loading: The models ['estate.property'] have no access rules in module estate, consider adding some, like:
     id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
-Access rights are defined as records of the model ``ir.model.access``. Each
+Access rights are defined as records of the model ``ir.access``. Each
 access right is associated with a model, a group (or no group for global
 access) and a set of permissions: create, read, write and unlink\ [#unlink]_. Such access
 rights are usually defined in a CSV file named
-``ir.model.access.csv``.
+``ir.access.csv``.
 
 Here is an example for our previous `test_model`:
 
@@ -99,7 +99,7 @@ Here is an example for our previous `test_model`:
     access_test_model,access_test_model,model_test_model,base.group_user,1,0,0,0
 
 - ``id`` is an :term:`external identifier`.
-- ``name`` is the name of the ``ir.model.access``.
+- ``name`` is the name of the ``ir.access``.
 - ``model_id/id`` refers to the model which the access right applies to. The standard way to refer
   to the model is ``model_<model_name>``, where ``<model_name>`` is the ``_name`` of the model
   with the ``.`` replaced by ``_``. Seems cumbersome? Indeed it is...
@@ -108,7 +108,7 @@ Here is an example for our previous `test_model`:
 
 .. exercise:: Add access rights.
 
-    Create the ``ir.model.access.csv`` file in the appropriate folder and define it in the
+    Create the ``ir.access.csv`` file in the appropriate folder and define it in the
     ``__manifest__.py`` file.
 
     Give the read, write, create and unlink permissions to the group ``base.group_user``.
