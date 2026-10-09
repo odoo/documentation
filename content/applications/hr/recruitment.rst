@@ -372,6 +372,7 @@ appears in the chatter.
    - :doc:`recruitment/source_analysis`
    - :doc:`recruitment/hiring_velocity`
    - :doc:`recruitment/team_performance`
+   - :doc:`recruitment/offer_analysis`
 
 .. toctree::
    :titlesonly:
@@ -387,3 +388,4 @@ appears in the chatter.
    recruitment/source_analysis
    recruitment/hiring_velocity
    recruitment/team_performance
+   recruitment/offer_analysis
