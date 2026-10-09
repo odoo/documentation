@@ -11,16 +11,16 @@ the same data. In Studio, views are organized into four categories: :ref:`genera
 .. tip::
    - To change the default view of a model, :ref:`access Studio <studio/access>`, go to
      :guilabel:`Views`, click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon next to the
-     desired view, and click :guilabel:`Set as Default`.
-   - You can modify views using the built-in XML editor: Activate the :ref:`Developer mode
-     <developer-mode>`, go to the view you want to edit, select the :guilabel:`View` tab, and
+     desired view, and click :guilabel:`Set As Default`.
+   - Views can also be modified using the built-in XML editor. To do so, :ref:`activate developer
+     mode <developer-mode>`, navigate to the relevant view, select the :guilabel:`View` tab, then
      click :guilabel:`</> XML`.
 
      .. important::
-        If you are editing a view using the XML editor, avoid making changes directly to standard
+        When editing a view using the XML editor, avoid making changes directly to standard
         and inherited views, as these would be reset and lost during updates or module upgrades.
-        Always make sure you select the right Studio inherited views: When you modify a
-        view in Studio by dragging and dropping a new field, for example, a specific Studio
+        Always make sure to select the correct Studio inherited views: when a view is modified in
+        Studio by dragging and dropping a new field, for example, a specific Studio
         inherited view and its corresponding XPath, which defines the modified part of the view, are
         automatically generated.
 
@@ -41,12 +41,16 @@ Form
 The :guilabel:`Form` :icon:`fa-address-card` view is used when creating and editing records, such as
 contacts, sales orders, products, etc.
 
-- To structure a form, drag and drop the :guilabel:`Tabs and Columns` element found under the
-  :guilabel:`+ Add` tab.
-- To prevent users from creating, editing, deleting or duplicating records, untick :guilabel:`Can Create`,
-  :guilabel:`Can Edit`, :guilabel:`Can Delete` or :guilabel:`Can Duplicate`.
-- To add a button, click :guilabel:`Add a button` at the top of the form, enter a :guilabel:`Label`,
-  and select the button's action:
+- To structure a form, drag and drop the :guilabel:`Tabs` and/or :guilabel:`Columns` elements from
+  the :guilabel:`+ Add` tab.
+- To :ref:`add a field <studio/fields/add>`, drag and drop a :guilabel:`New Field` or
+  :guilabel:`Existing Field` from the :guilabel:`+ Add` tab.
+- To prevent users from creating, editing, deleting, or duplicating records, untick :guilabel:`Can
+  Create`, :guilabel:`Can Edit`, :guilabel:`Can Delete`, or :guilabel:`Can Duplicate` in the
+  :guilabel:`View` tab.
+- To add a button, click :guilabel:`Add button` at the top left of the form view, enter a
+  :guilabel:`Label`, and select the button's action from the field :guilabel:`What should the button
+  do` field in the :guilabel:`Properties` tab:
 
   - :guilabel:`Run a Server Action`: select the :ref:`server action <reference/actions/server>` to
     be executed from the dropdown list;
@@ -63,13 +67,22 @@ contacts, sales orders, products, etc.
      request for quotation, and are less visually prominent. By default, a new button is styled as a
      secondary button.
 
-- To add a smart button, click the :icon:`fa-plus-square` (:guilabel:`plus`) icon in the top-right
-  corner of the form. Enter a :guilabel:`Label`, choose an :guilabel:`Icon`, and select a
-  :ref:`related field <studio/fields/relational-fields-related-field>`.
+- To add a smart button, click :guilabel:`Add button` in the upper-right corner of the form view.
+  Select a :ref:`Related field <studio/fields/relational-fields-related-field>`, enter a
+  :guilabel:`Label`, and choose an :guilabel:`Icon`.
+
+- To reorder buttons, smart buttons, or tabs, click the button or tab, then drag it to the desired
+  position within its section; a blue rectangle indicates the area within which the button or tab
+  can be moved.
+
+- To create additional Kanban stages (i.e., status bar) for a model that allows such customization,
+  drag and drop a :ref:`Many2One <studio/fields/relational-fields-many2one>` or :ref:`Selection
+  <studio/fields/simple-fields-selection>` and select the related model or enter the selection
+  values as relevant.
 
 .. example::
 
-   .. image:: views/form-new-quotation.png
+   .. image:: views/form-opportunity.png
       :alt: Quotation Template model's Form view
 
 .. _studio/views/general/activity:
@@ -145,39 +158,48 @@ List
 The :guilabel:`List` :icon:`oi-view-list` view is used to overview many records at once, look for
 records, and edit simple records.
 
-- To prevent users from creating, editing, deleting or duplicating records, untick
-  :guilabel:`Can Create`, :guilabel:`Can Edit`, :guilabel:`Can Delete`, or :guilabel:`Can Duplicate`.
+- To :ref:`add a field <studio/fields/add>`, drag and drop a :guilabel:`New Field` or
+  :guilabel:`Existing Field` from the :guilabel:`+ Add` tab.
+- To prevent users from creating, editing, deleting, or duplicating records, untick
+  :guilabel:`Can Create`, :guilabel:`Can Edit`, :guilabel:`Can Delete`, or :guilabel:`Can
+  Duplicate` in the :guilabel:`View` tab.
 - To create and edit records directly within the view, select either :guilabel:`Add record at the
-  bottom`, :guilabel:`Add record on top` or :guilabel:`Open form view` under
+  bottom`, :guilabel:`Add record on top`, or :guilabel:`Open form view` under
   :guilabel:`When Creating Record`.
 
   .. note::
-     This prevents users from opening records in :ref:`Form view <studio/views/general/form>` from the
-     :guilabel:`List` view.
+     This prevents users from opening records in :ref:`Form view <studio/views/general/form>` from
+     the :guilabel:`List` view.
 
-- To edit several records at once, tick :guilabel:`Enable Mass Editing`.
+- To allow several records to be edited at once, tick :guilabel:`Enable Mass Editing`.
 - To change the way records are sorted by default, select a field under :guilabel:`Sort By`.
 - To set a default grouping for records, select a field under :guilabel:`Default Group By`.
-- To add a button, click :guilabel:`Add a button` at the top of the list, enter a :guilabel:`Label`,
-  and select the button's action:
+- To add a button, click :guilabel:`Add a button` at the top left of the list view, enter a
+  :guilabel:`Label`, and select the button's action from the field :guilabel:`What should the button
+  do` field in the :guilabel:`Properties` tab:
 
   - :guilabel:`Run a Server Action`: select the :ref:`server action <reference/actions/server>` to
     be executed from the dropdown list;
   - :guilabel:`Call a method`: specify an existing Python method already defined in Odoo.
 
-The widths of columns in a :guilabel:`List` :icon:`oi-view-list` view are computed automatically to
-provide the optimal user experience. However, it is also possible to set a fixed column width per
-field. To do so, click on the relevant column to open the field's :icon:`fa-server`
-:guilabel:`Properties` tab, then enter the desired number of pixels in the :guilabel:`Column Width
-(px)` field.
+- The widths of columns in a :guilabel:`List` :icon:`oi-view-list` view are computed automatically
+  to provide the optimal user experience. However, it is also possible to set a fixed or minimum
+  column width per field in pixels, or to define a range. To do so, click on the relevant column to
+  open the field's :icon:`fa-server` :guilabel:`Properties` tab, then complete the :guilabel:`Column
+  Width (px)` field as relevant:
+
+  - for a fixed width, enter the number of pixels, e.g., `250`
+  - for a minimum width, enter the number of pixels within square brackets (`[]`), e.g., `[200]`
+  - for a range, enter the minimum and maximum number of pixels within square brackets, e.g.,
+    `[200,250]`
 
 .. tip::
    To add a :icon:`oi-draggable` (:guilabel:`drag handle`) icon to reorder records manually, add
    an :ref:`Integer field <studio/fields/simple-fields-integer>` with the :guilabel:`Handle`
    widget.
 
-     .. image:: views/list-drag-handle.png
-        :alt: Drag handle icon enabling to sort records manually in List view
+   .. image:: views/list-drag-handle.png
+      :alt: Drag handle icon enabling to sort records manually in List view
 
 .. example::
 
@@ -319,7 +341,8 @@ records. Records are represented by a bar under a time scale.
      Studio. It is supported for the Project, Time Off, Planning, and Manufacturing apps.
 
 - To show a total row at the bottom, tick :guilabel:`Display Total row`.
-- To collapse multiple records in a single row, tick :guilabel:`Collapse First Level`.
+- To allow users to schedule or unschedule records by dragging and dropping them between the Gantt
+  view and the side panel, enable :guilabel:`Scheduling`.
 - To choose which way records are grouped by default on rows (e.g., per employee or project), select
   a field under :guilabel:`Default Group by`.
 - To define a default time scale to view records, select :guilabel:`Day`, :guilabel:`Week`,
