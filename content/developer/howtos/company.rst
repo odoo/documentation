@@ -202,28 +202,18 @@ care that a user does not have access to records belonging to other companies.
 This is achieved with security rules based on `company_ids`, which contain the current companies of
 the user (the companies the user checked in the multi-company widget).
 
-.. code-block:: xml
+.. code-block:: text
 
-    <!-- Shareable Records -->
-    <record model="ir.rule" id="record_shared_company_rule">
-        <field name="name">Shared Record: multi-company</field>
-        <field name="model_id" ref="model_record_shared"/>
-        <field name="global" eval="True"/>
-        <field name="domain_force">
-            ['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]
-        </field>
-    </record>
+    id,name,model_id,group_id/id,operation,domain
+    record_shared_company_rule,Shared Record: multi-company,record.shared,,crud,"[
+        '|', ('company_id', '=', False), ('company_id', 'in', company_ids),
+    ]"
 
-.. code-block:: xml
+.. code-block:: text
 
-    <!-- Company-restricted Records -->
-    <record model="ir.rule" id="record_restricted_company_rule">
-        <field name="name">Restricted Record: multi-company</field>
-        <field name="model_id" ref="model_record_restricted"/>
-        <field name="global" eval="True"/>
-        <field name="domain_force">
-            [('company_id', 'in', company_ids)]
-        </field>
-    </record>
+    id,name,model_id,group_id/id,operation,domain
+    record_restricted_company_rule,Restricted Record: multi-company,record.restricted,,crud,"[
+        ('company_id', 'in', company_ids),
+    ]"
 
 .. todo:: check_company on company_dependent fields.
