@@ -160,6 +160,11 @@ depending on the journal's configuration. By default, no journal entries are cre
 To configure a journal to create payments, set :ref:`outstanding payments accounts
 <accounting/journals/outstanding-accounts>` on the journal's payment methods.
 
+.. note::
+   Electronic invoices are recorded in **Sales** journals for outgoing customer invoices, while
+   incoming electronic bills are imported into **Purchase** journals by default. However, this may
+   differ based on your :doc:`fiscal localization <../fiscal_localizations>`.
+
 .. _accounting/get_started/fiscal-positions:
 
 Fiscal positions
