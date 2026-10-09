@@ -39,9 +39,6 @@ fields that are specific to assets:
    .. tab:: Accounting
 
       - :guilabel:`Type`: Select :guilabel:`Fixed Assets` or :guilabel:`Non-current Assets`.
-      - :ref:`Variation Account <accounting/inventory-valuation/variation-account>` (optional):
-        Select an account to register the inventory variation of the period into a specific account.
-        This field is only available if the account type is :guilabel:`Current Assets`.
       - :guilabel:`Currency`: Select a currency to force all journal items in this account to use
         that currency. Leave it empty for no restriction.
       - :guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments
