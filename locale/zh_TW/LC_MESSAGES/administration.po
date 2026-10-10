@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-07 16:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -761,7 +761,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_online.rst:3
 #: ../../content/administration/odoo_sh/getting_started/create.rst:121
-#: ../../content/administration/standard_extended_support.rst:30
+#: ../../content/administration/standard_extended_support.rst:33
 #: ../../content/administration/upgrade.rst:14
 #: ../../content/administration/upgrade.rst:109
 #: ../../content/administration/upgrade.rst:330
@@ -1169,7 +1169,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/odoo_sh.rst:6
-#: ../../content/administration/standard_extended_support.rst:31
+#: ../../content/administration/standard_extended_support.rst:34
 #: ../../content/administration/upgrade.rst:22
 #: ../../content/administration/upgrade.rst:132
 #: ../../content/administration/upgrade.rst:341
@@ -1586,6 +1586,42 @@ msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh 會通知專案管理員 IP 位址變更。**此外，當生產執行個體的 IP 位址變更"
+"時，系統會向路徑 `/_odoo.sh/ip-change` 發出 HTTP `GET` 請求，新 IP 位址作為查"
+"詢字串參數（`new`）包含在內，前一個 IP 位址則作為附加參數（`old`）。"
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"出於安全考量，`/_odoo.sh/ip-change` 路徑僅供平台內部存取，透過任何其他方式存"
+"取時會傳回 `403` 回應。"
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "以下是一個偽實作範例："
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -4532,7 +4568,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
-#: ../../content/administration/standard_extended_support.rst:32
+#: ../../content/administration/standard_extended_support.rst:35
 #: ../../content/administration/upgrade.rst:30
 #: ../../content/administration/upgrade.rst:156
 #: ../../content/administration/upgrade.rst:364
@@ -5172,18 +5208,17 @@ msgstr "連線 + / 連線身分"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:196
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:197
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:198
-#: ../../content/administration/standard_extended_support.rst:36
-#: ../../content/administration/standard_extended_support.rst:42
-#: ../../content/administration/standard_extended_support.rst:48
-#: ../../content/administration/standard_extended_support.rst:60
-#: ../../content/administration/standard_extended_support.rst:61
-#: ../../content/administration/standard_extended_support.rst:62
-#: ../../content/administration/standard_extended_support.rst:84
-#: ../../content/administration/standard_extended_support.rst:85
-#: ../../content/administration/standard_extended_support.rst:86
-#: ../../content/administration/standard_extended_support.rst:90
-#: ../../content/administration/standard_extended_support.rst:91
-#: ../../content/administration/standard_extended_support.rst:92
+#: ../../content/administration/standard_extended_support.rst:39
+#: ../../content/administration/standard_extended_support.rst:40
+#: ../../content/administration/standard_extended_support.rst:41
+#: ../../content/administration/standard_extended_support.rst:45
+#: ../../content/administration/standard_extended_support.rst:51
+#: ../../content/administration/standard_extended_support.rst:69
+#: ../../content/administration/standard_extended_support.rst:70
+#: ../../content/administration/standard_extended_support.rst:71
+#: ../../content/administration/standard_extended_support.rst:75
+#: ../../content/administration/standard_extended_support.rst:76
+#: ../../content/administration/standard_extended_support.rst:77
 msgid "|green|"
 msgstr "|green|"
 
@@ -5258,15 +5293,13 @@ msgstr "狀態"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:187
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:191
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:192
-#: ../../content/administration/standard_extended_support.rst:54
-#: ../../content/administration/standard_extended_support.rst:66
-#: ../../content/administration/standard_extended_support.rst:72
-#: ../../content/administration/standard_extended_support.rst:78
-#: ../../content/administration/standard_extended_support.rst:96
-#: ../../content/administration/standard_extended_support.rst:102
-#: ../../content/administration/standard_extended_support.rst:108
-#: ../../content/administration/standard_extended_support.rst:114
-#: ../../content/administration/standard_extended_support.rst:115
+#: ../../content/administration/standard_extended_support.rst:57
+#: ../../content/administration/standard_extended_support.rst:63
+#: ../../content/administration/standard_extended_support.rst:81
+#: ../../content/administration/standard_extended_support.rst:87
+#: ../../content/administration/standard_extended_support.rst:93
+#: ../../content/administration/standard_extended_support.rst:99
+#: ../../content/administration/standard_extended_support.rst:100
 msgid "|red|"
 msgstr "|red|"
 
@@ -5280,7 +5313,7 @@ msgid ":ref:`Backups <odoo-sh/branches/tabs/backups>`"
 msgstr ":ref:`備份 <odoo-sh/branches/tabs/backups>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:200
-#: ../../content/administration/standard_extended_support.rst:120
+#: ../../content/administration/standard_extended_support.rst:105
 msgid "Legend"
 msgstr "圖例"
 
@@ -5699,11 +5732,18 @@ msgid ""
 msgstr ""
 "即使在註冊資料庫後，這些連接埠也必須保持開啟，因為更新通知每週執行一次。"
 
-#: ../../content/administration/on_premise.rst:71
+#: ../../content/administration/on_premise.rst:70
+msgid ""
+"If your internal policies do not allow outbound connections on port `80`, "
+"you can alternatively open port `443` **and** add the following line to your "
+"Odoo configuration file:"
+msgstr ""
+
+#: ../../content/administration/on_premise.rst:78
 msgid "Too many users error"
 msgstr "使用者過多錯誤"
 
-#: ../../content/administration/on_premise.rst:73
+#: ../../content/administration/on_premise.rst:80
 msgid ""
 "If you have more users in a local database than provisioned in your Odoo "
 "Enterprise subscription, the following message should be displayed."
@@ -5714,19 +5754,19 @@ msgstr ""
 msgid "Too many users on a database error message"
 msgstr "資料庫使用者過多錯誤訊息"
 
-#: ../../content/administration/on_premise.rst:79
+#: ../../content/administration/on_premise.rst:86
 msgid ""
 "When the message appears, you have 30 days to act before the database "
 "expires. The countdown is updated every day."
 msgstr ""
 "當訊息出現時，您有 30 天的時間採取行動，否則資料庫將過期。倒數計時每天更新。"
 
-#: ../../content/administration/on_premise.rst:82
-#: ../../content/administration/on_premise.rst:102
+#: ../../content/administration/on_premise.rst:89
+#: ../../content/administration/on_premise.rst:109
 msgid "To resolve the issue, either:"
 msgstr "要解決此問題，請採取以下任一方式："
 
-#: ../../content/administration/on_premise.rst:84
+#: ../../content/administration/on_premise.rst:91
 msgid ""
 "**Add more users** to your subscription by clicking the :guilabel:`Upgrade "
 "your subscription` link displayed in the message to validate the upsell "
@@ -5735,13 +5775,13 @@ msgstr ""
 "**新增更多使用者**到您的訂閱，方法是按一下訊息中顯示的 :guilabel:`升級您的訂"
 "閱` 連結，以驗證追加報價並支付額外使用者的費用。"
 
-#: ../../content/administration/on_premise.rst:86
+#: ../../content/administration/on_premise.rst:93
 msgid ""
 ":ref:`Deactivate users <users/deactivate>` and **reject** the upsell "
 "quotation."
 msgstr ":ref:`停用使用者 <users/deactivate>`並**拒絕**追加報價。"
 
-#: ../../content/administration/on_premise.rst:88
+#: ../../content/administration/on_premise.rst:95
 msgid ""
 "Once your database has the correct number of users, the expiration message "
 "disappears automatically after a few days, when the next verification occurs."
@@ -5749,11 +5789,11 @@ msgstr ""
 "一旦您的資料庫具有正確的使用者數量，過期訊息將在幾天後(下次驗證發生時)自動消"
 "失。"
 
-#: ../../content/administration/on_premise.rst:92
+#: ../../content/administration/on_premise.rst:99
 msgid "Database expired error"
 msgstr "資料庫已過期錯誤"
 
-#: ../../content/administration/on_premise.rst:94
+#: ../../content/administration/on_premise.rst:101
 msgid ""
 "If your database expires before you renew your subscription, the following "
 "message should be displayed."
@@ -5763,13 +5803,13 @@ msgstr "如果您的資料庫在續訂訂閱之前過期，應會顯示以下訊
 msgid "Database expired error message"
 msgstr "資料庫過期錯誤訊息"
 
-#: ../../content/administration/on_premise.rst:100
+#: ../../content/administration/on_premise.rst:107
 msgid ""
 "This message appears if you fail to act before the end of the 30-day "
 "countdown."
 msgstr "如果您未能在 30 天倒數結束前採取行動，就會出現此訊息。"
 
-#: ../../content/administration/on_premise.rst:104
+#: ../../content/administration/on_premise.rst:111
 msgid ""
 "Click the :guilabel:`Renew your subscription` link displayed in the message "
 "and complete the process. If you pay by wire transfer, your subscription "
@@ -5779,7 +5819,7 @@ msgstr ""
 "按一下訊息中顯示的:guilabel:`續訂您的訂閱`連結並完成流程。如果您使用電匯付"
 "款，您的訂閱將在款項到達時續訂，這可能需要幾天時間。信用卡付款會立即處理。"
 
-#: ../../content/administration/on_premise.rst:107
+#: ../../content/administration/on_premise.rst:114
 msgid "`Send a support ticket <https://www.odoo.com/help>`_."
 msgstr "<https://www.odoo.com/help>傳送支援請求。"
 
@@ -8777,222 +8817,197 @@ msgstr ""
 "terms/enterprise>`的任何條款。如有任何不一致或衝突，應以訂閱協議為準。"
 
 #: ../../content/administration/standard_extended_support.rst:10
-msgid ""
-"Odoo provides **standard support** for all major versions for three years. "
-"It includes helpdesk support, bug fixing, and security updates."
+msgid "Odoo supports every major version in two phases:"
 msgstr ""
-"Odoo 為所有主要版本提供**標準支援**，期限為三年。其中包括幫助台支援、錯誤修復"
-"和安全性更新。"
 
-#: ../../content/administration/standard_extended_support.rst:13
+#: ../../content/administration/standard_extended_support.rst:12
 msgid ""
-"Beyond those three years, **extended support** is subject to a mandatory "
-"additional fee and includes helpdesk support and bug fixes (depending on "
-"feasibility)."
+"**Standard support** covers the first three years after release. It is "
+"available on Odoo Online, Odoo.sh, and on-premise."
 msgstr ""
-"超過這三年之後,**延伸支援**需要支付額外的強制費用,包括幫助台支援和錯誤修正(視"
-"可行性而定)。"
+
+#: ../../content/administration/standard_extended_support.rst:14
+msgid ""
+"**Extended support** begins when standard support ends and requires an "
+"additional fee. It is available only on Odoo.sh (for a limited number of "
+"versions) and on-premise (for any version)."
+msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
-"Odoo releases intermediary versions, called online or SaaS versions, every "
-"two to three months. These versions are only available on Odoo Online and "
-"are not eligible for extended support."
+"Both phases include helpdesk support, bug fixes, and security updates. "
+"During extended support, fixes are provided only where technically feasible."
 msgstr ""
-"Odoo 每兩到三個月發布中間版本，稱為線上版本或 SaaS 版本。這些版本僅在 Odoo 雲"
-"端版上提供，不符合延伸支援資格。"
 
-#: ../../content/administration/standard_extended_support.rst:19
+#: ../../content/administration/standard_extended_support.rst:21
 msgid ""
-"You can `upgrade <https://upgrade.odoo.com>`_ from any version **to "
-"supported versions** only. The last unsupported version can still be used as "
-"an upgrade target for up to six months following its end-of-life date."
+"**SaaS versions** (also called *Online* versions) are released every two to "
+"three months. They are only available on Odoo Online and are not eligible "
+"for extended support."
 msgstr ""
-"您可以從任何版本\\ `升級 <https://upgrade.odoo.com>`_\\ **至支援的版本**。最"
-"後一個不受支援的版本在其終止日期後仍可作為升級目標使用最多六個月。"
 
 #: ../../content/administration/standard_extended_support.rst:23
 msgid ""
-"The table below shows the support status of every version. Major releases "
-"are highlighted in bold."
-msgstr "下表顯示每個版本的支援狀態。主要版本以粗體標示。"
+"You can `upgrade <https://upgrade.odoo.com>`_ from any version to any major "
+"version still under standard support, or that reached the end of standard "
+"support less than six months ago."
+msgstr ""
 
-#: ../../content/administration/standard_extended_support.rst:33
+#: ../../content/administration/standard_extended_support.rst:26
+msgid ""
+"The table below shows the support status of every version. Major versions "
+"are in bold."
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:36
 msgid "Release date"
 msgstr "發行日期"
 
-#: ../../content/administration/standard_extended_support.rst:34
+#: ../../content/administration/standard_extended_support.rst:37
 msgid "End of standard support"
 msgstr "標準支援結束"
 
-#: ../../content/administration/standard_extended_support.rst:35
+#: ../../content/administration/standard_extended_support.rst:38
+msgid "**Odoo 20.0**"
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:42
+#: ../../content/administration/standard_extended_support.rst:85
+msgid "September 2026"
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:43
+msgid "September 2029 (planned)"
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:44
 msgid "Odoo SaaS 19.4"
 msgstr "Odoo SaaS 19.4"
 
-#: ../../content/administration/standard_extended_support.rst:37
-#: ../../content/administration/standard_extended_support.rst:38
-#: ../../content/administration/standard_extended_support.rst:43
-#: ../../content/administration/standard_extended_support.rst:44
-#: ../../content/administration/standard_extended_support.rst:49
-#: ../../content/administration/standard_extended_support.rst:50
-#: ../../content/administration/standard_extended_support.rst:55
-#: ../../content/administration/standard_extended_support.rst:56
-#: ../../content/administration/standard_extended_support.rst:67
-#: ../../content/administration/standard_extended_support.rst:68
-#: ../../content/administration/standard_extended_support.rst:73
-#: ../../content/administration/standard_extended_support.rst:74
-#: ../../content/administration/standard_extended_support.rst:79
-#: ../../content/administration/standard_extended_support.rst:80
+#: ../../content/administration/standard_extended_support.rst:46
+#: ../../content/administration/standard_extended_support.rst:47
+#: ../../content/administration/standard_extended_support.rst:52
+#: ../../content/administration/standard_extended_support.rst:53
+#: ../../content/administration/standard_extended_support.rst:58
+#: ../../content/administration/standard_extended_support.rst:59
+#: ../../content/administration/standard_extended_support.rst:64
+#: ../../content/administration/standard_extended_support.rst:65
 msgid "N/A"
 msgstr "不適用"
 
-#: ../../content/administration/standard_extended_support.rst:39
+#: ../../content/administration/standard_extended_support.rst:48
 msgid "July 2026"
 msgstr "2026 年 7 月"
 
-#: ../../content/administration/standard_extended_support.rst:41
+#: ../../content/administration/standard_extended_support.rst:50
 msgid "Odoo SaaS 19.3"
 msgstr "Odoo SaaS 19.3"
 
-#: ../../content/administration/standard_extended_support.rst:45
+#: ../../content/administration/standard_extended_support.rst:54
 msgid "May 2026"
 msgstr "2026 年 5 月"
 
-#: ../../content/administration/standard_extended_support.rst:47
+#: ../../content/administration/standard_extended_support.rst:56
 msgid "Odoo SaaS 19.2"
 msgstr "Odoo SaaS 19.2"
 
-#: ../../content/administration/standard_extended_support.rst:51
+#: ../../content/administration/standard_extended_support.rst:60
 msgid "March 2026"
 msgstr "2026 年 3 月"
 
-#: ../../content/administration/standard_extended_support.rst:53
+#: ../../content/administration/standard_extended_support.rst:62
 msgid "Odoo SaaS 19.1"
 msgstr "Odoo SaaS 19.1"
 
-#: ../../content/administration/standard_extended_support.rst:57
+#: ../../content/administration/standard_extended_support.rst:66
 msgid "January 2026"
 msgstr "2026 年 1 月"
 
-#: ../../content/administration/standard_extended_support.rst:59
+#: ../../content/administration/standard_extended_support.rst:68
 msgid "**Odoo 19.0**"
 msgstr "**Odoo 19.0**"
 
-#: ../../content/administration/standard_extended_support.rst:63
-#: ../../content/administration/standard_extended_support.rst:100
+#: ../../content/administration/standard_extended_support.rst:72
+#: ../../content/administration/standard_extended_support.rst:91
 msgid "September 2025"
 msgstr "2025 年 9 月"
 
-#: ../../content/administration/standard_extended_support.rst:64
+#: ../../content/administration/standard_extended_support.rst:73
 msgid "September 2028 (planned)"
 msgstr "2028 年 9 月（計劃）"
 
-#: ../../content/administration/standard_extended_support.rst:65
-msgid "Odoo SaaS 18.4"
-msgstr "Odoo SaaS 18.4"
-
-#: ../../content/administration/standard_extended_support.rst:69
-msgid "July 2025"
-msgstr "2025 年 7 月"
-
-#: ../../content/administration/standard_extended_support.rst:71
-msgid "Odoo SaaS 18.3"
-msgstr "Odoo SaaS 18.3"
-
-#: ../../content/administration/standard_extended_support.rst:75
-msgid "May 2025"
-msgstr "2025 年 5 月"
-
-#: ../../content/administration/standard_extended_support.rst:77
-msgid "Odoo SaaS 18.2"
-msgstr "Odoo SaaS 18.2"
-
-#: ../../content/administration/standard_extended_support.rst:81
-msgid "March 2025"
-msgstr "2025 年 3 月"
-
-#: ../../content/administration/standard_extended_support.rst:83
+#: ../../content/administration/standard_extended_support.rst:74
 msgid "**Odoo 18.0**"
 msgstr "**Odoo 18.0**"
 
-#: ../../content/administration/standard_extended_support.rst:87
-#: ../../content/administration/standard_extended_support.rst:106
+#: ../../content/administration/standard_extended_support.rst:78
+#: ../../content/administration/standard_extended_support.rst:97
 msgid "October 2024"
 msgstr "2024 年 10 月"
 
-#: ../../content/administration/standard_extended_support.rst:88
+#: ../../content/administration/standard_extended_support.rst:79
 msgid "September 2027 (planned)"
 msgstr "2027 年 9 月（計劃中）"
 
-#: ../../content/administration/standard_extended_support.rst:89
+#: ../../content/administration/standard_extended_support.rst:80
 msgid "**Odoo 17.0**"
 msgstr "**Odoo 17.0**"
 
-#: ../../content/administration/standard_extended_support.rst:93
-msgid "November 2023"
-msgstr "2023 年 11 月"
-
+#: ../../content/administration/standard_extended_support.rst:82
+#: ../../content/administration/standard_extended_support.rst:83
+#: ../../content/administration/standard_extended_support.rst:88
+#: ../../content/administration/standard_extended_support.rst:89
 #: ../../content/administration/standard_extended_support.rst:94
-msgid "September 2026 (planned)"
-msgstr "2026 年 9 月（計劃中）"
-
 #: ../../content/administration/standard_extended_support.rst:95
-msgid "**Odoo 16.0**"
-msgstr "**Odoo 16.0**"
-
-#: ../../content/administration/standard_extended_support.rst:97
-#: ../../content/administration/standard_extended_support.rst:98
-#: ../../content/administration/standard_extended_support.rst:103
-#: ../../content/administration/standard_extended_support.rst:104
-#: ../../content/administration/standard_extended_support.rst:109
-#: ../../content/administration/standard_extended_support.rst:110
-#: ../../content/administration/standard_extended_support.rst:116
+#: ../../content/administration/standard_extended_support.rst:101
 msgid "|orange|"
 msgstr "|orange|"
 
-#: ../../content/administration/standard_extended_support.rst:99
+#: ../../content/administration/standard_extended_support.rst:84
+msgid "November 2023"
+msgstr "2023 年 11 月"
+
+#: ../../content/administration/standard_extended_support.rst:86
+msgid "**Odoo 16.0**"
+msgstr "**Odoo 16.0**"
+
+#: ../../content/administration/standard_extended_support.rst:90
 msgid "October 2022"
 msgstr "2022 年 10 月"
 
-#: ../../content/administration/standard_extended_support.rst:101
+#: ../../content/administration/standard_extended_support.rst:92
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/standard_extended_support.rst:105
+#: ../../content/administration/standard_extended_support.rst:96
 msgid "October 2021"
 msgstr "2021 年 10 月"
 
-#: ../../content/administration/standard_extended_support.rst:107
-msgid "**Odoo 14.0**"
-msgstr "**Odoo 14.0**"
-
-#: ../../content/administration/standard_extended_support.rst:111
-#: ../../content/administration/standard_extended_support.rst:117
-msgid "Before 2021"
-msgstr "2021 年之前"
-
-#: ../../content/administration/standard_extended_support.rst:112
-#: ../../content/administration/standard_extended_support.rst:118
-msgid "Before 2024"
-msgstr "2024 年之前"
-
-#: ../../content/administration/standard_extended_support.rst:113
+#: ../../content/administration/standard_extended_support.rst:98
 msgid "Older versions"
 msgstr "較舊版本"
 
-#: ../../content/administration/standard_extended_support.rst:122
+#: ../../content/administration/standard_extended_support.rst:102
+msgid "Before 2021"
+msgstr "2021 年之前"
+
+#: ../../content/administration/standard_extended_support.rst:103
+msgid "Before 2024"
+msgstr "2024 年之前"
+
+#: ../../content/administration/standard_extended_support.rst:107
 msgid "|green| : Standard support"
 msgstr "|green|：標準支援"
 
-#: ../../content/administration/standard_extended_support.rst:124
-msgid "|orange| : Extended support (mandatory extra fee)"
-msgstr "|orange|:延伸支援(需支付額外強制費用)"
+#: ../../content/administration/standard_extended_support.rst:109
+msgid "|orange| : Extended support (additional fee)"
+msgstr ""
 
-#: ../../content/administration/standard_extended_support.rst:126
+#: ../../content/administration/standard_extended_support.rst:111
 msgid "|red| : Not supported"
 msgstr "|red|:不支援"
 
-#: ../../content/administration/standard_extended_support.rst:128
+#: ../../content/administration/standard_extended_support.rst:113
 msgid "N/A : Never released for this platform"
 msgstr "N/A：此平台從未發布"
 
@@ -9956,6 +9971,69 @@ msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`受支援的 Odoo 版本 <standard_extended_support>`"
 
 #~ msgid ""
+#~ "Odoo provides **standard support** for all major versions for three "
+#~ "years. It includes helpdesk support, bug fixing, and security updates."
+#~ msgstr ""
+#~ "Odoo 為所有主要版本提供**標準支援**，期限為三年。其中包括幫助台支援、錯誤"
+#~ "修復和安全性更新。"
+
+#~ msgid ""
+#~ "Beyond those three years, **extended support** is subject to a mandatory "
+#~ "additional fee and includes helpdesk support and bug fixes (depending on "
+#~ "feasibility)."
+#~ msgstr ""
+#~ "超過這三年之後,**延伸支援**需要支付額外的強制費用,包括幫助台支援和錯誤修正"
+#~ "(視可行性而定)。"
+
+#~ msgid ""
+#~ "Odoo releases intermediary versions, called online or SaaS versions, "
+#~ "every two to three months. These versions are only available on Odoo "
+#~ "Online and are not eligible for extended support."
+#~ msgstr ""
+#~ "Odoo 每兩到三個月發布中間版本，稱為線上版本或 SaaS 版本。這些版本僅在 "
+#~ "Odoo 雲端版上提供，不符合延伸支援資格。"
+
+#~ msgid ""
+#~ "You can `upgrade <https://upgrade.odoo.com>`_ from any version **to "
+#~ "supported versions** only. The last unsupported version can still be used "
+#~ "as an upgrade target for up to six months following its end-of-life date."
+#~ msgstr ""
+#~ "您可以從任何版本\\ `升級 <https://upgrade.odoo.com>`_\\ **至支援的版本**。"
+#~ "最後一個不受支援的版本在其終止日期後仍可作為升級目標使用最多六個月。"
+
+#~ msgid ""
+#~ "The table below shows the support status of every version. Major releases "
+#~ "are highlighted in bold."
+#~ msgstr "下表顯示每個版本的支援狀態。主要版本以粗體標示。"
+
+#~ msgid "Odoo SaaS 18.4"
+#~ msgstr "Odoo SaaS 18.4"
+
+#~ msgid "July 2025"
+#~ msgstr "2025 年 7 月"
+
+#~ msgid "Odoo SaaS 18.3"
+#~ msgstr "Odoo SaaS 18.3"
+
+#~ msgid "May 2025"
+#~ msgstr "2025 年 5 月"
+
+#~ msgid "Odoo SaaS 18.2"
+#~ msgstr "Odoo SaaS 18.2"
+
+#~ msgid "March 2025"
+#~ msgstr "2025 年 3 月"
+
+#~ msgid "September 2026 (planned)"
+#~ msgstr "2026 年 9 月（計劃中）"
+
+#~ msgid "**Odoo 14.0**"
+#~ msgstr "**Odoo 14.0**"
+
+#~ msgid "|orange| : Extended support (mandatory extra fee)"
+#~ msgstr "|orange|:延伸支援(需支付額外強制費用)"
+
+#~ msgid ""
 #~ "To retrieve a list of all databases displayed under the `database manager "
 #~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
 #~ "method of the `odoo.database` model via an :doc:`external JSON-2 API <../"
@@ -10264,34 +10342,12 @@ msgstr ":doc:`受支援的 Odoo 版本 <standard_extended_support>`"
 #~ msgstr "當 IP 位址變更時，如何自動化任務？"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh 會通知專案管理員 IP 位址變更。**此外，當生產執行個體的 IP 位址變"
-#~ "更時，系統會向路徑 `/_odoo.sh/ip-change` 發出 HTTP `GET` 請求，新 IP 位址"
-#~ "作為查詢字串參數（`new`）包含在內，前一個 IP 位址則作為附加參數（`old`）。"
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
 #~ msgstr ""
 #~ "此機制允許針對 IP 位址變更套用自訂動作（例如傳送電子郵件、聯繫防火牆 API、"
 #~ "設定資料庫物件等）"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "出於安全考量，`/_odoo.sh/ip-change` 路徑僅供平台內部存取，透過任何其他方式"
-#~ "存取時會傳回 `403` 回應。"
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "以下是一個偽實作範例："
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
