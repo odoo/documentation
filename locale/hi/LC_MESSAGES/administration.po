@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:32+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -1641,6 +1641,44 @@ msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh प्रोजेक्ट एडमिनिस्ट्रेटर को आईपी एड्रेस बदलाव की सूचना देता है।** इसके "
+"अतिरिक्त, जब प्रॉडक्शन इंस्टेंस का आईपी एड्रेस बदलता है, तो पाथ `/_odoo.sh/ip-change` "
+"पर एक HTTP `GET` अनुरोध किया जाता है जिसमें नया आईपी एड्रेस क्वेरी स्ट्रिंग पैरामीटर "
+"(`new`) के रूप में शामिल होता है, साथ ही पिछला आईपी एड्रेस अतिरिक्त पैरामीटर (`old`) "
+"के रूप में शामिल होता है।"
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"सुरक्षा कारणों से, `/_odoo.sh/ip-change` रूट केवल प्लेटफ़ॉर्म द्वारा ही आंतरिक रूप से एक्सेस "
+"किया जा सकता है और किसी अन्य माध्यम से एक्सेस करने पर `403` रिस्पॉन्स देता है।"
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "यहाँ एक स्यूडो-इंप्लिमेंटेशन उदाहरण है:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -10857,36 +10895,12 @@ msgstr ":doc:`समर्थित Odoo संस्करण <standard_extende
 #~ msgstr "जब आईपी एड्रेस बदलता है तो मैं टास्क को ऑटोमैटिकली कैसे कर सकता हूँ?"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh प्रोजेक्ट एडमिनिस्ट्रेटर को आईपी एड्रेस बदलाव की सूचना देता है।** इसके "
-#~ "अतिरिक्त, जब प्रॉडक्शन इंस्टेंस का आईपी एड्रेस बदलता है, तो पाथ `/_odoo.sh/ip-"
-#~ "change` पर एक HTTP `GET` अनुरोध किया जाता है जिसमें नया आईपी एड्रेस क्वेरी स्ट्रिंग "
-#~ "पैरामीटर (`new`) के रूप में शामिल होता है, साथ ही पिछला आईपी एड्रेस अतिरिक्त "
-#~ "पैरामीटर (`old`) के रूप में शामिल होता है।"
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
 #~ msgstr ""
 #~ "यह मैकेनिज़्म आईपी एड्रेस बदलाव के जवाब में कस्टम एक्शन लागू करने की अनुमति देता है (जैसे "
 #~ "ईमेल भेजना, फ़ायरवॉल एपीआई से संपर्क करना, डेटाबेस ऑब्जेक्ट कॉन्फ़िगर करना, आदि)"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "सुरक्षा कारणों से, `/_odoo.sh/ip-change` रूट केवल प्लेटफ़ॉर्म द्वारा ही आंतरिक रूप से "
-#~ "एक्सेस किया जा सकता है और किसी अन्य माध्यम से एक्सेस करने पर `403` रिस्पॉन्स देता है।"
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "यहाँ एक स्यूडो-इंप्लिमेंटेशन उदाहरण है:"
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:32+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -1633,6 +1633,44 @@ msgid ""
 "more often than expected."
 msgstr ""
 "มีคุณสมบัติ idempotent กล่าวคือต้องไม่ก่อให้เกิดผลข้างเคียง หากถูกเรียกใช้งานบ่อยกว่าที่คาดไว้"
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh แจ้งให้ผู้ดูแลระบบโครงการทราบเกี่ยวกับการเปลี่ยนแปลงที่อยู่ IP** นอกจากนี้ เมื่อที่อยู่ "
+"IP ของอินสแตนซ์การใช้งานจริงมีการเปลี่ยนแปลง จะมีการส่งคำขอ HTTP `GET` ไปยังเส้นทาง `/"
+"_odoo.sh/ip-change` โดยรวมที่อยู่ IP ใหม่เป็นพารามิเตอร์สตริงแบบสอบถาม (`ใหม่`) "
+"พร้อมกับที่อยู่ IP ก่อนหน้านี้เป็นพารามิเตอร์เพิ่มเติม (`เก่า`)"
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"ด้วยเหตุผลด้านความปลอดภัย เส้นทาง `/_odoo.sh/ip-change` "
+"จะสามารถเข้าถึงได้จากภายในแพลตฟอร์มเท่านั้น และจะส่งกลับการตอบสนอง `403` "
+"หากเข้าถึงผ่านวิธีการอื่น"
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "นี่คือตัวอย่างการนำไปปฏิบัติแบบหลอก:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -10627,37 +10665,12 @@ msgstr ":doc:`Odoo เวอร์ชันที่รองรับ <standard
 #~ msgstr "ฉันจะทำให้งานเป็นอัตโนมัติได้อย่างไรเมื่อมีการเปลี่ยนแปลงที่อยู่ IP?"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh แจ้งให้ผู้ดูแลระบบโครงการทราบเกี่ยวกับการเปลี่ยนแปลงที่อยู่ IP** นอกจากนี้ "
-#~ "เมื่อที่อยู่ IP ของอินสแตนซ์การใช้งานจริงมีการเปลี่ยนแปลง จะมีการส่งคำขอ HTTP `GET` "
-#~ "ไปยังเส้นทาง `/_odoo.sh/ip-change` โดยรวมที่อยู่ IP "
-#~ "ใหม่เป็นพารามิเตอร์สตริงแบบสอบถาม (`ใหม่`) พร้อมกับที่อยู่ IP "
-#~ "ก่อนหน้านี้เป็นพารามิเตอร์เพิ่มเติม (`เก่า`)"
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
 #~ msgstr ""
 #~ "กลไกนี้ช่วยให้สามารถนำการดำเนินการแบบกำหนดเองมาใช้เพื่อตอบสนองต่อการเปลี่ยนแปลงที่อยู่ "
 #~ "IP ได้ (เช่น การส่งอีเมล การติดต่อ API ไฟร์วอลล์ การกำหนดค่าวัตถุฐานข้อมูล ฯลฯ)"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "ด้วยเหตุผลด้านความปลอดภัย เส้นทาง `/_odoo.sh/ip-change` "
-#~ "จะสามารถเข้าถึงได้จากภายในแพลตฟอร์มเท่านั้น และจะส่งกลับการตอบสนอง `403` "
-#~ "หากเข้าถึงผ่านวิธีการอื่น"
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "นี่คือตัวอย่างการนำไปปฏิบัติแบบหลอก:"
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "

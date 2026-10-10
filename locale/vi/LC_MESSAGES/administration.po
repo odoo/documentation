@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:32+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -1777,6 +1777,45 @@ msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh thông báo cho quản trị viên dự án về những thay đổi địa chỉ IP.** "
+"Ngoài ra, khi địa chỉ IP của phiên bản production thay đổi, yêu cầu HTTP "
+"`GET` sẽ được gửi đến đường dẫn `/_odoo.sh/ip-change` với địa chỉ IP mới "
+"được bao gồm dưới dạng tham số chuỗi truy vấn (`new`), cùng với địa chỉ IP "
+"trước đó dưới dạng tham số bổ sung (`old`)."
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"Vì lý do bảo mật, tuyến `/_odoo.sh/ip-change` chỉ có thể được chính nền tảng "
+"truy cập nội bộ và sẽ trả về phản hồi `403` nếu được truy cập thông qua bất "
+"kỳ phương tiện nào khác."
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "Sau đây là một ví dụ triển khai giả lập:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -11281,19 +11320,6 @@ msgstr ":doc:`Các phiên bản Odoo được hỗ trợ <standard_extended_supp
 #~ "Làm thế nào tôi có thể tự động hóa các nhiệm vụ khi địa chỉ IP thay đổi?"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh thông báo cho quản trị viên dự án về những thay đổi địa chỉ "
-#~ "IP.** Ngoài ra, khi địa chỉ IP của phiên bản production thay đổi, yêu cầu "
-#~ "HTTP `GET` sẽ được gửi đến đường dẫn `/_odoo.sh/ip-change` với địa chỉ IP "
-#~ "mới được bao gồm dưới dạng tham số chuỗi truy vấn (`new`), cùng với địa "
-#~ "chỉ IP trước đó dưới dạng tham số bổ sung (`old`)."
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
@@ -11301,18 +11327,6 @@ msgstr ":doc:`Các phiên bản Odoo được hỗ trợ <standard_extended_supp
 #~ "Cơ chế này cho phép áp dụng các tác vụ tùy chỉnh để phản hồi lại sự thay "
 #~ "đổi địa chỉ IP (VD: gửi email, liên hệ với API tường lửa, cấu hình đối "
 #~ "tượng cơ sở dữ liệu,...)"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "Vì lý do bảo mật, tuyến `/_odoo.sh/ip-change` chỉ có thể được chính nền "
-#~ "tảng truy cập nội bộ và sẽ trả về phản hồi `403` nếu được truy cập thông "
-#~ "qua bất kỳ phương tiện nào khác."
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "Sau đây là một ví dụ triển khai giả lập:"
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "

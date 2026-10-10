@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:32+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -1803,6 +1803,45 @@ msgid ""
 msgstr ""
 "Є ідемпотентними, тобто не повинні спричиняти побічних ефектів, якщо "
 "запускаються частіше, ніж очікується."
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh повідомляє адміністраторів проекту про зміни IP-адреси.** Крім "
+"того, коли змінюється IP-адреса виробничого екземпляра, надсилається HTTP-"
+"запит `GET` за шляхом `/_odoo.sh/ip-change` з новою IP-адресою, включеною як "
+"параметр рядка запиту (`new`), разом з попередньою IP-адресою як додатковим "
+"параметром (`old`)."
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"З міркувань безпеки маршрут `/_odoo.sh/ip-change` доступний лише внутрішньо "
+"самою платформою і повертає відповідь `403`, якщо до нього звертаються будь-"
+"яким іншим способом."
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "Ось приклад псевдореалізації:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -11415,19 +11454,6 @@ msgstr ":doc:`Підтримувані версії Odoo <standard_extended_supp
 #~ msgstr "Як можна автоматизувати задачі при зміні IP-адреси?"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh повідомляє адміністраторів проекту про зміни IP-адреси.** Крім "
-#~ "того, коли змінюється IP-адреса виробничого екземпляра, надсилається HTTP-"
-#~ "запит `GET` за шляхом `/_odoo.sh/ip-change` з новою IP-адресою, включеною "
-#~ "як параметр рядка запиту (`new`), разом з попередньою IP-адресою як "
-#~ "додатковим параметром (`old`)."
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
@@ -11435,18 +11461,6 @@ msgstr ":doc:`Підтримувані версії Odoo <standard_extended_supp
 #~ "Цей механізм дозволяє застосовувати власні дії у відповідь на зміну IP-"
 #~ "адреси (наприклад, надсилання електронного листа, звернення до API "
 #~ "брандмауера, налаштування об'єктів бази даних тощо)"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "З міркувань безпеки маршрут `/_odoo.sh/ip-change` доступний лише "
-#~ "внутрішньо самою платформою і повертає відповідь `403`, якщо до нього "
-#~ "звертаються будь-яким іншим способом."
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "Ось приклад псевдореалізації:"
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "

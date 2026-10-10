@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:32+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-12 10:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -1606,6 +1606,42 @@ msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr "具有冪等性，即如果比預期更頻繁地啟動，也不應造成副作用。"
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh 會通知專案管理員 IP 位址變更。**此外，當生產執行個體的 IP 位址變更"
+"時，系統會向路徑 `/_odoo.sh/ip-change` 發出 HTTP `GET` 請求，新 IP 位址作為查"
+"詢字串參數（`new`）包含在內，前一個 IP 位址則作為附加參數（`old`）。"
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"出於安全考量，`/_odoo.sh/ip-change` 路徑僅供平台內部存取，透過任何其他方式存"
+"取時會傳回 `403` 回應。"
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "以下是一個偽實作範例："
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -10292,34 +10328,12 @@ msgstr ":doc:`受支援的 Odoo 版本 <standard_extended_support>`"
 #~ msgstr "當 IP 位址變更時，如何自動化任務？"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh 會通知專案管理員 IP 位址變更。**此外，當生產執行個體的 IP 位址變"
-#~ "更時，系統會向路徑 `/_odoo.sh/ip-change` 發出 HTTP `GET` 請求，新 IP 位址"
-#~ "作為查詢字串參數（`new`）包含在內，前一個 IP 位址則作為附加參數（`old`）。"
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
 #~ msgstr ""
 #~ "此機制允許針對 IP 位址變更套用自訂動作（例如傳送電子郵件、聯繫防火牆 API、"
 #~ "設定資料庫物件等）"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "出於安全考量，`/_odoo.sh/ip-change` 路徑僅供平台內部存取，透過任何其他方式"
-#~ "存取時會傳回 `403` 回應。"
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "以下是一個偽實作範例："
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
