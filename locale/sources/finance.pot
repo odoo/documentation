@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:31+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -691,6 +691,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:22
 #: ../../content/applications/finance/accounting/taxes/retention.rst:11
 #: ../../content/applications/finance/accounting/vendor_bills.rst:177
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:239
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:29
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:24
 #: ../../content/applications/finance/expenses/expense_cards.rst:59
@@ -1337,6 +1338,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:96
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:210
 #: ../../content/applications/finance/accounting/reporting/annual-report.rst:29
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:87
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:127
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:223
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:135
@@ -8398,7 +8400,7 @@ msgid "Configuration of an account"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:23
-msgid "The country you select during the creation of your database (or additional company in your database) determines which :doc:`fiscal localization package <../../fiscal_localizations>` is installed by default. This package adds a standard chart of accounts already configured according to the country's regulations, including expense accounts that may be :ref:`linked to default asset models <chart-of-account/assets>`. You can use the chart of accounts directly or modify it according to your company's needs."
+msgid "The country you select during the creation of your database (or additional company in your database) determines which :doc:`fiscal localization package <../../fiscal_localizations>` is installed by default. This package adds a standard chart of accounts already configured according to the country's regulations, including expense accounts that may be :ref:`linked to default asset models <accounting/chart-of-account/assets>`. You can use the chart of accounts directly or modify it according to your company's needs."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:30
@@ -8634,7 +8636,7 @@ msgid "Transactions not displayed on the balance sheet or profit and loss report
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:104
-msgid "Account types of :guilabel:`Fixed Assets` and :guilabel:`Non-current Assets` can **automate** the creation of :ref:`asset <assets-automation>` entries. To **automate** entries, click :guilabel:`View` on an account line and go to the :guilabel:`Automation` tab."
+msgid "Account types of :guilabel:`Fixed Assets` and :guilabel:`Non-current Assets` can **automate** the creation of :ref:`asset <accounting/assets/account>` entries. To **automate** entries, click :guilabel:`View` on an account line and go to the :guilabel:`Automation` tab."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:108
@@ -15516,7 +15518,7 @@ msgid "Configure AvaTax settings"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:237
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:32
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:24
 msgid "Prerequisites"
 msgstr ""
 
@@ -17407,303 +17409,534 @@ msgid "Non-current assets and fixed assets"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:5
-msgid "**Non-current Assets**, also known as **long-term assets**, are investments that are expected to be realized after one year. They are capitalized rather than being expensed and appear on the company's balance sheet. Depending on their nature, they may undergo **depreciation**."
+msgid "Managing long-term company resources in Odoo involves two main asset categories:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:7
+msgid "**Non-current assets (Long-term assets):** Investments realized after one year that are capitalized on the balance sheet and subject to depreciation."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:9
-msgid "**Fixed Assets** are a type of Non-current Assets and include the properties bought for their productive aspects, such as buildings, vehicles, equipment, land, and software."
+msgid "**Fixed assets:** A subset of non-current assets comprising physical productive assets like buildings, vehicles, equipment, land, and software."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:12
-msgid "For example, let's say we buy a car for $ 27,000. We plan to amortize it over five years, and we will sell it for $ 7,000 afterward. Using the linear, or straight-line, depreciation method, $ 4,000 are expensed each year as **depreciation expenses**. After five years, the **Accumulated Depreciation** amount reported on the balance sheet equals $ 20,000, leaving us with $ 7,000 of **Not Depreciable Value**, or Salvage value."
+msgid "Odoo Accounting simplifies asset management by automatically creating depreciation entries in *draft* mode for periodic posting."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:18
-msgid "Odoo Accounting handles depreciation by creating all depreciation entries automatically in *draft mode*. They are then posted periodically."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:15
+msgid "Supported **depreciation methods**:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:21
-msgid "Odoo supports the following **Depreciation Methods**:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:23
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:17
 msgid "Straight Line"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:24
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:18
 msgid "Declining"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:25
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:19
 msgid "Declining Then Straight Line"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:28
-msgid "The server checks once a day if an entry must be posted. It might then take up to 24 hours before you see a change from *draft* to *posted*."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:26
+msgid "Transactions related to assets must be posted to an **asset account** rather than a standard expense account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:32
+msgid "Asset account"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:34
-msgid "Such transactions must be posted on an **Assets Account** rather than on the default expense account."
+msgid "To :ref:`create or configure <chart-of-account/create>` an assets account, fill out the following fields that are specific to assets:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:38
-msgid "Configure an Assets Account"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:39
+#: ../../content/applications/finance/esg.rst:38
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:384
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:42
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:463
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:277
+#: ../../content/applications/finance/fiscal_localizations/ecuador.rst:427
+#: ../../content/applications/finance/fiscal_localizations/france.rst:104
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:137
+#: ../../content/applications/finance/fiscal_localizations/indonesia.rst:94
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:422
+#: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:181
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:233
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:96
+msgid "Accounting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:40
-msgid "To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`, click on *Create*, and fill out the form."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:41
+msgid ":guilabel:`Type`: Select :guilabel:`Fixed Assets` or :guilabel:`Non-current Assets`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Configuration of an Assets Account in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:42
+msgid ":ref:`Variation Account <accounting/inventory-valuation/variation-account>` (optional): Select an account to register the inventory variation of the period into a specific account. This field is only available if the account type is :guilabel:`Current Assets`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:48
-msgid "This account's type must be either *Fixed Assets* or *Non-current Assets*."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:45
+msgid ":guilabel:`Currency`: Select a currency to force all journal items in this account to use that currency. Leave it empty for no restriction."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:51
-msgid "Post an expense to the right account"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:47
+msgid ":guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments matching of journal items."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:49
+msgid ":guilabel:`Active`: Activate or deactivate use of the account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:50
+msgid ":guilabel:`Companies`: Select the companies in which the account is available."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:52
+msgid "Automation"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:54
-msgid "Select the account on a draft bill"
+msgid "When creating or editing an account whose type is either :guilabel:`Non-current Assets` or :guilabel:`Fixed Assets`, it can be configured to automatically create assets for the expenses that are credited to it."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:56
-msgid "On a draft bill, select the right account for all the assets you are buying."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:58
+msgid ":guilabel:`Automate Asset`:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Selection of an Assets Account on a draft bill in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:60
+msgid ":guilabel:`No`: The draft sheet is manually created by the user when validating a vendor bill."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:65
-msgid "Choose a different Expense Account for specific products"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:62
+msgid ":guilabel:`Create in draft`: Odoo automatically creates a depreciation board with draft entries. Verify them before validating."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:64
+msgid ":guilabel:`Create and validate`: The asset is created and posted. The posted entry can be reset to draft and modified."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:67
-msgid "Start editing the product, go to the *Accounting* tab, select the right **Expense Account**, and save."
+msgid ":guilabel:`Manage Items`: If checked, the quantity on the invoice line determines the number of assets created."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Change of the Assets Account for a product in Odoo"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:70
+msgid ":ref:`Asset Model <accounting/assets/models>`: This account can be linked to a model, so the assets booked on this account always follow the same structure."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:75
-msgid "It is possible to :ref:`automate the creation of assets entries <assets-automation>` for these products."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:74
+msgid "Select this account as the default **Expense Account** of a product to fully automate its purchase."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:81
-msgid "Change the account of a posted journal item"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:80
+msgid "Product expense accounts"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:83
-msgid "To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting --> Purchases`, select the journal item you want to modify, click on the account, and select the right one."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:82
+msgid "To automatically post purchases of a specific product to an asset account, set the default asset account directly on the product form:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Modification of a posted journal item's account in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:85
+msgid "Open the product form and go to the :guilabel:`Accounting` tab."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:86
+msgid "Set the desired asset account in the :guilabel:`Expense Account` field."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:92
-msgid "Assets entries"
+msgid "Asset creation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:97
-msgid "Create a new entry"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:99
-msgid "An **Asset entry** automatically generates all journal entries in *draft mode*. They are then posted one by one at the right time."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:94
+msgid "There are two available methods to create assets in Odoo: a :ref:`manual creation <accounting/assets/creation-methods>` method, and a method :ref:`from a journal item <accounting/assets/creation-journal>`. Regardless of the method used, :ref:`these settings <accounting/assets/creation-settings>` must be filled out for either."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:102
-msgid "To create a new entry, go to :menuselection:`Accounting --> Accounting --> Assets`, click on *Create*, and fill out the form."
+msgid "Creation methods"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:105
-msgid "Click on **select related purchases** to link an existing journal item to this new entry. Some fields are then automatically filled out, and the journal item is now listed under the **Related Purchase** tab."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:107
+msgid "Manual creation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Assets entry in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:109
+msgid "An **Asset entry** automatically generates all journal entries in *draft mode*. They are then posted one by one over the configured period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:113
-msgid "Once done, you can click on *Compute Depreciation* (next to the *Confirm* button) to generate all the values of the **Depreciation Board**. This board shows you all the entries that Odoo will post to depreciate your asset, and at which date."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:112
+msgid "To create a new entry, go to :menuselection:`Accounting --> Accounting --> Assets`, click :guilabel:`New`, and fill out the :ref:`form <accounting/assets/creation-settings>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Depreciation Board in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:116
+msgid "In the :guilabel:`Bills` tab, a link to the bill that financed or acquired the asset can be :ref:`configured <accounting/assets/creation-settings>` to populate the asset fields automatically."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:122
-msgid "What does \"Prorata Temporis\" mean?"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:120
+msgid "Then, click :guilabel:`Compute Depreciation` to generate all the values in the :guilabel:`Depreciation Board` tab. This board shows you all the entries that will be posted to depreciate your asset, and at which date. Then, :guilabel:`Confirm` the asset."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:124
-msgid "The **Prorata Temporis** feature is useful to depreciate your assets the most accurately possible."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:127
+msgid "Creation from a journal item"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:126
-msgid "With this feature, the first entry on the Depreciation Board is computed based on the time left between the *Prorata Date* and the *First Depreciation Date* rather than the default amount of time between depreciations."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:129
+msgid "To create an asset entry from a specific journal item entry, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:130
-msgid "For example, the Depreciation Board above has its first depreciation with an amount of $ 241.10 rather than $ 4,000.00. Consequently, the last entry is also lower and has an amount of $ 3758.90."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:131
+msgid "Go to :menuselection:`Accounting --> Review --> Journal Items`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:132
+msgid "In the :guilabel:`Journal Items` list view, select the entry to create an asset from."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:133
+msgid "Click :guilabel:`Create Asset`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:134
-msgid "What are the different Depreciation Methods"
+msgid "Fill out the form the same way as when :ref:`creating a new entry <accounting/assets/creation>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:136
-msgid "The **Straight Line Depreciation Method** divides the initial Depreciable Value by the number of depreciations planned. All depreciation entries have the same amount."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:138
+msgid "Make sure the item is posted to the :ref:`correct account <accounting/assets/account>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:139
-msgid "The **Declining Depreciation Method** multiplies the Depreciable Value by the **Declining Factor** for each entry. Each depreciation entry has a lower amount than the previous entry. The last depreciation entry doesn't use the declining factor but instead has an amount corresponding to the balance of the depreciable value so that it reaches $0 by the end of the specified duration."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:143
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:738
+msgid "Settings"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:144
-msgid "The **Declining Then Straight Line Depreciation Method** uses the Declining Method, but with a minimum Depreciation equal to the Straight Line Method. This method ensures a fast depreciation at the beginning, followed by a constant one afterward."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:145
+msgid "When creating or editing an asset, complete the following fields across the relevant sections:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:149
-msgid "Assets from the Purchases Journal"
+msgid ":guilabel:`Asset`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:151
-msgid "You can create an asset entry from a specific journal item in your **Purchases Journal**."
+msgid ":guilabel:`Asset Name`: The name of the asset to be depreciated."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:153
-msgid "To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting --> Purchases`, and select the journal item you want to record as an asset. Make sure that it is posted in the right account (see: :ref:`journal-assets-account`)."
+msgid ":guilabel:`Original Value`: The acquisition cost of the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:154
+msgid ":guilabel:`Acquisition Date`: The date the asset was purchased."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:155
+msgid ":guilabel:`Asset Model`: Select a :ref:`template <accounting/assets/models>` to populate default settings automatically (optional)."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:157
-msgid "Then, click on *Action*, select **Create Asset**, and fill out the form the same way you would do to :ref:`create a new entry <create-assets-entry>`."
+msgid ":guilabel:`Asset Group`: Group up other assets into a single group."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Create Asset Entry from a journal item in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:159
+msgid "**Current Values**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:161
+msgid ":guilabel:`Not Depreciable Value`: The salvage or residual value excluded from depreciation."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:162
+msgid ":guilabel:`Book Value`: The calculated remaining value (*Original Value* minus *Accumulated Depreciation*)."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:165
-msgid "Modification of an Asset"
+msgid "**Depreciation Method**"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:167
-msgid "You can modify the values of an asset to increase or decrease its value."
+msgid ":guilabel:`Method`: Select the computation logic:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:169
-msgid "To do so, open the asset you want to modify, and click on *Modify Depreciation*. Then, fill out the form with the new depreciation values and click on *Modify*."
+msgid ":guilabel:`Straight Line`: Divides the depreciable value equally over the lifespan."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:170
+msgid ":guilabel:`Declining`: Multiplies remaining value by a declining factor until reaching salvage value."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:172
-msgid "A **decrease in value** posts a new Journal Entry for the **Value Decrease** and modifies all the future *unposted* Journal Entries listed in the Depreciation Board."
+msgid ":guilabel:`Declining Then Straight Line`: Uses declining depreciation until straight-line yields a higher amount, ensuring faster initial depreciation."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:174
+msgid ":guilabel:`Duration`: Set lifespan frequency in :guilabel:`Months` or :guilabel:`Years`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:175
-msgid "An **increase in value** requires you to fill out additional fields related to the account movements and creates a new Asset entry with the **Value Increase**. The Gross Increase Asset Entry can be accessed with a Smart Button."
+msgid ":guilabel:`Computation`: Select timing logic (:guilabel:`No Prorata`, :guilabel:`Constant Periods`, or :guilabel:`Based on days per period`)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Gross Increase smart button in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:177
+msgid ":guilabel:`Prorata Date`: The starting date used when calculating pro-rata depreciation for partial first periods."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:184
-msgid "Disposal of Fixed Assets"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:180
+msgid "The :guilabel:`Straight Line` depreciation method divides the initial depreciable value by the number of depreciations planned. All depreciation entries have the same amount."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:186
-msgid "To **sell** an asset or **dispose** of it implies that it must be removed from the Balance Sheet."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:183
+msgid "The :guilabel:`Declining` depreciation method multiplies the depreciable value by the :guilabel:`Declining Factor` for each entry. Each depreciation entry has a lower amount than the previous entry. The last depreciation entry doesn't use the declining factor but has an amount corresponding to the remaining depreciable value, ensuring it reaches zero by the end of the specified duration."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:188
-msgid "To do so, open the asset you want to dispose of, click on *Sell or Dispose*, and fill out the form."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Disposal of Assets in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:189
+msgid "The :guilabel:`Declining Then Straight Line` depreciation method starts with the :guilabel:`Declining` method, but sets the minimum depreciation equal to match the :guilabel:`Straight Line` method. This method ensures a fast depreciation initially, followed by a constant depreciation afterward."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:194
-msgid "Odoo Accounting then generates all the journal entries necessary to dispose of the asset, including the gain or loss on sale, which is based on the difference between the asset's book value at the time of the sale and the amount it is sold for."
+msgid "**Accounting**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:196
+msgid ":guilabel:`Company`: The company that owns the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:197
+msgid ":guilabel:`Fixed Asset Account`: The asset account storing the initial acquisition value."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:198
+msgid ":guilabel:`Depreciation Account`: The accumulated depreciation balance sheet account."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:199
-msgid "To record the sale of an asset, you must first post the related Customer Invoice so you can link the sale of the asset with it."
+msgid ":guilabel:`Expense Account`: The income statement account where depreciation expense is posted."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:205
-msgid "Assets Models"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:201
+msgid ":guilabel:`Journal`: The target journal for depreciation entries."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:207
-msgid "You can create **Assets Models** to create your Asset entries faster. It is particularly useful if you recurrently buy the same kind of assets."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:202
+msgid ":guilabel:`Analytic Distribution`: :doc:`Analytic accounts <../reporting/analytic_accounting>` assignments (optional)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:210
-msgid "To create a model, go to :menuselection:`Accounting --> Configuration --> Assets Models`, click on *Create*, and fill out the form the same way you would do to create a new entry."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:206
+msgid "To change the account of a posted journal item, go to :menuselection:`Accounting --> Review --> Journal Items`, then filter by :guilabel:`Purchases`, and tick the journal item(s) you wish to modify. Once selected, click the :guilabel:`Account` column related to the item(s), then click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to select a new account from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:212
+msgid "**Value at Import**"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:214
-msgid "You can also convert a *confirmed Asset entry* into a model by opening it from :menuselection:`Accounting --> Accounting --> Assets` and then, by clicking on the button *Save Model*."
+msgid ":guilabel:`Depreciated Amount`: If applicable, input the asset's amount that has been depreciated before importing it in Odoo (requires :doc:`Developer Mode <../../../general/developer_mode>` enabled)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:219
-msgid "Apply an Asset Model to a new entry"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:217
+msgid ":guilabel:`Vehicle`: Select the imported vehicle from your fleet to allow for unified cost tracking."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:221
-msgid "When you create a new Asset entry,  fill out the **Fixed Asset Account** with the right asset account."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:220
+msgid ":guilabel:`Depreciation Board`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:224
-msgid "New buttons with all the models linked to that account appear at the top of the form. Clicking on a model button fills out the form according to that model."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:222
+msgid "This tab displays all journal entries, both in draft and posted, of the computed depreciations over the configured period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Assets model button in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:225
+msgid ":guilabel:`Bills`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:227
+msgid "If a posted bill exists for that asset, open the :guilabel:`Bills` tab, then click :guilabel:`Add a line`, and select the related bill to automatically fill out the asset fields."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:234
-msgid "Automate the Assets"
+msgid "Asset models"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:236
-msgid "When you create or edit an account of which the type is either *Non-current Assets* or *Fixed Assets*, you can configure it to create assets for the expenses that are credited on it automatically."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:241
+msgid "**Asset models** serve as reusable templates for depreciation settings. They streamline entry creation when regularly purchasing identical types of assets."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:240
-msgid "You have three choices for the **Automate Assets** field:"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:244
+msgid "To create an asset model, go to :menuselection:`Accounting --> Configuration --> Asset Models`. Then, click :guilabel:`New`, and fill out the following fields:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:242
-msgid "**No:** this is the default value. Nothing happens."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:247
+msgid ":guilabel:`Asset Model name`: The name of the model corresponding to a specific type of asset."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:243
-msgid "**Create in draft:** whenever a transaction is posted on the account, a draft *Assets entry* is created, but not validated. You must first fill out the form in :menuselection:`Accounting --> Accounting --> Assets`."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:248
+msgid ":guilabel:`Method`: Choose the method to use to compute the amount of depreciation lines."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:246
-msgid "**Create and validate:** you must also select an Asset Model (see: `Assets Models`_). Whenever a transaction is posted on the account, an *Assets entry* is created and immediately validated."
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:249
+msgid ":guilabel:`Declining Factor`: For the declining depreciation method, input a declining factor per year."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:None
-msgid "Automate Assets on an account in Odoo Accounting"
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:251
+msgid ":guilabel:`Duration`: The number of :guilabel:`Months` or :guilabel:`Years` needed to depreciate the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:253
+msgid ":guilabel:`Computation`: The computation method to calculate the depreciation rate."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:254
-msgid "You can, for example, select this account as the default **Expense Account** of a product to fully automate its purchase. (see: :ref:`product-assets-account`)."
+msgid ":guilabel:`Not Depreciable Value Percent`: Input the amount planned as non-depreciated."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:255
+msgid ":guilabel:`Company`: Which company has access to this model. Leave blank to allow all."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:256
+msgid ":guilabel:`Depreciation Account`: Account used in the depreciation entries to decrease the asset value."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:258
-msgid ":doc:`../get_started/chart_of_accounts`"
+msgid ":guilabel:`Expense Account`: Account use in the periodical entries to record part of the asset as expense."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:260
+msgid ":guilabel:`Journal`: The journal used to record depreciation entries."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:263
+msgid "To convert an existing confirmed asset into a model, open it and click :guilabel:`Save as Model`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:265
+msgid "To apply an asset model to a new entry, select a model from the :guilabel:`Asset Model` field, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:271
+msgid "Asset modification and disposal"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:273
+msgid "To adjust an existing asset's values to account for re-evaluations, sale, disposal, or pause, open the asset that needs modification, and click :guilabel:`Modify Depreciation`. Then, in the :guilabel:`Modify Asset` window, select one of the following actions:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:277
+msgid ":guilabel:`Dispose`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:279
+msgid ":guilabel:`Date`: Enter the date of the asset disposal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:280
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:291
+msgid ":guilabel:`Loss Account`: Account used to write the journal item in case of loss."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:281
+msgid ":guilabel:`Note`: Write a note regarding the disposal (optional)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:283
+msgid "Then, click :guilabel:`Dispose`. The updated asset is then :guilabel:`Closed`, and a new disposal journal entry is posted to the loss account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:286
+msgid ":guilabel:`Sell`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:288
+msgid ":guilabel:`Date`: Enter the date of the asset sale."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:289
+msgid ":guilabel:`Customer Invoice`: Select the customer invoice of the asset sale."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:290
+msgid ":guilabel:`Invoice Line`: The invoice line(s) related to the asset sale."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:292
+msgid ":guilabel:`Note`: Write a note regarding the sale (optional)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:294
+msgid "Then, click :guilabel:`Sell`. The updated asset is then :guilabel:`Closed`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:296
+msgid ":guilabel:`Re-evaluate`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:298
+msgid ":guilabel:`Date`: The date of the asset's re-evaluation."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:299
+msgid ":guilabel:`Duration`: The lifespan of the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:300
+msgid ":guilabel:`Depreciable Amount`: The new residual amount for the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:301
+msgid ":guilabel:`Not Depreciable Amount`: The new salvage amount for the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:302
+msgid ":guilabel:`Gross Increase Account`: The gross increase account for the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:303
+msgid ":guilabel:`Asset Counterpart Account`: The counterpart account used to balance the journal entry created for the value re-evaluation (e.g., Revaluation Surplus or Loss/Gain account)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:305
+msgid ":guilabel:`Depreciation Account`: The depreciation account for the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:306
+msgid ":guilabel:`Expense Account`: The expense account to use for the asset."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:307
+msgid ":guilabel:`Note`: Add an internal note, if desired."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:309
+msgid "Then, click :guilabel:`Modify`. All future entries will be recomputed to reflect the asset's depreciation following the change."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:313
+msgid "A **decrease in value** posts a new Journal Entry for the **Value Decrease** and modifies all the future *unposted* Journal Entries listed in the Depreciation Board."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:316
+msgid "An **increase in value** creates a new asset entry with the **Value Increase**. The gross increase asset entry is accessible by clicking the :guilabel:`Gross Increase Asset` smart button."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:320
+msgid ":guilabel:`Pause`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:322
+msgid ":guilabel:`Date`: The date on which the asset depreciation is paused."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:323
+msgid ":guilabel:`Note:` Add an internal note, if desired."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:325
+msgid "Then, click :guilabel:`Pause`. The depreciation is then :guilabel:`On Hold` and can be resumed if needed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/assets.rst:329
+msgid ":doc:`Chart of accounts <../get_started/chart_of_accounts>`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:3
@@ -18146,22 +18379,6 @@ msgstr ""
 
 #: ../../content/applications/finance/esg.rst:33
 msgid ":ref:`Manual inputs <esg/manual>`"
-msgstr ""
-
-#: ../../content/applications/finance/esg.rst:38
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:384
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:42
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:463
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:277
-#: ../../content/applications/finance/fiscal_localizations/ecuador.rst:427
-#: ../../content/applications/finance/fiscal_localizations/france.rst:104
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:137
-#: ../../content/applications/finance/fiscal_localizations/indonesia.rst:94
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:422
-#: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:181
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:233
-#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:96
-msgid "Accounting"
 msgstr ""
 
 #: ../../content/applications/finance/esg.rst:40
@@ -46706,10 +46923,6 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:730
 msgid "Before creating ISO 20022 records, several configurations must be made, including :ref:`general settings <l10n_us/settings>`, contact information for the :ref:`company <l10n_us/contact-info-company>`, and contact and banking information for all :ref:`recipients <l10n_us/contact-info-recipient>`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:738
-msgid "Settings"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:740
