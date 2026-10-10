@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"POT-Creation-Date: 2026-10-09 17:32+0000\n"
 "PO-Revision-Date: 2026-09-12 11:33+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -839,7 +839,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_online.rst:3
 #: ../../content/administration/odoo_sh/getting_started/create.rst:121
-#: ../../content/administration/standard_extended_support.rst:30
+#: ../../content/administration/standard_extended_support.rst:33
 #: ../../content/administration/upgrade.rst:14
 #: ../../content/administration/upgrade.rst:109
 #: ../../content/administration/upgrade.rst:330
@@ -1153,8 +1153,8 @@ msgid ""
 "method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
 "developer/reference/external_api>`."
 msgstr ""
-"За да извлечете програмно списък с всички бази данни, показани в "
-":ref:`мениджъра на бази данни <odoo-online/database-manager>`, извикайте "
+"За да извлечете програмно списък с всички бази данни, показани "
+"в :ref:`мениджъра на бази данни <odoo-online/database-manager>`, извикайте "
 "метода `list` на модела `odoo.database` чрез :doc:`външния JSON-2 API <../"
 "developer/reference/external_api>`."
 
@@ -1180,8 +1180,8 @@ msgid ""
 "JSON-2 API <../developer/reference/external_api>`."
 msgstr ""
 "За да извлечете логовете на административните действия на база данни на Odoo "
-"Online, извикайте метода `get_audit_logs` на модела `odoo.database` чрез "
-":doc:`външния JSON-2 API <../developer/reference/external_api>`."
+"Online, извикайте метода `get_audit_logs` на модела `odoo.database` "
+"чрез :doc:`външния JSON-2 API <../developer/reference/external_api>`."
 
 #: ../../content/administration/odoo_online.rst:205
 msgid ""
@@ -1293,7 +1293,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/odoo_sh.rst:6
-#: ../../content/administration/standard_extended_support.rst:31
+#: ../../content/administration/standard_extended_support.rst:34
 #: ../../content/administration/upgrade.rst:22
 #: ../../content/administration/upgrade.rst:132
 #: ../../content/administration/upgrade.rst:341
@@ -1477,8 +1477,8 @@ msgid ""
 "\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
 "За да намерите пътя за добавки, използван от Odoo.sh за стартиране на вашия "
-"сървър, потърсете „*odoo: addons paths*“ в логовете (:file:`~/logs/odoo.log`)"
-"."
+"сървър, потърсете „*odoo: addons paths*“ в логовете (:file:`~/logs/"
+"odoo.log`)."
 
 #: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
@@ -1539,8 +1539,8 @@ msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
-"постоянно, като добавите `pudb` или `ipdb` във файла "
-":file:`requirements.txt` на вашия проект, или"
+"постоянно, като добавите `pudb` или `ipdb` във "
+"файла :file:`requirements.txt` на вашия проект, или"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
@@ -1635,8 +1635,8 @@ msgid ""
 "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
 "on Odoo.sh`."
 msgstr ""
-"В горния десен ъгъл щракнете върху :guilabel:`Подмодул`, след което "
-":guilabel:`Изпълни в Odoo.sh`."
+"В горния десен ъгъл щракнете върху :guilabel:`Подмодул`, след "
+"което :guilabel:`Изпълни в Odoo.sh`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:274
 msgid "In the dialog box, fill in the following:"
@@ -1729,8 +1729,8 @@ msgstr ""
 "игнорирате някои от тях, ако се инсталират автоматично. За да направите "
 "това, добавете префикс :code:`.` към папката на подмодула (напр. `.folder`). "
 "Платформата ще игнорира тази папка и вие можете сами да изберете модулите, "
-"като създадете `символни връзки <https://en.wikipedia.org/wiki/Symbolic_link>"
-"`_ към тях от друга папка."
+"като създадете `символни връзки <https://en.wikipedia.org/wiki/"
+"Symbolic_link>`_ към тях от друга папка."
 
 #: ../../content/administration/odoo_sh/advanced.rst:330
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:80
@@ -1788,6 +1788,45 @@ msgid ""
 msgstr ""
 "Са идемпотентни, т.е. не трябва да предизвикват странични ефекти, ако бъдат "
 "стартирани по-често от очакваното."
+
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh уведомява администраторите на проекта за промени в IP адреса.** "
+"Освен това, когато IP адресът на работна (production) инстанция се промени, "
+"се прави HTTP `GET` заявка към пътя `/_odoo.sh/ip-change` с новия IP адрес, "
+"включен като параметър на заявката (`new`), заедно с предишния IP адрес като "
+"допълнителен параметър (`old`)."
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"От съображения за сигурност маршрутът `/_odoo.sh/ip-change` е достъпен само "
+"вътрешно от самата платформа и връща отговор `403`, ако бъде достъпен по "
+"друг начин."
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "Ето пример за псевдо-имплементация:"
 
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
@@ -2450,7 +2489,8 @@ msgstr ":ref:`проект в Odoo.sh <odoo-sh/getting-started/components/projec
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
-msgstr ":ref:`база данни на Odoo <odoo-sh/getting-started/components/database>`"
+msgstr ""
+":ref:`база данни на Odoo <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2600,7 +2640,8 @@ msgstr "Технически понятия"
 msgid ""
 "When working with Odoo.sh, it is also important to understand several "
 "technical concepts:"
-msgstr "При работа с Odoo.sh е важно да разбирате и няколко технически понятия:"
+msgstr ""
+"При работа с Odoo.sh е важно да разбирате и няколко технически понятия:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:90
 msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
@@ -5172,7 +5213,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
-#: ../../content/administration/standard_extended_support.rst:32
+#: ../../content/administration/standard_extended_support.rst:35
 #: ../../content/administration/upgrade.rst:30
 #: ../../content/administration/upgrade.rst:156
 #: ../../content/administration/upgrade.rst:364
@@ -5857,18 +5898,17 @@ msgstr "Свързване + / Свързване като"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:196
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:197
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:198
-#: ../../content/administration/standard_extended_support.rst:36
-#: ../../content/administration/standard_extended_support.rst:42
-#: ../../content/administration/standard_extended_support.rst:48
-#: ../../content/administration/standard_extended_support.rst:60
-#: ../../content/administration/standard_extended_support.rst:61
-#: ../../content/administration/standard_extended_support.rst:62
-#: ../../content/administration/standard_extended_support.rst:84
-#: ../../content/administration/standard_extended_support.rst:85
-#: ../../content/administration/standard_extended_support.rst:86
-#: ../../content/administration/standard_extended_support.rst:90
-#: ../../content/administration/standard_extended_support.rst:91
-#: ../../content/administration/standard_extended_support.rst:92
+#: ../../content/administration/standard_extended_support.rst:39
+#: ../../content/administration/standard_extended_support.rst:40
+#: ../../content/administration/standard_extended_support.rst:41
+#: ../../content/administration/standard_extended_support.rst:45
+#: ../../content/administration/standard_extended_support.rst:51
+#: ../../content/administration/standard_extended_support.rst:69
+#: ../../content/administration/standard_extended_support.rst:70
+#: ../../content/administration/standard_extended_support.rst:71
+#: ../../content/administration/standard_extended_support.rst:75
+#: ../../content/administration/standard_extended_support.rst:76
+#: ../../content/administration/standard_extended_support.rst:77
 msgid "|green|"
 msgstr "|green|"
 
@@ -5943,15 +5983,13 @@ msgstr "Статус"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:187
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:191
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:192
-#: ../../content/administration/standard_extended_support.rst:54
-#: ../../content/administration/standard_extended_support.rst:66
-#: ../../content/administration/standard_extended_support.rst:72
-#: ../../content/administration/standard_extended_support.rst:78
-#: ../../content/administration/standard_extended_support.rst:96
-#: ../../content/administration/standard_extended_support.rst:102
-#: ../../content/administration/standard_extended_support.rst:108
-#: ../../content/administration/standard_extended_support.rst:114
-#: ../../content/administration/standard_extended_support.rst:115
+#: ../../content/administration/standard_extended_support.rst:57
+#: ../../content/administration/standard_extended_support.rst:63
+#: ../../content/administration/standard_extended_support.rst:81
+#: ../../content/administration/standard_extended_support.rst:87
+#: ../../content/administration/standard_extended_support.rst:93
+#: ../../content/administration/standard_extended_support.rst:99
+#: ../../content/administration/standard_extended_support.rst:100
 msgid "|red|"
 msgstr "|red|"
 
@@ -5965,7 +6003,7 @@ msgid ":ref:`Backups <odoo-sh/branches/tabs/backups>`"
 msgstr ":ref:`Резервни копия <odoo-sh/branches/tabs/backups>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:200
-#: ../../content/administration/standard_extended_support.rst:120
+#: ../../content/administration/standard_extended_support.rst:105
 msgid "Legend"
 msgstr "Легенда"
 
@@ -6430,11 +6468,18 @@ msgstr ""
 "Тези портове трябва да останат отворени дори след регистрирането на база "
 "данни, тъй като известието за актуализация се изпълнява веднъж седмично."
 
-#: ../../content/administration/on_premise.rst:71
+#: ../../content/administration/on_premise.rst:70
+msgid ""
+"If your internal policies do not allow outbound connections on port `80`, "
+"you can alternatively open port `443` **and** add the following line to your "
+"Odoo configuration file:"
+msgstr ""
+
+#: ../../content/administration/on_premise.rst:78
 msgid "Too many users error"
 msgstr "Грешка за твърде много потребители"
 
-#: ../../content/administration/on_premise.rst:73
+#: ../../content/administration/on_premise.rst:80
 msgid ""
 "If you have more users in a local database than provisioned in your Odoo "
 "Enterprise subscription, the following message should be displayed."
@@ -6446,7 +6491,7 @@ msgstr ""
 msgid "Too many users on a database error message"
 msgstr "Съобщение за грешка за твърде много потребители в база данни"
 
-#: ../../content/administration/on_premise.rst:79
+#: ../../content/administration/on_premise.rst:86
 msgid ""
 "When the message appears, you have 30 days to act before the database "
 "expires. The countdown is updated every day."
@@ -6454,12 +6499,12 @@ msgstr ""
 "Когато съобщението се появи, имате 30 дни да предприемете действие, преди "
 "базата данни да изтече. Обратното броене се актуализира всеки ден."
 
-#: ../../content/administration/on_premise.rst:82
-#: ../../content/administration/on_premise.rst:102
+#: ../../content/administration/on_premise.rst:89
+#: ../../content/administration/on_premise.rst:109
 msgid "To resolve the issue, either:"
 msgstr "За да разрешите проблема, можете да:"
 
-#: ../../content/administration/on_premise.rst:84
+#: ../../content/administration/on_premise.rst:91
 msgid ""
 "**Add more users** to your subscription by clicking the :guilabel:`Upgrade "
 "your subscription` link displayed in the message to validate the upsell "
@@ -6470,7 +6515,7 @@ msgstr ""
 "да потвърдите офертата за надграждане и да платите за допълнителните "
 "потребители."
 
-#: ../../content/administration/on_premise.rst:86
+#: ../../content/administration/on_premise.rst:93
 msgid ""
 ":ref:`Deactivate users <users/deactivate>` and **reject** the upsell "
 "quotation."
@@ -6478,7 +6523,7 @@ msgstr ""
 ":ref:`Деактивирате потребители <users/deactivate>` и **отхвърлите** офертата "
 "за надграждане."
 
-#: ../../content/administration/on_premise.rst:88
+#: ../../content/administration/on_premise.rst:95
 msgid ""
 "Once your database has the correct number of users, the expiration message "
 "disappears automatically after a few days, when the next verification occurs."
@@ -6487,11 +6532,11 @@ msgstr ""
 "изтичане изчезва автоматично след няколко дни, когато настъпи следващата "
 "проверка."
 
-#: ../../content/administration/on_premise.rst:92
+#: ../../content/administration/on_premise.rst:99
 msgid "Database expired error"
 msgstr "Грешка за изтекла база данни"
 
-#: ../../content/administration/on_premise.rst:94
+#: ../../content/administration/on_premise.rst:101
 msgid ""
 "If your database expires before you renew your subscription, the following "
 "message should be displayed."
@@ -6503,7 +6548,7 @@ msgstr ""
 msgid "Database expired error message"
 msgstr "Съобщение за грешка за изтекла база данни"
 
-#: ../../content/administration/on_premise.rst:100
+#: ../../content/administration/on_premise.rst:107
 msgid ""
 "This message appears if you fail to act before the end of the 30-day "
 "countdown."
@@ -6511,7 +6556,7 @@ msgstr ""
 "Това съобщение се показва, ако не предприемете действие преди края на 30-"
 "дневното обратно броене."
 
-#: ../../content/administration/on_premise.rst:104
+#: ../../content/administration/on_premise.rst:111
 msgid ""
 "Click the :guilabel:`Renew your subscription` link displayed in the message "
 "and complete the process. If you pay by wire transfer, your subscription "
@@ -6523,7 +6568,7 @@ msgstr ""
 "абонамент ще бъде подновен, когато плащането пристигне, което може да отнеме "
 "няколко дни. Плащанията с кредитна карта се обработват незабавно."
 
-#: ../../content/administration/on_premise.rst:107
+#: ../../content/administration/on_premise.rst:114
 msgid "`Send a support ticket <https://www.odoo.com/help>`_."
 msgstr "`Изпратете тикет за поддръжка <https://www.odoo.com/help>`_."
 
@@ -9850,229 +9895,197 @@ msgstr ""
 "конфликт, споразумението за абонамент има предимство."
 
 #: ../../content/administration/standard_extended_support.rst:10
-msgid ""
-"Odoo provides **standard support** for all major versions for three years. "
-"It includes helpdesk support, bug fixing, and security updates."
+msgid "Odoo supports every major version in two phases:"
 msgstr ""
-"Odoo предоставя **стандартна поддръжка** за всички основни версии в "
-"продължение на три години. Тя включва поддръжка от helpdesk, отстраняване на "
-"грешки и актуализации за сигурност."
 
-#: ../../content/administration/standard_extended_support.rst:13
+#: ../../content/administration/standard_extended_support.rst:12
 msgid ""
-"Beyond those three years, **extended support** is subject to a mandatory "
-"additional fee and includes helpdesk support and bug fixes (depending on "
-"feasibility)."
+"**Standard support** covers the first three years after release. It is "
+"available on Odoo Online, Odoo.sh, and on-premise."
 msgstr ""
-"След тези три години **разширената поддръжка** се предоставя срещу "
-"задължителна допълнителна такса и включва поддръжка от helpdesk и "
-"отстраняване на грешки (в зависимост от възможността за това)."
+
+#: ../../content/administration/standard_extended_support.rst:14
+msgid ""
+"**Extended support** begins when standard support ends and requires an "
+"additional fee. It is available only on Odoo.sh (for a limited number of "
+"versions) and on-premise (for any version)."
+msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
-"Odoo releases intermediary versions, called online or SaaS versions, every "
-"two to three months. These versions are only available on Odoo Online and "
-"are not eligible for extended support."
+"Both phases include helpdesk support, bug fixes, and security updates. "
+"During extended support, fixes are provided only where technically feasible."
 msgstr ""
-"Odoo издава междинни версии, наречени онлайн или SaaS версии, на всеки два "
-"до три месеца. Тези версии са достъпни само в Odoo Online и не отговарят на "
-"условията за разширена поддръжка."
 
-#: ../../content/administration/standard_extended_support.rst:19
+#: ../../content/administration/standard_extended_support.rst:21
 msgid ""
-"You can `upgrade <https://upgrade.odoo.com>`_ from any version **to "
-"supported versions** only. The last unsupported version can still be used as "
-"an upgrade target for up to six months following its end-of-life date."
+"**SaaS versions** (also called *Online* versions) are released every two to "
+"three months. They are only available on Odoo Online and are not eligible "
+"for extended support."
 msgstr ""
-"Можете да `надградите <https://upgrade.odoo.com>`_ от всяка версия **само "
-"към поддържани версии**. Последната неподдържана версия все още може да се "
-"използва като цел за надграждане до шест месеца след датата на края на "
-"поддръжката ѝ."
 
 #: ../../content/administration/standard_extended_support.rst:23
 msgid ""
-"The table below shows the support status of every version. Major releases "
-"are highlighted in bold."
+"You can `upgrade <https://upgrade.odoo.com>`_ from any version to any major "
+"version still under standard support, or that reached the end of standard "
+"support less than six months ago."
 msgstr ""
-"Таблицата по-долу показва статуса на поддръжка на всяка версия. Основните "
-"версии са изписани с получер шрифт."
 
-#: ../../content/administration/standard_extended_support.rst:33
+#: ../../content/administration/standard_extended_support.rst:26
+msgid ""
+"The table below shows the support status of every version. Major versions "
+"are in bold."
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:36
 msgid "Release date"
 msgstr "Дата на издаване"
 
-#: ../../content/administration/standard_extended_support.rst:34
+#: ../../content/administration/standard_extended_support.rst:37
 msgid "End of standard support"
 msgstr "Край на стандартната поддръжка"
 
-#: ../../content/administration/standard_extended_support.rst:35
+#: ../../content/administration/standard_extended_support.rst:38
+msgid "**Odoo 20.0**"
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:42
+#: ../../content/administration/standard_extended_support.rst:85
+msgid "September 2026"
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:43
+msgid "September 2029 (planned)"
+msgstr ""
+
+#: ../../content/administration/standard_extended_support.rst:44
 msgid "Odoo SaaS 19.4"
 msgstr "Odoo SaaS 19.4"
 
-#: ../../content/administration/standard_extended_support.rst:37
-#: ../../content/administration/standard_extended_support.rst:38
-#: ../../content/administration/standard_extended_support.rst:43
-#: ../../content/administration/standard_extended_support.rst:44
-#: ../../content/administration/standard_extended_support.rst:49
-#: ../../content/administration/standard_extended_support.rst:50
-#: ../../content/administration/standard_extended_support.rst:55
-#: ../../content/administration/standard_extended_support.rst:56
-#: ../../content/administration/standard_extended_support.rst:67
-#: ../../content/administration/standard_extended_support.rst:68
-#: ../../content/administration/standard_extended_support.rst:73
-#: ../../content/administration/standard_extended_support.rst:74
-#: ../../content/administration/standard_extended_support.rst:79
-#: ../../content/administration/standard_extended_support.rst:80
+#: ../../content/administration/standard_extended_support.rst:46
+#: ../../content/administration/standard_extended_support.rst:47
+#: ../../content/administration/standard_extended_support.rst:52
+#: ../../content/administration/standard_extended_support.rst:53
+#: ../../content/administration/standard_extended_support.rst:58
+#: ../../content/administration/standard_extended_support.rst:59
+#: ../../content/administration/standard_extended_support.rst:64
+#: ../../content/administration/standard_extended_support.rst:65
 msgid "N/A"
 msgstr "Няма"
 
-#: ../../content/administration/standard_extended_support.rst:39
+#: ../../content/administration/standard_extended_support.rst:48
 msgid "July 2026"
 msgstr "юли 2026 г."
 
-#: ../../content/administration/standard_extended_support.rst:41
+#: ../../content/administration/standard_extended_support.rst:50
 msgid "Odoo SaaS 19.3"
 msgstr "Odoo SaaS 19.3"
 
-#: ../../content/administration/standard_extended_support.rst:45
+#: ../../content/administration/standard_extended_support.rst:54
 msgid "May 2026"
 msgstr "Май 2026"
 
-#: ../../content/administration/standard_extended_support.rst:47
+#: ../../content/administration/standard_extended_support.rst:56
 msgid "Odoo SaaS 19.2"
 msgstr "Odoo SaaS 19.2"
 
-#: ../../content/administration/standard_extended_support.rst:51
+#: ../../content/administration/standard_extended_support.rst:60
 msgid "March 2026"
 msgstr "Март 2026"
 
-#: ../../content/administration/standard_extended_support.rst:53
+#: ../../content/administration/standard_extended_support.rst:62
 msgid "Odoo SaaS 19.1"
 msgstr "Odoo SaaS 19.1"
 
-#: ../../content/administration/standard_extended_support.rst:57
+#: ../../content/administration/standard_extended_support.rst:66
 msgid "January 2026"
 msgstr "Януари 2026"
 
-#: ../../content/administration/standard_extended_support.rst:59
+#: ../../content/administration/standard_extended_support.rst:68
 msgid "**Odoo 19.0**"
 msgstr "**Odoo 19.0**"
 
-#: ../../content/administration/standard_extended_support.rst:63
-#: ../../content/administration/standard_extended_support.rst:100
+#: ../../content/administration/standard_extended_support.rst:72
+#: ../../content/administration/standard_extended_support.rst:91
 msgid "September 2025"
 msgstr "Септември 2025"
 
-#: ../../content/administration/standard_extended_support.rst:64
+#: ../../content/administration/standard_extended_support.rst:73
 msgid "September 2028 (planned)"
 msgstr "Септември 2028 (планирано)"
 
-#: ../../content/administration/standard_extended_support.rst:65
-msgid "Odoo SaaS 18.4"
-msgstr "Odoo SaaS 18.4"
-
-#: ../../content/administration/standard_extended_support.rst:69
-msgid "July 2025"
-msgstr "Юли 2025"
-
-#: ../../content/administration/standard_extended_support.rst:71
-msgid "Odoo SaaS 18.3"
-msgstr "Odoo SaaS 18.3"
-
-#: ../../content/administration/standard_extended_support.rst:75
-msgid "May 2025"
-msgstr "Май 2025"
-
-#: ../../content/administration/standard_extended_support.rst:77
-msgid "Odoo SaaS 18.2"
-msgstr "Odoo SaaS 18.2"
-
-#: ../../content/administration/standard_extended_support.rst:81
-msgid "March 2025"
-msgstr "Март 2025"
-
-#: ../../content/administration/standard_extended_support.rst:83
+#: ../../content/administration/standard_extended_support.rst:74
 msgid "**Odoo 18.0**"
 msgstr "**Odoo 18.0**"
 
-#: ../../content/administration/standard_extended_support.rst:87
-#: ../../content/administration/standard_extended_support.rst:106
+#: ../../content/administration/standard_extended_support.rst:78
+#: ../../content/administration/standard_extended_support.rst:97
 msgid "October 2024"
 msgstr "Октомври 2024"
 
-#: ../../content/administration/standard_extended_support.rst:88
+#: ../../content/administration/standard_extended_support.rst:79
 msgid "September 2027 (planned)"
 msgstr "Септември 2027 (планирано)"
 
-#: ../../content/administration/standard_extended_support.rst:89
+#: ../../content/administration/standard_extended_support.rst:80
 msgid "**Odoo 17.0**"
 msgstr "**Odoo 17.0**"
 
-#: ../../content/administration/standard_extended_support.rst:93
-msgid "November 2023"
-msgstr "Ноември 2023"
-
+#: ../../content/administration/standard_extended_support.rst:82
+#: ../../content/administration/standard_extended_support.rst:83
+#: ../../content/administration/standard_extended_support.rst:88
+#: ../../content/administration/standard_extended_support.rst:89
 #: ../../content/administration/standard_extended_support.rst:94
-msgid "September 2026 (planned)"
-msgstr "Септември 2026 (планирано)"
-
 #: ../../content/administration/standard_extended_support.rst:95
-msgid "**Odoo 16.0**"
-msgstr "**Odoo 16.0**"
-
-#: ../../content/administration/standard_extended_support.rst:97
-#: ../../content/administration/standard_extended_support.rst:98
-#: ../../content/administration/standard_extended_support.rst:103
-#: ../../content/administration/standard_extended_support.rst:104
-#: ../../content/administration/standard_extended_support.rst:109
-#: ../../content/administration/standard_extended_support.rst:110
-#: ../../content/administration/standard_extended_support.rst:116
+#: ../../content/administration/standard_extended_support.rst:101
 msgid "|orange|"
 msgstr "|orange|"
 
-#: ../../content/administration/standard_extended_support.rst:99
+#: ../../content/administration/standard_extended_support.rst:84
+msgid "November 2023"
+msgstr "Ноември 2023"
+
+#: ../../content/administration/standard_extended_support.rst:86
+msgid "**Odoo 16.0**"
+msgstr "**Odoo 16.0**"
+
+#: ../../content/administration/standard_extended_support.rst:90
 msgid "October 2022"
 msgstr "Октомври 2022"
 
-#: ../../content/administration/standard_extended_support.rst:101
+#: ../../content/administration/standard_extended_support.rst:92
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/standard_extended_support.rst:105
+#: ../../content/administration/standard_extended_support.rst:96
 msgid "October 2021"
 msgstr "Октомври 2021"
 
-#: ../../content/administration/standard_extended_support.rst:107
-msgid "**Odoo 14.0**"
-msgstr "**Odoo 14.0**"
-
-#: ../../content/administration/standard_extended_support.rst:111
-#: ../../content/administration/standard_extended_support.rst:117
-msgid "Before 2021"
-msgstr "Преди 2021"
-
-#: ../../content/administration/standard_extended_support.rst:112
-#: ../../content/administration/standard_extended_support.rst:118
-msgid "Before 2024"
-msgstr "Преди 2024"
-
-#: ../../content/administration/standard_extended_support.rst:113
+#: ../../content/administration/standard_extended_support.rst:98
 msgid "Older versions"
 msgstr "По-стари версии"
 
-#: ../../content/administration/standard_extended_support.rst:122
+#: ../../content/administration/standard_extended_support.rst:102
+msgid "Before 2021"
+msgstr "Преди 2021"
+
+#: ../../content/administration/standard_extended_support.rst:103
+msgid "Before 2024"
+msgstr "Преди 2024"
+
+#: ../../content/administration/standard_extended_support.rst:107
 msgid "|green| : Standard support"
 msgstr "|green| : Стандартна поддръжка"
 
-#: ../../content/administration/standard_extended_support.rst:124
-msgid "|orange| : Extended support (mandatory extra fee)"
-msgstr "|orange| : Разширена поддръжка (задължителна допълнителна такса)"
+#: ../../content/administration/standard_extended_support.rst:109
+msgid "|orange| : Extended support (additional fee)"
+msgstr ""
 
-#: ../../content/administration/standard_extended_support.rst:126
+#: ../../content/administration/standard_extended_support.rst:111
 msgid "|red| : Not supported"
 msgstr "|red| : Не се поддържа"
 
-#: ../../content/administration/standard_extended_support.rst:128
+#: ../../content/administration/standard_extended_support.rst:113
 msgid "N/A : Never released for this platform"
 msgstr "Няма : Никога не е издавана за тази платформа"
 
@@ -11194,6 +11207,76 @@ msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Поддържани версии на Odoo <standard_extended_support>`"
 
 #~ msgid ""
+#~ "Odoo provides **standard support** for all major versions for three "
+#~ "years. It includes helpdesk support, bug fixing, and security updates."
+#~ msgstr ""
+#~ "Odoo предоставя **стандартна поддръжка** за всички основни версии в "
+#~ "продължение на три години. Тя включва поддръжка от helpdesk, отстраняване "
+#~ "на грешки и актуализации за сигурност."
+
+#~ msgid ""
+#~ "Beyond those three years, **extended support** is subject to a mandatory "
+#~ "additional fee and includes helpdesk support and bug fixes (depending on "
+#~ "feasibility)."
+#~ msgstr ""
+#~ "След тези три години **разширената поддръжка** се предоставя срещу "
+#~ "задължителна допълнителна такса и включва поддръжка от helpdesk и "
+#~ "отстраняване на грешки (в зависимост от възможността за това)."
+
+#~ msgid ""
+#~ "Odoo releases intermediary versions, called online or SaaS versions, "
+#~ "every two to three months. These versions are only available on Odoo "
+#~ "Online and are not eligible for extended support."
+#~ msgstr ""
+#~ "Odoo издава междинни версии, наречени онлайн или SaaS версии, на всеки "
+#~ "два до три месеца. Тези версии са достъпни само в Odoo Online и не "
+#~ "отговарят на условията за разширена поддръжка."
+
+#~ msgid ""
+#~ "You can `upgrade <https://upgrade.odoo.com>`_ from any version **to "
+#~ "supported versions** only. The last unsupported version can still be used "
+#~ "as an upgrade target for up to six months following its end-of-life date."
+#~ msgstr ""
+#~ "Можете да `надградите <https://upgrade.odoo.com>`_ от всяка версия **само "
+#~ "към поддържани версии**. Последната неподдържана версия все още може да "
+#~ "се използва като цел за надграждане до шест месеца след датата на края на "
+#~ "поддръжката ѝ."
+
+#~ msgid ""
+#~ "The table below shows the support status of every version. Major releases "
+#~ "are highlighted in bold."
+#~ msgstr ""
+#~ "Таблицата по-долу показва статуса на поддръжка на всяка версия. Основните "
+#~ "версии са изписани с получер шрифт."
+
+#~ msgid "Odoo SaaS 18.4"
+#~ msgstr "Odoo SaaS 18.4"
+
+#~ msgid "July 2025"
+#~ msgstr "Юли 2025"
+
+#~ msgid "Odoo SaaS 18.3"
+#~ msgstr "Odoo SaaS 18.3"
+
+#~ msgid "May 2025"
+#~ msgstr "Май 2025"
+
+#~ msgid "Odoo SaaS 18.2"
+#~ msgstr "Odoo SaaS 18.2"
+
+#~ msgid "March 2025"
+#~ msgstr "Март 2025"
+
+#~ msgid "September 2026 (planned)"
+#~ msgstr "Септември 2026 (планирано)"
+
+#~ msgid "**Odoo 14.0**"
+#~ msgstr "**Odoo 14.0**"
+
+#~ msgid "|orange| : Extended support (mandatory extra fee)"
+#~ msgstr "|orange| : Разширена поддръжка (задължителна допълнителна такса)"
+
+#~ msgid ""
 #~ "To retrieve a list of all databases displayed under the `database manager "
 #~ "<https://www.odoo.com/my/databases>`_ programmatically, call the `list` "
 #~ "method of the `odoo.database` model via an :doc:`external JSON-2 API <../"
@@ -11557,19 +11640,6 @@ msgstr ":doc:`Поддържани версии на Odoo <standard_extended_sup
 #~ msgstr "Как мога да автоматизирам задачи при промяна на IP адрес?"
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh уведомява администраторите на проекта за промени в IP адреса.** "
-#~ "Освен това, когато IP адресът на работна (production) инстанция се "
-#~ "промени, се прави HTTP `GET` заявка към пътя `/_odoo.sh/ip-change` с "
-#~ "новия IP адрес, включен като параметър на заявката (`new`), заедно с "
-#~ "предишния IP адрес като допълнителен параметър (`old`)."
-
-#~ msgid ""
 #~ "This mechanism allows custom actions to be applied in response to the IP "
 #~ "address change (e.g., sending an email, contacting a firewall API, "
 #~ "configuring database objects, etc.)"
@@ -11577,18 +11647,6 @@ msgstr ":doc:`Поддържани версии на Odoo <standard_extended_sup
 #~ "Този механизъм позволява да се прилагат персонализирани действия в "
 #~ "отговор на промяната на IP адреса (напр. изпращане на имейл, свързване с "
 #~ "API на защитна стена, конфигуриране на обекти в базата данни и т.н.)"
-
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "От съображения за сигурност маршрутът `/_odoo.sh/ip-change` е достъпен "
-#~ "само вътрешно от самата платформа и връща отговор `403`, ако бъде "
-#~ "достъпен по друг начин."
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "Ето пример за псевдо-имплементация:"
 
 #~ msgid ""
 #~ "A `Git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
