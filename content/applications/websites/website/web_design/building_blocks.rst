@@ -38,16 +38,15 @@ templates for different categories. Once the block is placed, drag and drop :gui
 Content` blocks into it.
 
 .. tip::
-   Use the search bar in the :guilabel:`Insert a block` pop-up window to quickly find a specific
-   block.
+   - Use the search bar in the :guilabel:`Insert a block` pop-up window to quickly find a specific
+     block.
 
-  .. image:: building_blocks/insert-a-block.png
-      :alt: Pop-up block selection
-      :scale: 75%
+     .. image:: building_blocks/insert-a-block.png
+        :alt: Pop-up block selection
+        :scale: 75%
 
-.. tip::
-   Building blocks can also be added to the login page. To access it, navigate to the website's
-   homepage, add `/web/login` to the URL, and press `Enter`.
+   - Building blocks can also be added to the login page. To access it, navigate to the website's
+     homepage, add `/web/login` to the URL, and press `Enter`.
 
 .. note::
    Some building blocks require their corresponding application or module to be installed (e.g.,
@@ -150,7 +149,6 @@ are available to customize it.
 
    .. image:: building_blocks/change-block-position.png
       :alt: Move a building block to the back or front.
-      :scale: 80%
 
 .. _website/building_blocks/layout:
 

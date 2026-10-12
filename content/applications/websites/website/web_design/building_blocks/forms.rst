@@ -17,24 +17,24 @@ records may become available. To choose a different action, click :guilabel:`Edi
 field, navigate to the :guilabel:`Style` tab, and, in the :guilabel:`Form` section, select the
 desired :guilabel:`Action`:
 
-- :guilabel:`Apply for a Job` (:doc:`Recruitment </applications/hr/recruitment>`)
-- :guilabel:`Create a Customer` (:doc:`eCommerce </applications/websites/ecommerce>`)
-- :guilabel:`Create a Ticket` (:doc:`Helpdesk </applications/services/helpdesk>`)
-- :guilabel:`Create an Opportunity` (:doc:`CRM </applications/sales/crm>`)
-- :guilabel:`Subscribe to Newsletter` (:doc:`Email Marketing
-  </applications/marketing/email_marketing>`)
-- :guilabel:`Create a Task` (:doc:`Project </applications/services/project>`)
+- :doc:`Apply for a Job </applications/hr/recruitment/recruitment_flow>`
+- :ref:`Create a Customer <ecommerce/customer_accounts/account-creation>`
+- :ref:`Create a Ticket <helpdesk/receiving_tickets/website-form>`
+- :doc:`Create an Opportunity </applications/sales/crm/acquire_leads/opportunities_form>`
+- :doc:`Subscribe to Newsletter </applications/marketing/email_marketing/mailing_lists>`
+- :doc:`Create a Task </applications/services/project/tasks/task_creation>`
 - :guilabel:`More models`: to generate other types of records
 
 By default, submitting the form redirects visitors to a *Thank you* page. Use the :guilabel:`URL`
 field to send them to a different page. Alternatively, select :guilabel:`Nothing` or :guilabel:`Show
 Message` in the :guilabel:`On Success` field to keep visitors on the form's page.
 
-It is also possible to define the :guilabel:`Labels Width`, specify whether fields are
-:guilabel:`Required` or :guilabel:`Optional` in the :guilabel:`Marked Fields`, and define a
-:guilabel:`Mark Text` to indicate required fields.
+You can also define the :guilabel:`Labels Width` and specify whether :guilabel:`Marked Fields` are
+:guilabel:`Required` or :guilabel:`Optional`, or select :guilabel:`None` to indicate
+that no fields are marked. Additionally, define the :guilabel:`Mark Text` used to identify marked
+fields.
 
-.. tip::
+.. seealso::
    Configure the :doc:`visibility <../visibility>` settings for forms.
 
 .. _building_blocks/forms/fields:
@@ -65,7 +65,7 @@ section of the :guilabel:`Style` tab. For example, you can:
 - Enable a field :guilabel:`Description`. Toggle the switch on and click the default description on
   the form to modify it.
 - Specify if the field is :guilabel:`Required`.
-- Use the :guilabel:`Requirement` field to add validation :guilabel:`Conditions` to ensure customers
+- Use the :guilabel:`Requirement` field to add validation :guilabel:`Conditions` to ensure visitors
   enter valid information. For example, set the condition requiring the :guilabel:`Email` field to
   contain an `@` symbol.
 - Add an :ref:`animation <website/elements/animations>`.
@@ -77,10 +77,10 @@ Depending on the selected field, the following options are available:
 
    .. tab:: String and numerical fields
 
-      For text & string fields, such as :guilabel:`Text`, :guilabel:`Long Text`, :guilabel:`Email`,
-      and :guilabel:`Url`, as well as numerical fields, such as :guilabel:`Telephone`,
-      :guilabel:`Number`, and :guilabel:`Decimal Number`, you can define a :guilabel:`Placeholder`
-      and a :guilabel:`Default Value`.
+      For text and string fields, such as :guilabel:`Text`, :guilabel:`Long Text`,
+      :guilabel:`Email`, and :guilabel:`Url`, as well as numerical fields, such as
+      :guilabel:`Telephone`, :guilabel:`Number`, and :guilabel:`Decimal Number`, you can define a
+      :guilabel:`Placeholder` and a :guilabel:`Default Value`.
 
       For the :guilabel:`Long Text` field, you can also specify the field's :guilabel:`Height`.
 
@@ -88,24 +88,24 @@ Depending on the selected field, the following options are available:
 
       The following selection fields are available:
 
-      - :guilabel:`Checkbox`: Customers can select or clear the checkbox. Enable :guilabel:`Default
+      - :guilabel:`Checkbox`: Visitors can select or clear the checkbox. Enable :guilabel:`Default
         Value` to have it selected by default.
-      - :guilabel:`Multiple Checkboxes`: Customers can select multiple options.
-      - :guilabel:`Radio Buttons`: Customers can select one option.
+      - :guilabel:`Multiple Checkboxes`: Visitors can select multiple options.
+      - :guilabel:`Radio Buttons`: Visitors can select one option.
 
         .. tip::
            For :guilabel:`Multiple Checkboxes` and :guilabel:`Radio Buttons`, define how the options
            are displayed: :guilabel:`Horizontal` or :guilabel:`Vertical`.
 
-      - :guilabel:`Selection`: Customers can select one option from the drop-down menu.
+      - :guilabel:`Selection`: Visitors can select one option from the drop-down menu.
 
       For fields with multiple options, enable the options you want to make available by toggling
-      the switch on. To remove an option, click the :icon:`fa-minus` (:guilabel:`remove)` icon. To
+      the switch on. To remove an option, click the :icon:`fa-minus` (:guilabel:`remove`) icon. To
       add a new option, click :guilabel:`Add New Option` and enter the option.
 
-   .. tab:: Date & time
+   .. tab:: Date and time
 
-      The :guilabel:`Date` and :guilabel:`Date & Time` fields allow customers to select a date and,
+      The :guilabel:`Date` and :guilabel:`Date & Time` fields allow visitors to select a date and,
       if applicable, a time using the date selector. You can also define a :guilabel:`Placeholder`
       and a :guilabel:`Default Value`, e.g., to use a specific date/time by default.
 
@@ -115,15 +115,15 @@ Depending on the selected field, the following options are available:
 
    .. tab:: Files
 
-      The :guilabel:`File Upload` field type allows customers to upload a file. You can define the
+      The :guilabel:`File Upload` field type allows visitors to upload a file. You can define the
       :guilabel:`Max # of Files` as well as the :guilabel:`Max File Size`.
 
 To apply the changes, click :guilabel:`Save`.
 
 .. tip::
    Modify the text of the :guilabel:`Submit` button by clicking it and entering the desired text.
-   Then, change the :guilabel:`Button Position` in the :guilabel:`Submit Button` section of the
-   :guilabel:`Style` tab.
+   You can also change the :guilabel:`Button Position` in the :guilabel:`Submit Button` section of
+   the :guilabel:`Style` tab.
 
 .. _building_blocks/forms/add-to-external:
 
