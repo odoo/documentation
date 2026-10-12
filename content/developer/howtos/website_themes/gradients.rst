@@ -22,7 +22,6 @@ custom themes, gradients have to be added directly in the `section` tag with a `
    <section
       class="s_text_image"
       data-snippet="s_text_image"
-      data-name="Text - Image"
       style="background-image: linear-gradient(135deg, rgb(255, 204, 51) 0%, rgb(226, 51, 255) 100%) !important;">
       <!-- Content -->
    </section>
