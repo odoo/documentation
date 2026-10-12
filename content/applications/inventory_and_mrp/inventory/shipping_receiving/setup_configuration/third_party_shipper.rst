@@ -28,7 +28,7 @@ The following is a list of available shipping connectors in Odoo:
 
    * - Carrier
      - Region availability
-   * - FedEx
+   * - :doc:`FedEx <fedex>`
      - All
    * - :doc:`DHL Express <dhl_credentials>`
      - All
@@ -79,7 +79,6 @@ to install it. Multiple third-party shipping connectors can be selected at once.
    <general/install>` documentation.
 
 .. image:: third_party_shipper/shipping-connectors.png
-   :align: center
    :alt: Options of available shipping connectors in Odoo.
 
 .. _inventory/shipping_receiving/configure-delivery-method:
@@ -109,16 +108,16 @@ delivery method.
 
 The :guilabel:`Shipping Method` page contains details about the provider, including:
 
-- :guilabel:`Shipping Method` (*Required field*): the name of the delivery method (e.g. `FedEx US`,
-  `FedEx EU`, etc.).
+- :guilabel:`Shipping Method` (*Required field*): the name of the delivery method (e.g. `ShipRocket
+  Domestic`, `USPS International`, etc.).
 - :guilabel:`Website`: configure shipping methods for an *eCommerce* page that is connected to a
   specific website in the database. Select the applicable website from the drop-down menu, or leave
   it blank to apply the method to all web pages.
-- :guilabel:`Provider` (*Required field*): choose the third-party delivery service, like FedEx. Upon
+- :guilabel:`Provider` (*Required field*): choose the third-party delivery service, like USPS. Upon
   choosing a provider, the :guilabel:`Integration Level`, :guilabel:`Invoicing Policy` and
   :guilabel:`Insurance Percentage` fields become available.
-- :guilabel:`Integration Level`: choose :guilabel:`Get Rate` to simply get an :ref:`estimated
-  shipment cost <inventory/shipping_receiving/third-party-so>` on an |SO| or invoice.
+- :guilabel:`Integration Level`: choose :guilabel:`Get Rate` to get an :ref:`estimated shipment cost
+  <inventory/shipping_receiving/third-party-so>` on an |SO| or invoice.
 
   .. important::
      Select :guilabel:`Get Rate and Create Shipment` to also :doc:`generate shipping labels
@@ -138,11 +137,10 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
 - :guilabel:`Insurance Percentage`: specify a percentage amount of the shipping costs reimbursed to
   the senders if the package is lost or stolen in transit.
 
-.. figure:: third_party_shipper/fedex.png
-   :align: center
-   :alt: Screenshot of a FedEx shipping method.
+.. figure:: third_party_shipper/usps-international.png
+   :alt: Screenshot of a USPS International shipping method.
 
-   **Shipping Method** configuration page for `FedEx US`.
+   **Shipping Method** configuration page for `USPS International`.
 
 In the :guilabel:`Configuration` tab, fill out the API credential fields (e.g. API key, password,
 account number, etc.). Depending on the third-party shipping carrier chosen in the
@@ -152,6 +150,7 @@ documents:
 
 .. seealso::
    - :doc:`DHL credentials <dhl_credentials>`
+   - :doc:`FedEx credentials <fedex>`
    - :doc:`Sendcloud credentials <sendcloud_shipping>`
    - :doc:`UPS credentials <ups_credentials>`
 
@@ -170,8 +169,7 @@ set it to :guilabel:`Production Environment`.
    delivery method to :guilabel:`Production`.
 
 .. image:: third_party_shipper/production.png
-   :align: center
-   :alt: Show the "Test Environment" smart button.
+   :alt: Show the Test Environment smart button.
 
 .. _inventory/shipping_receiving/configure-source-address:
 
@@ -186,14 +184,12 @@ On the warehouse configuration page, open the warehouse contact page by clicking
 :guilabel:`Company` field.
 
 .. image:: third_party_shipper/internal-link.png
-   :align: center
-   :alt: Highlight the "Company" field.
+   :alt: Highlight the Company field.
 
 Verify that the :guilabel:`Address` and :guilabel:`Phone` number are correct, as they are required
 for the shipping connector to work properly.
 
 .. image:: third_party_shipper/company.png
-   :align: center
    :alt: Show company address and phone number.
 
 .. _inventory/shipping_receiving/configure-weight:
@@ -208,8 +204,7 @@ Then, switch to the :guilabel:`Inventory` tab, and define the :guilabel:`Weight`
 the :guilabel:`Logistics` section.
 
 .. image:: third_party_shipper/product-weight.png
-   :align: center
-   :alt: Display the "Weight" field in the Inventory tab of the product form.
+   :alt: Display the Weight field in the Inventory tab of the product form.
 
 Apply third-party shipping carrier
 ==================================
@@ -231,8 +226,7 @@ add the cost of shipping through a third-party carrier to a quotation, by clicki
 :guilabel:`Add Shipping` button in the bottom-right corner of the :guilabel:`Order Lines` tab.
 
 .. image:: third_party_shipper/add-shipping.png
-   :align: center
-   :alt: Show the "Add shipping" button at the bottom of a quotation.
+   :alt: Show the Add shipping button at the bottom of a quotation.
 
 In the resulting :guilabel:`Add a shipping method` pop-up window, select the intended carrier from
 the :guilabel:`Shipping Method` drop-down menu. The :guilabel:`Cost` field is automatically filled
@@ -273,8 +267,7 @@ provided.
    :doc:`Generate shipping labels <labels>`
 
 .. image:: third_party_shipper/delivery-info.png
-   :align: center
-   :alt: Show the delivery order's "Additional info" tab.
+   :alt: Show the delivery order's Additional info tab.
 
 .. _inventory/shipping_receiving/third-party-troubles:
 
@@ -311,8 +304,7 @@ Method`), and select the desired shipping method. Click the :guilabel:`No Debugg
 activate :guilabel:`Debug Requests`.
 
 .. image:: third_party_shipper/no-debug.png
-   :align: center
-   :alt: Show the "No Debug" smart button.
+   :alt: Show the No Debug smart button.
 
 With :guilabel:`Debug Requests` activated, each time the shipping connector is used to estimate the
 cost of shipping, records are saved in the :guilabel:`Logging` report. To access the report, turn on
@@ -326,13 +318,11 @@ Database Structure section --> Logging`.
    *Website* app.
 
 .. image:: third_party_shipper/log.png
-   :align: center
-   :alt: Show how to find the "Logging" option from the "Technical" menu.
+   :alt: Show how to find the Logging option from the Technical menu.
 
 Click the *HTTP request* line item to open a detailed page, and verify the correct information is
 sent from Odoo to the shipping carrier. In the *HTTP response*, verify that the same information is
 received.
 
 .. image:: third_party_shipper/logging.png
-   :align: center
-   :alt: Show debug request history in Settings > Technical > Logging.
+   :alt: Show debug request history on the Logging page.

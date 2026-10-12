@@ -26,8 +26,9 @@ Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in the :g
 bar. After finding the :guilabel:`Delivery Costs` module, click :guilabel:`Activate` to install it.
 
 .. image:: setup_configuration/install-module.png
-   :align: center
    :alt: Install the Delivery Costs module.
+
+.. _inventory/setup_configuration/add-shipping-method:
 
 Add shipping method
 ===================
@@ -44,8 +45,7 @@ Methods`.
       by checking the corresponding checkbox.
 
    .. image:: setup_configuration/enable-delivery.png
-      :align: center
-      :alt: Enable the *Delivery Methods* feature by checking the box in Configuration > Settings.
+      :alt: Enable the Delivery Methods feature by checking the box in Settings.
 
 On the :guilabel:`Shipping Methods` page, add a method by clicking :guilabel:`New`. Doing so opens
 a form to provide details about the shipping provider, including:
@@ -98,7 +98,6 @@ To enable free shipping if the amount of the order exceeds a specified amount, c
    - :guilabel:`Delivery Product`: `[SHIP] Flat`
 
    .. image:: setup_configuration/new-shipping-method.png
-      :align: center
       :alt: Example of filling out a shipping method.
 
 .. _inventory/shipping/rules:
@@ -125,7 +124,6 @@ Once finished, click either :guilabel:`Save & New` to add another rule, or :guil
    :guilabel:`Condition` to `Quantity <= 5.00`, and the :guilabel:`Delivery Cost` to `$20`.
 
    .. image:: setup_configuration/pricing-rule.png
-      :align: center
       :alt: Display window to add a pricing rule. Set a condition and delivery cost.
 
 To restrict shipping to specific destinations on the eCommerce website, in the shipping method form,
@@ -151,8 +149,7 @@ Shipping cost is the :guilabel:`Delivery cost` specified in the rule that satisf
    :guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is `$9.00`.
 
    .. image:: setup_configuration/delivery-cost-example.png
-      :align: center
-      :alt: Show example of "Based on rules" shipping method with margins configured.
+      :alt: Show example of Based on rules shipping method with margins configured.
 
    When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + 9). When the second
    rule is applied, the delivery cost is $64 (50 + (0.1 * 50) + 9).
@@ -202,7 +199,6 @@ the shipping method form.
    `S00088`.
 
      .. image:: setup_configuration/delivery-product.png
-        :align: center
         :alt: Show delivery order on the sales order line.
 
 Delivery order
@@ -213,7 +209,6 @@ delivery order. To add or change the delivery method on the delivery itself, go 
 :guilabel:`Additional Info` tab and modify the :guilabel:`Carrier` field.
 
 .. image:: setup_configuration/delivery-order.png
-   :align: center
    :alt: Shipping carrier information on the delivery form.
 
 .. toctree::
@@ -223,6 +218,7 @@ delivery order. To add or change the delivery method on the delivery itself, go 
    setup_configuration/labels
    setup_configuration/bpost
    setup_configuration/dhl_credentials
+   setup_configuration/fedex
    setup_configuration/sendcloud_shipping
    setup_configuration/ups_credentials
    setup_configuration/cancel
