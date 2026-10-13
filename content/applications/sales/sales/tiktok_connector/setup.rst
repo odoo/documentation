@@ -53,7 +53,7 @@ m/tiktok/return_from_authorization`.
 .. image:: setup/tiktok-shop-partner-center-app-information.png
    :alt: App and service type configuration settings in TikTok Shop.
 
-Go to :guilabel:`Manage API` in the created app.
+Go to :guilabel:`Manage Scope` in the created app.
 
 .. image:: setup/tiktok-shop-partner-center-manage-api.png
    :alt: Manage API button under the basic information section.
