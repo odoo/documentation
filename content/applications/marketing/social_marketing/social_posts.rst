@@ -342,9 +342,9 @@ It should be noted that *none* of these fields are required.
 The first field in this section is :guilabel:`Notification Title`. In this field, there is the
 option to add a custom title to the push notification that will be sent.
 
-To designate a specific page on the website that should trigger this push notification, enter that
-page's URL in the :guilabel:`Target URL` field. Then, once a visitor reaches that specific page,
-Odoo will display the push notification.
+The :guilabel:`Target URL` field associates a link with the notification. When a user clicks the
+notification, they are directed to this specific destination. This is ideal for driving traffic
+to a specific page, such as a product or a promotion.
 
 Below that field is the option to add a custom :guilabel:`Icon Image` to the push notification. This
 is an icon that appears beside the push notification.
