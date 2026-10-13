@@ -834,13 +834,16 @@ To allow payments through Bancontact Pay, create and configure a `Bancontact Pro
 <https://www.bancontact.com/en/professional/what-is-bancontact-pro>`_ merchant account. To do so,
 access the `Bancontact Pro website
 <https://www.bancontact.com/en/professional/our-solutions/integrated-solution>`_, click
-:guilabel:`Log in`, then follow the instructions.
+:guilabel:`Log in`, then follow the instructions. To find the automatically-generated API key and PPID, follow the next
+steps:
 
-The API key and PPID are automatically generated. Go to the portal's :guilabel:`Shops and products`
-section, copy them, and save them for the :ref:`payment method configuration in Odoo
-<belgium/pos/bancontact-method>`.
+#. Go to :guilabel:`Admin Centre` and enter the OPT received via email.
+#. Go to :guilabel:`Shops and products`.
+#. Find the relevant shop/product.
+#. Select `API Key management`. The portal shows options to view or renew the API key and PPID.
+#. Copy them and save them for the :ref:`payment method configuration in Odoo <belgium/pos/bancontact-method>`.
 
-Then, choose the desired solution for QR code generation in the :guilabel:`QR codes` section:
+Then, go to the :guilabel:`QR codes` section and choose the desired solution for QR code generation:
 
    - :guilabel:`Display`: `Generate a unique QR code
      <https://docs.bancontactpro.com/guides/instore/ondisplay052025v4>`_ for each transaction
