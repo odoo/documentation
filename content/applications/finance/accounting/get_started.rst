@@ -281,8 +281,8 @@ The following primary accounting configurations are crucial to successfully sett
 records. The majority of these are found in the Accounting settings and accessible via
 :menuselection:`Accounting --> Configuration --> Settings`.
 
-- :doc:`Company information <../../general/companies>`, such as its name, address, logo, phone, and
-  email address
+- :doc:`Company information <../../general/companies>`, such as its name, address, tax ID, company
+  ID, logo, phone, and email address
 - :ref:`accounting/tax-returns/periodicity`
 - :guilabel:`Rounding Method`: Choose whether the total tax amount is rounded per line or per tax
   in the :guilabel:`Taxes` section of the Accounting settings.

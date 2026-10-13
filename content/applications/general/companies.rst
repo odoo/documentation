@@ -33,7 +33,7 @@ To create a company, open the Settings app, navigate to the :guilabel:`Companies
 
 - :guilabel:`Company Name`
 - :guilabel:`Address`
-- :guilabel:`Tax ID`: tax identification number.
+- :guilabel:`Tax ID` or :guilabel:`VAT`: tax identification number.
 - :guilabel:`LEI`: legal entity identifier.
 - :guilabel:`Company ID`: company's registry number, if different from :guilabel:`Tax ID`
 - :ref:`Currency <multi-currency/config-main-currency>`
@@ -42,6 +42,12 @@ To create a company, open the Settings app, navigate to the :guilabel:`Companies
 - :guilabel:`Website`
 - :guilabel:`Email Domain`
 - :guilabel:`Color`
+
+.. note::
+   Some companies may need to register multiple types of identification numbers, for example, to
+   properly configure electronic invoicing for specific :doc:`fiscal localizations
+   <../finance/fiscal_localizations>`. In this case, click the :icon:`fa-plus` (:guilabel:`plus`)
+   icon next to the tax ID field, add the appropriate extra identification types, and complete them.
 
 Upload the company's logo and :guilabel:`Save`.
 
