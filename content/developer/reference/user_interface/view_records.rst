@@ -43,6 +43,8 @@ View types
   Display records as "cards", configurable as a small template.
 :ref:`Card <reference/view_architectures/card>`
   Define reusable card templates for use in kanban and other views.
+:ref:`Help <reference/view_architectures/help>`
+  Define the helper displayed when a view has no record to show.
 :ref:`Qweb <reference/view_architectures/qweb>`
   Templating of reporting, website...
 :ref:`Graph <reference/view_architectures/graph>`

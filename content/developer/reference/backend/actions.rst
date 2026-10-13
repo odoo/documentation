@@ -98,6 +98,11 @@ Its fields are:
 ``limit`` (optional)
     number of records to display in lists by default. Defaults to 80 in the
     web client
+``help`` (optional)
+    HTML displayed when a view of the action has no record to show
+``help_view_id`` (optional)
+    :ref:`help view <reference/view_architectures/help>` displayed when a view
+    of the action has no record to show, unless the view defines its own
 
 For instance, to open customers (partner with the ``customer`` flag set) with
 list and form views::
