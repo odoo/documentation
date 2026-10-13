@@ -297,19 +297,22 @@ The concerned state is given after each field.
     many2one to ``ir.model.fields``, specifies the current record's m2o field
     on which the newly created record should be set (models should match)
 
-``fields_lines`` (create/write)
-    fields to override when creating or copying the record.
-    :class:`~odoo.fields.One2many` with the fields:
+..
+    This field was removed in Odoo 17.0
 
-    ``col1``
-        ``ir.model.fields`` to set in the concerned model
-        (``crud_model_id`` for creates, ``model_id`` for updates)
-    ``value``
-        value for the field, interpreted via ``type``
-    ``type`` (value|reference|equation)
-        If ``value``, the ``value`` field is interpreted as a literal value
-        (possibly converted), if ``equation`` the ``value`` field is
-        interpreted as a Python expression and evaluated
+    ``fields_lines`` (create/write)
+        fields to override when creating or copying the record.
+        :class:`~odoo.fields.One2many` with the fields:
+    
+        ``col1``
+            ``ir.model.fields`` to set in the concerned model
+            (``crud_model_id`` for creates, ``model_id`` for updates)
+        ``value``
+            value for the field, interpreted via ``type``
+        ``type`` (value|reference|equation)
+            If ``value``, the ``value`` field is interpreted as a literal value
+            (possibly converted), if ``equation`` the ``value`` field is
+            interpreted as a Python expression and evaluated
 
 ``child_ids`` (multi)
     Specify the multiple sub-actions (``ir.actions.server``) to enact in state multi.
