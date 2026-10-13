@@ -783,7 +783,7 @@ To replace the content or modify its structure, you can add your own code to the
 
    <template id="copyright" inherit_id="website.layout">
       <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
-         <div class="o_footer_copyright" data-name="Copyright">
+         <div class="o_footer_copyright" data-builder-name="copyright">
             <!-- Content -->
          </div>
       </xpath>
@@ -893,8 +893,7 @@ Hide a section on desktop:
 
    <section
       class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16 d-lg-none o_snippet_desktop_invisible"
-      data-snippet="s_text_block"
-      data-name="Text">
+      data-snippet="s_text_block">
       <!-- Content -->
    </section>
 
@@ -904,8 +903,7 @@ Hide a column on mobile:
 
    <section
       class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16"
-      data-snippet="s_text_block"
-      data-name="Text">
+      data-snippet="s_text_block">
       <div class="container s_allow_columns">
          <div class="row">
             <div class="col-12 col-lg-6 d-none d-lg-block o_snippet_mobile_invisible">

@@ -82,7 +82,7 @@ block of content that you can move or duplicate.
 
 .. code-block:: xml
 
-   <section class="s_snippet_name" data-name="..." data-snippet="...">
+   <section class="s_snippet_name" data-snippet="...">
       <!-- Content -->
    </section>
 
@@ -90,7 +90,7 @@ For inner content snippets, any other HTML tag can be used.
 
 .. code-block:: xml
 
-   <div class="s_snippet_name" data-name="..." data-snippet="...">
+   <div class="s_snippet_name" data-snippet="...">
       <!-- Content -->
    </div>
 
@@ -103,14 +103,14 @@ For inner content snippets, any other HTML tag can be used.
      - Description
    * - class
      - Unique class name for this snippet
-   * - data-name
-     - Displayed in the right panel as the name of the snippet. If not found, it will fall back to
-       *Block*.
+   * - data-builder-name
+     - The name displayed in the right panel is based on the snippet key in `data-snippet`,
+       another name can be choosen by setting another `data-builder-name`. If no name is found,
+       it will fall back to *Block*.
    * - data-snippet
      - Used by the system to identify the snippet
 
-The system automatically adds the `data-name` and `data-snippet` attributes during the drag and
-drop based on the template's name.
+The system automatically adds the `data-snippet` attribute during the drag and drop based on the template.
 
 .. warning::
    Those attributes should be specifically added when a snippet is declared on a theme page.
@@ -472,8 +472,8 @@ First, create the template of the custom snippet:
    </odoo>
 
 .. warning::
-   `data-name` and `data-snippet` attributes have to be specified when a snippet is declared on a
-   theme page. Otherwise, the snippet won't be recognised by the Website Builder and issues might
+   `data-snippet` attributes have to be specified when a snippet is declared on a theme page.
+   Otherwise, the snippet won't be recognised by the Website Builder and issues might
    occur whenever a database upgrade is done. Additionally, remember that the name attribute is
    shown as the name of your custom snippet in the :guilabel:`Blocks` section of the options panel.
 
@@ -1258,7 +1258,6 @@ the right template based on the `data-template-key` and the custom CSS class:
 
    <section
       data-snippet="s_blog_posts"
-      data-name="Blog Posts"
       class="s_blog_post_airproof s_dynamic_snippet_blog_posts s_blog_posts_post_picture_size_default s_dynamic pt64 pb64 s_blog_post_card o_colored_level o_dynamic_snippet_loading"
       data-template-key="website_airproof.dynamic_filter_template_blog_post_airproof"
       data-custom-template-data="{
