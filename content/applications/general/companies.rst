@@ -43,6 +43,12 @@ To create a company, open the Settings app, navigate to the :guilabel:`Companies
 - :guilabel:`Email Domain`
 - :guilabel:`Color`
 
+.. note::
+   Some companies may need to register multiple types of identification numbers, for example, to
+   properly configure electronic invoicing for specific :doc:`fiscal localizations
+   <../finance/fiscal_localizations>`. In this case, click the :icon:`fa-plus` (:guilabel:`plus`)
+   icon next to the tax ID field, add the appropriate extra identification types, and complete them.
+
 Upload the company's logo and :guilabel:`Save`.
 
 .. note::
