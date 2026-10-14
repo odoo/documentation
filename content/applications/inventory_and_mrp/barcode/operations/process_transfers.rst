@@ -2,15 +2,14 @@
 Process batch transfers
 =======================
 
-The Odoo **Barcode** app can be used to process *Batch*, *Wave*, and *Cluster* transfers that are
-created in the **Inventory** app.
+The Odoo **Barcode** app can be used to process *Batch* and *Cluster* transfers that are created in
+the **Inventory** app.
 
 .. seealso::
    This document covers the steps to process transfers in the **Barcode** app. Instructions on
    creating transfers can be found below:
 
    - :doc:`../../inventory/shipping_receiving/picking_methods/batch`
-   - :doc:`../../inventory/shipping_receiving/picking_methods/wave`
    - :doc:`../../inventory/shipping_receiving/picking_methods/cluster`
 
 Process the batch

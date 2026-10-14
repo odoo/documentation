@@ -148,9 +148,9 @@ After dock locations are set up in Odoo, configure them in the operation type. N
 :menuselection:`Inventory app --> Configuration --> Operations Types` and open an existing delivery
 operation type, or click :guilabel:`New` to create a new one.
 
-After defining the other fields in the operation type form, scroll to the *Batch & wave transfers*
-section and select the :guilabel:`Dispatch Management` checkbox. The :guilabel:`Dock locations`
-field appears. Define the dock locations for this operation type.
+After defining the other fields in the operation type form, scroll to the *Batch transfers* section
+and select the :guilabel:`Dispatch Management` checkbox. The :guilabel:`Dock Locations` field
+appears. Select one or more dock locations for this operation type.
 
 .. image:: dispatch/dock-location.png
    :alt: Location configuration.
@@ -175,7 +175,6 @@ reveals a list of outgoing deliveries.
    their dedicated articles.
 
    - :doc:`../picking_methods/batch`
-   - :doc:`Wave picking <../picking_methods/wave>`
    - :doc:`../picking_methods/cluster`
 
 .. _inventory/shipping_receiving/assign-carrier:
@@ -207,20 +206,20 @@ batch. Click :guilabel:`Confirm`, and the carrier is updated for all the selecte
 Create batch
 ------------
 
-With the carrier set, begin adding orders to a batch or wave transfer by ticking the checkbox.
+With the carrier set, begin adding orders to a batch transfer by ticking the checkbox.
 
 .. note::
   If a delivery order is already assigned to a batch transfer, assigning a batch transfer here does
   **not** update it.
 
-Then, click the :icon:`fa-cog` :guilabel:`Actions` button, and click either :guilabel:`Add to batch`
-or :guilabel:`Add to wave`. In the pop-up window, ensure :guilabel:`Add to` is set to :guilabel:`a
-new [batch/wave] transfer`, then click :guilabel:`Confirm`.
+Then, click the :icon:`fa-cog` :guilabel:`Actions` button, and click either :guilabel:`Add to
+batch`. In the pop-up window, ensure :guilabel:`Add to` is set to :guilabel:`a new batch transfer`,
+then click :guilabel:`Confirm`.
 
-.. figure:: dispatch/add-to-wave.png
-   :alt: Example wave.
+.. figure:: dispatch/add-to-batch.png
+   :alt: Example batch.
 
-   Delivery orders are selected to be grouped into a wave transfer.
+   Delivery orders are grouped into a batch transfer.
 
 Alternative batch creation method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

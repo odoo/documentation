@@ -85,23 +85,24 @@ Configuration --> Settings`.
 If :guilabel:`Set Package Type` is selected, a package or package type can be selected when the
 :guilabel:`Put in Pack` button is clicked on an operation's order form.
 
-Batch & wave transfers
-~~~~~~~~~~~~~~~~~~~~~~
+Batch transfers
+~~~~~~~~~~~~~~~
 
 This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is enabled in
 :menuselection:`Inventory app --> Configuration --> Settings`.
 
-Select the :guilabel:`Dispatch Management` checkbox to show dispatch-management-related details on
-the batch or wave form and the *Inventory Overview* page. Then, select a location or vehicle.
+On the *Settings* page, select the :guilabel:`Transport Management` checkbox to show
+dispatch-management-related details on the batch form. Then, select a location or vehicle on the
+batch form. Dispatch management details can also be retrieved from the :icon:`fa-ellipsis-v`
+:guilabel:`(vertical ellipsis)` menu for an operation type.
 
 .. image:: operation_type/overview-transport-mgmt.png
    :alt: The vertical ellipsis menu shows Transport Management options on the Inventory Overview.
 
-Select the :guilabel:`Automatic Batches` checkbox to specify that pickings should be automatically
-batched as they are confirmed when possible.
+To learn how to automatically create batches, see the :ref:`inventory/batch/automatic`
+documentation.
 
 .. seealso::
-   - :doc:`../../shipping_receiving/picking_methods/wave`
    - :doc:`../../shipping_receiving/picking_methods/batch`
    - :doc:`../../shipping_receiving/picking_methods/cluster`
 

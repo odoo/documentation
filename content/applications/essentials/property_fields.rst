@@ -165,13 +165,9 @@ models. Once set, the property is shared by all records that are linked to the s
        * - :guilabel:`Inventory`
          - :ref:`Lot/Serial <inventory/product_management/edit-lot>`
 
-           :doc:`Transfer
-           </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave>`
-
-           :ref:`Batch Transfer <inventory/misc/batch_picking>`
+           :doc:`Batch Transfer
+           <../inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch>`
          - :ref:`Product variant <product-variants/add-product-variants>`
-
-           :ref:`Operation type <inventory/product_management/operation-type-setting>`
 
            :ref:`Operation type <inventory/product_management/operation-type-setting>`
        * - :guilabel:`Knowledge`
