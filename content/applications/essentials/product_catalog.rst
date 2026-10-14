@@ -40,6 +40,8 @@ Products` to view the product catalog with a filter active for that app.
 .. image:: product_catalog/catalog-purchase-example.png
    :alt: The product catalog as accessed through the Purchase app.
 
+.. _essentials/product_catalog/database-record:
+
 Access the catalog through a database record
 --------------------------------------------
 
