@@ -30,8 +30,8 @@ electronic signatures:
 #. Advanced electronic signatures
 #. Qualified electronic signatures
 
-Odoo generates the first type, **simple electronic signatures**; these signatures are legally valid
-in the EU, as stated in the eIDAS regulation.
+Odoo generates the first type, **qualified electronic signatures**; these signatures are legally
+valid everywhere in the EU.
 
 Electronic signatures may not be automatically recognized as valid. You may need to bring
 supporting evidence of a signature's validity. While the Sign app provides a simple electronic
