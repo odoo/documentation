@@ -7,8 +7,8 @@ Cluster picking
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 .. |SOS| replace:: :abbr:`SOs (Sales Orders)`
 
-Cluster picking is an advanced picking method that combines the efficiency of :ref:`batch picking
-<inventory/misc/batch_picking>` with immediate sorting during the picking process. It is best suited
+Cluster picking is an advanced picking method that combines the efficiency of :doc:`batch picking
+<batch>` with immediate sorting during the picking process. It is best suited
 for warehouses with high order volumes where organization and speed are critical.
 
 Unlike batch picking, which requires a separate sorting step after picking, cluster picking sorts
