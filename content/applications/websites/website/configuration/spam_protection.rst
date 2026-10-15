@@ -124,9 +124,19 @@ On Odoo
 .. seealso::
    `Interpret reCAPTCHA scores - Google documentation <https://cloud.google.com/recaptcha/docs/interpret-assessment-website#interpret_scores>`_
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 You can notify visitors that reCAPTCHA protects a :doc:`form <../web_design/building_blocks/forms>`.
 To do so, navigate to the form and open the website editor. Then, click somewhere on the form, go to
 the :guilabel:`Style` tab, and, in the :guilabel:`Form` section, enable :guilabel:`Show ReCAPTCHA
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+You can notify visitors that reCAPTCHA protects a :ref:`form <website/building_blocks/form>`. To do
+so, navigate to the form and open the website editor. Then, click somewhere on the form, go to the
+:guilabel:`Style` tab, and, in the :guilabel:`Block` section, enable :guilabel:`Show ReCAPTCHA
+=======
+You can notify visitors that reCAPTCHA protects a :doc:`form <../web_design/building_blocks/forms>`.
+To do so, navigate to the form and open the website editor. Then, click somewhere on the form, go to
+the :guilabel:`Style` tab, and, in the :guilabel:`Block` section, enable :guilabel:`Show ReCAPTCHA
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 Policy`.
 
 .. image:: spam_protection/recaptcha-accept-policy.png

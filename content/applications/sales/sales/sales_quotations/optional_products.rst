@@ -51,6 +51,7 @@ optional products at once when using this form by clicking their checkboxes and 
 .. image:: optional_products/search-optional-products-form.png
    :alt: The Search: Optional Products form accessed by clicking Search more...
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 Enabling automatic suggestions for optional products
 ====================================================
 
@@ -103,6 +104,11 @@ that field. To restart the automation or trigger a suggestion update for a produ
 .. image:: optional_products/update-suggested-products-option.png
    :alt: The product form's Action submenu showing the Update suggested products option.
 
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+.. _sales/optional_products/optional-product-sections-in-quotations:
+
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 Setting optional product sections in quotations
 ===============================================
 

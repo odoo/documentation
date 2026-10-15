@@ -85,8 +85,16 @@ localization:
      - Export 1099 data for e-filing with a third party.
    * - :ref:`Avatax <l10n_us/taxes-avatax>`
      - `account_avatax`
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
      - Module for the :doc:`AvaTax integration <../accounting/taxes/avalara>` with Odoo.
    * - :doc:`United States - Payroll <../../hr/payroll/payroll_localizations/united_states>`
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+     - Module for the :doc:`AvaTax integration <../accounting/taxes/avatax>` with Odoo.
+   * - :ref:`United States - Payroll <l10n_us/payroll>`
+=======
+     - Module for the :doc:`AvaTax integration <../accounting/taxes/avatax>` with Odoo.
+   * - :doc:`United States - Payroll <../../hr/payroll/payroll_localizations/united_states>`
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
      - `l10n_us_hr_payroll`
      - Includes the necessary rules for United States payroll, including:
 

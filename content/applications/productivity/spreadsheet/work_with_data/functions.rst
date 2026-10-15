@@ -1024,11 +1024,19 @@ Misc
    * - ODOO.LIST(list_id, [row count])
      - Re-inserts a dynamic Odoo list (not compatible with Excel)
    * - ODOO.LIST.HEADER(list_id, field_name)
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
      - Returns a header from an inserted Odoo list (not compatible with Excel)
    * - ODOO.LIST.VALUE(list_id, index, field_name)
      - Returns a value from an inserted Odoo list (not compatible with Excel)
    * - ODOO.SURVEY(survey_id)
      - Returns the results of an Odoo survey (not compatible with Excel)
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+     - Returns the header of a list (not compatible with Excel)
+=======
+     - Returns the header of a list (not compatible with Excel)
+   * - ODOO.SURVEY(survey_id)
+     - Returns the results of an Odoo survey (not compatible with Excel)
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 Operators
 ~~~~~~~~~

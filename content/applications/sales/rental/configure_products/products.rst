@@ -6,6 +6,8 @@ The Odoo **Rental** app allows users to customize scheduling, pricing, and inven
 rental products that require stock movement, otherwise known as *Goods*. Users can set up multiple
 pickup and drop-off locations and track rental products by serial number.
 
+.. _rental/products/settings:
+
 Settings
 ========
 
@@ -258,7 +260,13 @@ page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent Locat
 
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory`
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
    - :doc:`../rental_orders/create_rental_order`
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+   - :doc:`../rental_orders/create_rental_order`
+   - :doc:`../rental_orders/pickup_return`
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
    - `Odoo Tutorials: Configuring a rental product
      <https://youtu.be/CE-SahTUC9A?si=APacZmYDIsVnHOnj>`_
 

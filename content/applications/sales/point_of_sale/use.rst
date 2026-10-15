@@ -333,7 +333,29 @@ To process a standalone refund that is *not* based on an order, follow these ste
 #. Optionally, select the :ref:`gift card <pos/pricing/giftcards_ewallet>` if needed for the
    process.
 #. Click :guilabel:`Payment` to open the payment screen.
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 #. Select a payment method, then click :guilabel:`Validate`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+#. Choose how to handle the refund:
+
+   - To refund the customer, on the payment screen, select a payment method, then click
+     :guilabel:`Validate`.
+   - To issue a :ref:`gift card <pos/pricing/loyalty>` for the refund amount, on the payment screen,
+     click :guilabel:`Back`. The cart displays the returned product(s) with a negative quantity.
+     Then, add the gift card from the product selector to the order; its value is automatically set
+     to match the total refund amount. Click :guilabel:`Payment`, then :guilabel:`Validate` the
+     refund.
+=======
+#. Choose how to handle the refund:
+
+   - To refund the customer, on the payment screen, select a payment method, then click
+     :guilabel:`Validate`.
+   - To issue a :ref:`gift card <pos/pricing/giftcards_ewallet>` for the refund amount, on the
+     payment screen, click :guilabel:`Back`. The cart displays the returned product(s) with a
+     negative quantity. Then, add the gift card from the product selector to the order; its value is
+     automatically set to match the total refund amount. Click :guilabel:`Payment`, then
+     :guilabel:`Validate` the refund.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. tip::
    To facilitate management of standalone returns, create a :doc:`preset <extra/presets>` with only

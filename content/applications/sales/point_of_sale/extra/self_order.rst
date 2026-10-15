@@ -183,24 +183,85 @@ To further configure the self-ordering options, use the settings in the :guilabe
       to the :guilabel:`Background` section and click :icon:`fa-paperclip` :guilabel:`Set background
       image`.
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
       If necessary, click the default :guilabel:`Color` to change it and define a color scheme for
       buttons and backgrounds.
-
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+      - Fill in the field with an existing :guilabel:`Alternative Fiscal Position`;
+      - Create and set up a new fiscal position by filling in the field and clicking
+        :guilabel:`Create & Edit`; or
+      - Create and set up a new fiscal position by clicking :icon:`fa-arrow-right` :guilabel:`Fiscal
+        Positions`.
+=======
 .. tip::
    Use :doc:`presets <presets>` in self-ordering mode to define :doc:`fiscal positions
    </applications/finance/accounting/taxes/fiscal_positions>` to :ref:`adjust the tax rate
    <pos/pricing/taxes>` based on whether customers dine in or take their order to go.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
+.. tip::
+   Use :doc:`presets <presets>` in self-ordering mode to define :doc:`fiscal positions
+   </applications/finance/accounting/taxes/fiscal_positions>` to :ref:`adjust the tax rate
+   <pos/pricing/taxes>` based on whether customers dine in or take their order to go.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+      .. seealso::
+         - :ref:`pos/pricing/taxes`
+         - :doc:`/applications/finance/accounting/taxes/fiscal_positions`
+=======
 .. _pos/self_order/use:
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
+.. _pos/self_order/use:
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   .. tab:: Launch on IoT Box
+        This option allows for using an :doc:`IoT Box </applications/general/iot/iot_box>` connected to a
+        touchscreen as a self-ordering kiosk.
+=======
 Using the self-ordering mode
 ============================
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
+Using the self-ordering mode
+============================
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+        #. :doc:`Connect an IoT Box </applications/general/iot/connect>` to your Odoo database.
+        #. Ensure a touchscreen :doc:`display </applications/general/iot/devices/screen>` is connected
+        #. Select the IoT Box from the :guilabel:`Launch on` field.
+=======
+Once the self-ordering mode configuration is completed, make it accessible to customers by either
+displaying printed QR codes or installing a self-service kiosk.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
+
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 Once the self-ordering mode configuration is completed, make it accessible to customers by either
 displaying printed QR codes or installing a self-service kiosk.
 
 .. important::
    :ref:`The POS register must be open <pos/use/open-register>` for customers to place an order.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+        .. note::
+            Once connected to the IoT box, the touchscreen display appears as two separate
+            devices in the IoT box's list of devices: a display and a keyboard input device.
+
+Preview
+-------
+
+Review the interface before making the self-ordering feature available to customers to ensure all
+settings are applied correctly. Click :icon:`fa-arrow-right` :guilabel:`Preview Web interface`
+under the :guilabel:`Self  Ordering` field to ensure all :ref:`additional settings
+<pos/self_order/add-settings>` are correctly applied.
+
+.. _extra/self_order/usage-guidelines:
+
+Usage guidelines
+================
+=======
+.. important::
+   :ref:`The POS register must be open <pos/use/open-register>` for customers to place an order.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. tabs::
 
@@ -219,12 +280,22 @@ displaying printed QR codes or installing a self-service kiosk.
       #. Select the items, then click :guilabel:`Order` to place an order.
       #. Follow the instructions on-screen to assign a table and pay for the order.
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
       .. tip::
          On the :guilabel:`Your Order` page, customers can click the :icon:`fa-plus` icon next to
          :guilabel:`Add an order note` to enter additional information or special requests, such as
          `Burger without onions, please`, and click :guilabel:`Apply`. These notes are then
          displayed on the :doc:`preparation display <preparation>`.
 
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+      .. tip::
+         On the :guilabel:`Your Order` page, customers can click :icon:`fa-pencil-square-o`
+         :guilabel:`Add a note` to enter additional information or special requests, such as
+         `Burger without onions, please`. These notes are then displayed on the :doc:`preparation
+         display <preparation>`.
+
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
    .. group-tab:: Kiosk
 
       On the POS user's end, click the :guilabel:`Start Kiosk` button on the POS card.

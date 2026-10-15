@@ -56,9 +56,21 @@ To pay a vendor bill with a check, follow these steps:
 .. note::
    Once printed, several options are available:
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
    - :guilabel:`Void Check`: click to cancel the check payment.
    - :guilabel:`Reject`: click if the check was rejected. The payment status is then set to
      :guilabel:`Rejected`, and the related bill is no longer marked as :guilabel:`Paid`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+To register a payment, open any supplier bill from the menu :menuselection:`Purchases --> Vendor
+Bills`.
+Once the supplier bill is validated, you can register a payment. Set the :guilabel:`Payment Method`
+to :guilabel:`Checks` and validate the payment.
+=======
+   - :guilabel:`Void Check`: click to cancel the check payment.
+   - :guilabel:`Validate`: click to mark the payment as :guilabel:`Paid`.
+   - :guilabel:`Reject`: click if the check was rejected. The payment status is then set to
+     :guilabel:`Rejected`, and the related bill is no longer marked as :guilabel:`Paid`.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. tip::
    - Alternatively, from the :guilabel:`Accounting Dashboard`, click :guilabel:`Checks to print`

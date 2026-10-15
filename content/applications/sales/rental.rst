@@ -46,6 +46,18 @@ invoice customers from a single platform.
       Learn about the different rental product types, general configuration, and possible app
       integrations.
 
+   .. card:: Create a rental order
+      :target: rental/rental_orders/create_rental_order
+      :large:
+
+      Learn how to create a rental order.
+
+   .. card:: Pick up and return rental products
+      :target: rental/rental_orders/pickup_return
+      :large:
+
+      Learn how to pick up and return rental products.
+
 .. _rental/price-computing:
 
 Price computing
@@ -84,9 +96,21 @@ Odoo uses two rules to compute the price of a product when a rental order is cre
 Rental pricelist rules
 ======================
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 Extra rental prices are configured in the product's :guilabel:`Prices` tab. The prices are
 configured like advanced :doc:`pricelists <sales/products_prices/prices/pricing>`, where the
 following fields work as conditions for the price to be applied:
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+Extra rental prices are configured in the product's :ref:`Prices
+<rental/products/price-tab-method>` tab. The prices are configured like advanced :doc:`pricelists
+<sales/products_prices/prices/pricing>`, where the following fields work as conditions for the price
+to be applied:
+=======
+Extra rental prices are configured in the product's :ref:`Prices <rental/products/price-tab-method>`
+tab. The prices are configured like advanced :doc:`pricelists
+<sales/products_prices/prices/pricing>`, where the following fields work as conditions for the price
+to be applied:
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 - :guilabel:`Pricelist`: The pricelist for which the pricelist rule is valid.
 - :guilabel:`Min Quantity`: To trigger the Pricelist rule, the quantity must meet or exceed the

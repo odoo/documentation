@@ -17,6 +17,7 @@ Geolocate contacts and places
 The :guilabel:`Geolocation` feature generates latitude and longitude coordinates to pinpoint
 locations. It can be used to:
 
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 - Check employees' :ref:`check-in/out locations <attendances/check-in-out-details>` in the
   **Attendances** app;
 - Display the pickup location when using the :ref:`pickup on-site delivery method
@@ -29,6 +30,24 @@ To enable the :guilabel:`Geolocation` feature, navigate to :menuselection:`Setti
 Settings`, scroll down to the :guilabel:`Integrations` section, and activate
 :guilabel:`Geolocation`. Then, in the :guilabel:`API:` field, select either :guilabel:`Open Street
 Map` or :guilabel:`Google Place Map`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+  .. important::
+     OpenStreetMap might not always be accurate. You can `join the OpenStreetMap community
+     <https://www.openstreetmap.org/fixthemap>`_ to fix any issues encountered.
+=======
+- Check employees' :ref:`check-in/out locations <attendances/check-in-out-details>` in the
+  **Attendances** app;
+- Display the pickup location when using the :ref:`pickup on-site delivery method
+  <ecommerce/shipping/instore-pickup>`;
+- :ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;
+- Validate addresses with the :ref:`Avatax address validation
+  <accounting/avatax/address-validation>` feature.
+
+To enable the :guilabel:`Geolocation` feature, navigate to :menuselection:`Settings --> General
+Settings`, scroll down to the :guilabel:`Integrations` section, and activate
+:guilabel:`Geolocation`. Then, in the :guilabel:`API` field, select either :guilabel:`Open Street
+Map` or :guilabel:`Google Place Map`.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. _geolocation/google-places-api:
 
@@ -57,6 +76,7 @@ Map` or :guilabel:`Google Place Map`.
 
 .. seealso::
    :doc:`address_autocomplete`
+<<<<<<< 665800ccd1861d0367d0785cfe181c8afbdeb8d2
 
 .. _general/integrations/geolocation-routes:
 
@@ -88,3 +108,37 @@ To create routes, follow these steps:
    - `How to use Mapbox securely: Access tokens
      <https://docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_
    - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+
+.. _general/integrations/geolocation-routes:
+
+Map routes
+==========
+
+Map routes are useful for providing itineraries and locations to :doc:`field service
+technicians </applications/services/field_service/planning_itinerary>` and delivery routes to
+drivers in a :doc:`dispatch management system
+</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch>`.
+
+To create routes, follow these steps:
+
+#. Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_.
+#. `Create an access token <https://docs.mapbox.com/help/dive-deeper/access-tokens/>`_.
+#. Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-tokens/>`_ and copy
+   your token to the clipboard.
+
+   .. important::
+      Mapbox displays secret tokens only once upon creation and hides them permanently after
+      leaving the :guilabel:`Access Token` page. Make sure to save the token.
+
+#. In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down to the
+   :guilabel:`Integrations` section.
+#. Under :guilabel:`Map Routes`, paste the Mapbox access token into the :guilabel:`Token` field.
+#. Click :guilabel:`Save`.
+
+.. seealso::
+   - `How to use Mapbox securely: Access tokens
+     <https://docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_
+   - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
