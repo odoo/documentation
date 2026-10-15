@@ -19,9 +19,9 @@ view. Other available views are: :icon:`oi-view-kanban` :guilabel:`(Kanban)`, :i
 :guilabel:`(Graph)`, and :icon:`fa-clock-o` :guilabel:`(Activity)`.
 
 .. image:: rental_order_dashboard/rental-order-dashboard.png
-   :alt: Example of the Rental Order Dashboard in the Rental app.
+   :alt: Example of the Rental Orders Dashboard in the Rental app.
 
-At the top of the dashboard there are six smart buttons:
+At the top of the dashboard, there are six smart buttons:
 
 - :guilabel:`Today`: Filters the dashboard to show rental orders whose :guilabel:`Pick up Date` or
   :guilabel:`Return Date` is the present date. These are rental orders with the status of
@@ -30,7 +30,7 @@ At the top of the dashboard there are six smart buttons:
 - :guilabel:`Pickups`: Filters the dashboard to show only rental orders with the
   :guilabel:`Reserved` status that are waiting to be picked up by the customer.
 - :guilabel:`Returns`: Filters the dashboard to show only rental orders with the
-  :guilabel:`Pickedup` status, and have not been returned yet. This includes both on-time and
+  :guilabel:`Pickedup` status that have not been returned yet. This includes both on-time and
   past-due returns.
 - :guilabel:`Late`: Filters the dashboard to show only rental orders whose :guilabel:`Pick up Date`
   or :guilabel:`Return Date` is overdue.
@@ -49,7 +49,7 @@ The :icon:`fa-list` :guilabel:`(List)` view has the following columns:
 - :guilabel:`Status`: Displays the progression of the rental order using one of the following
   options:
 
-  + :guilabel:`Quotation`: The rental quote is not confirmed.
+  + :guilabel:`Quotation`: The rental quotation is not confirmed.
   + :guilabel:`Reserved`: The rental order is confirmed, and the rental products have been scheduled
     for pickup.
   + :guilabel:`Pickedup`: The rental order is confirmed, and the rental products have been picked
@@ -66,21 +66,21 @@ The :icon:`fa-list` :guilabel:`(List)` view has the following columns:
 - :guilabel:`Invoice Status`: Displays the invoice stage using one of the following options:
 
   + :guilabel:`To invoice`: The rental order has no associated invoice.
-  + :guilabel:`Fully invoiced`: The rental order either has a drafted or posted invoice. However,
+  + :guilabel:`Fully invoiced`: The rental order has either a drafted or posted invoice. However,
     the filter doesn't include invoice payment status.
   + :guilabel:`Nothing to invoice`: The rental quote has not been confirmed yet, and thus the
     invoice amount is not finalized.
 
-The following columns can be applied using the :icon:`fa-sliders` :guilabel:`(adjust settings)`
+The following columns can be enabled using the :icon:`fa-sliders` :guilabel:`(adjust settings)`
 icon: :guilabel:`Salesperson`, :guilabel:`Order Date`, :guilabel:`Sales Team`, :guilabel:`Tags`, and
 :guilabel:`Activities`.
 
 Rental orders that are late for their specified :guilabel:`Pick up Date` or :guilabel:`Return Date`
-columns display in red. Rental orders without an invoice display in blue in the :guilabel:`Total`
-column. At the bottom of the :guilabel:`Total` column, the total amount of all the rental quotations
-and orders together is shown.
+columns display in red text. Rental orders without an invoice display in blue text in the
+:guilabel:`Total` column. At the bottom of the :guilabel:`Total` column, the total amount of all the
+rental quotations and orders together is shown.
 
-Another way to filter the dashboard is using the search bar filters. Click the search bar to view
+Another way to filter the dashboard is to use the search bar filters. Click the search bar to view
 the preconfigured filters.
 
 Filters
@@ -126,27 +126,26 @@ Use cases
 
 .. _rental/rental_order_dashboard/sales-team:
 
-Managing a sales team use case
-------------------------------
+Managing a sales team
+---------------------
 
 A manager wants to view all the rental quotes and orders from their sales team. To view their sales
 team rental orders on the *Rental Orders* dashboard:
 
 1. Click into the search bar.
 #. Select :guilabel:`Salesperson` in the *Group By* section of the drop-down menu.
-#. Click the :icon:`fa-setting-adjust` :guilabel:`(setting adjust)` icon and enable :guilabel:`Sales
-   Team`.
+#. Click the :icon:`fa-sliders` :guilabel:`(setting adjust)` icon and enable :guilabel:`Sales Team`.
 
 Now the manager can group rental orders using the :guilabel:`Sales Team` column and see all the
-rental quotes and orders each team member has done.
+rental quotes and orders each team member has created.
 
 .. _rental/rental_order_dashboard/user-rental-orders:
 
-Managing priority rental orders for the day use case
-----------------------------------------------------
+Managing priority rental orders for the day
+-------------------------------------------
 
 A rental store employee wants to check all rental quotes and orders that are due today or overdue.
-To view all rental orders with actions due today or have overdue pickups or returns by the user:
+To view these rental orders and those that have actions due today on the Rental Orders dashboard:
 
 1. Click into the search bar.
 #. From the :guilabel:`Filters` section, select :guilabel:`My Orders`, :guilabel:`Today`, and
