@@ -6,6 +6,8 @@ from pathlib import Path
 
 import docutils
 import sphinx
+import sphinx.transforms.i18n
+import sphinx.util.i18n
 from pygments.lexers import JsonLexer, XmlLexer
 from sphinx.ext import graphviz
 from sphinx.util import logging
@@ -41,9 +43,8 @@ current_major_version = current_major_branch.replace('.0', '')
 # The minimal Sphinx version required to build the documentation.
 needs_sphinx = '3.0.0'
 
-# The default language in which the documentation is written. It is set to `None` because Sphinx
-# considers that no language means 'en'.
-language = None
+# The default language in which the documentation is written.
+language = 'en'
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -537,7 +538,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
             root_ = app.config.project_root
         else:
             # Project root like .../documentation/_build/html/14.0/fr
-            root_ = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
+            root_ = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', str(app.outdir))
         # If the canonical version is not set, assume that the project has a single version
         canonical_version_ = app.config.canonical_version or app.config.version
         version_ = version_ or app.config.version

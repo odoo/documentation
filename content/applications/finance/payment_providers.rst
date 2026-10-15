@@ -195,7 +195,7 @@ Online payment providers
      -
    * - :doc:`Xendit <payment_providers/xendit>`
      - Odoo or the provider's website
-     - |V| *
+     - |V| [*]_
      -
      -
      -
