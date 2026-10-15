@@ -8,7 +8,7 @@ according to the number of overdue days. Follow-ups can be sent through differen
 email, WhatsApp message, SMS, or post.
 
 .. seealso::
-   - `Odoo Tutorials: Payment Follow-up <https://www.youtube.com/watch?v=50qy2ygS7eM>`_
+   - `Odoo Tutorials: Payment Follow-up <https://www.youtube.com/watch?v=WgtcfHFvIZo>`_
    - :doc:`/applications/finance/accounting/customer_invoices/payment_terms`
 
 .. _accounting/follow_up/configuration:
