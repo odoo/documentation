@@ -4,61 +4,63 @@ Inter-warehouse replenishment
 
 .. |MTO| replace:: :abbr:`MTO (Make to Order)`
 
-When a business operates multiple locations, such as warehouses, retail shops, or manufacturing
-facilities, resupplying stock from a central warehouse is sometimes necessary. Odoo uses a *Route*
-configuration that enables locations to replenish from a central distribution center, automatically
-generating *inter-warehouse transfers*. Odoo :guilabel:`Inventory` manages these transfers to keep
-stores in stock.
+Businesses with multiple locations such as warehouses, retail shops, or manufacturing facilities may
+resupply stock from other warehouses. Odoo **Inventory** allows locations to replenish products from
+other warehouses, either internal or external to the company, automatically generating
+*inter-warehouse* or *inter-company* transfers.
 
-This guide explains how to conduct inter-warehouse transfers using two replenishment strategies:
+This documentation explains how to conduct inter-warehouse and inter-company transfers using two
+replenishment strategies:
 
-#. :ref:`Make to order (MTO) <inventory/warehouses_storage/MTO>`
-#. :ref:`Reordering rule <inventory/warehouses_storage/reordering-rule>`
+#. :ref:`Replenish on Order (MTO) <inventory/resupply_warehouses/MTO>`
+#. :ref:`Reordering rule <inventory/resupply_warehouses/reordering-rule>`
 
 .. seealso::
    :doc:`Difference between MTO and reordering rules <../replenishment>`
 
+.. _inventory/resupply_warehouses/configuration:
+
 Configuration
 =============
 
-The initial configuration for both replenishment strategies is the same. First go to
-:menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section,
-activate :guilabel:`Storage Locations`. Then, click :guilabel:`Save` to apply the setting.
+To conduct inter-warehouse or inter-company transfers using either |MTO| or reordering rules,
+navigate to :menuselection:`Inventory app --> Configuration --> Settings` and ensure that both
+:guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` are enabled.
 
-.. image:: resupply_warehouses/storage-locations.png
-   :align: center
-   :alt: Enable Storage Locations in Inventory settings.
+To use inter-company transfers, ensure that a :doc:`multi-company environment
+<../../../../general/companies/multi_company>` is configured. See :ref:`Resupply from another
+company <inventory/resupply_warehouses/inter-company>` for the additional requirements.
 
 Warehouses
 ----------
 
-Configure the settings for the central warehouse and connecting storage locations by going to
+To configure the central warehouse and its connecting storage locations, navigate to
 :menuselection:`Inventory app --> Configuration --> Warehouses`.
 
 .. important::
-   Each central warehouse and other locations *must* have its own warehouse. For example, each shop
-   is considered a local warehouse.
+   Each location, including the central warehouse and each shop, *must* be configured as its own
+   warehouse.
 
-Select an existing warehouse, or create a new one to be resupplied from the central warehouse, by
-clicking :guilabel:`New`. Then, give the warehouse a name and a :guilabel:`Short Name`, which will
-appear on that warehouse's transfers.
+Select an existing warehouse or :ref:`create a new one <inventory/warehouses/configuration>` to be
+resupplied from the central warehouse.
 
-In the :guilabel:`Warehouse Configuration` tab, locate the :guilabel:`Resupply From` field. Check
-the box next to the central warehouse's name. If the warehouse can be resupplied by more than one
-warehouse, make sure to check those warehouses' boxes too. Now, Odoo knows which warehouses can
-resupply this warehouse.
+In the *Warehouse Configuration* tab, locate the :guilabel:`Resupply From` field. Select one or more
+warehouses that will resupply the current warehouse. In a multi-company database, this field also
+lists the warehouses of the other companies the user has access to.
+
+.. note::
+   The :guilabel:`Resupply From` field appears **only** if the database has at least two warehouses,
+   or if multiple companies are configured.
 
 .. example::
-   The central warehouse that will supply the shops is called `Central warehouse`. The
-   :guilabel:`Resupply From` field is set to this warehouse on the shop's warehouse configuration
-   page.
+   The central warehouse that will supply the shops is called `Main`. The :guilabel:`Resupply From`
+   field is set to this warehouse on the shop's warehouse configuration page.
+
+   .. image:: resupply_warehouses/warehouse.png
+      :alt: Supply one warehouse with another in the Warehouse Configuration tab.
 
 .. seealso::
    :doc:`../inventory_management/warehouses`
-
-.. image:: resupply_warehouses/warehouse.png
-   :align: center
-   :alt: Supply one warehouse with another in the Warehouse Configuration tab.
 
 Set route on a product
 ----------------------
@@ -67,106 +69,169 @@ Products must also be configured properly in order for them to be transferred be
 
 Go to :menuselection:`Inventory app --> Products --> Products` and select the desired product.
 
-In the :guilabel:`Inventory` tab, the new route appears as :guilabel:`X: Supply Product from Y` in
-the :guilabel:`Routes` section, where 'X' is the store's warehouse that receives products, and 'Y'
-is the warehouse that sends products.
+In the *Inventory* tab, the :guilabel:`Routes` field of the *Operations* section lists any new
+routes generated from the warehouse configuration as :guilabel:`X: Supply Product from Y`, where `X`
+is the receiving warehouse, and `Y` is the supplying warehouse.
 
-Tick the :guilabel:`X: Supply Product from Y` checkbox, which is intended to be used with the |MTO|
-route or a reordering rule to replenish stock by moving the product from one warehouse to another.
-Proceed to the dedicated sections below to continue the process.
+After selecting the applicable routes, proceed to either the :ref:`MTO
+<inventory/resupply_warehouses/MTO>` or the :ref:`reordering rules
+<inventory/resupply_warehouses/reordering-rule>` configuration process.
 
-.. _inventory/warehouses_storage/MTO:
+.. _inventory/resupply_warehouses/MTO:
 
 MTO
 ~~~
 
-To replenish products using the make-to-order method, go to the product form and ensure the
-:ref:`MTO route is unarchived <inventory/mto/enable-mto>`, so it appears in the :guilabel:`Routes`
-section of the :guilabel:`Inventory` tab.
+To replenish products using |MTO|, ensure the :guilabel:`Replenish on Order (MTO)` route is selected
+in the *Inventory* tab of the product form.
 
-With the resupply and |MTO| routes ticked, jump to the section titled: :ref:`Replenish from another
-warehouse <inventory/warehouses_storage/resupply-workflow>`.
+.. important::
+   The :guilabel:`Replenish on Order (MTO)` route **only** appears if the :guilabel:`Replenish on
+   Order (MTO)` feature is enabled in :menuselection:`Inventory app --> Configuration --> Settings`.
+
+With the resupply and |MTO| routes selected, continue by :ref:`replenishing from another warehouse
+<inventory/resupply_warehouses/resupply-workflow>`.
 
 .. example::
-   The product, sold at the warehouse, `Store`, is resupplied from the central warehouse, named
+   A customized cabinet, sold at the warehouse `Store`, is resupplied from the central warehouse,
    `YourCompany`. To replenish the product using |MTO|, the following routes are selected:
 
    - :guilabel:`Store: Supply Product from YourCompany`
    - :guilabel:`Replenish on Order (MTO)`
 
    .. image:: resupply_warehouses/resupply-route.png
-      :align: center
-      :alt: Route setting which enables a product to resupplied from a second warehouse.
+      :alt: Route setting which enables a product to be resupplied from a second warehouse.
 
-.. _inventory/warehouses_storage/reordering-rule:
+.. _inventory/resupply_warehouses/reordering-rule:
 
 Reordering rule
 ~~~~~~~~~~~~~~~
 
-To replenish products using reordering rules, first ensure the :guilabel:`X: Supply Product from Y`
-route is selected in the :guilabel:`Inventory` tab of the product form.
+To replenish products using reordering rules, ensure the :guilabel:`X: Supply Product from Y` route
+is selected in the *Inventory* tab of the product form.
 
 Then, create a reordering rule to automate replenishment by clicking the :guilabel:`Reordering
 Rules` smart button.
 
-Click :guilabel:`New`, and set:
+Click :guilabel:`New` and configure the following:
 
-- :guilabel:`Location`: the stock location of the retail store. For example, `SHOP/Stock`.
-- :guilabel:`Route`: :guilabel:`X: Supply Product from Y`.
-- :guilabel:`Min Quantity` and :guilabel:`Max Quantity` to trigger automatic stock transfers when
-  inventory falls below the set threshold.
-
-.. seealso::
-   :doc:`reordering_rules`
+- :guilabel:`Location`: The stock location of the receiving warehouse.
+- :guilabel:`Route`: The :guilabel:`X: Supply Product from Y` route. If this column is hidden,
+  enable it by clicking the :icon:`oi-settings-adjust` :guilabel:`(optional columns)` icon. If the
+  product already has the resupply route, this field is automatically populated.
+- :guilabel:`Min`: The minimum inventory level for which to trigger an automatic stock transfer.
+- :guilabel:`Max`: The maximum inventory level to which stock should be replenished.
 
 .. example::
    A :ref:`0/0 reordering rule <inventory/warehouses_storage/zero-zero>` to replenish the shop's
    warehouse is created, with the :guilabel:`Location` set to `SHOP/Stock`, and the
-   :guilabel:`Route` set to :guilabel:`Store: Resupply from YourCompany`.
+   :guilabel:`Route` set to :guilabel:`Store (Chicago): Supply Product from Main`.
 
    .. image:: resupply_warehouses/reordering-rule.png
-      :align: center
       :alt: Show reordering rule configurations.
 
-.. _inventory/warehouses_storage/resupply-workflow:
+.. seealso::
+   :doc:`reordering_rules`
+
+.. _inventory/resupply_warehouses/resupply-workflow:
 
 Replenish one warehouse from another
 ====================================
 
-After completing the setup, trigger replenishment using one of several methods, such as:
+After completing the setup, trigger replenishment using one of the following methods:
 
-- Navigate to the product form of the product that is resupplied from another warehouse.
-
-  Click the :guilabel:`Replenish` button on the top-left of the product page. In the pop-up window,
-  set the warehouse to the retail shop, (e.g. `Store`), and click :guilabel:`Confirm`.
+- Via the product form: On the product form, click the :icon:`fa-cog` :guilabel:`(Actions)` icon,
+  then :guilabel:`Replenish`. In the pop-up window, set the desired :guilabel:`Quantity` and
+  :guilabel:`Scheduled Date`. Optionally, set the resupply route in the :guilabel:`Preferred Route`
+  field. Then, click :guilabel:`Confirm`.
 
   .. image:: resupply_warehouses/replenish.png
-     :align: center
      :alt: Replenish pop-up window on the product form.
 
-- Create a quotation, and in the :guilabel:`Other Info` tab, set the :guilabel:`Warehouse` to the
-  retail shop (e.g. `Store`), when selling the product makes the on-hand quantity of the product go
-  below the minimum set on the reordering rule.
+- Via a sales order (|MTO| only): Create a quotation with the product. On the *Other Info* tab of
+  the quotation form, set the :guilabel:`Warehouse` to the receiving warehouse, then
+  :guilabel:`Confirm` the quotation.
 
   .. image:: resupply_warehouses/warehouse-field.png
-     :align: center
-     :alt: Create a quote at the store.
+     :alt: Warehouse field on the Other Info tab of a quotation.
 
-Once triggered, Odoo creates two transfers: One is a *delivery order* from the central, supplying
-warehouse, which contains all the necessary products to the store, and the second is a *receipt* at
-the shop, from the main warehouse.
+- Via a reordering rule: The rule triggers automatically when the forecasted quantity drops below
+  the :guilabel:`Min` quantity. To trigger it manually, go to :menuselection:`Inventory app -->
+  Operations --> Replenishment`, and click :guilabel:`Order` on the rule's line.
 
-While in transit, the product is located at `Physical Locations/Inter-warehouse transit`.
+Once triggered, the following transfers are created:
+
+#. Outgoing transfers that move the product from the supplying warehouse to the transit location.
+   Depending on the warehouse's :guilabel:`Outgoing Shipments` setting, this is a single delivery,
+   or a pick (and pack) followed by a delivery.
+#. A receipt from the transit location to the receiving warehouse, followed by any additional steps
+   set in its :guilabel:`Incoming Shipments` setting. The receipt is :guilabel:`Waiting` until the
+   delivery from the supplying warehouse is validated.
+
+If the product is transferred between warehouses of the same company, the transit location is
+`Inter-warehouse transit`. If the transfer occurs between warehouses of different companies, the
+transit location is `Inter-company transit`.
+
+.. tip::
+   A delivery created manually from the supplying warehouse to the receiving warehouse's address
+   also generates the receipt at the receiving warehouse. Returns of these receipts are sent back to
+   the supplying warehouse.
 
 .. example::
-   A sales order for the product at the shop is created. To replenish the product at the shop and
-   ship it from there, Odoo generates a delivery order from the central warehouse's stock,
-   `WH/Stock` to the shop's warehouse `SHOP/Stock`. While the products are traveling between
-   warehouses, they are in `Physical Locations/Inter-warehouse transit`.
-
-   The final delivery order is from the shop to the customer's delivery address, and is not
-   pertinent to the workflow in this guide.
+   A sales order for the product at the shop's Chicago location is created. To replenish the product
+   from the `Main` warehouse, Odoo generates a delivery order from `WH/Stock` to `Inter-company
+   transit`, and a receipt from `Inter-company transit` to the shop's `SHOP/Stock` location. The
+   receipt becomes ready once the delivery is validated.
 
    .. image:: resupply_warehouses/transfers.png
       :alt: Show shipments from warehouse to store.
 
+.. _inventory/resupply_warehouses/inter-company:
+
+Resupply from another company
+=============================
+
+In a :doc:`multi-company database <../../../../general/companies/multi_company>`, a warehouse can be
+resupplied by a warehouse belonging to another company, without creating inter-company sales or
+purchase orders.
+
+To do so, ensure the following:
+
+- The user has access to both companies, and both are selected in the :ref:`company selector
+  <general/multi-company/company-selector>`.
+- The product is :ref:`shared between the companies
+  <general/multi-company/shared-and-unshared-records>` (i.e., its :guilabel:`Company` field is
+  empty).
+
+Then, :ref:`configure the warehouse <inventory/resupply_warehouses/configuration>` of the receiving
+company, and select the supplying company's warehouse in the :guilabel:`Resupply From` field. The
+resulting :guilabel:`X: Supply Product from Y` route is shared between both companies, and is used
+with |MTO| or reordering rules in the same way as an inter-warehouse route.
+
+When triggered, the delivery belongs to the supplying company, and the receipt belongs to the
+receiving company.
+
+.. important::
+   The receiving company's stock valuation uses the product's value before it left the supplying
+   company. The `Inter-company transit` location itself is not valued.
+
+Ship a sales order from another company's warehouse
+---------------------------------------------------
+
+The :guilabel:`Warehouse` of a sales order can also be set to a warehouse from another company
+selected in the company selector. The products are then delivered to the customer directly from that
+warehouse, and the delivery belongs to the warehouse's company.
+
+Track inter-company deliveries
+------------------------------
+
+To review the products moved between companies, go to :menuselection:`Inventory app --> Reporting
+--> Moves Analysis`. Click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` icon in the
+search bar, and select the :guilabel:`Intercompany Deliveries` :ref:`Favorites
+<inventory/warehouses_storage/moves-analysis-search-options>` filter.
+
+This report lists the completed moves to the `Inter-company transit` location and the deliveries of
+sales orders made from another company's warehouse.
+
+.. image:: resupply_warehouses/inter-company-moves.png
+   :alt: List of inter-company moves.
