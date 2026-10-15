@@ -598,7 +598,7 @@ which tends to be a huge amount.
                   asList(asList(
                       asList("is_company", "=", true))),
                   new HashMap() {{ put("limit", 1); }})));
-          final Map record = (Map)((Object[])models.execute(
+          final Map partner = (Map)((Object[])models.execute(
               "execute_kw", asList(
                   db, uid, password,
                   "res.partner", "read",
@@ -606,7 +606,7 @@ which tends to be a huge amount.
               )
           ))[0];
           // count the number of fields fetched by default
-          record.size();
+          partner.size();
 
       .. code-tab:: go
 
