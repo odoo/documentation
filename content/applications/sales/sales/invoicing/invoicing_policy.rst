@@ -117,9 +117,18 @@ Invoice delivered quantity workflow
 -----------------------------------
 
 Confirm that the product's invoicing policy is set to :guilabel:`Delivered quantities` in the
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 product form. :ref:`Create a quotation and sales order <sales/create_quotations/create-quotation>`
 as normal. After the sales order is confirmed, the product must be delivered before an invoice can
 be created.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+product form. :ref:`Create a quotation and sales order <sales/create-quotation>` as normal. After
+the sales order has been confirmed, the product must be delivered before an invoice can be created.
+=======
+product form. :ref:`Create a quotation and sales order <sales/create_quotations/create-quotation>`
+as normal. After the sales order has been confirmed, the product must be delivered before an invoice
+can be created.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 Once the product has been shipped and delivery has been confirmed, click the :icon:`fa-truck`
 :guilabel:`Delivery` smart button on the sales order screen and click :guilabel:`Validate` to

@@ -3,12 +3,27 @@ Scale
 =====
 
 .. important::
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
    - In EU member states, `certification is legally required
      <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
      for the use of a scale as an integrated device.
    - The **Mettler Toledo scale (Ariva S)** using protocol 8217 is recommended with Odoo.
    - To connect the scale to Odoo, :ref:`link it directly via USB <pos/scale/usb-connection>` or
      :ref:`configure an IoT system <pos/scale/iot-connection>`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   In EU member states, `certification is legally required
+   <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
+   to use a scale as an integrated device.
+=======
+   - In EU member states, `certification is legally required
+     <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
+     for the use of a scale as an integrated device.
+   - The **Mettler Toledo scale (Ariva S)** using protocol 8217 is recommended with Odoo.
+   - Connecting a scale to Odoo requires setting up an :doc:`IoT system
+     </applications/general/iot>`. For optimal reliability, it is recommended to use a
+     :doc:`physical IoT system </applications/general/iot/iot_box>` rather than a :doc:`virtual one
+     </applications/general/iot/windows_iot>`.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. _pos/scale/configuration:
 
@@ -20,6 +35,7 @@ Configuration
 Scale connection
 ----------------
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 .. _pos/scale/usb-connection:
 
 USB connection
@@ -32,6 +48,22 @@ To connect the scale with Point of Sale via USB, follow these steps:
 #. Scroll down to the :guilabel:`Connected Devices` section and click the :guilabel:`Connect USB
    Scale` button under the :guilabel:`USB Scale` setting.
 #. Select the relevant scale in the popover, then click :guilabel:`Connect`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+#. :ref:`Access the POS settings <pos/use/settings>`.
+#. Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`IoT Box`.
+#. Select the scale in the :guilabel:`Electronic Scale` field.
+=======
+To connect the scale with Point of Sale, follow these steps:
+
+#. Turn on the scale before starting the IoT system to ensure it is detected during setup.
+#. Connect the :doc:`scale to the IoT system </applications/general/iot/devices/scale>`.
+#. Connect the :ref:`IoT system to Odoo <iot/iot-odoo/connection>`.
+#. In the :guilabel:`Connect to a Point of Sale` popover, set the :guilabel:`Associated PoS` field
+   to the relevant point of sale, then click :guilabel:`Continue`.
+#. Go to :menuselection:`Point of Sale --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Connected Devices` section, then select the scale in the
+   :guilabel:`Electronic Scale` field.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 #. Click :guilabel:`Save`.
 
 .. note::
@@ -84,6 +116,7 @@ Product configuration
 ---------------------
 
 .. important::
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
    - Ensure the :guilabel:`Point of Sale` checkbox is activated on the product form to be able to
      enable the :guilabel:`To Weigh With Scale` option and make the product available in Point of
      Sale.
@@ -104,6 +137,31 @@ The following configuration is required to be able to weigh products and display
    unit of mass.
 #. Click the :guilabel:`Point of Sale` tab and enable :guilabel:`To Weigh` to be able to weigh the
    product directly on the connected scale.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   The selected unit of measure for weighable products must be :guilabel:`kg` to ensure compliance
+   with **European regulations**.
+=======
+   - Ensure the :guilabel:`Point of Sale` checkbox is activated on the product form to be able to
+     enable the :guilabel:`To Weigh With Scale` option and make the product available in Point of
+     Sale.
+   - To comply with :ref:`European regulations <pos/scale/eu-regulations>`, the unit of measure for
+     weighable products must be set to `kg`.
+
+The following configuration is required to be able to weigh products and display their weight in the
+:ref:`POS register <pos/use/open-register>`:
+
+#. Go to :menuselection:`Inventory --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Products` section, enable the :doc:`Units of Measure & Packagings
+   </applications/inventory_and_mrp/inventory/product_management/configure/uom>` setting, and click
+   :guilabel:`Save`.
+#. Go to :menuselection:`Point of Sale --> Products --> Products`.
+#. Click an exisiting product or click :guilabel:`New` to :ref:`create a new one
+   <pos/products/creation>`.
+#. In the :guilabel:`General Information` tab, set the :guilabel:`Sales Price` to the relevant
+   unit of mass.
+#. Click the :guilabel:`Point of Sale` tab and enable :guilabel:`To Weigh With Scale` to be able to
+   weigh the product directly on the connected scale.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. seealso::
    :doc:`/applications/inventory_and_mrp/inventory/product_management/configure/uom`

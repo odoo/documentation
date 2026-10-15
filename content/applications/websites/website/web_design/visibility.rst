@@ -30,10 +30,24 @@ To control the visibility of a building block based on the visitor's device type
 
 Then, click :guilabel:`Save` to apply the changes.
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 Snippets and some :doc:`elements <elements>` within building blocks can also be hidden individually.
 This is particularly useful for elements that are too wide to display properly on smaller screens.
 To check whether this option is available, select an element within a building block and look for
 the :guilabel:`Visibility` option in the element's customization options.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+- Click :guilabel:`Save` to apply the changes.
+
+It is also sometimes possible to hide elements within blocks. It is mostly used to hide specific
+elements inside blocks that may be too wide to be correctly displayed on mobile devices. To see if
+the option is available, select an element within a block and look for the :guilabel:`Visibility`
+option under the element's customization option.
+=======
+Some :doc:`elements <elements>` within building blocks can also be hidden individually.
+This is particularly useful for elements that are too wide to display properly on smaller screens.
+To check whether this option is available, select an element within a building block and look for
+the :guilabel:`Visibility` option in the element's customization options.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. example::
    The red |mobile icon| (:guilabel:`Show/Hide on Mobile`) button indicates that the selected image

@@ -13,6 +13,7 @@ The following modules are installed automatically with the Danish localization:
    :header-rows: 1
    :widths: 25 25 50
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
    * - Name
      - Technical name
      - Description
@@ -26,6 +27,27 @@ The following modules are installed automatically with the Danish localization:
    * - :guilabel:`Denmark - FIK Number`
      - `l10n_dk_fik`
      - Support Danish FIK number as payment references on customer invoices
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+Key requirements of the Danish Bookkeeping Act
+----------------------------------------------
+=======
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Denmark - Accounting`
+     - `l10n_dk`
+     - Danish :ref:`fiscal localization package <fiscal_localizations/packages>`, complete with
+       the Danish chart of accounts, taxes, tax report, and fiscal positions
+   * - :guilabel:`Denmark - Accounting Reports`
+     - `l10n_dk_reports`
+     - Module providing Danish accounting reports
+   * - :guilabel:`Denmark - Nemhandel Business Response`
+     - `l10n_dk_nemhandel_response`
+     - Enables the rejection and approval of sent and received documents
+   * - :guilabel:`Denmark - FIK Number`
+     - `l10n_dk_fik`
+     - Support Danish FIK number as payment references on customer invoices
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 Additionally, the following modules must be manually :ref:`installed <general/install>`:
 

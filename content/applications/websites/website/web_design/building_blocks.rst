@@ -53,9 +53,18 @@ Content` blocks into it.
    the **Appointments** app for the :guilabel:`Appointments` block).
 
 .. example::
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
    Use the :guilabel:`Social Media` :guilabel:`Inner Content` building block to display links to
    your social media accounts. Click :guilabel:`Add New Social Network` to add a platform, and
    :icon:`fa-minus` (:guilabel:`Remove link`) to remove it. You can also edit the account URLs.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   Add all your social media accounts in one place with the inner content :guilabel:`Social Media`
+   block. Toggle the switch on or off next to the desired platform and copy/paste your account URL.
+=======
+   Use the :guilabel:`Social Media` :guilabel:`Inner Content` building block to display links to
+   your social media accounts. Toggle the desired platforms on or off, then enter the corresponding
+   account URLs.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
    .. image:: building_blocks/social-media-inner-content-block.png
       :alt: Social Media inner content block
@@ -165,8 +174,19 @@ to the :guilabel:`Style` tab, and set the :guilabel:`Layout` field to :guilabel:
 Grid
 ~~~~
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 The :guilabel:`Grid` layout allows you to reposition and resize elements by dragging and dropping
 them. You can also adjust their position and size using the :guilabel:`Spacing` options.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+The :guilabel:`Grid` layout allows you to reposition and resize elements, such as images or text, by
+dragging and dropping them. When :guilabel:`Grid` is selected, additional options are available to
+:guilabel:`Add Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`.
+=======
+The :guilabel:`Grid` layout allows you to reposition and resize elements by dragging and dropping
+them. Once this layout type is selected, additional options are available to :guilabel:`Add
+Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`. Adjust their
+position and size using the :guilabel:`Spacing (Y, X)` options.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. _website/building_blocks/columns:
 
@@ -209,8 +229,16 @@ and drag and drop the :guilabel:`Custom` categorical block. In the pop-up window
 the desired block in the :guilabel:`Custom` category.
 
 .. tip::
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
    In the :guilabel:`Insert a block` pop-up window, click :icon:`fa-pencil` (:guilabel:`Rename`) to
    rename the custom block or :icon:`fa-trash` (:guilabel:`Remove`) to delete it.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   In the :guilabel:`Insert a block` popup, click :icon:`fa-pencil` (:guilabel:`edit`) to rename the
+   custom block or :icon:`fa-trash` (:guilabel:`delete`) to delete it.
+=======
+   In the :guilabel:`Insert a block` pop-up window, click :icon:`fa-pencil` (:guilabel:`edit`) to
+   rename the custom block or :icon:`fa-trash` (:guilabel:`remove`) to delete it.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. _website/building_blocks/anchor:
 

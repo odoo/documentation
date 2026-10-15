@@ -26,9 +26,15 @@ Create invoices
 ===============
 
 When a sales order is confirmed, the option to create an invoice becomes available via the
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 :guilabel:`Create Invoice` button. When clicked, a *Create invoice(s)* pop-up appears. If a greater
 quantity of a service is being delivered than what has been invoiced, the overage appears in red and
 the option to invoice any overages is enabled by default.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+:guilabel:`Create Invoice` button. When clicked, a :guilabel:`Create invoice(s)` pop-up appears.
+=======
+:guilabel:`Create Invoice` button. When clicked, a *Create invoice(s)* pop-up appears.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. image:: down_payment/create-invoices-popup-form.png
    :alt: Create invoice(s) pop-up form that appears in Odoo Sales.

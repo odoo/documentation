@@ -386,6 +386,8 @@ Info
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISERROR(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
+   * - ISFORMULA(cell_reference)
+     - `Excel ISFORMULA article <https://support.microsoft.com/en-us/excel/functions/isformula-function>`_
    * - ISLOGICAL(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISNA(value)
@@ -1000,9 +1002,17 @@ Misc
    * - ODOO.LIST(list_id, [row count])
      - Re-inserts a dynamic Odoo list (not compatible with Excel)
    * - ODOO.LIST.HEADER(list_id, field_name)
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
      - Returns a header from an inserted Odoo list (not compatible with Excel)
    * - ODOO.LIST.VALUE(list_id, index, field_name)
      - Returns a value from an inserted Odoo list (not compatible with Excel)
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+     - Returns the header of a list (not compatible with Excel)
+=======
+     - Returns the header of a list (not compatible with Excel)
+   * - ODOO.SURVEY(survey_id)
+     - Returns the results of an Odoo survey (not compatible with Excel)
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 Operators
 ---------

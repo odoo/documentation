@@ -215,6 +215,10 @@ is used in the Project app to plan an itinerary between different tasks.
      A :ref:`Mapbox token <general/integrations/geolocation-routes>` must be configured to use the
      routing.
 
+  .. note::
+     A :ref:`Mapbox token <general/integrations/geolocation-routes>` must be configured to use the
+     routing.
+
 .. example::
 
    .. image:: views/map-task.png

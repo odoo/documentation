@@ -284,10 +284,22 @@ shift, the OEE, or actual time that each shift is taking to produce a product.
    .. image:: using_work_centers/work-order-duration-deviation.png
       :alt: A bar graph of two work centers with duration deviations of -6.50 and 15.00
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
    To create this report, go to :menuselection:`Manufacturing app --> Reporting --> Work Orders` and
    click to remove the :icon:`fa-filter` **To Do** *or* **Blocked** *or* **In Progress** filter by
    clicking the :icon:`oi-close` :guilabel:`(Remove)` icon on its right side. Next, click the
    measures button and select :guilabel:`Duration Deviation (%)`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   To create this report, go to :menuselection:`Reporting --> Work Orders` and click to remove the
+   :icon:`fa-filter` **Ready** *or* **Waiting** *or* **Pending** *or* **In Progress** filter by
+   clicking the :icon:`fa-x` :guilabel:`Remove` icon on its right side. Next, click the
+   :guilabel:`Measures` button and select :guilabel:`Duration Deviation (%)`
+=======
+   To create this report, go to :menuselection:`Manufacturing app --> Reporting --> Work Orders` and
+   click to remove the :icon:`fa-filter` **Ready** *or* **Waiting** *or* **Pending** *or* **In
+   Progress** filter by clicking the :icon:`oi-close` :guilabel:`Remove` icon on its right side.
+   Next, click the :guilabel:`Measures` button and select :guilabel:`Duration Deviation (%)`.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
    In this case, the day shift has on average taken more than the expected time to produce products
    (-6.50%) while the night shift took less than the expected time (15.00%).

@@ -18,6 +18,7 @@ Localization also includes integrating country-specific payroll elements such as
 termination rules, and reporting requirements, helping businesses avoid legal risks while ensuring
 employees receive their correct compensation.
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 .. _payroll_localizations/countries-list:
 
 List of countries
@@ -199,6 +200,183 @@ Payroll localization modules are available for the countries listed below.
    New countries are frequently added to this list, as Odoo keeps expanding and improving existing
    localizations and related documentation.
 
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+.. _payroll_localizations/countries-list:
+
+List of countries
+=================
+
+Payroll localization modules are available for the countries listed below.
+
+.. cards::
+
+   .. card:: Australia
+      :target: payroll_localizations/australia
+      :image: payroll_localizations/au.png
+      :alt: Australia
+
+      Payroll localization
+
+   .. card:: Bangladesh
+      :target: payroll_localizations
+      :image: payroll_localizations/bd.png
+      :alt: Bangladesh
+
+      Payroll localization
+
+   .. card:: Belgium
+      :target: payroll_localizations/belgium
+      :image: payroll_localizations/be.png
+      :alt: Belgium
+
+      Payroll localization
+
+   .. card:: Egypt
+      :target: payroll_localizations/egypt
+      :image: payroll_localizations/eg.png
+      :alt: Egypt
+
+      Payroll localization
+
+   .. card:: Hong Kong
+      :target: payroll_localizations/hong_kong
+      :image: payroll_localizations/hk.png
+      :alt: Hong Kong
+
+      Payroll localization
+
+   .. card:: India
+      :target: payroll_localizations/india
+      :image: payroll_localizations/in.png
+      :alt: India
+
+      Payroll localization
+
+   .. card:: Indonesia
+      :target: payroll_localizations
+      :image: payroll_localizations/id.png
+      :alt: Indonesia
+
+      Payroll localization
+
+   .. card:: Jordan
+      :target: payroll_localizations/jordan
+      :image: payroll_localizations/jo.png
+      :alt: Jordan
+
+      Payroll localization
+
+   .. card:: Kenya
+      :target: payroll_localizations/kenya
+      :image: payroll_localizations/ke.png
+      :alt: Kenya
+
+      Payroll localization
+
+   .. card:: Lithuania
+      :target: payroll_localizations
+      :image: payroll_localizations/li.png
+      :alt: Lithuania
+
+      Payroll localization
+
+   .. card:: Luxembourg
+      :target: payroll_localizations
+      :image: payroll_localizations/lu.png
+      :alt: Luxembourg
+
+      Payroll localization
+
+   .. card:: Mexico
+      :target: payroll_localizations/mexico
+      :image: payroll_localizations/mx.png
+      :alt: Mexico
+
+      Payroll localization
+
+   .. card:: Morocco
+      :target: payroll_localizations
+      :image: payroll_localizations/mo.png
+      :alt: Morocco
+
+      Payroll localization
+
+   .. card:: Netherlands
+      :target: payroll_localizations
+      :image: payroll_localizations/nl.png
+      :alt: Netherlands
+
+      Payroll localization
+
+   .. card:: Pakistan
+      :target: payroll_localizations
+      :image: payroll_localizations/pk.png
+      :alt: Pakistan
+
+      Payroll localization
+
+   .. card:: Poland
+      :target: payroll_localizations
+      :image: payroll_localizations/po.png
+      :alt: Poland
+
+      Payroll localization
+
+   .. card:: Romania
+      :target: payroll_localizations
+      :image: payroll_localizations/rm.png
+      :alt: Romania
+
+      Payroll localization
+
+   .. card:: Saudi Arabia
+      :target: payroll_localizations/saudi_arabia
+      :image: payroll_localizations/sa.png
+      :alt: Saudi Arabia
+
+      Payroll localization
+
+   .. card:: Slovakia
+      :target: payroll_localizations
+      :image: payroll_localizations/sk.png
+      :alt: Slovakia
+
+      Payroll localization
+
+   .. card:: Switzerland
+      :target: payroll_localizations
+      :image: payroll_localizations/sw.png
+      :alt: Switzerland
+
+      Payroll localization
+
+   .. card:: Türkiye
+      :target: payroll_localizations/turkey
+      :image: payroll_localizations/tk.png
+      :alt: Türkiye
+
+      Payroll localization
+
+   .. card:: United Arab Emirates
+      :target: payroll_localizations/united_arab_emirates
+      :image: payroll_localizations/ae.png
+      :alt: United Arab Emirates
+
+      Payroll localization
+
+   .. card:: United States
+      :target: payroll_localizations/united_states
+      :image: payroll_localizations/us.png
+      :alt: United States
+
+      Payroll localization
+
+.. note::
+   New countries are frequently added to this list, as Odoo keeps expanding and improving existing
+   localizations and related documentation.
+
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 Install localization package
 ============================
 

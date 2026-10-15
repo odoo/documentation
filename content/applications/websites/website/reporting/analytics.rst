@@ -125,9 +125,17 @@ To follow your Odoo website's traffic with Google Analytics:
       :alt: Measurement ID in Google Analytics.
 
 #. In Odoo, go to :menuselection:`Website --> Configuration --> Settings`.
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 #. In the :guilabel:`Tracking & SEO` section, enable :guilabel:`Google Tag Manager/Google
    Analytics`, paste the measurement ID in the :guilabel:`Identifier` field, and click
    :guilabel:`Save`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+#. In the :guilabel:`Tracking & SEO` section, enable :guilabel:`Google Analytics`, then paste the
+   :guilabel:`Measurement ID` and click :guilabel:`Save`.
+=======
+#. In the :guilabel:`Tracking & SEO` section, enable :guilabel:`Google Analytics`, then paste the
+   measurement ID in the :guilabel:`Measurement ID or Tag` field and click :guilabel:`Save`.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. tip::
    If you have :doc:`multiple websites <../configuration/multi_website>` with separate domains, it
@@ -145,8 +153,18 @@ To follow your Odoo website's traffic with Google Analytics:
 Google Tag Manager
 ==================
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 Google Tag Manager is a tag management system that allows you to easily update measurement codes and
 related code fragments, collectively known as tags, on your website or mobile app.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+Google Tag Manager is a tag management system that allows you to easily update
+measurement codes and related code fragments, collectively known as tags on your website or mobile
+app, directly through the code injector.
+=======
+Google Tag Manager is a tag management system that allows you to easily update measurement codes and
+related code fragments, collectively known as tags, on your website or mobile app, directly through
+the code injector.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. note::
    :abbr:`GTM (Google Tag Manager)` is not an analytics tool and does not offer reporting features.
@@ -163,6 +181,7 @@ related code fragments, collectively known as tags, on your website or mobile ap
 
 To configure GTM, proceed as follows:
 
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 #. `Create an account and a container in Google Tag Manager
    <https://support.google.com/tagmanager/answer/14842164?hl=en>`_.
 #. On the `GTM accounts page <https://tagmanager.google.com/#/home>`_, locate the relevant website
@@ -188,6 +207,29 @@ To configure GTM, proceed as follows:
       tab, scroll down to the :guilabel:`Advanced` section, and, next to :guilabel:`Code Injection`,
       click :guilabel:`<head> and </body>` to paste the corresponding code.
    #. Click :guilabel:`Save`.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+#. Create or sign in to a Google account by going to https://tagmanager.google.com/.
+#. In the :guilabel:`Accounts` tab, click :guilabel:`Create Account`.
+#. Enter an :guilabel:`Account Name` and select the account's :guilabel:`Country`.
+#. Enter your website's URL in the :guilabel:`Container name` field and select the :guilabel:`Target
+   platform`.
+#. Click :guilabel:`Create` and agree to the Terms of Service.
+#. Copy the `<head>` and `<body>` codes from the popup window. Then, go to your website, click
+   :guilabel:`Edit`, go to the :guilabel:`Theme` tab, scroll down to the :guilabel:`Advanced`
+   section, then click :guilabel:`<head>` and :guilabel:`</body>` next to :guilabel:`Code Injection`
+   to paste the codes, then click :guilabel:`Save`.
+=======
+#. Create or sign in to a Google account by going to https://tagmanager.google.com/.
+#. In the :guilabel:`Accounts` tab, click :guilabel:`Create Account`.
+#. Enter an :guilabel:`Account Name` and select the account's :guilabel:`Country`.
+#. Enter your website's URL in the :guilabel:`Container name` field and select the :guilabel:`Target
+   platform`.
+#. Click :guilabel:`Create` and agree to the Terms of Service.
+#. Copy the `<head>` and `<body>` codes from the pop-up window. Then, go to your website, click
+   :guilabel:`Edit`, go to the :guilabel:`Theme` tab, scroll down to the :guilabel:`Advanced`
+   section, then click :guilabel:`<head> and </body>` next to :guilabel:`Code Injection`
+   to paste the codes, then click :guilabel:`Save`.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. note::
    The data is collected in the marketing tools used to monitor the website (e.g., Google Analytics,

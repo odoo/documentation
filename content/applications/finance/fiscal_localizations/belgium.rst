@@ -814,6 +814,7 @@ VAT signing card
 When you open the POS register and make your initial transaction, you are prompted to enter the PIN
 provided with your :abbr:`VSC (VAT signing card)`. The card is delivered by the :abbr:`FPS (Service
 Public Federal Finances)` upon `registration <https://www.systemedecaisseenregistreuse.be/fr/enregistrement>`_.
+<<<<<<< 2f8ed910ef5ef22b22112decbac44d6f0f999740
 
 .. _belgium/pos/bancontact-pay:
 
@@ -931,3 +932,38 @@ WinBooks are likely to have incomplete data. The counterpart of incomplete entri
 suspense account.
 
 Once configured, click :guilabel:`Import` to import your data into Odoo.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+
+WinBooks import
+===============
+
+Before importing your data in Odoo, you must prepare the data to be exported. Open **WinBooks** and
+navigate to :menuselection:`Maintenance --> Backup`. Then, select to export the following data as a
+`.zip` file:
+
+- Chart of accounts,
+- Contacts,
+- Taxes,
+- History of journal entries,
+- Documents.
+
+.. note::
+   - The following WinBooks Desktop versions are supported: 5.50, 6, 7, and 8.
+   - File sizes beyond 396 MB may not work during the import.
+
+To import your data into Odoo, :doc:`install <../../general/apps_modules>` the module
+:guilabel:`Account Winbooks Import` (`account_winbooks_import`). Then, open the **Accounting app**,
+and go to :menuselection:`Configuration --> Settings`. Under the :guilabel:`Accounting Import`
+section, click :icon:`oi-arrow-right` :guilabel:`Import`. Finally, click :guilabel:`Import WBK` and
+upload the previously prepared `.zip` file.
+
+Check :guilabel:`Import only open years` if you wish to import only open years. Years closed in
+WinBooks are likely to have incomplete data. The counterpart of incomplete entries will be set in a
+suspense account.
+
+If you choose to import years closed in WinBooks, enter the code of the suspense account used to
+balance incomplete entries in the :guilabel:`Suspense Account Code` field.
+
+Once configured, click :guilabel:`Import` to import your data into Odoo.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
