@@ -37,23 +37,25 @@ class Monkey:
         old = getattr(self.obj, name)
         setattr(self.obj, name, lambda self_, *args, **kwargs: fn(old, self_, *args, **kwargs))
 
-@Monkey(toctree.TocTree)
-def resolve(old_resolve, tree, docname, *args, **kwargs):
+def _resolve_toctree_and_patch_nodes(old_resolve, env_or_tree, docname, *args, **kwargs):
+    """ Call the original toctree-resolving callable then patch the resulting nodes.
+
+    Internal structure of toc nodes:
+    <ul>
+        <li>
+            <p><a/></p>
+            <ul>
+                ...
+            </ul>
+        </li>
+        <li/>
+    <ul/>
+    """
+    # Sphinx < 7.3 passes the `TocTree` adapter (which exposes `.env`); Sphinx >= 7.3 calls the
+    # module-level `_resolve_toctree` function directly with the `BuildEnvironment` itself.
+    env = env_or_tree if hasattr(env_or_tree, 'metadata') else env_or_tree.env
 
     def _update_toctree_nodes(_node) -> None:
-        """ Make necessary changes to Docutils' nodes of the toc.
-
-        Internal structure of toc nodes:
-        <ul>
-            <li>
-                <p><a/></p>
-                <ul>
-                    ...
-                </ul>
-            </li>
-            <li/>
-        <ul/>
-        """
         if isinstance(_node, nodes.reference):  # The node is a reference (<a/>)
             _node_docname = _get_docname(_node)
             _clear_reference_if_empty_page(_node, _node_docname)
@@ -99,17 +101,30 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
             isinstance(_subnode, nodes.bullet_list)
             for _subnode in _reference_node.parent.parent.children
         ):  # The node references a toc
-            if 'show-content' not in tree.env.metadata[_node_docname]:
+            if 'show-content' not in env.metadata[_node_docname]:
                 _reference_node['refuri'] = '#'  # The page must not be accessible
 
     def _set_docname_as_class(_reference_node, _node_docname):
         _node_docname = _node_docname or docname  # refuri==None <-> href="#"
         _reference_node.parent.parent['classes'].append(f'o_menu_{_node_docname.replace("/", "_")}')
 
-    resolved_toc = old_resolve(tree, docname, *args, **kwargs)
+    resolved_toc = old_resolve(env_or_tree, docname, *args, **kwargs)
     if resolved_toc:  # `resolve` returns None if the depth of the TOC to resolve is too high
         _update_toctree_nodes(resolved_toc)
     return resolved_toc
+
+
+if hasattr(toctree, '_resolve_toctree'):
+    # Sphinx >= 7.3: the HTML builder calls the module-level `_resolve_toctree` directly to build
+    # the sidebar/global toc, bypassing `TocTree.resolve` (now a thin wrapper around it).
+    _original_resolve_toctree = toctree._resolve_toctree
+    def _patched_resolve_toctree(*args, **kwargs):
+        return _resolve_toctree_and_patch_nodes(_original_resolve_toctree, *args, **kwargs)
+    toctree._resolve_toctree = _patched_resolve_toctree
+else:
+    @Monkey(toctree.TocTree)
+    def resolve(old_resolve, tree, docname, *args, **kwargs):
+        return _resolve_toctree_and_patch_nodes(old_resolve, tree, docname, *args, **kwargs)
 
 
 def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
