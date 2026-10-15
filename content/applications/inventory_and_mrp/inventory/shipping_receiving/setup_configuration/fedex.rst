@@ -155,7 +155,8 @@ Specify the :guilabel:`Declared Value Percentage` for insurance purposes.
 Test environment unavailable
 ============================
 
-FedEx does not allow users to create a test environment in Odoo to verify that the shipping method
-is set up properly.
+At the moment, FedEx does not offer a test environment where testing credentials can be used to
+simulate future deliveries.
 
-To test the setup, create shipments in Odoo, then cancel the request through FedEx.
+Use production credentials for testing instead, and cancel the test requests through the FedEx
+platform after testing is complete.
