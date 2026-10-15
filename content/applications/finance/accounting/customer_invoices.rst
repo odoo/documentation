@@ -9,12 +9,10 @@ customer. It records receivables as they are sent to customers. Customer invoice
 amounts due for the goods and/or services provided, applicable sales taxes, shipping and handling
 fees, and other charges. Odoo supports multiple invoicing and payment workflows.
 
-.. seealso::
-   :doc:`/applications/finance/accounting/customer_invoices/overview`
-
 From draft invoice to profit and loss report, the process involves several steps once the goods (or
 services) have been ordered/shipped (or rendered) to a customer, depending on the invoicing policy:
 
+- :ref:`accounting/invoice/invoice-from-orders`
 - :ref:`accounting/invoice/creation`
 - :ref:`accounting/invoice/confirmation`
 - :ref:`accounting/invoice/sending`
@@ -22,23 +20,121 @@ services) have been ordered/shipped (or rendered) to a customer, depending on th
 - :ref:`accounting/invoice/followup`
 - :ref:`accounting/invoice/reporting`
 
+.. _accounting/invoice/invoice-from-orders:
+
+Invoice from orders
+===================
+
+Based on specific business needs, Odoo automates customer invoice creation by generating draft
+invoices directly from source documents, such as sales orders. Select one of the following methods:
+
+- :ref:`Sales <accounting/invoice/invoice-from-sales>`
+- :ref:`Subscriptions <accounting/invoice/invoice-from-subscriptions>`
+- :ref:`eCommerce <accounting/invoice/invoice-from-ecommerce>`
+- :ref:`Point of sale <accounting/invoice/invoice-from-pos>`
+
+.. _accounting/invoice/invoice-from-sales:
+
+Sales
+-----
+
+Standard sales workflows convert approved quotations into sales orders, which then generate draft
+invoices. The different invoicing options are:
+
+-  Invoicing manually: Manually create draft invoices directly from the sales order using the
+   :guilabel:`Create Invoice` button.
+-  Depending on the :doc:`invoicing policy configured
+   <../../sales/sales/invoicing/invoicing_policy>`, :guilabel:`Ordered quantities` invoicing
+   (before delivery) or :guilabel:`Delivered quantities` invoicing.
+
+.. note::
+   - Manual invoicing lets salespeople generate custom invoices for products or services, with
+     options to charge the entire order, specific lines, or fixed/percentage advance payments.
+   - Invoices can be generated directly from the :doc:`Repairs app
+     </applications/inventory_and_mrp/repairs>` sales orders to invoice after-sales services.
+
+.. tip::
+   To create a consolidated invoice for all sales orders linked to the same customer, follow these
+   steps:
+
+   #. Go to :menuselection:`Sales --> Orders --> Orders`, and use the search bar to
+      :guilabel:`Group By` :guilabel:`Customer`.
+   #. Click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to expand the list of sales
+      orders for the desired customer.
+   #. Select the relevant sales orders with :guilabel:`Invoice Status` set to :guilabel:`To
+      Invoice`, ensuring all selected orders share the same invoicing address and the same delivery
+      address.
+   #. Click :guilabel:`Create Invoices`.
+   #. In the :guilabel:`Create invoice(s)` window, keep the :guilabel:`Consolidated Billing` option
+      enabled, and set the :guilabel:`Timesheets Period`, if needed.
+   #. Click :guilabel:`Create Draft`.
+
+.. seealso::
+   :doc:`../../sales/sales/invoicing/proforma`
+
+.. _accounting/invoice/invoice-from-contracts:
+
+Contracts
+~~~~~~~~~
+
+Under the terms of a contract with a customer, invoices can be generated periodically or at the end
+of the contract based on the following:
+
+- :doc:`Time and materials <../../sales/sales/invoicing/time_materials>`: Based on recorded hours
+  and materials used, as documented in timesheets or purchase records.
+- Fixed products/services: Based on predefined products or services as outlined in a sales order
+  linked to the contract.
+
+.. note::
+   This invoicing method is commonly used by service companies that bill primarily on a
+   time-and-materials basis. In contrast, service companies that invoice at a fixed price typically
+   follow a :ref:`standard sales order process <accounting/invoice/invoice-from-sales>`.
+
+.. seealso::
+   :doc:`../../sales/sales/invoicing/milestone`
+
+.. _accounting/invoice/invoice-from-subscriptions:
+
+Subscriptions
+-------------
+
+Invoices for :doc:`subscriptions <../../sales/subscriptions>` or recurring contracts are generated
+automatically at regular intervals. The billing period and specific services or products included
+are defined in the configured recurring plans.
+
+.. _accounting/invoice/invoice-from-ecommerce:
+
+eCommerce
+---------
+
+:ref:`eCommerce orders generate invoices <ecommerce/handling/invoices>` once the order has been
+fully paid.
+
+.. _accounting/invoice/invoice-from-pos:
+
+Point of sale
+-------------
+
+Point of Sale allows for :doc:`creating invoices <../../sales/point_of_sale/use/pos_invoices>` for
+:ref:`registered customers <pos/use/customers>`.
+
 .. _accounting/invoice/creation:
 
-Invoice creation
-================
+Manual invoice creation
+=======================
 
-Draft invoices can be created directly from documents like sales orders or purchase orders or
-manually from the :guilabel:`Customer Invoices` journal in the :guilabel:`Accounting Dashboard`.
+Draft invoices can be created manually from the :guilabel:`Customer Invoices` journal in the
+:guilabel:`Accounting Dashboard`.
 
 An invoice must include the required information to enable the customer to pay promptly for their
 goods and services. Make sure the following fields are appropriately completed:
 
 - :guilabel:`Customer`: When a customer is selected, Odoo automatically pulls information from the
-  customer record like the invoice address,
+  customer record, such as the invoice address,
   :doc:`preferred payment terms <customer_invoices/payment_terms>`,
   :doc:`fiscal positions <taxes/fiscal_positions>`, receivable account, and more onto the invoice.
-  To change these values for this specific invoice, edit them directly on the invoice. To change
-  them for future invoices, change the values on the contact record.
+  To change these values for this specific invoice, edit them directly on the invoice. To apply them
+  for future invoices, update the values on the contact record.
 - :guilabel:`Invoice Date`: If not set manually, this field is automatically set as the current date
   upon confirmation.
 - :guilabel:`Due Date` or :doc:`payment terms <customer_invoices/payment_terms>`: To specify when
@@ -64,10 +160,10 @@ invoice lines.
    Configuration --> Settings` and activate the :guilabel:`Total amount of invoice in letters`
    option.
 
-The :guilabel:`Journal Items` tab displays the accounting entries created. Additional invoice
-information such as the :guilabel:`Customer Reference`, :guilabel:`Payment Reference`, :doc:`Fiscal
-Positions <taxes/fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, and more can be
-added or modified in the :guilabel:`Other Info` tab.
+The :guilabel:`Journal Items` tab displays the created accounting entries. Additional invoice
+information, such as the :guilabel:`Customer Reference`, :guilabel:`Payment Reference`, :doc:`Fiscal
+Positions <taxes/fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, and more, can
+be added or modified in the :guilabel:`Other Info` tab.
 
 .. note::
    Odoo initially creates invoices in :guilabel:`Draft` status. Draft invoices have no accounting
@@ -136,12 +232,12 @@ Sending multiple invoices
 -------------------------
 
 To send multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`,
-select them in the :guilabel:`Invoices` list view and click :guilabel:`Send`. The
-:guilabel:`Send` window displays the number of selected invoice to send by email.
+select them in the :guilabel:`Invoices` list view, and click :guilabel:`Send`. The
+:guilabel:`Send` window displays the number of selected invoices to send by email.
 
 After clicking :guilabel:`Send`, a banner is added to the selected invoices to indicate they are
 part of an ongoing send batch. This helps prevent the process from being triggered manually again,
-as it may take some time to complete for exceptionally large batches.
+as exceptionally large batches may take some time to complete.
 
 To check all invoices that have not yet been sent, go to :menuselection:`Accounting --> Customers
 --> Invoices`. In the :guilabel:`Invoices` list view, click into the search bar and filter on
@@ -225,7 +321,6 @@ liabilities, and equity at a specific time.
 .. toctree::
    :titlesonly:
 
-   customer_invoices/overview
    customer_invoices/customer_addresses
    customer_invoices/payment_terms
    customer_invoices/terms_conditions
