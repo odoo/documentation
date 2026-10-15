@@ -44,9 +44,9 @@
       In the `header` of a list or kanban view, the button also accepts files dragged and
       dropped on the records of the view. In a form, the record is saved first, as for the other
       buttons. In the `header` of the list or kanban view of an :ref:`x2many field <reference/view_architectures/form/field>`, the button is shown
-      above the field, without drag and drop: it calls the method of the field's model on an
-      empty recordset, without saving the parent record, given in the `context` as
-      `active_model` and `active_id`.
+      above the field, without drag and drop: the parent record is saved first, then the method
+      of the field's model is called on an empty recordset, with the parent record in the
+      `context` as `active_model` and `active_id`.
 
       The button `options` can contain:
 
@@ -55,8 +55,6 @@
       - `multiple`: whether several files can be picked at once. Default: `True`.
       - `max_size`: the maximum size of a file, in bytes. Default: the upload limit of the
         server. The larger files are left out with a warning, the others are uploaded.
-      - `res_model`: call the method of this model, on an empty recordset, instead of the view's
-        model. The button `context` passes the values it needs, and a form is not saved first.
 
    .. example::
       .. code-block:: xml
