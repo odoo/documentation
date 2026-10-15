@@ -201,7 +201,8 @@ Online payment providers
      -
 
 .. |V| replace:: ✔
-.. [*] Refer to the :doc:`Xendit documentation <payment_providers/xendit>` for more information.
+
+\* Refer to the :doc:`Xendit documentation <payment_providers/xendit>` for more information.
 
 .. note::
    - Each provider has its own specific configuration flow, depending on which feature is available.
