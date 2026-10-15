@@ -51,8 +51,8 @@ class BootstrapTranslator(HTML5Translator):
 
         # Meta
         self.meta = ['', '']  # HTMLWriter strips out the first two items from Translator.meta
-        self.add_meta('<meta http-equiv="X-UA-Compatible" content="IE=edge">')
-        self.add_meta('<meta name="viewport" content="width=device-width, initial-scale=1">')
+        self.meta.append('<meta http-equiv="X-UA-Compatible" content="IE=edge">')
+        self.meta.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
 
         # Body
         self.body = []
@@ -118,6 +118,13 @@ class BootstrapTranslator(HTML5Translator):
             node.insert(0, nodes.title(name, admonitionlabels[name]))
 
     # overwritten
+    # `visit_admonition` above always emits a plain <div> without pushing a
+    # closing tag onto `self.context` (unlike Sphinx's own implementation), so
+    # depart must close it directly instead of popping `self.context`.
+    def depart_admonition(self, node=None):
+        self.body.append('</div>\n')
+
+    # overwritten
     # Appends alert-title class to <p> if parent is an Admonition.
     def visit_title(self, node):
         if isinstance(node.parent, nodes.Admonition):
@@ -145,8 +152,6 @@ class BootstrapTranslator(HTML5Translator):
     # overwritten
     # Ensure table class is present for tables
     def visit_table(self, node):
-        self.generate_targets_for_table(node)
-
         # c/p of https://github.com/pydata/pydata-sphinx-theme/pull/509/files
         self._table_row_indices.append(0)
 
