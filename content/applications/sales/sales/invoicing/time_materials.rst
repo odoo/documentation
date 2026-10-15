@@ -53,7 +53,13 @@ Then, click :guilabel:`Save` to save all changes.
    :align: center
    :alt: What the Timesheets feature looks like on the Odoo Project settings page.
 
+<<<<<<< 355b39e088c31445af77af6dc46b63257adbc72d
 .. _sales/time-materials/configuration-product:
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+.. _sales/invoicing/configured-service-product:
+=======
+.. _sales/time_materials/configured-service-product:
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 Service product configuration
 =============================
@@ -96,7 +102,13 @@ Order* options, it is possible to add time spent to a sales order.
 To see that in action, navigate to :menuselection:`Sales app --> New` to open a blank quotation
 form. Then, proceed to add a :guilabel:`Customer`, and in the :guilabel:`Order Lines` tab, click
 :guilabel:`Add a product`, and select the properly :ref:`configured service product
+<<<<<<< 355b39e088c31445af77af6dc46b63257adbc72d
 <sales/time-materials/configuration-product>` from the drop-down menu.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+<sales/invoicing/configured-service-product>` from the drop-down menu.
+=======
+<sales/time_materials/configured-service-product>` from the drop-down menu.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 Next, click :guilabel:`Confirm` to confirm the order.
 

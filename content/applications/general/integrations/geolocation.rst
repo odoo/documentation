@@ -57,6 +57,7 @@ Map` or :guilabel:`Google Place Map`.
 
 .. seealso::
    :doc:`address_autocomplete`
+<<<<<<< 355b39e088c31445af77af6dc46b63257adbc72d
 
 .. _general/integrations/geolocation-routes:
 
@@ -88,3 +89,37 @@ To create routes, follow these steps:
    - `How to use Mapbox securely: Access tokens
      <https://docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_
    - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+=======
+
+.. _general/integrations/geolocation-routes:
+
+Map routes
+==========
+
+Map routes are useful for providing itineraries and locations to :doc:`field service
+technicians </applications/services/field_service/planning_itinerary>` and delivery routes to
+drivers in a :doc:`dispatch management system
+</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch>`.
+
+To create routes, follow these steps:
+
+#. Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_.
+#. `Create an access token <https://docs.mapbox.com/help/dive-deeper/access-tokens/>`_.
+#. Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-tokens/>`_ and copy
+   your token to the clipboard.
+
+   .. important::
+      Mapbox displays secret tokens only once upon creation and hides them permanently after
+      leaving the :guilabel:`Access Token` page. Make sure to save the token.
+
+#. In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down to the
+   :guilabel:`Integrations` section.
+#. Under :guilabel:`Map Routes`, paste the Mapbox access token into the :guilabel:`Token` field.
+#. Click :guilabel:`Save`.
+
+.. seealso::
+   - `How to use Mapbox securely: Access tokens
+     <https://docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_
+   - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789

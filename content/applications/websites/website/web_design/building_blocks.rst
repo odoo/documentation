@@ -165,10 +165,21 @@ to the :guilabel:`Style` tab, and set the :guilabel:`Layout` field to :guilabel:
 Grid
 ~~~~
 
+<<<<<<< 355b39e088c31445af77af6dc46b63257adbc72d
 The :guilabel:`Grid` layout allows you to reposition and resize elements by dragging and dropping
 them. Once this layout type is selected, additional options are available to :guilabel:`Add
 Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`. Adjust their
 position and size using the :guilabel:`Spacing` options.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+The :guilabel:`Grid` layout allows you to reposition and resize elements, such as images or text, by
+dragging and dropping them. When :guilabel:`Grid` is selected, additional options are available to
+:guilabel:`Add Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`.
+=======
+The :guilabel:`Grid` layout allows you to reposition and resize elements by dragging and dropping
+them. Once this layout type is selected, additional options are available to :guilabel:`Add
+Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`. Adjust their
+position and size using the :guilabel:`Spacing (Y, X)` options.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. _website/building_blocks/columns:
 
@@ -211,8 +222,16 @@ and drag and drop the :guilabel:`Custom` categorical block. In the pop-up window
 the desired block in the :guilabel:`Custom` category.
 
 .. tip::
+<<<<<<< 355b39e088c31445af77af6dc46b63257adbc72d
    In the :guilabel:`Insert a block` pop-up window, click :icon:`fa-pencil` (:guilabel:`Rename`) to
    rename the custom block or :icon:`fa-trash` (:guilabel:`Remove`) to delete it.
+||||||| b92af720ce3cbc93da96b43a15ccdee04f6e5f0b
+   In the :guilabel:`Insert a block` popup, click :icon:`fa-pencil` (:guilabel:`edit`) to rename the
+   custom block or :icon:`fa-trash` (:guilabel:`delete`) to delete it.
+=======
+   In the :guilabel:`Insert a block` pop-up window, click :icon:`fa-pencil` (:guilabel:`edit`) to
+   rename the custom block or :icon:`fa-trash` (:guilabel:`remove`) to delete it.
+>>>>>>> c88fc783f3fd8812857421ea73f158c7859a2789
 
 .. _website/building_blocks/anchor:
 
