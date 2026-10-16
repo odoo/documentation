@@ -68,9 +68,10 @@ The Odoo **Sales** app can add a custom PDF as a header or footer. The :guilabel
 in a quote allows the selection of multiple headers and footers for insertion into the final PDF
 quote.
 
-To add a custom PDF as a header or footer, navigate to :menuselection:`Sales app --> Configuration
---> Headers/Footers`. On this page, click :guilabel:`New` to create a new header or footer, or click
-:guilabel:`Upload` to add a PDF file.
+To add a custom PDF as a header or footer, navigate to
+:menuselection:`Sales app --> Configuration --> Settings`, and click :icon:`fa-arrow-right`
+:guilabel:`Headers/Footers` under the :guilabel:`PDF Quote builder` setting. On this page, click
+:guilabel:`New` to create a new header or footer, or click :guilabel:`Upload` to add a PDF file.
 
 Clicking :guilabel:`Upload` lets the user select a PDF file from their computer. Select the
 :guilabel:`Document Type` to set the order in which the PDF appears in the quote. :guilabel:`Header`
@@ -94,7 +95,7 @@ to that template.
 
 .. note::
    Headers and footers can also be added to a quotation template by navigating to
-   :menuselection:`Sales app --> Configuration --> Quotation Templates`. Select a template and then
+   :menuselection:`Sales app --> Configuration --> Templates`. Select a template and then
    in the :guilabel:`Quote Builder` tab, :guilabel:`Add` or :guilabel:`Upload` a PDF directly.
 
 .. figure:: pdf_quote_builder/config-header-pdf.png

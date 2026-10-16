@@ -88,8 +88,9 @@ Map PDF form fields to Odoo
 ===========================
 
 This step connects any *dynamic form field* in the PDF to the corresponding Odoo field by specifying
-the exact location of that information. Once the PDF file is ready, save the changes and upload it
-to Odoo via :menuselection:`Sales app --> Configuration --> Headers/Footers` and clicking
+the exact location of that information. Once the PDF file is ready, save the changes. Then, go to
+:menuselection:`Sales app --> Configuration --> Settings`, click :icon:`fa-arrow-right`
+:guilabel:`Headers/Footers` under the :guilabel:`PDF Quote builder` setting, and click
 :guilabel:`Upload`.
 
 Odoo automatically detects *dynamic form fields* in the uploaded PDF and displays the

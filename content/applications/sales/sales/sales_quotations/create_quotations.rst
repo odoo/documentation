@@ -21,30 +21,29 @@ Settings`, and scroll to the :guilabel:`Quotations & Orders` section.
 .. image:: create_quotations/quotations-orders-section.png
    :alt: The Quotations and Orders section on the Odoo Sales app Settings page.
 
-- :guilabel:`Mandatory Product`: Prevents sales without a linked product from being completed.
-- :guilabel:`Online Signature`: Requests an online signature by default to validate orders. This may
-  be changed on individual orders.
 - :guilabel:`Online Payment`: Requests online prepayment from customers to confirm orders. The
   payment may be full or partial. When this option is active, an additional field
   (:guilabel:`Payment X %`) appears. A demo with the current payment provider may be configured by
   clicking the :guilabel:`Configure Demo` button. Other providers may be selected by clicking
   :icon:`fa-arrow-right` :guilabel:`View Other Providers`.
-- :guilabel:`Default Quotation Validity`: Determines a set amount (in :guilabel:`days`) that
-  quotations remain valid for. This default may be changed per order.
-- :guilabel:`Sale Warnings`: Issues warning messages to database users about orders that include
-  specific products or customers.
+- :guilabel:`Configure Delivery Methods`: Configures delivery methods, including integrations with
+  delivery providers.
+- :guilabel:`Mandatory Product`: Prevents sales without a linked product from being completed.
+- :guilabel:`Online Signature`: Requests an online signature by default to validate orders. This
+  may be changed on individual orders.
+- :guilabel:`Quotation Validity`: Determines a set amount (in :guilabel:`days`) that quotations
+  remain valid for. This default may be changed per order.
 - :guilabel:`PDF Quote builder`: Customizes the look of quotations with header pages, product
   descriptions, footer pages, and more.
-- :guilabel:`Display Product Images`: Allows product images to be displayed on PDFs and online
-  quotations.
+- :guilabel:`Product Images`: Allows product images to be displayed on PDFs and online quotations.
 - :guilabel:`Lock Confirmed Sales`: Ensures that orders cannot be edited once confirmed.
-- :guilabel:`Pro-Forma Invoice`: Allows pro-forma invoices to be sent to customers ahead of regular
+- :guilabel:`Pro Forma`: Allows pro-forma invoices to be sent to customers ahead of regular
   invoices.
 
 To activate any of these settings, click the checkbox beside the desired options. Then, click
 :guilabel:`Save`. The values set in the :guilabel:`Online Signature`, :guilabel:`Online Payment`,
-:guilabel:`Default Quotation Validity`, and :guilabel:`Display Product Images` fields are
-company-specific. In a multi-company database, these must be set for each individual company.
+:guilabel:`Quotation Validity`, and :guilabel:`Product Images` fields are company-specific. In a
+multi-company database, these must be set for each individual company.
 
 .. _sales/create_quotations/quotations-dashboard:
 
@@ -115,7 +114,7 @@ quotation. It should be noted that some additional fields may appear, depending 
 selected.
 
 The default date that appears in the :guilabel:`Expiration` field is based on the number configured
-in the :ref:`Default Quotation Validity setting <sales/create_quotations/quotation-settings>` (in
+in the :ref:`Quotation Validity setting <sales/create_quotations/quotation-settings>` (in
 :menuselection:`Sales app --> Configuration --> Settings`).
 
 .. tip::
