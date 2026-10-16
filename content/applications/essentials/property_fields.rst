@@ -56,7 +56,7 @@ Then, configure the property field in the popover:
       * - :ref:`Monetary <studio/fields/simple-fields-monetary>`
         - Selection of a (cost) currency
         - Enter a :guilabel:`Default Value` if desired.
-      * - :ref:`Date <studio/fields/simple-fields-date>`
+      * - :ref:`Date <studio/fields/simple-fields-date-time>`
         - Selection of a date on a calendar
         - Select a :guilabel:`Default Value` if desired.
       * - :ref:`Date & Time <studio/fields/simple-fields-date-time>`

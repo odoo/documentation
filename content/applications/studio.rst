@@ -31,14 +31,14 @@ Learn how to :doc:`build an app from scratch <studio/models_modules_apps>`.
 
 .. _studio/access:
 
-To access **Studio**, navigate to the app and model you want to modify, then click the
+To access Studio, navigate to the app and model you want to modify, then click the
 :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon. Alternatively, with any app open, click the
 :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon and navigate to the relevant app and model.
 
-To close **Studio**, click :guilabel:`Close` in the upper-right corner.
+To close Studio, click :guilabel:`Close` in the upper-right corner.
 
 .. warning::
-   Installing **Studio** in an Odoo database on the *Standard* pricing plan automatically triggers
+   Installing Studio in an Odoo database on the *Standard* pricing plan automatically triggers
    an upsell to the *Custom* pricing plan.
 
    - **For yearly or multi-year contracts**: An upsell order is created with a 30-day limit.
