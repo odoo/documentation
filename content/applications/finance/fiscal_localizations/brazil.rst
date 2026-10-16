@@ -2,7 +2,6 @@
 Brazil
 ======
 
-.. |IAP| replace:: :abbr:`IAP (In-app-purchase)`
 .. |API| replace:: :abbr:`API (Application programming interface)`
 .. |SO| replace:: :abbr:`SO (Sales order)`
 
@@ -40,9 +39,8 @@ The following modules related to the Brazilian localization are available:
    * - :guilabel:`Brazil - Accounting Reports`
      - `l10n_br_reports`
      - Accounting reports for Brazil.
-   * - :guilabel:`AvaTax Brazil`, :guilabel:`Avatax Brazil Sale` & :guilabel:`Test SOs for the
-       Brazilian Avatax`
-     - `l10n_br_avatax`, `l10n_br_avatax_sale` & `l10n_br_test_avatax_sale`
+   * - :guilabel:`AvaTax Brazil` and :guilabel:`Avatax Brazil Sale`
+     - `l10n_br_avatax` and `l10n_br_avatax_sale`
      - Goods and Services tax computation through Avalara.
    * - :guilabel:`Brazilian Accounting EDI`
      - `l10n_br_edi`
@@ -68,6 +66,9 @@ The following modules related to the Brazilian localization are available:
    * - :guilabel:`Brazil - Sale Subscription`
      - `l10n_br_sale_subscription`
      - Sale subscription modifications for Brazil
+   * - :guilabel:`Brazil - NFS-e Bill OCR`
+     - `l10n_br_edi_extract`
+     - Extracts NFE-s vendor bills using OCR to fill them automatically
 
 .. note::
    The localization's core modules are installed automatically with the localization. The rest can
@@ -189,12 +190,7 @@ AvaTax integration
    - Make sure to :ref:`install <general/install>` the :guilabel:`AvaTax Brazil` (`l10n_br_avatax`)
      module.
    - Odoo is a certified partner of Avalara Brazil.
-   - The :doc:`Avalara AvaTax integration <../accounting/taxes/avalara>` uses :doc:`In-App-Purchases
-     (IAPs) <../../essentials/in_app_purchase>` to compute taxes and handle electronic documents
-     (e.g., :ref:`NF-e <localizations/brazil/e-invoice-goods>`, :ref:`NFS-e
-     <localizations/brazil/e-invoice-services>`). Each action consumes credits from the `IAP credit
-     balance <https://iap.odoo.com/iap/in-app-services/819>`_. On creation, new databases receive
-     500 free credits.
+   - Avalara Brazil usage is free of charge with Odoo.
 
 To compute the goods and services tax and process electronic invoices, the following configurations
 are needed:
@@ -301,42 +297,6 @@ how the product will be used.
 E-invoices for goods (NF-e)
 ***************************
 
-.. important::
-   The :ref:`Avalara integration <localizations/brazil/avatax-account>` works on a credit-based
-   system, where each interaction with Avalara consumes one credit. Below are the main
-   credit-consuming operations:
-
-   **Sales application**
-
-   - Tax calculation on quotations and sales orders.
-
-   **Accounting application**
-
-   - Tax calculation on invoices.
-   - Electronic invoice submission (NF-e or NFS-e).
-
-   **Occasional operations**: (each step is billed separately)
-
-   - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
-   - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
-   - :ref:`Sales refund via credit note <localizations/brazil/credit-notes>`
-   - :ref:`Sales complementary invoice via debit note <localizations/brazil/debit-notes>`
-   - :ref:`Invoice number range invalidation <localizations/brazil/invoice-number-invalidation>`
-   - Other tax validations.
-
-.. note::
-   If taxes are calculated in the **Sales** app, and the invoice is later issued in the
-   **Accounting** app, the calculation happens twice, consuming two credits.
-
-.. example::
-   | **Sales order confirmed**
-   | :icon:`fa-arrow-down` 1 credit (tax calculation)
-   | **Invoice created**
-   | :icon:`fa-arrow-down` 1 credit (tax calculation)
-   | **Invoice confirmed and submitted**
-   | :icon:`fa-arrow-down` 1 credit (tax calculation) + 1 credit (submit invoice)
-   | **Total: 4 credits**
-
 - :guilabel:`CEST Code`: tax classification code identifying goods and products subject to tax
   substitution under ICMS regulations, and helps determine the applicable tax treatment and
   procedures for specific items. The product's applicability to this requirement can be verified at
@@ -360,43 +320,6 @@ E-invoices for goods (NF-e)
 
 E-invoices for services (NFS-e)
 *******************************
-
-.. important::
-   The :ref:`Avalara integration <localizations/brazil/avatax-account>` works on a credit-based
-   system, where each interaction with Avalara consumes one credit. Below are the main
-   credit-consuming operations:
-
-   **Sales application**
-
-   - Tax calculation on quotations and sales orders.
-
-   **Accounting application**
-
-   - Tax calculation on invoices.
-   - Electronic invoice submission (NF-e or NFS-e).
-   - Invoice status check (1 credit is consumed each time the invoice status is checked).
-
-   **Occasional operations**: (each step is billed separately)
-
-   - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
-   - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
-   - :ref:`Sales refund via credit note <localizations/brazil/credit-notes>`
-   - :ref:`Sales complementary invoice via debit note <localizations/brazil/debit-notes>`
-   - :ref:`Invoice number range invalidation <localizations/brazil/invoice-number-invalidation>`
-   - Other tax validations.
-
-.. note::
-   If taxes are calculated in the **Sales** app and the invoice is later issued in the
-   **Accounting** app, the calculation happens twice, consuming two credits.
-
-.. example::
-   | **Sales order confirmed**
-   | :icon:`fa-arrow-down` 1 credit (tax calculation)
-   | **Invoice created**
-   | :icon:`fa-arrow-down` 1 credit (tax calculation)
-   | **Invoice confirmed and submitted**
-   | :icon:`fa-arrow-down` 1 credit (tax calculation) + 1 credit (submit invoice)
-   | **Total: 4 credits**
 
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
 - :guilabel:`Purpose of Use`: intended purpose of use for this product
@@ -569,7 +492,7 @@ customer via email, enable the :guilabel:`E-mail` checkbox.
 
 .. note::
    This is an electronic cancellation, which means that Odoo will send a request to the government
-   to cancel the NF-e. It will then consume one |IAP| credit, as an |API| call occurs.
+   to cancel the NF-e.
 
 .. _localizations/brazil/e-invoice-services-nf-e:
 
@@ -642,19 +565,6 @@ electronic document can be issued through **Odoo Point of Sale**.
 
 Its legal validity is guaranteed by the digital signature and by each Brazilian state's SEFAZ
 (Secretaria da Fazenda).
-
-.. important::
-   The :ref:`Avalara integration <localizations/brazil/avatax-account>` operates on a credit-based
-   system. Each operation that involves communication with Avalara consumes one credit. The
-   following operations within the **Point of Sale** (POS) application are subject to credit
-   consumption:
-
-   - Tax calculation at the time of sale
-   - Electronic invoice issuance (NFC-e)
-
-.. note::
-   Each step is billed separately. For example, calculating taxes and issuing an invoice for the
-   same POS transaction consumes two credits.
 
 .. seealso::
    :doc:`Point of Sale <../../sales/point_of_sale>`
