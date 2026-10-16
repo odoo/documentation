@@ -75,7 +75,7 @@ Date & Calendar
 ---------------
 
 Selecting :guilabel:`Date & Calendar` adds to the :ref:`Form view <studio/views/general/form>` a
-:ref:`Date field <studio/fields/simple-fields-date>` and activates the :ref:`Calendar view
+:ref:`Date field <studio/fields/simple-fields-date-time>` and activates the :ref:`Calendar view
 <studio/views/timeline/calendar>`.
 
 .. _studio/models-modules-apps/suggested-features/date-range-gantt:
@@ -84,8 +84,8 @@ Date range & Gantt
 ------------------
 
 Selecting :guilabel:`Date range & Gantt` adds to the :ref:`Form view <studio/views/general/form>`
-two :ref:`Date fields <studio/fields/simple-fields-date>` next to each other: one to set a start
-date, the other to set an end date, using the :guilabel:`daterange` widget, and activates the
+two :ref:`Date fields <studio/fields/simple-fields-date-time>` next to each other: one to set a
+start date, the other to set an end date, using the :guilabel:`daterange` widget, and activates the
 :ref:`Gantt view <studio/views/timeline/gantt>`.
 
 .. _studio/models-modules-apps/suggested-features/pipeline-stages:
@@ -227,7 +227,7 @@ example, when setting up a new module or for training purposes.
 Export customizations
 ---------------------
 
-To export customizations, click the :icon:`oi-studio` :guilabel:`(Toggle Studio)` button on the main
+To export customizations, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) button on the main
 Odoo dashboard, then :guilabel:`Export`, then either:
 
 - download all Studio customizations by clicking the :guilabel:`Export` button; or
@@ -255,9 +255,8 @@ Tick the following options as relevant:
 - :guilabel:`Updatable`: if the exported records should be able to be updated during a module update.
 
 If necessary, edit the :guilabel:`Domain` to determine which of the model's records should be
-exported. To do so, click the :guilabel:`Edit Domain` button or :icon:`fa-caret-right`
-:guilabel:`(Modify filter)` then :guilabel:`Edit Domain`, as appropriate. Proceed to make any
-required changes.
+exported. To do so, click :guilabel:`Edit Domain` the proceed to :ref:`add rules
+<search/custom-filters>` as needed.
 
 After configuring a model for export, click :guilabel:`Studio Export` to return to the main screen.
 To download a ZIP file with the customizations for all the listed models, click :guilabel:`Export`.
@@ -274,7 +273,7 @@ In the :guilabel:`Studio Export` window:
 - tick :guilabel:`Include Demo Data` to include data from the selected models that is flagged
   as demo data. Ticking this option also ticks :guilabel:`Include Data`.
 
-Click the :guilabel:`Export` button to download the ZIP file.
+Click :guilabel:`Export` to download the ZIP file.
 
 .. image:: models_modules_apps/studio-export.png
    :alt: Choosing to export both data and demo data
@@ -292,7 +291,7 @@ Import customizations
 To import and install Studio customizations in another Odoo database:
 
 #. Connect to the destination database.
-#. Click the :icon:`oi-studio` :guilabel:`(Toggle Studio)` button on the main Odoo dashboard, then
+#. Click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) button on the main Odoo dashboard, then
    :guilabel:`Import`.
 #. Upload the exported ZIP file. If demo data should be imported, tick :guilabel:`Load demo data`.
 #. Click :guilabel:`Install`.
