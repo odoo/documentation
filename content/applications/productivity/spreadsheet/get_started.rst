@@ -124,6 +124,77 @@ Spreadsheet. To do so:
 
 The file can now be fully edited in Odoo Spreadsheet.
 
+.. _spreadsheet/get-started/manage-sheets:
+
+Navigate and manage sheets
+==========================
+
+.. _spreadsheet/get-started/manage-sheets-navigate:
+
+Navigate between sheets
+-----------------------
+
+When a spreadsheet contains more sheets than can be shown in the bottom bar, the following methods
+can be used to access a sheet:
+
+- Click the :icon:`fa-bars` :guilabel:`(menu)` icon in the bottom bar to see a list of all the
+  sheets present in the spreadsheet, then click on a sheet name to open it.
+- Scroll left or right using the :icon:`fa-caret-right` or :icon:`fa-caret-left`
+  :guilabel:`(right or left caret)` icons in the bottom bar until the desired sheet tab is visible,
+  then click the tab to open the sheet.
+
+.. _spreadsheet/get-started/manage-sheets-basic:
+
+Basic sheet actions
+-------------------
+
+Users with :guilabel:`Editor` rights to the spreadsheet have various options for managing the
+sheets of a spreadsheet from the bottom bar:
+
+- :icon:`fa-plus` :guilabel:`(plus)`: adds a new sheet to the right of the active sheet.
+- Click the :icon:`fa-caret-down` :guilabel:`(down caret)` on a sheet's tab or right-click the
+  tab to open a menu with the following options:
+
+  - :icon:`fa-trash` :guilabel:`Delete`: deletes the sheet, after requiring confirmation.
+  - :icon:`fa-eye-slash` :guilabel:`Hide sheet`: :ref:`hides the sheet
+    <spreadsheet/get-started/manage-sheets-hide>` from the bottom bar and makes it inaccessible to
+    users with only :guilabel:`Viewer` rights.
+  - :icon:`fa-clone` :guilabel:`Duplicate`: creates a copy of the sheet beside the original sheet.
+  - :icon:`os-rename-sheet` :guilabel:`Rename`: makes the name of the sheet directly editable in its
+    tab.
+
+    .. tip::
+       Alternatively, double-click the sheet's tab to edit the sheet name directly.
+
+  - :icon:`os-paint-format` :guilabel:`Change tab color`: select an existing or custom color to add
+    a colored bar to the bottom of the sheet's tab. Tab colors appear as dots beside the sheet name
+    when using the :icon:`fa-bars` :guilabel:`(menu)` icon to see a list of all sheets in the
+    spreadsheet.
+  - :icon:`os-move-sheet-right` :guilabel:`Move sheet right` or :icon:`os-move-sheet-left`
+    :guilabel:`Move sheet left`: moves the sheet one position to the right or left.
+
+    .. tip::
+       Alternatively, click and drag a sheet's tab to the desired position.
+
+.. _spreadsheet/get-started/manage-sheets-hide:
+
+Hide sheets
+-----------
+
+Users with :guilabel:`Editor` rights to the spreadsheet can hide one or more sheets by clicking the
+:icon:`fa-caret-down` :guilabel:`(down caret)` on a sheet's tab or right-clicking the tab, then
+clicking :icon:`fa-eye-slash` :guilabel:`Hide sheet`. This may be useful for sheets that are
+not ready to be shared with others, or sheets being used for calculations by other sheets.
+
+The sheet is then removed from the bottom bar, but still included, with its name grayed out, in the
+list of all sheets accessible via the :icon:`fa-bars` :guilabel:`(menu)` icon.
+
+Users with:
+
+- only :guilabel:`Viewer` rights to the spreadsheet cannot open a hidden sheet.
+- :guilabel:`Editor` rights can open a hidden sheet via the :icon:`fa-bars` :guilabel:`(menu)` icon;
+  this restores the sheet's tab on the bottom bar.
+
 .. _spreadsheet/get-started/manage-spreadsheets:
 
 Manage spreadsheets
