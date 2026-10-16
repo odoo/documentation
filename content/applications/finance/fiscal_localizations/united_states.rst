@@ -234,6 +234,49 @@ and *purchase* taxes are created automatically when the Odoo **Accounting** app 
 manage existing or configure additional taxes, navigate to :menuselection:`Accounting -->
 Configuration --> Taxes`.
 
+.. _l10n_us/taxes-configuration:
+
+US tax configuration
+--------------------
+
+US taxes are categorized by jurisdiction and linked to their exempt and nontaxable variations. The
+:ref:`tax report <l10n_us/tax-report>` uses these settings to group taxes by jurisdiction, rather
+than by tax group.
+
+To configure a tax, navigate to :menuselection:`Accounting --> Configuration --> Taxes`, and open
+the tax record. Then, open the :guilabel:`Advanced Options` tab. The :guilabel:`US` section contains
+the following fields:
+
+- :guilabel:`Jurisdiction Type`: Categorizes the tax level as :guilabel:`State`, :guilabel:`County`,
+  :guilabel:`City`, or :guilabel:`Special`.
+
+  - :guilabel:`State`: The state associated with the tax. This field appears and is required once a
+    :guilabel:`Jurisdiction Type` is selected, as the tax report is organized by state.
+  - :guilabel:`County`: The county associated with the tax. This field appears and is required when
+    the :guilabel:`Jurisdiction Type` is :guilabel:`County`.
+  - :guilabel:`City`: The city associated with the tax. This field appears and is required when the
+    :guilabel:`Jurisdiction Type` is :guilabel:`City`.
+
+- :guilabel:`Exempt Tax`: Maps the linked tax records designated as tax-exempt (e.g., `CA State 6%
+  Exempt`).
+- :guilabel:`Nontaxable Tax`: Maps the linked tax records with their nontaxable or reduced-rate
+  counterpart (e.g., `CA State 6% Non-Taxable`).
+
+Associating taxes with their exempt and nontaxable variations provides better organization and shows
+how much tax should be paid or declared as taxable base.
+
+.. image:: united_states/us-l10n-tax-configuration.png
+   :alt: US section of a tax's Advanced Options tab with a jurisdiction and exempt and nontaxable
+         taxes.
+
+.. important::
+   When using :ref:`AvaTax <l10n_us/taxes-avatax>`, most fields in the :guilabel:`US` section
+   (:guilabel:`Jurisdiction Type`, :guilabel:`State`, :guilabel:`Exempt Tax`, and
+   :guilabel:`Nontaxable Tax`) are populated automatically, requiring minimal manual setup.
+
+   Since AvaTax tax rates can be shared between counties and cities, AvaTax does not set the
+   :guilabel:`County` or :guilabel:`City` fields. Set them manually where applicable.
+
 .. _l10n_us/taxes-avatax:
 
 AvaTax
@@ -247,6 +290,9 @@ tax calculations when items are sold, purchased, and invoiced in the database.
    AvaTax is available for integration with databases/companies that have locations in the United
    States and Canada. Reference the :ref:`accounting/avalara/fiscal_country` documentation for more
    information.
+
+When using AvaTax, most of the :ref:`US tax configuration <l10n_us/taxes-configuration>` fields used
+by the :ref:`tax report <l10n_us/tax-report>` are populated automatically.
 
 .. seealso::
    Refer to the documentation articles below to integrate and configure an AvaTax account with an
@@ -268,6 +314,12 @@ available for the US localization under the :menuselection:`Accounting --> Repor
 
 - :ref:`Check Register <l10n_us/optional-modules>`: A report displaying cash transactions
   (regardless of the journal) with their running balance after the transaction.
+- :ref:`Profit and Loss <l10n_us/profit-loss-statement>`: The generic |P&L| statement, with labels
+  modified to conform to |GAAP| standards.
+- :ref:`Cash Flow Statement <l10n_us/cash-flow-statement>`: A report of actual cash inflows and
+  outflows from the company's operations, compiled using the direct cash flow method.
+- :ref:`Tax Report (US) <l10n_us/tax-report>`: An overview of US tax obligations, organized by
+  jurisdiction, with a breakdown of exempt, nontaxable, and taxable amounts.
 - :ref:`1099 Report <l10n_us/1099-report>`: A CSV download of payments made to non-employees in a
   period to file electronically in a third-party service.
 
@@ -276,76 +328,16 @@ available for the US localization under the :menuselection:`Accounting --> Repor
    - :doc:`../../essentials/search`
    - :ref:`Cash basis reporting <accounting/cash-basis/report-filter>`
 
-.. _l10n_us/1099-report:
-
-1099 report
------------
-
-The :ref:`1099 report <l10n_us/optional-modules>` includes payments that are made to non-employees
-across a given reporting period. Use the available CSV download from the report in Odoo to file 1099
-payments electronically via a third-party service.
-
-To generate a 1099 report, navigate to :menuselection:`Accounting app --> Reporting --> Management:
-1099 Report` to open a :guilabel:`1099 Report` wizard.
-
-First, enter the date range of the transactions to report in the :guilabel:`Start Date` and
-:guilabel:`End Date` fields.
-
-Then, edit the journal items that appear on the wizard. Click :guilabel:`Add a line` to add any
-items that are missing. Be sure to remove any items that should not be included in the report by
-clicking :icon:`fa-times` :guilabel:`(delete)` on the row.
-
-Finally, once all necessary items are included in the 1099 report, click on the :guilabel:`Generate`
-button. Doing so downloads a CSV file that groups transactions by the partner that received the
-payments.
-
-.. _l10n_us/cash-flow-statement:
-
-Cash flow statement
--------------------
-
-Navigate to the *Cash Flow Statement* (CFS) dashboard by going to :menuselection:`Accounting app -->
-Reporting --> Statement Reports: Cash Flow Statement`. From here, |CFS| reports can be generated
-using the various :ref:`filters <accounting/reporting/filters>` that are available at the top of the
-dashboard.
-
-Odoo uses the *direct* cash flow method to compile cash flow statements, which measures actual cash
-inflows and outflows from the company's operations, such as when cash is received from customers or
-when cash payments are made to suppliers.
-
-By default, an account labeled with any of the three default :guilabel:`Tags` on the
-:guilabel:`Chart of Accounts` dashboard is included in the report, which includes:
-:guilabel:`Operating Activities`, :guilabel:`Financing Activities`, and :guilabel:`Investing &
-Extraordinary Activities`.
-
-.. image:: united_states/us-l10n-cash-flow-statement-tags.png
-   :alt: Examples of tagged accounts that are included in the Cash Flow Statement in Odoo.
-
-Additionally, the cash flow statement in Odoo:
-
-- is limited to the *Bank* and *Cash* journals to reflect money coming in or out; and
-- also contains *Expenses* accounts, to show the counterpart transactions versus *Bank* or *Cash*
-  journal entries, while excluding |AR| and |AP| activity.
-
-.. example::
-   Create a vendor bill for $100, as an operating expense (not |AP|). Doing so will **not** reflect
-   a transaction on the cash flow statement. However, register a corresponding payment for $100, and
-   the transaction **will** reflect on the cash flow statement as :guilabel:`Cash paid for operating
-   activities`.
-
-   .. image:: united_states/us-l10n-operating-expenses-example.png
-      :alt: Example of a bill registered as an operating expense as part of a cash flow statement.
-
 .. _l10n_us/profit-loss-statement:
 
-Profit & loss statement
------------------------
+Profit and loss
+---------------
 
-To view the |P&L| statement, navigate to :menuselection:`Accounting --> Reporting --> Profit and
-Loss`. To conform with |GAAP| standards and facilitate migration from other US accounting software,
-the labels of the generic |P&L| statement are modified for the US localization. The structure and
-formulas in this :doc:`custom report <../accounting/reporting/customize>` are identical to the
-generic report.
+To view the Profit and Loss (P&L) statement, navigate to :menuselection:`Accounting --> Reporting
+--> Profit and Loss`. To conform to |GAAP| standards and facilitate migration from other US
+accounting software, the labels for the generic |P&L| statement are modified for the US
+localization. The structure and formulas in this :doc:`custom report
+<../accounting/reporting/customize>` are identical to the generic report.
 
 To view the labels used in the report, enter :ref:`developer mode <developer-mode>`, navigate to the
 |P&L| statement, and click the :icon:`fa-cogs` :guilabel:`(cogs)` smart button. The US |P&L|
@@ -384,8 +376,119 @@ statement line items correspond to the generic |P&L| statement line items as fol
    *Net Other Income* is calculated by subtracting *Other Expense* from *Other Income*.
 
    European accounting frameworks include appropriation of profit in the generic |P&L| statement.
-   Under |GAAP| accounting standards, the |P&L| statement summarizes performance only. As a result,
-   the US report does not include *Allocations and Withdrawals*.
+   Under |GAAP|, the |P&L| statement summarizes performance only. As a result, the US report does
+   not include *Allocations and Withdrawals*.
+
+.. _l10n_us/cash-flow-statement:
+
+Cash flow statement
+-------------------
+
+Navigate to the *Cash Flow Statement* (CFS) dashboard by going to :menuselection:`Accounting app -->
+Reporting --> Statement Reports: Cash Flow Statement`. From here, |CFS| reports can be generated
+using the various :ref:`filters <accounting/reporting/filters>` that are available at the top of the
+dashboard.
+
+Odoo uses the *direct* cash flow method to compile cash flow statements, which measures actual cash
+inflows and outflows from the company's operations, such as when cash is received from customers or
+when cash payments are made to suppliers.
+
+By default, an account labeled with any of the three default :guilabel:`Tags` on the
+:guilabel:`Chart of Accounts` dashboard is included in the report, which includes:
+:guilabel:`Operating Activities`, :guilabel:`Financing Activities`, and :guilabel:`Investing &
+Extraordinary Activities`.
+
+.. image:: united_states/us-l10n-cash-flow-statement-tags.png
+   :alt: Examples of tagged accounts that are included in the Cash Flow Statement in Odoo.
+
+Additionally, the cash flow statement in Odoo:
+
+- is limited to the *Bank* and *Cash* journals to reflect money coming in or out; and
+- also contains *Expenses* accounts, to show the counterpart transactions versus *Bank* or *Cash*
+  journal entries, while excluding |AR| and |AP| activity.
+
+.. example::
+   Create a vendor bill for $100, as an operating expense (not |AP|). Doing so will **not** reflect
+   a transaction on the cash flow statement. However, register a corresponding payment for $100, and
+   the transaction **will** reflect on the cash flow statement as :guilabel:`Cash paid for operating
+   activities`.
+
+   .. image:: united_states/us-l10n-operating-expenses-example.png
+      :alt: Example of a bill registered as an operating expense as part of a cash flow statement.
+
+.. _l10n_us/tax-report:
+
+Tax report
+----------
+
+The :guilabel:`Tax Report (US)` provides a comprehensive overview of US tax obligations, organized
+by jurisdiction: state, county, city, and special. While standard tax reporting tracks taxable bases
+and collected tax amounts, this report also maps exempt and nontaxable amounts to present a complete
+breakdown of gross sales and purchase activity:
+
+`Total Sales = Exempt + Non-Taxable + Taxable`
+
+The breakdown relies on the :ref:`US tax configuration <l10n_us/taxes-configuration>` of each tax.
+
+To open the report, navigate to :menuselection:`Accounting --> Reporting --> Taxes & Fiscal: Tax
+Report`. In the :guilabel:`Report` selector, make sure :guilabel:`Tax Report (US)` is selected.
+
+.. image:: united_states/us-l10n-tax-report.png
+   :alt: Tax Report (US) with sales and purchases grouped by state, showing exempt, nontaxable, and
+         taxable amounts.
+
+Report structure
+~~~~~~~~~~~~~~~~
+
+Line items in the tax report are grouped by the following categories:
+
+- **Sales vs. purchases**: Line items are separated into :guilabel:`Sales` and :guilabel:`Purchases`
+  sections, each with its own total.
+- **Jurisdictions**: Line items are automatically grouped by state (e.g., `California`, `Texas`),
+  with the taxes of each child jurisdiction (county, city, and special) grouped under the state. The
+  subtotal for each state is provided.
+- **Undefined**: Unmapped taxes or transactions that are missing a jurisdiction assignment, grouped
+  for reconciliation.
+
+Columns
+~~~~~~~
+
+Each line item in the tax report contains the following columns:
+
+- :guilabel:`Total Sales`: The total gross volume, calculated as :guilabel:`Exempt` +
+  :guilabel:`Non-Taxable` + :guilabel:`Taxable`.
+- :guilabel:`Exempt`: Transactions categorized under exempt tax mappings. These are usually linked
+  to customers that have an exemption certificate granted by the state or another institution (e.g.,
+  nonprofit and charitable organizations).
+- :guilabel:`Non-Taxable`: Transactions categorized under nontaxable tax mappings. For example,
+  unprocessed groceries are free from tax in most states.
+- :guilabel:`Taxable`: The net amount subject to tax, calculated as :guilabel:`Total Sales` -
+  :guilabel:`Exempt` - :guilabel:`Non-Taxable`.
+- :guilabel:`Tax Rate` and :guilabel:`Tax`: The applicable rate percentage and the total tax
+  collected or owed.
+
+.. _l10n_us/1099-report:
+
+1099 report
+-----------
+
+The :ref:`1099 report <l10n_us/optional-modules>` includes payments that are made to non-employees
+across a given reporting period. Use the available CSV download from the report in Odoo to file 1099
+payments electronically via a third-party service.
+
+To generate a 1099 report, navigate to :menuselection:`Accounting app --> Reporting --> United
+States: 1099 Report...` to open a :guilabel:`1099 Report` wizard.
+
+First, enter the transaction date range to report in the :guilabel:`Start Date` and :guilabel:`End
+Date` fields.
+
+Then, edit the journal items that appear on the wizard. Click :guilabel:`Add a line` to add any
+additional items, and remove any items that should not be included in the report by clicking
+:icon:`fa-times` :guilabel:`(delete)` on the row.
+
+Finally, once all necessary items are included in the 1099 report, click on the :guilabel:`Generate`
+button. Doing so downloads a CSV file that groups transactions by the partner that received the
+payments.
 
 .. _l10n_us/cash-discount:
 
@@ -666,8 +769,8 @@ detailed below:
            top of the page.
 
 .. note::
-   Wise offers a `Sandbox environment <https://sandbox.transferwise.tech/login>`_ for testing
-   features and integrations.
+   Wise offers a `Sandbox environment <https://wise-sandbox.com>`_ for testing features and
+   integrations.
 
    Select the appropriate environment to ensure accurate results (*sandbox* for testing,
    *production* for real transactions).
