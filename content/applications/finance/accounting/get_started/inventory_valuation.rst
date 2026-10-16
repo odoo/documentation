@@ -271,18 +271,22 @@ To check for pending transactions requiring accrual entries:
 Upgrade process for Anglo-Saxon Perpetual
 =========================================
 
-In Odoo 19, the stock input/output accounts are no longer used. Any non-zero balances in stock
+.. note::
+   This process is only mandatory if upgrading from Odoo 19 to Odoo 20. It is handled automatically
+   when upgrading from Odoo 18 to Odoo 20.
+
+In Odoo 20, the stock input/output accounts are no longer used. Any non-zero balances in stock
 interim accounts must be transferred to the :ref:`stock valuation account
 <accounting/inventory-valuation/valuation-account>` via journal entry to maintain accurate inventory
 values after migration. This rebalancing can be performed :ref:`before
 <accounting/inventory-valuation/upgrade-process-server-action>` or :ref:`after
-<accounting/inventory-valuation/upgrade-process-manual>` upgrading to Odoo 19.
+<accounting/inventory-valuation/upgrade-process-manual>` upgrading to Odoo 20.
 
 Before upgrading, review received purchase or sales orders that are not yet linked to vendor bills
 or invoices, and post any existing draft bills/invoices to reduce the open balance.
 
 .. tip::
-   It is recommended to implement the change **after** upgrading to Odoo 19, because a server action
+   It is recommended to implement the change **after** upgrading to Odoo 20, because a server action
    identifies the open balance in the :guilabel:`Stock Interim` accounts and automatically applies
    the change.
 
@@ -302,7 +306,7 @@ Option 1: Server action journal entry
    :ref:`Inventory Valuation report <accounting/inventory-valuation/inventory-valuation-report>` to
    ensure accuracy.
 
-After upgrading to Odoo 19, the server action must be applied to each company to balance any
+After upgrading to Odoo 20, the server action must be applied to each company to balance any
 non-zero :guilabel:`Stock Interim` accounts:
 
 #. Go to :menuselection:`Settings --> Users & Companies --> Companies` and click the relevant
@@ -323,7 +327,7 @@ non-zero :guilabel:`Stock Interim` accounts:
 
 .. tip::
    Journal entries can also be created manually if needed, using the same process for
-   balancing :guilabel:`Stock Interim` accounts :ref:`before upgrading to Odoo 19
+   balancing :guilabel:`Stock Interim` accounts :ref:`before upgrading to Odoo 20
    <accounting/inventory-valuation/upgrade-process-manual>`.
 
 .. _accounting/inventory-valuation/upgrade-process-manual:
@@ -346,7 +350,7 @@ To create the manual journal entry, follow these steps:
    #. Check the General Ledger to confirm that the :guilabel:`Stock Interim` accounts are balanced to
       zero and that the remaining amount is recorded in the :guilabel:`Stock valuation` account.
 
-#. After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --> Inventory Valuation`
+#. After upgrading to Odoo 20, go to :menuselection:`Accounting --> Review --> Inventory Valuation`
    and :ref:`generate an inventory variation entry <accounting/inventory-valuation/closing-entry>`.
    The increased value on the :ref:`Valuation account
    <accounting/inventory-valuation/valuation-account>` is then transferred to the :ref:`Variation
