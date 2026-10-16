@@ -13,7 +13,7 @@ With Studio, it is possible to:
   there are 15 :ref:`field types <studio/fields/field-types>` in Odoo. However, you can choose from
   21 field types in Studio, as some field types are available more than once with a different
   default widget;
-- :ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that already exists on a
+- :ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that already exist on a
   model, to any view of that model;
 - :ref:`modify a field's properties <studio/fields/modify>`; or
 - :ref:`remove a field from a view <studio/fields/remove>`.
@@ -42,11 +42,6 @@ Fields can be broadly divided into two categories:
   numbers, files, etc.
 - :ref:`Relational fields <studio/fields/relational-fields>`, which are used to link and
   display the data from records on another model.
-
-.. admonition:: AI fields
-
-   :doc:`AI fields <../productivity/ai/fields>` are essentially standard Odoo fields with added AI
-   capabilities that allow their values to be generated automatically through prompts.
 
 .. _studio/fields/simple-fields:
 
@@ -152,6 +147,20 @@ with a decimal`).
    .. image:: fields/decimal-examples.png
       :alt: Examples of Decimal fields with different widgets
 
+.. _studio/fields/simple-fields-html:
+
+Html (`html`)
+~~~~~~~~~~~~~
+
+The :guilabel:`Html` field is used to add text that can be edited using the Odoo HTML editor.
+
+- :guilabel:`Multiline Text`: disables the Odoo HTML editor to allow editing raw HTML.
+
+.. example::
+
+   .. image:: fields/html-example.png
+      :alt: Examples of Html fields with different widgets
+
 .. _studio/fields/simple-fields-monetary:
 
 Monetary (`monetary`)
@@ -169,67 +178,51 @@ The :guilabel:`Monetary` field is used for all monetary values.
    .. image:: fields/monetary-example.png
       :alt: Example of a Monetary field along with its Currency field
 
-.. _studio/fields/simple-fields-html:
-
-Html (`html`)
-~~~~~~~~~~~~~
-
-The :guilabel:`Html` field is used to add text that can be edited using the Odoo HTML editor.
-
-- :guilabel:`Multiline Text`: disables the Odoo HTML editor to allow editing raw HTML.
-
-.. example::
-
-   .. image:: fields/html-example.png
-      :alt: Examples of Html fields with different widgets
-
-.. _studio/fields/simple-fields-date:
-
-Date (`date`)
-~~~~~~~~~~~~~
-
-The :guilabel:`Date` field is used to select a date on a calendar.
-
-- :guilabel:`Remaining Days`: the remaining number of days before the selected date is displayed
-  (e.g., *In 5 days*), based on the current date. This field should be set to :guilabel:`Read only`.
-
-.. example::
-
-   .. image:: fields/date-examples.png
-      :alt: Examples of Date fields with different widgets
-
 .. _studio/fields/simple-fields-date-time:
 
-Date & Time (`datetime`)
-~~~~~~~~~~~~~~~~~~~~~~~~
+Date (`date`) and Datetime (`datetime`)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Date & Time` field is used to select a date on a calendar and a time on a clock. The
-user's current time is automatically used if no time is set.
+The :guilabel:`Date` field is used to select a date on a calendar. The :guilabel:`Datetime` field
+is used to select a date on a calendar and a time on a clock; if no time is set, the time of the
+user's local device is automatically used.
+
+- :ref:`Date Range <studio/fields/simple-fields-date-time-range>`: displays a period of time defined
+  by a start date and an end date in a single line. A date range can have a mandatory start and end
+  date, e.g., for a multi-day event, or allow an optional start or end date, e.g., for a field
+  service intervention or a project task. If the field is a :guilabel:`Datetime` field, a start time
+  and end time are also displayed.
+- :guilabel:`Remaining Days`: displays the remaining number of days before the selected date (e.g.,
+  *In 5 days*), based on the current date and time. This field should be set to
+  :guilabel:`Readonly`.
+
+.. example::
+
+   .. image:: fields/date-date-time-examples.png
+      :alt: Examples of Date and Datetime fields
 
 .. tip::
 
    As well as :ref:`general properties <studio/fields/properties>`, some
    :ref:`specific properties <studio/fields/properties-date-datetime>` are available for
-   :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` or :guilabel:`Date Range`
-   widget set.
+   :guilabel:`Date` and :guilabel:`Datetime` fields.
+
+.. _studio/fields/simple-fields-date-time-range:
 
 Date Range (`daterange`)
 ************************
 
-The :guilabel:`Date Range` widget is used to display a period of time defined by a start date and an
-end date in a single line. A date range can have a mandatory start and end date, e.g., for a
-multi-day event, or allow an optional start or end date, e.g., for a field service intervention or a
-project task.
+Adding a date range requires two fields:
 
-Adding a date range requires two fields: a :guilabel:`Date & Time` field with the
-:guilabel:`Date Range` widget set and another field that is selected as the start date *or* end
-date. This underlying field can be an existing :ref:`Date <studio/fields/simple-fields-date>`
-or :guilabel:`Date & Time` field, or one created specifically for this purpose.
+- a :guilabel:`Date` or :guilabel:`Datetime` field with the :guilabel:`Date Range` widget set
+- another field that is selected as the start date *or* end date. This underlying field can be an
+  existing :ref:`Date or Datetime field <studio/fields/simple-fields-date-time>`, or one created
+  specifically for this purpose.
 
 To add a date range:
 
-#. Identify an existing :guilabel:`Date` or :guilabel:`Date & Time` field that can be used as the
-   underlying start/end date field, or add a new one. If the date range:
+#. Identify the existing :guilabel:`Date` or :guilabel:`Datetime` field to use as the underlying
+   start/end date field, or add a new one. If the date range:
 
    - has a mandatory start date and end date, this field can be either the start date or end date;
      the outcome is the same.
@@ -240,27 +233,15 @@ To add a date range:
       made invisible by enabling :guilabel:`Invisible` or removed from the view by clicking
       :guilabel:`Remove from view`.
 
-#. Add a :guilabel:`Date & Time` field and set the :guilabel:`Widget` field to
+#. Add a :guilabel:`Date` or :guilabel:`Datetime` field and set the :guilabel:`Widget` field to
    :guilabel:`Date Range`.
 #. Enter an appropriate :guilabel:`Label`.
 #. Select the underlying start/end date field from the :guilabel:`Start date field` or
    :guilabel:`End date field` dropdown, as relevant.
-#. If the date range should have a mandatory start and end date, enable :guilabel:`Always range`.
+#. If the date range should always have a start *and* end date, enable :guilabel:`Always range`.
 #. Update any other :ref:`general properties <studio/fields/properties>` or specific
-   :ref:`properties for Date & Time fields <studio/fields/properties-date-datetime>` as needed, then
-   click :guilabel:`Close` in the upper right corner of the screen.
-
-.. example::
-
-   .. image:: fields/date-time-examples.png
-      :alt: Examples of Date & Time fields with different widgets
-
-Remaining Days (`remaining_days`)
-*********************************
-
-The :guilabel:`Remaining Days` widget displays the remaining number of days before the selected date
-(e.g., *In 5 days*), based on the current date and time. This field should be set to :guilabel:`Read
-only`.
+   :ref:`properties for Date and Datetime fields <studio/fields/properties-date-datetime>` as
+   needed, then click :guilabel:`Close` in the upper right corner of the screen.
 
 .. _studio/fields/simple-fields-checkbox:
 
@@ -311,6 +292,39 @@ predefined values.
    .. image:: fields/selection-examples.png
       :alt: Examples of Selection fields with different widgets
 
+.. _studio/fields/simple-fields-file:
+
+File (`binary`)
+~~~~~~~~~~~~~~~
+
+The :guilabel:`File` field is used to upload any type of file.
+
+- :guilabel:`Image`: users can upload an image file, which is then displayed in :ref:`Form view
+  <studio/views/general/form>`. This has the same effect as using the :ref:`Image field
+  <studio/fields/simple-fields-image>`.
+- :guilabel:`PDF Viewer`: users can upload a PDF file, which can be then browsed from the
+  :ref:`Form view <studio/views/general/form>`.
+
+.. example::
+
+   .. image:: fields/file-examples.png
+      :alt: Examples of File fields with different widgets
+
+.. _studio/fields/simple-fields-image:
+
+Image (`image`)
+~~~~~~~~~~~~~~~
+
+The :guilabel:`Image` field is used to upload an image and display it in :ref:`Form view
+<studio/views/general/form>`. This field type is a :ref:`File field
+<studio/fields/simple-fields-file>` with the :guilabel:`Image` widget selected by default.
+Consequently, the :guilabel:`File` and :guilabel:`PDF Viewer` widgets have the same effects as
+described under :ref:`File <studio/fields/simple-fields-file>`.
+
+.. tip::
+   To change the display size of uploaded images, select :guilabel:`Small`, :guilabel:`Medium`, or
+   :guilabel:`Large` under the :guilabel:`Size` option.
+
 .. _studio/fields/simple-fields-priority:
 
 Priority (`selection`)
@@ -333,58 +347,39 @@ and four priority values predefined. Consequently, the :guilabel:`Badge`, :guila
    .. image:: fields/priority-example.png
       :alt: Example of a Priority field
 
-.. _studio/fields/simple-fields-file:
-
-File (`binary`)
-~~~~~~~~~~~~~~~
-
-The :guilabel:`File` field is used to upload any type of file, or sign a form (:guilabel:`Sign`
-widget).
-
-- :guilabel:`Image`: users can upload an image file, which is then displayed in :ref:`Form view
-  <studio/views/general/form>`. This has the same effect as using the :ref:`Image field
-  <studio/fields/simple-fields-image>`.
-- :guilabel:`PDF Viewer`: users can upload a PDF file, which can be then browsed from the
-  :ref:`Form view <studio/views/general/form>`.
-- :guilabel:`Sign`: users can electronically sign the form. This has the same effect as selecting
-  the :ref:`Sign field <studio/fields/simple-fields-sign>`.
-
-.. example::
-
-   .. image:: fields/file-examples.png
-      :alt: Examples of File fields with different widgets
-
-.. _studio/fields/simple-fields-image:
-
-Image (`binary`)
-~~~~~~~~~~~~~~~~
-
-The :guilabel:`Image` field is used to upload an image and display it in :ref:`Form view
-<studio/views/general/form>`. This field type is a :ref:`File field
-<studio/fields/simple-fields-file>` with the :guilabel:`Image` widget selected by default.
-Consequently, the :guilabel:`File`, :guilabel:`PDF Viewer`, and :guilabel:`Sign` widgets have the
-same effects as described under :ref:`File <studio/fields/simple-fields-file>`.
-
-.. tip::
-   To change the display size of uploaded images, select :guilabel:`Small`, :guilabel:`Medium`, or
-   :guilabel:`Large` under the :guilabel:`Size` option.
-
 .. _studio/fields/simple-fields-sign:
 
-Sign (`binary`)
-~~~~~~~~~~~~~~~
+Signature (`signature`)
+~~~~~~~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Sign` field is used to sign the form electronically. This field type is a :ref:`File
-field <studio/fields/simple-fields-file>` with the :guilabel:`Sign` widget selected by default.
-Consequently, the :guilabel:`File`, :guilabel:`Image`, and :guilabel:`PDF Viewer` widgets have the
-same effects as described under :ref:`File <studio/fields/simple-fields-file>`.
+The :guilabel:`Signature` field is used to sign the form electronically. This field type is a
+:ref:`File field <studio/fields/simple-fields-file>` with the :guilabel:`Signature` widget selected
+by default. Consequently, the :guilabel:`File`, :guilabel:`Image`, and :guilabel:`PDF Viewer`
+widgets have the same effects as described under :ref:`File <studio/fields/simple-fields-file>`.
 
 .. tip::
    To give users the :guilabel:`Auto` option when having to draw their signature, select one of the
-   available :guilabel:`Auto-complete with` fields (:ref:`Text <studio/fields/simple-fields-text>`,
-   :ref:`Many2One <studio/fields/relational-fields-many2one>`, and :ref:`Related Field
-   <studio/fields/relational-fields-related-field>` on the model only). The signature is
+   available :guilabel:`Prefill with` fields (:ref:`Many2One
+   <studio/fields/relational-fields-many2one>`, and :ref:`Related Field
+   <studio/fields/relational-fields-related-field>` on the model only). The signature is then
    automatically generated using the data from the selected field.
+
+.. example::
+
+   .. image:: fields/signature-example.png
+      :alt: Example of a Signature field
+
+.. _studio/fields/simple-fields-ai:
+
+AI Field
+~~~~~~~~
+
+An :doc:`AI Field <../productivity/ai/fields>` is essentially a standard Odoo field with added AI
+capabilities that allow its values to be generated automatically through prompts.
+
+.. tip::
+   It is also possible to add AI capabilities to a newly added field via the :ref:`field
+   properties <studio/fields/properties-general>`.
 
 .. _studio/fields/relational-fields:
 
@@ -393,6 +388,44 @@ Relational fields
 
 .. note::
    Non-default widgets, when available, are presented as bullet points or sub-headings.
+
+.. _studio/fields/relational-fields-lines:
+
+Lines (`one2many`)
+~~~~~~~~~~~~~~~~~~
+
+The :guilabel:`Lines` field is used to create a table with rows and columns (e.g., the lines of
+products on a sales order).
+
+.. tip::
+   To modify the columns, click on the :guilabel:`Lines` field and then :guilabel:`Edit List View`.
+   To edit the form that pops up when a user clicks on :guilabel:`Add a line`, click on
+   :guilabel:`Edit Form View` instead.
+
+.. example::
+
+   .. image:: fields/lines-example.png
+      :alt: Example of a Lines field
+
+.. _studio/fields/relational-fields-one2many:
+
+One2Many (`one2many`)
+~~~~~~~~~~~~~~~~~~~~~
+
+The :guilabel:`One2Many` field is used to display the existing relations between a record on the
+current model and multiple records from another model.
+
+.. example::
+   You could add a :guilabel:`One2Many` field on the *Contact* model to look at **one** customer's
+   **many** sales orders.
+
+   .. image:: fields/one2many-diagram.png
+      :alt: Diagram showing a one2many relationship
+
+.. note::
+   To use a :guilabel:`One2Many` field, the two models must have been linked already using a
+   :ref:`Many2One field <studio/fields/relational-fields-many2one>`. One2Many relations do not exist
+   independently: a reverse-search of existing Many2One relations is performed.
 
 .. _studio/fields/relational-fields-many2one:
 
@@ -422,44 +455,6 @@ being edited. The record's name from the other model is then displayed on the re
 - :guilabel:`Badge`: displays the value inside a rounded shape, similar to a tag. The value cannot
   be edited on the UI.
 - :guilabel:`Radio`: displays all selectable values at the same time as radio buttons.
-
-.. _studio/fields/relational-fields-one2many:
-
-One2Many (`one2many`)
-~~~~~~~~~~~~~~~~~~~~~
-
-The :guilabel:`One2Many` field is used to display the existing relations between a record on the
-current model and multiple records from another model.
-
-.. example::
-   You could add a :guilabel:`One2Many` field on the *Contact* model to look at **one** customer's
-   **many** sales orders.
-
-   .. image:: fields/one2many-diagram.png
-      :alt: Diagram showing a one2many relationship
-
-.. note::
-   To use a :guilabel:`One2Many` field, the two models must have been linked already using a
-   :ref:`Many2One field <studio/fields/relational-fields-many2one>`. One2Many relations do not exist
-   independently: a reverse-search of existing Many2One relations is performed.
-
-.. _studio/fields/relational-fields-lines:
-
-Lines (`one2many`)
-~~~~~~~~~~~~~~~~~~
-
-The :guilabel:`Lines` field is used to create a table with rows and columns (e.g., the lines of
-products on a sales order).
-
-.. tip::
-   To modify the columns, click on the :guilabel:`Lines` field and then :guilabel:`Edit List View`.
-   To edit the form that pops up when a user clicks on :guilabel:`Add a line`, click on
-   :guilabel:`Edit Form View` instead.
-
-.. example::
-
-   .. image:: fields/lines-example.png
-      :alt: Example of a Lines field
 
 .. _studio/fields/relational-fields-many2many:
 
@@ -615,9 +610,9 @@ Field properties
 
 A series of :ref:`general properties <studio/fields/properties-general>` can be configured for most
 combinations of :ref:`field type and widget <studio/fields/field-types>`. Additional properties are
-available depending on the specific field type and widget selected. For example, :guilabel:`Date &
-Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` widget have various
-:ref:`specific properties <studio/fields/properties-date-datetime>` that can be configured.
+available depending on the specific field type and widget selected. For example,
+:guilabel:`Datetime` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` widget have
+various :ref:`specific properties <studio/fields/properties-date-datetime>` that can be configured.
 
 .. _studio/fields/properties-general:
 
@@ -654,6 +649,17 @@ General properties
   displayed inside a tooltip box when hovering with your mouse over the question mark beside the
   field's label.
 
+- :guilabel:`AI`: To add AI capabilities allowing the value of the field to be generated
+  automatically through a prompt, enable :guilabel:`AI`. When the browser page reloads, click the
+  :guilabel:`Prompt` field that appears and enter a prompt; type `/` to open the :guilabel:`AI
+  prompt tools` and use the :guilabel:`Field Selector` to tell Odoo AI which fields to check for
+  context. Click :guilabel:`Save & Generate`.
+
+  .. tip::
+
+   It is also possible to :doc:`add a new AI field directly <../productivity/ai/fields>` to a form
+   or list view.
+
 - :guilabel:`Technical Name`: To view a field's technical name in Studio (and, during the
   configuration of a new field, edit it if desired), activate :ref:`developer mode
   <developer-mode>`.
@@ -672,44 +678,35 @@ General properties
 - :guilabel:`Dynamic Placeholder`: To provide the value of the selected field as an example of how a
   field should be completed. The text appears in light gray until a value is entered.
 
-- :guilabel:`Default value`: To display a default value in a field when a record is created, add a
-  value.
+- :guilabel:`Default value`: To display a default value in a field when a
+  record is created, enter a value.
 
 - :guilabel:`Allow visibility to groups`: To limit which users can view the field, select one or
   more user access :ref:`groups <access-rights/groups>`.
+
 - :guilabel:`Forbid visibility to groups`: To prevent certain users from seeing the field, select
   one or more user access :ref:`groups <access-rights/groups>`.
 
 .. _studio/fields/properties-date-datetime:
 
-Properties for Date & Time fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Properties for Date and Datetime fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For :guilabel:`Date & Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range`
+For :guilabel:`Date` fields using the :guilabel:`Date` or :guilabel:`Date Range` widget and
+:guilabel:`Datetime` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range`
 widget, some specific properties are available:
 
 - :guilabel:`Minimal precision`: Determine the smallest date unit that must be selected in the date
-  selector. The possible values are `Day`, `Month`, `Year` or `Decade`. If no value is selected, the
-  user must select a day in the date selector.
+  selector. The possible values are `Days`, `Decades`, `Months` and `Years`. If no value is
+  selected, the user must select a day in the date or datetime selector.
 - :guilabel:`Maximal precision`: Determine the largest date unit that can be used to navigate the
-  date selector. The possible values are `Day`, `Month`, `Year` or `Decade`. If no value is
+  date selector. The possible values are `Days`, `Decades`, `Months` and `Years`. If no value is
   selected, the user can navigate the date selector by decade.
-- :guilabel:`Warning for future dates`: Enable this property to display a warning icon if a future
-  date is selected.
-- :guilabel:`Date format`: By default the date will be shown as `Apr 2, 2025, 08:05 AM`.
-  Enable this property to show the date in the format `4/2/2025 08:05:00`.
-  The numeric mode is the format set on the current language. In this mode the seconds are always
-  shown.
-- :guilabel:`Show date`: This property is enabled by default for :guilabel:`Date & Time` fields.
-  Disable this property to show only the time.
-- :guilabel:`Show time`: This property is enabled by default for :guilabel:`Date & Time` fields. On
-  a read-only field, disable the property to show only the date. This can keep a list view less
-  cluttered, for example.
-- :guilabel:`Show seconds`: This property is disabled by default for :guilabel:`Date & Time` fields.
-  Enable the property to show the seconds.
-- :guilabel:`Time interval`: Enter a value to determine the minute intervals shown in the time
-  selector. For example, enter 15 to allow quarter-hour intervals. The default value is set to 5
-  minutes.
+- :guilabel:`Date format`: By default the date will be shown as e.g., `Jan 31, 2026` (or the
+  equivalent for the user's language/regional settings). Select the all-numeric date format, e.g.,
+  31/01/2026, if desired.
+- :guilabel:`Warning for future dates`: Enable this property to warn the user that a future
+  date has been selected by displaying the date in red.
 - :guilabel:`Earliest accepted date`: Enter the earliest date that can be selected in the date
   selector in ISO-format, i.e., `YYYY-MM-DD`. If the current date is always the earliest accepted
   date, enter `today`. On the date selector, dates prior to the earliest accepted date are grayed
@@ -718,6 +715,23 @@ widget, some specific properties are available:
   selector in ISO-format, i.e., `YYYY-MM-DD`. If the current date is always the latest accepted
   date, enter `today`. On the date selector, dates later than the latest accepted date are grayed
   out.
+
+For :guilabel:`Date` or :guilabel:`Datetime` fields using the :guilabel:`Date Range`
+widget, additional properties are available:
+
+- :guilabel:`Start date field` and :guilabel:`End date field`: These properties are used to define
+  a start or end date for a :ref:`date range or date and time range
+  <studio/fields/simple-fields-date-time-range>`; only one of these properties can be populated.
+- :guilabel:`Show date`: This property is enabled by default for :guilabel:`Datetime` fields.
+  Disable this property to show only the time.
+- :guilabel:`Show time`: This property is enabled by default for :guilabel:`Datetime` fields. On
+  a read-only field, disable the property to show only the date. This can keep a list view less
+  cluttered, for example.
+- :guilabel:`Show seconds`: This property is disabled by default for :guilabel:`Datetime` fields.
+  Enable the property to show the seconds.
+- :guilabel:`Time interval`: Enter a value to determine the minute intervals shown in the time
+  selector. For example, enter 15 to allow quarter-hour intervals. The default value is set to 5
+  minutes.
 
 .. _studio/fields/modify:
 
