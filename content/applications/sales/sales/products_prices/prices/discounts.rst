@@ -23,15 +23,15 @@ discount for each product line and the new price is automatically calculated in 
 
 .. tip::
    A discount can also be added directly to a sales order in the same way. Navigate to
-   :menuselection:`Sales app --> Orders --> Orders`, click the desired sales order, and add the
+   :menuselection:`Sales app --> Orders --> Quotations`, click the desired sales order, and add the
    discount to :guilabel:`Disc.%` field as described above.
 
 .. image:: discounts/discount-on-sales-order.png
    :alt: The Dis.% heading will now appear in Order Lines.
 
 .. note::
-   Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
-   used to *increase* the price.
+   Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be used
+   to *increase* the price.
 
 .. important::
    Positive values, or price decreases, will be visible to the customer, while negative values, or
