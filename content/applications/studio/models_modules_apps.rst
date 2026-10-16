@@ -75,7 +75,7 @@ Date & Calendar
 ---------------
 
 Selecting :guilabel:`Date & Calendar` adds to the :ref:`Form view <studio/views/general/form>` a
-:ref:`Date field <studio/fields/simple-fields-date>` and activates the :ref:`Calendar view
+:ref:`Date field <studio/fields/simple-fields-date-time>` and activates the :ref:`Calendar view
 <studio/views/timeline/calendar>`.
 
 .. _studio/models-modules-apps/suggested-features/date-range-gantt:
@@ -84,8 +84,8 @@ Date range & Gantt
 ------------------
 
 Selecting :guilabel:`Date range & Gantt` adds to the :ref:`Form view <studio/views/general/form>`
-two :ref:`Date fields <studio/fields/simple-fields-date>` next to each other: one to set a start
-date, the other to set an end date, using the :guilabel:`daterange` widget, and activates the
+two :ref:`Date fields <studio/fields/simple-fields-date-time>` next to each other: one to set a
+start date, the other to set an end date, using the :guilabel:`daterange` widget, and activates the
 :ref:`Gantt view <studio/views/timeline/gantt>`.
 
 .. _studio/models-modules-apps/suggested-features/pipeline-stages:
