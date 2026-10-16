@@ -32,20 +32,6 @@ The following modules are installed automatically with the German localization:
      - Adds the new regulatory requirements specifically related to the restaurant industry in
        Germany.
 
-Additionally, the following modules must be manually :ref:`installed <general/install>`:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 25 50
-
-   * - Name
-     - Technical name
-     - Description
-   * - :guilabel:`Germany - Elster Tax Submission`
-     - `l10n_de_reports_elster`
-     - Electronic submission of the German *UStVA* (advance tax return) to the Finanzamt via the
-       Elster system.
-
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
    modules may not be installed automatically. Any missing modules can be manually :doc:`installed
@@ -106,11 +92,9 @@ Tax return with Elster integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
-   - Make sure to :ref:`install <general/install>` the :guilabel:`Germany - Elster Tax Submission`
-     (`l10n_de_reports_elster`) module.
-   - To submit *UStVA* (VAT advance returns) to Elster, the :guilabel:`VAT` ID and tax number
-     (:guilabel:`St.-Nr.`) are required on the :doc:`company record
-     </applications/general/companies>`.
+   To submit *UStVA* (VAT advance returns) to Elster, the :guilabel:`VAT` ID and tax number
+   (:guilabel:`St.-Nr.`) are required on the :doc:`company record
+   </applications/general/companies>`.
 
 Once the module is installed and the VAT ID and tax number have been entered, data is sent to Elster
 upon :ref:`submission of the tax return <accounting/tax-returns/vat-report>`.
@@ -122,9 +106,9 @@ upon :ref:`submission of the tax return <accounting/tax-returns/vat-report>`.
 
    #. Enable :ref:`developer mode <developer-mode>`.
    #. Open the Settings app and go to :menuselection:`Settings --> Technical --> System Parameters`.
-   #. Click :guilabel:`New` to add the `l10n_de_reports_elster.elster_proxy_mode` key and set its
-      value to `test`.
-   #. Click :guilabel:`Save`.
+   #. Click :guilabel:`New` to add the `l10n_de_reports.elster_proxy_mode` key and set its value to
+      `test`.
+   #. :guilabel:`Save`.
 
 .. tip::
    Once the submission is complete, the generated CPA005 TXT file is displayed in the tax return's
