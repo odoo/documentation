@@ -88,9 +88,6 @@ located in the upper-left corner of the main :guilabel:`Quotations` dashboard.
 Clicking the :guilabel:`New` button reveals a blank quotation form, with various fields and tabs to
 configure.
 
-.. image:: create_quotations/quotation-form.png
-   :alt: A typical quotation form in the Odoo Sales application.
-
 Begin by entering the customer's name in the :guilabel:`Customer` field at the top of the form. This
 is a **required** field.
 
@@ -119,7 +116,7 @@ in the :ref:`Default Quotation Validity setting <sales/create_quotations/quotati
 :menuselection:`Sales app --> Configuration --> Settings`).
 
 .. tip::
-   When using a quotation template, the date in the :guilabel:`Expiration` field is based off the
+   When using a quotation template, the date in the :guilabel:`Expiration` field is based on the
    :guilabel:`Quotation Validity` figure on the template form.
 
 If the quotation is for a recurring product or subscription, select the desired :guilabel:`Recurring
@@ -158,7 +155,7 @@ organized by :guilabel:`Product Category` and :guilabel:`Attributes`.
 
 From here, locate the desired items, click the :icon:`fa-shopping-cart` :guilabel:`Add` button on
 the product card, and adjust the quantity, if needed. When complete, click the :guilabel:`Back to
-Quotation` button in the upper-left corner to return to the quotation, where the newly-selected
+Quotation` button in the upper-left corner to return to the quotation, where the newly selected
 catalog items can be found in the *Order Lines* tab.
 
 If multiple items should be presented in a more organized way on the quotation, click :guilabel:`Add
@@ -212,15 +209,15 @@ be configured.
    :alt: The Sales section of the Other Info tab of a quotation form in Odoo Sales.
 
 - :guilabel:`Salesperson`: Assign a salesperson from the drop-down menu to be associated with this
-  quotation. The user who originally created the quotation is selected in this field, by default.
+  quotation. The user who originally created the quotation is selected in this field by default.
 - :guilabel:`Sales Team`: Assign a specific sales team to this quotation. If the selected
   :guilabel:`Salesperson` is a member of a sales team, that team is auto-populated in the field.
-- :guilabel:`Company`: Select a company from the drop-down menu this quotation should be associated
-  with. This field only appears when working in a multi-company environment.
+- :guilabel:`Company`: Select a company from the drop-down menu that this quotation should be
+  associated with. This field only appears when working in a multi-company environment.
 - :guilabel:`Online signature`: Click this checkbox to request an online signature from the customer
   to confirm the order. This field only appears if the *Online Signature* setting has been enabled.
 - :guilabel:`Online payment`: Click this checkbox and enter a desired percentage in the adjacent
-  field, to request an online payment from the customer (for that designated percentage of the total
+  field to request an online payment from the customer (for that designated percentage of the total
   amount) to confirm the order. This field only appears if the *Online Payment* setting has been
   enabled.
 - :guilabel:`Customer Reference`: Enter a custom reference ID for this customer. The entered
@@ -244,9 +241,9 @@ can be configured.
 - :guilabel:`Incoterm Location`: If an Incoterm is being used, enter the international location in
   this field.
 - :guilabel:`Shipping Policy`: Select a desired shipping policy from the drop-down menu. If all
-  products are delivered at once, the delivery order is scheduled, based on the greatest product
-  lead time. Otherwise, it is based on the shortest lead time. The available options are:
-  :guilabel:`As soon as possible` or :guilabel:`When all products are ready`.
+  products are delivered at once, the delivery order is scheduled based on the greatest product lead
+  time. Otherwise, it is based on the shortest lead time. The available options are :guilabel:`As
+  soon as possible` or :guilabel:`When all products are ready`.
 - :guilabel:`Delivery Date`: Click into the empty field to reveal a calendar popover, from which a
   customer delivery date can be selected. If no custom date is required, refer to the
   :guilabel:`Expected` date listed to the right of that field.
@@ -264,7 +261,7 @@ that can be configured.
   particular customers or sales orders/invoices. The default value comes from the customer. If a
   selection is made in this field, an :icon:`fa-refresh` :guilabel:`Update Taxes` clickable link and
   icon appear. When clicked, the taxes for this particular customer and quotation are updated. A
-  confirmation window appears, as well.
+  confirmation window appears as well.
 - :guilabel:`Analytic Account`: Select an analytic account to apply to this customer/quotation.
 
 Tracking section
@@ -281,9 +278,9 @@ can be configured.
 - :guilabel:`Opportunity`: Select the specific opportunity (from the **CRM** app) related to this
   quotation, if applicable.
 - :guilabel:`Campaign`: Select the marketing campaign related to this quotation, if applicable.
-- :guilabel:`Medium`: Select the method by which this quotation originated (e.g. *Email*), if
+- :guilabel:`Medium`: Select the method by which this quotation originated (e.g., *Email*), if
   applicable.
-- :guilabel:`Source`: Select the source of the link used to generate this quotation (e.g.
+- :guilabel:`Source`: Select the source of the link used to generate this quotation (e.g.,
   *Facebook*), if applicable.
 
 .. seealso::
@@ -308,18 +305,18 @@ At the top of the form, there is a series of buttons:
 - :guilabel:`Send by Email`: When clicked, a pop-up window appears with the customer's name and
   email address in the :guilabel:`Recipients` field, the quotation (and reference ID) in the
   :guilabel:`Subject` field, and a brief default message in the body of the email, which can be
-  modified, if needed.
+  modified if needed.
 
   Below that, a PDF copy of the quotation is attached. When ready, click :guilabel:`Send` to send
-  the quotation, via email, to the customer, so they can review and confirm it.
+  the quotation via email to the customer so they can review and confirm it.
 - :guilabel:`Send PRO-FORMA Invoice`: This button **only** appears if the *Pro-Forma Invoice*
   setting has been enabled. When clicked, a pop-up window appears with the customer's name and email
   address in the :guilabel:`Recipients` field, the *Proforma* invoice (and reference ID) in the
   :guilabel:`Subject` field, and a brief default message in the body of the email, which can be
-  modified, if needed.
+  modified if needed.
 
   Below that, a PDF copy of the quotation is attached. When ready, click :guilabel:`Send` to send
-  the quotation, via email, to the customer, so they can review and confirm it.
+  the quotation via email to the customer so they can review and confirm it.
 - :guilabel:`Confirm`: When clicked, the quotation is confirmed, and the status changes to
   :guilabel:`Sales Order`.
 - :guilabel:`Preview`: When clicked, Odoo reveals a preview of the quotation the customer sees when
@@ -328,7 +325,7 @@ At the top of the form, there is a series of buttons:
 - :guilabel:`Cancel`: When clicked, the quotation is canceled.
 
 .. note::
-   If the *Lock Confirmed Sales* setting is enabled, the sales order becomes :guilabel:`Locked`, and
+   If the *Lock Confirmed Sales* setting is enabled, the sales order becomes :guilabel:`Locked` and
    is indicated as such on the sales order form.
 
 At this point, the quotation has been confirmed, turned into a sales order, and is now ready to be
