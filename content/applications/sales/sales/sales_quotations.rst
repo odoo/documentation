@@ -9,6 +9,33 @@ A *sales quotation* or quote is a document sent to a customer that outlines the 
 terms for goods and services. Once accepted, a quotation can be converted into a sales order, which
 serves as the final agreement before delivery and invoicing.
 
+Sales quotation dashboard
+=========================
+
+The quotations dashboard shows all sales orders by default, regardless of their current status.
+Additional filters may be applied by clicking the :icon:`fa-magnifying-glass`
+:guilabel:`(Search...)` bar and selecting them from the dropdown menu. The dashboard view may also
+be changed by using the buttons in the header. High-level information about total orders and revenue
+is available in the header as well.
+
+.. image:: sales_quotations/quotation-kanban-dashboard.png
+   :alt: View of the Sales Quotation kanban dashboard's header.
+
+- :guilabel:`To Confirm`: Show how many orders still require confirmation. Click to filter the
+  dashboard to show only those orders.
+- :guilabel:`To Deliver`: Show how many orders still require delivery. Click to filter the dashboard
+  to show only those orders.
+- :guilabel:`To Invoice`: Show how many orders still require invoicing. Click to filter the
+  dashboard to show only those orders.
+
+- :icon:`fa-calendar` :guilabel:`Last # Days`: Sets the date range for which orders are shown.
+  Choose from 7 days, 30 days, 90 days, or 365 days.
+- :guilabel:`Sales Orders`: Shows the total sales orders for the chosen time period. Also shows the
+  rate of change for sales orders. Rate of change data may not be available for all time periods.
+- :guilabel:`Sales Revenue`: Shows the total sales revenue for the chosen time period. Also shows
+  the rate of change for sales orders. Rate of change data may not be available for all time
+  periods.
+
 Sales flow overview
 ===================
 
@@ -34,8 +61,8 @@ as part of the sales workflow:
   on potential deals.
 - **Helpdesk**: :doc:`Generate quotes from tickets <../../services/helpdesk/advanced/after_sales>`
   when offering paid services or products.
-- **Subscriptions**: :doc:`Offer recurring services <../subscriptions>` before
-  starting an automatic billing cycle.
+- **Subscriptions**: :doc:`Offer recurring services <../subscriptions>` before starting an automatic
+  billing cycle.
 
 .. cards::
 
@@ -67,8 +94,8 @@ as part of the sales workflow:
    .. card:: Quotation Deadlines
       :target: sales_quotations/deadline
 
-      Set deadlines on quotations to encourage customers to act in a timely manner when
-      closing business deals.
+      Set deadlines on quotations to encourage customers to act in a timely manner when closing
+      business deals.
 
    .. card:: Deliver orders and invoices to different addresses
       :target: sales_quotations/different_addresses
@@ -94,9 +121,9 @@ delivery. The quotation also provides transparency in pricing, helping both part
 finalize the terms before making a commitment.
 
 Sales quotations play a crucial role in business transactions by defining the scope and cost of what
-is being sold to the end-customer; setting clear expectations on pricing, delivery, tax, and
-payment terms; and providing a documented stage where the business deal can be negotiated before
-agreed upon.
+is being sold to the end-customer; setting clear expectations on pricing, delivery, tax, and payment
+terms; and providing a documented stage where the business deal can be negotiated before agreed
+upon.
 
 Key components of a sales quotation
 ===================================
@@ -106,8 +133,8 @@ A well-structured sales quotation comprises the following:
 - Quotation number and date: A unique identifier for tracking and reference, as well as the
   :doc:`dates of issue and expiration <sales_quotations/deadline>`. In Odoo **Sales** app, the
   quotation number is assigned under a standard naming convention once it is confirmed.
-- Customer information: Customer name and contact information, as well as
-  :doc:`invoicing and delivery address <sales_quotations/different_addresses>`.
+- Customer information: Customer name and contact information, as well as :doc:`invoicing and
+  delivery address <sales_quotations/different_addresses>`.
 - Products and services: Itemized listing of items to be purchased, including quantity,
   specifications (as needed), and unit price.
 - Payment terms and :doc:`pricelists <products_prices/prices/pricing>`: Configured agreements and
@@ -117,8 +144,8 @@ A well-structured sales quotation comprises the following:
 - Total cost and currency: Summary totals of product or service and shipping prices, including
   relevant taxes.
 
-In Odoo's **Sales** app, quotations can include additional details and configurations that add
-more detail and information, such as :doc:`quotation templates <sales_quotations/quote_template>`,
+In Odoo's **Sales** app, quotations can include additional details and configurations that add more
+detail and information, such as :doc:`quotation templates <sales_quotations/quote_template>`,
 :doc:`subscription plans <../../sales/subscriptions>`, and :doc:`sales team referrer name
 <sales_quotations/create_quotations>`.
 
