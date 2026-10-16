@@ -1,29 +1,30 @@
+.. meta::
+   :description: AI agents in Odoo are virtual assistants that understand natural-language requests
+                 and perform tasks. Learn how agents use instructions, skills, tools, and knowledge
+                 sources, and how to create and configure a new agent.
+
 =========
 AI agents
 =========
 
 .. |AI| replace:: :abbr:`AI (artificial intelligence)`
 
-An |AI| agent is a smart virtual assistant in Odoo that can understand natural language, perform
-tasks, and assist users by interacting with Odoo tools. Agents are a core component of the |AI|
-structure in Odoo. Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and
-a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its behavior.
+An |AI| agent is a virtual assistant in Odoo that can understand natural-language requests, access
+information, and perform tasks using the tools available to it. Agents can be configured for
+specific roles and can be used interactively or as part of automated workflows.
 
-When interacting with an |AI| agent, the conversation interface may display intermediate status
-messages while a request is being processed.
+Agents are built from four main components:
 
-These messages reflect the current step of the interaction, such as analyzing the request,
-consulting sources, or preparing an action, before the final response is generated.
+:icon:`oi-list-view`
+:icon:`reorder`
+:icon:`fa-cog`
 
-.. image:: agents/analyzing-request.png
-   :alt: An Agent analyzing a user request.
-
-Agents are formed of two main components, *Skills* and *Sources*.
-
- - *Skills* are the instructions and roles that inform the agent of what tasks they need to
-   complete. *Tools* are assigned to skills, and are the actual functions the agent can utilize to
-   perform tasks.
- - *Sources* provide the agent with the information they need to complete their tasks.
+- *Instructions* define the agent's purpose, behavior, and responsibilities.
+- *Knowledge* provides information the agent can use when completing tasks.
+- *Skills and tools* define what the agent can do. Skills provide instructions for specific tasks,
+  while tools allow the agent to perform actions in Odoo.
+- *Triggers* determine when the agent is invoked, such as when a user starts a conversation or when
+  an automated or scheduled action calls the agent.
 
 .. important::
    While many |AI| features can be used in Odoo without the **AI** application, creating and
@@ -31,26 +32,15 @@ Agents are formed of two main components, *Skills* and *Sources*.
 
 .. _ai/agents/prompts-in-odoo:
 
-AI prompts in Odoo
-==================
+AI Instructions
+===============
 
-Before working with |AI| agents, it is important to understand some basic concepts regarding |AI|
-prompts.
+Instructions define the agent's overall role, purpose, and behavior.
 
-An |AI| prompt is a set of written instructions or context given to an |AI| model that tells it how
-to respond to a request, or what role to take. Prompts can define:
+Each AI agent is assigned a *System Prompt* that provides its main instructions. It can define the
+agent's responsibilities, constraints, and how it should respond to requests.
 
-- the tone, style, and persona of the |AI| model
-- the scope of what the model can do
-- the type of output expected from the request
-
-In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the agent's overall role,
-purpose, and behavior. It acts as the core mission statement of the agent, and drives all
-interactions. During a conversation, the system prompts and skill instructions are continuously
-applied. They influence how the agent interprets messages, selects tools, uses sources, and
-determines whether additional actions are required before responding.
-
-Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, called *Instructions*.
+Each :ref:`Skill <ai/skills>` also includes its own prompt-like component, called *Instructions*.
 Instructions are skill-specific guidelines that refine how the agent behaves within a certain
 context or workflow, and how it interacts within the Odoo framework.
 
@@ -64,60 +54,10 @@ Instructions often include:
 Agent structure
 ===============
 
-.. _ai/topics:
-
-Skills
-------
-
-*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that define how an agent
-behaves within a specific context. Essentially, the skills define what an agent can do within the
-database. Skills guide conversations, telling the agent what it can do, how it can do it, and when
-it should do it.
-
-.. important::
-   If an agent is not assigned any Skills, it is **only** able to provide information. It **cannot**
-   complete tasks or make changes to the database.
-
-Within each skill is a detailed prompt, which provides the agent with more in-depth instructions on
-how to perform the tasks associated with that skill, define the boundaries of its behavior, and
-determine how it should interpret user intent. These prompts ensure that the agent follows a
-consistent reasoning pattern and uses the appropriate tools to generate accurate, context-aware
-responses.
-
-The following skills are preconfigured in the **AI** app:
-
-- :guilabel:`View Builder`: Supports the interpretation of a user query to open the appropriate Odoo
-  view with a set of tools necessary to perform the search. Natural language queries can also
-  include time-based grouping instructions. This allows agents to group results by time intervals
-  such as day, month, or year when querying records.
-- :guilabel:`Information retrieval`: A collection of tools to retrieve information about the models.
-- :guilabel:`Update Records`: Tools to update records.
-- :guilabel:`Create Records`: Tools to create records.
-- :guilabel:`Generate Images`: A collection of tools to support image generation. Load this skill
-  when the user asks to generate or enhance an image.
-- :guilabel:`Web Search`: Enable the Agent to explore the internet in real time.
-- :guilabel:`Website Builder`: Tools for editing Odoo website pages.
-- :guilabel:`Create Leads`: A collection of tools to support automated lead creation. This skill is
-  **only** available if the **CRM** app is installed.
-
-Within each skill is a set of :guilabel:`Instructions`, which act as a prompt and provide guidance
-for the structure of the interaction, and one or more :ref:`AI Tools <ai/tools>`, which indicate the
-functions the agent can perform.
-
-.. _ai/tools:
-
-Tools
-~~~~~
-
-*Tools* are the functions the agent can perform in Odoo. These include actions like creating a lead
-or opening a view. Tools extend the purpose of the agent beyond conversations, they enable real
-actions. The available tools in a database vary based on the applications installed. Multiple
-:guilabel:`AI Tools` can be assigned to a single skill.
-
 .. _ai/sources:
 
-Sources
--------
+Knowledge
+---------
 
 Sources are the data the agent can refer to when generating responses or completing tasks. Sources
 are indexed so the agent can retrieve relevant information when a user asks a question.
@@ -130,52 +70,69 @@ Sources can be in the following formats:
 
  - PDFs
  - Weblinks
- - Documents (uploaded in the **Documents** application)
- - **Knowledge** app articles
+ - Documents (uploaded in the :doc:`Documents <../documents>` application)
+ - :doc:`Knowledge <../knowledge>` app articles
 
 .. important::
    If the :guilabel:`Restrict to Sources` option is enabled on an agent, the agent can **only**
    utilize information from the uploaded and active sources.
 
-Uploaded files
---------------
+Reprocessing sources
+~~~~~~~~~~~~~~~~~~~~
 
-During a conversation with an |AI| agent, additional context can be provided by uploading files.
-Files are temporarily treated as sources for the ongoing discussion. The agent can use their content
-to answer questions, summarize information, or extract relevant details.
+If the content of a source changes after it has been indexed, it may be necessary to reprocess the
+source so that agents use the most recent information. Reprocessing can be triggered manually and
+ensures that updated documents, links, or knowledge articles are reflected in future agent
+responses.
 
-The provided files only influence the current conversation, unless they are explicitly added as
-sources on the agent.
+To reprocess a source:
 
-To attach a file in a conversation, click the :icon:`fa-plus-circle` :guilabel:`(plus circle)` icon
-in the message window, then click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file
-explorer window, select one or more files to attach, then click :guilabel:`Open`.
+#. Navigate to the :menuselection:`AI` app and select an |AI| agent,
+#. Click the knowledge tab, and select a source.
+#. Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the source.
+#. On the menu, click :guilabel:`Reprocess`.
 
-.. example::
-   A manager finds a receipt for supplies and is unsure whether it has already been submitted to the
-   **Expenses** app for reimbursement. They open a conversation with the *Ask AI* agent and enter
-   the following prompt:
+.. image:: agents/reprocess-sources.png
+   :alt: The Knowledge tab of an agent, with the Reprocess option visible.
 
-   `Can you open the expense that matches this receipt?`
+.. _ai/skills:
 
-   They attach the receipt to the message. After the agent analyzes the attachment, it opens the
-   view to the correct expense.
+Skills
+------
 
-   .. image:: agents/attach-files.png
-     :alt: Add alt text.
+*Skills* define specific tasks an agent can perform. Each *Skill* includes instructions that guide
+the agent through the task and can have one or more tools assigned to it.
 
-Gain insights from previewed files
-----------------------------------
+.. important::
+   If an agent is not assigned any Skills, it is **only** able to provide information. It **cannot**
+   complete tasks or make changes to the database.
 
-When a document is open in preview mode, |AI| agents can use the content of the previewed file as
-context for the conversation.
+Multiple *Skills* can be assigned to the same agent, allowing it to perform different types of
+tasks.
 
-First, navigate to the :menuselection:`Documents` app and click a document to preview it. Click the
-|AI| icon at the top of the page to open the :guilabel:`Ask AI` chat window. From here, click one of
-the default prompts to use them, or enter a custom one in the message window.
+.. _ai/tools:
 
-In this case, the agent's responses are grounded in the file currently being previewed, in
-combination with any other sources assigned to the agent.
+Tools
+~~~~~
+
+*Tools* are the functions an agent can perform in Odoo. For example, a tool can allow an agent to
+search records, create or update records, or open an Odoo view. Multiple *Tools* can be assigned to
+a single skill.
+
+Triggers
+--------
+
+An agent can be triggered in different ways depending on how it is used.
+
+Agents can be launched interactively by users through an AI chat. They can also be triggered
+automatically by automated actions and scheduled actions, allowing agents to participate in
+automated workflows.
+
+When an agent is triggered by an automation, the conversation can be reviewed to see how the agent
+handled the task.
+
+.. seealso::
+   See :doc:`AI server actions <server-actions>` for more information.
 
 .. _ai/create-agent:
 
@@ -183,84 +140,21 @@ Create a new agent
 ==================
 
 To create a new |AI| agent, navigate to the :menuselection:`AI` app and click :guilabel:`New`. Enter
-an :guilabel:`Agent Name`, then add a short description, if desired.
+an agent name, then add a short description, if desired.
 
 .. tip::
    Before creating a new agent, it is recommended to have a clear use case in mind. This helps when
-   writing out the :guilabel:`System Prompt`, and assigning the :guilabel:`Skills` and :guilabel:`AI
-   Tools`.
+   writing out the *Instructions*, and assigning the *Skills* and *Tools*.
 
-Next, select a :guilabel:`Response Style`. This manages the overall tone the agent uses when
-responding to an inquiry. Choose from one of the following options:
-
- - :guilabel:`Standard`: Maintains a balanced, professional tone. Provides clear, direct answers
-   with a moderate level of detail.
- - :guilabel:`Nuanced`: Provides sophisticated and deeply contextualized responses. Explores
-   multiple perspectives, acknowledges subtleties, and uses precise, academic language where
-   appropriate.
- - :guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. Prioritizes brevity and wit.
-   Uses expressive language, metaphors, and a dynamic structure to keep the user interested.
- - :guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical soundness above all else.
-   Breaks down complex steps, cites reasoning clearly, and verifies every claim. Adopts a meticulous
-   and formal tone.
-
-Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to **only** respond based on
-the provided resources.
-
-Next, select one or more :guilabel:`Skills` for the agent. As explained above, :ref:`Skills
-<ai/topics>` include both instructions and tools that guide the agent in helping users complete a
-task.
-
-Enter a :guilabel:`System Prompt` with detailed instructions for the agent as to their role and
-responsibilities.
+On the *Instructions* tab, enter a system prompt with detailed instructions for the agent as to
+their role and responsibilities.
 
 .. image:: agents/new-agent.png
-   :alt: A new agent form with the required information.
+   :alt: A new agent form.
 
-.. tip::
-   The specificity and length of the :guilabel:`System Prompt` can vary, depending on the use case
-   for the agent. Use the preconfigured agents as an example of the possible information.
+On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As explained above,
+:ref:`Skills <ai/skills>` include both instructions and tools that guide the agent in helping users
+complete a task.
 
-If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` tab, then click
-:guilabel:`Add a source`.
-
-Select a format:
-
- - :guilabel:`Upload a File`: Select the appropriate file from the explorer window, and click
-   :guilabel:`Open`.
- - :guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, paste one link per
-   line. Click :guilabel:`Save`.
- - :guilabel:`Add from Documents` (uploaded in the **Documents** application): Click the checkbox
-   next to one or more documents, then click :guilabel:`Select`.
- - :guilabel:`Add from Knowledge`: Click the checkbox next to one or more articles, then click
-   :guilabel:`Select`.
-
-Once a source is added, the :guilabel:`Status` field updates to reflect its current status. The
-source is ready when the status changes from *Processing* to *Indexed*. Slide the :guilabel:`Active`
-toggle to activate the source.
-
-.. image:: agents/sources.png
-   :alt: A list of sources for an agent, each denoted with their format.
-
-.. important::
-   If a source fails to upload, it could be the result of a conflict with the selected provider.
-
-Click the :guilabel:`Test` button to open a conversation window and test the new agent.
-
-Manually reprocessing sources
------------------------------
-
-If the content of a source changes after it has been indexed, it may be necessary to reprocess the
-source so that agents use the most recent information. Reprocessing can be triggered manually and
-ensures that updated documents, links, or knowledge articles are reflected in future agent
-responses.
-
-To reprocess a source, navigate to the :menuselection:`AI` app. Select an |AI| agent, and on the
-kanban card, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then click
-:guilabel:`Configuration`.
-
-On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to any source that should
-be updated.
-
-.. image:: agents/reprocess-source.png
-   :alt: AI agent sources with the reprocess icon visible.
+Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit the agent to **only**
+respond based on the provided resources.
