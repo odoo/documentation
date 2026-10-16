@@ -57,11 +57,11 @@ post.
    - Supported formats for sending documents include **BIS Billing 3.0, XRechnung CIUS, and
      NLCIUS**.
    - | The following **countries** are eligible for **Peppol registration in Odoo**:
-     | Andorra, Albania, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Switzerland, Cyprus,
-       Czech Republic, Germany, Denmark, Estonia, Spain, Finland, France, United Kingdom, Greece,
-       Croatia, Hungary, Ireland, Iceland, Italy, Liechtenstein, Lithuania, Luxembourg, Latvia,
-       Monaco, Montenegro, North Macedonia, Malta, Netherlands, Norway, Poland, Portugal, Romania,
-       Serbia, Sweden, Slovenia, Slovakia, San Marino, Turkey, Holy See (Vatican City State).
+     | Albania, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech
+       Republic, Denmark, Estonia, Finland, France, Germany, Greece, Holy See (Vatican City State),
+       Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta,
+       Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Romania, San
+       Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Turkey, United Kingdom.
 
 .. _accounting/e-invoicing/peppol-registration:
 
@@ -69,50 +69,59 @@ Registration
 ------------
 
 To register on Peppol, go to :menuselection:`Accounting --> Configuration --> Settings` and scroll
-to the :guilabel:`PEPPOL Electronic Invoicing` section. Then, follow these steps:
+down to the :guilabel:`Electronic Invoicing` section. Then, follow these steps:
 
-#. Click :guilabel:`Activate Electronic Invoicing` and fill in the following fields:
+#. Click :guilabel:`Activate Peppol` and fill in the following fields:
 
-   - Using the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon, make sure the relevant
-     country-specific Peppol endpoint identifier is selected in the dropdown list, then enter your
-     Peppol endpoint (usually a Company Registry or VAT number).
-   - :guilabel:`Email`
-   - :guilabel:`Phone`, including the country code (e.g., `+32` in Belgium)
+   - Select an identifying method for your company (VAT, company registry number, or the relevant
+     option) and enter the related information.
+   - :guilabel:`Email`.
+   - :guilabel:`Phone`, including the country code (e.g., `+32` in Belgium).
 
-#. Click :guilabel:`Activate Peppol`. The registration is then pending activation and should be
-   automatically activated within a day.
+#. Click :guilabel:`Activate Peppol`. The registration is then pending activation and should
+   be automatically activated within a day.
 
    .. seealso::
       `Peppol endpoint - OpenPeppol eDEC Code Lists <https://docs.peppol.eu/edelivery/codelists/>`_
       (open the "Participant Identifier Schemes" as HTML page)
 
-#. Define where documents should be received:
-
-   - :guilabel:`Receive in Journal`: If necessary, select another purchase journal in the
-     :guilabel:`Incoming Invoices Journal` field.
-   - :doc:`Receive in Documents <../../../productivity/documents>`: Select a folder in the
-     :guilabel:`Document Workspace` field if multiple purchase journals are used.
-
-#. Click :guilabel:`Save`.
-
-All invoices and vendor bills can then be sent/received directly using Peppol.
-
-.. note::
-   - To update the :guilabel:`Primary contact email`, click :icon:`oi-arrow-right`
-     :guilabel:`Advanced Configuration`, modify it, and click :guilabel:`Save`.
-   - If you are using an access point from a previous provider, make sure to deregister from it
-     first, then register with your new access point, unless it's Hermes (BOSA). If using Hermes
-     (BOSA), no action is needed; the migration is handled automatically.
-
 .. tip::
+   - To disconnect from Peppol, click :guilabel:`Disconnect Peppol`.
    - To manually trigger the scheduled action used to check the Peppol registration status, enable
      :ref:`developer mode <developer-mode>`, open the Settings app, go to :menuselection:`Settings
      --> Technical --> Scheduled actions`, and search for :guilabel:`Peppol: update participant
      status`. Open the scheduled action, then click :guilabel:`Run Manually`.
    - To try Peppol without sending real data, enable demo mode by selecting :guilabel:`Odoo Demo
-     ID` as the Peppol endpoint identifier. To switch back to production mode, :ref:`deregister from
-     the demo mode <accounting/e-invoicing/peppol-deregister>` and :ref:`register
-     <accounting/e-invoicing/peppol-registration>` in production.
+     ID` as the Peppol endpoint identifier. To switch back to production mode, deregister from the
+     demo mode and :ref:`register <accounting/e-invoicing/peppol-registration>` in production.
+
+Configuration
+-------------
+
+Once Peppol is activated:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`, and scroll down to the
+   :guilabel:`Electronic Invoicing` section.
+#. By default, the :guilabel:`Peppol Contact Email` is automatically filled in using the company's
+   record. This email is used by Odoo to contact you for KYC purposes, information regarding your
+   database, and other exceptional cases. It is recommended *not* to change this email.
+#. Select the :guilabel:`Peppol Participation Role`:
+
+   - :guilabel:`Sending & Receiving`: to both send *and* receive Peppol documents.
+   - :guilabel:`Sending Only`: to send Peppol documents only.
+
+#. If :guilabel:`Sending & Receiving` is selected as the :guilabel:`Peppol Participation Role`,
+   define where Peppol documents should be received:
+
+   - :guilabel:`Recieve as Bills`: If multiple purchase journals are used, select the journal where
+     the bills should be posted in the :guilabel:`Incoming Accounting Journal` field.
+   - :guilabel:`Receive as Documents`: Select the :guilabel:`Document Folder` where the Peppol
+     documents should be stored and the :guilabel:`Document Tags` to assign to them.
+
+.. note::
+   If you are using an access point from a previous provider, deregister from it before registering
+   with the new access point. No action is required if the previous access point was Hermes (BOSA),
+   as this migration is handled automatically.
 
 .. _accounting/e-invoicing/contact-verification:
 
@@ -177,10 +186,11 @@ New documents received via Peppol are checked multiple times a day. Depending on
 :ref:`registration settings <accounting/e-invoicing/peppol-registration>`, received documents
 are automatically:
 
-- either imported into the purchase journal set in the :guilabel:`PEPPOL Electronic Invoicing`
-  section, and corresponding vendor bills are created as drafts;
+- either imported into the purchase journal set in the :guilabel:`Electronic Invoicing` section, and
+  corresponding vendor bills are created as drafts;
 - or received via the :ref:`Documents app
-  <accounting/e-invoicing/receive-vendor-bills-documents-app>`.
+  <accounting/e-invoicing/receive-vendor-bills-documents-app>`, in the folder set in the
+  :guilabel:`Electronic Invoicing` section.
 
 .. tip::
    To manually trigger the scheduled action used to retrieve incoming Peppol documents, enable
@@ -203,8 +213,8 @@ steps:
 #. In the Documents app, create a specific :ref:`folder <documents/folders>` or enable :ref:`file
    centralization <documents/file-centralization>` for :guilabel:`Accounting` documents.
 #. Open the Accounting app, go to :menuselection:`Accounting --> Configuration --> Settings`, and
-   scroll to the :guilabel:`PEPPOL Electronic Invoicing` section.
-#. In the :guilabel:`Document Workspace` field, choose the relevant folder.
+   scroll to the :guilabel:`Electronic Invoicing` section.
+#. In the :guilabel:`Document Folder` field, choose the relevant folder.
 #. Use the :guilabel:`Document Tags` field to add tags to incoming Peppol documents for easy
    identification.
 #. Click :guilabel:`Save`.
@@ -294,21 +304,6 @@ steps:
 .. tip::
    After a new field has been created as explained above, it can be :ref:`added to other views
    <studio/fields/add-existing>` such as the invoice list view.
-
-.. _accounting/e-invoicing/peppol-deregister:
-
-Peppol deregistration from Odoo
--------------------------------
-
-Only one Peppol receiver registration can be active for each Peppol endpoint identifier at a time.
-To stop using Odoo as the Peppol access point, e.g., to switch to another provider or reconfigure
-the registration for a new database, you must first deregister from Peppol. To do so, go to
-:menuselection:`Accounting --> Configuration --> Settings`, scroll down to the :guilabel:`PEPPOL
-Electronic Invoicing` section, and click :icon:`oi-arrow-right` :guilabel:`Advanced Configuration`.
-Then click :guilabel:`Remove from Peppol` and confirm.
-
-Once removed, the Peppol registration is deleted from the database, and documents can no longer be
-sent or received via Peppol in Odoo.
 
 .. _accounting/e-invoicing/peppol-country-specific:
 
