@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-09-08 18:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -21870,7 +21870,7 @@ msgid "The form for a DHL shipping method."
 msgstr "Formulir untuk metode pengiriman DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "Informasi umum"
@@ -23845,42 +23845,13 @@ msgstr "Integrasi FedEx"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"Mengintegrasikan akun FedEx dengan aplikasi **Inventaris** Odoo memungkinkan "
-"untuk :doc:`menghitung tarif pengiriman <../setup_configuration>`, "
-"dan :doc:`menghasilkan label pengiriman <labels>` dalam Odoo. Ini dicapai "
-"dengan mengaktifkan *konektor pengiriman* FedEx, kemudian mengonfigurasi "
-"setidaknya satu *metode pengiriman*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-"Sejak 21 Oktober 2025, integrasi FedEx menggunakan API terbaru sementara "
-"tidak tersedia sementara Odoo menyelesaikan validasi penyedia solusinya "
-"untuk FedEx. Pengaturan baru saat ini diblokir, dan integrasi yang ada "
-"menggunakan penyedia Pengiriman Fedex (Legacy) akan berhenti bekerja pada 1 "
-"Juni 2026."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"Untuk solusi sementara, :doc:`integrasi Sendcloud <sendcloud_shipping>` juga "
-"mendukung layanan FedEx. Untuk meminta bantuan lebih lanjut, `kirim tiket "
-"dukungan <https://www.odoo.com/help>`_."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -23890,100 +23861,93 @@ msgstr ""
 "Lihat dokumentasi tentang :doc:`pengirim pihak ketiga <third_party_shipper>` "
 "untuk instruksi integrasi pengirim umum."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "Aktifkan konektor pengiriman"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"Untuk mengaktifkan konektor pengiriman untuk FedEx, buka "
-"aplikasi :menuselection:`Apps`. Cari `FedEx`. :guilabel:`Aktifkan` konektor "
-"pengiriman."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "Konfigurasikan metode pengiriman"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"Setelah konektor pengiriman FedEx diaktifkan, perlu untuk mengonfigurasi "
-"setidaknya satu metode pengiriman. Setelah itu, metode pengiriman dapat "
-"disertakan dalam pesanan penjualan (SO) dan digunakan untuk menghitung biaya "
-"pengiriman dan mencetak label pengiriman."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"Untuk melihat semua metode pengiriman untuk setiap pengirim dengan konektor "
-"yang diaktifkan, buka :menuselection:`aplikasi Inventaris --> Konfigurasi --"
-"> Metode Pengiriman`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"Pilih metode pengiriman untuk membuka formulirnya. Sebagai alternatif, "
-"klik :guilabel:`Baru` untuk membuka formulir kosong, dan konfigurasikan "
-"metode pengiriman baru."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "Formulir untuk metode pengiriman FedEx."
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"Di bagian paling atas formulir metode pengiriman terdapat kolom yang "
-"digunakan untuk mengonfigurasi cara kerja metode tersebut di Odoo. Di "
-"kolom :guilabel:`Penyedia`, pilih :guilabel:`FedEx` dari menu drop-down, "
-"jika belum dipilih."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"Kolom lainnya di bagian ini berlaku umum untuk semua penyedia pengiriman. "
-"Untuk detail tentang cara mengisinya, lihat dokumentasi "
-"tentang :doc:`pengirim pihak ketiga <third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "Tab konfigurasi FedEx"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"Opsi di tab *Fedex Configuration* pada formulir metode pengiriman FedEx "
-"digunakan untuk menghubungkan metode ke akun FedEx dan mengonfigurasi detail "
-"pengiriman yang terkait dengan metode tersebut (jenis drop-off, jenis paket, "
-"dll.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -23995,48 +23959,26 @@ msgstr ""
 "Account <https://www.fedex.com/en-us/open-account.html>`_ FedEx, "
 "klik :guilabel:`Create Account`, dan ikuti instruksinya."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"Kemudian, daftarkan akun FedEx di database. Klik tombol :guilabel:`Register "
-"FedEx Account`. Jendela *FedEx Account Registration* terbuka. Terima "
-"perjanjian lisensi pengguna akhir (EULA) dengan memilih kotak "
-"centang :guilabel:`I acknowledge the reading of the FedEx End User License "
-"Agreement` dan :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping`, kemudian klik :guilabel:`Accept and Continue`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
 msgstr ""
-"Sebuah *nomor akun* adalah nomor unik yang ditetapkan untuk setiap akun "
-"FedEx."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"Untuk menemukan nomor akun FedEx, masuk ke akun FedEx di https://"
-"www.fedex.com. Klik nama pemegang akun di sudut kanan atas layar, dan "
-"pilih :menuselection:`Profil Saya` dari menu drop-down."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"Pada halaman profil, klik :guilabel:`Manajemen Akun` di sisi kiri layar. "
-"Nomor akun ditampilkan pada layar ini."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -24051,7 +23993,7 @@ msgstr ""
 "dikirim dari alamat residensial, pilih kotak centang :guilabel:`Residential "
 "Address`. Klik tombol :guilabel:`Validate Address`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -24060,7 +24002,7 @@ msgstr ""
 "Selanjutnya, pilih :guilabel:`Validation Option` untuk memverifikasi akses "
 "ke akun. Ini adalah bentuk autentikasi multi-faktor (MFA). Dua opsi tersedia:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
@@ -24068,7 +24010,7 @@ msgstr ""
 ":guilabel:`Invoice Validation`: Gunakan informasi dari invoice terbaru "
 "(dalam 90 hari terakhir) untuk memvalidasi informasi akun."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -24076,7 +24018,36 @@ msgstr ""
 ":guilabel:`Secure Code Validation`: Terima PIN "
 "melalui :guilabel:`Email`, :guilabel:`SMS`, atau :guilabel:`Voice Call`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -24087,15 +24058,13 @@ msgstr ""
 "klik :guilabel:`Open FedEx Account Form` dan modifikasi pengaturan "
 "perusahaan."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
+"shipping method:"
 msgstr ""
-"Di tab *FedEx Configuration*, berikan informasi lebih lanjut tentang metode "
-"pengiriman:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
@@ -24103,23 +24072,19 @@ msgstr ""
 ":guilabel:`FedEx Service Type`: Pilih layanan FedEx yang digunakan untuk "
 "mengirim paket."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
 msgstr ""
-":guilabel:`FedEx Drop-Off Type`: Pilih metode untuk menyerahkan paket ke "
-"FedEx."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
 msgstr ""
-":guilabel:`FedEx Package Type`: Pilih jenis paket yang digunakan untuk "
-"metode pengiriman."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
@@ -24127,7 +24092,7 @@ msgstr ""
 ":guilabel:`Package Weight Unit`: Pilih satuan ukuran yang digunakan untuk "
 "menimbang paket."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -24141,14 +24106,12 @@ msgstr ""
 "Jika :guilabel:`Kilograms` dipilih, satuan panjang diperbarui "
 "menjadi :guilabel:`Centimeters`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
 msgstr ""
-":guilabel:`Label Type`: Pilih jenis label pengiriman yang digunakan untuk "
-"paket."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
@@ -24156,41 +24119,32 @@ msgstr ""
 ":guilabel:`Label Format`: Pilih format file yang digunakan Odoo untuk "
 "menghasilkan label pengiriman."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"Opsi yang harus dipilih pada tab *FedEx Configuration* dari metode "
-"pengiriman bergantung pada layanan pengiriman yang dinegosiasikan dari akun "
-"FedEx terkait. Untuk mengonfirmasi layanan yang tersedia untuk akun FedEx, "
-"kunjungi halaman *Account Management* setelah masuk ke website FedEx atau "
-"hubungi perwakilan layanan pelanggan."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "Bagian opsi"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"Bagian :guilabel:`Options` dari tab *FedEx Configuration* menyediakan "
-"beberapa opsi tambahan untuk mengonfigurasi lebih lanjut metode pengiriman:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`Generate Return Label`: Pilih kotak centang ini untuk secara "
-"otomatis menghasilkan label ketika pengiriman divalidasi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -24199,7 +24153,7 @@ msgstr ""
 "pembaruan melalui email kepada pelanggan, jika alamat email dikonfigurasi "
 "untuk pelanggan."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -24207,7 +24161,7 @@ msgstr ""
 ":guilabel:`Bea dibayar oleh`: Gunakan menu drop-down untuk memilih apakah "
 "biaya bea harus dibayar oleh :guilabel:`Pengirim` atau :guilabel:`Penerima`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
@@ -24215,7 +24169,7 @@ msgstr ""
 ":guilabel:`Residential delivery`: Tentukan kapan menandai alamat penerima "
 "sebagai residensial."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -24225,69 +24179,32 @@ msgstr ""
 "atau dikirim sebagai dokumen perdagangan elektronik. Ini biasanya diperlukan "
 "ketika faktur komersial dibutuhkan untuk pengiriman internasional."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "Bagian Nilai yang Dideklarasikan"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr ""
 "Tentukan :guilabel:`Persentase Nilai yang Dideklarasikan` untuk keperluan "
 "asuransi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "Aktifkan metode pengiriman"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"Secara default, metode pengiriman di Odoo dibuat dalam *lingkungan uji*. Ini "
-"berarti metode tersebut hanya dapat digunakan untuk tujuan pengujian, dan "
-"tidak dapat menghasilkan surat jalan yang sebenarnya."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"Untuk mengaktifkan metode pengiriman di *lingkungan produksi*, klik tombol "
-"pintar :icon:`fa-stop` :guilabel:`Lingkungan Uji` di bagian atas formulir "
-"metode pengiriman. Setelah melakukannya, tombol pintar berubah "
-"menjadi :icon:`fa-play` :guilabel:`Lingkungan Produksi`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"Dengan lingkungan produksi diaktifkan, memvalidasi surat jalan menggunakan "
-"metode pengiriman akan menghasilkan label pengiriman yang sebenarnya dengan "
-"FedEx."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"Klik tombol pintar :icon:`fa-play` :guilabel:`Lingkungan Produksi` untuk "
-"mengembalikan metode pengiriman ke lingkungan uji."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"**Jangan** aktifkan lingkungan produksi untuk metode pengiriman sebelum siap "
-"digunakan untuk surat jalan yang sebenarnya. Melakukan hal tersebut dapat "
-"menyebabkan terciptanya biaya yang tidak diinginkan dengan FedEx."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -27441,6 +27358,11 @@ msgstr ""
 "Navigasi ke :menuselection:`Inventory app --> Configuration --> Settings`. "
 "Di bagian *Shipping Connectors*, aktifkan :guilabel:`Shiprocket Connector`, "
 "kemudian klik :guilabel:`Save`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "Konfigurasikan metode pengiriman"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -62586,6 +62508,255 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "Mengintegrasikan akun FedEx dengan aplikasi **Inventaris** Odoo "
+#~ "memungkinkan untuk :doc:`menghitung tarif pengiriman <../"
+#~ "setup_configuration>`, dan :doc:`menghasilkan label pengiriman <labels>` "
+#~ "dalam Odoo. Ini dicapai dengan mengaktifkan *konektor pengiriman* FedEx, "
+#~ "kemudian mengonfigurasi setidaknya satu *metode pengiriman*."
+
+#~ msgid ""
+#~ "As of October 21, 2025, the FedEx integration using the latest API is "
+#~ "temporarily unavailable while Odoo finalizes its solution-provider "
+#~ "validation for FedEx. New setups are currently blocked, and existing "
+#~ "integrations using the FedEx Shipping (Legacy) provider will stop working "
+#~ "as of June 1, 2026."
+#~ msgstr ""
+#~ "Sejak 21 Oktober 2025, integrasi FedEx menggunakan API terbaru sementara "
+#~ "tidak tersedia sementara Odoo menyelesaikan validasi penyedia solusinya "
+#~ "untuk FedEx. Pengaturan baru saat ini diblokir, dan integrasi yang ada "
+#~ "menggunakan penyedia Pengiriman Fedex (Legacy) akan berhenti bekerja pada "
+#~ "1 Juni 2026."
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "Untuk solusi sementara, :doc:`integrasi Sendcloud <sendcloud_shipping>` "
+#~ "juga mendukung layanan FedEx. Untuk meminta bantuan lebih lanjut, `kirim "
+#~ "tiket dukungan <https://www.odoo.com/help>`_."
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "Untuk mengaktifkan konektor pengiriman untuk FedEx, buka "
+#~ "aplikasi :menuselection:`Apps`. Cari `FedEx`. :guilabel:`Aktifkan` "
+#~ "konektor pengiriman."
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "Setelah konektor pengiriman FedEx diaktifkan, perlu untuk mengonfigurasi "
+#~ "setidaknya satu metode pengiriman. Setelah itu, metode pengiriman dapat "
+#~ "disertakan dalam pesanan penjualan (SO) dan digunakan untuk menghitung "
+#~ "biaya pengiriman dan mencetak label pengiriman."
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "Untuk melihat semua metode pengiriman untuk setiap pengirim dengan "
+#~ "konektor yang diaktifkan, buka :menuselection:`aplikasi Inventaris --> "
+#~ "Konfigurasi --> Metode Pengiriman`."
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "Pilih metode pengiriman untuk membuka formulirnya. Sebagai alternatif, "
+#~ "klik :guilabel:`Baru` untuk membuka formulir kosong, dan konfigurasikan "
+#~ "metode pengiriman baru."
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "Formulir untuk metode pengiriman FedEx."
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "Di bagian paling atas formulir metode pengiriman terdapat kolom yang "
+#~ "digunakan untuk mengonfigurasi cara kerja metode tersebut di Odoo. Di "
+#~ "kolom :guilabel:`Penyedia`, pilih :guilabel:`FedEx` dari menu drop-down, "
+#~ "jika belum dipilih."
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "Kolom lainnya di bagian ini berlaku umum untuk semua penyedia pengiriman. "
+#~ "Untuk detail tentang cara mengisinya, lihat dokumentasi "
+#~ "tentang :doc:`pengirim pihak ketiga <third_party_shipper>`."
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "Opsi di tab *Fedex Configuration* pada formulir metode pengiriman FedEx "
+#~ "digunakan untuk menghubungkan metode ke akun FedEx dan mengonfigurasi "
+#~ "detail pengiriman yang terkait dengan metode tersebut (jenis drop-off, "
+#~ "jenis paket, dll.)."
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "Kemudian, daftarkan akun FedEx di database. Klik "
+#~ "tombol :guilabel:`Register FedEx Account`. Jendela *FedEx Account "
+#~ "Registration* terbuka. Terima perjanjian lisensi pengguna akhir (EULA) "
+#~ "dengan memilih kotak centang :guilabel:`I acknowledge the reading of the "
+#~ "FedEx End User License Agreement` dan :guilabel:`I accept the terms of "
+#~ "FedEx EULA to start shipping`, kemudian klik :guilabel:`Accept and "
+#~ "Continue`."
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr ""
+#~ "Sebuah *nomor akun* adalah nomor unik yang ditetapkan untuk setiap akun "
+#~ "FedEx."
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "Untuk menemukan nomor akun FedEx, masuk ke akun FedEx di https://"
+#~ "www.fedex.com. Klik nama pemegang akun di sudut kanan atas layar, dan "
+#~ "pilih :menuselection:`Profil Saya` dari menu drop-down."
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "Pada halaman profil, klik :guilabel:`Manajemen Akun` di sisi kiri layar. "
+#~ "Nomor akun ditampilkan pada layar ini."
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr ""
+#~ "Di tab *FedEx Configuration*, berikan informasi lebih lanjut tentang "
+#~ "metode pengiriman:"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Pilih metode untuk menyerahkan paket ke "
+#~ "FedEx."
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ""
+#~ ":guilabel:`FedEx Package Type`: Pilih jenis paket yang digunakan untuk "
+#~ "metode pengiriman."
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ""
+#~ ":guilabel:`Label Type`: Pilih jenis label pengiriman yang digunakan untuk "
+#~ "paket."
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "Opsi yang harus dipilih pada tab *FedEx Configuration* dari metode "
+#~ "pengiriman bergantung pada layanan pengiriman yang dinegosiasikan dari "
+#~ "akun FedEx terkait. Untuk mengonfirmasi layanan yang tersedia untuk akun "
+#~ "FedEx, kunjungi halaman *Account Management* setelah masuk ke website "
+#~ "FedEx atau hubungi perwakilan layanan pelanggan."
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "Bagian :guilabel:`Options` dari tab *FedEx Configuration* menyediakan "
+#~ "beberapa opsi tambahan untuk mengonfigurasi lebih lanjut metode "
+#~ "pengiriman:"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`Generate Return Label`: Pilih kotak centang ini untuk secara "
+#~ "otomatis menghasilkan label ketika pengiriman divalidasi."
+
+#~ msgid "Activate delivery method"
+#~ msgstr "Aktifkan metode pengiriman"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "Secara default, metode pengiriman di Odoo dibuat dalam *lingkungan uji*. "
+#~ "Ini berarti metode tersebut hanya dapat digunakan untuk tujuan pengujian, "
+#~ "dan tidak dapat menghasilkan surat jalan yang sebenarnya."
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "Untuk mengaktifkan metode pengiriman di *lingkungan produksi*, klik "
+#~ "tombol pintar :icon:`fa-stop` :guilabel:`Lingkungan Uji` di bagian atas "
+#~ "formulir metode pengiriman. Setelah melakukannya, tombol pintar berubah "
+#~ "menjadi :icon:`fa-play` :guilabel:`Lingkungan Produksi`."
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "Dengan lingkungan produksi diaktifkan, memvalidasi surat jalan "
+#~ "menggunakan metode pengiriman akan menghasilkan label pengiriman yang "
+#~ "sebenarnya dengan FedEx."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "Klik tombol pintar :icon:`fa-play` :guilabel:`Lingkungan Produksi` untuk "
+#~ "mengembalikan metode pengiriman ke lingkungan uji."
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "**Jangan** aktifkan lingkungan produksi untuk metode pengiriman sebelum "
+#~ "siap digunakan untuk surat jalan yang sebenarnya. Melakukan hal tersebut "
+#~ "dapat menyebabkan terciptanya biaya yang tidak diinginkan dengan FedEx."
 
 #~ msgid ""
 #~ "The *one-step inventory flow* is the simplest option, with minimal "

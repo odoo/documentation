@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-09-08 20:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -22178,7 +22178,7 @@ msgid "The form for a DHL shipping method."
 msgstr "Formularul pentru o metodă de transport DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "Informații generale"
@@ -24179,42 +24179,13 @@ msgstr "Integrare FedEx"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"Integrarea unui cont FedEx cu aplicația **Stoc** din Odoo face "
-"posibilă :doc:`calcularea tarifelor de livrare <../setup_configuration>` "
-"și :doc:`generarea etichetelor de livrare <labels>` în cadrul Odoo. Acest "
-"lucru se realizează prin activarea *conectorului de expediere* FedEx, apoi "
-"configurarea a cel puțin o *metodă de expediere*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-"Din 21 octombrie 2025, integrarea FedEx folosind cel mai recent API este "
-"temporar indisponibilă în timp ce Odoo își finalizează validarea "
-"furnizorului de soluții pentru FedEx. Configurațiile noi sunt în prezent "
-"blocate, iar integrările existente care utilizează furnizorul FedEx Shipping "
-"(Legacy) vor înceta să funcționeze de la 1 iunie 2026."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"Pentru o soluție temporară, :doc:`integrarea Sendcloud <sendcloud_shipping>` "
-"acceptă și serviciile FedEx. Pentru a solicita asistență suplimentară, "
-"`trimiteți un tichet de asistență <https://www.odoo.com/help>`_."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -24225,100 +24196,93 @@ msgstr ""
 "<third_party_shipper>` pentru instrucțiuni generale de integrare a "
 "transportatorilor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "Activează conectorul de transport"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"Pentru a activa conectorul de transport pentru FedEx, deschideți "
-"aplicația :menuselection:`Aplicații`. Căutați `FedEx`. :guilabel:`Activați` "
-"conectorul de transport."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "Configurare metodă de livrare"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"După ce conectorul de transport FedEx este activat, este necesar să "
-"configurați cel puțin o metodă de livrare. După aceea, metoda de livrare "
-"poate fi inclusă în comenzile de vânzare (CV) și utilizată pentru a calcula "
-"costurile de livrare și a imprima etichetele de livrare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"Pentru a vedea toate metodele de livrare pentru fiecare expeditor cu un "
-"conector activat, accesați :menuselection:`aplicația Stoc --> Configurare --"
-"> Metode de livrare`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"Selectați o metodă de livrare pentru a deschide formularul acesteia. "
-"Alternativ, faceți clic pe :guilabel:`Creează` pentru a deschide un formular "
-"gol și a configura o metodă de livrare nouă."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "Formularul pentru o metodă de livrare FedEx."
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"În partea de sus a unui formular de metodă de livrare se află câmpuri "
-"utilizate pentru a configura modul în care metoda funcționează în Odoo. În "
-"câmpul :guilabel:`Furnizor`, selectați :guilabel:`FedEx` din meniul "
-"derulant, dacă nu este deja selectat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"Restul câmpurilor din această secțiune sunt generale pentru toți furnizorii "
-"de livrare. Pentru detalii despre cum să le completați, consultați "
-"documentația despre :doc:`expeditori terți <third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "Fila de configurare FedEx"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"Opțiunile din fila *Configurare Fedex* a formularului metodei de transport "
-"FedEx sunt utilizate pentru a conecta metoda la un cont FedEx și pentru a "
-"configura detaliile de livrare asociate metodei (tipul de predare, tipul de "
-"pachet etc.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -24330,48 +24294,26 @@ msgstr ""
 "la pagina `Deschidere cont <https://www.fedex.com/en-us/open-account.html>`_ "
 "FedEx, faceți clic pe :guilabel:`Creează cont` și urmați instrucțiunile."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"Apoi, înregistrați contul FedEx în baza de date. Faceți clic pe "
-"butonul :guilabel:`Înregistrează cont FedEx`. Se deschide fereastra "
-"*Înregistrare cont FedEx*. Acceptați acordul de licență pentru utilizatorul "
-"final (EULA) selectând casetele de selectare :guilabel:`Confirm citirea "
-"Acordului de licență pentru utilizatorul final FedEx` și :guilabel:`Accept "
-"termenii EULA FedEx pentru a începe transportul`, apoi faceți clic "
-"pe :guilabel:`Acceptă și continuă`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
-msgstr "Un *număr de cont* este numărul unic atribuit fiecărui cont FedEx."
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"Pentru a găsi un account number FedEx, conectați-vă la contul dvs. pe "
-"https://www.fedex.com. Faceți clic pe numele titularului de cont din colțul "
-"din dreapta sus al ecranului și selectați :menuselection:`My Profile` din "
-"meniul derulant."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"Pe pagina de profil, faceți clic pe :guilabel:`Account Management` în partea "
-"stângă a ecranului. Numărul de cont va fi afișat pe acest ecran."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -24387,7 +24329,7 @@ msgstr ""
 "selectare :guilabel:`Adresă rezidențială`. Faceți clic pe "
 "butonul :guilabel:`Validează adresa`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -24397,7 +24339,7 @@ msgstr ""
 "cont. Aceasta este o formă de autentificare cu mai mulți factori (MFA). Sunt "
 "disponibile două opțiuni:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
@@ -24405,7 +24347,7 @@ msgstr ""
 ":guilabel:`Validare factură`: Utilizați informații dintr-o factură recentă "
 "(în ultimele 90 de zile) pentru a valida informațiile contului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -24413,7 +24355,36 @@ msgstr ""
 ":guilabel:`Validare cod securizat`: Primiți un cod PIN prin :guilabel:`E-"
 "mail`, :guilabel:`SMS` sau :guilabel:`Apel vocal`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -24424,15 +24395,13 @@ msgstr ""
 "modifica această setare, faceți clic pe :guilabel:`Deschide formularul "
 "contului FedEx` și modificați setările companiei."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
+"shipping method:"
 msgstr ""
-"În fila *Configurare FedEx*, furnizați mai multe informații despre metoda de "
-"livrare:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
@@ -24440,23 +24409,19 @@ msgstr ""
 ":guilabel:`Tip serviciu FedEx`: Selectați serviciul FedEx utilizat pentru a "
 "expedia un pachet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
 msgstr ""
-":guilabel:`Tip de predare FedEx`: Selectați metoda de predare a unui pachet "
-"către FedEx."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
 msgstr ""
-":guilabel:`Tip pachet FedEx`: Selectați tipul de pachet utilizat pentru "
-"metoda de transport."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
@@ -24464,7 +24429,7 @@ msgstr ""
 ":guilabel:`Unitate de greutate pachet`: Selectați unitatea de măsură "
 "utilizată pentru cântărirea pachetelor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -24478,14 +24443,12 @@ msgstr ""
 "la :guilabel:`Inci`. Dacă este selectat :guilabel:`Kilograme`, unitatea de "
 "lungime se actualizează la :guilabel:`Centimetri`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
 msgstr ""
-":guilabel:`Tip etichetă`: Selectați tipul de etichetă de transport utilizată "
-"pentru pachete."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
@@ -24493,41 +24456,32 @@ msgstr ""
 ":guilabel:`Format etichetă`: Selectați formatul de fișier utilizat de Odoo "
 "pentru a genera etichetele de transport."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"Opțiunile care ar trebui să fie selectate pe fila *Configurare FedEx* a unei "
-"metode de livrare depind de serviciile de transport negociate ale contului "
-"FedEx asociat. Pentru a confirma serviciile disponibile pentru un cont "
-"FedEx, vizitați pagina *Gestionare cont* după autentificarea pe site-ul "
-"FedEx sau vorbiți cu un reprezentant al serviciului clienți."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "Secțiunea Opțiuni"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"Secțiunea :guilabel:`Opțiuni` de pe fila *Configurare FedEx* oferă câteva "
-"opțiuni adiționale pentru a configura suplimentar metoda de livrare:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`Generează etichetă de returnare`: Bifați această casetă pentru a "
-"genera automat o etichetă când o livrare este validată."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -24536,7 +24490,7 @@ msgstr ""
 "actualizări prin e-mail clienților, dacă o adresă de e-mail este configurată "
 "pentru client."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -24544,7 +24498,7 @@ msgstr ""
 ":guilabel:`Duties paid by`: Folosiți meniul derulant pentru a selecta dacă "
 "taxele vamale sunt plătite de :guilabel:`Sender` sau :guilabel:`Recipient`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
@@ -24552,7 +24506,7 @@ msgstr ""
 ":guilabel:`Livrare rezidențială`: Specificați când să marcați adresa "
 "destinatarului ca fiind rezidențială."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -24563,68 +24517,31 @@ msgstr ""
 "obicei necesar când sunt necesare facturi comerciale pentru transportări "
 "internaționale."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "Secțiunea Valoare declarată"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr ""
 "Specificați :guilabel:`Procentul valorii declarate` în scopuri de asigurare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "Activare metodă de livrare"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"Implicit, metodele de livrare din Odoo sunt create într-un *mediu de "
-"testare*. Aceasta înseamnă că pot fi utilizate doar în scopuri de testare și "
-"nu pot genera comenzi de livrare reale."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"Pentru a activa o metodă de livrare într-un *mediu de producție*, faceți "
-"clic pe butonul inteligent :icon:`fa-stop` :guilabel:`Mediu de testare` din "
-"partea de sus a formularului metodei de livrare. După aceea, butonul "
-"inteligent se va schimba pentru a afișa :icon:`fa-play` :guilabel:`Mediu de "
-"producție`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"Cu mediul de producție activat, validarea unei comenzi de livrare utilizând "
-"metoda de livrare generează o etichetă de livrare reală cu FedEx."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"Faceți clic pe butonul inteligent :icon:`fa-play` :guilabel:`Mediu de "
-"producție` pentru a readuce metoda de livrare într-un mediu de testare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"**Nu** activați mediul de producție pentru o metodă de livrare înainte ca "
-"aceasta să fie gata de utilizare pentru comenzi de livrare reale. Acest "
-"lucru poate duce la crearea de taxe nedorite cu FedEx."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -27855,6 +27772,11 @@ msgstr ""
 "Navigați la :menuselection:`aplicația Stoc --> Configurare --> Setări`. În "
 "secțiunea *Shipping Connectors*, activați :guilabel:`Shiprocket Connector`, "
 "apoi faceți clic pe :guilabel:`Save`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "Configurare metodă de livrare"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -63603,6 +63525,257 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "Integrarea unui cont FedEx cu aplicația **Stoc** din Odoo face "
+#~ "posibilă :doc:`calcularea tarifelor de livrare <../setup_configuration>` "
+#~ "și :doc:`generarea etichetelor de livrare <labels>` în cadrul Odoo. Acest "
+#~ "lucru se realizează prin activarea *conectorului de expediere* FedEx, "
+#~ "apoi configurarea a cel puțin o *metodă de expediere*."
+
+#~ msgid ""
+#~ "As of October 21, 2025, the FedEx integration using the latest API is "
+#~ "temporarily unavailable while Odoo finalizes its solution-provider "
+#~ "validation for FedEx. New setups are currently blocked, and existing "
+#~ "integrations using the FedEx Shipping (Legacy) provider will stop working "
+#~ "as of June 1, 2026."
+#~ msgstr ""
+#~ "Din 21 octombrie 2025, integrarea FedEx folosind cel mai recent API este "
+#~ "temporar indisponibilă în timp ce Odoo își finalizează validarea "
+#~ "furnizorului de soluții pentru FedEx. Configurațiile noi sunt în prezent "
+#~ "blocate, iar integrările existente care utilizează furnizorul FedEx "
+#~ "Shipping (Legacy) vor înceta să funcționeze de la 1 iunie 2026."
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "Pentru o soluție temporară, :doc:`integrarea Sendcloud "
+#~ "<sendcloud_shipping>` acceptă și serviciile FedEx. Pentru a solicita "
+#~ "asistență suplimentară, `trimiteți un tichet de asistență <https://"
+#~ "www.odoo.com/help>`_."
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "Pentru a activa conectorul de transport pentru FedEx, deschideți "
+#~ "aplicația :menuselection:`Aplicații`. Căutați "
+#~ "`FedEx`. :guilabel:`Activați` conectorul de transport."
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "După ce conectorul de transport FedEx este activat, este necesar să "
+#~ "configurați cel puțin o metodă de livrare. După aceea, metoda de livrare "
+#~ "poate fi inclusă în comenzile de vânzare (CV) și utilizată pentru a "
+#~ "calcula costurile de livrare și a imprima etichetele de livrare."
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "Pentru a vedea toate metodele de livrare pentru fiecare expeditor cu un "
+#~ "conector activat, accesați :menuselection:`aplicația Stoc --> Configurare "
+#~ "--> Metode de livrare`."
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "Selectați o metodă de livrare pentru a deschide formularul acesteia. "
+#~ "Alternativ, faceți clic pe :guilabel:`Creează` pentru a deschide un "
+#~ "formular gol și a configura o metodă de livrare nouă."
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "Formularul pentru o metodă de livrare FedEx."
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "În partea de sus a unui formular de metodă de livrare se află câmpuri "
+#~ "utilizate pentru a configura modul în care metoda funcționează în Odoo. "
+#~ "În câmpul :guilabel:`Furnizor`, selectați :guilabel:`FedEx` din meniul "
+#~ "derulant, dacă nu este deja selectat."
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "Restul câmpurilor din această secțiune sunt generale pentru toți "
+#~ "furnizorii de livrare. Pentru detalii despre cum să le completați, "
+#~ "consultați documentația despre :doc:`expeditori terți "
+#~ "<third_party_shipper>`."
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "Opțiunile din fila *Configurare Fedex* a formularului metodei de "
+#~ "transport FedEx sunt utilizate pentru a conecta metoda la un cont FedEx "
+#~ "și pentru a configura detaliile de livrare asociate metodei (tipul de "
+#~ "predare, tipul de pachet etc.)."
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "Apoi, înregistrați contul FedEx în baza de date. Faceți clic pe "
+#~ "butonul :guilabel:`Înregistrează cont FedEx`. Se deschide fereastra "
+#~ "*Înregistrare cont FedEx*. Acceptați acordul de licență pentru "
+#~ "utilizatorul final (EULA) selectând casetele de "
+#~ "selectare :guilabel:`Confirm citirea Acordului de licență pentru "
+#~ "utilizatorul final FedEx` și :guilabel:`Accept termenii EULA FedEx pentru "
+#~ "a începe transportul`, apoi faceți clic pe :guilabel:`Acceptă și "
+#~ "continuă`."
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr "Un *număr de cont* este numărul unic atribuit fiecărui cont FedEx."
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "Pentru a găsi un account number FedEx, conectați-vă la contul dvs. pe "
+#~ "https://www.fedex.com. Faceți clic pe numele titularului de cont din "
+#~ "colțul din dreapta sus al ecranului și selectați :menuselection:`My "
+#~ "Profile` din meniul derulant."
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "Pe pagina de profil, faceți clic pe :guilabel:`Account Management` în "
+#~ "partea stângă a ecranului. Numărul de cont va fi afișat pe acest ecran."
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr ""
+#~ "În fila *Configurare FedEx*, furnizați mai multe informații despre metoda "
+#~ "de livrare:"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ""
+#~ ":guilabel:`Tip de predare FedEx`: Selectați metoda de predare a unui "
+#~ "pachet către FedEx."
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ""
+#~ ":guilabel:`Tip pachet FedEx`: Selectați tipul de pachet utilizat pentru "
+#~ "metoda de transport."
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ""
+#~ ":guilabel:`Tip etichetă`: Selectați tipul de etichetă de transport "
+#~ "utilizată pentru pachete."
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "Opțiunile care ar trebui să fie selectate pe fila *Configurare FedEx* a "
+#~ "unei metode de livrare depind de serviciile de transport negociate ale "
+#~ "contului FedEx asociat. Pentru a confirma serviciile disponibile pentru "
+#~ "un cont FedEx, vizitați pagina *Gestionare cont* după autentificarea pe "
+#~ "site-ul FedEx sau vorbiți cu un reprezentant al serviciului clienți."
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "Secțiunea :guilabel:`Opțiuni` de pe fila *Configurare FedEx* oferă câteva "
+#~ "opțiuni adiționale pentru a configura suplimentar metoda de livrare:"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`Generează etichetă de returnare`: Bifați această casetă pentru "
+#~ "a genera automat o etichetă când o livrare este validată."
+
+#~ msgid "Activate delivery method"
+#~ msgstr "Activare metodă de livrare"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "Implicit, metodele de livrare din Odoo sunt create într-un *mediu de "
+#~ "testare*. Aceasta înseamnă că pot fi utilizate doar în scopuri de testare "
+#~ "și nu pot genera comenzi de livrare reale."
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "Pentru a activa o metodă de livrare într-un *mediu de producție*, faceți "
+#~ "clic pe butonul inteligent :icon:`fa-stop` :guilabel:`Mediu de testare` "
+#~ "din partea de sus a formularului metodei de livrare. După aceea, butonul "
+#~ "inteligent se va schimba pentru a afișa :icon:`fa-play` :guilabel:`Mediu "
+#~ "de producție`."
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "Cu mediul de producție activat, validarea unei comenzi de livrare "
+#~ "utilizând metoda de livrare generează o etichetă de livrare reală cu "
+#~ "FedEx."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "Faceți clic pe butonul inteligent :icon:`fa-play` :guilabel:`Mediu de "
+#~ "producție` pentru a readuce metoda de livrare într-un mediu de testare."
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "**Nu** activați mediul de producție pentru o metodă de livrare înainte ca "
+#~ "aceasta să fie gata de utilizare pentru comenzi de livrare reale. Acest "
+#~ "lucru poate duce la crearea de taxe nedorite cu FedEx."
 
 #~ msgid ""
 #~ "The *one-step inventory flow* is the simplest option, with minimal "

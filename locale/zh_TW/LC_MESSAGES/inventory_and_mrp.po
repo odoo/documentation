@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-07-30 07:08+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -19051,7 +19051,7 @@ msgid "The form for a DHL shipping method."
 msgstr "DHL\\ 配送方式的表單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "一般資訊"
@@ -20869,34 +20869,13 @@ msgstr "FedEx 整合"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"將 FedEx 帳戶與 Odoo 的\\ **庫存**\\ 應用程式整合後，即可在 Odoo 中\\ :doc:`"
-"計算運費 <../setup_configuration>`\\ 並\\ :doc:`產生運送標籤 <labels>`。這可"
-"透過啟用 FedEx *運送連接器*，然後配置至少一種*運送方式*來完成。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"作為臨時解決方案，:doc:`Sendcloud 整合 <sendcloud_shipping>`\\ 也支援聯邦快遞"
-"服務。若要請求進一步協助，請\\ `提交支援工單 <https://www.odoo.com/help>`_。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -20905,91 +20884,93 @@ msgstr ""
 "本使用說明包含 FedEx 整合的特定配置詳細資訊。有關第三方運送商整合的一般說明，"
 "請參閱\\ :doc:`第三方運送商 <third_party_shipper>`\\ 的使用說明。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "啟用運送連接器"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"若要啟用聯邦快遞的寄送連接器，請開啟\\ :menuselection:`應用程式`\\ 應用程式。"
-"搜尋 `FedEx`。\\ :guilabel:`啟動`\\ 寄送連接器。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "配置運送方式"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"啟用聯邦快遞寄送連接器後，必須至少配置一種配送方式。完成後，配送方式可包含在"
-"銷售訂單（SO）中，並用於計算配送成本和列印配送標籤。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"要查看所有已啟用連接器的運送商的所有運送方式，請前往\\ :menuselection:`庫存應"
-"用程式 --> 配置 --> 運送方式`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"選取一種運送方式以開啟其表單。或者，按一下\\ :guilabel:`新增`\\ 以開啟空白表"
-"單，並配置新的運送方式。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "FedEx 運送方式的表單。"
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"運送方式表單的最上方是用於配置該方式在 Odoo 中運作方式的欄位。在"
-"\\ :guilabel:`供應商`\\ 欄位中，從下拉選單選取\\ :guilabel:`FedEx`（如果尚未"
-"選取）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"此區段中的其餘欄位適用於所有運送供應商。有關如何填寫這些欄位的詳細資訊，請參"
-"閱\\ :doc:`第三方運送商 <third_party_shipper>`\\ 的使用說明。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "FedEx 配置分頁"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"*聯邦快遞配置*\\ 分頁中的選項用於將該方法連線到聯邦快遞帳戶，並配置與該方法相"
-"關的配送詳情（投遞類型、包裹類型等）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -21000,45 +20981,26 @@ msgstr ""
 "聯邦快遞的\\ `開立帳戶 <https://www.fedex.com/en-us/open-account.html>`_\\ 頁"
 "面，按一下\\ :guilabel:`建立帳戶`\\ ，然後依照指示操作。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"然後，在資料庫中註冊聯邦快遞帳戶。按一下\\ :guilabel:`註冊聯邦快遞帳戶`\\ 按"
-"鈕。*聯邦快遞帳戶註冊*視窗會開啟。勾選\\ :guilabel:`我確認已閱讀聯邦快遞使用"
-"者授權合約`\\ 和\\ :guilabel:`我接受聯邦快遞使用者授權合約條款以開始配送`\\ "
-"勾選方格來接受使用者授權合約（EULA），然後按一下\\ :guilabel:`接受並繼續"
-"`\\ 。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
-msgstr "*帳號*是指派給每個 FedEx 帳戶的唯一號碼。"
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"要查詢 FedEx 帳號號碼，請登入 FedEx 帳戶（https://www.fedex.com）。按一下畫面"
-"右上角的帳戶持有人姓名，並從下拉選單中選擇\\ :menuselection:`我的個人檔案"
-"`\\ 。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"在個人檔案頁面上，按一下畫面左側的\\ :guilabel:`帳戶管理`\\ 。此畫面上會顯示"
-"帳號號碼。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -21052,7 +21014,7 @@ msgstr ""
 "品是從住宅地址配送，請勾選\\ :guilabel:`住宅地址`\\ 勾選方格。按一下"
 "\\ :guilabel:`驗證地址`\\ 按鈕。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -21061,14 +21023,14 @@ msgstr ""
 "接下來，選擇\\ :guilabel:`驗證選項`\\ 來驗證對帳戶的存取。這是一種多重要素驗"
 "證（MFA）形式。有兩個選項可用："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
 msgstr ""
 ":guilabel:`發票驗證`\\ ：使用最近發票（過去 90 天內）中的資訊來驗證帳戶資訊。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -21076,7 +21038,36 @@ msgstr ""
 ":guilabel:`安全代碼驗證`\\ ：透過\\ :guilabel:`電子郵件`\\ 、\\ :guilabel:`短"
 "訊`\\ 或\\ :guilabel:`語音通話`\\ 接收 PIN 碼。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -21086,37 +21077,37 @@ msgstr ""
 "用。若要變更此設定，請按一下\\ :guilabel:`開啟聯邦快遞帳戶表單`\\ 並修改公司"
 "設定。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
-msgstr "在\\ *聯邦快遞配置*\\ 分頁中，提供有關配送方法的更多資訊："
+"shipping method:"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
 msgstr ":guilabel:`聯邦快遞服務類型`\\ ：選擇用於配送包裹的聯邦快遞服務。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
-msgstr ":guilabel:`聯邦快遞投遞類型`\\ ：選擇將包裹交給聯邦快遞的方法。"
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
-msgstr ":guilabel:`聯邦快遞包裹類型`\\ ：選擇用於配送方法的包裹類型。"
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
 msgstr ":guilabel:`包裹重量單位`\\ ：選擇用於秤重包裹的測量單位。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -21129,49 +21120,43 @@ msgstr ""
 "\\ :guilabel:`英吋`\\ 。如果選擇\\ :guilabel:`公斤`\\ ，長度單位會更新為"
 "\\ :guilabel:`公分`\\ 。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
-msgstr ":guilabel:`標籤類型`\\ ：選擇用於包裹的配送標籤類型。"
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
 msgstr ":guilabel:`標籤格式`\\ ：選擇 Odoo 用於產生配送標籤的檔案格式。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"在配送方法的\\ *聯邦快遞配置*\\ 分頁上應選擇的選項取決於相關聯邦快遞帳戶的協"
-"商配送服務。若要確認聯邦快遞帳戶的可用服務，請在登入聯邦快遞網站後造訪\\ *帳"
-"戶管理*\\ 頁面，或與客戶服務代表聯絡。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "選項區段"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"*聯邦快遞配置*\\ 分頁的\\ :guilabel:`選項`\\ 區段提供了一些額外選項，以進一步"
-"配置配送方法："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`產生退貨標籤`\\ ：勾選此勾選方格以在配送經驗證時自動產生標籤。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -21179,7 +21164,7 @@ msgstr ""
 ":guilabel:`電子郵件通知`\\ ：勾選此勾選方格以透過電子郵件向客戶傳送更新（如果"
 "已為客戶配置電子郵件地址）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -21187,13 +21172,13 @@ msgstr ""
 ":guilabel:`關稅支付者`\\ ：使用下拉選單選擇關稅費用應由\\ :guilabel:`寄件人"
 "`\\ 或\\ :guilabel:`收件人`\\ 支付。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
 msgstr "\\ :guilabel:`住宅配送`\\ ：指定何時將收件人地址標記為住宅地址。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -21202,62 +21187,30 @@ msgstr ""
 "\\ :guilabel:`產生發票`\\ ：指定發票應產生為 PDF 或作為電子貿易文件傳送。這通"
 "常在國際運送需要商業發票時必須使用。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "申報價值區段"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr "為保險目的指定\\ :guilabel:`申報價值百分比`\\ 。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "啟用配送方式"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"在 Odoo 中，配送方式預設是在*測試環境*中建立的。這表示它們僅能用於測試目的，"
-"無法產生實際的配送訂單。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"要在*正式環境*中啟用配送方式，請按一下配送方式表單頂部的\\ :icon:`fa-"
-"stop`\\ :guilabel:`測試環境`\\ 智慧按鈕。執行此操作後，智慧按鈕會變更為顯示"
-"\\ :icon:`fa-play`\\ :guilabel:`正式環境`\\ 。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"啟用正式環境後，使用該配送方式驗證配送訂單將會產生實際的 FedEx 配送標籤。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"按一下\\ :icon:`fa-play`\\ :guilabel:`正式環境`\\ 智慧按鈕，將配送方式回復為"
-"測試環境。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"在配送方式準備好用於實際配送訂單之前，**請勿**啟用正式環境。這樣做可能會導致"
-"在 FedEx 產生不必要的費用。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -24129,6 +24082,11 @@ msgstr ""
 "前往\\ :menuselection:`庫存應用程式 --> 配置 --> 設定`\\ 。在「運輸連接器」區"
 "段中，啟用\\ :guilabel:`Shiprocket 連接器`\\ ，然後按一下\\ :guilabel:`儲存"
 "`\\ 。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "配置運送方式"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -55012,6 +54970,211 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "將 FedEx 帳戶與 Odoo 的\\ **庫存**\\ 應用程式整合後，即可在 Odoo 中"
+#~ "\\ :doc:`計算運費 <../setup_configuration>`\\ 並\\ :doc:`產生運送標籤 "
+#~ "<labels>`。這可透過啟用 FedEx *運送連接器*，然後配置至少一種*運送方式*來完"
+#~ "成。"
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "作為臨時解決方案，:doc:`Sendcloud 整合 <sendcloud_shipping>`\\ 也支援聯邦"
+#~ "快遞服務。若要請求進一步協助，請\\ `提交支援工單 <https://www.odoo.com/"
+#~ "help>`_。"
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "若要啟用聯邦快遞的寄送連接器，請開啟\\ :menuselection:`應用程式`\\ 應用程"
+#~ "式。搜尋 `FedEx`。\\ :guilabel:`啟動`\\ 寄送連接器。"
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "啟用聯邦快遞寄送連接器後，必須至少配置一種配送方式。完成後，配送方式可包含"
+#~ "在銷售訂單（SO）中，並用於計算配送成本和列印配送標籤。"
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "要查看所有已啟用連接器的運送商的所有運送方式，請前往\\ :menuselection:`庫"
+#~ "存應用程式 --> 配置 --> 運送方式`。"
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "選取一種運送方式以開啟其表單。或者，按一下\\ :guilabel:`新增`\\ 以開啟空白"
+#~ "表單，並配置新的運送方式。"
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "FedEx 運送方式的表單。"
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "運送方式表單的最上方是用於配置該方式在 Odoo 中運作方式的欄位。在"
+#~ "\\ :guilabel:`供應商`\\ 欄位中，從下拉選單選取\\ :guilabel:`FedEx`（如果尚"
+#~ "未選取）。"
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "此區段中的其餘欄位適用於所有運送供應商。有關如何填寫這些欄位的詳細資訊，請"
+#~ "參閱\\ :doc:`第三方運送商 <third_party_shipper>`\\ 的使用說明。"
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "*聯邦快遞配置*\\ 分頁中的選項用於將該方法連線到聯邦快遞帳戶，並配置與該方"
+#~ "法相關的配送詳情（投遞類型、包裹類型等）。"
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "然後，在資料庫中註冊聯邦快遞帳戶。按一下\\ :guilabel:`註冊聯邦快遞帳戶`\\ "
+#~ "按鈕。*聯邦快遞帳戶註冊*視窗會開啟。勾選\\ :guilabel:`我確認已閱讀聯邦快遞"
+#~ "使用者授權合約`\\ 和\\ :guilabel:`我接受聯邦快遞使用者授權合約條款以開始配"
+#~ "送`\\ 勾選方格來接受使用者授權合約（EULA），然後按一下\\ :guilabel:`接受並"
+#~ "繼續`\\ 。"
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr "*帳號*是指派給每個 FedEx 帳戶的唯一號碼。"
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "要查詢 FedEx 帳號號碼，請登入 FedEx 帳戶（https://www.fedex.com）。按一下"
+#~ "畫面右上角的帳戶持有人姓名，並從下拉選單中選擇\\ :menuselection:`我的個人"
+#~ "檔案`\\ 。"
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "在個人檔案頁面上，按一下畫面左側的\\ :guilabel:`帳戶管理`\\ 。此畫面上會顯"
+#~ "示帳號號碼。"
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr "在\\ *聯邦快遞配置*\\ 分頁中，提供有關配送方法的更多資訊："
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ":guilabel:`聯邦快遞投遞類型`\\ ：選擇將包裹交給聯邦快遞的方法。"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ":guilabel:`聯邦快遞包裹類型`\\ ：選擇用於配送方法的包裹類型。"
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ":guilabel:`標籤類型`\\ ：選擇用於包裹的配送標籤類型。"
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "在配送方法的\\ *聯邦快遞配置*\\ 分頁上應選擇的選項取決於相關聯邦快遞帳戶的"
+#~ "協商配送服務。若要確認聯邦快遞帳戶的可用服務，請在登入聯邦快遞網站後造訪"
+#~ "\\ *帳戶管理*\\ 頁面，或與客戶服務代表聯絡。"
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "*聯邦快遞配置*\\ 分頁的\\ :guilabel:`選項`\\ 區段提供了一些額外選項，以進"
+#~ "一步配置配送方法："
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`產生退貨標籤`\\ ：勾選此勾選方格以在配送經驗證時自動產生標籤。"
+
+#~ msgid "Activate delivery method"
+#~ msgstr "啟用配送方式"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "在 Odoo 中，配送方式預設是在*測試環境*中建立的。這表示它們僅能用於測試目"
+#~ "的，無法產生實際的配送訂單。"
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "要在*正式環境*中啟用配送方式，請按一下配送方式表單頂部的\\ :icon:`fa-"
+#~ "stop`\\ :guilabel:`測試環境`\\ 智慧按鈕。執行此操作後，智慧按鈕會變更為顯"
+#~ "示\\ :icon:`fa-play`\\ :guilabel:`正式環境`\\ 。"
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "啟用正式環境後，使用該配送方式驗證配送訂單將會產生實際的 FedEx 配送標籤。"
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "按一下\\ :icon:`fa-play`\\ :guilabel:`正式環境`\\ 智慧按鈕，將配送方式回復"
+#~ "為測試環境。"
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "在配送方式準備好用於實際配送訂單之前，**請勿**啟用正式環境。這樣做可能會導"
+#~ "致在 FedEx 產生不必要的費用。"
 
 #~ msgid ""
 #~ "Define tailored receiving or delivery workflows to meet specific business "

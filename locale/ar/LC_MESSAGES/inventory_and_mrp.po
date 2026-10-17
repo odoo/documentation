@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-09-08 16:12+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -20824,7 +20824,7 @@ msgid "The form for a DHL shipping method."
 msgstr "نموذج طريقة الشحن عبر DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "المعلومات العامة"
@@ -22713,40 +22713,13 @@ msgstr "تكامل FedEx"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"يتيح تكامل حساب FedEx مع تطبيق **المخزون** في Odoo إمكانية :doc:`حساب أسعار "
-"التوصيل <../setup_configuration>`، و:doc:`إنشاء ملصقات التوصيل <labels>` "
-"داخل Odoo. يتم ذلك عن طريق تمكين *موصل الشحن* الخاص بـ FedEx، ثم تكوين "
-"*طريقة شحن* واحدة على الأقل."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-"اعتبارًا من 21 أكتوبر 2025، لم يعد تكامل FedEx باستخدام أحدث واجهة برمجة "
-"تطبيقات متاحًا مؤقتًا بينما تقوم Odoo بإنهاء التحقق من صحة موفر الحلول الخاص "
-"بها لـ FedEx. الإعدادات الجديدة محظورة حاليًا، وستتوقف عمليات التكامل الحالية "
-"التي تستخدم موفر الشحن عن طريق Fedex (قديم) عن العمل اعتبارًا من 1 يونيو 2026."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"للحصول على حل مؤقت، يدعم :doc:`تكامل Sendcloud <sendcloud_shipping>` أيضاً "
-"خدمات FedEx. لطلب مساعدة إضافية، `أرسل تذكرة دعم <https://www.odoo.com/"
-"help>`_."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -22756,94 +22729,93 @@ msgstr ""
 "الخاصة بـ :doc:`شركات الشحن من طرف ثالث <third_party_shipper>` للحصول على "
 "إرشادات تكامل شركات الشحن العامة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "تمكين موصل الشحن"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"لتفعيل موصل الشحن لـ FedEx، افتح تطبيق :menuselection:`التطبيقات`. ابحث عن "
-"`FedEx`. :guilabel:`فعّل` موصل الشحن."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "تكوين طريقة التوصيل"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"بعد تفعيل موصل الشحن عن طريق FedEx، من الضروري تكوين طريقة توصيل واحدة على "
-"الأقل. بعد القيام بذلك، يمكن تضمين طريقة التوصيل في أوامر المبيعات "
-"واستخدامها لحساب تكاليف التوصيل وطباعة ملصقات التوصيل."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"لرؤية جميع طرق التوصيل لكل شركة شحن تم تمكين موصل لها، انتقل "
-"إلى :menuselection:`تطبيق المخزون --> الإعدادات --> طرق التوصيل`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"حدد طريقة تسليم لفتح نموذجها. بدلاً من ذلك، انقر على :guilabel:`جديد` لفتح "
-"نموذج فارغ، وقم بتكوين طريقة تسليم جديدة."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "نموذج طريقة التسليم عن طريق FedEx."
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"في أعلى نموذج طريقة التسليم توجد حقول تُستخدم لتكوين طريقة عمل الطريقة في "
-"Odoo. في حقل :guilabel:`المزود`، حدد :guilabel:`FedEx` من القائمة المنسدلة، "
-"إذا لم يكن محددًا بالفعل."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"باقي الحقول في هذا القسم عامة لجميع موفري التسليم. للحصول على تفاصيل حول "
-"كيفية ملئها، راجع الوثائق الخاصة بـ :doc:`شاحني الطرف الثالث "
-"<third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "علامة تبويب تكوين FedEx"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"تُستخدم الخيارات في علامة تبويب *تكوين Fedex* في نموذج طريقة الشحن عن طريق "
-"FedEx لربط الطريقة بحساب FedEx وتكوين تفاصيل التوصيل المرتبطة بالطريقة (نوع "
-"التسليم، نوع الطرد، إلخ)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -22855,45 +22827,26 @@ msgstr ""
 "www.fedex.com/en-us/open-account.html>`_ الخاصة بـ FedEx، انقر "
 "على :guilabel:`إنشاء حساب`، واتبع التعليمات."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"بعد ذلك، سجّل حساب FedEx في قاعدة البيانات. انقر على زر :guilabel:`تسجيل حساب "
-"FedEx`. تفتح نافذة *تسجيل حساب FedEx*. اقبل اتفاقية ترخيص المستخدم النهائي "
-"(EULA) عن طريق تحديد خانتي الاختيار :guilabel:`أقر بقراءة اتفاقية ترخيص "
-"المستخدم النهائي من FedEx` و:guilabel:`أوافق على شروط اتفاقية ترخيص المستخدم "
-"النهائي من FedEx لبدء الشحن`، ثم انقر على :guilabel:`موافقة ومتابعة`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
-msgstr "*رقم الحساب* هو الرقم الفريد المخصص لكل حساب FedEx."
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"للعثور على رقم حساب FedEx، سجل الدخول إلى حساب FedEx على https://"
-"www.fedex.com. انقر على اسم صاحب الحساب في الزاوية العلوية اليمنى من الشاشة، "
-"واختر :menuselection:`ملفي الشخصي` من القائمة المنسدلة."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"في صفحة الملف الشخصي، انقر على :guilabel:`إدارة الحساب` على الجانب الأيسر من "
-"الشاشة. يظهر رقم الحساب على هذه الشاشة."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -22907,7 +22860,7 @@ msgstr ""
 "كانت المنتجات تُشحن من عنوان سكني، حدد خانة الاختيار :guilabel:`عنوان سكني`. "
 "انقر على زر :guilabel:`التحقق من العنوان`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -22916,7 +22869,7 @@ msgstr ""
 "بعد ذلك، اختر :guilabel:`خيار التحقق` للتحقق من الوصول إلى الحساب. هذا شكل "
 "من أشكال المصادقة متعددة العوامل (MFA). يتوفر خياران:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
@@ -22924,7 +22877,7 @@ msgstr ""
 ":guilabel:`التحقق من الفاتورة`: استخدم معلومات من فاتورة حديثة (خلال الـ 90 "
 "يومًا الماضية) للتحقق من معلومات الحساب."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -22932,7 +22885,36 @@ msgstr ""
 ":guilabel:`التحقق بالرمز الآمن`: استلم رمز PIN عبر :guilabel:`البريد "
 "الإلكتروني`، أو :guilabel:`الرسائل القصيرة`، أو :guilabel:`المكالمة الصوتية`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -22942,38 +22924,37 @@ msgstr ""
 "لجميع الشركات. لتغيير هذا الإعداد، انقر على :guilabel:`فتح نموذج حساب FedEx` "
 "وعدّل إعدادات الشركة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
+"shipping method:"
 msgstr ""
-"في علامة تبويب *تكوين FedEx*، قدّم مزيدًا من المعلومات حول طريقة التوصيل:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
 msgstr ":guilabel:`نوع خدمة FedEx`: حدد خدمة FedEx المستخدمة لشحن الطرد."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
-msgstr ":guilabel:`نوع تسليم FedEx`: حدد طريقة إيصال الطرد إلى حيازة FedEx."
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
-msgstr ":guilabel:`نوع طرد FedEx`: حدد نوع الطرد المستخدم لطريقة الشحن."
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
 msgstr ":guilabel:`وحدة وزن الطرد`: حدد وحدة القياس المستخدمة لوزن الطرود."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -22986,12 +22967,12 @@ msgstr ""
 "الطول إلى :guilabel:`البوصة`. إذا تم اختيار :guilabel:`الكيلوغرام`، تتحدث "
 "وحدة الطول إلى :guilabel:`السنتيمتر`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
-msgstr ":guilabel:`نوع الملصق`: حدد نوع ملصق الشحن المستخدم للطرود."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
@@ -22999,40 +22980,32 @@ msgstr ""
 ":guilabel:`تنسيق الملصق`: حدد تنسيق الملف المستخدم من قبل Odoo لإنشاء ملصقات "
 "الشحن."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"الخيارات التي يجب تحديدها في علامة تبويب *تكوين FedEx* لطريقة التوصيل تعتمد "
-"على خدمات الشحن المتفق عليها للحساب المرتبط بـ FedEx. للتأكد من الخدمات "
-"المتاحة لحساب FedEx، قم بزيارة صفحة *إدارة الحساب* بعد تسجيل الدخول إلى موقع "
-"FedEx الإلكتروني أو تحدث مع ممثل خدمة العملاء."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "قسم الخيارات"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"يوفر قسم :guilabel:`الخيارات` في علامة تبويب *إعدادات FedEx* بعض الخيارات "
-"الإضافية لمزيد من تكوين طريقة التسليم:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`إنشاء ملصق الإرجاع`: حدد خانة الاختيار هذه لإنشاء ملصق تلقائيًا "
-"عند التحقق من صحة التسليم."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -23040,7 +23013,7 @@ msgstr ""
 ":guilabel:`إشعارات البريد الإلكتروني`: حدد خانة الاختيار هذه لإرسال تحديثات "
 "عبر البريد الإلكتروني إلى العملاء، إذا تم تكوين عنوان بريد إلكتروني للعميل."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -23048,7 +23021,7 @@ msgstr ""
 ":guilabel:`الرسوم الجمركية يدفعها`: استخدم القائمة المنسدلة لتحديد ما إذا "
 "كان يجب دفع الرسوم الجمركية من قبل :guilabel:`المرسل` أو :guilabel:`المستلم`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
@@ -23056,7 +23029,7 @@ msgstr ""
 ":guilabel:`التسليم السكني`: حدد متى يتم وضع علامة على عنوان المستلم كعنوان "
 "سكني."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -23066,64 +23039,30 @@ msgstr ""
 "إرسالها كمستند تجاري إلكتروني. هذا مطلوب عادةً عندما تكون هناك حاجة إلى "
 "فواتير تجارية للشحنات الدولية."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "قسم القيمة المعلنة"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr "حدد :guilabel:`نسبة القيمة المعلنة` لأغراض التأمين."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "تفعيل طريقة التوصيل"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"بشكل افتراضي، يتم إنشاء طرق التوصيل في Odoo ضمن *بيئة اختبار*. وهذا يعني أنه "
-"يمكن استخدامها لأغراض الاختبار فقط، وغير قادرة على إنشاء أوامر توصيل فعلية."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"لتفعيل طريقة التوصيل في *بيئة الإنتاج*، انقر على الزر الذكي :icon:`fa-"
-"stop` :guilabel:`بيئة الاختبار` في أعلى نموذج طريقة التوصيل. بعد ذلك، يتغير "
-"الزر الذكي ليصبح :icon:`fa-play` :guilabel:`بيئة الإنتاج`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"مع تفعيل بيئة الإنتاج، يؤدي اعتماد أمر توصيل باستخدام طريقة التوصيل إلى "
-"إنشاء ملصق توصيل فعلي مع فيديكس."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"انقر على الزر الذكي :icon:`fa-play` :guilabel:`بيئة الإنتاج` لإعادة طريقة "
-"التوصيل إلى بيئة اختبار."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"**لا** تقم بتفعيل بيئة الإنتاج لطريقة التوصيل قبل أن تكون جاهزة للاستخدام في "
-"أوامر التوصيل الفعلية. قد يؤدي القيام بذلك إلى إنشاء رسوم غير مرغوب فيها مع "
-"فيديكس."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -26167,6 +26106,11 @@ msgstr ""
 "انتقل إلى :menuselection:`تطبيق المخزون --> الإعدادات --> الإعدادات`. في قسم "
 "*موصلات الشحن*، قم بتمكين :guilabel:`موصل Shiprocket`، ثم انقر "
 "فوق :guilabel:`حفظ`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "تكوين طريقة التوصيل"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -59609,6 +59553,234 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "يتيح تكامل حساب FedEx مع تطبيق **المخزون** في Odoo إمكانية :doc:`حساب "
+#~ "أسعار التوصيل <../setup_configuration>`، و:doc:`إنشاء ملصقات التوصيل "
+#~ "<labels>` داخل Odoo. يتم ذلك عن طريق تمكين *موصل الشحن* الخاص بـ FedEx، "
+#~ "ثم تكوين *طريقة شحن* واحدة على الأقل."
+
+#~ msgid ""
+#~ "As of October 21, 2025, the FedEx integration using the latest API is "
+#~ "temporarily unavailable while Odoo finalizes its solution-provider "
+#~ "validation for FedEx. New setups are currently blocked, and existing "
+#~ "integrations using the FedEx Shipping (Legacy) provider will stop working "
+#~ "as of June 1, 2026."
+#~ msgstr ""
+#~ "اعتبارًا من 21 أكتوبر 2025، لم يعد تكامل FedEx باستخدام أحدث واجهة برمجة "
+#~ "تطبيقات متاحًا مؤقتًا بينما تقوم Odoo بإنهاء التحقق من صحة موفر الحلول "
+#~ "الخاص بها لـ FedEx. الإعدادات الجديدة محظورة حاليًا، وستتوقف عمليات "
+#~ "التكامل الحالية التي تستخدم موفر الشحن عن طريق Fedex (قديم) عن العمل "
+#~ "اعتبارًا من 1 يونيو 2026."
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "للحصول على حل مؤقت، يدعم :doc:`تكامل Sendcloud <sendcloud_shipping>` أيضاً "
+#~ "خدمات FedEx. لطلب مساعدة إضافية، `أرسل تذكرة دعم <https://www.odoo.com/"
+#~ "help>`_."
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "لتفعيل موصل الشحن لـ FedEx، افتح تطبيق :menuselection:`التطبيقات`. ابحث "
+#~ "عن `FedEx`. :guilabel:`فعّل` موصل الشحن."
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "بعد تفعيل موصل الشحن عن طريق FedEx، من الضروري تكوين طريقة توصيل واحدة "
+#~ "على الأقل. بعد القيام بذلك، يمكن تضمين طريقة التوصيل في أوامر المبيعات "
+#~ "واستخدامها لحساب تكاليف التوصيل وطباعة ملصقات التوصيل."
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "لرؤية جميع طرق التوصيل لكل شركة شحن تم تمكين موصل لها، انتقل "
+#~ "إلى :menuselection:`تطبيق المخزون --> الإعدادات --> طرق التوصيل`."
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "حدد طريقة تسليم لفتح نموذجها. بدلاً من ذلك، انقر على :guilabel:`جديد` لفتح "
+#~ "نموذج فارغ، وقم بتكوين طريقة تسليم جديدة."
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "نموذج طريقة التسليم عن طريق FedEx."
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "في أعلى نموذج طريقة التسليم توجد حقول تُستخدم لتكوين طريقة عمل الطريقة في "
+#~ "Odoo. في حقل :guilabel:`المزود`، حدد :guilabel:`FedEx` من القائمة "
+#~ "المنسدلة، إذا لم يكن محددًا بالفعل."
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "باقي الحقول في هذا القسم عامة لجميع موفري التسليم. للحصول على تفاصيل حول "
+#~ "كيفية ملئها، راجع الوثائق الخاصة بـ :doc:`شاحني الطرف الثالث "
+#~ "<third_party_shipper>`."
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "تُستخدم الخيارات في علامة تبويب *تكوين Fedex* في نموذج طريقة الشحن عن طريق "
+#~ "FedEx لربط الطريقة بحساب FedEx وتكوين تفاصيل التوصيل المرتبطة بالطريقة "
+#~ "(نوع التسليم، نوع الطرد، إلخ)."
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "بعد ذلك، سجّل حساب FedEx في قاعدة البيانات. انقر على زر :guilabel:`تسجيل "
+#~ "حساب FedEx`. تفتح نافذة *تسجيل حساب FedEx*. اقبل اتفاقية ترخيص المستخدم "
+#~ "النهائي (EULA) عن طريق تحديد خانتي الاختيار :guilabel:`أقر بقراءة اتفاقية "
+#~ "ترخيص المستخدم النهائي من FedEx` و:guilabel:`أوافق على شروط اتفاقية ترخيص "
+#~ "المستخدم النهائي من FedEx لبدء الشحن`، ثم انقر على :guilabel:`موافقة "
+#~ "ومتابعة`."
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr "*رقم الحساب* هو الرقم الفريد المخصص لكل حساب FedEx."
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "للعثور على رقم حساب FedEx، سجل الدخول إلى حساب FedEx على https://"
+#~ "www.fedex.com. انقر على اسم صاحب الحساب في الزاوية العلوية اليمنى من "
+#~ "الشاشة، واختر :menuselection:`ملفي الشخصي` من القائمة المنسدلة."
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "في صفحة الملف الشخصي، انقر على :guilabel:`إدارة الحساب` على الجانب الأيسر "
+#~ "من الشاشة. يظهر رقم الحساب على هذه الشاشة."
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr ""
+#~ "في علامة تبويب *تكوين FedEx*، قدّم مزيدًا من المعلومات حول طريقة التوصيل:"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ":guilabel:`نوع تسليم FedEx`: حدد طريقة إيصال الطرد إلى حيازة FedEx."
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ":guilabel:`نوع طرد FedEx`: حدد نوع الطرد المستخدم لطريقة الشحن."
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ":guilabel:`نوع الملصق`: حدد نوع ملصق الشحن المستخدم للطرود."
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "الخيارات التي يجب تحديدها في علامة تبويب *تكوين FedEx* لطريقة التوصيل "
+#~ "تعتمد على خدمات الشحن المتفق عليها للحساب المرتبط بـ FedEx. للتأكد من "
+#~ "الخدمات المتاحة لحساب FedEx، قم بزيارة صفحة *إدارة الحساب* بعد تسجيل "
+#~ "الدخول إلى موقع FedEx الإلكتروني أو تحدث مع ممثل خدمة العملاء."
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "يوفر قسم :guilabel:`الخيارات` في علامة تبويب *إعدادات FedEx* بعض الخيارات "
+#~ "الإضافية لمزيد من تكوين طريقة التسليم:"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`إنشاء ملصق الإرجاع`: حدد خانة الاختيار هذه لإنشاء ملصق تلقائيًا "
+#~ "عند التحقق من صحة التسليم."
+
+#~ msgid "Activate delivery method"
+#~ msgstr "تفعيل طريقة التوصيل"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "بشكل افتراضي، يتم إنشاء طرق التوصيل في Odoo ضمن *بيئة اختبار*. وهذا يعني "
+#~ "أنه يمكن استخدامها لأغراض الاختبار فقط، وغير قادرة على إنشاء أوامر توصيل "
+#~ "فعلية."
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "لتفعيل طريقة التوصيل في *بيئة الإنتاج*، انقر على الزر الذكي :icon:`fa-"
+#~ "stop` :guilabel:`بيئة الاختبار` في أعلى نموذج طريقة التوصيل. بعد ذلك، "
+#~ "يتغير الزر الذكي ليصبح :icon:`fa-play` :guilabel:`بيئة الإنتاج`."
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "مع تفعيل بيئة الإنتاج، يؤدي اعتماد أمر توصيل باستخدام طريقة التوصيل إلى "
+#~ "إنشاء ملصق توصيل فعلي مع فيديكس."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "انقر على الزر الذكي :icon:`fa-play` :guilabel:`بيئة الإنتاج` لإعادة طريقة "
+#~ "التوصيل إلى بيئة اختبار."
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "**لا** تقم بتفعيل بيئة الإنتاج لطريقة التوصيل قبل أن تكون جاهزة للاستخدام "
+#~ "في أوامر التوصيل الفعلية. قد يؤدي القيام بذلك إلى إنشاء رسوم غير مرغوب "
+#~ "فيها مع فيديكس."
 
 #~ msgid ""
 #~ "Define tailored receiving or delivery workflows to meet specific business "

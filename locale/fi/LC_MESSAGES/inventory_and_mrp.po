@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-10-15 10:33+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -21828,7 +21828,7 @@ msgid "The form for a DHL shipping method."
 msgstr "Lomake DHL-toimitustavalle."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "Yleiset tiedot"
@@ -23804,37 +23804,13 @@ msgstr "FedEx-integraatio"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"FedEx-tilin integrointi Odoon **Varastointi**-sovellukseen "
-"mahdollistaa :doc:`toimitushintojen laskemisen <../setup_configuration>` "
-"ja :doc:`toimitustarrojen luomisen <labels>` Odoossa. Tämä toteutetaan "
-"ottamalla käyttöön FedEx-*toimitusliitin* ja määrittämällä sitten vähintään "
-"yksi *toimitustapa*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"Pro dočasné řešení podporuje :doc:`integrace Sendcloud <sendcloud_shipping>` "
-"také služby FedEx. Pro další pomoc `odešlete lístek podpory <https://"
-"www.odoo.com/help>`_."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -23845,99 +23821,93 @@ msgstr ""
 "dokumentaatiosta :doc:`kolmannen osapuolen rahdinkuljettajista "
 "<third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "Ota toimitusliitin käyttöön"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"Ottaaksesi FedEx-toimitusliittimen käyttöön "
-"avaa :menuselection:`Sovellukset`-sovellus. Hae `FedEx`. :guilabel:`Aktivoi` "
-"toimitusliitin."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "Määritä toimitustapa"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"Kun FedEx-toimitusliitin on otettu käyttöön, on määritettävä vähintään yksi "
-"toimitusmenetelmä. Tämän jälkeen toimitusmenetelmä voidaan lisätä "
-"myyntitilauksiin ja sitä voidaan käyttää toimituskulujen laskemiseen ja "
-"toimitustarrojen tulostamiseen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"Kaikkien toimitusmenetelmien näyttämiseksi kaikille rahdinkuljettajille, "
-"joilla on yhdistin käytössä, siirry kohtaan :menuselection:`Varastointi-"
-"sovellus --> Asetukset --> Toimitusmenetelmät`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"Avaa toimitusmenetelmän lomake valitsemalla toimitusmenetelmä. "
-"Vaihtoehtoisesti voit avata tyhjän lomakkeen napsauttamalla :guilabel:`Uusi` "
-"ja määrittää uuden toimitusmenetelmän."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "FedEx-toimitusmenetelmän lomake."
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"Toimitusmenetelmän lomakkeen yläosassa on kentät, joilla määritetään "
-"menetelmän toimintatapa Odossa. Valitse :guilabel:`Palveluntarjoaja` "
-"-kentässä avattavasta valikosta :guilabel:`FedEx`, jos sitä ei ole jo "
-"valittu."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"Tämän osion muut kentät ovat yleisiä kaikille toimitusten tarjoajille. "
-"Lisätietoja niiden täyttämisestä on :doc:`kolmannen osapuolen "
-"rahdinkuljettajia <third_party_shipper>` koskevassa ohjeessa."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "FedEx-määritys-välilehti"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"*Fedex-määritys* -välilehden vaihtoehtoja FedEx-toimitusmenetelmälomakkeessa "
-"käytetään menetelmän yhdistämiseen FedEx-tiliin ja menetelmään liittyvien "
-"toimitustietojen määrittämiseen (toimitustyyppi, pakkaustyyppi jne.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -23949,48 +23919,26 @@ msgstr ""
 "`Avaa tili <https://www.fedex.com/en-us/open-account.html>`_ -sivulle, "
 "napsauta :guilabel:`Luo tili` ja noudata ohjeita."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"Rekisteröi sitten FedEx-tili tietokantaan. Napsauta "
-"painiketta :guilabel:`Rekisteröi FedEx-tili`. *FedEx-tilin rekisteröinti* "
-"-ikkuna avautuu. Hyväksy loppukäyttäjän käyttöoikeussopimus valitsemalla "
-"valintaruudut :guilabel:`Vahvistan lukeneeni FedExin loppukäyttäjän "
-"käyttöoikeussopimuksen` ja :guilabel:`Hyväksyn FedExin "
-"käyttöoikeussopimuksen ehdot aloittaakseni toimitukset`, ja napsauta "
-"sitten :guilabel:`Hyväksy ja jatka`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
 msgstr ""
-"*Tilinumero* on jokaiselle Fedex-tilille määritetty yksilöllinen numero."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"Löytääksesi Fedex-tilinumeron kirjaudu Fedex-tilille osoitteessa https://"
-"www.fedex.com. Klikkaa tilin haltijan nimeä näytön oikeassa yläkulmassa ja "
-"valitse pudotusvalikosta :menuselection:`Oma profiili`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"Klikkaa profiilisivulla :guilabel:`Account Management` näytön vasemmalla "
-"puolella. Tilinumero näkyy tällä sivulla."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -24005,7 +23953,7 @@ msgstr ""
 "tuotteita lähetetään asuinosoitteesta, valitse :guilabel:`Asuinosoite` "
 "-valintaruutu. Napsauta :guilabel:`Vahvista osoite` -painiketta."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -24015,7 +23963,7 @@ msgstr ""
 "vahvistamiseksi. Tämä on monivaiheisen todennuksen (MFA) muoto. "
 "Käytettävissä on kaksi vaihtoehtoa:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
@@ -24023,7 +23971,7 @@ msgstr ""
 ":guilabel:`Laskun vahvistus`: Käytä viimeaikaisen laskun (viimeisten 90 "
 "päivän ajalta) tietoja tilin tietojen vahvistamiseen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -24032,7 +23980,36 @@ msgstr ""
 "(:guilabel:`Sähköposti`), tekstiviestillä (:guilabel:`Tekstiviesti`) tai "
 "puhelulla (:guilabel:`Puhelu`)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -24042,13 +24019,13 @@ msgstr ""
 "on kaikkien yritysten käytettävissä. Muuta tätä asetusta "
 "napsauttamalla :guilabel:`Avaa FedEx-tililomake` ja muokkaa yritysasetuksia."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
-msgstr "*FedEx-määritys*-välilehdellä anna lisätietoja toimitustavasta:"
+"shipping method:"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
@@ -24056,23 +24033,19 @@ msgstr ""
 ":guilabel:`FedEx-palvelutyyppi`: Valitse paketin toimittamiseen käytetty "
 "FedEx-palvelu."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
 msgstr ""
-":guilabel:`FedEx-luovutustyyppi`: Valitse tapa, jolla paketti luovutetaan "
-"FedExin haltuun."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
 msgstr ""
-":guilabel:`FedEx-pakettityyppi`: Valitse toimitustapaan käytettävä "
-"pakettityyppi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
@@ -24080,7 +24053,7 @@ msgstr ""
 ":guilabel:`Paketin painoyksikkö`: Valitse pakettien punnituksessa käytetty "
 "mittayksikkö."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -24094,54 +24067,44 @@ msgstr ""
 "valittu on :guilabel:`Kilogrammat`, pituusyksiköksi "
 "päivittyy :guilabel:`Senttimetrit`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
 msgstr ""
-":guilabel:`Tarratyyppi`: Valitse paketteihin käytetty lähetystarran tyyppi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
 msgstr ""
 ":guilabel:`Tarramuoto`: Valitse tiedostomuoto, jolla Odoo luo lähetystarrat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"Toimitustavan *FedEx-määritys*-välilehdellä valittavat vaihtoehdot riippuvat "
-"liitettyyn FedEx-tiliin neuvotelluista toimituspalveluista. Vahvista FedEx-"
-"tilin käytettävissä olevat palvelut vierailemalla *Tilin hallinta* -sivulla "
-"kirjauduttuasi FedEx-verkkosivulle tai keskustelemalla asiakaspalvelun "
-"edustajan kanssa."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "Asetukset-osio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"Toimitustavan *FedEx-määritys*-välilehden :guilabel:`Valinnat` -osiossa on "
-"muutamia lisävaihtoehtoja toimitustavan määrittämiseen:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`Luo palautustarra`: Valitse tämä valintaruutu, jos haluat luoda "
-"tarran automaattisesti toimituksen vahvistamisen yhteydessä."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -24150,7 +24113,7 @@ msgstr ""
 "lähettää päivityksiä sähköpostitse asiakkaille, jos asiakkaalle on "
 "määritetty sähköpostiosoite."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -24158,7 +24121,7 @@ msgstr ""
 ":guilabel:`Tullimaksun maksaja`: Valitse pudotusvalikosta, maksaako "
 "tullimaksut :guilabel:`Lähettäjä` vai :guilabel:`Vastaanottaja`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
@@ -24166,7 +24129,7 @@ msgstr ""
 ":guilabel:`Kotiinkuljetus`: Määritä, milloin vastaanottajan osoite merkitään "
 "kotiosoitteeksi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -24176,68 +24139,32 @@ msgstr ""
 "lähetetäänkö se sähköisenä kauppa-asiakirjana. Tämä vaaditaan yleensä, kun "
 "kansainvälisiin lähetyksiin tarvitaan kauppalaskuja."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "Ilmoitettu arvo -osio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr ""
 "Määritä :guilabel:`Ilmoitetun arvon prosenttiosuus` vakuutustarkoituksia "
 "varten."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "Aktivoi toimitustapa"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"Odoon toimitustavat luodaan oletuksena *testiympäristöön*. Tämä tarkoittaa, "
-"että niitä voidaan käyttää vain testaustarkoituksiin, eivätkä ne voi luoda "
-"todellisia toimitustilauksia."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"Aktivoidaksesi toimitustavan *tuotantoympäristössä* napsauta :icon:`fa-"
-"stop` :guilabel:`Testiympäristö` -älynappia toimitustavan lomakkeen "
-"yläosassa. Tämän jälkeen älynappiin tulee teksti :icon:`fa-"
-"play` :guilabel:`Tuotantoympäristö`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"Kun tuotantoympäristö on käytössä, toimitustilauksen vahvistaminen käyttäen "
-"toimitustapaa luo todellisen toimitusmerkin FedExin kanssa."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"Napsauta :icon:`fa-play` :guilabel:`Tuotantoympäristö` -älynappia "
-"palauttaaksesi toimitustavan testiympäristöön."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"**Älä** ota tuotantoympäristöä käyttöön toimitustavalle ennen kuin se on "
-"valmis todellisiin toimitustilauksiin. Muutoin voi syntyä ei-toivottuja "
-"kuluja FedExin kanssa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -27398,6 +27325,11 @@ msgstr ""
 "Siirry kohtaan :menuselection:`Varastointi --> Asetukset --> Asetukset`. Ota "
 "*Shipping Connectors* -osiossa käyttöön :guilabel:`Shiprocket Connector` ja "
 "napsauta sitten :guilabel:`Tallenna`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "Määritä toimitustapa"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -62363,6 +62295,237 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "FedEx-tilin integrointi Odoon **Varastointi**-sovellukseen "
+#~ "mahdollistaa :doc:`toimitushintojen laskemisen <../setup_configuration>` "
+#~ "ja :doc:`toimitustarrojen luomisen <labels>` Odoossa. Tämä toteutetaan "
+#~ "ottamalla käyttöön FedEx-*toimitusliitin* ja määrittämällä sitten "
+#~ "vähintään yksi *toimitustapa*."
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "Pro dočasné řešení podporuje :doc:`integrace Sendcloud "
+#~ "<sendcloud_shipping>` také služby FedEx. Pro další pomoc `odešlete lístek "
+#~ "podpory <https://www.odoo.com/help>`_."
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "Ottaaksesi FedEx-toimitusliittimen käyttöön "
+#~ "avaa :menuselection:`Sovellukset`-sovellus. Hae "
+#~ "`FedEx`. :guilabel:`Aktivoi` toimitusliitin."
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "Kun FedEx-toimitusliitin on otettu käyttöön, on määritettävä vähintään "
+#~ "yksi toimitusmenetelmä. Tämän jälkeen toimitusmenetelmä voidaan lisätä "
+#~ "myyntitilauksiin ja sitä voidaan käyttää toimituskulujen laskemiseen ja "
+#~ "toimitustarrojen tulostamiseen."
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "Kaikkien toimitusmenetelmien näyttämiseksi kaikille rahdinkuljettajille, "
+#~ "joilla on yhdistin käytössä, siirry kohtaan :menuselection:`Varastointi-"
+#~ "sovellus --> Asetukset --> Toimitusmenetelmät`."
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "Avaa toimitusmenetelmän lomake valitsemalla toimitusmenetelmä. "
+#~ "Vaihtoehtoisesti voit avata tyhjän lomakkeen "
+#~ "napsauttamalla :guilabel:`Uusi` ja määrittää uuden toimitusmenetelmän."
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "FedEx-toimitusmenetelmän lomake."
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "Toimitusmenetelmän lomakkeen yläosassa on kentät, joilla määritetään "
+#~ "menetelmän toimintatapa Odossa. Valitse :guilabel:`Palveluntarjoaja` "
+#~ "-kentässä avattavasta valikosta :guilabel:`FedEx`, jos sitä ei ole jo "
+#~ "valittu."
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "Tämän osion muut kentät ovat yleisiä kaikille toimitusten tarjoajille. "
+#~ "Lisätietoja niiden täyttämisestä on :doc:`kolmannen osapuolen "
+#~ "rahdinkuljettajia <third_party_shipper>` koskevassa ohjeessa."
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "*Fedex-määritys* -välilehden vaihtoehtoja FedEx-"
+#~ "toimitusmenetelmälomakkeessa käytetään menetelmän yhdistämiseen FedEx-"
+#~ "tiliin ja menetelmään liittyvien toimitustietojen määrittämiseen "
+#~ "(toimitustyyppi, pakkaustyyppi jne.)."
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "Rekisteröi sitten FedEx-tili tietokantaan. Napsauta "
+#~ "painiketta :guilabel:`Rekisteröi FedEx-tili`. *FedEx-tilin rekisteröinti* "
+#~ "-ikkuna avautuu. Hyväksy loppukäyttäjän käyttöoikeussopimus valitsemalla "
+#~ "valintaruudut :guilabel:`Vahvistan lukeneeni FedExin loppukäyttäjän "
+#~ "käyttöoikeussopimuksen` ja :guilabel:`Hyväksyn FedExin "
+#~ "käyttöoikeussopimuksen ehdot aloittaakseni toimitukset`, ja napsauta "
+#~ "sitten :guilabel:`Hyväksy ja jatka`."
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr ""
+#~ "*Tilinumero* on jokaiselle Fedex-tilille määritetty yksilöllinen numero."
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "Löytääksesi Fedex-tilinumeron kirjaudu Fedex-tilille osoitteessa https://"
+#~ "www.fedex.com. Klikkaa tilin haltijan nimeä näytön oikeassa yläkulmassa "
+#~ "ja valitse pudotusvalikosta :menuselection:`Oma profiili`."
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "Klikkaa profiilisivulla :guilabel:`Account Management` näytön vasemmalla "
+#~ "puolella. Tilinumero näkyy tällä sivulla."
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr "*FedEx-määritys*-välilehdellä anna lisätietoja toimitustavasta:"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ""
+#~ ":guilabel:`FedEx-luovutustyyppi`: Valitse tapa, jolla paketti luovutetaan "
+#~ "FedExin haltuun."
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ""
+#~ ":guilabel:`FedEx-pakettityyppi`: Valitse toimitustapaan käytettävä "
+#~ "pakettityyppi."
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ""
+#~ ":guilabel:`Tarratyyppi`: Valitse paketteihin käytetty lähetystarran "
+#~ "tyyppi."
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "Toimitustavan *FedEx-määritys*-välilehdellä valittavat vaihtoehdot "
+#~ "riippuvat liitettyyn FedEx-tiliin neuvotelluista toimituspalveluista. "
+#~ "Vahvista FedEx-tilin käytettävissä olevat palvelut vierailemalla *Tilin "
+#~ "hallinta* -sivulla kirjauduttuasi FedEx-verkkosivulle tai keskustelemalla "
+#~ "asiakaspalvelun edustajan kanssa."
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "Toimitustavan *FedEx-määritys*-välilehden :guilabel:`Valinnat` -osiossa "
+#~ "on muutamia lisävaihtoehtoja toimitustavan määrittämiseen:"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`Luo palautustarra`: Valitse tämä valintaruutu, jos haluat "
+#~ "luoda tarran automaattisesti toimituksen vahvistamisen yhteydessä."
+
+#~ msgid "Activate delivery method"
+#~ msgstr "Aktivoi toimitustapa"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "Odoon toimitustavat luodaan oletuksena *testiympäristöön*. Tämä "
+#~ "tarkoittaa, että niitä voidaan käyttää vain testaustarkoituksiin, eivätkä "
+#~ "ne voi luoda todellisia toimitustilauksia."
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "Aktivoidaksesi toimitustavan *tuotantoympäristössä* napsauta :icon:`fa-"
+#~ "stop` :guilabel:`Testiympäristö` -älynappia toimitustavan lomakkeen "
+#~ "yläosassa. Tämän jälkeen älynappiin tulee teksti :icon:`fa-"
+#~ "play` :guilabel:`Tuotantoympäristö`."
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "Kun tuotantoympäristö on käytössä, toimitustilauksen vahvistaminen "
+#~ "käyttäen toimitustapaa luo todellisen toimitusmerkin FedExin kanssa."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "Napsauta :icon:`fa-play` :guilabel:`Tuotantoympäristö` -älynappia "
+#~ "palauttaaksesi toimitustavan testiympäristöön."
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "**Älä** ota tuotantoympäristöä käyttöön toimitustavalle ennen kuin se on "
+#~ "valmis todellisiin toimitustilauksiin. Muutoin voi syntyä ei-toivottuja "
+#~ "kuluja FedExin kanssa."
 
 #~ msgid ""
 #~ "Define tailored receiving or delivery workflows to meet specific business "

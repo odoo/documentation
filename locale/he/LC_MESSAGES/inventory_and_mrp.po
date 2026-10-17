@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-09-08 18:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hebrew <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -20627,7 +20627,7 @@ msgid "The form for a DHL shipping method."
 msgstr "הטופס לשיטת משלוח DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "מידע כללי"
@@ -22501,40 +22501,13 @@ msgstr "אינטגרציית FedEx"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"שילוב חשבון FedEx עם אפליקציית **מלאי** של Odoo מאפשר :doc:`לחשב תעריפי "
-"משלוח <../setup_configuration>`, ו:doc:`ליצור תוויות משלוח <labels>` בתוך "
-"Odoo. הדבר מושג על ידי הפעלת *מחבר המשלוח* של FedEx, ולאחר מכן הגדרת לפחות "
-"*שיטת משלוח* אחת."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-"החל מה-21 באוקטובר 2025, השילוב של FedEx באמצעות ה-API העדכני ביותר אינו "
-"זמין באופן זמני בזמן ש-Odoo משלים את אימות ספק הפתרונות שלו עבור FedEx. "
-"הגדרות חדשות חסומות כעת, ושילובים קיימים המשתמשים בספק FedEx Shipping "
-"(Legacy) יפסיקו לעבוד החל מה-1 ביוני 2026."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"לפתרון זמני, :doc:`אינטגרציית Sendcloud <sendcloud_shipping>` תומכת גם "
-"בשירותי FedEx. כדי לבקש סיוע נוסף, `יש להגיש פנייה לתמיכה <https://"
-"www.odoo.com/help>`_."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -22543,94 +22516,93 @@ msgstr ""
 "תיעוד זה מכיל פרטי הגדרה ספציפיים לאינטגרציית FedEx. עיינו בתיעוד "
 "על :doc:`שולחים צד שלישי <third_party_shipper>` להוראות כלליות לשילוב שולח."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "הפעלת מחבר משלוח"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"כדי להפעיל את מחבר המשלוח עבור FedEx, פתח את "
-"אפליקציית :menuselection:`אפליקציות`. חפש `FedEx`. :guilabel:`הפעל` את מחבר "
-"המשלוח."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "הגדרת שיטת משלוח"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"לאחר הפעלת מחבר המשלוח של FedEx, יש להגדיר לפחות שיטת משלוח אחת. לאחר מכן, "
-"ניתן לכלול את שיטת המשלוח בהזמנות מכירה (SOs) ולהשתמש בה לחישוב עלויות משלוח "
-"ולהדפסת תוויות משלוח."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"כדי לראות את כל שיטות המשלוח עבור כל שולח עם מחבר מופעל, נווטו "
-"ל-:menuselection:`אפליקציית מלאי --> הגדרות --> שיטות משלוח`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"בחרו שיטת משלוח כדי לפתוח את הטופס שלה. לחלופין, לחצו על :guilabel:`חדש` כדי "
-"לפתוח טופס ריק, והגדירו שיטת משלוח חדשה."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "הטופס עבור שיטת משלוח FedEx."
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"בחלק העליון ביותר של טופס שיטת משלוח ישנם שדות המשמשים להגדרת האופן שבו "
-"השיטה פועלת ב-Odoo. בשדה :guilabel:`ספק`, בחרו :guilabel:`FedEx` מהתפריט "
-"הנפתח, אם הוא לא כבר נבחר."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"שאר השדות בחלק זה הם כלליים לכל ספקי המשלוח. לפרטים על אופן מילוין, עיינו "
-"בתיעוד על :doc:`משלוחים של צד שלישי <third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "כרטיסיית תצורה של FedEx"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"האפשרויות בלשונית *Fedex Configuration* של טופס שיטת משלוח FedEx משמשות "
-"לחיבור השיטה לחשבון FedEx ולהגדרת פרטי המשלוח המשויכים לשיטה (סוג המסירה, "
-"סוג החבילה וכו')."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -22642,46 +22614,26 @@ msgstr ""
 "open-account.html>`_ של FedEx, ללחוץ על :guilabel:`Create Account` ולפעול "
 "לפי ההוראות."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"לאחר מכן, יש לרשום את חשבון FedEx במסד הנתונים. יש ללחוץ על "
-"כפתור :guilabel:`Register FedEx Account`. חלון *FedEx Account Registration* "
-"ייפתח. יש לאשר את הסכם רישיון המשתמש הקצה (EULA) על ידי בחירה בתיבות "
-"הסימון :guilabel:`I acknowledge the reading of the FedEx End User License "
-"Agreement` וגם :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping`, ולאחר מכן ללחוץ על :guilabel:`Accept and Continue`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
-msgstr "*מספר חשבון* הוא המספר הייחודי המוקצה לכל חשבון FedEx."
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"כדי למצוא מספר חשבון FedEx, יש להתחבר לחשבון FedEx בכתובת https://"
-"www.fedex.com. יש ללחוץ על שם בעל החשבון בפינה השמאלית העליונה של המסך, "
-"ולבחור :menuselection:`הפרופיל שלי` מהתפריט הנפתח."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"בדף הפרופיל, יש ללחוץ על :guilabel:`ניהול חשבון` בצד שמאל של המסך. מספר "
-"החשבון מוצג במסך זה."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -22696,7 +22648,7 @@ msgstr ""
 "מגורים, יש לסמן את תיבת הסימון :guilabel:`Residential Address`. יש ללחוץ על "
 "כפתור :guilabel:`Validate Address`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -22705,7 +22657,7 @@ msgstr ""
 "לאחר מכן, יש לבחור :guilabel:`Validation Option` כדי לאמת את הגישה לחשבון. "
 "זוהי צורה של אימות רב-גורמי (MFA). שתי אפשרויות זמינות:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
@@ -22713,7 +22665,7 @@ msgstr ""
 ":guilabel:`Invoice Validation`: שימוש במידע מחשבונית אחרונה (בתוך 90 הימים "
 "האחרונים) כדי לאמת את פרטי החשבון."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -22721,7 +22673,36 @@ msgstr ""
 ":guilabel:`Secure Code Validation`: קבלת קוד PIN "
 "באמצעות :guilabel:`Email`, :guilabel:`SMS` או :guilabel:`Voice Call`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -22731,38 +22712,38 @@ msgstr ""
 "יהיה זמין עבור כל החברות. כדי לשנות הגדרה זו, יש ללחוץ על :guilabel:`Open "
 "FedEx Account Form` ולשנות את הגדרות החברה."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
-msgstr "בלשונית *FedEx Configuration*, יש לספק מידע נוסף על שיטת המשלוח:"
+"shipping method:"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
 msgstr ":guilabel:`FedEx Service Type`: בחירת שירות FedEx המשמש למשלוח חבילה."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
-msgstr ":guilabel:`FedEx Drop-Off Type`: בחירת השיטה להעברת חבילה לחזקת FedEx."
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
-msgstr ":guilabel:`FedEx Package Type`: בחירת סוג החבילה המשמש לשיטת המשלוח."
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
 msgstr ""
 ":guilabel:`Package Weight Unit`: בחירת יחידת המידה המשמשת לשקילת חבילות."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -22775,12 +22756,12 @@ msgstr ""
 "האורך מתעדכנת ל-:guilabel:`Inches`. אם נבחר :guilabel:`Kilograms`, יחידת "
 "האורך מתעדכנת ל-:guilabel:`Centimeters`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
-msgstr ":guilabel:`Label Type`: בחירת סוג תווית המשלוח המשמש לחבילות."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
@@ -22788,40 +22769,32 @@ msgstr ""
 ":guilabel:`Label Format`: בחירת פורמט הקובץ שבו Odoo משתמש ליצירת תוויות "
 "משלוח."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"האפשרויות שצריך לבחור בלשונית *FedEx Configuration* של שיטת משלוח תלויות "
-"בשירותי המשלוח המוסכמים של חשבון FedEx המשויך. כדי לאשר את השירותים הזמינים "
-"לחשבון FedEx, יש לבקר בעמוד *Account Management* לאחר כניסה לאתר FedEx או "
-"לדבר עם נציג שירות לקוחות."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "סעיף אפשרויות"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"קטע :guilabel:`Options` בלשונית *FedEx Configuration* מספק כמה אפשרויות "
-"נוספות להגדרה מתקדמת יותר של שיטת המשלוח:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`Generate Return Label`: יש לסמן תיבת סימון זו כדי ליצור תווית "
-"באופן אוטומטי כאשר משלוח מאושר."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -22829,7 +22802,7 @@ msgstr ""
 ":guilabel:`Email Notifications`: יש לסמן תיבת סימון זו כדי לשלוח עדכונים "
 "בדוא\"ל ללקוחות, אם כתובת דוא\"ל מוגדרת עבור הלקוח."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -22837,13 +22810,13 @@ msgstr ""
 ":guilabel:`מסים ששולמו על ידי`: יש להשתמש בתפריט הנפתח כדי לבחור האם חיובי "
 "מכס צריכים להיות משולמים על ידי ה:guilabel:`שולח` או ה:guilabel:`נמען`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
 msgstr ":guilabel:`משלוח למגורים`: ציין מתי לסמן כתובת של נמען כמגורים."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -22853,63 +22826,30 @@ msgstr ""
 "כמסמך מסחר אלקטרוני. זה נדרש בדרך כלל כאשר יש צורך בחשבוניות מסחריות עבור "
 "משלוחים בינלאומיים."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "מדור ערך מוצהר"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr "ציין את :guilabel:`אחוז הערך המוצהר` למטרות ביטוח."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "הפעלת שיטת משלוח"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"כברירת מחדל, שיטות משלוח ב-Odoo נוצרות בתוך *סביבת בדיקה*. המשמעות היא שניתן "
-"להשתמש בהן רק למטרות בדיקה, ואינן מסוגלות ליצור הזמנות משלוח ממשיות."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"כדי להפעיל שיטת משלוח ב*סביבת ייצור*, יש ללחוץ על הכפתור החכם :icon:`fa-"
-"stop` :guilabel:`סביבת בדיקה` בחלק העליון של טופס שיטת המשלוח. לאחר מכן, "
-"הכפתור החכם משתנה ל-:icon:`fa-play` :guilabel:`סביבת ייצור`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"כאשר סביבת הייצור מופעלת, אימות הזמנת משלוח באמצעות שיטת המשלוח יוצר תווית "
-"משלוח ממשית עם FedEx."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"יש ללחוץ על הכפתור החכם :icon:`fa-play` :guilabel:`סביבת ייצור` כדי להחזיר "
-"את שיטת המשלוח לסביבת בדיקה."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"**אין** להפעיל את סביבת הייצור עבור שיטת משלוח לפני שהיא מוכנה לשימוש עבור "
-"הזמנות משלוח ממשיות. פעולה זו עלולה להוביל ליצירת חיובים לא רצויים עם FedEx."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -25908,6 +25848,11 @@ msgstr ""
 "נווט אל :menuselection:`אפליקציית מלאי --> תצורה --> הגדרות`. בקטע *מחברי "
 "משלוח*, הפעל את :guilabel:`מחבר Shiprocket`, ולאחר מכן לחץ "
 "על :guilabel:`שמור`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "הגדרת שיטת משלוח"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -58832,6 +58777,233 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "שילוב חשבון FedEx עם אפליקציית **מלאי** של Odoo מאפשר :doc:`לחשב תעריפי "
+#~ "משלוח <../setup_configuration>`, ו:doc:`ליצור תוויות משלוח <labels>` בתוך "
+#~ "Odoo. הדבר מושג על ידי הפעלת *מחבר המשלוח* של FedEx, ולאחר מכן הגדרת "
+#~ "לפחות *שיטת משלוח* אחת."
+
+#~ msgid ""
+#~ "As of October 21, 2025, the FedEx integration using the latest API is "
+#~ "temporarily unavailable while Odoo finalizes its solution-provider "
+#~ "validation for FedEx. New setups are currently blocked, and existing "
+#~ "integrations using the FedEx Shipping (Legacy) provider will stop working "
+#~ "as of June 1, 2026."
+#~ msgstr ""
+#~ "החל מה-21 באוקטובר 2025, השילוב של FedEx באמצעות ה-API העדכני ביותר אינו "
+#~ "זמין באופן זמני בזמן ש-Odoo משלים את אימות ספק הפתרונות שלו עבור FedEx. "
+#~ "הגדרות חדשות חסומות כעת, ושילובים קיימים המשתמשים בספק FedEx Shipping "
+#~ "(Legacy) יפסיקו לעבוד החל מה-1 ביוני 2026."
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "לפתרון זמני, :doc:`אינטגרציית Sendcloud <sendcloud_shipping>` תומכת גם "
+#~ "בשירותי FedEx. כדי לבקש סיוע נוסף, `יש להגיש פנייה לתמיכה <https://"
+#~ "www.odoo.com/help>`_."
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "כדי להפעיל את מחבר המשלוח עבור FedEx, פתח את "
+#~ "אפליקציית :menuselection:`אפליקציות`. חפש `FedEx`. :guilabel:`הפעל` את "
+#~ "מחבר המשלוח."
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "לאחר הפעלת מחבר המשלוח של FedEx, יש להגדיר לפחות שיטת משלוח אחת. לאחר "
+#~ "מכן, ניתן לכלול את שיטת המשלוח בהזמנות מכירה (SOs) ולהשתמש בה לחישוב "
+#~ "עלויות משלוח ולהדפסת תוויות משלוח."
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "כדי לראות את כל שיטות המשלוח עבור כל שולח עם מחבר מופעל, נווטו "
+#~ "ל-:menuselection:`אפליקציית מלאי --> הגדרות --> שיטות משלוח`."
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "בחרו שיטת משלוח כדי לפתוח את הטופס שלה. לחלופין, לחצו על :guilabel:`חדש` "
+#~ "כדי לפתוח טופס ריק, והגדירו שיטת משלוח חדשה."
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "הטופס עבור שיטת משלוח FedEx."
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "בחלק העליון ביותר של טופס שיטת משלוח ישנם שדות המשמשים להגדרת האופן שבו "
+#~ "השיטה פועלת ב-Odoo. בשדה :guilabel:`ספק`, בחרו :guilabel:`FedEx` מהתפריט "
+#~ "הנפתח, אם הוא לא כבר נבחר."
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "שאר השדות בחלק זה הם כלליים לכל ספקי המשלוח. לפרטים על אופן מילוין, עיינו "
+#~ "בתיעוד על :doc:`משלוחים של צד שלישי <third_party_shipper>`."
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "האפשרויות בלשונית *Fedex Configuration* של טופס שיטת משלוח FedEx משמשות "
+#~ "לחיבור השיטה לחשבון FedEx ולהגדרת פרטי המשלוח המשויכים לשיטה (סוג המסירה, "
+#~ "סוג החבילה וכו')."
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "לאחר מכן, יש לרשום את חשבון FedEx במסד הנתונים. יש ללחוץ על "
+#~ "כפתור :guilabel:`Register FedEx Account`. חלון *FedEx Account "
+#~ "Registration* ייפתח. יש לאשר את הסכם רישיון המשתמש הקצה (EULA) על ידי "
+#~ "בחירה בתיבות הסימון :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` וגם :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping`, ולאחר מכן ללחוץ על :guilabel:`Accept and Continue`."
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr "*מספר חשבון* הוא המספר הייחודי המוקצה לכל חשבון FedEx."
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "כדי למצוא מספר חשבון FedEx, יש להתחבר לחשבון FedEx בכתובת https://"
+#~ "www.fedex.com. יש ללחוץ על שם בעל החשבון בפינה השמאלית העליונה של המסך, "
+#~ "ולבחור :menuselection:`הפרופיל שלי` מהתפריט הנפתח."
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "בדף הפרופיל, יש ללחוץ על :guilabel:`ניהול חשבון` בצד שמאל של המסך. מספר "
+#~ "החשבון מוצג במסך זה."
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr "בלשונית *FedEx Configuration*, יש לספק מידע נוסף על שיטת המשלוח:"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ""
+#~ ":guilabel:`FedEx Drop-Off Type`: בחירת השיטה להעברת חבילה לחזקת FedEx."
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ""
+#~ ":guilabel:`FedEx Package Type`: בחירת סוג החבילה המשמש לשיטת המשלוח."
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ":guilabel:`Label Type`: בחירת סוג תווית המשלוח המשמש לחבילות."
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "האפשרויות שצריך לבחור בלשונית *FedEx Configuration* של שיטת משלוח תלויות "
+#~ "בשירותי המשלוח המוסכמים של חשבון FedEx המשויך. כדי לאשר את השירותים "
+#~ "הזמינים לחשבון FedEx, יש לבקר בעמוד *Account Management* לאחר כניסה לאתר "
+#~ "FedEx או לדבר עם נציג שירות לקוחות."
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "קטע :guilabel:`Options` בלשונית *FedEx Configuration* מספק כמה אפשרויות "
+#~ "נוספות להגדרה מתקדמת יותר של שיטת המשלוח:"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`Generate Return Label`: יש לסמן תיבת סימון זו כדי ליצור תווית "
+#~ "באופן אוטומטי כאשר משלוח מאושר."
+
+#~ msgid "Activate delivery method"
+#~ msgstr "הפעלת שיטת משלוח"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "כברירת מחדל, שיטות משלוח ב-Odoo נוצרות בתוך *סביבת בדיקה*. המשמעות היא "
+#~ "שניתן להשתמש בהן רק למטרות בדיקה, ואינן מסוגלות ליצור הזמנות משלוח ממשיות."
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "כדי להפעיל שיטת משלוח ב*סביבת ייצור*, יש ללחוץ על הכפתור החכם :icon:`fa-"
+#~ "stop` :guilabel:`סביבת בדיקה` בחלק העליון של טופס שיטת המשלוח. לאחר מכן, "
+#~ "הכפתור החכם משתנה ל-:icon:`fa-play` :guilabel:`סביבת ייצור`."
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "כאשר סביבת הייצור מופעלת, אימות הזמנת משלוח באמצעות שיטת המשלוח יוצר "
+#~ "תווית משלוח ממשית עם FedEx."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "יש ללחוץ על הכפתור החכם :icon:`fa-play` :guilabel:`סביבת ייצור` כדי "
+#~ "להחזיר את שיטת המשלוח לסביבת בדיקה."
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "**אין** להפעיל את סביבת הייצור עבור שיטת משלוח לפני שהיא מוכנה לשימוש "
+#~ "עבור הזמנות משלוח ממשיות. פעולה זו עלולה להוביל ליצירת חיובים לא רצויים "
+#~ "עם FedEx."
 
 #~ msgid ""
 #~ "The *one-step inventory flow* is the simplest option, with minimal "

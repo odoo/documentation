@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:34+0000\n"
 "PO-Revision-Date: 2026-07-06 14:29+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -20900,7 +20900,7 @@ msgid "The form for a DHL shipping method."
 msgstr "DHL शिपिंग मेथड के लिए फ़ॉर्म।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "सामान्य जानकारी"
@@ -22806,40 +22806,13 @@ msgstr "Fedex इंटिग्रेशन"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate delivery rates <../setup_configuration>`, "
-"and :doc:`generate delivery labels <labels>` within Odoo. This is "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
+"and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"Fedex अकाउंट को Odoo के **इन्वेंट्री** ऐप्लिकेशन के साथ इंटिग्रेट करने से Odoo के "
-"अंदर :doc:`डिलीवरी रेट कैलकुलेट <../setup_configuration>` करना और :doc:`डिलीवरी "
-"लेबल जनरेट <labels>` करना संभव हो जाता है। यह Fedex *शिपिंग कनेक्टर* को इनेबल करके, "
-"फिर कम से कम एक *शिपिंग मेथड* कॉन्फ़िगर करके पूरा किया जाता है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
-msgid ""
-"As of October 21, 2025, the FedEx integration using the latest API is "
-"temporarily unavailable while Odoo finalizes its solution-provider "
-"validation for FedEx. New setups are currently blocked, and existing "
-"integrations using the FedEx Shipping (Legacy) provider will stop working as "
-"of June 1, 2026."
-msgstr ""
-"21 अक्टूबर 2025 तक, नवीनतम एपीआई का इस्तेमाल करते हुए Fedex इंटिग्रेशन अस्थायी रूप से "
-"अनुपलब्ध है जबकि Odoo अपने solution-provider वैलिडेशन को Fedex के लिए अंतिम रूप दे रहा "
-"है। नए सेटअप वर्तमान में ब्लॉक हैं, और Fedex शिपिंग (पुराना) प्रोवाइडर का इस्तेमाल करते हुए "
-"मौजूदा इंटिग्रेशन 1 जून 2026 तक काम करना बंद कर देंगे।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
-msgid ""
-"For a temporary solution, the :doc:`Sendcloud integration "
-"<sendcloud_shipping>` also supports FedEx services. To request further "
-"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
-"अस्थायी समाधान के लिए, :doc:`Sendcloud इंटिग्रेशन <sendcloud_shipping>` भी Fedex "
-"सर्विस को सपोर्ट करता है। अधिक सहायता के अनुरोध के लिए, `सपोर्ट टिकट सबमिट करें "
-"<https://www.odoo.com/help>`_।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -22849,93 +22822,93 @@ msgstr ""
 "शिपर इंटिग्रेशन निर्देशों के लिए :doc:`थर्ड-पार्टी शिपर्स <third_party_shipper>` पर "
 "दस्तावेज़ देखें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "शिपिंग कनेक्टर सक्षम करें"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
-"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
-"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
+"To enable the shipping connector for FedEx, first :doc:`activate developer "
+"mode <../../../../general/developer_mode>`. Then open "
+"the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
+"the `delivery_fedex_certified` shipping connector."
 msgstr ""
-"FedEx के लिए शिपिंग कनेक्टर चालू करने के लिए, :menuselection:`ऐप्लिकेशन` ऐप्लिकेशन खोलें। "
-"`FedEx` खोजें। शिपिंग कनेक्टर को :guilabel:`एक्टिवेट` करें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
-msgid "Configure delivery method"
-msgstr "डिलीवरी मेथड कॉन्फ़िगर करें"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
-msgid ""
-"After the FedEx shipping connector is enabled, it is necessary to configure "
-"at least one delivery method. After doing so, the delivery method can be "
-"included in sales orders (SOs) and used to compute delivery costs and print "
-"delivery labels."
-msgstr ""
-"FedEx शिपिंग कनेक्टर चालू होने के बाद, कम से कम एक डिलीवरी मेथड कॉन्फ़िगर करना ज़रूरी है। "
-"ऐसा करने के बाद, डिलीवरी मेथड को सेल्स ऑर्डर (SO) में शामिल किया जा सकता है और "
-"डिलीवरी लागत कैलकुलेट करने और डिलीवरी लेबल प्रिंट करने के लिए इस्तेमाल किया जा सकता है।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
-msgid ""
-"To see all delivery methods for every shipper with a connector enabled, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
-"Methods`."
-msgstr ""
-"कनेक्टर सक्षम किए गए हर शिपर के लिए सभी डिलीवरी मेथड देखने के "
-"लिए, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन --> डिलीवरी मेथड` पर जाएं।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
-msgid ""
-"Select a delivery method to open its form. Alternatively, "
-"click :guilabel:`New` to open a blank form, and configure a new delivery "
-"method."
-msgstr ""
-"डिलीवरी मेथड के फ़ॉर्म को खोलने के लिए उसे चुनें। वैकल्पिक रूप से, खाली फ़ॉर्म खोलने के "
-"लिए :guilabel:`नया` क्लिक करें, और नया डिलीवरी मेथड कॉन्फ़िगर करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The form for a FedEx delivery method."
-msgstr "FedEx डिलीवरी मेथड के लिए फ़ॉर्म।"
+msgid "The delivery_fedex_certified connector is installed."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
+msgid "Other FedEx modules are out-of-date and should not be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+msgid "Configure shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:31
 msgid ""
-"At the very top of a delivery method form are fields used to configure the "
+"After the FedEx shipping connector is enabled, ensure that *Delivery "
+"Methods* is enabled. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and scroll to the *Shipping* section. "
+"Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
+"of the *Settings* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
+msgid ""
+"After *Delivery Methods* is enabled, it is necessary to configure at least "
+"one shipping method. After doing so, the shipping method can be included in "
+"sales orders (SOs), and used to compute shipping costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
+msgid ""
+"To see all shipping methods for every shipper with a connector enabled, "
+"navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:43
+msgid ""
+"Select a FedEx shipping method to open its form. Alternatively, "
+"click :guilabel:`New` to open a blank form, and configure a new shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "The form for a FedEx shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
+msgid ""
+"At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
 "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
 "selected."
 msgstr ""
-"डिलीवरी मेथड फ़ॉर्म के बिल्कुल ऊपर वे फ़ील्ड होते हैं जो Odoo में मेथड के संचालन के तरीके को "
-"कॉन्फ़िगर करने के लिए उपयोग किए जाते हैं। :guilabel:`प्रोवाइडर` फ़ील्ड में, ड्रॉप-डाउन "
-"मेन्यू से :guilabel:`FedEx` चुनें, अगर यह पहले से चयनित नहीं है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
 msgid ""
-"The rest of the fields in this section are general to all delivery "
-"providers. For details on how to fill them out, see the documentation "
-"on :doc:`third-party shippers <third_party_shipper>`."
+"The remaining fields should be completed as outlined in the :ref:`inventory/"
+"shipping_receiving/configure-delivery-method` section."
 msgstr ""
-"इस सेक्शन में बाकी फ़ील्ड सभी डिलीवरी प्रोवाइडर के लिए सामान्य हैं। इन्हें कैसे भरना है इसके "
-"विवरण के लिए, :doc:`थर्ड-पार्टी शिपर्स <third_party_shipper>` पर दस्तावेज़ देखें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
 msgstr "FedEx कॉन्फ़िगरेशन टैब"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
-"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
-"are used to connect the method to a FedEx account and configure the delivery "
-"details associated with the method (drop-off type, package type, etc.)."
+"The options in the *FedEx Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
 msgstr ""
-"FedEx शिपिंग मेथड फ़ॉर्म के *Fedex कॉन्फ़िगरेशन* टैब में मौजूद ऑप्शन का इस्तेमाल मेथड को "
-"FedEx अकाउंट से कनेक्ट करने और मेथड से जुड़ी डिलीवरी डिटेल (ड्रॉप-ऑफ़ टाइप, पैकेज टाइप, "
-"आदि) कॉन्फ़िगर करने के लिए किया जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -22947,45 +22920,26 @@ msgstr ""
 "open-account.html>`_ पेज पर जाएं, :guilabel:`अकाउंट बनाएं` पर क्लिक करें और निर्देशों "
 "का पालन करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
-msgid ""
-"Then, register the FedEx account in the database. Click "
-"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
-"Registration* window opens. Accept the end user license agreement (EULA) by "
-"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
-"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
-"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
+msgid "Register FedEx account in database"
 msgstr ""
-"फिर, डेटाबेस में FedEx अकाउंट रजिस्टर करें। :guilabel:`FedEx अकाउंट रजिस्टर करें` बटन पर "
-"क्लिक करें। *FedEx अकाउंट रजिस्ट्रेशन* विंडो खुलती है। एंड यूज़र लाइसेंस एग्रीमेंट (EULA) "
-"को :guilabel:`मैं FedEx एंड यूज़र लाइसेंस एग्रीमेंट पढ़ने को स्वीकार करता/करती हूं` "
-"और :guilabel:`मैं शिपिंग शुरू करने के लिए FedEx EULA की शर्तें स्वीकार करता/करती हूं` "
-"चेकबॉक्स सेलेक्ट करके स्वीकार करें, फिर :guilabel:`स्वीकार करें और जारी रखें` पर क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
-"An *account number* is the unique number assigned to each FedEx account."
-msgstr "*अकाउंट नंबर* हर FedEx अकाउंट को असाइन किया गया यूनीक नंबर है।"
+"After registering for a business account through FedEx, register the FedEx "
+"account in the database. Click the :guilabel:`Register FedEx Account` "
+"button. The *FedEx Account Registration* window opens."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
+"Accept the end user license agreement (EULA) by selecting the :guilabel:`I "
+"acknowledge the reading of the FedEx End User License Agreement` "
+"and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
+"checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"FedEx अकाउंट नंबर खोजने के लिए, https://www.fedex.com पर FedEx अकाउंट में लॉग इन "
-"करें। स्क्रीन के ऊपरी-दाएं कोने में अकाउंट होल्डर के नाम पर क्लिक करें, और ड्रॉप-डाउन मेन्यू "
-"से :menuselection:`मेरा प्रोफ़ाइल` चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"प्रोफ़ाइल पेज पर, स्क्रीन के बाईं ओर :guilabel:`अकाउंट मैनेजमेंट` पर क्लिक करें। अकाउंट नंबर "
-"इस स्क्रीन पर दिखाया गया है।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
 "In the *FedEx Account Registration - Shipper Information* window, enter "
 "the :guilabel:`FedEx Account Number`. Enter the name of the company in "
@@ -22999,7 +22953,7 @@ msgstr ""
 "प्रॉडक्ट रेजिडेंशियल एड्रेस से शिप किए जा रहे हैं, तो :guilabel:`रेजिडेंशियल एड्रेस` चेकबॉक्स "
 "सेलेक्ट करें। :guilabel:`पता वैलिडेट करें` बटन पर क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:86
 msgid ""
 "Next, choose a :guilabel:`Validation Option` to verify access to the "
 "account. This is a form of multi-factor authentication (MFA). Two options "
@@ -23008,7 +22962,7 @@ msgstr ""
 "इसके बाद, अकाउंट तक एक्सेस वेरिफ़ाई करने के लिए :guilabel:`वैलिडेशन ऑप्शन` चुनें। यह मल्टी-"
 "फ़ैक्टर ऑथेंटिकेशन (MFA) का एक रूप है। दो ऑप्शन उपलब्ध हैं:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:89
 msgid ""
 ":guilabel:`Invoice Validation`: Use information from a recent invoice "
 "(within the past 90 days) to validate the account information."
@@ -23016,7 +22970,7 @@ msgstr ""
 ":guilabel:`इनवॉइस वैलिडेशन`: अकाउंट की जानकारी वैलिडेट करने के लिए हाल के इनवॉइस "
 "(पिछले 90 दिनों के भीतर) की जानकारी का इस्तेमाल करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:91
 msgid ""
 ":guilabel:`Secure Code Validation`: Receive a PIN "
 "via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
@@ -23024,7 +22978,36 @@ msgstr ""
 ":guilabel:`सिक्योर कोड वैलिडेशन`: :guilabel:`ईमेल`, :guilabel:`एसएमएस`, "
 "या :guilabel:`वॉइस कॉल` के ज़रिए पिन प्राप्त करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid "Click :guilabel:`Continue` to proceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+"If validating via invoice, in the *FedEx Account Registration - Invoice "
+"Validation* window, enter a recent :guilabel:`Invoice "
+"Number`, :guilabel:`Invoice Date`, :guilabel:`Invoice Amount`, and "
+"the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
+"Invoice`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed Invoice Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+"If validating via PIN, in the *FedEx Account Registration - PIN Validation* "
+"window, select from the list of :guilabel:`PIN Options`, then "
+"click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
+"then click :guilabel:`Validate Code`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
+msgid "A completed PIN Validation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
 "If successful, the *FedEx Account Registration - Success* window displays, "
 "and the account is available for all companies. To change this setting, "
@@ -23034,13 +23017,13 @@ msgstr ""
 "सभी कंपनियों के लिए उपलब्ध होता है। यह सेटिंग बदलने के लिए, :guilabel:`FedEx अकाउंट "
 "फ़ॉर्म खोलें` पर क्लिक करें और कंपनी सेटिंग में बदलाव करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
-"delivery method:"
-msgstr "*FedEx कॉन्फ़िगरेशन* टैब में, डिलीवरी मेथड के बारे में ज़्यादा जानकारी दें:"
+"shipping method:"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
 ":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
 "package."
@@ -23048,28 +23031,26 @@ msgstr ""
 ":guilabel:`FedEx सर्विस टाइप`: पैकेज शिप करने के लिए इस्तेमाल की जाने वाली FedEx "
 "सर्विस सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
-"into FedEx's possession."
-msgstr ":guilabel:`Fedex ड्रॉप-ऑफ़ टाइप`: Fedex के पास पैकेज पहुँचाने का तरीका चुनें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:105
-msgid ""
-":guilabel:`FedEx Package Type`: Select the type of package used for the "
-"shipping method."
+":guilabel:`Drop-Off Type`: Select the method for getting a package into "
+"FedEx's possession."
 msgstr ""
-":guilabel:`Fedex पैकेज टाइप`: शिपिंग मेथड के लिए इस्तेमाल किए जाने वाले पैकेज का टाइप "
-"चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
+msgid ""
+":guilabel:`Package Type`: Select the type of package used for the shipping "
+"method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
 ":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
 "packages."
 msgstr ""
 ":guilabel:`पैकेज वेट यूनिट`: पैकेज को तौलने के लिए इस्तेमाल की जाने वाली यूनिट ऑफ़ मेज़र चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:120
 msgid ""
 ":guilabel:`Package Length Unit`: This field changes based on what is "
 "selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
@@ -23082,13 +23063,12 @@ msgstr ""
 "में अपडेट हो जाती है। अगर :guilabel:`किलोग्राम` चुना जाता है, तो लेंथ "
 "यूनिट :guilabel:`सेंटीमीटर` में अपडेट हो जाती है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
 msgid ""
-":guilabel:`Label Type`: Select the type of shipping label used for packages."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
 msgstr ""
-":guilabel:`लेबल टाइप`: पैकेज के लिए इस्तेमाल किए जाने वाले शिपिंग लेबल का टाइप चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
 ":guilabel:`Label Format`: Select the file format used by Odoo to generate "
 "shipping labels."
@@ -23096,40 +23076,32 @@ msgstr ""
 ":guilabel:`लेबल फ़ॉर्मैट`: Odoo द्वारा शिपिंग लेबल जनरेट करने के लिए इस्तेमाल किया जाने "
 "वाला फ़ाइल फ़ॉर्मैट चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 "The options that should be selected on the *FedEx Configuration* tab of a "
-"delivery method depend on the negotiated shipping services of the associated "
+"shipping method depend on the negotiated shipping services of the associated "
 "FedEx account. To confirm the available services for a FedEx account, visit "
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
-"डिलीवरी मेथड के *Fedex कॉन्फ़िगरेशन* टैब पर चुने जाने वाले ऑप्शन संबंधित Fedex अकाउंट की "
-"नेगोशिएटेड शिपिंग सर्विस पर निर्भर करते हैं। Fedex अकाउंट के लिए उपलब्ध सर्विस की पुष्टि "
-"करने के लिए, Fedex वेबसाइट पर लॉग इन करने के बाद *अकाउंट मैनेजमेंट* पेज पर जाएँ या कस्टमर "
-"सर्विस रेप्रेजेंटेटिव से बात करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
 msgstr "ऑप्शन सेक्शन"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
-"few additional options to further configure the delivery method:"
+"few additional options to further configure the shipping method:"
 msgstr ""
-"*Fedex कॉन्फ़िगरेशन* टैब का :guilabel:`ऑप्शन` सेक्शन डिलीवरी मेथड को और कॉन्फ़िगर करने "
-"के लिए कुछ अतिरिक्त ऑप्शन देता है:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
-"generate a label when a delivery is validated."
+"generate a return label when a delivery is validated."
 msgstr ""
-":guilabel:`रिटर्न लेबल जनरेट करें`: डिलीवरी को वैलिडेट करने पर ऑटोमैटिकली लेबल जनरेट "
-"करने के लिए यह चेकबॉक्स चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
 ":guilabel:`Email Notifications`: Select this checkbox to send updates via "
 "email to customers, if an email address is configured for the customer."
@@ -23137,7 +23109,7 @@ msgstr ""
 ":guilabel:`ईमेल नोटिफ़िकेशन`: अगर ग्राहक के लिए ईमेल एड्रेस कॉन्फ़िगर किया गया है, तो "
 "ईमेल के जरिए ग्राहकों को अपडेट भेजने के लिए यह चेकबॉक्स चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -23146,7 +23118,7 @@ msgstr ""
 "कि ड्यूटी चार्ज :guilabel:`भेजने वाला` या :guilabel:`पाने वाला` द्वारा भुगतान किया "
 "जाना चाहिए।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
 msgid ""
 ":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
 "as residential."
@@ -23154,7 +23126,7 @@ msgstr ""
 ":guilabel:`रेजिडेंशियल डिलीवरी`: तय करें कि पाने वाले के पते को रेजिडेंशियल के रूप में कब "
 "मार्क करना है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 ":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
 "as a PDF or sent as an electronic trade document. This is typically required "
@@ -23164,66 +23136,30 @@ msgstr ""
 "चाहिए या इलेक्ट्रॉनिक ट्रेड दस्तावेज़ के रूप में भेजा जाना चाहिए। यह आमतौर पर तब ज़रूरी "
 "होता है जब इंटरनेशनल शिपमेंट के लिए कमर्शियल इनवॉइस की ज़रूरत हो।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid "Declared Value section"
 msgstr "डिक्लेयर्ड वैल्यू सेक्शन"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 "Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
 msgstr "इंश्योरेंस के उद्देश्य से :guilabel:`डिक्लेयर्ड वैल्यू परसेंटेज` तय करें।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
-msgid "Activate delivery method"
-msgstr "डिलीवरी मेथड एक्टिवेट करें"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:145
-msgid ""
-"By default, delivery methods in Odoo are created within a *test "
-"environment*. This means they can only be used for testing purposes, and are "
-"unable to generate actual delivery orders."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
+msgid "Test environment unavailable"
 msgstr ""
-"डिफ़ॉल्ट रूप से, Odoo में डिलीवरी मेथड *टेस्ट एनवायरमेंट* के भीतर बनाए जाते हैं। इसका मतलब "
-"है कि उनका इस्तेमाल सिर्फ़ टेस्टिंग उद्देश्यों के लिए किया जा सकता है, और वे वास्तविक "
-"डिलीवरी ऑर्डर जनरेट करने में असमर्थ हैं।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
-"To activate a delivery method in a *production environment*, click "
-"the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
-"the delivery method form. After doing so, the smart buttons changes to "
-"read :icon:`fa-play` :guilabel:`Production Environment`."
+"At the moment, FedEx does not offer a test environment where testing "
+"credentials can be used to simulate future deliveries."
 msgstr ""
-"*प्रॉडक्शन एनवायरमेंट* में डिलीवरी मेथड एक्टिवेट करने के लिए, डिलीवरी मेथड फ़ॉर्म के "
-"ऊपर :icon:`fa-stop` :guilabel:`टेस्ट एनवायरमेंट` स्मार्ट बटन पर क्लिक करें। ऐसा करने के "
-"बाद, स्मार्ट बटन :icon:`fa-play` :guilabel:`प्रॉडक्शन एनवायरमेंट` दिखाने के लिए बदल "
-"जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
-"With the production environment enabled, validating a delivery order using "
-"the delivery method generates an actual delivery label with FedEx."
+"Use production credentials for testing instead, and cancel the test requests "
+"through the FedEx platform after testing is complete."
 msgstr ""
-"प्रॉडक्शन एनवायरमेंट सक्षम होने के साथ, डिलीवरी मेथड का इस्तेमाल करके डिलीवरी ऑर्डर को "
-"वैलिडेट करने से FedEx के साथ वास्तविक डिलीवरी लेबल जनरेट होता है।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:155
-msgid ""
-"Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
-"return the delivery method to a test environment."
-msgstr ""
-"डिलीवरी मेथड को टेस्ट एनवायरमेंट में वापस लाने के लिए :icon:`fa-"
-"play` :guilabel:`प्रॉडक्शन एनवायरमेंट` स्मार्ट बटन पर क्लिक करें।"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
-msgid ""
-"**Do not** enable the production environment for a delivery method before it "
-"is ready to be used for actual delivery orders. Doing so may lead to the "
-"creation of unwanted charges with FedEx."
-msgstr ""
-"डिलीवरी मेथड के लिए प्रॉडक्शन एनवायरमेंट को तब तक सक्षम **न करें** जब तक यह वास्तविक "
-"डिलीवरी ऑर्डर के लिए इस्तेमाल के लिए तैयार न हो। ऐसा करने से FedEx के साथ अनचाहे चार्ज "
-"बन सकते हैं।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -26207,6 +26143,11 @@ msgstr ""
 ":menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन --> सेटिंग` पर नेविगेट करें। *शिपिंग "
 "कनेक्टर* सेक्शन में, :guilabel:`Shiprocket कनेक्टर` इनेबल करें, फिर :guilabel:`सेव करें` "
 "क्लिक करें।"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
+msgid "Configure delivery method"
+msgstr "डिलीवरी मेथड कॉन्फ़िगर करें"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shiprocket.rst:94
 msgid ""
@@ -59722,6 +59663,238 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate delivery rates <../setup_configuration>`, "
+#~ "and :doc:`generate delivery labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "Fedex अकाउंट को Odoo के **इन्वेंट्री** ऐप्लिकेशन के साथ इंटिग्रेट करने से Odoo के "
+#~ "अंदर :doc:`डिलीवरी रेट कैलकुलेट <../setup_configuration>` करना "
+#~ "और :doc:`डिलीवरी लेबल जनरेट <labels>` करना संभव हो जाता है। यह Fedex *शिपिंग "
+#~ "कनेक्टर* को इनेबल करके, फिर कम से कम एक *शिपिंग मेथड* कॉन्फ़िगर करके पूरा किया जाता "
+#~ "है।"
+
+#~ msgid ""
+#~ "As of October 21, 2025, the FedEx integration using the latest API is "
+#~ "temporarily unavailable while Odoo finalizes its solution-provider "
+#~ "validation for FedEx. New setups are currently blocked, and existing "
+#~ "integrations using the FedEx Shipping (Legacy) provider will stop working "
+#~ "as of June 1, 2026."
+#~ msgstr ""
+#~ "21 अक्टूबर 2025 तक, नवीनतम एपीआई का इस्तेमाल करते हुए Fedex इंटिग्रेशन अस्थायी रूप से "
+#~ "अनुपलब्ध है जबकि Odoo अपने solution-provider वैलिडेशन को Fedex के लिए अंतिम रूप दे "
+#~ "रहा है। नए सेटअप वर्तमान में ब्लॉक हैं, और Fedex शिपिंग (पुराना) प्रोवाइडर का इस्तेमाल "
+#~ "करते हुए मौजूदा इंटिग्रेशन 1 जून 2026 तक काम करना बंद कर देंगे।"
+
+#~ msgid ""
+#~ "For a temporary solution, the :doc:`Sendcloud integration "
+#~ "<sendcloud_shipping>` also supports FedEx services. To request further "
+#~ "assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+#~ msgstr ""
+#~ "अस्थायी समाधान के लिए, :doc:`Sendcloud इंटिग्रेशन <sendcloud_shipping>` भी "
+#~ "Fedex सर्विस को सपोर्ट करता है। अधिक सहायता के अनुरोध के लिए, `सपोर्ट टिकट सबमिट "
+#~ "करें <https://www.odoo.com/help>`_।"
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, open "
+#~ "the :menuselection:`Apps` app. Search for `FedEx`. :guilabel:`Activate` "
+#~ "the shipping connector."
+#~ msgstr ""
+#~ "FedEx के लिए शिपिंग कनेक्टर चालू करने के लिए, :menuselection:`ऐप्लिकेशन` ऐप्लिकेशन "
+#~ "खोलें। `FedEx` खोजें। शिपिंग कनेक्टर को :guilabel:`एक्टिवेट` करें।"
+
+#~ msgid ""
+#~ "After the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one delivery method. After doing so, the delivery "
+#~ "method can be included in sales orders (SOs) and used to compute delivery "
+#~ "costs and print delivery labels."
+#~ msgstr ""
+#~ "FedEx शिपिंग कनेक्टर चालू होने के बाद, कम से कम एक डिलीवरी मेथड कॉन्फ़िगर करना ज़रूरी "
+#~ "है। ऐसा करने के बाद, डिलीवरी मेथड को सेल्स ऑर्डर (SO) में शामिल किया जा सकता है और "
+#~ "डिलीवरी लागत कैलकुलेट करने और डिलीवरी लेबल प्रिंट करने के लिए इस्तेमाल किया जा सकता "
+#~ "है।"
+
+#~ msgid ""
+#~ "To see all delivery methods for every shipper with a connector enabled, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> Delivery "
+#~ "Methods`."
+#~ msgstr ""
+#~ "कनेक्टर सक्षम किए गए हर शिपर के लिए सभी डिलीवरी मेथड देखने के "
+#~ "लिए, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> कॉन्फ़िगरेशन --> डिलीवरी मेथड` पर जाएं।"
+
+#~ msgid ""
+#~ "Select a delivery method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new delivery "
+#~ "method."
+#~ msgstr ""
+#~ "डिलीवरी मेथड के फ़ॉर्म को खोलने के लिए उसे चुनें। वैकल्पिक रूप से, खाली फ़ॉर्म खोलने के "
+#~ "लिए :guilabel:`नया` क्लिक करें, और नया डिलीवरी मेथड कॉन्फ़िगर करें।"
+
+#~ msgid "The form for a FedEx delivery method."
+#~ msgstr "FedEx डिलीवरी मेथड के लिए फ़ॉर्म।"
+
+#~ msgid ""
+#~ "At the very top of a delivery method form are fields used to configure "
+#~ "the way the method operates in Odoo. In the :guilabel:`Provider` field, "
+#~ "select :guilabel:`FedEx` from the drop-down menu, if it is not already "
+#~ "selected."
+#~ msgstr ""
+#~ "डिलीवरी मेथड फ़ॉर्म के बिल्कुल ऊपर वे फ़ील्ड होते हैं जो Odoo में मेथड के संचालन के तरीके को "
+#~ "कॉन्फ़िगर करने के लिए उपयोग किए जाते हैं। :guilabel:`प्रोवाइडर` फ़ील्ड में, ड्रॉप-डाउन "
+#~ "मेन्यू से :guilabel:`FedEx` चुनें, अगर यह पहले से चयनित नहीं है।"
+
+#~ msgid ""
+#~ "The rest of the fields in this section are general to all delivery "
+#~ "providers. For details on how to fill them out, see the documentation "
+#~ "on :doc:`third-party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "इस सेक्शन में बाकी फ़ील्ड सभी डिलीवरी प्रोवाइडर के लिए सामान्य हैं। इन्हें कैसे भरना है "
+#~ "इसके विवरण के लिए, :doc:`थर्ड-पार्टी शिपर्स <third_party_shipper>` पर दस्तावेज़ "
+#~ "देखें।"
+
+#~ msgid ""
+#~ "The options in the *Fedex Configuration* tab of a FedEx shipping method "
+#~ "form are used to connect the method to a FedEx account and configure the "
+#~ "delivery details associated with the method (drop-off type, package type, "
+#~ "etc.)."
+#~ msgstr ""
+#~ "FedEx शिपिंग मेथड फ़ॉर्म के *Fedex कॉन्फ़िगरेशन* टैब में मौजूद ऑप्शन का इस्तेमाल मेथड को "
+#~ "FedEx अकाउंट से कनेक्ट करने और मेथड से जुड़ी डिलीवरी डिटेल (ड्रॉप-ऑफ़ टाइप, पैकेज टाइप, "
+#~ "आदि) कॉन्फ़िगर करने के लिए किया जाता है।"
+
+#~ msgid ""
+#~ "Then, register the FedEx account in the database. Click "
+#~ "the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+#~ "Registration* window opens. Accept the end user license agreement (EULA) "
+#~ "by selecting the :guilabel:`I acknowledge the reading of the FedEx End "
+#~ "User License Agreement` and :guilabel:`I accept the terms of FedEx EULA "
+#~ "to start shipping` checkboxes, then click :guilabel:`Accept and Continue`."
+#~ msgstr ""
+#~ "फिर, डेटाबेस में FedEx अकाउंट रजिस्टर करें। :guilabel:`FedEx अकाउंट रजिस्टर करें` बटन "
+#~ "पर क्लिक करें। *FedEx अकाउंट रजिस्ट्रेशन* विंडो खुलती है। एंड यूज़र लाइसेंस एग्रीमेंट "
+#~ "(EULA) को :guilabel:`मैं FedEx एंड यूज़र लाइसेंस एग्रीमेंट पढ़ने को स्वीकार करता/करती "
+#~ "हूं` और :guilabel:`मैं शिपिंग शुरू करने के लिए FedEx EULA की शर्तें स्वीकार करता/करती "
+#~ "हूं` चेकबॉक्स सेलेक्ट करके स्वीकार करें, फिर :guilabel:`स्वीकार करें और जारी रखें` पर "
+#~ "क्लिक करें।"
+
+#~ msgid ""
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr "*अकाउंट नंबर* हर FedEx अकाउंट को असाइन किया गया यूनीक नंबर है।"
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "FedEx अकाउंट नंबर खोजने के लिए, https://www.fedex.com पर FedEx अकाउंट में लॉग इन "
+#~ "करें। स्क्रीन के ऊपरी-दाएं कोने में अकाउंट होल्डर के नाम पर क्लिक करें, और ड्रॉप-डाउन मेन्यू "
+#~ "से :menuselection:`मेरा प्रोफ़ाइल` चुनें।"
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "प्रोफ़ाइल पेज पर, स्क्रीन के बाईं ओर :guilabel:`अकाउंट मैनेजमेंट` पर क्लिक करें। अकाउंट "
+#~ "नंबर इस स्क्रीन पर दिखाया गया है।"
+
+#~ msgid ""
+#~ "In the *FedEx Configuration* tab, provide more information about the "
+#~ "delivery method:"
+#~ msgstr "*FedEx कॉन्फ़िगरेशन* टैब में, डिलीवरी मेथड के बारे में ज़्यादा जानकारी दें:"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+#~ "into FedEx's possession."
+#~ msgstr ":guilabel:`Fedex ड्रॉप-ऑफ़ टाइप`: Fedex के पास पैकेज पहुँचाने का तरीका चुनें।"
+
+#~ msgid ""
+#~ ":guilabel:`FedEx Package Type`: Select the type of package used for the "
+#~ "shipping method."
+#~ msgstr ""
+#~ ":guilabel:`Fedex पैकेज टाइप`: शिपिंग मेथड के लिए इस्तेमाल किए जाने वाले पैकेज का "
+#~ "टाइप चुनें।"
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: Select the type of shipping label used for "
+#~ "packages."
+#~ msgstr ""
+#~ ":guilabel:`लेबल टाइप`: पैकेज के लिए इस्तेमाल किए जाने वाले शिपिंग लेबल का टाइप चुनें।"
+
+#~ msgid ""
+#~ "The options that should be selected on the *FedEx Configuration* tab of a "
+#~ "delivery method depend on the negotiated shipping services of the "
+#~ "associated FedEx account. To confirm the available services for a FedEx "
+#~ "account, visit the *Account Management* page after logging in to the "
+#~ "FedEx website or speak with a customer service representative."
+#~ msgstr ""
+#~ "डिलीवरी मेथड के *Fedex कॉन्फ़िगरेशन* टैब पर चुने जाने वाले ऑप्शन संबंधित Fedex अकाउंट "
+#~ "की नेगोशिएटेड शिपिंग सर्विस पर निर्भर करते हैं। Fedex अकाउंट के लिए उपलब्ध सर्विस की "
+#~ "पुष्टि करने के लिए, Fedex वेबसाइट पर लॉग इन करने के बाद *अकाउंट मैनेजमेंट* पेज पर जाएँ "
+#~ "या कस्टमर सर्विस रेप्रेजेंटेटिव से बात करें।"
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the *FedEx Configuration* tab provides "
+#~ "a few additional options to further configure the delivery method:"
+#~ msgstr ""
+#~ "*Fedex कॉन्फ़िगरेशन* टैब का :guilabel:`ऑप्शन` सेक्शन डिलीवरी मेथड को और कॉन्फ़िगर "
+#~ "करने के लिए कुछ अतिरिक्त ऑप्शन देता है:"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+#~ "generate a label when a delivery is validated."
+#~ msgstr ""
+#~ ":guilabel:`रिटर्न लेबल जनरेट करें`: डिलीवरी को वैलिडेट करने पर ऑटोमैटिकली लेबल जनरेट "
+#~ "करने के लिए यह चेकबॉक्स चुनें।"
+
+#~ msgid "Activate delivery method"
+#~ msgstr "डिलीवरी मेथड एक्टिवेट करें"
+
+#~ msgid ""
+#~ "By default, delivery methods in Odoo are created within a *test "
+#~ "environment*. This means they can only be used for testing purposes, and "
+#~ "are unable to generate actual delivery orders."
+#~ msgstr ""
+#~ "डिफ़ॉल्ट रूप से, Odoo में डिलीवरी मेथड *टेस्ट एनवायरमेंट* के भीतर बनाए जाते हैं। इसका "
+#~ "मतलब है कि उनका इस्तेमाल सिर्फ़ टेस्टिंग उद्देश्यों के लिए किया जा सकता है, और वे "
+#~ "वास्तविक डिलीवरी ऑर्डर जनरेट करने में असमर्थ हैं।"
+
+#~ msgid ""
+#~ "To activate a delivery method in a *production environment*, click "
+#~ "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top "
+#~ "of the delivery method form. After doing so, the smart buttons changes to "
+#~ "read :icon:`fa-play` :guilabel:`Production Environment`."
+#~ msgstr ""
+#~ "*प्रॉडक्शन एनवायरमेंट* में डिलीवरी मेथड एक्टिवेट करने के लिए, डिलीवरी मेथड फ़ॉर्म के "
+#~ "ऊपर :icon:`fa-stop` :guilabel:`टेस्ट एनवायरमेंट` स्मार्ट बटन पर क्लिक करें। ऐसा "
+#~ "करने के बाद, स्मार्ट बटन :icon:`fa-play` :guilabel:`प्रॉडक्शन एनवायरमेंट` दिखाने के "
+#~ "लिए बदल जाता है।"
+
+#~ msgid ""
+#~ "With the production environment enabled, validating a delivery order "
+#~ "using the delivery method generates an actual delivery label with FedEx."
+#~ msgstr ""
+#~ "प्रॉडक्शन एनवायरमेंट सक्षम होने के साथ, डिलीवरी मेथड का इस्तेमाल करके डिलीवरी ऑर्डर "
+#~ "को वैलिडेट करने से FedEx के साथ वास्तविक डिलीवरी लेबल जनरेट होता है।"
+
+#~ msgid ""
+#~ "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button "
+#~ "to return the delivery method to a test environment."
+#~ msgstr ""
+#~ "डिलीवरी मेथड को टेस्ट एनवायरमेंट में वापस लाने के लिए :icon:`fa-"
+#~ "play` :guilabel:`प्रॉडक्शन एनवायरमेंट` स्मार्ट बटन पर क्लिक करें।"
+
+#~ msgid ""
+#~ "**Do not** enable the production environment for a delivery method before "
+#~ "it is ready to be used for actual delivery orders. Doing so may lead to "
+#~ "the creation of unwanted charges with FedEx."
+#~ msgstr ""
+#~ "डिलीवरी मेथड के लिए प्रॉडक्शन एनवायरमेंट को तब तक सक्षम **न करें** जब तक यह "
+#~ "वास्तविक डिलीवरी ऑर्डर के लिए इस्तेमाल के लिए तैयार न हो। ऐसा करने से FedEx के साथ "
+#~ "अनचाहे चार्ज बन सकते हैं।"
 
 #~ msgid ""
 #~ "The *one-step inventory flow* is the simplest option, with minimal "
