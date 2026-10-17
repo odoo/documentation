@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:32+0000\n"
+"POT-Creation-Date: 2026-10-16 17:33+0000\n"
 "PO-Revision-Date: 2026-10-10 23:34+0000\n"
 "Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
@@ -1739,6 +1739,46 @@ msgid ""
 "more often than expected."
 msgstr ""
 
+#: ../../content/administration/odoo_sh/advanced.rst:350
+msgid "IP address change"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:352
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh le notifica a los administradores del proyecto si hay cambios en "
+"la dirección IP.** Además, cuando la dirección IP de una instancia de "
+"producción cambia, se realiza una petición HTTP `GET` en la ruta `/_odoo.sh/"
+"ip-change` con la nueva dirección IP incluida como parámetro en la cadena de "
+"consulta (`new`) junto con la dirección IP anterior como parámetro adicional "
+"(`old`)."
+
+#: ../../content/administration/odoo_sh/advanced.rst:357
+msgid ""
+"This mechanism allows custom actions to be triggered in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/advanced.rst:360
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"Por motivos de seguridad, la ruta `/_odoo.sh/ip-change` solo es accesible de "
+"forma interna por la propia plataforma y devuelve una respuesta `403` al "
+"intentar acceder por otros medios."
+
+#: ../../content/administration/odoo_sh/advanced.rst:363
+msgid "Here is a pseudo-implementation example:"
+msgstr "Este es un ejemplo de pseudoimplementación:"
+
 #: ../../content/administration/odoo_sh/create_module.rst:3
 msgid "Create a module"
 msgstr "Crear un módulo"
@@ -1809,8 +1849,8 @@ msgid ""
 "branch`) button next to :guilabel:`Development`."
 msgstr ""
 "En el panel de navegación de ramas, haz clic en el botón ＋ "
-"(:guilabel:`Nueva rama de desarrollo`) ubicado junto a "
-":guilabel:`Desarrollo`."
+"(:guilabel:`Nueva rama de desarrollo`) ubicado junto "
+"a :guilabel:`Desarrollo`."
 
 #: ../../content/administration/odoo_sh/create_module.rst:32
 msgid "Under :guilabel:`Fork`, select the `main` branch."
@@ -1889,10 +1929,10 @@ msgid ""
 "my_module.zip>`. Replace every occurrence of `my_module` with the name of "
 "your choice."
 msgstr ""
-"Si no quieres instalar Odoo en tu computadora, también puedes "
-":download:`descargar esta plantilla de estructura de módulo <create_module/"
-"my_module.zip>`. Reemplaza cada aparición de `my_module` con el nombre de tu "
-"elección."
+"Si no quieres instalar Odoo en tu computadora, también "
+"puedes :download:`descargar esta plantilla de estructura de módulo "
+"<create_module/my_module.zip>`. Reemplaza cada aparición de `my_module` con "
+"el nombre de tu elección."
 
 #: ../../content/administration/odoo_sh/create_module.rst:94
 msgid "The structure below will be generated:"
@@ -1965,8 +2005,8 @@ msgid ""
 "tutorials/server_framework_101` tutorial to understand the structure of a "
 "module and the content of each file."
 msgstr ""
-"Para crear la estructura de tu módulo de forma manual, sigue el tutorial "
-":doc:`/developer/tutorials/server_framework_101` para comprender la "
+"Para crear la estructura de tu módulo de forma manual, sigue el "
+"tutorial :doc:`/developer/tutorials/server_framework_101` para comprender la "
 "estructura de un módulo y el contenido de cada archivo."
 
 #: ../../content/administration/odoo_sh/create_module.rst:147
@@ -2042,8 +2082,8 @@ msgid ""
 msgstr ""
 "Si tu proyecto de Odoo.sh está configurado para instalar el módulo de forma "
 "automática, aparecerá de forma directa en el tablero de la base de datos. De "
-"lo contrario, estará disponible para su instalación en la aplicación "
-":guilabel:`Aplicaciones`."
+"lo contrario, estará disponible para su instalación en la "
+"aplicación :guilabel:`Aplicaciones`."
 
 #: ../../content/administration/odoo_sh/create_module.rst:None
 msgid "The new module on the database dashboard"
@@ -2361,8 +2401,8 @@ msgid ""
 "manifest>` :file:`__manifest__.py`."
 msgstr ""
 "Aumenta la versión del módulo para instalar la dependencia de Python. Para "
-"ello, edita el :ref:`manifiesto del módulo <odoo-sh/module/add/manifest>` "
-":file:`__manifest__.py`."
+"ello, edita el :ref:`manifiesto del módulo <odoo-sh/module/add/"
+"manifest>` :file:`__manifest__.py`."
 
 #: ../../content/administration/odoo_sh/create_module.rst:409
 msgid "Then, :ref:`push the changes <odoo-sh/module/push-development>`."
@@ -5330,8 +5370,8 @@ msgid ""
 msgstr ""
 "Para abrir un archivo en el editor, haz doble clic en él en el panel del "
 "explorador de archivos y después podrás editar el archivo. Para guardar los "
-"cambios, ve a :menuselection:`Archivo --> Guardar` o presiona las teclas "
-":kbd:`Ctrl + S` para usar el atajo del teclado."
+"cambios, ve a :menuselection:`Archivo --> Guardar` o presiona las "
+"teclas :kbd:`Ctrl + S` para usar el atajo del teclado."
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:61
 msgid ""
@@ -5363,7 +5403,8 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:None
 msgid "Using the editor to update the current module"
-msgstr "Captura de pantalla del uso del editor para actualizar el módulo actual"
+msgstr ""
+"Captura de pantalla del uso del editor para actualizar el módulo actual"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:75
 msgid ""
@@ -5511,10 +5552,10 @@ msgid ""
 "stable/config/integrating.html#rich-display>`_ to display objects in HTML."
 msgstr ""
 "Puedes abrir consolas de Python, que son `intérpretes interactivos de "
-"IPython <https://ipython.readthedocs.io/en/stable/interactive/tutorial.html>"
-"`_. Usar estas consolas de Python (en lugar de intérpretes de IPython dentro "
-"de una terminal) te permite utilizar las `capacidades de visualización "
-"enriquecida <https://ipython.readthedocs.io/en/stable/config/"
+"IPython <https://ipython.readthedocs.io/en/stable/interactive/"
+"tutorial.html>`_. Usar estas consolas de Python (en lugar de intérpretes de "
+"IPython dentro de una terminal) te permite utilizar las `capacidades de "
+"visualización enriquecida <https://ipython.readthedocs.io/en/stable/config/"
 "integrating.html#rich-display>`_ para mostrar objetos en HTML."
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:162
@@ -5959,9 +6000,9 @@ msgstr ""
 "El sistema crea una clave de despliegue y un webhook en tu repositorio de "
 "GitHub de forma automática para que Odoo.sh obtenga el código y reciba las "
 "notificaciones de las confirmaciones o commits. Como alguien podría "
-"modificarlos o eliminarlos por error, puedes usar los botones "
-":guilabel:`Verificar clave de despliegue` y :guilabel:`Verificar webhook` "
-"para comprobar su configuración."
+"modificarlos o eliminarlos por error, puedes usar los "
+"botones :guilabel:`Verificar clave de despliegue` y :guilabel:`Verificar "
+"webhook` para comprobar su configuración."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The GitHub key and webhook setting"
@@ -6015,8 +6056,8 @@ msgid ""
 "REPOSITORY.git`) and click :guilabel:`Add`."
 msgstr ""
 "Pega la URL SSH del subrepositorio, por ejemplo "
-"`git@github.com:NOMBREDEUSUARIO/REPOSITORIO.git`, y haz clic en "
-":guilabel:`Agregar`."
+"`git@github.com:NOMBREDEUSUARIO/REPOSITORIO.git`, y haz clic "
+"en :guilabel:`Agregar`."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:288
 msgid "Copy the generated :guilabel:`Public Key`."
@@ -6035,8 +6076,8 @@ msgid ""
 "Click :menuselection:`Add deploy key`, enter a :guilabel:`Title`, paste the "
 "public key into the :guilabel:`Key` field, and click :guilabel:`Add key`."
 msgstr ""
-"Haz clic en :menuselection:`Agregar clave de despliegue`, escribe un "
-":guilabel:`título`, pega la clave pública en el campo :guilabel:`Clave` y "
+"Haz clic en :menuselection:`Agregar clave de despliegue`, escribe "
+"un :guilabel:`título`, pega la clave pública en el campo :guilabel:`Clave` y "
 "haz clic en :guilabel:`Agregar clave`."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:293
@@ -6090,8 +6131,8 @@ msgid ""
 "in the :ref:`web shell <odoo-sh/branches/tabs/shell>`."
 msgstr ""
 "Para analizar el uso del disco, ejecuta la `herramienta Ncdu <https://"
-"dev.yorhel.nl/ncdu/man>`_ en el :ref:`shell web <odoo-sh/branches/tabs/shell>"
-"`."
+"dev.yorhel.nl/ncdu/man>`_ en el :ref:`shell web <odoo-sh/branches/tabs/"
+"shell>`."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:328
 msgid "Database workers"
@@ -6187,8 +6228,8 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:374
 msgid "An invalid code (not linked to an Odoo.sh custom plan)"
 msgstr ""
-"Un código inválido (que no esté vinculado a un plan personalizado de Odoo.sh)"
-"."
+"Un código inválido (que no esté vinculado a un plan personalizado de "
+"Odoo.sh)."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:376
 msgid ""
@@ -9822,8 +9863,9 @@ msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
-"Both phases include helpdesk support, bug fixes, and security updates. "
-"During extended support, fixes are provided only where technically feasible."
+"Security updates are only provided during standard support. Both phases "
+"include helpdesk support and bug fixes. During extended support, fixes are "
+"provided only where technically feasible."
 msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:21
@@ -11177,20 +11219,6 @@ msgstr ":doc:`Versiones compatibles de Odoo <standard_extended_support>`"
 #~ "cuenta cuando desarrolles tus propios crons."
 
 #~ msgid ""
-#~ "**Odoo.sh notifies project administrators of IP address changes.** "
-#~ "Additionally, when the IP address of a production instance changes, an "
-#~ "HTTP `GET` request is made to the path `/_odoo.sh/ip-change` with the new "
-#~ "IP address included as a query string parameter (`new`), along with the "
-#~ "previous IP address as an additional parameter (`old`)."
-#~ msgstr ""
-#~ "**Odoo.sh le notifica a los administradores del proyecto si hay cambios "
-#~ "en la dirección IP.** Además, cuando la dirección IP de una instancia de "
-#~ "producción cambia, se realiza una petición HTTP `GET` en la ruta `/"
-#~ "_odoo.sh/ip-change` con la nueva dirección IP incluida como parámetro en "
-#~ "la cadena de consulta (`new`) junto con la dirección IP anterior como "
-#~ "parámetro adicional (`old`)."
-
-#~ msgid ""
 #~ "**Odoo.sh project**: a Platform as a Service (PaaS) that integrates with "
 #~ "GitHub and enables streamlined development, testing, and deployment of "
 #~ "Odoo applications. It includes tools such as automated backups, staging "
@@ -11546,15 +11574,6 @@ msgstr ":doc:`Versiones compatibles de Odoo <standard_extended_support>`"
 #~ "general, también podrías considerar usar :doc:`submódulos <../advanced/"
 #~ "submodules>`."
 
-#~ msgid ""
-#~ "For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
-#~ "internally by the platform itself and returns a `403` response if "
-#~ "accessed through any other means."
-#~ msgstr ""
-#~ "Por motivos de seguridad, la ruta `/_odoo.sh/ip-change` solo es accesible "
-#~ "de forma interna por la propia plataforma y devuelve una respuesta `403` "
-#~ "al intentar acceder por otros medios."
-
 #~ msgid "Frequent Technical Questions"
 #~ msgstr "Preguntas técnicas frecuentes"
 
@@ -11598,9 +11617,6 @@ msgstr ":doc:`Versiones compatibles de Odoo <standard_extended_support>`"
 
 #~ msgid "Here are the Odoo.sh pertinent directories:"
 #~ msgstr "Estos son los respectivos directorios de Odoo.sh:"
-
-#~ msgid "Here is a pseudo-implementation example:"
-#~ msgstr "Este es un ejemplo de pseudoimplementación:"
 
 #~ msgid "How can I automate tasks when an IP address change occurs?"
 #~ msgstr "¿Cómo puedo automatizar tareas cuando la dirección IP cambia?"
