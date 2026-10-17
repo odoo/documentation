@@ -88,9 +88,6 @@ located in the upper-left corner of the main :guilabel:`Quotations` dashboard.
 Clicking the :guilabel:`New` button reveals a blank quotation form, with various fields and tabs to
 configure.
 
-.. image:: create_quotations/quotation-form.png
-   :alt: A typical quotation form in the Odoo Sales application.
-
 Begin by entering the customer's name in the :guilabel:`Customer` field at the top of the form. This
 is a **required** field.
 
