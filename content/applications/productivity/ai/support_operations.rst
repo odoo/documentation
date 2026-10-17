@@ -85,7 +85,7 @@ sources directly impacts the quality of AI responses.
    the supplied resources.
 
 Users may also define *skills*, which grant the agent permission to perform specific actions.
-:ref:`Skills <ai/topics>` allow advanced scenarios such as record creation or automation triggers.
+:ref:`Skills <ai/skills>` allow advanced scenarios such as record creation or automation triggers.
 
 .. image:: support_operations/support-agent.png
    :alt: An example support AI agent.
