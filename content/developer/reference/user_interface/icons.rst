@@ -48,6 +48,13 @@ to the ``data-icon`` attribute:
    The list of available icons in Odoo is maintained in
    `icons_wishlist.txt <{GITHUB_PATH}/addons/web/tooling/icons/icons_wishlist.txt>`_.
 
+.. warning::
+   Only the names listed in :file:`icons_wishlist.txt` are available. A name outside the list
+   raises no error: the icon is rendered with no width, so it disappears. If the beginning of the
+   name matches an available icon, that icon is rendered instead; for example,
+   ``assignment_turned_in`` is rendered as ``assignment``. Check the list or the
+   :guilabel:`Icons` tab of the Media Dialog before using a name.
+
 .. _ui/odoo-ui-icons:
 
 Odoo UI icons
