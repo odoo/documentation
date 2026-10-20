@@ -24,7 +24,7 @@ desired :guilabel:`Action`:
 - :doc:`Subscribe to Newsletter </applications/marketing/email_marketing/mailing_lists>`
 - :ref:`Create a Shift <planning/create-shift>`
 - :doc:`Create a Task </applications/services/project/tasks/task_creation>`
-- :doc:`Request Withdrawal </applications/websites/ecommerce/order_handling>`
+- :ref:`Request Withdrawal <ecommerce/order_handling/withdrawal-request>`
 - :guilabel:`More models`: to generate other types of records
 
 By default, submitting the form redirects visitors to a *Thank you* page. Use the :guilabel:`URL`
