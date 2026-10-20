@@ -1,35 +1,28 @@
 =================================
-Set multiple vendors on a product
+Configurar múltiples proveedores en un producto
 =================================
 
-If you find yourself with the need to buy from multiple vendors for one
-product, Odoo can let you directly link them with a single product.
+Si necesita comprar un mismo producto a varios proveedores, Odoo le permite vincularlos directamente con un solo producto.
 
-Add vendors in a product
+Añadir proveedores en un producto
 ========================
 
-To use this feature, go to :menuselection:`Purchases --> Products`, then
-select a product.
+Para utilizar esta función, vaya a :menuselection:`Compras --> Productos` y seleccione un producto.
 
-From there you can add existing vendors to your product or create a new
-one on the fly.
+Desde allí, puede añadir proveedores existentes a su producto o crear uno nuevo sobre la marcha.
 
-Note that every first time the product is purchased from a new vendor,
-Odoo will automatically link the contact and price with the product.
+Tenga en cuenta que la primera vez que compre el producto a un nuevo proveedor, Odoo vinculará automáticamente el contacto y el precio con el producto.
 
 .. image:: suppliers/suppliers01.png
     :align: center
 
-Add price & quantity as well as a validity period
+Añadir precio y cantidad, así como un período de validez
 -------------------------------------------------
 
-When you're adding a vendor to a product, you're able to add the vendor
-product name & code as well as set the minimal quantity, price and
-validity period.
+Al añadir un proveedor a un producto, puede incluir el nombre y código del producto del proveedor, así como fijar la cantidad mínima, el precio y el período de validez.
 
 .. image:: suppliers/suppliers02.png
     :align: center
 
 .. tip::
-    This Odoo feature also works with variants of your products, such as one
-    t-shirt in different sizes!
+    ¡Esta función de Odoo también funciona con variantes de sus productos, como una camiseta en diferentes tallas!
