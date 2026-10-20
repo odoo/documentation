@@ -39,7 +39,8 @@ Create booking options for different session lengths while using the same resour
 the availability of each lane connected across the booking options. Configure online prepayment
 for customers to pay when reserving their session.
 
-Review booked sessions in the **Calendar** app when planning the day's lane use.
+Review booked sessions in the **Appointments** app's Gantt or Calendar view when planning the day's
+lane use.
 
 .. _industries/bowling/sell-sessions-and-refreshments:
 
