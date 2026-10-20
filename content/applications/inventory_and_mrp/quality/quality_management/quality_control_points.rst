@@ -30,9 +30,8 @@ In the :guilabel:`Apply to` field, specify whether the |QCP| should apply to eit
 
 - If :guilabel:`Products` is selected, leave the :guilabel:`Products` field blank to ensure the
   |QCP| applies to all products, or select at least one product to which it should apply.
-- If :guilabel:`Categories` is selected, leave the :guilabel:`Categories` field blank to
-  ensure the |QCP| applies to all categories, or select at least one category to which it should
-  apply.
+- If :guilabel:`Categories` is selected, leave the :guilabel:`Categories` field blank to ensure the
+  |QCP| applies to all categories, or select at least one category to which it should apply.
 
 In the :guilabel:`Operations` field, select the operations that should trigger the |QCP|. For
 example, selecting the :guilabel:`Manufacturing` option in the :guilabel:`Operations` field creates
@@ -127,17 +126,17 @@ selected:
 In the :guilabel:`Team` field, specify the quality team responsible for managing the |QCP| and the
 quality checks it creates.
 
-In the :guilabel:`Instructions` tab at the bottom of the form, enter instructions for how to
-complete the quality checks created by the |QCP|.
+In the *Instructions* tab at the bottom of the form, enter instructions for how to complete the
+quality checks created by the |QCP|.
 
-In the :guilabel:`Worksheet` tab, upload a worksheet file from the device.
+In the *Worksheet* tab, upload a worksheet file from the device.
 
-In the :guilabel:`Message If Failure` tab, include instructions for what to do if the quality check
-fails. For example, instruct the employee processing the quality check to create a :doc:`quality
-alert <quality_alerts>`.
+In the *Message If Failure* tab, include instructions for what to do if the quality check fails. For
+example, instruct the employee processing the quality check to create a :doc:`quality alert
+<quality_alerts>`.
 
-Use the :guilabel:`Notes` tab to provide additional information about the |QCP|, like the reason it
-was created. The information entered in this tab is **not** shown to the employees who process the
+Use the *Notes* tab to provide additional information about the |QCP|, like the reason it was
+created. The information entered in this tab is **not** shown to the employees who process the
 quality checks created by the |QCP|.
 
 .. image:: quality_control_points/qcp-form.png
