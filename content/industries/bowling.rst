@@ -87,6 +87,5 @@ Explore the :doc:`Odoo documentation <../index>` and
 guidance.
 
 .. note::
-
    `Contact Odoo <https://www.odoo.com/contactus>`__ to discuss the setup or request a
    demonstration.
