@@ -39,9 +39,10 @@ Next, click the *Purchase* tab, and under :guilabel:`Vendor`, click :guilabel:`A
 select a vendor from the drop-down menu. Then, set a purchase price under :guilabel:`Unit Price`.
 
 .. important::
-   A vendor **must** be set for temporary reordering rules to work. Attempting to replenish the
-   product from the *Replenishment* dashboard in the **Inventory** app without one triggers a
-   warning to add a vendor on the product form.
+   For temporary reordering rules to work, a vendor **must** be set, or the product must have been
+   purchased on at least one confirmed |PO|. Attempting to replenish the product from the
+   *Replenishment* dashboard in the **Inventory** app without one of these triggers a warning to add a vendor
+   on the product form.
 
 Before creating an |SO| for the product, ensure the :guilabel:`Quantity On Hand` field, on the
 *General Information* tab, reads `0.00 Units`. Then, ensure that the :icon:`fa-refresh`
@@ -78,9 +79,9 @@ On this dashboard, locate the product for which the temporary reordering rule wa
 product line, its :guilabel:`On Hand` quantity, negative :guilabel:`Forecast` quantity, *Buy*
 :guilabel:`Route`, and :guilabel:`To Order` quantity to replenish can be seen.
 
-Additionally, three replenishment options are located to the far-right of the row:
-:icon:`fa-truck` :guilabel:`Order`, :icon:`fa-refresh` :guilabel:`Automate`, and
-:icon:`fa-bell-slash` :guilabel:`Snooze`.
+Additionally, three replenishment options are located at the end of the row: :icon:`fa-truck`
+:guilabel:`Order`, :icon:`fa-refresh` :guilabel:`Automate`, and :icon:`fa-bell-slash`
+:guilabel:`Snooze`.
 
 .. image:: temporary_reordering/temporary-reordering-replenishment-dashboard.png
    :alt: Replenishment report displaying temporary reordering rule and options.
