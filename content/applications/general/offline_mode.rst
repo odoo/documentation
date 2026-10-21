@@ -40,3 +40,6 @@ searches.
    - Performing a hard refresh using `Ctrl + F5` or `Cmd + Shift + R`, e.g., for troubleshooting
      reasons, removes all locally stored data. This impacts the availability of views and records in
      offline mode.
+
+.. seealso::
+   :ref:`Point of Sale offline mode <pos/use/offline-pos>`
