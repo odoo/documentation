@@ -12,6 +12,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Lasse L, 2024
@@ -21,8 +22,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-21 20:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18-doc/"
 "general/sv/>\n"
 "Language: sv\n"
@@ -2685,11 +2686,20 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"För inkommande e-post kommer, efter att du har lagt till din egen domän, "
+":ref:`svar från kunder att komma tillbaka till din domän <email-inbound-"
+"custom-domain>`, och du måste använda ett av de tre möjliga sätten att få "
+"tillbaka e-posten till Odoo (antingen via :ref:`inkommande e-postserver "
+"<email-inbound-custom-domain-incoming-server>`, :ref:`omdirigering/"
+"vidarebefordran <email-inbound-custom-domain-redirections>` eller "
+":ref:`genom att använda en underdomän <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Hantera inkommande meddelanden <email_communication/"
+"email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -4236,6 +4246,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"För mer information om att konfigurera DNS-poster för underdomäner, se "
+":ref:`installation av DNS-poster <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4349,7 +4361,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`DNS-poster <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4366,6 +4378,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"För **on-premise-databaser** kräver metoderna med omdirigering och DNS-"
+"poster även att du konfigurerar :doc:`skriptet för e-postgateway &lt;../../"
+"../../administration/on_premise/email_gateway&gt;`. Att gå igenom detta "
+"skript kräver **avancerad teknisk kunskap och infrastrukturkunskap**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4593,7 +4609,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid "DNS records"
-msgstr ""
+msgstr "DNS-poster"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:296
 msgid ""
@@ -4602,6 +4618,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Ett tredje alternativ är att använda en dedikerad underdomän (till exempel "
+"`mail.mydomain.com`) och konfigurera dess DNS-poster så att e-post som "
+"skickas till adresser på den underdomänen hanteras av Odoo och behandlas "
+"direkt i din databas."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:300
 msgid ""
@@ -4609,6 +4629,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"För Odoo Online och Odoo.sh stöds CNAME-baserad routing endast när en "
+"dedikerad underdomän används. Det kan inte konfigureras på din rotdomän "
+"(t.ex. `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
@@ -4616,12 +4639,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Observera att denna underdomän kommer att vara dedikerad till e-posttrafik. "
+"Om den öppnas i en webbläsare omdirigeras användare till den första hemsidan "
+"som konfigurerats på databasen (återfinns en sådan)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Eftersom en ny underdomän konfigureras för inkommande e-post måste dess "
+":doc:`DNS-poster även ställas in för utgående e-post <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4631,7 +4659,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Öppna dina DNS-inställningar"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4639,29 +4667,34 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Om din domän hanteras av en tredjepartsregistrator (till exempel GoDaddy, "
+"Namecheap, Cloudflare), logga in hos registratorn och öppna DNS-"
+"hanteringszonen för din domän."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Om Odoo hanterar din DNS:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "Öppna `databashanteraren <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:321
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Klicka på ikonen :icon:`fa-gear` (:guilabel:`kugghjul`) bredvid databasen "
+"och välj :icon:`fa-globe` :guilabel:`Domännamn`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "Klicka på :guilabel:`DNS` och sedan :guilabel:`Lägg till DNS-post`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Skapa en CNAME-post"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:327
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:381
@@ -8058,11 +8091,11 @@ msgstr ":guilabel:`Tillåtna metoder`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Tillåtna headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Exponerade headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -11317,6 +11350,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Skrivare i DYMO Series 5 är inte kompatibla med :doc:`IoT-boxen &lt;../"
+"iot_box&gt;` och kräver parkoppling med en :doc:`virtuell Windows-IoT &lt;../"
+"windows_iot&gt;`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "DYMO LabelWriter not printing"

@@ -4,6 +4,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Martin Trigaux, 2024
@@ -13,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:34+0000\n"
-"PO-Revision-Date: 2026-07-06 14:29+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-21 23:11+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
 "inventory_and_mrp/hi/>\n"
 "Language: hi\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
 msgid "Supply Chain"
@@ -30304,6 +30305,8 @@ msgid ""
 ":guilabel:`Barcode`: Define the barcode to be used when transferring "
 "products between locations."
 msgstr ""
+":guilabel:`बारकोड`: जगहों के बीच प्रोडक्ट ट्रांसफर करते समय इस्तेमाल किए जाने वाले "
+"बारकोड को परिभाषित करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:31
 msgid ""
@@ -30315,17 +30318,26 @@ msgid ""
 "number of days before an operation completes, select :guilabel:`Beforfe "
 "scheduled date`."
 msgstr ""
+":guilabel:`रिजर्वेशन मेथड`: चुनें कि ऑपरेशन के दौरान ट्रांसफर किए जा रहे प्रोडक्ट को कैसे "
+"रिजर्व किया जाना चाहिए। जब इस टाइप के ऑपरेशन की पुष्टि हो, तो प्रोडक्ट को ऑटोमैटिकली "
+"रिजर्व करने के लिए :guilabel:`कन्फर्मेशन पर` चुनें। ऑपरेशन के लिए प्रोडक्ट को मैन्युअल रूप से "
+"रिजर्व करने के लिए :guilabel:`मैन्युअल रूप से` चुनें। ऑपरेशन पूरा होने से पहले निर्दिष्ट "
+"अधिकतम दिनों से पहले प्रोडक्ट को रिजर्व करने के लिए :guilabel:`निर्धारित तारीख से पहले` "
+"चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:36
 msgid ""
 ":guilabel:`Company`: Specify the company that can use this operation type."
 msgstr ""
+":guilabel:`कंपनी`: उस कंपनी को निर्दिष्ट करें जो इस ऑपरेशन टाइप का इस्तेमाल कर सकती है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:37
 msgid ""
 ":guilabel:`Returns Type`: Define which operation can create returns for this "
 "operation type."
 msgstr ""
+":guilabel:`रिटर्न टाइप`: तय करें कि कौन सा ऑपरेशन इस ऑपरेशन टाइप के लिए रिटर्न बना "
+"सकता है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:38
 msgid ""
@@ -30336,6 +30348,11 @@ msgid ""
 "Select :guilabel:`Never` to specify that the remaining products should be "
 "canceled."
 msgstr ""
+":guilabel:`बैकऑर्डर बनाएं`: तय करें कि इस ऑपरेशन टाइप के लिए वैलिडेशन पर बिना डिलीवर "
+"किए गए प्रोडक्ट के लिए बैकऑर्डर कब बनाए जा सकते हैं। अगर Odoo को यह पूछना चाहिए कि "
+"बैकऑर्डर बनाया जाए या नहीं, तो :guilabel:`पूछें` चुनें। हमेशा बैकऑर्डर जनरेट करने के लिए "
+":guilabel:`हमेशा` चुनें। यह निर्दिष्ट करने के लिए कि शेष प्रोडक्ट को रद्द कर दिया जाना "
+"चाहिए, :guilabel:`कभी नहीं` चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:42
 msgid ""
@@ -30345,39 +30362,49 @@ msgid ""
 "been validated for the project. This ensures that the product's cost is "
 "tracked during the stock move."
 msgstr ""
+":guilabel:`एनालिटिक लागत`: स्टॉक मूव्स मान्य होने पर प्रोजेक्ट में एनालिटिक प्रविष्टियां "
+"बनाई जाएं, यह सुनिश्चित करने के लिए इस चेकबॉक्स को चुनें। यह प्रोजेक्ट के लिए मान्य किए गए "
+"स्टॉक मूव्स (डिलीवरी और रसीदों) में शामिल प्रोडक्ट की कुल लागत को ट्रैक करता है। इससे यह "
+"सुनिश्चित होता है कि स्टॉक मूव के दौरान प्रोडक्ट की लागत ट्रैक की जाती है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:48
 msgid ":doc:`../../shipping_receiving/reservation_methods/at_confirmation`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/reservation_methods/at_confirmation`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:49
 msgid ":doc:`../../shipping_receiving/reservation_methods/manually`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/reservation_methods/manually`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:50
 msgid ""
 ":doc:`../../shipping_receiving/reservation_methods/before_scheduled_date`"
 msgstr ""
+":doc:`../../shipping_receiving/reservation_methods/before_scheduled_date`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:53
 msgid "Lots/serial numbers"
-msgstr ""
+msgstr "लॉट/सीरियल नंबर"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:55
 msgid ""
 "This section only appears if :guilabel:`Lots & Serial Numbers` is enabled "
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"यह सेक्शन सिर्फ़ तभी दिखाई देता है अगर :guilabel:`लॉट और सीरियल नंबर` को "
+":menuselection:`Inventory app --&gt; Configuration --&gt; Settings` में सक्षम "
+"किया गया हो।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:58
 msgid "The following fields are available:"
-msgstr ""
+msgstr "निम्नलिखित फ़ील्ड उपलब्ध हैं:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:60
 msgid ""
 ":guilabel:`Create New`: Select this checkbox to specify that lots and serial "
 "numbers can be created from this operation type."
 msgstr ""
+":guilabel:`नया बनाएं`: यह निर्दिष्ट करने के लिए इस चेकबॉक्स को चुनें कि इस ऑपरेशन टाइप "
+"से लॉट और सीरियल नंबर बनाए जा सकते हैं।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:62
 msgid ""
@@ -30385,42 +30412,52 @@ msgid ""
 "serial number can be selected when creating transfers for this operation "
 "type."
 msgstr ""
+":guilabel:`मौजूदा का इस्तेमाल करें`: अगर यह चेकबॉक्स चुना जाता है, तो इस ऑपरेशन टाइप के "
+"लिए ट्रांसफर बनाते समय लॉट या सीरियल नंबर चुना जा सकता है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:66
 msgid ":doc:`../../product_management/product_tracking/lots`"
-msgstr ""
+msgstr ":doc:`../../product_management/product_tracking/lots`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:67
 msgid ":doc:`../../product_management/product_tracking/serial_numbers`"
-msgstr ""
+msgstr ":doc:`../../product_management/product_tracking/serial_numbers`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:72
 msgid ""
 "This section only appears if :guilabel:`Storage Locations` is enabled "
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"यह सेक्शन सिर्फ़ तभी दिखाई देता है अगर :guilabel:`स्टोरेज जगहें` को "
+":menuselection:`Inventory app --&gt; Configuration --&gt; Settings` में सक्षम "
+"किया गया हो।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:75
 msgid "Specify the following locations for the operation type:"
-msgstr ""
+msgstr "ऑपरेशन टाइप के लिए निम्नलिखित जगहें निर्दिष्ट करें:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:77
 msgid ""
 ":guilabel:`Source Location`: Select a default source location when "
 "operations of this type are created."
 msgstr ""
+":guilabel:`सोर्स जगह`: इस टाइप के ऑपरेशन बनाए जाने पर एक डिफ़ॉल्ट सोर्स जगह चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:79
 msgid ""
 ":guilabel:`Destination Location`: Select a default destination location when "
 "operations of this type are created."
 msgstr ""
+":guilabel:`डेस्टिनेशन जगह`: इस टाइप के ऑपरेशन बनाए जाने पर एक डिफ़ॉल्ट डेस्टिनेशन जगह चुनें"
+"।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:83
 msgid ""
 "The :guilabel:`Source Location` and :guilabel:`Destination Location` can be "
 "changed on operation forms."
 msgstr ""
+"ऑपरेशन फ़ॉर्म पर :guilabel:`सोर्स जगह` और :guilabel:`डेस्टिनेशन जगह` को बदला जा "
+"सकता है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:90
 #: ../../content/applications/inventory_and_mrp/repairs.rst:8
@@ -30429,69 +30466,80 @@ msgstr "रिपेयर"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:92
 msgid "This section appears only if the **Repairs** app is installed."
-msgstr ""
+msgstr "यह सेक्शन सिर्फ़ तभी दिखाई देता है अगर **रिपेयर** एप्लिकेशन इंस्टॉल हो।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:94
 msgid ""
 "To create repair orders from returns for this operation type, select "
 "the :guilabel:`Create Repair Orders from Returns` checkbox."
 msgstr ""
+"इस ऑपरेशन टाइप के लिए रिटर्न से रिपेयर ऑर्डर बनाने के लिए, :guilabel:`रिटर्न से रिपेयर "
+"ऑर्डर बनाएं` चेकबॉक्स चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:98
 msgid "Batch & wave transfers"
-msgstr ""
+msgstr "बैच और वेव ट्रांसफ़र"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:100
 msgid ""
 "This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is "
 "enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"यह सेक्शन सिर्फ़ तभी दिखाई देता है अगर :guilabel:`बैच, वेव और क्लस्टर ट्रांसफ़र` को "
+":menuselection:`इन्वेंट्री एप्लिकेशन --&gt; कॉन्फ़िगरेशन --&gt; सेटिंग` में सक्षम किया गया "
+"हो।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:103
 msgid ""
 "Select the :guilabel:`Automatic Batches` checkbox to specify that pickings "
 "should be automatically batched as they are confirmed when possible."
 msgstr ""
+"यह तय करने के लिए :guilabel:`ऑटोमैटिक बैच` चेकबॉक्स चुनें कि संभव होने पर पिकिंग कन्फ़र्म "
+"होते ही उन्हें ऑटोमैटिकली बैच किया जाना चाहिए।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:107
 msgid ":doc:`../../shipping_receiving/picking_methods/wave`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/picking_methods/wave`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:108
 msgid ":doc:`../../shipping_receiving/picking_methods/batch`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/picking_methods/batch`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:109
 msgid ":doc:`../../shipping_receiving/picking_methods/cluster`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/picking_methods/cluster`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:114
 msgid "Hardware tab"
-msgstr ""
+msgstr "हार्डवेयर टैब"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:116
 msgid ""
 "In the *Print on validation* or *Print when done* section, specify what "
 "should be printed automatically when an operation is validated or complete."
 msgstr ""
+"*Print on validation* या *Print when done* सेक्शन में, यह तय करें कि किसी ऑपरेशन के "
+"मान्य होने या पूरा होने पर ऑटोमैटिकली क्या प्रिंट होना चाहिए।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:119
 msgid ""
 "In the *Scales* section, specify a scale to use in conjunction with "
 "operations of this operation type in the :guilabel:`Connect Scale` field."
 msgstr ""
+"*Scales* सेक्शन में, इस ऑपरेशन टाइप के ऑपरेशन के साथ इस्तेमाल करने के लिए :guilabel:`स्केल "
+"कनेक्ट करें` फ़ील्ड में एक स्केल निर्दिष्ट करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:123
 msgid ":doc:`../../../../general/iot/devices/printer`"
-msgstr ""
+msgstr ":doc:`../../../../general/iot/devices/printer`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:124
 msgid ":doc:`../../../../general/iot/devices/scale`"
-msgstr ""
+msgstr ":doc:`../../../../general/iot/devices/scale`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:129
 msgid "Barcode App tab"
-msgstr ""
+msgstr "बारकोड एप्लिकेशन टैब"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:131
 msgid ""
@@ -30499,16 +30547,22 @@ msgid ""
 "the **Barcode** app. Specify when barcodes must be scanned or how often, "
 "whether to group products, or when to validate an operation."
 msgstr ""
+"यह तय करने के लिए *Barcode App* टैब का इस्तेमाल करें कि यह ऑपरेशन टाइप **बारकोड** "
+"एप्लिकेशन के साथ कैसे एकीकृत होता है। यह निर्दिष्ट करें कि बारकोड कब या कितनी बार स्कैन "
+"किए जाने चाहिए, प्रॉडक्ट को समूहीकृत करना है या नहीं, या किसी ऑपरेशन को कब मान्य करना "
+"है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:135
 msgid ""
 "To display reserved lots or serial numbers on an operation in the "
 "**Barcode** app, select the :guilabel:`Show reserved lots/SN` checkbox."
 msgstr ""
+"**बारकोड** एप्लिकेशन में किसी ऑपरेशन पर रिज़र्व किए गए लॉट या सीरियल नंबर दिखाने के "
+"लिए, :guilabel:`रिज़र्व लॉट/एसएन दिखाएं` चेकबॉक्स चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:139
 msgid ":doc:`../../../barcode`"
-msgstr ""
+msgstr ":doc:`../../../barcode`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:82
@@ -33255,6 +33309,9 @@ msgid ""
 "**Manufacturing** app, and in the :guilabel:`Inventory` "
 "tab's :guilabel:`Routes` field, tick the :guilabel:`Manufacture` checkbox."
 msgstr ""
+"अगर प्रॉडक्ट मैन्युफ़ैक्चर किया जाता है, तो **मैन्युफ़ैक्चरिंग** एप्लिकेशन को :ref:`इंस्टॉल करें "
+"<general/install>`, और :guilabel:`इन्वेंट्री` टैब के :guilabel:`रूट्स` फ़ील्ड में, "
+":guilabel:`मैन्युफ़ैक्चर` चेकबॉक्स को टिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:89
 msgid ""
@@ -33328,6 +33385,9 @@ msgid ""
 "multiples, rounding the ordered quantity up to the nearest multiple that "
 "remains below or equal to the :guilabel:`Max` quantity."
 msgstr ""
+":guilabel:`मल्टीपल क्वांटिटी`: सुनिश्चित करता है कि प्रॉडक्ट निश्चित गुणकों में फिर से भरे "
+"जाएं, जिससे ऑर्डर की गई मात्रा निकटतम गुणक तक राउंड अप हो जाए जो "
+":guilabel:`अधिकतम` मात्रा से कम या उसके बराबर रहे।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:119
 msgid ""
@@ -33336,6 +33396,10 @@ msgid ""
 "forecasted quantity is `7`, the required quantity is `13`. Because `13` is "
 "not a multiple of three, Odoo rounds down and orders `12`."
 msgstr ""
+"उदाहरण के लिए, अगर :guilabel:`मल्टीपल क्वांटिटी` को `3` पर सेट किया गया है, तो "
+"Odoo तीन के गुणकों (3, 6, 9, ...) में ऑर्डर करता है। अगर :guilabel:`अधिकतम` `20` है "
+"और पूर्वानुमानित मात्रा `7` है, तो आवश्यक मात्रा `13` है। चूंकि `13` तीन का गुणक नहीं है, "
+"इसलिए Odoo राउंड डाउन करता है और `12` का ऑर्डर देता है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid "The form for creating a new reordering rule."
@@ -33356,6 +33420,10 @@ msgid ""
 "future demand, see the :ref:`Just-in-time logic <inventory/"
 "warehouses_storage/just-in-time>` section."
 msgstr ""
+"ऑन-हैंड मात्रा और भविष्य की डिमांड का उपयोग करके :guilabel:`ऑन हैंड`, "
+":guilabel:`फ़ोरकास्ट`, और :guilabel:`टू ऑर्डर` फ़ील्ड की गणना कैसे की जाती है, यह "
+"जानने के लिए :ref:`जस्ट-इन-टाइम लॉजिक <inventory/warehouses_storage/just-in-"
+"time>` सेक्शन देखें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:137
 msgid "For advanced usage, learn about the following reordering rule fields:"
@@ -33966,7 +34034,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:396
 msgid "Just-in-time logic"
-msgstr ""
+msgstr "जस्ट-इन-टाइम लॉजिक"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
 msgid ""
@@ -33975,6 +34043,10 @@ msgid ""
 "date <inventory/warehouses_storage/forecasted-date>`, which determines when "
 "replenishment is necessary to avoid overstocking."
 msgstr ""
+"Odoo में *जस्ट-इन-टाइम लॉजिक* डेडलाइन पूरा करने के लिए सटीक रूप से ऑर्डर देकर स्टोरेज "
+"लागत को कम करता है। यह :ref:`फ़ोरकास्ट की गई तारीख <inventory/"
+"warehouses_storage/forecasted-date>` का उपयोग करके हासिल किया जाता है, जो यह "
+"तय करती है कि ओवरस्टॉकिंग से बचने के लिए रिप्लिनिशमेंट कब ज़रूरी है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:402
 msgid ""
@@ -33986,6 +34058,13 @@ msgid ""
 "or :ref:`manufacturing lead times <inventory/warehouses_storage/manuf-lt>` "
 "for production. Both automatic and manual reordering rules work this way."
 msgstr ""
+"फ़ोरकास्ट की गई तारीख प्रॉडक्ट प्राप्त करने की **यथासंभव सबसे शुरुआती तारीख** है अगर "
+"रिप्लिनिशमेंट प्रक्रिया तुरंत शुरू होती है। इसकी गणना रिप्लिनिशमेंट प्रक्रिया से जुड़े लीड टाइम "
+"को जोड़कर की जाती है, जैसे परचेज़ के लिए :ref:`वेंडर लीड टाइम <inventory/"
+"warehouses_storage/purchase-lt>` और :ref:`परचेज़िंग देरी <inventory/"
+"warehouses_storage/purchase-security-lt>`, या प्रोडक्शन के लिए :ref:`मैन्युफ़ैक्चरिंग "
+"लीड टाइम <inventory/warehouses_storage/manuf-lt>`। ऑटोमैटिक और मैनुअल दोनों "
+"रीऑर्डरिंग नियम इसी तरह काम करते हैं।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:410
 msgid ""
@@ -33993,16 +34072,21 @@ msgid ""
 "in 10 days, Odoo waits 5 days to place the order, ensuring it arrives just "
 "in time for delivery."
 msgstr ""
+"5 दिन के कुल लीड टाइम और 10 दिनों में सेल्स ऑर्डर डिलीवरी की तारीख वाले प्रॉडक्ट के लिए, "
+"Odoo ऑर्डर देने के लिए 5 दिन इंतज़ार करता है, जिससे यह सुनिश्चित होता है कि यह डिलीवरी "
+"के लिए बिल्कुल सही समय पर पहुंचे।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:413
 msgid "Important considerations:"
-msgstr ""
+msgstr "ज़रूरी बातें:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:415
 msgid ""
 "**If this feels risky**, consider adding buffer time or :doc:`adjusting lead "
 "times <lead_times>` for more flexibility."
 msgstr ""
+"**अगर यह जोखिम भरा लगता है**, तो ज़्यादा लचीलेपन के लिए बफ़र समय जोड़ने या :doc:`लीड "
+"टाइम एडजस्ट करने <lead_times>` पर विचार करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:417
 msgid ""
@@ -34011,10 +34095,14 @@ msgid ""
 "dates on sales orders as their *creation date* ensures purchases are "
 "immediately triggered when needed"
 msgstr ""
+"हालांकि लीड टाइम और जस्ट-इन-टाइम लॉजिक अतिरिक्त कंट्रोल प्रदान करते हैं, लेकिन "
+"**रीऑर्डरिंग नियम उनके बिना भी बिल्कुल ठीक काम करते हैं**। सेल्स ऑर्डर पर डिलीवरी की "
+"तारीखों को उनकी *क्रिएशन तारीख* के रूप में रखने से यह सुनिश्चित होता है कि ज़रूरत पड़ने पर "
+"परचेज़ तुरंत ट्रिगर हो जाएं"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:424
 msgid "Forecasted date and To Order quantity"
-msgstr ""
+msgstr "फ़ोरकास्ट की गई तारीख और टू ऑर्डर मात्रा"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
 msgid ""
@@ -34035,6 +34123,10 @@ msgid ""
 "reordering rule. The :guilabel:`Replenishment Information` pop-up window "
 "displays the :guilabel:`Forecasted Date` and various lead times."
 msgstr ""
+"फ़ोरकास्ट की गई तारीख देखने के लिए रिप्लिनिशमेंट रिपोर्ट पर जाएं और मनचाहे रीऑर्डरिंग "
+"नियम के लिए :icon:`fa-info-circle` :guilabel:`(जानकारी)` आइकॉन पर क्लिक करें। "
+":guilabel:`रिप्लिनिशमेंट जानकारी` पॉप-अप विंडो :guilabel:`फ़ोरकास्टेड तारीख` और "
+"विभिन्न लीड टाइम प्रदर्शित करती है।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:435
 msgid ""
@@ -35593,6 +35685,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:226
 msgid ":doc:`Odoo reporting essentials <../../../../essentials/reporting>`"
 msgstr ""
+":doc:`Odoo रिपोर्टिंग की ज़रूरी बातें &lt;../../../../essentials/reporting&gt;`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:3
 msgid "Forecasted report"
@@ -35620,7 +35713,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:22
 msgid "Navigating the forecast report"
-msgstr ""
+msgstr "फ़ोरकास्ट रिपोर्ट नेविगेट करना"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
 msgid ""
@@ -35994,6 +36087,10 @@ msgid ""
 "warehouse_storage/stranded>`, or view past inventory to see product "
 "locations on specific dates."
 msgstr ""
+"**इन्वेंट्री** एप्लिकेशन में *Locations* डैशबोर्ड कंपनी के प्रॉडक्ट के ऑन-हैंड स्टोरेज स्थानों की "
+"पूरी जानकारी प्रदान करता है। स्टॉक कहां स्टोर है यह देखने, :ref:`गलत जगह रखे गए आइटम "
+"<inventory/warehouse_storage/stranded>` की पहचान करने, या विशिष्ट तारीखों पर "
+"प्रॉडक्ट की लोकेशन देखने के लिए पिछली इन्वेंट्री देखने हेतु इस रिपोर्ट का इस्तेमाल करें।"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:10
 msgid ""
@@ -39088,6 +39185,8 @@ msgid ""
 "To create a kit product, go to :menuselection:`Inventory app --> Products --"
 "> Products`, and then click :guilabel:`New`."
 msgstr ""
+"एक किट प्रॉडक्ट बनाने के लिए, :menuselection:`इन्वेंट्री एप्लिकेशन --&gt; प्रॉडक्ट --"
+"&gt; प्रॉडक्ट` पर जाएं, और फिर :guilabel:`नया` पर क्लिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:24
 msgid ""
@@ -39192,6 +39291,9 @@ msgid ""
 "components can be added to an **eCommerce** cart unless the option "
 "to :doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
 msgstr ""
+"**कॉम्पोनेंट परचेज़ प्रतिबंध**: किट के सिर्फ़ न्यूनतम आवश्यक कॉम्पोनेंट को ही **ई-कॉमर्स** "
+"कार्ट में जोड़ा जा सकता है, जब तक कि :doc:`बेचना जारी रखें&lt;../../../websites/"
+"ecommerce/products&gt;` का विकल्प अक्षम न किया गया हो।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62
 msgid ""
@@ -40237,7 +40339,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/products/catalog`"
-msgstr ""
+msgstr ":doc:`../../../websites/ecommerce/products/catalog`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:5
 msgid ""
@@ -41945,6 +42047,12 @@ msgid ""
 "the :guilabel:`Tracking` field, select :guilabel:`By Unique Serial Number` "
 "or :guilabel:`By Lots`."
 msgstr ""
+"नए मैन्युफ़ैक्चर किए गए प्रॉडक्ट को लॉट या सीरियल नंबर का असाइनमेंट वैकल्पिक है। नए "
+"मैन्युफ़ैक्चर किए गए प्रॉडक्ट को वैकल्पिक रूप से :doc:`लॉट या सीरियल नंबर असाइन करने "
+"&lt;../../inventory/product_management/product_tracking&gt;` के लिए, "
+":guilabel:`ट्रेसेबिलिटी` सेक्शन पर जाएं, जो :guilabel:`इन्वेंट्री` टैब में है। "
+":guilabel:`ट्रैकिंग` फ़ील्ड में, :guilabel:`यूनिक सीरियल नंबर द्वारा` या "
+":guilabel:`लॉट द्वारा` चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:38
 msgid ""
@@ -47801,7 +47909,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:3
 msgid "Dismantle products into components"
-msgstr ""
+msgstr "प्रोडक्ट को कॉम्पोनेंट में अलग करें"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:8
 msgid ""
@@ -47811,6 +47919,10 @@ msgid ""
 "components, selling the functional parts to mechanics, who can make use of "
 "those parts."
 msgstr ""
+"कुछ कंपनियाँ एक्सटर्नल सोर्स से प्रोडक्ट प्राप्त कर सकती हैं और भविष्य के उपयोग के लिए उन "
+"प्रोडक्ट के कॉम्पोनेंट रख सकती हैं। उदाहरण के लिए, एक कार जंकयार्ड ऐसी कारें ले सकता है जो "
+"अब चालू हालत में नहीं हैं और उन्हें उनके कॉम्पोनेंट में अलग कर सकता है, और काम करने वाले पार्ट्स "
+"को मैकेनिकों को बेच सकता है, जो उन पार्ट्स का इस्तेमाल कर सकते हैं।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:13
 msgid ""
@@ -47819,26 +47931,34 @@ msgid ""
 "material's (BoM) :doc:`by-products <byproducts>` to split the item into "
 "components and add those parts to inventory."
 msgstr ""
+"जहाँ :doc:`अनबिल्ड ऑर्डर <unbuild_orders>` निर्मित किए जाने वाले प्रोडक्ट पर लागू होते "
+"हैं, वहीं डिसअसेंबल किए जाने वाले खरीदे गए प्रोडक्ट, आइटम को कॉम्पोनेंट में अलग करने और उन "
+"पार्ट्स को इन्वेंट्री में जोड़ने के लिए बिल ऑफ़ मटेरियल (बीओएम) के :doc:`बाय-प्रोडक्ट "
+"<byproducts>` पर निर्भर करते हैं।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:17
 msgid ""
 "Creating by-products ensures that the components for each product can be "
 "entered into inventory, complete with serial numbers (if they are used)."
 msgstr ""
+"बाय-प्रोडक्ट बनाने से यह सुनिश्चित होता है कि प्रत्येक प्रोडक्ट के कॉम्पोनेंट को इन्वेंट्री में "
+"दर्ज किया जा सकता है, साथ ही उनके सीरियल नंबर भी (अगर वे इस्तेमाल किए जाते हैं)।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:20
 msgid "Typically, the process is as follows:"
-msgstr ""
+msgstr "आमतौर पर, प्रक्रिया इस प्रकार है:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:22
 msgid ""
 ":ref:`Create a bill of materials for the product to dismantle <manufacturing/"
 "dismantle_products/create-bom>`."
 msgstr ""
+":ref:`अलग किए जाने वाले प्रोडक्ट के लिए बिल ऑफ़ मटेरियल बनाएं <manufacturing/"
+"dismantle_products/create-bom>`।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:24
 msgid "Create a manufacturing order (MO) for the product."
-msgstr ""
+msgstr "प्रोडक्ट के लिए एक मैन्युफैक्चरिंग ऑर्डर (एमओ) बनाएं।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:25
 msgid ""
@@ -47846,16 +47966,21 @@ msgid ""
 "dismantle_products/dismantle>` and enter any tracking numbers (like lots or "
 "serial numbers) for the component parts."
 msgstr ""
+":ref:`प्रोडक्ट को उसके बाय-प्रोडक्ट कॉम्पोनेंट में अलग करें <manufacturing/"
+"dismantle_products/dismantle>` और कॉम्पोनेंट पार्ट्स के लिए कोई भी ट्रैकिंग नंबर (जैसे "
+"लॉट या सीरियल नंबर) दर्ज करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:28
 msgid ""
 ":ref:`Enter parts into inventory <manufacturing/dismantle_products/"
 "inventory>` by clicking :guilabel:`Produce All` on the manufacturing order."
 msgstr ""
+":ref:`पार्ट्स को इन्वेंट्री में दर्ज करें <manufacturing/dismantle_products/inventory>"
+"`, इसके लिए मैन्युफैक्चरिंग ऑर्डर पर :guilabel:`सभी प्रोड्यूस करें` पर क्लिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:34
 msgid "Enable settings"
-msgstr ""
+msgstr "सेटिंग चालू करें"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:36
 msgid ""
@@ -47863,18 +47988,21 @@ msgid ""
 "to :menuselection:`Manufacturing app --> Configuration --> Settings`. In the "
 "*Operations* section, select the :guilabel:`By-Products` checkbox."
 msgstr ""
+"प्रोडक्ट को बाय-प्रोडक्ट में अलग करने के लिए Odoo को सेटअप करने हेतु, "
+":menuselection:`मैन्युफैक्चरिंग एप्लिकेशन --&gt; कॉन्फ़िगरेशन --&gt; सेटिंग` पर जाएं। "
+"*ऑपरेशन* सेक्शन में, :guilabel:`बाय-प्रोडक्ट` चेकबॉक्स चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "Enable By-Products in the Manufacturing configuration settings."
-msgstr ""
+msgstr "मैन्युफैक्चरिंग कॉन्फ़िगरेशन सेटिंग में बाय-प्रोडक्ट चालू करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:46
 msgid "Create bill of materials"
-msgstr ""
+msgstr "बिल ऑफ़ मटेरियल बनाएं"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:48
 msgid "First, create a new |BoM| for the product that will be dismantled."
-msgstr ""
+msgstr "सबसे पहले, अलग किए जाने वाले प्रोडक्ट के लिए एक नया |BoM| बनाएं।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:50
 msgid ""
@@ -49862,6 +49990,8 @@ msgid ""
 ":guilabel:`Indirect Demand`: Filter by products configured with the "
 "*Indirect Demand* option."
 msgstr ""
+":guilabel:`इनडायरेक्ट डिमांड`: *इनडायरेक्ट डिमांड* विकल्प के साथ कॉन्फ़िगर किए गए "
+"प्रोडक्ट के अनुसार फ़िल्टर करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:342
 msgid ""
@@ -49869,6 +49999,9 @@ msgid ""
 "quantity below the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in yellow)."
 msgstr ""
+":guilabel:`रिप्लिनिशमेंट बहुत कम`: सुझाई गई रिप्लिनिशमेंट मात्रा से कम रिप्लिनिश की गई "
+"मात्रा वाले प्रोडक्ट के अनुसार फ़िल्टर करें (यानी, कम से कम एक :guilabel:`+ रिप्लिनिशमेंट` "
+"सेल पीले रंग में हाइलाइट हो)।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:345
 msgid ""
@@ -49876,24 +50009,33 @@ msgid ""
 "quantity above the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in red)."
 msgstr ""
+":guilabel:`रिप्लिनिशमेंट बहुत अधिक`: सुझाई गई रिप्लिनिशमेंट मात्रा से अधिक रिप्लिनिश की "
+"गई मात्रा वाले प्रोडक्ट के अनुसार फ़िल्टर करें (यानी, कम से कम एक :guilabel:`+ "
+"रिप्लिनिशमेंट` सेल लाल रंग में हाइलाइट हो)।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:348
 msgid ""
 ":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
 "Trigger* set to *Manual*."
 msgstr ""
+":guilabel:`मैन्युअल रूप से रिप्लिनिश किया गया`: उन प्रोडक्ट के अनुसार फ़िल्टर करें जिनमें "
+"*रिप्लिनिशमेंट ट्रिगर* *मैनुअल* पर सेट है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:350
 msgid ""
 ":guilabel:`Automatically Replenished`: Filter by products with the "
 "*Replenishment Trigger* set to *Automatic*."
 msgstr ""
+":guilabel:`ऑटोमैटिकली रिप्लिनिश किया गया`: उन प्रोडक्ट के अनुसार फ़िल्टर करें जिनमें "
+"*रिप्लिनिशमेंट ट्रिगर* *ऑटोमैटिक* पर सेट है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:352
 msgid ""
 ":guilabel:`Not Replenished from MPS`: Filter by products with the "
 "*Replenishment Trigger* set to *Never*."
 msgstr ""
+":guilabel:`एमपीएस से रिप्लिनिश नहीं किया गया`: उन प्रोडक्ट के अनुसार फ़िल्टर करें जिनमें "
+"*रिप्लिनिशमेंट ट्रिगर* *कभी नहीं* पर सेट है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
@@ -52375,6 +52517,8 @@ msgid ""
 "(optional) adding vendors (the sellers in this workflow) as :doc:`portal "
 "users <../../../general/users/portal>`."
 msgstr ""
+"(वैकल्पिक) वेंडरों (इस वर्कफ़्लो में विक्रेता) को :doc:`पोर्टल यूज़र्स &lt;../../../general/"
+"users/portal&gt;` के रूप में जोड़ना।"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:48
 msgid "Seller database"
@@ -55695,7 +55839,7 @@ msgstr "`price`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:154
 msgid "Delivery Lead Time"
-msgstr ""
+msgstr "डिलीवरी लीड टाइम"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:155
 msgid ""

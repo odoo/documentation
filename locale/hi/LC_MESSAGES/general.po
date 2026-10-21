@@ -4,6 +4,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Martin Trigaux, 2024
@@ -14,8 +15,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-10 04:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-21 20:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
 "general/hi/>\n"
 "Language: hi\n"
@@ -2573,11 +2574,18 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"इनकमिंग ईमेल के लिए, अपना डोमेन जोड़ने के बाद, :ref:`ग्राहकों के जवाब आपके डोमेन पर वापस "
+"आएंगे <email-inbound-custom-domain>`, और आपको ईमेल वापस Odoo में पाने के लिए तीन "
+"संभावित तरीकों में से किसी एक का इस्तेमाल करना होगा (या तो :ref:`इनकमिंग मेल सर्वर "
+"<email-inbound-custom-domain-incoming-server>`, :ref:`रीडायरेक्शन/फ़ॉरवर्डिंग "
+"<email-inbound-custom-domain-redirections>` या :ref:`सबडोमेन का इस्तेमाल करना "
+"<email-inbound-custom-domain-dns>`)।"
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`इनबाउंड मैसेज मैनेज करें <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3530,6 +3538,11 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"ईमेल भेजते समय, Odoo ईमेल सर्वर हेडर में एक अद्वितीय :abbr:`DKIM (DomainKeys "
+"Identified Mail)` हस्ताक्षर शामिल करता है। पाने वाले का सर्वर डेटाबेस के डोमेन नाम में "
+"मौजूद DKIM रिकॉर्ड का उपयोग करके इस हस्ताक्षर को डिक्रिप्ट करता है। अगर हस्ताक्षर और "
+"रिकॉर्ड में मौजूद कुंजी मेल खाते हैं, तो यह साबित होता है कि मैसेज प्रामाणिक है और ट्रांसपोर्ट "
+"के दौरान इसमें कोई बदलाव नहीं किया गया है।"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3544,6 +3557,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"DKIM चालू करने के लिए, डोमेन नाम के :abbr:`CNAME (Canonical Name)` रिकॉर्ड को "
+":abbr:`DNS (Domain Name System)` ज़ोन में जोड़ें:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3551,6 +3566,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"अगर डोमेन नाम `company-name.com` है, तो सुनिश्चित करें कि आप एक सबडोमेन "
+"`odoo._domainkey.company-name.com` बनाएं जिसका कैनोनिकल नाम "
+"`odoo._domainkey.odoo.com.` हो।"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3569,6 +3587,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"जांचें कि क्या DKIM रिकॉर्ड `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/"
+"dkim.aspx>`_ जैसे टूल का उपयोग करके मान्य है। DKIM लुकअप टूल में `example.com:odoo` "
+"दर्ज करें, यह निर्दिष्ट करते हुए कि कस्टम डोमेन `example.com` के लिए टेस्ट किया जा रहा "
+"सिलेक्टर `odoo` है।"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3684,6 +3706,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`GoDaddy CNAME रिकॉर्ड <https://www.godaddy.com/help/add-a-cname-record-19236>"
+"`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4033,6 +4057,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"सबडोमेन के लिए DNS रिकॉर्ड कॉन्फ़िगर करने के बारे में ज़्यादा जानकारी के लिए, :ref:`DNS "
+"रिकॉर्ड सेटअप <dns_record_setup>` देखें।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4137,7 +4163,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`DNS रिकॉर्ड <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4154,6 +4180,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"**ऑन-प्रेमिस डेटाबेस** के लिए, रीडायरेक्शन और DNS रिकॉर्ड के तरीकों में :doc:`मेल गेटवे "
+"स्क्रिप्ट &lt;../../../../administration/on_premise/email_gateway&gt;` को "
+"कॉन्फ़िगर करना भी आवश्यक है। इस स्क्रिप्ट को समझने के लिए **एडवांस टेक्निकल और "
+"इंफ़्रास्ट्रक्चर नॉलेज** की आवश्यकता होती है।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4370,7 +4400,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid "DNS records"
-msgstr ""
+msgstr "DNS रिकॉर्ड"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:296
 msgid ""
@@ -4379,6 +4409,9 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"तीसरा विकल्प एक डेडिकेटेड सबडोमेन (उदाहरण के लिए, `mail.mydomain.com`) का इस्तेमाल "
+"करना और इसके DNS रिकॉर्ड कॉन्फ़िगर करना है ताकि उस सबडोमेन के पतों पर भेजे गए ईमेल Odoo "
+"द्वारा हैंडल किए जाएं और सीधे आपके डेटाबेस में प्रोसेस किए जाएं।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:300
 msgid ""
@@ -4386,6 +4419,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Odoo ऑनलाइन और Odoo.sh के लिए, CNAME-आधारित रूटिंग सिर्फ़ तब समर्थित होती है जब एक "
+"डेडिकेटेड सबडोमेन का इस्तेमाल किया जा रहा हो। इसे आपके रूट डोमेन (जैसे `mydomain.com`) "
+"पर कॉन्फ़िगर नहीं किया जा सकता है।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
@@ -4393,12 +4429,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"ध्यान दें कि यह सबडोमेन ईमेल ट्रैफ़िक के लिए डेडिकेटेड होगा। अगर इसे किसी वेब ब्राउज़र में "
+"एक्सेस किया जाता है, तो उपयोगकर्ताओं को डेटाबेस पर कॉन्फ़िगर की गई पहली वेबसाइट पर "
+"रीडायरेक्ट कर दिया जाएगा (यदि लागू हो)।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"चूंकि इनबाउंड मेल के लिए एक नया सबडोमेन कॉन्फ़िगर किया जा रहा है, इसलिए इसके "
+":doc:`आउटबाउंड मेल के लिए DNS रिकॉर्ड भी सेट अप होने चाहिए <email_domain>`।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4408,7 +4449,7 @@ msgstr "Odoo ऑनलाइन"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "अपनी DNS सेटिंग एक्सेस करें"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4416,6 +4457,9 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"अगर आपका डोमेन किसी थर्ड-पार्टी रजिस्ट्रार (उदाहरण के लिए, GoDaddy, Namecheap, "
+"Cloudflare) के साथ होस्ट किया गया है, तो रजिस्ट्रार में लॉग इन करें और अपने डोमेन के लिए "
+"DNS मैनेजमेंट ज़ोन खोलें।"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid "If Odoo manages your DNS:"
@@ -7707,11 +7751,11 @@ msgstr ":guilabel:`Allowed methods`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`अनुमत हेडर`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`एक्सपोज़्ड हेडर`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -10859,6 +10903,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"DYMO Series 5 प्रिंटर :doc:`IoT बॉक्स &lt;../iot_box&gt;` के साथ संगत नहीं हैं और "
+"इन्हें :doc:`Windows वर्चुअल IoT &lt;../windows_iot&gt;` के साथ पेयर करने की आवश्यकता "
+"होती है।"
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "DYMO LabelWriter not printing"

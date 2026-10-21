@@ -7,6 +7,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Yaroslav Husyar, 2024
@@ -16,8 +17,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-10 04:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-21 20:34+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18-doc/"
 "general/uk/>\n"
 "Language: uk\n"
@@ -2705,11 +2706,20 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Що стосується вхідних електронних листів, після додавання власного домену "
+":ref:`відповіді від клієнтів надходитимуть на ваш домен <email-inbound-"
+"custom-domain>`, і вам потрібно буде скористатися одним із трьох можливих "
+"способів повернення листів до Odoo (використовуючи :ref:`сервер вхідної "
+"пошти <email-inbound-custom-domain-incoming-server>`, :ref:`перенаправлення "
+"<email-inbound-custom-domain-redirections>` або :ref:`використання піддомену "
+"<email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Керування вхідними повідомленнями <email_communication/"
+"email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3716,6 +3726,12 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"Під час надсилання електронного листа поштовий сервер Odoo додає унікальний "
+"підпис :abbr:`DKIM (DomainKeys Identified Mail)` у заголовки. Сервер "
+"одержувача розшифровує цей підпис за допомогою запису DKIM для доменного "
+"імені бази даних. Якщо підпис і ключ, що містяться в записі, збігаються, це "
+"підтверджує справжність повідомлення та свідчить про те, що воно не було "
+"змінено під час пересилання."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3730,6 +3746,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Щоб увімкнути DKIM, додайте запис :abbr:`CNAME (Canonical Name)` до зони "
+":abbr:`DNS (Domain Name System)` доменного імені:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3737,6 +3755,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Якщо доменним ім'ям є `company-name.com`, обов'язково створіть піддомен "
+"`odoo._domainkey.company-name.com`, канонічним ім'ям якого є "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3755,6 +3776,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Перевірте дійсність запису DKIM за допомогою такого інструмента, як "
+"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Введіть "
+"`example.com:odoo` в інструмент пошуку DKIM, вказавши, що селектором для "
+"перевірки є `odoo` для власного домену `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3874,6 +3899,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`Запис CNAME у GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4243,6 +4270,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Докладнішу інформацію щодо налаштування записів DNS для піддоменів див. у "
+"розділі :ref:`Налаштування записів DNS <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4356,7 +4385,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Записи DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4375,6 +4404,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Для **локальних баз даних** методи перенаправлення та записів DNS також "
+"вимагають налаштування :doc:`скрипту поштового шлюзу &lt;../../../../"
+"administration/on_premise/email_gateway&gt;`. Робота з цим скриптом вимагає "
+"**глибоких технічних знань та розуміння інфраструктури**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4600,7 +4633,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid "DNS records"
-msgstr ""
+msgstr "Записи DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:296
 msgid ""
@@ -4609,6 +4642,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Третій варіант — використовувати виділений піддомен (наприклад, "
+"`mail.mydomain.com`) і налаштувати його записи DNS таким чином, щоб "
+"електронні листи, надіслані на адреси цього піддомену, оброблялися Odoo та "
+"надходили безпосередньо у вашу базу даних."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:300
 msgid ""
@@ -4616,6 +4653,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Для Odoo Online та Odoo.sh маршрутизація на основі CNAME підтримується лише "
+"у разі використання виділеного піддомену. Її не можна налаштувати для "
+"кореневого домену (наприклад, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
@@ -4623,12 +4663,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Зверніть увагу, що цей піддомен буде виділений для поштового трафіку. Якщо "
+"відкрити його у веббраузері, користувачів буде перенаправлено на перший "
+"вебсайт, налаштований у базі даних (якщо такий є)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Оскільки для вхідної пошти налаштовується новий піддомен, його :doc:`записи "
+"DNS також мають бути налаштовані для вихідної пошти <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4638,7 +4683,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Перейдіть до налаштувань DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4646,6 +4691,9 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Якщо ваш домен розміщено у стороннього реєстратора (наприклад, GoDaddy, "
+"Namecheap, Cloudflare), увійдіть в обліковий запис реєстратора та відкрийте "
+"зону керування DNS для вашого домену."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid "If Odoo manages your DNS:"
@@ -8093,11 +8141,11 @@ msgstr ":guilabel:`Allowed methods`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Дозволені заголовки`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Відкриті заголовки`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -11349,6 +11397,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Принтери DYMO Series 5 несумісні з :doc:`IoT box &lt;../iot_box&gt;` та "
+"потребують підключення до :doc:`віртуального Windows IoT &lt;../"
+"windows_iot&gt;`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "DYMO LabelWriter not printing"

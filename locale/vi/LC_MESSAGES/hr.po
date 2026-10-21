@@ -10,6 +10,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Tiffany Chang, 2024
@@ -19,8 +20,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-21 20:34+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-18-doc/"
 "hr/vi/>\n"
 "Language: vi\n"
@@ -2675,6 +2676,13 @@ msgid ""
 "records, both on the **Attendances** application dashboard as well as in the "
 "attendance reports, and make modifications to their records."
 msgstr ""
+"Để xem ai là người phê duyệt điểm danh của một nhân viên, hãy chuyển đến "
+":menuselection:`ứng dụng Nhân viên` và nhấp vào nhân viên cụ thể. Nhấp vào "
+"tab :guilabel:`Thông tin làm việc`, cuộn đến phần :guilabel:`NGƯỜI PHÊ "
+"DUYỆT` và kiểm tra trường :guilabel:`Điểm danh`. Người được chọn có thể xem "
+"các bản ghi điểm danh của nhân viên đó trên cả bảng điều khiển của ứng dụng "
+"**Điểm danh** cũng như trong các báo cáo điểm danh, đồng thời thực hiện các "
+"chỉnh sửa đối với hồ sơ của họ."
 
 #: ../../content/applications/hr/attendances.rst:68
 #: ../../content/applications/hr/attendances/kiosks.rst:22
@@ -2710,6 +2718,10 @@ msgid ""
 "building-o` :guilabel:`(building)` icon apply to all companies within the "
 "database."
 msgstr ""
+"Bất kỳ mục cấu hình nào có biểu tượng :icon:`fa-building-o` :guilabel:`(tòa "
+"nhà)` đều là cấu hình riêng cho từng công ty. Các mục không có biểu tượng "
+":icon:`fa-building-o` :guilabel:`(tòa nhà)` sẽ áp dụng cho tất cả các công "
+"ty trong cơ sở dữ liệu."
 
 #: ../../content/applications/hr/attendances.rst:83
 msgid "Modes"
@@ -2732,6 +2744,9 @@ msgid ""
 "to automatically check out employees according to their working schedule, "
 "after a buffer of time has passed."
 msgstr ""
+":guilabel:`Tự động điểm danh ra` :icon:`fa-building-o`: Kích hoạt tính năng "
+"này để tự động điểm danh ra cho nhân viên theo lịch làm việc của họ sau khi "
+"hết khoảng thời gian đệm."
 
 #: ../../content/applications/hr/attendances.rst:90
 msgid ""
@@ -2740,6 +2755,10 @@ msgid ""
 "time, in hours, that must elapse after an employee's working hours have "
 "ended, before they are automatically checked out."
 msgstr ""
+":guilabel:`Dung sai`: Trường này chỉ xuất hiện khi tính năng :guilabel:`Tự "
+"động điểm danh ra` :icon:`fa-building-o` được bật. Nhập khoảng thời gian "
+"(tính bằng giờ) phải trôi qua sau khi giờ làm việc của nhân viên kết thúc "
+"trước khi họ được tự động điểm danh ra."
 
 #: ../../content/applications/hr/attendances.rst:95
 msgid ""
@@ -2760,6 +2779,10 @@ msgid ""
 "vacation time or sick time, on the :doc:`attendance report <attendances/"
 "attendance_reporting>`."
 msgstr ""
+":guilabel:`Quản lý vắng mặt` :icon:`fa-building-o`: Kích hoạt tính năng này "
+"để ghi nhận mọi trường hợp vắng mặt không gắn liền với yêu cầu nghỉ phép, "
+"chẳng hạn như thời gian nghỉ phép hoặc nghỉ ốm, trên :doc:`báo cáo điểm danh "
+"<attendances/attendance_reporting>`."
 
 #: ../../content/applications/hr/attendances.rst:104
 msgid "Extra Hours"
@@ -2906,6 +2929,12 @@ msgid ""
 "specific employees, those employees' check-in and check-out information also "
 "appears on the :guilabel:`Overview` dashboard."
 msgstr ""
+"Khi truy cập ứng dụng **Điểm danh**, bảng điều khiển :guilabel:`Tổng quan` "
+"sẽ hiển thị, chứa tất cả thông tin điểm danh vào và ra của người dùng. Nếu "
+"người dùng có các :ref:`quyền truy cập <attendances/access-rights>` cần "
+"thiết hoặc là :ref:`người phê duyệt <attendances/approvers>` của các nhân "
+"viên cụ thể, thông tin điểm danh vào và ra của những nhân viên đó cũng sẽ "
+"xuất hiện trên bảng điều khiển :guilabel:`Tổng quan`."
 
 #: ../../content/applications/hr/attendances.rst:161
 msgid ""
@@ -3152,18 +3181,24 @@ msgid ""
 "the day, across multiple check-ins and outs, in an hour and minute format "
 "(HH:MM)."
 msgstr ""
+":guilabel:`Thời gian làm việc`: Tổng thời gian nhân viên đã ghi nhận trong "
+"ngày qua nhiều lần điểm danh vào và ra, theo định dạng giờ và phút (HH:MM)."
 
 #: ../../content/applications/hr/attendances.rst:255
 msgid ""
 ":guilabel:`Worked Extra Hours`: Unpaid overtime hours worked beyond the "
 "expected working schedule (shows **only** when present for the employee)."
 msgstr ""
+":guilabel:`Số giờ làm thêm đã làm`: Số giờ làm thêm không được trả lương "
+"ngoài lịch làm việc dự kiến (chỉ hiển thị khi nhân viên có số giờ này)."
 
 #: ../../content/applications/hr/attendances.rst:257
 msgid ""
 ":guilabel:`Extra Hours`: Approved overtime (the :guilabel:`Worked Time` "
 "minus the approved :guilabel:`Worked Extra Hours`."
 msgstr ""
+":guilabel:`Giờ làm thêm`: Giờ làm thêm đã được phê duyệt (:guilabel:`Thời "
+"gian làm việc` trừ đi :guilabel:`Số giờ làm thêm đã làm` đã được phê duyệt)."
 
 #: ../../content/applications/hr/attendances.rst:261
 msgid "Check in/check out details"
@@ -3183,6 +3218,9 @@ msgid ""
 "<attendances/check-in>`, :ref:`Kiosk <attendances/kiosk-mode-entry>`, "
 "or :guilabel:`Manual` entry."
 msgstr ""
+":guilabel:`Chế độ`: Phương thức gửi điểm danh. Có thể là mục nhập "
+":ref:`Systray <attendances/check-in>`, :ref:`Kiosk <attendances/kiosk-mode-"
+"entry>` hoặc :guilabel:`Thủ công`."
 
 #: ../../content/applications/hr/attendances.rst:268
 msgid ":guilabel:`IP Address`: The device's IP address used to log in or out."
@@ -4811,7 +4849,7 @@ msgstr "Chứng nhận"
 
 #: ../../content/applications/hr/employees.rst:30
 msgid "Certify employees as subject matter experts with certifications."
-msgstr ""
+msgstr "Chứng nhận nhân viên là chuyên gia chuyên môn thông qua các chứng chỉ."
 
 #: ../../content/applications/hr/employees.rst:35
 msgid "Grant badges to employees for performance and achievements."
@@ -4842,7 +4880,7 @@ msgstr "Báo cáo giữ chân nhân viên"
 
 #: ../../content/applications/hr/employees.rst:50
 msgid "Gain insight to the retention rate for a company."
-msgstr ""
+msgstr "Nắm bắt thông tin chi tiết về tỷ lệ giữ chân nhân viên của một công ty."
 
 #: ../../content/applications/hr/employees.rst:58
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
@@ -4979,6 +5017,10 @@ msgid ""
 "week`, :guilabel:`Appointment Resource Default Calendar`, "
 "and :guilabel:`Standard 32 hours/week (4 work days, Friday free)`."
 msgstr ""
+"Sử dụng menu thả xuống, chọn :guilabel:`Giờ làm việc của công ty` mặc định. "
+"Các tùy chọn mặc định gồm :guilabel:`Tiêu chuẩn 40 giờ/tuần`, "
+":guilabel:`Lịch mặc định nguồn lực cuộc hẹn` và :guilabel:`Tiêu chuẩn 32 giờ/"
+"tuần (4 ngày làm việc, thứ Sáu nghỉ)`."
 
 #: ../../content/applications/hr/employees.rst:110
 msgid ""
@@ -5363,6 +5405,9 @@ msgid ""
 "Click :guilabel:`New`, and a blank certification form loads. Enter the "
 "following information on the form:"
 msgstr ""
+"Để ghi nhận chứng chỉ cho nhân viên, hãy điều hướng đến :menuselection:`Ứng "
+"dụng Nhân viên --&gt; Học tập --&gt; Chứng chỉ`. Nhấp vào :guilabel:`Mới`, "
+"một biểu mẫu chứng chỉ trống sẽ hiển thị. Nhập thông tin sau vào biểu mẫu:"
 
 #: ../../content/applications/hr/employees/certifications.rst:75
 msgid ""
@@ -5832,6 +5877,9 @@ msgid ""
 "Requests`, to reveal a list view of the requests to approve for that "
 "department"
 msgstr ""
+"Nhấp vào cảnh báo trong thẻ phòng ban, chẳng hạn như :guilabel:`Yêu cầu nghỉ "
+"phép`, để hiển thị chế độ xem danh sách các yêu cầu cần phê duyệt cho phòng "
+"ban đó"
 
 #: ../../content/applications/hr/employees/departments.rst:99
 msgid "List view"
@@ -6167,7 +6215,7 @@ msgstr ""
 
 #: ../../content/applications/hr/employees/new_employee.rst:None
 msgid "Create a new employee form with all fields filled out."
-msgstr ""
+msgstr "Tạo biểu mẫu nhân viên mới với tất cả các trường đã được điền đầy đủ."
 
 #: ../../content/applications/hr/employees/new_employee.rst:22
 msgid ""
@@ -6176,6 +6224,10 @@ msgid ""
 "**Appraisals** application is installed, the :guilabel:`Next Appraisal Date` "
 "field is populated with a date six months from the current date."
 msgstr ""
+"Số điện thoại và tên hiện tại của công ty được điền vào các trường "
+":guilabel:`Điện thoại nơi làm việc` và :guilabel:`Công ty`. Nếu ứng dụng "
+"**Đánh giá** được cài đặt, trường :guilabel:`Ngày đánh giá tiếp theo` sẽ "
+"được điền ngày cách ngày hiện tại sáu tháng."
 
 #: ../../content/applications/hr/employees/new_employee.rst:29
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:18
@@ -6184,7 +6236,7 @@ msgstr "Thông tin chung"
 
 #: ../../content/applications/hr/employees/new_employee.rst:31
 msgid "Fill out the following employee details."
-msgstr ""
+msgstr "Điền các thông tin chi tiết sau của nhân viên."
 
 #: ../../content/applications/hr/employees/new_employee.rst:34
 msgid ""
@@ -6200,7 +6252,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Employee's Name`: enter the employee's name. This field is "
 "required."
-msgstr ""
+msgstr ":guilabel:`Tên nhân viên`: nhập tên nhân viên. Đây là trường bắt buộc."
 
 #: ../../content/applications/hr/employees/new_employee.rst:38
 msgid ""
@@ -6210,6 +6262,11 @@ msgid ""
 "the :guilabel:`Department` field to auto-populate the top field. The two "
 "fields do not need to match."
 msgstr ""
+":guilabel:`Vị trí công việc`: trường này xuất hiện bên dưới tên nhân viên và "
+"có thể được điền thủ công. Ngoài ra, hãy chọn một vị trí từ menu thả xuống "
+"trong trường :guilabel:`Vị trí công việc` bên dưới trường :guilabel:`Phòng "
+"ban` để tự động điền vào trường phía trên. Hai trường này không nhất thiết "
+"phải trùng khớp."
 
 #: ../../content/applications/hr/employees/new_employee.rst:44
 msgid ""
@@ -6217,6 +6274,9 @@ msgid ""
 "description in this top field can contain more specific information than the "
 "selected drop-down :guilabel:`Job Position`, if desired."
 msgstr ""
+"Mặc dù nên để các vị trí công việc trùng khớp nhau, nhưng phần mô tả được "
+"nhập trong trường phía trên này có thể chứa thông tin cụ thể hơn so với "
+":guilabel:`Vị trí công việc` được chọn từ menu thả xuống, nếu muốn."
 
 #: ../../content/applications/hr/employees/new_employee.rst:48
 msgid ""
@@ -6224,6 +6284,10 @@ msgid ""
 "configured as :guilabel:`Sales Representative` in the **Recruitment** app, "
 "that can be selected in the drop-down :guilabel:`Job Position` field."
 msgstr ""
+"Ví dụ: nếu một nhân viên được tuyển dụng cho vị trí đại diện bán hàng được "
+"định cấu hình là :guilabel:`Đại diện bán hàng` trong ứng dụng **Tuyển "
+"dụng**, vị trí đó có thể được chọn trong trường thả xuống :guilabel:`Vị trí "
+"công việc`."
 
 #: ../../content/applications/hr/employees/new_employee.rst:52
 msgid ""
@@ -6232,6 +6296,10 @@ msgid ""
 "`Sales Representative - Subscriptions` if the employee is focused solely on "
 "subscription sales."
 msgstr ""
+"Trong trường :guilabel:`Vị trí công việc` được nhập văn bản bên dưới "
+":guilabel:`Tên nhân viên`, vị trí có thể cụ thể hơn, chẳng hạn như `Sales "
+"Representative - Subscriptions` nếu nhân viên đó chỉ tập trung vào bán gói "
+"thuê bao."
 
 #: ../../content/applications/hr/employees/new_employee.rst:0
 msgid "Both job position fields entered but with different information."
@@ -6243,6 +6311,9 @@ msgid ""
 ":guilabel:`Photo`: in the top-right image box of the employee form, click on "
 "the :icon:`fa-pencil` :guilabel:`(Edit)` icon, then select a photo to upload."
 msgstr ""
+":guilabel:`Ảnh`: trong hộp ảnh ở trên cùng bên phải của biểu mẫu nhân viên, "
+"hãy nhấp vào biểu tượng :icon:`fa-pencil` :guilabel:`(Chỉnh sửa)`, sau đó "
+"chọn một ảnh để tải lên."
 
 #: ../../content/applications/hr/employees/new_employee.rst:61
 msgid ""
@@ -6250,6 +6321,9 @@ msgid ""
 "Email`, :guilabel:`Work Phone`, and :guilabel:`Work Mobile`,  information, "
 "if not already auto-populated."
 msgstr ""
+"*Thông tin liên hệ công việc*: nhập thông tin :guilabel:`Email nơi làm "
+"việc`, :guilabel:`Điện thoại nơi làm việc`, và :guilabel:`Di động nơi làm "
+"việc` của nhân viên, nếu chưa được tự động điền."
 
 #: ../../content/applications/hr/employees/new_employee.rst:63
 msgid ""
@@ -6258,6 +6332,10 @@ msgid ""
 "created, the new tag is available for all employee records. There is no "
 "limit to the amount of tags that can be added on an employee form."
 msgstr ""
+":guilabel:`Thẻ`: chọn một thẻ từ menu thả xuống để thêm các thẻ liên quan "
+"cho nhân viên. Bạn có thể tạo bất kỳ thẻ nào trong trường này bằng cách nhập "
+"tên thẻ. Sau khi tạo, thẻ mới sẽ khả dụng cho tất cả hồ sơ nhân viên. Không "
+"có giới hạn về số lượng thẻ có thể thêm vào biểu mẫu nhân viên."
 
 #: ../../content/applications/hr/employees/new_employee.rst:66
 msgid ""
@@ -6266,12 +6344,16 @@ msgid ""
 "name in the field, and clicking :guilabel:`Create` or :guilabel:`Create and "
 "edit...` from the mini drop-down menu that appears. This field is required."
 msgstr ""
+":guilabel:`Công ty`: từ menu thả xuống trong trường này, hãy chọn công ty đã "
+"tuyển dụng nhân viên mới, hoặc tạo một công ty mới bằng cách nhập tên vào "
+"trường này và nhấp vào :guilabel:`Tạo` hoặc :guilabel:`Tạo và chỉnh sửa...` "
+"từ menu thả xuống thu nhỏ xuất hiện. Đây là trường bắt buộc."
 
 #: ../../content/applications/hr/employees/new_employee.rst:70
 msgid ""
 ":guilabel:`Department`: select the employee's department from the drop-down "
 "menu."
-msgstr ""
+msgstr ":guilabel:`Phòng ban`: chọn phòng ban của nhân viên từ menu thả xuống."
 
 #: ../../content/applications/hr/employees/new_employee.rst:71
 msgid ""
@@ -6281,15 +6363,25 @@ msgid ""
 "beneath the :guilabel:`Employee's Name` field automatically updates to "
 "reflect the currently selected job position, but is still editable."
 msgstr ""
+":guilabel:`Vị trí công việc`: chọn vị trí công việc của nhân viên từ menu "
+"thả xuống. Nếu sử dụng ứng dụng **Tuyển dụng**, danh sách này sẽ phản ánh "
+"các vị trí công việc đã được định cấu hình. Sau khi chọn, trường "
+":guilabel:`Vị trí công việc` bên dưới trường :guilabel:`Tên nhân viên` sẽ tự "
+"động cập nhật để phản ánh vị trí công việc hiện được chọn, nhưng vẫn có thể "
+"chỉnh sửa."
 
 #: ../../content/applications/hr/employees/new_employee.rst:75
 msgid ""
 ":guilabel:`Manager`: select the employee's manager from the drop-down menu."
 msgstr ""
+":guilabel:`Người quản lý`: chọn người quản lý của nhân viên từ menu thả "
+"xuống."
 
 #: ../../content/applications/hr/employees/new_employee.rst:76
 msgid ":guilabel:`Coach`: select the employee's coach from the drop-down menu."
 msgstr ""
+":guilabel:`Huấn luyện viên`: chọn huấn luyện viên của nhân viên từ menu thả "
+"xuống."
 
 #: ../../content/applications/hr/employees/new_employee.rst:77
 msgid ""
@@ -6299,6 +6391,10 @@ msgid ""
 "**Appraisals** application. This date can be modified using the calendar "
 "selector."
 msgstr ""
+":guilabel:`Ngày đánh giá tiếp theo`: trường này **chỉ** hiển thị nếu ứng "
+"dụng **Đánh giá** được cài đặt. Ngày sẽ được tự động điền theo ngày được "
+"tính toán dựa trên các cài đặt được định cấu hình trong ứng dụng **Đánh "
+"giá**. Ngày này có thể được sửa đổi bằng bộ chọn lịch."
 
 #: ../../content/applications/hr/employees/new_employee.rst:83
 msgid ""
@@ -6306,6 +6402,9 @@ msgid ""
 "manager and coach automatically populates the respective :guilabel:`Manager` "
 "and :guilabel:`Coach` fields."
 msgstr ""
+"Sau khi chọn :guilabel:`Phòng ban`, người quản lý và huấn luyện viên được "
+"định cấu hình của phòng ban sẽ tự động điền vào các trường :guilabel:`Người "
+"quản lý` và :guilabel:`Huấn luyện viên` tương ứng."
 
 #: ../../content/applications/hr/employees/new_employee.rst:87
 msgid ""
@@ -6317,6 +6416,12 @@ msgid ""
 "selected form, allowing for modifications. Click :guilabel:`Save` after any "
 "edits are made."
 msgstr ""
+"Để chỉnh sửa :guilabel:`Phòng ban`, :guilabel:`Người quản lý`, "
+":guilabel:`Huấn luyện viên`, hoặc :guilabel:`Công ty` đã chọn, hãy nhấp vào "
+"mũi tên :icon:`oi-arrow-right` :guilabel:`(Liên kết nội bộ)` bên cạnh lựa "
+"chọn tương ứng. Mũi tên :icon:`oi-arrow-right` :guilabel:`(Liên kết nội bộ)` "
+"sẽ mở biểu mẫu đã chọn, cho phép thực hiện các sửa đổi. Nhấp vào "
+":guilabel:`Lưu` sau khi hoàn tất chỉnh sửa."
 
 #: ../../content/applications/hr/employees/new_employee.rst:95
 msgid "Resumé tab"
@@ -14821,6 +14926,14 @@ msgid ""
 "**Attendances**, **Planning**, or **Timesheets** apps. Any errors with work "
 "entries **must** be resolved *before* continuing to process payroll."
 msgstr ""
+"Khi đến kỳ tính bảng lương theo lịch trình của doanh nghiệp (hàng tháng, "
+"hàng tuần, hai tuần một lần,...), bạn có thể tạo :doc:`phiếu lương <payroll/"
+"payslips>` riêng lẻ hoặc theo :doc:`nhóm <payroll/batches>`. Odoo tính toán "
+"thời gian làm việc của nhân viên dựa trên :doc:`chi tiết công <payroll/"
+"work_entries>` của họ. Chi tiết công được tạo theo :doc:`hợp đồng <payroll/"
+"contracts>` của họ, dựa trên thông tin từ các ứng dụng **Điểm danh**, **Kế "
+"hoạch** hoặc **Bảng chấm công**. Mọi lỗi liên quan đến chi tiết công "
+"**phải** được giải quyết *trước khi* tiếp tục xử lý bảng lương."
 
 #: ../../content/applications/hr/payroll.rst:30
 msgid ""
@@ -15107,7 +15220,7 @@ msgstr ":doc:`payroll/payslips`"
 
 #: ../../content/applications/hr/payroll.rst:148
 msgid ":doc:`payroll/batches`"
-msgstr ""
+msgstr ":doc:`payroll/batches`"
 
 #: ../../content/applications/hr/payroll.rst:149
 msgid ":doc:`payroll/commissions`"
@@ -15136,6 +15249,10 @@ msgid ""
 "This method not only helps the payroll department pay employees in less "
 "time, but it also helps keep payslips organized."
 msgstr ""
+"Các đợt được sử dụng để tạo nhiều :doc:`phiếu lương <payslips>` cùng một lúc "
+"và xử lý chúng theo nhóm, thay vì tạo và xử lý từng phiếu lương riêng lẻ. "
+"Phương pháp này không chỉ giúp phòng ban bảng lương trả lương cho nhân viên "
+"nhanh hơn, mà còn giúp quản lý phiếu lương một cách ngăn nắp."
 
 #: ../../content/applications/hr/payroll/batches.rst:9
 msgid ""
@@ -15144,16 +15261,22 @@ msgid ""
 "bi-weekly, or monthly). If desired, batches can be further organized by "
 "department, job position, or salary structure type."
 msgstr ""
+"Thông thường, phòng ban bảng lương của một công ty :ref:`tạo một đợt mới "
+"<payroll/new-batch>` cho từng cơ cấu lương, cho mỗi kỳ trả lương (thường là "
+"hàng tuần, hai tuần một lần hoặc hàng tháng). Nếu muốn, các đợt có thể được "
+"sắp xếp theo phòng ban, vị trí công việc hoặc loại cơ cấu lương."
 
 #: ../../content/applications/hr/payroll/batches.rst:13
 msgid ""
 "Once a batch is made, :ref:`payslips are added to the batch <payroll/add-"
 "payslips>`, then the batch is processed, and employees are paid."
 msgstr ""
+"Sau khi một đợt được tạo, :ref:`phiếu lương được thêm vào đợt <payroll/add-"
+"payslips>`, sau đó đợt được xử lý và nhân viên được trả lương."
 
 #: ../../content/applications/hr/payroll/batches.rst:17
 msgid "View batches"
-msgstr ""
+msgstr "Xem các đợt"
 
 #: ../../content/applications/hr/payroll/batches.rst:19
 msgid ""
@@ -15161,6 +15284,10 @@ msgid ""
 "app --> Payslips --> Batches` to display all payslip batches that have been "
 "created. These payslip batches are displayed in a list view, by default."
 msgstr ""
+"Để xem tất cả các đợt trong cơ sở dữ liệu, hãy điều hướng tới "
+":menuselection:`Ứng dụng Bảng lương --&gt; Phiếu lương --&gt; Đợt` để hiển "
+"thị tất cả các đợt phiếu lương đã được tạo. Theo mặc định, các đợt phiếu "
+"lương này được hiển thị ở chế độ xem danh sách."
 
 #: ../../content/applications/hr/payroll/batches.rst:23
 msgid ""
@@ -15169,6 +15296,10 @@ msgid ""
 "its :guilabel:`Status`, the number of payslips in the batch "
 "(:guilabel:`Payslips Count`), and the :guilabel:`Company`."
 msgstr ""
+"Mỗi đợt hiển thị :guilabel:`Tên`, các ngày mà đợt bao gồm (các trường "
+":guilabel:`Từ ngày` và :guilabel:`Đến ngày`), :guilabel:`Trạng thái`, số "
+"lượng phiếu lương trong đợt (:guilabel:`Số lượng phiếu lương`) và "
+":guilabel:`Công ty`."
 
 #: ../../content/applications/hr/payroll/batches.rst:None
 msgid "View displaying all batches created."
@@ -15185,12 +15316,19 @@ msgid ""
 "Payslips --> Batches`. Click the :guilabel:`New` button in the top-left "
 "corner. Doing so reveals a blank payslip batch form on a separate page."
 msgstr ""
+"Các đợt phiếu lương mới phải được tạo từ bảng điều khiển :guilabel:`Đợt "
+"phiếu lương`, bằng cách điều hướng tới :menuselection:`Ứng dụng Bảng lương --"
+"&gt; Phiếu lương --&gt; Đợt`. Nhấp vào nút :guilabel:`Mới` ở góc trên bên "
+"trái. Thao tác này sẽ mở một biểu mẫu đợt phiếu lương trống trên một trang "
+"riêng biệt."
 
 #: ../../content/applications/hr/payroll/batches.rst:39
 msgid ""
 "On the new payslip batch form, enter the :guilabel:`Batch Name`. This should "
 "be something short and descriptive, to keep records organized."
 msgstr ""
+"Trên biểu mẫu đợt phiếu lương mới, hãy nhập :guilabel:`Tên đợt`. Tên này nên "
+"ngắn gọn và mang tính mô tả để lưu trữ hồ sơ một cách khoa học."
 
 #: ../../content/applications/hr/payroll/batches.rst:43
 msgid ""
@@ -15198,6 +15336,9 @@ msgid ""
 "batches for their two different :ref:`salary structures <payroll/structure-"
 "types>` they use: worker pay and regular pay."
 msgstr ""
+"Một công ty trả lương cho nhân viên hai tuần một lần và tạo các đợt riêng "
+"cho hai :ref:`cơ cấu lương <payroll/structure-types>` khác nhau mà họ sử "
+"dụng: lương công nhân và lương thông thường."
 
 #: ../../content/applications/hr/payroll/batches.rst:47
 msgid "The names for their four August 2025 batches are:"
@@ -15762,6 +15903,11 @@ msgid ""
 "and :guilabel:`Cancelled`. Each grouping displays the number of contracts "
 "within the grouping."
 msgstr ""
+"Bảng điều khiển :guilabel:`Hợp đồng` hiển thị tất cả hợp đồng nhân viên ở "
+"chế độ xem danh sách mặc định, được nhóm theo :guilabel:`Trạng thái`. Các "
+"nhóm trạng thái khả dụng là :guilabel:`Mới`, :guilabel:`Đang chạy`, "
+":guilabel:`Hết hạn` và :guilabel:`Đã hủy`. Mỗi nhóm hiển thị số lượng hợp "
+"đồng trong nhóm đó."
 
 #: ../../content/applications/hr/payroll/contracts.rst:None
 msgid ""
@@ -15776,6 +15922,9 @@ msgid ""
 "**Payroll** app, and vice versa. Contract information remains identical, "
 "regardless of where the contract information is accessed."
 msgstr ""
+"Mọi thay đổi đối với hợp đồng trong ứng dụng **Nhân viên** đều được phản ánh "
+"trong ứng dụng **Bảng lương**, và ngược lại. Thông tin hợp đồng luôn giống "
+"nhau, bất kể bạn truy cập thông tin hợp đồng từ đâu."
 
 #: ../../content/applications/hr/payroll/contracts.rst:42
 msgid "Create a contract"
@@ -15787,6 +15936,9 @@ msgid ""
 "the :ref:`Contracts dashboard <payroll/contract-dashboard>`, and a blank "
 "contract form appears."
 msgstr ""
+"Để tạo hợp đồng mới, hãy nhấp vào nút :guilabel:`Mới` trên :ref:`Bảng điều "
+"khiển Hợp đồng <payroll/contract-dashboard>`, và một biểu mẫu hợp đồng trống "
+"sẽ xuất hiện."
 
 #: ../../content/applications/hr/payroll/contracts.rst:50
 #: ../../content/applications/hr/payroll/work_entries.rst:252
@@ -15796,19 +15948,23 @@ msgstr "Phần Thông tin chung"
 #: ../../content/applications/hr/payroll/contracts.rst:52
 msgid ""
 "Enter the following information in the top-half of the blank contract form:"
-msgstr ""
+msgstr "Nhập các thông tin sau vào nửa trên của biểu mẫu hợp đồng trống:"
 
 #: ../../content/applications/hr/payroll/contracts.rst:54
 msgid ""
 ":guilabel:`Contact Reference`: Type in the name or title for the contract, "
 "such as `John Smith Contract`. This field is **required**."
 msgstr ""
+":guilabel:`Tham chiếu liên hệ`: Nhập tên hoặc tiêu đề cho hợp đồng, chẳng "
+"hạn như `John Smith Contract`. Trường này là **bắt buộc**."
 
 #: ../../content/applications/hr/payroll/contracts.rst:56
 msgid ""
 ":guilabel:`Employee`: Using the drop-down menu, select the employee the "
 "contract is for."
 msgstr ""
+":guilabel:`Nhân viên`: Sử dụng menu thả xuống, chọn nhân viên ký kết hợp "
+"đồng này."
 
 #: ../../content/applications/hr/payroll/contracts.rst:57
 msgid ""
@@ -15817,6 +15973,10 @@ msgid ""
 "future date. The current date populates this required field by default, but "
 "can be modified."
 msgstr ""
+":guilabel:`Ngày bắt đầu hợp đồng`: Chọn ngày hợp đồng có hiệu lực. Hợp đồng "
+"có thể được tạo hồi tố hoặc được tạo để bắt đầu vào một ngày trong tương "
+"lai. Ngày hiện tại được điền vào trường bắt buộc này theo mặc định nhưng có "
+"thể chỉnh sửa."
 
 #: ../../content/applications/hr/payroll/contracts.rst:60
 msgid ""
@@ -15825,6 +15985,10 @@ msgid ""
 "indefinitely, or until a new contract is made (when the employee has a "
 "change to their job title, salary, or benefits)."
 msgstr ""
+":guilabel:`Ngày kết thúc hợp đồng`: Nếu hợp đồng có ngày kết thúc cố định, "
+"hãy nhập ngày vào trường này. Để trống trường này nếu hợp đồng kéo dài vô "
+"thời hạn, hoặc cho đến khi một hợp đồng mới được lập (khi nhân viên có sự "
+"thay đổi về chức danh công việc, mức lương hoặc phúc lợi)."
 
 #: ../../content/applications/hr/payroll/contracts.rst:63
 msgid ""
@@ -15835,6 +15999,11 @@ msgid ""
 "field is left blank, this allows the employee to work as many or as few "
 "hours as desired every week, with no restrictions."
 msgstr ""
+":guilabel:`Lịch làm việc`: Chọn một trong các lịch làm việc khả dụng mà nhân "
+"viên dự kiến sẽ làm theo từ menu thả xuống. Lịch làm việc được chọn xác định "
+"cách tạo :doc:`mục chấm công <work_entries>`, qua đó xác định lịch trình và "
+"thù lao của nhân viên. Nếu để trống trường này, nhân viên có thể làm việc "
+"nhiều hay ít giờ tùy ý mỗi tuần mà không bị giới hạn."
 
 #: ../../content/applications/hr/payroll/contracts.rst:70
 msgid ""
@@ -15857,6 +16026,9 @@ msgid ""
 "**required**. Click the radio button next to the desired selection. The "
 "options are:"
 msgstr ""
+":guilabel:`Nguồn mục công`: Sử dụng menu thả xuống, chọn cách tạo :doc:`mục "
+"công <work_entries>`. Trường này là **bắt buộc**. Nhấp vào nút radio bên "
+"cạnh lựa chọn mong muốn. Các tùy chọn gồm có:"
 
 #: ../../content/applications/hr/payroll/contracts.rst:81
 msgid ""
@@ -15893,18 +16065,26 @@ msgid ""
 "are :guilabel:`Employee` or :guilabel:`Worker`. A :ref:`new salary structure "
 "type <payroll/new-structure-type>` can be created, if needed."
 msgstr ""
+":guilabel:`Loại cơ cấu lương`: Chọn một trong các loại cơ cấu lương từ menu "
+"thả xuống. Các loại cơ cấu lương mặc định là :guilabel:`Nhân viên` hoặc "
+":guilabel:`Công nhân`. Bạn có thể tạo :ref:`loại cơ cấu lương mới <payroll/"
+"new-structure-type>` nếu cần."
 
 #: ../../content/applications/hr/payroll/contracts.rst:91
 msgid ""
 ":guilabel:`Department`: Select the department the employee is working "
 "within, using the drop-down menu."
 msgstr ""
+":guilabel:`Phòng ban`: Chọn phòng ban mà nhân viên đang làm việc bằng menu "
+"thả xuống."
 
 #: ../../content/applications/hr/payroll/contracts.rst:93
 msgid ""
 ":guilabel:`Job Position`: Select the employee's specific job position using "
 "the drop-down menu."
 msgstr ""
+":guilabel:`Vị trí công việc`: Chọn vị trí công việc cụ thể của nhân viên "
+"bằng menu thả xuống."
 
 #: ../../content/applications/hr/payroll/contracts.rst:96
 msgid ""
@@ -15925,11 +16105,18 @@ msgid ""
 "Time`, :guilabel:`Intern`, :guilabel:`Student`, :guilabel:`Apprenticeship`, :guilabel:`Thesis`, :guilabel:`Statutory`, "
 "and :guilabel:`Employee`."
 msgstr ""
+":guilabel:`Loại hợp đồng`: Sử dụng menu thả xuống, chọn loại hợp đồng đang "
+"được tạo. Các tùy chọn mặc định là :guilabel:`Dài hạn`, :guilabel:`Tạm "
+"thời`, :guilabel:`Thời vụ`, :guilabel:`Toàn thời gian`, :guilabel:`Thực tập "
+"sinh`, :guilabel:`Sinh viên`, :guilabel:`Học nghề`, :guilabel:`Luận văn`, "
+":guilabel:`Theo luật định` và :guilabel:`Nhân viên`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:104
 msgid ""
 ":guilabel:`Wage on Payroll`: Enter the employee's monthly wage in this field."
 msgstr ""
+":guilabel:`Tiền lương trên bảng lương`: Nhập lương hàng tháng của nhân viên "
+"vào trường này."
 
 #: ../../content/applications/hr/payroll/contracts.rst:107
 msgid ""
@@ -15951,6 +16138,8 @@ msgid ""
 ":guilabel:`HR Responsible`: Select the person who is responsible for "
 "validating the contract using the drop-down menu. This field is required."
 msgstr ""
+":guilabel:`Người phụ trách nhân sự`: Sử dụng menu thả xuống, chọn người chịu "
+"trách nhiệm xác thực hợp đồng. Trường này là bắt buộc."
 
 #: ../../content/applications/hr/payroll/contracts.rst:116
 msgid ""
@@ -15958,10 +16147,13 @@ msgid ""
 "Configurator** (`hr_contract_salary`) module and the **Sign** app are both "
 "installed."
 msgstr ""
+"Trường :guilabel:`Người phụ trách nhân sự` chỉ xuất hiện nếu cả phân hệ "
+"**Salary Configurator** (`hr_contract_salary`) và ứng dụng **Sign** đều được "
+"cài đặt."
 
 #: ../../content/applications/hr/payroll/contracts.rst:None
 msgid "New contract form to be filled in when creating a new contract."
-msgstr ""
+msgstr "Biểu mẫu hợp đồng mới cần điền khi tạo hợp đồng mới."
 
 #: ../../content/applications/hr/payroll/contracts.rst:123
 #: ../../content/applications/hr/payroll/contracts.rst:332
@@ -15974,6 +16166,9 @@ msgid ""
 "much and how often the employee is paid. Fill in the following fields in "
 "this tab:"
 msgstr ""
+"Tab :guilabel:`Thông tin lương` là nơi cung cấp thông tin chi tiết về số "
+"tiền và tần suất chi trả cho nhân viên. Hãy điền các trường sau trong tab "
+"này:"
 
 #: ../../content/applications/hr/payroll/contracts.rst:128
 msgid ""
@@ -15983,6 +16178,11 @@ msgid ""
 "employees, and select :guilabel:`Hourly Wage` for employees who are paid "
 "based on their logged worked hours."
 msgstr ""
+":guilabel:`Loại lương`: Sử dụng menu thả xuống, chọn hình thức trả lương cho "
+"nhân viên. Hai tùy chọn mặc định là :guilabel:`Lương cố định` hoặc "
+":guilabel:`Lương theo giờ`. Chọn :guilabel:`Lương cố định` đối với nhân viên "
+"hưởng lương cố định, và chọn :guilabel:`Lương theo giờ` đối với nhân viên "
+"được trả lương dựa trên số giờ làm việc đã ghi nhận."
 
 #: ../../content/applications/hr/payroll/contracts.rst:132
 msgid ""
@@ -15993,6 +16193,11 @@ msgid ""
 "monthly`, :guilabel:`Monthly`, :guilabel:`Semi-monthly`,  :guilabel:`Bi-"
 "weekly`, :guilabel:`Weekly`, or :guilabel:`Daily`."
 msgstr ""
+":guilabel:`Kỳ hạn trả lương`: Sử dụng menu thả xuống, chọn tần suất chi trả "
+"cho nhân viên. Các tùy chọn mặc định là :guilabel:`Hàng năm`, :guilabel:`Nửa "
+"năm một lần`, :guilabel:`Hàng quý`, :guilabel:`Hai tháng một lần`, "
+":guilabel:`Hàng tháng`, :guilabel:`Nửa tháng một lần`,  :guilabel:`Hai tuần "
+"một lần`, :guilabel:`Hàng tuần` hoặc :guilabel:`Hàng ngày`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:136
 msgid ""
@@ -16001,6 +16206,10 @@ msgid ""
 "how often the pay is issued to the employee. The second field *cannot* be "
 "modified, and is updated when the :guilabel:`Schedule Pay` field changes."
 msgstr ""
+":guilabel:`Tiền lương`: Nhập số tiền mà nhân viên nhận được mỗi kỳ trả "
+"lương. Trường thứ nhất cho phép nhập tiền lương, trường thứ hai hiển thị tần "
+"suất trả lương cho nhân viên. Trường thứ hai *không thể* chỉnh sửa và được "
+"cập nhật khi trường :guilabel:`Lịch trả lương` thay đổi."
 
 #: ../../content/applications/hr/payroll/contracts.rst:140
 msgid ""
@@ -16011,6 +16220,13 @@ msgid ""
 "accordingly. Ensure both the :guilabel:`Wage` and :guilabel:`Yearly Cost "
 "(Real)` are correct if this field is modified."
 msgstr ""
+":guilabel:`Chi phí hàng năm (Thực tế)`: Trường này tự động cập nhật sau khi "
+"các trường :guilabel:`Kỳ hạn trả lương` và :guilabel:`Tiền lương` được nhập. "
+"Số tiền này là tổng chi phí hàng năm của người sử dụng lao động. Trường này "
+"có thể chỉnh sửa. Tuy nhiên, nếu chỉnh sửa trường này, trường "
+":guilabel:`Tiền lương` sẽ tự động cập nhật tương ứng. Hãy đảm bảo cả hai "
+"trường :guilabel:`Tiền lương` và :guilabel:`Chi phí hàng năm (Thực tế)` đều "
+"chính xác nếu trường này được chỉnh sửa."
 
 #: ../../content/applications/hr/payroll/contracts.rst:145
 msgid ""
@@ -16019,6 +16235,11 @@ msgid ""
 "amount is the total monthly cost for the employer. This field **cannot** be "
 "modified, and is calculated based on the :guilabel:`Yearly Cost (Real)`."
 msgstr ""
+":guilabel:`Chi phí hàng tháng (Thực tế)`: Trường này tự động cập nhật sau "
+"khi các trường :guilabel:`Kỳ hạn trả lương` và :guilabel:`Tiền lương` được "
+"nhập. Số tiền này là tổng chi phí hàng tháng của người sử dụng lao động. "
+"Trường này **không thể** chỉnh sửa và được tính toán dựa trên :guilabel:`Chi "
+"phí hàng năm (Thực tế)`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:None
 msgid "The Salary Information tab filled out."
@@ -16044,6 +16265,8 @@ msgid ""
 "a :ref:`contract template <payroll/contract-template>` to use when making an "
 "offer to an applicant."
 msgstr ""
+":guilabel:`Mẫu hợp đồng`: Dùng menu thả xuống, chọn một :ref:`mẫu hợp đồng "
+"<payroll/contract-template>` để dùng khi gửi đề nghị cho ứng viên."
 
 #: ../../content/applications/hr/payroll/contracts.rst:163
 msgid ""
@@ -16177,6 +16400,8 @@ msgid ""
 "This tab **only** appears after an :guilabel:`Employee` is selected. "
 "Additionally, only image files can be attached in this field at this time."
 msgstr ""
+"Tab này **chỉ** xuất hiện sau khi chọn :guilabel:`Nhân viên`. Ngoài ra, hiện "
+"tại chỉ có thể đính kèm các tệp hình ảnh vào trường này."
 
 #: ../../content/applications/hr/payroll/contracts.rst:235
 #: ../../content/applications/hr/payroll/salary_attachments.rst:3
@@ -16189,6 +16414,8 @@ msgid ""
 "book` :guilabel:`Salary Attachments` smart button appears at the top of the "
 "page."
 msgstr ""
+"Sau khi một nhân viên được chọn cho hợp đồng, nút thông minh :icon:`fa-book` "
+":guilabel:`Khấu trừ lương` sẽ xuất hiện ở đầu trang."
 
 #: ../../content/applications/hr/payroll/contracts.rst:240
 msgid ""
@@ -16197,16 +16424,22 @@ msgid ""
 "employee who already has salary attachments configured, the smart button "
 "displays the number of salary attachments currently running."
 msgstr ""
+"Đối với nhân viên mới hiện chưa có hợp đồng, nút thông minh sẽ hiển thị "
+":guilabel:`Mới`. Nếu hợp đồng đang được cập nhật cho một nhân viên hiện tại "
+"đã được cấu hình các khoản khấu trừ lương, nút thông minh sẽ hiển thị số "
+"lượng khoản khấu trừ lương hiện đang áp dụng."
 
 #: ../../content/applications/hr/payroll/contracts.rst:244
 msgid ""
 ":doc:`Create or update any necessary salary attachments "
 "<salary_attachments>` for the contract, before sending."
 msgstr ""
+":doc:`Tạo hoặc cập nhật bất kỳ khoản khấu trừ lương cần thiết nào "
+"<salary_attachments>` cho hợp đồng trước khi gửi."
 
 #: ../../content/applications/hr/payroll/contracts.rst:248
 msgid "Send a contract"
-msgstr ""
+msgstr "Gửi hợp đồng"
 
 #: ../../content/applications/hr/payroll/contracts.rst:250
 msgid ""
@@ -16214,6 +16447,9 @@ msgid ""
 "it to the employee or applicant. Click the :guilabel:`Generate Offer` "
 "button, and the :guilabel:`Offer for (Employee)` form loads."
 msgstr ""
+"Sau khi hợp đồng đã được tạo và cấu hình, bước tiếp theo là gửi hợp đồng cho "
+"nhân viên hoặc người ứng tuyển. Nhấp vào nút :guilabel:`Tạo đề nghị`, và "
+"biểu mẫu :guilabel:`Đề nghị cho (Nhân viên)` sẽ tải."
 
 #: ../../content/applications/hr/payroll/contracts.rst:254
 msgid ""
@@ -16223,6 +16459,11 @@ msgid ""
 "field. This indicates how long the offer is valid. Enter the desired number "
 "of days in the field. The default is `30` days."
 msgstr ""
+"Biểu mẫu :guilabel:`Đề nghị cho (Nhân viên)` hiển thị tất cả thông tin cơ "
+"bản từ hợp đồng, cũng như liên kết mà nhân viên có thể sử dụng để ký hợp "
+"đồng. Trường cuối cùng trên biểu mẫu là trường :guilabel:`Số ngày hiệu lực`. "
+"Trường này cho biết thời gian đề nghị có hiệu lực. Nhập số ngày mong muốn "
+"vào trường này. Mặc định là `30` ngày."
 
 #: ../../content/applications/hr/payroll/contracts.rst:259
 msgid ""
@@ -16230,12 +16471,17 @@ msgid ""
 "preconfigured default email template. Click :guilabel:`Send` to send the "
 "offer."
 msgstr ""
+"Nhấp vào :guilabel:`Gửi qua email` và một cửa sổ email bật lên sẽ tải, sử "
+"dụng mẫu email mặc định đã được cấu hình trước. Nhấp vào :guilabel:`Gửi` để "
+"gửi đề nghị."
 
 #: ../../content/applications/hr/payroll/contracts.rst:263
 msgid ""
 "In order to send a contract using the :guilabel:`Generate Offer` button, "
 "there **must** be an employee signature field on the contract PDF being sent."
 msgstr ""
+"Để gửi hợp đồng bằng nút :guilabel:`Tạo đề nghị`, **phải** có trường chữ ký "
+"của nhân viên trên tệp PDF hợp đồng được gửi."
 
 #: ../../content/applications/hr/payroll/contracts.rst:None
 msgid "Send the contract to the employee via one of the buttons."
@@ -16243,13 +16489,14 @@ msgstr "Gửi hợp đồng cho nhân viên thông qua một trong các nút."
 
 #: ../../content/applications/hr/payroll/contracts.rst:270
 msgid "Contract status"
-msgstr ""
+msgstr "Trạng thái hợp đồng"
 
 #: ../../content/applications/hr/payroll/contracts.rst:272
 msgid ""
 "When creating and sending out a contract, the default status of the contract "
 "is :guilabel:`New`."
 msgstr ""
+"Khi tạo và gửi hợp đồng, trạng thái mặc định của hợp đồng là :guilabel:`Mới`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:274
 msgid ""
@@ -16258,26 +16505,35 @@ msgid ""
 "and recruitment employees, are alerted in the database when there is a "
 "signature requested of them."
 msgstr ""
+"Khi có ít nhất một chữ ký hoàn tất trên tài liệu, trạng thái sẽ chuyển thành "
+":guilabel:`Đã ký một phần`. Người dùng nội bộ, chẳng hạn như nhân viên nhân "
+"sự và tuyển dụng, sẽ nhận được cảnh báo trong cơ sở dữ liệu khi có yêu cầu "
+"chữ ký từ họ."
 
 #: ../../content/applications/hr/payroll/contracts.rst:278
 msgid ""
 "After all required parties have signed the contract, the status changes "
 "to :guilabel:`Fully Signed`."
 msgstr ""
+"Sau khi tất cả các bên được yêu cầu đã ký hợp đồng, trạng thái sẽ chuyển "
+"thành :guilabel:`Đã ký đầy đủ`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:280
 msgid "All status changes happen automatically as the document is signed."
 msgstr ""
+"Tất cả các thay đổi trạng thái đều diễn ra tự động khi tài liệu được ký."
 
 #: ../../content/applications/hr/payroll/contracts.rst:285
 msgid "Contract templates"
-msgstr ""
+msgstr "Mẫu hợp đồng"
 
 #: ../../content/applications/hr/payroll/contracts.rst:287
 msgid ""
 "Contract *templates* eliminate the need to configure new contracts every "
 "time an employee is hired."
 msgstr ""
+"*Mẫu* hợp đồng loại bỏ nhu cầu phải cấu hình hợp đồng mới mỗi khi tuyển dụng "
+"một nhân viên."
 
 #: ../../content/applications/hr/payroll/contracts.rst:290
 msgid ""
@@ -16285,30 +16541,41 @@ msgid ""
 "different types of employment positions that are commonly filled, such as "
 "full time, part time, seasonal, etc."
 msgstr ""
+"Việc có nhiều mẫu hợp đồng cho phép tạo hợp đồng nhanh hơn cho các loại vị "
+"trí việc làm thường được tuyển dụng, chẳng hạn như toàn thời gian, bán thời "
+"gian, thời vụ, v.v."
 
 #: ../../content/applications/hr/payroll/contracts.rst:293
 msgid ""
 "Contract templates are created through the **Payroll** app configuration "
 "menu, and stored in the **Documents** app."
 msgstr ""
+"Các mẫu hợp đồng được tạo thông qua menu cấu hình của ứng dụng **Bảng "
+"lương** và được lưu trữ trong ứng dụng **Tài liệu**."
 
 #: ../../content/applications/hr/payroll/contracts.rst:297
 msgid ""
 "To access contract templates, the **Salary Configurator** "
 "(`hr_contract_salary`) module **must** be :ref:`installed <general/install>`."
 msgstr ""
+"Để truy cập các mẫu hợp đồng, phân hệ **Bộ cấu hình lương** "
+"(`hr_contract_salary`) **phải** được :ref:`cài đặt <general/install>`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:300
 msgid ""
 "To view all contract templates, navigate to :menuselection:`Payroll app --> "
 "Configuration --> Templates`."
 msgstr ""
+"Để xem tất cả các mẫu hợp đồng, hãy điều hướng đến :menuselection:`Ứng dụng "
+"Bảng lương --&gt; Cấu hình --&gt; Mẫu`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:303
 msgid ""
 "The :guilabel:`Contract Templates` page lists all existing templates. Click "
 "a template line to open and edit it."
 msgstr ""
+"Trang :guilabel:`Mẫu hợp đồng` liệt kê tất cả các mẫu hiện có. Nhấp vào một "
+"dòng mẫu để mở và chỉnh sửa."
 
 #: ../../content/applications/hr/payroll/contracts.rst:306
 msgid ""
@@ -16325,6 +16592,9 @@ msgid ""
 "This should be clear and easily understood, as this name appears in the "
 "**Recruitment** application, as well."
 msgstr ""
+":guilabel:`Tham chiếu hợp đồng`: Nhập mô tả ngắn gọn cho mẫu. Nội dung này "
+"phải rõ ràng và dễ hiểu vì tên này cũng xuất hiện trong ứng dụng **Tuyển "
+"dụng**."
 
 #: ../../content/applications/hr/payroll/contracts.rst:311
 msgid ""
@@ -16332,18 +16602,25 @@ msgid ""
 "contract applies to from the drop-down menu. If a new working schedule is "
 "needed, create a :ref:`new working schedule <payroll/new-working-schedule>`."
 msgstr ""
+":guilabel:`Lịch làm việc`: Chọn lịch làm việc mong muốn mà hợp đồng áp dụng "
+"từ menu thả xuống. Nếu cần một lịch làm việc mới, hãy tạo một :ref:`lịch làm "
+"việc mới <payroll/new-working-schedule>`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:314
 msgid ""
 ":guilabel:`Work Entry Source`: Select :ref:`how the work entries are "
 "generated <payroll/work-entry-source>`."
 msgstr ""
+":guilabel:`Nguồn công`: Chọn :ref:`cách tạo các mục công <payroll/work-entry-"
+"source>`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:316
 msgid ""
 ":guilabel:`Salary Structure Type`: Select the :ref:`salary structure type "
 "<payroll/structure-types>` from the drop-down menu."
 msgstr ""
+":guilabel:`Loại cơ cấu lương`: Chọn :ref:`loại cơ cấu lương <payroll/"
+"structure-types>` từ menu thả xuống."
 
 #: ../../content/applications/hr/payroll/contracts.rst:318
 msgid ""
@@ -16360,22 +16637,30 @@ msgid ""
 "new_job>` the contract template applies to from the drop-down menu. If "
 "blank, the template applies to all job positions."
 msgstr ""
+":guilabel:`Vị trí công việc`: Chọn :doc:`vị trí công việc &lt;../recruitment/"
+"new_job&gt;` mà mẫu hợp đồng áp dụng từ menu thả xuống. Nếu để trống, mẫu sẽ "
+"áp dụng cho tất cả các vị trí công việc."
 
 #: ../../content/applications/hr/payroll/contracts.rst:322
 msgid ""
 ":guilabel:`Contract Type`: Select the type of contract from the drop-down "
 "menu. This list is the same as the *employment type*."
 msgstr ""
+":guilabel:`Loại hợp đồng`: Chọn loại hợp đồng từ menu thả xuống. Danh sách "
+"này giống với *loại việc làm*."
 
 #: ../../content/applications/hr/payroll/contracts.rst:324
 msgid ":guilabel:`Wage on Payroll`: Enter the monthly wage in the field."
 msgstr ""
+":guilabel:`Lương trên bảng lương`: Nhập lương hàng tháng vào trường này."
 
 #: ../../content/applications/hr/payroll/contracts.rst:325
 msgid ""
 ":guilabel:`HR Responsible`: Select the employee responsible for validating "
 "contracts, using this template, from the drop-down menu."
 msgstr ""
+":guilabel:`Người phụ trách nhân sự`: Chọn nhân viên chịu trách nhiệm xác "
+"thực các hợp đồng sử dụng mẫu này từ menu thả xuống."
 
 #: ../../content/applications/hr/payroll/contracts.rst:None
 msgid "A new contract template form, with the fields filled in."
@@ -16386,6 +16671,8 @@ msgid ""
 ":guilabel:`Wage Type`: Select either :guilabel:`Fixed Wage` "
 "or :guilabel:`Hourly Wage` from the drop-down menu."
 msgstr ""
+":guilabel:`Hình thức trả lương`: Chọn :guilabel:`Lương cố định` hoặc "
+":guilabel:`Lương theo giờ` từ menu thả xuống."
 
 #: ../../content/applications/hr/payroll/contracts.rst:336
 msgid ""
@@ -16395,6 +16682,11 @@ msgid ""
 "monthly`, :guilabel:`Monthly`, :guilabel:`Semi-monthly`, :guilabel:`Bi-"
 "weekly`, :guilabel:`Weekly`, or :guilabel:`Daily`."
 msgstr ""
+":guilabel:`Kỳ trả lương`: Sử dụng menu thả xuống để chọn tần suất chi trả "
+"cho nhân viên. Các tùy chọn bao gồm :guilabel:`Hàng năm`, :guilabel:`Nửa năm "
+"một lần`, :guilabel:`Hàng quý`, :guilabel:`Hai tháng một lần`, "
+":guilabel:`Hàng tháng`, :guilabel:`Nửa tháng một lần`, :guilabel:`Hai tuần "
+"một lần`, :guilabel:`Hàng tuần` hoặc :guilabel:`Hàng ngày`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:340
 msgid ""
@@ -16403,6 +16695,10 @@ msgid ""
 "It is recommended to populate the :guilabel:`Yearly Cost (Real)` field "
 "*first*, since that entry updates this field automatically."
 msgstr ""
+":guilabel:`Lương`: Nhập lương gộp. Khoảng thời gian hiển thị trong trường "
+"này dựa trên giá trị được chọn cho trường :guilabel:`Kỳ trả lương`. Bạn nên "
+"điền trường :guilabel:`Chi phí hàng năm (Thực tế)` *trước*, vì mục nhập đó "
+"sẽ tự động cập nhật trường này."
 
 #: ../../content/applications/hr/payroll/contracts.rst:343
 msgid ""
@@ -16410,6 +16706,9 @@ msgid ""
 "costs the employer. When this value is entered, the :guilabel:`Monthly Cost "
 "(Real)` is automatically updated."
 msgstr ""
+":guilabel:`Chi phí hàng năm (Thực tế)`: Nhập tổng chi phí hàng năm mà nhân "
+"viên tiêu tốn của người sử dụng lao động. Khi giá trị này được nhập, trường "
+":guilabel:`Chi phí hàng tháng (Thực tế)` sẽ được tự động cập nhật."
 
 #: ../../content/applications/hr/payroll/contracts.rst:345
 msgid ""
@@ -16417,6 +16716,9 @@ msgid ""
 "is automatically populated after the :guilabel:`Yearly Cost (Real)` is "
 "entered."
 msgstr ""
+":guilabel:`Chi phí hàng tháng (Thực tế)`: Trường này **không** thể chỉnh "
+"sửa. Giá trị sẽ được tự động điền sau khi nhập trường :guilabel:`Chi phí "
+"hàng năm (Thực tế)`."
 
 #: ../../content/applications/hr/payroll/contracts.rst:349
 msgid ""
@@ -16447,6 +16749,10 @@ msgid ""
 "appear at all. For example, some entries may pertain to retirement accounts, "
 "health insurance benefits, and commuter benefits."
 msgstr ""
+"Tùy thuộc vào :doc:`bản địa hóa bảng lương <payroll_localizations>` của công "
+"ty, các mục hiển thị trong phần này có thể khác nhau hoặc hoàn toàn không "
+"xuất hiện. Ví dụ: một số mục có thể liên quan đến tài khoản hưu trí, phúc "
+"lợi bảo hiểm y tế và trợ cấp đi lại."
 
 #: ../../content/applications/hr/payroll/contracts.rst:364
 msgid ""
@@ -16461,18 +16767,24 @@ msgid ""
 "This tab outlines which documents the employee must sign to either accept a "
 "new offer or an updated contract."
 msgstr ""
+"Tab này nêu rõ các tài liệu mà nhân viên phải ký để chấp nhận lời mời làm "
+"việc mới hoặc hợp đồng cập nhật."
 
 #: ../../content/applications/hr/payroll/contracts.rst:373
 msgid ""
 ":guilabel:`New Contract PDF Template`: Select the default document that a "
 "new employee has to sign to accept an offer."
 msgstr ""
+":guilabel:`Mẫu PDF hợp đồng mới`: Chọn tài liệu mặc định mà nhân viên mới "
+"phải ký để chấp nhận lời mời nhận việc."
 
 #: ../../content/applications/hr/payroll/contracts.rst:375
 msgid ""
 ":guilabel:`Contract Update PDF Template`: Select the default document that a "
 "current employee has to sign to update their contract."
 msgstr ""
+":guilabel:`Mẫu PDF cập nhật hợp đồng`: Chọn tài liệu mặc định mà nhân viên "
+"hiện tại phải ký để cập nhật hợp đồng của họ."
 
 #: ../../content/applications/hr/payroll/contracts.rst:379
 msgid ":doc:`../../productivity/documents`"
@@ -28686,7 +28998,7 @@ msgstr "Loại bút toán công việc Hồng Kông."
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:274
 msgid ""
 ":ref:`Creating and configuring work entry types <payroll/work-entry-types>`"
-msgstr ""
+msgstr ":ref:`Tạo và cấu hình loại chi tiết công <payroll/work-entry-types>`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:277
 msgid "Understanding 713 Ordinance"
@@ -31634,6 +31946,9 @@ msgid ""
 ":guilabel:`Flexible Hours`: Tick the checkbox to let employees adjust their "
 "start and end times while maintaining the same total daily hours."
 msgstr ""
+":guilabel:`Giờ linh hoạt`: Đánh dấu vào ô để cho phép nhân viên điều chỉnh "
+"thời gian bắt đầu và kết thúc nhưng vẫn duy trì cùng tổng số giờ làm việc "
+"hàng ngày."
 
 #: ../../content/applications/hr/payroll/salaries.rst:108
 msgid ""
@@ -31858,31 +32173,39 @@ msgstr "Phần trên cùng"
 #: ../../content/applications/hr/payroll/salaries.rst:193
 msgid ""
 ":guilabel:`Rule Name`: Enter a name for the rule. This field is required."
-msgstr ""
+msgstr ":guilabel:`Tên quy tắc`: Nhập tên cho quy tắc. Trường này là bắt buộc."
 
 #: ../../content/applications/hr/payroll/salaries.rst:194
 msgid ""
 ":guilabel:`Category`: Select a category the rule applies to from the drop-"
 "down menu, or enter a new one. This field is required."
 msgstr ""
+":guilabel:`Danh mục`: Chọn danh mục mà quy tắc áp dụng từ menu thả xuống "
+"hoặc nhập danh mục mới. Trường này là bắt buộc."
 
 #: ../../content/applications/hr/payroll/salaries.rst:196
 msgid ""
 ":guilabel:`Code`: Enter a code to be used for this new rule. This field is "
 "required."
 msgstr ""
+":guilabel:`Mã`: Nhập mã sẽ sử dụng cho quy tắc mới này. Trường này là bắt "
+"buộc."
 
 #: ../../content/applications/hr/payroll/salaries.rst:197
 msgid ""
 ":guilabel:`Sequence`: Enter a number indicating when this rule is calculated "
 "in the sequence of all other rules."
 msgstr ""
+":guilabel:`Thứ tự`: Nhập một số cho biết thứ tự tính toán quy tắc này trong "
+"chuỗi tất cả các quy tắc khác."
 
 #: ../../content/applications/hr/payroll/salaries.rst:199
 msgid ""
 ":guilabel:`Salary Structure`: Select a salary structure the rule applies to "
 "from the drop-down menu, or enter a new one. This field is required."
 msgstr ""
+":guilabel:`Cấu trúc lương`: Chọn cấu trúc lương mà quy tắc áp dụng từ menu "
+"thả xuống hoặc nhập cấu trúc mới. Trường này là bắt buộc."
 
 #: ../../content/applications/hr/payroll/salaries.rst:201
 msgid ""
@@ -31890,12 +32213,17 @@ msgid ""
 "Disable the toggle to continue to show it on the payslip, but skip the "
 "computation."
 msgstr ""
+":guilabel:`Có hiệu lực`: Bật công tắc này để quy tắc sẵn sàng sử dụng. Tắt "
+"công tắc để tiếp tục hiển thị quy tắc trên phiếu lương nhưng bỏ qua việc "
+"tính toán."
 
 #: ../../content/applications/hr/payroll/salaries.rst:203
 msgid ""
 ":guilabel:`Appears on payslip`: Disabling the toggle will still show the "
 "rule on the payslip, it will just not be computed."
 msgstr ""
+":guilabel:`Hiển thị trên phiếu lương`: Tắt công tắc vẫn sẽ hiển thị quy tắc "
+"trên phiếu lương nhưng quy tắc sẽ không được tính toán."
 
 #: ../../content/applications/hr/payroll/salaries.rst:205
 msgid ""
@@ -31903,12 +32231,17 @@ msgid ""
 "rule appear on the *Employer Cost* report, located on the *Payroll* app "
 "dashboard."
 msgstr ""
+":guilabel:`Xem trên Bảng điều khiển chi phí người sử dụng lao động`: Đánh "
+"dấu vào ô để quy tắc xuất hiện trên báo cáo *Chi phí người sử dụng lao "
+"động*, nằm trên bảng điều khiển của ứng dụng *Bảng lương*."
 
 #: ../../content/applications/hr/payroll/salaries.rst:207
 msgid ""
 ":guilabel:`View on Payroll Reporting`: Tick the checkbox to have the rule "
 "appear on payroll reports."
 msgstr ""
+":guilabel:`Xem trên Báo cáo bảng lương`: Đánh dấu vào ô để quy tắc xuất hiện "
+"trên các báo cáo bảng lương."
 
 #: ../../content/applications/hr/payroll/salaries.rst:None
 msgid "Enter the information for the new rule on the new rule form."
@@ -31931,6 +32264,11 @@ msgid ""
 "field), or a :guilabel:`Python Expression` (the code is entered beneath the "
 "selection). This field is required."
 msgstr ""
+":guilabel:`Điều kiện dựa trên`: Chọn từ menu thả xuống xem quy tắc là "
+":guilabel:`Luôn đúng` (luôn áp dụng), :guilabel:`Khoảng` (áp dụng cho một "
+"khoảng cụ thể được nhập bên dưới lựa chọn), :guilabel:`Đầu vào khác` (điều "
+"kiện được nhập bên dưới trường) hay :guilabel:`Biểu thức Python` (mã được "
+"nhập bên dưới lựa chọn). Trường này là bắt buộc."
 
 #: ../../content/applications/hr/payroll/salaries.rst:226
 msgid "Computation"
@@ -31944,6 +32282,11 @@ msgid ""
 "what is selected, the fixed amount, percentage, other input, or Python code "
 "needs to be entered next. This field is required."
 msgstr ""
+":guilabel:`Loại số tiền`: Chọn từ menu thả xuống xem số tiền là "
+":guilabel:`Số tiền cố định`, :guilabel:`Tỷ lệ phần trăm (%)`, :guilabel:`Đầu "
+"vào khác` hay :guilabel:`Mã Python`. Tùy thuộc vào lựa chọn, bạn sẽ cần nhập "
+"số tiền cố định, tỷ lệ phần trăm, đầu vào khác hoặc mã Python tiếp theo. "
+"Trường này là bắt buộc."
 
 #: ../../content/applications/hr/payroll/salaries.rst:234
 msgid "Company contribution"
@@ -31954,6 +32297,8 @@ msgid ""
 ":guilabel:`Partner`: If another company financially contributes to this "
 "rule, select the company from the drop-down menu."
 msgstr ""
+":guilabel:`Đối tác`: Nếu một công ty khác đóng góp tài chính cho quy tắc "
+"này, hãy chọn công ty đó từ menu thả xuống."
 
 #: ../../content/applications/hr/payroll/salaries.rst:240
 msgid "Description tab"
@@ -31976,18 +32321,24 @@ msgid ""
 ":guilabel:`Debit Account`: Select the debit account from the drop-down menu "
 "the rule affects."
 msgstr ""
+":guilabel:`Tài khoản nợ`: Chọn tài khoản nợ bị ảnh hưởng bởi quy tắc từ menu "
+"thả xuống."
 
 #: ../../content/applications/hr/payroll/salaries.rst:249
 msgid ""
 ":guilabel:`Credit Account`: Select the credit account from the drop-down "
 "menu the rule affects."
 msgstr ""
+":guilabel:`Tài khoản thẻ tín dụng`: Chọn tài khoản thẻ tín dụng từ menu thả "
+"xuống mà quy tắc này ảnh hưởng."
 
 #: ../../content/applications/hr/payroll/salaries.rst:250
 msgid ""
 ":guilabel:`Split account line based on name`: Tick the checkbox to split the "
 "accounting entry according to the payslip line name."
 msgstr ""
+":guilabel:`Tách dòng tài khoản theo tên`: Đánh dấu vào ô để tách bút toán kế "
+"toán theo tên dòng phiếu lương."
 
 #: ../../content/applications/hr/payroll/salaries.rst:252
 msgid ""
@@ -31995,6 +32346,9 @@ msgid ""
 "the rule is shown independently from the net salary, to allow for better "
 "reporting in the **Accounting** app."
 msgstr ""
+":guilabel:`Không tính vào hạch toán ròng`: Nếu được chọn, số tiền của quy "
+"tắc sẽ được hiển thị độc lập với lương thực nhận để phục vụ báo cáo tốt hơn "
+"trong ứng dụng **Kế toán**."
 
 #: ../../content/applications/hr/payroll/salaries.rst:258
 msgid "Rule parameters"
@@ -32072,6 +32426,8 @@ msgid ""
 "Tick the :guilabel:`Available in attachments` checkbox if the input should "
 "be a salary attachment."
 msgstr ""
+"Đánh dấu vào ô :guilabel:`Khả dụng trong tệp đính kèm` nếu khoản nhập này "
+"phải là một khoản đính kèm lương."
 
 #: ../../content/applications/hr/payroll/salaries.rst:292
 msgid ""
@@ -32104,12 +32460,19 @@ msgid ""
 "referred to as a *wage garnishment*. In Odoo, these are all universally "
 "called *salary attachments*."
 msgstr ""
+"Khi khoản khấu trừ là tự nguyện, chúng thường được coi là *khoản giảm trừ*. "
+"Khi khoản khấu trừ theo lệnh của tòa án, hoặc không tự nguyện, đôi khi nó "
+"được gọi là *tịch biên tiền lương*. Trong Odoo, tất cả những khoản này được "
+"gọi chung là *khoản khấu trừ lương*."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:12
 msgid ""
 "Note that salary attachments could also be used to give recurring amounts of "
 "money to employees, like a bonus divided in multiple payments."
 msgstr ""
+"Lưu ý rằng các khoản khấu trừ lương cũng có thể được sử dụng để chi trả các "
+"khoản tiền định kỳ cho nhân viên, chẳng hạn như tiền thưởng được chia thành "
+"nhiều đợt thanh toán."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:18
 msgid "Salary attachment types"
@@ -32122,6 +32485,10 @@ msgid ""
 "This displays *all* other salary inputs, not just the various salary "
 "attachments."
 msgstr ""
+"Để xem các loại khấu trừ lương hiện được cấu hình, hãy điều hướng đến "
+":menuselection:`Ứng dụng Bảng lương --&gt; Cấu hình --&gt; Loại đầu vào "
+"khác`. Mục này hiển thị *tất cả* các khoản đầu vào lương khác, chứ không chỉ "
+"các khoản khấu trừ lương khác nhau."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:24
 msgid ""
@@ -32129,12 +32496,17 @@ msgid ""
 "are: :guilabel:`Attachment of Salary`, :guilabel:`Assignment of Salary`, "
 "and :guilabel:`Child Support`."
 msgstr ""
+"Ba loại khấu trừ lương mặc định xuất hiện trong danh sách này là: "
+":guilabel:`Tịch biên tiền lương`, :guilabel:`Chuyển nhượng tiền lương`, và "
+":guilabel:`Cấp dưỡng con cái`."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:27
 msgid ""
 "Each salary attachment type displays the :guilabel:`Name` of the attachment "
 "type, and the :guilabel:`Code` used when calculating payslips."
 msgstr ""
+"Mỗi loại khấu trừ lương sẽ hiển thị :guilabel:`Tên` của loại khấu trừ đó, và "
+":guilabel:`Mã` được sử dụng khi tính phiếu lương."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:None
 msgid "The default salary attachment types."
@@ -32151,6 +32523,10 @@ msgid ""
 "various salary structures, as well as the installed :ref:`localization "
 "package <fiscal_localizations/packages>`."
 msgstr ""
+"Sau khi cài đặt ứng dụng **Bảng lương**, các loại khấu trừ lương mặc định "
+"được cấu hình sẵn sẽ được liên kết với nhiều quy tắc liên kết với các cơ cấu "
+"lương khác nhau, cũng như :ref:`gói nội địa hóa <fiscal_localizations/"
+"packages>` đã cài đặt."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:41
 msgid ""
@@ -32186,6 +32562,15 @@ msgid ""
 "structure, use the drop-down menu in the :guilabel:`Available in Structure` "
 "field, and select the specific structure."
 msgstr ""
+"Để tạo một loại khấu trừ lương mới, nhấp vào nút :guilabel:`Mới`, và một "
+"biểu mẫu :guilabel:`Các loại đầu vào khác` trống sẽ được tải. Nhập "
+":guilabel:`Mô tả` cho loại khấu trừ lương mới vào trường tương ứng. Tiếp "
+"theo, tích vào ô kiểm :guilabel:`Khả dụng trong các khoản khấu trừ`, biểu "
+"thị rằng nó khả dụng để dùng làm khấu trừ lương. Nhập :guilabel:`Mã` được sử "
+"dụng trong các quy tắc lương để tính phiếu lương. Cuối cùng, nếu loại khấu "
+"trừ lương **chỉ** nên được dùng trong một cấu trúc lương cụ thể, hãy dùng "
+"menu thả xuống trong trường :guilabel:`Khả dụng trong cấu trúc` và chọn cấu "
+"trúc cụ thể đó."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:60
 msgid "Create a salary attachment"
@@ -32210,12 +32595,18 @@ msgid ""
 "attachment :guilabel:`Type`, the :guilabel:`payslips "
 "Amount`, :guilabel:`Start Date`, and current :guilabel:`Status`."
 msgstr ""
+"Tất cả các khoản khấu trừ lương xuất hiện trong chế độ xem danh sách mặc "
+"định và hiển thị tên :guilabel:`Nhân viên`, :guilabel:`Mô tả`, "
+":guilabel:`Loại` khấu trừ lương, :guilabel:`Số tiền trên phiếu lương`, "
+":guilabel:`Ngày bắt đầu` và :guilabel:`Trạng thái` hiện tại."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:70
 msgid ""
 "At the end of each line is a :guilabel:`Related Payslips` button. Click this "
 "to view all payslips containing the corresponding salary attachment."
 msgstr ""
+"Ở cuối mỗi dòng là nút :guilabel:`Phiếu lương liên quan`. Nhấp vào nút này "
+"để xem tất cả các phiếu lương chứa khoản khấu trừ lương tương ứng."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:73
 msgid ""
@@ -32264,6 +32655,11 @@ msgid ""
 "Today's date populates the field by default. Then, when the :guilabel:`Total "
 "Amount` field is populated, this date is updated."
 msgstr ""
+":guilabel:`Ngày kết thúc ước tính`: Trường này **không** thể chỉnh sửa và "
+"**chỉ** xuất hiện sau khi trường :guilabel:`Số tiền trên phiếu lương` được "
+"điền. Trường này là ngày ước tính hoàn thành khoản khấu trừ lương. Ngày hiện "
+"tại được điền vào trường theo mặc định. Sau đó, khi trường :guilabel:`Tổng "
+"số tiền` được điền, ngày này sẽ được cập nhật."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:87
 msgid ""
@@ -32283,6 +32679,9 @@ msgid ""
 "indefinitely. If ticked, the :guilabel:`Total Amount` field is hidden from "
 "view."
 msgstr ""
+":guilabel:`Không có ngày kết thúc`: Tích vào ô kiểm này nếu khoản khấu trừ "
+"lương kéo dài vô thời hạn. Nếu được tích, trường :guilabel:`Tổng số tiền` sẽ "
+"bị ẩn khỏi giao diện."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:92
 msgid ""
@@ -32298,12 +32697,17 @@ msgid ""
 "attachment. Note that this field **only** appears if the :guilabel:`No End "
 "Date` option is **not** ticked."
 msgstr ""
+":guilabel:`Tổng số tiền`: Nhập tổng số tiền phải trả cho khoản khấu trừ "
+"lương. Lưu ý rằng trường này **chỉ** xuất hiện nếu tùy chọn :guilabel:`Không "
+"có ngày kết thúc` **không** được tích."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:95
 msgid ""
 ":guilabel:`Negative Amount`: Tick this checkbox if the salary attachment is "
 "a negative value."
 msgstr ""
+":guilabel:`Số tiền âm`: Đánh dấu vào ô này nếu khoản đính kèm lương là một "
+"giá trị âm."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:96
 msgid ""
@@ -32312,6 +32716,10 @@ msgid ""
 "are populated. The number indicates the amount of payslips needed to "
 "complete the salary attachment."
 msgstr ""
+":guilabel:`Số lần phát sinh`: Trường này **không** thể chỉnh sửa và chỉ xuất "
+"hiện sau khi cả hai trường :guilabel:`Số tiền trên phiếu lương` và "
+":guilabel:`Tổng số tiền` được điền. Con số này cho biết số lượng phiếu lương "
+"cần thiết để hoàn thành khoản khấu trừ lương."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:None
 msgid "The salary attachment form with all fields filled out."
@@ -32381,10 +32789,15 @@ msgid ""
 "or :guilabel:`Type`, click on the column title to sort by that specific "
 "column."
 msgstr ""
+"Tất cả các khoản khấu trừ lương xuất hiện theo thứ tự thời gian, theo "
+":guilabel:`Ngày bắt đầu`, với khoản gần đây nhất xuất hiện ở trên cùng. Để "
+"xem các khoản khấu trừ lương theo một tiêu chí cụ thể, chẳng hạn như "
+":guilabel:`Trạng thái` hoặc :guilabel:`Loại`, hãy nhấp vào tiêu đề cột để "
+"sắp xếp theo cột cụ thể đó."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:None
 msgid "All salary attachments, organized by start date."
-msgstr ""
+msgstr "Tất cả các khoản khấu trừ lương, được tổ chức theo ngày bắt đầu."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:131
 msgid "Completed salary attachments"
@@ -33493,7 +33906,7 @@ msgstr ":doc:`payslips`"
 
 #: ../../content/applications/hr/payroll/work_entries.rst:333
 msgid ":doc:`batches`"
-msgstr ""
+msgstr ":doc:`batches`"
 
 #: ../../content/applications/hr/payroll/work_entry_analysis.rst:3
 msgid "Work entry analysis"
@@ -41060,6 +41473,10 @@ msgid ""
 "<time_off/accrual-plans>` can be created, and :ref:`public holidays "
 "<time_off/public-holidays>` can be set."
 msgstr ""
+"Có thể chạy các :doc:`báo cáo <time_off/reporting>` chi tiết để xem số ngày "
+"nghỉ (và các loại nghỉ phép) đang được sử dụng, có thể tạo :ref:`kế hoạch "
+"tích lũy <time_off/accrual-plans>` và thiết lập :ref:`ngày lễ <time_off/"
+"public-holidays>`."
 
 #: ../../content/applications/hr/time_off.rst:20
 msgid ""
@@ -42049,12 +42466,19 @@ msgid ""
 "employee has to use their rolled over time off. After that time period "
 "passes, any unused rolled over time will expire."
 msgstr ""
+"Tiếp theo, hãy nhập số lượng tối đa :guilabel:`Ngày` hoặc :guilabel:`Tháng` "
+"mà nhân viên có để sử dụng thời gian nghỉ phép được chuyển tiếp của họ. Sau "
+"khi khoảng thời gian đó kết thúc, mọi thời gian chuyển tiếp chưa sử dụng sẽ "
+"hết hạn."
 
 #: ../../content/applications/hr/time_off.rst:390
 msgid ""
 "If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
 "reset to 0`, the :guilabel:`Carry Over Validity` field does not appear."
 msgstr ""
+"Nếu trường :guilabel:`Chuyển tiếp` được đặt thành :guilabel:`Không có. Thời "
+"gian tích lũy được đặt về 0`, trường :guilabel:`Hiệu lực chuyển tiếp` sẽ "
+"không xuất hiện."
 
 #: ../../content/applications/hr/time_off.rst:393
 msgid ""
@@ -42072,6 +42496,8 @@ msgid ""
 "This milestone form is configured so the employee earns five days a year. "
 "They start to earn this time yearly, on January 1st."
 msgstr ""
+"Biểu mẫu mốc này được cấu hình để nhân viên tích lũy được năm ngày mỗi năm. "
+"Họ bắt đầu tích lũy thời gian này hàng năm, vào ngày 1 tháng 1."
 
 #: ../../content/applications/hr/time_off.rst:401
 msgid ""
@@ -42079,18 +42505,26 @@ msgid ""
 "accrual plan. Anytime they have 120 days banked, they will stop accruing "
 "more time off."
 msgstr ""
+"Nhân viên không bao giờ có thể tích lũy quá 120 ngày nghỉ phép với kế hoạch "
+"tích lũy này. Bất cứ khi nào họ tích lũy đủ 120 ngày, họ sẽ dừng tích lũy "
+"thêm thời gian nghỉ phép."
 
 #: ../../content/applications/hr/time_off.rst:404
 msgid ""
 "Additionally, they can roll over up to 100 days of time off to the next "
 "year, and they have three months to use that rollover time."
 msgstr ""
+"Ngoài ra, họ có thể chuyển tiếp tối đa 100 ngày nghỉ phép sang năm tiếp theo "
+"và họ có ba tháng để sử dụng thời gian chuyển tiếp đó."
 
 #: ../../content/applications/hr/time_off.rst:407
 msgid ""
 "Note that due to the :guilabel:`Capped accrued time` of 120 days, the "
 "employee cannot carry over any time off that exceeds 120 days in total."
 msgstr ""
+"Lưu ý rằng do giới hạn :guilabel:`Thời gian tích lũy tối đa` là 120 ngày, "
+"nhân viên không thể chuyển tiếp bất kỳ thời gian nghỉ phép nào vượt quá tổng "
+"cộng 120 ngày."
 
 #: ../../content/applications/hr/time_off.rst:0
 msgid "A milestone form with all the entries filled out."
@@ -42107,6 +42541,10 @@ msgid ""
 "holidays, and provide extra days off as holidays to employees, configure the "
 "observed public holidays in Odoo."
 msgstr ""
+"Vì các ngày lễ khác nhau tùy theo từng quốc gia, hoặc thậm chí giữa các "
+"thành phố, nên không có ngày lễ nào được cấu hình sẵn trong Odoo. Để áp dụng "
+"các ngày lễ công cộng hoặc quốc lễ, đồng thời cung cấp thêm các ngày nghỉ lễ "
+"cho nhân viên, hãy cấu hình các ngày lễ được áp dụng trong Odoo."
 
 #: ../../content/applications/hr/time_off.rst:422
 msgid ""
@@ -42114,6 +42552,9 @@ msgid ""
 "of the days they have off, and do not request time off on days that are "
 "already set as a public holiday (non-working days)."
 msgstr ""
+"Việc cấu hình các ngày lễ trong Odoo là rất quan trọng, để nhân viên nắm "
+"được các ngày họ được nghỉ và không tạo yêu cầu nghỉ phép vào những ngày đã "
+"được đặt là ngày lễ (ngày không làm việc)."
 
 #: ../../content/applications/hr/time_off.rst:426
 msgid ""
@@ -42194,6 +42635,12 @@ msgid ""
 "computer is set to a different time zone, the start time is adjusted "
 "accordingly, compared to the company's time zone."
 msgstr ""
+":guilabel:`Ngày bắt đầu`: Sử dụng bộ chọn ngày và giờ để chọn ngày và giờ "
+"bắt đầu kỳ nghỉ, sau đó nhấp vào :icon:`fa-check` :guilabel:`Áp dụng`. Theo "
+"mặc định, trường này được định cấu hình cho ngày hiện tại. Giờ bắt đầu được "
+"đặt theo giờ bắt đầu của công ty (theo :doc:`lịch làm việc <payroll/"
+"working_schedules>`). Nếu máy tính của người dùng được đặt sang một múi giờ "
+"khác, giờ bắt đầu sẽ được điều chỉnh tương ứng so với múi giờ của công ty."
 
 #: ../../content/applications/hr/time_off.rst:457
 msgid ""
@@ -42205,6 +42652,12 @@ msgid ""
 "time zone, the start time is adjusted accordingly, compared to the company's "
 "time zone."
 msgstr ""
+":guilabel:`Ngày kết thúc`: Sử dụng bộ chọn ngày và giờ để chọn ngày và giờ "
+"kết thúc kỳ nghỉ, sau đó nhấp vào :icon:`fa-check` :guilabel:`Áp dụng`. Theo "
+"mặc định, trường này được định cấu hình cho ngày hiện tại và giờ được đặt "
+"thành giờ kết thúc của công ty (theo :doc:`lịch làm việc <payroll/"
+"working_schedules>`). Nếu máy tính của người dùng được đặt sang một múi giờ "
+"khác, giờ bắt đầu sẽ được điều chỉnh tương ứng so với múi giờ của công ty."
 
 #: ../../content/applications/hr/time_off.rst:464
 msgid ""
@@ -42249,6 +42702,9 @@ msgid ""
 "defines how the :doc:`work entries <payroll/work_entries>` for the holiday "
 "appear. Select the work entry type from the drop-down menu."
 msgstr ""
+":guilabel:`Loại mục công việc`: Nếu sử dụng ứng dụng **Bảng lương**, trường "
+"này xác định cách các :doc:`mục công việc <payroll/work_entries>` cho ngày "
+"nghỉ xuất hiện. Chọn loại mục công việc từ menu thả xuống."
 
 #: ../../content/applications/hr/time_off.rst:None
 msgid "The list of public holidays in the configuration menu."
@@ -42601,6 +43057,10 @@ msgid ""
 "or :guilabel:`Accrual Allocation` if the time off is earned through "
 "an :ref:`accrual plan <time_off/accrual-plans>`."
 msgstr ""
+":guilabel:`Loại phân bổ`: Chọn cách cấp phân bổ. Chọn :guilabel:`Phân bổ "
+"thông thường` nếu thời gian nghỉ phép được cấp ngay lập tức, hoặc "
+":guilabel:`Phân bổ tích lũy` nếu thời gian nghỉ phép được tích lũy thông qua "
+"một :ref:`kế hoạch tích lũy <time_off/accrual-plans>`."
 
 #: ../../content/applications/hr/time_off/allocations.rst:39
 msgid ""
@@ -42705,6 +43165,9 @@ msgid ""
 "adjusts it to the start or end of that period based on the *Accrued Gain "
 "Time* entered on the :ref:`accrual plan <time_off/accrual-plans>`."
 msgstr ""
+"Nếu :guilabel:`Ngày bắt đầu` nằm ở giữa chu kỳ tích lũy, Odoo sẽ điều chỉnh "
+"nó về đầu hoặc cuối chu kỳ đó dựa trên *Accrued Gain Time* đã nhập trên "
+":ref:`kế hoạch tích lũy <time_off/accrual-plans>`."
 
 #: ../../content/applications/hr/time_off/allocations.rst:76
 msgid ""
@@ -44157,6 +44620,11 @@ msgid ""
 "off requested. This field is in either hours or days, depending on how the "
 "selected :ref:`Time Off Type <time_off/time-off-types>` is configured."
 msgstr ""
+":guilabel:`Đã yêu cầu (Ngày/Giờ)`: Trường này tự động cập nhật sau khi phần "
+":guilabel:`Ngày` được hoàn thành. Nếu phần :guilabel:`Ngày` bị thay đổi, "
+"phần này sẽ tự động cập nhật để phản ánh tổng thời gian nghỉ phép đã yêu "
+"cầu. Trường này ở dạng giờ hoặc ngày, tùy thuộc vào cách cấu hình :ref:`Loại "
+"nghỉ phép <time_off/time-off-types>` được chọn."
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:67
 msgid ""
@@ -44175,6 +44643,10 @@ msgid ""
 "attachment of documents. Click the :icon:`fa-paperclip` :guilabel:`Attach "
 "File` button, and a file explorer window appears."
 msgstr ""
+":guilabel:`Tài liệu hỗ trợ`: Trường này **chỉ** xuất hiện nếu :ref:`Loại "
+"nghỉ phép <time_off/time-off-types>` được chọn cho phép đính kèm tài liệu. "
+"Nhấp vào nút :icon:`fa-paperclip` :guilabel:`Đính kèm tệp` và cửa sổ trình "
+"duyệt tệp sẽ xuất hiện."
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:73
 msgid ""

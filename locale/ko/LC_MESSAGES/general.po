@@ -5,6 +5,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Martin Trigaux, 2024
@@ -18,8 +19,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 16:12+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-21 20:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
 "general/ko/>\n"
 "Language: ko\n"
@@ -2590,11 +2591,17 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"수신 이메일의 경우, 자체 도메인을 설정한 후에는 \\ :ref:`고객의 답장이 자체 "
+"도메인으로 수신됨 <email-inbound-custom-domain>`\\ 으로, 이메일을 Odoo로 "
+"다시 가져오는 세 가지 방법(\\ :ref:`수신 메일 서버 <email-inbound-custom-"
+"domain-incoming-server>`, \\ :ref:`리디렉션/전달 <email-inbound-custom-"
+"domain-redirections>` 또는 \\ :ref:`서브도메인 사용 <email-inbound-custom-"
+"domain-dns>` 중 하나)을 사용해야 합니다."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
-msgstr ""
+msgstr ":doc:`수신 메시지 관리 <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -4071,6 +4078,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"서브도메인의 DNS 레코드 구성에 대한 자세한 내용은 \\ :ref:`DNS 레코드 설정 "
+"<dns_record_setup>`\\ 을 참고하세요."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4177,7 +4186,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`DNS 레코드 <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4194,6 +4203,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"**온프레미스 데이터베이스**의 경우 리디렉션 및 DNS 레코드 방식을 사용하려면 "
+"\\ :doc:`메일 게이트온이 스크\\ub practices트 &lt;../../../../administration/"
+"on_premise/email_gateway&gt;`\\ 도 구성해야 합니다. 이 스크립트를 사용하려면 "
+"**고급 기술 및 인프라 지식**이 필요합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4409,7 +4422,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid "DNS records"
-msgstr ""
+msgstr "DNS 레코드"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:296
 msgid ""
@@ -4418,6 +4431,9 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"세 번째 옵션은 전용 서브도메인(예: `mail.mydomain.com`)을 사용하고 해당 "
+"서브도메인의 주소로 발송된 이메일이 Odoo에서 처리되어 데이터베이스 내에서 "
+"직접 처리되도록 DNS 레코드를 구성하는 것입니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:300
 msgid ""
@@ -4425,6 +4441,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Odoo Online 및 Odoo.sh의 경우 CNAME 기반 라우팅은 전용 서브도메인을 사용할 "
+"때만 지\\uc6won됩니다. 루트 도메인(예: `mydomain.com`)에서는 구성할 수 "
+"없습니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
@@ -4432,12 +4451,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"이 서브도메인은 이메일 트래픽 전용으로 사용됩니다. 웹 브라우저에서 접속하는 "
+"경우 사용자는 데이터베이스에 구성된 첫 번째 웹사이트로 리디렉션됩니다"
+"(해당되는 경우)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"수신 메일용으로 새 서브도메인을 구성하는 것이므로, 해당 서브도메인의 \\ "
+":doc:`발신 메일용 DNS 레코드도 설정 <email_domain>`\\ 해야 합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4447,7 +4471,7 @@ msgstr "Odoo 온라인"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "DNS 설정 액세스"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4455,29 +4479,35 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"도메인이 타사 등록 기관(예: GoDaddy, Namecheap, Cloudflare)에서 호스팅되는 "
+"경우 해당 등록 대행업체에 로그인하여 도메인의 DNS 관리 영역을 엽니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Odoo에서 DNS를 관리하는 경우:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "`데이터베이스 관리자 <https://www.odoo.com/my/databases>`_\\ 를 엽니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:321
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"데이터베이스 옆의 :icon:`fa-gear` (\\ :guilabel:`기어`\\ ) 아이콘을 클릭하고 "
+":icon:`fa-globe` \\ :guilabel:`도메인 이름`\\ 을 선택합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
 msgstr ""
+"\\ :guilabel:`DNS`\\ 를 클릭한 다음 \\ :guilabel:`DNS 레코드 추가`\\ 를 "
+"클릭합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "CNAME 레코드 생성"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:327
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:381
@@ -7736,11 +7766,11 @@ msgstr ":guilabel:`방법 허용`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`허용된 헤더`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`노출된 헤더`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -10896,6 +10926,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"DYMO Series 5 프린터는 \\ :doc:`IoT box &lt;../iot_box&gt;`\\ 와 호환되지 "
+"않으므로 \\ :doc:`Windows 가상 IoT &lt;../windows_iot&gt;`\\ 와 페어링해야 "
+"합니다."
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "DYMO LabelWriter not printing"

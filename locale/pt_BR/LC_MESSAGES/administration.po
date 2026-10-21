@@ -9,6 +9,7 @@
 # "Maitê Dietze (madi)" <madi@odoo.com>, 2026.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # a75f12d3d37ea5bf159c4b3e85eb30e7_0fa6927, 2024
@@ -20,10 +21,10 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:34+0000\n"
-"PO-Revision-Date: 2026-09-12 10:33+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
-"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
-"odoo-18-doc/administration/pt_BR/>\n"
+"PO-Revision-Date: 2026-10-21 20:34+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
+"18-doc/administration/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1331,7 +1332,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:3
 msgid "Advanced topics"
-msgstr ""
+msgstr "Tópicos avançados"
 
 #: ../../content/administration/odoo_sh/advanced.rst:5
 msgid ""
@@ -1339,6 +1340,10 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
+"Esta seção aborda recursos avançados do Odoo.sh relacionados a "
+":ref:`contêineres <odoo-sh/advanced/containers>`, :ref:`submódulos do Git "
+"<odoo-sh/advanced/submodules>` e :ref:`ações agendadas <odoo-sh/advanced/"
+"scheduled>`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
@@ -1350,6 +1355,9 @@ msgid ""
 "base is an Ubuntu-based system on which all of Odoo's required dependencies, "
 "as well as common, useful packages, are installed."
 msgstr ""
+"Cada build é isolada em seu próprio contêiner (contêiner de namespace Linux)"
+". A base é um sistema baseado em Ubuntu no qual todas as dependências "
+"necessárias do Odoo, bem como pacotes comuns e úteis, estão instalados."
 
 #: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
@@ -1359,18 +1367,26 @@ msgid ""
 "them. The platform will ensure these dependencies are installed in your "
 "containers."
 msgstr ""
+"Se o seu projeto exigir :ref:`dependências adicionais do Python <odoo-sh/"
+"module/library>` ou versões mais recentes, você pode definir um arquivo "
+":file:`requirements.txt` na raiz de suas branches que as liste. A plataforma "
+"garantirá que essas dependências sejam instaladas em seus contêineres."
 
 #: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
 "For a concrete example, check out the Odoo Community `requirements.txt file "
 "<https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 msgstr ""
+"Para ver um exemplo concreto, confira o `arquivo requirements.txt do Odoo "
+"Community <https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 
 #: ../../content/administration/odoo_sh/advanced.rst:25
 msgid ""
 "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
 "reference/requirement-specifiers/>`_"
 msgstr ""
+"`Documentação de especificadores de requisitos da PyPA <https://pip.pypa.io/"
+"en/stable/reference/requirement-specifiers/>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:29
 msgid ""
@@ -1378,6 +1394,9 @@ msgid ""
 "submodules>` are also taken into account. The platform looks for such files "
 "in the parent folder of each folder containing an Odoo module."
 msgstr ""
+"Os arquivos :file:`requirements.txt` de :ref:`submódulos <odoo-sh/advanced/"
+"submodules>` também são levados em consideração. A plataforma procura por "
+"esses arquivos na pasta pai de cada pasta que contenha um módulo do Odoo."
 
 #: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
@@ -1389,16 +1408,21 @@ msgid ""
 "`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 msgstr ""
+"Como os contêineres são baseados no Ubuntu, sua estrutura de diretórios "
+"segue o `Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_."
 
 #: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
 "`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
 "LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
+"`Documentação dos diretórios principais do Ubuntu <https://help.ubuntu.com/"
+"community/LinuxFilesystemTreeOverview#Main_directories>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:44
 msgid "The directories relevant to Odoo.sh are the following:"
-msgstr ""
+msgstr "Os diretórios relevantes para o Odoo.sh são os seguintes:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
@@ -1409,6 +1433,8 @@ msgid ""
 "While accessing a container with the shell, you can access the database "
 "using the `psql` command."
 msgstr ""
+"Ao acessar um contêiner pelo shell, você pode acessar a base de dados usando "
+"o comando `psql`."
 
 #: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
@@ -1419,6 +1445,12 @@ msgid ""
 "safety net in case of a mistake. You simply have to rollback your changes to "
 "revert your database to its previous state."
 msgstr ""
+"Sempre use `transações <https://www.postgresql.org/docs/current/static/sql-"
+"begin.html>`_ (ex.: `BEGIN` (...) `COMMIT` / `ROLLBACK`) quando uma "
+"instrução SQL resultar em alterações (ex.: `UPDATE`, `DELETE`, `ALTER` etc.)"
+", especialmente para a sua base de dados de produção. O mecanismo de "
+"transações é a sua rede de segurança em caso de erro. Basta reverter as "
+"alterações para restaurar a base de dados ao estado anterior."
 
 #: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
@@ -1426,22 +1458,30 @@ msgid ""
 "lock records in your tables, and a running database may wait for them to be "
 "released, causing a server to hang indefinitely."
 msgstr ""
+"Não se esqueça de confirmar (commit) ou reverter (rollback) as transações. "
+"Transações abertas podem bloquear registros em suas tabelas, e uma base de "
+"dados em execução pode aguardar sua liberação, fazendo com que o servidor "
+"trave indefinidamente."
 
 #: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
 "In addition, use your staging databases to test your statements first. It "
 "gives you an extra safety net."
 msgstr ""
+"Além disso, use suas bases de dados de staging para testar as instruções "
+"primeiro. Isso oferece uma margem de segurança adicional."
 
 #: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
 "You forgot to set your `WHERE` condition. In such a case, you can rollback "
 "to revert the unwanted change:"
 msgstr ""
+"Você se esqueceu de definir a condição `WHERE`. Nesse caso, pode fazer "
+"rollback para reverter a alteração indesejada:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:120
 msgid "Then, rewrite the statement and commit the change:"
-msgstr ""
+msgstr "Em seguida, reescreva a instrução e faça o commit da alteração:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
@@ -1453,6 +1493,9 @@ msgid ""
 "able to access it from the outside world with a web browser, but you can, "
 "for example:"
 msgstr ""
+"Você pode iniciar uma instância do servidor Odoo a partir do shell do "
+"contêiner. Não será possível acessá-la externamente com um navegador web, "
+"mas você pode, por exemplo:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
@@ -1809,7 +1852,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:350
 msgid "IP address change"
-msgstr ""
+msgstr "Alteração de endereço IP"
 
 #: ../../content/administration/odoo_sh/advanced.rst:352
 msgid ""
@@ -1830,6 +1873,9 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
+"Esse mecanismo permite que ações personalizadas sejam acionadas em resposta "
+"à alteração do endereço IP (por exemplo, envio de e-mail, contato com uma "
+"API de firewall, configuração de objetos de banco de dados etc.)"
 
 #: ../../content/administration/odoo_sh/advanced.rst:360
 msgid ""
@@ -3995,6 +4041,10 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"O objetivo dos backups manuais é criar um snapshot específico de bases de "
+"dados de produção ou de staging (não disponível para desenvolvimento). Eles "
+"permanecem disponíveis por três dias. No entanto, há um limite de cinco "
+"backups manuais diários."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -6493,6 +6543,9 @@ msgid ""
 "you can alternatively open port `443` **and** add the following line to your "
 "Odoo configuration file:"
 msgstr ""
+"Se as suas políticas internas não permitirem conexões de saída na porta "
+"`80`, como alternativa, você poderá abrir a porta `443` **e** adicionar a "
+"seguinte linha ao seu arquivo de configuração do Odoo:"
 
 #: ../../content/administration/on_premise.rst:78
 msgid "Too many users error"
@@ -9849,13 +9902,15 @@ msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:10
 msgid "Odoo supports every major version in two phases:"
-msgstr ""
+msgstr "O Odoo oferece suporte a todas as versões principais em duas fases:"
 
 #: ../../content/administration/standard_extended_support.rst:12
 msgid ""
 "**Standard support** covers the first three years after release. It is "
 "available on Odoo Online, Odoo.sh, and on-premise."
 msgstr ""
+"O **suporte padrão** cobre os três primeiros anos após o lançamento. Ele "
+"está disponível no Odoo Online, no Odoo.sh e on-premise."
 
 #: ../../content/administration/standard_extended_support.rst:14
 msgid ""
@@ -9863,6 +9918,9 @@ msgid ""
 "additional fee. It is available only on Odoo.sh (for a limited number of "
 "versions) and on-premise (for any version)."
 msgstr ""
+"O **suporte estendido** começa quando o suporte padrão termina e requer uma "
+"taxa adicional. Ele está disponível apenas no Odoo.sh (para um número "
+"limitado de versões) e on-premise (para qualquer versão)."
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
@@ -9870,6 +9928,10 @@ msgid ""
 "include helpdesk support and bug fixes. During extended support, fixes are "
 "provided only where technically feasible."
 msgstr ""
+"As atualizações de segurança são fornecidas apenas durante o suporte padrão. "
+"Ambas as fases incluem suporte da Central de Ajuda e correções de bugs. "
+"Durante o suporte estendido, as correções são fornecidas apenas quando for "
+"tecnicamente viável."
 
 #: ../../content/administration/standard_extended_support.rst:21
 msgid ""
@@ -9877,6 +9939,9 @@ msgid ""
 "three months. They are only available on Odoo Online and are not eligible "
 "for extended support."
 msgstr ""
+"As **versões SaaS** (também chamadas de versões *Online*) são lançadas a "
+"cada dois ou três meses. Elas estão disponíveis apenas no Odoo Online e não "
+"são qualificadas para suporte estendido."
 
 #: ../../content/administration/standard_extended_support.rst:23
 msgid ""
@@ -9884,12 +9949,17 @@ msgid ""
 "version still under standard support, or that reached the end of standard "
 "support less than six months ago."
 msgstr ""
+"Você pode `fazer upgrade <https://upgrade.odoo.com>`_ de qualquer versão "
+"para qualquer versão principal ainda sob suporte padrão ou que tenha "
+"atingido o fim do suporte padrão há menos de seis meses."
 
 #: ../../content/administration/standard_extended_support.rst:26
 msgid ""
 "The table below shows the support status of every version. Major versions "
 "are in bold."
 msgstr ""
+"A tabela abaixo mostra a situação do suporte de cada versão. As versões "
+"principais estão em negrito."
 
 #: ../../content/administration/standard_extended_support.rst:36
 msgid "Release date"
@@ -9901,20 +9971,20 @@ msgstr "Fim do suporte padrão"
 
 #: ../../content/administration/standard_extended_support.rst:38
 msgid "**Odoo 20.0**"
-msgstr ""
+msgstr "**Odoo 20.0**"
 
 #: ../../content/administration/standard_extended_support.rst:42
 #: ../../content/administration/standard_extended_support.rst:85
 msgid "September 2026"
-msgstr ""
+msgstr "Setembro de 2026"
 
 #: ../../content/administration/standard_extended_support.rst:43
 msgid "September 2029 (planned)"
-msgstr ""
+msgstr "Setembro de 2029 (planejado)"
 
 #: ../../content/administration/standard_extended_support.rst:44
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:46
 #: ../../content/administration/standard_extended_support.rst:47
@@ -9929,7 +9999,7 @@ msgstr "N/D"
 
 #: ../../content/administration/standard_extended_support.rst:48
 msgid "July 2026"
-msgstr ""
+msgstr "Julho de 2026"
 
 #: ../../content/administration/standard_extended_support.rst:50
 msgid "Odoo SaaS 19.3"
@@ -10033,7 +10103,7 @@ msgstr "|green| : Suporte padrão"
 
 #: ../../content/administration/standard_extended_support.rst:109
 msgid "|orange| : Extended support (additional fee)"
-msgstr ""
+msgstr "|orange| : Suporte estendido (taxa adicional)"
 
 #: ../../content/administration/standard_extended_support.rst:111
 msgid "|red| : Not supported"
