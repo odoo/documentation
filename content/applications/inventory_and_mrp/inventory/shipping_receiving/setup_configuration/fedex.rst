@@ -160,3 +160,7 @@ simulate future deliveries.
 
 Use production credentials for testing instead, and cancel the test requests through the FedEx
 platform after testing is complete.
+
+.. important::
+   FedEx shipments and requests cannot be made from a staging database. You must use a production
+   database to create shipments.
