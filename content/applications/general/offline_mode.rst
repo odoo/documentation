@@ -6,6 +6,9 @@ Offline mode
    Odoo’s offline mode provides a solution for short-term interruptions; it is not intended to offer
    full or long-term offline capabilities.
 
+.. seealso::
+   :ref:`Point of Sale offline mode <pos/use/offline-pos>`
+
 To ensure business continuity when connectivity is unreliable or unavailable, such as while
 commuting or when working in locations with poor or no coverage, Odoo makes certain functionality
 available offline for logged-in users.
