@@ -87,9 +87,16 @@ Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration
 
 - :guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <india/tds-tcs-threshold>`
   functionality along with account-based TDS/TCS section suggestions.
-- :guilabel:`Registered Under GST`: Select this if your business is registered under GST to access
-  GST-related features, including e-invoice, e-waybill, GST e-filing, fetch vendor e-invoiced
-  document and check GST number status.
+- :guilabel:`GST Registration Details`: Select the company's GST :guilabel:`Registration Type` to
+  access GST-related features, including e-invoice, e-waybill, GST e-filing, fetch vendor
+  e-invoiced document and check GST number status:
+
+  - :guilabel:`Regular Scheme`: Select if the business is registered as a regular GST taxpayer.
+  - :guilabel:`Composition Scheme`: Select if the business has opted for the :ref:`GST Composition
+    Scheme <india/composition>`.
+  - Leave the field empty if the business is not registered under GST (:guilabel:`Unregistered`).
+
+  Once a registration type is selected, enter the company's :guilabel:`GST Number`.
 - :guilabel:`E-Invoicing`: Connects to the :ref:`e-invoice <india/e-invoicing>` :abbr:`NIC
   (National Informatics Center)` portal to submit invoices.
 - :guilabel:`E-Way bill`: Connects to the :ref:`e-waybill <india/e-waybill>` :abbr:`NIC
@@ -105,12 +112,109 @@ Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration
    production environment. If you want to use the testing environment then keep the checkbox
    unchecked.
 
+.. _india/composition:
+
+GST Composition Scheme
+----------------------
+
+The **GST Composition Scheme** is a simplified tax mechanism for small taxpayers whose aggregate
+turnover does not exceed the limit set by the government (₹1.5 crore for suppliers of goods and ₹50
+lakh for service providers). Unlike regular taxpayers, composition dealers:
+
+- Pay tax at a fixed percentage of their turnover;
+- Cannot claim :abbr:`ITC (Input Tax Credit)` on their purchases;
+- Cannot collect tax from their customers or issue tax invoices. They issue a **Bill of Supply**
+  instead;
+- Cannot make inter-state outward supplies of goods.
+
+Composition dealers file the following returns:
+
+- **CMP-08**: quarterly statement used to declare and pay tax, due by the **18th of the month
+  following the quarter**.
+- **GSTR-4**: annual return, due by **30th April following the end of the financial year**.
+
+.. _india/composition-configuration:
+
+Configuration
+~~~~~~~~~~~~~
+
+To register a company under the composition scheme, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll down to the
+   :guilabel:`Indian Integration` section.
+#. In the :guilabel:`GST Registration Details` setting, set the :guilabel:`Registration Type` to
+   :guilabel:`Composition Scheme`.
+#. Enter the company's :guilabel:`GST Number`.
+#. Select the applicable composition :guilabel:`Tax Rate`:
+
+   - :guilabel:`1% for Manufacturers and Traders`
+   - :guilabel:`5% for Restaurants`
+   - :guilabel:`6% for Service Providers`
+
+#. Click :guilabel:`Save`.
+
+.. image:: india/composition-registration-details.png
+   :alt: GST Registration Details set to Composition Scheme
+
+When the :guilabel:`Composition Scheme` is selected, Odoo automatically:
+
+- Activates the taxes applicable to composition dealers, i.e., the purchase taxes without input tax
+  credit (:guilabel:`(No ITC)`), the reverse charge purchase taxes, and the nil-rated, exempt, and
+  non-GST taxes. All other GST taxes are archived;
+- Removes the default sales tax and sets :guilabel:`5% GST P (No ITC)` as the default purchase
+  tax;
+- Hides the features that do not apply to composition dealers: :guilabel:`E-Invoicing`,
+  :guilabel:`Fetch Vendor E-Invoiced Document`, :guilabel:`Disable B2C HSN Reporting`, and
+  :guilabel:`HSN/SAC Validation`;
+- Sets the tax return periodicity to quarterly if the :guilabel:`Indian - Accounting Reports`
+  (`l10n_in_reports`) module is installed.
+
+.. note::
+   The :guilabel:`E-Way bill`, :ref:`Check GST Number Status <india/gstin_status>`, and :ref:`GST
+   return filing <india/composition-returns>` features remain available for composition dealers.
+
+.. _india/composition-sales:
+
+Customer invoices
+~~~~~~~~~~~~~~~~~
+
+As composition dealers cannot collect tax from customers, leave the :guilabel:`Taxes` field empty
+on customer invoice lines. The tax due is computed on the turnover using the composition
+:guilabel:`Tax Rate` in the :ref:`CMP-08 report <india/cmp-08_report>`.
+
+When printed, the invoice PDF report is titled **Bill of Supply** and includes the mention
+:guilabel:`Composition Taxable Person - Not Eligible to Collect Tax on Supplies`.
+
+.. image:: india/composition-bill-of-supply.png
+   :alt: Bill of Supply issued by a composition dealer
+
+.. important::
+   Customer invoices with GST taxes or with an inter-state place of supply are flagged by the
+   :ref:`CMP-08 validation checks <india/cmp-08>`.
+
+.. _india/composition-purchases:
+
+Vendor bills
+~~~~~~~~~~~~
+
+As composition dealers cannot claim input tax credit, use the :guilabel:`(No ITC)` taxes on vendor
+bills (e.g., :guilabel:`5% GST P (No ITC)`). The GST amount is added to the cost of the purchased
+goods or services instead of being recorded as a recoverable tax.
+
+For purchases subject to the reverse charge mechanism, use the reverse charge purchase taxes. The
+tax payable on these purchases is reported in the :ref:`CMP-08 report <india/cmp-08_report>`.
+
 .. _india/e-invoicing:
 
 e-Invoice system
 ================
 
 Odoo is compliant with the **Indian Goods and Services Tax (GST) e-Invoice system** requirements.
+
+.. note::
+   The e-Invoice system is not available for companies registered under the :ref:`GST Composition
+   Scheme <india/composition>`, as composition dealers issue a **Bill of Supply** instead of a tax
+   invoice.
 
 Setup
 -----
@@ -487,8 +591,8 @@ Indian GST Service In Odoo
 
 Once you have enabled the :ref:`API access <india/gstr_api>` on the GST portal, :ref:`activate
 <india/indian-configuration>` the :guilabel:`GST E-Filing & Matching Feature` to start using GST
-Service. Then, in the :guilabel:`Registered Under GST` section, fill in the required :guilabel:`GST
-Username`.
+Service. Then, in the :guilabel:`GST Registration Details` setting, fill in the required
+:guilabel:`GST Username`.
 
    .. image:: india/gst-setup.png
       :alt: Please enter your GST portal Username as Username
@@ -509,6 +613,14 @@ To file a GST return, make sure the :ref:`GST E-Filing & Matching Feature
 - :guilabel:`Opening Date`: Starting date from which tax return periods are created.
 - :guilabel:`Fiscal Year End`: End date of the fiscal year (e.g., :guilabel:`31 March`).
 - :guilabel:`GSTIN Periodicity`: Frequency of return filing (e.g., :guilabel:`Monthly`).
+
+.. note::
+   Odoo generates the returns based on the company's :guilabel:`Registration Type`:
+
+   - :guilabel:`Regular Scheme`: :ref:`GSTR-1 <india/gstr-1>` and :ref:`GSTR-2B <india/gstr-2b>`
+     returns.
+   - :guilabel:`Composition Scheme`: :ref:`CMP-08 <india/cmp-08>` and :ref:`GSTR-4
+     <india/gstr-4>` returns.
 
 .. tip::
    Alternatively, go to :menuselection:`Accounting --> Reporting --> Tax Report`, click
@@ -642,10 +754,101 @@ Receive GSTR-2B tax reconciliation
    The :guilabel:`Complete` stage in the progress bar turns green, finalizing the bill
    reconciliation.
 
+.. _india/composition-returns:
+
+GST returns for composition dealers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Companies registered under the :ref:`GST Composition Scheme <india/composition>` file the
+:guilabel:`CMP-08` statement every quarter and the :guilabel:`GSTR-4` return every financial year.
+These returns are available on the :guilabel:`Tax Returns` once the :ref:`GST E-Filing & Matching
+Feature <india/indian-configuration>` is enabled.
+
+.. image:: india/composition-tax-returns.png
+   :alt: CMP-08 and GSTR-4 returns of a composition dealer
+
+.. important::
+   Odoo does not send the :guilabel:`CMP-08` and :guilabel:`GSTR-4` returns to the GST portal. Use
+   Odoo to review and validate the data, then file the return on the `GST portal
+   <https://services.gst.gov.in/services/login>`_.
+
+.. _india/cmp-08:
+
+Filing CMP-08 statement
+***********************
+
+To file a CMP-08 statement, follow these steps:
+
+#. Click the :guilabel:`CMP-08` return for the desired quarter.
+
+   .. note::
+      The CMP-08 statement must be filed by the **18th of the month following the quarter**.
+
+#. Odoo automatically performs validation checks to ensure compliance with the composition scheme
+   rules:
+
+   .. note::
+      The following types of validation issues can be raised:
+
+      - :guilabel:`Apply Appropriate Sale Tax`: Regular GST rates are not applicable on sales for composition dealers.
+      - :guilabel:`No Inter State Sale`: Composition dealers cannot make sales outside their home
+        state.
+
+   Click on any individual check to view and correct the related invoices. Once all checks are
+   reviewed, click :guilabel:`Validate`.
+
+#. Click :guilabel:`CMP-08` to review the :ref:`report <india/cmp-08_report>`. If applicable, click
+   the amounts of the :guilabel:`3.4 Interest, Late Fee, Penalty and Others (Manual)` line to enter
+   them manually.
+
+#. Pay the :guilabel:`3.3 Tax Payable` amount and file the CMP-08 statement on the GST portal.
+
+#. Click :guilabel:`Submit` to mark the return as submitted. Odoo attaches a PDF copy of the report
+   to the return.
+
+.. _india/gstr-4:
+
+Filing GSTR-4 annual return
+***************************
+
+To file a GSTR-4 annual return, follow these steps:
+
+#. Click the :guilabel:`GSTR-4` return for the desired financial year.
+
+   .. note::
+      The GSTR-4 return must be filed by **30th June following the end of the financial year**.
+
+#. Odoo automatically performs validation checks:
+
+   .. note::
+
+      - :guilabel:`All CMP-08 Filled`: All four :ref:`CMP-08 statements <india/cmp-08>` of the
+        financial year must be submitted before filing the GSTR-4 return.
+      - :guilabel:`Missing GST Treatment Type`: A GST treatment must be set on all invoices and bills.
+        Click the check to open the list of related contacts and set their :guilabel:`GST Treatment`.
+
+   Once all checks are reviewed, click :guilabel:`Validate`.
+
+#. Click :guilabel:`GSTR-4` to review the :ref:`report <india/gstr-4_report>`. If applicable, click
+   the amounts of the :guilabel:`(Manual)` lines (i.e., advances paid or adjusted, interest, and
+   late fees) to enter them manually.
+
+#. File the GSTR-4 return on the GST portal.
+
+#. Click :guilabel:`Submit` to mark the return as submitted. Odoo attaches a PDF copy of the report
+   to the return.
+
 .. _india/gstr_reports:
 
 Tax reports
 ===========
+
+The available GST reports depend on the company's :guilabel:`Registration Type`:
+
+- :guilabel:`Regular Scheme`: :ref:`GSTR-1 <india/gstr-1_report>`, :ref:`GSTR-2B
+  <india/gstr-2b_report>`, and :ref:`GSTR-3B <india/gstr-3b_report>` reports.
+- :guilabel:`Composition Scheme`: :ref:`CMP-08 <india/cmp-08_report>` and :ref:`GSTR-4
+  <india/gstr-4_report>` reports.
 
 .. _india/gstr-1_report:
 
@@ -685,6 +888,56 @@ The :guilabel:`GSTR-3B` report contains different sections:
 
    .. image:: india/gst-gstr-3b-report.png
       :alt: GSTR-3B Report
+
+.. _india/cmp-08_report:
+
+CMP-08 report
+-------------
+
+The :guilabel:`CMP-08` report is used by :ref:`composition dealers <india/composition>` to declare
+the tax payable for the quarter. It displays the :guilabel:`Base` amount, :abbr:`IGST (Integrated
+Goods and Services Tax)`, :abbr:`CGST (Central Goods and Services Tax)`, :guilabel:`SGST/UTGST`,
+and :guilabel:`CESS` for each section:
+
+- :guilabel:`3.1 Taxable Outward Supplies`: Intra-state sales without GST taxes. The CGST and SGST
+  amounts are computed by applying the composition :guilabel:`Tax Rate` to the turnover, split
+  equally between CGST and SGST.
+- :guilabel:`3.2 Inward Supplies attracting Reverse Charge including Import of Services`: Purchases
+  subject to the reverse charge mechanism, including the import of services.
+- :guilabel:`3.3 Tax Payable`: Sum of the :guilabel:`3.1` and :guilabel:`3.2` lines.
+- :guilabel:`3.4 Interest, Late Fee, Penalty and Others (Manual)`: Interest, late fees, and
+  penalties, to be entered manually.
+
+.. example::
+   A trader registered under the composition scheme with the :guilabel:`1% for Manufacturers and
+   Traders` tax rate makes intra-state sales of ₹10,00,000 during the quarter. The
+   :guilabel:`3.1 Taxable Outward Supplies` line displays a :guilabel:`Base` amount of ₹10,00,000,
+   a CGST amount of ₹5,000, and an SGST amount of ₹5,000.
+
+.. image:: india/cmp-08-report.png
+   :alt: CMP-08 Report
+
+.. _india/gstr-4_report:
+
+GSTR-4 report
+-------------
+
+The :guilabel:`GSTR-4` report is the annual return of :ref:`composition dealers
+<india/composition>`. It displays the :guilabel:`Base` amount, :abbr:`IGST (Integrated Goods and
+Services Tax)`, :abbr:`CGST (Central Goods and Services Tax)`, :guilabel:`SGST/UTGST`, and
+:guilabel:`CESS` for each section:
+
+- :guilabel:`4. Inward Supplies`: Purchases from registered persons (with and without reverse
+  charge), from unregistered persons, and import of services.
+- :guilabel:`5. Debit/Credit Notes (Inward Supplies)`: Debit and credit notes received from
+  registered and unregistered persons.
+- :guilabel:`6. Tax on Outward Supplies`: Turnover and tax payable on sales for the financial year.
+- :guilabel:`8. Advance Paid/Adjusted`: Advances paid and adjusted, to be entered manually.
+- :guilabel:`11. Interest, Late fee, Penalty and Others`: Interest and late fees, to be entered
+  manually.
+
+.. image:: india/gstr-4-report.png
+   :alt: GSTR-4 Report
 
 Profit and Loss (IN) report
 ---------------------------
