@@ -31,7 +31,7 @@ It should look something like the following.
       data-success-page="/contactus-thank-you"
       data-model_name="mail.mail">
       <div class="s_website_form_rows row s_col_no_bgcolor">
-            <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
+            <div class="form-group s_website_form_field col-12 s_website_form_dnone">
                <!-- Form fields -->
             </div>
       </div>
