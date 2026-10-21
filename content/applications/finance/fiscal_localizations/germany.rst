@@ -47,7 +47,8 @@ Odoo offers a service that is compliant with the help of `fiskaly <https://fiska
 *cloud-based solution*.
 
 .. important::
-   Since this solution is cloud-based, a working internet connection is required.
+   Offline functionality is supported wih Odoo. However, a working Internet connection is
+   recommended.
 
 .. note::
    The only VAT rates allowed are given by fiskaly. You can check these rates by consulting:
