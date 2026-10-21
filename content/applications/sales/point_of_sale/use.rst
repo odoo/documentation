@@ -466,6 +466,8 @@ Difference` field.
 Once configured, if a discrepancy exceeds this limit, the pop-up window displays the authorized
 threshold and instructs the user to contact a manager to approve the closing.
 
+.. _pos/use/offline-pos:
+
 Offline POS
 ===========
 
