@@ -392,8 +392,8 @@ To send event invites to potential attendees, navigate to the desired event form
 :menuselection:`Events app --> Events` and click the desired event. On the event form, click the
 :guilabel:`Invite` button.
 
-Doing so reveals a blank :ref:`email form <email_marketing/create_email>`. Customize the message by
-specifying a mailing type, subject, recipients, and the mail body.
+Doing so reveals a blank :ref:`email form <email_marketing/create-mailing>`. Customize the message
+by specifying a mailing type, subject, recipients, and the mail body.
 
 .. tip::
    Sending emails from Odoo is subject to a daily limit, which, by default, is 200. To learn more
