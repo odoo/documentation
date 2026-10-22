@@ -389,10 +389,11 @@ requires that electronic record-keeping systems - including the :doc:`point of s
 (also called **TSS** or **TSE**).
 
 Odoo offers a service that is compliant with the help of `fiskaly <https://fiskaly.com>`_, a
-*cloud-based solution*.
+cloud-based solution.
 
 .. important::
-   Since this solution is cloud-based, a working internet connection is required.
+   The Odoo Point of Sale offline functionality allows POS orders placed offline to remain
+   compliant. However, a working internet connection is recommended.
 
 .. note::
    The only VAT rates allowed are given by fiskaly. You can check these rates by consulting
