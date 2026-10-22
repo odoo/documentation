@@ -37,6 +37,21 @@ verify that the :guilabel:`Show Allocation` checkbox is enabled. Enabling this o
 displays the option to view an :ref:`allocation report
 <inventory/allocation_report/workflow/report>` for the specific operation.
 
+.. _inventory/allocation_report/configuration/allocation_location:
+
+Optional: Set allocation location
+---------------------------------
+
+Allocated units can also be sent to a dedicated location separate from stock until they are
+delivered or consumed. To configure this option, locate the *Locations* section on the desired
+:guilabel:`Operation Type` form, then select an internal location in the :guilabel:`Location for
+allocation` field.
+
+.. note::
+   The :guilabel:`Location for allocation` field only appears when the :guilabel:`Show Allocation`
+   option is enabled and the :doc:`Storage Locations <../inventory_management/use_locations>`
+   setting is active.
+
 .. _inventory/allocation_report/workflow:
 
 Workflow
@@ -63,13 +78,15 @@ by purchasing it or by manufacturing it.
 On the receipt from the |PO| or on the confirmed |MO|, users can open the allocation report, which
 displays the incoming product. Next to the product is a list of all applicable outgoing transfers
 (i.e., originating |SOs|/|MOs| containing the product) to which incoming units can be assigned.
-Assigning these units does not move any inventory. Instead, it allows the user to flexibly choose
-which demands to prioritize before actually receiving incoming units. When those units are received,
-the user can fulfill the original demands.
 
-.. note::
-   If multiple products are replenished through the |PO|/|MO|, the allocation report lists all
-   products with originating |SOs|/|MOs| available for reservation.
+.. important::
+   Assigning these units does not move any inventory. Instead, it allows the user to flexibly choose
+   which demands to prioritize before actually receiving incoming units. When those units are
+   received, the user can fulfill the original demands.
+
+   If a *Location for allocation* is configured, any allocated incoming quantity is first sent to
+   the specified location. Only after validating the incoming operation are these allocated units
+   picked from the allocation location.
 
 .. _inventory/allocation_report/workflow/confirm_demand:
 
@@ -120,9 +137,10 @@ it through a |PO| or by manufacturing it through an |MO|.
 Replenish through |PO|
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To create a |PO|, navigate to the **Purchase** app and click :guilabel:`New` to create a new Request
-for Quotation (RfQ). On the form, add the products in demand on the customers' |SOs| by clicking
-:guilabel:`Add a product` in the *Products* tab and specifying the required :guilabel:`Quantity`.
+To create a |PO|, navigate to the :menuselection:`Purchase` app and click :guilabel:`New` to create
+a new Request for Quotation (RfQ). On the form, add the products in demand on the customers' |SOs|
+by clicking :guilabel:`Add a product` in the *Products* tab and specifying the required
+:guilabel:`Quantity`.
 
 After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|.
 
@@ -170,7 +188,11 @@ each of these products is a list of originating |SOs|/|MOs| to which the product
 Each row of this list displays the :guilabel:`Quantity` of reservable units out of the total demand
 for the product. The quantity is highlighted if it cannot be reserved for the complete demand.
 
-The toggle button in the :guilabel:`Reserved` column allows the user to :ref:`allocate
+.. note::
+   Quantities already reserved for an outgoing order from existing stock cannot be allocated. The
+   report only lists the remaining unreserved quantity of each demand.
+
+The toggle button in the :guilabel:`Assigned` column allows the user to :ref:`allocate
 <inventory/allocation_report/workflow/report/allocate>` the specified quantity.
 
 A link to each |SO|/|MO| is included in the :guilabel:`For` column, along with its expected delivery
@@ -194,6 +216,11 @@ To allocate units for a product, click the toggle button in the :guilabel:`For` 
 
 Alternatively, to allocate all available units for *all* products across all |SOs|/|MOs|, click
 :guilabel:`Assign All` at the top.
+
+.. tip::
+   Incoming units can also be allocated from the product's :ref:`forecasted report
+   <inventory/forecast/report/allocate>` using the :guilabel:`Assign` and :guilabel:`Unassign` links
+   on each demand line.
 
 The quantity of reservable units for each product is automatically calculated in order, starting
 from the oldest |SO|/|MO|. This allows users to allocate as many units as available to fulfill the
@@ -317,3 +344,7 @@ product, its associated |SO|/|MO| number, and its customer (for |SOs|).
 
 .. image:: allocation_report/printed-labels.png
    :alt: Printed labels from an allocation report.
+
+.. seealso::
+   :ref:`Print labels for allocated products in the Barcode app
+   <barcode/receipts_deliveries/allocated-products>`
