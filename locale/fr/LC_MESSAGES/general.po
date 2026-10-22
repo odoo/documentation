@@ -19,10 +19,11 @@
 # Fernanda Marques <fem@odoo.com>, 2021
 # Cécile Collart <cco@odoo.com>, 2021
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Louis Travaux <lotr@odoo.com>, 2025.
 # "Manon Rondou (ronm)" <ronm@odoo.com>, 2025.
 # Odoo Translation Bot <c3p@odoo.com>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 #
@@ -31,8 +32,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-09 17:32+0000\n"
-"PO-Revision-Date: 2026-10-09 14:50+0000\n"
-"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"PO-Revision-Date: 2026-10-21 23:34+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/fr/>\n"
 "Language: fr\n"
@@ -2504,7 +2505,7 @@ msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/companies/multi_company.rst:181
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "Compensation inter-sociétés"
 
 #: ../../content/applications/general/companies/multi_company.rst:183
 msgid ""
@@ -2512,6 +2513,9 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"La fonctionnalité **Compensation inter-sociétés** automatise les écritures "
+"comptables lorsqu'une société reçoit un paiement pour une facture émise par "
+"une autre société au sein de la même base de données."
 
 #: ../../content/applications/general/companies/multi_company.rst:186
 msgid ""
@@ -2521,30 +2525,39 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"Lorsqu'un paiement est traité par une société secondaire, Odoo lettre "
+"automatiquement la facture client ouverte dans la société émettrice et crée "
+"des écritures inter-sociétés d'équilibrage entre les deux sociétés. Cette "
+"automatisation élimine le suivi manuel sur feuille de calcul et maintient "
+"les comptes inter-sociétés équilibrés en temps réel."
 
 #: ../../content/applications/general/companies/multi_company.rst:192
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "La **Société A** émet une facture client de 100 $."
 
 #: ../../content/applications/general/companies/multi_company.rst:194
 msgid "The customer pays via the customer portal belonging to **Company B**."
-msgstr ""
+msgstr "Le client paie via le portail client appartenant à la **Société B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:196
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "Dès réception du paiement, Odoo :"
 
 #: ../../content/applications/general/companies/multi_company.rst:198
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "Règle la créance client dans les **Sociétés A et B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:199
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
 msgstr ""
+"Reclasse la créance de la Société A en tant que créance envers la **Société "
+"B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:200
 msgid "Records Company B's received funds as a payable owed to **Company A**."
 msgstr ""
+"Enregistre les fonds reçus par la Société B comme une dette envers la "
+"**Société A**."
 
 #: ../../content/applications/general/companies/multi_company.rst:206
 msgid ""
@@ -2554,44 +2567,62 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"Le module :guilabel:`Paiement inter-sociétés - Comptabilité` "
+"(`account_payment_interco`) doit être :ref:`installé <general/install>` et "
+"la fonctionnalité :guilabel:`Transactions inter-sociétés` doit être activée "
+"**dans chaque société** concernée pour que les champs "
+":guilabel:`Compensation inter-sociétés` apparaissent dans les paramètres de "
+"la Comptabilité."
 
 #: ../../content/applications/general/companies/multi_company.rst:211
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
-msgstr ""
+msgstr "Aller à :menuselection:`Comptabilité --> Configuration --> Paramètres`."
 
 #: ../../content/applications/general/companies/multi_company.rst:212
 msgid "Scroll down to the :guilabel:`Default Accounts` section."
-msgstr ""
+msgstr "Faire défiler jusqu'à la section :guilabel:`Comptes par défaut`."
 
 #: ../../content/applications/general/companies/multi_company.rst:213
 msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
 msgstr ""
+"Sous :guilabel:`Compensation inter-sociétés`, définir les champs suivants "
+"pour la société actuellement active :"
 
 #: ../../content/applications/general/companies/multi_company.rst:216
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
 msgstr ""
+":guilabel:`Journal` : le journal dédié utilisé pour enregistrer les "
+"transferts de compensation entre entités."
 
 #: ../../content/applications/general/companies/multi_company.rst:217
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
 msgstr ""
+":guilabel:`Compte fournisseur` : le compte fournisseur de compensation "
+"utilisé pour enregistrer les dettes envers d'autres sociétés au sein de la "
+"base de données."
 
 #: ../../content/applications/general/companies/multi_company.rst:219
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
 msgstr ""
+":guilabel:`Compte client` : le compte client de compensation utilisé pour "
+"enregistrer les créances envers d'autres sociétés au sein de la base de "
+"données."
 
 #: ../../content/applications/general/companies/multi_company.rst:222
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
 msgstr ""
+"Passer aux autres sociétés concernées à l'aide du sélecteur de société dans "
+"le menu en haut à droite et répéter le processus pour chacune d'elles."
 
 #: ../../content/applications/general/companies/multi_company.rst:226
 msgid ""
@@ -2599,6 +2630,9 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"La méthode de paiement utilisée pour enregistrer le paiement client doit "
+"utiliser un :ref:`compte des encaissements en attente <accounting/journals/"
+"outstanding-accounts>` afin qu'une pièce comptable soit créée."
 
 #: ../../content/applications/general/companies/multi_company.rst:230
 msgid ""
@@ -2607,6 +2641,10 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`Créer <chart-of-account/create>` des comptes de compensation "
+"fournisseurs et clients uniques, distincts des comptes fournisseurs et "
+"clients utilisés pour les opérations générales, et activer l'option "
+":guilabel:`Non commercial` sur ces comptes."
 
 #: ../../content/applications/general/companies/multi_company.rst:237
 msgid "Use cases"
@@ -2944,11 +2982,20 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Pour les e-mails entrants, après avoir ajouté votre propre domaine, "
+":ref:`les réponses des clients reviendront vers votre domaine <email-inbound-"
+"custom-domain>`, et vous devrez utiliser l'une des trois méthodes possibles "
+"pour réintégrer les e-mails dans Odoo (en utilisant soit un :ref:`serveur de "
+"messagerie entrant <email-inbound-custom-domain-incoming-server>`, une "
+":ref:`redirection/transfert <email-inbound-custom-domain-redirections>` ou "
+":ref:`un sous-domaine <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Gérer les messages entrants <email_communication/email_servers_inbound>"
+"`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3988,6 +4035,13 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"Lors de l'envoi d'un e-mail, le serveur de messagerie d'Odoo inclut une "
+"signature :abbr:`DKIM (DomainKeys Identified Mail)` unique dans les en-"
+"têtes. Le serveur du destinataire déchiffre cette signature à l'aide de "
+"l'enregistrement DKIM figurant dans le nom de domaine de la base de données. "
+"Si la signature et la clé contenue dans l'enregistrement correspondent, cela "
+"prouve que le message est authentique et n'a pas été altéré pendant le "
+"transport."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -4002,6 +4056,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Pour activer DKIM, ajouter un enregistrement :abbr:`CNAME (Canonical Name)` "
+"à la zone :abbr:`DNS (Domain Name System)` du nom de domaine :"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -4009,6 +4065,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Si le nom de domaine est `company-name.com`, veiller à créer un sous-domaine "
+"`odoo._domainkey.company-name.com` dont le nom canonique est "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -4028,6 +4087,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Vérifier si l'enregistrement DKIM est valide à l'aide d'un outil tel que "
+"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Saisir "
+"`example.com:odoo` dans l'outil de recherche DKIM, en précisant que le "
+"sélecteur testé est `odoo` pour le domaine personnalisé `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -4150,6 +4213,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`GoDaddy : ajouter un enregistrement CNAME <https://www.godaddy.com/help/add-"
+"a-cname-record-19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4527,6 +4592,9 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Pour plus d'informations sur la configuration des enregistrements DNS pour "
+"les sous-domaines, consulter :ref:`Configuration des enregistrements DNS "
+"<dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4643,7 +4711,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Enregistrements DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4664,6 +4732,11 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Pour les **bases de données on-premise**, les méthodes de redirection et "
+"d'enregistrement DNS nécessitent également la configuration du :doc:`script "
+"de passerelle de messagerie <../../../../administration/on_premise/"
+"email_gateway>`. L'utilisation de ce script requiert des **connaissances "
+"techniques et d'infrastructure avancées**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4932,7 +5005,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "Enregistrements DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4941,6 +5014,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Une troisième option consiste à utiliser un sous-domaine dédié (par exemple, "
+"`mail.mydomain.com`) et à configurer ses enregistrements DNS afin que les e-"
+"mails envoyés aux adresses de ce sous-domaine soient gérés par Odoo et "
+"traités directement au sein de votre base de données."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4948,6 +5025,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Pour Odoo Online et Odoo.sh, le routage basé sur CNAME n'est pris en charge "
+"que lors de l'utilisation d'un sous-domaine dédié. Il ne peut pas être "
+"configuré sur votre domaine racine (par exemple, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4955,12 +5035,18 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Noter que ce sous-domaine sera dédié au trafic de messagerie. En cas d'accès "
+"via un navigateur Web, les utilisateurs seront redirigés vers le premier "
+"site Web configuré sur la base de données (le cas échéant)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Puisqu'un nouveau sous-domaine est configuré pour le courrier entrant, ses "
+":doc:`enregistrements DNS doivent également être configurés pour le courrier "
+"sortant <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4970,7 +5056,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Accéder à vos paramètres DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4978,34 +5064,45 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Si votre domaine est hébergé auprès d'un registraire tiers (par exemple, "
+"GoDaddy, Namecheap, Cloudflare), se connecter au registraire et ouvrir la "
+"zone de gestion DNS de votre domaine."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Si Odoo gère votre DNS :"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
 msgstr ""
+"Ouvrir le `gestionnaire de bases de données <https://www.odoo.com/my/"
+"databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Cliquer sur l'icône :icon:`fa-gear` (:guilabel:`engrenage`) à côté de la "
+"base de données et choisir :icon:`fa-globe` :guilabel:`Noms de domaine`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
 msgstr ""
+"Cliquer sur :guilabel:`DNS`, puis sur :guilabel:`Ajouter un enregistrement "
+"DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Créer un enregistrement CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
 msgstr ""
+"**Nom / Hôte :** le sous-domaine que vous souhaitez utiliser (par exemple, "
+"`mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -5013,10 +5110,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Contenu / Cible :** le domaine racine de votre base de données (par "
+"exemple, `dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Ajouter le sous-domaine à votre portail Odoo"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -5024,6 +5123,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Dans le `gestionnaire de bases de données <https://www.odoo.com/my/databases>"
+"`_, cliquer sur l'icône :icon:`fa-gear` (:guilabel:`engrenage`) de votre "
+"base de données et sélectionner :icon:`fa-globe` :guilabel:`Noms de domaine`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -5031,6 +5133,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Cliquer sur :guilabel:`Utiliser mon propre domaine`, saisir le sous-domaine "
+"complet (par exemple, `mail.mydomain.com`). Une fois la vérification "
+"réussie, cliquer sur :guilabel:`Je confirme, c'est fait`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -5040,16 +5145,23 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Si la vérification échoue, vérifier que la cible CNAME se termine par un "
+"point final (par exemple, `dbname.odoo.com.`), car certains fournisseurs DNS "
+"l'exigent. Prévoir également un délai de propagation pour les modifications "
+"DNS — cela peut prendre de quelques minutes à 48 heures selon votre "
+"fournisseur. Une fois la propagation terminée, réessayer la vérification."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Ajouter le domaine alias à la base de données"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
 msgstr ""
+"Se connecter à la base de données et ouvrir l'application "
+":guilabel:`Paramètres`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -5057,38 +5169,50 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"Dans le champ :guilabel:`Domaine alias`, saisir le sous-domaine configuré "
+"(par exemple, `mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Ajout d'un domaine alias dans les paramètres."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"Dans la section :guilabel:`Noms de domaine`, le sous-domaine devrait "
+"apparaître comme suit :"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
 msgstr ""
+"Exemple de configuration des enregistrements de noms de domaine dans le "
+"portail Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
 msgstr ""
+"Dans la section :guilabel:`DNS`, les enregistrements devraient apparaître "
+"comme suit :"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Exemple de configuration des enregistrements DNS dans le portail Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"Le second enregistrement permet à Odoo d'envoyer des e-mails authentifiés "
+"depuis votre domaine personnalisé."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+":doc:`Configurer les enregistrements DNS pour envoyer des e-mails dans Odoo "
+"<email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -5100,26 +5224,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Connectez-vous à votre registraire tiers (par exemple, GoDaddy, Namecheap, "
+"Cloudflare) et ouvrez la zone de gestion DNS de votre domaine."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Ajouter le sous-domaine aux paramètres Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Connectez-vous à la plateforme Odoo.sh et ouvrez votre projet."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Sélectionnez la branche de production, allez à l'onglet "
+":guilabel:`Paramètres` et repérez la section **Domaines personnalisés**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Saisissez le sous-domaine complet (par ex. `mail.mydomain.com`) et cliquez "
+"sur :guilabel:`Ajouter un domaine`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -5133,6 +5263,10 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Au lieu d'un enregistrement CNAME, vous pouvez également créer un "
+"enregistrement MX pour votre sous-domaine (par ex. `mail`), pointant vers "
+"`dbname.odoo.com.` avec une priorité de `10`. Le reste des étapes de "
+"configuration reste identique."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -5140,6 +5274,10 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Notez que, contrairement à CNAME, un enregistrement MX n'hérite pas du SPF "
+"ni des autres enregistrements DNS du domaine cible. Vous devrez peut-être "
+"configurer ces éléments séparément pour que le courrier sortant soit "
+"correctement authentifié."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5566,6 +5704,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Enregistrements DNS <email-inbound-custom-domain-dns>` (nécessite des "
+"connaissances techniques avancées)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6740,6 +6880,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Pour plus d'informations sur les tâches cron avec Odoo.sh, consultez la "
+":ref:`documentation sur Odoo.sh et les actions planifiées <odoo-sh/advanced/"
+"scheduled>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8718,11 +8861,11 @@ msgstr ":guilabel:`Méthodes autorisées` : `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`En-têtes autorisés` : `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`En-têtes exposés` : `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8912,45 +9055,60 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odoo propose des intégrations de géolocalisation qui permettent de localiser "
+"des contacts ou des lieux et de générer des itinéraires sur une carte."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"La vue :ref:`Carte <studio/views/multiple-records/map>` est disponible par "
+"défaut. Aucune configuration n'est requise pour y accéder."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "Géolocaliser des contacts et des lieux"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"La fonctionnalité :guilabel:`Géolocalisation` génère des coordonnées de "
+"latitude et de longitude pour localiser précisément des emplacements. Elle "
+"peut être utilisée pour :"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"Vérifier les :ref:`lieux d'arrivée/de départ <attendances/check-in-out-"
+"details>` des employés dans l'application **Présences** ;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"Afficher le lieu de retrait lors de l'utilisation du :ref:`mode de livraison "
+"avec retrait sur place <ecommerce/shipping/instore-pickup>` ;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`Assigner des partenaires <contacts/partner-assignment>` dans "
+"l'application **Contacts** ;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avalara address validation <accounting/"
 "avalara/address-validation>` feature."
 msgstr ""
+"Valider les adresses avec la fonctionnalité de :ref:`validation d'adresses "
+"Avalara <accounting/avalara/address-validation>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8960,10 +9118,15 @@ msgid ""
 "Then, in the :guilabel:`API:` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"Pour activer la fonctionnalité :guilabel:`Géolocalisation`, aller à "
+":menuselection:`Paramètres --> Paramètres généraux`, descendre jusqu'à la "
+"section :guilabel:`Intégrations` et activer :guilabel:`Géolocalisation`. "
+"Ensuite, dans le champ :guilabel:`API :`, sélectionner :guilabel:`Open "
+"Street Map` ou :guilabel:`Google Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8971,6 +9134,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap est une base de données géographique libre et gratuite, mise à "
+"jour et maintenue par des bénévoles. Aucune configuration supplémentaire "
+"n'est requise pour utiliser :guilabel:`Open Street Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -9004,7 +9170,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "Carte itinéraires"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -9333,7 +9499,7 @@ msgstr ":ref:`language/install`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:5
 msgid "Mail plugins"
-msgstr ""
+msgstr "Plugins de messagerie"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:7
 msgid ""
@@ -9360,13 +9526,15 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:18
 msgid "Mail plugin features"
-msgstr ""
+msgstr "Fonctionnalités du plugin de messagerie"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:21
 msgid ""
 "The options available in mail plugins will vary based on the applications "
 "installed in the database."
 msgstr ""
+"Les options disponibles dans les plugins de messagerie varient selon les "
+"applications installées sur la base de données."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:25
 msgid "Create a contact"
@@ -9377,6 +9545,8 @@ msgid ""
 "To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
 "circle` :guilabel:`(New)` icon."
 msgstr ""
+"Pour créer un enregistrement de contact dans Odoo à partir d'un e-mail, "
+"cliquer sur l'icône :icon:`fa-plus-circle` :guilabel:`(Nouveau)`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:31
 msgid ""
@@ -9398,6 +9568,11 @@ msgid ""
 "email is used as the opportunity title, and the content of the email is "
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
+"Pour créer une opportunité depuis un email, cliquer sur l'icône :icon:`fa-"
+"plus` :guilabel:`(plus)` à côté de :guilabel:`Opportunities`. Cela ouvre une "
+"nouvelle fiche opportunité dans Odoo dans un nouvel onglet. L'objet de "
+"l'email est utilisé comme titre de l'opportunité et le contenu de l'email "
+"est ajouté à l'onglet :guilabel:`Notes` de l'opportunité."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:42
 msgid "Create a task"
@@ -9412,6 +9587,13 @@ msgid ""
 "Odoo in a new tab. The subject of the email is used as the task title, and "
 "the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
+"Pour créer une tâche depuis un email, cliquer sur l'icône :icon:`fa-plus` "
+":guilabel:`(plus)` à côté de :guilabel:`Tasks`. Ensuite, saisir le titre du "
+"projet où la tâche doit être créée dans le champ correspondant et "
+"sélectionner le projet approprié dans la liste proposée. Cela ouvre une "
+"nouvelle fiche tâche dans Odoo dans un nouvel onglet. L'objet de l'email est "
+"utilisé comme titre de la tâche et le contenu de l'email est ajouté à "
+"l'onglet :guilabel:`Description`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:51
 msgid "Create a ticket"
@@ -9425,33 +9607,42 @@ msgid ""
 "the ticket title, and the content of the email is added to "
 "the :guilabel:`Description` tab of the ticket."
 msgstr ""
+"Pour créer un ticket à partir d'un e-mail, cliquer sur l'icône :icon:`fa-"
+"plus` :guilabel:`(Nouveau)` à côté de :guilabel:`Tickets`. Une nouvelle "
+"fiche de ticket s'ouvre alors dans Odoo dans un nouvel onglet. L'objet de "
+"l'e-mail est utilisé comme titre du ticket et le contenu de l'e-mail est "
+"ajouté à l'onglet :guilabel:`Description` du ticket."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:59
 msgid "Email providers"
-msgstr ""
+msgstr "Fournisseurs de messagerie"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:61
 msgid "Mail plugins are available for Outlook and Gmail:"
-msgstr ""
+msgstr "Des plugins de messagerie sont disponibles pour Outlook et Gmail :"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook plugin"
-msgstr ""
+msgstr "Plugin Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 msgid ""
 "Learn how to set up the Outlook plugin and connect it to an Odoo database."
 msgstr ""
+"Découvrir comment configurer le plugin Outlook et le connecter à une base de "
+"données Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid "Gmail plugin"
-msgstr ""
+msgstr "Plugin Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid ""
 "Learn how to set up the Gmail plugin and connect it to an Odoo database."
 msgstr ""
+"Découvrir comment configurer le plugin Gmail et le connecter à une base de "
+"données Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:3
 msgid "Gmail Plugin"
@@ -9463,6 +9654,10 @@ msgid ""
 "users to create Odoo records (such as opportunities, tasks, and tickets) "
 "directly in Gmail."
 msgstr ""
+"Le plugin Gmail connecte une base de données Odoo à une boîte de réception "
+"Gmail, ce qui permet aux utilisateurs de créer des enregistrements Odoo "
+"(tels que des opportunités, des tâches et des tickets) directement dans "
+"Gmail."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:9
 msgid ""
@@ -9492,10 +9687,14 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"Pour les versions de base de données antérieures à 19.2, consulter la "
+"`documentation 19.0 <https://www.odoo.com/documentation/19.0/applications/"
+"general/integrations/mail_plugins/gmail.html>`_ pour les instructions "
+"d'installation."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:26
 msgid "From the Google Workspace Marketplace"
-msgstr ""
+msgstr "Depuis Google Workspace Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:28
 msgid ""
@@ -9508,10 +9707,18 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Pour installer le plugin Odoo pour Gmail, se connecter au compte Gmail à "
+"associer à Odoo, puis accéder à la page `Odoo Inbox Addin <https://"
+"workspace.google.com/marketplace/app/odoo_inbox_addin/546131068990>`_ sur "
+"Google Workspace Marketplace. Cliquer sur :guilabel:`Installer` ; une "
+"fenêtre contextuelle apparaît. Cliquer sur :guilabel:`Continuer` et cocher "
+"la case à côté de :guilabel:`Tout sélectionner` pour accorder les "
+"autorisations nécessaires, puis cliquer une nouvelle fois sur "
+":guilabel:`Continuer` pour confirmer l'installation du plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:36
 msgid "From the Gmail inbox"
-msgstr ""
+msgstr "Depuis la boîte de réception Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:38
 msgid ""
@@ -9521,6 +9728,12 @@ msgid ""
 "chevron-left` :guilabel:`(Show side panel)` icon in the bottom-right corner "
 "of the inbox to expand it."
 msgstr ""
+"Le plugin peut également être installé directement depuis la boîte de "
+"réception Gmail. Pour ce faire, cliquer sur l'icône :icon:`fa-plus` "
+":guilabel:`(Télécharger des modules complémentaires)` dans le panneau "
+"latéral droit. Si le panneau latéral n'est pas visible, cliquer sur l'icône "
+":icon:`fa-chevron-left` :guilabel:`(Afficher le panneau latéral)` dans le "
+"coin inférieur droit de la boîte de réception pour le développer."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Plus sign icon on the Gmail inbox side panel."
@@ -9530,10 +9743,12 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:46
 msgid "Click :guilabel:`Search apps`, then type `Odoo` and press Enter."
 msgstr ""
+"Cliquer sur :guilabel:`Rechercher des applications`, puis saisir `Odoo` et "
+"appuyer sur Entrée."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Odoo Inbox Addin in Google Workspace Marketplace."
-msgstr ""
+msgstr "Odoo Inbox Addin dans Google Workspace Marketplace."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:51
 msgid ""
@@ -9543,17 +9758,25 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Cliquer sur :guilabel:`Odoo Inbox Addin`, puis cliquer sur "
+":guilabel:`Installer` et une fenêtre contextuelle apparaît. Cliquer sur "
+":guilabel:`Continuer` et cocher la case à côté de :guilabel:`Tout "
+"sélectionner` pour accorder les autorisations nécessaires, puis cliquer sur "
+":guilabel:`Continuer` une nouvelle fois pour confirmer l'installation du "
+"plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
 msgid ""
 "If the plugin does not appear in the side panel after installation, refresh "
 "the page."
 msgstr ""
+"Si le plugin n'apparaît pas dans le panneau latéral après l'installation, "
+"actualiser la page."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:60
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:49
 msgid "Connect an Odoo database"
-msgstr ""
+msgstr "Connecter une base de données Odoo"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:62
 msgid ""
@@ -9564,6 +9787,14 @@ msgid ""
 "account, and a pop-up window opens. Click :guilabel:`Allow` in the pop-up "
 "window to let the Gmail plugin connect to the database."
 msgstr ""
+"Pour ouvrir le plugin, cliquer sur l'icône Odoo dans le panneau latéral "
+"droit. Le panneau du plugin s'ouvre entre la boîte de réception et le "
+"panneau latéral droit. Cliquer sur :guilabel:`Connexion`. Saisir l'URL de la "
+"base de données Odoo et cliquer sur :guilabel:`Connexion`, ou cliquer sur "
+":guilabel:`S'inscrire` pour créer un compte Odoo, et une fenêtre "
+"contextuelle s'ouvre. Cliquer sur :guilabel:`Autoriser` dans la fenêtre "
+"contextuelle pour autoriser le plugin Gmail à se connecter à la base de "
+"données."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
 msgid ""
@@ -9582,6 +9813,10 @@ msgid ""
 "enables users to create Odoo records (such as opportunities, tasks, and "
 "tickets) directly in Outlook."
 msgstr ""
+"Le plugin Outlook connecte une base de données Odoo à une boîte de réception "
+"Outlook, ce qui permet aux utilisateurs de créer des enregistrements Odoo "
+"(tels que des opportunités, des tâches et des tickets) directement dans "
+"Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:9
 msgid ""
@@ -9596,7 +9831,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:16
 msgid "Install the Outlook plugin"
-msgstr ""
+msgstr "Installer le plugin Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:22
 msgid ""
@@ -9604,10 +9839,14 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"Pour les versions de base de données antérieures à 19.2, consulter la "
+"`documentation 19.0 <https://www.odoo.com/documentation/19.0/applications/"
+"general/integrations/mail_plugins/outlook.html>`_ pour les instructions "
+"d'installation."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:27
 msgid "From the Microsoft Marketplace"
-msgstr ""
+msgstr "Depuis le Microsoft Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:29
 msgid ""
@@ -9620,10 +9859,19 @@ msgid ""
 "the Outlook inbox. Click :guilabel:`Add` to confirm the installation of the "
 "plugin."
 msgstr ""
+"Pour installer le plugin Odoo Outlook, se rendre sur la page `Odoo Inbox "
+"Addin <https://marketplace.microsoft.com/en-us/product/"
+"WA200009923?tab=Overview>`_ du Microsoft Marketplace et cliquer sur "
+":guilabel:`Obtenir maintenant`. Se connecter au compte Outlook à associer à "
+"Odoo. Remplir les champs :guilabel:`Nom` et :guilabel:`Pays / région`, puis "
+"cliquer sur :guilabel:`Obtenir maintenant` une nouvelle fois pour accorder "
+"les autorisations nécessaires, et la page redirige vers la boîte de "
+"réception Outlook. Cliquer sur :guilabel:`Ajouter` pour confirmer "
+"l'installation du plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid "From the Outlook inbox"
-msgstr ""
+msgstr "Depuis la boîte de réception Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
 msgid ""
@@ -9634,10 +9882,18 @@ msgid ""
 "Click :guilabel:`Odoo Inbox Addin`, then click :guilabel:`Add` to confirm "
 "the installation of the plugin."
 msgstr ""
+"Il est également possible d'installer le plugin directement depuis la boîte "
+"de réception Outlook. Pour ce faire, ouvrir un e-mail dans la boîte de "
+"réception Outlook, cliquer sur le bouton :guilabel:`Applications` dans le "
+"coin supérieur droit de l'e-mail, puis cliquer sur :guilabel:`Obtenir des "
+"compléments`. Cliquer sur :guilabel:`Rechercher des compléments`, puis "
+"saisir `Odoo` et appuyer sur Entrée. Cliquer sur :guilabel:`Odoo Inbox "
+"Addin`, puis cliquer sur :guilabel:`Ajouter` pour confirmer l'installation "
+"du plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Apps button in the Outlook inbox."
-msgstr ""
+msgstr "Bouton Applications dans la boîte de réception Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:51
 msgid ""
@@ -9645,6 +9901,9 @@ msgid ""
 "corner of any email, and select :guilabel:`Odoo`. The plugin panel opens to "
 "the right of the email."
 msgstr ""
+"Pour ouvrir le plugin, cliquer sur le bouton :guilabel:`Applications` dans "
+"le coin supérieur droit de n'importe quel e-mail et sélectionner "
+":guilabel:`Odoo`. Le panneau du plugin s'ouvre à droite de l'e-mail."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:54
 msgid ""
@@ -9653,6 +9912,11 @@ msgid ""
 "and a pop-up window opens. Click :guilabel:`Allow` in the pop-up window to "
 "let the Outlook plugin connect to the database."
 msgstr ""
+"Saisir l'URL de la base de données Odoo et cliquer sur "
+":guilabel:`Connexion`, ou cliquer sur :guilabel:`S'inscrire` pour créer un "
+"compte Odoo. Cliquer sur :guilabel:`Autoriser` et une fenêtre contextuelle "
+"s'ouvre. Cliquer sur :guilabel:`Autoriser` dans la fenêtre contextuelle pour "
+"autoriser le plugin Outlook à se connecter à la base de données."
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -10050,6 +10314,9 @@ msgid ""
 "Connect the IoT box to an external monitor or a USB printer. If the IoT box "
 "was already plugged prior to this, :ref:`restart it <iot/iot-box/homepage>`."
 msgstr ""
+"Connecter l'IoT Box à un moniteur externe ou à une imprimante USB. Si l'IoT "
+"Box était déjà branchée avant cela, :ref:`la redémarrer <iot/iot-box/"
+"homepage>`."
 
 #: ../../content/applications/general/iot/connect.rst:64
 msgid ""
@@ -10226,6 +10493,12 @@ msgid ""
 "https_certificate>` :guilabel:`End Date`. By default, drivers are "
 "automatically updated every time the IoT system is restarted."
 msgstr ""
+"Activer le :ref:`mode développeur <developer-mode>` pour accéder aux "
+":guilabel:`Informations techniques` du système IoT, telles que son "
+":guilabel:`Adresse de domaine`, sa :guilabel:`Version de l'image` et, pour "
+"son :ref:`Certificat SSL <iot/connect/https_certificate>`, sa "
+":guilabel:`Date de fin`. Par défaut, les pilotes sont automatiquement mis à "
+"jour à chaque redémarrage du système IoT."
 
 #: ../../content/applications/general/iot/connect.rst:127
 msgid ""
@@ -10367,6 +10640,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`Connecter un terminal de paiement Worldline/Axepta BNP Paribas <../../"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../content/applications/general/iot/devices.rst:23
 msgid ""
@@ -10569,7 +10844,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11820,6 +12095,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Les imprimantes DYMO Series 5 ne sont pas compatibles avec l':doc:`IoT Box "
+"<../iot_box>` et doivent être associées à un :doc:`IoT virtuel Windows <../"
+"windows_iot>`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:368
 msgid "DYMO LabelWriter not printing"
@@ -12196,6 +12474,13 @@ msgid ""
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Pour connecter une balance au système IoT, utiliser un câble USB. Dans "
+"certains cas, un adaptateur série-USB peut être nécessaire pour établir la "
+"connexion. Si la balance est `compatible avec un système IoT <https://"
+"www.odoo.com/page/iot-hardware>`_, aucune configuration supplémentaire n'est "
+"requise ; la balance est automatiquement détectée dès qu'elle est connectée. "
+"Si la balance n'est pas détectée, redémarrer l'IoT Box ou :ref:`redémarrer "
+"le service IoT virtuel Windows <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:17
 msgid ""
@@ -12203,6 +12488,9 @@ msgid ""
 "Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a "
 "different scale must be used."
 msgstr ""
+"Si la balance ne fonctionne toujours pas, il se peut qu'elle ne soit pas "
+"`compatible avec le système IoT d'Odoo <https://www.odoo.com/page/iot-"
+"hardware>`_. Dans ce cas, une autre balance doit être utilisée."
 
 #: ../../content/applications/general/iot/devices/scale.rst:21
 msgid ""
@@ -12251,10 +12539,16 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"Pour configurer la balance Ariva S pour la reconnaissance par le système "
+"IoT, consulter le `Guide d'installation Mettler pour les balances de la "
+"série Ariva S <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ et suivre les "
+"étapes suivantes :"
 
 #: ../../content/applications/general/iot/devices/scale.rst:44
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
 msgstr ""
+"Maintenir le bouton **>T<** enfoncé jusqu'à ce que :guilabel:`CONF` "
+"apparaisse."
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid ""
@@ -12268,12 +12562,17 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"À l'étape :guilabel:`3.1`, s'assurer que la valeur est définie sur "
+":guilabel:`1` (USB Virtual COM ports). Appuyer sur **>T<** pour faire "
+"défiler les options."
 
 #: ../../content/applications/general/iot/devices/scale.rst:48
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"Appuyer sur **>0<** jusqu'à :guilabel:`3.6` et s'assurer que la valeur est "
+"définie sur :guilabel:`3` (8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:50
 msgid ""
@@ -12305,6 +12604,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"Redémarrer l':doc:`IoT box <../iot_box>` ou :ref:`redémarrer le service IoT "
+"virtuel Windows <iot/windows_iot/restart>`. La balance devrait alors "
+"apparaître sous le nom `Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12507,6 +12809,10 @@ msgid ""
 "virtual IoT service <iot/windows_iot/restart>` to generate and display the "
 "pairing code."
 msgstr ""
+"Le délai d'affichage du :ref:`code de jumelage <iot/connect/pairing-code>` a "
+"expiré. Redémarrer l':ref:`IoT box <iot/iot-box/homepage>` ou le "
+":ref:`service IoT virtuel Windows <iot/windows_iot/restart>` pour générer et "
+"afficher le code de jumelage."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:22
 msgid "The IoT system does not connect to the database"
@@ -12535,6 +12841,8 @@ msgid ""
 "Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows "
 "virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Redémarrer l':ref:`IoT box <iot/iot-box/homepage>` ou le :ref:`service IoT "
+"virtuel Windows <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:33
 msgid "The IoT system is connected to the Odoo database but cannot be reached"
@@ -12649,12 +12957,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"Le système IoT est connecté et les rapports sont assignés à une imprimante "
+"qui ne peut pas imprimer"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Vérifier que le navigateur est autorisé à :ref:`accéder aux périphériques "
+"sur le réseau local <pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -12925,6 +13237,12 @@ msgid ""
 "the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
 "then :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
+"Les IoT Box et les Virtual IoT Box se mettent à jour automatiquement chaque "
+"semaine. Il est toujours possible de forcer une mise à jour si le système "
+"IoT ne semble pas être à jour en accédant à la :ref:`page d'accueil <iot/iot-"
+"box/homepage>`, en cliquant sur le bouton :icon:`fa-cogs` (:guilabel:`cogs`) "
+"en haut à droite, puis sur :guilabel:`Mettre à jour` dans la section "
+":guilabel:`Version`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:14
 msgid ""
@@ -12942,6 +13260,9 @@ msgid ""
 "which requires flashing the IoT box's SD card or uninstalling and "
 "reinstalling the Windows virtual IoT package."
 msgstr ""
+"Dans les cas extrêmes, il peut être nécessaire de réinitialiser complètement "
+"le système IoT, ce qui nécessite de flasher la carte SD de l'IoT box ou de "
+"désinstaller et réinstaller le paquet Windows virtuel IoT."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:26
 msgid ""
@@ -12964,6 +13285,9 @@ msgid ""
 "`Download balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (a free "
 "and open-source tool for writing disk images to SD cards)."
 msgstr ""
+"`Télécharger balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (un "
+"outil gratuit et open-source pour graver des images disque sur des cartes SD)"
+"."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:32
 msgid "Insert the IoT box's micro SD card into the computer or adapter."
@@ -13001,6 +13325,9 @@ msgid ""
 ":ref:`Uninstall the program <iot/windows_iot/uninstall>` and :ref:`reinstall "
 "<iot/windows-iot/installation>` the latest package."
 msgstr ""
+":ref:`Désinstaller le programme <iot/windows_iot/uninstall>` et "
+":ref:`réinstaller <iot/windows-iot/installation>` la dernière version du "
+"paquet."
 
 #: ../../content/applications/general/iot/iot_box.rst:5
 msgid "To start using an IoT box:"
@@ -13023,6 +13350,8 @@ msgid ""
 "`Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://"
 "www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 msgstr ""
+"`Vidéo : Comment configurer et utiliser l'Odoo IoT Box : Guide du débutant "
+"<https://www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 
 #: ../../content/applications/general/iot/iot_box.rst:19
 msgid "Network connection"
@@ -13041,6 +13370,8 @@ msgid ""
 "It is recommended to connect the IoT box to the same network as "
 "the :doc:`devices <devices>` it connects to."
 msgstr ""
+"Il est recommandé de connecter l'IoT box au même réseau que les "
+":doc:`appareils <devices>` auxquels elle se connecte."
 
 #: ../../content/applications/general/iot/iot_box.rst:29
 msgid ""
@@ -13093,6 +13424,9 @@ msgid ""
 "network name is in the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is "
 "a unique identifier)."
 msgstr ""
+"Accéder aux paramètres Wi-Fi de l'ordinateur et sélectionner le réseau de "
+"l'IoT box. Le nom du réseau est au format `IoTBox-xxxxxxxxxxxx` (où "
+"`xxxxxxxxxxxx` est un identifiant unique)."
 
 #: ../../content/applications/general/iot/iot_box.rst:51
 msgid ""
@@ -13100,6 +13434,9 @@ msgid ""
 "automatically open and redirect to the :ref:`IoT box's homepage <iot/iot-box/"
 "homepage>`."
 msgstr ""
+"Se connecter au réseau Wi-Fi de l'IoT box et s'y identifier ; le navigateur "
+"devrait s'ouvrir automatiquement et rediriger vers la :ref:`page d'accueil "
+"de l'IoT box <iot/iot-box/homepage>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:53
 msgid ""
@@ -13139,6 +13476,11 @@ msgid ""
 "and navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
+"Selon le système d'exploitation utilisé, il est possible que le navigateur "
+"ne s'ouvre pas et ne redirige pas vers la page d'accueil de l'IoT box. Dans "
+"ce cas, ouvrir le navigateur manuellement et se rendre à l'adresse `http://"
+"10.11.12.1` ou à toute URL commençant par **http** (par ex. `http://"
+"odoo.com`)."
 
 #: ../../content/applications/general/iot/iot_box.rst:71
 msgid ""
@@ -13149,6 +13491,13 @@ msgid ""
 "the :guilabel:`Internet Status` section, select the relevant Wi-Fi network, "
 "enter the password, and click :guilabel:`Connect`."
 msgstr ""
+"Si l'IoT box est connectée à un :doc:`écran externe <devices/screen>`, "
+"scanner le premier code QR affiché à l'écran pour se connecter au réseau, "
+"puis scanner le deuxième code QR pour accéder à la :ref:`page d'accueil <iot/"
+"iot-box/homepage>` de l'IoT box. Sur la page d'accueil, cliquer sur "
+":guilabel:`Configurer` dans la section :guilabel:`Statut Internet`, "
+"sélectionner le réseau Wi-Fi correspondant, saisir le mot de passe et "
+"cliquer sur :guilabel:`Connecter`."
 
 #: ../../content/applications/general/iot/iot_box.rst:80
 msgid "LED status"
@@ -13160,6 +13509,9 @@ msgid ""
 "that indicate its status and help with troubleshooting when no display is "
 "connected. The LEDs can be interpreted as follows:"
 msgstr ""
+"L'IoT box comporte deux voyants LED, situés à droite de l'emplacement de la "
+"carte SD, qui indiquent son statut et facilitent le dépannage lorsqu'aucun "
+"écran n'est connecté. Les voyants LED s'interprètent comme suit :"
 
 #: ../../content/applications/general/iot/iot_box.rst:85
 msgid ""
@@ -13167,12 +13519,17 @@ msgid ""
 "Ethernet cable is properly connected, or :ref:`connect the IoT box via Wi-Fi "
 "<iot/iot_box/network-wifi>`."
 msgstr ""
+"**LED rouge allumée** : l'IoT box n'est pas connectée à Internet. S'assurer "
+"que le câble Ethernet est correctement branché ou :ref:`connecter l'IoT box "
+"via Wi-Fi <iot/iot_box/network-wifi>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:87
 msgid ""
 "**Green LED flashing**: The IoT box is waiting to :doc:`connect to a "
 "database <connect>`."
 msgstr ""
+"**LED verte clignotante** : l'IoT box attend de :doc:`se connecter à une "
+"base de données <connect>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:88
 msgid ""
@@ -13193,6 +13550,11 @@ msgid ""
 "click :guilabel:`Homepage`, or open a browser on the device and navigate to "
 "the IoT box's IP address."
 msgstr ""
+"Pour accéder à la page d'accueil de l'IoT box sur un appareil, s'assurer "
+"d'abord que l'appareil se trouve sur le même réseau que l'IoT box. Ensuite, "
+"en cas d'utilisation de l'application IoT, cliquer sur :guilabel:`Page "
+"d'accueil`, ou ouvrir un navigateur sur l'appareil et accéder à l'adresse IP "
+"de l'IoT box."
 
 #: ../../content/applications/general/iot/iot_box.rst:None
 msgid "IoT box's homepage"
@@ -13203,6 +13565,8 @@ msgid ""
 "If the IP address is not already known, use any of the following methods to "
 "retrieve it:"
 msgstr ""
+"Si l'adresse IP n'est pas encore connue, utiliser l'une des méthodes "
+"suivantes pour la récupérer :"
 
 #: ../../content/applications/general/iot/iot_box.rst:106
 msgid ""
@@ -13210,6 +13574,9 @@ msgid ""
 "navigate to `http://iotbox.local`. The page automatically redirects to the "
 "homepage, which displays the IP address."
 msgstr ""
+"Tout en étant connecté au même réseau que l'IoT box, ouvrir un navigateur "
+"web et accéder à `http://iotbox.local`. La page redirige automatiquement "
+"vers la page d'accueil, qui affiche l'adresse IP."
 
 #: ../../content/applications/general/iot/iot_box.rst:109
 msgid ""
@@ -13217,24 +13584,34 @@ msgid ""
 "hardware>`_ using a USB cable, which then automatically prints a ticket with "
 "the IP address."
 msgstr ""
+"Connecter une `imprimante de reçus ou d'étiquettes prise en charge <https://"
+"www.odoo.com/app/iot-hardware>`_ à l'aide d'un câble USB, ce qui imprime "
+"ensuite automatiquement un ticket avec l'adresse IP."
 
 #: ../../content/applications/general/iot/iot_box.rst:111
 msgid ""
 "Connect the IoT box to an :doc:`external monitor <devices/screen>`, which "
 "then displays the IP address on the screen."
 msgstr ""
+"Connecter l'IoT box à un :doc:`moniteur externe <devices/screen>`, qui "
+"affiche ensuite l'adresse IP à l'écran."
 
 #: ../../content/applications/general/iot/iot_box.rst:113
 msgid ""
 "On IoT box images `L2026.05.25` and later, the IoT box IP address is "
 "displayed as a discovered Bluetooth device for 5 minutes after booting."
 msgstr ""
+"Sur les images d'IoT box `L2026.05.25` et ultérieures, l'adresse IP de l'IoT "
+"box s'affiche en tant qu'appareil Bluetooth détecté pendant 5 minutes après "
+"le démarrage."
 
 #: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
 "Access the router's administrator interface, or use third-party software to "
 "scan the network."
 msgstr ""
+"Accéder à l'interface d'administration du routeur ou utiliser un logiciel "
+"tiers pour analyser le réseau."
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT box's IP address"
@@ -13246,6 +13623,9 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"Pour redémarrer manuellement l'IoT box, accéder à la :ref:`page d'accueil "
+"<iot/iot-box/homepage>`, puis cliquer sur le bouton :icon:`fa-power-off` "
+":guilabel:`(éteindre)` dans le coin supérieur droit."
 
 #: ../../content/applications/general/iot/iot_box.rst:124
 msgid ""
@@ -13261,7 +13641,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:127
 msgid "To fully reboot the IoT box, unplug it and plug it back in."
-msgstr ""
+msgstr "Pour redémarrer complètement l'IoT box, la débrancher et la rebrancher."
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -13483,6 +13863,10 @@ msgid ""
 "the device does not appear, restart the IoT system from the :ref:`IoT "
 "system's homepage <iot/windows-iot/homepage>`."
 msgstr ""
+"Après avoir connecté les appareils à l'ordinateur, actualiser la :ref:`page "
+"d'accueil du système IoT <iot/windows-iot/homepage>` pour vérifier que "
+"l'appareil y figure. Si l'appareil n'apparaît pas, redémarrer le système IoT "
+"depuis la :ref:`page d'accueil du système IoT <iot/windows-iot/homepage>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:85
 msgid "Windows Firewall configuration"
@@ -13567,6 +13951,9 @@ msgid ""
 "port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/"
 "terminals/worldline_axepta` payment terminals."
 msgstr ""
+"D'autres ports peuvent être requis selon vos appareils IoT. Par exemple, "
+"ajouter le port `9050` pour les terminaux de paiement :doc:`/applications/"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:114
 msgid ""
@@ -13687,6 +14074,9 @@ msgid ""
 "Odoo’s offline mode provides a solution for short-term interruptions; it is "
 "not intended to offer full or long-term offline capabilities."
 msgstr ""
+"Le mode hors ligne d'Odoo offre une solution pour les interruptions de "
+"courte durée ; il n'est pas destiné à fournir des fonctionnalités hors ligne "
+"complètes ou à long terme."
 
 #: ../../content/applications/general/offline_mode.rst:9
 msgid ""
@@ -13695,6 +14085,10 @@ msgid ""
 "or no coverage, Odoo makes certain functionality available offline for "
 "logged-in users."
 msgstr ""
+"Pour assurer la continuité des activités lorsque la connectivité est "
+"instable ou indisponible, par exemple lors des déplacements ou en cas de "
+"travail dans des zones mal couvertes ou sans réseau, Odoo met certaines "
+"fonctionnalités à disposition hors ligne pour les utilisateurs connectés."
 
 #: ../../content/applications/general/offline_mode.rst:13
 msgid ""
@@ -13707,14 +14101,23 @@ msgid ""
 "Previously performed :ref:`search queries <general/offline-mode/search>` can "
 "be run again."
 msgstr ""
+"Dès que la connexion Internet n'est plus active, un bouton :guilabel:`Mode "
+"hors ligne` apparaît dans l'en-tête de la base de données. Les vues ou les "
+"enregistrements précédemment ouverts en ligne peuvent être rouverts, qu'ils "
+"aient été actifs ou non dans le navigateur au moment de la perte de "
+"connectivité. Les enregistrements peuvent être :ref:`modifiés, supprimés, "
+"archivés, désarchivés ou créés <general/offline-mode/records-create-udpate>"
+"`, sous réserve de certaines conditions. Les :ref:`requêtes de recherche "
+"<general/offline-mode/search>` précédemment effectuées peuvent être "
+"réexécutées."
 
 #: ../../content/applications/general/offline_mode.rst:20
 msgid "Items that are not available offline are grayed out."
-msgstr ""
+msgstr "Les éléments qui ne sont pas disponibles hors ligne sont grisés."
 
 #: ../../content/applications/general/offline_mode.rst:None
 msgid "Elements not available offline are grayed out"
-msgstr ""
+msgstr "Les éléments non disponibles hors ligne sont grisés"
 
 #: ../../content/applications/general/offline_mode.rst:25
 msgid ""
@@ -13722,6 +14125,10 @@ msgid ""
 "manage-changes>`; when connectivity is restored, changes are synced "
 "automatically and reflected in your database."
 msgstr ""
+"Toutes les modifications apportées hors ligne sont :ref:`mises en file "
+"d'attente localement <general/offline-mode/manage-changes>` ; lorsque la "
+"connectivité est rétablie, les modifications sont automatiquement "
+"synchronisées et répercutées dans votre base de données."
 
 #: ../../content/applications/general/offline_mode.rst:29
 msgid ""
@@ -13729,6 +14136,10 @@ msgid ""
 "expect to need, and perform any searches so they can still be accessed if/"
 "when connectivity is lost."
 msgstr ""
+"Si vous prévoyez des problèmes de connectivité, ouvrez brièvement les vues "
+"ou les enregistrements dont vous pensez avoir besoin et effectuez des "
+"recherches afin qu'ils restent accessibles si/lorsque la connectivité est "
+"perdue."
 
 #: ../../content/applications/general/offline_mode.rst:33
 msgid ""
@@ -13763,33 +14174,39 @@ msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:44
 msgid "Create and update records"
-msgstr ""
+msgstr "Créer et mettre à jour des enregistrements"
 
 #: ../../content/applications/general/offline_mode.rst:46
 msgid "When offline, records can be:"
-msgstr ""
+msgstr "Hors ligne, les enregistrements peuvent être :"
 
 #: ../../content/applications/general/offline_mode.rst:48
 msgid ""
 "created, provided a record of the same type was previously created while you "
 "were online"
 msgstr ""
+"créés, à condition qu'un enregistrement du même type ait été préalablement "
+"créé lorsque vous étiez en ligne"
 
 #: ../../content/applications/general/offline_mode.rst:49
 msgid ""
 "edited, deleted, archived, or unarchived, provided they were previously "
 "opened while you were online"
 msgstr ""
+"modifiés, supprimés, archivés ou désarchivés, à condition qu'ils aient été "
+"préalablement ouverts lorsque vous étiez en ligne"
 
 #: ../../content/applications/general/offline_mode.rst:53
 msgid ""
 "Attachments and images can be opened while offline, but cannot be uploaded "
 "or deleted."
 msgstr ""
+"Les pièces jointes et les images peuvent être ouvertes hors ligne, mais ne "
+"peuvent pas être téléversées ou supprimées."
 
 #: ../../content/applications/general/offline_mode.rst:58
 msgid "Perform searches"
-msgstr ""
+msgstr "Effectuer des recherches"
 
 #: ../../content/applications/general/offline_mode.rst:60
 msgid ""
@@ -13797,20 +14214,26 @@ msgid ""
 "offline. To repeat a previously performed search, click in the search bar, "
 "then choose from the available searches."
 msgstr ""
+"Les requêtes de recherche précédemment effectuées en ligne peuvent être "
+"répétées hors ligne. Pour répéter une recherche déjà effectuée, cliquer dans "
+"la barre de recherche, puis choisir parmi les recherches disponibles."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Previous executed searches available via search bar"
-msgstr ""
+msgstr "Recherches précédemment exécutées disponibles via la barre de recherche"
 
 #: ../../content/applications/general/offline_mode.rst:70
 msgid "Manage offline changes"
-msgstr ""
+msgstr "Gérer les modifications hors ligne"
 
 #: ../../content/applications/general/offline_mode.rst:72
 msgid ""
 "When you create or update a record offline, the changes are stored locally "
 "in a temporary queue until the internet connection is restored."
 msgstr ""
+"Lorsque vous créez ou mettez à jour un enregistrement hors ligne, les "
+"modifications sont stockées localement dans une file d'attente temporaire "
+"jusqu'à ce que la connexion Internet soit rétablie."
 
 #: ../../content/applications/general/offline_mode.rst:75
 msgid ""
@@ -13819,10 +14242,17 @@ msgid ""
 "record was :guilabel:`Created`, :guilabel:`Edited`, :guilabel:`Archived`, "
 "or :guilabel:`Unarchived`."
 msgstr ""
+"Pour afficher les modifications en attente tout en étant hors ligne, cliquer "
+"sur le bouton :guilabel:`Travailler hors ligne` ; les enregistrements "
+"modifiés sont listés, avec une étiquette indiquant si l'enregistrement a été "
+":guilabel:`Créé`, :guilabel:`Modifié`, :guilabel:`Archivé` ou "
+":guilabel:`Désarchivé`."
 
 #: ../../content/applications/general/offline_mode.rst:79
 msgid "Hovering over an :guilabel:`Edited` tag reveals the changes made."
 msgstr ""
+"Survoler une étiquette :guilabel:`Modifié` révèle les modifications "
+"apportées."
 
 #: ../../content/applications/general/offline_mode.rst:82
 msgid ""
@@ -13831,10 +14261,16 @@ msgid ""
 "name :guilabel:`user_id`) from `Mitchell Admin` to `Marc Demo` and "
 "the :guilabel:`Expected Revenue` from `9000` to `15000`."
 msgstr ""
+"Dans l'exemple, l'opportunité :guilabel:`Office Design and Architecture` a "
+"été modifiée pour changer le :guilabel:`Commercial` (nom technique du champ "
+":guilabel:`user_id`) de `Mitchell Admin` à `Marc Demo` et le "
+":guilabel:`Revenu espéré` de `9000` à `15000`."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Dropdown on Working offline button showing list of changes made offline"
 msgstr ""
+"Menu déroulant sur le bouton Travailler hors ligne montrant la liste des "
+"modifications apportées hors ligne"
 
 #: ../../content/applications/general/offline_mode.rst:90
 msgid ""
@@ -13843,10 +14279,16 @@ msgid ""
 "for example, if changes were made in error or in the wrong order, click "
 "the :icon:`fa-trash` :guilabel:`(Discard offline changes)` icon."
 msgstr ""
+"Pour apporter d'autres modifications à un enregistrement modifié tout en "
+"restant hors ligne, cliquer sur l'enregistrement pour l'ouvrir localement. "
+"Pour annuler les modifications en attente tout en restant hors ligne, par "
+"exemple si des modifications ont été effectuées par erreur ou dans le "
+"mauvais ordre, cliquer sur l'icône :icon:`fa-trash` :guilabel:`(Ignorer les "
+"modifications hors ligne)`."
 
 #: ../../content/applications/general/offline_mode.rst:97
 msgid "Disable offline mode for specific views"
-msgstr ""
+msgstr "Désactiver le mode hors ligne pour des vues spécifiques"
 
 #: ../../content/applications/general/offline_mode.rst:99
 msgid ""
@@ -13855,20 +14297,26 @@ msgid ""
 "specific view and, as a result, make the view unavailable offline, follow "
 "these steps:"
 msgstr ""
+"Dans certains cas, par exemple pour les vues de rapport, l'affichage "
+"d'informations obsolètes ou mises en cache peut ne pas être approprié. Pour "
+"désactiver la mise en cache des données pour une vue spécifique et, par "
+"conséquent, rendre la vue indisponible hors ligne, procéder comme suit :"
 
 #: ../../content/applications/general/offline_mode.rst:103
 msgid "Open the view in question."
-msgstr ""
+msgstr "Ouvrir la vue en question."
 
 #: ../../content/applications/general/offline_mode.rst:104
 msgid "Activate :ref:`developer mode <developer-mode>`."
-msgstr ""
+msgstr "Activer le :ref:`mode développeur <developer-mode>`."
 
 #: ../../content/applications/general/offline_mode.rst:105
 msgid ""
 "Click the :icon:`fa-bug` :guilabel:`(bug)` icon in the database header, then "
 "select :guilabel:`Action`."
 msgstr ""
+"Cliquer sur l'icône :icon:`fa-bug` :guilabel:`(bug)` dans l'en-tête de la "
+"base de données, puis sélectionner :guilabel:`Action`."
 
 #: ../../content/applications/general/offline_mode.rst:107
 msgid "Disable :guilabel:`Data caching`."
@@ -14375,7 +14823,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Multisociétés"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -14812,7 +15260,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid "Manage roles"
-msgstr ""
+msgstr "Gérer les rôles"
 
 #: ../../content/applications/general/users/access_rights.rst:36
 msgid ""
@@ -14848,27 +15296,27 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage personal and employee-related information."
-msgstr ""
+msgstr "Gérer les informations personnelles et relatives aux employés."
 
 #: ../../content/applications/general/users/access_rights.rst:51
 msgid "Submit leave and expense requests."
-msgstr ""
+msgstr "Soumettre des demandes de congés et de notes de frais."
 
 #: ../../content/applications/general/users/access_rights.rst:52
 msgid "Access the **Planning** app and worksheets."
-msgstr ""
+msgstr "Accéder à l'application **Planning** et aux feuilles de travail."
 
 #: ../../content/applications/general/users/access_rights.rst:53
 msgid "Connect to **Point of Sale** sessions as an employee."
-msgstr ""
+msgstr "Se connecter aux sessions du **Point de Vente** en tant qu'employé."
 
 #: ../../content/applications/general/users/access_rights.rst:54
 msgid "Read **Knowledge** articles."
-msgstr ""
+msgstr "Consulter les articles de **Connaissances**."
 
 #: ../../content/applications/general/users/access_rights.rst:55
 msgid "Perform warehouse barcode scanning operations."
-msgstr ""
+msgstr "Effectuer des opérations de lecture de codes-barres en entrepôt."
 
 #: ../../content/applications/general/users/access_rights.rst:57
 msgid ""
@@ -14876,6 +15324,10 @@ msgid ""
 "**Sales**, **Purchases**, **Projects**, or **Accounting**, or to advanced "
 "features reserved for standard or custom users."
 msgstr ""
+"Les utilisateurs Light n'ont pas accès aux applications métier principales "
+"telles que **Ventes**, **Achats**, **Projets** ou **Comptabilité**, ni aux "
+"fonctionnalités avancées réservées aux utilisateurs standard ou "
+"personnalisés."
 
 #: ../../content/applications/general/users/access_rights.rst:61
 msgid ""
@@ -14883,16 +15335,23 @@ msgid ""
 "granted access beyond their default reduced permissions. See `Pricing Page "
 "<https://www.odoo.com/pricing>`_ for more details."
 msgstr ""
+"Un utilisateur *Light* passe automatiquement au rôle *Utilisateur* s'il "
+"bénéficie d'accès allant au-delà de ses autorisations réduites par défaut. "
+"Consulter la `page des tarifs <https://www.odoo.com/pricing>`_ pour plus de "
+"détails."
 
 #: ../../content/applications/general/users/access_rights.rst:65
 msgid "Portal users"
-msgstr ""
+msgstr "Utilisateurs du portail"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
 "The *Portal* role can be used for external users. It is assigned to a "
 "customer or supplier who accesses their own data through the portal."
 msgstr ""
+"Le rôle *Portail* peut être utilisé pour les utilisateurs externes. Il est "
+"attribué à un client ou à un fournisseur qui accède à ses propres données "
+"via le portail."
 
 #: ../../content/applications/general/users/access_rights.rst:70
 msgid ""
@@ -14901,6 +15360,11 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` icon, then select :guilabel:`Grant portal "
 "access` from the drop-down."
 msgstr ""
+"Pour accorder l'accès au portail, accéder à l'application "
+":menuselection:`Contacts` et sélectionner un enregistrement. Cliquer sur "
+"l'icône :icon:`fa-ellipsis-v` :guilabel:`(points de suspension verticaux)`, "
+"puis sélectionner :guilabel:`Accorder l'accès au portail` dans le menu "
+"déroulant."
 
 #: ../../content/applications/general/users/access_rights.rst:77
 msgid "Manage user permissions"

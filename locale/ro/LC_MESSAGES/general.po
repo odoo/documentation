@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the Odoo package.
 # Odoo Translation Bot <c3p@odoo.com>, 2025, 2026.
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-09 17:32+0000\n"
-"PO-Revision-Date: 2026-10-10 21:55+0000\n"
-"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"PO-Revision-Date: 2026-10-22 02:16+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/ro/>\n"
 "Language: ro\n"
@@ -2448,7 +2450,7 @@ msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/companies/multi_company.rst:181
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "Compensare între companii"
 
 #: ../../content/applications/general/companies/multi_company.rst:183
 msgid ""
@@ -2456,6 +2458,9 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"Funcționalitatea **Compensare între companii** automatizează înregistrările "
+"contabile atunci când o companie primește o plată pentru o factură emisă de "
+"o altă companie din aceeași bază de date."
 
 #: ../../content/applications/general/companies/multi_company.rst:186
 msgid ""
@@ -2465,30 +2470,39 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"Atunci când o plată este procesată de o companie secundară, Odoo "
+"reconciliază automat factura deschisă a clientului în compania emitentă și "
+"creează înregistrări de echilibrare între companii între cele două companii. "
+"Această automatizare elimină urmărirea manuală în foi de calcul și menține "
+"conturile dintre companii echilibrate în timp real."
 
 #: ../../content/applications/general/companies/multi_company.rst:192
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "**Compania A** emite o factură de client în valoare de 100 $."
 
 #: ../../content/applications/general/companies/multi_company.rst:194
 msgid "The customer pays via the customer portal belonging to **Company B**."
 msgstr ""
+"Clientul plătește prin intermediul portalului pentru clienți care aparține "
+"**Companiei B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:196
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "La primirea plății, Odoo:"
 
 #: ../../content/applications/general/companies/multi_company.rst:198
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "Stinge creanța clientului în **Companiile A și B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:199
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
-msgstr ""
+msgstr "Reclasifică creanța Companiei A ca o creanță față de **Compania B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:200
 msgid "Records Company B's received funds as a payable owed to **Company A**."
 msgstr ""
+"Înregistrează fondurile primite de Compania B ca o datorie față de "
+"**Compania A**."
 
 #: ../../content/applications/general/companies/multi_company.rst:206
 msgid ""
@@ -2498,44 +2512,59 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"Modulul :guilabel:`Plată între companii - Cont` (`account_payment_interco`) "
+"trebuie să fie :ref:`instalat <general/install>`, iar funcționalitatea "
+":guilabel:`Tranzacții între companii` trebuie să fie activată **în fiecare "
+"companie** implicată pentru ca câmpurile :guilabel:`Compensare între "
+"companii` să apară în setările de contabilitate."
 
 #: ../../content/applications/general/companies/multi_company.rst:211
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
-msgstr ""
+msgstr "Accesați :menuselection:`Accounting --> Configuration --> Settings`."
 
 #: ../../content/applications/general/companies/multi_company.rst:212
 msgid "Scroll down to the :guilabel:`Default Accounts` section."
-msgstr ""
+msgstr "Derulați în jos până la secțiunea :guilabel:`Conturi implicite`."
 
 #: ../../content/applications/general/companies/multi_company.rst:213
 msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
 msgstr ""
+"Sub :guilabel:`Compensare între companii`, definiți următoarele câmpuri "
+"pentru compania care este activă în prezent:"
 
 #: ../../content/applications/general/companies/multi_company.rst:216
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
 msgstr ""
+":guilabel:`Jurnal`: Jurnalul dedicat utilizat pentru înregistrarea "
+"transferurilor de compensare între entități."
 
 #: ../../content/applications/general/companies/multi_company.rst:217
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
 msgstr ""
+":guilabel:`Cont furnizori`: Contul de compensare a datoriilor utilizat "
+"pentru a înregistra datoriile către alte companii din baza de date."
 
 #: ../../content/applications/general/companies/multi_company.rst:219
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
 msgstr ""
+":guilabel:`Cont clienți`: Contul de compensare a creanțelor utilizat pentru "
+"a înregistra creanțele față de alte companii din baza de date."
 
 #: ../../content/applications/general/companies/multi_company.rst:222
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
 msgstr ""
+"Comutați la celelalte companii implicate utilizând selectorul de companii "
+"din meniul din dreapta sus și repetați procesul pentru fiecare dintre ele."
 
 #: ../../content/applications/general/companies/multi_company.rst:226
 msgid ""
@@ -2543,6 +2572,9 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"Metoda de plată utilizată pentru înregistrarea plății clientului trebuie să "
+"folosească un :ref:`cont de încasări în curs <accounting/journals/"
+"outstanding-accounts>` astfel încât să fie creată o notă contabilă."
 
 #: ../../content/applications/general/companies/multi_company.rst:230
 msgid ""
@@ -2551,6 +2583,10 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`Creați <chart-of-account/create>` conturi unice de compensare a "
+"datoriilor și creanțelor, separate de conturile de datorii și creanțe "
+"utilizate pentru tranzacțiile generale, și activați opțiunea "
+":guilabel:`Necomercial` pentru aceste conturi."
 
 #: ../../content/applications/general/companies/multi_company.rst:237
 msgid "Use cases"
@@ -2882,11 +2918,20 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Pentru e-mailurile primite, după adăugarea propriului domeniu, "
+":ref:`răspunsurile de la clienți vor reveni la domeniul dvs. <email-inbound-"
+"custom-domain>`, și va trebui să utilizați una dintre cele trei modalități "
+"posibile de a aduce e-mailurile înapoi în Odoo (folosind fie :ref:`serverul "
+"de e-mail de intrare <email-inbound-custom-domain-incoming-server>`, "
+":ref:`redirecționare/înaintare <email-inbound-custom-domain-redirections>` "
+"sau :ref:`utilizarea unui subdomeniu <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Gestionarea mesajelor primite <email_communication/"
+"email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -4448,6 +4493,9 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Pentru mai multe informații despre configurarea înregistrărilor DNS pentru "
+"subdomenii, consultați :ref:`Configurarea înregistrărilor DNS "
+"<dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4562,7 +4610,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Înregistrări DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4583,6 +4631,11 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Pentru **bazele de date on-premise**, metodele de redirecționare și de "
+"înregistrare DNS necesită, de asemenea, configurarea :doc:`scriptului "
+"gateway de e-mail &lt;../../../../administration/on_premise/"
+"email_gateway&gt;`. Parcurgerea acestui script necesită **cunoștințe tehnice "
+"și de infrastructură avansate**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4844,7 +4897,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "Înregistrări DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4853,6 +4906,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"O a treia opțiune este să utilizați un subdomeniu dedicat (de exemplu, "
+"`mail.mydomain.com`) și să configurați înregistrările sale DNS, astfel încât "
+"e-mailurile trimise la adrese din acel subdomeniu să fie gestionate de Odoo "
+"și procesate direct în baza dvs. de date."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4860,6 +4917,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Pentru Odoo Online și Odoo.sh, rutarea bazată pe CNAME este acceptată numai "
+"la utilizarea unui subdomeniu dedicat. Nu poate fi configurată pe domeniul "
+"rădăcină (de ex., `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4867,6 +4927,9 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Rețineți că acest subdomeniu va fi dedicat traficului de e-mail. Dacă este "
+"accesat într-un browser web, utilizatorii vor fi redirecționați către primul "
+"site web configurat în baza de date (în cazul în care există)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
@@ -5018,20 +5081,26 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
 msgstr ""
+"În secțiunea :guilabel:`DNS`, înregistrările ar trebui să apară după cum "
+"urmează:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Exemplu de configurare a înregistrărilor DNS în portalul Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"A doua înregistrare permite Odoo să trimită e-mailuri autentificate de la "
+"domeniul dvs. personalizat."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+":doc:`Configurarea înregistrărilor DNS pentru trimiterea e-mailurilor în "
+"Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -5043,26 +5112,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Conectați-vă la registratorul dvs. terț (de exemplu, GoDaddy, Namecheap, "
+"Cloudflare) și deschideți zona de administrare DNS pentru domeniul dvs."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Adăugați subdomeniul în setările Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Conectați-vă la platforma Odoo.sh și deschideți proiectul dvs."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Selectați ramura de producție, accesați fila :guilabel:`Setări` și "
+"localizați secțiunea **Domenii personalizate**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Introduceți subdomeniul complet (de ex., `mail.mydomain.com`) și faceți clic "
+"pe :guilabel:`Adaugă domeniu`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -5076,6 +5151,10 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"În loc de o înregistrare CNAME, puteți crea alternativ o înregistrare MX "
+"pentru subdomeniul dvs. (de ex., `mail`), care să indice către "
+"`dbname.odoo.com.` cu o prioritate de `10`. Restul pașilor de configurare "
+"rămân aceiși."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -5083,6 +5162,10 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Rețineți că, spre deosebire de CNAME, o înregistrare MX nu moștenește SPF "
+"sau alte înregistrări DNS de la domeniul țintă, astfel încât ar putea fi "
+"necesar să configurați aceste elemente separat pentru ca mesajele trimise să "
+"fie autentificate corect."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5498,6 +5581,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Înregistrări DNS <email-inbound-custom-domain-dns>` (necesită "
+"cunoștințe tehnice avansate)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6655,6 +6740,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Pentru mai multe informații despre cron-uri atunci când utilizați Odoo.sh, "
+"consultați :ref:`documentația despre Odoo.sh și acțiunile programate <odoo-"
+"sh/advanced/scheduled>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8596,11 +8684,11 @@ msgstr ":guilabel:`Metode permise`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Antete permise`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Antete expuse`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8790,45 +8878,61 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odoo oferă integrări de geolocalizare care vă permit să localizați contacte "
+"sau locuri și să generați rute pe o hartă."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"Vizualizarea :ref:`Hartă <studio/views/multiple-records/map>` este "
+"disponibilă în mod implicit. Nu este necesară nicio configurare pentru a o "
+"accesa."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "Geolocalizați contacte și locuri"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"Funcționalitatea :guilabel:`Geolocalizare` generează coordonate de "
+"latitudine și longitudine pentru a identifica locații. Aceasta poate fi "
+"utilizată pentru a:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"Verifica :ref:`locațiile de pontaj intrare/ieșire <attendances/check-in-out-"
+"details>` ale angajaților în aplicația **Prezențe**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"Afișa locația de ridicare la utilizarea :ref:`metodei de livrare prin "
+"ridicare la fața locului <ecommerce/shipping/instore-pickup>`;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`Atribui parteneri <contacts/partner-assignment>` în aplicația "
+"**Contacte**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avalara address validation <accounting/"
 "avalara/address-validation>` feature."
 msgstr ""
+"Valida adresele cu ajutorul funcționalității :ref:`de validare a adreselor "
+"Avalara <accounting/avalara/address-validation>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8838,10 +8942,15 @@ msgid ""
 "Then, in the :guilabel:`API:` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"Pentru a activa funcționalitatea :guilabel:`Geolocalizare`, navigați la "
+":menuselection:`Setări --> Setări generale`, derulați în jos până la "
+"secțiunea :guilabel:`Integrări` și activați :guilabel:`Geolocalizare`. Apoi, "
+"în câmpul :guilabel:`API:`, selectați fie :guilabel:`Open Street Map` sau "
+":guilabel:`Google Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8849,6 +8958,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap este o bază de date geografică gratuită și deschisă, "
+"actualizată și întreținută de voluntari. Nu este necesară nicio configurare "
+"suplimentară pentru a utiliza :guilabel:`Open Street Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8856,10 +8968,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"Datele OpenStreetMap ar putea să nu fie întotdeauna exacte. Vă puteți "
+"`alătura comunității OpenStreetMap <https://www.openstreetmap.org/fixthemap>"
+"`_ pentru a raporta și corecta eventualele probleme întâmpinate."
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8867,6 +8982,9 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places API oferă informații detaliate despre locuri, companii și "
+"puncte de interes. Acesta acceptă funcționalități bazate pe locație, cum ar "
+"fi căutarea, navigarea și recomandările."
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8882,7 +9000,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "Trasee hărți"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8892,26 +9010,35 @@ msgid ""
 "applications/inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/dispatch>`."
 msgstr ""
+"Rutele pe hartă sunt utile pentru a furniza itinerarii și locații "
+":doc:`tehnicienilor de service pe teren </applications/services/planning/"
+"field_service>` și rute de livrare șoferilor într-un :doc:`sistem de "
+"gestionare a expedierilor </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "Pentru a crea rute, urmați acești pași:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
-msgstr ""
+msgstr "Creați sau conectați-vă la un `cont Mapbox <https://www.mapbox.com/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`Creați un token de acces <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"Accesați `pagina Tokenuri de acces din Mapbox <https://account.mapbox.com/"
+"access-tokens/>`_ și copiați tokenul în clipboard."
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8919,30 +9046,41 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox afișează tokenurile secrete o singură dată la creare și le ascunde "
+"definitiv după părăsirea paginii :guilabel:`Token de acces`. Asigurați-vă că "
+"salvați tokenul."
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"În Odoo, mergeți la :menuselection:`Setări --> Setări generale`, derulați în "
+"jos până la secțiunea :guilabel:`Integrări`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Mapbox`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"La :guilabel:`Mapbox`, lipiți tokenul de acces Mapbox în câmpul "
+":guilabel:`Token`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Cum se utilizează Mapbox în siguranță: Tokenuri de acces <https://"
+"docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`Restricții URL <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -9207,7 +9345,7 @@ msgstr ":ref:`language/install`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:5
 msgid "Mail plugins"
-msgstr ""
+msgstr "Pluginuri de e-mail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:7
 msgid ""
@@ -9215,32 +9353,37 @@ msgid ""
 "With plugins, interact with an Odoo database directly from an email inbox in "
 "the following ways:"
 msgstr ""
+"Pluginurile de e-mail sunt conectori care fac legătura între o bază de date "
+"Odoo și căsuțele de e-mail. Cu aceste pluginuri, interacționați cu o bază de "
+"date Odoo direct dintr-o căsuță de e-mail în următoarele moduri:"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:10
 msgid "Log emails in the chatter of related Odoo records."
-msgstr ""
+msgstr "Înregistrați e-mailurile în chatter-ul înregistrărilor Odoo asociate."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:11
 msgid "Search for and create opportunities, tickets, and tasks."
-msgstr ""
+msgstr "Căutați și creați oportunități, tichete și sarcini."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:12
 msgid "Open related Odoo records from an email inbox."
-msgstr ""
+msgstr "Deschideți înregistrările Odoo asociate dintr-o căsuță de e-mail."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:13
 msgid "Create Odoo contacts."
-msgstr ""
+msgstr "Creați contacte Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:18
 msgid "Mail plugin features"
-msgstr ""
+msgstr "Funcționalități ale pluginurilor de e-mail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:21
 msgid ""
 "The options available in mail plugins will vary based on the applications "
 "installed in the database."
 msgstr ""
+"Opțiunile disponibile în pluginurile de e-mail vor varia în funcție de "
+"aplicațiile instalate în baza de date."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:25
 msgid "Create a contact"
@@ -9251,6 +9394,8 @@ msgid ""
 "To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
 "circle` :guilabel:`(New)` icon."
 msgstr ""
+"Pentru a crea o înregistrare de contact în Odoo dintr-un e-mail, faceți clic "
+"pe pictograma :icon:`fa-plus-circle` :guilabel:`(Nou)`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:31
 msgid ""
@@ -9272,6 +9417,11 @@ msgid ""
 "email is used as the opportunity title, and the content of the email is "
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
+"Pentru a crea o oportunitate dintr-un e-mail, faceți clic pe pictograma "
+":icon:`fa-plus` :guilabel:`(plus)` de lângă :guilabel:`Opportunities`. "
+"Aceasta deschide o nouă înregistrare de oportunitate în Odoo într-o filă "
+"nouă. Subiectul e-mailului este folosit ca titlu al oportunității, iar "
+"conținutul e-mailului este adăugat în fila :guilabel:`Notes` a oportunității."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:42
 msgid "Create a task"
@@ -9286,6 +9436,13 @@ msgid ""
 "Odoo in a new tab. The subject of the email is used as the task title, and "
 "the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
+"Pentru a crea o sarcină dintr-un e-mail, faceți clic pe pictograma :icon:`fa-"
+"plus` :guilabel:`(plus)` de lângă :guilabel:`Tasks`. Apoi, introduceți "
+"titlul proiectului în care trebuie creată sarcina în câmpul rezultat și "
+"selectați proiectul corespunzător din lista rezultată. Aceasta deschide o "
+"nouă înregistrare de sarcină în Odoo într-o filă nouă. Subiectul e-mailului "
+"este folosit ca titlu al sarcinii, iar conținutul e-mailului este adăugat în "
+"fila :guilabel:`Description`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:51
 msgid "Create a ticket"
@@ -9299,33 +9456,42 @@ msgid ""
 "the ticket title, and the content of the email is added to "
 "the :guilabel:`Description` tab of the ticket."
 msgstr ""
+"Pentru a crea un tichet dintr-un e-mail, faceți clic pe pictograma :icon:`fa-"
+"plus` :guilabel:`(Nou)` de lângă :guilabel:`Tichete`. Această acțiune "
+"deschide o nouă înregistrare de tichet în Odoo într-o filă nouă. Subiectul e-"
+"mailului este utilizat ca titlu al tichetului, iar conținutul e-mailului "
+"este adăugat în fila :guilabel:`Descriere` a tichetului."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:59
 msgid "Email providers"
-msgstr ""
+msgstr "Furnizori de e-mail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:61
 msgid "Mail plugins are available for Outlook and Gmail:"
-msgstr ""
+msgstr "Pluginurile de e-mail sunt disponibile pentru Outlook și Gmail:"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook plugin"
-msgstr ""
+msgstr "Pugin pentru Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 msgid ""
 "Learn how to set up the Outlook plugin and connect it to an Odoo database."
 msgstr ""
+"Aflați cum să configurați pluginul Outlook și să îl conectați la o bază de "
+"date Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid "Gmail plugin"
-msgstr ""
+msgstr "Plugin pentru Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid ""
 "Learn how to set up the Gmail plugin and connect it to an Odoo database."
 msgstr ""
+"Aflați cum să configurați pluginul Gmail și să îl conectați la o bază de "
+"date Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:3
 msgid "Gmail Plugin"
@@ -9337,6 +9503,9 @@ msgid ""
 "users to create Odoo records (such as opportunities, tasks, and tickets) "
 "directly in Gmail."
 msgstr ""
+"Pluginul Gmail conectează o bază de date Odoo la o căsuță de e-mail Gmail, "
+"permițând utilizatorilor să creeze înregistrări Odoo (cum ar fi "
+"oportunități, sarcini și tichete) direct în Gmail."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:9
 msgid ""
@@ -9367,10 +9536,14 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"Pentru versiuni ale bazei de date anterioare versiunii 19.2, consultați "
+"`documentația 19.0 <https://www.odoo.com/documentation/19.0/applications/"
+"general/integrations/mail_plugins/gmail.html>`_ pentru instrucțiuni de "
+"instalare."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:26
 msgid "From the Google Workspace Marketplace"
-msgstr ""
+msgstr "Din Google Workspace Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:28
 msgid ""
@@ -9383,10 +9556,18 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Pentru a instala pluginul Odoo Gmail, conectați-vă la contul Gmail care "
+"urmează să fie conectat la Odoo, apoi accesați pagina `Odoo Inbox Addin "
+"<https://workspace.google.com/marketplace/app/odoo_inbox_addin/546131068990>"
+"`_ din Google Workspace Marketplace. Faceți clic pe :guilabel:`Instalare` și "
+"va apărea o fereastră pop-up. Faceți clic pe :guilabel:`Continuare` și "
+"bifați caseta de selectare de lângă :guilabel:`Selectați tot` pentru a "
+"acorda permisiunile necesare, apoi faceți clic încă o dată pe "
+":guilabel:`Continuare` pentru a confirma instalarea pluginului."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:36
 msgid "From the Gmail inbox"
-msgstr ""
+msgstr "Din căsuța de e-mail Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:38
 msgid ""
@@ -9396,6 +9577,12 @@ msgid ""
 "chevron-left` :guilabel:`(Show side panel)` icon in the bottom-right corner "
 "of the inbox to expand it."
 msgstr ""
+"Alternativ, pluginul poate fi instalat direct din căsuța de e-mail Gmail. "
+"Pentru a face acest lucru, faceți clic pe pictograma :icon:`fa-plus` "
+":guilabel:`(Obțineți programe de completare)` de pe panoul lateral din "
+"dreapta. Dacă panoul lateral nu este vizibil, faceți clic pe pictograma "
+":icon:`fa-chevron-left` :guilabel:`(Afișați panoul lateral)` din colțul din "
+"dreapta jos al căsuței de e-mail pentru a-l extinde."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Plus sign icon on the Gmail inbox side panel."
@@ -9405,10 +9592,12 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:46
 msgid "Click :guilabel:`Search apps`, then type `Odoo` and press Enter."
 msgstr ""
+"Faceți clic pe :guilabel:`Căutați aplicații`, apoi tastați `Odoo` și apăsați "
+"pe Enter."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Odoo Inbox Addin in Google Workspace Marketplace."
-msgstr ""
+msgstr "Odoo Inbox Addin în Google Workspace Marketplace."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:51
 msgid ""
@@ -9418,17 +9607,25 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Faceți clic pe :guilabel:`Odoo Inbox Addin`, apoi faceți clic pe "
+":guilabel:`Instalare` și va apărea o fereastră pop-up. Faceți clic pe "
+":guilabel:`Continuare` și bifați caseta de selectare de lângă "
+":guilabel:`Selectați tot` pentru a acorda permisiunile necesare, apoi faceți "
+"clic încă o dată pe :guilabel:`Continuare` pentru a confirma instalarea "
+"pluginului."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
 msgid ""
 "If the plugin does not appear in the side panel after installation, refresh "
 "the page."
 msgstr ""
+"Dacă pluginul nu apare în panoul lateral după instalare, reîmprospătați "
+"pagina."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:60
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:49
 msgid "Connect an Odoo database"
-msgstr ""
+msgstr "Conectați o bază de date Odoo"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:62
 msgid ""
@@ -9439,6 +9636,14 @@ msgid ""
 "account, and a pop-up window opens. Click :guilabel:`Allow` in the pop-up "
 "window to let the Gmail plugin connect to the database."
 msgstr ""
+"Pentru a deschide pluginul, faceți clic pe pictograma Odoo din panoul "
+"lateral din dreapta. Panoul pluginului se deschide între căsuța de e-mail și "
+"panoul lateral din dreapta. Faceți clic pe :guilabel:`Autentificare`. "
+"Introduceți adresa URL a bazei de date Odoo și faceți clic pe "
+":guilabel:`Autentificare`, sau faceți clic pe :guilabel:`Înregistrare` "
+"pentru a crea un cont Odoo, iar o fereastră pop-up se deschide. Faceți clic "
+"pe :guilabel:`Permiteți` în fereastra pop-up pentru a permite pluginului "
+"Gmail să se conecteze la baza de date."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
 msgid ""
@@ -9456,6 +9661,9 @@ msgid ""
 "enables users to create Odoo records (such as opportunities, tasks, and "
 "tickets) directly in Outlook."
 msgstr ""
+"Pluginul Outlook conectează o bază de date Odoo la o căsuță de e-mail "
+"Outlook, permițând utilizatorilor să creeze înregistrări Odoo (cum ar fi "
+"oportunități, sarcini și tichete) direct în Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:9
 msgid ""
@@ -9470,7 +9678,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:16
 msgid "Install the Outlook plugin"
-msgstr ""
+msgstr "Instalarea pluginului Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:22
 msgid ""
@@ -10234,6 +10442,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`Conectați un terminal de plată Worldline/Axepta BNP Paribas <../../"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../content/applications/general/iot/devices.rst:23
 msgid ""
@@ -11655,6 +11865,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Imprimantele DYMO Seria 5 nu sunt compatibile cu :doc:`IoT box &lt;../"
+"iot_box&gt;` și necesită asocierea cu un :doc:`IoT virtual Windows &lt;../"
+"windows_iot&gt;`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:368
 msgid "DYMO LabelWriter not printing"
@@ -12099,6 +12312,8 @@ msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"Apăsați **>0<** până la :guilabel:`3.6` și asigurați-vă că valoarea este "
+"setată la :guilabel:`3` (8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:50
 msgid ""
@@ -12130,6 +12345,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"Reporniți :doc:`IoT box <../iot_box>` sau :ref:`reporniți serviciul virtual "
+"IoT Windows <iot/windows_iot/restart>`. Cântarul ar trebui să apară apoi ca "
+"`Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12297,7 +12515,7 @@ msgstr ":doc:`../connect`"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:6
 msgid "Frequently encountered issues"
-msgstr ""
+msgstr "Probleme frecvent întâlnite"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:9
 msgid "The pairing code does not appear or does not work"
@@ -12330,6 +12548,10 @@ msgid ""
 "virtual IoT service <iot/windows_iot/restart>` to generate and display the "
 "pairing code."
 msgstr ""
+"Timpul de afișare pentru :ref:`codul de asociere <iot/connect/pairing-code>` "
+"a expirat. Reporniți :ref:`IoT box <iot/iot-box/homepage>` sau "
+":ref:`serviciul virtual IoT Windows <iot/windows_iot/restart>` pentru a "
+"genera și a afișa codul de asociere."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:22
 msgid "The IoT system does not connect to the database"
@@ -12357,6 +12579,8 @@ msgid ""
 "Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows "
 "virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Reporniți :ref:`IoT box <iot/iot-box/homepage>` sau :ref:`serviciul virtual "
+"IoT Windows <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:33
 msgid "The IoT system is connected to the Odoo database but cannot be reached"
@@ -12470,12 +12694,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"Sistemul IoT este conectat și rapoartele sunt atribuite unei imprimante care "
+"nu poate imprima"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Verificați dacă browserul are permisiunea să :ref:`acceseze dispozitive din "
+"rețeaua locală <pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -12526,6 +12754,9 @@ msgid ""
 "issues occur during the generation or reception of the :ref:`HTTPS "
 "certificate <iot/connect/https_certificate>`."
 msgstr ""
+"Un cod de eroare specific este afișat pe pagina de pornire a sistemului IoT "
+"dacă apar probleme la generarea sau primirea :ref:`certificatului HTTPS <iot/"
+"connect/https_certificate>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:109
 msgid ""
@@ -12540,7 +12771,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:114
 msgid "Missing credentials"
-msgstr ""
+msgstr "Date de autentificare lipsă"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:116
 msgid ""
@@ -12595,7 +12826,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:134
 msgid "Odoo.com not reachable"
-msgstr ""
+msgstr "Odoo.com nu este accesibil"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:136
 msgid ""
@@ -12637,7 +12868,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:148
 msgid "Still no certificate?"
-msgstr ""
+msgstr "Încă nu există certificat?"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:151
 msgid ""
@@ -12645,6 +12876,9 @@ msgid ""
 "the server refused to provide the :ref:`HTTPS certificate <iot/connect/"
 "https_certificate>`."
 msgstr ""
+"Dacă sistemul IoT s-a conectat cu succes la `<https://www.odoo.com>`_, dar "
+"serverul a refuzat să furnizeze :ref:`certificatul HTTPS <iot/connect/"
+"https_certificate>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:154
 msgid ""
@@ -12658,7 +12892,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:158
 msgid "Grant Odoo support team access to an IoT Box"
-msgstr ""
+msgstr "Acordați echipei de asistență Odoo acces la un IoT Box"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:160
 msgid ""
@@ -12666,6 +12900,10 @@ msgid ""
 "Tailscale token on the IoT Box's homepage. This allows the Odoo support team "
 "to access the IoT Box for troubleshooting securely."
 msgstr ""
+"Dacă trebuie să acordați acces de la distanță la un IoT Box, puteți furniza "
+"un token Tailscale pe pagina de pornire a IoT Box-ului. Acest lucru permite "
+"echipei de asistență Odoo să acceseze IoT Box-ul în siguranță pentru "
+"depanare."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:165
 msgid ""
@@ -12673,6 +12911,10 @@ msgid ""
 "representative. Providing a token grants access to the IoT Box and your "
 "entire local network, so it should be done with caution."
 msgstr ""
+"Introduceți doar un token de la o sursă de încredere, cum ar fi un "
+"reprezentant oficial de asistență Odoo. Furnizarea unui token acordă acces "
+"la IoT Box și la întreaga rețea locală, așa că acest lucru ar trebui făcut "
+"cu prudență."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:169
 msgid ""
@@ -12681,16 +12923,23 @@ msgid ""
 "the pop-up window, enter the Tailscale token provided by the Odoo support "
 "team and click :guilabel:`Enable`."
 msgstr ""
+"Pe :ref:`pagina de pornire a IoT Box-ului <iot/iot-box/homepage>`, faceți "
+"clic pe butonul :icon:`fa-cogs` (:guilabel:`roți dințate`), apoi faceți clic "
+"pe :guilabel:`Instrumente de depanare`. În fereastra pop-up, introduceți "
+"tokenul Tailscale furnizat de echipa de asistență Odoo și faceți clic pe "
+":guilabel:`Activare`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:174
 msgid ""
 "**Remote Debug** is only available for :doc:`IoT boxes <../iot_box>`, not "
 "the :doc:`Windows virtual IoT <../windows_iot>`."
 msgstr ""
+"**Depanarea de la distanță** este disponibilă doar pentru :doc:`IoT box <../"
+"iot_box>`, nu și pentru :doc:`Windows virtual IoT <../windows_iot>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:178
 msgid "Is the IoT Box down?"
-msgstr ""
+msgstr "IoT Box-ul este indisponibil?"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:180
 msgid ""
@@ -12698,6 +12947,10 @@ msgid ""
 "support team. Just provide the key in the only field displayed on "
 "the :ref:`homepage <iot/iot-box/homepage>` and click :guilabel:`Enable`."
 msgstr ""
+"Dacă IoT Box-ul este indisponibil, puteți activa în continuare accesul de la "
+"distanță pentru echipa de asistență Odoo. Doar introduceți cheia în singurul "
+"câmp afișat pe :ref:`pagina de pornire <iot/iot-box/homepage>` și faceți "
+"clic pe :guilabel:`Activare`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:188
 msgid ""
@@ -12706,6 +12959,10 @@ msgid ""
 "to :ref:`flash the IoT Box's card with the latest image <iot/updating_iot/"
 "image-code>`."
 msgstr ""
+"Activarea accesului de la distanță pe un IoT Box indisponibil este posibilă "
+"doar începând cu versiunile ulterioare v26.01.2026. Dacă IoT Box-ul "
+"dumneavoastră nu are această opțiune, va trebui să :ref:`scrieți cea mai "
+"recentă imagine pe cardul IoT Box-ului <iot/updating_iot/image-code>`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:7
 msgid ""
@@ -12715,6 +12972,12 @@ msgid ""
 "the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
 "then :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
+"Dispozitivele IoT Box și Virtual IoT Box se actualizează automat în fiecare "
+"săptămână. Puteți totuși forța o actualizare dacă considerați că sistemul "
+"dumneavoastră IoT nu este actualizat, accesând :ref:`pagina principală <iot/"
+"iot-box/homepage>`, făcând clic pe butonul :icon:`fa-cogs` (:guilabel:`roți "
+"dințate`) din colțul din dreapta sus, apoi pe :guilabel:`Actualizare` din "
+"secțiunea :guilabel:`Versiune`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:14
 msgid ""
@@ -12732,6 +12995,10 @@ msgid ""
 "which requires flashing the IoT box's SD card or uninstalling and "
 "reinstalling the Windows virtual IoT package."
 msgstr ""
+"În cazuri extreme, ar putea fi necesar să efectuați o resetare completă a "
+"sistemului IoT, ceea ce necesită rescrierea cardului SD al dispozitivului "
+"IoT Box sau dezinstalarea și reinstalarea pachetului virtual IoT pentru "
+"Windows."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:26
 msgid ""
@@ -12754,6 +13021,9 @@ msgid ""
 "`Download balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (a free "
 "and open-source tool for writing disk images to SD cards)."
 msgstr ""
+"`Descărcați balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (un "
+"instrument gratuit și open-source pentru scrierea imaginilor de disc pe "
+"carduri SD)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:32
 msgid "Insert the IoT box's micro SD card into the computer or adapter."
@@ -12788,6 +13058,8 @@ msgid ""
 ":ref:`Uninstall the program <iot/windows_iot/uninstall>` and :ref:`reinstall "
 "<iot/windows-iot/installation>` the latest package."
 msgstr ""
+":ref:`Dezinstalați programul <iot/windows_iot/uninstall>` și "
+":ref:`reinstalați <iot/windows-iot/installation>` cel mai recent pachet."
 
 #: ../../content/applications/general/iot/iot_box.rst:5
 msgid "To start using an IoT box:"
@@ -12810,6 +13082,8 @@ msgid ""
 "`Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://"
 "www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 msgstr ""
+"`Video: Cum să configurați și să utilizați Odoo IoT Box: Ghid pentru "
+"începători <https://www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 
 #: ../../content/applications/general/iot/iot_box.rst:19
 msgid "Network connection"
@@ -12828,6 +13102,8 @@ msgid ""
 "It is recommended to connect the IoT box to the same network as "
 "the :doc:`devices <devices>` it connects to."
 msgstr ""
+"Se recomandă conectarea dispozitivului IoT Box la aceeași rețea ca "
+":doc:`dispozitivele <devices>` la care se conectează."
 
 #: ../../content/applications/general/iot/iot_box.rst:29
 msgid ""
@@ -12879,6 +13155,9 @@ msgid ""
 "network name is in the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is "
 "a unique identifier)."
 msgstr ""
+"Accesați setările Wi-Fi ale computerului și selectați rețeaua dispozitivului "
+"IoT Box. Numele rețelei este în formatul `IoTBox-xxxxxxxxxxxx` (unde "
+"`xxxxxxxxxxxx` este un identificator unic)."
 
 #: ../../content/applications/general/iot/iot_box.rst:51
 msgid ""
@@ -12886,6 +13165,9 @@ msgid ""
 "automatically open and redirect to the :ref:`IoT box's homepage <iot/iot-box/"
 "homepage>`."
 msgstr ""
+"Conectați-vă la rețeaua Wi-Fi a dispozitivului IoT Box și autentificați-vă; "
+"browserul ar trebui să se deschidă automat și să redirecționeze către "
+":ref:`pagina principală a dispozitivului IoT Box <iot/iot-box/homepage>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:53
 msgid ""
@@ -12924,6 +13206,11 @@ msgid ""
 "and navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
+"În funcție de sistemul de operare utilizat, este posibil ca browserul să nu "
+"se deschidă și să nu redirecționeze către pagina principală a dispozitivului "
+"IoT Box. În acest caz, deschideți browserul manual și navigați la `http://"
+"10.11.12.1` sau la orice adresă URL care începe cu **http** (de exemplu, "
+"`http://odoo.com`)."
 
 #: ../../content/applications/general/iot/iot_box.rst:71
 msgid ""
@@ -12934,6 +13221,13 @@ msgid ""
 "the :guilabel:`Internet Status` section, select the relevant Wi-Fi network, "
 "enter the password, and click :guilabel:`Connect`."
 msgstr ""
+"Dacă dispozitivul IoT Box este conectat la un :doc:`monitor extern <devices/"
+"screen>`, scanați primul cod QR afișat pe ecran pentru a vă conecta la "
+"rețea, apoi scanați al doilea cod QR pentru a accesa :ref:`pagina principală "
+"<iot/iot-box/homepage>` a dispozitivului IoT Box. Pe pagina principală, "
+"faceți clic pe :guilabel:`Configurare` din secțiunea :guilabel:`Stare "
+"internet`, selectați rețeaua Wi-Fi relevantă, introduceți parola și faceți "
+"clic pe :guilabel:`Conectare`."
 
 #: ../../content/applications/general/iot/iot_box.rst:80
 msgid "LED status"
@@ -12945,6 +13239,10 @@ msgid ""
 "that indicate its status and help with troubleshooting when no display is "
 "connected. The LEDs can be interpreted as follows:"
 msgstr ""
+"Dispozitivul IoT Box dispune de două LED-uri, situate în dreapta slotului "
+"pentru cardul SD, care indică starea acestuia și ajută la depanare atunci "
+"când nu este conectat niciun ecran. LED-urile pot fi interpretate după cum "
+"urmează:"
 
 #: ../../content/applications/general/iot/iot_box.rst:85
 msgid ""
@@ -12952,12 +13250,17 @@ msgid ""
 "Ethernet cable is properly connected, or :ref:`connect the IoT box via Wi-Fi "
 "<iot/iot_box/network-wifi>`."
 msgstr ""
+"**LED roșu aprins**: Dispozitivul IoT Box nu este conectat la internet. "
+"Asigurați-vă că cablul Ethernet este conectat corect sau :ref:`conectați "
+"dispozitivul IoT Box prin Wi-Fi <iot/iot_box/network-wifi>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:87
 msgid ""
 "**Green LED flashing**: The IoT box is waiting to :doc:`connect to a "
 "database <connect>`."
 msgstr ""
+"**LED verde intermitent**: Dispozitivul IoT Box așteaptă să se "
+":doc:`conecteze la o bază de date <connect>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:88
 msgid ""
@@ -12978,6 +13281,11 @@ msgid ""
 "click :guilabel:`Homepage`, or open a browser on the device and navigate to "
 "the IoT box's IP address."
 msgstr ""
+"Pentru a accesa pagina principală a dispozitivului IoT Box de pe un "
+"dispozitiv, asigurați-vă mai întâi că dispozitivul se află în aceeași rețea "
+"cu dispozitivul IoT Box. Apoi, dacă utilizați aplicația IoT, faceți clic pe "
+":guilabel:`Pagina principală`, sau deschideți un browser pe dispozitiv și "
+"navigați la adresa IP a dispozitivului IoT Box."
 
 #: ../../content/applications/general/iot/iot_box.rst:None
 msgid "IoT box's homepage"
@@ -12988,6 +13296,8 @@ msgid ""
 "If the IP address is not already known, use any of the following methods to "
 "retrieve it:"
 msgstr ""
+"Dacă adresa IP nu este deja cunoscută, utilizați oricare dintre următoarele "
+"metode pentru a o afla:"
 
 #: ../../content/applications/general/iot/iot_box.rst:106
 msgid ""
@@ -12995,6 +13305,9 @@ msgid ""
 "navigate to `http://iotbox.local`. The page automatically redirects to the "
 "homepage, which displays the IP address."
 msgstr ""
+"În timp ce sunteți conectat la aceeași rețea ca dispozitivul IoT Box, "
+"deschideți un browser web și navigați la `http://iotbox.local`. Pagina se "
+"redirecționează automat către pagina principală, care afișează adresa IP."
 
 #: ../../content/applications/general/iot/iot_box.rst:109
 msgid ""
@@ -13002,24 +13315,34 @@ msgid ""
 "hardware>`_ using a USB cable, which then automatically prints a ticket with "
 "the IP address."
 msgstr ""
+"Conectați o `imprimantă compatibilă de chitanțe sau etichete <https://"
+"www.odoo.com/app/iot-hardware>`_ utilizând un cablu USB, care va imprima "
+"automat un bon cu adresa IP."
 
 #: ../../content/applications/general/iot/iot_box.rst:111
 msgid ""
 "Connect the IoT box to an :doc:`external monitor <devices/screen>`, which "
 "then displays the IP address on the screen."
 msgstr ""
+"Conectați dispozitivul IoT Box la un :doc:`monitor extern <devices/screen>`, "
+"care va afișa apoi adresa IP pe ecran."
 
 #: ../../content/applications/general/iot/iot_box.rst:113
 msgid ""
 "On IoT box images `L2026.05.25` and later, the IoT box IP address is "
 "displayed as a discovered Bluetooth device for 5 minutes after booting."
 msgstr ""
+"Pe imaginile IoT Box `L2026.05.25` și ulterioare, adresa IP a dispozitivului "
+"IoT Box este afișată ca dispozitiv Bluetooth descoperit timp de 5 minute "
+"după pornire."
 
 #: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
 "Access the router's administrator interface, or use third-party software to "
 "scan the network."
 msgstr ""
+"Accesați interfața de administrare a ruterului sau utilizați un software "
+"terț pentru a scana rețeaua."
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT box's IP address"
@@ -13031,6 +13354,9 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"Pentru a reporni manual caseta IoT, accesați :ref:`pagina principală <iot/"
+"iot-box/homepage>`, apoi faceți clic pe butonul :icon:`fa-power-off` "
+":guilabel:`(oprire)` din colțul din dreapta sus."
 
 #: ../../content/applications/general/iot/iot_box.rst:124
 msgid ""
@@ -13047,6 +13373,8 @@ msgstr ""
 #: ../../content/applications/general/iot/iot_box.rst:127
 msgid "To fully reboot the IoT box, unplug it and plug it back in."
 msgstr ""
+"Pentru a reporni complet caseta IoT, deconectați-o de la alimentare și "
+"conectați-o la loc."
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -13264,6 +13592,11 @@ msgid ""
 "the device does not appear, restart the IoT system from the :ref:`IoT "
 "system's homepage <iot/windows-iot/homepage>`."
 msgstr ""
+"După conectarea dispozitivelor la calculator, actualizați :ref:`pagina "
+"principală a sistemului IoT <iot/windows-iot/homepage>` pentru a verifica "
+"dacă dispozitivul este listat. Dacă dispozitivul nu apare, reporniți "
+"sistemul IoT de pe :ref:`pagina principală a sistemului IoT <iot/windows-iot/"
+"homepage>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:85
 msgid "Windows Firewall configuration"
@@ -13345,6 +13678,9 @@ msgid ""
 "port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/"
 "terminals/worldline_axepta` payment terminals."
 msgstr ""
+"Pot fi necesare și alte porturi, în funcție de dispozitivele dumneavoastră "
+"IoT. De exemplu, adăugați portul `9050` pentru terminalele de plată :doc:`/"
+"applications/sales/point_of_sale/payment_methods/terminals/worldline_axepta`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:114
 msgid ""
@@ -13464,6 +13800,9 @@ msgid ""
 "Odoo’s offline mode provides a solution for short-term interruptions; it is "
 "not intended to offer full or long-term offline capabilities."
 msgstr ""
+"Modul offline al Odoo oferă o soluție pentru întreruperi pe termen scurt; "
+"acesta nu este destinat să ofere capacități complete sau pe termen lung de "
+"lucru offline."
 
 #: ../../content/applications/general/offline_mode.rst:9
 msgid ""
@@ -13472,6 +13811,10 @@ msgid ""
 "or no coverage, Odoo makes certain functionality available offline for "
 "logged-in users."
 msgstr ""
+"Pentru a asigura continuitatea activității atunci când conectivitatea este "
+"instabilă sau indisponibilă, cum ar fi în timpul deplasărilor sau când "
+"lucrați în locații cu acoperire slabă sau inexistentă, Odoo pune la "
+"dispoziție anumite funcționalități offline pentru utilizatorii autentificați."
 
 #: ../../content/applications/general/offline_mode.rst:13
 msgid ""
@@ -13484,14 +13827,22 @@ msgid ""
 "Previously performed :ref:`search queries <general/offline-mode/search>` can "
 "be run again."
 msgstr ""
+"De îndată ce conexiunea la internet nu mai este activă, în antetul bazei de "
+"date apare butonul :guilabel:`Lucru offline`. Vizualizările sau "
+"înregistrările care au fost deschise anterior în timp ce erați online pot fi "
+"redeschise, indiferent dacă erau active în browser în momentul pierderii "
+"conectivității. Înregistrările pot fi :ref:`modificate, șterse, arhivate, "
+"dezarhivate sau create <general/offline-mode/records-create-udpate>`, dacă "
+"sunt îndeplinite anumite condiții. Pot fi rulate din nou :ref:`interogările "
+"de căutare <general/offline-mode/search>` efectuate anterior."
 
 #: ../../content/applications/general/offline_mode.rst:20
 msgid "Items that are not available offline are grayed out."
-msgstr ""
+msgstr "Elementele care nu sunt disponibile offline sunt estompate."
 
 #: ../../content/applications/general/offline_mode.rst:None
 msgid "Elements not available offline are grayed out"
-msgstr ""
+msgstr "Elementele indisponibile offline sunt estompate"
 
 #: ../../content/applications/general/offline_mode.rst:25
 msgid ""
@@ -13499,6 +13850,10 @@ msgid ""
 "manage-changes>`; when connectivity is restored, changes are synced "
 "automatically and reflected in your database."
 msgstr ""
+"Toate modificările efectuate offline sunt :ref:`plasate în coadă la nivel "
+"local <general/offline-mode/manage-changes>`; când conectivitatea este "
+"restabilită, modificările sunt sincronizate automat și reflectate în baza "
+"dumneavoastră de date."
 
 #: ../../content/applications/general/offline_mode.rst:29
 msgid ""
@@ -13506,6 +13861,10 @@ msgid ""
 "expect to need, and perform any searches so they can still be accessed if/"
 "when connectivity is lost."
 msgstr ""
+"Dacă anticipați probleme de conectivitate, deschideți scurt vizualizările "
+"sau înregistrările de care preconizați că veți avea nevoie și efectuați "
+"căutările necesare, astfel încât acestea să poată fi accesate în cazul în "
+"care se pierde conectivitatea."
 
 #: ../../content/applications/general/offline_mode.rst:33
 msgid ""
@@ -13540,33 +13899,39 @@ msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:44
 msgid "Create and update records"
-msgstr ""
+msgstr "Crearea și actualizarea înregistrărilor"
 
 #: ../../content/applications/general/offline_mode.rst:46
 msgid "When offline, records can be:"
-msgstr ""
+msgstr "În modul offline, înregistrările pot fi:"
 
 #: ../../content/applications/general/offline_mode.rst:48
 msgid ""
 "created, provided a record of the same type was previously created while you "
 "were online"
 msgstr ""
+"create, cu condiția ca o înregistrare de același tip să fi fost creată "
+"anterior în timp ce erați online"
 
 #: ../../content/applications/general/offline_mode.rst:49
 msgid ""
 "edited, deleted, archived, or unarchived, provided they were previously "
 "opened while you were online"
 msgstr ""
+"modificate, șterse, arhivate sau dezarhivate, cu condiția ca acestea să fi "
+"fost deschise anterior în timp ce erați online"
 
 #: ../../content/applications/general/offline_mode.rst:53
 msgid ""
 "Attachments and images can be opened while offline, but cannot be uploaded "
 "or deleted."
 msgstr ""
+"Atașamentele și imaginile pot fi deschise în modul offline, dar nu pot fi "
+"încărcate sau șterse."
 
 #: ../../content/applications/general/offline_mode.rst:58
 msgid "Perform searches"
-msgstr ""
+msgstr "Efectuarea căutărilor"
 
 #: ../../content/applications/general/offline_mode.rst:60
 msgid ""
@@ -13574,20 +13939,26 @@ msgid ""
 "offline. To repeat a previously performed search, click in the search bar, "
 "then choose from the available searches."
 msgstr ""
+"Interogările de căutare efectuate anterior în timp ce erați online pot fi "
+"repetate offline. Pentru a repeta o căutare efectuată anterior, faceți clic "
+"în bara de căutare, apoi alegeți dintre căutările disponibile."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Previous executed searches available via search bar"
-msgstr ""
+msgstr "Căutări executate anterior disponibile prin bara de căutare"
 
 #: ../../content/applications/general/offline_mode.rst:70
 msgid "Manage offline changes"
-msgstr ""
+msgstr "Gestionarea modificărilor offline"
 
 #: ../../content/applications/general/offline_mode.rst:72
 msgid ""
 "When you create or update a record offline, the changes are stored locally "
 "in a temporary queue until the internet connection is restored."
 msgstr ""
+"Când creați sau actualizați o înregistrare offline, modificările sunt "
+"stocate local într-o coadă temporară până când conexiunea la internet este "
+"restabilită."
 
 #: ../../content/applications/general/offline_mode.rst:75
 msgid ""
@@ -13596,10 +13967,17 @@ msgid ""
 "record was :guilabel:`Created`, :guilabel:`Edited`, :guilabel:`Archived`, "
 "or :guilabel:`Unarchived`."
 msgstr ""
+"Pentru a vizualiza modificările în așteptare în timp ce sunteți încă "
+"offline, faceți clic pe butonul :guilabel:`Lucru offline`; înregistrările "
+"modificate sunt listate, cu o etichetă care indică dacă înregistrarea a fost "
+":guilabel:`Creată`, :guilabel:`Modificată`, :guilabel:`Arhivată` sau "
+":guilabel:`Dezarhivată`."
 
 #: ../../content/applications/general/offline_mode.rst:79
 msgid "Hovering over an :guilabel:`Edited` tag reveals the changes made."
 msgstr ""
+"Plasarea cursorului pe o etichetă :guilabel:`Modificată` afișează "
+"modificările efectuate."
 
 #: ../../content/applications/general/offline_mode.rst:82
 msgid ""
@@ -13608,10 +13986,16 @@ msgid ""
 "name :guilabel:`user_id`) from `Mitchell Admin` to `Marc Demo` and "
 "the :guilabel:`Expected Revenue` from `9000` to `15000`."
 msgstr ""
+"În exemplu, oportunitatea :guilabel:`Office Design and Architecture` a fost "
+"editată pentru a schimba :guilabel:`Agent de vânzări` (nume tehnic câmp "
+":guilabel:`user_id`) de la `Mitchell Admin` la `Marc Demo`, iar "
+":guilabel:`Venit estimat` de la `9000` la `15000`."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Dropdown on Working offline button showing list of changes made offline"
 msgstr ""
+"Meniu derulant pe butonul Lucru offline care afișează lista modificărilor "
+"efectuate offline"
 
 #: ../../content/applications/general/offline_mode.rst:90
 msgid ""
@@ -13620,10 +14004,16 @@ msgid ""
 "for example, if changes were made in error or in the wrong order, click "
 "the :icon:`fa-trash` :guilabel:`(Discard offline changes)` icon."
 msgstr ""
+"Pentru a efectua modificări suplimentare la o înregistrare editată în timp "
+"ce sunteți încă offline, faceți clic pe înregistrare pentru a o deschide "
+"local. Pentru a renunța la modificările în așteptare în timp ce sunteți încă "
+"offline, de exemplu, dacă modificările au fost făcute din greșeală sau într-"
+"o ordine incorectă, faceți clic pe pictograma :icon:`fa-trash` :guilabel:`"
+"(Renunță la modificările offline)`."
 
 #: ../../content/applications/general/offline_mode.rst:97
 msgid "Disable offline mode for specific views"
-msgstr ""
+msgstr "Dezactivarea modului offline pentru anumite vizualizări"
 
 #: ../../content/applications/general/offline_mode.rst:99
 msgid ""
@@ -13632,24 +14022,31 @@ msgid ""
 "specific view and, as a result, make the view unavailable offline, follow "
 "these steps:"
 msgstr ""
+"În unele cazuri, de exemplu, pentru vizualizările de raportare, afișarea "
+"informațiilor învechite sau memorate în cache poate să nu fie adecvată. "
+"Pentru a dezactiva salvarea datelor în cache pentru o anumită vizualizare "
+"și, prin urmare, a face vizualizarea indisponibilă offline, urmați acești "
+"pași:"
 
 #: ../../content/applications/general/offline_mode.rst:103
 msgid "Open the view in question."
-msgstr ""
+msgstr "Deschideți vizualizarea în cauză."
 
 #: ../../content/applications/general/offline_mode.rst:104
 msgid "Activate :ref:`developer mode <developer-mode>`."
-msgstr ""
+msgstr "Activați :ref:`modul dezvoltator <developer-mode>`."
 
 #: ../../content/applications/general/offline_mode.rst:105
 msgid ""
 "Click the :icon:`fa-bug` :guilabel:`(bug)` icon in the database header, then "
 "select :guilabel:`Action`."
 msgstr ""
+"Faceți clic pe pictograma :icon:`fa-bug` :guilabel:`(bug)` din antetul bazei "
+"de date, apoi selectați :guilabel:`Acțiune`."
 
 #: ../../content/applications/general/offline_mode.rst:107
 msgid "Disable :guilabel:`Data caching`."
-msgstr ""
+msgstr "Dezactivați :guilabel:`Memorare date în cache`."
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -14591,7 +14988,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid "Manage roles"
-msgstr ""
+msgstr "Gestionare roluri"
 
 #: ../../content/applications/general/users/access_rights.rst:36
 msgid ""
@@ -14600,22 +14997,32 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`Utilizatorilor individuali <users/add-individual>` li se atribuie un "
+"*Rol* atunci când sunt adăugați în baza de date. Rolurile determină nivelul "
+"de acces pe care îl are un utilizator, în timp ce drepturile specifice de "
+"acces asociate fiecărui rol sunt definite de :ref:`grupuri <access-rights/"
+"groups>`."
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid "The available internal roles are:"
-msgstr ""
+msgstr "Rolurile interne disponibile sunt:"
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*Utilizator*: un utilizator intern care are de obicei acces la back-end și "
+"poate crea și edita înregistrări, dar are per total mai puțin acces decât un "
+"administrator."
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*Administrator*: un utilizator intern cu acces la funcții tehnice, creare de "
+"produse, export și alte permisiuni avansate."
 
 #: ../../content/applications/general/users/access_rights.rst:46
 msgid ""
@@ -14624,30 +15031,35 @@ msgid ""
 "database, or can exist solely as an employee record without login access. "
 "When login access is granted, light users can:"
 msgstr ""
+"*Light*: un utilizator cu acces limitat la funcțiile esențiale Odoo. Un "
+"utilizator light poate fi asociat unei înregistrări de angajat pentru a "
+"oferi acces limitat la baza de date sau poate exista exclusiv ca "
+"înregistrare de angajat fără acces de conectare. Când i se acordă acces de "
+"conectare, utilizatorii light pot:"
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage personal and employee-related information."
-msgstr ""
+msgstr "Să gestioneze informațiile personale și legate de angajați."
 
 #: ../../content/applications/general/users/access_rights.rst:51
 msgid "Submit leave and expense requests."
-msgstr ""
+msgstr "Să trimită cereri de concediu și de cheltuieli."
 
 #: ../../content/applications/general/users/access_rights.rst:52
 msgid "Access the **Planning** app and worksheets."
-msgstr ""
+msgstr "Să acceseze aplicația **Planificare** și foile de lucru."
 
 #: ../../content/applications/general/users/access_rights.rst:53
 msgid "Connect to **Point of Sale** sessions as an employee."
-msgstr ""
+msgstr "Să se conecteze la sesiuni **Punct de vânzare** ca angajat."
 
 #: ../../content/applications/general/users/access_rights.rst:54
 msgid "Read **Knowledge** articles."
-msgstr ""
+msgstr "Să citească articole din **Cunoștințe**."
 
 #: ../../content/applications/general/users/access_rights.rst:55
 msgid "Perform warehouse barcode scanning operations."
-msgstr ""
+msgstr "Să efectueze operațiuni de scanare a codurilor de bare în depozit."
 
 #: ../../content/applications/general/users/access_rights.rst:57
 msgid ""
@@ -14655,6 +15067,10 @@ msgid ""
 "**Sales**, **Purchases**, **Projects**, or **Accounting**, or to advanced "
 "features reserved for standard or custom users."
 msgstr ""
+"Utilizatorii light nu au acces la aplicațiile principale de afaceri, cum ar "
+"fi **Vânzări**, **Achiziții**, **Proiecte** sau **Contabilitate**, și nici "
+"la funcționalitățile avansate rezervate utilizatorilor standard sau "
+"personalizați."
 
 #: ../../content/applications/general/users/access_rights.rst:61
 msgid ""
@@ -14662,16 +15078,22 @@ msgid ""
 "granted access beyond their default reduced permissions. See `Pricing Page "
 "<https://www.odoo.com/pricing>`_ for more details."
 msgstr ""
+"Un utilizator *Light* este actualizat automat la un rol de *Utilizator* dacă "
+"i se acordă acces dincolo de permisiunile reduse implicite. Consultați "
+"`Pagina de prețuri <https://www.odoo.com/pricing>`_ pentru mai multe detalii."
 
 #: ../../content/applications/general/users/access_rights.rst:65
 msgid "Portal users"
-msgstr ""
+msgstr "Utilizatori Portal"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
 "The *Portal* role can be used for external users. It is assigned to a "
 "customer or supplier who accesses their own data through the portal."
 msgstr ""
+"Rolul *Portal* poate fi utilizat pentru utilizatori externi. Acesta este "
+"atribuit unui client sau furnizor care își accesează propriile date prin "
+"intermediul portalului."
 
 #: ../../content/applications/general/users/access_rights.rst:70
 msgid ""
@@ -14680,6 +15102,10 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` icon, then select :guilabel:`Grant portal "
 "access` from the drop-down."
 msgstr ""
+"Pentru a acorda acces la portal, navigați la aplicația "
+":menuselection:`Contacte` și selectați o înregistrare. Faceți clic pe "
+"pictograma :icon:`fa-ellipsis-v` :guilabel:`(puncte de suspensie verticale)"
+"`, apoi selectați :guilabel:`Acordare acces la portal` din meniul derulant."
 
 #: ../../content/applications/general/users/access_rights.rst:77
 msgid "Manage user permissions"
@@ -14724,6 +15150,10 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"Permisiunile disponibile în fila *Drepturi de acces* sunt determinate de "
+"grupurile asociate rolului utilizatorului. Rolurile oferă un set predefinit "
+"de permisiuni, în timp ce grupurile definesc drepturile de acces specifice "
+"acordate utilizatorilor."
 
 #: ../../content/applications/general/users/access_rights.rst:94
 msgid ""
@@ -14979,6 +15409,9 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"Introduceți un :guilabel:`Nume` pentru grup și bifați caseta de selectare de "
+"lângă :guilabel:`Grup de partajare`, dacă acest grup a fost creat pentru a "
+"stabili drepturi de acces pentru partajarea datelor cu anumiți utilizatori."
 
 #: ../../content/applications/general/users/access_rights.rst:192
 msgid ""
@@ -15282,6 +15715,11 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"Pentru a activa expirarea sesiunii, faceți clic pe fila *Timeouts* și bifați "
+"caseta de selectare :guilabel:`Sesiune`. Apoi, alegeți fie "
+":guilabel:`Deconectare`, fie :guilabel:`Deconectare cu autentificare cu doi "
+"factori` din meniul derulant. Aceasta determină dacă utilizatorul trebuie să "
+"finalizeze verificarea 2FA la reconectare."
 
 #: ../../content/applications/general/users/access_rights.rst:304
 msgid ""
@@ -16713,7 +17151,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/user_portals.rst:16
 msgid "Manage :ref:`product returns <ecommerce/handling/returns>`"
-msgstr ""
+msgstr "Gestionarea :ref:`returnărilor de produse <ecommerce/handling/returns>`"
 
 #: ../../content/applications/general/users/user_portals.rst:17
 msgid "Manage payment methods"

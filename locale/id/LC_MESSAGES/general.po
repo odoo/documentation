@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the Odoo package.
 # Odoo Translation Bot <c3p@odoo.com>, 2025, 2026.
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-09 17:32+0000\n"
-"PO-Revision-Date: 2026-10-09 15:58+0000\n"
-"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"PO-Revision-Date: 2026-10-21 23:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/id/>\n"
 "Language: id\n"
@@ -2397,7 +2398,7 @@ msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/companies/multi_company.rst:181
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "Kliring antarperusahaan"
 
 #: ../../content/applications/general/companies/multi_company.rst:183
 msgid ""
@@ -2405,6 +2406,9 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"Fitur **Intercompany clearing** mengotomatiskan entri akuntansi saat satu "
+"perusahaan menerima pembayaran untuk faktur yang diterbitkan oleh perusahaan "
+"lain di dalam database yang sama."
 
 #: ../../content/applications/general/companies/multi_company.rst:186
 msgid ""
@@ -2414,30 +2418,39 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"Saat pembayaran diproses oleh perusahaan sekunder, Odoo secara otomatis "
+"merekonsiliasi faktur terbuka pelanggan di perusahaan penerbit dan membuat "
+"entri penyeimbang antarperusahaan di antara kedua perusahaan. Otomatisasi "
+"ini meniadakan pelacakan spreadsheet manual dan menjaga akun antarperusahaan "
+"tetap seimbang secara real time."
 
 #: ../../content/applications/general/companies/multi_company.rst:192
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "**Perusahaan A** menerbitkan faktur pelanggan sebesar $100."
 
 #: ../../content/applications/general/companies/multi_company.rst:194
 msgid "The customer pays via the customer portal belonging to **Company B**."
-msgstr ""
+msgstr "Pelanggan membayar melalui portal pelanggan milik **Perusahaan B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:196
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "Setelah menerima pembayaran, Odoo:"
 
 #: ../../content/applications/general/companies/multi_company.rst:198
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "Menyelesaikan piutang pelanggan di **Perusahaan A dan B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:199
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
 msgstr ""
+"Mengklasifikasikan ulang piutang Perusahaan A sebagai klaim terhadap "
+"**Perusahaan B**."
 
 #: ../../content/applications/general/companies/multi_company.rst:200
 msgid "Records Company B's received funds as a payable owed to **Company A**."
 msgstr ""
+"Mencatat dana yang diterima Perusahaan B sebagai utang kepada **Perusahaan "
+"A**."
 
 #: ../../content/applications/general/companies/multi_company.rst:206
 msgid ""
@@ -2447,44 +2460,59 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"Modul :guilabel:`Pembayaran Antarperusahaan - Akun` "
+"(`account_payment_interco`) harus :ref:`diinstal <general/install>`, dan "
+"fitur :guilabel:`Transaksi Antar-Perusahaan` harus diaktifkan **di setiap "
+"perusahaan** yang terlibat agar kolom :guilabel:`Kliring Antarperusahaan` "
+"muncul di pengaturan Akuntansi."
 
 #: ../../content/applications/general/companies/multi_company.rst:211
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
-msgstr ""
+msgstr "Buka :menuselection:`Akuntansi --> Konfigurasi --> Pengaturan`."
 
 #: ../../content/applications/general/companies/multi_company.rst:212
 msgid "Scroll down to the :guilabel:`Default Accounts` section."
-msgstr ""
+msgstr "Gulir ke bawah ke bagian :guilabel:`Akun Default`."
 
 #: ../../content/applications/general/companies/multi_company.rst:213
 msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
 msgstr ""
+"Di bawah :guilabel:`Kliring Antarperusahaan`, tentukan kolom berikut untuk "
+"perusahaan yang saat ini aktif:"
 
 #: ../../content/applications/general/companies/multi_company.rst:216
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
 msgstr ""
+":guilabel:`Jurnal`: Jurnal khusus yang digunakan untuk mencatat transfer "
+"kliring lintas entitas."
 
 #: ../../content/applications/general/companies/multi_company.rst:217
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
 msgstr ""
+":guilabel:`Akun Utang`: Akun utang kliring yang digunakan untuk mencatat "
+"utang kepada perusahaan lain di dalam database."
 
 #: ../../content/applications/general/companies/multi_company.rst:219
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
 msgstr ""
+":guilabel:`Akun Piutang`: Akun piutang kliring yang digunakan untuk mencatat "
+"klaim terhadap perusahaan lain di dalam database."
 
 #: ../../content/applications/general/companies/multi_company.rst:222
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
 msgstr ""
+"Beralihlah ke perusahaan lain yang terlibat menggunakan pemilih perusahaan "
+"di menu kanan atas dan ulangi proses tersebut untuk masing-masing perusahaan."
 
 #: ../../content/applications/general/companies/multi_company.rst:226
 msgid ""
@@ -2492,6 +2520,9 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"Metode pembayaran yang digunakan untuk mendaftarkan pembayaran pelanggan "
+"harus menggunakan :ref:`akun tanda terima yang belum diselesaikan "
+"<accounting/journals/outstanding-accounts>` agar entri jurnal dibuat."
 
 #: ../../content/applications/general/companies/multi_company.rst:230
 msgid ""
@@ -2500,6 +2531,9 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`Buat <chart-of-account/create>` akun kliring utang dan piutang unik "
+"yang terpisah dari akun utang dan piutang yang digunakan untuk transaksi "
+"umum, dan aktifkan opsi :guilabel:`Bukan Dagang` pada akun-akun ini."
 
 #: ../../content/applications/general/companies/multi_company.rst:237
 msgid "Use cases"
@@ -2829,11 +2863,19 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Untuk email masuk, setelah menambahkan domain Anda sendiri, :ref:`balasan "
+"dari pelanggan akan kembali ke domain Anda <email-inbound-custom-domain>`, "
+"dan Anda perlu menggunakan salah satu dari tiga cara yang memungkinkan untuk "
+"mendapatkan email tersebut kembali ke dalam Odoo (menggunakan :ref:`server "
+"email masuk <email-inbound-custom-domain-incoming-server>`, :ref:`redireksi/"
+"penerusan <email-inbound-custom-domain-redirections>` atau :ref:`menggunakan "
+"subdomain <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Mengelola pesan masuk <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3824,6 +3866,12 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"Saat mengirim email, server email Odoo menyertakan tanda tangan unik "
+":abbr:`DKIM (DomainKeys Identified Mail)` di header. Server penerima "
+"mendekripsi tanda tangan ini menggunakan catatan DKIM di nama domain "
+"database. Jika tanda tangan dan kunci yang terdapat dalam catatan tersebut "
+"cocok, ini membuktikan bahwa pesan tersebut asli dan tidak diubah selama "
+"pengiriman."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3838,6 +3886,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Untuk mengaktifkan DKIM, tambahkan catatan :abbr:`CNAME (Canonical Name)` ke "
+"zona :abbr:`DNS (Domain Name System)` dari nama domain tersebut:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3845,6 +3895,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Jika nama domainnya adalah `company-name.com`, pastikan untuk membuat "
+"subdomain `odoo._domainkey.company-name.com` yang canonical name-nya adalah "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3863,6 +3916,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Periksa apakah catatan DKIM valid menggunakan alat seperti `MXToolbox DKIM "
+"Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Masukkan "
+"`example.com:odoo` di alat pencarian DKIM, dengan menentukan bahwa selector "
+"yang diuji adalah `odoo` untuk domain khusus `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3982,6 +4039,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`Catatan CNAME GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4341,6 +4400,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Untuk informasi lebih lanjut tentang konfigurasi catatan DNS untuk "
+"subdomain, lihat :ref:`pengaturan catatan DNS <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4449,7 +4510,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Catatan DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4468,6 +4529,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Untuk **database on-premise**, metode redireksi dan catatan DNS juga "
+"memerlukan konfigurasi :doc:`skrip mail gateway <../../../../administration/"
+"on_premise/email_gateway>`. Menjalankan skrip ini memerlukan **pengetahuan "
+"teknis dan infrastruktur tingkat lanjut**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4723,7 +4788,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "Catatan DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4732,6 +4797,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Opsi ketiga adalah menggunakan subdomain khusus (misalnya, "
+"`mail.mydomain.com`) dan mengonfigurasi catatan DNS-nya sehingga email yang "
+"dikirim ke alamat pada subdomain tersebut ditangani oleh Odoo dan diproses "
+"langsung di dalam database Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4739,6 +4808,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Untuk Odoo Online dan Odoo.sh, routing berbasis CNAME hanya didukung saat "
+"menggunakan subdomain khusus. Ini tidak dapat dikonfigurasi pada domain "
+"utama Anda (misalnya, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4746,12 +4818,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Perlu diketahui bahwa subdomain ini akan dikhususkan untuk lalu lintas "
+"email. Jika diakses melalui browser web, pengguna akan diarahkan ke website "
+"pertama yang dikonfigurasi pada database (jika berlaku)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Karena subdomain baru sedang dikonfigurasi untuk email masuk, :doc:`catatan "
+"DNS-nya juga harus disiapkan untuk email keluar <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4761,7 +4838,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Akses pengaturan DNS Anda"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4769,34 +4846,39 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Jika domain Anda di-hosting oleh registrar pihak ketiga (misalnya, GoDaddy, "
+"Namecheap, Cloudflare), masuklah ke registrar tersebut dan buka zona "
+"manajemen DNS untuk domain Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Jika Odoo mengelola DNS Anda:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "Buka `pengelola database <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Klik ikon :icon:`fa-gear` (:guilabel:`roda gigi`) di samping database, lalu "
+"pilih :icon:`fa-globe` :guilabel:`Nama Domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "Klik :guilabel:`DNS`, lalu :guilabel:`Tambahkan rekaman DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Buat rekaman CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**Nama / Host:** subdomain yang ingin Anda gunakan (misalnya, `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4804,10 +4886,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Konten / Target:** domain root database Anda (misalnya, `dbname.odoo.com.`)"
+"."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Tambahkan subdomain ke portal Odoo Anda"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4815,6 +4899,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Di `pengelola database <https://www.odoo.com/my/databases>`_, klik ikon "
+":icon:`fa-gear` (:guilabel:`roda gigi`) untuk database Anda, lalu pilih "
+":icon:`fa-globe` :guilabel:`Nama Domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4822,6 +4909,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Klik :guilabel:`Gunakan domain saya sendiri`, lalu masukkan subdomain "
+"lengkap (misalnya, `mail.mydomain.com`). Setelah verifikasi berhasil, klik "
+":guilabel:`Saya konfirmasi, selesai`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4831,16 +4921,21 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Jika verifikasi gagal, periksa kembali apakah target CNAME diakhiri dengan "
+"titik (misalnya, `dbname.odoo.com.`), karena beberapa penyedia DNS "
+"mewajibkannya. Beri waktu bagi perubahan DNS untuk merambat — ini dapat "
+"memakan waktu dari beberapa menit hingga 48 jam tergantung penyedia Anda. "
+"Setelah perambatan selesai, coba verifikasi lagi."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Tambahkan domain alias ke database"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "Masuk ke database dan buka aplikasi :guilabel:`Pengaturan`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4848,38 +4943,44 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"Di field :guilabel:`Domain Alias`, masukkan subdomain yang Anda "
+"konfigurasikan (misalnya, `mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Menambahkan domain alias di pengaturan."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"Di bagian :guilabel:`Nama Domain`, subdomain harus tampil sebagai berikut:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Contoh konfigurasi rekaman nama domain di portal Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "Di bagian :guilabel:`DNS`, rekaman harus tampil sebagai berikut:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Contoh konfigurasi rekaman DNS di portal Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"Rekaman kedua memungkinkan Odoo mengirim email terautentikasi dari domain "
+"khusus Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+":doc:`Mengonfigurasi rekaman DNS untuk mengirim email di Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4891,26 +4992,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Masuk ke registrar pihak ketiga Anda (misalnya, GoDaddy, Namecheap, "
+"Cloudflare) dan buka zona manajemen DNS untuk domain Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Tambahkan subdomain ke pengaturan Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Masuk ke platform Odoo.sh dan buka proyek Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Pilih cabang produksi, buka tab :guilabel:`Pengaturan`, dan cari bagian "
+"**Domain kustom**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Masukkan subdomain lengkap (misalnya, `mail.mydomain.com`) dan klik "
+":guilabel:`Tambahkan domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4922,6 +5029,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Sebagai alternatif dari rekaman CNAME, Anda dapat membuat rekaman MX untuk "
+"subdomain Anda (misalnya, `mail`), yang mengarah ke `dbname.odoo.com.` "
+"dengan prioritas `10`. Langkah konfigurasi lainnya tetap sama."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4929,6 +5039,10 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Perlu diperhatikan bahwa berbeda dengan CNAME, rekaman MX tidak mewarisi SPF "
+"atau rekaman DNS lain dari domain target, sehingga Anda mungkin perlu "
+"mengonfigurasinya secara terpisah agar email keluar dapat diautentikasi "
+"dengan benar."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5340,6 +5454,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Rekaman DNS <email-inbound-custom-domain-dns>` (memerlukan pengetahuan "
+"teknis lanjutan)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6467,6 +6583,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Untuk informasi lebih lanjut tentang cron saat menggunakan Odoo.sh, lihat "
+":ref:`dokumentasi Odoo.sh dan tindakan terjadwal <odoo-sh/advanced/scheduled>"
+"`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8378,11 +8497,11 @@ msgstr ":guilabel:`Allowed methods`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8564,45 +8683,58 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odoo menyediakan integrasi geolokasi yang memungkinkan Anda menemukan lokasi "
+"kontak atau tempat serta membuat rute di peta."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"Tampilan :ref:`Peta <studio/views/multiple-records/map>` tersedia secara "
+"default. Tidak diperlukan konfigurasi untuk mengaksesnya."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "Geolokasi kontak dan tempat"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"Fitur :guilabel:`Geolokasi` menghasilkan koordinat lintang dan bujur untuk "
+"menentukan lokasi secara tepat. Fitur ini dapat digunakan untuk:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"Memeriksa :ref:`lokasi check-in/out <attendances/check-in-out-details>` "
+"karyawan di aplikasi **Presensi**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"Menampilkan lokasi pengambilan saat menggunakan :ref:`metode pengiriman "
+"ambil di tempat <ecommerce/shipping/instore-pickup>`;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`Menetapkan mitra <contacts/partner-assignment>` di aplikasi **Kontak**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avalara address validation <accounting/"
 "avalara/address-validation>` feature."
 msgstr ""
+"Memvalidasi alamat dengan fitur :ref:`validasi alamat Avalara <accounting/"
+"avalara/address-validation>` ."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8612,10 +8744,15 @@ msgid ""
 "Then, in the :guilabel:`API:` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"Untuk mengaktifkan fitur :guilabel:`Geolokasi`, buka "
+":menuselection:`Pengaturan --> Pengaturan Umum`, gulir ke bawah ke bagian "
+":guilabel:`Integrasi`, dan aktifkan :guilabel:`Geolokasi`. Kemudian, pada "
+"kolom :guilabel:`API:`, pilih :guilabel:`Open Street Map` atau "
+":guilabel:`Google Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8623,6 +8760,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap adalah basis data geografis gratis dan terbuka yang diperbarui "
+"dan dikelola oleh sukarelawan. Tidak diperlukan konfigurasi tambahan untuk "
+"menggunakan :guilabel:`Open Street Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8630,10 +8770,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"Data OpenStreetMap mungkin tidak selalu akurat. Anda dapat `bergabung dengan "
+"komunitas OpenStreetMap <https://www.openstreetmap.org/fixthemap>`_ untuk "
+"melaporkan dan memperbaiki masalah apa pun yang Anda temui."
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8641,6 +8784,9 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places API menyediakan informasi mendetail tentang tempat, bisnis, "
+"dan tempat menarik. API ini mendukung fitur berbasis lokasi seperti "
+"pencarian, navigasi, dan rekomendasi."
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8656,7 +8802,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "Rute Peta"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8666,26 +8812,35 @@ msgid ""
 "applications/inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/dispatch>`."
 msgstr ""
+"Rute peta berguna untuk menyediakan rencana perjalanan dan lokasi bagi "
+":doc:`teknisi layanan lapangan </applications/services/planning/"
+"field_service>` dan rute pengiriman ke pengemudi dalam :doc:`sistem "
+"manajemen dispatch </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "Untuk membuat rute, ikuti langkah-langkah berikut:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
-msgstr ""
+msgstr "Buat atau masuk ke `akun Mapbox <https://www.mapbox.com/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`Buat token akses <https://docs.mapbox.com/help/dive-deeper/access-tokens/>"
+"`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"Buka `halaman Access tokens di Mapbox <https://account.mapbox.com/access-"
+"tokens/>`_ dan salin token Anda ke papan klip."
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8693,30 +8848,41 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox hanya menampilkan token rahasia satu kali saat pembuatan dan "
+"menyembunyikannya secara permanen setelah meninggalkan halaman "
+":guilabel:`Access Token`. Pastikan untuk menyimpan token tersebut."
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"Di Odoo, buka :menuselection:`Pengaturan --> Pengaturan Umum`, gulir ke "
+"bawah ke bagian :guilabel:`Integrasi`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Mapbox`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"Di bawah :guilabel:`Mapbox`, tempel token akses Mapbox ke kolom "
+":guilabel:`Token`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Cara menggunakan Mapbox dengan aman: Token akses <https://docs.mapbox.com/"
+"help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`Pembatasan URL <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -8972,7 +9138,7 @@ msgstr ":ref:`language/install`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:5
 msgid "Mail plugins"
-msgstr ""
+msgstr "Plugin email"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:7
 msgid ""
@@ -8980,32 +9146,37 @@ msgid ""
 "With plugins, interact with an Odoo database directly from an email inbox in "
 "the following ways:"
 msgstr ""
+"Plugin email adalah konektor yang menjembatani database Odoo dengan kotak "
+"masuk email. Dengan plugin, Anda dapat berinteraksi dengan database Odoo "
+"secara langsung dari kotak masuk email melalui cara-cara berikut:"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:10
 msgid "Log emails in the chatter of related Odoo records."
-msgstr ""
+msgstr "Catat email di chatter rekaman Odoo terkait."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:11
 msgid "Search for and create opportunities, tickets, and tasks."
-msgstr ""
+msgstr "Cari dan buat peluang, tiket, dan tugas."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:12
 msgid "Open related Odoo records from an email inbox."
-msgstr ""
+msgstr "Buka rekaman Odoo terkait dari kotak masuk email."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:13
 msgid "Create Odoo contacts."
-msgstr ""
+msgstr "Buat kontak Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:18
 msgid "Mail plugin features"
-msgstr ""
+msgstr "Fitur plugin email"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:21
 msgid ""
 "The options available in mail plugins will vary based on the applications "
 "installed in the database."
 msgstr ""
+"Opsi yang tersedia di plugin email akan bervariasi bergantung pada aplikasi "
+"yang diinstal di database."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:25
 msgid "Create a contact"
@@ -9016,6 +9187,8 @@ msgid ""
 "To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
 "circle` :guilabel:`(New)` icon."
 msgstr ""
+"Untuk membuat record kontak di Odoo dari email, klik ikon :icon:`fa-plus-"
+"circle` :guilabel:`(Baru)`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:31
 msgid ""
@@ -9035,6 +9208,11 @@ msgid ""
 "email is used as the opportunity title, and the content of the email is "
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
+"Untuk membuat peluang dari email, klik ikon :icon:`fa-plus` :guilabel:`(plus)"
+"` di sebelah :guilabel:`Opportunities`. Melakukan hal ini akan membuka "
+"rekaman peluang baru di Odoo dalam tab baru. Subjek email digunakan sebagai "
+"judul peluang, dan konten email ditambahkan ke tab :guilabel:`Notes` dari "
+"peluang tersebut."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:42
 msgid "Create a task"
@@ -9049,6 +9227,12 @@ msgid ""
 "Odoo in a new tab. The subject of the email is used as the task title, and "
 "the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
+"Untuk membuat task dari email, klik ikon :icon:`fa-plus` :guilabel:`(plus)` "
+"di sebelah :guilabel:`Tasks`. Kemudian, masukkan judul project di mana task "
+"harus dibuat pada field yang muncul, dan pilih project yang sesuai dari "
+"daftar yang muncul. Ini akan membuka rekaman task baru di Odoo dalam tab "
+"baru. Subjek email digunakan sebagai judul task, dan konten email "
+"ditambahkan ke tab :guilabel:`Description`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:51
 msgid "Create a ticket"
@@ -9062,33 +9246,40 @@ msgid ""
 "the ticket title, and the content of the email is added to "
 "the :guilabel:`Description` tab of the ticket."
 msgstr ""
+"Untuk membuat tiket dari email, klik ikon :icon:`fa-plus` :guilabel:`(Baru)` "
+"di sebelah :guilabel:`Tiket`. Tindakan ini akan membuka record tiket baru di "
+"Odoo pada tab baru. Subjek email akan digunakan sebagai judul tiket, dan "
+"konten email akan ditambahkan ke tab :guilabel:`Deskripsi` tiket."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:59
 msgid "Email providers"
-msgstr ""
+msgstr "Penyedia email"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:61
 msgid "Mail plugins are available for Outlook and Gmail:"
-msgstr ""
+msgstr "Plugin email tersedia untuk Outlook dan Gmail:"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook plugin"
-msgstr ""
+msgstr "Outlook Plugin"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 msgid ""
 "Learn how to set up the Outlook plugin and connect it to an Odoo database."
 msgstr ""
+"Pelajari cara menyiapkan plugin Outlook dan menghubungkannya ke database "
+"Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid "Gmail plugin"
-msgstr ""
+msgstr "Plugin Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid ""
 "Learn how to set up the Gmail plugin and connect it to an Odoo database."
 msgstr ""
+"Pelajari cara menyiapkan plugin Gmail dan menghubungkannya ke database Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:3
 msgid "Gmail Plugin"
@@ -9100,6 +9291,9 @@ msgid ""
 "users to create Odoo records (such as opportunities, tasks, and tickets) "
 "directly in Gmail."
 msgstr ""
+"Plugin Gmail menghubungkan database Odoo ke kotak masuk Gmail, yang "
+"memungkinkan pengguna membuat record Odoo (seperti peluang, tugas, dan "
+"tiket) langsung di Gmail."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:9
 msgid ""
@@ -9129,10 +9323,13 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"Untuk versi database sebelum 19.2, lihat `dokumentasi 19.0 <https://"
+"www.odoo.com/documentation/19.0/applications/general/integrations/"
+"mail_plugins/gmail.html>`_ untuk instruksi penginstalan."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:26
 msgid "From the Google Workspace Marketplace"
-msgstr ""
+msgstr "Dari Google Workspace Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:28
 msgid ""
@@ -9145,10 +9342,17 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Untuk menginstal plugin Gmail Odoo, masuk ke akun Gmail yang akan "
+"dihubungkan ke Odoo, lalu buka halaman `Odoo Inbox Addin <https://"
+"workspace.google.com/marketplace/app/odoo_inbox_addin/546131068990>`_ di "
+"Google Workspace Marketplace. Klik :guilabel:`Instal` dan jendela pop-up "
+"akan muncul. Klik :guilabel:`Lanjutkan` dan centang kotak di sebelah "
+":guilabel:`Pilih semua` untuk memberikan izin yang diperlukan, lalu klik "
+":guilabel:`Lanjutkan` sekali lagi untuk mengonfirmasi penginstalan plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:36
 msgid "From the Gmail inbox"
-msgstr ""
+msgstr "Dari kotak masuk Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:38
 msgid ""
@@ -9158,6 +9362,11 @@ msgid ""
 "chevron-left` :guilabel:`(Show side panel)` icon in the bottom-right corner "
 "of the inbox to expand it."
 msgstr ""
+"Sebagai alternatif, plugin dapat diinstal langsung dari kotak masuk Gmail. "
+"Untuk melakukannya, klik ikon :icon:`fa-plus` :guilabel:`(Dapatkan Add-on)` "
+"pada panel samping kanan. Jika panel samping tidak terlihat, klik ikon "
+":icon:`fa-chevron-left` :guilabel:`(Tampilkan panel samping)` di sudut kanan "
+"bawah kotak masuk untuk meluaskannya."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Plus sign icon on the Gmail inbox side panel."
@@ -9165,11 +9374,11 @@ msgstr "Ikon tanda plus di panel sisi kotak masuk Gmail."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:46
 msgid "Click :guilabel:`Search apps`, then type `Odoo` and press Enter."
-msgstr ""
+msgstr "Klik :guilabel:`Telusuri aplikasi`, lalu ketik `Odoo` dan tekan Enter."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Odoo Inbox Addin in Google Workspace Marketplace."
-msgstr ""
+msgstr "Odoo Inbox Addin di Google Workspace Marketplace."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:51
 msgid ""
@@ -9179,17 +9388,23 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Klik :guilabel:`Odoo Inbox Addin`, lalu klik :guilabel:`Instal`, dan jendela "
+"pop-up akan muncul. Klik :guilabel:`Lanjutkan` dan centang kotak di samping "
+":guilabel:`Pilih semua` untuk memberikan izin yang diperlukan, lalu klik "
+":guilabel:`Lanjutkan` sekali lagi untuk mengonfirmasi penginstalan plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
 msgid ""
 "If the plugin does not appear in the side panel after installation, refresh "
 "the page."
 msgstr ""
+"Jika plugin tidak muncul di panel samping setelah penginstalan, segarkan "
+"halaman."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:60
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:49
 msgid "Connect an Odoo database"
-msgstr ""
+msgstr "Hubungkan database Odoo"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:62
 msgid ""
@@ -9200,6 +9415,12 @@ msgid ""
 "account, and a pop-up window opens. Click :guilabel:`Allow` in the pop-up "
 "window to let the Gmail plugin connect to the database."
 msgstr ""
+"Untuk membuka plugin, klik ikon Odoo di panel samping sebelah kanan. Panel "
+"plugin akan terbuka di antara kotak masuk dan panel samping sebelah kanan. "
+"Klik :guilabel:`Login`. Masukkan URL database Odoo dan klik "
+":guilabel:`Login`, atau klik :guilabel:`Daftar` untuk membuat akun Odoo, dan "
+"jendela pop-up akan terbuka. Klik :guilabel:`Izinkan` di jendela pop-up "
+"untuk mengizinkan plugin Gmail terhubung ke database."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
 msgid ""
@@ -9217,6 +9438,9 @@ msgid ""
 "enables users to create Odoo records (such as opportunities, tasks, and "
 "tickets) directly in Outlook."
 msgstr ""
+"Plugin Outlook menghubungkan database Odoo ke kotak masuk Outlook, yang "
+"memungkinkan pengguna membuat record Odoo (seperti peluang, tugas, dan "
+"tiket) langsung di Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:9
 msgid ""
@@ -9230,7 +9454,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:16
 msgid "Install the Outlook plugin"
-msgstr ""
+msgstr "Instal Outlook Plugin"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:22
 msgid ""
@@ -9238,10 +9462,13 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"Untuk versi database sebelum 19.2, lihat `dokumentasi 19.0 <https://"
+"www.odoo.com/documentation/19.0/applications/general/integrations/"
+"mail_plugins/outlook.html>`_ untuk instruksi penginstalan."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:27
 msgid "From the Microsoft Marketplace"
-msgstr ""
+msgstr "Dari Microsoft Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:29
 msgid ""
@@ -9254,10 +9481,18 @@ msgid ""
 "the Outlook inbox. Click :guilabel:`Add` to confirm the installation of the "
 "plugin."
 msgstr ""
+"Untuk menginstal plugin Odoo Outlook, buka halaman `Odoo Inbox Addin "
+"<https://marketplace.microsoft.com/en-us/product/WA200009923?tab=Overview>`_ "
+"di Microsoft Marketplace dan klik :guilabel:`Dapatkan sekarang`. Masuk ke "
+"akun Outlook yang akan dihubungkan ke Odoo. Isi bidang :guilabel:`Nama` dan "
+":guilabel:`Negara / wilayah`, lalu klik :guilabel:`Dapatkan sekarang` sekali "
+"lagi untuk memberikan izin yang diperlukan, dan halaman akan dialihkan ke "
+"kotak masuk Outlook. Klik :guilabel:`Tambahkan` untuk mengonfirmasi "
+"penginstalan plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid "From the Outlook inbox"
-msgstr ""
+msgstr "Dari kotak masuk Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
 msgid ""
@@ -9268,10 +9503,16 @@ msgid ""
 "Click :guilabel:`Odoo Inbox Addin`, then click :guilabel:`Add` to confirm "
 "the installation of the plugin."
 msgstr ""
+"Atau, plugin dapat diinstal langsung dari kotak masuk Outlook. Untuk "
+"melakukannya, buka email di kotak masuk Outlook, klik tombol "
+":guilabel:`Aplikasi` di sudut kanan atas email, lalu klik "
+":guilabel:`Dapatkan add-in`. Klik :guilabel:`Cari add-in`, lalu ketik `Odoo` "
+"dan tekan Enter. Klik :guilabel:`Odoo Inbox Addin`, lalu klik "
+":guilabel:`Tambahkan` untuk mengonfirmasi penginstalan plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Apps button in the Outlook inbox."
-msgstr ""
+msgstr "Tombol Aplikasi di kotak masuk Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:51
 msgid ""
@@ -9279,6 +9520,9 @@ msgid ""
 "corner of any email, and select :guilabel:`Odoo`. The plugin panel opens to "
 "the right of the email."
 msgstr ""
+"Untuk membuka plugin, klik tombol :guilabel:`Aplikasi` di sudut kanan atas "
+"email mana pun, dan pilih :guilabel:`Odoo`. Panel plugin akan terbuka di "
+"sebelah kanan email."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:54
 msgid ""
@@ -9287,6 +9531,10 @@ msgid ""
 "and a pop-up window opens. Click :guilabel:`Allow` in the pop-up window to "
 "let the Outlook plugin connect to the database."
 msgstr ""
+"Masukkan URL database Odoo dan klik :guilabel:`Login`, atau klik "
+":guilabel:`Daftar` untuk membuat akun Odoo. Klik :guilabel:`Izinkan` dan "
+"jendela pop-up akan terbuka. Klik :guilabel:`Izinkan` di jendela pop-up "
+"untuk mengizinkan plugin Outlook terhubung ke database."
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -9673,6 +9921,8 @@ msgid ""
 "Connect the IoT box to an external monitor or a USB printer. If the IoT box "
 "was already plugged prior to this, :ref:`restart it <iot/iot-box/homepage>`."
 msgstr ""
+"Hubungkan IoT box ke monitor eksternal atau printer USB. Jika IoT box sudah "
+"dicolokkan sebelum ini, :ref:`mulai ulang <iot/iot-box/homepage>`."
 
 #: ../../content/applications/general/iot/connect.rst:64
 msgid ""
@@ -9842,6 +10092,11 @@ msgid ""
 "https_certificate>` :guilabel:`End Date`. By default, drivers are "
 "automatically updated every time the IoT system is restarted."
 msgstr ""
+"Aktifkan :ref:`mode pengembang <developer-mode>` untuk mengakses "
+":guilabel:`Informasi Teknis` sistem IoT, seperti :guilabel:`Alamat Domain`, "
+":guilabel:`Versi Image`, dan :ref:`Sertifikat SSL <iot/connect/"
+"https_certificate>` :guilabel:`Tanggal Berakhir`. Secara default, driver "
+"otomatis diperbarui setiap kali sistem IoT dimulai ulang."
 
 #: ../../content/applications/general/iot/connect.rst:127
 msgid ""
@@ -9978,6 +10233,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`Hubungkan terminal pembayaran Worldline/Axepta BNP Paribas <../../"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../content/applications/general/iot/devices.rst:23
 msgid ""
@@ -10175,7 +10432,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11380,6 +11637,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Printer DYMO Series 5 tidak kompatibel dengan :doc:`IoT box <../iot_box>` "
+"dan memerlukan penyandingan dengan :doc:`Windows virtual IoT <../windows_iot>"
+"`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:368
 msgid "DYMO LabelWriter not printing"
@@ -11741,6 +12001,13 @@ msgid ""
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Untuk menghubungkan timbangan ke sistem IoT, gunakan kabel USB. Dalam "
+"beberapa kasus, Anda mungkin memerlukan adaptor serial-ke-USB untuk "
+"menyelesaikan koneksi. Jika timbangan `kompatibel dengan sistem IoT <https://"
+"www.odoo.com/page/iot-hardware>`_, tidak diperlukan penyiapan tambahan; "
+"timbangan terdeteksi secara otomatis begitu terhubung. Jika timbangan tidak "
+"terdeteksi, reboot IoT box atau :ref:`mulai ulang layanan Windows virtual "
+"IoT <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:17
 msgid ""
@@ -11748,6 +12015,9 @@ msgid ""
 "Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a "
 "different scale must be used."
 msgstr ""
+"Jika timbangan masih tidak berfungsi, kemungkinan timbangan tersebut tidak "
+"`kompatibel dengan sistem IoT Odoo <https://www.odoo.com/page/iot-hardware>"
+"`_. Dalam kasus tersebut, timbangan lain harus digunakan."
 
 #: ../../content/applications/general/iot/devices/scale.rst:21
 msgid ""
@@ -11795,10 +12065,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"Untuk mengonfigurasi timbangan Ariva S agar dikenali oleh sistem IoT, lihat "
+"`Panduan Pengaturan Mettler untuk timbangan seri Ariva S <https://www.mt.com/"
+"dam/RET_DOCS/Ariv.pdf>`_ dan ikuti langkah-langkah berikut:"
 
 #: ../../content/applications/general/iot/devices/scale.rst:44
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "Tahan tombol **>T<** hingga :guilabel:`CONF` muncul."
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid ""
@@ -11812,12 +12085,16 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"Pada langkah :guilabel:`3.1`, pastikan nilainya diatur ke :guilabel:`1` (USB "
+"Virtual COM ports). Tekan **>T<** untuk menelusuri opsi."
 
 #: ../../content/applications/general/iot/devices/scale.rst:48
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"Tekan **>0<** hingga :guilabel:`3.6` dan pastikan nilainya diatur ke "
+":guilabel:`3` (8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:50
 msgid ""
@@ -11847,6 +12124,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"Mulai ulang :doc:`IoT box <../iot_box>` atau :ref:`restart layanan IoT "
+"virtual Windows <iot/windows_iot/restart>`. Timbangan kemudian akan muncul "
+"sebagai `Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12045,6 +12325,10 @@ msgid ""
 "virtual IoT service <iot/windows_iot/restart>` to generate and display the "
 "pairing code."
 msgstr ""
+"Waktu tampilan :ref:`kode pairing <iot/connect/pairing-code>` telah "
+"berakhir. Mulai ulang :ref:`IoT box <iot/iot-box/homepage>` atau "
+":ref:`layanan IoT virtual Windows <iot/windows_iot/restart>` untuk membuat "
+"dan menampilkan kode pairing."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:22
 msgid "The IoT system does not connect to the database"
@@ -12072,6 +12356,8 @@ msgid ""
 "Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows "
 "virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Mulai ulang :ref:`IoT box <iot/iot-box/homepage>` atau :ref:`layanan IoT "
+"virtual Windows <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:33
 msgid "The IoT system is connected to the Odoo database but cannot be reached"
@@ -12182,12 +12468,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"Sistem IoT terhubung dan laporan ditetapkan ke printer yang tidak dapat "
+"mencetak"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Verifikasi bahwa browser diizinkan untuk :ref:`mengakses perangkat di "
+"jaringan lokal <pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -12448,6 +12738,11 @@ msgid ""
 "the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
 "then :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
+"IoT Box dan IoT Box Virtual memperbarui dirinya secara otomatis setiap "
+"minggu. Anda tetap dapat memaksakan pembaruan jika merasa sistem IoT Anda "
+"belum diperbarui dengan mengakses :ref:`beranda <iot/iot-box/homepage>`, "
+"mengeklik tombol :icon:`fa-cogs` (:guilabel:`roda gigi`) di kanan atas, lalu "
+":guilabel:`Perbarui` di bagian :guilabel:`Versi`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:14
 msgid ""
@@ -12465,6 +12760,9 @@ msgid ""
 "which requires flashing the IoT box's SD card or uninstalling and "
 "reinstalling the Windows virtual IoT package."
 msgstr ""
+"Dalam kasus ekstrem, Anda mungkin perlu melakukan reset total sistem IoT, "
+"yang mengharuskan flashing kartu SD IoT box atau menghapus dan menginstal "
+"ulang paket IoT virtual Windows."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:26
 msgid ""
@@ -12487,6 +12785,8 @@ msgid ""
 "`Download balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (a free "
 "and open-source tool for writing disk images to SD cards)."
 msgstr ""
+"`Unduh balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (alat "
+"gratis dan sumber terbuka untuk menulis image disk ke kartu SD)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:32
 msgid "Insert the IoT box's micro SD card into the computer or adapter."
@@ -12520,6 +12820,8 @@ msgid ""
 ":ref:`Uninstall the program <iot/windows_iot/uninstall>` and :ref:`reinstall "
 "<iot/windows-iot/installation>` the latest package."
 msgstr ""
+":ref:`Hapus instalan program <iot/windows_iot/uninstall>` dan :ref:`instal "
+"ulang <iot/windows-iot/installation>` paket terbaru."
 
 #: ../../content/applications/general/iot/iot_box.rst:5
 msgid "To start using an IoT box:"
@@ -12542,6 +12844,8 @@ msgid ""
 "`Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://"
 "www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 msgstr ""
+"`Video: Cara Menyiapkan dan Menggunakan Odoo IoT Box: Panduan Pemula "
+"<https://www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 
 #: ../../content/applications/general/iot/iot_box.rst:19
 msgid "Network connection"
@@ -12560,6 +12864,8 @@ msgid ""
 "It is recommended to connect the IoT box to the same network as "
 "the :doc:`devices <devices>` it connects to."
 msgstr ""
+"Disarankan untuk menghubungkan IoT box ke jaringan yang sama dengan "
+":doc:`perangkat <devices>` yang terhubung dengannya."
 
 #: ../../content/applications/general/iot/iot_box.rst:29
 msgid ""
@@ -12609,6 +12915,9 @@ msgid ""
 "network name is in the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is "
 "a unique identifier)."
 msgstr ""
+"Akses pengaturan Wi-Fi komputer dan pilih jaringan IoT box. Nama jaringan "
+"memiliki format `IoTBox-xxxxxxxxxxxx` (di mana `xxxxxxxxxxxx` adalah "
+"pengenal unik)."
 
 #: ../../content/applications/general/iot/iot_box.rst:51
 msgid ""
@@ -12616,6 +12925,9 @@ msgid ""
 "automatically open and redirect to the :ref:`IoT box's homepage <iot/iot-box/"
 "homepage>`."
 msgstr ""
+"Hubungkan ke jaringan Wi-Fi IoT box dan masuk ke dalamnya; browser akan "
+"otomatis membuka dan mengarahkan ke :ref:`beranda IoT box <iot/iot-box/"
+"homepage>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:53
 msgid ""
@@ -12654,6 +12966,10 @@ msgid ""
 "and navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
+"Bergantung pada sistem operasi yang digunakan, browser mungkin tidak terbuka "
+"dan mengarahkan otomatis ke beranda IoT box. Jika terjadi demikian, buka "
+"browser secara manual dan navigasikan ke `http://10.11.12.1` atau URL apa "
+"pun yang diawali dengan **http** (misalnya, `http://odoo.com`)."
 
 #: ../../content/applications/general/iot/iot_box.rst:71
 msgid ""
@@ -12664,6 +12980,12 @@ msgid ""
 "the :guilabel:`Internet Status` section, select the relevant Wi-Fi network, "
 "enter the password, and click :guilabel:`Connect`."
 msgstr ""
+"Jika IoT box terhubung ke :doc:`monitor eksternal <devices/screen>`, pindai "
+"kode QR pertama yang ditampilkan di layar untuk menyambungkan ke jaringan, "
+"lalu pindai kode QR kedua untuk mengakses :ref:`beranda <iot/iot-box/"
+"homepage>` IoT box. Pada beranda, klik :guilabel:`Konfigurasi` di bagian "
+":guilabel:`Status Internet`, pilih jaringan Wi-Fi yang relevan, masukkan "
+"kata sandi, lalu klik :guilabel:`Hubungkan`."
 
 #: ../../content/applications/general/iot/iot_box.rst:80
 msgid "LED status"
@@ -12675,6 +12997,9 @@ msgid ""
 "that indicate its status and help with troubleshooting when no display is "
 "connected. The LEDs can be interpreted as follows:"
 msgstr ""
+"IoT box dilengkapi dua LED, terletak di sebelah kanan slot kartu SD, yang "
+"menunjukkan statusnya dan membantu pemecahan masalah saat tidak ada layar "
+"yang terhubung. LED tersebut dapat diartikan sebagai berikut:"
 
 #: ../../content/applications/general/iot/iot_box.rst:85
 msgid ""
@@ -12682,12 +13007,17 @@ msgid ""
 "Ethernet cable is properly connected, or :ref:`connect the IoT box via Wi-Fi "
 "<iot/iot_box/network-wifi>`."
 msgstr ""
+"**LED merah menyala**: IoT box tidak terhubung ke Internet. Pastikan kabel "
+"Ethernet tersambung dengan benar, atau :ref:`hubungkan IoT box melalui Wi-Fi "
+"<iot/iot_box/network-wifi>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:87
 msgid ""
 "**Green LED flashing**: The IoT box is waiting to :doc:`connect to a "
 "database <connect>`."
 msgstr ""
+"**LED hijau berkedip**: IoT box sedang menunggu untuk :doc:`terhubung ke "
+"database <connect>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:88
 msgid ""
@@ -12708,6 +13038,10 @@ msgid ""
 "click :guilabel:`Homepage`, or open a browser on the device and navigate to "
 "the IoT box's IP address."
 msgstr ""
+"Untuk mengakses beranda IoT box pada perangkat, pertama-tama pastikan "
+"perangkat berada di jaringan yang sama dengan IoT box. Kemudian, jika "
+"menggunakan aplikasi IoT, klik :guilabel:`Beranda`, atau buka browser pada "
+"perangkat dan navigasikan ke alamat IP IoT box."
 
 #: ../../content/applications/general/iot/iot_box.rst:None
 msgid "IoT box's homepage"
@@ -12718,6 +13052,8 @@ msgid ""
 "If the IP address is not already known, use any of the following methods to "
 "retrieve it:"
 msgstr ""
+"Jika alamat IP belum diketahui, gunakan salah satu metode berikut untuk "
+"mendapatkannya:"
 
 #: ../../content/applications/general/iot/iot_box.rst:106
 msgid ""
@@ -12725,6 +13061,9 @@ msgid ""
 "navigate to `http://iotbox.local`. The page automatically redirects to the "
 "homepage, which displays the IP address."
 msgstr ""
+"Saat terhubung ke jaringan yang sama dengan IoT box, buka browser web dan "
+"navigasikan ke `http://iotbox.local`. Halaman tersebut secara otomatis "
+"mengalihkan ke beranda, yang menampilkan alamat IP."
 
 #: ../../content/applications/general/iot/iot_box.rst:109
 msgid ""
@@ -12732,24 +13071,34 @@ msgid ""
 "hardware>`_ using a USB cable, which then automatically prints a ticket with "
 "the IP address."
 msgstr ""
+"Hubungkan `printer struk atau label yang didukung <https://www.odoo.com/app/"
+"iot-hardware>`_ menggunakan kabel USB, yang kemudian akan secara otomatis "
+"mencetak tiket dengan alamat IP."
 
 #: ../../content/applications/general/iot/iot_box.rst:111
 msgid ""
 "Connect the IoT box to an :doc:`external monitor <devices/screen>`, which "
 "then displays the IP address on the screen."
 msgstr ""
+"Hubungkan IoT box ke :doc:`monitor eksternal <devices/screen>`, yang "
+"kemudian akan menampilkan alamat IP pada layar."
 
 #: ../../content/applications/general/iot/iot_box.rst:113
 msgid ""
 "On IoT box images `L2026.05.25` and later, the IoT box IP address is "
 "displayed as a discovered Bluetooth device for 5 minutes after booting."
 msgstr ""
+"Pada image IoT box `L2026.05.25` dan versi yang lebih baru, alamat IP IoT "
+"box ditampilkan sebagai perangkat Bluetooth yang ditemukan selama 5 menit "
+"setelah booting."
 
 #: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
 "Access the router's administrator interface, or use third-party software to "
 "scan the network."
 msgstr ""
+"Akses antarmuka administrator router, atau gunakan perangkat lunak pihak "
+"ketiga untuk memindai jaringan."
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT box's IP address"
@@ -12761,6 +13110,9 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"Untuk me-restart IoT box secara manual, akses :ref:`beranda <iot/iot-box/"
+"homepage>`, lalu klik tombol :icon:`fa-power-off` :guilabel:`(matikan daya)` "
+"di sudut kanan atas."
 
 #: ../../content/applications/general/iot/iot_box.rst:124
 msgid ""
@@ -12777,6 +13129,7 @@ msgstr ""
 #: ../../content/applications/general/iot/iot_box.rst:127
 msgid "To fully reboot the IoT box, unplug it and plug it back in."
 msgstr ""
+"Untuk me-reboot IoT box sepenuhnya, cabut dan pasang kembali kabel dayanya."
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -12990,6 +13343,10 @@ msgid ""
 "the device does not appear, restart the IoT system from the :ref:`IoT "
 "system's homepage <iot/windows-iot/homepage>`."
 msgstr ""
+"Setelah menghubungkan perangkat ke komputer, refresh :ref:`beranda sistem "
+"IoT <iot/windows-iot/homepage>` untuk memverifikasi bahwa perangkat "
+"tercantum. Jika perangkat tidak muncul, restart sistem IoT dari "
+":ref:`beranda sistem IoT <iot/windows-iot/homepage>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:85
 msgid "Windows Firewall configuration"
@@ -13072,6 +13429,9 @@ msgid ""
 "port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/"
 "terminals/worldline_axepta` payment terminals."
 msgstr ""
+"Port lain mungkin diperlukan tergantung pada perangkat IoT Anda. Misalnya, "
+"tambahkan port `9050` untuk terminal pembayaran :doc:`/applications/sales/"
+"point_of_sale/payment_methods/terminals/worldline_axepta`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:114
 msgid ""
@@ -13190,6 +13550,9 @@ msgid ""
 "Odoo’s offline mode provides a solution for short-term interruptions; it is "
 "not intended to offer full or long-term offline capabilities."
 msgstr ""
+"Mode offline Odoo menyediakan solusi untuk gangguan jangka pendek; mode ini "
+"tidak dimaksudkan untuk menawarkan kemampuan offline penuh atau jangka "
+"panjang."
 
 #: ../../content/applications/general/offline_mode.rst:9
 msgid ""
@@ -13198,6 +13561,10 @@ msgid ""
 "or no coverage, Odoo makes certain functionality available offline for "
 "logged-in users."
 msgstr ""
+"Untuk memastikan kelangsungan bisnis saat konektivitas tidak dapat "
+"diandalkan atau tidak tersedia, seperti saat bepergian atau saat bekerja di "
+"lokasi dengan jangkauan buruk atau tanpa jangkauan, Odoo menyediakan "
+"fungsionalitas tertentu secara offline untuk pengguna yang telah login."
 
 #: ../../content/applications/general/offline_mode.rst:13
 msgid ""
@@ -13210,14 +13577,22 @@ msgid ""
 "Previously performed :ref:`search queries <general/offline-mode/search>` can "
 "be run again."
 msgstr ""
+"Segera setelah koneksi internet tidak lagi aktif, tombol :guilabel:`Bekerja "
+"offline` muncul di header database. Tampilan atau rekaman yang sebelumnya "
+"dibuka saat online dapat dibuka kembali, terlepas dari apakah tampilan atau "
+"rekaman tersebut aktif di browser pada saat konektivitas terputus. Rekaman "
+"dapat :ref:`diedit, dihapus, diarsipkan, dibatalkan pengarsipannya, atau "
+"dibuat <general/offline-mode/records-create-udpate>`, asalkan kondisi "
+"tertentu terpenuhi. :ref:`Kueri pencarian <general/offline-mode/search>` "
+"yang sebelumnya dilakukan dapat dijalankan lagi."
 
 #: ../../content/applications/general/offline_mode.rst:20
 msgid "Items that are not available offline are grayed out."
-msgstr ""
+msgstr "Item yang tidak tersedia secara offline ditampilkan berwarna abu-abu."
 
 #: ../../content/applications/general/offline_mode.rst:None
 msgid "Elements not available offline are grayed out"
-msgstr ""
+msgstr "Elemen yang tidak tersedia secara offline berwarna abu-abu"
 
 #: ../../content/applications/general/offline_mode.rst:25
 msgid ""
@@ -13225,6 +13600,9 @@ msgid ""
 "manage-changes>`; when connectivity is restored, changes are synced "
 "automatically and reflected in your database."
 msgstr ""
+"Setiap perubahan yang dibuat secara offline akan :ref:`diantrekan secara "
+"lokal <general/offline-mode/manage-changes>`; saat konektivitas dipulihkan, "
+"perubahan disinkronkan secara otomatis dan diterapkan di database Anda."
 
 #: ../../content/applications/general/offline_mode.rst:29
 msgid ""
@@ -13232,6 +13610,9 @@ msgid ""
 "expect to need, and perform any searches so they can still be accessed if/"
 "when connectivity is lost."
 msgstr ""
+"Jika Anda mengantisipasi masalah konektivitas, buka sebentar tampilan atau "
+"rekaman apa pun yang diperkirakan akan Anda butuhkan, dan lakukan pencarian "
+"sehingga data tersebut tetap dapat diakses jika/saat konektivitas terputus."
 
 #: ../../content/applications/general/offline_mode.rst:33
 msgid ""
@@ -13266,33 +13647,39 @@ msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:44
 msgid "Create and update records"
-msgstr ""
+msgstr "Buat dan perbarui rekaman"
 
 #: ../../content/applications/general/offline_mode.rst:46
 msgid "When offline, records can be:"
-msgstr ""
+msgstr "Saat offline, rekaman dapat:"
 
 #: ../../content/applications/general/offline_mode.rst:48
 msgid ""
 "created, provided a record of the same type was previously created while you "
 "were online"
 msgstr ""
+"dibuat, asalkan rekaman dari jenis yang sama telah dibuat sebelumnya saat "
+"Anda online"
 
 #: ../../content/applications/general/offline_mode.rst:49
 msgid ""
 "edited, deleted, archived, or unarchived, provided they were previously "
 "opened while you were online"
 msgstr ""
+"diedit, dihapus, diarsipkan, atau dibatalkan pengarsipannya, asalkan telah "
+"dibuka sebelumnya saat Anda online"
 
 #: ../../content/applications/general/offline_mode.rst:53
 msgid ""
 "Attachments and images can be opened while offline, but cannot be uploaded "
 "or deleted."
 msgstr ""
+"Lampiran dan gambar dapat dibuka saat offline, tetapi tidak dapat diunggah "
+"atau dihapus."
 
 #: ../../content/applications/general/offline_mode.rst:58
 msgid "Perform searches"
-msgstr ""
+msgstr "Lakukan pencarian"
 
 #: ../../content/applications/general/offline_mode.rst:60
 msgid ""
@@ -13300,20 +13687,26 @@ msgid ""
 "offline. To repeat a previously performed search, click in the search bar, "
 "then choose from the available searches."
 msgstr ""
+"Kueri pencarian yang sebelumnya dilakukan saat online dapat diulangi secara "
+"offline. Untuk mengulangi pencarian yang dilakukan sebelumnya, klik di bilah "
+"pencarian, lalu pilih dari pencarian yang tersedia."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Previous executed searches available via search bar"
-msgstr ""
+msgstr "Pencarian sebelumnya yang dijalankan tersedia melalui bilah pencarian"
 
 #: ../../content/applications/general/offline_mode.rst:70
 msgid "Manage offline changes"
-msgstr ""
+msgstr "Kelola perubahan offline"
 
 #: ../../content/applications/general/offline_mode.rst:72
 msgid ""
 "When you create or update a record offline, the changes are stored locally "
 "in a temporary queue until the internet connection is restored."
 msgstr ""
+"Saat Anda membuat atau memperbarui rekaman secara offline, perubahan "
+"disimpan secara lokal dalam antrean sementara hingga koneksi internet "
+"dipulihkan."
 
 #: ../../content/applications/general/offline_mode.rst:75
 msgid ""
@@ -13322,10 +13715,17 @@ msgid ""
 "record was :guilabel:`Created`, :guilabel:`Edited`, :guilabel:`Archived`, "
 "or :guilabel:`Unarchived`."
 msgstr ""
+"Untuk melihat perubahan yang tertunda saat masih offline, klik tombol "
+":guilabel:`Bekerja offline`; rekaman yang dimodifikasi akan dicantumkan, "
+"dengan tag yang menunjukkan apakah rekaman tersebut :guilabel:`Dibuat`, "
+":guilabel:`Diedit`, :guilabel:`Diarsipkan`, atau :guilabel:`Batal "
+"Diarsipkan`."
 
 #: ../../content/applications/general/offline_mode.rst:79
 msgid "Hovering over an :guilabel:`Edited` tag reveals the changes made."
 msgstr ""
+"Mengarahkan kursor ke tag :guilabel:`Diedit` akan menampilkan perubahan yang "
+"dibuat."
 
 #: ../../content/applications/general/offline_mode.rst:82
 msgid ""
@@ -13334,10 +13734,16 @@ msgid ""
 "name :guilabel:`user_id`) from `Mitchell Admin` to `Marc Demo` and "
 "the :guilabel:`Expected Revenue` from `9000` to `15000`."
 msgstr ""
+"Dalam contoh, opportunity :guilabel:`Office Design and Architecture` diedit "
+"untuk mengubah :guilabel:`Tenaga Penjual` (nama field teknis "
+":guilabel:`user_id`) dari `Mitchell Admin` menjadi `Marc Demo` dan "
+":guilabel:`Pendapatan yang Diharapkan` dari `9000` menjadi `15000`."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Dropdown on Working offline button showing list of changes made offline"
 msgstr ""
+"Dropdown pada tombol Bekerja offline menampilkan daftar perubahan yang "
+"dibuat offline"
 
 #: ../../content/applications/general/offline_mode.rst:90
 msgid ""
@@ -13346,10 +13752,15 @@ msgid ""
 "for example, if changes were made in error or in the wrong order, click "
 "the :icon:`fa-trash` :guilabel:`(Discard offline changes)` icon."
 msgstr ""
+"Untuk membuat perubahan lebih lanjut pada rekaman yang diedit saat masih "
+"offline, klik rekaman untuk membukanya secara lokal. Untuk membuang "
+"perubahan yang tertunda saat masih offline, misalnya jika perubahan dibuat "
+"karena kesalahan atau dalam urutan yang salah, klik ikon :icon:`fa-trash` "
+":guilabel:`(Buang perubahan offline)`."
 
 #: ../../content/applications/general/offline_mode.rst:97
 msgid "Disable offline mode for specific views"
-msgstr ""
+msgstr "Nonaktifkan mode offline untuk tampilan tertentu"
 
 #: ../../content/applications/general/offline_mode.rst:99
 msgid ""
@@ -13358,24 +13769,31 @@ msgid ""
 "specific view and, as a result, make the view unavailable offline, follow "
 "these steps:"
 msgstr ""
+"Dalam beberapa kasus, misalnya untuk tampilan pelaporan, menampilkan "
+"informasi yang kedaluwarsa atau tersimpan dalam cache mungkin tidak sesuai. "
+"Untuk menonaktifkan caching data pada tampilan tertentu dan, sebagai "
+"hasilnya, membuat tampilan tersebut tidak tersedia secara offline, ikuti "
+"langkah-langkah berikut:"
 
 #: ../../content/applications/general/offline_mode.rst:103
 msgid "Open the view in question."
-msgstr ""
+msgstr "Buka tampilan yang dimaksud."
 
 #: ../../content/applications/general/offline_mode.rst:104
 msgid "Activate :ref:`developer mode <developer-mode>`."
-msgstr ""
+msgstr "Aktifkan :ref:`mode pengembang <developer-mode>`."
 
 #: ../../content/applications/general/offline_mode.rst:105
 msgid ""
 "Click the :icon:`fa-bug` :guilabel:`(bug)` icon in the database header, then "
 "select :guilabel:`Action`."
 msgstr ""
+"Klik ikon :icon:`fa-bug` :guilabel:`(bug)` di header database, lalu pilih "
+":guilabel:`Tindakan`."
 
 #: ../../content/applications/general/offline_mode.rst:107
 msgid "Disable :guilabel:`Data caching`."
-msgstr ""
+msgstr "Nonaktifkan :guilabel:`Caching data`."
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -13550,6 +13968,12 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"Untuk memeriksa perangkat yang masuk, klik ikon pengguna di sudut kanan "
+"atas, lalu klik :guilabel:`Preferensi Saya` untuk membuka profil pengguna. "
+"Klik tab *Keamanan* untuk melihat daftar semua perangkat yang digunakan "
+"pengguna untuk masuk ke database. Perangkat apa pun yang saat ini masuk ke "
+"sistem akan menampilkan lingkaran hijau di samping nama perangkat pada kartu "
+"Kanban."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -13565,6 +13989,9 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"Jika perangkat yang tercantum **bukan** perangkat pengguna yang sah dan "
+"berpotensi menimbulkan risiko keamanan, hapus perangkat dan cabut akses "
+"dengan mengeklik tombol :guilabel:`Keluar`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -13572,12 +13999,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"Jendela pop-up :guilabel:`Kontrol Akses` akan dimuat, meminta pengguna untuk "
+"mengonfirmasi identitas mereka. Masukkan kata sandi pengguna, lalu klik "
+":guilabel:`Konfirmasi Kata Sandi`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"Perangkat akan menghilang dari tab *Keamanan* dan tidak dapat lagi digunakan "
+"untuk masuk ke database."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -13703,6 +14135,12 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"Untuk memberlakukan persyaratan panjang kata sandi minimum, :ref:`instal "
+"<general/install>` modul :guilabel:`Kebijakan Kata Sandi` "
+"(`auth_password_policy`). Kemudian, buka aplikasi :guilabel:`Pengaturan`, "
+"buka bagian *Izin*, dan masukkan panjang kata sandi yang diinginkan pada "
+"kolom :guilabel:`Panjang Kata Sandi Minimum`. Secara default, nilainya "
+"adalah `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -13849,7 +14287,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Multi Companies"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -13858,12 +14296,19 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"Kolom :guilabel:`Perusahaan` pada formulir pengguna menentukan perusahaan "
+"mana yang dapat diakses pengguna. Untuk mengonfigurasi akses multi-"
+"perusahaan, navigasi ke :menuselection:`Aplikasi Pengaturan --> bagian "
+"Pengguna --> Kelola Pengguna`. Kemudian pilih pengguna yang diinginkan untuk "
+"membuka formulir pengguna mereka."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"Pada tab *Hak Akses*, di bawah bagian *Peran*, konfigurasikan kolom "
+":guilabel:`Perusahaan` dan :guilabel:`Perusahaan Default`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -13871,6 +14316,9 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`Perusahaan`: Pilih satu atau beberapa perusahaan yang dapat "
+"diakses pengguna. Izin akses dan pengeditan pengguna ditentukan oleh hak "
+"akses yang ditetapkan."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
@@ -14259,7 +14707,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid "Manage roles"
-msgstr ""
+msgstr "Kelola peran"
 
 #: ../../content/applications/general/users/access_rights.rst:36
 msgid ""
@@ -14268,22 +14716,31 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`Pengguna individu <users/add-individual>` diberikan sebuah *Peran* "
+"saat mereka ditambahkan ke database. Peran menentukan tingkat akses yang "
+"dimiliki pengguna, sedangkan hak akses khusus yang terkait dengan setiap "
+"peran ditentukan oleh :ref:`grup <access-rights/groups>`."
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid "The available internal roles are:"
-msgstr ""
+msgstr "Peran internal yang tersedia adalah:"
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*User*: Pengguna internal yang biasanya memiliki akses ke back end dan dapat "
+"membuat serta mengedit rekaman tetapi memiliki lebih sedikit akses "
+"keseluruhan daripada administrator."
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*Administrator*: Pengguna internal dengan akses ke fitur teknis, pembuatan "
+"produk, ekspor, dan izin tingkat lanjut lainnya."
 
 #: ../../content/applications/general/users/access_rights.rst:46
 msgid ""
@@ -14292,30 +14749,34 @@ msgid ""
 "database, or can exist solely as an employee record without login access. "
 "When login access is granted, light users can:"
 msgstr ""
+"*Light*: Pengguna dengan akses terbatas ke fitur-fitur penting Odoo. "
+"Pengguna light dapat ditautkan ke rekaman karyawan untuk memberikan akses "
+"terbatas ke database, atau dapat berdiri sendiri sebagai rekaman karyawan "
+"tanpa akses login. Saat akses login diberikan, pengguna light dapat:"
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage personal and employee-related information."
-msgstr ""
+msgstr "Kelola informasi pribadi dan terkait karyawan."
 
 #: ../../content/applications/general/users/access_rights.rst:51
 msgid "Submit leave and expense requests."
-msgstr ""
+msgstr "Ajukan permohonan cuti dan pengeluaran."
 
 #: ../../content/applications/general/users/access_rights.rst:52
 msgid "Access the **Planning** app and worksheets."
-msgstr ""
+msgstr "Akses aplikasi **Perencanaan** dan lembar kerja."
 
 #: ../../content/applications/general/users/access_rights.rst:53
 msgid "Connect to **Point of Sale** sessions as an employee."
-msgstr ""
+msgstr "Terhubung ke sesi **Point of Sale** sebagai karyawan."
 
 #: ../../content/applications/general/users/access_rights.rst:54
 msgid "Read **Knowledge** articles."
-msgstr ""
+msgstr "Baca artikel **Pengetahuan**."
 
 #: ../../content/applications/general/users/access_rights.rst:55
 msgid "Perform warehouse barcode scanning operations."
-msgstr ""
+msgstr "Lakukan operasi pemindaian barcode gudang."
 
 #: ../../content/applications/general/users/access_rights.rst:57
 msgid ""
@@ -14323,6 +14784,9 @@ msgid ""
 "**Sales**, **Purchases**, **Projects**, or **Accounting**, or to advanced "
 "features reserved for standard or custom users."
 msgstr ""
+"User Light tidak memiliki akses ke aplikasi bisnis inti seperti "
+"**Penjualan**, **Pembelian**, **Proyek**, atau **Akuntansi**, atau ke fitur "
+"lanjutan yang dicadangkan untuk user standar atau kustom."
 
 #: ../../content/applications/general/users/access_rights.rst:61
 msgid ""
@@ -14330,16 +14794,21 @@ msgid ""
 "granted access beyond their default reduced permissions. See `Pricing Page "
 "<https://www.odoo.com/pricing>`_ for more details."
 msgstr ""
+"User *Light* secara otomatis ditingkatkan ke peran *User* jika mereka "
+"diberikan akses di luar izin default yang dikurangi. Lihat `Halaman Harga "
+"<https://www.odoo.com/pricing>`_ untuk detail lebih lanjut."
 
 #: ../../content/applications/general/users/access_rights.rst:65
 msgid "Portal users"
-msgstr ""
+msgstr "User-user portal"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
 "The *Portal* role can be used for external users. It is assigned to a "
 "customer or supplier who accesses their own data through the portal."
 msgstr ""
+"Peran *Portal* dapat digunakan untuk user eksternal. Peran ini ditetapkan ke "
+"pelanggan atau pemasok yang mengakses data mereka sendiri melalui portal."
 
 #: ../../content/applications/general/users/access_rights.rst:70
 msgid ""
@@ -14348,6 +14817,9 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` icon, then select :guilabel:`Grant portal "
 "access` from the drop-down."
 msgstr ""
+"Untuk memberikan akses portal, navigasi ke aplikasi :menuselection:`Kontak`, "
+"dan pilih data. Klik ikon :icon:`fa-ellipsis-v` :guilabel:`(elipsis vertikal)"
+"`, lalu pilih :guilabel:`Berikan akses portal` dari drop-down."
 
 #: ../../content/applications/general/users/access_rights.rst:77
 msgid "Manage user permissions"
@@ -14390,6 +14862,9 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"Izin yang tersedia pada tab *Hak Akses* ditentukan oleh grup yang terkait "
+"dengan peran pengguna. Peran menyediakan serangkaian izin standar, sedangkan "
+"grup menentukan hak akses spesifik yang diberikan kepada pengguna."
 
 #: ../../content/applications/general/users/access_rights.rst:94
 msgid ""
@@ -14632,6 +15107,9 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"Masukkan :guilabel:`Nama` untuk grup dan pilih kotak centang di samping "
+":guilabel:`Grup Berbagi`, jika grup ini dibuat untuk menetapkan hak akses "
+"guna membagikan data dengan beberapa pengguna."
 
 #: ../../content/applications/general/users/access_rights.rst:192
 msgid ""
@@ -14929,6 +15407,11 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"Untuk mengaktifkan batas waktu sesi, klik tab *Batas Waktu*, lalu centang "
+"kotak :guilabel:`Sesi`. Selanjutnya, pilih :guilabel:`Keluar` atau "
+":guilabel:`Keluar dengan autentikasi dua faktor` dari menu drop-down. Opsi "
+"ini menentukan apakah pengguna harus menyelesaikan verifikasi 2FA saat masuk "
+"kembali."
 
 #: ../../content/applications/general/users/access_rights.rst:304
 msgid ""
@@ -16318,7 +16801,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/user_portals.rst:16
 msgid "Manage :ref:`product returns <ecommerce/handling/returns>`"
-msgstr ""
+msgstr "Kelola :ref:`pengembalian produk <ecommerce/handling/returns>`"
 
 #: ../../content/applications/general/users/user_portals.rst:17
 msgid "Manage payment methods"

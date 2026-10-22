@@ -9,8 +9,9 @@
 # Yuriy Razumovskiy <garazdcreation@gmail.com>, 2021
 # Martin Trigaux, 2021
 # Ivan Yelizariev // IEL <yelizariev@itpp.dev>, 2021
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Odoo Translation Bot <c3p@odoo.com>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 #
@@ -19,8 +20,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-09 17:32+0000\n"
-"PO-Revision-Date: 2026-10-10 21:55+0000\n"
-"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"PO-Revision-Date: 2026-10-22 04:38+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/ru/>\n"
 "Language: ru\n"
@@ -2435,7 +2436,7 @@ msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/companies/multi_company.rst:181
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "Межфирменный клиринг"
 
 #: ../../content/applications/general/companies/multi_company.rst:183
 msgid ""
@@ -2443,6 +2444,9 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"Функция **Межфирменный клиринг** автоматизирует бухгалтерские проводки, "
+"когда одна компания получает платеж по счету, выставленному другой компанией "
+"в рамках той же базы данных."
 
 #: ../../content/applications/general/companies/multi_company.rst:186
 msgid ""
@@ -2452,30 +2456,40 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"Когда платеж обрабатывается вторичной компанией, Odoo автоматически сверяет "
+"открытый счет клиента в компании-эмитенте и создает балансирующие "
+"межфирменные проводки между двумя компаниями. Такая автоматизация устраняет "
+"необходимость вести ручной учет в таблицах и поддерживает баланс "
+"межфирменных счетов в режиме реального времени."
 
 #: ../../content/applications/general/companies/multi_company.rst:192
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "**Компания А** выставляет клиенту счет на сумму $100."
 
 #: ../../content/applications/general/companies/multi_company.rst:194
 msgid "The customer pays via the customer portal belonging to **Company B**."
 msgstr ""
+"Клиент производит оплату через портал клиентов, принадлежащий **Компании Б**."
 
 #: ../../content/applications/general/companies/multi_company.rst:196
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "После получения платежа Odoo:"
 
 #: ../../content/applications/general/companies/multi_company.rst:198
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "Погашает дебиторскую задолженность клиента в **Компаниях А и Б**."
 
 #: ../../content/applications/general/companies/multi_company.rst:199
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
 msgstr ""
+"Реклассифицирует дебиторскую задолженность Компании А как требование к "
+"**Компании Б**."
 
 #: ../../content/applications/general/companies/multi_company.rst:200
 msgid "Records Company B's received funds as a payable owed to **Company A**."
 msgstr ""
+"Отражает полученные Компанией Б средства как кредиторскую задолженность "
+"перед **Компанией А**."
 
 #: ../../content/applications/general/companies/multi_company.rst:206
 msgid ""
@@ -2485,44 +2499,61 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"Модуль :guilabel:`Межфирменный платеж — Счет` (`account_payment_interco`) "
+"должен быть :ref:`установлен <general/install>`, а функция "
+":guilabel:`Межфирменные операции` должна быть включена **в каждой "
+"участвующей компании**, чтобы поля :guilabel:`Межфирменный клиринг` "
+"появились в настройках бухучета."
 
 #: ../../content/applications/general/companies/multi_company.rst:211
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
 msgstr ""
+"Перейдите в :menuselection:`Бухгалтерский учёт --> Конфигурация --> "
+"Настройки`."
 
 #: ../../content/applications/general/companies/multi_company.rst:212
 msgid "Scroll down to the :guilabel:`Default Accounts` section."
-msgstr ""
+msgstr "Прокрутите вниз до раздела :guilabel:`Счета по умолчанию`."
 
 #: ../../content/applications/general/companies/multi_company.rst:213
 msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
 msgstr ""
+"В разделе :guilabel:`Межфирменный клиринг` настройте следующие поля для "
+"текущей активной компании:"
 
 #: ../../content/applications/general/companies/multi_company.rst:216
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
 msgstr ""
+":guilabel:`Журнал`: специальный журнал для регистрации межфирменных "
+"клиринговых перемещений."
 
 #: ../../content/applications/general/companies/multi_company.rst:217
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
 msgstr ""
+":guilabel:`Счет кредиторской задолженности`: клиринговый счет кредиторской "
+"задолженности для учета обязательств перед другими компаниями в базе данных."
 
 #: ../../content/applications/general/companies/multi_company.rst:219
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
 msgstr ""
+":guilabel:`Счет дебиторской задолженности`: клиринговый счет дебиторской "
+"задолженности для учета требований к другим компаниям в базе данных."
 
 #: ../../content/applications/general/companies/multi_company.rst:222
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
 msgstr ""
+"Переключитесь на другие участвующие компании с помощью меню выбора компании "
+"в правом верхнем углу и повторите эти действия для каждой из них."
 
 #: ../../content/applications/general/companies/multi_company.rst:226
 msgid ""
@@ -2530,6 +2561,9 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"Способ оплаты, используемый для регистрации платежа клиента, должен быть "
+"привязан к :ref:`счету ожидаемых поступлений <accounting/journals/"
+"outstanding-accounts>`, чтобы сформировалась проводка в журнале."
 
 #: ../../content/applications/general/companies/multi_company.rst:230
 msgid ""
@@ -2538,6 +2572,9 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`Создайте <chart-of-account/create>` отдельные клиринговые счета "
+"кредиторской и дебиторской задолженности, отличающиеся от счетов для "
+"основных операций, и активируйте для них параметр :guilabel:`Неторговый`."
 
 #: ../../content/applications/general/companies/multi_company.rst:237
 msgid "Use cases"
@@ -2868,11 +2905,20 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Для входящих писем после добавления собственного домена :ref:`ответы от "
+"клиентов будут поступать на ваш домен <email-inbound-custom-domain>`, и вам "
+"потребуется использовать один из трех возможных способов доставки писем "
+"обратно в Odoo (с помощью :ref:`сервера входящей почты <email-inbound-custom-"
+"domain-incoming-server>`, :ref:`перенаправления/пересылки <email-inbound-"
+"custom-domain-redirections>` или :ref:`использования поддомена <email-"
+"inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Управление входящими сообщениями <email_communication/"
+"email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3879,6 +3925,11 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"При отправке электронного письма почтовый сервер Odoo включает в заголовки "
+"уникальную подпись :abbr:`DKIM (DomainKeys Identified Mail)`. Сервер "
+"получателя расшифровывает эту подпись с помощью записи DKIM в доменном имени "
+"базы данных. Если подпись и ключ в записи совпадают, это подтверждает "
+"подлинность сообщения и то, что оно не было изменено при передаче."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3893,6 +3944,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Чтобы включить DKIM, добавьте запись :abbr:`CNAME (Canonical Name)` в зону "
+":abbr:`DNS (Domain Name System)` доменного имени:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3900,6 +3953,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Если доменное имя — `company-name.com`, обязательно создайте поддомен "
+"`odoo._domainkey.company-name.com`, каноническим именем которого является "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3918,6 +3974,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Проверьте корректность записи DKIM с помощью такого инструмента, как "
+"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Введите "
+"`example.com:odoo` в инструменте проверки DKIM, указав селектор `odoo` для "
+"пользовательского домена `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -4035,6 +4095,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`Запись CNAME в GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4400,6 +4462,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Дополнительные сведения о настройке записей DNS для поддоменов см. в разделе "
+":ref:`Настройка записей DNS <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4511,7 +4575,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Записи DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4531,6 +4595,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Для **локальных баз данных** методы перенаправления и записей DNS также "
+"требуют настройки :doc:`скрипта почтового шлюза &lt;../../../../"
+"administration/on_premise/email_gateway&gt;`. Работа с этим скриптом требует "
+"**продвинутых технических знаний и понимания инфраструктуры**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4791,7 +4859,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "DNS-записи"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4800,6 +4868,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Третий вариант — использовать выделенный поддомен (например, "
+"`mail.mydomain.com`) и настроить его записи DNS так, чтобы письма, "
+"отправленные на адреса этого поддомена, обрабатывались Odoo и поступали "
+"непосредственно в вашу базу данных."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4807,6 +4879,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"В Odoo Online и Odoo.sh маршрутизация на основе CNAME поддерживается только "
+"при использовании выделенного поддомена. Ее нельзя настроить для корневого "
+"домена (например, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4814,12 +4889,18 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Обратите внимание, что этот поддомен будет выделен исключительно для "
+"почтового трафика. При переходе по нему в веб-браузере пользователи будут "
+"перенаправлены на первый веб-сайт, настроенный в базе данных (если применимо)"
+"."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Поскольку для входящей почты настраивается новый поддомен, :doc:`его записи "
+"DNS также должны быть настроены для исходящей почты <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4829,7 +4910,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Перейдите к настройкам DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4837,34 +4918,40 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Если ваш домен размещен у стороннего регистратора (например, GoDaddy, "
+"Namecheap, Cloudflare), войдите в учетную запись регистратора и откройте "
+"панель управления DNS для вашего домена."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Если Odoo управляет вашим DNS:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "Откройте `менеджер баз данных <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Нажмите на значок :icon:`fa-gear` (:guilabel:`шестерёнка`) рядом с базой "
+"данных и выберите :icon:`fa-globe` :guilabel:`Доменные имена`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "Нажмите :guilabel:`DNS`, затем :guilabel:`Добавить запись DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Создайте запись CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
 msgstr ""
+"**Имя / Хост:** поддомен, который вы хотите использовать (например, `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4872,10 +4959,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Контент / Цель:** корневой домен вашей базы данных (например, "
+"`dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Добавьте поддомен на портале Odoo"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4883,6 +4972,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"В `менеджере баз данных <https://www.odoo.com/my/databases>`_ нажмите на "
+"значок :icon:`fa-gear` (:guilabel:`шестерёнка`) для вашей базы данных и "
+"выберите :icon:`fa-globe` :guilabel:`Доменные имена`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4890,6 +4982,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Нажмите :guilabel:`Использовать собственный домен`, введите полный поддомен "
+"(например, `mail.mydomain.com`). После успешной проверки нажмите "
+":guilabel:`Я подтверждаю, всё готово`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4899,16 +4994,22 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Если проверка не удалась, убедитесь, что целевой адрес CNAME заканчивается "
+"точкой (например, `dbname.odoo.com.`), так как некоторые DNS-провайдеры "
+"требуют этого. Также подождите некоторое время, пока изменения DNS "
+"распространятся — это может занять от нескольких минут до 48 часов в "
+"зависимости от вашего провайдера. После завершения распространения "
+"попробуйте выполнить проверку снова."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Добавьте домен-псевдоним в базу данных"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "Войдите в базу данных и откройте приложение :guilabel:`Настройки`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4916,38 +5017,44 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"В поле :guilabel:`Домен-псевдоним` введите настроенный вами поддомен "
+"(например, `mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Добавление домена-псевдонима в настройках."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"В разделе :guilabel:`Доменные имена` поддомен должен отображаться следующим "
+"образом:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Пример настройки записей доменных имен на портале Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "В разделе :guilabel:`DNS` записи должны отображаться следующим образом:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Пример настройки DNS-записей на портале Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"Вторая запись позволяет Odoo отправлять аутентифицированные электронные "
+"письма с вашего собственного домена."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
-msgstr ""
+msgstr ":doc:`Настройка записей DNS для отправки писем в Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4959,26 +5066,33 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Войдите в панель управления вашего стороннего регистратора (например, "
+"GoDaddy, Namecheap, Cloudflare) и откройте зону управления DNS для вашего "
+"домена."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Добавление поддомена в настройки Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Войдите на платформу Odoo.sh и откройте свой проект."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Выберите рабочую ветку, перейдите на вкладку :guilabel:`Настройки` и найдите "
+"раздел **Пользовательские домены**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Введите полный поддомен (например, `mail.mydomain.com`) и нажмите "
+":guilabel:`Добавить домен`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4991,6 +5105,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Вместо записи CNAME вы также можете создать запись MX для своего поддомена "
+"(например, `mail`), указывающую на `dbname.odoo.com.` с приоритетом `10`. "
+"Остальные шаги настройки остаются такими же."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4998,6 +5115,9 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Обратите внимание, что, в отличие от CNAME, запись MX не наследует SPF и "
+"другие записи DNS от целевого домена, поэтому для правильной аутентификации "
+"исходящей почты их может потребоваться настроить отдельно."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5414,6 +5534,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Записи DNS <email-inbound-custom-domain-dns>` (требует продвинутых "
+"технических знаний)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6564,6 +6686,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Для получения дополнительной информации о заданиях cron при использовании "
+"Odoo.sh см. :ref:`документацию по Odoo.sh и запланированным действиям <odoo-"
+"sh/advanced/scheduled>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8487,11 +8612,11 @@ msgstr ":guilabel:`Разрешенные методы`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Разрешенные заголовки`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Открытые заголовки`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8679,45 +8804,59 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"В Odoo предусмотрены интеграции для геолокации, позволяющие находить "
+"контакты или места и строить маршруты на карте."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"Вид :ref:`Карта <studio/views/multiple-records/map>` доступен по умолчанию. "
+"Для доступа к нему настройка не требуется."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "Геолокация контактов и мест"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"Функция :guilabel:`Геолокация` определяет координаты широты и долготы для "
+"точного указания местоположения. Ее можно использовать для:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"проверки :ref:`мест отметки входа/выхода <attendances/check-in-out-details>` "
+"сотрудников в приложении **Посещаемость**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"отображения пункта выдачи при использовании :ref:`способа доставки «Самовывоз"
+"» <ecommerce/shipping/instore-pickup>`;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`назначения партнеров <contacts/partner-assignment>` в приложении "
+"**Контакты**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avalara address validation <accounting/"
 "avalara/address-validation>` feature."
 msgstr ""
+"проверки адресов с помощью функции :ref:`проверки адресов Avalara "
+"<accounting/avalara/address-validation>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8727,10 +8866,15 @@ msgid ""
 "Then, in the :guilabel:`API:` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"Чтобы включить функцию :guilabel:`Геолокация`, перейдите в меню "
+":menuselection:`Настройки --> Общие настройки`, прокрутите вниз до раздела "
+":guilabel:`Интеграции` и включите :guilabel:`Геолокация`. Затем в поле "
+":guilabel:`API:` выберите :guilabel:`Open Street Map` или :guilabel:`Google "
+"Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8738,6 +8882,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap — это бесплатная открытая географическая база данных, которую "
+"обновляют и поддерживают волонтеры. Для использования :guilabel:`Open Street "
+"Map` дополнительная настройка не требуется."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8745,10 +8892,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"Данные OpenStreetMap не всегда могут быть точными. Вы можете `присоединиться "
+"к сообществу OpenStreetMap <https://www.openstreetmap.org/fixthemap>`_, "
+"чтобы сообщать о любых возникающих проблемах и исправлять их."
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8756,6 +8906,9 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places API предоставляет подробную информацию о местах, организациях "
+"и достопримечательностях. Он поддерживает функции на основе местоположения, "
+"такие как поиск, навигация и рекомендации."
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8771,7 +8924,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "Карта Маршруты"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8781,26 +8934,36 @@ msgid ""
 "applications/inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/dispatch>`."
 msgstr ""
+"Маршруты на карте полезны для передачи планов поездок и местоположений "
+":doc:`специалистам выездного обслуживания </applications/services/planning/"
+"field_service>`, а также маршрутов доставки водителям в :doc:`системе "
+"диспетчеризации </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "Чтобы создать маршруты, выполните следующие действия:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
 msgstr ""
+"Создайте или войдите в `учетную запись Mapbox <https://www.mapbox.com/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`Создайте токен доступа <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"Перейдите на `страницу токенов доступа в Mapbox <https://account.mapbox.com/"
+"access-tokens/>`_ и скопируйте свой токен в буфер обмена."
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8808,30 +8971,41 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox отображает секретные токены только один раз при создании и навсегда "
+"скрывает их после ухода со страницы :guilabel:`Токен доступа`. Обязательно "
+"сохраните этот токен."
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"В Odoo перейдите в меню :menuselection:`Настройки --> Общие настройки` и "
+"прокрутите вниз до раздела :guilabel:`Интеграции`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Mapbox`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"В разделе :guilabel:`Mapbox` вставьте токен доступа Mapbox в поле "
+":guilabel:`Токен`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Безопасное использование Mapbox: токены доступа <https://docs.mapbox.com/"
+"help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`Ограничения URL <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -9090,7 +9264,7 @@ msgstr ":ref:`language/install`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:5
 msgid "Mail plugins"
-msgstr ""
+msgstr "Почтовые плагины"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:7
 msgid ""
@@ -9098,22 +9272,25 @@ msgid ""
 "With plugins, interact with an Odoo database directly from an email inbox in "
 "the following ways:"
 msgstr ""
+"Почтовые плагины — это коннекторы, связывающие базу данных Odoo с почтовыми "
+"ящиками. С помощью плагинов можно взаимодействовать с базой данных Odoo "
+"прямо из почтового ящика следующими способами:"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:10
 msgid "Log emails in the chatter of related Odoo records."
-msgstr ""
+msgstr "Регистрировать электронные письма в чаттере связанных записей Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:11
 msgid "Search for and create opportunities, tickets, and tasks."
-msgstr ""
+msgstr "Искать и создавать сделки, тикеты и задачи."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:12
 msgid "Open related Odoo records from an email inbox."
-msgstr ""
+msgstr "Открывать связанные записи Odoo прямо из почтового ящика."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:13
 msgid "Create Odoo contacts."
-msgstr ""
+msgstr "Создавать контакты Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:18
 msgid "Mail plugin features"
@@ -9155,6 +9332,11 @@ msgid ""
 "email is used as the opportunity title, and the content of the email is "
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
+"Чтобы создать возможность из письма, нажмите значок :icon:`fa-plus` "
+":guilabel:`(плюс)` рядом с :guilabel:`Opportunities`. Это откроет новую "
+"запись возможности в Odoo на новой вкладке. Тема письма используется в "
+"качестве названия возможности, а содержимое письма добавляется на вкладку "
+":guilabel:`Notes` возможности."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:42
 msgid "Create a task"
@@ -9169,6 +9351,12 @@ msgid ""
 "Odoo in a new tab. The subject of the email is used as the task title, and "
 "the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
+"Чтобы создать задачу из письма, нажмите значок :icon:`fa-plus` :guilabel:`"
+"(плюс)` рядом с :guilabel:`Tasks`. Затем введите название проекта, в котором "
+"должна быть создана задача, в появившееся поле и выберите соответствующий "
+"проект из списка. Это откроет новую запись задачи в Odoo на новой вкладке. "
+"Тема письма используется в качестве названия задачи, а содержимое письма "
+"добавляется на вкладку :guilabel:`Description`."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:51
 msgid "Create a ticket"
@@ -9194,7 +9382,7 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook plugin"
-msgstr ""
+msgstr "Плагин Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 msgid ""
@@ -9203,7 +9391,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid "Gmail plugin"
-msgstr ""
+msgstr "Плагин Gmail"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid ""
@@ -9299,17 +9487,23 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"Нажмите :guilabel:`Odoo Inbox Addin`, затем нажмите :guilabel:`Установить` — "
+"откроется всплывающее окно. Нажмите :guilabel:`Продолжить` и установите "
+"флажок рядом с :guilabel:`Выбрать все`, чтобы предоставить необходимые "
+"разрешения, затем еще раз нажмите :guilabel:`Продолжить`, чтобы подтвердить "
+"установку плагина."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
 msgid ""
 "If the plugin does not appear in the side panel after installation, refresh "
 "the page."
 msgstr ""
+"Если после установки плагин не появился на боковой панели, обновите страницу."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:60
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:49
 msgid "Connect an Odoo database"
-msgstr ""
+msgstr "Подключение базы данных Odoo"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:62
 msgid ""
@@ -9320,6 +9514,12 @@ msgid ""
 "account, and a pop-up window opens. Click :guilabel:`Allow` in the pop-up "
 "window to let the Gmail plugin connect to the database."
 msgstr ""
+"Чтобы открыть плагин, нажмите на значок Odoo на панели справа. Панель "
+"плагина откроется между папкой «Входящие» и правой боковой панелью. Нажмите "
+":guilabel:`Войти`. Введите URL-адрес базы данных Odoo и нажмите "
+":guilabel:`Войти` или нажмите :guilabel:`Регистрация`, чтобы создать учетную "
+"запись Odoo, — откроется всплывающее окно. Нажмите :guilabel:`Разрешить` во "
+"всплывающем окне, чтобы разрешить плагину Gmail подключиться к базе данных."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
 msgid ""
@@ -9337,6 +9537,9 @@ msgid ""
 "enables users to create Odoo records (such as opportunities, tasks, and "
 "tickets) directly in Outlook."
 msgstr ""
+"Плагин для Outlook подключает базу данных Odoo к почтовому ящику Outlook, "
+"что позволяет пользователям создавать записи Odoo (например, сделки, задачи "
+"и заявки) прямо в Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:9
 msgid ""
@@ -9350,7 +9553,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:16
 msgid "Install the Outlook plugin"
-msgstr ""
+msgstr "Установить плагин Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:22
 msgid ""
@@ -9358,10 +9561,13 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"Инструкции по установке для версий базы данных до 19.2 см. в `документации к "
+"версии 19.0 <https://www.odoo.com/documentation/19.0/applications/general/"
+"integrations/mail_plugins/outlook.html>`_."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:27
 msgid "From the Microsoft Marketplace"
-msgstr ""
+msgstr "Из Microsoft Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:29
 msgid ""
@@ -9374,10 +9580,19 @@ msgid ""
 "the Outlook inbox. Click :guilabel:`Add` to confirm the installation of the "
 "plugin."
 msgstr ""
+"Чтобы установить плагин Odoo для Outlook, перейдите на страницу `Odoo Inbox "
+"Addin <https://marketplace.microsoft.com/en-us/product/"
+"WA200009923?tab=Overview>`_ в Microsoft Marketplace и нажмите "
+":guilabel:`Получить сейчас`. Войдите в учетную запись Outlook, которую "
+"необходимо подключить к Odoo. Заполните поля :guilabel:`Имя` и "
+":guilabel:`Страна / регион`, затем еще раз нажмите :guilabel:`Получить "
+"сейчас`, чтобы предоставить необходимые разрешения; после этого произойдет "
+"перенаправление в почтовый ящик Outlook. Нажмите :guilabel:`Добавить`, чтобы "
+"подтвердить установку плагина."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid "From the Outlook inbox"
-msgstr ""
+msgstr "Из почтового ящика Outlook"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
 msgid ""
@@ -9388,10 +9603,16 @@ msgid ""
 "Click :guilabel:`Odoo Inbox Addin`, then click :guilabel:`Add` to confirm "
 "the installation of the plugin."
 msgstr ""
+"Плагин также можно установить непосредственно из почтового ящика Outlook. "
+"Для этого откройте любое письмо в Outlook, нажмите кнопку "
+":guilabel:`Приложения` в правом верхнем углу письма, затем нажмите "
+":guilabel:`Получить надстройки`. Нажмите :guilabel:`Поиск надстроек`, "
+"введите `Odoo` и нажмите Enter. Нажмите :guilabel:`Odoo Inbox Addin`, затем "
+"нажмите :guilabel:`Добавить`, чтобы подтвердить установку плагина."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Apps button in the Outlook inbox."
-msgstr ""
+msgstr "Кнопка «Приложения» в почтовом ящике Outlook."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:51
 msgid ""
@@ -9399,6 +9620,9 @@ msgid ""
 "corner of any email, and select :guilabel:`Odoo`. The plugin panel opens to "
 "the right of the email."
 msgstr ""
+"Чтобы открыть плагин, нажмите кнопку :guilabel:`Приложения` в правом верхнем "
+"углу любого письма и выберите :guilabel:`Odoo`. Панель плагина откроется "
+"справа от письма."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:54
 msgid ""
@@ -9407,6 +9631,11 @@ msgid ""
 "and a pop-up window opens. Click :guilabel:`Allow` in the pop-up window to "
 "let the Outlook plugin connect to the database."
 msgstr ""
+"Введите URL-адрес базы данных Odoo и нажмите :guilabel:`Войти` или нажмите "
+":guilabel:`Регистрация`, чтобы создать учетную запись Odoo. Нажмите "
+":guilabel:`Разрешить` — откроется всплывающее окно. Нажмите "
+":guilabel:`Разрешить` во всплывающем окне, чтобы разрешить плагину Outlook "
+"подключиться к базе данных."
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -9796,6 +10025,8 @@ msgid ""
 "Connect the IoT box to an external monitor or a USB printer. If the IoT box "
 "was already plugged prior to this, :ref:`restart it <iot/iot-box/homepage>`."
 msgstr ""
+"Подключите IoT Box к внешнему монитору или USB-принтеру. Если IoT Box уже "
+"был включен до этого, :ref:`перезагрузите его <iot/iot-box/homepage>`."
 
 #: ../../content/applications/general/iot/connect.rst:64
 msgid ""
@@ -9968,6 +10199,12 @@ msgid ""
 "https_certificate>` :guilabel:`End Date`. By default, drivers are "
 "automatically updated every time the IoT system is restarted."
 msgstr ""
+"Активируйте :ref:`режим разработчика <developer-mode>`, чтобы получить "
+"доступ к разделу :guilabel:`Техническая информация` системы IoT, например к "
+"ее параметрам :guilabel:`Доменный адрес`, :guilabel:`Версия образа` и "
+":ref:`SSL-сертификат <iot/connect/https_certificate>` :guilabel:`Дата "
+"окончания`. По умолчанию драйверы обновляются автоматически при каждом "
+"перезапуске системы IoT."
 
 #: ../../content/applications/general/iot/connect.rst:127
 msgid ""
@@ -10105,6 +10342,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`Подключение платежного терминала Worldline/Axepta BNP Paribas <../../"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../content/applications/general/iot/devices.rst:23
 msgid ""
@@ -10301,7 +10540,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11508,6 +11747,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Принтеры DYMO Series 5 несовместимы с :doc:`IoT box &lt;../iot_box&gt;` и "
+"требуют сопряжения с :doc:`виртуальным IoT для Windows &lt;../"
+"windows_iot&gt;`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:368
 msgid "DYMO LabelWriter not printing"
@@ -11871,6 +12113,13 @@ msgid ""
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Чтобы подключить весы к системе IoT, используйте USB-кабель. В некоторых "
+"случаях для подключения может потребоваться переходник с последовательного "
+"порта на USB. Если весы `совместимы с системой IoT <https://www.odoo.com/"
+"page/iot-hardware>`_, дополнительная настройка не требуется: весы "
+"распознаются автоматически сразу после подключения. Если весы не обнаружены, "
+"перезагрузите IoT Box или :ref:`перезапустите службу Windows virtual IoT "
+"<iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:17
 msgid ""
@@ -11878,6 +12127,9 @@ msgid ""
 "Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a "
 "different scale must be used."
 msgstr ""
+"Если весы по-прежнему не работают, возможно, они `несовместимы с системой "
+"Odoo IoT <https://www.odoo.com/page/iot-hardware>`_. В таком случае "
+"необходимо использовать другие весы."
 
 #: ../../content/applications/general/iot/devices/scale.rst:21
 msgid ""
@@ -11926,10 +12178,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"Чтобы настроить весы Ariva S для распознавания IoT-системой, обратитесь к "
+"`руководству Mettler по настройке весов серии Ariva S <https://www.mt.com/"
+"dam/RET_DOCS/Ariv.pdf>`_ и выполните следующие действия:"
 
 #: ../../content/applications/general/iot/devices/scale.rst:44
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "Удерживайте кнопку **>T<**, пока не появится :guilabel:`CONF`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid ""
@@ -11943,12 +12198,16 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"На шаге :guilabel:`3.1` убедитесь, что установлено значение :guilabel:`1` "
+"(виртуальные COM-порты USB). Нажимайте **>T<** для переключения вариантов."
 
 #: ../../content/applications/general/iot/devices/scale.rst:48
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"Нажимайте **>0<** до шага :guilabel:`3.6` и убедитесь, что установлено "
+"значение :guilabel:`3` (8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:50
 msgid ""
@@ -11980,6 +12239,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"Перезагрузите :doc:`IoT-бокс <../iot_box>` или :ref:`перезапустите "
+"виртуальную службу Windows IoT <iot/windows_iot/restart>`. После этого весы "
+"должны отображаться как `Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12179,6 +12441,10 @@ msgid ""
 "virtual IoT service <iot/windows_iot/restart>` to generate and display the "
 "pairing code."
 msgstr ""
+"Время отображения :ref:`кода сопряжения <iot/connect/pairing-code>` истекло. "
+"Перезагрузите :ref:`IoT-бокс <iot/iot-box/homepage>` или :ref:`виртуальную "
+"службу Windows IoT <iot/windows_iot/restart>`, чтобы сгенерировать и "
+"отобразить код сопряжения."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:22
 msgid "The IoT system does not connect to the database"
@@ -12207,6 +12473,8 @@ msgid ""
 "Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows "
 "virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Перезагрузите :ref:`IoT-бокс <iot/iot-box/homepage>` или :ref:`виртуальную "
+"службу Windows IoT <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:33
 msgid "The IoT system is connected to the Odoo database but cannot be reached"
@@ -12319,12 +12587,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"IoT-система подключена, и отчеты назначены принтеру, который не может "
+"печатать"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Убедитесь, что браузеру разрешен :ref:`доступ к устройствам в локальной сети "
+"<pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -12589,6 +12861,11 @@ msgid ""
 "the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
 "then :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
+"IoT-боксы и виртуальные IoT-боксы обновляются автоматически каждую неделю. "
+"Вы также можете принудительно запустить обновление, если считаете, что ваша "
+"IoT-система устарела: перейдите на :ref:`главную страницу <iot/iot-box/"
+"homepage>`, нажмите кнопку :icon:`fa-cogs` (:guilabel:`шестеренки`) в правом "
+"верхнем углу, а затем — :guilabel:`Обновить` в разделе :guilabel:`Версия`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:14
 msgid ""
@@ -12606,6 +12883,9 @@ msgid ""
 "which requires flashing the IoT box's SD card or uninstalling and "
 "reinstalling the Windows virtual IoT package."
 msgstr ""
+"В крайних случаях может потребоваться полный сброс IoT-системы, для чего "
+"необходимо прошить SD-карту IoT-бокса либо удалить и повторно установить "
+"пакет виртуального IoT для Windows."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:26
 msgid ""
@@ -12628,6 +12908,9 @@ msgid ""
 "`Download balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (a free "
 "and open-source tool for writing disk images to SD cards)."
 msgstr ""
+"`Скачайте balenaEtcher <https://etcher.balena.io/#download-etcher>`_ "
+"(бесплатный инструмент с открытым исходным кодом для записи образов дисков "
+"на SD-карты)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:32
 msgid "Insert the IoT box's micro SD card into the computer or adapter."
@@ -12662,6 +12945,8 @@ msgid ""
 ":ref:`Uninstall the program <iot/windows_iot/uninstall>` and :ref:`reinstall "
 "<iot/windows-iot/installation>` the latest package."
 msgstr ""
+":ref:`Удалите программу <iot/windows_iot/uninstall>` и :ref:`переустановите "
+"<iot/windows-iot/installation>` последнюю версию пакета."
 
 #: ../../content/applications/general/iot/iot_box.rst:5
 msgid "To start using an IoT box:"
@@ -12684,6 +12969,8 @@ msgid ""
 "`Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://"
 "www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 msgstr ""
+"`Видео: настройка и использование Odoo IoT Box: руководство для начинающих "
+"<https://www.youtube.com/watch?v=w2_Dcm3r_7o>`_"
 
 #: ../../content/applications/general/iot/iot_box.rst:19
 msgid "Network connection"
@@ -12702,6 +12989,8 @@ msgid ""
 "It is recommended to connect the IoT box to the same network as "
 "the :doc:`devices <devices>` it connects to."
 msgstr ""
+"Рекомендуется подключать IoT-бокс к той же сети, что и :doc:`устройства "
+"<devices>`, к которым он подключается."
 
 #: ../../content/applications/general/iot/iot_box.rst:29
 msgid ""
@@ -12753,6 +13042,9 @@ msgid ""
 "network name is in the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is "
 "a unique identifier)."
 msgstr ""
+"Откройте настройки Wi-Fi на компьютере и выберите сеть IoT-бокса. Имя сети "
+"имеет формат `IoTBox-xxxxxxxxxxxx` (где `xxxxxxxxxxxx` — уникальный "
+"идентификатор)."
 
 #: ../../content/applications/general/iot/iot_box.rst:51
 msgid ""
@@ -12760,6 +13052,9 @@ msgid ""
 "automatically open and redirect to the :ref:`IoT box's homepage <iot/iot-box/"
 "homepage>`."
 msgstr ""
+"Подключитесь к сети Wi-Fi IoT-бокса и выполните вход в нее; браузер должен "
+"автоматически открыться и перенаправить вас на :ref:`главную страницу IoT-"
+"бокса <iot/iot-box/homepage>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:53
 msgid ""
@@ -12798,6 +13093,11 @@ msgid ""
 "and navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
+"В зависимости от используемой операционной системы браузер может не "
+"открыться автоматически и не перенаправить вас на главную страницу IoT-"
+"бокса. В этом случае откройте браузер вручную и перейдите по адресу `http://"
+"10.11.12.1` или любому URL-адресу, начинающемуся с **http** (например, "
+"`http://odoo.com`)."
 
 #: ../../content/applications/general/iot/iot_box.rst:71
 msgid ""
@@ -12808,6 +13108,12 @@ msgid ""
 "the :guilabel:`Internet Status` section, select the relevant Wi-Fi network, "
 "enter the password, and click :guilabel:`Connect`."
 msgstr ""
+"Если IoT-бокс подключен к :doc:`внешнему монитору <devices/screen>`, "
+"отсканируйте первый QR-код на экране для подключения к сети, затем "
+"отсканируйте второй QR-код для перехода на :ref:`главную страницу <iot/iot-"
+"box/homepage>` IoT-бокса. На главной странице нажмите :guilabel:`Настроить` "
+"в разделе :guilabel:`Статус интернета`, выберите нужную сеть Wi-Fi, введите "
+"пароль и нажмите :guilabel:`Подключиться`."
 
 #: ../../content/applications/general/iot/iot_box.rst:80
 msgid "LED status"
@@ -12819,6 +13125,10 @@ msgid ""
 "that indicate its status and help with troubleshooting when no display is "
 "connected. The LEDs can be interpreted as follows:"
 msgstr ""
+"На IoT-боксе справа от слота для SD-карты расположены два светодиодных "
+"индикатора, которые показывают его состояние и помогают при устранении "
+"неполадок, если дисплей не подключен. Значения индикаторов расшифровываются "
+"следующим образом:"
 
 #: ../../content/applications/general/iot/iot_box.rst:85
 msgid ""
@@ -12826,12 +13136,17 @@ msgid ""
 "Ethernet cable is properly connected, or :ref:`connect the IoT box via Wi-Fi "
 "<iot/iot_box/network-wifi>`."
 msgstr ""
+"**Горит красный светодиод**: IoT box не подключен к интернету. Убедитесь, "
+"что кабель Ethernet подключен правильно, или :ref:`подключите IoT box по Wi-"
+"Fi <iot/iot_box/network-wifi>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:87
 msgid ""
 "**Green LED flashing**: The IoT box is waiting to :doc:`connect to a "
 "database <connect>`."
 msgstr ""
+"**Мигает зеленый светодиод**: IoT box ожидает :doc:`подключения к базе "
+"данных <connect>`."
 
 #: ../../content/applications/general/iot/iot_box.rst:88
 msgid ""
@@ -12852,6 +13167,10 @@ msgid ""
 "click :guilabel:`Homepage`, or open a browser on the device and navigate to "
 "the IoT box's IP address."
 msgstr ""
+"Чтобы открыть главную страницу IoT box на устройстве, сначала убедитесь, что "
+"устройство находится в той же сети, что и IoT box. Затем, если вы "
+"используете приложение IoT, нажмите :guilabel:`Главная страница` или "
+"откройте браузер на устройстве и перейдите по IP-адресу IoT box."
 
 #: ../../content/applications/general/iot/iot_box.rst:None
 msgid "IoT box's homepage"
@@ -12862,6 +13181,8 @@ msgid ""
 "If the IP address is not already known, use any of the following methods to "
 "retrieve it:"
 msgstr ""
+"Если IP-адрес еще не известен, используйте любой из следующих способов, "
+"чтобы узнать его:"
 
 #: ../../content/applications/general/iot/iot_box.rst:106
 msgid ""
@@ -12869,6 +13190,9 @@ msgid ""
 "navigate to `http://iotbox.local`. The page automatically redirects to the "
 "homepage, which displays the IP address."
 msgstr ""
+"Подключившись к той же сети, что и IoT box, откройте веб-браузер и перейдите "
+"по адресу `http://iotbox.local`. Страница автоматически перенаправит на "
+"главную страницу, где отображается IP-адрес."
 
 #: ../../content/applications/general/iot/iot_box.rst:109
 msgid ""
@@ -12876,24 +13200,34 @@ msgid ""
 "hardware>`_ using a USB cable, which then automatically prints a ticket with "
 "the IP address."
 msgstr ""
+"Подключите `поддерживаемый принтер чеков или этикеток <https://www.odoo.com/"
+"app/iot-hardware>`_ с помощью USB-кабеля, после чего автоматически "
+"распечатается чек с IP-адресом."
 
 #: ../../content/applications/general/iot/iot_box.rst:111
 msgid ""
 "Connect the IoT box to an :doc:`external monitor <devices/screen>`, which "
 "then displays the IP address on the screen."
 msgstr ""
+"Подключите IoT box к :doc:`внешнему монитору <devices/screen>`, на котором "
+"отобразится IP-адрес."
 
 #: ../../content/applications/general/iot/iot_box.rst:113
 msgid ""
 "On IoT box images `L2026.05.25` and later, the IoT box IP address is "
 "displayed as a discovered Bluetooth device for 5 minutes after booting."
 msgstr ""
+"В образах IoT box `L2026.05.25` и более поздних версиях IP-адрес IoT box "
+"отображается как обнаруженное устройство Bluetooth в течение 5 минут после "
+"загрузки."
 
 #: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
 "Access the router's administrator interface, or use third-party software to "
 "scan the network."
 msgstr ""
+"Войдите в панель управления маршрутизатора или используйте стороннее "
+"программное обеспечение для сканирования сети."
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT box's IP address"
@@ -12905,6 +13239,9 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"Чтобы вручную перезагрузить IoT box, откройте :ref:`главную страницу <iot/"
+"iot-box/homepage>`, затем нажмите кнопку :icon:`fa-power-off` :guilabel:`"
+"(выключение)` в правом верхнем углу."
 
 #: ../../content/applications/general/iot/iot_box.rst:124
 msgid ""
@@ -12921,6 +13258,8 @@ msgstr ""
 #: ../../content/applications/general/iot/iot_box.rst:127
 msgid "To fully reboot the IoT box, unplug it and plug it back in."
 msgstr ""
+"Чтобы полностью перезагрузить IoT box, отключите его от сети и подключите "
+"снова."
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -13139,6 +13478,10 @@ msgid ""
 "the device does not appear, restart the IoT system from the :ref:`IoT "
 "system's homepage <iot/windows-iot/homepage>`."
 msgstr ""
+"После подключения устройств к компьютеру обновите :ref:`главную страницу "
+"системы IoT <iot/windows-iot/homepage>`, чтобы убедиться, что устройство "
+"отображается в списке. Если устройство не появляется, перезапустите систему "
+"IoT с :ref:`главной страницы системы IoT <iot/windows-iot/homepage>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:85
 msgid "Windows Firewall configuration"
@@ -13223,6 +13566,9 @@ msgid ""
 "port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/"
 "terminals/worldline_axepta` payment terminals."
 msgstr ""
+"В зависимости от ваших устройств IoT могут потребоваться другие порты. "
+"Например, добавьте порт `9050` для платежных терминалов :doc:`/applications/"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:114
 msgid ""
@@ -13342,6 +13688,8 @@ msgid ""
 "Odoo’s offline mode provides a solution for short-term interruptions; it is "
 "not intended to offer full or long-term offline capabilities."
 msgstr ""
+"Автономный режим Odoo предназначен для кратковременных перебоев связи; он не "
+"рассчитан на полноценную или долгосрочную работу в автономном режиме."
 
 #: ../../content/applications/general/offline_mode.rst:9
 msgid ""
@@ -13350,6 +13698,10 @@ msgid ""
 "or no coverage, Odoo makes certain functionality available offline for "
 "logged-in users."
 msgstr ""
+"Для обеспечения непрерывности бизнес-процессов при ненадежном или "
+"отсутствующем подключении (например, в дороге или в местах с плохим "
+"покрытием сети либо без него) Odoo предоставляет авторизованным "
+"пользователям определенные функции в автономном режиме."
 
 #: ../../content/applications/general/offline_mode.rst:13
 msgid ""
@@ -13362,14 +13714,22 @@ msgid ""
 "Previously performed :ref:`search queries <general/offline-mode/search>` can "
 "be run again."
 msgstr ""
+"Как только подключение к интернету пропадает, в шапке базы данных появляется "
+"кнопка :guilabel:`Работа в автономном режиме`. Представления или записи, "
+"открытые ранее во время работы в сети, можно открыть снова независимо от "
+"того, были ли они активны в браузере в момент потери связи. Записи можно "
+":ref:`редактировать, удалять, архивировать, разархивировать или создавать "
+"<general/offline-mode/records-create-udpate>` при соблюдении определенных "
+"условий. Ранее выполненные :ref:`поисковые запросы <general/offline-mode/"
+"search>` можно запускать повторно."
 
 #: ../../content/applications/general/offline_mode.rst:20
 msgid "Items that are not available offline are grayed out."
-msgstr ""
+msgstr "Элементы, недоступные в автономном режиме, отображаются серым цветом."
 
 #: ../../content/applications/general/offline_mode.rst:None
 msgid "Elements not available offline are grayed out"
-msgstr ""
+msgstr "Элементы, недоступные в автономном режиме, отображаются серым цветом"
 
 #: ../../content/applications/general/offline_mode.rst:25
 msgid ""
@@ -13377,6 +13737,10 @@ msgid ""
 "manage-changes>`; when connectivity is restored, changes are synced "
 "automatically and reflected in your database."
 msgstr ""
+"Все изменения, внесенные в автономном режиме, :ref:`помещаются в локальную "
+"очередь <general/offline-mode/manage-changes>`; при восстановлении "
+"подключения изменения автоматически синхронизируются и отображаются в вашей "
+"базе данных."
 
 #: ../../content/applications/general/offline_mode.rst:29
 msgid ""
@@ -13384,6 +13748,9 @@ msgid ""
 "expect to need, and perform any searches so they can still be accessed if/"
 "when connectivity is lost."
 msgstr ""
+"Если ожидаются проблемы со связью, заранее откройте нужные представления или "
+"записи и выполните поисковые запросы, чтобы к ним можно было получить доступ "
+"при потере подключения."
 
 #: ../../content/applications/general/offline_mode.rst:33
 msgid ""
@@ -13418,33 +13785,38 @@ msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:44
 msgid "Create and update records"
-msgstr ""
+msgstr "Создание и обновление записей"
 
 #: ../../content/applications/general/offline_mode.rst:46
 msgid "When offline, records can be:"
-msgstr ""
+msgstr "В автономном режиме записи можно:"
 
 #: ../../content/applications/general/offline_mode.rst:48
 msgid ""
 "created, provided a record of the same type was previously created while you "
 "were online"
 msgstr ""
+"создавать, если запись того же типа ранее уже создавалась в режиме онлайн"
 
 #: ../../content/applications/general/offline_mode.rst:49
 msgid ""
 "edited, deleted, archived, or unarchived, provided they were previously "
 "opened while you were online"
 msgstr ""
+"редактировать, удалять, архивировать или разархивировать, если ранее они уже "
+"открывались в режиме онлайн"
 
 #: ../../content/applications/general/offline_mode.rst:53
 msgid ""
 "Attachments and images can be opened while offline, but cannot be uploaded "
 "or deleted."
 msgstr ""
+"В автономном режиме можно открывать вложения и изображения, но их нельзя "
+"загружать или удалять."
 
 #: ../../content/applications/general/offline_mode.rst:58
 msgid "Perform searches"
-msgstr ""
+msgstr "Выполнение поиска"
 
 #: ../../content/applications/general/offline_mode.rst:60
 msgid ""
@@ -13452,20 +13824,25 @@ msgid ""
 "offline. To repeat a previously performed search, click in the search bar, "
 "then choose from the available searches."
 msgstr ""
+"Поисковые запросы, выполненные ранее в режиме онлайн, можно повторять и в "
+"автономном режиме. Чтобы повторить ранее выполненный поиск, нажмите на "
+"строку поиска и выберите подходящий вариант из списка доступных."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Previous executed searches available via search bar"
-msgstr ""
+msgstr "Ранее выполненные поисковые запросы, доступные в строке поиска"
 
 #: ../../content/applications/general/offline_mode.rst:70
 msgid "Manage offline changes"
-msgstr ""
+msgstr "Управление изменениями в автономном режиме"
 
 #: ../../content/applications/general/offline_mode.rst:72
 msgid ""
 "When you create or update a record offline, the changes are stored locally "
 "in a temporary queue until the internet connection is restored."
 msgstr ""
+"При создании или обновлении записи в автономном режиме изменения сохраняются "
+"локально во временной очереди до восстановления подключения к интернету."
 
 #: ../../content/applications/general/offline_mode.rst:75
 msgid ""
@@ -13474,10 +13851,16 @@ msgid ""
 "record was :guilabel:`Created`, :guilabel:`Edited`, :guilabel:`Archived`, "
 "or :guilabel:`Unarchived`."
 msgstr ""
+"Чтобы просмотреть ожидающие изменения в автономном режиме, нажмите кнопку "
+":guilabel:`Работа в автономном режиме`; в появившемся списке измененных "
+"записей тег указывает действие: :guilabel:`Создано`, :guilabel:`Изменено`, "
+":guilabel:`Архивировано` или :guilabel:`Разархивировано`."
 
 #: ../../content/applications/general/offline_mode.rst:79
 msgid "Hovering over an :guilabel:`Edited` tag reveals the changes made."
 msgstr ""
+"При наведении курсора на тег :guilabel:`Изменено` отображаются внесенные "
+"изменения."
 
 #: ../../content/applications/general/offline_mode.rst:82
 msgid ""
@@ -13486,10 +13869,16 @@ msgid ""
 "name :guilabel:`user_id`) from `Mitchell Admin` to `Marc Demo` and "
 "the :guilabel:`Expected Revenue` from `9000` to `15000`."
 msgstr ""
+"В этом примере в сделке :guilabel:`Дизайн и архитектура офиса` поле "
+":guilabel:`Продавец` (техническое имя поля — :guilabel:`user_id`) было "
+"изменено с `Mitchell Admin` на `Marc Demo`, а поле :guilabel:`Ожидаемый "
+"доход` — с `9000` на `15000`."
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Dropdown on Working offline button showing list of changes made offline"
 msgstr ""
+"Раскрывающийся список кнопки «Работа в автономном режиме» со списком "
+"изменений, внесенных офлайн"
 
 #: ../../content/applications/general/offline_mode.rst:90
 msgid ""
@@ -13498,10 +13887,14 @@ msgid ""
 "for example, if changes were made in error or in the wrong order, click "
 "the :icon:`fa-trash` :guilabel:`(Discard offline changes)` icon."
 msgstr ""
+"Чтобы продолжить редактирование записи в автономном режиме, нажмите на нее, "
+"чтобы открыть локально. Чтобы отменить ожидающие изменения (например, если "
+"они были сделаны по ошибке или в неверном порядке), нажмите значок :icon:`fa-"
+"trash` :guilabel:`(Отменить автономные изменения)`."
 
 #: ../../content/applications/general/offline_mode.rst:97
 msgid "Disable offline mode for specific views"
-msgstr ""
+msgstr "Отключение автономного режима для определенных представлений"
 
 #: ../../content/applications/general/offline_mode.rst:99
 msgid ""
@@ -13510,24 +13903,30 @@ msgid ""
 "specific view and, as a result, make the view unavailable offline, follow "
 "these steps:"
 msgstr ""
+"В некоторых случаях (например, для представлений отчетов) отображение "
+"устаревшей или кэшированной информации может быть нежелательным. Чтобы "
+"отключить кэширование данных для определенного представления и сделать его "
+"недоступным в автономном режиме, выполните следующие действия:"
 
 #: ../../content/applications/general/offline_mode.rst:103
 msgid "Open the view in question."
-msgstr ""
+msgstr "Откройте нужное представление."
 
 #: ../../content/applications/general/offline_mode.rst:104
 msgid "Activate :ref:`developer mode <developer-mode>`."
-msgstr ""
+msgstr "Активируйте :ref:`режим разработчика <developer-mode>`."
 
 #: ../../content/applications/general/offline_mode.rst:105
 msgid ""
 "Click the :icon:`fa-bug` :guilabel:`(bug)` icon in the database header, then "
 "select :guilabel:`Action`."
 msgstr ""
+"Нажмите значок :icon:`fa-bug` :guilabel:`(жук)` в заголовке базы данных, "
+"затем выберите :guilabel:`Действие`."
 
 #: ../../content/applications/general/offline_mode.rst:107
 msgid "Disable :guilabel:`Data caching`."
-msgstr ""
+msgstr "Отключите :guilabel:`Кэширование данных`."
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -13707,6 +14106,12 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"Чтобы проверить устройства, с которых выполнен вход, нажмите на значок "
+"пользователя в правом верхнем углу и выберите :guilabel:`Мои настройки`, "
+"чтобы открыть профиль пользователя. Перейдите на вкладку *Безопасность*, "
+"чтобы просмотреть список всех устройств, с которых пользователь входил в "
+"базу данных. Рядом с именем каждого устройства, с которого в данный момент "
+"выполнен вход в систему, на карточке канбана отображается зеленый кружок."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -13722,6 +14127,9 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"Если указанное в списке устройство **не** принадлежит пользователю и может "
+"представлять угрозу безопасности, удалите устройство и отзовите доступ, "
+"нажав кнопку :guilabel:`Выйти`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -13729,12 +14137,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"Откроется всплывающее окно :guilabel:`Контроль доступа`, в котором "
+"пользователю будет предложено подтвердить свою личность. Введите пароль "
+"пользователя и нажмите кнопку :guilabel:`Подтвердить пароль`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"Устройство исчезнет со вкладки *Безопасность*, и его больше нельзя будет "
+"использовать для входа в базу данных."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -13866,6 +14279,11 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"Чтобы задать требование к минимальной длине пароля, :ref:`установите "
+"<general/install>` модуль :guilabel:`Политика паролей` "
+"(`auth_password_policy`). Затем откройте приложение :guilabel:`Настройки`, "
+"перейдите в раздел *Права доступа* и укажите нужную длину пароля в поле "
+":guilabel:`Минимальная длина пароля`. По умолчанию установлено значение `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -14012,7 +14430,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Мультикомпании"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -14021,12 +14439,19 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"Поле :guilabel:`Компании` в карточке пользователя определяет, к каким "
+"компаниям пользователь имеет доступ. Чтобы настроить доступ к нескольким "
+"компаниям, перейдите в меню :menuselection:`Настройки --> раздел "
+"Пользователи --> Управление пользователями`. Затем выберите нужного "
+"пользователя, чтобы открыть форму его профиля."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"На вкладке *Права доступа* в разделе *Роли* настройте поля "
+":guilabel:`Компании` и :guilabel:`Компания по умолчанию`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -14034,6 +14459,9 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`Компании`: выберите одну или несколько компаний, к которым "
+"пользователь имеет доступ. Права доступа и редактирования пользователя "
+"определяются назначенными ему правами доступа."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
@@ -14430,7 +14858,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid "Manage roles"
-msgstr ""
+msgstr "Управление ролями"
 
 #: ../../content/applications/general/users/access_rights.rst:36
 msgid ""
@@ -14439,22 +14867,31 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`Отдельным пользователям <users/add-individual>` при добавлении в базу "
+"данных назначается *Роль*. Роли определяют уровень доступа пользователя, "
+"тогда как конкретные права доступа для каждой роли задаются :ref:`группами "
+"<access-rights/groups>`."
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid "The available internal roles are:"
-msgstr ""
+msgstr "Доступные внутренние роли:"
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*Пользователь*: внутренний пользователь, который обычно имеет доступ к "
+"интерфейсу управления и может создавать и редактировать записи, но имеет "
+"меньший общий объем прав, чем администратор."
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*Администратор*: внутренний пользователь с доступом к техническим функциям, "
+"созданию продуктов, экспорту и другим расширенным правам."
 
 #: ../../content/applications/general/users/access_rights.rst:46
 msgid ""
@@ -14463,30 +14900,35 @@ msgid ""
 "database, or can exist solely as an employee record without login access. "
 "When login access is granted, light users can:"
 msgstr ""
+"*Light*: пользователь с ограниченным доступом к основным функциям Odoo. "
+"Пользователя с ролью Light можно связать с карточкой сотрудника для "
+"предоставления ограниченного доступа к базе данных или вести только как "
+"карточку сотрудника без права входа. При предоставлении доступа к учетной "
+"записи пользователи с ролью Light могут:"
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage personal and employee-related information."
-msgstr ""
+msgstr "Управление личной информацией и сведениями о сотрудниках."
 
 #: ../../content/applications/general/users/access_rights.rst:51
 msgid "Submit leave and expense requests."
-msgstr ""
+msgstr "Подача заявок на отгулы и расходы."
 
 #: ../../content/applications/general/users/access_rights.rst:52
 msgid "Access the **Planning** app and worksheets."
-msgstr ""
+msgstr "Доступ к приложению **Планирование** и рабочим листам."
 
 #: ../../content/applications/general/users/access_rights.rst:53
 msgid "Connect to **Point of Sale** sessions as an employee."
-msgstr ""
+msgstr "Подключение к сессиям **Точки продаж** в качестве сотрудника."
 
 #: ../../content/applications/general/users/access_rights.rst:54
 msgid "Read **Knowledge** articles."
-msgstr ""
+msgstr "Чтение статей **Базы знаний**."
 
 #: ../../content/applications/general/users/access_rights.rst:55
 msgid "Perform warehouse barcode scanning operations."
-msgstr ""
+msgstr "Выполнение операций сканирования штрихкодов на складе."
 
 #: ../../content/applications/general/users/access_rights.rst:57
 msgid ""
@@ -14494,6 +14936,10 @@ msgid ""
 "**Sales**, **Purchases**, **Projects**, or **Accounting**, or to advanced "
 "features reserved for standard or custom users."
 msgstr ""
+"Пользователи Light не имеют доступа к основным бизнес-приложениям, таким как "
+"**Продажи**, **Закупки**, **Проекты** или **Бухгалтерский учет**, а также к "
+"расширенным функциям, доступным только стандартным или настроенным "
+"пользователям."
 
 #: ../../content/applications/general/users/access_rights.rst:61
 msgid ""
@@ -14501,16 +14947,23 @@ msgid ""
 "granted access beyond their default reduced permissions. See `Pricing Page "
 "<https://www.odoo.com/pricing>`_ for more details."
 msgstr ""
+"Пользователь с ролью *Light* автоматически переводится на роль "
+"*Пользователь*, если ему предоставляются права доступа, выходящие за рамки "
+"стандартных ограниченных прав. Подробнее см. на `странице тарифов <https://"
+"www.odoo.com/pricing>`_."
 
 #: ../../content/applications/general/users/access_rights.rst:65
 msgid "Portal users"
-msgstr ""
+msgstr "Пользователи портала"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
 "The *Portal* role can be used for external users. It is assigned to a "
 "customer or supplier who accesses their own data through the portal."
 msgstr ""
+"Роль *Портал* может использоваться для внешних пользователей. Она "
+"назначается клиенту или поставщику, который получает доступ к собственным "
+"данным через портал."
 
 #: ../../content/applications/general/users/access_rights.rst:70
 msgid ""
@@ -14519,6 +14972,10 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` icon, then select :guilabel:`Grant portal "
 "access` from the drop-down."
 msgstr ""
+"Чтобы предоставить доступ к порталу, перейдите в приложение "
+":menuselection:`Контакты` и выберите запись. Нажмите на значок :icon:`fa-"
+"ellipsis-v` :guilabel:`(вертикальное многоточие)`, а затем выберите "
+":guilabel:`Предоставить доступ к порталу` в раскрывающемся списке."
 
 #: ../../content/applications/general/users/access_rights.rst:77
 msgid "Manage user permissions"
@@ -14563,6 +15020,10 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"Права, доступные на вкладке *Права доступа*, определяются группами, "
+"связанными с ролью пользователя. Роли предоставляют предварительно заданный "
+"набор разрешений, а группы определяют конкретные права доступа, "
+"предоставляемые пользователям."
 
 #: ../../content/applications/general/users/access_rights.rst:94
 msgid ""
@@ -14813,6 +15274,9 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"Введите :guilabel:`Название` группы и установите флажок рядом с полем "
+":guilabel:`Группа общего доступа`, если эта группа создана для настройки "
+"прав совместного доступа к данным для определенных пользователей."
 
 #: ../../content/applications/general/users/access_rights.rst:192
 msgid ""
@@ -15119,6 +15583,11 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"Чтобы включить тайм-аут сессии, перейдите на вкладку *Тайм-ауты* и "
+"установите флажок :guilabel:`Сессия`. Затем выберите в раскрывающемся меню "
+":guilabel:`Выход` или :guilabel:`Выход с двухфакторной аутентификацией`. Это "
+"определяет, потребуется ли пользователю проходить проверку 2FA при повторном "
+"входе в систему."
 
 #: ../../content/applications/general/users/access_rights.rst:304
 msgid ""
@@ -16533,7 +17002,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/user_portals.rst:16
 msgid "Manage :ref:`product returns <ecommerce/handling/returns>`"
-msgstr ""
+msgstr "Управление :ref:`возвратами товаров <ecommerce/handling/returns>`"
 
 #: ../../content/applications/general/users/user_portals.rst:17
 msgid "Manage payment methods"

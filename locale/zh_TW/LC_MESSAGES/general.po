@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the Odoo package.
 # Odoo Translation Bot <c3p@odoo.com>, 2025, 2026.
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # "Tony Ng (ngto)" <ngto@odoo.com>, 2025.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-09 17:32+0000\n"
-"PO-Revision-Date: 2026-10-09 14:50+0000\n"
-"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"PO-Revision-Date: 2026-10-22 03:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/general/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -2219,7 +2220,7 @@ msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/companies/multi_company.rst:181
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "公司間清算"
 
 #: ../../content/applications/general/companies/multi_company.rst:183
 msgid ""
@@ -2227,6 +2228,8 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"**公司間清算**功能會在同一資料庫中的一間公司收到另一間公司所開立發票的付款時"
+"，自動產生會計分錄。"
 
 #: ../../content/applications/general/companies/multi_company.rst:186
 msgid ""
@@ -2236,30 +2239,33 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"當由次要公司處理付款時，Odoo 會自動核銷開立發票公司中的客戶未結發票，並在兩家"
+"公司之間建立平衡的公司間分錄。此自動化功能省去了手動試算表追蹤的麻煩，並保持"
+"公司間帳戶即時平衡。"
 
 #: ../../content/applications/general/companies/multi_company.rst:192
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "**公司 A** 開立一張 100 美元的客戶發票。"
 
 #: ../../content/applications/general/companies/multi_company.rst:194
 msgid "The customer pays via the customer portal belonging to **Company B**."
-msgstr ""
+msgstr "客戶透過屬於 **公司 B** 的客戶網站入口付款。"
 
 #: ../../content/applications/general/companies/multi_company.rst:196
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "收到付款後，Odoo 會："
 
 #: ../../content/applications/general/companies/multi_company.rst:198
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "結清 **公司 A 及 B** 的應收帳款。"
 
 #: ../../content/applications/general/companies/multi_company.rst:199
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
-msgstr ""
+msgstr "將公司 A 的應收帳款重新歸類為對 **公司 B** 的債權。"
 
 #: ../../content/applications/general/companies/multi_company.rst:200
 msgid "Records Company B's received funds as a payable owed to **Company A**."
-msgstr ""
+msgstr "將公司 B 收到的款項記錄為對 **公司 A** 的應付帳款。"
 
 #: ../../content/applications/general/companies/multi_company.rst:206
 msgid ""
@@ -2269,44 +2275,48 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"必須\\ :guilabel:`Intercompany Payment - Account`\\ "
+"（`account_payment_interco`）模組已\\ :ref:`安裝 <general/install>`，且所涉及"
+"的**每間公司**都必須啟用\\ :guilabel:`公司間交易`\\ 功能，會計設定中才會顯"
+"示\\ :guilabel:`公司間清算`\\ 欄位。"
 
 #: ../../content/applications/general/companies/multi_company.rst:211
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
-msgstr ""
+msgstr "前往\\ :menuselection:`會計 --> 配置 --> 設定`\\ 。"
 
 #: ../../content/applications/general/companies/multi_company.rst:212
 msgid "Scroll down to the :guilabel:`Default Accounts` section."
-msgstr ""
+msgstr "向下捲動至\\ :guilabel:`預設帳戶`\\ 區段。"
 
 #: ../../content/applications/general/companies/multi_company.rst:213
 msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
-msgstr ""
+msgstr "在\\ :guilabel:`公司間清算`\\ 下，為目前處於活動狀態的公司定義以下欄位："
 
 #: ../../content/applications/general/companies/multi_company.rst:216
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
-msgstr ""
+msgstr ":guilabel:`日記賬`：用於記錄跨實體清算轉帳的專用日記帳。"
 
 #: ../../content/applications/general/companies/multi_company.rst:217
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
-msgstr ""
+msgstr ":guilabel:`應付帳款`：用於記錄積欠資料庫內其他公司債務的清算應付帳戶。"
 
 #: ../../content/applications/general/companies/multi_company.rst:219
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
-msgstr ""
+msgstr ":guilabel:`應收帳款`：用於記錄對資料庫內其他公司債權的清算應收帳戶。"
 
 #: ../../content/applications/general/companies/multi_company.rst:222
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
-msgstr ""
+msgstr "使用右上角選單中的公司選擇器切換至其他相關公司，並對每間公司重複此程序。"
 
 #: ../../content/applications/general/companies/multi_company.rst:226
 msgid ""
@@ -2314,6 +2324,8 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"用於登記客戶付款的付款方式必須使用\\ :ref:`未結收款帳戶 <accounting/journals/"
+"outstanding-accounts>`，以便建立日記帳分錄。"
 
 #: ../../content/applications/general/companies/multi_company.rst:230
 msgid ""
@@ -2322,6 +2334,8 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`建立 <chart-of-account/create>`\\ 獨立於一般交易所用應付及應收帳戶的專"
+"用應付及應收清算帳戶，並在這些帳戶上啟用\\ :guilabel:`非營業`\\ 選項。"
 
 #: ../../content/applications/general/companies/multi_company.rst:237
 msgid "Use cases"
@@ -3686,6 +3700,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`GoDaddy：新增 CNAME 記錄\\ <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4363,7 +4379,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "DNS 記錄"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4412,42 +4428,44 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "如果 Odoo 管理您的 DNS："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "開啟 `資料庫管理員 <https://www.odoo.com/my/databases>`_。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"按一下資料庫旁的\\ :icon:`fa-gear` (:guilabel:`齒輪`) 圖示，然後選擇\\ "
+":icon:`fa-globe` :guilabel:`網域名稱`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "按一下\\ :guilabel:`DNS`，然後按一下\\ :guilabel:`加入 DNS 記錄`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "建立 CNAME 記錄"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**名稱 / 主機：**您要使用的子網域（例如 `mail`）。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
 msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
-msgstr ""
+msgstr "**內容 / 目標：**您的資料庫根網域（例如 `dbname.odoo.com.`）。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "將子網域加入至您的 Odoo 門戶網站"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4455,6 +4473,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"在\\ `資料庫管理員 <https://www.odoo.com/my/databases>`_\\ 中，按一下您資料庫"
+"的\\ :icon:`fa-gear` (:guilabel:`齒輪`) 圖示，然後選擇\\ :icon:`fa-globe` "
+":guilabel:`網域名稱`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4462,6 +4483,8 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"按一下\\ :guilabel:`使用我自己的網域`，輸入完整子網域（例如 "
+"`mail.mydomain.com`）。驗證成功後，按一下\\ :guilabel:`我確認，已完成`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4471,16 +4494,20 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"如果驗證失敗，請仔細檢查 CNAME 目標結尾是否帶有句點（例如 "
+"`dbname.odoo.com.`），因為部分 DNS 提供商有此要求。此外，也請預留時間讓 DNS "
+"變更生效傳播——視您的提供商而定，這可能需要幾分鐘到 48 小時不等。傳播完成後，"
+"請再次\\u5boot試驗證。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "將別名網域加入資料庫"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "登入資料庫並開啟\\ :guilabel:`設定` 應用程式。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4488,38 +4515,40 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"在\\ :guilabel:`別名網域` 欄位中，輸入您設定的子網域（例如 "
+"`mail.mydomain.com`）。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "在設定中加入別名網域。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
-msgstr ""
+msgstr "在\\ :guilabel:`網域名稱` 區段中，子網域應顯示如下："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Odoo 門戶網站中的網域名稱記錄配置範例。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "在\\ :guilabel:`DNS` 區段中，記錄應顯示如下："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Odoo 門戶網站中的 DNS 記錄配置範例。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
-msgstr ""
+msgstr "第二筆記錄可讓 Odoo 從您的自訂網域傳送經過驗證的電子郵件。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
-msgstr ""
+msgstr ":doc:`在 Odoo 中設定 DNS 記錄以傳送電子郵件 <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4531,26 +4560,30 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"登入您的第三方註冊商（例如 GoDaddy、Namecheap、Cloudflare），然後開啟網域的 "
+"DNS 管理區。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "將子網域加入 Odoo.sh 設定"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "登入 Odoo.sh 平台並開啟您的專案。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
-msgstr ""
+msgstr "選擇正式分支，前往\\ :guilabel:`設定`\\ 分頁，然後找到 **自訂網域** 區塊。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"輸入完整子網域（例如 `mail.mydomain.com`），然後按一下\\ :guilabel:`新增網"
+"域`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4562,6 +4595,8 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"您也可以不使用 CNAME 記錄，而是為子網域（例如 `mail`）建立一筆 MX 記錄，指向 "
+"`dbname.odoo.com.`，優先順序為 `10`。其餘的設定步驟保持不變。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4569,6 +4604,8 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"請注意，與 CNAME 不同，MX 記錄不會繼承目標網域的 SPF 或其他 DNS 記錄，因此您"
+"可能需要另外設定這些記錄，才能讓外寄郵件正確通過驗證。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -4939,7 +4976,7 @@ msgstr ":ref:`傳入郵件伺服器 <email-inbound-custom-domain-incoming-server
 msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
-msgstr ""
+msgstr ":ref:`DNS 記錄 <email-inbound-custom-domain-dns>` （需要進階技術知識）"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -5959,6 +5996,8 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"如需在使用 Odoo.sh 時關於排程工作的更多資訊，請參閱\\ :ref:`Odoo.sh 與排程動"
+"作使用說明 <odoo-sh/advanced/scheduled>`。"
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -7980,7 +8019,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "**OpenStreetMap**"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8021,7 +8060,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "地圖路線"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8320,7 +8359,7 @@ msgstr ":ref:`language/install`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:5
 msgid "Mail plugins"
-msgstr ""
+msgstr "郵件外掛程式"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:7
 msgid ""
@@ -8383,6 +8422,10 @@ msgid ""
 "email is used as the opportunity title, and the content of the email is "
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
+"要從電子郵件建立商機，請按一下\\ :guilabel:`商機`\\ 旁邊的\\ :icon:`fa-"
+"plus`\\ :guilabel:`（加號）`\\ 圖示。這樣做會在新分頁中於 Odoo 開啟新的商機記"
+"錄。電子郵件的主旨將用作商機標題，電子郵件的內容將加入到商機的\\ "
+":guilabel:`備註`\\ 分頁中。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:42
 msgid "Create a task"
@@ -8397,6 +8440,11 @@ msgid ""
 "Odoo in a new tab. The subject of the email is used as the task title, and "
 "the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
+"要從電子郵件建立任務，請按一下\\ :guilabel:`任務`\\ 旁邊的\\ :icon:`fa-"
+"plus`\\ :guilabel:`（加號）`\\ 圖示。然後，在結果欄位中輸入應建立任務的專案標"
+"題，並從結果清單中選擇適當的專案。這會在新分頁中於 Odoo 開啟新的任務記錄。電"
+"子郵件的主旨將用作任務標題，電子郵件的內容將加入到\\ :guilabel:`描述`\\ 分頁"
+"中。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:51
 msgid "Create a ticket"
@@ -8422,7 +8470,7 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook plugin"
-msgstr ""
+msgstr "Outlook 外掛程式"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:64
 msgid ""
@@ -8431,7 +8479,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid "Gmail plugin"
-msgstr ""
+msgstr "Gmail 外掛程式"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:70
 msgid ""
@@ -8525,17 +8573,21 @@ msgid ""
 "click :guilabel:`Continue` one more time to confirm the installation of the "
 "plugin."
 msgstr ""
+"按一下\\ :guilabel:`Odoo Inbox Addin`\\ ，然後按一下\\ :guilabel:`安裝`\\ ，"
+"隨即會彈出視窗。按一下\\ :guilabel:`繼續`\\ 並勾選\\ :guilabel:`全選`\\ 旁邊"
+"的核取方塊以授予必要權限，然後再次按一下\\ :guilabel:`繼續`\\ 以確認安裝外掛"
+"程式。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
 msgid ""
 "If the plugin does not appear in the side panel after installation, refresh "
 "the page."
-msgstr ""
+msgstr "若安裝後側邊面板未顯示該外掛程式，請重新整理頁面。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:60
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:49
 msgid "Connect an Odoo database"
-msgstr ""
+msgstr "連接 Odoo 資料庫"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:62
 msgid ""
@@ -8546,6 +8598,11 @@ msgid ""
 "account, and a pop-up window opens. Click :guilabel:`Allow` in the pop-up "
 "window to let the Gmail plugin connect to the database."
 msgstr ""
+"要開啟外掛程式，請按一下右側面板中的 Odoo 圖示。外掛程式面板會開啟在收件匣與"
+"右側面板之間。按一下\\ :guilabel:`登入`\\ 。輸入 Odoo 資料庫網址並按一下\\ "
+":guilabel:`登入`\\ ，或按一下\\ :guilabel:`註冊`\\ 以建立 Odoo 帳戶，隨即會開"
+"啟彈出式視窗。在彈出視窗中按一下\\ :guilabel:`允許`\\ ，以允許 Gmail 外掛程式"
+"連接至資料庫。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
 msgid ""
@@ -8563,6 +8620,8 @@ msgid ""
 "enables users to create Odoo records (such as opportunities, tasks, and "
 "tickets) directly in Outlook."
 msgstr ""
+"Outlook 外掛程式將 Odoo 資料庫連接至 Outlook 收件匣，讓使用者可以直接在 "
+"Outlook 中建立 Odoo 記錄（例如商機、任務和支援請求）。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:9
 msgid ""
@@ -8576,7 +8635,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:16
 msgid "Install the Outlook plugin"
-msgstr ""
+msgstr "安裝 Outlook 外掛程式"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:22
 msgid ""
@@ -8584,10 +8643,13 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"若資料庫版本早於 19.2，請參閱\\ `19.0 說明文件 <https://www.odoo.com/"
+"documentation/19.0/applications/general/integrations/mail_plugins/"
+"outlook.html>`_\\ 以取得安裝指示。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:27
 msgid "From the Microsoft Marketplace"
-msgstr ""
+msgstr "從 Microsoft Marketplace"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:29
 msgid ""
@@ -8600,10 +8662,17 @@ msgid ""
 "the Outlook inbox. Click :guilabel:`Add` to confirm the installation of the "
 "plugin."
 msgstr ""
+"若要安裝 Odoo Outlook 外掛程式，請前往 Microsoft Marketplace 中的\\ `Odoo "
+"Inbox Addin <https://marketplace.microsoft.com/en-us/product/"
+"WA200009923?tab=Overview>`_\\ 頁面，然後按一下\\ :guilabel:`立即取得`\\ 。登"
+"入要連接至 Odoo 的 Outlook 帳戶。填寫\\ :guilabel:`姓名`\\ 及\\ :guilabel:`國"
+"家/地區`\\ 欄位，然後再次按一下\\ :guilabel:`立即取得`\\ 以授予必要權限，頁面"
+"隨即會重新導向至 Outlook 收件匣。按一下\\ :guilabel:`新增`\\ 以確認安裝外掛程"
+"式。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid "From the Outlook inbox"
-msgstr ""
+msgstr "從 Outlook 收件匣"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
 msgid ""
@@ -8614,10 +8683,15 @@ msgid ""
 "Click :guilabel:`Odoo Inbox Addin`, then click :guilabel:`Add` to confirm "
 "the installation of the plugin."
 msgstr ""
+"或者，也可以直接從 Outlook 收件匣安裝外掛程式。為此，請在 Outlook 收件匣中開"
+"啟一封電子郵件，按一下電子郵件右上角的\\ :guilabel:`應用程式`\\ 按鈕，然後按"
+"一下\\ :guilabel:`取得增益集`\\ 。按一下\\ :guilabel:`搜尋增益集`\\ ，然後輸"
+"入 `Odoo` 並按 Enter。按一下\\ :guilabel:`Odoo Inbox Addin`\\ ，然後按一下\\ "
+":guilabel:`新增`\\ 以確認安裝外掛程式。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Apps button in the Outlook inbox."
-msgstr ""
+msgstr "Outlook 收件匣中的「應用程式」按鈕。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:51
 msgid ""
@@ -8625,6 +8699,8 @@ msgid ""
 "corner of any email, and select :guilabel:`Odoo`. The plugin panel opens to "
 "the right of the email."
 msgstr ""
+"若要開啟外掛程式，請按一下任何電子郵件右上角的\\ :guilabel:`應用程式`\\ 按鈕"
+"，然後選擇\\ :guilabel:`Odoo`\\ 。外掛程式面板會開啟在電子郵件右側。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:54
 msgid ""
@@ -8633,6 +8709,10 @@ msgid ""
 "and a pop-up window opens. Click :guilabel:`Allow` in the pop-up window to "
 "let the Outlook plugin connect to the database."
 msgstr ""
+"輸入 Odoo 資料庫網址並按一下\\ :guilabel:`登入`\\ ，或按一下\\ :guilabel:`註"
+"冊`\\ 以建立 Odoo 帳戶。按一下\\ :guilabel:`允許`\\ ，隨即會開啟彈出式視窗。"
+"在彈出視窗中按一下\\ :guilabel:`允許`\\ ，以允許 Outlook 外掛程式連接至資料庫"
+"。"
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -8991,6 +9071,8 @@ msgid ""
 "Connect the IoT box to an external monitor or a USB printer. If the IoT box "
 "was already plugged prior to this, :ref:`restart it <iot/iot-box/homepage>`."
 msgstr ""
+"將 IoT 盒連接至外接螢幕或 USB 印表機。若在此之前已為 IoT 盒接通電源，請\\ "
+":ref:`重新啟動 <iot/iot-box/homepage>`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:64
 msgid ""
@@ -9147,6 +9229,10 @@ msgid ""
 "https_certificate>` :guilabel:`End Date`. By default, drivers are "
 "automatically updated every time the IoT system is restarted."
 msgstr ""
+"啟用\\ :ref:`開發者模式 <developer-mode>`\\ 以存取 IoT 系統的\\ :guilabel:`技"
+"術資訊`\\ ，例如其\\ :guilabel:`網域地址`\\ 、\\ :guilabel:`映像檔版本`\\ 以"
+"及\\ :ref:`SSL 憑證 <iot/connect/https_certificate>`\\ :guilabel:`結束日期`\\"
+" 。根據預設，每次重新啟動 IoT 系統時，驅動程式都會自動更新。"
 
 #: ../../content/applications/general/iot/connect.rst:127
 msgid ""
@@ -9273,6 +9359,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`連接 Worldline/Axepta BNP Paribas 支付終端機 <../../sales/"
+"point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../content/applications/general/iot/devices.rst:23
 msgid ""
@@ -9452,7 +9540,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -10540,6 +10628,8 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"DYMO Series 5 印表機與\\ :doc:`IoT 盒 <../iot_box>`\\ 不相容，需要與\\ "
+":doc:`Windows 虛擬 IoT <../windows_iot>`\\ 配對。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:368
 msgid "DYMO LabelWriter not printing"
@@ -10868,6 +10958,11 @@ msgid ""
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"若要將電子磅秤連接至 IoT 系統，請使用 USB 連接線。在某些情況下，可能需要序列"
+"埠轉 USB 轉接器才能完成連接。若該磅秤\\ `與 IoT 系統相容 <https://"
+"www.odoo.com/page/iot-hardware>`_\\ ，則無需其他設定；磅秤一經連接便會自動偵"
+"測到。若未偵測到磅秤，請將 IoT 盒重新開機或\\ :ref:`重新啟動 Windows 虛擬 "
+"IoT 服務 <iot/windows_iot/restart>`\\ 。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:17
 msgid ""
@@ -10875,6 +10970,8 @@ msgid ""
 "Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a "
 "different scale must be used."
 msgstr ""
+"若磅秤仍無法正常運作，則可能\\ `與 Odoo IoT 系統不相容 <https://www.odoo.com/"
+"page/iot-hardware>`_\\ 。在這種情況下，必須使用其他磅秤。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:21
 msgid ""
@@ -11755,12 +11852,14 @@ msgid ""
 "Ethernet cable is properly connected, or :ref:`connect the IoT box via Wi-Fi "
 "<iot/iot_box/network-wifi>`."
 msgstr ""
+"**紅色 LED 燈亮起**：IoT 盒未連線至網際網路。請確保乙太網路線已正確連接，或\\"
+" :ref:`透過 Wi-Fi 連接 IoT 盒 <iot/iot_box/network-wifi>`\\ 。"
 
 #: ../../content/applications/general/iot/iot_box.rst:87
 msgid ""
 "**Green LED flashing**: The IoT box is waiting to :doc:`connect to a "
 "database <connect>`."
-msgstr ""
+msgstr "**綠色 LED 燈閃爍**：IoT 盒正在等待\\ :doc:`連接至資料庫 <connect>`\\ 。"
 
 #: ../../content/applications/general/iot/iot_box.rst:88
 msgid ""
@@ -11779,6 +11878,9 @@ msgid ""
 "click :guilabel:`Homepage`, or open a browser on the device and navigate to "
 "the IoT box's IP address."
 msgstr ""
+"若要在裝置上存取 IoT 盒的首頁，請先確保該裝置與 IoT 盒處於同一個網路。接著，"
+"若使用 IoT 應用程式，請按一下\\ :guilabel:`首頁`\\ ，或在裝置上開啟瀏覽器並前"
+"往 IoT 盒的 IP 位址。"
 
 #: ../../content/applications/general/iot/iot_box.rst:None
 msgid "IoT box's homepage"
@@ -11788,7 +11890,7 @@ msgstr "IoT Box 的首頁"
 msgid ""
 "If the IP address is not already known, use any of the following methods to "
 "retrieve it:"
-msgstr ""
+msgstr "若尚未得知 IP 位址，可使用以下任一方法取得："
 
 #: ../../content/applications/general/iot/iot_box.rst:106
 msgid ""
@@ -11796,6 +11898,8 @@ msgid ""
 "navigate to `http://iotbox.local`. The page automatically redirects to the "
 "homepage, which displays the IP address."
 msgstr ""
+"連線至與 IoT 盒相同的網路時，開啟網頁瀏覽器並前往\\ `http://iotbox.local`\\ "
+"。該頁面會自動重新導向至首頁，並顯示 IP 位址。"
 
 #: ../../content/applications/general/iot/iot_box.rst:109
 msgid ""
@@ -11803,24 +11907,30 @@ msgid ""
 "hardware>`_ using a USB cable, which then automatically prints a ticket with "
 "the IP address."
 msgstr ""
+"使用 USB 連接線連接\\ `支援的收據或標籤印表機 <https://www.odoo.com/app/iot-"
+"hardware>`_\\ ，印表機隨後會自動列印一張載有 IP 位址的單據。"
 
 #: ../../content/applications/general/iot/iot_box.rst:111
 msgid ""
 "Connect the IoT box to an :doc:`external monitor <devices/screen>`, which "
 "then displays the IP address on the screen."
 msgstr ""
+"將 IoT 盒連接至\\ :doc:`外接螢幕 <devices/screen>`\\ ，螢幕隨即會顯示 IP 位址"
+"。"
 
 #: ../../content/applications/general/iot/iot_box.rst:113
 msgid ""
 "On IoT box images `L2026.05.25` and later, the IoT box IP address is "
 "displayed as a discovered Bluetooth device for 5 minutes after booting."
 msgstr ""
+"在\\ `L2026.05.25`\\ 及更新版本的 IoT 盒映像檔中，開機後的 5 分鐘內，IoT 盒"
+"的 IP 位址會顯示為已偵測到的藍牙裝置。"
 
 #: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
 "Access the router's administrator interface, or use third-party software to "
 "scan the network."
-msgstr ""
+msgstr "存取路由器的管理員介面，或使用第三方軟體掃描網路。"
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT box's IP address"
@@ -11832,6 +11942,8 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"若要手動重新啟動 IoT 盒，請前往\\ :ref:`首頁 <iot/iot-box/homepage>`\\ ，然後"
+"按一下右上角的\\ :icon:`fa-power-off` :guilabel:`（關閉電源）`\\ 按鈕。"
 
 #: ../../content/applications/general/iot/iot_box.rst:124
 msgid ""
@@ -11846,7 +11958,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:127
 msgid "To fully reboot the IoT box, unplug it and plug it back in."
-msgstr ""
+msgstr "若要將 IoT 盒完全重新開機，請拔下電源線後再重新插上。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -12051,6 +12163,9 @@ msgid ""
 "the device does not appear, restart the IoT system from the :ref:`IoT "
 "system's homepage <iot/windows-iot/homepage>`."
 msgstr ""
+"將裝置連接至電腦後，請重新整理\\ :ref:`IoT 系統首頁 <iot/windows-iot/"
+"homepage>`\\ ，以確認該裝置已列在清單中。若裝置未顯示，請從\\ :ref:`IoT 系統"
+"首頁 <iot/windows-iot/homepage>`\\ 重新啟動 IoT 系統。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:85
 msgid "Windows Firewall configuration"
@@ -12128,6 +12243,9 @@ msgid ""
 "port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/"
 "terminals/worldline_axepta` payment terminals."
 msgstr ""
+"視你的 IoT 裝置而定，可能還需要其他連接埠。例如，為\\ :doc:`/applications/"
+"sales/point_of_sale/payment_methods/terminals/worldline_axepta`\\ 付款終端機"
+"新增連接埠\\ `9050`\\ 。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:114
 msgid ""
@@ -12239,7 +12357,7 @@ msgstr "離線模式"
 msgid ""
 "Odoo’s offline mode provides a solution for short-term interruptions; it is "
 "not intended to offer full or long-term offline capabilities."
-msgstr ""
+msgstr "Odoo 的離線模式旨在因應短暫的網路中斷，並非提供完整或長期的離線功能。"
 
 #: ../../content/applications/general/offline_mode.rst:9
 msgid ""
@@ -12248,6 +12366,8 @@ msgid ""
 "or no coverage, Odoo makes certain functionality available offline for "
 "logged-in users."
 msgstr ""
+"為在連線不穩定或無法連線時（例如通勤或在收訊不良、無收訊的地點工作）確保業務"
+"持續運作，Odoo 為已登入的使用者提供特定離線功能。"
 
 #: ../../content/applications/general/offline_mode.rst:13
 msgid ""
@@ -12260,14 +12380,19 @@ msgid ""
 "Previously performed :ref:`search queries <general/offline-mode/search>` can "
 "be run again."
 msgstr ""
+"一旦網際網路連線中斷，資料庫頁首就會顯示\\ :guilabel:`離線工作`\\ 按鈕。先前"
+"在線上開啟過的檢視畫面或記錄都可以重新開啟，無論失去連線當下它們是否在瀏覽器"
+"中處於開啟狀態。只要符合特定條件，即可對記錄進行\\ :ref:`編輯、刪除、封存、取"
+"消封存或建立 <general/offline-mode/records-create-udpate>`\\ 。先前執行過的\\"
+" :ref:`搜尋查詢 <general/offline-mode/search>`\\ 亦可重新執行。"
 
 #: ../../content/applications/general/offline_mode.rst:20
 msgid "Items that are not available offline are grayed out."
-msgstr ""
+msgstr "無法離線使用的項目會顯示為灰色。"
 
 #: ../../content/applications/general/offline_mode.rst:None
 msgid "Elements not available offline are grayed out"
-msgstr ""
+msgstr "無法離線使用的元素會顯示為灰色"
 
 #: ../../content/applications/general/offline_mode.rst:25
 msgid ""
@@ -12275,6 +12400,8 @@ msgid ""
 "manage-changes>`; when connectivity is restored, changes are synced "
 "automatically and reflected in your database."
 msgstr ""
+"在離線狀態下所作的任何變更都會\\ :ref:`在本地端排入佇列 <general/offline-"
+"mode/manage-changes>`\\ ；當恢復連線時，變更會自動同步並反映在資料庫中。"
 
 #: ../../content/applications/general/offline_mode.rst:29
 msgid ""
@@ -12282,6 +12409,8 @@ msgid ""
 "expect to need, and perform any searches so they can still be accessed if/"
 "when connectivity is lost."
 msgstr ""
+"若預計會發生連線問題，請預先開啟預期需要的任何檢視畫面或記錄，並執行相關搜尋"
+"，以便在連線中斷時仍可存取這些內容。"
 
 #: ../../content/applications/general/offline_mode.rst:33
 msgid ""
@@ -12312,33 +12441,33 @@ msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:44
 msgid "Create and update records"
-msgstr ""
+msgstr "建立及更新記錄"
 
 #: ../../content/applications/general/offline_mode.rst:46
 msgid "When offline, records can be:"
-msgstr ""
+msgstr "離線時，記錄可以："
 
 #: ../../content/applications/general/offline_mode.rst:48
 msgid ""
 "created, provided a record of the same type was previously created while you "
 "were online"
-msgstr ""
+msgstr "建立，前提是先前在連線狀態下曾建立過相同類型的記錄"
 
 #: ../../content/applications/general/offline_mode.rst:49
 msgid ""
 "edited, deleted, archived, or unarchived, provided they were previously "
 "opened while you were online"
-msgstr ""
+msgstr "編輯、刪除、封存或取消封存，前提是先前曾在連線時開啟過該記錄"
 
 #: ../../content/applications/general/offline_mode.rst:53
 msgid ""
 "Attachments and images can be opened while offline, but cannot be uploaded "
 "or deleted."
-msgstr ""
+msgstr "附件和圖片可以在離線時開啟，但無法上傳或刪除。"
 
 #: ../../content/applications/general/offline_mode.rst:58
 msgid "Perform searches"
-msgstr ""
+msgstr "執行搜尋"
 
 #: ../../content/applications/general/offline_mode.rst:60
 msgid ""
@@ -12346,20 +12475,24 @@ msgid ""
 "offline. To repeat a previously performed search, click in the search bar, "
 "then choose from the available searches."
 msgstr ""
+"先前在連線時執行過的搜尋查詢，可以在離線時重複執行。若要重複執行先前搜尋過的"
+"內容，請按一下搜尋列，然後從可用的搜尋中選取。"
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Previous executed searches available via search bar"
-msgstr ""
+msgstr "可透過搜尋列使用先前執行的搜尋"
 
 #: ../../content/applications/general/offline_mode.rst:70
 msgid "Manage offline changes"
-msgstr ""
+msgstr "管理離線變更"
 
 #: ../../content/applications/general/offline_mode.rst:72
 msgid ""
 "When you create or update a record offline, the changes are stored locally "
 "in a temporary queue until the internet connection is restored."
 msgstr ""
+"在離線狀態下建立或更新記錄時，變更會儲存在本機的臨時佇列中，直到網際網路連線"
+"恢復為止。"
 
 #: ../../content/applications/general/offline_mode.rst:75
 msgid ""
@@ -12368,10 +12501,14 @@ msgid ""
 "record was :guilabel:`Created`, :guilabel:`Edited`, :guilabel:`Archived`, "
 "or :guilabel:`Unarchived`."
 msgstr ""
+"若要在離線時查看待處理的變更，請按一下\\ :guilabel:`離線工作`\\ 按鈕；系統會"
+"列出已修改的記錄，並顯示標籤指明該記錄為\\ :guilabel:`已建立`\\ 、\\ "
+":guilabel:`已編輯`\\ 、\\ :guilabel:`已封存`\\ 或\\ :guilabel:`已取消封存`\\ "
+"。"
 
 #: ../../content/applications/general/offline_mode.rst:79
 msgid "Hovering over an :guilabel:`Edited` tag reveals the changes made."
-msgstr ""
+msgstr "將滑鼠游標懸停在\\ :guilabel:`已編輯`\\ 標籤上，即可查看所做的變更。"
 
 #: ../../content/applications/general/offline_mode.rst:82
 msgid ""
@@ -12380,10 +12517,14 @@ msgid ""
 "name :guilabel:`user_id`) from `Mitchell Admin` to `Marc Demo` and "
 "the :guilabel:`Expected Revenue` from `9000` to `15000`."
 msgstr ""
+"在此範例中，\\ :guilabel:`辦公室設計與架構`\\ 商機已被編輯，將\\ "
+":guilabel:`銷售員`\\ （技術欄位名稱為\\ :guilabel:`user_id`\\ ）由\\ "
+"`Mitchell Admin`\\ 變更為\\ `Marc Demo`\\ ，並將\\ :guilabel:`預期收入`\\ 由 "
+"`9000` 變更為 `15000`。"
 
 #: ../../content/applications/general/offline_mode.rst:0
 msgid "Dropdown on Working offline button showing list of changes made offline"
-msgstr ""
+msgstr "「離線工作」按鈕上的下拉式選單，顯示離線時所做的變更清單"
 
 #: ../../content/applications/general/offline_mode.rst:90
 msgid ""
@@ -12392,10 +12533,13 @@ msgid ""
 "for example, if changes were made in error or in the wrong order, click "
 "the :icon:`fa-trash` :guilabel:`(Discard offline changes)` icon."
 msgstr ""
+"若要在離線時進一步變更已編輯的記錄，請按一下該記錄以在本機開啟。若要在離線時"
+"捨棄待處理的變更（例如變更出錯或順序有誤），請按一下\\ :icon:`fa-trash` "
+":guilabel:`（捨棄離線變更）`\\ 圖示。"
 
 #: ../../content/applications/general/offline_mode.rst:97
 msgid "Disable offline mode for specific views"
-msgstr ""
+msgstr "停用特定檢視畫面的離線模式"
 
 #: ../../content/applications/general/offline_mode.rst:99
 msgid ""
@@ -12404,24 +12548,29 @@ msgid ""
 "specific view and, as a result, make the view unavailable offline, follow "
 "these steps:"
 msgstr ""
+"在某些情況下（例如報表檢視畫面），顯示過期或快取的資訊可能並不合適。若要停用"
+"特定檢視畫面的資料快取，從而使該檢視畫面無法在離線時使用，請依照以下步驟操作"
+"："
 
 #: ../../content/applications/general/offline_mode.rst:103
 msgid "Open the view in question."
-msgstr ""
+msgstr "開啟相關檢視畫面。"
 
 #: ../../content/applications/general/offline_mode.rst:104
 msgid "Activate :ref:`developer mode <developer-mode>`."
-msgstr ""
+msgstr "啟用\\ :ref:`開發者模式 <developer-mode>`\\ 。"
 
 #: ../../content/applications/general/offline_mode.rst:105
 msgid ""
 "Click the :icon:`fa-bug` :guilabel:`(bug)` icon in the database header, then "
 "select :guilabel:`Action`."
 msgstr ""
+"按一下資料庫頁首的\\ :icon:`fa-bug` :guilabel:`（除錯）`\\ 圖示，然後選取\\ "
+":guilabel:`動作`\\ 。"
 
 #: ../../content/applications/general/offline_mode.rst:107
 msgid "Disable :guilabel:`Data caching`."
-msgstr ""
+msgstr "停用\\ :guilabel:`資料快取`\\ 。"
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -12580,6 +12729,10 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"若要查看已登入的裝置，請按一下右上角的使用者圖示，然後按一下\\ :guilabel:`個"
+"人偏好設定`\\ 以開啟使用者個人檔案。按一下\\ *安全性*\\ 分頁，即可查看使用者"
+"登入資料庫所使用的所有裝置清單。任何目前已登入系統的裝置，在看板卡片上的裝置"
+"名稱旁都會顯示一個綠色圓圈。"
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -12595,6 +12748,8 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"如果清單中的裝置\\ **並非**\\ 合法的使用者裝置，且可能存在潛在安全風險，請按"
+"一下\\ :guilabel:`登出`\\ 按鈕，移除該裝置並撤銷存取權限。"
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -12602,12 +12757,14 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"系統會載入\\ :guilabel:`存取控制`\\ 彈出視窗，要求使用者確認身分。輸入使用者"
+"密碼，然後按一下\\ :guilabel:`確認密碼`\\ 。"
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
-msgstr ""
+msgstr "該裝置會從\\ *安全性*\\ 分頁中消失，且無法再用於登入資料庫。"
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -12723,6 +12880,10 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"若要強制執行密碼長度下限要求，請\\ :ref:`安裝 <general/install>`\\ "
+":guilabel:`密碼原則`（`auth_password_policy`）模組。然後開啟\\ :guilabel:`設"
+"定`\\ 應用程式，前往\\ *權限*\\ 區段，並在\\ :guilabel:`密碼長度下限`\\ 欄位"
+"中輸入所需的密碼長度。預設值為 `8`。"
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -12857,7 +13018,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "多公司"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -12866,12 +13027,17 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"使用者表單上的\\ :guilabel:`公司`\\ 欄位決定了該使用者可以存取哪些公司。若要"
+"設定多公司存取權限，請前往\\ :menuselection:`設定應用程式 --> 使用者區段 --> "
+"管理使用者`\\ 。然後選取所需的使用者以開啟其使用者表單。"
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"在\\ *存取權限*\\ 分頁的\\ *角色*\\ 區段下，設定\\ :guilabel:`公司`\\ 與\\ "
+":guilabel:`預設公司`\\ 欄位："
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -12879,12 +13045,16 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`公司`：選取使用者可以存取的一或多間公司。使用者的存取與編輯權限取"
+"決於指派給他們的存取權限。"
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
 ":guilabel:`Default Company`: Select the company that is automatically "
 "selected when the user logs in. Only one company can be set as the default."
 msgstr ""
+":guilabel:`預設公司`：選取使用者登入時自動選擇的公司。只能將一間公司設為預設"
+"。"
 
 #: ../../content/applications/general/users.rst:239
 msgid ""
@@ -12894,6 +13064,9 @@ msgid ""
 "explanations, refer to the developer documentation on :doc:`../../../"
 "developer/howtos/company`."
 msgstr ""
+"不正確設定多公司存取權限，可能會導致各公司之間的運作行為不一致。只有經驗豐富"
+"的 Odoo 使用者才應修改具有多公司設定之資料庫中的使用者存取權限。有關技術說明"
+"，請參閱\\ :doc:`../../../developer/howtos/company`\\ 的開發者文件。"
 
 #: ../../content/applications/general/users.rst:None
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
@@ -13016,10 +13189,12 @@ msgid ""
 "avatar in the upper-right corner, and select :guilabel:`My Preferences` from "
 "the resulting drop-down menu."
 msgstr ""
+"選取驗證工具後，登入 Odoo，然後按一下右上角的使用者頭像，並從下拉式選單中選"
+"擇\\ :guilabel:`個人偏好設定`\\ 。"
 
 #: ../../content/applications/general/users/2fa.rst:54
 msgid "Click the *Security* tab, then click :guilabel:`Enable 2FA`."
-msgstr ""
+msgstr "按一下\\ *安全性*\\ 分頁，然後按一下\\ :guilabel:`啟用 2FA`\\ 。"
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The account secuirty tab in a user profile."
@@ -13032,6 +13207,9 @@ msgid ""
 "click :guilabel:`Confirm Password`. Next, a *Two-Factor Authentication "
 "Activation* pop-up window appears, with a |QR|."
 msgstr ""
+"這會產生\\ *存取控制*\\ 彈出視窗，需要確認密碼才能繼續。輸入 Odoo 帳戶密碼，"
+"然後按一下\\ :guilabel:`確認密碼`\\ 。接著會出現\\ *雙重驗證啟用*\\ 彈出視窗"
+"，並附有\\ |QR|\\ 。"
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "The 2fa authentication QR code in Odoo."
@@ -13039,7 +13217,7 @@ msgstr "Odoo 中的 2fa 驗證二維碼。"
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "Using the desired authenticator application, scan the |QR| code."
-msgstr ""
+msgstr "使用所需的驗證工具應用程式，掃描\\ |QR|\\ 碼。"
 
 #: ../../content/applications/general/users/2fa.rst:69
 msgid ""
@@ -13069,6 +13247,8 @@ msgid ""
 "Enter the code into the :guilabel:`Verification code` field, then "
 "click :guilabel:`Enable Two-Factor Authentication`."
 msgstr ""
+"在\\ :guilabel:`驗證碼`\\ 欄位中輸入代碼，然後按一下\\ :guilabel:`啟用雙重驗"
+"證`\\ 。"
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid ""
@@ -13225,7 +13405,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid "Manage roles"
-msgstr ""
+msgstr "管理角色"
 
 #: ../../content/applications/general/users/access_rights.rst:36
 msgid ""
@@ -13234,6 +13414,9 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`個別使用者 <users/add-individual>`\\ 在新增至資料庫時會被指派\\ *角"
+"色*\\ 。角色決定了使用者擁有的存取層級，而與每個角色相關聯的具體存取權限則"
+"由\\ :ref:`群組 <access-rights/groups>`\\ 定義。"
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid "The available internal roles are:"
@@ -13249,7 +13432,7 @@ msgstr ""
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
-msgstr ""
+msgstr "*管理員*：具有存取技術功能、建立產品、匯出以及其他進階權限的內部使用者。"
 
 #: ../../content/applications/general/users/access_rights.rst:46
 msgid ""
@@ -13299,7 +13482,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:65
 msgid "Portal users"
-msgstr ""
+msgstr "門戶使用者"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
