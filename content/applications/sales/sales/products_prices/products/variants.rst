@@ -118,9 +118,6 @@ Creation` mode cannot be edited.
   a product template.
 - :guilabel:`Dynamically`: Creates variants **only** when corresponding attributes and values are
   added to a sales order.
-- :guilabel:`Never`: Prevents the automatic creation of purchaseable variants with this tag.
-  Instead, this tag is treated as being informational. If more than one value is assigned to an
-  attribute with this tag, all values are loaded when the product displays, since the creation of
 - :guilabel:`Never`: Prevents the automatic creation of purchasable variants with this tag. Instead,
   this tag is treated as being informational. If more than one value is assigned to an attribute
   with this tag, all values are loaded when the product displays, since the creation of discrete
