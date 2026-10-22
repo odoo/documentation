@@ -203,7 +203,7 @@ Add body content
 Now, with the domain section of the email campaign complete, create the body content of the email
 using any of the premade stylized templates, or choose between the :guilabel:`Plain Text` or
 :guilabel:`Start From Scratch` options for more granular control. For more information, refer to the
-*Email Marketing* :ref:`documentation on how to create an email <email_marketing/create_email>`.
+*Email Marketing* :ref:`documentation on how to create an email <email_marketing/create-mailing>`.
 
 .. tip::
    To save the set of filters for later use, click :guilabel:`Save as Favorite Filter 💾 (floppy
