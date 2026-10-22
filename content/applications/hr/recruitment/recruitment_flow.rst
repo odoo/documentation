@@ -116,7 +116,7 @@ the *Send an interview* pop-up window.
    :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
          preconfigured template.
 
-.. _recruitment/recruitment_flow/initial-qualification:
+.. _recruitment/recruitment_flow/qualification:
 
 Qualification
 =============
