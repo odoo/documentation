@@ -6,17 +6,17 @@ This guide explains the end-to-end appraisal workflow in Odoo, from creation to 
 showing how managers and employees collaborate at each stage.
 
 - :ref:`Employee self-assessment <appraisals/employee-feedback>`: The employee completes the
-  *Employee's Feedback* template and updates their skills. Responses remain hidden until the
-  employee sets the form to *Visible to Manager*.
+  *Employee's Feedback* template. Responses remain hidden until the employee sets their section to
+  *Shared to Appraisers*.
 - :ref:`Manager feedback <appraisals/manager-feedback>`: While the employee works on their section,
-  the manager reviews goals, gathers peer input if needed, and fills out the *Manager's Feedback*
-  template. Feedback can remain hidden until the appraisal meeting.
+  the manager reviews goals and skills, gathers peer input if needed, and fills out the *Manager's
+  Feedback* template. Feedback can remain hidden until the appraisal meeting.
 - :ref:`Appraisal review <appraisals/review>`: Manager and employee meet to discuss both feedback
   sections, validate skill changes, and agree on next steps. The meeting can be scheduled directly
   from the appraisal or the calendar.
 - :ref:`Completion and rating <appraisals/complete>`: After the discussion, the manager assigns a
-  final rating, adds any private notes, and marks the appraisal as done. The record then locks
-  unless it is reopened for further edits.
+  final rating, adds any private notes, and marks the appraisal as done. Both feedback sections are
+  then shared, and the record locks unless it is reopened for further edits.
 
 Throughout the process, optional actions, such as requesting peer feedback or logging private
 manager notes, enhance the appraisal's accuracy and relevance.
@@ -26,14 +26,16 @@ manager notes, enhance the appraisal's accuracy and relevance.
 Employee self-assessment
 ========================
 
-Once an appraisal is confirmed, the employee is required to fill out the self-assessment.
+Once an appraisal is confirmed, its status changes from :guilabel:`Draft` to :guilabel:`Ongoing`,
+and the employee is required to fill out the self-assessment.
 
 .. note::
-   Only confirmed appraisals can be worked on. If an appraisal is *not* confirmed, the fields on the
-   appraisal form cannot be edited, and feedback cannot be recorded.
+   Only appraisals with an :guilabel:`Ongoing` status can be worked on. While an appraisal is in
+   :guilabel:`Draft`, the feedback sections only show a preview of the template, and feedback
+   cannot be recorded.
 
 After the employee receives a notification via email that an appraisal is confirmed and scheduled,
-they are requested to fill out their half of the default appraisal template, and update any skills.
+they are requested to fill out their half of the default appraisal template.
 
 Employees can click on the link in the confirmation email to navigate to the appraisal, or they can
 open their appraisal in the **Appraisals** app. To do this, open the **Appraisals** app, then click
@@ -48,10 +50,14 @@ Complete the self-assessment
 ----------------------------
 
 The employee feedback remains hidden from management while the employee is performing their
-self-assessment. Once the employee has completed their half of the appraisal, and updated any
-skills, they click the gray :guilabel:`Private` toggle. This changes the toggle text to
-:guilabel:`Shared to Appraisers`, the color changes to green, and their responses are then visible
-to the appraisers.
+self-assessment. Once the employee has completed their half of the appraisal, they click the
+:guilabel:`Private` toggle. This changes the toggle to :guilabel:`Shared to Appraisers`, the color
+changes to green, and their responses are then visible to the appraisers.
+
+.. note::
+   Appraisers can also share the employee's feedback themselves, by clicking the toggle in the
+   :guilabel:`Employee's Feedback` section. As this publishes the feedback without the employee's
+   consent, a confirmation pop-up window appears, and the action is logged in the chatter.
 
 .. _appraisals/manager-feedback:
 
@@ -83,7 +89,7 @@ improvements, with actionable steps to help the employee achieve their goals in 
 short term.
 
 When the feedback section is completed, the manager clicks the :guilabel:`Private` toggle. This
-changes the toggle text to :guilabel:`Shared to Employee`, the color changes to green, and their
+changes the toggle to :guilabel:`Shared to Employee`, the color changes to green, and their
 responses are then visible to the employee.
 
 .. note::
@@ -103,8 +109,9 @@ Feedback is requested from coworkers and anyone else who works with the employee
 more well-rounded view of the employee, and aid in the manager's overall assessment.
 
 .. important::
-   To request feedback, the appraisal **must** be confirmed. Once confirmed, an :guilabel:`Ask
-   Feedback` button appears in the upper-left corner of the form.
+   To request feedback, the appraisal **must** be confirmed. Once its status is
+   :guilabel:`Ongoing`, an :guilabel:`Ask Feedback` button appears in the upper-left corner of the
+   form.
 
 .. _appraisals/review:
 
@@ -127,19 +134,21 @@ at this time, and updated as needed.
 Schedule appraisal review
 -------------------------
 
-Meetings to review appraisals are scheduled from the individual appraisal Kanban card.
+Meetings to review appraisals are scheduled from the appraisal form, while its status is
+:guilabel:`Ongoing`.
 
 To schedule an appraisal, navigate to :menuselection:`Appraisals app --> Appraisals`, and click on
 the desired Kanban card.
 
-Click the :guilabel:`Schedule Meeting` button, and the :guilabel:`Meetings` dashboard loads.
-Navigate to the desired date using the calendar on the right side, then click on the desired time on
-the calendar. This opens a *New Event* pop-up window.
+Click the :guilabel:`Schedule Meeting` button, and the :guilabel:`Meetings` dashboard loads, opened
+on the appraisal date. Navigate to the desired date using the calendar on the right side, if
+needed, then click on the desired time on the calendar. This opens a *New Event* pop-up window.
 
 The :icon:`fa-tag` :guilabel:`(Title)` field is populated with `Appraisal of (Employee Name)`, and
-the date and time populate the :icon:`fa-clock-o` :guilabel:`(Dates)` fields. The employee and
-appraisers populate the :icon:`fa-user` :guilabel:`(Participants)` field by default. Add anyone else
-who should be in the meeting, if necessary.
+the date and time populate the :icon:`fa-clock-o` :guilabel:`(Dates)` fields. The employee, the
+appraisers, and the user scheduling the meeting populate the :icon:`fa-user`
+:guilabel:`(Participants)` field by default. Add anyone else who should be in the meeting, if
+necessary.
 
 Add a :icon:`fa-map` :guilabel:`(Location)` if desired. This can be more detailed, such as `Main
 Conference Room`.
@@ -168,15 +177,18 @@ Part of an appraisal is evaluating an employee's skills and tracking their progr
 an appraisal is confirmed, the *Skills* tab of the appraisal form auto-populates with the skills
 from the :ref:`employee form <employees/skills>`. Additionally, if the :guilabel:`Target Job` field
 is populated, the corresponding skills and expected levels also appear in the *Skills* tab. The
-target level for each skill appears in red in the :guilabel:`Job Target` column.
+target level for each skill appears in the :guilabel:`Job Target` column, in green if the current
+level reaches it, and in red if it does not.
 
 Each skill is grouped with like skills, and the :guilabel:`Skill Level`, :guilabel:`Current`
 progress, and :guilabel:`Justification` are displayed for each skill.
 
-If a :guilabel:`Skill Level` has changed since the last appraisal, the level must be updated.
+If a :guilabel:`Skill Level` has changed since the last appraisal, the appraiser updates the level.
 
 .. note::
-   The *Skills* tab does not appear on the appraisal until the appraisal is confirmed.
+   The *Skills* tab does not appear on the appraisal until the appraisal is confirmed. Only
+   appraisers can update skills. The employee does not see the *Skills* tab while the appraisal is
+   :guilabel:`Ongoing`; it becomes visible to them once the appraisal is :guilabel:`Done`.
 
 Click on the :guilabel:`Skill Level` for the skill that has changed, revealing a dropdown of all
 available levels. Click on the new level for the skill. Once selected, the :guilabel:`Current` field
@@ -190,7 +202,8 @@ After the appraisal is completed and the skills have been updated, the next time
 confirmed, the updated skills populate the *Skills* tab.
 
 .. note::
-   The *Skills* tab can be modified at any time.
+   The *Skills* tab can be modified as long as the appraisal is :guilabel:`Ongoing`. Once the
+   appraisal is :guilabel:`Done`, the skills are read-only.
 
 .. _appraisals/complete:
 
@@ -204,14 +217,23 @@ met and discussed the employee's performance, the manager then :ref:`logs any no
 When completed, click the :guilabel:`Mark as Done` button in the upper-left corner of the appraisal
 form.
 
-Once the appraisal is marked as *Done*, the status changes from :guilabel:`Confirmed` to
+Once the appraisal is marked as *Done*, the status changes from :guilabel:`Ongoing` to
 :guilabel:`Done`, and the :guilabel:`Mark as Done` button changes to a :guilabel:`Reopen` button.
+Both the :guilabel:`Employee's Feedback` and :guilabel:`Manager's Feedback` sections are
+automatically shared, and the appraisal's followers are notified that the appraisal is completed.
 
 .. tip::
    When an appraisal is marked as done, it is locked and modifications are not possible. To make any
    changes to an appraisal with a status of :guilabel:`Done`, click the :guilabel:`Reopen` button,
-   then make any needed modifications. Once all modifications are complete, click the
-   :guilabel:`Mark as Done` button again.
+   then make any needed modifications. Reopening the appraisal sets its status back to
+   :guilabel:`Ongoing`, and both feedback sections become :guilabel:`Private` again. Once all
+   modifications are complete, click the :guilabel:`Mark as Done` button again.
+
+.. warning::
+   While an appraisal is :guilabel:`Ongoing`, managers can also click the :guilabel:`Reset` button
+   to set it back to :guilabel:`Draft`. This erases all manually entered content in the
+   :guilabel:`Employee's Feedback` and :guilabel:`Manager's Feedback` sections, as well as the
+   :guilabel:`Final Rating`.
 
 .. _appraisals/notes:
 
@@ -219,7 +241,8 @@ Add a private note
 ------------------
 
 Managers can log notes on an appraisal that are **only** visible to other managers. Enter any notes
-in the *Private Note* tab. This can be done anytime during the appraisal process.
+in the *Private Note* tab. This can be done anytime during the appraisal process, until the
+appraisal is marked as *Done*.
 
 The employee being evaluated does **not** have access to this tab, and the tab does **not** appear
 on their appraisal.
@@ -236,7 +259,10 @@ must be given a :guilabel:`Final Rating`.
 
 Using the drop-down menu, select the rating for the employee. The default options are:
 :guilabel:`Needs improvement`, :guilabel:`Meets expectations`, :guilabel:`Exceeds expectations`, and
-:guilabel:`Strongly Exceeds Expectations`.
+:guilabel:`Strongly Exceed Expectations`.
+
+.. note::
+   The :guilabel:`Final Rating` field is not visible to the employee being evaluated.
 
 To add a new rating, navigate to :menuselection:`Appraisals app --> Configuration --> Evaluation
 Scale`. The default ratings are presented in a list view. To add a new rating, click the

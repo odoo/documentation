@@ -47,7 +47,7 @@ The default template consists of the following questions:
 
        **My future**
 
-       **What are my short-and-long-term goals with the company and for my career?**
+       **What are my short- and long-term goals within the company and for my career?**
 
        - *Provide a short-term objective (within the next 6 months).*
        - *Provide a long-term objective (beyond 6 months).*
@@ -59,7 +59,7 @@ The default template consists of the following questions:
 
        **My feelings**
 
-       **How do I feel about the company...**
+       **How do I feel about the company?**
 
        - Company culture and values: |5-stars|
        - Internal Communication: |5-stars|
@@ -80,7 +80,7 @@ The default template consists of the following questions:
        **Evaluation**
 
        +---------------------+-----------+
-       | *Stress Resistance* | |5-stars| |
+       | *Stress Management* | |5-stars| |
        +---------------------+-----------+
        | *Time Management*   | |5-stars| |
        +---------------------+-----------+
@@ -125,9 +125,17 @@ specific feedback is needed.
    one for the on-site repair technicians.
 
 To create a new appraisal template, navigate to :menuselection:`Appraisals app --> Configuration -->
-Appraisal Templates` and click the :guilabel:`New` button in the upper-left corner. Next, configure
-the appraisal by :doc:`adding questions to the template using the rich-text editor
-<../../essentials/html_editor>`.
+Appraisal Templates` and click the :guilabel:`New` button in the upper-left corner.
+
+Enter a name for the template in the :guilabel:`Short Name` field. To restrict the template to
+specific departments, select them in the :guilabel:`Departments` field. If this field is left empty,
+the template is available for all departments. In a multi-company database, select the
+:guilabel:`Company` the template applies to, or leave it empty to make it available to all
+companies.
+
+Next, configure the appraisal by :doc:`adding questions to the template using the rich-text editor
+<../../essentials/html_editor>` in the :guilabel:`Employee Feedback` and :guilabel:`Manager
+Feedback` sections.
 
 Additionally, a new appraisal template can be created by duplicating the default template and
 modifying the copy. To duplicate the template, navigate to :menuselection:`Appraisals app -->
@@ -136,17 +144,25 @@ Configuration --> Appraisal Templates`, then click on the template being duplica
 
 First, rename the template, then make any desired changes.
 
+.. note::
+   When an appraisal is created manually, its :guilabel:`Template` field is populated with the first
+   template in the :guilabel:`Appraisal Templates` list that applies to the employee's company and
+   department, either because it is linked to the employee's department, or because it has no
+   department. To have a department-specific template selected by default, drag it above the
+   :guilabel:`Default` template in the list using the :icon:`oi-draggable` :guilabel:`(draggable)`
+   icon.
+
 .. important::
-   Appraisal templates are housed in the **Surveys** app. Any appraisal template created *in* the
-   **Appraisals** app must be configured to be used with the **Appraisals** app, or it will *not* be
-   available for appraisals.
+   When the :guilabel:`360 Feedback` setting is enabled, a :guilabel:`360 Feedback Survey` field
+   appears on appraisal templates. Use it to select the surveys that can be sent to colleagues for
+   appraisals using this template. If left empty, every appraisal survey is allowed.
 
-   To ensure a new template is available for the **Appraisals** app, navigate to the **Surveys**
-   app, and click on the appraisal template.
+   Only surveys configured for the **Appraisals** app are available in this field. To make a survey
+   available, navigate to the **Surveys** app, and click on the survey.
 
-   Tick the radio button next to :guilabel:`Appraisal` at the top of the survey. This setting allows
-   the survey to be used in the **Appraisals** app, and is visible in the :guilabel:`Appraisal
-   Template` drop-down menu.
+   Select the :guilabel:`Appraisal` option at the top of the survey form. This setting allows the
+   survey to be used in the **Appraisals** app, and makes it available in the :guilabel:`360
+   Feedback Survey` drop-down menu.
 
    .. image:: appraisal_templates/appraisal-button.png
-      :alt: The appraisal radio button ticked on an appraisal form in the Surveys app.
+      :alt: The Appraisal option selected on a survey form in the Surveys app.
