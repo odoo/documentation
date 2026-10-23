@@ -10,6 +10,8 @@ Settings
 * ``github_user``, username/organisation under which the project lives
 * ``github_project``, name of the project on github
 * (optional) ``version``, github branch to link to (default: master)
+* (optional) ``addons_projects``, ``{addons directory: (project, repository root)}``
+  of the additional addons directories, whose objects are linked to their project
 
 Notes
 =====
@@ -30,6 +32,7 @@ from urllib.parse import urlunsplit
 def setup(app):
     app.add_config_value('github_user', None, 'env')
     app.add_config_value('github_project', None, 'env')
+    app.add_config_value('addons_projects', {}, 'env')
     app.connect('html-page-context', add_doc_link)
 
     def linkcode_resolve(domain, info):
@@ -70,6 +73,11 @@ def setup(app):
             from odoo.upgrade import util
             project = 'upgrade-util'
             project_root = os.path.join(os.path.dirname(util.__file__), '../..')
+        elif addons_project := next((
+            project_info for addons_dir, project_info in (app.config.addons_projects or {}).items()
+            if os.path.realpath(obj_source_path).startswith(os.path.join(addons_dir, ''))
+        ), None):
+            project, project_root = addons_project
         else:
             from odoo import release
             project = 'odoo'
