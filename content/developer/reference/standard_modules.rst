@@ -11,3 +11,4 @@ Standard modules
     standard_modules/payment
     standard_modules/resource
     standard_modules/hr
+    standard_modules/payroll
