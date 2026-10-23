@@ -106,7 +106,10 @@ class FieldDocumenter(AttributeDocumenter):
                 self.add_line(f":possible_values: `{reference} <{self.config.source_read_replace_vals['GITHUB_PATH']}/{reference}>`__", source_name)
         if field.default:
             from odoo.models import Model
-            self.add_line(f":default: {field.default(Model)}", source_name)
+            try:
+                self.add_line(f":default: {field.default(Model)}", source_name)
+            except Exception:  # noqa: BLE001
+                pass  # the default depends on the environment (e.g. ``self.env.company``)
 
         super().add_content(more_content)
         if field.help:
