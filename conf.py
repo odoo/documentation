@@ -167,6 +167,44 @@ if odoo_dir_in_path:
         from odoo import upgrade
         upgrade.__path__.append(str((upgrade_util_dir / 'src').resolve()))
 
+# Search for the odoo/enterprise sources and for additional addons directories to also document
+# their modules. DOCUMENTATION_ADDONS_PATH lists additional directories separated by os.pathsep,
+# like an addons path. Each directory can be prefixed by the name of its GitHub project
+# (`project=path`), which defaults to the name of its repository directory.
+addons_projects = {}  # {addons directory: (GitHub project, repository root)}
+if odoo_dir_in_path:
+    enterprise_source_dir = os.environ.get('DOCUMENTATION_ENTERPRISE_SOURCE_DIR')
+    enterprise_source_dir = Path(enterprise_source_dir) if enterprise_source_dir else None
+    if not enterprise_source_dir:
+        enterprise_source_dir = next(filter(Path.exists, [Path('enterprise'), Path('../enterprise')]), None)
+
+    addons_entries = [f'enterprise={enterprise_source_dir}'] if enterprise_source_dir else []
+    addons_path = os.environ.get('DOCUMENTATION_ADDONS_PATH')
+    if addons_path:
+        addons_entries += [entry for entry in addons_path.split(os.pathsep) if entry]
+    for entry in addons_entries:
+        project, _sep, addons_dir = entry.rpartition('=')
+        addons_dir = Path(addons_dir).resolve()
+        if not any(addons_dir.glob('*/__manifest__.py')):
+            if addons_path:
+                _logger.warning(
+                    "Could not find any Odoo module in %(directory)s, given in the environment "
+                    "variable DOCUMENTATION_ADDONS_PATH.",
+                    {'directory': addons_dir},
+                )
+            continue
+        repository_dir = next(
+            (d for d in (addons_dir, *addons_dir.parents) if (d / '.git').exists()), addons_dir,
+        )
+        addons_projects[str(addons_dir)] = (project or repository_dir.name, str(repository_dir))
+        odoo.addons.__path__.append(str(addons_dir))
+        _logger.info("Found Odoo modules in %(directory)s", {'directory': addons_dir})
+
+    if not enterprise_source_dir:
+        # If community code is available but not enterprise, we want to suppress unavailable
+        # autodoc imports.
+        suppress_warnings = ['autodoc.import_object']
+
 # Mapping between odoo models related to master data and the declaration of the
 # data. This is used to point users to available xml_ids when giving values for
 # a field with the autodoc_field extension.
@@ -457,7 +495,6 @@ def setup(app):
         docutils.parsers.rst.directives.tables.CSVTable,
     ):
         patch(to_patch)
-
 
 def _generate_alternate_urls(app, pagename, templatename, context, doctree):
     """ Add keys of required alternate URLs for the current document in the rendering context.
