@@ -456,7 +456,7 @@ HTTP
 
 .. option:: --http-interface <interface>
 
-    TCP/IP address on which the HTTP server listens, defaults to ``0.0.0.0``
+    TCP/IP address on which the HTTP server listens, defaults to ``127.0.0.1``
     (all addresses)
 
 .. option:: -p <port>
