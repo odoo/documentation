@@ -13,9 +13,9 @@ every completed transaction.
 
    - Network-based printers that support the ePOS communication protocol (without IoT), such as
      the TM-m30 iii (model 112 or 152).
-   - ePOS printers with USB connectivity that need to be connected to an :doc:`IoT system
+   - ePOS printers with USB connectivity that require an :doc:`IoT connection
      </applications/general/iot/connect>`.
-   - ESC/POS printers that require a connection via an :doc:`IoT system
+   - ESC/POS printers that require an :doc:`IoT connection
      </applications/general/iot/connect>` using either a USB or network-based interface.
 
    Bluetooth printers are not compatible with Odoo.
@@ -65,17 +65,41 @@ To link the printer with the Point of Sale, follow the next steps:
 Directly supported ePOS printers
 ================================
 
-The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are strongly recommended, as they have
-been fully tested with Odoo Point of Sale.
+The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are recommended, as they are integrated with Odoo Point of
+Sale.
 
 Other Wi-Fi or Ethernet Epson printer models that support the **ePoS protocol** should also be
 compatible.
 
+It is also recommended to activate :doc:`pos_lna` instead of generating a :ref:`self-signed certificate
+<pos/epos-ssc/certificate>` to allow the communication between the point of sale and the printer.
+
 .. important::
    - The printer must be capable of operating in HTTP mode.
-   - When using :doc:`Local Network Access (LNA) <pos_lna>`, the printer must have a **static
-     IP address**; otherwise, it may become unreachable. The static IP should be configured
-     through the router.
+   - When using LNA:
+
+     - the printer must have a **static IP address**; otherwise, it may become unreachable. The static IP should be
+       configured through the router.
+     - certain settings of Epson printers :ref:`must be disabled <pos/epos-printers/lna-epson>`.
+
+.. _pos/epos-printers/lna-epson:
+
+Epson printer setup with LNA
+----------------------------
+
+Before activating :doc:`pos_lna` when configuring an Epson printer, follow these steps:
+
+#. Open the browser, type the printer's IP address in the search bar (e.g., `https://192.168.1.25`),
+   and press `Enter`.
+#. On the security warning page, click :guilabel:`Advanced`, then :guilabel:`Proceed to [IP address]
+   (unsafe)` to force the connection.
+#. On the EPSON platform, click :guilabel:`Advanced Settings`, then :guilabel:`Administrator Login`
+   to log in to the printer's homepage.
+#. Type the initial password located at the back of the printer in the :guilabel:`Current Password`
+   field, then press `Enter`.
+#. Go to :menuselection:`Print --> Secure Printing` and tick the :guilabel:`Disable` option.
+#. Go to :menuselection:`Network Security --> SSL/TLS --> Basic` and tick the :guilabel:`Disable`
+   option.
 
 .. _pos/epos-printers/imin-printer:
 
@@ -120,10 +144,10 @@ address field empty. This action automatically links the device with Odoo.
 
 .. _pos/epos-printers/iot-supported-printers:
 
-Printers with IoT system integration
-====================================
+IoT-connected printers
+======================
 
-The following printers require an :doc:`IoT system </applications/general/iot/devices/printer>` to
+The following printers require an :doc:`IoT connection </applications/general/iot/devices/printer>` to
 be compatible with Odoo:
 
 - Epson TM-T20 family (incompatible ePOS software)
