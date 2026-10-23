@@ -1,11 +1,11 @@
 ======
-Mexico 
+Mexico
 ======
 
 .. |PAC| replace:: :abbr:`PAC (Proveedor Autorizado de Certificación / Authorized Certification
    Provider)`
 .. |RFC| replace:: :abbr:`RFC (Registro Federal de Contribuyentes)`
-.. |CFDI| replace:: :abbr:`CFDI (Comprobante Fiscal Digital por Internet)`
+.. |CFDI| replace:: :abbr:`CFDI (Comprobante Fiscal Digital por Internet) `
 .. |IMSS| replace:: :abbr:`IMSS (Instituto Mexicano del Seguro Social)`
 
 The Mexico payroll localization covers salary computations for employees, including employee and
