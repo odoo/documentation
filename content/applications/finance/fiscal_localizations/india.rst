@@ -85,8 +85,7 @@ Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration
 .. image:: india/indian-integration.png
    :alt: Indian Integration Section
 
-- :guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <india/tds-tcs-threshold>`
-  functionality along with account-based TDS/TCS section suggestions.
+- :guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <india/tds-tcs>` functionality.
 - :guilabel:`Registered Under GST`: Select this if your business is registered under GST to access
   GST-related features, including e-invoice, e-waybill, GST e-filing, fetch vendor e-invoiced
   document and check GST number status.
@@ -696,98 +695,81 @@ goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`
    .. image:: india/profit-and-loss-report.png
       :alt: Profit and Loss report
 
-.. _india/tds-tcs-threshold:
+.. _india/tds-tcs:
 
-TDS/TCS threshold alert
-=======================
+TDS and TCS
+===========
 
 :abbr:`TDS (tax deducted at source)` and :abbr:`TCS (tax collected at source)` are tax provisions
-under Indian law, triggered when transaction amounts exceed specified thresholds. This alert
-notifies users when the value of invoices or bills surpasses these limits, prompting the application
-of the appropriate TDS/TCS.
-
-To configure Odoo to advise you on when to apply TDS/TCS, set the :guilabel:`TDS/TCS section`
-field on the corresponding account in the chart of accounts. Odoo will display a banner suggesting
-the TDS/TCS section under which tax might be applicable when recording an invoice or bill.
+under Indian income tax law. TCS is collected by the seller on top of the invoice amount, while TDS
+is deducted by the payer from the amount due. In Odoo, TDS can be recorded as soon as the bill is
+confirmed, either on its own or together with the payment.
 
 Configuration
 -------------
 
 #. Navigate to :menuselection:`Accounting --> Configuration --> Settings`
 #. In the :guilabel:`Indian Integration` section, enable the :guilabel:`TDS` or :guilabel:`TCS`
-   feature as required.
-#. Navigate to :menuselection:`Accounting --> Configuration --> Chart of Accounts`.
-#. Click :guilabel:`View` on the desired account, and set the :guilabel:`TDS/TCS Section` field.
+   features as required.
+#. If :guilabel:`TDS` is enabled, scroll down to the :guilabel:`Default Accounts` section and, under
+   :guilabel:`India TDS Control`, set the following fields:
+
+   - :guilabel:`TDS Journal`: Select the miscellaneous journal used to record TDS entries.
+   - :guilabel:`TDS Control Account`: Select the account used on TDS base lines. By default, the
+     :guilabel:`TDS (Withholding Control)` account is used.
+
+#. Click :guilabel:`Save`.
 
 .. note::
-   The TDS/TCS sections are pre-configured with threshold limits. If you need to modify these
-   limits, go to :menuselection:`Accounting --> Configuration --> Taxes`. In the :guilabel:`Advanced
-   Options` tab, click on the  :icon:`fa-arrow-right` :guilabel:`(internal link)` icon of the
-   :guilabel:`Section` field.
+   TDS and TCS taxes are pre-configured for the sections of the Income Tax Act. To view them, go to
+   :menuselection:`Accounting --> Configuration --> Taxes` and search for `TDS` or `TCS`. TDS taxes
+   have the :guilabel:`Withhold` option enabled, which means they do not affect the invoice or bill
+   amount due. The TDS is recorded separately using the :guilabel:`Pay` button, before or together
+   with the payment.
 
-   .. image:: india/tds-tcs-section-modify.png
-      :alt: TDS/TCS section modify
+.. _india/tcs:
 
-Applying TCS/TDS on invoices and bills
---------------------------------------
+Apply TCS on customer invoices
+------------------------------
 
-Based on the account used on the customer invoice or vendor bill, Odoo checks the TCS/TDS threshold
-limit. If the limit specified in the :guilabel:`TCS/TDS Section` of the account is exceeded, Odoo
-displays an alert that suggests applying the appropriate TCS/TDS. The alert will disappear once the
-TCS/TDS is applied.
+TCS is directly applicable as a tax on the invoice lines. On the customer invoice, add the
+appropriate TCS tax in the :guilabel:`Taxes` column of the invoice line. The TCS amount is added to
+the invoice total.
 
-.. image:: india/tcs-warning.png
-   :alt: TCS advice
+.. note::
+   If the customer's :abbr:`PAN (Permanent Account Number)` is missing or invalid, Odoo displays a
+   warning suggesting to apply TCS at the higher rate.
 
-**TCS** is directly applicable in the tax on the invoice lines. To apply **TDS**, click the
-:guilabel:`TDS Entry` smart button on the vendor bill/payment. The popup window allows specifying
-the TDS details. Confirm the entry to apply the TDS.
+.. _india/tds:
 
-.. image:: india/tds-apply.png
-   :alt: TDS application
+Apply TDS on vendor bills
+-------------------------
 
-In Odoo, the aggregate total is calculated for partners sharing the same PAN number, across all company branches.
+#. On the vendor bill, add the appropriate TDS tax in the :guilabel:`Taxes` column of the bill line.
+   The TDS tax does not reduce the bill's amount due. Instead, the :guilabel:`TDS Due` and
+   :guilabel:`Net Due` amounts are displayed below the bill totals.
+#. :guilabel:`Confirm` the bill and click :guilabel:`Pay`.
+#. In the :guilabel:`Pay` window, select one of the following options:
 
-.. example::
+   - :guilabel:`TDS Only` (default): Record only the TDS entry in the :guilabel:`TDS Journal`,
+     without paying the vendor. Use this option to deduct TDS when the bill is booked, before the
+     payment is made. The vendor payment can be registered later using the :guilabel:`Payment Only`
+     option.
+   - :guilabel:`TDS and Pay`: Record the TDS entry and the vendor payment for the net amount at
+     the same time.
+   - :guilabel:`Payment Only`: Record only the vendor payment.
 
-   .. list-table::
-      :header-rows: 1
-      :widths: 10 20 10 20 15
+#. In the :guilabel:`Withholdings` tab, review the TDS lines, which are pre-filled based on the TDS
+   taxes applied on the bill. If needed, modify the :guilabel:`TDS base` or the :guilabel:`Tax`, or
+   add a line.
+#. Click :guilabel:`Create Payment`.
 
-      * - **Branch**
-        - **Customer**
-        - **Invoice**
-        - **Transaction Amount (₹)**
-        - **PAN Number**
-      * - IN - MH
-        - XYZ Enterprise - GJ
-        - Invoice 1
-        - ₹50,000
-        - ABCPX1234E
-      * - IN - MH
-        - XYZ Enterprise - GJ
-        - Invoice 2
-        - ₹30,000
-        - ABCPX1234E
-      * - IN - MH
-        - XYZ Enterprise - MH
-        - Invoice 3
-        - ₹40,000
-        - ABCPX1234E
-      * - IN - DL
-        - XYZ Enterprise - GJ
-        - Invoice 4
-        - ₹20,000
-        - ABCPX1234E
-      * - IN - GJ
-        - XYZ Enterprise - MH
-        - Invoice 5
-        - ₹60,000
-        - ABCPX1234E
-
-   -  **Aggregate total** = 50,000 + 30,000 + 40,000 + 20,000 + 60,000 = ₹200,000
-   -  The aggregate total for all customers (XYZ Enterprise - GJ, MH, DL) sharing the PAN number
-      ABCPX1234E across all branches is ₹200,000.
+.. note::
+   - TDS options are not available when registering a single payment for multiple bills. Register
+     the TDS for each bill individually.
+   - The same flow applies when a customer deducts TDS from a payment for a customer invoice. Add
+     the appropriate TDS sale tax on the invoice line and record the TDS when registering the
+     customer payment.
 
 .. _india/bill-of-entry:
 
