@@ -18,6 +18,8 @@ making, ensuring stock availability for upcoming sales, manufacturing, and reple
    The forecast report is **only** available on products where inventory is being tracked, commonly
    referred to as a *storable product*.
 
+.. _inventory/forecast/report:
+
 Navigating the report
 =====================
 
@@ -54,6 +56,8 @@ The table provides detailed metrics regarding operations, including:
 - :guilabel:`Forecasted with Pending`: The updated stock levels with the pending stock movements
   considered.
 
+.. _inventory/forecast/report/reserve:
+
 Reserve and unreserve products
 ------------------------------
 
@@ -66,6 +70,23 @@ allocation aligns with operational needs.
 .. seealso::
    :doc:`../../shipping_receiving/reservation_methods`
 
+.. _inventory/forecast/report/allocate:
+
+Assign and unassign incoming units
+----------------------------------
+
+When an outgoing demand is matched with an incoming receipt or manufacturing order (MO), users can
+allocate the incoming or manufactured units to the demand by clicking :guilabel:`Assign` on the
+corresponding demand line. To undo the allocation, click :guilabel:`Unassign`.
+
+.. image:: forecast/forecast-assign.png
+   :alt: Allocate units on a forecast report.
+
+.. seealso::
+   :doc:`allocation_report`
+
+.. _inventory/forecast/report/replenish:
+
 Replenish products
 ------------------
 
@@ -73,6 +94,8 @@ Click the :guilabel:`Replenish` button at the top of the report to open the :gui
 Replenish` pop-up. From here, products can be replenished through purchase orders from vendors, or
 manufactured. Select the :guilabel:`Quantity`, :guilabel:`Preferred Route` and :guilabel:`Vendor`,
 before clicking :guilabel:`Confirm`.
+
+.. _inventory/forecast/report/manufacturing-forecast:
 
 Manufacturing forecast
 ----------------------
@@ -87,6 +110,8 @@ timelines, and helps to align manufacturing activities with sales demands.
 .. image:: forecast/manufacturing-forecast.png
    :alt: An example of the manufacturing forecast report.
 
+.. _inventory/forecast/report/update-quantity:
+
 Update quantity
 ---------------
 
@@ -95,6 +120,8 @@ To manually update the quantity of a product, click :guilabel:`Update Quantity`.
 :guilabel:`Product` field, then enter the appropriate value in the :guilabel:`New Quantity on Hand`
 field. Click :guilabel:`Apply` when finished. The report then updates to reflect the new product
 quantity.
+
+.. _inventory/forecast/report/multi-step-reservation:
 
 Multi-step reservation
 ======================
@@ -105,6 +132,8 @@ Reserved quantities for multi-step incoming and outgoing shipments are indicated
 :guilabel:`Stock in Transit` refers to products that have been received, but are in transit to their
 input or quality control locations. :guilabel:`Free Stock in Transit` refers to available products
 received in the input location, but not yet placed in stock.
+
+.. _inventory/forecast/report/operations:
 
 Operations affecting the forecast report
 ========================================
@@ -120,6 +149,8 @@ arrive after the |PO| has been confirmed.
 Confirmed |SOs| decrease the forecasted stock, adjusting the report based on the scheduled delivery
 date. Confirmed manufacturing orders (MOs) affect the forecasted stock for both raw materials and
 finished goods.
+
+.. _inventory/forecast/report/use-cases:
 
 Use cases
 =========

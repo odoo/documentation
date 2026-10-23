@@ -184,6 +184,27 @@ Continue processing the receipts.
 
    From there, the warehouse worker can continue to process products in the two receipts.
 
+.. _barcode/receipts_deliveries/allocated-products:
+
+Allocated products
+------------------
+
+If incoming units were :doc:`allocated
+<../../inventory/warehouses_storage/reporting/allocation_report>` to outgoing orders, click the
+:icon:`fa-cog` :guilabel:`(gear)` icon in the upper corner of the receipt, then click :guilabel:`See
+Allocation` to open the allocation report and :ref:`print labels
+<inventory/allocation_report/print_labels>` for each unit.
+
+.. note::
+   If a :ref:`Location for allocation
+   <inventory/allocation_report/configuration/allocation_location>` is configured on the operation
+   type (e.g., Receipts, Manufacturing), product lines going to that location display a
+   :icon:`fa-print` :guilabel:`(print)` icon next to the destination location. Click it to print a
+   label for each unit on that line.
+
+.. image:: receipts_deliveries/allocated-receipt.png
+   :alt: Allocated units on a barcode receipt.
+
 Validating the transfer
 -----------------------
 
