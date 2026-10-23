@@ -545,41 +545,38 @@ In addition to the :doc:`standard credit notes flow <../accounting/customer_invo
 the |SAT| requires each credit note to be linked to its corresponding invoice using the fiscal
 folio.
 
-Because of this requirement, the :guilabel:`CFDI Origin` field creates this relation with `01|`,
-followed by the fiscal folio of the original :abbr:`UUID (universally unique identifier)`.
+To comply with this requirement, the :guilabel:`CFDI Origin` field links the original :abbr:`UUID
+(universally unique identifier)` using the prefix `01|`, followed by its fiscal folio.
 
 When creating credit notes, make sure the line description clearly indicates its purpose and
 specifies whether the entry applies to a bonus, a discount, or a refund.
 
 .. tip::
-   To add the :guilabel:`CFDI Origin` field automatically, use the :guilabel:`Add Credit Note`
-   button on the invoice instead of creating the credit note manually.
-
-Credit notes generally reverse the main sales account defined on the journal, but an account can
-also be assigned globally to all credit notes. To do so, go to :menuselection:`Accounting -->
-Configuration --> Settings` and set the :guilabel:`Credit notes` account in the :guilabel:`Default
-Accounts` section.
+   - To add the :guilabel:`CFDI Origin` field automatically, use the :guilabel:`Add Credit Note`
+     button on the invoice instead of creating the credit note manually.
+   - Credit notes generally reverse the main sales account defined on the journal, but an account can
+     also be assigned globally to all credit notes. To do so, go to :menuselection:`Accounting -->
+     Configuration --> Settings` and set the :guilabel:`Credit notes` account in the 
+     :guilabel:`Default Accounts` section.
+   - The :guilabel:`Payment Policy` can be set manually before signing the document.
 
 .. note::
    In the default configuration, the credit notes account is set to :guilabel:`402.01.01 Returns,
    discounts or bonuses over sales and/or services at the general rate`.
-
-.. tip::
-   The :guilabel:`Payment Policy` can be set manually before signing the document.
 
 .. _l10n/mx/vendor-bills:
 
 Vendor bills
 ~~~~~~~~~~~~
 
-Vendor bills must have a fiscal folio for the reports and payments to work correctly. If the vendor
-bill was created from the Purchase app or added manually, add the XML file of the invoice to the
-chatter **as a log note** to update the fiscal folio accordingly. The bill **must be in draft** for
-the update to happen.
+Vendor bills require a fiscal folio for accurate reporting and payment processing. If a vendor bill
+is created via the Purchase app or manually, attach its XML file as a chatter **log note** while the
+bill is in :guilabel:`Draft` status to update the fiscal folio accordingly.
 
 .. tip::
-   Clicking :guilabel:`Update SAT` refreshes the :guilabel:`SAT status` field, which confirms
-   whether the XML file is :guilabel:`Validated` with the |SAT|. This also applies to vendor bills.
+   To refresh the :guilabel:`SAT status` field and confirm whether the XML file is
+   :guilabel:`Validated` with the |SAT|, click :guilabel:`Update SAT`. This also applies to vendor
+   bills.
 
 .. seealso::
    - :doc:`../accounting/vendor_bills`
@@ -591,32 +588,35 @@ XML reader
 ~~~~~~~~~~
 
 Invoices and vendor bills created in another software or directly with the |SAT| can be uploaded to
-Odoo, and the XML reader retrieves the data from the XML file. To do so, go to
-:menuselection:`Accounting --> Customers --> Invoices` and, in the list view, click
-:guilabel:`Upload` to select any number of XML files. Draft invoices are created automatically.
-Files can also be dragged from a local folder and dropped into the view.
+Odoo, and the XML reader retrieves the data from the XML file. 
 
-XML files that are not issued to the company's |RFC| are not imported. The file is still added to
-the chatter, together with a message stating that the invoice does not belong to the company's
-|RFC|.
+To create draft invoices or bills automatically, go to :menuselection:`Accounting --> Customers -->
+Invoices`. In the list view, click :guilabel:`Upload` to select one or more XML files, or drag and
+drop them directly into the list view.
 
-From each imported file, the XML reader retrieves:
+.. note::
+   XML files that are not issued to the company's |RFC| are not imported. The file is still added to
+   the chatter, with a message explaining that the invoice does not belong to the company's |RFC|.
 
-- The customer or vendor information, creating the contact if it does not exist
-- The product lines, including the product descriptions and the internal references
-- The taxes, including :ref:`local taxes <l10n/mx/local-taxes>` and the amounts of a hidden
-  :ref:`IEPS <l10n/mx/ieps-breakdown>`
-- For documents in a foreign currency, the exchange rate stated on the document, which is used
-  instead of the rate configured in Odoo
-- The fields specific to the Mexican localization
+The XML reader extracts the following information:
+
+- Contact details: Customer or vendor information, with new contacts created if they do not exist.
+- Product lines: Product descriptions and internal references included
+- Taxes: :ref:`Local taxes <l10n/mx/local-taxes>` and :ref:`IEPS <l10n/mx/ieps-breakdown>`
+  amounts if not hidden.
+- Exchange rate: Foreign currency rates specified on the document, overriding the rate configured in
+  Odoo.
+- Fields specific to the Mexican localization.
 
 Products are matched on several criteria, including the vendor pricelists, and the account of each
 line is determined by a predictive model.
 
-The amounts of the transaction and of the taxes are matched to the cent against the values of the
-XML file, and the totals read from the file are transcribed in the chatter. If an amount does not
-match, Odoo flags an anomaly in the invoice list view and a banner on the document recommends
-checking the values; the import is not blocked. Nothing is flagged when the amounts match exactly.
+Transaction and tax amounts are verified to the cent against the XML values, and total amounts are
+logged in the chatter:
+
+- If amounts match: No flags are generated.
+- If amounts differ: An anomaly is flagged in the invoice list view, and a banner on the document is
+  displayed, recommending that the values be checked. The import is not blocked. 
 
 Customer invoices created this way can generate *payment complements* and can be canceled at any
 time. Clicking :guilabel:`Print` produces a PDF document that includes all the corresponding
@@ -631,26 +631,24 @@ information. The same applies to vendor bills.
 CFDI documents
 ~~~~~~~~~~~~~~
 
-Odoo downloads the XML files of the CFDIs received by the company from the |SAT| and creates the
-corresponding vendor bills and credit notes. To access them, go to :menuselection:`Accounting -->
-Review --> CFDI Documents (MX)`.
+The incoming |CFDI| XML files from the |SAT| are downloaded and generate corresponding vendor bills
+and credit notes. To access them, go to :menuselection:`Accounting --> Review --> CFDI Documents
+(MX)`:
 
-To enable the download, upload the company's e.firma, formerly known as FIEL, in the
-:guilabel:`Certificates and Keys` section of the Settings app, following the same steps as for the
-:ref:`digital seal certificate <l10n/mx/certifications>`. No other configuration is required.
-
-The downloaded files are processed by the :ref:`XML reader <l10n/mx/xml-reader>`, which fills in the
-vendor information, the product lines, the taxes, and the fields specific to the Mexican
-localization. Each downloaded document is compared with the documents already in the database, so
-only the missing ones are created and existing records are not duplicated.
-
-The list displays the :guilabel:`Datetime`, :guilabel:`Fiscal Folio`, :guilabel:`Receipt Type`,
-:guilabel:`RFC`, and :guilabel:`Sat State` of every CFDI in the database. The :guilabel:`Sat State`
-column shows the status of each document with the |SAT|. Click a line to open the related document,
-and use the :guilabel:`Receipt Type` and :guilabel:`Datetime` fields to filter the list.
-
-Two requests are sent automatically every day: one for the invoices received and one for the credit
-notes received. The CFDIs issued by the company are only retrieved through a manual request.
+- To enable the download, upload the company's e.firma (formerly known as FIEL) to the
+  :guilabel:`Certificates and Keys` section of the Settings app, following the same steps as for the
+  :ref:`digital seal certificate <l10n/mx/certifications>`. No other configuration is required.
+- The downloaded files are processed by the :ref:`XML reader <l10n/mx/xml-reader>`, which fills in
+  the vendor information, product lines, taxes, and fields specific to the Mexican localization.
+  Each downloaded document is compared with the documents already in the database, so only the 
+  missing ones are created, and existing records are not duplicated.
+- The list displays the :guilabel:`Datetime`, :guilabel:`Fiscal Folio`, :guilabel:`Receipt Type`,
+  :guilabel:`RFC`, and :guilabel:`Sat State` of every CFDI in the database. The :guilabel:`Sat 
+  State` column shows the status of each document with the |SAT|. Click a line to open the related
+  document, and use the :guilabel:`Receipt Type` and :guilabel:`Datetime` fields to filter the list.
+- Two requests are sent automatically every day: one for the invoices received, and one for the
+  credit notes received. The CFDIs issued by the company can only be retrieved through a manual 
+  request.
 
 To retrieve the CFDIs issued by the company, or documents from a specific period, such as those
 issued from other software during the previous fiscal year, proceed as follows:
@@ -685,19 +683,21 @@ The request is processed in the background. To follow its status, go to :menusel
 Journals
 ~~~~~~~~
 
-The :guilabel:`EDI for Mexico (Advanced Features)` (`l10n_mx_edi_extended`) module must be installed
-to complete the :guilabel:`Address Issued` field on the sales journal. This ensures that all
-invoices from that sales journal, as well as :ref:`global invoices <l10n/mx/global-invoice>`, use
-the correct ZIP code when generating the |CFDI|.
+.. note::
+   To complete the :guilabel:`Address Issued` field on the sales journal, the :guilabel:`EDI for
+   Mexico (Advanced Features)` (`l10n_mx_edi_extended`) module is :ref:`installed <general/install>`.
+   This ensures that all invoices from that sales journal, as well as :ref:`global invoices
+   <l10n/mx/global-invoice>`, use the correct ZIP code when generating the |CFDI|.
 
-To invoice within a company spanning several time zones with the same user, create a system
+To invoice within a company spanning multiple time zones with the same user, create a system
 parameter that applies the correct time zone when invoicing, as the user's time zone is used by
-default.
+default. To do so, follow these steps:
 
-To do so, enable the :doc:`developer mode <../../general/developer_mode>` and go to
-:menuselection:`Settings --> Technical --> System Parameters`. Click :guilabel:`New` to create a
-parameter with the key `l10n_mx_edi_tz_XX`, where `XX` is the ID of the journal, and set the desired
-time zone as the value, e.g., `America/Tijuana`.
+#. Enable :doc:`developer mode <../../general/developer_mode>`.
+#. Go to :menuselection:`Settings --> Technical --> System Parameters`. 
+#. Click :guilabel:`New` to create a parameter with the key `l10n_mx_edi_tz_XX`, where `XX` is the
+   ID of the journal.
+#. Set the desired time zone as the value, e.g., `America/Tijuana`.
 
 .. _l10n/mx/payments:
 
@@ -709,23 +709,15 @@ Payments
 Payment policy
 **************
 
-The :guilabel:`Payment Policy` field is specific to the Mexican localization. `According to the SAT
-documentation <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-pagos>`_, there
-are two types of payments:
+Set the Mexican-specific :guilabel:`Payment Policy` field `according to the two SAT payment 
+classifications <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-pagos>`_:
 
-- :guilabel:`PUE`: Pago en una Sola Exhibición / Payment in a Single Exhibition
-- :guilabel:`PPD`: Pago en Parcialidades o Diferido / Payment in Installments or Deferred
+- :guilabel:`PUE` (*Pago en una Sola Exhibición*): Payment in a Single Exhibition
+- :guilabel:`PPD` (*Pago en Parcialidades o Diferido*): Payment in Installments or Deferred
 
 .. warning::
-   Payment complements are only generated if the policy of the invoice is set to |PPD|.
-
-.. image:: mexico/mx-pue-payment.png
-   :alt: Example of an invoice with the PUE requirements.
-
-If the invoice has a due date outside the current month, the policy defaults to |PPD|.
-
-.. image:: mexico/mx-ppd-payment.png
-   :alt: Example of an invoice with the PPD requirements.
+   - Payment complements are only generated if the policy of the invoice is set to |PPD|.
+   - If the invoice has a due date outside the current month, the policy defaults to |PPD|.
 
 .. _l10n/mx/payment-flow:
 
