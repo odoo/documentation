@@ -61,6 +61,13 @@ Models overview
    The organization and the configuration: departments, job positions, work locations, employee
    tags and types, salary structure types, departures and departure reasons.
 
+:ref:`hr.leave, hr.leave.allocation <reference/hr/time_off>` (`hr_holidays`)
+   Time off requests and their approval, allocations, balances and accrual plans. Time off types
+   are work entry types.
+
+:ref:`hr.attendance <reference/hr/hr_attendance>` (`hr_attendance`)
+   Check-ins and check-outs of the employees, their worked and overtime hours.
+
 .. _reference/hr/versions:
 
 Employees and versions in short
@@ -145,3 +152,5 @@ adding fields is explained in :ref:`reference/hr/hr_employee/public`.
    hr/hr_version
    hr/hr_employee
    hr/hr_organization
+   hr/time_off
+   hr/time_off_allocation
