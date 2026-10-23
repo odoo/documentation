@@ -154,3 +154,4 @@ adding fields is explained in :ref:`reference/hr/hr_employee/public`.
    hr/hr_organization
    hr/time_off
    hr/time_off_allocation
+   hr/hr_attendance
