@@ -5,6 +5,7 @@
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
 # OpenAI <noreply-mt-openai@weblate.org>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 #
 # Translators:
 # Tiffany Chang, 2024
@@ -16,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:34+0000\n"
-"PO-Revision-Date: 2026-10-21 20:33+0000\n"
+"PO-Revision-Date: 2026-10-23 12:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/ja/>\n"
@@ -1293,7 +1294,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:3
 msgid "Advanced topics"
-msgstr ""
+msgstr "高度なトピック"
 
 #: ../../content/administration/odoo_sh/advanced.rst:5
 msgid ""
@@ -1301,6 +1302,10 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
+"本セクションでは、\\ :ref:`コンテナ <odoo-sh/advanced/containers>`\\ 、\\ "
+":ref:`Gitサブモジュール <odoo-sh/advanced/submodules>`\\ 、および\\ "
+":ref:`スケジュール済みアクション <odoo-sh/advanced/scheduled>`\\ に関連する"
+"Odoo.shの高度な機能について説明します。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
@@ -1312,6 +1317,9 @@ msgid ""
 "base is an Ubuntu-based system on which all of Odoo's required dependencies, "
 "as well as common, useful packages, are installed."
 msgstr ""
+"各ビルドは独自のコンテナ（Linux名前空間コンテナ）内に分離されています。ベース"
+"はUbuntuベースのシステムで、Odooに必要なすべての依存関係と、一般的で便利な"
+"パッケージがインストールされています。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
@@ -1321,18 +1329,26 @@ msgid ""
 "them. The platform will ensure these dependencies are installed in your "
 "containers."
 msgstr ""
+"プロジェクトで\\ :ref:`追加のPython依存関係 <odoo-sh/module/library>`\\ やよ"
+"り新しいリリースが必要な場合は、ブランチのルートにそれらをリストした\\ "
+":file:`requirements.txt`\\ ファイルを定義できます。プラットフォームにより、こ"
+"れらの依存関係がコンテナに確実にインストールされます。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
 "For a concrete example, check out the Odoo Community `requirements.txt file "
 "<https://github.com/odoo/odoo/blob/18.0/requirements.txt>`_."
 msgstr ""
+"具体例については、Odooコミュニティの\\ `requirements.txtファイル <https://"
+"github.com/odoo/odoo/blob/18.0/requirements.txt>`_\\ を参照してください。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:25
 msgid ""
 "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
 "reference/requirement-specifiers/>`_"
 msgstr ""
+"`PyPA要件指定子のドキュメント <https://pip.pypa.io/en/stable/reference/"
+"requirement-specifiers/>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:29
 msgid ""
@@ -1340,6 +1356,9 @@ msgid ""
 "submodules>` are also taken into account. The platform looks for such files "
 "in the parent folder of each folder containing an Odoo module."
 msgstr ""
+"\\ :file:`requirements.txt`\\ ファイルは、\\ :ref:`サブモジュール <odoo-sh/"
+"advanced/submodules>`\\ のものも考慮されます。プラットフォームは、Odoo"
+"モジュールを含む各フォルダの親フォルダでこのようなファイルを検索します。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
@@ -1351,16 +1370,21 @@ msgid ""
 "`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 msgstr ""
+"コンテナはUbuntuベースであるため、そのディレクトリ構造は\\ `Filesystem "
+"Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_\\ に準拠しています。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
 "`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
 "LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
+"`Ubuntuの主要ディレクトリに関するドキュメント <https://help.ubuntu.com/"
+"community/LinuxFilesystemTreeOverview#Main_directories>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:44
 msgid "The directories relevant to Odoo.sh are the following:"
-msgstr ""
+msgstr "Odoo.shに関連するディレクトリは次のとおりです："
 
 #: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
@@ -1371,6 +1395,8 @@ msgid ""
 "While accessing a container with the shell, you can access the database "
 "using the `psql` command."
 msgstr ""
+"シェルを使用してコンテナにアクセスしている間は、\\ `psql`\\ コマンドを使用し"
+"てデータベースにアクセスできます。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
@@ -1381,6 +1407,12 @@ msgid ""
 "safety net in case of a mistake. You simply have to rollback your changes to "
 "revert your database to its previous state."
 msgstr ""
+"特に本番データベースにおいて、SQL文によって変更が生じる場合 (例: "
+"`UPDATE`、`DELETE`、`ALTER` など) は、常に\\ `トランザクション <https://"
+"www.postgresql.org/docs/current/static/sql-begin.html>`_ (例: `BEGIN` (...) "
+"`COMMIT` / `ROLLBACK`) を使用してください。トランザクション機能は、誤りがあっ"
+"た場合のセーフティネットとなります。変更をロールバックするだけで、"
+"データベースを以前の状態に戻すことができます。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
@@ -1388,22 +1420,30 @@ msgid ""
 "lock records in your tables, and a running database may wait for them to be "
 "released, causing a server to hang indefinitely."
 msgstr ""
+"トランザクションのコミットまたはロールバックを忘れないようにしてください。開"
+"いたままのトランザクションはテーブル内のレコードをロックする可能性があり、稼"
+"働中のデータベースがその解放を待機することで、サーバーが無期限に応答しなくな"
+"る原因になります。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
 "In addition, use your staging databases to test your statements first. It "
 "gives you an extra safety net."
 msgstr ""
+"さらに、まずはステージングデータベースを使用してステートメントをテストしてく"
+"ださい。これにより、安全性をより高めることができます。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
 "You forgot to set your `WHERE` condition. In such a case, you can rollback "
 "to revert the unwanted change:"
 msgstr ""
+"\\ `WHERE`\\ 条件の設定を忘れた場合、ロールバックして不要な変更を取り消すこと"
+"ができます:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:120
 msgid "Then, rewrite the statement and commit the change:"
-msgstr ""
+msgstr "その後、ステートメントを書き直して変更をコミットします:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
@@ -1415,6 +1455,8 @@ msgid ""
 "able to access it from the outside world with a web browser, but you can, "
 "for example:"
 msgstr ""
+"コンテナのシェルからOdooサーバーインスタンスを起動できます。Webブラウザから外"
+"部アクセスすることはできませんが、例えば以下のような操作が可能です:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
@@ -1737,22 +1779,28 @@ msgid ""
 "As the execution time of scheduled actions is limited, it is advised to "
 "ensure your scheduled actions:"
 msgstr ""
+"自動処理の実行時間には上限があるため、自動処理が以下を満たすようにすることを"
+"お勧めします:"
 
 #: ../../content/administration/odoo_sh/advanced.rst:343
 msgid "Work on small batches of records."
-msgstr ""
+msgstr "少量のレコードバッチで処理を行うこと。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:344
 msgid ""
 "Commit their work after processing each batch so that if they are "
 "interrupted by the time limit, they do not need to start over."
 msgstr ""
+"制限時間によって中断された場合に最初からやり直す必要がないよう、各バッチの処"
+"理後に作業内容をコミットすること。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:346
 msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
 msgstr ""
+"冪等(べきとう)であること。つまり、想定よりも頻繁に開始された場合でも副作用を"
+"引き起こさないこと。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:350
 msgid "IP address change"
@@ -2431,18 +2479,20 @@ msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
 "involved:"
 msgstr ""
+"Odoo.shを使用する際は、関連する主要なコンポーネントを理解しておくことが重要で"
+"す:"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
 msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
-msgstr ""
+msgstr ":ref:`GitHubリポジトリ <odoo-sh/getting-started/components/github>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:15
 msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
-msgstr ""
+msgstr ":ref:`Odoo.shプロジェクト <odoo-sh/getting-started/components/project>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
-msgstr ""
+msgstr ":ref:`Odooデータベース <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2450,10 +2500,13 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
+"これらはすべて相互に接続されていますが、それぞれがOdooアプリケーションの開発"
+"とデプロイにおいて独自の役割を果たします。これらが連携することで、コード開発"
+"から実際の本番業務利用までの首尾一貫したパイプラインが形成されます。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
-msgstr ""
+msgstr "GitHubリポジトリをご確認ください。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
 msgid ""
@@ -2462,6 +2515,9 @@ msgid ""
 "on GitHub and can be accessed and edited by multiple people on different "
 "computers."
 msgstr ""
+"GitHubリポジトリは、特定のプロジェクトのすべてのファイルとフォルダが格納され"
+"ているコンピュータ上のフォルダのようなものです。異なる点は、GitHub上に保存さ"
+"れており、異なるコンピュータから複数の人がアクセスして編集できることです。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:31
 msgid ""
@@ -2471,6 +2527,11 @@ msgid ""
 "changes to your project over time, so you can easily roll back to a previous "
 "version if needed."
 msgstr ""
+"言い換えると、GitHubリポジトリはプロジェクトのファイルを保存し、他の人と共有"
+"できる場所です。これにより、他のユーザーと共同作業したり、変更を加えたり、"
+"プロジェクトに貢献したりできます。また、時間の経過に伴うプロジェクトのすべて"
+"の変更履歴も記録されるため、必要に応じて以前のバージョンに簡単にロールバック"
+"できます。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2481,6 +2542,12 @@ msgid ""
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
+"さらに、GitHubには課題追跡、プルリクエスト、コードレビューなど、プロジェクト"
+"管理に役立つ多くの機能が用意されています。ソフトウェアプロジェクトの管理と"
+"コラボレーションのための強力なツールであり、世界中の開発者に広く利用されてい"
+"ます。Odooアプリケーションのソースコードが保存されるバージョン管理された"
+"スペースであり、すべての変更を追跡し、コラボレーションをサポートし、公開また"
+"は非公開のいずれかに設定できます。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2488,7 +2555,7 @@ msgstr "GitHubリポジトリの例"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:48
 msgid "Odoo.sh project"
-msgstr ""
+msgstr "Odoo.shプロジェクト"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
@@ -2497,6 +2564,10 @@ msgid ""
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
+"Odoo.shプロジェクトは、GitHubと連携し、Odooアプリケーションの合理的な開発、"
+"テスト、デプロイを可能にする\\ *Platform as a Service*\\ (PaaS)です。自動"
+"バックアップ、ステージング環境、継続的インテグレーションパイプラインなどの"
+"ツールが含まれています。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
@@ -2504,13 +2575,15 @@ msgstr "Odoo.shプロジェクトの例"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:60
 msgid "Odoo database"
-msgstr ""
+msgstr "Odooデータベース"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:62
 msgid ""
 "An Odoo database stores all the operational data used and generated by Odoo "
 "applications, such as business records, configurations, and user data."
 msgstr ""
+"Odooデータベースには、業務レコード、設定、ユーザーデータなど、Odoo"
+"アプリケーションで使用および生成されるすべての運用データが格納されます。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
@@ -2534,6 +2607,9 @@ msgid ""
 "the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
+"**GitHubユーザー**：Odoo.shプロジェクトにリンクされたGitHubリポジトリへの"
+"アクセス権を持つ開発者。リポジトリへのアクセス権があっても、自動的にOdoo.sh"
+"プロジェクトのコラボレーターになるわけではありません。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
@@ -2541,6 +2617,9 @@ msgid ""
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
+"**Odoo.shコラボレーター**：Odoo.shプロジェクトを管理する個人。各"
+"コラボレーターはGitHubユーザーにリンクされている必要があります。ただし、"
+"コラボレーターはデータベースユーザーとは異なります。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
@@ -2548,6 +2627,8 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
+"**データベースユーザー**：デプロイされたOdooデータベースのエンドユーザー。本"
+"番システムを操作しますが、開発やプロジェクト管理には関与しません。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
@@ -3823,6 +3904,9 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"手動バックアップの目的は、本番環境またはステージング環境のデータベース（開発"
+"環境では利用不可）の特定のスナップショットを作成することです。これらは3日間利"
+"用可能です。ただし、1日の手動バックアップ数には5件までの制限があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -9616,7 +9700,7 @@ msgstr "2029年9月(予定)"
 
 #: ../../content/administration/standard_extended_support.rst:44
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:46
 #: ../../content/administration/standard_extended_support.rst:47
@@ -9631,7 +9715,7 @@ msgstr "N/A"
 
 #: ../../content/administration/standard_extended_support.rst:48
 msgid "July 2026"
-msgstr ""
+msgstr "2026年7月"
 
 #: ../../content/administration/standard_extended_support.rst:50
 msgid "Odoo SaaS 19.3"

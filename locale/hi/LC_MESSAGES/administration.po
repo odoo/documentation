@@ -4,6 +4,7 @@
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
 # OpenAI <noreply-mt-openai@weblate.org>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 #
 # Translators:
 # Martin Trigaux, 2024
@@ -13,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:34+0000\n"
-"PO-Revision-Date: 2026-10-21 20:33+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 12:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/hi/>\n"
 "Language: hi\n"
@@ -1097,7 +1098,7 @@ msgstr "वेब सर्विस"
 
 #: ../../content/administration/odoo_online.rst:163
 msgid "Databases list"
-msgstr ""
+msgstr "डेटाबेस सूची"
 
 #: ../../content/administration/odoo_online.rst:165
 msgid ""
@@ -1106,6 +1107,10 @@ msgid ""
 "method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
 "developer/reference/external_api>`."
 msgstr ""
+"प्रोग्रामेटिक रूप से :ref:`डेटाबेस मैनेजर <odoo-online/database-manager>` के अंतर्गत "
+"प्रदर्शित सभी डेटाबेस की सूची प्राप्त करने के लिए, :doc:`एक्सटर्नल JSON-2 एपीआई <../"
+"developer/reference/external_api>` के ज़रिए `odoo.database` मॉडल के `list` मेथड "
+"को कॉल करें।"
 
 #: ../../content/administration/odoo_online.rst:171
 #: ../../content/administration/odoo_online.rst:216
@@ -1116,11 +1121,11 @@ msgstr "Python"
 #: ../../content/administration/odoo_online.rst:189
 #: ../../content/administration/odoo_online.rst:232
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: ../../content/administration/odoo_online.rst:200
 msgid "Audit logs"
-msgstr ""
+msgstr "ऑडिट लॉग"
 
 #: ../../content/administration/odoo_online.rst:202
 msgid ""
@@ -1128,6 +1133,9 @@ msgid ""
 "`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
 "JSON-2 API <../developer/reference/external_api>`."
 msgstr ""
+"किसी Odoo ऑनलाइन डेटाबेस के एडमिन एक्टिविटी लॉग प्राप्त करने के लिए, :doc:`एक्सटर्नल "
+"JSON-2 एपीआई <../developer/reference/external_api>` के ज़रिए `odoo.database` "
+"मॉडल के `get_audit_logs` मेथड को कॉल करें।"
 
 #: ../../content/administration/odoo_online.rst:205
 msgid ""
@@ -1136,75 +1144,91 @@ msgid ""
 "`subscription_code` can be used to retrieve logs for all databases and "
 "projects belonging to the subscription."
 msgstr ""
+"अनुरोध में या तो `db_uuid` या `subscription_code` प्रदान किया जाना चाहिए। अगर "
+"`db_uuid` प्रदान किया जाता है, तो उस डेटाबेस के लॉग लौटाए जाते हैं। अन्यथा, सब्सक्रिप्शन "
+"से संबंधित सभी डेटाबेस और प्रोजेक्ट के लॉग प्राप्त करने के लिए `subscription_code` का "
+"उपयोग किया जा सकता है।"
 
 #: ../../content/administration/odoo_online.rst:209
 msgid ""
 "The optional `cursor` is an opaque value returned by a previous request. "
 "When provided, only logs more recent than the cursor are returned."
 msgstr ""
+"वैकल्पिक `cursor` पिछले अनुरोध द्वारा लौटाई गई एक ओपेक वैल्यू है। प्रदान किए जाने पर, "
+"सिर्फ़ कर्सर से ज़्यादा हाल के लॉग लौटाए जाते हैं।"
 
 #: ../../content/administration/odoo_online.rst:212
 msgid ""
 "Audit log retrieval is subject to rate limits and must not be performed more "
 "than once every 5 minutes."
 msgstr ""
+"ऑडिट लॉग प्राप्त करना रेट लिमिट के अधीन है और इसे हर 5 मिनट में एक बार से ज़्यादा नहीं "
+"किया जाना चाहिए।"
 
 #: ../../content/administration/odoo_online.rst:242
 msgid ""
 "The response is a JSON object containing the logs and an opaque cursor for "
 "retrieving the next batch:"
 msgstr ""
+"रिस्पॉन्स एक JSON ऑब्जेक्ट है जिसमें लॉग और अगला बैच प्राप्त करने के लिए एक ओपेक कर्सर "
+"शामिल है:"
 
 #: ../../content/administration/odoo_online.rst:263
 msgid "The request parameters are:"
-msgstr ""
+msgstr "अनुरोध पैरामीटर हैं:"
 
 #: ../../content/administration/odoo_online.rst:265
 msgid ""
 "`db_uuid` (string): the UUID of the database. If provided, "
 "`subscription_code` is ignored."
 msgstr ""
+"`db_uuid` (string): डेटाबेस का UUID। अगर प्रदान किया जाता है, तो "
+"`subscription_code` को अनदेखा कर दिया जाता है।"
 
 #: ../../content/administration/odoo_online.rst:266
 msgid ""
 "`subscription_code` (string): the subscription code. Used when `db_uuid` is "
 "not provided."
 msgstr ""
+"`subscription_code` (string): सब्सक्रिप्शन कोड। इसका उपयोग तब किया जाता है जब "
+"`db_uuid` प्रदान नहीं किया जाता है।"
 
 #: ../../content/administration/odoo_online.rst:267
 msgid ""
 "`cursor` (string): an opaque cursor returned by a previous request. When "
 "provided, only logs more recent than the cursor are returned."
 msgstr ""
+"`cursor` (string): पिछले अनुरोध द्वारा लौटाया गया एक ओपेक कर्सर। प्रदान किए जाने "
+"पर, सिर्फ़ कर्सर से ज़्यादा हाल के लॉग लौटाए जाते हैं।"
 
 #: ../../content/administration/odoo_online.rst:270
 msgid "Each log entry contains:"
-msgstr ""
+msgstr "प्रत्येक लॉग प्रविष्टि में शामिल है:"
 
 #: ../../content/administration/odoo_online.rst:272
 msgid "`date` (string): the log date and time in UTC."
-msgstr ""
+msgstr "`date` (string): UTC में लॉग की तारीख और समय।"
 
 #: ../../content/administration/odoo_online.rst:273
 msgid "`user` (string): the user who performed the action"
-msgstr ""
+msgstr "`user` (string): वह उपयोगकर्ता जिसने एक्शन किया"
 
 #: ../../content/administration/odoo_online.rst:274
 msgid ""
 "`database` (string): the database concerned by the action, when applicable."
-msgstr ""
+msgstr "`database` (string): एक्शन से संबंधित डेटाबेस, जहां लागू हो।"
 
 #: ../../content/administration/odoo_online.rst:275
 msgid "`subscription` (string): the subscription code."
-msgstr ""
+msgstr "`subscription` (string): सब्सक्रिप्शन कोड।"
 
 #: ../../content/administration/odoo_online.rst:276
 msgid "`ip` (string): the IP address from which the action was performed."
-msgstr ""
+msgstr "`ip` (string): वह आईपी पता जिससे एक्शन किया गया था।"
 
 #: ../../content/administration/odoo_online.rst:277
 msgid "`action` (string): the type of action."
-msgstr ""
+msgstr "`action` (string): एक्शन का टाइप।"
 
 #: ../../content/administration/odoo_online.rst:278
 msgid "`details` (string): additional information about the action."
@@ -3749,6 +3773,9 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for three days. However, there is a limit of five daily manual backups."
 msgstr ""
+"मैन्युअल बैकअप का उद्देश्य प्रॉडक्शन या स्टेजिंग डेटाबेस का एक विशिष्ट स्नैपशॉट बनाना है "
+"(डेवलपमेंट के लिए उपलब्ध नहीं है)। ये तीन दिनों तक उपलब्ध रहते हैं। हालांकि, प्रतिदिन पांच "
+"मैन्युअल बैकअप की सीमा है।"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
@@ -9426,7 +9453,7 @@ msgstr "सितंबर 2029 (नियोजित)"
 
 #: ../../content/administration/standard_extended_support.rst:44
 msgid "Odoo SaaS 19.4"
-msgstr ""
+msgstr "Odoo SaaS 19.4"
 
 #: ../../content/administration/standard_extended_support.rst:46
 #: ../../content/administration/standard_extended_support.rst:47
@@ -9441,7 +9468,7 @@ msgstr "उपलब्ध नहीं"
 
 #: ../../content/administration/standard_extended_support.rst:48
 msgid "July 2026"
-msgstr ""
+msgstr "जुलाई 2026"
 
 #: ../../content/administration/standard_extended_support.rst:50
 msgid "Odoo SaaS 19.3"
