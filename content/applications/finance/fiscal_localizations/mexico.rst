@@ -1731,29 +1731,31 @@ eCommerce
 =========
 
 The :doc:`eCommerce <../../websites/ecommerce>` adaptation of the Mexican localization adds a step
-to the checkout to create invoices that comply with the |SAT| requirements. It collects the fiscal
-data of the customer, signs the invoices automatically once the payment is processed, sends the
-files to the customers by email, and grants them access to their PDF file from the customer portal.
+to the checkout to create invoices that comply with the |SAT| requirements. It collects the
+customer's fiscal data, automatically signs invoices once payment is processed, sends the files to
+customers via email, and grants them access to their PDF files from the customer portal.
 
 .. _l10n/mx/ecommerce/flow:
 
 eCommerce flow
 --------------
 
-During the checkout process, an :guilabel:`Invoicing info` step is added, which asks
-:guilabel:`Do you need an invoice?`. Clicking :guilabel:`I don't need an invoice` skips the step and
-leads to the payment.
+During the checkout process, an :guilabel:`Invoicing info` step is added, which asks :guilabel:`Do
+you need an invoice?`:
 
-Clicking :guilabel:`Yes` displays the fiscal fields, which are all required to issue the invoice:
-:guilabel:`RFC`, :guilabel:`Company Name`, :guilabel:`Fiscal Regime`, :guilabel:`Usage`, and
-:guilabel:`Payment Way`. The customer can also tick the :guilabel:`IEPS Breakdown` checkbox to
-request the :ref:`IEPS breakdown <l10n/mx/ieps-breakdown>`. The information is then completed on
-the sales order, whose status changes to :guilabel:`To Invoice`.
+- Clicking :guilabel:`I don't need an invoice` skips the step and proceeds to the payment.
+- Clicking :guilabel:`Yes` displays the fiscal fields, which are all required to issue the invoice:
 
-The invoicing information is synchronized between the order of the customer in the portal and the
-sales order: the data entered during the checkout is reflected on the sales order, changes made by
-the customer in the portal update the sales order, and changes made on the sales order are reflected
-in the portal.
+  - :guilabel:`RFC`
+  - :guilabel:`Company Name`
+  - :guilabel:`Fiscal Regime`
+  - :guilabel:`Usage`
+  - :guilabel:`Payment Way`
+  - :guilabel:`IEPS Breakdown` (optional): Enable to request the :ref:`IEPS breakdown
+    <l10n/mx/ieps-breakdown>`.
+
+  The information is then completed on the sales order, whose status changes to :guilabel:`To
+  Invoice`.
 
 .. important::
    Make sure to add a :guilabel:`UNSPSC Product Category` to the :ref:`shipping product
@@ -1843,22 +1845,26 @@ make sure :guilabel:`Landed Costs` is enabled.
    field on landed costs, even though landed costs that only add customs numbers, without
    :guilabel:`Additional Costs`, do not create journal entries.
 
-Then, configure the goods-type products that hold the customs numbers. Create the products and
-complete the following three requirements:
+Then, configure the goods-type products that hold the customs numbers:
 
-- :guilabel:`Tracking` **must** be set to either :guilabel:`By Lots` or :guilabel:`By Unique Serial
-  Number`, but **not** :guilabel:`By Quantity`.
-- :guilabel:`Invoicing Policy` **must** be set to :guilabel:`Delivered quantities`.
-- :doc:`Valuation by lots/serial numbers
-  <../../inventory_and_mrp/inventory/inventory_valuation/valuation_by_lots>` **must** be enabled.
+ #. Create the products and complete the following three requirements:
 
-This makes the :guilabel:`Customs invoicing` field available in the :guilabel:`Accounting` tab.
-Enable the field to use customs numbers with this product.
+   - :guilabel:`Tracking` **must** be set to either :guilabel:`By Lots` or :guilabel:`By Unique
+     Serial Number`, but **not** :guilabel:`By Quantity`.
+   - :guilabel:`Invoicing Policy` **must** be set to :guilabel:`Delivered quantities`.
+   - In the :guilabel:`Inventory` tab, the :doc:`Valuation by Lots/Serial
+     <../../inventory_and_mrp/inventory/inventory_valuation/valuation_by_lots>` option **must** be
+     enabled in the :guilabel:`Traceability` section.
 
-Make sure the product has a :guilabel:`Product Category` with the following configuration:
+#. Then, an additional :guilabel:`Customs invoicing` field appears in the :guilabel:`Accounting`
+   tab: enable the option to use custom numbers with this product.
 
-- :guilabel:`Costing Method`: either :guilabel:`FIFO` or :guilabel:`AVCO`
-- :guilabel:`Inventory Valuation`: either :guilabel:`Periodic` or :guilabel:`Perpetual`
+#. Make sure the product has a :guilabel:`Product Category` with the following configuration:
+
+   - :guilabel:`Inventory Valuation`: either :guilabel:`Periodic (at closing)` or 
+     :guilabel:`Perpetual (at invoicing)`
+   - :guilabel:`Costing Method`: either :guilabel:`Average Cost (AVCO)` or :guilabel:`First In First
+      Out (FIFO)`
 
 .. note::
    The feature works regardless of whether the :doc:`inventory valuation
@@ -1879,23 +1885,21 @@ Purchase and sales flow
 After configuring the product, follow the standard :doc:`purchase flow
 <../../inventory_and_mrp/purchase>`.
 
-Create a purchase order from :menuselection:`Purchase --> Orders --> Purchase Orders`, then confirm
-the order to display the :guilabel:`Receipt` smart button. Click the :guilabel:`Receipt` smart
-button and :guilabel:`Validate` the receipt.
+:ref:`Create a purchase order <purchase/manage_deals/create-new-rfq> and confirm it. Then, click 
+guilabel:`Receive Products`, and :guilabel:`Validate`.
 
 Go to :menuselection:`Inventory --> Operations --> Landed Costs` and create a new record. In the
 :guilabel:`Transfer` field, add the receipt that was just validated, then add the :guilabel:`Customs
 number`.
 
 .. tip::
-   While costs related to the customs number can be added at this stage of the process, creating a
-   landed cost from a vendor bill issued by a customs agent is highly recommended. Learn more about
+   While costs related to the customs number can be added at this stage, creating a landed cost from
+   a vendor bill issued by a customs agent is highly recommended. Learn more about
    :doc:`landed costs <../../inventory_and_mrp/inventory/inventory_valuation/landed_costs>`.
 
 .. warning::
-   The :guilabel:`Customs number` field is not editable once it is set, and it cannot be repeated.
-   However, the number on the lot or serial number can be fixed later by selecting a different
-   landed cost.
+   The :guilabel:`Customs number` field is not editable once set and cannot be repeated. However,
+   the lot number or serial number can be fixed later by selecting a different landed cost.
 
 .. image:: mexico/mx-landing-inventory.png
    :alt: Customs number on a landed cost record.
@@ -1927,11 +1931,11 @@ A `Carta Porte <https://www.sat.gob.mx/portal/public/tramites/complemento-carta-
 of lading, a document stating the type, quantity, and destination of the goods being carried.
 
 On July 17, 2024, version 3.1 of this |CFDI| was implemented for all transportation providers,
-intermediaries, and owners of goods. Odoo generates a document of type `T` (Traslado), which, unlike
+intermediaries, and owners of goods. A document of type `T` (Traslado) is generated, which, unlike
 other documents, is created on a delivery order instead of an invoice or a payment.
 
-Odoo creates XML and PDF files with or without ground transport, and processes materials treated as
-*dangerous hazards*.
+XML and PDF files are generated with or without ground transport, and materials treated as
+*dangerous hazards* are processed.
 
 To print the PDF file, the delivery order must be signed by the |PAC|. It can then be printed
 using the :guilabel:`Print Carta Porte` button on the delivery order.
@@ -1939,7 +1943,7 @@ using the :guilabel:`Print Carta Porte` button on the delivery order.
 .. tip::
    The PDF file contains a QR code that allows the authorities to verify the CCP code.
 
-To transport goods between warehouses, the logistic route must contain a delivery-type operation.
+To transport goods between warehouses, the logistics route must contain a delivery-type operation.
 
 .. seealso::
    :doc:`Inter-warehouse replenishment
@@ -1951,10 +1955,10 @@ To transport goods between warehouses, the logistic route must contain a deliver
    :doc:`Sales <../../sales/sales>` apps.
 
 .. important::
-   Odoo does not support the Carta Porte document of type `I` (Ingreso), nor air, train, or marine
-   transport.
+   The Carta Porte documents of type `I` (Ingreso), air, train, or marine transport are currently
+   not supported.
 
-   Consult an accountant before making any modification.
+   Consult an accountant before making any modifications.
 
 .. _l10n/mx/inventory/delivery-guide/configuration:
 
@@ -1964,16 +1968,13 @@ Configuration
 There are two types of |CFDI| of type `T`, which can be generated from :doc:`incoming shipments or
 delivery orders <../../inventory_and_mrp/inventory/shipping_receiving/daily_operations>`:
 
-- :guilabel:`No Federal Highways` is used when the :guilabel:`Distance to Destination` is `less than
-  30 km
-  <http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_.
-- :guilabel:`Federal Transport` is used when the :guilabel:`Distance to Destination` exceeds 30 km.
-
-For :guilabel:`No Federal Highways`, no configuration is required beyond the standard requirements
-of regular invoicing, i.e., the |RFC| of the customer, the UNSPSC code, etc.
-
-For :guilabel:`Federal Transport`, several configurations must be added to contacts, vehicle setups,
-and products. Those configurations are then included in the XML and PDF files.
+- Use :guilabel:`No Federal Highways` when the :guilabel:`Distance to Destination` is `less than 30 
+  km <http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_:
+  No additional configuration is needed beyond the standard requirements for regular invoicing,
+  i.e., the customer |RFC|, the UNSPSC code, etc.
+- Use :guilabel:`Federal Transport` when the :guilabel:`Distance to Destination` exceeds 30 km:
+  Additional configurations for contacts, vehicle setups, and products are needed and are included
+  in the XML and PDF files.
 
 .. _l10n/mx/inventory/delivery-guide/contacts:
 
