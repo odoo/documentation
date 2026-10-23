@@ -30,7 +30,7 @@
 # Josep Anton Belchi Riera, 2021
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
 # "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2025, 2026.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Odoo Translation Bot <c3p@odoo.com>, 2026.
 #
 # Translators:
@@ -40,8 +40,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:33+0000\n"
-"PO-Revision-Date: 2026-10-10 21:48+0000\n"
-"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"PO-Revision-Date: 2026-10-23 01:34+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-20-doc/"
 "websites/es/>\n"
 "Language: es\n"
@@ -2270,6 +2270,9 @@ msgid ""
 "Customer` :ref:`action <building_blocks/forms/action>` to automatically "
 "create a customer record in the backend when filled in."
 msgstr ""
+"Es posible configurar un formulario del sitio web con una :guilabel:`Crear "
+"un cliente` :ref:`acción <website/building_blocks/action>` para crear "
+"automáticamente un registro de cliente en el backend cuando se complete."
 
 #: ../../content/applications/websites/ecommerce/configuration/customer_accounts.rst:74
 msgid "Access restriction"
@@ -2506,11 +2509,16 @@ msgid ""
 "excluded, and the tax is computed at the :ref:`ecommerce/checkout/"
 "review_order` step."
 msgstr ""
+":guilabel:`Impuestos excluidos`: el precio mostrado en el sitio web excluye "
+"impuestos, y el impuesto se calcula en el paso de :ref:`revisión del pedido "
+"<ecommerce/checkout/review_order>`;"
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:31
 msgid ""
 ":guilabel:`Tax Included`: The price displayed on the website is tax-included."
 msgstr ""
+":guilabel:`Impuesto incluido`: el precio mostrado en el sitio web incluye "
+"impuestos."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:34
 msgid ""
@@ -2527,6 +2535,11 @@ msgid ""
 "the price is `Tax excluded` or `Tax included` on the :doc:`../../ecommerce/"
 "ecommerce_design/product_page`."
 msgstr ""
+"Activa el botón de alternancia :ref:`Indicación de impuestos "
+"<ecommerce_design/product_page/customization>` en el editor del sitio web "
+"para indicar explícitamente si el precio es `Impuestos excluidos` o "
+"`Impuestos incluidos` en la :doc:`página del producto <../../ecommerce/"
+"ecommerce_design/product_page>`."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:41
 msgid ""
@@ -2534,6 +2547,9 @@ msgid ""
 "checkout in the :ref:`delivery step <ecommerce/checkout/delivery>` using "
 "the :doc:`website editor </applications/websites/website/web_design>`."
 msgstr ""
+"Habilita :ref:`campos B2B <ecommerce/b2b_b2c/b2b-fields>` específicos en el "
+":ref:`paso de entrega <ecommerce/checkout/delivery>` durante el pago usando "
+"el :doc:`editor del sitio web </applications/websites/website/web_design>`."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:48
 msgid "Price per unit"
@@ -2657,6 +2673,10 @@ msgid ""
 "you do not assign any website, the pricelist will not be used, unless it "
 "is :ref:`selectable <ecommerce/prices/selectable-pricelists>`."
 msgstr ""
+"Si utilizas varios sitios web y quieres usar la misma lista de precios en "
+"varios de ellos, necesitas duplicar la lista de precios para cada sitio web. "
+"Si no asignas ningún sitio web, la lista de precios no se utilizará, a menos "
+"que sea :ref:`seleccionable <ecommerce/prices/selectable-pricelists>`."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:103
 msgid ""
@@ -2823,6 +2843,12 @@ msgid ""
 "pricelists>`, the others will disappear as soon as customers select the "
 "selectable pricelist."
 msgstr ""
+"Se recomienda encarecidamente desactivar la opción :guilabel:`Seleccionable` "
+"al usar tarifas con grupos de países. De hecho, todas las tarifas con el "
+"grupo de países relevante se aplican automáticamente al catálogo, pero si "
+"una de ellas está marcada como :ref:`Seleccionable <ecommerce/prices/"
+"selectable-pricelists>`, las demás desaparecerán en cuanto los clientes "
+"seleccionen la tarifa seleccionable."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:187
 msgid "Imagine you create three pricelists:"
@@ -2850,6 +2876,13 @@ msgid ""
 "prices` list, and prices will be displayed based on the `EU regular prices` "
 "pricelist in the catalog."
 msgstr ""
+"Si la opción :guilabel:`Seleccionable` está habilitada para `EU regular "
+"prices` y `US prices`, y el cliente es de la Unión Europea, solo estarán "
+"disponibles las tarifas `EU regular prices` y `EU prices with discounts`. "
+"Sin embargo, como la lista `EU prices with discount` no es seleccionable, "
+"desaparecerá una vez que el cliente seleccione la lista `EU regular prices` "
+"y los precios se mostrarán según la tarifa `EU regular prices` en el "
+"catálogo."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:200
 msgid "Pricelist application"
@@ -2957,6 +2990,13 @@ msgid ""
 "the :guilabel:`Sales Price` field, and the original price (strikethrough) in "
 "the :guilabel:`Compare to Price` field."
 msgstr ""
+"Para mostrar un precio con descuento permanente, navega a "
+":menuselection:`Sitio web --> Configuración --> Ajustes`, desplázate hacia "
+"abajo hasta :guilabel:`Comercio electrónico`, activa la opción "
+":guilabel:`Precio de comparación` y haz clic en :guilabel:`Guardar`. Luego, "
+":ref:`ve al formulario del producto <ecommerce/products/product-creation>`, "
+"introduce el nuevo precio (con descuento) en el campo :guilabel:`Precio de "
+"venta` y el original (tachado) en el campo :guilabel:`Comparar con precio`."
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:264
 msgid ""
@@ -3175,6 +3215,21 @@ msgid ""
 "click :guilabel:`Product` in the top-right corner to access the backend "
 "product form."
 msgstr ""
+"Para crear un producto desde el frontend, ve a la aplicación Sitio web, haz "
+"clic en :guilabel:`Nuevo` :icon:`fa-caret-down` en la esquina superior "
+"derecha, luego selecciona :guilabel:`Producto`. Introduce el "
+":guilabel:`Nombre del producto` y otros detalles relevantes como el "
+":guilabel:`Código de barras`, :guilabel:`Precio de venta`, "
+":guilabel:`Impuestos de venta` predeterminados y una :ref:`Categoría del "
+"sitio web <ecommerce/categories_variants/categories>`, luego añade una "
+"imagen. Una vez que hagas clic en :guilabel:`Guardar`, serás redirigido a la "
+"página del producto donde puedes :ref:`personalizarla <ecommerce_design/"
+"product_page/customization>` usando el :doc:`editor del sitio web </"
+"applications/websites/website/web_design>`. Una vez que hayas terminado, haz "
+"clic en :guilabel:`Guardar`. Para configurar :ref:`detalles del producto "
+"<ecommerce/products/product-configuration>` avanzados adicionales, haz clic "
+"en :guilabel:`Producto` en la esquina superior derecha para acceder al "
+"formulario de producto del backend."
 
 #: ../../content/applications/websites/ecommerce/configuration/products.rst:31
 msgid ""
@@ -3317,6 +3372,17 @@ msgid ""
 "it available on all of them, **duplicate** the product for each website and "
 "assign the corresponding website to each duplicate."
 msgstr ""
+"Al gestionar múltiples sitios web, la disponibilidad de un producto en cada "
+"sitio web se puede establecer desde el :ref:`formulario de producto "
+"<ecommerce/products/product-form>`. Navega a la pestaña :guilabel:`Ventas`, "
+"luego en la sección :guilabel:`Tienda de comercio electrónico`, selecciona "
+"el :guilabel:`Sitio web` donde el producto debería estar disponible. Deja el "
+"campo en blanco para que el producto esté disponible en *todos* los sitios "
+"web. Puedes hacer que un producto esté disponible en *un* sitio web o en "
+"*todos* los sitios web, pero seleccionar solo *algunos* sitios web no es "
+"posible. Para vender el producto en múltiples sitios web específicos sin "
+"hacerlo disponible en todos ellos, **duplica** el producto para cada sitio "
+"web y asigna el sitio web correspondiente a cada duplicado."
 
 #: ../../content/applications/websites/ecommerce/configuration/products.rst:92
 msgid "Product configuration"
@@ -3469,6 +3535,11 @@ msgid ""
 "corresponding :guilabel:`Optional Products`, :guilabel:`Accessory Products`, "
 "and/or :guilabel:`Alternative Products` fields."
 msgstr ""
+"Para configurar estas sugerencias de productos, ve a :menuselection:`Sitio "
+"web --> Comercio electrónico --> Productos`, selecciona el producto "
+"relevante, ve a la pestaña :guilabel:`Ventas` y añade los productos deseados "
+"en los campos correspondientes :guilabel:`Productos opcionales`, "
+":guilabel:`Productos complementarios` y/o :guilabel:`Productos alternativos`."
 
 #: ../../content/applications/websites/ecommerce/configuration/products.rst:172
 msgid "Optional products"
@@ -3651,6 +3722,15 @@ msgid ""
 "product-highlight>` names, :doc:`categories and variants "
 "<categories_variants>` names, etc."
 msgstr ""
+"Si un sitio web está disponible en varios idiomas, la información del "
+"producto puede traducirse directamente en el :ref:`formulario del producto "
+"<ecommerce/products/product-form>`. Los campos que admiten varios idiomas se "
+"identifican por su abreviatura de idioma (p. ej., `EN`) junto al campo, como "
+"el :guilabel:`Nombre del producto`, el :ref:`Mensaje de sin stock <ecommerce/"
+"products/stock-management>`, la :ref:`Descripción de comercio electrónico "
+"<ecommerce/products/description>`, los nombres de :ref:`cinta o insignia "
+"<ecommerce/products/additional_features/product-highlight>`, los nombres de "
+":doc:`categorías y variantes <categories_variants>`, etc."
 
 #: ../../content/applications/websites/ecommerce/configuration/products.rst:257
 msgid ""
@@ -3825,6 +3905,12 @@ msgid ""
 "custom :guilabel:`Out-of-Stock Message` can also be added to inform "
 "customers that the item will be replenished."
 msgstr ""
+"Actualmente, la `Silla Boko` no está disponible en ningún almacén. Sin "
+"embargo, los clientes pueden hacer clic en el enlace :icon:`fa-envelope-o` "
+"(:guilabel:`sobre`) :guilabel:`Recibir notificación cuando vuelva a estar "
+"disponible` para recibir una notificación en cuanto el producto vuelva a "
+"estar disponible. También se puede añadir un :guilabel:`Mensaje de sin "
+"stock` para informar a los clientes de que el artículo será repuesto."
 
 #: ../../content/applications/websites/ecommerce/configuration/products.rst:0
 msgid ""
@@ -4151,6 +4237,10 @@ msgid ""
 "the :guilabel:`Save for Later` button in the :guilabel:`Order "
 "summary` :ref:`checkout step <ecommerce/checkout/review_order>`."
 msgstr ""
+"Los clientes pueden mover productos de su carrito a su lista de deseos "
+"haciendo clic en el botón :guilabel:`Guardar para después` en el "
+":guilabel:`Resumen del pedido` :ref:`paso de pago <ecommerce/checkout/"
+"review_order>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/additional_features.rst:100
 msgid ""
@@ -4173,6 +4263,13 @@ msgid ""
 "or :guilabel:`New!`) or create a :guilabel:`New` one. Add a ribbon name, and "
 "select the method to :guilabel:`Assign` it:"
 msgstr ""
+"La aplicación Comercio electrónico te permite destacar productos para "
+"aumentar su visibilidad. Para ello, ve a :menuselection:`Sitio web --> "
+"Comercio electrónico --> Etiquetas de productos`. Puedes usar una de las "
+"etiquetas preconfiguradas (:guilabel:`Agotado`, :guilabel:`Oferta`, "
+":guilabel:`Sin existencias` o :guilabel:`¡Nuevo!`) o crear una "
+":guilabel:`Nueva`. Agrega un nombre de etiqueta y selecciona el método para "
+":guilabel:`Asignar`la:"
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/additional_features.rst:113
 msgid ":guilabel:`Manually`: assign the ribbon manually."
@@ -4623,6 +4720,11 @@ msgid ""
 "heart` :ref:`Wishlist <ecommerce/products/additional_features/wishlists>`) "
 "and customize their placement."
 msgstr ""
+"Habilitar algunas :guilabel:`Acciones` (p. ej., :icon:`fa-shopping-cart` "
+":ref:`Añadir al carrito <ecommerce/checkout/add-to-cart>`, :icon:`fa-"
+"exchange` :ref:`Comparar <ecommerce/products/additional_features/product-"
+"comparison>`, o :icon:`fa-heart` :ref:`Lista de deseos <ecommerce/products/"
+"additional_features/wishlists>`) y personalizar su ubicación."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:168
 msgid ""
@@ -6030,6 +6132,11 @@ msgid ""
 "--> Settings`, scroll to the :guilabel:`Shipping` section, and "
 "enable :guilabel:`Confirmation Email`."
 msgstr ""
+"Para habilitar correos electrónicos de confirmación automáticos para órdenes "
+"de entrega completadas (estado :guilabel:`Hecho`), ve a "
+":menuselection:`Inventario --> Configuración --> Ajustes`, desplázate hasta "
+"la sección :guilabel:`Envío` y habilita :guilabel:`Confirmación por correo "
+"electrónico`."
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:180
 msgid ""
@@ -6104,7 +6211,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:216
 msgid "Select the relevant order."
-msgstr ""
+msgstr "Selecciona el pedido correspondiente."
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:217
 msgid "Click the :icon:`fa-reply` :guilabel:`Return` button."
@@ -6225,6 +6332,10 @@ msgid ""
 "proforma>` in the customer portal until they are manually :ref:`sent to the "
 "customer <accounting/invoice/sending>`."
 msgstr ""
+"Cuando la facturación automática está desactivada y las facturas se crean "
+"manualmente, aparecen como :doc:`facturas proforma </applications/sales/"
+"sales/invoicing/proforma>` en el portal del cliente hasta que se "
+":ref:`envían manualmente al cliente <accounting/invoice/sending>`."
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:268
 msgid ":doc:`/applications/finance/accounting/payments`"
@@ -6244,7 +6355,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/payments.rst:3
 msgid "Payments"
-msgstr ""
+msgstr "Pagos"
 
 #: ../../content/applications/websites/ecommerce/payments.rst:5
 msgid "E-commerce orders can be paid:"
@@ -6287,7 +6398,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/payments.rst:23
 msgid "Payment providers"
-msgstr ""
+msgstr "Proveedores de pago"
 
 #: ../../content/applications/websites/ecommerce/payments.rst:25
 msgid ""
@@ -6310,7 +6421,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/payments.rst:39
 msgid "Pay on site"
-msgstr ""
+msgstr "Pagar en el sitio"
 
 #: ../../content/applications/websites/ecommerce/payments.rst:41
 msgid ""
@@ -6328,7 +6439,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/payments.rst:52
 msgid "Cash on delivery"
-msgstr ""
+msgstr "Pago contra reembolso"
 
 #: ../../content/applications/websites/ecommerce/payments.rst:54
 msgid ""
@@ -6357,7 +6468,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/payments.rst:66
 msgid "Pay on invoice"
-msgstr ""
+msgstr "Pago contra factura"
 
 #: ../../content/applications/websites/ecommerce/payments.rst:68
 msgid ""
@@ -6536,7 +6647,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:3
 msgid "Deliveries"
-msgstr ""
+msgstr "Entregas"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:5
 msgid ""
@@ -6617,6 +6728,9 @@ msgid ""
 "Methods` button of an already-installed provider to access the delivery "
 "method's form, or :guilabel:`Install` a new provider."
 msgstr ""
+"En la página :guilabel:`Nuevos proveedores`, haz clic en el botón "
+":guilabel:`Métodos de envío` de un proveedor ya instalado para acceder al "
+"formulario del método de envío, o :guilabel:`Instala` un nuevo proveedor."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:40
 msgid ""
@@ -6634,6 +6748,11 @@ msgid ""
 "configure-delivery-method>` (if applicable), is displayed when selecting the "
 "provider during :ref:`checkout <ecommerce/checkout/steps>`."
 msgstr ""
+"El :ref:`precio de envío <inventory/shipping/calculate-delivery-cost>`, "
+"incluyendo el :guilabel:`Margen sobre tarifa` o :guilabel:`Margen adicional` "
+"configurado en el :ref:`método de envío <inventory/shipping_receiving/"
+"configure-delivery-method>` (si aplica), se muestra al seleccionar el "
+"proveedor durante el :ref:`proceso de pago <ecommerce/checkout/steps>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:50
 msgid ""
@@ -12262,6 +12381,12 @@ msgid ""
 "appropriate shortcut, then click the :icon:`fa-paper-"
 "plane` :guilabel:`(send)` icon or hit :kbd:`Enter`."
 msgstr ""
+"Para usar una respuesta predefinida en una conversación, haga clic en el "
+"icono :icon:`fa-plus-circle` :guilabel:`(más)` de la ventana de chat y haga "
+"clic en :guilabel:`Insertar respuesta predefinida` para abrir una lista de "
+"las respuestas predefinidas disponibles. Seleccione una respuesta de la "
+"lista o escriba el atajo correspondieste y haga clic en el icono :icon:`fa-"
+"paper-plane` :guilabel:`(enviar)` o presione :kbd:`Enter`."
 
 #: ../../content/applications/websites/livechat/responses.rst:186
 msgid ""
@@ -13238,6 +13363,9 @@ msgid ""
 "to :ref:`route incoming emails directly to your Odoo database via DNS "
 "records <dns_record_setup>`."
 msgstr ""
+"Crea un subdominio dedicado (por ejemplo, ``mail.mydomain.com``) para "
+":ref:`dirigir los correos electrónicos entrantes directamente a tu base de "
+"datos de Odoo mediante registros DNS <dns_record_setup>`."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:130
 msgid "Use an external email provider"
@@ -15919,6 +16047,8 @@ msgid ""
 "In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add "
 "shared link`."
 msgstr ""
+"En la barra lateral, selecciona :guilabel:`Visibilidad`, luego haz clic en "
+":guilabel:`Añadir enlace compartido`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:76
 msgid ""
@@ -16105,6 +16235,9 @@ msgid ""
 "Analytics and Google Tag Manager <https://support.google.com/tagmanager/"
 "answer/9442095?hl=en>`_."
 msgstr ""
+"Para más información, consulta la `documentación sobre cómo vincular Google "
+"Analytics y Google Tag Manager <https://support.google.com/tagmanager/answer/"
+"9442095?hl=en>`_."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:160
 msgid ""
@@ -16446,6 +16579,8 @@ msgid ""
 "**Create a regular drop-down menu** by dragging and dropping the sub-menu "
 "items to the right, underneath their parent menu."
 msgstr ""
+"**crear un menú desplegable estándar** arrastrando y soltando los elementos "
+"del submenú a la derecha, debajo de su menú principal.  "
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:None
 msgid "Menu editor with sub-menus"
@@ -16463,7 +16598,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:0
 msgid "Access the menu editor while in Edit mode."
-msgstr ""
+msgstr "Acceso al editor de menú desde el modo de edición "
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:53
 msgid ""
@@ -16558,7 +16693,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:101
 msgid "Hide a dynamic menu item for non-logged-in users"
-msgstr ""
+msgstr "Ocultar un elemento de menú dinámico para usuarios no conectados"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:103
 msgid ""
@@ -16932,6 +17067,8 @@ msgid ""
 "Choose a :guilabel:`Slideout Effect`: :guilabel:`Regular` (i.e., no "
 "effect), :guilabel:`Slide Hover`, or :guilabel:`Slide Hover + Shadow`."
 msgstr ""
+"Elige un :guilabel:`Efecto deslizante`: :guilabel:`Normal` (es decir, sin "
+"efecto), :guilabel:`Deslizamiento al pasar` o :guilabel:`Sombra`."
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:249
 msgid ""
@@ -18569,7 +18706,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:None
 msgid "Add the link to the embedded code you want to point to."
-msgstr ""
+msgstr "Agregue el enlace al código insertado que quiere resaltar"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:82
 msgid ""
@@ -18699,7 +18836,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:156
 msgid "Layout"
-msgstr ""
+msgstr "Diseño"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:158
 msgid ""
@@ -18723,7 +18860,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:174
 msgid "Column"
-msgstr ""
+msgstr "Columna"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:176
 msgid ""
@@ -18745,7 +18882,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:190
 msgid "Shape"
-msgstr ""
+msgstr "Forma"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:192
 msgid ""
@@ -18819,6 +18956,9 @@ msgid ""
 "Anchor links are hyperlinks that direct users to a specific section of a "
 "page. To create an anchor link for a block, follow these steps:"
 msgstr ""
+"Los enlaces de ancla son hipervínculos que dirigen a los usuarios a una "
+"**sección específica** de una página. Para crear un enlace de ancla para un "
+"bloque, sigue estos pasos:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:236
 msgid "Click :guilabel:`Edit` and select the block you want to link to."
@@ -18840,6 +18980,7 @@ msgstr ""
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:241
 msgid "Replace the anchor name and click :guilabel:`Save & Copy`."
 msgstr ""
+"Reemplaza el nombre del ancla y haz clic en :guilabel:`Guardar y copiar`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:243
 msgid ""
@@ -18851,7 +18992,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:3
 msgid "Forms"
-msgstr ""
+msgstr "Formularios"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:5
 msgid ""
@@ -18963,6 +19104,10 @@ msgid ""
 "selected action. Property fields added to the database can also be used "
 "depending on the selected action."
 msgstr ""
+"También es posible seleccionar un :guilabel:`campo existente` de la base de "
+"datos y usar los datos que contiene. Los campos disponibles dependen de la "
+"acción seleccionada. También se pueden usar campos de propiedad añadidos a "
+"la base de datos."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:0
 msgid "All types of form fields"
@@ -19101,7 +19246,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:119
 msgid "Date and time"
-msgstr ""
+msgstr "\" (fecha y hora)"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:121
 msgid ""
@@ -19119,7 +19264,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:129
 msgid "Files"
-msgstr ""
+msgstr "Archivos"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:131
 msgid ""
@@ -19168,6 +19313,11 @@ msgid ""
 "and remove the :ref:`header and footer design <website/header_footer/"
 "design>`. Make sure only the contact form remains on the page."
 msgstr ""
+"**Prepara el formulario de Odoo:** Crea un formulario de contacto en una "
+"página en el sitio web de Odoo y elimina el :ref:`diseño del encabezado "
+"<website/header_footer/header-design>` y el :ref:`diseño del pie de página "
+"<website/header_footer/footer-design>`. Asegúrate de que solo el formulario "
+"de contacto permanezca en la página."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:155
 msgid ""
@@ -19189,6 +19339,9 @@ msgid ""
 "HTML (in the code editor or CMS) and insert the embedded code where the form "
 "should be displayed."
 msgstr ""
+"**Añade el código incrustado al sitio web que no es de Odoo:** Abre el HTML "
+"de la página correspondiente (en el editor de código o CMS) e inserta el "
+"código incrustado donde se debe mostrar el formulario."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:163
 msgid "Example of an embedded code:"
@@ -20177,7 +20330,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/themes.rst:219
 msgid "Shadows"
-msgstr ""
+msgstr "Sombras"
 
 #: ../../content/applications/websites/website/web_design/themes.rst:221
 msgid ""
@@ -20371,15 +20524,15 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:71
 msgid ":guilabel:`UTM Campaign`: The selected campaign."
-msgstr ""
+msgstr ":guilabel:`Campaña UTM`: la campaña seleccionada."
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:72
 msgid ":guilabel:`UTM Medium`: The selected medium of any campaign."
-msgstr ""
+msgstr ":guilabel:`Medio UTM`: el medio seleccionado de cualquier campaña."
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:73
 msgid ":guilabel:`UTM Source`: The selected source of any campaign."
-msgstr ""
+msgstr ":guilabel:`Fuente UTM`: la fuente seleccionada de cualquier campaña."
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:74
 msgid ""
@@ -20435,6 +20588,8 @@ msgid ""
 "Blocks and elements with custom visibility settings displayed at the bottom "
 "of the editor."
 msgstr ""
+"Bloques y elementos con configuración de visibilidad personalizada mostrados "
+"en la parte inferior del editor"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:107
 msgid ""
@@ -20632,7 +20787,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:99
 msgid "Metadata"
-msgstr ""
+msgstr "Metadatos"
 
 #: ../../content/applications/websites/website/website_creation.rst:101
 msgid ""
@@ -20664,7 +20819,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:112
 msgid "Shopify"
-msgstr ""
+msgstr "Shopify"
 
 #: ../../content/applications/websites/website/website_creation.rst:114
 msgid ""
@@ -20674,7 +20829,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:117
 msgid "WooCommerce"
-msgstr ""
+msgstr "WooCommerce"
 
 #: ../../content/applications/websites/website/website_creation.rst:119
 msgid ""
@@ -20700,7 +20855,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:129
 msgid "PrestaShop"
-msgstr ""
+msgstr "PrestaShop"
 
 #: ../../content/applications/websites/website/website_creation.rst:131
 msgid ""
@@ -20727,15 +20882,15 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:144
 msgid "Resource"
-msgstr ""
+msgstr "Recurso"
 
 #: ../../content/applications/websites/website/website_creation.rst:145
 msgid "Permission"
-msgstr ""
+msgstr "Permiso"
 
 #: ../../content/applications/websites/website/website_creation.rst:146
 msgid "categories"
-msgstr ""
+msgstr "Categorías"
 
 #: ../../content/applications/websites/website/website_creation.rst:147
 #: ../../content/applications/websites/website/website_creation.rst:149
@@ -20752,7 +20907,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:150
 msgid "images"
-msgstr ""
+msgstr "Imagenes"
 
 #: ../../content/applications/websites/website/website_creation.rst:152
 msgid "product_option_values"
@@ -20764,7 +20919,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:156
 msgid "products"
-msgstr ""
+msgstr "productos"
 
 #: ../../content/applications/websites/website/website_creation.rst:159
 msgid "Copy the generated API key."
@@ -20802,7 +20957,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:176
 msgid "Ghost"
-msgstr ""
+msgstr "fantasma"
 
 #: ../../content/applications/websites/website/website_creation.rst:178
 msgid ""
