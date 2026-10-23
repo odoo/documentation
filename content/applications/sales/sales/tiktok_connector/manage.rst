@@ -50,8 +50,6 @@ Orders are automatically fetched from TikTok Shop and synchronized in Odoo at re
 
 - Synchronization Scope: Only orders with status :guilabel:`AWAITING_SHIPMENT` or
   :guilabel:`AWAITING_COLLECTION` are fetched, as these require shipping action.
-- Processing Intervals: Sync orders and Webhooks of order status changes are processed every 5
-  minutes. Shipping labels are processed every 15 minutes. Inventory is processed every 30 minutes.
 - Status Updates: When an order is canceled on TikTok Shop, its status updates in Odoo. However,
   canceling an order in Odoo does not reflect on TikTok Shop.
 - Customer Creation: For each synchronized order, Odoo uses the buying identifier to search for
@@ -89,10 +87,12 @@ the :menuselection:`Inventory` app, a sales order, and a customer record, upon s
 TikTok Shop delivery statuses
 -----------------------------
 
+- :guilabel:`On Hold`: The order is not confirmed by platform for shipment arrangement. These
+  orders will not be fetched by Odoo until further updates.
 - :guilabel:`Awaiting Shipment`: The order is ready for shipment arrangement.
 - :guilabel:`Awaiting Collection`: The seller has arranged shipment and received a tracking number
   from the logistics provider.
-- :guilabel:`Shipped`: The parcel has been dropped off or picked up by the logistics provider.
+- :guilabel:`In Transit`: The parcel has been dropped off or picked up by the logistics provider.
 - :guilabel:`Cancelled`: The order has been canceled.
 - :guilabel:`Pickup Failed`: The logistics provider failed to pick up the parcel and the seller
   must rearrange shipment.

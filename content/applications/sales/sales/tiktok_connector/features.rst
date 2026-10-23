@@ -11,15 +11,15 @@ Supported features
 
 The **TikTok Shop Connector** is able to:
 
-- Synchronize (TikTok Shop to Odoo) all confirmed orders (:abbr:`FBS (Fulfilled By Seller)`) with
+- Synchronize (TikTok Shop to Odoo) all confirmed orders (:abbr:`FBM (Fulfilled By Merchant)`) with
   status :guilabel:`AWAITING_SHIPMENT` or :guilabel:`AWAITING_COLLECTION`, including:
 
   - Product name
   - Item ID reference
   - Quantity
 
-- Synchronize (Odoo to TikTok Shop) all available product quantities (:abbr:`FBS (Fulfilled By
-  Seller)`).
+- Synchronize (Odoo to TikTok Shop) all available product quantities (:abbr:`FBM (Fulfilled By
+  Merchant)`).
 
 - Synchronize the TikTok Shop product catalog into Odoo or map existing Odoo products to TikTok
   Shop Item IDs.

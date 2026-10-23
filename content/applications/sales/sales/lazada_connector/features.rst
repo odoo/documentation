@@ -13,7 +13,7 @@ Supported features
 The **Lazada Connector** is able to:
 
 - Synchronize (Lazada to Odoo) all confirmed orders (:abbr:`FBM (Fulfilled By Merchant)`) with
-  status :guilabel:`READY_TO_SHIP` or :guilabel:`PROCESSED`, including:
+  status :guilabel:`PENDING`, including:
 
   - Product name
   - SKU reference

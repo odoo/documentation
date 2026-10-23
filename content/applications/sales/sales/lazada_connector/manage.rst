@@ -43,8 +43,8 @@ Order synchronization
 Orders are automatically fetched from Lazada and synchronized in Odoo at regular intervals
 (every 60 minutes).
 
-- Only orders with status :guilabel:`READY_TO_SHIP` or :guilabel:`PROCESSED` are fetched, as these
-  require shipping action.
+- Only orders with status :guilabel:`PENDING` are fetched, and Waybill is fetched for 
+  orders with status :guilabel:`PACKED` or :guilabel:`READY_TO_SHIP`.
 - When an order is canceled on Lazada, its status updates in Odoo. However, cancelling an order in
   Odoo does not reflect on Lazada.
 - For each synchronized order, Odoo creates a sales order and a customer (contact) if the customer
@@ -58,15 +58,18 @@ Orders are automatically fetched from Lazada and synchronized in Odoo at regular
 Force synchronization
 =====================
 
+For every order synchronization, Odoo will be fetching all orders and the information that has been
+updated since the last synchronization.
+
 To synchronize an order whose status hasn't changed since the last synchronization:
 
 1. Navigate to :menuselection:`Sales app --> Configuration --> Lazada --> Shops`.
 2. Select the Lazada Shop and modify the :guilabel:`Last Order Sync` date under
-   :guilabel:`Synchronization Information` to a date prior to the order's last status change.
+   :guilabel:`Synchronization Information` to a date prior to the order's creation time.
 3. Save to trigger synchronization.
 
 .. tip::
-   In Debug Mode, access the Lazada shop in Odoo and click :guilabel:`Sync Orders` to immediately
+   For manual flow, access the Lazada shop in Odoo and click :guilabel:`Sync Orders` to immediately
    synchronize orders or :guilabel:`Sync Inventory` for inventory updates.
 
 Manage deliveries in FBM

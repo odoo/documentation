@@ -38,6 +38,14 @@ the Open Shopee account in Odoo.
    #. Ensure your Shopee account meets all the necessary criteria *before* proceeding with the
       Odoo Shopee Connector configuration.
 
+Once your organization has been approved, head to the portal's `App List 
+<https://open.shopee.com/console/app>`_, "Add New App" to create a set of integration credentials.
+Make sure of followings: 
+- Select "ERP System" as App Category
+- Use your Odoo database domain for all "Redirect URL Domain" (e.g.https://your-company.odoo.com/)
+- Once the App is created, head to "Go-live the approval", for Odoo online databases,
+   make sure Buyer PII requirement  and all servers IP address(es) declaration is disabled.
+
 .. _shopee/setup:
 
 Connect Shopee seller account to Odoo
