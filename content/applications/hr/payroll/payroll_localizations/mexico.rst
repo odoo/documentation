@@ -5,7 +5,7 @@ Mexico
 .. |PAC| replace:: :abbr:`PAC (Proveedor Autorizado de Certificación / Authorized Certification
    Provider)`
 .. |RFC| replace:: :abbr:`RFC (Registro Federal de Contribuyentes)`
-.. |CFDI| replace:: :abbr:`CFDI (Comprobante Fiscal Digital por Internet) `
+.. |CFDI| replace:: :abbr:`CFDI (Comprobante Fiscal Digital por Internet)`
 .. |IMSS| replace:: :abbr:`IMSS (Instituto Mexicano del Seguro Social)`
 
 The Mexico payroll localization covers salary computations for employees, including employee and
@@ -34,12 +34,8 @@ localization:
      - - hr_payroll
        - hr_work_entry_holidays
        - hr_payroll_holidays
-     - Adds the required fields to manage employee payroll and time off data.
-   * - :guilabel:`Mexico - Payroll CFDI`
-     - `l10n_mx_hr_payroll_account_edi`
-     - - l10n_mx_hr_payroll_account
-       - l10n_mx_edi
-     - Adds the ability to sign |CFDI| payroll documents with the government.
+     - Adds the required fields to manage employee payroll and time off data and the ability to sign
+      |CFDI| payroll documents with the government.
    * - :guilabel:`Mexico - Payroll with Accounting`
      - `l10n_mx_hr_payroll_account`
      - - hr_payroll_account
