@@ -103,7 +103,7 @@ that field. To restart the automation or trigger a suggestion update for a produ
 .. image:: optional_products/update-suggested-products-option.png
    :alt: The product form's Action submenu showing the Update suggested products option.
 
-.. _sales/optional_products/optional-product-sections-in-quotations:
+.. _sales/optional_products/sections:
 
 Setting optional product sections in quotations
 ===============================================

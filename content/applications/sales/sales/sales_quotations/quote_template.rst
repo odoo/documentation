@@ -1,283 +1,346 @@
 .. meta::
-   :description: Reusable quotation and section templates are configured and created in Odoo's Sales
-                 app, covering template lines, terms and conditions, and settings, along with
-                 applying templates to quotes and mass cancelling quotations or sales orders.
+   :description: Create quotation and section templates in the Odoo Sales app, from scratch or from
+                 an existing quotation, and configure their terms and settings. Apply templates to
+                 quotations, preview them in the customer portal, and cancel multiple quotations at
+                 once.
 
 .. _quote-calculator: https://youtu.be/W_0-gUc87WI?si=GMIuIMXP9-lOPtob
 
-=============================
-Quotation & section templates
-=============================
+===============================
+Quotation and section templates
+===============================
 
-Reusable quotation and section templates can be made in Odoo's **Sales** app for common products or
-services.
+Quotation and section templates are reusable building blocks for quotations in Odoo's **Sales** app.
+A quotation template prefills an entire quotation. A section template prefills one section of a
+quotation.
 
-By using these templates, quotations can be tailored and sent to customers at a quicker pace,
-without having to create new quotations from scratch every time a sales negotiation occurs.
+Use templates for products or services that are sold often. Templates let salespeople send tailored
+quotations faster, without building each quotation from scratch.
 
-Configuration
-=============
-
-To use quotation and section templates, begin by activating the setting in :menuselection:`Sales app
---> Configuration --> Settings`, and scroll to the :guilabel:`Quotations &_Orders` heading.
-
-Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing so reveals a new
-:guilabel:`Default Template` field, in which a default quotation template can be chosen from the
-drop-down menu. Upon activating the :guilabel:`Quotation Templates` feature, an internal
-:icon:`fa-arrow-right` :guilabel:`Quotation Templates` link appears beneath the :guilabel:`Default
-Template` field. Clicking this link reveals the :guilabel:`Templates` page, from which templates can
-be created, viewed, and edited.
-
-Before leaving the :guilabel:`Settings` page, click the :guilabel:`Save` button to save all changes
-made during the session.
+Both template types are permanently enabled features in the **Sales** app. No settings need to be
+activated before creating them.
 
 .. _sales/quote_template/create_templates:
 
-Create quotation templates
-==========================
+Create a quotation or section template
+======================================
 
-To create a quotation template, navigate to :menuselection:`Sales app --> Configuration -->
-Templates`. The *Templates* page displays from which templates can be created, viewed, and edited.
+Create a quotation or section template by going to :menuselection:`Sales app --> Configuration -->
+Templates`. The *Templates* page displays, where quotation and section templates can be created,
+viewed, and edited.
 
 .. image:: quote_template/quotation-templates-page.png
    :alt: Quotation templates page in the Odoo Sales application.
 
-To create a new quotation template, click the :guilabel:`New` button, located in the upper-left
-corner. Doing so reveals a blank quotation template form that can be customized.
+Click :guilabel:`New` to open a blank template form. Fill in the fields described in the following
+list, then :ref:`add products to the template <sales/quote_template/product>`:
+
+- :guilabel:`Template`: The name of the template.
+- :guilabel:`Type`: Set the template type to :guilabel:`Quotation` or :guilabel:`Section`. The
+  :guilabel:`Quotation` option is the default.
+- :guilabel:`Quote calculator`: Links to a new or existing spreadsheet that performs complex
+  calculations for the template. When a spreadsheet is selected, a :guilabel:`Quote calculator`
+  smart button displays on the sales quotation form.
+- :guilabel:`Share`: Makes the template accessible to specific sales teams. Select which teams can
+  access it in the :guilabel:`Sales Team` field. Leave blank to make it visible to all database
+  users.
+- :guilabel:`Company`: Restricts the template to one company in a :doc:`multi-company environment
+  <../../../general/companies/multi_company>`.
 
 .. image:: quote_template/blank-quotation-form.png
    :alt: Create a new quotation template on Odoo Sales.
 
-Start by entering a name for the template in the :guilabel:`Template` field. Then select
-:guilabel:`Quotation` for the :guilabel:`Type` field. If needed, select an existing spreadsheet to
-do complex calculations for the template in the :guilabel:`Quote calculator` field.
+Section templates have only the *Lines* tab. The *Terms & Conditions*, *Quote Builder*, and
+*Settings* tabs are available only on quotation templates.
 
-.. important::
-   The :guilabel:`Quote calculator` field is only available for Quotation templates.
+In the *Lines* tab, three kinds of lines can be added. Products are added by clicking :guilabel:`Add
+a product` or :guilabel:`Catalog`. Sections are added by clicking :guilabel:`Add a section` and
+organize products under headers. Notes are added by clicking :guilabel:`Add a note` and hold extra
+information such as warranty details or terms.
 
-Enable the :guilabel:`Share` checkbox to make the template accessible to specific sales teams.
-Select which teams can access it in the :guilabel:`Sales Team` field. If working in a
-:doc:`multi-company environment <../../../general/companies/multi_company>`, use the
-:guilabel:`Company` field to designate to which company can access the template.
+.. _sales/quote_template/product:
 
-.. _sales/quote_template/lines-tab:
+Add a product
+-------------
 
-Lines tab
----------
+Add a product to a template by clicking :guilabel:`Add a product` in the *Lines* tab and selecting
+the product. Templates do not support combo products due to the product variations the combo
+requires.
 
-In the *Lines* tab, products can be added to the quotation template by clicking :guilabel:`Add a
-product`, organized by clicking :guilabel:`Add a section` (and dragging/dropping section headers),
-and further explained with discretionary information (such as warranty details, terms, etc.) by
-clicking :guilabel:`Add a note`.
+To add a product, follow these steps:
 
-To add a product to a quotation template, click :guilabel:`Add a product` in the *Lines* tab of a
-quotation template form. Doing so reveals a blank field in the :guilabel:`Product` column.
+1. Click :guilabel:`Add a product`. A blank field appears in the :guilabel:`Product` column.
+#. Type the product name in the :guilabel:`Product` field, then select the product from the
+   drop-down menu.
+#. Edit the :guilabel:`Quantity` field if needed. The default quantity is `1`.
+#. To reorder the line, drag the :icon:`drag_indicator` :guilabel:`(six-squares)` icon on the left
+   side of the line to the desired position.
 
-When clicked, a drop-down menu with existing products in the database appears. Select the desired
-product from the drop-down menu to add it to the quotation template. If the desired product is not
-visible, type the name of the desired product in the :guilabel:`Product` field, and the option
-appears in the drop-down menu. Products can also be found by clicking :guilabel:`Search More...`
-from the drop-down menu.
+To add several products at once, click :guilabel:`Catalog` instead of :guilabel:`Add a product`. On
+the :ref:`Product catalog <essentials/product_catalog/database-record>` page, select multiple
+products and quantities, and click :guilabel:`Back to Template` to return to the template.
 
 .. tip::
    It is possible to add event-related products (booths and registrations) to quotation templates.
    To do so, click the :guilabel:`Product` field, type in `Event`, and select the desired
    event-related product from the resulting drop-down menu.
 
-.. note::
-   When a product is added to a quotation template, the default :guilabel:`Quantity` is `1`, but
-   that can be edited at any time.
+.. _sales/quote_template/section:
 
-Then, drag and drop the product to the desired position, via the :guilabel:`six squares` icon,
-located to the left of each line item.
+Add sections to a quotation or section template
+-----------------------------------------------
 
-To add a *section*, which serves as a header to organize the lines of a sales order, click
-:guilabel:`Add a section` in the *Lines* tab. When clicked, a blank field appears, in which the
-desired name of the section can be typed. When the name has been entered, click away to secure the
-section name. Then, drag and drop the section name to the desired position, via the :icon:`oi-apps`
-:guilabel:`(six squares)` icon, located to the left of each line item.
+Add a section to a template by clicking :guilabel:`Add a section` in the *Lines* tab and typing the
+section name. A section is a header that groups the lines of a quotation. In a section template, an
+added section becomes a subsection.
 
-.. note::
+To add a section, follow these steps:
 
-   Users can :ref:`create an optional product section
-   <sales/optional_products/optional-product-sections-in-quotations>` in a quotation template and in
-   the quotation form.
+1. Click :guilabel:`Add a section`. A blank field appears.
+#. Type the section name and, if needed, a description. Click outside the field to save it.
+#. To reorder the section, drag the :icon:`drag_indicator` :guilabel:`(six-squares)` icon on the
+   left side of the line to the desired position.
+#. :ref:`Add products <sales/quote_template/product>` below the section header to include them in
+   the section.
 
-To add a note, which appears as a piece of text for the customer on the quotation, click
-:guilabel:`Add a note` in the *Lines* tab. When clicked, a blank field appears, in which the desired
-note can be typed. When the note has been entered, click away to secure the note. Then, drag and
-drop the note to the desired position, via the :icon:`oi-apps` :guilabel:`(six squares)` icon.
+The section header can set the quantity and unit for every product in the section at once. Enter the
+new values in the :guilabel:`Quantity` and :guilabel:`Unit` fields on the section header line. Odoo
+updates the :guilabel:`Quantity` and :guilabel:`Unit` fields of every product in that section
+automatically.
 
-To delete any line item from the *Lines* tab (product, section, and/or note), click the
-:icon:`fa-trash` :guilabel:`(remove record)` icon on the far-right side of the line.
+Configuration options in the section header drop-down menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Terms & Conditions tab
-----------------------
+More section configuration options are available from the :icon:`fa-ellipsis-v` :guilabel:`(vertical
+ellipsis)` icon on the section header line. The following list describes the drop-down menu options:
 
-The *Terms & Conditions* tab provides the opportunity to add terms and conditions to the quotation
-template. To add terms and conditions, type the desired terms and conditions in this tab.
+- :icon:`fa-plus` :guilabel:`Add a line`: Adds a product line to the section.
+- :icon:`subdirectory_arrow_right` :guilabel:`Add a subsection`: Adds a section inside the current
+  section.
+- :icon:`fa-eye-slash` :guilabel:`Hide Prices`: Shows the product list and section subtotal, but
+  hides individual product prices on the customer portal and on the quotation or sales order PDF. A
+  :icon:`fa-eye-slash` :guilabel:`(Hide Prices)` icon appears on the section header. To disable it,
+  select :icon:`fa-eye` :guilabel:`Show Prices` from the same menu.
+- :icon:`fa-compress` :guilabel:`Hide Composition`: Shows only the section header and subtotal and
+  hides the products on the customer portal and on the quotation or sales order. Products appear
+  grayed out on the template, and a :icon:`fa-compress` :guilabel:`(Hide Composition)` icon appears
+  on the section header. To disable it, select :icon:`fa-expand` :guilabel:`Show Composition` from
+  the same menu.
+- :icon:`fa-dot-circle-o` :guilabel:`Set Optional`: Turns the section into an :ref:`optional
+  products section <sales/optional_products/sections>`. A :icon:`fa-dot-circle-o` :guilabel:`(Set
+  Optional)` icon appears on the section header. To disable it, select :icon:`fa-dot-circle-o`
+  :guilabel:`Unset Optional` from the same menu.
+- :icon:`fa-sticky-note-o` :guilabel:`Add a note`: :ref:`Adds a note <sales/quote_template/note>`
+  inside the section.
+- :icon:`fa-arrow-up` :guilabel:`Move Up`: Moves the section and its contents up one line.
+- :icon:`fa-arrow-down` :guilabel:`Move Down`: Moves the section and its contents down one line.
+- :icon:`fa-clone` :guilabel:`Duplicate`: Copies the section and its contents directly below the
+  original section.
+- :icon:`delete` :guilabel:`Delete`: Removes the section and every product and note inside it.
 
 .. seealso::
-   :doc:`../../../finance/accounting/customer_invoices/terms_conditions`
+   - :doc:`optional_products`
 
-.. note::
-   Terms and conditions are **not** required to create a quotation template.
+.. _sales/quote_template/note:
 
-Quote Builder tab
------------------
+Add notes to a template
+-----------------------
+
+Add a note to a template by clicking :guilabel:`Add a note` in the *Lines* tab and typing the text.
+A note appears on the quotation as text for the customer.
+
+To add a note, follow these steps:
+
+1. Click :guilabel:`Add a note`. A blank field appears.
+#. Type the note, then click outside the field to save it.
+#. To reorder the note, drag the :icon:`drag_indicator` :guilabel:`(six-squares)` icon on the left
+   side of the line to the desired position.
+
+.. _sales/quote_template/delete:
+
+Delete a line from a template
+-----------------------------
+
+Delete any product, section, or note from the *Lines* tab by clicking the :icon:`delete`
+:guilabel:`(remove record)` icon on the far-right side of that line. Deleting a section also deletes
+every product and note inside it.
+
+.. _sales/quote_template/terms-conditions:
+
+Add Terms & Conditions to a quotation template
+----------------------------------------------
+
+Add terms and conditions to a quotation template by typing them in the *Terms & Conditions* tab of
+the template form. Use the tab for contractual points, such as returns and refunds, warranty, and
+after-sale services.
+
+Terms and conditions are optional. A quotation template can be saved without them. The *Terms &
+Conditions* tab is not available on section templates.
+
+For company-wide terms that apply to every quotation, see the Odoo documentation on :doc:`default
+terms and conditions <../../../finance/accounting/customer_invoices/terms_conditions>`.
+
+.. _sales/quote_template/quote-builder:
+
+Use the PDF quote builder in a quotation template
+-------------------------------------------------
 
 .. important::
-   The :guilabel:`PDF Quote builder` checkbox must be enabled for this tab to become available.
+   The *Quote Builder* tab requires the :ref:`PDF Quote builder
+   <sales/pdf_quote_builder/configuration>` setting. If the setting is not enabled, the tab does not
+   appear on the quotation template form. The tab is not available on section templates.
 
-The *Quote Builder* tab allows specific headers and footers to become available when the quotation
-template is used on a sales quote. Any headers or footers that are :ref:`assigned to the template
-<pdf_quote_builder/add_pdf_quotes/add-to-quote-template>` are not available to use unless the
-template is applied.
+The *Quote Builder* tab :ref:`assigns specific headers and footers to a quotation template
+<pdf_quote_builder/add_pdf_quotes/add-to-quote-template>`. Those headers and footers are available
+on a quotation only when the quotation template is applied to it.
 
-Settings tab
-------------
+.. _sales/quote_template/settings:
 
-The *Settings* tab provides extra confirmation and invoicing settings to the quotation template.
+Configure quotation template settings
+-------------------------------------
 
-In the *Confirmation* section, the :guilabel:`Quotation Validity` field designates how many days the
-quotation template is valid for, or leave the field on the default `0` to keep the template valid
-indefinitely.
+The *Settings* tab of a quotation template controls how quotations are confirmed and which journal
+invoices them. The tab has a *Confirmation* and an *Invoicing* section. The *Settings* tab is not
+available on section templates.
 
-If the :guilabel:`Online Signature` feature is activated in the :guilabel:`Settings`
-(:menuselection:`Sales app --> Configuration --> Settings`), a toggle is available to activate on
-the quotation template. Enable the toggle for :guilabel:`Online Signature` to request an online
-signature from the customer to confirm an order.
+The following list describes the fields in the *Confirmation* section:
 
-If the :guilabel:`Online Payment` feature is activated in the :guilabel:`Settings`
-(:menuselection:`Sales app --> Configuration --> Settings`), a percentage field displays, in which a
-specific percentage of payment can be entered.
+- :guilabel:`Quotation Validity`: The number of days the quotation template is valid. The default
+  value of `0` keeps the template valid indefinitely.
+- :guilabel:`Online Signature`: A global setting that applies to all sales orders. It requests an
+  online signature from the customer to confirm an order, even if *Online Signature* isn't enabled
+  on the **Sales** *Settings* page.
+- :guilabel:`Prepayment`: A global setting that applies to all sales orders. It sets the percentage
+  of the sales order total that the customer must pay before the order is confirmed. It allows
+  online payment, even if *Online Payment* isn't enabled on the Sales *Settings* page.
 
-Both features :guilabel:`Online Signature` and :guilabel:`Online Payment` can be enabled
-simultaneously, in which case the customer must provide **both** a signature **and** a payment to
-confirm an order.
+  .. note::
+     :guilabel:`Online Signature` and :guilabel:`Prepayment` can be enabled at the same time. When
+     both are enabled, the customer must sign **and** pay to confirm an order.
 
-Next, in the :guilabel:`Confirmation Mail` field, click the blank drop-down menu to select a
-preconfigured email template to be sent to customers upon confirmation of an order.
+- :guilabel:`Confirmation Mail`: The email template sent to the customer when an order is confirmed.
+  Select an existing email template or :ref:`create a new one
+  <sales/quote_template/create-confirmation-mail>`.
 
-.. tip::
-   To create a new email template directly from the :guilabel:`Confirmation Mail` field, start
-   typing the name of the new email template in the field, and select either: :guilabel:`Create` or
-   :guilabel:`Create and edit...` from the drop-down menu that appears.
+In the *Invoicing* section, the :guilabel:`Invoicing Journal` field sets the journal that invoices
+every sales order from the quotation template. If the field is empty, Odoo uses the sales journal
+with the lowest sequence.
 
-   Selecting :guilabel:`Create` creates the email template, which can be edited later.
+.. _sales/quote_template/create-confirmation-mail:
 
-   Selecting :guilabel:`Create and edit...` creates the email template, and a *Create Confirmation
-   Mail* pop-up window appears, in which the email template can be customized and configured
-   immediately.
+Create a confirmation email template from a quotation template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   .. image:: quote_template/create-confirmation-mail-popup.png
-      :alt: Create confirmation mail pop-up window from the quotation template form in Odoo Sales.
+Create a confirmation email template directly from the quotation template by typing a new name in
+the :guilabel:`Confirmation Mail` field. The field is in the *Confirmation* section of the quotation
+template's *Settings* tab.
 
-   When all modifications are complete, click :guilabel:`Save & Close` to save the email template
-   and return to the quotation form.
+To create the confirmation email template, follow these steps:
 
-In the *Invoicing* section, the :guilabel:`Invoicing Journal` field designates all sales orders
-using this template are invoiced in the selected journal. If no journal is selected, the sales
-journal with the lowest sequence is used.
+1. In the :guilabel:`Confirmation Mail` field, type the name of the new email template.
+#. From the drop-down menu, select either :guilabel:`Create` or :guilabel:`Create and edit`.
+
+   - Selecting :guilabel:`Create` saves the email template immediately. It can be edited later.
+   - Selecting :guilabel:`Create and edit` saves the email template and opens the *Create
+     Confirmation Mail* pop-up window, where the email template can be configured.
+#. Click :guilabel:`Save & Close` to save the email template and return to the quotation template
+   form.
+
+.. image:: quote_template/create-confirmation-mail-popup.png
+   :alt: Create confirmation mail pop-up window from the quotation template form in Odoo Sales.
 
 .. _sales/quote_template/section-templates:
 
-Create section templates
-========================
+Create a template from an existing quotation or sales order
+-----------------------------------------------------------
 
-Section templates can be created on the *Templates* page or directly from a sales quote. To create a
-template from the *Templates* page, navigate to :menuselection:`Sales app --> Configuration -->
-Templates` and click the :guilabel:`New` button, located in the upper-left corner. A blank template
-form displays.
+Create a quotation template from an existing quotation or sales order with the :guilabel:`Save as
+template` action. Create a section template from an existing section with the :guilabel:`Save as
+Template` option on the section header line.
 
-Enter the name of the template in :guilabel:`Template` field and set the :guilabel:`Type` field to
-:guilabel:`Section`. To add sections, products, or notes follow the instructions in the
-:ref:`sales/quote_template/lines-tab` section.
+Save a quotation or sales order as a quotation template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. important::
-   Only the *Lines* tab is available for section templates. Templates with the same name and created
-   by the same user are overwritten when saved. Combos **cannot** be saved as a section template.
+1. In the **Sales** app, open the desired quotation or sales order from the *Quotations* dashboard.
+#. Click the :icon:`fa-ellipsis-v` :guilabel:`Actions` icon at the top of the form.
+#. Select :guilabel:`Save as template`.
+#. Configure the :guilabel:`Template` name, :guilabel:`Type`, :guilabel:`Quote calculator`, and
+   :guilabel:`Share` fields.
 
-To create a section template from a sales quote, navigate to :menuselection:`Sales app --> Orders
---> Quotations` and :ref:`create a new quote <sales/create_quotations/create-quotation>` or select
-an existing one.
+Save a section as a section template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Add section and any products in the *Order Lines* tab, then click the :icon:`fa-ellipsis-v`
-:guilabel:`Ellipsis` icon on the right side of the order line. Select the :icon:`fa-save`
-:guilabel:`Save as Template` icon to save the section. Odoo saves the section template using the
-name given the section on the sales quote.
+1. Go to :menuselection:`Sales app --> Orders`, select :guilabel:`Quotations` or :guilabel:`Orders`,
+   and open the desired quotation or sales order.
+#. On the section header line, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis menu)`
+   icon on the right side.
+#. Select :icon:`fa-save` :guilabel:`Save as Template`. Odoo saves the section as a section template
+   with the same name as the section.
 
-.. image:: quote_template/section-save-as-template-option.png
+.. image:: quote_template/section-save-as-template.png
    :alt: A sales quote's order line submenu that contains the Save as Template option.
 
-.. note::
-   Section templates can be saved without any products added in the section.
+A section template can be saved even if the section contains no products. Any subsections or notes
+inside the section are saved with the template.
 
-To find a section template, navigate to :menuselection:`Sales --> Configuration --> Templates`. In
-the search bar, delete the :guilabel:`Quotation Templates filter` to display all template types.
+To find a section template, go to :menuselection:`Sales app --> Configuration --> Templates`. In the
+search bar, delete the :guilabel:`Quotation Templates` filter to display all template types.
 
 .. _sales/quote_template/use-templates:
 
-Use templates
-=============
+Use a template on a quotation
+=============================
 
-When :ref:`creating a quote <sales/create_quotations/create-quotation>` (:menuselection:`Sales app
---> New`), choose a preconfigured template from the drop-down menu of the :guilabel:`New` button.
+Apply a quotation template by clicking :guilabel:`New` on the *Quotations* dashboard and selecting a
+template from the drop-down menu. Apply a section template by clicking :guilabel:`Add a section` on
+a quotation and selecting the section template from the drop-down menu.
 
-.. note::
-   The order of the templates in the :guilabel:`Quotation Template` field is determined by the order
-   of the templates in the Quotation Templates form. The order of the quotations in the Quotation
-   Templates form does **not** affect anything else.
+The quotation templates in the :guilabel:`New` drop-down menu appear in the same order as on the
+*Templates* page. The order of the templates on the *Templates* page does **not** affect anything
+else.
 
-To apply a section template, click :guilabel:`Add a section` and select a template from the
-drop-down menu.
+Preview a quotation in the customer portal
+------------------------------------------
 
-To view what the customer will see, click the :guilabel:`Preview` button at the top of the page to
-see how the quotation template appears on the front-end of the website through Odoo's customer
-portal.
+Preview the quotation as the customer sees it by clicking the :guilabel:`Preview` button at the top
+of the quotation. The preview shows the quotation on the front-end of the website, through Odoo's
+customer portal.
 
-.. image:: quote_template/quotations-templates-preview.png
-   :alt: Customer preview of a quotation template in Odoo Sales.
+To return to the quotation, click the :icon:`apps` :guilabel:`(Apps)` icon to open the Odoo home
+page. Go to :menuselection:`Sales app --> Orders --> Quotations` and select the desired quotation.
 
-When all blocks and customizations are complete, click the :guilabel:`Save` button to save the
-configuration.
+.. _sales/quote_templates/mass-cancel:
 
-The blue banner located at the top of the quotation template preview can be used to return
-:icon:`fa-arrow-right` :guilabel:`Back to edit mode`. When clicked, Odoo returns to the quotation
-form in the back-end of the *Sales* application.
+Cancel multiple quotations or sales orders at once
+==================================================
 
-Mass cancel quotations/sales orders
-===================================
+Cancel several quotations or sales orders at once by selecting them in the *Quotations* list view
+and choosing :menuselection:`Actions --> Cancel`. Quotations can be canceled at any stage, including
+after they are confirmed as sales orders.
 
-Cancel multiple quotations (or sales orders) by navigating to the :menuselection:`Sales app -->
-Orders --> Quotations` dashboard, landing, by default, in the list view. Then, on the left side of
-the table, tick the checkboxes for the quotations to be canceled.
+To cancel multiple quotations or sales orders, follow these steps:
 
-.. tip::
-   Select all records in the table by selecting the checkbox column header at the top-left of the
-   table; the total number of selected items are displayed at the top of the page.
+1. Go to :menuselection:`Sales app --> Orders --> Quotations`. The dashboard opens in list view by
+   default.
+#. In the search bar, remove the :guilabel:`My Quotations` filter.
+#. Click the search bar and select the :guilabel:`Quotations` filter, the :guilabel:`Sales Orders`
+   filter, or both.
+#. Select the checkbox on the left side of each record to cancel. To select every record in the
+   table, select the checkbox in the column header. The number of selected records appears at the
+   top of the page.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` button, then select :guilabel:`Cancel`.
+#. In the *Cancel* confirmation pop-up window, click :guilabel:`Cancel`.
 
-Then, with the desired quotations (or sales orders) selected from the list view on the *Quotations*
-page, click the :icon:`fa-cog` :guilabel:`Actions` button to reveal a drop-down menu.
+.. figure:: quote_template/cancel-quotations.png
+   :alt: The Cancel option on the Actions drop-down menu in the Sales application.
 
-From this drop-down menu, select :guilabel:`Cancel`.
+   The :guilabel:`Cancel` option on the :guilabel:`Actions` drop-down menu to cancel multiple sales
+   quotations.
 
-.. image:: quote_template/cancel-quotations.png
-   :alt: The Cancel option on the Actions drop-down menu in the Odoo Sales application.
-
-.. note::
-   This action can be performed for quotations in *any* stage, even if it is confirmed as a sales
-   order.
-
-Upon selecting the :guilabel:`Cancel` option, a *Cancel* pop-up window appears. To complete the
-cancellation, click :guilabel:`Cancel`.
-
-.. note::
-   An error pop-up message appears when attempting to cancel an order for an ongoing subscription
-   that has an invoice.
+Cancellation fails for an order that belongs to an ongoing subscription with an invoice. In that
+case, Odoo displays an error pop-up message.
 
 .. seealso::
    - :doc:`get_signature_to_validate`
    - :doc:`get_paid_to_validate`
-   - `Tutorial: Quote calculator Basics <quote-calculator_>`_
-
+   - `Tutorial: Quote Calculator Basics <quote-calculator_>`_
