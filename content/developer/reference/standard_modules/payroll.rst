@@ -164,4 +164,5 @@ Computing a payslip
    payroll/hr_version
    payroll/hr_salary_attachment
    payroll/declarations
+   payroll/salary_configurator
    payroll/localization
