@@ -167,6 +167,34 @@ if odoo_dir_in_path:
         from odoo import upgrade
         upgrade.__path__.append(str((upgrade_util_dir / 'src').resolve()))
 
+# Search for the directory of odoo enterprise sources to also document enterprise modules
+enterprise_dir_in_path = False
+enterprise_source_dir = None
+if odoo_dir_in_path:
+    enterprise_dir = os.environ.get('DOCUMENTATION_ENTERPRISE_SOURCE_DIR')
+    enterprise_dir = next(
+        (d for d in ([Path(enterprise_dir)] if enterprise_dir else [Path('enterprise'), Path('../enterprise')])
+         if (d / 'web_enterprise' / '__manifest__.py').exists()),
+        None,
+    )
+    if not enterprise_dir:
+        _logger.warning(
+            "Could not find Odoo Enterprise sources directory in `enterprise`.\n"
+            "The 'Developer' documentation will be built but autodoc directives targeting "
+            "enterprise modules will be skipped.\n"
+            "In order to fully build the 'Developer' documentation, clone the repository with "
+            "`git clone https://github.com/odoo/enterprise` or create a symbolic link.\n"
+            "You can also provide the path to the enterprise sources directory with the "
+            "environment variable DOCUMENTATION_ENTERPRISE_SOURCE_DIR",
+        )
+    else:
+        enterprise_source_dir = str(enterprise_dir.resolve())
+        _logger.info(
+            "Found Odoo Enterprise sources in %(directory)s", {'directory': enterprise_source_dir},
+        )
+        odoo.addons.__path__.append(enterprise_source_dir)
+        enterprise_dir_in_path = True
+
 # Mapping between odoo models related to master data and the declaration of the
 # data. This is used to point users to available xml_ids when giving values for
 # a field with the autodoc_field extension.
@@ -440,6 +468,7 @@ def setup(app):
 
     # Add a `condition` option on directives to ignore them based on config values
     app.add_config_value('odoo_dir_in_path', None, 'env')
+    app.add_config_value('enterprise_dir_in_path', None, 'env')
     def context_eval(expr):
         return eval(expr, {confval.name: confval.value for confval in app.config})
 
@@ -457,6 +486,21 @@ def setup(app):
         docutils.parsers.rst.directives.tables.CSVTable,
     ):
         patch(to_patch)
+
+    # Skip autodoc directives targeting addons missing from the sources (e.g. enterprise ones)
+    if odoo_dir_in_path and not enterprise_dir_in_path:
+        from sphinx.ext.autodoc.directive import AutodocDirective
+
+        original_autodoc_run = AutodocDirective.run
+        def autodoc_run(self):
+            parts = self.arguments[0].split('.')
+            if parts[:2] == ['odoo', 'addons'] and len(parts) > 2 and not any(
+                (Path(addons_dir) / parts[2] / '__manifest__.py').exists()
+                for addons_dir in odoo.addons.__path__
+            ):
+                return []
+            return original_autodoc_run(self)
+        AutodocDirective.run = autodoc_run
 
 
 def _generate_alternate_urls(app, pagename, templatename, context, doctree):

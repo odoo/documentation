@@ -11,6 +11,7 @@
 - A local copy of the [odoo/odoo](https://github.com/odoo/odoo) repository (optional)
 - A local copy of the [odoo/upgrade-util](https://github.com/odoo/upgrade-util) repository
   (optional)
+- A local copy of the [odoo/enterprise](https://github.com/odoo/enterprise) repository (optional)
 
 ### Quick start
 
@@ -42,12 +43,15 @@ When building the documentation for a specific language or version, the build fi
 
 ### Using local Odoo sources
 
-If you have local checkouts of `odoo/odoo` and/or `odoo/upgrade-util`, place them either:
+If you have local checkouts of `odoo/odoo`, `odoo/upgrade-util` and/or `odoo/enterprise`, place them
+either:
 - as siblings of this repository (in the parent directory), or
 - inside the `documentation` directory.
 
 When present in one of these locations, the build will include Python docstrings from those
-repositories if their version matches the documentation's version.
+repositories if their version matches the documentation's version. The `odoo/enterprise` sources
+are only used along with the `odoo/odoo` ones; without them, the docstrings of enterprise modules are
+skipped.
 
 ### Troubleshooting
 

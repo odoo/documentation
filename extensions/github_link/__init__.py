@@ -10,6 +10,8 @@ Settings
 * ``github_user``, username/organisation under which the project lives
 * ``github_project``, name of the project on github
 * (optional) ``version``, github branch to link to (default: master)
+* (optional) ``enterprise_source_dir``, path of the enterprise sources, whose
+  objects are linked to the ``enterprise`` project
 
 Notes
 =====
@@ -30,6 +32,7 @@ from urllib.parse import urlunsplit
 def setup(app):
     app.add_config_value('github_user', None, 'env')
     app.add_config_value('github_project', None, 'env')
+    app.add_config_value('enterprise_source_dir', None, 'env')
     app.connect('html-page-context', add_doc_link)
 
     def linkcode_resolve(domain, info):
@@ -70,6 +73,11 @@ def setup(app):
             from odoo.upgrade import util
             project = 'upgrade-util'
             project_root = os.path.join(os.path.dirname(util.__file__), '../..')
+        elif app.config.enterprise_source_dir and os.path.realpath(obj_source_path).startswith(
+            os.path.join(app.config.enterprise_source_dir, '')
+        ):
+            project = 'enterprise'
+            project_root = app.config.enterprise_source_dir
         else:
             from odoo import release
             project = 'odoo'
