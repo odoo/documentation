@@ -6,13 +6,14 @@
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:33+0000\n"
-"PO-Revision-Date: 2026-09-22 04:35+0000\n"
-"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
+"PO-Revision-Date: 2026-10-23 09:34+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
 "websites/ja/>\n"
 "Language: ja\n"
@@ -2035,6 +2036,9 @@ msgid ""
 "Customer` :ref:`action <building_blocks/forms/action>` to automatically "
 "create a customer record in the backend when filled in."
 msgstr ""
+"ウェブサイトフォームに:guilabel:`顧客を作成`:ref:`アクション <website/"
+"building_blocks/action>`を設定することで、フォームへの入力時にバックエンドで"
+"顧客レコードを自動的に作成することができます。"
 
 #: ../../content/applications/websites/ecommerce/configuration/customer_accounts.rst:74
 msgid "Access restriction"
@@ -11557,7 +11561,7 @@ msgstr ""
 #: ../../content/applications/websites/website.rst:16
 #: ../../content/applications/websites/website/website_creation.rst:3
 msgid "Website creation"
-msgstr ""
+msgstr "ウェブサイト作成"
 
 #: ../../content/applications/websites/website.rst:16
 msgid ""
@@ -12453,6 +12457,9 @@ msgid ""
 "to :ref:`route incoming emails directly to your Odoo database via DNS "
 "records <dns_record_setup>`."
 msgstr ""
+"専用サブドメイン(例: ``mail.mydomain.com``)を作成し、\\ :ref:`DNSレコード経由"
+"で受信メールをOdooデータベースに直接ルーティング <dns_record_setup>`\\ します"
+"。"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:130
 msgid "Use an external email provider"
@@ -13132,6 +13139,12 @@ msgid ""
 "CAA records configured for the domain must `allow Let's Encrypt <https://"
 "letsencrypt.org/docs/caa/>`_, otherwise certificate generation may fail."
 msgstr ""
+"Odooは、\\ :ref:`データベースにマッピングされた <domain-name/existing/db-map>"
+"`\\ 各ドメインに対して、\\ `Let's Encryptの認証局とACMEプロトコル <https://"
+"letsencrypt.org/how-it-works/>`_\\ を使用して個別のSSL証明書を生成します。該"
+"当ドメインに設定されているCAAレコードは、\\ `Let's Encryptを許可 <https://"
+"letsencrypt.org/docs/caa/>`_\\ している必要があります。そうでない場合、証明書"
+"の生成に失敗する可能性があります。"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:417
 msgid "Certificate generation may take up to 24 hours."
@@ -13601,6 +13614,10 @@ msgid ""
 "multiple brands operating under your organization, or if you want to create "
 "separate websites for different products/services or audiences."
 msgstr ""
+"Odooでは、同じデータベースから複数のウェブサイトを\\ :doc:`作成 <../"
+"website_creation>`\\ できます。これは、組織内で複数のブランドを展開している場"
+"合や、異なる製品/サービスまたはターゲット層向けに個別のウェブサイトを作成した"
+"い場合に便利です。"
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:10
 msgid "Creating another website"
@@ -13666,6 +13683,11 @@ msgid ""
 "website's address in the :guilabel:`Website Domain` field (e.g., `https://"
 "www.yourseconddomain.com` or `https://subdomain.yourdomain.com`)."
 msgstr ""
+"\\ :ref:`2つ目のドメイン名のアドレスを2つ目のOdooウェブサイトにマッピング "
+"<domain-name/existing/website-map>`\\ する段階になったら、\\ `作成 <../../"
+"website_creation>`\\ して、\\ :guilabel:`ウェブサイトドメイン`\\ フィールドに"
+"2つ目のウェブサイトのアドレス(例: `https://www.yourseconddomain.com` または "
+"`https://subdomain.yourdomain.com`)を入力することで直接マッピングできます。"
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:34
 msgid ""
@@ -14933,6 +14955,10 @@ msgid ""
 "dashboard is integrated into Odoo and can be accessed "
 "via :menuselection:`Website --> Reporting --> Analytics`."
 msgstr ""
+"Odooは独自のPlausible.ioサーバーをホストしており、Plausible"
+"アナリティクスダッシュボードはOdooに統合され、\\ "
+":menuselection:`ウェブサイト --> レポート --> アナリティクス`\\ からアクセス"
+"できます。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:20
 msgid ""
@@ -14944,12 +14970,22 @@ msgid ""
 "The credentials are automatically filled in the :guilabel:`Shared Link Auth` "
 "and the :guilabel:`Site` fields."
 msgstr ""
+"Odoo Onlineでホストされているデータベースは、自動生成された認証情報と事前設定"
+"されたPlausibleアカウントを備えた、無料ですぐに使えるPlausible.io"
+"ソリューションを利用できます。有効にするには、\\ "
+":menuselection:`ウェブサイト --> 設定 --> 設定`\\ に移動し、\\ "
+":guilabel:`トラッキング & SEO`\\ セクションで\\ :guilabel:`Plausible"
+"アナリティクス`\\ を有効にして\\ :guilabel:`保存`\\ をクリックします。認証情"
+"報は\\ :guilabel:`共有リンク認証`\\ フィールドと\\ :guilabel:`サイト`\\ "
+"フィールドに自動的に入力されます。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:27
 msgid ""
 "Click the :icon:`fa-arrow-right` :guilabel:`See Analytics Report` link to "
 "open the corresponding report."
 msgstr ""
+"\\ :icon:`fa-arrow-right` \\ :guilabel:`アナリティクスレポートを見る`\\ "
+"リンクをクリックして、対応するレポートを開きます。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:31
 msgid ""
@@ -15019,12 +15055,17 @@ msgid ""
 "own Plausible.io account or use an existing one and link it to your "
 "database. To do so, follow these steps:"
 msgstr ""
+"データベースがOdoo.shまたはオンプレミスでホストされている場合は、独自の"
+"Plausible.ioアカウントを作成するか既存のアカウントを使用して、データベースに"
+"リンクする必要があります。これを行うには、次の手順に従います:"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:61
 msgid ""
 "`Create <https://plausible.io/register>`_ or `sign in <https://plausible.io/"
 "login>`_ to a Plausible.io account."
 msgstr ""
+"`作成 <https://plausible.io/register>`_\\ するか、Plausible.ioアカウントに\\ "
+"`サインイン <https://plausible.io/login>`_\\ します。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:63
 msgid ""
@@ -15036,6 +15077,13 @@ msgid ""
 "your site. Once done, click :guilabel:`I've installed it` to proceed to the "
 "next step."
 msgstr ""
+"新しいアカウントを作成する場合は、登録と有効化の手順を実行します。\\ "
+":guilabel:`ウェブサイトを追加`\\ ページで、\\ `www`\\ や\\ `http`\\ を含めず"
+"にウェブサイトの\\ :guilabel:`ドメイン`\\ 名(例: `example.com`)を入力し、\\ "
+":guilabel:`サイトを追加`\\ をクリックします。\\ :guilabel:`サイトに"
+"トラッキングを追加`\\ ページで、画面の指示に従ってサイトにPlausibleを"
+"インストールします。完了したら、\\ :guilabel:`インストール完了`\\ をクリック"
+"して次のステップに進みます。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:68
 msgid ""
@@ -15058,6 +15106,8 @@ msgid ""
 "In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add "
 "shared link`."
 msgstr ""
+"サイドバーで:guilabel:`公開設定`を選択し、:guilabel:`共有リンクを追加`を"
+"クリックします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:76
 msgid ""
@@ -15074,6 +15124,8 @@ msgid ""
 "Click :icon:`fa-files-o` :guilabel:`COPY` to add the shared link to the "
 "clipboard."
 msgstr ""
+"\\ :icon:`fa-files-o` \\ :guilabel:`コピー`\\ をクリックして、共有リンクを"
+"クリップボードにコピーします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:0
 msgid "Copy the shared link URL from Plausible.io"
@@ -15103,6 +15155,12 @@ msgid ""
 "settings, ensure that the correct website is selected from the dropdown menu "
 "at the top of the page before pasting the shared link."
 msgstr ""
+"\\ :doc:`複数のウェブサイト <../configuration/multi_website>`\\ をお持ちの場"
+"合は、`<https://plausible.io/sites>`_\\ にアクセスして\\ :guilabel:`+ "
+"ウェブサイトを追加`\\ をクリックし、Plausible.ioアカウントに追加します。Odoo"
+"のウェブサイト設定では、共有リンクを貼り付ける前に、ページ上部の"
+"ドロップダウンメニューから正しいウェブサイトが選択されていることを確認してく"
+"ださい。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:93
 msgid ""
@@ -15112,6 +15170,11 @@ msgid ""
 "navigate to :guilabel:`Goals` in the sidebar menu, and click :guilabel:`Add "
 "goal` :icon:`fa-caret-down`."
 msgstr ""
+"Odooは、`Lead Generation` と `Shop` の2つのカスタム目標を自動的にプッシュしま"
+"す。カスタム目標はPlausible.io経由で追加できます。追加するには、該当する"
+"ウェブサイトカードにある\\ :icon:`fa-ellipsis-v` (\\ :guilabel:`省略記号`\\ )"
+"ボタンをクリックし、サイドバーメニューの\\ :guilabel:`目標`\\ に移動して、\\ "
+":guilabel:`目標を追加` :icon:`fa-caret-down`\\ をクリックします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:99
 msgid "`Plausible Analytics documentation <https://plausible.io/docs>`_"
@@ -15149,6 +15212,11 @@ msgid ""
 "plus` :guilabel:`Create` :icon:`fa-caret-down` and "
 "select :guilabel:`Property` from the drop-down menu."
 msgstr ""
+"Google アナリティクスのアカウントを既にお持ちの場合は、サインインしてページ左"
+"下隅の\\ :icon:`fa-cog`\\ アイコンをクリックし、\\ :guilabel:`管理`\\ ページ"
+"にアクセスします。次に、\\ :icon:`fa-plus` \\ :guilabel:`作成` \\ :icon:`fa-"
+"caret-down`\\ をクリックし、ドロップダウンメニューから\\ "
+":guilabel:`プロパティ`\\ を選択します。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:115
 msgid ""
@@ -15157,6 +15225,10 @@ msgid ""
 "&visit_id=638278591144564289-3612494643&rd=2#property>`_, :guilabel:`Business "
 "details`, and :guilabel:`Business objectives`, and click :guilabel:`Create`."
 msgstr ""
+"次のステップ(\\ `プロパティ作成 <https://support.google.com/analytics/answer/"
+"9304153?hl=en/&visit_id=638278591144564289-3612494643&rd=2#property>`_\\ 、\\"
+" :guilabel:`ビジネスの詳細`\\ 、\\ :guilabel:`ビジネス目標`\\ )を完了し、\\ "
+":guilabel:`作成`\\ をクリックします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:117
 msgid ""
@@ -15172,18 +15244,25 @@ msgid ""
 "a :guilabel:`Stream name`, then click :guilabel:`Create & continue` in the "
 "upper-right corner."
 msgstr ""
+"データストリームを設定します:\\ :guilabel:`ウェブサイトURL`\\ と\\ "
+":guilabel:`ストリーム名`\\ を指定し、右上隅にある\\ :guilabel:`作成して続"
+"行`\\ をクリックします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:120
 msgid ""
 "Close the :guilabel:`Set up a Google Tag` popover, as no Google Tag is "
 "required to link Google Analytics to Odoo."
 msgstr ""
+"\\ :guilabel:`Googleタグの設定`\\ ポップオーバーを閉じます。Google "
+"アナリティクスをOdooに連携するのにGoogleタグは必要ありません。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:122
 msgid ""
 "In the :guilabel:`Web stream details` popover, copy "
 "the :guilabel:`Measurement ID`."
 msgstr ""
+"\\ :guilabel:`ウェブストリームの詳細`\\ ポップオーバーで、\\ :guilabel:`測定"
+"ID`\\ をコピーします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:0
 msgid "Measurement ID in Google Analytics."
@@ -15206,6 +15285,13 @@ msgid ""
 "in the field next to :icon:`fa-plus` :guilabel:`New website` at the top of "
 "the page before pasting the :guilabel:`Measurement ID`."
 msgstr ""
+"個別ドメインを持つ\\ :doc:`複数のウェブサイト <../configuration/"
+"multi_website>`\\ がある場合は、ドメインごとに\\ `1つのプロパティ <https://"
+"support.google.com/analytics/answer/9304153?hl=en/"
+"&visit_id=638278591144564289-3612494643&rd=2#property>`_\\ を作成することをお"
+"勧めします。Odooの\\ **ウェブサイト**\\ 設定で、ページ上部の\\ :icon:`fa-"
+"plus` :guilabel:`新規ウェブサイト`\\ の横にあるフィールドで適切なウェブサイト"
+"を選択してから、\\ :guilabel:`測定ID`\\ を貼り付けてください。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:139
 msgid ""
@@ -15225,6 +15311,9 @@ msgid ""
 "update measurement codes and related code fragments, collectively known as "
 "tags, on your website or mobile app, directly through the code injector."
 msgstr ""
+"Googleタグマネージャーは、ウェブサイトやモバイルアプリ上の測定コードおよび関"
+"連するコードフラグメント(総称してタグと呼ばれます)を、コードインジェクターを"
+"通じて直接簡単に更新できるタグ管理システムです。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:152
 msgid ""
@@ -15233,6 +15322,10 @@ msgid ""
 "Analytics to provide more detailed insights. To use GTM properly, it is "
 "recommended to configure Google Analytics as well."
 msgstr ""
+":abbr:`GTM (Googleタグマネージャー)`\\ は分析ツールではなく、レポート機能は提"
+"供していません。データ収集に使用され、Googleアナリティクスと連携してより詳細"
+"なインサイトを提供します。GTMを適切に使用するには、Googleアナリティクスも設定"
+"することをお勧めします。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:156
 msgid ""
@@ -15240,6 +15333,9 @@ msgid ""
 "Analytics and Google Tag Manager <https://support.google.com/tagmanager/"
 "answer/9442095?hl=en>`_."
 msgstr ""
+"詳細については、`Google AnalyticsとGoogleタグマネージャーのリンクに関する"
+"ドキュメント <https://support.google.com/tagmanager/answer/9442095?hl=en>`_を"
+"参照してください。"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:160
 msgid ""
@@ -15504,6 +15600,12 @@ msgid ""
 "legal notices, and other useful information. Both can be customized as "
 "needed."
 msgstr ""
+"ウェブサイトのヘッダーはウェブページの最上部セクションであり、通常、ロゴ、"
+"ナビゲーション\\ :ref:`メニュー <website/header_footer/header-content>`\\ 、"
+"検索バー、サインインまたは\\ :doc:`顧客アカウント <../../ecommerce/"
+"configuration/customer_accounts>`\\ ボタンなどの要素が含まれます。フッターは"
+"ウェブページの最下部に表示され、通常、連絡先情報、リンク、法的通知、その他の"
+"有用な情報が含まれます。どちらも必要に応じてカスタマイズできます。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:14
 msgid "Header content"
@@ -15517,6 +15619,11 @@ msgid ""
 "menus also play an important role in improving :doc:`search engine rankings "
 "<seo>`."
 msgstr ""
+"ヘッダーには会社情報、クイックアクセスボタン、ユーザーがウェブサイトを効率的"
+"にナビゲートできるようにするための\\ :ref:`ウェブサイトメニュー <website/"
+"header_footer/menu-editor>`\\ が含まれています。適切に構成された使いやすい"
+"ヘッダーとメニューは、\\ :doc:`検索エンジンの順位 <seo>`\\ を向上させる上でも"
+"重要な役割を果たします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:24
 msgid "Menu editor"
@@ -15528,36 +15635,50 @@ msgid ""
 "items <website/header_footer/menu-items>` and :ref:`mega menus <website/"
 "header_footer/mega-menus>`."
 msgstr ""
+"メニューエディタを使用すると、ウェブサイトヘッダーを編集し、\\ :ref:`メニュー"
+"項目 <website/header_footer/menu-items>`\\ や\\ :ref:`メガメニュー <website/"
+"header_footer/mega-menus>`\\ を追加できます。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:31
 msgid ""
 "To open the menu editor, go to :menuselection:`Website --> Site --> Menu "
 "Editor`. From there, you can:"
 msgstr ""
+"メニューエディタを開くには、\\ :menuselection:`ウェブサイト --> サイト --> "
+"メニューエディタ`\\ に移動します。そこから以下の操作を行えます:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:34
 msgid ""
 "**Rename** a menu item or change its URL using the :icon:`fa-pencil` "
 "(:guilabel:`Edit Menu Item`) icon."
 msgstr ""
+"メニュー項目の\\ **名前を変更**\\ するか、そのURLを変更するには、\\ "
+":icon:`fa-pencil` (\\ :guilabel:`メニュー項目を編集`\\ )アイコンを使用します"
+"。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:36
 msgid ""
 "**Delete** a menu item using the :icon:`fa-trash` (:guilabel:`Delete Menu "
 "Item`) icon."
 msgstr ""
+"メニュー項目を\\ **削除**\\ するには、\\ :icon:`fa-trash` (\\ "
+":guilabel:`メニュー項目を削除`\\ )アイコンを使用します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:37
 msgid ""
 "**Move** a menu item by dragging and dropping it to the desired location in "
 "the menu."
 msgstr ""
+"メニュー内の希望の場所にドラッグ＆ドロップして、メニュー項目を\\ **移動**\\ "
+"します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:38
 msgid ""
 "**Create a regular drop-down menu** by dragging and dropping the sub-menu "
 "items to the right, underneath their parent menu."
 msgstr ""
+"サブメニュー項目を右側の親メニューの下にドラッグ&ドロップして、**通常の"
+"ドロップダウンメニューを作成**する"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:None
 msgid "Menu editor with sub-menus"
@@ -15568,20 +15689,26 @@ msgid ""
 "You can also access the menu editor from the website editor. To do so, "
 "either:"
 msgstr ""
+"メニューエディタには、ウェブサイトエディタからもアクセスできます。これを行う"
+"には、次のいずれかを実行します:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:48
 msgid "Select any menu item and click :guilabel:`Edit Menu`, or"
 msgstr ""
+"任意のメニュー項目を選択して\\ :guilabel:`メニューを編集`\\ をクリックするか"
+"、"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:0
 msgid "Access the menu editor while in Edit mode."
-msgstr ""
+msgstr "編集モード中にメニューエディターにアクセスします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:53
 msgid ""
 "Navigate to the :guilabel:`Style` tab, and click :guilabel:`Edit Menu` next "
 "to the :guilabel:`Header` section title."
 msgstr ""
+"\\ :guilabel:`スタイル`\\ タブに移動し、\\ :guilabel:`メニューを編集`\\ （\\ "
+":guilabel:`ヘッダー`\\ セクションタイトルの横）をクリックします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:59
 msgid "Add menu items"
@@ -15602,18 +15729,25 @@ msgid ""
 "In the :ref:`menu editor <website/header_footer/open-menu-editor>`, "
 "click :guilabel:`Add Menu Item`."
 msgstr ""
+"\\ :ref:`メニューエディタ <website/header_footer/open-menu-editor>`\\ で、\\ "
+":guilabel:`メニュー項目を追加`\\ をクリックします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:66
 msgid ""
 "In the pop-up window, enter the :guilabel:`Title` to be displayed in the "
 "menu."
 msgstr ""
+"ポップアップウィンドウで、メニューに表示する\\ :guilabel:`タイトル`\\ を入力"
+"します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:67
 msgid ""
 "In the :guilabel:`URL or Email` field, type `/` to search for an existing "
 "page on the website or `#` to search for an existing custom anchor."
 msgstr ""
+"\\ :guilabel:`URLまたはメール`\\ フィールドで、\\ `/`\\ を入力して"
+"ウェブサイト上の既存のページを検索するか、\\ `#`\\ を入力して既存の"
+"カスタムアンカーを検索します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:71
 msgid ""
@@ -15622,6 +15756,11 @@ msgid ""
 "up. If you add the menu item without creating the corresponding page, the "
 "link leads to a :ref:`404 error page <website/pages/URL-redirection>`."
 msgstr ""
+"まだ存在しないページのメニュー項目を追加するには、新しいURLまたはアンカーを入"
+"力し、\\ :guilabel:`ページを作成`\\ （\\ :guilabel:`メニューを編集`\\ "
+"ポップアップ内）をクリックします。対応するページを作成せずにメニュー項目を追"
+"加すると、リンクは\\ :ref:`404エラーページ <website/pages/URL-redirection>`\\"
+" につながります。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:77
 #: ../../content/applications/websites/website/structure/header_footer.rst:149
@@ -15629,6 +15768,8 @@ msgid ""
 "Adjust the :ref:`menu structure <website/header_footer/menu-editor>` if "
 "needed."
 msgstr ""
+"必要に応じて\\ :ref:`メニュー構造 <website/header_footer/menu-editor>`\\ を調"
+"整します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:83
 msgid "Menu item design"
@@ -15641,36 +15782,50 @@ msgid ""
 "navigate to the :guilabel:`Navigation` section. The following options are "
 "available:"
 msgstr ""
+"メニュー項目のデザインを変更するには、右上の\\ :guilabel:`編集`\\ をクリック"
+"してヘッダーを選択します。次に、\\ :guilabel:`スタイル`\\ タブに移動し、\\ "
+":guilabel:`ナビゲーション`\\ セクションへ進みます。次のオプションが利用可能で"
+"す:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:89
 msgid "Adjust the :guilabel:`Desktop Menu` alignment for desktop devices."
 msgstr ""
+"デスクトップ端末向けに\\ :guilabel:`デスクトップメニュー`\\ の配置を調整しま"
+"す。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:90
 msgid ""
 "Adjust the :guilabel:`Mobile Menu` alignment and position for mobile devices."
 msgstr ""
+"モバイル端末向けに\\ :guilabel:`モバイルメニュー`\\ の配置と位置を調整します"
+"。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:91
 msgid ""
 "Choose whether :guilabel:`Sub Menus` open :guilabel:`On Hover` "
 "or :guilabel:`On Click`."
 msgstr ""
+"\\ :guilabel:`サブメニュー`\\ を\\ :guilabel:`ホバー時`\\ または\\ "
+":guilabel:`クリック時`\\ のどちらで開くかを選択します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:92
 msgid ""
 "Select a :guilabel:`Link Style` to highlight the current page in the menu."
 msgstr ""
+"メニュー内で現在のページを強調表示する\\ :guilabel:`リンクスタイル`\\ を選択"
+"します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:95
 msgid ""
 "The options available in the :guilabel:`Navigation` section may vary "
 "depending on the selected template."
 msgstr ""
+"\\ :guilabel:`ナビゲーション`\\ セクションで利用可能なオプションは、選択した"
+"テンプレートによって異なる場合があります。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:101
 msgid "Hide a dynamic menu item for non-logged-in users"
-msgstr ""
+msgstr "ログインしていないユーザーに対して動的メニュー項目を非表示にする"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:103
 msgid ""
@@ -15678,6 +15833,9 @@ msgid ""
 "commerce access to logged-in users <ecommerce/customer_accounts/shop-"
 "access>`."
 msgstr ""
+"未ログインユーザーに対して\\ `ショップ`\\ メニュー項目を非表示にするには、\\ "
+":ref:`eコマースへのアクセスをログインユーザーに制限 <ecommerce/"
+"customer_accounts/shop-access>`\\ します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:106
 msgid ""
@@ -15686,6 +15844,10 @@ msgid ""
 "installing an app or module, such as `Events`, `Courses`, etc.) to non-"
 "logged-in users, follow these steps:"
 msgstr ""
+"未ログインユーザーに対して\\ :ref:`動的 <website/pages/page_type>`\\ ページに"
+"関連する他のメニュー項目（アプリやモジュールをインストールした際にOdooによっ"
+"て自動生成されるメニュー項目、例えば\\ `イベント`\\ 、\\ `コース`\\ など）を"
+"非表示にするには、次の手順に従います:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:110
 msgid ":ref:`Enable developer mode <developer-mode>`."
@@ -15697,22 +15859,26 @@ msgstr ":menuselection:`ウェブサイト --> 設定 --> メニュー`に移動
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:112
 msgid "Expand the list of menus for the relevant website if needed."
-msgstr ""
+msgstr "必要に応じて、該当するウェブサイトのメニュー一覧を展開します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:113
 msgid "Select the menu item you wish to hide."
-msgstr ""
+msgstr "非表示にするメニュー項目を選択します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:114
 msgid ""
 "In the :guilabel:`Visible Groups` section, click :guilabel:`Add a line`."
 msgstr ""
+"\\ :guilabel:`表示グループ`\\ セクションで、\\ :guilabel:`行を追加`\\ を"
+"クリックします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:115
 msgid ""
 "Search for the group :guilabel:`Name` :guilabel:`Role / Portal`, "
 "and :guilabel:`Select` it."
 msgstr ""
+"グループ\\ :guilabel:`名前` :guilabel:`ロール / ポータル`\\ を検索し、\\ "
+":guilabel:`選択`\\ します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:116
 msgid "Save."
@@ -15722,28 +15888,36 @@ msgstr "セーブ。"
 msgid ""
 "You can further customize the menu items on this menu item form. For example:"
 msgstr ""
+"このメニュー項目フォームでは、メニュー項目をさらにカスタマイズできます。例え"
+"ば:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:121
 msgid ""
 "Enable the :guilabel:`New Window` checkbox to open the page in a new tab "
 "when clicked."
 msgstr ""
+"クリック時に新しいタブでページを開くには、\\ :guilabel:`新規ウィンドウ`\\ "
+"チェックボックスを有効にします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:122
 msgid "Add a :guilabel:`Related Page` or :guilabel:`Related Model Page`."
 msgstr ""
+"\\ :guilabel:`関連ページ`\\ または\\ :guilabel:`関連モデルページ`\\ を追加し"
+"ます。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:123
 msgid ""
 "Assign a :guilabel:`Parent Menu`, and/or :guilabel:`Child Menus` to create a "
 "hierarchy."
 msgstr ""
+"階層を作成するには、\\ :guilabel:`親メニュー`\\ や\\ :guilabel:`子メニュー`\\"
+" を割り当てます。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:126
 #: ../../content/applications/websites/website/web_design/visibility.rst:112
 msgid ""
 ":ref:`Manage the visibility of static pages <website/pages/page_properties>`"
-msgstr ""
+msgstr ":ref:`静的ページの表示を管理 <website/pages/page_properties>`"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:131
 msgid "Mega menus"
@@ -15759,6 +15933,13 @@ msgid ""
 "<ecommerce/categories_variants/categories>` in the menu while keeping all "
 "menu items visible at once."
 msgstr ""
+"メガメニューはドロップダウンメニューに似ていますが、サブメニューの単純な"
+"リストを表示する代わりに、ナビゲーションオプションのグループに分割された"
+"パネルを表示します。コンテンツ量が多いウェブサイトや\\ :doc:`e"
+"コマースウェブサイト <../../ecommerce>`\\ で特に役立ち、すべてのメニュー項目"
+"を一度に表示したまま、すべてのウェブページや\\ :ref:`eコマースカテゴリ "
+"<ecommerce/categories_variants/categories>`\\ をメニューに含めることができま"
+"す。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:None
 msgid "Mega menu in the navigation bar."
@@ -15766,17 +15947,21 @@ msgstr "ナビゲーションバーのメガメニュー。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:143
 msgid "To create a mega menu, follow these steps:"
-msgstr ""
+msgstr "メガメニューを作成するには、次の手順に従います:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:145
 msgid ""
 "In the :ref:`menu editor <website/header_footer/open-menu-editor>`, "
 "click :guilabel:`Add Mega Menu Item`."
 msgstr ""
+"\\ :ref:`メニューエディタ <website/header_footer/open-menu-editor>`\\ で、\\ "
+":guilabel:`メガメニュー項目を追加`\\ をクリックします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:147
 msgid "In the pop-up window, enter the :guilabel:`Title` of the mega menu."
 msgstr ""
+"ポップアップウィンドウで、メガメニューの\\ :guilabel:`タイトル`\\ を入力しま"
+"す。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:152
 msgid ""
@@ -15785,16 +15970,22 @@ msgid ""
 "individually. To do so, click :guilabel:`Edit` in the upper-right corner, "
 "then select the mega menu. Then:"
 msgstr ""
+"メガメニューはデフォルトの\\ :doc:`ビルディングブロック <../web_design/"
+"building_blocks>`\\ を使用して構築されるため、各コンポーネントを個別に"
+"カスタマイズする必要があります。これを行うには、右上隅の\\ :guilabel:`編集`\\"
+" をクリックし、メガメニューを選択します。その後:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:156
 msgid "Edit the text directly within the building block."
-msgstr ""
+msgstr "ビルディングブロック内のテキストを直接編集します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:157
 msgid ""
 "Edit a :ref:`menu item's URL <website/header_footer/menu-items>` by "
 "selecting the mega menu item and clicking the :guilabel:`Edit` button."
 msgstr ""
+"\\ :ref:`メニュー項目のURL <website/header_footer/menu-items>`\\ を編集するに"
+"は、メガメニュー項目を選択して\\ :guilabel:`編集`\\ ボタンをクリックします。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:0
 msgid "Edit a mega menu option."
@@ -15813,10 +16004,12 @@ msgid ""
 "Delete a menu item by clicking the :icon:`fa-trash` (:guilabel:`Remove`) "
 "icon of the related block."
 msgstr ""
+"関連ブロックの\\ :icon:`fa-trash` (:guilabel:`削除`) アイコンをクリックして、"
+"メニュー項目を削除します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:169
 msgid "Mega menu design"
-msgstr ""
+msgstr "メガメニューのデザイン"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:171
 msgid ""
@@ -15825,6 +16018,11 @@ msgid ""
 "website editor, go to the :guilabel:`Style` tab, and navigate to "
 "the :guilabel:`Mega Menu` section. The following options are available:"
 msgstr ""
+"メガメニューおよび個別の\\ :doc:`ビルディングブロック <../web_design/"
+"building_blocks>`\\ の全体的なレイアウトをカスタマイズするには、"
+"ウェブサイトエディタを開いて\\ :guilabel:`スタイル`\\ タブに移動し、\\ "
+":guilabel:`メガメニュー`\\ セクションに進みます。次のオプションが利用可能で"
+"す:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:175
 msgid "Choose a :guilabel:`Template`."
@@ -15843,10 +16041,12 @@ msgid ""
 "Toggle :ref:`eCommerce Categories <ecommerce/categories_variants/"
 "categories>` if applicable."
 msgstr ""
+"該当する場合は、\\ :ref:`eコマースカテゴリ <ecommerce/categories_variants/"
+"categories>`\\ を切り替えます。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:182
 msgid "Header and footer design"
-msgstr ""
+msgstr "ヘッダーとフッターのデザイン"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:184
 msgid ""
@@ -15855,6 +16055,11 @@ msgid ""
 "the :guilabel:`Style` tab and navigate to the :guilabel:`Header` "
 "or :guilabel:`Footer` section. The following options are available:"
 msgstr ""
+"ヘッダーまたはフッターのデザインを変更するには、右上隅の\\ :guilabel:`編集`\\"
+" をクリックしてヘッダーまたはフッターを選択します。次に、\\ "
+":guilabel:`スタイル`\\ タブに移動し、\\ :guilabel:`ヘッダー`\\ または\\ "
+":guilabel:`フッター`\\ セクションに移動します。以下のオプションが利用可能で"
+"す:"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:188
 msgid "Choose a :guilabel:`Template` from the drop-down menu."
@@ -15866,6 +16071,9 @@ msgid ""
 "themes/theme-colors>` style, a :guilabel:`Custom` color option, or "
 "a :guilabel:`Gradient`."
 msgstr ""
+"\\ :guilabel:`背景`\\ 色を選択するには、\\ :ref:`テーマ <website/themes/"
+"theme-colors>`\\ スタイル、\\ :guilabel:`カスタム`\\ カラーオプション、また"
+"は\\ :guilabel:`グラデーション`\\ を設定します。"
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:191
 msgid "Set the :guilabel:`Content Width`."
@@ -17587,41 +17795,52 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:None
 msgid "Add the link to the embedded code you want to point to."
-msgstr ""
+msgstr "指定したい埋め込みコードへのリンクを追加します"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:82
 msgid ""
 "Only use embed code from sources you trust. Copying and pasting code you do "
 "not understand could put your data at risk."
 msgstr ""
+"信頼できるソースからの埋め込みコードのみを使用してください。理解していない"
+"コードをコピー＆ペーストすると、データが危険にさらされるおそれがあります。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:88
 msgid "Move, duplicate, or delete a building block"
-msgstr ""
+msgstr "ビルディングブロックの移動、複製、削除"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:90
 msgid ""
 "To adjust the position and size of a building block, use the following "
 "options:"
 msgstr ""
+"ビルディングブロックの位置とサイズを調整するには、以下のオプションを使用しま"
+"す："
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:92
 msgid ""
 "Drag the turquoise borders on the block to increase or decrease the space at "
 "the top or bottom."
 msgstr ""
+"ブロック上のターコイズ色の境界線をドラッグして、上部または下部のスペースを拡"
+"大または縮小します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:93
 msgid ""
 "Click the :icon:`fa-chevron-up` (:guilabel:`Move up`) or :icon:`fa-chevron-"
 "down` (:guilabel:`Move down`) icons to change the block's order."
 msgstr ""
+"ブロックの順序を変更するには、\\ :icon:`fa-chevron-up` (:guilabel:`上に移"
+"動`) または\\ :icon:`fa-chevron-down` (:guilabel:`下に移動`) アイコンを"
+"クリックします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:95
 msgid ""
 "Click the :icon:`fa-arrows` (:guilabel:`Drag and move`) icon to move the "
 "block on the page."
 msgstr ""
+"ページ上でブロックを移動するには、\\ :icon:`fa-arrows` (:guilabel:`ドラッグし"
+"て移動`) アイコンをクリックします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:96
 msgid ""
@@ -17630,20 +17849,28 @@ msgid ""
 "left` (:guilabel:`Move left`) or :icon:`fa-chevron-right` (:guilabel:`Move "
 "right`)."
 msgstr ""
+"ブロックに複数の\\ :ref:`カラム <website/building_blocks/columns>`\\ が含まれ"
+"ている場合、\\ :icon:`fa-chevron-left` (:guilabel:`左に移動`) または\\ "
+":icon:`fa-chevron-right` (:guilabel:`右に移動`) をクリックしてカラムを左右に"
+"移動します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:99
 msgid ""
 "Click :icon:`fa-clone` (:guilabel:`Duplicate`) to create a copy of the "
 "block. The duplicate is added below the original."
 msgstr ""
+"ブロックのコピーを作成するには、\\ :icon:`fa-clone` (:guilabel:`複製`) を"
+"クリックします。複製はオリジナルの下に追加されます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:101
 msgid "Click :icon:`fa-trash` (:guilabel:`Remove`) to delete the block."
 msgstr ""
+"ブロックを削除するには、\\ :icon:`fa-trash` (:guilabel:`削除`) をクリックしま"
+"す。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:0
 msgid "Building block options to move, duplicate , or remove it."
-msgstr ""
+msgstr "ビルディングブロックを移動、複製、または削除するためのオプション。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:107
 msgid ""
@@ -17651,6 +17878,9 @@ msgid ""
 "the :icon:`fa-clone` (:guilabel:`Duplicate this block`) or :icon:`fa-trash` "
 "(:guilabel:`Remove this block`) icon at the top of the tab."
 msgstr ""
+"または、ブロックをクリックして\\ :guilabel:`スタイル`\\ タブに移動し、タブ上"
+"部にある\\ :icon:`fa-clone` (:guilabel:`このブロックを複製`) または\\ "
+":icon:`fa-trash` (:guilabel:`このブロックを削除`) アイコンをクリックします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:112
 msgid ""
@@ -17677,6 +17907,13 @@ msgid ""
 "layout>`, and :ref:`content dimensions <website/building_blocks/content-"
 "layout>`."
 msgstr ""
+"ビルディングブロックをカスタマイズするには、ブロックをクリックして\\ "
+":guilabel:`スタイル`\\ タブに移動します。利用可能なカスタマイズオプションは、"
+"選択したブロックのタイプによって異なります。ほとんどのブロックでは、\\ "
+":ref:`背景 <website/building_blocks/background>`、\\ :ref:`レイアウト "
+"<website/building_blocks/layout>`、\\ :ref:`コンテンツの寸法 <website/"
+"building_blocks/content-layout>`\\ をカスタマイズするオプションが用意されてい"
+"ます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:130
 msgid ":doc:`Web design elements <elements>`"
@@ -17703,6 +17940,12 @@ msgid ""
 "videos>`, and/or shape. After selecting an option, additional options are "
 "available to customize it."
 msgstr ""
+"ビルディングブロックの背景をカスタマイズするには、カラードットまたはその他"
+"の\\ :guilabel:`背景`\\ オプションをクリックします。選択したオプションに応じ"
+"て、背景の\\ :ref:`色 <website/themes/theme-colors>`\\ を変更したり、\\ "
+":ref:`画像 <website/elements/images>`\\ 、\\ :ref:`動画 <website/elements/"
+"videos>`\\ 、形状を追加したりできます。オプションを選択すると、さらに"
+"カスタマイズするための追加オプションが利用可能になります。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:146
 msgid ""
@@ -17710,14 +17953,17 @@ msgid ""
 "the :guilabel:`Send to back` or :guilabel:`Bring to front` icons to position "
 "elements, such as images and text, behind or in front of other elements."
 msgstr ""
+"\\ :ref:`グリッド <website/building_blocks/grid>`\\ レイアウトでは、\\ "
+":guilabel:`最背面に移動`\\ または\\ :guilabel:`最前面に移動`\\ アイコンを使用"
+"して、画像やテキストなどの要素を他の要素の背面または前面に配置します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:0
 msgid "Move a building block to the back or front."
-msgstr ""
+msgstr "ビルディングブロックを背面または前面に移動。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:156
 msgid "Layout"
-msgstr ""
+msgstr "レイアウト"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:158
 msgid ""
@@ -17727,6 +17973,12 @@ msgid ""
 "tab, and set the :guilabel:`Layout` field to :guilabel:`Grid` "
 "or :guilabel:`Column`."
 msgstr ""
+"ほとんどのビルディングブロックは、\\ :ref:`グリッド <website/building_blocks/"
+"grid>`\\ と\\ :ref:`カラム <website/building_blocks/columns>`\\ の2つの"
+"レイアウトスタイルをサポートしています。デフォルトのレイアウトを変更するには"
+"、ブロックをクリックして\\ :guilabel:`スタイル`\\ タブに移動し、\\ "
+":guilabel:`レイアウト`\\ フィールドを\\ :guilabel:`グリッド`\\ または\\ "
+":guilabel:`カラム`\\ に設定します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:166
 msgid "Grid"
@@ -17740,10 +17992,16 @@ msgid ""
 "clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`. Adjust "
 "their position and size using the :guilabel:`Spacing (Y, X)` options."
 msgstr ""
+"\\ :guilabel:`グリッド`\\ レイアウトでは、要素をドラッグ＆ドロップして位置や"
+"サイズを変更できます。このレイアウトタイプを選択すると、追加オプションの\\ "
+":guilabel:`要素を追加`\\ が利用可能になり、\\ :guilabel:`画像`、\\ "
+":guilabel:`テキスト`、または\\ :guilabel:`ボタン`\\ をクリックして追加できま"
+"す。\\ :guilabel:`間隔 (Y, X)`\\ オプションを使用して、位置とサイズを調整しま"
+"す。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:176
 msgid "Column"
-msgstr ""
+msgstr "カラム"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:178
 msgid ""
@@ -17753,6 +18011,11 @@ msgid ""
 "can then modify a specific column's settings using the options in "
 "the :guilabel:`Column` section of the :guilabel:`Style` tab."
 msgstr ""
+"\\ :guilabel:`カラム`\\ レイアウトでは、ブロック内の1行あたりの要素数を指定で"
+"きます。これを行うには、変更するブロックを選択し、\\ :guilabel:`カラム`\\ "
+"フィールドの隣にあるドロップダウンをクリックして数値を調整します。その後、\\ "
+":guilabel:`カラム`\\ セクション（\\ :guilabel:`スタイル`\\ タブ内）の"
+"オプションを使用して、特定のカラムの設定を変更できます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:184
 msgid ""
@@ -17762,20 +18025,28 @@ msgid ""
 "mobile` (:guilabel:`Mobile Preview`) at the top of the website editor and "
 "adapt the number of columns. Shapes are hidden by default on mobile devices."
 msgstr ""
+"デフォルトでは、小さめの画面でもコンテンツが読みやすくアクセスしやすいように"
+"、\\ :doc:`モバイルデバイス上 <visibility>`\\ では1行につき1つの要素（カラム"
+"）のみが表示されます。この値を調整するには、ウェブサイトエディタの上部にあ"
+"る\\ :icon:`fa-mobile` (:guilabel:`モバイルプレビュー`) をクリックして、"
+"カラム数を調整します。モバイルデバイスでは、図形はデフォルトで非表示になって"
+"います。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:192
 msgid "Content dimensions"
-msgstr ""
+msgstr "コンテンツの寸法"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:194
 msgid "To adjust the content dimensions of a building block:"
-msgstr ""
+msgstr "ビルディングブロックのコンテンツ寸法を調整するには:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:196
 msgid ""
 "Use the :guilabel:`Content Width` options to make the content fill the "
 "entire width of the page or add spacing around it."
 msgstr ""
+"\\ :guilabel:`コンテンツ幅`\\ オプションを使用して、コンテンツをページ幅いっ"
+"ぱいに表示したり、周囲に間隔を追加したりします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:198
 msgid ""
@@ -17819,6 +18090,9 @@ msgid ""
 "Anchor links are hyperlinks that direct users to a specific section of a "
 "page. To create an anchor link for a block, follow these steps:"
 msgstr ""
+"アンカーリンクは、ユーザーをページの**特定のセクション**に誘導する"
+"ハイパーリンクです。ブロックのアンカーリンクを作成するには、次の手順に従いま"
+"す:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:225
 msgid "Click :guilabel:`Edit` and select the block you want to link to."
@@ -17838,7 +18112,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:230
 msgid "Replace the anchor name and click :guilabel:`Save & Copy`."
-msgstr ""
+msgstr "アンカー名を置き換えて、:guilabel:`保存してコピー`をクリックします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:232
 msgid ""
@@ -17850,7 +18124,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:3
 msgid "Forms"
-msgstr ""
+msgstr "フォーム"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:5
 msgid ""
@@ -17884,24 +18158,26 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:22
 msgid ":ref:`Create a Ticket <helpdesk/receiving_tickets/website-form>`"
-msgstr ""
+msgstr ":ref:`チケットを作成 <helpdesk/receiving_tickets/website-form>`"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:23
 msgid ""
 ":doc:`Create an Opportunity </applications/sales/crm/acquire_leads/"
 "opportunities_form>`"
-msgstr ""
+msgstr ":doc:`案件を作成 </applications/sales/crm/acquire_leads/opportunities_form>`"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:24
 msgid ""
 ":doc:`Subscribe to Newsletter </applications/marketing/email_marketing/"
 "mailing_lists>`"
 msgstr ""
+":doc:`ニュースレターを購読 </applications/marketing/email_marketing/"
+"mailing_lists>`"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:25
 msgid ""
 ":doc:`Create a Task </applications/services/project/tasks/task_creation>`"
-msgstr ""
+msgstr ":doc:`タスクを作成 </applications/services/project/tasks/task_creation>`"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:26
 msgid ":guilabel:`More models`: to generate other types of records"
@@ -17914,6 +18190,11 @@ msgid ""
 "Alternatively, select :guilabel:`Nothing` or :guilabel:`Show Message` in "
 "the :guilabel:`On Success` field to keep visitors on the form's page."
 msgstr ""
+"デフォルトでは、フォームを送信すると訪問者は\\ *Thank you*\\ ページに"
+"リダイレクトされます。別のページに誘導するには、\\ :guilabel:`URL`\\ "
+"フィールドを使用します。また、\\ :guilabel:`何もしない`\\ または\\ "
+":guilabel:`メッセージを表示`\\ を\\ :guilabel:`成功時`\\ フィールドで選択する"
+"と、訪問者をフォームのページにとどめることができます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:32
 msgid ""
@@ -17926,7 +18207,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:38
 msgid "Configure the :doc:`visibility <../visibility>` settings for forms."
-msgstr ""
+msgstr "フォームの\\ :doc:`表示 <../visibility>`\\ 設定を行います。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:43
 msgid "Fields"
@@ -17999,15 +18280,15 @@ msgstr ":ref:`アニメーション <website/elements/animations>`を追加し�
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:72
 msgid ""
 "Edit the field's :doc:`visibility <../../web_design/visibility>` settings."
-msgstr ""
+msgstr "フィールドの\\ :doc:`表示 <../../web_design/visibility>`\\ 設定を編集します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:74
 msgid "Depending on the selected field, the following options are available:"
-msgstr ""
+msgstr "選択したフィールドに応じて、以下のオプションが利用可能です:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:78
 msgid "String and numerical fields"
-msgstr ""
+msgstr "文字列および数値フィールド"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:80
 msgid ""
@@ -18017,20 +18298,27 @@ msgid ""
 "Number`, you can define a :guilabel:`Placeholder` and a :guilabel:`Default "
 "Value`."
 msgstr ""
+"\\ :guilabel:`テキスト`、\\ :guilabel:`長いテキスト`、\\ :guilabel:`E"
+"メール`、\\ :guilabel:`URL`\\ などのテキストおよび文字列フィールドや、\\ "
+":guilabel:`電話番号`、\\ :guilabel:`数値`、\\ :guilabel:`小数`\\ などの数値"
+"フィールドでは、\\ :guilabel:`プレースホルダ`\\ と\\ :guilabel:`デフォルト"
+"値`\\ を定義できます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:85
 msgid ""
 "For the :guilabel:`Long Text` field, you can also specify the "
 "field's :guilabel:`Height`."
 msgstr ""
+"\\ :guilabel:`長いテキスト`\\ フィールドでは、フィールドの\\ :guilabel:`高"
+"さ`\\ を指定することもできます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:87
 msgid "Selection fields"
-msgstr ""
+msgstr "選択フィールド"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:89
 msgid "The following selection fields are available:"
-msgstr ""
+msgstr "以下の選択フィールドが利用可能です:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:91
 msgid ""
@@ -18040,11 +18328,11 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:93
 msgid ":guilabel:`Multiple Checkboxes`: Visitors can select multiple options."
-msgstr ""
+msgstr ":guilabel:`複数チェックボックス`：訪問者は複数のオプションを選択できます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:94
 msgid ":guilabel:`Radio Buttons`: Visitors can select one option."
-msgstr ""
+msgstr ":guilabel:`ラジオボタン`：訪問者は1つのオプションを選択できます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:97
 msgid ""
@@ -18052,12 +18340,17 @@ msgid ""
 "how the options are displayed: :guilabel:`Horizontal` "
 "or :guilabel:`Vertical`."
 msgstr ""
+"\\ :guilabel:`複数チェックボックス`\\ および\\ :guilabel:`ラジオボタン`\\ で"
+"は、オプションの表示方法を\\ :guilabel:`水平`\\ または\\ :guilabel:`垂直`\\ "
+"で定義します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:100
 msgid ""
 ":guilabel:`Selection`: Visitors can select one option from the drop-down "
 "menu."
 msgstr ""
+":guilabel:`選択`：訪問者はドロップダウンメニューから1つのオプションを選択でき"
+"ます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:102
 msgid ""
@@ -18069,7 +18362,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:106
 msgid "Date and time"
-msgstr ""
+msgstr "日時"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:108
 msgid ""
@@ -18078,16 +18371,22 @@ msgid ""
 "also define a :guilabel:`Placeholder` and a :guilabel:`Default Value`, e.g., "
 "to use a specific date/time by default."
 msgstr ""
+"\\ :guilabel:`日付`\\ および\\ :guilabel:`日時`\\ フィールドでは、訪問者が日"
+"付セレクタを使用して日付や必要に応じて時刻を選択できます。また、デフォルトで"
+"特定の日時を使用する場合などに、\\ :guilabel:`プレースホルダ`\\ や\\ "
+":guilabel:`デフォルト値`\\ を定義することもできます。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:113
 msgid ""
 "If needed, customize the :icon:`fa-calendar` "
 "(:guilabel:`calendar`) :ref:`icon <website/elements/icons>`."
 msgstr ""
+"必要に応じて、\\ :icon:`fa-calendar` (:guilabel:`カレンダー`) :ref:`アイコン "
+"<website/elements/icons>`\\ をカスタマイズします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:116
 msgid "Files"
-msgstr ""
+msgstr "ファイル"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:118
 msgid ""
@@ -18098,7 +18397,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:121
 msgid "To apply the changes, click :guilabel:`Save`."
-msgstr ""
+msgstr "変更を適用するには、\\ :guilabel:`保存`\\ をクリックします。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:124
 msgid ""
@@ -18125,6 +18424,9 @@ msgid ""
 "and remove the :ref:`header and footer design <website/header_footer/"
 "design>`. Make sure only the contact form remains on the page."
 msgstr ""
+"**Odooフォームの準備：** Odoo Webサイトのページにお問い合わせフォームを作成し"
+"、\\ :ref:`ヘッダーおよびフッターのデザイン <website/header_footer/design>`\\"
+" を削除します。ページ上にお問い合わせフォームのみが残るようにしてください。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:139
 msgid ""
@@ -18145,6 +18447,9 @@ msgid ""
 "HTML (in the code editor or CMS) and insert the embedded code where the form "
 "should be displayed."
 msgstr ""
+"**Odoo以外のウェブサイトに埋め込みコードを追加:** 関連ページのHTML"
+"(コードエディターまたはCMS内)を開き、フォームを表示する場所に埋め込みコードを"
+"挿入します。"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/forms.rst:147
 msgid "Example of an embedded code:"
@@ -19303,6 +19608,12 @@ msgid ""
 "urls>`, or :doc:`login status <../../ecommerce/configuration/"
 "customer_accounts>`."
 msgstr ""
+"訪問者が\\ :doc:`ビルディングブロック <building_blocks>`\\ や\\ :doc:`要素 "
+"<elements>`\\ を閲覧できるかどうかを、訪問者の国（IP位置情報）、ウェブサイト"
+"の\\ :ref:`言語 <translate/language-selector>`\\ 、\\ :ref:`UTMパラメータ "
+"<website/link_tracker/create-urls>`\\ 、または\\ :doc:`ログインステータス "
+"<../../ecommerce/configuration/customer_accounts>`\\ に基づいて制御する条件を"
+"1つ以上設定します。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:60
 msgid ""
@@ -19310,33 +19621,38 @@ msgid ""
 "down` field in the :guilabel:`Visibility` options and "
 "select :guilabel:`Conditionally` instead to display the available options:"
 msgstr ""
+"条件を定義するには、\\ :guilabel:`条件なし` :icon:`fa-caret-down`\\ "
+"フィールド（\\ :guilabel:`表示`\\ オプション内）をクリックし、代わりに\\ "
+":guilabel:`条件付き`\\ を選択して利用可能なオプションを表示します:"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:64
 msgid ""
 ":guilabel:`Country`: The visitor’s country, determined from their IP address."
-msgstr ""
+msgstr ":guilabel:`国`：IPアドレスから判定された訪問者の国。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:65
 msgid ":guilabel:`Languages`: The website language selected by the visitor."
-msgstr ""
+msgstr ":guilabel:`言語`：訪問者が選択したウェブサイトの言語。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:68
 msgid ""
 "This option is only available if multiple :doc:`languages are defined for "
 "the website <../configuration/translate>`."
 msgstr ""
+"このオプションは、ウェブサイトに複数の\\ :doc:`言語が定義されている <../"
+"configuration/translate>`\\ 場合にのみ利用可能です。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:71
 msgid ":guilabel:`UTM Campaign`: The selected campaign."
-msgstr ""
+msgstr ":guilabel:`UTMキャンペーン`: 選択したキャンペーン。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:72
 msgid ":guilabel:`UTM Medium`: The selected medium of any campaign."
-msgstr ""
+msgstr ":guilabel:`UTMメディア`: 任意のキャンペーンの選択したメディア。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:73
 msgid ":guilabel:`UTM Source`: The selected source of any campaign."
-msgstr ""
+msgstr ":guilabel:`UTMソース`: 任意のキャンペーンの選択したソース。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:74
 msgid ""
@@ -19344,6 +19660,10 @@ msgid ""
 "Logged In` or :guilabel:`Visible for Logged Out` users. By default, the "
 "option is set to :guilabel:`Visible for Everyone`."
 msgstr ""
+":guilabel:`ユーザー`：ブロックを\\ :guilabel:`ログイン済に表示`\\ または\\ "
+":guilabel:`ログアウト済に表示`\\ ユーザーのどちらに表示するかを選択します。"
+"デフォルトでは、このオプションは\\ :guilabel:`全員に表示`\\ に設定されていま"
+"す。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:78
 msgid ""
@@ -19352,24 +19672,31 @@ msgid ""
 "click :guilabel:`Choose a record...` and select one or multiple options. "
 "Click the :icon:`fa-minus` (:guilabel:`remove`) button to remove an option."
 msgstr ""
+"最初の5つの条件のいずれについても、ブロックを\\ :guilabel:`表示対象`\\ また"
+"は\\ :guilabel:`非表示対象`\\ にするかを選択し、\\ :guilabel:`レコードを選"
+"択...`\\ をクリックして1つまたは複数のオプションを選択します。オプションを削"
+"除するには\\ :icon:`fa-minus`\\ （\\ :guilabel:`削除`\\ ）ボタンをクリックし"
+"ます。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:85
 msgid ""
 "A building block configured with the following conditions is displayed only "
 "to visitors:"
-msgstr ""
+msgstr "次の条件で設定されたビルディングブロックは、以下の訪問者にのみ表示されます:"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:87
 msgid "whose IP address is located in Belgium,"
-msgstr ""
+msgstr "IPアドレスがベルギーにある訪問者、"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:88
 msgid "who are viewing the website in French, and"
-msgstr ""
+msgstr "ウェブサイトをフランス語で閲覧している訪問者、および"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:89
 msgid "who did *not* access the page through a tracked `Sales` campaign URL."
 msgstr ""
+"追跡された `Sales` キャンペーンURLからページにアクセスして\\ *いない*\\ 訪問"
+"者。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:0
 msgid "Example of a block configured with several visibility conditions"
@@ -19386,24 +19713,29 @@ msgid ""
 "the :guilabel:`Invisible Elements` section to preview the page with or "
 "without it."
 msgstr ""
+"カスタム表示設定を持つブロックおよび要素は、ウェブサイトエディタのサイドバー"
+"下部に一覧表示されます。\\ :guilabel:`非表示要素`\\ セクションのブロックまた"
+"は要素をクリックすると、その有無によるページのプレビューを確認できます。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:None
 msgid ""
 "Blocks and elements with custom visibility settings displayed at the bottom "
 "of the editor."
-msgstr ""
+msgstr "エディタの下部に表示されるカスタム表示設定を持つブロックと要素"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:107
 msgid ""
 "You can also :guilabel:`Show/Hide Elements` in the :ref:`header or footer "
 "<website/header_footer/design>`."
 msgstr ""
+"また、\\ :guilabel:`要素の表示/非表示`\\ を\\ :ref:`ヘッダーまたはフッター "
+"<website/header_footer/design>`\\ で行うこともできます。"
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:111
 msgid ""
 ":ref:`Manage the visibility of dynamic pages <website/header_footer/hide-"
 "menu-item>`"
-msgstr ""
+msgstr ":ref:`動的ページの表示を管理する <website/header_footer/hide-menu-item>`"
 
 #: ../../content/applications/websites/website/website_creation.rst:5
 msgid ""
@@ -19414,10 +19746,16 @@ msgid ""
 "website <website_creation/create>` or :ref:`import an existing one "
 "<website_creation/import>`."
 msgstr ""
+"Odooウェブサイトでは、情報発信のためのウェブサイトを作成・カスタマイズしたり"
+"、\\ :doc:`オンラインショップ <../ecommerce>`\\ 、\\ :doc:`e"
+"ラーニングプラットフォーム <../elearning>`\\ 、\\ :doc:`フォーラム <../forum>"
+"`\\ 、\\ :doc:`ブログ <../blog>`\\ などを統合したりできます。\\ :ref:`新しい"
+"ウェブサイトを作成 <website_creation/create>`\\ することも、\\ :ref:`既存の"
+"ウェブサイトをインポート <website_creation/import>`\\ することも可能です。"
 
 #: ../../content/applications/websites/website/website_creation.rst:13
 msgid "Create a new website"
-msgstr ""
+msgstr "新しいウェブサイトを作成"
 
 #: ../../content/applications/websites/website/website_creation.rst:17
 msgid ""
@@ -19427,7 +19765,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:20
 msgid "Define the purpose of your website."
-msgstr ""
+msgstr "ウェブサイトの目的を定義します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:21
 msgid ""
@@ -19453,71 +19791,87 @@ msgid ""
 "If you prefer to bypass this setup, click the :guilabel:`Skip and start from "
 "scratch` link."
 msgstr ""
+"この設定をスキップしたい場合は、\\ :guilabel:`スキップして最初から作成`\\ "
+"リンクをクリックします。"
 
 #: ../../content/applications/websites/website/website_creation.rst:31
 msgid ""
 "Starting from scratch results in a blank website without a predefined design "
 "or content."
 msgstr ""
+"最初から作成すると、事前に定義されたデザインやコンテンツのない空白の"
+"ウェブサイトになります。"
 
 #: ../../content/applications/websites/website/website_creation.rst:33
 msgid "To create an additional website, follow these steps:"
-msgstr ""
+msgstr "ウェブサイトを追加で作成するには、次の手順に従います:"
 
 #: ../../content/applications/websites/website/website_creation.rst:35
 #: ../../content/applications/websites/website/website_creation.rst:83
 msgid "Navigate to :menuselection:`Website --> Configuration --> Settings`."
-msgstr ""
+msgstr "\\ :menuselection:`ウェブサイト --> 設定 --> 設定`\\ に移動します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:36
 msgid "In the settings banner, click :icon:`fa-plus` :guilabel:`New Website`."
 msgstr ""
+"設定バナーで、\\ :icon:`fa-plus`\\ \\ :guilabel:`新規ウェブサイト`\\ を"
+"クリックします。"
 
 #: ../../content/applications/websites/website/website_creation.rst:37
 msgid "In the :guilabel:`Add Website` pop-up window:"
-msgstr ""
+msgstr "\\ :guilabel:`ウェブサイトを追加`\\ ポップアップウィンドウで:"
 
 #: ../../content/applications/websites/website/website_creation.rst:39
 msgid "Enter a :guilabel:`Website Name`."
-msgstr ""
+msgstr "\\ :guilabel:`ウェブサイト名`\\ を入力します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:40
 msgid ""
 "Fill in the :doc:`Website Domain <configuration/domain_names>`, if "
 "applicable."
 msgstr ""
+"該当する場合は、\\ :doc:`ウェブサイトドメイン <configuration/domain_names>`\\"
+" を入力します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:41
 msgid ""
 "In a :doc:`multi-company environment </applications/general/companies/"
 "multi_company>`, select a :guilabel:`Company`."
 msgstr ""
+"\\ :doc:`複数会社環境 </applications/general/companies/multi_company>`\\ では"
+"、\\ :guilabel:`会社`\\ を選択します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:43
 msgid ""
 "In a :doc:`multilingual environment <configuration/translate>`, select the "
 "relevant :guilabel:`Languages` and define a :guilabel:`Default Language`."
 msgstr ""
+"\\ :doc:`多言語環境 <configuration/translate>`\\ では、該当する\\ "
+":guilabel:`言語`\\ を選択し、\\ :guilabel:`デフォルト言語`\\ を定義します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:47
 msgid "Languages already installed in the database are selected automatically."
-msgstr ""
+msgstr "データベースにすでにインストールされている言語は自動的に選択されます。"
 
 #: ../../content/applications/websites/website/website_creation.rst:50
 msgid ""
 "Use the :ref:`website builder <website_creation/website-builder>` to "
 "complete the setup."
 msgstr ""
+"\\ :ref:`ウェブサイトビルダー <website_creation/website-builder>`\\ を使用し"
+"て設定を完了します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:55
 msgid "Import an existing website"
-msgstr ""
+msgstr "既存のウェブサイトをインポート"
 
 #: ../../content/applications/websites/website/website_creation.rst:58
 msgid ""
 "The website import tool is available only with an `Odoo Enterprise "
 "subscription <https://www.odoo.com/page/editions>`_."
 msgstr ""
+"ウェブサイトインポートツールは、`Odoo Enterprise サブスクリプション <https://"
+"www.odoo.com/page/editions>`_ でのみ利用できます。"
 
 #: ../../content/applications/websites/website/website_creation.rst:61
 msgid ""
@@ -19531,12 +19885,24 @@ msgid ""
 "Odoo :doc:`building blocks <web_design/building_blocks>`, making the "
 "imported website fully editable in Odoo."
 msgstr ""
+"ウェブサイトインポートツールは、指定されたウェブサイトを検索して分析する"
+"ウェブスクレイパーです。次に、カスタムAIモデルを使用してOdooウェブサイトとし"
+"て再構築します。抽出はページごとに行われ、元のウェブサイトの構造とコンテンツ"
+"が保持されます。画像、サイトマップ、\\ :doc:`ヘッダーおよびフッター "
+"<structure/header_footer>`\\ もインポートされます。オプションで、\\ "
+":doc:`プロダクトデータ <../ecommerce/configuration/products>`\\ も抽出できま"
+"す。このツールはページを標準のOdoo\\ :doc:`ビルディングブロック <web_design/"
+"building_blocks>`\\ に変換し、インポートされたウェブサイトをOdooで完全に編集"
+"できるようにします。"
 
 #: ../../content/applications/websites/website/website_creation.rst:70
 msgid ""
 "The imported website is not an exact replica of the original. Manual "
 "adjustments to layout, styling, or content may be needed after import."
 msgstr ""
+"インポートされたウェブサイトは、元のウェブサイトの完全な複製ではありません。"
+"インポート後にレイアウト、スタイル、コンテンツの手動調整が必要になる場合があ"
+"ります。"
 
 #: ../../content/applications/websites/website/website_creation.rst:74
 msgid ""
@@ -19544,12 +19910,17 @@ msgid ""
 "associated content (such as images), and that you take full responsibility "
 "for their use and any potential legal implications."
 msgstr ""
+"このツールを使用することで、お客様はウェブサイトおよびそれに関連するすべての"
+"コンテンツ(画像など)を所有していること、ならびにそれらの使用および潜在的な法"
+"的影響について全責任を負うことを確認したことになります。"
 
 #: ../../content/applications/websites/website/website_creation.rst:77
 msgid ""
 "For the best results, ensure your database is up to date with the latest "
 "version of Odoo."
 msgstr ""
+"最適な結果を得るため、データベースがOdooの最新バージョンに更新されていること"
+"を確認してください。"
 
 #: ../../content/applications/websites/website/website_creation.rst:78
 msgid ""
@@ -19557,31 +19928,43 @@ msgid ""
 "the content of the website currently being edited, potentially resulting in "
 "the loss of unsaved changes."
 msgstr ""
+"インポート処理中はウェブサイトを編集しないでください。データをインポートする"
+"と現在編集中のウェブサイトのコンテンツが上書きされ、未保存の変更が失われる可"
+"能性があります。"
 
 #: ../../content/applications/websites/website/website_creation.rst:81
 msgid "To import your current website, follow these steps:"
-msgstr ""
+msgstr "現在のウェブサイトをインポートするには、以下の手順に従います:"
 
 #: ../../content/applications/websites/website/website_creation.rst:84
 msgid ""
 "In the settings banner, click :icon:`fa-plus` :guilabel:`Import Website`."
 msgstr ""
+"設定バナーで、\\ :icon:`fa-plus` :guilabel:`ウェブサイトをインポート`\\ を"
+"クリックします。"
 
 #: ../../content/applications/websites/website/website_creation.rst:85
 msgid ""
 "On the :guilabel:`Import your Pages and Products` page, enter "
 "the :guilabel:`Website URL` (e.g., `https://www.example.com`)."
 msgstr ""
+"\\ :guilabel:`ページおよびプロダクトをインポート`\\ ページで、\\ "
+":guilabel:`ウェブサイトURL`\\ (例: `https://www.example.com`)を入力します。"
 
 #: ../../content/applications/websites/website/website_creation.rst:87
 msgid ""
 "When running an online shop, ensure the :guilabel:`Import Products` option "
 "is enabled to extract product data."
 msgstr ""
+"オンラインショップを運営している場合は、プロダクトデータを抽出するために、\\ "
+":guilabel:`プロダクトをインポート`\\ オプションが有効になっていることを確認し"
+"てください。"
 
 #: ../../content/applications/websites/website/website_creation.rst:89
 msgid "To submit the request, click :guilabel:`Import my website`."
 msgstr ""
+"リクエストを送信するには、\\ :guilabel:`ウェブサイトをインポート`\\ を"
+"クリックします。"
 
 #: ../../content/applications/websites/website/website_creation.rst:91
 msgid ""
@@ -19589,20 +19972,25 @@ msgid ""
 "confirming that your Odoo website is ready. You can then further customize "
 "the website using the :doc:`website editor <web_design>`."
 msgstr ""
+"インポートが完了すると、Odooウェブサイトの準備が整ったことを確認するEメールま"
+"たは通知が届きます。その後、\\ :doc:`ウェブサイトエディタ <web_design>`\\ を"
+"使用してウェブサイトをさらにカスタマイズできます。"
 
 #: ../../content/applications/websites/website/website_creation.rst:96
 msgid "Blogs cannot be imported."
-msgstr ""
+msgstr "ブログはインポートできません。"
 
 #: ../../content/applications/websites/website/website_creation.rst:97
 msgid "You can import up to **100** pages by default."
-msgstr ""
+msgstr "デフォルトで最大\\ **100**\\ ページまでインポートできます。"
 
 #: ../../content/applications/websites/website/website_creation.rst:98
 msgid ""
 "Importing products automatically installs the :doc:`eCommerce app <../"
 "ecommerce>` if it is not already installed."
 msgstr ""
+"プロダクトをインポートすると、まだインストールされていない場合は\\ :doc:`e"
+"コマースアプリ <../ecommerce>`\\ が自動的にインストールされます。"
 
 #: ../../content/applications/websites/website/website_creation.rst:100
 msgid ""
@@ -19626,19 +20014,19 @@ msgstr ""
 
 #: ../../content/applications/websites/website/website_creation.rst:107
 msgid "JSON-LD"
-msgstr ""
+msgstr "JSON-LD"
 
 #: ../../content/applications/websites/website/website_creation.rst:108
 msgid "RDFa"
-msgstr ""
+msgstr "RDFa"
 
 #: ../../content/applications/websites/website/website_creation.rst:109
 msgid "Open Graph"
-msgstr ""
+msgstr "Open Graph"
 
 #: ../../content/applications/websites/website/website_creation.rst:110
 msgid "Microdata"
-msgstr ""
+msgstr "Microdata"
 
 #: ../../content/applications/websites/website/website_creation.rst:113
 msgid ""
@@ -19646,6 +20034,9 @@ msgid ""
 "startwebsite>`_ to test the website import feature by importing up to 10 "
 "pages from the original website into a trial database."
 msgstr ""
+"`ウェブサイトインポートツール試用版 <https://www.odoo.com/fr_FR/page/"
+"startwebsite>`_\\ を使用して、元のウェブサイトから試用データベースに最大10"
+"ページをインポートし、ウェブサイトインポート機能をテストします。"
 
 #: ../../content/applications/websites/website/website_creation.rst:116
 msgid ""
@@ -19653,6 +20044,9 @@ msgid ""
 "by :ref:`Cloudflare <website/spam_protection/cloudflare-turnstile>` or other "
 "anti-bot mechanisms."
 msgstr ""
+"元のウェブサイトが一般に公開されており、\\ :ref:`Cloudflare <website/"
+"spam_protection/cloudflare-turnstile>`\\ などのボット対策機能で保護されていな"
+"いことを確認してください。"
 
 #: ../../content/applications/websites/website/website_creation.rst:120
 msgid ":doc:`configuration/multi_website`"

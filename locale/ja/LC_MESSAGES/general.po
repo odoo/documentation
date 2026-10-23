@@ -5,13 +5,15 @@
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025, 2026.
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-18 17:32+0000\n"
-"PO-Revision-Date: 2026-09-07 18:12+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:41+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/ja/>\n"
 "Language: ja\n"
@@ -2657,11 +2659,17 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"受信メールについては、独自ドメインを追加すると、\\ :ref:`顧客からの返信がその"
+"独自ドメイン宛てに届く <email-inbound-custom-domain>`\\ ようになります。その"
+"ため、メールをOdooに取り込むには、3つの方法（\\ :ref:`受信メールサーバ "
+"<email-inbound-custom-domain-incoming-server>`、\\ :ref:`リダイレクト/転送 "
+"<email-inbound-custom-domain-redirections>`、または\\ :ref:`サブドメインの使"
+"用 <email-inbound-custom-domain-dns>`）のいずれかを使用する必要があります。"
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
-msgstr ""
+msgstr ":doc:`受信メッセージの管理 <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -4161,6 +4169,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"サブドメイン用のDNSレコード設定の詳細については、\\ :ref:`DNSレコードの設定 "
+"<dns_record_setup>`\\ を参照してください。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4267,7 +4277,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`DNSレコード <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4285,6 +4295,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"**オンプレミスデータベース**の場合、転送方式およびDNSレコード方式では\\ "
+":doc:`メールゲートウェイスクリプト &lt;../../../../administration/on_premise/"
+"email_gateway&gt;`\\ の設定も必要です。このスクリプトを操作するには、**高度な"
+"技術知識およびインフラ知識**が必要となります。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4539,7 +4553,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "DNSレコード"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4548,6 +4562,9 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"3つ目の方法は、専用のサブドメイン（例：`mail.mydomain.com`）を使用し、その"
+"サブドメイン宛てのメールがOdooで処理されてデータベースに直接取り込まれるよう"
+"にDNSレコードを設定することです。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4555,6 +4572,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"OdooオンラインおよびOdoo.shでは、CNAMEベースのルーティングは専用サブドメイン"
+"を使用する場合にのみサポートされます。ルートドメイン（例：`mydomain.com`）に"
+"は設定できません。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4562,12 +4582,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"このサブドメインはメール送受信用として専用化される点にご注意ください。"
+"ウェブブラウザでアクセスされた場合、データベースに設定されている最初の"
+"ウェブサイト（該当する場合）にリダイレクトされます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"受信メール用に新しいサブドメインを設定するため、そのサブドメインの\\ "
+":doc:`DNSレコードも送信メール用に設定する必要があります <email_domain>`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4577,7 +4602,7 @@ msgstr "Odooオンライン"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "DNS設定にアクセスする"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4585,34 +4610,41 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"ドメインがサードパーティのレジストラ（例：GoDaddy、Namecheap、Cloudflareなど"
+"）でホストされている場合は、そのレジストラにログインし、ドメインのDNS管理"
+"ゾーンを開きます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "OdooがDNSを管理している場合："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "`データベースマネージャー<https://www.odoo.com/my/databases>`_を開きます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"データベースの横にある\\ :icon:`fa-gear` (\\ :guilabel:`gear`\\ ) アイコンを"
+"クリックし、\\ :icon:`fa-globe` \\ :guilabel:`ドメイン名`\\ を選択します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
 msgstr ""
+"\\ :guilabel:`DNS`\\ をクリックし、次に\\ :guilabel:`DNSレコードを追加`\\ を"
+"クリックします。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "CNAMEレコードを作成する"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**名前 / ホスト：** 使用するサブドメイン（例：`mail`）。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4620,10 +4652,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**コンテンツ / ターゲット：** データベースのルートドメイン（例"
+"：`dbname.odoo.com.`）。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Odooポータルにサブドメインを追加"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4631,6 +4665,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"`データベースマネージャ <https://www.odoo.com/my/databases>`_ で、"
+"データベースの\\ :icon:`fa-gear` (\\ :guilabel:`歯車`\\ )アイコンをクリックし"
+"、\\ :icon:`fa-globe` \\ :guilabel:`ドメイン名`\\ を選択します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4638,6 +4675,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"\\ :guilabel:`独自ドメインを使用`\\ をクリックし、完全なサブドメイン（例"
+"：`mail.mydomain.com`）を入力します。検証に成功したら、\\ :guilabel:`確定、完"
+"了しました`\\ をクリックします。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4647,16 +4687,21 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"検証に失敗した場合は、一部のDNSプロバイダーで必要とされるため、CNAME"
+"ターゲットの末尾にドット（例：`dbname.odoo.com.`）が付いていることを再確認し"
+"てください。また、DNSの変更が反映されるまでしばらくお待ちください。"
+"プロバイダーによっては数分から最大48時間かかることがあります。反映が完了した"
+"ら、再度検証をお試しください。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "データベースにエイリアスドメインを追加"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "データベースにログインし、\\ :guilabel:`設定`\\ アプリを開きます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4664,38 +4709,44 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"\\ :guilabel:`エイリアスドメイン`\\ フィールドに、設定したサブドメイン（例"
+"：`mail.mydomain.com`）を入力します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "設定でのエイリアスドメインの追加。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"\\ :guilabel:`ドメイン名`\\ セクションに、サブドメインが次のように表示されま"
+"す："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Odooポータルでのドメイン名レコード設定の例。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "\\ :guilabel:`DNS`\\ セクションに、レコードが次のように表示されます："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "OdooポータルでのDNSレコード設定の例。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"2つ目のレコードにより、Odooはカスタムドメインから認証済みメールを送信できるよ"
+"うになります。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
-msgstr ""
+msgstr ":doc:`Odooでメールを送信するためのDNSレコード設定 <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4707,26 +4758,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"サードパーティのレジストラ（例：GoDaddy、Namecheap、Cloudflare）にログインし"
+"、ドメインのDNS管理ゾーンを開きます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Odoo.shの設定にサブドメインを追加"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Odoo.shプラットフォームにログインし、プロジェクトを開きます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"本番ブランチを選択し、\\ :guilabel:`設定`\\ タブに移動して"
+"、**カスタムドメイン**\\ セクションを探します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"サブドメイン全体（例：`mail.mydomain.com`）を入力し、\\ :guilabel:`ドメインを"
+"追加`\\ をクリックします。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4738,6 +4795,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"CNAMEレコードの代わりに、サブドメイン（例：`mail`）用のMXレコードを作成し、優"
+"先度`10`で`dbname.odoo.com.`を指定することもできます。残りの設定手順は同じで"
+"す。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4745,6 +4805,9 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"CNAMEとは異なり、MXレコードはターゲットドメインからSPFやその他のDNSレコードを"
+"継承しないため、送信メールを正しく認証するにはこれらを別途設定する必要がある"
+"場合があります。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5144,6 +5207,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`DNSレコード <email-inbound-custom-domain-dns>`\\ （高度な技術知識が必要"
+"）"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6246,6 +6311,8 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Odoo.shでcronを使用する場合の詳細については、\\ :ref:`Odoo.shとスケジュール済"
+"み施策のドキュメント <odoo-sh/advanced/scheduled>`\\ をご覧ください。"
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8140,11 +8207,11 @@ msgstr ":guilabel:`許可されたメソッド: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`許可ヘッダ`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`公開ヘッダ`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8332,45 +8399,59 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odooは、連絡先や場所を特定し、マップ上でルートを生成できる位置情報連携機能を"
+"提供しています。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"\\ :ref:`マップ <studio/views/multiple-records/map>`\\ ビューはデフォルトで使"
+"用可能です。アクセスするための設定は不要です。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "連絡先と場所の位置情報を特定"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"\\ :guilabel:`位置情報`\\ 機能は、場所をピンポイントで特定するための緯度と経"
+"度の座標を生成します。以下の用途に使用できます："
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"従業員の\\ :ref:`出退勤場所 <attendances/check-in-out-details>`\\ を**勤"
+"怠**アプリで確認；"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"\\ :ref:`現地受取配送方法 <ecommerce/shipping/instore-pickup>`\\ を使用する際"
+"に受取場所を表示；"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`取引先の割当 <contacts/partner-assignment>`\\ を**連絡先**アプリで実行"
+"；"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avatax address validation <accounting/"
 "avatax/address-validation>` feature."
 msgstr ""
+"\\ :ref:`Avatax住所検証 <accounting/avatax/address-validation>`\\ 機能で住所"
+"を検証します。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8380,10 +8461,15 @@ msgid ""
 "Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"\\ :guilabel:`位置情報`\\ 機能を有効にするには、\\ :menuselection:`設定 --> "
+"一般設定`\\ に移動し、\\ :guilabel:`連携`\\ セクションまで下にスクロールして"
+"、\\ :guilabel:`位置情報`\\ を有効化します。次に、\\ :guilabel:`API`\\ "
+"フィールドで\\ :guilabel:`Open Street Map`\\ または\\ :guilabel:`Google "
+"Place Map`\\ のいずれかを選択します。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "**OpenStreetMap**"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8391,6 +8477,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMapは、ボランティアによって更新および維持されている無料のオープンな"
+"地理データベースです。\\ :guilabel:`Open Street Map`\\ を使用するための追加設"
+"定は不要です。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8398,10 +8487,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"OpenStreetMapのデータは必ずしも正確とは限りません。見つかった問題を報告および"
+"修正するには、\\ `OpenStreetMapコミュニティに参加する <https://"
+"www.openstreetmap.org/fixthemap>`_\\ ことができます。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8409,6 +8501,8 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places APIは、場所、企業、スポットに関する詳細情報を提供します。検索、"
+"ナビゲーション、おすすめなどの位置情報ベースの機能をサポートしています。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8424,7 +8518,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "地図ルート"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8434,26 +8528,37 @@ msgid ""
 "management system </applications/inventory_and_mrp/inventory/"
 "shipping_receiving/setup_configuration/dispatch>`."
 msgstr ""
+"マップルートは、\\ :doc:`フィールドサービステクニシャン </applications/"
+"services/field_service/planning_itinerary>`\\ に旅程と場所を提供したり、\\ "
+":doc:`配車管理システム </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`\\ でドライバーに配送ルート"
+"を提供したりするのに役立ちます。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "ルートを作成するには、以下の手順を実行します:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
 msgstr ""
+"`Mapboxアカウント <https://www.mapbox.com/>`_\\ を作成するか、サインインしま"
+"す。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`アクセストークンを作成 <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_\\ します。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"`Mapboxのアクセストークンページ <https://account.mapbox.com/access-tokens/>"
+"`_\\ に移動し、トークンをクリップボードにコピーします。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8461,30 +8566,40 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapboxはシークレットトークンを作成時に一度だけ表示し、\\ "
+":guilabel:`アクセストークン`\\ ページから離れると完全に非表示になります。"
+"トークンは必ず保存してください。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"Odooで、\\ :menuselection:`設定 --> 一般設定`\\ に移動し、\\ :guilabel:`連"
+"携`\\ セクションまでスクロールします。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Map Routes`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"\\ :guilabel:`マップルート`\\ の下の\\ :guilabel:`トークン`\\ フィールドに"
+"Mapboxアクセストークンを貼り付けます。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Mapboxを安全に使用する方法: アクセストークン <https://docs.mapbox.com/help/"
+"dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`URL制限 <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -8878,6 +8993,9 @@ msgid ""
 "www.odoo.com/documentation/master/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"データベースバージョン19.2以降の場合、インストール手順については`最新の"
+"ドキュメント<https://www.odoo.com/documentation/master/applications/general/"
+"integrations/mail_plugins/gmail.html>`_\\ を参照してください。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
 msgid ""
@@ -8977,6 +9095,12 @@ msgid ""
 "the :guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and "
 "then click :guilabel:`Save`."
 msgstr ""
+"Gmailプラグインを使用するには、Odooデータベースで\\ "
+":guilabel:`メールプラグイン`\\ 機能を有効にする必要があります。この機能を有効"
+"にするには、\\ :menuselection:`設定アプリ --> 一般設定`\\ に移動します。\\ "
+":guilabel:`インテグレーション`\\ セクションで、\\ "
+":guilabel:`メールプラグイン`\\ を有効化し、\\ :guilabel:`保存`\\ をクリックし"
+"ます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "The Mail Plugin feature in the Settings."
@@ -9170,12 +9294,17 @@ msgid ""
 "The legacy version of the *Odoo Inbox Addin* might display a generic error "
 "message after upgrading the connected database to version 19.0:"
 msgstr ""
+"接続されているデータベースをバージョン19.0にアップグレードした後、*Odoo "
+"Inbox Addin*の旧バージョンでは一般的なエラーメッセージが表示されることがあり"
+"ます:"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:177
 msgid ""
 "`Add-on error: Something went wrong while executing add-on. For help, "
 "contact the add-on developer.`"
 msgstr ""
+"`アドオンエラー: アドオンの実行中に問題が発生しました。サポートについては、"
+"アドオン開発者にお問い合わせください。`"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:179
 msgid ""
@@ -9183,22 +9312,30 @@ msgid ""
 "backend Mail Plugin module) does not resolve the issue, manually refresh the "
 "Gmail plugin to sync with the upgraded database:"
 msgstr ""
+"標準のトラブルシューティング（再インストール、キャッシュのクリア、"
+"バックエンドのメールプラグインモジュールのアップグレード）で問題が解決しない"
+"場合は、Gmailプラグインを手動で更新して、アップグレードされたデータベースと同"
+"期します："
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:182
 msgid ""
 "In the Gmail inbox, click the :icon:`oi-odoo` :guilabel:`(Odoo)` icon in the "
 "side panel to open the *Odoo Inbox Addin (Legacy)*."
 msgstr ""
+"Gmailの受信トレイで、サイドパネルにある\\ :icon:`oi-odoo` :guilabel:`(Odoo)"
+"`\\ アイコンをクリックして、*Odoo Inbox Addin (Legacy)* を開きます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:184
 msgid ""
 "Click the :icon:`fa-ellipsis-v` :guilabel:`(More actions)` icon in the top "
 "corner of the plugin."
 msgstr ""
+"プラグイン上部にある\\ :icon:`fa-ellipsis-v` :guilabel:`(その他の操作)`\\ "
+"アイコンをクリックします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:185
 msgid "Click :guilabel:`Refresh`."
-msgstr ""
+msgstr "\\ :guilabel:`更新`\\ をクリックします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:187
 msgid ""
@@ -9206,10 +9343,13 @@ msgid ""
 "upgraded database version, clearing the stalled script and resolving the "
 "execution error."
 msgstr ""
+"これにより、プラグインが新しくアップグレードされたデータベースバージョンと強"
+"制的に手動同期され、停止していたスクリプトがクリアされて実行エラーが解決され"
+"ます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Refresh button in the Odoo Gmail plugin."
-msgstr ""
+msgstr "Odoo Gmailプラグインの更新ボタン。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook Plugin"
@@ -10425,7 +10565,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11611,6 +11751,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"DYMO Series 5プリンタは\\ :doc:`IoT Box &lt;../iot_box&gt;`\\ と互換性がなく"
+"、\\ :doc:`Windows仮想IoT &lt;../windows_iot&gt;`\\ とのペアリングが必要です"
+"。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:376
 msgid "DYMO LabelWriter not printing"
@@ -12042,10 +12185,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"IoTシステムに認識されるようAriva Sスケールを設定するには、`MettlerのAriva S"
+"シリーズスケール用セットアップガイド <https://www.mt.com/dam/RET_DOCS/"
+"Ariv.pdf>`_ を参照し、次の手順に従います:"
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "**>T<** ボタンを、\\ :guilabel:`CONF`\\ が表示されるまで長押しします。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
@@ -12059,12 +12205,17 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"ステップ\\ :guilabel:`3.1`\\ で、値が\\ :guilabel:`1`\\ (USB Virtual COM "
+"ports)に設定されていることを確認します。**>T<** を押してオプションを順に切り"
+"替えます。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:49
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"**>0<** を押して\\ :guilabel:`3.6`\\ まで進め、値が\\ :guilabel:`3`\\ (8217 "
+"Mettler-Toledo (WO))に設定されていることを確認します。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:51
 msgid ""
@@ -12097,6 +12248,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"\\ :doc:`IoT Box <../iot_box>`\\ を再起動するか、\\ :ref:`Windows仮想IoT"
+"サービスを再起動 <iot/windows_iot/restart>`\\ します。これでスケールが "
+"`Toledo 8217` として表示されます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12433,12 +12587,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"IoTシステムは接続されており、印刷できないプリンタにレポートが割り当てられてい"
+"る"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"ブラウザが\\ :ref:`ローカルネットワーク上のデバイスへのアクセス <pos/lna/"
+"browser-permission>`\\ を許可されていることを確認します。"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -13853,6 +14011,11 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"ログイン中のデバイスを確認するには、右上隅のユーザーアイコンをクリックし、\\ "
+":guilabel:`個人設定`\\ をクリックしてユーザープロファイルを開きます"
+"。*セキュリティ* タブをクリックすると、ユーザーがデータベースへのログインに使"
+"用した全デバイスの一覧が表示されます。現在システムにログインしているデバイス"
+"には、かんばんカードのデバイス名の横に緑色の円が表示されます。"
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -13868,6 +14031,9 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"一覧にあるデバイスが正当なユーザーデバイスで**なく**、セキュリティ上のリスク"
+"が生じる可能性がある場合は、\\ :guilabel:`ログアウト`\\ ボタンをクリックして"
+"デバイスを削除し、アクセスを取り消します。"
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -13875,12 +14041,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"\\ :guilabel:`アクセス制御`\\ ポップアップウィンドウが表示され、ユーザー本人"
+"確認を求められます。ユーザーのパスワードを入力し、\\ :guilabel:`パスワードの"
+"確認`\\ をクリックします。"
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"該当デバイスは *セキュリティ* タブから消去され、データベースへのログインに使"
+"用できなくなります。"
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -14006,6 +14177,11 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"パスワードの最小文字数要件を適用するには、次を\\ :ref:`インストール <general/"
+"install>`\\ します：\\ :guilabel:`パスワードポリシー` "
+"(`auth_password_policy`) モジュール。次に、\\ :guilabel:`設定`\\ アプリを開き"
+"、*権限* セクションに移動して、\\ :guilabel:`最小パスワード長`\\ フィールドに"
+"希望のパスワードの長さを入力します。デフォルトでは、値は `8` です。"
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -14150,7 +14326,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "マルチカンパニー"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -14159,12 +14335,18 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"ユーザフォームの\\ :guilabel:`会社`\\ フィールドにより、ユーザがアクセスでき"
+"る会社が決まります。マルチカンパニーアクセスを設定するには、\\ "
+":menuselection:`設定アプリ --> ユーザセクション --> ユーザ管理`\\ に移動しま"
+"す。次に、対象のユーザを選択してユーザフォームを開きます。"
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"*アクセス権* タブの *ロール* セクションで、\\ :guilabel:`会社`\\ および\\ "
+":guilabel:`デフォルト会社`\\ フィールドを設定します："
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -14172,12 +14354,16 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`会社`：ユーザがアクセスできる会社を1つ以上選択します。ユーザの"
+"アクセス権および編集権限は、割り当てられたアクセス権によって決定されます。"
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
 ":guilabel:`Default Company`: Select the company that is automatically "
 "selected when the user logs in. Only one company can be set as the default."
 msgstr ""
+":guilabel:`デフォルト会社`：ユーザのログイン時に自動的に選択される会社を選択"
+"します。デフォルトとして設定できる会社は1社のみです。"
 
 #: ../../content/applications/general/users.rst:239
 msgid ""
@@ -14187,6 +14373,11 @@ msgid ""
 "explanations, refer to the developer documentation on :doc:`../../../"
 "developer/howtos/company`."
 msgstr ""
+"マルチカンパニーアクセスの設定を誤ると、会社間で挙動に不整合が生じる可能性が"
+"あります。マルチカンパニー設定のデータベースにおいてユーザのアクセス権を変更"
+"するのは、経験豊富なOdooユーザのみが行うようにしてください。技術的な説明につ"
+"いては、\\ :doc:`../../../developer/howtos/company`\\ の開発者向け"
+"ドキュメントを参照してください。"
 
 #: ../../content/applications/general/users.rst:None
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
@@ -14319,10 +14510,15 @@ msgid ""
 "avatar in the upper-right corner, and select :guilabel:`My Preferences` from "
 "the resulting drop-down menu."
 msgstr ""
+"認証システムを選択したら、Odooにログインし、右上隅のプロフィールアバターを"
+"クリックして、表示されるドロップダウンメニューから\\ :guilabel:`個人設定`\\ "
+"を選択します。"
 
 #: ../../content/applications/general/users/2fa.rst:54
 msgid "Click the *Security* tab, then click :guilabel:`Enable 2FA`."
 msgstr ""
+"*セキュリティ* タブをクリックし、\\ :guilabel:`2FAを有効化`\\ をクリックしま"
+"す。"
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The account secuirty tab in a user profile."
@@ -14335,6 +14531,10 @@ msgid ""
 "click :guilabel:`Confirm Password`. Next, a *Two-Factor Authentication "
 "Activation* pop-up window appears, with a |QR|."
 msgstr ""
+"これにより、続行するためにパスワード確認が必要な *アクセス制御* "
+"ポップアップウィンドウが生成されます。Odooアカウントのパスワードを入力し、\\ "
+":guilabel:`パスワード確定`\\ をクリックします。次に、\\ |QR|\\ を含む *2要素"
+"認証の有効化* ポップアップウィンドウが表示されます。"
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "The 2fa authentication QR code in Odoo."
@@ -14546,7 +14746,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:32
 msgid "Manage roles"
-msgstr ""
+msgstr "役割を管理"
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid ""
@@ -14555,34 +14755,44 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`個別ユーザ <users/add-individual>`\\ は、データベースに追加される際"
+"に*ロール*が割り当てられます。ロールはユーザが持つアクセスのレベルを決定し、"
+"各ロールに関連付けられた特定のアクセス権は\\ :ref:`グループ <access-rights/"
+"groups>`\\ によって定義されます。"
 
 #: ../../content/applications/general/users/access_rights.rst:38
 msgid "The four available roles are:"
-msgstr ""
+msgstr "利用可能な4つのロールは以下のとおりです:"
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*管理者*：技術機能、プロダクト作成、エクスポート、およびその他の高度な権限に"
+"アクセスできる内部ユーザ。"
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*ユーザ*：通常、バックエンドへのアクセス権を持ち、レコードの作成や編集ができ"
+"ますが、管理者よりも全体的なアクセス権が制限されている内部ユーザ。"
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Portal*: A customer or supplier who accesses their own data through the "
 "portal."
-msgstr ""
+msgstr "*ポータル*：ポータル経由で自身のデータにアクセスする顧客または仕入先。"
 
 #: ../../content/applications/general/users/access_rights.rst:45
 msgid ""
 "*Public*: A website visitor or other external user. They generally have the "
 "least access."
 msgstr ""
+"*パブリック*：ウェブサイト訪問者またはその他の外部ユーザ。通常、最もアクセス"
+"権が制限されています。"
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage user permissions"
@@ -14625,6 +14835,9 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"*アクセス権*タブで使用可能な権限は、ユーザのロールに関連付けられたグループに"
+"よって決定されます。ロールは事前定義された権限セットを提供し、グループは"
+"ユーザに付与される特定のアクセス権を定義します。"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
@@ -14714,10 +14927,10 @@ msgid ""
 "located under the :menuselection:`Users & Companies --> Groups` menu, in "
 "the :guilabel:`Inherited` tab."
 msgstr ""
-":guilabel:`自動的に追加されるグループ`: ユーザーに明示的に付与されている権限"
-"に伴って、 *内包* 関係により *継承される* 権限です。ここに表示される値は、 *"
-"グループ* のフォームで( :menuselection:`ユーザと会社 --> グループ` メニュー"
-"内) で :guilabel:`継承` タブに表示される値と一致します。"
+":guilabel:`自動追加されるグループ`: ユーザに明示的に付与された権限とともに "
+"*継承* される、 *包含* された権限です。ここに表示される値は、 *グループ* の"
+"フォームで( :menuselection:`ユーザと会社 --> グループ` メニュー内) で "
+":guilabel:`継承` タブに表示される値と一致します。"
 
 #: ../../content/applications/general/users/access_rights.rst:None
 msgid "The technical access rights tab opened up for a user profile."
@@ -14775,11 +14988,11 @@ msgid ""
 "permissions by clicking on the permission itself, and then adding the user "
 "to that permission's group."
 msgstr ""
-":guilabel:`自動的に追加されたグループ` セクションのすべての権限"
-"は、:guilabel:`選択されたグループ` セクションに表示されている権限によって内包"
-"されているか、必要とされています。これらは削除できませんが、権限自体をクリッ"
-"クしてその権限のグループにユーザを追加することで、より多くのユーザにこれらの"
-"権限を付与できます。"
+":guilabel:`自動的に追加されたグループ` セクションのすべての権限は"
+"、:guilabel:`選択されたグループ` セクションに表示されている権限によって包含さ"
+"れているか、必要とされています。これらは削除できませんが、権限自体をクリック"
+"してその権限のグループにユーザを追加することで、より多くのユーザにこれらの権"
+"限を付与できます。"
 
 #: ../../content/applications/general/users/access_rights.rst:133
 msgid ""
@@ -14860,6 +15073,9 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"グループの\\ :guilabel:`名前`\\ を入力し、一部のユーザとデータを共有するため"
+"のアクセス権を設定するためにこのグループを作成した場合は、\\ :guilabel:`共有"
+"グループ`\\ の横にあるチェックボックスを選択します。"
 
 #: ../../content/applications/general/users/access_rights.rst:165
 msgid ""
@@ -15155,6 +15371,11 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"セッションタイムアウトを有効にするには、*タイムアウト*タブをクリックし、\\ "
+":guilabel:`セッション`\\ チェックボックスを選択します。次に、"
+"ドロップダウンメニューから\\ :guilabel:`ログアウト`\\ または\\ :guilabel:`2要"
+"素認証でログアウト`\\ のいずれかを選択します。これにより、ユーザが再ログイン"
+"時に2FA検証を完了する必要があるかどうかが決まります。"
 
 #: ../../content/applications/general/users/access_rights.rst:277
 msgid ""

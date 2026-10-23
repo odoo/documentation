@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the Odoo package.
 # Odoo Translation Bot <c3p@odoo.com>, 2025.
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025, 2026.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-18 17:32+0000\n"
-"PO-Revision-Date: 2026-09-07 18:12+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 07:34+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/sv/>\n"
 "Language: sv\n"
@@ -2722,11 +2723,20 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"För inkommande e-post kommer, efter att du har lagt till din egen domän, "
+":ref:`svar från kunder att komma tillbaka till din domän <email-inbound-"
+"custom-domain>`, och du måste använda ett av de tre möjliga sätten att få "
+"tillbaka e-posten till Odoo (antingen via :ref:`inkommande e-postserver "
+"<email-inbound-custom-domain-incoming-server>`, :ref:`omdirigering/"
+"vidarebefordran <email-inbound-custom-domain-redirections>` eller "
+":ref:`genom att använda en underdomän <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Hantera inkommande meddelanden <email_communication/"
+"email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -4274,6 +4284,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"För mer information om att konfigurera DNS-poster för underdomäner, se "
+":ref:`installation av DNS-poster <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4387,7 +4399,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`DNS-poster <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4404,6 +4416,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"För **on-premise-databaser** kräver metoderna med omdirigering och DNS-"
+"poster även att du konfigurerar :doc:`skriptet för e-postgateway &lt;../../"
+"../../administration/on_premise/email_gateway&gt;`. Att gå igenom detta "
+"skript kräver **avancerad teknisk kunskap och infrastrukturkunskap**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4663,7 +4679,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "DNS-poster"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4672,6 +4688,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Ett tredje alternativ är att använda en dedikerad underdomän (till exempel "
+"`mail.mydomain.com`) och konfigurera dess DNS-poster så att e-post som "
+"skickas till adresser på den underdomänen hanteras av Odoo och behandlas "
+"direkt i din databas."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4679,6 +4699,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"För Odoo Online och Odoo.sh stöds CNAME-baserad routing endast när en "
+"dedikerad underdomän används. Det kan inte konfigureras på din rotdomän "
+"(t.ex. `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4686,12 +4709,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Observera att denna underdomän kommer att vara dedikerad till e-posttrafik. "
+"Om den öppnas i en webbläsare omdirigeras användare till den första hemsidan "
+"som konfigurerats på databasen (återfinns en sådan)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Eftersom en ny underdomän konfigureras för inkommande e-post måste dess "
+":doc:`DNS-poster även ställas in för utgående e-post <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4701,7 +4729,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Öppna dina DNS-inställningar"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4709,34 +4737,39 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Om din domän hanteras av en tredjepartsregistrator (till exempel GoDaddy, "
+"Namecheap, Cloudflare), logga in hos registratorn och öppna DNS-"
+"hanteringszonen för din domän."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Om Odoo hanterar din DNS:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "Öppna `databashanteraren <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Klicka på ikonen :icon:`fa-gear` (:guilabel:`kugghjul`) bredvid databasen "
+"och välj :icon:`fa-globe` :guilabel:`Domännamn`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "Klicka på :guilabel:`DNS` och sedan :guilabel:`Lägg till DNS-post`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Skapa en CNAME-post"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**Namn / Värd:** den underdomän du vill använda (till exempel `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4744,10 +4777,11 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Innehåll / Mål:** din databas rotdomän (till exempel `dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Lägg till underdomänen i din Odoo-portal"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4755,6 +4789,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"I `databashanteraren <https://www.odoo.com/my/databases>`_ klickar du på "
+"ikonen :icon:`fa-gear` (:guilabel:`kugghjul`) för din databas och väljer "
+":icon:`fa-globe` :guilabel:`Domännamn`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4762,6 +4799,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Klicka på :guilabel:`Använd min egen domän`, ange hela underdomänen (till "
+"exempel `mail.mydomain.com`). När verifieringen har lyckats klickar du på "
+":guilabel:`Jag bekräftar, det är klart`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4771,16 +4811,21 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Om verifieringen misslyckas kontrollerar du att CNAME-målet slutar med en "
+"avslutande punkt (till exempel `dbname.odoo.com.`), eftersom vissa DNS-"
+"leverantörer kräver det. Ge även DNS-ändringarna lite tid att spridas – "
+"detta kan ta allt från några minuter upp till 48 timmar beroende på din "
+"leverantör. När spridningen är klar försöker du verifiera igen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Lägg till aliasdomänen i databasen"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "Logga in i databasen och öppna appen :guilabel:`Inställningar`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4788,38 +4833,44 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"I fältet :guilabel:`Aliasdomän` anger du underdomänen som du konfigurerade "
+"(till exempel `mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Lägga till en aliasdomän i inställningarna."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"I avsnittet :guilabel:`Domännamn` bör underdomänen visas enligt följande:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Exempel på konfiguration av domännamnsposter i Odoo-portalen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "I avsnittet :guilabel:`DNS` bör posterna visas enligt följande:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Exempel på konfiguration av DNS-poster i Odoo-portalen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"Den andra posten gör det möjligt för Odoo att skicka autentiserade e-"
+"postmeddelanden från din anpassade domän."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+":doc:`Konfigurera DNS-poster för att skicka e-post i Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4831,26 +4882,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Logga in hos din tredjepartsregistrator (till exempel GoDaddy, Namecheap, "
+"Cloudflare) och öppna DNS-hanteringszonen för din domän."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Lägg till underdomänen i inställningarna för Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Logga in på Odoo.sh-plattformen och öppna ditt projekt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Välj produktionsgrenen, gå till fliken :guilabel:`Inställningar` och leta "
+"upp avsnittet **Anpassade domäner**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Ange den fullständiga underdomänen (t.ex. `mail.mydomain.com`) och klicka på "
+":guilabel:`Lägg till domän`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4864,6 +4921,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Istället för en CNAME-post kan du alternativt skapa en MX-post för din "
+"underdomän (t.ex. `mail`), som pekar till `dbname.odoo.com.` med prioritet "
+"`10`. Resten av konfigurationsstegen förblir desamma."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4871,6 +4931,9 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Observera att till skillnad från CNAME ärver inte en MX-post SPF eller andra "
+"DNS-poster från måldomänen, så du kan behöva konfigurera dessa separat för "
+"att utgående e-post ska autentiseras korrekt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5285,6 +5348,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`DNS-poster <email-inbound-custom-domain-dns>` (kräver avancerad "
+"teknisk kompetens)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6432,6 +6497,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"För mer information om cronjobb när du använder Odoo.sh, se "
+":ref:`dokumentationen om Odoo.sh och schemalagda åtgärder <odoo-sh/advanced/"
+"scheduled>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8367,11 +8435,11 @@ msgstr ":guilabel:`Tillåtna metoder`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Tillåtna headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Exponerade headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8558,45 +8626,58 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odoo erbjuder integrationer för geolokalisering som gör det möjligt att "
+"hitta kontakter eller platser och skapa rutter på en karta."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"Vyn :ref:`Karta <studio/views/multiple-records/map>` är tillgänglig som "
+"standard. Ingen konfiguration krävs för att få tillgång till den."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "Geolokalisera kontakter och platser"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"Funktionen :guilabel:`Geolokalisering` genererar latitud- och "
+"longitudkoordinater för att fastställa platser. Den kan användas för att:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"Kontrollera anställdas :ref:`platser för in- och utstämpling <attendances/"
+"check-in-out-details>` i appen **Närvaro**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"Visa hämtningsplatsen vid användning av :ref:`leveransmetoden för "
+"upphämtning på plats <ecommerce/shipping/instore-pickup>`;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`Tilldela partners <contacts/partner-assignment>` i appen **Kontakter**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avatax address validation <accounting/"
 "avatax/address-validation>` feature."
 msgstr ""
+"Validera adresser med funktionen :ref:`Avatax adressvalidering <accounting/"
+"avatax/address-validation>` feature."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8606,10 +8687,15 @@ msgid ""
 "Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"För att aktivera funktionen :guilabel:`Geolokalisering`, gå till "
+":menuselection:`Inställningar --> Allmänna inställningar`, skrolla ned till "
+"avsnittet :guilabel:`Integrationer` och aktivera "
+":guilabel:`Geolokalisering`. I fältet :guilabel:`API:` väljer du sedan "
+"antingen :guilabel:`Open Street Map` eller :guilabel:`Google Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8617,6 +8703,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap är en fri, öppen geografisk databas som uppdateras och "
+"underhålls av volontärer. Ingen ytterligare konfiguration krävs för att "
+"använda :guilabel:`Open Street Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8624,10 +8713,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"Data från OpenStreetMap är inte alltid helt korrekt. Du kan `gå med i "
+"OpenStreetMap-gemenskapen <https://www.openstreetmap.org/fixthemap>`_ för "
+"att rapportera och korrigera eventuella problem som du stöter på."
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8635,6 +8727,9 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places API tillhandahåller detaljerad information om platser, företag "
+"och intressepunkter. Det stöder platsbaserade funktioner som sökning, "
+"navigering och rekommendationer."
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8650,7 +8745,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "Kartrutter"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8660,26 +8755,35 @@ msgid ""
 "management system </applications/inventory_and_mrp/inventory/"
 "shipping_receiving/setup_configuration/dispatch>`."
 msgstr ""
+"Kartrutter är användbara för att tillhandahålla resvägar och platser till "
+":doc:`fältservicetekniker </applications/services/planning/field_service>` "
+"samt leveransrutter till förare i ett :doc:`dispatchhanteringssystem </"
+"applications/inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/dispatch>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "Följ dessa steg för att skapa rutter:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
-msgstr ""
+msgstr "Skapa eller logga in på ett `Mapbox-konto <https://www.mapbox.com/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`Skapa en åtkomsttoken <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"Gå till `sidan för åtkomsttokens på Mapbox <https://account.mapbox.com/"
+"access-tokens/>`_ och kopiera din token till urklipp."
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8687,30 +8791,41 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox visar hemliga tokens endast en gång vid skapandet och döljer dem "
+"permanent när du lämnar sidan :guilabel:`Åtkomsttoken`. Se till att spara "
+"din token."
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"I Odoo går du till :menuselection:`Inställningar --> Allmänna inställningar` "
+"och scrollar ner till avsnittet :guilabel:`Integrationer`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Map Routes`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"Under :guilabel:`Kartrutter`, klistra in Mapbox-åtkomsttoken i fältet "
+":guilabel:`Token`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Hur man använder Mapbox på ett säkert sätt: Åtkomsttokens <https://"
+"docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`URL-begränsningar <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -9110,6 +9225,9 @@ msgid ""
 "www.odoo.com/documentation/master/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"För databasversioner 19.2 och senare, se den `senaste dokumentationen "
+"<https://www.odoo.com/documentation/master/applications/general/integrations/"
+"mail_plugins/gmail.html>`_ för installationsinstruktioner."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
 msgid ""
@@ -9417,22 +9535,30 @@ msgid ""
 "backend Mail Plugin module) does not resolve the issue, manually refresh the "
 "Gmail plugin to sync with the upgraded database:"
 msgstr ""
+"Om standardfelsökning (ominstallation, rensning av cache, uppgradering av "
+"backend-modulen Mail Plugin) inte löser ärendet, uppdatera Gmail-"
+"insticksprogrammet manuellt för att synkronisera med den uppgraderade "
+"databasen:"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:182
 msgid ""
 "In the Gmail inbox, click the :icon:`oi-odoo` :guilabel:`(Odoo)` icon in the "
 "side panel to open the *Odoo Inbox Addin (Legacy)*."
 msgstr ""
+"I Gmail-inkorgen klickar du på ikonen :icon:`oi-odoo` :guilabel:`(Odoo)` i "
+"sidofältet för att öppna *Odoo Inbox Addin (Legacy)*."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:184
 msgid ""
 "Click the :icon:`fa-ellipsis-v` :guilabel:`(More actions)` icon in the top "
 "corner of the plugin."
 msgstr ""
+"Klicka på ikonen :icon:`fa-ellipsis-v` :guilabel:`(Fler åtgärder)` i "
+"insticksprogrammets övre hörn."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:185
 msgid "Click :guilabel:`Refresh`."
-msgstr ""
+msgstr "Klicka på :guilabel:`Uppdatera`."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:187
 msgid ""
@@ -9440,10 +9566,13 @@ msgid ""
 "upgraded database version, clearing the stalled script and resolving the "
 "execution error."
 msgstr ""
+"Detta tvingar insticksprogrammet att manuellt synkronisera sin anslutning "
+"med den nyligen uppgraderade databasversionen, vilket rensar det låsta "
+"skriptet och löser körfelet."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Refresh button in the Odoo Gmail plugin."
-msgstr ""
+msgstr "Knappen Uppdatera i Odoos Gmail-insticksprogram."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook Plugin"
@@ -10674,7 +10803,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11892,6 +12021,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Skrivare i DYMO Series 5 är inte kompatibla med :doc:`IoT-boxen &lt;../"
+"iot_box&gt;` och kräver parkoppling med en :doc:`virtuell Windows-IoT &lt;../"
+"windows_iot&gt;`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:376
 msgid "DYMO LabelWriter not printing"
@@ -12320,10 +12452,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"För att konfigurera Ariva S-vågen så att IoT-systemet känner igen den, se "
+"`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
+"RET_DOCS/Ariv.pdf>`_ och följ dessa steg:"
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "Håll ned knappen **>T<** tills :guilabel:`CONF` visas."
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
@@ -12337,12 +12472,16 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"Vid steg :guilabel:`3.1`, se till att värdet är inställt på :guilabel:`1` "
+"(USB Virtual COM ports). Tryck på **>T<** för att bläddra bland alternativen."
 
 #: ../../content/applications/general/iot/devices/scale.rst:49
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"Tryck på **>0<** fram till :guilabel:`3.6` och se till att värdet är "
+"inställt på :guilabel:`3` (8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:51
 msgid ""
@@ -12372,6 +12511,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"Starta om :doc:`IoT-boxen <../iot_box>` eller :ref:`starta om tjänsten för "
+"virtuell Windows IoT <iot/windows_iot/restart>`. Vågen bör sedan visas som "
+"`Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12715,12 +12857,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"IoT-systemet är anslutet och rapporter har tilldelats en skrivare som inte "
+"kan skriva ut"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Kontrollera att webbläsaren tillåts att :ref:`få åtkomst till enheter på det "
+"lokala nätverket <pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -14152,6 +14298,12 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"För att kontrollera inloggade enheter, klicka på användarikonen i det övre "
+"högra hörnet och klicka på :guilabel:`Mina inställningar` för att öppna "
+"användarprofilen. Klicka på fliken *Säkerhet* för att visa en lista över "
+"alla enheter som användaren har loggat in på databasen med. Enheter som för "
+"närvarande är inloggade i systemet visas med en grön cirkel bredvid "
+"enhetsnamnet på kanban-kortet."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -14167,6 +14319,9 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"Om en listad enhet **inte** är en legitim användarenhet och kan utgöra en "
+"potentiell säkerhetsrisk, ta bort enheten och återkalla åtkomsten genom att "
+"klicka på knappen :guilabel:`Logga ut`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -14174,12 +14329,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"Ett popup-fönster för :guilabel:`Åtkomstkontroll` öppnas och ber användaren "
+"att bekräfta sin identitet. Ange användarens lösenord och klicka sedan på "
+":guilabel:`Bekräfta lösenord`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"Enheten försvinner från fliken *Säkerhet* och kan inte längre användas för "
+"att logga in i databasen."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -14307,6 +14467,11 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"För att kräva en minsta lösenordslängd, :ref:`installera <general/install>` "
+"modulen :guilabel:`Lösenordspolicy` (`auth_password_policy`). Öppna sedan "
+"appen :guilabel:`Inställningar`, navigera till avsnittet *Behörigheter* och "
+"ange önskad lösenordslängd i fältet :guilabel:`Minsta lösenordslängd`. Som "
+"standard är värdet `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -14456,7 +14621,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Flera företag"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -14465,12 +14630,19 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"Fältet :guilabel:`Företag` i ett användarformulär avgör vilka företag en "
+"användare har åtkomst till. För att konfigurera åtkomst för flera företag, "
+"navigera till :menuselection:`Inställningar --> Avsnittet Användare --> "
+"Hantera användare`. Välj sedan önskad användare för att öppna dennes "
+"användarformulär."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"På fliken *Åtkomsträttigheter*, under avsnittet *Roller*, konfigurerar du "
+"fälten :guilabel:`Företag` och :guilabel:`Standardföretag`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -14478,12 +14650,17 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`Företag`: Välj ett eller flera företag som användaren har "
+"tillgång till. Användarens behörigheter för åtkomst och redigering bestäms "
+"av tilldelade åtkomsträttigheter."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
 ":guilabel:`Default Company`: Select the company that is automatically "
 "selected when the user logs in. Only one company can be set as the default."
 msgstr ""
+":guilabel:`Standardföretag`: Välj det företag som automatiskt väljs när "
+"användaren loggar in. Endast ett företag kan anges som standardföretag."
 
 #: ../../content/applications/general/users.rst:239
 msgid ""
@@ -14493,6 +14670,11 @@ msgid ""
 "explanations, refer to the developer documentation on :doc:`../../../"
 "developer/howtos/company`."
 msgstr ""
+"Felaktig konfigurering av åtkomst till flera företag kan leda till "
+"inkonsekvent beteende mellan företagen. Endast erfarna Odoo-användare bör "
+"ändra användarrättigheter i databaser med konfiguration för flera företag. "
+"För tekniska förklaringar, se utvecklardokumentationen om :doc:`../../../"
+"developer/howtos/company`."
 
 #: ../../content/applications/general/users.rst:None
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
@@ -14627,10 +14809,14 @@ msgid ""
 "avatar in the upper-right corner, and select :guilabel:`My Preferences` from "
 "the resulting drop-down menu."
 msgstr ""
+"Efter att ha valt en autentiseringsapp, logga in på Odoo, klicka på "
+"profilavataren i det övre högra hörnet och välj :guilabel:`Mina "
+"inställningar` i rullgardinsmenyn."
 
 #: ../../content/applications/general/users/2fa.rst:54
 msgid "Click the *Security* tab, then click :guilabel:`Enable 2FA`."
 msgstr ""
+"Klicka på fliken *Säkerhet* och klicka sedan på :guilabel:`Aktivera 2FA`."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The account secuirty tab in a user profile."
@@ -14643,6 +14829,10 @@ msgid ""
 "click :guilabel:`Confirm Password`. Next, a *Two-Factor Authentication "
 "Activation* pop-up window appears, with a |QR|."
 msgstr ""
+"Detta öppnar ett popup-fönster för *Åtkomstkontroll* som kräver "
+"lösenordsbekräftelse för att fortsätta. Ange lösenordet för Odoo-kontot och "
+"klicka på :guilabel:`Bekräfta lösenord`. Därefter visas ett popup-fönster "
+"för *Aktivering av tvåfaktorsautentisering* med en |QR|."
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "The 2fa authentication QR code in Odoo."
@@ -14857,7 +15047,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:32
 msgid "Manage roles"
-msgstr ""
+msgstr "Hantera roller"
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid ""
@@ -14866,34 +15056,47 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`Enskilda användare <users/add-individual>` tilldelas en *Roll* när de "
+"läggs till i databasen. Roller avgör vilken åtkomstnivå en användare har, "
+"medan de specifika åtkomsträttigheterna för varje roll definieras av "
+":ref:`grupper <access-rights/groups>`."
 
 #: ../../content/applications/general/users/access_rights.rst:38
 msgid "The four available roles are:"
-msgstr ""
+msgstr "De fyra tillgängliga rollerna är:"
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*Administratör*: En intern användare med åtkomst till tekniska funktioner, "
+"produktskapande, export och andra avancerade behörigheter."
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*Användare*: En intern användare som vanligtvis har tillgång till backend "
+"och kan skapa och redigera poster, men med mindre omfattande behörigheter än "
+"en administratör."
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Portal*: A customer or supplier who accesses their own data through the "
 "portal."
 msgstr ""
+"*Portal*: En kund eller leverantör som har åtkomst till sina egna data via "
+"portalen."
 
 #: ../../content/applications/general/users/access_rights.rst:45
 msgid ""
 "*Public*: A website visitor or other external user. They generally have the "
 "least access."
 msgstr ""
+"*Offentlig*: En besökare på hemsidan eller annan extern användare. De har i "
+"allmänhet minst åtkomst."
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage user permissions"
@@ -14937,6 +15140,10 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"Behörigheterna som är tillgängliga på fliken *Åtkomsträttigheter* bestäms av "
+"de grupper som är kopplade till användarens roll. Roller ger en "
+"fördefinierad uppsättning behörigheter, medan grupper definierar de "
+"specifika åtkomsträttigheter som beviljas användare."
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
@@ -15185,6 +15392,9 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"Ange ett :guilabel:`Namn` för gruppen och markera kryssrutan bredvid "
+":guilabel:`Dela grupp` om gruppen skapades för att ställa in "
+"åtkomsträttigheter för datadelning med vissa användare."
 
 #: ../../content/applications/general/users/access_rights.rst:165
 msgid ""
@@ -15485,6 +15695,11 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"För att aktivera tidsgräns för sessioner, klicka på fliken *Tidsgränser* och "
+"markera kryssrutan :guilabel:`Session`. Välj sedan antingen :guilabel:`Logga "
+"ut` eller :guilabel:`Logga ut med tvåfaktorsautentisering` i "
+"rullgardinsmenyn. Detta avgör om användaren måste genomföra 2FA-verifiering "
+"vid återinloggning."
 
 #: ../../content/applications/general/users/access_rights.rst:277
 msgid ""

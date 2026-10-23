@@ -4,13 +4,14 @@
 # "Chloe Wang (chwa)" <chwa@odoo.com>, 2025, 2026.
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-16 17:33+0000\n"
-"PO-Revision-Date: 2026-09-07 16:12+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 09:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/administration/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -1040,7 +1041,7 @@ msgstr "网络服务"
 
 #: ../../content/administration/odoo_online.rst:163
 msgid "Databases list"
-msgstr ""
+msgstr "数据库列表"
 
 #: ../../content/administration/odoo_online.rst:165
 msgid ""
@@ -1049,6 +1050,9 @@ msgid ""
 "method of the `odoo.database` model via the :doc:`external JSON-2 API <../"
 "developer/reference/external_api>`."
 msgstr ""
+"要以编程方式获取在\\ :ref:`数据库管理器 <odoo-online/database-manager>`\\ 下"
+"显示的所有数据库列表，请通过\\ :doc:`外部 JSON-2 API <../developer/reference/"
+"external_api>`\\ 调用 `odoo.database` 模型的 `list` 方法。"
 
 #: ../../content/administration/odoo_online.rst:171
 #: ../../content/administration/odoo_online.rst:216
@@ -1059,11 +1063,11 @@ msgstr "Python"
 #: ../../content/administration/odoo_online.rst:189
 #: ../../content/administration/odoo_online.rst:232
 msgid "cURL"
-msgstr ""
+msgstr "cURL"
 
 #: ../../content/administration/odoo_online.rst:200
 msgid "Audit logs"
-msgstr ""
+msgstr "审计日志"
 
 #: ../../content/administration/odoo_online.rst:202
 msgid ""
@@ -1071,6 +1075,9 @@ msgid ""
 "`get_audit_logs` method of the `odoo.database` model via the :doc:`external "
 "JSON-2 API <../developer/reference/external_api>`."
 msgstr ""
+"要获取 Odoo Online 数据库的管理员活动日志，请通过\\ :doc:`外部 JSON-2 API "
+"&lt;../developer/reference/external_api&gt;`\\ 调用 `odoo.database` 模型的 "
+"`get_audit_logs` 方法。"
 
 #: ../../content/administration/odoo_online.rst:205
 msgid ""
@@ -1079,89 +1086,96 @@ msgid ""
 "`subscription_code` can be used to retrieve logs for all databases and "
 "projects belonging to the subscription."
 msgstr ""
+"请求必须提供 `db_uuid` 或 `subscription_code`。如果提供了 `db_uuid`，则返回该"
+"数据库的日志。否则，可使用 `subscription_code` 获取属于该订阅的所有数据库和项"
+"目的日志。"
 
 #: ../../content/administration/odoo_online.rst:209
 msgid ""
 "The optional `cursor` is an opaque value returned by a previous request. "
 "When provided, only logs more recent than the cursor are returned."
 msgstr ""
+"可选的 `cursor` 是由上一个请求返回的不透明值。提供该参数时，仅返回比该游标更"
+"新的日志。"
 
 #: ../../content/administration/odoo_online.rst:212
 msgid ""
 "Audit log retrieval is subject to rate limits and must not be performed more "
 "than once every 5 minutes."
-msgstr ""
+msgstr "审计日志检索受速率限制，每 5 分钟不得执行超过一次。"
 
 #: ../../content/administration/odoo_online.rst:242
 msgid ""
 "The response is a JSON object containing the logs and an opaque cursor for "
 "retrieving the next batch:"
-msgstr ""
+msgstr "响应是一个 JSON 对象，包含日志以及用于获取下一批次的不透明游标："
 
 #: ../../content/administration/odoo_online.rst:263
 msgid "The request parameters are:"
-msgstr ""
+msgstr "请求参数为："
 
 #: ../../content/administration/odoo_online.rst:265
 msgid ""
 "`db_uuid` (string): the UUID of the database. If provided, "
 "`subscription_code` is ignored."
-msgstr ""
+msgstr "`db_uuid` (string)：数据库的 UUID。如果提供，将忽略 `subscription_code`。"
 
 #: ../../content/administration/odoo_online.rst:266
 msgid ""
 "`subscription_code` (string): the subscription code. Used when `db_uuid` is "
 "not provided."
-msgstr ""
+msgstr "`subscription_code` (string)：订阅代码。在未提供 `db_uuid` 时使用。"
 
 #: ../../content/administration/odoo_online.rst:267
 msgid ""
 "`cursor` (string): an opaque cursor returned by a previous request. When "
 "provided, only logs more recent than the cursor are returned."
 msgstr ""
+"`cursor` (string)：由上一个请求返回的不透明游标。提供该参数时，仅返回比该游标"
+"更新的日志。"
 
 #: ../../content/administration/odoo_online.rst:270
 msgid "Each log entry contains:"
-msgstr ""
+msgstr "每个日志条目包含："
 
 #: ../../content/administration/odoo_online.rst:272
 msgid "`date` (string): the log date and time in UTC."
-msgstr ""
+msgstr "`date` (string)：UTC 格式的日志日期和时间。"
 
 #: ../../content/administration/odoo_online.rst:273
 msgid "`user` (string): the user who performed the action"
-msgstr ""
+msgstr "`user` (string)：执行该操作的用户"
 
 #: ../../content/administration/odoo_online.rst:274
 msgid ""
 "`database` (string): the database concerned by the action, when applicable."
-msgstr ""
+msgstr "`database` (string)：操作涉及的数据库（如适用）。"
 
 #: ../../content/administration/odoo_online.rst:275
 msgid "`subscription` (string): the subscription code."
-msgstr ""
+msgstr "`subscription` (string)：订阅代码。"
 
 #: ../../content/administration/odoo_online.rst:276
 msgid "`ip` (string): the IP address from which the action was performed."
-msgstr ""
+msgstr "`ip` (string)：执行操作的 IP 地址。"
 
 #: ../../content/administration/odoo_online.rst:277
 msgid "`action` (string): the type of action."
-msgstr ""
+msgstr "`action` (string)：操作类型。"
 
 #: ../../content/administration/odoo_online.rst:278
 msgid "`details` (string): additional information about the action."
-msgstr ""
+msgstr "`details`\\ （字符串）：关于该操作的附加信息。"
 
 #: ../../content/administration/odoo_online.rst:279
 msgid "`authorized` (boolean): whether the action was authorized."
-msgstr ""
+msgstr "`authorized`\\ （布尔值）：该操作是否已获授权。"
 
 #: ../../content/administration/odoo_online.rst:281
 msgid ""
 "The `next_cursor` value is an opaque cursor that can be provided as `cursor` "
 "in a subsequent request."
-msgstr ""
+msgstr "`next_cursor`\\ 值是一个不透明的游标，可作为\\ `cursor`\\ 在后续请求中提供。"
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:34
@@ -1182,7 +1196,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced.rst:3
 msgid "Advanced topics"
-msgstr ""
+msgstr "高级主题"
 
 #: ../../content/administration/odoo_sh/advanced.rst:5
 msgid ""
@@ -1190,6 +1204,9 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
+"本节介绍与\\ :ref:`容器 <odoo-sh/advanced/containers>`\\ 、\\ :ref:`Git 子模"
+"块 <odoo-sh/advanced/submodules>`\\ 以及\\ :ref:`计划动作 <odoo-sh/advanced/"
+"scheduled>`\\ 相关的 Odoo.sh 高级功能。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
@@ -1201,6 +1218,8 @@ msgid ""
 "base is an Ubuntu-based system on which all of Odoo's required dependencies, "
 "as well as common, useful packages, are installed."
 msgstr ""
+"每个构建都在其独立的容器（Linux 命名空间容器）中隔离运行。基础环境是基于 "
+"Ubuntu 的系统，上面安装了 Odoo 所需的所有依赖项以及常用的实用软件包。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:18
 msgid ""
@@ -1210,6 +1229,9 @@ msgid ""
 "them. The platform will ensure these dependencies are installed in your "
 "containers."
 msgstr ""
+"如果您的项目需要\\ :ref:`其他 Python 依赖项 <odoo-sh/module/library>`\\ 或更"
+"新的版本，您可以在分支根目录下定义一个列出这些依赖项的\\ "
+":file:`requirements.txt`\\ 文件。平台将确保在您的容器中安装这些依赖项。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:23
 msgid ""
@@ -1222,6 +1244,8 @@ msgid ""
 "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
 "reference/requirement-specifiers/>`_"
 msgstr ""
+"`PyPA 依赖说明符文档 <https://pip.pypa.io/en/stable/reference/requirement-"
+"specifiers/>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:29
 msgid ""
@@ -1229,6 +1253,9 @@ msgid ""
 "submodules>` are also taken into account. The platform looks for such files "
 "in the parent folder of each folder containing an Odoo module."
 msgstr ""
+"对于\\ :file:`requirements.txt`\\ 文件，\\ :ref:`子模块 <odoo-sh/advanced/"
+"submodules>`\\ 中的此类文件也会被考虑在内。平台会在每个包含 Odoo 模块的文件夹"
+"的父文件夹中查找此类文件。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
@@ -1240,16 +1267,20 @@ msgid ""
 "`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 msgstr ""
+"由于容器基于 Ubuntu，其目录结构遵循\\ `文件系统层次结构标准 <https://"
+"en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:42
 msgid ""
 "`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
 "LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
+"`Ubuntu 主要目录文档 <https://help.ubuntu.com/community/"
+"LinuxFilesystemTreeOverview#Main_directories>`_"
 
 #: ../../content/administration/odoo_sh/advanced.rst:44
 msgid "The directories relevant to Odoo.sh are the following:"
-msgstr ""
+msgstr "与 Odoo.sh 相关的目录如下："
 
 #: ../../content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
@@ -1259,7 +1290,7 @@ msgstr "数据库外壳"
 msgid ""
 "While accessing a container with the shell, you can access the database "
 "using the `psql` command."
-msgstr ""
+msgstr "通过 shell 访问容器时，可以使用 `psql` 命令访问数据库。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:94
 msgid ""
@@ -1270,6 +1301,10 @@ msgid ""
 "safety net in case of a mistake. You simply have to rollback your changes to "
 "revert your database to its previous state."
 msgstr ""
+"当 SQL 语句导致变更（例如 `UPDATE`、`DELETE`、`ALTER` 等）时，请务必使用\\ "
+"`事务 <https://www.postgresql.org/docs/current/static/sql-begin.html>`_（例"
+"如 `BEGIN` (...) `COMMIT` / `ROLLBACK`），尤其是对于生产数据库。事务机制是您"
+"在发生错误时的安全保障。只需回滚更改即可将数据库恢复到先前的状态。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:100
 msgid ""
@@ -1277,22 +1312,24 @@ msgid ""
 "lock records in your tables, and a running database may wait for them to be "
 "released, causing a server to hang indefinitely."
 msgstr ""
+"请务必提交或回滚事务。未结束的事务可能会锁定表中的记录，而正在运行的数据库可"
+"能会等待这些锁释放，从而导致服务器无限期挂起。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:104
 msgid ""
 "In addition, use your staging databases to test your statements first. It "
 "gives you an extra safety net."
-msgstr ""
+msgstr "此外，请先使用暂存数据库测试您的语句。这能为您提供额外的安全保障。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:108
 msgid ""
 "You forgot to set your `WHERE` condition. In such a case, you can rollback "
 "to revert the unwanted change:"
-msgstr ""
+msgstr "您忘记设置 `WHERE` 条件。在这种情况下，您可以进行回滚以撤销不必要的更改："
 
 #: ../../content/administration/odoo_sh/advanced.rst:120
 msgid "Then, rewrite the statement and commit the change:"
-msgstr ""
+msgstr "然后重写该语句并提交更改："
 
 #: ../../content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
@@ -1304,44 +1341,48 @@ msgid ""
 "able to access it from the outside world with a web browser, but you can, "
 "for example:"
 msgstr ""
+"您可以从容器 shell 启动 Odoo 服务器实例。您将无法通过网页浏览器从外部访问它，"
+"但您可以（例如）："
 
 #: ../../content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
-msgstr ""
+msgstr "使用 Odoo shell："
 
 #: ../../content/administration/odoo_sh/advanced.rst:151
 msgid "Install a module:"
-msgstr ""
+msgstr "安装模块："
 
 #: ../../content/administration/odoo_sh/advanced.rst:158
 msgid ""
 "The argument `--without-demo=all` prevents demo data from being loaded for "
 "all modules."
-msgstr ""
+msgstr "参数 `--without-demo=all` 可防止为所有模块加载演示数据。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:159
 msgid ""
 "The argument `--stop-after-init` immediately shutdowns the server instance "
 "after the operation is completed."
-msgstr ""
+msgstr "参数 `--stop-after-init` 会在操作完成后立即停止服务器实例。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:162
 msgid "Update a module:"
-msgstr ""
+msgstr "更新模块："
 
 #: ../../content/administration/odoo_sh/advanced.rst:168
 msgid "Run the tests for a module:"
-msgstr ""
+msgstr "运行模块测试："
 
 #: ../../content/administration/odoo_sh/advanced.rst:175
 msgid ":doc:`CLI documentation </developer/reference/cli>`"
-msgstr ""
+msgstr ":doc:`CLI 文档 </developer/reference/cli>`"
 
 #: ../../content/administration/odoo_sh/advanced.rst:177
 msgid ""
 "To find the addons path used by Odoo.sh to run your server, look for "
 "\"*odoo: addons paths*\" in the logs (:file:`~/logs/odoo.log`)."
 msgstr ""
+"若要查找 Odoo.sh 用于运行服务器的 addons 路径，请在日志（\\ :file:`~/logs/"
+"odoo.log`\\ ）中查找“*odoo: addons paths*”。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:187
 msgid ""
@@ -1349,6 +1390,8 @@ msgid ""
 "will be reflected in the database. Remember to always carry out tests in "
 "your staging databases."
 msgstr ""
+"在 Odoo 服务器实例上执行的操作不是孤立的；所做更改将反映在数据库中。请记住，"
+"务必始终在暂存数据库中执行测试。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:193
 msgid "Debugging in Odoo.sh"
@@ -1361,6 +1404,8 @@ msgid ""
 "and limitations of the Odoo.sh platform, and assumes that you already know "
 "how to use a debugger."
 msgstr ""
+"调试 Odoo.sh 构建与调试其他 Python 应用程序没有实质区别。因此，本节旨在介绍 "
+"Odoo.sh 平台的特性与限制，并假定您已了解如何使用调试器。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:200
 msgid ""
@@ -1368,6 +1413,8 @@ msgid ""
 "server runs outside a shell, you cannot launch the debugger directly from "
 "your Odoo backend, as it requires a shell to operate."
 msgstr ""
+"您可以使用 `pdb`、`pudb` 或 `ipdb` 在 Odoo.sh 上调试代码。由于服务器在 shell "
+"之外运行，而调试器需要 shell 才能工作，因此无法直接从 Odoo 后台启动调试器。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:204
 msgid ""
@@ -1381,39 +1428,45 @@ msgid ""
 "To use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/"
 "project/ipdb/>`_, it is necessary to install them either:"
 msgstr ""
+"若要使用 `pudb <https://pypi.org/project/pudb/>`_ 或 `ipdb <https://pypi.org/"
+"project/ipdb/>`_，必须通过以下任一方式进行安装："
 
 #: ../../content/administration/odoo_sh/advanced.rst:210
 msgid ""
 "permanently by adding `pudb` or `ipdb` to your "
 "project's :file:`requirements.txt` file, or"
 msgstr ""
+"永久方式：将 `pudb` 或 `ipdb` 添加到项目的\\ :file:`requirements.txt`\\ 文件"
+"中；或者"
 
 #: ../../content/administration/odoo_sh/advanced.rst:211
 msgid ""
 "temporarily (only in the current build) by running the relevant command:"
-msgstr ""
+msgstr "临时方式（仅限当前构建）：运行相关命令："
 
 #: ../../content/administration/odoo_sh/advanced.rst:221
 msgid "To trigger the debugger, add this to the code you want to debug:"
-msgstr ""
+msgstr "若要触发调试器，请将以下代码添加到要调试的位置："
 
 #: ../../content/administration/odoo_sh/advanced.rst:230
 msgid ""
 "The condition `sys.__stdin__.isatty()` is a workaround for detecting whether "
 "you are running Odoo from a shell."
 msgstr ""
+"条件 `sys.__stdin__.isatty()` 是一种用于检测是否正在从 shell 运行 Odoo 的变通"
+"方法。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:233
 msgid "Next, save the file and run the Odoo shell:"
-msgstr ""
+msgstr "接下来，保存文件并运行 Odoo shell："
 
 #: ../../content/administration/odoo_sh/advanced.rst:239
 msgid "Use the Odoo shell to trigger the code you want to debug."
-msgstr ""
+msgstr "使用 Odoo shell 触发要调试的代码。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:0
 msgid "pdb running in an Odoo.sh shell"
-msgstr ""
+msgstr "在 Odoo.sh shell 中运行的 pdb"
 
 #: ../../content/administration/odoo_sh/advanced.rst:247
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:266
@@ -1428,6 +1481,10 @@ msgid ""
 "main codebase. You maintain precise version control by choosing exact "
 "branches and pinning specific commit revisions to update whenever you choose."
 msgstr ""
+"`Git 子模块 <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ 允许您直"
+"接将外部仓库链接到项目中，无需复制粘贴代码，通过在主代码库旁克隆依赖项来简化"
+"部署。您可以选择确切的分支并锁定具体的提交版本，随时进行更新，从而保持精确的"
+"版本控制。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:254
 msgid ""
@@ -1436,6 +1493,9 @@ msgid ""
 "deploy key in your project and repository settings <odoo-sh/settings/"
 "submodules>` when integrating private repositories."
 msgstr ""
+"在 Odoo.sh 上，平台会自动检测子模块并将其添加到 addons 路径以进行数据库安装，"
+"前提是在集成私有仓库时\\ :ref:`在项目和仓库设置中配置部署密钥 <odoo-sh/"
+"settings/submodules>`\\ 。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:261
 msgid "Adding a submodule"
@@ -1443,48 +1503,54 @@ msgstr "添加子模块"
 
 #: ../../content/administration/odoo_sh/advanced.rst:265
 msgid "With Odoo.sh"
-msgstr ""
+msgstr "使用 Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced.rst:268
 msgid ""
 "Currently, it is not possible to add **private** repositories with Odoo.sh. "
 "You can nevertheless do so with Git."
-msgstr ""
+msgstr "目前无法通过 Odoo.sh 添加**私有**仓库。不过，您可以通过 Git 来完成此操作。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:271
 msgid ""
 "From the :doc:`Branches <getting_started/branches>` view of your Odoo.sh "
 "project, choose the branch in which you want to add a submodule."
 msgstr ""
+"在 Odoo.sh 项目的\\ :doc:`分支 <getting_started/branches>`\\ 视图中，选择要添"
+"加子模块的分支。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:273
 msgid ""
 "In the upper right corner, click :guilabel:`Submodule`, then :guilabel:`Run "
 "on Odoo.sh`."
 msgstr ""
+"在右上角，单击\\ :guilabel:`子模块`\\ ，然后单击\\ :guilabel:`在 Odoo.sh 上运"
+"行`\\ 。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:274
 msgid "In the dialog box, fill in the following:"
-msgstr ""
+msgstr "在对话框中填写以下内容："
 
 #: ../../content/administration/odoo_sh/advanced.rst:276
 msgid ":guilabel:`Repository URL`: the SSH URL of the repository"
-msgstr ""
+msgstr ":guilabel:`仓库 URL`：仓库的 SSH URL"
 
 #: ../../content/administration/odoo_sh/advanced.rst:279
 msgid ""
 "On GitHub, click :guilabel:`Clone`, select :guilabel:`SSH`, and copy the URL."
 msgstr ""
+"在 GitHub 上，单击\\ :guilabel:`克隆`\\ ，选择\\ :guilabel:`SSH`\\ 并复制该 "
+"URL。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:284
 msgid ":guilabel:`Branch`: the specific branch that should be used"
-msgstr ""
+msgstr ":guilabel:`分支`：应使用的特定分支"
 
 #: ../../content/administration/odoo_sh/advanced.rst:285
 msgid ""
 ":guilabel:`Path`: the folder in which the submodule should be added to in "
 "your branch"
-msgstr ""
+msgstr ":guilabel:`路径`：子模块应添加到分支中的文件夹"
 
 #: ../../content/administration/odoo_sh/advanced.rst:290
 msgid "With Git (advanced)"
@@ -1498,37 +1564,39 @@ msgstr "在终端中，在克隆 Git 存储库的文件夹中，检出要在其�
 
 #: ../../content/administration/odoo_sh/advanced.rst:299
 msgid "Add the submodule:"
-msgstr ""
+msgstr "添加子模块："
 
 #: ../../content/administration/odoo_sh/advanced.rst:305
 msgid ""
 "*<git@yourprovider.com>:<username/repository.git>*: the SSH URL of the "
 "repository you want to add as a submodule"
 msgstr ""
+"*<git@yourprovider.com>:<username/repository.git>*：要添加为子模块的仓库 SSH "
+"URL"
 
 #: ../../content/administration/odoo_sh/advanced.rst:307
 msgid "*<branch>*: the branch you want to use in the above repository"
-msgstr ""
+msgstr "*<branch>*：要在上述仓库中使用的分支"
 
 #: ../../content/administration/odoo_sh/advanced.rst:308
 msgid "*<path>*: the folder in which you want to add this submodule"
-msgstr ""
+msgstr "*<path>*：要在其中添加此子模块的文件夹"
 
 #: ../../content/administration/odoo_sh/advanced.rst:310
 msgid "Commit and push the changes:"
-msgstr ""
+msgstr "提交并推送更改："
 
 #: ../../content/administration/odoo_sh/advanced.rst:316
 msgid ""
 "*<remote>*: the repository on which you want to push your changes. On a "
 "standard Git setup, this is *origin*."
-msgstr ""
+msgstr "*<remote>*：您要向其推送更改的仓库。在标准 Git 设置中，这是 *origin*。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:318
 msgid ""
 "*<branch>*: the branch on which you want to push your changes. Most likely, "
 "the branch you checked out in the first step."
-msgstr ""
+msgstr "*<branch>*：您要向其推送更改的分支。通常是您在第一步中检出的分支。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:322
 msgid ""
@@ -1538,6 +1606,10 @@ msgid ""
 "this folder, and you can hand-pick the modules by creating `symbolic links "
 "<https://en.wikipedia.org/wiki/Symbolic_link>`_ to them from another folder."
 msgstr ""
+"添加包含多个模块的仓库时，如果有些模块会自动安装，您可能希望忽略其中某些模块"
+"。为此，请在子模块文件夹名称前加上前缀\\ :code:`.`\\ （例如 `.folder`）。该平"
+"台将忽略此文件夹，您可以通过从另一个文件夹创建指向它们的\\ `符号链接 "
+"<https://en.wikipedia.org/wiki/Symbolic_link>`_\\ 来手动挑选模块。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:330
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:80
@@ -1552,38 +1624,41 @@ msgid ""
 "each customer is guaranteed a fair share of the server's resources. "
 "Therefore, an exact running time for scheduled actions cannot be guaranteed."
 msgstr ""
+"在 Odoo.sh 平台上，计划操作的实现方式与常规 Odoo 服务器略有不同，并按尽力而为"
+"的原则运行。这是因为同一台服务器上可能存在多个客户，并且每个客户都能保证获得"
+"公平分配的服务器资源。因此，无法保证计划操作的确切运行时间。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:338
 msgid ""
 "Do not expect any scheduled action to be run more often than every five "
 "minutes."
-msgstr ""
+msgstr "不要指望任何计划操作的运行频率超过每五分钟一次。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:340
 msgid ""
 "As the execution time of scheduled actions is limited, it is advised to "
 "ensure your scheduled actions:"
-msgstr ""
+msgstr "由于计划操作的执行时间有限，建议确保计划操作："
 
 #: ../../content/administration/odoo_sh/advanced.rst:343
 msgid "Work on small batches of records."
-msgstr ""
+msgstr "每次处理小批量记录。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:344
 msgid ""
 "Commit their work after processing each batch so that if they are "
 "interrupted by the time limit, they do not need to start over."
-msgstr ""
+msgstr "每次处理完一批记录后立即提交，以便在因超时而中断时无需从头开始。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:346
 msgid ""
 "Are idempotent, i.e, they must not cause side effects if they are started "
 "more often than expected."
-msgstr ""
+msgstr "具有幂等性，即如果启动频率高于预期，也不会产生副作用。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:350
 msgid "IP address change"
-msgstr ""
+msgstr "IP 地址变更"
 
 #: ../../content/administration/odoo_sh/advanced.rst:352
 msgid ""
@@ -1603,6 +1678,8 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
+"该机制允许在 IP 地址发生变更时触发自定义操作（例如发送电子邮件、调用防火墙 "
+"API、配置数据库对象等）。"
 
 #: ../../content/administration/odoo_sh/advanced.rst:360
 msgid ""
@@ -2200,19 +2277,19 @@ msgstr "核心构成"
 msgid ""
 "When working with Odoo.sh, it is important to understand the main components "
 "involved:"
-msgstr ""
+msgstr "使用\\ Odoo.sh\\ 时，了解其中涉及的主要组件非常重要："
 
 #: ../../content/administration/odoo_sh/getting_started.rst:14
 msgid ":ref:`GitHub repository <odoo-sh/getting-started/components/github>`"
-msgstr ""
+msgstr ":ref:`GitHub 仓库 <odoo-sh/getting-started/components/github>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:15
 msgid ":ref:`Odoo.sh project <odoo-sh/getting-started/components/project>`"
-msgstr ""
+msgstr ":ref:`Odoo.sh 项目 <odoo-sh/getting-started/components/project>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:16
 msgid ":ref:`Odoo database <odoo-sh/getting-started/components/database>`"
-msgstr ""
+msgstr ":ref:`Odoo 数据库 <odoo-sh/getting-started/components/database>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:18
 msgid ""
@@ -2220,10 +2297,12 @@ msgid ""
 "development and deployment of Odoo applications. Together, they form a "
 "cohesive pipeline from code development to a live business use."
 msgstr ""
+"虽然它们彼此互联，但每个组件在 Odoo 应用程序的开发和部署中都扮演着不同的角色"
+"。它们共同构成了一个从代码开发到实际业务使用的完整流程。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:25
 msgid "GitHub repository"
-msgstr ""
+msgstr "GitHub 仓库"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:27
 msgid ""
@@ -2232,6 +2311,8 @@ msgid ""
 "on GitHub and can be accessed and edited by multiple people on different "
 "computers."
 msgstr ""
+"GitHub 仓库就像电脑上的一个文件夹，包含特定项目的所有文件和文件夹。不同之处在"
+"于，它存储在\\ GitHub\\ 上，多个人可以在不同的电脑上访问和编辑它。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:31
 msgid ""
@@ -2241,6 +2322,9 @@ msgid ""
 "changes to your project over time, so you can easily roll back to a previous "
 "version if needed."
 msgstr ""
+"换句话说，GitHub 仓库是一个存放项目文件并与他人共享的地方，方便他人与你协作、"
+"进行更改并为项目做出贡献。它还会随时间跟踪项目的所有更改，因此需要时可以轻松"
+"回滚到之前的版本。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:36
 msgid ""
@@ -2251,6 +2335,10 @@ msgid ""
 "applications' source code is stored. It tracks every change, supports "
 "collaboration, and can be either public or private."
 msgstr ""
+"此外，GitHub 还提供许多帮助管理项目的功能，例如问题跟踪、拉取请求和代码审查。"
+"它是管理和协作软件项目的强大工具，被全球开发者广泛使用。它是一个用于存储\\ "
+"Odoo\\ 应用程序源代码的版本控制空间，可跟踪每一次更改，支持协作，并且可以设置"
+"为公开或私有。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of a GitHub repository"
@@ -2258,7 +2346,7 @@ msgstr "GitHub 代码仓库示例"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:48
 msgid "Odoo.sh project"
-msgstr ""
+msgstr "Odoo.sh 项目"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:50
 msgid ""
@@ -2267,6 +2355,9 @@ msgid ""
 "applications. It includes tools such as automated backups, staging "
 "environments, and continuous integration pipelines."
 msgstr ""
+"Odoo.sh 项目是一种*平台即服务*（PaaS），与\\ GitHub\\ 集成，可简化\\ Odoo\\ "
+"应用程序的开发、测试和部署流程。它包含自动备份、预备环境和持续集成流水线等工"
+"具。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo.sh project"
@@ -2274,13 +2365,15 @@ msgstr "Odoo.sh项目示例"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:60
 msgid "Odoo database"
-msgstr ""
+msgstr "Odoo 数据库"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:62
 msgid ""
 "An Odoo database stores all the operational data used and generated by Odoo "
 "applications, such as business records, configurations, and user data."
 msgstr ""
+"Odoo 数据库存储\\ Odoo\\ 应用程序使用和生成的所有操作数据，例如业务记录、配置"
+"和用户数据。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:None
 msgid "Example of an Odoo database"
@@ -2302,6 +2395,8 @@ msgid ""
 "the Odoo.sh project. Access to the repository does not automatically make "
 "someone a collaborator on the Odoo.sh project."
 msgstr ""
+"**GitHub 用户**：有权访问与\\ Odoo.sh\\ 项目关联的\\ GitHub\\ 仓库的开发者。"
+"有权访问仓库并不会自动使其成为\\ Odoo.sh\\ 项目的合作者。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:78
 msgid ""
@@ -2309,6 +2404,8 @@ msgid ""
 "collaborator must be linked to a GitHub user. However, collaborators are not "
 "the same as database users."
 msgstr ""
+"**Odoo.sh 合作者**：管理\\ Odoo.sh\\ 项目的人员。每位合作者都必须关联一个\\ "
+"GitHub\\ 用户。但是，合作者与数据库用户并不相同。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:80
 msgid ""
@@ -2316,32 +2413,34 @@ msgid ""
 "with the live system but are not involved in development or project "
 "management."
 msgstr ""
+"**数据库用户**：已部署的\\ Odoo\\ 数据库的最终用户。他们与实际运行的系统交互"
+"，但不参与开发或项目管理。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:86
 msgid "Technical concepts"
-msgstr ""
+msgstr "技术概念"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:88
 msgid ""
 "When working with Odoo.sh, it is also important to understand several "
 "technical concepts:"
-msgstr ""
+msgstr "在使用 Odoo.sh 时，了解以下几个技术概念也很重要："
 
 #: ../../content/administration/odoo_sh/getting_started.rst:90
 msgid ":ref:`Forking a repository <odoo-sh/getting-started/concepts/fork>`"
-msgstr ""
+msgstr ":ref:`复刻代码仓库 <odoo-sh/getting-started/concepts/fork>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:91
 msgid ":ref:`Pushing a commit <odoo-sh/getting-started/concepts/commit>`"
-msgstr ""
+msgstr ":ref:`推送提交 <odoo-sh/getting-started/concepts/commit>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:92
 msgid ":ref:`Merging a branch <odoo-sh/getting-started/concepts/merge>`"
-msgstr ""
+msgstr ":ref:`合并分支 <odoo-sh/getting-started/concepts/merge>`"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:97
 msgid "Forking a repository"
-msgstr ""
+msgstr "复刻代码仓库"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:99
 msgid ""
@@ -2349,6 +2448,8 @@ msgid ""
 "repository on your own account. This allows you to make changes to the "
 "repository without affecting the original version."
 msgstr ""
+"在 GitHub 上复刻代码仓库是指将他人的代码仓库复制一份到您自己的账户下。这样您"
+"就可以对代码仓库进行修改，而不会影响原始版本。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:102
 msgid ""
@@ -2357,6 +2458,9 @@ msgid ""
 "then make changes to the files in your copy of the repository and commit "
 "them, just like you would with any other repository."
 msgstr ""
+"复刻代码仓库时，您会创建一份自己的代码仓库副本，其中包含原始代码仓库中的所有"
+"文件和文件夹。之后，您可以像对待其他任何代码仓库一样，修改副本中的文件并提交"
+"更改。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:106
 msgid ""
@@ -2366,6 +2470,9 @@ msgid ""
 "also use the forked repository as a starting point for your project, making "
 "changes as needed."
 msgstr ""
+"复刻代码仓库的好处是，您可以修改代码而不影响原始版本。当您想尝试新功能或修复"
+"他人代码中的错误时，这一点非常有用。您也可以将复刻的代码仓库作为项目的起点，"
+"按需进行修改。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:111
 msgid ""
@@ -2375,10 +2482,13 @@ msgid ""
 "projects to accept contributions from other developers, and it can be a "
 "great way to get involved in the community and improve your coding skills."
 msgstr ""
+"对复刻的代码仓库进行修改后，您可以向原始代码仓库的所有者提交拉取请求，请求他"
+"们将您的更改合并回其代码仓库。这是开源项目接受其他开发者贡献的常见方式，也是"
+"参与社区、提升编码技能的好方法。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:119
 msgid "Pushing a commit"
-msgstr ""
+msgstr "推送提交"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:121
 msgid ""
@@ -2387,6 +2497,8 @@ msgid ""
 "words, Git knows that changes have been made, but they haven't been "
 "officially saved or recorded yet."
 msgstr ""
+"当您在本地计算机上的 Git 代码仓库中修改一个或多个文件时，这些更改被视为*未提"
+"交*的。换言之，Git 知道已经发生了更改，但这些更改尚未正式保存或记录。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:125
 msgid ""
@@ -2395,6 +2507,8 @@ msgid ""
 "specific point in time. It records what changes were made, who made them, "
 "and when."
 msgstr ""
+"要保存这些更改并将其添加到 Git 代码仓库，您需要创建一个*提交*。提交是您在特定"
+"时间点对文件所做更改的快照，记录了做出了哪些更改、由谁做出以及在何时做出。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:129
 msgid ""
@@ -2403,6 +2517,9 @@ msgid ""
 "you've made in the commit from your local repository to the remote "
 "repository so that others can see and use them."
 msgstr ""
+"创建提交后，您可以将其*推送*到远程代码仓库，例如托管在 GitHub 上的代码仓库。"
+"推送提交是指将提交中的更改从本地代码仓库发送到远程代码仓库，以便其他人可以看"
+"到并使用这些更改。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:133
 msgid ""
@@ -2411,10 +2528,12 @@ msgid ""
 "repository. It is a way to share your changes with others and collaborate on "
 "a project."
 msgstr ""
+"总而言之，推送提交是指将您在本地计算机上对 Git 代码仓库文件所做的更改发送到远"
+"程代码仓库。这是一种与他人分享更改并进行项目协作的方式。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:140
 msgid "Merging a branch"
-msgstr ""
+msgstr "合并分支"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:142
 msgid ""
@@ -2425,6 +2544,9 @@ msgid ""
 "changes back into the main branch (often called the `master` or `main` "
 "branch)."
 msgstr ""
+"将一个分支合并到另一个分支，是指将某个分支中的更改合并到另一个分支中。例如，"
+"假设您创建了一个名为`feature-branch`的新分支，用于开发项目的新功能。完成对该"
+"分支的更改后，您可以将这些更改合并回主分支（通常称为`master`或`main`分支）。"
 
 #: ../../content/administration/odoo_sh/getting_started.rst:147
 msgid ""
@@ -2433,6 +2555,8 @@ msgid ""
 "made in the two branches, Git will prompt you to resolve them before "
 "completing the merge (code-wise)."
 msgstr ""
+"合并分支时，Git 会检查两个分支中的更改并尝试将它们合并。如果两个分支中的更改"
+"存在任何冲突，Git 会在完成合并（在代码层面）之前提示您解决这些冲突。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
@@ -3646,6 +3770,8 @@ msgid ""
 "installs the branch's modules, excluding :ref:`submodules <odoo-sh/advanced/"
 "submodules>`. This is the default option."
 msgstr ""
+":guilabel:`仅安装我的模块（不包括子模块）`：只安装该分支的模块，不包"
+"括:ref:`子模块 <odoo-sh/advanced/submodules>`。这是默认选项。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -4022,7 +4148,7 @@ msgstr "子模块命令用于将其他代码仓库的分支，以子模块形式
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
 msgid ":ref:`Submodules documentation <odoo-sh/advanced/submodules>`"
-msgstr ""
+msgstr ":ref:`子模块文档 <odoo-sh/advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -4557,6 +4683,8 @@ msgid ""
 "For publicly available community modules, you may also consider "
 "using :ref:`submodules <odoo-sh/advanced/submodules>`"
 msgstr ""
+"对于公开的社区模块，您还可以考虑使用:ref:`子模块 <odoo-sh/advanced/"
+"submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -5733,6 +5861,8 @@ msgid ""
 "you can alternatively open port `443` **and** add the following line to your "
 "Odoo configuration file:"
 msgstr ""
+"如果内部策略不允许在端口\\ `80`\\ 上建立出站连接，也可以改为开放端口\\ "
+"`443`\\ **并**\\ 在 Odoo 配置文件中添加以下行："
 
 #: ../../content/administration/on_premise.rst:78
 msgid "Too many users error"
@@ -8788,13 +8918,13 @@ msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:10
 msgid "Odoo supports every major version in two phases:"
-msgstr ""
+msgstr "Odoo 分两个阶段为每个主要版本提供支持："
 
 #: ../../content/administration/standard_extended_support.rst:12
 msgid ""
 "**Standard support** covers the first three years after release. It is "
 "available on Odoo Online, Odoo.sh, and on-premise."
-msgstr ""
+msgstr "**标准支持**\\ 涵盖发布后的前三年。它适用于 Odoo Online、Odoo.sh 和本地部署。"
 
 #: ../../content/administration/standard_extended_support.rst:14
 msgid ""
@@ -8802,6 +8932,8 @@ msgid ""
 "additional fee. It is available only on Odoo.sh (for a limited number of "
 "versions) and on-premise (for any version)."
 msgstr ""
+"**扩展支持**\\ 在标准支持结束后开始，且需要额外付费。它仅适用于 Odoo.sh（针对"
+"部分版本）和本地部署（针对任何版本）。"
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
@@ -8809,6 +8941,8 @@ msgid ""
 "include helpdesk support and bug fixes. During extended support, fixes are "
 "provided only where technically feasible."
 msgstr ""
+"安全更新仅在标准支持期间提供。两个阶段均包含服务台支持和错误修复。在扩展支持"
+"期间，仅在技术可行的情况下提供修复。"
 
 #: ../../content/administration/standard_extended_support.rst:21
 msgid ""
@@ -8816,6 +8950,8 @@ msgid ""
 "three months. They are only available on Odoo Online and are not eligible "
 "for extended support."
 msgstr ""
+"**SaaS 版本**\\ （也称为\\ *Online*\\ 版本）每两到三个月发布一次。它们仅在 "
+"Odoo Online 上提供，且不符合扩展支持的条件。"
 
 #: ../../content/administration/standard_extended_support.rst:23
 msgid ""
@@ -8823,12 +8959,14 @@ msgid ""
 "version still under standard support, or that reached the end of standard "
 "support less than six months ago."
 msgstr ""
+"您可以从任何版本\\ `升级 <https://upgrade.odoo.com>`\\_ 至仍处于标准支持期内"
+"、或结束标准支持不足六个月的任何主要版本。"
 
 #: ../../content/administration/standard_extended_support.rst:26
 msgid ""
 "The table below shows the support status of every version. Major versions "
 "are in bold."
-msgstr ""
+msgstr "下表显示了各个版本的支持状态。主要版本以粗体显示。"
 
 #: ../../content/administration/standard_extended_support.rst:36
 msgid "Release date"
@@ -8840,16 +8978,16 @@ msgstr "标准支持结束"
 
 #: ../../content/administration/standard_extended_support.rst:38
 msgid "**Odoo 20.0**"
-msgstr ""
+msgstr "**Odoo 20.0**"
 
 #: ../../content/administration/standard_extended_support.rst:42
 #: ../../content/administration/standard_extended_support.rst:85
 msgid "September 2026"
-msgstr ""
+msgstr "2026 年 9 月"
 
 #: ../../content/administration/standard_extended_support.rst:43
 msgid "September 2029 (planned)"
-msgstr ""
+msgstr "2029 年 9 月（计划）"
 
 #: ../../content/administration/standard_extended_support.rst:44
 msgid "Odoo SaaS 19.4"
@@ -8972,7 +9110,7 @@ msgstr "|green|：标准支持"
 
 #: ../../content/administration/standard_extended_support.rst:109
 msgid "|orange| : Extended support (additional fee)"
-msgstr ""
+msgstr "|orange|：扩展支持（额外费用）"
 
 #: ../../content/administration/standard_extended_support.rst:111
 msgid "|red| : Not supported"

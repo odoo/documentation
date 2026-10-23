@@ -5,13 +5,14 @@
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-18 17:32+0000\n"
-"PO-Revision-Date: 2026-09-07 18:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 05:37+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Hebrew <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/he/>\n"
 "Language: he\n"
@@ -2592,11 +2593,17 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"עבור הודעות דוא\"ל נכנסות, לאחר הוספת הדומיין שלכם, :ref:`תשובות מלקוחות "
+"יחזרו לדומיין שלכם <email-inbound-custom-domain>`, ותצטרכו להשתמש באחת משלוש "
+"הדרכים האפשריות לקבלת הודעות הדוא\"ל בחזרה ב-Odoo (באמצעות :ref:`שרת דוא\"ל "
+"נכנס <email-inbound-custom-domain-incoming-server>`, :ref:`הפניה מחדש/העברה "
+"<email-inbound-custom-domain-redirections>` או :ref:`שימוש בתת-דומיין <email-"
+"inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
-msgstr ""
+msgstr ":doc:`ניהול הודעות נכנסות <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3540,6 +3547,10 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"בעת שליחת הודעת דוא\"ל, שרת הדוא\"ל של Odoo כולל בכותרות חתימת :abbr:`DKIM "
+"(DomainKeys Identified Mail)` ייחודית. שרת הנמען מפענח חתימה זו באמצעות "
+"רשומת ה-DKIM בשם הדומיין של מסד הנתונים. אם החתימה והמפתח הכלול ברשומה "
+"תואמים, הדבר מוכיח שההודעה אותנטית ושלא שונתה במהלך ההעברה."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3554,6 +3565,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"כדי להפעיל DKIM, הוסיפו רשומת :abbr:`CNAME (Canonical Name)` לאזור ה-"
+":abbr:`DNS (Domain Name System)` של שם הדומיין:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3561,6 +3574,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"אם שם הדומיין הוא `company-name.com`, הקפידו ליצור תת-דומיין "
+"`odoo._domainkey.company-name.com` ששמו הקנוני הוא "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3579,6 +3595,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"בדקו אם רשומת ה-DKIM תקינה באמצעות כלי כגון `MXToolbox DKIM Record Lookup "
+"<https://mxtoolbox.com/dkim.aspx>`_. הזינו `example.com:odoo` בכלי לבדיקת "
+"DKIM, וציינו שהבורר (selector) הנבדק הוא `odoo` עבור הדומיין המותאם אישית "
+"`example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3693,6 +3713,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`רשומת CNAME של GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4032,6 +4054,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"למידע נוסף על הגדרת רשומות DNS עבור תת-דומיינים, ראו :ref:`הגדרת רשומות DNS "
+"<dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4137,7 +4161,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`רשומות DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4154,6 +4178,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"עבור **מסדי נתונים מקומיים (on-premise)**, שיטות ההפניה מחדש ורשומות ה-DNS "
+"דורשות גם הגדרה של :doc:`סקריפט שער הדוא\"ל &lt;../../../../administration/"
+"on_premise/email_gateway&gt;`. מעבר על סקריפט זה דורש **ידע טכני וידע תשתיתי "
+"מתקדם**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4394,7 +4422,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "רשומות DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4403,6 +4431,9 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"אפשרות שלישית היא להשתמש בתת-דומיין ייעודי (למשל, `mail.mydomain.com`) "
+"ולהגדיר את רשומות ה-DNS שלו כך שהודעות דוא\"ל הנשלחות לכתובות בתת-דומיין זה "
+"יטופלו על ידי Odoo ויעובדו ישירות במסד הנתונים שלכם."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4410,6 +4441,8 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"ב-Odoo Online וב-Odoo.sh, ניתוב מבוסס CNAME נתמך רק בעת שימוש בתת-דומיין "
+"ייעודי. לא ניתן להגדיר אותו בדומיין הבסיס שלכם (למשל, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4417,12 +4450,16 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"שימו לב שתת-דומיין זה יוקדש לתעבורת דוא\"ל. אם ייגשו אליו בדפדפן אינטרנט, "
+"המשתמשים יופנו לאתר הראשון שמוגדר במסד הנתונים (אם רלוונטי)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"מאחר שתת-דומיין חדש מוגדר עבור דוא\"ל נכנס, :doc:`יש להגדיר את רשומות ה-DNS "
+"שלו גם עבור דוא\"ל יוצא <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4432,7 +4469,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "גישה להגדרות ה-DNS שלכם"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4440,34 +4477,38 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"אם הדומיין שלכם מתארח אצל רשם צד שלישי (למשל, GoDaddy, Namecheap, Cloudflare)"
+", התחברו לרשם ופתחו את אזור ניהול ה-DNS של הדומיין שלכם."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "אם Odoo מנהל את ה-DNS שלכם:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "פתחו את `מנהל מסדי הנתונים <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"לחצו על סמל ה-:icon:`fa-gear` (:guilabel:`גלגל שיניים`) לצד מסד הנתונים "
+"ובחרו ב-:icon:`fa-globe` :guilabel:`שמות דומיין`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "לחצו על :guilabel:`DNS`, ולאחר מכן על :guilabel:`הוספת רשומת DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "יצירת רשומת CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**שם / מארח:** תת-הדומיין שבו ברצונכם להשתמש (למשל, `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4475,10 +4516,11 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**תוכן / יעד:** דומיין השורש של מסד הנתונים שלכם (למשל, `dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "הוספת תת-הדומיין לפורטל Odoo שלכם"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4486,6 +4528,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"ב-`מנהל מסדי הנתונים <https://www.odoo.com/my/databases>`_, לחצו על סמל ה-"
+":icon:`fa-gear` (:guilabel:`גלגל שיניים`) עבור מסד הנתונים שלכם ובחרו ב-"
+":icon:`fa-globe` :guilabel:`שמות דומיין`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4493,6 +4538,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"לחצו על :guilabel:`שימוש בדומיין משלי`, הזינו את תת-הדומיין המלא (למשל, "
+"`mail.mydomain.com`). לאחר שהאימות יצליח, לחצו על :guilabel:`אני מאשר, זה "
+"בוצע`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4502,16 +4550,20 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"אם האימות נכשל, ודאו שיעד ה-CNAME מסתיים בנקודה בסופו (למשל, "
+"`dbname.odoo.com.`), מכיוון שחלק מספקי ה-DNS דורשים זאת. בנוסף, המתינו מעט "
+"כדי ששינויי ה-DNS יתפשטו — פעולה זו יכולה להימשך בין מספר דקות ועד ל-48 "
+"שעות, בהתאם לספק שלכם. לאחר השלמת ההפצה, נסו לאמת שוב."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "הוספת דומיין הכינוי למסד הנתונים"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "התחברו למסד הנתונים ופתחו את אפליקציית :guilabel:`הגדרות`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4519,38 +4571,42 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"בשדה :guilabel:`דומיין כינוי`, הזינו את תת-הדומיין שהגדרתם (למשל, "
+"`mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "הוספת דומיין כינוי בהגדרות."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
-msgstr ""
+msgstr "בסעיף :guilabel:`שמות דומיין`, תת-הדומיין אמור להופיע כך:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "דוגמה להגדרת רשומות שם דומיין בפורטל Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "בסעיף :guilabel:`DNS`, הרשומות אמורות להופיע כך:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "דוגמה להגדרת רשומות DNS בפורטל Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"הרשומה השנייה מאפשרת ל-Odoo לשלוח הודעות דוא\"ל מאומתות מהדומיין המותאם "
+"אישית שלכם."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
-msgstr ""
+msgstr ":doc:`הגדרת רשומות DNS לשליחת הודעות אימייל ב-Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4562,26 +4618,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"התחברו לרשם הצד השלישי שלכם (למשל, GoDaddy,‏ Namecheap,‏ Cloudflare) ופתחו את "
+"אזור ניהול ה-DNS עבור הדומיין שלכם."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "הוספת תת-הדומיין להגדרות Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "התחברו לפלטפורמת Odoo.sh ופתחו את הפרויקט שלכם."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"בחרו בענף הייצור, עברו ללשונית :guilabel:`הגדרות`, ואתרו את הקטע **דומיינים "
+"מותאמים אישית**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"הזינו את תת-הדומיין המלא (למשל, `mail.mydomain.com`) ולחצו על "
+":guilabel:`הוספת דומיין`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4593,6 +4655,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"במקום רשומת CNAME, אפשר לחלופין ליצור רשומת MX עבור תת-הדומיין שלכם (למשל, "
+"`mail`), המפנה אל `dbname.odoo.com.` בעדיפות `10`. שאר שלבי ההגדרה נשארים "
+"זהים."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4600,6 +4665,9 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"שימו לב שבניגוד ל-CNAME, רשומת MX אינה יורשת SPF או רשומות DNS אחרות "
+"מהדומיין היעד, ולכן ייתכן שיהיה עליכם להגדיר אותן בנפרד כדי שהודעות דוא\"ל "
+"יוצאות יאומתו כראוי."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -4991,6 +5059,7 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`רשומות DNS <email-inbound-custom-domain-dns>` (דורש ידע טכני מתקדם)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6060,6 +6129,8 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"למידע נוסף על משימות מתוזמנות (crons) בעת שימוש ב-Odoo.sh, עיינו "
+"ב:ref:`תיעוד Odoo.sh ופעולות מתוזמנות <odoo-sh/advanced/scheduled>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -7907,11 +7978,11 @@ msgstr ":guilabel:`שיטות מורשות`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`כותרות מורשות`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`כותרות חשופות`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8092,45 +8163,57 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odoo מספקת אינטגרציות מיקום גיאוגרפי המאפשרות לאתר אנשי קשר או מקומות ולהפיק "
+"מסלולים על גבי מפה."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"תצוגת ה-:ref:`מפה <studio/views/multiple-records/map>` זמינה כברירת מחדל. "
+"אין צורך בהגדרה כלשהי כדי לגשת אליה."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "איתור מיקום גיאוגרפי של אנשי קשר ומקומות"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"התכונה :guilabel:`מיקום גיאוגרפי` מפיקה קואורדינטות של קו רוחב וקו אורך "
+"לאיתור מיקומים מדויקים. ניתן להשתמש בה כדי:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"לבדוק את :ref:`מיקומי הכניסה/יציאה <attendances/check-in-out-details>` של "
+"עובדים ביישום **נוכחות**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"להציג את מיקום האיסוף בעת שימוש ב:ref:`שיטת משלוח של איסוף עצמי <ecommerce/"
+"shipping/instore-pickup>`;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
-msgstr ""
+msgstr ":ref:`הקצאת שותפים <contacts/partner-assignment>` ביישום **אנשי קשר**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avatax address validation <accounting/"
 "avatax/address-validation>` feature."
 msgstr ""
+"לאמת כתובות באמצעות התכונה :ref:`אימות כתובות של Avatax <accounting/avatax/"
+"address-validation>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8140,10 +8223,15 @@ msgid ""
 "Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"כדי להפעיל את תכונת ה-:guilabel:`מיקום גיאוגרפי`, עבור אל "
+":menuselection:`הגדרות --> הגדרות כלליות`, גלול מטה אל המקטע "
+":guilabel:`אינטגרציות`, והפעל את :guilabel:`מיקום גיאוגרפי`. לאחר מכן, בשדה "
+":guilabel:`API:`, בחר ב-:guilabel:`Open Street Map` או ב-:guilabel:`Google "
+"Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8151,6 +8239,8 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap הוא מסד נתונים גיאוגרפי פתוח וחינמי, המעודכן ומתוחזק על ידי "
+"מתנדבים. אין צורך בהגדרה נוספת כדי להשתמש ב-:guilabel:`Open Street Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8158,10 +8248,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"ייתכן שהנתונים של OpenStreetMap לא תמיד יהיו מדויקים. באפשרותך `להצטרף "
+"לקהילת OpenStreetMap <https://www.openstreetmap.org/fixthemap>`_ כדי לדווח "
+"על בעיות שבהן נתקלת ולתקן אותן."
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8169,6 +8262,8 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"ה-Google Places API מספק מידע מפורט על מקומות, בתי עסק ונקודות עניין. הוא "
+"תומך בתכונות מבוססות-מיקום כגון חיפוש, ניווט והמלצות."
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8184,7 +8279,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "מסלולי מפה"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8194,26 +8289,33 @@ msgid ""
 "management system </applications/inventory_and_mrp/inventory/"
 "shipping_receiving/setup_configuration/dispatch>`."
 msgstr ""
+"מסלולי מפה שימושיים למתן מסלולי הגעה ומיקומים ל:doc:`טכנאי שירות שטח </"
+"applications/services/field_service/planning_itinerary>` ומסלולי משלוח "
+"לנהגים ב:doc:`מערכת ניהול שיגור </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "כדי ליצור מסלולים, בצע את השלבים הבאים:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
-msgstr ""
+msgstr "צור `חשבון Mapbox <https://www.mapbox.com/>`_ או היכנס אליו."
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`צור אסימון גישה <https://docs.mapbox.com/help/dive-deeper/access-tokens/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"עבור אל `דף אסימוני הגישה ב-Mapbox <https://account.mapbox.com/access-"
+"tokens/>`_ והעתק את האסימון ללוח."
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8221,30 +8323,40 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox מציגה אסימונים סודיים פעם אחת בלבד בעת יצירתם ומסתירה אותם לצמיתות "
+"לאחר עזיבת דף :guilabel:`אסימון גישה`. הקפד לשמור את האסימון."
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"ב-Odoo, עבור אל :menuselection:`הגדרות --> הגדרות כלליות`, וגלול מטה אל "
+"הסעיף :guilabel:`אינטגרציות`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Map Routes`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"תחת :guilabel:`מסלולי מפה`, הדבק את אסימון הגישה של Mapbox בשדה "
+":guilabel:`אסימון`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`כיצד להשתמש ב-Mapbox בצורה מאובטחת: אסימוני גישה <https://docs.mapbox.com/"
+"help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`הגבלות URL <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -8626,6 +8738,9 @@ msgid ""
 "www.odoo.com/documentation/master/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"עבור גרסאות מסד נתונים 19.2 ואילך, ראה את `התיעוד העדכני <https://"
+"www.odoo.com/documentation/master/applications/general/integrations/"
+"mail_plugins/gmail.html>`_ להוראות התקנה."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
 msgid ""
@@ -8725,6 +8840,10 @@ msgid ""
 "the :guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and "
 "then click :guilabel:`Save`."
 msgstr ""
+"יש להפעיל את התכונה :guilabel:`תוסף דוא\"ל` במסד הנתונים של Odoo כדי להשתמש "
+"בתוסף Gmail. כדי להפעיל את התכונה, עבור אל :menuselection:`אפליקציית "
+"הגדרות --> הגדרות כלליות`. תחת המקטע :guilabel:`אינטגרציות`, הפעל את "
+":guilabel:`תוסף דוא\"ל`, ולאחר מכן לחץ על :guilabel:`שמור`."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "The Mail Plugin feature in the Settings."
@@ -8912,12 +9031,14 @@ msgid ""
 "The legacy version of the *Odoo Inbox Addin* might display a generic error "
 "message after upgrading the connected database to version 19.0:"
 msgstr ""
+"הגרסה הישנה של *Odoo Inbox Addin* עשויה להציג הודעת שגיאה כללית לאחר שדרוג "
+"מסד הנתונים המחובר לגרסה 19.0:"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:177
 msgid ""
 "`Add-on error: Something went wrong while executing add-on. For help, "
 "contact the add-on developer.`"
-msgstr ""
+msgstr "`שגיאת תוסף: משהו השתבש בעת הפעלת התוסף. לקבלת עזרה, פנה למפתח התוסף.`"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:179
 msgid ""
@@ -8925,22 +9046,29 @@ msgid ""
 "backend Mail Plugin module) does not resolve the issue, manually refresh the "
 "Gmail plugin to sync with the upgraded database:"
 msgstr ""
+"אם פתרון בעיות סטנדרטי (התקנה מחדש, ניקוי מטמון, שדרוג מודול Mail Plugin ב-"
+"backend) אינו פותר את הבעיה, רענן ידנית את תוסף Gmail כדי לסנכרן אותו עם מסד "
+"הנתונים המשודרג:"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:182
 msgid ""
 "In the Gmail inbox, click the :icon:`oi-odoo` :guilabel:`(Odoo)` icon in the "
 "side panel to open the *Odoo Inbox Addin (Legacy)*."
 msgstr ""
+"בתיבת הדואר הנכנס של Gmail, לחץ על הסמל :icon:`oi-odoo` :guilabel:`(Odoo)` "
+"בחלונית הצדדית כדי לפתוח את *Odoo Inbox Addin (Legacy)*."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:184
 msgid ""
 "Click the :icon:`fa-ellipsis-v` :guilabel:`(More actions)` icon in the top "
 "corner of the plugin."
 msgstr ""
+"לחץ על הסמל :icon:`fa-ellipsis-v` :guilabel:`(פעולות נוספות)` בפינה העליונה "
+"של התוסף."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:185
 msgid "Click :guilabel:`Refresh`."
-msgstr ""
+msgstr "לחץ על :guilabel:`רענן`."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:187
 msgid ""
@@ -8948,10 +9076,12 @@ msgid ""
 "upgraded database version, clearing the stalled script and resolving the "
 "execution error."
 msgstr ""
+"פעולה זו מאלצת את התוסף לסנכרן ידנית את החיבור שלו עם גרסת מסד הנתונים "
+"ששודרגה לאחרונה, ובכך מנקה את הסקריפט שנתקע ופותרת את שגיאת ההפעלה."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Refresh button in the Odoo Gmail plugin."
-msgstr ""
+msgstr "לחצן רענון בתוסף Gmail של Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook Plugin"
@@ -10128,7 +10258,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11272,6 +11402,8 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"מדפסות מסדרת DYMO 5 אינן תואמות ל-:doc:`קופסת IoT &lt;../iot_box&gt;` "
+"ודורשות שיוך עם :doc:`IoT וירטואלי של Windows &lt;../windows_iot&gt;`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:376
 msgid "DYMO LabelWriter not printing"
@@ -11671,10 +11803,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"כדי להגדיר את משקל Ariva S לזיהוי במערכת ה-IoT, יש לעיין ב-`מדריך ההתקנה של "
+"Mettler למשקלי סדרת Ariva S <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ "
+"ולפעול לפי השלבים הבאים:"
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "יש ללחוץ לחיצה ממושכת על הלחצן **>T<** עד שיופיע :guilabel:`CONF`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
@@ -11688,12 +11823,16 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"בשלב :guilabel:`3.1`, יש לוודא שהערך מוגדר ל-:guilabel:`1` (USB Virtual COM "
+"ports). יש ללחוץ על **>T<** כדי לעבור בין האפשרויות."
 
 #: ../../content/applications/general/iot/devices/scale.rst:49
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"יש ללחוץ על **>0<** עד :guilabel:`3.6` ולוודא שהערך מוגדר ל-:guilabel:`3` "
+"(8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:51
 msgid ""
@@ -11722,6 +11861,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"הפעל מחדש את :doc:`קופסת ה-IoT <../iot_box>` או :ref:`הפעל מחדש את שירות ה-"
+"IoT הווירטואלי של Windows <iot/windows_iot/restart>`. לאחר מכן המשקל אמור "
+"להופיע בתור `Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12051,13 +12193,15 @@ msgstr ""
 msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
-msgstr ""
+msgstr "מערכת ה-IoT מחוברת ודוחות מוקצים למדפסת שאינה יכולה להדפיס"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"ודא כי לדפדפן מותר :ref:`לגשת למכשירים ברשת המקומית <pos/lna/browser-"
+"permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -13419,6 +13563,10 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"כדי לבדוק את המכשירים המחוברים, לחץ על סמל המשתמש בפינה הימנית העליונה, ולחץ "
+"על :guilabel:`ההעדפות שלי` כדי לפתוח את פרופיל המשתמש. לחץ על הכרטיסייה "
+"*אבטחה* כדי להציג רשימה של כל המכשירים שבאמצעותם המשתמש התחבר למסד הנתונים. "
+"כל מכשיר שמחובר כעת למערכת מציג עיגול ירוק ליד שם המכשיר בכרטיס הקנבן."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -13434,6 +13582,8 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"אם מכשיר המופיע ברשימה **אינו** מכשיר משתמש לגיטימי ועלול להוות סיכון אבטחה "
+"אפשרי, הסר את המכשיר ובטל את הגישה על ידי לחיצה על לחצן ה-:guilabel:`התנתק`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -13441,12 +13591,16 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"חלון קופץ של :guilabel:`בקרת גישה` נטען, ומבקש מהמשתמש לאמת את זהותו. הזן את "
+"סיסמת המשתמש, ולאחר מכן לחץ על :guilabel:`אשר סיסמה`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"המכשיר ייעלם מהכרטיסייה *אבטחה* ולא ניתן יהיה עוד להשתמש בו כדי להתחבר למסד "
+"הנתונים."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -13564,6 +13718,10 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"כדי לאכוף דרישת אורך סיסמה מינימלי, :ref:`התקן <general/install>` את המודול "
+":guilabel:`מדיניות סיסמאות` (`auth_password_policy`). לאחר מכן, פתח את יישום "
+"ה-:guilabel:`הגדרות`, נווט לסעיף *הרשאות*, והזן את אורך הסיסמה הרצוי בשדה "
+":guilabel:`אורך סיסמה מינימלי`. כברירת מחדל, הערך הוא `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -13702,7 +13860,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "חברות מרובות"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -13711,12 +13869,18 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"השדה :guilabel:`חברות` בטופס המשתמש קובע לאילו חברות יש למשתמש גישה. כדי "
+"להגדיר גישה מרובת חברות, נווט אל :menuselection:`יישום הגדרות --> סעיף "
+"משתמשים --> ניהול משתמשים`. לאחר מכן בחר את המשתמש הרצוי כדי לפתוח את טופס "
+"המשתמש שלו."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"בכרטיסייה *הרשאות גישה*, תחת הסעיף *תפקידים*, הגדר את השדות "
+":guilabel:`חברות` ו-:guilabel:`חברת ברירת מחדל`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -13724,6 +13888,8 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`חברות`: בחר חברה אחת או יותר שלמשתמש תהיה גישה אליהן. הרשאות "
+"הגישה והעריכה של המשתמש נקבעות לפי הרשאות הגישה שהוקצו לו."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
@@ -14093,7 +14259,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:32
 msgid "Manage roles"
-msgstr ""
+msgstr "ניהול תפקידים"
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid ""
@@ -14102,34 +14268,43 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`משתמשים בודדים <users/add-individual>` מקבלים *תפקיד* כאשר הם מתווספים "
+"למסד הנתונים. תפקידים קובעים את רמת הגישה שיש למשתמש, בעוד שהרשאות הגישה "
+"הספציפיות המשויכות לכל תפקיד מוגדרות על ידי :ref:`קבוצות <access-rights/"
+"groups>`."
 
 #: ../../content/applications/general/users/access_rights.rst:38
 msgid "The four available roles are:"
-msgstr ""
+msgstr "ארבעת התפקידים הזמינים הם:"
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*מנהל מערכת*: משתמש פנימי בעל גישה לתכונות טכניות, יצירת מוצרים, ייצוא "
+"והרשאות מתקדמות נוספות."
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*משתמש*: משתמש פנימי שבדרך כלל יש לו גישה לצד האחורי (back end) ויכול ליצור "
+"ולערוך רשומות, אך בעל פחות גישה כוללת ממנהל מערכת."
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Portal*: A customer or supplier who accesses their own data through the "
 "portal."
-msgstr ""
+msgstr "*פורטל*: לקוח או ספק הניגש לנתונים שלו דרך הפורטל."
 
 #: ../../content/applications/general/users/access_rights.rst:45
 msgid ""
 "*Public*: A website visitor or other external user. They generally have the "
 "least access."
 msgstr ""
+"*ציבורי*: מבקר באתר או משתמש חיצוני אחר. בדרך כלל בעל רמת הגישה הנמוכה ביותר."
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage user permissions"
@@ -14171,6 +14346,9 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"ההרשאות הזמינות בכרטיסייה *הרשאות גישה* נקבעות על ידי הקבוצות המשויכות "
+"לתפקיד המשתמש. תפקידים מספקים קבוצה מוגדרת מראש של הרשאות, בעוד שקבוצות "
+"מגדירות את הרשאות הגישה הספציפיות המוענקות למשתמשים."
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
@@ -14403,6 +14581,8 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"הזן :guilabel:`שם` לקבוצה וסמן את תיבת הסימון לצד :guilabel:`קבוצת שיתוף`, "
+"אם קבוצה זו נוצרה כדי להגדיר הרשאות גישה לשיתוף נתונים עם משתמשים מסוימים."
 
 #: ../../content/applications/general/users/access_rights.rst:165
 msgid ""
@@ -14685,6 +14865,10 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"כדי להפעיל פסק זמן להפעלה, לחץ על הכרטיסייה *פסקי זמן*, ובחר בתיבת הסימון "
+":guilabel:`הפעלה`. לאחר מכן, בחר ב-:guilabel:`התנתקות` או ב-"
+":guilabel:`התנתקות עם אימות דו-שלבי` מהתפריט הנפתח. הגדרה זו קובעת אם על "
+"המשתמש להשלים אימות דו-שלבי בעת התחברות מחדש."
 
 #: ../../content/applications/general/users/access_rights.rst:277
 msgid ""

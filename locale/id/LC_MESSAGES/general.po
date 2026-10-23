@@ -6,13 +6,14 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # "Nurul Aini Akrima Sabila (nuaas)" <nuaas@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-18 17:32+0000\n"
-"PO-Revision-Date: 2026-09-07 18:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 07:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/id/>\n"
 "Language: id\n"
@@ -2725,11 +2726,19 @@ msgid ""
 "domain-redirections>` or :ref:`using a subdomain <email-inbound-custom-"
 "domain-dns>`)."
 msgstr ""
+"Untuk email masuk, setelah menambahkan domain Anda sendiri, :ref:`balasan "
+"dari pelanggan akan kembali ke domain Anda <email-inbound-custom-domain>`, "
+"dan Anda perlu menggunakan salah satu dari tiga cara yang memungkinkan untuk "
+"mendapatkan email tersebut kembali ke dalam Odoo (menggunakan :ref:`server "
+"email masuk <email-inbound-custom-domain-incoming-server>`, :ref:`redireksi/"
+"penerusan <email-inbound-custom-domain-redirections>` atau :ref:`menggunakan "
+"subdomain <email-inbound-custom-domain-dns>`)."
 
 #: ../../content/applications/general/email_communication.rst:56
 msgid ""
 ":doc:`Manage inbound messages <email_communication/email_servers_inbound>`"
 msgstr ""
+":doc:`Mengelola pesan masuk <email_communication/email_servers_inbound>`"
 
 #: ../../content/applications/general/email_communication.rst:61
 msgid "On-premise users"
@@ -3720,6 +3729,12 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"Saat mengirim email, server email Odoo menyertakan tanda tangan unik "
+":abbr:`DKIM (DomainKeys Identified Mail)` di header. Server penerima "
+"mendekripsi tanda tangan ini menggunakan catatan DKIM di nama domain "
+"database. Jika tanda tangan dan kunci yang terdapat dalam catatan tersebut "
+"cocok, ini membuktikan bahwa pesan tersebut asli dan tidak diubah selama "
+"pengiriman."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3734,6 +3749,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Untuk mengaktifkan DKIM, tambahkan catatan :abbr:`CNAME (Canonical Name)` ke "
+"zona :abbr:`DNS (Domain Name System)` dari nama domain tersebut:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3741,6 +3758,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Jika nama domainnya adalah `company-name.com`, pastikan untuk membuat "
+"subdomain `odoo._domainkey.company-name.com` yang canonical name-nya adalah "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3759,6 +3779,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Periksa apakah catatan DKIM valid menggunakan alat seperti `MXToolbox DKIM "
+"Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Masukkan "
+"`example.com:odoo` di alat pencarian DKIM, dengan menentukan bahwa selector "
+"yang diuji adalah `odoo` untuk domain khusus `example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3878,6 +3902,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`Catatan CNAME GoDaddy <https://www.godaddy.com/help/add-a-cname-record-"
+"19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -4237,6 +4263,8 @@ msgid ""
 "For more information on configuring DNS records for subdomains, "
 "see :ref:`DNS record setup <dns_record_setup>`."
 msgstr ""
+"Untuk informasi lebih lanjut tentang konfigurasi catatan DNS untuk "
+"subdomain, lihat :ref:`pengaturan catatan DNS <dns_record_setup>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:146
 msgid "Use a custom domain for inbound messages"
@@ -4345,7 +4373,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:186
 msgid ":ref:`DNS records <email-inbound-custom-domain-dns>`"
-msgstr ""
+msgstr ":ref:`Catatan DNS <email-inbound-custom-domain-dns>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:187
 msgid "Only one record needs to be created to make all aliases work properly."
@@ -4364,6 +4392,10 @@ msgid ""
 "administration/on_premise/email_gateway>`. Going through this script "
 "requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Untuk **database on-premise**, metode redireksi dan catatan DNS juga "
+"memerlukan konfigurasi :doc:`skrip mail gateway <../../../../administration/"
+"on_premise/email_gateway>`. Menjalankan skrip ini memerlukan **pengetahuan "
+"teknis dan infrastruktur tingkat lanjut**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:197
 msgid ""
@@ -4619,7 +4651,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid "DNS records"
-msgstr ""
+msgstr "Catatan DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:307
 msgid ""
@@ -4628,6 +4660,10 @@ msgid ""
 "addresses on that subdomain are handled by Odoo and processed directly "
 "within your database."
 msgstr ""
+"Opsi ketiga adalah menggunakan subdomain khusus (misalnya, "
+"`mail.mydomain.com`) dan mengonfigurasi catatan DNS-nya sehingga email yang "
+"dikirim ke alamat pada subdomain tersebut ditangani oleh Odoo dan diproses "
+"langsung di dalam database Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:311
 msgid ""
@@ -4635,6 +4671,9 @@ msgid ""
 "using a dedicated subdomain. It cannot be configured on your root domain "
 "(e.g., `mydomain.com`)."
 msgstr ""
+"Untuk Odoo Online dan Odoo.sh, routing berbasis CNAME hanya didukung saat "
+"menggunakan subdomain khusus. Ini tidak dapat dikonfigurasi pada domain "
+"utama Anda (misalnya, `mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4642,12 +4681,17 @@ msgid ""
 "accessed in a web browser, users will be redirected to the first website "
 "configured on the database (if applicable)."
 msgstr ""
+"Perlu diketahui bahwa subdomain ini akan dikhususkan untuk lalu lintas "
+"email. Jika diakses melalui browser web, pengguna akan diarahkan ke website "
+"pertama yang dikonfigurasi pada database (jika berlaku)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Karena subdomain baru sedang dikonfigurasi untuk email masuk, :doc:`catatan "
+"DNS-nya juga harus disiapkan untuk email keluar <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4657,7 +4701,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Akses pengaturan DNS Anda"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4665,34 +4709,39 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Jika domain Anda di-hosting oleh registrar pihak ketiga (misalnya, GoDaddy, "
+"Namecheap, Cloudflare), masuklah ke registrar tersebut dan buka zona "
+"manajemen DNS untuk domain Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Jika Odoo mengelola DNS Anda:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "Buka `pengelola database <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Klik ikon :icon:`fa-gear` (:guilabel:`roda gigi`) di samping database, lalu "
+"pilih :icon:`fa-globe` :guilabel:`Nama Domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
-msgstr ""
+msgstr "Klik :guilabel:`DNS`, lalu :guilabel:`Tambahkan rekaman DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Buat rekaman CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
-msgstr ""
+msgstr "**Nama / Host:** subdomain yang ingin Anda gunakan (misalnya, `mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4700,10 +4749,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Konten / Target:** domain root database Anda (misalnya, `dbname.odoo.com.`)"
+"."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Tambahkan subdomain ke portal Odoo Anda"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4711,6 +4762,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Di `pengelola database <https://www.odoo.com/my/databases>`_, klik ikon "
+":icon:`fa-gear` (:guilabel:`roda gigi`) untuk database Anda, lalu pilih "
+":icon:`fa-globe` :guilabel:`Nama Domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4718,6 +4772,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Klik :guilabel:`Gunakan domain saya sendiri`, lalu masukkan subdomain "
+"lengkap (misalnya, `mail.mydomain.com`). Setelah verifikasi berhasil, klik "
+":guilabel:`Saya konfirmasi, selesai`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4727,16 +4784,21 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Jika verifikasi gagal, periksa kembali apakah target CNAME diakhiri dengan "
+"titik (misalnya, `dbname.odoo.com.`), karena beberapa penyedia DNS "
+"mewajibkannya. Beri waktu bagi perubahan DNS untuk merambat — ini dapat "
+"memakan waktu dari beberapa menit hingga 48 jam tergantung penyedia Anda. "
+"Setelah perambatan selesai, coba verifikasi lagi."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Tambahkan domain alias ke database"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
-msgstr ""
+msgstr "Masuk ke database dan buka aplikasi :guilabel:`Pengaturan`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4744,38 +4806,44 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"Di field :guilabel:`Domain Alias`, masukkan subdomain yang Anda "
+"konfigurasikan (misalnya, `mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Menambahkan domain alias di pengaturan."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"Di bagian :guilabel:`Nama Domain`, subdomain harus tampil sebagai berikut:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
-msgstr ""
+msgstr "Contoh konfigurasi rekaman nama domain di portal Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
-msgstr ""
+msgstr "Di bagian :guilabel:`DNS`, rekaman harus tampil sebagai berikut:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of a DNS records configuration in the Odoo portal."
-msgstr ""
+msgstr "Contoh konfigurasi rekaman DNS di portal Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:379
 msgid ""
 "The second record enables Odoo to send authenticated emails from your custom "
 "domain."
 msgstr ""
+"Rekaman kedua memungkinkan Odoo mengirim email terautentikasi dari domain "
+"khusus Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+":doc:`Mengonfigurasi rekaman DNS untuk mengirim email di Odoo <email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 #: ../../content/applications/general/email_communication/faq.rst:301
@@ -4787,26 +4855,32 @@ msgid ""
 "Log in to your third-party registrar (for example, GoDaddy, Namecheap, "
 "Cloudflare) and open the DNS management zone for your domain."
 msgstr ""
+"Masuk ke registrar pihak ketiga Anda (misalnya, GoDaddy, Namecheap, "
+"Cloudflare) dan buka zona manajemen DNS untuk domain Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:395
 msgid "Add the subdomain to Odoo.sh settings"
-msgstr ""
+msgstr "Tambahkan subdomain ke pengaturan Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:397
 msgid "Log in to the Odoo.sh platform and open your project."
-msgstr ""
+msgstr "Masuk ke platform Odoo.sh dan buka proyek Anda."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:398
 msgid ""
 "Select the production branch, go to the :guilabel:`Settings` tab, and locate "
 "the **Custom domains** section."
 msgstr ""
+"Pilih cabang produksi, buka tab :guilabel:`Pengaturan`, dan cari bagian "
+"**Domain kustom**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:400
 msgid ""
 "Enter the full subdomain (e.g., `mail.mydomain.com`) and "
 "click :guilabel:`Add domain`."
 msgstr ""
+"Masukkan subdomain lengkap (misalnya, `mail.mydomain.com`) dan klik "
+":guilabel:`Tambahkan domain`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
@@ -4818,6 +4892,9 @@ msgid ""
 "your subdomain (e.g., `mail`), pointing to `dbname.odoo.com.` with a "
 "priority of `10`. The rest of the configuration steps remain the same."
 msgstr ""
+"Sebagai alternatif dari rekaman CNAME, Anda dapat membuat rekaman MX untuk "
+"subdomain Anda (misalnya, `mail`), yang mengarah ke `dbname.odoo.com.` "
+"dengan prioritas `10`. Langkah konfigurasi lainnya tetap sama."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:421
 msgid ""
@@ -4825,6 +4902,10 @@ msgid ""
 "records from the target domain, so you may need to configure these "
 "separately for outbound mail to be properly authenticated."
 msgstr ""
+"Perlu diperhatikan bahwa berbeda dengan CNAME, rekaman MX tidak mewarisi SPF "
+"atau rekaman DNS lain dari domain target, sehingga Anda mungkin perlu "
+"mengonfigurasinya secara terpisah agar email keluar dapat diautentikasi "
+"dengan benar."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:427
 msgid "Infinite email loops"
@@ -5236,6 +5317,8 @@ msgid ""
 ":ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced "
 "technical knowledge)"
 msgstr ""
+":ref:`Rekaman DNS <email-inbound-custom-domain-dns>` (memerlukan pengetahuan "
+"teknis lanjutan)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
@@ -6363,6 +6446,9 @@ msgid ""
 "the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
 "scheduled>`."
 msgstr ""
+"Untuk informasi lebih lanjut tentang cron saat menggunakan Odoo.sh, lihat "
+":ref:`dokumentasi Odoo.sh dan tindakan terjadwal <odoo-sh/advanced/scheduled>"
+"`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -8274,11 +8360,11 @@ msgstr ":guilabel:`Allowed methods`: `GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -8460,45 +8546,58 @@ msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
 msgstr ""
+"Odoo menyediakan integrasi geolokasi yang memungkinkan Anda menemukan lokasi "
+"kontak atau tempat serta membuat rute di peta."
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"Tampilan :ref:`Peta <studio/views/multiple-records/map>` tersedia secara "
+"default. Tidak diperlukan konfigurasi untuk mengaksesnya."
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "Geolokasi kontak dan tempat"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
 msgstr ""
+"Fitur :guilabel:`Geolokasi` menghasilkan koordinat lintang dan bujur untuk "
+"menentukan lokasi secara tepat. Fitur ini dapat digunakan untuk:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"Memeriksa :ref:`lokasi check-in/out <attendances/check-in-out-details>` "
+"karyawan di aplikasi **Presensi**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"Menampilkan lokasi pengambilan saat menggunakan :ref:`metode pengiriman "
+"ambil di tempat <ecommerce/shipping/instore-pickup>`;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
 msgstr ""
+":ref:`Menetapkan mitra <contacts/partner-assignment>` di aplikasi **Kontak**;"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avatax address validation <accounting/"
 "avatax/address-validation>` feature."
 msgstr ""
+"Memvalidasi alamat dengan fitur :ref:`validasi alamat Avatax <accounting/"
+"avatax/address-validation>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8508,10 +8607,15 @@ msgid ""
 "Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"Untuk mengaktifkan fitur :guilabel:`Geolokasi`, buka "
+":menuselection:`Pengaturan --> Pengaturan Umum`, gulir ke bawah ke bagian "
+":guilabel:`Integrasi`, dan aktifkan :guilabel:`Geolokasi`. Kemudian, pada "
+"kolom :guilabel:`API:`, pilih :guilabel:`Open Street Map` atau "
+":guilabel:`Google Place Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
@@ -8519,6 +8623,9 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap adalah basis data geografis gratis dan terbuka yang diperbarui "
+"dan dikelola oleh sukarelawan. Tidak diperlukan konfigurasi tambahan untuk "
+"menggunakan :guilabel:`Open Street Map`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -8526,10 +8633,13 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"Data OpenStreetMap mungkin tidak selalu akurat. Anda dapat `bergabung dengan "
+"komunitas OpenStreetMap <https://www.openstreetmap.org/fixthemap>`_ untuk "
+"melaporkan dan memperbaiki masalah apa pun yang Anda temui."
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -8537,6 +8647,9 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places API menyediakan informasi mendetail tentang tempat, bisnis, "
+"dan tempat menarik. API ini mendukung fitur berbasis lokasi seperti "
+"pencarian, navigasi, dan rekomendasi."
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -8552,7 +8665,7 @@ msgstr ":doc:`address_autocomplete`"
 
 #: ../../content/applications/general/integrations/geolocation.rst:64
 msgid "Map routes"
-msgstr ""
+msgstr "Rute Peta"
 
 #: ../../content/applications/general/integrations/geolocation.rst:66
 msgid ""
@@ -8562,26 +8675,35 @@ msgid ""
 "management system </applications/inventory_and_mrp/inventory/"
 "shipping_receiving/setup_configuration/dispatch>`."
 msgstr ""
+"Rute peta berguna untuk menyediakan rencana perjalanan dan lokasi bagi "
+":doc:`teknisi layanan lapangan </applications/services/planning/"
+"field_service>` dan rute pengiriman ke pengemudi dalam :doc:`sistem "
+"manajemen dispatch </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "Untuk membuat rute, ikuti langkah-langkah berikut:"
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
-msgstr ""
+msgstr "Buat atau masuk ke `akun Mapbox <https://www.mapbox.com/>`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`Buat token akses <https://docs.mapbox.com/help/dive-deeper/access-tokens/>"
+"`_."
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"Buka `halaman Access tokens di Mapbox <https://account.mapbox.com/access-"
+"tokens/>`_ dan salin token Anda ke papan klip."
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8589,30 +8711,41 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox hanya menampilkan token rahasia satu kali saat pembuatan dan "
+"menyembunyikannya secara permanen setelah meninggalkan halaman "
+":guilabel:`Access Token`. Pastikan untuk menyimpan token tersebut."
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"Di Odoo, buka :menuselection:`Pengaturan --> Pengaturan Umum`, gulir ke "
+"bawah ke bagian :guilabel:`Integrasi`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Map Routes`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"Di bawah :guilabel:`Rute Peta`, tempel token akses Mapbox ke field "
+":guilabel:`Token`."
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Cara menggunakan Mapbox dengan aman: Token akses <https://docs.mapbox.com/"
+"help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`Pembatasan URL <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -9004,6 +9137,9 @@ msgid ""
 "www.odoo.com/documentation/master/applications/general/integrations/"
 "mail_plugins/gmail.html>`_ for installation instructions."
 msgstr ""
+"Untuk versi database 19.2 dan yang lebih baru, lihat `dokumentasi "
+"terbaru<https://www.odoo.com/documentation/master/applications/general/"
+"integrations/mail_plugins/gmail.html>`_ untuk instruksi instalasi."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
 msgid ""
@@ -9105,6 +9241,11 @@ msgid ""
 "the :guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and "
 "then click :guilabel:`Save`."
 msgstr ""
+"Fitur :guilabel:`Plugin Email` harus diaktifkan di database Odoo untuk "
+"menggunakan Plugin Gmail. Untuk mengaktifkan fitur ini, buka "
+":menuselection:`aplikasi Pengaturan --> Pengaturan Umum`. Di bawah bagian "
+":guilabel:`Integrasi`, aktifkan :guilabel:`Plugin Email`, lalu klik "
+":guilabel:`Simpan`."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "The Mail Plugin feature in the Settings."
@@ -9293,12 +9434,16 @@ msgid ""
 "The legacy version of the *Odoo Inbox Addin* might display a generic error "
 "message after upgrading the connected database to version 19.0:"
 msgstr ""
+"Versi terdahulu dari *Odoo Inbox Addin* mungkin menampilkan pesan kesalahan "
+"umum setelah meng-upgrade database yang terhubung ke versi 19.0:"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:177
 msgid ""
 "`Add-on error: Something went wrong while executing add-on. For help, "
 "contact the add-on developer.`"
 msgstr ""
+"`Kesalahan add-on: Terjadi masalah saat menjalankan add-on. Untuk "
+"mendapatkan bantuan, hubungi developer add-on.`"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:179
 msgid ""
@@ -9306,22 +9451,30 @@ msgid ""
 "backend Mail Plugin module) does not resolve the issue, manually refresh the "
 "Gmail plugin to sync with the upgraded database:"
 msgstr ""
+"Jika pemecahan masalah standar (menginstal ulang, membersihkan cache, meng-"
+"upgrade modul backend Mail Plugin) tidak menyelesaikan masalah, refresh "
+"plugin Gmail secara manual untuk menyinkronkannya dengan database yang telah "
+"di-upgrade:"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:182
 msgid ""
 "In the Gmail inbox, click the :icon:`oi-odoo` :guilabel:`(Odoo)` icon in the "
 "side panel to open the *Odoo Inbox Addin (Legacy)*."
 msgstr ""
+"Di kotak masuk Gmail, klik ikon :icon:`oi-odoo` :guilabel:`(Odoo)` di panel "
+"samping untuk membuka *Odoo Inbox Addin (Legacy)*."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:184
 msgid ""
 "Click the :icon:`fa-ellipsis-v` :guilabel:`(More actions)` icon in the top "
 "corner of the plugin."
 msgstr ""
+"Klik ikon :icon:`fa-ellipsis-v` :guilabel:`(Tindakan lainnya)` di sudut atas "
+"plugin."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:185
 msgid "Click :guilabel:`Refresh`."
-msgstr ""
+msgstr "Klik :guilabel:`Segarkan`."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:187
 msgid ""
@@ -9329,10 +9482,13 @@ msgid ""
 "upgraded database version, clearing the stalled script and resolving the "
 "execution error."
 msgstr ""
+"Ini memaksa plugin untuk menyinkronkan koneksinya secara manual dengan versi "
+"database yang baru di-upgrade, membersihkan skrip yang macet dan "
+"menyelesaikan kesalahan eksekusi."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Refresh button in the Odoo Gmail plugin."
-msgstr ""
+msgstr "Tombol Segarkan pada plugin Gmail Odoo."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook Plugin"
@@ -10562,7 +10718,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/footswitch.rst:50
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:92
 msgid ":ref:`manufacturing/using_work_centers/workcenter-iot`"
-msgstr ""
+msgstr ":ref:`manufacturing/using_work_centers/workcenter-iot`"
 
 #: ../../content/applications/general/iot/devices/footswitch.rst:3
 msgid "Connect a footswitch"
@@ -11785,6 +11941,9 @@ msgid ""
 "iot_box>` and require pairing with a :doc:`Windows virtual IoT <../"
 "windows_iot>`."
 msgstr ""
+"Printer DYMO Series 5 tidak kompatibel dengan :doc:`IoT box <../iot_box>` "
+"dan memerlukan penyandingan dengan :doc:`Windows virtual IoT <../windows_iot>"
+"`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:376
 msgid "DYMO LabelWriter not printing"
@@ -12212,10 +12371,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"Untuk mengonfigurasi timbangan Ariva S agar dikenali oleh sistem IoT, lihat "
+"`Panduan Pengaturan Mettler untuk timbangan seri Ariva S <https://www.mt.com/"
+"dam/RET_DOCS/Ariv.pdf>`_ dan ikuti langkah-langkah berikut:"
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "Tahan tombol **>T<** hingga :guilabel:`CONF` muncul."
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
@@ -12229,12 +12391,16 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"Pada langkah :guilabel:`3.1`, pastikan nilainya diatur ke :guilabel:`1` (USB "
+"Virtual COM ports). Tekan **>T<** untuk menelusuri opsi."
 
 #: ../../content/applications/general/iot/devices/scale.rst:49
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"Tekan **>0<** hingga :guilabel:`3.6` dan pastikan nilainya diatur ke "
+":guilabel:`3` (8217 Mettler-Toledo (WO))."
 
 #: ../../content/applications/general/iot/devices/scale.rst:51
 msgid ""
@@ -12264,6 +12430,9 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"Mulai ulang :doc:`IoT box <../iot_box>` atau :ref:`restart layanan IoT "
+"virtual Windows <iot/windows_iot/restart>`. Timbangan kemudian akan muncul "
+"sebagai `Toledo 8217`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -12605,12 +12774,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"Sistem IoT terhubung dan laporan ditetapkan ke printer yang tidak dapat "
+"mencetak"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Verifikasi bahwa browser diizinkan untuk :ref:`mengakses perangkat di "
+"jaringan lokal <pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -14032,6 +14205,12 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"Untuk memeriksa perangkat yang masuk, klik ikon pengguna di sudut kanan "
+"atas, lalu klik :guilabel:`Preferensi Saya` untuk membuka profil pengguna. "
+"Klik tab *Keamanan* untuk melihat daftar semua perangkat yang digunakan "
+"pengguna untuk masuk ke database. Perangkat apa pun yang saat ini masuk ke "
+"sistem akan menampilkan lingkaran hijau di samping nama perangkat pada kartu "
+"Kanban."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -14047,6 +14226,9 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"Jika perangkat yang tercantum **bukan** perangkat pengguna yang sah dan "
+"berpotensi menimbulkan risiko keamanan, hapus perangkat dan cabut akses "
+"dengan mengeklik tombol :guilabel:`Keluar`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -14054,12 +14236,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"Jendela pop-up :guilabel:`Kontrol Akses` akan dimuat, meminta pengguna untuk "
+"mengonfirmasi identitas mereka. Masukkan kata sandi pengguna, lalu klik "
+":guilabel:`Konfirmasi Kata Sandi`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"Perangkat akan menghilang dari tab *Keamanan* dan tidak dapat lagi digunakan "
+"untuk masuk ke database."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -14185,6 +14372,12 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"Untuk memberlakukan persyaratan panjang kata sandi minimum, :ref:`instal "
+"<general/install>` modul :guilabel:`Kebijakan Kata Sandi` "
+"(`auth_password_policy`). Kemudian, buka aplikasi :guilabel:`Pengaturan`, "
+"buka bagian *Izin*, dan masukkan panjang kata sandi yang diinginkan pada "
+"kolom :guilabel:`Panjang Kata Sandi Minimum`. Secara default, nilainya "
+"adalah `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -14331,7 +14524,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Multi Companies"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -14340,12 +14533,19 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"Kolom :guilabel:`Perusahaan` pada formulir pengguna menentukan perusahaan "
+"mana yang dapat diakses pengguna. Untuk mengonfigurasi akses multi-"
+"perusahaan, navigasi ke :menuselection:`Aplikasi Pengaturan --> bagian "
+"Pengguna --> Kelola Pengguna`. Kemudian pilih pengguna yang diinginkan untuk "
+"membuka formulir pengguna mereka."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"Pada tab *Hak Akses*, di bawah bagian *Peran*, konfigurasikan kolom "
+":guilabel:`Perusahaan` dan :guilabel:`Perusahaan Default`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -14353,6 +14553,9 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`Perusahaan`: Pilih satu atau beberapa perusahaan yang dapat "
+"diakses pengguna. Izin akses dan pengeditan pengguna ditentukan oleh hak "
+"akses yang ditetapkan."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
@@ -14741,7 +14944,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:32
 msgid "Manage roles"
-msgstr ""
+msgstr "Kelola peran"
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid ""
@@ -14750,34 +14953,47 @@ msgid ""
 "has, while the specific access rights associated with each role are defined "
 "by :ref:`groups <access-rights/groups>`."
 msgstr ""
+":ref:`Pengguna individu <users/add-individual>` diberikan sebuah *Peran* "
+"saat mereka ditambahkan ke database. Peran menentukan tingkat akses yang "
+"dimiliki pengguna, sedangkan hak akses khusus yang terkait dengan setiap "
+"peran ditentukan oleh :ref:`grup <access-rights/groups>`."
 
 #: ../../content/applications/general/users/access_rights.rst:38
 msgid "The four available roles are:"
-msgstr ""
+msgstr "Empat peran yang tersedia adalah:"
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid ""
 "*Administrator*: An internal user with access to technical features, product "
 "creation, export, and other advanced permissions."
 msgstr ""
+"*Administrator*: Pengguna internal dengan akses ke fitur teknis, pembuatan "
+"produk, ekspor, dan izin tingkat lanjut lainnya."
 
 #: ../../content/applications/general/users/access_rights.rst:42
 msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*User*: Pengguna internal yang biasanya memiliki akses ke back end dan dapat "
+"membuat serta mengedit rekaman tetapi memiliki lebih sedikit akses "
+"keseluruhan daripada administrator."
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Portal*: A customer or supplier who accesses their own data through the "
 "portal."
 msgstr ""
+"*Portal*: Pelanggan atau pemasok yang mengakses data mereka sendiri melalui "
+"portal."
 
 #: ../../content/applications/general/users/access_rights.rst:45
 msgid ""
 "*Public*: A website visitor or other external user. They generally have the "
 "least access."
 msgstr ""
+"*Public*: Pengunjung website atau user eksternal lainnya. Mereka biasanya "
+"memiliki akses paling sedikit."
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage user permissions"
@@ -14820,6 +15036,9 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"Izin yang tersedia pada tab *Hak Akses* ditentukan oleh grup yang terkait "
+"dengan peran pengguna. Peran menyediakan serangkaian izin standar, sedangkan "
+"grup menentukan hak akses spesifik yang diberikan kepada pengguna."
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
@@ -15062,6 +15281,9 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"Masukkan :guilabel:`Nama` untuk grup dan pilih kotak centang di samping "
+":guilabel:`Grup Berbagi`, jika grup ini dibuat untuk menetapkan hak akses "
+"guna membagikan data dengan beberapa pengguna."
 
 #: ../../content/applications/general/users/access_rights.rst:165
 msgid ""
@@ -15359,6 +15581,11 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"Untuk mengaktifkan batas waktu sesi, klik tab *Batas Waktu*, lalu centang "
+"kotak :guilabel:`Sesi`. Selanjutnya, pilih :guilabel:`Keluar` atau "
+":guilabel:`Keluar dengan autentikasi dua faktor` dari menu drop-down. Opsi "
+"ini menentukan apakah pengguna harus menyelesaikan verifikasi 2FA saat masuk "
+"kembali."
 
 #: ../../content/applications/general/users/access_rights.rst:277
 msgid ""
