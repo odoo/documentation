@@ -724,26 +724,25 @@ classifications <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion
 Payment flow
 ************
 
-In both cases, the payment process in Odoo :doc:`is the same <../accounting/payments>`. The main
-difference is that, by law, payments related to |PPD| invoices must be sent to the government as a
-document of type `P` (Pago).
+:doc:`The payment process is the same <../accounting/payments>` for |PUE| or |PPD|. Note that the
+payments for |PPD| invoices legally require a type `P` (Pago) document to be sent to the government.
 
-A payment related to a |PUE| invoice can be registered through the payment window and associated
-with the corresponding invoice. To do so, go to :menuselection:`Accounting --> Customers -->
-Invoices` and select an invoice. Then, click :guilabel:`Pay` to open the payment window, set the
-:guilabel:`Payment Way` and any other field, and click :guilabel:`Create Payment`.
+To register a payment for a PUE invoice, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Customers --> Invoices`.
+#. Select the relevant invoice and click :guilabel:`Pay`.
+#. In the :guilabel:`Pay` window, set the :guilabel:`Payment Way` and any other necessary field.
+#. Click :guilabel:`Create Payment`.
 
 .. seealso::
    - :doc:`../accounting/payments`
    - :doc:`../accounting/bank/reconciliation`
 
-The process is the same for |PPD| invoices, but creating an :doc:`electronic document
-<../accounting/customer_invoices/electronic_invoicing>` adds requirements to send the document to
-the |SAT| correctly.
-
-From a legal perspective, |PPD| invoices **must** include the specific :guilabel:`Payment Way` used
-to receive the payment. For this reason, the :guilabel:`Payment Way` field **cannot** be set to
-:guilabel:`To Define`, and the option is therefore hidden.
+|PPD| invoice payments follow the same workflow. But, additional requirements apply when creating
+:doc:`electronic documents <../accounting/customer_invoices/electronic_invoicing>` to ensure proper
+transmission to the |PAC|. |PPD| invoices do not require a :guilabel:`Payment Way` as it is set as
+*99 - To Define*. Consequently, the :guilabel:`Payment Way` of a payment **cannot** be set to
+:guilabel:`To Define`, and the option does not exist.
 
 .. note::
    - If a bank account number is required, add it in the :guilabel:`Accounting` tab of the
@@ -757,12 +756,12 @@ If a fully reconciled payment is related to an invoice with a :guilabel:`Fiscal 
 the government automatically and display it in the :guilabel:`CFDI` tab of both the invoice and the
 payment.
 
-As with an invoice or a credit note, the PDF and XML files can be sent to the final customer. To do
-so, click the :icon:`fa-cog` (:guilabel:`gear`) icon on the payment to open the actions dropdown
-menu, then select :guilabel:`Send receipt by email`.
-
-To download the payment PDF from the :guilabel:`CFDI` tab of the invoice, regardless of whether the
-payment was created with or without reconciliation, click :guilabel:`Print`.
+.. tip::
+   - Like invoices or credit notes, PDF and XML files can be sent to the final customer. To do so,
+     click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon on the payment and select
+     :guilabel:`Send receipt by email`.
+   - To download the payment PDF from the invoice :guilabel:`CFDI` tab, regardless of whether the
+     payment was created with or without reconciliation, click :guilabel:`Print`.
 
 .. image:: mexico/mx-print-payment.png
    :alt: Example of the print button on the CFDI tab.
