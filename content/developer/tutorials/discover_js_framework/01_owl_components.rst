@@ -76,7 +76,7 @@ file, with the `xml` tagged template from `@odoo/owl`.
      <https://odoo.github.io/owl/documentation/v3/owl/reference/template_syntax.html>`_
    - `Hooks <https://odoo.github.io/owl/documentation/v3/owl/reference/hooks.html>`_
 
-Tutorial 1: Getting Started
+Playground exercise 1: Getting Started
 ===========================
 
 Open the `Getting Started tutorial <https://odoo.github.io/owl/playground/#getting_started>`_ in the
