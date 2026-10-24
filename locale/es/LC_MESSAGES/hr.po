@@ -19,6 +19,7 @@
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 #
 # Translators:
 # Tiffany Chang, 2024
@@ -28,8 +29,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-09-08 18:11+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 02:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-18-doc/hr/"
 "es/>\n"
 "Language: es\n"
@@ -43331,12 +43332,17 @@ msgid ""
 "responsible for approving requests and allocations for this specific type of "
 "time off."
 msgstr ""
+":guilabel:`Responsable de ausencias a notificar`: selecciona al usuario al "
+"que se notifica y que es responsable de aprobar las solicitudes y "
+"asignaciones para este tipo específico de ausencia."
 
 #: ../../content/applications/hr/time_off.rst:139
 msgid ""
 ":guilabel:`Take Time Off in`: Select the format the time off is requested in "
 "from the drop-down menu. The options are:"
 msgstr ""
+":guilabel:`Tomar ausencias en`: en el menú desplegable, selecciona el "
+"formato en el que se solicitan las ausencias. Las opciones son:"
 
 #: ../../content/applications/hr/time_off.rst:142
 msgid ""
@@ -43470,6 +43476,11 @@ msgid ""
 "If enabled, an :guilabel:`Maximum Excess Amount` field appears. In this "
 "field, enter the maximum amount of negative time allowed, in days."
 msgstr ""
+"Activa la opción :guilabel:`Permitir límite negativo` si los empleados "
+"pueden solicitar más ausencias de las que tienen actualmente, lo que permite "
+"un saldo negativo. Si se activa, aparecerá el campo :guilabel:`Cantidad "
+"máxima de exceso`. En este campo, introduce la cantidad máxima de tiempo "
+"negativo permitida, en días."
 
 #: ../../content/applications/hr/time_off.rst:189
 msgid ""
@@ -43704,6 +43715,13 @@ msgid ""
 "ticked), which means they **only** earn vacation time for the five weekdays "
 "they work, *not* the entire seven day week period."
 msgstr ""
+"A un empleado se le concede tiempo de ausencia a partir de un plan de "
+"acumulación configurado para acumular un día de vacaciones por cada cinco "
+"días trabajados. El plan de acumulación se basa en el tiempo trabajado por "
+"el empleado (la casilla :guilabel:`Basado en el tiempo trabajado` está "
+"marcada), lo que significa que **solo** acumula vacaciones durante los cinco "
+"días laborables que trabaja, *no* durante todo el período de siete días de "
+"la semana."
 
 #: ../../content/applications/hr/time_off.rst:277
 msgid ""
@@ -43720,6 +43738,10 @@ msgid ""
 "an :guilabel:`Absence`. Because the plan grants vacation only for worked "
 "time, those five days do not count toward accrual."
 msgstr ""
+"El empleado disfruta de cinco días libres mediante un :ref:`tipo de ausencia "
+"<time_off/time-off-types>` con el :guilabel:`Tipo de ausencia` establecido "
+"como :guilabel:`Ausencia`. Como el plan concede vacaciones solo por el "
+"tiempo trabajado, esos cinco días no cuentan para la acumulación."
 
 #: ../../content/applications/hr/time_off.rst:284
 msgid ""
@@ -43753,6 +43775,10 @@ msgid ""
 "database. Using the drop-down menu, select the company the accrual plan "
 "applies to. If left blank, the accrual plan is available for all companies."
 msgstr ""
+":guilabel:`Compañía`: Este campo **solo** aparece en una base de datos "
+"multicompañía. En el menú desplegable, selecciona la compañía a la que se "
+"aplica el plan de acumulación. Si se deja en blanco, el plan de acumulación "
+"estará disponible para todas las compañías."
 
 #: ../../content/applications/hr/time_off.rst:None
 msgid "An accrual plan form with all the entries filled out."
@@ -43836,6 +43862,8 @@ msgid ""
 ":guilabel:`Cap accrued time`: If there is a maximum amount of time the "
 "employee can accrue with this plan, enable this option."
 msgstr ""
+":guilabel:`Limitar el tiempo acumulado`: si hay una cantidad máxima de "
+"tiempo que el empleado puede acumular con este plan, activa esta opción."
 
 #: ../../content/applications/hr/time_off.rst:330
 msgid ""
@@ -43844,18 +43872,27 @@ msgid ""
 "matching the selection made in the :ref:`Employee Accrue <time_off/accrue>` "
 "section."
 msgstr ""
+"Al activarla, aparecen dos campos adicionales a la derecha de la casilla. El "
+"segundo campo se completa con :guilabel:`Días` u :guilabel:`Horas`, según la "
+"selección realizada en la sección :ref:`Acumulación del empleado <time_off/"
+"accrue>`."
 
 #: ../../content/applications/hr/time_off.rst:334
 msgid ""
 "Enter a numerical value in the first field to specify the maximum amount of "
 "time that can be accrued, in the specified increments."
 msgstr ""
+"Introduce un valor numérico en el primer campo para especificar la cantidad "
+"máxima de tiempo que se puede acumular, en los incrementos especificados."
 
 #: ../../content/applications/hr/time_off.rst:336
 msgid ""
 ":guilabel:`Start Accruing`: Enter the number and value of the time period "
 "that must pass before the employee starts to accumulate time off."
 msgstr ""
+":guilabel:`Empezar a acumular`: introduce el número y el valor del período "
+"de tiempo que debe transcurrir antes de que el empleado empiece a acumular "
+"tiempo de ausencia."
 
 #: ../../content/applications/hr/time_off.rst:339
 msgid ""
@@ -43863,6 +43900,9 @@ msgid ""
 "the desired time increment (either :guilabel:`Days`, :guilabel:`Months`, "
 "or :guilabel:`Years`)."
 msgstr ""
+"Utiliza el primer campo para introducir un valor numérico y luego establece "
+"el segundo campo en el incremento de tiempo deseado (:guilabel:`Días`, "
+":guilabel:`Meses` o :guilabel:`Años`)."
 
 #: ../../content/applications/hr/time_off.rst:341
 msgid ""
@@ -43875,6 +43915,8 @@ msgstr ""
 #: ../../content/applications/hr/time_off.rst:343
 msgid ":guilabel:`None. Accrued time reset to 0`: Any unused time off is lost."
 msgstr ""
+":guilabel:`Ninguno. El tiempo acumulado se restablece a 0`: cualquier "
+"ausencia no disfrutada se pierde."
 
 #: ../../content/applications/hr/time_off.rst:344
 msgid ""
@@ -43890,6 +43932,9 @@ msgid ""
 "next calendar year, but there is a cap. An :guilabel:`Up to` field appears "
 "if this is selected."
 msgstr ""
+":guilabel:`Traspaso con un máximo`: las ausencias no disfrutadas se "
+"transfieren al siguiente año natural, pero hay un límite. Si se selecciona "
+"esta opción, aparece el campo :guilabel:`Hasta`."
 
 #: ../../content/applications/hr/time_off.rst:349
 msgid ""
@@ -43897,10 +43942,14 @@ msgid ""
 "roll over to the following year. The presented time increment is determined "
 "by how the :ref:`Employee Accrue <time_off/accrue>` section is configured."
 msgstr ""
+"Introduce el número máximo de :guilabel:`Horas` o :guilabel:`Días` que se "
+"pueden transferir al año siguiente. El incremento de tiempo mostrado viene "
+"determinado por cómo esté configurada la sección :ref:`Acumulación del "
+"empleado <time_off/accrue>`."
 
 #: ../../content/applications/hr/time_off.rst:353
 msgid "Any time off beyond this parameter is lost."
-msgstr ""
+msgstr "Cualquier ausencia que supere este parámetro se perderá."
 
 #: ../../content/applications/hr/time_off.rst:356
 msgid ""
@@ -43967,12 +44016,21 @@ msgid ""
 "accrue during a year. The presented time increment is determined by how "
 "the :ref:`Employee Accrue <time_off/accrue>`  section is configured."
 msgstr ""
+":guilabel:`Límite de hito`: marca esta casilla para establecer un límite a "
+"la cantidad total de tiempo que se puede acumular en cada año natural. "
+"Introduce el número máximo total de :guilabel:`Horas` o :guilabel:`Días` que "
+"el empleado puede acumular durante un año. El incremento de tiempo mostrado "
+"viene determinado por cómo esté configurada la sección :ref:`Acumulación del "
+"empleado <time_off/accrue>` ."
 
 #: ../../content/applications/hr/time_off.rst:380
 msgid ""
 "If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
 "reset to 0`, the :guilabel:`Milestone cap` field does not appear."
 msgstr ""
+"Si el campo :guilabel:`Traspaso` se establece en :guilabel:`Ninguno. El "
+"tiempo acumulado se restablece a 0`, el campo :guilabel:`Límite de hito` no "
+"aparece."
 
 #: ../../content/applications/hr/time_off.rst:382
 msgid ""
@@ -43981,6 +44039,10 @@ msgid ""
 "second field to the desired time-period using the drop-down menu, "
 "either :guilabel:`Days` or :guilabel:`Months`."
 msgstr ""
+":guilabel:`Validez del traspaso`: marca esta casilla para establecer un "
+"límite de tiempo para que el empleado disfrute de las ausencias "
+"transferidas. Primero, selecciona el período de tiempo deseado en el menú "
+"desplegable del segundo campo, ya sea :guilabel:`Días` o :guilabel:`Meses`."
 
 #: ../../content/applications/hr/time_off.rst:386
 msgid ""
@@ -43988,12 +44050,19 @@ msgid ""
 "employee has to use their rolled over time off. After that time period "
 "passes, any unused rolled over time will expire."
 msgstr ""
+"A continuación, introduce el número máximo de :guilabel:`Días` o "
+":guilabel:`Meses` que tiene el empleado para disfrutar de sus ausencias "
+"transferidas. Una vez transcurrido ese período de tiempo, cualquier tiempo "
+"transferido y no disfrutado caducará."
 
 #: ../../content/applications/hr/time_off.rst:390
 msgid ""
 "If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
 "reset to 0`, the :guilabel:`Carry Over Validity` field does not appear."
 msgstr ""
+"Si el campo :guilabel:`Traspaso` se establece en :guilabel:`Ninguno. El "
+"tiempo acumulado se restablece a 0`, el campo :guilabel:`Validez del "
+"traspaso` no aparece."
 
 #: ../../content/applications/hr/time_off.rst:393
 msgid ""
