@@ -26,16 +26,16 @@ electronic signatures in the `27 member states of the European Union
 <https://europa.eu/european-union/about-eu/countries_en>`_. It distinguishes three types of
 electronic signatures:
 
-#. Simple electronic signatures
-#. Advanced electronic signatures
-#. Qualified electronic signatures
+#. Simple Electronic Signatures
+#. Advanced Electronic Signatures
+#. Qualified Electronic Signatures
 
-Odoo generates the first type, **simple electronic signatures**; these signatures are legally valid
-in the EU, as stated in the eIDAS regulation.
+| Odoo generates a signature that is equivalent to **Advanced Electronic Signatures** by default; these signatures are legally valid in the EU, as stated in the eIDAS regulation.
+|
+| If a higher level of certification is needed, **itsme®**\ integration also makes it possible to use a **Qualified Electronic Signature**\  when signing. These are useful for high-value contracts or sectors that require increased trust.
 
-Electronic signatures may not be automatically recognized as valid. You may need to bring
-supporting evidence of a signature's validity. While the Sign app provides a simple electronic
-signature, some supporting evidence is automatically collected during the signature process, such
+You may need to bring
+supporting evidence of a signature's validity. While the Sign app provides an **Advanced Electronic Signature**, some supporting evidence is automatically collected during the signature process, such
 as:
 
 #. Email validation and SMS validation (if enabled)
