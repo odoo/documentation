@@ -6,6 +6,8 @@
 # "Patricia Gutiérrez (pagc)" <pagc@odoo.com>, 2025, 2026.
 # "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2025, 2026.
 # Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 #
 # Translators:
 # Tiffany Chang, 2024
@@ -15,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 17:34+0000\n"
-"PO-Revision-Date: 2026-10-19 16:33+0000\n"
-"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
+"POT-Creation-Date: 2026-10-23 17:32+0000\n"
+"PO-Revision-Date: 2026-10-24 06:36+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/inventory_and_mrp/es_419/>\n"
 "Language: es_419\n"
@@ -14425,6 +14427,13 @@ msgid ""
 "high-volume, low-risk products or fast-moving operations where additional "
 "validation steps are not necessary."
 msgstr ""
+"El *flujo de inventario de un paso* es el más sencillo, ya que cuenta con "
+"menos pasos de gestión y menor trazabilidad. En esta configuración, los "
+"productos pasan directo de los proveedores al inventario o del inventario a "
+"los clientes, y Odoo solo registra cuándo los artículos entran o salen del "
+"almacén. Es la opción ideal para empresas con productos de alto volumen y "
+"bajo riesgo o con operaciones rápidas que no necesitan pasos de validación "
+"adicionales."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
 msgid "**Receiving**: Products go directly into stock."
@@ -14721,13 +14730,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:148
 msgid "Routes"
-msgstr ""
+msgstr "Rutas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:148
 msgid ""
 "Use routes to automate multi-step reception, delivery, and additional stock "
 "movement between locations"
 msgstr ""
+"Usa rutas para automatizar la recepción en varios pasos, la entrega y los "
+"movimientos de existencias adicionales entre ubicaciones"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -17523,24 +17534,33 @@ msgid ""
 "specific conditions. They can be configured to create advanced use cases "
 "such as:"
 msgstr ""
+"Las *rutas* en Odoo controlan el movimiento de productos entre diferentes "
+"ubicaciones, ya sean internas o externas, mediante una combinación de reglas "
+"de empuje y extracción. Estas reglas ayudan a automatizar el movimiento de "
+"productos según condiciones específicas y se pueden configurar para crear "
+"casos de uso avanzados, como:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:20
 msgid "Managing product manufacturing chains."
-msgstr ""
+msgstr "Gestionar cadenas de manufactura de productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:21
 msgid "Managing default locations per product."
-msgstr ""
+msgstr "Gestionar las ubicaciones predeterminadas por producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:22
 msgid ""
 "Defining warehouse movement for quality control, after-sales services, or "
 "supplier returns."
 msgstr ""
+"Definir movimientos de almacén para control de calidad, servicios posventa o "
+"devoluciones a proveedores."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:23
 msgid "Helping rental management automate return moves for rented products."
 msgstr ""
+"Ayudar a la gestión de alquileres a automatizar los movimientos de "
+"devolución de productos alquilados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:26
 msgid "`Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
@@ -17559,6 +17579,11 @@ msgid ""
 "and :guilabel:`Storage Locations` features are enabled, then "
 "click :guilabel:`Save`."
 msgstr ""
+"Para acceder a las rutas y seleccionarlas en los productos, ve "
+"a :menuselection:`Aplicación de Inventario --> Configuración --> Ajustes`. "
+"En la sección *Almacén*, asegúrate de que las funciones :guilabel:`Rutas "
+"multietapa` y :guilabel:`Ubicaciones de almacenamiento` estén activadas y "
+"luego haz clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:38
 msgid ""
@@ -17569,6 +17594,12 @@ msgid ""
 "the desired inbound and outbound flows in the :guilabel:`Incoming Shipments` "
 "and :guilabel:`Outgoing Shipments` fields."
 msgstr ""
+"Además, las rutas se generan según las configuraciones de recepción y "
+"entrega del almacén. Para acceder a estos ajustes, ve "
+"a :menuselection:`Aplicación de Inventario --> Configuración --> Almacenes` "
+"y selecciona el almacén correspondiente. En la pestaña *Configuración del "
+"almacén*, habilita los flujos de entrada y salida deseados en los "
+"campos :guilabel:`Envíos entrantes` y :guilabel:`Envíos salientes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:45
 msgid ""
@@ -17576,14 +17607,17 @@ msgid ""
 "the :guilabel:`Incoming Shipments` and :guilabel:`Outgoing Shipments` fields "
 "should be set. Do **not** create or modify rules to set up these flows."
 msgstr ""
+"Para usar recepciones o entregas en 1 paso, 2 pasos o 3 pasos, solo debes "
+"configurar los campos :guilabel:`Envíos entrantes` y :guilabel:`Envíos "
+"salientes`. **No** crees ni modifiques reglas para configurar estos flujos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:50
 msgid ":doc:`../../warehouses_storage/inventory_management/warehouses`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/inventory_management/warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:55
 msgid "Standard warehouse routes"
-msgstr ""
+msgstr "Rutas estándar de almacén"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:57
 msgid ""
@@ -17593,42 +17627,60 @@ msgid ""
 "warehouse, and do **not** need to be :ref:`manually applied <inventory/"
 "routes/apply>` on individual products."
 msgstr ""
+"Odoo genera rutas de almacén automáticamente según los "
+"campos :guilabel:`Envíos entrantes` y :guilabel:`Envíos salientes` del "
+"almacén. Estas rutas se aplican automáticamente a cada producto del almacén "
+"y **no** es necesario :ref:`aplicarlas manualmente <inventory/routes/apply>` "
+"en productos individuales."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:62
 msgid ""
 "Depending on the route, products move through the following warehouse "
 "locations, where `<WH>` is the warehouse's short name:"
 msgstr ""
+"Según la ruta, los productos pasan por las siguientes ubicaciones del "
+"almacén, donde `<WH>` es el nombre corto del almacén:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:65
 msgid "|ST|: The main stock location, used by all flows."
 msgstr ""
+"|ST|: la ubicación principal de existencias, utilizada por todos los flujos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid ""
 "|IN|: Where products are received before being stored. Used in 2-step and 3-"
 "step receptions."
 msgstr ""
+"|IN|: donde se reciben los productos antes de almacenarlos. Se utiliza en "
+"recepciones en 2 y 3 pasos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:67
 msgid "|QC|: Where received products are checked. Used in 3-step receptions."
 msgstr ""
+"|QC|: donde se revisan los productos recibidos. Se utiliza en recepciones en "
+"3 pasos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:68
 msgid "|PACK|: Where picked products are packed. Used in 3-step deliveries."
 msgstr ""
+"|PACK|: donde se empaquetan los productos recolectados. Se utiliza en "
+"entregas en 3 pasos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:69
 msgid ""
 "|OUT|: Where products wait before being shipped. Used in 2-step and 3-step "
 "deliveries."
 msgstr ""
+"|OUT|: donde esperan los productos antes de enviarse. Se utiliza en entregas "
+"en 2 y 3 pasos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:71
 msgid ""
 "Odoo activates and archives these locations automatically when the warehouse "
 "options change."
 msgstr ""
+"Odoo activa y archiva estas ubicaciones de forma automática cuando cambian "
+"las opciones del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:None
 msgid "View of a generic warehouse with stock and quality control area."
@@ -17640,10 +17692,12 @@ msgid ""
 "The following tables list the operations created for each option. Each "
 "operation is created when the previous one is validated."
 msgstr ""
+"Las siguientes tablas muestran las operaciones creadas para cada opción. "
+"Cada operación se crea al validar la anterior."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:80
 msgid "Incoming shipments"
-msgstr ""
+msgstr "Envíos entrantes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:87
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:107
@@ -17655,84 +17709,91 @@ msgstr "Ruta"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:108
 msgid "Operations created"
-msgstr ""
+msgstr "Operaciones creadas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:89
 msgid ":doc:`Receive and Store (1 step) <receipts_delivery_one_step>`"
-msgstr ""
+msgstr ":doc:`Recibir y almacenar (1 paso) <receipts_delivery_one_step>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:90
 msgid "*Receipts*: |VEND| → |ST|"
-msgstr ""
+msgstr "*Recepciones*: |VEND| → |ST|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:91
 msgid ":doc:`Receive then Store (2 steps) <receipts_delivery_two_steps>`"
 msgstr ""
+":doc:`Recibir y luego almacenar (2 pasos) <receipts_delivery_two_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:92
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:95
 msgid "*Receipts*: |VEND| → |IN|"
-msgstr ""
+msgstr "*Recepciones*: |VEND| → |IN|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:93
 msgid "*Storage*: |IN| → |ST|"
-msgstr ""
+msgstr "*Almacenamiento*: |IN| → |ST|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:94
 msgid ""
 ":doc:`Receive, Quality Control, then Store (3 steps) <receipts_three_steps>`"
 msgstr ""
+":doc:`Recibir, control de calidad y luego almacenar (3 pasos) "
+"<receipts_three_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 msgid "*Quality Control*: |IN| → |QC|"
-msgstr ""
+msgstr "*Control de calidad*: |IN| → |QC|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:97
 msgid "*Storage*: |QC| → |ST|"
-msgstr ""
+msgstr "*Almacenamiento*: |QC| → |ST|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:100
 msgid "Outgoing shipments"
-msgstr ""
+msgstr "Envíos salientes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:109
 msgid ":doc:`Deliver (1 step) <receipts_delivery_one_step>`"
-msgstr ""
+msgstr ":doc:`Entregar (1 paso) <receipts_delivery_one_step>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:110
 msgid "*Delivery Orders*: |ST| → |CUST|"
-msgstr ""
+msgstr "*Órdenes de entrega*: |ST| → |CUST|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:111
 msgid ":doc:`Pick then Deliver (2 steps) <receipts_delivery_two_steps>`"
 msgstr ""
+":doc:`Recolectar y luego entregar (2 pasos) <receipts_delivery_two_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:112
 msgid "*Pick*: |ST| → |OUT|"
-msgstr ""
+msgstr "*Recolección*: |ST| → |OUT|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:113
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:117
 msgid "*Delivery Orders*: |OUT| → |CUST|"
-msgstr ""
+msgstr "*Órdenes de entrega*: |OUT| → |CUST|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:114
 msgid ":doc:`Pick, Pack, then Deliver (3 steps) <delivery_three_steps>`"
 msgstr ""
+":doc:`Recolectar, empacar y luego entregar (3 pasos) <delivery_three_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:115
 msgid "*Pick*: |ST| → |PACK|"
-msgstr ""
+msgstr "*Recolección*: |ST| → |PACK|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:116
 msgid "*Pack*: |PACK| → |OUT|"
-msgstr ""
+msgstr "*Empaque*: |PACK| → |OUT|"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:120
 msgid ""
 "Depending on the warehouse configuration, Odoo can also generate the "
 "following warehouse routes:"
 msgstr ""
+"Según la configuración del almacén, Odoo también puede generar las "
+"siguientes rutas de almacén:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:122
 msgid ""
@@ -17740,6 +17801,9 @@ msgid ""
 "to |OUT| without storing them. Generated when neither :guilabel:`Incoming "
 "Shipments` nor :guilabel:`Outgoing Shipments` is set to 1 step."
 msgstr ""
+":doc:`Cross-dock <cross_dock>`: mueve los productos recibidos directamente "
+"de |IN| a |OUT| sin almacenarlos. Se genera cuando ni :guilabel:`Envíos "
+"entrantes` ni :guilabel:`Envíos salientes` están configurados en 1 paso."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:125
 msgid ""
@@ -17747,15 +17811,18 @@ msgid ""
 "Generated when :guilabel:`Resupply Subcontractors` is enabled on the "
 "warehouse."
 msgstr ""
+"*Reabastecer al subcontratista*: envía componentes desde |ST| a los "
+"subcontratistas. Se genera cuando :guilabel:`Reabastecer subcontratistas` "
+"está habilitado en el almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:129
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:384
 msgid ":doc:`../../warehouses_storage/inventory_management/use_locations`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/inventory_management/use_locations`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:134
 msgid "Advanced: how routes work"
-msgstr ""
+msgstr "Avanzado: cómo funcionan las rutas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:136
 msgid ""
@@ -17763,6 +17830,9 @@ msgid ""
 "rule configurations. For more advanced users, the following section provides "
 "information about routes and their rules and operations."
 msgstr ""
+":ref:`Rutas estándar <inventory/routes/warehouse-routes>` funcionan sin "
+"ninguna configuración de reglas. Para usuarios más avanzados, la siguiente "
+"sección proporciona información sobre las rutas, sus reglas y operaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:140
 msgid ""
@@ -17770,6 +17840,9 @@ msgid ""
 "rules>` and :ref:`pull <inventory/routes/overview/pull-rules>` rules that "
 "determine how products move between locations."
 msgstr ""
+"Las *rutas* son combinaciones de reglas de :ref:`empuje <inventory/routes/"
+"overview/push-rules>` y :ref:`extracción <inventory/routes/overview/pull-"
+"rules>` que determinan cómo se mueven los productos entre ubicaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:146
 msgid "Push rules"
@@ -17780,12 +17853,17 @@ msgid ""
 "Push rules move products from a source location to a destination location. "
 "These rules are triggered as soon as products arrive at the source location."
 msgstr ""
+"Las reglas de empuje mueven productos de una ubicación de origen a una de "
+"destino. Estas reglas se activan en cuanto los productos llegan a la "
+"ubicación de origen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:152
 msgid ""
 "Push rules can only be triggered once a product transfer has already been "
 "generated."
 msgstr ""
+"Las reglas de empuje solo se pueden activar una vez que ya se haya generado "
+"un traslado de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:155
 msgid ""
@@ -17793,6 +17871,9 @@ msgid ""
 "some products to move directly to |ST| as soon as they arrive at |IN|, while "
 "other products are pushed to |QC|."
 msgstr ""
+"Diferentes productos llegan desde |VEND| a |IN|. Las reglas de empuje están "
+"configuradas en algunos productos para moverlos directamente a |ST| en "
+"cuanto llegan a |IN|, mientras que otros productos se envían a |QC|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:0
 msgid "View of a generic push to rule when receiving products."
@@ -17809,6 +17890,10 @@ msgid ""
 "demand (e.g., sales orders or reordering needs) is confirmed at the "
 "destination location."
 msgstr ""
+"Las reglas de extracción definen los flujos de traslado de productos desde "
+"una ubicación de origen hasta una de destino. Estas reglas se basan en la "
+"demanda y se activan solo cuando se confirma la demanda (por ejemplo, "
+"órdenes de venta o necesidades de reordenamiento) en la ubicación de destino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:171
 msgid ""
@@ -17818,6 +17903,11 @@ msgid ""
 "route. Push rules are required to move the product through the rest of the "
 "transfer flow."
 msgstr ""
+"En las rutas de varios pasos, las reglas de extracción suelen usarse junto "
+"con las de empuje. Cuando hay varias ubicaciones en el flujo de traslado, la "
+"regla de extracción especifica el destino final del producto y genera el "
+"primer traslado en la ruta. Se necesitan reglas de empuje para mover el "
+"producto a lo largo del resto del flujo de traslado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:177
 msgid ""
@@ -17827,6 +17917,12 @@ msgid ""
 "operation that moves products from |ST| to the |PACK|. Then, push rules move "
 "the products from |PACK| to |OUT|, then finally from |OUT| to |CUST|."
 msgstr ""
+"Por ejemplo, un almacén está configurado con una ruta de entrega en 3 pasos. "
+"Se configura una regla de extracción para mover productos desde |ST| en "
+"cuanto se necesiten en |CUST|. La regla también crea el primer traslado del "
+"flujo: una operación *Pick* que mueve productos desde |ST| hasta |PACK|. "
+"Después, las reglas de empuje mueven los productos desde |PACK| a |OUT| y, "
+"finalmente, desde |OUT| a |CUST|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:0
 msgid "View of a generic pull from rule when preparing deliveries."
@@ -17834,7 +17930,7 @@ msgstr "Vista de una regla pull genérica en la preparación de entregas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:188
 msgid "Additional routes"
-msgstr ""
+msgstr "Rutas adicionales"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:190
 msgid ""
@@ -17844,6 +17940,11 @@ msgid ""
 "<inventory/routes/apply>` to individual products, product categories, or "
 "other records."
 msgstr ""
+"Además de los flujos estándar de almacén, en Odoo están disponibles las "
+"siguientes rutas opcionales. A diferencia de las rutas estándar de almacén, "
+"estas rutas **no** se aplican automáticamente. Debes :ref:`aplicarlas "
+"<inventory/routes/apply>` manualmente a productos individuales, categorías "
+"de productos u otros registros."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:201
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:164
@@ -17854,46 +17955,57 @@ msgstr "Descripción"
 msgid ""
 ":doc:`Replenish on Order (MTO) <../../warehouses_storage/replenishment/mto>`"
 msgstr ""
+":doc:`Reabastecer bajo pedido (MTO) <../../warehouses_storage/replenishment/"
+"mto>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:203
 msgid ""
 "Triggers a replenishment for each order instead of using existing stock. "
 "Used together with the *Buy* or *Manufacture* route. Archived by default."
 msgstr ""
+"Activa un reabastecimiento para cada orden en lugar de utilizar las "
+"existencias disponibles. Se utiliza junto con la ruta *Comprar* o "
+"*Fabricar*. Está archivada de forma predeterminada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:205
 msgid "Buy"
-msgstr ""
+msgstr "Comprar"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:206
 msgid ""
 "Creates an |RfQ| when products need to be replenished. Requires the "
 "**Purchase** app."
 msgstr ""
+"Crea una |RfQ| cuando es necesario reabastecer productos. Requiere la "
+"aplicación **Compras**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:207
 msgid "Manufacture"
-msgstr ""
+msgstr "Manufactura"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:208
 msgid ""
 "Creates an |MO| when products need to be replenished. Requires the "
 "**Manufacturing** app."
 msgstr ""
+"Crea una |MO| cuando es necesario reabastecer productos. Requiere la "
+"aplicación **Manufactura**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:209
 msgid ":doc:`Dropship <dropshipping>`"
-msgstr ""
+msgstr ":doc:`Triangulación de envíos <dropshipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:210
 msgid "Has a vendor ship products directly to the customer."
-msgstr ""
+msgstr "Hace que un proveedor envíe productos directamente al cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:211
 msgid ""
 ":doc:`Resupply Subcontractor on Order <../../../manufacturing/subcontracting/"
 "subcontracting_resupply>`"
 msgstr ""
+":doc:`Reabastecer al subcontratista bajo pedido <../../../manufacturing/"
+"subcontracting/subcontracting_resupply>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:213
 msgid ""
@@ -17901,20 +18013,26 @@ msgid ""
 "ordered. The components are sent from stock through the warehouse's "
 "*Resupply Subcontractor* route."
 msgstr ""
+"Envía componentes al subcontratista cuando se pide un producto "
+"subcontratado. Los componentes se envían desde las existencias mediante la "
+"ruta *Reabastecer al subcontratista* del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:215
 msgid ""
 ":doc:`Dropship Subcontractor on Order <../../../manufacturing/subcontracting/"
 "subcontracting_dropship>`"
 msgstr ""
+":doc:`Triangulación de envíos al subcontratista bajo pedido <../../../"
+"manufacturing/subcontracting/subcontracting_dropship>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:217
 msgid "Has a vendor deliver components directly to the subcontractor."
 msgstr ""
+"Hace que un proveedor entregue componentes directamente al subcontratista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:222
 msgid "Applying routes"
-msgstr ""
+msgstr "Aplicar rutas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:224
 msgid ""
@@ -17923,16 +18041,23 @@ msgid ""
 "for :ref:`additional routes <inventory/routes/reference>`, such as "
 "*Replenish on Order (MTO)*, *Buy*, *Manufacture*, or *Dropship*."
 msgstr ""
+"Puedes asignar rutas manualmente a productos, categorías de productos, "
+"embalajes, métodos de envío y líneas de las órdenes de venta. Esto solo es "
+"necesario para las :ref:`rutas adicionales <inventory/routes/reference>`, "
+"como *Reabastecer bajo pedido (MTO)*, *Comprar*, *Fabricar* o *Triangulación "
+"de envíos*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:229
 msgid ""
 "In order to apply routes on these forms, they must first be :ref:`made "
 "selectable <inventory/routes/manage/visibility>`."
 msgstr ""
+"Para poder aplicar rutas en estos formularios, primero debes :ref:`hacerlas "
+"seleccionables <inventory/routes/manage/visibility>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:235
 msgid "On products"
-msgstr ""
+msgstr "En productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:237
 msgid ""
@@ -17941,6 +18066,11 @@ msgid ""
 "product. On the product form, select the *Inventory* tab, then select one or "
 "more :guilabel:`Routes` in the *Operations* section."
 msgstr ""
+"Para asignar rutas directamente a un producto, ve "
+"a :menuselection:`Aplicación de Inventario --> Productos --> Productos` y "
+"selecciona el producto. En el formulario del producto, selecciona la pestaña "
+"*Inventario*, luego selecciona una o más :guilabel:`Rutas` en la sección "
+"*Operaciones*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:242
 msgid ""
@@ -17948,14 +18078,17 @@ msgid ""
 "click :icon:`oi-arrow-right` :guilabel:`View Diagram` next to "
 "the :guilabel:`Routes` field."
 msgstr ""
+"Para ver qué rutas y reglas se aplican a un producto sin modificarlas, haz "
+"clic en :icon:`oi-arrow-right` :guilabel:`Ver diagrama` junto al "
+"campo :guilabel:`Rutas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:None
 msgid "Routes on a product form."
-msgstr ""
+msgstr "Rutas en el formulario de un producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:249
 msgid "On product categories"
-msgstr ""
+msgstr "En categorías de productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:251
 msgid ""
@@ -17964,14 +18097,18 @@ msgid ""
 "and select the product category. On the category form, select one or "
 "more :guilabel:`Routes` in the *Logistics* section."
 msgstr ""
+"Para asignar rutas a una categoría de producto, ve "
+"a :menuselection:`Aplicación de Inventario --> Configuración --> Categorías "
+"de producto` y selecciona la categoría de producto. En el formulario de la "
+"categoría, selecciona una o más :guilabel:`Rutas` en la sección *Logística*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:None
 msgid "Routes on a product category form."
-msgstr ""
+msgstr "Rutas en el formulario de una categoría de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:259
 msgid "On product packagings"
-msgstr ""
+msgstr "En empaquetados de productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:261
 msgid ""
@@ -17982,19 +18119,28 @@ msgid ""
 "hidden. To enable it, click the :icon:`oi-settings-"
 "adjust` :guilabel:`(Optional Columns)` icon, then select :guilabel:`Routes`."
 msgstr ""
+"Para asignar rutas a un empaquetado de producto, ve "
+"a :menuselection:`Aplicación de Inventario --> Productos --> Productos` y "
+"selecciona el producto. En el formulario del producto, selecciona la pestaña "
+"*Inventario*. En la sección *Empaquetado*, se enumeran los empaquetados "
+"existentes. De forma predeterminada, la columna de rutas está oculta. Para "
+"habilitarla, haz clic en el icono :icon:`oi-settings-"
+"adjust` :guilabel:`(Columnas opcionales)` y selecciona :guilabel:`Rutas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:267
 msgid ""
 "In the newly added column, select one or more routes on a packaging line."
 msgstr ""
+"En la columna que acabas de agregar, selecciona una o más rutas en una línea "
+"de empaquetado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:270
 msgid ":ref:`inventory/product_management/packaging-route`"
-msgstr ""
+msgstr ":ref:`inventory/product_management/packaging-route`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:273
 msgid "On shipping methods"
-msgstr ""
+msgstr "En los métodos de envío"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:275
 msgid ""
@@ -18002,18 +18148,21 @@ msgid ""
 "app --> Configuration --> Delivery Methods` and select the shipping method. "
 "On the form, select one or more :guilabel:`Routes`."
 msgstr ""
+"Para asignar rutas a un método de envío, ve a :menuselection:`Aplicación de "
+"Inventario --> Configuración --> Métodos de entrega` y selecciona el método "
+"de envío. En el formulario, selecciona una o más :guilabel:`Rutas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:None
 msgid "Routes on a delivery method form."
-msgstr ""
+msgstr "Rutas en el formulario de un método de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:283
 msgid ":ref:`inventory/shipping_receiving/shipping-route`"
-msgstr ""
+msgstr ":ref:`inventory/shipping_receiving/shipping-route`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:286
 msgid "On sales order lines"
-msgstr ""
+msgstr "En las líneas de la orden de venta"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:288
 msgid ""
@@ -18023,18 +18172,26 @@ msgid ""
 "settings-adjust` :guilabel:`(Optional Columns)` icon, then "
 "select :guilabel:`Route`."
 msgstr ""
+"Para asignar rutas a una línea de orden de venta, abre la aplicación "
+"**Ventas** y selecciona la cotización de venta. Las líneas existentes "
+"aparecen en la pestaña *Líneas de la orden*. De forma predeterminada, la "
+"columna de rutas está oculta. Para habilitarla, haz clic en el "
+"icono :icon:`oi-settings-adjust` :guilabel:`(Columnas opcionales)`, luego "
+"selecciona :guilabel:`Rutas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:293
 msgid "In the newly-added column, select one or more routes on an order line."
 msgstr ""
+"En la columna recién agregada, selecciona una o más rutas en una línea de la "
+"orden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:None
 msgid "Routes on a sales order line."
-msgstr ""
+msgstr "Rutas en una línea de la orden de venta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:301
 msgid "Advanced: managing routes"
-msgstr ""
+msgstr "Avanzado: administra rutas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:304
 msgid ""
@@ -18042,6 +18199,9 @@ msgid ""
 "for custom flows. Standard 1-step, 2-step, and 3-step flows require no route "
 "or rule changes."
 msgstr ""
+"La siguiente sección está dirigida a usuarios avanzados que necesitan "
+"configuraciones para flujos personalizados. Los flujos estándar de 1 paso, 2 "
+"pasos y 3 pasos no requieren cambios en las rutas o reglas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:307
 msgid ""
@@ -18049,6 +18209,9 @@ msgid ""
 "--> Configuration --> Routes`. This opens the *Routes* page, displaying a "
 "list of all available routes across all warehouses."
 msgstr ""
+"Accede a un tablero de rutas al navegar a :menuselection:`Aplicación de "
+"Inventario --> Configuración --> Rutas`. Esto abre la página *Rutas*, que "
+"muestra una lista de todas las rutas disponibles en todos los almacenes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:312
 msgid ""
@@ -18057,32 +18220,42 @@ msgid ""
 "the warehouse, then click the :icon:`fa-refresh` :guilabel:`Routes` smart "
 "button."
 msgstr ""
+"Para acceder a las rutas de un almacén específico, ve "
+"a :menuselection:`Aplicación de Inventario --> Configuración --> Almacenes`. "
+"Selecciona el almacén y luego haz clic en el botón inteligente :icon:`fa-"
+"refresh` :guilabel:`Rutas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:316
 msgid ""
 "To view additional settings, click the desired route in the list. This opens "
 "the route's form."
 msgstr ""
+"Para ver ajustes adicionales, haz clic en la ruta deseada en la lista. Esto "
+"abre el formulario de la ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:None
 msgid "Route form in Odoo Inventory."
-msgstr ""
+msgstr "Formulario de ruta en Inventario de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:324
 msgid "Define route visibility"
-msgstr ""
+msgstr "Define la visibilidad de la ruta"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:326
 msgid ""
 "The :guilabel:`Company` field allows users to restrict the route to specific "
 "companies (if using a multi-company environment)."
 msgstr ""
+"El campo :guilabel:`Empresa` permite a los usuarios restringir la ruta a "
+"empresas específicas (si usas un entorno multiempresa)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:329
 msgid ""
 "In the *Applicable On* section, specify any forms on which the route can be "
 "made selectable via the following options:"
 msgstr ""
+"En la sección *Aplicable en*, especifica los formularios en los que la ruta "
+"se puede seleccionar mediante las siguientes opciones:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:332
 msgid ""
@@ -18090,12 +18263,18 @@ msgid ""
 "Categories* form. When configured with a route, every product in the "
 "category inherits the route's rules."
 msgstr ""
+":guilabel:`Categorías de productos`: permite que las rutas se puedan "
+"seleccionar en un formulario de *Categorías de productos*. Al configurarlo "
+"con una ruta, cada producto de la categoría hereda las reglas de la ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:334
 msgid ""
 ":guilabel:`Products`: Allow routes to be selectable on a *Products* form. "
 "The configured product inherits the route's rules."
 msgstr ""
+":guilabel:`Productos`: permite que las rutas se puedan seleccionar en un "
+"formulario de *Productos*. El producto configurado hereda las reglas de la "
+"ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:336
 msgid ""
@@ -18103,6 +18282,10 @@ msgid ""
 "Packaging* form. When configured with a packaging, all orders with the "
 "chosen packaging inherit the route's rules."
 msgstr ""
+":guilabel:`Empaquetados`: Permite que las rutas se puedan seleccionar en el "
+"formulario de *Empaquetado del producto*. Al configurarse con un "
+"empaquetado, todas las órdenes con el empaquetado elegido heredan las reglas "
+"de la ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:338
 msgid ""
@@ -18110,12 +18293,18 @@ msgid ""
 "Methods* form. When applied on a carrier, all orders with the chosen "
 "shipping method inherit the route's rules."
 msgstr ""
+":guilabel:`Métodos de envío`: permite que las rutas se puedan seleccionar en "
+"un formulario de *Métodos de entrega*. Al aplicarse en un cransportista, "
+"todas las órdenes con el método de envío elegido heredan las reglas de la "
+"ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:340
 msgid ""
 ":guilabel:`Warehouses`: Select the warehouses for which this route should be "
 "used as the default route."
 msgstr ""
+":guilabel:`Almacenes`: selecciona los almacenes para los que se debe usar "
+"esta ruta como ruta predeterminada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:342
 msgid ""
@@ -18123,36 +18312,46 @@ msgid ""
 "lines. When applied on individual sales order lines, the chosen routes "
 "override the corresponding product's routes for the specific order **only**."
 msgstr ""
+":guilabel:`Líneas de la orden de venta`: permite seleccionar rutas en las "
+"líneas de las órdenes de venta. Si se aplican en líneas individuales de la "
+"orden de venta, las rutas elegidas anulan las rutas del producto "
+"correspondiente **solo** para esa orden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:347
 msgid ""
 "See the :ref:`Applying routes <inventory/routes/apply>` section to see how "
 "routes are applied on these forms."
 msgstr ""
+"Consulta la sección :ref:`Aplicación de rutas <inventory/routes/apply>` para "
+"ver cómo se aplican las rutas en estos formularios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:353
 msgid "Viewing rules"
-msgstr ""
+msgstr "Visualizar reglas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:355
 msgid "The *Rules* section lists any rules defining the route."
-msgstr ""
+msgstr "La sección *Reglas* enumera las reglas que definen la ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:358
 msgid ""
 "Modifying Odoo's default rules may cause unexpected errors in the database "
 "and is therefore **not** recommended."
 msgstr ""
+"Modificar las reglas predeterminadas de Odoo puede causar errores "
+"inesperados en la base de datos y, por lo tanto, **no** se recomienda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:361
 msgid ""
 "Each rule has an :guilabel:`Action`, an :guilabel:`Operation Type`, "
 "a :guilabel:`Source Location`, and a :guilabel:`Destination Location`."
 msgstr ""
+"Cada regla tiene una :guilabel:`Acción`, un :guilabel:`Tipo de operación`, "
+"una :guilabel:`Ubicación de origen` y una :guilabel:`Ubicación de destino`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:364
 msgid "The following actions are defined in Odoo:"
-msgstr ""
+msgstr "Las siguientes acciones están definidas en Odoo:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:366
 msgid ""
@@ -18160,6 +18359,10 @@ msgid ""
 "at the *Destination Location*, a picking of the specified *Operation Type* "
 "is created from the *Source Location* to fulfill the demand."
 msgstr ""
+"`Obtener de`: cuando surge una demanda (por ejemplo, de órdenes de venta o "
+"de manufactura) en la *Ubicación de destino*, se crea una recolección del "
+"*Tipo de operación* especificado desde la *Ubicación de origen* para "
+"satisfacer la demanda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:369
 msgid ""
@@ -18167,12 +18370,18 @@ msgid ""
 "specified *Operation Type* is created to send them to the *Destination "
 "Location*."
 msgstr ""
+"`Enviar a`: cuando llegan productos a la *Ubicación de origen*, se crea una "
+"recolección del *Tipo de operación* especificado para enviarlos a la "
+"*Ubicación de destino*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:371
 msgid ""
 "`Pull & Push`: Create both a `Pull From` and `Push To` rule with the "
 "selected *Operation Type*, *Source Location*, and *Destination Location*."
 msgstr ""
+"`Obtener y enviar`: crea una regla tanto de `Obtener de` como de `Enviar a` "
+"con el *Tipo de operación*, la *Ubicación de origen* y la *Ubicación de "
+"destino* seleccionados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:373
 msgid ""
@@ -18180,22 +18389,29 @@ msgid ""
 "manufacturing order (MO) is created to fulfill the demand, taking any "
 "required components from the *Source Location*."
 msgstr ""
+"`Fabricar`: cuando se necesitan productos en la *Ubicación de destino*, se "
+"crea una orden de manufactura (MO) para satisfacer la demanda y se toman los "
+"componentes necesarios de la *Ubicación de origen*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:375
 msgid ""
 "`Buy`: When products are needed at the *Destination Location*, a request for "
 "quotation (RfQ) is created to fulfill the need."
 msgstr ""
+"`Comprar`: cuando se necesitan productos en la *Ubicación de destino*, se "
+"crea una solicitud de cotización (SdC) para satisfacer la necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:379
 msgid ""
 "The `Buy` action is only available with the **Purchase** app installed, and "
 "`Manufacture` with the **Manufacturing** app."
 msgstr ""
+"La acción `Comprar` solo está disponible si tienes instalada la aplicación "
+"**Compras**, y `Fabricar` con la aplicación **Manufactura**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:383
 msgid ":doc:`../../warehouses_storage/inventory_management/operation_type`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/inventory_management/operation_type`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:3
 msgid "Batch picking"
@@ -19943,6 +20159,10 @@ msgid ""
 "to the output or packing location, set the removal strategy on "
 "the :ref:`parent location <inventory/use_locations/create-location>`."
 msgstr ""
+"Una vez que nombres las ubicaciones en orden alfabético según su proximidad "
+"a la ubicación de salida o de empaquetado, configura la estrategia de "
+"remoción en la :ref:`ubicación padre <inventory/use_locations/create-"
+"location>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
 msgid ""
@@ -24622,6 +24842,11 @@ msgid ""
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
+"Integrar una cuenta de FedEx con la aplicación **Inventario** de Odoo "
+"permite :doc:`calcular las tarifas de envío <../setup_configuration>` "
+"y :doc:`generar etiquetas de envío <labels>` dentro de Odoo. Esto se logra "
+"al habilitar el *conector de envío* de FedEx y luego configurar al menos un "
+"*método de envío*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
 msgid ""
@@ -24645,14 +24870,19 @@ msgid ""
 "the :menuselection:`Apps` app and search for `FedEx`. :guilabel:`Activate` "
 "the `delivery_fedex_certified` shipping connector."
 msgstr ""
+"Para habilitar el conector de envío de FedEx, primero :doc:`activa el modo "
+"de desarrollador <../../../../general/developer_mode>`. Luego abre la "
+"aplicación :menuselection:`Aplicaciones` y busca `FedEx`. :guilabel:`Activa` "
+"el conector de envío `delivery_fedex_certified`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
 msgid "The delivery_fedex_certified connector is installed."
-msgstr ""
+msgstr "El conector delivery_fedex_certified está instalado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
 msgid "Other FedEx modules are out-of-date and should not be installed."
 msgstr ""
+"Los demás módulos de FedEx están desactualizados y no se deben instalar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
 msgid "Configure shipping method"
@@ -24666,6 +24896,11 @@ msgid ""
 "Enable :guilabel:`Delivery Methods`, then click :guilabel:`Save` at the top "
 "of the *Settings* page."
 msgstr ""
+"Una vez habilitado el conector de envío de FedEx, asegúrate de que *Métodos "
+"de entrega* esté habilitado. Ve a :menuselection:`Aplicación Inventario --> "
+"Configuración --> Ajustes` y desplázate hasta la sección *Envío*. "
+"Habilita :guilabel:`Métodos de entrega` y luego haz clic "
+"en :guilabel:`Guardar` en la parte superior de la página de *Ajustes*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
 msgid ""
@@ -24674,6 +24909,10 @@ msgid ""
 "sales orders (SOs), and used to compute shipping costs and print shipping "
 "labels."
 msgstr ""
+"Una vez habilitado *Métodos de entrega*, es necesario configurar al menos un "
+"método de envío. Después de hacerlo, el método de envío se puede incluir en "
+"órdenes de venta (OV) y utilizarse para calcular los costos de envío e "
+"imprimir etiquetas de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:40
 msgid ""
@@ -24691,6 +24930,9 @@ msgid ""
 "click :guilabel:`New` to open a blank form, and configure a new shipping "
 "method."
 msgstr ""
+"Selecciona un método de envío de FedEx para abrir su formulario. De forma "
+"alternativa, haz clic en :guilabel:`Nuevo` para abrir un formulario en "
+"blanco y configurar un nuevo método de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
 msgid "The form for a FedEx shipping method."
@@ -24713,6 +24955,8 @@ msgid ""
 "The remaining fields should be completed as outlined in the :ref:`inventory/"
 "shipping_receiving/configure-delivery-method` section."
 msgstr ""
+"Los campos restantes se deben completar como se describe en la "
+"sección :ref:`inventory/shipping_receiving/configure-delivery-method`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "FedEx Configuration tab"
@@ -24725,6 +24969,10 @@ msgid ""
 "shipping details associated with the method (drop-off type, package type, "
 "etc.)."
 msgstr ""
+"Las opciones de la pestaña *Configuración de FedEx* en el formulario de un "
+"método de envío de FedEx se utilizan para conectar el método a una cuenta de "
+"FedEx y configurar los detalles de envío asociados (tipo de entrega, tipo de "
+"paquete, etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
@@ -24741,7 +24989,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
 msgid "Register FedEx account in database"
-msgstr ""
+msgstr "Registrar la cuenta de FedEx en la base de datos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:74
 msgid ""
@@ -24749,6 +24997,9 @@ msgid ""
 "account in the database. Click the :guilabel:`Register FedEx Account` "
 "button. The *FedEx Account Registration* window opens."
 msgstr ""
+"Después de registrar una cuenta comercial en FedEx, registra la cuenta de "
+"FedEx en la base de datos. Haz clic en el botón :guilabel:`Registrar cuenta "
+"de FedEx`. Se abrirá la ventana *Registro de cuenta de FedEx*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:77
 msgid ""
@@ -24757,6 +25008,10 @@ msgid ""
 "and :guilabel:`I accept the terms of FedEx EULA to start shipping` "
 "checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
+"Acepta el contrato de licencia de usuario final (EULA) marcando las "
+"casillas :guilabel:`Reconozco haber leído el Acuerdo de licencia de usuario "
+"final de FedEx` e :guilabel:`Acepto los términos del EULA de FedEx para "
+"comenzar a enviar`, luego haz clic en :guilabel:`Aceptar y continuar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:81
 msgid ""
@@ -24803,7 +25058,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
 msgid "Click :guilabel:`Continue` to proceed."
-msgstr ""
+msgstr "Haz clic en :guilabel:`Continuar` para continuar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
 msgid ""
@@ -24813,10 +25068,15 @@ msgid ""
 "the :guilabel:`Currency` used on the invoice. Click :guilabel:`Validate "
 "Invoice`."
 msgstr ""
+"Si realizas la validación mediante factura, en la ventana *Registro de "
+"cuenta de FedEx - Validación de factura*, ingresa los datos recientes "
+"de :guilabel:`Número de factura`, :guilabel:`Fecha de "
+"factura`, :guilabel:`Monto de la factura` y la :guilabel:`Moneda` utilizada "
+"en la factura. Haz clic en :guilabel:`Validar factura`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
 msgid "A completed Invoice Validation form."
-msgstr ""
+msgstr "Un formulario de validación de factura completado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
 msgid ""
@@ -24825,10 +25085,15 @@ msgid ""
 "click :guilabel:`Send Code`. Enter the :guilabel:`6 digits secure code`, "
 "then click :guilabel:`Validate Code`."
 msgstr ""
+"Si realizas la validación mediante PIN, en la ventana *Registro de cuenta de "
+"FedEx - Validación de PIN*, selecciona una opción de la "
+"lista :guilabel:`Opciones de PIN` y luego haz clic en :guilabel:`Enviar "
+"código`. Ingresa el :guilabel:`Código de seguridad de 6 dígitos` y después "
+"haz clic en :guilabel:`Validar código`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
 msgid "A completed PIN Validation form."
-msgstr ""
+msgstr "Un formulario de validación de PIN completado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:110
 msgid ""
@@ -24846,6 +25111,8 @@ msgid ""
 "In the *FedEx Configuration* tab, provide more information about the "
 "shipping method:"
 msgstr ""
+"En la pestaña *Configuración de FedEx*, proporciona más información sobre el "
+"método de envío:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:116
 msgid ""
@@ -24860,12 +25127,16 @@ msgid ""
 ":guilabel:`Drop-Off Type`: Select the method for getting a package into "
 "FedEx's possession."
 msgstr ""
+":guilabel:`Tipo de entrega`: selecciona el método para entregar el paquete a "
+"FedEx."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
 ":guilabel:`Package Type`: Select the type of package used for the shipping "
 "method."
 msgstr ""
+":guilabel:`Tipo de paquete`: selecciona el tipo de paquete utilizado para el "
+"método de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
@@ -24893,6 +25164,8 @@ msgstr ""
 msgid ""
 ":guilabel:`Label Size`: Select the type of shipping label used for packages."
 msgstr ""
+":guilabel:`Tamaño de la etiqueta`: selecciona el tipo de etiqueta de envío "
+"utilizada para los paquetes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
@@ -24910,6 +25183,12 @@ msgid ""
 "the *Account Management* page after logging in to the FedEx website or speak "
 "with a customer service representative."
 msgstr ""
+"Las opciones que se deben seleccionar en la pestaña *Configuración de FedEx* "
+"de un método de envío dependen de los servicios de envío negociados en la "
+"cuenta de FedEx asociada. Para confirmar los servicios disponibles para una "
+"cuenta de FedEx, visita la página de *Administración de cuentas* después de "
+"iniciar sesión en el sitio web de FedEx o comunícate con un representante de "
+"atención al cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Options section"
@@ -24920,12 +25199,18 @@ msgid ""
 "The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
 "few additional options to further configure the shipping method:"
 msgstr ""
+"La sección :guilabel:`Opciones` de la pestaña *Configuración de FedEx* "
+"ofrece algunas opciones adicionales para configurar aún más el método de "
+"envío:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 ":guilabel:`Generate Return Label`: Select this checkbox to automatically "
 "generate a return label when a delivery is validated."
 msgstr ""
+":guilabel:`Generar etiqueta de devolución`: Selecciona esta casilla para "
+"generar automáticamente una etiqueta de devolución cuando se valide una "
+"entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:141
 msgid ""
@@ -24977,18 +25262,29 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:156
 msgid "Test environment unavailable"
-msgstr ""
+msgstr "Entorno de prueba no disponible"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:158
 msgid ""
 "At the moment, FedEx does not offer a test environment where testing "
 "credentials can be used to simulate future deliveries."
 msgstr ""
+"Por el momento, FedEx no ofrece un entorno de prueba donde se puedan usar "
+"credenciales de prueba para simular entregas futuras."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid ""
 "Use production credentials for testing instead, and cancel the test requests "
 "through the FedEx platform after testing is complete."
+msgstr ""
+"En su lugar, utiliza credenciales de producción para realizar pruebas y "
+"cancela las solicitudes de prueba a través de la plataforma de FedEx una vez "
+"que termines."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:165
+msgid ""
+"FedEx shipments and requests cannot be made from a staging database. You "
+"must use a production database to create shipments."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
@@ -33908,12 +34204,19 @@ msgid ""
 "<inventory/warehouses_storage/location-type>`, which determines the behavior "
 "of stock moves and valuation."
 msgstr ""
+"Una *ubicación* es un espacio específico dentro de un almacén (por ejemplo, "
+"un estante, una habitación, un pasillo, etc.). Cada ubicación se categoriza "
+"mediante un :ref:`tipo de ubicación <inventory/warehouses_storage/location-"
+"type>`, lo que determina el comportamiento de los movimientos de existencias "
+"y la valoración."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:9
 msgid ""
 "Users can create custom locations, track products at specific locations, and "
 "manage putaway rules."
 msgstr ""
+"Los usuarios pueden crear ubicaciones personalizadas, rastrear productos en "
+"ubicaciones específicas y gestionar reglas de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:16
 msgid ""
@@ -33922,6 +34225,11 @@ msgid ""
 "In the :guilabel:`Warehouse` section, select the :guilabel:`Storage "
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
+"Para crear ubicaciones de almacenamiento específicas, habilita la función "
+"*Ubicaciones de almacenamiento* en :menuselection:`aplicación Inventario --> "
+"Configuración --> Ajustes`. En la sección :guilabel:`Almacén`, selecciona la "
+"casilla :guilabel:`Ubicaciones de almacenamiento`. Luego, haz clic "
+"en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:21
 msgid ""
@@ -33947,6 +34255,9 @@ msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
 "Configuration --> Locations` to open a list of locations."
 msgstr ""
+"Luego de habilitar *Ubicaciones de almacenamiento*, ve "
+"a :menuselection:`Aplicación de Inventario --> Configuración --> "
+"Ubicaciones` para abrir una lista de ubicaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "List of internal locations."
@@ -33955,6 +34266,8 @@ msgstr "Lista de ubicaciones internas."
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
 msgid "On this page, click :guilabel:`New` to open a new location form."
 msgstr ""
+"En esta página, haz clic en :guilabel:`Nuevo` para abrir un nuevo formulario "
+"de ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "Additional Information section of new location creation form."
@@ -33964,17 +34277,20 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
 msgid "To start, enter the following details:"
-msgstr ""
+msgstr "Para comenzar, ingresa los siguientes datos:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
 msgid ":guilabel:`Location Name`: A recognizable name for the location."
 msgstr ""
+":guilabel:`Nombre de la ubicación`: un nombre reconocible para la ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
 msgid ""
 ":guilabel:`Parent Location`: The new location's parent location, if "
 "applicable."
 msgstr ""
+":guilabel:`Ubicación padre`: la ubicación padre de la nueva ubicación, si "
+"corresponde."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
 msgid ""
@@ -33982,6 +34298,10 @@ msgid ""
 "location name, and `Zone A` is the parent location. Both the location and "
 "the parent location are organized hierarchically within `WH/Stock`."
 msgstr ""
+"En la ubicación `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` es el "
+"nombre de la ubicación y `Zone A` es la ubicación padre. Tanto la ubicación "
+"como la ubicación padre están organizadas jerárquicamente dentro de `WH/"
+"Stock`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
 msgid "Additional Information section"
@@ -34001,6 +34321,8 @@ msgid ""
 ":guilabel:`Location Type`: Select the :ref:`location type <inventory/"
 "warehouses_storage/location-type>`."
 msgstr ""
+":guilabel:`Tipo de ubicación`: Selecciona el :ref:`tipo de ubicación "
+"<inventory/warehouses_storage/location-type>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
 msgid ""
@@ -34008,16 +34330,23 @@ msgid ""
 "Categories <../../shipping_receiving/daily_operations/storage_category>` "
 "feature **must** be enabled."
 msgstr ""
+":guilabel:`Categoría de almacenamiento`: selecciona la categoría de "
+"almacenamiento. La función :doc:`Categorías de almacenamiento <../../"
+"shipping_receiving/daily_operations/storage_category>` **debe** estar "
+"habilitada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
 msgid ":guilabel:`Company`: The company of the location."
-msgstr ""
+msgstr ":guilabel:`Compañía`: la compañía de la ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
 msgid ""
 ":guilabel:`Is a Scrap Location?`: Select this checkbox to "
 "allow :doc:`scrapped goods <scrap_inventory>` to be stored in this location."
 msgstr ""
+":guilabel:`¿Es una ubicación de desecho?`: selecciona esta casilla para "
+"permitir que los :doc:`artículos desechados <scrap_inventory>` se almacenen "
+"en esta ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:67
 msgid ""
@@ -34025,6 +34354,10 @@ msgid ""
 "using :doc:`batch transfers <../../shipping_receiving/picking_methods/"
 "batch>`, select this checkbox to allow batches to be loaded at this location."
 msgstr ""
+":guilabel:`Es una ubicación de muelle`: si la aplicación **Flotilla** está "
+"instalada y usas :doc:`traslados por lote <../../shipping_receiving/"
+"picking_methods/batch>`, selecciona esta casilla para permitir que los lotes "
+"se carguen en esta ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
 msgid ""
@@ -34032,6 +34365,9 @@ msgid ""
 "setup/location>` at this location when scanned. The **Barcode** app **must** "
 "be installed."
 msgstr ""
+":guilabel:`Código de barras`: ingresa el código de barras "
+"para :ref:`identificar acciones <barcode/setup/location>` en esta ubicación "
+"al escanearlo. La aplicación **Código de barras** **debe** estar instalada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:72
 msgid ""
@@ -34040,6 +34376,10 @@ msgid ""
 "other :doc:`configured routes <../../shipping_receiving/daily_operations/"
 "use_routes>`."
 msgstr ""
+":guilabel:`Reabastecer ubicación`: selecciona esta casilla para establecer "
+"la ubicación como un destino para recibir productos desde *Comprar*, "
+"*Fabricar* u otras :doc:`rutas configuradas <../../shipping_receiving/"
+"daily_operations/use_routes>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
 msgid "Cyclic Counting section"
@@ -34052,18 +34392,27 @@ msgid ""
 "inventory counts, in days. By default, it is set to `0` (no scheduled "
 "counts)."
 msgstr ""
+"Para programar recuentos de inventario periódicos en esta ubicación, "
+"establece el campo :guilabel:`Frecuencia de inventario` en el intervalo "
+"deseado entre recuentos de inventario, en días. De forma predeterminada, "
+"está establecido en `0` (sin recuentos programados)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
 "The :guilabel:`Last Inventory` field displays the date of the last inventory "
 "count at this location."
 msgstr ""
+"El campo :guilabel:`Último inventario` muestra la fecha del último conteo de "
+"inventario en esta ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ""
 "After specifying an :guilabel:`Inventory Frequency`, the :guilabel:`Next "
 "Expected` field automatically displays the date of the next inventory count."
 msgstr ""
+"Después de especificar una :guilabel:`Frecuencia de inventario`, el "
+"campo :guilabel:`Próximo esperado` muestra automáticamente la fecha del "
+"siguiente recuento de inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
@@ -34071,6 +34420,9 @@ msgid ""
 "the :guilabel:`Last Inventory` count occurred on September 24, and "
 "the :guilabel:`Next Expected` is October 24."
 msgstr ""
+"Con los conteos de inventario programados para realizarse cada `30` días, el "
+"conteo de :guilabel:`Último inventario` se realizó el 24 de septiembre y el "
+"de :guilabel:`Próximo esperado` es el 24 de octubre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
 msgid "Show Cyclic Count section of the locations form."
@@ -34079,7 +34431,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
 msgid ":doc:`Cycle Counts <cycle_counts>`"
-msgstr ""
+msgstr ":doc:`Recuentos cíclicos <cycle_counts>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid "Logistics section"
@@ -34091,26 +34443,30 @@ msgid ""
 "strategy <../../shipping_receiving/removal_strategies>` to specify the order "
 "and priority for picking products from inventory. The options are:"
 msgstr ""
+"De forma opcional, en la sección :guilabel:`Logística`, selecciona "
+"una :doc:`estrategia de salida <../../shipping_receiving/"
+"removal_strategies>` para especificar el orden y la prioridad de recolección "
+"de productos del inventario. Las opciones son:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
 msgid ":guilabel:`First In First Out (FIFO)`"
-msgstr ""
+msgstr ":guilabel:`Primero en entrar, primero en salir (FIFO)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid ":guilabel:`Last In First Out (LIFO)`"
-msgstr ""
+msgstr ":guilabel:`Último en entrar, primero en salir (LIFO)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:107
 msgid ":guilabel:`Closest Location`"
-msgstr ""
+msgstr ":guilabel:`Ubicación más cercana`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
 msgid ":guilabel:`Least Packages`"
-msgstr ""
+msgstr ":guilabel:`Menos paquetes`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
 msgid ":guilabel:`First Expiry First Out (FEFO)`"
-msgstr ""
+msgstr ":guilabel:`Primero en vencer, primero en salir (FEFO)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
 msgid ""
@@ -34118,16 +34474,22 @@ msgid ""
 "the :doc:`Packages feature <../../product_management/configure/package>` is "
 "enabled."
 msgstr ""
+"La opción :guilabel:`Menos paquetes` solo se puede seleccionar si "
+"la :doc:`función Paquetes <../../product_management/configure/package>` está "
+"habilitada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:116
 msgid ""
 "See the :doc:`../../shipping_receiving/removal_strategies` documentation for "
 "details about each option listed in this field."
 msgstr ""
+"Consulta la documentación de :doc:`../../shipping_receiving/"
+"removal_strategies` para conocer los detalles sobre cada opción que aparece "
+"en este campo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
 msgid "Manage additional options at location"
-msgstr ""
+msgstr "Gestionar opciones adicionales en la ubicación"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
 msgid ""
@@ -34136,16 +34498,22 @@ msgid ""
 "to :menuselection:`Inventory app --> Configuration --> Locations` and "
 "selecting the desired location."
 msgstr ""
+"Los usuarios también pueden acceder a listas de productos, existencias "
+"actuales y reglas de almacenamiento por ubicación. Para hacerlo, abre el "
+"formulario de la ubicación al ir a :menuselection:`aplicación Inventario --> "
+"Configuración --> Ubicaciones` y selecciona la ubicación deseada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:126
 msgid ""
 "In the location form, access each of these options by selecting its "
 "corresponding smart button."
 msgstr ""
+"En el formulario de la ubicación, accede a cada una de estas opciones "
+"seleccionando su botón inteligente correspondiente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:131
 msgid "View current stock"
-msgstr ""
+msgstr "Ver existencias actuales"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
 msgid ""
@@ -34153,6 +34521,10 @@ msgid ""
 "cubes` :guilabel:`Current Stock` smart button. This opens a list of all "
 "products at the location, including their :guilabel:`On Hand` quantities."
 msgstr ""
+"Para ver las existencias actuales en la ubicación, haz clic en el botón "
+"inteligente :icon:`fa-cubes` :guilabel:`Stock actual`. Esto abre una lista "
+"de todos los productos en la ubicación, incluyendo sus "
+"cantidades :guilabel:`A la mano`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:137
 msgid ""
@@ -34160,14 +34532,17 @@ msgid ""
 "Additional :doc:`filters and grouping <../../../../essentials/search>` "
 "options can be applied via the search bar."
 msgstr ""
+"De forma predeterminada, la información de las existencias actuales se "
+"agrupa por producto. Puedes aplicar opciones adicionales de :doc:`filtros y "
+"agrupaciones <../../../../essentials/search>` mediante la barra de búsqueda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:None
 msgid "Show stock at Shelf 2."
-msgstr ""
+msgstr "Mostrar las existencias en el estante 2."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:146
 msgid "View products"
-msgstr ""
+msgstr "Ver productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:148
 msgid ""
@@ -34176,10 +34551,15 @@ msgid ""
 "all available products or products with outstanding demand. Additional "
 "filters and grouping options can be applied via the search bar."
 msgstr ""
+"Para ver todos los productos de la ubicación, haz clic en el botón "
+"inteligente :icon:`fa-th-list` :guilabel:`Productos`. De forma "
+"predeterminada, esto abre una lista de todos los productos disponibles o con "
+"demanda pendiente. Puedes aplicar filtros y opciones de agrupación "
+"adicionales mediante la barra de búsqueda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:155
 msgid "View putaway rules"
-msgstr ""
+msgstr "Ver reglas de almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:157
 msgid ""
@@ -34188,6 +34568,11 @@ msgid ""
 "Rules <../../shipping_receiving/daily_operations/putaway>` page, where users "
 "can view, edit, or create additional rules."
 msgstr ""
+"Para ver todas las reglas de almacenamiento de la ubicación, haz clic en el "
+"botón inteligente :icon:`fa-random` :guilabel:`Reglas de almacenamiento`. "
+"Esto abre la página :doc:`Reglas de almacenamiento <../../shipping_receiving/"
+"daily_operations/putaway>`, donde puedes ver, editar o crear reglas "
+"adicionales."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
@@ -54444,10 +54829,12 @@ msgid ""
 "Additionally, the following rules are applied to the suggested "
 "`Replenishment` quantity above if minimum/maximum limits are set:"
 msgstr ""
+"Además, se aplican las siguientes reglas a la cantidad sugerida de "
+"`Reabastecimiento` anterior si se establecen límites mínimos y máximos:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:213
 msgid "If ``Replenishment > Maximum to Replenish``, it remains at the maximum."
-msgstr ""
+msgstr "Si ``Replenishment > Maximum to Replenish``, permanece en el máximo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:214
 msgid ""
@@ -54455,6 +54842,10 @@ msgid ""
 "minimum quantity. If ``Replenishment ≤ 0``, it defaults to `0`. However, if "
 "the suggestion already meets or exceeds the minimum, it remains as-is."
 msgstr ""
+"Si ``0 < Replenishment < Minimum to Replenish``, la sugerencia es la "
+"cantidad mínima. Si ``Replenishment ≤ 0``, el valor predeterminado es `0`. "
+"Sin embargo, si la sugerencia ya alcanza o supera el mínimo, permanece como "
+"está."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:219
 msgid ""
@@ -54462,18 +54853,21 @@ msgid ""
 "and a forecasted demand of `75` units. The following replenishment options "
 "are set:"
 msgstr ""
+"Un producto *Silla* tiene un stock inicial de `60` unidades para el periodo "
+"actual y una demanda pronosticada de `75` unidades. Se configuran las "
+"siguientes opciones de reabastecimiento:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
 msgid ":guilabel:`Safety Stock Target`: `10` units"
-msgstr ""
+msgstr ":guilabel:`Objetivo de existencias de seguridad`: `10` unidades"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:223
 msgid ":guilabel:`Minimum to Replenish`: `5` units"
-msgstr ""
+msgstr ":guilabel:`Mínimo a reabastecer`: `5` unidades"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
 msgid ":guilabel:`Maximum to Replenish`: `20` units"
-msgstr ""
+msgstr ":guilabel:`Máximo a reabastecer`: `20` unidades"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:226
 msgid ""
@@ -54481,6 +54875,10 @@ msgid ""
 "`25` units of the *Chair*, it exceeds the configured maximum of `20` units. "
 "Therefore the final suggested replenishment quantity is `20`."
 msgstr ""
+"Aunque la cantidad sugerida de reabastecimiento predeterminada (``10 - 60 + "
+"75``) es de `25` unidades de la *Silla*, supera el máximo configurado de "
+"`20` unidades. Por lo tanto, la cantidad final sugerida de reabastecimiento "
+"es `20`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Specify replenishment trigger"

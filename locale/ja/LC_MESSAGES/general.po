@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-10-23 10:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 04:33+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
 "general/ja/>\n"
 "Language: ja\n"
@@ -549,6 +549,13 @@ msgid ""
 "inventory_and_mrp/inventory/warehouses_storage/inventory_management/"
 "use_locations>`."
 msgstr ""
+"親会社から継承される\\ :ref:`会計 <accounting/branches>`\\ 設定を除き、すべて"
+"の設定はブランチごとに個別に設定する必要があります。これにより、\\ "
+":doc:`ロイヤリティプログラム <../sales/point_of_sale/pricing/loyalty>`、\\ "
+":doc:`価格表 <../sales/point_of_sale/pricing/pricelists>`、\\ :doc:`在庫"
+"ロケーション <../inventory_and_mrp/inventory/warehouses_storage/"
+"inventory_management/use_locations>`\\ など、ブランチ固有の設定が可能になりま"
+"す。"
 
 #: ../../content/applications/general/companies.rst:145
 #: ../../content/applications/general/companies/multi_company.rst:66
@@ -2026,6 +2033,10 @@ msgid ""
 "information <general/companies/company>` or select an existing company to "
 "edit it."
 msgstr ""
+"設定アプリを開き、\\ :guilabel:`会社`\\ セクションに移動して、:icon:`oi-"
+"arrow-right` \\ :guilabel:`会社を管理`\\ をクリックします。次に、\\ "
+":guilabel:`新規`\\ をクリックして\\ :ref:`フォームに会社情報を入力 <general/"
+"companies/company>`\\ するか、既存の会社を選択して編集します。"
 
 #: ../../content/applications/general/companies/multi_company.rst:45
 msgid "To archive a company, follow these steps:"
@@ -2141,13 +2152,15 @@ msgstr ""
 
 #: ../../content/applications/general/companies/multi_company.rst:98
 msgid "either leave the field blank to make it accessible to all companies;"
-msgstr ""
+msgstr "すべての会社からアクセスできるようにフィールドを空白のままにするか、"
 
 #: ../../content/applications/general/companies/multi_company.rst:99
 msgid ""
 "or select the company to make it visible to users logged in to that specific "
 "company."
 msgstr ""
+"または特定の会社を選択して、その会社にログインしているユーザにのみ表示される"
+"ようにします。"
 
 #: ../../content/applications/general/companies/multi_company.rst:101
 msgid ""
@@ -2185,6 +2198,10 @@ msgid ""
 "documents for orders and invoices can be automatically generated and "
 "synchronized."
 msgstr ""
+"\\ :guilabel:`会社間取引`\\ 機能を使用すると、データベース内の1つの会社が同じ"
+"データベース内の別の会社から商品やサービスを販売または購買できるようになりま"
+"す。設定に応じて、オーダや請求書の相対ドキュメントが自動的に生成され、同期さ"
+"れます。"
 
 #: ../../content/applications/general/companies/multi_company.rst:120
 msgid ""
@@ -2207,6 +2224,11 @@ msgid ""
 "enable :guilabel:`Inter-Company Transactions`, and :guilabel:`Save`. Then, "
 "select the option(s) to create a counterpart for the selected company:"
 msgstr ""
+"会社間取引を有効にするには、\\ :ref:`会社セレクタ <general/multi-company/"
+"company-selector>`\\ で該当する会社を選択し、設定アプリを開いて\\ "
+":guilabel:`会社`\\ セクションに移動し、\\ :guilabel:`会社間取引`\\ を有効にし"
+"て\\ :guilabel:`保存`\\ します。次に、選択した会社の相対ドキュメントを作成す"
+"るオプションを選択します:"
 
 #: ../../content/applications/general/companies/multi_company.rst:130
 msgid ""
@@ -2214,6 +2236,9 @@ msgid ""
 "company confirms an invoice/credit note for the selected company. To "
 "generate a validated bill/refund, select :guilabel:`Create and validate`."
 msgstr ""
+":guilabel:`仕入先請求書および返金を生成`：会社が選択した会社に対する請求書/"
+"クレジットノートを確認したときに、仕入先請求書/返金を生成します。確定済の仕入"
+"先請求書/返金を生成するには、\\ :guilabel:`作成して確定`\\ を選択します。"
 
 #: ../../content/applications/general/companies/multi_company.rst:133
 msgid ""
@@ -2222,6 +2247,9 @@ msgid ""
 "a validated sales order instead of a quotation, select :guilabel:`Create and "
 "validate`."
 msgstr ""
+":guilabel:`販売オーダを生成`：選択した会社に対して販売オーダが確定されたとき"
+"に、見積書(ドラフト販売オーダ)を生成します。見積書の代わりに確定済の販売"
+"オーダを生成するには、\\ :guilabel:`作成して確定`\\ を選択します。"
 
 #: ../../content/applications/general/companies/multi_company.rst:136
 msgid ""
@@ -2231,12 +2259,18 @@ msgid ""
 "the selected company. To generate a validated purchase order instead of a "
 "request for quotation, select :guilabel:`Create and validate`."
 msgstr ""
+":guilabel:`購買オーダを生成`：選択した会社に対して購買オーダが確定されたとき"
+"に、\\ :guilabel:`倉庫を使用`\\ フィールドで選択された会社の倉庫を使用して見"
+"積依頼(ドラフト購買オーダ)を生成します。見積依頼の代わりに確定済の購買オーダ"
+"を生成するには、\\ :guilabel:`作成して確定`\\ を選択します。"
 
 #: ../../content/applications/general/companies/multi_company.rst:142
 msgid ""
 "For inter-company transactions, the :ref:`products must be shared <general/"
 "multi-company/shared-and-unshared-records>` among the involved companies."
 msgstr ""
+"会社間取引では、関連する会社間で\\ :ref:`プロダクトを共有する必要があります "
+"<general/multi-company/shared-and-unshared-records>`。"
 
 #: ../../content/applications/general/companies/multi_company.rst:146
 msgid ""
@@ -2244,6 +2278,9 @@ msgid ""
 "for :guilabel:`Customer` `JS Store US` is posted on `JS Store Belgium`, a "
 "vendor bill is automatically created in `JS Store US`."
 msgstr ""
+":guilabel:`仕入先請求書および返金を生成`：\\ :guilabel:`顧客`\\ `JS Store "
+"US` 向けの請求書が `JS Store Belgium` で記帳されると、仕入先請求書が `JS "
+"Store US` に自動的に作成されます。"
 
 #: ../../content/applications/general/companies/multi_company.rst:149
 msgid ""
@@ -2252,6 +2289,10 @@ msgid ""
 "purchase order on `JS Store US` is automatically created (and confirmed if "
 "the :guilabel:`Create and validate` option is selected)."
 msgstr ""
+":guilabel:`販売オーダを生成`：\\ :guilabel:`顧客`\\ `JS Store US` 向けの販売"
+"オーダが `JS Store Belgium` で確定されると、`JS Store US` に購買オーダが自動"
+"的に作成されます(\\ :guilabel:`作成して確定`\\ オプションが選択されている場合"
+"は確定もされます)。"
 
 #: ../../content/applications/general/companies/multi_company.rst:154
 msgid ":doc:`Multi-company Guidelines <../../../developer/howtos/company>`"
@@ -11340,7 +11381,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/devices/printer.rst:456
 msgid "The printer appears multiple times"
-msgstr ""
+msgstr "プリンタが複数表示される"
 
 #: ../../content/applications/general/iot/devices/printer.rst:458
 msgid ""
@@ -11351,14 +11392,20 @@ msgid ""
 "feature. This feature allows to list all detected printers together with all "
 "available drivers, creating one entry for each printer–driver pair."
 msgstr ""
+"プリンタが\\ :ref:`IoT Boxの <iot/iot-box/homepage>`\\ または\\ :ref:`Windows"
+"仮想IoTの <iot/windows-iot/homepage>`\\ ホームページ、および/または\\ "
+":guilabel:`デバイス`\\ 一覧(\\ :ref:`IoTシステムフォーム <iot/connect/IoT-"
+"form>`\\ 上)に複数表示される場合、通常はCUPS自動検出機能が原因です。この機能"
+"により、検出されたすべてのプリンタが利用可能なすべてのドライバとともに一覧表"
+"示され、プリンタとドライバのペアごとに1つのエントリが作成されます。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:464
 msgid "Simply select the entry that works best and ignore the others."
-msgstr ""
+msgstr "最も適切に動作するエントリを選択し、他のエントリは無視してください。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:467
 msgid "Workarounds exist to disable the CUPS auto-discovery feature."
-msgstr ""
+msgstr "CUPS自動検出機能を無効にする回避策があります。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:470
 msgid "Barcode scanner issues"
@@ -11495,6 +11542,8 @@ msgid ""
 "Once the scale is connected to the IoT system, :ref:`configure it in the POS "
 "settings <pos/scale>`."
 msgstr ""
+"スケールをIoTシステムに接続したら、\\ :ref:`POS設定で設定 <pos/scale>`\\ しま"
+"す。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:25
 msgid ""
@@ -12838,6 +12887,9 @@ msgid ""
 "**Community** edition of Odoo for Windows **matching your database's "
 "version**."
 msgstr ""
+"`Odooのダウンロードページ <https://odoo.com/download>`_ にアクセスし、**お使"
+"いのデータベースのバージョンと一致する** Windows用Odoo **Community** "
+"エディションをダウンロードします。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:44
 msgid ""
