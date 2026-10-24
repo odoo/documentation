@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 17:31+0000\n"
+"POT-Creation-Date: 2026-10-23 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6011,7 +6011,6 @@ msgid "Enable direct browser communication with local hardware, like ePOS printe
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:22
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:3
 msgid "IoT system connection"
 msgstr ""
 
@@ -6039,7 +6038,6 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:3
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
 #: ../../content/applications/sales/point_of_sale/products.rst:225
 msgid "Customer display"
 msgstr ""
@@ -6049,7 +6047,6 @@ msgid "Set up a secondary screen to show order details and prices to customers d
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:44
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:29
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:3
 msgid "Scale"
 msgstr ""
@@ -6551,19 +6548,23 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:55
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:137
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:153
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:81
 msgid "Open the browser, type the printer's IP address in the search bar (e.g., `https://192.168.1.25`), and press `Enter`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:57
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:139
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:83
 msgid "On the security warning page, click :guilabel:`Advanced`, then :guilabel:`Proceed to [IP address] (unsafe)` to force the connection."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:59
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:85
 msgid "On the EPSON platform, click :guilabel:`Advanced Settings`, then :guilabel:`Administrator Login` to log in to the printer's homepage."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:61
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:87
 msgid "Type the initial password located at the back of the printer in the :guilabel:`Current Password` field, then press `Enter`."
 msgstr ""
 
@@ -6909,96 +6910,89 @@ msgstr ""
 msgid "To confirm the printer's connection is secure, connect to its IP address using HTTPS. For example, navigate to `https://192.168.1.25` in a browser. If the self-signed certificate has been applied correctly, no warning page appears, and the address bar should display a padlock icon, indicating a secure connection."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:3
+msgid "IoT connection"
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:5
-msgid "To connect the POS with an :doc:`IoT system </applications/general/iot>`:"
+msgid "Physical devices, such as :doc:`printers <receipt_printers>`, :doc:`scales <scale>`, :doc:`payment terminals <../payment_methods/terminals>`, :doc:`customer displays <customer_display>`, and/or the :ref:`Belgian blackbox <belgium/fdm>`, that cannot be connected to an Odoo database directly using the device’s IP address can be connected using an IoT gateway. As well as serving as a bridge between the device and the point of sale, the IoT gateway also manages SSL/TLS security certificates."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:7
-msgid "Make sure both the Point of Sale and Internet of Things (IoT) apps are installed on your database."
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:13
+msgid "For optimal reliability, use a :doc:`physical IoT gateway </applications/general/iot/iot_box>` instead of a :doc:`virtual one </applications/general/iot/windows_iot>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:9
-msgid "Set up the :doc:`/applications/general/iot/iot_box` or :doc:`/applications/general/iot/windows_iot`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:11
-msgid "Connect the peripheral devices to the IoT system:"
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:15
+msgid "For maximum network stability, use an Ethernet connection instead of a Wi-Fi connection. Enable :doc:`pos_lna` to allow Odoo to communicate with the IoT gateway on the local network."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:17
-msgid "Device"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:18
-msgid "Instructions"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:19
-msgid "Printer"
+msgid ":doc:`Ingenico <../payment_methods/terminals/ingenico>` terminals require an IoT connection and must be connected to their own IoT gateway."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:20
-msgid "Connect a supported receipt printer to a :abbr:`USB (Universal Serial Bus)` port or to the network, and power it on. Refer to :ref:`Order printing <pos/restaurant/orders-printing>`."
+msgid "To set up an IoT connection between the physical devices and the point of sale, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:22
+msgid "Download the Odoo IoT app."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:23
-msgid "Cash drawer"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:24
-msgid "The cash drawer should be connected to the printer with an RJ25 cable."
+msgid "Set up the :ref:`Odoo IoT Box <iot/iot_box/network>` or :ref:`Windows virtual IoT <iot/windows-iot/installation>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:25
-msgid "Barcode scanner"
+msgid "Connect the desired device(s) to the IoT gateway:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:26
-msgid "The barcode scanner must end barcodes with an `ENTER` character (keycode 28) in order for the barcode scanner to be compatible. This is most likely the barcode scanner's default configuration."
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:27
+msgid ":ref:`Belgian blackbox <belgium/fdm>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:28
+msgid ":doc:`Printer <receipt_printers>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:29
+msgid ":doc:`Scale <scale>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:30
-msgid ":doc:`Connect the scale and power it on <scale>`."
+msgid ":doc:`Customer display <customer_display>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:32
-msgid ":doc:`Connect a screen <customer_display>` to the :abbr:`IoT (Internet of Things)` box to display the :abbr:`PoS (Point of Sale)` order."
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
+msgid ":doc:`Ingenico terminal <../payment_methods/terminals/ingenico>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:34
-msgid "Payment terminal"
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:33
+msgid "Open the IoT app and click :guilabel:`Connect` to :ref:`connect the IoT gateway to your Odoo database <iot/connect/connection>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:35
-msgid "The connection process depends on the terminal. Refer to the :doc:`payment terminals documentation </applications/sales/point_of_sale/payment_methods>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:38
-msgid ":doc:`Connect the IoT system to your Odoo database </applications/general/iot/connect>`."
+msgid "In the :guilabel:`Connect to a Point of Sale` popover, set the :guilabel:`Associated POS` field to the relevant point of sale, then click :guilabel:`Continue`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:39
-msgid "In the :guilabel:`Connect to a Point of Sale` popup that opens, select the :guilabel:`Associated POS` and click :guilabel:`Continue`. The IoT system and its devices are automatically linked to the POS."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:44
-msgid "Alternatively, :ref:`access the POS settings <pos/use/settings>` and select the POS, or click the vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Then, enable :guilabel:`IoT Box`, select the devices to use with the POS, and click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:50
-msgid "`List of supported hardware <https://www.odoo.com/page/point-of-sale-hardware>`_."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:51
-msgid ":doc:`IoT documentation </applications/general/iot>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:56
-msgid "Setup example"
+msgid "Selecting the point of sale in the :guilabel:`Associated POS` field enables the :guilabel:`IoT Box` setting in the :ref:`POS settings <pos/use/settings>`. The connected device(s) need to be added individually."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:None
-msgid "A suggested configuration for a point of sale system."
+msgid "A suggested configuration for a point of sale gateway."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:47
+msgid ":doc:`/applications/general/iot`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:48
+msgid "`Fundamentals of the IoT (video) <https://www.youtube.com/watch?v=XKuDb685LIQ>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:49
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:48
+msgid ":doc:`pos_lna`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:7
@@ -7123,11 +7117,11 @@ msgid "Network-based printers that support the ePOS communication protocol (with
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:14
-msgid "ePOS printers with USB connectivity that need to be connected to an :doc:`IoT system </applications/general/iot/connect>`."
+msgid "ePOS printers with USB connectivity that require an :doc:`IoT connection </applications/general/iot/connect>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:16
-msgid "ESC/POS printers that require a connection via an :doc:`IoT system </applications/general/iot/connect>` using either a USB or network-based interface."
+msgid "ESC/POS printers that require an :doc:`IoT connection </applications/general/iot/connect>` using either a USB or network-based interface."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:19
@@ -7158,141 +7152,161 @@ msgstr ""
 msgid "Type the printer's IP address in the dedicated field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:43
-msgid "Enable :doc:`pos_lna` to allow Point of Sale to communicate directly with the printer on the same network. Alternatively, once the printer is connected to Odoo, ensure the connection is secure and reliable by generating a :ref:`self-signed certificate <pos/epos-ssc/certificate>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:48
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:44
 msgid "Leave the IP address field empty if using an :ref:`iMin POS device <pos/epos-printers/imin-printer>`, as these devices do not provide an IP address."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:52
-msgid ":doc:`pos_lna`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:53
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:49
 msgid ":doc:`epos_ssc`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:54
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:50
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:346
 msgid ":doc:`/applications/general/iot/devices/printer`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:59
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:55
 msgid "Directly supported ePOS printers"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:61
-msgid "The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are strongly recommended, as they have been fully tested with Odoo Point of Sale."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:57
+msgid "The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are recommended, as they are integrated with Odoo Point of Sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:64
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:60
 msgid "Other Wi-Fi or Ethernet Epson printer models that support the **ePoS protocol** should also be compatible."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:68
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:63
+msgid "It is also recommended to activate :doc:`pos_lna` instead of generating a :ref:`self-signed certificate <pos/epos-ssc/certificate>` to allow the communication between the point of sale and the printer."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:67
 msgid "The printer must be capable of operating in HTTP mode."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:69
-msgid "When using :doc:`Local Network Access (LNA) <pos_lna>`, the printer must have a **static IP address**; otherwise, it may become unreachable. The static IP should be configured through the router."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:68
+msgid "When using LNA:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:76
-msgid "iMin POS systems"
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:70
+msgid "the printer must have a **static IP address**; otherwise, it may become unreachable. The static IP should be configured through the router."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:78
-msgid "`iMin POS devices <https://www.imin.com/products/#desktop>`_ are Android-based systems that combine POS management and printing functionality."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:72
+msgid "certain settings of Epson printers :ref:`must be disabled <pos/epos-printers/lna-epson>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:82
-msgid "Odoo is compatible with `Swan 2 <https://www.imin.com/product/swan-2/>`_ and `Falcon 2 <https://www.imin.com/product/falcon-2/>`_ POS devices, which can be purchased from `iMin business partners <https://www.imin.com/contact-us/>`_."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:77
+msgid "Epson printer setup with LNA"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:85
-msgid "`Falcon 2 <https://www.imin.com/product/falcon-2/>`_ devices require the base device to be connected to the dock before printing receipts."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:79
+msgid "Before activating :doc:`pos_lna` when configuring an Epson printer, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:87
-msgid "iMin POS devices are network-based and do not require an IoT system to operate."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:89
+msgid "Go to :menuselection:`Print --> Secure Printing` and tick the :guilabel:`Disable` option."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:90
-msgid "Do not use iMin POS devices to :ref:`print preparation orders <pos/restaurant/orders-printing>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:92
-msgid "To configure an iMin POS device, connect it to a network via Ethernet or WI-Fi, then follow the next steps:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:95
-msgid "Install the latest iMinOS version."
+msgid "Go to :menuselection:`Network Security --> SSL/TLS --> Basic` and tick the :guilabel:`Disable` option."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:96
-msgid "Download and install the Odoo and Android System WebView apps from iMin's App Store."
+msgid "iMin POS systems"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:97
-msgid "Optionally, install a security certificate if any connected devices require HTTPS, such as :doc:`payment terminals <../payment_methods/terminals>` or :ref:`preparation printers <pos/restaurant/orders-printing>`. To do so, go to :menuselection:`Settings --> Security --> More security settings --> Encryption & credentials`, then click :guilabel:`Install a certificate`."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:98
+msgid "`iMin POS devices <https://www.imin.com/products/#desktop>`_ are Android-based systems that combine POS management and printing functionality."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:102
-msgid "Once the device is set up, :ref:`install <general/install>` the :guilabel:`POS iMin` module and :ref:`connect the device to your Odoo database<pos/epos-printers/configuration>`, leaving the IP address field empty. This action automatically links the device with Odoo."
+msgid "Odoo is compatible with `Swan 2 <https://www.imin.com/product/swan-2/>`_ and `Falcon 2 <https://www.imin.com/product/falcon-2/>`_ POS devices, which can be purchased from `iMin business partners <https://www.imin.com/contact-us/>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:105
+msgid "`Falcon 2 <https://www.imin.com/product/falcon-2/>`_ devices require the base device to be connected to the dock before printing receipts."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:107
-msgid "To ensure the device's printer works correctly, access the :guilabel:`TestTools` app on the device interface. A test ticket is automatically printed. If not, click :guilabel:`Print`."
+msgid "iMin POS devices are network-based and do not require an IoT system to operate."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:111
-msgid "`iMin device troubleshooting guide <https://oss-sg.imin.sg/docs/demo/Troubleshooting%20Guide%20for%20iMin%20Device(Eng).pdf>`_"
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:110
+msgid "Do not use iMin POS devices to :ref:`print preparation orders <pos/restaurant/orders-printing>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:112
+msgid "To configure an iMin POS device, connect it to a network via Ethernet or WI-Fi, then follow the next steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:115
+msgid "Install the latest iMinOS version."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:116
+msgid "Download and install the Odoo and Android System WebView apps from iMin's App Store."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:117
-msgid "Printers with IoT system integration"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:119
-msgid "The following printers require an :doc:`IoT system </applications/general/iot/devices/printer>` to be compatible with Odoo:"
+msgid "Optionally, install a security certificate if any connected devices require HTTPS, such as :doc:`payment terminals <../payment_methods/terminals>` or :ref:`preparation printers <pos/restaurant/orders-printing>`. To do so, go to :menuselection:`Settings --> Security --> More security settings --> Encryption & credentials`, then click :guilabel:`Install a certificate`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:122
+msgid "Once the device is set up, :ref:`install <general/install>` the :guilabel:`POS iMin` module and :ref:`connect the device to your Odoo database<pos/epos-printers/configuration>`, leaving the IP address field empty. This action automatically links the device with Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:127
+msgid "To ensure the device's printer works correctly, access the :guilabel:`TestTools` app on the device interface. A test ticket is automatically printed. If not, click :guilabel:`Print`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:131
+msgid "`iMin device troubleshooting guide <https://oss-sg.imin.sg/docs/demo/Troubleshooting%20Guide%20for%20iMin%20Device(Eng).pdf>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:137
+msgid "IoT-connected printers"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:139
+msgid "The following printers require an :doc:`IoT connection </applications/general/iot/devices/printer>` to be compatible with Odoo:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:142
 msgid "Epson TM-T20 family (incompatible ePOS software)"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:123
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:143
 msgid "Epson TM-T88 family (incompatible ePOS software)"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:128
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:148
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:130
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:150
 msgid "To resolve common hardware issues, including connectivity failures, configuration errors, and physical maintenance, follow the instructions below:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:133
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:153
 msgid "If Google Chrome denies access to local devices, printers and IoT boxes will fail to connect. :ref:`Grant the necessary browser permissions <pos/lna/browser-permission>` to restore the connection."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:136
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:156
 msgid "Check the printer's blinking lights to help identify the source of a problem."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:137
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:157
 msgid "If the printer does not print the first automatic ticket with the IP address, check the network cable or Wi-Fi connection."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:139
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:159
 msgid "If the receipt comes out blank, the paper roll may be upside down; try flipping it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:140
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:160
 msgid "If the POS cannot connect to the printer, make sure the printer's IP address entered in Odoo matches the one on the first automatically printed ticket. Also, ensure the router assigns the printer a static IP address."
 msgstr ""
 
@@ -7325,7 +7339,7 @@ msgid "Connect the :doc:`scale to the IoT system </applications/general/iot/devi
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:29
-msgid "Connect the :ref:`IoT system to Odoo <iot/iot-odoo/connection>`."
+msgid "Connect the :ref:`IoT system to Odoo <iot/connect/connection>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:30
@@ -7341,7 +7355,7 @@ msgid "If the scale is not recognized by the IoT system, restart it or :ref:`rec
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:41
-msgid "Alternatively, to connect the IoT system to the POS after it is :ref:`connected to the database <iot/iot-odoo/connection>`, go to the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`Connected Devices` section, and enable the :guilabel:`IoT Box` setting."
+msgid "Alternatively, to connect the IoT system to the POS after it is :ref:`connected to the database <iot/connect/connection>`, go to the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`Connected Devices` section, and enable the :guilabel:`IoT Box` setting."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:44
@@ -12186,12 +12200,12 @@ msgid "Assign a dedicated :doc:`cash payment method and a cash journal <../point
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:72
-#: ../../content/applications/sales/point_of_sale/use.rst:531
+#: ../../content/applications/sales/point_of_sale/use.rst:533
 msgid ":doc:`shop`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:73
-#: ../../content/applications/sales/point_of_sale/use.rst:532
+#: ../../content/applications/sales/point_of_sale/use.rst:534
 msgid ":doc:`restaurant`"
 msgstr ""
 
@@ -12759,79 +12773,79 @@ msgstr ""
 msgid "Once configured, if a discrepancy exceeds this limit, the pop-up window displays the authorized threshold and instructs the user to contact a manager to approve the closing."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:470
+#: ../../content/applications/sales/point_of_sale/use.rst:472
 msgid "Offline POS"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:472
+#: ../../content/applications/sales/point_of_sale/use.rst:474
 msgid "During an internet outage, the POS switches to *offline mode*. This mode keeps order creation and management functional even when backend-dependent features are unavailable. When a :ref:`POS session starts <pos/use/open-register>`, essential data, such as products and customers, is loaded into the browser cache so that the data remains accessible offline. Orders created offline are stored in the browser cache and synced to the backend when the connection is restored."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:479
+#: ../../content/applications/sales/point_of_sale/use.rst:481
 msgid "To avoid losing any data created while offline, do not close or reload the browser, and do not clear the browser cache until the POS is back online and synced with the backend."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:483
+#: ../../content/applications/sales/point_of_sale/use.rst:485
 msgid "The POS offline mode refers only to Point of Sale-specific functionality. A separate :doc:`offline mode <../../general/offline_mode>` feature covers the rest of Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:486
+#: ../../content/applications/sales/point_of_sale/use.rst:488
 msgid "Many POS features rely on backend information and, therefore, are not available offline. These features include:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:489
+#: ../../content/applications/sales/point_of_sale/use.rst:491
 msgid ":doc:`Generating invoices <use/pos_invoices>`: Invoices requested while offline are generated automatically after the connection is restored."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:491
+#: ../../content/applications/sales/point_of_sale/use.rst:493
 msgid ":ref:`Registering customers <pos/use/customers>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:492
+#: ../../content/applications/sales/point_of_sale/use.rst:494
 msgid ":ref:`Accessing detailed product information <pos/products/information-display>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:493
+#: ../../content/applications/sales/point_of_sale/use.rst:495
 msgid ":ref:`Synchronizing stock in real time <pos/products/stock-management>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:494
+#: ../../content/applications/sales/point_of_sale/use.rst:496
 msgid ":ref:`Using payment terminals <pos/terminals/terminal-use>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:495
+#: ../../content/applications/sales/point_of_sale/use.rst:497
 msgid "Loading data on demand"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:497
+#: ../../content/applications/sales/point_of_sale/use.rst:499
 msgid "Devices connected to the :doc:`local network <hardware_network/pos_lna>`, such as :doc:`printers <hardware_network/receipt_printers>` and :doc:`scales <hardware_network/scale>`, continue to work offline, as long as no changes are made to the local network. Connected payment terminals rely on an active internet connection and do not work offline."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:503
+#: ../../content/applications/sales/point_of_sale/use.rst:505
 msgid "The :icon:`fa-chain-broken` (:guilabel:`offline mode`) icon appears in the POS interface header when the system is offline."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:505
+#: ../../content/applications/sales/point_of_sale/use.rst:507
 msgid "If a feature is not available offline, a popover with the message :guilabel:`Connection Lost` appears. To use the offline POS without that feature, click :guilabel:`Continue with limited functionality`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:510
+#: ../../content/applications/sales/point_of_sale/use.rst:512
 msgid "Cached data"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:512
+#: ../../content/applications/sales/point_of_sale/use.rst:514
 msgid "Each time a customer or product is used in the POS, new data is added to the browser cache, along with the data loaded at the beginning of a session. If frequent internet outages occur, increasing the amount of data loaded into the POS at the start of the session can ensure that when the POS goes offline, all necessary data remains available. To do so, activate :ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings --> Technical --> System Parameters` and adapt the :guilabel:`Value` of the following system parameters:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:519
+#: ../../content/applications/sales/point_of_sale/use.rst:521
 msgid ":guilabel:`point_of_sale.limited_customer_count`: Number of :ref:`customers <pos/use/customers>` loaded into the POS. Customers with the highest order counts are loaded first, up to the specified value."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:522
+#: ../../content/applications/sales/point_of_sale/use.rst:524
 msgid ":guilabel:`point_of_sale.limited_product_count`: Number of :doc:`products <products>` loaded into the POS. Favorite products are loaded first, followed by services, then by the most recently updated products, up to the specified value."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use.rst:527
+#: ../../content/applications/sales/point_of_sale/use.rst:529
 msgid "Increasing the amount of data initialized in the POS also increases the time required to open the register."
 msgstr ""
 
@@ -15194,7 +15208,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/lazada_connector/features.rst:71
 #: ../../content/applications/sales/sales/lazada_connector/setup.rst:161
 #: ../../content/applications/sales/sales/shopee_connector/features.rst:65
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:232
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:236
 #: ../../content/applications/sales/sales/shopify_connector/fulfillment.rst:432
 #: ../../content/applications/sales/sales/shopify_connector/setup.rst:208
 #: ../../content/applications/sales/sales/tiktok_connector/features.rst:85
@@ -15558,7 +15572,7 @@ msgid "To modify default products, activate the :ref:`developer mode <developer-
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:110
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:178
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:182
 msgid "Product tax configuration"
 msgstr ""
 
@@ -15575,7 +15589,7 @@ msgid "As Amazon does not necessarily apply the same taxes as those configured i
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:126
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:195
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:199
 msgid "Add a new marketplace"
 msgstr ""
 
@@ -22239,287 +22253,291 @@ msgid "**Filtering Shopee sales on the dashboard:** Once sales teams are assigne
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:198
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:231
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:235
 msgid ":doc:`Shopee supported features and marketplaces <../shopee_connector>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:3
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:1
+msgid "Configure the Odoo Shopee Connector, from the required Shopee Seller and Shopee Open accounts to authorizing Odoo access, registering the account, and creating the Shopee shop. The page also covers how synchronized Shopee orders and product taxes are handled in Odoo, and how to add new marketplaces that synchronize automatically."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:10
 msgid "Shopee Connector configuration"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:5
-msgid "Odoo allows users to synchronize with Shopee Seller account in the database, but users **must** have a registered **Shopee Seller account** and a **Shopee Open account** prior to completing the configuration."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:12
+msgid "Odoo allows users to synchronize with a Shopee Seller account in the database, but users **must** have a registered **Shopee Seller account** and a **Shopee Open account** prior to completing the configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:9
-msgid "Set up an Open Shopee account by first going to the `Shopee Open Platform <https://open.shopee.com/>`_, and click the :guilabel:`Get Access (Now)` button located in the middle of the page."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:16
+msgid "Set up an Open Shopee account by first going to the `Shopee Open Platform <https://open.shopee.com/>`_ and click the :guilabel:`Get Access (Now)` button located in the middle of the page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:13
-msgid "Use the `Open Shopee Developer Guide <https://open.shopee.com/developer-guide/12>`_, and follow the registration process. Once all done, proceed to follow the instructions below to register and link the Open Shopee account in Odoo."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:20
+msgid "Use the `Open Shopee Developer Guide <https://open.shopee.com/developer-guide/12>`_, and follow the registration process. Once everything done, proceed to follow the instructions below to register and link the Open Shopee account in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:18
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:25
 msgid "Shopee Open Platform access and seller account requirements are **regionally specific**. This means the rules, qualifications, and processes differ from country to country. Before proceeding with Odoo's Shopee Connector setup, verify the requirements for *your* specific Shopee region."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:22
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:29
 msgid "**Key Considerations:**"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:24
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:31
 msgid "**Shopee Seller Status & Business Type:** You must have an active Shopee seller account (Individual or Registered Business). Your eligibility depends on your region and business registration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:27
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:34
 msgid "**Order Volume/Seller Tier (If Applicable):** Many regions require a minimum number of orders within a specific time frame or a certain seller tier (e.g., Mall, Preferred, Managed) to access the Open Platform."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:31
-msgid "**Action Required:**"
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:38
+msgid "**Actions Required:**"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:33
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:40
 msgid "Identify your Shopee region."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:34
-msgid "Locate the official Shopee documentation for your region. `Open Shopee Developer Guide <https://open.shopee.com/developer-guide/12>`_"
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:41
+msgid "Locate the official Shopee documentation for your region. `Open the Shopee Developer Guide <https://open.shopee.com/developer-guide/12>`_"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:36
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:43
 msgid "Carefully review the requirements for seller accounts and Open Platform access in your region."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:38
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:44
 msgid "Ensure your Shopee account meets all the necessary criteria *before* proceeding with the Odoo Shopee Connector configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:44
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:50
 msgid "Connect Shopee seller account to Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:46
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:52
 msgid ":ref:`Install <general/install>` the :guilabel:`Shopee Connector` (`sale_shoppe`) by going to :menuselection:`Apps`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:49
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:55
 msgid "Then connect your Shopee Open account by navigating to :menuselection:`Sales app --> Configuration --> Shopee --> Accounts`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:52
-msgid "From here, click :guilabel:`New` to create to link a new Shopee account."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:58
+msgid "From here, click :guilabel:`New` to create and link a new Shopee account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:54
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:60
 msgid "Then, in the :guilabel:`Credentials` tab, select the appropriate :guilabel:`API Endpoint` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:58
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:64
 msgid "Shopee offers several API endpoints for production and testing. Selecting the correct endpoint is crucial for successful integration. Choose the endpoint that corresponds to your marketplace location."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:62
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:68
 msgid ":guilabel:`Shopee Production Endpoint (Singapore)`: This is the primary endpoint for sellers in most APAC countries. Select this option unless you are specifically operating within mainland China or Brazil."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:65
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:71
 msgid ":guilabel:`Shopee Production Endpoint (China)`: This endpoint is exclusively for sellers operating within mainland China. It is designed to comply with local regulations and business practices."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:68
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:74
 msgid ":guilabel:`Shopee Production Endpoint (Brazil)`: This endpoint is dedicated to sellers operating within Brazil. Select this option if your Shopee store is based in Brazil."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:70
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:76
 msgid ":guilabel:`Shopee Testing Endpoint`: This endpoint is for development and testing purposes only. Use it to simulate interactions with the Shopee API without affecting your live data. **Do not use this endpoint for production.**"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:73
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:79
 msgid ":guilabel:`Shopee Testing Endpoint (China)`:  Similar to the general testing endpoint, this one is specifically for testing integrations related to the China-specific production endpoint. **Do not use this endpoint for production.**"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:77
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:83
 msgid "After selecting the correct API Endpoint in the :guilabel:`Credentials` form, input your Open Shopee :guilabel:`Partner ID` and :guilabel:`Partner Key` in the corresponding fields. Then click :guilabel:`Save And Authorize`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:82
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:88
 msgid "You'll need your Open Shopee :guilabel:`Partner ID` and :guilabel:`Partner Key` to complete this step. Here's how to find them in the Shopee Open Platform:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:85
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:91
 msgid "**Log in to the Shopee Open Platform:** `Log in <https://open.shopee.com/>`_ with the credentials you used to register your Open Shopee account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:87
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:93
 msgid "**Navigate to App Management:** Go to the :guilabel:`App Management` section, then select :guilabel:`App List`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:89
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:95
 msgid "**Select your app:** Choose the specific app you want to synchronize with Odoo (either your test app or your production app)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:91
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:97
 msgid "**Find your credentials:** Within the app details, you'll find your Partner ID and Partner Key. These are the values you'll need to copy and paste into the corresponding fields in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:96
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:101
 msgid "**Copy carefully:** Copy the Partner ID and Partner Key accurately, without any extra spaces or characters. These are case-sensitive."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:98
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:103
 msgid "**Keep your key secure:** Your Partner Key is sensitive information. Do not share it with anyone. Treat it like a password."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:102
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:107
 msgid "Authorization and account registration"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:104
-msgid "After entering connecting the :ref:`Shoppe Seller account to Odoo <shopee/setup>`, the authorization process begins."
-msgstr ""
-
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:108
-msgid "Shopee seller account selection/login"
-msgstr ""
-
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:110
-msgid "Upon clicking :guilabel:`Save and Authorize`, Odoo redirects to the Shopee seller account selection page."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:109
+msgid "After connecting the :ref:`Shopee Seller account to Odoo <shopee/setup>`, the authorization process begins."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:113
-msgid "**Already logged in:** If you are already logged in to a Shopee account, your email address or username will be displayed. Click on your account to proceed."
+msgid "Shopee seller account selection/login"
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:115
+msgid "Upon clicking :guilabel:`Save and Authorize`, Odoo redirects to the Shopee seller account selection page."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:118
+msgid "**Already logged in:** If you are already logged in to a Shopee account, your email address or username will be displayed. Click on your account to proceed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:120
 msgid "**Not logged in:** If you are not logged in, you will be prompted to enter the credentials (email/username and password) of the Shopee seller account you wish to connect to Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:119
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:124
 msgid "Granting access to Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:121
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:126
 msgid "After selecting or logging into your Shopee seller account, you will be directed to the authorization (or consent) page. Here, confirm that you allow Shopee to grant Odoo access to your account and related data. This step is essential for the integration to function correctly."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:126
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:131
 msgid "Account registration and Shopee shop creation"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:128
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:133
 msgid "Upon confirming access, Shopee redirects you back to Odoo. An indicator appears, confirming that your Shopee account has been successfully registered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:132
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:137
 msgid "Post-synchronization configuration"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:134
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:139
 msgid "After the redirection, you should perform the following steps within Odoo:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:136
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:141
 msgid "**Rename the Shopee Account (Optional):** The newly created Shopee account in Odoo will likely have a default name. You can rename it to something more descriptive (e.g., the name of your Shopee shop) for easier management."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:139
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:144
 msgid "**Set the Last Order Synchronization Date:** This setting determines the starting point for fetching orders from Shopee. Choose a date from which you want Odoo to retrieve past orders."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:141
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:146
 msgid "**Configure Inventory Synchronization:**  Decide whether you want to synchronize your product inventory between Odoo and Shopee. Enable the :guilabel:`Synchronize Inventory` option to automatically push stock updates from Odoo to Shopee. Disabling this option prevents automatic inventory updates."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:145
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:150
 msgid "**Assign a Default Sales Team:** Assign a default sales team to your Shopee account in Odoo. This helps with reporting and order management."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:148
-msgid "With the Shopee account successfully registered, the marketplaces available with this specific account can later be synchronized the exact same way, and listed under the :guilabel:`Shops` button."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:153
+msgid "With the Shopee account successfully registered, the marketplaces available with this specific account can later be synchronized the exact same way and listed under the :guilabel:`Shops` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:153
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:157
 msgid "Shopee orders in Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:155
-msgid "When a Shopee order is synchronized, only lines for items are created on the sales order in Odoo. Each one represents one for the product that was sold on Shopee."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:159
+msgid "When a Shopee order is synchronized, only lines for items are created on the sales order in Odoo. Each one represents one product that was sold on Shopee."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:None
 msgid "Shopee synchronized sale order in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:161
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:165
 msgid "Any necessary price reconciliation related to shipping or income versus fees can be managed later using Shopee's weekly / monthly financial reports, which can then be imported into the Odoo **Accounting** app."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:165
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:169
 msgid "The selection of a database product for a sales order item is done by matching its :guilabel:`Internal Reference` (a customizable product reference identifier in Odoo, like `FURN001`) with the Shopee *SKU*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:169
-msgid "If no database product with a matching internal reference is found for a given :guilabel:`Shopee SKU`, then a default database product, *Shopee Item*."
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:173
+msgid "If no database product with a matching internal reference is found for a given :guilabel:`Shopee SKU`, then a default database product, *Shopee Item*, is used."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:173
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:177
 msgid "To modify default products, activate the :ref:`developer mode <developer-mode>`, and navigate to :menuselection:`Sales app --> Configuration --> Settings`. In the :guilabel:`Connectors` section, under :guilabel:`Shopee Sync`, find the :guilabel:`Default Products`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:180
-msgid "To allow for tax reporting of Shopee sales with Odoo, the taxes applied to the sales order items are those set on the product, or determined by the :doc:`fiscal position <../../../finance/fiscal_localizations>`."
-msgstr ""
-
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:184
-msgid "Make sure to have the correct taxes set on your products in Odoo, or have it done by a fiscal position, to avoid discrepancies in the subtotals between *Shopee Seller Central* and Odoo."
+msgid "To allow for tax reporting of Shopee sales with Odoo, the taxes applied to the sales order items are those set on the product or determined by the :doc:`fiscal position <../../../finance/fiscal_localizations>`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:188
-msgid "As shopee does not necessarily apply the same taxes as those configured in Odoo, it may happen that order totals differ by a few cents between Odoo and *Shopee Seller Central*. Those differences can be resolved with a write-off when reconciling the payments in Odoo."
+msgid "Make sure to have the correct taxes set on your products in Odoo, or have them determined by a fiscal position, to avoid discrepancies in the subtotals between *Shopee Seller Central* and Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:197
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:192
+msgid "As Shopee does not necessarily apply the same taxes as those configured in Odoo, it may happen that order totals differ by a few cents between Odoo and *Shopee Seller Central*. Those differences can be resolved with a write-off when reconciling the payments in Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:201
 msgid "To add a new marketplace, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:199
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:203
 msgid "**Navigate to Shopee Accounts:** Go to :menuselection:`Sales --> Configuration --> Accounts`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:200
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:204
 msgid "**Create a New Shopee Account:** Click :guilabel:`New` to create a new Shopee marketplace account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:202
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:206
 msgid "**Select the API Endpoint:** Choose the appropriate API endpoint for your local market. (Typically, this will be :guilabel:`Shopee Production Endpoint (Singapore)` unless you are operating in mainland China or Brazil. Refer to the documentation for details on endpoint selection)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:206
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:210
 msgid "**Enter Credentials:** Your :guilabel:`Partner ID` and :guilabel:`Partner Key` are the same as those linked to your unique Open Shopee account. Enter these values in the corresponding fields."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:208
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:212
 msgid "**Name Your Shop:** Give the new shop a descriptive name (e.g., `Shopee Philippines`) to identify it later."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:210
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:214
 msgid "**Assign a Sales Team:** Assign a relevant sales team (e.g., `Shopee Sales Philippines`) to enable advanced reporting capabilities."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:212
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:216
 msgid "**Synchronize Your Account:** If none of your existing marketplaces are listed, click :guilabel:`Log in with another account` to synchronize a new one. This will initiate the Shopee authorization process."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:217
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:221
 msgid "Automatic synchronization"
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:219
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:223
 msgid "Newly added marketplaces are automatically added to the list of synchronized marketplaces. If a new marketplace does *not* appear in the list after synchronization, it indicates that the marketplace is either incompatible with the Shopee Open Platform or unavailable for your specific seller account. Consult the Shopee Open Platform documentation or contact their support for further assistance."
 msgstr ""
 
-#: ../../content/applications/sales/sales/shopee_connector/setup.rst:226
+#: ../../content/applications/sales/sales/shopee_connector/setup.rst:230
 msgid "While Odoo allows creating the same Shopee shop multiple times, only one instance will function due to token limitations. To avoid order management issues, synchronize each shop only once. For connection updates, manually fetch orders first before re-establishing the connection."
 msgstr ""
 
