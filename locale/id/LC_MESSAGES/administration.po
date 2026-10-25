@@ -4,12 +4,13 @@
 # Odoo Translation Bot <c3p@odoo.com>, 2025, 2026.
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# OpenAI <noreply-mt-openai@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-21 23:33+0000\n"
+"PO-Revision-Date: 2026-10-25 01:37+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-20-doc/"
 "administration/id/>\n"
@@ -1294,7 +1295,7 @@ msgstr ""
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:3
 msgid "Advanced topics"
-msgstr ""
+msgstr "Topik lanjutan"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:5
 msgid ""
@@ -1302,6 +1303,10 @@ msgid ""
 "<odoo-sh/advanced/containers>`, :ref:`Git submodules <odoo-sh/advanced/"
 "submodules>`, and :ref:`scheduled actions <odoo-sh/advanced/scheduled>`."
 msgstr ""
+"Bagian ini membahas fitur-fitur lanjutan Odoo.sh yang terkait dengan "
+":ref:`kontainer <odoo-sh/advanced/containers>`, :ref:`submodul Git <odoo-sh/"
+"advanced/submodules>`, dan :ref:`tindakan terjadwal <odoo-sh/advanced/"
+"scheduled>`."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:12
 msgid "Containers"
@@ -1313,6 +1318,9 @@ msgid ""
 "base is an Ubuntu-based system on which all of Odoo's required dependencies, "
 "as well as common, useful packages, are installed."
 msgstr ""
+"Setiap build diisolasi di dalam kontainernya sendiri (Linux namespace "
+"container). Dasarnya adalah sistem berbasis Ubuntu tempat semua dependensi "
+"yang diperlukan Odoo, serta paket-paket umum yang berguna, terinstal."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:18
 msgid ""
@@ -1322,18 +1330,26 @@ msgid ""
 "them. The platform will ensure these dependencies are installed in your "
 "containers."
 msgstr ""
+"Jika project Anda memerlukan :ref:`dependensi Python tambahan <odoo-sh/"
+"module/library>` atau rilis yang lebih baru, Anda dapat menentukan file "
+":file:`requirements.txt` di root branch Anda yang mencantumkannya. Platform "
+"akan memastikan dependensi ini terinstal di kontainer Anda."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:23
 msgid ""
 "For a concrete example, check out the Odoo Community `requirements.txt file "
 "<https://github.com/odoo/odoo/blob/20.0/requirements.txt>`_."
 msgstr ""
+"Sebagai contoh konkret, lihat `file requirements.txt <https://github.com/"
+"odoo/odoo/blob/20.0/requirements.txt>`_ Odoo Community."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:25
 msgid ""
 "`PyPA requirements specifiers documentation <https://pip.pypa.io/en/stable/"
 "reference/requirement-specifiers/>`_"
 msgstr ""
+"`Dokumentasi requirement specifiers PyPA <https://pip.pypa.io/en/stable/"
+"reference/requirement-specifiers/>`_"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:29
 msgid ""
@@ -1341,6 +1357,9 @@ msgid ""
 "submodules>` are also taken into account. The platform looks for such files "
 "in the parent folder of each folder containing an Odoo module."
 msgstr ""
+"File :file:`requirements.txt` dari :ref:`submodul <odoo-sh/advanced/"
+"submodules>` juga diperhitungkan. Platform mencari file tersebut di folder "
+"induk dari setiap folder yang memuat modul Odoo."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:36
 msgid "Directory structure"
@@ -1352,16 +1371,21 @@ msgid ""
 "`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 msgstr ""
+"Karena kontainer berbasis Ubuntu, struktur direktorinya mengikuti "
+"`Filesystem Hierarchy Standard <https://en.wikipedia.org/wiki/"
+"Filesystem_Hierarchy_Standard>`_."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:42
 msgid ""
 "`Ubuntu main directories documentation <https://help.ubuntu.com/community/"
 "LinuxFilesystemTreeOverview#Main_directories>`_"
 msgstr ""
+"`Dokumentasi direktori utama Ubuntu <https://help.ubuntu.com/community/"
+"LinuxFilesystemTreeOverview#Main_directories>`_"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:44
 msgid "The directories relevant to Odoo.sh are the following:"
-msgstr ""
+msgstr "Direktori yang relevan dengan Odoo.sh adalah sebagai berikut:"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:81
 msgid "Database shell"
@@ -1372,6 +1396,8 @@ msgid ""
 "While accessing a container with the shell, you can access the database "
 "using the `psql` command."
 msgstr ""
+"Saat mengakses kontainer dengan shell, Anda dapat mengakses database "
+"menggunakan perintah `psql`."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:94
 msgid ""
@@ -1382,6 +1408,13 @@ msgid ""
 "safety net in case of a mistake. You simply have to rollback your changes to "
 "revert your database to its previous state."
 msgstr ""
+"Selalu gunakan `transaksi <https://www.postgresql.org/docs/current/static/"
+"sql-begin.html>`_ (misalnya, `BEGIN` (...) `COMMIT` / `ROLLBACK`) saat "
+"pernyataan SQL menghasilkan perubahan (misalnya, `UPDATE`, `DELETE`, "
+"`ALTER`, dll.) , terutama untuk database produksi Anda. Mekanisme transaksi "
+"adalah jaring pengaman Anda jika terjadi kesalahan. Anda cukup melakukan "
+"rollback pada perubahan Anda untuk mengembalikan database ke keadaan "
+"sebelumnya."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:100
 msgid ""
@@ -1389,22 +1422,31 @@ msgid ""
 "lock records in your tables, and a running database may wait for them to be "
 "released, causing a server to hang indefinitely."
 msgstr ""
+"Jangan lupa untuk melakukan commit atau rollback pada transaksi. Transaksi "
+"yang terbuka dapat mengunci record di tabel Anda, dan database yang sedang "
+"berjalan mungkin menunggu record tersebut dilepaskan, sehingga menyebabkan "
+"server hang tanpa batas waktu."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:104
 msgid ""
 "In addition, use your staging databases to test your statements first. It "
 "gives you an extra safety net."
 msgstr ""
+"Selain itu, gunakan database staging Anda untuk menguji pernyataan Anda "
+"terlebih dahulu. Ini memberi Anda jaring pengaman tambahan."
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:108
 msgid ""
 "You forgot to set your `WHERE` condition. In such a case, you can rollback "
 "to revert the unwanted change:"
 msgstr ""
+"Anda lupa menetapkan kondisi `WHERE` Anda. Dalam kasus seperti ini, Anda "
+"dapat melakukan rollback untuk membatalkan perubahan yang tidak diinginkan:"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:120
 msgid "Then, rewrite the statement and commit the change:"
 msgstr ""
+"Kemudian, tulis ulang pernyataan tersebut dan lakukan commit pada perubahan:"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:134
 msgid "Run an Odoo server"
@@ -1416,6 +1458,9 @@ msgid ""
 "able to access it from the outside world with a web browser, but you can, "
 "for example:"
 msgstr ""
+"Anda dapat memulai instance server Odoo dari shell kontainer. Anda tidak "
+"akan dapat mengaksesnya dari luar menggunakan browser web, tetapi Anda "
+"dapat, misalnya:"
 
 #: ../../export/content/administration/odoo_sh/advanced.rst:139
 msgid "Use the Odoo shell:"
@@ -8639,6 +8684,8 @@ msgid ""
 "Odoo 20 'deb' package currently supports `Ubuntu Noble (24.04LTS) <https://"
 "releases.ubuntu.com/noble>`_."
 msgstr ""
+"Paket 'deb' Odoo 20 saat ini mendukung `Ubuntu Noble (24.04LTS) <https://"
+"releases.ubuntu.com/noble>`_."
 
 #: ../../export/content/administration/on_premise/packages.rst:106
 msgid ""
@@ -8652,7 +8699,7 @@ msgstr ""
 
 #: ../../export/content/administration/on_premise/packages.rst:117
 msgid "Odoo 20 'rpm' package supports Fedora 42."
-msgstr ""
+msgstr "Paket 'rpm' Odoo 20 mendukung Fedora 42."
 
 #: ../../export/content/administration/on_premise/packages.rst:119
 msgid ""
@@ -8861,7 +8908,7 @@ msgstr ""
 
 #: ../../export/content/administration/on_premise/source.rst:121
 msgid "Odoo requires **Python 3.12** or later to run."
-msgstr ""
+msgstr "Odoo memerlukan **Python 3.12** atau yang lebih baru untuk dijalankan."
 
 #: ../../export/content/administration/on_premise/source.rst:123
 msgid "Minimum requirement updated from Python 3.7 to Python 3.10."
@@ -8869,7 +8916,7 @@ msgstr "Persyaratan minimum diupdate dari Python 3.7 menjadi Python 3.10."
 
 #: ../../export/content/administration/on_premise/source.rst:126
 msgid "Minimum requirement updated from Python 3.10 to Python 3.12."
-msgstr ""
+msgstr "Persyaratan minimum diperbarui dari Python 3.10 ke Python 3.12."
 
 #: ../../export/content/administration/on_premise/source.rst:134
 msgid "Use a package manager to download and install Python 3 if needed."
@@ -8925,25 +8972,32 @@ msgstr "Persyaratan minimum diperbarui dari PostgreSQL 12 ke PostgreSQL 13."
 
 #: ../../export/content/administration/on_premise/source.rst:203
 msgid "Minimum requirement updated from PostgreSQL 13 to PostgreSQL 16."
-msgstr ""
+msgstr "Persyaratan minimum diperbarui dari PostgreSQL 13 ke PostgreSQL 16."
 
 #: ../../export/content/administration/on_premise/source.rst:210
 msgid ""
 "Use a package manager to download and install PostgreSQL (supported "
 "versions: 16.0 or above). It can be achieved by executing the following:"
 msgstr ""
+"Gunakan package manager untuk mengunduh dan menginstal PostgreSQL (versi "
+"yang didukung: 16.0 atau lebih baru). Hal ini dapat dilakukan dengan "
+"menjalankan perintah berikut:"
 
 #: ../../export/content/administration/on_premise/source.rst:219
 msgid ""
 "`Download PostgreSQL <https://www.postgresql.org/download/windows>`_ "
 "(supported versions: 16.0 or above) and install it."
 msgstr ""
+"`Unduh PostgreSQL <https://www.postgresql.org/download/windows>`_ (versi "
+"yang didukung: 16.0 atau lebih baru) dan instal."
 
 #: ../../export/content/administration/on_premise/source.rst:224
 msgid ""
 "Use `Postgres.app <https://postgresapp.com>`_ to download and install "
 "PostgreSQL (supported version: 16.0 or above)."
 msgstr ""
+"Gunakan `Postgres.app <https://postgresapp.com>`_ untuk mengunduh dan "
+"menginstal PostgreSQL (versi yang didukung: 16.0 atau lebih baru)."
 
 #: ../../export/content/administration/on_premise/source.rst:228
 msgid ""
@@ -9126,6 +9180,9 @@ msgid ""
 "github.com/odoo/odoo/blob/20.0/debian/control>`_ file and install the found "
 "packages."
 msgstr ""
+"Skrip `setup/debinstall.sh` akan mengurai file `debian/control <https://"
+"github.com/odoo/odoo/blob/20.0/debian/control>`_ dan menginstal paket yang "
+"ditemukan."
 
 #: ../../export/content/administration/on_premise/source.rst:420
 msgid "Install with pip"
