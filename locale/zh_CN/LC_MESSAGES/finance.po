@@ -59,8 +59,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-24 16:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-25 13:36+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/finance/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -17293,6 +17293,9 @@ msgid ""
 "the :ref:`Cost of Production <accounting/inventory-valuation/cost-of-"
 "production>` account was entered during configuration."
 msgstr ""
+":guilabel:`生产成本`\\ （仅限\\ :guilabel:`定期（期末）`\\ ，即使在此估值方法"
+"中使用此科目并不常见）：仅在配置期间输入了\\ :ref:`生产成本 <accounting/"
+"inventory-valuation/cost-of-production>`\\ 科目时适用。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:212
 msgid ""
@@ -17300,6 +17303,8 @@ msgid ""
 "inventory value and the stock valuation recorded in the Inventory app (i.e., "
 "the remaining quantity in stock moves)."
 msgstr ""
+":guilabel:`库存变动`\\ 显示已过账库存价值与“库存”应用中记录的库存估值（即库存"
+"移动中的剩余数量）之间的差额。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:214
 msgid ""
@@ -17309,6 +17314,10 @@ msgid ""
 "Stock <../../../inventory_and_mrp/inventory/warehouses_storage/reporting/"
 "stock>` report."
 msgstr ""
+":guilabel:`期末库存`：完成\\ :ref:`期末分录 <accounting/inventory-valuation/"
+"closing-entry>`\\ 后的未来会计库存价值。点击\\ :guilabel:`期末库存`\\ 可访"
+"问\\ :doc:`库存 <../../../inventory_and_mrp/inventory/warehouses_storage/"
+"reporting/stock>`\\ 报表。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:220
 msgid ""
@@ -17317,6 +17326,9 @@ msgid ""
 "valuation/configuration>`, or manually when :ref:`generating an entry "
 "<accounting/inventory-valuation/closing-entry>`."
 msgstr ""
+"库存变动会在\\ :ref:`配置 <accounting/inventory-valuation/configuration>`\\ "
+"期间设置的期末通过库存期末分录自动记录，或者在\\ :ref:`生成分录 <accounting/"
+"inventory-valuation/closing-entry>`\\ 时手动记录。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:227
 msgid "Stock closing entry"
@@ -17477,7 +17489,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:297
 msgid "Option 1: Server action journal entry"
-msgstr ""
+msgstr "选项 1：服务器操作日记账分录"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:300
 msgid ""
@@ -17487,18 +17499,24 @@ msgid ""
 "Valuation report <accounting/inventory-valuation/inventory-valuation-"
 "report>` to ensure accuracy."
 msgstr ""
+"请先使用在升级过程中创建的测试数据库，并验证\\ :doc:`库存报表 <../../../"
+"inventory_and_mrp/inventory/warehouses_storage/reporting/stock>`\\ 、科目和\\"
+" :ref:`库存估值报表 <accounting/inventory-valuation/inventory-valuation-"
+"report>`\\ ，以确保准确性。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:305
 msgid ""
 "After upgrading to Odoo 19, the server action must be applied to each "
 "company to balance any non-zero :guilabel:`Stock Interim` accounts:"
 msgstr ""
+"升级至 Odoo 19 后，必须对每个公司应用该服务器操作，以平衡任何非零的\\ "
+":guilabel:`库存中转`\\ 科目："
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:308
 msgid ""
 "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
 "click the relevant company."
-msgstr ""
+msgstr "前往\\ :menuselection:`设置 --> 用户与公司 --> 公司`\\ 并点击相关公司。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:310
 msgid ""
@@ -17506,12 +17524,14 @@ msgid ""
 "Valuation rebalance interim Accounts`. A draft journal entry is "
 "automatically generated to balance the open amount."
 msgstr ""
+"点击\\ :icon:`fa-cog` :guilabel:`（齿轮）`\\ 图标，然后选择\\ :guilabel:`库存"
+"估值重新平衡中转科目`\\ 。系统将自动生成草稿日记账分录以平衡未结金额。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:312
 msgid ""
 "Review the draft journal entry amounts, edit them if necessary, then "
 "click :guilabel:`Post`."
-msgstr ""
+msgstr "核对草稿日记账分录金额，必要时进行修改，然后点击\\ :guilabel:`过账`\\ 。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:313
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:346
@@ -17520,6 +17540,8 @@ msgid ""
 "accounts are balanced to zero and that the remaining amount is recorded in "
 "the :guilabel:`Stock valuation` account."
 msgstr ""
+"检查总账以确认\\ :guilabel:`库存中转`\\ 科目已平衡至零，且剩余金额已记录在\\ "
+":guilabel:`库存估值`\\ 科目中。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:315
 msgid ""
@@ -17530,6 +17552,11 @@ msgid ""
 "transferred to the :ref:`Variation account <accounting/inventory-valuation/"
 "variation-account>`, which is a new type of interim account."
 msgstr ""
+"前往\\ :menuselection:`会计 --> 审查 --> 库存估值`\\ 并\\ :ref:`生成库存变动"
+"分录 <accounting/inventory-valuation/closing-entry>`\\ 。\\ :ref:`估值科目 "
+"<accounting/inventory-valuation/valuation-account>`\\ 上的增加值随后会结转"
+"至\\ :ref:`变动科目 <accounting/inventory-valuation/variation-account>`\\ ，"
+"该科目属于一种新型中转科目。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:320
 msgid ""
@@ -17537,6 +17564,8 @@ msgid ""
 "accrual-entries>` if an accounting closing is required and the Bill to "
 "Receive or |GRNI| account, etc., needs updating."
 msgstr ""
+"（可选）生成\\ :ref:`应计分录 <accounting/inventory-valuation/accrual-"
+"entries>`\\ ，前提是需要进行会计结账且待收账单或\\ |GRNI|\\ 科目等需要更新。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:325
 msgid ""
@@ -17545,14 +17574,17 @@ msgid ""
 "upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
 "manual>`."
 msgstr ""
+"如有需要，也可以手动创建日记账分录，采用平衡\\ :guilabel:`库存中转`\\ 科目的"
+"相同流程，具体如\\ :ref:`升级至 Odoo 19 之前 <accounting/inventory-valuation/"
+"upgrade-process-manual>`\\ 所述。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:332
 msgid "Option 2: Manual journal entry"
-msgstr ""
+msgstr "选项 2：手动日记账分录"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:334
 msgid "To create the manual journal entry, follow these steps:"
-msgstr ""
+msgstr "若要创建手动日记账分录，请按照以下步骤操作："
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:336
 msgid ""
@@ -18870,12 +18902,12 @@ msgstr "使用未结账款"
 msgid ""
 "If :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` "
 "are configured:"
-msgstr ""
+msgstr "如果配置了\\ :ref:`未结科目 <accounting/journals/outstanding-accounts>`\\ ："
 
 #: ../../content/applications/finance/accounting/payments.rst:137
 #: ../../content/applications/finance/accounting/payments.rst:208
 msgid "A journal entry is created."
-msgstr ""
+msgstr "创建日记账分录。"
 
 #: ../../content/applications/finance/accounting/payments.rst:138
 #: ../../content/applications/finance/accounting/payments.rst:209
@@ -18883,23 +18915,29 @@ msgid ""
 "The counterpart is reflected in an :ref:`outstanding receipts or payments "
 "account <accounting/journals/outstanding-accounts>`."
 msgstr ""
+"对方科目反映在\\ :ref:`未结收款或付款科目 <accounting/journals/outstanding-"
+"accounts>`\\ 中。"
 
 #: ../../content/applications/finance/accounting/payments.rst:140
 #: ../../content/applications/finance/accounting/payments.rst:211
 msgid "The :guilabel:`Amount Due` is reduced based on the payment amount."
-msgstr ""
+msgstr "根据付款金额相应扣减\\ :guilabel:`到期金额`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:141
 msgid ""
 "After the payment is :doc:`reconciled <bank/reconciliation>` with a bank "
 "transaction, the invoice/bill is marked as :guilabel:`Paid`."
 msgstr ""
+"付款与银行交易\\ :doc:`对账 <bank/reconciliation>`\\ 后，发票/账单将标记为\\ "
+":guilabel:`已付款`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:144
 msgid ""
 "More payment information is also accessible by clicking the :icon:`fa-info-"
 "circle` :guilabel:`(information icon)` and clicking :guilabel:`view`."
 msgstr ""
+"还可以通过点击\\ :icon:`fa-info-circle` :guilabel:`（信息图标）`\\ 并点击\\ "
+":guilabel:`查看`\\ 获取更多付款信息。"
 
 #: ../../content/applications/finance/accounting/payments.rst:148
 msgid ""
@@ -18949,6 +18987,9 @@ msgid ""
 "directly using their preferred payment method, simplifying the payment "
 "process."
 msgstr ""
+"为方便发票付款，可以启用\\ :guilabel:`发票在线支付`\\ 功能，这会在客户门户中"
+"添加\\ :guilabel:`立即支付`\\ 按钮。这样客户就可以在线查看发票，并直接使用偏"
+"好的付款方式付款，从而简化付款流程。"
 
 #: ../../content/applications/finance/accounting/payments.rst:171
 msgid ""
@@ -18957,6 +18998,9 @@ msgid ""
 "Payments` section to enable :guilabel:`Invoice Online Payment`, and "
 "click :guilabel:`Save`."
 msgstr ""
+"要启用在线支付，请前往\\ :menuselection:`会计 --> 配置 --> 设置`\\ ，向下滚动"
+"至\\ :guilabel:`客户付款`\\ 部分，启用\\ :guilabel:`发票在线支付`\\ ，然后点"
+"击\\ :guilabel:`保存`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
@@ -18965,12 +19009,18 @@ msgid ""
 "customer portal. From there, they can click :guilabel:`Pay Now` to select "
 "a :ref:`Payment Provider <payment_providers/online_providers>`."
 msgstr ""
+"创建发票后，点击\\ :guilabel:`发送`\\ 通过电子邮件发送给客户，客户会收到一封"
+"包含其客户门户发票查看链接的电子邮件。在客户门户中，他们可以点击\\ "
+":guilabel:`立即支付`\\ 来选择\\ :ref:`支付服务商 <payment_providers/"
+"online_providers>`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:180
 msgid ""
 "Make sure :ref:`payment providers <payment_providers/supported_providers>` "
 "are configured correctly."
 msgstr ""
+"请确保已正确配置\\ :ref:`支付服务商 <payment_providers/supported_providers>"
+"`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:182
 msgid ""
@@ -18978,6 +19028,8 @@ msgid ""
 "wire_transfer>` is the only enabled payment provider, but payment details "
 "must still be entered."
 msgstr ""
+"默认情况下，\\ :ref:`电汇 <payment_providers/bank_payments/wire_transfer>`\\ "
+"是唯一启用的支付服务商，但仍必须输入付款详情。"
 
 #: ../../content/applications/finance/accounting/payments.rst:186
 msgid ":doc:`/applications/finance/payment_providers`"
@@ -18988,34 +19040,44 @@ msgid ""
 "As soon as the customer has paid, a payment for the invoice is registered, "
 "and the invoice is marked as :guilabel:`In payment`."
 msgstr ""
+"客户付款后，系统会立即登记该发票的付款，发票将标记为\\ :guilabel:`支付中`\\ "
+"。"
 
 #: ../../content/applications/finance/accounting/payments.rst:195
 msgid ""
 "If the payment method configured in the payment provider has "
 "no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>`:"
 msgstr ""
+"如果支付服务商中配置的付款方式没有\\ :ref:`未结科目 <accounting/journals/"
+"outstanding-accounts>`\\ ："
 
 #: ../../content/applications/finance/accounting/payments.rst:198
 msgid "No journal entry created."
-msgstr ""
+msgstr "不创建日记账分录。"
 
 #: ../../content/applications/finance/accounting/payments.rst:200
 msgid ""
 "After the invoice is :doc:`reconciled <bank/reconciliation>` with a bank "
 "transaction, the invoice is marked as :guilabel:`Paid`."
 msgstr ""
+"在发票与银行交易\\ :doc:`对账 <bank/reconciliation>`\\ 后，发票将标记为\\ "
+":guilabel:`已付款`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:205
 msgid ""
 "If the payment method configured in the payment provider "
 "has :ref:`outstanding accounts <accounting/journals/outstanding-accounts>`:"
 msgstr ""
+"如果支付服务商中配置的付款方式设有\\ :ref:`未结科目 <accounting/journals/"
+"outstanding-accounts>`\\ ："
 
 #: ../../content/applications/finance/accounting/payments.rst:212
 msgid ""
 "After :doc:`reconciliation <bank/reconciliation>` between the payment and "
 "the bank transaction, the invoice is marked as :guilabel:`Paid`."
 msgstr ""
+"在付款与银行交易进行\\ :doc:`对账 <bank/reconciliation>`\\ 后，发票将标记为\\"
+" :guilabel:`已付款`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:218
 msgid "Registering payments not tied to an invoice or bill"
@@ -19027,6 +19089,8 @@ msgid ""
 "Customers --> Payments` or :menuselection:`Accounting --> Vendor --> "
 "Payments`, it is not directly linked to an invoice or bill."
 msgstr ""
+"通过\\ :menuselection:`会计 --> 客户 --> 付款`\\ 或\\ :menuselection:`会"
+"计 --> 供应商 --> 付款`\\ 登记新付款时，该付款不会直接关联到发票或账单。"
 
 #: ../../content/applications/finance/accounting/payments.rst:228
 msgid ""
@@ -19034,10 +19098,12 @@ msgid ""
 "using :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` "
 "as:"
 msgstr ""
+"在未使用\\ :ref:`未结科目 <accounting/journals/outstanding-accounts>`\\ 的情"
+"况下，不应登记独立付款，因为："
 
 #: ../../content/applications/finance/accounting/payments.rst:231
 msgid "No journal entries are created."
-msgstr ""
+msgstr "不会创建日记账分录。"
 
 #: ../../content/applications/finance/accounting/payments.rst:232
 msgid "The payment cannot be linked to the invoice/bill."
@@ -29433,27 +29499,31 @@ msgstr ":ref:`启用开发者模式 <developer-mode>`。"
 msgid ""
 "Go to :guilabel:`Accounting --> Reporting`, then select the relevant report "
 "from the menu."
-msgstr ""
+msgstr "前往\\ :guilabel:`会计 --> 报告`\\ ，然后从菜单中选择相关报告。"
 
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:127
 msgid "Click the :icon:`fa-cogs` :guilabel:`(cogs)` icon in the top bar."
-msgstr ""
+msgstr "点击顶栏中的\\ :icon:`fa-cogs` :guilabel:`（齿轮）`\\ 图标。"
 
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:128
 msgid ""
 "Go to the :guilabel:`Options` tab and enable :guilabel:`Cash Basis` in "
 "the :guilabel:`Advanced` section."
 msgstr ""
+"前往\\ :guilabel:`选项`\\ 选项卡，启用\\ :guilabel:`现金收付制`\\ （位于\\ "
+":guilabel:`高级`\\ 部分）。"
 
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:130
 msgid "Go back to the report of your choice."
-msgstr ""
+msgstr "返回所选报告。"
 
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:131
 msgid ""
 "Click the :icon:`oi-settings-adjust` :guilabel:`(sliders)` report options "
 "button and select :guilabel:`Cash Basis Method`."
 msgstr ""
+"点击\\ :icon:`oi-settings-adjust` :guilabel:`（滑块）`\\ 报告选项按钮，并选"
+"择\\ :guilabel:`现金收付制方法`\\ 。"
 
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:5
 msgid ""
@@ -31515,25 +31585,27 @@ msgstr ":guilabel:`资产`"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:148
 msgid ":guilabel:`Asset Name`: The name of the asset to be depreciated."
-msgstr ""
+msgstr ":guilabel:`资产名称`：待折旧资产的名称。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:150
 msgid ":guilabel:`Original Value`: The acquisition cost of the asset."
-msgstr ""
+msgstr ":guilabel:`原始价值`：资产的购置成本。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:151
 msgid ":guilabel:`Acquisition Date`: The date the asset was purchased."
-msgstr ""
+msgstr ":guilabel:`购置日期`：购买资产的日期。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:152
 msgid ""
 ":guilabel:`Asset Model`: Select a :ref:`template <accounting/assets/models>` "
 "to populate default settings automatically (optional)."
 msgstr ""
+":guilabel:`资产模型`：选择一个\\ :ref:`模板 <accounting/assets/models>`\\ 以"
+"自动填充默认设置（可选）。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:154
 msgid ":guilabel:`Asset Group`: Group up other assets into a single group."
-msgstr ""
+msgstr ":guilabel:`资产组`：将其他资产归入单个组中。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:156
 msgid "**Current Values**"
@@ -31543,13 +31615,15 @@ msgstr "当前值"
 msgid ""
 ":guilabel:`Not Depreciable Value`: The salvage or residual value excluded "
 "from depreciation."
-msgstr ""
+msgstr ":guilabel:`不可折旧价值`：不计入折旧的残值或残余价值。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:159
 msgid ""
 ":guilabel:`Book Value`: The calculated remaining value (*Original Value* "
 "minus *Accumulated Depreciation*)."
 msgstr ""
+":guilabel:`账面价值`：计算得出的剩余价值（\\ *原始价值*\\ 减去\\ *累计折旧*\\"
+" ）。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:162
 msgid "**Depreciation Method**"
@@ -31557,31 +31631,35 @@ msgstr "折旧方法"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:164
 msgid ":guilabel:`Method`: Select the computation logic:"
-msgstr ""
+msgstr ":guilabel:`方法`：选择计算逻辑："
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:166
 msgid ""
 ":guilabel:`Straight Line`: Divides the depreciable value equally over the "
 "lifespan."
-msgstr ""
+msgstr ":guilabel:`直线法`：在整个使用寿命内平均分摊可折旧价值。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:167
 msgid ""
 ":guilabel:`Declining`: Multiplies remaining value by a declining factor "
 "until reaching salvage value."
-msgstr ""
+msgstr ":guilabel:`递减法`：将剩余价值乘以递减系数，直至达到残值。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:169
 msgid ""
 ":guilabel:`Declining Then Straight Line`: Uses declining depreciation until "
 "straight-line yields a higher amount, ensuring faster initial depreciation."
 msgstr ""
+":guilabel:`先递减后直线法`：在初期采用递减折旧，直到直线法折旧额更高为止，以"
+"确保初期更快地折旧。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:171
 msgid ""
 ":guilabel:`Duration`: Set lifespan frequency in :guilabel:`Months` "
 "or :guilabel:`Years`."
 msgstr ""
+":guilabel:`期限`：设置使用寿命周期，单位为\\ :guilabel:`月`\\ 或\\ "
+":guilabel:`年`\\ 。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:172
 msgid ""
@@ -31589,12 +31667,14 @@ msgid ""
 "Prorata`, :guilabel:`Constant Periods`, or :guilabel:`Based on days per "
 "period`)."
 msgstr ""
+":guilabel:`计算`：选择计时逻辑（\\ :guilabel:`不按比例`\\ 、\\ :guilabel:`固"
+"定期间`\\ 或\\ :guilabel:`按每期天数`\\ ）。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:174
 msgid ""
 ":guilabel:`Prorata Date`: The starting date used when calculating pro-rata "
 "depreciation for partial first periods."
-msgstr ""
+msgstr ":guilabel:`比例分配日期`：用于计算首期部分期间按比例折旧的起始日期。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:177
 msgid ""
@@ -31602,6 +31682,8 @@ msgid ""
 "depreciable value by the number of depreciations planned. All depreciation "
 "entries have the same amount."
 msgstr ""
+"采用\\ :guilabel:`直线法`\\ 折旧方法将初始可折旧价值除以计划折旧期数。所有折"
+"旧分录的金额均相同。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:180
 msgid ""
@@ -31612,6 +31694,9 @@ msgid ""
 "the remaining depreciable value, ensuring it reaches zero by the end of the "
 "specified duration."
 msgstr ""
+"采用\\ :guilabel:`递减法`\\ 折旧方法在生成每笔分录时将可折旧价值乘以\\ "
+":guilabel:`递减系数`\\ 。每笔折旧分录的金额均低于前一笔分录。最后一笔折旧分录"
+"不使用递减系数，而是对应剩余的可折旧价值，以确保在指定期限结束时价值归零。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:186
 msgid ""
@@ -31620,6 +31705,9 @@ msgid ""
 "match the :guilabel:`Straight Line` method. This method ensures a fast "
 "depreciation initially, followed by a constant depreciation afterward."
 msgstr ""
+"采用\\ :guilabel:`先递减后直线法`\\ 折旧方法最初采用\\ :guilabel:`递减法`\\ "
+"，但设置的最低折旧额等于\\ :guilabel:`直线法`\\ 折旧额。该方法可确保初期快速"
+"折旧，随后保持恒定折旧。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:191
 msgid "**Accounting**"
@@ -31760,56 +31848,62 @@ msgid ""
 ":guilabel:`Duration`: The number of :guilabel:`Months` or :guilabel:`Years` "
 "needed to depreciate the asset."
 msgstr ""
+":guilabel:`期限`：对资产计提折旧所需的\\ :guilabel:`月`\\ 数或\\ "
+":guilabel:`年`\\ 数。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:250
 msgid ""
 ":guilabel:`Computation`: The computation method to calculate the "
 "depreciation rate."
-msgstr ""
+msgstr ":guilabel:`计算`：用于计算折旧率的计算方法。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:251
 msgid ""
 ":guilabel:`Not Depreciable Value Percent`: Input the amount planned as non-"
 "depreciated."
-msgstr ""
+msgstr ":guilabel:`不可折旧价值百分比`：输入计划不计提折旧的金额。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:252
 msgid ""
 ":guilabel:`Company`: Which company has access to this model. Leave blank to "
 "allow all."
-msgstr ""
+msgstr ":guilabel:`公司`：有权访问此模型的公司。留空则允许所有公司。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:253
 msgid ""
 ":guilabel:`Depreciation Account`: Account used in the depreciation entries "
 "to decrease the asset value."
-msgstr ""
+msgstr ":guilabel:`折旧科目`：折旧分录中用于冲减资产价值的科目。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:255
 msgid ""
 ":guilabel:`Expense Account`: Account use in the periodical entries to record "
 "part of the asset as expense."
-msgstr ""
+msgstr ":guilabel:`费用科目`：定期分录中用于将部分资产计入费用的科目。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:257
 msgid ":guilabel:`Journal`: The journal used to record depreciation entries."
-msgstr ""
+msgstr ":guilabel:`日记账`：用于记录折旧分录的日记账。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:260
 msgid ""
 "To convert an existing confirmed asset into a model, open it and "
 "click :guilabel:`Save as Model`."
 msgstr ""
+"要将现有的已确认资产转换为模型，请打开该资产并单击\\ :guilabel:`另存为模型`\\"
+" 。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:262
 msgid ""
 "To apply an asset model to a new entry, select a model from "
 "the :guilabel:`Asset Model` field, and click :guilabel:`Save`."
 msgstr ""
+"要将资产模型应用到新分录，请从\\ :guilabel:`资产模型`\\ 字段中选择一个模型，"
+"然后单击\\ :guilabel:`保存`\\ 。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:268
 msgid "Asset modification and disposal"
-msgstr ""
+msgstr "资产修改与处置"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:270
 msgid ""
@@ -31818,25 +31912,28 @@ msgid ""
 "click :guilabel:`Modify Depreciation`. Then, in the :guilabel:`Modify Asset` "
 "window, select one of the following actions:"
 msgstr ""
+"要调整现有资产的价值以计入重估、出售、处置或暂停，请打开需要修改的资产，然后"
+"单击\\ :guilabel:`修改折旧`\\ 。接着在\\ :guilabel:`修改资产`\\ 窗口中，选择"
+"以下操作之一："
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:274
 msgid ":guilabel:`Dispose`:"
-msgstr ""
+msgstr ":guilabel:`处置`："
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:276
 msgid ":guilabel:`Date`: Enter the date of the asset disposal."
-msgstr ""
+msgstr ":guilabel:`日期`：输入资产处置日期。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:277
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:288
 msgid ""
 ":guilabel:`Loss Account`: Account used to write the journal item in case of "
 "loss."
-msgstr ""
+msgstr ":guilabel:`损失科目`：发生损失时用于记录日记账明细的科目。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:278
 msgid ":guilabel:`Note`: Write a note regarding the disposal (optional)."
-msgstr ""
+msgstr ":guilabel:`备注`：输入有关处置的备注（可选）。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:280
 msgid ""
@@ -31844,24 +31941,26 @@ msgid ""
 "then :guilabel:`Closed`, and a new disposal journal entry is posted to the "
 "loss account."
 msgstr ""
+"然后单击\\ :guilabel:`处置`\\ 。更新后的资产将处于\\ :guilabel:`已关闭`\\ 状"
+"态，并在损失科目中过账一条新的处置日记账分录。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:283
 msgid ":guilabel:`Sell`:"
-msgstr ""
+msgstr ":guilabel:`出售`："
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:285
 msgid ":guilabel:`Date`: Enter the date of the asset sale."
-msgstr ""
+msgstr ":guilabel:`日期`：输入资产出售日期。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:286
 msgid ""
 ":guilabel:`Customer Invoice`: Select the customer invoice of the asset sale."
-msgstr ""
+msgstr ":guilabel:`客户发票`：选择资产出售的客户发票。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:287
 msgid ""
 ":guilabel:`Invoice Line`: The invoice line(s) related to the asset sale."
-msgstr ""
+msgstr ":guilabel:`发票行`：与资产出售相关的发票行。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:289
 msgid ":guilabel:`Note`: Write a note regarding the sale (optional)."
@@ -36506,6 +36605,10 @@ msgid ""
 "company's localization. Therefore, entities operating in different countries "
 "should be set up as companies, not branches."
 msgstr ""
+"在\\ :doc:`多公司 <../general/companies/multi_company>`\\ 环境中，每个公司可"
+"以使用不同的财务本地化模块。但是，\\ :ref:`分支机构 <accounting/branches>`\\ "
+"始终遵循母公司的本地化。因此，在不同国家/地区运营的实体应设置为公司，而非分支"
+"机构。"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:31
 msgid ""
@@ -37100,24 +37203,30 @@ msgid ""
 "fiscal positions, reporting, and a predefined chart of accounts tailored to "
 "Argentina's standards."
 msgstr ""
+"阿根廷本地化包确保符合阿根廷财政和会计法规。它包括用于管理税费、财务状况、报"
+"表以及针对阿根廷标准量身定制的预定义会计科目表的工具。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:64
 msgid ""
 "The Argentinian localization package provides the following key features to "
 "ensure compliance with local fiscal and accounting regulations:"
-msgstr ""
+msgstr "阿根廷本地化包提供以下主要功能，以确保符合当地财政和会计法规："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:67
 msgid ""
 ":ref:`Chart of accounts <localizations/argentina/chart-accounts>`: a "
 "predefined structure tailored to Argentinian accounting standards"
 msgstr ""
+":ref:`会计科目表 <localizations/argentina/chart-accounts>`：针对阿根廷会计标"
+"准量身定制的预定义结构"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:69
 msgid ""
 ":ref:`Taxes <localizations/argentina/taxes>`: pre-configured tax rates, "
 "including standard VAT, zero-rated, and exempt options"
 msgstr ""
+":ref:`税费 <localizations/argentina/taxes>`：预配置的税率，包括标准增值税、零"
+"税率和免税选项"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:71
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:76
@@ -37138,7 +37247,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:73
 msgid ":ref:`Reporting <localizations/argentina/reporting>`"
-msgstr ""
+msgstr ":ref:`报表 <localizations/argentina/reporting>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:80
 msgid ""
@@ -37148,24 +37257,30 @@ msgid ""
 "of package depends on the company’s |ARCA| responsibility type and reflects "
 "the different levels of fiscal complexity required:"
 msgstr ""
+"有三种不同的\\ :doc:`会计科目表 <../accounting/get_started/chart_of_accounts>"
+"`\\ 软件包可在\\ :ref:`配置阿根廷财务本地化 <fiscal_localizations/packages>"
+"`\\ 时使用。软件包的选择取决于公司的\\ |ARCA|\\ 责任类型，并反映了所需的不同"
+"财务复杂程度："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:85
 msgid ""
 ":guilabel:`Monotributista` (227 accounts): Generic chart of accounts "
 "Argentina single taxpayer / basis"
-msgstr ""
+msgstr ":guilabel:`Monotributista` (227 个科目）：阿根廷单一纳税人/基础通用会计科目表"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:87
 msgid ""
 ":guilabel:`Exento` (290 accounts): Argentine generic chart of accounts for "
 "exempt individuals"
-msgstr ""
+msgstr ":guilabel:`Exento` (290 个科目）：阿根廷免税个人通用会计科目表"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:88
 msgid ""
 ":guilabel:`Responsable Inscripto` (298 accounts): Argentine generic chart of "
 "accounts for registered accountants."
 msgstr ""
+":guilabel:`Responsable Inscripto` (298 个科目）：阿根廷注册会计师通用会计科目"
+"表。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:96
 msgid ""
@@ -37182,17 +37297,17 @@ msgstr "Argentina has several tax types, the most common ones are:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:101
 msgid ":guilabel:`VAT`: Regular VAT with various percentages."
-msgstr ""
+msgstr ":guilabel:`增值税`：具有不同税率的常规增值税。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:102
 msgid ""
 ":guilabel:`Perception`: Advance payment of a tax that is applied to invoices."
-msgstr ""
+msgstr ":guilabel:`预收税`：应用于发票的预缴税款。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:103
 msgid ""
 ":guilabel:`Retention`: Advance payment of a tax that is applied to payments."
-msgstr ""
+msgstr ":guilabel:`预扣税`：应用于付款的预缴税款。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:105
 msgid ""
@@ -37200,6 +37315,8 @@ msgid ""
 "therefore labeled as inactive in Odoo by default. Before creating a new tax, "
 "check that the tax is not already included and labeled inactive."
 msgstr ""
+"某些阿根廷税费并非所有公司都常用，因此在 Odoo 中默认标记为已停用。在创建新税"
+"费之前，请检查该税费是否已包含且标记为已停用。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:112
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:260
@@ -37217,6 +37334,9 @@ msgid ""
 "www.arca.gob.ar/>`__ is the governmental fiscal authority that defines such "
 "transactions."
 msgstr ""
+"在某些拉丁美洲国家（如阿根廷），客户发票和供应商账单等会计交易按政府财政部门"
+"定义的单据类型进行分类。在阿根廷，\\ `ARCA <https://www.arca.gob.ar/>`__\\ 是"
+"定义此类交易的政府财政部门。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:119
 msgid ""
@@ -37224,6 +37344,8 @@ msgid ""
 "displayed in printed reports, invoices, and journal entries that list "
 "account moves."
 msgstr ""
+"单据类型是一项重要信息，必须在打印的报表、发票以及列出凭证分录的日记账分录中"
+"清晰显示。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:122
 msgid ""
@@ -37423,6 +37545,8 @@ msgid ""
 ":guilabel:`ARCA POS Number`: The number configured in |ARCA| to identify the "
 "operations related to this ARCA POS."
 msgstr ""
+":guilabel:`ARCA POS 编号`：在\\ |ARCA|\\ 中配置的编号，用于标识与此\\ "
+"|ARCA|\\ POS 相关的操作。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:214
 msgid ""
@@ -37432,24 +37556,27 @@ msgid ""
 "ARCA| will require the company to have one ARCA POS per location. This "
 "location will appear on the invoice report."
 msgstr ""
+":guilabel:`ARCA POS 地址`：与为 POS 注册的营业地址相关的字段，通常与公司地址"
+"相同。例如，如果一家公司拥有多家门店（财务位置），则\\ |ARCA|\\ 将要求该公司"
+"为每个位置设有一个 ARCA POS。该位置将显示在发票报表上。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:219
 msgid ""
 "In ARCA, when configuring the electronic invoicing data, the following "
 "should be configured:"
-msgstr ""
+msgstr "在 ARCA 中配置电子发票数据时，应配置以下内容："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:221
 msgid "Monotributista: Factura Electrónica – Monotributo - WebServices"
-msgstr ""
+msgstr "Monotributista：Factura Electrónica – Monotributo - WebServices"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:222
 msgid "Exento: Facturación Electrónica - exento en IVA - WebServices"
-msgstr ""
+msgstr "Exento：Facturación Electrónica - exento en IVA - WebServices"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:223
 msgid "Responsable Inscripto: RECE para aplicativo y WebServices"
-msgstr ""
+msgstr "Responsable Inscripto: RECE para aplicativo y WebServices"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:228
 msgid "Sequences"
@@ -37459,7 +37586,7 @@ msgstr "序列  Sequences"
 msgid ""
 "For the first invoice, Odoo automatically synchronizes with ARCA and "
 "displays the last sequence used."
-msgstr ""
+msgstr "对于第一张发票，Odoo 会自动与 ARCA 同步并显示最后使用的序列号。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:234
 msgid ""
@@ -37468,6 +37595,9 @@ msgid ""
 "there is no need to manually associate document type sequences, since the "
 "vendor provides the document number."
 msgstr ""
+"创建\\ :guilabel:`采购日记账`\\ 时，请指定它们是否与文档类型相关。启用\\ "
+":guilabel:`使用文档`\\ 选项后，无需手动关联文档类型序列号，因为供应商会提供文"
+"档编号。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:243
 msgid ""
@@ -37477,6 +37607,10 @@ msgid ""
 "to :menuselection:`Accounting --> Reporting`, and select the relevant report "
 "in the :guilabel:`Argentinean Statements` section."
 msgstr ""
+"作为本地化安装的一部分，阿根廷的财务\\ :doc:`报表 <../accounting/reporting>"
+"`\\ 可在\\ :guilabel:`会计`\\ 仪表板中查看。若要访问这些报告，请导航至\\ "
+":menuselection:`会计 --> 报告`\\ ，并在\\ :guilabel:`阿根廷报表`\\ 部分选择相"
+"关报告。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:248
 msgid ""
@@ -37484,6 +37618,9 @@ msgid ""
 "Reporting --> Tax Report`, click :icon:`fa-book` :guilabel:`Report:`, and "
 "select :guilabel:`VAT book (AR)`."
 msgstr ""
+"要访问增值税账簿报告，请前往\\ :menuselection:`会计 --> 报告 --> 税务报告`\\ "
+"，单击\\ :icon:`fa-book` :guilabel:`报告：`\\ ，然后选择\\ :guilabel:`增值税"
+"账簿 (AR)`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:252
 msgid ""
@@ -37491,6 +37628,9 @@ msgid ""
 "Book (ZIP)` or :guilabel:`VAT Simple Report (ZIP)` to generate the VAT Book "
 "or VAT Simple report ZIP file, respectively."
 msgstr ""
+"单击\\ :icon:`fa-cog` :guilabel:`(齿轮)`\\ 图标，然后选择\\ :guilabel:`增值税"
+"账簿 (ZIP)`\\ 或\\ :guilabel:`增值税简易报告 (ZIP)`\\ ，以分别生成增值税账簿"
+"或增值税简易报告 ZIP 文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:259
 msgid "VAT summary"
@@ -37502,6 +37642,8 @@ msgid ""
 "internal use and is not sent to the ARCA. To access it, go "
 "to :menuselection:`Accounting --> Reporting --> VAT Summary`."
 msgstr ""
+"此透视表显示每月增值税总额。此报告仅供内部使用，不会发送至 ARCA。要访问它，请"
+"前往\\ :menuselection:`会计 --> 报告 --> 增值税汇总`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:267
 msgid "IIBB - Sales by jurisdiction"
@@ -37514,6 +37656,9 @@ msgid ""
 "ARCA. To access it, go to :menuselection:`Accounting --> Reporting --> IIBB "
 "Sales by jurisdiction`."
 msgstr ""
+"此透视表显示各管辖区的总收入。它用作相应应纳税额的宣誓书，但不会提交给 ARCA。"
+"要访问它，请前往\\ :menuselection:`会计 --> 报告 --> 按管辖区划分的 IIBB 销"
+"售`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:276
 msgid "IIBB - Purchases by jurisdiction"
@@ -37526,6 +37671,9 @@ msgid ""
 "to the ARCA. To access it, go to :menuselection:`Accounting --> Reporting --"
 "> IIBB --> Purchases by jurisdiction`."
 msgstr ""
+"此透视表显示各管辖区的采购总额。它用作相应应纳税额的宣誓书，但不会提交给 ARCA"
+"。要访问它，请前往\\ :menuselection:`会计 --> 报告 --> IIBB --> 按管辖区划分"
+"的采购`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:285
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:97
@@ -37549,6 +37697,9 @@ msgid ""
 "field, :guilabel:`ARCA Responsibility Type`, to define the company's fiscal "
 "obligation and structure."
 msgstr ""
+"安装本地化模块后，第一步是设置\\ :ref:`公司记录 <general/companies/"
+"configuration>`\\ 。除基本信息外，请务必填写阿根廷特有的\\ :guilabel:`ARCA 责"
+"任类型`\\ 字段，以定义公司的税务义务和架构。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:300
 msgid "Identification type and VAT"
@@ -37562,16 +37713,21 @@ msgid ""
 "Seven :guilabel:`Identification Types` are available by default, as well as "
 "32 inactive types."
 msgstr ""
+"作为阿根廷本地化的一部分，由 |ARCA| 定义的证件类型可在\\ :doc:`联系人表单 "
+"<../../essentials/contacts>`\\ 中使用。信息对于大多数交易至关重要。默认提供 "
+"7 种\\ :guilabel:`证件类型`\\ 以及 32 种非活动类型。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:307
 msgid ""
 "The complete list of :guilabel:`Identification Types` defined by |ARCA| is "
 "included in Odoo, but only the common ones are active."
 msgstr ""
+"Odoo 包含了\\ :guilabel:`证件类型`\\ 的完整列表（由 |ARCA| 定义），但仅常用类"
+"型处于启用状态。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:313
 msgid "ARCA responsibility type"
-msgstr ""
+msgstr "ARCA 责任类型"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:315
 msgid ""
@@ -37580,6 +37736,9 @@ msgid ""
 "Type`. This field should be defined in the :doc:`contact form <../../"
 "essentials/contacts>`."
 msgstr ""
+"在阿根廷，与客户和供应商关联的文档类型及相应交易由\\ :guilabel:`ARCA 责任类"
+"型`\\ 定义。应在\\ :doc:`联系人表单 <../../essentials/contacts>`\\ 中定义此字"
+"段。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:322
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:371
@@ -37600,7 +37759,7 @@ msgstr "环境"
 msgid ""
 "The ARCA infrastructure is replicated across two separate environments, "
 "**testing** and **production**."
-msgstr ""
+msgstr "ARCA 基础设施在两个独立的环境中复制：**测试**与**生产**。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:337
 msgid ""
@@ -37978,6 +38137,8 @@ msgid ""
 "For exportation documents, complete the :guilabel:`Incoterm` field in "
 "the :guilabel:`Accounting` section of the :guilabel:`Other Info` tab."
 msgstr ""
+"对于出口文档，请填写\\ :guilabel:`国际贸易术语`\\ 字段，该字段位于\\ "
+":guilabel:`会计`\\ 部分的\\ :guilabel:`其他信息`\\ 选项卡中。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:521
 msgid "Fiscal bond"
@@ -37990,6 +38151,9 @@ msgid ""
 "www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>`_ "
 "granted by the Ministry of Economy."
 msgstr ""
+"\\ :guilabel:`电子财政债券`\\ 供开具资本货物发票且希望享受经济部授予的\\ `电"
+"子税务债券 <https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-"
+"de-capital>`_\\ 的纳税人使用。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:527
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:552
@@ -38051,6 +38215,9 @@ msgid ""
 "by collecting early on credits and receivables issued to their clients and/"
 "or vendors."
 msgstr ""
+"对于中小企业发票，有几种文档类型被归类为 **MiPyME**，也称为**电子信用发票**（"
+"西班牙语为 |FCE|）。该分类建立了一种机制，可改善中小企业的融资条件，并允许他"
+"们通过提前收回向客户和/或供应商开出的信用和应收账款来提高生产力。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:554
 msgid "Specific document types (201, 202, 206, etc)."
@@ -38058,11 +38225,11 @@ msgstr "Specific document types (201, 202, 206, etc)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:555
 msgid "The emitter should be eligible for MiPyME transactions via |ARCA|."
-msgstr ""
+msgstr "开票方应具备通过 |ARCA| 进行 MiPyME 交易的资格。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:556
 msgid "The amount should be larger than 100,000 ARS."
-msgstr ""
+msgstr "金额应大于 100,000 ARS。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:557
 msgid ""
@@ -38210,6 +38377,8 @@ msgid ""
 "format will be validated automatically. However, if the format is invalid, "
 "an error message indicates the expected format."
 msgstr ""
+"必须手动输入\\ :guilabel:`单据编号`\\ 字段，系统将自动验证格式。但是，如果格"
+"式无效，错误消息会显示预期的格式。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:639
 msgid ""
@@ -38217,16 +38386,20 @@ msgid ""
 "except that the document sequence is entered by the user in the following "
 "format: `Document Prefix - Letter - Document Number`."
 msgstr ""
+"供应商账单编号的结构与客户发票相同，不同之处在于单据序列由用户按以下格式输入"
+"：`单据前缀 - 字母 - 单据编号`。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:646
 msgid "Validate vendor bill number in ARCA"
-msgstr ""
+msgstr "在 ARCA 中验证供应商账单编号"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:648
 msgid ""
 "As most companies have internal controls to verify that the vendor bill is "
 "related to a valid |ARCA| document, an automatic validation can be set."
 msgstr ""
+"由于大多数公司都设有内部控制，用于验证供应商账单是否与有效的\\ |ARCA|\\ 单据"
+"关联，因此可以设置自动验证。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:651
 msgid ""
@@ -38235,6 +38408,9 @@ msgid ""
 "one of the following options under :guilabel:`Verify Vendor Bills validity "
 "in ARCA`:"
 msgstr ""
+"为此，请前往\\ :menuselection:`会计 --> 配置 --> 设置`，向下滚动至\\ "
+":guilabel:`阿根廷本地化`\\ 部分，然后在\\ :guilabel:`在 ARCA 中验证供应商账单"
+"有效性`\\ 下设置以下选项之一："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:655
 msgid ""
@@ -38500,6 +38676,8 @@ msgid ""
 "different records created for a bill and automatically calculates the "
 "correct withholding amount."
 msgstr ""
+"收益阶梯是累加的，这意味着 Odoo 会跟踪为账单创建的不同记录，并自动计算出正确"
+"的预扣金额。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:793
 msgid "IIBB Total Amount"
@@ -38513,6 +38691,9 @@ msgid ""
 "not automatically synchronize the percentages applicable to each province, "
 "this information must be manually updated."
 msgstr ""
+"在这种情况下，必须创建与适用省份相关的必要记录。预扣金额是根据税费配置中设置"
+"的百分比\\ :guilabel:`金额`\\ 计算的。由于 Odoo 不会自动同步适用于各省份的百"
+"分比，因此必须手动更新此信息。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:800
 msgid ""
@@ -38521,6 +38702,8 @@ msgid ""
 "configurations that allow the proper calculation and accounting of the "
 "withholding."
 msgstr ""
+"在这种情况下，建议始终复制各记录并分别应用不同配置，以保留可实现正确计算和核"
+"算预扣的技术配置。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:807
 msgid "IIBB Untaxed"
@@ -38536,6 +38719,10 @@ msgid ""
 "that it is not necessary to establish a non-taxable amount or minimum "
 "withholding for this record type."
 msgstr ""
+"免税营业毛收入预扣的配置与\\ :ref:`总额预扣 <localizations/argentina/iib-"
+"total-amount-withholdings>`\\ 非常相似，因此必须维护每个记录中的百分比\\ "
+":guilabel:`金额`。不过，Odoo 预先配置了适用于不同省份的若干记录。此处的区别在"
+"于，无需为此记录类型设置免税额或最低预扣额。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:818
 msgid "Partner withholding assignation"
@@ -38549,6 +38736,9 @@ msgid ""
 "the :guilabel:`Accounting` tab, find the :guilabel:`Purchase Withholdings` "
 "table."
 msgstr ""
+"为业务伙伴的各项可能预扣完成相应配置后，必须将适用的预扣分配给各个联系人。为"
+"此，请打开“联系人”应用并选择所需的业务伙伴。在\\ :guilabel:`会计`\\ 选项卡中"
+"，找到\\ :guilabel:`采购预扣`\\ 表格。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:825
 msgid ""
@@ -38614,6 +38804,8 @@ msgid ""
 "reconciled with the bank), which will be represented as the payment amount "
 "after the withholding application."
 msgstr ""
+"要核销的债务金额等于付款总额。但是，Odoo 仍会记录净额（即要与银行核对的金额）"
+"，该净额在应用预扣后表示为付款金额。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Payment registered form."
@@ -38628,6 +38820,8 @@ msgid ""
 "Make sure to :ref:`install <general/install>` the :guilabel:`Third Party and "
 "Deferred/Electronic Checks Management` (`l10n_latam_check`) module."
 msgstr ""
+"请确保\\ :ref:`安装 <general/install>`\\ \\ :guilabel:`第三方和延期/电子支票"
+"管理`\\ （`l10n_latam_check`）模块。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:867
 msgid ""
@@ -38646,7 +38840,7 @@ msgstr "优化*自有支票*和*第三方支票*的管理"
 msgid ""
 "Have an easy and effective way to manage expiration dates for your own and "
 "third-party checks."
-msgstr ""
+msgstr "以简便有效的方式管理自有支票和第三方支票的到期日。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:873
 msgid ""
@@ -38654,6 +38848,8 @@ msgid ""
 "flow, it is also needed to complete certain configurations for the own "
 "checks and third-party checks flows."
 msgstr ""
+"为阿根廷电子发票流程完成所有配置后，还需要针对自有支票和第三方支票流程完成相"
+"应配置。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:879
 msgid "Own checks"
@@ -38684,15 +38880,15 @@ msgstr "启用 :guilabel:`使用电子及递延支票` 设置。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:890
 msgid "This last configuration disables the printing ability but:"
-msgstr ""
+msgstr "这最后一项配置会停用打印功能，但："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:892
 msgid "allows check numbers to be entered manually"
-msgstr ""
+msgstr "允许手动输入支票号码"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:893
 msgid "adds a field to indicate the payment date of the check"
-msgstr ""
+msgstr "添加用于指明支票付款日期的字段"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:898
 msgid "Management of own checks"
@@ -38702,7 +38898,7 @@ msgstr "管理自有支票"
 msgid ""
 "Own checks can be created directly from the vendor bill. For this process, "
 "click :guilabel:`Register Payment`."
-msgstr ""
+msgstr "可以直接从供应商账单创建自有支票。为此，请点击\\ :guilabel:`登记付款`。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:903
 msgid ""
@@ -38710,6 +38906,8 @@ msgid ""
 "payment is to be made and set the :guilabel:`Check Cash-In Date` "
 "and :guilabel:`Amount`."
 msgstr ""
+"在\\ :guilabel:`付款`\\ 窗口中，选择用于付款的银行日记账，并设置\\ "
+":guilabel:`支票兑现日期`\\ 和\\ :guilabel:`金额`。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:907
 msgid ""
@@ -38727,6 +38925,9 @@ msgid ""
 "including the dates checks must be paid, the total number of checks, and the "
 "total amount paid in checks."
 msgstr ""
+"如要管理现有的自有支票，请前往\\ :menuselection:`会计 --> 供应商 --> 自有支"
+"票`。该窗口会显示关键信息，包括支票必须支付的日期、支票总数以及通过支票支付的"
+"总金额。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:915
 msgid ""
@@ -38753,6 +38954,9 @@ msgid ""
 "reconciliation between vendor bills and bank statements, leaving the check "
 "marked as :guilabel:`Cancelled`."
 msgstr ""
+"要取消在 Odoo 中创建的自开支票，请前往\\ :menuselection:`会计 --> 供应商 --> "
+"自开支票`\\ 并选择要取消的支票，然后点击\\ :guilabel:`作废支票`\\ 。这会解除"
+"供应商账单与银行对账单之间的对账，并将支票标记为\\ :guilabel:`已取消`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:933
 msgid "Third-party checks"
@@ -38764,6 +38968,8 @@ msgid ""
 "configured. To do so, navigate to :menuselection:`Accounting --> "
 "Configuration --> Journals` and create two new journals:"
 msgstr ""
+"要使用第三方支票登记付款，必须配置两个特定日记账。为此，请前往\\ "
+":menuselection:`会计 --> 配置 --> 日记账`\\ 并创建两个新日记账："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:938
 msgid "`Third-Party Checks`"
@@ -38777,13 +38983,13 @@ msgstr "`拒绝的第三方支票`"
 msgid ""
 "You can manually create additional journals if you have multiple points of "
 "sale and need journals for those."
-msgstr ""
+msgstr "如果您有多个销售点且需要相应的日记账，可以手动创建更多日记账。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:945
 msgid ""
 "To create the *Third-Party Checks* journal, click :guilabel:`New` and "
 "configure the following:"
-msgstr ""
+msgstr "要创建\\ *第三方支票*\\ 日记账，请点击\\ :guilabel:`新建`\\ 并配置以下内容："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:947
 msgid "Type `Third-Party Checks` as the :guilabel:`Journal Name`."
@@ -38806,7 +39012,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:952
 msgid ""
 "The available payment methods are listed in the :guilabel:`Payments` tab:"
-msgstr ""
+msgstr "可用付款方式列于\\ :guilabel:`付款`\\ 标签页中："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:954
 msgid ""
@@ -38814,6 +39020,9 @@ msgid ""
 "the :guilabel:`Incoming Payments` tab and select :guilabel:`New Third Party "
 "Checks`. This method is used to create *new* third-party checks."
 msgstr ""
+"对于新收到的第三方支票，请点击\\ :guilabel:`添加行`\\ （在\\ :guilabel:`收"
+"款`\\ 标签页中），然后选择\\ :guilabel:`新第三方支票`\\ 。此方法用于创建\\ "
+"*新*\\ 第三方支票。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:957
 msgid ""
@@ -38824,12 +39033,16 @@ msgid ""
 "pay vendor bills using already *existing* checks, as well as for internal "
 "transfers."
 msgstr ""
+"对于进出款项的现有第三方支票，请点击\\ :guilabel:`添加行`\\ （在\\ "
+":guilabel:`收款`\\ 标签页中），然后选择\\ :guilabel:`现有第三方支票`\\ 。在\\"
+" :guilabel:`付款`\\ 标签页中重复相同步骤。此方法用于使用已\\ *存在*\\ 的支票"
+"收取款项和/或支付供应商账单，以及进行内部转账。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:963
 msgid ""
 "You can delete pre-existing payment methods that appear by default when "
 "configuring third-party check journals."
-msgstr ""
+msgstr "在配置第三方支票日记账时，您可以删除默认显示的预设付款方式。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:966
 msgid ""
@@ -38838,12 +39051,16 @@ msgid ""
 "can be used to send checks rejected at the time of collection or upon "
 "receipt from vendors."
 msgstr ""
+"还必须创建和/或配置\\ *退回的第三方支票*\\ 日记账。该日记账用于管理被拒绝的第"
+"三方支票，并可用于发送在托收时或从供应商处收到时被拒绝的支票。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:970
 msgid ""
 "To create the *Rejected Third-Party Checks* journal, click :guilabel:`New` "
 "and configure the following:"
 msgstr ""
+"要创建\\ *退回的第三方支票*\\ 日记账，请点击\\ :guilabel:`新建`\\ 并配置以下"
+"内容："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:973
 msgid "Type `Rejected Third Party Checks` as the :guilabel:`Journal Name`"
@@ -42542,6 +42759,9 @@ msgid ""
 "exported. Open **WinBooks** and navigate to :menuselection:`Maintenance --> "
 "Backup`. Then, select to export the following data as a `.zip` file:"
 msgstr ""
+"在将数据导入 Odoo 之前，必须准备好要导出的数据。打开 **WinBooks** 并前往\\ "
+":menuselection:`维护保养 --> 备份`\\ 。然后，选择将以下数据导出为 `.zip` 文件"
+"："
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:820
 msgid "Chart of accounts,"
@@ -42557,7 +42777,7 @@ msgstr "税项"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:823
 msgid "History of journal entries,"
-msgstr ""
+msgstr "日记账分录历史，"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:824
 msgid "Documents."
@@ -42566,11 +42786,11 @@ msgstr "文件"
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:827
 msgid ""
 "The following WinBooks Desktop versions are supported: 5.50, 6, 7, and 8."
-msgstr ""
+msgstr "支持以下 WinBooks Desktop 版本：5.50、6、7 和 8。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:828
 msgid "File sizes beyond 396 MB may not work during the import."
-msgstr ""
+msgstr "超过 396 MB 的文件在导入过程中可能无法正常工作。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:830
 msgid ""
@@ -42581,6 +42801,11 @@ msgid ""
 "click :icon:`oi-arrow-right` :guilabel:`Import`. Finally, "
 "click :guilabel:`Import WBK` and upload the previously prepared `.zip` file."
 msgstr ""
+"要将数据导入 Odoo，请\\ :doc:`安装 <../../general/apps_modules>`\\ 模块\\ "
+":guilabel:`会计 Winbooks 导入`\\ （`account_winbooks_import`）。然后，打"
+"开**会计**应用程序，并前往\\ :menuselection:`配置 --> 设置`\\ 。在\\ "
+":guilabel:`会计导入`\\ 部分下，点击\\ :icon:`oi-arrow-right` :guilabel:`导"
+"入`\\ 。最后，点击\\ :guilabel:`导入 WBK`\\ 并上传之前准备好的 `.zip` 文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:836
 msgid ""
@@ -42588,6 +42813,8 @@ msgid ""
 "years. Years closed in WinBooks are likely to have incomplete data. The "
 "counterpart of incomplete entries will be set in a suspense account."
 msgstr ""
+"如需仅导入未结年份，请勾选\\ :guilabel:`仅导入未结年份`\\ 。在 WinBooks 中已"
+"结账的年份数据可能不完整。不完整分录的对应项将计入暂记账户。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:840
 msgid ""
@@ -42595,11 +42822,13 @@ msgid ""
 "suspense account used to balance incomplete entries in "
 "the :guilabel:`Suspense Account Code` field."
 msgstr ""
+"如果选择导入在 WinBooks 中已结账的年份，请在\\ :guilabel:`暂记账户代码`\\ 字"
+"段中输入用于平衡不完整分录的暂记账户代码。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:843
 msgid ""
 "Once configured, click :guilabel:`Import` to import your data into Odoo."
-msgstr ""
+msgstr "配置完成后，点击\\ :guilabel:`导入`\\ 将数据导入 Odoo。"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:3
 msgid "Brazil"
@@ -45026,42 +45255,48 @@ msgid ""
 "Make sure to :ref:`install <general/install>` the :guilabel:`CPA005 "
 "Payments` (`l10n_ca_payment_cpa005`) module."
 msgstr ""
+"请务必\\ :ref:`安装 <general/install>`\\ :guilabel:`CPA005 付款`\\ "
+"(`l10n_ca_payment_cpa005`) 模块。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:353
 msgid "The following configurations are required:"
-msgstr ""
+msgstr "需要进行以下配置："
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:355
 msgid ""
 "Make sure to fill in the necessary fields on the :doc:`company record </"
 "applications/general/companies>`:"
 msgstr ""
+"请务必填写\\ :doc:`公司记录 </applications/general/companies>`\\ 中的必填字段"
+"："
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:358
 msgid ":guilabel:`Country`: Canada."
-msgstr ""
+msgstr ":guilabel:`国家`：加拿大。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:359
 msgid ""
 ":guilabel:`Short Name used in Canadian EFT`: Enter a short version of "
 "the :guilabel:`Company Name`, limited to a maximum of 15 characters."
 msgstr ""
+":guilabel:`加拿大 EFT 中使用的简称`：输入\\ :guilabel:`公司名称`\\ 的简称，最"
+"多不超过 15 个字符。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:363
 msgid "Most banks require this value to be all uppercase letters."
-msgstr ""
+msgstr "大多数银行要求该值全部为大写字母。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:364
 msgid ""
 "Both the :guilabel:`Company Name` and the short name appear in the CPA005 "
 "file."
-msgstr ""
+msgstr "CPA005 文件中会同时显示\\ :guilabel:`公司名称`\\ 和简称。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:366
 msgid ""
 "Set up the CPA005 information in the :ref:`Bank journal <accounting/journals/"
 "bank>`:"
-msgstr ""
+msgstr "在\\ :ref:`银行日记账 <accounting/journals/bank>`\\ 中设置 CPA005 信息："
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:369
 msgid ""
@@ -45069,18 +45304,24 @@ msgid ""
 "access_rights>` in the :guilabel:`Accounting` section to validate bank "
 "accounts."
 msgstr ""
+"请确保具有适当的\\ :doc:`访问权限 <../../general/users/access_rights>`，以便"
+"在\\ :guilabel:`会计`\\ 部分中验证银行账户。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:372
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Journals` and access "
 "the relevant :guilabel:`Bank` journal."
 msgstr ""
+"前往\\ :menuselection:`会计 --> 配置 --> 日记账`\\ 并访问相关的\\ "
+":guilabel:`银行`\\ 日记账。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:374
 msgid ""
 "In  the :guilabel:`Journal Entries` tab, enter the bank :ref:`Account Number "
 "and Bank <accounting/journals/bank>` details."
 msgstr ""
+"在\\ :guilabel:`日记账分录`\\ 选项卡中，输入银行\\ :ref:`账号和银行 "
+"<accounting/journals/bank>`\\ 详细信息。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:376
 msgid ""
@@ -45088,51 +45329,61 @@ msgid ""
 "EFT` Payment Method is set. Then, complete the following fields in "
 "the :guilabel:`Canadian EFT/CPA configuration` section:"
 msgstr ""
+"在\\ :guilabel:`付款`\\ 选项卡中，确保已设置\\ :guilabel:`加拿大 EFT`\\ 付款"
+"方式。然后，在\\ :guilabel:`加拿大 EFT/CPA 配置`\\ 部分填写以下字段："
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:380
 msgid ""
 ":guilabel:`Destination Data Center`: Enter the 5-digit ID provided by your "
 "bank."
-msgstr ""
+msgstr ":guilabel:`目标数据中心`：输入银行提供的 5 位数 ID。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:381
 msgid ""
 ":guilabel:`Originator ID`: Enter the 10-digit code provided by your bank."
-msgstr ""
+msgstr ":guilabel:`发起人 ID`：输入银行提供的 10 位数代码。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:382
 msgid ""
 ":guilabel:`Next File Creation Number (FCN)`: Enter a sequence between `1` "
 "and `9,999` that will appear on the CPA005 file."
 msgstr ""
+":guilabel:`下一个文件创建编号 (FCN)`：输入将在 CPA005 文件中显示的介于 `1` "
+"到 `9,999` 之间的序列号。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:385
 msgid ""
 "Make sure the :guilabel:`Bank Account` information is properly set up in "
 "the :ref:`Accounting tab <contacts/accounting-tab>` for the relevant vendor."
 msgstr ""
+"确保相关供应商的\\ :guilabel:`银行账户`\\ 信息已在\\ :ref:`会计选项卡 "
+"<contacts/accounting-tab>`\\ 中正确设置。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:391
 msgid "CPA005 EFT payments"
-msgstr ""
+msgstr "CPA005 EFT 付款"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:394
 msgid ""
 "Make sure that :ref:`batch payments are enabled <accounting/batch/"
 "configuration>`."
-msgstr ""
+msgstr "确保\\ :ref:`已启用批量付款 <accounting/batch/configuration>`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:396
 msgid ""
 "To pay vendor bills using an :abbr:`EFT (Electronic Funds Transfer)` via the "
 "CPA005 file format, follow these steps:"
 msgstr ""
+"若要通过 CPA005 文件格式使用\\ :abbr:`EFT（电子转账）`\\ 支付供应商账单，请按"
+"照以下步骤操作："
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:399
 msgid ""
 "When :ref:`registering payments for vendor bills <accounting/payments/group-"
 "payments>`, select the :guilabel:`Canadian EFT` payment method."
 msgstr ""
+"在\\ :ref:`登记供应商账单付款 <accounting/payments/group-payments>`\\ 时，选"
+"择\\ :guilabel:`加拿大 EFT`\\ 付款方式。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:401
 msgid ""
@@ -45140,12 +45391,16 @@ msgid ""
 "relevant payments, and select the :guilabel:`EFT/CPA transaction code` for "
 "each payment."
 msgstr ""
+"前往\\ :menuselection:`会计 --> 供应商 --> 付款`\\ ，进入相关付款，并为每笔付"
+"款选择\\ :guilabel:`EFT/CPA 交易代码`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:403
 msgid ""
 "In the :guilabel:`Vendor Payments` list view, select the relevant payments "
 "and click :guilabel:`Create Batch`."
 msgstr ""
+"在\\ :guilabel:`供应商付款`\\ 列表视图中，选择相关付款并点击\\ :guilabel:`创"
+"建批次`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:405
 msgid ""
@@ -45153,6 +45408,8 @@ msgid ""
 "Creation Number`, before validating the batch payment, as modifications can "
 "be more complex once validated."
 msgstr ""
+"在确认批量付款之前，请核对信息（例如\\ :guilabel:`日期`\\ 和\\ :guilabel:`文"
+"件创建编号`\\ ），因为一旦确认，修改可能会更复杂。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:407
 msgid "Click :guilabel:`Validate`."
@@ -45162,13 +45419,13 @@ msgstr "点击\\ :guilabel:`验证`\\ 。"
 msgid ""
 "The generated CPA005 TXT file is available in the chatter for download and "
 "bank import."
-msgstr ""
+msgstr "生成的 CPA005 TXT 文件可在 chatter 中下载并导入银行。"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:412
 msgid ""
 "After importing the file into your banking system, payment processing may "
 "take up to 48 hours."
-msgstr ""
+msgstr "将文件导入银行系统后，付款处理最多可能需要 48 小时。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:3
 msgid "Chile"
@@ -49883,14 +50140,16 @@ msgid ""
 ":guilabel:`Denmark P`, :guilabel:`Denmark CVR`, or :guilabel:`Denmark SE`: "
 "Select one of the options and enter the related number."
 msgstr ""
+":guilabel:`丹麦 P`\\ 、\\ :guilabel:`丹麦 CVR`\\ 或\\ :guilabel:`丹麦 SE`：选"
+"择其中一个选项并输入相关编号。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:153
 msgid "When done, click :guilabel:`Activate Peppol`."
-msgstr ""
+msgstr "完成后，单击\\ :guilabel:`启用 Peppol`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:156
 msgid "Updating contact details"
-msgstr ""
+msgstr "更新联系人详情"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:158
 msgid ""
@@ -49899,11 +50158,14 @@ msgid ""
 "and :guilabel:`Primary contact Email` of your choice, and then "
 "click :guilabel:`Update`."
 msgstr ""
+"要更新您的 Peppol 联系人详情，请前往\\ :menuselection:`会计 --> 配置 --> 设"
+"置`\\ 。选择所需的\\ :guilabel:`进项发票日记账`\\ 与\\ :guilabel:`主要联系人"
+"电子邮箱`\\ ，然后单击\\ :guilabel:`更新`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:162
 msgid ""
 "To deregister from the Peppol system, click :guilabel:`Remove from Peppol`."
-msgstr ""
+msgstr "要从 Peppol 系统注销，请单击\\ :guilabel:`从 Peppol 移除`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:165
 msgid ""
@@ -49911,14 +50173,16 @@ msgid ""
 "ability to send customer invoices, click :guilabel:`Disable the reception`. "
 "To re-enable it, click :guilabel:`Allow reception`."
 msgstr ""
+"若要禁用通过 Peppol 接收文档，但保留发送客户发票的功能，请单击\\ "
+":guilabel:`禁用接收`\\ 。若要重新启用，请单击\\ :guilabel:`允许接收`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:170
 msgid "Your **Peppol ID** is found in this section."
-msgstr ""
+msgstr "您的 **Peppol ID** 可以在此部分找到。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:173
 msgid "FIK number"
-msgstr ""
+msgstr "FIK 编号"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:175
 msgid ""
@@ -49930,25 +50194,30 @@ msgid ""
 "Click the :guilabel:`Advanced Settings` tab and configure the following "
 "settings if necessary:"
 msgstr ""
+"要在客户发票上生成并使用\\ :abbr:`FIK (Fælles Indbetalingskort)`\\ 付款参考，"
+"请\\ :doc:`安装 <../../general/apps_modules>`\\ 模块\\ :guilabel:`丹麦 - FIK "
+"编号`\\ 。要验证用于 FIK 付款参考的设置，请前往\\ :menuselection:`会计 --> 配"
+"置 --> 日记账`\\ ，然后选择\\ :guilabel:`销售`\\ 类型的相关日记账。单击\\ "
+":guilabel:`高级设置`\\ 选项卡，并在必要时配置以下设置："
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:181
 msgid ":guilabel:`Communication Type`: Set it to :guilabel:`Based on Invoice`."
-msgstr ""
+msgstr ":guilabel:`通信类型`：将其设置为\\ :guilabel:`基于发票`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:182
 msgid ""
 ":guilabel:`Communication Standard`: Select the communication standard "
 "required."
-msgstr ""
+msgstr ":guilabel:`通信标准`：选择所需的通信标准。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:183
 msgid ""
 ":guilabel:`FIK Creditor Number`: Enter the FIK creditor number (8-digit)."
-msgstr ""
+msgstr ":guilabel:`FIK 债权人编号`：输入 FIK 债权人编号（8 位数）。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:186
 msgid "RSU tax report"
-msgstr ""
+msgstr "RSU 税务报告"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:188
 msgid ""
@@ -49958,26 +50227,30 @@ msgid ""
 "Return`. Click :guilabel:`Send report`, and in the new window, fill out the "
 "fields:"
 msgstr ""
+"要向丹麦税务机关报告您的\\ :abbr:`RSU (Restricted Stock Units)`\\ ，请前往\\ "
+":menuselection:`会计 --> 报告 --> 纳税申报表`\\ ，然后单击\\ :icon:`fa-cog` "
+":guilabel:`（齿轮）`\\ （位于\\ :guilabel:`纳税申报表`\\ 旁边）。单击\\ "
+":guilabel:`发送报告`\\ ，并在新窗口中填写以下字段："
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:193
 msgid ":guilabel:`Period Starting Date`: The starting date of the period."
-msgstr ""
+msgstr ":guilabel:`期间开始日期`：期间的开始日期。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:194
 msgid ":guilabel:`Period Ending Date`: The ending date of the period."
-msgstr ""
+msgstr ":guilabel:`期间结束日期`：期间的结束日期。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:195
 msgid ":guilabel:`Description`: Enter a description of the declaration type."
-msgstr ""
+msgstr ":guilabel:`描述`：输入申报类型的描述。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:197
 msgid "When done, click :guilabel:`Send Interval`."
-msgstr ""
+msgstr "完成后，点击\\ :guilabel:`发送间隔`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:200
 msgid "SAF-T format"
-msgstr ""
+msgstr "SAF-T 格式"
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:203
 msgid "Import"
@@ -55163,17 +55436,17 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:23
 msgid ":guilabel:`Germany - Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`德国 - 会计报告`"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:24
 msgid "`l10n_de_reports`"
-msgstr ""
+msgstr "`l10n_de_reports`"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:25
 msgid ""
 "Provides German accounting reports and adds DATEV export options to the "
 "general ledger."
-msgstr ""
+msgstr "提供德国会计报告，并向总账添加 DATEV 导出选项。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:26
 msgid ":guilabel:`Germany - Certification for Point of Sale`"
@@ -55307,6 +55580,9 @@ msgid ""
 "and tax number (:guilabel:`St.-Nr.`) are required on the :doc:`company "
 "record </applications/general/companies>`."
 msgstr ""
+"如要向 Elster 提交 *UStVA*（增值税预申报），\\ :guilabel:`增值税`\\ ID 与税号"
+"（\\ :guilabel:`St.-Nr.`\\ ）在\\ :doc:`公司记录 </applications/general/"
+"companies>`\\ 上是必填项。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:115
 msgid ""
@@ -55314,6 +55590,8 @@ msgid ""
 "entered, data is sent to Elster upon :ref:`submission of the tax return "
 "<accounting/tax-returns/vat-report>`."
 msgstr ""
+"安装该模块并输入增值税 ID 和税号后，将在\\ :ref:`提交纳税申报表 <accounting/"
+"tax-returns/vat-report>`\\ 时将数据发送至 Elster。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:118
 #: ../../content/applications/finance/payment_providers.rst:272
@@ -55325,6 +55603,8 @@ msgid ""
 "To set the test mode and use the Elster integration without sending real "
 "data, follow these steps:"
 msgstr ""
+"如需设置测试模式并在不发送实际数据的情况下使用 Elster 集成，请按照以下步骤操"
+"作："
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:123
 msgid "Enable :ref:`developer mode <developer-mode>`."
@@ -55341,6 +55621,8 @@ msgid ""
 "Click :guilabel:`New` to add the `l10n_de_reports_elster.elster_proxy_mode` "
 "key and set its value to `test`."
 msgstr ""
+"单击\\ :guilabel:`新建`\\ 以添加 `l10n_de_reports_elster.elster_proxy_mode` "
+"键，并将其值设为 `test`。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:130
 msgid ""
@@ -55348,6 +55630,8 @@ msgid ""
 "in the tax return's chatter for download and bank import, along with the XML "
 "file for manual upload via Elster.de and the tax reports."
 msgstr ""
+"提交完成后，生成的 CPA005 TXT 文件将显示在纳税申报表的 chatter 中，以便下载和"
+"进行银行导入，同时还提供用于通过 Elster.de 手动上传的 XML 文件和税务报告。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:142
 msgid "Taxable supply date"
@@ -55361,6 +55645,9 @@ msgid ""
 "automatically aligns the invoice's accounting date, ensuring that the "
 "journal entry and the associated VAT are recognized in the correct period."
 msgstr ""
+"在发票上设置\\ :guilabel:`应税供应日期`\\ ，以反映在创建发票之前所提供商品或"
+"服务的实际交付日期（例如，5 月交付服务，6 月创建发票）。填写此字段会自动对齐"
+"发票的会计日期，确保日记账分录和相关增值税在正确的期间进行确认。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:150
 msgid ""
@@ -55369,6 +55656,9 @@ msgid ""
 "allowed. Consequently, the journal entry will automatically be posted in the "
 "current open period."
 msgstr ""
+"如果上一期间已关闭并锁定（通过\\ :ref:`锁定日期 <accounting/tax-returns/lock-"
+"date>`\\ ），则不允许在该期间进行过账。因此，日记账分录将自动过账到当前未结期"
+"间。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:155
 msgid ""
@@ -55377,6 +55667,9 @@ msgid ""
 "the :guilabel:`DIN 5008` layout, ensure the :guilabel:`Delivery Date` field "
 "is filled to display the date on the generated PDF invoice."
 msgstr ""
+"此\\ :guilabel:`应税供应日期字段`\\ 用于会计目的，不会显示在打印报告中。使"
+"用\\ :guilabel:`DIN 5008`\\ 布局时，请确保填写\\ :guilabel:`交付日期`\\ 字段"
+"，以便在生成的 PDF 发票上显示该日期。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:162
 msgid "Exporting entries from Odoo to DATEV"
@@ -55388,6 +55681,8 @@ msgid ""
 "<fiscal_localizations/packages>` is installed, accounting entries from Odoo "
 "can be exported to DATEV from the general ledger."
 msgstr ""
+"只要安装了德国\\ :ref:`财务本地化包 <fiscal_localizations/packages>`\\ 之一，"
+"就可以将 Odoo 的会计分录从总账导出到 DATEV。"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:168
 msgid ""
@@ -55407,7 +55702,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:178
 msgid "DATEV DATA"
-msgstr ""
+msgstr "DATEV DATA"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:180
 msgid ""
@@ -55464,7 +55759,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:203
 msgid "DATEV ATCH"
-msgstr ""
+msgstr "DATEV ATCH"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:205
 msgid ""
@@ -56745,7 +57040,7 @@ msgstr "香港"
 msgid ""
 "The following modules are installed automatically with the Hong Kong "
 "localization:"
-msgstr ""
+msgstr "香港本地化会自动安装以下模块："
 
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:16
 msgid ":guilabel:`Hong Kong - Accounting`"
@@ -56763,15 +57058,15 @@ msgstr "管理香港会计科目表和本地化的基础模块。"
 
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:19
 msgid ":guilabel:`Hong Kong - Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`香港 - 会计报表`"
 
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:20
 msgid "`l10n_hk_reports`"
-msgstr ""
+msgstr "`l10n_hk_reports`"
 
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:21
 msgid "Accounting reports specific to the Hong Kong localization"
-msgstr ""
+msgstr "特定于香港本地化的会计报表"
 
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:24
 msgid ""
@@ -56779,6 +57074,8 @@ msgid ""
 "modules. A manual :ref:`update <general/upgrade>` may be required for "
 "missing elements or updates."
 msgstr ""
+"本地化会自动\\ :ref:`安装 <general/install>`\\ 核心模块。若缺少某些组件或需要"
+"更新，可能需要手动\\ :ref:`更新 <general/upgrade>`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:28
 msgid ""
@@ -61216,7 +61513,7 @@ msgstr "当发票发送到 JoFotara 时，Odoo 会执行以下操作："
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:186
 msgid "generates the invoice in the required format (UBL 2.1)"
-msgstr ""
+msgstr "以所需格式（UBL 2.1）生成发票"
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:187
 msgid "submits the invoice to JoFotara for validation"
@@ -61431,7 +61728,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:42
 msgid ":guilabel:`Kenya - Point of Sale`"
-msgstr ""
+msgstr ":guilabel:`肯尼亚 - POS`"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:43
 msgid "`l10n_ke_edi_oscu_pos`"
@@ -61683,7 +61980,7 @@ msgstr "第 5 部分：勾选必填复选框，输入日期并签名。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:147
 msgid "Integration tokens"
-msgstr ""
+msgstr "集成令牌"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:149
 msgid ""
@@ -61867,6 +62164,8 @@ msgid ""
 "The **OSCU** device must be :ref:`initialized independently <localizations/"
 "kenya/initialization>` for each branch."
 msgstr ""
+"**OSCU** 设备必须为每个分支机构\\ :ref:`独立初始化 <localizations/kenya/"
+"initialization>`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:237
 msgid "Contact branch ID"
@@ -62011,7 +62310,7 @@ msgstr "\\ :guilabel:`适用保险`\\ "
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:304
 msgid ":ref:`UNSPSC Category <localizations/kenya/unspsc-codes>`."
-msgstr ""
+msgstr ":ref:`UNSPSC 类别 <localizations/kenya/unspsc-codes>`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:306
 msgid ""
@@ -62068,6 +62367,8 @@ msgid ""
 "registration>` for the stock move to be sent to eTIMS. If a product has not "
 "been registered yet, a yellow banner will prompt the product's registration."
 msgstr ""
+"所有产品必须经过\\ :ref:`注册 <localizations/kenya/product-registration>`\\ "
+"，库存调拨才能发送到 eTIMS。如果产品尚未注册，黄色横幅将提示注册该产品。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:338
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:90
@@ -62227,11 +62528,11 @@ msgstr "签名发票的唯一 **KRA QR 码**。"
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:400
 msgid ""
 "If the error message :guilabel:`Invoice number already exists.` appears:"
-msgstr ""
+msgstr "如果出现错误消息\\ :guilabel:`发票号码已存在。`\\ ："
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:402
 msgid "Go to your eTIMS portal and check the last invoice number used."
-msgstr ""
+msgstr "前往您的 eTIMS 门户，查看最后使用的发票号码。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:403
 msgid ""
@@ -62239,6 +62540,9 @@ msgid ""
 "to :menuselection:`Settings --> Technical --> Sequences` and search "
 "for :guilabel:`eTIMS Customer Invoice Number`."
 msgstr ""
+"打开您的 Odoo 数据库，启用\\ :doc:`../../general/developer_mode`\\ ，然后前"
+"往\\ :menuselection:`设置 --> 技术 --> 序号`\\ 并搜索\\ :guilabel:`eTIMS 客户"
+"发票号码`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:406
 msgid ""
@@ -62246,6 +62550,8 @@ msgid ""
 "sequence number (for example, if the last invoice number on eTIMS was 31, "
 "set this field to 32)."
 msgstr ""
+"点击该项并将\\ :guilabel:`下一编号`\\ 字段更改为下一个可用序号（例如，如果 "
+"eTIMS 上最后使用的发票号码为 31，则将此字段设置为 32）。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:412
 msgid "Imports"
@@ -62307,6 +62613,8 @@ msgid ""
 "order (see :ref:`purchase steps <localizations/kenya/purchases>`). The stock "
 "must be correctly adjusted when the customs import is approved."
 msgstr ""
+"根据业务伙伴，将导入项目与其相关的采购订单进行匹配（参见\\ :ref:`采购步骤 "
+"<localizations/kenya/purchases>`\\ ）。海关进口获得批准后，必须正确调整库存。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:435
 msgid ""
@@ -62340,6 +62648,9 @@ msgid ""
 "product-registration>`. To access a product's BOM, click the product and "
 "then click the :guilabel:`Bill of Materials` smart button."
 msgstr ""
+"KRA 要求向其发送所有物料清单。要将物料清单发送至 eTIMS，产品及其组件\\ *必"
+"须*\\ 进行\\ :ref:`注册 <localizations/kenya/product-registration>`\\ 。要访"
+"问产品的物料清单，点击该产品，然后点击\\ :guilabel:`物料清单`\\ 智能按钮。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:454
 msgid ""
@@ -62350,6 +62661,10 @@ msgid ""
 "confirmed in the chatter, where you can also find the sent information in an "
 "attached JSON file."
 msgstr ""
+"请确保\\ :ref:`KRA 必填字段 <localizations/kenya/product-registration>`\\ 已"
+"填写在\\ :guilabel:`KRA eTIMS 详细信息`\\ 部分（位于产品表单的\\ "
+":guilabel:`会计`\\ 选项卡），然后点击\\ :guilabel:`发送至 eTIMS`\\ 。物料清单"
+"成功发送后会在 chatter 中确认，您也可以在随附的 JSON 文件中找到已发送的信息。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:464
 msgid ""
@@ -74102,23 +74417,23 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:101
 msgid ":guilabel:`Spain - SMEs (2008)`"
-msgstr ""
+msgstr ":guilabel:`西班牙 - 中小企业 (2008)`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:102
 msgid ":guilabel:`Spain - Non-profit entities (2008)`"
-msgstr ""
+msgstr ":guilabel:`西班牙 - 非营利实体 (2008)`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:103
 msgid ":guilabel:`Spain - Cooperatives - Complete (2008)`"
-msgstr ""
+msgstr ":guilabel:`西班牙 - 合作社 - 完整 (2008)`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:104
 msgid ":guilabel:`Spain - Cooperatives - SMEs (2008)`"
-msgstr ""
+msgstr ":guilabel:`西班牙 - 合作社 - 中小企业 (2008)`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:105
 msgid ":guilabel:`Spain - Complete (2008)`"
-msgstr ""
+msgstr ":guilabel:`西班牙 - 完整 (2008)`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:107
 msgid ""
@@ -74126,18 +74441,20 @@ msgid ""
 "up by default with the :guilabel:`Spain - SMEs (2008)` fiscal localization "
 "package."
 msgstr ""
+"创建以西班牙为所选国家/地区的全新 Odoo 在线数据库时，默认配置\\ :guilabel:`西"
+"班牙 - 中小企业 (2008)`\\ 财务本地化包。"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:115
 msgid "The Spanish-specific statement reports available are:"
-msgstr ""
+msgstr "可用的西班牙特定报表包括："
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:118
 msgid "Profit & Loss (ES)"
-msgstr ""
+msgstr "损益表 (ES)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:120
 msgid ":ref:`Tax report (Modelo) <localizations/spain/tax-report>`"
-msgstr ""
+msgstr ":ref:`税务报告 (Modelo) <localizations/spain/tax-report>`"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:127
 msgid ""
@@ -74145,14 +74462,17 @@ msgid ""
 "to :menuselection:`Accounting --> Reporting --> Tax Report`, click :icon:`fa-"
 "book` :guilabel:`Report:` and select one of the following:"
 msgstr ""
+"若要访问西班牙特定的税务报告 (Modelo)，请前往\\ :menuselection:`会计 --> 报"
+"告 --> 税务报告`\\ ，点击\\ :icon:`fa-book` :guilabel:`报告:`\\ 并选择以下选"
+"项之一："
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:130
 msgid "Tax Report (Mod 111)(ES)"
-msgstr ""
+msgstr "税务报告 (Mod 111)(ES)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:131
 msgid "Tax Report (Mod 115)(ES)"
-msgstr ""
+msgstr "税务报告 (Mod 115)(ES)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:132
 msgid ":ref:`Tax Report (Mod 130)(ES) <localizations/spain/modelo-130>`"
@@ -74834,7 +75154,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:64
 msgid "Updated VAT for January 2025"
-msgstr ""
+msgstr "2025 年 1 月增值税更新"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:66
 msgid ""
@@ -74843,6 +75163,8 @@ msgid ""
 "the hotel sector switched to 3.8%. Basic needs goods have a reduced rate of "
 "2.6% applied."
 msgstr ""
+"自 2025 年 1 月 1 日起，瑞士将采用上调后的新增值税税率。标准税率从 8.0% 调整"
+"为 8.1%，酒店行业的特定税率调整为 3.8%。基本生活必需品适用 2.6% 的减低税率。"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:73
 msgid "ISO 20022 and SEPA pain versions"
@@ -78297,7 +78619,7 @@ msgstr "用于 :doc:`AvaTax 整合 <../accounting/taxes/avatax>` 与 Odoo 的模
 msgid ""
 ":doc:`United States - Payroll <../../hr/payroll/payroll_localizations/"
 "united_states>`"
-msgstr ""
+msgstr ":doc:`美国 - 工资 <../../hr/payroll/payroll_localizations/united_states>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:90
 msgid "`l10n_us_hr_payroll`"
@@ -78351,7 +78673,7 @@ msgstr "包含美国工资规则所需的会计数据。"
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:104
 msgid ""
 ":ref:`United States - Payroll - Export to ADP <payroll/united_states/adp>`"
-msgstr ""
+msgstr ":ref:`美国 - 工资 - 导出至 ADP <payroll/united_states/adp>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:105
 msgid "`l10n_us_hr_payroll_adp`"
@@ -78365,7 +78687,7 @@ msgstr "将工作条目导出至 ADP 薪酬管理软件。"
 msgid ""
 ":doc:`United States payroll localization <../../hr/payroll/"
 "payroll_localizations/united_states>`"
-msgstr ""
+msgstr ":doc:`美国工资本地化 <../../hr/payroll/payroll_localizations/united_states>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:116
 msgid ""
@@ -78563,6 +78885,8 @@ msgid ""
 "following reports are available for the US localization under "
 "the :menuselection:`Accounting --> Reporting` menu:"
 msgstr ""
+"除\\ :doc:`通用报告 <../accounting/reporting>`\\ 外，美国本地化还在\\ "
+":menuselection:`会计 --> 报告`\\ 菜单下提供以下报告："
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:271
 msgid ""
@@ -78570,16 +78894,20 @@ msgid ""
 "transactions (regardless of the journal) with their running balance after "
 "the transaction."
 msgstr ""
+":ref:`支票登记簿 <l10n_us/optional-modules>`：显示现金交易（无论属于哪个日记"
+"账）及其交易后当前余额的报告。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:273
 msgid ""
 ":ref:`1099 Report <l10n_us/1099-report>`: A CSV download of payments made to "
 "non-employees in a period to file electronically in a third-party service."
 msgstr ""
+":ref:`1099 报告 <l10n_us/1099-report>`：一段时期内向非员工付款的 CSV 下载文件"
+"，用于通过第三方服务进行电子申报。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:279
 msgid ":ref:`Cash basis reporting <accounting/cash-basis/report-filter>`"
-msgstr ""
+msgstr ":ref:`现金收付制报告 <accounting/cash-basis/report-filter>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:286
 msgid ""
@@ -78588,6 +78916,9 @@ msgid ""
 "download from the report in Odoo to file 1099 payments electronically via a "
 "third-party service."
 msgstr ""
+"该\\ :ref:`1099 报告 <l10n_us/optional-modules>`\\ 包含指定报告期内向非员工支"
+"付的款项。使用 Odoo 中该报告提供的 CSV 下载文件，可通过第三方服务以电子方式申"
+"报 1099 付款。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:290
 msgid ""
@@ -81665,7 +81996,7 @@ msgstr ":doc:`PayPal <payment_providers/paypal>`"
 
 #: ../../content/applications/finance/payment_providers.rst:162
 msgid ":doc:`PayU <payment_providers/payu>`"
-msgstr ""
+msgstr ":doc:`PayU <payment_providers/payu>`"
 
 #: ../../content/applications/finance/payment_providers.rst:168
 msgid ":doc:`Razorpay <payment_providers/razorpay>`"
@@ -84548,6 +84879,9 @@ msgid ""
 "allows businesses to accept online payments through credit and debit cards, "
 "as well as several local payment methods."
 msgstr ""
+"`Paymob <https://paymob.com/>`_\\ 是一家总部位于埃及的支付服务提供商，业务覆"
+"盖埃及、阿曼、沙特阿拉伯和阿拉伯联合酋长国。企业可通过它使用信用卡和借记卡以"
+"及多种本地付款方式接收在线付款。"
 
 #: ../../content/applications/finance/payment_providers/paymob.rst:12
 msgid "Configuration on the Paymob dashboard"
@@ -84694,6 +85028,10 @@ msgid ""
 "start:~:text=go%2Dlive%20approval-,Not%20sure%20where%20to%20start%3F,-"
 "Use%20this%20quick>`_."
 msgstr ""
+"根据其\\ `可用域名列表 <https://developers.paymob.com/paymob-docs/getting-"
+"started/overview#Not-sure-where-to-start:~:text=go%2Dlive%20approval-"
+",Not%20sure%20where%20to%20start%3F,-Use%20this%20quick>`_，Paymob 已停止支持"
+"巴基斯坦。"
 
 #: ../../content/applications/finance/payment_providers/paypal.rst:3
 msgid "PayPal"
@@ -84890,11 +85228,11 @@ msgstr "PayU"
 #: ../../content/applications/finance/payment_providers/payu.rst:5
 msgid ""
 "`PayU <https://payu.in/>`_ is an online payment provider covering India."
-msgstr ""
+msgstr "`PayU <https://payu.in/>`_\\ 是一家覆盖印度的在线支付提供商。"
 
 #: ../../content/applications/finance/payment_providers/payu.rst:10
 msgid "Create a PayU account with Odoo"
-msgstr ""
+msgstr "在 Odoo 中创建 PayU 账户"
 
 #: ../../content/applications/finance/payment_providers/payu.rst:13
 #: ../../content/applications/finance/payment_providers/razorpay.rst:15
@@ -84908,6 +85246,8 @@ msgid ""
 ":ref:`Navigate to the PayU payment provider <payment_providers/"
 "supported_providers>` and click :guilabel:`Connect`."
 msgstr ""
+":ref:`前往 PayU 支付服务商 <payment_providers/supported_providers>`\\ 并点"
+"击\\ :guilabel:`连接`\\ 。"
 
 #: ../../content/applications/finance/payment_providers/payu.rst:17
 #: ../../content/applications/finance/payment_providers/razorpay.rst:19
@@ -84920,7 +85260,7 @@ msgstr "完成账户创建流程，并在提示时输入验证码。"
 msgid ""
 "If you already have a PayU account, enter your credentials to log into your "
 "existing account."
-msgstr ""
+msgstr "如果您已有 PayU 账户，请输入您的凭据以登录现有账户。"
 
 #: ../../content/applications/finance/payment_providers/payu.rst:22
 msgid ""
@@ -84928,6 +85268,9 @@ msgid ""
 "all required information has been submitted, you are then redirected to "
 "Odoo, and the payment provider is :guilabel:`Enabled`."
 msgstr ""
+"在此流程结束时，点击\\ :guilabel:`允许访问账户`\\ 。如果已提交所有必需信息，"
+"系统随后会将您重定向回 Odoo，且该支付服务商将处于\\ :guilabel:`已启用`\\ 状态"
+"。"
 
 #: ../../content/applications/finance/payment_providers/razorpay.rst:3
 msgid "Razorpay"

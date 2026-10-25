@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-23 09:34+0000\n"
+"PO-Revision-Date: 2026-10-25 07:37+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/general/zh_Hant/>\n"
@@ -3439,6 +3439,10 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"傳送電子郵件時，Odoo 電子郵件伺服器會在標頭中加入一組專屬的\\ :abbr:`DKIM "
+"(DomainKeys Identified Mail)`\\ 簽章。收件者的伺服器會使用資料庫網域名稱中的 "
+"DKIM 記錄來解密此簽章。若簽章與記錄中包含的金鑰相符，即證明該訊息真實無誤，且"
+"在傳送過程中未遭竄改。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3452,6 +3456,8 @@ msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
 "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"若要啟用 DKIM，請將\\ :abbr:`CNAME (Canonical Name)`\\ 記錄加入網域名稱的\\ "
+":abbr:`DNS (Domain Name System)`\\ 區域："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3459,6 +3465,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"若網域名稱為\\ `company-name.com`\\ ，請務必建立子網域\\ "
+"`odoo._domainkey.company-name.com`\\ ，其規範名稱為\\ "
+"`odoo._domainkey.odoo.com.`\\ 。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3477,6 +3486,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"請使用類似\\ `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>"
+"`_\\ 的工具檢查 DKIM 記錄是否有效。在 DKIM 查詢工具中輸入\\ "
+"`example.com:odoo`\\ ，並指定自訂網域\\ `example.com`\\ 所要測試的選取器為\\ "
+"`odoo`\\ 。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -7691,11 +7704,11 @@ msgstr ":guilabel:`允許的方法`：`GET`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:179
 msgid ":guilabel:`Allowed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`允許的標頭`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:180
 msgid ":guilabel:`Exposed headers`: `Content-Type, Content-Disposition`"
-msgstr ""
+msgstr ":guilabel:`公開的標頭`: `Content-Type, Content-Disposition`"
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:181
 #: ../../content/applications/general/integrations/cloud_storage.rst:189
@@ -7872,46 +7885,54 @@ msgstr "地理位置"
 msgid ""
 "Odoo provides geolocation integrations that allow you to locate contacts or "
 "places and generate routes on a map."
-msgstr ""
+msgstr "Odoo 提供地理位置整合功能，讓你能定位聯絡人或地點，並在地圖上產生路線。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
 "The :ref:`Map <studio/views/multiple-records/map>` view is available by "
 "default. No configuration is required to access it."
 msgstr ""
+"\\ :ref:`地圖 <studio/views/multiple-records/map>`\\ 檢視畫面預設可用。存取它"
+"無需進行任何配置。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:15
 msgid "Geolocate contacts and places"
-msgstr ""
+msgstr "定位聯絡人與地點"
 
 #: ../../content/applications/general/integrations/geolocation.rst:17
 msgid ""
 "The :guilabel:`Geolocation` feature generates latitude and longitude "
 "coordinates to pinpoint locations. It can be used to:"
-msgstr ""
+msgstr "\\ :guilabel:`地理位置`\\ 功能可產生緯度與經度座標以精確定位。可用於："
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
 "Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
 "details>` in the **Attendances** app;"
 msgstr ""
+"在 **考勤** 應用程式中檢查員工的\\ :ref:`簽到/簽退位置 <attendances/check-in-"
+"out-details>`\\ ；"
 
 #: ../../content/applications/general/integrations/geolocation.rst:22
 msgid ""
 "Display the pickup location when using the :ref:`pickup on-site delivery "
 "method <ecommerce/shipping/instore-pickup>`;"
 msgstr ""
+"使用\\ :ref:`現場自取送貨方式 <ecommerce/shipping/instore-pickup>`\\ 時顯示取"
+"貨地點；"
 
 #: ../../content/applications/general/integrations/geolocation.rst:24
 msgid ""
 ":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
-msgstr ""
+msgstr ":ref:`指派合作夥伴 <contacts/partner-assignment>`\\ 於 **聯絡人** 應用程式；"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
 "Validate addresses with the :ref:`Avatax address validation <accounting/"
 "avatax/address-validation>` feature."
 msgstr ""
+"使用\\ :ref:`Avatax 地址驗證 <accounting/avatax/address-validation>`\\ 功能驗"
+"證地址。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -7921,6 +7942,10 @@ msgid ""
 "Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
 "Map` or :guilabel:`Google Place Map`."
 msgstr ""
+"若要啟用\\ :guilabel:`地理位置`\\ 功能，前往\\ :menuselection:`設定 --> 一般"
+"設定`\\ ，向下滾動至\\ :guilabel:`整合`\\ 區段，並啟動\\ :guilabel:`地理位"
+"置`\\ 。接著，在\\ :guilabel:`API`\\ 欄位中，選擇\\ :guilabel:`Open Street "
+"Map`\\ 或\\ :guilabel:`Google Place Map`\\ 。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:37
 msgid "OpenStreetMap"
@@ -7932,6 +7957,8 @@ msgid ""
 "volunteers. No additional configuration is required to use :guilabel:`Open "
 "Street Map`."
 msgstr ""
+"OpenStreetMap 是一個由志工更新與維護的免費開放地理資料庫。使用\\ "
+":guilabel:`Open Street Map`\\ 無需額外配置。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:43
 msgid ""
@@ -7939,10 +7966,12 @@ msgid ""
 "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
 "report and correct any issues you encounter."
 msgstr ""
+"OpenStreetMap 資料可能並非完全準確。你可以\\ `加入 OpenStreetMap 社群 "
+"<https://www.openstreetmap.org/fixthemap>`_\\ 來回報並修正遇到的任何問題。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:46
 msgid "Google Places API"
-msgstr ""
+msgstr "Google Places API"
 
 #: ../../content/applications/general/integrations/geolocation.rst:48
 msgid ""
@@ -7950,6 +7979,8 @@ msgid ""
 "businesses, and points of interest. It supports location-based features like "
 "search, navigation, and recommendations."
 msgstr ""
+"Google Places API 提供有關地點、商家和景點的詳細資訊。它支援搜尋、導航和推薦"
+"等基於位置的功能。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
@@ -7975,26 +8006,34 @@ msgid ""
 "management system </applications/inventory_and_mrp/inventory/"
 "shipping_receiving/setup_configuration/dispatch>`."
 msgstr ""
+"地圖路線可用於為\\ :doc:`外勤服務技術人員 </applications/services/"
+"field_service/planning_itinerary>`\\ 提供行程與位置，並在\\ :doc:`調度管理系"
+"統 </applications/inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/dispatch>`\\ 中為司機提供運送路線。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:71
 msgid "To create routes, follow these steps:"
-msgstr ""
+msgstr "若要建立路線，請依照以下步驟操作："
 
 #: ../../content/applications/general/integrations/geolocation.rst:73
 msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
-msgstr ""
+msgstr "建立或登入\\ `Mapbox 帳戶 <https://www.mapbox.com/>`_\\ 。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:74
 msgid ""
 "`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
 "tokens/>`_."
 msgstr ""
+"`建立存取權杖 <https://docs.mapbox.com/help/dive-deeper/access-tokens/>`_\\ "
+"。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:75
 msgid ""
 "Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
 "tokens/>`_ and copy your token to the clipboard."
 msgstr ""
+"前往\\ `Mapbox 上的存取權杖頁面 <https://account.mapbox.com/access-tokens/>"
+"`_\\ 並將權杖複製到剪貼簿。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:79
 msgid ""
@@ -8002,30 +8041,40 @@ msgid ""
 "permanently after leaving the :guilabel:`Access Token` page. Make sure to "
 "save the token."
 msgstr ""
+"Mapbox 僅在建立時顯示一次機密權杖，離開\\ :guilabel:`存取權杖`\\ 頁面後即會永"
+"久隱藏。請務必儲存該權杖。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:82
 msgid ""
 "In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
 "to the :guilabel:`Integrations` section."
 msgstr ""
+"在 Odoo 中，前往\\ :menuselection:`設定 --> 一般設定`\\ ，向下捲動至\\ "
+":guilabel:`整合`\\ 區塊。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:84
 msgid ""
 "Under :guilabel:`Map Routes`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"在\\ :guilabel:`地圖路線`\\ 下，將 Mapbox 存取權杖貼至\\ :guilabel:`權杖`\\ "
+"欄位。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:88
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`如何安全使用 Mapbox：存取權杖 <https://docs.mapbox.com/help/dive-deeper/how-"
+"to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/general/integrations/geolocation.rst:90
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`網址限制 <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>"
+"`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -9126,22 +9175,26 @@ msgid ""
 "scanners, receipt printers, payment terminals, measurement tools, and more "
 "to an Odoo database using an IoT gateway."
 msgstr ""
+"Odoo IoT 允許透過 IoT 閘道將實體裝置（例如條碼掃描器、收據列印機、付款終端機"
+"、測量工具等）連線至 Odoo 資料庫。"
 
 #: ../../content/applications/general/iot.rst:12
 msgid "The following IoT gateways are supported:"
-msgstr ""
+msgstr "支援下列 IoT 閘道："
 
 #: ../../content/applications/general/iot.rst:14
 msgid ""
 ":doc:`IoT Box <iot/iot_box>`: micro-computer, plug-and-play device on which "
 "the Odoo IoT program is pre-installed;"
-msgstr ""
+msgstr ":doc:`IoT Box <iot/iot_box>`：已預先安裝 Odoo IoT 程式的隨插即用微型電腦；"
 
 #: ../../content/applications/general/iot.rst:16
 msgid ""
 ":doc:`Windows virtual IoT <iot/windows_iot>`: an Odoo IoT program for "
 "Windows that can be installed on a Windows computer."
 msgstr ""
+":doc:`Windows 虛擬物聯網 <iot/windows_iot>`：適用於 Windows 的 Odoo 物聯網程"
+"式，可安裝在 Windows 電腦上。"
 
 #: ../../content/applications/general/iot.rst:20
 msgid ""
@@ -9153,7 +9206,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot.rst:22
 msgid "Multiple IoT gateways can be used at the same time."
-msgstr ""
+msgstr "可同時使用多個 IoT 閘道。"
 
 #: ../../content/applications/general/iot.rst:23
 msgid ""
@@ -9167,11 +9220,11 @@ msgstr ""
 #: ../../content/applications/general/iot.rst:28
 #: ../../content/applications/general/iot/iot_box.rst:3
 msgid "IoT Box"
-msgstr ""
+msgstr "IoT Box"
 
 #: ../../content/applications/general/iot.rst:28
 msgid "Set up an IoT Box."
-msgstr ""
+msgstr "設定 IoT Box。"
 
 #: ../../content/applications/general/iot.rst:34
 #: ../../content/applications/general/iot/connect.rst:74
@@ -9187,13 +9240,13 @@ msgstr "設定 Windows 虛擬 IoT。"
 #: ../../content/applications/general/iot.rst:40
 #: ../../content/applications/general/iot/connect.rst:3
 msgid "IoT connection to Odoo"
-msgstr ""
+msgstr "IoT 連線至 Odoo"
 
 #: ../../content/applications/general/iot.rst:40
 msgid ""
 "Connect the IoT gateway to your Odoo database and troubleshoot potential "
 "connection issues."
-msgstr ""
+msgstr "將 IoT 閘道連線至您的 Odoo 資料庫，並排除潛在的連線問題。"
 
 #: ../../content/applications/general/iot.rst:45
 #: ../../content/applications/general/iot/devices.rst:7
@@ -9204,21 +9257,23 @@ msgstr "設備"
 msgid ""
 "Connect devices such as printers, screens, measurement tools, etc., to the "
 "IoT gateway."
-msgstr ""
+msgstr "將列印機、螢幕、測量工具等裝置連線至 IoT 閘道。"
 
 #: ../../content/applications/general/iot.rst:50
 msgid "Diagnose and resolve common IoT connection and configuration issues."
-msgstr ""
+msgstr "診斷並解決常見的 IoT 連線與配置問題。"
 
 #: ../../content/applications/general/iot.rst:55
 msgid "IoT gateway updates"
-msgstr ""
+msgstr "IoT 閘道更新"
 
 #: ../../content/applications/general/iot.rst:55
 msgid ""
 "Update your IoT gateway's image, core code, and handlers to benefit from the "
 "latest IoT fixes and features or reset the IoT gateway if needed."
 msgstr ""
+"更新 IoT 閘道的圖片、核心程式碼與處理常式，以享用最新的 IoT 修復和功能，或在"
+"需要時重設 IoT 閘道。"
 
 #: ../../content/applications/general/iot/connect.rst:6
 msgid "Prerequisites"
@@ -9229,19 +9284,21 @@ msgid ""
 "To connect the :doc:`IoT gateway <../iot>` to an Odoo database, the "
 "following prerequisites must be met:"
 msgstr ""
+"若要將\\ :doc:`IoT 閘道 <../iot>`\\ 連線至 Odoo 資料庫，必須符合以下先決條件"
+"："
 
 #: ../../content/applications/general/iot/connect.rst:11
 msgid "The Odoo IoT app must be :ref:`installed <general/install>`."
-msgstr ""
+msgstr "Odoo IoT 應用程式必須已\\ :ref:`安裝 <general/install>`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:12
 msgid "The IoT gateway must be connected to the network."
-msgstr ""
+msgstr "IoT 閘道必須連線至網路。"
 
 #: ../../content/applications/general/iot/connect.rst:13
 msgid ""
 "The device connecting to Odoo must be on the same network as the IoT gateway."
-msgstr ""
+msgstr "連線至 Odoo 的裝置必須與 IoT 閘道器位於同一網路。"
 
 #: ../../content/applications/general/iot/connect.rst:16
 msgid ""
@@ -9249,6 +9306,9 @@ msgid ""
 "as other types of environments may cause issues (e.g., with :ref:`HTTPS "
 "certificate generation <iot/https_certificate_iot/iot-eligibility>`)."
 msgstr ""
+"建議將 IoT 閘道器連線至\\ **正式**\\ 執行個體，因為其他類型的環境可能會導致問"
+"題（例如\\ :ref:`產生 HTTPS 憑證 <iot/https_certificate_iot/iot-eligibility>"
+"`\\ ）。"
 
 #: ../../content/applications/general/iot/connect.rst:21
 msgid ":doc:`iot_box`"
@@ -9271,6 +9331,8 @@ msgid ""
 "To connect the IoT gateway to an Odoo database, open the IoT app and "
 "click :guilabel:`Connect`."
 msgstr ""
+"若要將 IoT 閘道器連線至 Odoo 資料庫，請開啟 IoT 應用程式並按一下\\ "
+":guilabel:`連線`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:31
 msgid ""
@@ -9282,6 +9344,11 @@ msgid ""
 "a :ref:`pairing code <iot/connect/pairing-code>` or a :ref:`connection token "
 "<iot/connect/token>`."
 msgstr ""
+"接著，瀏覽器會掃描電腦所連線的網路，尋找可用的 IoT 閘道器。若偵測到 IoT 閘道"
+"器，系統會自動進行連線。若找到多個 IoT 閘道器，請在開啟的彈出視窗中選取適當的"
+"閘道器，然後按一下\\ :guilabel:`連線`\\ 。若未自動偵測到任何 IoT 閘道器，請嘗"
+"試使用\\ :ref:`配對代碼 <iot/connect/pairing-code>`\\ 或\\ :ref:`連線權杖 "
+"<iot/connect/token>`\\ 將其連線至資料庫。"
 
 #: ../../content/applications/general/iot/connect.rst:38
 msgid ""
@@ -9289,6 +9356,9 @@ msgid ""
 "the :doc:`Windows computer <windows_iot>`’s motherboard serial number, "
 "followed by its :ref:`pairing code <iot/connect/pairing-code>`."
 msgstr ""
+"IoT 閘道器的名稱由\\ :doc:`IoT Box <iot_box>`\\ 或\\ :doc:`Windows 電腦 "
+"<windows_iot>`\\ 的主機板序號組成，後方附有其\\ :ref:`配對代碼 <iot/connect/"
+"pairing-code>`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:45
 msgid "Connection using a pairing code"
@@ -9302,6 +9372,10 @@ msgid ""
 "pairing code. Alternatively, connect the IoT gateway to the database using "
 "a :ref:`connection token <iot/connect/token>`."
 msgstr ""
+"配對代碼在 IoT 閘道器開機後最多 2 小時內有效。若代碼已失效，請重新啟動 IoT "
+"Box 或\\ :ref:`重新啟動 Windows 虛擬 IoT 服務 <iot/windows_iot/restart>`\\ 以"
+"顯示另一組配對代碼。或者，也可以使用\\ :ref:`連線權杖 <iot/connect/token>`\\ "
+"將 IoT 閘道器連線至資料庫。"
 
 #: ../../content/applications/general/iot/connect.rst:52
 msgid ""
@@ -9309,10 +9383,12 @@ msgid ""
 "a database (e.g., a test database). If necessary, :ref:`disconnect the IoT "
 "gateway from the database <iot/connect/disconnect>`."
 msgstr ""
+"若 IoT 閘道器已連線至資料庫（例如測試資料庫），則不會顯示配對碼。如有需要，"
+"請\\ :ref:`將 IoT 閘道器與資料庫中斷連線 <iot/connect/disconnect>`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:56
 msgid "Retrieve the IoT gateway's pairing code:"
-msgstr ""
+msgstr "取得 IoT 閘道器的配對碼："
 
 #: ../../content/applications/general/iot/connect.rst:60
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:17
@@ -9325,12 +9401,14 @@ msgid ""
 "was already plugged in prior to this, :ref:`restart <iot/iot-box/restart>` "
 "it."
 msgstr ""
+"將 IoT Box 連接至外接螢幕或 USB 印表機。若在此之前已插入 IoT Box 電源，請將"
+"其\\ :ref:`重新啟動 <iot/iot-box/restart>`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:65
 msgid ""
 "External monitor: The pairing code will be displayed on the screen after "
 "(re)starting the IoT Box."
-msgstr ""
+msgstr "外接螢幕:配對碼將在 IoT box (重新)啟動後顯示在螢幕上。"
 
 #: ../../content/applications/general/iot/connect.rst:67
 msgid ""
@@ -9343,6 +9421,8 @@ msgid ""
 "the :ref:`IoT Box's homepage <iot/iot-box/homepage>`; the code is displayed "
 "in the :guilabel:`Pairing Code` section."
 msgstr ""
+"如果沒有外部螢幕或印表機連線至 IoT box，請存取 :ref:`IoT box 的首頁 <iot/iot-"
+"box/homepage>`；配對碼會顯示在 :guilabel:`Pairing Code` 區段中。"
 
 #: ../../content/applications/general/iot/connect.rst:76
 msgid ""
@@ -9350,6 +9430,9 @@ msgid ""
 "gateway's homepage in a web browser by navigating to the URL `http://"
 "localhost:8069`. Then, scroll to the :guilabel:`Pairing Code` section."
 msgstr ""
+"在安裝了 Windows 虛擬 IoT 的電腦上，透過網路瀏覽器導覽至網址 `http://"
+"localhost:8069` 以開啟 IoT 閘道器的首頁。接著，捲動至\\ :guilabel:`配對碼`\\ "
+"區段。"
 
 #: ../../content/applications/general/iot/connect.rst:80
 #: ../../content/applications/general/iot/connect.rst:90
@@ -9395,6 +9478,8 @@ msgid ""
 "Access the :ref:`IoT Box's <iot/iot-box/homepage>` or :ref:`Windows virtual "
 "IoT's <iot/windows-iot/homepage>` homepage."
 msgstr ""
+"存取 :ref:`IoT box <iot/iot-box/homepage>` 或 :ref:`Windows 虛擬 IoT <iot/"
+"windows-iot/homepage>` 的首頁。"
 
 #: ../../content/applications/general/iot/connect.rst:95
 msgid ""
@@ -9413,7 +9498,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:99
 msgid "Once the IoT gateway is connected to a database:"
-msgstr ""
+msgstr "IoT 閘道器連線至資料庫後："
 
 #: ../../content/applications/general/iot/connect.rst:101
 msgid ""
@@ -9422,12 +9507,17 @@ msgid ""
 "associated with </applications/sales/point_of_sale/hardware_network/"
 "pos_iot>`."
 msgstr ""
+"若已安裝\\ :doc:`POS 應用程式 </applications/sales/point_of_sale>`\\ ，則會彈"
+"出視窗以選取\\ :doc:`IoT 閘道器應關聯的 POS </applications/sales/"
+"point_of_sale/hardware_network/pos_iot>`\\ 。"
 
 #: ../../content/applications/general/iot/connect.rst:104
 msgid ""
 "If using an :doc:`IoT Box <iot_box>`, wait a few minutes for it to update "
 "before using the connected :doc:`devices <devices>`."
 msgstr ""
+"如果使用 :doc:`IoT box <iot_box>`,請等待幾分鐘讓其更新,然後再使用已連線的 "
+":doc:`裝置 <devices>`。"
 
 #: ../../content/applications/general/iot/connect.rst:106
 msgid ""
@@ -9435,6 +9525,8 @@ msgid ""
 "connect/https_certificate>` and its homepage is updated to a new HTTPS URL "
 "ending with `.odoo-iot.com` when it becomes available."
 msgstr ""
+"IoT 閘道器會自動請求\\ :ref:`HTTPS 憑證 <iot/connect/https_certificate>`\\ ，"
+"當憑證可用時，其首頁網址會更新為以 `.odoo-iot.com` 結尾的新 HTTPS 網址。"
 
 #: ../../content/applications/general/iot/connect.rst:111
 #: ../../content/applications/general/iot/iot_box.rst:14
@@ -9444,7 +9536,7 @@ msgstr ":doc:`iot_advanced/troubleshooting`"
 
 #: ../../content/applications/general/iot/connect.rst:116
 msgid "IoT gateway form"
-msgstr ""
+msgstr "IoT 閘道器表單"
 
 #: ../../content/applications/general/iot/connect.rst:118
 msgid ""
@@ -9453,6 +9545,9 @@ msgid ""
 "Box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's <iot/windows-"
 "iot/homepage>` homepage."
 msgstr ""
+"按一下該卡片以開啟 IoT 閘道器表單。該表單列出已連線至 IoT 閘道器的\\ :doc:`裝"
+"置 <devices>`\\ ，並可存取\\ :ref:`IoT Box <iot/iot-box/homepage>`\\ 或\\ "
+":ref:`Windows 虛擬 IoT <iot/windows-iot/homepage>`\\ 的首頁。"
 
 #: ../../content/applications/general/iot/connect.rst:123
 msgid ""
@@ -9464,6 +9559,12 @@ msgid ""
 "gateway is restarted. To disable automatic updates, uncheck "
 "the :guilabel:`Automatic drivers update` option."
 msgstr ""
+"啟用\\ :ref:`開發人員模式 <developer-mode>`\\ 以存取 IoT 閘道器的\\ "
+":guilabel:`技術資訊`\\ ，例如其\\ :guilabel:`網域地址`\\ 、\\ :guilabel:`映像"
+"版本`\\ 以及\\ :ref:`SSL 憑證 <iot/connect/https_certificate>` :guilabel:`到"
+"期日`\\ 。預設情況下，每次重新啟動 IoT 閘道器時，驅動程式都會自動\\ :ref:`更"
+"新 <iot_updating_iot/handlers>`\\ 。若要停用自動更新，請取消勾選\\ "
+":guilabel:`自動更新驅動程式`\\ 選項。"
 
 #: ../../content/applications/general/iot/connect.rst:129
 msgid ""
@@ -9471,18 +9572,20 @@ msgid ""
 "connection between the IoT gateway and Odoo and assess the quality of the "
 "gateway's Internet connection."
 msgstr ""
+"在 IoT 閘道器表單上，按一下\\ :guilabel:`測試`\\ 按鈕，以測試 IoT 閘道器與 "
+"Odoo 之間的連線，並評估閘道器的網際網路連線品質。"
 
 #: ../../content/applications/general/iot/connect.rst:135
 msgid "Disconnecting an IoT gateway from a database"
-msgstr ""
+msgstr "將 IoT 閘道器與資料庫中斷連線"
 
 #: ../../content/applications/general/iot/connect.rst:137
 msgid "To disconnect the IoT gateway from a database, follow these steps:"
-msgstr ""
+msgstr "若要將 IoT 閘道器與資料庫中斷連線，請依照以下步驟操作："
 
 #: ../../content/applications/general/iot/connect.rst:139
 msgid "Open the IoT app and click the relevant IoT gateway's card."
-msgstr ""
+msgstr "開啟 IoT 應用程式，並按一下相關的 IoT 閘道器卡片。"
 
 #: ../../content/applications/general/iot/connect.rst:140
 msgid ""
@@ -9521,6 +9624,12 @@ msgid ""
 "terminals, require a valid HTTPS certificate to communicate with the IoT "
 "gateway; without it, they cannot interact properly."
 msgstr ""
+":abbr:`HTTPS (Hypertext Transfer Protocol Secure)`\\ 是\\ :abbr:`HTTP "
+"(Hypertext Transfer Protocol)`\\ 的安全加密版本。它使用\\ :abbr:`TLS "
+"(Transport Layer Security)`\\ （前身為\\ :abbr:`SSL (Secure Sockets Layer)`\\"
+" ）憑證來驗證伺服器，並保護瀏覽器與網站之間交換的資料。某些網路裝置（例如付款"
+"終端機）需要有效的 HTTPS 憑證才能與 IoT 閘道器通訊；若沒有憑證，這些裝置便無"
+"法正常互動。"
 
 #: ../../content/applications/general/iot/connect.rst:164
 msgid ""
@@ -9536,6 +9645,8 @@ msgid ""
 "automatically downloads the HTTPS certificate if the database meets the "
 "following eligibility criteria:"
 msgstr ""
+"當 IoT 閘道器（重新）啟動並連線至資料庫時，若資料庫符合以下資格條件，則會自動"
+"下載 HTTPS 憑證："
 
 #: ../../content/applications/general/iot/connect.rst:172
 msgid ""
@@ -9557,7 +9668,7 @@ msgstr "系統收到證書之後："
 msgid ""
 "The IoT gateway's homepage address is updated to a new HTTPS URL ending with "
 "`.odoo-iot.com`."
-msgstr ""
+msgstr "IoT 閘道器的首頁網址會更新為以 `.odoo-iot.com` 結尾的新 HTTPS 網址。"
 
 #: ../../content/applications/general/iot/connect.rst:179
 msgid ""
@@ -9565,10 +9676,12 @@ msgid ""
 "period. To view this information, click the :icon:`fa-cogs` "
 "(:guilabel:`cogs`) button at the top-right of the IoT gateway's homepage."
 msgstr ""
+"The\\ :guilabel:`HTTPS 憑證`\\ 橫幅會顯示憑證的有效期間。若要檢視此資訊，請按"
+"一下 IoT 閘道器首頁右上角的\\ :icon:`fa-cogs` (\\ :guilabel:`齒輪`\\ ) 按鈕。"
 
 #: ../../content/applications/general/iot/connect.rst:0
 msgid "IoT Box homepage with HTTPS certificate validity date."
-msgstr ""
+msgstr "顯示 HTTPS 證書有效期的物聯網盒子 IoT Box 主頁。"
 
 #: ../../content/applications/general/iot/connect.rst:187
 msgid ":ref:`iot/troubleshooting/https_certificate`"
@@ -11271,10 +11384,13 @@ msgid ""
 "`Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
 "RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
+"若要配置 Ariva S 電子秤以供 IoT 系統識別，請參閱\\ `Mettler 的 Ariva S 系列電"
+"子秤設定指南 <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_\\ 並依照以下步驟操"
+"作："
 
 #: ../../content/applications/general/iot/devices/scale.rst:45
 msgid "Hold the **>T<** button until :guilabel:`CONF` appears."
-msgstr ""
+msgstr "按住 **>T<** 按鈕，直到顯示\\ :guilabel:`CONF`\\ 為止。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
@@ -11286,12 +11402,16 @@ msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports). Press **>T<** to cycle through the options."
 msgstr ""
+"在步驟\\ :guilabel:`3.1`\\ ，確認數值設為\\ :guilabel:`1`\\ （USB 虛擬 COM 連"
+"接埠）。按 **>T<** 可循環切換各個選項。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:49
 msgid ""
 "Press **>0<** until :guilabel:`3.6` and make sure the value is set "
 "to :guilabel:`3` (8217 Mettler-Toledo (WO))."
 msgstr ""
+"按 **>0<** 直到顯示\\ :guilabel:`3.6`\\ ，並確認數值設為\\ :guilabel:`3`\\ （"
+"8217 Mettler-Toledo (WO)）。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:51
 msgid ""
@@ -11320,6 +11440,8 @@ msgid ""
 "IoT service <iot/windows_iot/restart>`. The scale should then appear as "
 "`Toledo 8217`."
 msgstr ""
+"重啟\\ :doc:`IoT Box <../iot_box>`\\ 或\\ :ref:`重新啟動 Windows 虛擬 IoT 服"
+"務 <iot/windows_iot/restart>`\\ 。電子秤接著應會顯示為 `Toledo 8217`。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
@@ -11638,13 +11760,15 @@ msgstr ""
 msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
-msgstr ""
+msgstr "IoT 系統已連線，且報表已指派給無法列印的印表機"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"確認瀏覽器獲准\\ :ref:`存取區域網路上的裝置 <pos/lna/browser-permission>`\\ "
+"。"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -12081,19 +12205,19 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:5
 msgid "To start using an IoT Box:"
-msgstr ""
+msgstr "若要開始使用 IoT Box:"
 
 #: ../../content/applications/general/iot/iot_box.rst:7
 msgid "Connect your :doc:`devices <devices>` to the IoT Box."
-msgstr ""
+msgstr "將您的 :doc:`裝置 <devices>` 連線到 IoT Box。"
 
 #: ../../content/applications/general/iot/iot_box.rst:8
 msgid ":ref:`Connect the IoT Box to the network <iot/iot_box/network>`."
-msgstr ""
+msgstr ":ref:`將 IoT Box 連線到網路 <iot/iot_box/network>`。"
 
 #: ../../content/applications/general/iot/iot_box.rst:9
 msgid ":doc:`Connect the IoT Box to your Odoo database <connect>`."
-msgstr ""
+msgstr ":doc:`將 IoT Box 連線到您的 Odoo 資料庫 <connect>`。"
 
 #: ../../content/applications/general/iot/iot_box.rst:12
 msgid ""
@@ -12105,7 +12229,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:19
 msgid "IoT Box subscription"
-msgstr ""
+msgstr "IoT Box 訂閱"
 
 #: ../../content/applications/general/iot/iot_box.rst:21
 msgid ""
@@ -12115,6 +12239,10 @@ msgid ""
 "database <connect>`. If you have issues related to your subscription, "
 "contact the database's account manager or Odoo partner for assistance."
 msgstr ""
+"將 IoT 閘道器用於正式生產環境以及產生\\ :ref:`HTTPS 憑證 <iot/connect/"
+"https_certificate>`\\ 時，需要 IoT Box 訂閱。當 IoT 閘道器\\ :doc:`連線至資料"
+"庫 <connect>`\\ 時會自動建立訂閱。若您有與訂閱相關的問題，請聯絡資料庫的客戶"
+"經理或 Odoo 夥伴以尋求協助。"
 
 #: ../../content/applications/general/iot/iot_box.rst:27
 msgid ""
@@ -12131,7 +12259,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:30
 msgid "`IoT gateway FAQ <https://www.odoo.com/app/iot-faq>`_"
-msgstr ""
+msgstr "`IoT 閘道器常見問題 <https://www.odoo.com/app/iot-faq>`_"
 
 #: ../../content/applications/general/iot/iot_box.rst:31
 msgid ""
@@ -12150,12 +12278,14 @@ msgid ""
 "The IoT Box can be connected to the network via :ref:`Ethernet <iot/iot_box/"
 "network-ethernet>` or :ref:`Wi-Fi <iot/iot_box/network-wifi>`."
 msgstr ""
+"IoT Box 可以透過:ref:`乙太網路 <iot/iot_box/network-ethernet>`或:ref:`Wi-Fi "
+"<iot/iot_box/network-wifi>`連線至網路。"
 
 #: ../../content/applications/general/iot/iot_box.rst:43
 msgid ""
 "It is recommended to connect the IoT Box to the same network as "
 "the :doc:`devices <devices>` connecting to it."
-msgstr ""
+msgstr "建議將 IoT Box 連線至與連線至該盒之\\ :doc:`裝置 <devices>`\\ 相同的網路。"
 
 #: ../../content/applications/general/iot/iot_box.rst:47
 msgid ""
@@ -12164,6 +12294,8 @@ msgid ""
 "network. Exposing them to the public Internet would create a **security "
 "risk**."
 msgstr ""
+"絕對不要讓 IoT Box 可從公開網際網路存取。IoT 系統的設計目的是讓您的資料庫存取"
+"本地網路上的裝置。將其暴露於公開網際網路會產生**安全風險**。"
 
 #: ../../content/applications/general/iot/iot_box.rst:54
 msgid "Ethernet"
@@ -12174,6 +12306,8 @@ msgid ""
 "Plug the Ethernet cable into the IoT Box's Ethernet port and an available "
 "port on your router, then connect the IoT Box to a power source."
 msgstr ""
+"將乙太網路線插入 IoT Box 的乙太網路埠及路由器上的可用埠，然後將 IoT Box 連接"
+"至電源。"
 
 #: ../../content/applications/general/iot/iot_box.rst:62
 msgid "Wi-Fi"
@@ -12183,13 +12317,13 @@ msgstr "Wi-Fi"
 msgid ""
 "Make sure no Ethernet cable is connected to the IoT Box and follow these "
 "steps:"
-msgstr ""
+msgstr "確保沒有乙太網路線連接至 IoT Box，然後依照以下步驟進行："
 
 #: ../../content/applications/general/iot/iot_box.rst:66
 msgid ""
 "Connect the IoT Box to a power source and wait a few minutes for it to power "
 "on."
-msgstr ""
+msgstr "將 IoT Box 連接至電源並等待幾分鐘以便其啟動。"
 
 #: ../../content/applications/general/iot/iot_box.rst:67
 msgid ""
@@ -12197,6 +12331,8 @@ msgid ""
 "network name is in the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is "
 "a unique identifier)."
 msgstr ""
+"存取電腦的 Wi-Fi 設定並選擇 IoT Box 的網路。網路名稱格式為 `IoTBox-"
+"xxxxxxxxxxxx`（其中 `xxxxxxxxxxxx` 是唯一識別碼）。"
 
 #: ../../content/applications/general/iot/iot_box.rst:69
 msgid ""
@@ -12204,6 +12340,8 @@ msgid ""
 "automatically open and redirect to the :ref:`IoT Box's homepage <iot/iot-box/"
 "homepage>`."
 msgstr ""
+"連線至 IoT Box 的 Wi-Fi 網路並登入；瀏覽器應會自動開啟並重新導向至:ref:`IoT "
+"Box 的首頁 <iot/iot-box/homepage>`。"
 
 #: ../../content/applications/general/iot/iot_box.rst:73
 msgid ""
@@ -12212,16 +12350,19 @@ msgid ""
 "navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
+"根據您的作業系統，瀏覽器可能不會開啟並重新導向到 IoT Box 的首頁。在這種情況下"
+"，請手動開啟瀏覽器並導航到 `http://10.11.12.1` 或任何以 **http** 開頭的網址（"
+"例如 `http://odoo.com`）。"
 
 #: ../../content/applications/general/iot/iot_box.rst:77
 msgid ""
 "On the IoT Box's homepage, click :guilabel:`Configure` next to "
 "the :guilabel:`Internet Status` section."
-msgstr ""
+msgstr "在 IoT Box 的首頁上，按一下:guilabel:`網際網路狀態`區段旁的:guilabel:`配置`。"
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "IoT Box's WiFi hotspot"
-msgstr ""
+msgstr "IoT box 的 WiFi 熱點"
 
 #: ../../content/applications/general/iot/iot_box.rst:84
 msgid ""
@@ -12237,6 +12378,8 @@ msgid ""
 "signal, and the computer should automatically reconnect to its original "
 "network. If it does not, reconnect to it manually."
 msgstr ""
+"連線至 Wi-Fi 網路後，IoT Box 會停止發射其 Wi-Fi 訊號，電腦應會自動重新連線至"
+"原始網路。若未自動重新連線，請手動連線。"
 
 #: ../../content/applications/general/iot/iot_box.rst:93
 msgid ""
@@ -12248,6 +12391,11 @@ msgid ""
 "select the relevant Wi-Fi network, enter the password, and "
 "click :guilabel:`Connect`."
 msgstr ""
+"若 IoT Box 已連線至\\ :doc:`外接螢幕 <devices/screen>`\\ ，你也可以掃描螢幕上"
+"顯示的第一個二維碼以連線至網路，然後掃描第二個二維碼以存取 IoT Box 的\\ "
+":ref:`首頁 <iot/iot-box/homepage>`\\ 。在首頁上，按一下\\ :guilabel:`配置`\\ "
+"（位於\\ :guilabel:`網路狀態`\\ 區段），選取相關的 Wi-Fi 網路，輸入密碼，然後"
+"按一下\\ :guilabel:`連線`\\ 。"
 
 #: ../../content/applications/general/iot/iot_box.rst:102
 msgid "LED status"
@@ -12259,6 +12407,8 @@ msgid ""
 "which show its status and help with troubleshooting when no display is "
 "connected. The LEDs can be interpreted as follows:"
 msgstr ""
+"IoT Box 配備兩個 LED 指示燈，位於 SD 卡插槽右側，用於顯示其狀態，並在未連線任"
+"何顯示器時協助排除疑難。LED 指示燈的狀態說明如下："
 
 #: ../../content/applications/general/iot/iot_box.rst:107
 msgid ""
@@ -12266,46 +12416,50 @@ msgid ""
 "cable is properly connected or :ref:`connect the IoT Box via Wi-Fi <iot/"
 "iot_box/network-wifi>`."
 msgstr ""
+"**紅色 LED 恆亮**：IoT Box 沒有網際網路連線。請確認乙太網路線已妥善連線，或\\"
+" :ref:`透過 Wi-Fi 將 IoT Box 連線 <iot/iot_box/network-wifi>`\\ 。"
 
 #: ../../content/applications/general/iot/iot_box.rst:109
 msgid ""
 "**Green LED flashing**: The IoT Box is awaiting :doc:`connection to a "
 "database <connect>`."
-msgstr ""
+msgstr "**綠色 LED 閃爍**：IoT Box 正在等待\\ :doc:`連線至資料庫 <connect>`\\ 。"
 
 #: ../../content/applications/general/iot/iot_box.rst:110
 msgid ""
 "**Green LED constantly lit**: The IoT Box is connected to a database; no "
 "further action is required."
-msgstr ""
+msgstr "**綠色 LED 燈恆亮**：IoT Box 已連線到資料庫，無需進一步操作。"
 
 #: ../../content/applications/general/iot/iot_box.rst:116
 msgid "IoT Box homepage"
-msgstr ""
+msgstr "IoT Box 首頁"
 
 #: ../../content/applications/general/iot/iot_box.rst:118
 msgid ""
 "To access the IoT Box's homepage, open a web browser **on the same network "
 "as the IoT Box** and navigate to the IoT Box's IP address."
 msgstr ""
+"若要存取 IoT Box 的首頁，請在**與 IoT Box 位於相同網路的裝置上**開啟網頁瀏覽"
+"器，並瀏覽至 IoT Box 的 IP 位址。"
 
 #: ../../content/applications/general/iot/iot_box.rst:None
 msgid "IoT Box's homepage"
-msgstr ""
+msgstr "IoT Box 的首頁"
 
 #: ../../content/applications/general/iot/iot_box.rst:125
 msgid "The IoT Box's IP address can be retrieved by:"
-msgstr ""
+msgstr "可透過以下方式取得 IoT Box 的 IP 位址："
 
 #: ../../content/applications/general/iot/iot_box.rst:127
 msgid ""
 "connecting the IoT Box to an :doc:`external monitor <devices/screen>`: the "
 "IP address is displayed on the screen."
-msgstr ""
+msgstr "將 IoT Box 連線至\\ :doc:`外接螢幕 <devices/screen>`：IP 位址會顯示在螢幕上。"
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT Box's IP address"
-msgstr ""
+msgstr "顯示 IoT box IP 位址的狀態畫面"
 
 #: ../../content/applications/general/iot/iot_box.rst:134
 msgid ""
@@ -12313,12 +12467,14 @@ msgid ""
 "www.odoo.com/app/iot-hardware>`_ with a USB cable: the IP address is "
 "automatically printed."
 msgstr ""
+"使用 USB 線將 IoT Box 連接至`支援的收據或標籤印表機<https://www.odoo.com/app/"
+"iot-hardware>`_：IP 位址會自動列印。"
 
 #: ../../content/applications/general/iot/iot_box.rst:137
 msgid ""
 "accessing the administrator interface of the router to which the IoT Box is "
 "connected or using third-party software to scan the network."
-msgstr ""
+msgstr "存取 IoT Box 所連接之路由器的管理員介面，或使用第三方軟體掃描網路。"
 
 #: ../../content/applications/general/iot/iot_box.rst:141
 msgid ""
@@ -12327,6 +12483,9 @@ msgid ""
 "scanning the displayed or printed QR code with a device connected to the "
 "same network as the IoT Box."
 msgstr ""
+"如果 IoT box 連線至:doc:`外接螢幕 <devices/screen>`或:doc:`印表機 <devices/"
+"printer>`，也可以使用連線至與 IoT box 相同網路的裝置掃描顯示或列印的二維碼來"
+"存取其首頁。"
 
 #: ../../content/applications/general/iot/iot_box.rst:145
 msgid ""
@@ -12334,10 +12493,12 @@ msgid ""
 "homepage can be accessed from the IoT app: click the relevant IoT Box's "
 "card, then click :guilabel:`Homepage`."
 msgstr ""
+"當 IoT Box 已\\ :doc:`連線至 Odoo 資料庫 <connect>`\\ 後，即可從 IoT 應用程式"
+"存取其首頁：按一下相關 IoT Box 的卡片，然後按一下\\ :guilabel:`首頁`\\ 。"
 
 #: ../../content/applications/general/iot/iot_box.rst:151
 msgid "IoT Box restart"
-msgstr ""
+msgstr "IoT Box 重新啟動"
 
 #: ../../content/applications/general/iot/iot_box.rst:153
 msgid ""
@@ -12345,11 +12506,13 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"若要手動重新啟動 IoT Box，請存取其\\ :ref:`首頁 <iot/iot-box/homepage>`\\ ，"
+"然後按一下右上角的\\ :icon:`fa-power-off` :guilabel:`(關閉電源)`\\ 按鈕。"
 
 #: ../../content/applications/general/iot/iot_box.rst:157
 msgid ""
 "You can also fully reboot the IoT Box by unplugging and plugging it back in."
-msgstr ""
+msgstr "您也可以拔掉電源並重新插上，以將 IoT Box 完全重新開機。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -12809,7 +12972,7 @@ msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:29
 msgid ":ref:`Point of Sale offline mode <pos/use/offline-pos>`"
-msgstr ""
+msgstr ":ref:`POS 離線模式 <pos/use/offline-pos>`"
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -13659,7 +13822,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:38
 msgid "The four available roles are:"
-msgstr ""
+msgstr "四種可用角色如下："
 
 #: ../../content/applications/general/users/access_rights.rst:40
 msgid ""
@@ -13673,18 +13836,20 @@ msgid ""
 "*User*: An internal user that typically has access to the back end and can "
 "create and edit records but has less overall access than an administrator."
 msgstr ""
+"*User*：內部使用者，通常可存取後端並能建立與編輯記錄，但整體存取權限少於管理"
+"員。"
 
 #: ../../content/applications/general/users/access_rights.rst:44
 msgid ""
 "*Portal*: A customer or supplier who accesses their own data through the "
 "portal."
-msgstr ""
+msgstr "*Portal*：透過門戶網站存取自身資料的客戶或供應商。"
 
 #: ../../content/applications/general/users/access_rights.rst:45
 msgid ""
 "*Public*: A website visitor or other external user. They generally have the "
 "least access."
-msgstr ""
+msgstr "*Public*：網站訪客或其他外部使用者。通常擁有最少存取權限。"
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage user permissions"
@@ -13723,6 +13888,8 @@ msgid ""
 "groups associated with the user's role. Roles provide a predefined set of "
 "permissions, while groups define the specific access rights granted to users."
 msgstr ""
+"*Access Rights* 分頁中可用的權限，由與使用者角色關聯的群組決定。角色提供一組"
+"預先定義的權限，而群組則定義授予使用者的具體存取權限。"
 
 #: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
@@ -13943,6 +14110,8 @@ msgid ""
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
+"為群組輸入\\ :guilabel:`名稱`\\ ；若建立此群組是為了設定與部分使用者共用資料"
+"的存取權限，請選取\\ :guilabel:`共用群組`\\ 旁邊的勾選方格。"
 
 #: ../../content/applications/general/users/access_rights.rst:165
 msgid ""
@@ -14183,6 +14352,10 @@ msgid ""
 "drop-down menu. This determines whether the user must complete 2FA "
 "verification when logging back in."
 msgstr ""
+"若要啟用閒置逾時，請按一下 *Timeouts* 分頁，並勾選\\ :guilabel:`Inactivity`\\"
+" 勾選方格。接著，從下拉式選單中選擇\\ :guilabel:`Screen lock`\\ 或\\ "
+":guilabel:`Screen lock with two-factor authentication`\\ 。這將決定使用者重新"
+"登入時是否必須完成 2FA 雙重驗證。"
 
 #: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
@@ -14212,6 +14385,10 @@ msgid ""
 "menu. This determines whether the user must complete 2FA verification when "
 "logging back in."
 msgstr ""
+"若要啟用工作階段逾時，請按一下 *Timeouts* 分頁，並勾選\\ "
+":guilabel:`Session`\\ 勾選方格。接著，從下拉式選單中選擇\\ "
+":guilabel:`Logout`\\ 或\\ :guilabel:`Logout with two-factor authentication`\\"
+" 。這將決定使用者重新登入時是否必須完成 2FA 雙重驗證。"
 
 #: ../../content/applications/general/users/access_rights.rst:277
 msgid ""

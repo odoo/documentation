@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-24 16:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-25 07:37+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-19-doc/"
 "sales/ru/>\n"
 "Language: ru\n"
@@ -45665,35 +45665,38 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:402
 msgid ":icon:`fa-refresh` :guilabel:`Fetch Locations`"
-msgstr ""
+msgstr ":icon:`fa-refresh` :guilabel:`Получить местоположения`"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:403
 msgid ":icon:`fa-refresh` :guilabel:`Fetch Inventory`"
-msgstr ""
+msgstr ":icon:`fa-refresh` :guilabel:`Получить склад`"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:404
 msgid ""
 ":icon:`fa-refresh` :guilabel:`Update Pickings` (in case delivery is handled "
 "in Odoo)"
 msgstr ""
+":icon:`fa-refresh` :guilabel:`Обновить перемещения` (если доставка "
+"обрабатывается в Odoo)"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:405
 msgid ":guilabel:`Recover Order` (recover a specific order)"
-msgstr ""
+msgstr ":guilabel:`Восстановить заказ` (восстановить определенный заказ)"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:None
 msgid ""
 "The manual operations available under the Operations tab of a Shopify "
 "account."
 msgstr ""
+"Ручные операции, доступные на вкладке «Операции» учетной записи Shopify."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:413
 msgid "Monitoring and troubleshooting"
-msgstr ""
+msgstr "Мониторинг и устранение неполадок"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:416
 msgid "Logging system"
-msgstr ""
+msgstr "Система логирования"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:418
 msgid ""
@@ -45701,26 +45704,34 @@ msgid ""
 "via the :guilabel:`Logs` smart button. Users **must** be in :ref:`developer "
 "mode <developer-mode>` for the :guilabel:`Logs` smart button to display."
 msgstr ""
+"Коннектор Shopify создает подробные журналы API в форме учетной записи "
+"Shopify с помощью смарт-кнопки :guilabel:`Журналы`. Пользователи **должны** "
+"находиться в :ref:`режиме разработчика <developer-mode>`, чтобы отображалась "
+"смарт-кнопка :guilabel:`Журналы`."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:422
 msgid ""
 "The *Logs* page displays every log entry in list view and organizes them "
 "with the following columns:"
 msgstr ""
+"На странице *Журналы* отображаются все записи журнала в виде списка со "
+"следующими столбцами:"
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:424
 msgid ":guilabel:`Created on`: The date and time the log entry was created."
-msgstr ""
+msgstr ":guilabel:`Дата создания`: дата и время создания записи журнала."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:425
 msgid ":guilabel:`Created by`: OdooBot, which displays as `1`."
-msgstr ""
+msgstr ":guilabel:`Создано`: OdooBot, который отображается как `1`."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:426
 msgid ""
 ":guilabel:`Database Name`: The name of the Odoo database where the entry was "
 "recorded."
 msgstr ""
+":guilabel:`Имя базы данных`: имя базы данных Odoo, в которой была сохранена "
+"запись."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:427
 msgid ""
@@ -45731,6 +45742,12 @@ msgid ""
 "entries raised while Odoo processes data it has already received, and for "
 "entries where a synchronization step was skipped."
 msgstr ""
+":guilabel:`Тип`: отображает либо :guilabel:`Сервер`, либо "
+":guilabel:`Клиент`. :guilabel:`Сервер` используется для записей, возникающих "
+"во время обмена данными Odoo с Shopify через API (получение заказов или "
+"товаров, передача остатков или выполнений). :guilabel:`Клиент` используется "
+"для записей, возникающих во время обработки Odoo уже полученных данных, а "
+"также для записей, в которых шаг синхронизации был пропущен."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:432
 msgid ""
@@ -45738,6 +45755,9 @@ msgid ""
 "the form Account name-ID (for example, My Shopify Store-3), where ID is the "
 "database ID of the account."
 msgstr ""
+":guilabel:`Название`: определяет учетную запись электронной коммерции, к "
+"которой относится запись, в формате «Имя учетной записи-ID» (например, My "
+"Shopify Store-3), где ID — идентификатор учетной записи в базе данных."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:434
 msgid ""
@@ -45749,30 +45769,47 @@ msgid ""
 "Shopify status, or an invoice not created because the order has several "
 "payment transactions."
 msgstr ""
+":guilabel:`Уровень`: указывает, является ли запись :guilabel:`Ошибка` или "
+":guilabel:`Информация`. :guilabel:`Ошибка` означает, что действие "
+"завершилось сбоем: получение данных, обработка записи или отправленное в "
+"Shopify обновление не было завершено. :guilabel:`Информация` означает, что "
+"действие успешно завершено, но один из шагов был намеренно пропущен — "
+"например, заказ был проигнорирован из-за своего статуса в Shopify или счет-"
+"фактура не был создан, поскольку по заказу есть несколько платежных "
+"транзакций."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:439
 msgid ""
 ":guilabel:`Path`: The origin of the entry. Connector entries always display "
 "as :guilabel:`E-Commerce`."
 msgstr ""
+":guilabel:`Путь`: источник записи. Для записей коннектора всегда "
+"отображается :guilabel:`Электронная коммерция`."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:441
 msgid ""
 ":guilabel:`Line`: The line number of the entry. Connector entries always "
 "display `1`, since the line is not tracked."
 msgstr ""
+":guilabel:`Строка`: номер строки записи. Для записей коннектора всегда "
+"отображается `1`, поскольку строка не отслеживается."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:443
 msgid ""
 ":guilabel:`Function`: Displays the function that is the source of the entry, "
 "such as `_sync_orders`, `_process_order_data`, or `_auto_create_credit_note`."
 msgstr ""
+":guilabel:`Функция`: отображает функцию, являющуюся источником записи, "
+"например `_sync_orders`, `_process_order_data` или "
+"`_auto_create_credit_note`."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:447
 msgid ""
 "Developer mode can be enabled using :kbd:`Ctrl` + :kbd:`K` and typing "
 "`debug`."
 msgstr ""
+"Режим разработчика можно включить с помощью :kbd:`Ctrl` + :kbd:`K` и ввода "
+"`debug`."
 
 #: ../../content/applications/sales/sales/shopify_connector/manage.rst:449
 msgid ""
