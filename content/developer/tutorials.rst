@@ -8,7 +8,7 @@ Tutorials
 .. toctree::
    tutorials/setup_guide
    tutorials/server_framework_101
-   tutorials/discover_js_framework
+   tutorials/client_framework_101
    tutorials/define_module_data
    tutorials/restrict_data_access
    tutorials/unit_tests
@@ -35,8 +35,8 @@ Learn the server and web frameworks
       development. It covers the essential aspects and key concepts of the server framework. Learn
       to create a simple module from scratch with step-by-step instructions and practical insights.
 
-   .. card:: Discover the web framework
-      :target: tutorials/discover_js_framework
+   .. card:: Client framework 101
+      :target: tutorials/client_framework_101
       :tag: Beginner
 
       This tutorial will teach the basics of the web framework and how to work with Owl components
