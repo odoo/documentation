@@ -128,7 +128,7 @@ location of our state to make it available for all our components. This is a per
 
 .. seealso::
 
-   - :ref:`Short explanation on services <tutorials/discover_js_framework/services>`
+   - :ref:`Short explanation on services <tutorials/client_framework_101/services>`
 
 5. Use a custom hook
 ====================

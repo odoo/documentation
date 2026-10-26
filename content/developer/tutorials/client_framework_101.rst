@@ -1,18 +1,163 @@
-============================
-Chapter 2: Build a dashboard
-============================
+====================
+Client framework 101
+====================
+
+This two-part tutorial introduces the Odoo web framework, the JavaScript code behind the web client.
+Whether you are new to the framework or have some prior experience, it will give you a solid
+foundation for your own projects.
+
+The first part is about `Owl <https://github.com/odoo/owl>`_, the component framework the web client
+is built on. Owl has its own interactive tutorials, which run in the browser, so this part is short:
+an overview of the main ideas, then two tutorials to follow in the Owl playground. The second part
+builds a dashboard in an Odoo addon. It is mostly an excuse to discover and practice many features
+of the web framework: the common layout, plugins, server calls, lazy loading, registries, and
+dialogs.
+
+This tutorial assumes that you have some basic knowledge of development with Odoo in general
+(models, controllers, QWeb, ...). If you are new to Odoo, we recommend that you start with the
+:doc:`/developer/tutorials/server_framework_101` tutorial before proceeding with this one.
+
+.. note::
+   Each part of this tutorial is an independent project. If you feel comfortable with Owl, you can
+   start directly with :ref:`part 2 <tutorials/client_framework_101/dashboard>`.
+
+.. _tutorials/client_framework_101/owl:
+
+Part 1: Owl components
+======================
+
+The Odoo web client is built with `Owl <https://github.com/odoo/owl>`_, a JavaScript framework
+developed by Odoo, in the same family as React and Vue. Everything on screen in Odoo is an Owl
+component: the navbar, the views, each field of a form. Learning Owl is the first step to working
+with the web framework.
+
+This part starts with a short overview of Owl. The exercises themselves are in the `Owl playground
+<https://odoo.github.io/owl/playground/>`_, a page that runs Owl code in the browser, with nothing
+to install. The playground comes with two tutorials: *Getting Started*, then *Todo List*.
+
+Owl in a nutshell
+-----------------
+
+Owl provides four things:
+
+- A `Component` class. Each part of the user interface is a component: a JavaScript class and a
+  template.
+- Templates, written in QWeb, the same template language as on the server, with a few additions for
+  components.
+- Reactivity, built on *signals*. When a signal changes, Owl re-renders the components that read it.
+- Hooks, functions that plug into the lifecycle of a component, such as `onWillStart` or
+  `onMounted`.
+
+Example: a `Counter` component
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `Counter` component below displays a number, and increments it each time the user clicks on the
+button.
+
+.. code-block:: js
+   :caption: ``counter.js``
+
+   import { Component, signal } from "@odoo/owl";
+
+   export class Counter extends Component {
+       static template = "my_module.Counter";
+
+       count = signal(0);
+
+       increment() {
+           this.count.set(this.count() + 1);
+       }
+   }
+
+.. code-block:: xml
+   :caption: ``counter.xml``
+
+   <templates xml:space="preserve">
+       <t t-name="my_module.Counter">
+           <p>Counter: <t t-out="this.count()"/></p>
+           <button class="btn btn-primary" t-on-click="this.increment">Increment</button>
+       </t>
+   </templates>
+
+A few things to notice:
+
+- `static template` gives the name of the template. That name is what ties the two files together.
+- Owl evaluates the template with the component as `this`. Each directive value is a JavaScript
+  expression: `this.count()` reads the signal, and `this.increment` is the method to call on click.
+- `signal(0)` creates a reactive value. Call it to read it, call `set` to write it. During
+  rendering, a component records the signals it reads, and re-renders when one of them changes.
+  There is nothing else to declare.
+
+In an Odoo addon, the template lives in an XML file of the addon, and the manifest adds both files
+to an assets bundle. In the playground, a template can also be written inline in the JavaScript
+file, with the `xml` tagged template from `@odoo/owl`.
+
+.. seealso::
+   - `Owl documentation <https://odoo.github.io/owl/documentation/>`_
+   - `Signals <https://odoo.github.io/owl/documentation/v3/owl/reference/signals.html>`_
+   - `Template syntax
+     <https://odoo.github.io/owl/documentation/v3/owl/reference/template_syntax.html>`_
+   - `Hooks <https://odoo.github.io/owl/documentation/v3/owl/reference/hooks.html>`_
+
+Playground exercise 1: Getting Started
+--------------------------------------
+
+Open the `Getting Started tutorial <https://odoo.github.io/owl/playground/#getting_started>`_ in the
+Owl playground. You can also open the playground and pick :guilabel:`Getting Started` on its home
+page.
+
+.. image:: client_framework_101/playground-getting-started.png
+   :align: center
+   :alt: The Owl playground, with the instructions of the Getting Started tutorial on the left, and
+         the home page of the playground on the right.
+
+On the left, the playground shows the instructions of the current step and an editor for its files.
+On the right, it runs the code: click :guilabel:`Run` to see the result. The navigation bar above
+the editor moves between steps, and each step has hints and a solution that you can reveal with
+:guilabel:`Solve` if you get stuck.
+
+This first tutorial covers the fundamentals of Owl: signals to hold reactive state, templates and
+event handlers, splitting the interface into sub components, passing data down with props and
+validating them, deriving values with `computed` and binding inputs with `t-model`, and running code
+at key moments of a component's life with lifecycle hooks.
+
+Playground exercise 2: Todo List
+--------------------------------
+
+Once you are done with Getting Started, open the `Todo List tutorial
+<https://odoo.github.io/owl/playground/#todo_list>`_.
+
+.. image:: client_framework_101/playground-todo-list.png
+   :align: center
+   :alt: The Owl playground, with the instructions of the Todo List tutorial on the left, and the
+         home page of the playground on the right.
+
+This second tutorial builds a complete todo application and introduces the concepts a real
+application needs: rendering lists of components, handling user input, dynamic classes, references
+to DOM elements and custom hooks, callback props, effects that react to data changes, plugins to
+separate the business logic from the interface, computed values, persisting data, and when to use a
+`proxy` rather than signals.
+
+.. tip::
+   The playground has a third project, *Hibou OS*, which builds a small desktop environment. It goes
+   further into plugins and registries, if you want more practice before part 2.
+
+.. _tutorials/client_framework_101/dashboard:
+
+Part 2: Build a dashboard
+=========================
 
 The first part of this tutorial introduced you to Owl. It is now time to learn about the Odoo
-JavaScript framework in its entirety, as used by the web client. This chapter is a complete
-standalone project, in which we implement a dashboard client action. It is mostly an excuse to
-discover and practice many features of the Odoo web framework!
+JavaScript framework in its entirety, as used by the web client. This part is a complete standalone
+project, in which we implement a dashboard client action. It is mostly an excuse to discover and
+practice many features of the Odoo web framework!
 
-For this chapter, we will start from the empty dashboard provided by the `awesome_dashboard` addon.
-We will progressively add features to it, using the Odoo JavaScript framework.
+For this part, we will start from the empty dashboard provided by the `awesome_dashboard` addon. We
+will progressively add features to it, using the Odoo JavaScript framework.
 
 .. admonition:: Goal
 
-   .. image:: 02_build_a_dashboard/overview.png
+   .. image:: client_framework_101/overview.png
       :align: center
       :alt: The finished dashboard: a control panel with two buttons and a gear icon, five cards
             with statistics, and a pie chart of t-shirt orders by size.
@@ -25,10 +170,10 @@ solution!
    The Odoo JavaScript files downloaded by the browser are minified. For debugging purposes, switch
    to :ref:`debug mode with assets <developer-mode/activation>`, so that the files are not minified.
 
-.. _tutorials/discover_js_framework/setup:
+.. _tutorials/client_framework_101/setup:
 
 Setup
-=====
+-----
 
 To get started, you need a running Odoo server and a development environment setup, with the
 `awesome_dashboard` addon installed:
@@ -39,7 +184,7 @@ To get started, you need a running Odoo server and a development environment set
 #. Start a new Odoo database and install the `awesome_dashboard` module.
 
 1. A common layout
-==================
+------------------
 
 Most screens in the Odoo web client use a common layout: a control panel on top, with some buttons,
 and a main content zone just below. This is done using the `Layout component
@@ -55,7 +200,7 @@ and a main content zone just below. This is done using the `Layout component
 Open http://localhost:8069/odoo, then open the :guilabel:`Awesome Dashboard` app, and see the
 result.
 
-.. image:: 02_build_a_dashboard/new-layout.png
+.. image:: client_framework_101/new-layout.png
    :align: center
    :alt: The dashboard with an empty control panel above a gray content area.
 
@@ -101,11 +246,11 @@ result.
           background-color: gray;
       }
 
-.. _tutorials/discover_js_framework/plugins:
-.. _tutorials/discover_js_framework/services:
+.. _tutorials/client_framework_101/plugins:
+.. _tutorials/client_framework_101/services:
 
 Theory: plugins
-===============
+---------------
 
 Owl destroys a component when it leaves the screen, and its state goes with it. This is fine in many
 cases, but some code has to outlive a screen. For example, Discuss should not reload all its
@@ -207,7 +352,7 @@ The web client starts many plugins. Here are some of the most common ones:
    <https://odoo.github.io/owl/documentation/v3/owl/reference/plugins.html>`_
 
 2. Add some buttons for quick navigation
-========================================
+----------------------------------------
 
 One important plugin provided by Odoo is the `ActionPlugin`: it can execute all kinds of standard
 actions defined by Odoo. For example, here is how a component could execute an action by its XML id:
@@ -231,7 +376,7 @@ Let us now add two buttons to our control panel:
 #. A button `Leads`, which opens a dynamic action on the `crm.lead` model with a list and a form
    view.
 
-.. image:: 02_build_a_dashboard/navigation-buttons.png
+.. image:: client_framework_101/navigation-buttons.png
    :align: center
    :alt: The control panel of the dashboard, with a Customers and a Leads button.
 
@@ -288,7 +433,7 @@ Let us now add two buttons to our control panel:
       </Layout>
 
 3. Add a dashboard item
-=======================
+-----------------------
 
 Let us now improve the content of this dashboard.
 
@@ -297,7 +442,7 @@ Let us now improve the content of this dashboard.
    hardcoded to `(18*size)rem`.
 #. Add two cards to the dashboard. One with no size, and the other with a size of 2.
 
-.. image:: 02_build_a_dashboard/dashboard-item.png
+.. image:: client_framework_101/dashboard-item.png
    :align: center
    :alt: Two white cards on the gray dashboard, the second one twice as wide as the first.
 
@@ -353,7 +498,7 @@ Let us now improve the content of this dashboard.
    already does for `Layout`.
 
 4. Call the server, add some statistics
-=======================================
+---------------------------------------
 
 Let us improve the dashboard by adding a few dashboard items to display *real* business data. The
 `awesome_dashboard` addon provides a `/awesome_dashboard/statistics` route that is meant to return
@@ -390,7 +535,7 @@ returns. Use it for the data that the screen cannot render without.
    - Number of cancelled orders this month
    - Average time for an order to go from 'new' to 'sent' or 'cancelled'
 
-.. image:: 02_build_a_dashboard/statistics.png
+.. image:: client_framework_101/statistics.png
    :align: center
    :alt: Five cards on the dashboard, each one with a statistic in large green figures.
 
@@ -457,7 +602,7 @@ returns. Use it for the data that the screen cannot render without.
       </div>
 
 5. Cache network calls, create a plugin
-=======================================
+---------------------------------------
 
 If you open the :guilabel:`Network` tab of your browser's dev tools, you will see that the call to
 `/awesome_dashboard/statistics` is done every time the client action is displayed. This is because
@@ -520,7 +665,7 @@ outside of the component. This is a nice use case for a plugin!
    The `rpc` import moves from :file:`dashboard.js` to the plugin.
 
 6. Cleanup
-==========
+----------
 
 The plugin owns the network call now, but the component still holds the data: a `statistics` signal,
 and an `onWillStart` whose only job is to fill it. Two dashboards on screen would each keep their
@@ -585,7 +730,7 @@ to pass it along.
    `onWillStart` still waits for the first load, so the first render has its data.
 
 7. Display a pie chart
-======================
+----------------------
 
 Everyone likes charts (!), so let us add a pie chart in our dashboard. It will display the
 proportions of t-shirts sold for each size: S/M/L/XL/XXL.
@@ -659,7 +804,7 @@ load the Chart.js code every time if they don't need it.
 
 #. Make it work!
 
-.. image:: 02_build_a_dashboard/pie-chart.png
+.. image:: client_framework_101/pie-chart.png
    :align: center
    :alt: A wide card on the dashboard with a pie chart of the t-shirts sold by size.
 
@@ -789,7 +934,7 @@ load the Chart.js code every time if they don't need it.
    normal flow, and its size no longer affects the size of its parent.
 
 8. Make it a generic hook
-=========================
+-------------------------
 
 `PieChart` holds two different things. One is what a pie chart of t-shirt sizes looks like. The
 other is the plumbing that every chart needs: load Chart.js, keep a ref to a canvas, create the
@@ -878,7 +1023,7 @@ Another type of chart is then just a component with a different `descFn`.
    the effect, where reading `this.props.data` subscribes the chart to it.
 
 9. Periodic updates
-===================
+-------------------
 
 Since we moved the data loading in a cache, it never updates. But let us say that we are looking at
 fast moving data, so we want to periodically (for example, every 10 minutes) reload fresh data.
@@ -966,7 +1111,7 @@ again.
    cards until the first load is done.
 
 10. Lazy loading the dashboard
-==============================
+------------------------------
 
 Let us imagine that our dashboard is getting quite big, and is only of interest to some of our
 users. In that case, it could make sense to lazy load our dashboard, and all related assets, so we
@@ -1044,7 +1189,7 @@ that will load an asset bundle before displaying our component.
    them on to the dashboard.
 
 11. Making our dashboard generic
-================================
+--------------------------------
 
 So far, we have a nice working dashboard. But it is currently hardcoded in the dashboard template.
 What if we want to customize our dashboard? Maybe some users have different needs and want to see
@@ -1250,7 +1395,7 @@ And now, our dashboard template is generic!
       </div>
 
 12. Making our dashboard extensible
-===================================
+-----------------------------------
 
 However, the content of our item list is still hardcoded. Let us fix that by using a registry. We
 will use the `Registry` class of Owl 3, rather than the global registry of `@web/core/registry`. The
@@ -1317,7 +1462,7 @@ item, it gets a clear error right away.
    an item.
 
 13. Add and remove dashboard items
-==================================
+----------------------------------
 
 Let us see how we can make our dashboard customizable. To make it simple, we will save the user
 dashboard configuration in the local storage, so that we don't have to deal with the server for now.
@@ -1332,7 +1477,7 @@ The dashboard configuration will be saved as a list of removed item ids.
 #. Modify the `AwesomeDashboard` component to filter the current items by removing the ids of items
    from the configuration.
 
-.. image:: 02_build_a_dashboard/items-configuration.png
+.. image:: client_framework_101/items-configuration.png
    :align: center
    :alt: A dialog over the dashboard, with a checkbox for each dashboard item and a Done button.
 
@@ -1468,7 +1613,7 @@ The dashboard configuration will be saved as a list of removed item ids.
       </t>
 
 14. Going further
-=================
+-----------------
 
 Here is a list of some small (and not so small) improvements you could try to do if you have the
 time:
