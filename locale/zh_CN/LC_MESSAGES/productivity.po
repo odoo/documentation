@@ -26,8 +26,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-25 23:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-26 19:01+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/productivity/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -2341,6 +2341,8 @@ msgid ""
 "the :menuselection:`AI app --> Agents --> Skills`, and "
 "click :guilabel:`Create Leads`."
 msgstr ""
+"要查看创建线索技能的详细说明，请前往\\ :menuselection:`AI 应用程序 --> 智能"
+"体 --> 技能`\\ ，然后点击\\ :guilabel:`创建线索`\\ 。"
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:116
 #: ../../export/content/applications/productivity/ai/support_operations.rst:133
@@ -2359,6 +2361,10 @@ msgid ""
 "directly to their Odoo database through an Odoo |MCP| server in order to "
 "read or modify the database using their own local |AI| workflows."
 msgstr ""
+"模型上下文协议（MCP）是一项开源标准，允许大语言模型（LLM）安全地与外部应用程"
+"序交互并访问其数据。在 Odoo **AI** 中，用户可以将外部\\ |AI|\\ 智能体通过 "
+"Odoo\\ |MCP|\\ 服务器直接连接到其 Odoo 数据库，以便使用其本地\\ |AI|\\ 工作流"
+"读取或修改数据库。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:17
 msgid ""
@@ -2366,12 +2372,16 @@ msgid ""
 "to connect |AI| agents to them, and how to read or write data through the "
 "server."
 msgstr ""
+"以下文档概述了 Odoo\\ |MCP|\\ 服务器、如何将\\ |AI|\\ 智能体连接至该服务器，"
+"以及如何通过服务器读取或写入数据。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:21
 msgid ""
 "This documentation uses the following terms with some flexibility and may "
 "differ from their proper technical usage, either in Odoo or externally:"
 msgstr ""
+"本文档在使用以下术语时具有一定灵活性，可能与 Odoo 或外部的严格技术用法有所不"
+"同："
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:24
 msgid ""
@@ -2379,10 +2389,12 @@ msgid ""
 "interacts. For example, the |LLM| prompted by the user is also referred to "
 "as the *client*."
 msgstr ""
+"*客户端*：泛指用户与之交互的\\ |AI|\\ 应用程序。例如，用户向其输入提示词的\\ "
+"|LLM|\\ 也被称为*客户端*。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:30
 msgid "MCP workflow"
-msgstr ""
+msgstr "MCP 工作流"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:32
 msgid ""
@@ -2393,10 +2405,14 @@ msgid ""
 "the user, who interacts with the |MCP| client **only** by prompting it with "
 "specific tasks."
 msgstr ""
+"在\\ |MCP|\\ 工作流中，Odoo 数据库充当远程\\ |MCP|\\ *服务器*，与\\ |MCP|\\ "
+"*客户端*（用户的外部\\ |AI|\\ 智能体）通信以执行\\ :doc:`工具 <server-"
+"actions>`\\ ，例如读取数据或编辑数据库中的记录。此过程在内部进行且对用户不可"
+"见，用户**仅**通过输入特定任务的提示词与\\ |MCP|\\ 客户端交互。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:37
 msgid "The following sequence outlines the |MCP| workflow in Odoo:"
-msgstr ""
+msgstr "以下流程概述了 Odoo 中的\\ |MCP|\\ 工作流："
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:39
 msgid ""
@@ -2406,28 +2422,34 @@ msgid ""
 "<mcp_server/mcp_tools>` (or *Server Actions*) exposed to it in the database. "
 "If successful, the client caches the tools for the remainder of the session."
 msgstr ""
+"用户使用服务器详细信息和身份验证密钥\\ :ref:`配置客户端 <ai/mcp/"
+"configuration>`\\ 。连接成功后，客户端会自动向服务器发送初始请求，获取数据库"
+"中向其公开的所有可用\\ :doc:`AI 工具 <mcp_server/mcp_tools>`\\ （或*服务器动"
+"作*）。如果成功，客户端会在该会话的剩余时间内缓存这些工具。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:43
 msgid ""
 "The user prompts the client in plain language. A list of :ref:`example "
 "prompts <ai/mcp/use-cases>` is provided in this documentation."
 msgstr ""
+"用户使用自然语言向客户端输入提示。本文档提供了\\ :ref:`示例提示词 <ai/mcp/"
+"use-cases>`\\ 列表。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:45
 msgid "The client requests that the server invoke the correct tools."
-msgstr ""
+msgstr "客户端请求服务器调用正确的工具。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:46
 msgid "After executing the tool, the server returns the results to the client."
-msgstr ""
+msgstr "执行工具后，服务器将结果返回给客户端。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:47
 msgid "The client responds to the user's prompt in plain language."
-msgstr ""
+msgstr "客户端使用自然语言响应用户的提示。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:49
 msgid "Client-server interaction diagram for Odoo AI MCP."
-msgstr ""
+msgstr "Odoo AI MCP 客户端与服务器交互图。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:53
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:458
@@ -2436,7 +2458,7 @@ msgstr ":doc:`server-actions`"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:60
 msgid "The configuration process includes the following steps:"
-msgstr ""
+msgstr "配置过程包括以下步骤："
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:62
 msgid ""
@@ -2448,12 +2470,12 @@ msgstr ""
 msgid ""
 ":ref:`Configure the MCP server details <ai/mcp/server-settings>` and connect "
 "via the client."
-msgstr ""
+msgstr ":ref:`配置 MCP 服务器详细信息 <ai/mcp/server-settings>`\\ 并通过客户端连接。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:65
 msgid ""
 ":ref:`Expose server actions <ai/mcp/expose-tools>` to the client from Odoo."
-msgstr ""
+msgstr ":ref:`公开服务器动作 <ai/mcp/expose-tools>`\\ 至客户端（在 Odoo 中进行）。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:66
 msgid ""
@@ -2464,12 +2486,12 @@ msgstr ""
 msgid ""
 "Before configuring the AI client settings in step two, ensure that the "
 "following are installed:"
-msgstr ""
+msgstr "在第二步配置 AI 客户端设置之前，请确保已安装以下项："
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:71
 msgid ""
 "An |MCP|-compatible AI agent (e.g., *Claude Code*, *Antigravity*, *Codex*)"
-msgstr ""
+msgstr "兼容\\ |MCP|\\ 的 AI 智能体（例如 *Claude Code*、*Antigravity*、*Codex*）"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:72
 msgid ""
@@ -2679,6 +2701,9 @@ msgid ""
 "client sends a request to the server, it uses the key to authenticate the "
 "user's identity and permissions in the Odoo database."
 msgstr ""
+"要将\\ |MCP|\\ 客户端连接到服务器，用户必须首先通过静态 API 密钥设置对服务器"
+"的身份验证。每当\\ |MCP|\\ 客户端向服务器发送请求时，都会使用该密钥验证用户"
+"在 Odoo 数据库中的身份和权限。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:184
 msgid ""
@@ -4259,28 +4284,32 @@ msgid ""
 "title, duration, the assigned users or resources, and counters for upcoming "
 "and total meetings or bookings."
 msgstr ""
+"主\\ :menuselection:`预约`\\ 应用仪表板以默认看板视图显示所有预约类型。每行显"
+"示预约标题、时长、指派的用户或资源，以及待举行和总计的会议或预订计数器。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:10
 msgid ""
 "User-based appointment types display their counters as :guilabel:`Meetings`, "
 "while resource-based types display them as :guilabel:`Bookings`."
 msgstr ""
+"基于用户的预约类型将其计数器显示为\\ :guilabel:`会议`\\ ，而基于资源的预约类"
+"型则显示为\\ :guilabel:`预订`\\ 。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:13
 msgid "Each appointment type has two action buttons on the right:"
-msgstr ""
+msgstr "每个预约类型右侧都有两个操作按钮："
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:15
 msgid ""
 ":guilabel:`Share`: Click this button to copy the appointment link to the "
 "clipboard, which can be shared."
-msgstr ""
+msgstr ":guilabel:`分享`：单击此按钮将预约链接复制到剪贴板以便分享。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:17
 msgid ""
 ":guilabel:`Configure`: Click this to open the appointment type form to edit "
 "its settings."
-msgstr ""
+msgstr ":guilabel:`配置`：单击此按钮打开预约类型表单以编辑其设置。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:19
 msgid ""
@@ -4288,6 +4317,8 @@ msgid ""
 "Unpublished types do not have a ribbon and are not visible to customers on "
 "the website."
 msgstr ""
+"已发布的预约类型会显示\\ :guilabel:`已发布`\\ 缎带。未发布的类型没有缎带，且"
+"对网站上的客户不可见。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:22
 msgid ""
@@ -4295,6 +4326,8 @@ msgid ""
 "click :guilabel:`Share` in the top toolbar to share multiple appointment "
 "types at once."
 msgstr ""
+"单击\\ :guilabel:`新建`\\ 以创建新的预约类型，或单击顶部工具栏中的\\ "
+":guilabel:`分享`\\ 一次分享多个预约类型。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:30
 msgid ""
@@ -4302,12 +4335,16 @@ msgid ""
 "defines *what* can be booked, *when* it is available, *who* (or which "
 "resource) handles it, and what information the customer must provide."
 msgstr ""
+"**预约类型**\\ 代表一项可预订的服务。预约类型定义了\\ *什么*\\ 可以预订、\\ "
+"*何时*\\ 可用、由\\ *谁*\\ （或哪个资源）处理，以及客户必须提供哪些信息。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:34
 msgid ""
 "To create or manage appointment types, open "
 "the :menuselection:`Appointments` app dashboard and click :guilabel:`New`."
 msgstr ""
+"要创建或管理预约类型，请打开\\ :menuselection:`预约`\\ 应用仪表板并单击\\ "
+":guilabel:`新建`\\ 。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:40
 msgid "Resources"
@@ -4320,6 +4357,8 @@ msgid ""
 "create a new resource, or manage existing resources, navigate "
 "to :menuselection:`Appointments --> Configuration --> Resources`."
 msgstr ""
+"**预约**\\ 应用支持根据用户或资源的可用性安排新预约，例如会议室或座位区。要创"
+"建新资源或管理现有资源，请转到\\ :menuselection:`预约 --> 配置 --> 资源`\\ 。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:46
 msgid ""
@@ -4328,6 +4367,9 @@ msgid ""
 "the :guilabel:`Capacity` field, enter the maximum number of people the "
 "resource can accommodate."
 msgstr ""
+"单击\\ :guilabel:`新建`\\ 创建资源。在空白记录中，为新资源输入\\ "
+":guilabel:`名称`\\ （例如 ``Court 1``）。在\\ :guilabel:`容纳人数`\\ 字段中，"
+"输入该资源最多可容纳的人数。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:50
 msgid ""
@@ -4336,12 +4378,17 @@ msgid ""
 "Calendar`. Select a different calendar to customize the resource's own "
 "availability independently from the appointment type's Availabilities tab."
 msgstr ""
+"\\ :guilabel:`开放时间`\\ 字段定义了该资源的工作日历。默认设置为\\ "
+":guilabel:`预约资源默认日历`\\ 。选择其他日历可自定义该资源自身的空闲时间，独"
+"立于预约类型的“可用性”选项卡。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:56
 msgid ""
 "The :guilabel:`Opening Hours` field only appears when :ref:`developer mode "
 "<developer-mode/activation>` is activated."
 msgstr ""
+"\\ :guilabel:`开放时间`\\ 字段仅在启用\\ :ref:`开发者模式 <developer-mode/"
+"activation>`\\ 时出现。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:59
 msgid ""
@@ -4351,6 +4398,9 @@ msgid ""
 "combination with others to handle larger groups, select one or more "
 "resources to link."
 msgstr ""
+"在\\ :guilabel:`关联资源`\\ 字段中，选择该资源与其他资源的组合方式。默认情况"
+"下，资源设置为\\ :guilabel:`不组合`\\ ，表示其独立运作。要允许该资源与其他资"
+"源组合使用以接纳更大的人群，请选择一个或多个要关联的资源。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:65
 msgid ""
@@ -4525,13 +4575,15 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:139
 msgid "Availabilities tab"
-msgstr ""
+msgstr "“可用性”选项卡"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:141
 msgid ""
 "The :guilabel:`Availabilities` tab is used to define when this appointment "
 "type can be booked. Each row represents a recurring time window."
 msgstr ""
+"\\ :guilabel:`可用性`\\ 选项卡用于定义何时可以预订该预约类型。每行代表一个周"
+"期性时间窗口。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:144
 msgid ""
@@ -4541,18 +4593,26 @@ msgid ""
 "the :guilabel:`Restrict to Users` column to limit a specific time window to "
 "one or more users; if left empty, the window applies to all assigned users."
 msgstr ""
+"单击\\ :guilabel:`添加明细行`\\ 创建可用时间窗口。从\\ :guilabel:`每周`\\ 下"
+"拉列表中选择星期几，然后设置\\ :guilabel:`从`\\ 和\\ :guilabel:`至`\\ 时间。"
+"可选地，使用\\ :guilabel:`限制用户`\\ 列将特定时间窗口限制为一个或多个用户；"
+"若留空，则该窗口适用于所有被指派的用户。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:149
 msgid ""
 "Multiple entries per day are supported. Click the :icon:`fa-trash-"
 "o` :guilabel:`(trash)` icon to delete an entry."
 msgstr ""
+"每天支持多个条目。单击\\ :icon:`fa-trash-o` :guilabel:`（废纸篓）`\\ 图标以删"
+"除条目。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:153
 msgid ""
 "To block out a lunch break, create two entries for the same day: one before "
 "the break (e.g., ``9h`` to ``12h``) and one after (e.g., ``14h`` to ``17h``)."
 msgstr ""
+"要预留午休时间，请在同一天创建两个条目：一个在休息之前（例如 ``9h`` 至 "
+"``12h``），一个在休息之后（例如 ``14h`` 至 ``17h``）。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:157
 msgid ""
@@ -4564,6 +4624,11 @@ msgid ""
 "``17h`` but the employee's schedule is Monday ``10h`` to ``16h``, only "
 "``10h`` to ``16h`` is shown to customers."
 msgstr ""
+"如果在\\ :guilabel:`员工日程`\\ 选项已在\\ :ref:`选项选项卡 <appointments/"
+"appointment-types/options-tab>`\\ 中启用，则可用时间为此处定义的时间窗口与\\ "
+"**员工**\\ 应用中用户工作日程的\\ **交集**\\ 。只有同时处于两者之中的时段才可"
+"预订。例如，如果“可用性”选项卡允许周一 ``9h`` 至 ``17h``，但员工的日程安排为"
+"周一 ``10h`` 至 ``16h``，则向客户仅显示 ``10h`` 至 ``16h``。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:167
 #: ../../export/content/applications/productivity/calendar.rst:204
@@ -28594,6 +28659,9 @@ msgid ""
 "<access-rights/groups>` in the :ref:`template settings <spreadsheet/get-"
 "started/templates-manage>`."
 msgstr ""
+"默认情况下，模板对数据库中的所有用户可用。若要限制模板的使用，请将相关\\ "
+":ref:`用户组 <access-rights/groups>`\\ 在\\ :ref:`模板设置 <spreadsheet/get-"
+"started/templates-manage>`\\ 中进行定义。"
 
 #: ../../export/content/applications/productivity/spreadsheet/get_started.rst:68
 msgid ""
@@ -28602,6 +28670,9 @@ msgid ""
 "template, :ref:`edit the template <spreadsheet/get-started/templates-"
 "manage>`."
 msgstr ""
+"电子表格保存为模板后，对打开的电子表格所做的任何进一步更改都只会保存在该电子"
+"表格中。如需更改模板，请\\ :ref:`编辑模板 <spreadsheet/get-started/templates-"
+"manage>`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/get_started.rst:77
 msgid ""
@@ -28654,6 +28725,8 @@ msgid ""
 "field, then deleting :ref:`user groups <access-rights/groups>` or selecting "
 "user groups from the dropdown, as relevant."
 msgstr ""
+"要控制对模板的访问权限，请点击\\ :guilabel:`访问组`\\ 字段，然后根据需要删"
+"除\\ :ref:`用户组 <access-rights/groups>`\\ 或从下拉列表中选择用户组。"
 
 #: ../../export/content/applications/productivity/spreadsheet/get_started.rst:102
 msgid ""
@@ -28772,6 +28845,8 @@ msgid ""
 "Users with :guilabel:`Editor` rights to a spreadsheet have various options "
 "for managing the spreadsheet's sheets from the bottom bar:"
 msgstr ""
+"拥有电子表格\\ :guilabel:`编辑者`\\ 权限的用户可以通过底部栏使用各种选项来管"
+"理电子表格的工作表："
 
 #: ../../export/content/applications/productivity/spreadsheet/get_started.rst:158
 msgid ""
@@ -28836,6 +28911,8 @@ msgid ""
 ":guilabel:`Change grid color`: select an existing or custom color to change "
 "the color of the grid of the individual sheet."
 msgstr ""
+":guilabel:`更改网格颜色`：选择现有颜色或自定义颜色，以更改单个工作表的网格颜"
+"色。"
 
 #: ../../export/content/applications/productivity/spreadsheet/get_started.rst:179
 msgid ""

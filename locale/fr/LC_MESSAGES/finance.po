@@ -71,7 +71,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-25 17:33+0000\n"
+"PO-Revision-Date: 2026-10-26 23:32+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-20-doc/"
 "finance/fr/>\n"
@@ -19440,6 +19440,9 @@ msgid ""
 "method>`: Set the valuation method as :guilabel:`Perpetual (at invoicing)` "
 "or :guilabel:`Periodic (at closing)`."
 msgstr ""
+":ref:`Valorisation d'inventaire <accounting/inventory-valuation/valuation-"
+"method>` : définir la méthode de valorisation sur :guilabel:`Perpétuelle ( à "
+"la facturation)` ou :guilabel:`Périodique (à la clôture)`."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:41
 msgid ""
@@ -19448,6 +19451,10 @@ msgid ""
 "to :guilabel:`Manual`, :guilabel:`Daily`, or :guilabel:`Monthly` to automate "
 "it, if needed."
 msgstr ""
+":guilabel:`Valorisation périodique` : définir le processus d':ref:`entrée de "
+"clôture <accounting/inventory-valuation/closing-entry>` sur "
+":guilabel:`Manuel`, :guilabel:`Quotidien` ou :guilabel:`Mensuel` pour "
+"l'automatiser, si nécessaire."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:44
 msgid ""
@@ -19455,6 +19462,9 @@ msgid ""
 "Price`, :guilabel:`First in First Out (FIFO)`, or :guilabel:`Average Cost "
 "(AVCO)`."
 msgstr ""
+":ref:`Méthode de coût d'inventaire <costing-methods>` : choisir "
+":guilabel:`Prix standard`, :guilabel:`Premier entré, premier sorti (FIFO)` "
+"ou :guilabel:`Coût moyen (AVCO)`."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:46
 msgid ""
@@ -19465,11 +19475,20 @@ msgid ""
 "Valuation` account and update the :ref:`Variation Account <accounting/"
 "inventory-valuation/variation-account>`."
 msgstr ""
+":ref:`Compte de valorisation <accounting/inventory-valuation/valuation-"
+"account>` : définir le compte d'actif utilisé pour enregistrer la valeur "
+"financière du stock physique. Cliquer ensuite sur :icon:`oi-arrow-right` "
+":guilabel:`(lien interne)` à côté du champ :guilabel:`Compte de "
+"valorisation` pour ouvrir le compte de :guilabel:`Valorisation de stock` et "
+"mettre à jour le :ref:`Compte de variation <accounting/inventory-valuation/"
+"variation-account>`."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:51
 msgid ""
 ":guilabel:`Journal`: Set the journal to post inventory valuation entries in."
 msgstr ""
+":guilabel:`Journal` : définir le journal dans lequel comptabiliser les "
+"écritures de valorisation d'inventaire."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:52
 msgid ""
@@ -19479,12 +19498,20 @@ msgid ""
 "inventory-valuation/inventory-loss>` or the :ref:`Cost of Production "
 "<accounting/inventory-valuation/cost-of-production>` accounts."
 msgstr ""
+":guilabel:`D'autres comptes peuvent être définis sur \"Perte d'inventaire\" "
+"et \"Production\" sur des emplacements dédiés` : si nécessaire, cliquer sur "
+":guilabel:`emplacements` et définir les comptes de :ref:`Perte d'inventaire "
+"<accounting/inventory-valuation/inventory-loss>` ou de :ref:`Coût de "
+"production <accounting/inventory-valuation/cost-of-production>`."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:58
 msgid ""
 "Default accounts, inventory valuation methods, and costing methods can be "
 "overridden by setting them on the product category form."
 msgstr ""
+"Les comptes par défaut, les méthodes de valorisation d'inventaire et les "
+"méthodes de coût peuvent être remplacés en les définissant sur la fiche de "
+"la catégorie de produit."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:64
 msgid "Valuation methods"
@@ -19495,6 +19522,8 @@ msgid ""
 "The timing and manner of maintaining inventory records vary based on the "
 "inventory valuation method:"
 msgstr ""
+"Le moment et la manière de tenir les registres d'inventaire varient en "
+"fonction de la méthode de valorisation d'inventaire :"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:68
 msgid ""
@@ -19507,6 +19536,16 @@ msgid ""
 "the :guilabel:`Periodic` inventory valuation method, the expense account is "
 "debited when vendor bills are posted."
 msgstr ""
+":guilabel:`Périodique (à la clôture)` : la valorisation de l'inventaire est "
+"mise à jour uniquement lors de la génération d'écritures pendant le "
+":ref:`processus de clôture des stocks <accounting/inventory-valuation/"
+"closing-entry>`. Bien que les mouvements de stock soient suivis physiquement "
+"via le rapport :doc:`Stock d'inventaire <../../../inventory_and_mrp/"
+"inventory/warehouses_storage/reporting/stock>`, ils ne sont pas "
+"automatiquement synchronisés avec les registres financiers. Lors de "
+"l'utilisation de la méthode de valorisation d'inventaire "
+":guilabel:`Périodique`, le compte de charge est débité lorsque les factures "
+"fournisseurs sont comptabilisées."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:74
 msgid ""
@@ -19517,6 +19556,14 @@ msgid ""
 "entry>`, :guilabel:`Perpetual (at invoicing)` inventory valuation is updated "
 "for deliveries and receipts, even if there is no invoice or vendor bill yet."
 msgstr ""
+":guilabel:`Perpétuelle (à la facturation)` : la valorisation de l'inventaire "
+"est mise à jour lorsque les factures sont comptabilisées. Le compte de "
+"charge (:abbr:`COGS (Coût des marchandises vendues)`) est débité lorsque les "
+"factures sont comptabilisées. Combiné avec le :ref:`processus de clôture des "
+"stocks <accounting/inventory-valuation/closing-entry>`, la valorisation "
+"d'inventaire :guilabel:`Perpétuelle (à la facturation)` est mise à jour pour "
+"les livraisons et les réceptions, même s'il n'y a pas encore de facture "
+"client ou fournisseur."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:81
 msgid ""
@@ -19525,6 +19572,11 @@ msgid ""
 "standards. However, companies may choose a different inventory valuation "
 "method based on their specific needs."
 msgstr ""
+"La méthode de valorisation périodique est souvent associée aux normes "
+"continentales, tandis que la méthode perpétuelle est couramment utilisée "
+"avec les normes anglo-saxonnes. Toutefois, les entreprises peuvent choisir "
+"une méthode de valorisation d'inventaire différente en fonction de leurs "
+"besoins spécifiques."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:84
 msgid ""
@@ -19534,6 +19586,12 @@ msgid ""
 "require synchronization with inventory stock, unless an automatic update of "
 "accounting inventory value is needed."
 msgstr ""
+"Dans la valorisation :guilabel:`Perpétuelle`, il est plus courant de définir "
+"la :guilabel:`Valorisation périodique` sur :guilabel:`Manuel` et de générer "
+"des écritures de clôture uniquement lorsqu'une période fiscale se clôt, ou "
+"lorsque les rapports comptables nécessitent une synchronisation avec le "
+"stock d'inventaire, à moins qu'une mise à jour automatique de la valeur "
+"d'inventaire comptable ne soit nécessaire."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:90
 msgid ""
@@ -19544,6 +19602,12 @@ msgid ""
 "the product form, and the actual billed price, helping track pricing "
 "fluctuations."
 msgstr ""
+"Lors de l'utilisation de la méthode de valorisation :guilabel:`Perpétuelle "
+"(à la facturation)` avec la méthode de coût :guilabel:`Prix standard`, un "
+":guilabel:`Compte de différence de prix` peut être défini pour la "
+":guilabel:`Catégorie de produit`. Ce compte enregistre la différence entre "
+"le prix standard du produit, tel que spécifié sur la fiche produit, et le "
+"prix facturé réel, ce qui aide à suivre les fluctuations de prix."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:99
 msgid "Valuation account"
@@ -19556,6 +19620,11 @@ msgid ""
 "inventory asset value differently depending on the selected :ref:`valuation "
 "method <accounting/inventory-valuation/valuation-method>`."
 msgstr ""
+"Le :guilabel:`Compte de valorisation` enregistre la valeur d'inventaire "
+"listée comme un actif circulant au bilan. Le :guilabel:`Compte de "
+"valorisation` suit la valeur des actifs d'inventaire différemment selon la "
+":ref:`méthode de valorisation <accounting/inventory-valuation/valuation-"
+"method>` sélectionnée."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:108
 msgid "Variation account"
@@ -19568,6 +19637,11 @@ msgid ""
 "valuation/closing-entry>` and can be updated during :ref:`configuration "
 "<accounting/inventory-valuation/configuration>`:"
 msgstr ""
+"Le :guilabel:`Compte de variation` est utilisé pour enregistrer les "
+"variations d'inventaire pour la période couverte par le :ref:`processus de "
+"clôture des stocks <accounting/inventory-valuation/closing-entry>` et peut "
+"être mis à jour pendant la :ref:`configuration <accounting/inventory-"
+"valuation/configuration>` :"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:114
 msgid ""
@@ -20178,14 +20252,17 @@ msgid ""
 "Identify the open balance in the :guilabel:`Stock Interim` accounts and "
 "create a journal entry that debits/credits:"
 msgstr ""
+"Identifier le solde ouvert dans les comptes de :guilabel:`Stock provisoire` "
+"et créer une pièce comptable qui débite/crédite :"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:343
 msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
 msgstr ""
+"Le(s) compte(s) de :guilabel:`Stock provisoire` contenant le solde ouvert"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:344
 msgid "The :guilabel:`Stock Valuation` account"
-msgstr ""
+msgstr "Le compte de :guilabel:`Valorisation de stock` "
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:349
 msgid ""
@@ -43720,26 +43797,34 @@ msgid ""
 "invoice, and the :guilabel:`Result` field indicates if the invoice has "
 "been :guilabel:`Aceptado en ARCA` or :guilabel:`Aceptado con Observaciones`."
 msgstr ""
+"Une fois la facture comptabilisée, les informations relatives à |ARCA| "
+"apparaissent sur la facture, et le champ :guilabel:`Résultat` indique si la "
+"facture a été :guilabel:`Aceptado en ARCA` ou :guilabel:`Aceptado con "
+"Observaciones`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:446
 msgid ""
 "In the :guilabel:`ARCA` tab, the following authorization information is "
 "displayed:"
 msgstr ""
+"Dans l'onglet :guilabel:`ARCA`, les informations d'autorisation suivantes "
+"sont affichées :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:448
 msgid ":guilabel:`ARCA authorization`: |CAE| number"
-msgstr ""
+msgstr ":guilabel:`Autorisation ARCA` : |CAE| numéro"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:449
 msgid ""
 ":guilabel:`Authorization Due date`: deadline to deliver the invoice to the "
 "customers (normally 10 days after the |CAE| is generated)"
 msgstr ""
+":guilabel:`Date limite d'autorisation` : date limite pour remettre la "
+"facture aux clients (généralement 10 jours après la génération du |CAE|)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:452
 msgid "ARCA Status."
-msgstr ""
+msgstr "Statut ARCA."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:458
 msgid "Invoice taxes"
@@ -43750,6 +43835,8 @@ msgid ""
 "Based on the :guilabel:`ARCA Responsibility Type`, the VAT tax can apply "
 "differently on the PDF report:"
 msgstr ""
+"En fonction du :guilabel:`Type de responsabilité ARCA`, la taxe TVA peut "
+"s'appliquer différemment sur le rapport PDF :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:463
 msgid ""
@@ -43758,6 +43845,10 @@ msgid ""
 "customer's :guilabel:`ARCA Responsibility type` is :guilabel:`Responsable "
 "Inscripto`."
 msgstr ""
+":guilabel:`Hors taxes` : dans ce cas, le montant taxé doit être clairement "
+"identifié dans le rapport. Cette condition s'applique lorsque le "
+":guilabel:`Type de responsabilité ARCA` du client est :guilabel:`Responsable "
+"Inscripto`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:466
 msgid ""
@@ -43766,22 +43857,26 @@ msgid ""
 "applies when the customer has the following :guilabel:`ARCA Responsibility "
 "type`:"
 msgstr ""
+":guilabel:`Montant des taxes inclus` : cela signifie que le montant taxé est "
+"inclus dans le prix du produit, le sous-total et les totaux. Cette condition "
+"s'applique lorsque le client a le :guilabel:`Type de responsabilité ARCA` "
+"suivant :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:470
 msgid ":guilabel:`IVA Sujeto Exento`"
-msgstr ""
+msgstr ":guilabel:`IVA Sujeto Exento`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:471
 msgid ":guilabel:`Consumidor Final`"
-msgstr ""
+msgstr ":guilabel:`Consumidor Final`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:472
 msgid ":guilabel:`Responsable Monotributo`"
-msgstr ""
+msgstr ":guilabel:`Responsable Monotributo`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:473
 msgid ":guilabel:`IVA liberado`"
-msgstr ""
+msgstr ":guilabel:`IVA liberado`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:478
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:676
@@ -43798,6 +43893,10 @@ msgid ""
 "reporting the service start and end dates. To do so, fill in "
 "the :guilabel:`Service Date` field in the :guilabel:`Other Info` tab."
 msgstr ""
+"Pour les factures électroniques qui incluent des :guilabel:`Services`, "
+"|ARCA| exige de déclarer les dates de début et de fin de service. Pour ce "
+"faire, remplissez le champ :guilabel:`Date de service` dans l'onglet "
+":guilabel:`Autres informations`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:490
 msgid ""
@@ -43805,6 +43904,9 @@ msgid ""
 "values will be automatically set to the first and last days of the invoice's "
 "month."
 msgstr ""
+"Si les dates ne sont pas sélectionnées manuellement avant la validation de "
+"la facture, les valeurs seront automatiquement définies sur le premier et le "
+"dernier jour du mois de la facture."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:496
 msgid "Exportation invoices"
@@ -43816,6 +43918,9 @@ msgid ""
 "using |ARCA| POS System :guilabel:`Export Voucher - Web Service` to ensure "
 "the correct document types are associated."
 msgstr ""
+"Les factures liées aux :guilabel:`Opérations d'exportation` nécessitent un "
+"journal utilisant |ARCA| Système de PDV :guilabel:`Export Voucher - Web "
+"Service` pour garantir que les types de documents corrects sont associés."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:501
 msgid ""
@@ -43823,14 +43928,17 @@ msgid ""
 "responsibility type :guilabel:`Cliente / Proveedor del Exterior` "
 "- :guilabel:`Ley N° 19.640`, Odoo automatically assigns the:"
 msgstr ""
+"Lorsque le client sélectionné dans la facture est configuré avec un type de "
+"responsabilité |ARCA| :guilabel:`Cliente / Proveedor del Exterior` - "
+":guilabel:`Ley N° 19.640`, Odoo assigne automatiquement le :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:505
 msgid ":guilabel:`Journal`: related to the exportation Web Service"
-msgstr ""
+msgstr ":guilabel:`Journal` : lié au service Web d'exportation"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:506
 msgid "Exportation :guilabel:`Document Type`"
-msgstr ""
+msgstr "Exportation :guilabel:`Type de document`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:507
 msgid "Exempt Taxes"
@@ -43845,18 +43953,25 @@ msgid ""
 ":guilabel:`Invoice` section - :guilabel:`ARCA Concept`: Products / "
 "Definitive export of goods"
 msgstr ""
+":guilabel:`Facture` section - :guilabel:`Concept ARCA` : Produits / "
+"Exportation définitive de marchandises"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:512
 msgid ""
 ":guilabel:`Accounting` section - :guilabel:`Fiscal position`: Compras/Ventas "
 "al exterior"
 msgstr ""
+":guilabel:`Comptabilité` section - :guilabel:`Position fiscale` : Compras/"
+"Ventas al exterior"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:515
 msgid ""
 "For exportation documents, complete the :guilabel:`Incoterm` field in "
 "the :guilabel:`Accounting` section of the :guilabel:`Other Info` tab."
 msgstr ""
+"Pour les documents d'exportation, complétez le champ :guilabel:`Incoterm` "
+"dans la section :guilabel:`Comptabilité` de l'onglet :guilabel:`Autres "
+"informations`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:521
 msgid "Fiscal bond"
@@ -43869,6 +43984,10 @@ msgid ""
 "www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>`_ "
 "granted by the Ministry of Economy."
 msgstr ""
+"Le :guilabel:`Electronic Fiscal Bond` est utilisé par ceux qui facturent des "
+"biens d'équipement et souhaitent bénéficier des `Electronic Tax Bonds "
+"<https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>"
+"`_ accordés par le ministère de l'Économie."
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:527
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:552
@@ -49108,25 +49227,31 @@ msgstr "Aller dans :guilabel:`Boutiques et produits`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/belgium.rst:844
 msgid "Find the relevant shop/product."
-msgstr ""
+msgstr "Trouver le magasin/produit concerné."
 
 #: ../../export/content/applications/finance/fiscal_localizations/belgium.rst:845
 msgid ""
 "Select :guilabel:`API Key management`. The portal shows options to view or "
 "renew the API key and PPID."
 msgstr ""
+"Sélectionner :guilabel:`Gestion de la clé API`. Le portail affiche des "
+"options pour visualiser ou renouveler la clé API et le PPID."
 
 #: ../../export/content/applications/finance/fiscal_localizations/belgium.rst:847
 msgid ""
 "Copy them and save them for the :ref:`payment method configuration in Odoo "
 "<belgium/pos/bancontact-method>`."
 msgstr ""
+"Les copier et les enregistrer pour la :ref:`configuration du mode de "
+"paiement dans Odoo <belgium/pos/bancontact-method>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/belgium.rst:850
 msgid ""
 "Then, go to the :guilabel:`QR codes` section and choose the desired solution "
 "for QR code generation:"
 msgstr ""
+"Ensuite, aller dans la section :guilabel:`Codes QR` et choisir la solution "
+"souhaitée pour la génération de codes QR :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/belgium.rst:852
 msgid ""
@@ -49461,11 +49586,11 @@ msgstr "Rapports comptables pour le Brésil."
 
 #: ../../export/content/applications/finance/fiscal_localizations/brazil.rst:42
 msgid ":guilabel:`AvaTax Brazil` and :guilabel:`Avatax Brazil Sale`"
-msgstr ""
+msgstr ":guilabel:`AvaTax Brésil` et :guilabel:`Vente Avatax Brésil`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/brazil.rst:43
 msgid "`l10n_br_avatax` and `l10n_br_avatax_sale`"
-msgstr ""
+msgstr "`l10n_br_avatax` et `l10n_br_avatax_sale`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/brazil.rst:44
 msgid "Goods and Services tax computation through Avalara."
@@ -55945,15 +56070,15 @@ msgstr "7"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:316
 msgid ":guilabel:`I ND`"
-msgstr ""
+msgstr ":guilabel:`I ND`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:317
 msgid "13%, 9%, 6%, 5%, 3%, 0%, Tax Exemption"
-msgstr ""
+msgstr "13 %, 9 %, 6 %, 5 %, 3 %, 0 %, Exonération de taxe"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:318
 msgid "Any (input tax not deductible)"
-msgstr ""
+msgstr "Tout (taxe en amont non déductible)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:323
 msgid ""
@@ -55961,6 +56086,9 @@ msgid ""
 "Details`, for VAT Special Invoices certified and deducted in the current "
 "period."
 msgstr ""
+":guilabel:`I S` taxes alimentent uniquement la ligne 2 du :guilabel:`Annexe "
+"2 - Détails de la taxe en amont`, pour les factures spéciales de TVA "
+"certifiées et déduites au cours de la période actuelle."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:325
 msgid ""
@@ -55968,10 +56096,14 @@ msgid ""
 "current period, enter the amounts manually on line 3 of the :ref:`tax report "
 "<localizations/china/accounting/tax_report>`."
 msgstr ""
+"Pour les factures spéciales de TVA certifiées au cours d'une période "
+"précédente et déduites au cours de la période actuelle, saisir les montants "
+"manuellement sur la ligne 3 du :ref:`rapport de taxes <localizations/china/"
+"accounting/tax_report>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:332
 msgid "Tax grids for specific scenarios"
-msgstr ""
+msgstr "Grilles de taxes pour des scénarios spécifiques"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:334
 msgid ""
@@ -55979,6 +56111,10 @@ msgid ""
 "independent tax grid defined directly in the formulas of the :ref:`tax "
 "report <localizations/china/accounting/tax_report>`."
 msgstr ""
+"Certains scénarios de TVA ne sont pas configurés comme des taxes. Au lieu de "
+"cela, chaque scénario est une grille de taxes indépendante définie "
+"directement dans les formules du :ref:`rapport de taxes <localizations/china/"
+"accounting/tax_report>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:338
 msgid ""
@@ -55988,16 +56124,25 @@ msgid ""
 "be used alone, without applying a tax rate, or combined with a tax when the "
 "amount also needs to follow a tax rate."
 msgstr ""
+"Pour déclarer un montant sous une grille spécifique, ouvrir une facture "
+"brouillon, une facture fournisseur ou une pièce comptable. Dans l'onglet "
+":guilabel:`Écritures comptables`, sélectionner la grille dans le champ "
+":guilabel:`Grilles de taxes` de l'écriture comptable concernée. Une grille "
+"de taxes peut être utilisée seule, sans appliquer de taux de taxe, ou "
+"combinée avec une taxe lorsque le montant doit également suivre un taux de "
+"taxe."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:344
 msgid ""
 "These grids are not taxes and therefore do not appear in the list of taxes "
 "under :menuselection:`Accounting --> Configuration --> Taxes`."
 msgstr ""
+"Ces grilles ne sont pas des taxes et n'apparaissent donc pas dans la liste "
+"des taxes sous :menuselection:`Comptabilité --> Configuration --> Taxes`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:350
 msgid "Items subject to refund upon collection"
-msgstr ""
+msgstr "Articles soumis au remboursement lors de la perception"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:356
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:393
@@ -56007,41 +56152,57 @@ msgstr "Grilles de taxes"
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:359
 msgid ":guilabel:`一般计税 即征即退货物销售额`"
 msgstr ""
+":guilabel:`Méthode de calcul de taxe générale, remboursement lors de la "
+"perception : montant des ventes de marchandises`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:360
 msgid ""
 "General tax calculation method, refund upon collection: sales amount of goods"
 msgstr ""
+"Méthode de calcul de taxe générale, remboursement lors de la perception : "
+"montant des ventes de marchandises"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:362
 msgid ":guilabel:`一般计税 即征即退货物销项税额`"
 msgstr ""
+":guilabel:`Méthode de calcul de taxe générale, remboursement lors de la "
+"perception : montant de la taxe en aval des marchandises`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:363
 msgid ""
 "General tax calculation method, refund upon collection: output tax amount of "
 "goods"
 msgstr ""
+"Méthode de calcul de taxe générale, remboursement lors de la perception : "
+"montant de la taxe en aval des marchandises"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:365
 msgid ":guilabel:`一般计税 即征即退服务销售额`"
 msgstr ""
+":guilabel:`Méthode de calcul de taxe générale, remboursement lors de "
+"l'encaissement : montant des ventes de services`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:366
 msgid ""
 "General tax calculation method, refund upon collection: sales amount of "
 "service"
 msgstr ""
+"Méthode de calcul de taxe générale, remboursement lors de l'encaissement : "
+"montant des ventes de services"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:368
 msgid ":guilabel:`一般计税 即征即退服务销项税额`"
 msgstr ""
+":guilabel:`Méthode de calcul de taxe générale, remboursement lors de "
+"l'encaissement : montant de la taxe de sortie sur service`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:369
 msgid ""
 "General tax calculation method, refund upon collection: output tax amount of "
 "service"
 msgstr ""
+"Méthode de calcul de taxe générale, remboursement lors de l'encaissement : "
+"montant de la taxe de sortie sur service"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:371
 msgid ":guilabel:`简易计税 即征即退货物销售额`"
@@ -56703,15 +56864,15 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:635
 msgid "In the list view, select the relevant records."
-msgstr ""
+msgstr "Dans la vue liste, sélectionner les enregistrements concernés."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:636
 msgid "Click :icon:`fa-print` :guilabel:`Print`."
-msgstr ""
+msgstr "Cliquer sur :icon:`fa-print` :guilabel:`Imprimer`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:637
 msgid "Select :guilabel:`Voucher`."
-msgstr ""
+msgstr "Sélectionner :guilabel:`Justificatif`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/colombia.rst:3
 msgid "Colombia"
@@ -68286,17 +68447,20 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:36
 msgid ":guilabel:`Indian - Bill Of Entry`"
-msgstr ""
+msgstr ":guilabel:`Indien - Déclaration en douane`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:37
 msgid "`l10n_in_boe`"
-msgstr ""
+msgstr "`l10n_in_boe`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:38
 msgid ""
 ":ref:`Bill of Entry (BOE) <india/bill-of-entry>` support for imports and "
 "customs duty landed costs."
 msgstr ""
+":ref:`Déclaration en douane (Bill of Entry - BOE) <india/bill-of-entry>` "
+"prise en charge des importations et des coûts de revient des droits de "
+"douane."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:42
 msgid ""
@@ -70050,7 +70214,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:795
 msgid "Bill of Entry (BOE)"
-msgstr ""
+msgstr "Déclaration en douane (Bill of Entry - BOE)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:797
 msgid ""
@@ -70060,22 +70224,33 @@ msgid ""
 "generates a customs vendor bill and allocates customs duties to the related "
 "stock receipts using landed costs."
 msgstr ""
+"Une déclaration en douane (:abbr:`BOE (Bill of Entry)`) est un document "
+"légal déposé par les importateurs auprès du service des douanes pour "
+"déclarer les marchandises importées, les valeurs imposables, les droits de "
+"douane et les taxes à l'importation. Dans Odoo, la création d'une "
+"déclaration en douane génère une facture fournisseur de douane et alloue les "
+"droits de douane aux réceptions de stock associées via les coûts de revient."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:803
 msgid ""
 "Make sure the :guilabel:`Indian - Bill Of Entry` (`l10n_in_boe`) module "
 "is :ref:`installed <general/install>`."
 msgstr ""
+"S'assurer que le module :guilabel:`Indien - Déclaration en douane` "
+"(`l10n_in_boe`) est :ref:`installé <general/install>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:805
 msgid ""
 "The imported products must use the :guilabel:`First In First Out (FIFO)` "
 "or :guilabel:`Average Cost (AVCO)` costing method."
 msgstr ""
+"Les produits importés doivent utiliser la méthode d'évaluation des stocks "
+":guilabel:`Premier entré, premier sorti (FIFO)` ou :guilabel:`Coût moyen "
+"(AVCO)`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:808
 msgid "To create a Bill of Entry, follow these steps:"
-msgstr ""
+msgstr "Pour créer une déclaration en douane, suivre ces étapes :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:810
 msgid ""
@@ -70085,30 +70260,44 @@ msgid ""
 "currency from the list view, and click :menuselection:`Action --> Bill of "
 "Entry`)."
 msgstr ""
+"Aller à :menuselection:`Comptabilité --> Fournisseurs --> Factures` et "
+"ouvrir une facture fournisseur comptabilisée avec son :guilabel:`Traitement "
+"GST` réglé sur :guilabel:`Outre-mer` (ou sélectionner plusieurs factures "
+"fournisseur outre-mer comptabilisées pour le même fournisseur et la même "
+"devise dans la vue liste, et cliquer sur :menuselection:`Action --> "
+"Déclaration en douane`)."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:814
 msgid ""
 ":ref:`Match the relevant purchase order to the vendor bill <accounting/"
 "vendor_bills/vendor-bills-matching-po>`."
 msgstr ""
+":ref:`Rapprocher le bon de commande pertinent avec la facture fournisseur "
+"<accounting/vendor_bills/vendor-bills-matching-po>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:815
 msgid ""
 "Click :guilabel:`Bill Of Entry` to open the wizard and fill in the required "
 "details:"
 msgstr ""
+"Cliquer sur :guilabel:`Déclaration en douane` pour ouvrir l'assistant et "
+"remplir les détails requis :"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:817
 msgid ""
 ":guilabel:`Transfers`: Select the validated (:guilabel:`Done`) incoming "
 "stock receipts linked to the purchase."
 msgstr ""
+":guilabel:`Transferts` : sélectionner les réceptions de stock entrantes "
+"validées (:guilabel:`Fait`) liées à l'achat."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:819
 msgid ""
 ":guilabel:`Currency`: Verify the document currency and conversion rate if it "
 "differs from the company currency."
 msgstr ""
+":guilabel:`Devise` : vérifier la devise du document et le taux de conversion "
+"s'il diffère de la devise de la société."
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:821
 msgid ""

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-25 23:32+0000\n"
+"PO-Revision-Date: 2026-10-26 03:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/fi/>\n"
@@ -2464,7 +2464,7 @@ msgstr ""
 
 #: ../../export/content/applications/general/companies/multi_company.rst:197
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "Yritysten välinen clearing"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:199
 msgid ""
@@ -2472,6 +2472,9 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"**Yritysten välinen clearing** -toiminto automatisoi kirjanpitoviennit, kun "
+"yksi yritys vastaanottaa maksun toisen saman tietokannan yrityksen "
+"laatimasta laskusta."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:202
 msgid ""
@@ -2481,30 +2484,35 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"Kun toissijainen yritys käsittelee maksun, Odoo täsmäyttää automaattisesti "
+"asiakkaan avoimen laskun laskuttavassa yrityksessä ja luo tasapainottavat "
+"yritysten väliset viennit näiden kahden yrityksen välille. Tämä automaatio "
+"poistaa manuaalisen seurannan taulukoissa ja pitää yritysten väliset tilit "
+"tasapainossa reaaliaikaisesti."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:208
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "**Yritys A** laatii asiakkaalle 100 dollarin myyntilaskun."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:210
 msgid "The customer pays via the customer portal belonging to **Company B**."
-msgstr ""
+msgstr "Asiakas maksaa **Yrityksen B** asiakasportaalin kautta."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:212
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "Maksun vastaanotettuaan Odoo:"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:214
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "Kuittaa myyntisaamisen **yrityksissä A ja B**."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:215
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
-msgstr ""
+msgstr "Uudelleenluokittelee Yrityksen A saamisen saamiseksi **Yritykseltä B**."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:216
 msgid "Records Company B's received funds as a payable owed to **Company A**."
-msgstr ""
+msgstr "Kirjaa Yrityksen B vastaanottamat varat velaksi **Yritykselle A**."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:222
 msgid ""
@@ -2514,6 +2522,11 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"Moduulin :guilabel:`Yritysten väliset maksut - Kirjanpito` "
+"(`account_payment_interco`) on oltava :ref:`asennettuna <general/install>`, "
+"ja :guilabel:`Yritysten väliset tapahtumat` -toiminnon on oltava käytössä "
+"**jokaisessa yrityksessä**, jota asia koskee, jotta :guilabel:`Yritysten "
+"välinen clearing` -kentät tulevat näkyviin kirjanpidon asetuksissa."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:227
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
@@ -2529,30 +2542,40 @@ msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
 msgstr ""
+"Kohdassa :guilabel:`Yritysten välinen clearing` määritä seuraavat kentät "
+"tällä hetkellä aktiiviselle yritykselle:"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:232
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
 msgstr ""
+":guilabel:`Päiväkirja`: Erillinen päiväkirja, jota käytetään yritysten "
+"välisten clearing-siirtojen kirjaamiseen."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:233
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
 msgstr ""
+":guilabel:`Ostovelat`: Clearing-ostovelkatili, jota käytetään tietokannan "
+"muille yrityksille olevien velkojen kirjaamiseen."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:235
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
 msgstr ""
+":guilabel:`Myyntisaamiset`: Clearing-myyntisaamistili, jota käytetään "
+"tietokannan muilta yrityksiltä olevien saamisten kirjaamiseen."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:238
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
 msgstr ""
+"Vaihda muihin asianomaisiin yrityksiin oikean yläkulman yritysvalitsimesta "
+"ja toista toimenpide kunkin kohdalla."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:242
 msgid ""
@@ -2560,6 +2583,9 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"Asiakasmaksun kirjaamiseen käytettävän maksutavan on käytettävä "
+":ref:`saapuvien maksujen odotustiliä <accounting/journals/outstanding-"
+"accounts>`, jotta päiväkirjavienti luodaan."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:246
 msgid ""
@@ -2568,6 +2594,10 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`Luo <chart-of-account/create>` yksilölliset ostovelkojen ja "
+"myyntisaamisten clearing-tilit, jotka ovat erillään yleisissä tapahtumissa "
+"käytettävistä osto- ja myyntitileistä, ja ota näillä tileillä käyttöön "
+"valinta :guilabel:`Ei-kaupallinen`."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:253
 msgid "Use cases"
@@ -8867,6 +8897,8 @@ msgid ""
 "Validate addresses with the :ref:`Avalara address validation <accounting/"
 "avalara/address-validation>` feature."
 msgstr ""
+"Vahvista osoitteet :ref:`Avalaran osoitteenvahvistus <accounting/avalara/"
+"address-validation>` -toiminnolla."
 
 #: ../../export/content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -8997,6 +9029,8 @@ msgid ""
 "Under :guilabel:`Mapbox`, paste the Mapbox access token into "
 "the :guilabel:`Token` field."
 msgstr ""
+"Kohdassa :guilabel:`Mapbox` liitä Mapbox-pääsytunniste kenttään "
+":guilabel:`Token`."
 
 #: ../../export/content/applications/general/integrations/geolocation.rst:88
 msgid ""
@@ -10371,6 +10405,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`Yhdistä Worldline/Axepta BNP Paribas -maksupääte <../../sales/"
+"point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../export/content/applications/general/iot/devices.rst:23
 msgid ""

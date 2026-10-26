@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-22 20:23+0000\n"
+"PO-Revision-Date: 2026-10-26 16:34+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-20-doc/"
 "services/ru/>\n"
@@ -6112,6 +6112,12 @@ msgid ""
 "available in the dropdown menu. If the shift was :ref:`created from a sales "
 "order <planning/shifts-sales-orders>`, this field is filled automatically."
 msgstr ""
+":guilabel:`Заказ на продажу`: если за выезд необходимо :ref:`выставить счет "
+"<planning/field-service/invoicing>`, выберите соответствующий заказ на "
+"продажу. В раскрывающемся списке доступны только заказы на продажу, "
+"связанные с указанным клиентом и содержащие услуги. Если смена была "
+":ref:`создана на основе заказа на продажу <planning/shifts-sales-orders>`, "
+"это поле заполняется автоматически."
 
 #: ../../export/content/applications/services/planning/field_service.rst:36
 msgid ""
@@ -6119,6 +6125,10 @@ msgid ""
 "worksheets>` are enabled, the default one is automatically selected in this "
 "field. Choose a different one from the dropdown menu or create one if needed."
 msgstr ""
+":guilabel:`Рабочий лист`: если :ref:`рабочие листы <planning/field-service/"
+"worksheets>` включены, в этом поле автоматически выбирается лист по "
+"умолчанию. Выберите другой вариант из раскрывающегося списка или создайте "
+"новый при необходимости."
 
 #: ../../export/content/applications/services/planning/field_service.rst:39
 msgid ""
@@ -6128,57 +6138,74 @@ msgid ""
 "invoiced. The price of any material or service added directly on the sales "
 "order remains unchanged."
 msgstr ""
+":guilabel:`По гарантии`: установите этот флажок, чтобы автоматически "
+"обнулить цену любых материалов или услуг, :ref:`добавленных в заказ на "
+"продажу из смены <planning/field-service/products>`, предотвращая "
+"выставление счета за них. Цена любых материалов или услуг, добавленных "
+"непосредственно в заказ на продажу, остается без изменений."
 
 #: ../../export/content/applications/services/planning/field_service.rst:44
 msgid ""
 "Once the shift has been created, :ref:`publish it <planning/shifts-publish>`."
-msgstr ""
+msgstr "После создания смены :ref:`опубликуйте ее <planning/shifts-publish>`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:47
 msgid ""
 "Ensure the customer has a valid address if :ref:`itinerary planning "
 "<planning/field-service/itinerary>` is required."
 msgstr ""
+"Убедитесь, что для клиента указан действительный адрес, если требуется "
+":ref:`планирование маршрута <planning/field-service/itinerary>`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:53
 msgid "Intervention logging"
-msgstr ""
+msgstr "Регистрация выезда"
 
 #: ../../export/content/applications/services/planning/field_service.rst:56
 msgid "In order to start working on an intervention:"
-msgstr ""
+msgstr "Чтобы начать работу над выездом:"
 
 #: ../../export/content/applications/services/planning/field_service.rst:58
 msgid "The shift must be :ref:`published <planning/shifts-publish>`."
-msgstr ""
+msgstr "Смена должна быть :ref:`опубликована <planning/shifts-publish>`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:59
 msgid ""
 "A :guilabel:`Customer` must be :ref:`defined for the shift <planning/field-"
 "service/shifts>`."
 msgstr ""
+"Поле :guilabel:`Клиент` должно быть :ref:`заполнено для смены <planning/"
+"field-service/shifts>`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:61
 msgid "To sign in and log intervention details, follow these steps:"
 msgstr ""
+"Чтобы отметиться и зафиксировать сведения о выезде, выполните следующие "
+"действия:"
 
 #: ../../export/content/applications/services/planning/field_service.rst:63
 msgid ""
 "Go to :menuselection:`Planning --> Planning --> My Planning` or access "
 "any :ref:`schedule <planning/shifts>`."
 msgstr ""
+"Перейдите в :menuselection:`Планирование --> Планирование --> Мое "
+"планирование` или откройте любое :ref:`расписание <planning/shifts>`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:65
 msgid ""
 "Click the relevant intervention in the calendar or schedule, then "
 "click :guilabel:`Sign In`."
 msgstr ""
+"Нажмите на нужный выезд в календаре или расписании, а затем нажмите "
+":guilabel:`Войти`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:66
 msgid ""
 "Add :guilabel:`Photos` or :ref:`Products <planning/field-service/products>`, "
 "if any, using the buttons above the form."
 msgstr ""
+"Добавьте :guilabel:`Фотографии` или :ref:`товары <planning/field-service/"
+"products>` (при наличии) с помощью кнопок над формой."
 
 #: ../../export/content/applications/services/planning/field_service.rst:68
 msgid ""
@@ -6186,12 +6213,17 @@ msgid ""
 "notes and :ref:`Worksheet <planning/field-service/worksheets>` details, "
 "respectively."
 msgstr ""
+"Используйте вкладки :guilabel:`Примечание` и :guilabel:`Рабочий лист` для "
+"добавления внутренних заметок и сведений :ref:`рабочего листа <planning/"
+"field-service/worksheets>` соответственно."
 
 #: ../../export/content/applications/services/planning/field_service.rst:70
 msgid ""
 "Click :guilabel:`Complete`. The :ref:`customer report <planning/field-"
 "service/customer-report>` is automatically generated, if applicable."
 msgstr ""
+"Нажмите :guilabel:`Завершить`. Если применимо, :ref:`отчет для клиента "
+"<planning/field-service/customer-report>` будет сформирован автоматически."
 
 #: ../../export/content/applications/services/planning/field_service.rst:74
 msgid ""
@@ -6199,12 +6231,17 @@ msgid ""
 "to and completing it, respectively, and the :guilabel:`Allocated Time` is "
 "adjusted accordingly."
 msgstr ""
+"Дата и время начала и окончания выезда обновляются при отметке о начале и "
+"завершении соответственно, а :guilabel:`Выделенное время` корректируется "
+"соответствующим образом."
 
 #: ../../export/content/applications/services/planning/field_service.rst:78
 msgid ""
 "To add items or information to ongoing or completed shifts at a later "
 "point, :ref:`edit the shift <planning/shifts-edit>`."
 msgstr ""
+"Чтобы позже добавить элементы или информацию в текущие или завершенные "
+"смены, :ref:`отредактируйте смену <planning/shifts-edit>`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:84
 msgid "Geolocation"
@@ -6395,12 +6432,17 @@ msgid ""
 "interventions planned for the day by going to :menuselection:`Planning --> "
 "Planning --> My Map`."
 msgstr ""
+"Технические специалисты могут просмотреть карту с местоположением "
+"запланированных на день выездов, перейдя в :menuselection:`Планирование --> "
+"Планирование --> Моя карта`."
 
 #: ../../export/content/applications/services/planning/field_service.rst:170
 msgid ""
 "For an intervention's location to appear on the map, a valid address must be "
 "provided for the customer."
 msgstr ""
+"Чтобы местоположение выезда отображалось на карте, для клиента должен быть "
+"указан действительный адрес."
 
 #: ../../export/content/applications/services/planning/field_service.rst:173
 msgid ""
@@ -6410,6 +6452,11 @@ msgid ""
 "get directions from the current location to the intervention's location in "
 "Google Maps."
 msgstr ""
+"В левой панели выезды отсортированы по запланированной дате и времени. "
+"Нажмите на выезд, чтобы просмотреть его местоположение и сведения. Затем "
+"нажмите :guilabel:`Открыть`, чтобы открыть форму смены, или "
+":guilabel:`Проложить маршрут`, чтобы построить маршрут от текущего "
+"местоположения до места выезда в Google Maps."
 
 #: ../../export/content/applications/services/planning/field_service.rst:179
 msgid ""

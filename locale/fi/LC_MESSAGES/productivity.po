@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-25 17:33+0000\n"
+"PO-Revision-Date: 2026-10-26 05:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/fi/>\n"
@@ -2543,6 +2543,9 @@ msgid ""
 "the :menuselection:`AI app --> Agents --> Skills`, and "
 "click :guilabel:`Create Leads`."
 msgstr ""
+"Jos haluat tarkastella liidien luontitaidon yksityiskohtaisia ohjeita, "
+"siirry kohtaan :menuselection:`Tekoälysovellus --> Agentit --> Taidot` ja "
+"napsauta :guilabel:`Luo liidejä`."
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:116
 #: ../../export/content/applications/productivity/ai/support_operations.rst:133
@@ -2561,6 +2564,12 @@ msgid ""
 "directly to their Odoo database through an Odoo |MCP| server in order to "
 "read or modify the database using their own local |AI| workflows."
 msgstr ""
+"Model Context Protocol (MCP) on avoimen lähdekoodin standardi, jonka avulla "
+"suuret kielimallit (LLM) voivat olla turvallisesti vuorovaikutuksessa "
+"ulkoisten sovellusten kanssa ja käyttää niiden tietoja. Odoo **AI**:ssa "
+"käyttäjät voivat yhdistää ulkoisen |AI|-agentin suoraan Odoo-tietokantaansa "
+"Odoon |MCP|-palvelimen kautta lukeakseen tai muokatakseen tietokantaa omien "
+"paikallisten |AI|-työnkulkujensa avulla."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:17
 msgid ""
@@ -2568,12 +2577,18 @@ msgid ""
 "to connect |AI| agents to them, and how to read or write data through the "
 "server."
 msgstr ""
+"Tämä dokumentaatio tarjoaa yleiskatsauksen Odoon |MCP|-palvelimista, miten "
+"niihin yhdistetään |AI|-agentteja ja miten tietoja luetaan tai kirjoitetaan "
+"palvelimen kautta."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:21
 msgid ""
 "This documentation uses the following terms with some flexibility and may "
 "differ from their proper technical usage, either in Odoo or externally:"
 msgstr ""
+"Tässä dokumentaatiossa seuraavia termejä käytetään joustavasti, ja niiden "
+"merkitys voi poiketa niiden varsinaisesta teknisestä käytöstä joko Odoossa "
+"tai sen ulkopuolella:"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:24
 msgid ""
@@ -2581,10 +2596,13 @@ msgid ""
 "interacts. For example, the |LLM| prompted by the user is also referred to "
 "as the *client*."
 msgstr ""
+"*Asiakasohjelma*: Viittaa yleisesti |AI|-sovellukseen, jonka kanssa käyttäjä "
+"on vuorovaikutuksessa. Esimerkiksi |LLM|-mallia, jolle käyttäjä antaa "
+"kehotteen, kutsutaan myös *asiakasohjelmaksi*."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:30
 msgid "MCP workflow"
-msgstr ""
+msgstr "MCP-työnkulku"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:32
 msgid ""
@@ -2595,10 +2613,17 @@ msgid ""
 "the user, who interacts with the |MCP| client **only** by prompting it with "
 "specific tasks."
 msgstr ""
+"Vuon |MCP| työnkulussa Odoo-tietokanta toimii etänä toimivana |MCP| -"
+"*palvelimena*, joka viestii |MCP| -*asiakasohjelman* (käyttäjän ulkoisen "
+"|AI| -agentin) kanssa suorittaakseen :doc:`työkaluja <server-actions>`, "
+"kuten tietojen lukemista tai tietueiden muokkaamista tietokannassa. Tämä "
+"prosessi tapahtuu sisäisesti ja on näkymätön käyttäjälle, joka on "
+"vuorovaikutuksessa |MCP|-asiakasohjelman kanssa **vain** antamalla sille "
+"tiettyjä tehtäväkehotteita."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:37
 msgid "The following sequence outlines the |MCP| workflow in Odoo:"
-msgstr ""
+msgstr "Seuraava järjestys kuvaa |MCP|-työnkulkua Odoossa:"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:39
 msgid ""
@@ -2608,28 +2633,37 @@ msgid ""
 "<mcp_server/mcp_tools>` (or *Server Actions*) exposed to it in the database. "
 "If successful, the client caches the tools for the remainder of the session."
 msgstr ""
+"Käyttäjä :ref:`määrittää asiakasohjelman <ai/mcp/configuration>` palvelimen "
+"tiedoilla ja todennusavaimella. Kun yhteys on muodostettu, asiakasohjelma "
+"tekee palvelimelle automaattisesti alustavan pyynnön kaikista sille "
+"tietokannassa julkaistuista :doc:`tekoälytyökaluista <mcp_server/mcp_tools>` "
+"(tai *palvelintoiminnoista*). Jos pyyntö onnistuu, asiakasohjelma tallentaa "
+"työkalut välimuistiin istunnon loppuajaksi."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:43
 msgid ""
 "The user prompts the client in plain language. A list of :ref:`example "
 "prompts <ai/mcp/use-cases>` is provided in this documentation."
 msgstr ""
+"Käyttäjä antaa asiakasohjelmalle kehotteita luonnollisella kielellä. "
+"Luettelo :ref:`esimerkkikehotteista <ai/mcp/use-cases>` löytyy tästä "
+"dokumentaatiosta."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:45
 msgid "The client requests that the server invoke the correct tools."
-msgstr ""
+msgstr "Asiakasohjelma pyytää palvelinta kutsumaan oikeita työkaluja."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:46
 msgid "After executing the tool, the server returns the results to the client."
-msgstr ""
+msgstr "Suoritettuaan työkalun palvelin palauttaa tulokset asiakasohjelmalle."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:47
 msgid "The client responds to the user's prompt in plain language."
-msgstr ""
+msgstr "Asiakasohjelma vastaa käyttäjän kehotteeseen luonnollisella kielellä."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:49
 msgid "Client-server interaction diagram for Odoo AI MCP."
-msgstr ""
+msgstr "Asiakas-palvelin-vuorovaikutuskaavio Odoo AI MCP:lle."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:53
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:458
@@ -2638,7 +2672,7 @@ msgstr ":doc:`server-actions`"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:60
 msgid "The configuration process includes the following steps:"
-msgstr ""
+msgstr "Määritysprosessi sisältää seuraavat vaiheet:"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:62
 msgid ""
@@ -2653,11 +2687,15 @@ msgid ""
 ":ref:`Configure the MCP server details <ai/mcp/server-settings>` and connect "
 "via the client."
 msgstr ""
+":ref:`Määritä MCP-palvelimen tiedot <ai/mcp/server-settings>` ja muodosta "
+"yhteys asiakasohjelman kautta."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:65
 msgid ""
 ":ref:`Expose server actions <ai/mcp/expose-tools>` to the client from Odoo."
 msgstr ""
+":ref:`Julkaise palvelintoiminnot <ai/mcp/expose-tools>` asiakasohjelmalle "
+"Odoosta."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:66
 msgid ""
@@ -2671,11 +2709,15 @@ msgid ""
 "Before configuring the AI client settings in step two, ensure that the "
 "following are installed:"
 msgstr ""
+"Varmista ennen tekoälyasiakasohjelman asetusten määrittämistä toisessa "
+"vaiheessa, että seuraavat on asennettu:"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:71
 msgid ""
 "An |MCP|-compatible AI agent (e.g., *Claude Code*, *Antigravity*, *Codex*)"
 msgstr ""
+" |MCP|-yhteensopiva tekoälyagentti (esim. *Claude Code*, *Antigravity*, "
+"*Codex*)"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:72
 msgid ""
@@ -2709,17 +2751,19 @@ msgstr ":ref:`Salli asiakasohjelman <ai/mcp/oauth/allow>` pääsy tietokantaan."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:85
 msgid ":ref:`Connect the client <ai/mcp/oauth/connect>` and grant access."
-msgstr ""
+msgstr ":ref:`Yhdistä asiakasohjelma <ai/mcp/oauth/connect>` ja myönnä pääsy."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:88
 msgid ""
 "OAuth is only available to internal users. Portal users must authenticate "
 "using an API key."
 msgstr ""
+"OAuth on käytettävissä vain sisäisille käyttäjille. Portaalikäyttäjien on "
+"todennettava itsensä API-avaimella."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:93
 msgid "Approve AI clients"
-msgstr ""
+msgstr "Hyväksy tekoälyasiakasohjelmat"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:95
 msgid ""
@@ -2727,18 +2771,26 @@ msgid ""
 "approved clients, navigate to :menuselection:`Settings app --> Integrations "
 "section --> MCP OAuth`."
 msgstr ""
+"Vain hyväksytyt |AI| -asiakasohjelmat voivat pyytää pääsyä tietokantaan. "
+"Voit tarkastella hyväksyttyjä asiakasohjelmia siirtymällä kohtaan "
+":menuselection:`Asetukset-sovellus --> Integraatiot-osio --> MCP OAuth`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:98
 msgid ""
 "The :guilabel:`MCP OAuth` field lists the metadata URL, or *Client ID "
 "Metadata Document (CIMD)*, of each approved client."
 msgstr ""
+"Kentässä :guilabel:`MCP OAuth` luetellaan kunkin hyväksytyn asiakasohjelman "
+"metatietojen URL-osoite eli *Client ID Metadata Document (CIMD)*."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:101
 msgid ""
 "To approve another client that supports |CIMD|, add its metadata URL on a "
 "new line, then click :guilabel:`Save`."
 msgstr ""
+"Jos haluat hyväksyä toisen asiakasohjelman, joka tukee standardia |CIMD|, "
+"lisää sen metatietojen URL-osoite uudelle riville ja napsauta sitten "
+":guilabel:`Tallenna`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:104
 msgid ""
@@ -2746,6 +2798,9 @@ msgid ""
 "Client Registration (DCR)` checkbox. This allows **any** |MCP| client to "
 "register itself and request access."
 msgstr ""
+"Jos asiakasohjelma ei tue standardia |CIMD|, valitse valintaruutu "
+":guilabel:`Salli dynaaminen asiakasrekisteröinti (DCR)`. Tämä sallii **minkä "
+"tahansa** |MCP| -asiakasohjelman rekisteröityä ja pyytää pääsyä."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:108
 msgid ""
@@ -2754,20 +2809,27 @@ msgid ""
 "to :menuselection:`Settings app --> Technical --> OAuth Clients`, then "
 "archive the client."
 msgstr ""
+"DCR:n ottaminen käyttöön antaa minkä tahansa sovelluksen rekisteröityä "
+"asiakasohjelmaksi. Jos haluat estää rekisteröidyn asiakasohjelman, ota "
+"käyttöön :ref:`kehittäjätila <developer-mode>`, siirry kohtaan "
+":menuselection:`Asetukset-sovellus --> Tekninen --> OAuth-asiakkaat` ja "
+"arkistoi sitten asiakasohjelma."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:112
 msgid "Approved CIMD clients in Settings."
-msgstr ""
+msgstr "Hyväksytyt CIMD-asiakasohjelmat Asetuksissa."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:118
 msgid "Connect the client and grant access"
-msgstr ""
+msgstr "Yhdistä asiakasohjelma ja myönnä pääsy"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:120
 msgid ""
 "In the |MCP| client, add a server using only the server endpoint URL (e.g., "
 "`https://example.odoo.com/mcp`)."
 msgstr ""
+"Lisää |MCP| -asiakasohjelmassa palvelin käyttämällä vain palvelimen "
+"päätepisteen URL-osoitetta (esim. `https://example.odoo.com/mcp`)."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:124
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:223
@@ -2803,16 +2865,20 @@ msgid ""
 "Then, run `claude mcp list` to check the connection status of the newly "
 "added server."
 msgstr ""
+"Tarkista sitten juuri lisätyn palvelimen yhteyden tila suorittamalla `claude "
+"mcp list`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:141
 msgid "Grok"
-msgstr ""
+msgstr "Grok"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:149
 msgid ""
 "Then, run `grok mcp list` to check the connection status of the newly added "
 "server."
 msgstr ""
+"Tarkista sitten juuri lisätyn palvelimen yhteyden tila suorittamalla `grok "
+"mcp list`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:151
 msgid "ChatGPT"
@@ -2823,12 +2889,16 @@ msgid ""
 "Open ChatGPT, navigate to :menuselection:`Settings --> Plugins --> Add / Add "
 "custom MCP server`."
 msgstr ""
+"Avaa ChatGPT ja siirry kohtaan :menuselection:`Asetukset --> "
+"Laajennukset --> Lisää / Lisää mukautettu MCP-palvelin`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:156
 msgid ""
 "Provide a name, the endpoint/URL (`<database_url>/mcp`), and the "
 "authentication method (`OAuth`). Finally, save to add the server."
 msgstr ""
+"Määritä nimi, päätepiste/URL (`<database_url>/mcp`) ja todennustapa (`OAuth`)"
+". Tallenna lopuksi lisätäksesi palvelimen."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:159
 msgid ""
@@ -2837,22 +2907,32 @@ msgid ""
 "access. Under :guilabel:`<client> access expires after:`, select how long "
 "access remains valid, then click :guilabel:`Allow`."
 msgstr ""
+"Palvelimen lisäämisen jälkeen asiakasohjelma avaa Odoon kirjautumissivun "
+"selaimessa. Kirjautumisen jälkeen *Grant Access* -sivulla näkyy, mikä "
+"asiakasohjelma pyytää pääsyä. Valitse kohdassa :guilabel:`<client> pääsy "
+"vanhenee:`, kuinka kauan käyttöoikeus on voimassa, ja napsauta sitten "
+":guilabel:`Salli`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:163
 msgid ""
 "After granting access, the browser redirects back to the client. When access "
 "expires, the client prompts the user to sign in again."
 msgstr ""
+"Pääsyn myöntämisen jälkeen selain ohjaa takaisin asiakasohjelmaan. Kun "
+"käyttöoikeus vanhenee, asiakasohjelma kehottaa käyttäjää kirjautumaan "
+"uudelleen."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:166
 msgid "Access screen for authenticating using OAuth."
-msgstr ""
+msgstr "Käyttöoikeusnäyttö OAuth-todennusta varten."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:170
 msgid ""
 "`Connect to MCP servers using Grok <https://docs.x.ai/build/features/mcp-"
 "servers>`_"
 msgstr ""
+"`Yhdistä MCP-palvelimiin Grokin avulla <https://docs.x.ai/build/features/mcp-"
+"servers>`_"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:171
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:356
@@ -2882,16 +2962,23 @@ msgid ""
 "client sends a request to the server, it uses the key to authenticate the "
 "user's identity and permissions in the Odoo database."
 msgstr ""
+"Yhdistääkseen |MCP|-asiakasohjelman palvelimeen käyttäjien on ensin "
+"määritettävä todennus palvelimeen staattisen API-avaimen avulla. Aina kun "
+"|MCP|-asiakasohjelma lähettää pyynnön palvelimelle, se käyttää avainta "
+"käyttäjän henkilöllisyyden ja käyttöoikeuksien todentamiseen Odoo-"
+"tietokannassa."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:184
 msgid ""
 "To generate the API key, click the user icon in the upper corner, then "
 "select :guilabel:`My Preferences`."
 msgstr ""
+"Voit luoda API-avaimen napsauttamalla yläkulmassa olevaa käyttäjäkuvaketta "
+"ja valitsemalla sitten :guilabel:`Omat asetukset`."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:187
 msgid "Security tab of the user preferences window."
-msgstr ""
+msgstr "Käyttäjän asetukset -ikkunan Suojaus-välilehti."
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:190
 msgid ""
@@ -3587,6 +3674,8 @@ msgid ""
 "Creates new records on a model with specified fields, optionally linking a "
 "preview menu to show the result."
 msgstr ""
+"Luo malliin uusia tietueita määritetyillä kentillä ja linkittää "
+"valinnaisesti esikatseluvalikon tuloksen näyttämiseksi."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:66
 #: ../../export/content/applications/productivity/phone/phone_widget.rst:15
@@ -3601,6 +3690,8 @@ msgstr "Tekoälytyökalu: Avaa valikkoluettelo"
 msgid ""
 "Redirects the UI to a menu's List view, optionally filtered and grouped."
 msgstr ""
+"Ohjaa käyttöliittymän valikon luettelonäkymään, mahdollisesti suodatettuna "
+"ja ryhmiteltynä."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:77
 msgid "`AI Tool: Open Menu Kanban`"
@@ -3610,6 +3701,8 @@ msgstr "Tekoälytyökalu: Avaa kanban-valikko"
 msgid ""
 "Redirects the UI to a menu's Kanban view, optionally filtered and grouped."
 msgstr ""
+"Ohjaa käyttöliittymän valikon Kanban-näkymään, mahdollisesti suodatettuna ja "
+"ryhmiteltynä."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:80
 msgid "`AI Tool: Open Menu Graph`"
@@ -3620,6 +3713,8 @@ msgid ""
 "Redirects the UI to a menu's Graph view with a chosen measure, chart mode, "
 "grouping, and sorting options."
 msgstr ""
+"Ohjaa käyttöliittymän valikon kaavionäkymään valitulla mittarilla, "
+"kaaviotyypillä, ryhmittelyllä ja lajitteluvaihtoehdoilla."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:84
 msgid "`AI Tool: Open Menu Pivot`"
@@ -3630,6 +3725,8 @@ msgid ""
 "Redirects the UI to a menu's Pivot view with row and column groupings and "
 "measures."
 msgstr ""
+"Ohjaa käyttöliittymän valikon pivot-näkymään rivi- ja sarakeryhmittelyillä "
+"sekä mittareilla."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:87
 msgid "`AI Tool: Run view action`"
@@ -3640,6 +3737,8 @@ msgid ""
 "Opens client or report actions (e.g., Discuss, printed reports) tied to a "
 "menu."
 msgstr ""
+"Avaa valikkoon liitettyjä asiakas- tai raporttitoimintoja (esim. Keskustelu, "
+"tulostetut raportit)."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:90
 msgid "`AI Tool: Compute Report Measures`"
@@ -3650,6 +3749,9 @@ msgid ""
 "Returns the measures available for aggregation on a given model or action. "
 "This tool is meant to be called before opening a pivot or graph view."
 msgstr ""
+"Palauttaa mittarit, jotka ovat käytettävissä koosteisiin annetussa mallissa "
+"tai toiminnossa. Tämä työkalu on tarkoitettu kutsuttavaksi ennen pivot- tai "
+"kaavionäkymän avaamista."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:94
 msgid "`AI Tool: Prepare Record Previews`"
@@ -3660,6 +3762,8 @@ msgid ""
 "Prepares metadata so that specific records render as rich preview cards in "
 "the Odoo Chat."
 msgstr ""
+"Valmistelee metatiedot, jotta tietyt tietueet näkyvät monipuolisina "
+"esikatselukortteina Odoo-keskustelussa."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:97
 msgid "`AI Tool: Adjust Search`"
@@ -3670,6 +3774,8 @@ msgid ""
 "Adjusts the search filters, groupings, active measures, or view type of the "
 "current view."
 msgstr ""
+"Säätää nykyisen näkymän hakusuodattimia, ryhmittelyjä, aktiivisia mittareita "
+"tai näkymätyyppiä."
 
 #: ../../export/content/applications/productivity/ai/mcp_server/mcp_tools.rst:100
 msgid "`AI Tool: Compute Date`"
@@ -4957,16 +5063,21 @@ msgid ""
 "Lastly, tick the :guilabel:`Manage Capacities` checkbox to limit how many "
 "simultaneous appointments each user can have in the same time slot."
 msgstr ""
+"Valitse lopuksi valintaruutu :guilabel:`Hallitse kapasiteetteja` "
+"rajoittaaksesi sitä, kuinka monta samanaikaista tapaamista kullakin "
+"käyttäjällä voi olla samalla aikavälillä."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:139
 msgid "Availabilities tab"
-msgstr ""
+msgstr "Saatavuudet-välilehti"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:141
 msgid ""
 "The :guilabel:`Availabilities` tab is used to define when this appointment "
 "type can be booked. Each row represents a recurring time window."
 msgstr ""
+"Välilehdellä :guilabel:`Saatavuudet` määritetään, milloin tämä "
+"tapaamistyyppi on varattavissa. Jokainen rivi edustaa toistuvaa aikaikkunaa."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:144
 msgid ""
@@ -4976,18 +5087,29 @@ msgid ""
 "the :guilabel:`Restrict to Users` column to limit a specific time window to "
 "one or more users; if left empty, the window applies to all assigned users."
 msgstr ""
+"Napsauta :guilabel:`Lisää rivi` luodaksesi saatavuusikkunan. Valitse "
+"viikonpäivä avattavasta :guilabel:`Joka` -valikosta ja määritä sitten "
+"kellonajat kenttiin :guilabel:`Alkaen` ja :guilabel:`Asti`. Voit myös "
+"käyttää saraketta :guilabel:`Rajoita käyttäjille` rajataksesi tietyn "
+"aikaikkunan yhdelle tai useammalle käyttäjälle; jos kenttä jätetään "
+"tyhjäksi, ikkuna koskee kaikkia määritettyjä käyttäjiä."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:149
 msgid ""
 "Multiple entries per day are supported. Click the :icon:`fa-trash-"
 "o` :guilabel:`(trash)` icon to delete an entry."
 msgstr ""
+"Päivää kohti tuetaan useita merkintöjä. Poista merkintä napsauttamalla "
+"kuvaketta :icon:`fa-trash-o` :guilabel:`(roskakori)`."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:153
 msgid ""
 "To block out a lunch break, create two entries for the same day: one before "
 "the break (e.g., ``9h`` to ``12h``) and one after (e.g., ``14h`` to ``17h``)."
 msgstr ""
+"Jos haluat varata lounastauon, luo samalle päivälle kaksi merkintää: toinen "
+"ennen taukoa (esim. ``9h``–``12h``) ja toinen sen jälkeen (esim. "
+"``14h``–``17h``)."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:157
 msgid ""
@@ -4999,6 +5121,13 @@ msgid ""
 "``17h`` but the employee's schedule is Monday ``10h`` to ``16h``, only "
 "``10h`` to ``16h`` is shown to customers."
 msgstr ""
+"Jos valinta :guilabel:`Työntekijän aikataulu` on otettu käyttöön kohdassa "
+":ref:`Valinnat-välilehti <appointments/appointment-types/options-tab>`, "
+"saatavuus on tässä määritettyjen aikaikkunoiden ja käyttäjän työaikataulun "
+"**leikkaus** **Työntekijät**-sovelluksessa. Aika on varattavissa vain, jos "
+"se osuu molempiin. Jos esimerkiksi Saatavuudet-välilehti sallii maanantain "
+"klo ``9h``–``17h``, mutta työntekijän aikataulu on maanantaina klo "
+"``10h``–``16h``, asiakkaille näytetään vain klo ``10h``–``16h``."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:167
 #: ../../export/content/applications/productivity/calendar.rst:204
@@ -5010,6 +5139,8 @@ msgid ""
 "The :guilabel:`Questions` tab can be used to collect customer information "
 "during the booking process."
 msgstr ""
+"Välilehteä :guilabel:`Kysymykset` voidaan käyttää asiakastietojen "
+"keräämiseen varausprosessin aikana."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:172
 msgid ""
@@ -5022,6 +5153,15 @@ msgid ""
 "Tick the :guilabel:`Mandatory` checkbox to require an answer before the "
 "customer can confirm the booking."
 msgstr ""
+"Napsauta :guilabel:`Lisää rivi` lisätäksesi kysymyksen suoraan luetteloon, "
+"jolloin *Lisää: Kysymykset* -ponnahdusikkuna avautuu. Napsauta "
+":guilabel:`Luo uusi`, jolloin *Luo kysymyksiä* -ponnahdusikkuna avautuu. "
+"Kirjoita :guilabel:`Kysymys` -teksti ja valitse sitten "
+":guilabel:`Vastaustyyppi` (esim. :guilabel:`Teksti`, "
+":guilabel:`Puhelinnumero`, :guilabel:`Sähköposti`). Määritä ennalta "
+"määritetyt :guilabel:`Vastaukset`, jos vastaustyyppi edellyttää niitä. "
+"Valitse valintaruutu :guilabel:`Pakollinen`, jos haluat vaatia vastauksen "
+"ennen kuin asiakas voi vahvistaa varauksen."
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:182
 #: ../../export/content/applications/productivity/calendar.rst:219
@@ -33526,12 +33666,17 @@ msgid ""
 ":doc:`Property fields <../../../essentials/property_fields>` visible in a "
 "list view are included when the list is inserted into a spreadsheet."
 msgstr ""
+":doc:`Ominaisuuskentät <../../../essentials/property_fields>`, jotka näkyvät "
+"luettelonäkymässä, sisällytetään mukaan, kun luettelo lisätään "
+"laskentataulukkoon."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:53
 msgid ""
 "To insert a list from an :ref:`Odoo list view <studio/views/multiple-records/"
 "list>` into an Odoo spreadsheet:"
 msgstr ""
+"Voit lisätä luettelon :ref:`Odoon luettelonäkymästä <studio/views/multiple-"
+"records/list>` Odoo-laskentataulukkoon seuraavasti:"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:56
 msgid ""
@@ -33540,6 +33685,10 @@ msgid ""
 "then :menuselection:`Spreadsheet -->` :icon:`oi-view-"
 "list` :menuselection:`Insert list in spreadsheet`."
 msgstr ""
+"Kun asianmukainen luettelonäkymä on auki, napsauta näkymän nimen vieressä "
+"olevaa :icon:`fa-cog` :guilabel:`(Toiminnot)` -kuvaketta ja valitse sitten "
+":menuselection:`Laskentataulukko -->` :icon:`oi-view-list` "
+":menuselection:`Lisää luettelo laskentataulukkoon`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:61
 msgid ""
@@ -33555,12 +33704,15 @@ msgstr ""
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:65
 msgid "In the window that opens, edit the :guilabel:`List name` if needed."
 msgstr ""
+"Muokkaa avautuvassa ikkunassa tarvittaessa kenttää :guilabel:`Luettelon "
+"nimi`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:67
 msgid ""
 "Edit the number of :guilabel:`Records`, i.e., rows, to be inserted, if "
 "needed."
 msgstr ""
+"Muokkaa tarvittaessa lisättävien rivien eli :guilabel:`Tietueet` -määrää."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:69
 msgid ""
@@ -33568,6 +33720,9 @@ msgid ""
 "page of the list view. For example, if the list contains 150 records but "
 "only 80 are visible, this field will show 80."
 msgstr ""
+"Oletusarvoisesti näytetty määrä on luettelonäkymän ensimmäisellä sivulla "
+"näkyvien tietueiden määrä. Jos luettelossa on esimerkiksi 150 tietuetta, "
+"mutta vain 80 on näkyvissä, tässä kentässä näkyy 80."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:73
 msgid ""
@@ -33576,6 +33731,11 @@ msgid ""
 "accommodate new records. If it is likely that new records will be added in "
 "the database, consider adding extra rows when inserting the list."
 msgstr ""
+"Odoon luettelonäkymästä lisätty luettelo on :ref:`staattinen luettelo "
+"<spreadsheet/insert-list/static-vs-dynamic>`, joka ei laajene "
+"automaattisesti uusien tietueiden myötä. Jos tietokantaan todennäköisesti "
+"lisätään uusia tietueita, harkitse lisärivien lisäämistä luetteloa "
+"lisättäessä."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:78
 msgid ""
@@ -33594,6 +33754,11 @@ msgid ""
 "spreadsheet shows the :ref:`list properties <spreadsheet/insert-list/"
 "properties>`."
 msgstr ""
+"Luettelo lisätään laskentataulukon uudelle välilehdelle. Alapalkin "
+"välilehdessä näkyy luettelon nimi ja sen jälkeen luettelotunnus, esim. "
+"*Tarjoukset yhteensä (luettelo #1)*. Laskentataulukon oikeassa reunassa "
+"oleva paneeli näyttää :ref:`luettelon ominaisuudet <spreadsheet/insert-list/"
+"properties>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:87
 msgid ""
@@ -33602,6 +33767,10 @@ msgid ""
 "<spreadsheet/insert-list/static-functions>` that retrieves data from the "
 "database."
 msgstr ""
+"Oletusarvoisesti luettelo on :ref:`staattinen luettelo <spreadsheet/insert-"
+"list/static-vs-dynamic>`, jossa jokainen solu sisältää :ref:`Odoo-kohtaisen "
+"funktion <spreadsheet/insert-list/static-functions>`, joka hakee tiedot "
+"tietokannasta."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:92
 msgid ""
@@ -33609,6 +33778,9 @@ msgid ""
 "properties <spreadsheet/insert-list/properties>`, and can be edited at any "
 "time."
 msgstr ""
+"Kenttää :guilabel:`Luettelon nimi` käytetään taulukon nimessä ja "
+":ref:`luettelon ominaisuuksissa <spreadsheet/insert-list/properties>`, ja "
+"sitä voi muokata milloin tahansa."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:94
 msgid ""
@@ -33618,6 +33790,11 @@ msgid ""
 "insert-list/static-convert>` to allow it to expand to accommodate new "
 "records."
 msgstr ""
+"Tietueita/rivejä voidaan myös :ref:`lisätä manuaalisesti <spreadsheet/insert-"
+"list/static-add-records>` sen jälkeen, kun laskentataulukko on lisätty. "
+"Vaihtoehtoisesti lisätty luettelo voidaan :ref:`muuntaa dynaamiseksi "
+"luetteloksi <spreadsheet/insert-list/static-convert>`, jotta se voi "
+"laajentua uusien tietueiden myötä."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:98
 msgid ""
@@ -33636,10 +33813,15 @@ msgid ""
 "then right-click again and select :menuselection:`Paste special --> Paste as "
 "value`."
 msgstr ""
+"Jos haluat katkaista linkin lisätyn luettelon ja tietokannan välillä, "
+"valitse koko luettelo, napsauta hiiren kakkospainikkeella ja valitse "
+":icon:`fa-clipboard` :guilabel:`Kopioi`, napsauta sitten uudelleen hiiren "
+"kakkospainikkeella ja valitse :menuselection:`Liitä määräten --> Liitä "
+"arvona`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:107
 msgid "Static list functions"
-msgstr ""
+msgstr "Staattisen luettelon funktiot"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:109
 msgid ""
@@ -33647,6 +33829,9 @@ msgid ""
 "functions/odoo>` to retrieve the header and field values, respectively, via "
 "its :ref:`data source <spreadsheet/insert/data-sources>`:"
 msgstr ""
+"Staattinen luettelo käyttää seuraavia :ref:`Odoo-kohtaisia funktioita "
+"<spreadsheet/functions/odoo>` otsikon ja kenttäarvojen hakemiseen sen "
+":ref:`tietolähteen <spreadsheet/insert/data-sources>` kautta:"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:118
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:223
@@ -33696,7 +33881,7 @@ msgstr "Laskentataulukon solujen kaavojen tarkastelu"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:138
 msgid "Convert a static list to a dynamic list"
-msgstr ""
+msgstr "Muunna dynaaminen luettelo staattiseksi luetteloksi"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:140
 msgid ""
@@ -33705,16 +33890,25 @@ msgid ""
 "then :ref:`update the array function <spreadsheet/insert-list/dynamic-all-"
 "records>`."
 msgstr ""
+"Jotta lisätty luettelo voi laajentua ja vastaanottaa uusia tietueita, muunna "
+"luettelo :ref:`dynaamiseksi luetteloksi <spreadsheet/insert-list/static-vs-"
+"dynamic>` ja :ref:`päivitä sitten matriisifunktio <spreadsheet/insert-list/"
+"dynamic-all-records>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:144
 msgid "There are two main ways to convert a static list to a dynamic list:"
 msgstr ""
+"Staattisen luettelon voi muuntaa dynaamiseksi luetteloksi kahdella "
+"päätavalla:"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:146
 msgid ""
 ":ref:`Duplicate the list from the list properties <spreadsheet/insert-list/"
 "duplicate>`. The new dynamic list has the same styling as the original list."
 msgstr ""
+":ref:`Monista luettelo luettelon ominaisuuksista <spreadsheet/insert-list/"
+"duplicate>`. Uudella dynaamisella luettelolla on sama muotoilu kuin "
+"alkuperäisellä luettelolla."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:150
 msgid ""
@@ -33722,6 +33916,10 @@ msgid ""
 "ID. This means multiple lists can be associated with the same model, but "
 "have distinct configurations or calculations."
 msgstr ""
+"Tällä menetelmällä uudelle dynaamiselle luettelolle määritetään seuraava "
+"vapaana oleva luettelotunnus. Tämä tarkoittaa, että useita luetteloita "
+"voidaan liittää samaan malliin, mutta niillä voi olla eri määritykset tai "
+"laskelmat."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:154
 msgid ""
@@ -33730,6 +33928,11 @@ msgid ""
 "Click :menuselection:`Data -->` :icon:`os-insert-list` :menuselection:`Re-"
 "insert dynamic list` from the menu bar, then select the relevant list."
 msgstr ""
+"**Lisää dynaaminen luettelo uudelleen Tiedot-valikosta.** Aseta kohdistin "
+"tyhjään soluun staattisen luettelon sisältävällä välilehdellä. Valitse "
+"valikkoriviltä :menuselection:`Tiedot -->` :icon:`os-insert-list` "
+":menuselection:`Lisää dynaaminen luettelo uudelleen` ja valitse sitten "
+"asianmukainen luettelo."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:159
 msgid "A new dynamic list appears, with the same styling as the original list."
