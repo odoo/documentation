@@ -1,0 +1,461 @@
+/* Panel de Control de Ventas — Hacienda Huentelauquén
+   Paleta oficial de marca: maroon #8C0026 (títulos), rojo #ED0035 (acento).
+   El panel se sirve en un solo tema claro, pintado explícitamente. */
+
+:root {
+  --marca-maroon: #8c0026;
+  --marca-rojo: #ed0035;
+
+  /* Colores de dato. Validados contra la superficie clara: ambos superan 3:1
+     de contraste y caen dentro de la banda de luminosidad para marcas. */
+  --serie-venta: #a8002a;
+  --serie-margen: #ed0035;
+
+  --superficie: #ffffff;
+  --fondo: #fafafa;
+  --rosa-suave: #fdf0f2;
+  --rosa: #f2dcdb;
+  --borde: #e4b5bf;
+  --borde-neutro: #e8e8e8;
+  --grid: #ececec;
+
+  --texto: #222222;
+  --texto-2: #3a3a3a;
+  --texto-mudo: #6e6e6e;
+
+  --positivo: #1b7f5a;
+  --negativo: #b3261e;
+
+  --serif: Cambria, "Times New Roman", Georgia, serif;
+  --sans: Calibri, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --radio: 8px;
+  --sombra: 0 1px 2px rgba(34, 34, 34, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------------------------------------------------------------------ cabecera */
+
+.encabezado {
+  background: var(--marca-maroon);
+  color: #ffffff;
+  padding: 22px 28px 20px;
+}
+
+.encabezado__interior {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kicker {
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rosa);
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.insignia-periodo {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------- diseño */
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 22px 28px 48px;
+}
+
+.seccion { margin-top: 30px; }
+
+.seccion__titulo {
+  margin: 0 0 3px;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--marca-maroon);
+}
+
+.seccion__nota {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: var(--texto-mudo);
+}
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde-neutro);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 18px 20px;
+}
+
+/* ------------------------------------------------------------------ controles */
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--superficie);
+  border: 1px solid var(--borde-neutro);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.campo { display: flex; flex-direction: column; gap: 4px; }
+
+.campo label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-mudo);
+}
+
+.campo select,
+.campo input {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 7px 10px;
+  min-width: 130px;
+}
+
+.campo select:focus-visible,
+.campo input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--marca-rojo);
+  outline-offset: 2px;
+}
+
+.boton {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--marca-rojo);
+  border: 1px solid var(--marca-rojo);
+  border-radius: 6px;
+  padding: 9px 18px;
+  cursor: pointer;
+}
+
+.boton:hover { background: var(--marca-maroon); border-color: var(--marca-maroon); }
+.boton[disabled] { opacity: 0.55; cursor: progress; }
+
+.boton--tenue {
+  color: var(--marca-maroon);
+  background: var(--superficie);
+  border-color: var(--borde);
+  font-weight: 600;
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+.boton--tenue:hover { background: var(--rosa-suave); border-color: var(--marca-rojo); }
+
+.controles__estado {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--texto-mudo);
+}
+
+/* ---------------------------------------------------------------- indicadores */
+
+.heroe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 26px;
+  margin-top: 18px;
+  padding: 22px 24px;
+  background: var(--superficie);
+  border: 1px solid var(--borde-neutro);
+  border-left: 4px solid var(--marca-maroon);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.heroe__etiqueta {
+  margin: 0 0 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto-mudo);
+}
+
+/* La cifra protagonista va en la sans del panel, no en la serif de los títulos,
+   y con dígitos proporcionales: `tabular-nums` se reserva para columnas. */
+.heroe__valor {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+}
+
+.heroe__deltas { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.delta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--rosa-suave);
+  border: 1px solid var(--rosa);
+  font-size: 13px;
+  color: var(--texto-2);
+}
+
+.delta__cifra { font-weight: 700; }
+.delta--sube .delta__cifra { color: var(--positivo); }
+.delta--baja .delta__cifra { color: var(--negativo); }
+.delta--nd .delta__cifra { color: var(--texto-mudo); }
+
+.rejilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.tarjeta-kpi { padding: 15px 17px; }
+
+.tarjeta-kpi__etiqueta {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: var(--texto-mudo);
+}
+
+.tarjeta-kpi__valor {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--texto);
+}
+
+.tarjeta-kpi__pie { margin-top: 3px; font-size: 12px; color: var(--texto-mudo); }
+
+/* -------------------------------------------------------------------- gráficos */
+
+.grafico__cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.grafico__titulo {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--marca-maroon);
+}
+
+.grafico__subtitulo { margin: 2px 0 0; font-size: 13px; color: var(--texto-mudo); }
+
+.lienzo { width: 100%; display: block; }
+
+.eje-texto { font-size: 11px; fill: var(--texto-mudo); font-variant-numeric: tabular-nums; }
+.etiqueta-directa { font-size: 12px; font-weight: 700; fill: var(--texto); }
+.linea-grid { stroke: var(--grid); stroke-width: 1; }
+.zona-activa { fill: transparent; cursor: pointer; }
+
+/* --------------------------------------------------------------------- tablas */
+
+.tabla-envoltorio { overflow-x: auto; margin-top: 12px; }
+
+/* En pantallas angostas la tabla se desplaza dentro de su contenedor en vez de
+   comprimir las columnas hasta volverlas ilegibles. */
+.tabla-envoltorio table.datos { min-width: 620px; }
+
+table.datos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table.datos caption {
+  text-align: left;
+  font-size: 12px;
+  color: var(--texto-mudo);
+  padding-bottom: 6px;
+}
+
+table.datos th,
+table.datos td {
+  border-bottom: 1px solid var(--borde);
+  padding: 8px 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+table.datos thead th {
+  background: var(--marca-rojo);
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+table.datos th:first-child,
+table.datos td:first-child,
+table.datos th.celda-nombre,
+table.datos td.celda-nombre { text-align: left; }
+
+table.datos tbody td { font-variant-numeric: tabular-nums; }
+
+table.datos tbody tr:nth-child(even) { background: #fbfbfb; }
+
+.celda-nombre {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.celda-barra { width: 34%; min-width: 130px; padding-right: 0; }
+
+/* El rótulo se alinea con el origen de las barras, no con su extremo. */
+table.datos th.celda-barra { text-align: left; }
+
+.barra-fila {
+  display: block;
+  height: 14px;
+  border-radius: 0 4px 4px 0;
+  background: var(--serie-venta);
+  min-width: 2px;
+}
+
+/* --------------------------------------------------------------------- pestañas */
+
+.pestanas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pestana {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--marca-maroon);
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+
+.pestana:hover { background: var(--rosa-suave); }
+
+.pestana[aria-selected="true"] {
+  background: var(--marca-maroon);
+  border-color: var(--marca-maroon);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------- estados */
+
+.aviso {
+  margin-top: 18px;
+  padding: 13px 16px;
+  border-radius: var(--radio);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--marca-rojo);
+  background: var(--rosa-suave);
+  color: var(--texto-2);
+  font-size: 14px;
+}
+
+.aviso[hidden] { display: none; }
+.aviso__titulo { font-weight: 700; color: var(--marca-maroon); }
+
+.vacio {
+  padding: 26px 10px;
+  text-align: center;
+  color: var(--texto-mudo);
+  font-size: 14px;
+}
+
+.cargando { opacity: 0.45; transition: opacity 0.15s ease; }
+
+/* ------------------------------------------------------------------ tooltip */
+
+.tooltip {
+  position: fixed;
+  z-index: 20;
+  pointer-events: none;
+  background: var(--texto);
+  color: #ffffff;
+  font-size: 12.5px;
+  line-height: 1.45;
+  padding: 8px 11px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  max-width: 280px;
+}
+
+.tooltip[hidden] { display: none; }
+.tooltip__titulo { font-weight: 700; margin-bottom: 2px; }
+.tooltip__fila { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* --------------------------------------------------------------------- pie */
+
+.pie {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px 34px;
+  font-size: 12px;
+  color: var(--texto-mudo);
+}
+
+@media (max-width: 620px) {
+  .encabezado, main, .pie { padding-left: 16px; padding-right: 16px; }
+  .heroe__valor { font-size: 40px; }
+  .controles__estado { margin-left: 0; width: 100%; }
+}
+
+@media print {
+  body { background: #ffffff; }
+  .controles, .boton, .pestana { display: none !important; }
+}

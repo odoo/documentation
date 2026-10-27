@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de Control de Ventas — Hacienda Huentelauquén</title>
+  <meta name="description" content="Panel de control de ventas de Hacienda Huentelauquén sobre datos de Odoo.">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%238C0026'/><rect x='7' y='16' width='4' height='9' fill='%23fff'/><rect x='14' y='11' width='4' height='14' fill='%23fff'/><rect x='21' y='7' width='4' height='18' fill='%23ED0035'/></svg>">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <div>
+        <p class="kicker" id="kicker">Hacienda Huentelauquén</p>
+        <h1>Panel de Control de Ventas</h1>
+      </div>
+      <span class="insignia-periodo" id="insignia-periodo">Cargando…</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Los filtros van en una sola fila por encima de los gráficos. -->
+    <form class="controles" id="controles" aria-label="Filtros del panel">
+      <div class="campo">
+        <label for="mes">Mes</label>
+        <select id="mes" name="mes"></select>
+      </div>
+      <div class="campo">
+        <label for="anio">Año</label>
+        <select id="anio" name="anio"></select>
+      </div>
+      <div class="campo">
+        <label for="meses">Meses de tendencia</label>
+        <select id="meses" name="meses">
+          <option value="6">6 meses</option>
+          <option value="12" selected>12 meses</option>
+          <option value="24">24 meses</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="limite">Top de rankings</label>
+        <select id="limite" name="limite">
+          <option value="5">Top 5</option>
+          <option value="10" selected>Top 10</option>
+          <option value="20">Top 20</option>
+        </select>
+      </div>
+      <button class="boton" type="submit" id="btn-actualizar">Actualizar</button>
+      <span class="controles__estado" id="estado" role="status" aria-live="polite"></span>
+    </form>
+
+    <div class="aviso" id="aviso" hidden role="alert">
+      <span class="aviso__titulo" id="aviso-titulo">Aviso</span>
+      <span id="aviso-texto"></span>
+    </div>
+
+    <section class="seccion" aria-labelledby="titulo-resumen">
+      <h2 class="seccion__titulo" id="titulo-resumen">Resumen del período</h2>
+      <p class="seccion__nota">
+        Importes netos, sin IVA, sobre ventas confirmadas en Odoo.
+      </p>
+
+      <div class="heroe">
+        <div>
+          <p class="heroe__etiqueta">Venta neta del período</p>
+          <div class="heroe__valor" id="heroe-valor" title="">—</div>
+        </div>
+        <div class="heroe__deltas" id="heroe-deltas"></div>
+      </div>
+
+      <div class="rejilla-tarjetas" id="tarjetas-kpi"></div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-tendencia">
+      <h2 class="seccion__titulo" id="titulo-tendencia">Evolución mensual</h2>
+      <p class="seccion__nota">
+        Venta neta y margen se muestran en dos gráficos separados: comparten los
+        mismos meses, pero cada medida conserva su propia escala.
+      </p>
+
+      <div class="tarjeta">
+        <div class="grafico__cabecera">
+          <div>
+            <h3 class="grafico__titulo">Venta neta por mes</h3>
+            <p class="grafico__subtitulo" id="sub-venta">—</p>
+          </div>
+          <button class="boton boton--tenue" type="button" id="btn-tabla-venta"
+                  aria-expanded="false" aria-controls="tabla-venta">Ver tabla</button>
+        </div>
+        <svg class="lienzo" id="grafico-venta" role="img"
+             aria-label="Gráfico de barras de venta neta por mes"></svg>
+        <div class="tabla-envoltorio" id="tabla-venta" hidden></div>
+      </div>
+
+      <div class="tarjeta" style="margin-top:14px">
+        <div class="grafico__cabecera">
+          <div>
+            <h3 class="grafico__titulo">Margen por mes</h3>
+            <p class="grafico__subtitulo" id="sub-margen">—</p>
+          </div>
+          <button class="boton boton--tenue" type="button" id="btn-tabla-margen"
+                  aria-expanded="false" aria-controls="tabla-margen">Ver tabla</button>
+        </div>
+        <svg class="lienzo" id="grafico-margen" role="img"
+             aria-label="Gráfico de línea del margen porcentual por mes"></svg>
+        <div class="tabla-envoltorio" id="tabla-margen" hidden></div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-rankings">
+      <h2 class="seccion__titulo" id="titulo-rankings">Ventas por producto, cliente y canal</h2>
+      <p class="seccion__nota" id="nota-rankings">
+        Ordenado por venta neta del período.
+      </p>
+
+      <div class="pestanas" role="tablist" aria-label="Dimensión del ranking">
+        <button class="pestana" role="tab" type="button" id="tab-producto"
+                data-dim="producto" aria-selected="true" aria-controls="panel-ranking">Producto</button>
+        <button class="pestana" role="tab" type="button" id="tab-cliente"
+                data-dim="cliente" aria-selected="false" aria-controls="panel-ranking">Cliente</button>
+        <button class="pestana" role="tab" type="button" id="tab-canal"
+                data-dim="canal" aria-selected="false" aria-controls="panel-ranking">Canal</button>
+      </div>
+
+      <div class="tarjeta" id="panel-ranking" role="tabpanel" aria-labelledby="tab-producto"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p id="pie-texto">Fuente: Odoo — modelo <code>sale.report</code> (Análisis de ventas).</p>
+  </footer>
+
+  <div class="tooltip" id="tooltip" hidden role="tooltip"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
