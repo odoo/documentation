@@ -37,7 +37,7 @@ dictionary, where each key specifies module metadatum.
         ],
     }
 
-Available manifest fields are:
+Available manifest keys are:
 
 ``name`` (``str``, required)
     the human-readable name of the module
