@@ -95,7 +95,7 @@ to that template.
 
 .. note::
    Headers and footers can also be added to a quotation template by navigating to
-   :menuselection:`Sales app --> Configuration --> Quotation Templates`. Select a template and then
+   :menuselection:`Sales app --> Configuration --> Templates`. Select a template and then
    in the :guilabel:`Quote Builder` tab, :guilabel:`Add` or :guilabel:`Upload` a PDF directly.
 
 .. figure:: pdf_quote_builder/config-header-pdf.png
