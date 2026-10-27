@@ -30,7 +30,8 @@ The main dashboard provides access to every installed app in the database.
 .. _industries/bowling/configure-lane-bookings:
 
 Configure lane bookings
-======================
+Configure lane bookings
+=======================
 
 Use the **Appointments** app to offer lane sessions on the website. Link the appointment type to the
 lane resources and define the maximum number of players for each lane.
