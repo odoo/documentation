@@ -1,5 +1,5 @@
 =============
-Multi-company
+Multi-compan
 =============
 
 .. seealso::
