@@ -47,7 +47,8 @@ located.
 
 For clients with a global presence, the applicable pricing is always
 based on the client location with the highest price list, unless otherwise
-specified in writing at the time of purchase.
+specified in writing at the time of purchase.Odoo Enterprise self hosted requires a 
+minimum annual agreement paid upfront.
 
 Monthly Subscriptions are only available for hosting on the Cloud Platform
 (Odoo SaaS and Odoo SH). Payment of Monthly Subscriptions can only be made
