@@ -63,7 +63,7 @@ orders. Include the products available for self-service in the kiosk's catalog.
 .. _industries/bowling/present-the-venue-online:
 
 Present the venue online
-=======================
+========================
 
 Use the **Website** app to publish the venue's booking options and practical information. A contact
 form can collect inquiries about business events and other group bookings.
