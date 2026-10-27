@@ -337,7 +337,13 @@ CPA005 file
 ~~~~~~~~~~~
 
 CPA005 is a standardized file format used by Canadian banks to process batched financial
-transactions, primarily for :abbr:`EFT (Electronic Funds Transfers)`.
+transactions, primarily for :abbr:`EFT (Electronic Funds Transfers)`. Odoo generates CPA005 files
+to:
+
+- :ref:`pay vendors <localizations/canada/cpa005-payments>` by direct deposit;
+- :ref:`collect payments from customers <localizations/canada/cpa005-pad-collections>` by
+  :abbr:`PAD (Pre-Authorized Debit)`, once they have signed a :ref:`PAD mandate
+  <localizations/canada/cpa005-pad-mandates>`.
 
 .. note::
    Make sure to :ref:`install <general/install>` the :guilabel:`CPA005 Payments`
@@ -370,18 +376,43 @@ The following configurations are required:
    #. Go to :menuselection:`Accounting --> Configuration --> Journals` and access the relevant
       :guilabel:`Bank` journal.
    #. In  the :guilabel:`Journal Entries` tab, enter the bank :ref:`Account Number and Bank
-      <accounting/journals/bank>` details.
-   #. In the :guilabel:`Outgoing Payments` tab, make sure the :guilabel:`Canadian EFT` Payment
-      Method is set. Then, complete the following fields in the :guilabel:`Canadian EFT/CPA
-      configuration` section:
+      <accounting/journals/bank>` details. This bank account must be :ref:`trusted
+      <accounting/batch/create-bank-account>` and have a :guilabel:`Routing Number (EFT)`.
+   #. To pay vendors, open the :guilabel:`Outgoing Payments` tab and make sure the :guilabel:`CPA
+      005 Direct Deposit` payment method is set. To collect payments from customers, open the
+      :guilabel:`Incoming Payments` tab and make sure the :guilabel:`CPA 005 Pre-Authorized Debit
+      (PAD)` payment method is set. Then, complete the following fields in the :guilabel:`Canadian
+      EFT/CPA configuration` section of the tab:
 
       - :guilabel:`Destination Data Center`: Enter the 5-digit ID provided by your bank.
       - :guilabel:`Originator ID`: Enter the 10-digit code provided by your bank.
-      - :guilabel:`Next File Creation Number (FCN)`: Enter a sequence between `1` and `9,999` that
-        will appear on the CPA005 file.
+      - :guilabel:`Next File Creation Number (FCN)` (:guilabel:`Outgoing Payments` tab) or
+        :guilabel:`Next PAD File Creation Number (FCN)` (:guilabel:`Incoming Payments` tab): Enter
+        a sequence between `1` and `9,999` that will appear on the CPA005 file.
+
+      .. note::
+         The :guilabel:`Destination Data Center` and :guilabel:`Originator ID` are shared by both
+         tabs, while vendor payment and PAD files each have their own File Creation Number
+         sequence.
+
+      .. image:: canada/l10n-ca-pad-journal-configuration.png
+         :alt: CPA005 PAD configuration in the Incoming Payments tab of a bank journal.
 
 #. Make sure the :guilabel:`Bank Account` information is properly set up in the :ref:`Accounting
-   tab <contacts/accounting-tab>` for the relevant vendor.
+   tab <contacts/accounting-tab>` for the relevant vendors and customers:
+
+   - :guilabel:`Account Number`: up to 12 digits.
+   - :guilabel:`Routing Number (EFT)`: 9 digits, made of a `0`, followed by the 3-digit institution
+     number and the 5-digit branch transit number (e.g., `000305432` for institution `003` and
+     transit `05432`).
+
+   .. note::
+      The :guilabel:`Routing Number (EFT)` is the clearing number of Canadian bank accounts. If
+      another label, such as :guilabel:`Clearing Number`, is displayed next to the field, select
+      :guilabel:`Routing Number (EFT)` in the drop-down menu.
+
+   .. image:: canada/l10n-ca-bank-account-routing-number.png
+      :alt: Routing Number (EFT) on a Canadian bank account.
 
 .. _localizations/canada/cpa005-payments:
 
@@ -395,11 +426,10 @@ To pay vendor bills using an :abbr:`EFT (Electronic Funds Transfer)` via the CPA
 follow these steps:
 
 #. When :ref:`registering payments for vendor bills <accounting/payments/group-payments>`, select
-   the :guilabel:`Canadian EFT` payment method.
-#. Go to :menuselection:`Accounting --> Vendor --> Payments`, access the relevant payments, and
-   select the :guilabel:`EFT/CPA transaction code` for each payment.
-#. In the :guilabel:`Vendor Payments` list view, select the relevant payments and click
-   :guilabel:`Create Batch`.
+   the :guilabel:`CPA 005 Direct Deposit` payment method and the :guilabel:`EFT/CPA transaction
+   code` that best describes the payment.
+#. Go to :menuselection:`Accounting --> Vendors --> Payments`, select the relevant payments, click
+   :icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Create batch payment`.
 #. Verify the information, such as the :guilabel:`Date` and :guilabel:`File Creation Number`, before
    validating the batch payment, as modifications can be more complex once validated.
 #. Click :guilabel:`Validate`.
@@ -408,3 +438,116 @@ The generated CPA005 TXT file is available in the chatter for download and bank 
 
 .. important::
    After importing the file into your banking system, payment processing may take up to 48 hours.
+
+.. _localizations/canada/cpa005-pad-mandates:
+
+PAD mandates
+************
+
+A :abbr:`PAD (Pre-Authorized Debit)` mandate, or PAD agreement, is the authorization given by a
+customer to debit their bank account for the amounts due on their invoices. An active PAD mandate is
+required to collect a customer's payments with a CPA005 file.
+
+To create a PAD mandate, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates` and click
+   :guilabel:`New`.
+#. Select the :guilabel:`Customer`. Make sure a :guilabel:`Country` is set on the customer's contact
+   form.
+#. Select the customer's :guilabel:`Bank Account` from which the payments are collected.
+#. Select the :guilabel:`PAD Category`, which is printed on the PAD agreement: :guilabel:`Personal
+   (Utilities, Mortgage, ...)` or :guilabel:`Business (Commercial Activities)`.
+#. Set the :guilabel:`Pre-notification` period, i.e., the minimum number of days between notifying
+   the customer of an upcoming debit (e.g., by sending them the invoice) and collecting it. The
+   Payments Canada rules require at least `10` days.
+#. Set the :guilabel:`Validity` period. If no end date is set, the mandate remains active until it
+   is :ref:`closed or revoked <localizations/canada/cpa005-pad-close-revoke>`.
+
+   .. image:: canada/l10n-ca-pad-mandate.png
+      :alt: Draft PAD mandate for a Canadian customer.
+
+#. Click :guilabel:`Send & Print` to generate the PAD agreement. Enable :guilabel:`Email` to send it
+   to the customer for signature and/or :guilabel:`Download` to get the PDF file, then click
+   :guilabel:`Send & Print`. The PAD agreement is attached to the mandate.
+
+   .. image:: canada/l10n-ca-pad-agreement.png
+      :alt: PAD agreement generated from a PAD mandate.
+
+#. Once the customer has signed the PAD agreement, click :guilabel:`Validate` to activate the
+   mandate.
+
+.. important::
+   - Validating a mandate requires the :guilabel:`Validate bank account` :doc:`access rights
+     <../../general/users/access_rights>`.
+   - The customer's bank account must be :ref:`trusted <accounting/batch/create-bank-account>`, and
+     its :guilabel:`Account Number` and :guilabel:`Routing Number (EFT)` must be valid for the
+     CPA005 format.
+
+.. tip::
+   - To access a customer's mandates or create a new one from their contact form, click the
+     :guilabel:`Direct Debit Mandates` smart button.
+   - Click the :guilabel:`Collections` and :guilabel:`Invoices Paid` smart buttons on the mandate
+     form to view the payments and invoices linked to it.
+
+.. _localizations/canada/cpa005-pad-close-revoke:
+
+To stop using an active mandate, open it and click:
+
+- :guilabel:`Close`: The mandate's end date is set to the current day. It can no longer be used for
+  payments dated after that day.
+- :guilabel:`Revoke`: The mandate is immediately disabled (e.g., in case of fraud). It can no
+  longer be used for any payment.
+
+Mandates are also closed automatically once their end date has passed. Closed and revoked mandates
+cannot be reactivated, and payments linked to them are flagged when validating a batch payment.
+
+.. _localizations/canada/cpa005-pad-collections:
+
+PAD collections
+***************
+
+.. note::
+   Make sure that :ref:`batch payments are enabled <accounting/batch/configuration>`.
+
+To collect customer invoices by :abbr:`PAD (Pre-Authorized Debit)` via the CPA005 file format,
+follow these steps:
+
+#. :ref:`Register the payment <accounting/payments/from-invoice-bill>` of the customer invoices
+   with the bank journal configured for CPA005. Select the :guilabel:`CPA 005 Pre-Authorized Debit
+   (PAD)` payment method and the :guilabel:`EFT/CPA transaction code` that best describes the
+   payment.
+
+   A message confirms that a valid mandate is available for the customer. The payment is linked to
+   that mandate, and the amount is collected from the bank account set on it. Invoices of customers
+   without a valid mandate are not paid.
+
+   .. image:: canada/l10n-ca-pad-register-payment.png
+      :alt: Registering a CPA005 PAD payment for an invoice with a valid mandate.
+
+   .. tip::
+      To list the invoices that can be paid with a mandate, go to :menuselection:`Accounting -->
+      Customers --> Invoices` and use the :guilabel:`Has Mandate` filter.
+
+#. Go to :menuselection:`Accounting --> Customers --> Payments`, select the relevant payments, click
+   :icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Create batch payment`.
+#. Verify the information, such as the :guilabel:`Date` and the :guilabel:`File Creation Number used
+   in Canadian EFT`, before validating the batch payment. Leave the :guilabel:`File Creation Number
+   used in Canadian EFT` field empty to use the journal's next PAD :abbr:`FCN (File Creation
+   Number)`.
+#. Click :guilabel:`Validate`.
+
+The generated CPA005 TXT file is available in the chatter for download and bank import. Once the
+bank has collected the funds, :ref:`reconcile <accounting/batch/bank_reconciliation>` the bank
+transaction with the batch payment.
+
+.. image:: canada/l10n-ca-pad-batch-payment.png
+   :alt: Validated CPA005 PAD batch payment with the generated file in the chatter.
+
+.. important::
+   - The payment date is the date on which the funds are collected. Make sure the customer is
+     notified of the amount and date at least as many days in advance as set in the mandate's
+     :guilabel:`Pre-notification` field.
+   - The CPA005 format only accepts payment dates up to 2 business days after the batch payment's
+     :guilabel:`Date`, and up to 173 days before it.
+   - A CPA005 file contains payments in a single currency: either Canadian dollars (CAD) or United
+     States dollars (USD).
