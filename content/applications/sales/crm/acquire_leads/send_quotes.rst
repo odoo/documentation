@@ -78,7 +78,7 @@ of the form, and update any missing or incorrect fields:
 
    When using a quotation template, the expiration date is based off of the :guilabel:`Quotation
    Validity` field on the template. To alter the validity date computation on a template, go to
-   :menuselection:`Sales app --> Configuration --> Sales Orders --> Quotation Templates`.
+   :menuselection:`Sales app --> Configuration --> Templates`.
 
    Then, click on a template to open it, and update the number in the :guilabel:`Quotation Validity`
    field.
