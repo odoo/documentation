@@ -24,6 +24,7 @@ you to:
 - manage authentication via SMS and :ref:`buy credits <in_app_purchase/credits>`
 - upload a `.p12` or `.pfx` file containing a personal digital certificate, allowing you to add a
   :ref:`cryptographic, or digital, signature <sign/security/cryptographic>` to a document
+- send documents for signing through WhatsApp and manage signature request templates
 
 .. _sign/configuration/settings-t-and-c:
 
@@ -43,7 +44,7 @@ To add default terms and conditions to signature requests:
 
    - :guilabel:`Terms in Email`: This option is selected by default and places the terms and
      conditions at the bottom of the signature request email. Add your terms and conditions to the
-     text box.
+     text box and click :guilabel:`Save`.
    - :guilabel:`Terms as Web Page`: This option displays the terms and conditions on a web page; the
      link to that page is then added as a link in the signature request email. Click
      :guilabel:`Save`, then click :guilabel:`Update Terms`. Add your terms and conditions to the
@@ -155,6 +156,8 @@ To enable auto-completion for a Sign field:
    e.g., *Contact*.
 #. Click beside :guilabel:`Field`, then use the field selector to select the relevant field, e.g.,
    *Email*.
+#. Tick the :guilabel:`Update Field` box so that the value entered when signing is written back
+   to the corresponding field using the sender's permissions.
 
 .. example::
    In the example, the :icon:`fa-envelope` :guilabel:`Email` field in the Sign app is linked to the
