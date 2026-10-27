@@ -4,38 +4,52 @@
 Odoo Sign legality in Iran
 ==========================
 
-:doc:`Odoo Sign <../../sign>` is your trusted partner for secure, efficient, and legally compliant
-electronic signatures in Iran.
+:doc:`Odoo Sign <../../sign>` provides electronic signatures for secure and efficient
+document workflows. This page outlines the current electronic signature framework in Iran
+and important considerations before using Odoo Sign there.
 
 Legal framework for electronic signatures in Iran
 =================================================
 
-In Iran, electronic signatures are regulated under the `Iran Civil Code
-<https://faolex.fao.org/docs/pdf/ira206827.pdf>`_  and the `Electronic Commerce Act
-<https://wipolex-res.wipo.int/edocs/lexdocs/laws/en/ir/ir008en.html>`_. The law governs the use of
-electronic records and signatures. The key points of the law include:
+In Iran, electronic signatures are governed by the
+`Electronic Commerce Law 2004 <https://wipolex-res.wipo.int/edocs/lexdocs/laws/en/ir/ir008en.html>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures. The law
+distinguishes basic electronic signatures from higher-assurance, certificate-based signatures with
+stronger legal effect.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
 - **Reliability and security**: electronic signatures must be created with a secure method that can
   reliably identify the signatory and ensure the integrity of the signed document.
+- **Secure electronic signature:** the law recognizes digital signature certificates issued by
+  accredited certification authorities for higher-assurance cases.
 
-How Odoo Sign complies with Iranian regulations
-===============================================
+How Odoo Sign works in Iran
+---------------------------
 
-Odoo Sign ensures full compliance with the Electronic Signature Law of Iran by incorporating the
-following features:
+Odoo Sign provides electronic signature capabilities that may be usable in Iran
+for documents where electronic signing is legally permitted. The platform incorporates:
 
-- **Secure signature creation**: Odoo Sign utilizes advanced cryptographic techniques to ensure the
-  authenticity and integrity of electronic signatures.
-- **Third-party signature authenticator**: Odoo Online serves as an independent validation mechanism
-  that adds an extra layer of security to the procurement process.
-- **Audit trails**: detailed audit logs are maintained to provide evidence of the signing process,
-  including timestamps, IP addresses, and identity verification.
-- **Cryptographic traceability and immutability**: Odoo Sign ensures that any operation is logged
-  securely. An audit log provides full transparency to all parties while preserving private data.
-- **Multiple authentication means**: authentication by SMS, email, geoIP or handwritten electronic
-  signature.
+- **Secure signature creation:** Odoo Sign utilizes advanced cryptographic techniques to
+  ensure the authenticity and integrity of electronic signatures.
+- **Audit trails:** detailed audit logs are maintained including timestamps, IP addresses,
+  and identity verification.
+- **Cryptographic traceability and immutability:** any alteration made to a signed
+  document is detected by Odoo's cryptographic proofs.
+- **Multiple authentication means:** authentication by SMS, email, geoIP, or handwritten
+  electronic signature.
+
+.. warning::
+
+   The electronic signature framework in Iran has significant limitations.
+   The primary concern is the international sanctions environment, which prohibits or restricts most
+   cross-border technology use regardless of domestic law. We strongly recommend engaging local
+   legal counsel before relying electronic signatures for any material document in this
+   jurisdiction.
+
 
 Types of documents you can sign with Odoo Sign
 ==============================================
@@ -62,10 +76,8 @@ not be suitable or legally recognized in Iran:
 
 .. admonition:: Disclaimer
 
-   The information provided on this page is for general informational purposes only and does not
-   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of Iran,
-   users should consult with legal professionals to ensure specific document types and use cases
-   meet all legal requirements. Compliance with additional industry-specific regulations may also be
-   necessary.
+   The information provided on this page is for general informational purposes only and does
+   not constitute legal advice. Users should consult with legal professionals familiar with
+   Iran law before relying on electronic signatures for any material document.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

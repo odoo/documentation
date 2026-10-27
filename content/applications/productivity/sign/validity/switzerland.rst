@@ -10,9 +10,12 @@ electronic signatures in Switzerland.
 Legal framework for electronic signatures in Switzerland
 ========================================================
 
-In Switzerland, electronic signatures are regulated under the `Federal Act on Electronic Signatures
-<https://www.wipo.int/wipolex/en/legislation/details/20036>`_ and the Swiss Code of Obligations. The
-law governs transactions performed through electronic means and the use of electronic signatures.
+In Switzerland, electronic signatures are regulated under the
+`Federal Act on Electronic Signatures (ZertES 2016) <https://www.fedlex.admin.ch/eli/cc/2016/752/en>`_
+and the `Swiss Code of Obligations Art. 14 <https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -70,4 +73,4 @@ not be suitable or legally recognized in Switzerland:
    use cases meet all legal requirements. Compliance with additional industry-specific regulations
    may also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

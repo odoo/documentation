@@ -10,11 +10,12 @@ electronic signatures in Turkey.
 Legal framework for electronic signatures in Turkey
 ===================================================
 
-In Turkey, electronic signatures are regulated under the `Electronic Signature Law No.5070
-<https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5070.pdf>`_, `Code of Obligations No. 6098
-<https://www.wipo.int/wipolex/en/legislation/details/11084>`_, among other secondary regulations.
-The law governs transactions performed through electronic means and the use of electronic
-signatures. The key points of the law include:
+In Turkey, electronic signatures are regulated under the `Electronic Signature Law No. 5070
+<https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5070.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -71,4 +72,5 @@ not be suitable or legally recognized in Turkey:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+

@@ -10,10 +10,14 @@ electronic signatures in Japan.
 Legal framework for electronic signatures in Japan
 ==================================================
 
-In Japan, electronic signatures are regulated under the `Act on Electronic Signatures and
-Certification Business (E-signature Act) <https://www.cas.go.jp/jp/seisaku/hourei/data/aescb.pdf>`_
-published in the official gazette on May 31, 2000. The law provides the foundation for the use and
-legal recognition of electronic signatures. The key points of the E-signature Act include:
+In Japan, electronic signatures are regulated under the
+`Act on Electronic Signatures and Certification Business (Act No. 102/2000)
+<https://www.japaneselawtranslation.go.jp/en/laws/view/3821/en>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
+
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +74,5 @@ not be suitable or legally recognized in Japan:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*
+
