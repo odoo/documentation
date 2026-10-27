@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 07:34+0000\n"
+"PO-Revision-Date: 2026-10-27 05:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-20-doc/hr/"
 "ro/>\n"
@@ -40814,6 +40814,11 @@ msgid ""
 "total remaining, unexpired allocations for that specific leave type assigned "
 "to the employee."
 msgstr ""
+"*Compensarea zilelor de concediu de odihnă neefectuate*: *Soldul concediului "
+"de odihnă* este afișat în fișa angajatului. Acesta se bazează pe "
+":guilabel:`Tip concediu de odihnă` definit în setările aplicației "
+"**Payroll**, și este calculat ca totalul alocărilor rămase, neexpirate, "
+"pentru acel tip specific de concediu atribuit angajatului."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:249
 msgid ""
@@ -40824,16 +40829,24 @@ msgid ""
 "then calculated by multiplying this deserved balance by the employee's daily "
 "rate."
 msgstr ""
+"Soldul reprezintă totalul concediului rămas alocat angajatului, dar **nu** "
+"reflectă porțiunea de zile de concediu pe care angajatul a câștigat-o până "
+"în luna curentă. La calcularea valorii, soldul de concediu cuvenit este "
+"determinat pe baza perioadei din an lucrate. Valoarea beneficiului este apoi "
+"calculată prin înmulțirea acestui sold cuvenit cu tariful zilnic al "
+"angajatului."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:256
 msgid ""
 "An employee has 3 days of remaining allocation days. If their daily rate is "
 "50 OMR, the benefit value is:"
 msgstr ""
+"Un angajat are 3 zile de alocare rămase. Dacă tariful său zilnic este 50 "
+"OMR, valoarea beneficiului este:"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:259
 msgid ":math:`3 \\text{ days} \\times 50 \\text{ OMR} = 150 \\text{ OMR}`"
-msgstr ""
+msgstr ":math:`3 \\text{ days} \\times 50 \\text{ OMR} = 150 \\text{ OMR}`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:262
 msgid ""
@@ -40841,6 +40854,9 @@ msgid ""
 "calculation is based on *deserved leaves*, which are defined by the period "
 "of time the employee worked during the current year."
 msgstr ""
+"Dacă alocarea a fost acordată integral la începutul anului, calculul se "
+"bazează pe *concediile cuvenite*, care sunt definite de perioada de timp în "
+"care angajatul a lucrat în cursul anului curent."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:266
 msgid ""
@@ -40849,6 +40865,10 @@ msgid ""
 "number of days to be compensated. This value can either be positive or "
 "negative."
 msgstr ""
+"De exemplu, un angajat care a lucrat 7 luni merită 2,5*7 = 17,5 zile. "
+"Această valoare este dedusă din numărul de alocări neutilizate rămase pentru "
+"a obține numărul de zile care trebuie compensate. Această valoare poate fi "
+"pozitivă sau negativă."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:270
 msgid ""
@@ -40858,12 +40878,19 @@ msgid ""
 "365-day year. The resulting period in years is then multiplied by the "
 "employee's basic salary."
 msgstr ""
+"*Beneficiu de sfârșit de serviciu*: Calculul începe prin determinarea "
+"numărului total de zile lucrate de angajat în companie, de la data angajării "
+"până la ultima zi de lucru. Durata totală a serviciului este calculată "
+"raportat la un an de 365 de zile. Perioada rezultată în ani este apoi "
+"înmulțită cu salariul de bază al angajatului."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:275
 msgid ""
 "\\text{Latest Basic} \\times \\left(\\frac{\\text{Number of Days}}"
 "{365}\\right)"
 msgstr ""
+"\\text{Latest Basic} \\times \\left(\\frac{\\text{Number of Days}}{365}\\r"
+"ight)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:282
 msgid ""
@@ -40872,16 +40899,22 @@ msgid ""
 "when employees leave the company. It is computed on a monthly basis but does "
 "**not** affect the employee's net wage."
 msgstr ""
+"Provizioanele reprezintă sumele calculate de angajator pentru |EOS| plățile "
+"beneficiilor făcute către angajat, sau pentru compensarea concediilor de "
+"odihnă rămase atunci când angajații părăsesc compania. Acestea sunt "
+"calculate lunar, dar **nu** afectează salariul net al angajatului."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:286
 msgid ""
 "*End of service benefit provision*: This is computed by dividing the monthly "
 "basic salary by 12:"
 msgstr ""
+"*Provizion beneficiu de sfârșit de serviciu*: Acesta se calculează împărțind "
+"salariul de bază lunar la 12:"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:288
 msgid "\\frac{\\text{Basic}}{12}"
-msgstr ""
+msgstr "\\frac{\\text{Basic}}{12}"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:292
 msgid ""
@@ -40889,12 +40922,18 @@ msgid ""
 "30 to calculate the daily salary, then multiplying that by the number of "
 "leave days (which is 30 in Oman), and dividing the result by 12."
 msgstr ""
+"*Provizion concediu de odihnă*: Acesta se calculează împărțind salariul brut "
+"la 30 pentru a calcula salariul zilnic, apoi înmulțind rezultatul cu numărul "
+"de zile de concediu (care este 30 în Oman) și împărțind rezultatul la 12."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:307
 msgid ""
 "Several sections within the **Payroll** app also install a salary structure, "
 "structure type, and rules specific to Oman."
 msgstr ""
+"Mai multe secțiuni din cadrul aplicației **Payroll** instalează, de "
+"asemenea, o structură salarială, un tip de structură și reguli specifice "
+"pentru Oman."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:313
 msgid ""
@@ -40903,6 +40942,10 @@ msgid ""
 "installed, :guilabel:`Oman: Monthly Pay`. This structure includes "
 "one :guilabel:`Structure Type`, :guilabel:`Oman: Employee`."
 msgstr ""
+"Când modulul **l10n_om_hr_payroll** este :ref:`instalat <payroll/oman/"
+"om_apps>`, o nouă :guilabel:`Structură salarială` este instalată, "
+":guilabel:`Oman: Salariu lunar`. Această structură include un :guilabel:`Tip "
+"de structură`, :guilabel:`Oman: Angajat`."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:317
 msgid ""
@@ -40910,10 +40953,14 @@ msgid ""
 "rules <payroll/oman/om_rules>` that inform the **Payroll** app how to "
 "calculate employee payslips."
 msgstr ""
+"Această :guilabel:`Structură salarială` conține toate :ref:`regulile "
+"salariale <payroll/oman/om_rules>` individuale care informează aplicația "
+"**Payroll** cu privire la modul de calcul al fluturașelor de salariu ale "
+"angajaților."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:320
 msgid "The Omann salary structure in the salary structures list."
-msgstr ""
+msgstr "Structura salarială Oman din lista de structuri salariale."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:328
 msgid ""
@@ -40923,14 +40970,20 @@ msgid ""
 "the :guilabel:`Omann: Monthly Pay` structure type. Click :guilabel:`Omann: "
 "Monthly Pay` to view the detailed salary rules."
 msgstr ""
+"Pentru a vedea regulile salariale care informează structura salarială despre "
+"ce trebuie să facă, navigați la :menuselection:`Aplicația Payroll --> "
+"Configurare --> Structuri` și extindeți grupul :guilabel:`Oman: Angajat` "
+"pentru a dezvălui tipul de structură :guilabel:`Oman: Salariu lunar`. Faceți "
+"clic pe :guilabel:`Oman: Salariu lunar` pentru a vizualiza regulile "
+"salariale detaliate."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:336
 msgid "The top portion of the Omann salary rules."
-msgstr ""
+msgstr "Partea superioară a regulilor salariale Oman."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:340
 msgid "Run Omann payroll"
-msgstr ""
+msgstr "Rulare salarii Oman"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:342
 msgid ""
@@ -40940,6 +40993,12 @@ msgid ""
 "process>` or :doc:`in groups <../pay_runs>`, referred to in the **Payroll** "
 "app as *Pay Runs*."
 msgstr ""
+"Înainte de a rula salariile, responsabilul cu salarizarea trebuie să "
+"valideze concediile și pontajele angajaților pentru a confirma acuratețea "
+"plăților și a detecta erorile. Odată ce totul este corect, fluturașele de "
+"salariu ciornă sunt :ref:`create individual <payroll/payslips/process>` sau "
+":doc:`în grupuri <../pay_runs>`, menționate în aplicația **Payroll** sub "
+"numele de *Rulaje de plată*."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:348
 msgid ""
@@ -41102,28 +41161,32 @@ msgid ""
 "Company |MOL| Number under :menuselection:`Payroll --> Settings --> Oman "
 "Payroll`"
 msgstr ""
+"Companie |MOL| Număr sub :menuselection:`Salarizare --> Setări --> "
+"Salarizare Oman`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:415
 msgid "Payer CR-NO"
-msgstr ""
+msgstr "CR-NO plătitor"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:416
 msgid "CR number of the payer"
-msgstr ""
+msgstr "Număr CR al plătitorului"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:417
 msgid ""
 "Payer |MOL| Number under :menuselection:`Payroll --> Settings --> Oman "
 "Payroll`"
 msgstr ""
+"Plătitor |MOL| Număr sub :menuselection:`Salarizare --> Setări --> "
+"Salarizare Oman`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:418
 msgid "Payer Bank Short Name"
-msgstr ""
+msgstr "Nume scurt bancă plătitor"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:419
 msgid "Short code for the payer's bank"
-msgstr ""
+msgstr "Cod scurt pentru banca plătitorului"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:420
 msgid ""
@@ -41131,61 +41194,67 @@ msgid ""
 "which can be found under :menuselection:`Payroll --> Settings --> Oman "
 "Payroll`"
 msgstr ""
+":guilabel:`Nume scurt` al :guilabel:`Cont bancar pentru plăți WPS` care "
+"poate fi găsit sub :menuselection:`Salarizare --> Setări --> Salarizare Oman`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:422
 msgid "Payer |IBAN|"
-msgstr ""
+msgstr "Plătitor |IBAN|"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:423
 msgid "|IBAN| of the payer's account"
-msgstr ""
+msgstr "|IBAN| al contului plătitorului"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:424
 msgid ""
 ":guilabel:`IBAN` of the :guilabel:`WPS Disbursement Bank Account` which can "
 "be found under :menuselection:`Payroll --> Settings --> Oman Payroll`"
 msgstr ""
+":guilabel:`IBAN` al :guilabel:`Cont bancar pentru plăți WPS` care poate fi "
+"găsit sub :menuselection:`Salarizare --> Setări --> Salarizare Oman`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:426
 msgid "Salary Year"
-msgstr ""
+msgstr "An salarial"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:427
 msgid "Year of the payroll period (YYYY)"
-msgstr ""
+msgstr "Anul perioadei de salarizare (AAAA)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:428
 msgid "Payslip/Pay runs year."
-msgstr ""
+msgstr "Anul fluturașului de salariu/plăților."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:429
 msgid "Salary Month"
-msgstr ""
+msgstr "Lună salarială"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:430
 msgid "Month of the payroll period (MM)"
-msgstr ""
+msgstr "Luna perioadei de salarizare (LL)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:431
 msgid "Payslip/Pay runs month."
-msgstr ""
+msgstr "Luna fluturașului de salariu/plăților."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:432
 msgid "Total Salaries"
-msgstr ""
+msgstr "Total salarii"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:433
 msgid ""
 "Sum of Net for all payslips in the pay run (or single Net for off-cycle)"
 msgstr ""
+"Suma Netă pentru toate fluturașele de salariu din rulajul de plată (sau Net "
+"singular pentru perioadele off-cycle)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:434
 msgid "Sum of Salary Rule: Net (3 decimal digits)"
-msgstr ""
+msgstr "Sumă regulă salarială: Net (3 zecimale)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:435
 msgid "Number of Records"
-msgstr ""
+msgstr "Număr de înregistrări"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:436
 msgid "Count of employees in the report"

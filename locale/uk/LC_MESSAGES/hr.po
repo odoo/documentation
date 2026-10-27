@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 12:34+0000\n"
+"PO-Revision-Date: 2026-10-27 05:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-20-doc/hr/"
 "uk/>\n"
@@ -40410,6 +40410,12 @@ msgid ""
 "total remaining, unexpired allocations for that specific leave type assigned "
 "to the employee."
 msgstr ""
+"*Компенсація за невикористану щорічну відпустку*: *Баланс щорічної "
+"відпустки* відображається у картці працівника. Він базується на "
+":guilabel:`Тип відпустки: щорічна`, визначеному в налаштуваннях додатка "
+"**Розрахунок зарплати**, і розраховується як загальна кількість "
+"невикористаних, термін дії яких ще не сплив, днів відпустки, призначених "
+"працівнику."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:249
 msgid ""
@@ -40420,16 +40426,24 @@ msgid ""
 "then calculated by multiplying this deserved balance by the employee's daily "
 "rate."
 msgstr ""
+"Баланс відображає загальну кількість залишку відпустки, наданої працівнику, "
+"але **не** враховує частку днів відпустки, які працівник заробив до "
+"поточного місяця. Під час розрахунку значення баланс відпусток визначається "
+"на основі частини відпрацьованого року. Після цього вартість виплати "
+"розраховується шляхом множення цього належного балансу на денну ставку "
+"працівника."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:256
 msgid ""
 "An employee has 3 days of remaining allocation days. If their daily rate is "
 "50 OMR, the benefit value is:"
 msgstr ""
+"Працівник має 3 дні залишку відпустки. Якщо його денна ставка становить 50 "
+"OMR, сума виплати дорівнює:"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:259
 msgid ":math:`3 \\text{ days} \\times 50 \\text{ OMR} = 150 \\text{ OMR}`"
-msgstr ""
+msgstr ":math:`3 \\text{ days} \\times 50 \\text{ OMR} = 150 \\text{ OMR}`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:262
 msgid ""
@@ -40437,6 +40451,9 @@ msgid ""
 "calculation is based on *deserved leaves*, which are defined by the period "
 "of time the employee worked during the current year."
 msgstr ""
+"Якщо відпустка була повністю надана на початку року, розрахунок базується на "
+"*належних днях відпустки*, які визначаються періодом часу, протягом якого "
+"працівник працював у поточному році."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:266
 msgid ""
@@ -40445,6 +40462,10 @@ msgid ""
 "number of days to be compensated. This value can either be positive or "
 "negative."
 msgstr ""
+"Наприклад, працівник, який пропрацював 7 місяців, має право на 2,5*7 = 17,5 "
+"днів. Це віднімається від кількості залишків невикористаної відпустки, щоб "
+"отримати кількість днів, які підлягають компенсації. Це значення може бути "
+"як додатним, так і від'ємним."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:270
 msgid ""
@@ -40454,12 +40475,19 @@ msgid ""
 "365-day year. The resulting period in years is then multiplied by the "
 "employee's basic salary."
 msgstr ""
+"*Виплата при звільненні*: Розрахунок починається з визначення загальної "
+"кількості днів, які працівник пропрацював у компанії, від дати прийняття на "
+"роботу до останнього робочого дня. Загальна тривалість стажу розраховується "
+"з урахуванням 365-денного року. Отриманий період у роках множиться на базову "
+"зарплату працівника."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:275
 msgid ""
 "\\text{Latest Basic} \\times \\left(\\frac{\\text{Number of Days}}"
 "{365}\\right)"
 msgstr ""
+"\\text{Latest Basic} \\times \\left(\\frac{\\text{Number of Days}}{365}\\r"
+"ight)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:282
 msgid ""
@@ -40468,16 +40496,22 @@ msgid ""
 "when employees leave the company. It is computed on a monthly basis but does "
 "**not** affect the employee's net wage."
 msgstr ""
+"Резерви — це суми, що обчислюються роботодавцем для |EOS| виплат допомоги "
+"працівнику або компенсації за невикористану щорічну відпустку під час "
+"звільнення. Вони обчислюються щомісяця, але **не** впливають на чисту "
+"заробітну плату працівника."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:286
 msgid ""
 "*End of service benefit provision*: This is computed by dividing the monthly "
 "basic salary by 12:"
 msgstr ""
+"*Резерв на виплату при звільненні*: Обчислюється шляхом ділення місячної "
+"базової зарплати на 12:"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:288
 msgid "\\frac{\\text{Basic}}{12}"
-msgstr ""
+msgstr "\\frac{\\text{Basic}}{12}"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:292
 msgid ""
@@ -40485,12 +40519,17 @@ msgid ""
 "30 to calculate the daily salary, then multiplying that by the number of "
 "leave days (which is 30 in Oman), and dividing the result by 12."
 msgstr ""
+"*Резерв на щорічну відпустку*: Обчислюється шляхом ділення валової зарплати "
+"на 30 для визначення денної зарплати, множення її на кількість днів "
+"відпустки (яка в Омані становить 30) та ділення результату на 12."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:307
 msgid ""
 "Several sections within the **Payroll** app also install a salary structure, "
 "structure type, and rules specific to Oman."
 msgstr ""
+"Кілька розділів у додатку **Розрахунок зарплати** також встановлюють "
+"структуру зарплати, тип структури та правила, специфічні для Оману."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:313
 msgid ""
@@ -40499,6 +40538,10 @@ msgid ""
 "installed, :guilabel:`Oman: Monthly Pay`. This structure includes "
 "one :guilabel:`Structure Type`, :guilabel:`Oman: Employee`."
 msgstr ""
+"Коли модуль **l10n_om_hr_payroll** :ref:`встановлено <payroll/oman/om_apps>"
+"`, встановлюється нова :guilabel:`Структура зарплати`, :guilabel:`Оман: "
+"Щомісячна виплата`. Ця структура включає один :guilabel:`Тип структури`, "
+":guilabel:`Оман: Працівник`."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:317
 msgid ""
@@ -40506,10 +40549,13 @@ msgid ""
 "rules <payroll/oman/om_rules>` that inform the **Payroll** app how to "
 "calculate employee payslips."
 msgstr ""
+"У :guilabel:`Структурі зарплати` містяться всі окремі :ref:`правила зарплати "
+"<payroll/oman/om_rules>`, які повідомляють додатку **Розрахунок зарплати**, "
+"як розраховувати розрахункові листки працівників."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:320
 msgid "The Omann salary structure in the salary structures list."
-msgstr ""
+msgstr "Оманська структура зарплати у списку структур зарплати."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:328
 msgid ""
@@ -40519,14 +40565,20 @@ msgid ""
 "the :guilabel:`Omann: Monthly Pay` structure type. Click :guilabel:`Omann: "
 "Monthly Pay` to view the detailed salary rules."
 msgstr ""
+"Щоб переглянути правила зарплати, які визначають роботу структури зарплати, "
+"перейдіть до :menuselection:`Додаток Розрахунок зарплати --> "
+"Конфігурація --> Структури` і розгорніть групу :guilabel:`Оман: Працівник`, "
+"щоб побачити тип структури :guilabel:`Оман: Щомісячна виплата`. Натисніть "
+":guilabel:`Оман: Щомісячна виплата`, щоб переглянути детальні правила "
+"зарплати."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:336
 msgid "The top portion of the Omann salary rules."
-msgstr ""
+msgstr "Верхня частина оманських правил зарплати."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:340
 msgid "Run Omann payroll"
-msgstr ""
+msgstr "Запустити оманський розрахунок зарплати"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:342
 msgid ""
@@ -40536,6 +40588,12 @@ msgid ""
 "process>` or :doc:`in groups <../pay_runs>`, referred to in the **Payroll** "
 "app as *Pay Runs*."
 msgstr ""
+"Перед запуском розрахунку зарплати відповідальний працівник повинен "
+"перевірити відпустки та відвідуваність працівників, щоб підтвердити точність "
+"виплат і виявити помилки. Після того, як все перевірено, чернетки "
+"розрахункових листків :ref:`створюються індивідуально <payroll/payslips/"
+"process>` або :doc:`групами <../pay_runs>`, що в додатку **Розрахунок "
+"зарплати** називається *Розрахунковими періодами*."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:348
 msgid ""
@@ -40701,28 +40759,32 @@ msgid ""
 "Company |MOL| Number under :menuselection:`Payroll --> Settings --> Oman "
 "Payroll`"
 msgstr ""
+"Company |MOL| номер у :menuselection:`Заробітна плата --> Налаштування --> "
+"Заробітна плата Оману`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:415
 msgid "Payer CR-NO"
-msgstr ""
+msgstr "Регістраційний номер платника (CR-NO)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:416
 msgid "CR number of the payer"
-msgstr ""
+msgstr "Регістраційний номер (CR) платника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:417
 msgid ""
 "Payer |MOL| Number under :menuselection:`Payroll --> Settings --> Oman "
 "Payroll`"
 msgstr ""
+"Платник |MOL| номер у :menuselection:`Заробітна плата --> Налаштування --> "
+"Заробітна плата Оману`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:418
 msgid "Payer Bank Short Name"
-msgstr ""
+msgstr "Коротка назва банку платника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:419
 msgid "Short code for the payer's bank"
-msgstr ""
+msgstr "Короткий код банку платника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:420
 msgid ""
@@ -40730,69 +40792,78 @@ msgid ""
 "which can be found under :menuselection:`Payroll --> Settings --> Oman "
 "Payroll`"
 msgstr ""
+":guilabel:`Коротка назва` банку :guilabel:`Банківський рахунок для виплат "
+"зарплати (WPS)`, яку можна знайти у :menuselection:`Заробітна плата --> "
+"Налаштування --> Заробітна плата Оману`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:422
 msgid "Payer |IBAN|"
-msgstr ""
+msgstr "Платник |IBAN|"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:423
 msgid "|IBAN| of the payer's account"
-msgstr ""
+msgstr "|IBAN| рахунку платника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:424
 msgid ""
 ":guilabel:`IBAN` of the :guilabel:`WPS Disbursement Bank Account` which can "
 "be found under :menuselection:`Payroll --> Settings --> Oman Payroll`"
 msgstr ""
+":guilabel:`IBAN` банківського рахунку :guilabel:`Банківський рахунок для "
+"виплат зарплати (WPS)`, який можна знайти у :menuselection:`Заробітна "
+"плата --> Налаштування --> Заробітна плата Оману`"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:426
 msgid "Salary Year"
-msgstr ""
+msgstr "Рік зарплати"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:427
 msgid "Year of the payroll period (YYYY)"
-msgstr ""
+msgstr "Рік періоду нарахувань (YYYY)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:428
 msgid "Payslip/Pay runs year."
-msgstr ""
+msgstr "Рік розрахункових листів/виплат."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:429
 msgid "Salary Month"
-msgstr ""
+msgstr "Місяць зарплати"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:430
 msgid "Month of the payroll period (MM)"
-msgstr ""
+msgstr "Місяць періоду нарахувань (MM)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:431
 msgid "Payslip/Pay runs month."
-msgstr ""
+msgstr "Місяць розрахункових листів/виплат."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:432
 msgid "Total Salaries"
-msgstr ""
+msgstr "Загальна сума зарплат"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:433
 msgid ""
 "Sum of Net for all payslips in the pay run (or single Net for off-cycle)"
 msgstr ""
+"Сума нето для всіх розрахункових листів (або одинь нето для позапланових)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:434
 msgid "Sum of Salary Rule: Net (3 decimal digits)"
-msgstr ""
+msgstr "Сума правила нарахування: нето (3 десяткові розряди)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:435
 msgid "Number of Records"
-msgstr ""
+msgstr "Кількість записів"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:436
 msgid "Count of employees in the report"
-msgstr ""
+msgstr "Кількість співробітників у звіті"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:437
 msgid "1 if only a single payslip, or if only one employee is in a pay run."
 msgstr ""
+"1, якщо це лише один розрахунковий лист або один співробітник у платіжній "
+"відомості."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:438
 msgid "Payment Type"
@@ -40800,37 +40871,39 @@ msgstr "Тип оплати"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:439
 msgid "Static value"
-msgstr ""
+msgstr "Статичне значення"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:440
 msgid "Hardcoded text: \"Salary\""
-msgstr ""
+msgstr "Жорстко заданий текст: \"Заробітна плата\""
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:442
 msgid "Employee Details section"
-msgstr ""
+msgstr "Розділ Деталі співробітника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:450
 msgid "Employee ID Type"
-msgstr ""
+msgstr "Тип ідентифікатора співробітника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:451
 msgid "P = Passport, C = Civil Status Card"
-msgstr ""
+msgstr "P = Паспорт, C = Картка громадянина"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:452
 msgid ""
 ":guilabel:`Identification Type` which can be found on the employee record, "
 "in the *Citizenship* section of the *Personal* tab."
 msgstr ""
+":guilabel:`Тип ідентифікатора`, який можна знайти в картці співробітника, у "
+"розділі *Громадянство* вкладки *Особисте*."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:454
 msgid "Employee ID"
-msgstr ""
+msgstr "ID співробітника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:455
 msgid "ID number matching the selected ID Type"
-msgstr ""
+msgstr "Номер ID, що відповідає вибраному типу ID"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:456
 msgid ""
@@ -40838,6 +40911,9 @@ msgid ""
 "employee's :guilabel:`Identification Type`, which can be found on the "
 "employee record, in the *Citizenship* section of the *Personal* tab."
 msgstr ""
+":guilabel:`Ідентифікаційний номер` або :guilabel:`Номер паспорта` залежно "
+"від :guilabel:`Тип ідентифікатора` співробітника, який можна знайти в картці "
+"співробітника, у розділі *Громадянство* вкладки *Особисте*."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:459
 msgid "Employee Name"
@@ -40845,35 +40921,39 @@ msgstr "Ім'я співробітника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:460
 msgid "Employee's legal name"
-msgstr ""
+msgstr "Офіційна назва співробітника"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:461
 msgid ""
 "The employee's legal name, found in the *Personal Information* section of "
 "the *Personal* tab of the employee's record."
 msgstr ""
+"Офіційна назва співробітника, яка знаходиться в розділі *Особиста "
+"інформація* вкладки *Особисте* картки співробітника."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:463
 msgid "Employee |BIC|"
-msgstr ""
+msgstr "Співробітник |BIC|"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:464
 msgid "Employee's bank account |BIC|"
-msgstr ""
+msgstr "Банківський рахунок співробітника |BIC|"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:465
 msgid ""
 "|BIC| of the bank account for the employee, found in the *Private Contact* "
 "section of the *Personal* tab of the employee record."
 msgstr ""
+"|BIC| банківського рахунку співробітника, який можна знайти в розділі "
+"*Приватні контакти* вкладки *Особисте* картки співробітника."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:467
 msgid "Employee |IBAN|"
-msgstr ""
+msgstr "Співробітник |IBAN|"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:468
 msgid "Employee's bank account |IBAN|"
-msgstr ""
+msgstr "Банківський рахунок співробітника |IBAN|"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:469
 msgid ""
@@ -44877,11 +44957,11 @@ msgstr "(TX)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:57
 msgid "Utah"
-msgstr ""
+msgstr "Юта"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:58
 msgid "(UT)"
-msgstr ""
+msgstr "(UT)"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:59
 msgid "Vermont"
@@ -44921,10 +45001,14 @@ msgid ""
 "and Unemployment) for both employees and employers are covered by default in "
 "the Odoo U.S. Payroll localization."
 msgstr ""
+"Федеральні податки (прибутковий, :abbr:`FICA (Закон про федеральні страхові "
+"внески)` та безробіття) як для працівників, так і для роботодавців, за "
+"замовчуванням враховуються в локалізації Odoo для розрахунку заробітної "
+"плати в США."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:72
 msgid "Additional states may be added over time, so check back for updates."
-msgstr ""
+msgstr "З часом можуть бути додані додаткові штати, тому перевіряйте оновлення."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:74
 msgid ""
@@ -45153,7 +45237,7 @@ msgstr "Налаштуйте будь-які відповідні поля дл�
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:250
 msgid "Tax filing section"
-msgstr ""
+msgstr "Розділ податкової звітності"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:252
 msgid ""
@@ -45199,6 +45283,11 @@ msgid ""
 "**no** corresponding state options in the :guilabel:`State Tax Status` "
 "field, and it can be left blank."
 msgstr ""
+"Станом на 2025 рік ці штати **не** стягують державний прибутковий податок: "
+"Аляска, Флорида, Невада, Нью-Гемпшир, Південна Дакота, Теннессі, Техас, "
+"Вашингтон та Вайомінг. Якщо для цих штатів існує локалізація заробітної "
+"плати, для них **немає** відповідних параметрів штату в полі "
+":guilabel:`Статус податку штату`, тому його можна залишити порожнім."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:271
 msgid ""
@@ -45225,7 +45314,7 @@ msgstr ""
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:278
 msgid "The tax filing section of the employee form, filled out."
-msgstr ""
+msgstr "Заповнений розділ податкової звітності у формі працівника."
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:282
 msgid "Common benefits"
@@ -46150,6 +46239,10 @@ msgid ""
 "if applicable, using the drop-down menu. For individual payslips not related "
 "to a pay run, leave this field blank."
 msgstr ""
+":guilabel:`Розрахунковий період`: Виберіть розрахунковий період, до якого "
+"слід додати цей новий розрахунковий лист, якщо це застосовно, за допомогою "
+"випадаючого меню. Для окремих розрахункових листів, не пов'язаних із "
+"розрахунковим періодом, залиште це поле порожнім."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:41
 msgid ""
@@ -46167,6 +46260,9 @@ msgid ""
 "last days of the *current* month auto-populate the two :guilabel:`Period` "
 "fields by default. The dates can be changed, if desired."
 msgstr ""
+":guilabel:`Період`: Початкова та кінцева дати розрахункового періоду. Перший "
+"і останній дні *поточного* місяця автоматично заповнюють два поля "
+":guilabel:`Період` за замовчуванням. Дати можна змінити за бажанням."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:47
 msgid ""
@@ -46175,6 +46271,10 @@ msgid ""
 "desired month, and click on the desired day to select that specific date. "
 "These fields are **required**."
 msgstr ""
+"Щоб змінити дату початку або закінчення, натисніть на першу дату в полі "
+":guilabel:`Період`, щоб відкрити спливаючий календар. Перейдіть до "
+"потрібного місяця та натисніть на потрібний день, щоб вибрати цю конкретну "
+"дату. Ці поля є **обов'язковими**."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:52
 msgid ""
@@ -46182,15 +46282,20 @@ msgid ""
 "check with the accounting department to ensure every entry that affects the "
 "**Accounting** app is correct."
 msgstr ""
+"Якщо в автоматично заповнені поля вносяться зміни, рекомендується "
+"проконсультуватися з відділом бухгалтерії, щоб переконатися, що кожен запис, "
+"який впливає на додаток **Бухгалтерія**, є правильним."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:55
 msgid ""
 "The top fields for a new payslip all filled out for a September payslip."
 msgstr ""
+"Верхні поля нового розрахункового листа, заповнені для вересневого "
+"розрахункового листа."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:61
 msgid "Worked days tab"
-msgstr ""
+msgstr "Вкладка \"Відпрацьовані дні\""
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:63
 msgid ""
@@ -46200,30 +46305,35 @@ msgid ""
 "records for the time period, including both worked time and any time off "
 "taken."
 msgstr ""
+"Вкладка *Відпрацьовані дні* містить кількість днів і годин, які працівник "
+"відпрацював протягом :guilabel:`Період`, зазначеного у верхній частині форми "
+"розрахункового листа. Ця вкладка автоматично заповнюється всіма окремими "
+"записами відвідуваності за цей період, включаючи як відпрацьований час, так "
+"і будь-яку використану відпустку."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:68
 msgid "Each individual entry lists:"
-msgstr ""
+msgstr "Кожен окремий запис містить:"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:70
 msgid "The :guilabel:`Type` of entry"
-msgstr ""
+msgstr "Тип :guilabel:`Тип` запису"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:71
 msgid "A :guilabel:`Description`"
-msgstr ""
+msgstr "Опис :guilabel:`Опис`"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:72
 msgid "The number of :guilabel:`Days` worked"
-msgstr ""
+msgstr "Кількість відпрацьованих :guilabel:`Дні` днів"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:73
 msgid "The total :guilabel:`Hours`"
-msgstr ""
+msgstr "Загальна кількість :guilabel:`Годин`"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:74
 msgid "The :guilabel:`Amount` earned"
-msgstr ""
+msgstr "Зароблена :guilabel:`Сума` зароблена"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:76
 msgid ""
@@ -46231,20 +46341,27 @@ msgid ""
 "auto-populated according to the employee's attendance records or working "
 "schedule on their :ref:`employee record <employees/work-info-tab>`."
 msgstr ""
+"Додаткові записи **не можна** створити на вкладці *Відпрацьовані дні*, "
+"оскільки вона заповнюється автоматично відповідно до табеля обліку робочого "
+"часу працівника або графіку роботи в його :ref:`картці працівника <employees/"
+"work-info-tab>`."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:80
 msgid "The attendance and time off entries in the worked days tab."
-msgstr ""
+msgstr "Записи про відвідуваність та відпустки на вкладці відпрацьованих днів."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:84
 msgid ""
 "Adjusting work entries can be done on the *Work Entry* :doc:`dashboard "
 "<work_entries>` or in the :doc:`Attendances app <../attendances>`."
 msgstr ""
+"Коригування робочих записів можна виконати на :doc:`панелі приладів "
+"<work_entries>` робочих записів або в додатку :doc:`Відвідуваність <../"
+"attendances>`."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:90
 msgid "Salary inputs tab"
-msgstr ""
+msgstr "Вкладка записів про заробітну плату"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:92
 msgid ""
@@ -46252,22 +46369,25 @@ msgid ""
 "adjustments <salary_attachments>` and other additional inputs such as tips, "
 "bonuses, etc."
 msgstr ""
+"Вкладка *Записи про зарплату* автоматично відображає всі діючі "
+":doc:`коригування зарплати <salary_attachments>` та інші додаткові "
+"надходження, такі як чайові, бонуси тощо."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:95
 msgid "Each salary input lists:"
-msgstr ""
+msgstr "Кожен запис про зарплату містить:"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:97
 msgid "The :guilabel:`Type` of input"
-msgstr ""
+msgstr "Назва :guilabel:`Тип` введення"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:98
 msgid "The :guilabel:`Note` related to it"
-msgstr ""
+msgstr "Відповідна :guilabel:`Примітка` до нього"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:99
 msgid "The :guilabel:`Amount`"
-msgstr ""
+msgstr "Ця :guilabel:`Сума`"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:101
 msgid ""
@@ -46276,10 +46396,16 @@ msgid ""
 "drop-down menu. Add any relevant :guilabel:`Notes` to the corresponding "
 "field, then enter the :guilabel:`Amount`."
 msgstr ""
+"Щоб вручну додати запис про заробітну плату, натисніть :guilabel:`Додати "
+"рядок`, і на вкладці з'явиться порожній рядок. Виберіть :guilabel:`Тип` за "
+"допомогою випадаючого меню. Додайте будь-які відповідні :guilabel:`Примітки` "
+"у відповідне поле, а потім введіть :guilabel:`Суму`."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:105
 msgid "The salary inputs tab with a salary attachment and commission added."
 msgstr ""
+"Вкладка записів про заробітну плату з доданим утриманням із зарплати та "
+"комісійними."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:113
 msgid ""
@@ -46289,6 +46415,11 @@ msgid ""
 "<payroll_localizations>`, such as taxes, expenses, benefit contributions, "
 "and any other items."
 msgstr ""
+"Вкладка *Розрахунок зарплати* обчислює кожне окреме правило заробітної "
+"плати. Це включає все: від зарплати працівника до всіх відрахувань і пільг, "
+"пов'язаних із встановленою :doc:`локалізацією розрахунку заробітної плати "
+"<payroll_localizations>`, як-от податки, витрати, внески на соціальне "
+"забезпечення та будь-які інші статті."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:118
 msgid ""
@@ -46296,6 +46427,9 @@ msgid ""
 "the :guilabel:`Compute Sheet` button in the corner, and the *Salary "
 "Computation* tab is populated."
 msgstr ""
+"Після першого створення розрахункового листа ця вкладка залишається "
+"порожньою. Натисніть кнопку :guilabel:`Розрахувати лист` у кутку, і вкладка "
+"*Розрахунок зарплати* заповниться."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:121
 msgid ""
@@ -46322,6 +46456,10 @@ msgid ""
 "make the necessary changes, then click the :guilabel:`Compute Sheet` button "
 "to recalculate the payslip."
 msgstr ""
+"Якщо потрібно внести зміни до вкладок :ref:`Відпрацьовані дні <payroll/"
+"payslips/worked-days>` або :ref:`Записи про зарплату <payroll/payslips/"
+"salary-inputs>`, внесіть необхідні зміни, а потім натисніть кнопку "
+":guilabel:`Розрахувати лист`, щоб перерахувати розрахунковий лист."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:133
 msgid "The fields filled out in the salary computation tab."
@@ -46336,6 +46474,8 @@ msgid ""
 "The *Other Info* tab displays accounting details that are not used in the "
 "*Salary Computation* tab."
 msgstr ""
+"Вкладка *Інша інформація* відображає бухгалтерські дані, які не "
+"використовуються на вкладці *Розрахунок зарплати*."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:141
 msgid ""
@@ -46344,6 +46484,10 @@ msgid ""
 "`Salary Slip - (Employee) - (Month) (Year)`. Make any desired edits to the "
 "name in this field. This field is **required**."
 msgstr ""
+"Назва :guilabel:`Розрахункового листа` автоматично заповнюється відповідно "
+"до імені працівника та періоду, за який видається розрахунковий лист, у "
+"такому форматі: `Salary Slip - (Employee) - (Month) (Year)`. Внесіть будь-"
+"які необхідні правки до назви в цьому полі. Це поле є **обов’язковим**."
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:145
 msgid ""
@@ -57928,12 +58072,18 @@ msgid ""
 "happens to the unused accrued time. The options are either :guilabel:`They "
 "should be carried over` or :guilabel:`They should be lost (reset)`."
 msgstr ""
+":guilabel:`Що має статися з невикористаним накопиченим часом`: Виберіть, що "
+"має статися з невикористаним накопиченим часом. Варіанти: :guilabel:`Вони "
+"повинні бути перенесені` або :guilabel:`Вони мають бути втрачені (скинуті)`."
 
 #: ../../export/content/applications/hr/time_off/accrual_plans.rst:61
 msgid ""
 ":guilabel:`When should unused accrued time be reset/carried over`: Select "
 "when the employee receives previously accrued time. The options are:"
 msgstr ""
+":guilabel:`Коли невикористаний накопичений час має бути скинутий/"
+"перенесений`: Виберіть, коли працівник отримує раніше накопичений час. "
+"Варіанти:"
 
 #: ../../export/content/applications/hr/time_off/accrual_plans.rst:64
 msgid ""
@@ -57967,6 +58117,10 @@ msgid ""
 "employee moves to the next accrual level. The options are "
 "either :guilabel:`Immediately` or :guilabel:`After this accrual's period`."
 msgstr ""
+":guilabel:`Перевести працівників на новий рівень нарахування:` Виберіть, "
+"коли працівник переходить на наступний рівень нарахування. Варіанти: "
+":guilabel:`Негайно` або :guilabel:`Після закінчення періоду цього "
+"нарахування`."
 
 #: ../../export/content/applications/hr/time_off/accrual_plans.rst:76
 msgid "An accrual plan form filled out for a Seniority Plan."
@@ -57993,6 +58147,10 @@ msgid ""
 "milestone` button. Both options open a *New Milestone* pop-up window. Fill "
 "out the following sections on the form."
 msgstr ""
+"Щоб створити перший етап, натисніть кнопку :guilabel:`Створити етап`, або "
+"щоб створити *додаткові* етапи, натисніть кнопку :guilabel:`Додати етап`. "
+"Обидва варіанти відкривають спливаюче вікно *Новий етап*. Заповніть наступні "
+"розділи у формі."
 
 #: ../../export/content/applications/hr/time_off/accrual_plans.rst:90
 msgid ""

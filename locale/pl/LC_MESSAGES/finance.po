@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 22:33+0000\n"
+"PO-Revision-Date: 2026-10-27 05:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-20-doc/"
 "finance/pl/>\n"
@@ -13450,11 +13450,11 @@ msgstr ""
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:93
 msgid "Prior to implementation"
-msgstr ""
+msgstr "Przed wdrożeniem"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:98
 msgid "Accounting master data"
-msgstr ""
+msgstr "Główne dane księgowe"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:100
 msgid ""
@@ -13463,6 +13463,10 @@ msgid ""
 "records rely on master data, the order in which accounting data is "
 "transferred into Odoo, whether manually or via import, is crucial."
 msgstr ""
+"Dane główne to dane, na których opierają się inne rekordy. Na przykład "
+"faktura wymaga klienta; klient lub kontakt to dane główne. Ponieważ inne "
+"rekordy polegają na danych głównych, kolejność, w jakiej dane księgowe są "
+"przesyłane do Odoo (ręcznie lub przez import), ma kluczowe znaczenie."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:107
 #: ../../export/content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
@@ -13503,6 +13507,14 @@ msgid ""
 "standard chart of accounts. These two types of accounts should be handled "
 "differently:"
 msgstr ""
+"The :doc:`plan kont <get_started/chart_of_accounts>` jest podstawą "
+"wszystkich zapisów księgowych i jako taki musi zostać utworzony przed innymi "
+"rekordami w bazie danych. Standardowy plan kont jest dołączony do każdej "
+"lokalizacji podatkowej, ale większość firm posiada własny plan kont z "
+"własnymi kontami. Niektóre z tych kont prawdopodobnie służą tym samym celom, "
+"co standardowe konta w Odoo, ale mogą mieć inną nazwę i/lub kod. Inne konta "
+"mogą nie mieć odpowiednika w standardowym planie kont Odoo. Te dwa typy kont "
+"należy traktować w odmienny sposób:"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:117
 msgid ""
@@ -13510,6 +13522,9 @@ msgid ""
 "chart of accounts, simply edit the account name and/or account code of the "
 "standard Odoo account to match your own."
 msgstr ""
+"W przypadku kont w twoim planie, które mają odpowiednik w standardowym "
+"planie kont Odoo, wystarczy edytować nazwę konta i/lub kod konta "
+"standardowego konta Odoo, aby dopasować je do własnych."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:119
 msgid ""
@@ -13517,6 +13532,9 @@ msgid ""
 "standard chart of accounts, create them manually or :ref:`import <essentials/"
 "export_import_data/import-data>` them."
 msgstr ""
+"W przypadku kont w twoim planie, które nie mają odpowiednika w standardowym "
+"planie kont Odoo, utwórz je ręcznie lub :ref:`zaimportuj <essentials/"
+"export_import_data/import-data>` je."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:123
 msgid ""
@@ -13524,6 +13542,9 @@ msgid ""
 "any newly created or imported accounts do not share the same code as an "
 "existing account."
 msgstr ""
+"Kody kont, jeśli są używane, muszą być unikalne w ramach planu kont, więc "
+"upewnij się, że żadne nowo utworzone lub zaimportowane konto nie ma tego "
+"samego kodu, co istniejące już konto."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:127
 msgid ""
@@ -14372,6 +14393,8 @@ msgid ""
 "(Optional) Invoice reference (i.e., the name of the document that created "
 "this invoice)"
 msgstr ""
+"(Opcjonalnie) Referencja faktury (tj. nazwa dokumentu, który utworzył tę "
+"fakturę)"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:427
 msgid "Invoice Bill Date"
@@ -14382,6 +14405,8 @@ msgid ""
 "Date the invoice was created. Ensure the year in the :guilabel:`Number` and "
 "the year in this field are the same to prevent errors."
 msgstr ""
+"Data utworzenia faktury. Upewnij się, że rok w polu :guilabel:`Numer` oraz "
+"rok w tym polu są takie same, aby uniknąć błędów."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:430
 msgid "Due Date"
@@ -14392,6 +14417,8 @@ msgid ""
 "Date the invoice/bill is due. Each invoice/bill can have either a due date "
 "or payment terms, but not both."
 msgstr ""
+"Termin płatności faktury/rachunku. Każda faktura/rachunek może mieć termin "
+"płatności lub warunki płatności, ale nie jedno i drugie."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:433
 msgid "Payment Terms"
@@ -14404,6 +14431,11 @@ msgid ""
 "both. Payment terms are only recommended for open invoices/bills if they are "
 "used with payment installments."
 msgstr ""
+"The :doc:`warunki płatności <customer_invoices/payment_terms>` faktury/"
+"rachunku. Każda faktura/rachunek może mieć termin płatności lub warunki "
+"płatności, ale nie jedno i drugie. Warunki płatności są zalecane dla "
+"otwartych faktur/rachunków tylko wtedy, gdy są używane z płatnościami "
+"ratalnymi."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:438
 msgid ""
@@ -14461,6 +14493,10 @@ msgid ""
 "Lines / Account / External ID` and identify the account by "
 "its :ref:`external ID <export_import_data/different-ids>`."
 msgstr ""
+"Aby zidentyfikować konta, gdy nie używasz kodów kont, zastąp pole "
+":guilabel:`Linie faktury / Konto` polem :guilabel:`Linie faktury / Konto / "
+"Zewnętrzny ID` i zidentyfikuj konto przez jego :ref:`zewnętrzny ID "
+"<export_import_data/different-ids>`."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:459
 msgid "Validate invoices and bills"
@@ -19643,11 +19679,11 @@ msgstr ""
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:343
 msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
-msgstr ""
+msgstr "Konto(-a) :guilabel:`Tymczasowe zapasów` zawierające saldo otwarcia"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:344
 msgid "The :guilabel:`Stock Valuation` account"
-msgstr ""
+msgstr "Konto :guilabel:`Wyceny zapasów` account"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:349
 msgid ""
@@ -19659,6 +19695,12 @@ msgid ""
 "inventory-valuation/variation-account>`, which is a new type of interim "
 "account."
 msgstr ""
+"Po aktualizacji do Odoo 19, przejdź do :menuselection:`Księgowość --> "
+"Przegląd --> Wycena zapasów` i :ref:`wygeneruj wpis wariancji zapasów "
+"<accounting/inventory-valuation/closing-entry>`. Zwiększona wartość na "
+"koncie :ref:`Konto wyceny <accounting/inventory-valuation/valuation-account>"
+"` jest następnie przenoszona na :ref:`Konto wariancji <accounting/inventory-"
+"valuation/variation-account>`, które jest nowym typem konta tymczasowego."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:355
 msgid ""
@@ -19666,6 +19708,9 @@ msgid ""
 "accrual-entries>` if an accounting closing is needed and the Bill to Receive "
 "or |GRNI| account, etc., must be up to date."
 msgstr ""
+"Opcjonalnie wygeneruj :ref:`wpisy memoriałowe <accounting/inventory-"
+"valuation/accrual-entries>` jeśli potrzebne jest zamknięcie księgowe, a "
+"konto Faktury do otrzymania lub |GRNI| itp. musi być aktualne."
 
 #: ../../export/content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -31314,13 +31359,14 @@ msgstr ""
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:339
 msgid "Connect to Avalara"
-msgstr ""
+msgstr "Połącz z Avalara"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:341
 msgid ""
 "After creating the basic company profile in Avalara, connect Avalara and "
 "Odoo."
 msgstr ""
+"Po utworzeniu podstawowego profilu firmy w Avalara, połącz Avalara z Odoo."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:343
 msgid ""
@@ -31328,12 +31374,17 @@ msgid ""
 "or `production <https://admin.avalara.com/>`_ environment, depending on "
 "which type of Avalara account you wish to integrate."
 msgstr ""
+"Przejdź do środowiska `sandbox <https://sandbox.admin.avalara.com/>`_ lub "
+"`production <https://admin.avalara.com/>`_ w Avalara, w zależności od tego, "
+"jaki typ konta Avalara chcesz zintegrować."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:348
 msgid ""
 "`Sandbox vs production environments in Avalara <https://"
 "knowledge.avalara.com/bundle/hxd9079947903116/page/hvk7450989081223.html>`_."
 msgstr ""
+"`Środowiska Sandbox a produkcyjne w Avalara <https://knowledge.avalara.com/"
+"bundle/hxd9079947903116/page/hvk7450989081223.html>`_."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:351
 msgid ""
@@ -42670,13 +42721,15 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:448
 msgid ":guilabel:`ARCA authorization`: |CAE| number"
-msgstr ""
+msgstr ":guilabel:`Autoryzacja ARCA`: |CAE| numer"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:449
 msgid ""
 ":guilabel:`Authorization Due date`: deadline to deliver the invoice to the "
 "customers (normally 10 days after the |CAE| is generated)"
 msgstr ""
+":guilabel:`Termin autoryzacji`: termin dostarczenia faktury klientom "
+"(zazwyczaj 10 dni po wygenerowaniu |CAE|)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:452
 msgid "ARCA Status."
@@ -49562,6 +49615,9 @@ msgid ""
 "POS` (`l10nbr_edi_pos`) module and make sure to activate :doc:`AvaTax <../"
 "accounting/taxes/avalara>`."
 msgstr ""
+":ref:`Zainstaluj <general/install>` moduł :guilabel:`Brazylijska księgowość "
+"EDI dla POS` (`l10nbr_edi_pos`) i upewnij się, że aktywowano :doc:`AvaTax "
+"<../accounting/taxes/avalara>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/brazil.rst:583
 msgid "CSC details"
@@ -50438,19 +50494,23 @@ msgstr ""
 #: ../../export/content/applications/finance/fiscal_localizations/canada.rst:225
 #: ../../export/content/applications/finance/fiscal_localizations/united_states.rst:301
 msgid ":doc:`Avalara integration <../accounting/taxes/avalara>`"
-msgstr ""
+msgstr ":doc:`Integracja z Avalara <../accounting/taxes/avalara>`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/canada.rst:226
 #: ../../export/content/applications/finance/fiscal_localizations/united_states.rst:302
 msgid ""
 ":doc:`Avalara management portal <../accounting/taxes/avalara/avalara_portal>`"
 msgstr ""
+":doc:`Portal zarządzania Avalara <../accounting/taxes/avalara/avalara_portal>"
+"`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/canada.rst:227
 #: ../../export/content/applications/finance/fiscal_localizations/united_states.rst:303
 msgid ""
 ":doc:`Calculate taxes with AvaTax <../accounting/taxes/avalara/avatax_use>`"
 msgstr ""
+":doc:`Obliczanie podatków za pomocą AvaTax <../accounting/taxes/avalara/"
+"avatax_use>`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/canada.rst:234
 msgid ""
@@ -58007,27 +58067,36 @@ msgid ""
 ":guilabel:`E32 - Electronic Consumer Invoice` (*Factura de Consumo "
 "Electrónica*)"
 msgstr ""
+":guilabel:`E32 - Elektroniczna faktura konsumencka` (*Factura de Consumo "
+"Electrónica*)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:134
 msgid ":guilabel:`E33 - Electronic Debit Note` (*Nota de Débito Electrónica*)"
 msgstr ""
+":guilabel:`E33 - Elektroniczna nota debetowa` (*Nota de Débito Electrónica*)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:135
 msgid ""
 ":guilabel:`E34 - Electronic Credit Note` (*Nota de Crédito Electrónica*)"
 msgstr ""
+":guilabel:`E34 - Elektroniczna nota kredytowa` (*Nota de Crédito "
+"Electrónica*)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:138
 msgid ""
 "An `Infile <https://infile.com/republica-dominicana>`_ account is required "
 "to generate and submit electronic fiscal receipts to the |DGII|."
 msgstr ""
+"Konto `Infile <https://infile.com/republica-dominicana>`_ jest wymagane do "
+"generowania i przesyłania elektronicznych paragonów fiskalnych do |DGII|."
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:147
 msgid ""
 "Make sure to :ref:`install <general/install>` the :guilabel:`Dominican "
 "Republic - Accounting EDI` (`l10n_do_edi`) module."
 msgstr ""
+"Upewnij się, że :ref:`zainstalowano <general/install>` moduł "
+":guilabel:`Dominikana – Księgowość EDI` (`l10n_do_edi`)."
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:150
 msgid ""
@@ -58035,6 +58104,10 @@ msgid ""
 "to the |DGII| for validation. To ensure proper validation and the official |"
 "eNCF| assignment, configure this connection before issuing documents:"
 msgstr ""
+"Odoo łączy się z Infile w celu generowania i przesyłania elektronicznych "
+"dokumentów fiskalnych do |DGII| w celu weryfikacji. Aby zapewnić prawidłową "
+"weryfikację i przypisanie oficjalnego |eNCF|, skonfiguruj to połączenie "
+"przed wystawieniem dokumentów:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:154
 msgid ""
@@ -58042,18 +58115,26 @@ msgid ""
 "dominicana>`_ to enable as Electronic Invoicer and receive Infile "
 "credentials."
 msgstr ""
+"Podpisz umowę serwisową bezpośrednio z `Infile <https://infile.com/republica-"
+"dominicana>`_, aby włączyć elektroniczne fakturowanie i otrzymać dane "
+"uwierzytelniające Infile."
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:156
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll "
 "down to the :guilabel:`Dominican Republic Electronic Invoicing` section."
 msgstr ""
+"Przejdź do :menuselection:`Księgowość --> Konfiguracja --> Ustawienia`, "
+"przewiń w dół do sekcji :guilabel:`Elektroniczne fakturowanie w Republice "
+"Dominikańskiej`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:158
 msgid ""
 "Select the :guilabel:`Web Service Environment`, "
 "either :guilabel:`Demo`, :guilabel:`Test`, or :guilabel:`Production`."
 msgstr ""
+"Wybierz :guilabel:`Środowisko usługi internetowej`, czyli :guilabel:`Demo`, "
+":guilabel:`Testowe` lub :guilabel:`Produkcyjne`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:160
 #: ../../export/content/applications/finance/fiscal_localizations/guatemala.rst:150
@@ -58072,11 +58153,11 @@ msgstr ":guilabel:`Hasło`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:164
 msgid ":guilabel:`Security Key`"
-msgstr ""
+msgstr ":guilabel:`Klucz bezpieczeństwa`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:165
 msgid ":guilabel:`Llave`"
-msgstr ""
+msgstr ":guilabel:`Klucz (Llave)`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:170
 msgid ""
@@ -58094,6 +58175,10 @@ msgid ""
 "not generate legal documents, official |eNCF| sequences, or submit documents "
 "to the |DGII|. No Infile account or credentials are needed to use it."
 msgstr ""
+"Środowisko :guilabel:`Demo` jest przeznaczone wyłącznie do testów lokalnych "
+"i nie generuje dokumentów prawnych, oficjalnych sekwencji |eNCF| ani nie "
+"przesyła dokumentów do |DGII|. Do jego użycia nie jest potrzebne konto ani "
+"dane uwierzytelniające Infile."
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:182
 msgid ""
@@ -77185,12 +77270,16 @@ msgid ""
 "If an account is shorter than five characters, mark it as inactive so "
 "validations do not apply to it."
 msgstr ""
+"Jeśli konto jest krótsze niż pięć znaków, oznacz je jako nieaktywne, aby "
+"walidacje go nie dotyczyły."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1267
 msgid ""
 "Accounts shorter than three characters are not reported in XML reports. This "
 "is useful to classify accounts."
 msgstr ""
+"Konta krótsze niż trzy znaki nie są uwzględniane w raportach XML. Jest to "
+"przydatne do klasyfikacji kont."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1269
 msgid ""

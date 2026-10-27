@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 23:32+0000\n"
+"PO-Revision-Date: 2026-10-27 05:35+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/ja/>\n"
@@ -2380,7 +2380,7 @@ msgstr ""
 
 #: ../../export/content/applications/general/companies/multi_company.rst:197
 msgid "Inter-company clearing"
-msgstr ""
+msgstr "会社間精算"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:199
 msgid ""
@@ -2388,6 +2388,8 @@ msgid ""
 "company receives a payment for an invoice issued by another company within "
 "the same database."
 msgstr ""
+"**会社間精算**機能は、同一データベース内の別会社が発行した請求書に対する支払"
+"いを1つの会社が受け取った場合に、会計仕訳を自動化します。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:202
 msgid ""
@@ -2397,30 +2399,34 @@ msgid ""
 "eliminates manual spreadsheet tracking and keeps intercompany accounts "
 "balanced in real time."
 msgstr ""
+"二次的な会社によって支払いが処理されると、Odooは発行会社側の顧客の未消込請求"
+"書を自動的に消し込み、2社間で相殺となる会社間取引仕訳を作成します。この自動化"
+"により、スプレッドシートによる手動追跡が不要になり、会社間勘定をリアルタイム"
+"でバランスさせることができます。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:208
 msgid "**Company A** issues a customer invoice for $100."
-msgstr ""
+msgstr "**会社A**が100ドルの顧客請求書を発行します。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:210
 msgid "The customer pays via the customer portal belonging to **Company B**."
-msgstr ""
+msgstr "顧客は**会社B**の顧客ポータルを通じて支払います。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:212
 msgid "Upon receiving the payment, Odoo:"
-msgstr ""
+msgstr "支払いを受け取ると、Odooは以下を実行します："
 
 #: ../../export/content/applications/general/companies/multi_company.rst:214
 msgid "Settles the customer receivable in **Companies A and B**."
-msgstr ""
+msgstr "**会社AおよびB**における顧客売掛金を決済します。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:215
 msgid "Reclassifies Company A's receivable as a claim against **Company B**."
-msgstr ""
+msgstr "会社Aの売掛金を**会社B**に対する請求として再分類します。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:216
 msgid "Records Company B's received funds as a payable owed to **Company A**."
-msgstr ""
+msgstr "会社Bが受け取った資金を**会社A**に対する買掛金として記録します。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:222
 msgid ""
@@ -2430,6 +2436,10 @@ msgid ""
 "involved for the :guilabel:`Intercompany Clearing` fields to appear in the "
 "Accounting settings."
 msgstr ""
+"会計設定に:guilabel:`会社間支払 - 会計` (`account_payment_interco`) "
+"モジュールが:ref:`インストール <general/install>`され、かつ:guilabel:`会社間"
+"取引`機能が、対象となる**各会社で**有効化されている必要があります。これによ"
+"り:guilabel:`会社間精算`フィールドが表示されます。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:227
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`."
@@ -2444,30 +2454,40 @@ msgid ""
 "Under :guilabel:`Intercompany Clearing`, define the following fields for "
 "company that is currently active:"
 msgstr ""
+"\\ :guilabel:`会社間精算`\\ の下で、現在アクティブな会社に対して以下の"
+"フィールドを定義します："
 
 #: ../../export/content/applications/general/companies/multi_company.rst:232
 msgid ""
 ":guilabel:`Journal`: The dedicated journal used to log cross-entity clearing "
 "transfers."
 msgstr ""
+":guilabel:`仕訳帳`：エンティティ間の精算振替を記録するために使用される専用の"
+"仕訳帳。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:233
 msgid ""
 ":guilabel:`Account Payable`: The clearing payable account used to record "
 "debts owed to other companies within the database."
 msgstr ""
+":guilabel:`買掛金勘定`：データベース内の他社に対する債務を記録するために使用"
+"される精算買掛金勘定。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:235
 msgid ""
 ":guilabel:`Account Receivable`: The clearing receivable account used to "
 "record claims against other companies within the database."
 msgstr ""
+":guilabel:`売掛金勘定`：データベース内の他社に対する債権を記録するために使用"
+"される精算売掛金勘定。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:238
 msgid ""
 "Switch to other companies involved using the company selector in the top "
 "right menu and repeat the process for each one."
 msgstr ""
+"右上のメニューにある会社セレクターを使用して、関連する他の会社に切り替え、そ"
+"れぞれの会社でこのプロセスを繰り返します。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:242
 msgid ""
@@ -2475,6 +2495,9 @@ msgid ""
 "an :ref:`outstanding receipts account <accounting/journals/outstanding-"
 "accounts>` so that a journal entry is created."
 msgstr ""
+"顧客支払いの登録に使用される支払方法は、仕訳入力が作成されるように、:ref:`未"
+"消込受取勘定 <accounting/journals/outstanding-accounts>`を使用する必要があり"
+"ます。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:246
 msgid ""
@@ -2483,6 +2506,9 @@ msgid ""
 "used for general transactions, and enable the :guilabel:`Non Trade` option "
 "on these accounts."
 msgstr ""
+":ref:`作成 <chart-of-account/create>`する買掛金および売掛金の精算勘定は、通常"
+"の取引に使用される買掛金・売掛金勘定とは別のものにし、これらの勘定"
+"で:guilabel:`非営業`オプションを有効にします。"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:253
 msgid "Use cases"
@@ -8597,6 +8623,8 @@ msgid ""
 "Validate addresses with the :ref:`Avalara address validation <accounting/"
 "avalara/address-validation>` feature."
 msgstr ""
+"\\ :ref:`Avalara住所検証 <accounting/avalara/address-validation>`\\ 機能を使"
+"用して住所を検証します。"
 
 #: ../../export/content/applications/general/integrations/geolocation.rst:28
 msgid ""
@@ -9328,6 +9356,9 @@ msgid ""
 "<https://www.odoo.com/documentation/19.0/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"19.2より前のデータベースバージョンについては、インストール手順について `19.0 "
+"ドキュメント <https://www.odoo.com/documentation/19.0/applications/general/"
+"integrations/mail_plugins/outlook.html>`_ を参照してください。"
 
 #: ../../export/content/applications/general/integrations/mail_plugins/outlook.rst:27
 msgid "From the Microsoft Marketplace"
@@ -10059,6 +10090,8 @@ msgid ""
 ":doc:`Connect a Worldline/Axepta BNP Paribas payment terminal <../../sales/"
 "point_of_sale/payment_methods/terminals/worldline_axepta>`"
 msgstr ""
+":doc:`Worldline/Axepta BNP Paribas決済端末を接続する <../../sales/"
+"point_of_sale/payment_methods/terminals/worldline_axepta>`"
 
 #: ../../export/content/applications/general/iot/devices.rst:23
 msgid ""

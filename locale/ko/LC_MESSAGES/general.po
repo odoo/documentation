@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 03:34+0000\n"
+"PO-Revision-Date: 2026-10-27 05:35+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-20-doc/"
 "general/ko/>\n"
@@ -2203,6 +2203,9 @@ msgid ""
 "credit note for the selected company. Select the checkbox to display "
 "the :guilabel:`in Journal` drop-down menu."
 msgstr ""
+":guilabel:`공급업체 청구서 생성`: 다른 회사가 선택한 회사에 대한 송장이나 "
+"신용노트를 확인하면 선택한 구매 분개장에 자동으로 청구서나 환불을 "
+"생성합니다. 확인란을 선택하면 :guilabel:`분개장` 드롭다운 메뉴가 표시됩니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:146
 msgid ""
@@ -2210,6 +2213,8 @@ msgid ""
 "another company confirms a purchase order with the selected company. The "
 "warehouse is based on the delivery address."
 msgstr ""
+":guilabel:`판매 주문 생성`: 다른 회사가 선택한 회사와의 구매 주문을 확인하면 "
+"자동으로 판매 주문을 생성합니다. 창고는 배송 주소를 기준으로 합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:148
 msgid ""
@@ -2217,6 +2222,8 @@ msgid ""
 "when another company confirms a sales order with the selected company. The "
 "warehouse is based on the receipt address."
 msgstr ""
+":guilabel:`구매 주문 생성`: 다른 회사가 선택한 회사와의 판매 주문을 확인하면 "
+"자동으로 구매 주문을 생성합니다. 창고는 수령 주소를 기준으로 합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:151
 msgid ""
@@ -2225,6 +2232,9 @@ msgid ""
 "validate them. This setting applies to all of the inter-company transaction "
 "options."
 msgstr ""
+"다음과 같이 생성 :guilabel:`Create as` 필드에서 :guilabel:`초안`을 선택하여 "
+"대응 문서를 초안으로 생성하거나, :guilabel:`승인됨`을 선택하여 자동으로 "
+"승인합니다. 이 설정은 모든 회사 간 거래 옵션에 적용됩니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:156
 msgid ""
@@ -2233,6 +2243,9 @@ msgid ""
 "with another company, Odoo links the delivery of one company with the "
 "corresponding receipt of the other."
 msgstr ""
+"\\ :doc:`../developer_mode`\\  기능이 활성화된 상태에서 :guilabel:`SO/PO에서 "
+"전송 동기화` 옵션도 표시됩니다. 다른 회사와 판매 또는 구매 주문이 확인되면, "
+"Odoo는 한 회사의 배송과 다른 회사의 해당 수령을 연결합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:161
 msgid ""
@@ -2240,6 +2253,8 @@ msgid ""
 "created after the initial database setup. Warehouses for each company must "
 "be created manually."
 msgstr ""
+"Odoo는 초기 데이터베이스 설정 후 추가된 회사에 대해 자동으로 창고를 생성하지 "
+"않습니다. 각 회사별 창고는 수동으로 생성해야 합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:165
 msgid ""
@@ -2247,6 +2262,9 @@ msgid ""
 "`JS Store US` is posted on `JS Store Belgium`, a vendor bill is "
 "automatically created in `JS Store US`."
 msgstr ""
+":guilabel:`공급업체 청구서 생성`: `JS Store Belgium`에 대해 :guilabel:`고객` "
+"`JS Store US`의 송장이 게시되면, `JS Store US`에 공급업체 청구서가 자동으로 "
+"생성됩니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:168
 msgid ""
@@ -2255,6 +2273,10 @@ msgid ""
 "purchase order on `JS Store US` is automatically created (and confirmed "
 "if :guilabel:`Validated` is selected in the :guilabel:`Create as` field)."
 msgstr ""
+":guilabel:`구매 주문 생성`: `JS Store Belgium`에서 `JS Store US` "
+":guilabel:`고객`의 판매 주문이 확인되면 `JS Store US`에 대한 구매 주문이 "
+"자동으로 생성됩니다(:guilabel:`승인됨`이 :guilabel:`다음과 같이 생성` "
+"필드에서 선택된 경우 확인 처리됨)."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:173
 msgid ":doc:`Multi-company Guidelines <../../../developer/howtos/company>`"
@@ -2266,13 +2288,15 @@ msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:179
 msgid "Inter-company stock transfers"
-msgstr ""
+msgstr "회사 간 재고 이동"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:181
 msgid ""
 "Stock can also be moved between companies without creating inter-company "
 "sales or purchase orders:"
 msgstr ""
+"회사 간 판매 또는 구매 주문을 생성하지 않고도 회사 간에 재고를 이동할 수 "
+"있습니다:"
 
 #: ../../export/content/applications/general/companies/multi_company.rst:183
 msgid ""
@@ -2280,12 +2304,16 @@ msgid ""
 "resupply_warehouses/inter-company>`, using :abbr:`MTO (Make to Order)` or "
 "reordering rules."
 msgstr ""
+":ref:`다른 회사의 창고에서 창고 재공급 <inventory/resupply_warehouses/inter-"
+"company>`, :abbr:`MTO (주문 제작)` 또는 재주문 규칙을 사용합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:186
 msgid ""
 "On a sales order, set the :guilabel:`Warehouse` to another company's "
 "warehouse to deliver the customer's order from there."
 msgstr ""
+"판매 주문에서 :guilabel:`창고`를 다른 회사의 창고로 설정하여 거기서 고객의 "
+"주문을 배송합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:188
 msgid ""
@@ -2293,6 +2321,8 @@ msgid ""
 "company's receipt operation type to buy in one company and receive the "
 "products in another."
 msgstr ""
+"구매 주문에서 :guilabel:`배송지` 필드를 다른 회사의 수령 작업 유형으로 "
+"설정하여 한 회사에서 구매하고 다른 회사에서 제품을 수령합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:191
 msgid ""
@@ -2300,6 +2330,8 @@ msgid ""
 "the :ref:`company selector <general/multi-company/company-selector>` are "
 "available."
 msgstr ""
+"\\ :ref:`회사 선택기 <general/multi-company/company-selector>`\\  에서 "
+"선택한 회사의 창고와 작업 유형만 사용할 수 있습니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:197
 msgid "Inter-company clearing"
@@ -2360,7 +2392,7 @@ msgstr ":menuselection:`회계 --> 환경설정 --> 설정` 으로 이동하세�
 
 #: ../../export/content/applications/general/companies/multi_company.rst:228
 msgid "Scroll down to the *Default Accounts* section."
-msgstr ""
+msgstr "아래로 스크롤하여 *기본 계정* 섹션으로 이동합니다."
 
 #: ../../export/content/applications/general/companies/multi_company.rst:229
 msgid ""

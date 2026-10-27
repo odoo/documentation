@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 22:33+0000\n"
+"PO-Revision-Date: 2026-10-27 01:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-20-doc/"
 "finance/ro/>\n"
@@ -13547,20 +13547,29 @@ msgid ""
 "correct localization is set in the :guilabel:`Package` field in "
 "the :guilabel:`Fiscal Localization` section."
 msgstr ""
+"Un pachet de localizare fiscală este instalat automat pe baza țării "
+"selectate atunci când este creată baza de date. Unele țări au mai multe "
+"pachete de localizare fiscală pentru diferite tipuri de afaceri, așa că "
+"asigurați-vă că verificați dacă pachetul corect este instalat. Pentru a face "
+"acest lucru, mergeți la :menuselection:`Contabilitate --> Configurare --> "
+"Setări` și verificați dacă localizarea corectă este setată în câmpul "
+":guilabel:`Pachet` din secțiunea :guilabel:`Localizare fiscală`."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:88
 msgid ""
 "Selecting another package is only possible if no journal entry has been "
 "posted yet."
 msgstr ""
+"Selectarea unui alt pachet este posibilă doar dacă nu a fost postată nicio "
+"notă contabilă."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:93
 msgid "Prior to implementation"
-msgstr ""
+msgstr "Înainte de implementare"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:98
 msgid "Accounting master data"
-msgstr ""
+msgstr "Date principale contabile"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:100
 msgid ""
@@ -13569,6 +13578,11 @@ msgid ""
 "records rely on master data, the order in which accounting data is "
 "transferred into Odoo, whether manually or via import, is crucial."
 msgstr ""
+"Datele principale reprezintă informațiile pe care se bazează alte "
+"înregistrări. De exemplu, o factură necesită un client; clientul, sau "
+"contactul, reprezintă date principale. Deoarece alte înregistrări se bazează "
+"pe date principale, ordinea în care datele contabile sunt transferate în "
+"Odoo, fie manual, fie prin import, este crucială."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:107
 #: ../../export/content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
@@ -13609,6 +13623,15 @@ msgid ""
 "standard chart of accounts. These two types of accounts should be handled "
 "differently:"
 msgstr ""
+"Planul de conturi :doc:`planul de conturi <get_started/chart_of_accounts>` "
+"reprezintă fundamentul tuturor înregistrărilor contabile și, ca atare, "
+"trebuie creat înainte de alte înregistrări din baza de date. Un plan de "
+"conturi standard este inclus cu fiecare localizare fiscală, dar majoritatea "
+"companiilor au propriul plan de conturi cu propriile conturi. Unele dintre "
+"aceste conturi servesc probabil aceluiași scop ca unele conturi standard "
+"Odoo, dar pot avea un nume și/sau cod diferit. Alte conturi pot să nu aibă "
+"un cont analog în planul de conturi standard Odoo. Aceste două tipuri de "
+"conturi ar trebui gestionate diferit:"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:117
 msgid ""
@@ -13616,6 +13639,9 @@ msgid ""
 "chart of accounts, simply edit the account name and/or account code of the "
 "standard Odoo account to match your own."
 msgstr ""
+"Pentru conturile din planul dvs. care au un cont analog în planul de conturi "
+"standard Odoo, pur și simplu editați numele contului și/sau codul contului "
+"din contul standard Odoo pentru a se potrivi cu al dvs."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:119
 msgid ""
@@ -13623,6 +13649,9 @@ msgid ""
 "standard chart of accounts, create them manually or :ref:`import <essentials/"
 "export_import_data/import-data>` them."
 msgstr ""
+"Pentru conturile din planul dvs. care nu au un cont analog în planul de "
+"conturi standard Odoo, creați-le manual sau :ref:`importați <essentials/"
+"export_import_data/import-data>`-le."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:123
 msgid ""
@@ -13630,6 +13659,9 @@ msgid ""
 "any newly created or imported accounts do not share the same code as an "
 "existing account."
 msgstr ""
+"Codurile de cont, dacă sunt utilizate, trebuie să fie unice pentru fiecare "
+"plan de conturi, așa că asigurați-vă că niciun cont nou creat sau importat "
+"nu împărță același cod ca un cont existent."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:127
 msgid ""
@@ -13639,12 +13671,20 @@ msgid ""
 "break basic processes** like creating an invoice. Instead of deleting "
 "accounts in Odoo's standard chart of accounts, simply rename and recode them."
 msgstr ""
+"Deoarece anumite conturi standard sunt setate ca fiind conturi implicite "
+"pentru diverse câmpuri (pe produse, categorii de produse, contacte și în "
+"setările Contabilitate), **ștergerea lor sau modificarea tipului de cont "
+"poate perturba procese de bază**, cum ar fi crearea unei facturi. În loc să "
+"ștergeți conturile din planul de conturi standard Odoo, pur și simplu "
+"redenumiți-le și recodificați-le."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:133
 msgid ""
 "`Odoo Tutorial: Update your chart of accounts <https://www.odoo.com/slides/"
 "slide/update-your-chart-of-accounts-6391>`_"
 msgstr ""
+"`Tutorial Odoo: Actualizați planul dvs. de conturi <https://www.odoo.com/"
+"slides/slide/update-your-chart-of-accounts-6391>`_"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:139
 #: ../../export/content/applications/finance/accounting/get_started.rst:446
@@ -14340,13 +14380,15 @@ msgstr ""
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:400
 msgid "Prepare invoices and bills"
-msgstr ""
+msgstr "Pregătiți facturile și facturile furnizor"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:402
 msgid ""
 "Prepare the open invoices and bills using the import template available in "
 "Odoo. To access the import templates:"
 msgstr ""
+"Pregătiți facturile deschise și facturile furnizor folosind șablonul de "
+"import disponibil în Odoo. Pentru a accesa șabloanele de import:"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:405
 msgid ""
@@ -14355,6 +14397,11 @@ msgid ""
 "icon, and click :icon:`oi-download` :guilabel:`Import`. Click :icon:`oi-"
 "download` :guilabel:`Template for Invoices` to download the template."
 msgstr ""
+"Pentru facturi și note de credit, mergeți la "
+":menuselection:`Contabilitate --> Clienți --> Facturi`, dați clic pe "
+"pictograma :icon:`fa-cog` (:guilabel:`Acțiuni`) și dați clic pe :icon:`oi-"
+"download` :guilabel:`Import`. Dați clic pe :icon:`oi-download` "
+":guilabel:`Șablon pentru facturi` pentru a descărca șablonul."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:408
 msgid ""
@@ -14363,11 +14410,16 @@ msgid ""
 "click :icon:`oi-download` :guilabel:`Import`. Click :icon:`oi-"
 "download` :guilabel:`Template for Bills` to download the template."
 msgstr ""
+"Pentru facturi furnizor și rambursări, mergeți la "
+":menuselection:`Contabilitate --> Furnizori --> Facturi furnizor`, dați clic "
+"pe pictograma :icon:`fa-cog` (:guilabel:`Acțiuni`) și dați clic pe :icon:`oi-"
+"download` :guilabel:`Import`. Dați clic pe :icon:`oi-download` "
+":guilabel:`Șablon pentru facturi furnizor` pentru a descărca șablonul."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:412
 #: ../../export/content/applications/finance/accounting/get_started.rst:536
 msgid "Prepare the following fields:"
-msgstr ""
+msgstr "Pregătiți următoarele câmpuri:"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:418
 #: ../../export/content/applications/finance/accounting/get_started.rst:542
@@ -14443,6 +14495,8 @@ msgstr "Descriere"
 #: ../../export/content/applications/finance/accounting/get_started.rst:421
 msgid "Customer name (must exactly match a contact record in Odoo)"
 msgstr ""
+"Nume client (trebuie să corespundă exact unei înregistrări de contact în "
+"Odoo)"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:422
 msgid "Number"
@@ -14454,6 +14508,9 @@ msgid ""
 "exist in this database yet; otherwise, it will have to be :doc:`resequenced "
 "<customer_invoices/sequence>`"
 msgstr ""
+"Număr factură (de ex., BILL/2026/00001): Acest număr **nu** trebuie să "
+"existe deja în această bază de date; în caz contrar, va trebui să fie "
+":doc:`resecvențiat <customer_invoices/sequence>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:425
 #: ../../export/content/applications/finance/accounting/get_started.rst:647
@@ -14466,6 +14523,8 @@ msgid ""
 "(Optional) Invoice reference (i.e., the name of the document that created "
 "this invoice)"
 msgstr ""
+"(Opțional) Referință factură (adică, numele documentului care a creat "
+"această factură)"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:427
 msgid "Invoice Bill Date"
@@ -14476,6 +14535,9 @@ msgid ""
 "Date the invoice was created. Ensure the year in the :guilabel:`Number` and "
 "the year in this field are the same to prevent errors."
 msgstr ""
+"Data la care a fost creată factura. Asigurați-vă că anul din "
+":guilabel:`Număr` și anul din acest câmp sunt identice pentru a preveni "
+"erorile."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:430
 msgid "Due Date"
@@ -14486,6 +14548,8 @@ msgid ""
 "Date the invoice/bill is due. Each invoice/bill can have either a due date "
 "or payment terms, but not both."
 msgstr ""
+"Data scadentă a facturii/facturii primite. Fiecare factură/factură primită "
+"poate avea fie o dată scadentă, fie termene de plată, dar nu ambele."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:433
 msgid "Payment Terms"
@@ -14498,16 +14562,23 @@ msgid ""
 "both. Payment terms are only recommended for open invoices/bills if they are "
 "used with payment installments."
 msgstr ""
+"The :doc:`termenele de plată <customer_invoices/payment_terms>` ale facturii/"
+"facturii primite. Fiecare factură/factură primită poate avea fie o dată "
+"scadentă, fie termene de plată, dar nu ambele. Termenele de plată sunt "
+"recomandate pentru facturile/facturile primite deschise doar dacă sunt "
+"utilizate cu tranșe de plată."
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:438
 msgid ""
 "(Optional) The journal name, if multiple sales journals or multiple purchase "
 "journals exist"
 msgstr ""
+"(Opțional) Numele jurnalului, dacă există mai multe jurnale de vânzări sau "
+"mai multe jurnale de achiziții"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:439
 msgid "Invoice Lines / Label"
-msgstr ""
+msgstr "Linii factură / Etichetă"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:440
 msgid "A label for the invoice (e.g., `Open Invoices`)"
@@ -19762,24 +19833,30 @@ msgid ""
 "If all vendor bills or invoices can't be created for all the received "
 "purchase/sales orders before the upgrade, follow these steps:"
 msgstr ""
+"Dacă nu pot fi create toate facturile furnizor sau facturile de client "
+"pentru toate comenzile de achiziție/vânzare primite înainte de actualizare, "
+"urmați acești pași:"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:339
 msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
 msgstr ""
+"Mergeți la :menuselection:`Contabilitate --> Raportare --> Registru general`."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:340
 msgid ""
 "Identify the open balance in the :guilabel:`Stock Interim` accounts and "
 "create a journal entry that debits/credits:"
 msgstr ""
+"Identificați soldul deschis în conturile :guilabel:`Stoc interimar` și "
+"creați o notă contabilă care debitează/creditează:"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:343
 msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
-msgstr ""
+msgstr "Contul/conturile :guilabel:`Stoc interimar` care conțin soldul deschis"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:344
 msgid "The :guilabel:`Stock Valuation` account"
-msgstr ""
+msgstr "Contul :guilabel:`Evaluare stoc` "
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:349
 msgid ""
@@ -19791,6 +19868,13 @@ msgid ""
 "inventory-valuation/variation-account>`, which is a new type of interim "
 "account."
 msgstr ""
+"După actualizarea la Odoo 19, mergeți la :menuselection:`Contabilitate --> "
+"Revizuire --> Evaluare inventar` și :ref:`generați o notă de variație a "
+"inventarului <accounting/inventory-valuation/closing-entry>`. Valoarea "
+"crescută în :ref:`Contul de evaluare <accounting/inventory-valuation/"
+"valuation-account>` este apoi transferată în :ref:`Contul de variație "
+"<accounting/inventory-valuation/variation-account>`, care este un nou tip de "
+"cont interimar."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:355
 msgid ""
@@ -19798,6 +19882,10 @@ msgid ""
 "accrual-entries>` if an accounting closing is needed and the Bill to Receive "
 "or |GRNI| account, etc., must be up to date."
 msgstr ""
+"Opțional, generați :ref:`note contabile de regularizare <accounting/"
+"inventory-valuation/accrual-entries>` dacă este necesară o închidere "
+"contabilă și contul Facturi de primit sau |GRNI|, etc., trebuie să fie "
+"actualizat."
 
 #: ../../export/content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -23249,22 +23337,32 @@ msgid ""
 "the :doc:`bank transaction <../bank/transactions>` is matched with the "
 "payment transaction."
 msgstr ""
+":abbr:`Mandatele SDD (Debit Direct SEPA)` sunt create automat ca "
+":guilabel:`Ciornă` pentru comenzile de vânzare plătite online folosind "
+":ref:`metoda de plată Debit Direct SEPA <payment_providers/bank_payments/sdd>"
+"`. Mandatul este validat odată ce o plată inițială (efectuată prin transfer "
+"bancar) este primită și :doc:`tranzacția bancară <../bank/transactions>` "
+"este corelată cu tranzacția de plată."
 
 #: ../../export/content/applications/finance/accounting/payments/sepa_payments.rst:76
 msgid "To create an SDD mandate manually, follow these steps:"
-msgstr ""
+msgstr "Pentru a crea manual un mandat SDD, urmați acești pași:"
 
 #: ../../export/content/applications/finance/accounting/payments/sepa_payments.rst:78
 msgid ""
 "Ensure a valid IBAN is defined for the :doc:`bank journal <../bank>` used to "
 "receive SDD payments for the mandate."
 msgstr ""
+"Asigurați-vă că un IBAN valid este definit pentru :doc:`jurnalul bancar <../"
+"bank>` utilizat pentru a primi plăți SDD pentru mandat."
 
 #: ../../export/content/applications/finance/accounting/payments/sepa_payments.rst:80
 msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates` "
 "and click :guilabel:`New`."
 msgstr ""
+"Mergeți la :menuselection:`Contabilitate --> Clienți --> Mandate de debitare "
+"directă` și faceți clic pe :guilabel:`Nou`."
 
 #: ../../export/content/applications/finance/accounting/payments/sepa_payments.rst:82
 msgid "Select or create the relevant :guilabel:`Customer`."
@@ -31455,6 +31553,9 @@ msgid ""
 "Once the migration is complete, :ref:`IAP credits <accounting/avalara/"
 "included-iap>` must be purchased to continue using the AvaTax engine."
 msgstr ""
+"Odată ce migrarea este completă, :ref:`creditele IAP <accounting/avalara/"
+"included-iap>` trebuie achiziționate pentru a continua utilizarea motorului "
+"AvaTax."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:278
 msgid ""
@@ -31464,12 +31565,20 @@ msgid ""
 "*Avalara Direct* integrates with Odoo to provide real-time, region-specific "
 "tax calculations for sales, purchases, and invoices."
 msgstr ""
+"*Avalara Direct* este un serviciu de calculare a taxelor în aplicație, "
+"conceput pentru companiile din piața mijlocie și pentru întreprinderi cu un "
+"volum mare de tranzacții (peste 5000 pe an) și nevoi mai complexe. Construit "
+"pe motorul *Avalara AvaTax*, *Avalara Direct* se integrează cu Odoo pentru a "
+"oferi calcule fiscale în timp real, specifice regiunii, pentru vânzări, "
+"achiziții și facturi."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:283
 msgid ""
 "*Avalara Direct* is available for databases/companies with locations in the "
 "United States and Canada."
 msgstr ""
+"*Avalara Direct* este disponibil pentru baze de date/companii cu sedii în "
+"Statele Unite și Canada."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:291
 msgid ""
@@ -31478,6 +31587,10 @@ msgid ""
 "annual transactions can :ref:`migrate to Avalara Included <accounting/"
 "avalara/included-migrate>`."
 msgstr ""
+"Majoritatea întreprinderilor mici și mijlocii ar trebui să utilizeze în "
+"schimb :ref:`accounting/avalara/included`. Utilizatorii existenți *Avalara "
+"Direct* cu mai puțin de 5.000 de tranzacții anuale pot :ref:`migra la "
+"Avalara Included <accounting/avalara/included-migrate>`."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:303
 msgid "Create an account"
@@ -31492,6 +31605,13 @@ msgid ""
 "Contact_07_2025_ODOO-Page---Contact-"
 "Us&marketing_channel=web_referral&vendor=partner&paid_unpaid=unpaid&target_audience=prospect>`_."
 msgstr ""
+"Pentru a utiliza AvaTax, este necesar un cont la Avalara pentru configurare. "
+"Dacă nu a fost creat unul încă, `conectați-vă cu Avalara pentru a cumpăra o "
+"licență <https://www.avalara.com/us/en/get-"
+"started.html?campaignID=701Uz00000kcMwLIAU&utm_campaign=AMER_PROS_Unpaid-"
+"Synd_General-Contact_07_2025_ODOO-Page---Contact-"
+"Us&marketing_channel=web_referral&vendor=partner&paid_unpaid=unpaid&target_audience=prospect>"
+"`_."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:310
 msgid ""
@@ -55039,27 +55159,27 @@ msgstr "Deducibil"
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:295
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:395
 msgid "Schedule 2 line"
-msgstr ""
+msgstr "Linie Anexa 2"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:296
 msgid ":guilabel:`I S`"
-msgstr ""
+msgstr ":guilabel:`I S`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:297
 msgid "13%, 9%, 6%, 5%, 3%"
-msgstr ""
+msgstr "13%, 9%, 6%, 5%, 3%"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:301
 msgid ":guilabel:`I C`"
-msgstr ""
+msgstr ":guilabel:`I C`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:302
 msgid "13%, 9%"
-msgstr ""
+msgstr "13%, 9%"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:303
 msgid "Customs Import VAT Special Payment Receipt"
-msgstr ""
+msgstr "Chitanță de plată specială pentru TVA la import"
 
 #: ../../export/content/applications/finance/fiscal_localizations/china.rst:306
 msgid ":guilabel:`I A`"
@@ -57754,15 +57874,17 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/denmark.rst:39
 msgid ":guilabel:`Denmark - Intrastat`"
-msgstr ""
+msgstr ":guilabel:`Danemarca - Intrastat`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/denmark.rst:40
 msgid "`l10n_dk_intrastat`"
-msgstr ""
+msgstr "`l10n_dk_intrastat`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/denmark.rst:41
 msgid "Enables the :doc:`Intrastat <../accounting/reporting/intrastat>` report"
 msgstr ""
+"Activează raportul :doc:`Intrastat <../accounting/reporting/intrastat>` "
+"report"
 
 #: ../../export/content/applications/finance/fiscal_localizations/denmark.rst:42
 msgid ":guilabel:`Denmark - SAF-T Import`"
@@ -62041,18 +62163,25 @@ msgid ""
 "Click the :guilabel:`DAS2 Report` line, then click the :guilabel:`DAS2 "
 "Report (FR)` button to access and review it."
 msgstr ""
+"Faceți clic pe linia :guilabel:`Raport DAS2`, apoi faceți clic pe butonul "
+":guilabel:`Raport DAS2 (FR)` pentru a-l accesa și revizui."
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:185
 msgid ""
 "After reviewing, click :guilabel:`Tax Return` in the breadcrumbs to return "
 "to the :guilabel:`DAS2 Report` item."
 msgstr ""
+"După examinare, faceți clic pe :guilabel:`Declarație fiscală` în breadcrumbs "
+"pentru a reveni la elementul :guilabel:`Raport DAS2`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:187
 msgid ""
 "Click :guilabel:`Validate` to complete the :guilabel:`Review` step; the DAS2 "
 "report PDF is then available in the chatter."
 msgstr ""
+"Faceți clic pe :guilabel:`Validare` pentru a finaliza pasul de "
+":guilabel:`Revizuire`; PDF-ul raportului DAS2 este apoi disponibil în "
+"conversație."
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:189
 msgid "Click :guilabel:`Submit` to submit the DAS2 Report to the |DGFiP|."
@@ -62073,7 +62202,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:197
 msgid "Simplified fiscal declaration"
-msgstr ""
+msgstr "Declarație fiscală simplificată"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:199
 msgid ""
@@ -92628,6 +92757,8 @@ msgid ""
 ":ref:`Setting up Authorize.net for ACH payments (Odoo) <payment_providers/"
 "authorize/ach_payments>`"
 msgstr ""
+":ref:`Configurarea Authorize.net pentru plăți ACH (Odoo) <payment_providers/"
+"authorize/ach_payments>`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/united_states.rst:547
 msgid ""
@@ -95518,6 +95649,11 @@ msgid ""
 "sales orders, invoices, or subscriptions with recurring payments using their "
 "favorite payment methods, such as **credit cards**."
 msgstr ""
+"Odoo încorporează mai mulți **furnizori de servicii de plată** care permit "
+"clienților să plătească online prin *portalele clienților* sau *site-uri "
+"eCommerce*. Clienții plătesc comenzile de vânzare, facturile sau "
+"abonamentele cu plăți recurente folosind metodele lor de plată preferate, "
+"cum ar fi **cardurile de credit**."
 
 #: ../../export/content/applications/finance/payment_providers.rst:38
 msgid ""
@@ -95778,7 +95914,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/payment_providers.rst:224
 msgid "Alternative payment methods"
-msgstr ""
+msgstr "Metode de plată alternative"
 
 #: ../../export/content/applications/finance/payment_providers.rst:226
 msgid ""
@@ -95786,6 +95922,9 @@ msgid ""
 "methods are installed and configured as payment providers in Odoo, and "
 "include the following:"
 msgstr ""
+"Unele metode de plată nu se bazează pe un furnizor extern de servicii de "
+"plată. Aceste metode sunt instalate și configurate ca furnizori de servicii "
+"de plată în Odoo și includ următoarele:"
 
 #: ../../export/content/applications/finance/payment_providers.rst:229
 msgid ""
@@ -95793,6 +95932,9 @@ msgid ""
 "Customers make a bank transfer using your payment information and a payment "
 "reference."
 msgstr ""
+":ref:`Transfer bancar <payment_providers/bank_payments/wire_transfer>`: "
+"Clienții efectuează un transfer bancar utilizând informațiile de plată și o "
+"referință de plată."
 
 #: ../../export/content/applications/finance/payment_providers.rst:231
 msgid ""
@@ -95800,6 +95942,9 @@ msgid ""
 "make a bank transfer to register a SEPA Direct Debit mandate, allowing their "
 "account to be charged directly for future payments."
 msgstr ""
+":ref:`Debit direct SEPA <payment_providers/bank_payments/sdd>`: Clienții "
+"efectuează un transfer bancar pentru a înregistra un mandat de debit direct "
+"SEPA, permițând debitarea directă a contului lor pentru plăți viitoare."
 
 #: ../../export/content/applications/finance/payment_providers.rst:234
 msgid ""

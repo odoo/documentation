@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 22:33+0000\n"
+"PO-Revision-Date: 2026-10-27 05:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-20-doc/"
 "finance/ja/>\n"
@@ -13631,7 +13631,7 @@ msgstr ""
 #: ../../export/content/applications/finance/accounting/get_started.rst:412
 #: ../../export/content/applications/finance/accounting/get_started.rst:536
 msgid "Prepare the following fields:"
-msgstr ""
+msgstr "以下のフィールドを準備します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:418
 #: ../../export/content/applications/finance/accounting/get_started.rst:542
@@ -13706,7 +13706,7 @@ msgstr "説明"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:421
 msgid "Customer name (must exactly match a contact record in Odoo)"
-msgstr ""
+msgstr "顧客名（Odoo内の連絡先レコードと完全に一致する必要があります）"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:422
 msgid "Number"
@@ -13718,6 +13718,9 @@ msgid ""
 "exist in this database yet; otherwise, it will have to be :doc:`resequenced "
 "<customer_invoices/sequence>`"
 msgstr ""
+"請求書番号（例: BILL/2026/00001）：この番号は、このデータベース内にまだ存在し"
+"ては**いけません**。存在する場合は、 :doc:`再付番 <customer_invoices/"
+"sequence>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:425
 #: ../../export/content/applications/finance/accounting/get_started.rst:647
@@ -13853,10 +13856,12 @@ msgid ""
 "The sum of open invoices minus the sum of open credit notes equals the "
 "balance of the accounts receivable on the opening trial balance."
 msgstr ""
+"未払請求書の合計から未払クレジットノートの合計を差し引いた金額が、開始試算表"
+"における売掛金の残高と一致します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:467
 msgid "Check for negative invoices and bills:"
-msgstr ""
+msgstr "マイナスの請求書および仕入先請求書の確認："
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:469
 msgid ""
@@ -13866,6 +13871,11 @@ msgid ""
 "the :guilabel:`Number` from `INV/YEAR/NUMBER` to `RINV/YEAR/NUMBER`, and "
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [INV Number]`."
 msgstr ""
+"マイナス金額の請求書がある場合、それはクレジットノートですので、 "
+":menuselection:`会計 --> 顧客 --> クレジットノート` メニューから正の数として"
+"個別にインポートする必要があります。 :guilabel:`番号` を `INV/YEAR/NUMBER` か"
+"ら `RINV/YEAR/NUMBER` に変更し、（オプションで） :guilabel:`参照` を "
+"`Reversal of: [INV Number]` に変更します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:473
 msgid ""
@@ -13876,6 +13886,11 @@ msgid ""
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [BILL "
 "Number]`."
 msgstr ""
+"同様に、マイナス金額の仕入先請求書がある場合、それは返金ですので、 "
+":guilabel:`会計 --> 仕入先 --> 返金` メニューから正の数として個別にインポート"
+"する必要があります。 :guilabel:`番号` を `BILL/YEAR/NUMBER` から `RBILL/YEAR/"
+"NUMBER` に変更し、（オプションで） :guilabel:`参照` を `Reversal of: [BILL "
+"Number]` に変更します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:478
 msgid ""
@@ -13884,39 +13899,53 @@ msgid ""
 "currency/manual-update>` for the date of creation for each invoice or bill "
 "in a different currency."
 msgstr ""
+"異なる通貨の確認：異なる通貨の未払請求書/仕入先請求書をインポートする場合は、"
+"各請求書または仕入先請求書の作成日に対して、通貨ごとに :ref:`過去の為替"
+"レート <multi-currency/manual-update>` を作成して下さい。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:485
 msgid "Import invoices and bills"
-msgstr ""
+msgstr "請求書および仕入先請求書のインポート"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:487
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
 "fields <accounting/get_started/prep-bills>` from the appropriate menu:"
 msgstr ""
+":ref:`インポート <essentials/export_import_data/import-data>` 該当する"
+"メニューから :ref:`準備したフィールド <accounting/get_started/prep-bills>` を"
+"行います:"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:490
 msgid ""
 "For customer invoices, go to :menuselection:`Accounting --> Customers --> "
 "Invoices`."
 msgstr ""
+"顧客請求書については、 :menuselection:`会計 --> 顧客 --> 請求書` に移動します"
+"。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:491
 msgid ""
 "For vendor bills, go to :menuselection:`Accounting --> Vendors --> Bills`."
 msgstr ""
+"仕入先請求書については、 :menuselection:`会計 --> 仕入先 --> 請求書` に移動し"
+"ます。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:492
 msgid ""
 "For credit notes, go to :menuselection:`Accounting --> Customers --> Credit "
 "Notes`."
 msgstr ""
+"クレジットノートについては、 :menuselection:`会計 --> 顧客 --> "
+"クレジットノート` に移動します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:493
 msgid ""
 "For vendor refunds, go to :menuselection:`Accounting --> Vendors --> "
 "Refunds`."
 msgstr ""
+"仕入先返金については、 :menuselection:`会計 --> 仕入先 --> 返金` に移動します"
+"。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:495
 msgid ""
@@ -13924,16 +13953,22 @@ msgid ""
 "the imported draft records, click :icon:`fa-cog` :guilabel:`Actions`, and "
 "click :guilabel:`Confirm Entries`."
 msgstr ""
+"レコードはすべてドラフトとしてインポートされます。結果のリストビューから、"
+"インポートしたドラフトレコードを選択し、 :icon:`fa-cog` "
+":guilabel:`アクション` をクリックし、 :guilabel:`仕訳を確定` をクリックします"
+"。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:498
 msgid ""
 "Repeat the process for each record type (invoices, bills, credit notes, and "
 "refunds)."
 msgstr ""
+"各レコードタイプ（請求書、仕入先請求書、クレジットノート、返金）ごとに"
+"プロセスを繰り返します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:503
 msgid "Opening inventory"
-msgstr ""
+msgstr "期首在庫"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:506
 msgid ""
@@ -13942,26 +13977,29 @@ msgid ""
 "<accounting/inventory-valuation/accounting-standards>` or :ref:`valuation "
 "method <accounting/inventory-valuation/configuration>`."
 msgstr ""
+"期首在庫数をカウントし、関連する在庫評価を作成するプロセスは、 :ref:`会計基"
+"準 <accounting/inventory-valuation/accounting-standards>` や :ref:`評価方法 "
+"<accounting/inventory-valuation/configuration>` にかかわらず同じです。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:511
 msgid "The process of importing an opening inventory is done in three steps:"
-msgstr ""
+msgstr "期首在庫をインポートするプロセスは、3つのステップで行われます。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:513
 msgid ":ref:`Preparing inventory <accounting/get_started/prep-inventory>`"
-msgstr ""
+msgstr ":ref:`在庫の準備 <accounting/get_started/prep-inventory>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:514
 msgid ":ref:`Validating inventory <accounting/get_started/validate-inventory>`"
-msgstr ""
+msgstr ":ref:`棚卸の検証 <accounting/get_started/validate-inventory>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:515
 msgid ":ref:`Importing inventory <accounting/get_started/import-inventory>`"
-msgstr ""
+msgstr ":ref:`棚卸のインポート <accounting/get_started/import-inventory>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:520
 msgid "Prepare the inventory"
-msgstr ""
+msgstr "棚卸を準備します"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:522
 msgid ""
@@ -14125,7 +14163,7 @@ msgstr "$350"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:585
 msgid "$2800"
-msgstr ""
+msgstr "$2800"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:586
 msgid "Chair"
@@ -14141,11 +14179,11 @@ msgstr "15"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:588
 msgid "$50"
-msgstr ""
+msgstr "$50"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:589
 msgid "$750"
-msgstr ""
+msgstr "$750"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:591
 msgid ""
@@ -14153,47 +14191,56 @@ msgid ""
 "the inventory account in the trial balance must equal $6050, or if there are "
 "multiple inventory accounts, their sum must be $6050."
 msgstr ""
+"すべての在庫の合計は$6050 ($2500 + $2800 + $750)です。試算表上の在庫勘定の金"
+"額は$6050と一致している必要があり、複数の在庫勘定がある場合は、その合計"
+"が$6050でなければなりません。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:598
 msgid "Import the inventory"
-msgstr ""
+msgstr "棚卸をインポートします"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:600
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
 "fields <accounting/get_started/prep-inventory>`:"
 msgstr ""
+":ref:`インポート <essentials/export_import_data/import-data>` :ref:`準備した"
+"フィールド <accounting/get_started/prep-inventory>`："
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:603
 msgid "Go to :menuselection:`Inventory --> Operations --> Physical Inventory`."
-msgstr ""
+msgstr "\\ :menuselection:`在庫 --> オペレーション --> 実地棚卸`\\ に移動します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:604
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the inventory "
 "count."
-msgstr ""
+msgstr ":ref:`インポート <essentials/export_import_data/import-data>` します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:605
 msgid ""
 "The records are all imported as drafts. From the resulting list view, "
 "click :guilabel:`Apply All`."
 msgstr ""
+"レコードはすべてドラフトとしてインポートされます。表示されたリストビューから"
+"、\\ :guilabel:`すべて適用`\\ をクリックします。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:607
 msgid ""
 "Enter an :guilabel:`Inventory Reason` (e.g., `Opening inventory`) and "
 "a :guilabel:`Counting Date`."
 msgstr ""
+"\\ :guilabel:`棚卸理由`\\ (例：`開始棚卸`) と \\ :guilabel:`棚卸日`\\ を入力"
+"します。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:609
 msgid "Click :guilabel:`Update Quantities`."
-msgstr ""
+msgstr "\\ :guilabel:`数量を更新`\\ をクリックします。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:614
 #: ../../export/content/applications/finance/accounting/get_started.rst:703
 msgid "Opening trial balance"
-msgstr ""
+msgstr "開始試算表"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:616
 msgid ""
@@ -14201,24 +14248,26 @@ msgid ""
 "balance. It is crucial to input this data into Odoo so that accounts have "
 "the correct balances going forward."
 msgstr ""
+"試算表とは、すべての勘定科目と現在の残高を一覧にしたものです。Odooにこの"
+"データを入力することで、今後の勘定残高が正しく管理されるようになります。"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:619
 msgid ""
 "The process of importing an opening trial balance is done in three steps:"
-msgstr ""
+msgstr "開始試算表をインポートするプロセスは、3つのステップで行われます："
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:621
 msgid ":ref:`Preparing the trial balance <accounting/get_started/prep-tb>`"
-msgstr ""
+msgstr ":ref:`試算表の準備 <accounting/get_started/prep-tb>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:622
 msgid ""
 ":ref:`Validating the trial balance <accounting/get_started/validate-tb>`"
-msgstr ""
+msgstr ":ref:`試算表の検証 <accounting/get_started/validate-tb>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:623
 msgid ":ref:`Importing the trial balance <accounting/get_started/import-tb>`"
-msgstr ""
+msgstr ":ref:`試算表のインポート <accounting/get_started/import-tb>`"
 
 #: ../../export/content/applications/finance/accounting/get_started.rst:628
 msgid "Prepare the opening trial balance"
@@ -29757,7 +29806,7 @@ msgstr "`会社情報を追加 <https://www.odoo.com/r/XZDW>`_ します。"
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:222
 msgid ""
 "`Add where the company collects and pays tax <https://www.odoo.com/r/E6g>`_."
-msgstr ""
+msgstr "`会社が税金を収集・納付する場所を追加 <https://www.odoo.com/r/E6g>`_."
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:224
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:329
@@ -30267,6 +30316,9 @@ msgid ""
 "to :menuselection:`Accounting --> Configuration --> Settings` and enable the "
 "relevant options in the :guilabel:`AvaTax` section:"
 msgstr ""
+"AvaTax関連のトランザクション設定を行うには、\\ :menuselection:`会計 --> 設"
+"定 --> 設定`\\ に移動し、\\ :guilabel:`AvaTax`\\ セクションで関連オプションを"
+"有効化します："
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:473
 msgid ""
@@ -30274,12 +30326,17 @@ msgid ""
 "instead of custom-defined codes in Avalara. Consult a certified public "
 "accountant (CPA) for specific guidance."
 msgstr ""
+":guilabel:`UPCを使用`：Avalaraで定義されたカスタムコードの代わりに、"
+"トランザクションにユニバーサル製品コード(UPC)を使用します。具体的なガイダンス"
+"については、公計会計士(CPA)に相談してください。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:476
 msgid ""
 ":guilabel:`Commit Transactions`: to add the Odoo database's transactions to "
 "AvaTax reports."
 msgstr ""
+":guilabel:`トランザクションを実行`：Odooデータベースのトランザクションを"
+"AvaTaxレポートに追加します。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:481
 msgid "Address validation"
@@ -30307,6 +30364,9 @@ msgid ""
 "under :guilabel:`AvaTax`, tick the checkbox next to :guilabel:`Address "
 "Validation`."
 msgstr ""
+"住所検証を有効化するには、\\ :menuselection:`会計 --> 設定 --> 設定`\\ に移動"
+"し、\\ :guilabel:`税`\\ セクションまでスクロールし、\\ :guilabel:`AvaTax`\\ "
+"の下にある\\ :guilabel:`住所検証`\\ のチェックボックスをオンにします。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:493
 msgid ""
@@ -30314,6 +30374,9 @@ msgid ""
 "North American contact records. Each contact's address must be validated "
 "individually:"
 msgstr ""
+":guilabel:`保存`\\ して設定を保存すると、北米の連絡先レコードに\\ "
+":guilabel:`検証`\\ リンクが表示されます。各連絡先の住所は個別に検証する必要が"
+"あります："
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:496
 msgid ""
@@ -30321,10 +30384,13 @@ msgid ""
 "select a contact. With the :guilabel:`Address Validation` feature enabled, "
 "the :guilabel:`Validate` link appears beside the :guilabel:`Address`."
 msgstr ""
+"住所を\\ :guilabel:`検証`\\ するには、\\ :guilabel:`連絡先`\\ アプリを開いて"
+"連絡先を選択します。\\ :guilabel:`住所検証`\\ 機能が有効になっている場合、\\ "
+":guilabel:`検証`\\ リンクが\\ :guilabel:`住所`\\ の横に表示されます。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:500
 msgid "Validate address link on a North American contact in Odoo."
-msgstr ""
+msgstr "Odooの北米連絡先における住所検証リンク。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:503
 msgid ""
@@ -30333,12 +30399,18 @@ msgid ""
 "the :guilabel:`Validated Address` is the correct mailing address for tax "
 "purposes, click :guilabel:`Save Validated`."
 msgstr ""
+"\\ :guilabel:`検証`\\ をクリックすると、\\ :guilabel:`検証済住所`\\ と\\ "
+":guilabel:`原本住所`\\ が表示されるポップアップウィンダウが開きます。\\ "
+":guilabel:`検証済住所`\\ が税務上正しい郵送先住所である場合は、\\ "
+":guilabel:`検証済を保存`\\ をクリックします。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:508
 msgid ""
 "All previously-entered addresses for contacts in the Odoo database need to "
 "be validated using the validation process outlined above."
 msgstr ""
+"Odooデータベースにすでに入力されているすべての連絡先住所は、上記の検証"
+"プロセスを使用して検証する必要があります。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:512
 msgid ""
@@ -30360,16 +30432,19 @@ msgid ""
 "based on the customer. They are also used for :ref:`account mapping "
 "<fiscal_positions/account-mapping>`."
 msgstr ""
+":doc:`fiscal_positions`\\ は、顧客に基づいて適用すべき税率を決定するために使"
+"用されます。これらは\\ :ref:`アカウントマッピング <fiscal_positions/account-"
+"mapping>`\\ にも使用されます。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:525
 msgid "To configure a fiscal position for AvaTax:"
-msgstr ""
+msgstr "AvaTax用の財務ポジションを設定するには："
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:527
 msgid ""
 "Navigate to :menuselection:`Accounting --> Configuration --> Fiscal "
 "positions`."
-msgstr ""
+msgstr "\\ :menuselection:`会計 --> 設定 --> 財務ポジション`\\ に移動します。"
 
 #: ../../export/content/applications/finance/accounting/taxes/avalara.rst:528
 msgid ""
@@ -31764,26 +31839,33 @@ msgid ""
 "Go to :guilabel:`Accounting --> Reporting`, then select the relevant report "
 "from the menu."
 msgstr ""
+"\\ :guilabel:`会計 --> レポート`\\ に移動し、メニューから関連するレポートを選"
+"択します。"
 
 #: ../../export/content/applications/finance/accounting/taxes/cash_basis.rst:127
 msgid "Click the :icon:`fa-cogs` :guilabel:`(cogs)` icon in the top bar."
-msgstr ""
+msgstr "トップバーの :icon:`fa-cogs` :guilabel:`(歯車)`\\ アイコンをクリックします。"
 
 #: ../../export/content/applications/finance/accounting/taxes/cash_basis.rst:128
 msgid ""
 "Go to the :guilabel:`Options` tab and enable :guilabel:`Cash Basis` in "
 "the :guilabel:`Advanced` section."
 msgstr ""
+"\\ :guilabel:`オプション`\\ タブに移動し、\\ :guilabel:`現金基準`\\ を\\ "
+":guilabel:`高度`\\ セクションで有効にします。"
 
 #: ../../export/content/applications/finance/accounting/taxes/cash_basis.rst:130
 msgid "Go back to the report of your choice."
-msgstr ""
+msgstr "選択したレポートに戻ります。"
 
 #: ../../export/content/applications/finance/accounting/taxes/cash_basis.rst:131
 msgid ""
 "Click the :icon:`oi-settings-adjust` :guilabel:`(sliders)` report options "
 "button and select :guilabel:`Cash Basis Method`."
 msgstr ""
+"\\ :icon:`oi-settings-adjust`\\ :guilabel:`(スライダー)`\\ "
+"レポートオプションボタンをクリックし、\\ :guilabel:`現金基準方法`\\ を選択し"
+"ます。"
 
 #: ../../export/content/applications/finance/accounting/taxes/eu_distance_selling.rst:5
 msgid ""
@@ -32207,6 +32289,12 @@ msgid ""
 "subsequent>`, and :ref:`Base Affected by Preceding Taxes <taxes/base-"
 "affected>` fields are all located in the :guilabel:`Advanced Options` tab."
 msgstr ""
+"税金の計算方法は、税設定フォームビューの複数の異なるフィールドに依存します"
+"。\\ :ref:`税計算 <taxes/computation>`\\ フィールドは税設定フォームビューの上"
+"部にありますが、\\ :ref:`価格に含める <taxes/included-in-price>`\\ 、\\ "
+":ref:`後続税の課税基準に影響する <taxes/base-subsequent>`\\ 、および\\ "
+":ref:`前置税により基準に影響する <taxes/base-affected>`\\ フィールドは、すべ"
+"て\\ :guilabel:`設定オプション`\\ タブにあります。"
 
 #: ../../export/content/applications/finance/accounting/taxes/tax_computation.rst:16
 msgid ""
@@ -32647,6 +32735,8 @@ msgid ""
 "and invoices already includes this tax or if this tax should be applied on "
 "top of that value."
 msgstr ""
+"\\ :guilabel:`価格に含める`\\ フィールドは、製品や請求書の価格にすでにこの税"
+"が含まれているか、またはこの税がその価格に加算されるべきかを決定します。"
 
 #: ../../export/content/applications/finance/accounting/taxes/tax_computation.rst:213
 msgid ""
@@ -32655,6 +32745,10 @@ msgid ""
 "the :guilabel:`Taxes` section, and set the :guilabel:`Prices` setting "
 "to :guilabel:`Tax Excluded` or :guilabel:`Tax Included`."
 msgstr ""
+"この設定の全社的なデフォルト値を設定するには、 :menuselection:`会計 --> 設"
+"定 --> 設定`\\ に移動し、 :guilabel:`税`\\ セクションを見つけて、 "
+":guilabel:`価格`\\ 設定を :guilabel:`税抜`\\ または :guilabel:`税込`\\ に設定"
+"します。"
 
 #: ../../export/content/applications/finance/accounting/taxes/tax_computation.rst:217
 msgid ""
@@ -40342,6 +40436,8 @@ msgid ""
 "international customers and transactions involving export processes; the "
 "related document type is type E."
 msgstr ""
+":guilabel:`wsfexv1: 輸出バウチャー`：海外の顧客向けの請求書や輸出プロセスを伴"
+"う取引の生成に使用されます。関連するドキュメントタイプはタイプEです。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:210
 msgid "Here are some useful fields to know when working with web services:"
@@ -40364,24 +40460,28 @@ msgid ""
 "ARCA| will require the company to have one ARCA POS per location. This "
 "location will appear on the invoice report."
 msgstr ""
+":guilabel:`ARCA POS住所`：POSに登録された商業住所に関連するフィールドで、通常"
+"は会社住所と同じです。例えば、会社が複数の店舗（会計上の場所）を持つ場合、 "
+"|ARCA|\\ は会社に対し、場所ごとに1つのARCA POSを持つことを要求します。この場"
+"所は請求書レポートに表示されます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:219
 msgid ""
 "In ARCA, when configuring the electronic invoicing data, the following "
 "should be configured:"
-msgstr ""
+msgstr "ARCAで電子請求データを設定する場合、以下を設定する必要があります："
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:221
 msgid "Monotributista: Factura Electrónica – Monotributo - WebServices"
-msgstr ""
+msgstr "Monotributista: Factura Electrónica – Monotributo - WebServices"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:222
 msgid "Exento: Facturación Electrónica - exento en IVA - WebServices"
-msgstr ""
+msgstr "Exento: Facturación Electrónica - exento en IVA - WebServices"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:223
 msgid "Responsable Inscripto: RECE para aplicativo y WebServices"
-msgstr ""
+msgstr "Responsable Inscripto: RECE para aplicativo y WebServices"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:228
 msgid "Sequences"
@@ -40392,6 +40492,8 @@ msgid ""
 "For the first invoice, Odoo automatically synchronizes with ARCA and "
 "displays the last sequence used."
 msgstr ""
+"初回請求書発行時、Odooは自動的にARCAと同期し、最後に使用されたシーケンスを表"
+"示します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:234
 msgid ""
@@ -40400,6 +40502,10 @@ msgid ""
 "there is no need to manually associate document type sequences, since the "
 "vendor provides the document number."
 msgstr ""
+"「:guilabel:`購買仕訳帳`」を作成する際、それらがドキュメントタイプに関連して"
+"いるかどうかを指定します。「:guilabel:`ドキュメントを使用`」オプションが有効"
+"な場合、ベンダーがドキュメント番号を提供するため、ドキュメントタイプの"
+"シーケンスを手動で関連付ける必要はありません。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:243
 msgid ""
@@ -40409,6 +40515,11 @@ msgid ""
 "to :menuselection:`Accounting --> Reporting`, and select the relevant report "
 "in the :guilabel:`Argentinean Statements` section."
 msgstr ""
+"ローカリゼーションインストールの一環として、アルゼンチン向けの財務 "
+":doc:`レポート <../accounting/reporting>`\\ が :guilabel:`会計`\\ "
+"ダッシュボードで利用可能です。これらのレポートにアクセスするには、 "
+":menuselection:`会計 --> レポート`\\ に移動し、 :guilabel:`アルゼンチン様式明"
+"細`\\ セクションで関連するレポートを選択します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:248
 msgid ""
@@ -40416,6 +40527,9 @@ msgid ""
 "Reporting --> Tax Report`, click :icon:`fa-book` :guilabel:`Report:`, and "
 "select :guilabel:`VAT book (AR)`."
 msgstr ""
+"VAT帳簿レポートにアクセスするには、 :menuselection:`会計 --> レポート --> 税"
+"レポート`\\ に移動し、 :icon:`fa-book` :guilabel:`レポート:`\\ をクリックして"
+"、 :guilabel:`VAT帳簿 (AR)`\\ を選択します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:252
 msgid ""
@@ -40423,6 +40537,9 @@ msgid ""
 "Book (ZIP)` or :guilabel:`VAT Simple Report (ZIP)` to generate the VAT Book "
 "or VAT Simple report ZIP file, respectively."
 msgstr ""
+" :icon:`fa-cog` :guilabel:`(歯車)`\\ アイコンをクリックし、 :guilabel:`VAT帳"
+"簿 (ZIP)`\\ または :guilabel:`VAT簡易レポート (ZIP)`\\ を選択して、VAT帳簿ま"
+"たはVAT簡易レポートのZIPファイルをそれぞれ生成します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:259
 msgid "VAT summary"
@@ -40434,6 +40551,9 @@ msgid ""
 "internal use and is not sent to the ARCA. To access it, go "
 "to :menuselection:`Accounting --> Reporting --> VAT Summary`."
 msgstr ""
+"このピボットテーブルには月次VAT合計が表示されます。このレポートは社内使用向け"
+"であり、ARCAには送信されません。アクセスするには、 :menuselection:`会計 --> "
+"レポート --> VATサマリー`\\ に移動します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:267
 msgid "IIBB - Sales by jurisdiction"
@@ -40446,6 +40566,9 @@ msgid ""
 "ARCA. To access it, go to :menuselection:`Accounting --> Reporting --> IIBB "
 "Sales by jurisdiction`."
 msgstr ""
+"このピボットテーブルには各管轄区域の総収入が表示されます。これは対応する税金"
+"の申告書として機能しますが、ARCAには提出されません。アクセスするには、 "
+":menuselection:`会計 --> レポート --> IIBB 管轄区域別売上`\\ に移動します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:276
 msgid "IIBB - Purchases by jurisdiction"
@@ -40458,6 +40581,10 @@ msgid ""
 "to the ARCA. To access it, go to :menuselection:`Accounting --> Reporting --"
 "> IIBB --> Purchases by jurisdiction`."
 msgstr ""
+"このピボットテーブルには各管轄区域の総購買が表示されます。これは対応する税金"
+"の申告書として機能しますが、ARCAには提出されません。アクセスするには、 "
+":menuselection:`会計 --> レポート --> IIBB --> 管轄区域別購買`\\ に移動します"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:285
 #: ../../export/content/applications/finance/fiscal_localizations/guatemala.rst:97
@@ -40481,6 +40608,10 @@ msgid ""
 "field, :guilabel:`ARCA Responsibility Type`, to define the company's fiscal "
 "obligation and structure."
 msgstr ""
+"ローカリゼーションモジュールのインストール後、最初のステップは :ref:`会社の"
+"レコード <general/companies/configuration>`\\ を設定することです。基本情報に"
+"加え、アルゼンチン固有のフィールド「:guilabel:`ARCA責任タイプ`」を必ず入力し"
+"、会社の会計上の義務と構造を定義して下さい。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:300
 msgid "Identification type and VAT"
@@ -40494,16 +40625,22 @@ msgid ""
 "Seven :guilabel:`Identification Types` are available by default, as well as "
 "32 inactive types."
 msgstr ""
+"アルゼンチン向けローカリゼーションの一環として、 |ARCA|\\ によって定義された"
+"識別タイプが :doc:`連絡先フォーム <../../essentials/contacts>`\\ で利用可能で"
+"す。情報はほとんどの取引において必須です。7つの :guilabel:`識別タイプ`\\ が"
+"デフォルトで利用可能であり、さらに32の非アクティブタイプも存在します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:307
 msgid ""
 "The complete list of :guilabel:`Identification Types` defined by |ARCA| is "
 "included in Odoo, but only the common ones are active."
 msgstr ""
+" :guilabel:`識別タイプ`\\ の完全なリストは |ARCA|\\ によって定義されており"
+"Odooに含まれていますが、一般的なもののみが有効化されています。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:313
 msgid "ARCA responsibility type"
-msgstr ""
+msgstr "ARCA責任タイプ"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:315
 msgid ""
@@ -40512,6 +40649,10 @@ msgid ""
 "Type`. This field should be defined in the :doc:`contact form <../../"
 "essentials/contacts>`."
 msgstr ""
+"アルゼンチンでは、顧客やベンダーに関連するドキュメントタイプおよび対応する取"
+"引は :guilabel:`ARCA責任タイプ`\\ によって定義されます。このフィールドは "
+":doc:`連絡先フォーム <../../essentials/contacts>`\\ で定義する必要があります"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/argentina.rst:322
 #: ../../export/content/applications/finance/fiscal_localizations/australia.rst:371
@@ -55891,12 +56032,17 @@ msgid ""
 "dominican-republic/e-invoice-document-types>` to generate (auto-suggested "
 "based on customer profile)."
 msgstr ""
+":guilabel:`ドキュメントタイプ`：生成する |ECF| :ref:`タイプ <localizations/"
+"dominican-republic/e-invoice-document-types>` を選択します（顧客プロファイル"
+"に基づいて自動提案されます）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:281
 msgid ""
 ":guilabel:`Income Type`: Select the income classification code that applies "
 "to the transaction (e.g., :guilabel:`Operational Income`)."
 msgstr ""
+":guilabel:`所得タイプ`：取引に適用される所得分類コードを選択します（例"
+"：:guilabel:`営業所得`）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:285
 msgid ""
@@ -55905,45 +56051,52 @@ msgid ""
 "type code, and the remaining digits form the sequential number within the "
 "authorized range."
 msgstr ""
+"確定すると、請求書に |eNCF| 番号（形式 `E310000000001`）が割り当てられます。"
+"最初の2桁（`31`）はドキュメントタイプコードを表し、残りの桁は許可された範囲内"
+"の連番です。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:294
 msgid "To send the invoice, follow these steps:"
-msgstr ""
+msgstr "請求書を送信するには、以下の手順に従います："
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:297
 msgid "In the :guilabel:`Send` window, enable these options:"
-msgstr ""
+msgstr "「:guilabel:`送信`」ウィンドウで、以下のオプションを有効にします："
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:299
 msgid ""
 ":guilabel:`DGII`: To submit the |ECF| XML to the |DGII| through Infile's web "
 "service."
 msgstr ""
+":guilabel:`DGII`：Infileのウェブサービスを通じて |ECF| XMLを |DGII| に提出し"
+"ます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:300
 msgid ""
 ":guilabel:`by Email`: To send the validated document to the customer's email."
-msgstr ""
+msgstr ":guilabel:`メールで`：検証済みドキュメントを顧客のメールに送信します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:304
 msgid "The following actions occur:"
-msgstr ""
+msgstr "以下の処理が行われます："
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:306
 msgid "The |ECF| XML file is generated."
-msgstr ""
+msgstr " |ECF| XMLファイルが生成されます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:307
 msgid ""
 "The XML file is processed and signed synchronously by Infile and submitted "
 "to the |DGII|."
-msgstr ""
+msgstr "XMLファイルはInfileによって同期的に処理・署名され、 |DGII| に提出されます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:308
 msgid ""
 "The |ECF| PDF and XML files are attached to the customer's email and "
 "available in the chatter for download."
 msgstr ""
+" |ECF| PDFおよびXMLファイルが顧客のメールに添付され、チャターからダウンロード"
+"可能になります。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/dominican_republic.rst:310
 msgid ""
@@ -58850,6 +59003,9 @@ msgid ""
 "plus` :guilabel:`(plus)` icon and select :guilabel:`SIRET` to enter "
 "the :guilabel:`SIRET` number."
 msgstr ""
+":guilabel:`SIRET` 番号：:guilabel:`VAT` フィールドで、 :icon:`fa-plus` "
+":guilabel:`(プラス)` アイコンをクリックし、:guilabel:`SIRET` を選択して "
+":guilabel:`SIRET` 番号を入力します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:138
 msgid ""
@@ -58857,6 +59013,8 @@ msgid ""
 "the :guilabel:`DAS2 - Profession` field located in the :guilabel:`General` "
 "section."
 msgstr ""
+":guilabel:`DAS2 - 職種`：:guilabel:`会計タブ`で、:guilabel:`一般` セクション"
+"にある :guilabel:`DAS2 - 職種` フィールドに入力します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:142
 msgid ""
@@ -58864,12 +59022,16 @@ msgid ""
 "residents (excluding France) and received copyright royalties (DA) or "
 "inventor's fees (DI)."
 msgstr ""
+"取引先の生年月日は、EU居住者（フランスを除く）で著作権料（DA）または発明者報"
+"酬（DI）を受け取ったDAS2受益者に必須です。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:151
 msgid ""
 "A minimum total payment of €2,400 is required for the corresponding line to "
 "be included in the DAS2 report."
 msgstr ""
+"該当する行をDAS2レポートに含めるには、合計支払額が2,400ユーロ以上である必要が"
+"あります。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:153
 msgid ""
@@ -58877,6 +59039,9 @@ msgid ""
 "company's main :guilabel:`Activity` fields must be completed on "
 "the :doc:`company record </applications/general/companies>`."
 msgstr ""
+"EDI DAS2レポートを正常に送信するには、:guilabel:`APE` および会社の主な "
+":guilabel:`活動` フィールドが :doc:`会社レコード </applications/general/"
+"companies>`で完了している必要があります。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:157
 msgid ""
@@ -58884,12 +59049,16 @@ msgid ""
 "beneficiaries are subject to VAT. To submit the EDI DAS2 report, follow "
 "these steps:"
 msgstr ""
+"DAS2レポートには、受益者がVATの対象である場合はVATを含め、支払われた合計金額"
+"が含まれます。EDI DAS2レポートを提出するには、以下の手順に従います："
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:160
 msgid ""
 "In the :guilabel:`DAS2 Report` view, click the :icon:`fa-cog` "
 "(:guilabel:`gear`) icon, and select :guilabel:`EDI DAS2`."
 msgstr ""
+"「:guilabel:`DAS2レポート`」ビューで、 :icon:`fa-cog` （:guilabel:`歯車`）"
+"アイコンをクリックし、「:guilabel:`EDI DAS2`」を選択します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:162
 msgid ""
@@ -61223,6 +61392,9 @@ msgid ""
 "Make sure a valid VAT :guilabel:`ROF` (*Référence d’Obligation Fiscale*) is "
 "entered on the :doc:`company record </applications/general/companies>`."
 msgstr ""
+"有効なVAT\\ :guilabel:`ROF`\\ (*Référence d’Obligation Fiscale*) が\\ "
+":doc:`会社レコード </applications/general/companies>`\\ に入力されていること"
+"を確認して下さい。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1041
 msgid ""
@@ -61230,6 +61402,9 @@ msgid ""
 "then :ref:`review and validate <accounting/tax-returns/vat-return-review>` "
 "the tax return (VAT report)."
 msgstr ""
+"\\ :menuselection:`会計 --> 会計 --> 税務申告`\\ に移動し、税務申告(VAT"
+"レポート)を\\ :ref:`確認および検証 <accounting/tax-returns/vat-return-review>"
+"`\\ します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1043
 msgid "Click :guilabel:`Submit`."
@@ -61237,13 +61412,15 @@ msgstr ":guilabel:`送信`をクリックします。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1044
 msgid "If payment to the |DGFiP| is required:"
-msgstr ""
+msgstr "\\ |DGFiP|\\ への支払いが必要な場合："
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1046
 msgid ""
 "If needed, enable :guilabel:`Partial amount` and set the desired amount to "
 "pay."
 msgstr ""
+"必要に応じて、\\ :guilabel:`一部金額`\\ を有効にし、支払いたい金額を設定しま"
+"す。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1049
 msgid ""
@@ -61251,6 +61428,9 @@ msgid ""
 "payment. If proceeding without matching the :guilabel:`VAT Due` amount, the "
 "difference will be carried over to the next period."
 msgstr ""
+"入力された金額が必要な支払いと一致しないことを示す黄色いバナーが表示されます"
+"。\\ :guilabel:`VAT納付額`\\ を照合せずに進める場合、差額は次期に繰り越されま"
+"す。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1053
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1068
@@ -61258,6 +61438,8 @@ msgid ""
 "Update the :guilabel:`Bank Partner` account number if needed and make sure "
 "the corresponding :guilabel:`BIC` reference is set."
 msgstr ""
+"必要に応じて\\ :guilabel:`銀行パートナー`\\ 口座番号を更新し、対応する\\ "
+":guilabel:`BIC`\\ 参照が設定されていることを確認します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/france.rst:1056
 msgid "If reimbursement from the |DGFiP| is expected:"
@@ -70977,12 +71159,16 @@ msgid ""
 "Documents within a defined period are aggregated into consolidated invoices "
 "based on the following criteria:"
 msgstr ""
+"定義された期間内のドキュメントは、以下の基準に基づいて統合請求書にまとめられ"
+"ます："
 
 #: ../../export/content/applications/finance/fiscal_localizations/malaysia.rst:341
 msgid ""
 ":guilabel:`Document Type`: Separated by invoices, vendor bills, and their "
 "respective credit or refund notes."
 msgstr ""
+":guilabel:`ドキュメントタイプ`：請求書、仕入先請求書、およびそれぞれの貸方票"
+"または返金票ごとに分類されます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/malaysia.rst:343
 msgid ":guilabel:`Currency`: Grouped by transaction currency."
@@ -75657,12 +75843,20 @@ msgid ""
 "the :guilabel:`Vehicle setup` configuration where it is possible to add "
 "additional :guilabel:`Extra weight` to account for the drivers and luggage."
 msgstr ""
+"もし\\ :guilabel:`連邦輸送`\\ :guilabel:`輸送タイプ`\\ を使用している場合、選"
+"択のために\\ :guilabel:`車両設定`\\ が表示されます。\\ "
+":guilabel:`オペレーター`\\ は、車両のドライバーから取得されます。これは配送ご"
+"とに変更できます。変更すると、\\ :guilabel:`メインドライバーとして設定`\\ "
+"ボタンが表示されます。追跡目的でフリート車両のドライバーを置き換えるには、こ"
+"のボタンをクリックします。\\ :guilabel:`車両総重量`\\ は、\\ :guilabel:`車両"
+"設定`\\ 構成から取得され、ドライバーや荷物を考慮して追加の\\ :guilabel:`追加"
+"重量`\\ を加算することが可能です。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1970
 msgid ""
 "Odoo calculates the :guilabel:`Gross vehicle weight` with the following "
 "formula:"
-msgstr ""
+msgstr "Odooは、次の数式を使用して\\ :guilabel:`車両総重量`\\ を計算します："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1972
 msgid ""
@@ -75689,6 +75883,9 @@ msgid ""
 "the time when the shipment is expected to arrive at its destination. These "
 "values are declared in both the XML and PDF."
 msgstr ""
+"デフォルトでは、\\ :guilabel:`予定日`\\ が入力されており、出荷が倉庫から出発"
+"する時間を表します。\\ :guilabel:`配送日`\\ は、出荷が目的地に到着すると予想"
+"される時間です。これらの値はXMLとPDFの両方で宣言されます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1984
 msgid "Dangerous hazards"
@@ -75729,6 +75926,9 @@ msgid ""
 "hazard, for example *01010101*. If it is not dangerous, enter `0` in "
 "the :guilabel:`Hazardous Material Designation Code` field."
 msgstr ""
+"\\ :guilabel:`UNSPSCカテゴリ`\\ は危険有害物として分類される場合とされない場"
+"合があります（例：*01010101*）。危険物ではない場合は、\\ :guilabel:`危険物指"
+"定コード`\\ フィールドに `0` と入力してください。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:2003
 msgid ""
@@ -75749,6 +75949,8 @@ msgid ""
 "If a Carta Porte is for international operations (for exports), some "
 "additional fields need to be taken into account."
 msgstr ""
+"Carta Porteが国際業務（輸出用）の場合、追加のフィールドを考慮する必要がありま"
+"す。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:2013
 msgid ""
@@ -75814,6 +76016,9 @@ msgid ""
 "xxxxxxx`. For example, use `15 48 3009 0001235` with **two** spaces between "
 "text."
 msgstr ""
+"\\ :guilabel:`税関番号`\\ フィールドは、`xx xx xxxx xxxxxxx` のパターンに従う"
+"必要があります。例えば、テキストの間に**2つ**のスペースを入れて `15 48 3009 "
+"0001235` を使用してください。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/netherlands.rst:10
 msgid ""
@@ -75837,6 +76042,8 @@ msgid ""
 "complete with the Dutch chart of accounts, taxes, financial reports, and "
 "fiscal positions"
 msgstr ""
+"オランダの基本\\ :ref:`会計ローカライズ <fiscal_localizations/packages>`\\ 。"
+"オランダの勘定科目表、税金、財務報告書、および会計ポジションが含まれます。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/netherlands.rst:23
 msgid ":guilabel:`Netherlands - Accounting Reports`"
@@ -82340,11 +82547,11 @@ msgstr ":guilabel:`スペイン - 会計レポート Libro IVA PoS`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:46
 msgid "`l10n_es_reports_pos`"
-msgstr ""
+msgstr "`l10n_es_reports_pos`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:47
 msgid "PoS of support for the Spanish VAT record books."
-msgstr ""
+msgstr "スペインのVAT記録簿をサポートするPoS。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:48
 msgid ":guilabel:`Spain - SII EDI Suministro de Libros`"
@@ -82403,30 +82610,32 @@ msgstr "POS\\ に Veri*Factu サポートを追加します。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:61
 msgid ":guilabel:`Spain - Real Estates`"
-msgstr ""
+msgstr ":guilabel:`スペイン - 不動産`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:62
 msgid "`l10n_es_real_estates`"
-msgstr ""
+msgstr "`l10n_es_real_estates`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:63
 msgid ""
 "Allows users to add real estate related to data to the Spanish localization "
 "and generate a mod 347 report."
 msgstr ""
+"ユーザーがスペインのローカライズに不動産関連データを追加し、モデル347レポート"
+"を生成できるようにします。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:65
 msgid ":guilabel:`Spain - Amazon Connector`"
-msgstr ""
+msgstr ":guilabel:`スペイン - Amazonコネクター`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:66
 msgid "`l10n_es_sale_amazon`"
-msgstr ""
+msgstr "`l10n_es_sale_amazon`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:67
 msgid ""
 "Bridging module between the Spanish localization and Amazon integration."
-msgstr ""
+msgstr "スペインのローカライズとAmazon統合を橋渡しするモジュール。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:75
 msgid ""
@@ -83512,6 +83721,8 @@ msgid ""
 ":guilabel:`Individual` (B2C): Fill in the individual's :guilabel:`name` and "
 "provide the :guilabel:`Email` or :guilabel:`Phone` number."
 msgstr ""
+":guilabel:`個人`\\ (B2C)：個人の\\ :guilabel:`氏名`\\ を入力し、\\ "
+":guilabel:`メール`\\ または\\ :guilabel:`電話番号`\\ を指定してください。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/taiwan.rst:84
 msgid ""
@@ -83519,6 +83730,9 @@ msgid ""
 "the :guilabel:`Tax ID`, and provide the :guilabel:`Email` "
 "or :guilabel:`Phone` number."
 msgstr ""
+":guilabel:`会社`\\ (B2B)：会社の\\ :guilabel:`名称`\\ を入力し、\\ "
+":guilabel:`税ID`\\ を入力して、\\ :guilabel:`メール`\\ または\\ :guilabel:`電"
+"話番号`\\ を指定してください。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/taiwan.rst:88
 msgid ""
@@ -83983,6 +84197,8 @@ msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the Thai localization:"
 msgstr ""
+":ref:`インストール <general/install>`\\ タイのローカライズの全機能を利用する"
+"には、以下のモジュールをインストールしてください："
 
 #: ../../export/content/applications/finance/fiscal_localizations/thailand.rst:19
 msgid ":guilabel:`Thailand - Accounting`"
@@ -84002,7 +84218,7 @@ msgstr "`l10n_th_reports`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/thailand.rst:25
 msgid "This module includes the accounting reports for Thailand."
-msgstr ""
+msgstr "このモジュールには、タイの会計レポートが含まれています。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/thailand.rst:32
 msgid ""
@@ -93853,7 +94069,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:45
 msgid ":ref:`Publish <payment_providers/add_new>` the payment method."
-msgstr ""
+msgstr ":ref:`公開 <payment_providers/add_new>`\\ 決済方法。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:48
 msgid ""
@@ -93862,6 +94078,9 @@ msgid ""
 "the Wire Transfer payment method <payment_providers/payment_methods>`, "
 "duplicate it, and rename it accordingly."
 msgstr ""
+"**銀行振込**\\ \\ 決済方法は、小切手など手動で処理される他の決済方法の"
+"テンプレートとして使用できます。\\ :ref:`銀行振込決済方法にアクセスし "
+"<payment_providers/payment_methods>`、それを複製して適宜名前を変更します。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:59
 msgid ""
@@ -93890,6 +94109,8 @@ msgid ""
 "To configure **SEPA Direct Debit** as an online payment method, follow these "
 "steps:"
 msgstr ""
+"**SEPA口座振替**\\ \\ をオンライン決済方法として設定するには、以下の手順に従"
+"います。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:74
 msgid ""
@@ -93897,6 +94118,9 @@ msgid ""
 "company's :guilabel:`Creditor Identifier` in the :ref:`Accounting or "
 "Invoicing settings <accounting/sepa_payments/sdd_configuration>`."
 msgstr ""
+"\\ :guilabel:`SEPA口座振替(SDD)`\\ 機能有効化し、\\ :guilabel:`債権者識別"
+"子`\\ を\\ :ref:`会計または請求書設定 <accounting/sepa_payments/"
+"sdd_configuration>`\\ で定義します。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:77
 msgid ""
@@ -93914,6 +94138,10 @@ msgid ""
 "default :guilabel:`EUR` tag to ensure |sdd| is only available for payments "
 "in euros."
 msgstr ""
+"必要に応じて、\\ :ref:`決済方法の利用可否を制限 <payment_providers/"
+"availability>`\\ し、\\ :guilabel:`制限`\\ タブで、\\ :guilabel:`通貨`\\ "
+"フィールドがデフォルトの\\ :guilabel:`EUR`\\ タグに設定されていることを確認し"
+"て、\\ |sdd|\\ がユーロでの支払いにのみ利用可能であることを保証します。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:93
 msgid ""
@@ -93922,10 +94150,13 @@ msgid ""
 "the end of the checkout process on the e-commerce website or the customer "
 "portal."
 msgstr ""
+"\\ :guilabel:`メッセージ`\\ タブのデフォルトの支払指示を編集して、**銀行口座"
+"番号**を含めます。これらの指示は、ECサイトまたは顧客ポータルの"
+"チェックアウトプロセスの最後に表示されます。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:96
 msgid "Enable :guilabel:`Live`."
-msgstr ""
+msgstr "\\ :guilabel:`本番`\\ を有効にします。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:99
 msgid ""
@@ -93945,10 +94176,13 @@ msgid ""
 "create :ref:`SEPA Direct Debit mandates <accounting/sepa_payments/sdd>`, the "
 "invoice being paid must be in euros."
 msgstr ""
+"SEPA口座振替(SDD)をオンライン決済方法として使用し、\\ :ref:`SEPA口座振替"
+"マンデート <accounting/sepa_payments/sdd>`\\ を作成するには、支払対象の請求書"
+"がユーロ建てである必要があります。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:108
 msgid "The |sdd| online payment process involves the following steps:"
-msgstr ""
+msgstr "\\ |sdd|\\ オンライン決済プロセスには、以下のステップが含まれます："
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:110
 msgid ""
@@ -93957,6 +94191,9 @@ msgid ""
 "sepa_payments/sdd_mandates>`, which is then automatically created as "
 "a :guilabel:`Draft`."
 msgstr ""
+"決済方法として\\ |sdd|\\ を選択した顧客は、IBANの入力を求められ、\\ "
+":ref:`SEPA口座振替マンデート <accounting/sepa_payments/sdd_mandates>`\\ を完"
+"了します。これは自動的に\\ :guilabel:`ドラフト`\\ として作成されます。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:113
 msgid ""
@@ -93964,30 +94201,38 @@ msgid ""
 "the expected amount, using the specified payment reference (communication) "
 "and bank account number."
 msgstr ""
+"マンデートを確定するには、顧客は指定された支払参照(通信欄)と銀行口座番号を使"
+"用して、予想される金額の銀行振込を正常に完了する必要があります。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:115
 msgid ""
 "Once this initial payment is received, the :doc:`bank transaction <../"
 "accounting/bank/transactions>` must be matched with the payment transaction."
 msgstr ""
+"この初回支払いが受領されたら、\\ :doc:`銀行取引 <../accounting/bank/"
+"transactions>`\\ を支払取引と照合する必要があります。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:117
 msgid ""
 "The sales order is confirmed automatically and the |sdd| mandate is "
 "validated."
-msgstr ""
+msgstr "受注は自動的に確定され、\\ |sdd|\\ マンデートが検証されます。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:118
 msgid ""
 "Once a mandate is active, it is reused for all subsequent payments made by "
 "the customer with the |sdd| payment method."
 msgstr ""
+"一度マンデートが有効になると、顧客が行うその後のすべての支払いに\\ |sdd|\\ 決"
+"済方法で再利用されます。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:120
 msgid ""
 ":ref:`Process the SDD payments <accounting/sepa_payments/XML>` to collect "
 "payments from customers with an active |sdd| mandate."
 msgstr ""
+":ref:`SDD支払いを処理 <accounting/sepa_payments/XML>`\\ し、有効な\\ |sdd|\\ "
+"マンデートを持つ顧客から支払いを回収します。"
 
 #: ../../export/content/applications/finance/payment_providers/bank_payments.rst:124
 msgid ":doc:`../accounting/payments/sepa_payments`"

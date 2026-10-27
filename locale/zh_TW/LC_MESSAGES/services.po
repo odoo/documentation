@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-26 16:34+0000\n"
+"PO-Revision-Date: 2026-10-27 05:35+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/services/zh_Hant/>\n"
@@ -9546,12 +9546,15 @@ msgid ""
 "rules>` for further processing. If left blank, the rule's :guilabel:`Name` "
 "is used instead."
 msgstr ""
+":guilabel:`範本`：定義產生之工時表項目的名稱。它也用於\\ :ref:`本機規則 "
+"<timesheets/timesheet-assistant/local-rules>`\\ 以進行進一步處理。如果留空，"
+"則改用該規則的\\ :guilabel:`名稱`\\ 。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:253
 msgid ""
 ":guilabel:`Description`: A display-only label shown in the timesheet "
 "assistant."
-msgstr ""
+msgstr ":guilabel:`說明`：工時表助理中顯示的唯讀標籤。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:254
 msgid ""
@@ -9560,6 +9563,9 @@ msgid ""
 "of keyboard and mouse inactivity. This is especially useful for rules "
 "covering activities such as meetings."
 msgstr ""
+":guilabel:`始終活動`：啟用後，即使 ActivityWatch 在鍵盤和滑鼠閒置三分鐘後將使"
+"用者標記為非活動狀態，此規則比對到的活動仍會被追蹤。這對於涵蓋會議等活動的規"
+"則特別有用。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:259
 msgid ""
@@ -9569,6 +9575,10 @@ msgid ""
 "enable :guilabel:`Project` and :guilabel:`Task`, then select the desired "
 "values from the fields in the list view."
 msgstr ""
+"若要為從比對到的活動建立的工時表項目設定預設專案與任務，請按一下清單標頭中"
+"的\\ :icon:`oi-settings-adjust`\\ （:guilabel:`其他選項`）按鈕，啟用\\ "
+":guilabel:`專案`\\ 和\\ :guilabel:`任務`\\ ，然後從清單檢視的欄位中選取所需的"
+"值。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:265
 msgid ""
@@ -9576,38 +9586,42 @@ msgid ""
 "recognizes a Google Meet video conference matching this regex, the timesheet "
 "assistant marks it as a key event."
 msgstr ""
+"以下範例為 Google Meet 設定了一條規則。當 ActivityWatch 識別出符合此正規表示"
+"式的 Google Meet 視訊會議時，工時表助理會將其標記為關鍵事件。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:268
 msgid ":guilabel:`Name`: Customer Meeting"
-msgstr ""
+msgstr ":guilabel:`名稱`：客戶會議"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:269
 msgid ":guilabel:`Regex`: `meet - (.*)\\|https://meet.google.com`"
-msgstr ""
+msgstr ":guilabel:`正規表示式`：`meet - (.*)\\|https://meet.google.com`"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:270
 msgid ":guilabel:`Type`: Video Conference"
-msgstr ""
+msgstr ":guilabel:`類型`：視訊會議"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:271
 msgid ""
 ":guilabel:`Template`: Customer Meeting ($1) (refers to the value captured by "
 "the first group in the regex)"
-msgstr ""
+msgstr ":guilabel:`範本`：客戶會議 ($1)（指正規表示式中第一組捕獲的值）"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:273
 msgid ":guilabel:`Description`: Customer Meeting"
-msgstr ""
+msgstr ":guilabel:`說明`：客戶會議"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:274
 msgid ""
 ":guilabel:`Project` and :guilabel:`Task`: Left empty, since each meeting may "
 "be related to a different customer/task"
 msgstr ""
+":guilabel:`專案`\\ 和\\ :guilabel:`任務`：留空，因為每次會議可能與不同的客戶/"
+"任務相關"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:276
 msgid ":guilabel:`Always active`: Enabled"
-msgstr ""
+msgstr ":guilabel:`始終活動`：已啟用"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:281
 msgid ""
@@ -9618,6 +9632,10 @@ msgid ""
 "mode <developer-mode>`, then go to :menuselection:`Timesheets --> "
 "Configuration --> Local Assistant Rules`."
 msgstr ""
+"若要查看由 ActivityWatch 偵測到的關鍵事件清單，以及根據設定的\\ :ref:`助理規"
+"則 <timesheets/timesheet-assistant/assistant-rules>`\\ 和/或分配給過去建議之"
+"工時表項目的專案與任務，請啟用\\ :ref:`開發者模式 <developer-mode>`\\ ，然後"
+"前往\\ :menuselection:`工時表 --> 設定 --> 本機助理規則`\\ 。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:290
 msgid "Use"
@@ -9634,6 +9652,12 @@ msgid ""
 "detected by ActivityWatch based on tracked activities when their duration "
 "exceeds one minute."
 msgstr ""
+"一旦工時表助理完成\\ :ref:`設定 <timesheets/timesheet-assistant/"
+"configuration>`\\ ，每天啟動時會自動追蹤電腦和瀏覽器（如\\ :ref:`適用 "
+"<timesheets/timesheet-assistant/install-browser>`\\ ）活動，並檢查 Odoo 中的"
+"日曆活動與排程。當追蹤到的活動持續時間超過一分鐘時，會根據 ActivityWatch 偵測"
+"到的\\ :ref:`關鍵事件 <timesheets/timesheet-assistant/assistant-rules>`\\ 產"
+"生工時表項目建議。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:299
 msgid ""
@@ -9642,6 +9666,9 @@ msgid ""
 "click :guilabel:`Chronological` in the top-right of the panel to switch to "
 "chronological order."
 msgstr ""
+"若要查看建議，請前往\\ :menuselection:`工時表 --> 助理`\\ 。預設情況下，\\ "
+":guilabel:`建議`\\ 是以\\ :guilabel:`按專案`\\ 列出的；按一下面板右上角的\\ "
+":guilabel:`依時間順序`\\ 即可切換至時間順序。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:303
 msgid ""
@@ -9649,6 +9676,9 @@ msgid ""
 "suggestions in the list, :ref:`edit the fields <timesheets/timesheets/log-"
 "manually>` in the left pane if necessary, and click :guilabel:`Create`."
 msgstr ""
+"若要從一個或多個建議建立工時表項目，請按一下清單中相關的建議，如有必要，請在"
+"左側窗格中\\ :ref:`編輯欄位 <timesheets/timesheets/log-manually>`\\ ，然後按"
+"一下\\ :guilabel:`建立`\\ 。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:307
 msgid ""
@@ -9656,6 +9686,9 @@ msgid ""
 "delete multiple suggestions at once, select them in the list and "
 "click :guilabel:`Delete` at the top of the view."
 msgstr ""
+"若要刪除建議，請將滑鼠游標懸停在其上方並按一下\\ :guilabel:`移除`\\ 。若要一"
+"次刪除多個建議，請在清單中選取它們，然後按一下檢視畫面頂端的\\ :guilabel:`刪"
+"除`\\ 。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:310
 msgid ""
@@ -9663,10 +9696,12 @@ msgid ""
 "make the necessary changes, then click :guilabel:`Save` or "
 "click :guilabel:`Delete`."
 msgstr ""
+"若要編輯或刪除現有的工時表項目，請在左側窗格中按一下該項目，進行必要的變更，"
+"然後按一下\\ :guilabel:`儲存`\\ 或按一下\\ :guilabel:`刪除`\\ 。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:314
 msgid "The :guilabel:`Time Rounding` settings apply to timesheet suggestions."
-msgstr ""
+msgstr "\\ :guilabel:`時間捨入`\\ 設定適用於工時表建議。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:315
 msgid ""
@@ -9675,6 +9710,9 @@ msgid ""
 "enabled for a matching :ref:`rule <timesheets/timesheet-assistant/assistant-"
 "rules>`."
 msgstr ""
+"滑鼠或鍵盤閒置三分鐘或以上會被視為非活動狀態（即休息時間），除非為相符的\\ "
+":guilabel:`始終活動`\\ 選項已為比對到的\\ :ref:`規則 <timesheets/timesheet-"
+"assistant/assistant-rules>`\\ 啟用。"
 
 #: ../../export/content/applications/services/timesheets/timesheet_assistant.rst:318
 msgid ""
