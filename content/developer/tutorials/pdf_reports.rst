@@ -124,7 +124,7 @@ our minimal property offers template file:
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <t t-set="offers" t-value="property.mapped('offer_ids')"/>
+                                    <t t-set="offers" t-value="property.offer_ids"/>
                                     <tr t-foreach="offers" t-as="offer">
                                         <td>
                                             <span t-field="offer.price"/>
