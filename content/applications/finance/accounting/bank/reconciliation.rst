@@ -120,6 +120,9 @@ If no partner is set on the transaction, the transaction's :guilabel:`Label` is 
 :guilabel:`Number`, :guilabel:`Customer Reference`, :guilabel:`Bill Reference`, and
 :guilabel:`Payment Reference` of existing invoices, bills, and payments.
 
+.. note::
+   Automatic reconciliation requires the :guilabel:`Label` to contain at least 6 characters.
+
 If a partner is set on the transaction, the transaction is instead matched with invoices, bills, and
 payments of the partner based on the :guilabel:`Amount`. The following rules are used in a
 sequential order to identify and apply a match:
