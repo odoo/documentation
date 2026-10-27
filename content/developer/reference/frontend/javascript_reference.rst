@@ -1004,43 +1004,44 @@ Displaying a notification
 The most common way to display a notification is by using the method that come
 from the *ServiceMixin*:
 
-- *displayNotification(options)*:
-    Display a notification with the following *options*:
+- *displayNotification(message, options)*:
+    Display a notification with the following *parameters*:
 
-    - *title*: string, optional. This will be displayed on the top as a title.
+    - *message*: string, the content of the notification
 
-    - *subtitle*: string, optional. This will be displayed on the top as a
-      subtitle.
+    - *options*: object, optional.  This object can contain the following keys:
+        - *title*: string, optional. This will be displayed on the top as a title.
 
-    - *message*: string, optional. The content of the notification.
+        - *subtitle*: string, optional. This will be displayed on the top as a
+          subtitle.
 
-    - *sticky*: boolean, optional (default false). If true, the notification
-      will stay until the user dismisses it.  Otherwise, the notification will
-      be automatically closed after a short delay.
+        - *message*: string, optional. The content of the notification.
 
-    - *type*: string, optional (default 'warning'). Determines the style of the
-      notification. Possible values: 'info', 'success', 'warning', 'danger', ''.
+        - *sticky*: boolean, optional (default false). If true, the notification
+          will stay until the user dismisses it.  Otherwise, the notification will
+          be automatically closed after a short delay.
 
-    - *className*: string, optional.  This is a css class name that will be
-      automatically added to the notification.  This could be useful for styling
-      purpose, even though its use is discouraged.
+        - *type*: string, optional (default 'warning'). Determines the style of the
+          notification. Possible values: 'info', 'success', 'warning', 'danger', ''.
 
-    - *messageIsHtml*: boolean, optional (default false). Allows passing an html
-      message. Strongly discouraged: other options should be considered before
-      enabling this option. The responsibility is on the caller to properly
-      escape the message if this option is enabled.
+        - *className*: string, optional.  This is a css class name that will be
+          automatically added to the notification.  This could be useful for styling
+          purpose, even though its use is discouraged.
+
+        - *messageIsHtml*: boolean, optional (default false). Allows passing an html
+          message. Strongly discouraged: other options should be considered before
+          enabling this option. The responsibility is on the caller to properly
+          escape the message if this option is enabled.
 
 Here are two examples on how to use these methods:
 
 .. code-block:: javascript
 
     // note that we call _t on the text to make sure it is properly translated.
-    this.displayNotification({
-        title: _t("Success"),
+    this.displayNotification(_t("Success"), {
         message: _t("Your signature request has been sent.")
     });
-    this.displayNotification({
-        title: _t("Error"),
+    this.displayNotification(title: _t("Error"), {
         message: _t("Filter name is required."),
         type: 'danger',
     });
