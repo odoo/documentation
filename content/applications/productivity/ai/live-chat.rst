@@ -84,7 +84,7 @@ Conversations are escalated when one of the following occurs:
 - The agent cannot respond with high confidence.
 
 When one of these conditions is met, the agent activates the *Lead Creation* :ref:`skill
-<ai/topics>`.
+<ai/skills>`.
 
 Lead creation skill
 ~~~~~~~~~~~~~~~~~~~
