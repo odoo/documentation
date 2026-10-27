@@ -25,6 +25,9 @@ states. It collects data on:
 General configuration
 =====================
 
+.. note:: To access the :guilabel:`Intrastat` option, make sure the :guilabel:`Intrastat Reports
+   (account_intrastat)` module is :doc:`installed </applications/general/apps_modules>`.
+
 Enable the Intrastat report by going to :menuselection:`Accounting --> Configuration --> Settings`.
 Under the :guilabel:`Customer Invoices` section, tick :guilabel:`Intrastat` and then
 :guilabel:`Save`.
