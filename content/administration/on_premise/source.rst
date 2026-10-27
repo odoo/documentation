@@ -420,7 +420,11 @@ Dependencies
    `wkhtmltopdf` is not installed through **pip** and must be installed manually in `version 0.12.6
    <https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ for it to support headers
    and footers. Check out the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_
-   for more details on the various versions.
+   for more details on the various versions. To draw emojis in PDF reports, `wkhtmltopdf` needs a
+   black-and-white emoji font, as it cannot draw color ones. On Debian/Ubuntu, the `fonts-symbola`
+   package covers the emojis up to 2017. For the recent ones, put the :file:`NotoEmoji-Regular.ttf`
+   file of `Noto Emoji <https://fonts.google.com/noto/specimen/Noto+Emoji>`_ in the
+   :file:`/usr/local/share/fonts` folder.
 
 .. _install/source/running_odoo:
 
