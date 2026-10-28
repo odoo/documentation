@@ -1,17 +1,22 @@
+.. meta::
+   :description: This page explains how to customize email template signatures so outgoing emails
+                 display the contact information of the employee responsible for customer follow-up,
+                 rather than the employee associated with the sales order for commission purposes.
+                 It covers updating the Send From field in the Settings tab and replacing
+                 object.user_id.signature with user.signature in the email body code.
+
 =======================
 Custom email signatures
 =======================
 
-Some business workflows require email template signatures to be updated so outgoing communications
-display the appropriate contact information for customer follow-up and correspondence.
+Some business workflows email template's signature needs updating so customers see the right contact
+for follow-ups. This is matters when sales team members share responsibility for a customer
+opportunity. For example, one employee may handle quotes and customer communications, while another
+is linked to the sales order for commission.
 
-This is particularly important when responsibility for a customer opportunity is shared between team
-members. In these cases, the employee responsible for managing quotes and customer communications
-may differ from the employee associated with the sales order for commission purposes.
-
-Email templates default to the signature of the employee assigned to the record; therefore the
-template should be modified to display the contact information of the employee responsible for
-customer follow-up. This ensures customers know who to contact with questions, approvals, and other
+By default, email templates use the signature of the employee assigned to the record. However, the
+email template can be customized to dynamically fill in the contact information of the employee
+sending the follow-up email, so customers know who to contact with questions, approvals, and other
 correspondence.
 
 .. note::
@@ -22,32 +27,37 @@ Open the email template
 =======================
 
 To modify an email template, first :ref:`activate developer mode <developer-mode/activation>`, then
-navigate to :menuselection:`Settings app --> Technical --> Email Templates`. Click on the email
-template being modified, in this case, the `Sales: Order Confirmation` template.
+navigate to :menuselection:`Settings app --> Technical --> Email Templates`. Click the email
+template to modify. For this example, it is the `Sales: Order Confirmation` template.
 
-Update from field
+Modify the sender
 =================
 
-On the email template, open the *Email Configuration* tab. Delete the default text in the
-:guilabel:`From` field and replace it with: `{{ (user.email_formatted) }}`.
+On the email template, open the *Settings* tab. Delete the default text in the :guilabel:`Send From`
+field and replace it with: `{{ (user.email_formatted) }}`.
 
 .. image:: custom_signatures/from-field.png
-   :alt: The from field updated with the correct text.
+   :alt: The Send From field updated with the correct text.
 
-Modify the code
-===============
+Modify the email signature
+==========================
 
-Click the *Content* tab, and highlight some text so the toolbar is visible. Click the :guilabel:`</>
-(Code view)` button and the text changes to code.
+To modify the signature in the email body text, follow these steps:
 
-Search the code for `signature` to find the two instances of the code `object.user_id.signature`.
-Replace both `object.user_id.signature` instances with `User.signature`.
+#. Click the *Body* tab.
+#. Highlight some text so the toolbar is visible.
+#. Click the :icon:`oi-ellipsis-v` :guilabel:`(Expand toolbar)` icon, then click the :icon:`fa-code`
+   :guilabel:`(Code view)` icon.
+#. Search for `signature` to find the two instances of `object.user_id.signature`.
+#. Replace both instances of `object.user_id.signature` with `user.signature`.
 
 .. image:: custom_signatures/code.png
-   :alt: The two 'object.user_id.signature' fields replaced with 'User.signature'.
+   :alt: The two instances of 'object.user_id.signature' replaced with 'user.signature'.
 
 .. tip::
-   If a user has not set up their email signature, instead of having the default `Mitchell Admin`
-   populate the signature, the company name can be displayed instead.
+   If a user has not set up their email signature, the default signature uses `Mitchell Admin` as a
+   placeholder. To display the company name instead, search for `Mitchell Admin` in the code, and
+   replace it with the company name.
 
-   To do this, search for `Mitchell Admin` in the code, and replace it with the company name.
+.. seealso::
+   :doc:`../../../general/companies/email_template`
