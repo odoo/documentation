@@ -15,7 +15,7 @@ Goals library
 
 The *Goals Library* houses all the goals configured in the database, and is where new goals are
 added. To view all the currently configured goals, navigate to :menuselection:`Appraisals app -->
-Configuration --> Library`, and the *Goals template* dashboard loads. All goals are displayed in a
+Configuration --> Library`, and the *Goals Template* dashboard loads. All goals are displayed in a
 default list view, and each goal displays the following information:
 
 - :guilabel:`Name`: The name of the goal.
@@ -120,7 +120,7 @@ at the bottom of the list. Enter the tag name, then press return or click away f
 on a colored dot at the end of the line to select a color for the tag.
 
 .. image:: goals/tags.png
-   :alt: The list of tags ad their colors.
+   :alt: The list of tags and their colors.
 
 View employee goals
 ===================
@@ -141,10 +141,11 @@ achieved, the :guilabel:`Progress` displays `100%` and appears in green.
 Any goals whose :guilabel:`Deadline` has passed appears in red text.
 
 .. image:: goals/goals-template-library.png
-   :alt: Add alt text.
+   :alt: The goals template library, listing all the configured goals.
 
 .. note::
-   Only employees with goals assigned to them appear in the list.
+   Only employees with goals assigned to them appear in the list. Goals that have sub-goals do not
+   appear in the list; only their sub-goals are displayed.
 
 .. image:: goals/goal-list.png
    :alt: A list of goals for all employees.
@@ -191,7 +192,8 @@ To create new goals, navigate to :menuselection:`Appraisals app --> Goals`, and 
 :guilabel:`New` in the top-left corner to open a blank *Goals* form. Add the following information
 on the form:
 
-- :guilabel:`Goal`: Type in a brief name for the goal in this field.
+- *Goal name*: Type in a brief name for the goal in the top field, such as `Improve your English
+  level`.
 - :guilabel:`Employee`: Select the employee being assigned the goal using the drop-down menu. Once
   this field is populated, the employee's manager populates the :guilabel:`Manager` field.
 - :guilabel:`Progress`: Click the current percentage of competency for the goal. The options are
@@ -201,7 +203,7 @@ on the form:
 - :guilabel:`Deadline`: Enter the due date for the goal using the calendar selector.
 - :guilabel:`Tags`: Add any relevant :ref:`tags <appraisals/add-tags>` to the goal using the
   drop-down menu.
-- :guilabel:`Description`: Enter any details regarding the goal in this tab.
+- :guilabel:`Description`: Enter any details regarding the goal in this section.
 
 .. tip::
    Some goals can be broken down into steps, which may be input as a checklist. A checklist is a
@@ -222,7 +224,7 @@ To update a goal's progress percentage outside of an appraisal, navigate to
 click on an individual goal to open the goal record.
 
 Click the new :guilabel:`Progress` box to set the new progress level. It is recommended to add notes
-in the :guilabel:`Description` tab, as the employee progresses with the goal. The notes should
+in the :guilabel:`Description` section, as the employee progresses with the goal. The notes should
 include dates the progress changed, and any supporting information regarding the change.
 
 Completed employee goals
