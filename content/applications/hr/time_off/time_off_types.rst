@@ -1,8 +1,9 @@
-==============
-Time off types
-==============
+==========
+Time types
+==========
 
-One of the first things that requires configuration in the **Time Off** app are the time off types.
+One of the first things that requires configuration in the **Time Off** app are the time off
+*types*.
 
 When employees request time off, they must specify the *type* of time off they are requesting, such
 as sick time, vacation time, etc. The time off type determines several things, including *how* the
