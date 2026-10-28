@@ -60,7 +60,8 @@ Forgot to request time off
 --------------------------
 
 If the employee did not request time off, the employee's manager or time off officer must
-:ref:`create the missing time off request <time_off/missing>` retroactively in the **Time Off** app.
+:ref:`create the missing time off request <time_off/management/missing>` retroactively in the **Time
+Off** app.
 
 .. _attendances/unapproved-time-off:
 
@@ -68,8 +69,8 @@ Time off request was unapproved
 -------------------------------
 
 If the employee requested time off and the employee's manager or time off officer did not approve
-the request in time, the :ref:`request must be approved <time_off/manage-time-off>` in the **Time
-Off** app.
+the request in time, the :ref:`request must be approved <time_off/management/manage-time-off>` in
+the **Time Off** app.
 
 .. _attendances/forgot-partial-log:
 
