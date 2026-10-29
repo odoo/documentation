@@ -28,11 +28,11 @@ Configure advanced, POS-specific :ref:`product details <pos/products/configurati
 
 .. tip::
    It is also possible to create a product from the POS interface. To do so, open the :ref:`POS
-   register <pos/use/open-register>`, click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon,
-   then select :icon:`fa-plus` :guilabel:`Create Product`. Enter the product details in the popover
-   and click :guilabel:`Save`. The product is immediately available in the POS register. Existing
-   products can also be updated directly from the POS register through the :ref:`product information
-   popover <pos/products/information-display>`.
+   register <pos/use/open-register>`, click the :icon:`menu` (:guilabel:`hamburger menu`) icon, then
+   select :icon:`add` :guilabel:`Create Product`. Enter the product details in the popover and click
+   :guilabel:`Save`. The product is immediately available in the POS register. Existing products can
+   also be updated directly from the POS register through the :ref:`product information popover
+   <pos/products/information-display>`.
 
    .. note::
       When using :ref:`POS product categories <pos/products/categories>`, each product must be
@@ -50,6 +50,7 @@ Product information display in the POS register
 To view and edit product information from the POS register, click and hold the product to access the
 following details:
 
+- :ref:`product tags <pos/products/tags>`,
 - the :doc:`available
   </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products>`,
   :doc:`forecasted
@@ -70,8 +71,8 @@ product in the register, click the countdown timer, then, in the :guilabel:`Stop
 click :guilabel:`Yes` to confirm.
 
 You can also access and edit the product information of a product that has already been :ref:`added
-to the cart <pos/use/sell>` by selecting the product, clicking the :icon:`fa-ellipsis-v`
-:guilabel:`(vertical ellipsis)` icon, then the :icon:`fa-info` :guilabel:`Info` button.
+to the cart <pos/use/sell>` by selecting the product, clicking the :icon:`more_vert`
+:guilabel:`(vertical ellipsis)` icon, then the :icon:`info` :guilabel:`Info` button.
 
 .. image:: products/product-information-window.png
    :alt: Example of product information window.
@@ -98,9 +99,9 @@ Sale` tab on the product form to configure the following POS-specific options:
 - Enable :guilabel:`Available in Self Order` if the product can be ordered in :doc:`self-ordering
   mode <extra/self_order>`. This option only appears once the self-ordering mode is :ref:`enabled
   <pos/self_order/configuration>`.
-- Write a :guilabel:`Description` to display in the :ref:`product information window in the POS
-  register <pos/products/information-display>` and in :doc:`self-ordering mode <extra/self_order>`
-  when clicking the :icon:`fa-info-circle` :ref:`info button <pos/products/tag-application>`.
+- Write a product :guilabel:`Description` that appears in the product information display :ref:`in
+  the POS register <pos/products/information-display>` and in :ref:`self-ordering mode
+  <pos/self_order/product-information-display>`.
 - In the :guilabel:`Upsell & cross-sell` section, enable :guilabel:`POS Optional Products` to
   suggest :doc:`optional products <../sales/sales_quotations/optional_products>` when :ref:`adding
   items to the cart <pos/use/sell>` in the POS register.
@@ -197,41 +198,40 @@ Then, specify the product's reference price as follows:
 
 .. _pos/products/tags:
 
-Product Tags
+Product tags
 ------------
 
-Product tags help highlight specific features in :doc:`self-ordering mode <extra/self_order>`. To
-create product tags, go to :menuselection:`Point of Sale --> Configuration --> Product Tags`. On the
-:guilabel:`Product Tags` page, click :guilabel:`New` or select an existing tag.
+Product tags highlight specific product features, such as allergens or product composition. The tags
+appear in the :ref:`POS register product information display <pos/products/information-display>` to
+assist cashiers, and in the :ref:`self-ordering product information display
+<pos/self_order/product-information-display>` to inform customers browsing the menu or product
+catalog.
 
-On the product tag form:
+Create tags
+~~~~~~~~~~~
+
+To create a tag, go to :menuselection:`Point of Sale --> Configuration --> Product Tags`, click
+:guilabel:`New`, then customize the tag fields as follows:
 
 - Enter a :guilabel:`Tag` label.
-- Enable/disable :guilabel:`Visible to customers` to control whether the tag is visible to customers
-  in :doc:`self-ordering mode <extra/self_order>`.
-- Optionally, choose a :guilabel:`Color` or add an image. If both are configured, the image replaces
-  the tag's color.
-- In the :guilabel:`Point of sale` section, write a :guilabel:`Description` to be shown in
-  self-ordering mode.
+- Optionally, upload an image to be displayed beside the tag label in self-ordering mode.
+- Enable :guilabel:`Visible to customers` to make the tag visible in self-ordering mode. Tags are
+  always visible in the POS register.
+- Optionally, choose a :guilabel:`Color`. In the POS register, the tag appears in the selected
+  color. In self-ordering mode, if no tag image is uploaded, a color dot in the selected color
+  appears beside the tag label.
+- In the :guilabel:`Point of Sale` section, enter a tag :guilabel:`Description` to provide
+  additional information in self-ordering mode, if desired.
 
-To add tags to a product, navigate to the product form, go to the :guilabel:`Sales` tab, and, in
-the :guilabel:`Extra info` section, add as many :guilabel:`Tags` as needed.
+Assign tags
+~~~~~~~~~~~
 
-.. note::
-   If the **eCommerce** app is installed, :ref:`tags <ecommerce/catalog/filters>` are used in both
-   apps, and need to be added in the :guilabel:`Shop` section of the :guilabel:`eCommerce` tab.
+To assign tags to products, follow these steps:
 
-.. _pos/products/tag-application:
-
-.. admonition:: Practical application
-
-   Tags are displayed only in :doc:`self-ordering mode <extra/self_order>`, *not* in the :ref:`POS
-   register <pos/use/open-register>`. Customers can view the tags and tag descriptions by clicking
-   the :icon:`fa-info` :guilabel:`(info)` icon next to the product name.
-
-   .. image:: products/tag-kiosk.png
-      :alt: Example of product tags in self-ordering mode.
-      :scale: 60%
+#. Go to :menuselection:`Point of Sale --> Products --> Products`.
+#. :ref:`Create or select a product <pos/products/creation>`.
+#. Go to the :guilabel:`General Information` tab.
+#. Assign one or more tags in the :guilabel:`Tags` field.
 
 .. _pos/products/units:
 
@@ -247,8 +247,7 @@ To do so, follow these steps:
 
 #. Enable :ref:`Units of Measure & Packagings <inventory/product_replenishment/configuration>` in
    the Invoicing app settings.
-#. Click the :icon:`fa-arrow-right` :guilabel:`Units & Packagings` link to view all configured
-   units.
+#. Click the :icon:`east` :guilabel:`Units & Packagings` link to view all configured units.
 #. Select a unit.
 #. Activate :ref:`developer mode <developer-mode>`.
 #. Enable :guilabel:`Group Products in POS`.
@@ -264,8 +263,16 @@ To do so, follow these steps:
 
 .. _pos/products/images:
 
-Product and category images
----------------------------
+Images
+------
+
+.. |yes| raw:: html
+
+   <span class="text-success" role="img" aria-label="Yes" style="font-size: 28px; font-weight: bold; line-height: 28px; display: inline-block; vertical-align: middle;">✓</span>
+
+.. |no| raw:: html
+
+   <span class="text-danger" role="img" aria-label="No" style="font-size: 28px; font-weight: bold; line-height: 28px; display: inline-block; vertical-align: middle;">✕</span>
 
 Images can be added for :ref:`products <pos/products/creation>`, :ref:`product tags
 <pos/products/tags>`, :ref:`variants <pos/products/variants>`, and :ref:`categories
@@ -283,22 +290,21 @@ in :doc:`self-ordering mode <extra/self_order>`, as follows:
      - Customer display
      - Self-ordering mode
    * - Product image
-     - :icon:`fa-check`
-     - :icon:`fa-check`
-     - :icon:`fa-check` on the :guilabel:`Your Order` page
+     - |yes|
+     - |yes|
+     - |yes| on the :guilabel:`Your Order` page
    * - Product tag image
-     - :icon:`oi-close`
-     - :icon:`oi-close`
-     - :icon:`fa-check` when clicking the :icon:`fa-info-circle` :ref:`Info button
-       <pos/products/tag-application>`
+     - |no|
+     - |no|
+     - |yes| on the :ref:`product information display <pos/self_order/product-information-display>`
    * - Product variant image
-     - :icon:`oi-close`
-     - :icon:`fa-check`
-     - :icon:`fa-check` on the :guilabel:`Your Order` page
+     - |no|
+     - |yes|
+     - |yes| on the :guilabel:`Your Order` page
    * - Category image
-     - :icon:`fa-check`
-     - :icon:`oi-close`
-     - :icon:`oi-close`
+     - |yes|
+     - |no|
+     - |no|
 
 Once you have added images to products or categories, configure their visibility *in the POS
 register*. To do so, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the
@@ -391,9 +397,9 @@ or more items from each combo choice.
             :scale: 70%
 
        - To split a combo into its individual products, select the combo, click the
-         :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) button, and select :icon:`fa-outdent`
-         :guilabel:`Break Combo`. The price of each product is adjusted according to its standard
-         :guilabel:`Sales Price`.
+         :icon:`more_vert` (:guilabel:`vertical ellipsis`) button, and select
+         :icon:`format_indent_decrease` :guilabel:`Break Combo`. The price of each product is
+         adjusted according to its standard :guilabel:`Sales Price`.
 
 .. seealso::
    `Product combos (video tutorial) <https://youtu.be/H8e2CakLhaQ?si=yjPbvYkj00K7OP3q>`_
@@ -538,16 +544,16 @@ or lot number. If no tracking number exists, a popover appears to create and ass
    Click :guilabel:`Ok` to proceed.
 
 Once tracking numbers are assigned or imported, they appear in the cart below the corresponding
-products, next to the :icon:`fa-list` (:guilabel:`Valid product lot`) icon. The icon's color
-highlights if the tracking has been assigned:
+products, next to the :icon:`format_list_bulleted` (:guilabel:`Valid product lot`) icon. The icon's
+color highlights if the tracking has been assigned:
 
-- **Green** :icon:`fa-list` (:guilabel:`Valid product lot`) **icon**: The tracking number was
-  successfully imported or assigned.
-- **Red** :icon:`fa-list` (:guilabel:`Invalid product lot`) **icon**: The tracking number is
-  missing or incorrect.
+- **Green** :icon:`format_list_bulleted` (:guilabel:`Valid product lot`) **icon**: The tracking
+  number was successfully imported or assigned.
+- **Red** :icon:`format_list_bulleted` (:guilabel:`Invalid product lot`) **icon**: The tracking
+  number is missing or incorrect.
 
-To change a tracking number, click the :icon:`fa-list` (:guilabel:`Valid product lot`) icon, select
-a different lot or serial number from the popover, and click :guilabel:`Apply`.
+To change a tracking number, click the :icon:`format_list_bulleted` (:guilabel:`Valid product lot`)
+icon, select a different lot or serial number from the popover, and click :guilabel:`Apply`.
 
 .. example::
    The icon appears in green for the :guilabel:`Casual T-shirt` as the serial number `123456` has
