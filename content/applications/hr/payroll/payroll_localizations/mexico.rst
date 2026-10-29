@@ -389,8 +389,8 @@ In Mexico, all companies are **required** to configure the following rule parame
   be updated when configuring the Mexico payroll localization.
 - :guilabel:`Mexico: Christmas Bonus` (Días de Aguinaldo): In Mexico, an annual Christmas bonus is
   given to all employees. The bonus must be for a minimum of 15 days of pay. Companies that provide
-  a higher bonus **must** modify this value. In Odoo, all employees of a company recieve the same
-  amout of paid days for their Chirstmas bonus.
+  a higher bonus **must** modify this value. In Odoo, all employees of a company receive the same
+  amout of paid days for their Christmas bonus.
 - :guilabel:`Mexico: Holiday Table` (Tabla de vacaciones): This rule outlines the number of vacation
   days an employee is allocated, based on their years of service. This **must** be modified, if
   needed, to reflect the company's paid vacation policy.
