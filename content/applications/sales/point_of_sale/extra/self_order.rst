@@ -25,12 +25,12 @@ You can choose between :guilabel:`QR menu`, :guilabel:`QR menu + Ordering`, and 
       menu or product catalog by scanning a QR code on their personal device. The latter also
       allows them to place an order and make a payment. Then:
 
-      - Click :icon:`fa-arrow-right` :guilabel:`Print QR Codes` to download a .pdf document with the
+      - Click :icon:`east` :guilabel:`Print QR Codes` to download a .pdf document with the generated
+        QR codes.
+      - Click :icon:`east` :guilabel:`Download QR Codes` to download a compressed file with the
         generated QR codes.
-      - Click :icon:`fa-arrow-right` :guilabel:`Download QR Codes` to download a compressed file
-        with the generated QR codes.
-      - Click :icon:`fa-arrow-right` :guilabel:`Free Metal / Wood Stands` to `order QR code stands
-        from Odoo <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_.
+      - Click :icon:`east` :guilabel:`Free Metal / Wood Stands` to `order QR code stands from Odoo
+        <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_.
 
       .. note::
          In :ref:`restaurants <pos/restaurant/floors>`, printing or downloading QR codes generates
@@ -47,8 +47,8 @@ You can choose between :guilabel:`QR menu`, :guilabel:`QR menu + Ordering`, and 
       Select :guilabel:`Kiosk` to let customers browse the menu or product catalog, place orders,
       and pay directly at a self-ordering kiosk.
 
-Once a self-ordering type is selected, click :icon:`fa-arrow-right` :guilabel:`Preview Web
-interface` under the :guilabel:`Self Ordering` field to ensure all :ref:`additional settings
+Once a self-ordering type is selected, click :icon:`east` :guilabel:`Preview Web interface` under
+the :guilabel:`Self Ordering` field to ensure all :ref:`additional settings
 <pos/self_order/additional-settings>` are correctly applied.
 
 .. _pos/self_order/additional-settings:
@@ -64,8 +64,8 @@ To further configure the self-ordering options, use the settings in the :guilabe
    .. tab:: Home buttons
 
       The :guilabel:`Home buttons` are displayed on the kiosk or mobile device interfaces when
-      customers are self-ordering. To set them up, click :icon:`fa-arrow-right` :guilabel:`Home
-      buttons`. Then,
+      customers are self-ordering. To set them up, click :icon:`east` :guilabel:`Home buttons`.
+      Then,
 
       #. Click :guilabel:`New` to add a new button.
       #. Set the :guilabel:`Label`.
@@ -128,8 +128,8 @@ To further configure the self-ordering options, use the settings in the :guilabe
          can be added.
 
       .. tip::
-         Click :icon:`fa-arrow-right` :guilabel:`Payment Methods` to :doc:`create or edit payment
-         methods <../payment_methods>`.
+         Click :icon:`east` :guilabel:`Payment Methods` to :doc:`create or edit payment methods
+         <../payment_methods>`.
 
       .. seealso::
          - :doc:`/applications/finance/payment_providers`
@@ -156,7 +156,7 @@ To further configure the self-ordering options, use the settings in the :guilabe
       language and, if desired, additional :guilabel:`Available` languages. To add more languages,
       follow these steps:
 
-      #. Click :icon:`fa-arrow-right` :guilabel:`Add Languages`.
+      #. Click :icon:`east` :guilabel:`Add Languages`.
       #. Add as many languages as needed to the :guilabel:`Languages` field.
       #. Click :guilabel:`Add`.
       #. Add those languages to the :guilabel:`Available` field.
@@ -169,9 +169,9 @@ To further configure the self-ordering options, use the settings in the :guilabe
       Splash screens are introductory screens displayed when the self-ordering interface or kiosk is
       launched. They typically contain branding, welcome messages, or usage instructions.
 
-      - To add a splash screen image, click :icon:`fa-paperclip` :guilabel:`Add Media`, select and
+      - To add a splash screen image, click :icon:`attach_file` :guilabel:`Add Media`, select and
         open an image.
-      - To remove a splash screen image, hover over the image and click :icon:`fa-times`
+      - To remove a splash screen image, hover over the image and click :icon:`close`
         (:guilabel:`Delete`).
 
       .. note::
@@ -180,7 +180,7 @@ To further configure the self-ordering options, use the settings in the :guilabe
    .. tab:: Background
 
       Add a custom image to the self-ordering interface to match your business's style. To do so, go
-      to the :guilabel:`Background` section and click :icon:`fa-paperclip` :guilabel:`Set background
+      to the :guilabel:`Background` section and click :icon:`attach_file` :guilabel:`Set background
       image`.
 
       If necessary, click the default :guilabel:`Color` to change it and define a color scheme for
@@ -220,7 +220,7 @@ displaying printed QR codes or installing a self-service kiosk.
       #. Follow the instructions on-screen to assign a table and pay for the order.
 
       .. tip::
-         On the :guilabel:`Your Order` page, customers can click the :icon:`fa-plus` icon next to
+         On the :guilabel:`Your Order` page, customers can click the :icon:`add` icon next to
          :guilabel:`Add an order note` to enter additional information or special requests, such as
          `Burger without onions, please`, and click :guilabel:`Apply`. These notes are then
          displayed on the :doc:`preparation display <preparation>`.
@@ -249,3 +249,18 @@ displaying printed QR codes or installing a self-service kiosk.
 .. note::
    Once an order is placed, it is automatically sent to :doc:`the preparation screen <preparation>`
    and added to the list of POS orders.
+
+.. _pos/self_order/product-information-display:
+
+Product information display in self-ordering mode
+-------------------------------------------------
+
+To view product information in the self-ordering menu or product catalog, customers can click the
+:icon:`info` (:guilabel:`info`) icon next to the product name.
+
+The :ref:`product description <pos/products/configuration>` is displayed, as well as the
+:ref:`product tag and tag description <pos/products/tags>`, if relevant.
+
+.. image:: self_order/product_information_display.png
+   :alt: Pizza Margherita information in the self-ordering menu.
+   :scale: 80%
