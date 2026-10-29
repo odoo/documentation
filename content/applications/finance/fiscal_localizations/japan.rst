@@ -135,3 +135,18 @@ for the date of the transaction on the purchase line.
 .. important::
    Taxes whose transition period has ended are not deactivated automatically. When a period ends, go
    to :menuselection:`Accounting --> Configuration --> Taxes` and deactivate the tax.
+
+.. _localizations/japan/qualified-invoice:
+
+Qualified invoice issuers
+=========================
+
+If your company is a qualified invoice issuer, enter your registration number (`T` followed by 13
+digits) in the :guilabel:`Tax ID` field of your company. It is then printed on invoices and other
+documents.
+
+#. Go to :menuselection:`Settings --> General Settings`, and in the :guilabel:`Companies` section,
+   click :guilabel:`Update Info`.
+#. In the :guilabel:`Tax ID` field, enter the registration number.
+
+The :guilabel:`Tax ID` entered on a contact is printed in the address block of the invoice.
