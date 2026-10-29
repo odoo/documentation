@@ -50,6 +50,7 @@ Product information display in the POS register
 To view and edit product information from the POS register, click and hold the product to access the
 following details:
 
+- :ref:`product tags <pos/products/tags>`,
 - the :doc:`available
   </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products>`,
   :doc:`forecasted
@@ -98,9 +99,9 @@ Sale` tab on the product form to configure the following POS-specific options:
 - Enable :guilabel:`Available in Self Order` if the product can be ordered in :doc:`self-ordering
   mode <extra/self_order>`. This option only appears once the self-ordering mode is :ref:`enabled
   <pos/self_order/configuration>`.
-- Write a :guilabel:`Description` to display in the :ref:`product information window in the POS
-  register <pos/products/information-display>` and in :doc:`self-ordering mode <extra/self_order>`
-  when clicking the :icon:`fa-info-circle` :ref:`info button <pos/products/tag-application>`.
+- Write a :guilabel:`Description` that appears in the product information display :ref:`in the POS
+  register <pos/products/information-display>` and in :ref:`self-ordering mode
+  <pos/self_order/product-information-display>`.
 - In the :guilabel:`Upsell & cross-sell` section, enable :guilabel:`POS Optional Products` to
   suggest :doc:`optional products <../sales/sales_quotations/optional_products>` when :ref:`adding
   items to the cart <pos/use/sell>` in the POS register.
@@ -197,41 +198,41 @@ Then, specify the product's reference price as follows:
 
 .. _pos/products/tags:
 
-Product Tags
+Product tags
 ------------
 
-Product tags help highlight specific features in :doc:`self-ordering mode <extra/self_order>`. To
-create product tags, go to :menuselection:`Point of Sale --> Configuration --> Product Tags`. On the
-:guilabel:`Product Tags` page, click :guilabel:`New` or select an existing tag.
+Product tags highlight specific product features, such as allergens or dietary restrictions. The
+tags appear in the :ref:`POS register product information display
+<pos/products/information-display>` to assist cashiers, and in the :ref:`self-ordering product
+information display <pos/self_order/product-information-display>` to inform customers browsing the
+menu or product catalog.
 
-On the product tag form:
+Create tags
+~~~~~~~~~~~
+
+To create a tag, go to :menuselection:`Point of Sale --> Configuration --> Product Tags`, click
+:guilabel:`New`, then customize the tag fields as follows:
 
 - Enter a :guilabel:`Tag` label.
-- Enable/disable :guilabel:`Visible to customers` to control whether the tag is visible to customers
-  in :doc:`self-ordering mode <extra/self_order>`.
-- Optionally, choose a :guilabel:`Color` or add an image. If both are configured, the image replaces
-  the tag's color.
-- In the :guilabel:`Point of sale` section, write a :guilabel:`Description` to be shown in
-  self-ordering mode.
-
-To add tags to a product, navigate to the product form, go to the :guilabel:`Sales` tab, and, in
-the :guilabel:`Extra info` section, add as many :guilabel:`Tags` as needed.
+- Enable :guilabel:`Visible to customers` to make the tag visible in self-ordering mode. Tags are
+  always visible on the POS register, regardless of this field.
+- Choose a :guilabel:`Color` or add an image for self-ordering mode. If both are configured, only
+  the image appears in self-ordering mode.
+- In the :guilabel:`Point of Sale` section, enter a :guilabel:`Description` for self-ordering mode.
 
 .. note::
-   If the **eCommerce** app is installed, :ref:`tags <ecommerce/catalog/filters>` are used in both
-   apps, and need to be added in the :guilabel:`Shop` section of the :guilabel:`eCommerce` tab.
+   Only the :guilabel:`Tag` label and :guilabel:`Color` appear in the POS register. The tag image
+   and :guilabel:`Description` appear only in self-ordering mode.
 
-.. _pos/products/tag-application:
+Assign tags
+~~~~~~~~~~~
 
-.. admonition:: Practical application
+To assign tags to products, follow these steps:
 
-   Tags are displayed only in :doc:`self-ordering mode <extra/self_order>`, *not* in the :ref:`POS
-   register <pos/use/open-register>`. Customers can view the tags and tag descriptions by clicking
-   the :icon:`fa-info` :guilabel:`(info)` icon next to the product name.
-
-   .. image:: products/tag-kiosk.png
-      :alt: Example of product tags in self-ordering mode.
-      :scale: 60%
+#. Go to :menuselection:`Point of Sale --> Products --> Products`.
+#. :ref:`Create or select a product <pos/products/creation>`.
+#. Go to the :guilabel:`General Information` tab.
+#. Assign one or more tags in the :guilabel:`Tags` field.
 
 .. _pos/products/units:
 
@@ -289,8 +290,8 @@ in :doc:`self-ordering mode <extra/self_order>`, as follows:
    * - Product tag image
      - :icon:`oi-close`
      - :icon:`oi-close`
-     - :icon:`fa-check` when clicking the :icon:`fa-info-circle` :ref:`Info button
-       <pos/products/tag-application>`
+     - :icon:`fa-check` on the :ref:`product information display
+       <pos/self_order/product-information-display>`
    * - Product variant image
      - :icon:`oi-close`
      - :icon:`fa-check`
