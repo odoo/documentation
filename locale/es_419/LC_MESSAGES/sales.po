@@ -35,7 +35,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-25 07:37+0000\n"
+"PO-Revision-Date: 2026-10-29 03:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/sales/es_419/>\n"
@@ -12069,7 +12069,7 @@ msgstr "Al escanear un código QR descargado o impreso."
 
 #: ../../content/applications/sales/point_of_sale/extra/self_order.rst:208
 msgid "Clicking the :guilabel:`Mobile Menu` button on the POS card."
-msgstr ""
+msgstr "Hacer clic en el botón :guilabel:`Menú móvil` de la tarjeta del PdV."
 
 #: ../../content/applications/sales/point_of_sale/extra/self_order.rst:210
 #: ../../content/applications/sales/point_of_sale/extra/self_order.rst:232
@@ -13676,7 +13676,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:3
 msgid "IoT connection"
-msgstr ""
+msgstr "Conexión IoT"
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:5
 msgid ""
@@ -13688,6 +13688,14 @@ msgid ""
 "an IoT gateway. As well as serving as a bridge between the device and the "
 "point of sale, the IoT gateway also manages SSL/TLS security certificates."
 msgstr ""
+"Los dispositivos físicos, como :doc:`impresoras <receipt_printers>`, "
+":doc:`básculas <scale>`, :doc:`terminales de pago <../payment_methods/"
+"terminals>`, :doc:`pantallas de cliente <customer_display>` y/o la "
+":ref:`caja negra belga <belgium/fdm>`, que no se pueden conectar "
+"directamente a una base de datos de Odoo mediante la dirección IP del "
+"dispositivo, se pueden conectar mediante una pasarela IoT. Además de servir "
+"como puente entre el dispositivo y el Punto de venta, la pasarela IoT "
+"también gestiona los certificados de seguridad SSL/TLS."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:13
 msgid ""
@@ -13695,6 +13703,9 @@ msgid ""
 "general/iot/iot_box>` instead of a :doc:`virtual one </applications/general/"
 "iot/windows_iot>`."
 msgstr ""
+"Para una fiabilidad óptima, utiliza una :doc:`pasarela IoT física </"
+"applications/general/iot/iot_box>` en lugar de una :doc:`virtual </"
+"applications/general/iot/windows_iot>`."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:15
 msgid ""
@@ -13702,18 +13713,25 @@ msgid ""
 "connection. Enable :doc:`pos_lna` to allow Odoo to communicate with the IoT "
 "gateway on the local network."
 msgstr ""
+"Para una estabilidad de red máxima, utiliza una conexión Ethernet en lugar "
+"de una conexión Wi-Fi. Habilita :doc:`pos_lna` para permitir que Odoo se "
+"comunique con la pasarela IoT en la red local."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:17
 msgid ""
 ":doc:`Ingenico <../payment_methods/terminals/ingenico>` terminals require an "
 "IoT connection and must be connected to their own IoT gateway."
 msgstr ""
+":doc:`Ingenico <../payment_methods/terminals/ingenico>` terminales requieren "
+"una conexión IoT y deben estar conectados a su propia pasarela IoT."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:20
 msgid ""
 "To set up an IoT connection between the physical devices and the point of "
 "sale, follow these steps:"
 msgstr ""
+"Para configurar una conexión IoT entre los dispositivos físicos y el Punto "
+"de venta, sigue estos pasos:"
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:22
 msgid "Download the Odoo IoT app."
@@ -19491,6 +19509,10 @@ msgid ""
 "in :doc:`self-ordering mode <extra/self_order>`. This option only appears "
 "once the self-ordering mode is :ref:`enabled <pos/self_order/configuration>`."
 msgstr ""
+"Activa :guilabel:`Disponible en autopedido` si el producto se puede ordenar "
+"en el :doc:`modo de autopedido <extra/self_order>`. Esta opción solo aparece "
+"una vez que el modo de autopedido está :ref:`habilitado <pos/self_order/"
+"configuration>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:93
 msgid ""
@@ -25174,6 +25196,8 @@ msgid ""
 "This document explains how to configure a labor service rental product in "
 "the Rental app."
 msgstr ""
+"Este documento explica cómo configurar un producto de alquiler de servicio "
+"de mano de obra en la aplicación de Alquiler."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:9
 msgid ""
@@ -25184,10 +25208,17 @@ msgid ""
 "A labor service is an intangible good that sometimes requires an employee to "
 "execute. Some examples are:"
 msgstr ""
+"Existen dos tipos de productos de servicio en la aplicación **Alquiler** que "
+"requieren configuraciones distintas: :doc:`físicos <service_products>` y no "
+"físicos (mano de obra). Este documento se enfoca en la configuración de "
+"productos de servicio de alquiler no físicos y, en adelante, se referirá a "
+"ellos como servicios de mano de obra. Un servicio de mano de obra es un bien "
+"intangible que a veces requiere que un empleado lo realice. Algunos ejemplos "
+"son:"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:15
 msgid "Rental insurance or a warranty"
-msgstr ""
+msgstr "Seguro de alquiler o una garantía"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:16
 msgid "Housekeeping"
@@ -25195,7 +25226,7 @@ msgstr "Limpieza"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:17
 msgid "Catering services like bartending or waitstaffing for events"
-msgstr ""
+msgstr "Servicios de banquetes como servicio de bar o meseros para eventos"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:24
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:25
@@ -25216,16 +25247,20 @@ msgid ""
 "To access the **Rental** app's settings, navigate to :menuselection:`Rental "
 "app --> Configuration --> Settings`."
 msgstr ""
+"Para acceder a los ajustes de la aplicación **Alquiler**, ve a "
+":menuselection:`Alquiler --> Configuración --> Ajustes`."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:31
 msgid ""
 "The following configurations assume the **Rental**, **Planning**, "
 "**Timesheets**, and **Sales** apps are installed."
 msgstr ""
+"Las siguientes configuraciones asumen que las aplicaciones **Alquiler**, "
+"**Planificación**, **Hojas de horas** y **Ventas** están instaladas."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:37
 msgid "Configure employee roles"
-msgstr ""
+msgstr "Configurar roles de empleado"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:39
 msgid ""
@@ -25237,6 +25272,14 @@ msgid ""
 "**Rental** app syncs with the **Planning** app to update the employee shift "
 "availability."
 msgstr ""
+"Antes de crear un producto de servicio laboral en la aplicación "
+"**Alquiler**, se recomienda :ref:`crear <planning/roles>` y :ref:`asignar "
+"<planning/employees>` roles de empleado en la aplicación **Planificación** "
+"para habilitar la planificación de turnos de los empleados. Los empleados se "
+"vinculan al producto de servicio laboral a través de su rol asignado. Cada "
+"vez que el servicio se añade a una orden de alquiler, la aplicación "
+"**Alquiler** se sincroniza con la aplicación **Planificación** para "
+"actualizar la disponibilidad de turnos de los empleados."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:46
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:78
@@ -25250,6 +25293,10 @@ msgid ""
 "Products --> Products` and then click :guilabel:`New`. The new product form "
 "displays with the *General Information* tab open by default."
 msgstr ""
+"Para configurar un nuevo servicio de alquiler, ve a "
+":menuselection:`Aplicación de Alquiler --> Productos --> Productos` y luego "
+"haz clic en :guilabel:`Nuevo`. El formulario del nuevo producto se muestra "
+"con la pestaña *Información general* abierta de forma predeterminada."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:53
 #: ../../content/applications/sales/rental/configure_products/products.rst:52
@@ -25267,34 +25314,49 @@ msgid ""
 "one. Optionally, in the :guilabel:`Create on Order` field, "
 "select :guilabel:`Project`."
 msgstr ""
+"En el formulario del nuevo producto, selecciona la casilla "
+":guilabel:`Ventas`. En la pestaña *Información general*, selecciona "
+":guilabel:`Servicio` como el :guilabel:`Tipo de producto`. En el menú "
+"desplegable :guilabel:`Política de facturación`, selecciona "
+":guilabel:`Basado en registros de horas`. Habilita la casilla "
+":guilabel:`Planear servicios` y crea un nuevo rol o selecciona uno "
+"existente. Opcionalmente, en el campo :guilabel:`Crear al ordenar`, "
+"selecciona :guilabel:`Proyectos`."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:None
 msgid ""
 "Example of a configured Photography service product form in the Rental app."
 msgstr ""
+"Ejemplo de un formulario de producto de servicio de Fotografía configurado "
+"en la aplicación Alquiler."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:65
 msgid ""
 "The **Sales**, **Planning**, **Project**, and **Timesheets** apps must be "
 "installed for the following fields to be available:"
 msgstr ""
+"Las aplicaciones de **Ventas**, **Planeación**, **Proyectos** y **Registro "
+"de horas** deben estar instaladas para que los siguientes campos estén "
+"disponibles:"
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:68
 msgid ":guilabel:`Project` option of the :guilabel:`Create on Order` field."
-msgstr ""
+msgstr ":guilabel:`Proyectos` opción del campo :guilabel:`Crear al ordenar`."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:69
 msgid ":guilabel:`Project Template` field."
-msgstr ""
+msgstr ":guilabel:`Plantilla de proyecto` campo."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:70
 msgid ":guilabel:`Based on Timesheets` option of the *Invoicing Policy* field."
 msgstr ""
+":guilabel:`Según las hojas de horas` opción del campo *Política de "
+"facturación*."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:71
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:93
 msgid ":guilabel:`Plan Services` field."
-msgstr ""
+msgstr ":guilabel:`Planificar servicios` campo."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:73
 msgid ""
@@ -25525,7 +25587,7 @@ msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:0
 msgid "Example of service variants in the Attributes & Variants tab."
-msgstr ""
+msgstr "Ejemplo de variantes de servicio en la pestaña Atributos y variantes."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:161
 #: ../../content/applications/sales/rental/configure_products/products.rst:247
@@ -25538,6 +25600,8 @@ msgid ""
 "The *Ecommerce* sections are only available if the **eCommerce** module is "
 "installed."
 msgstr ""
+"Las secciones de *Comercio electrónico* solo están disponibles si el módulo "
+"de **Comercio electrónico** está instalado."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:166
 msgid ""
@@ -25548,6 +25612,13 @@ msgid ""
 "product-configuration>` sections for the **eCommerce** module for "
 "configuration instructions."
 msgstr ""
+"La pestaña *Ventas* tiene las siguientes secciones que configuran la página "
+"de producto en el sitio web: *Tienda de comercio electrónico*, *Medios de "
+"comercio electrónico* y *Descripción de comercio electrónico*. Consulta las "
+"secciones :ref:`Visibilidad del producto <ecommerce/products/publish-"
+"products>` y :ref:`Configuración del producto <ecommerce/products/product-"
+"configuration>` del módulo de **Comercio electrónico** para obtener "
+"instrucciones de configuración."
 
 #: ../../content/applications/sales/rental/configure_products/labor_service_products.rst:173
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:130
@@ -26553,6 +26624,10 @@ msgid ""
 "including Planning app materials and roles, product creation, rental periods "
 "and pricing, variants, and eCommerce settings."
 msgstr ""
+"Esta página explica cómo configurar productos de alquiler de servicios "
+"físicos, incluyendo materiales y roles de la aplicación Planeación, creación "
+"de productos, periodos de alquiler y precios, variantes y configuraciones de "
+"comercio electrónico."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:10
 msgid ""
@@ -26562,6 +26637,11 @@ msgid ""
 "rental service product is a physical product that doesn't require any stock "
 "movements. Some examples are:"
 msgstr ""
+"Existen dos tipos de productos de servicio en la aplicación **Alquiler** que "
+"requieren diferentes configuraciones: físicos y no físicos (mano de obra). "
+"Este documento se centra en la configuración de productos de servicio de "
+"alquiler físico. Un producto de servicio de alquiler físico es un producto "
+"físico que no requiere movimientos de existencias. Algunos ejemplos son:"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:15
 msgid "Hotel rooms"
@@ -26573,21 +26653,23 @@ msgstr "Salas de conferencias"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:17
 msgid "Work stations"
-msgstr ""
+msgstr "Estaciones de trabajo"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:18
 msgid "Storage units"
-msgstr ""
+msgstr "Unidades de almacenamiento"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:32
 msgid ""
 "The following configurations assume the **Rental**, **Planning**, and "
 "**Sales** apps are installed."
 msgstr ""
+"Las siguientes configuraciones asumen que las aplicaciones **Alquiler**, "
+"**Planificación** y **Ventas** están instaladas."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:37
 msgid "Configure materials and a role for the physical service product"
-msgstr ""
+msgstr "Configurar materiales y un rol para el producto de servicio físico"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:39
 msgid ""
@@ -26596,6 +26678,10 @@ msgid ""
 "<planning/roles>` in the **Planning** app for the physical rental products "
 "(such as storage units or conference rooms)."
 msgstr ""
+"Antes de crear un producto de servicio en la aplicación **Alquiler**, "
+"configura los :ref:`materiales <planning/materials>` y :ref:`crea un rol "
+"<planning/roles>` en la aplicación **Planificación** para los productos de "
+"alquiler físico (como unidades de almacenamiento o salas de conferencias)."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:43
 msgid ""
@@ -26605,10 +26691,16 @@ msgid ""
 "**Rental** app syncs with the **Planning** app to check and update the "
 "material shift availability."
 msgstr ""
+"Esto permite que la aplicación **Planificación** cree y asigne turnos para "
+"el producto de alquiler físico, y el *Rol* vincula los materiales de "
+"alquiler con el servicio de alquiler. Cada vez que el servicio se agrega a "
+"una orden de alquiler, la aplicación **Alquiler** se sincroniza con la "
+"aplicación **Planificación** para verificar y actualizar la disponibilidad "
+"de turnos del material."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:49
 msgid "It's recommended to name the role after the service."
-msgstr ""
+msgstr "Se recomienda asignar al rol el mismo nombre que el servicio."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:52
 msgid ""
@@ -26617,10 +26709,15 @@ msgid ""
 "navigating to the :menuselection:`Planning app --> Configuration --> Roles`. "
 "Click :guilabel:`New` and create the :guilabel:`Deluxe Room` role."
 msgstr ""
+"Shady Grove necesita agregar un nuevo nivel de habitación a la aplicación "
+"**Alquiler**, la *Habitación de lujo*. Hay cinco habitaciones que pertenecen "
+"a este nivel. Crea un nuevo *Rol* navegando a :menuselection:`Aplicación "
+"Planeación --> Configuración --> Roles`. Haz clic en :guilabel:`Nuevo` y "
+"crea el rol de :guilabel:`Habitación de lujo`."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:0
 msgid "Example of configured role for the Deluxe Room."
-msgstr ""
+msgstr "Ejemplo de rol configurado para la Habitación Deluxe."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:60
 msgid ""
@@ -26630,10 +26727,15 @@ msgid ""
 "Room` for the :guilabel:`Role` column. Repeat that process for all five "
 "rooms."
 msgstr ""
+"Para agregar las cinco habitaciones como un recurso para el *Rol*, navega a "
+":menuselection:`Aplicación Planeación --> Configuración --> Materiales`. Haz "
+"clic en :guilabel:`Nuevo`, ingresa el número de habitación y selecciona "
+":guilabel:`Habitación de lujo` para la columna :guilabel:`Rol`. Repite ese "
+"proceso para las cinco habitaciones."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:0
 msgid "Example of configured materials for the Deluxe Room."
-msgstr ""
+msgstr "Ejemplo de materiales configurados para la Habitación Deluxe."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:67
 msgid ""
@@ -26643,26 +26745,37 @@ msgid ""
 "a :guilabel:`Service` type product with the :guilabel:`Plan Services` "
 "checkbox enabled and the :guilabel:`Deluxe Room` role assigned."
 msgstr ""
+"Crea la :guilabel:`Habitación Deluxe` como un nuevo tipo de producto "
+"*Servicio* al ir a :menuselection:`Aplicación Alquiler --> Productos`. Haz "
+"clic en :guilabel:`Nuevo` y luego configura la Habitación Deluxe como un "
+"producto de tipo :guilabel:`Servicio` con la casilla :guilabel:`Planificar "
+"servicios` activada y el rol :guilabel:`Habitación Deluxe` asignado."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:0
 msgid "Example of the Plan Services field configured to the Deluxe Room role."
 msgstr ""
+"Ejemplo del campo Planificar servicios configurado para el rol Habitación "
+"Deluxe."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:88
 msgid ""
 "The **Sales** and **Planning** apps must be installed for the following "
 "fields to become available:"
 msgstr ""
+"Las aplicaciones **Ventas** y **Planeación** deben estar instaladas para que "
+"los siguientes campos estén disponibles:"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:91
 msgid ":guilabel:`Invoicing Policy` field."
-msgstr ""
+msgstr ":guilabel:`Política de facturación` campo."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:92
 msgid ""
 ":guilabel:`Prepaid/Fixed Price` option of the :guilabel:`Invoicing Policy` "
 "field."
 msgstr ""
+":guilabel:`Prepago/Precio fijo` opción del campo :guilabel:`Política de "
+"facturación`."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:95
 msgid ""
@@ -26673,6 +26786,12 @@ msgid ""
 "either :ref:`create a new role <planning/roles>` or select a pre-existing "
 "one."
 msgstr ""
+"En la ventana de nuevo producto, selecciona la casilla de verificación "
+":guilabel:`Ventas`. Selecciona :guilabel:`Servicio` como el :guilabel:`Tipo "
+"de producto`. En el menú desplegable :guilabel:`Política de facturación`, "
+"selecciona :guilabel:`Prepago/Precio fijo`. Habilita la casilla de "
+"verificación :guilabel:`Planificar servicios` y :ref:`crea un rol nuevo "
+"<planning/roles>` o selecciona uno preexistente."
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Example of a configured physical service product in the Rental app."
@@ -31511,6 +31630,9 @@ msgid ""
 "configuring a milestone-based service product to defining milestones and "
 "invoicing a completed milestone."
 msgstr ""
+"Describe el flujo de trabajo entre aplicaciones para facturar hitos de "
+"proyectos, desde cómo configurar un producto de servicio basado en hitos "
+"hasta cómo definir hitos y facturar un hito completado."
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:8
 msgid "Invoice project milestones"
@@ -31757,6 +31879,11 @@ msgid ""
 "the :guilabel:`Milestones` smart button. On the *Milestones* page, enable "
 "the checkbox in the :guilabel:`Reached` column for the milestone."
 msgstr ""
+"Es posible realizar el seguimiento de los hitos desde la aplicación "
+"**Proyecto** (consulta :ref:`Uso de hitos <project/project_milestones/using-"
+"milestones>`). Además, puedes marcar un hito como completado si vas a la "
+"|SO| y haces clic en el botón inteligente :guilabel:`Hitos`. En la página "
+"*Hitos*, marca la casilla en la columna :guilabel:`Alcanzado` del hito."
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:102
 msgid ""
@@ -31980,6 +32107,9 @@ msgid ""
 "configuring service products for time spent, tracking and invoicing "
 "expenses, and invoicing purchases linked to the order."
 msgstr ""
+"Cubre la facturación de una orden de venta según el tiempo y los materiales, "
+"lo que incluye configurar productos de servicio para el tiempo dedicado, "
+"registrar y facturar gastos, y facturar compras vinculadas a la orden."
 
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:8
 msgid "Invoicing based on time and materials"
@@ -32197,6 +32327,12 @@ msgid ""
 "select the properly :ref:`configured service product <sales/time_materials/"
 "configured-service-product>` from the drop-down menu."
 msgstr ""
+"Para ver esto en acción, ve a :menuselection:`Ventas --> Nuevo` para abrir "
+"un formulario de cotización en blanco. Luego, agrega un :guilabel:`Cliente` "
+"y, en la pestaña :guilabel:`Líneas de la orden`, haz clic en "
+":guilabel:`Agregar un producto` y selecciona el :ref:`producto de servicio "
+"configurado <sales/time-materials/configuration-product>` correctamente en "
+"el menú desplegable."
 
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:99
 msgid "Next, click :guilabel:`Confirm` to confirm the order."
@@ -32565,6 +32701,12 @@ msgid ""
 "in the :menuselection:`Expenses` app. From the expense report, click "
 "the :guilabel:`Sales Orders` smart button at the top of the page."
 msgstr ""
+"Para facturar a un cliente un :ref:`gasto en una orden de venta <sales/"
+"time_materials/add-expenses-sales-order>`, ve a la orden de venta "
+"correspondiente, ya sea desde la aplicación :menuselection:`Ventas` o desde "
+"el reporte de gastos en la aplicación :menuselection:`Gastos`. Desde el "
+"reporte de gastos, haz clic en el botón inteligente :guilabel:`Órdenes de "
+"venta` en la parte superior de la página."
 
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:246
 msgid ""
@@ -32836,6 +32978,10 @@ msgid ""
 "order>`, then navigate to the desired sales order in "
 "the :menuselection:`Sales` app."
 msgstr ""
+"Para facturar a un cliente una compra en una orden de venta, primero "
+":ref:`agrega la compra a la orden de venta <sales/time_materials/add-"
+"purchase-to-sales-order>` y luego ve a la orden de venta deseada en la "
+"aplicación :menuselection:`Ventas`."
 
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:356
 msgid ""
@@ -38642,6 +38788,9 @@ msgid ""
 "its Order Lines, Optional Products, and Other Info tabs, and send it to a "
 "customer for confirmation."
 msgstr ""
+"Explica cómo configurar los ajustes de cotizaciones, crear una cotización, "
+"completar sus pestañas Líneas de la orden, Productos opcionales y Otra "
+"información, y enviarla a un cliente para su confirmación."
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:10
 msgid ""
