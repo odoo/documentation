@@ -74,14 +74,10 @@ Schedule
 
 This section defines when the employee is expected to work. Configure the following fields:
 
-- :guilabel:`Working Hours`: Select the hours the employee is expected to work, using the drop-down
+- :guilabel:`Working Hours`: Select the hours the employee is expected to work using the drop-down
   menu. By default, a :guilabel:`Standard 40 hours/week` working schedule is selected. If the
   **Timesheets** app is installed, an :guilabel:`Appointment Resource Default Calendar` option is
   also available.
-
-  To view and modify the specific daily working hours, click the :icon:`oi-arrow-right`
-  :guilabel:`(Internal link)` arrow at the end of the :guilabel:`Working Hours` line. Working hours
-  can be modified or deleted here.
 
   .. note::
     :guilabel:`Working Hours` are related to a company's working schedules, and an employee
@@ -101,6 +97,11 @@ This section defines when the employee is expected to work. Configure the follow
 
     After the new working hours are created, or an existing one is modified, the :guilabel:`Working
     Hours` can be selected on the employee form.
+
+  .. important::
+     The :guilabel:`Working Hours` field is **required** and cannot be left blank. For employees
+     with no fixed schedule, :ref:`create a new fully-flexible working schedule
+     <payroll/new-working-schedule>`, then select it.
 
   .. seealso::
      :doc:`Working hours <working_hours>`
