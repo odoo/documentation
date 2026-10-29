@@ -132,9 +132,6 @@ configured:
 - :guilabel:`Pay Category`: Select :guilabel:`Jordan: Employee` for this field. This defines when
   the employee is paid, their default working schedule, and the work entry type it applies to.
 
-.. image:: jordan/jo-payroll-overview.png
-   :alt: The contract overview section of the employee form of the payroll tab.
-
 Schedule section
 ~~~~~~~~~~~~~~~~
 
@@ -159,24 +156,22 @@ Allowances section
 The following sections of benefits are considered common ones offered by Jordanian employers. This
 information needs to be populated with the information selected by the employee.
 
+Enter the monthly allowance amount for :guilabel:`Housing`, :guilabel:`Transportation`, and
+:guilabel:`Other` allowances.
+
 .. note::
    The benefits listed in this section are considered the ones most commonly offered by companies.
    If other employee benefits exist that require regular paycheck deductions, they can be added as
    *inputs*.
-
-Enter the monthly allowance amount for :guilabel:`Housing`, :guilabel:`Transportation`, and
-:guilabel:`Other` allowances.
-
-If the employee is tax exempt, enter the annual amount that is not subject to taxes in the
-:guilabel:`Tax Exemption` field.
-
-If the employee's salary is based on commission, tick the :guilabel:`Is Commission based` checkbox.
 
 Annual leave provision section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Every year, employees receive days off. Enter the number of days in the :guilabel:`Number of Leave
 days` field. The default value is 14.
+
+.. image:: jordan/jo-payroll-overview.png
+   :alt: The contract overview section of the employee form of the payroll tab.
 
 Social Insurance
 ================
