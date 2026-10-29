@@ -50,6 +50,7 @@ Product information display in the POS register
 To view and edit product information from the POS register, click and hold the product to access the
 following details:
 
+- :ref:`product tags <pos/products/tags>`,
 - the :doc:`available
   </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products>`,
   :doc:`forecasted
@@ -200,26 +201,27 @@ Then, specify the product's reference price as follows:
 Product Tags
 ------------
 
-Product tags help highlight specific features in :doc:`self-ordering mode <extra/self_order>`. To
-create product tags, go to :menuselection:`Point of Sale --> Configuration --> Product Tags`. On the
-:guilabel:`Product Tags` page, click :guilabel:`New` or select an existing tag.
-
-On the product tag form:
+Product tags highlight specific product features, such as allergens. Product tags appear in the
+:ref:`POS register <pos/products/information-display>` to help cashiers inform customers and in
+:doc:`self-ordering mode <extra/self_order>` to inform customers browsing the menu. To create a tag,
+go to :menuselection:`Point of Sale --> Configuration --> Product Tags`, click :guilabel:`New`, then
+customize the fields as follows:
 
 - Enter a :guilabel:`Tag` label.
-- Enable/disable :guilabel:`Visible to customers` to control whether the tag is visible to customers
-  in :doc:`self-ordering mode <extra/self_order>`.
-- Optionally, choose a :guilabel:`Color` or add an image. If both are configured, the image replaces
-  the tag's color.
-- In the :guilabel:`Point of sale` section, write a :guilabel:`Description` to be shown in
-  self-ordering mode.
-
-To add tags to a product, navigate to the product form, go to the :guilabel:`Sales` tab, and, in
-the :guilabel:`Extra info` section, add as many :guilabel:`Tags` as needed.
+- Enable :guilabel:`Visible to customers` to show the tag in self-ordering mode. This does not
+  affect the POS register, where tags are always visible.
+- Choose a :guilabel:`Color` or add an image for self-ordering mode. If both are configured, only
+  the image appears in self-ordering mode.
+- In the :guilabel:`Point of Sale` section, enter a :guilabel:`Description` for self-ordering mode.
 
 .. note::
-   If the **eCommerce** app is installed, :ref:`tags <ecommerce/catalog/filters>` are used in both
-   apps, and need to be added in the :guilabel:`Shop` section of the :guilabel:`eCommerce` tab.
+   Only the tag label and :guilabel:`Color` appear in the POS register. The tag image and
+   :guilabel:`Description` appear only in self-ordering mode.
+
+Assign tags to products on the :ref:`product form <pos/products/creation>`, under the
+:guilabel:`General Information` tab, in the :guilabel:`Tags` field.
+
+.. todo:: Update the examples.
 
 .. _pos/products/tag-application:
 
