@@ -58,8 +58,8 @@ Click :guilabel:`New` to create a new plan, add a name, and fill in the followin
 
 - :guilabel:`Color`: Set a color for the tag related to this specific plan.
 
-To fine-tune a plan's applicability, create a new line in the :guilabel:`Applicability` tab and set
-the following fields:
+To fine-tune a plan's applicability, create a new line in the :guilabel:`Applicability` tab and
+configure the following fields to your needs:
 
 - :guilabel:`Domain`: Choose the accounting documents to which the plan applies.
 - :guilabel:`Financial Accounts Prefixes`: Enter the prefix(es) of the account(s) to which the plan
@@ -70,6 +70,11 @@ the following fields:
 - :guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>`
   environment, select the company using the plan. To make the analytic plan accessible to all
   companies, leave the field empty.
+
+.. tip::
+   To apply an analytic plan only to specific account types (for example, to :guilabel:`Expenses`
+   accounts), but without using numerical prefixes, leave the :guilabel:`Financial Accounts
+   Prefixes` field blank. Instead, use the :guilabel:`Domain` field to filter by account types.
 
 Two smart buttons are available:
 
@@ -89,8 +94,8 @@ Analytic distribution
 =====================
 
 The distribution of costs in one or more analytic accounts can be set in each :ref:`invoice/bill
-<accounting/analytic_accounting/distribution-invoices-bills>` or :ref:`en masse
-<accounting/analytic_accounting/distribution-mass>`.
+<accounting/analytic_accounting/distribution-invoices-bills>` or :ref:`in bulk
+<accounting/analytic_accounting/distribution-bulk>`.
 
 .. note::
    The analytic distribution is prefilled based on the applicability and the :ref:`analytic
@@ -112,17 +117,19 @@ To add analytic distribution, click the :guilabel:`Analytic Distribution` column
 
 In the :guilabel:`Analytic` window, select the desired :guilabel:`Analytic Accounts` in the
 different :guilabel:`Analytic Plans` displayed in columns. Then, split the costs between the
-accounts by modifying the percentage.
+accounts by modifying the percentage. Then, split the costs between the accounts by modifying the
+percentages. Percentages apply per analytic plan column independently (each plan must total 100%),
+meaning combined rows in the pop-up window can add up to more than 100%.
 
-.. image:: analytic_accounting/analytic-distribution.png
+.. image:: analytic_accounting/analytic-plans.png
    :alt: create a distribution template
 
-.. _accounting/analytic_accounting/distribution-mass:
+.. _accounting/analytic_accounting/distribution-bulk:
 
-Analytic distribution en masse
-------------------------------
+Bulk analytic distribution
+--------------------------
 
-To mass-edit analytic accounts in several entries simultaneously, go to :menuselection:`Accounting
+To bulk-edit analytic accounts in several entries simultaneously, go to :menuselection:`Accounting
 --> Review --> Journal items`, and select the ones that need to be updated. Click the
 :guilabel:`Analytic Distribution` column and add the required distribution in the
 :guilabel:`Analytic` column, then click the :icon:`oi-close` :guilabel:`(cross)` and
@@ -152,6 +159,11 @@ to apply automatically:
      multiple models if linked to different
      :ref:`analytic plans <accounting/analytic_accounting/analytic_plans>`. To adjust the order,
      drag and drop the models using the :icon:`oi-draggable` :guilabel:`(draggable)` icon.
+
+.. tip::
+   If a field is left empty, Odoo ignores that constraint. For example, if you do not use
+   :guilabel:`Accounts Prefixes`, leave the field blank and trigger the model using the
+   :guilabel:`Partner` or :guilabel:`Product` fields.
 
 - :guilabel:`Accounts Prefixes`: Apply the distribution model only to journal items involving
   accounts that begin with specific prefixes.
@@ -192,10 +204,32 @@ reveal more columns or click :guilabel:`View` on an individual analytic distribu
 
 .. tip::
    Alternatively, it is possible to create an analytic distribution model from the
-   :guilabel:`Analytic` window by clicking :guilabel:`New Model`:
+   :guilabel:`Analytic` window by clicking :guilabel:`New Model` when:
 
-   - either when creating an invoice/bill and filling in the :ref:`analytic distribution
+   - creating an invoice/bill and filling in the :ref:`analytic distribution
      <accounting/analytic_accounting/distribution-invoices-bills>`;
-   - or when :ref:`mass-editing analytic accounts
-     <accounting/analytic_accounting/distribution-mass>` in several entries simultaneously.
+   - :ref:`bulk-editing analytic accounts <accounting/analytic_accounting/distribution-bulk>` in
+     several entries simultaneously.
 
+   .. example::
+      If your company operates without numerical account codes (like the United States), you can
+      leave the :guilabel:`Accounts Prefixes` field blank and trigger your automation using other
+      transaction details. Here are some business case examples:
+
+        - You want to split all generic utility bills automatically between your physical retail
+          stores and your e-commerce operations.
+
+          - Setup: Leave :guilabel:`Accounts Prefixes` empty. Set :guilabel:`Product Category` to
+            `Bills & Utilities`.
+          - :guilabel:`Analytic Distribution`: Set `60% Retail` and `40% E-commerce`.
+          - Result: Any time a vendor bill is entered for an item under that category, Odoo splits
+            the costs automatically without needing a GL account number.
+
+      - You want to distribute shared cloud infrastructure costs across internal teams whenever a
+        bill arrives from a specific vendor.
+
+        - Setup: Leave :guilabel:`Accounts Prefixes` empty. Set :guilabel:`Partner` to
+          `Amazon Web Services`.
+        - :guilabel:`Analytic Distribution`: Set `30% Customer Operations` and `70% Internal IT`.
+        - Result: Any time a vendor bill is entered with this partner, Odoo splits the costs
+          automatically without needing a GL account number.
