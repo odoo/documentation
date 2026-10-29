@@ -105,11 +105,6 @@ value of the expression:
    The result is the sum of all the balances of the matched move lines if this amount is negative.
    Otherwise, it is `0`.
 
-`count_rows`
-   The result is the number of sub-lines of this expression. If the report line has a group-by
-   value, this will correspond to the number of distinct grouping keys in the matched move lines.
-   Otherwise, it will be the number of matched move lines.
-
 You can also put a `-` sign at the beginning of the subformula to **reverse** the sign of the
 result.
 
