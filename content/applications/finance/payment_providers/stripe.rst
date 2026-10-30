@@ -108,6 +108,11 @@ the Stripe payment provider <payment_providers/supported_providers>`, then go to
 :guilabel:`Configuration` tab, enable :guilabel:`Allow Express Checkout`, and click
 :guilabel:`Enable Apple Pay`.
 
+.. important::
+   Apple Pay can only be enabled on one payment provider at a time. If Apple Pay is already enabled
+   on another provider (e.g., :doc:`PayPal <paypal>`), disable it there before enabling it with
+   Stripe.
+
 .. seealso::
    :ref:`Express checkout and Google Pay <payment_providers/express_checkout>`
 
