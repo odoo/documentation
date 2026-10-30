@@ -602,7 +602,7 @@ Multiprocessing
         Number of requests a worker will process before being recycled and
         restarted.
 
-        Defaults to *8196*.
+        Defaults to *65536*.
 
     .. option:: --limit-memory-soft <limit>
 
