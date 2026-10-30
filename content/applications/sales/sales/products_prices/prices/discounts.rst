@@ -5,21 +5,16 @@ Discounts
 The *Discounts* feature allows users to decrease or increase the price on item lines in a sales
 quotation or order. This is calculated as a percentage of the products' sales price.
 
-To access discounts in the **Sales** app, navigate to :menuselection:`Sales app --> Configuration
---> Settings`. In the :guilabel:`Pricing` section, tick the :guilabel:`Discounts` checkbox, then
-click :guilabel:`Save`.
-
-After the setting has been activated, navigate to the desired quotation by going to
+To apply a discount, navigate to the desired quotation by going to
 :menuselection:`Sales app --> Orders --> Quotations` at the top of the page. Once there, click on
 the desired quote from the list.
 
 Discounts on product lines
 ==========================
 
-In the :guilabel:`Order Lines` tab of the quotation form, a new column heading appears labeled
-:guilabel:`Disc.%`. This column is used to set discounts on individual line items. Enter the desired
-discount for each product line and the new price is automatically calculated in the
-:guilabel:`Total` at the bottom of the page.
+In the :guilabel:`Order Lines` tab of the quotation form, the :guilabel:`Disc.%` column is used to
+set discounts on individual line items. Enter the desired discount for each product line and the
+new price is automatically calculated in the :guilabel:`Total` at the bottom of the page.
 
 .. tip::
    A discount can also be added directly to a sales order in the same way. Navigate to
@@ -43,8 +38,7 @@ discount for each product line and the new price is automatically calculated in 
 Discount button
 ===============
 
-With the *Discounts* settings enabled, a :guilabel:`Discount` button appears at the bottom of sales
-orders.
+A :guilabel:`Discount` button is available at the bottom of sales orders.
 
 .. image:: discounts/discount-button-sales-order.png
    :alt: The discount button located at the bottom of a sales order form in the Odoo Sales app.
