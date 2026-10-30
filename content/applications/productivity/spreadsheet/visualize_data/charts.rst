@@ -7,80 +7,82 @@ relationships between data.
 
 .. tip::
    Charts can be :ref:`created manually based on spreadsheet data
-   <spreadsheet/visualize/create-chart>` or :doc:`inserted directly from an Odoo graph view
+   <spreadsheet/charts/create>` or :doc:`inserted directly from an Odoo graph view
    <../insert/insert_chart>`.
 
-.. _spreadsheet/visualize/create-chart:
+.. _spreadsheet/charts/create:
 
 Create a chart
 --------------
 
 To create a chart manually:
 
-#. Select the cells containing the data you want to represent using a chart.
-#. Click :menuselection:`Insert --> Chart` from the menu bar.
+#. Select the cells containing the data to represent using a chart.
+#. Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` from the menu bar.
 
-   .. tip:: Odoo uses the most appropriate :ref:`chart type <spreadsheet/visualize/chart-types>` for
-      the selected data; this can be changed in the configuration section of the :ref:`chart
-      properties <spreadsheet/visualize/customize-charts>`, which opens on the right side of the
-      spreadsheet.
+   .. note:: Odoo uses the most appropriate :ref:`chart type
+      <spreadsheet/charts/customize-configuration-type>` for the selected data; this can be changed
+      in the :icon:`tune` :ref:`Configuration <spreadsheet/charts/customize-configuration>` tab of
+      the chart properties.
 
-#. Make any desired changes to the configuration or design of the chart in the :ref:`chart
-   properties <spreadsheet/visualize/customize-charts>`.
+Once the chart has been created, it can be :ref:`customized <spreadsheet/charts/customize>` via the
+chart properties.
 
-.. _spreadsheet/visualize/customize-charts:
+.. _spreadsheet/charts/customize:
 
 Customize charts
 ----------------
 
-A chart that has been :ref:`created manually <spreadsheet/visualize/create-chart>` or :doc:`inserted
+A chart that has been :ref:`created manually <spreadsheet/charts/create>` or :doc:`inserted
 from an Odoo graph view <../insert/insert_chart>` can be further customized via the
-:ref:`chart properties <spreadsheet/visualize/customize-charts>`.
+chart properties, which open in a panel to the right of the spreadsheet.
 
 Here, it is possible to modify various aspects of the chart's configuration and design via the
-:icon:`fa-sliders` :ref:`Configuration <spreadsheet/visualize/charts-configuration>` and
-:icon:`fa-paint-brush` :ref:`Design <spreadsheet/visualize/charts-design>` tabs respectively.
+:icon:`tune` :ref:`Configuration <spreadsheet/charts/customize-configuration>` and
+:icon:`design_services` :ref:`Design <spreadsheet/charts/customize-design>` tabs respectively.
 
 .. tip::
    A chart's properties can be accessed at any time, as follows:
 
    - For any chart, whether manually created or inserted from an Odoo view, hover over
-     the chart then click the :icon:`fa-bars` :guilabel:`(menu)` icon and click
-     :icon:`fa-pencil-square-o` :guilabel:`Edit`.
-   - For a chart inserted from an Odoo graph view, click :guilabel:`Data` on the menu bar then
-     select the relevant chart, as prefaced by the :icon:`fa-bar-chart` :guilabel:`(chart)` icon,
-     e.g., :icon:`fa-bar-chart` *(#1) Sales Analysis*.
+     the chart, click the :icon:`more_vert` :guilabel:`(menu)` icon, then click
+     :icon:`edit_square` :guilabel:`Edit`.
+   - For a chart inserted from an Odoo graph view, click :guilabel:`Data` on the menu bar, then
+     select the relevant chart from the :icon:`bar_chart` :guilabel:`Charts` section.
 
-.. _spreadsheet/visualize/charts-configuration:
+.. _spreadsheet/charts/customize-configuration:
 
 Configuration tab
 ~~~~~~~~~~~~~~~~~
 
-The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sections:
+The :icon:`tune` :guilabel:`Configuration` tab includes the following fields:
 
-- :ref:`Chart type <spreadsheet/visualize/chart-types>`: the type of chart. For a chart that has
-  been:
+- :ref:`Chart type <spreadsheet/charts/customize-configuration-type>`: the type of chart. For a
+  chart that has been:
 
   - manually created, this is by default the chart type suggested by Odoo;
   - inserted from an Odoo graph view, this is by default the type of chart selected in the graph
-    view before the chart was inserted in the spreadsheet.
+    view before the chart was inserted into the spreadsheet.
 
-  To change the chart type, click the dropdown menu to select the desired chart type.
+  Click the dropdown menu to select a different chart type.
 
-- :guilabel:`Domain`: the rules used to determine which records are shown. Click :ref:`Edit domain
-  <search/custom-filters>` to add or edit rules.
+- :guilabel:`Model` and :guilabel:`Domain`: for a chart inserted from an Odoo graph view, the model
+  from which the data has been extracted and rules used to determine which records are shown,
+  respectively. Click :icon:`east` :ref:`Edit domain <search/custom-filters>` to add or edit rules.
 - :guilabel:`Link to Odoo menu`: to add a :doc:`clickable link <../insert/insert_clickable_links>`
   from a chart to an Odoo menu item, i.e., a specific view of a model.
 
-.. _spreadsheet/visualize/chart-types:
+Depending on the chart type, other fields may also be displayed.
+
+.. _spreadsheet/charts/customize-configuration-type:
 
 Chart types
 ***********
 
 When a chart is:
 
-- :ref:`created manually <spreadsheet/visualize/create-chart>`, any of the chart types in the tabs
-  below can be selected;
+- :ref:`created manually <spreadsheet/charts/create>`, any of the chart types in the tabs below can
+  be selected;
 - :doc:`inserted directly from an Odoo graph view <../insert/insert_chart>`, any chart type except
   those shown in the :guilabel:`Other` tab can be selected.
 
@@ -208,12 +210,6 @@ When a chart is:
       :guilabel:`Filled radar`: fills the area within the radar chart's polygon, emphasizing the
       overall magnitude of values across different attributes for comparison.
 
-      .. image:: charts/chart-type-geo.png
-         :alt: Geo chart icon
-
-      :guilabel:`Geo`: visualizes data on a map using color variations to represent values or
-      categories across different geographical regions.
-
       .. image:: charts/chart-type-funnel.png
          :alt: Funnel chart icon
 
@@ -224,6 +220,12 @@ When a chart is:
 
       When creating a chart from spreadsheet data, rather than inserting one from a graph view,
       the following chart types are also available:
+
+      .. image:: charts/chart-type-bubble.png
+         :alt: Bubble chart icon
+
+      :guilabel:`Bubble`: Visualizes multi-dimensional data across categories using circle size and
+      position.
 
       .. image:: charts/chart-type-gauge.png
          :alt: Gauge chart icon
@@ -238,6 +240,12 @@ When a chart is:
       format, such as total sales or conversion rates, and compare to a baseline or a previous
       value.
 
+      .. image:: charts/chart-type-geo.png
+         :alt: Geo chart icon
+
+      :guilabel:`Geo`: visualizes data on a map using color variations to represent values or
+      categories across different geographical regions.
+
       .. image:: charts/chart-type-calendar.png
          :alt: Calendar chart icon
 
@@ -245,64 +253,131 @@ When a chart is:
       months or years. This chart type can be used to illustrate fluctuations based on e.g.,
       specific days of the week or for tracking long-term trends.
 
-.. _spreadsheet/visualize/charts-design:
+.. _spreadsheet/charts/customize-design:
 
 Design tab
 ~~~~~~~~~~
 
-Depending on the chart type, the :icon:`fa-paint-brush` :guilabel:`Design` tab has one or more
-sections.
+The :icon:`design_services` :guilabel:`Design` tab contains several sections, depending on the
+:ref:`type of chart <spreadsheet/charts/customize-configuration-type>`. The fields and options
+available within sections may also vary depending on the chart type.
 
-The :guilabel:`General` section allows you to modify the following elements:
+.. _spreadsheet/charts/design-general:
 
-- :guilabel:`Background color`: Add or change the background color by clicking on the color dot.
-  Choose one of the standard colors or click the :icon:`fa-plus` icon to manually select a custom
-  color.
+General
+*******
+
+The :guilabel:`General` section allows the following elements to be modified:
+
+- :guilabel:`Background color`: Add or change the background color by clicking the color dot, then
+  :ref:`choosing the desired color <spreadsheet/charts/design-color>`.
 - :guilabel:`Chart title`: Edit the chart title, if needed. The font formatting, horizontal
   alignment, font size, and color of the title can be modified using the editor.
 - :guilabel:`Legend position`: Change the position of the legend or opt to have no legend.
-- Enable :guilabel:`Show values` to add numeric values to the data points on the
-  chart.
+- :guilabel:`Show values`: Add numeric values to the data points on the chart.
+- :guilabel:`Zoom`: Enable :guilabel:`Show slicer` to be able to zoom in on a portion of the
+  horizontal axis and scroll forwards and backwards.
+- :guilabel:`Number formatting`: Enable :guilabel:`Use compact format` to display, e.g., $200k
+  instead of $200,000.00.
 
-The :guilabel:`Data Series` section allows you to modify the following elements:
+.. _spreadsheet/charts/design-color:
+
+.. tip::
+   To choose a color from the color selector, use one of the following methods:
+
+   - select one of the standard colors
+   - click the :icon:`add_circle` :guilabel:`(plus)` icon to manually select a custom color
+   - click the :icon:`colorize` :guilabel:`(dropper)` icon to copy any color from the device's
+     screen
+
+.. _spreadsheet/charts/design-annotation:
+
+Annotation
+**********
+
+The :guilabel:`Annotation` section allows the addition of :guilabel:`Text` to provide context or
+additional information about the chart and/or a :guilabel:`See more link`.
+
+.. tip::
+   Annotations added to a chart can be viewed by hovering over the chart, then clicking the
+   :icon:`info` :guilabel:`(Chart Info)` icon in the top right corner.
+
+.. _spreadsheet/charts/design-data-series:
+
+Data Series
+***********
+
+The :guilabel:`Data Series` section allows the following elements to be modified:
 
 - :guilabel:`Series color`: With the relevant data series selected, change the color of the related
-  data points on the chart by clicking on the color dot circle. Choose one of the standard colors or
-  click the :icon:`fa-plus` icon to manually select a custom color.
+  data points on the chart by clicking on the color dot and :ref:`choosing the desired color
+  <spreadsheet/charts/design-color>`.
 - :guilabel:`Series name`: Edit the name of a data series, if needed.
-- :guilabel:`Serie type`: For each data series of a :guilabel:`Combo` chart, determine whether the
+- :guilabel:`Series type`: For each data series of a :guilabel:`Combo` chart, determine whether the
   series is shown as a :guilabel:`Bar` or :guilabel:`Line`.
 - :guilabel:`Vertical axis`: For the selected data series of a :guilabel:`Line`, :guilabel:`Area`,
   or :guilabel:`Column` chart, select whether it should be displayed on the :guilabel:`Left`
   (primary) or :guilabel:`Right` (secondary) vertical axis.
 - :guilabel:`Trend line`: With the relevant data series selected, enable :guilabel:`Show trend line`
-  then select the type of trend line from the dropdown; the options are :guilabel:`Linear`,
-  :guilabel:`Exponential`, :guilabel:`Polynomial`, :guilabel:`Logarithmic`, and :guilabel:`Trailing
-  moving average`. The color of the trend line can be changed by clicking on the color circle.
+  then select the :guilabel:`Type` of trend line: :guilabel:`Linear`, :guilabel:`Exponential`,
+  :guilabel:`Polynomial`, :guilabel:`Logarithmic`, or :guilabel:`Trailing moving average`. To change
+  the color of the trend line, click the color dot, then :ref:`choose the desired color
+  <spreadsheet/charts/design-color>`.
 
-The :guilabel:`Axes` section allows you add a title to one or both axes of a chart. The font
-formatting, horizontal alignment, font size, and color of the title can be modified using the
-editor.
+.. _spreadsheet/charts/design-axes:
 
-Waterfall charts have a dedicated :guilabel:`Waterfall design` section.
+Axes
+****
 
-.. _spreadsheet/visualize/manage-charts:
+The :guilabel:`Axes` section allows the following elements to be modified:
+
+- :guilabel:`Axis title`: Add a title to the :guilabel:`Horizontal axis` or :guilabel:`Vertical
+  axis`. The font formatting, horizontal alignment, font size, and color of the
+  title can be modified using the editor.
+
+- For horizontal or vertical axes that display numerical scales, it is also possible to modify the
+  following elements:
+
+  - :guilabel:`Axis range`: To restrict the range shown by an axis, enter a minimum and/or maximum
+    value. This can be used, for example, to avoid having empty space at the bottom of a chart if
+    all the values are well above zero, or to focus on a specific range of data.
+  - :guilabel:`Gridlines`: By default, only major horizonal/vertical gridlines are shown. Enable
+    minor horizonal/vertical gridlines if desired.
+
+.. _spreadsheet/charts/design-pie-slice:
+
+Pie Slice
+*********
+
+The :guilabel:`Pie Slice` section allows the color of pie chart slices, or categories of data, to be
+modified. With the relevant data series selected, change the color of the related pie chart slice by
+clicking the color dot and :ref:`choosing the desired color <spreadsheet/charts/design-color>`.
+
+.. _spreadsheet/charts/design-other:
+
+Other chart type-specific sections
+**********************************
+
+Sunburst, treemap, bubble, gauge, scorecard, waterfall, geo, funnel, and calendar charts have
+dedicated design sections.
+
+.. _spreadsheet/charts/manage:
 
 Manage charts
 -------------
 
-To reposition a chart within the same sheet, select the chart then drag it to the desired position.
-Resize a chart by selecting it, then clicking and dragging the blue markers until the chart is the
-desired size.
+.. _spreadsheet/charts/manage-basic-actions:
 
-Hovering over the chart reveals a :icon:`fa-bars` :guilabel:`(menu)` icon in the top right corner of
-the chart. Click the menu to reveal the following options:
+Basic actions
+~~~~~~~~~~~~~
 
-- :icon:`fa-edit` :guilabel:`Edit` to open the :ref:`chart properties
-  <spreadsheet/visualize/customize-charts>`, where various aspects of the chart's configuration and
-  design can be modified.
+Hover over a chart, then click the :icon:`more_vert` :guilabel:`(menu)` icon to reveal the following
+options:
 
-- :icon:`fa-clipboard` :guilabel:`Copy` or :icon:`os-cut` :guilabel:`Cut` to copy or cut a chart
+- :icon:`edit_square` :guilabel:`Edit` to open the chart's properties, where various aspects of the
+  chart's configuration and design can be :ref:`customized <spreadsheet/charts/customize>`.
+
+- :icon:`assignment` :guilabel:`Copy` or :icon:`os-cut` :guilabel:`Cut` to copy or cut a chart
   with the intention of pasting it *within the same spreadsheet*. Alternatively, with the chart
   selected, use the relevant keyboard shortcut to copy or cut the chart.
 
@@ -311,26 +386,40 @@ the chart. Click the menu to reveal the following options:
 
   .. note::
      For a chart inserted from an Odoo graph view, copying/cutting and pasting a chart in this way
-     maintains the :ref:`link between the chart and your database
+     maintains the :ref:`link between the chart and the database
      <spreadsheet/insert/data-sources>`. The data in the pasted chart remains up-to-date, and
      :ref:`clicking on a data point <spreadsheet/insert/accessing-data>` opens the related list view
      in the database.
 
-- :icon:`os-copy-as-image` :guilabel:`Copy as image` to copy an image of a chart to your clipboard
-  with the intention of pasting it *in any location within or outside your spreadsheet*.
+- :icon:`os-copy-as-image` :guilabel:`Copy as image` to copy an image of a chart to the clipboard
+  with the intention of pasting it *in any location within or outside the spreadsheet*.
 
   Paste the image in the desired location using the paste function of the destination program or the
   relevant keyboard shortcut.
 
   .. note::
      For a chart inserted from an Odoo graph view, copying and pasting a static image of a chart
-     implies there is no longer any link between the chart and your database.
+     implies there is no longer any link between the chart and the database.
 
-- :icon:`fa-download` :guilabel:`Download` to download an image of the chart as as `.png` file.
+- :icon:`download` :guilabel:`Download` to download an image of the chart as a `PNG` file.
 
-- :icon:`fa-trash-o` :guilabel:`Delete` to delete a chart from the spreadsheet. Alternatively, use
-  your preferred keyboard command to delete a chart.
+- :icon:`delete` :guilabel:`Delete` to delete a chart from the spreadsheet. Alternatively, use
+  the relevant keyboard command to delete a chart.
 
   .. note::
      For a chart inserted from an Odoo graph view, deleting a chart also deletes the chart's
      underlying :ref:`data source <spreadsheet/insert/data-sources>`.
+
+.. _spreadsheet/charts/manage-reposition-resize:
+
+Reposition or resize charts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Reposition a chart within the same sheet by dragging it to the desired position; to reposition
+multiple items at once, e.g., images, charts, or carousels, hold `CTRL` or `SHIFT` (or `Command`),
+select the items, then drag them to the desired position.
+
+Resize a chart by selecting it, then dragging the blue markers until the chart is the desired size.
+
+      .. image:: charts/resize-chart.png
+         :alt: Resize a chart using the blue markers
