@@ -9,7 +9,7 @@ tests
 
 - Python unit tests (see `Testing Python code`_): useful for testing model business logic
 - JS unit tests (see `Testing JS code`_): useful to test the javascript code in isolation
-- Tours (see `Integration Testing`_): tours simulate a real situation. They ensures that the
+- Tours (see `Integration Testing`_): tours simulate a real situation. They ensure that the
   python and the javascript parts properly talk to each other.
 
 .. _testing/python:
