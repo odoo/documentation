@@ -3186,6 +3186,64 @@ their value is used in a `t-if` condition.
          </templates>
       </card>
 
+.. _reference/view_architectures/help:
+
+Help
+====
+
+Help views define the helper displayed when a view has no record to show. They are standalone view
+records that list, kanban, graph, pivot, hierarchy, cohort, gantt and grid views reference with the
+``help_id`` root attribute. A help view must be defined on the same model as the views using it.
+
+The root element of help views is ``help``. Its content is :ref:`QWeb <reference/qweb>`, with the
+same directives as :ref:`card templates <reference/view_architectures/card/templates>`. It can
+contain:
+
+- HTML, with ``invisible`` attributes;
+- ``button`` elements of type ``object`` or ``action``; object buttons are called on an empty
+  recordset, and the view is reloaded afterwards;
+- ``widget`` elements, rendered without record.
+
+The rendering context contains:
+
+- ``context``: the current context;
+- ``data``: the values returned by the ``data_method`` (see below);
+- ``action_help``: the help of the action, rendered with ``<t t-out="action_help"/>``.
+
+.. example::
+   .. code-block:: xml
+
+      <record id="my_model_view_help" model="ir.ui.view">
+          <field name="model">my.model</field>
+          <field name="type">help</field>
+          <field name="arch" type="xml">
+              <help data_method="get_help_data">
+                  <t t-out="action_help"/>
+                  <p invisible="not data.get('alias_email')">
+                      Or send emails to <span t-out="data.alias_email"/>
+                  </p>
+                  <button name="action_load_sample_data" type="object" string="Load sample data"/>
+              </help>
+          </field>
+      </record>
+
+      <list help_id="%(my_module.my_model_view_help)d">
+          ...
+      </list>
+
+.. note::
+   ``invisible`` attributes are Python expressions (``data.get('key')``), while QWeb directives are
+   JavaScript expressions (``data.key``).
+
+.. attribute:: data_method
+
+   Name of a public method of the model, decorated with :func:`~odoo.api.model`, returning a
+   dictionary available as ``data`` in the help view. It receives the domain of the current search,
+   and is called when the helper is displayed and whenever the search changes.
+
+   :requirement: Optional
+   :type: str
+
 .. ALL VIEWS BELOW HAVE NOT YET BEEN CONVERTED TO THE NEW REFERENCE DOCUMENTATION FORMAT
 
 .. _reference/view_architectures/qweb:
