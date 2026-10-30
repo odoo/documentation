@@ -220,9 +220,8 @@ Timeline views
 
 .. note::
    - When you first activate one of the timeline views, you need to select which :ref:`Date
-     <studio/fields/simple-fields-date>` or :ref:`Date & Time
-     <studio/fields/simple-fields-date-time>` fields on your model should be used to define when the
-     records start and stop in order to display them on the view. You can modify the
+     or Date & Time fields <studio/fields/simple-fields-date-time>` on your model should be used to
+     define when the records start and stop in order to display them on the view. You can modify the
      :guilabel:`Start Date Field` and :guilabel:`Stop Date Field` after activating the view.
    - The settings described below are found under the view's :guilabel:`View` tab unless specified
      otherwise.

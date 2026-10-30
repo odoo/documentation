@@ -109,8 +109,8 @@ Date
 ~~~~
 
 .. note::
-   A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/simple-fields-date>`
-   or :ref:`Date & Time <studio/fields/simple-fields-date-time>` field.
+   A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time
+   <studio/fields/simple-fields-date-time>` field.
 
 With the :guilabel:`Filter properties` panel open:
 
