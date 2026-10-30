@@ -2,9 +2,9 @@
 Address autocomplete
 ====================
 
-Odoo integrates with the Google Places API to allow the autocompletion of addresses. As you begin
-typing an address, the system provides a list of suggested locations, reducing manual errors and
-saving time.
+Odoo integrates with the Google Places API to enable address autocompletion on contact forms. As
+you begin typing an address, the system provides a list of suggested locations, reducing manual
+errors and saving time.
 
 .. image:: address_autocomplete/address-autocomplete-example.png
    :alt: Address autocomplete on the contact form.
@@ -77,8 +77,9 @@ create API credentials. To do so, follow these steps:
 #. Click :guilabel:`Create`.
 
 .. note::
-   Under :guilabel:`Application restrictions`, the API key can be restricted to allow requests only
-   from specific websites, IP addresses, or apps.
+   Configuring restrictions under :guilabel:`Application restrictions` may cause connection
+   failures. Therefore, do not apply any additional restrictions to Odoo Online or Odoo.sh
+   databases. For on-premises databases, you can configure an IP address restriction if needed.
 
 .. important::
    Save your API key securely and never share it publicly.
@@ -96,5 +97,6 @@ Once the API key is generated, connect the Odoo database to the Google Places AP
 #. Click :guilabel:`Save`.
 
 .. seealso::
-   - :ref:`Address validation with Google Places API <ecommerce/checkout/address-validation>`
+   - :ref:`Address validation with the Google Places API during e-commerce checkout
+     <ecommerce/checkout/address-validation>`
    - :ref:`Geolocalization with Google Places API <geolocation/google-places-api>`
