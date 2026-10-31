@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-27 01:33+0000\n"
+"POT-Creation-Date: 2026-10-30 17:31+0000\n"
+"PO-Revision-Date: 2026-10-31 12:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-20-doc/hr/"
 "it/>\n"
@@ -1014,6 +1014,7 @@ msgstr ""
 "formazione sulla sicurezza in fabbrica."
 
 #: ../../export/content/applications/hr/appraisals/goals.rst:67
+#: ../../export/content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "Scheda Descrizione"
 
@@ -2805,6 +2806,498 @@ msgstr ":doc:`Report essenziali di Odoo <../../essentials/reporting>`"
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
 
+#: ../../export/content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Approvazioni"
+
+#: ../../export/content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"L'app **Approvazioni** in Odoo consente ai dipendenti di effettuare "
+"richieste ufficiali per una varietà di cose, dando alla direzione la "
+"possibilità di esaminare le richieste e quindi approvarle o rifiutarle. "
+"Questo mantiene tutte le richieste in un'unica posizione centralizzata, "
+"fornendo un'organizzazione chiara e trasparenza per tutte le richieste."
+
+#: ../../export/content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Tipi di approvazione"
+
+#: ../../export/content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Quando si richiede un'approvazione, è necessario specificare la categoria, o "
+"*tipo*. Sono disponibili nove categorie di approvazione preconfigurate per "
+"effettuare le richieste:"
+
+#: ../../export/content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`Viaggio di lavoro`: per richiedere viaggi di lavoro."
+
+#: ../../export/content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Prendi in prestito articoli`: per richiedere articoli fisici che "
+"l'azienda possiede o vende, per un determinato periodo di tempo."
+
+#: ../../export/content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Approvazione generale`: per richieste che non rientrano in "
+"nessuno degli altri otto tipi predefiniti."
+
+#: ../../export/content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Approvazione contratto`: per richiedere qualsiasi tipo di "
+"contratto esterno, escludendo :doc:`contratti dipendente <payroll/contracts>"
+"`."
+
+#: ../../export/content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Richiesta di pagamento`: per richiedere un'*approvazione "
+"preventiva* per spese relative all'azienda."
+
+#: ../../export/content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Questo tipo di approvazione viene utilizzato **solo** quando si richiede "
+"l'approvazione *in anticipo* per una spesa pagata direttamente dall'azienda. "
+"Questa categoria **non** deve essere utilizzata per le spese per le quali i "
+"dipendenti richiedono un rimborso. Ciò viene fatto tramite l':doc:`app Note "
+"spese <../finance/expenses/log_expenses>`."
+
+#: ../../export/content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ""
+":guilabel:`Richiesta di noleggio auto`: per richiedere un'auto a noleggio."
+
+#: ../../export/content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Premio segnalazione lavoro`: per richiedere premi per "
+"segnalazioni di lavoro guadagnati ma non completati tramite l'app "
+":doc:`Segnalazioni <referrals>`."
+
+#: ../../export/content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Approvvigionamento`: utilizzato per richiedere articoli legati al "
+"lavoro come forniture per ufficio, strumenti, ecc."
+
+#: ../../export/content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Crea RDO`: utilizzato per richiedere un preventivo per articoli "
+"da un fornitore."
+
+#: ../../export/content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Richieste di approvazione"
+
+#: ../../export/content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"Per creare una nuova richiesta di approvazione, apri l'app **Approvazioni**, "
+"fai clic sul pulsante :guilabel:`Nuova richiesta` sulla scheda del tipo di "
+"approvazione che meglio si adatta alla richiesta, e si caricherà un modulo "
+"di approvazione vuoto. Compila le varie sezioni e schede, quindi fai clic su "
+":guilabel:`Invia` per inviare la richiesta di approvazione."
+
+#: ../../export/content/applications/hr/approvals.rst:52
+#: ../../export/content/applications/hr/payroll/contracts.rst:80
+#: ../../export/content/applications/hr/payroll/work_entries.rst:252
+#: ../../export/content/applications/hr/time_off/time_off_types.rst:33
+msgid "General information section"
+msgstr "Sezione informazioni generali"
+
+#: ../../export/content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"La metà superiore del modulo contiene tutte le informazioni generali "
+"relative alla richiesta. Compila i seguenti campi nella metà superiore del "
+"modulo:"
+
+#: ../../export/content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Tutti i campi elencati di seguito appaiono nel modulo per la categoria "
+":guilabel:`Approvazione generale`. Se viene selezionata una "
+":guilabel:`Categoria` diversa, alcuni campi verranno nascosti."
+
+#: ../../export/content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Oggetto approvazione`: questo campo viene popolato "
+"automaticamente con il tipo di approvazione selezionato. Apporta le "
+"modifiche desiderate al testo predefinito per fornire ulteriore contesto "
+"alla richiesta."
+
+#: ../../export/content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Responsabile richiesta`: la persona responsabile della richiesta "
+"di approvazione. L'utente che ha effettuato l'accesso popola questo campo "
+"per impostazione predefinita."
+
+#: ../../export/content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`Categoria`: la categoria selezionata appare in questo campo ma "
+"può essere modificata usando il menu a tendina."
+
+#: ../../export/content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Data`: usando il selettore del calendario, imposta la data e "
+"l'ora a cui si riferisce la richiesta. Questo campo appare **solo** se è "
+"selezionato :guilabel:`Richiesta di pagamento` o :guilabel:`Approvazione "
+"generale` per la :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Periodo`: usando il selettore del calendario, imposta le date di "
+"inizio e fine per la richiesta nei campi :guilabel:`Da` e :guilabel:`a`. "
+"Questo campo appare **solo** se è selezionato :guilabel:`Viaggio di lavoro`, "
+":guilabel:`Prendi in prestito articoli`, :guilabel:`Richiesta noleggio auto` "
+"o :guilabel:`Approvazione generale` per la :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Luogo`: inserisci il luogo specifico a cui si riferisce la "
+"richiesta di approvazione. Questo campo appare **solo** se è selezionato "
+":guilabel:`Viaggio di lavoro` o :guilabel:`Approvazione generale` per la "
+":guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Contatto`: seleziona il punto di contatto per la richiesta "
+"utilizzando il menu a tendina. Le opzioni disponibili provengono dall'app "
+"**Contatti**. Questo campo appare **solo** se è selezionato "
+":guilabel:`Approvazione contratto`, :guilabel:`Richiesta di pagamento`, "
+":guilabel:`Premio segnalazione lavoro` o :guilabel:`Approvazione generale` "
+"per la :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Quantità`: inserisci il numero di articoli richiesti in questo "
+"campo. Questo campo appare **solo** se è selezionato "
+":guilabel:`Approvvigionamento` per la :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Importo`: inserisci l'importo richiesto. Questo campo appare "
+"**solo** se è selezionato :guilabel:`Approvazione contratto`, "
+":guilabel:`Richiesta di pagamento`, :guilabel:`Approvvigionamento` o "
+":guilabel:`Approvazione generale` per la :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Riferimento`: inserisci qualsiasi riferimento pertinente per la "
+"richiesta in questo campo. Questo campo appare **solo** se è selezionato "
+":guilabel:`Approvazione contratto` o :guilabel:`Approvazione generale` per "
+"la :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"Ogni tipo di approvazione presenta campi diversi sul modulo di approvazione. "
+"Questo perché ogni *tipo di approvazione* ha i propri campi obbligatori. Se "
+"il *tipo* non è noto immediatamente, fai clic sul pulsante :guilabel:`Nuova "
+"richiesta` nella parte superiore della pagina per aprire un modulo di "
+"richiesta di approvazione generica. Una volta selezionata la "
+":guilabel:`Categoria`, appaiono i campi corrispondenti sul modulo."
+
+#: ../../export/content/applications/hr/approvals.rst:97
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr ""
+"La metà superiore di un modulo di approvazione compilato per un viaggio di "
+"lavoro."
+
+#: ../../export/content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "Scheda prodotto"
+
+#: ../../export/content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"Se vengono richiesti prodotti configurati nel database, questi sono elencati "
+"nella scheda *Prodotti*. Questa scheda appare **solo** se è selezionato "
+":guilabel:`Prendi in prestito articoli`, :guilabel:`Approvazione generale` o "
+":guilabel:`Crea richieste di offerta` nel campo :guilabel:`Categoria`."
+
+#: ../../export/content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"Per aggiungere un prodotto, fai clic su :guilabel:`Aggiungi una riga` e "
+"apparirà una riga vuota. Utilizzando il menu a tendina, seleziona il "
+"prodotto richiesto. Una volta selezionato, la :guilabel:`Descrizione` "
+"configurata del prodotto popola automaticamente il campo. La "
+":guilabel:`Quantità` è :guilabel:`1.00` per impostazione predefinita, ma può "
+"essere aggiornata se necessario."
+
+#: ../../export/content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"La scheda *Descrizione* serve per inserire qualsiasi informazione utile a "
+"chiarire la richiesta. Aggiungi eventuali informazioni pertinenti in questa "
+"scheda."
+
+#: ../../export/content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "Scheda Approvatore/i"
+
+#: ../../export/content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"La scheda *Approvatore(i)* è dove vengono configurate le persone "
+"responsabili dell'approvazione della richiesta. Per aggiungere un "
+"approvatore, fai clic su :guilabel:`Aggiungi una riga`, e apparirà una riga "
+"vuota. Utilizzando il menu a tendina, seleziona l'utente desiderato. Ripeti "
+"per tutti gli altri approvatori. Non c'è un numero massimo di utenti per "
+"questa scheda."
+
+#: ../../export/content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"Per indicare che un utente **deve** approvare la richiesta, seleziona la "
+"casella di controllo nella colonna :guilabel:`Obbligatorio`."
+
+#: ../../export/content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"Man mano che gli utenti vengono aggiunti, il loro :guilabel:`Stato` rimane "
+":guilabel:`Nuovo`."
+
+#: ../../export/content/applications/hr/approvals.rst:133
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+"La scheda approvatori con tre approvatori elencati, di cui uno obbligatorio."
+
+#: ../../export/content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "Allega documenti"
+
+#: ../../export/content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Tutte le richieste di approvazione includono l'opzione di allegare documenti "
+"pertinenti. Per allegare un documento, fare clic sul pulsante "
+":guilabel:`Allega documento` nella parte superiore della pagina; si aprirà "
+"una finestra di esplora risorse. Navigare fino al file desiderato, "
+"selezionarlo, quindi fare clic su :guilabel:`Apri` per allegarlo. È "
+"possibile selezionare e aggiungere più documenti contemporaneamente."
+
+#: ../../export/content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Una volta allegato, nella parte superiore della pagina appare un :icon:`fa-"
+"book` :guilabel:`Documenti` pulsante smart che indica quanti documenti sono "
+"allegati. Inoltre, i documenti sono elencati nel chatter. Se lo schermo è "
+"sufficientemente ampio, i documenti appaiono sul lato dello schermo."
+
+#: ../../export/content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Gestire le approvazioni"
+
+#: ../../export/content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Dopo che le richieste sono state inviate, devono essere approvate dagli "
+"approvatori richiesti elencati nella :ref:`scheda Approvatore/i <approvals/"
+"approvers>`. Per visualizzare le approvazioni in attesa di azione, navigare "
+"su :menuselection:`Approvazioni --> Manager --> Approvazioni da "
+"revisionare`, e verrà caricata la dashboard *Approvazioni da revisionare*. "
+"Tutte le approvazioni in attesa di azione da parte dell'utente appaiono in "
+"ordine alfabetico in una visualizzazione elenco predefinita."
+
+#: ../../export/content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"Solo le richieste *inviate* per le quali l'utente è assegnato come "
+"approvatore appaiono nella dashboard *Approvazioni da revisionare*. Tutte le "
+"altre richieste rimangono nascoste."
+
+#: ../../export/content/applications/hr/approvals.rst:163
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+"Tutte le richieste di approvazione in attesa di approvazione assegnate "
+"all'utente."
+
+#: ../../export/content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Le richieste devono essere approvate individualmente dal modulo delle "
+"approvazioni. Per approvare una richiesta, fare clic sulla singola richiesta "
+"nella dashboard *Approvazioni da revisionare* per caricare il modulo della "
+"richiesta individuale."
+
+#: ../../export/content/applications/hr/approvals.rst:169
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr ""
+"Una richiesta di prendere in prestito una fotocamera, con i pulsanti Approva "
+"e Rifiuta in evidenza."
+
+#: ../../export/content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"Per approvare la richiesta, fare clic sul pulsante :guilabel:`Approva` nel "
+"modulo di richiesta di approvazione individuale; lo stato cambierà in "
+":guilabel:`Approvato`. Quando gli utenti approvano la richiesta, il loro "
+":guilabel:`Stato` cambia in :guilabel:`Approvato` e il testo diventa verde."
+
+#: ../../export/content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"Per rifiutare la richiesta, fare clic sul pulsante :guilabel:`Rifiuta` nel "
+"modulo di richiesta di approvazione individuale; lo stato cambierà in "
+":guilabel:`Rifiutato`. Quando un utente rifiuta una richiesta, il suo "
+":guilabel:`Stato` cambia in :guilabel:`Rifiutato` e il testo diventa rosso."
+
+#: ../../export/content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"In qualsiasi momento, le richieste di approvazione :guilabel:`Approvate` o "
+":guilabel:`Rifiutate` possono tornare allo stadio :guilabel:`Inviato` "
+"facendo clic sul pulsante :guilabel:`Ritira`. Lo :guilabel:`Stato` per tutti "
+"gli approvatori torna a :guilabel:`Da approvare` e il testo diventa "
+"arancione."
+
 #: ../../export/content/applications/hr/attendances.rst:5
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:974
 msgid "Attendances"
@@ -2923,7 +3416,7 @@ msgstr ""
 "apportare modifiche alle impostazioni."
 
 #: ../../export/content/applications/hr/attendances.rst:49
-#: ../../export/content/applications/hr/employees/new_employee.rst:625
+#: ../../export/content/applications/hr/employees/new_employee.rst:626
 msgid "Approvers"
 msgstr "Approvatori"
 
@@ -7521,7 +8014,7 @@ msgstr ""
 "sono annidate sotto di essa."
 
 #: ../../export/content/applications/hr/employees/certifications.rst:28
-#: ../../export/content/applications/hr/employees/new_employee.rst:305
+#: ../../export/content/applications/hr/employees/new_employee.rst:306
 msgid ""
 ":guilabel:`Color`: Click on the existing color to view the available colors. "
 "Click the desired color to select it."
@@ -9000,31 +9493,19 @@ msgstr ""
 
 #: ../../export/content/applications/hr/employees/new_employee.rst:77
 msgid ""
-":guilabel:`Working Hours`: Select the hours the employee is expected to "
-"work, using the drop-down menu. By default, a :guilabel:`Standard 40 hours/"
-"week` working schedule is selected. If the **Timesheets** app is installed, "
+":guilabel:`Working Hours`: Select the hours the employee is expected to work "
+"using the drop-down menu. By default, a :guilabel:`Standard 40 hours/week` "
+"working schedule is selected. If the **Timesheets** app is installed, "
 "an :guilabel:`Appointment Resource Default Calendar` option is also "
 "available."
 msgstr ""
-":guilabel:`Orario di lavoro`: Selezionare l'orario in cui il dipendente deve "
-"lavorare, utilizzando il menu a discesa. Per impostazione predefinita, è "
-"selezionato un orario di lavoro :guilabel:`Standard 40 ore/settimana`. Se è "
-"installata l'app **Fogli ore**, è disponibile anche "
-"un'opzione :guilabel:`Calendario predefinito risorsa appuntamento`."
+":guilabel:`Orario di lavoro`: Seleziona le ore in cui il dipendente deve "
+"lavorare utilizzando il menu a tendina. Per impostazione predefinita, è "
+"selezionato un programma di lavoro :guilabel:`Standard 40 ore/settimana`. Se "
+"è installata l'app **Fogli ore**, è disponibile anche l'opzione "
+":guilabel:`Calendario predefinito risorsa appuntamento`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:82
-msgid ""
-"To view and modify the specific daily working hours, click the :icon:`oi-"
-"arrow-right` :guilabel:`(Internal link)` arrow at the end of "
-"the :guilabel:`Working Hours` line. Working hours can be modified or deleted "
-"here."
-msgstr ""
-"Per visualizzare e modificare gli orari di lavoro giornalieri specifici, "
-"fare clic sulla freccia :icon:`oi-arrow-right` :guilabel:`(Link interno)` "
-"alla fine della riga :guilabel:`Orari di lavoro`. Gli orari di lavoro "
-"possono essere modificati o eliminati qui."
-
-#: ../../export/content/applications/hr/employees/new_employee.rst:87
+#: ../../export/content/applications/hr/employees/new_employee.rst:83
 msgid ""
 ":guilabel:`Working Hours` are related to a company's working schedules, and "
 "an employee **cannot** have working hours that are outside of a company's "
@@ -9034,7 +9515,7 @@ msgstr ""
 "e un dipendente **non può** avere orari di lavoro esterni all'orario di "
 "lavoro di un'azienda."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:90
+#: ../../export/content/applications/hr/employees/new_employee.rst:86
 msgid ""
 "Each individual working schedule is company-specific. For multi-company "
 "databases, each company **must** have its own working hours set."
@@ -9042,7 +9523,7 @@ msgstr ""
 "Ogni singolo orario di lavoro è specifico per azienda. Per i database multi-"
 "azienda, ogni azienda **deve** avere i propri orari di lavoro impostati."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:93
+#: ../../export/content/applications/hr/employees/new_employee.rst:89
 msgid ""
 "If an employee's working hours are not configured as a working schedule for "
 "the company, new working schedules can be added, or existing working "
@@ -9052,7 +9533,7 @@ msgstr ""
 "lavoro per l'azienda, è possibile aggiungere nuovi orari di lavoro o "
 "modificare quelli esistenti."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:96
+#: ../../export/content/applications/hr/employees/new_employee.rst:92
 msgid ""
 "Working hours can be modified in both the **Employees** and **Payroll** "
 "apps, where they are referred to as :guilabel:`Working Schedules`."
@@ -9061,7 +9542,7 @@ msgstr ""
 "che nell'app **Libro paga**, dove sono indicati come :guilabel:`Orari di "
 "lavoro`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:99
+#: ../../export/content/applications/hr/employees/new_employee.rst:95
 msgid ""
 "For more information on how to create or modify :guilabel:`Working "
 "Schedules`, refer to the :doc:`working schedules <../payroll/"
@@ -9071,7 +9552,7 @@ msgstr ""
 "di lavoro`, consultare la documentazione sugli :doc:`orari di lavoro <../"
 "payroll/working_schedules>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:102
+#: ../../export/content/applications/hr/employees/new_employee.rst:98
 msgid ""
 "After the new working hours are created, or an existing one is modified, "
 "the :guilabel:`Working Hours` can be selected on the employee form."
@@ -9080,11 +9561,22 @@ msgstr ""
 "esistente, è possibile selezionare :guilabel:`Orario lavorativo` nel modulo "
 "dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:106
+#: ../../export/content/applications/hr/employees/new_employee.rst:102
+msgid ""
+"The :guilabel:`Working Hours` field is **required** and cannot be left "
+"blank. For employees with no fixed schedule, :ref:`create a new fully-"
+"flexible working schedule <payroll/new-working-schedule>`, then select it."
+msgstr ""
+"Il campo :guilabel:`Orario di lavoro` è **obbligatorio** e non può essere "
+"lasciato vuoto. Per i dipendenti senza un orario fisso, :ref:`creare un "
+"nuovo orario di lavoro completamente flessibile <payroll/new-working-"
+"schedule>`, quindi selezionarlo."
+
+#: ../../export/content/applications/hr/employees/new_employee.rst:107
 msgid ":doc:`Working hours <working_hours>`"
 msgstr ":doc:`Orario di lavoro <working_hours>`"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:108
+#: ../../export/content/applications/hr/employees/new_employee.rst:109
 msgid ""
 ":guilabel:`Attendance Based`: Click this checkbox to have payslips created "
 "using the employee's badge records when signing in and out of work in "
@@ -9099,11 +9591,11 @@ msgstr ""
 "selezionato per il dipendente per creare le voci di lavoro durante "
 "l'elaborazione del libro paga."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:114
+#: ../../export/content/applications/hr/employees/new_employee.rst:115
 msgid "Payslip adjustments tab"
 msgstr "Scheda rettifiche busta paga"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:116
+#: ../../export/content/applications/hr/employees/new_employee.rst:117
 msgid ""
 "This *Payslip Adjustments* tab houses **all** additional payslip "
 "adjustments, including :doc:`salary adjustments <../payroll/"
@@ -9116,7 +9608,7 @@ msgstr ""
 "mance, bonus, rimborsi spese e qualsiasi altra trattenuta effettuata dalla "
 "busta paga del dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:120
+#: ../../export/content/applications/hr/employees/new_employee.rst:121
 msgid ""
 "Add each individual :ref:`payslip adjustment <payroll/salary_attachments/"
 "create>` to this tab."
@@ -9124,7 +9616,7 @@ msgstr ""
 "Aggiungere ogni singola :ref:`rettifica della busta paga <payroll/"
 "salary_attachments/create>` a questa scheda."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:125
+#: ../../export/content/applications/hr/employees/new_employee.rst:126
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:220
 #: ../../export/content/applications/hr/payroll/payroll_localizations/hong_kong.rst:355
 #: ../../export/content/applications/hr/payroll/payroll_localizations/jordan.rst:76
@@ -9135,7 +9627,7 @@ msgstr ""
 msgid "Work tab"
 msgstr "Scheda Lavoro"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:127
+#: ../../export/content/applications/hr/employees/new_employee.rst:128
 msgid ""
 "This tab is visible for all employees, and does not require any other apps "
 "to be installed."
@@ -9143,11 +9635,11 @@ msgstr ""
 "Questa scheda è visibile per tutti i dipendenti e non richiede "
 "l'installazione di altre app."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:130
+#: ../../export/content/applications/hr/employees/new_employee.rst:131
 msgid "Work"
 msgstr "Lavoro"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:132
+#: ../../export/content/applications/hr/employees/new_employee.rst:133
 msgid ""
 ":guilabel:`Company`: Select the company the new employee was hired by using "
 "the drop-down menu. This field is required, but only appears when in a multi-"
@@ -9157,14 +9649,14 @@ msgstr ""
 "dipendente utilizzando il menu a discesa. Questo campo è obbligatorio, ma "
 "compare solo in un database multi-azienda."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:134
+#: ../../export/content/applications/hr/employees/new_employee.rst:135
 msgid ""
 ":guilabel:`Department`: Select the employee's department from the drop-down "
 "menu."
 msgstr ""
 ":guilabel:`Ufficio`: selezionare l'ufficio del dipendente dal menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:135
+#: ../../export/content/applications/hr/employees/new_employee.rst:136
 msgid ""
 ":guilabel:`Job Position`: Select the employee's job position from the drop-"
 "down menu. If using the **Recruitment** app, this list reflects configured "
@@ -9174,7 +9666,7 @@ msgstr ""
 "dipendente dal menu a discesa. Se si utilizza l'app **Assunzioni**, questo "
 "elenco riflette le posizioni lavorative configurate."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:137
+#: ../../export/content/applications/hr/employees/new_employee.rst:138
 msgid ""
 ":guilabel:`Job Title`: This field is automatically populated with the "
 "selection made in the :guilabel:`Job Position` field. Adjust the text, if "
@@ -9185,14 +9677,14 @@ msgstr ""
 "il testo, se lo si desidera, per riflettere al meglio il ruolo del "
 "dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:141
+#: ../../export/content/applications/hr/employees/new_employee.rst:142
 msgid ""
 "Specific details can be added in the :guilabel:`Job Title` field, if desired."
 msgstr ""
 "È possibile aggiungere dettagli specifici nel campo :guilabel:`Qualifica`, "
 "se lo si desidera."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:143
+#: ../../export/content/applications/hr/employees/new_employee.rst:144
 msgid ""
 "For example, a sales representative position configured as :guilabel:`Sales "
 "Associate` in the **Recruitment** app can be selected for the :guilabel:`Job "
@@ -9202,7 +9694,7 @@ msgstr ""
 "come :guilabel:`Addetto alle vendite` nell'app **Assunzioni** può essere "
 "selezionata per il campo :guilabel:`Posizione lavorativa`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:146
+#: ../../export/content/applications/hr/employees/new_employee.rst:147
 msgid ""
 "The :guilabel:`Job Title` field can be more specific, such as `Sales "
 "Associate - Europe` if the employee is focused solely on European sales."
@@ -9211,20 +9703,20 @@ msgstr ""
 "esempio `Sales Associate - Europe` se il dipendente si occupa esclusivamente "
 "delle vendite in Europa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:149
+#: ../../export/content/applications/hr/employees/new_employee.rst:150
 msgid "Both job position fields entered but with different information."
 msgstr ""
 "Entrambi i campi della posizione lavorativa sono stati inseriti ma con "
 "informazioni diverse."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:152
+#: ../../export/content/applications/hr/employees/new_employee.rst:153
 msgid ""
 ":guilabel:`Manager`: Select the employee's manager using the drop-down menu."
 msgstr ""
 ":guilabel:`Responsabile`: Selezionare il responsabile del dipendente "
 "utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:153
+#: ../../export/content/applications/hr/employees/new_employee.rst:154
 msgid ""
 ":guilabel:`Next Appraisal Date`: If the **Appraisals** app is installed, "
 "this field displays the next scheduled appraisal for the employee. This "
@@ -9235,12 +9727,12 @@ msgstr ""
 "dipendente. Come impostazione predefinita, questo campo è impostato a sei "
 "mesi dalla data del contratto del dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:158
-#: ../../export/content/applications/hr/employees/new_employee.rst:516
+#: ../../export/content/applications/hr/employees/new_employee.rst:159
+#: ../../export/content/applications/hr/employees/new_employee.rst:517
 msgid "Location"
 msgstr "Sede"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:160
+#: ../../export/content/applications/hr/employees/new_employee.rst:161
 msgid ""
 "This section states where the employee is expected to work on any given "
 "workday."
@@ -9248,7 +9740,7 @@ msgstr ""
 "Questa sezione specifica il luogo in cui il dipendente deve lavorare in un "
 "determinato giorno lavorativo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:162
+#: ../../export/content/applications/hr/employees/new_employee.rst:163
 msgid ""
 "Using the drop-down menu, select the typical place the employee works from "
 "in the :guilabel:`Usual Work Location` field. The default options "
@@ -9262,7 +9754,7 @@ msgstr ""
 "building` :guilabel:`Ufficio` o :icon:`fa-map-marker` :guilabel:`Altro`. "
 "Questo campo è **obbligatorio**."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:167
+#: ../../export/content/applications/hr/employees/new_employee.rst:168
 msgid ""
 "To create a new location, type the location in the field, "
 "click :guilabel:`Create and edit`, and a *Create Usual Work Location* pop-up "
@@ -9272,7 +9764,7 @@ msgstr ""
 "su :guilabel:`Crea e modifica` per visualizzare un modulo a comparsa *Crea "
 "luogo di lavoro abituale*."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:170
+#: ../../export/content/applications/hr/employees/new_employee.rst:171
 msgid ""
 "The entered name populates the :guilabel:`Work Location` field, but can be "
 "modified. Select the :guilabel:`Work Address` using the drop-down menu. "
@@ -9287,7 +9779,7 @@ msgstr ""
 "campo :guilabel:`Azienda`, compilato con l'azienda corrente per impostazione "
 "predefinita ma modificabile all'occorrenza."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:175
+#: ../../export/content/applications/hr/employees/new_employee.rst:176
 msgid ""
 "Click :guilabel:`Save` when the form is complete. The window closes, and the "
 "newly configured location appears in the field."
@@ -9295,7 +9787,7 @@ msgstr ""
 "Fare clic su :guilabel:`Salva` una volta completato il modulo. La finestra "
 "si chiude e il luogo appena configurato compare nel campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:178
+#: ../../export/content/applications/hr/employees/new_employee.rst:179
 msgid ""
 "Below the :guilabel:`Usual Work Location` field is a list of the days of the "
 "week. For each day of the work week, select where the employee works that "
@@ -9308,7 +9800,7 @@ msgstr ""
 "Il luogo selezionato viene visualizzato sulla scheda Kanban del dipendente, "
 "indicando la sua posizione per quel giorno."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:182
+#: ../../export/content/applications/hr/employees/new_employee.rst:183
 msgid ""
 "Leave the field blank (:guilabel:`Unspecified`) for non-working days, such "
 "as Saturday and Sunday."
@@ -9316,23 +9808,23 @@ msgstr ""
 "Lasciare il campo vuoto (:guilabel:`Non specificato`) per i giorni non "
 "lavorativi, come sabato e domenica."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:184
+#: ../../export/content/applications/hr/employees/new_employee.rst:185
 msgid "A new work location form with all fields filled out."
 msgstr "Un nuovo modulo di posizione lavorativa con tutti i campi compilati."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:188
+#: ../../export/content/applications/hr/employees/new_employee.rst:189
 msgid "Note"
 msgstr "Nota"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:190
+#: ../../export/content/applications/hr/employees/new_employee.rst:191
 msgid "Enter any relevant notes in this field."
 msgstr "Inserire eventuali note rilevanti in questo campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:193
+#: ../../export/content/applications/hr/employees/new_employee.rst:194
 msgid "Organization chart"
 msgstr "Organigramma"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:195
+#: ../../export/content/applications/hr/employees/new_employee.rst:196
 msgid ""
 "The related departments appear in this section, illustrating where in the "
 "company the employee works. The numbers to the right of each person listed "
@@ -9343,7 +9835,7 @@ msgstr ""
 "elencata indicano quanti collaboratori diretti o indiretti ha ogni "
 "dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:200
+#: ../../export/content/applications/hr/employees/new_employee.rst:201
 msgid ""
 "After a :guilabel:`Department` is selected, the department's configured "
 "manager automatically populates the :guilabel:`Manager` field."
@@ -9351,20 +9843,20 @@ msgstr ""
 "Dopo aver selezionato un :guilabel:`Ufficio`, il responsabile configurato "
 "dell'ufficio popola automaticamente il campo :guilabel:`Responsabile`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:203
+#: ../../export/content/applications/hr/employees/new_employee.rst:204
 msgid "The organizational chart including the employee's manager."
 msgstr "L'organigramma include il responsabile del dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:209
+#: ../../export/content/applications/hr/employees/new_employee.rst:210
 msgid "Resumé tab"
 msgstr "Scheda curriculum"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:212
+#: ../../export/content/applications/hr/employees/new_employee.rst:213
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:35
 msgid "Resumé"
 msgstr "Curriculum vitae"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:214
+#: ../../export/content/applications/hr/employees/new_employee.rst:215
 msgid ""
 "Enter the employee's work history in the *Resumé* tab. Each resumé line must "
 "be entered individually. When creating an entry for the first time, click "
@@ -9382,7 +9874,7 @@ msgstr ""
 "pulsante :guilabel:`AGGIUNGI`. Inserire le seguenti informazioni per ogni "
 "voce."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:220
+#: ../../export/content/applications/hr/employees/new_employee.rst:221
 msgid ""
 ":guilabel:`Type`: Click the corresponding button to reflect the *type* of "
 "experience being added. The available options are :guilabel:`Other "
@@ -9395,12 +9887,12 @@ msgstr ""
 "esperienza`, :guilabel:`Istruzione`, :guilabel:`Formazione` "
 "o :guilabel:`Certificazione interna`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:223
+#: ../../export/content/applications/hr/employees/new_employee.rst:224
 msgid ":guilabel:`Title`: Type in the title from the previous work experience."
 msgstr ""
 ":guilabel:`Titolo`: inserire il titolo dell'esperienza lavorativa precedente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:224
+#: ../../export/content/applications/hr/employees/new_employee.rst:225
 msgid ""
 ":guilabel:`Duration`: Enter the start and end dates for the work experience "
 "using the calendar module in the corresponding fields."
@@ -9408,7 +9900,7 @@ msgstr ""
 ":guilabel:`Durata`: inserire le date di inizio e di fine dell'esperienza "
 "lavorativa nei campi corrispondenti utilizzando il modulo calendario."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:226
+#: ../../export/content/applications/hr/employees/new_employee.rst:227
 msgid ""
 ":guilabel:`Certificate`: If there is a relevant certificate to attach, click "
 "the :icon:`fa-upload` :guilabel:`(Upload)` icon, select the desired file, "
@@ -9420,13 +9912,13 @@ msgstr ""
 "selezionare il file desiderato e fare clic su :guilabel:`Seleziona`. Nel "
 "campo compare il nome del file, non l'immagine del certificato."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:229
+#: ../../export/content/applications/hr/employees/new_employee.rst:230
 msgid ":guilabel:`Description`: Enter any relevant details in this field."
 msgstr ""
 ":guilabel:`Descrizione`: inserire eventuali dettagli rilevanti in questo "
 "campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:231
+#: ../../export/content/applications/hr/employees/new_employee.rst:232
 msgid ""
 "Once all the information is entered, click the :guilabel:`Save & Close` "
 "button if there is only one entry to add, or click the :guilabel:`Save & "
@@ -9437,11 +9929,11 @@ msgstr ""
 "oppure fare clic sul pulsante :guilabel:`Salva e nuovo` per salvare la voce "
 "corrente e creare un'altra riga del curriculum."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:235
+#: ../../export/content/applications/hr/employees/new_employee.rst:236
 msgid "A resumé entry form with all the information populated."
 msgstr "Un modulo di voce del curriculum con tutte le informazioni inserite."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:239
+#: ../../export/content/applications/hr/employees/new_employee.rst:240
 msgid ""
 "After the new employee form is saved, the current position and company is "
 "automatically added to the *Resumé* tab, with the end date listed as "
@@ -9451,11 +9943,11 @@ msgstr ""
 "attuali vengono aggiunte automaticamente alla scheda *Curriculum*, con la "
 "data di fine indicata come `Attuale`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:245
+#: ../../export/content/applications/hr/employees/new_employee.rst:246
 msgid "Skills & certifications"
 msgstr "Competenze e certificazioni"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:247
+#: ../../export/content/applications/hr/employees/new_employee.rst:248
 msgid ""
 "An employee's skills and certifications can be entered in the *Resumé* tab "
 "in the same manner that a resumé line is created."
@@ -9464,7 +9956,7 @@ msgstr ""
 "nella scheda *Curriculum* con la stessa modalità utilizzata per creare una "
 "riga del curriculum."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:250
+#: ../../export/content/applications/hr/employees/new_employee.rst:251
 msgid ""
 "To add a skill to an employee record, the skill type must first be "
 "configured. By default, Odoo comes with two :guilabel:`Skill Types` "
@@ -9479,7 +9971,7 @@ msgstr ""
 "competenza <employees/skill-types>` prima di aggiungere qualsiasi competenza "
 "alla scheda dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:255
+#: ../../export/content/applications/hr/employees/new_employee.rst:256
 msgid ""
 "When adding the first skill to an employee record, a :guilabel:`Pick a skill "
 "from the list` button appears in the *Skills* section of the *Resumé* tab. "
@@ -9494,7 +9986,7 @@ msgstr ""
 "una finestra pop-up vuota *Aggiorna competenze*. Configurare le seguenti "
 "informazioni per ogni competenza:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:260
+#: ../../export/content/applications/hr/employees/new_employee.rst:261
 msgid ""
 ":guilabel:`Category`: Select a :ref:`skill type <employees/skill-types>` by "
 "clicking it."
@@ -9502,7 +9994,7 @@ msgstr ""
 ":guilabel:`Categoria`: selezionare un :ref:`tipo di competenza <employees/"
 "skill-types>` cliccandoci sopra."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:261
+#: ../../export/content/applications/hr/employees/new_employee.rst:262
 msgid ""
 ":guilabel:`Skill`: After selecting the :guilabel:`Category`, all "
 "corresponding skills associated with that selected category appear in "
@@ -9517,7 +10009,7 @@ msgstr ""
 "scegliere nella sezione :guilabel:`Competenza`. Fare clic sulla competenza "
 "desiderata dall'elenco."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:267
+#: ../../export/content/applications/hr/employees/new_employee.rst:268
 msgid ""
 "If the desired skill does not appear in the list, it is **not** possible to "
 "add the new skill from this window. New skills must be added from "
@@ -9528,7 +10020,7 @@ msgstr ""
 "devono essere aggiunte dalla dashboard :ref:`Tipi di competenza <employees/"
 "skill-types>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:271
+#: ../../export/content/applications/hr/employees/new_employee.rst:272
 msgid ""
 ":guilabel:`Skill Level`: Pre-defined skill levels associated with the "
 "selected :guilabel:`Category` appear. Click on a :guilabel:`Skill Level` to "
@@ -9541,7 +10033,7 @@ msgstr ""
 "competenza possono essere creati e modificati dalla dashboard :ref:`Tipi di "
 "competenza <employees/skill-types>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:275
+#: ../../export/content/applications/hr/employees/new_employee.rst:276
 msgid ""
 "Click the :guilabel:`Save & Close` button if there is only one skill to add, "
 "or click the :guilabel:`Save & New` button to save the current entry and "
@@ -9551,18 +10043,18 @@ msgstr ""
 "da aggiungere, oppure fare clic sul pulsante :guilabel:`Salva e nuovo` per "
 "salvare la voce corrente e aggiungere immediatamente un'altra competenza."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:278
+#: ../../export/content/applications/hr/employees/new_employee.rst:279
 msgid ""
 "At any point, a new line can be added by clicking the :guilabel:`Add` button."
 msgstr ""
 "In qualsiasi momento, è possibile aggiungere una nuova riga cliccando sul "
 "pulsante :guilabel:`AGGIUNGI`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:280
+#: ../../export/content/applications/hr/employees/new_employee.rst:281
 msgid "A skill form with the information filled out."
 msgstr "Un modulo di competenza con le informazioni compilate."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:284
+#: ../../export/content/applications/hr/employees/new_employee.rst:285
 msgid ""
 "Only users with :guilabel:`Officer: Manage all employees` "
 "or :guilabel:`Administrator` rights for the **Employees** app can add or "
@@ -9572,11 +10064,11 @@ msgstr ""
 "dipendenti` o :guilabel:`Amministratore` per l'app **Dipendenti** possono "
 "aggiungere o modificare competenze."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:290
+#: ../../export/content/applications/hr/employees/new_employee.rst:291
 msgid "Skill types"
 msgstr "Tipi di competenza"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:292
+#: ../../export/content/applications/hr/employees/new_employee.rst:293
 msgid ""
 "To add a skill to an employee's form, the :guilabel:`Skill Types` must be "
 "configured. Navigate to :menuselection:`Employees app --> Configuration --> "
@@ -9588,7 +10080,7 @@ msgstr ""
 "Dipendenti --> Configurazione --> Tipi di competenza` per visualizzare i "
 "tipi di competenza attualmente configurati e creare nuovi tipi di competenza."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:297
+#: ../../export/content/applications/hr/employees/new_employee.rst:298
 msgid ""
 "The default skill of :guilabel:`Languages` is preconfigured with twenty-one "
 "skills, and the default :guilabel:`Soft Skills` is preconfigured with "
@@ -9598,7 +10090,7 @@ msgstr ""
 "competenze e la competenza predefinita :guilabel:`Soft Skills` è "
 "preconfigurata con quindici competenze."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:300
+#: ../../export/content/applications/hr/employees/new_employee.rst:301
 msgid ""
 "Click the :guilabel:`New` button in the corner, and a new *Skill Type* form "
 "loads. Fill out the following details for the new skill type. Repeat this "
@@ -9609,7 +10101,7 @@ msgstr ""
 "di competenza. Ripetere l'operazione per tutti i tipi di competenze "
 "necessari."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:303
+#: ../../export/content/applications/hr/employees/new_employee.rst:304
 msgid ""
 ":guilabel:`Skill Type`: Enter a name for the type of skill. This acts as the "
 "parent category for more specific skills and should be generic."
@@ -9618,7 +10110,7 @@ msgstr ""
 "Questo funge da categoria principale per competenze più specifiche e "
 "dovrebbe essere generico."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:307
+#: ../../export/content/applications/hr/employees/new_employee.rst:308
 msgid ""
 ":guilabel:`Certification`: Click the toggle to indicate the skill is a "
 "certification. The toggle turns green, indicating it is active and the skill "
@@ -9629,7 +10121,7 @@ msgstr ""
 "è attivo e la competenza può essere aggiunta alla "
 "scheda :ref:`certificazioni <employees/certifications>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:310
+#: ../../export/content/applications/hr/employees/new_employee.rst:311
 msgid ""
 ":guilabel:`Skills`: Click :guilabel:`Add a line` and enter "
 "the :guilabel:`Name` for the new skill, then repeat for all other needed "
@@ -9639,7 +10131,7 @@ msgstr ""
 "inserire il :guilabel:`Nome` della nuova competenza, quindi ripetere per "
 "tutte le altre competenze necessarie."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:312
+#: ../../export/content/applications/hr/employees/new_employee.rst:313
 msgid ""
 ":guilabel:`Levels`: Click :guilabel:`Add a line`, and enter "
 "a :guilabel:`Name` and :guilabel:`Progress` percentage (`0`-`100`) for each "
@@ -9649,7 +10141,7 @@ msgstr ""
 "un :guilabel:`Nome` e una percentuale di :guilabel:`Progresso` (da `0` a "
 "`100`) per ciascun livello."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:315
+#: ../../export/content/applications/hr/employees/new_employee.rst:316
 msgid ""
 "Set a :guilabel:`Default Level` by clicking the toggle on the desired line. "
 "Only **one** level can be selected. The toggle turns green to indicate the "
@@ -9662,7 +10154,7 @@ msgstr ""
 "viene scelto il livello più basso, ma è possibile selezionare qualsiasi "
 "livello."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:320
+#: ../../export/content/applications/hr/employees/new_employee.rst:321
 msgid ""
 "To add math skills in yellow, enter `Math` in the :guilabel:`Skill Type` "
 "field, and click the colored circle next to :guilabel:`Color`, and select "
@@ -9682,13 +10174,13 @@ msgstr ""
 "su :guilabel:`Imposta predefinito` sulla riga `Beginner` per impostare "
 "questo come livello di competenza predefinito."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:327
+#: ../../export/content/applications/hr/employees/new_employee.rst:328
 msgid "A skill form for a Math skill type, with all the information entered."
 msgstr ""
 "Un modulo di competenza per un tipo di competenza matematica, con tutte le "
 "informazioni inserite."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:331
+#: ../../export/content/applications/hr/employees/new_employee.rst:332
 msgid ""
 "Once the form is completely filled out, click the :icon:`fa-cloud-"
 "upload` :guilabel:`(Save manually)` icon at the top of the screen, and "
@@ -9702,11 +10194,11 @@ msgstr ""
 "il livello più alto in alto e il più basso in basso, indipendentemente dal "
 "livello predefinito e dall'ordine in cui sono stati inseriti."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:339
+#: ../../export/content/applications/hr/employees/new_employee.rst:340
 msgid "Certifications tab"
 msgstr "Scheda Certificazioni"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:341
+#: ../../export/content/applications/hr/employees/new_employee.rst:342
 msgid ""
 "This tab houses all the employee's certifications, which can be important "
 "for employees who are required to hold specific certifications to perform "
@@ -9721,7 +10213,7 @@ msgstr ""
 "una certificazione :abbr:`CSM (Certified Safety Manager)` per un "
 "responsabile della costruzione."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:346
+#: ../../export/content/applications/hr/employees/new_employee.rst:347
 msgid ""
 "The tab lists each :guilabel:`Certification` in a line, and displays the "
 "validity period in the :guilabel:`From` and :guilabel:`To` fields."
@@ -9729,7 +10221,7 @@ msgstr ""
 "La scheda elenca ogni :guilabel:`Certificazione` in una riga e visualizza il "
 "periodo di validità nei campi :guilabel:`Da` e :guilabel:`A`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:350
+#: ../../export/content/applications/hr/employees/new_employee.rst:351
 msgid ""
 "This tab **only** appears if *at least one* :ref:`skill type <employees/"
 "skill-types>` is configured as a *certification*. When adding "
@@ -9741,7 +10233,7 @@ msgstr ""
 "aggiungono certificazioni, è possibile selezionare **solo** i tipi di "
 "competenza contrassegnati come certificazione."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:354
+#: ../../export/content/applications/hr/employees/new_employee.rst:355
 msgid ""
 "To add a certification, click :guilabel:`Add a line` in the *Certifications* "
 "tab and a blank *Create Certification* pop-up window loads. Enter the "
@@ -9751,13 +10243,13 @@ msgstr ""
 "riga` nella scheda *Certificazioni* e si carica una finestra popup *Crea "
 "certificazione* vuota. Inserire le seguenti informazioni nel modulo:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:357
+#: ../../export/content/applications/hr/employees/new_employee.rst:358
 msgid ":guilabel:`Skill`: Click on the specific certification being added."
 msgstr ""
 ":guilabel:`Competenza`: fare clic sulla specifica certificazione da "
 "aggiungere."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:358
+#: ../../export/content/applications/hr/employees/new_employee.rst:359
 msgid ""
 ":guilabel:`Validity`: Click into the two fields, and select the start and "
 "end dates for the certification, using the calendar selector."
@@ -9765,7 +10257,7 @@ msgstr ""
 ":guilabel:`Validità`: fare clic nei due campi e selezionare le date di "
 "inizio e fine per la certificazione, utilizzando il selettore del calendario."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:360
+#: ../../export/content/applications/hr/employees/new_employee.rst:361
 msgid ""
 ":guilabel:`Certificate`: If a proof of certification document is available, "
 "such as a course completion certificate, it can be added in this field. "
@@ -9777,7 +10269,7 @@ msgstr ""
 "campo. Fare clic sull'icona :icon:`fa-upload` :guilabel:`(Carica)`, "
 "individuare il file e fare clic su :guilabel:`Seleziona`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:364
+#: ../../export/content/applications/hr/employees/new_employee.rst:365
 msgid ""
 "When the form is complete, click :guilabel:`Save & New` to add the "
 "certification and add another, or :guilabel:`Save & Close` to add the "
@@ -9788,7 +10280,7 @@ msgstr ""
 "su :guilabel:`Salva e chiudi` per aggiungere la certificazione e chiudere la "
 "finestra popup."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:367
+#: ../../export/content/applications/hr/employees/new_employee.rst:368
 msgid ""
 "The certification pop-up with everything configured for a Fire Safety Course "
 "certification."
@@ -9796,7 +10288,7 @@ msgstr ""
 "La finestra a comparsa della certificazione con tutti i campi configurati "
 "per la certificazione del corso sulla sicurezza antincendio."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:373
+#: ../../export/content/applications/hr/employees/new_employee.rst:374
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:228
 #: ../../export/content/applications/hr/payroll/payroll_localizations/hong_kong.rst:366
 #: ../../export/content/applications/hr/payroll/payroll_localizations/jordan.rst:82
@@ -9809,7 +10301,7 @@ msgstr ""
 msgid "Personal tab"
 msgstr "Scheda Personale"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:375
+#: ../../export/content/applications/hr/employees/new_employee.rst:376
 msgid ""
 "No information in the *Personal* tab is required to create an employee. "
 "However, some information in this section may be necessary for the company's "
@@ -9819,7 +10311,7 @@ msgstr ""
 "dipendente. Tuttavia, alcune informazioni in questa sezione potrebbero "
 "essere necessarie per l'ufficio paghe dell'azienda."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:378
+#: ../../export/content/applications/hr/employees/new_employee.rst:379
 msgid ""
 "To properly process payslips and ensure all deductions are accounted for, it "
 "is recommended to check with the accounting department and payroll "
@@ -9833,7 +10325,7 @@ msgstr ""
 "per pagare i dipendenti tramite accredito diretto, essi **devono** avere un "
 "conto fidato indicato nel campo :guilabel:`Conti bancari` ."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:383
+#: ../../export/content/applications/hr/employees/new_employee.rst:384
 msgid ""
 "Enter the various information in the following sections and fields of the "
 "*Personal* tab. Fields are entered either using a drop-down menu, clicking a "
@@ -9843,7 +10335,7 @@ msgstr ""
 "*Personale*. I dati nei campi si inseriscono selezionando un'opzione dal "
 "menu a discesa, selezionando una casella di spunta o digitando il testo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:387
+#: ../../export/content/applications/hr/employees/new_employee.rst:388
 msgid ""
 "Depending on the localization setting, other fields or sections may be "
 "present."
@@ -9851,26 +10343,26 @@ msgstr ""
 "A seconda delle impostazioni di localizzazione, potrebbero essere presenti "
 "altri campi o sezioni."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:392
+#: ../../export/content/applications/hr/employees/new_employee.rst:393
 msgid "Private contact"
 msgstr "Contatto privato"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:394
+#: ../../export/content/applications/hr/employees/new_employee.rst:395
 msgid "Fill out the following fields in this section:"
 msgstr "Compilare i seguenti campi in questa sezione:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:396
+#: ../../export/content/applications/hr/employees/new_employee.rst:397
 msgid ":guilabel:`Email`: Enter the employee's personal email address."
 msgstr ""
 ":guilabel:`Email`: inserire l'indirizzo email personale del dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:397
+#: ../../export/content/applications/hr/employees/new_employee.rst:398
 msgid ":guilabel:`Phone`: Enter the employee's personal phone number."
 msgstr ""
 ":guilabel:`Telefono`: inserire il numero di telefono personale del "
 "dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:398
+#: ../../export/content/applications/hr/employees/new_employee.rst:399
 msgid ""
 ":guilabel:`Bank Accounts`: Enter the bank account number using the drop-down "
 "menu. If the bank account does not exist, :ref:`create a new bank account "
@@ -9880,11 +10372,11 @@ msgstr ""
 "il menu a discesa. Se il conto bancario non esiste, :ref:`creare un nuovo "
 "conto bancario <employees/add-bank>` e selezionarlo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:404
+#: ../../export/content/applications/hr/employees/new_employee.rst:405
 msgid "Add a bank account"
 msgstr "Aggiungere un conto bancario"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:406
+#: ../../export/content/applications/hr/employees/new_employee.rst:407
 msgid ""
 "When an employee is added to the database, their bank account must also be "
 "added to pay them using the **Payroll** app. To add a new bank account, "
@@ -9897,7 +10389,7 @@ msgstr ""
 "bancari` della sezione *Contatto privato*, quindi fare clic "
 "su :guilabel:`Crea`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:410
+#: ../../export/content/applications/hr/employees/new_employee.rst:411
 msgid ""
 "A blank *Create Bank Accounts* pop-up window loads. Enter the following "
 "information on the form:"
@@ -9905,7 +10397,7 @@ msgstr ""
 "Viene visualizzata una finestra a comparsa vuota *Crea conti bancari*. "
 "Inserire le seguenti informazioni nel modulo:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:412
+#: ../../export/content/applications/hr/employees/new_employee.rst:413
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:481
 msgid ""
 ":guilabel:`Account Number`: Enter the bank account number in this field."
@@ -9913,7 +10405,7 @@ msgstr ""
 ":guilabel:`Numero di conto`: Inserire il numero di conto bancario in questo "
 "campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:413
+#: ../../export/content/applications/hr/employees/new_employee.rst:414
 msgid ""
 ":guilabel:`Clearing Number`: The default name for this field "
 "is :guilabel:`Clearing Number` but may be different depending on the "
@@ -9932,7 +10424,7 @@ msgstr ""
 "visualizzato :guilabel:`Sort Code`. Quindi, inserire il codice "
 "corrispondente in questo campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:418
+#: ../../export/content/applications/hr/employees/new_employee.rst:419
 msgid ""
 ":guilabel:`BIC/SWIFT`: Enter the Bank Identifier Code in this field. This is "
 "used for international wire transfers."
@@ -9940,7 +10432,7 @@ msgstr ""
 ":guilabel:`BIC/SWIFT`: inserire il Bank Identifier Code in questo campo. "
 "Viene utilizzato per i bonifici internazionali."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:420
+#: ../../export/content/applications/hr/employees/new_employee.rst:421
 msgid ""
 ":guilabel:`Bank Account Type`: Select the kind of account being added. The "
 "options are :guilabel:`Checking` or :guilabel:`Savings`."
@@ -9949,13 +10441,13 @@ msgstr ""
 "aggiungere. Le opzioni sono :guilabel:`Conto corrente` o :guilabel:`Conto di "
 "risparmio`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:422
+#: ../../export/content/applications/hr/employees/new_employee.rst:423
 msgid ":guilabel:`Holder Name`: Enter the account holder's name in this field."
 msgstr ""
 ":guilabel:`Nome titolare`: inserire il nome del titolare del conto in questo "
 "campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:423
+#: ../../export/content/applications/hr/employees/new_employee.rst:424
 msgid ""
 ":guilabel:`Trust bank account`: Click the toggle so it appears green, "
 "indicating it is a trusted bank account."
@@ -9963,7 +10455,7 @@ msgstr ""
 ":guilabel:`Conto bancario fidato`: fare clic sull'interruttore per farlo "
 "diventare verde, indicando che si tratta di un conto bancario fidato."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:425
+#: ../../export/content/applications/hr/employees/new_employee.rst:426
 msgid ""
 ":guilabel:`Company`: This field only appears in a multi-company environment. "
 "Select a company to restrict the bank account to be used **only** with the "
@@ -9975,7 +10467,7 @@ msgstr ""
 "all'azienda selezionata. Lasciando il campo vuoto, questa informazione sarà "
 "visibile a tutte le aziende."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:428
+#: ../../export/content/applications/hr/employees/new_employee.rst:429
 msgid ""
 ":guilabel:`Employee`: The employee record the bank account is being added to "
 "automatically appears in this field and **cannot** be modified."
@@ -9984,11 +10476,11 @@ msgstr ""
 "conto bancario appare automaticamente in questo campo e **non può** essere "
 "modificata."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:430
+#: ../../export/content/applications/hr/employees/new_employee.rst:431
 msgid "*Note* tab: Enter any relevant notes in the *Note* tab."
 msgstr "Scheda *Note*: inserire eventuali note pertinenti nella scheda *Note*."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:431
+#: ../../export/content/applications/hr/employees/new_employee.rst:432
 msgid ""
 "*Bank Information* tab: Enter the :guilabel:`Bank Name`, :guilabel:`Bank "
 "Address`, and the :guilabel:`Intermediary SWIFT` code in the corresponding "
@@ -9998,11 +10490,11 @@ msgstr ""
 "banca`, :guilabel:`Indirizzo banca` e il codice :guilabel:`SWIFT "
 "intermediario` nei campi corrispondenti."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:434
+#: ../../export/content/applications/hr/employees/new_employee.rst:435
 msgid "The Create Bank Account form with all the information filled out."
 msgstr "Il modulo Crea conto bancario con tutte le informazioni compilate."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:438
+#: ../../export/content/applications/hr/employees/new_employee.rst:439
 msgid ""
 "To ensure payments are processed and sent to the bank account, mark the bank "
 "account as :guilabel:`Trusted`. Having an untrusted bank account for an "
@@ -10014,7 +10506,7 @@ msgstr ""
 "conto bancario :guilabel:`Non attendibile` per un dipendente causa un errore "
 "nell'applicazione **Libro paga** durante l'elaborazione dei depositi diretti."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:442
+#: ../../export/content/applications/hr/employees/new_employee.rst:443
 msgid ""
 "If issuing paper checks or paying via cash, the :guilabel:`Bank` field does "
 "not need to be configured."
@@ -10022,11 +10514,11 @@ msgstr ""
 "Se si emettono assegni cartacei o si paga in contanti, il "
 "campo :guilabel:`Banca` non deve essere configurato."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:446
+#: ../../export/content/applications/hr/employees/new_employee.rst:447
 msgid "Personal information"
 msgstr "Informazioni personali"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:448
+#: ../../export/content/applications/hr/employees/new_employee.rst:449
 msgid ""
 "The *Personal Information* section houses some basic information used "
 "primarily for payroll and tax purposes. Fill out the following fields in "
@@ -10036,7 +10528,7 @@ msgstr ""
 "utilizzate principalmente per fini fiscali e di elaborazione paghe. "
 "Compilare i seguenti campi in questa sezione:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:451
+#: ../../export/content/applications/hr/employees/new_employee.rst:452
 msgid ""
 ":guilabel:`Legal Name`: Enter the employee's legal name in this field. By "
 "default, the name entered in the :ref:`general information section "
@@ -10048,7 +10540,7 @@ msgstr ""
 "delle informazioni generali <employees/general-info>` compila questo campo. "
 "Si tratta del nome utilizzato tipicamente per la dichiarazione dei redditi."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:454
+#: ../../export/content/applications/hr/employees/new_employee.rst:455
 msgid ""
 ":guilabel:`Birthday`: Select the birthday of the employee using the calendar "
 "selector."
@@ -10056,7 +10548,7 @@ msgstr ""
 ":guilabel:`Birthday`: selezionare la data di nascita del dipendente "
 "utilizzando il selettore di calendario."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:455
+#: ../../export/content/applications/hr/employees/new_employee.rst:456
 msgid ""
 ":guilabel:`Place of Birth`: Enter both the city or town the employee was "
 "born in the first field, and select the country in the second field using "
@@ -10066,7 +10558,7 @@ msgstr ""
 "dipendente nel primo campo e selezionare il Paese nel secondo campo "
 "utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:457
+#: ../../export/content/applications/hr/employees/new_employee.rst:458
 msgid ""
 ":guilabel:`Sex`: Select the employee's legal sex recognized by the state "
 "from the drop-down menu. The default options are :guilabel:`Male` "
@@ -10076,7 +10568,7 @@ msgstr ""
 "riconosciuto dallo Stato dal menu a discesa. Le opzioni predefinite "
 "sono :guilabel:`Maschio` e :guilabel:`Femmina`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:459
+#: ../../export/content/applications/hr/employees/new_employee.rst:460
 msgid ""
 ":guilabel:`Disabled`: Check this box if the employee is considered legally "
 "disabled."
@@ -10084,7 +10576,7 @@ msgstr ""
 ":guilabel:`Disabled`: selezionare questa casella se il dipendente è "
 "considerato legalmente disabile."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:460
+#: ../../export/content/applications/hr/employees/new_employee.rst:461
 msgid ""
 ":guilabel:`Payslip Language`: Select the language used when printing the "
 "employee's payslips. Each language must be :doc:`added to the database "
@@ -10094,11 +10586,11 @@ msgstr ""
 "dei cedolini del dipendente. Ogni lingua deve essere :doc:`aggiunta al "
 "database <../../general/users/language>` per apparire nel menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:465
+#: ../../export/content/applications/hr/employees/new_employee.rst:466
 msgid "Citizenship"
 msgstr "Cittadinanza"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:467
+#: ../../export/content/applications/hr/employees/new_employee.rst:468
 msgid ""
 "The *Citizenship* section outlines all the information relating to the "
 "employee's citizenship. This section is primarily for employees who are "
@@ -10115,7 +10607,7 @@ msgstr ""
 "essere necessarie. A seconda della localizzazione installata, potrebbero "
 "essere visibili campi diversi. Compilare i seguenti campi in questa sezione:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:473
+#: ../../export/content/applications/hr/employees/new_employee.rst:474
 msgid ""
 ":guilabel:`Nationality (Country)`: Select the country the employee is from "
 "using the drop-down menu."
@@ -10123,7 +10615,7 @@ msgstr ""
 ":guilabel:`Nazionalità (Paese)`: selezionare il paese di provenienza del "
 "dipendente utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:475
+#: ../../export/content/applications/hr/employees/new_employee.rst:476
 msgid ""
 ":guilabel:`Non-resident`: Click this checkbox if the employee is not a legal "
 "resident of the country where they are employed."
@@ -10131,7 +10623,7 @@ msgstr ""
 ":guilabel:`Non residente`: selezionare questa casella se il dipendente non è "
 "un residente legale del Paese in cui lavora."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:477
+#: ../../export/content/applications/hr/employees/new_employee.rst:478
 msgid ""
 ":guilabel:`Identification No`: Enter the employee's national identification "
 "number issued by the government in this field. Some examples are "
@@ -10144,12 +10636,12 @@ msgstr ""
 "sociale)`, :abbr:`SSN (numero di previdenza sociale)` o :abbr:`NIN (numero "
 "di identificazione nazionale)`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:480
+#: ../../export/content/applications/hr/employees/new_employee.rst:481
 msgid ":guilabel:`Passport No`: Enter the employee's passport number."
 msgstr ""
 ":guilabel:`Passport No`: inserire il numero di passaporto del dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:483
+#: ../../export/content/applications/hr/employees/new_employee.rst:484
 msgid ""
 "Depending on the installed :doc:`payroll localization <../payroll/"
 "payroll_localizations>`, additional fields may appear in this section."
@@ -10158,11 +10650,11 @@ msgstr ""
 "payroll_localizations>` installata, in questa sezione potrebbero comparire "
 "altri campi."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:487
+#: ../../export/content/applications/hr/employees/new_employee.rst:488
 msgid "Visa & work permit"
 msgstr "Visto e permesso di lavoro"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:489
+#: ../../export/content/applications/hr/employees/new_employee.rst:490
 msgid ""
 "This section should be filled in if the employee is working on some type of "
 "work permit or visa. This section may be left blank if they do not require "
@@ -10174,7 +10666,7 @@ msgstr ""
 "o permessi di lavoro per l'impiego. Compilare i seguenti campi applicabili "
 "in questa sezione:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:493
+#: ../../export/content/applications/hr/employees/new_employee.rst:494
 msgid ""
 ":guilabel:`Visa No`: Enter the employee's visa number. When entered, "
 "an :guilabel:`Expires on` field appears. Select the date the visa expires "
@@ -10184,7 +10676,7 @@ msgstr ""
 "volta inserito, viene visualizzato il campo :guilabel:`Scade il`. "
 "Selezionare la data di scadenza del visto utilizzando il calendario."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:495
+#: ../../export/content/applications/hr/employees/new_employee.rst:496
 msgid ""
 ":guilabel:`Work Permit No`: Enter the employee's work permit number. When "
 "entered, an :guilabel:`Expires on` field appears. Select the date the work "
@@ -10195,7 +10687,7 @@ msgstr ""
 "Selezionare la data di scadenza del permesso di lavoro utilizzando il "
 "calendario."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:497
+#: ../../export/content/applications/hr/employees/new_employee.rst:498
 msgid ""
 ":guilabel:`Document`: click the :icon:`fa-upload` :guilabel:`(Upload)` icon, "
 "then navigate to the work permit or visa file in the file explorer, and "
@@ -10206,7 +10698,7 @@ msgstr ""
 "di lavoro nella gestione file e fare clic su :guilabel:`Seleziona` per "
 "caricarlo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:501
+#: ../../export/content/applications/hr/employees/new_employee.rst:502
 msgid ""
 "Typically, an employee needs either a visa *or* a work permit, not both. For "
 "this reason, only one document can be added to the :guilabel:`Document` "
@@ -10216,11 +10708,11 @@ msgstr ""
 "non di entrambi. Per questo motivo, è possibile aggiungere un solo documento "
 "al campo :guilabel:`Documento`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:505
+#: ../../export/content/applications/hr/employees/new_employee.rst:506
 msgid "Emergency contact"
 msgstr "Contatto di emergenza"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:507
+#: ../../export/content/applications/hr/employees/new_employee.rst:508
 msgid ""
 "This section details the person to contact in the event of an emergency. "
 "Enter the following fields:"
@@ -10228,11 +10720,11 @@ msgstr ""
 "Questa sezione specifica la persona da contattare in caso di emergenza. "
 "Compilare i seguenti campi:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:509
+#: ../../export/content/applications/hr/employees/new_employee.rst:510
 msgid ":guilabel:`Contact`: Enter the emergency contact's name."
 msgstr ":guilabel:`Contatto`: inserire il nome del contatto di emergenza."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:510
+#: ../../export/content/applications/hr/employees/new_employee.rst:511
 msgid ""
 ":guilabel:`Phone`: Enter the emergency contact's phone number. It is "
 "recommended to enter a phone number that the person has the most access to, "
@@ -10242,7 +10734,7 @@ msgstr ""
 "emergenza. Si consiglia di inserire un numero di telefono a cui la persona "
 "ha maggiore accesso, in genere un telefono cellulare."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:518
+#: ../../export/content/applications/hr/employees/new_employee.rst:519
 msgid ""
 "The *Location* section is visible for all employees, and does not require "
 "any other apps to be installed for this section to be visible. Enter the "
@@ -10252,7 +10744,7 @@ msgstr ""
 "l'installazione di altre applicazioni per essere visualizzata. Inserire le "
 "seguenti informazioni in questa sezione:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:521
+#: ../../export/content/applications/hr/employees/new_employee.rst:522
 msgid ""
 ":guilabel:`Private Address`: Enter the employee's current home address in "
 "this field."
@@ -10260,7 +10752,7 @@ msgstr ""
 ":guilabel:`Indirizzo privato`: inserire in questo campo l'indirizzo di "
 "residenza attuale del dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:522
+#: ../../export/content/applications/hr/employees/new_employee.rst:523
 msgid ""
 ":guilabel:`Home-Work Distance`: Enter the number of miles or kilometers the "
 "employee commutes to work, in one direction. The unit of measure can be "
@@ -10276,11 +10768,11 @@ msgstr ""
 "per pendolari o detrazioni fiscali basate sulla distanza percorsa per "
 "raggiungere il posto di lavoro."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:528
+#: ../../export/content/applications/hr/employees/new_employee.rst:529
 msgid "Family"
 msgstr "Famiglia"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:530
+#: ../../export/content/applications/hr/employees/new_employee.rst:531
 msgid ""
 "The *Family* section is used for tax purposes and affects the **Payroll** "
 "app. Enter the following information in the following fields:"
@@ -10289,7 +10781,7 @@ msgstr ""
 "sull'applicazione **Libro paga**. Inserire le informazioni nei seguenti "
 "campi:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:533
+#: ../../export/content/applications/hr/employees/new_employee.rst:534
 msgid ""
 ":guilabel:`Marital Status`: Select the marital status for the employee using "
 "the drop-down menu. The default options "
@@ -10301,7 +10793,7 @@ msgstr ""
 "sono :guilabel:`Single`, :guilabel:`Married`, :guilabel:`Legal "
 "Cohabitant`, :guilabel:`Widower` e :guilabel:`Divorced`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:537
+#: ../../export/content/applications/hr/employees/new_employee.rst:538
 msgid ""
 "If :guilabel:`Married` or :guilabel:`Legal Cohabitant` is selected, two "
 "additional fields appear: :guilabel:`Spouse Legal Name` "
@@ -10313,7 +10805,7 @@ msgstr ""
 "e :guilabel:`Spouse Birthdate`. Compilare questi campi con le rispettive "
 "informazioni."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:540
+#: ../../export/content/applications/hr/employees/new_employee.rst:541
 msgid ""
 ":guilabel:`Dependent Children`: Enter the number of dependent children. This "
 "number is the same number used for calculating tax deductions, and should "
@@ -10324,11 +10816,11 @@ msgstr ""
 "fiscali e deve rispettare tutte le normative fiscali relative ai familiari a "
 "carico applicabili."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:545
+#: ../../export/content/applications/hr/employees/new_employee.rst:546
 msgid "Education"
 msgstr "Istruzione"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:547
+#: ../../export/content/applications/hr/employees/new_employee.rst:548
 msgid ""
 "The *Education* section allows for only one entry, and should be populated "
 "with the highest degree the employee has earned. Configure the following "
@@ -10338,7 +10830,7 @@ msgstr ""
 "con il titolo di studio più elevato conseguito dal dipendente. Configurare i "
 "seguenti campi:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:550
+#: ../../export/content/applications/hr/employees/new_employee.rst:551
 msgid ""
 ":guilabel:`Certificate Level`: Select the highest degree the employee has "
 "earned using the drop-down menu. The default options "
@@ -10350,7 +10842,7 @@ msgstr ""
 "predefinite sono :guilabel:`Diploma`, :guilabel:`Laurea`, :guilabel:`Laurea "
 "magistrale`, :guilabel:`Dottorato` e :guilabel:`Altro`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:553
+#: ../../export/content/applications/hr/employees/new_employee.rst:554
 msgid ""
 ":guilabel:`Field of Study`: Type in the subject the employee studied, such "
 "as `Business` or `Marketing and Communications`."
@@ -10358,11 +10850,11 @@ msgstr ""
 ":guilabel:`Campo di studio`: inserire la materia studiata dal dipendente, ad "
 "esempio `Economia` o `Marketing e comunicazione`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:557
+#: ../../export/content/applications/hr/employees/new_employee.rst:558
 msgid "Documents"
 msgstr "Documenti"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:559
+#: ../../export/content/applications/hr/employees/new_employee.rst:560
 msgid ""
 "The *Documents* section allows for uploading any relevant documents on the "
 "employee form. Click the :icon:`fa-upload` :guilabel:`(Upload)` icon next to "
@@ -10375,11 +10867,11 @@ msgstr ""
 "selezionare il file e fare clic su :guilabel:`Seleziona` per caricare il "
 "file."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:563
+#: ../../export/content/applications/hr/employees/new_employee.rst:564
 msgid "The documents that can be uploaded are:"
 msgstr "I documenti che possono essere caricati sono:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:565
+#: ../../export/content/applications/hr/employees/new_employee.rst:566
 msgid ""
 ":guilabel:`ID Card Copy`: Upload any relevant IDs that may be required by "
 "the payroll or HR department."
@@ -10388,7 +10880,7 @@ msgstr ""
 "pertinente che potrebbe essere richiesto dall'ufficio paghe o dalle risorse "
 "umane."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:567
+#: ../../export/content/applications/hr/employees/new_employee.rst:568
 msgid ""
 ":guilabel:`Driving License`: Upload the employee's driver's license. This "
 "field may be necessary if the employee drives as part of their job, or is "
@@ -10398,7 +10890,7 @@ msgstr ""
 "Questo campo può essere necessario se il dipendente guida nell'ambito del "
 "proprio lavoro o se gli viene assegnata un'auto aziendale da utilizzare."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:569
+#: ../../export/content/applications/hr/employees/new_employee.rst:570
 msgid ""
 ":guilabel:`SIM Card Copy`: Upload a copy of the SIM card if the employee is "
 "using a work-issued mobile phone."
@@ -10406,7 +10898,7 @@ msgstr ""
 ":guilabel:`SIM Card Copy`: caricare una copia della scheda SIM se il "
 "dipendente utilizza un telefono cellulare aziendale."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:571
+#: ../../export/content/applications/hr/employees/new_employee.rst:572
 msgid ""
 ":guilabel:`Internet Subscription Invoice`: If the employee is receiving "
 "benefits or compensation for their internet service, upload their invoice in "
@@ -10415,7 +10907,7 @@ msgstr ""
 ":guilabel:`Internet Subscription Invoice`: se il dipendente riceve benefit o "
 "rimborsi per il servizio Internet, caricare la fattura in questo campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:575
+#: ../../export/content/applications/hr/employees/new_employee.rst:576
 msgid ""
 "The :guilabel:`Internet Subscription Invoice` field is for documentation "
 "purposes only. Employees must use the :doc:`Expenses app <../../finance/"
@@ -10427,11 +10919,11 @@ msgstr ""
 "expenses>` per richiedere il rimborso delle spese oppure definire "
 "l'indennizzo nella scheda *Rettifiche busta paga*."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:580
+#: ../../export/content/applications/hr/employees/new_employee.rst:581
 msgid "Badges tab"
 msgstr "Scheda Badge"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:582
+#: ../../export/content/applications/hr/employees/new_employee.rst:583
 msgid ""
 "The *Badges* tab is where all earned and awarded :doc:`badges <badges>` are "
 "housed."
@@ -10439,11 +10931,11 @@ msgstr ""
 "La scheda *Badge* è il luogo in cui sono raccolti tutti i :doc:`badge "
 "<badges>` ottenuti e assegnati."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:587
+#: ../../export/content/applications/hr/employees/new_employee.rst:588
 msgid "Settings tab"
 msgstr "Scheda Impostazioni"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:589
+#: ../../export/content/applications/hr/employees/new_employee.rst:590
 msgid ""
 "The *Settings* tab provides various fields for different applications within "
 "the database. Depending on the installed applications, different fields and "
@@ -10453,11 +10945,11 @@ msgstr ""
 "all'interno del database. A seconda delle applicazioni installate, in questa "
 "scheda possono comparire campi e sezioni differenti."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:593
+#: ../../export/content/applications/hr/employees/new_employee.rst:594
 msgid "User"
 msgstr "Utente"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:595
+#: ../../export/content/applications/hr/employees/new_employee.rst:596
 msgid ""
 ":guilabel:`User`: If desired, select a user in the database to link to this "
 "employee using the drop-down menu, or :ref:`create a new user <employees/new-"
@@ -10467,7 +10959,7 @@ msgstr ""
 "collegare a questo dipendente utilizzando il menu a discesa "
 "oppure :ref:`creare un nuovo utente <employees/new-user>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:597
+#: ../../export/content/applications/hr/employees/new_employee.rst:598
 msgid ""
 ":guilabel:`Timezone`: Select the timezone for the employee using the drop-"
 "down menu."
@@ -10475,11 +10967,11 @@ msgstr ""
 ":guilabel:`Fuso orario`: Selezionare il fuso orario per il dipendente "
 "utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:602
+#: ../../export/content/applications/hr/employees/new_employee.rst:603
 msgid "Create a user"
 msgstr "Creare un utente"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:604
+#: ../../export/content/applications/hr/employees/new_employee.rst:605
 msgid ""
 "If the new employee also needs access to the database, click into the drop-"
 "down menu next to the :guilabel:`User` field. Click :icon:`fa-envelope-"
@@ -10491,7 +10983,7 @@ msgstr ""
 "o` :guilabel:`Invita colleghi via e-mail` per visualizzare la finestra a "
 "comparsa *Invita colleghi*."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:608
+#: ../../export/content/applications/hr/employees/new_employee.rst:609
 msgid ""
 "The employee name populates the :guilabel:`Name` field by default. "
 "The :guilabel:`Email Address`, :guilabel:`Phone`, :guilabel:`Company`, "
@@ -10504,7 +10996,7 @@ msgstr ""
 "compilati con i campi corrispondenti della sezione :ref:`informazioni "
 "generali <employees/general-info>` del modulo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:612
+#: ../../export/content/applications/hr/employees/new_employee.rst:613
 msgid ""
 "Click the :guilabel:`Send Invitation` button, an email is sent, and a "
 "notification briefly appears."
@@ -10512,21 +11004,21 @@ msgstr ""
 "Facendo clic sul pulsante :guilabel:`Invia invito`, viene inviata un'e-mail "
 "e compare brevemente una notifica."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:614
+#: ../../export/content/applications/hr/employees/new_employee.rst:615
 msgid "Once the user is created, it populates the :guilabel:`User` field."
 msgstr "Una volta creato, l'utente popola il campo :guilabel:`Utente`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:617
+#: ../../export/content/applications/hr/employees/new_employee.rst:618
 msgid "Users can also be :doc:`created manually <../../general/users/>`."
 msgstr ""
 "Gli utenti possono anche essere :doc:`creati manualmente <../../general/"
 "users/>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:619
+#: ../../export/content/applications/hr/employees/new_employee.rst:620
 msgid "The invite a user pop-up window, configured."
 msgstr "La finestra pop-up di invito utente, configurata."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:627
+#: ../../export/content/applications/hr/employees/new_employee.rst:628
 msgid ""
 "To view this section, the user must have :guilabel:`Administrator` rights "
 "set for the **Employees** app. For the category to appear, the respective "
@@ -10541,7 +11033,7 @@ msgstr ""
 "approvazione :guilabel:`Ferie` non compare. È possibile effettuare una sola "
 "selezione per ciascun campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:633
+#: ../../export/content/applications/hr/employees/new_employee.rst:634
 msgid ""
 "Only users with *Administrator* rights for the corresponding human resources "
 "role appear in the drop-down menu."
@@ -10549,7 +11041,7 @@ msgstr ""
 "Nel menu a discesa compaiono solo gli utenti con diritti di *Amministratore* "
 "per il ruolo risorse umane corrispondente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:636
+#: ../../export/content/applications/hr/employees/new_employee.rst:637
 msgid ""
 "To check these rights, navigate to :menuselection:`Settings app --> Users & "
 "Companies --> Users`, and click on a user. Scroll to the *Human Resources* "
@@ -10561,7 +11053,7 @@ msgstr ""
 "sezione *Risorse umane* nella scheda *Diritti di accesso* e verificare le "
 "impostazioni di :guilabel:`Dipendenti`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:640
+#: ../../export/content/applications/hr/employees/new_employee.rst:641
 msgid ""
 ":guilabel:`HR Responsible`: Select the user responsible for validating the "
 "employee's contracts using the drop-down menu."
@@ -10569,7 +11061,7 @@ msgstr ""
 ":guilabel:`Responsabile HR`: Selezionare l'utente responsabile della "
 "convalida dei contratti del dipendente utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:642
+#: ../../export/content/applications/hr/employees/new_employee.rst:643
 msgid ""
 ":guilabel:`Expense`: Select the user responsible for approving all expenses "
 "for the employee using the drop-down menu."
@@ -10577,7 +11069,7 @@ msgstr ""
 ":guilabel:`Nota spese`: Selezionare l'utente responsabile dell'approvazione "
 "di tutte le note spese per il dipendente utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:644
+#: ../../export/content/applications/hr/employees/new_employee.rst:645
 msgid ""
 ":guilabel:`Time Off`: Select the user responsible for approving all time off "
 "requests from this employee using the drop-down menu."
@@ -10586,7 +11078,7 @@ msgstr ""
 "tutte le richieste di ferie di questo dipendente utilizzando il menu a "
 "discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:646
+#: ../../export/content/applications/hr/employees/new_employee.rst:647
 msgid ""
 ":guilabel:`Timesheet`: Select the user responsible for approving all the "
 "employee's timesheet entries using the drop-down menu."
@@ -10594,7 +11086,7 @@ msgstr ""
 ":guilabel:`Foglio ore`: Selezionare l'utente responsabile dell'approvazione "
 "di tutte le voci del foglio ore del dipendente utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:648
+#: ../../export/content/applications/hr/employees/new_employee.rst:649
 msgid ""
 ":guilabel:`Attendance`: Select the user responsible for approving all "
 "attendance entries for the employee using the drop-down menu."
@@ -10602,7 +11094,7 @@ msgstr ""
 ":guilabel:`Presenze`: Selezionare l'utente responsabile dell'approvazione di "
 "tutte le voci delle presenze per il dipendente utilizzando il menu a discesa."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:652
+#: ../../export/content/applications/hr/employees/new_employee.rst:653
 msgid ""
 "If any approver field is left empty, the approval is done by an "
 "Administrator or Approver."
@@ -10610,12 +11102,12 @@ msgstr ""
 "Se un campo approvatore viene lasciato vuoto, l'approvazione viene "
 "effettuata da un Amministratore o Approvatore."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:655
+#: ../../export/content/applications/hr/employees/new_employee.rst:656
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:985
 msgid "Planning"
 msgstr "Pianificazione"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:657
+#: ../../export/content/applications/hr/employees/new_employee.rst:658
 msgid ""
 "This section is **only** visible if the **Planning** app is installed, as "
 "this section affects what the employee can be assigned in the **Planning** "
@@ -10625,7 +11117,7 @@ msgstr ""
 "poiché questa sezione influisce su ciò che può essere assegnato al "
 "dipendente nell'app **Pianificazione**."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:660
+#: ../../export/content/applications/hr/employees/new_employee.rst:661
 msgid ""
 ":guilabel:`Roles`: Select all the roles the employee can perform using the "
 "drop-down menu. There are no preconfigured roles available, so all roles "
@@ -10638,7 +11130,7 @@ msgstr ""
 "<planning/roles>`. Non c'è limite al numero di ruoli assegnati a un "
 "dipendente."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:663
+#: ../../export/content/applications/hr/employees/new_employee.rst:664
 msgid ""
 ":guilabel:`Default Role`: Select the default role the employee will "
 "typically perform using the drop-down menu. If the :guilabel:`Default Role` "
@@ -10651,11 +11143,11 @@ msgstr ""
 "campo :guilabel:`Ruoli` sia configurato, il ruolo selezionato viene "
 "automaticamente aggiunto all'elenco dei :guilabel:`Ruoli`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:668
+#: ../../export/content/applications/hr/employees/new_employee.rst:669
 msgid "Application settings"
 msgstr "Impostazioni dell'applicazione"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:670
+#: ../../export/content/applications/hr/employees/new_employee.rst:671
 msgid ""
 "This section affects the **Manufacturing** app. Enter the following "
 "information in this section."
@@ -10663,7 +11155,7 @@ msgstr ""
 "Questa sezione riguarda l'applicazione **Produzione**. Inserire le seguenti "
 "informazioni in questa sezione."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:672
+#: ../../export/content/applications/hr/employees/new_employee.rst:673
 msgid ""
 ":guilabel:`Hourly Cost`: Enter the hourly cost for the employee, in a "
 "`##.##` format. This cost is factored in when the employee is working at "
@@ -10675,7 +11167,7 @@ msgstr ""
 "dipendente lavora presso un :doc:`centro di lavoro <../../inventory_and_mrp/"
 "manufacturing/advanced_configuration/using_work_centers>`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:677
+#: ../../export/content/applications/hr/employees/new_employee.rst:678
 msgid ""
 "Manufacturing costs are added to the costs for producing a product if the "
 "value of the manufactured product is **not** a fixed amount. This cost does "
@@ -10685,11 +11177,11 @@ msgstr ""
 "prodotto se il valore del prodotto fabbricato **non** è un importo fisso. "
 "Questo costo **non** influisce sull'applicazione **Libro paga**."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:684
+#: ../../export/content/applications/hr/employees/new_employee.rst:685
 msgid "Attendance/Point of Sale/Manufacturing"
 msgstr "Presenze/Punto vendita/Produzione"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:686
+#: ../../export/content/applications/hr/employees/new_employee.rst:687
 msgid ""
 "This section determines how employees sign in to the **Attendances**, "
 "**Point Of Sale**, and **Manufacturing** apps, and only appears if any of "
@@ -10699,7 +11191,7 @@ msgstr ""
 "**Punto vendita** e **Produzione** e appare solo se una di queste app è "
 "installata."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:689
+#: ../../export/content/applications/hr/employees/new_employee.rst:690
 msgid ""
 ":guilabel:`PIN Code`: Enter the employee's PIN code in this field. This code "
 "is used to sign in and out of **Attendances** app kiosks, the **Point Of "
@@ -10710,7 +11202,7 @@ msgstr ""
 "dell'app **Presenze**, dall'app **Punto vendita** e dal modulo complementare "
 "*Linea di produzione* dell'app **Produzione**."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:692
+#: ../../export/content/applications/hr/employees/new_employee.rst:693
 msgid ""
 ":guilabel:`RFID/Badge Number`: Click :guilabel:`Generate` at the end of "
 "the :guilabel:`RFID/Badge Number` line to create a unique number. Once "
@@ -10729,7 +11221,7 @@ msgstr ""
 "o per :ref:`registrare l'ingresso <attendances/kiosk-mode-entry>` su un "
 "chiosco multimediale dell'app **Presenze**."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:699
+#: ../../export/content/applications/hr/employees/new_employee.rst:700
 msgid ""
 "If the employee uses an RFID token or already has an ID badge issued with a "
 "barcode, click :guilabel:`Read a badge` and the system allows the barcode or "
@@ -10741,7 +11233,7 @@ msgstr ""
 "consente di leggere il codice a barre o il token RFID. Una volta letto, il "
 "numero popola il campo :guilabel:`Numero RFID/Badge`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:704
+#: ../../export/content/applications/hr/employees/new_employee.rst:705
 msgid ""
 "To create a new :guilabel:`RFID/Badge Number`, delete the current number, "
 "and the :guilabel:`Generate` option reappears. Click :guilabel:`Generate` "
@@ -10751,7 +11243,7 @@ msgstr ""
 "corrente; l'opzione :guilabel:`Genera` ricomparirà. Fare clic "
 "su :guilabel:`Genera` per visualizzare un nuovo numero."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:707
+#: ../../export/content/applications/hr/employees/new_employee.rst:708
 msgid ""
 ":guilabel:`ZKTeco Employee ID`: If the :guilabel:`Attendances ZKTeco "
 "BioTime` module is installed, this field appears. Enter the ZKTeco BioTime "
@@ -10761,11 +11253,11 @@ msgstr ""
 "BioTime` è installato, viene visualizzato questo campo. Inserisci l'ID "
 "dipendente ZKTeco BioTime in questo campo."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:711
+#: ../../export/content/applications/hr/employees/new_employee.rst:712
 msgid "Export"
 msgstr "Esporta"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:713
+#: ../../export/content/applications/hr/employees/new_employee.rst:714
 msgid ""
 "This section is used when exporting data to a third party. Enter the "
 "relevant code in the :guilabel:`External Code` field."
@@ -10773,11 +11265,11 @@ msgstr ""
 "Questa sezione viene utilizzata per l'esportazione di dati a terzi. Inserire "
 "il codice pertinente nel campo :guilabel:`Codice esterno`."
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:717
+#: ../../export/content/applications/hr/employees/new_employee.rst:718
 msgid "Invite the employee"
 msgstr "Invitare il dipendente"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:719
+#: ../../export/content/applications/hr/employees/new_employee.rst:720
 msgid ""
 "After the employee is created, click the :guilabel:`Invite` button in the "
 "top corner of the employee record. An email is sent to the address entered "
@@ -10818,10 +11310,10 @@ msgid ""
 "be :doc:`updated to reflect their departure <archive>`, log the reason why "
 "they left, and close any open activities associated with the employee."
 msgstr ""
-"Oltre a un piano di offboarding, la scheda del dipendente deve essere "
-":doc:`aggiornata per riflettere la sua partenza <archive>`, registrare il "
-"motivo dell'uscita e chiudere qualsiasi attività aperta associata al "
-"dipendente."
+"Oltre a un piano di offboarding, la scheda del dipendente deve "
+"essere :doc:`aggiornata per riflettere la sua partenza <archive>`, "
+"registrare il motivo dell'uscita e chiudere qualsiasi attività aperta "
+"associata al dipendente."
 
 #: ../../export/content/applications/hr/employees/offboarding.rst:19
 msgid "View offboarding plan"
@@ -19796,12 +20288,6 @@ msgstr ""
 "di contratto vuoto. Configurare i seguenti campi nelle varie sezioni del "
 "modulo:"
 
-#: ../../export/content/applications/hr/payroll/contracts.rst:80
-#: ../../export/content/applications/hr/payroll/work_entries.rst:252
-#: ../../export/content/applications/hr/time_off/time_off_types.rst:33
-msgid "General information section"
-msgstr "Sezione informazioni generali"
-
 #: ../../export/content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -20198,7 +20684,7 @@ msgstr "Report dell'organico"
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:5
 msgid ""
-"The *Headcount report* in the **Payroll** app shows the number of employees "
+"The *Headcount* report in the **Payroll** app shows the number of employees "
 "on payroll and allows headcount comparisons between different periods of "
 "time."
 msgstr ""
@@ -20228,54 +20714,62 @@ msgstr ""
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:17
 msgid ""
-"Report name: generated automatically as `Headcount for (Company Name) on the "
-"(YYYY-MM-DD)` and **cannot** be modified."
+":guilabel:`Report name`: The name is generated automatically as `Headcount "
+"for (Company Name) on the (YYYY-MM-DD)` and **cannot** be modified."
 msgstr ""
-"Nome del report: generato automaticamente come `Organico per (Nome azienda) "
-"in data (AAAA-MM-GG)` e **non può** essere modificato."
+":guilabel:`Nome del report`: il nome viene generato automaticamente come "
+"`Headcount for (Company Name) on the (YYYY-MM-DD)` e **non può** essere "
+"modificato."
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:19
 msgid ""
-":guilabel:`Company`: populated automatically (works in both single and multi-"
-"company databases)"
+":guilabel:`Company`: The company is automatically populated (works in both "
+"single and multi-company databases)."
 msgstr ""
-":guilabel:`Azienda`: popolato automaticamente (funziona sia in database mono-"
-"azienda che multi-azienda)"
+":guilabel:`Azienda`: l'azienda viene popolata automaticamente (funziona sia "
+"in database con azienda singola che multi-azienda)."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:20
+#: ../../export/content/applications/hr/payroll/headcount.rst:21
 msgid ""
-":guilabel:`From`/:guilabel:`To` dates: defaults to current date (from) and "
-"blank (to). Adjust these to define the period to analyze."
+":guilabel:`From`: Using the calendar selector, select the start date for the "
+"report. The current date populates this field by default."
 msgstr ""
-"Date :guilabel:`Da`/:guilabel:`A`: impostato per default alla data corrente "
-"(da) e vuoto (a). Regolare questi valori per definire il periodo da "
-"analizzare."
+":guilabel:`Da`: utilizzando il selettore del calendario, seleziona la data "
+"di inizio del report. Il campo viene popolato per impostazione predefinita "
+"con la data corrente."
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:23
-msgid "A headcount report form filled out for the third quarter of 2025."
+msgid ""
+":guilabel:`To`: Using the calendar selector, select the end date for the "
+"report."
 msgstr ""
-"Un modulo di report dell'organico compilato per il terzo trimestre del 2025."
+":guilabel:`A`: utilizzando il selettore del calendario, seleziona la data di "
+"fine del report."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:26
+#: ../../export/content/applications/hr/payroll/headcount.rst:25
 msgid "Next, click :guilabel:`Populate` to generate the report."
 msgstr ""
 "Successivamente, fare clic su :guilabel:`Popola` per generare il report."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:28
+#: ../../export/content/applications/hr/payroll/headcount.rst:27
 msgid ""
-"At the top of the form, a :icon:`fa-people` :guilabel:`Employees` smart "
+"At the top of the form, an :icon:`fa-users` :guilabel:`Employees` smart "
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"Nella parte superiore del modulo appare un pulsante smart :icon:`fa-"
-"people` :guilabel:`Dipendenti`. Facendo clic sul pulsante viene visualizzato "
-"il numero totale di dipendenti per il periodo selezionato."
+"Nella parte superiore del modulo, appare un pulsante smart :icon:`fa-users` "
+":guilabel:`Dipendenti`. Cliccando sul pulsante viene visualizzato il numero "
+"totale di dipendenti per il periodo selezionato."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:32
+#: ../../export/content/applications/hr/payroll/headcount.rst:30
+msgid "A headcount report created on October 22, 2026 for 2026."
+msgstr "Un report dell'organico creato il 22 ottobre 2026 per il 2026."
+
+#: ../../export/content/applications/hr/payroll/headcount.rst:34
 msgid "View all headcount reports"
 msgstr "Visualizzare tutti i report dell'organico"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:34
+#: ../../export/content/applications/hr/payroll/headcount.rst:36
 msgid ""
 "See how the company headcount has changed over time by viewing all headcount "
 "reports in a list view."
@@ -20283,7 +20777,7 @@ msgstr ""
 "Vedere come l'organico aziendale è cambiato nel tempo visualizzando tutti i "
 "report dell'organico in una vista elenco."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:36
+#: ../../export/content/applications/hr/payroll/headcount.rst:38
 msgid ""
 "To view all headcount reports, navigate to :menuselection:`Payroll app --> "
 "Reporting --> Headcount`."
@@ -20291,29 +20785,29 @@ msgstr ""
 "Per visualizzare tutti i report dell'organico, accedere "
 "a :menuselection:`app Libro paga --> Reportistica --> Organico`."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:39
+#: ../../export/content/applications/hr/payroll/headcount.rst:41
 msgid "View employees in a headcount"
 msgstr "Visualizzare i dipendenti in un organico"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:41
+#: ../../export/content/applications/hr/payroll/headcount.rst:43
 msgid ""
-"TO get an overall view of employees and their salary impact on the company, "
+"To get an overall view of employees and their salary impact on the company, "
 "view all employee records of a specific headcount report."
 msgstr ""
 "Per ottenere una panoramica completa dei dipendenti e del loro impatto "
 "salariale sull'azienda, visualizzare tutti i record dei dipendenti di uno "
 "specifico report dell'organico."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:44
+#: ../../export/content/applications/hr/payroll/headcount.rst:46
 msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
-"people` :guilabel:`Employees` smart button at the top of a headcount report."
+"users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
-"Per visualizzare i dipendenti di uno specifico report dell'organico, fare "
-"clic sul pulsante smart :icon:`fa-people` :guilabel:`Dipendenti` nella parte "
+"Per visualizzare i dipendenti di uno specifico report dell'organico, clicca "
+"sul pulsante smart :icon:`fa-users` :guilabel:`Dipendenti` nella parte "
 "superiore di un report dell'organico."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:47
+#: ../../export/content/applications/hr/payroll/headcount.rst:49
 msgid ""
 "All employees from the headcount appear in a list view, grouped "
 "by :guilabel:`Department`."
@@ -20321,32 +20815,42 @@ msgstr ""
 "Tutti i dipendenti dell'organico appaiono in una vista elenco, raggruppati "
 "per :guilabel:`Ufficio`."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:49
-msgid ":guilabel:`Employee`: the employee's full name"
+#: ../../export/content/applications/hr/payroll/headcount.rst:51
+msgid ":guilabel:`Employee`: The employee's full name."
 msgstr ":guilabel:`Dipendente`: il nome completo del dipendente"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:50
-msgid ":guilabel:`Department`: the department their job position is in"
+#: ../../export/content/applications/hr/payroll/headcount.rst:52
+msgid ":guilabel:`Department`: The department their job position is in."
 msgstr ""
 ":guilabel:`Ufficio`: l'ufficio in cui si trova la loro posizione lavorativa"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:51
-msgid ":guilabel:`Job Title`: their role"
-msgstr ":guilabel:`Qualifica`: il loro ruolo"
+#: ../../export/content/applications/hr/payroll/headcount.rst:53
+msgid ":guilabel:`Job Title`: Their specific role."
+msgstr ":guilabel:`Qualifica`: il ruolo specifico della persona."
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:52
+#: ../../export/content/applications/hr/payroll/headcount.rst:54
 msgid ""
-":guilabel:`Employer Cost`: how much the company pays the employee each pay-"
-"period"
+":guilabel:`Employer Cost`: How much the company pays the employee each pay "
+"period."
 msgstr ""
 ":guilabel:`Costo per il datore di lavoro`: quanto l'azienda paga al "
 "dipendente per ogni periodo di paga"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:53
-msgid ":guilabel:`Wage on Payroll`: the dollar amount on payroll reports"
+#: ../../export/content/applications/hr/payroll/headcount.rst:55
+msgid ":guilabel:`Wage On Payroll`: The monetary amount on payroll reports."
 msgstr ""
-":guilabel:`Salario sul libro paga`: l'importo in dollari nei report del "
-"libro paga"
+":guilabel:`Retribuzione a libro paga`: l'importo monetario presente nei "
+"report del libro paga."
+
+#: ../../export/content/applications/hr/payroll/headcount.rst:57
+msgid "Click on any department to expand the list and view the employees."
+msgstr ""
+"Clicca su qualsiasi ufficio per espandere l'elenco e visualizzare i "
+"dipendenti."
+
+#: ../../export/content/applications/hr/payroll/headcount.rst:59
+msgid "The headcount report showing expanded departments."
+msgstr "Il report dell'organico che mostra gli uffici espansi."
 
 #: ../../export/content/applications/hr/payroll/pay_runs.rst:3
 msgid "Pay runs"
@@ -21270,6 +21774,7 @@ msgstr "Dipendenze"
 #: ../../export/content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:92
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:34
 msgid "Description"
 msgstr "Descrizione"
 
@@ -52334,6 +52839,10 @@ msgstr ":doc:`recruitment/hiring_velocity`"
 msgid ":doc:`recruitment/team_performance`"
 msgstr ":doc:`recruitment/team_performance`"
 
+#: ../../export/content/applications/hr/recruitment.rst:375
+msgid ":doc:`recruitment/offer_analysis`"
+msgstr ":doc:`recruitment/offer_analysis`"
+
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:3
 msgid "Add applicants"
 msgstr "Aggiungi candidati"
@@ -53869,6 +54378,193 @@ msgstr ""
 msgid ":doc:`post_job`"
 msgstr ":doc:`post_job`"
 
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:3
+msgid "Offer analysis"
+msgstr "Analisi offerta"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:5
+msgid ""
+"The *Offer Analysis* report provides a high-level summary of job offers, "
+"grouped by job position and status. This allows recruiters to view offer "
+"activity across different job positions and track how many offers are in "
+"each stage."
+msgstr ""
+"Il report *Analisi offerte* fornisce un riepilogo di alto livello delle "
+"offerte di lavoro, raggruppate per posizione lavorativa e stato. Ciò "
+"consente ai responsabili delle assunzioni di visualizzare l'attività delle "
+"offerte tra le diverse posizioni lavorative e di tenere traccia di quante "
+"offerte si trovano in ogni fase."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:9
+msgid ""
+"Using the *Offer Analysis* report, recruiters can compare the number of open "
+"positions with the number of offers made, identify positions with limited "
+"offer activity, and monitor the progress of recruitment efforts. For "
+"example, positions with fewer offers may indicate a need to adjust "
+"recruitment strategies to attract more qualified applicants. By reviewing "
+"offer data across positions and statuses, recruiters can identify potential "
+"gaps in the hiring process and make more informed decisions to support "
+"recruitment goals."
+msgstr ""
+"Utilizzando il report *Analisi offerte*, i responsabili delle assunzioni "
+"possono confrontare il numero di posizioni aperte con il numero di offerte "
+"effettuate, identificare le posizioni con un'attività di offerta limitata e "
+"monitorare il progresso degli sforzi di assunzione. Ad esempio, posizioni "
+"con meno offerte possono indicare la necessità di adeguare le strategie di "
+"reclutamento per attrarre candidati più qualificati. Revisionando i dati "
+"delle offerte tra posizioni e stati, i responsabili possono identificare "
+"potenziali lacune nel processo di assunzione e prendere decisioni più "
+"informate per supportare gli obiettivi di reclutamento."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:17
+msgid "View offer analysis report"
+msgstr "Visualizzare il report di analisi offerte"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:19
+msgid ""
+"To access the *Offer Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Offer Analysis`. By "
+"default, the report displays offer data for all job positions in a :icon:`fa-"
+"bar-chart` :guilabel:`(Bar Chart)` with :icon:`fa-"
+"database` :guilabel:`(Stacked)` groups. The default filter "
+"is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
+"days."
+msgstr ""
+"Per accedere al report *Analisi offerte*, vai su :menuselection:`App "
+"Assunzioni --> Report --> Analisi offerte`. Per impostazione predefinita, il "
+"report visualizza i dati delle offerte per tutte le posizioni lavorative in "
+"un :icon:`fa-bar-chart` :guilabel:`(Grafico a barre)` con gruppi :icon:`fa-"
+"database` :guilabel:`(Impilato)`. Il filtro predefinito è :guilabel:`Offerte "
+"ultimi 365 giorni`, che mostra informazioni relative agli ultimi 365 giorni."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:24
+msgid ""
+"Job positions are listed on the x-axis, with color-coded blocks showing the "
+"number of offers in each stage along the y-axis. Hover over a stage to view "
+"the number of offers in that stage for the job position. The stages are "
+"color-coded as follows:"
+msgstr ""
+"Le posizioni lavorative sono elencate sull'asse x, con blocchi colorati che "
+"mostrano il numero di offerte in ogni fase lungo l'asse y. Passa il mouse "
+"sopra una fase per visualizzare il numero di offerte in quella fase per la "
+"posizione lavorativa. Le fasi sono codificate a colori come segue:"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:32
+msgid "Color"
+msgstr "Colore"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:33
+msgid "Status"
+msgstr "Stato"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:35
+msgid "Red"
+msgstr "Rosso"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:36
+msgid "In progress"
+msgstr "In corso"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:37
+msgid ""
+"The offer was sent to the employee but the offer is unsigned by all parties."
+msgstr ""
+"L'offerta è stata inviata al dipendente ma non è ancora firmata da tutte le "
+"parti."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:38
+msgid "Orange"
+msgstr "Arancione"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:39
+msgid "Partially signed"
+msgstr "Firmato parzialmente"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:40
+msgid ""
+"A minimum of one person has signed the contract, but other signatures are "
+"required."
+msgstr ""
+"Almeno una persona ha firmato il contratto, ma sono necessarie altre firme."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:41
+msgid "Green"
+msgstr "Verde"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:42
+msgid "Fully signed"
+msgstr "Firma completa"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:43
+msgid "The offer was accepted and all parties have signed the contract."
+msgstr ""
+"L'offerta è stata accettata e tutte le parti hanno firmato il contratto."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:44
+msgid "Blue"
+msgstr "Blu"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:45
+#: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:213
+msgid "Refused"
+msgstr "Respinta"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:46
+msgid "The offer was refused by the applicant."
+msgstr "L'offerta è stata rifiutata dal candidato."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:48
+msgid "A bar chart view of the Offer Analysis report."
+msgstr "Una vista a grafico a barre del report Analisi offerte."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:52
+msgid "Use case: view offers by state"
+msgstr "Caso d'uso: visualizzare le offerte per stato"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:54
+msgid ""
+"A large, growing company with hundreds of employees is constantly "
+"recruiting. Due to the large number of roles they are continuously filling, "
+"it can be difficult to keep track of all the job offers and where each offer "
+"stands."
+msgstr ""
+"Una grande azienda in crescita con centinaia di dipendenti assume "
+"costantemente. A causa dell'elevato numero di ruoli da coprire "
+"continuamente, può essere difficile tenere traccia di tutte le offerte di "
+"lavoro e del relativo stato."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:58
+msgid ""
+"To aid the team, the *Offer Analysis* report can be modified to show all "
+"offers by state, instead of by job position. To view offers by state, "
+"navigate to :menuselection:`Recruitment app --> Reporting --> Offer "
+"Analysis`. Click into the search bar and select the :guilabel:`Offer State` "
+"option in the :icon:`oi-group` :guilabel:`Group By` column. This provides a "
+"high-level overview of where all offers stand."
+msgstr ""
+"Per aiutare il team, il report *Analisi offerte* può essere modificato per "
+"mostrare tutte le offerte per stato, anziché per posizione lavorativa. Per "
+"visualizzare le offerte per stato, vai su :menuselection:`App Assunzioni --> "
+"Rendicontazione --> Analisi offerte`. Fai clic nella barra di ricerca e "
+"seleziona l'opzione :guilabel:`Stato offerta` nella colonna :icon:`oi-group` "
+":guilabel:`Raggruppa per`. Questo fornisce una panoramica di alto livello "
+"dello stato di tutte le offerte."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:64
+msgid ""
+"Click on a column to open a list view of all the offers in that particular "
+"state. This is helpful when trying to finalize all open offers, or see how "
+"many were refused or completed."
+msgstr ""
+"Fai clic su una colonna per aprire una vista elenco di tutte le offerte in "
+"quello specifico stato. Questa funzione è utile quando si cerca di "
+"finalizzare tutte le offerte aperte o per vedere quante sono state rifiutate "
+"o completate."
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:67
+msgid "All offers grouped by state."
+msgstr "Tutte le offerte raggruppate per stato."
+
 #: ../../export/content/applications/hr/recruitment/offer_job_positions.rst:3
 msgid "Offer job positions"
 msgstr "Offrire posizioni lavorative"
@@ -55306,10 +56002,6 @@ msgstr ""
 "fase :guilabel:`Contratto firmato` dalla vista Kanban oppure fare clic sulla "
 "fase :guilabel:`Contratto firmato` nella parte superiore della scheda del "
 "singolo candidato."
-
-#: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:213
-msgid "Refused"
-msgstr "Respinta"
 
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
@@ -62693,6 +63385,115 @@ msgstr "Sezione opzioni di visualizzazione"
 msgid "The time off tab configured for paid time off."
 msgstr "La scheda ferie configurata per le ferie retribuite."
 
+#~ msgid ""
+#~ ":guilabel:`Working Hours`: Select the hours the employee is expected to "
+#~ "work, using the drop-down menu. By default, a :guilabel:`Standard 40 "
+#~ "hours/week` working schedule is selected. If the **Timesheets** app is "
+#~ "installed, an :guilabel:`Appointment Resource Default Calendar` option is "
+#~ "also available."
+#~ msgstr ""
+#~ ":guilabel:`Orario di lavoro`: Selezionare l'orario in cui il dipendente "
+#~ "deve lavorare, utilizzando il menu a discesa. Per impostazione "
+#~ "predefinita, è selezionato un orario di lavoro :guilabel:`Standard 40 ore/"
+#~ "settimana`. Se è installata l'app **Fogli ore**, è disponibile anche "
+#~ "un'opzione :guilabel:`Calendario predefinito risorsa appuntamento`."
+
+#~ msgid ""
+#~ "To view and modify the specific daily working hours, click the :icon:`oi-"
+#~ "arrow-right` :guilabel:`(Internal link)` arrow at the end of "
+#~ "the :guilabel:`Working Hours` line. Working hours can be modified or "
+#~ "deleted here."
+#~ msgstr ""
+#~ "Per visualizzare e modificare gli orari di lavoro giornalieri specifici, "
+#~ "fare clic sulla freccia :icon:`oi-arrow-right` :guilabel:`(Link interno)` "
+#~ "alla fine della riga :guilabel:`Orari di lavoro`. Gli orari di lavoro "
+#~ "possono essere modificati o eliminati qui."
+
+#~ msgid ""
+#~ "The *Headcount report* in the **Payroll** app shows the number of "
+#~ "employees on payroll and allows headcount comparisons between different "
+#~ "periods of time."
+#~ msgstr ""
+#~ "Il *report dell'organico* nell'app **Libro paga** mostra il numero di "
+#~ "dipendenti in forza e consente confronti dell'organico tra diversi "
+#~ "periodi di tempo."
+
+#~ msgid ""
+#~ "Report name: generated automatically as `Headcount for (Company Name) on "
+#~ "the (YYYY-MM-DD)` and **cannot** be modified."
+#~ msgstr ""
+#~ "Nome del report: generato automaticamente come `Organico per (Nome "
+#~ "azienda) in data (AAAA-MM-GG)` e **non può** essere modificato."
+
+#~ msgid ""
+#~ ":guilabel:`Company`: populated automatically (works in both single and "
+#~ "multi-company databases)"
+#~ msgstr ""
+#~ ":guilabel:`Azienda`: popolato automaticamente (funziona sia in database "
+#~ "mono-azienda che multi-azienda)"
+
+#~ msgid ""
+#~ ":guilabel:`From`/:guilabel:`To` dates: defaults to current date (from) "
+#~ "and blank (to). Adjust these to define the period to analyze."
+#~ msgstr ""
+#~ "Date :guilabel:`Da`/:guilabel:`A`: impostato per default alla data "
+#~ "corrente (da) e vuoto (a). Regolare questi valori per definire il periodo "
+#~ "da analizzare."
+
+#~ msgid "A headcount report form filled out for the third quarter of 2025."
+#~ msgstr ""
+#~ "Un modulo di report dell'organico compilato per il terzo trimestre del "
+#~ "2025."
+
+#~ msgid ""
+#~ "At the top of the form, a :icon:`fa-people` :guilabel:`Employees` smart "
+#~ "button appears. Clicking the button displays the total number of "
+#~ "employees for the selected period."
+#~ msgstr ""
+#~ "Nella parte superiore del modulo appare un pulsante smart :icon:`fa-"
+#~ "people` :guilabel:`Dipendenti`. Facendo clic sul pulsante viene "
+#~ "visualizzato il numero totale di dipendenti per il periodo selezionato."
+
+#~ msgid ""
+#~ "TO get an overall view of employees and their salary impact on the "
+#~ "company, view all employee records of a specific headcount report."
+#~ msgstr ""
+#~ "Per ottenere una panoramica completa dei dipendenti e del loro impatto "
+#~ "salariale sull'azienda, visualizzare tutti i record dei dipendenti di uno "
+#~ "specifico report dell'organico."
+
+#~ msgid ""
+#~ "To view the employees of a specific headcount report, click the :icon:`fa-"
+#~ "people` :guilabel:`Employees` smart button at the top of a headcount "
+#~ "report."
+#~ msgstr ""
+#~ "Per visualizzare i dipendenti di uno specifico report dell'organico, fare "
+#~ "clic sul pulsante smart :icon:`fa-people` :guilabel:`Dipendenti` nella "
+#~ "parte superiore di un report dell'organico."
+
+#~ msgid ":guilabel:`Employee`: the employee's full name"
+#~ msgstr ":guilabel:`Dipendente`: il nome completo del dipendente"
+
+#~ msgid ":guilabel:`Department`: the department their job position is in"
+#~ msgstr ""
+#~ ":guilabel:`Ufficio`: l'ufficio in cui si trova la loro posizione "
+#~ "lavorativa"
+
+#~ msgid ":guilabel:`Job Title`: their role"
+#~ msgstr ":guilabel:`Qualifica`: il loro ruolo"
+
+#~ msgid ""
+#~ ":guilabel:`Employer Cost`: how much the company pays the employee each "
+#~ "pay-period"
+#~ msgstr ""
+#~ ":guilabel:`Costo per il datore di lavoro`: quanto l'azienda paga al "
+#~ "dipendente per ogni periodo di paga"
+
+#~ msgid ":guilabel:`Wage on Payroll`: the dollar amount on payroll reports"
+#~ msgstr ""
+#~ ":guilabel:`Salario sul libro paga`: l'importo in dollari nei report del "
+#~ "libro paga"
+
 #~ msgid "Take care of employee records when collaboration ends."
 #~ msgstr ""
 #~ "Gestire le anagrafiche dei dipendenti al termine della collaborazione."
@@ -63465,9 +64266,6 @@ msgstr "La scheda ferie configurata per le ferie retribuite."
 #~ msgid "Adjustments"
 #~ msgstr "Rettifiche"
 
-#~ msgid "Color"
-#~ msgstr "Colore"
-
 #~ msgid "Commission"
 #~ msgstr "Provvigione"
 
@@ -63495,14 +64293,8 @@ msgstr "La scheda ferie configurata per le ferie retribuite."
 #~ msgid "Notes tab"
 #~ msgstr "Scheda Note"
 
-#~ msgid "Orange"
-#~ msgstr "Arancione"
-
 #~ msgid "Period"
 #~ msgstr "Periodo"
-
-#~ msgid "Red"
-#~ msgstr "Rosso"
 
 #~ msgid "Regular"
 #~ msgstr "Normale"
@@ -63515,9 +64307,6 @@ msgstr "La scheda ferie configurata per le ferie retribuite."
 
 #~ msgid "Skills"
 #~ msgstr "Competenze"
-
-#~ msgid "Status"
-#~ msgstr "Stato"
 
 #~ msgid "Total"
 #~ msgstr "Totale"

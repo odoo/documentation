@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-28 09:38+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-10-30 17:31+0000\n"
+"PO-Revision-Date: 2026-10-31 12:35+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-20-doc/"
 "inventory_and_mrp/ja/>\n"
 "Language: ja\n"
@@ -228,6 +228,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:17
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:23
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/failure_locations.rst:19
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:22
 msgid "Configuration"
 msgstr "設定"
 
@@ -2774,7 +2775,7 @@ msgid "A warehouse order is partially processed when scanning a package."
 msgstr "梱包材をスキャンすると、倉庫オーダが部分的に処理されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:233
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:254
 msgid "Editing a product line"
 msgstr "プロダクト行の編集"
 
@@ -2847,7 +2848,7 @@ msgstr ""
 "材を選択または作成します。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:251
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:272
 msgid ""
 ":guilabel:`Destination Container Package`: If a package must be nested "
 "inside another (pack-in-pack), select or create the parent package. "
@@ -2860,7 +2861,7 @@ msgstr ""
 "してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:138
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:264
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:285
 msgid ""
 "When ready, click :guilabel:`Confirm` to confirm the changes made to the "
 "product line."
@@ -2981,11 +2982,38 @@ msgid ""
 msgstr ""
 "そこから、倉庫作業員は2つの入荷に含まれるプロダクトの処理を続行できます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:188
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+msgid "Allocated products"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:192
+msgid ""
+"If incoming units were :doc:`allocated <../../inventory/warehouses_storage/"
+"reporting/allocation_report>` to outgoing orders, click the :icon:`fa-"
+"cog` :guilabel:`(gear)` icon in the upper corner of the receipt, then "
+"click :guilabel:`See Allocation` to open the allocation report "
+"and :ref:`print labels <inventory/allocation_report/print_labels>` for each "
+"unit."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:199
+msgid ""
+"If a :ref:`Location for allocation <inventory/allocation_report/"
+"configuration/allocation-location>` is configured on the operation type "
+"(e.g., Receipts, Manufacturing), product lines going to that location "
+"display a :icon:`fa-print` :guilabel:`(print)` icon next to the destination "
+"location. Click it to print a label for each unit on that line."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:205
+msgid "Allocated units on a barcode receipt."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
 msgid "Validating the transfer"
 msgstr "入庫の最終確定"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:211
 msgid ""
 "If not all products were scanned or manually entered from the pencil icon, "
 "click the :guilabel:`+#` button on the product line for the products being "
@@ -2995,7 +3023,7 @@ msgstr ""
 "は、受付されるプロダクトのプロダクト行の\\ :guilabel:`+#`\\ ボタンをクリック"
 "するか、プロダクトまたはプロダクトパッケージのバーコードをスキャンします。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:215
 msgid ""
 "Finally, click :guilabel:`Validate`. The receipt is processed, and the "
 "**Barcode** app can be closed."
@@ -3003,15 +3031,15 @@ msgstr ""
 "最後に、\\ :guilabel:`確認`\\ をクリックします。受付が処理され、\\ **バーコー"
 "ド**\\ アプリを閉じることができます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:197
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:218
 msgid "Overview of receipts in transfer to validate."
 msgstr "未検証の転送の入荷の概要。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:201
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:222
 msgid "Scan barcodes for delivery orders"
 msgstr "出荷オーダ用にバーコードをスキャンする"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:203
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:224
 msgid ""
 "To process warehouse deliveries for outgoing products, a sales order (SO) "
 "must be created to create a delivery operation to process. First, create a "
@@ -3021,13 +3049,13 @@ msgstr ""
 "出荷作業を作成する必要があります。まず見積もりを作成し、次にそれを確定して\\ "
 "|SO|\\ を作成します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:207
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:228
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
 msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:230
 msgid ""
 "To process and scan barcodes for warehouse deliveries, navigate to "
 "the :menuselection:`Barcode` app."
@@ -3035,7 +3063,7 @@ msgstr ""
 "倉庫出荷のバーコードを処理してスキャンするには、\\ :menuselection:`バーコード"
 "`\\ アプリに移動します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:211
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:232
 msgid ""
 "In the **Barcode** app, a :guilabel:`Barcode Scanner` screen opens, "
 "displaying different options. To process deliveries, click "
@@ -3047,7 +3075,7 @@ msgstr ""
 "\\ :guilabel:`作業`\\ ボタンをクリックします。これにより、\\ :guilabel:`作業"
 "`\\ 概要ページが開きます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:215
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:236
 msgid ""
 "On this page, click the :guilabel:`Delivery Orders` card to view all "
 "outstanding deliveries."
@@ -3055,11 +3083,11 @@ msgstr ""
 "このページで、\\ :guilabel:`出荷オーダ`\\ カードをクリックして、すべての未処"
 "理の出荷を表示します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:217
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:238
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "バーコードアプリのダッシュボードにあるオペレーション概要ページ。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:220
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:241
 msgid ""
 "Select the desired delivery order to process. This navigates to the barcode "
 "transfer screen."
@@ -3067,7 +3095,7 @@ msgstr ""
 "処理する目的の出荷オーダを選択します。これにより、バーコード入庫画面に移動し"
 "ます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:222
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:243
 msgid ""
 "On this screen, first scan the source location of the products to deliver. "
 "Then, review the overview of all products, packages, and packagings to "
@@ -3082,7 +3110,7 @@ msgstr ""
 "度に最終確定すべきかに応じて、\\ :guilabel:`プロダクトを追加`\\ または"
 "\\ :guilabel:`確認`\\ のボタンがあります。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:228
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:249
 msgid ""
 "To process and scan each product individually, choose a specific product "
 "line. Scan a product, package, or product packaging, or click "
@@ -3094,7 +3122,7 @@ msgstr ""
 "\\ :guilabel:`+#`\\ （例：\\ `+6`\\ ）ボタンをクリックして、そのプロダクトの"
 "出荷を示します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:235
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:256
 msgid ""
 "To manually adjust quantities for a product, click the :icon:`fa-"
 "pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
@@ -3104,7 +3132,7 @@ msgstr ""
 "筆）`\\ アイコンをクリックして、そのプロダクト行を編集する新しい画面を開きま"
 "す。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:238
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:259
 msgid ""
 "The product that's being delivered is listed on this screen. Under the "
 "product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
@@ -3122,7 +3150,7 @@ msgstr ""
 "\\ :guilabel:`+1`\\ および\\ :guilabel:`-1`\\ ボタンをクリックして、プロダク"
 "トの数量を追加または減算します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:245
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:266
 msgid ""
 "When the *Packages* feature is enabled in the **Inventory** settings, the "
 "following fields appear:"
@@ -3130,7 +3158,7 @@ msgstr ""
 "**在庫**設定で*パッケージ*機能が有効になっている場合、以下のフィールドが表示"
 "されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:247
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:268
 msgid ""
 ":guilabel:`Source Package`: If outgoing products should be picked from a "
 "package in inventory, select or create the package."
@@ -3138,7 +3166,7 @@ msgstr ""
 ":guilabel:`ソースパッケージ`：在庫のパッケージから出荷製品をピッキングする必"
 "要がある場合は、パッケージを選択または作成します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:249
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:270
 msgid ""
 ":guilabel:`Destination Package`: If the products should be stored in a "
 "package before delivery, select or create the package."
@@ -3146,7 +3174,7 @@ msgstr ""
 ":guilabel:`宛先パッケージ`：配送前に製品をパッケージに保管する必要がある場合"
 "は、パッケージを選択または作成します。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:255
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:276
 msgid ""
 "The :guilabel:`Quantity in Stock` section lists the locations from which "
 "products can be picked. The selected location is the location from which the "
@@ -3154,27 +3182,27 @@ msgid ""
 "additional locations to choose from (if this product is stored in multiple "
 "locations in the warehouse)."
 msgstr ""
-"「\\ :guilabel:`在庫数量`\\ 」セクションには、製品をピッキングできる"
-"ロケーションが一覧表示されます。選択されたロケーションは、配送のために製品が"
-"引き出されるロケーションです。（製品が倉庫内の複数のロケーションに保管されて"
-"いる場合、）この行をクリックすると、選択可能な他のロケーションのメニューが表"
-"示されます。"
+"「\\ :guilabel:`在庫数量`\\ 」セクションには、製品をピッキングできるロケー"
+"ションが一覧表示されます。選択されたロケーションは、配送のために製品が引き出"
+"されるロケーションです。（製品が倉庫内の複数のロケーションに保管されている場"
+"合、）この行をクリックすると、選択可能な他のロケーションのメニューが表示され"
+"ます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:261
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:282
 msgid ""
 "For warehouses with multiple different storage locations, putaway rules, and "
 "removal strategies, additional steps can be added for various operation "
 "types while using the **Barcode** app."
 msgstr ""
-"複数の異なる保管ロケーション、プットアウェイ規則、在庫削除戦略を持つ倉庫では"
-"、**バーコード**アプリを使用する際に、様々なオペレーションタイプに対して追加"
-"ステップを追加できます。"
+"複数の異なる保管ロケーション、プットアウェイ規則、在庫削除戦略を持つ倉庫で"
+"は、**バーコード**アプリを使用する際に、様々なオペレーションタイプに対して追"
+"加ステップを追加できます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:267
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:288
 msgid "Validating the delivery"
 msgstr "配送を最終確定する"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:269
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:290
 msgid ""
 "If not all products, packages, or product packagings have been scanned or "
 "entered on the overview page, scan the products, packages, or packagings, or "
@@ -3188,7 +3216,7 @@ msgstr ""
 "確認`\\ をクリックします。配送が処理され、**バーコード**\\ アプリを閉じること"
 "ができます。"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:274
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:295
 msgid "Overview of deliveries in transfer to validate."
 msgstr "未検証の移動における配送の概要。"
 
@@ -5445,7 +5473,8 @@ msgstr "ハードウェア"
 msgid ""
 "To start working with RFID in Odoo, one of the following devices is "
 "recommended:"
-msgstr "OdooでRFIDの使用を開始するには、以下のいずれかのデバイスが推奨されます。"
+msgstr ""
+"OdooでRFIDの使用を開始するには、以下のいずれかのデバイスが推奨されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
 msgid "CipherLab UHF RFID RS36, RS38 Series"
@@ -5459,8 +5488,8 @@ msgstr "Zebra TC53e-RFIDシリーズ"
 msgid ""
 "Zebra UHF RFID RFD90XX, RFD40XX Series paired with a mobile Android device"
 msgstr ""
-"Zebra UHF RFID RFD90XX, RFD40XXシリーズ（モバイルAndroidデバイスとペアリング"
-"）"
+"Zebra UHF RFID RFD90XX, RFD40XXシリーズ（モバイルAndroidデバイスとペアリン"
+"グ）"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
 msgid ""
@@ -5469,10 +5498,10 @@ msgid ""
 "under :guilabel:`App` or :guilabel:`App & Notification` settings, under "
 "the :guilabel:`Special access` or :guilabel:`Special app access` section."
 msgstr ""
-"デバイスに |APK| をインストールする前に、Android設定で不明なソースからの"
-"インストールを有効にします。このオプションは通常、:guilabel:`アプリ` または "
-":guilabel:`アプリと通知` 設定の、:guilabel:`特別なアクセス` または "
-":guilabel:`特別なアプリアクセス` セクションにあります。"
+"デバイスに |APK| をインストールする前に、Android設定で不明なソースからのイン"
+"ストールを有効にします。このオプションは通常、:guilabel:`アプリ` また"
+"は :guilabel:`アプリと通知` 設定の、:guilabel:`特別なアクセス` また"
+"は :guilabel:`特別なアプリアクセス` セクションにあります。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:41
 msgid "CipherLab"
@@ -5483,8 +5512,8 @@ msgid ""
 "Before using RFID tags to manage inventory, an additional |APK| developed by "
 "CipherLab must be installed on the mobile computer or smartphone."
 msgstr ""
-"RFIDタグを使用して在庫を管理する前に、CipherLabが開発した追加の |APK| を"
-"モバイルコンピュータまたはスマートフォンにインストールする必要があります。"
+"RFIDタグを使用して在庫を管理する前に、CipherLabが開発した追加の |APK| をモバ"
+"イルコンピュータまたはスマートフォンにインストールする必要があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:47
 msgid ""
@@ -5493,11 +5522,11 @@ msgid ""
 "to :menuselection:`Settings --> System --> System updates`. If asked to "
 "enter an :guilabel:`Input verify code`, contact a CipherLab reseller."
 msgstr ""
-"CipherLab |APK| をインストールする前に、CipherLab Androidデバイスの"
-"ファームウェアが最新であることを確認してください。アップデートを確認するには"
-"、:menuselection:`設定 --> システム --> システムアップデート` に進みます"
-"。:guilabel:`入力確認コード`の入力を求められた場合は、CipherLabリセラーにお問"
-"い合わせください。"
+"CipherLab |APK| をインストールする前に、CipherLab Androidデバイスのファーム"
+"ウェアが最新であることを確認してください。アップデートを確認するに"
+"は、:menuselection:`設定 --> システム --> システムアップデート` に進みま"
+"す。:guilabel:`入力確認コード`の入力を求められた場合は、CipherLabリセラーにお"
+"問い合わせください。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:52
 msgid ""
@@ -5513,8 +5542,8 @@ msgid ""
 "Transfer the |APK| to the device using USB or Bluetooth, or download it "
 "directly using the device's web browser."
 msgstr ""
-"USBまたはBluetoothを使用して |APK| をデバイスに転送するか、デバイスの"
-"ウェブブラウザを使用して直接ダウンロードします。"
+"USBまたはBluetoothを使用して |APK| をデバイスに転送するか、デバイスのウェブブ"
+"ラウザを使用して直接ダウンロードします。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
 msgid ""
@@ -5531,9 +5560,9 @@ msgid ""
 "ellipsis menu appears in the top corner. Open the menu, then "
 "select :guilabel:`Allow restricted settings`."
 msgstr ""
-"次に、:guilabel:`通知` 権限を有効にします。:menuselection:`設定 --> "
-"アプリ --> Multi-Tag Output` に移動します。上部の隅に垂直の省略記号メニューが"
-"表示されます。メニューを開き、:guilabel:`制限付き設定を許可` を選択します。"
+"次に、:guilabel:`通知` 権限を有効にします。:menuselection:`設定 --> アプリ --"
+"> Multi-Tag Output` に移動します。上部の隅に垂直の省略記号メニューが表示され"
+"ます。メニューを開き、:guilabel:`制限付き設定を許可` を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:65
 msgid ""
@@ -5541,8 +5570,8 @@ msgid ""
 "In the :guilabel:`Multi-Tag Output` section, select :guilabel:`Use Multi-Tag "
 "Output`."
 msgstr ""
-"CipherLabアプリが開くと、:guilabel:`ユーザー補助` 設定が開きます"
-"。:guilabel:`Multi-Tag Output` セクションで、:guilabel:`Use Multi-Tag "
+"CipherLabアプリが開くと、:guilabel:`ユーザー補助` 設定が開きま"
+"す。:guilabel:`Multi-Tag Output` セクションで、:guilabel:`Use Multi-Tag "
 "Output` を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
@@ -5558,8 +5587,8 @@ msgid ""
 "This scanner also works with the **Barcode** Progressive Web App (PWA) or in "
 "a web browser. The Android Odoo app is not mandatory."
 msgstr ""
-"このスキャナは、**バーコード**プログレッシブウェブアプリ（PWA）や"
-"ウェブブラウザでも動作します。Android版Odooアプリは必須ではありません。"
+"このスキャナは、**バーコード**プログレッシブウェブアプリ（PWA）やウェブブラウ"
+"ザでも動作します。Android版Odooアプリは必須ではありません。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
 msgid "Zebra"
@@ -5570,9 +5599,9 @@ msgid ""
 "Before using RFID tags to manage inventory, a dedicated Odoo Android app "
 "with RFID support must be installed on the mobile computer or smartphone."
 msgstr ""
-"RFIDタグを使用して在庫を管理する前に、RFIDサポート付きの専用Odoo Android"
-"アプリをモバイルコンピュータまたはスマートフォンにインストールする必要があり"
-"ます。"
+"RFIDタグを使用して在庫を管理する前に、RFIDサポート付きの専用Odoo Androidアプ"
+"リをモバイルコンピュータまたはスマートフォンにインストールする必要がありま"
+"す。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
 msgid ""
@@ -5583,13 +5612,12 @@ msgid ""
 "computer and transfer the |APK| via USB or Bluetooth, or use the device's "
 "web browser to download the |APK|."
 msgstr ""
-"まず、|APK|をダウンロードします。:guilabel:`ダウンロード`ページで"
-"、:guilabel:`モバイルアプリケーション`セクションの下にあ"
-"る:guilabel:`ダウンロード`を、:guilabel:`Android`オプションの横でクリックし、"
-"ドロップダウンメニューから:guilabel:`APKをダウンロード (Zebra RFIDサポート付)"
-"`を選択します。このファイルをコンピュータ経由でダウンロードし、USBまたは"
-"Bluetooth経由で|APK|を転送するか、デバイスのウェブブラウザを使用して|APK|を"
-"ダウンロードします。"
+"まず、|APK|をダウンロードします。:guilabel:`ダウンロード`ページ"
+"で、:guilabel:`モバイルアプリケーション`セクションの下にある:guilabel:`ダウン"
+"ロード`を、:guilabel:`Android`オプションの横でクリックし、ドロップダウンメ"
+"ニューから:guilabel:`APKをダウンロード (Zebra RFIDサポート付)`を選択します。"
+"このファイルをコンピュータ経由でダウンロードし、USBまたはBluetooth経由で|APK|"
+"を転送するか、デバイスのウェブブラウザを使用して|APK|をダウンロードします。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
 msgid "Download the APK from the Download page."
@@ -5599,7 +5627,8 @@ msgstr "ダウンロードページからAPKをダウンロードします。"
 msgid ""
 "Install the |APK| directly from the browser download notification or the "
 "location where it is stored."
-msgstr "ブラウザのダウンロード通知または保存場所から直接|APK|をインストールします。"
+msgstr ""
+"ブラウザのダウンロード通知または保存場所から直接|APK|をインストールします。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/setup/rfid.rst:92
 msgid ""
@@ -8052,7 +8081,8 @@ msgstr "18"
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:2183
 msgid ""
 "At closing Accounting Stock and Inventory Stock must have the same value."
-msgstr "期末処理において、会計在庫と在庫管理の在庫は同じ金額である必要があります。"
+msgstr ""
+"期末処理において、会計在庫と在庫管理の在庫は同じ金額である必要があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:2185
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:2300
@@ -8073,9 +8103,9 @@ msgid ""
 "during this period."
 msgstr ""
 "期末処理時に、大陸式会計のロジックに従って変動勘定および経費勘定に金額が正し"
-"く記録されるよう、修正仕訳が作成されます。実際、期中には英米式会計のCOGS"
-"ロジックに従って経費が計上されますが、期末処理時には、計上された経費はその期"
-"間中に実際に購入されたものを表す必要があります。"
+"く記録されるよう、修正仕訳が作成されます。実際、期中には英米式会計のCOGSロ"
+"ジックに従って経費が計上されますが、期末処理時には、計上された経費はその期間"
+"中に実際に購入されたものを表す必要があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:2201
 msgid ""
@@ -8794,11 +8824,11 @@ msgid ""
 "Price* costing method behave differently, since their unit cost is set "
 "manually and is never recalculated by an operation."
 msgstr ""
-"この記事では、プロダクトカテゴリごとに設定される\\ |AVCO|\\ または\\ |FIFO|\\"
-" 原価計算方法において、**在庫**\\ アプリで報告される在庫評価に影響を与える在"
-"庫処理について説明します。*標準価格*\\ 原価計算方法を使用するプロダクトは、単"
-"位原価が手動で設定され、処理によって再計算されることがないため、動作が異なり"
-"ます。"
+"この記事では、プロダクトカテゴリごとに設定される\\ |AVCO|\\ または\\ |FIFO|"
+"\\ 原価計算方法において、**在庫**\\ アプリで報告される在庫評価に影響を与える"
+"在庫処理について説明します。*標準価格*\\ 原価計算方法を使用するプロダクトは、"
+"単位原価が手動で設定され、処理によって再計算されることがないため、動作が異な"
+"ります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:24
 msgid ""
@@ -8808,9 +8838,9 @@ msgid ""
 "is reported as :ref:`stock variation <accounting/inventory-valuation/"
 "inventory-valuation-report>` in the **Accounting** app."
 msgstr ""
-"これらの処理は、対応する会計仕訳がすでに存在するかどうかにかかわらず、**在"
-"庫**\\ アプリ内のプロダクト評価を即座に変更します。**在庫**\\ アプリと\\ **会"
-"計**\\ アプリの評価額の差額は、**会計**\\ アプリで\\ :ref:`在庫変動 "
+"これらの処理は、対応する会計仕訳がすでに存在するかどうかにかかわらず、**在庫"
+"**\\ アプリ内のプロダクト評価を即座に変更します。**在庫**\\ アプリと\\ **会計"
+"**\\ アプリの評価額の差額は、**会計**\\ アプリで\\ :ref:`在庫変動 "
 "<accounting/inventory-valuation/inventory-valuation-report>`\\ としてレポート"
 "されます。"
 
@@ -8827,8 +8857,8 @@ msgid ""
 ":doc:`../../../finance/accounting/get_started/inventory_valuation`\\: For "
 "configuration and reporting from the **Accounting** perspective."
 msgstr ""
-":doc:`../../../finance/accounting/get_started/inventory_valuation`\\: **会"
-"計**\\ の観点からの設定とレポーティング。"
+":doc:`../../../finance/accounting/get_started/inventory_valuation`\\: **会計"
+"**\\ の観点からの設定とレポーティング。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:38
 msgid "Types of inventory operations"
@@ -10632,7 +10662,7 @@ msgid ""
 msgstr "特定のパッケージングタイプに対して倉庫内のルートを定義可能"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure.rst:102
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:125
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:155
 msgid "Use cases"
 msgstr "使用ケース"
 
@@ -11791,19 +11821,19 @@ msgid ""
 "clicked, a *Create Packagings* window opens, where information about the "
 "packaging can be specified:"
 msgstr ""
-"販売パッケージを指定するには、*販売*タブを開き"
-"、:guilabel:`パッケージ`を:guilabel:`アップセル & クロスセル`セクションで指定"
-"します。既存のパッケージを指定するか、:guilabel:`作成および編集`をクリックし"
-"て新規作成します。:guilabel:`作成および編集`をクリックすると、*パッケージ作"
-"成*ウィンドウが開き、パッケージに関する情報を指定できます。"
+"販売パッケージを指定するには、*販売*タブを開き、:guilabel:`パッケージ`"
+"を:guilabel:`アップセル & クロスセル`セクションで指定します。既存のパッケージ"
+"を指定するか、:guilabel:`作成および編集`をクリックして新規作成しま"
+"す。:guilabel:`作成および編集`をクリックすると、*パッケージ作成*ウィンドウが"
+"開き、パッケージに関する情報を指定できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:48
 msgid ""
 ":guilabel:`Unit Name` (required): Specify the name of the packaging that "
 "appears on sales/purchase orders as a packaging option for the product."
 msgstr ""
-":guilabel:`ユニット名` (必須)：製品のパッケージオプションとして販売/購買"
-"オーダに表示されるパッケージ名。"
+":guilabel:`ユニット名` (必須)：製品のパッケージオプションとして販売/購買オー"
+"ダに表示されるパッケージ名。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:50
 msgid ""
@@ -11823,8 +11853,8 @@ msgid ""
 "dimensions and limits. See :ref:`package type <inventory/warehouses_storage/"
 "package-type>` to learn more."
 msgstr ""
-":guilabel:`パッケージタイプ`：カスタム寸法と制限を設定するために使用する"
-"パッケージタイプを指定します。詳細は:ref:`パッケージタイプ <inventory/"
+":guilabel:`パッケージタイプ`：カスタム寸法と制限を設定するために使用するパッ"
+"ケージタイプを指定します。詳細は:ref:`パッケージタイプ <inventory/"
 "warehouses_storage/package-type>`を参照してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:54
@@ -11848,8 +11878,8 @@ msgid ""
 "the :guilabel:`Packagings` field. The *Packaging Barcodes* page opens."
 msgstr ""
 "製品のすべての定義済みパッケージのバーコードを更新するには、:icon:`oi-arrow-"
-"right` :guilabel:`バーコード`リンクを:guilabel:`パッケージ`フィールドの下で"
-"クリックします。*パッケージバーコード*ページが開きます。"
+"right` :guilabel:`バーコード`リンクを:guilabel:`パッケージ`フィールドの下でク"
+"リックします。*パッケージバーコード*ページが開きます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:64
 msgid "The following fields are available on the *Packaging Barcodes* page:"
@@ -11898,10 +11928,10 @@ msgid ""
 msgstr ""
 "仕入先向けに購買パッケージを指定するには、*購買*タブを開き、仕入先を追加しま"
 "す。:guilabel:`単位`フィールドを更新して、その仕入先の購買パッケージを指定し"
-"ます。ここに既存のパッケージを指定するか、:guilabel:`作成および編集`を"
-"クリックして新規作成します。:guilabel:`作成および編集`をクリックすると、*単位"
-"作成*ウィンドウが開きます。このボックスのフィールドは、上記の*パッケージ作"
-"成*ウィンドウと同じです。"
+"ます。ここに既存のパッケージを指定するか、:guilabel:`作成および編集`をクリッ"
+"クして新規作成します。:guilabel:`作成および編集`をクリックすると、*単位作成*"
+"ウィンドウが開きます。このボックスのフィールドは、上記の*パッケージ作成*ウィ"
+"ンドウと同じです。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:82
 msgid ""
@@ -11913,11 +11943,11 @@ msgid ""
 "click :guilabel:`Save`. Repeat this process for additional packagings."
 msgstr ""
 "製品`Grape Soda`の6個単位の購買パッケージタイプを作成するには、まず*購買*タブ"
-"で:guilabel:`行追加`をクリックします。:guilabel:`仕入先`を指定します"
-"。:guilabel:`単位`フィールドに`6パック`と入力し、:guilabel:`作成および編集`を"
-"クリックします。*単位作成*ウィンドウで、数量と基準単位(この場合は`6` "
-"`ユニット`)を指定し、:guilabel:`保存`をクリックします。追加のパッケージについ"
-"てもこのプロセスを繰り返します。"
+"で:guilabel:`行追加`をクリックします。:guilabel:`仕入先`を指定しま"
+"す。:guilabel:`単位`フィールドに`6パック`と入力し、:guilabel:`作成および編集`"
+"をクリックします。*単位作成*ウィンドウで、数量と基準単位(この場合は`6` `ユ"
+"ニット`)を指定し、:guilabel:`保存`をクリックします。追加のパッケージについて"
+"もこのプロセスを繰り返します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:88
 msgid "Create purchase packagings for product."
@@ -11962,9 +11992,9 @@ msgid ""
 "barcode` :guilabel:`Packaging Barcodes` smart button in the packaging form. "
 "The *Packaging Barcodes* page opens, with the following fields available:"
 msgstr ""
-"パッケージのバーコードを定義するには、パッケージフォームの:icon:`fa-barcode` "
-":guilabel:`パッケージバーコード`スマートボタンをクリックします"
-"。*パッケージバーコード*ページが開き、以下のフィールドが利用可能になります："
+"パッケージのバーコードを定義するには、パッケージフォームの:icon:`fa-"
+"barcode` :guilabel:`パッケージバーコード`スマートボタンをクリックします。*"
+"パッケージバーコード*ページが開き、以下のフィールドが利用可能になります："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:118
 msgid "Partial reservation"
@@ -12104,10 +12134,10 @@ msgid ""
 "Alternatively, from the *Products* page, click :guilabel:`New` to create a "
 "new product."
 msgstr ""
-"既存のプロダクトを設定するには、:menuselection:`在庫アプリ --> "
-"プロダクト --> プロダクト`\\ に移動し、リストから目的のプロダクトを選択します"
-"。または、:guilabel:`プロダクト`\\ ページから\\ :guilabel:`新規`\\ をクリック"
-"して新しいプロダクトを作成します。"
+"既存のプロダクトを設定するには、:menuselection:`在庫アプリ --> プロダクト --"
+"> プロダクト`\\ に移動し、リストから目的のプロダクトを選択します。また"
+"は、:guilabel:`プロダクト`\\ ページから\\ :guilabel:`新規`\\ をクリックして新"
+"しいプロダクトを作成します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:19
 msgid "For sale vs. purchase"
@@ -13744,10 +13774,10 @@ msgid ""
 "The receipt cannot be validated without an assigned lot or serial number."
 msgstr ""
 "\\ :guilabel:`確認`\\ をクリックする前に、注文されたプロダクト数量にシリアル"
-"番号を割り当てないと、\\ :guilabel:`無効な操作`\\ ポップアップが表示されます"
-"。このポップアップでは、注文されたプロダクトのロットまたはシリアル番号の入力"
-"が求められます。ロットまたはシリアル番号を割り当てないと、入荷を最終確定でき"
-"ません。"
+"番号を割り当てないと、\\ :guilabel:`無効な操作`\\ ポップアップが表示されま"
+"す。このポップアップでは、注文されたプロダクトのロットまたはシリアル番号の入"
+"力が求められます。ロットまたはシリアル番号を割り当てないと、入荷を最終確定で"
+"きません。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:106
 msgid "User error popup when validating an order with no lot number."
@@ -13906,10 +13936,10 @@ msgid ""
 "click :guilabel:`Apply` to confirm the date. Finally, "
 "click :guilabel:`Confirm` to confirm the sales order."
 msgstr ""
-"次に、:guilabel:`その他情報` タブをクリックします。:guilabel:`配送` "
-"セクションで、:guilabel:`配送日` を予定日以降の日付に変更し、:guilabel:`適"
-"用` をクリックして日付を確定します。最後に、:guilabel:`確認` をクリックして販"
-"売オーダを確定します。"
+"次に、:guilabel:`その他情報` タブをクリックします。:guilabel:`配送` セクショ"
+"ンで、:guilabel:`配送日` を予定日以降の日付に変更し、:guilabel:`適用` をク"
+"リックして日付を確定します。最後に、:guilabel:`確認` をクリックして販売オーダ"
+"を確定します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:174
 msgid ""
@@ -14064,10 +14094,10 @@ msgid ""
 "page via the breadcrumbs. Remove all of the search filters from the search "
 "bar on the :guilabel:`Lots/Serial Numbers` dashboard."
 msgstr ""
-"新しい使用期限切れアラート、または使用期限が切れた(または間もなく切れる) "
-"プロダクトの使用期限切れアラートを確認するには、パンくずリストから "
-":guilabel:`ロット/シリアル番号` ページに戻ります。 :guilabel:`ロット/シリアル"
-"番号` ダッシュボードの検索バーから、検索フィルタを全て削除します。"
+"新しい使用期限切れアラート、または使用期限が切れた(または間もなく切れる) プロ"
+"ダクトの使用期限切れアラートを確認するには、パンくずリストから :guilabel:`"
+"ロット/シリアル番号` ページに戻ります。 :guilabel:`ロット/シリアル番号` ダッ"
+"シュボードの検索バーから、検索フィルタを全て削除します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:242
 msgid ""
@@ -14102,11 +14132,10 @@ msgid ""
 "the :guilabel:`Logistics` section, select a user in "
 "the :guilabel:`Responsible` field."
 msgstr ""
-"通知を設定するには、:menuselection:`在庫アプリ --> プロダクト --> "
-"プロダクト` に移動します。ロット番号/シリアル番号および使用期限の追跡が設定さ"
-"れたプロダクトを選択します。:guilabel:`在庫` タブに移動します"
-"。:guilabel:`ロジスティクス` セクションで、:guilabel:`担当者` フィールドから"
-"ユーザを選択します。"
+"通知を設定するには、:menuselection:`在庫アプリ --> プロダクト --> プロダクト"
+"` に移動します。ロット番号/シリアル番号および使用期限の追跡が設定されたプロダ"
+"クトを選択します。:guilabel:`在庫` タブに移動します。:guilabel:`ロジスティク"
+"ス` セクションで、:guilabel:`担当者` フィールドからユーザを選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:258
 msgid ""
@@ -15353,8 +15382,8 @@ msgid ""
 "On that product's detail form, click the :icon:`fa-bars` :guilabel:`Lot/"
 "Serial Numbers` smart button to view the new serial number."
 msgstr ""
-"その製品の詳細フォームで、:icon:`fa-bars`\\ :guilabel:`ロット/シリアル番号`\\"
-" スマートボタンをクリックして、新しいシリアル番号を表示します。"
+"その製品の詳細フォームで、:icon:`fa-bars`\\ :guilabel:`ロット/シリアル番号"
+"`\\ スマートボタンをクリックして、新しいシリアル番号を表示します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:135
 msgid "Create serial numbers for incoming or outgoing products"
@@ -15423,9 +15452,9 @@ msgid ""
 "settings-adjust` :guilabel:`(Adjust Settings)` icon, and in the drop-down "
 "menu, select the :guilabel:`Serial Numbers` checkbox."
 msgstr ""
-"受領書または配送オーダーで:guilabel:`シリアル番号`フィールドを表示させるには"
-"、:guilabel:`操作`タブで:icon:`oi-settings-adjust`\\ :guilabel:`(設定を調整)"
-"`\\ アイコンをクリックし、ドロップダウンメニューから:guilabel:`シリアル番"
+"受領書または配送オーダーで:guilabel:`シリアル番号`フィールドを表示させるに"
+"は、:guilabel:`操作`タブで:icon:`oi-settings-adjust`\\ :guilabel:`(設定を調"
+"整)`\\ アイコンをクリックし、ドロップダウンメニューから:guilabel:`シリアル番"
 "号`チェックボックスを選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:165
@@ -15475,8 +15504,8 @@ msgid ""
 "Assign multiple serial numbers at once by clicking the :guilabel:`Generate "
 "Serials/Lots` link in the *Detailed Operations* pop-up window."
 msgstr ""
-"*詳細操作* ポップアップウィンドウにある:guilabel:`シリアル/ロットの生"
-"成`リンクをクリックして、一度に複数のシリアル番号を割り当てます。"
+"*詳細操作* ポップアップウィンドウにある:guilabel:`シリアル/ロットの生成`リン"
+"クをクリックして、一度に複数のシリアル番号を割り当てます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:196
 msgid ""
@@ -15527,12 +15556,13 @@ msgid ""
 "the list, leave the box unchecked."
 msgstr ""
 ":guilabel:`現在の行を保持`：以前に追加された可能性のある既存のシリアル番号を"
-"保持する場合にこれを選択します。リスト内の既存のシリアル番号を置き換えるには"
-"、このチェックボックスをオフのままにします。"
+"保持する場合にこれを選択します。リスト内の既存のシリアル番号を置き換えるに"
+"は、このチェックボックスをオフのままにします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:214
 msgid "After filling out these fields, click the :guilabel:`Validate` button."
-msgstr "これらのフィールドに入力した後、:guilabel:`検証`ボタンをクリックします。"
+msgstr ""
+"これらのフィールドに入力した後、:guilabel:`検証`ボタンをクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:216
 msgid ""
@@ -15540,9 +15570,9 @@ msgid ""
 "Click :guilabel:`Save` to update the :guilabel:`Quantity` field on the "
 "delivery order or receipt."
 msgstr ""
-"新しく生成されたシリアル番号が *詳細操作* ウィンドウに表示されます"
-"。:guilabel:`保存`をクリックして、配送オーダーまたは受領書の:guilabel:`数"
-"量`フィールドを更新します。"
+"新しく生成されたシリアル番号が *詳細操作* ウィンドウに表示されま"
+"す。:guilabel:`保存`をクリックして、配送オーダーまたは受領書の:guilabel:`数量"
+"`フィールドを更新します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:220
 msgid "Import Serials/Lots"
@@ -15554,9 +15584,9 @@ msgid ""
 "the :guilabel:`Import Serials/Lots` link in the *Detailed Operations* pop-up "
 "window."
 msgstr ""
-"一度に複数のシリアル番号を割り当てるもう一つのオプションは、*詳細操作* "
-"ポップアップウィンドウの:guilabel:`シリアル/ロットをインポート`リンクを"
-"クリックすることです。"
+"一度に複数のシリアル番号を割り当てるもう一つのオプションは、*詳細操作* ポップ"
+"アップウィンドウの:guilabel:`シリアル/ロットをインポート`リンクをクリックする"
+"ことです。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:226
 msgid ""
@@ -15565,17 +15595,17 @@ msgid ""
 "product_management/operation-type-setting>`."
 msgstr ""
 "インポートリンクが表示されない場合は、:guilabel:`新規作成`ボックスが:ref:`受"
-"領の設定ページ <inventory/product_management/operation-type-setting>`で"
-"チェックされていることを確認してください。"
+"領の設定ページ <inventory/product_management/operation-type-setting>`でチェッ"
+"クされていることを確認してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:229
 msgid ""
 "Doing so opens the *Import Serials* pop-up window. Enter each serial number "
 "on a separate line in the :guilabel:`Serial numbers` text field."
 msgstr ""
-"これを行うと、*シリアルをインポート* ポップアップウィンドウが開きます"
-"。:guilabel:`シリアル番号`テキストフィールドに、各シリアル番号を別の行に入力"
-"してください。"
+"これを行うと、*シリアルをインポート* ポップアップウィンドウが開きま"
+"す。:guilabel:`シリアル番号`テキストフィールドに、各シリアル番号を別の行に入"
+"力してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:232
 msgid ""
@@ -15619,8 +15649,8 @@ msgid ""
 "following in the :guilabel:`Serial numbers` input field:"
 msgstr ""
 "したがって、:guilabel:`シリアルをインポート`ポップアップウィンドウで、以下の"
-"通り:guilabel:`シリアル番号`入力フィールドに入力することで、残りの製品に `SN-"
-"2` から `SN-5` までの4つのシリアル番号が割り当てられます:"
+"通り:guilabel:`シリアル番号`入力フィールドに入力することで、残りの製品に "
+"`SN-2` から `SN-5` までの4つのシリアル番号が割り当てられます:"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:260
 msgid ""
@@ -19086,9 +19116,9 @@ msgid ""
 "other records."
 msgstr ""
 "標準の倉庫フローに加えて、Odooでは次のオプションルートを利用できます。標準の"
-"倉庫ルートとは異なり、これらのルートは自動的には\\ **適用されません**\\ 。個"
-"々のプロダクト、プロダクトカテゴリ、またはその他のレコードに手動で\\ :ref:`適"
-"用 <inventory/routes/apply>`\\ する必要があります。"
+"倉庫ルートとは異なり、これらのルートは自動的には\\ **適用されません**\\ 。"
+"個々のプロダクト、プロダクトカテゴリ、またはその他のレコードに手動で\\ :ref:`"
+"適用 <inventory/routes/apply>`\\ する必要があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:193
 msgid ""
@@ -19184,8 +19214,8 @@ msgid ""
 "ordered. The components are sent from stock through the warehouse's "
 "*Resupply Subcontractor* route."
 msgstr ""
-"外注プロダクトがオーダされたときに、構成品を外注先へ送ります。構成品は倉庫"
-"の*外注先補充*ルートを通じて在庫から送られます。"
+"外注プロダクトがオーダされたときに、構成品を外注先へ送ります。構成品は倉庫の*"
+"外注先補充*ルートを通じて在庫から送られます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:226
 msgid "Applying routes"
@@ -19271,10 +19301,10 @@ msgid ""
 "product. On the product form, select the *Inventory* tab, then select one or "
 "more :guilabel:`Routes` in the *Operations* section."
 msgstr ""
-"プロダクトに直接ルートを割り当てるには、\\ :menuselection:`在庫アプリ --> "
-"プロダクト --> プロダクト`\\ に移動し、プロダクトを選択します。"
-"プロダクトフォームで、*在庫*タブを選択し、*オペレーション*セクションで1つ以上"
-"の\\ :guilabel:`ルート`\\ を選択します。"
+"プロダクトに直接ルートを割り当てるには、\\ :menuselection:`在庫アプリ --> プ"
+"ロダクト --> プロダクト`\\ に移動し、プロダクトを選択します。プロダクトフォー"
+"ムで、*在庫*タブを選択し、*オペレーション*セクションで1つ以上の\\ :guilabel:`"
+"ルート`\\ を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:264
 msgid ""
@@ -19282,9 +19312,9 @@ msgid ""
 "click :icon:`oi-arrow-right` :guilabel:`View Diagram` next to "
 "the :guilabel:`Routes` field."
 msgstr ""
-"プロダクトを変更せずに、どのルートとルールが適用されるかを確認するには、\\ "
-":icon:`oi-arrow-right` :guilabel:`ダイアグラム表示`\\ (\\ "
-":guilabel:`ルート`\\ フィールドの横)をクリックします。"
+"プロダクトを変更せずに、どのルートとルールが適用されるかを確認するには、"
+"\\ :icon:`oi-arrow-right` :guilabel:`ダイアグラム表示`\\ (\\ :guilabel:`ルー"
+"ト`\\ フィールドの横)をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:267
 msgid "Routes on a product form."
@@ -19371,8 +19401,8 @@ msgid ""
 "On the form, select one or more :guilabel:`Routes`."
 msgstr ""
 "配送方法にルートを割り当てるには、\\ :menuselection:`在庫アプリ --> 設定 --> "
-"配送方法`\\ に移動し、配送方法を選択します。フォームで、1つ以上の\\ "
-":guilabel:`ルート`\\ を選択します。"
+"配送方法`\\ に移動し、配送方法を選択します。フォームで、1つ以上の"
+"\\ :guilabel:`ルート`\\ を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:316
 msgid "Routes on a delivery method form."
@@ -19560,9 +19590,9 @@ msgid ""
 "Each rule has an :guilabel:`Action`, an :guilabel:`Operation Type`, "
 "a :guilabel:`Source Location`, and a :guilabel:`Destination Location`."
 msgstr ""
-"各ルールには、\\ :guilabel:`アクション`\\ 、\\ "
-":guilabel:`オペレーションタイプ`\\ 、\\ :guilabel:`移動元ロケーション`\\ 、お"
-"よび\\ :guilabel:`移動先ロケーション`\\ があります。"
+"各ルールには、\\ :guilabel:`アクション`\\ 、\\ :guilabel:`オペレーションタイ"
+"プ`\\ 、\\ :guilabel:`移動元ロケーション`\\ 、および\\ :guilabel:`移動先ロ"
+"ケーション`\\ があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:403
 msgid "The following actions are defined in Odoo:"
@@ -19575,8 +19605,8 @@ msgid ""
 "is created from the *Source Location* to fulfill the demand."
 msgstr ""
 "`Pull From`：\\ *移動先ロケーション*\\ で需要(販売オーダや製造オーダなど)が発"
-"生すると、その需要を満たすために\\ *移動元ロケーション*\\ から指定された\\ "
-"*オペレーションタイプ*\\ のピッキングが作成されます。"
+"生すると、その需要を満たすために\\ *移動元ロケーション*\\ から指定された\\ *"
+"オペレーションタイプ*\\ のピッキングが作成されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:408
 msgid ""
@@ -19585,17 +19615,17 @@ msgid ""
 "Location*."
 msgstr ""
 "`Push To`：プロダクトが\\ *移動元ロケーション*\\ に到着すると、それらを\\ *移"
-"動先ロケーション*\\ に送るために指定された\\ *オペレーションタイプ*\\ の"
-"ピッキングが作成されます。"
+"動先ロケーション*\\ に送るために指定された\\ *オペレーションタイプ*\\ のピッ"
+"キングが作成されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:410
 msgid ""
 "`Pull & Push`: Create both a `Pull From` and `Push To` rule with the "
 "selected *Operation Type*, *Source Location*, and *Destination Location*."
 msgstr ""
-"`Pull & Push`：選択した\\ *オペレーションタイプ*\\ 、\\ *移動元"
-"ロケーション*\\ 、および\\ *移動先ロケーション*\\ を使用して、\\ `Pull "
-"From`\\ と\\ `Push To`\\ の両方のルールを作成します。"
+"`Pull & Push`：選択した\\ *オペレーションタイプ*\\ 、\\ *移動元ロケーション"
+"*\\ 、および\\ *移動先ロケーション*\\ を使用して、\\ `Pull From`\\ と\\ "
+"`Push To`\\ の両方のルールを作成します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:412
 msgid ""
@@ -21322,7 +21352,7 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:73
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:34
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:57
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:131
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:90
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -21964,9 +21994,9 @@ msgid ""
 msgstr ""
 "次に、\\ :menuselection:`在庫アプリ --> プロダクト --> プロダクト`\\ に移動し"
 "て対象のプロダクトを選択し、ロットまたはシリアル番号で追跡されていることを確"
-"認します。プロダクトフォームで、\\ :guilabel:`一般情報`\\ タブを開きます。\\ "
-":guilabel:`追跡`\\ フィールドで、\\ :guilabel:`固有のシリアル番号`\\ または "
-"\\ :guilabel:`ロット`\\ のいずれかを選択します。"
+"認します。プロダクトフォームで、\\ :guilabel:`一般情報`\\ タブを開きます。"
+"\\ :guilabel:`追跡`\\ フィールドで、\\ :guilabel:`固有のシリアル番号`\\ また"
+"は \\ :guilabel:`ロット`\\ のいずれかを選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:37
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:41
@@ -25216,32 +25246,37 @@ msgid ""
 "Senders are required to produce these forms. A waybill consists of four "
 "parts:"
 msgstr ""
+"この条約を支援するために、標準の運送状または輸送書類が作成されました。これは"
+"運送状（|CMR| 運送状とも呼ばれます）と呼ばれます。荷送人はこれらのフォームを"
+"作成する必要があります。運送状は4つの部分で構成されています。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:299
 msgid "Sender's copy (in red)"
-msgstr ""
+msgstr "荷送人控え（赤）"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:300
 msgid "Receiver's copy (in blue)"
-msgstr ""
+msgstr "荷受人控え（青）"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:301
 msgid "Carrier's copy (in green)"
-msgstr ""
+msgstr "運送業者控え（緑）"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:302
 msgid "Second carrier's copy (in black)"
-msgstr ""
+msgstr "第2運送業者控え（黒）"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:304
 msgid ""
 "Odoo completes these forms using the information it has; any additional "
 "information must be added manually."
 msgstr ""
+"Odooは保持している情報を使用してこれらのフォームに記入します。追加情報は手動"
+"で入力する必要があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:308
 msgid "Single-delivery |CMR|"
-msgstr ""
+msgstr "単一配送 |CMR|"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:310
 msgid ""
@@ -25249,6 +25284,8 @@ msgid ""
 "to :menuselection:`Inventory app --> Operations --> Deliveries`. Open the "
 "delivery order that requires a consignment note."
 msgstr ""
+"配送オーダーの |CMR| を印刷するには、 :menuselection:`在庫アプリ --> 操"
+"作 --> 配送` に移動します。運送状が必要な配送オーダーを開きます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:313
 msgid ""
@@ -25256,14 +25293,16 @@ msgid ""
 "print` :menuselection:`Print --> Consignment Note (CMR)`. A consignment note "
 "is generated."
 msgstr ""
+" :icon:`fa-cog` :guilabel:`（操作）` アイコンをクリックし、 :icon:`fa-print` "
+":menuselection:`印刷 --> 運送状 (CMR)` を選択します。運送状が生成されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:316
 msgid "A CMR note for a shipment of produce, going to Belgium."
-msgstr ""
+msgstr "ベルギー行きの農産物輸送用のCMR運送状。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:320
 msgid "Batch delivery |CMR|"
-msgstr ""
+msgstr "一括配送 |CMR|"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:322
 msgid ""
@@ -25271,6 +25310,8 @@ msgid ""
 "app --> Operations --> Batch Transfers`. Open the batch transfer that "
 "requires consignment notes."
 msgstr ""
+"一括オーダーの |CMRs| を印刷するには、 :menuselection:`在庫アプリ --> 操"
+"作 --> 一括移動` に移動します。運送状が必要な一括転送を開きます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:325
 msgid ""
@@ -25278,6 +25319,9 @@ msgid ""
 "print` :menuselection:`Print --> Consignment Note (CMR)`. A consignment note "
 "is generated for each delivery in the batch transfer."
 msgstr ""
+" :icon:`fa-cog` :guilabel:`（操作）` アイコンをクリックし、 :icon:`fa-print` "
+":menuselection:`印刷 --> 運送状 (CMR)` を選択します。一括転送に含まれる各配送"
+"の運送状が生成されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:3
 msgid "EasyPost integration"
@@ -26726,6 +26770,14 @@ msgstr ""
 "代わりに本番環境の認証情報を使用してテストを行い、テスト完了後にFedExプラット"
 "フォームからテストリクエストをキャンセルしてください。"
 
+#: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:165
+msgid ""
+"FedEx shipments and requests cannot be made from a staging database. You "
+"must use a production database to create shipments."
+msgstr ""
+"ステージングデータベースからはFedExの配送やリクエストを作成できません。配送を"
+"作成するには、本番データベースを使用する必要があります。"
+
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
 msgstr "配送費用請求"
@@ -27752,6 +27804,9 @@ msgid ""
 "Delivery <ecommerce/payments/cash-on-delivery>` payment method when "
 "selecting this delivery option on the ecommerce website."
 msgstr ""
+":guilabel:`代引換`：Eコマースウェブサイトでこの配送オプションを選択する際に、"
+"顧客が :ref:`代引換 <ecommerce/payments/cash-on-delivery>` 支払方法を選択でき"
+"るようにします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:49
 msgid ""
@@ -28252,33 +28307,41 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:37
 msgid "Configure printers"
-msgstr ""
+msgstr "プリンタの設定"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:39
 msgid ""
 "By default, Odoo will download the PDF document to the device, but the "
 "printer can be configured to print the document directly."
 msgstr ""
+"デフォルトでは、OdooはPDFドキュメントをデバイスにダウンロードしますが、"
+"プリンタを設定してドキュメントを直接印刷することもできます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:42
 msgid ""
 "Three types of printers can be configured from the :menuselection:`Inventory "
 "app --> Configuration --> Manage Printers` menu:"
 msgstr ""
+"3種類のプリンタを :menuselection:`在庫アプリ --> 設定 --> プリンタ管理` "
+"メニューから設定できます："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:45
 msgid "**ePOS:** Print PNG carrier labels, or any PDF label."
-msgstr ""
+msgstr "**ePOS:** PNG運送業者ラベル、または任意のPDFラベルを印刷します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:46
 msgid "**ZPL:** Print ZPL carrier or product labels over the network."
 msgstr ""
+"**ZPL:** ネットワーク経由でZPL運送業者ラベルまたはプロダクトラベルを印刷しま"
+"す。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:47
 msgid ""
 ":doc:`IoT <../../../../general/iot/devices/printer>`: Print ZPL or PDF "
 "reports depending on the printer's capabilities."
 msgstr ""
+":doc:`IoT <../../../../general/iot/devices/printer>`：プリンタの機能に応じて"
+"ZPLまたはPDFレポートを印刷します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:51
 msgid "For *ePOS* and *ZPL*, the printer's IP address **must** be set up."
@@ -29103,11 +29166,11 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:122
 msgid ""
 "Fill out the following fields in the :guilabel:`New Delivery Method` form:"
-msgstr ""
+msgstr "以下のフィールドを :guilabel:`配送方法を新規作成` フォームに入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:124
 msgid ":guilabel:`Delivery Method`: Type `Sendcloud DPD`."
-msgstr ""
+msgstr ":guilabel:`配送方法`: 「Sendcloud DPD」と入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:125
 msgid ""
@@ -29126,23 +29189,23 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
 msgid ":guilabel:`Invoicing Policy`: Select one of the options."
-msgstr ""
+msgstr ":guilabel:`請求方針`: オプションを1つ選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:129
 msgid "In the :guilabel:`SendCloud Configuration` tab:"
-msgstr ""
+msgstr "\\ :guilabel:`SendCloud設定`\\ タブで："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
 msgid "Enter the :guilabel:`Sendcloud Public Key`."
-msgstr ""
+msgstr "\\ :guilabel:`Sendcloud公開鍵`\\ を入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid "Enter the :guilabel:`Sendcloud Secret Key`."
-msgstr ""
+msgstr "\\ :guilabel:`Sendcloud秘密鍵`\\ を入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:133
 msgid "Enter the :guilabel:`Ship From` location."
-msgstr ""
+msgstr "\\ :guilabel:`出荷元`\\ ロケーションを入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:138
 msgid "Pickup points"
@@ -29166,26 +29229,33 @@ msgid ""
 "*Options* section in the *SendCloud Configuration* tab, "
 "enable :guilabel:`Use Sendcloud Locations` feature."
 msgstr ""
+"この機能を有効にするには、配送方法フォームに移動し、\\ :guilabel:`Sendcloud"
+"ロケーションを使用`\\ 機能を有効にします（\\ *SendCloud設定*\\ タブの "
+"*オプション* セクション内）。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:148
 msgid "Once enabled, the pickup point selection is available through:"
-msgstr ""
+msgstr "有効にすると、以下の場所から受取拠点を選択できるようになります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:150
 msgid ""
 "The **Website** app on the *Delivery method* page during the online checkout "
 "process."
 msgstr ""
+"オンラインチェックアウトプロセス中の *配送方法* ページにおける "
+"**ウェブサイト** アプリ。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:152
 msgid "The Delivery method page with Sendcloud option selected."
-msgstr ""
+msgstr "Sendcloudオプションが選択された状態の配送方法ページ。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:155
 msgid ""
 "The **Sales** app on the sales quotation using the *Add shipping* button or "
 "the *Delivery* smart button."
 msgstr ""
+"*配送を追加* ボタンまたは *配送* スマートボタンを使用した、販売見積書の **販"
+"売** アプリ。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:158
 msgid ""
@@ -29195,6 +29265,11 @@ msgid ""
 "Select :guilabel:`Sendcloud MR` (Sendcloud Mondial Relay) for "
 "the :guilabel:`Delivery Method` and then click :guilabel:`Get Rate`."
 msgstr ""
+"販売見積に\\ :guilabel:`受取拠点`\\ を追加するには、\\ :ref:`見積を作成 "
+"<sales/create_quotations/create-quotation>`\\ し、\\ :guilabel:`配送を追加`\\"
+" ボタンをクリックします。*配送方法を追加* ポップアップが表示されます。\\ "
+":guilabel:`Sendcloud MR`\\ （Sendcloud Mondial Relay）を\\ :guilabel:`配送方"
+"法`\\ に選択し、\\ :guilabel:`料金を取得`\\ をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
 msgid ""
@@ -29204,38 +29279,47 @@ msgid ""
 "Click :guilabel:`Choose this location` to save it and return to the *Add a "
 "delivery method* pop-up, then click :guilabel:`Add`."
 msgstr ""
+"\\ :icon:`fa-pencil`\\ \\ :guilabel:`鉛筆`\\ アイコンを\\ :guilabel:`受取拠"
+"点`\\ フィールドの隣でクリックすると、*受取拠点を選択* ポップアップが表示され"
+"ます。郵便番号を入力し、生成されたリストからロケーションを選択します。\\ "
+":guilabel:`このロケーションを選択`\\ をクリックして保存し、*配送方法を追加* "
+"ポップアップに戻ってから、\\ :guilabel:`追加`\\ をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:168
 msgid ""
 "Completed pop-up with the Sendcloud method selected and Pickup Point "
 "configured."
-msgstr ""
+msgstr "Sendcloudメソッドが選択され、受取拠点が設定された状態の完了ポップアップ。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:171
 msgid ""
 "To change a pickup point after a sales quotation is confirmed, ensure the "
 "delivery order has not been validated. If the delivery order is validated:"
 msgstr ""
+"販売見積書が確定された後に受取拠点を変更するには、出荷オーダーがまだ検証され"
+"ていないことを確認してください。出荷オーダーが検証済みの場合："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:174
 msgid ""
 "**Do not** attempt to change the pickup point on the sales order or delivery "
 "order."
-msgstr ""
+msgstr "販売オーダーや出荷オーダーでの受取拠点の変更は **行わないでください** 。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:175
 msgid "Cancel the existing sales order."
-msgstr ""
+msgstr "既存の販売オーダーをキャンセルします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:176
 msgid "Create a new sales order with the correct pickup point."
-msgstr ""
+msgstr "正しい受取拠点で新しい販売オーダーを作成します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:179
 msgid ""
 "The customer has already confirmed the sales order with their chosen pickup "
 "point, however, now they want to change the pickup point location."
 msgstr ""
+"顧客が選択した受取拠点で販売オーダーを既に確定しているが、受取拠点の場所を変"
+"更したいというケースです。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:182
 msgid ""
@@ -30295,23 +30379,23 @@ msgid ""
 "Configuration --> Delivery Methods`, then click :guilabel:`New`. In the "
 "*Delivery Method* form, fill in the following fields:"
 msgstr ""
-"配送方法を作成するには、 :menuselection:`在庫 --> 設定 --> 配送方法` に移動し"
-"、 :guilabel:`新規` をクリックします。 *配送方法* フォームで、以下の"
-"フィールドに入力します。"
+"配送方法を作成するには、 :menuselection:`在庫 --> 設定 --> 配送方法` に移動"
+"し、 :guilabel:`新規` をクリックします。 *配送方法* フォームで、以下のフィー"
+"ルドに入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:65
 msgid ""
 ":guilabel:`Name`: Enter a name for the delivery method, e.g., `ShipStation + "
 "UPS Ground`."
 msgstr ""
-":guilabel:`名称`: 配送方法の名前を入力します (例: `ShipStation + UPS Ground`)"
-"。"
+":guilabel:`名称`: 配送方法の名前を入力します (例: `ShipStation + UPS "
+"Ground`)。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:66
 msgid ":guilabel:`Provider`: Select :guilabel:`ShipStation` as the provider."
 msgstr ""
-":guilabel:`プロバイダ`: プロバイダとして :guilabel:`ShipStation` を選択します"
-"。"
+":guilabel:`プロバイダ`: プロバイダとして :guilabel:`ShipStation` を選択しま"
+"す。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:67
 msgid ""
@@ -30328,8 +30412,8 @@ msgid ""
 "product specifically to track delivery orders that use this method."
 msgstr ""
 ":guilabel:`配送プロダクト`: 一般的な配送プロダクト (:guilabel:`配送料`) を選"
-"択するか、この方法を使用する配送オーダを追跡するために専用のShipStation配送"
-"プロダクトを作成します。"
+"択するか、この方法を使用する配送オーダを追跡するために専用のShipStation配送プ"
+"ロダクトを作成します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:73
 msgid "Delivery method form in Odoo with the ShipStation provider selected."
@@ -30350,9 +30434,9 @@ msgid ""
 "*ShipStation Configuration* tab appears. Fill in the following fields in the "
 "*ShipStation Configuration* tab:"
 msgstr ""
-"プロバイダが :guilabel:`ShipStation` に設定されると、 "
-":guilabel:`ShipStation` *ShipStation設定* タブが表示されます。 *ShipStation設"
-"定* タブで、以下のフィールドに入力します。"
+"プロバイダが :guilabel:`ShipStation` に設定される"
+"と、 :guilabel:`ShipStation` *ShipStation設定* タブが表示されます。 "
+"*ShipStation設定* タブで、以下のフィールドに入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:83
 msgid ""
@@ -30365,24 +30449,24 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:85
 msgid ":guilabel:`ShipStation Label Layout`: Optionally select a label size."
 msgstr ""
-":guilabel:`ShipStationラベルレイアウト`: 必要に応じてラベルサイズを選択します"
-"。"
+":guilabel:`ShipStationラベルレイアウト`: 必要に応じてラベルサイズを選択しま"
+"す。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:86
 msgid ""
 ":guilabel:`ShipStation Label Format`: Optionally select the desired label "
 "file format."
 msgstr ""
-":guilabel:`ShipStationラベルフォーマット`: 必要に応じて希望の"
-"ラベルファイルフォーマットを選択します。"
+":guilabel:`ShipStationラベルフォーマット`: 必要に応じて希望のラベルファイル"
+"フォーマットを選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:87
 msgid ""
 ":guilabel:`ShipStation Insurance Provider`: Optionally select an insurance "
 "provider."
 msgstr ""
-":guilabel:`ShipStation保険プロバイダ`: 必要に応じて保険プロバイダを選択します"
-"。"
+":guilabel:`ShipStation保険プロバイダ`: 必要に応じて保険プロバイダを選択しま"
+"す。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:90
 msgid ""
@@ -30443,10 +30527,10 @@ msgid ""
 "delivery method (`ShipStation +` *the selected carrier and service*). The "
 "delivery product associated with the method is added to the quotation."
 msgstr ""
-":doc:`見積を作成 <../../../../sales/sales/sales_quotations/create_quotations>"
-"`し、:guilabel:`配送を追加`をクリックして、配送方法（`ShipStation +` *選択し"
-"た配送業者およびサービス*）を選択します。その方法に関連付けられた配送"
-"プロダクトが見積に追加されます。"
+":doc:`見積を作成 <../../../../sales/sales/sales_quotations/"
+"create_quotations>`し、:guilabel:`配送を追加`をクリックして、配送方法"
+"（`ShipStation +` *選択した配送業者およびサービス*）を選択します。その方法に"
+"関連付けられた配送プロダクトが見積に追加されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/shipstation.rst:116
 msgid "Add a delivery method window on a quotation form."
@@ -33267,8 +33351,8 @@ msgid ""
 "To view the *Physical Inventory* page, navigate to :menuselection:`Inventory "
 "app --> Operations --> Physical Inventory`."
 msgstr ""
-"*実在庫* ページを表示するには、\\ :menuselection:`在庫アプリ --> "
-"オペレーション --> 実在庫`\\ に移動します。"
+"*実在庫* ページを表示するには、\\ :menuselection:`在庫アプリ --> オペレーショ"
+"ン --> 実在庫`\\ に移動します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:20
 msgid "Products listed on the Physical Inventory page."
@@ -33279,8 +33363,8 @@ msgid ""
 "On the *Physical Inventory* page, all products with stock history are "
 "listed, even if the quantity in stock is less than zero."
 msgstr ""
-"*実在庫* ページには、在庫数量がゼロ未満であっても、在庫履歴があるすべての"
-"プロダクトが表示されます。"
+"*実在庫* ページには、在庫数量がゼロ未満であっても、在庫履歴があるすべてのプロ"
+"ダクトが表示されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:27
 msgid ""
@@ -33299,8 +33383,8 @@ msgid ""
 "<use_locations>` are enabled."
 msgstr ""
 ":guilabel:`ロケーション`：プロダクトが保管されている倉庫内の特定の場所。この"
-"列は、\\ :doc:`保管ロケーション <use_locations>`\\ が有効になっている場合"
-"に**のみ**表示されます。"
+"列は、\\ :doc:`保管ロケーション <use_locations>`\\ が有効になっている場合に**"
+"のみ**表示されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:33
 msgid ""
@@ -33346,9 +33430,9 @@ msgid ""
 "made. The difference is automatically calculated after every inventory "
 "adjustment."
 msgstr ""
-":guilabel:`差異`：在庫調整が行われた後の\\ :guilabel:`手持数量`\\ と\\ "
-":guilabel:`カウント済数量`\\ の差。差異は在庫調整のたびに自動的に計算されます"
-"。"
+":guilabel:`差異`：在庫調整が行われた後の\\ :guilabel:`手持数量`\\ と"
+"\\ :guilabel:`カウント済数量`\\ の差。差異は在庫調整のたびに自動的に計算され"
+"ます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:48
 msgid ""
@@ -33358,9 +33442,9 @@ msgid ""
 "(Unit of Measure)` is :guilabel:`Units`."
 msgstr ""
 ":guilabel:`単位`：プロダクトを測定する\\ :doc:`測定単位 <../../"
-"product_management/configure/uom>`\\ です。特に指定がない限り（例:\\ "
-":guilabel:`ポンド`\\ または\\ :guilabel:`オンス`）、デフォルトの\\ :abbr:`UoM"
-"（測定単位）`\\ は\\ :guilabel:`個`\\ です。"
+"product_management/configure/uom>`\\ です。特に指定がない限り（例:"
+"\\ :guilabel:`ポンド`\\ または\\ :guilabel:`オンス`）、デフォルトの"
+"\\ :abbr:`UoM（測定単位）`\\ は\\ :guilabel:`個`\\ です。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:51
 msgid ""
@@ -33374,7 +33458,8 @@ msgstr ""
 msgid ""
 ":guilabel:`Product Category`: The category of the product list on the "
 "inventory adjustment line."
-msgstr ":guilabel:`プロダクトカテゴリ`：棚卸調整行のプロダクトリストのカテゴリ。"
+msgstr ""
+":guilabel:`プロダクトカテゴリ`：棚卸調整行のプロダクトリストのカテゴリ。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:54
 msgid ":guilabel:`Last Count Date`: The last time the quantity was updated."
@@ -33402,7 +33487,8 @@ msgstr ""
 msgid ""
 ":guilabel:`On Hand`: The quantity of the product currently recorded in the "
 "database."
-msgstr ":guilabel:`手持数量`：現在データベースに記録されているプロダクトの数量。"
+msgstr ""
+":guilabel:`手持数量`：現在データベースに記録されているプロダクトの数量。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:60
 msgid ""
@@ -33420,10 +33506,9 @@ msgid ""
 "of the form's top row, and reveal any desired column by selecting the "
 "checkbox next to that option."
 msgstr ""
-"一部の列はデフォルトで非表示になっています。これらの列を表示するには、"
-"フォームの最上行の隅にある\\ :icon:`oi-settings-adjust`\\ :guilabel:`(調整)"
-"`\\ アイコンをクリックし、目的の列の横にあるチェックボックスを選択して表示さ"
-"せます。"
+"一部の列はデフォルトで非表示になっています。これらの列を表示するには、フォー"
+"ムの最上行の隅にある\\ :icon:`oi-settings-adjust`\\ :guilabel:`(調整)`\\ アイ"
+"コンをクリックし、目的の列の横にあるチェックボックスを選択して表示させます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:68
 msgid ""
@@ -34901,10 +34986,10 @@ msgid ""
 "report is only available to users with :doc:`admin access <../../../../"
 "general/users/access_rights>`."
 msgstr ""
-"廃棄されたアイテムの累計数量を確認するには、\\ :menuselection:`在庫"
-"アプリ --> レポート --> 移動履歴`\\ に移動します。このレポートは、\\ :doc:`管"
-"理者アクセス <../../../../general/users/access_rights>`\\ 権限を持つユーザー"
-"のみが利用可能です。"
+"廃棄されたアイテムの累計数量を確認するには、\\ :menuselection:`在庫アプリ --"
+"> レポート --> 移動履歴`\\ に移動します。このレポートは、\\ :doc:`管理者アク"
+"セス <../../../../general/users/access_rights>`\\ 権限を持つユーザーのみが利"
+"用可能です。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:59
 msgid ""
@@ -35090,10 +35175,10 @@ msgid ""
 "feature. In the  *Warehouse* section, select the :guilabel:`Storage "
 "Locations` checkbox, then click :guilabel:`Save`."
 msgstr ""
-"特定の保管ロケーションを作成するには、\\ :menuselection:`在庫アプリ --> 設"
-"定 --> 設定`\\ に移動し、*保管ロケーション* 機能を有効にします。*倉庫* "
-"セクションで、\\ :guilabel:`保管ロケーション`\\ チェックボックスを選択し、\\ "
-":guilabel:`保存`\\ をクリックします。"
+"特定の保管ロケーションを作成するには、\\ :menuselection:`在庫アプリ --> 設定 "
+"--> 設定`\\ に移動し、*保管ロケーション* 機能を有効にします。*倉庫* セクショ"
+"ンで、\\ :guilabel:`保管ロケーション`\\ チェックボックスを選択し、"
+"\\ :guilabel:`保存`\\ をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
 msgid ""
@@ -35874,9 +35959,9 @@ msgid ""
 "Information* pop-up window displays the :guilabel:`Forecasted Date` and "
 "various lead times."
 msgstr ""
-"予測日を表示するには、:menuselection:`在庫アプリ --> オペレーション --> 補"
-"充`\\ に移動して\\ :doc:`補充レポート <report>`\\ にアクセスし、目的の発注"
-"ルールの\\ :icon:`fa-info-circle`\\ (:guilabel:`情報`) アイコンをクリックしま"
+"予測日を表示するには、:menuselection:`在庫アプリ --> オペレーション --> 補充"
+"`\\ に移動して\\ :doc:`補充レポート <report>`\\ にアクセスし、目的の発注ルー"
+"ルの\\ :icon:`fa-info-circle`\\ (:guilabel:`情報`) アイコンをクリックしま"
 "す。:guilabel:`補充情報`\\ ポップアップウィンドウに、:guilabel:`予測日`\\ と"
 "さまざまなリードタイムが表示されます。"
 
@@ -35894,10 +35979,9 @@ msgid ""
 "to extend this logic to also consider near-future demand beyond the forecast "
 "date, see :ref:`Horizon Days <inventory/warehouses_storage/horizon-days>`."
 msgstr ""
-"ジャストインタイムロジックは、補充の正確なタイミングを決定します。この"
-"ロジックを拡張して、予測日を超えた近い将来の需要も考慮したい場合は、\\ "
-":ref:`計画期間 <inventory/warehouses_storage/horizon-days>`\\ を参照してくだ"
-"さい。"
+"ジャストインタイムロジックは、補充の正確なタイミングを決定します。このロジッ"
+"クを拡張して、予測日を超えた近い将来の需要も考慮したい場合は、\\ :ref:`計画期"
+"間 <inventory/warehouses_storage/horizon-days>`\\ を参照してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:48
 msgid ""
@@ -36955,7 +37039,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:82
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:223
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:249
 msgid "For purchased products"
 msgstr "購入プロダクトの場合"
 
@@ -36986,7 +37070,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:97
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:164
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:230
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:256
 msgid "For manufactured products"
 msgstr "製造プロダクトの場合"
 
@@ -38434,10 +38518,10 @@ msgid ""
 "tab, and the :guilabel:`Available Quantity` shows the on-hand stock in each "
 "warehouse."
 msgstr ""
-"倉庫の補充方法が :doc:`別の倉庫から補充 <resupply_warehouses>` である場合"
-"、:guilabel:`補充情報` ポップアップウィンドウを開いて、他の倉庫のプロダクトの"
-"在庫状況を確認します。在庫を補充できる倉庫は :guilabel:`倉庫` タブの下に"
-"リストされ、:guilabel:`利用可能数量` には各倉庫の手持在庫が表示されます。"
+"倉庫の補充方法が :doc:`別の倉庫から補充 <resupply_warehouses>` である場"
+"合、:guilabel:`補充情報` ポップアップウィンドウを開いて、他の倉庫のプロダクト"
+"の在庫状況を確認します。在庫を補充できる倉庫は :guilabel:`倉庫` タブの下にリ"
+"ストされ、:guilabel:`利用可能数量` には各倉庫の手持在庫が表示されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:154
 msgid ""
@@ -38647,7 +38731,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:118
 msgid ":guilabel:`Location`: The stock location of the receiving warehouse."
-msgstr ""
+msgstr ":guilabel:`ロケーション`：受入倉庫の在庫ロケーション。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:119
 msgid ""
@@ -38656,18 +38740,22 @@ msgid ""
 "adjust` :guilabel:`(optional columns)` icon. If the product already has the "
 "resupply route, this field is automatically populated."
 msgstr ""
+":guilabel:`ルート`：:guilabel:`X：Yから製品を補給`ルート。この列が非表示の場"
+"合は、:icon:`oi-settings-adjust` :guilabel:`(オプション列)` アイコンを"
+"クリックして有効にします。製品にすでに再供給ルートが設定されている場合、この"
+"フィールドは自動的に入力されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:122
 msgid ""
 ":guilabel:`Min`: The minimum inventory level for which to trigger an "
 "automatic stock transfer."
-msgstr ""
+msgstr ":guilabel:`最小`：自動在庫転送をトリガーするための最小在庫レベル。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:123
 msgid ""
 ":guilabel:`Max`: The maximum inventory level to which stock should be "
 "replenished."
-msgstr ""
+msgstr ":guilabel:`最大`：在庫を補充する上限となる在庫レベル。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:126
 msgid ""
@@ -38676,6 +38764,10 @@ msgid ""
 "to `SHOP/Stock`, and the :guilabel:`Route` set to :guilabel:`Store "
 "(Chicago): Supply Product from Main`."
 msgstr ""
+"ショップ倉庫を補充するための :ref:`0/0再注文規則 <inventory/"
+"warehouses_storage/zero-zero>` が作成され、:guilabel:`ロケーション` が `SHOP/"
+"Stock` に設定され、:guilabel:`ルート` が :guilabel:`ストア（シカゴ）：メイン"
+"から製品を補給` に設定されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:130
 msgid "Show reordering rule configurations."
@@ -38693,7 +38785,7 @@ msgstr "倉庫から倉庫への補充"
 msgid ""
 "After completing the setup, trigger replenishment using one of the following "
 "methods:"
-msgstr ""
+msgstr "設定が完了したら、以下のいずれかの方法で補充をトリガーします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:143
 msgid ""
@@ -38703,6 +38795,11 @@ msgid ""
 "Optionally, set the resupply route in the :guilabel:`Preferred Route` field. "
 "Then, click :guilabel:`Confirm`."
 msgstr ""
+"製品フォームから行う場合：製品フォームで :icon:`fa-cog` :guilabel:`"
+"(アクション)` アイコンをクリックし、:guilabel:`補充` を選択します。"
+"ポップアップウィンドウで、希望する :guilabel:`数量` と :guilabel:`予定日` を"
+"設定します。オプションで、:guilabel:`優先ルート` フィールドで再供給ルートを設"
+"定します。その後、:guilabel:`確認` をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:148
 msgid "Replenish pop-up window on the product form."
@@ -38714,10 +38811,13 @@ msgid ""
 "*Other Info* tab of the quotation form, set the :guilabel:`Warehouse` to the "
 "receiving warehouse, then :guilabel:`Confirm` the quotation."
 msgstr ""
+"販売オーダから行う場合（|MTO| のみ）：製品を指定した見積を作成します。見積"
+"フォームの「その他情報」タブで、:guilabel:`倉庫` を受入倉庫に設定し、見積を "
+":guilabel:`確認` します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:155
 msgid "Warehouse field on the Other Info tab of a quotation."
-msgstr ""
+msgstr "見積のその他情報タブにある倉庫フィールド。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:158
 msgid ""
@@ -38726,10 +38826,14 @@ msgid ""
 "go to :menuselection:`Inventory app --> Operations --> Replenishment`, and "
 "click :guilabel:`Order` on the rule's line."
 msgstr ""
+"再注文規則から行う場合：予測数量が :guilabel:`最小` 数量を下回ると、規則が自"
+"動的にトリガーされます。手動でトリガーするには、:menuselection:`在庫"
+"アプリ --> オペレーション --> 補充` に移動し、規則の行で :guilabel:`オーダ` "
+"をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:162
 msgid "Once triggered, the following transfers are created:"
-msgstr ""
+msgstr "トリガーされると、以下の転送が作成されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:164
 msgid ""
@@ -38738,6 +38842,9 @@ msgid ""
 "Shipments` setting, this is a single delivery, or a pick (and pack) followed "
 "by a delivery."
 msgstr ""
+"供給倉庫から通過ロケーションへ製品を移動する出荷転送。倉庫の :guilabel:`出"
+"荷` 設定に応じて、これは単一の配送、またはピッキング（および梱包）後の配送と"
+"なります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:167
 msgid ""
@@ -38746,6 +38853,9 @@ msgid ""
 "receipt is :guilabel:`Waiting` until the delivery from the supplying "
 "warehouse is validated."
 msgstr ""
+"通過ロケーションから受入倉庫への入庫（レシート）で、その :guilabel:`入荷` 設"
+"定で設定された追加ステップが続きます。供給倉庫からの配送が検証されるまで、入"
+"庫は :guilabel:`待機` 状態になります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:171
 msgid ""
@@ -38754,6 +38864,9 @@ msgid ""
 "between warehouses of different companies, the transit location is `Inter-"
 "company transit`."
 msgstr ""
+"製品が同一会社の倉庫間で転送される場合、通過ロケーションは「倉庫間通過」とな"
+"ります。転送が異なる会社の倉庫間で行われる場合、通過ロケーションは「会社間通"
+"過」となります。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:176
 msgid ""
@@ -38761,6 +38874,8 @@ msgid ""
 "warehouse's address also generates the receipt at the receiving warehouse. "
 "Returns of these receipts are sent back to the supplying warehouse."
 msgstr ""
+"供給倉庫から受入倉庫の住所へ手動で作成された配送でも、受入倉庫に入庫が生成さ"
+"れます。これらの入庫の返品は供給倉庫に送り返されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:181
 msgid ""
@@ -38770,6 +38885,10 @@ msgid ""
 "company transit` to the shop's `SHOP/Stock` location. The receipt becomes "
 "ready once the delivery is validated."
 msgstr ""
+"ショップのシカゴロケーションで製品の販売オーダが作成されます。「メイン」倉庫"
+"から製品を補充するために、Odooは「WH/Stock」から「会社間通過」への出荷オーダ"
+"と、「会社間通過」からショップの「SHOP/Stock」ロケーションへの入庫を生成しま"
+"す。配送が検証されると、入庫の準備が整います。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:186
 msgid "Show shipments from warehouse to store."
@@ -38777,7 +38896,7 @@ msgstr "倉庫出荷から店舗への出荷"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:192
 msgid "Resupply from another company"
-msgstr ""
+msgstr "他社からの再供給"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:194
 msgid ""
@@ -38785,16 +38904,21 @@ msgid ""
 "multi_company>`, a warehouse can be resupplied by a warehouse belonging to "
 "another company, without creating inter-company sales or purchase orders."
 msgstr ""
+"「:doc:`マルチカンパニーデータベース <../../../../general/companies/"
+"multi_company>`」では、会社間販売オーダや購入オーダを作成することなく、別の会"
+"社に属する倉庫から倉庫を再供給できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:198
 msgid "To do so, ensure the following:"
-msgstr ""
+msgstr "そのために、以下を確認してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:200
 msgid ""
 "The user has access to both companies, and both are selected in "
 "the :ref:`company selector <general/multi-company/company-selector>`."
 msgstr ""
+"ユーザが両方の会社にアクセスでき、両方が :ref:`会社セレクタ <general/multi-"
+"company/company-selector>` で選択されていること。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:202
 msgid ""
@@ -38920,45 +39044,64 @@ msgid ""
 "<inventory/allocation_report/workflow/report>` for the specific operation."
 msgstr ""
 
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
+msgid "Optional: Set allocation location"
+msgstr ""
+
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:45
+msgid ""
+"Allocated units can be sent to a dedicated location separate from stock "
+"until they are delivered or consumed. To configure this option, go to the "
+"*Locations* section on the desired :guilabel:`Operation Type` form, then "
+"select an internal location in the :guilabel:`Location for allocation` field."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:51
+msgid ""
+"The :guilabel:`Location for allocation` field only appears when "
+"the :guilabel:`Show Allocation` option and :doc:`Storage Locations <../"
+"inventory_management/use_locations>` features are enabled."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:59
 msgid ""
 "The following outline summarizes all necessary steps for allocating a "
 "product using allocation reports:"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:48
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:62
 msgid ""
 "Verify that outgoing demand exists for the product in previously confirmed |"
 "SOs| or |MOs|. If not, :ref:`create them <inventory/allocation_report/"
 "workflow/confirm_demand>`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:50
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:64
 msgid ""
 "If existing stock cannot fulfill the demand, create and :ref:`confirm a PO "
 "or MO <inventory/allocation_report/workflow/confirm_replenish>` to replenish "
 "the demanded products."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:52
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:66
 msgid ""
 "Open the receipt or |MO| and :ref:`use the allocation report <inventory/"
 "allocation_report/workflow/report>` to allocate products."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:54
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:68
 msgid ""
 ":ref:`Validate the incoming units <inventory/allocation_report/workflow/"
 "validate_incoming>` into stock."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:56
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:70
 msgid ""
 ":ref:`Validate the outgoing units <inventory/allocation_report/workflow/"
 "validate_outgoing>` to fulfill the original demand."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:59
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:73
 msgid ""
 "The process begins by ensuring that an outstanding demand for the product "
 "already exists. Confirming a |PO|/|MO| replenishes the stock necessary to "
@@ -38966,55 +39109,58 @@ msgid ""
 "manufacturing it."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:63
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:77
 msgid ""
 "On the receipt from the |PO| or on the confirmed |MO|, users can open the "
 "allocation report, which displays the incoming product. Next to the product "
 "is a list of all applicable outgoing transfers (i.e., originating |SOs|/|"
-"MOs| containing the product) to which incoming units can be assigned. "
-"Assigning these units does not move any inventory. Instead, it allows the "
-"user to flexibly choose which demands to prioritize before actually "
-"receiving incoming units. When those units are received, the user can "
-"fulfill the original demands."
+"MOs| containing the product) to which incoming units can be assigned."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:71
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:82
 msgid ""
-"If multiple products are replenished through the |PO|/|MO|, the allocation "
-"report lists all products with originating |SOs|/|MOs| available for "
-"reservation."
+"Allocating units does not move any inventory. Instead, it allows for "
+"specific demands to be prioritized before incoming units arrive."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:77
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:85
+msgid ""
+"If a :ref:`Location for allocation <inventory/allocation_report/"
+"configuration/allocation-location>` is configured, the allocated incoming "
+"quantity is sent to the specified location. The allocated units can only be "
+"picked to fulfill demand after the incoming operation has been validated."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:93
 msgid "Create and confirm demand"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:79
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:95
 msgid ""
 "Using allocation reports for specific products requires either a previously "
 "confirmed |SO| with the product or an |MO| where the product is used as a "
 "component. If no such record exists, create it."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:83
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:99
 msgid ""
 "To ensure Odoo can properly create allocations for purchased products, "
 "confirm that the selected products have the :guilabel:`Purchase` option "
 "selected and the :guilabel:`Product Type` set to :guilabel:`Goods`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:87
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:103
 msgid ""
 "For manufactured products, ensure that the product has a :doc:`bill of "
 "materials <../../../manufacturing/basic_setup/bill_configuration>` "
 "configured."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:91
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:107
 msgid "Create |SOs|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:93
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:109
 msgid ""
 "If no confirmed |SO| exists for the product, :doc:`create it <../../../../"
 "sales/sales/sales_quotations/create_quotations>` by opening a new sales "
@@ -39025,16 +39171,16 @@ msgid ""
 "accessible via the :icon:`fa-truck` :guilabel:`Delivery` smart button."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:100
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:116
 msgid ""
 "Repeat this process if there are multiple customers demanding the product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:103
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:119
 msgid "Create |MOs|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:105
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:121
 msgid ""
 "If there is no confirmed |MO| with the product as a component, :ref:`create "
 "it <manufacturing/manufacturing-orders/create-mo>` by opening a new |MO| "
@@ -39043,45 +39189,46 @@ msgid ""
 "clicking :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:110
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:126
 msgid ""
 "Repeat this process if there are multiple |MOs| requiring the component."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:115
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:131
 msgid "Create and confirm |PO| or |MO|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:117
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:133
 msgid ""
 "After confirming existing demand for the product, replenish the necessary "
 "stock either by purchasing it through a |PO| or by manufacturing it through "
 "an |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:121
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:137
 msgid "Replenish through |PO|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:123
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:139
 msgid ""
-"To create a |PO|, navigate to the **Purchase** app and click :guilabel:`New` "
-"to create a new Request for Quotation (RfQ). On the form, add the products "
-"in demand on the customers' |SOs| by clicking :guilabel:`Add a product` in "
-"the *Products* tab and specifying the required :guilabel:`Quantity`."
+"To create a |PO|, navigate to the :menuselection:`Purchase` app and "
+"click :guilabel:`New` to create a new Request for Quotation (RfQ). On the "
+"form, add the products in demand on the customers' |SOs| by "
+"clicking :guilabel:`Add a product` in the *Products* tab and specifying the "
+"required :guilabel:`Quantity`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:127
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:144
 msgid ""
 "After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| "
 "into a |PO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:130
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:147
 msgid "Replenish through |MO|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:132
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:149
 msgid ""
 "To create an |MO|, navigate to :menuselection:`Manufacturing app --> "
 "Operations --> Manufacturing Orders`. Then, click :guilabel:`New` to open a "
@@ -39089,114 +39236,128 @@ msgid ""
 "the :guilabel:`Quantity` to replenish."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:136
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:153
 msgid "Finally, :guilabel:`Confirm` the |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:141
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:158
 msgid "Allocating using the report"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:143
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:160
 msgid ""
 "After confirming the replenishment for the product, open the allocation "
 "report to assign the pending incoming stock to any available originating |"
 "SOs|/|MOs| requiring the product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:146
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:163
 msgid ""
 "For confirmed |POs|, click the :icon:`fa-truck` :guilabel:`Receipt` smart "
 "button at the top of the |PO| to open the receipt for the incoming stock of "
 "the product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:149
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:166
 msgid ""
 "Then, click the :icon:`fa-list` :guilabel:`Allocation` smart button at the "
 "top."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:152
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:169
 msgid ""
 "Alternatively, to open the receipt, navigate to the **Inventory** app and "
 "click :guilabel:`(#) To Process` in the :guilabel:`Receipts` card. Then, "
 "select the appropriate receipt."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:155
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:172
 msgid ""
 "For confirmed |MOs|, the :icon:`fa-list` :guilabel:`Allocation` smart button "
 "appears directly in the |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:159
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:176
 msgid ""
 "If the :guilabel:`Allocation` smart button does not appear for an |MO|, "
 "follow the :ref:`configuration process <inventory/allocation_report/"
 "configuration>` to enable it."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:165
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:182
 msgid "Allocation report dashboard"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:167
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:184
 msgid ""
 "The allocation report displays a list of available products on the "
 "replenishing |PO|/|MO|. Next to each of these products is a list of "
 "originating |SOs|/|MOs| to which the products can be allocated."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:170
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:187
 msgid ""
 "Each row of this list displays the :guilabel:`Quantity` of reservable units "
 "out of the total demand for the product. The quantity is highlighted if it "
 "cannot be reserved for the complete demand."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:173
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:191
 msgid ""
-"The toggle button in the :guilabel:`Reserved` column allows the user "
+"Quantities already reserved for an outgoing order from existing stock cannot "
+"be allocated. The report only lists the remaining unreserved quantity of "
+"each demand."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:194
+msgid ""
+"The toggle button in the :guilabel:`Assigned` column allows the user "
 "to :ref:`allocate <inventory/allocation_report/workflow/report/allocate>` "
 "the specified quantity."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:176
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:197
 msgid ""
 "A link to each |SO|/|MO| is included in the :guilabel:`For` column, along "
 "with its expected delivery :guilabel:`Date`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:180
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:201
 msgid ""
 "|SOs|/|MOs| in the allocation report are listed in chronological order of "
 "their associated delivery or scheduled date (i.e., the |SO| with the oldest "
 "delivery order or the |MO| with the oldest scheduled date appears first)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:184
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:205
 msgid "Allocation report page in Odoo Inventory."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:190
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:211
 msgid "Allocate units"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:192
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:213
 msgid ""
 "To allocate units for a product, click the toggle button in "
 "the :guilabel:`For` column in the |SO|/|MO|'s corresponding row. Click the "
 "toggle button again to undo the reservation."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:195
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:216
 msgid ""
 "Alternatively, to allocate all available units for *all* products across all "
 "|SOs|/|MOs|, click :guilabel:`Assign All` at the top."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:198
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:220
+msgid ""
+"Incoming units can also be allocated from the product's :ref:`forecasted "
+"report <inventory/forecast/report/allocate>` by clicking :guilabel:`Assign` "
+"and :guilabel:`Unassign` on each demand line."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:224
 msgid ""
 "The quantity of reservable units for each product is automatically "
 "calculated in order, starting from the oldest |SO|/|MO|. This allows users "
@@ -39204,7 +39365,7 @@ msgid ""
 "the original demand."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:203
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:229
 msgid ""
 "For example, |SO| A demands five *Chairs* and |SO| B demands five *Chairs*. "
 "A |PO| for eight units is created. On the allocation report, |SO| A is "
@@ -39213,7 +39374,7 @@ msgid ""
 "insufficient supply."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:208
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:234
 msgid ""
 "After allocation, originating |SOs| with allocated units are automatically "
 "linked to the replenishing |PO|/|MO|. Users can access this directly from "
@@ -39223,18 +39384,18 @@ msgid ""
 "dollar` :guilabel:`Sale` smart button."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:217
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:243
 msgid "Validate incoming move"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:219
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:245
 msgid ""
 "After allocating the desired units, validate the incoming stock either by "
 "receiving it into inventory (for purchased products) or by producing it (for "
 "manufactured products)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:225
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:251
 msgid ""
 "If the incoming stock was purchased, navigate to the replenishing |PO| and "
 "click :guilabel:`Receive Products` or the :icon:`fa-"
@@ -39242,13 +39403,13 @@ msgid ""
 "click :guilabel:`Validate` to receive the products into stock."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:232
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:258
 msgid ""
 "If the stock was confirmed to be manufactured, navigate to the replenishing |"
 "MO| and click :guilabel:`Produce` to produce the finished product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:235
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
 msgid ""
 "Finished products from completed |MOs| become directly available in stock in "
 "the case of :doc:`one-step <../../../manufacturing/basic_setup/"
@@ -39259,28 +39420,28 @@ msgid ""
 "the product from the manufacturing location to inventory."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:241
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
 msgid ""
 "To validate the incoming transfer on the |MO|, click "
 "the :guilabel:`Transfer` smart button at the top. Then, open the relevant "
 "order and click :guilabel:`Validate` to receive the product into stock."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:247
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:273
 msgid "Validate outgoing move"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:249
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:275
 msgid ""
 "After receiving the incoming stock, fulfill the outgoing demand for the "
 "originating |SO|/|MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:252
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:278
 msgid "Fulfill |SO| order"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:254
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:280
 msgid ""
 "To fulfill the demand on an |SO|, navigate to the |SO|, then click :icon:`fa-"
 "truck` :guilabel:`Delivery` to open the delivery order. Note that the "
@@ -39288,7 +39449,7 @@ msgid ""
 "allocated :guilabel:`Product` and its allocated :guilabel:`Quantity`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:258
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:284
 msgid ""
 "Finally, click :guilabel:`Validate` to confirm that the products have been "
 "delivered to the customer."
@@ -39296,15 +39457,15 @@ msgstr ""
 "最後に、\\ :guilabel:`確認`\\ をクリックして、プロダクトが顧客に納品されたこ"
 "とを確定します。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
 msgid "Delivery order from an allocation report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:265
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:291
 msgid "Fulfill |MO| order"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:293
 msgid ""
 "To fulfill a component demand on an |MO|, navigate to the |MO|. The "
 "replenished components in the previous step are now marked "
@@ -39312,13 +39473,13 @@ msgid ""
 "Click :guilabel:`Produce` to manufacture the final product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:272
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:298
 msgid ""
 "The following example demonstrates how an allocation report is used to "
 "assign stock for a customer |SO| of higher priority."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:275
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:301
 msgid ""
 "Two |SOs| are created for separate customers. Customer A orders 75 units of "
 "a *Chair*. Customer B also orders 75 units of the same product but needs "
@@ -39328,7 +39489,7 @@ msgstr ""
 "します。顧客Bも同じプロダクトを75個注文しますが、できるだけ早く必要としていま"
 "す。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:278
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:304
 msgid ""
 "No stock exists for the *Chair*, so the user creates and confirms a |PO| to "
 "replenish the product from Vendor A. This vendor can only provide 100 units "
@@ -39336,7 +39497,7 @@ msgid ""
 "replenish the remaining 50 units from Vendor B next week."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:282
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:308
 msgid ""
 "After confirming the |POs|, the user opens the allocation reports for each "
 "vendor's receipt. Vendor A's report lists the |SO| for Customer A with 75 "
@@ -39344,7 +39505,7 @@ msgid ""
 "B's report lists the |SO| for Customer A with 50 reservable units."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:313
 msgid ""
 "Because the user wants to prioritize Customer B's order, they want to ensure "
 "Customer B receives 75 units from Vendor A, which can guarantee faster "
@@ -39354,7 +39515,7 @@ msgid ""
 "Customer B's quantity to 75 units."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:293
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:319
 msgid ""
 "The user can now assign all 75 units from Vendor A to fulfill Customer B's "
 "delivery."
@@ -39362,11 +39523,11 @@ msgstr ""
 "これでユーザは、顧客Bの配送を処理するために仕入先Aからの全75個を割り当てるこ"
 "とができます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:298
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:324
 msgid "Print labels"
 msgstr "ラベルを印刷する"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:300
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:326
 msgid ""
 "Users can print labels for allocated products to ensure that they are "
 "correctly designated to the appropriate customer."
@@ -39374,25 +39535,25 @@ msgstr ""
 "ユーザは引当済プロダクトのラベルを印刷して、適切な顧客に正しく割り当てられて"
 "いることを確認できます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:303
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:329
 msgid ""
 "After allocating the desired units, click :guilabel:`Print` at the top to "
 "download a PDF of the allocation report for the allocated units. The report "
 "includes a scannable barcode at the top for the receipt or |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:308
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:334
 msgid ""
 "If a :ref:`document layout <accounting/invoice/sending>` has not been "
 "configured, clicking :guilabel:`Print` opens a pop-up window for the user to "
 "configure one."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:311
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:337
 msgid "Printed report from an allocation report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:314
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:340
 msgid ""
 "If products are allocated to specific orders, users can also "
 "click :guilabel:`Print Labels` to print an individual label for each unit of "
@@ -39400,8 +39561,14 @@ msgid ""
 "associated |SO|/|MO| number, and its customer (for |SOs|)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:318
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:344
 msgid "Printed labels from an allocation report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:348
+msgid ""
+":ref:`Print labels for allocated products in the Barcode app <barcode/"
+"receipts_deliveries/allocated-products>`"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/dashboards.rst:3
@@ -40294,11 +40461,11 @@ msgstr ""
 "在庫が追跡されているプロダクト、一般的に *在庫可能品* と呼ばれるプロダクト *"
 "のみ* で、予測レポートが利用可能です。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:22
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
 msgid "Navigating the report"
 msgstr "レポートのナビゲーション"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:26
 msgid ""
 "The forecast report can be accessed via the **Inventory**, **Purchase**,  "
 "**Manufacturing**, and **Sales** apps."
@@ -40306,7 +40473,7 @@ msgstr ""
 "予測レポートは、**在庫**、**購買**、**製造**、および **販売** アプリからアク"
 "セスできます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:27
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:29
 msgid ""
 "To access the report, click the :icon:`fa-area-chart` :guilabel:`Forecasted` "
 "smart button on a product form. Alternatively, the report can be accessed "
@@ -40321,11 +40488,11 @@ msgstr ""
 "right` :guilabel:`予測照会` を選択することでレポートにアクセスすることもでき"
 "ます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:32
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:34
 msgid "A sales order with the forecast report icon highlighted."
 msgstr "予測レポートアイコンがハイライトされた販売オーダ"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:35
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:37
 msgid ""
 "The forecasted report consists of a graph and a table. The graph visually "
 "represents stock movements over time. The following information is displayed:"
@@ -40333,12 +40500,12 @@ msgstr ""
 "予測レポートはグラフと表で構成されています。グラフは、在庫の動きを視覚的に表"
 "したものです。以下の情報が表示されます:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:38
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
 msgid ""
 ":guilabel:`On Hand`: current stock physically available in the warehouse."
 msgstr ":guilabel:`手持在庫`: 倉庫に物理的に保管されている現在の在庫"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:39
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
 msgid ""
 ":guilabel:`Incoming`: quantities expected from confirmed purchase orders or "
 "manufacturing orders."
@@ -40346,7 +40513,7 @@ msgstr ""
 ":guilabel:`入荷予定`: 確定した購買オーダまたは製造オーダから予想される入荷数"
 "量"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:42
 msgid ""
 ":guilabel:`Outgoing`: quantities reserved for sales orders or other outgoing "
 "operations."
@@ -40354,7 +40521,7 @@ msgstr ""
 ":guilabel:`出荷予定`: 販売オーダやその他の出荷オペレーション用に引当された数"
 "量"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:43
 msgid ""
 ":guilabel:`Forecasted`: projected stock levels based on confirmed and "
 "planned operations."
@@ -40362,16 +40529,16 @@ msgstr ""
 ":guilabel:`予測`: 確認済のオペレーションと計画されているオペレーションに基づ"
 "いた在庫数の予測"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:43
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:45
 msgid "An example of the chart on a forecast report."
 msgstr "予測レポートのグラフの一例"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:46
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:48
 msgid "The table provides detailed metrics regarding operations, including:"
 msgstr ""
 "この表にはオペレーションに関する詳細な指標が表示されており、以下を含みます:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:48
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:50
 msgid ""
 ":guilabel:`Replenishment`: Shows reserved quantities, especially useful for "
 "multi-step operations."
@@ -40379,38 +40546,38 @@ msgstr ""
 ":guilabel:`補充`: 予約数量を表示します。特に、複数ステップのオペレーションに"
 "便利です。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:49
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:51
 msgid ":guilabel:`Receipt`: The date of receipt for the items."
 msgstr ":guilabel:`入荷`: 商品の受領日"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:50
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:52
 msgid ":guilabel:`Units`: The number of units involved in each operation."
 msgstr ":guilabel:`単位`: 各オペレーションに関与するユニット単位数"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:51
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:53
 msgid ":guilabel:`Used by`: The operation the stock is allocated for."
 msgstr ":guilabel:`使用先`: 在庫が割り当てられるオペレーション"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:52
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:54
 msgid ":guilabel:`Delivery`: The scheduled or expected date of stock movement."
 msgstr ":guilabel:`配送`: 在庫移動の予定日または予測日"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:53
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:55
 msgid ":guilabel:`Forecasted Inventory`: The forecasted stock levels."
 msgstr ":guilabel:`予測在庫`: 予測された在庫数"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:54
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:56
 msgid ""
 ":guilabel:`Forecasted with Pending`: The updated stock levels with the "
 "pending stock movements considered."
 msgstr ""
 ":guilabel:`保留中を含む予測`: 在庫移動の保留を考慮した更新後の在庫レベル"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:58
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:62
 msgid "Reserve and unreserve products"
 msgstr "プロダクトの引当と引当解除"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:60
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:64
 msgid ""
 "Users can reserve or unreserve products directly from the forecasted report, "
 "ensuring stock allocation aligns with operational needs."
@@ -40418,21 +40585,41 @@ msgstr ""
 "ユーザは予測レポートから直接プロダクトの引当や引当解除を行うことができ、在庫"
 "がオペレーションのニーズに確実に一致するよう管理できます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:63
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:67
 msgid ""
 "The detailed section on a forecast report showing the replenishment and "
 "reserved stock."
 msgstr "補充在庫と引当在庫を示す予測レポートの詳細セクション"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:67
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:71
 msgid ":doc:`../../shipping_receiving/reservation_methods`"
 msgstr ":doc:`../../shipping_receiving/reservation_methods`"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:70
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:76
+msgid "Assign and unassign incoming units"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:78
+msgid ""
+"When an outgoing demand is matched with an incoming receipt or |MO|, the "
+"incoming or manufactured units can be allocated to the demand by "
+"clicking :guilabel:`Assign` on the corresponding demand line. To undo the "
+"allocation, click :guilabel:`Unassign`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:81
+msgid "Allocate units on a forecast report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:85
+msgid ":doc:`allocation_report`"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:90
 msgid "Replenish products"
 msgstr "プロダクトを補充する"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:72
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:92
 msgid ""
 "Click the :guilabel:`Replenish` button at the top of the report to open "
 "the :guilabel:`Product Replenish` pop-up. From here, products can be "
@@ -40446,11 +40633,11 @@ msgstr ""
 "`、:guilabel:`優先ルート`、:guilabel:`仕入先` を選択してから、:guilabel:`確認"
 "` をクリックします。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:78
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:100
 msgid "Manufacturing forecast"
 msgstr "製造予測"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:80
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:102
 msgid ""
 "To view the availability of manufactured products, click "
 "the :guilabel:`Manufacturing Forecast` button. This displays the forecasted "
@@ -40461,7 +40648,7 @@ msgstr ""
 "します。これにより、今後の製造オーダで消費される予定の原材料の在庫レベルが予"
 "測表示されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:84
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:106
 msgid ""
 "The manufacturing forecast identifies component shortages before they can "
 "impact manufacturing timelines, and helps to align manufacturing activities "
@@ -40470,15 +40657,15 @@ msgstr ""
 "製造予測は、製造スケジュールに影響が出る前に構成品の不足を特定し、製造活動を"
 "販売需要に一致させるのに役立ちます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:87
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:109
 msgid "An example of the manufacturing forecast report."
 msgstr "製造予測レポートの例"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:91
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:115
 msgid "Update quantity"
 msgstr "数量を更新する"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:93
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:117
 msgid ""
 "To manually update the quantity of a product, click :guilabel:`Update "
 "Quantity`. This opens the :guilabel:`Change Product Quantity` pop-up. "
@@ -40493,11 +40680,11 @@ msgstr ""
 "手持数量フィールドに適切な値を入力します。完了したら、適用をクリックします。"
 "すると、レポートが更新され、新しいプロダクト数量が反映されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:100
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:126
 msgid "Multi-step reservation"
 msgstr "複数ステップ引当"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:102
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:128
 msgid ""
 "Reserved quantities for multi-step incoming and outgoing shipments are "
 "indicated on in the :guilabel:`Replenishment` column on the table of the "
@@ -40506,7 +40693,7 @@ msgstr ""
 "複数ステップでの入荷・出荷配送用の引当数量は、レポートの表の :guilabel:`補充"
 "` 列に表示されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:105
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:131
 msgid ""
 ":guilabel:`Stock in Transit` refers to products that have been received, but "
 "are in transit to their input or quality control locations. :guilabel:`Free "
@@ -40518,11 +40705,11 @@ msgstr ""
 "ケーションに到着済みだが、まだ在庫として登録されていない利用可能なプロダクト"
 "を指します。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:110
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:138
 msgid "Operations affecting the forecast report"
 msgstr "予測レポートに影響を与えるオペレーション"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:112
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:140
 msgid ""
 "The forecast report is influenced by various operations, each impacting "
 "stock levels differently. Scheduled delivery dates, planned manufacturing "
@@ -40532,7 +40719,7 @@ msgstr ""
 "影響を受けます。 配送予定日、製造予定日、入荷予定日は全て在庫予測に影響を与え"
 "ます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:116
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:144
 msgid ""
 "Requests for Quotation (RFQs) do not immediately impact the forecast report, "
 "as the products are not confirmed for replenishment. |POs|, however, do "
@@ -40543,7 +40730,7 @@ msgstr ""
 "座には影響しません。一方、購買オーダは、プロダクトが購買オーダ確定後に到着す"
 "ることが予想されるため、レポートに影響します。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:120
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:148
 msgid ""
 "Confirmed |SOs| decrease the forecasted stock, adjusting the report based on "
 "the scheduled delivery date. Confirmed manufacturing orders (MOs) affect the "
@@ -40552,11 +40739,11 @@ msgstr ""
 "確認済の販売オーダは、予定日配送に基づく報告書を調整し、予測在庫を減少させま"
 "す。確認済の製造オーダ(MO)は、原材料と完成品の両方の予測在庫に影響します。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:128
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:158
 msgid "Negative quantity"
 msgstr "マイナス数量"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:130
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:160
 msgid ""
 "A negative forecasted quantity indicates that the projected demand exceeds "
 "the available and incoming stock at a given point in time. This could occur "
@@ -40568,7 +40755,7 @@ msgstr ""
 "または予想されている在庫以上の在庫を、販売オーダまたは製造オーダが要求してい"
 "る場合、または出荷または製造プロセスに遅延が発生している場合に起こり得ます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:135
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:165
 msgid ""
 "Whatever the cause, when negative numbers are displayed on the forecast "
 "report, it serves as an early warning, allowing business to take "
@@ -40577,15 +40764,15 @@ msgstr ""
 "その原因が何であれ、予測レポートにマイナスの数値が表示されると、事前警告とし"
 "て機能し、企業は予防措置を取ることができます。これには以下が含まれます:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:138
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:168
 msgid "Prioritizing specific sales or production orders."
 msgstr "特定の販売または製造オーダを優先する"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:139
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:169
 msgid "Adjusting procurement strategies to expedite purchase orders."
 msgstr "購買オーダを迅速化するための調達戦略の調整"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:140
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:170
 msgid ""
 "Manage customer expectations by proactively communicating the possibility "
 "for delays."
@@ -40593,15 +40780,15 @@ msgstr ""
 "遅延が想定される際には、こまめな情報提供を行い、顧客の期待と実際の納品状況と"
 "のギャップを最小限に抑える"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:142
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:172
 msgid "An example of the forecast report with a negative quantity."
 msgstr "数量がマイナスの場合の予測レポートの例"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:146
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:176
 msgid "Split orders"
 msgstr "オーダを分割する"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:148
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:178
 msgid ""
 "In the example below, there is not currently enough stock of a product, "
 "`Cabinet with Doors` to fulfill the multiple sales orders. The current stock "
@@ -40615,17 +40802,17 @@ msgstr ""
 "り、残りは2つのオーダに分割されています。残りの在庫は`WH/IN/00004` で入荷予定"
 "です。入荷後、残りのオーダをカバーするために分割されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:154
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:184
 msgid ""
 "An example of the forecast report chart showing the split delivery for an "
 "order."
 msgstr "オーダの分割配送を示す予測レポートチャートの例"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:158
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:188
 msgid "Late receipt"
 msgstr "遅延入荷"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:160
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:190
 msgid ""
 "The replenishment table can be used to determine whether an incoming "
 "shipment arrives in time to fulfill an order. For example, a |SO| is "
@@ -40638,7 +40825,7 @@ msgstr ""
 "日` とともに販売オーダが表示されています。現在の手持在庫はゼロです。購買オー"
 "ダが確認されており、入荷予定日は本日より3日後です。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:165
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:195
 msgid ""
 "The forecasted quantity for today shows `-5`, because the confirmed demand "
 "is five, but the current stock on hand is zero. Since "
@@ -40649,7 +40836,7 @@ msgstr ""
 "現在の手持在庫がゼロであるためです。入荷日が配送日の後であるため、出荷が遅れ"
 "ています。"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:169
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:199
 msgid ""
 "This can be an indication to either expedite the current shipment, if "
 "possible, or reschedule the delivery date for the |SO|."
@@ -40664,10 +40851,10 @@ msgid ""
 "configured Aging Report favorite tracks remaining quantity and value by "
 "product, month over month, to identify slow-moving stock."
 msgstr ""
-"「移動分析」レポートでは、在庫移動の計画対実績比較を確認でき、ピボット、"
-"リスト、グラフ、かんばんビューで利用可能です。あらかじめ設定された「"
-"エージングレポート」のお気に入りでは、製品ごと、月ごとに残数量と金額を追跡し"
-"、動きの鈍い在庫を特定できます。"
+"「移動分析」レポートでは、在庫移動の計画対実績比較を確認でき、ピボット、リス"
+"ト、グラフ、かんばんビューで利用可能です。あらかじめ設定された「エージングレ"
+"ポート」のお気に入りでは、製品ごと、月ごとに残数量と金額を追跡し、動きの鈍い"
+"在庫を特定できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:9
 msgid "Moves analysis report"
@@ -40706,8 +40893,8 @@ msgid ""
 "To access the moves analysis report, go to :menuselection:`Inventory app --> "
 "Reporting --> Moves Analysis`."
 msgstr ""
-"移動分析レポートにアクセスするには、:menuselection:`在庫アプリ --> "
-"レポーティング --> 移動分析` に移動します。"
+"移動分析レポートにアクセスするには、:menuselection:`在庫アプリ --> レポーティ"
+"ング --> 移動分析` に移動します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:26
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:11
@@ -40730,8 +40917,8 @@ msgid ""
 "Use the following search options to customize the :guilabel:`Moves Analysis` "
 "report to display relevant information."
 msgstr ""
-"関連情報を表示するために :guilabel:`移動分析` レポートをカスタマイズするには"
-"、以下の検索オプションを使用します。"
+"関連情報を表示するために :guilabel:`移動分析` レポートをカスタマイズするに"
+"は、以下の検索オプションを使用します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:39
 msgid ":icon:`fa-filter` Filters"
@@ -40784,8 +40971,8 @@ msgid ""
 ":guilabel:`Date`: Access various date filter options and view stock moves "
 "from a specific month, quarter, or year."
 msgstr ""
-":guilabel:`日付`：様々な日付フィルタオプションにアクセスし、特定の月、四半期"
-"、または年の在庫移動を表示します。"
+":guilabel:`日付`：様々な日付フィルタオプションにアクセスし、特定の月、四半"
+"期、または年の在庫移動を表示します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:54
 msgid ""
@@ -41098,10 +41285,10 @@ msgid ""
 "the :icon:`oi-settings-adjust` :guilabel:`(Settings)` button at the end of "
 "the column headers."
 msgstr ""
-"\\ :guilabel:`連絡先`、\\ :guilabel:`所有者`、\\ :guilabel:`金額`、\\ "
-":guilabel:`残数量`、および\\ :guilabel:`残額`\\ の追加列は、列ヘッダーの末尾"
-"にある\\ :icon:`oi-settings-adjust` \\ :guilabel:`(設定)`\\ ボタンをクリック"
-"することで表示できます。"
+"\\ :guilabel:`連絡先`、\\ :guilabel:`所有者`、\\ :guilabel:`金額`、"
+"\\ :guilabel:`残数量`、および\\ :guilabel:`残額`\\ の追加列は、列ヘッダーの末"
+"尾にある\\ :icon:`oi-settings-adjust` \\ :guilabel:`(設定)`\\ ボタンをクリッ"
+"クすることで表示できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:165
 msgid "The Moves Analysis report in the list view."
@@ -41130,10 +41317,10 @@ msgid ""
 "it."
 msgstr ""
 "\\ :ref:`グラフビュー <reporting/using-graph>`\\ は一度に1つの指標をプロット"
-"するため、傾向の可視化や1つの次元にわたる値の比較を一目で確認するのに最適です"
-"。左上隅の\\ :ref:`指標 <inventory/warehouses_storage/moves-analysis-"
-"measures>`\\ ドロップダウンからプロットする指標を選択し、その横にある"
-"チャートタイプを1つ選択します。"
+"するため、傾向の可視化や1つの次元にわたる値の比較を一目で確認するのに最適で"
+"す。左上隅の\\ :ref:`指標 <inventory/warehouses_storage/moves-analysis-"
+"measures>`\\ ドロップダウンからプロットする指標を選択し、その横にあるチャート"
+"タイプを1つ選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:182
 msgid "The Moves Analysis report in the graph view."
@@ -41150,10 +41337,10 @@ msgid ""
 "analytical depth of the four views, but is useful for browsing recent moves "
 "without configuring a list, pivot, or graph."
 msgstr ""
-"かんばんビューでは移動ごとにカードが1枚表示され、関連するプロダクト、\\ "
-":guilabel:`数量`、および\\ :guilabel:`需要`\\ が表示されます。4つのビューの中"
-"で最も分析の深さは低いですが、リスト、ピボット、グラフを設定せずに最近の移動"
-"を確認するのに役立ちます。"
+"かんばんビューでは移動ごとにカードが1枚表示され、関連するプロダクト、"
+"\\ :guilabel:`数量`、および\\ :guilabel:`需要`\\ が表示されます。4つのビュー"
+"の中で最も分析の深さは低いですが、リスト、ピボット、グラフを設定せずに最近の"
+"移動を確認するのに役立ちます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:194
 msgid "The Moves Analysis report in the Kanban view."
@@ -41174,15 +41361,16 @@ msgid ""
 msgstr ""
 "\\ :guilabel:`エージングレポート`\\ は、\\ :ref:`お気に入り <inventory/"
 "warehouses_storage/moves-analysis-search-options>`\\ フィルタです。これは、各"
-"プロダクトの\\ :guilabel:`移動分析`\\ ピボットビューをあらかじめ設定し、\\ "
-":guilabel:`残数量`\\ および\\ :guilabel:`残額`\\ を月ごとに追跡します。これに"
-"より、賞味期限が近づいている生鮮食品など、動きの鈍い在庫や滞留在庫を特定する"
-"のに役立ちます。"
+"プロダクトの\\ :guilabel:`移動分析`\\ ピボットビューをあらかじめ設定し、"
+"\\ :guilabel:`残数量`\\ および\\ :guilabel:`残額`\\ を月ごとに追跡します。こ"
+"れにより、賞味期限が近づいている生鮮食品など、動きの鈍い在庫や滞留在庫を特定"
+"するのに役立ちます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:208
 msgid ""
 "Select the Aging Report favorite filter from the Moves Analysis search bar."
-msgstr "移動分析検索バーから「エージングレポート」のお気に入りフィルタを選択します。"
+msgstr ""
+"移動分析検索バーから「エージングレポート」のお気に入りフィルタを選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:211
 msgid "Applying this filter configures the pivot view as follows:"
@@ -41193,8 +41381,8 @@ msgid ""
 "Rows are grouped by :guilabel:`Product Category`, then "
 "by :guilabel:`Product`."
 msgstr ""
-"行は\\ :guilabel:`プロダクトカテゴリ`、次に\\ :guilabel:`プロダクト`\\ で"
-"グループ化されます。"
+"行は\\ :guilabel:`プロダクトカテゴリ`、次に\\ :guilabel:`プロダクト`\\ でグ"
+"ループ化されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:214
 msgid "Columns are grouped by :guilabel:`Month`."
@@ -41204,7 +41392,8 @@ msgstr "列は\\ :guilabel:`月`\\ でグループ化されます。"
 msgid ""
 "Measures are set to :guilabel:`Remaining Quantity` and :guilabel:`Remaining "
 "Value`."
-msgstr "指標には\\ :guilabel:`残数量`\\ と\\ :guilabel:`残額`\\ が設定されます。"
+msgstr ""
+"指標には\\ :guilabel:`残数量`\\ と\\ :guilabel:`残額`\\ が設定されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:217
 msgid ""
@@ -41212,8 +41401,8 @@ msgid ""
 "months as\n"
 "columns."
 msgstr ""
-"プロダクトカテゴリとプロダクトでグループ化され、月が列として表示された"
-"エージングレポートのピボットテーブル。"
+"プロダクトカテゴリとプロダクトでグループ化され、月が列として表示されたエージ"
+"ングレポートのピボットテーブル。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:222
 msgid ""
@@ -47497,11 +47686,11 @@ msgid ""
 "or :guilabel:`By Lots`."
 msgstr ""
 "新しく製造されたプロダクトに任意で:doc:`ロットまたはシリアル番号を割り当てる "
-"<../../inventory/product_management/product_tracking>`には"
-"、:menuselection:`製造 --> プロダクト --> プロダクト`に移動します。次に、既存"
-"のプロダクトを選択するか、:guilabel:`新規`をクリックして新しいプロダクトを作"
-"成します。:guilabel:`在庫`タブに移動し、:guilabel:`一般情報`タブを開きます"
-"。:guilabel:`在庫追跡`フィールドで、:guilabel:`一意のシリアル番号別`また"
+"<../../inventory/product_management/product_tracking>`には、:menuselection:`"
+"製造 --> プロダクト --> プロダクト`に移動します。次に、既存のプロダクトを選択"
+"するか、:guilabel:`新規`をクリックして新しいプロダクトを作成しま"
+"す。:guilabel:`在庫`タブに移動し、:guilabel:`一般情報`タブを開きま"
+"す。:guilabel:`在庫追跡`フィールドで、:guilabel:`一意のシリアル番号別`また"
 "は:guilabel:`ロット別`を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:23
@@ -47836,6 +48025,10 @@ msgid ""
 "Orders`. A list of work orders displays. Choose a work order from the list. "
 "The work order form opens."
 msgstr ""
+"作業オーダーをフォームから処理するには、 :menuselection:`製造アプリ --> "
+"オペレーション --> 作業オーダー` に移動して「作業オーダー」ページを開きます。"
+"作業オーダーのリストが表示されます。リストから作業オーダーを選択すると、作業"
+"オーダーフォームが開きます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:110
 msgid ""
@@ -47845,6 +48038,11 @@ msgid ""
 "Date` updates to the current date and time, with the end time based on "
 "the :guilabel:`Expected Duration`."
 msgstr ""
+"フォームの隅に作業オーダーのステータスが表示されます。ステータスを "
+":guilabel:`要対応` から :guilabel:`進行中` に変更すると、新しい "
+":guilabel:`タイムトラッキング` エントリが作成されます。:guilabel:`予定日` は"
+"現在の日時に更新され、終了時刻は :guilabel:`予想所要時間` に基づいて決定され"
+"ます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:115
 msgid ""
@@ -47853,6 +48051,10 @@ msgid ""
 "to :guilabel:`To Do`. Then, to add a new entry and begin work, change the "
 "status of the work order back to :guilabel:`In Progress`."
 msgstr ""
+"作業オーダーの作業は、異なる :guilabel:`タイムトラッキング` エントリに分割で"
+"きます。エントリを終了して作業を一時停止するには、作業オーダーのステータスを "
+":guilabel:`要対応` に変更します。次に、新しいエントリを追加して作業を開始する"
+"には、作業オーダーのステータスを :guilabel:`進行中` に戻します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:119
 msgid ""
@@ -47862,6 +48064,11 @@ msgid ""
 "Follow the :guilabel:`Instructions`, then click :guilabel:`Pass` to mark the "
 "instruction as completed."
 msgstr ""
+"もし :guilabel:`手順` が含まれている場合は、手順をクリックします。「オープン"
+"：チェック」ウィンドウが開きます。ポップアップウィンドウの隅にある :icon:`fa-"
+"expand` :guilabel:`(展開)` アイコンをクリックします。品質"
+"チェックオーダーフォームが開きます。:guilabel:`手順` に従い、 :guilabel:`合"
+"格` をクリックして手順を完了としてマークします。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:125
 msgid ""
@@ -47870,22 +48077,30 @@ msgid ""
 "module, filtered to the |MO|, then :ref:`process the work order in Shop "
 "Floor <manufacturing/basic_setup/complete-wo>`."
 msgstr ""
+"作業オーダーをより簡単に完了するには、 :icon:`oi-view-kanban` :guilabel:`製造"
+"現場を開く` スマートボタンをクリックして、「製造現場」モジュールを開きます。 "
+"|MO| でフィルタリングし、次に :ref:`製造現場で作業オーダーを処理する "
+"<manufacturing/basic_setup/complete-wo>` します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:129
 msgid ""
 "After all instructions are completed, complete the work order by changing "
 "its status to :guilabel:`Done`."
 msgstr ""
+"全ての手順が完了したら、作業オーダーのステータスを :guilabel:`完了` に変更し"
+"て、作業オーダーを完了させます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:132
 msgid ""
 "After all work orders for the |MO| are complete, :ref:`complete the MO "
 "<manufacturing/basic_setup/complete-mo>`."
 msgstr ""
+" |MO| の全ての作業オーダーが完了したら、 :ref:`製造オーダを完了する "
+"<manufacturing/basic_setup/complete-mo>` します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:138
 msgid "Complete the MO"
-msgstr ""
+msgstr "製造オーダを完了する"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:140
 msgid ""
@@ -47893,10 +48108,13 @@ msgid ""
 "click :guilabel:`Produce` at the top of the screen to mark the |MO| "
 "as :guilabel:`Done` and register the manufactured products into inventory."
 msgstr ""
+" |MO| フォームに戻り、全ての作業オーダーを完了した後、画面上部の "
+":guilabel:`製造` をクリックして、 |MO| を :guilabel:`完了` としてマークし、製"
+"造された製品を在庫に登録します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:146
 msgid "Partially complete the MO"
-msgstr ""
+msgstr "製造オーダを部分的に完了する"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:148
 msgid ""
@@ -47924,6 +48142,8 @@ msgid ""
 "The |MO| is marked as :guilabel:`Done` and the manufactured products are "
 "registered into inventory."
 msgstr ""
+" |MO| は :guilabel:`完了` としてマークされ、製造された製品は在庫に登録されま"
+"す。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:163
 msgid ""
@@ -47931,6 +48151,9 @@ msgid ""
 "backorders <manufacturing/manufacturing-backorders/create-backorder-"
 "manufacturing-app>`."
 msgstr ""
+"残数量のバックオーダを作成するには、 :ref:`製造バックオーダ <manufacturing/"
+"manufacturing-backorders/create-backorder-manufacturing-app>` を参照してくだ"
+"さい。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:169
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:81
@@ -47945,42 +48168,51 @@ msgid ""
 "by navigating to :menuselection:`Manufacturing app --> Operations --> "
 "Manufacturing Orders`, and then select an |MO|."
 msgstr ""
+" |MO| の作業オーダーを「製造現場」モジュールを使用して完了するには、まず "
+":menuselection:`製造アプリ --> オペレーション --> 製造オーダ` に移動し、 "
+"|MO| を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:174
 msgid ""
 "Manufacturing orders can be opened in the *Shop Floor* module from two "
 "different locations:"
-msgstr ""
+msgstr "製造オーダは、「製造現場」モジュール内で次の2つの場所から開くことができます："
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:176
 msgid ":ref:`From the MO form <manufacturing/basic_setup/shop-floor-from-mo>`"
-msgstr ""
+msgstr ":ref:`製造オーダフォームから <manufacturing/basic_setup/shop-floor-from-mo>`"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:177
 msgid ""
 ":ref:`From the main Odoo dashboard <manufacturing/basic_setup/shop-floor-"
 "from-dashboard>`"
 msgstr ""
+":ref:`Odooメインダッシュボードから <manufacturing/basic_setup/shop-floor-"
+"from-dashboard>`"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:180
 msgid ""
 "To partially complete the MO, see :ref:`Partially complete the MO "
 "<manufacturing/basic_setup/partially-complete-mo>`."
 msgstr ""
+"製造オーダを部分的に完了するには、 :ref:`製造オーダを部分的に完了する "
+"<manufacturing/basic_setup/partially-complete-mo>` を参照してください。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:186
 msgid "MO form"
-msgstr ""
+msgstr "製造オーダフォーム"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:188
 msgid ""
 "On the |MO|, click the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart "
 "button. The |MO| opens in the *Shop Floor* module."
 msgstr ""
+" |MO| 上で、 :icon:`oi-view-kanban` :guilabel:`製造現場` スマートボタンを"
+"クリックします。 |MO| が「製造現場」モジュールで開きます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:191
 msgid "Open Shop Floor from a manufacturing order."
-msgstr ""
+msgstr "製造オーダから製造現場を開く。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:194
 msgid ""
@@ -48318,9 +48550,9 @@ msgid ""
 "available number."
 msgstr ""
 "どちらの方法でも、生産が終了する前に\\ |MO|\\ のプロダクトにロット番号が割り"
-"当てられます。また、ロット番号を割り当てずに\\ |MO|\\ で\\ :guilabel:`生産`\\"
-" をクリックして、生産を完了して閉じることも可能です。そうすると、次に利用可能"
-"な番号を使用してロットが自動的に生成され、割り当てられます。"
+"当てられます。また、ロット番号を割り当てずに\\ |MO|\\ で\\ :guilabel:`生産"
+"`\\ をクリックして、生産を完了して閉じることも可能です。そうすると、次に利用"
+"可能な番号を使用してロットが自動的に生成され、割り当てられます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:364
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/manufacture_lots_serials.rst:63
@@ -52801,9 +53033,9 @@ msgid ""
 "applied to each component in order to be properly sent from the dropshipping "
 "vendor to the subcontractor."
 msgstr ""
-"プロダクトフォームで外注先を仕入先として指定することで、発注元企業は購買"
-"オーダ (PO) を通じて外注先からプロダクトを適切に購入できるようになります。\\ "
-"|BoM|\\ により、プロダクトを外注先で外部製造できるようになります。各構成品に"
+"プロダクトフォームで外注先を仕入先として指定することで、発注元企業は購買オー"
+"ダ (PO) を通じて外注先からプロダクトを適切に購入できるようになります。\\ |"
+"BoM|\\ により、プロダクトを外注先で外部製造できるようになります。各構成品に"
 "は、直送仕入先から外注先へ適切に送付されるよう、\\ *Dropship Subcontractor "
 "on Order*\\ ルートが適用されます。"
 
@@ -53044,11 +53276,14 @@ msgid ""
 "subcontracting-dropship/workflow/track-inventory>` from the subcontractor to "
 "the company's stock (4, 5)."
 msgstr ""
+"製品の製造および受領が完了すると、請負業者は受領（6）を検証し、下請業者から会"
+"社在庫（4、5）への\\ :ref:`在庫移動 <manufacturing/subcontracting-dropship/"
+"workflow/track-inventory>`\\ をトリガーします。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:164
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:119
 msgid "Create and confirm subcontractor |PO|"
-msgstr ""
+msgstr "下請業者を作成し、確認します |PO|"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:177
 msgid ""
@@ -53224,12 +53459,17 @@ msgid ""
 "subcontracting_resupply/workflow>`, users must follow the configuration "
 "process below:"
 msgstr ""
+"外部委託先への再供給\\ :ref:`ワークフロー <manufacturing/"
+"subcontracting_resupply/workflow>`\\ を使用するには、ユーザーは以下の構成"
+"プロセスに従う必要があります。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:28
 msgid ""
 ":ref:`Specify the subcontractor <manufacturing/subcontracting_resupply/"
 "config/product-config>` as a vendor on the subcontracted product."
 msgstr ""
+":ref:`下請業者を指定 <manufacturing/subcontracting_resupply/config/product-"
+"config>`\\ して、委託製品の仕入先として設定します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:30
 msgid ""
@@ -53249,6 +53489,10 @@ msgid ""
 "components specified on a subcontracting-type |BoM| are automatically "
 "configured to be sent from the contractor to the subcontractor."
 msgstr ""
+"製品フォームで下請業者を仕入先として指定すると、契約企業は発注書（PO）を通じ"
+"て下請業者から適切に製品を調達できます。部品表（BoM）により、製品は下請業者に"
+"よって外部で製造されます。デフォルトでは、委託加工タイプの\\ |BoM|\\ に指定さ"
+"れた構成部品は、自動的に請負業者から下請業者へ送付されるように構成されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:44
 msgid ""
@@ -53630,6 +53874,9 @@ msgid ""
 "top of the |MO|. After doing so, inventory counts update to reflect the "
 "quantity of by-products produced, as well as the quantity of the product."
 msgstr ""
+"製造が完了したら、\\ :guilabel:`製造`\\ ボタンを\\ |MO|\\ の上部でクリックし"
+"ます。その後、在庫数が更新され、生産された副産物の数量と製品の数量が反映され"
+"ます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:69
 msgid ""
@@ -53935,6 +54182,11 @@ msgid ""
 "engineering_change_orders/apply-changes>` made to the |BoM|, at which point "
 "the updated |BoM| becomes available for new |MOs|."
 msgstr ""
+"\\ |BoM|\\ の変更が適切なレビュープロセスを経て承認されると、更新された\\ "
+"|BoM|\\ を使用できるようになります。これは、\\ |ECO|\\ レビュー段階のいずれか"
+"を構成し、\\ :ref:`変更を適用 <plm/engineering_change_orders/apply-changes>"
+"`\\ するように設定することで達成されます。これにより、更新された\\ |BoM|\\ が"
+"完成し、更新された\\ |BoM|\\ が新しい\\ |MOs|\\ で利用可能になります。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:139
 msgid ""
@@ -53969,6 +54221,10 @@ msgid ""
 "interventions allow service technicians (or other employees) to be sent to a "
 "customer's location to address an issue with a product."
 msgstr ""
+"そのような場合、計画アプリを使用して\\ :doc:`現場介入 </applications/"
+"services/planning/field_service>`\\ をスケジュールできます。これらの介入によ"
+"り、サービス技術者（または他の従業員）を顧客の場所に派遣し、製品に関する問題"
+"に対処できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:158
 msgid "Review actions"
@@ -54204,12 +54460,18 @@ msgid ""
 "dependent work order ready before the full quantity of the previous is "
 "finished."
 msgstr ""
+"継続生産により、製造業者は作業オーダを部分的な数量で処理できます。部品表で有"
+"効にすると、作業オーダで生産を登録する際に次の作業オーダが自動的にブロック解"
+"除され、前の作業オーダの全数量が終了する前に、次の依存作業オーダが準備完了状"
+"態になります。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:14
 msgid ""
 "If the manufacturing order (MO) is closed before the full demand is "
 "produced, Odoo's normal backorder flow handles the remaining quantity."
 msgstr ""
+"製造オーダ（MO）が全需要が生産される前にクローズされた場合、Odooの通常の"
+"バックオーダフローが残りの数量を処理します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:17
 msgid ""
@@ -54221,6 +54483,12 @@ msgid ""
 "produced in batches, waves, or a steady line, rather than as one single "
 "finished block."
 msgstr ""
+"標準の\\ |MO|\\ フローは順次処理されるため、各作業オーダは、次の作業オーダが"
+"開始される前に、前の作業オーダが全数量を終了するのを待機します。これは単純な"
+"場合には機能しますが、製造品が組立ラインを通ってある機械やワークセンタから次"
+"へと移動する場合、不要なアイドル時間が発生する可能性があります。そのような環"
+"境では、製品は単一の完成ブロックではなく、バッチ、ウェーブ、または一定の"
+"ラインで生産されることがよくあります。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:23
 msgid ""
@@ -54230,10 +54498,14 @@ msgid ""
 "units can start the next operation while the first work center continues "
 "producing the remaining 80."
 msgstr ""
+"継続生産は、完了した部分的な数量を、全体の\\ |MO|\\ が完了する前に次の工程に"
+"進めることで、その動作を変更します。例えば、最初の工程が100個のうち20個を終了"
+"した場合、その20個は次の工程を開始でき、その一方で最初のワークセンタは残りの"
+"80個の生産を継続します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:28
 msgid "The quantities produced enter stock after the |MO| is complete."
-msgstr ""
+msgstr "生産された数量は、\\ |MO|\\ が完了した後に在庫に入ります。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:33
 msgid ""
@@ -54241,14 +54513,16 @@ msgid ""
 "Settings`. In the *Operations* section, select the :guilabel:`Work Orders` "
 "checkbox."
 msgstr ""
+"\\ :menuselection:`製造アプリ --> 設定 --> 設定`\\ に移動します。*操"
+"作*セクションで、\\ :guilabel:`作業オーダ`\\ チェックボックスを選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:36
 msgid "Enable Work Orders in the Manufacturing configuration settings."
-msgstr ""
+msgstr "製造構成設定で作業オーダを有効にします。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:40
 msgid "Set up BOM"
-msgstr ""
+msgstr "BOMを設定"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:42
 msgid "Next:"
@@ -54257,21 +54531,21 @@ msgstr "次:"
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:44
 msgid ""
 ":doc:`Set up a bill of materials (BOM) <../basic_setup/bill_configuration>`"
-msgstr ""
+msgstr ":doc:`部品表(BOM)を設定 <../basic_setup/bill_configuration>`"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:45
 msgid ""
 ":ref:`Enable continuous production on a product <manufacturing/"
 "continuous_production/enable-cp>`"
-msgstr ""
+msgstr ":ref:`製品の継続生産を有効化 <manufacturing/continuous_production/enable-cp>`"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:50
 msgid "Enable continuous production"
-msgstr ""
+msgstr "継続生産を有効にする"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:52
 msgid "Continuous production for a product is set up through its |BOM|."
-msgstr ""
+msgstr "製品の継続生産は、その\\ |BOM|\\ を通じて設定されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/continuous_production.rst:54
 msgid ""
@@ -54669,11 +54943,10 @@ msgid ""
 "Details)` icon to open the *Move Byproduct* window. Enter the :guilabel:`Lot/"
 "Serial Number` for each by-product, then click :guilabel:`Save`."
 msgstr ""
-"副産品がロットまたはシリアル番号で追跡されている場合は、\\ |MO|\\ の *副産"
-"品* タブを開きます。\\ :icon:`fa-list` :guilabel:`(詳細を表示)`\\ アイコンを"
-"クリックして *副産品移動* ウィンドウを開きます。各副産品の\\ "
-":guilabel:`ロット/シリアル番号`\\ を入力し、\\ :guilabel:`保存`\\ をクリック"
-"します。"
+"副産品がロットまたはシリアル番号で追跡されている場合は、\\ |MO|\\ の *副産品"
+"* タブを開きます。\\ :icon:`fa-list` :guilabel:`(詳細を表示)`\\ アイコンをク"
+"リックして *副産品移動* ウィンドウを開きます。各副産品の\\ :guilabel:`ロット/"
+"シリアル番号`\\ を入力し、\\ :guilabel:`保存`\\ をクリックします。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:85
 msgid "Two axle by-products are assigned serial numbers."
@@ -56479,25 +56752,31 @@ msgstr ""
 msgid ""
 ":guilabel:`Previous Year`: Suggest based on completed outgoing moves "
 "**only** for matching period one year ago."
-msgstr ""
+msgstr ":guilabel:`Previous Year`：1年前の同時期の完了済出荷に基づき提案します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
 msgid ""
 ":guilabel:`Last 30 Days`: Suggest based on the product's average demand over "
 "the last 30 days, prorated to the length of one time period."
 msgstr ""
+":guilabel:`Last 30 Days`：過去30日間のプロダクトの平均需要に基づき提案します"
+"。1期間分の長さに按分されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:266
 msgid ""
 ":guilabel:`Last 3 Months`: Suggest based on the product's average demand "
 "over the last three months, prorated to the length of one time period."
 msgstr ""
+":guilabel:`Last 3 Months`：過去3か月間のプロダクトの平均需要に基づき提案しま"
+"す。1期間分の長さに按分されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:268
 msgid ""
 ":guilabel:`Last 12 Months`: Suggest based on the product's average demand "
 "over the last 12 months, prorated to the length of one time period."
 msgstr ""
+":guilabel:`Last 12 Months`：過去12か月間のプロダクトの平均需要に基づき提案し"
+"ます。1期間分の長さに按分されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:271
 msgid ""
@@ -56505,12 +56784,16 @@ msgid ""
 "a :guilabel:`(#) %` increase or decrease in projected demand (e.g., `110%` "
 "projects a demand growth of 10 percent)."
 msgstr ""
+"2つ目のフィールドにスケーリング係数を入力し、予測需要の :guilabel:`(#) %` の"
+"増減を考慮します（例：`110%` と入力すると、10％の需要成長が予測されます）。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:274
 msgid ""
 "Finally, click :guilabel:`Apply` to apply the suggested demand for the "
 "specified time periods, or click :guilabel:`Discard` to cancel."
 msgstr ""
+"最後に :guilabel:`Apply` をクリックして指定期間の推奨需要を適用するか"
+"、:guilabel:`Discard` をクリックしてキャンセルします。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:280
 msgid "Replenishing products with |MPS|"
@@ -56542,9 +56825,9 @@ msgid ""
 "the drop-down menu."
 msgstr ""
 "複数のプロダクトを選択して補充するには、1つまたは複数のプロダクトのヘッダ行の"
-"横にあるチェックボックスを選択します。次に、上部にある\\ :icon:`fa-cog` "
-":guilabel:`施策`\\ ボタンをクリックし、ドロップダウンメニューから\\ "
-":guilabel:`オーダ`\\ を選択します。"
+"横にあるチェックボックスを選択します。次に、上部にある\\ :icon:`fa-"
+"cog` :guilabel:`施策`\\ ボタンをクリックし、ドロップダウンメニューから"
+"\\ :guilabel:`オーダ`\\ を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:292
 msgid ""
@@ -56563,8 +56846,8 @@ msgid ""
 "to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
 "*購買*ルートが選択されている場合、プロダクトを購入するための\\ |RfQ|\\ が生成"
-"されます。生成された\\ |RfQs|\\ は、\\ :menuselection:`購買アプリ --> "
-"オーダ --> 見積依頼`\\ に移動して確認できます。"
+"されます。生成された\\ |RfQs|\\ は、\\ :menuselection:`購買アプリ --> オーダ "
+"--> 見積依頼`\\ に移動して確認できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:298
 msgid ""
@@ -56574,8 +56857,8 @@ msgid ""
 "Orders`."
 msgstr ""
 "*製造*ルートが選択されている場合、プロダクトを製造するための\\ |MO|\\ が生成"
-"されます。生成された\\ |MOs|\\ は、\\ :menuselection:`製造アプリ --> 作"
-"業 --> 製造オーダ`\\ に移動して確認できます。"
+"されます。生成された\\ |MOs|\\ は、\\ :menuselection:`製造アプリ --> 作業 --"
+"> 製造オーダ`\\ に移動して確認できます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
 msgid "Replenishment status indicators"
@@ -56628,9 +56911,9 @@ msgid ""
 "customize the |MPS| by configuring additional rows for products or by "
 "filtering existing records based on specific criteria."
 msgstr ""
-"\\ :guilabel:`検索...`\\ バーのドロップダウンメニューを使用すると、ユーザは"
-"プロダクトの追加行を設定したり、特定の基準に基づいて既存のレコードを"
-"フィルタリングしたりして、\\ |MPS|\\ をさらにカスタマイズできます。"
+"\\ :guilabel:`検索...`\\ バーのドロップダウンメニューを使用すると、ユーザはプ"
+"ロダクトの追加行を設定したり、特定の基準に基づいて既存のレコードをフィルタリ"
+"ングしたりして、\\ |MPS|\\ をさらにカスタマイズできます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:328
 msgid "Rows"
@@ -56675,6 +56958,9 @@ msgid ""
 "Forecast` row to :guilabel:`- Actual / Indirect Demand Forecast`, comparing "
 "the component's confirmed demand and its forecasted demand."
 msgstr ""
+":guilabel:`Indirect Actual Demand`：:guilabel:`- Indirect Demand Forecast` 行"
+"を :guilabel:`- Actual / Indirect Demand Forecast` に変更し、構成品の確定需要"
+"と予測需要を比較します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:342
 msgid ""
@@ -56682,8 +56968,8 @@ msgid ""
 "row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
 "replenished quantity and its suggested quantity."
 msgstr ""
-":guilabel:`実績補充`：\\ :guilabel:`+ 補充`\\ 行を\\ :guilabel:`+ 実績/補"
-"充`\\ に変更し、プロダクトの補充数量と提案数量を比較します。"
+":guilabel:`実績補充`：\\ :guilabel:`+ 補充`\\ 行を\\ :guilabel:`+ 実績/補充"
+"`\\ に変更し、プロダクトの補充数量と提案数量を比較します。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:344
 msgid ""
@@ -56694,11 +56980,16 @@ msgid ""
 "calculated by ``Starting Stock - Actual Demand - Indirect Actual Demand + "
 "Replenishment``."
 msgstr ""
+":guilabel:`Available to Promise`：:guilabel:`= Forecasted Stock` 行を "
+":guilabel:`= ATP / Forecasted Stock` に変更し、プロダクトの有効在庫（``期首在"
+"庫 - 実績需要 + 補充``）と予測在庫を比較します。プロダクトが構成品の場合、有"
+"効在庫は ``期首在庫 - 実績需要 - 間接実績需要 + 補充`` で計算されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:352
 msgid ""
 "Users can filter records from the |MPS| based on the following criteria:"
-msgstr "ユーザは、\\ |MPS|\\ のレコードを次の基準に基づいてフィルタリングできます:"
+msgstr ""
+"ユーザは、\\ |MPS|\\ のレコードを次の基準に基づいてフィルタリングできます:"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:354
 msgid ""
@@ -56751,6 +57042,9 @@ msgid ""
 "greater than the forecasted demand (e.g., :guilabel:`Actual Demand` is "
 "greater than :guilabel:`Forecasted Demand`)."
 msgstr ""
+":guilabel:`Forecast Too Low`：実績需要が予測需要を上回るプロダクトで"
+"フィルタリングします（例：:guilabel:`Actual Demand` が :guilabel:`Forecasted "
+"Demand` を上回る）。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:366
 msgid ""
@@ -56773,8 +57067,8 @@ msgid ""
 ":guilabel:`Not Replenished from MPS`: Filter by products with the "
 "*Replenishment Trigger* set to *Never*."
 msgstr ""
-":guilabel:`MPSから補充しない`：*補充トリガー*が*しない*に設定されている"
-"プロダクトで絞り込みます。"
+":guilabel:`MPSから補充しない`：*補充トリガー*が*しない*に設定されているプロダ"
+"クトで絞り込みます。"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
@@ -57558,8 +57852,8 @@ msgid ""
 "The stages of the |ECO| :guilabel:`Type` are displayed at the top of the |"
 "ECO|."
 msgstr ""
-"The stages of the |ECO| :guilabel:`タイプ` are displayed at the top of the "
-"|ECO|."
+"The stages of the |ECO| :guilabel:`タイプ` are displayed at the top of the |"
+"ECO|."
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:76
 msgid ""
@@ -57608,9 +57902,9 @@ msgid ""
 "select :guilabel:`Add/Modify Step`. Then, select one of the options from "
 "this menu:"
 msgstr ""
-"Click the :icon:`fa-edit` :guilabel:`指示を更新` button. Then, select "
-":guilabel:`ステップを追加/修正`. Then, select one of the options from this "
-"menu:"
+"Click the :icon:`fa-edit` :guilabel:`指示を更新` button. Then, "
+"select :guilabel:`ステップを追加/修正`. Then, select one of the options from "
+"this menu:"
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:98
 msgid ""
@@ -57634,8 +57928,8 @@ msgid ""
 "Complete the form for the suggestion, then click :guilabel:`Propose Change`. "
 "An |ECO| is created for the suggested change."
 msgstr ""
-"Complete the form for the suggestion, then click :guilabel:`変更を提案`. An "
-"|ECO| is created for the suggested change."
+"Complete the form for the suggestion, then click :guilabel:`変更を提案`. An |"
+"ECO| is created for the suggested change."
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:106
 msgid ""
@@ -57680,8 +57974,8 @@ msgid ""
 "marked with a large red :guilabel:`Archived` flag."
 msgstr ""
 "After clicking the :guilabel:`改訂を開始` button for an |ECO| for the "
-"`Table` product, make changes to the product's |BOM| by clicking the "
-":guilabel:`改訂` smart button. Doing so opens the archived |BOM|, marked "
+"`Table` product, make changes to the product's |BOM| by clicking "
+"the :guilabel:`改訂` smart button. Doing so opens the archived |BOM|, marked "
 "with a large red :guilabel:`アーカイブ済` flag."
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:123
@@ -57868,8 +58162,8 @@ msgid ""
 "View the summary of the differences between the current and revised table |"
 "BOMs| in the *ECO Changes Summary* report of the |ECO|."
 msgstr ""
-"現在および修正後のテーブル |BOMs| の差異の概要を、 |ECO| の *設計変更概要* "
-"レポートで表示します。"
+"現在および修正後のテーブル |BOMs| の差異の概要を、 |ECO| の *設計変更概要* レ"
+"ポートで表示します。"
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:213
 msgid "View summary of component changes in the ECO Changes Summary report."
@@ -58093,9 +58387,9 @@ msgid ""
 "by the user-entered title. Click the line item to view the suggested changes."
 msgstr ""
 "前述の例を続けると、責任エンジニアが「作業」タブを開いた後、作業を実行するた"
-"めの「手順」リストが表示されます。最新の手順には `新規ステップ案:` という"
-"タイトルが付けられ、その後にユーザーが入力したタイトルが続きます。リスト項目"
-"をクリックすると、提案された変更が表示されます。"
+"めの「手順」リストが表示されます。最新の手順には `新規ステップ案:` というタイ"
+"トルが付けられ、その後にユーザーが入力したタイトルが続きます。リスト項目をク"
+"リックすると、提案された変更が表示されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:315
 msgid "Open the operation from the list to view its instructions."
@@ -58255,9 +58549,9 @@ msgid ""
 "chatter, and hovering over the time the |ECO| was moved to the :ref:`closing "
 "stage <plm/eco_type/stage-config>`."
 msgstr ""
-" |BOM| がいつ公開されたかを確認する回避策として、チャターに移動し、 |ECO| が "
-":ref:`完了ステージ <plm/eco_type/stage-config>` に移動された時間にカーソルを"
-"合わせます。"
+" |BOM| がいつ公開されたかを確認する回避策として、チャターに移動し、 |ECO| "
+"が :ref:`完了ステージ <plm/eco_type/stage-config>` に移動された時間にカーソル"
+"を合わせます。"
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:83
 msgid "Design files"
@@ -58332,8 +58626,8 @@ msgid ""
 "engineering_change_orders/apply-changes>`."
 msgstr ""
 "各添付ファイルにカーソルを合わせると、 :guilabel:`︙ (縦3点)` アイコンが表示"
-"されます。そこから、ファイルの :guilabel:`編集`、 :guilabel:`削除`、または "
-":guilabel:`ダウンロード` を選択します。これらのファイルに加えられた変更は "
+"されます。そこから、ファイルの :guilabel:`編集`、 :guilabel:`削除`、また"
+"は :guilabel:`ダウンロード` を選択します。これらのファイルに加えられた変更は "
 "|ECO| 内に含まれ、 |BOM| には :ref:`変更が適用 <plm/"
 "engineering_change_orders/apply-changes>` された後にのみ反映されます。"
 
@@ -59965,9 +60259,9 @@ msgid ""
 "purchase (if needed)."
 msgstr ""
 "パラメータが確定したら、\\ :guilabel:`すべて追加`\\ をクリックして、すべての"
-"提案をオーダに追加します。次に、\\ :guilabel:`見積書に戻る`\\ をクリックして"
-"、\\ |RFQ|\\ 上の最終数値を確認し、(必要に応じて)購入するプロダクトの数量を調"
-"整します。"
+"提案をオーダに追加します。次に、\\ :guilabel:`見積書に戻る`\\ をクリックし"
+"て、\\ |RFQ|\\ 上の最終数値を確認し、(必要に応じて)購入するプロダクトの数量を"
+"調整します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:60
 msgid ""
@@ -59976,8 +60270,8 @@ msgid ""
 "company delivered 20 units of orchids 15 days ago and 20 units 1 day ago."
 msgstr ""
 "ある企業が、直近30日間の履歴データを売上の100%として参照し、今後14日間のラン"
-"を補充する必要があります。その30日以内に、この企業は15日前にランを20ユニット"
-"、1日前に20ユニット納品しました。"
+"を補充する必要があります。その30日以内に、この企業は15日前にランを20ユニッ"
+"ト、1日前に20ユニット納品しました。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:64
 msgid "Average~Daily~Demand = \\frac{40}{30}  \\approx 1.33 \\text{ units/day}"
@@ -60034,8 +60328,8 @@ msgid ""
 "\\times Percentage\n"
 "\\\\ \\\\ Estimated~Demand = Average~Daily~Demand \\times Replenish~for~Days"
 msgstr ""
-"Average~Daily~Demand = \\frac{Delivered~or~Consumed~Items}{Based~on~Days} \\t"
-"imes Percentage\n"
+"Average~Daily~Demand = \\frac{Delivered~or~Consumed~Items}{Based~on~Days} "
+"\\times Percentage\n"
 "\\\\ \\\\ Estimated~Demand = Average~Daily~Demand \\times Replenish~for~Days"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:96
@@ -60045,9 +60339,9 @@ msgid ""
 "manufacturing orders in :guilabel:`Draft` are not taken into account until "
 "validated."
 msgstr ""
-"*1日あたりの平均需要* の計算では、\\ :guilabel:`引当済`\\ または\\ "
-":guilabel:`確定済`\\ の移動のみが考慮されます。\\ :guilabel:`下書き`\\ 状態の"
-"販売見積書や製造オーダは、検証されるまで考慮されません。"
+"*1日あたりの平均需要* の計算では、\\ :guilabel:`引当済`\\ または"
+"\\ :guilabel:`確定済`\\ の移動のみが考慮されます。\\ :guilabel:`下書き`\\ 状"
+"態の販売見積書や製造オーダは、検証されるまで考慮されません。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:101
 msgid ""
@@ -61156,6 +61450,12 @@ msgid ""
 "enable the radio button for either :guilabel:`On ordered quantities` "
 "or :guilabel:`On recieved quantities`."
 msgstr ""
+"プロダクトの管理ポリシーを設定するには、:menuselection:`Purchase app --> "
+"Products --> Products` に移動し、プロダクトレコードをクリックして開きます"
+"。:guilabel:`Purchase` タブをクリックします。:guilabel:`Vendor Bills` "
+"セクションまでスクロールします。:guilabel:`Control Policy` の下で"
+"、:guilabel:`On ordered quantities` または :guilabel:`On recieved "
+"quantities` のラジオボタンを有効にします。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:24
 msgid ""
@@ -61172,6 +61472,9 @@ msgid ""
 "the total order has been received. The products and quantities received are "
 "used to generate a draft bill."
 msgstr ""
+":guilabel:`On received quantities`：合計オーダの一部が受領された *後* にのみ"
+"請求書が作成されます。受領されたプロダクトと数量を使用して下書き請求書が生成"
+"されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:29
 msgid ""
@@ -62001,9 +62304,9 @@ msgid ""
 "added (or removed) from the *Purchase* tab."
 msgstr ""
 "列を有効化にしたり、無効にするにはヘッダー行の右側にある :icon:`oi-settings-"
-"adjust` :guilabel:`(追加オプション)` アイコンアイコンをクリックして、 "
-":guilabel:`購買` タブに追加 (または削除)できる追加の列の"
-"ドロップダウンメニューを表示します。"
+"adjust` :guilabel:`(追加オプション)` アイコンアイコンをクリックし"
+"て、 :guilabel:`購買` タブに追加 (または削除)できる追加の列のドロップダウンメ"
+"ニューを表示します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:62
 msgid ""
@@ -62352,9 +62655,9 @@ msgid ""
 "a product`, and type in the product name, or select the item from the drop-"
 "down menu."
 msgstr ""
-":guilabel:`プロダクト`  タブで、発注するプロダクトを追加します。:guilabel: "
-":guilabel:`プロダクト追加`  をクリックし、プロダクト名を入力するか、"
-"ドロップダウンメニューから項目を選択して下さい。"
+":guilabel:`プロダクト`  タブで、発注するプロダクトを追加しま"
+"す。:guilabel: :guilabel:`プロダクト追加`  をクリックし、プロダクト名を入力す"
+"るか、ドロップダウンメニューから項目を選択して下さい。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:218
 msgid ""
@@ -62907,8 +63210,8 @@ msgid ""
 "On the page, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then "
 "select :icon:`fa-download` :guilabel:`Import`."
 msgstr ""
-"ページ上で、:icon:`fa-cog`\\ :guilabel:`アクション`\\ アイコンをクリックし"
-"、:icon:`fa-download`\\ :guilabel:`インポート`を選択します。"
+"ページ上で、:icon:`fa-cog`\\ :guilabel:`アクション`\\ アイコンをクリック"
+"し、:icon:`fa-download`\\ :guilabel:`インポート`を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/pricelist.rst:191
 msgid ""
@@ -63354,6 +63657,12 @@ msgid ""
 "This rule is deleted upon confirmation of the purchase order (PO) generated "
 "for the product."
 msgstr ""
+"特定の場合、企業は自動的に補充したくないプロダクトに対して *一時的* な再"
+"オーダ規則を選択することがあります。Odooでは、*一時的* な再オーダ規則は、"
+"プロダクトに *購入* ルートが設定され、再オーダ規則が設定されておらず、手持数"
+"量が `0` で、販売オーダに含まれている場合に、補充ダッシュボードで作成されます"
+"。この規則は、そのプロダクトに対して生成された購入オーダ（PO）が確定されると"
+"削除されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:20
 msgid ":doc:`../../purchase/products/reordering`"
@@ -63384,6 +63693,9 @@ msgid ""
 "the :guilabel:`Sales` and :guilabel:`Purchase` options are enabled, located "
 "beneath the :guilabel:`Product Name` field."
 msgstr ""
+"プロダクトフォームでプロダクト名を入力し、:guilabel:`Sales` オプションと "
+":guilabel:`Purchase` オプション（:guilabel:`Product Name` フィールドの下）が"
+"有効になっていることを確認します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:35
 msgid ""
@@ -63400,6 +63712,9 @@ msgid ""
 "click :guilabel:`Add a line` and select a vendor from the drop-down menu. "
 "Then, set a purchase price under :guilabel:`Unit Price`."
 msgstr ""
+"次に *購入* タブをクリックし、:guilabel:`Vendor` の下で :guilabel:`Add a "
+"line` をクリックし、ドロップダウンメニューから仕入先を選択します。その後"
+"、:guilabel:`Unit Price` の下に購入価格を設定します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:42
 msgid ""
@@ -63409,10 +63724,10 @@ msgid ""
 "**Inventory** app without one of these triggers a warning to add a vendor on "
 "the product form."
 msgstr ""
-"一時的な発注ルールを機能させるには、ベンダーが設定されているか、または"
-"プロダクトが少なくとも1つの確定済み|PO|で購入されている必要があります。いずれ"
-"も設定せずに **在庫** アプリの *補充* ダッシュボードからプロダクトを補充しよ"
-"うとすると、プロダクトフォームにベンダーを追加するよう警告が表示されます。"
+"一時的な発注ルールを機能させるには、ベンダーが設定されているか、またはプロダ"
+"クトが少なくとも1つの確定済み|PO|で購入されている必要があります。いずれも設定"
+"せずに **在庫** アプリの *補充* ダッシュボードからプロダクトを補充しようとす"
+"ると、プロダクトフォームにベンダーを追加するよう警告が表示されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:47
 msgid ""
@@ -63421,16 +63736,22 @@ msgid ""
 "ensure that the :icon:`fa-refresh` :guilabel:`Reordering Rules` smart button "
 "reads `0`, indicating there are no rules applied to this product."
 msgstr ""
+"プロダクトの |SO| を作成する前に、*一般情報* タブの :guilabel:`Quantity On "
+"Hand` フィールドが `0.00 Units` となっていることを確認します。次に"
+"、:icon:`fa-refresh` :guilabel:`Reordering Rules` スマートボタンが `0` となっ"
+"ていることを確認し、このプロダクトに規則が適用されていないことを確認します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:53
 msgid ""
 "If the button bar is full, the *Reordering Rules* smart button is located "
 "under the *More* dropdown."
 msgstr ""
+"ボタンバーがいっぱいの場合は、*再オーダ規則* スマートボタンは *さらに表示* "
+"ドロップダウンの下にあります。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:56
 msgid "The smart buttons bar with the more option selected."
-msgstr ""
+msgstr "さらに表示オプションが選択されたスマートボタンバー。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:60
 msgid "Trigger temporary reordering rule"
@@ -63484,9 +63805,9 @@ msgid ""
 "row: :icon:`fa-truck` :guilabel:`Order`, :icon:`fa-"
 "refresh` :guilabel:`Automate`, and :icon:`fa-bell-slash` :guilabel:`Snooze`."
 msgstr ""
-"さらに、行の末尾には3つの補充オプションがあります：:icon:`fa-truck`\\ "
-":guilabel:`オーダ`、:icon:`fa-refresh`\\ :guilabel:`自動化`、そして:icon:`fa-"
-"bell-slash`\\ :guilabel:`スヌーズ`。"
+"さらに、行の末尾には3つの補充オプションがあります：:icon:`fa-"
+"truck`\\ :guilabel:`オーダ`、:icon:`fa-refresh`\\ :guilabel:`自動化`、そし"
+"て:icon:`fa-bell-slash`\\ :guilabel:`スヌーズ`。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:86
 msgid "Replenishment report displaying temporary reordering rule and options."
@@ -63499,10 +63820,10 @@ msgid ""
 "confirmation pop-up window, reading :guilabel:`The following replenishment "
 "order has been generated`, along with a new purchase order number."
 msgstr ""
-"単発の一時的な再オーダ規則を使用するには、:icon:`fa-truck` "
-":guilabel:`オーダ`\\ をクリックします。この操作により、新しい購買オーダ番号と"
-"ともに、:guilabel:`以下の補充オーダが生成されました`\\ という確認"
-"ポップアップウィンドウが一時的に表示されます。"
+"単発の一時的な再オーダ規則を使用するには、:icon:`fa-truck` :guilabel:`オーダ"
+"`\\ をクリックします。この操作により、新しい購買オーダ番号ととも"
+"に、:guilabel:`以下の補充オーダが生成されました`\\ という確認ポップアップウィ"
+"ンドウが一時的に表示されます。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:94
 msgid ""
@@ -63524,18 +63845,17 @@ msgid ""
 "navigate to the :menuselection:`Purchase app`, and select the generated |PO| "
 "from the *Requests for Quotation* dashboard."
 msgstr ""
-"*補充*\\ ダッシュボードから作成された購買オーダを表示するには"
-"、:menuselection:`購買アプリ`\\ に移動し、*見積*\\ ダッシュボードから生成され"
-"た |PO|\\ を選択します。"
+"*補充*\\ ダッシュボードから作成された購買オーダを表示するに"
+"は、:menuselection:`購買アプリ`\\ に移動し、*見積*\\ ダッシュボードから生成さ"
+"れた |PO|\\ を選択します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:105
 msgid ""
 "From here, click :guilabel:`Confirm Order`, then click :guilabel:`Receive`. "
 "Finally, click :guilabel:`Validate` to complete the |PO|."
 msgstr ""
-"ここから :guilabel:`オーダ確認`\\ をクリックし、次に :guilabel:`入荷`\\ を"
-"クリックします。最後に、:guilabel:`検証`\\ をクリックして |PO|\\ を完了します"
-"。"
+"ここから :guilabel:`オーダ確認`\\ をクリックし、次に :guilabel:`入荷`\\ をク"
+"リックします。最後に、:guilabel:`検証`\\ をクリックして |PO|\\ を完了します。"
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:108
 msgid ""
@@ -65862,7 +66182,7 @@ msgstr "品質検査ポイント"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:11
 msgid ""
-"In Odoo, *quality control points* (QCPs), are used to automatically "
+"In Odoo, *quality control points* (QCPs) are used to automatically "
 "create :doc:`quality checks <quality_checks>` at predetermined intervals. |"
 "QCPs| can be configured to create quality checks for specific operations "
 "(manufacturing, delivery, etc.) and for specific products within those "
@@ -65920,7 +66240,7 @@ msgstr ""
 "フィールドを空白のままにしてすべてのカテゴリに\\ |QCP|\\ が適用されるようにす"
 "るか、適用するカテゴリを少なくとも1つ選択します。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:37
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:36
 msgid ""
 "In the :guilabel:`Operations` field, select the operations that should "
 "trigger the |QCP|. For example, selecting the :guilabel:`Manufacturing` "
@@ -65932,7 +66252,7 @@ msgstr ""
 "\\ :guilabel:`オペレーション`\\ フィールドで選択すると、新規製造オーダ（MO）"
 "の品質チェックが作成されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:42
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:41
 msgid ""
 "When creating a new |QCP|, at least one operation must be listed in "
 "the :guilabel:`Operations` field. However, the :guilabel:`Products` "
@@ -65946,7 +66266,7 @@ msgstr ""
 "できます。空白のままにすると、|QCP|\\ は指定された操作のすべてのインスタンス"
 "に対して品質小切手を生成します。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:47
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:46
 msgid ""
 "If the :guilabel:`Manufacturing` operation is selected in "
 "the :guilabel:`Operations` field, the :guilabel:`Work Order Operation` field "
@@ -65959,7 +66279,7 @@ msgstr ""
 "ドが表示されます。このフィールドから特定の作業オーダを選択し、製造オペレー"
 "ション全般ではなく、その作業オーダに対して品質チェックを生成します。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:52
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:51
 msgid ""
 "A |QCP| could be configured to create quality checks for the `Assembly` work "
 "order of the `Coffee Table` product. Then, if a new |MO| is confirmed for a "
@@ -65971,11 +66291,11 @@ msgstr ""
 "製造オーダが確定すると、品質検査ポイントは `組み立て` オペレーション専用の品"
 "質検査を作成します。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:56
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:55
 msgid "Select a :guilabel:`Company` for which the |QCP| should apply."
 msgstr "\\ :guilabel:`会社`\\ を選択して、\\ |QCP|\\ の適用先を指定します。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:58
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:57
 msgid ""
 "If a specific quality team member is responsible for the |QCP|, select them "
 "in the :guilabel:`Responsible` field."
@@ -65983,7 +66303,7 @@ msgstr ""
 "特定の品質チーム メンバーが\\ |QCP|\\ に責任を持つ場合は、\\ :guilabel:`担当"
 "者`\\ フィールドでそのメンバーを選択します。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:61
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:60
 msgid ""
 "The :guilabel:`Control per` field is set to one of three options that "
 "determine *when* a new quality check is created:"
@@ -65991,7 +66311,7 @@ msgstr ""
 ":guilabel:`検査単位` フィールドには、新しい品質検査が いつ 作成されるかを決定"
 "する 3 つのオプションのいずれかが設定されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:63
 msgid ""
 ":guilabel:`Operation`: One check is requested for the specified operation, "
 "as a whole."
@@ -65999,7 +66319,7 @@ msgstr ""
 ":guilabel:`オペレーション`: 指定されたオペレーション全体について、1 件の検査"
 "が要求されています。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:65
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
 msgid ""
 ":guilabel:`Product`: One check is requested for each *unique* product "
 "included in the specified operation. For example, a delivery operation for "
@@ -66011,27 +66331,21 @@ msgstr ""
 "送作業では、2 *種類* のプロダクトが含まれているため、2件の検査が生成されま"
 "す。:guilabel:作業: 指定された作業全体に対して1件の検査が要求されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:68
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:67
 msgid ""
-":guilabel:`Quantity`: A check is requested for a certain percentage of items "
-"within the specified operation. This percentage is set by selecting "
-"the :guilabel:`Partial Transfer Test` checkbox, then entering a numerical "
-"value in the :guilabel:`Percentage` field that appears. If the checkbox is "
-"not selected, one quality check is created for the full quantity."
+":guilabel:`Lot`: A check is requested for a certain percentage of items "
+"within the specified operation. Next to the :guilabel:`Partial Test` field, "
+"enter a percentage in the :guilabel:`Test (#) % of products` field. The "
+"default value is `100`, meaning one quality check is created for the full "
+"quantity."
 msgstr ""
-":guilabel:`数量`：指定されたオペレーション内のアイテムの一定割合に対して"
-"チェックが要求されます。この割合は、\\ :guilabel:`一部移動テスト`\\ チェック"
-"ボックスを選択し、表示される\\ :guilabel:`パーセンテージ`\\ フィールドに数値"
-"を入力して設定します。チェックボックスが選択されていない場合、全数量に対して1"
-"つの品質チェックが作成されます。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:73
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:72
 msgid ""
-"The :guilabel:`Control Frequency` field is set to one of four options that "
+"If the :guilabel:`Lot` option was selected for :guilabel:`Control per`, "
+"the :guilabel:`Control Frequency` field is set to one of four options that "
 "determine *how often* a new quality check is created:"
 msgstr ""
-":guilabel:`管理頻度`\\ フィールドを、新しい品質チェックが作成される\\ *頻度"
-"*\\ を決定する 4 つのオプションのいずれかに設定します:"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:76
 msgid ""
@@ -66217,48 +66531,207 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:130
 msgid ""
-"In the :guilabel:`Instructions` tab at the bottom of the form, enter "
-"instructions for how to complete the quality checks created by the |QCP|."
+"In the *Instructions* tab at the bottom of the form, enter instructions for "
+"how to complete the quality checks created by the |QCP|."
 msgstr ""
-"フォームの下部にある :guilabel:`指示` タブで、品質検査ポイントによって作成さ"
-"れた品質検査の完了方法に関する指示を入力します。ドキュメントを品質検査ポイン"
-"トの下部にある :guilabel:`指示` タブに含める場合は、 :guilabel:`カスタム` を"
-"選択します。"
+"フォームの下部にある\\ *指示*\\ タブで、\\ |QCP|\\ によって作成される品質"
+"チェックを完了する方法の指示を入力します。"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:133
-msgid ""
-"In the :guilabel:`Worksheet` tab, upload a worksheet file from the device."
+msgid "In the *Attachment* tab, upload a worksheet file from the device."
 msgstr ""
-"\\ :guilabel:`ワークシート`\\ タブで、デバイスからワークシートファイルをアッ"
-"プロードします。"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:135
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:136
 msgid ""
-"In the :guilabel:`Message If Failure` tab, include instructions for what to "
-"do if the quality check fails. For example, instruct the employee processing "
-"the quality check to create a :doc:`quality alert <quality_alerts>`."
+"The *Attachment* tab only appears if the :guilabel:`Manufacturing` option is "
+"selected in the :guilabel:`Operations` field and a :guilabel:`Work Order "
+"Operation` is selected."
 msgstr ""
-":guilabel:`不合格時のメッセージ` タブには、品質検査に不合格となった場合に何を"
-"すべきかの指示を記載します。たとえば、品質検査を担当する従業員に、:doc:`品質"
-"アラート <quality_alerts>` を作成するよう指示することができます。"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:139
 msgid ""
-"Use the :guilabel:`Notes` tab to provide additional information about the |"
-"QCP|, like the reason it was created. The information entered in this tab is "
-"**not** shown to the employees who process the quality checks created by the "
-"|QCP|."
+"In the *Message If Failure* tab, include instructions for what to do if the "
+"quality check fails. For example, instruct the employee processing the "
+"quality check to create a :doc:`quality alert <quality_alerts>`."
 msgstr ""
-"\\ :guilabel:`注記`\\ タブを使用して、作成理由など、\\ |QCP|\\ に関する追加情"
-"報を入力します。このタブに入力された情報は、\\ |QCP|\\ によって作成された品質"
-"チェックを処理する従業員には表示\\ **されません**\\ 。"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:143
+msgid ""
+"Use the *Notes* tab to provide additional information about the |QCP|, like "
+"the reason it was created. The information entered in this tab is **not** "
+"shown to the employees who process the quality checks created by the |QCP|."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:147
 msgid ""
 "A QCP configured to create Pass - Fail checks for a work order operation."
 msgstr ""
 "作業オーダのオペレーションに対して合否チェックを行うように設定された品質検査"
 "ポイント"
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:3
+msgid "Quality rate"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:14
+msgid ""
+"In Odoo **Quality**, users can view the quality rate, or the percentage of "
+"successful quality checks across incoming transfers from vendors. This "
+"documentation covers how to access and view quality rates on vendors' "
+"contact forms, requests for quotation (RFQs) or purchase orders (POs), and "
+"quality control points (QCPs)."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:24
+msgid "To check quality rates, ensure the following are true:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:26
+msgid "The **Quality** and **Purchase** apps are installed."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:27
+msgid ""
+"The user's :doc:`access rights <../../../general/users/access_rights>` are "
+"set to :guilabel:`Quality / User` at the minimum."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:33
+msgid "View quality rates"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:35
+msgid ""
+"Quality rates can be viewed on vendors' contact forms, |RFQs| or |POs|, and |"
+"QCPs|. Each of these forms provides the option to open a customizable report "
+"showing the percentage of passing quality checks, organized by product or by "
+"vendor."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:39
+msgid "Users can access the report using one of the following options:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:41
+msgid ""
+"Via the contact form: Navigate to :menuselection:`Purchase app --> Orders --"
+"> Vendors` and select a vendor. The :icon:`fa-check` :guilabel:`Quality "
+"Rate` smart button displays the quality rate across all incoming products "
+"from the vendor. Click the button to open a specific report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:44
+msgid ""
+"Via an |RFQ| or |PO|: Open the **Purchase** app and select an order. "
+"The :icon:`fa-check` :guilabel:`Quality Rate` smart button displays the "
+"quality rate across all incoming products from the vendor. Click the button "
+"to open a specific report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:47
+msgid ""
+"Via a |QCP|: Navigate to :menuselection:`Quality app --> Quality Control --> "
+"Control Points` and select a control point. The :icon:`fa-"
+"user` :guilabel:`Suppliers` smart button displays the number of vendors with "
+"completed quality checks at the control point. Click the button to open a "
+"specific report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:53
+msgid ""
+"The control point's :guilabel:`Operations` field must be set to the "
+"`Receipts` operation type."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:56
+msgid ""
+"If the :icon:`fa-check` :guilabel:`Quality Rate` smart button does not "
+"appear on a vendor contact form, |RFQ|, or |PO|, ensure that at least one "
+"check has been performed across the vendor's incoming transfers."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:60
+msgid ""
+"Similarly, if the :icon:`fa-user` :guilabel:`Suppliers` smart button does "
+"not appear on a |QCP|, ensure that at least one check has been performed at "
+"the control point."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:66
+msgid "Quality rate report"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:68
+msgid ""
+"When opened from the contact form or the |RFQ|/|PO|, the *Quality Check "
+"Analysis* report shows a :icon:`fa-toggle-on` :guilabel:`Stacked` :icon:`fa-"
+"bar-chart` :guilabel:`(Bar Chart)` of the vendor's :guilabel:`Quality Rate` "
+"for each product over the last 12 months."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:72
+msgid ""
+"Modify the :ref:`view <reporting/views>`, :ref:`measure <reporting/choosing-"
+"measures>`, :ref:`filters <search/custom-filters>`, or :ref:`grouping "
+"options <search/group>` to customize the report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:77
+msgid ""
+"By default, reports accessed from the |QCP| display the rates for each "
+"vendor with quality checks at the control point, not the quality rate of "
+"each product by vendor."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:82
+msgid ""
+"In the following example, multiple products are purchased from the vendor "
+"Azure Interior. After performing quality checks, the :icon:`fa-"
+"check` :guilabel:`Quality Rate` smart button displays a quality rate of "
+"`43%`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:86
+msgid ""
+"After opening the default report from the |PO|, the following quality rates "
+"are shown for each product:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:89
+msgid "Pedal Bin: 1 pass, 1 fail (50% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:90
+msgid "Corner Desk Left Sit: 1 pass (100% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:91
+msgid "Office Chair: 1 pass, 1 fail (50% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:92
+msgid "Large Cabinet: 1 fail (0% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:93
+msgid "Large Cabinet (Wood): 1 fail (0% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:95
+msgid "Therefore, the overall quality rate is `3 passed / 7 total = 43%`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:97
+msgid "Quality Check Analysis report for a partner, grouping by product."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:101
+msgid ":doc:`quality_checks`"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:102
+msgid ":doc:`quality_control_points`"
+msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/repairs.rst:8
 msgid "Repairs"
@@ -66693,6 +67166,62 @@ msgid ""
 msgstr ""
 "配送が処理され、プロダクトが顧客に返送されたら、:guilabel:`検証` をクリックし"
 "て配送を検証します。"
+
+#~ msgid ""
+#~ ":guilabel:`Quantity`: A check is requested for a certain percentage of "
+#~ "items within the specified operation. This percentage is set by selecting "
+#~ "the :guilabel:`Partial Transfer Test` checkbox, then entering a numerical "
+#~ "value in the :guilabel:`Percentage` field that appears. If the checkbox "
+#~ "is not selected, one quality check is created for the full quantity."
+#~ msgstr ""
+#~ ":guilabel:`数量`：指定されたオペレーション内のアイテムの一定割合に対して"
+#~ "チェックが要求されます。この割合は、\\ :guilabel:`一部移動テスト`\\ チェッ"
+#~ "クボックスを選択し、表示される\\ :guilabel:`パーセンテージ`\\ フィールドに"
+#~ "数値を入力して設定します。チェックボックスが選択されていない場合、全数量に"
+#~ "対して1つの品質チェックが作成されます。"
+
+#~ msgid ""
+#~ "The :guilabel:`Control Frequency` field is set to one of four options "
+#~ "that determine *how often* a new quality check is created:"
+#~ msgstr ""
+#~ ":guilabel:`管理頻度`\\ フィールドを、新しい品質チェックが作成される\\ *頻"
+#~ "度*\\ を決定する 4 つのオプションのいずれかに設定します:"
+
+#~ msgid ""
+#~ "In the :guilabel:`Instructions` tab at the bottom of the form, enter "
+#~ "instructions for how to complete the quality checks created by the |QCP|."
+#~ msgstr ""
+#~ "フォームの下部にある :guilabel:`指示` タブで、品質検査ポイントによって作成"
+#~ "された品質検査の完了方法に関する指示を入力します。ドキュメントを品質検査ポ"
+#~ "イントの下部にある :guilabel:`指示` タブに含める場合は、 :guilabel:`カスタ"
+#~ "ム` を選択します。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Worksheet` tab, upload a worksheet file from the device."
+#~ msgstr ""
+#~ "\\ :guilabel:`ワークシート`\\ タブで、デバイスからワークシートファイルを"
+#~ "アップロードします。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Message If Failure` tab, include instructions for what "
+#~ "to do if the quality check fails. For example, instruct the employee "
+#~ "processing the quality check to create a :doc:`quality alert "
+#~ "<quality_alerts>`."
+#~ msgstr ""
+#~ ":guilabel:`不合格時のメッセージ` タブには、品質検査に不合格となった場合に"
+#~ "何をすべきかの指示を記載します。たとえば、品質検査を担当する従業員"
+#~ "に、:doc:`品質アラート <quality_alerts>` を作成するよう指示することができ"
+#~ "ます。"
+
+#~ msgid ""
+#~ "Use the :guilabel:`Notes` tab to provide additional information about the "
+#~ "|QCP|, like the reason it was created. The information entered in this "
+#~ "tab is **not** shown to the employees who process the quality checks "
+#~ "created by the |QCP|."
+#~ msgstr ""
+#~ "\\ :guilabel:`注記`\\ タブを使用して、作成理由など、\\ |QCP|\\ に関する追"
+#~ "加情報を入力します。このタブに入力された情報は、\\ |QCP|\\ によって作成さ"
+#~ "れた品質チェックを処理する従業員には表示\\ **されません**\\ 。"
 
 #~ msgid "Standard Cost: fixed unit cost, updated manually"
 #~ msgstr "標準原価：固定の単価を手動で更新する方式"

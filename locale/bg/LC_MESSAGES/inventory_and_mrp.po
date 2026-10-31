@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 20.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-27 09:45+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-10-30 17:31+0000\n"
+"PO-Revision-Date: 2026-10-31 12:39+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-20-doc/"
 "inventory_and_mrp/bg/>\n"
 "Language: bg\n"
@@ -228,6 +228,7 @@ msgstr "Таблото на Баркод с възложено преброяв�
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:17
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:23
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/failure_locations.rst:19
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:22
 msgid "Configuration"
 msgstr "Конфигурация"
 
@@ -2858,7 +2859,7 @@ msgid "A warehouse order is partially processed when scanning a package."
 msgstr "Складова поръчка се обработва частично при сканиране на пакет."
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:233
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:254
 msgid "Editing a product line"
 msgstr "Редактиране на ред на продукт"
 
@@ -2932,7 +2933,7 @@ msgstr ""
 "склада, изберете или създайте пакета."
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:251
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:272
 msgid ""
 ":guilabel:`Destination Container Package`: If a package must be nested "
 "inside another (pack-in-pack), select or create the parent package. "
@@ -2945,7 +2946,7 @@ msgstr ""
 "повече подробности."
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:138
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:264
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:285
 msgid ""
 "When ready, click :guilabel:`Confirm` to confirm the changes made to the "
 "product line."
@@ -3073,11 +3074,50 @@ msgstr ""
 "Оттам нататък складовият работник може да продължи с обработката на "
 "продуктите в двете разписки."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:188
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+msgid "Allocated products"
+msgstr "Разпределени продукти"
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:192
+msgid ""
+"If incoming units were :doc:`allocated <../../inventory/warehouses_storage/"
+"reporting/allocation_report>` to outgoing orders, click the :icon:`fa-"
+"cog` :guilabel:`(gear)` icon in the upper corner of the receipt, then "
+"click :guilabel:`See Allocation` to open the allocation report "
+"and :ref:`print labels <inventory/allocation_report/print_labels>` for each "
+"unit."
+msgstr ""
+"Ако входящите единици са били :doc:`разпределени <../../inventory/"
+"warehouses_storage/reporting/allocation_report>` към изходящи поръчки, "
+"щракнете върху иконата :icon:`fa-cog` :guilabel:`(зъбно колело)` в горния "
+"ъгъл на разписката, след което щракнете върху :guilabel:`Виж "
+"разпределението`, за да отворите отчета за разпределение и :ref:`отпечатате "
+"етикети <inventory/allocation_report/print_labels>` за всяка единица."
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:199
+msgid ""
+"If a :ref:`Location for allocation <inventory/allocation_report/"
+"configuration/allocation-location>` is configured on the operation type "
+"(e.g., Receipts, Manufacturing), product lines going to that location "
+"display a :icon:`fa-print` :guilabel:`(print)` icon next to the destination "
+"location. Click it to print a label for each unit on that line."
+msgstr ""
+"Ако е конфигурирано :ref:`Местоположение за разпределение <inventory/"
+"allocation_report/configuration/allocation-location>` за типа операция "
+"(напр. Разписки, Производство), продуктовите редове, отиващи към това "
+"местоположение, показват икона :icon:`fa-print` :guilabel:`(печат)` до "
+"целевото местоположение. Щракнете върху нея, за да отпечатате етикет за "
+"всяка единица в този ред."
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:205
+msgid "Allocated units on a barcode receipt."
+msgstr "Разпределени единици върху баркод разписка."
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
 msgid "Validating the transfer"
 msgstr "Потвърждаване на трансфера"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:211
 msgid ""
 "If not all products were scanned or manually entered from the pencil icon, "
 "click the :guilabel:`+#` button on the product line for the products being "
@@ -3088,7 +3128,7 @@ msgstr ""
 "получаваните продукти, или сканирайте баркода на продукта или опаковката на "
 "продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:215
 msgid ""
 "Finally, click :guilabel:`Validate`. The receipt is processed, and the "
 "**Barcode** app can be closed."
@@ -3096,15 +3136,15 @@ msgstr ""
 "Накрая кликнете върху :guilabel:`Потвърждаване`. Получаването е обработено и "
 "приложението **Баркод** може да бъде затворено."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:197
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:218
 msgid "Overview of receipts in transfer to validate."
 msgstr "Общ преглед на получавания за потвърждаване в трансфер."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:201
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:222
 msgid "Scan barcodes for delivery orders"
 msgstr "Сканиране на баркодове за нареждания за доставка"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:203
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:224
 msgid ""
 "To process warehouse deliveries for outgoing products, a sales order (SO) "
 "must be created to create a delivery operation to process. First, create a "
@@ -3115,13 +3155,13 @@ msgstr ""
 "обработка. Първо създайте оферта, след което я потвърдете, за да създадете |"
 "SO|."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:207
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:228
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
 msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:230
 msgid ""
 "To process and scan barcodes for warehouse deliveries, navigate to "
 "the :menuselection:`Barcode` app."
@@ -3129,7 +3169,7 @@ msgstr ""
 "За да обработите и сканирате баркодове за складови доставки, отидете в "
 "приложението :menuselection:`Баркод`."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:211
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:232
 msgid ""
 "In the **Barcode** app, a :guilabel:`Barcode Scanner` screen opens, "
 "displaying different options. To process deliveries, click "
@@ -3141,7 +3181,7 @@ msgstr ""
 "бутона :guilabel:`Операции` в долната част на екрана. Това отваря общата "
 "страница :guilabel:`Операции`."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:215
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:236
 msgid ""
 "On this page, click the :guilabel:`Delivery Orders` card to view all "
 "outstanding deliveries."
@@ -3149,11 +3189,11 @@ msgstr ""
 "На тази страница кликнете върху картата :guilabel:`Нареждания за доставка`, "
 "за да видите всички чакащи доставки."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:217
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:238
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "Обща страница за операции в таблото на приложението Баркод."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:220
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:241
 msgid ""
 "Select the desired delivery order to process. This navigates to the barcode "
 "transfer screen."
@@ -3161,7 +3201,7 @@ msgstr ""
 "Изберете желаното нареждане за доставка, което да обработите. Това ви "
 "отвежда до екрана за трансфер с баркод."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:222
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:243
 msgid ""
 "On this screen, first scan the source location of the products to deliver. "
 "Then, review the overview of all products, packages, and packagings to "
@@ -3178,7 +3218,7 @@ msgstr ""
 "добавят продукти към операцията, или цялата операция трябва да се потвърди "
 "наведнъж."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:228
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:249
 msgid ""
 "To process and scan each product individually, choose a specific product "
 "line. Scan a product, package, or product packaging, or click "
@@ -3190,7 +3230,7 @@ msgstr ""
 "бутона :guilabel:`+#` (например `+6`), за да отбележите доставката на този "
 "продукт."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:235
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:256
 msgid ""
 "To manually adjust quantities for a product, click the :icon:`fa-"
 "pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
@@ -3200,7 +3240,7 @@ msgstr ""
 "иконата :icon:`fa-pencil` :guilabel:`(молив)`, за да отворите нов екран за "
 "редактиране на този ред на продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:238
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:259
 msgid ""
 "The product that's being delivered is listed on this screen. Under the "
 "product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
@@ -3218,7 +3258,7 @@ msgstr ""
 "`6-pack`). Като алтернатива кликнете върху бутоните :guilabel:`+1` "
 "и :guilabel:`-1`, за да добавите или намалите количеството на продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:245
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:266
 msgid ""
 "When the *Packages* feature is enabled in the **Inventory** settings, the "
 "following fields appear:"
@@ -3226,7 +3266,7 @@ msgstr ""
 "Когато функцията *Пакети* е активирана в настройките на **Склад**, се "
 "показват следните полета:"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:247
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:268
 msgid ""
 ":guilabel:`Source Package`: If outgoing products should be picked from a "
 "package in inventory, select or create the package."
@@ -3234,7 +3274,7 @@ msgstr ""
 ":guilabel:`Изходен пакет`: Ако изходящите продукти трябва да бъдат взети от "
 "пакет в склада, изберете или създайте пакета."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:249
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:270
 msgid ""
 ":guilabel:`Destination Package`: If the products should be stored in a "
 "package before delivery, select or create the package."
@@ -3242,7 +3282,7 @@ msgstr ""
 ":guilabel:`Пакет местоназначение`: Ако продуктите трябва да се съхраняват в "
 "пакет преди доставката, изберете или създайте пакета."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:255
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:276
 msgid ""
 "The :guilabel:`Quantity in Stock` section lists the locations from which "
 "products can be picked. The selected location is the location from which the "
@@ -3256,7 +3296,7 @@ msgstr ""
 "меню с допълнителни локации за избор (ако този продукт се съхранява на "
 "няколко локации в склада)."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:261
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:282
 msgid ""
 "For warehouses with multiple different storage locations, putaway rules, and "
 "removal strategies, additional steps can be added for various operation "
@@ -3266,11 +3306,11 @@ msgstr ""
 "и стратегии за премахване, могат да се добавят допълнителни стъпки за "
 "различни типове операции при използване на приложението **Баркод**."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:267
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:288
 msgid "Validating the delivery"
 msgstr "Потвърждаване на доставката"
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:269
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:290
 msgid ""
 "If not all products, packages, or product packagings have been scanned or "
 "entered on the overview page, scan the products, packages, or packagings, or "
@@ -3284,7 +3324,7 @@ msgstr ""
 "Накрая кликнете върху :guilabel:`Потвърждаване`. Доставката е обработена и "
 "приложението **Баркод** може да бъде затворено."
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:274
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:295
 msgid "Overview of deliveries in transfer to validate."
 msgstr "Общ преглед на доставки за потвърждаване в трансфер."
 
@@ -8000,7 +8040,8 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:1432
 msgid "Cost of Production Account: defined on the production location"
-msgstr "Сметка за производствени разходи: дефинирана в производствената локация"
+msgstr ""
+"Сметка за производствени разходи: дефинирана в производствената локация"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:1440
 msgid ""
@@ -8392,7 +8433,8 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:2275
 msgid "Cost of Production Account: defined on the Production location"
-msgstr "Сметка за производствени разходи: дефинирана в производствената локация"
+msgstr ""
+"Сметка за производствени разходи: дефинирана в производствената локация"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:2298
 msgid ""
@@ -11058,7 +11100,7 @@ msgstr ""
 "опаковка"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure.rst:102
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:125
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:155
 msgid "Use cases"
 msgstr "Примерни случаи на употреба"
 
@@ -12604,10 +12646,11 @@ msgid ""
 "Alternatively, from the *Products* page, click :guilabel:`New` to create a "
 "new product."
 msgstr ""
-"За да конфигурирате съществуващ продукт, отидете на "
-":menuselection:`приложение Складова наличност --> Продукти --> Продукти` и "
-"изберете желания продукт от списъка. Алтернативно, от страницата "
-":guilabel:`Продукти`, кликнете :guilabel:`Нов`, за да създадете нов продукт."
+"За да конфигурирате съществуващ продукт, отидете "
+"на :menuselection:`приложение Складова наличност --> Продукти --> Продукти` "
+"и изберете желания продукт от списъка. Алтернативно, от "
+"страницата :guilabel:`Продукти`, кликнете :guilabel:`Нов`, за да създадете "
+"нов продукт."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:19
 msgid "For sale vs. purchase"
@@ -12865,8 +12908,8 @@ msgid ""
 "To mark a product as untracked, select :guilabel:`None` in "
 "the :guilabel:`Tracking` field."
 msgstr ""
-"За да маркирате продукт като неследен, изберете :guilabel:`Няма` в полето "
-":guilabel:`Проследяване`."
+"За да маркирате продукт като неследен, изберете :guilabel:`Няма` в "
+"полето :guilabel:`Проследяване`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:119
 msgid ""
@@ -14227,10 +14270,10 @@ msgid ""
 "Number` or :guilabel:`By Lots`."
 msgstr ""
 "За да бъдат следени чрез партиди или серийни номера, или за да се "
-"конфигурира информация за срока на годност, продуктите *трябва* да имат своя "
-":guilabel:`Тип продукт` зададен като :guilabel:`Стоки` под раздела *Обща "
-"информация*. След това, в полето :guilabel:`Проследяване`, изберете или "
-":guilabel:`По уникален сериен номер` или :guilabel:`По партиди`."
+"конфигурира информация за срока на годност, продуктите *трябва* да имат "
+"своя :guilabel:`Тип продукт` зададен като :guilabel:`Стоки` под раздела "
+"*Обща информация*. След това, в полето :guilabel:`Проследяване`, изберете "
+"или :guilabel:`По уникален сериен номер` или :guilabel:`По партиди`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:57
 msgid ""
@@ -14238,9 +14281,9 @@ msgid ""
 "the :guilabel:`Traceability` section. Select the :guilabel:`Expiration Date` "
 "checkbox."
 msgstr ""
-"След това щракнете върху раздела *Инвентар* и превъртете надолу до секцията "
-":guilabel:`Проследяемост`. Поставете отметка в квадратчето :guilabel:`Дата "
-"на изтичане`."
+"След това щракнете върху раздела *Инвентар* и превъртете надолу до "
+"секцията :guilabel:`Проследяемост`. Поставете отметка в "
+"квадратчето :guilabel:`Дата на изтичане`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:61
 msgid ""
@@ -14358,10 +14401,11 @@ msgid ""
 "The receipt cannot be validated without an assigned lot or serial number."
 msgstr ""
 "Щракването върху :guilabel:`Validate` преди присвояване на сериен номер на "
-"поръчаните количества продукти предизвиква изскачащ прозорец "
-":guilabel:`Invalid Operation`. Изскачащият прозорец изисква въвеждане на "
-"номер на партида или сериен номер за поръчаните продукти. Получаването не "
-"може да бъде потвърдено без присвоен номер на партида или сериен номер."
+"поръчаните количества продукти предизвиква изскачащ "
+"прозорец :guilabel:`Invalid Operation`. Изскачащият прозорец изисква "
+"въвеждане на номер на партида или сериен номер за поръчаните продукти. "
+"Получаването не може да бъде потвърдено без присвоен номер на партида или "
+"сериен номер."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:106
 msgid "User error popup when validating an order with no lot number."
@@ -14534,9 +14578,9 @@ msgid ""
 "click :guilabel:`Apply` to confirm the date. Finally, "
 "click :guilabel:`Confirm` to confirm the sales order."
 msgstr ""
-"След това щракнете върху раздела :guilabel:`Other Info`. В раздела "
-":guilabel:`Delivery` променете :guilabel:`Delivery Date` на дата след "
-"очакваната дата, и щракнете върху :guilabel:`Apply`, за да потвърдите "
+"След това щракнете върху раздела :guilabel:`Other Info`. В "
+"раздела :guilabel:`Delivery` променете :guilabel:`Delivery Date` на дата "
+"след очакваната дата, и щракнете върху :guilabel:`Apply`, за да потвърдите "
 "датата. Накрая щракнете върху :guilabel:`Confirm`, за да потвърдите "
 "поръчката за продажба."
 
@@ -14669,9 +14713,9 @@ msgid ""
 "On the :guilabel:`Lot/Serial Number` detail form, the *Dates* tab lists all "
 "expiration information related to the products."
 msgstr ""
-"В подробния формуляр :guilabel:`Lot/Serial Number`, разделът "
-":guilabel:`Dates` изброява цялата информация за срок на годност, свързана с "
-"продуктите."
+"В подробния формуляр :guilabel:`Lot/Serial Number`, "
+"разделът :guilabel:`Dates` изброява цялата информация за срок на годност, "
+"свързана с продуктите."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:229
 msgid ""
@@ -14705,8 +14749,8 @@ msgstr ""
 "За да видите новия сигнал за срок на годност, или всякакви сигнали за срок "
 "на годност за продукти, чийто срок е изтекъл (или ще изтече скоро), се "
 "върнете на страницата :guilabel:`Lots/Serial Numbers` чрез навигационните "
-"връзки. Премахнете всички филтри за търсене от лентата за търсене на таблото "
-":guilabel:`Lots/Serial Numbers`."
+"връзки. Премахнете всички филтри за търсене от лентата за търсене на "
+"таблото :guilabel:`Lots/Serial Numbers`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:242
 msgid ""
@@ -14745,9 +14789,9 @@ msgid ""
 msgstr ""
 "За да конфигурирате известие, отидете на :menuselection:`Inventory app --> "
 "Products --> Products`. Изберете продукт, конфигуриран с проследяване по "
-"партиди/серийни номера и срок на годност. Отидете на раздела "
-":guilabel:`Inventory`. В раздела :guilabel:`Logistics` изберете потребител в "
-"полето :guilabel:`Responsible`."
+"партиди/серийни номера и срок на годност. Отидете на "
+"раздела :guilabel:`Inventory`. В раздела :guilabel:`Logistics` изберете "
+"потребител в полето :guilabel:`Responsible`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:258
 msgid ""
@@ -22433,7 +22477,7 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:73
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:34
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:57
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:131
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:90
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -28201,6 +28245,14 @@ msgstr ""
 "Вместо това използвайте производствени идентификационни данни за тестване и "
 "анулирайте тестовите заявки през платформата на FedEx след приключване на "
 "тестването."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:165
+msgid ""
+"FedEx shipments and requests cannot be made from a staging database. You "
+"must use a production database to create shipments."
+msgstr ""
+"FedEx пратки и заявки не могат да се правят от тестова (staging) база данни. "
+"Трябва да използвате продукционна база данни, за да създавате пратки."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -37085,12 +37137,12 @@ msgid ""
 "Number` form, click the :icon:`fa-cog` :guilabel:`(cog)` icon, then "
 "select :guilabel:`Scrap`. This opens a form to scrap the product."
 msgstr ""
-"За да бракувате продукт с партиден или сериен номер, отворете "
-":menuselection:`Приложение „Склад“ --> Продукти --> Партиди/Серийни номера`. "
-"Отворете партиден или сериен номер от списъка. В бланката :guilabel:`Партида/"
-"Сериен номер` щракнете върху иконата :icon:`fa-cog` :guilabel:`(зъбно колело)"
-"`, след което изберете :guilabel:`Брак`. Това отваря формуляр за бракуване "
-"на продукта."
+"За да бракувате продукт с партиден или сериен номер, "
+"отворете :menuselection:`Приложение „Склад“ --> Продукти --> Партиди/Серийни "
+"номера`. Отворете партиден или сериен номер от списъка. В "
+"бланката :guilabel:`Партида/Сериен номер` щракнете върху иконата :icon:`fa-"
+"cog` :guilabel:`(зъбно колело)`, след което изберете :guilabel:`Брак`. Това "
+"отваря формуляр за бракуване на продукта."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:122
 msgid ""
@@ -37137,9 +37189,9 @@ msgid ""
 "the :guilabel:`Lot/Serial Number` form."
 msgstr ""
 "След създаването на брака следвайте пътечките (breadcrumbs) обратно към "
-"формуляра :guilabel:`Партида/Сериен номер`. В горната част на формуляра "
-":icon:`fa-trash` :guilabel:`Бракувани` се появява смарт бутон "
-":guilabel:`Партида/Сериен номер`."
+"формуляра :guilabel:`Партида/Сериен номер`. В горната част на "
+"формуляра :icon:`fa-trash` :guilabel:`Бракувани` се появява смарт "
+"бутон :guilabel:`Партида/Сериен номер`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:145
 msgid "Find scraps from the Lot/Serial Number form."
@@ -37158,8 +37210,8 @@ msgid ""
 "This report is only available to users with :doc:`admin access <../../../../"
 "general/users/access_rights>`."
 msgstr ""
-"Този отчет е достъпен само за потребители с :doc:`права на администратор <../"
-"../../../general/users/access_rights>`."
+"Този отчет е достъпен само за потребители с :doc:`права на администратор "
+"<../../../../general/users/access_rights>`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:157
 msgid "Open :menuselection:`Inventory app --> Reporting --> Moves History`."
@@ -37221,8 +37273,8 @@ msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
 "Configuration --> Locations`."
 msgstr ""
-"След активиране на *Местоположения за съхранение*, отидете на "
-":menuselection:`Приложение „Склад“ --> Конфигурация --> Местоположения`."
+"След активиране на *Местоположения за съхранение*, отидете "
+"на :menuselection:`Приложение „Склад“ --> Конфигурация --> Местоположения`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:32
 msgid "List of internal locations."
@@ -37500,8 +37552,8 @@ msgid ""
 "shipping_receiving/daily_operations/use_routes>` between them."
 msgstr ""
 "Всяка база данни има предварително конфигуриран склад с адреса на "
-"компанията. Потребителите могат да настроят няколко склада и да "
-":doc:`създават движения на наличност <../../shipping_receiving/"
+"компанията. Потребителите могат да настроят няколко склада и "
+"да :doc:`създават движения на наличност <../../shipping_receiving/"
 "daily_operations/use_routes>` между тях."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:17
@@ -38106,8 +38158,8 @@ msgid ""
 "the :guilabel:`To Order` field."
 msgstr ""
 "Потвърдена |SO| за 200 единици има дата на доставка 13 октомври (6 дни от "
-"днес). Това търсене ще се появи в доклада за дополване днес в полето "
-":guilabel:`За поръчка` ."
+"днес). Това търсене ще се появи в доклада за дополване днес в "
+"полето :guilabel:`За поръчка` ."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:68
 msgid ""
@@ -38198,8 +38250,8 @@ msgid ""
 "the order is shipped from the warehouse. This is the expected time frame for "
 "customer order fulfillment."
 msgstr ""
-":ref:`Време за доставка <inventory/warehouses_storage/sales-delivery-time-lt>"
-"`: Броят дни от датата на потвърждение на поръчката за продажба (SO) до "
+":ref:`Време за доставка <inventory/warehouses_storage/sales-delivery-time-"
+"lt>`: Броят дни от датата на потвърждение на поръчката за продажба (SO) до "
 "датата, на която поръчката се изпраща от склада. Това е очакваният срок за "
 "изпълнение на клиентската поръчка."
 
@@ -38365,11 +38417,11 @@ msgid ""
 "start to finish."
 msgstr ""
 "*Времето за доставка* се задава ръчно за всеки отделен продукт. За да "
-"зададете времето за доставка за даден продукт, отидете на "
-":menuselection:`Приложение „Продажби“ --> Продукти --> Продукти`. Изберете "
-"желания продукт и преминете към раздела :guilabel:`Склад`. В полето "
-":guilabel:`Време за доставка` въведете броя на календарните дни, необходими "
-"за изпълнение на поръчката за доставка от началото до края."
+"зададете времето за доставка за даден продукт, отидете "
+"на :menuselection:`Приложение „Продажби“ --> Продукти --> Продукти`. "
+"Изберете желания продукт и преминете към раздела :guilabel:`Склад`. В "
+"полето :guilabel:`Време за доставка` въведете броя на календарните дни, "
+"необходими за изпълнение на поръчката за доставка от началото до края."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:99
 msgid ""
@@ -39199,7 +39251,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:82
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:223
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:249
 msgid "For purchased products"
 msgstr "За закупувани продукти"
 
@@ -39228,12 +39280,12 @@ msgid ""
 "RFQ|."
 msgstr ""
 "За закупени продукти, потребителите **може да** укажат доставчик или да имат "
-"поне един потвърден |PO| за продукта, за да може Odoo правилно да създаде "
-"|RFQ|."
+"поне един потвърден |PO| за продукта, за да може Odoo правилно да създаде |"
+"RFQ|."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:97
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:164
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:230
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:256
 msgid "For manufactured products"
 msgstr "За произвеждани продукти"
 
@@ -40606,8 +40658,8 @@ msgid ""
 msgstr ""
 "За да зададете хоризонт в дни, отидете на :menuselection:`Приложение "
 "Инвентар --> Операции --> Дополване`, и кликнете върху свитата странична "
-"лента. В менюто, което се появява, задайте броя на дните в "
-":guilabel:`Хоризонт` дни."
+"лента. В менюто, което се появява, задайте броя на дните "
+"в :guilabel:`Хоризонт` дни."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:84
 msgid "Current date: October 13"
@@ -40694,8 +40746,8 @@ msgid ""
 "screen. The *Suggest Min-Max* pop-up window opens."
 msgstr ""
 "В отчета за *Зареждане* изберете поне един продукт, чиито правила за "
-"презареждане трябва да бъдат преизчислени. Кликнете върху "
-":guilabel:`Предлагане` в горната част на екрана. Отваря се изскачащият "
+"презареждане трябва да бъдат преизчислени. Кликнете "
+"върху :guilabel:`Предлагане` в горната част на екрана. Отваря се изскачащият "
 "прозорец *Предлагане на мин.-макс.*."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:115
@@ -40852,8 +40904,8 @@ msgstr ":ref:`Зареждане по поръчка (MTO) <inventory/resupply_w
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:16
 msgid ":ref:`Reordering rule <inventory/resupply_warehouses/reordering-rule>`"
 msgstr ""
-":ref:`Правило за презареждане <inventory/resupply_warehouses/reordering-rule>"
-"`"
+":ref:`Правило за презареждане <inventory/resupply_warehouses/reordering-"
+"rule>`"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:19
 msgid ":doc:`Difference between MTO and reordering rules <../replenishment>`"
@@ -40878,10 +40930,10 @@ msgid ""
 "See :ref:`Resupply from another company <inventory/resupply_warehouses/inter-"
 "company>` for the additional requirements."
 msgstr ""
-"За да използвате междуфирмени трансфери, се уверете, че е конфигурирана "
-":doc:`мулти-фирмена среда <../../../../general/companies/multi_company>`. "
-"Вижте :ref:`Снабдяване от друга фирма <inventory/resupply_warehouses/inter-"
-"company>` за допълнителните изисквания."
+"За да използвате междуфирмени трансфери, се уверете, че е "
+"конфигурирана :doc:`мулти-фирмена среда <../../../../general/companies/"
+"multi_company>`. Вижте :ref:`Снабдяване от друга фирма <inventory/"
+"resupply_warehouses/inter-company>` за допълнителните изисквания."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:37
 msgid ""
@@ -40889,8 +40941,8 @@ msgid ""
 "navigate to :menuselection:`Inventory app --> Configuration --> Warehouses`."
 msgstr ""
 "За да конфигурирате централния склад и неговите свързани складови "
-"местоположения, отидете на :menuselection:`Склад приложение --> "
-"Конфигурация --> Складове`."
+"местоположения, отидете на :menuselection:`Склад приложение --> Конфигурация "
+"--> Складове`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:41
 msgid ""
@@ -40934,8 +40986,8 @@ msgid ""
 "The :guilabel:`Resupply From` field is set to this warehouse on the shop's "
 "warehouse configuration page."
 msgstr ""
-"Централният склад, който ще снабдява магазините, се нарича `Main`. Полето "
-":guilabel:`Доставяне от` е настроено към този склад на страницата за "
+"Централният склад, който ще снабдява магазините, се нарича `Main`. "
+"Полето :guilabel:`Доставяне от` е настроено към този склад на страницата за "
 "конфигуриране на склада на магазина."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:59
@@ -40974,9 +41026,9 @@ msgid ""
 "warehouse, and `Y` is the supplying warehouse."
 msgstr ""
 "В раздела *Инвентар*, полето :guilabel:`Маршрути` от секция *Операции* "
-"изброява всички нови маршрути, генерирани от конфигурацията на склада, като "
-":guilabel:`X: Снабдяване на продукт от Y`, където `X` е приемащият склад, а "
-"`Y` е доставящият склад."
+"изброява всички нови маршрути, генерирани от конфигурацията на склада, "
+"като :guilabel:`X: Снабдяване на продукт от Y`, където `X` е приемащият "
+"склад, а `Y` е доставящият склад."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:76
 msgid ""
@@ -40985,18 +41037,18 @@ msgid ""
 "<inventory/resupply_warehouses/reordering-rule>` configuration process."
 msgstr ""
 "След като изберете приложимите маршрути, преминете към процеса на "
-"конфигуриране на :ref:`MTO <inventory/resupply_warehouses/MTO>` или "
-":ref:`правила за пренареждане <inventory/resupply_warehouses/reordering-rule>"
-"`."
+"конфигуриране на :ref:`MTO <inventory/resupply_warehouses/MTO>` "
+"или :ref:`правила за пренареждане <inventory/resupply_warehouses/reordering-"
+"rule>`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:85
 msgid ""
 "To replenish products using |MTO|, ensure the :guilabel:`Replenish on Order "
 "(MTO)` route is selected in the *Inventory* tab of the product form."
 msgstr ""
-"За да попълвате наличности чрез |MTO|, уверете се, че маршрутът "
-":guilabel:`Попълване при поръчка (MTO)` е избран в раздела *Инвентар* на "
-"формуляра за продукта."
+"За да попълвате наличности чрез |MTO|, уверете се, че "
+"маршрутът :guilabel:`Попълване при поръчка (MTO)` е избран в раздела "
+"*Инвентар* на формуляра за продукта."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:89
 msgid ""
@@ -41005,8 +41057,8 @@ msgid ""
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
 "Маршрутът :guilabel:`Попълване при поръчка (MTO)` се появява **само** ако "
-"функцията :guilabel:`Попълване при поръчка (MTO)` е активирана в "
-":menuselection:`Приложение „Инвентар“ --> Конфигурация --> Настройки`."
+"функцията :guilabel:`Попълване при поръчка (MTO)` е активирана "
+"в :menuselection:`Приложение „Инвентар“ --> Конфигурация --> Настройки`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:92
 msgid ""
@@ -41081,8 +41133,8 @@ msgid ""
 "resupply route, this field is automatically populated."
 msgstr ""
 ":guilabel:`Маршрут`: Маршрутът :guilabel:`X: Снабдяване на продукт от Y`. "
-"Ако тази колона е скрита, активирайте я, като щракнете върху иконата "
-":icon:`oi-settings-adjust` :guilabel:`(незадължителни колони)`. Ако "
+"Ако тази колона е скрита, активирайте я, като щракнете върху "
+"иконата :icon:`oi-settings-adjust` :guilabel:`(незадължителни колони)`. Ако "
 "продуктът вече има маршрут за снабдяване, това поле се попълва автоматично."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:122
@@ -41109,9 +41161,9 @@ msgid ""
 "(Chicago): Supply Product from Main`."
 msgstr ""
 "Създава се :ref:`правило за пренареждане 0/0 <inventory/warehouses_storage/"
-"zero-zero>` за попълване на склада на магазина, като "
-":guilabel:`Местоположение` е настроено на `SHOP/Stock`, а "
-":guilabel:`Маршрут` е настроено на :guilabel:`Магазин (Чикаго): Снабдяване "
+"zero-zero>` за попълване на склада на магазина, "
+"като :guilabel:`Местоположение` е настроено на `SHOP/Stock`, "
+"а :guilabel:`Маршрут` е настроено на :guilabel:`Магазин (Чикаго): Снабдяване "
 "на продукт от Основен`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:130
@@ -41142,12 +41194,12 @@ msgid ""
 "Optionally, set the resupply route in the :guilabel:`Preferred Route` field. "
 "Then, click :guilabel:`Confirm`."
 msgstr ""
-"Чрез формуляра за продукта: На формуляра за продукта щракнете върху иконата "
-":icon:`fa-cog` :guilabel:`(Действия)`, след това :guilabel:`Попълване`. В "
-"изскачащия прозорец задайте желаното :guilabel:`Количество` и "
-":guilabel:`Планирана дата`. По избор, задайте маршрута за снабдяване в "
-"полето :guilabel:`Предпочитан маршрут`. След това щракнете върху "
-":guilabel:`Потвърждаване`."
+"Чрез формуляра за продукта: На формуляра за продукта щракнете върху "
+"иконата :icon:`fa-cog` :guilabel:`(Действия)`, след "
+"това :guilabel:`Попълване`. В изскачащия прозорец задайте "
+"желаното :guilabel:`Количество` и :guilabel:`Планирана дата`. По избор, "
+"задайте маршрута за снабдяване в полето :guilabel:`Предпочитан маршрут`. "
+"След това щракнете върху :guilabel:`Потвърждаване`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:148
 msgid "Replenish pop-up window on the product form."
@@ -41272,8 +41324,8 @@ msgid ""
 "The user has access to both companies, and both are selected in "
 "the :ref:`company selector <general/multi-company/company-selector>`."
 msgstr ""
-"Потребителят има достъп до двете компании и двете са избрани в "
-":ref:`селектора на компании <general/multi-company/company-selector>`."
+"Потребителят има достъп до двете компании и двете са избрани "
+"в :ref:`селектора на компании <general/multi-company/company-selector>`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:202
 msgid ""
@@ -41295,8 +41347,8 @@ msgstr ""
 "След това :ref:`конфигурирайте склада <inventory/resupply_warehouses/"
 "configuration>` на получаващата компания и изберете склада на снабдяващата "
 "компания в полето :guilabel:`Попълване от`. Полученият маршрут :guilabel:`X: "
-"Доставка на продукт от Y` се споделя между двете компании и се използва с "
-"|MTO| или правила за пренареждане по същия начин като междускладов маршрут."
+"Доставка на продукт от Y` се споделя между двете компании и се използва с |"
+"MTO| или правила за пренареждане по същия начин като междускладов маршрут."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:211
 msgid ""
@@ -41313,8 +41365,8 @@ msgid ""
 "not valued."
 msgstr ""
 "Оценката на наличностите на получаващата компания използва стойността на "
-"продукта, преди той да напусне снабдяващата компания. Самата локация „"
-"Транзит между компании“ не се оценява."
+"продукта, преди той да напусне снабдяващата компания. Самата локация "
+"„Транзит между компании“ не се оценява."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:219
 msgid "Ship a sales order from another company's warehouse"
@@ -41345,11 +41397,11 @@ msgid ""
 "Deliveries` :ref:`Favorites <inventory/warehouses_storage/moves-analysis-"
 "search-options>` filter."
 msgstr ""
-"За да прегледате продуктите, преместени между компаниите, отидете на "
-":menuselection:`Приложение „Склад“ --> Отчети --> Анализ на движенията`. "
+"За да прегледате продуктите, преместени между компаниите, отидете "
+"на :menuselection:`Приложение „Склад“ --> Отчети --> Анализ на движенията`. "
 "Щракнете върху иконата :icon:`fa-caret-down` :guilabel:`(Превключване на "
-"панела за търсене)` в лентата за търсене и изберете филтъра "
-":guilabel:`Доставки между компании` :ref:`Любими <inventory/"
+"панела за търсене)` в лентата за търсене и изберете "
+"филтъра :guilabel:`Доставки между компании` :ref:`Любими <inventory/"
 "warehouses_storage/moves-analysis-search-options>`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:233
@@ -41433,7 +41485,35 @@ msgstr ""
 "показва възможността за преглед на :ref:`отчет за разпределението <inventory/"
 "allocation_report/workflow/report>` за конкретната операция."
 
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
+msgid "Optional: Set allocation location"
+msgstr "По избор: Задаване на местоположение за разпределение"
+
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:45
+msgid ""
+"Allocated units can be sent to a dedicated location separate from stock "
+"until they are delivered or consumed. To configure this option, go to the "
+"*Locations* section on the desired :guilabel:`Operation Type` form, then "
+"select an internal location in the :guilabel:`Location for allocation` field."
+msgstr ""
+"Разпределените единици могат да бъдат изпратени до специално местоположение, "
+"отделно от наличностите, докато не бъдат доставени или консумирани. За да "
+"конфигурирате тази опция, отидете в секцията *Местоположения* на желаната "
+"форма за :guilabel:`Тип операция`, след което изберете вътрешно "
+"местоположение в полето :guilabel:`Местоположение за разпределение`."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:51
+msgid ""
+"The :guilabel:`Location for allocation` field only appears when "
+"the :guilabel:`Show Allocation` option and :doc:`Storage Locations <../"
+"inventory_management/use_locations>` features are enabled."
+msgstr ""
+"Полето :guilabel:`Местоположение за разпределение` се появява само когато "
+"опцията :guilabel:`Показване на разпределение` и функциите "
+":doc:`Местоположения за съхранение <../inventory_management/use_locations>` "
+"са активирани."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:59
 msgid ""
 "The following outline summarizes all necessary steps for allocating a "
 "product using allocation reports:"
@@ -41441,7 +41521,7 @@ msgstr ""
 "Следният план обобщава всички необходими стъпки за разпределяне на продукт "
 "чрез отчети за разпределение:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:48
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:62
 msgid ""
 "Verify that outgoing demand exists for the product in previously confirmed |"
 "SOs| or |MOs|. If not, :ref:`create them <inventory/allocation_report/"
@@ -41451,7 +41531,7 @@ msgstr ""
 "потвърдени |SOs| или |MOs|. Ако няма такова, :ref:`ги създайте <inventory/"
 "allocation_report/workflow/confirm_demand>`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:50
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:64
 msgid ""
 "If existing stock cannot fulfill the demand, create and :ref:`confirm a PO "
 "or MO <inventory/allocation_report/workflow/confirm_replenish>` to replenish "
@@ -41461,7 +41541,7 @@ msgstr ""
 "и :ref:`потвърдете PO или MO <inventory/allocation_report/workflow/"
 "confirm_replenish>`, за да попълните търсените продукти."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:52
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:66
 msgid ""
 "Open the receipt or |MO| and :ref:`use the allocation report <inventory/"
 "allocation_report/workflow/report>` to allocate products."
@@ -41469,7 +41549,7 @@ msgstr ""
 "Отворете разписката или |MO| и :ref:`използвайте отчета за разпределение "
 "<inventory/allocation_report/workflow/report>`, за да разпределите продукти."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:54
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:68
 msgid ""
 ":ref:`Validate the incoming units <inventory/allocation_report/workflow/"
 "validate_incoming>` into stock."
@@ -41477,7 +41557,7 @@ msgstr ""
 ":ref:`Потвърдете входящите единици <inventory/allocation_report/workflow/"
 "validate_incoming>` в склада."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:56
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:70
 msgid ""
 ":ref:`Validate the outgoing units <inventory/allocation_report/workflow/"
 "validate_outgoing>` to fulfill the original demand."
@@ -41485,7 +41565,7 @@ msgstr ""
 ":ref:`Потвърдете изходящите единици <inventory/allocation_report/workflow/"
 "validate_outgoing>`, за да изпълните първоначалното търсене."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:59
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:73
 msgid ""
 "The process begins by ensuring that an outstanding demand for the product "
 "already exists. Confirming a |PO|/|MO| replenishes the stock necessary to "
@@ -41497,40 +41577,46 @@ msgstr ""
 "необходима за посрещане на търсенето в първоначалната |SO|/|MO| чрез "
 "закупуването или чрез производството му."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:63
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:77
 msgid ""
 "On the receipt from the |PO| or on the confirmed |MO|, users can open the "
 "allocation report, which displays the incoming product. Next to the product "
 "is a list of all applicable outgoing transfers (i.e., originating |SOs|/|"
-"MOs| containing the product) to which incoming units can be assigned. "
-"Assigning these units does not move any inventory. Instead, it allows the "
-"user to flexibly choose which demands to prioritize before actually "
-"receiving incoming units. When those units are received, the user can "
-"fulfill the original demands."
+"MOs| containing the product) to which incoming units can be assigned."
 msgstr ""
-"В разписката от |PO| или в потвърдената |MO| потребителите могат да отворят "
-"отчета за разпределение, който показва входящия продукт. До продукта има "
-"списък с всички приложими изходящи движения (т.е. първоначалните |SOs|/|"
-"MOs|, съдържащи продукта), към които могат да бъдат зачислени входящи "
-"бройки. Зачисляването на тези бройки не движи складови наличности. Вместо "
-"това то позволява на потребителя гъвкаво да избере кои заявки да "
-"приоритизира, преди реално да получи входящите единици. След като тези "
-"единици бъдат получени, потребителят може да изпълни първоначалните заявки."
+"На разписката от |PO| или на потвърдената |MO|, потребителите могат да "
+"отворят отчета за разпределение, който показва входящия продукт. До продукта "
+"има списък с всички приложими изходящи трансфери (т.е. произхождащи |SOs|/"
+"|MOs|, съдържащи продукта), към които могат да бъдат присвоени входящите "
+"единици."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:71
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:82
 msgid ""
-"If multiple products are replenished through the |PO|/|MO|, the allocation "
-"report lists all products with originating |SOs|/|MOs| available for "
-"reservation."
+"Allocating units does not move any inventory. Instead, it allows for "
+"specific demands to be prioritized before incoming units arrive."
 msgstr ""
-"Ако чрез |PO|/|MO| се попълват множество продукти, отчетът за разпределение "
-"показва всички продукти с първоначални |SOs|/|MOs|, достъпни за резервация."
+"Разпределянето на единици не премества никакви наличности. Вместо това "
+"позволява специфични заявки да бъдат приоритизирани преди пристигането на "
+"входящите единици."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:77
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:85
+msgid ""
+"If a :ref:`Location for allocation <inventory/allocation_report/"
+"configuration/allocation-location>` is configured, the allocated incoming "
+"quantity is sent to the specified location. The allocated units can only be "
+"picked to fulfill demand after the incoming operation has been validated."
+msgstr ""
+"Ако е конфигурирано :ref:`Местоположение за разпределение <inventory/"
+"allocation_report/configuration/allocation-location>`, разпределеното "
+"входящо количество се изпраща до посоченото местоположение. Разпределените "
+"единици могат да бъдат избрани за изпълнение на заявката само след като "
+"входящата операция бъде потвърдена."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:93
 msgid "Create and confirm demand"
 msgstr "Създаване и потвърждаване на търсене"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:79
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:95
 msgid ""
 "Using allocation reports for specific products requires either a previously "
 "confirmed |SO| with the product or an |MO| where the product is used as a "
@@ -41540,7 +41626,7 @@ msgstr ""
 "предходно потвърдена |SO| с продукта, или |MO|, в която продуктът се "
 "използва като компонент. Ако няма такъв запис, създайте го."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:83
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:99
 msgid ""
 "To ensure Odoo can properly create allocations for purchased products, "
 "confirm that the selected products have the :guilabel:`Purchase` option "
@@ -41551,7 +41637,7 @@ msgstr ""
 "опцията :guilabel:`Покупка` и :guilabel:`Тип продукт` е зададен "
 "като :guilabel:`Стоки`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:87
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:103
 msgid ""
 "For manufactured products, ensure that the product has a :doc:`bill of "
 "materials <../../../manufacturing/basic_setup/bill_configuration>` "
@@ -41561,11 +41647,11 @@ msgstr ""
 "конфигурирана :doc:`спецификация на материалите <../../../manufacturing/"
 "basic_setup/bill_configuration>`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:91
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:107
 msgid "Create |SOs|"
 msgstr "Създаване на |SOs|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:93
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:109
 msgid ""
 "If no confirmed |SO| exists for the product, :doc:`create it <../../../../"
 "sales/sales/sales_quotations/create_quotations>` by opening a new sales "
@@ -41583,16 +41669,16 @@ msgstr ""
 "потвърдена |SO| и генерира нареждане за доставка, достъпно чрез "
 "интелигентния бутон :icon:`fa-truck` :guilabel:`Доставка`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:100
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:116
 msgid ""
 "Repeat this process if there are multiple customers demanding the product."
 msgstr "Повторете този процес, ако продуктът се търси от няколко клиенти."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:103
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:119
 msgid "Create |MOs|"
 msgstr "Създаване на |MOs|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:105
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:121
 msgid ""
 "If there is no confirmed |MO| with the product as a component, :ref:`create "
 "it <manufacturing/manufacturing-orders/create-mo>` by opening a new |MO| "
@@ -41606,16 +41692,16 @@ msgstr ""
 "количеството :guilabel:`За консумация`, след което потвърдете |MO|, като "
 "щракнете върху :guilabel:`Потвърждаване`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:110
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:126
 msgid ""
 "Repeat this process if there are multiple |MOs| requiring the component."
 msgstr "Повторете този процес, ако компонентът е необходим за няколко |MOs|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:115
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:131
 msgid "Create and confirm |PO| or |MO|"
 msgstr "Създаване и потвърждаване на |PO| или |MO|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:117
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:133
 msgid ""
 "After confirming existing demand for the product, replenish the necessary "
 "stock either by purchasing it through a |PO| or by manufacturing it through "
@@ -41625,24 +41711,25 @@ msgstr ""
 "необходимата наличност, като го закупите чрез |PO| или го произведете чрез |"
 "MO|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:121
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:137
 msgid "Replenish through |PO|"
 msgstr "Попълване чрез |PO|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:123
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:139
 msgid ""
-"To create a |PO|, navigate to the **Purchase** app and click :guilabel:`New` "
-"to create a new Request for Quotation (RfQ). On the form, add the products "
-"in demand on the customers' |SOs| by clicking :guilabel:`Add a product` in "
-"the *Products* tab and specifying the required :guilabel:`Quantity`."
+"To create a |PO|, navigate to the :menuselection:`Purchase` app and "
+"click :guilabel:`New` to create a new Request for Quotation (RfQ). On the "
+"form, add the products in demand on the customers' |SOs| by "
+"clicking :guilabel:`Add a product` in the *Products* tab and specifying the "
+"required :guilabel:`Quantity`."
 msgstr ""
-"За да създадете |PO|, отидете в приложението **Purchase** и щракнете "
-"върху :guilabel:`Нов`, за да създадете ново запитване за оферта (RfQ). Във "
-"формуляра добавете търсените продукти от |SOs| на клиентите, като щракнете "
-"върху :guilabel:`Добавяне на продукт` в раздел *Products* и посочите "
-"необходимото :guilabel:`Количество`."
+"За да създадете |PO|, отидете в приложението :menuselection:`Покупки` и "
+"щракнете върху :guilabel:`Нов`, за да създадете нова Заявка за оферта (RfQ). "
+"Във формата добавете продуктите в търсене към |SOs| на клиентите, като "
+"щракнете върху :guilabel:`Добавяне на продукт` в раздела *Продукти* и "
+"посочите необходимото :guilabel:`Количество`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:127
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:144
 msgid ""
 "After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| "
 "into a |PO|."
@@ -41650,11 +41737,11 @@ msgstr ""
 "След добавяне на продуктите щракнете върху :guilabel:`Потвърди`, за да "
 "превърнете |RfQ| в |PO|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:130
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:147
 msgid "Replenish through |MO|"
 msgstr "Попълване чрез |MO|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:132
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:149
 msgid ""
 "To create an |MO|, navigate to :menuselection:`Manufacturing app --> "
 "Operations --> Manufacturing Orders`. Then, click :guilabel:`New` to open a "
@@ -41666,15 +41753,15 @@ msgstr ""
 "върху :guilabel:`Нов`, за да отворите нов формуляр за |MO|. "
 "Изберете :guilabel:`Продукт` и въведете :guilabel:`Количество` за попълване."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:136
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:153
 msgid "Finally, :guilabel:`Confirm` the |MO|."
 msgstr "Накрая кликнете върху :guilabel:`Потвърждение`, за да потвърдите |MO|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:141
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:158
 msgid "Allocating using the report"
 msgstr "Разпределение чрез отчета"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:143
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:160
 msgid ""
 "After confirming the replenishment for the product, open the allocation "
 "report to assign the pending incoming stock to any available originating |"
@@ -41684,7 +41771,7 @@ msgstr ""
 "разпределение, за да зачислите чакащата входяща наличност към всяки налични "
 "първоначални |SOs|/|MOs|, изискващи продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:146
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:163
 msgid ""
 "For confirmed |POs|, click the :icon:`fa-truck` :guilabel:`Receipt` smart "
 "button at the top of the |PO| to open the receipt for the incoming stock of "
@@ -41694,7 +41781,7 @@ msgstr ""
 "truck` :guilabel:`Бележка за получаване` в горната част на |PO|, за да "
 "отворите разписката за входящата наличност от продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:149
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:166
 msgid ""
 "Then, click the :icon:`fa-list` :guilabel:`Allocation` smart button at the "
 "top."
@@ -41702,7 +41789,7 @@ msgstr ""
 "След това щракнете върху смарт бутона :icon:`fa-"
 "list` :guilabel:`Разпределение` в горната част."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:152
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:169
 msgid ""
 "Alternatively, to open the receipt, navigate to the **Inventory** app and "
 "click :guilabel:`(#) To Process` in the :guilabel:`Receipts` card. Then, "
@@ -41712,7 +41799,7 @@ msgstr ""
 "**Inventory** и щракнете върху :guilabel:`(#) За обработка` в "
 "картата :guilabel:`Разписки`. След това изберете съответната разписка."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:155
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:172
 msgid ""
 "For confirmed |MOs|, the :icon:`fa-list` :guilabel:`Allocation` smart button "
 "appears directly in the |MO|."
@@ -41720,7 +41807,7 @@ msgstr ""
 "За потвърдени |MOs| смарт бутонът :icon:`fa-list` :guilabel:`Разпределение` "
 "се появява директно в |MO|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:159
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:176
 msgid ""
 "If the :guilabel:`Allocation` smart button does not appear for an |MO|, "
 "follow the :ref:`configuration process <inventory/allocation_report/"
@@ -41730,21 +41817,21 @@ msgstr ""
 "следвайте :ref:`процеса на конфигуриране <inventory/allocation_report/"
 "configuration>`, за да го активирате."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:165
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:182
 msgid "Allocation report dashboard"
 msgstr "Табло на отчета за разпределение"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:167
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:184
 msgid ""
 "The allocation report displays a list of available products on the "
 "replenishing |PO|/|MO|. Next to each of these products is a list of "
 "originating |SOs|/|MOs| to which the products can be allocated."
 msgstr ""
-"Отчетът за разпределение показва списък с налични продукти за попълване на "
-"|PO|/|MO|. До всеки от тези продукти има списък с произхождащи |SOs|/|MOs|, "
+"Отчетът за разпределение показва списък с налични продукти за попълване на |"
+"PO|/|MO|. До всеки от тези продукти има списък с произхождащи |SOs|/|MOs|, "
 "към които могат да бъдат разпределени продуктите."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:170
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:187
 msgid ""
 "Each row of this list displays the :guilabel:`Quantity` of reservable units "
 "out of the total demand for the product. The quantity is highlighted if it "
@@ -41754,17 +41841,27 @@ msgstr ""
 "единици от общото търсене на продукта. Количеството е маркирано, ако не може "
 "да бъде резервирано за цялото търсене."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:173
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:191
 msgid ""
-"The toggle button in the :guilabel:`Reserved` column allows the user "
+"Quantities already reserved for an outgoing order from existing stock cannot "
+"be allocated. The report only lists the remaining unreserved quantity of "
+"each demand."
+msgstr ""
+"Количества, които вече са резервирани за изходяща поръчка от съществуващи "
+"наличности, не могат да бъдат разпределяни. Отчетът изброява само оставащото "
+"нерезервирано количество за всяка заявка."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:194
+msgid ""
+"The toggle button in the :guilabel:`Assigned` column allows the user "
 "to :ref:`allocate <inventory/allocation_report/workflow/report/allocate>` "
 "the specified quantity."
 msgstr ""
-"Превключващият бутон в колоната :guilabel:`Резервирано` позволява на "
+"Бутонът за превключване в колоната :guilabel:`Присвоено` позволява на "
 "потребителя да :ref:`разпредели <inventory/allocation_report/workflow/report/"
 "allocate>` посоченото количество."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:176
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:197
 msgid ""
 "A link to each |SO|/|MO| is included in the :guilabel:`For` column, along "
 "with its expected delivery :guilabel:`Date`."
@@ -41772,7 +41869,7 @@ msgstr ""
 "Връзка към всяка |SO|/|MO| е включена в колоната :guilabel:`За`, заедно с "
 "очакваната :guilabel:`Дата` на доставка."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:180
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:201
 msgid ""
 "|SOs|/|MOs| in the allocation report are listed in chronological order of "
 "their associated delivery or scheduled date (i.e., the |SO| with the oldest "
@@ -41783,15 +41880,15 @@ msgstr ""
 "нареждане за доставка или |MO| с най-старата планирана дата се показва "
 "първа)."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:184
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:205
 msgid "Allocation report page in Odoo Inventory."
 msgstr "Страница с отчети за разпределение в Odoo Inventory."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:190
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:211
 msgid "Allocate units"
 msgstr "Разпределяне на бройки"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:192
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:213
 msgid ""
 "To allocate units for a product, click the toggle button in "
 "the :guilabel:`For` column in the |SO|/|MO|'s corresponding row. Click the "
@@ -41801,7 +41898,7 @@ msgstr ""
 "бутон в колоната :guilabel:`За` в съответния ред на |SO|/|MO|. Щракнете "
 "отново върху превключващия бутон, за да отмените резервацията."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:195
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:216
 msgid ""
 "Alternatively, to allocate all available units for *all* products across all "
 "|SOs|/|MOs|, click :guilabel:`Assign All` at the top."
@@ -41810,7 +41907,18 @@ msgstr ""
 "във всички |SOs|/|MOs|, щракнете върху :guilabel:`Разпределяне на всички` в "
 "горната част."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:198
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:220
+msgid ""
+"Incoming units can also be allocated from the product's :ref:`forecasted "
+"report <inventory/forecast/report/allocate>` by clicking :guilabel:`Assign` "
+"and :guilabel:`Unassign` on each demand line."
+msgstr ""
+"Входящите единици могат също да бъдат разпределяни от :ref:`прогнозен отчет "
+"<inventory/forecast/report/allocate>` на продукта, като щракнете върху "
+":guilabel:`Присвояване` и :guilabel:`Премахване на присвояване` на всеки ред "
+"за заявка."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:224
 msgid ""
 "The quantity of reservable units for each product is automatically "
 "calculated in order, starting from the oldest |SO|/|MO|. This allows users "
@@ -41822,7 +41930,7 @@ msgstr ""
 "да разпределят толкова единици, колкото са налични, за да отговорят на "
 "количеството, посочено в първоначалното търсене."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:203
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:229
 msgid ""
 "For example, |SO| A demands five *Chairs* and |SO| B demands five *Chairs*. "
 "A |PO| for eight units is created. On the allocation report, |SO| A is "
@@ -41836,7 +41944,7 @@ msgstr ""
 "могат да бъдат разпределени към |SO| B, което създава просрочена поръчка "
 "поради недостатъчни доставки."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:208
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:234
 msgid ""
 "After allocation, originating |SOs| with allocated units are automatically "
 "linked to the replenishing |PO|/|MO|. Users can access this directly from "
@@ -41849,14 +41957,14 @@ msgstr ""
 "свързват автоматично с попълващите |PO|/|MO|. Потребителите имат директен "
 "достъп от |SO| чрез :icon:`fa-credit-card` :guilabel:`Покупка` интелигентен "
 "бутон или :icon:`fa-wrench` :guilabel:`Производство` интелигентен бутон. По "
-"същия начин, свързаната |SO| може да бъде достъпена от |PO|/|MO| чрез "
-":icon:`fa-dollar` :guilabel:`Продажба` интелигентен бутон."
+"същия начин, свързаната |SO| може да бъде достъпена от |PO|/|MO| "
+"чрез :icon:`fa-dollar` :guilabel:`Продажба` интелигентен бутон."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:217
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:243
 msgid "Validate incoming move"
 msgstr "Потвърждаване на входящото движение"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:219
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:245
 msgid ""
 "After allocating the desired units, validate the incoming stock either by "
 "receiving it into inventory (for purchased products) or by producing it (for "
@@ -41866,7 +41974,7 @@ msgstr ""
 "чрез получаването ѝ в инвентара (за закупени продукти), или чрез "
 "производството ѝ (за произведени продукти)."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:225
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:251
 msgid ""
 "If the incoming stock was purchased, navigate to the replenishing |PO| and "
 "click :guilabel:`Receive Products` or the :icon:`fa-"
@@ -41874,11 +41982,11 @@ msgid ""
 "click :guilabel:`Validate` to receive the products into stock."
 msgstr ""
 "Ако входящата наличност е закупена, отидете до попълващата |PO| и щракнете "
-"върху :guilabel:`Получаване на продукти` или :icon:`fa-truck` "
-":guilabel:`Разписка`, за да отворите разписката. След това щракнете върху "
-":guilabel:`Потвърждаване`, за да получите продуктите в наличност."
+"върху :guilabel:`Получаване на продукти` или :icon:`fa-"
+"truck` :guilabel:`Разписка`, за да отворите разписката. След това щракнете "
+"върху :guilabel:`Потвърждаване`, за да получите продуктите в наличност."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:232
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:258
 msgid ""
 "If the stock was confirmed to be manufactured, navigate to the replenishing |"
 "MO| and click :guilabel:`Produce` to produce the finished product."
@@ -41886,7 +41994,7 @@ msgstr ""
 "Ако наличността е потвърдена за производство, отидете до попълващата |MO| и "
 "щракнете върху :guilabel:`Производство`, за да произведете крайния продукт."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:235
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
 msgid ""
 "Finished products from completed |MOs| become directly available in stock in "
 "the case of :doc:`one-step <../../../manufacturing/basic_setup/"
@@ -41904,7 +42012,7 @@ msgstr ""
 "за да се премести продуктът от местоположението за производство към "
 "наличността."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:241
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
 msgid ""
 "To validate the incoming transfer on the |MO|, click "
 "the :guilabel:`Transfer` smart button at the top. Then, open the relevant "
@@ -41915,11 +42023,11 @@ msgstr ""
 "поръчка и щракнете върху :guilabel:`Потвърждаване`, за да получите продукта "
 "в наличност."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:247
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:273
 msgid "Validate outgoing move"
 msgstr "Валидиране на изходящото движение"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:249
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:275
 msgid ""
 "After receiving the incoming stock, fulfill the outgoing demand for the "
 "originating |SO|/|MO|."
@@ -41927,11 +42035,11 @@ msgstr ""
 "След получаване на входящата наличност, изпълнете изходящото търсене за "
 "първоначалната |SO|/|MO|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:252
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:278
 msgid "Fulfill |SO| order"
 msgstr "Изпълнение на поръчка |SO|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:254
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:280
 msgid ""
 "To fulfill the demand on an |SO|, navigate to the |SO|, then click :icon:`fa-"
 "truck` :guilabel:`Delivery` to open the delivery order. Note that the "
@@ -41944,7 +42052,7 @@ msgstr ""
 "показващ разпределения :guilabel:`Продукт` и разпределеното "
 "му :guilabel:`Количество`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:258
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:284
 msgid ""
 "Finally, click :guilabel:`Validate` to confirm that the products have been "
 "delivered to the customer."
@@ -41952,15 +42060,15 @@ msgstr ""
 "Накрая щракнете върху :guilabel:`Валидирай`, за да потвърдите, че продуктите "
 "са доставени на клиента."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
 msgid "Delivery order from an allocation report."
 msgstr "Поръчка за доставка от отчет за разпределение."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:265
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:291
 msgid "Fulfill |MO| order"
 msgstr "Изпълнение на поръчка |MO|"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:293
 msgid ""
 "To fulfill a component demand on an |MO|, navigate to the |MO|. The "
 "replenished components in the previous step are now marked "
@@ -41972,7 +42080,7 @@ msgstr ""
 "разположение` за производство по тази |MO|. Кликнете "
 "върху :guilabel:`Произведи`, за да произведете крайния продукт."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:272
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:298
 msgid ""
 "The following example demonstrates how an allocation report is used to "
 "assign stock for a customer |SO| of higher priority."
@@ -41980,7 +42088,7 @@ msgstr ""
 "Следният пример демонстрира как отчет за разпределение се използва за "
 "назначаване на наличност за клиентска |SO| с по-висок приоритет."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:275
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:301
 msgid ""
 "Two |SOs| are created for separate customers. Customer A orders 75 units of "
 "a *Chair*. Customer B also orders 75 units of the same product but needs "
@@ -41990,20 +42098,20 @@ msgstr ""
 "*Стол*. Клиент B също поръчва 75 бройки от същия продукт, но му трябват "
 "възможно най-скоро."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:278
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:304
 msgid ""
 "No stock exists for the *Chair*, so the user creates and confirms a |PO| to "
 "replenish the product from Vendor A. This vendor can only provide 100 units "
 "of the *Chair* this week. So, the user creates and confirms another |PO| to "
 "replenish the remaining 50 units from Vendor B next week."
 msgstr ""
-"Няма налична стока за *стола*, така че потребителят създава и потвърждава "
-"|PO|, за да попълни продукта от Доставчик А. Този доставчик може да "
+"Няма налична стока за *стола*, така че потребителят създава и потвърждава |"
+"PO|, за да попълни продукта от Доставчик А. Този доставчик може да "
 "предостави само 100 бройки от *стола* тази седмица. Така че, потребителят "
 "създава и потвърждава друга |PO|, за да попълни останалите 50 бройки от "
 "Доставчик B следващата седмица."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:282
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:308
 msgid ""
 "After confirming the |POs|, the user opens the allocation reports for each "
 "vendor's receipt. Vendor A's report lists the |SO| for Customer A with 75 "
@@ -42016,7 +42124,7 @@ msgstr ""
 "резервируеми единици. В отчета на Доставчик B са посочени |SO| за Клиент A с "
 "50 резервируеми единици."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:313
 msgid ""
 "Because the user wants to prioritize Customer B's order, they want to ensure "
 "Customer B receives 75 units from Vendor A, which can guarantee faster "
@@ -42033,7 +42141,7 @@ msgstr ""
 "Доставчик A, като актуализира предишното количество за Клиент A от 75 "
 "единици на 25 единици, а количеството за Клиент B – на 75 единици."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:293
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:319
 msgid ""
 "The user can now assign all 75 units from Vendor A to fulfill Customer B's "
 "delivery."
@@ -42041,11 +42149,11 @@ msgstr ""
 "Сега потребителят може да назначи всички 75 бройки от Доставчик A за "
 "изпълнение на доставката към Клиент B."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:298
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:324
 msgid "Print labels"
 msgstr "Отпечатване на етикети"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:300
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:326
 msgid ""
 "Users can print labels for allocated products to ensure that they are "
 "correctly designated to the appropriate customer."
@@ -42053,7 +42161,7 @@ msgstr ""
 "Потребителите могат да отпечатат етикети за разпределените продукти, за да "
 "са сигурни, че те са правилно предназначени за съответния клиент."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:303
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:329
 msgid ""
 "After allocating the desired units, click :guilabel:`Print` at the top to "
 "download a PDF of the allocation report for the allocated units. The report "
@@ -42064,7 +42172,7 @@ msgstr ""
 "разпределените единици. Отчетът включва сканируем баркод в горната част за "
 "разписката или |MO|."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:308
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:334
 msgid ""
 "If a :ref:`document layout <accounting/invoice/sending>` has not been "
 "configured, clicking :guilabel:`Print` opens a pop-up window for the user to "
@@ -42074,11 +42182,11 @@ msgstr ""
 "sending>`, щракването върху :guilabel:`Печат` отваря изскачащ прозорец, в "
 "който потребителят може да го конфигурира."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:311
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:337
 msgid "Printed report from an allocation report."
 msgstr "Отпечатан отчет от отчет за разпределение."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:314
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:340
 msgid ""
 "If products are allocated to specific orders, users can also "
 "click :guilabel:`Print Labels` to print an individual label for each unit of "
@@ -42091,9 +42199,17 @@ msgstr ""
 "етикет показва името на продукта, свързания му номер на |SO|/|MO| и неговия "
 "клиент (за |SOs|)."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:318
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:344
 msgid "Printed labels from an allocation report."
 msgstr "Отпечатани етикети от отчет за разпределение."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:348
+msgid ""
+":ref:`Print labels for allocated products in the Barcode app <barcode/"
+"receipts_deliveries/allocated-products>`"
+msgstr ""
+":ref:`Отпечатайте етикети за разпределени продукти в приложението Баркод "
+"<barcode/receipts_deliveries/allocated-products>`"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/dashboards.rst:3
 msgid "Inventory dashboards"
@@ -43067,11 +43183,11 @@ msgstr ""
 "Прогнозният отчет е наличен **само** за продукти, при които се следи "
 "наличността, обикновено наричани *продукт за съхранение*."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:22
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
 msgid "Navigating the report"
 msgstr "Навигация в отчета"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:26
 msgid ""
 "The forecast report can be accessed via the **Inventory**, **Purchase**,  "
 "**Manufacturing**, and **Sales** apps."
@@ -43079,7 +43195,7 @@ msgstr ""
 "До прогнозния отчет може да се достигне през приложенията **Inventory**, "
 "**Purchase**,  **Manufacturing** и **Sales**."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:27
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:29
 msgid ""
 "To access the report, click the :icon:`fa-area-chart` :guilabel:`Forecasted` "
 "smart button on a product form. Alternatively, the report can be accessed "
@@ -43094,11 +43210,11 @@ msgstr ""
 "chart` :guilabel:`(Графика)` до продукта, след което изберете :icon:`oi-"
 "arrow-right` :guilabel:`Преглед на прогноза`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:32
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:34
 msgid "A sales order with the forecast report icon highlighted."
 msgstr "Поръчка за продажба с маркирана икона на прогнозния отчет."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:35
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:37
 msgid ""
 "The forecasted report consists of a graph and a table. The graph visually "
 "represents stock movements over time. The following information is displayed:"
@@ -43107,12 +43223,12 @@ msgstr ""
 "представя движенията на наличността във времето. Показва се следната "
 "информация:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:38
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
 msgid ""
 ":guilabel:`On Hand`: current stock physically available in the warehouse."
 msgstr ":guilabel:`Налично`: текущата наличност, физически налична в склада."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:39
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
 msgid ""
 ":guilabel:`Incoming`: quantities expected from confirmed purchase orders or "
 "manufacturing orders."
@@ -43120,7 +43236,7 @@ msgstr ""
 ":guilabel:`Входящо`: количества, очаквани от потвърдени поръчки за покупка "
 "или производствени поръчки."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:42
 msgid ""
 ":guilabel:`Outgoing`: quantities reserved for sales orders or other outgoing "
 "operations."
@@ -43128,7 +43244,7 @@ msgstr ""
 ":guilabel:`Изходящо`: количества, резервирани за поръчки за продажба или "
 "други изходящи операции."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:43
 msgid ""
 ":guilabel:`Forecasted`: projected stock levels based on confirmed and "
 "planned operations."
@@ -43136,16 +43252,16 @@ msgstr ""
 ":guilabel:`Прогнозирано`: прогнозирани нива на наличност въз основа на "
 "потвърдени и планирани операции."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:43
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:45
 msgid "An example of the chart on a forecast report."
 msgstr "Пример за графика в прогнозен отчет."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:46
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:48
 msgid "The table provides detailed metrics regarding operations, including:"
 msgstr ""
 "Таблицата предоставя подробни показатели относно операциите, включително:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:48
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:50
 msgid ""
 ":guilabel:`Replenishment`: Shows reserved quantities, especially useful for "
 "multi-step operations."
@@ -43153,30 +43269,30 @@ msgstr ""
 ":guilabel:`Попълване`: Показва резервираните количества, особено полезно за "
 "многостъпкови операции."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:49
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:51
 msgid ":guilabel:`Receipt`: The date of receipt for the items."
 msgstr ":guilabel:`Получаване`: Датата на получаване на артикулите."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:50
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:52
 msgid ":guilabel:`Units`: The number of units involved in each operation."
 msgstr ":guilabel:`Единици`: Броят единици, участващи във всяка операция."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:51
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:53
 msgid ":guilabel:`Used by`: The operation the stock is allocated for."
 msgstr ""
 ":guilabel:`Използвано от`: Операцията, за която е разпределена наличността."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:52
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:54
 msgid ":guilabel:`Delivery`: The scheduled or expected date of stock movement."
 msgstr ""
 ":guilabel:`Доставка`: Планираната или очакваната дата на движение на "
 "наличността."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:53
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:55
 msgid ":guilabel:`Forecasted Inventory`: The forecasted stock levels."
 msgstr ":guilabel:`Прогнозна наличност`: Прогнозираните нива на наличност."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:54
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:56
 msgid ""
 ":guilabel:`Forecasted with Pending`: The updated stock levels with the "
 "pending stock movements considered."
@@ -43184,11 +43300,11 @@ msgstr ""
 ":guilabel:`Прогноза с чакащи`: Актуализираните нива на наличност, като са "
 "взети предвид чакащите движения на наличността."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:58
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:62
 msgid "Reserve and unreserve products"
 msgstr "Резервиране и освобождаване на резервацията на продукти"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:60
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:64
 msgid ""
 "Users can reserve or unreserve products directly from the forecasted report, "
 "ensuring stock allocation aligns with operational needs."
@@ -43197,7 +43313,7 @@ msgstr ""
 "директно от прогнозния отчет, като гарантират, че разпределението на "
 "наличността съответства на оперативните нужди."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:63
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:67
 msgid ""
 "The detailed section on a forecast report showing the replenishment and "
 "reserved stock."
@@ -43205,15 +43321,40 @@ msgstr ""
 "Подробният раздел в прогнозен отчет, показващ попълването и резервираната "
 "наличност."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:67
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:71
 msgid ":doc:`../../shipping_receiving/reservation_methods`"
 msgstr ":doc:`../../shipping_receiving/reservation_methods`"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:70
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:76
+msgid "Assign and unassign incoming units"
+msgstr "Присвояване и премахване на присвояване на входящи единици"
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:78
+msgid ""
+"When an outgoing demand is matched with an incoming receipt or |MO|, the "
+"incoming or manufactured units can be allocated to the demand by "
+"clicking :guilabel:`Assign` on the corresponding demand line. To undo the "
+"allocation, click :guilabel:`Unassign`."
+msgstr ""
+"Когато изходяща заявка бъде съпоставена с входяща разписка или |MO|, "
+"входящите или произведените единици могат да бъдат разпределени към заявката "
+"чрез щракване върху :guilabel:`Присвояване` на съответния ред за заявка. За "
+"да отмените разпределението, щракнете върху :guilabel:`Премахване на "
+"присвояване`."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:81
+msgid "Allocate units on a forecast report."
+msgstr "Разпределяне на единици в прогнозен отчет."
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:85
+msgid ":doc:`allocation_report`"
+msgstr ":doc:`allocation_report`"
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:90
 msgid "Replenish products"
 msgstr "Попълване на продукти"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:72
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:92
 msgid ""
 "Click the :guilabel:`Replenish` button at the top of the report to open "
 "the :guilabel:`Product Replenish` pop-up. From here, products can be "
@@ -43228,11 +43369,11 @@ msgstr ""
 "маршрут` и :guilabel:`Доставчик`, преди да кликнете "
 "върху :guilabel:`Потвърждаване`."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:78
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:100
 msgid "Manufacturing forecast"
 msgstr "Прогноза за производство"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:80
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:102
 msgid ""
 "To view the availability of manufactured products, click "
 "the :guilabel:`Manufacturing Forecast` button. This displays the forecasted "
@@ -43244,7 +43385,7 @@ msgstr ""
 "нива на наличност за суровините, показвайки колко се очаква да бъдат "
 "изразходвани за предстоящите производствени поръчки."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:84
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:106
 msgid ""
 "The manufacturing forecast identifies component shortages before they can "
 "impact manufacturing timelines, and helps to align manufacturing activities "
@@ -43254,15 +43395,15 @@ msgstr ""
 "да повлияе на сроковете за производство, и помага за съгласуване на "
 "производствените дейности с търсенето от продажбите."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:87
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:109
 msgid "An example of the manufacturing forecast report."
 msgstr "Пример за отчет за прогноза за производство."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:91
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:115
 msgid "Update quantity"
 msgstr "Актуализиране на количество"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:93
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:117
 msgid ""
 "To manually update the quantity of a product, click :guilabel:`Update "
 "Quantity`. This opens the :guilabel:`Change Product Quantity` pop-up. "
@@ -43279,11 +43420,11 @@ msgstr ""
 "количество`. Кликнете върху :guilabel:`Прилагане`, когато приключите. След "
 "това отчетът се актуализира, за да отрази новото количество на продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:100
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:126
 msgid "Multi-step reservation"
 msgstr "Многостъпкова резервация"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:102
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:128
 msgid ""
 "Reserved quantities for multi-step incoming and outgoing shipments are "
 "indicated on in the :guilabel:`Replenishment` column on the table of the "
@@ -43292,7 +43433,7 @@ msgstr ""
 "Резервираните количества за многостъпкови входящи и изходящи пратки са "
 "посочени в колоната :guilabel:`Попълване` в таблицата на отчета."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:105
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:131
 msgid ""
 ":guilabel:`Stock in Transit` refers to products that have been received, but "
 "are in transit to their input or quality control locations. :guilabel:`Free "
@@ -43304,11 +43445,11 @@ msgstr ""
 "качеството. :guilabel:`Свободна наличност в транзит` се отнася до налични "
 "продукти, получени във входната локация, но все още непоставени в наличност."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:110
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:138
 msgid "Operations affecting the forecast report"
 msgstr "Операции, влияещи на прогнозния отчет"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:112
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:140
 msgid ""
 "The forecast report is influenced by various operations, each impacting "
 "stock levels differently. Scheduled delivery dates, planned manufacturing "
@@ -43319,7 +43460,7 @@ msgstr ""
 "планираните дати на производство и очакваните дати на пристигане — всички те "
 "влияят на прогнозата за наличността."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:116
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:144
 msgid ""
 "Requests for Quotation (RFQs) do not immediately impact the forecast report, "
 "as the products are not confirmed for replenishment. |POs|, however, do "
@@ -43330,7 +43471,7 @@ msgstr ""
 "продуктите не са потвърдени за попълване. |POs| обаче влияят на отчета, тъй "
 "като се очаква продуктите да пристигнат след като |PO| бъде потвърдена."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:120
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:148
 msgid ""
 "Confirmed |SOs| decrease the forecasted stock, adjusting the report based on "
 "the scheduled delivery date. Confirmed manufacturing orders (MOs) affect the "
@@ -43341,11 +43482,11 @@ msgstr ""
 "поръчки (MOs) влияят на прогнозираната наличност както за суровините, така и "
 "за готовите продукти."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:128
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:158
 msgid "Negative quantity"
 msgstr "Отрицателно количество"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:130
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:160
 msgid ""
 "A negative forecasted quantity indicates that the projected demand exceeds "
 "the available and incoming stock at a given point in time. This could occur "
@@ -43358,7 +43499,7 @@ msgstr ""
 "текущо наличната или очакваната, или поради забавяния в процеса на доставка "
 "или производство."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:135
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:165
 msgid ""
 "Whatever the cause, when negative numbers are displayed on the forecast "
 "report, it serves as an early warning, allowing business to take "
@@ -43368,17 +43509,17 @@ msgstr ""
 "числа, това служи като ранно предупреждение, позволявайки на бизнеса да "
 "предприеме превантивни действия. Това може да включва:"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:138
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:168
 msgid "Prioritizing specific sales or production orders."
 msgstr "Приоритизиране на конкретни поръчки за продажба или производство."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:139
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:169
 msgid "Adjusting procurement strategies to expedite purchase orders."
 msgstr ""
 "Коригиране на стратегиите за снабдяване с цел ускоряване на поръчките за "
 "покупка."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:140
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:170
 msgid ""
 "Manage customer expectations by proactively communicating the possibility "
 "for delays."
@@ -43386,15 +43527,15 @@ msgstr ""
 "Управление на очакванията на клиентите чрез проактивно комуникиране на "
 "възможността за забавяния."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:142
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:172
 msgid "An example of the forecast report with a negative quantity."
 msgstr "Пример за прогнозен отчет с отрицателно количество."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:146
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:176
 msgid "Split orders"
 msgstr "Разделени поръчки"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:148
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:178
 msgid ""
 "In the example below, there is not currently enough stock of a product, "
 "`Cabinet with Doors` to fulfill the multiple sales orders. The current stock "
@@ -43409,7 +43550,7 @@ msgstr ""
 "между двете поръчки. Останалата наличност се очаква с `WH/IN/00004`. След "
 "получаването ѝ, тя се разделя, за да покрие останалите поръчки."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:154
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:184
 msgid ""
 "An example of the forecast report chart showing the split delivery for an "
 "order."
@@ -43417,11 +43558,11 @@ msgstr ""
 "Пример за графика на прогнозен отчет, показваща разделената доставка за "
 "поръчка."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:158
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:188
 msgid "Late receipt"
 msgstr "Закъсняло получаване"
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:160
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:190
 msgid ""
 "The replenishment table can be used to determine whether an incoming "
 "shipment arrives in time to fulfill an order. For example, a |SO| is "
@@ -43435,7 +43576,7 @@ msgstr ""
 "Текущото налично количество е нула. |PO| е потвърдена, с очаквано пристигане "
 "три дни от днес."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:165
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:195
 msgid ""
 "The forecasted quantity for today shows `-5`, because the confirmed demand "
 "is five, but the current stock on hand is zero. Since "
@@ -43447,7 +43588,7 @@ msgstr ""
 "на :guilabel:`Получаване` е *след* :guilabel:`Дата на доставка`, пратката "
 "закъснява."
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:169
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:199
 msgid ""
 "This can be an indication to either expedite the current shipment, if "
 "possible, or reschedule the delivery date for the |SO|."
@@ -43689,8 +43830,8 @@ msgid ""
 "warehouses_storage/moves-analysis-aging-report>`."
 msgstr ""
 ":guilabel:`Отчет за остаряване`: Предварително конфигуриран изглед за "
-"проследяване на това как :guilabel:`Оставащо количество` и "
-":guilabel:`Оставаща стойност` се променят месец за месец за всеки продукт. "
+"проследяване на това как :guilabel:`Оставащо количество` "
+"и :guilabel:`Оставаща стойност` се променят месец за месец за всеки продукт. "
 "Вижте :ref:`Отчет за остаряване <inventory/warehouses_storage/moves-analysis-"
 "aging-report>`."
 
@@ -43811,12 +43952,13 @@ msgid ""
 "location. This is the view used by the :ref:`Aging report <inventory/"
 "warehouses_storage/moves-analysis-aging-report>` in :guilabel:`Favorites`."
 msgstr ""
-"Изгледът :ref:`сводна таблица <reporting/using-pivot>` показва избраните "
-":ref:`мерки <inventory/warehouses_storage/moves-analysis-measures>` в "
-"таблица с две оси, което го прави най-подходящ за сравняване на количества и "
-"стойности по период от време, продукт, категория или местоположение. Това е "
-"изгледът, използван от :ref:`отчета за остаряване <inventory/"
-"warehouses_storage/moves-analysis-aging-report>` в :guilabel:`Любими`."
+"Изгледът :ref:`сводна таблица <reporting/using-pivot>` показва "
+"избраните :ref:`мерки <inventory/warehouses_storage/moves-analysis-"
+"measures>` в таблица с две оси, което го прави най-подходящ за сравняване на "
+"количества и стойности по период от време, продукт, категория или "
+"местоположение. Това е изгледът, използван от :ref:`отчета за остаряване "
+"<inventory/warehouses_storage/moves-analysis-aging-report>` "
+"в :guilabel:`Любими`."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:132
 msgid ""
@@ -43845,8 +43987,8 @@ msgid ""
 "view displays the following columns:"
 msgstr ""
 "Изгледът списък показва по един ред за всяко движение и е най-подходящ за "
-"търсене на подробности за отделни операции. Изгледът списък "
-":guilabel:`Анализ на движенията` показва следните колони:"
+"търсене на подробности за отделни операции. Изгледът "
+"списък :guilabel:`Анализ на движенията` показва следните колони:"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:147
 msgid ":guilabel:`Date`: Date and time of the stock move."
@@ -43911,10 +44053,11 @@ msgid ""
 "the :icon:`oi-settings-adjust` :guilabel:`(Settings)` button at the end of "
 "the column headers."
 msgstr ""
-"Допълнителни колони за :guilabel:`Контакт`, :guilabel:`Собственик`, "
-":guilabel:`Стойност`, :guilabel:`Оставащо количество` и :guilabel:`Оставаща "
-"стойност` могат да бъдат показани чрез кликване върху бутона :icon:`oi-"
-"settings-adjust` :guilabel:`(Настройки)` в края на заглавията на колоните."
+"Допълнителни колони "
+"за :guilabel:`Контакт`, :guilabel:`Собственик`, :guilabel:`Стойност`, :guilabel:`Оставащо "
+"количество` и :guilabel:`Оставаща стойност` могат да бъдат показани чрез "
+"кликване върху бутона :icon:`oi-settings-adjust` :guilabel:`(Настройки)` в "
+"края на заглавията на колоните."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_analysis.rst:165
 msgid "The Moves Analysis report in the list view."
@@ -48965,8 +49108,8 @@ msgstr ""
 "Отчети --> Работни поръчки` и кликнете, за да премахнете филтъра :icon:`fa-"
 "filter` **За изпълнение** *или* **Блокиран** *или* **В ход**, като кликнете "
 "върху иконата :icon:`oi-close` :guilabel:`(Премахване)` от дясната му "
-"страна. След това кликнете върху бутона за измервания и изберете "
-":guilabel:`Отклонение на продължителността (%)`."
+"страна. След това кликнете върху бутона за измервания и "
+"изберете :guilabel:`Отклонение на продължителността (%)`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:292
 msgid ""
@@ -49015,8 +49158,8 @@ msgid ""
 "Enable this setting, then click :guilabel:`Save` to confirm the changes."
 msgstr ""
 "Опцията :guilabel:`Персонализирани зависимости за работни поръчки` се "
-"появява под нея. Активирайте тази настройка и след това кликнете върху "
-":guilabel:`Запазване`, за да потвърдите промените."
+"появява под нея. Активирайте тази настройка и след това кликнете "
+"върху :guilabel:`Запазване`, за да потвърдите промените."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:23
 msgid "Add dependencies to BoM"
@@ -49118,8 +49261,8 @@ msgid ""
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
 "Orders`."
 msgstr ""
-"За да планирате работните поръчки за производствена поръчка, отидете на "
-":menuselection:`Производство --> Операции --> Производствени поръчки`."
+"За да планирате работните поръчки за производствена поръчка, отидете "
+"на :menuselection:`Производство --> Операции --> Производствени поръчки`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:68
 msgid ""
@@ -49241,8 +49384,8 @@ msgid ""
 "In the work order form, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, "
 "then select :guilabel:`Plan`."
 msgstr ""
-"Във формуляра за работна поръчка кликнете върху иконата :icon:`fa-cog` "
-":guilabel:`(Действия)`, след което изберете :guilabel:`Планиране`."
+"Във формуляра за работна поръчка кликнете върху иконата :icon:`fa-"
+"cog` :guilabel:`(Действия)`, след което изберете :guilabel:`Планиране`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:118
 msgid "Planning views"
@@ -49737,8 +49880,8 @@ msgid ""
 "First, select a :guilabel:`Product` using the drop-down menu. Optionally "
 "specify a :guilabel:`Product Variant` that this |BOM| applies to."
 msgstr ""
-"Първо, изберете :guilabel:`Продукт` чрез падащото меню. По желание посочете "
-":guilabel:`Вариант на продукт`, за който се прилага този |BOM|."
+"Първо, изберете :guilabel:`Продукт` чрез падащото меню. По желание "
+"посочете :guilabel:`Вариант на продукт`, за който се прилага този |BOM|."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:26
 msgid ""
@@ -49854,10 +49997,10 @@ msgid ""
 "adjust` :guilabel:`(settings adjust)` icon at the end of the *Components* "
 "tab. Select the following features to enable these columns:"
 msgstr ""
-"По желание достъпете допълнителни полета чрез кликване върху иконата "
-":icon:`oi-settings-adjust` :guilabel:`(корекция на настройките)` в края на "
-"раздела *Компоненти*. Изберете следните функции, за да активирате тези "
-"колони:"
+"По желание достъпете допълнителни полета чрез кликване върху "
+"иконата :icon:`oi-settings-adjust` :guilabel:`(корекция на настройките)` в "
+"края на раздела *Компоненти*. Изберете следните функции, за да активирате "
+"тези колони:"
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:76
 msgid ""
@@ -49890,8 +50033,8 @@ msgid ""
 msgstr ""
 "Добавете *операция* към |BOM|, за да зададете инструкции за производство и "
 "да регистрирате времето, прекарано в дадена операция. За да използвате тази "
-"функция, първо активирайте функцията *Работни поръчки*, като отидете на "
-":menuselection:`Производство --> Конфигурация --> Настройки`. В секция "
+"функция, първо активирайте функцията *Работни поръчки*, като отидете "
+"на :menuselection:`Производство --> Конфигурация --> Настройки`. В секция "
 "*Операции* изберете квадратчето :guilabel:`Работни поръчки`, за да "
 "активирате функцията."
 
@@ -50640,8 +50783,8 @@ msgid ""
 msgstr ""
 ":guilabel:`Количество`: Посочен е броят на единиците, необходими за "
 "производството на продукта. Това количество може да се коригира чрез "
-"посочване на число в :guilabel:`(# Единици)` до полето "
-":guilabel:`Количество` в горната част на страницата."
+"посочване на число в :guilabel:`(# Единици)` до "
+"полето :guilabel:`Количество` в горната част на страницата."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:369
 msgid ""
@@ -50700,8 +50843,8 @@ msgid ""
 "how many units can be reserved for an order out of the total number of units "
 "available at the subcontracting location."
 msgstr ""
-":guilabel:`Запаси на подизпълнителя`: Тази колона се появява само ако "
-":guilabel:`Тип спецификация` е настроен на :guilabel:`Подизпълнение`. Тя "
+":guilabel:`Запаси на подизпълнителя`: Тази колона се появява само "
+"ако :guilabel:`Тип спецификация` е настроен на :guilabel:`Подизпълнение`. Тя "
 "показва колко единици могат да бъдат резервирани за поръчка от общия брой "
 "единици, налични на местоположението на подизпълнителя."
 
@@ -50715,8 +50858,8 @@ msgid ""
 "product or component is subcontracted, this status is determined by the "
 "combined free-to-use quantities of the company and the subcontractor."
 msgstr ""
-":guilabel:`Статус`: Тази колона указва дали даден компонент е "
-":guilabel:`Наличен` или :guilabel:`Не е наличен`, или дали трябва да бъде "
+":guilabel:`Статус`: Тази колона указва дали даден компонент "
+"е :guilabel:`Наличен` или :guilabel:`Не е наличен`, или дали трябва да бъде "
 "закупен (:guilabel:`# За купуване`). Ако продуктът или компонентът трябва да "
 "бъде произведен, се посочва :guilabel:`Очаквана` дата на завършване, като се "
 "вземе предвид :guilabel:`Време за изпълнение`, посочено в следващата колона. "
@@ -50814,9 +50957,9 @@ msgstr ""
 "По желание, за да :doc:`зададете партиди или серийни номера <../../inventory/"
 "product_management/product_tracking>` на новопроизведени продукти, отидете "
 "на :menuselection:`Производство --> Продукти --> Продукти`. След това "
-"изберете съществуващ продукт или създайте нов, като щракнете върху "
-":guilabel:`Нов`. Отидете в раздела :guilabel:`Склад` и отворете раздела "
-":guilabel:`Обща информация`. В полето :guilabel:`Проследяване на "
+"изберете съществуващ продукт или създайте нов, като щракнете "
+"върху :guilabel:`Нов`. Отидете в раздела :guilabel:`Склад` и отворете "
+"раздела :guilabel:`Обща информация`. В полето :guilabel:`Проследяване на "
 "наличността` изберете :guilabel:`По уникален сериен номер` или :guilabel:`По "
 "партиди`."
 
@@ -50908,9 +51051,9 @@ msgid ""
 msgstr ""
 "Добавете компонент към |BOM|, като изберете раздела :guilabel:`Компоненти` и "
 "щракнете върху :guilabel:`Добавяне на ред`. Изберете компонент от падащото "
-"меню :guilabel:`Компонент`, след което въведете количеството в полето "
-":guilabel:`Количество`. Продължете да добавяте компоненти на нови редове, "
-"докато всички компоненти бъдат добавени."
+"меню :guilabel:`Компонент`, след което въведете количеството в "
+"полето :guilabel:`Количество`. Продължете да добавяте компоненти на нови "
+"редове, докато всички компоненти бъдат добавени."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:60
 msgid "The Components tab on a bill of materials."
@@ -50928,10 +51071,10 @@ msgstr ""
 "След това изберете раздела *Операции*. Щракнете върху :guilabel:`Добавяне на "
 "ред` и ще се появи формуляр за операция. В полето :guilabel:`Операция` "
 "посочете името на добавяната операция (напр. Сглобяване, Рязане и др.). "
-"Изберете работния център, където ще се извършва операцията, от падащото меню "
-":guilabel:`Работен център`. Накрая щракнете върху :guilabel:`Запазване и "
-"затваряне`, за да завършите добавянето на операции, или върху "
-":guilabel:`Запазване и ново`, за да добавите още."
+"Изберете работния център, където ще се извършва операцията, от падащото "
+"меню :guilabel:`Работен център`. Накрая щракнете върху :guilabel:`Запазване "
+"и затваряне`, за да завършите добавянето на операции, или "
+"върху :guilabel:`Запазване и ново`, за да добавите още."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:70
 msgid ""
@@ -50940,9 +51083,9 @@ msgid ""
 "Configuration --> Settings`, then enable the :guilabel:`Work Orders` "
 "checkbox."
 msgstr ""
-"Разделът :guilabel:`Операции` се появява само ако настройката "
-":guilabel:`Работни поръчки` е активирана. За целта отидете на "
-":menuselection:`Производство --> Конфигурация --> Настройки`, след което "
+"Разделът :guilabel:`Операции` се появява само ако "
+"настройката :guilabel:`Работни поръчки` е активирана. За целта отидете "
+"на :menuselection:`Производство --> Конфигурация --> Настройки`, след което "
 "активирайте квадратчето :guilabel:`Работни поръчки`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:74
@@ -51302,10 +51445,10 @@ msgstr ""
 "количеството на консумираните материали не съответства на количеството на "
 "произведените продукти, се появява изскачащ прозорец *Предупреждение за "
 "консумация*. Щракнете върху :guilabel:`Потвърждаване`, за да запазите "
-"съществуващото количество консумирани материали, или щракнете върху "
-":guilabel:`Актуализиране на количествата и валидиране`, за да съответстват "
-"консумираните количества на частичното количество произведени продукти по "
-"производствената поръчка."
+"съществуващото количество консумирани материали, или щракнете "
+"върху :guilabel:`Актуализиране на количествата и валидиране`, за да "
+"съответстват консумираните количества на частичното количество произведени "
+"продукти по производствената поръчка."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:155
 msgid ""
@@ -51317,8 +51460,8 @@ msgid ""
 msgstr ""
 "Щракнете върху :guilabel:`Затваряне на производството` в изскачащия прозорец "
 "*Произведохте по-малко от първоначалното търсене* и ще се появи втори "
-"изскачащ прозорец *Предупреждение за консумация*. Щракнете върху "
-":guilabel:`Потвърждаване`, за да запазите съществуващото количество "
+"изскачащ прозорец *Предупреждение за консумация*. Щракнете "
+"върху :guilabel:`Потвърждаване`, за да запазите съществуващото количество "
 "консумирани материали, или щракнете върху :guilabel:`Актуализиране на "
 "количествата и валидиране`, за да съответстват консумираните количества на "
 "пълното количество произведени продукти по производствената поръчка."
@@ -51337,9 +51480,9 @@ msgid ""
 "backorders <manufacturing/manufacturing-backorders/create-backorder-"
 "manufacturing-app>`."
 msgstr ""
-"За да създадете обратно поръчка за оставащото количество, вижте "
-":ref:`Производствени обратни поръчки <manufacturing/manufacturing-backorders/"
-"create-backorder-manufacturing-app>`."
+"За да създадете обратно поръчка за оставащото количество, "
+"вижте :ref:`Производствени обратни поръчки <manufacturing/manufacturing-"
+"backorders/create-backorder-manufacturing-app>`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:169
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:81
@@ -51398,8 +51541,8 @@ msgid ""
 "On the |MO|, click the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart "
 "button. The |MO| opens in the *Shop Floor* module."
 msgstr ""
-"В |MO| щракнете върху интелигентния бутон :icon:`oi-view-kanban` "
-":guilabel:`Цех`. |MO| се отваря в модула *Цех*."
+"В |MO| щракнете върху интелигентния бутон :icon:`oi-view-"
+"kanban` :guilabel:`Цех`. |MO| се отваря в модула *Цех*."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:191
 msgid "Open Shop Floor from a manufacturing order."
@@ -51476,8 +51619,8 @@ msgid ""
 msgstr ""
 "След завършване на всички стъпки за работна поръчка в долната част на "
 "картата ѝ се появява бутон. Ако трябва да бъдат завършени други работни "
-"поръчки, преди |MO| да може да бъде затворена, бутонът е обозначен с "
-":guilabel:`Маркирай като готово`. Ако няма допълнителни работни поръчки за "
+"поръчки, преди |MO| да може да бъде затворена, бутонът е обозначен "
+"с :guilabel:`Маркирай като готово`. Ако няма допълнителни работни поръчки за "
 "завършване, бутонът е обозначен с :guilabel:`Затвори производството`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:230
@@ -51683,11 +51826,11 @@ msgid ""
 "tracked, select :guilabel:`None` in the :guilabel:`Tracking` field."
 msgstr ""
 "Настройката по подразбиране :guilabel:`Проследяване` е :guilabel:`По "
-"количество`, която проследява само наличното количество. Изберете "
-":guilabel:`По партиди`, за да проследявате продукта чрез партидни номера, "
-"или :guilabel:`По уникален сериен номер`, за да проследявате продукта чрез "
-"серийни номера. За да укажете, че продуктът не трябва да се проследява, "
-"изберете :guilabel:`Няма` в полето :guilabel:`Проследяване`."
+"количество`, която проследява само наличното количество. "
+"Изберете :guilabel:`По партиди`, за да проследявате продукта чрез партидни "
+"номера, или :guilabel:`По уникален сериен номер`, за да проследявате "
+"продукта чрез серийни номера. За да укажете, че продуктът не трябва да се "
+"проследява, изберете :guilabel:`Няма` в полето :guilabel:`Проследяване`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:318
 msgid ""
@@ -51746,8 +51889,8 @@ msgid ""
 "Click :guilabel:`Confirm` to confirm the |MO|."
 msgstr ""
 "В полето :guilabel:`Продукт` изберете продукт, проследяван чрез партиди или "
-"серийни номера, и въведете желаното :guilabel:`Количество`. Щракнете върху "
-":guilabel:`Потвърждаване`, за да потвърдите |MO|."
+"серийни номера, и въведете желаното :guilabel:`Количество`. Щракнете "
+"върху :guilabel:`Потвърждаване`, за да потвърдите |MO|."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:342
 msgid ""
@@ -51801,8 +51944,8 @@ msgid ""
 msgstr ""
 "И двата метода присвояват партиден номер на продуктите в |MO| преди "
 "завършването на производството. Също така е възможно да завършите "
-"производството и да затворите |MO|, като щракнете върху "
-":guilabel:`Произвеждане`, без да присвоявате партиден номер. Това "
+"производството и да затворите |MO|, като щракнете "
+"върху :guilabel:`Произвеждане`, без да присвоявате партиден номер. Това "
 "автоматично генерира и присвоява партида, използвайки следващия свободен "
 "номер."
 
@@ -51844,9 +51987,9 @@ msgid ""
 "Serial` button next to the :guilabel:`Lot/Serial Number` field. The *Assign "
 "Serial Numbers* pop-up window opens."
 msgstr ""
-"За |MOs|, които произвеждат множество единици, щракнете върху бутона "
-":guilabel:`Генериране на сериен номер` до полето :guilabel:`Партиден/сериен "
-"номер`. Отваря се изскачащият прозорец *Задаване на серийни номера*."
+"За |MOs|, които произвеждат множество единици, щракнете върху "
+"бутона :guilabel:`Генериране на сериен номер` до полето :guilabel:`Партиден/"
+"сериен номер`. Отваря се изскачащият прозорец *Задаване на серийни номера*."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:379
 msgid ""
@@ -51869,9 +52012,9 @@ msgstr ""
 "Полето :guilabel:`Брой серийни номера` автоматично се попълва с броя "
 "единици, произведени от |MO|. Запазете този номер или въведете номер ръчно в "
 "полето, след което щракнете върху бутона :guilabel:`Генериране`, за да "
-"генерирате серийни номера за единиците в |MO|. Щракнете върху "
-":guilabel:`Прилагане`, за да приложите серийните номера към продуктите в "
-"производствената поръчка."
+"генерирате серийни номера за единиците в |MO|. Щракнете "
+"върху :guilabel:`Прилагане`, за да приложите серийните номера към продуктите "
+"в производствената поръчка."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/basic_setup/manufacturing_work_orders.rst:387
 msgid ""
@@ -54579,9 +54722,9 @@ msgid ""
 "By default, this view is filtered by manufacturing orders in :guilabel:`To "
 "Do` status. The filters can be changed from the search bar."
 msgstr ""
-"По подразбиране този изглед се филтрира по производствени поръчки със статус "
-":guilabel:`За изпълнение`. Филтрите могат да се променят от лентата за "
-"търсене."
+"По подразбиране този изглед се филтрира по производствени поръчки със "
+"статус :guilabel:`За изпълнение`. Филтрите могат да се променят от лентата "
+"за търсене."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:42
 msgid ""
@@ -54661,8 +54804,8 @@ msgstr ""
 ":guilabel:`Наличност на материали`: Производствените поръчки се групират "
 "според наличността на компонентите. Производствените поръчки, при които "
 "всички компоненти са налични, са изброени в колоната :guilabel:`Готов`, а "
-"тези, които очакват наличност на компоненти, са изброени в колоната "
-":guilabel:`Изчакващ` колоната."
+"тези, които очакват наличност на компоненти, са изброени в "
+"колоната :guilabel:`Изчакващ` колоната."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:67
 msgid ""
@@ -54670,8 +54813,9 @@ msgid ""
 "by :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, "
 "or :guilabel:`Day`."
 msgstr ""
-":guilabel:`Дата`: Групиране по :guilabel:`Година`, :guilabel:`Тримесечие`, "
-":guilabel:`Месец`, :guilabel:`Седмица` или :guilabel:`Ден`."
+":guilabel:`Дата`: Групиране "
+"по :guilabel:`Година`, :guilabel:`Тримесечие`, :guilabel:`Месец`, :guilabel:`Седмица` "
+"или :guilabel:`Ден`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:69
 msgid ""
@@ -54681,9 +54825,9 @@ msgid ""
 "or :guilabel:`Day`."
 msgstr ""
 ":guilabel:`Краен срок`: Ако към производствените поръчки са зададени крайни "
-"срокове, те могат да бъдат групирани по :guilabel:`Година`, "
-":guilabel:`Тримесечие`, :guilabel:`Месец`, :guilabel:`Седмица` или "
-":guilabel:`Ден`."
+"срокове, те могат да бъдат групирани "
+"по :guilabel:`Година`, :guilabel:`Тримесечие`, :guilabel:`Месец`, :guilabel:`Седмица` "
+"или :guilabel:`Ден`."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:73
 msgid ":doc:`../../../essentials/stages`"
@@ -54837,8 +54981,8 @@ msgid ""
 msgstr ""
 "Кликнете върху иконата :icon:`fa-navicon` :guilabel:`(меню)`, след това "
 "кликнете върху :icon:`fa-arrow-circle-down` :guilabel:`Инсталиране на "
-"приложение`. Отваря се нов прозорец. Кликнете върху бутона "
-":guilabel:`Инсталиране`, за да инсталирате приложението в браузъра на "
+"приложение`. Отваря се нов прозорец. Кликнете върху "
+"бутона :guilabel:`Инсталиране`, за да инсталирате приложението в браузъра на "
 "работната станция."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:54
@@ -58810,10 +58954,10 @@ msgid ""
 "numbers."
 msgstr ""
 "След това щракнете върху :menuselection:`Приложение „Производство“ --> "
-"Продукти --> Продукти` и отворете продукт за проследяване. В полето "
-":guilabel:`Проследяване` изберете :guilabel:`По партиди`, за да проследявате "
-"продукта чрез партидни номера, или :guilabel:`По уникален сериен номер`, за "
-"да проследявате продукта чрез серийни номера."
+"Продукти --> Продукти` и отворете продукт за проследяване. В "
+"полето :guilabel:`Проследяване` изберете :guilabel:`По партиди`, за да "
+"проследявате продукта чрез партидни номера, или :guilabel:`По уникален "
+"сериен номер`, за да проследявате продукта чрез серийни номера."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/manufacture_lots_serials.rst:31
 msgid ":doc:`Lots <../../inventory/product_management/product_tracking/lots>`"
@@ -59001,8 +59145,8 @@ msgid ""
 "To assign serial numbers to each unit of an |MO|, click :guilabel:`Produce` "
 "to open the *Batch Production* pop-up window."
 msgstr ""
-"За да зададете серийни номера за всяка единица от |MO|, щракнете върху "
-":guilabel:`Произвеждане`, за да отворите изскачащия прозорец *Партидно "
+"За да зададете серийни номера за всяка единица от |MO|, щракнете "
+"върху :guilabel:`Произвеждане`, за да отворите изскачащия прозорец *Партидно "
 "производство*."
 
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/workflows/manufacture_lots_serials.rst:112
@@ -62280,8 +62424,8 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:213
 msgid "View summary of component changes in the ECO Changes Summary report."
 msgstr ""
-"Вижте резюме на промените в компонентите в доклада „Резюме на промените в ЕИО"
-"“."
+"Вижте резюме на промените в компонентите в доклада „Резюме на промените в "
+"ЕИО“."
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:216
 msgid ""
@@ -62755,10 +62899,10 @@ msgid ""
 "engineering_change_orders/apply-changes>`."
 msgstr ""
 "Hover over each attachment to reveal the :guilabel:`⋮ (three vertical dots)` "
-"icon. From there, choose whether to :guilabel:`Edit`, :guilabel:`Remove`, or "
-":guilabel:`Download` the file. Any changes made to these files are contained "
-"within the |ECO|, and will only apply to the production |BOM| once the "
-":ref:`changes are applied <plm/engineering_change_orders/apply-changes>`."
+"icon. From there, choose whether to :guilabel:`Edit`, :guilabel:`Remove`, "
+"or :guilabel:`Download` the file. Any changes made to these files are "
+"contained within the |ECO|, and will only apply to the production |BOM| once "
+"the :ref:`changes are applied <plm/engineering_change_orders/apply-changes>`."
 
 #: ../../export/content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:116
 msgid ""
@@ -66589,9 +66733,9 @@ msgid ""
 "under the product name. Next, go to the *Inventory* tab and enable "
 "the :guilabel:`Buy` route."
 msgstr ""
-"За да конфигурирате продукти за покупка, активирайте квадратчето за отметка "
-":guilabel:`Покупка` под името на продукта. След това отидете на раздела "
-"*Склад* и активирайте маршрута :guilabel:`Купуване`."
+"За да конфигурирате продукти за покупка, активирайте квадратчето за "
+"отметка :guilabel:`Покупка` под името на продукта. След това отидете на "
+"раздела *Склад* и активирайте маршрута :guilabel:`Купуване`."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:31
 msgid ""
@@ -66925,7 +67069,8 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
 msgid "A receipt with the vendor reference added in the Source Document field."
-msgstr "A receipt with the vendor reference added in the Source Document field."
+msgstr ""
+"A receipt with the vendor reference added in the Source Document field."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:171
 msgid ""
@@ -66948,9 +67093,9 @@ msgid ""
 "to :menuselection:`Purchase app --> Configuration --> Settings`, then enable "
 "the :guilabel:`Blanket Orders` checkbox."
 msgstr ""
-"The :guilabel:`Purchase agreements` view only appears if the "
-":guilabel:`Blanket Order` setting is enabled. To do so, navigate to "
-":menuselection:`Purchase app --> Configuration --> Settings`, then enable "
+"The :guilabel:`Purchase agreements` view only appears if "
+"the :guilabel:`Blanket Order` setting is enabled. To do so, navigate "
+"to :menuselection:`Purchase app --> Configuration --> Settings`, then enable "
 "the :guilabel:`Blanket Orders` checkbox."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:181
@@ -66976,10 +67121,10 @@ msgid ""
 "the :guilabel:`Ask confirmation` checkbox to ask the vendor to confirm the "
 "shipping date by email."
 msgstr ""
-":guilabel:`Expected Arrival` is automatically calculated based on the "
-":guilabel:`Order Deadline` and vendor lead time. Enable the :guilabel:`Ask "
-"confirmation` checkbox to ask the vendor to confirm the shipping date by "
-"email."
+":guilabel:`Expected Arrival` is automatically calculated based on "
+"the :guilabel:`Order Deadline` and vendor lead time. Enable "
+"the :guilabel:`Ask confirmation` checkbox to ask the vendor to confirm the "
+"shipping date by email."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:192
 msgid ""
@@ -67014,9 +67159,9 @@ msgid ""
 "enable the :guilabel:`Dropshipping` checkbox."
 msgstr ""
 "The :guilabel:`Dropship` options only appear if the :guilabel:`Dropshipping` "
-"setting is enabled in the **Inventory** app. To do so, navigate to "
-":menuselection:`Inventory app --> Configuration --> Settings`, then enable "
-"the :guilabel:`Dropshipping` checkbox."
+"setting is enabled in the **Inventory** app. To do so, navigate "
+"to :menuselection:`Inventory app --> Configuration --> Settings`, then "
+"enable the :guilabel:`Dropshipping` checkbox."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:208
 msgid ""
@@ -67241,9 +67386,10 @@ msgid ""
 "the :guilabel:`Vendor`, :guilabel:`Unit Price`, and :guilabel:`Quantity` of "
 "the product to auto-populate this information on an |RfQ|."
 msgstr ""
-"В раздела *Покупки* на формата за продукт въведете :guilabel:`Доставчик`, "
-":guilabel:`Единична цена` и :guilabel:`Количество` на продукта, за да "
-"попълните автоматично тази информация в |RfQ|."
+"В раздела *Покупки* на формата за продукт "
+"въведете :guilabel:`Доставчик`, :guilabel:`Единична цена` "
+"и :guilabel:`Количество` на продукта, за да попълните автоматично тази "
+"информация в |RfQ|."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/pricelist.rst:35
 msgid ""
@@ -67253,8 +67399,8 @@ msgid ""
 msgstr ""
 "Потвърждаването на |PO| **не** създава автоматично ред в ценоразписа на "
 "доставчика. Когато даден доставчик няма ценоразпис за продукта, |RfQ| "
-"използва цената, отстъпката и времето за доставка от най-скоро потвърдената "
-"|PO| линия."
+"използва цената, отстъпката и времето за доставка от най-скоро потвърдената |"
+"PO| линия."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/pricelist.rst:39
 msgid "Vendor pricelist on product form."
@@ -67267,11 +67413,11 @@ msgid ""
 "dollar` :guilabel:`Price Comparison` smart button on a |PO| (if applicable). "
 "Records are grouped by product, then by vendor."
 msgstr ""
-"За да сравните последните цени, таксувани от всеки доставчик, щракнете върху "
-":icon:`fa-credit-card` :guilabel:`(Закупени)` интелигентен бутон във формата "
-"на продукта или :icon:`fa-dollar` :guilabel:`Сравнение на цени` интелигентен "
-"бутон в |PO| (ако е приложимо). Записите са групирани по продукт, след това "
-"по доставчик."
+"За да сравните последните цени, таксувани от всеки доставчик, щракнете "
+"върху :icon:`fa-credit-card` :guilabel:`(Закупени)` интелигентен бутон във "
+"формата на продукта или :icon:`fa-dollar` :guilabel:`Сравнение на цени` "
+"интелигентен бутон в |PO| (ако е приложимо). Записите са групирани по "
+"продукт, след това по доставчик."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/pricelist.rst:49
 msgid ""
@@ -67322,8 +67468,8 @@ msgid ""
 msgstr ""
 "На страницата изберете квадратчетата за отметка за желаните ценоразписи на "
 "доставчици. След това щракнете върху :icon:`fa-cog` :guilabel:`Действия` "
-"бутона, който се появява, и изберете :icon:`fa-upload` "
-":guilabel:`Експортиране` от падащото меню."
+"бутона, който се появява, и изберете :icon:`fa-"
+"upload` :guilabel:`Експортиране` от падащото меню."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/pricelist.rst:73
 msgid ""
@@ -67334,8 +67480,8 @@ msgid ""
 msgstr ""
 "В изскачащия прозорец, който се появява, полетата от секцията *Полета за "
 "експортиране* са включени в експортирания файл. За да добавите още полета, "
-"намерете желаното поле в секцията *Налични полета* и щракнете върху "
-":icon:`fa-plus` :guilabel:`(плюс)` иконата до полето."
+"намерете желаното поле в секцията *Налични полета* и щракнете "
+"върху :icon:`fa-plus` :guilabel:`(плюс)` иконата до полето."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/pricelist.rst:78
 msgid ""
@@ -68159,9 +68305,9 @@ msgid ""
 "to :guilabel:`Goods`. In the :guilabel:`Tracking` field, "
 "select :guilabel:`By Quantity`."
 msgstr ""
-"В раздела *Обща информация* оставете :guilabel:`Тип продукт` зададено на "
-":guilabel:`Стоки`. В полето :guilabel:`Проследяване` изберете :guilabel:`По "
-"количество`."
+"В раздела *Обща информация* оставете :guilabel:`Тип продукт` зададено "
+"на :guilabel:`Стоки`. В полето :guilabel:`Проследяване` "
+"изберете :guilabel:`По количество`."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:38
 msgid ""
@@ -68182,8 +68328,8 @@ msgid ""
 "the product form."
 msgstr ""
 "За да работят временните правила за пренареждане, **трябва** да бъде зададен "
-"доставчик или продуктът трябва да е бил купуван по поне една потвърдена "
-"|PO|. Опитът за попълване на продукта от таблото за *Попълване* в "
+"доставчик или продуктът трябва да е бил купуван по поне една потвърдена |"
+"PO|. Опитът за попълване на продукта от таблото за *Попълване* в "
 "приложението **Инвентар** без някое от тези неща задейства предупреждение за "
 "добавяне на доставчик във формата на продукта."
 
@@ -68272,8 +68418,8 @@ msgid ""
 "refresh` :guilabel:`Automate`, and :icon:`fa-bell-slash` :guilabel:`Snooze`."
 msgstr ""
 "Освен това, три опции за попълване се намират в края на реда: :icon:`fa-"
-"truck` :guilabel:`Поръчка`, :icon:`fa-refresh` :guilabel:`Автоматизиране` и "
-":icon:`fa-bell-slash` :guilabel:`Отлагане`."
+"truck` :guilabel:`Поръчка`, :icon:`fa-refresh` :guilabel:`Автоматизиране` "
+"и :icon:`fa-bell-slash` :guilabel:`Отлагане`."
 
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:86
 msgid "Replenishment report displaying temporary reordering rule and options."
@@ -70803,17 +70949,17 @@ msgstr "Точки за контрол на качеството"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:11
 msgid ""
-"In Odoo, *quality control points* (QCPs), are used to automatically "
+"In Odoo, *quality control points* (QCPs) are used to automatically "
 "create :doc:`quality checks <quality_checks>` at predetermined intervals. |"
 "QCPs| can be configured to create quality checks for specific operations "
 "(manufacturing, delivery, etc.) and for specific products within those "
 "operations."
 msgstr ""
-"В Odoo *контролните точки за качество* (QCP) се използват за автоматично "
-"създаване на :doc:`проверки на качеството <quality_checks>` на предварително "
-"определени интервали. |QCPs| могат да се конфигурират за създаване на "
-"проверки на качеството за конкретни операции (производство, доставка и др.) "
-"и за конкретни продукти в рамките на тези операции."
+"В Odoo *точките за качествен контрол* (QCP) се използват за автоматично "
+"създаване на :doc:`проверки на качеството <quality_checks>` през "
+"предварително определени интервали. |QCPs| могат да бъдат конфигурирани да "
+"създават проверки на качеството за специфични операции (производство, "
+"доставка и т.н.) и за специфични продукти в рамките на тези операции."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:16
 msgid ""
@@ -70871,7 +71017,7 @@ msgstr ""
 "празно, за да се гарантира, че |QCP| се прилага за всички категории, или "
 "изберете поне една категория, за която да се прилага."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:37
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:36
 msgid ""
 "In the :guilabel:`Operations` field, select the operations that should "
 "trigger the |QCP|. For example, selecting the :guilabel:`Manufacturing` "
@@ -70883,7 +71029,7 @@ msgstr ""
 "полето :guilabel:`Операции` създава проверка на качеството за нови "
 "производствени поръчки (MO)."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:42
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:41
 msgid ""
 "When creating a new |QCP|, at least one operation must be listed in "
 "the :guilabel:`Operations` field. However, the :guilabel:`Products` "
@@ -70897,7 +71043,7 @@ msgstr ""
 "бъдат оставени празни, |QCP| генерира проверки на качеството за всеки случай "
 "на посочените операции."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:47
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:46
 msgid ""
 "If the :guilabel:`Manufacturing` operation is selected in "
 "the :guilabel:`Operations` field, the :guilabel:`Work Order Operation` field "
@@ -70911,7 +71057,7 @@ msgstr ""
 "генерирате проверки на качеството за тази операция, а не за производствената "
 "операция като цяло."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:52
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:51
 msgid ""
 "A |QCP| could be configured to create quality checks for the `Assembly` work "
 "order of the `Coffee Table` product. Then, if a new |MO| is confirmed for a "
@@ -70923,11 +71069,11 @@ msgstr ""
 "MO| бъде потвърдена за `Coffee Table`, |QCP| създава проверка на качеството "
 "конкретно за операцията `Assembly`."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:56
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:55
 msgid "Select a :guilabel:`Company` for which the |QCP| should apply."
 msgstr "Изберете :guilabel:`Компания`, за която |QCP| трябва да се прилага."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:58
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:57
 msgid ""
 "If a specific quality team member is responsible for the |QCP|, select them "
 "in the :guilabel:`Responsible` field."
@@ -70935,7 +71081,7 @@ msgstr ""
 "Ако конкретен член на екипа по качество отговаря за |QCP|, изберете го в "
 "полето :guilabel:`Responsible`."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:61
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:60
 msgid ""
 "The :guilabel:`Control per` field is set to one of three options that "
 "determine *when* a new quality check is created:"
@@ -70943,7 +71089,7 @@ msgstr ""
 "Задайте полето :guilabel:`Control per` на една от трите опции, които "
 "определят *кога* се създава нова проверка на качеството:"
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:63
 msgid ""
 ":guilabel:`Operation`: One check is requested for the specified operation, "
 "as a whole."
@@ -70951,7 +71097,7 @@ msgstr ""
 ":guilabel:`Operation`: изисква се една проверка за посочената операция като "
 "цяло."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:65
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
 msgid ""
 ":guilabel:`Product`: One check is requested for each *unique* product "
 "included in the specified operation. For example, a delivery operation for "
@@ -70963,28 +71109,29 @@ msgstr ""
 "една маса и четири стола би генерирала две проверки, тъй като в операцията "
 "са включени два *уникални* продукта."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:68
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:67
 msgid ""
-":guilabel:`Quantity`: A check is requested for a certain percentage of items "
-"within the specified operation. This percentage is set by selecting "
-"the :guilabel:`Partial Transfer Test` checkbox, then entering a numerical "
-"value in the :guilabel:`Percentage` field that appears. If the checkbox is "
-"not selected, one quality check is created for the full quantity."
+":guilabel:`Lot`: A check is requested for a certain percentage of items "
+"within the specified operation. Next to the :guilabel:`Partial Test` field, "
+"enter a percentage in the :guilabel:`Test (#) % of products` field. The "
+"default value is `100`, meaning one quality check is created for the full "
+"quantity."
 msgstr ""
-":guilabel:`Количество`: Изисква се проверка за определен процент от "
-"артикулите в рамките на посочената операция. Този процент се задава чрез "
-"поставяне на отметка в квадратчето :guilabel:`Тест за частичен трансфер` и "
-"след това въвеждане на числова стойност в полето :guilabel:`Процент`, което "
-"се появява. Ако квадратчето за отметка не е избрано, се създава една "
-"проверка на качеството за цялото количество."
+":guilabel:`Партида`: Изисква се проверка за определен процент от артикулите "
+"в рамките на посочената операция. До полето :guilabel:`Частичен тест`, "
+"въведете процент в полето :guilabel:`Тестване (#) % от продуктите`. "
+"Стойността по подразбиране е `100`, което означава, че се създава една "
+"проверка на качеството за пълното количество."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:73
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:72
 msgid ""
-"The :guilabel:`Control Frequency` field is set to one of four options that "
+"If the :guilabel:`Lot` option was selected for :guilabel:`Control per`, "
+"the :guilabel:`Control Frequency` field is set to one of four options that "
 "determine *how often* a new quality check is created:"
 msgstr ""
-"Задайте полето :guilabel:`Control Frequency` на една от четирите опции, "
-"които определят *колко често* се създава нова проверка на качеството:"
+"Ако опцията :guilabel:`Партида` е била избрана за :guilabel:`Контрол по`, "
+"полето :guilabel:`Честота на контрол` се настройва на една от четирите "
+"опции, които определят *колко често* се създава нова проверка на качеството:"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:76
 msgid ""
@@ -71143,10 +71290,10 @@ msgid ""
 "*Quality Worksheet Template* or *Quality Spreadsheet Template* in "
 "the :guilabel:`Template` field under the :guilabel:`Type` field."
 msgstr ""
-"При създаване на |QCP| с типове проверки :guilabel:`Работен лист` или "
-":guilabel:`Електронна таблица`, е необходимо да се посочи *Шаблон за работен "
-"лист за качество* или *Шаблон за електронна таблица за качество* в полето "
-":guilabel:`Шаблон` под полето :guilabel:`Тип` поле."
+"При създаване на |QCP| с типове проверки :guilabel:`Работен лист` "
+"или :guilabel:`Електронна таблица`, е необходимо да се посочи *Шаблон за "
+"работен лист за качество* или *Шаблон за електронна таблица за качество* в "
+"полето :guilabel:`Шаблон` под полето :guilabel:`Тип` поле."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:121
 msgid ""
@@ -71177,49 +71324,250 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:130
 msgid ""
-"In the :guilabel:`Instructions` tab at the bottom of the form, enter "
-"instructions for how to complete the quality checks created by the |QCP|."
+"In the *Instructions* tab at the bottom of the form, enter instructions for "
+"how to complete the quality checks created by the |QCP|."
 msgstr ""
-"В раздела :guilabel:`Инструкции` в долната част на формуляра въведете "
-"инструкции за това как да завършите проверките за качество, създадени от "
-"|QCP|."
+"В раздела *Instructions* в долната част на формуляра въведете инструкции как "
+"да се извършват проверките на качеството, създадени от |QCP|."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:133
-msgid ""
-"In the :guilabel:`Worksheet` tab, upload a worksheet file from the device."
-msgstr ""
-"В раздела :guilabel:`Работен лист` качете файл с работен лист от "
-"устройството."
+msgid "In the *Attachment* tab, upload a worksheet file from the device."
+msgstr "В раздела *Прикачен файл* прикачете работен файл от устройството."
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:135
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:136
 msgid ""
-"In the :guilabel:`Message If Failure` tab, include instructions for what to "
-"do if the quality check fails. For example, instruct the employee processing "
-"the quality check to create a :doc:`quality alert <quality_alerts>`."
+"The *Attachment* tab only appears if the :guilabel:`Manufacturing` option is "
+"selected in the :guilabel:`Operations` field and a :guilabel:`Work Order "
+"Operation` is selected."
 msgstr ""
-"В раздела :guilabel:`Съобщение при неуспех` включете инструкции какво да "
-"правите, ако проверката за качество не успее. Например, инструктирайте "
-"служителя, обработващ проверката за качество, да създаде :doc:`сигнал за "
-"качество <quality_alerts>`."
+"Разделът *Прикачен файл* се появява само ако опцията "
+":guilabel:`Производство` е избрана в полето :guilabel:`Операции` и е избрана "
+":guilabel:`Операция по работна поръчка`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:139
 msgid ""
-"Use the :guilabel:`Notes` tab to provide additional information about the |"
-"QCP|, like the reason it was created. The information entered in this tab is "
-"**not** shown to the employees who process the quality checks created by the "
-"|QCP|."
+"In the *Message If Failure* tab, include instructions for what to do if the "
+"quality check fails. For example, instruct the employee processing the "
+"quality check to create a :doc:`quality alert <quality_alerts>`."
 msgstr ""
-"Използвайте раздела :guilabel:`Бележки`, за да предоставите допълнителна "
-"информация относно |QCP|, като например причината за създаването му. "
-"Информацията, въведена в този раздел, **не** се показва на служителите, "
-"които обработват проверките за качество, създадени от |QCP|."
+"В раздела *Съобщение при неуспех* включете инструкции какво да се направи, "
+"ако проверката на качеството се провали. Например, инструктирайте служителя, "
+"обработващ проверката на качеството, да създаде :doc:`сигнал за качество "
+"<quality_alerts>`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:143
+msgid ""
+"Use the *Notes* tab to provide additional information about the |QCP|, like "
+"the reason it was created. The information entered in this tab is **not** "
+"shown to the employees who process the quality checks created by the |QCP|."
+msgstr ""
+"Използвайте раздела *Бележки*, за да предоставите допълнителна информация "
+"относно |QCP|, като например причината за нейното създаване. Информацията, "
+"въведена в този раздел, **не** се показва на служителите, които обработват "
+"проверките на качеството, създадени от |QCP|."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:147
 msgid ""
 "A QCP configured to create Pass - Fail checks for a work order operation."
 msgstr ""
 "QCP, конфигуриран да създава проверки Pass - Fail за операция от работна "
 "поръчка."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:3
+msgid "Quality rate"
+msgstr "Процент на качеството"
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:14
+msgid ""
+"In Odoo **Quality**, users can view the quality rate, or the percentage of "
+"successful quality checks across incoming transfers from vendors. This "
+"documentation covers how to access and view quality rates on vendors' "
+"contact forms, requests for quotation (RFQs) or purchase orders (POs), and "
+"quality control points (QCPs)."
+msgstr ""
+"В модула **Качество** на Odoo потребителите могат да виждат процента на "
+"качеството, или дела на успешните проверки на качеството при входящи "
+"трансфери от доставчици. Тази документация обхваща начина на достъп и "
+"преглед на процентите на качеството във формулярите за контакт на "
+"доставчиците, заявките за оферти (RFQ) или поръчките за покупка (PO) и "
+"точките за качествен контрол (QCP)."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:24
+msgid "To check quality rates, ensure the following are true:"
+msgstr ""
+"За да проверите процентите на качеството, уверете се, че са изпълнени "
+"следните условия:"
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:26
+msgid "The **Quality** and **Purchase** apps are installed."
+msgstr "Инсталирани са приложенията **Качество** и **Покупки**."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:27
+msgid ""
+"The user's :doc:`access rights <../../../general/users/access_rights>` are "
+"set to :guilabel:`Quality / User` at the minimum."
+msgstr ""
+"Потребителските :doc:`права за достъп <../../../general/users/access_rights>"
+"` са настроени поне на :guilabel:`Качество / Потребител`."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:33
+msgid "View quality rates"
+msgstr "Преглед на процентите на качеството"
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:35
+msgid ""
+"Quality rates can be viewed on vendors' contact forms, |RFQs| or |POs|, and |"
+"QCPs|. Each of these forms provides the option to open a customizable report "
+"showing the percentage of passing quality checks, organized by product or by "
+"vendor."
+msgstr ""
+"Процентите на качеството могат да се видят във формулярите за контакт на "
+"доставчиците, |RFQs| или |POs|, и |QCPs|. Всеки от тези формуляри предоставя "
+"опция за отваряне на персонализиран отчет, показващ процента на успешно "
+"преминалите проверки на качеството, организиран по продукт или доставчик."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:39
+msgid "Users can access the report using one of the following options:"
+msgstr ""
+"Потребителите могат да достъпят отчета, като използват една от следните "
+"опции:"
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:41
+msgid ""
+"Via the contact form: Navigate to :menuselection:`Purchase app --> Orders --"
+"> Vendors` and select a vendor. The :icon:`fa-check` :guilabel:`Quality "
+"Rate` smart button displays the quality rate across all incoming products "
+"from the vendor. Click the button to open a specific report."
+msgstr ""
+"Чрез формуляра за контакт: Отидете на :menuselection:`Приложение „Покупки"
+"“ --> Поръчки --> Доставчици` и изберете доставчик. Смарт бутонът :icon:`fa-"
+"check` :guilabel:`Процент на качеството` показва процента на качеството за "
+"всички входящи продукти от доставчика. Щракнете върху бутона, за да отворите "
+"конкретен отчет."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:44
+msgid ""
+"Via an |RFQ| or |PO|: Open the **Purchase** app and select an order. "
+"The :icon:`fa-check` :guilabel:`Quality Rate` smart button displays the "
+"quality rate across all incoming products from the vendor. Click the button "
+"to open a specific report."
+msgstr ""
+"Чрез |RFQ| или |PO|: Отворете приложението **Покупки** и изберете поръчка. "
+"Смарт бутонът :icon:`fa-check` :guilabel:`Процент на качеството` показва "
+"процента на качеството за всички входящи продукти от доставчика. Щракнете "
+"върху бутона, за да отворите конкретен отчет."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:47
+msgid ""
+"Via a |QCP|: Navigate to :menuselection:`Quality app --> Quality Control --> "
+"Control Points` and select a control point. The :icon:`fa-"
+"user` :guilabel:`Suppliers` smart button displays the number of vendors with "
+"completed quality checks at the control point. Click the button to open a "
+"specific report."
+msgstr ""
+"Чрез |QCP|: Отидете на :menuselection:`Приложение „Качество“ --> Контрол на "
+"качеството --> Точки за контрол` и изберете точка за контрол. Смарт бутонът "
+":icon:`fa-user` :guilabel:`Доставчици` показва броя на доставчиците с "
+"приключени проверки на качеството в точката за контрол. Щракнете върху "
+"бутона, за да отворите конкретен отчет."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:53
+msgid ""
+"The control point's :guilabel:`Operations` field must be set to the "
+"`Receipts` operation type."
+msgstr ""
+"Полето :guilabel:`Операции` на точката за контрол трябва да бъде настроено "
+"на типа операция `Разписки`."
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:56
+msgid ""
+"If the :icon:`fa-check` :guilabel:`Quality Rate` smart button does not "
+"appear on a vendor contact form, |RFQ|, or |PO|, ensure that at least one "
+"check has been performed across the vendor's incoming transfers."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:60
+msgid ""
+"Similarly, if the :icon:`fa-user` :guilabel:`Suppliers` smart button does "
+"not appear on a |QCP|, ensure that at least one check has been performed at "
+"the control point."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:66
+msgid "Quality rate report"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:68
+msgid ""
+"When opened from the contact form or the |RFQ|/|PO|, the *Quality Check "
+"Analysis* report shows a :icon:`fa-toggle-on` :guilabel:`Stacked` :icon:`fa-"
+"bar-chart` :guilabel:`(Bar Chart)` of the vendor's :guilabel:`Quality Rate` "
+"for each product over the last 12 months."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:72
+msgid ""
+"Modify the :ref:`view <reporting/views>`, :ref:`measure <reporting/choosing-"
+"measures>`, :ref:`filters <search/custom-filters>`, or :ref:`grouping "
+"options <search/group>` to customize the report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:77
+msgid ""
+"By default, reports accessed from the |QCP| display the rates for each "
+"vendor with quality checks at the control point, not the quality rate of "
+"each product by vendor."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:82
+msgid ""
+"In the following example, multiple products are purchased from the vendor "
+"Azure Interior. After performing quality checks, the :icon:`fa-"
+"check` :guilabel:`Quality Rate` smart button displays a quality rate of "
+"`43%`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:86
+msgid ""
+"After opening the default report from the |PO|, the following quality rates "
+"are shown for each product:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:89
+msgid "Pedal Bin: 1 pass, 1 fail (50% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:90
+msgid "Corner Desk Left Sit: 1 pass (100% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:91
+msgid "Office Chair: 1 pass, 1 fail (50% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:92
+msgid "Large Cabinet: 1 fail (0% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:93
+msgid "Large Cabinet (Wood): 1 fail (0% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:95
+msgid "Therefore, the overall quality rate is `3 passed / 7 total = 43%`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:97
+msgid "Quality Check Analysis report for a partner, grouping by product."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:101
+msgid ":doc:`quality_checks`"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:102
+msgid ":doc:`quality_control_points`"
+msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/repairs.rst:8
 msgid "Repairs"
@@ -71643,8 +71991,8 @@ msgid ""
 msgstr ""
 "За да върнете ремонтиран продукт на клиента, отидете в приложението "
 "**Продажби** и изберете оригиналната |SO|, от която е обработено "
-"първоначалното връщане. След това щракнете върху интелигентния бутон "
-":guilabel:`Доставка`."
+"първоначалното връщане. След това щракнете върху интелигентния "
+"бутон :guilabel:`Доставка`."
 
 #: ../../export/content/applications/inventory_and_mrp/repairs/repair_orders.rst:163
 msgid ""
@@ -71714,6 +72062,127 @@ msgid ""
 msgstr ""
 "Когато доставката бъде обработена и продуктът бъде върнат на клиента, "
 "щракнете върху :guilabel:`Validate`, за да потвърдите доставката."
+
+#~ msgid ""
+#~ "On the receipt from the |PO| or on the confirmed |MO|, users can open the "
+#~ "allocation report, which displays the incoming product. Next to the "
+#~ "product is a list of all applicable outgoing transfers (i.e., originating "
+#~ "|SOs|/|MOs| containing the product) to which incoming units can be "
+#~ "assigned. Assigning these units does not move any inventory. Instead, it "
+#~ "allows the user to flexibly choose which demands to prioritize before "
+#~ "actually receiving incoming units. When those units are received, the "
+#~ "user can fulfill the original demands."
+#~ msgstr ""
+#~ "В разписката от |PO| или в потвърдената |MO| потребителите могат да "
+#~ "отворят отчета за разпределение, който показва входящия продукт. До "
+#~ "продукта има списък с всички приложими изходящи движения (т.е. "
+#~ "първоначалните |SOs|/|MOs|, съдържащи продукта), към които могат да бъдат "
+#~ "зачислени входящи бройки. Зачисляването на тези бройки не движи складови "
+#~ "наличности. Вместо това то позволява на потребителя гъвкаво да избере кои "
+#~ "заявки да приоритизира, преди реално да получи входящите единици. След "
+#~ "като тези единици бъдат получени, потребителят може да изпълни "
+#~ "първоначалните заявки."
+
+#~ msgid ""
+#~ "If multiple products are replenished through the |PO|/|MO|, the "
+#~ "allocation report lists all products with originating |SOs|/|MOs| "
+#~ "available for reservation."
+#~ msgstr ""
+#~ "Ако чрез |PO|/|MO| се попълват множество продукти, отчетът за "
+#~ "разпределение показва всички продукти с първоначални |SOs|/|MOs|, "
+#~ "достъпни за резервация."
+
+#~ msgid ""
+#~ "To create a |PO|, navigate to the **Purchase** app and "
+#~ "click :guilabel:`New` to create a new Request for Quotation (RfQ). On the "
+#~ "form, add the products in demand on the customers' |SOs| by "
+#~ "clicking :guilabel:`Add a product` in the *Products* tab and specifying "
+#~ "the required :guilabel:`Quantity`."
+#~ msgstr ""
+#~ "За да създадете |PO|, отидете в приложението **Purchase** и щракнете "
+#~ "върху :guilabel:`Нов`, за да създадете ново запитване за оферта (RfQ). "
+#~ "Във формуляра добавете търсените продукти от |SOs| на клиентите, като "
+#~ "щракнете върху :guilabel:`Добавяне на продукт` в раздел *Products* и "
+#~ "посочите необходимото :guilabel:`Количество`."
+
+#~ msgid ""
+#~ "The toggle button in the :guilabel:`Reserved` column allows the user "
+#~ "to :ref:`allocate <inventory/allocation_report/workflow/report/allocate>` "
+#~ "the specified quantity."
+#~ msgstr ""
+#~ "Превключващият бутон в колоната :guilabel:`Резервирано` позволява на "
+#~ "потребителя да :ref:`разпредели <inventory/allocation_report/workflow/"
+#~ "report/allocate>` посоченото количество."
+
+#~ msgid ""
+#~ "In Odoo, *quality control points* (QCPs), are used to automatically "
+#~ "create :doc:`quality checks <quality_checks>` at predetermined intervals. "
+#~ "|QCPs| can be configured to create quality checks for specific operations "
+#~ "(manufacturing, delivery, etc.) and for specific products within those "
+#~ "operations."
+#~ msgstr ""
+#~ "В Odoo *контролните точки за качество* (QCP) се използват за автоматично "
+#~ "създаване на :doc:`проверки на качеството <quality_checks>` на "
+#~ "предварително определени интервали. |QCPs| могат да се конфигурират за "
+#~ "създаване на проверки на качеството за конкретни операции (производство, "
+#~ "доставка и др.) и за конкретни продукти в рамките на тези операции."
+
+#~ msgid ""
+#~ ":guilabel:`Quantity`: A check is requested for a certain percentage of "
+#~ "items within the specified operation. This percentage is set by selecting "
+#~ "the :guilabel:`Partial Transfer Test` checkbox, then entering a numerical "
+#~ "value in the :guilabel:`Percentage` field that appears. If the checkbox "
+#~ "is not selected, one quality check is created for the full quantity."
+#~ msgstr ""
+#~ ":guilabel:`Количество`: Изисква се проверка за определен процент от "
+#~ "артикулите в рамките на посочената операция. Този процент се задава чрез "
+#~ "поставяне на отметка в квадратчето :guilabel:`Тест за частичен трансфер` "
+#~ "и след това въвеждане на числова стойност в полето :guilabel:`Процент`, "
+#~ "което се появява. Ако квадратчето за отметка не е избрано, се създава "
+#~ "една проверка на качеството за цялото количество."
+
+#~ msgid ""
+#~ "The :guilabel:`Control Frequency` field is set to one of four options "
+#~ "that determine *how often* a new quality check is created:"
+#~ msgstr ""
+#~ "Задайте полето :guilabel:`Control Frequency` на една от четирите опции, "
+#~ "които определят *колко често* се създава нова проверка на качеството:"
+
+#~ msgid ""
+#~ "In the :guilabel:`Instructions` tab at the bottom of the form, enter "
+#~ "instructions for how to complete the quality checks created by the |QCP|."
+#~ msgstr ""
+#~ "В раздела :guilabel:`Инструкции` в долната част на формуляра въведете "
+#~ "инструкции за това как да завършите проверките за качество, създадени от |"
+#~ "QCP|."
+
+#~ msgid ""
+#~ "In the :guilabel:`Worksheet` tab, upload a worksheet file from the device."
+#~ msgstr ""
+#~ "В раздела :guilabel:`Работен лист` качете файл с работен лист от "
+#~ "устройството."
+
+#~ msgid ""
+#~ "In the :guilabel:`Message If Failure` tab, include instructions for what "
+#~ "to do if the quality check fails. For example, instruct the employee "
+#~ "processing the quality check to create a :doc:`quality alert "
+#~ "<quality_alerts>`."
+#~ msgstr ""
+#~ "В раздела :guilabel:`Съобщение при неуспех` включете инструкции какво да "
+#~ "правите, ако проверката за качество не успее. Например, инструктирайте "
+#~ "служителя, обработващ проверката за качество, да създаде :doc:`сигнал за "
+#~ "качество <quality_alerts>`."
+
+#~ msgid ""
+#~ "Use the :guilabel:`Notes` tab to provide additional information about the "
+#~ "|QCP|, like the reason it was created. The information entered in this "
+#~ "tab is **not** shown to the employees who process the quality checks "
+#~ "created by the |QCP|."
+#~ msgstr ""
+#~ "Използвайте раздела :guilabel:`Бележки`, за да предоставите допълнителна "
+#~ "информация относно |QCP|, като например причината за създаването му. "
+#~ "Информацията, въведена в този раздел, **не** се показва на служителите, "
+#~ "които обработват проверките за качество, създадени от |QCP|."
 
 #~ msgid "Standard Cost: fixed unit cost, updated manually"
 #~ msgstr "Стандартна себестойност: фиксирана единична цена, обновявана ръчно"

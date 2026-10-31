@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-28 09:35+0000\n"
+"POT-Creation-Date: 2026-10-30 17:31+0000\n"
+"PO-Revision-Date: 2026-10-31 12:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-20-doc/hr/hi/>"
 "\n"
@@ -930,6 +930,7 @@ msgid ""
 msgstr "गोल्स फ़ॉर्म का ऊपरी आधा हिस्सा, फ़ैक्ट्री सेफ्टी ट्रेनिंग लक्ष्य के लिए भरा गया।"
 
 #: ../../export/content/applications/hr/appraisals/goals.rst:67
+#: ../../export/content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "डिस्क्रिप्शन टैब"
 
@@ -2579,6 +2580,466 @@ msgstr ":doc:`Odoo एसेंशियल्स रिपोर्टिंग
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
 
+#: ../../export/content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "अप्रूवल"
+
+#: ../../export/content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Odoo में **अप्रूवल** एप्लिकेशन कर्मचारियों को विभिन्न चीजों के लिए आधिकारिक अनुरोध करने "
+"की अनुमति देता है, जिससे मैनेजमेंट अनुरोधों की समीक्षा कर सकता है और उन्हें या तो अप्रूव या "
+"अस्वीकार कर सकता है। यह सभी अनुरोधों को एक केंद्रीकृत जगह पर रखता है, जो सभी अनुरोधों के "
+"लिए स्पष्ट संगठन और पारदर्शिता प्रदान करता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "अप्रूवल टाइप"
+
+#: ../../export/content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"अप्रूवल का अनुरोध करते समय, कैटेगरी या *टाइप* निर्दिष्ट की जानी चाहिए। अनुरोध करने के "
+"लिए नौ पहले से कॉन्फ़िगर की गई अप्रूवल कैटेगरी उपलब्ध हैं:"
+
+#: ../../export/content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`Business trip`: काम से संबंधित यात्रा का अनुरोध करने के लिए।"
+
+#: ../../export/content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Borrow Items`: ऐसी भौतिक वस्तुओं का अनुरोध करने के लिए जिन्हें कंपनी ओनर है "
+"या बेचती है, एक निर्दिष्ट समय अवधि के लिए।"
+
+#: ../../export/content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`सामान्य अनुमोदन`: उन अनुरोधों के लिए जो अन्य आठ डिफ़ॉल्ट प्रकारों में से किसी "
+"में भी फिट नहीं होते हैं।"
+
+#: ../../export/content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`अनुबंध अनुमोदन`: किसी भी प्रकार के बाहरी अनुबंध का अनुरोध करने के लिए, "
+":doc:`कर्मचारी अनुबंधों <payroll/contracts>` को छोड़कर।"
+
+#: ../../export/content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`भुगतान आवेदन`: कंपनी से संबंधित व्ययों के लिए *पूर्व अनुमोदन* का अनुरोध करने के "
+"लिए।"
+
+#: ../../export/content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"इस अनुमोदन प्रकार का उपयोग **सिर्फ** तब किया जाता है जब किसी ऐसे खर्च के लिए "
+"*अग्रिम* अनुमोदन का अनुरोध किया जा रहा हो जिसका भुगतान कंपनी सीधे करती है। इस श्रेणी "
+"का उपयोग उन खर्चों के लिए **नहीं** किया जाना चाहिए जिनके लिए कर्मचारी प्रतिपूर्ति "
+"(reimbursement) मांग रहे हैं। यह काम :doc:`एक्स्पेंस ऐप <../finance/expenses/"
+"log_expenses>` के माध्यम से किया जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`कार रेंटल आवेदन`: किराये की कार का अनुरोध करने के लिए।"
+
+#: ../../export/content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`जॉब रेफरल अवार्ड`: उन जॉब रेफरल अवार्ड्स का अनुरोध करने के लिए जो अर्जित "
+"किए गए थे लेकिन :doc:`रेफरल <referrals>` ऐप के माध्यम से पूरे नहीं किए गए।"
+
+#: ../../export/content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`प्रोक्योरमेंट`: काम से संबंधित वस्तुओं जैसे कार्यालय की आपूर्ति, उपकरण आदि का "
+"अनुरोध करने के लिए उपयोग किया जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`RFQ बनाएं`: किसी वेंडर से वस्तुओं के लिए कोटेशन का अनुरोध करने के लिए उपयोग "
+"किया जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "अनुमोदन अनुरोध"
+
+#: ../../export/content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"नया अनुमोदन अनुरोध बनाने के लिए, **Approvals** ऐप खोलें, अनुरोध के लिए सबसे उपयुक्त "
+"अप्रूवल टाइप कार्ड पर :guilabel:`नया अनुरोध` बटन पर क्लिक करें, और एक खाली अनुमोदन "
+"फॉर्म लोड हो जाएगा। विभिन्न अनुभागों और टैब को भरें, फिर अनुमोदन के लिए अनुरोध सबमिट "
+"करने हेतु :guilabel:`सबमिट करें` पर क्लिक करें।"
+
+#: ../../export/content/applications/hr/approvals.rst:52
+#: ../../export/content/applications/hr/payroll/contracts.rst:80
+#: ../../export/content/applications/hr/payroll/work_entries.rst:252
+#: ../../export/content/applications/hr/time_off/time_off_types.rst:33
+msgid "General information section"
+msgstr "जनरल इन्फ़ॉर्मेशन सेक्शन"
+
+#: ../../export/content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"फॉर्म का ऊपरी हिस्सा अनुरोध के संबंध में सभी सामान्य जानकारी रखता है। फॉर्म के ऊपरी हिस्से "
+"में निम्नलिखित फील्ड भरें:"
+
+#: ../../export/content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"नीचे सूचीबद्ध सभी फील्ड :guilabel:`सामान्य अनुमोदन` श्रेणी के लिए फॉर्म पर दिखाई देते हैं। "
+"यदि कोई अलग :guilabel:`कैटेगरी` चुना जाता है, तो कुछ फील्ड छिपी रहती हैं।"
+
+#: ../../export/content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`अनुमोदन विषय`: यह फील्ड चयनित अनुमोदन प्रकार के साथ स्वचालित रूप से भर "
+"जाती है। अनुरोध के लिए कोई अतिरिक्त संदर्भ प्रदान करने के लिए डिफ़ॉल्ट टेक्स्ट में कोई भी "
+"वांछित संशोधन करें।"
+
+#: ../../export/content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`अनुरोध स्वामी`: अनुमोदन अनुरोध के लिए जिम्मेदार व्यक्ति। साइन-इन किया हुआ "
+"उपयोगकर्ता डिफ़ॉल्ट रूप से इस फील्ड को भरता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`कैटेगरी`: चयनित श्रेणी इस फील्ड में दिखाई देती है लेकिन इसे ड्रॉप-डाउन मेनू का "
+"उपयोग करके बदला जा सकता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`तारीख`: कैलेंडर चयनकर्ता का उपयोग करके, उस तारीख और समय को सेट करें जिसके "
+"लिए अनुरोध है। यह फील्ड **सिर्फ** तब दिखाई देती है जब :guilabel:`भुगतान आवेदन` या "
+":guilabel:`सामान्य अनुमोदन` को :guilabel:`कैटेगरी` के लिए चुना जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`अवधि`: कैलेंडर चयनकर्ता का उपयोग करके, :guilabel:`से` और :guilabel:`तक` "
+"फील्ड में अनुरोध के लिए प्रारंभ और समाप्ति तिथियां सेट करें। यह फील्ड **सिर्फ** तब दिखाई "
+"देती है जब :guilabel:`बिजनेस ट्रिप`, :guilabel:`वस्तुएं उधार लें`, :guilabel:`कार रेंटल "
+"आवेदन`, या :guilabel:`सामान्य अनुमोदन` को :guilabel:`कैटेगरी` के लिए चुना जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`जगह`: उस विशिष्ट स्थान को दर्ज करें जिसके लिए अनुमोदन अनुरोध है। यह फील्ड "
+"**सिर्फ** तब दिखाई देती है जब :guilabel:`बिजनेस ट्रिप` या :guilabel:`सामान्य "
+"अनुमोदन` को :guilabel:`कैटेगरी` के लिए चुना जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`संपर्क`: ड्रॉप-डाउन मेनू का उपयोग करके अनुरोध के लिए संपर्क बिंदु चुनें। उपलब्ध "
+"विकल्प **कॉन्टैक्ट** ऐप से हैं। यह फील्ड **सिर्फ** तब दिखाई देती है जब :guilabel:`अनुबंध "
+"अनुमोदन`, :guilabel:`भुगतान आवेदन`, :guilabel:`जॉब रेफरल अवार्ड`, या "
+":guilabel:`सामान्य अनुमोदन` को :guilabel:`कैटेगरी` के लिए चुना जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`मात्रा`: इस फील्ड में अनुरोध की जा रही वस्तुओं की संख्या दर्ज करें। यह फील्ड "
+"**सिर्फ** तब दिखाई देती है जब :guilabel:`प्रोक्योरमेंट` को :guilabel:`कैटेगरी` के लिए "
+"चुना जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Amount`: अनुरोध की जा रही राशि दर्ज करें। यह फ़ील्ड **सिर्फ़** तब दिखाई "
+"देती है अगर :guilabel:`Contract Approval`, :guilabel:`Payment Application`, "
+":guilabel:`Procurement`, या :guilabel:`General Approval` को "
+":guilabel:`Category` के लिए चुना गया हो।"
+
+#: ../../export/content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Reference`: इस फ़ील्ड में अनुरोध के लिए कोई भी प्रासंगिक संदर्भ दर्ज करें। यह "
+"फ़ील्ड **सिर्फ़** तब दिखाई देती है अगर :guilabel:`Contract Approval` या "
+":guilabel:`General Approval` को :guilabel:`Category` के लिए चुना गया हो।"
+
+#: ../../export/content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"प्रत्येक अप्रूवल टाइप, अप्रूवल फ़ॉर्म पर अलग-अलग फ़ील्ड प्रस्तुत करता है। ऐसा इसलिए है क्योंकि "
+"प्रत्येक *अप्रूवल टाइप* के अपने आवश्यक फ़ील्ड होते हैं। अगर *टाइप* तुरंत ज्ञात नहीं है, तो पेज "
+"के शीर्ष पर स्थित :guilabel:`New Request` बटन पर क्लिक करके एक सामान्य अनुरोध फ़ॉर्म "
+"खोलें। एक बार :guilabel:`Category` चुने जाने के बाद, फ़ॉर्म पर संबंधित फ़ील्ड दिखाई देती हैं"
+"।"
+
+#: ../../export/content/applications/hr/approvals.rst:97
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr "बिज़नेस ट्रिप के लिए भरे गए अप्रूवल फ़ॉर्म का ऊपरी हिस्सा।"
+
+#: ../../export/content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "Product टैब"
+
+#: ../../export/content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"अगर डेटाबेस में कॉन्फ़िगर किए गए किसी भी प्रोडक्ट का अनुरोध किया जा रहा है, तो उन्हें "
+"*Products* टैब में सूचीबद्ध किया जाता है। यह टैब **सिर्फ़** तब दिखाई देता है अगर "
+":guilabel:`Borrow Items`, :guilabel:`General Approval`, या :guilabel:`Create "
+"RFQ's` को :guilabel:`Category` फ़ील्ड में चुना गया हो।"
+
+#: ../../export/content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"प्रोडक्ट जोड़ने के लिए, :guilabel:`Add a line` पर क्लिक करें और एक खाली लाइन दिखाई "
+"देती है। ड्रॉप-डाउन मेन्यू का उपयोग करके, अनुरोध किए जा रहे प्रोडक्ट को चुनें। एक बार चुने "
+"जाने पर, प्रोडक्ट का कॉन्फ़िगर किया गया :guilabel:`Description` स्वचालित रूप से उस "
+"फ़ील्ड में भर जाता है। :guilabel:`Quantity` डिफ़ॉल्ट रूप से :guilabel:`1.00` होता है, "
+"लेकिन ज़रूरत पड़ने पर इसे अपडेट किया जा सकता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"*Description* टैब वह जगह है जहाँ अनुरोध को स्पष्ट करने के लिए कोई भी जानकारी दर्ज की "
+"जाती है। इस टैब में कोई भी प्रासंगिक जानकारी जोड़ें।"
+
+#: ../../export/content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "Approver(s) टैब"
+
+#: ../../export/content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"*Approvers(s)* टैब वह जगह है जहाँ अनुरोध को मंज़ूरी देने के लिए ज़िम्मेदार लोगों को "
+"कॉन्फ़िगर किया जाता है। एक अप्रूवर जोड़ने के लिए, :guilabel:`Add a line` पर क्लिक करें, "
+"और एक खाली लाइन दिखाई देती है। ड्रॉप-डाउन मेन्यू का उपयोग करके, वांछित यूज़र को चुनें। "
+"अन्य सभी अप्रूवर्स के लिए दोहराएं। इस टैब के लिए यूज़र की कोई अधिकतम संख्या नहीं है।"
+
+#: ../../export/content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"यह दर्शाने के लिए कि किसी यूज़र को अनुरोध **ज़रूर** मंज़ूर करना होगा, "
+":guilabel:`Required` कॉलम में चेकबॉक्स पर क्लिक करें।"
+
+#: ../../export/content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"जैसे-जैसे यूज़र जोड़े जाते हैं, उनका :guilabel:`Status` :guilabel:`New` ही रहता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:133
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr "तीन अप्रूवर्स के साथ अप्रूवर्स टैब सूचीबद्ध है, और एक आवश्यक है।"
+
+#: ../../export/content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "दस्तावेज़ जोड़ें"
+
+#: ../../export/content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"सभी अप्रूवल अनुरोधों में प्रासंगिक दस्तावेज़ संलग्न करने का विकल्प शामिल होता है। दस्तावेज़ "
+"संलग्न करने के लिए, पेज के शीर्ष पर स्थित :guilabel:`Attach Document` बटन पर क्लिक "
+"करें, और एक फ़ाइल एक्सप्लोरर विंडो लोड हो जाती है। वांछित फ़ाइल पर नेविगेट करें, उसे चुनें, "
+"फिर इसे संलग्न करने के लिए :guilabel:`Open` पर क्लिक करें। एक ही समय में कई दस्तावेज़ों को "
+"चुना और जोड़ा जा सकता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"एक बार संलग्न हो जाने पर, पेज के शीर्ष पर एक :icon:`fa-book` :guilabel:`Documents` "
+"स्मार्ट बटन दिखाई देता है, जो बताता है कि कितने दस्तावेज़ संलग्न हैं। इसके अतिरिक्त, दस्तावेज़ "
+"चैटर में सूचीबद्ध होते हैं। यदि स्क्रीन पर्याप्त चौड़ी है, तो दस्तावेज़ स्क्रीन के किनारे दिखाई "
+"देते हैं।"
+
+#: ../../export/content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "अप्रूवल मैनेज करें"
+
+#: ../../export/content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"अनुरोध सबमिट होने के बाद, उन्हें :ref:`Approver(s) tab <approvals/approvers>` में "
+"सूचीबद्ध आवश्यक अप्रूवर्स द्वारा मंज़ूर किया जाना चाहिए। कार्रवाई की प्रतीक्षा कर रहे "
+"अप्रूवल को देखने के लिए, :menuselection:`Approvals app --> Manager --> Approvals "
+"to Review` पर नेविगेट करें, और *Approvals to Review* डैशबोर्ड लोड हो जाता है। यूज़र "
+"द्वारा कार्रवाई की प्रतीक्षा कर रहे सभी अप्रूवल वर्णानुक्रम में एक डिफ़ॉल्ट लिस्ट व्यू में "
+"दिखाई देते हैं।"
+
+#: ../../export/content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"*Approvals to Review* डैशबोर्ड में **सिर्फ़** वही *सबमिट किए गए* अनुरोध दिखाई देते हैं "
+"जिनके लिए यूज़र को अप्रूवर के रूप में नियुक्त किया गया है। अन्य सभी अनुरोध छिपे रहते हैं।"
+
+#: ../../export/content/applications/hr/approvals.rst:163
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+"सभी अप्रूवल अनुरोध जो अप्रूवल की प्रतीक्षा कर रहे हैं, यूज़र को नियुक्त किया गया है।"
+
+#: ../../export/content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"अनुरोधों को अप्रूवल फॉर्म से व्यक्तिगत रूप से स्वीकृत किया जाना चाहिए। किसी अनुरोध को "
+"स्वीकृत करने के लिए, *Approvals to Review* डैशबोर्ड पर व्यक्तिगत अनुरोध पर क्लिक करें और "
+"व्यक्तिगत अनुरोध फॉर्म लोड हो जाता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:169
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr ""
+"कैमरा उधार लेने का एक अनुरोध, जिसमें Approve और Refuse बटन दिखाई दे रहे हैं।"
+
+#: ../../export/content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"अनुरोध को स्वीकृत करने के लिए, व्यक्तिगत अप्रूवल अनुरोध फॉर्म पर :guilabel:`Approve` "
+"बटन पर क्लिक करें, और स्टेटस बदलकर :guilabel:`Approved` हो जाता है। जैसे-जैसे "
+"उपयोगकर्ता अनुरोध को स्वीकृत करते हैं, उनका :guilabel:`Status` बदलकर "
+":guilabel:`Approved` हो जाता है और टेक्स्ट हरे रंग में दिखाई देता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"अनुरोध को अस्वीकार करने के लिए, व्यक्तिगत अप्रूवल अनुरोध फॉर्म पर :guilabel:`Refuse` "
+"बटन पर क्लिक करें, और स्टेटस बदलकर :guilabel:`Refused` हो जाता है। जब कोई "
+"उपयोगकर्ता अनुरोध को अस्वीकार करता है, तो उसका :guilabel:`Status` बदलकर "
+":guilabel:`Refused` हो जाता है और टेक्स्ट लाल रंग में दिखाई देता है।"
+
+#: ../../export/content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"किसी भी बिंदु पर, जो अप्रूवल अनुरोध या तो :guilabel:`Approved` हैं या "
+":guilabel:`Refused`, वे :guilabel:`Submitted` स्टेज पर वापस आ सकते हैं, इसके लिए "
+":guilabel:`Withdraw` बटन पर क्लिक करें। सभी अप्रूवर के लिए :guilabel:`Status` वापस "
+":guilabel:`To Approve` पर आ जाता है, और टेक्स्ट नारंगी रंग में दिखाई देता है।"
+
 #: ../../export/content/applications/hr/attendances.rst:5
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:974
 msgid "Attendances"
@@ -2687,7 +3148,7 @@ msgstr ""
 "सकते हैं।"
 
 #: ../../export/content/applications/hr/attendances.rst:49
-#: ../../export/content/applications/hr/employees/new_employee.rst:625
+#: ../../export/content/applications/hr/employees/new_employee.rst:626
 msgid "Approvers"
 msgstr "अनुमति देने वाले"
 
@@ -6349,8 +6810,7 @@ msgstr "कर्मचारी को रिकॉर्ड में डा�
 
 #: ../../export/content/applications/hr/employees.rst:72
 msgid "Ensure employee records are correctly handled collaboration ends."
-msgstr ""
-"सहयोग समाप्त होने पर सुनिश्चित करें कि कर्मचारी के रिकॉर्ड ठीक से संभाले गए हैं।"
+msgstr "सहयोग समाप्त होने पर सुनिश्चित करें कि कर्मचारी के रिकॉर्ड ठीक से संभाले गए हैं।"
 
 #: ../../export/content/applications/hr/employees.rst:77
 #: ../../export/content/applications/hr/employees/training_attendances.rst:3
@@ -6540,8 +7000,8 @@ msgid ""
 msgstr ""
 "Odoo में, जब कोई कर्मचारी कंपनी छोड़ता है, तो उसे *आर्काइव* किया जाना चाहिए। यह चरण "
 "कर्मचारी के पूरी तरह से :doc:`ऑफ़बोर्ड <offboarding>` होने के *बाद* किया जाना चाहिए। "
-"किसी कर्मचारी को आर्काइव करने के लिए, पहले :menuselection:`कर्मचारी एप्लिकेशन` पर जाएँ"
-"। यहाँ से, कंपनी छोड़ने वाले कर्मचारी को ढूँढें और उनके कर्मचारी कार्ड पर क्लिक करें।"
+"किसी कर्मचारी को आर्काइव करने के लिए, पहले :menuselection:`कर्मचारी एप्लिकेशन` पर "
+"जाएँ। यहाँ से, कंपनी छोड़ने वाले कर्मचारी को ढूँढें और उनके कर्मचारी कार्ड पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/employees/archive.rst:10
 msgid ""
@@ -6948,7 +7408,7 @@ msgstr ""
 "में कार्य करता है, और व्यक्तिगत सर्टिफ़िकेशन इसके नीचे नेस्ट किए जाते हैं।"
 
 #: ../../export/content/applications/hr/employees/certifications.rst:28
-#: ../../export/content/applications/hr/employees/new_employee.rst:305
+#: ../../export/content/applications/hr/employees/new_employee.rst:306
 msgid ""
 ":guilabel:`Color`: Click on the existing color to view the available colors. "
 "Click the desired color to select it."
@@ -8309,29 +8769,18 @@ msgstr ""
 
 #: ../../export/content/applications/hr/employees/new_employee.rst:77
 msgid ""
-":guilabel:`Working Hours`: Select the hours the employee is expected to "
-"work, using the drop-down menu. By default, a :guilabel:`Standard 40 hours/"
-"week` working schedule is selected. If the **Timesheets** app is installed, "
+":guilabel:`Working Hours`: Select the hours the employee is expected to work "
+"using the drop-down menu. By default, a :guilabel:`Standard 40 hours/week` "
+"working schedule is selected. If the **Timesheets** app is installed, "
 "an :guilabel:`Appointment Resource Default Calendar` option is also "
 "available."
 msgstr ""
-":guilabel:`वर्किंग आवर्स`: ड्रॉप-डाउन मेन्यू का उपयोग करके, कर्मचारी से काम करने की "
-"अपेक्षित घंटों को चुनें। डिफ़ॉल्ट रूप से, एक :guilabel:`स्टैंडर्ड 40 घंटे/सप्ताह` वर्किंग शेड्यूल "
-"चुना गया है। अगर **टाइमशीट** ऐप्लिकेशन इंस्टॉल है, तो एक :guilabel:`अपॉइंटमेंट रिसोर्स "
-"डिफ़ॉल्ट कैलेंडर` विकल्प भी उपलब्ध है।"
+":guilabel:`Working Hours`: ड्रॉप-डाउन मेनू का उपयोग करके उन घंटों का चयन करें जिन्हें "
+"कर्मचारी से काम करने की उम्मीद की जाती है। डिफ़ॉल्ट रूप से, :guilabel:`Standard 40 "
+"hours/week` वर्किंग शेड्यूल चुना जाता है। यदि **Timesheets** ऐप इंस्टॉल है, तो एक "
+":guilabel:`Appointment Resource Default Calendar` विकल्प भी उपलब्ध है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:82
-msgid ""
-"To view and modify the specific daily working hours, click the :icon:`oi-"
-"arrow-right` :guilabel:`(Internal link)` arrow at the end of "
-"the :guilabel:`Working Hours` line. Working hours can be modified or deleted "
-"here."
-msgstr ""
-"विशिष्ट दैनिक वर्किंग ऑवर्स देखने और उनमें बदलाव करने के लिए, :guilabel:`वर्किंग ऑवर्स` "
-"लाइन के अंत में :icon:`oi-arrow-right` :guilabel:`(इंटरनल लिंक)` ऐरो पर क्लिक करें। "
-"यहां वर्किंग ऑवर्स में बदलाव किया जा सकता है या उन्हें डिलीट किया जा सकता है।"
-
-#: ../../export/content/applications/hr/employees/new_employee.rst:87
+#: ../../export/content/applications/hr/employees/new_employee.rst:83
 msgid ""
 ":guilabel:`Working Hours` are related to a company's working schedules, and "
 "an employee **cannot** have working hours that are outside of a company's "
@@ -8340,7 +8789,7 @@ msgstr ""
 ":guilabel:`वर्किंग आवर्स` कंपनी के वर्किंग शेड्यूल से संबंधित हैं, और एक कर्मचारी के पास ऐसे "
 "वर्किंग आवर्स **नहीं** हो सकते जो कंपनी के वर्किंग शेड्यूल से बाहर हों।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:90
+#: ../../export/content/applications/hr/employees/new_employee.rst:86
 msgid ""
 "Each individual working schedule is company-specific. For multi-company "
 "databases, each company **must** have its own working hours set."
@@ -8348,7 +8797,7 @@ msgstr ""
 "प्रत्येक व्यक्तिगत वर्किंग शेड्यूल कंपनी-विशिष्ट होता है। मल्टी-कंपनी डेटाबेस के लिए, प्रत्येक "
 "कंपनी के अपने वर्किंग ऑवर्स **ज़रूर** सेट होने चाहिए।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:93
+#: ../../export/content/applications/hr/employees/new_employee.rst:89
 msgid ""
 "If an employee's working hours are not configured as a working schedule for "
 "the company, new working schedules can be added, or existing working "
@@ -8357,7 +8806,7 @@ msgstr ""
 "अगर किसी कर्मचारी के वर्किंग ऑवर्स कंपनी के लिए वर्किंग शेड्यूल के रूप में कॉन्फ़िगर नहीं हैं, तो "
 "नए वर्किंग शेड्यूल जोड़े जा सकते हैं, या मौजूदा वर्किंग शेड्यूल में बदलाव किया जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:96
+#: ../../export/content/applications/hr/employees/new_employee.rst:92
 msgid ""
 "Working hours can be modified in both the **Employees** and **Payroll** "
 "apps, where they are referred to as :guilabel:`Working Schedules`."
@@ -8365,7 +8814,7 @@ msgstr ""
 "वर्किंग आवर्स को **कर्मचारी** और **पेरोल** दोनों ऐप्लिकेशन में संशोधित किया जा सकता है, "
 "जहाँ उन्हें :guilabel:`वर्किंग शेड्यूल` के रूप में संदर्भित किया जाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:99
+#: ../../export/content/applications/hr/employees/new_employee.rst:95
 msgid ""
 "For more information on how to create or modify :guilabel:`Working "
 "Schedules`, refer to the :doc:`working schedules <../payroll/"
@@ -8374,7 +8823,7 @@ msgstr ""
 ":guilabel:`वर्किंग शेड्यूल` बनाने या संशोधित करने के बारे में ज़्यादा जानकारी के "
 "लिए, :doc:`वर्किंग शेड्यूल <../payroll/working_schedules>` दस्तावेज़ देखें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:102
+#: ../../export/content/applications/hr/employees/new_employee.rst:98
 msgid ""
 "After the new working hours are created, or an existing one is modified, "
 "the :guilabel:`Working Hours` can be selected on the employee form."
@@ -8382,11 +8831,21 @@ msgstr ""
 "नए कार्य के घंटे बनाए जाने या किसी मौजूदा को संशोधित किए जाने के बाद, कर्मचारी फ़ॉर्म "
 "पर :guilabel:`कार्य के घंटे` का चयन किया जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:106
+#: ../../export/content/applications/hr/employees/new_employee.rst:102
+msgid ""
+"The :guilabel:`Working Hours` field is **required** and cannot be left "
+"blank. For employees with no fixed schedule, :ref:`create a new fully-"
+"flexible working schedule <payroll/new-working-schedule>`, then select it."
+msgstr ""
+"The :guilabel:`Working Hours` फ़ील्ड **अनिवार्य** है और इसे खाली नहीं छोड़ा जा सकता "
+"है। बिना किसी निश्चित शेड्यूल वाले कर्मचारियों के लिए, :ref:`create a new fully-"
+"flexible working schedule <payroll/new-working-schedule>`, फिर उसे चुनें।"
+
+#: ../../export/content/applications/hr/employees/new_employee.rst:107
 msgid ":doc:`Working hours <working_hours>`"
 msgstr ":doc:`कार्य के घंटे <working_hours>`"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:108
+#: ../../export/content/applications/hr/employees/new_employee.rst:109
 msgid ""
 ":guilabel:`Attendance Based`: Click this checkbox to have payslips created "
 "using the employee's badge records when signing in and out of work in "
@@ -8400,11 +8859,11 @@ msgstr ""
 "है, तो Odoo पेरोल प्रोसेस करते समय कार्य प्रविष्टियां बनाने के लिए कर्मचारी के "
 "चयनित :guilabel:`कार्य के घंटे` का उपयोग करता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:114
+#: ../../export/content/applications/hr/employees/new_employee.rst:115
 msgid "Payslip adjustments tab"
 msgstr "पेस्लिप समायोजन टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:116
+#: ../../export/content/applications/hr/employees/new_employee.rst:117
 msgid ""
 "This *Payslip Adjustments* tab houses **all** additional payslip "
 "adjustments, including :doc:`salary adjustments <../payroll/"
@@ -8416,7 +8875,7 @@ msgstr ""
 "टिप्स, बोनस, व्यय प्रतिपूर्ति, और कर्मचारी के वेतन से काटी गई कोई भी अन्य कटौती शामिल "
 "है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:120
+#: ../../export/content/applications/hr/employees/new_employee.rst:121
 msgid ""
 "Add each individual :ref:`payslip adjustment <payroll/salary_attachments/"
 "create>` to this tab."
@@ -8424,7 +8883,7 @@ msgstr ""
 "इस टैब में प्रत्येक व्यक्तिगत :ref:`पेस्लिप समायोजन <payroll/salary_attachments/"
 "create>` जोड़ें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:125
+#: ../../export/content/applications/hr/employees/new_employee.rst:126
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:220
 #: ../../export/content/applications/hr/payroll/payroll_localizations/hong_kong.rst:355
 #: ../../export/content/applications/hr/payroll/payroll_localizations/jordan.rst:76
@@ -8435,7 +8894,7 @@ msgstr ""
 msgid "Work tab"
 msgstr "वर्क टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:127
+#: ../../export/content/applications/hr/employees/new_employee.rst:128
 msgid ""
 "This tab is visible for all employees, and does not require any other apps "
 "to be installed."
@@ -8443,11 +8902,11 @@ msgstr ""
 "यह टैब सभी कर्मचारियों के लिए दिखाई देता है, और इसके लिए किसी अन्य ऐप्लिकेशन को इंस्टॉल "
 "करने की ज़रूरत नहीं है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:130
+#: ../../export/content/applications/hr/employees/new_employee.rst:131
 msgid "Work"
 msgstr "वर्क"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:132
+#: ../../export/content/applications/hr/employees/new_employee.rst:133
 msgid ""
 ":guilabel:`Company`: Select the company the new employee was hired by using "
 "the drop-down menu. This field is required, but only appears when in a multi-"
@@ -8457,13 +8916,13 @@ msgstr ""
 "को नियुक्त किया गया था। यह फ़ील्ड अनिवार्य है, लेकिन केवल बहु-कंपनी डेटाबेस में दिखाई देती "
 "है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:134
+#: ../../export/content/applications/hr/employees/new_employee.rst:135
 msgid ""
 ":guilabel:`Department`: Select the employee's department from the drop-down "
 "menu."
 msgstr ":guilabel:`डिपार्टमेंट`: ड्रॉप-डाउन मेन्यू से कर्मचारी का डिपार्टमेंट सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:135
+#: ../../export/content/applications/hr/employees/new_employee.rst:136
 msgid ""
 ":guilabel:`Job Position`: Select the employee's job position from the drop-"
 "down menu. If using the **Recruitment** app, this list reflects configured "
@@ -8473,7 +8932,7 @@ msgstr ""
 "**रिक्रूटमेंट** ऐप्लिकेशन का इस्तेमाल कर रहे हैं, तो यह लिस्ट कॉन्फ़िगर की गई जॉब पोजीशन "
 "को दर्शाती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:137
+#: ../../export/content/applications/hr/employees/new_employee.rst:138
 msgid ""
 ":guilabel:`Job Title`: This field is automatically populated with the "
 "selection made in the :guilabel:`Job Position` field. Adjust the text, if "
@@ -8483,12 +8942,12 @@ msgstr ""
 "साथ ऑटोमैटिकली भर जाती है। अगर चाहें तो टेक्स्ट को एडजस्ट करें ताकि कर्मचारी की भूमिका "
 "को बेहतर तरीके से दर्शाया जा सके।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:141
+#: ../../export/content/applications/hr/employees/new_employee.rst:142
 msgid ""
 "Specific details can be added in the :guilabel:`Job Title` field, if desired."
 msgstr "अगर चाहें तो :guilabel:`जॉब टाइटल` फ़ील्ड में खास विवरण जोड़े जा सकते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:143
+#: ../../export/content/applications/hr/employees/new_employee.rst:144
 msgid ""
 "For example, a sales representative position configured as :guilabel:`Sales "
 "Associate` in the **Recruitment** app can be selected for the :guilabel:`Job "
@@ -8498,7 +8957,7 @@ msgstr ""
 "की गई सेल्स रिप्रेजेंटेटिव पोजीशन को :guilabel:`जॉब पोजीशन` फ़ील्ड के लिए सेलेक्ट किया जा "
 "सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:146
+#: ../../export/content/applications/hr/employees/new_employee.rst:147
 msgid ""
 "The :guilabel:`Job Title` field can be more specific, such as `Sales "
 "Associate - Europe` if the employee is focused solely on European sales."
@@ -8506,16 +8965,16 @@ msgstr ""
 "यदि कर्मचारी पूरी तरह से यूरोपीय बिक्री पर केंद्रित है, तो :guilabel:`जॉब टाइटल` फ़ील्ड "
 "अधिक विशिष्ट हो सकता है, जैसे कि `Sales Associate - Europe`।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:149
+#: ../../export/content/applications/hr/employees/new_employee.rst:150
 msgid "Both job position fields entered but with different information."
 msgstr "दोनों जॉब पोजीशन फ़ील्ड दर्ज किए गए हैं लेकिन अलग-अलग जानकारी के साथ।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:152
+#: ../../export/content/applications/hr/employees/new_employee.rst:153
 msgid ""
 ":guilabel:`Manager`: Select the employee's manager using the drop-down menu."
 msgstr ":guilabel:`मैनेजर`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके कर्मचारी का मैनेजर सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:153
+#: ../../export/content/applications/hr/employees/new_employee.rst:154
 msgid ""
 ":guilabel:`Next Appraisal Date`: If the **Appraisals** app is installed, "
 "this field displays the next scheduled appraisal for the employee. This "
@@ -8525,19 +8984,19 @@ msgstr ""
 "के लिए अगला निर्धारित मूल्यांकन प्रदर्शित करती है। डिफ़ॉल्ट रूप से, यह फ़ील्ड कर्मचारी के "
 "अनुबंध की तारीख से छह महीने पर सेट होती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:158
-#: ../../export/content/applications/hr/employees/new_employee.rst:516
+#: ../../export/content/applications/hr/employees/new_employee.rst:159
+#: ../../export/content/applications/hr/employees/new_employee.rst:517
 msgid "Location"
 msgstr "जगह"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:160
+#: ../../export/content/applications/hr/employees/new_employee.rst:161
 msgid ""
 "This section states where the employee is expected to work on any given "
 "workday."
 msgstr ""
 "यह अनुभाग बताता है कि किसी भी कार्यदिवस पर कर्मचारी के कहाँ काम करने की अपेक्षा है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:162
+#: ../../export/content/applications/hr/employees/new_employee.rst:163
 msgid ""
 "Using the drop-down menu, select the typical place the employee works from "
 "in the :guilabel:`Usual Work Location` field. The default options "
@@ -8546,11 +9005,11 @@ msgid ""
 "This field is **required**."
 msgstr ""
 "ड्रॉप-डाउन मेनू का उपयोग करके, :guilabel:`Usual Work Location` फ़ील्ड में उस स्थान का "
-"चयन करें जहाँ से कर्मचारी आमतौर पर काम करता है। डिफ़ॉल्ट विकल्प :icon:`fa-home` "
-":guilabel:`Home`, :icon:`fa-building` :guilabel:`Office`, या :icon:`fa-map-"
-"marker` :guilabel:`Other` हैं। यह फ़ील्ड **अनिवार्य** है।"
+"चयन करें जहाँ से कर्मचारी आमतौर पर काम करता है। डिफ़ॉल्ट विकल्प :icon:`fa-"
+"home` :guilabel:`Home`, :icon:`fa-building` :guilabel:`Office`, या :icon:`fa-"
+"map-marker` :guilabel:`Other` हैं। यह फ़ील्ड **अनिवार्य** है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:167
+#: ../../export/content/applications/hr/employees/new_employee.rst:168
 msgid ""
 "To create a new location, type the location in the field, "
 "click :guilabel:`Create and edit`, and a *Create Usual Work Location* pop-up "
@@ -8560,7 +9019,7 @@ msgstr ""
 "क्लिक करें, और एक *Create Usual Work Location* (सामान्य कार्य स्थान बनाएँ) पॉप-अप "
 "फ़ॉर्म लोड हो जाएगा।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:170
+#: ../../export/content/applications/hr/employees/new_employee.rst:171
 msgid ""
 "The entered name populates the :guilabel:`Work Location` field, but can be "
 "modified. Select the :guilabel:`Work Address` using the drop-down menu. "
@@ -8569,12 +9028,12 @@ msgid ""
 "populated with the current company by default but can be modified if needed."
 msgstr ""
 "दर्ज किया गया नाम :guilabel:`Work Location` फ़ील्ड को भरता है, लेकिन इसे संशोधित "
-"किया जा सकता है। ड्रॉप-डाउन मेनू का उपयोग करके :guilabel:`Work Address` का चयन करें"
-"। :guilabel:`Location Type` का चयन करने के लिए संबंधित बटन पर क्लिक करें। मल्टी-कंपनी "
-"डेटाबेस में, एक :guilabel:`Company` फ़ील्ड दिखाई देता है, जो डिफ़ॉल्ट रूप से वर्तमान कंपनी "
-"के साथ भरा होता है, लेकिन यदि आवश्यक हो तो इसे संशोधित किया जा सकता है।"
+"किया जा सकता है। ड्रॉप-डाउन मेनू का उपयोग करके :guilabel:`Work Address` का चयन "
+"करें। :guilabel:`Location Type` का चयन करने के लिए संबंधित बटन पर क्लिक करें। मल्टी-"
+"कंपनी डेटाबेस में, एक :guilabel:`Company` फ़ील्ड दिखाई देता है, जो डिफ़ॉल्ट रूप से वर्तमान "
+"कंपनी के साथ भरा होता है, लेकिन यदि आवश्यक हो तो इसे संशोधित किया जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:175
+#: ../../export/content/applications/hr/employees/new_employee.rst:176
 msgid ""
 "Click :guilabel:`Save` when the form is complete. The window closes, and the "
 "newly configured location appears in the field."
@@ -8582,7 +9041,7 @@ msgstr ""
 "जब फ़ॉर्म पूरा हो जाए तो :guilabel:`Save` पर क्लिक करें। विंडो बंद हो जाती है, और नव "
 "कॉन्फ़िगर किया गया स्थान फ़ील्ड में दिखाई देता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:178
+#: ../../export/content/applications/hr/employees/new_employee.rst:179
 msgid ""
 "Below the :guilabel:`Usual Work Location` field is a list of the days of the "
 "week. For each day of the work week, select where the employee works that "
@@ -8594,7 +9053,7 @@ msgstr ""
 "काम करता है। चयनित स्थान कर्मचारी के कानबन कार्ड पर दिखाई देता है, जो उस दिन उनके "
 "स्थान को दर्शाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:182
+#: ../../export/content/applications/hr/employees/new_employee.rst:183
 msgid ""
 "Leave the field blank (:guilabel:`Unspecified`) for non-working days, such "
 "as Saturday and Sunday."
@@ -8602,23 +9061,23 @@ msgstr ""
 "गैर-कामकाजी दिनों जैसे शनिवार और रविवार के लिए फ़ीड को खाली छोड़ दें "
 "(:guilabel:`अनस्पेसिफ़ाइड`)।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:184
+#: ../../export/content/applications/hr/employees/new_employee.rst:185
 msgid "A new work location form with all fields filled out."
 msgstr "सभी फ़ीड्स भरे गए एक नया वर्क लोकेशन फ़ॉर्म।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:188
+#: ../../export/content/applications/hr/employees/new_employee.rst:189
 msgid "Note"
 msgstr "नोट"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:190
+#: ../../export/content/applications/hr/employees/new_employee.rst:191
 msgid "Enter any relevant notes in this field."
 msgstr "इस फ़ील्ड में कोई भी प्रासंगिक नोट्स दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:193
+#: ../../export/content/applications/hr/employees/new_employee.rst:194
 msgid "Organization chart"
 msgstr "ऑर्गनाइज़ेशन चार्ट"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:195
+#: ../../export/content/applications/hr/employees/new_employee.rst:196
 msgid ""
 "The related departments appear in this section, illustrating where in the "
 "company the employee works. The numbers to the right of each person listed "
@@ -8628,7 +9087,7 @@ msgstr ""
 "करता है। सूचीबद्ध प्रत्येक व्यक्ति के दाईं ओर की संख्या यह दर्शाती है कि प्रत्येक कर्मचारी के "
 "कितने प्रत्यक्ष या अप्रत्यक्ष रिपोर्ट हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:200
+#: ../../export/content/applications/hr/employees/new_employee.rst:201
 msgid ""
 "After a :guilabel:`Department` is selected, the department's configured "
 "manager automatically populates the :guilabel:`Manager` field."
@@ -8636,20 +9095,20 @@ msgstr ""
 ":guilabel:`डिपार्टमेंट` चुनने के बाद, डिपार्टमेंट का कॉन्फ़िगर किया गया मैनेजर "
 "ऑटोमैटिकली :guilabel:`मैनेजर` फ़ील्ड में भर जाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:203
+#: ../../export/content/applications/hr/employees/new_employee.rst:204
 msgid "The organizational chart including the employee's manager."
 msgstr "कर्मचारी के मैनेजर सहित संगठनात्मक चार्ट।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:209
+#: ../../export/content/applications/hr/employees/new_employee.rst:210
 msgid "Resumé tab"
 msgstr "रिज़्यूमे टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:212
+#: ../../export/content/applications/hr/employees/new_employee.rst:213
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:35
 msgid "Resumé"
 msgstr "रिज़्यूमे"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:214
+#: ../../export/content/applications/hr/employees/new_employee.rst:215
 msgid ""
 "Enter the employee's work history in the *Resumé* tab. Each resumé line must "
 "be entered individually. When creating an entry for the first time, click "
@@ -8664,7 +9123,7 @@ msgstr ""
 "बाद, :guilabel:`रिज्यूमे लाइनें बनाएं` बटन :guilabel:`जोड़ें` बटन से बदल जाता है। प्रत्येक "
 "प्रविष्टि के लिए निम्नलिखित जानकारी दर्ज करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:220
+#: ../../export/content/applications/hr/employees/new_employee.rst:221
 msgid ""
 ":guilabel:`Type`: Click the corresponding button to reflect the *type* of "
 "experience being added. The available options are :guilabel:`Other "
@@ -8676,11 +9135,11 @@ msgstr ""
 "एक्सपीरियंस`, :guilabel:`एजुकेशन`, :guilabel:`ट्रेनिंग`, या :guilabel:`इंटरनल "
 "सर्टिफ़िकेशन`।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:223
+#: ../../export/content/applications/hr/employees/new_employee.rst:224
 msgid ":guilabel:`Title`: Type in the title from the previous work experience."
 msgstr ":guilabel:`टाइटल`: पिछले वर्क एक्सपीरियंस से टाइटल टाइप करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:224
+#: ../../export/content/applications/hr/employees/new_employee.rst:225
 msgid ""
 ":guilabel:`Duration`: Enter the start and end dates for the work experience "
 "using the calendar module in the corresponding fields."
@@ -8688,7 +9147,7 @@ msgstr ""
 ":guilabel:`अवधि`: संबंधित फ़ील्ड में कैलेंडर मॉड्यूल का उपयोग करके कार्य अनुभव की आरंभ और "
 "समाप्ति तिथि दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:226
+#: ../../export/content/applications/hr/employees/new_employee.rst:227
 msgid ""
 ":guilabel:`Certificate`: If there is a relevant certificate to attach, click "
 "the :icon:`fa-upload` :guilabel:`(Upload)` icon, select the desired file, "
@@ -8700,11 +9159,11 @@ msgstr ""
 "और :guilabel:`चुनें` पर क्लिक करें। फ़ील्ड में फ़ाइल का नाम दिखाई देता है, प्रमाणपत्र की "
 "छवि नहीं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:229
+#: ../../export/content/applications/hr/employees/new_employee.rst:230
 msgid ":guilabel:`Description`: Enter any relevant details in this field."
 msgstr ":guilabel:`डिस्क्रिप्शन`: इस फ़ील्ड में कोई भी प्रासंगिक विवरण दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:231
+#: ../../export/content/applications/hr/employees/new_employee.rst:232
 msgid ""
 "Once all the information is entered, click the :guilabel:`Save & Close` "
 "button if there is only one entry to add, or click the :guilabel:`Save & "
@@ -8714,11 +9173,11 @@ msgstr ""
 "Close` बटन पर क्लिक करें, या मौजूदा एंट्री को सेव करने और दूसरी रिज़्यूमे लाइन बनाने के "
 "लिए :guilabel:`Save & New` बटन पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:235
+#: ../../export/content/applications/hr/employees/new_employee.rst:236
 msgid "A resumé entry form with all the information populated."
 msgstr "सभी जानकारी से भरा हुआ एक रिज़्यूमे एंट्री फ़ॉर्म।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:239
+#: ../../export/content/applications/hr/employees/new_employee.rst:240
 msgid ""
 "After the new employee form is saved, the current position and company is "
 "automatically added to the *Resumé* tab, with the end date listed as "
@@ -8727,11 +9186,11 @@ msgstr ""
 "नए कर्मचारी का फ़ॉर्म सहेजने के बाद, वर्तमान पद और कंपनी अपने आप *रिज्यूमे* टैब में जुड़ जाती "
 "है, और समाप्ति तिथि `वर्तमान` के रूप में सूचीबद्ध होती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:245
+#: ../../export/content/applications/hr/employees/new_employee.rst:246
 msgid "Skills & certifications"
 msgstr "स्किल्स और सर्टिफ़िकेशन"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:247
+#: ../../export/content/applications/hr/employees/new_employee.rst:248
 msgid ""
 "An employee's skills and certifications can be entered in the *Resumé* tab "
 "in the same manner that a resumé line is created."
@@ -8739,7 +9198,7 @@ msgstr ""
 "कर्मचारी के कौशल और प्रमाणपत्रों को *रिज्यूमे* टैब में उसी तरह दर्ज किया जा सकता है जिस "
 "तरह एक रिज्यूमे लाइन बनाई जाती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:250
+#: ../../export/content/applications/hr/employees/new_employee.rst:251
 msgid ""
 "To add a skill to an employee record, the skill type must first be "
 "configured. By default, Odoo comes with two :guilabel:`Skill Types` "
@@ -8752,7 +9211,7 @@ msgstr ""
 "*सॉफ्ट स्किल्स*। कर्मचारी रिकॉर्ड में कोई भी स्किल जोड़ने से पहले :ref:`बाकी स्किल टाइप्स "
 "को कॉन्फ़िगर करें <employees/skill-types>`।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:255
+#: ../../export/content/applications/hr/employees/new_employee.rst:256
 msgid ""
 "When adding the first skill to an employee record, a :guilabel:`Pick a skill "
 "from the list` button appears in the *Skills* section of the *Resumé* tab. "
@@ -8765,7 +9224,7 @@ msgstr ""
 "देता है। :guilabel:`पिक अ स्किल फ्रॉम द लिस्ट` बटन पर क्लिक करें, और एक खाली *अपडेट "
 "स्किल्स* पॉप-अप विंडो लोड होती है। प्रत्येक स्किल के लिए निम्नलिखित जानकारी कॉन्फ़िगर करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:260
+#: ../../export/content/applications/hr/employees/new_employee.rst:261
 msgid ""
 ":guilabel:`Category`: Select a :ref:`skill type <employees/skill-types>` by "
 "clicking it."
@@ -8773,7 +9232,7 @@ msgstr ""
 ":guilabel:`कैटगरी`: इस पर क्लिक करके एक :ref:`स्किल टाइप <employees/skill-"
 "types>` चुनें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:261
+#: ../../export/content/applications/hr/employees/new_employee.rst:262
 msgid ""
 ":guilabel:`Skill`: After selecting the :guilabel:`Category`, all "
 "corresponding skills associated with that selected category appear in "
@@ -8786,7 +9245,7 @@ msgstr ""
 "को :guilabel:`श्रेणी` के रूप में चुनने पर :guilabel:`कौशल` अनुभाग में चुनने के लिए कई "
 "भाषाएं प्रस्तुत होती हैं। सूची में से उपयुक्त कौशल पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:267
+#: ../../export/content/applications/hr/employees/new_employee.rst:268
 msgid ""
 "If the desired skill does not appear in the list, it is **not** possible to "
 "add the new skill from this window. New skills must be added from "
@@ -8796,7 +9255,7 @@ msgstr ""
 "**नहीं** है। नई स्किल को :ref:`Skill Types <employees/skill-types>` डैशबोर्ड से "
 "जोड़ा जाना चाहिए।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:271
+#: ../../export/content/applications/hr/employees/new_employee.rst:272
 msgid ""
 ":guilabel:`Skill Level`: Pre-defined skill levels associated with the "
 "selected :guilabel:`Category` appear. Click on a :guilabel:`Skill Level` to "
@@ -8808,7 +9267,7 @@ msgstr ""
 "को :ref:`स्किल टाइप्स <employees/skill-types>` डैशबोर्ड से बनाया और संशोधित किया "
 "जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:275
+#: ../../export/content/applications/hr/employees/new_employee.rst:276
 msgid ""
 "Click the :guilabel:`Save & Close` button if there is only one skill to add, "
 "or click the :guilabel:`Save & New` button to save the current entry and "
@@ -8818,17 +9277,17 @@ msgstr ""
 "एंट्री को सेव करने और तुरंत दूसरी स्किल जोड़ने के लिए :guilabel:`Save & New` बटन पर "
 "क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:278
+#: ../../export/content/applications/hr/employees/new_employee.rst:279
 msgid ""
 "At any point, a new line can be added by clicking the :guilabel:`Add` button."
 msgstr ""
 "किसी भी समय, :guilabel:`जोड़ें` बटन पर क्लिक करके एक नई लाइन जोड़ी जा सकती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:280
+#: ../../export/content/applications/hr/employees/new_employee.rst:281
 msgid "A skill form with the information filled out."
 msgstr "जानकारी से भरा हुआ एक स्किल फ़ॉर्म।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:284
+#: ../../export/content/applications/hr/employees/new_employee.rst:285
 msgid ""
 "Only users with :guilabel:`Officer: Manage all employees` "
 "or :guilabel:`Administrator` rights for the **Employees** app can add or "
@@ -8837,11 +9296,11 @@ msgstr ""
 "केवल **Employees** ऐप्लिकेशन के लिए :guilabel:`Officer: Manage all employees` "
 "या :guilabel:`Administrator` राइट्स वाले यूज़र ही स्किल जोड़ या एडिट कर सकते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:290
+#: ../../export/content/applications/hr/employees/new_employee.rst:291
 msgid "Skill types"
 msgstr "स्किल टाइप"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:292
+#: ../../export/content/applications/hr/employees/new_employee.rst:293
 msgid ""
 "To add a skill to an employee's form, the :guilabel:`Skill Types` must be "
 "configured. Navigate to :menuselection:`Employees app --> Configuration --> "
@@ -8852,7 +9311,7 @@ msgstr ""
 "ज़रूरी है। वर्तमान में कॉन्फ़िगर किए गए स्किल टाइप देखने और नए स्किल टाइप बनाने के "
 "लिए :menuselection:`कर्मचारी ऐप्लिकेशन --> कॉन्फ़िगरेशन --> स्किल टाइप` पर जाएं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:297
+#: ../../export/content/applications/hr/employees/new_employee.rst:298
 msgid ""
 "The default skill of :guilabel:`Languages` is preconfigured with twenty-one "
 "skills, and the default :guilabel:`Soft Skills` is preconfigured with "
@@ -8861,7 +9320,7 @@ msgstr ""
 ":guilabel:`Languages` की डिफ़ॉल्ट स्किल 21 स्किल के साथ पहले से कॉन्फ़िगर की गई है, और "
 "डिफ़ॉल्ट :guilabel:`Soft Skills` 15 स्किल के साथ पहले से कॉन्फ़िगर की गई है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:300
+#: ../../export/content/applications/hr/employees/new_employee.rst:301
 msgid ""
 "Click the :guilabel:`New` button in the corner, and a new *Skill Type* form "
 "loads. Fill out the following details for the new skill type. Repeat this "
@@ -8871,7 +9330,7 @@ msgstr ""
 "जाएगा। नए कौशल प्रकार के लिए निम्नलिखित विवरण भरें। सभी आवश्यक कौशल प्रकारों के लिए "
 "इसे दोहराएं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:303
+#: ../../export/content/applications/hr/employees/new_employee.rst:304
 msgid ""
 ":guilabel:`Skill Type`: Enter a name for the type of skill. This acts as the "
 "parent category for more specific skills and should be generic."
@@ -8879,7 +9338,7 @@ msgstr ""
 ":guilabel:`स्किल टाइप`: स्किल टाइप का नाम दर्ज करें। यह ज़्यादा स्पेसिफ़िक स्किल के लिए "
 "पेरेंट कैटेगरी के रूप में काम करता है और इसे जेनेरिक होना चाहिए।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:307
+#: ../../export/content/applications/hr/employees/new_employee.rst:308
 msgid ""
 ":guilabel:`Certification`: Click the toggle to indicate the skill is a "
 "certification. The toggle turns green, indicating it is active and the skill "
@@ -8889,7 +9348,7 @@ msgstr ""
 "टॉगल हरा हो जाता है, जो यह इंडिकेट करता है कि यह एक्टिव है और स्किल "
 "को :ref:`सर्टिफ़िकेशन <employees/certifications>` टैब में जोड़ा जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:310
+#: ../../export/content/applications/hr/employees/new_employee.rst:311
 msgid ""
 ":guilabel:`Skills`: Click :guilabel:`Add a line` and enter "
 "the :guilabel:`Name` for the new skill, then repeat for all other needed "
@@ -8898,7 +9357,7 @@ msgstr ""
 ":guilabel:`स्किल`: :guilabel:`लाइन जोड़ें` पर क्लिक करें और नए स्किल के "
 "लिए :guilabel:`नाम` दर्ज करें, फिर सभी दूसरे ज़रूरी स्किल के लिए दोहराएं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:312
+#: ../../export/content/applications/hr/employees/new_employee.rst:313
 msgid ""
 ":guilabel:`Levels`: Click :guilabel:`Add a line`, and enter "
 "a :guilabel:`Name` and :guilabel:`Progress` percentage (`0`-`100`) for each "
@@ -8907,7 +9366,7 @@ msgstr ""
 ":guilabel:`लेवल`: :guilabel:`लाइन जोड़ें` पर क्लिक करें, और हर लेवल के लिए "
 "एक :guilabel:`नाम` और :guilabel:`प्रोग्रेस` प्रतिशत (`0`-`100`) दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:315
+#: ../../export/content/applications/hr/employees/new_employee.rst:316
 msgid ""
 "Set a :guilabel:`Default Level` by clicking the toggle on the desired line. "
 "Only **one** level can be selected. The toggle turns green to indicate the "
@@ -8918,7 +9377,7 @@ msgstr ""
 "चुना जा सकता है)। टॉगल हरा हो जाता है जो डिफ़ॉल्ट लेवल को दर्शाता है। आमतौर पर, सबसे "
 "कम लेवल चुना जाता है, लेकिन कोई भी लेवल चुना जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:320
+#: ../../export/content/applications/hr/employees/new_employee.rst:321
 msgid ""
 "To add math skills in yellow, enter `Math` in the :guilabel:`Skill Type` "
 "field, and click the colored circle next to :guilabel:`Color`, and select "
@@ -8936,11 +9395,11 @@ msgstr ""
 "इसे डिफ़ॉल्ट स्किल लेवल के रूप में सेट करने के लिए `Beginner` लाइन पर :guilabel:`डिफ़ॉल्ट "
 "सेट करें` पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:327
+#: ../../export/content/applications/hr/employees/new_employee.rst:328
 msgid "A skill form for a Math skill type, with all the information entered."
 msgstr "Math स्किल टाइप के लिए एक स्किल फ़ॉर्म, सभी जानकारी दर्ज की गई है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:331
+#: ../../export/content/applications/hr/employees/new_employee.rst:332
 msgid ""
 "Once the form is completely filled out, click the :icon:`fa-cloud-"
 "upload` :guilabel:`(Save manually)` icon at the top of the screen, and "
@@ -8953,11 +9412,11 @@ msgstr ""
 "घटते क्रम में पुनर्व्यवस्थित हो जाते हैं, सबसे ऊंचे लेवल के साथ शीर्ष पर, और सबसे कम लेवल के साथ "
 "नीचे, डिफ़ॉल्ट लेवल और उनके दर्ज किए जाने के क्रम की परवाह किए बिना।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:339
+#: ../../export/content/applications/hr/employees/new_employee.rst:340
 msgid "Certifications tab"
 msgstr "सर्टिफ़िकेशन टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:341
+#: ../../export/content/applications/hr/employees/new_employee.rst:342
 msgid ""
 "This tab houses all the employee's certifications, which can be important "
 "for employees who are required to hold specific certifications to perform "
@@ -8970,7 +9429,7 @@ msgstr ""
 "लिए :abbr:`CPA (सर्टिफ़ाइड पब्लिक अकाउंटेंट)` सर्टिफ़िकेशन, या कंस्ट्रक्शन मैनेजर के "
 "लिए :abbr:`CSM (सर्टिफ़ाइड सेफ़्टी मैनेजर)` सर्टिफ़िकेशन।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:346
+#: ../../export/content/applications/hr/employees/new_employee.rst:347
 msgid ""
 "The tab lists each :guilabel:`Certification` in a line, and displays the "
 "validity period in the :guilabel:`From` and :guilabel:`To` fields."
@@ -8978,7 +9437,7 @@ msgstr ""
 "टैब हर :guilabel:`सर्टिफ़िकेशन` को एक लाइन में सूचीबद्ध करता है, और :guilabel:`से` "
 "और :guilabel:`तक` फ़ील्ड में वैधता अवधि प्रदर्शित करता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:350
+#: ../../export/content/applications/hr/employees/new_employee.rst:351
 msgid ""
 "This tab **only** appears if *at least one* :ref:`skill type <employees/"
 "skill-types>` is configured as a *certification*. When adding "
@@ -8989,7 +9448,7 @@ msgstr ""
 "skill-types>` को *सर्टिफ़िकेशन* के रूप में कॉन्फ़िगर किया गया हो। सर्टिफ़िकेशन जोड़ते समय, "
 "**सिर्फ़** सर्टिफ़िकेशन के रूप में मार्क किए गए स्किल टाइप को सेलेक्ट किया जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:354
+#: ../../export/content/applications/hr/employees/new_employee.rst:355
 msgid ""
 "To add a certification, click :guilabel:`Add a line` in the *Certifications* "
 "tab and a blank *Create Certification* pop-up window loads. Enter the "
@@ -8998,11 +9457,11 @@ msgstr ""
 "सर्टिफ़िकेशन जोड़ने के लिए, *सर्टिफ़िकेशन* टैब में :guilabel:`लाइन जोड़ें` पर क्लिक करें और एक "
 "खाली *सर्टिफ़िकेशन बनाएं* पॉप-अप विंडो लोड होगी। फ़ॉर्म पर निम्नलिखित जानकारी दर्ज करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:357
+#: ../../export/content/applications/hr/employees/new_employee.rst:358
 msgid ":guilabel:`Skill`: Click on the specific certification being added."
 msgstr ":guilabel:`कौशल`: जोड़े जा रहे विशिष्ट प्रमाणन पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:358
+#: ../../export/content/applications/hr/employees/new_employee.rst:359
 msgid ""
 ":guilabel:`Validity`: Click into the two fields, and select the start and "
 "end dates for the certification, using the calendar selector."
@@ -9010,7 +9469,7 @@ msgstr ""
 ":guilabel:`वैधता`: दोनों फ़ील्ड में क्लिक करें, और कैलेंडर सिलेक्टर का उपयोग करके सर्टिफ़िकेशन "
 "के लिए शुरुआत और समाप्ति तिथियां सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:360
+#: ../../export/content/applications/hr/employees/new_employee.rst:361
 msgid ""
 ":guilabel:`Certificate`: If a proof of certification document is available, "
 "such as a course completion certificate, it can be added in this field. "
@@ -9022,7 +9481,7 @@ msgstr ""
 "upload` :guilabel:`(अपलोड)` आइकन पर क्लिक करें, फ़ाइल पर जाएं और :guilabel:`चुनें` "
 "पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:364
+#: ../../export/content/applications/hr/employees/new_employee.rst:365
 msgid ""
 "When the form is complete, click :guilabel:`Save & New` to add the "
 "certification and add another, or :guilabel:`Save & Close` to add the "
@@ -9032,13 +9491,13 @@ msgstr ""
 "और नया` पर क्लिक करें, या सर्टिफ़िकेशन जोड़ने और पॉप-अप विंडो बंद करने के "
 "लिए :guilabel:`सेव करें और बंद करें` पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:367
+#: ../../export/content/applications/hr/employees/new_employee.rst:368
 msgid ""
 "The certification pop-up with everything configured for a Fire Safety Course "
 "certification."
 msgstr "फ़ायर सेफ़्टी कोर्स प्रमाणन के लिए सब कुछ कॉन्फ़िगर किया हुआ सर्टिफिकेशन पॉप-अप।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:373
+#: ../../export/content/applications/hr/employees/new_employee.rst:374
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:228
 #: ../../export/content/applications/hr/payroll/payroll_localizations/hong_kong.rst:366
 #: ../../export/content/applications/hr/payroll/payroll_localizations/jordan.rst:82
@@ -9051,7 +9510,7 @@ msgstr "फ़ायर सेफ़्टी कोर्स प्रमाण
 msgid "Personal tab"
 msgstr "पर्सनल टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:375
+#: ../../export/content/applications/hr/employees/new_employee.rst:376
 msgid ""
 "No information in the *Personal* tab is required to create an employee. "
 "However, some information in this section may be necessary for the company's "
@@ -9060,7 +9519,7 @@ msgstr ""
 "कर्मचारी बनाने के लिए *व्यक्तिगत* टैब में किसी भी जानकारी की आवश्यकता नहीं होती है। "
 "हालांकि, कंपनी के पेरोल विभाग के लिए इस अनुभाग की कुछ जानकारी आवश्यक हो सकती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:378
+#: ../../export/content/applications/hr/employees/new_employee.rst:379
 msgid ""
 "To properly process payslips and ensure all deductions are accounted for, it "
 "is recommended to check with the accounting department and payroll "
@@ -9074,7 +9533,7 @@ msgstr ""
 "लिए, उनके पास :guilabel:`बैंक खाते` फ़ील्ड में एक विश्वसनीय खाता सूचीबद्ध होना "
 "**चाहिए**।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:383
+#: ../../export/content/applications/hr/employees/new_employee.rst:384
 msgid ""
 "Enter the various information in the following sections and fields of the "
 "*Personal* tab. Fields are entered either using a drop-down menu, clicking a "
@@ -9084,29 +9543,29 @@ msgstr ""
 "प्रविष्टि या तो ड्रॉप-डाउन मेनू का उपयोग करके, चेकबॉक्स पर क्लिक करके, या जानकारी टाइप "
 "करके की जाती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:387
+#: ../../export/content/applications/hr/employees/new_employee.rst:388
 msgid ""
 "Depending on the localization setting, other fields or sections may be "
 "present."
 msgstr "स्थानीयकरण सेटिंग के आधार पर, अन्य फ़ील्ड या अनुभाग मौजूद हो सकते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:392
+#: ../../export/content/applications/hr/employees/new_employee.rst:393
 msgid "Private contact"
 msgstr "प्राइवेट संपर्क"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:394
+#: ../../export/content/applications/hr/employees/new_employee.rst:395
 msgid "Fill out the following fields in this section:"
 msgstr "इस सेक्शन में निम्नलिखित फ़ील्ड भरें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:396
+#: ../../export/content/applications/hr/employees/new_employee.rst:397
 msgid ":guilabel:`Email`: Enter the employee's personal email address."
 msgstr ":guilabel:`ईमेल`: कर्मचारी का व्यक्तिगत ईमेल पता दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:397
+#: ../../export/content/applications/hr/employees/new_employee.rst:398
 msgid ":guilabel:`Phone`: Enter the employee's personal phone number."
 msgstr ":guilabel:`फ़ोन`: कर्मचारी का व्यक्तिगत फ़ोन नंबर दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:398
+#: ../../export/content/applications/hr/employees/new_employee.rst:399
 msgid ""
 ":guilabel:`Bank Accounts`: Enter the bank account number using the drop-down "
 "menu. If the bank account does not exist, :ref:`create a new bank account "
@@ -9115,11 +9574,11 @@ msgstr ""
 ":guilabel:`बैंक अकाउंट`: ड्रॉप-डाउन मेन्यू का उपयोग करके बैंक अकाउंट नंबर दर्ज करें। अगर बैंक "
 "अकाउंट मौजूद नहीं है, तो :ref:`नया बैंक अकाउंट बनाएं <employees/add-bank>` और उसे चुनें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:404
+#: ../../export/content/applications/hr/employees/new_employee.rst:405
 msgid "Add a bank account"
 msgstr "बैंक अकाउंट जोड़ें"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:406
+#: ../../export/content/applications/hr/employees/new_employee.rst:407
 msgid ""
 "When an employee is added to the database, their bank account must also be "
 "added to pay them using the **Payroll** app. To add a new bank account, "
@@ -9131,7 +9590,7 @@ msgstr ""
 "*निजी संपर्क* सेक्शन में :guilabel:`बैंक खाते` फ़ील्ड पर क्लिक करें, फिर :guilabel:`बनाएँ` "
 "पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:410
+#: ../../export/content/applications/hr/employees/new_employee.rst:411
 msgid ""
 "A blank *Create Bank Accounts* pop-up window loads. Enter the following "
 "information on the form:"
@@ -9139,13 +9598,13 @@ msgstr ""
 "एक खाली *बैंक खाते बनाएँ* पॉप-अप विंडो लोड होती है। फ़ॉर्म में निम्नलिखित जानकारी दर्ज "
 "करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:412
+#: ../../export/content/applications/hr/employees/new_employee.rst:413
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:481
 msgid ""
 ":guilabel:`Account Number`: Enter the bank account number in this field."
 msgstr ":guilabel:`अकाउंट नंबर`: इस फ़ील्ड में बैंक अकाउंट नंबर दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:413
+#: ../../export/content/applications/hr/employees/new_employee.rst:414
 msgid ""
 ":guilabel:`Clearing Number`: The default name for this field "
 "is :guilabel:`Clearing Number` but may be different depending on the "
@@ -9162,7 +9621,7 @@ msgstr ""
 "करता है जबकि यूनाइटेड किंगडम :guilabel:`सॉर्ट कोड` प्रदर्शित करता है। इसके बाद, इस "
 "फ़ील्ड में संबंधित कोड दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:418
+#: ../../export/content/applications/hr/employees/new_employee.rst:419
 msgid ""
 ":guilabel:`BIC/SWIFT`: Enter the Bank Identifier Code in this field. This is "
 "used for international wire transfers."
@@ -9170,7 +9629,7 @@ msgstr ""
 ":guilabel:`BIC/SWIFT`: इस फ़ील्ड में बैंक आइडेंटिफ़ायर कोड दर्ज करें। इसका उपयोग "
 "अंतर्राष्ट्रीय वायर ट्रांसफ़र के लिए किया जाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:420
+#: ../../export/content/applications/hr/employees/new_employee.rst:421
 msgid ""
 ":guilabel:`Bank Account Type`: Select the kind of account being added. The "
 "options are :guilabel:`Checking` or :guilabel:`Savings`."
@@ -9178,11 +9637,11 @@ msgstr ""
 ":guilabel:`बैंक खाता प्रकार`: जोड़े जा रहे खाते का प्रकार चुनें। इसके "
 "विकल्प :guilabel:`चेकिंग` या :guilabel:`सेविंग्स` हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:422
+#: ../../export/content/applications/hr/employees/new_employee.rst:423
 msgid ":guilabel:`Holder Name`: Enter the account holder's name in this field."
 msgstr ":guilabel:`धारक का नाम`: इस फ़ील्ड में खाताधारक का नाम दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:423
+#: ../../export/content/applications/hr/employees/new_employee.rst:424
 msgid ""
 ":guilabel:`Trust bank account`: Click the toggle so it appears green, "
 "indicating it is a trusted bank account."
@@ -9190,7 +9649,7 @@ msgstr ""
 ":guilabel:`विश्वसनीय बैंक खाता`: टॉगल पर क्लिक करें ताकि यह हरा दिखाई दे, जो यह "
 "दर्शाता है कि यह एक विश्वसनीय बैंक खाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:425
+#: ../../export/content/applications/hr/employees/new_employee.rst:426
 msgid ""
 ":guilabel:`Company`: This field only appears in a multi-company environment. "
 "Select a company to restrict the bank account to be used **only** with the "
@@ -9201,7 +9660,7 @@ msgstr ""
 "**केवल** चयनित कंपनी के साथ उपयोग करने के लिए सीमित करने हेतु कंपनी चुनें। इस फ़ील्ड को "
 "खाली छोड़ने पर यह जानकारी सभी कंपनियों को दिखाई देगी।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:428
+#: ../../export/content/applications/hr/employees/new_employee.rst:429
 msgid ""
 ":guilabel:`Employee`: The employee record the bank account is being added to "
 "automatically appears in this field and **cannot** be modified."
@@ -9209,11 +9668,11 @@ msgstr ""
 ":guilabel:`कर्मचारी`: जिस कर्मचारी रिकॉर्ड में बैंक खाता जोड़ा जा रहा है, वह स्वचालित "
 "रूप से इस फ़ील्ड में दिखाई देता है और इसे संशोधित **नहीं** किया जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:430
+#: ../../export/content/applications/hr/employees/new_employee.rst:431
 msgid "*Note* tab: Enter any relevant notes in the *Note* tab."
 msgstr "*नोट* टैब: *नोट* टैब में कोई भी प्रासंगिक नोट दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:431
+#: ../../export/content/applications/hr/employees/new_employee.rst:432
 msgid ""
 "*Bank Information* tab: Enter the :guilabel:`Bank Name`, :guilabel:`Bank "
 "Address`, and the :guilabel:`Intermediary SWIFT` code in the corresponding "
@@ -9222,11 +9681,11 @@ msgstr ""
 "*बैंक जानकारी* टैब: संबंधित फ़ील्ड में :guilabel:`बैंक का नाम`, :guilabel:`बैंक का पता`, "
 "और :guilabel:`इंटरमीडियरी SWIFT` कोड दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:434
+#: ../../export/content/applications/hr/employees/new_employee.rst:435
 msgid "The Create Bank Account form with all the information filled out."
 msgstr "सभी जानकारी भरे गए बैंक अकाउंट बनाएं फ़ॉर्म।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:438
+#: ../../export/content/applications/hr/employees/new_employee.rst:439
 msgid ""
 "To ensure payments are processed and sent to the bank account, mark the bank "
 "account as :guilabel:`Trusted`. Having an untrusted bank account for an "
@@ -9238,7 +9697,7 @@ msgstr ""
 "लिए :guilabel:`अविश्वसनीय` बैंक अकाउंट होने से डायरेक्ट डिपोजिट को प्रोसेस करते समय "
 "**पेरोल** ऐप्लिकेशन में गड़बड़ी होती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:442
+#: ../../export/content/applications/hr/employees/new_employee.rst:443
 msgid ""
 "If issuing paper checks or paying via cash, the :guilabel:`Bank` field does "
 "not need to be configured."
@@ -9246,11 +9705,11 @@ msgstr ""
 "अगर पेपर चेक जारी करते हैं या कैश के जरिए भुगतान करते हैं, तो :guilabel:`बैंक` फ़ील्ड को "
 "कॉन्फ़िगर करने की जरूरत नहीं है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:446
+#: ../../export/content/applications/hr/employees/new_employee.rst:447
 msgid "Personal information"
 msgstr "व्यक्तिगत जानकारी"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:448
+#: ../../export/content/applications/hr/employees/new_employee.rst:449
 msgid ""
 "The *Personal Information* section houses some basic information used "
 "primarily for payroll and tax purposes. Fill out the following fields in "
@@ -9259,7 +9718,7 @@ msgstr ""
 "*व्यक्तिगत जानकारी* सेक्शन में मुख्य रूप से पेरोल और टैक्स उद्देश्यों के लिए उपयोग की जाने वाली "
 "कुछ बुनियादी जानकारी होती है। इस सेक्शन में निम्नलिखित फ़ील्ड भरें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:451
+#: ../../export/content/applications/hr/employees/new_employee.rst:452
 msgid ""
 ":guilabel:`Legal Name`: Enter the employee's legal name in this field. By "
 "default, the name entered in the :ref:`general information section "
@@ -9271,13 +9730,13 @@ msgstr ""
 "फ़ील्ड में भर जाता है। यह वह नाम है जो आमतौर पर टैक्स फाइल करने के लिए उपयोग किया जाता "
 "है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:454
+#: ../../export/content/applications/hr/employees/new_employee.rst:455
 msgid ""
 ":guilabel:`Birthday`: Select the birthday of the employee using the calendar "
 "selector."
 msgstr ":guilabel:`जन्मदिन`: कैलेंडर सिलेक्टर का उपयोग करके कर्मचारी का जन्मदिन चुनें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:455
+#: ../../export/content/applications/hr/employees/new_employee.rst:456
 msgid ""
 ":guilabel:`Place of Birth`: Enter both the city or town the employee was "
 "born in the first field, and select the country in the second field using "
@@ -9286,7 +9745,7 @@ msgstr ""
 ":guilabel:`जन्म स्थान`: पहले फ़ील्ड में वह शहर या कस्बा दर्ज करें जहाँ कर्मचारी का जन्म हुआ "
 "था, और दूसरे फ़ील्ड में ड्रॉप-डाउन मेनू का उपयोग करके देश चुनें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:457
+#: ../../export/content/applications/hr/employees/new_employee.rst:458
 msgid ""
 ":guilabel:`Sex`: Select the employee's legal sex recognized by the state "
 "from the drop-down menu. The default options are :guilabel:`Male` "
@@ -9295,7 +9754,7 @@ msgstr ""
 ":guilabel:`लिंग`: ड्रॉप-डाउन मेनू से राज्य द्वारा मान्यता प्राप्त कर्मचारी का कानूनी लिंग "
 "चुनें। डिफ़ॉल्ट विकल्प :guilabel:`पुरुष` और :guilabel:`महिला` हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:459
+#: ../../export/content/applications/hr/employees/new_employee.rst:460
 msgid ""
 ":guilabel:`Disabled`: Check this box if the employee is considered legally "
 "disabled."
@@ -9303,7 +9762,7 @@ msgstr ""
 ":guilabel:`विकलांग`: अगर कर्मचारी को कानूनी रूप से विकलांग माना जाता है तो इस बॉक्स "
 "को चेक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:460
+#: ../../export/content/applications/hr/employees/new_employee.rst:461
 msgid ""
 ":guilabel:`Payslip Language`: Select the language used when printing the "
 "employee's payslips. Each language must be :doc:`added to the database "
@@ -9313,11 +9772,11 @@ msgstr ""
 "चुनें। प्रत्येक भाषा को ड्रॉप-डाउन मेन्यू में दिखाई देने के लिए :doc:`डेटाबेस में जोड़ा <../../"
 "general/users/language>` जाना चाहिए।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:465
+#: ../../export/content/applications/hr/employees/new_employee.rst:466
 msgid "Citizenship"
 msgstr "नागरिकता"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:467
+#: ../../export/content/applications/hr/employees/new_employee.rst:468
 msgid ""
 "The *Citizenship* section outlines all the information relating to the "
 "employee's citizenship. This section is primarily for employees who are "
@@ -9332,7 +9791,7 @@ msgstr ""
 "लिए वर्क वीज़ा पर, इस जानकारी की आवश्यकता हो सकती है। इंस्टॉल किए गए लोकलाइज़ेशन के "
 "आधार पर, अलग-अलग फ़ील्ड दिखाई दे सकते हैं। इस सेक्शन में निम्नलिखित फ़ील्ड भरें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:473
+#: ../../export/content/applications/hr/employees/new_employee.rst:474
 msgid ""
 ":guilabel:`Nationality (Country)`: Select the country the employee is from "
 "using the drop-down menu."
@@ -9340,7 +9799,7 @@ msgstr ""
 ":guilabel:`राष्ट्रीयता (देश)`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके उस देश को सेलेक्ट करें जहाँ "
 "से कर्मचारी है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:475
+#: ../../export/content/applications/hr/employees/new_employee.rst:476
 msgid ""
 ":guilabel:`Non-resident`: Click this checkbox if the employee is not a legal "
 "resident of the country where they are employed."
@@ -9348,7 +9807,7 @@ msgstr ""
 ":guilabel:`अनिवासी`: यदि कर्मचारी उस देश का कानूनी निवासी नहीं है जहाँ वह कार्यरत "
 "है, तो इस चेकबॉक्स पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:477
+#: ../../export/content/applications/hr/employees/new_employee.rst:478
 msgid ""
 ":guilabel:`Identification No`: Enter the employee's national identification "
 "number issued by the government in this field. Some examples are "
@@ -9359,11 +9818,11 @@ msgstr ""
 "नंबर दर्ज करें। कुछ उदाहरण हैं आधार, :abbr:`SIN (सोशल इंश्योरेंस नंबर)`, :abbr:`SSN "
 "(सोशल सिक्योरिटी नंबर)`, या :abbr:`NIN (नेशनल आइडेंटिफिकेशन नंबर)`।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:480
+#: ../../export/content/applications/hr/employees/new_employee.rst:481
 msgid ":guilabel:`Passport No`: Enter the employee's passport number."
 msgstr ":guilabel:`पासपोर्ट नंबर`: कर्मचारी का पासपोर्ट नंबर एंटर करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:483
+#: ../../export/content/applications/hr/employees/new_employee.rst:484
 msgid ""
 "Depending on the installed :doc:`payroll localization <../payroll/"
 "payroll_localizations>`, additional fields may appear in this section."
@@ -9371,11 +9830,11 @@ msgstr ""
 "इंस्टॉल किए गए :doc:`पेरोल लोकलाइज़ेशन <../payroll/payroll_localizations>` के आधार "
 "पर, इस सेक्शन में अतिरिक्त फ़ील्ड दिखाई दे सकते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:487
+#: ../../export/content/applications/hr/employees/new_employee.rst:488
 msgid "Visa & work permit"
 msgstr "वीज़ा और वर्क परमिट"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:489
+#: ../../export/content/applications/hr/employees/new_employee.rst:490
 msgid ""
 "This section should be filled in if the employee is working on some type of "
 "work permit or visa. This section may be left blank if they do not require "
@@ -9386,17 +9845,17 @@ msgstr ""
 "कर रहा है। यदि उन्हें रोज़गार के लिए किसी वर्क परमिट या वीज़ा की आवश्यकता नहीं है तो इस "
 "अनुभाग को खाली छोड़ा जा सकता है। इस अनुभाग में निम्नलिखित लागू फ़ील्ड दर्ज करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:493
+#: ../../export/content/applications/hr/employees/new_employee.rst:494
 msgid ""
 ":guilabel:`Visa No`: Enter the employee's visa number. When entered, "
 "an :guilabel:`Expires on` field appears. Select the date the visa expires "
 "using the calendar selector."
 msgstr ""
-":guilabel:`Visa No`: कर्मचारी का वीज़ा नंबर दर्ज करें। दर्ज होने पर, एक "
-":guilabel:`Expires on` फ़ील्ड दिखाई देता है। कैलेंडर चयनकर्ता का उपयोग करके वह तारीख "
-"चुनें जब वीज़ा समाप्त होता है।"
+":guilabel:`Visa No`: कर्मचारी का वीज़ा नंबर दर्ज करें। दर्ज होने पर, "
+"एक :guilabel:`Expires on` फ़ील्ड दिखाई देता है। कैलेंडर चयनकर्ता का उपयोग करके वह "
+"तारीख चुनें जब वीज़ा समाप्त होता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:495
+#: ../../export/content/applications/hr/employees/new_employee.rst:496
 msgid ""
 ":guilabel:`Work Permit No`: Enter the employee's work permit number. When "
 "entered, an :guilabel:`Expires on` field appears. Select the date the work "
@@ -9406,7 +9865,7 @@ msgstr ""
 "एक :guilabel:`समाप्ति तिथि` फ़ील्ड दिखाई देती है। कैलेंडर का उपयोग करके वह तारीख चुनें "
 "जब वर्क परमिट समाप्त होता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:497
+#: ../../export/content/applications/hr/employees/new_employee.rst:498
 msgid ""
 ":guilabel:`Document`: click the :icon:`fa-upload` :guilabel:`(Upload)` icon, "
 "then navigate to the work permit or visa file in the file explorer, and "
@@ -9416,7 +9875,7 @@ msgstr ""
 "करें, फिर फ़ाइल एक्सप्लोरर में वर्क परमिट या वीज़ा फ़ाइल पर नेविगेट करें, और इसे अपलोड करने "
 "के लिए :guilabel:`Select` पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:501
+#: ../../export/content/applications/hr/employees/new_employee.rst:502
 msgid ""
 "Typically, an employee needs either a visa *or* a work permit, not both. For "
 "this reason, only one document can be added to the :guilabel:`Document` "
@@ -9425,11 +9884,11 @@ msgstr ""
 "आमतौर पर, एक कर्मचारी को वीज़ा *या* वर्क परमिट की आवश्यकता होती है, दोनों की नहीं। "
 "इस कारण से, :guilabel:`दस्तावेज़` फ़ील्ड में सिर्फ़ एक दस्तावेज़ जोड़ा जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:505
+#: ../../export/content/applications/hr/employees/new_employee.rst:506
 msgid "Emergency contact"
 msgstr "आपातकालीन संपर्क"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:507
+#: ../../export/content/applications/hr/employees/new_employee.rst:508
 msgid ""
 "This section details the person to contact in the event of an emergency. "
 "Enter the following fields:"
@@ -9437,11 +9896,11 @@ msgstr ""
 "यह अनुभाग आपात स्थिति में संपर्क करने वाले व्यक्ति का विवरण देता है। निम्नलिखित फ़ील्ड दर्ज "
 "करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:509
+#: ../../export/content/applications/hr/employees/new_employee.rst:510
 msgid ":guilabel:`Contact`: Enter the emergency contact's name."
 msgstr ":guilabel:`संपर्क`: आपातकालीन संपर्क का नाम दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:510
+#: ../../export/content/applications/hr/employees/new_employee.rst:511
 msgid ""
 ":guilabel:`Phone`: Enter the emergency contact's phone number. It is "
 "recommended to enter a phone number that the person has the most access to, "
@@ -9450,7 +9909,7 @@ msgstr ""
 ":guilabel:`फ़ोन`: आपातकालीन संपर्क का फ़ोन नंबर दर्ज करें। यह सिफारिश की जाती है कि "
 "ऐसा फ़ोन नंबर दर्ज करें जिस तक व्यक्ति की सबसे अधिक पहुंच हो, आमतौर पर मोबाइल फ़ोन।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:518
+#: ../../export/content/applications/hr/employees/new_employee.rst:519
 msgid ""
 "The *Location* section is visible for all employees, and does not require "
 "any other apps to be installed for this section to be visible. Enter the "
@@ -9460,14 +9919,13 @@ msgstr ""
 "देने के लिए किसी अन्य ऐप को इंस्टॉल करने की आवश्यकता नहीं है। इस अनुभाग में निम्नलिखित "
 "जानकारी दर्ज करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:521
+#: ../../export/content/applications/hr/employees/new_employee.rst:522
 msgid ""
 ":guilabel:`Private Address`: Enter the employee's current home address in "
 "this field."
-msgstr ""
-":guilabel:`निजी पता`: इस फ़ील्ड में कर्मचारी का वर्तमान गृह पता दर्ज करें।"
+msgstr ":guilabel:`निजी पता`: इस फ़ील्ड में कर्मचारी का वर्तमान गृह पता दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:522
+#: ../../export/content/applications/hr/employees/new_employee.rst:523
 msgid ""
 ":guilabel:`Home-Work Distance`: Enter the number of miles or kilometers the "
 "employee commutes to work, in one direction. The unit of measure can be "
@@ -9481,11 +9939,11 @@ msgstr ""
 "फ़ील्ड **केवल** तभी आवश्यक है यदि कर्मचारी को यात्रा की दूरी के आधार पर किसी भी प्रकार "
 "का कम्यूटर लाभ या कर कटौती प्राप्त हो रही है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:528
+#: ../../export/content/applications/hr/employees/new_employee.rst:529
 msgid "Family"
 msgstr "परिवार"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:530
+#: ../../export/content/applications/hr/employees/new_employee.rst:531
 msgid ""
 "The *Family* section is used for tax purposes and affects the **Payroll** "
 "app. Enter the following information in the following fields:"
@@ -9494,7 +9952,7 @@ msgstr ""
 "**Payroll** (पेरोल) ऐप को प्रभावित करता है। निम्नलिखित फ़ील्ड में निम्नलिखित जानकारी "
 "दर्ज करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:533
+#: ../../export/content/applications/hr/employees/new_employee.rst:534
 msgid ""
 ":guilabel:`Marital Status`: Select the marital status for the employee using "
 "the drop-down menu. The default options "
@@ -9506,7 +9964,7 @@ msgstr ""
 "ऑप्शन :guilabel:`अविवाहित`, :guilabel:`विवाहित`, :guilabel:`लीगल "
 "कोहैबिटेंट`, :guilabel:`विधुर` और :guilabel:`तलाकशुदा` हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:537
+#: ../../export/content/applications/hr/employees/new_employee.rst:538
 msgid ""
 "If :guilabel:`Married` or :guilabel:`Legal Cohabitant` is selected, two "
 "additional fields appear: :guilabel:`Spouse Legal Name` "
@@ -9517,7 +9975,7 @@ msgstr ""
 "अतिरिक्त फ़ील्ड दिखाई देते हैं: :guilabel:`पति/पत्नी का कानूनी नाम` और :guilabel:`पति/"
 "पत्नी की जन्मतिथि`। इन फ़ील्ड में संबंधित जानकारी एंटर करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:540
+#: ../../export/content/applications/hr/employees/new_employee.rst:541
 msgid ""
 ":guilabel:`Dependent Children`: Enter the number of dependent children. This "
 "number is the same number used for calculating tax deductions, and should "
@@ -9527,11 +9985,11 @@ msgstr ""
 "के लिए इस्तेमाल की जाने वाली संख्या के समान है, और लागू आश्रितों से संबंधित सभी टैक्स नियमों "
 "का पालन करनी चाहिए।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:545
+#: ../../export/content/applications/hr/employees/new_employee.rst:546
 msgid "Education"
 msgstr "शिक्षा"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:547
+#: ../../export/content/applications/hr/employees/new_employee.rst:548
 msgid ""
 "The *Education* section allows for only one entry, and should be populated "
 "with the highest degree the employee has earned. Configure the following "
@@ -9540,7 +9998,7 @@ msgstr ""
 "*Education* (शिक्षा) अनुभाग केवल एक प्रविष्टि की अनुमति देता है, और इसे कर्मचारी द्वारा "
 "अर्जित उच्चतम डिग्री के साथ भरा जाना चाहिए। निम्नलिखित फ़ील्ड कॉन्फ़िगर करें:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:550
+#: ../../export/content/applications/hr/employees/new_employee.rst:551
 msgid ""
 ":guilabel:`Certificate Level`: Select the highest degree the employee has "
 "earned using the drop-down menu. The default options "
@@ -9552,7 +10010,7 @@ msgstr ""
 "विकल्प :guilabel:`स्नातक`, :guilabel:`बैचलर`, :guilabel:`मास्टर`, :guilabel:`डॉक्टर`, "
 "और :guilabel:`अन्य` हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:553
+#: ../../export/content/applications/hr/employees/new_employee.rst:554
 msgid ""
 ":guilabel:`Field of Study`: Type in the subject the employee studied, such "
 "as `Business` or `Marketing and Communications`."
@@ -9560,11 +10018,11 @@ msgstr ""
 ":guilabel:`अध्ययन का क्षेत्र`: वह विषय लिखें जिसका कर्मचारी ने अध्ययन किया है, जैसे "
 "`Business` या `Marketing and Communications`।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:557
+#: ../../export/content/applications/hr/employees/new_employee.rst:558
 msgid "Documents"
 msgstr "दस्तावेज़"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:559
+#: ../../export/content/applications/hr/employees/new_employee.rst:560
 msgid ""
 "The *Documents* section allows for uploading any relevant documents on the "
 "employee form. Click the :icon:`fa-upload` :guilabel:`(Upload)` icon next to "
@@ -9576,11 +10034,11 @@ msgstr ""
 "आइकन पर क्लिक करें, फ़ाइल पर नेविगेट करें, फिर फ़ाइल अपलोड करने के लिए :guilabel:`चुनें` "
 "पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:563
+#: ../../export/content/applications/hr/employees/new_employee.rst:564
 msgid "The documents that can be uploaded are:"
 msgstr "जो दस्तावेज़ अपलोड किए जा सकते हैं वे हैं:"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:565
+#: ../../export/content/applications/hr/employees/new_employee.rst:566
 msgid ""
 ":guilabel:`ID Card Copy`: Upload any relevant IDs that may be required by "
 "the payroll or HR department."
@@ -9588,7 +10046,7 @@ msgstr ""
 ":guilabel:`आईडी कार्ड कॉपी`: कोई भी प्रासंगिक आईडी अपलोड करें जो पेरोल या एचआर "
 "विभाग द्वारा आवश्यक हो सकती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:567
+#: ../../export/content/applications/hr/employees/new_employee.rst:568
 msgid ""
 ":guilabel:`Driving License`: Upload the employee's driver's license. This "
 "field may be necessary if the employee drives as part of their job, or is "
@@ -9598,7 +10056,7 @@ msgstr ""
 "आवश्यक हो सकती है जब कर्मचारी अपने काम के हिस्से के रूप में गाड़ी चलाता है, या उसे इस्तेमाल "
 "करने के लिए कंपनी की कार दी जाती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:569
+#: ../../export/content/applications/hr/employees/new_employee.rst:570
 msgid ""
 ":guilabel:`SIM Card Copy`: Upload a copy of the SIM card if the employee is "
 "using a work-issued mobile phone."
@@ -9606,7 +10064,7 @@ msgstr ""
 ":guilabel:`सिम कार्ड की कॉपी`: अगर कर्मचारी काम से जारी किए गए मोबाइल फ़ोन का "
 "इस्तेमाल कर रहा है तो सिम कार्ड की कॉपी अपलोड करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:571
+#: ../../export/content/applications/hr/employees/new_employee.rst:572
 msgid ""
 ":guilabel:`Internet Subscription Invoice`: If the employee is receiving "
 "benefits or compensation for their internet service, upload their invoice in "
@@ -9615,7 +10073,7 @@ msgstr ""
 ":guilabel:`इंटरनेट सब्सक्रिप्शन इनवॉइस`: अगर कर्मचारी अपनी इंटरनेट सर्विस के लिए "
 "बेनिफ़िट्स या मुआवज़ा प्राप्त कर रहा है, तो इस फ़ील्ड में उनका इनवॉइस अपलोड करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:575
+#: ../../export/content/applications/hr/employees/new_employee.rst:576
 msgid ""
 "The :guilabel:`Internet Subscription Invoice` field is for documentation "
 "purposes only. Employees must use the :doc:`Expenses app <../../finance/"
@@ -9623,15 +10081,15 @@ msgid ""
 "the *Payslip Adjustments* tab."
 msgstr ""
 "यह :guilabel:`इंटरनेट सदस्यता चालान` फ़ील्ड केवल दस्तावेज़ीकरण उद्देश्यों के लिए है। "
-"कर्मचारियों को खर्चों की प्रतिपूर्ति का अनुरोध करने के लिए :doc:`Expenses (खर्च) ऐप <../"
-"../finance/expenses>` का उपयोग करना चाहिए, या *Payslip Adjustments* (पेस्लिप "
-"समायोजन) टैब में मुआवजे को परिभाषित करना चाहिए।"
+"कर्मचारियों को खर्चों की प्रतिपूर्ति का अनुरोध करने के लिए :doc:`Expenses (खर्च) ऐप "
+"<../../finance/expenses>` का उपयोग करना चाहिए, या *Payslip Adjustments* "
+"(पेस्लिप समायोजन) टैब में मुआवजे को परिभाषित करना चाहिए।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:580
+#: ../../export/content/applications/hr/employees/new_employee.rst:581
 msgid "Badges tab"
 msgstr "Badges (बैज) टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:582
+#: ../../export/content/applications/hr/employees/new_employee.rst:583
 msgid ""
 "The *Badges* tab is where all earned and awarded :doc:`badges <badges>` are "
 "housed."
@@ -9639,11 +10097,11 @@ msgstr ""
 "*Badges* (बैज) टैब वह स्थान है जहाँ सभी अर्जित और प्रदान किए गए :doc:`बैज <badges>` "
 "रखे जाते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:587
+#: ../../export/content/applications/hr/employees/new_employee.rst:588
 msgid "Settings tab"
 msgstr "सेटिंग टैब"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:589
+#: ../../export/content/applications/hr/employees/new_employee.rst:590
 msgid ""
 "The *Settings* tab provides various fields for different applications within "
 "the database. Depending on the installed applications, different fields and "
@@ -9653,11 +10111,11 @@ msgstr ""
 "करता है। इंस्टॉल किए गए अनुप्रयोगों के आधार पर, इस टैब में अलग-अलग फ़ील्ड और अनुभाग दिखाई "
 "दे सकते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:593
+#: ../../export/content/applications/hr/employees/new_employee.rst:594
 msgid "User"
 msgstr "उपयोगकर्ता"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:595
+#: ../../export/content/applications/hr/employees/new_employee.rst:596
 msgid ""
 ":guilabel:`User`: If desired, select a user in the database to link to this "
 "employee using the drop-down menu, or :ref:`create a new user <employees/new-"
@@ -9667,7 +10125,7 @@ msgstr ""
 "एक उपयोगकर्ता का चयन करें ड्रॉप-डाउन मेनू का उपयोग करके, या :ref:`नया उपयोगकर्ता "
 "बनाएं <employees/new-user>`।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:597
+#: ../../export/content/applications/hr/employees/new_employee.rst:598
 msgid ""
 ":guilabel:`Timezone`: Select the timezone for the employee using the drop-"
 "down menu."
@@ -9675,11 +10133,11 @@ msgstr ""
 ":guilabel:`टाइमज़ोन`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके कर्मचारी के लिए टाइमज़ोन सेलेक्ट "
 "करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:602
+#: ../../export/content/applications/hr/employees/new_employee.rst:603
 msgid "Create a user"
 msgstr "उपयोगकर्ता बनाएं"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:604
+#: ../../export/content/applications/hr/employees/new_employee.rst:605
 msgid ""
 "If the new employee also needs access to the database, click into the drop-"
 "down menu next to the :guilabel:`User` field. Click :icon:`fa-envelope-"
@@ -9687,11 +10145,11 @@ msgid ""
 "window appears."
 msgstr ""
 "यदि नए कर्मचारी को डेटाबेस तक पहुंच की भी आवश्यकता है, तो :guilabel:`उपयोगकर्ता` "
-"फ़ील्ड के बगल में स्थित ड्रॉप-डाउन मेनू में क्लिक करें। :icon:`fa-envelope-o` "
-":guilabel:`ईमेल के माध्यम से टीम के साथियों को आमंत्रित करें` पर क्लिक करें और एक *Invite "
-"teammates* (टीम के साथियों को आमंत्रित करें) पॉप-अप विंडो दिखाई देगी।"
+"फ़ील्ड के बगल में स्थित ड्रॉप-डाउन मेनू में क्लिक करें। :icon:`fa-envelope-"
+"o` :guilabel:`ईमेल के माध्यम से टीम के साथियों को आमंत्रित करें` पर क्लिक करें और एक "
+"*Invite teammates* (टीम के साथियों को आमंत्रित करें) पॉप-अप विंडो दिखाई देगी।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:608
+#: ../../export/content/applications/hr/employees/new_employee.rst:609
 msgid ""
 "The employee name populates the :guilabel:`Name` field by default. "
 "The :guilabel:`Email Address`, :guilabel:`Phone`, :guilabel:`Company`, "
@@ -9699,10 +10157,11 @@ msgid ""
 "from the :ref:`general information <employees/general-info>` section of form."
 msgstr ""
 "कर्मचारी का नाम डिफ़ॉल्ट रूप से :guilabel:`नाम` फ़ील्ड को भरता है। :guilabel:`ईमेल "
-"पता`, :guilabel:`फ़ोन`, :guilabel:`कंपनी`, और :guilabel:`फोटो` फ़ील्ड फ़ॉर्म के "
-":ref:`सामान्य जानकारी <employees/general-info>` अनुभाग के संबंधित फ़ील्ड से भरे जाते हैं।"
+"पता`, :guilabel:`फ़ोन`, :guilabel:`कंपनी`, और :guilabel:`फोटो` फ़ील्ड फ़ॉर्म "
+"के :ref:`सामान्य जानकारी <employees/general-info>` अनुभाग के संबंधित फ़ील्ड से भरे जाते "
+"हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:612
+#: ../../export/content/applications/hr/employees/new_employee.rst:613
 msgid ""
 "Click the :guilabel:`Send Invitation` button, an email is sent, and a "
 "notification briefly appears."
@@ -9710,21 +10169,20 @@ msgstr ""
 " :guilabel:`आमंत्रण भेजें` बटन पर क्लिक करें, एक ईमेल भेजा जाता है, और एक सूचना संक्षेप में "
 "दिखाई देती है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:614
+#: ../../export/content/applications/hr/employees/new_employee.rst:615
 msgid "Once the user is created, it populates the :guilabel:`User` field."
 msgstr ""
 "एक बार उपयोगकर्ता बन जाने के बाद, यह :guilabel:`उपयोगकर्ता` फ़ील्ड को भरता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:617
+#: ../../export/content/applications/hr/employees/new_employee.rst:618
 msgid "Users can also be :doc:`created manually <../../general/users/>`."
-msgstr ""
-"उपयोगकर्ता :doc:`मैन्युअल रूप से भी बनाए <../../general/users/>` जा सकते हैं।"
+msgstr "उपयोगकर्ता :doc:`मैन्युअल रूप से भी बनाए <../../general/users/>` जा सकते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:619
+#: ../../export/content/applications/hr/employees/new_employee.rst:620
 msgid "The invite a user pop-up window, configured."
 msgstr "उपयोगकर्ता को इनवाइट करने वाली पॉप-अप विंडो, कॉन्फ़िगर की गई।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:627
+#: ../../export/content/applications/hr/employees/new_employee.rst:628
 msgid ""
 "To view this section, the user must have :guilabel:`Administrator` rights "
 "set for the **Employees** app. For the category to appear, the respective "
@@ -9732,13 +10190,13 @@ msgid ""
 "installed, the :guilabel:`Time Off` approvers field does not appear. Only "
 "one selection can be made for each field."
 msgstr ""
-"इस अनुभाग को देखने के लिए, उपयोगकर्ता के पास **Employees** (कर्मचारी) ऐप के लिए "
-":guilabel:`प्रशासक` अधिकार सेट होने चाहिए। श्रेणी के दिखाई देने के लिए, संबंधित ऐप "
-"इंस्टॉल होना चाहिए। उदाहरण के लिए, यदि **Time Off** (अवकाश) ऐप इंस्टॉल नहीं है, तो "
-":guilabel:`अवकाश` अनुमोदनकर्ता फ़ील्ड दिखाई नहीं देता है। प्रत्येक फ़ील्ड के लिए केवल एक "
-"चयन किया जा सकता है।"
+"इस अनुभाग को देखने के लिए, उपयोगकर्ता के पास **Employees** (कर्मचारी) ऐप के "
+"लिए :guilabel:`प्रशासक` अधिकार सेट होने चाहिए। श्रेणी के दिखाई देने के लिए, संबंधित ऐप "
+"इंस्टॉल होना चाहिए। उदाहरण के लिए, यदि **Time Off** (अवकाश) ऐप इंस्टॉल नहीं है, "
+"तो :guilabel:`अवकाश` अनुमोदनकर्ता फ़ील्ड दिखाई नहीं देता है। प्रत्येक फ़ील्ड के लिए केवल "
+"एक चयन किया जा सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:633
+#: ../../export/content/applications/hr/employees/new_employee.rst:634
 msgid ""
 "Only users with *Administrator* rights for the corresponding human resources "
 "role appear in the drop-down menu."
@@ -9746,7 +10204,7 @@ msgstr ""
 "केवल संबंधित मानव संसाधन भूमिका के लिए *Administrator* (प्रशासक) अधिकारों वाले "
 "उपयोगकर्ता ही ड्रॉप-डाउन मेनू में दिखाई देते हैं।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:636
+#: ../../export/content/applications/hr/employees/new_employee.rst:637
 msgid ""
 "To check these rights, navigate to :menuselection:`Settings app --> Users & "
 "Companies --> Users`, and click on a user. Scroll to the *Human Resources* "
@@ -9754,7 +10212,7 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:640
+#: ../../export/content/applications/hr/employees/new_employee.rst:641
 msgid ""
 ":guilabel:`HR Responsible`: Select the user responsible for validating the "
 "employee's contracts using the drop-down menu."
@@ -9762,7 +10220,7 @@ msgstr ""
 ":guilabel:`एचआर रिस्पॉन्सिबल`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके कर्मचारी के कॉन्ट्रैक्ट "
 "को वैलिडेट करने के लिए ज़िम्मेदार उपयोगकर्ता सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:642
+#: ../../export/content/applications/hr/employees/new_employee.rst:643
 msgid ""
 ":guilabel:`Expense`: Select the user responsible for approving all expenses "
 "for the employee using the drop-down menu."
@@ -9770,7 +10228,7 @@ msgstr ""
 ":guilabel:`एक्सपेंस`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके कर्मचारी के सभी एक्सपेंस को अप्रूव "
 "करने के लिए ज़िम्मेदार उपयोगकर्ता सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:644
+#: ../../export/content/applications/hr/employees/new_employee.rst:645
 msgid ""
 ":guilabel:`Time Off`: Select the user responsible for approving all time off "
 "requests from this employee using the drop-down menu."
@@ -9778,7 +10236,7 @@ msgstr ""
 ":guilabel:`टाइम ऑफ़`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके इस कर्मचारी के सभी टाइम ऑफ़ "
 "अनुरोधों को अप्रूव करने के लिए ज़िम्मेदार उपयोगकर्ता सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:646
+#: ../../export/content/applications/hr/employees/new_employee.rst:647
 msgid ""
 ":guilabel:`Timesheet`: Select the user responsible for approving all the "
 "employee's timesheet entries using the drop-down menu."
@@ -9786,7 +10244,7 @@ msgstr ""
 ":guilabel:`टाइमशीट`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके कर्मचारी की सभी टाइमशीट एंट्री "
 "को अप्रूव करने के लिए ज़िम्मेदार उपयोगकर्ता सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:648
+#: ../../export/content/applications/hr/employees/new_employee.rst:649
 msgid ""
 ":guilabel:`Attendance`: Select the user responsible for approving all "
 "attendance entries for the employee using the drop-down menu."
@@ -9794,7 +10252,7 @@ msgstr ""
 ":guilabel:`अटेंडेंस`: ड्रॉप-डाउन मेन्यू का इस्तेमाल करके कर्मचारी की सभी अटेंडेंस एंट्री को "
 "अप्रूव करने के लिए ज़िम्मेदार उपयोगकर्ता सेलेक्ट करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:652
+#: ../../export/content/applications/hr/employees/new_employee.rst:653
 msgid ""
 "If any approver field is left empty, the approval is done by an "
 "Administrator or Approver."
@@ -9802,12 +10260,12 @@ msgstr ""
 "अगर कोई भी अप्रूवर फ़ीर्ड खाली छोड़ा जाता है, तो अप्रूवल एडमिन या अप्रूवर द्वारा किया "
 "जाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:655
+#: ../../export/content/applications/hr/employees/new_employee.rst:656
 #: ../../export/content/applications/hr/payroll/payroll_localizations/australia.rst:985
 msgid "Planning"
 msgstr "प्लानिंग"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:657
+#: ../../export/content/applications/hr/employees/new_employee.rst:658
 msgid ""
 "This section is **only** visible if the **Planning** app is installed, as "
 "this section affects what the employee can be assigned in the **Planning** "
@@ -9817,7 +10275,7 @@ msgstr ""
 "सेक्शन प्रभावित करता है कि कर्मचारी को **प्लानिंग** ऐप्लिकेशन में क्या असाइन किया जा "
 "सकता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:660
+#: ../../export/content/applications/hr/employees/new_employee.rst:661
 msgid ""
 ":guilabel:`Roles`: Select all the roles the employee can perform using the "
 "drop-down menu. There are no preconfigured roles available, so all roles "
@@ -9829,7 +10287,7 @@ msgstr ""
 "को :ref:`प्लानिंग ऐप्लिकेशन में कॉन्फ़िगर करना होगा <planning/roles>`। किसी कर्मचारी "
 "को असाइन किए गए रोल की संख्या की कोई सीमा नहीं है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:663
+#: ../../export/content/applications/hr/employees/new_employee.rst:664
 msgid ""
 ":guilabel:`Default Role`: Select the default role the employee will "
 "typically perform using the drop-down menu. If the :guilabel:`Default Role` "
@@ -9841,17 +10299,17 @@ msgstr ""
 "फ़ील्ड कॉन्फ़िगर होने से पहले सिलेक्ट किया जाता है, तो सिलेक्ट किया गया रोल "
 "ऑटोमैटिकली :guilabel:`रोल` की लिस्ट में जुड़ जाता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:668
+#: ../../export/content/applications/hr/employees/new_employee.rst:669
 msgid "Application settings"
 msgstr "ऐप्लिकेशन सेटिंग"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:670
+#: ../../export/content/applications/hr/employees/new_employee.rst:671
 msgid ""
 "This section affects the **Manufacturing** app. Enter the following "
 "information in this section."
 msgstr ""
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:672
+#: ../../export/content/applications/hr/employees/new_employee.rst:673
 msgid ""
 ":guilabel:`Hourly Cost`: Enter the hourly cost for the employee, in a "
 "`##.##` format. This cost is factored in when the employee is working at "
@@ -9863,7 +10321,7 @@ msgstr ""
 "inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers>` "
 "पर काम कर रहा हो।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:677
+#: ../../export/content/applications/hr/employees/new_employee.rst:678
 msgid ""
 "Manufacturing costs are added to the costs for producing a product if the "
 "value of the manufactured product is **not** a fixed amount. This cost does "
@@ -9872,11 +10330,11 @@ msgstr ""
 "मैन्युफ़ैक्चरिंग लागत प्रॉडक्ट बनाने की लागत में जुड़ जाती है अगर मैन्युफ़ैक्चर्ड प्रॉडक्ट की वैल्यू एक "
 "निश्चित राशि **नहीं** है। यह लागत **पेरोल** ऐप्लिकेशन को प्रभावित **नहीं** करती।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:684
+#: ../../export/content/applications/hr/employees/new_employee.rst:685
 msgid "Attendance/Point of Sale/Manufacturing"
 msgstr "अटेंडेंस/पॉइंट ऑफ़ सेल/मैन्युफ़ैक्चरिंग"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:686
+#: ../../export/content/applications/hr/employees/new_employee.rst:687
 msgid ""
 "This section determines how employees sign in to the **Attendances**, "
 "**Point Of Sale**, and **Manufacturing** apps, and only appears if any of "
@@ -9885,7 +10343,7 @@ msgstr ""
 "यह सेक्शन तय करता है कि कर्मचारी **अटेंडेंस**, **पॉइंट ऑफ़ सेल**, और **मैन्युफ़ैक्चरिंग** "
 "ऐप्लिकेशन में कैसे साइन इन करें और सिर्फ़ तभी दिखता है अगर उनमें से कोई ऐप्लिकेशन इंस्टॉल है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:689
+#: ../../export/content/applications/hr/employees/new_employee.rst:690
 msgid ""
 ":guilabel:`PIN Code`: Enter the employee's PIN code in this field. This code "
 "is used to sign in and out of **Attendances** app kiosks, the **Point Of "
@@ -9895,7 +10353,7 @@ msgstr ""
 "ऐप्लिकेशन कियोस्क, **पॉइंट ऑफ़ सेल** ऐप्लिकेशन, और **मैन्युफ़ैक्चरिंग** ऐप्लिकेशन के *शॉप "
 "फ़्लोर* कंपेनियन मॉड्यूल में साइन इन और आउट करने के लिए इस्तेमाल होता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:692
+#: ../../export/content/applications/hr/employees/new_employee.rst:693
 msgid ""
 ":guilabel:`RFID/Badge Number`: Click :guilabel:`Generate` at the end of "
 "the :guilabel:`RFID/Badge Number` line to create a unique number. Once "
@@ -9906,7 +10364,7 @@ msgid ""
 "<attendances/kiosk-mode-entry>` on an **Attendances** app kiosk."
 msgstr ""
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:699
+#: ../../export/content/applications/hr/employees/new_employee.rst:700
 msgid ""
 "If the employee uses an RFID token or already has an ID badge issued with a "
 "barcode, click :guilabel:`Read a badge` and the system allows the barcode or "
@@ -9918,14 +10376,14 @@ msgstr ""
 "को रीड करने की अनुमति देता है। एक बार रीड होने के बाद, नंबर :guilabel:`RFID/बैज नंबर` "
 "फ़ील्ड को भर देता है।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:704
+#: ../../export/content/applications/hr/employees/new_employee.rst:705
 msgid ""
 "To create a new :guilabel:`RFID/Badge Number`, delete the current number, "
 "and the :guilabel:`Generate` option reappears. Click :guilabel:`Generate` "
 "and a new number appears."
 msgstr ""
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:707
+#: ../../export/content/applications/hr/employees/new_employee.rst:708
 msgid ""
 ":guilabel:`ZKTeco Employee ID`: If the :guilabel:`Attendances ZKTeco "
 "BioTime` module is installed, this field appears. Enter the ZKTeco BioTime "
@@ -9935,21 +10393,21 @@ msgstr ""
 "मॉड्यूल इंस्टॉल है, तो यह फ़ील्ड दिखाई देता है। इस फ़ील्ड में ZKTeco BioTime कर्मचारी आईडी "
 "दर्ज करें।"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:711
+#: ../../export/content/applications/hr/employees/new_employee.rst:712
 msgid "Export"
 msgstr "एक्सपोर्ट करें"
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:713
+#: ../../export/content/applications/hr/employees/new_employee.rst:714
 msgid ""
 "This section is used when exporting data to a third party. Enter the "
 "relevant code in the :guilabel:`External Code` field."
 msgstr ""
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:717
+#: ../../export/content/applications/hr/employees/new_employee.rst:718
 msgid "Invite the employee"
 msgstr ""
 
-#: ../../export/content/applications/hr/employees/new_employee.rst:719
+#: ../../export/content/applications/hr/employees/new_employee.rst:720
 msgid ""
 "After the employee is created, click the :guilabel:`Invite` button in the "
 "top corner of the employee record. An email is sent to the address entered "
@@ -18342,12 +18800,6 @@ msgstr ""
 ":guilabel:`नया` बटन पर क्लिक करें, और एक खाली कॉन्ट्रैक्ट टेम्प्लेट फ़ॉर्म लोड होता है। "
 "फ़ॉर्म के विभिन्न सेक्शन में निम्नलिखित फ़ीड्ल्ड कॉन्फ़िगर करें:"
 
-#: ../../export/content/applications/hr/payroll/contracts.rst:80
-#: ../../export/content/applications/hr/payroll/work_entries.rst:252
-#: ../../export/content/applications/hr/time_off/time_off_types.rst:33
-msgid "General information section"
-msgstr "जनरल इन्फ़ॉर्मेशन सेक्शन"
-
 #: ../../export/content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -18709,7 +19161,7 @@ msgstr "हेडकाउंट रिपोर्ट"
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:5
 msgid ""
-"The *Headcount report* in the **Payroll** app shows the number of employees "
+"The *Headcount* report in the **Payroll** app shows the number of employees "
 "on payroll and allows headcount comparisons between different periods of "
 "time."
 msgstr ""
@@ -18738,58 +19190,64 @@ msgstr ""
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:17
 msgid ""
-"Report name: generated automatically as `Headcount for (Company Name) on the "
-"(YYYY-MM-DD)` and **cannot** be modified."
+":guilabel:`Report name`: The name is generated automatically as `Headcount "
+"for (Company Name) on the (YYYY-MM-DD)` and **cannot** be modified."
 msgstr ""
-"रिपोर्ट का नाम: ऑटोमैटिकली `Headcount for (Company Name) on the (YYYY-MM-DD)` "
-"के रूप में जनरेट होता है और इसे मॉडिफाई **नहीं** किया जा सकता।"
+":guilabel:`Report name`: यह नाम स्वचालित रूप से `Headcount for (Company Name) "
+"on the (YYYY-MM-DD)` के रूप में जेनरेट होता है और इसे **बदला** नहीं जा सकता।"
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:19
 msgid ""
-":guilabel:`Company`: populated automatically (works in both single and multi-"
-"company databases)"
+":guilabel:`Company`: The company is automatically populated (works in both "
+"single and multi-company databases)."
 msgstr ""
-":guilabel:`Company`: ऑटोमैटिकली पॉप्युलेट होता है (सिंगल और मल्टी-कंपनी डेटाबेस दोनों में "
-"काम करता है)"
+":guilabel:`Company`: कंपनी स्वचालित रूप से भर जाती है (यह सिंगल और मल्टी-कंपनी "
+"डाटाबेस दोनों में काम करता है)।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:20
+#: ../../export/content/applications/hr/payroll/headcount.rst:21
 msgid ""
-":guilabel:`From`/:guilabel:`To` dates: defaults to current date (from) and "
-"blank (to). Adjust these to define the period to analyze."
+":guilabel:`From`: Using the calendar selector, select the start date for the "
+"report. The current date populates this field by default."
 msgstr ""
-":guilabel:`From`/:guilabel:`To` तारीखें: डिफ़ॉल्ट रूप से वर्तमान तारीख (from) और "
-"खाली (to) होती हैं। विश्लेषण करने के लिए पीरियड डिफाइन करने हेतु इन्हें एडजस्ट करें।"
+":guilabel:`From`: कैलेंडर सिलेक्टर का उपयोग करके, रिपोर्ट के लिए शुरू होने की तारीख चुनें। "
+"डिफ़ॉल्ट रूप से वर्तमान तारीख इस फ़ील्ड में भर जाती है।"
 
 #: ../../export/content/applications/hr/payroll/headcount.rst:23
-msgid "A headcount report form filled out for the third quarter of 2025."
-msgstr "2025 की तीसरी तिमाही के लिए भरा गया हेडकाउंट रिपोर्ट फ़ॉर्म।"
+msgid ""
+":guilabel:`To`: Using the calendar selector, select the end date for the "
+"report."
+msgstr ""
+":guilabel:`To`: कैलेंडर सिलेक्टर का उपयोग करके, रिपोर्ट के लिए खत्म होने की तारीख चुनें।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:26
+#: ../../export/content/applications/hr/payroll/headcount.rst:25
 msgid "Next, click :guilabel:`Populate` to generate the report."
 msgstr "इसके बाद, रिपोर्ट जनरेट करने के लिए :guilabel:`Populate` पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:28
+#: ../../export/content/applications/hr/payroll/headcount.rst:27
 msgid ""
-"At the top of the form, a :icon:`fa-people` :guilabel:`Employees` smart "
+"At the top of the form, an :icon:`fa-users` :guilabel:`Employees` smart "
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"फ़ॉर्म के ऊपर, एक :icon:`fa-people` :guilabel:`Employees` स्मार्ट बटन दिखाई देता "
-"है। बटन पर क्लिक करने से सेलेक्ट की गई पीरियड के लिए कर्मचारियों की कुल संख्या दिखाई देती "
-"है।"
+"फ़ॉर्म के सिरे पर, एक :icon:`fa-users` :guilabel:`Employees` स्मार्ट बटन दिखाई देता "
+"है। बटन पर क्लिक करने पर चयनित अवधि के लिए कर्मचारियों की कुल संख्या प्रदर्शित होती है।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:32
+#: ../../export/content/applications/hr/payroll/headcount.rst:30
+msgid "A headcount report created on October 22, 2026 for 2026."
+msgstr "2026 के लिए 22 अक्टूबर, 2026 को बनाई गई एक Headcount रिपोर्ट।"
+
+#: ../../export/content/applications/hr/payroll/headcount.rst:34
 msgid "View all headcount reports"
 msgstr "सभी हेडकाउंट रिपोर्ट देखें"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:34
+#: ../../export/content/applications/hr/payroll/headcount.rst:36
 msgid ""
 "See how the company headcount has changed over time by viewing all headcount "
 "reports in a list view."
 msgstr ""
 "लिस्ट व्यू में सभी हेडकाउंट रिपोर्ट देखकर जानें कि समय के साथ कंपनी का हेडकाउंट कैसे बदला है।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:36
+#: ../../export/content/applications/hr/payroll/headcount.rst:38
 msgid ""
 "To view all headcount reports, navigate to :menuselection:`Payroll app --> "
 "Reporting --> Headcount`."
@@ -18797,27 +19255,27 @@ msgstr ""
 "सभी हेडकाउंट रिपोर्ट देखने के लिए, :menuselection:`पेरोल ऐप्लिकेशन --> रिपोर्टिंग --> "
 "हेडकाउंट` पर जाएं।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:39
+#: ../../export/content/applications/hr/payroll/headcount.rst:41
 msgid "View employees in a headcount"
 msgstr "हेडकाउंट में कर्मचारी देखें"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:41
+#: ../../export/content/applications/hr/payroll/headcount.rst:43
 msgid ""
-"TO get an overall view of employees and their salary impact on the company, "
+"To get an overall view of employees and their salary impact on the company, "
 "view all employee records of a specific headcount report."
 msgstr ""
 "कर्मचारियों और कंपनी पर उनके सैलरी प्रभाव का समग्र दृश्य प्राप्त करने के लिए, किसी विशिष्ट "
 "हेडकाउंट रिपोर्ट के सभी कर्मचारी रिकॉर्ड देखें।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:44
+#: ../../export/content/applications/hr/payroll/headcount.rst:46
 msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
-"people` :guilabel:`Employees` smart button at the top of a headcount report."
+"users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
-"किसी विशिष्ट हेडकाउंट रिपोर्ट के कर्मचारी देखने के लिए, हेडकाउंट रिपोर्ट के शीर्ष "
-"पर :icon:`fa-people` :guilabel:`कर्मचारी` स्मार्ट बटन पर क्लिक करें।"
+"किसी विशेष Headcount रिपोर्ट के कर्मचारियों को देखने के लिए, Headcount रिपोर्ट के सिरे "
+"पर मौजूद :icon:`fa-users` :guilabel:`Employees` स्मार्ट बटन पर क्लिक करें।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:47
+#: ../../export/content/applications/hr/payroll/headcount.rst:49
 msgid ""
 "All employees from the headcount appear in a list view, grouped "
 "by :guilabel:`Department`."
@@ -18825,28 +19283,37 @@ msgstr ""
 "हेडकाउंट के सभी कर्मचारी सूची दृश्य में दिखाई देते हैं, जो :guilabel:`डिपार्टमेंट` द्वारा "
 "समूहीकृत होते हैं।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:49
-msgid ":guilabel:`Employee`: the employee's full name"
+#: ../../export/content/applications/hr/payroll/headcount.rst:51
+msgid ":guilabel:`Employee`: The employee's full name."
 msgstr ":guilabel:`कर्मचारी`: कर्मचारी का पूरा नाम"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:50
-msgid ":guilabel:`Department`: the department their job position is in"
+#: ../../export/content/applications/hr/payroll/headcount.rst:52
+msgid ":guilabel:`Department`: The department their job position is in."
 msgstr ":guilabel:`डिपार्टमेंट`: वह डिपार्टमेंट जिसमें उनकी नौकरी का पद है"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:51
-msgid ":guilabel:`Job Title`: their role"
-msgstr ":guilabel:`जॉब टाइटल`: उनकी भूमिका"
+#: ../../export/content/applications/hr/payroll/headcount.rst:53
+msgid ":guilabel:`Job Title`: Their specific role."
+msgstr ":guilabel:`Job Title`: उनकी विशेष भूमिका।"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:52
+#: ../../export/content/applications/hr/payroll/headcount.rst:54
 msgid ""
-":guilabel:`Employer Cost`: how much the company pays the employee each pay-"
-"period"
+":guilabel:`Employer Cost`: How much the company pays the employee each pay "
+"period."
 msgstr ""
 ":guilabel:`नियोक्ता लागत`: कंपनी हर पे-पीरियड में कर्मचारी को कितना भुगतान करती है"
 
-#: ../../export/content/applications/hr/payroll/headcount.rst:53
-msgid ":guilabel:`Wage on Payroll`: the dollar amount on payroll reports"
-msgstr ":guilabel:`पेरोल पर वेज`: पेरोल रिपोर्ट पर डॉलर की राशि"
+#: ../../export/content/applications/hr/payroll/headcount.rst:55
+msgid ":guilabel:`Wage On Payroll`: The monetary amount on payroll reports."
+msgstr ":guilabel:`Wage On Payroll`: पेरोल रिपोर्ट पर मौद्रिक राशि।"
+
+#: ../../export/content/applications/hr/payroll/headcount.rst:57
+msgid "Click on any department to expand the list and view the employees."
+msgstr ""
+"सूची को विस्तार करने और कर्मचारियों को देखने के लिए किसी भी डिपार्टमेंट पर क्लिक करें।"
+
+#: ../../export/content/applications/hr/payroll/headcount.rst:59
+msgid "The headcount report showing expanded departments."
+msgstr "Headcount रिपोर्ट जो विस्तारित डिपार्टमेंट दिखाती है।"
 
 #: ../../export/content/applications/hr/payroll/pay_runs.rst:3
 msgid "Pay runs"
@@ -19714,6 +20181,7 @@ msgstr "निर्भरता"
 #: ../../export/content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
 #: ../../export/content/applications/hr/payroll/payroll_localizations/united_states.rst:92
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:34
 msgid "Description"
 msgstr "विवरण"
 
@@ -32664,8 +33132,7 @@ msgstr ""
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/hong_kong.rst:494
 msgid "Not included in the taxable cash total; handled as a perquisite."
-msgstr ""
-"कर योग्य कुल नकद में शामिल नहीं; अनुलाभ के रूप में प्रबंधित किया जाता है।"
+msgstr "कर योग्य कुल नकद में शामिल नहीं; अनुलाभ के रूप में प्रबंधित किया जाता है।"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/hong_kong.rst:495
 msgid "Co-Payment"
@@ -38466,11 +38933,11 @@ msgid ""
 "the :guilabel:`Omann: Monthly Pay` structure type. Click :guilabel:`Omann: "
 "Monthly Pay` to view the detailed salary rules."
 msgstr ""
-"वेतन नियमों को देखने के लिए जो वेतन संरचना को बताते हैं कि क्या करना है, "
-":menuselection:`Payroll app --> Configuration --> Structures` पर नेविगेट करें और "
-":guilabel:`Omann: Employee` समूह का विस्तार करें ताकि :guilabel:`Omann: Monthly "
-"Pay` संरचना प्रकार प्रकट हो। विस्तृत वेतन नियम देखने के लिए :guilabel:`Omann: Monthly "
-"Pay` पर क्लिक करें।"
+"वेतन नियमों को देखने के लिए जो वेतन संरचना को बताते हैं कि क्या करना "
+"है, :menuselection:`Payroll app --> Configuration --> Structures` पर नेविगेट करें "
+"और :guilabel:`Omann: Employee` समूह का विस्तार करें ताकि :guilabel:`Omann: "
+"Monthly Pay` संरचना प्रकार प्रकट हो। विस्तृत वेतन नियम देखने के लिए :guilabel:`Omann: "
+"Monthly Pay` पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/payroll/payroll_localizations/oman.rst:336
 msgid "The top portion of the Omann salary rules."
@@ -44059,6 +44526,10 @@ msgid ""
 "make the necessary changes, then click the :guilabel:`Compute Sheet` button "
 "to recalculate the payslip."
 msgstr ""
+"यदि :ref:`Worked Days <payroll/payslips/worked-days>` या :ref:`Salary Inputs "
+"<payroll/payslips/salary-inputs>` टैब में कोई बदलाव करने की आवश्यकता है, तो आवश्यक "
+"बदलाव करें, फिर पेस्लिप की पुनर्गणना करने के लिए :guilabel:`Compute Sheet` बटन पर "
+"क्लिक करें।"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:133
 msgid "The fields filled out in the salary computation tab."
@@ -44073,6 +44544,8 @@ msgid ""
 "The *Other Info* tab displays accounting details that are not used in the "
 "*Salary Computation* tab."
 msgstr ""
+"*Other Info* टैब अकाउंटिंग विवरण प्रदर्शित करता है जिनका उपयोग *Salary "
+"Computation* टैब में नहीं किया जाता है।"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:141
 msgid ""
@@ -44083,8 +44556,8 @@ msgid ""
 msgstr ""
 "The :guilabel:`पेस्लिप का नाम` कर्मचारी के नाम और उस समयावधि के अनुसार स्वतः भर "
 "जाता है जिसके लिए पेस्लिप है, निम्नलिखित प्रारूप में: `Salary Slip - (Employee) - "
-"(Month) (Year)`। इस फ़ील्ड में नाम में कोई भी वांछित संपादन करें। यह फ़ील्ड **अनिवार्य** है"
-"।"
+"(Month) (Year)`। इस फ़ील्ड में नाम में कोई भी वांछित संपादन करें। यह फ़ील्ड **अनिवार्य** "
+"है।"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:145
 msgid ""
@@ -44208,9 +44681,9 @@ msgid ""
 "(Draft)` smart button appears at the top. A PDF of the payslip appears in "
 "the sidebar, if the screen is wide enough to display it."
 msgstr ""
-"एक बार पेस्लिप वैलिडेट हो जाने के बाद, स्थिति :guilabel:`Draft` से बदलकर "
-":guilabel:`Validated` हो जाती है, और शीर्ष पर एक :icon:`fa-usd` "
-":guilabel:`Journal Entry (Draft)` स्मार्ट बटन दिखाई देता है। यदि स्क्रीन इसे "
+"एक बार पेस्लिप वैलिडेट हो जाने के बाद, स्थिति :guilabel:`Draft` से "
+"बदलकर :guilabel:`Validated` हो जाती है, और शीर्ष पर एक :icon:`fa-"
+"usd` :guilabel:`Journal Entry (Draft)` स्मार्ट बटन दिखाई देता है। यदि स्क्रीन इसे "
 "प्रदर्शित करने के लिए पर्याप्त चौड़ी है, तो पेस्लिप की पीडीएफ साइडबार में दिखाई देती है।"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:201
@@ -44250,8 +44723,8 @@ msgid ""
 msgstr ""
 "क्लिक करें :guilabel:`Create Payment Report` बटन और एक *Generate a Payment "
 "Report* पॉप-अप विंडो लोड हो जाती है। ड्रॉप-डाउन मेनू का उपयोग करके, भुगतान रिपोर्ट के "
-"लिए :guilabel:`Export Format` चुनें। उपलब्ध दो डिफ़ॉल्ट विकल्प :guilabel:`CSV` और "
-":guilabel:`NACHA` हैं। :guilabel:`NACHA` का अर्थ है :abbr:`National Automated "
+"लिए :guilabel:`Export Format` चुनें। उपलब्ध दो डिफ़ॉल्ट विकल्प :guilabel:`CSV` "
+"और :guilabel:`NACHA` हैं। :guilabel:`NACHA` का अर्थ है :abbr:`National Automated "
 "Clearing House Association (NACHA)`, और यह चयन एक संगत ACH फ़ाइल बनाता है, जिसे "
 "कंपनी के बैंक को भेजा जाता है।"
 
@@ -44313,9 +44786,9 @@ msgid ""
 msgstr ""
 "क्लिक करें :icon:`fa-usd` :guilabel:`Journal Entry (Draft)` स्मार्ट बटन, और जर्नल "
 "प्रविष्टि लोड हो जाती है। प्रविष्टि पोस्ट करने के लिए :guilabel:`Post` पर क्लिक करें, "
-"फिर पेस्लिप पर वापस जाने के लिए पेस्लिप ब्रेडक्रम्ब पर क्लिक करें। :icon:`fa-usd` "
-":guilabel:`Journal Entry (Draft)` स्मार्ट बटन :icon:`fa-usd` "
-":guilabel:`Journal Entry (Posted)` में बदल जाता है।"
+"फिर पेस्लिप पर वापस जाने के लिए पेस्लिप ब्रेडक्रम्ब पर क्लिक करें। :icon:`fa-"
+"usd` :guilabel:`Journal Entry (Draft)` स्मार्ट बटन :icon:`fa-"
+"usd` :guilabel:`Journal Entry (Posted)` में बदल जाता है।"
 
 #: ../../export/content/applications/hr/payroll/payslips.rst:251
 msgid "Pay the employee"
@@ -48708,6 +49181,10 @@ msgstr ":doc:`recruitment/hiring_velocity`"
 msgid ":doc:`recruitment/team_performance`"
 msgstr ":doc:`recruitment/team_performance`"
 
+#: ../../export/content/applications/hr/recruitment.rst:375
+msgid ":doc:`recruitment/offer_analysis`"
+msgstr ":doc:`recruitment/offer_analysis`"
+
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:3
 msgid "Add applicants"
 msgstr "आवेदक जोड़ें"
@@ -48988,8 +49465,7 @@ msgstr "विवरण टैब"
 msgid ""
 "The *Details* tab houses various information regarding the applicant and the "
 "job position."
-msgstr ""
-"*Details* टैब में आवेदक और नौकरी की स्थिति के बारे में विभिन्न जानकारी होती है।"
+msgstr "*Details* टैब में आवेदक और नौकरी की स्थिति के बारे में विभिन्न जानकारी होती है।"
 
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:118
 msgid "Enter the following information in the respective fields:"
@@ -49001,8 +49477,8 @@ msgid ""
 "the drop-down menu. Options are: :guilabel:`Graduate`, :guilabel:`Bachelor "
 "Degree`, :guilabel:`Master Degree`, or :guilabel:`Doctoral Degree`."
 msgstr ""
-":guilabel:`Degree`: ड्रॉप-डाउन मेनू से आवेदक की शिक्षा का उच्चतम स्तर चुनें। विकल्प हैं: "
-":guilabel:`Graduate`, :guilabel:`Bachelor Degree`, :guilabel:`Master "
+":guilabel:`Degree`: ड्रॉप-डाउन मेनू से आवेदक की शिक्षा का उच्चतम स्तर चुनें। विकल्प "
+"हैं: :guilabel:`Graduate`, :guilabel:`Bachelor Degree`, :guilabel:`Master "
 "Degree`, या :guilabel:`Doctoral Degree`।"
 
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:125
@@ -49080,10 +49556,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Expected`: इस फ़ील्ड में आवेदक की अनुरोधित वेतन राशि दर्ज करें। संख्या "
 "`XX,XXX.XX` प्रारूप में होनी चाहिए। मुद्रा कंपनी के स्थानीयकरण सेटिंग द्वारा निर्धारित की "
-"जाती है। यदि आवेदक द्वारा किसी लाभ का अनुरोध किया जाता है, तो उन्हें "
-":guilabel:`Other Benefits` टेक्स्ट फ़ील्ड में दर्ज करें जो :guilabel:`Expected` वेतन "
-"फ़ील्ड के बगल में है। लाभ संक्षिप्त और वर्णनात्मक होने चाहिए, जैसे `4 Weeks Vacation` या "
-"`Dental Plan`।"
+"जाती है। यदि आवेदक द्वारा किसी लाभ का अनुरोध किया जाता है, तो "
+"उन्हें :guilabel:`Other Benefits` टेक्स्ट फ़ील्ड में दर्ज करें जो :guilabel:`Expected` "
+"वेतन फ़ील्ड के बगल में है। लाभ संक्षिप्त और वर्णनात्मक होने चाहिए, जैसे `4 Weeks Vacation` "
+"या `Dental Plan`।"
 
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:154
 msgid ""
@@ -49094,10 +49570,10 @@ msgid ""
 "short and descriptive, such as `Unlimited Sick Time` or `Health Insurance`."
 msgstr ""
 ":guilabel:`Proposed`: इस फ़ील्ड में आवेदक को ऑफ़र की गई वेतन राशि दर्ज करें। संख्या "
-"`XX,XXX.XX` प्रारूप में होनी चाहिए। यदि आवेदक को कोई लाभ ऑफ़र किया जाता है, तो उन्हें "
-":guilabel:`Other Benefits` टेक्स्ट फ़ील्ड में दर्ज करें जो :guilabel:`Proposed` फ़ील्ड के "
-"बगल में है। लाभ संक्षिप्त और वर्णनात्मक होने चाहिए, जैसे `Unlimited Sick Time` या "
-"`Health Insurance`।"
+"`XX,XXX.XX` प्रारूप में होनी चाहिए। यदि आवेदक को कोई लाभ ऑफ़र किया जाता है, तो "
+"उन्हें :guilabel:`Other Benefits` टेक्स्ट फ़ील्ड में दर्ज करें जो :guilabel:`Proposed` "
+"फ़ील्ड के बगल में है। लाभ संक्षिप्त और वर्णनात्मक होने चाहिए, जैसे `Unlimited Sick Time` "
+"या `Health Insurance`।"
 
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:160
 msgid "Sourcing section"
@@ -49137,11 +49613,10 @@ msgid ""
 "source, then click :guilabel:`Create \"(new source)\"`."
 msgstr ""
 ":guilabel:`Source`: ड्रॉप-डाउन मेनू का उपयोग करके चुनें कि आवेदक को नौकरी की स्थिति के "
-"बारे में कहाँ से पता चला। Odoo में निम्नलिखित विकल्प पहले से कॉन्फ़िगर किए गए हैं: "
-":guilabel:`Search engine`, :guilabel:`Lead Recall`, :guilabel:`Newsletter`, "
-":guilabel:`Facebook`, :guilabel:`X`, :guilabel:`LinkedIn`, "
-":guilabel:`Monster`, :guilabel:`Glassdoor`, :guilabel:`Craigslist`, और "
-":guilabel:`Referral`। एक नया :guilabel:`Source` जोड़ने के लिए, स्रोत टाइप करें, "
+"बारे में कहाँ से पता चला। Odoo में निम्नलिखित विकल्प पहले से कॉन्फ़िगर किए गए "
+"हैं: :guilabel:`Search engine`, :guilabel:`Lead "
+"Recall`, :guilabel:`Newsletter`, :guilabel:`Facebook`, :guilabel:`X`, :guilabel:`LinkedIn`, :guilabel:`Monster`, :guilabel:`Glassdoor`, :guilabel:`Craigslist`, "
+"और :guilabel:`Referral`। एक नया :guilabel:`Source` जोड़ने के लिए, स्रोत टाइप करें, "
 "फिर :guilabel:`Create \"(new source)\"` पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:175
@@ -49155,12 +49630,12 @@ msgid ""
 "\"(new medium)\"`."
 msgstr ""
 ":guilabel:`Medium`: ड्रॉप-डाउन मेनू का उपयोग करके निर्दिष्ट करें कि नौकरी की सूची कैसे "
-"मिली। पहले से कॉन्फ़िगर किए गए विकल्प हैं: :guilabel:`Banner`, :guilabel:`Direct`, "
-":guilabel:`Email`, :guilabel:`Facebook`, :guilabel:`Google Adwords`, "
-":guilabel:`LinkedIn`, :guilabel:`Phone`, :guilabel:`SMS`, "
-":guilabel:`Television`, :guilabel:`Website`, :guilabel:`X`, या "
-":guilabel:`[Push Notifications] (website name)`। एक नया :guilabel:`Medium`, "
-"माध्यम टाइप करें, फिर :guilabel:`Create \"(new medium)\"` पर क्लिक करें।"
+"मिली। पहले से कॉन्फ़िगर किए गए विकल्प "
+"हैं: :guilabel:`Banner`, :guilabel:`Direct`, :guilabel:`Email`, :guilabel:`Facebook`, :guilabel:`Google "
+"Adwords`, :guilabel:`LinkedIn`, :guilabel:`Phone`, :guilabel:`SMS`, :guilabel:`Television`, :guilabel:`Website`, :guilabel:`X`, "
+"या :guilabel:`[Push Notifications] (website name)`। एक "
+"नया :guilabel:`Medium`, माध्यम टाइप करें, फिर :guilabel:`Create \"(new medium)"
+"\"` पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/recruitment/add_applicants.rst:181
 msgid ""
@@ -50131,6 +50606,183 @@ msgstr ""
 msgid ":doc:`post_job`"
 msgstr ":doc:`post_job`"
 
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:3
+msgid "Offer analysis"
+msgstr "ऑफ़र एनालिसिस"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:5
+msgid ""
+"The *Offer Analysis* report provides a high-level summary of job offers, "
+"grouped by job position and status. This allows recruiters to view offer "
+"activity across different job positions and track how many offers are in "
+"each stage."
+msgstr ""
+"ऑफर एनालिसिस रिपोर्ट जॉब ऑफर का उच्च-स्तरीय सारांश प्रदान करती है, जो जॉब पोजीशन "
+"और स्टेटस के अनुसार समूहीकृत होता है। यह रिक्रूटर्स को विभिन्न जॉब पोजीशन में ऑफर "
+"एक्टिविटी को देखने और यह ट्रैक करने की अनुमति देती है कि प्रत्येक स्टेज में कितने ऑफर हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:9
+msgid ""
+"Using the *Offer Analysis* report, recruiters can compare the number of open "
+"positions with the number of offers made, identify positions with limited "
+"offer activity, and monitor the progress of recruitment efforts. For "
+"example, positions with fewer offers may indicate a need to adjust "
+"recruitment strategies to attract more qualified applicants. By reviewing "
+"offer data across positions and statuses, recruiters can identify potential "
+"gaps in the hiring process and make more informed decisions to support "
+"recruitment goals."
+msgstr ""
+"ऑफर एनालिसिस रिपोर्ट का उपयोग करके, रिक्रूटर्स खुली पोजीशन की संख्या की तुलना किए गए "
+"ऑफर की संख्या से कर सकते हैं, सीमित ऑफर एक्टिविटी वाली पोजीशन की पहचान कर सकते हैं, और "
+"रिक्रूटमेंट प्रयासों की प्रगति की निगरानी कर सकते हैं। उदाहरण के लिए, कम ऑफर वाली "
+"पोजीशन यह संकेत दे सकती है कि अधिक योग्य आवेदकों को आकर्षित करने के लिए रिक्रूटमेंट "
+"रणनीतियों को समायोजित करने की आवश्यकता है। पोजीशन और स्टेटस के अनुसार ऑफर डेटा की "
+"समीक्षा करके, रिक्रूटर्स भर्ती प्रक्रिया में संभावित कमियों की पहचान कर सकते हैं और रिक्रूटमेंट "
+"लक्ष्यों का समर्थन करने के लिए अधिक सूचित निर्णय ले सकते हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:17
+msgid "View offer analysis report"
+msgstr "ऑफर एनालिसिस रिपोर्ट देखें"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:19
+msgid ""
+"To access the *Offer Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Offer Analysis`. By "
+"default, the report displays offer data for all job positions in a :icon:`fa-"
+"bar-chart` :guilabel:`(Bar Chart)` with :icon:`fa-"
+"database` :guilabel:`(Stacked)` groups. The default filter "
+"is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
+"days."
+msgstr ""
+"ऑफर एनालिसिस रिपोर्ट तक पहुंचने के लिए, :menuselection:`रिक्रूटमेंट एप्लिकेशन --> "
+"रिपोर्टिंग --> ऑफर एनालिसिस` पर नेविगेट करें। डिफ़ॉल्ट रूप से, रिपोर्ट सभी जॉब पोजीशन के "
+"लिए ऑफर डेटा को :icon:`fa-bar-chart` :guilabel:`(बार चार्ट)` में :icon:`fa-"
+"database` :guilabel:`(स्टैक्ड)` समूहों के साथ प्रदर्शित करती है। डिफ़ॉल्ट फ़िल्टर "
+":guilabel:`पिछले 365 दिनों के ऑफर` है, जो पिछले 365 दिनों की जानकारी दिखाता है।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:24
+msgid ""
+"Job positions are listed on the x-axis, with color-coded blocks showing the "
+"number of offers in each stage along the y-axis. Hover over a stage to view "
+"the number of offers in that stage for the job position. The stages are "
+"color-coded as follows:"
+msgstr ""
+"जॉब पोजीशन को x-अक्ष पर सूचीबद्ध किया गया है, जिसमें कलर-कोडेड ब्लॉक y-अक्ष के साथ "
+"प्रत्येक स्टेज में ऑफर की संख्या दिखाते हैं। जॉब पोजीशन के लिए उस स्टेज में ऑफर की संख्या देखने के "
+"लिए किसी स्टेज पर होवर करें। स्टेज को इस प्रकार कलर-कोडेड किया गया है:"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:32
+msgid "Color"
+msgstr "कलर"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:33
+msgid "Status"
+msgstr "स्टेटस"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:35
+msgid "Red"
+msgstr "रेड"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:36
+msgid "In progress"
+msgstr "प्रगति में है"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:37
+msgid ""
+"The offer was sent to the employee but the offer is unsigned by all parties."
+msgstr ""
+"ऑफर कर्मचारी को भेज दिया गया था लेकिन ऑफर पर सभी पक्षों के हस्ताक्षर नहीं हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:38
+msgid "Orange"
+msgstr "ओरेंज"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:39
+msgid "Partially signed"
+msgstr "आंशिक तौर पर हस्ताक्षर किया गया"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:40
+msgid ""
+"A minimum of one person has signed the contract, but other signatures are "
+"required."
+msgstr ""
+"कम से कम एक व्यक्ति ने कॉन्ट्रैक्ट पर हस्ताक्षर किए हैं, लेकिन अन्य हस्ताक्षर आवश्यक हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:41
+msgid "Green"
+msgstr "ग्रीन"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:42
+msgid "Fully signed"
+msgstr "पूरी तरह हस्ताक्षरित"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:43
+msgid "The offer was accepted and all parties have signed the contract."
+msgstr ""
+"ऑफर स्वीकार कर लिया गया था और सभी पक्षों ने कॉन्ट्रैक्ट पर हस्ताक्षर कर दिए हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:44
+msgid "Blue"
+msgstr "ब्लू"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:45
+#: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:213
+msgid "Refused"
+msgstr "मना कर दिया"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:46
+msgid "The offer was refused by the applicant."
+msgstr "ऑफर आवेदक द्वारा अस्वीकार कर दिया गया था।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:48
+msgid "A bar chart view of the Offer Analysis report."
+msgstr "ऑफर एनालिसिस रिपोर्ट का एक बार चार्ट व्यू।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:52
+msgid "Use case: view offers by state"
+msgstr "उपयोग का मामला: स्टेट के अनुसार ऑफर देखें"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:54
+msgid ""
+"A large, growing company with hundreds of employees is constantly "
+"recruiting. Due to the large number of roles they are continuously filling, "
+"it can be difficult to keep track of all the job offers and where each offer "
+"stands."
+msgstr ""
+"सैकड़ों कर्मचारियों वाली एक बड़ी, बढ़ती हुई कंपनी लगातार भर्ती कर रही है। जिन भूमिकाओं को "
+"वे लगातार भर रहे हैं, उनकी बड़ी संख्या के कारण, सभी जॉब ऑफर को ट्रैक करना और यह जानना "
+"मुश्किल हो सकता है कि प्रत्येक ऑफर किस स्थिति में है।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:58
+msgid ""
+"To aid the team, the *Offer Analysis* report can be modified to show all "
+"offers by state, instead of by job position. To view offers by state, "
+"navigate to :menuselection:`Recruitment app --> Reporting --> Offer "
+"Analysis`. Click into the search bar and select the :guilabel:`Offer State` "
+"option in the :icon:`oi-group` :guilabel:`Group By` column. This provides a "
+"high-level overview of where all offers stand."
+msgstr ""
+"टीम की मदद के लिए, *ऑफर एनालिसिस* रिपोर्ट को जॉब पोजीशन के बजाय स्टेट के अनुसार सभी "
+"ऑफर दिखाने के लिए संशोधित किया जा सकता है। स्टेट के अनुसार ऑफर देखने के लिए, "
+":menuselection:`रिक्रूटमेंट एप्लीकेशन --> रिपोर्टिंग --> ऑफर एनालिसिस` पर जाएं। सर्च "
+"बार में क्लिक करें और :guilabel:`ऑफर स्टेट` विकल्प को :icon:`oi-group` "
+":guilabel:`इन्होंने ग्रुप किया` कॉलम में चुनें। यह इस बात का उच्च-स्तरीय ओवरव्यू प्रदान "
+"करता है कि सभी ऑफर किस स्थिति में हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:64
+msgid ""
+"Click on a column to open a list view of all the offers in that particular "
+"state. This is helpful when trying to finalize all open offers, or see how "
+"many were refused or completed."
+msgstr ""
+"उस विशेष स्टेट में सभी ऑफर का लिस्ट व्यू खोलने के लिए किसी कॉलम पर क्लिक करें। यह तब "
+"सहायक होता है जब आप सभी ओपन ऑफर को अंतिम रूप देने का प्रयास कर रहे हों, या यह देखना "
+"चाहते हों कि कितने रिफ्यूज या पूरे हो गए हैं।"
+
+#: ../../export/content/applications/hr/recruitment/offer_analysis.rst:67
+msgid "All offers grouped by state."
+msgstr "स्टेट के अनुसार ग्रुप किए गए सभी ऑफर।"
+
 #: ../../export/content/applications/hr/recruitment/offer_job_positions.rst:3
 msgid "Offer job positions"
 msgstr "जॉब पोज़िशन ऑफ़र करें"
@@ -50612,8 +51264,8 @@ msgid ""
 "The :guilabel:`Online Posting` option is only available if the :doc:`Website "
 "<../../websites/website>` application is also installed."
 msgstr ""
-":guilabel:`ऑनलाइन पोस्टिंग` विकल्प सिर्फ़ तभी उपलब्ध होता है अगर :doc:`वेबसाइट <../"
-"../websites/website>` एप्लिकेशन भी इंस्टॉल हो।"
+":guilabel:`ऑनलाइन पोस्टिंग` विकल्प सिर्फ़ तभी उपलब्ध होता है अगर :doc:`वेबसाइट "
+"<../../websites/website>` एप्लिकेशन भी इंस्टॉल हो।"
 
 #: ../../export/content/applications/hr/recruitment/post_job.rst:25
 msgid ""
@@ -50682,10 +51334,10 @@ msgid ""
 "the :guilabel:`Save` button."
 msgstr ""
 "Odoo के बाहर किसी जॉब बोर्ड पर जॉब लिस्टिंग पब्लिश करने के लिए, पहले जॉब बोर्ड "
-"क्रेडेंशियल कॉन्फ़िगर किए जाने चाहिए। :menuselection:`रिक्रूटमेंट एप्लिकेशन --> "
-"कॉन्फ़िगरेशन --> सेटिंग` पर जाएं। *Monster Credentials* सेक्शन में, संबंधित फ़ील्ड में "
-"Monster के लिए :guilabel:`यूज़रनेम` और :guilabel:`पासवर्ड` दर्ज करें, फिर "
-":guilabel:`सेव करें` बटन पर क्लिक करें।"
+"क्रेडेंशियल कॉन्फ़िगर किए जाने चाहिए। :menuselection:`रिक्रूटमेंट एप्लिकेशन --> कॉन्फ़िगरेशन "
+"--> सेटिंग` पर जाएं। *Monster Credentials* सेक्शन में, संबंधित फ़ील्ड में Monster के "
+"लिए :guilabel:`यूज़रनेम` और :guilabel:`पासवर्ड` दर्ज करें, फिर :guilabel:`सेव करें` "
+"बटन पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/recruitment/post_job.rst:59
 msgid ""
@@ -50696,8 +51348,8 @@ msgid ""
 "the main **Apps** app."
 msgstr ""
 "**रिक्रूटमेंट** एप्लिकेशन इंस्टॉल करते समय, निम्नलिखित मॉड्यूल ऑटोमैटिकली इंस्टॉल हो जाते हैं: "
-"*Job Board - Monster.com*, *Job Board - Monster.com (Skills)*, और *Job "
-"Board - Monster.com (Website)*। अगर इनमें से कोई भी मॉड्यूल इंस्टॉल *नहीं* है, तो मुख्य "
+"*Job Board - Monster.com*, *Job Board - Monster.com (Skills)*, और *Job Board "
+"- Monster.com (Website)*। अगर इनमें से कोई भी मॉड्यूल इंस्टॉल *नहीं* है, तो मुख्य "
 "**एप्लिकेशन** ऐप से :doc:`उन्हें इंस्टॉल करें <../../general/apps_modules>`।"
 
 #: ../../export/content/applications/hr/recruitment/post_job.rst:65
@@ -50718,9 +51370,9 @@ msgid ""
 "Board* pop-up window loads. Fill out the following information in the pop-up "
 "window:"
 msgstr ""
-":menuselection:`रिक्रूटमेंट एप्लिकेशन --> एप्लिकेशन --> जॉब बोर्ड पोस्ट्स` पर जाएं, "
-":guilabel:`जॉब बोर्ड पर पब्लिश करें` पर क्लिक करें, और एक *Publish on a Job Board* "
-"पॉप-अप विंडो लोड होती है। पॉप-अप विंडो में निम्नलिखित जानकारी भरें:"
+":menuselection:`रिक्रूटमेंट एप्लिकेशन --> एप्लिकेशन --> जॉब बोर्ड पोस्ट्स` पर "
+"जाएं, :guilabel:`जॉब बोर्ड पर पब्लिश करें` पर क्लिक करें, और एक *Publish on a Job "
+"Board* पॉप-अप विंडो लोड होती है। पॉप-अप विंडो में निम्नलिखित जानकारी भरें:"
 
 #: ../../export/content/applications/hr/recruitment/post_job.rst:73
 msgid ""
@@ -51180,9 +51832,9 @@ msgid ""
 "address. Once entered, click :guilabel:`Set Email`."
 msgstr ""
 "अगर आवेदक के कार्ड पर ईमेल पता मौजूद नहीं है, तो जब :guilabel:`इंटरव्यू भेजें` बटन पर "
-"क्लिक किया जाता है और *इंटरव्यू भेजें* पॉप-अप विंडो लोड होती है, तो "
-":guilabel:`रेसिपिएंट्स` फ़ील्ड के नीचे एक दूसरी पॉप-अप विंडो दिखाई देती है। यह पॉप-अप "
-"विंडो ईमेल पता दर्ज करने के फ़ील्ड के साथ `What's the email address of (applicant "
+"क्लिक किया जाता है और *इंटरव्यू भेजें* पॉप-अप विंडो लोड होती है, "
+"तो :guilabel:`रेसिपिएंट्स` फ़ील्ड के नीचे एक दूसरी पॉप-अप विंडो दिखाई देती है। यह पॉप-"
+"अप विंडो ईमेल पता दर्ज करने के फ़ील्ड के साथ `What's the email address of (applicant "
 "name)?` प्रदर्शित करती है। दर्ज करने के बाद, :guilabel:`ईमेल सेट करें` पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:84
@@ -51267,8 +51919,8 @@ msgid ""
 "click :guilabel:`Send` at the bottom of the *Send an interview* pop-up "
 "window."
 msgstr ""
-"आवेदक को इंटरव्यू लिंक वाला ईमेल भेजने के लिए, *इंटरव्यू भेजें* पॉप-अप विंडो के नीचे "
-":guilabel:`भेजें` पर क्लिक करें।"
+"आवेदक को इंटरव्यू लिंक वाला ईमेल भेजने के लिए, *इंटरव्यू भेजें* पॉप-अप विंडो के "
+"नीचे :guilabel:`भेजें` पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:122
 msgid "Qualification"
@@ -51279,8 +51931,8 @@ msgid ""
 "If an applicant is determined to be a good potential candidate, they are "
 "moved to the :guilabel:`Qualification` stage."
 msgstr ""
-"अगर किसी आवेदक को एक अच्छा संभावित उम्मीदवार माना जाता है, तो उन्हें "
-":guilabel:`क्वालिफिकेशन` स्टेज में ले जाया जाता है।"
+"अगर किसी आवेदक को एक अच्छा संभावित उम्मीदवार माना जाता है, तो "
+"उन्हें :guilabel:`क्वालिफिकेशन` स्टेज में ले जाया जाता है।"
 
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:127
 msgid ""
@@ -51463,10 +52115,6 @@ msgstr ""
 "बाद, कानबन व्यू से आवेदक के कार्ड को :guilabel:`अनुबंध हस्ताक्षरित` चरण में ड्रैग और ड्रॉप "
 "करें, या व्यक्तिगत आवेदक के कार्ड के शीर्ष पर :guilabel:`अनुबंध हस्ताक्षरित` चरण पर क्लिक "
 "करें।"
-
-#: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:213
-msgid "Refused"
-msgstr "मना कर दिया"
 
 #: ../../export/content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
@@ -52278,9 +52926,9 @@ msgid ""
 "button next to the :guilabel:`Attendees` field on the expanded meeting form. "
 "A *Send SMS* pop-up window appears."
 msgstr ""
-"मीटिंग को SMS के माध्यम से भेजने के लिए, विस्तृत मीटिंग फॉर्म पर :icon:`fa-mobile` "
-":guilabel:`SMS` बटन पर क्लिक करें जो :guilabel:`Attendees` फ़ील्ड के बगल में है। एक "
-"*Send SMS* (SMS भेजें) पॉप-अप विंडो दिखाई देती है।"
+"मीटिंग को SMS के माध्यम से भेजने के लिए, विस्तृत मीटिंग फॉर्म पर :icon:`fa-"
+"mobile` :guilabel:`SMS` बटन पर क्लिक करें जो :guilabel:`Attendees` फ़ील्ड के बगल में "
+"है। एक *Send SMS* (SMS भेजें) पॉप-अप विंडो दिखाई देती है।"
 
 #: ../../export/content/applications/hr/recruitment/schedule_interviews.rst:148
 msgid ""
@@ -52302,8 +52950,8 @@ msgid ""
 "up window."
 msgstr ""
 "जब कोई चेतावनी संदेश दिखाई नहीं देता है, तो मुख्य टेक्स्ट फ़ील्ड में उपस्थित लोगों को भेजे जाने "
-"वाला संदेश टाइप करें। संदेश में कोई इमोजी जोड़ने के लिए, पॉप-अप विंडो के किनारे स्थित "
-":icon:`oi-smile-add` :guilabel:`(smile add)` आइकन पर क्लिक करें।"
+"वाला संदेश टाइप करें। संदेश में कोई इमोजी जोड़ने के लिए, पॉप-अप विंडो के किनारे "
+"स्थित :icon:`oi-smile-add` :guilabel:`(smile add)` आइकन पर क्लिक करें।"
 
 #: ../../export/content/applications/hr/recruitment/schedule_interviews.rst:156
 msgid ""
@@ -58360,6 +59008,102 @@ msgstr "डिस्प्ले विकल्प सेक्शन"
 msgid "The time off tab configured for paid time off."
 msgstr "सवेतन टाइम ऑफ़ के लिए कॉन्फ़िगर किया गया टाइम ऑफ़ टैब।"
 
+#~ msgid ""
+#~ ":guilabel:`Working Hours`: Select the hours the employee is expected to "
+#~ "work, using the drop-down menu. By default, a :guilabel:`Standard 40 "
+#~ "hours/week` working schedule is selected. If the **Timesheets** app is "
+#~ "installed, an :guilabel:`Appointment Resource Default Calendar` option is "
+#~ "also available."
+#~ msgstr ""
+#~ ":guilabel:`वर्किंग आवर्स`: ड्रॉप-डाउन मेन्यू का उपयोग करके, कर्मचारी से काम करने की "
+#~ "अपेक्षित घंटों को चुनें। डिफ़ॉल्ट रूप से, एक :guilabel:`स्टैंडर्ड 40 घंटे/सप्ताह` वर्किंग "
+#~ "शेड्यूल चुना गया है। अगर **टाइमशीट** ऐप्लिकेशन इंस्टॉल है, तो एक :guilabel:`अपॉइंटमेंट "
+#~ "रिसोर्स डिफ़ॉल्ट कैलेंडर` विकल्प भी उपलब्ध है।"
+
+#~ msgid ""
+#~ "To view and modify the specific daily working hours, click the :icon:`oi-"
+#~ "arrow-right` :guilabel:`(Internal link)` arrow at the end of "
+#~ "the :guilabel:`Working Hours` line. Working hours can be modified or "
+#~ "deleted here."
+#~ msgstr ""
+#~ "विशिष्ट दैनिक वर्किंग ऑवर्स देखने और उनमें बदलाव करने के लिए, :guilabel:`वर्किंग ऑवर्स` "
+#~ "लाइन के अंत में :icon:`oi-arrow-right` :guilabel:`(इंटरनल लिंक)` ऐरो पर क्लिक "
+#~ "करें। यहां वर्किंग ऑवर्स में बदलाव किया जा सकता है या उन्हें डिलीट किया जा सकता है।"
+
+#~ msgid ""
+#~ "The *Headcount report* in the **Payroll** app shows the number of "
+#~ "employees on payroll and allows headcount comparisons between different "
+#~ "periods of time."
+#~ msgstr ""
+#~ "**पेरोल** ऐप में *हेडकाउंट रिपोर्ट* पेरोल पर कर्मचारियों की संख्या दिखाती है और समय "
+#~ "की विभिन्न अवधियों के बीच हेडकाउंट तुलना की अनुमति देती है।"
+
+#~ msgid ""
+#~ "Report name: generated automatically as `Headcount for (Company Name) on "
+#~ "the (YYYY-MM-DD)` and **cannot** be modified."
+#~ msgstr ""
+#~ "रिपोर्ट का नाम: ऑटोमैटिकली `Headcount for (Company Name) on the (YYYY-MM-"
+#~ "DD)` के रूप में जनरेट होता है और इसे मॉडिफाई **नहीं** किया जा सकता।"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: populated automatically (works in both single and "
+#~ "multi-company databases)"
+#~ msgstr ""
+#~ ":guilabel:`Company`: ऑटोमैटिकली पॉप्युलेट होता है (सिंगल और मल्टी-कंपनी डेटाबेस "
+#~ "दोनों में काम करता है)"
+
+#~ msgid ""
+#~ ":guilabel:`From`/:guilabel:`To` dates: defaults to current date (from) "
+#~ "and blank (to). Adjust these to define the period to analyze."
+#~ msgstr ""
+#~ ":guilabel:`From`/:guilabel:`To` तारीखें: डिफ़ॉल्ट रूप से वर्तमान तारीख (from) और "
+#~ "खाली (to) होती हैं। विश्लेषण करने के लिए पीरियड डिफाइन करने हेतु इन्हें एडजस्ट करें।"
+
+#~ msgid "A headcount report form filled out for the third quarter of 2025."
+#~ msgstr "2025 की तीसरी तिमाही के लिए भरा गया हेडकाउंट रिपोर्ट फ़ॉर्म।"
+
+#~ msgid ""
+#~ "At the top of the form, a :icon:`fa-people` :guilabel:`Employees` smart "
+#~ "button appears. Clicking the button displays the total number of "
+#~ "employees for the selected period."
+#~ msgstr ""
+#~ "फ़ॉर्म के ऊपर, एक :icon:`fa-people` :guilabel:`Employees` स्मार्ट बटन दिखाई "
+#~ "देता है। बटन पर क्लिक करने से सेलेक्ट की गई पीरियड के लिए कर्मचारियों की कुल संख्या "
+#~ "दिखाई देती है।"
+
+#~ msgid ""
+#~ "TO get an overall view of employees and their salary impact on the "
+#~ "company, view all employee records of a specific headcount report."
+#~ msgstr ""
+#~ "कर्मचारियों और कंपनी पर उनके सैलरी प्रभाव का समग्र दृश्य प्राप्त करने के लिए, किसी "
+#~ "विशिष्ट हेडकाउंट रिपोर्ट के सभी कर्मचारी रिकॉर्ड देखें।"
+
+#~ msgid ""
+#~ "To view the employees of a specific headcount report, click the :icon:`fa-"
+#~ "people` :guilabel:`Employees` smart button at the top of a headcount "
+#~ "report."
+#~ msgstr ""
+#~ "किसी विशिष्ट हेडकाउंट रिपोर्ट के कर्मचारी देखने के लिए, हेडकाउंट रिपोर्ट के शीर्ष "
+#~ "पर :icon:`fa-people` :guilabel:`कर्मचारी` स्मार्ट बटन पर क्लिक करें।"
+
+#~ msgid ":guilabel:`Employee`: the employee's full name"
+#~ msgstr ":guilabel:`कर्मचारी`: कर्मचारी का पूरा नाम"
+
+#~ msgid ":guilabel:`Department`: the department their job position is in"
+#~ msgstr ":guilabel:`डिपार्टमेंट`: वह डिपार्टमेंट जिसमें उनकी नौकरी का पद है"
+
+#~ msgid ":guilabel:`Job Title`: their role"
+#~ msgstr ":guilabel:`जॉब टाइटल`: उनकी भूमिका"
+
+#~ msgid ""
+#~ ":guilabel:`Employer Cost`: how much the company pays the employee each "
+#~ "pay-period"
+#~ msgstr ""
+#~ ":guilabel:`नियोक्ता लागत`: कंपनी हर पे-पीरियड में कर्मचारी को कितना भुगतान करती है"
+
+#~ msgid ":guilabel:`Wage on Payroll`: the dollar amount on payroll reports"
+#~ msgstr ":guilabel:`पेरोल पर वेज`: पेरोल रिपोर्ट पर डॉलर की राशि"
+
 #~ msgid "Take care of employee records when collaboration ends."
 #~ msgstr "जब सहयोग समाप्त हो जाए तो कर्मचारी रिकॉर्ड की देखभाल करें।"
 
@@ -60210,9 +60954,6 @@ msgstr "सवेतन टाइम ऑफ़ के लिए कॉन्फ�
 #~ msgid "Adjustments"
 #~ msgstr "एडजस्टमेंट"
 
-#~ msgid "Color"
-#~ msgstr "कलर"
-
 #~ msgid "Commission"
 #~ msgstr "कमीशन"
 
@@ -60225,14 +60966,8 @@ msgstr "सवेतन टाइम ऑफ़ के लिए कॉन्फ�
 #~ msgid "N/A"
 #~ msgstr "उपलब्ध नहीं"
 
-#~ msgid "Orange"
-#~ msgstr "ओरेंज"
-
 #~ msgid "Period"
 #~ msgstr "समयावधि"
-
-#~ msgid "Red"
-#~ msgstr "रेड"
 
 #~ msgid "Regular"
 #~ msgstr "रेगुलर"
@@ -60242,9 +60977,6 @@ msgstr "सवेतन टाइम ऑफ़ के लिए कॉन्फ�
 
 #~ msgid "Skills"
 #~ msgstr "स्किल"
-
-#~ msgid "Status"
-#~ msgstr "स्टेटस"
 
 #~ msgid "Total"
 #~ msgstr "कुल"
