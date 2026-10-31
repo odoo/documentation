@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-25 01:37+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-10-30 17:32+0000\n"
+"PO-Revision-Date: 2026-10-31 11:35+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
 "19-doc/hr/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -6422,6 +6422,7 @@ msgstr "Desligamento"
 #: ../../content/applications/hr/employees.rst:62
 msgid "Take care of employee assets and documents when collaboration ends."
 msgstr ""
+"Cuide dos bens e documentos do funcionário quando a colaboração terminar."
 
 #: ../../content/applications/hr/employees.rst:67
 #: ../../content/applications/hr/employees/archive.rst:3
@@ -6431,6 +6432,8 @@ msgstr "Arquivar funcionários"
 #: ../../content/applications/hr/employees.rst:67
 msgid "Ensure employee records are correctly handled collaboration ends."
 msgstr ""
+"Garanta que os registros de funcionários sejam tratados corretamente ao "
+"término da colaboração."
 
 #: ../../content/applications/hr/employees.rst:72
 #: ../../content/applications/hr/employees/training_attendances.rst:3
@@ -6633,6 +6636,11 @@ msgid ""
 "the :menuselection:`Employees app`. From here, locate the employee leaving "
 "the company, and click on their employee card."
 msgstr ""
+"No Odoo, quando um funcionário sai da empresa, ele deve ser *arquivado*. "
+"Essa etapa deve ser feita *após* o funcionário ter sido totalmente "
+":doc:`desligado <offboarding>`. Para arquivar um funcionário, primeiro "
+"navegue até o :menuselection:`aplicativo Funcionários`. A partir daqui, "
+"localize o funcionário que está deixando a empresa e clique no cartão dele."
 
 #: ../../content/applications/hr/employees/archive.rst:10
 msgid ""
@@ -7547,7 +7555,6 @@ msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:56
 #: ../../content/applications/hr/fleet/accidents.rst:141
-#: ../../content/applications/hr/recruitment.rst:158
 msgid "Kanban view"
 msgstr "Visualização Kanban"
 
@@ -10468,6 +10475,9 @@ msgid ""
 "be :doc:`updated to reflect their departure <archive>`, log the reason why "
 "they left, and close any open activities associated with the employee."
 msgstr ""
+"Além de um plano de desligamento, o registro do funcionário deve ser "
+":doc:`atualizado para refletir sua saída <archive>`, registrar o motivo pelo "
+"qual ele saiu e encerrar quaisquer atividades abertas associadas a ele."
 
 #: ../../content/applications/hr/employees/offboarding.rst:19
 msgid "View offboarding plan"
@@ -19237,7 +19247,7 @@ msgstr ":guilabel:`Salário na Assinatura`: Digite o salário mensal no campo."
 #: ../../content/applications/hr/payroll/contracts.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:303
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:388
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:139
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:167
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:121
@@ -19437,13 +19447,13 @@ msgstr "Relatório de efetivo"
 
 #: ../../content/applications/hr/payroll/headcount.rst:5
 msgid ""
-"The *Headcount report* in the **Payroll** app shows the number of employees "
+"The *Headcount* report in the **Payroll** app shows the number of employees "
 "on payroll and allows headcount comparisons between different periods of "
 "time."
 msgstr ""
-"O *relatório de efetivo* no aplicativo **Folha de Pagamento** mostra o "
-"número de funcionários na folha de pagamento e permite comparações de "
-"efetivo entre diferentes períodos de tempo."
+"O relatório de *Contagem de Funcionários* no aplicativo **Folha de "
+"Pagamento** mostra o número de funcionários na folha de pagamento e permite "
+"comparações de contagem entre diferentes períodos de tempo."
 
 #: ../../content/applications/hr/payroll/headcount.rst:9
 msgid "Create a headcount report"
@@ -19467,53 +19477,62 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/headcount.rst:17
 msgid ""
-"Report name: generated automatically as `Headcount for (Company Name) on the "
-"(YYYY-MM-DD)` and **cannot** be modified."
+":guilabel:`Report name`: The name is generated automatically as `Headcount "
+"for (Company Name) on the (YYYY-MM-DD)` and **cannot** be modified."
 msgstr ""
-"Nome do relatório: gerado automaticamente como `Efetivo para (Nome da "
-"Empresa) em (AAAA-MM-DD)` e **não pode** ser modificado."
+":guilabel:`Nome do relatório`: O nome é gerado automaticamente como "
+"`Contagem para (Nome da Empresa) em (AAAA-MM-DD)` e **não** pode ser "
+"modificado."
 
 #: ../../content/applications/hr/payroll/headcount.rst:19
 msgid ""
-":guilabel:`Company`: populated automatically (works in both single and multi-"
-"company databases)"
+":guilabel:`Company`: The company is automatically populated (works in both "
+"single and multi-company databases)."
 msgstr ""
-":guilabel:`Empresa`: preenchido automaticamente (funciona em bancos de dados "
-"de empresa única e multiempresa)"
+":guilabel:`Empresa`: A empresa é preenchida automaticamente (funciona em "
+"bancos de dados de empresa única e multiempresa)."
 
-#: ../../content/applications/hr/payroll/headcount.rst:20
+#: ../../content/applications/hr/payroll/headcount.rst:21
 msgid ""
-":guilabel:`From`/:guilabel:`To` dates: defaults to current date (from) and "
-"blank (to). Adjust these to define the period to analyze."
+":guilabel:`From`: Using the calendar selector, select the start date for the "
+"report. The current date populates this field by default."
 msgstr ""
-":guilabel:`De`/:guilabel:`Até` datas: o padrão é a data atual (de) e em "
-"branco (até). Ajuste-as para definir o período a ser analisado."
+":guilabel:`De`: Usando o seletor de calendário, selecione a data de início "
+"do relatório. A data atual preenche este campo por padrão."
 
-#: ../../content/applications/hr/payroll/headcount.rst:None
-msgid "A headcount report form filled out for the third quarter of 2025."
+#: ../../content/applications/hr/payroll/headcount.rst:23
+msgid ""
+":guilabel:`To`: Using the calendar selector, select the end date for the "
+"report."
 msgstr ""
-"Um formulário de relatório de efetivo preenchido para o terceiro trimestre "
-"de 2025."
+":guilabel:`Para`: Usando o seletor de calendário, selecione a data de "
+"término do relatório."
 
-#: ../../content/applications/hr/payroll/headcount.rst:26
+#: ../../content/applications/hr/payroll/headcount.rst:25
 msgid "Next, click :guilabel:`Populate` to generate the report."
 msgstr "Em seguida, clique em :guilabel:`Popular` para gerar o relatório."
 
-#: ../../content/applications/hr/payroll/headcount.rst:28
+#: ../../content/applications/hr/payroll/headcount.rst:27
 msgid ""
-"At the top of the form, a :icon:`fa-people` :guilabel:`Employees` smart "
+"At the top of the form, an :icon:`fa-users` :guilabel:`Employees` smart "
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"No topo do formulário, aparece um botão inteligente :icon:`fa-"
-"people` :guilabel:`Funcionários`. Clicar no botão exibe o número total de "
-"funcionários para o período selecionado."
+"Na parte superior do formulário, um :icon:`fa-users` "
+":guilabel:`Funcionários` botão inteligente aparece. Clicar no botão exibe o "
+"número total de funcionários para o período selecionado."
 
-#: ../../content/applications/hr/payroll/headcount.rst:32
+#: ../../content/applications/hr/payroll/headcount.rst:None
+msgid "A headcount report created on October 22, 2026 for 2026."
+msgstr ""
+"Um relatório de contagem de funcionários criado em 22 de outubro de 2026 "
+"para 2026."
+
+#: ../../content/applications/hr/payroll/headcount.rst:34
 msgid "View all headcount reports"
 msgstr "Ver todos os relatórios de efetivo"
 
-#: ../../content/applications/hr/payroll/headcount.rst:34
+#: ../../content/applications/hr/payroll/headcount.rst:36
 msgid ""
 "See how the company headcount has changed over time by viewing all headcount "
 "reports in a list view."
@@ -19521,7 +19540,7 @@ msgstr ""
 "Veja como o efetivo da empresa mudou ao longo do tempo visualizando todos os "
 "relatórios de efetivo em uma lista."
 
-#: ../../content/applications/hr/payroll/headcount.rst:36
+#: ../../content/applications/hr/payroll/headcount.rst:38
 msgid ""
 "To view all headcount reports, navigate to :menuselection:`Payroll app --> "
 "Reporting --> Headcount`."
@@ -19530,29 +19549,29 @@ msgstr ""
 "até :menuselection:`aplicativo Folha de Pagamento --> Relatórios --> "
 "Efetivo`."
 
-#: ../../content/applications/hr/payroll/headcount.rst:39
+#: ../../content/applications/hr/payroll/headcount.rst:41
 msgid "View employees in a headcount"
 msgstr "Ver funcionários em um efetivo"
 
-#: ../../content/applications/hr/payroll/headcount.rst:41
+#: ../../content/applications/hr/payroll/headcount.rst:43
 msgid ""
-"TO get an overall view of employees and their salary impact on the company, "
+"To get an overall view of employees and their salary impact on the company, "
 "view all employee records of a specific headcount report."
 msgstr ""
-"Para obter uma visão geral dos funcionários e o impacto de seus salários na "
+"Para obter uma visão geral dos funcionários e seu impacto salarial na "
 "empresa, visualize todos os registros de funcionários de um relatório de "
 "headcount específico."
 
-#: ../../content/applications/hr/payroll/headcount.rst:44
+#: ../../content/applications/hr/payroll/headcount.rst:46
 msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
-"people` :guilabel:`Employees` smart button at the top of a headcount report."
+"users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
 "Para visualizar os funcionários de um relatório de headcount específico, "
-"clique no botão inteligente :icon:`fa-people` :guilabel:`Funcionários` no "
-"topo do relatório de headcount."
+"clique no botão inteligente :icon:`fa-users` :guilabel:`Funcionários` na "
+"parte superior de um relatório de headcount."
 
-#: ../../content/applications/hr/payroll/headcount.rst:47
+#: ../../content/applications/hr/payroll/headcount.rst:49
 msgid ""
 "All employees from the headcount appear in a list view, grouped "
 "by :guilabel:`Department`."
@@ -19560,32 +19579,42 @@ msgstr ""
 "Todos os funcionários do headcount aparecem em uma visualização de lista, "
 "agrupados por :guilabel:`Departamento`."
 
-#: ../../content/applications/hr/payroll/headcount.rst:49
-msgid ":guilabel:`Employee`: the employee's full name"
-msgstr ":guilabel:`Funcionário`: o nome completo do funcionário"
-
-#: ../../content/applications/hr/payroll/headcount.rst:50
-msgid ":guilabel:`Department`: the department their job position is in"
-msgstr ""
-":guilabel:`Departamento`: o departamento no qual o cargo está localizado"
-
 #: ../../content/applications/hr/payroll/headcount.rst:51
-msgid ":guilabel:`Job Title`: their role"
-msgstr ":guilabel:`Cargo`: a função do funcionário"
+msgid ":guilabel:`Employee`: The employee's full name."
+msgstr ":guilabel:`Funcionário`: O nome completo do funcionário."
 
 #: ../../content/applications/hr/payroll/headcount.rst:52
-msgid ""
-":guilabel:`Employer Cost`: how much the company pays the employee each pay-"
-"period"
+msgid ":guilabel:`Department`: The department their job position is in."
 msgstr ""
-":guilabel:`Custo para o Empregador`: quanto a empresa paga ao funcionário a "
-"cada período de pagamento"
+":guilabel:`Departamento`: O departamento em que se encontra o cargo dele."
 
 #: ../../content/applications/hr/payroll/headcount.rst:53
-msgid ":guilabel:`Wage on Payroll`: the dollar amount on payroll reports"
+msgid ":guilabel:`Job Title`: Their specific role."
+msgstr ":guilabel:`Cargo`: Sua função específica."
+
+#: ../../content/applications/hr/payroll/headcount.rst:54
+msgid ""
+":guilabel:`Employer Cost`: How much the company pays the employee each pay "
+"period."
 msgstr ""
-":guilabel:`Salário na Folha de Pagamento`: o valor em reais nos relatórios "
-"de folha de pagamento"
+":guilabel:`Custo do Empregador`: Quanto a empresa paga ao funcionário a cada "
+"período de pagamento."
+
+#: ../../content/applications/hr/payroll/headcount.rst:55
+msgid ":guilabel:`Wage On Payroll`: The monetary amount on payroll reports."
+msgstr ""
+":guilabel:`Salário na Folha de Pagamento`: O valor monetário nos relatórios "
+"da folha de pagamento."
+
+#: ../../content/applications/hr/payroll/headcount.rst:57
+msgid "Click on any department to expand the list and view the employees."
+msgstr ""
+"Clique em qualquer departamento para expandir a lista e visualizar os "
+"funcionários."
+
+#: ../../content/applications/hr/payroll/headcount.rst:None
+msgid "The headcount report showing expanded departments."
+msgstr "O relatório de headcount exibindo departamentos expandidos."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:3
 msgid "Pay runs"
@@ -20498,6 +20527,7 @@ msgstr "Dependências"
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:34
 msgid "Description"
 msgstr "Descrição"
 
@@ -21279,7 +21309,7 @@ msgstr ""
 "jornada de trabalho padrão e o tipo de entrada de trabalho ao qual se aplica."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:305
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:138
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:123
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:199
@@ -21293,7 +21323,7 @@ msgstr ""
 "período de pagamento especificado. As opções são:"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:308
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:144
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:139
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:126
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:202
@@ -21306,7 +21336,7 @@ msgstr ""
 "semana)."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:310
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:146
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:128
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:204
@@ -21319,7 +21349,7 @@ msgstr ""
 "Presença**."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:312
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:145
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:130
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
@@ -21889,7 +21919,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:507
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:81
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:304
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:336
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:331
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:296
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:192
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:138
@@ -21907,7 +21937,7 @@ msgstr ""
 "para a Austrália."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:513
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:342
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:337
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:328
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:144
@@ -21943,7 +21973,7 @@ msgstr "A estrutura salarial australiana na lista de estruturas salariais."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:528
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:314
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:357
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:352
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:345
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:159
@@ -21973,7 +22003,7 @@ msgstr "A parte superior das regras salariais australianas."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:539
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:325
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:371
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:366
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:359
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:250
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:175
@@ -21983,7 +22013,7 @@ msgid "Rule parameters"
 msgstr "Parâmetros de regra"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:541
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:373
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:252
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:436
@@ -21997,7 +22027,7 @@ msgstr ""
 "porcentagem ou um valor fixo, para referenciar nas regras salariais."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:544
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:380
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:375
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:365
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:255
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:443
@@ -22010,7 +22040,7 @@ msgstr ""
 "dólares)."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:547
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:383
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:378
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:258
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:183
@@ -22241,7 +22271,7 @@ msgid "Run Australian payroll"
 msgstr "Executar folha de pagamento australiana"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:633
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:397
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:392
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:409
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:285
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:339
@@ -22258,7 +22288,7 @@ msgstr ""
 "apropriada."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:637
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:401
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:396
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:289
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:343
@@ -23385,7 +23415,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1033
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:217
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:263
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:258
 msgid "Overtime"
 msgstr "Trabalho extra"
 
@@ -23746,7 +23776,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1150
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:452
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:507
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:502
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:538
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:399
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:419
@@ -23756,7 +23786,7 @@ msgstr "Fechar Folha de Pagamento"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1152
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:454
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:509
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:504
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:540
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:401
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:421
@@ -23767,7 +23797,7 @@ msgstr ""
 "pagamento."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1155
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:512
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:507
 #: ../../content/applications/hr/payroll/payroll_localizations/kenya.rst:152
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:574
 msgid "Reports"
@@ -27266,7 +27296,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1185
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1505
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:146
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:225
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:254
 msgid "Tax brackets"
 msgstr "Faixas de impostos"
@@ -32234,7 +32264,7 @@ msgstr ""
 "contratos."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:79
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:195
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:190
 msgid "Leaves"
 msgstr "Licenças"
 
@@ -32263,7 +32293,7 @@ msgstr ""
 "<time_off/request-allocation>` adequadamente."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:95
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:203
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:198
 msgid ""
 "Since the annual leave is fully paid, it is not connected to a salary rule, "
 "but it will appear on the worked days on the payslip form and on the PDF "
@@ -32375,7 +32405,7 @@ msgstr ""
 "de renda, onde as alíquotas aumentam com faixas de renda anual mais altas."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:148
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:227
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:222
 msgid ""
 "Depending on the annual income of the employee, the following rates apply:"
 msgstr ""
@@ -32418,7 +32448,7 @@ msgid "1-40k"
 msgstr "1-40k"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:168
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:237
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:232
 msgid "10%"
 msgstr "10%"
 
@@ -32431,7 +32461,7 @@ msgid "1 - 55k"
 msgstr "1 - 55k"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:175
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:239
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:234
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:264
 msgid "15%"
 msgstr "15%"
@@ -32446,7 +32476,7 @@ msgid "1 - 70k"
 msgstr "1 - 70k"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:182
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:241
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:266
 msgid "20%"
 msgstr "20%"
@@ -32477,7 +32507,7 @@ msgid "1 - 400k"
 msgstr "1 - 400k"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:196
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:243
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:238
 msgid "25%"
 msgstr "25%"
 
@@ -32502,7 +32532,7 @@ msgid "More than 1.2M"
 msgstr "Mais de 1,2M"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:212
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:254
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:249
 msgid "Exemptions"
 msgstr "Isenções"
 
@@ -32553,7 +32583,7 @@ msgstr ""
 "contracheques."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/egypt.rst:232
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:277
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:272
 msgid "Provisions"
 msgstr "Provisões"
 
@@ -34247,7 +34277,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:525
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:387
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:439
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:434
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:452
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:327
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:381
@@ -34267,7 +34297,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:531
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:395
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:447
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:442
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:460
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:335
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:389
@@ -35992,7 +36022,7 @@ msgstr ""
 "planejamento e folgas aprovadas."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:355
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:407
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:402
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:295
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:349
@@ -36008,7 +36038,7 @@ msgstr ""
 "Pagamento** como *Execuções de folha*."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:363
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:415
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:410
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:427
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:303
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:357
@@ -36026,7 +36056,7 @@ msgstr ""
 "que melhor atenda à empresa."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:367
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:419
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:414
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:361
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:488
 msgid ""
@@ -36043,7 +36073,7 @@ msgstr ""
 "reflita as horas reais trabalhadas do funcionário, entre outros."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:372
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:424
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:436
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:312
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:366
@@ -36057,7 +36087,7 @@ msgstr ""
 "validar os dados."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:375
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:427
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:422
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:315
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:369
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:496
@@ -36074,7 +36104,7 @@ msgstr ""
 "comissões, gorjetas, reembolsos, que estejam faltando."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:379
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:431
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:373
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:500
 msgid ""
@@ -36108,7 +36138,7 @@ msgstr ""
 "e :ref:`registrar pagamentos <payroll/in-register>`."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:397
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:449
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:444
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:462
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:337
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:391
@@ -36123,7 +36153,7 @@ msgstr ""
 "lançamento contábil é criado primeiro como rascunho."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:401
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:453
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:448
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:466
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:341
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:395
@@ -36248,7 +36278,7 @@ msgid "Journal entries posted."
 msgstr "Lançamentos contábeis publicados."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:442
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:497
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:492
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:513
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:384
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:404
@@ -36265,7 +36295,7 @@ msgstr ""
 "validados, o Odoo pode gerar pagamentos."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:446
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:501
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:496
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:393
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:563
@@ -36859,16 +36889,7 @@ msgstr ""
 "Funcionário` para este campo. Isso define quando o funcionário é pago, seu "
 "horário de trabalho padrão e o tipo de entrada de trabalho ao qual se aplica."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:None
-#: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:None
-#: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:None
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:None
-msgid "The contract overview section of the employee form of the payroll tab."
-msgstr ""
-"A seção de visão geral do contrato do formulário do funcionário da aba de "
-"folha de pagamento."
-
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:151
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
@@ -36880,7 +36901,7 @@ msgstr ""
 "aplicativo **Controle de Presença** adicione quaisquer entradas de trabalho "
 "extras registradas pelo funcionário."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:153
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:150
 msgid ""
 ":guilabel:`Working Hours`: Using the drop-down menu, "
 "select :guilabel:`Jordan Working Schedule`, which consists of a Sunday - "
@@ -36890,12 +36911,12 @@ msgstr ""
 "selecione :guilabel:`Horário de Trabalho da Jordânia`, que consiste em uma "
 "semana de trabalho de 40 horas de domingo a quinta-feira."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:157
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:154
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:165
 msgid "Allowances section"
 msgstr "Seção de adicionais"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:159
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:156
 msgid ""
 "The following sections of benefits are considered common ones offered by "
 "Jordanian employers. This information needs to be populated with the "
@@ -36904,6 +36925,16 @@ msgstr ""
 "As seguintes seções de benefícios são consideradas comuns oferecidas por "
 "empregadores jordanianos. Essas informações precisam ser preenchidas com as "
 "informações selecionadas pelo funcionário."
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:159
+msgid ""
+"Enter the monthly allowance amount "
+"for :guilabel:`Housing`, :guilabel:`Transportation`, and :guilabel:`Other` "
+"allowances."
+msgstr ""
+"Insira o valor mensal do adicional "
+"para :guilabel:`Moradia`, :guilabel:`Transporte` e "
+"adicionais :guilabel:`Outros`."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:163
 msgid ""
@@ -36916,37 +36947,11 @@ msgstr ""
 "que exigem deduções regulares no contracheque, eles podem ser adicionados "
 "como *entradas*."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:167
-msgid ""
-"Enter the monthly allowance amount "
-"for :guilabel:`Housing`, :guilabel:`Transportation`, and :guilabel:`Other` "
-"allowances."
-msgstr ""
-"Insira o valor mensal do adicional "
-"para :guilabel:`Moradia`, :guilabel:`Transporte` e "
-"adicionais :guilabel:`Outros`."
-
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:170
-msgid ""
-"If the employee is tax exempt, enter the annual amount that is not subject "
-"to taxes in the :guilabel:`Tax Exemption` field."
-msgstr ""
-"Se o funcionário for isento de impostos, insira o valor anual que não está "
-"sujeito a impostos no campo :guilabel:`Isenção Fiscal`."
-
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:173
-msgid ""
-"If the employee's salary is based on commission, tick the :guilabel:`Is "
-"Commission based` checkbox."
-msgstr ""
-"Se o salário do funcionário for baseado em comissão, marque a caixa de "
-"seleção :guilabel:`É baseado em Comissão`."
-
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:176
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:168
 msgid "Annual leave provision section"
 msgstr "Seção de provisão de licença anual"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:178
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:170
 msgid ""
 "Every year, employees receive days off. Enter the number of days in "
 "the :guilabel:`Number of Leave days` field. The default value is 14."
@@ -36954,11 +36959,20 @@ msgstr ""
 "Todo ano, os funcionários recebem dias de folga. Insira o número de dias no "
 "campo :guilabel:`Número de Dias de Licença`. O valor padrão é 14."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:182
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:None
+#: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:None
+#: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:None
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:None
+msgid "The contract overview section of the employee form of the payroll tab."
+msgstr ""
+"A seção de visão geral do contrato do formulário do funcionário da aba de "
+"folha de pagamento."
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:177
 msgid "Social Insurance"
 msgstr "Seguro Social"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:184
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:179
 msgid ""
 "Social insurance rules calculate the contribution amounts that are to be "
 "paid by the employer and employee to the :abbr:`Social Security Corporation "
@@ -36969,7 +36983,7 @@ msgstr ""
 "Segurança Social (SSC)`. Isso está disponível apenas para funcionários "
 "jordanianos."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:188
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:183
 msgid ""
 "The employer contributes 14.25% of the employee's salary to "
 "the :abbr:`Social Security Corporation (SSC)`, while the employee "
@@ -36979,7 +36993,7 @@ msgstr ""
 "a :abbr:`Corporação de Segurança Social (SSC)`, enquanto o funcionário "
 "contribui com 7,5% de seu salário, que é deduzido de seu contracheque."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:191
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:186
 msgid ""
 "For both employer and employee contributions, the base amount on which they "
 "are calculated is bound by a cap that gets updated every year."
@@ -36988,13 +37002,13 @@ msgstr ""
 "qual elas são calculadas é limitado por um teto que é atualizado todos os "
 "anos."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:197
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:192
 msgid "The following leave types are available to employees working in Jordan:"
 msgstr ""
 "Os seguintes tipos de licença estão disponíveis para funcionários que "
 "trabalham na Jordânia:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:199
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:194
 msgid ""
 ":guilabel:`Annual leave`: Employee's are eligible for 21 days of annual "
 "leave, and if the employee requires more days, they have to be requested "
@@ -37004,7 +37018,7 @@ msgstr ""
 "anual e, se o funcionário precisar de mais dias, eles devem ser solicitados "
 "aos gerentes de RH conforme necessário."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:206
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:201
 msgid ""
 ":guilabel:`Sick leave`: Employee's working in Jordan are entitled to 14 days "
 "of paid sick leave per year, with the possibility of an additional 14 days "
@@ -37015,7 +37029,7 @@ msgstr ""
 "de mais 14 dias se hospitalizados. Nenhuma dedução é aplicada ao funcionário "
 "nesses casos."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:210
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:205
 msgid ""
 ":guilabel:`Other leave types`: These leave types are fully paid and do not "
 "affect the final payslip, but are tracked for reporting purposes:"
@@ -37024,27 +37038,27 @@ msgstr ""
 "remunerados e não afetam o holerite final, mas são rastreados para fins de "
 "relatório:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:213
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:208
 msgid ":guilabel:`Maternity leave`"
 msgstr ":guilabel:`Licença maternidade`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:214
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:209
 msgid ":guilabel:`Paternity Leave`"
 msgstr ":guilabel:`Licença paternidade`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:215
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:210
 msgid ":guilabel:`Pilgrimage Leave`"
 msgstr ":guilabel:`Licença para peregrinação`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:216
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:211
 msgid ":guilabel:`Study leave`"
 msgstr ":guilabel:`Licença para estudos`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:219
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:214
 msgid "Income Tax"
 msgstr "Imposto de Renda"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:221
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:216
 msgid ""
 "In Jordan, employees are subject to a progressive income tax system, where "
 "tax rates increase with higher annual income brackets."
@@ -37053,49 +37067,49 @@ msgstr ""
 "imposto de renda, onde as alíquotas aumentam com faixas de renda anual mais "
 "altas."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:233
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:228
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:262
 msgid "Taxable Bracket"
 msgstr "Faixa tributável"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:234
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:229
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:263
 msgid "Range"
 msgstr "Intervalo"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:235
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:230
 msgid "5%"
 msgstr "5%"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:236
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:231
 msgid "0-5,000"
 msgstr "0-5.000"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:238
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:233
 msgid "5,001 - 10,000"
 msgstr "5.001 - 10.000"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:240
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:235
 msgid "10,001 - 15,000"
 msgstr "10.001 - 15.000"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:242
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:237
 msgid "15,001 - 20,000"
 msgstr "15.001 - 20.000"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:244
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:239
 msgid "20,001 - 1,000,000"
 msgstr "20.001 - 1.000.000"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:245
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:240
 msgid "30%"
 msgstr "30%"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:246
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:241
 msgid "More than 1,000,000"
 msgstr "Mais de 1.000.000"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:249
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:244
 msgid ""
 "Tax brackets are applied progressively. This means each portion of an "
 "employee's income is taxed at its respective rate within each bracket, "
@@ -37107,7 +37121,7 @@ msgstr ""
 "dentro de cada faixa, em vez de toda a renda ser tributada na alíquota da "
 "faixa mais alta em que se enquadra."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:256
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:251
 msgid ""
 "Several factors contribute to exempting part of an employee's gross income, "
 "including:"
@@ -37115,7 +37129,7 @@ msgstr ""
 "Vários fatores contribuem para isentar parte da renda bruta de um "
 "funcionário, incluindo:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:258
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:253
 msgid ""
 "**Jordanian residency**: Residents are entitled to a yearly exemption of "
 "12,000 JOD."
@@ -37123,7 +37137,7 @@ msgstr ""
 "**Residência jordaniana**: Residentes têm direito a uma isenção anual de "
 "12.000 JOD."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:259
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:254
 msgid ""
 "**Blindness**: Individuals who are blind are **fully** exempt from income "
 "tax."
@@ -37131,7 +37145,7 @@ msgstr ""
 "**Cegueira**: Indivíduos que são cegos são **totalmente** isentos de imposto "
 "de renda."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:260
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:255
 msgid ""
 "**Dependents**: An additional 12,000 JOD exemption per year for employees "
 "with dependents."
@@ -37139,7 +37153,7 @@ msgstr ""
 "**Dependentes**: Uma isenção adicional de 12.000 JOD por ano para "
 "funcionários com dependentes."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:265
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:260
 msgid ""
 "Employees are entitled to additional pay for overtime worked, depending on "
 "when the overtime hours are worked:"
@@ -37147,24 +37161,24 @@ msgstr ""
 "Funcionários têm direito a pagamento adicional por horas extras trabalhadas, "
 "dependendo de quando as horas extras são trabalhadas:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:268
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:263
 msgid ""
 "On working days: Overtime is paid at 1.25 times the regular hourly wage."
 msgstr ""
 "Em dias úteis: Horas extras são pagas a 1,25 vezes o salário horário regular."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:269
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:264
 msgid ""
 "On rest days: Overtime is compensated at 1.5 times the regular hourly wage."
 msgstr ""
 "Em dias de descanso: Horas extras são compensadas a 1,5 vezes o salário "
 "horário regular."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:271
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:266
 msgid "These percentages are recorded in the input parameters model."
 msgstr "Essas porcentagens são registradas no modelo de parâmetros de entrada."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:274
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:269
 msgid ""
 "The number of overtime hours is registered as other inputs directly on "
 "payslips."
@@ -37172,7 +37186,7 @@ msgstr ""
 "O número de horas extras é registrado como outras entradas diretamente nos "
 "recibos de pagamento."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:279
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:274
 msgid ""
 "Provisions are the amounts computed by the employer to account for the "
 "payments made to the employee for :abbr:`end-of-service (EOS)` benefits or "
@@ -37182,7 +37196,7 @@ msgstr ""
 "pagamentos feitos ao funcionário por benefícios de :abbr:`fim de serviço "
 "(EOS)` ou férias anuais. É calculado mensalmente."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:282
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:277
 msgid ""
 "**End of service benefit provision**: This is computed by dividing the "
 "monthly gross salary by 12"
@@ -37190,11 +37204,11 @@ msgstr ""
 "**Provisão de benefício de fim de serviço**: Isso é calculado dividindo o "
 "salário bruto mensal por 12"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:284
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:279
 msgid "\\frac{\\text{Basic} + \\text{Allowances}}{12}"
 msgstr "\\frac{\\text{Básico} + \\text{Adicionais}}{12}"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:288
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:283
 msgid ""
 "**Annual leave provision**: This is computed by dividing the gross salary by "
 "30 to get the daily salary, then multiplying that by the number of leave "
@@ -37204,7 +37218,7 @@ msgstr ""
 "por 30 para obter o salário diário, depois multiplicando isso pelo número de "
 "dias de férias e dividindo o resultado por 12."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:291
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:286
 msgid ""
 "\\left(\\frac{\\text{Basic} + \\text{Allowances}}{30}\\right)\n"
 "\\times\n"
@@ -37214,11 +37228,11 @@ msgstr ""
 "\\times\n"
 "\\left(\\frac{\\text{Número de Dias de Férias}}{12}\\right)"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:298
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:293
 msgid "End of Service"
 msgstr "Fim de Serviço"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:300
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:295
 msgid ""
 "At the end of the employee's service, if they are eligible for end-of-"
 "service benefits, they should receive the following two benefits:"
@@ -37226,7 +37240,7 @@ msgstr ""
 "Ao final do serviço do funcionário, se ele for elegível para benefícios de "
 "fim de serviço, deverá receber os seguintes dois benefícios:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:303
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:298
 msgid ""
 "**Unused leaves compensation**: The Annual Leave Balance is shown on the "
 "employee's record. It is based on the annual leave type defined in the "
@@ -37239,7 +37253,7 @@ msgstr ""
 "calculado como o total de alocações restantes para esse tipo específico de "
 "férias atribuído ao funcionário."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:307
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:302
 msgid ""
 "The balance represents the total remaining leave allocated to the employee "
 "but does not reflect the portion of leave days the employee has earned up to "
@@ -37249,7 +37263,7 @@ msgstr ""
 "não reflete a porção de dias de férias que o funcionário ganhou até o mês "
 "atual."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:310
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:305
 msgid ""
 "When calculating the benefit value, the deserved leave balance is determined "
 "based on the portion of the year worked. The benefit value is then "
@@ -37259,7 +37273,7 @@ msgstr ""
 "com base na porção do ano trabalhado. O valor do benefício é então calculado "
 "multiplicando este saldo merecido pela taxa diária do funcionário."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:315
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:310
 msgid ""
 "If an employee is entitled to 14 leave days per year and has worked for 6 "
 "months, they deserve 7 leave days so far. If their daily rate is 50 JOD, the "
@@ -37269,7 +37283,7 @@ msgstr ""
 "meses, ele merece 7 dias de férias até agora. Se sua taxa diária é de 50 "
 "JOD, o valor do benefício é: 7 dias × 50 JOD = 350 JOD"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:320
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:315
 msgid ""
 "The flow mentioned above requires the allocation for the annual leave to be "
 "given fully upfront in the beginning of the year for that employee"
@@ -37277,7 +37291,7 @@ msgstr ""
 "O fluxo mencionado acima requer que a alocação para as férias anuais seja "
 "concedida totalmente adiantada no início do ano para esse funcionário"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:323
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:318
 msgid ""
 "**End of Service Benefit**: The calculation begins by determining the total "
 "number of days the employee has worked at the company, starting from their "
@@ -37287,11 +37301,11 @@ msgstr ""
 "total de dias que o funcionário trabalhou na empresa, desde sua data de "
 "admissão até seu último dia de trabalho."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:326
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:321
 msgid "The total service duration is calculated out of a 365-day year."
 msgstr "A duração total do serviço é calculada com base em um ano de 365 dias."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:328
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:323
 msgid ""
 "The resulting period in years is then multiplied by the employee's gross "
 "salary, which includes the basic salary and the allowances defined in the "
@@ -37301,7 +37315,7 @@ msgstr ""
 "funcionário, que inclui o salário básico e os adicionais definidos na aba de "
 "folha de pagamento no registro do funcionário."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:331
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:326
 msgid ""
 "(\\text{Basic} + \\text{Allowances}) \\times \\left(\\frac{\\text{Number of "
 "Days}}{365}\\right)"
@@ -37309,7 +37323,7 @@ msgstr ""
 "(\\text{Básico} + \\text{Adicionais}) \\times \\left(\\frac{\\text{Número de "
 "Dias}}{365}\\right)"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:338
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:333
 msgid ""
 "Several sections within the **Payroll** app installs a Salary Structure, "
 "Structure Type, Rules, and Parameters specific to Jordan."
@@ -37318,7 +37332,7 @@ msgstr ""
 "Estrutura Salarial, Tipo de Estrutura, Regras e Parâmetros específicos para "
 "a Jordânia."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:344
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:339
 msgid ""
 "When the **l10n_jo_hr_payroll** module is :ref:`installed <payroll/"
 "jordan_apps>`, a new :guilabel:`Salary Structure` gets "
@@ -37330,7 +37344,7 @@ msgstr ""
 "instalada, :guilabel:`Jordânia: Pagamento Mensal`. Esta estrutura inclui "
 "um :guilabel:`Tipo de Estrutura`, :guilabel:`Jordânia: Funcionário`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:348
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:343
 msgid ""
 "The :guilabel:`Salary Structure` contains all the individual :ref:`salary "
 "rules <payroll/jordan_apps>` that informs the **Payroll** app how to "
@@ -37346,7 +37360,7 @@ msgid "The United States salary structure in the salary structures list."
 msgstr ""
 "A estrutura salarial dos Estados Unidos na lista de estruturas salariais."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:359
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:354
 msgid ""
 "To view the salary rules that inform the salary structure what to do, "
 "navigate to :menuselection:`Payroll app --> Configuration --> Structures` "
@@ -37368,7 +37382,7 @@ msgstr ""
 msgid "The top portion of the US salary rules."
 msgstr "A parte superior das regras salariais dos EUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:367
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:362
 msgid ""
 "Each rule defines how pay is calculated, taking into account factors such as "
 "allowances, deductions, and taxes."
@@ -37376,7 +37390,7 @@ msgstr ""
 "Cada regra define como o pagamento é calculado, levando em consideração "
 "fatores como adicionais, deduções e impostos."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:377
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:372
 msgid ""
 "The percentage rate for employee Social Security deductions is set in the "
 "`Jordan Social Security Employee Deduction Rate %` parameter."
@@ -37385,7 +37399,7 @@ msgstr ""
 "definida no parâmetro `Taxa de Dedução da Previdência Social da Jordânia "
 "para Funcionários %`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:389
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:384
 msgid ""
 "Odoo adds updated rule parameters for the current calendar year. It is "
 "**not** recommended to edit rule parameters **unless a national parameter "
@@ -37399,11 +37413,11 @@ msgstr ""
 "pelo Odoo. Verifique todas as regulamentações nacionais *antes* de fazer "
 "qualquer alteração nos parâmetros de regra."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:395
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:390
 msgid "Run Jordan payroll"
 msgstr "Executar folha de pagamento da Jordânia"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:404
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:399
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:416
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:473
 msgid ""
@@ -37415,7 +37429,7 @@ msgstr ""
 "resolvidos, e então as entradas de trabalho podem ser :ref:`regeneradas "
 "<payroll/regenerate-work-entries>`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:441
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:436
 msgid ""
 "The accounting process when running payroll has two "
 "components: :ref:`creating journal entries <payroll/jo-journal>`, "
@@ -37425,7 +37439,7 @@ msgstr ""
 "componentes: :ref:`criar lançamentos contábeis <payroll/jo-journal>` "
 "e :ref:`registrar pagamentos <payroll/jo-register>`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:459
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:454
 msgid ""
 "Thirteen accounts from the Jordan :abbr:`CoA (Chart of Accounts)` are "
 "included with the Jordan payroll localization:"
@@ -37433,12 +37447,12 @@ msgstr ""
 "Treze contas do :abbr:`Plano de Contas` da Jordânia estão incluídas na "
 "localização de folha de pagamento da Jordânia:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:462
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:457
 msgid "`500301 Basic Salary`: Tracks the basic wages paid to employees."
 msgstr ""
 "`500301 Salário Básico`: Rastreia os salários básicos pagos aos funcionários."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:463
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:458
 msgid ""
 "`500302 Housing Allowance`: Captures housing allowance payments provided to "
 "employees."
@@ -37446,7 +37460,7 @@ msgstr ""
 "`500302 Auxílio Moradia`: Captura pagamentos de auxílio moradia fornecidos "
 "aos funcionários."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:464
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:459
 msgid ""
 "`500303 Transportation Allowance`: Captures transportation allowance "
 "payments to employees."
@@ -37454,7 +37468,7 @@ msgstr ""
 "`500303 Auxílio Transporte`: Captura pagamentos de auxílio transporte aos "
 "funcionários."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:465
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:460
 msgid ""
 "`500308 Staff Other Allowances`: Covers employee allowances that do not fit "
 "any other available categories."
@@ -37462,7 +37476,7 @@ msgstr ""
 "`500308 Outros Adicionais de Pessoal`: Cobre adicionais de funcionários que "
 "não se encaixam em nenhuma outra categoria disponível."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:467
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:462
 msgid ""
 "`500310 Salary Deductions`: Reflects deductions applied to employee salaries "
 "(e.g., advances, fines, statutory deductions)."
@@ -37470,7 +37484,7 @@ msgstr ""
 "`500310 Deduções Salariais`: Reflete deduções aplicadas aos salários dos "
 "funcionários (por exemplo, adiantamentos, multas, deduções legais)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:469
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:464
 msgid ""
 "`500305 Leave Salary`: Records salaries actually paid to employees while on "
 "paid leave."
@@ -37478,7 +37492,7 @@ msgstr ""
 "`500305 Salário de Férias`: Registra salários efetivamente pagos aos "
 "funcionários durante licença remunerada."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:470
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:465
 msgid ""
 "`201022 Social Security Payable`: Holds both employee and employer amounts "
 "payable for social insurance contributions."
@@ -37486,7 +37500,7 @@ msgstr ""
 "`201022 Previdência Social a Pagar`: Contém valores a pagar tanto do "
 "funcionário quanto do empregador para contribuições de seguro social."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:472
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:467
 msgid ""
 "`200502 Leave Days Provision`: Accrues the cost of paid leave; the balance "
 "is reduced when leave is taken, and any leave not taken may be paid out when "
@@ -37496,7 +37510,7 @@ msgstr ""
 "o saldo é reduzido quando a licença é tirada, e qualquer licença não tirada "
 "pode ser paga quando o funcionário deixa a empresa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:474
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:469
 msgid ""
 "`200503 End of Service Provision`: Accumulates the end-of-service benefit "
 "monthly, so the amount can be paid (partially or fully) when the employee "
@@ -37506,7 +37520,7 @@ msgstr ""
 "de serviço, para que o valor possa ser pago (parcial ou totalmente) quando o "
 "funcionário sair, de acordo com o tempo de serviço e o motivo."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:476
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:471
 msgid ""
 "`200101 Payables`: Shows amounts payable to employees as salaries (unpaid "
 "salary liability at period end)."
@@ -37514,7 +37528,7 @@ msgstr ""
 "`200101 Contas a Pagar`: Mostra valores a pagar aos funcionários como "
 "salários (passivo de salário não pago no final do período)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:478
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:473
 msgid ""
 "`500202 End of Service Indemnity`: Captures company expenses set aside to "
 "fund end-of-service benefits (expense-side counterpart to the provision)."
@@ -37523,7 +37537,7 @@ msgstr ""
 "reservadas para financiar benefícios de fim de serviço (contraparte de "
 "despesa da provisão)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:480
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:475
 msgid ""
 "`200307 Employee Income Tax`: Accumulates the income tax amount withheld "
 "from the employee's salary."
@@ -37531,7 +37545,7 @@ msgstr ""
 "`200307 Imposto de Renda do Funcionário`: Acumula o valor do imposto de "
 "renda retido do salário do funcionário."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:482
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:477
 msgid ""
 "`500311 Social Security Expenses`: Captures The total expense amount from "
 "payments to the social insurance authority."
@@ -37539,7 +37553,7 @@ msgstr ""
 "`500311 Despesas de Seguridade Social`: Captura o valor total da despesa de "
 "pagamentos à autoridade de seguro social."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:485
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:480
 msgid ""
 "The :abbr:`CoA (Chart of Accounts)` configuration is done by default when "
 "installing the Jordan payroll localization. The account codes and names can "
@@ -37549,7 +37563,7 @@ msgstr ""
 "instalar a localização de folha de pagamento da Jordânia. Os códigos e nomes "
 "das contas podem ser editados para atender às necessidades da empresa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:489
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:484
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:505
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:376
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:546
@@ -37560,7 +37574,7 @@ msgstr ""
 "Se tudo parecer correto no rascunho do lançamento contábil, publique os "
 "lançamentos contábeis."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:499
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:494
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:556
 msgid ""
 "After the :ref:`journal entries <payroll/journal>` are validated, Odoo can "
@@ -37569,7 +37583,7 @@ msgstr ""
 "Após as :ref:`entradas de diário <payroll/journal>` serem validadas, o Odoo "
 "pode gerar pagamentos."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:514
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:509
 msgid ""
 "No additional payroll reports unique to the Jordan payroll localization "
 "exist. All reports are the standard preconfigured reports included with the "
@@ -39023,14 +39037,14 @@ msgid ""
 ":guilabel:`Mexico: Christmas Bonus` (Días de Aguinaldo): In Mexico, an "
 "annual Christmas bonus is given to all employees. The bonus must be for a "
 "minimum of 15 days of pay. Companies that provide a higher bonus **must** "
-"modify this value. In Odoo, all employees of a company recieve the same "
-"amout of paid days for their Chirstmas bonus."
+"modify this value. In Odoo, all employees of a company receive the same "
+"amout of paid days for their Christmas bonus."
 msgstr ""
 ":guilabel:`México: Bônus de Natal` (Días de Aguinaldo): No México, um bônus "
-"de Natal anual é dado a todos os funcionários. O bônus deve ser de no mínimo "
-"15 dias de pagamento. Empresas que fornecem um bônus maior **devem** "
-"modificar este valor. No Odoo, todos os funcionários de uma empresa recebem "
-"a mesma quantidade de dias pagos para seu bônus de Natal."
+"de Natal anual é concedido a todos os funcionários. O bônus deve ser de, no "
+"mínimo, 15 dias de pagamento. As empresas que oferecem um bônus maior "
+"**devem** modificar este valor. No Odoo, todos os funcionários de uma "
+"empresa recebem a mesma quantidade de dias pagos como bônus de Natal."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:387
 msgid ""
@@ -47835,7 +47849,7 @@ msgstr "Recrutamento"
 #: ../../content/applications/hr/recruitment.rst:7
 msgid ""
 "Odoo keeps all job applicants organized with a preconfigured series of steps "
-"and stages that each applicant goes through. Each stage has a specific steps "
+"and stages that each applicant goes through. Each stage has specific steps "
 "that should be performed. These range from scheduling a phone call, "
 "conducting an interview, or sending a job offer, for example. This process "
 "is referred to as the *applicant flow.*"
@@ -47882,11 +47896,11 @@ msgstr ""
 #: ../../content/applications/hr/recruitment.rst:24
 msgid ""
 "Stages apply to all job positions unless :ref:`marked as job-specific "
-"<recruitment/customize-stages>`  Changes to stages (e.g., additions, "
+"<recruitment/customize-stages>`. Changes to stages (e.g., additions, "
 "deletions) affect all positions unless explicitly scoped."
 msgstr ""
-"Os estágios se aplicam a todas as vagas de emprego, a menos "
-"que :ref:`marcados como específicos de vaga <recruitment/customize-stages>`. "
+"Os estágios se aplicam a todas as vagas de emprego, a menos que "
+":ref:`marcados como específicos de vaga <recruitment/customize-stages>`. "
 "Alterações nos estágios (por exemplo, adições, exclusões) afetam todas as "
 "posições, a menos que explicitamente definidas."
 
@@ -47895,45 +47909,59 @@ msgid ""
 "Before creating a job position in Odoo, configure the necessary settings for "
 "the **Recruitment** app. To view and edit the settings, navigate "
 "to :menuselection:`Recruitment app --> Configuration --> Settings`. After "
-"any changes are made, click the :guilabel:`Save` button in the top-left "
-"corner to save all the changes."
+"any changes are made, click the :guilabel:`Save` button in the corner."
 msgstr ""
-"Antes de criar uma posição de emprego no Odoo, configure as definições "
-"necessárias para o aplicativo **Recrutamento**. Para visualizar e editar as "
-"configurações, navegue até :menuselection:`aplicativo Recrutamento --> "
-"Configuração --> Configurações`. Após realizar quaisquer alterações, clique "
-"no botão :guilabel:`Salvar` no canto superior esquerdo para salvar todas as "
-"alterações."
+"Antes de criar um cargo no Odoo, configure as definições necessárias para o "
+"aplicativo **Recrutamento**. Para visualizar e editar as definições, navegue "
+"até :menuselection:`Aplicativo Recrutamento --> Configuração --> "
+"Definições`. Após fazer qualquer alteração, clique no botão "
+":guilabel:`Guardar` no canto."
 
-#: ../../content/applications/hr/recruitment.rst:39
+#: ../../content/applications/hr/recruitment.rst:38
+msgid "Job posting"
+msgstr "Anúncio de vagas"
+
+#: ../../content/applications/hr/recruitment.rst:40
+msgid ""
+"The *Job Posting* section of the settings page specifies where job positions "
+"can be posted. To post job positions on the website, enable "
+"the :guilabel:`Online Posting` option. There is also an option to post "
+"to :ref:`job boards <recruitment/post-job/boards>`."
+msgstr ""
+"A seção *Anúncio de Vaga* da página de definições especifica onde os cargos "
+"podem ser anunciados. Para anunciar cargos no site, ative a opção "
+":guilabel:`Publicação Online`. Há também uma opção para publicar em "
+":ref:`quadros de vagas <recruitment/post-job/boards>`."
+
+#: ../../content/applications/hr/recruitment.rst:45
 msgid "Process"
 msgstr "Processo"
 
-#: ../../content/applications/hr/recruitment.rst:41
+#: ../../content/applications/hr/recruitment.rst:47
 msgid ""
-"The :guilabel:`Process` section of the settings page specifies what the "
-"database can and cannot do during the recruitment process."
+"The *Process* section of the settings page specifies what the database can "
+"and cannot do during recruitment."
 msgstr ""
-"A seção :guilabel:`Processo` da página de configurações especifica o que o "
-"banco de dados pode ou não fazer durante o processo de recrutamento."
+"A seção *Processo* da página de definições especifica o que a base de dados "
+"pode e não pode fazer durante o recrutamento."
 
-#: ../../content/applications/hr/recruitment.rst:45
+#: ../../content/applications/hr/recruitment.rst:51
 msgid "Send interview survey"
 msgstr "Enviar pesquisa sobre entrevista"
 
-#: ../../content/applications/hr/recruitment.rst:47
+#: ../../content/applications/hr/recruitment.rst:53
 msgid ""
 "Odoo is capable of having a survey sent to an applicant to gather more "
 "information about them. Surveys can be thought of as exams, or "
 "questionnaires, and can be customized in various ways to provide the "
-"recruitment team with valuable insights into the applicant"
+"recruitment team with valuable insights into the applicant."
 msgstr ""
 "O Odoo é capaz de enviar uma pesquisa a um candidato para coletar mais "
 "informações. As pesquisas podem ser consideradas como testes ou "
 "questionários e podem ser personalizadas de várias maneiras para fornecer à "
 "equipe de recrutamento informações valiosas sobre o candidato."
 
-#: ../../content/applications/hr/recruitment.rst:51
+#: ../../content/applications/hr/recruitment.rst:57
 msgid ""
 "Enable the :guilabel:`Send Interview Survey` option to send surveys to "
 "applicants. Once enabled, an :icon:`fa-arrow-right` :guilabel:`Interview "
@@ -47946,25 +47974,24 @@ msgstr ""
 "arrow-right` :guilabel:`Pesquisa sobre entrevista` é exibido. Clique no link "
 "para navegar até uma lista de todas as pesquisas criadas."
 
-#: ../../content/applications/hr/recruitment.rst:56
+#: ../../content/applications/hr/recruitment.rst:62
 msgid ""
 "This list includes all surveys that were created in the database, not only "
 "surveys used in the **Recruitment** app. If no surveys have been created, "
-"the surveys list displays a :guilabel:`No Survey Found` message, and "
-"presents options to create a survey from several preconfigured survey "
-"templates."
+"the surveys list displays a :guilabel:`No Survey Found` message and presents "
+"options to create a survey from several preconfigured survey templates."
 msgstr ""
 "Esta lista inclui todas as pesquisas que foram criadas no banco de dados, "
 "não apenas pesquisas usadas no aplicativo **Recrutamento**. Se nenhuma "
-"pesquisa foi criada, a lista de pesquisas exibe a "
-"mensagem :guilabel:`Nenhuma pesquisa encontrada` e apresenta opções para "
-"criar uma pesquisa a partir de vários modelos de pesquisa pré-configurados."
+"pesquisa foi criada, a lista de pesquisas exibe a mensagem "
+":guilabel:`Nenhuma pesquisa encontrada` e apresenta opções para criar uma "
+"pesquisa a partir de vários modelos de pesquisa pré-configurados."
 
-#: ../../content/applications/hr/recruitment.rst:62
-msgid ":doc:`create/edit surveys <../marketing/surveys/create>`"
-msgstr ":doc:`criar/editar pesquisas <../marketing/surveys/create>`"
+#: ../../content/applications/hr/recruitment.rst:68
+msgid ":doc:`create and edit surveys <../marketing/surveys/create>`"
+msgstr ":doc:`criar e editar pesquisas <../marketing/surveys/create>`"
 
-#: ../../content/applications/hr/recruitment.rst:65
+#: ../../content/applications/hr/recruitment.rst:71
 msgid ""
 "Enabling the :guilabel:`Send Interview Survey` option will install the "
 "**Surveys** application once the settings are saved, if not already "
@@ -47974,11 +48001,11 @@ msgstr ""
 "aplicativo **Pesquisas** assim que as configurações forem salvas, se ainda "
 "não estiver instalado."
 
-#: ../../content/applications/hr/recruitment.rst:69
+#: ../../content/applications/hr/recruitment.rst:75
 msgid "Salary package configurator"
 msgstr "Configurador de pacote salarial"
 
-#: ../../content/applications/hr/recruitment.rst:71
+#: ../../content/applications/hr/recruitment.rst:77
 msgid ""
 "When sending an offer to an applicant, an expiration date can be set on the "
 "offer. Enter the number of days an offer is valid for in "
@@ -47991,96 +48018,33 @@ msgstr ""
 "passado, se o candidato não tiver aceitado a oferta, ela não estará mais "
 "disponível."
 
-#: ../../content/applications/hr/recruitment.rst:78
-msgid "Résumé display"
-msgstr "Exibição de currículo"
-
-#: ../../content/applications/hr/recruitment.rst:80
-msgid ""
-"When applicants submit an application, one of the default required fields is "
-"a résumé, or :abbr:`CV (curriculum vitae)`. All résumés are stored in the "
-"**Documents** application, and are accessible on the applicant's card."
-msgstr ""
-"Quando os candidatos enviam uma candidatura, um dos campos obrigatórios "
-"padrão é um currículo, ou :abbr:`CV (curriculum vitae)`. Todos os currículos "
-"são armazenados no aplicativo **Documentos** e podem ser acessados no cartão "
-"do candidato."
+#: ../../content/applications/hr/recruitment.rst:82
+msgid "In-app purchases"
+msgstr "Compras no aplicativo"
 
 #: ../../content/applications/hr/recruitment.rst:84
 msgid ""
-"A résumé has the option to appear on the applicant's form, which can be "
-"viewed by clicking on the applicant's card. The résumé appears on the right-"
-"side of the screen. If this is not enabled, the résumé is accessed via a "
-"link in the chatter, where it needs to be clicked to expand and view it, or "
-"downloaded."
+"The *In-App Purchases* section of the settings page covers items that "
+"require credits to use, such as :abbr:`SMS (Short Message Service)` text "
+"messages, and digitizing résumés."
 msgstr ""
-"Um currículo tem a opção de aparecer no formulário do candidato, que pode "
-"ser visualizado clicando no cartão do candidato. O currículo aparece no lado "
-"direito da tela. Se isso não estiver habilitado, o currículo é acessado por "
-"meio de um link no chatter, onde precisa ser clicado para expandir e "
-"visualizá-lo, ou baixado."
+"A seção *Compras no Aplicativo* da página de definições abrange itens que "
+"exigem créditos para serem usados, como mensagens de texto :abbr:`SMS "
+"(Serviço de Mensagens Curtas)` e digitalização de currículos."
 
-#: ../../content/applications/hr/recruitment.rst:89
-msgid ""
-"Enable the :guilabel:`Résumé Display` option to show the résumé on the "
-"applicant's card by default, and in addition to the document link. When "
-"enabled, the résumé appears on the right side of the applicant's card."
-msgstr ""
-"Habilite a opção :guilabel:`Exibição de currículo` para mostrar o currículo "
-"no cartão do candidato por padrão e além do link do documento. Quando "
-"habilitado, o currículo aparece no lado direito do cartão do candidato."
-
-#: ../../content/applications/hr/recruitment.rst:94
-msgid ""
-"For the résumé to appear on the right-side, the browser window must be in "
-"full-screen mode (where the browser spans the entire screen)."
-msgstr ""
-"Para que o currículo apareça no lado direito, a janela do navegador deve "
-"estar no modo tela cheia (onde o navegador ocupa toda a tela)."
-
-#: ../../content/applications/hr/recruitment.rst:97
-msgid ""
-"If the browser window is set to a size smaller than the entire width of the "
-"screen (not full-screen), then the résumé does not appear on the right-side. "
-"Instead, the résumé appears in the :guilabel:`Files` section of the chatter, "
-"below the applicant's card."
-msgstr ""
-"Se a janela do navegador estiver definida com um tamanho menor do que a "
-"largura total da tela (não em tela cheia), o currículo não aparecerá no lado "
-"direito. Em vez disso, o currículo aparece na seção :guilabel:`Arquivos` do "
-"chatter, abaixo do cartão do candidato."
-
-#: ../../content/applications/hr/recruitment.rst:None
-msgid "The résumé on an applicant's card, appearing on the right side."
-msgstr "O currículo no cartão de um candidato, aparecendo no lado direito."
-
-#: ../../content/applications/hr/recruitment.rst:105
-msgid "In-App Purchases"
-msgstr "Compras dentro do aplicativo (IAP)"
-
-#: ../../content/applications/hr/recruitment.rst:107
-msgid ""
-"The :guilabel:`In-App Purchases` section of the :guilabel:`Settings` menu "
-"deals with items that required credits to use, such as :abbr:`SMS (Short "
-"Message Service)` text messages, and digitizing résumés."
-msgstr ""
-"A seção :guilabel:`Compras no aplicativo` do menu :guilabel:`Configurações` "
-"lida com itens que exigem créditos para usar, como mensagens de "
-"texto :abbr:`SMS (Short Message Service)` e digitalização de currículos."
-
-#: ../../content/applications/hr/recruitment.rst:112
+#: ../../content/applications/hr/recruitment.rst:88
 msgid ""
 ":doc:`SMS pricing and FAQs <../marketing/sms_marketing/pricing_and_faq>`"
 msgstr ""
 ":doc:`Preços de SMS e perguntas frequentes <../marketing/sms_marketing/"
 "pricing_and_faq>`"
 
-#: ../../content/applications/hr/recruitment.rst:115
+#: ../../content/applications/hr/recruitment.rst:91
 #: ../../content/applications/hr/referrals/share_jobs.rst:83
 msgid "Send SMS"
 msgstr "Enviar SMS"
 
-#: ../../content/applications/hr/recruitment.rst:117
+#: ../../content/applications/hr/recruitment.rst:93
 msgid ""
 "It is possible to send text messages to applicants directly through the "
 "**Recruitment** app. This feature requires credits to use. Click "
@@ -48094,11 +48058,11 @@ msgstr ""
 "comprar créditos` e siga as etapas para :doc:`comprar créditos <../marketing/"
 "sms_marketing/pricing_and_faq>`."
 
-#: ../../content/applications/hr/recruitment.rst:125
+#: ../../content/applications/hr/recruitment.rst:101
 msgid "Résumé digitization (OCR)"
 msgstr "Digitalização de currículo (OCR)"
 
-#: ../../content/applications/hr/recruitment.rst:127
+#: ../../content/applications/hr/recruitment.rst:103
 msgid ""
 "When an application is submitted using any of the available methods, such as "
 "an online application submission, emailing a resume to the job position "
@@ -48115,7 +48079,7 @@ msgstr ""
 "formulário do candidato. Para fazer isso, habilite a "
 "opção :guilabel:`Digitalização de currículo (OCR)`."
 
-#: ../../content/applications/hr/recruitment.rst:133
+#: ../../content/applications/hr/recruitment.rst:109
 msgid ""
 "When enabled, additional options appear. Click on the corresponding radio "
 "button to select one of the following options:"
@@ -48123,33 +48087,33 @@ msgstr ""
 "Quando ativada, são exibidas opções adicionais. Clique no botão de rádio "
 "correspondente para selecionar uma das seguintes opções:"
 
-#: ../../content/applications/hr/recruitment.rst:136
-msgid ":guilabel:`Do not digitize`: this option turns off résumé digitization."
+#: ../../content/applications/hr/recruitment.rst:112
+msgid ":guilabel:`Do not digitize`: This option turns off résumé digitization."
 msgstr ""
 ":guilabel:`Não digitalizar`: esta opção desativa a digitalização de "
 "currículo."
 
-#: ../../content/applications/hr/recruitment.rst:137
+#: ../../content/applications/hr/recruitment.rst:113
 msgid ""
-":guilabel:`Digitize on demand only`: this option only digitizes resumes when "
-"requested. A :guilabel:`Digitize document` buttons appears on applicant "
-"cards. When clicked, the résumé is scanned and the applicant's card is "
+":guilabel:`Digitize on demand only`: This option only digitizes résumés when "
+"requested. A :guilabel:`Digitize document` button appears on applicant "
+"cards. When clicked, the résumé is scanned, and the applicant's card is "
 "updated."
 msgstr ""
-":guilabel:`Digitalizar apenas sob demanda`: esta opção digitaliza currículos "
+":guilabel:`Digitalizar apenas sob demanda`: Esta opção digitaliza currículos "
 "apenas quando solicitado. Um botão :guilabel:`Digitalizar documento` aparece "
 "nos cartões dos candidatos. Quando clicado, o currículo é digitalizado e o "
 "cartão do candidato é atualizado."
 
-#: ../../content/applications/hr/recruitment.rst:140
+#: ../../content/applications/hr/recruitment.rst:116
 msgid ""
-":guilabel:`Digitize automatically`: this option automatically digitizes all "
+":guilabel:`Digitize automatically`: This option automatically digitizes all "
 "résumés when they are submitted."
 msgstr ""
 ":guilabel:`Digitalizar automaticamente`: esta opção digitaliza "
 "automaticamente todos os currículos quando são enviados."
 
-#: ../../content/applications/hr/recruitment.rst:143
+#: ../../content/applications/hr/recruitment.rst:119
 msgid ""
 "Beneath these options are two additional links. Click the :icon:`fa-arrow-"
 "right` :guilabel:`Manage Service & Buy Credits` internal link to purchase "
@@ -48164,7 +48128,7 @@ msgstr ""
 "visualizar uma lista de todos os serviços atuais e seus saldos de créditos "
 "restantes."
 
-#: ../../content/applications/hr/recruitment.rst:148
+#: ../../content/applications/hr/recruitment.rst:124
 msgid ""
 "For more information on document digitization and :abbr:`IAP's (in-app "
 "purchases)`, refer to the :doc:`In-app purchase (IAP) <../essentials/"
@@ -48174,7 +48138,7 @@ msgstr ""
 "(compras no aplicativo)`, consulte a documentação :doc:`Compra no aplicativo "
 "(IAP) <../essentials/in_app_purchase>`."
 
-#: ../../content/applications/hr/recruitment.rst:152
+#: ../../content/applications/hr/recruitment.rst:128
 msgid ""
 "The :guilabel:`Do not digitize` option may appear redundant but serves a "
 "distinct purpose. Disabling the :guilabel:`Résumé Digitization (OCR)` option "
@@ -48188,31 +48152,29 @@ msgstr ""
 "mantém o módulo instalado, mas inativo — permitindo que o usuário reative a "
 "digitalização posteriormente sem reinstalar o módulo."
 
-#: ../../content/applications/hr/recruitment.rst:160
+#: ../../content/applications/hr/recruitment.rst:134
+msgid "View job positions"
+msgstr "Ver cargos"
+
+#: ../../content/applications/hr/recruitment.rst:136
 msgid ""
 "To access the Kanban view for a job position, navigate to the "
 "main :menuselection:`Recruitment` app dashboard, which is the default view "
 "when opening the application. All job positions appear on the main "
-"dashboard. Click the :guilabel:`(#) New Applications` smart button on a job "
-"position card to navigate to the Kanban view for all the applicants for that "
-"particular job position."
+"dashboard. Click a job position card to navigate to the Kanban view for all "
+"applicants for that particular job position."
 msgstr ""
-"Para acessar a visualização Kanban de uma posição de emprego, navegue até o "
-"painel principal do aplicativo :menuselection:`Recrutamento`, que é a "
-"visualização padrão ao abrir o aplicativo. Todas as posições de emprego "
-"aparecem no painel principal. Clique no botão inteligente :guilabel:`(#) "
-"Novas Candidaturas` em um cartão de posição de emprego para navegar até a "
-"visualização Kanban de todos os candidatos para aquela posição de emprego "
-"específica."
+"Para acessar a visualização Kanban de um cargo, navegue até o painel "
+"principal do aplicativo :menuselection:`Recrutamento`, que é a visualização "
+"padrão ao abrir o aplicativo. Todos os cargos aparecem no painel principal. "
+"Clique em um cartão de cargo para navegar para a visualização Kanban de "
+"todos os candidatos para esse cargo específico."
 
 #: ../../content/applications/hr/recruitment.rst:None
-msgid ""
-"Main dashboard view of job position card, showing new applications button."
-msgstr ""
-"Visualização do painel principal do cartão de cargo, mostrando o botão de "
-"novos aplicativos."
+msgid "Main dashboard view of all job positions."
+msgstr "Visualização do painel principal de todos os cargos."
 
-#: ../../content/applications/hr/recruitment.rst:168
+#: ../../content/applications/hr/recruitment.rst:144
 msgid ""
 "Inside the job application, the Kanban stages appear, with all the "
 "applicants populated in their respective columns, indicating what stage they "
@@ -48222,39 +48184,35 @@ msgstr ""
 "candidatos populados em suas respectivas colunas, indicando em que estágio "
 "eles estão atualmente. No Odoo, seis estágios padrão são configurados:"
 
-#: ../../content/applications/hr/recruitment.rst:172
+#: ../../content/applications/hr/recruitment.rst:148
 msgid ":ref:`New <recruitment/recruitment_flow/new>`"
 msgstr ":ref:`Novo <recruitment/recruitment_flow/new>`"
 
-#: ../../content/applications/hr/recruitment.rst:173
-msgid ""
-":ref:`Initial Qualification <recruitment/recruitment_flow/initial-"
-"qualification>`"
-msgstr ""
-":ref:`Qualificação inicial <recruitment/recruitment_flow/initial-"
-"qualification>`"
+#: ../../content/applications/hr/recruitment.rst:149
+msgid ":ref:`Qualification <recruitment/recruitment_flow/qualification>`"
+msgstr ":ref:`Qualificação <recruitment/recruitment_flow/qualification>`"
 
-#: ../../content/applications/hr/recruitment.rst:174
+#: ../../content/applications/hr/recruitment.rst:150
 msgid ":ref:`First Interview <recruitment/recruitment_flow/first-interview>`"
 msgstr ""
 ":ref:`Primeira entrevista <recruitment/recruitment_flow/first-interview>`"
 
-#: ../../content/applications/hr/recruitment.rst:175
+#: ../../content/applications/hr/recruitment.rst:151
 msgid ":ref:`Second Interview <recruitment/recruitment_flow/second-interview>`"
 msgstr ""
 ":ref:`Segunda entrevista <recruitment/recruitment_flow/second-interview>`"
 
-#: ../../content/applications/hr/recruitment.rst:176
+#: ../../content/applications/hr/recruitment.rst:152
 msgid ":doc:`Contract Proposal <recruitment/offer_job_positions>`"
 msgstr ":doc:`Proposta de contrato <recruitment/offer_job_positions>`"
 
-#: ../../content/applications/hr/recruitment.rst:177
+#: ../../content/applications/hr/recruitment.rst:153
 msgid ""
 ":ref:`Contract Signed <recruitment/offer_job_positions/contract-signed>`"
 msgstr ""
 ":ref:`Contrato assinado <recruitment/offer_job_positions/contract-signed>`"
 
-#: ../../content/applications/hr/recruitment.rst:179
+#: ../../content/applications/hr/recruitment.rst:155
 msgid ""
 "The last column, :guilabel:`Contract Signed`, is folded by default. Folded "
 "columns appear gray, and the applicants in it are hidden from view. To "
@@ -48273,68 +48231,72 @@ msgid "Expand a folded column by clicking on it in the Kanban view."
 msgstr ""
 "Expanda uma coluna dobrada clicando nela no modo de visualização Kanban."
 
-#: ../../content/applications/hr/recruitment.rst:187
+#: ../../content/applications/hr/recruitment.rst:163
 msgid ""
 "Each stage has a color-coded bar beneath the stage name, providing status "
-"information for the applicant's in that specific stage. The status colors "
-"are:"
+"information for the applicants in that specific stage. The status colors are:"
 msgstr ""
-"Cada estágio tem uma barra codificada por cores abaixo do nome do estágio, "
-"fornecendo informações de status para os candidatos naquele estágio "
+"Cada estágio possui uma barra codificada por cores abaixo do nome do "
+"estágio, fornecendo informações de status para os candidatos nesse estágio "
 "específico. As cores de status são:"
 
-#: ../../content/applications/hr/recruitment.rst:190
-msgid ":guilabel:`Green`: the applicant is ready to move to the next stage."
+#: ../../content/applications/hr/recruitment.rst:166
+msgid ""
+":guilabel:`Gray`: The applicant is still in progress at the current stage "
+"and is neither ready nor blocked from the next stage."
+msgstr ""
+":guilabel:`Cinza`: O candidato ainda está em andamento no estágio atual e "
+"não está pronto nem bloqueado para o próximo estágio."
+
+#: ../../content/applications/hr/recruitment.rst:168
+msgid ":guilabel:`Green`: The applicant is ready to move to the next stage."
 msgstr ""
 ":guilabel:`Verde`: o candidato está pronto para passar para a próxima etapa."
 
-#: ../../content/applications/hr/recruitment.rst:191
+#: ../../content/applications/hr/recruitment.rst:169
 msgid ""
-":guilabel:`Red`: the applicant is blocked from moving to the next stage."
+":guilabel:`Yellow`: The applicant is waiting for something before a decision "
+"can be made."
+msgstr ""
+":guilabel:`Amarelo`: O candidato está aguardando algo antes que uma decisão "
+"possa ser tomada."
+
+#: ../../content/applications/hr/recruitment.rst:170
+msgid ""
+":guilabel:`Red`: The applicant is blocked from moving to the next stage."
 msgstr ""
 ":guilabel:`Vermelho`: o candidato está impedido de passar para a próxima "
 "etapa."
 
-#: ../../content/applications/hr/recruitment.rst:192
-msgid ""
-":guilabel:`Gray`: the applicant is still in progress in the current stage "
-"and is neither ready nor blocked from the next stage."
-msgstr ""
-":guilabel:`Cinza`: o candidato ainda está em andamento no estágio atual e "
-"não está pronto nem bloqueado para o próximo estágio."
-
-#: ../../content/applications/hr/recruitment.rst:195
+#: ../../content/applications/hr/recruitment.rst:172
 msgid ""
 "The status for each card is set manually. To set the status, click on the "
-"small circle in the lower-left of the applicant card. A status pop-up window "
-"appears. Click on the desired status for the applicant. The status dot on "
-"the applicant card as well as the status bar updates."
+"small circle in the corner of the applicant card. A status pop-up window "
+"appears. Click on the desired status for the applicant."
 msgstr ""
 "O status de cada cartão é definido manualmente. Para definir o status, "
-"clique no pequeno círculo no canto inferior esquerdo do cartão do candidato. "
-"É exibida uma janela pop-up de status. Clique no status desejado para o "
-"candidato. O ponto de status no cartão do candidato e a barra de status são "
-"atualizados."
+"clique no pequeno círculo no canto do cartão do candidato. Uma janela pop-up "
+"de status aparecerá. Clique no status desejado para o candidato."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "The applicant card statuses, and status bar."
 msgstr "Os status do cartão do candidato e a barra de status."
 
-#: ../../content/applications/hr/recruitment.rst:203
+#: ../../content/applications/hr/recruitment.rst:180
 msgid ""
-"The names for the three status colors (`In Progress`, `Ready for Next "
-"Stage`, and `Blocked`) :ref:`can be modified <recruitment/modify-stages>`, "
+"The names for the four status colors (`In Progress`, `Ready for Next Stage`, "
+"`Waiting`,and `Blocked`) :ref:`can be modified <recruitment/modify-stages>`, "
 "if desired."
 msgstr ""
-"Os nomes das três cores de status (`Em Andamento`, `Pronto para o Próximo "
-"Estágio` e `Bloqueado`) :ref:`podem ser modificados <recruitment/modify-"
-"stages>`, se desejado."
+"Os nomes das quatro cores de status (`Em Andamento`, `Pronto para o Próximo "
+"Estágio`, `Aguardando` e `Bloqueado`) :ref:`podem ser modificados "
+"<recruitment/modify-stages>`, se desejado."
 
-#: ../../content/applications/hr/recruitment.rst:209
+#: ../../content/applications/hr/recruitment.rst:186
 msgid "Customize stages"
 msgstr "Personalizar estágios"
 
-#: ../../content/applications/hr/recruitment.rst:211
+#: ../../content/applications/hr/recruitment.rst:188
 msgid ""
 "Stages can be modified, added, or deleted to match the particular hiring "
 "steps of a business."
@@ -48342,50 +48304,58 @@ msgstr ""
 "Os estágios podem ser modificados, adicionados ou excluídos para "
 "corresponder às etapas específicas de contratação de uma empresa."
 
-#: ../../content/applications/hr/recruitment.rst:214
+#: ../../content/applications/hr/recruitment.rst:191
 msgid "New stage"
 msgstr "Novo estágio"
 
-#: ../../content/applications/hr/recruitment.rst:216
+#: ../../content/applications/hr/recruitment.rst:193
 msgid ""
-"To create a new stage, click on :icon:`fa-plus` :guilabel:`Stage` and a new "
-"column appears. Enter the title for the new stage in the :guilabel:`Stage "
-"title` field, then click :guilabel:`Add`. The new column appears, and "
-"another new stage is available to create. If no new stages are needed, click "
-"anywhere on the screen to exit the new stage creation."
+"To create a new stage, hover to the right of the :guilabel:`Contract Signed` "
+"stage, revealing an :guilabel:`Add Stage` option. Click :guilabel:`Add "
+"Stage` and a new column appears. Enter the title for the new stage in the "
+"blank box at the top of the new stage, then click the :icon:`fa-check` "
+"button. The new column appears, and another new stage appears. If no new "
+"stages are needed, click the :icon:`fa-multiply` button in the new stage to "
+"close the new stage. Once the stage is created, click and drag the stage to "
+"move it to the desired position in the workflow."
 msgstr ""
-"Para criar um novo estágio, clique em :icon:`fa-plus` :guilabel:`Estágio` e "
-"uma nova coluna será exibida. Digite o título do novo estágio no "
-"campo :guilabel:`Título do estágio` e, em seguida, clique "
-"em :guilabel:`Adicionar`. A nova coluna é exibida e outro novo estágio está "
-"disponível para ser criado. Se não houver necessidade de novos estágios, "
-"clique em qualquer lugar da tela para sair da criação do novo estágio."
+"Para criar um novo estágio, passe o mouse à direita do estágio "
+":guilabel:`Contrato Assinado`, revelando uma opção :guilabel:`Adicionar "
+"Estágio`. Clique em :guilabel:`Adicionar Estágio` e uma nova coluna "
+"aparecerá. Insira o título do novo estágio na caixa em branco no topo do "
+"novo estágio e, em seguida, clique no botão :icon:`fa-check`. A nova coluna "
+"aparecerá, bem como outro novo estágio. Se não forem necessários novos "
+"estágios, clique no botão :icon:`fa-multiply` no novo estágio para fechá-lo. "
+"Assim que o estágio for criado, clique e arraste-o para movê-lo para a "
+"posição desejada no fluxo de trabalho."
 
 #: ../../content/applications/hr/recruitment.rst:None
-msgid "The plus sign to click to add a new column to the Kanban stages."
-msgstr "Sinal de adição para adicionar uma nova coluna aos estágios do Kanban."
+msgid "A new stage added, along with a second stage ready to be named."
+msgstr ""
+"Um novo estágio foi adicionado, juntamente com um segundo estágio pronto "
+"para ser nomeado."
 
-#: ../../content/applications/hr/recruitment.rst:227
+#: ../../content/applications/hr/recruitment.rst:206
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:184
 msgid "Modify stage"
 msgstr "Modificar estágio"
 
-#: ../../content/applications/hr/recruitment.rst:229
+#: ../../content/applications/hr/recruitment.rst:208
 msgid ""
 "To modify the settings of a stage, hover over the name of the stage, and "
-"a :icon:`fa-cog` :guilabel:`(Settings)` icon appears in the upper right hand "
-"side of the stage. Click on the :icon:`fa-cog` :guilabel:`(Settings)` icon "
-"and a menu appears. Then click on the :guilabel:`Edit` option. "
-"An :guilabel:`Edit: (Stage)` form appears. Make any desired modifications to "
-"the form, then click :guilabel:`Save & Close` when done."
+"a :icon:`fa-cog` :guilabel:`(Settings)` icon appears in the upper corner. "
+"Click the :icon:`fa-cog` :guilabel:`(Settings)` icon, then click :icon:`fa-"
+"pencil` :guilabel:`Edit` from the resulting drop-down menu. An *Edit: "
+"(Stage)* pop-up window appears. Make any desired modifications in the pop-up "
+"window, then click :guilabel:`Save` when done."
 msgstr ""
 "Para modificar as configurações de um estágio, passe o mouse sobre o nome do "
-"estágio e um ícone :icon:`fa-cog` :guilabel:`(Configurações)` aparece no "
-"canto superior direito do estágio. Clique no ícone :icon:`fa-"
-"cog` :guilabel:`(Configurações)` e um menu aparece. Em seguida, clique na "
-"opção :guilabel:`Editar`. Um formulário :guilabel:`Editar: (Estágio)` "
-"aparece. Faça as modificações desejadas no formulário e clique "
-"em :guilabel:`Salvar e Fechar` quando concluir."
+"estágio e um ícone :icon:`fa-cog` :guilabel:`(Configurações)` aparecerá no "
+"canto superior. Clique no ícone :icon:`fa-cog` :guilabel:`(Configurações)` "
+"e, em seguida, clique em :icon:`fa-pencil` :guilabel:`Editar` no menu "
+"suspenso resultante. Uma janela pop-up *Editar: (Estágio)* aparecerá. Faça "
+"as modificações desejadas na janela pop-up e clique em :guilabel:`Salvar` "
+"quando terminar."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -48397,39 +48367,42 @@ msgstr ""
 "uma coluna e o menu suspenso que ele\n"
 "exibe quando clicado."
 
-#: ../../content/applications/hr/recruitment.rst:242
-msgid "Edit stage form"
-msgstr "Editar formulário de estágio"
+#: ../../content/applications/hr/recruitment.rst:221
+msgid "Edit stage"
+msgstr "Editar estágio"
 
-#: ../../content/applications/hr/recruitment.rst:244
+#: ../../content/applications/hr/recruitment.rst:223
 msgid ""
-"The :guilabel:`Edit: (Stage)` form is where the stage's settings are "
-"configured. The only required field is the :guilabel:`Stage Name`."
+"The *Edit: (Stage)* form is where the stage's settings are configured. The "
+"only required field is the :guilabel:`Stage Name`. modify the stage as "
+"desired, then click :guilabel:`Save` to save the changes."
 msgstr ""
-"O formulário :guilabel:`Editar: (Estágio)` é onde as configurações do palco "
-"são definidas. O único campo obrigatório é o :guilabel:`Nome do estágio`."
+"O formulário *Editar: (Estágio)* é onde as configurações do estágio são "
+"definidas. O único campo obrigatório é o :guilabel:`Nome do Estágio`. "
+"Modifique o estágio conforme desejado e clique em :guilabel:`Salvar` para "
+"salvar as alterações."
 
-#: ../../content/applications/hr/recruitment.rst:247
+#: ../../content/applications/hr/recruitment.rst:227
 msgid "The fields to be populated or modified are:"
 msgstr "Os campos a serem preenchidos ou modificados são:"
 
-#: ../../content/applications/hr/recruitment.rst:249
+#: ../../content/applications/hr/recruitment.rst:229
 msgid ":guilabel:`Stage Name`: Type in a name for the stage."
 msgstr ":guilabel:`Nome do Estágio`: Digite um nome para o estágio."
 
-#: ../../content/applications/hr/recruitment.rst:250
+#: ../../content/applications/hr/recruitment.rst:230
 msgid ""
-":guilabel:`Email Template`: Select an email template to be used from the "
-"drop-down menu. If a template is selected, when the applicant card enters "
-"the stage, an email is automatically sent to the applicant using the "
-"selected template."
+":guilabel:`Email Template`: Select an :ref:`email template <recruitment/"
+"templates>` to be used from the drop-down menu. If a template is selected, "
+"when the applicant card enters the stage, an email is automatically sent to "
+"the applicant using the selected template."
 msgstr ""
-":guilabel:`Modelo de E-mail`: Selecione um modelo de e-mail a ser usado no "
-"menu suspenso. Se um modelo for selecionado, quando o cartão do candidato "
-"entrar no estágio, um e-mail será enviado automaticamente ao candidato "
-"usando o modelo selecionado."
+":guilabel:`Modelo de E-mail`: Selecione um :ref:`modelo de e-mail "
+"<recruitment/templates>` a ser usado no menu suspenso. Se um modelo for "
+"selecionado, quando o cartão do candidato entrar no estágio, um e-mail será "
+"enviado automaticamente para o candidato usando o modelo selecionado."
 
-#: ../../content/applications/hr/recruitment.rst:253
+#: ../../content/applications/hr/recruitment.rst:233
 msgid ""
 ":guilabel:`Folded in Kanban`: Check the box to have the stage appear folded "
 "(hidden) at all times in the default view."
@@ -48437,7 +48410,7 @@ msgstr ""
 ":guilabel:`Dobrado no Kanban`: Marque a caixa para que o estágio apareça "
 "dobrado (oculto) o tempo todo na visualização padrão."
 
-#: ../../content/applications/hr/recruitment.rst:255
+#: ../../content/applications/hr/recruitment.rst:235
 msgid ""
 ":guilabel:`Hired Stage`: Check the box if this stage indicates that the "
 "applicant is hired. When an applicant's card enters this stage, the card "
@@ -48450,7 +48423,7 @@ msgstr ""
 "direito. Se esta caixa estiver marcada, este estágio é usado para determinar "
 "a data de contratação de um candidato."
 
-#: ../../content/applications/hr/recruitment.rst:259
+#: ../../content/applications/hr/recruitment.rst:239
 msgid ""
 ":guilabel:`Job Specific`: If the stage only applies to specific job "
 "positions, select the job positions from the drop-down menu. Multiple job "
@@ -48460,23 +48433,19 @@ msgstr ""
 "de emprego específicas, selecione as posições de emprego no menu suspenso. "
 "Várias posições de emprego podem ser selecionadas."
 
-#: ../../content/applications/hr/recruitment.rst:261
+#: ../../content/applications/hr/recruitment.rst:241
 msgid ""
 ":guilabel:`Show in Referrals`: Check the box if this stage should be seen in "
-"the *Referrals* application, and allow the referrer to accrue points when a "
-"referral of theirs reaches this stage. If this is active, "
-"a :guilabel:`Points` field appears. Enter the amount of referral points the "
-"employee receives when an applicant enters this stage. The **Referrals** app "
-"must be installed in order to use this option."
+"the **Referrals** application, and allow the referrer to accrue points when "
+"a referral of theirs reaches this stage. The **Referrals** app must be "
+"installed to use this option."
 msgstr ""
 ":guilabel:`Mostrar em Indicações`: Marque a caixa se este estágio deve ser "
-"visto no aplicativo *Indicações* e permitir que o indicador acumule pontos "
-"quando uma indicação sua atingir este estágio. Se isso estiver ativo, um "
-"campo :guilabel:`Pontos` aparece. Digite a quantidade de pontos de indicação "
-"que o funcionário recebe quando um candidato entra neste estágio. O "
-"aplicativo **Indicações** deve estar instalado para usar esta opção."
+"visível no aplicativo **Indicações** e permita que o indicador acumule "
+"pontos quando uma indicação dele atingir este estágio. O aplicativo "
+"**Indicações** deve estar instalado para usar esta opção."
 
-#: ../../content/applications/hr/recruitment.rst:266
+#: ../../content/applications/hr/recruitment.rst:244
 msgid ""
 ":guilabel:`Points`: If :guilabel:`Show in Referrals` is enabled, this field "
 "appears. Enter the number of points the employee earns when an applicant "
@@ -48486,72 +48455,80 @@ msgstr ""
 "este campo aparece. Digite o número de pontos que o funcionário ganha quando "
 "um candidato se move para este estágio."
 
-#: ../../content/applications/hr/recruitment.rst:268
+#: ../../content/applications/hr/recruitment.rst:246
 msgid ""
-":guilabel:`Tooltips` section: There are three preconfigured status labels "
+":guilabel:`Days to rot`: Enter the number of days that pass before the "
+"applicant is considered stale. Enter `0` to disable this."
+msgstr ""
+":guilabel:`Dias para expirar`: Insira o número de dias que se passam antes "
+"que o candidato seja considerado inativo. Insira `0` para desativar esta "
+"opção."
+
+#: ../../content/applications/hr/recruitment.rst:248
+msgid ""
+":guilabel:`Tooltips` section: There are four preconfigured status labels "
 "(colored circles) for each applicant's card, indicating its status. These "
 "colors are displayed at the top of each stage to reflect the statuses of the "
 "applicants in the stage. The *names* for the label can be modified, but the "
 "label itself (the color) cannot. The default names and labels "
-"are: :guilabel:`In Progress` (gray), :guilabel:`Blocked` (red), "
-"and :guilabel:`Ready for Next Stage` (green)."
+"are: :guilabel:`In Progress` (gray), :guilabel:`Blocked` "
+"(red), :guilabel:`Waiting` (yellow),  and :guilabel:`Ready for Next Stage` "
+"(green)."
 msgstr ""
-"Seção :guilabel:`Dicas de Ferramentas`: Existem três rótulos de status pré-"
+":guilabel:`Dicas de Ferramentas` seção: Existem quatro rótulos de status pré-"
 "configurados (círculos coloridos) para o cartão de cada candidato, indicando "
 "seu status. Essas cores são exibidas no topo de cada estágio para refletir "
 "os status dos candidatos no estágio. Os *nomes* do rótulo podem ser "
 "modificados, mas o próprio rótulo (a cor) não pode. Os nomes e rótulos "
 "padrão são: :guilabel:`Em Andamento` (cinza), :guilabel:`Bloqueado` "
-"(vermelho) e :guilabel:`Pronto para o Próximo Estágio` (verde)."
+"(vermelho), :guilabel:`Aguardando` (amarelo), e :guilabel:`Pronto para o "
+"Próximo Estágio` (verde)."
 
-#: ../../content/applications/hr/recruitment.rst:273
+#: ../../content/applications/hr/recruitment.rst:254
 msgid ""
-":guilabel:`Requirements`: Enter any internal notes for this stage explaining "
-"any requirements of the stage."
+":guilabel:`Requirements` section: Enter any internal notes for this stage "
+"explaining any requirements of the stage."
 msgstr ""
-":guilabel:`Requisitos`: Digite quaisquer notas internas para este estágio "
-"explicando os requisitos do estágio."
+":guilabel:`Requisitos` seção: Insira quaisquer notas internas para este "
+"estágio explicando quaisquer requisitos do estágio."
 
-#: ../../content/applications/hr/recruitment.rst:277
+#: ../../content/applications/hr/recruitment.rst:258
 msgid "Delete stage"
 msgstr "Excluir estágio"
 
-#: ../../content/applications/hr/recruitment.rst:279
+#: ../../content/applications/hr/recruitment.rst:260
 msgid ""
 "If a stage is no longer needed, the stage can be deleted. To delete a stage, "
-"hover over the name of the stage, and a :icon:`fa-"
-"cog` :guilabel:`(Settings)` icon appears. First, click on the :icon:`fa-"
-"cog` :guilabel:`(Settings)` icon to reveal a drop-down menu, then "
-"click :guilabel:`Delete`. A :guilabel:`Confirmation` pop-up warning appears, "
+"hover over the name of the stage, and click the :icon:`fa-"
+"cog` :guilabel:`(Settings)` icon that appears. Click :icon:`fa-"
+"trash` :guilabel:`Delete` and a *Confirmation* pop-up warning appears, "
 "asking :guilabel:`Are you sure you want to delete this column?` "
-"Click :guilabel:`Delete` to delete the column."
+"Click :guilabel:`Delete` to delete the stage."
 msgstr ""
-"Se um estágio não for mais necessário, o estágio pode ser excluído. Para "
-"excluir um estágio, passe o mouse sobre o nome do estágio e um "
-"ícone :icon:`fa-cog` :guilabel:`(Configurações)` aparece. Primeiro, clique "
-"no ícone :icon:`fa-cog` :guilabel:`(Configurações)` para revelar um menu "
-"suspenso e, em seguida, clique em :guilabel:`Excluir`. Um aviso pop-up "
-"de :guilabel:`Confirmação` aparece, perguntando :guilabel:`Tem certeza de "
-"que deseja excluir esta coluna?` Clique em :guilabel:`Excluir` para excluir "
-"a coluna."
+"Se um estágio não for mais necessário, ele pode ser excluído. Para excluir "
+"um estágio, passe o mouse sobre o nome do estágio e clique no ícone "
+":icon:`fa-cog` :guilabel:`(Configurações)` que aparece. Clique em :icon:`fa-"
+"trash` :guilabel:`Excluir` e um aviso pop-up de *Confirmação* aparecerá, "
+"perguntando :guilabel:`Tem certeza de que deseja excluir esta coluna?` "
+"Clique em :guilabel:`Excluir` para excluir o estágio."
 
-#: ../../content/applications/hr/recruitment.rst:286
+#: ../../content/applications/hr/recruitment.rst:267
 msgid ""
 "If there are applicants currently in the stage being deleted, an error pops "
-"up when attempting to delete the stage. The records currently in the stage "
-"to need to be either deleted, archived, or moved to a different stage before "
-"the stage can be deleted."
+"up when attempting to delete that stage. The records in that stage must be "
+"deleted, archived, or moved to a different stage before the stage can be "
+"deleted."
 msgstr ""
-"Se houver candidatos no estágio que está sendo excluído, um erro aparecerá "
-"ao tentar excluir a etapa. Os registros atualmente no estágio precisam ser "
-"excluídos, arquivados ou movidos para um estágio diferente antes que o "
-"estágio possa ser excluído."
+"Se houver candidatos atualmente no estágio sendo excluído, um erro aparecerá "
+"ao tentar excluí-lo. Os registros nesse estágio devem ser excluídos, "
+"arquivados ou movidos para um estágio diferente antes que o estágio possa "
+"ser excluído."
 
-#: ../../content/applications/hr/recruitment.rst:291
+#: ../../content/applications/hr/recruitment.rst:274
 msgid "Email templates"
 msgstr "Modelos de e-mail"
 
-#: ../../content/applications/hr/recruitment.rst:293
+#: ../../content/applications/hr/recruitment.rst:276
 msgid ""
 "To communicate with the applicant, Odoo has several preconfigured email "
 "templates that can be used. The preconfigured email templates and when to "
@@ -48561,19 +48538,20 @@ msgstr ""
 "pré-configurados que podem ser usados. Os modelos de e-mail pré-configurados "
 "e quando usá-los são os seguintes:"
 
-#: ../../content/applications/hr/recruitment.rst:296
+#: ../../content/applications/hr/recruitment.rst:279
 msgid ""
-":guilabel:`Recruitment: Applicant Acknowledgement`: this template is used to "
-"let the applicant know that their application was received. This email is "
+":guilabel:`Recruitment: Applicant Acknowledgement`: This template is used to "
+"let the applicant know their application was received. This email is "
 "automatically sent out once the applicant is in the :guilabel:`New` stage."
 msgstr ""
-":guilabel:`Recrutamento: Confirmação do candidato`: esse modelo é usado para "
-"informar ao candidato que sua candidatura foi recebida. Esse e-mail é "
-"enviado automaticamente quando o candidato está no estágio :guilabel:`Novo`."
+":guilabel:`Recrutamento: Confirmação de Candidato`: Este modelo é usado para "
+"informar ao candidato que sua candidatura foi recebida. Este e-mail é "
+"enviado automaticamente assim que o candidato está no estágio "
+":guilabel:`Novo`."
 
-#: ../../content/applications/hr/recruitment.rst:299
+#: ../../content/applications/hr/recruitment.rst:282
 msgid ""
-":guilabel:`Recruitment: Interest`: this template is used to let the "
+":guilabel:`Recruitment: Interest`: This template is used to let the "
 "applicant know that their application caught the recruiter's attention, and "
 "they have been shortlisted for either a phone call or an interview."
 msgstr ""
@@ -48581,9 +48559,9 @@ msgstr ""
 "candidato que sua candidatura chamou a atenção do recrutador e que ele foi "
 "pré-selecionado para uma ligação telefônica ou uma entrevista."
 
-#: ../../content/applications/hr/recruitment.rst:302
+#: ../../content/applications/hr/recruitment.rst:285
 msgid ""
-":guilabel:`Recruitment: Not interested anymore`: this template is used when "
+":guilabel:`Recruitment: Not interested anymore`: This template is used when "
 "an applicant communicates that they are no longer interested in the "
 "position, and thanks them for their time and consideration."
 msgstr ""
@@ -48591,17 +48569,17 @@ msgstr ""
 "quando um candidato comunica que não está mais interessado na vaga e "
 "agradece pelo tempo e consideração."
 
-#: ../../content/applications/hr/recruitment.rst:305
+#: ../../content/applications/hr/recruitment.rst:288
 msgid ""
-":guilabel:`Recruitment: Refuse`: this template is used when an applicant is "
+":guilabel:`Recruitment: Refuse`: This template is used when an applicant is "
 "no longer being considered for the position."
 msgstr ""
 ":guilabel:`Recrutamento: recusa`: esse modelo é usado quando um candidato "
 "não está mais sendo considerado para o cargo."
 
-#: ../../content/applications/hr/recruitment.rst:307
+#: ../../content/applications/hr/recruitment.rst:290
 msgid ""
-":guilabel:`Recruitment: Schedule Interview`: this template is used to let "
+":guilabel:`Recruitment: Schedule Interview`: This template is used to let "
 "the applicant know that they have passed the :guilabel:`Initial "
 "Qualification` stage, and they will soon be contacted to set up an interview "
 "with the recruiter. This email is automatically sent out once the applicant "
@@ -48613,7 +48591,7 @@ msgstr ""
 "recrutador. Este e-mail é enviado automaticamente quando o candidato está no "
 "estágio :guilabel:`Qualificação Inicial`."
 
-#: ../../content/applications/hr/recruitment.rst:313
+#: ../../content/applications/hr/recruitment.rst:296
 msgid ""
 "Email templates can be created, modified, and deleted to suit the needs of a "
 "business. For more information on email templates, refer to the :doc:`../"
@@ -48623,46 +48601,47 @@ msgstr ""
 "às necessidades de uma empresa. Para obter mais informações sobre modelos de "
 "e-mail, consulte a documentação :doc:`../general/companies/email_template`."
 
-#: ../../content/applications/hr/recruitment.rst:316
+#: ../../content/applications/hr/recruitment.rst:299
 msgid ""
 "To manually send an email, click :guilabel:`Send message` in the chatter. A "
-"text box appears, as well as the applicant's email address."
+"text box appears, as well as the applicant's email address. Enter the "
+"message in the text box."
 msgstr ""
 "Para enviar um e-mail manualmente, clique em :guilabel:`Enviar mensagem` no "
-"chatter. Uma caixa de texto é exibida, bem como o endereço de e-mail do "
-"candidato."
+"chatter. Uma caixa de texto aparecerá, juntamente com o endereço de e-mail "
+"do candidato. Insira a mensagem na caixa de texto."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "Send an email from the chatter."
 msgstr "Enviar um e-mail do chatter."
 
-#: ../../content/applications/hr/recruitment.rst:322
+#: ../../content/applications/hr/recruitment.rst:305
 msgid ""
-"Click the :icon:`fa-expand` :guilabel:`(Full composer)` icon in the bottom "
-"right corner of the :guilabel:`Send Message` tab in the chatter. "
-"A :guilabel:`Compose Email` pop-up window loads, with the :guilabel:`To` "
-"and :guilabel:`Subject` pre-populated. The applicant's email address is "
-"entered in the :guilabel:`To` field, and the :guilabel:`Subject` is `(Job "
-"Position)`. The email body is empty by default."
+"Click the :icon:`fa-expand` :guilabel:`(Open Full composer)` icon in the "
+"bottom corner of the *Send Message* tab in the chatter. A *Compose Email* "
+"pop-up window loads, with the :guilabel:`To` and :guilabel:`Subject` fields "
+"pre-populated. The applicant's email address is entered in "
+"the :guilabel:`To` field, and the :guilabel:`Subject` is `(Applicant's "
+"Name)`."
 msgstr ""
-"Clique no ícone :icon:`fa-expand` :guilabel:`(Editor completo)` no canto "
-"inferior direito da aba :guilabel:`Enviar Mensagem` no chatter. Uma janela "
-"pop-up :guilabel:`Compor E-mail` é carregada, com :guilabel:`Para` "
-"e :guilabel:`Assunto` pré-preenchidos. O endereço de e-mail do candidato é "
-"inserido no campo :guilabel:`Para` e o :guilabel:`Assunto` é `(Posição de "
-"Emprego)`. O corpo do e-mail está vazio por padrão."
+"Clique no ícone :icon:`fa-expand` :guilabel:`(Abrir compositor completo)` no "
+"canto inferior da guia *Enviar mensagem* no chatter. Uma janela pop-up "
+"*Compor e-mail* será carregada, com os campos :guilabel:`Para` e "
+":guilabel:`Assunto` preenchidos. O endereço de e-mail do candidato é "
+"inserido no campo :guilabel:`Para` e o :guilabel:`Assunto` é `(Nome do "
+"Candidato)`."
 
-#: ../../content/applications/hr/recruitment.rst:328
+#: ../../content/applications/hr/recruitment.rst:310
 msgid ""
 "To use a preconfigured email template, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical elipsis)` button in the bottom of the window. Select "
-"the email template to use from the drop-down menu."
+"v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
+"email template to use from the drop-down menu."
 msgstr ""
-"Para usar um modelo de e-mail pré-configurado, clique no botão :icon:`fa-"
-"ellipsis-v` :guilabel:`(elipse vertical)` na parte inferior da janela. "
-"Selecione o modelo de e-mail a ser usado no menu suspenso."
+"Para usar um modelo de e-mail pré-configurado, clique no ícone :icon:`fa-"
+"ellipsis-v` :guilabel:`(Modelos)` na parte inferior da janela. Selecione o "
+"modelo de e-mail que deseja usar no menu suspenso."
 
-#: ../../content/applications/hr/recruitment.rst:332
+#: ../../content/applications/hr/recruitment.rst:313
 msgid ""
 "Preconfigured email templates may contain dynamic placeholders so unique "
 "information can be populated in the email for a more personalized message to "
@@ -48676,7 +48655,7 @@ msgstr ""
 "configurados estão disponíveis para escolha. Dependendo do modelo "
 "selecionado, o assunto ou o corpo do e-mail podem mudar."
 
-#: ../../content/applications/hr/recruitment.rst:338
+#: ../../content/applications/hr/recruitment.rst:319
 msgid ""
 "Only the email templates that are configured for the model load. Other email "
 "templates come preconfigured in Odoo, but if they are not configured for the "
@@ -48688,51 +48667,49 @@ msgstr ""
 "configurados para o aplicativo de recrutamento, eles não aparecerão na lista "
 "de modelos disponíveis."
 
-#: ../../content/applications/hr/recruitment.rst:342
+#: ../../content/applications/hr/recruitment.rst:323
 msgid ""
 "If any attachments need to be added, click the :icon:`fa-"
-"paperclip` :guilabel:`(paperclip)` button at the bottom of the window. "
+"paperclip` :guilabel:`(Add Attachment)` button at the bottom of the window. "
 "Navigate to the file to be attached, then click :guilabel:`Open` to attach "
-"it. To delete an attachment, click the :icon:`fa-close` :guilabel:`(delete)` "
-"icon to the right of the attachment."
+"it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
+"icon at the end of the attachment."
 msgstr ""
-"Se for necessário adicionar anexos, clique no botão :icon:`fa-"
-"paperclip` :guilabel:`(clipe de papel)` na parte inferior da janela. Navegue "
-"até o arquivo a ser anexado e clique em :guilabel:`Abrir` para anexá-lo. "
-"Para excluir um anexo, clique no ícone :icon:`fa-"
-"close` :guilabel:`(excluir)` à direita do anexo."
+"Se algum anexo precisar ser adicionado, clique no botão :icon:`fa-paperclip` "
+":guilabel:`(Adicionar anexo)` na parte inferior da janela. Navegue até o "
+"arquivo a ser anexado e clique em :guilabel:`Abrir` para anexá-lo. Para "
+"excluir um anexo, clique no ícone :icon:`fa-times` :guilabel:`(Excluir)` ao "
+"final do anexo."
 
-#: ../../content/applications/hr/recruitment.rst:347
+#: ../../content/applications/hr/recruitment.rst:328
 msgid ""
 "If any changes need to be made to the email, edit the body of the email. If "
 "the edits should be saved to be used in the future, the email can be saved "
-"as a new template. Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical "
-"elipsis)` button in the bottom of the window, and select :guilabel:`Save as "
-"Template`. Options are presented to either overwrite an existing template, "
-"or save a new template. Click on an existing template name to overwrite that "
-"template, or click :guilabel:`Save as Template` to save a new template. "
-"A :guilabel:`Create a Mail Template` pop-up window loads. Enter a name for "
-"the template in the :guilabel:`Template Name` field, then "
-"click :guilabel:`Save`."
+"as a new template. Click the :icon:`fa-ellipsis-v` :guilabel:`(Templates)` "
+"button in the bottom of the window, and select :guilabel:`Save as Template`. "
+"Options are presented to either overwrite an existing template, or save a "
+"new template. Click on an existing template name to overwrite that template, "
+"or click :guilabel:`Save as Template` to save a new template. A *Create a "
+"Mail Template* pop-up window loads. Enter a name for the template in "
+"the :guilabel:`Template Name` field, then click :guilabel:`Save Template`."
 msgstr ""
-"Se for necessário fazer alterações no e-mail, edite o corpo da mensagem. Se "
-"as edições devem ser salvas para uso futuro, o e-mail pode ser salvo como um "
-"novo modelo. Clique no botão :icon:`fa-ellipsis-v` :guilabel:`(elipse "
-"vertical)` na parte inferior da janela e selecione :guilabel:`Salvar como "
-"modelo`. São apresentadas opções para substituir um modelo existente ou "
-"salvar um novo modelo. Clique no nome de um modelo existente para substituí-"
-"lo ou clique em :guilabel:`Salvar como modelo` para salvar um novo modelo. "
-"Uma janela pop-up :guilabel:`Criar um modelo de e-mail` é carregada. Digite "
-"um nome para o modelo no campo :guilabel:`Nome do modelo` e clique "
-"em :guilabel:`Salvar`."
+"Se for necessário fazer alterações no e-mail, edite o corpo do e-mail. Se as "
+"edições precisarem ser salvas para uso futuro, o e-mail pode ser salvo como "
+"um novo modelo. Clique no botão :icon:`fa-ellipsis-v` :guilabel:`(Modelos)` "
+"na parte inferior da janela e selecione :guilabel:`Salvar como modelo`. São "
+"apresentadas opções para substituir um modelo existente ou salvar um novo. "
+"Clique no nome de um modelo existente para substituí-lo ou clique em "
+":guilabel:`Salvar como modelo` para salvar um novo. Uma janela pop-up *Criar "
+"modelo de e-mail* será carregada. Insira um nome para o modelo no campo "
+":guilabel:`Nome do modelo` e clique em :guilabel:`Salvar modelo`."
 
-#: ../../content/applications/hr/recruitment.rst:356
+#: ../../content/applications/hr/recruitment.rst:337
 msgid ""
-"To send the email, click :guilabel:`Send` and the email is sent to the "
-"applicant. The email then appears in the chatter."
+"To send the email, click :guilabel:`Send`. The email is sent to the "
+"applicant and the email appears in the chatter."
 msgstr ""
-"Para enviar o e-mail, clique em :guilabel:`Enviar` e o e-mail será enviado "
-"ao candidato. O e-mail aparecerá no chatter."
+"Para enviar o e-mail, clique em :guilabel:`Enviar`. O e-mail será enviado ao "
+"candidato e aparecerá no chatter."
 
 #: ../../content/applications/hr/recruitment.rst:None
 #: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
@@ -48743,50 +48720,6 @@ msgid ""
 msgstr ""
 "Envie uma pesquisa personalizada, também chamada de formulário de "
 "entrevista, a um candidato usando um modelo pré-configurado."
-
-#: ../../content/applications/hr/recruitment.rst:364
-msgid ":doc:`recruitment/new_job`"
-msgstr ":doc:`recruitment/new_job`"
-
-#: ../../content/applications/hr/recruitment.rst:365
-msgid ":doc:`recruitment/post_job`"
-msgstr ":doc:`recruitment/post_job`"
-
-#: ../../content/applications/hr/recruitment.rst:366
-msgid ":doc:`recruitment/recruitment_flow`"
-msgstr ":doc:`recruitment/recruitment_flow`"
-
-#: ../../content/applications/hr/recruitment.rst:367
-msgid ":doc:`recruitment/add_applicants`"
-msgstr ":doc:`recruitment/add_applicants`"
-
-#: ../../content/applications/hr/recruitment.rst:368
-msgid ":doc:`recruitment/schedule_interviews`"
-msgstr ":doc:`recruitment/schedule_interviews`"
-
-#: ../../content/applications/hr/recruitment.rst:369
-msgid ":doc:`recruitment/offer_job_positions`"
-msgstr ":doc:`recruitment/offer_job_positions`"
-
-#: ../../content/applications/hr/recruitment.rst:370
-msgid ":doc:`recruitment/refuse_applicant`"
-msgstr ":doc:`recruitment/refuse_applicant`"
-
-#: ../../content/applications/hr/recruitment.rst:371
-msgid ":doc:`recruitment/application_analysis`"
-msgstr ":doc:`recruitment/application_analysis`"
-
-#: ../../content/applications/hr/recruitment.rst:372
-msgid ":doc:`recruitment/source_analysis`"
-msgstr ":doc:`recruitment/source_analysis`"
-
-#: ../../content/applications/hr/recruitment.rst:373
-msgid ":doc:`recruitment/hiring_velocity`"
-msgstr ":doc:`recruitment/hiring_velocity`"
-
-#: ../../content/applications/hr/recruitment.rst:374
-msgid ":doc:`recruitment/team_performance`"
-msgstr ":doc:`recruitment/team_performance`"
 
 #: ../../content/applications/hr/recruitment/add_applicants.rst:3
 msgid "Add applicants"
@@ -50297,6 +50230,191 @@ msgstr ""
 msgid ":doc:`post_job`"
 msgstr ":doc:`post_job`"
 
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:3
+msgid "Offer analysis"
+msgstr "Análise de oferta"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:5
+msgid ""
+"The *Offer Analysis* report provides a high-level summary of job offers, "
+"grouped by job position and status. This allows recruiters to view offer "
+"activity across different job positions and track how many offers are in "
+"each stage."
+msgstr ""
+"O relatório de *Análise de oferta* fornece um resumo de alto nível das "
+"ofertas de emprego, agrupadas por cargo e status. Isso permite que os "
+"recrutadores visualizem a atividade de ofertas em diferentes cargos e "
+"rastreiem quantas ofertas estão em cada estágio."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:9
+msgid ""
+"Using the *Offer Analysis* report, recruiters can compare the number of open "
+"positions with the number of offers made, identify positions with limited "
+"offer activity, and monitor the progress of recruitment efforts. For "
+"example, positions with fewer offers may indicate a need to adjust "
+"recruitment strategies to attract more qualified applicants. By reviewing "
+"offer data across positions and statuses, recruiters can identify potential "
+"gaps in the hiring process and make more informed decisions to support "
+"recruitment goals."
+msgstr ""
+"Usando o relatório de *Análise de oferta*, os recrutadores podem comparar o "
+"número de vagas abertas com o número de ofertas feitas, identificar cargos "
+"com atividade de oferta limitada e monitorar o progresso dos esforços de "
+"recrutamento. Por exemplo, cargos com menos ofertas podem indicar a "
+"necessidade de ajustar as estratégias de recrutamento para atrair candidatos "
+"mais qualificados. Ao revisar dados de ofertas entre cargos e status, os "
+"recrutadores podem identificar lacunas potenciais no processo de contratação "
+"e tomar decisões mais informadas para apoiar os objetivos de recrutamento."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:17
+msgid "View offer analysis report"
+msgstr "Visualizar relatório de análise de oferta"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:19
+msgid ""
+"To access the *Offer Analysis* report, navigate "
+"to :menuselection:`Recruitment app --> Reporting --> Offer Analysis`. By "
+"default, the report displays offer data for all job positions in a :icon:`fa-"
+"bar-chart` :guilabel:`(Bar Chart)` with :icon:`fa-"
+"database` :guilabel:`(Stacked)` groups. The default filter "
+"is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
+"days."
+msgstr ""
+"Para acessar o relatório de *Análise de oferta*, navegue até "
+":menuselection:`Recrutamento --> Relatórios --> Análise de oferta`. Por "
+"padrão, o relatório exibe dados de ofertas para todos os cargos em um "
+":icon:`fa-bar-chart` :guilabel:`(Gráfico de barras)` com :icon:`fa-database` "
+":guilabel:`(Empilhado)` grupos. O filtro padrão é :guilabel:`Ofertas dos "
+"últimos 365 dias`, mostrando informações dos últimos 365 dias."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:24
+msgid ""
+"Job positions are listed on the x-axis, with color-coded blocks showing the "
+"number of offers in each stage along the y-axis. Hover over a stage to view "
+"the number of offers in that stage for the job position. The stages are "
+"color-coded as follows:"
+msgstr ""
+"Os cargos são listados no eixo x, com blocos codificados por cores mostrando "
+"o número de ofertas em cada estágio ao longo do eixo y. Passe o mouse sobre "
+"um estágio para visualizar o número de ofertas nesse estágio para o cargo. "
+"Os estágios são codificados por cores da seguinte forma:"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:32
+msgid "Color"
+msgstr "Cor"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:33
+msgid "Status"
+msgstr "Status"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:35
+msgid "Red"
+msgstr "Vermelho"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:36
+msgid "In progress"
+msgstr "Em andamento"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:37
+msgid ""
+"The offer was sent to the employee but the offer is unsigned by all parties."
+msgstr ""
+"A oferta foi enviada ao funcionário, mas a oferta não foi assinada por todas "
+"as partes."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:38
+msgid "Orange"
+msgstr "Laranja"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:39
+msgid "Partially signed"
+msgstr "Parcialmente assinado"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:40
+msgid ""
+"A minimum of one person has signed the contract, but other signatures are "
+"required."
+msgstr ""
+"No mínimo uma pessoa assinou o contrato, mas outras assinaturas são "
+"necessárias."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:41
+msgid "Green"
+msgstr "Verde"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:42
+msgid "Fully signed"
+msgstr "Totalmente assinado"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:43
+msgid "The offer was accepted and all parties have signed the contract."
+msgstr "A oferta foi aceita e todas as partes assinaram o contrato."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:44
+msgid "Blue"
+msgstr "Azul"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:45
+#: ../../content/applications/hr/recruitment/recruitment_flow.rst:213
+msgid "Refused"
+msgstr "Recusado"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:46
+msgid "The offer was refused by the applicant."
+msgstr "A oferta foi recusada pelo candidato."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:None
+msgid "A bar chart view of the Offer Analysis report."
+msgstr ""
+"Uma visualização de gráfico de barras do relatório de Análise de Ofertas."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:52
+msgid "Use case: view offers by state"
+msgstr "Caso de uso: visualizar ofertas por estado"
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:54
+msgid ""
+"A large, growing company with hundreds of employees is constantly "
+"recruiting. Due to the large number of roles they are continuously filling, "
+"it can be difficult to keep track of all the job offers and where each offer "
+"stands."
+msgstr ""
+"Uma empresa grande e em crescimento com centenas de funcionários está "
+"recrutando constantemente. Devido ao grande número de cargos que estão "
+"preenchendo continuamente, pode ser difícil acompanhar todas as ofertas de "
+"emprego e em que estágio cada oferta se encontra."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:58
+msgid ""
+"To aid the team, the *Offer Analysis* report can be modified to show all "
+"offers by state, instead of by job position. To view offers by state, "
+"navigate to :menuselection:`Recruitment app --> Reporting --> Offer "
+"Analysis`. Click into the search bar and select the :guilabel:`Offer State` "
+"option in the :icon:`oi-group` :guilabel:`Group By` column. This provides a "
+"high-level overview of where all offers stand."
+msgstr ""
+"Para auxiliar a equipe, o relatório de *Análise de Ofertas* pode ser "
+"modificado para mostrar todas as ofertas por estado, em vez de por cargo. "
+"Para visualizar as ofertas por estado, navegue até "
+":menuselection:`Aplicativo Recrutamento --> Relatórios --> Análise de "
+"Ofertas`. Clique na barra de pesquisa e selecione a opção :guilabel:`Estado "
+"da oferta` na coluna :icon:`oi-group` :guilabel:`Agrupar por`. Isso fornece "
+"uma visão geral de alto nível sobre o status de todas as ofertas."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:64
+msgid ""
+"Click on a column to open a list view of all the offers in that particular "
+"state. This is helpful when trying to finalize all open offers, or see how "
+"many were refused or completed."
+msgstr ""
+"Clique em uma coluna para abrir uma visualização de lista de todas as "
+"ofertas naquele estado específico. Isso é útil ao tentar finalizar todas as "
+"ofertas em aberto, ou ver quantas foram recusadas ou concluídas."
+
+#: ../../content/applications/hr/recruitment/offer_analysis.rst:None
+msgid "All offers grouped by state."
+msgstr "Todas as ofertas agrupadas por estado."
+
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:3
 msgid "Offer job positions"
 msgstr "Oferta de vagas de emprego"
@@ -51713,10 +51831,6 @@ msgstr ""
 "do candidato no estágio :guilabel:`Contrato assinado` na visualização Kanban "
 "ou clique no estágio :guilabel:`Contrato assinado` na parte superior do "
 "cartão do candidato."
-
-#: ../../content/applications/hr/recruitment/recruitment_flow.rst:213
-msgid "Refused"
-msgstr "Recusado"
 
 #: ../../content/applications/hr/recruitment/recruitment_flow.rst:215
 msgid ""
@@ -56861,6 +56975,9 @@ msgid ""
 ":guilabel:`All Time Off` page. To view *all* requests, including approved "
 "and refused requests, clear the default filters in the search bar."
 msgstr ""
+":guilabel:`Todas as folgas` (página). Para visualizar *todas* as "
+"solicitações, incluindo as aprovadas e recusadas, limpe os filtros padrão na "
+"barra de pesquisa."
 
 #: ../../content/applications/hr/time_off/management.rst:None
 msgid "The detailed time off request form for the employee George Davis."
@@ -58790,6 +58907,648 @@ msgid ""
 msgstr ""
 "A metade inferior do formulário de tipo de folga, com a cor e o ícone "
 "selecionados."
+
+#~ msgid ""
+#~ "The *Headcount report* in the **Payroll** app shows the number of "
+#~ "employees on payroll and allows headcount comparisons between different "
+#~ "periods of time."
+#~ msgstr ""
+#~ "O *relatório de efetivo* no aplicativo **Folha de Pagamento** mostra o "
+#~ "número de funcionários na folha de pagamento e permite comparações de "
+#~ "efetivo entre diferentes períodos de tempo."
+
+#~ msgid ""
+#~ "Report name: generated automatically as `Headcount for (Company Name) on "
+#~ "the (YYYY-MM-DD)` and **cannot** be modified."
+#~ msgstr ""
+#~ "Nome do relatório: gerado automaticamente como `Efetivo para (Nome da "
+#~ "Empresa) em (AAAA-MM-DD)` e **não pode** ser modificado."
+
+#~ msgid ""
+#~ ":guilabel:`Company`: populated automatically (works in both single and "
+#~ "multi-company databases)"
+#~ msgstr ""
+#~ ":guilabel:`Empresa`: preenchido automaticamente (funciona em bancos de "
+#~ "dados de empresa única e multiempresa)"
+
+#~ msgid ""
+#~ ":guilabel:`From`/:guilabel:`To` dates: defaults to current date (from) "
+#~ "and blank (to). Adjust these to define the period to analyze."
+#~ msgstr ""
+#~ ":guilabel:`De`/:guilabel:`Até` datas: o padrão é a data atual (de) e em "
+#~ "branco (até). Ajuste-as para definir o período a ser analisado."
+
+#~ msgid "A headcount report form filled out for the third quarter of 2025."
+#~ msgstr ""
+#~ "Um formulário de relatório de efetivo preenchido para o terceiro "
+#~ "trimestre de 2025."
+
+#~ msgid ""
+#~ "At the top of the form, a :icon:`fa-people` :guilabel:`Employees` smart "
+#~ "button appears. Clicking the button displays the total number of "
+#~ "employees for the selected period."
+#~ msgstr ""
+#~ "No topo do formulário, aparece um botão inteligente :icon:`fa-"
+#~ "people` :guilabel:`Funcionários`. Clicar no botão exibe o número total de "
+#~ "funcionários para o período selecionado."
+
+#~ msgid ""
+#~ "TO get an overall view of employees and their salary impact on the "
+#~ "company, view all employee records of a specific headcount report."
+#~ msgstr ""
+#~ "Para obter uma visão geral dos funcionários e o impacto de seus salários "
+#~ "na empresa, visualize todos os registros de funcionários de um relatório "
+#~ "de headcount específico."
+
+#~ msgid ""
+#~ "To view the employees of a specific headcount report, click the :icon:`fa-"
+#~ "people` :guilabel:`Employees` smart button at the top of a headcount "
+#~ "report."
+#~ msgstr ""
+#~ "Para visualizar os funcionários de um relatório de headcount específico, "
+#~ "clique no botão inteligente :icon:`fa-people` :guilabel:`Funcionários` no "
+#~ "topo do relatório de headcount."
+
+#~ msgid ":guilabel:`Employee`: the employee's full name"
+#~ msgstr ":guilabel:`Funcionário`: o nome completo do funcionário"
+
+#~ msgid ":guilabel:`Department`: the department their job position is in"
+#~ msgstr ""
+#~ ":guilabel:`Departamento`: o departamento no qual o cargo está localizado"
+
+#~ msgid ":guilabel:`Job Title`: their role"
+#~ msgstr ":guilabel:`Cargo`: a função do funcionário"
+
+#~ msgid ""
+#~ ":guilabel:`Employer Cost`: how much the company pays the employee each "
+#~ "pay-period"
+#~ msgstr ""
+#~ ":guilabel:`Custo para o Empregador`: quanto a empresa paga ao funcionário "
+#~ "a cada período de pagamento"
+
+#~ msgid ":guilabel:`Wage on Payroll`: the dollar amount on payroll reports"
+#~ msgstr ""
+#~ ":guilabel:`Salário na Folha de Pagamento`: o valor em reais nos "
+#~ "relatórios de folha de pagamento"
+
+#~ msgid ""
+#~ "If the employee is tax exempt, enter the annual amount that is not "
+#~ "subject to taxes in the :guilabel:`Tax Exemption` field."
+#~ msgstr ""
+#~ "Se o funcionário for isento de impostos, insira o valor anual que não "
+#~ "está sujeito a impostos no campo :guilabel:`Isenção Fiscal`."
+
+#~ msgid ""
+#~ "If the employee's salary is based on commission, tick the :guilabel:`Is "
+#~ "Commission based` checkbox."
+#~ msgstr ""
+#~ "Se o salário do funcionário for baseado em comissão, marque a caixa de "
+#~ "seleção :guilabel:`É baseado em Comissão`."
+
+#~ msgid ""
+#~ ":guilabel:`Mexico: Christmas Bonus` (Días de Aguinaldo): In Mexico, an "
+#~ "annual Christmas bonus is given to all employees. The bonus must be for a "
+#~ "minimum of 15 days of pay. Companies that provide a higher bonus **must** "
+#~ "modify this value. In Odoo, all employees of a company recieve the same "
+#~ "amout of paid days for their Chirstmas bonus."
+#~ msgstr ""
+#~ ":guilabel:`México: Bônus de Natal` (Días de Aguinaldo): No México, um "
+#~ "bônus de Natal anual é dado a todos os funcionários. O bônus deve ser de "
+#~ "no mínimo 15 dias de pagamento. Empresas que fornecem um bônus maior "
+#~ "**devem** modificar este valor. No Odoo, todos os funcionários de uma "
+#~ "empresa recebem a mesma quantidade de dias pagos para seu bônus de Natal."
+
+#~ msgid ""
+#~ "Odoo keeps all job applicants organized with a preconfigured series of "
+#~ "steps and stages that each applicant goes through. Each stage has a "
+#~ "specific steps that should be performed. These range from scheduling a "
+#~ "phone call, conducting an interview, or sending a job offer, for example. "
+#~ "This process is referred to as the *applicant flow.*"
+#~ msgstr ""
+#~ "O Odoo mantém todos os candidatos organizados com uma série pré-"
+#~ "configurada de etapas e estágios pelos quais cada candidato passa. Cada "
+#~ "estágio tem etapas específicas que devem ser realizadas. Elas variam "
+#~ "desde agendar uma ligação telefónica, conduzir uma entrevista ou enviar "
+#~ "uma oferta de emprego, por exemplo. Este processo é referido como o "
+#~ "*fluxo de candidatos.*"
+
+#~ msgid ""
+#~ "Stages apply to all job positions unless :ref:`marked as job-specific "
+#~ "<recruitment/customize-stages>`  Changes to stages (e.g., additions, "
+#~ "deletions) affect all positions unless explicitly scoped."
+#~ msgstr ""
+#~ "Os estágios se aplicam a todas as vagas de emprego, a menos "
+#~ "que :ref:`marcados como específicos de vaga <recruitment/customize-"
+#~ "stages>`. Alterações nos estágios (por exemplo, adições, exclusões) "
+#~ "afetam todas as posições, a menos que explicitamente definidas."
+
+#~ msgid ""
+#~ "Before creating a job position in Odoo, configure the necessary settings "
+#~ "for the **Recruitment** app. To view and edit the settings, navigate "
+#~ "to :menuselection:`Recruitment app --> Configuration --> Settings`. After "
+#~ "any changes are made, click the :guilabel:`Save` button in the top-left "
+#~ "corner to save all the changes."
+#~ msgstr ""
+#~ "Antes de criar uma posição de emprego no Odoo, configure as definições "
+#~ "necessárias para o aplicativo **Recrutamento**. Para visualizar e editar "
+#~ "as configurações, navegue até :menuselection:`aplicativo Recrutamento --> "
+#~ "Configuração --> Configurações`. Após realizar quaisquer alterações, "
+#~ "clique no botão :guilabel:`Salvar` no canto superior esquerdo para salvar "
+#~ "todas as alterações."
+
+#~ msgid ""
+#~ "The :guilabel:`Process` section of the settings page specifies what the "
+#~ "database can and cannot do during the recruitment process."
+#~ msgstr ""
+#~ "A seção :guilabel:`Processo` da página de configurações especifica o que "
+#~ "o banco de dados pode ou não fazer durante o processo de recrutamento."
+
+#~ msgid ""
+#~ "Odoo is capable of having a survey sent to an applicant to gather more "
+#~ "information about them. Surveys can be thought of as exams, or "
+#~ "questionnaires, and can be customized in various ways to provide the "
+#~ "recruitment team with valuable insights into the applicant"
+#~ msgstr ""
+#~ "O Odoo é capaz de enviar uma pesquisa a um candidato para coletar mais "
+#~ "informações. As pesquisas podem ser consideradas como testes ou "
+#~ "questionários e podem ser personalizadas de várias maneiras para fornecer "
+#~ "à equipe de recrutamento informações valiosas sobre o candidato."
+
+#~ msgid ""
+#~ "This list includes all surveys that were created in the database, not "
+#~ "only surveys used in the **Recruitment** app. If no surveys have been "
+#~ "created, the surveys list displays a :guilabel:`No Survey Found` message, "
+#~ "and presents options to create a survey from several preconfigured survey "
+#~ "templates."
+#~ msgstr ""
+#~ "Esta lista inclui todas as pesquisas que foram criadas no banco de dados, "
+#~ "não apenas pesquisas usadas no aplicativo **Recrutamento**. Se nenhuma "
+#~ "pesquisa foi criada, a lista de pesquisas exibe a "
+#~ "mensagem :guilabel:`Nenhuma pesquisa encontrada` e apresenta opções para "
+#~ "criar uma pesquisa a partir de vários modelos de pesquisa pré-"
+#~ "configurados."
+
+#~ msgid ":doc:`create/edit surveys <../marketing/surveys/create>`"
+#~ msgstr ":doc:`criar/editar pesquisas <../marketing/surveys/create>`"
+
+#~ msgid "Résumé display"
+#~ msgstr "Exibição de currículo"
+
+#~ msgid ""
+#~ "When applicants submit an application, one of the default required fields "
+#~ "is a résumé, or :abbr:`CV (curriculum vitae)`. All résumés are stored in "
+#~ "the **Documents** application, and are accessible on the applicant's card."
+#~ msgstr ""
+#~ "Quando os candidatos enviam uma candidatura, um dos campos obrigatórios "
+#~ "padrão é um currículo, ou :abbr:`CV (curriculum vitae)`. Todos os "
+#~ "currículos são armazenados no aplicativo **Documentos** e podem ser "
+#~ "acessados no cartão do candidato."
+
+#~ msgid ""
+#~ "A résumé has the option to appear on the applicant's form, which can be "
+#~ "viewed by clicking on the applicant's card. The résumé appears on the "
+#~ "right-side of the screen. If this is not enabled, the résumé is accessed "
+#~ "via a link in the chatter, where it needs to be clicked to expand and "
+#~ "view it, or downloaded."
+#~ msgstr ""
+#~ "Um currículo tem a opção de aparecer no formulário do candidato, que pode "
+#~ "ser visualizado clicando no cartão do candidato. O currículo aparece no "
+#~ "lado direito da tela. Se isso não estiver habilitado, o currículo é "
+#~ "acessado por meio de um link no chatter, onde precisa ser clicado para "
+#~ "expandir e visualizá-lo, ou baixado."
+
+#~ msgid ""
+#~ "Enable the :guilabel:`Résumé Display` option to show the résumé on the "
+#~ "applicant's card by default, and in addition to the document link. When "
+#~ "enabled, the résumé appears on the right side of the applicant's card."
+#~ msgstr ""
+#~ "Habilite a opção :guilabel:`Exibição de currículo` para mostrar o "
+#~ "currículo no cartão do candidato por padrão e além do link do documento. "
+#~ "Quando habilitado, o currículo aparece no lado direito do cartão do "
+#~ "candidato."
+
+#~ msgid ""
+#~ "For the résumé to appear on the right-side, the browser window must be in "
+#~ "full-screen mode (where the browser spans the entire screen)."
+#~ msgstr ""
+#~ "Para que o currículo apareça no lado direito, a janela do navegador deve "
+#~ "estar no modo tela cheia (onde o navegador ocupa toda a tela)."
+
+#~ msgid ""
+#~ "If the browser window is set to a size smaller than the entire width of "
+#~ "the screen (not full-screen), then the résumé does not appear on the "
+#~ "right-side. Instead, the résumé appears in the :guilabel:`Files` section "
+#~ "of the chatter, below the applicant's card."
+#~ msgstr ""
+#~ "Se a janela do navegador estiver definida com um tamanho menor do que a "
+#~ "largura total da tela (não em tela cheia), o currículo não aparecerá no "
+#~ "lado direito. Em vez disso, o currículo aparece na "
+#~ "seção :guilabel:`Arquivos` do chatter, abaixo do cartão do candidato."
+
+#~ msgid "The résumé on an applicant's card, appearing on the right side."
+#~ msgstr "O currículo no cartão de um candidato, aparecendo no lado direito."
+
+#~ msgid "In-App Purchases"
+#~ msgstr "Compras dentro do aplicativo (IAP)"
+
+#~ msgid ""
+#~ "The :guilabel:`In-App Purchases` section of the :guilabel:`Settings` menu "
+#~ "deals with items that required credits to use, such as :abbr:`SMS (Short "
+#~ "Message Service)` text messages, and digitizing résumés."
+#~ msgstr ""
+#~ "A seção :guilabel:`Compras no aplicativo` do "
+#~ "menu :guilabel:`Configurações` lida com itens que exigem créditos para "
+#~ "usar, como mensagens de texto :abbr:`SMS (Short Message Service)` e "
+#~ "digitalização de currículos."
+
+#~ msgid ""
+#~ ":guilabel:`Do not digitize`: this option turns off résumé digitization."
+#~ msgstr ""
+#~ ":guilabel:`Não digitalizar`: esta opção desativa a digitalização de "
+#~ "currículo."
+
+#~ msgid ""
+#~ ":guilabel:`Digitize on demand only`: this option only digitizes resumes "
+#~ "when requested. A :guilabel:`Digitize document` buttons appears on "
+#~ "applicant cards. When clicked, the résumé is scanned and the applicant's "
+#~ "card is updated."
+#~ msgstr ""
+#~ ":guilabel:`Digitalizar apenas sob demanda`: esta opção digitaliza "
+#~ "currículos apenas quando solicitado. Um botão :guilabel:`Digitalizar "
+#~ "documento` aparece nos cartões dos candidatos. Quando clicado, o "
+#~ "currículo é digitalizado e o cartão do candidato é atualizado."
+
+#~ msgid ""
+#~ ":guilabel:`Digitize automatically`: this option automatically digitizes "
+#~ "all résumés when they are submitted."
+#~ msgstr ""
+#~ ":guilabel:`Digitalizar automaticamente`: esta opção digitaliza "
+#~ "automaticamente todos os currículos quando são enviados."
+
+#~ msgid ""
+#~ "To access the Kanban view for a job position, navigate to the "
+#~ "main :menuselection:`Recruitment` app dashboard, which is the default "
+#~ "view when opening the application. All job positions appear on the main "
+#~ "dashboard. Click the :guilabel:`(#) New Applications` smart button on a "
+#~ "job position card to navigate to the Kanban view for all the applicants "
+#~ "for that particular job position."
+#~ msgstr ""
+#~ "Para acessar a visualização Kanban de uma posição de emprego, navegue até "
+#~ "o painel principal do aplicativo :menuselection:`Recrutamento`, que é a "
+#~ "visualização padrão ao abrir o aplicativo. Todas as posições de emprego "
+#~ "aparecem no painel principal. Clique no botão inteligente :guilabel:`(#) "
+#~ "Novas Candidaturas` em um cartão de posição de emprego para navegar até a "
+#~ "visualização Kanban de todos os candidatos para aquela posição de emprego "
+#~ "específica."
+
+#~ msgid ""
+#~ "Main dashboard view of job position card, showing new applications button."
+#~ msgstr ""
+#~ "Visualização do painel principal do cartão de cargo, mostrando o botão de "
+#~ "novos aplicativos."
+
+#~ msgid ""
+#~ ":ref:`Initial Qualification <recruitment/recruitment_flow/initial-"
+#~ "qualification>`"
+#~ msgstr ""
+#~ ":ref:`Qualificação inicial <recruitment/recruitment_flow/initial-"
+#~ "qualification>`"
+
+#~ msgid ""
+#~ "Each stage has a color-coded bar beneath the stage name, providing status "
+#~ "information for the applicant's in that specific stage. The status colors "
+#~ "are:"
+#~ msgstr ""
+#~ "Cada estágio tem uma barra codificada por cores abaixo do nome do "
+#~ "estágio, fornecendo informações de status para os candidatos naquele "
+#~ "estágio específico. As cores de status são:"
+
+#~ msgid ":guilabel:`Green`: the applicant is ready to move to the next stage."
+#~ msgstr ""
+#~ ":guilabel:`Verde`: o candidato está pronto para passar para a próxima "
+#~ "etapa."
+
+#~ msgid ""
+#~ ":guilabel:`Red`: the applicant is blocked from moving to the next stage."
+#~ msgstr ""
+#~ ":guilabel:`Vermelho`: o candidato está impedido de passar para a próxima "
+#~ "etapa."
+
+#~ msgid ""
+#~ ":guilabel:`Gray`: the applicant is still in progress in the current stage "
+#~ "and is neither ready nor blocked from the next stage."
+#~ msgstr ""
+#~ ":guilabel:`Cinza`: o candidato ainda está em andamento no estágio atual e "
+#~ "não está pronto nem bloqueado para o próximo estágio."
+
+#~ msgid ""
+#~ "The status for each card is set manually. To set the status, click on the "
+#~ "small circle in the lower-left of the applicant card. A status pop-up "
+#~ "window appears. Click on the desired status for the applicant. The status "
+#~ "dot on the applicant card as well as the status bar updates."
+#~ msgstr ""
+#~ "O status de cada cartão é definido manualmente. Para definir o status, "
+#~ "clique no pequeno círculo no canto inferior esquerdo do cartão do "
+#~ "candidato. É exibida uma janela pop-up de status. Clique no status "
+#~ "desejado para o candidato. O ponto de status no cartão do candidato e a "
+#~ "barra de status são atualizados."
+
+#~ msgid ""
+#~ "The names for the three status colors (`In Progress`, `Ready for Next "
+#~ "Stage`, and `Blocked`) :ref:`can be modified <recruitment/modify-"
+#~ "stages>`, if desired."
+#~ msgstr ""
+#~ "Os nomes das três cores de status (`Em Andamento`, `Pronto para o Próximo "
+#~ "Estágio` e `Bloqueado`) :ref:`podem ser modificados <recruitment/modify-"
+#~ "stages>`, se desejado."
+
+#~ msgid ""
+#~ "To create a new stage, click on :icon:`fa-plus` :guilabel:`Stage` and a "
+#~ "new column appears. Enter the title for the new stage in "
+#~ "the :guilabel:`Stage title` field, then click :guilabel:`Add`. The new "
+#~ "column appears, and another new stage is available to create. If no new "
+#~ "stages are needed, click anywhere on the screen to exit the new stage "
+#~ "creation."
+#~ msgstr ""
+#~ "Para criar um novo estágio, clique em :icon:`fa-plus` :guilabel:`Estágio` "
+#~ "e uma nova coluna será exibida. Digite o título do novo estágio no "
+#~ "campo :guilabel:`Título do estágio` e, em seguida, clique "
+#~ "em :guilabel:`Adicionar`. A nova coluna é exibida e outro novo estágio "
+#~ "está disponível para ser criado. Se não houver necessidade de novos "
+#~ "estágios, clique em qualquer lugar da tela para sair da criação do novo "
+#~ "estágio."
+
+#~ msgid "The plus sign to click to add a new column to the Kanban stages."
+#~ msgstr ""
+#~ "Sinal de adição para adicionar uma nova coluna aos estágios do Kanban."
+
+#~ msgid ""
+#~ "To modify the settings of a stage, hover over the name of the stage, and "
+#~ "a :icon:`fa-cog` :guilabel:`(Settings)` icon appears in the upper right "
+#~ "hand side of the stage. Click on the :icon:`fa-"
+#~ "cog` :guilabel:`(Settings)` icon and a menu appears. Then click on "
+#~ "the :guilabel:`Edit` option. An :guilabel:`Edit: (Stage)` form appears. "
+#~ "Make any desired modifications to the form, then click :guilabel:`Save & "
+#~ "Close` when done."
+#~ msgstr ""
+#~ "Para modificar as configurações de um estágio, passe o mouse sobre o nome "
+#~ "do estágio e um ícone :icon:`fa-cog` :guilabel:`(Configurações)` aparece "
+#~ "no canto superior direito do estágio. Clique no ícone :icon:`fa-"
+#~ "cog` :guilabel:`(Configurações)` e um menu aparece. Em seguida, clique na "
+#~ "opção :guilabel:`Editar`. Um formulário :guilabel:`Editar: (Estágio)` "
+#~ "aparece. Faça as modificações desejadas no formulário e clique "
+#~ "em :guilabel:`Salvar e Fechar` quando concluir."
+
+#~ msgid "Edit stage form"
+#~ msgstr "Editar formulário de estágio"
+
+#~ msgid ""
+#~ "The :guilabel:`Edit: (Stage)` form is where the stage's settings are "
+#~ "configured. The only required field is the :guilabel:`Stage Name`."
+#~ msgstr ""
+#~ "O formulário :guilabel:`Editar: (Estágio)` é onde as configurações do "
+#~ "palco são definidas. O único campo obrigatório é o :guilabel:`Nome do "
+#~ "estágio`."
+
+#~ msgid ""
+#~ ":guilabel:`Email Template`: Select an email template to be used from the "
+#~ "drop-down menu. If a template is selected, when the applicant card enters "
+#~ "the stage, an email is automatically sent to the applicant using the "
+#~ "selected template."
+#~ msgstr ""
+#~ ":guilabel:`Modelo de E-mail`: Selecione um modelo de e-mail a ser usado "
+#~ "no menu suspenso. Se um modelo for selecionado, quando o cartão do "
+#~ "candidato entrar no estágio, um e-mail será enviado automaticamente ao "
+#~ "candidato usando o modelo selecionado."
+
+#~ msgid ""
+#~ ":guilabel:`Show in Referrals`: Check the box if this stage should be seen "
+#~ "in the *Referrals* application, and allow the referrer to accrue points "
+#~ "when a referral of theirs reaches this stage. If this is active, "
+#~ "a :guilabel:`Points` field appears. Enter the amount of referral points "
+#~ "the employee receives when an applicant enters this stage. The "
+#~ "**Referrals** app must be installed in order to use this option."
+#~ msgstr ""
+#~ ":guilabel:`Mostrar em Indicações`: Marque a caixa se este estágio deve "
+#~ "ser visto no aplicativo *Indicações* e permitir que o indicador acumule "
+#~ "pontos quando uma indicação sua atingir este estágio. Se isso estiver "
+#~ "ativo, um campo :guilabel:`Pontos` aparece. Digite a quantidade de pontos "
+#~ "de indicação que o funcionário recebe quando um candidato entra neste "
+#~ "estágio. O aplicativo **Indicações** deve estar instalado para usar esta "
+#~ "opção."
+
+#~ msgid ""
+#~ ":guilabel:`Tooltips` section: There are three preconfigured status labels "
+#~ "(colored circles) for each applicant's card, indicating its status. These "
+#~ "colors are displayed at the top of each stage to reflect the statuses of "
+#~ "the applicants in the stage. The *names* for the label can be modified, "
+#~ "but the label itself (the color) cannot. The default names and labels "
+#~ "are: :guilabel:`In Progress` (gray), :guilabel:`Blocked` (red), "
+#~ "and :guilabel:`Ready for Next Stage` (green)."
+#~ msgstr ""
+#~ "Seção :guilabel:`Dicas de Ferramentas`: Existem três rótulos de status "
+#~ "pré-configurados (círculos coloridos) para o cartão de cada candidato, "
+#~ "indicando seu status. Essas cores são exibidas no topo de cada estágio "
+#~ "para refletir os status dos candidatos no estágio. Os *nomes* do rótulo "
+#~ "podem ser modificados, mas o próprio rótulo (a cor) não pode. Os nomes e "
+#~ "rótulos padrão são: :guilabel:`Em Andamento` "
+#~ "(cinza), :guilabel:`Bloqueado` (vermelho) e :guilabel:`Pronto para o "
+#~ "Próximo Estágio` (verde)."
+
+#~ msgid ""
+#~ ":guilabel:`Requirements`: Enter any internal notes for this stage "
+#~ "explaining any requirements of the stage."
+#~ msgstr ""
+#~ ":guilabel:`Requisitos`: Digite quaisquer notas internas para este estágio "
+#~ "explicando os requisitos do estágio."
+
+#~ msgid ""
+#~ "If a stage is no longer needed, the stage can be deleted. To delete a "
+#~ "stage, hover over the name of the stage, and a :icon:`fa-"
+#~ "cog` :guilabel:`(Settings)` icon appears. First, click on the :icon:`fa-"
+#~ "cog` :guilabel:`(Settings)` icon to reveal a drop-down menu, then "
+#~ "click :guilabel:`Delete`. A :guilabel:`Confirmation` pop-up warning "
+#~ "appears, asking :guilabel:`Are you sure you want to delete this column?` "
+#~ "Click :guilabel:`Delete` to delete the column."
+#~ msgstr ""
+#~ "Se um estágio não for mais necessário, o estágio pode ser excluído. Para "
+#~ "excluir um estágio, passe o mouse sobre o nome do estágio e um "
+#~ "ícone :icon:`fa-cog` :guilabel:`(Configurações)` aparece. Primeiro, "
+#~ "clique no ícone :icon:`fa-cog` :guilabel:`(Configurações)` para revelar "
+#~ "um menu suspenso e, em seguida, clique em :guilabel:`Excluir`. Um aviso "
+#~ "pop-up de :guilabel:`Confirmação` aparece, perguntando :guilabel:`Tem "
+#~ "certeza de que deseja excluir esta coluna?` Clique em :guilabel:`Excluir` "
+#~ "para excluir a coluna."
+
+#~ msgid ""
+#~ "If there are applicants currently in the stage being deleted, an error "
+#~ "pops up when attempting to delete the stage. The records currently in the "
+#~ "stage to need to be either deleted, archived, or moved to a different "
+#~ "stage before the stage can be deleted."
+#~ msgstr ""
+#~ "Se houver candidatos no estágio que está sendo excluído, um erro "
+#~ "aparecerá ao tentar excluir a etapa. Os registros atualmente no estágio "
+#~ "precisam ser excluídos, arquivados ou movidos para um estágio diferente "
+#~ "antes que o estágio possa ser excluído."
+
+#~ msgid ""
+#~ ":guilabel:`Recruitment: Applicant Acknowledgement`: this template is used "
+#~ "to let the applicant know that their application was received. This email "
+#~ "is automatically sent out once the applicant is in the :guilabel:`New` "
+#~ "stage."
+#~ msgstr ""
+#~ ":guilabel:`Recrutamento: Confirmação do candidato`: esse modelo é usado "
+#~ "para informar ao candidato que sua candidatura foi recebida. Esse e-mail "
+#~ "é enviado automaticamente quando o candidato está no "
+#~ "estágio :guilabel:`Novo`."
+
+#~ msgid ""
+#~ ":guilabel:`Recruitment: Interest`: this template is used to let the "
+#~ "applicant know that their application caught the recruiter's attention, "
+#~ "and they have been shortlisted for either a phone call or an interview."
+#~ msgstr ""
+#~ ":guilabel:`Recrutamento: interesse`: esse modelo é usado para informar ao "
+#~ "candidato que sua candidatura chamou a atenção do recrutador e que ele "
+#~ "foi pré-selecionado para uma ligação telefônica ou uma entrevista."
+
+#~ msgid ""
+#~ ":guilabel:`Recruitment: Not interested anymore`: this template is used "
+#~ "when an applicant communicates that they are no longer interested in the "
+#~ "position, and thanks them for their time and consideration."
+#~ msgstr ""
+#~ ":guilabel:`Recrutamento: não estou mais interessado`: esse modelo é usado "
+#~ "quando um candidato comunica que não está mais interessado na vaga e "
+#~ "agradece pelo tempo e consideração."
+
+#~ msgid ""
+#~ ":guilabel:`Recruitment: Refuse`: this template is used when an applicant "
+#~ "is no longer being considered for the position."
+#~ msgstr ""
+#~ ":guilabel:`Recrutamento: recusa`: esse modelo é usado quando um candidato "
+#~ "não está mais sendo considerado para o cargo."
+
+#~ msgid ""
+#~ ":guilabel:`Recruitment: Schedule Interview`: this template is used to let "
+#~ "the applicant know that they have passed the :guilabel:`Initial "
+#~ "Qualification` stage, and they will soon be contacted to set up an "
+#~ "interview with the recruiter. This email is automatically sent out once "
+#~ "the applicant is in the :guilabel:`Initial Qualification` stage."
+#~ msgstr ""
+#~ ":guilabel:`Recrutamento: Agendar Entrevista`: este modelo é usado para "
+#~ "informar ao candidato que ele passou do estágio :guilabel:`Qualificação "
+#~ "Inicial` e que em breve será contatado para agendar uma entrevista com o "
+#~ "recrutador. Este e-mail é enviado automaticamente quando o candidato está "
+#~ "no estágio :guilabel:`Qualificação Inicial`."
+
+#~ msgid ""
+#~ "To manually send an email, click :guilabel:`Send message` in the chatter. "
+#~ "A text box appears, as well as the applicant's email address."
+#~ msgstr ""
+#~ "Para enviar um e-mail manualmente, clique em :guilabel:`Enviar mensagem` "
+#~ "no chatter. Uma caixa de texto é exibida, bem como o endereço de e-mail "
+#~ "do candidato."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-expand` :guilabel:`(Full composer)` icon in the "
+#~ "bottom right corner of the :guilabel:`Send Message` tab in the chatter. "
+#~ "A :guilabel:`Compose Email` pop-up window loads, with the :guilabel:`To` "
+#~ "and :guilabel:`Subject` pre-populated. The applicant's email address is "
+#~ "entered in the :guilabel:`To` field, and the :guilabel:`Subject` is `(Job "
+#~ "Position)`. The email body is empty by default."
+#~ msgstr ""
+#~ "Clique no ícone :icon:`fa-expand` :guilabel:`(Editor completo)` no canto "
+#~ "inferior direito da aba :guilabel:`Enviar Mensagem` no chatter. Uma "
+#~ "janela pop-up :guilabel:`Compor E-mail` é carregada, com :guilabel:`Para` "
+#~ "e :guilabel:`Assunto` pré-preenchidos. O endereço de e-mail do candidato "
+#~ "é inserido no campo :guilabel:`Para` e o :guilabel:`Assunto` é `(Posição "
+#~ "de Emprego)`. O corpo do e-mail está vazio por padrão."
+
+#~ msgid ""
+#~ "To use a preconfigured email template, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical elipsis)` button in the bottom of the window. "
+#~ "Select the email template to use from the drop-down menu."
+#~ msgstr ""
+#~ "Para usar um modelo de e-mail pré-configurado, clique no botão :icon:`fa-"
+#~ "ellipsis-v` :guilabel:`(elipse vertical)` na parte inferior da janela. "
+#~ "Selecione o modelo de e-mail a ser usado no menu suspenso."
+
+#~ msgid ""
+#~ "If any attachments need to be added, click the :icon:`fa-"
+#~ "paperclip` :guilabel:`(paperclip)` button at the bottom of the window. "
+#~ "Navigate to the file to be attached, then click :guilabel:`Open` to "
+#~ "attach it. To delete an attachment, click the :icon:`fa-"
+#~ "close` :guilabel:`(delete)` icon to the right of the attachment."
+#~ msgstr ""
+#~ "Se for necessário adicionar anexos, clique no botão :icon:`fa-"
+#~ "paperclip` :guilabel:`(clipe de papel)` na parte inferior da janela. "
+#~ "Navegue até o arquivo a ser anexado e clique em :guilabel:`Abrir` para "
+#~ "anexá-lo. Para excluir um anexo, clique no ícone :icon:`fa-"
+#~ "close` :guilabel:`(excluir)` à direita do anexo."
+
+#~ msgid ""
+#~ "If any changes need to be made to the email, edit the body of the email. "
+#~ "If the edits should be saved to be used in the future, the email can be "
+#~ "saved as a new template. Click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical elipsis)` button in the bottom of the window, and "
+#~ "select :guilabel:`Save as Template`. Options are presented to either "
+#~ "overwrite an existing template, or save a new template. Click on an "
+#~ "existing template name to overwrite that template, or "
+#~ "click :guilabel:`Save as Template` to save a new template. "
+#~ "A :guilabel:`Create a Mail Template` pop-up window loads. Enter a name "
+#~ "for the template in the :guilabel:`Template Name` field, then "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Se for necessário fazer alterações no e-mail, edite o corpo da mensagem. "
+#~ "Se as edições devem ser salvas para uso futuro, o e-mail pode ser salvo "
+#~ "como um novo modelo. Clique no botão :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(elipse vertical)` na parte inferior da janela e "
+#~ "selecione :guilabel:`Salvar como modelo`. São apresentadas opções para "
+#~ "substituir um modelo existente ou salvar um novo modelo. Clique no nome "
+#~ "de um modelo existente para substituí-lo ou clique em :guilabel:`Salvar "
+#~ "como modelo` para salvar um novo modelo. Uma janela pop-"
+#~ "up :guilabel:`Criar um modelo de e-mail` é carregada. Digite um nome para "
+#~ "o modelo no campo :guilabel:`Nome do modelo` e clique "
+#~ "em :guilabel:`Salvar`."
+
+#~ msgid ""
+#~ "To send the email, click :guilabel:`Send` and the email is sent to the "
+#~ "applicant. The email then appears in the chatter."
+#~ msgstr ""
+#~ "Para enviar o e-mail, clique em :guilabel:`Enviar` e o e-mail será "
+#~ "enviado ao candidato. O e-mail aparecerá no chatter."
+
+#~ msgid ":doc:`recruitment/new_job`"
+#~ msgstr ":doc:`recruitment/new_job`"
+
+#~ msgid ":doc:`recruitment/post_job`"
+#~ msgstr ":doc:`recruitment/post_job`"
+
+#~ msgid ":doc:`recruitment/recruitment_flow`"
+#~ msgstr ":doc:`recruitment/recruitment_flow`"
+
+#~ msgid ":doc:`recruitment/add_applicants`"
+#~ msgstr ":doc:`recruitment/add_applicants`"
+
+#~ msgid ":doc:`recruitment/schedule_interviews`"
+#~ msgstr ":doc:`recruitment/schedule_interviews`"
+
+#~ msgid ":doc:`recruitment/offer_job_positions`"
+#~ msgstr ":doc:`recruitment/offer_job_positions`"
+
+#~ msgid ":doc:`recruitment/refuse_applicant`"
+#~ msgstr ":doc:`recruitment/refuse_applicant`"
+
+#~ msgid ":doc:`recruitment/application_analysis`"
+#~ msgstr ":doc:`recruitment/application_analysis`"
+
+#~ msgid ":doc:`recruitment/source_analysis`"
+#~ msgstr ":doc:`recruitment/source_analysis`"
+
+#~ msgid ":doc:`recruitment/hiring_velocity`"
+#~ msgstr ":doc:`recruitment/hiring_velocity`"
+
+#~ msgid ":doc:`recruitment/team_performance`"
+#~ msgstr ":doc:`recruitment/team_performance`"
 
 #~ msgid "Take care of employee records when collaboration ends."
 #~ msgstr "Cuide dos registros de funcionários quando a colaboração terminar."
@@ -63844,12 +64603,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Cada entrada é destacada em uma cor diferente para representar seu status:"
 
-#~ msgid "Color"
-#~ msgstr "Cor"
-
-#~ msgid "Status"
-#~ msgstr "Status"
-
 #~ msgid "Meaning"
 #~ msgstr "Significado"
 
@@ -63862,17 +64615,11 @@ msgstr ""
 #~ msgid "The appraisal was completed."
 #~ msgstr "A avaliação foi concluída."
 
-#~ msgid "Orange"
-#~ msgstr "Laranja"
-
 #~ msgid ":guilabel:`Appraisal Sent`"
 #~ msgstr ":guilabel:`Avaliação enviada`"
 
 #~ msgid "The appraisal was confirmed, but not completed."
 #~ msgstr "A avaliação foi confirmada, mas não concluída."
-
-#~ msgid "Red"
-#~ msgstr "Vermelho"
 
 #~ msgid ":guilabel:`Cancelled`"
 #~ msgstr ":guilabel:`Cancelado`"
