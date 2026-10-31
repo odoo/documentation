@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:32+0000\n"
-"PO-Revision-Date: 2026-10-21 20:35+0000\n"
+"POT-Creation-Date: 2026-10-30 17:31+0000\n"
+"PO-Revision-Date: 2026-10-31 10:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18-doc/hr/"
 "fi/>\n"
@@ -2555,6 +2555,428 @@ msgstr ""
 "Pivot-taulukko, joka näyttää taitojen kehityksen kolmannella "
 "vuosineljänneksellä."
 
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Hyväksynnät"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Odoon **Hyväksynnät**-sovelluksen avulla työntekijät voivat tehdä virallisia "
+"pyyntöjä eri asioista, jolloin johto voi tarkastella pyyntöjä ja joko "
+"hyväksyä tai hylätä ne. Tämä pitää kaikki pyynnöt yhdessä keskitetyssä "
+"paikassa, mikä tarjoaa selkeän organisaation ja läpinäkyvyyden kaikille "
+"pyynnöille."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Hyväksyntätyypit"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Hyväksyntää pyydettäessä on määritettävä kategoria eli *tyyppi*. Pyyntöjä "
+"varten on käytettävissä yhdeksän esimääritettyä hyväksyntäkategoriaa:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`Työmatka`: Työhön liittyvien matkojen pyytämiseen."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Lainaa tuotteita`: Yrityksen omistamien tai myymien fyysisten "
+"tuotteiden lainaamiseen määrätyksi ajaksi."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Yleinen hyväksyntä`: Pyynnöille, jotka eivät sovi mihinkään "
+"kahdeksasta muusta oletustyypistä."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Sopimushyväksyntä`: Minkä tahansa ulkoisen sopimuksen "
+"pyytämiseen, lukuun ottamatta :doc:`työntekijäsopimuksia <payroll/contracts>"
+"`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Maksusovellus`: *Ennakkohyväksynnän* pyytämiseen yritykseen "
+"liittyville kuluille."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Tätä hyväksyntätyyppiä käytetään **vain**, kun pyydetään hyväksyntää "
+"*etukäteen* kululle, jonka yritys maksaa suoraan. Tätä kategoriaa **ei** "
+"tule käyttää kuluihin, joista työntekijät hakevat korvausta. Se tehdään "
+":doc:`Kulut-sovelluksen <../finance/expenses/log_expenses>` kautta."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`Autonvuokraushakemus`: Vuokra-auton pyytämiseen."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Työsuosittelupalkkio`: Työsuosittelupalkkioiden pyytämiseen, "
+"jotka on ansaittu, mutta joita ei ole suoritettu :doc:`Suosittelut "
+"<referrals>` -sovelluksen kautta."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Hankinta`: Käytetään työhön liittyvien tuotteiden, kuten "
+"toimistotarvikkeiden, työkalujen jne. pyytämiseen."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Luo tarjouspyyntöjä`: Käytetään tarjouksen pyytämiseen "
+"tavarantoimittajalta."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Hyväksyntäpyynnöt"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"Luodaksesi uuden hyväksyntäpyynnön, avaa **Hyväksynnät**-sovellus, klikkaa "
+":guilabel:`Uusi pyyntö` -painiketta siinä hyväksyntätyypin kortissa, joka "
+"parhaiten vastaa pyyntöä, ja tyhjä hyväksyntälomake latautuu. Täytä eri "
+"osiot ja välilehdet ja klikkaa sitten :guilabel:`Lähetä` lähettääksesi "
+"pyynnön hyväksyttäväksi."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:50
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+msgid "General information section"
+msgstr "Yleistietojen osio"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"Lomakkeen yläosa sisältää kaikki pyyntöä koskevat yleiset tiedot. Täytä "
+"seuraavat kentät lomakkeen yläosassa:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Kaikki alla luetellut kentät näkyvät lomakkeessa :guilabel:`Yleinen "
+"hyväksyntä` -kategorialle. Jos eri :guilabel:`Kategoria` on valittu, jotkin "
+"kentät ovat piilotettuina."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Hyväksynnän aihe`: Tämä kenttä täytetään automaattisesti "
+"valitulla hyväksyntätyypillä. Tee haluamasi muutokset oletustekstiin "
+"antaaksesi lisätietoja pyynnöstä."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Pyyntötyöntekijä`: Hyväksyntäpyynnöstä vastaava henkilö. "
+"Kirjautunut käyttäjä täyttää tämän kentän oletuksena."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:113
+#: ../../content/applications/hr/payroll/salaries.rst:240
+msgid "Description tab"
+msgstr "Kuvaus-välilehti"
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Kaikkiin hyväksyntäpyyntöihin sisältyy mahdollisuus liittää olennaisia "
+"asiakirjoja. Jos haluat liittää asiakirjan, napsauta sivun yläreunassa "
+"olevaa :guilabel:`Liitä asiakirja` -painiketta, jolloin tiedostoselain "
+"latautuu. Siirry haluamaasi tiedostoon, valitse se ja napsauta "
+":guilabel:`Avaa` liittääksesi sen. Useita asiakirjoja voidaan valita ja "
+"lisätä samanaikaisesti."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Kun asiakirjat on liitetty, sivun yläreunaan ilmestyy :icon:`fa-book` "
+":guilabel:`Asiakirjat` -älypainike, joka osoittaa liitettyjen asiakirjojen "
+"määrän. Lisäksi asiakirjat luetellaan chatterissa. Jos näyttö on riittävän "
+"leveä, asiakirjat näkyvät näytön sivussa."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Hallinnoi hyväksyntöjä"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Kun pyynnöt on lähetetty, ne on hyväksyttävä tarvittavilla hyväksyjillä, "
+"jotka on lueteltu :ref:`Hyväksyjät-välilehdellä <approvals/approvers>`. "
+"Nähdäksesi toimenpiteitä odottavat hyväksynnät, siirry kohtaan "
+":menuselection:`Hyväksynnät-sovellus --> Esimies --> Hyväksyttävät "
+"hyväksynnät`, jolloin *Hyväksyttävät hyväksynnät* -koontinäyttö latautuu. "
+"Kaikki käyttäjän toimenpiteitä odottavat hyväksynnät näkyvät "
+"aakkosjärjestyksessä oletusluettelonäkymässä."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"Vain *lähetetyt* pyynnöt, joissa käyttäjä on määritetty hyväksyjäksi, "
+"näkyvät *Hyväksyttävät hyväksynnät* -koontinäytöllä. Kaikki muut pyynnöt "
+"pysyvät piilotettuina."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr "Kaikki hyväksyntää odottavat pyynnöt, joihin käyttäjä on nimetty."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Pyynnöt on hyväksyttävä yksitellen hyväksyntälomakkeelta. Hyväksyäksesi "
+"pyynnön napsauta yksittäistä pyyntöä *Hyväksyttävät hyväksynnät* -"
+"koontinäytöllä, jolloin yksittäinen pyyntölomake latautuu."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr "Kameran lainauspyyntö, jossa näkyvät Hyväksy- ja Hylkää-painikkeet."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"Hyväksyäksesi pyynnön napsauta :guilabel:`Hyväksy` -painiketta yksittäisellä "
+"hyväksyntäpyyntölomakkeella, jolloin tila muuttuu muotoon "
+":guilabel:`Hyväksytty`. Kun käyttäjät hyväksyvät pyynnön, heidän "
+":guilabel:`Tilansa` muuttuu muotoon :guilabel:`Hyväksytty` ja teksti näkyy "
+"vihreänä."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"Hylätäksesi pyynnön napsauta :guilabel:`Hylkää` -painiketta yksittäisellä "
+"hyväksyntäpyyntölomakkeella, jolloin tila muuttuu muotoon "
+":guilabel:`Hylätty`. Kun käyttäjä hylkää pyynnön, sen :guilabel:`Tila` "
+"muuttuu muotoon :guilabel:`Hylätty` ja teksti näkyy punaisena."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"Milloin tahansa hyväksyntäpyynnöt, jotka ovat joko :guilabel:`Hyväksytty` "
+"tai :guilabel:`Hylätty`, voivat palata takaisin :guilabel:`Lähetetty` -"
+"vaiheeseen napsauttamalla :guilabel:`Peruuta` -painiketta. Kaikkien "
+"hyväksyjien :guilabel:`Tila` palaa takaisin tilaan :guilabel:`Odottaa "
+"hyväksyntää`, ja teksti näkyy oranssina."
+
 #: ../../content/applications/hr/attendances.rst:5
 msgid "Attendances"
 msgstr "Läsnäolot"
@@ -4889,8 +5311,8 @@ msgid ""
 "accuracy, capacity planning, and compliance reporting."
 msgstr ""
 "Odoo **Työntekijät** keskittää :doc:`henkilöstötiedot <employees/"
-"new_employee>`, :doc:`työsopimukset <payroll/contracts>` ja "
-":doc:`osastohierarkiat <employees/departments>` yhteen järjestelmään. Sen "
+"new_employee>`, :doc:`työsopimukset <payroll/contracts>` "
+"ja :doc:`osastohierarkiat <employees/departments>` yhteen järjestelmään. Sen "
 "asetusten asianmukainen määrittäminen varmistaa, että koontinäyttö näyttää "
 "kunkin työntekijän reaaliaikaisen läsnäolon ja työskentelypaikan – tiedot, "
 "jotka tukevat palkanlaskennan tarkkuutta, kapasiteetin suunnittelua ja "
@@ -4995,8 +5417,9 @@ msgid ""
 ":guilabel:`Based on attendances`: marked available when :ref:`checked into "
 "<attendances/check-in>` the **Attendances** app."
 msgstr ""
-":guilabel:`Läsnäolojen perusteella`: merkitään saatavilla olevaksi, kun "
-":ref:`kirjaudutaan sisään <attendances/check-in>` **Läsnäolot**-sovellukseen."
+":guilabel:`Läsnäolojen perusteella`: merkitään saatavilla olevaksi, "
+"kun :ref:`kirjaudutaan sisään <attendances/check-in>` **Läsnäolot**-"
+"sovellukseen."
 
 #: ../../content/applications/hr/employees.rst:70
 msgid ""
@@ -5026,8 +5449,8 @@ msgstr ""
 ":guilabel:`Lähetettyjen sähköpostien määrän perusteella`: työntekijä "
 "merkitään läsnä olevaksi, jos hän lähettää vähintään tietyn määrän (#) "
 "sähköposteja tunnissa; muussa tapauksessa hänet merkitään poissa olevaksi. "
-"Syötä lähetettävien sähköpostien vähimmäismäärä kenttään "
-":guilabel:`Lähetetyt sähköpostit`."
+"Syötä lähetettävien sähköpostien vähimmäismäärä "
+"kenttään :guilabel:`Lähetetyt sähköpostit`."
 
 #: ../../content/applications/hr/employees.rst:79
 msgid ""
@@ -5048,11 +5471,11 @@ msgid ""
 "for the display of :ref:`work experience <employees/resume>`, :ref:`skills "
 "<employees/skills>`, and :doc:`certifications <employees/certifications>`."
 msgstr ""
-":guilabel:`Taitojen hallinta`: ota tämä vaihtoehto käyttöön näyttääksesi "
-":ref:`ansioluettelovälilehden <employees/resume>` työntekijäprofiileissa. "
-"Tämä mahdollistaa seuraavien tietojen näyttämisen: :ref:`työkokemus "
-"<employees/resume>`, :ref:`taidot <employees/skills>` ja :doc:`sertifioinnit "
-"<employees/certifications>`."
+":guilabel:`Taitojen hallinta`: ota tämä vaihtoehto käyttöön "
+"näyttääksesi :ref:`ansioluettelovälilehden <employees/resume>` "
+"työntekijäprofiileissa. Tämä mahdollistaa seuraavien tietojen "
+"näyttämisen: :ref:`työkokemus <employees/resume>`, :ref:`taidot <employees/"
+"skills>` ja :doc:`sertifioinnit <employees/certifications>`."
 
 #: ../../content/applications/hr/employees.rst:86
 msgid ""
@@ -5063,11 +5486,12 @@ msgid ""
 "upper-right corner of the employee card, indicating their location by icon, "
 "and status by color."
 msgstr ""
-":guilabel:`Etätyö`: ota tämä vaihtoehto käyttöön, jotta työntekijälomakkeen "
-":ref:`Työtiedot <employees/work-info-tab>` -välilehdelle saadaan näkyviin "
-"tarkka aikataulu. Kun toiminto on käytössä, työntekijälle voidaan määrittää "
-"tietty sijainti kullekin työpäivälle. Vastaava kuvake näkyy työntekijäkortin "
-"oikeassa yläkulmassa, osoittaen sijainnin kuvakkeella ja tilan värillä."
+":guilabel:`Etätyö`: ota tämä vaihtoehto käyttöön, jotta "
+"työntekijälomakkeen :ref:`Työtiedot <employees/work-info-tab>` -välilehdelle "
+"saadaan näkyviin tarkka aikataulu. Kun toiminto on käytössä, työntekijälle "
+"voidaan määrittää tietty sijainti kullekin työpäivälle. Vastaava kuvake "
+"näkyy työntekijäkortin oikeassa yläkulmassa, osoittaen sijainnin kuvakkeella "
+"ja tilan värillä."
 
 #: ../../content/applications/hr/employees.rst:93
 msgid ""
@@ -5076,9 +5500,9 @@ msgid ""
 "icon means the employee is scheduled to work at the office."
 msgstr ""
 "Vihreä :icon:`fa-home` :guilabel:`(koti)` -kuvake osoittaa, että työntekijä "
-"tekee kotona etätöitä kyseisenä päivänä. :icon:`fa-building` :guilabel:`"
-"(rakennus)` -kuvake puolestaan tarkoittaa, että työntekijän on määrä "
-"työskennellä toimistolla."
+"tekee kotona etätöitä kyseisenä päivänä. :icon:`fa-"
+"building` :guilabel:`(rakennus)` -kuvake puolestaan tarkoittaa, että "
+"työntekijän on määrä työskennellä toimistolla."
 
 #: ../../content/applications/hr/employees.rst:97
 msgid ""
@@ -5959,8 +6383,8 @@ msgid ""
 "approve_expenses>`. This **only** appears if there are any expense reports "
 "waiting for approval."
 msgstr ""
-":guilabel:`Kuluraportit`: niiden osaston työntekijöiden määrä, joilla on "
-":doc:`avoimia kuluraportteja hyväksyttävänä &lt;../../finance/expenses/"
+":guilabel:`Kuluraportit`: niiden osaston työntekijöiden määrä, joilla "
+"on :doc:`avoimia kuluraportteja hyväksyttävänä &lt;../../finance/expenses/"
 "approve_expenses&gt;`. Tämä näkyy **vain**, jos hyväksyntää odottavia "
 "kuluraportteja on."
 
@@ -6337,9 +6761,9 @@ msgid ""
 "**Appraisals** application is installed, the :guilabel:`Next Appraisal Date` "
 "field is populated with a date six months from the current date."
 msgstr ""
-"Nykyisen yrityksen puhelinnumero ja nimi täytetään kenttiin "
-":guilabel:`Työpuhelin` ja :guilabel:`Yritys`. Jos **Arvioinnit**-sovellus on "
-"asennettu, kenttä :guilabel:`Seuraava arviointipäivä` täytetään "
+"Nykyisen yrityksen puhelinnumero ja nimi täytetään "
+"kenttiin :guilabel:`Työpuhelin` ja :guilabel:`Yritys`. Jos **Arvioinnit**-"
+"sovellus on asennettu, kenttä :guilabel:`Seuraava arviointipäivä` täytetään "
 "päivämäärällä, joka on kuusi kuukautta kuluvan päivän jälkeen."
 
 #: ../../content/applications/hr/employees/new_employee.rst:29
@@ -6380,9 +6804,9 @@ msgid ""
 msgstr ""
 ":guilabel:`Tehtävänimike`: tämä kenttä näkyy työntekijän nimen alapuolella "
 "ja sen voi täyttää manuaalisesti. Vaihtoehtoisesti valitse tehtävä "
-"pudotusvalikosta kentässä :guilabel:`Tehtävänimike`, joka on kentän "
-":guilabel:`Osasto` alapuolella, täyttääksesi ylemmän kentän automaattisesti. "
-"Näiden kahden kentän ei tarvitse vastata toisiaan."
+"pudotusvalikosta kentässä :guilabel:`Tehtävänimike`, joka on "
+"kentän :guilabel:`Osasto` alapuolella, täyttääksesi ylemmän kentän "
+"automaattisesti. Näiden kahden kentän ei tarvitse vastata toisiaan."
 
 #: ../../content/applications/hr/employees/new_employee.rst:44
 msgid ""
@@ -6411,10 +6835,10 @@ msgid ""
 "`Sales Representative - Subscriptions` if the employee is focused solely on "
 "subscription sales."
 msgstr ""
-"Kirjoitettavassa :guilabel:`Tehtävänimike` -kentässä kentän "
-":guilabel:`Työntekijän nimi` alla tehtävänimike voi olla tarkempi, kuten "
-"`Sales Representative - Subscriptions`, jos työntekijä keskittyy ainoastaan "
-"tilausten myyntiin."
+"Kirjoitettavassa :guilabel:`Tehtävänimike` -kentässä "
+"kentän :guilabel:`Työntekijän nimi` alla tehtävänimike voi olla tarkempi, "
+"kuten `Sales Representative - Subscriptions`, jos työntekijä keskittyy "
+"ainoastaan tilausten myyntiin."
 
 #: ../../content/applications/hr/employees/new_employee.rst:0
 msgid "Both job position fields entered but with different information."
@@ -6435,9 +6859,10 @@ msgid ""
 "Email`, :guilabel:`Work Phone`, and :guilabel:`Work Mobile`,  information, "
 "if not already auto-populated."
 msgstr ""
-"*Työyhteystiedot*: syötä työntekijän :guilabel:`Työsähköposti`, "
-":guilabel:`Työpuhelin` ja :guilabel:`Työmatkapuhelin` -tiedot, jos niitä ei "
-"ole jo täytetty automaattisesti."
+"*Työyhteystiedot*: syötä "
+"työntekijän :guilabel:`Työsähköposti`, :guilabel:`Työpuhelin` "
+"ja :guilabel:`Työmatkapuhelin` -tiedot, jos niitä ei ole jo täytetty "
+"automaattisesti."
 
 #: ../../content/applications/hr/employees/new_employee.rst:63
 msgid ""
@@ -6461,8 +6886,8 @@ msgid ""
 msgstr ""
 ":guilabel:`Yritys`: valitse tämän kentän pudotusvalikosta yritys, johon uusi "
 "työntekijä palkattiin, tai luo uusi yritys kirjoittamalla nimi kenttään ja "
-"napsauttamalla avautuvasta pienestä pudotusvalikosta :guilabel:`Luo` tai "
-":guilabel:`Luo ja muokkaa...`. Tämä kenttä on pakollinen."
+"napsauttamalla avautuvasta pienestä pudotusvalikosta :guilabel:`Luo` "
+"tai :guilabel:`Luo ja muokkaa...`. Tämä kenttä on pakollinen."
 
 #: ../../content/applications/hr/employees/new_employee.rst:70
 msgid ""
@@ -6480,10 +6905,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Tehtävänimike`: valitse työntekijän tehtävänimike "
 "pudotusvalikosta. Jos käytössä on **Rekrytointi**-sovellus, luettelossa "
-"näkyvät määritetyt tehtävänimikkeet. Kun valinta on tehty, kenttä "
-":guilabel:`Tehtävänimike` kentän :guilabel:`Työntekijän nimi` alapuolella "
-"päivittyy automaattisesti vastaamaan valittua tehtävänimikettä, mutta sitä "
-"voi edelleen muokata."
+"näkyvät määritetyt tehtävänimikkeet. Kun valinta on tehty, "
+"kenttä :guilabel:`Tehtävänimike` kentän :guilabel:`Työntekijän nimi` "
+"alapuolella päivittyy automaattisesti vastaamaan valittua tehtävänimikettä, "
+"mutta sitä voi edelleen muokata."
 
 #: ../../content/applications/hr/employees/new_employee.rst:75
 msgid ""
@@ -10354,9 +10779,9 @@ msgid ""
 "for the logo."
 msgstr ""
 "Jos haluat lisätä tietokantaan uuden valmistajan, avaa tyhjä "
-"valmistajalomake napsauttamalla vasemmassa yläkulmassa olevaa painiketta "
-":guilabel:`Uusi`. Kirjoita valmistajan nimi kenttään :guilabel:`Nimi` ja "
-"valitse ladattava kuva logoksi."
+"valmistajalomake napsauttamalla vasemmassa yläkulmassa olevaa "
+"painiketta :guilabel:`Uusi`. Kirjoita valmistajan nimi "
+"kenttään :guilabel:`Nimi` ja valitse ladattava kuva logoksi."
 
 #: ../../content/applications/hr/fleet/models.rst:39
 msgid "Models"
@@ -10651,8 +11076,8 @@ msgid ""
 "the :guilabel:`Power` field."
 msgstr ""
 ":guilabel:`Hevosvoimat`: Syötä ajoneuvon hevosvoimat tähän kenttään. Tämä "
-"kenttä näkyy vain, jos :guilabel:`Hevosvoimat` on valittu kenttään "
-":guilabel:`Teho`."
+"kenttä näkyy vain, jos :guilabel:`Hevosvoimat` on valittu "
+"kenttään :guilabel:`Teho`."
 
 #: ../../content/applications/hr/fleet/models.rst:138
 msgid ""
@@ -10736,13 +11161,13 @@ msgid ""
 "another new vendor."
 msgstr ""
 "Jos tavarantoimittaja *ei* vielä ole tietokannassa, lisää tavarantoimittaja "
-"napsauttamalla painiketta :guilabel:`Uusi` ponnahdusikkunan "
-":guilabel:`Lisää: Tavarantoimittajat` vasemmassa alakulmassa. Syötä "
-"tarvittavat tiedot avautuvaan lomakkeeseen :guilabel:`Luo "
-"tavarantoimittajia` ja lisää tavarantoimittaja napsauttamalla "
-":guilabel:`Tallenna ja sulje` tai lisää nykyinen tavarantoimittaja ja luo "
-"toinen uusi tavarantoimittaja napsauttamalla :guilabel:`Tallenna ja luo "
-"uusi`."
+"napsauttamalla painiketta :guilabel:`Uusi` "
+"ponnahdusikkunan :guilabel:`Lisää: Tavarantoimittajat` vasemmassa "
+"alakulmassa. Syötä tarvittavat tiedot avautuvaan lomakkeeseen :guilabel:`Luo "
+"tavarantoimittajia` ja lisää tavarantoimittaja "
+"napsauttamalla :guilabel:`Tallenna ja sulje` tai lisää nykyinen "
+"tavarantoimittaja ja luo toinen uusi tavarantoimittaja "
+"napsauttamalla :guilabel:`Tallenna ja luo uusi`."
 
 #: ../../content/applications/hr/fleet/models.rst:None
 msgid "Vendor form to fill out when adding a new vendor."
@@ -10946,11 +11371,11 @@ msgid ""
 "the :guilabel:`Information` section of the contract, look "
 "under :guilabel:`Responsible` to see who receives expiration alerts."
 msgstr ""
-"Jos haluat avata sopimuksen kaikkien sopimusten luettelosta, siirry kohtaan "
-":menuselection:`Kuljetuskalusto-sovellus --&gt; Kuljetuskalusto --&gt; "
-"Sopimukset`, jolloin kaikki sopimukset tulevat näkyviin luetteloon. Avaa "
-"sopimus napsauttamalla riviä :guilabel:`Sopimus`. Katso sopimuksen osiosta "
-":guilabel:`Tiedot` kohta :guilabel:`Vastuuhenkilö` nähdäksesi, kuka "
+"Jos haluat avata sopimuksen kaikkien sopimusten luettelosta, siirry "
+"kohtaan :menuselection:`Kuljetuskalusto-sovellus --&gt; Kuljetuskalusto --"
+"&gt; Sopimukset`, jolloin kaikki sopimukset tulevat näkyviin luetteloon. "
+"Avaa sopimus napsauttamalla riviä :guilabel:`Sopimus`. Katso sopimuksen "
+"osiosta :guilabel:`Tiedot` kohta :guilabel:`Vastuuhenkilö` nähdäksesi, kuka "
 "vastaanottaa vanhenemishälytykset."
 
 #: ../../content/applications/hr/fleet/new_vehicle.rst:56
@@ -10965,10 +11390,10 @@ msgstr ""
 "Yksittäinen sopimus voidaan avata myös suoraan tietystä ajoneuvosta "
 "siirtymällä kohtaan :menuselection:`Kuljetuskalusto-sovellus --&gt; "
 "Kuljetuskalusto --&gt; Kuljetuskalusto` ja napsauttamalla yksittäistä "
-"ajoneuvoa. Napsauta ajoneuvolomakkeen yläreunassa olevaa älypainiketta "
-":guilabel:`Sopimukset`. Luettelossa näkyvät vain kyseiseen ajoneuvoon "
-"liittyvät sopimukset. Avaa yksittäinen sopimus napsauttamalla sitä. Henkilö "
-":guilabel:`Vastuuhenkilö` on merkitty sopimukseen."
+"ajoneuvoa. Napsauta ajoneuvolomakkeen yläreunassa olevaa "
+"älypainiketta :guilabel:`Sopimukset`. Luettelossa näkyvät vain kyseiseen "
+"ajoneuvoon liittyvät sopimukset. Avaa yksittäinen sopimus napsauttamalla "
+"sitä. Henkilö :guilabel:`Vastuuhenkilö` on merkitty sopimukseen."
 
 #: ../../content/applications/hr/fleet/new_vehicle.rst:65
 msgid "New Vehicle Request (Belgian Payroll - Fleet)"
@@ -13871,8 +14296,8 @@ msgid ""
 "view-list` :guilabel:`(List)` icon in the top-right corner of the dashboard."
 msgstr ""
 "Tuotteet voidaan näyttää myös luettelonäkymässä napsauttamalla koontinäytön "
-"oikeassa yläkulmassa olevaa :icon:`oi-view-list` :guilabel:`(Lista)` -"
-"kuvaketta."
+"oikeassa yläkulmassa olevaa :icon:`oi-view-list` :guilabel:`(Lista)` "
+"-kuvaketta."
 
 #: ../../content/applications/hr/lunch/orders.rst:54
 msgid "Placing orders"
@@ -13885,8 +14310,9 @@ msgid ""
 "to :menuselection:`Lunch app --> My Lunch --> New Order`."
 msgstr ""
 "Tee lounastilaus siirtymällä pääkoontinäyttöön :guilabel:`Tilaa lounaasi` "
-"joko avaamalla **Lounas**-sovellus tai siirtymällä kohtaan "
-":menuselection:`Lounas-sovellus --&gt; Oma lounas --&gt; Uusi tilaus`."
+"joko avaamalla **Lounas**-sovellus tai siirtymällä "
+"kohtaan :menuselection:`Lounas-sovellus --&gt; Oma lounas --&gt; Uusi "
+"tilaus`."
 
 #: ../../content/applications/hr/lunch/orders.rst:61
 msgid "Add products to an order"
@@ -13899,8 +14325,8 @@ msgid ""
 "Order` pop-up window."
 msgstr ""
 "Napsauta :guilabel:`Tilaa lounaasi` -koontinäytössä haluamaasi tilaukseen "
-"lisättävää tuotetta, jolloin tuote avautuu ponnahdusikkunassa "
-":guilabel:`Määritä tilauksesi`."
+"lisättävää tuotetta, jolloin tuote avautuu "
+"ponnahdusikkunassa :guilabel:`Määritä tilauksesi`."
 
 #: ../../content/applications/hr/lunch/orders.rst:66
 msgid ""
@@ -13911,10 +14337,10 @@ msgid ""
 "the :guilabel:`Extras` fields to add them to the order."
 msgstr ""
 "Ponnahdusikkunan yläosassa ovat tuotteen kuva, nimi ja hinta. Sen "
-"alapuolella voi olla :guilabel:`Lisukkeet` -kenttiä, joissa esitellään "
-":ref:`lisätuotteet tai -vaihtoehdot <lunch/extras>`, kuten täytteet tai "
-"juomat. Valitse haluamasi lisukkeen valintaruutu kentässä "
-":guilabel:`Lisukkeet` lisätäksesi sen tilaukseen."
+"alapuolella voi olla :guilabel:`Lisukkeet` -kenttiä, joissa "
+"esitellään :ref:`lisätuotteet tai -vaihtoehdot <lunch/extras>`, kuten "
+"täytteet tai juomat. Valitse haluamasi lisukkeen valintaruutu "
+"kentässä :guilabel:`Lisukkeet` lisätäksesi sen tilaukseen."
 
 #: ../../content/applications/hr/lunch/orders.rst:71
 msgid ""
@@ -13934,9 +14360,9 @@ msgid ""
 "regarding the order, such as any special requests or food allergies."
 msgstr ""
 "Kentän :guilabel:`Lisukkeet` alapuolella on tuotteen :guilabel:`Kuvaus`, "
-"jota seuraa kenttä :guilabel:`Muistiinpanot`. Kenttää "
-":guilabel:`Muistiinpanot` käytetään tilausta koskevien tärkeiden tietojen "
-"antamiseen tavarantoimittajalle, kuten erityistoiveiden tai ruoka-"
+"jota seuraa kenttä :guilabel:`Muistiinpanot`. "
+"Kenttää :guilabel:`Muistiinpanot` käytetään tilausta koskevien tärkeiden "
+"tietojen antamiseen tavarantoimittajalle, kuten erityistoiveiden tai ruoka-"
 "aineallergioiden ilmoittamiseen."
 
 #: ../../content/applications/hr/lunch/orders.rst:79
@@ -14085,9 +14511,9 @@ msgid ""
 "display the cost for the currently selected quantity of the product."
 msgstr ""
 "Tuotemääriä voidaan muuttaa napsauttamalla luetteloidun tuotteen vasemmalla "
-"puolella olevia :icon:`fa-plus` :guilabel:`(plus)`- tai :icon:`fa-minus` "
-":guilabel:`(miinus)` -kuvakkeita. Tuotteen hinta päivittyy reaaliaikaisesti "
-"vastaamaan valittua tuotemäärää."
+"puolella olevia :icon:`fa-plus` :guilabel:`(plus)`- tai :icon:`fa-"
+"minus` :guilabel:`(miinus)` -kuvakkeita. Tuotteen hinta päivittyy "
+"reaaliaikaisesti vastaamaan valittua tuotemäärää."
 
 #: ../../content/applications/hr/lunch/orders.rst:135
 msgid ""
@@ -14099,8 +14525,8 @@ msgid ""
 "paid, in order to place the currently configured order."
 msgstr ""
 "Yhteenvedon :guilabel:`Tilauksesi` oikealla puolella näkyvät ostotiedot. "
-"Koko päivän lounastilauksen :guilabel:`Yhteensä`-summa näytetään. Kenttä "
-":guilabel:`Jo maksettu` osoittaa, kuinka paljon kyseisenä päivänä on "
+"Koko päivän lounastilauksen :guilabel:`Yhteensä`-summa näytetään. "
+"Kenttä :guilabel:`Jo maksettu` osoittaa, kuinka paljon kyseisenä päivänä on "
 "maksettu summasta :guilabel:`Yhteensä`. Kenttä :guilabel:`Maksettava` "
 "näyttää, kuinka paljon jäljellä olevasta summasta :guilabel:`Yhteensä` on "
 "maksettava määritetyn tilauksen tekemiseksi."
@@ -14145,10 +14571,10 @@ msgid ""
 "is displayed in the :guilabel:`To Pay` field, and the cost is deducted from "
 "their **Lunch** account balance."
 msgstr ""
-"Tee tilaus napsauttamalla :guilabel:`Tilaa heti` -painiketta yhteenvedon "
-":guilabel:`Tilauksesi` oikeassa reunassa. Käyttäjältä veloitetaan kentässä "
-":guilabel:`Maksettava` näkyvä summa, ja kulu vähennetään hänen **Lounas**-"
-"tilinsä saldosta."
+"Tee tilaus napsauttamalla :guilabel:`Tilaa heti` -painiketta "
+"yhteenvedon :guilabel:`Tilauksesi` oikeassa reunassa. Käyttäjältä "
+"veloitetaan kentässä :guilabel:`Maksettava` näkyvä summa, ja kulu "
+"vähennetään hänen **Lounas**-tilinsä saldosta."
 
 #: ../../content/applications/hr/lunch/orders.rst:160
 msgid ""
@@ -16247,11 +16673,6 @@ msgstr ""
 "Uuden sopimuksen luomiseksi napsauta :guilabel:`Uusi` "
 "-painiketta :ref:`Sopimukset-koontinäytössä <payroll/contract-dashboard>`, "
 "jolloin avautuu tyhjä sopimuslomake."
-
-#: ../../content/applications/hr/payroll/contracts.rst:50
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-msgid "General information section"
-msgstr "Yleistietojen osio"
 
 #: ../../content/applications/hr/payroll/contracts.rst:52
 msgid ""
@@ -32751,10 +33172,6 @@ msgstr ""
 ":guilabel:`Kumppani`: Jos toinen yritys osallistuu taloudellisesti tähän "
 "sääntöön, valitse yritys pudotusvalikosta."
 
-#: ../../content/applications/hr/payroll/salaries.rst:240
-msgid "Description tab"
-msgstr "Kuvaus-välilehti"
-
 #: ../../content/applications/hr/payroll/salaries.rst:242
 msgid ""
 "Provide any additional information in this tab to help clarify the rule. "
@@ -41327,9 +41744,9 @@ msgid ""
 "Only users with :guilabel:`Administrator` rights for the **Recruitment** "
 "application can create or modify rewards."
 msgstr ""
-"Vain käyttäjät, joilla on **Rekrytointi**-sovelluksen "
-":guilabel:`Järjestelmänvalvoja` -oikeudet, voivat luoda tai muokata "
-"palkkioita."
+"Vain käyttäjät, joilla on **Rekrytointi**-"
+"sovelluksen :guilabel:`Järjestelmänvalvoja` -oikeudet, voivat luoda tai "
+"muokata palkkioita."
 
 #: ../../content/applications/hr/referrals/rewards.rst:21
 msgid ":doc:`../../general/users/access_rights`"
@@ -42084,10 +42501,11 @@ msgid ""
 "and :guilabel:`Extra Hours`. These can be modified to suit business needs, "
 "or used as-is."
 msgstr ""
-"**Vapaa**-sovelluksessa on neljä valmiiksi määritettyä vapaatyyppiä: "
-":guilabel:`Palkallinen vapaa`, :guilabel:`Sairausloma`, "
-":guilabel:`Palkaton`, :guilabel:`Korvauspäivät` ja :guilabel:`Lisätunnit`. "
-"Näitä voidaan muokata yrityksen tarpeiden mukaan tai käyttää sellaisenaan."
+"**Vapaa**-sovelluksessa on neljä valmiiksi määritettyä "
+"vapaatyyppiä: :guilabel:`Palkallinen "
+"vapaa`, :guilabel:`Sairausloma`, :guilabel:`Palkaton`, :guilabel:`Korvauspäivät` "
+"ja :guilabel:`Lisätunnit`. Näitä voidaan muokata yrityksen tarpeiden mukaan "
+"tai käyttää sellaisenaan."
 
 #: ../../content/applications/hr/time_off.rst:52
 msgid "Create time off type"
@@ -42695,10 +43113,10 @@ msgid ""
 msgstr ""
 "Työntekijälle myönnetään vapaata kertymäsuunnitelmasta, joka on määritetty "
 "kerryttämään yksi lomapäivä jokaista viittä tehtyä työpäivää kohden. "
-"Kertymäsuunnitelma perustuu työntekijän tekemään työaikaan (valintaruutu "
-":guilabel:`Perustuu tehtyyn työaikaan` on valittuna), mikä tarkoittaa, että "
-"hän ansaitsee vapaata **vain** tekemiltään viideltä arkipäivältä, *ei* koko "
-"seitsemän päivän viikolta."
+"Kertymäsuunnitelma perustuu työntekijän tekemään työaikaan "
+"(valintaruutu :guilabel:`Perustuu tehtyyn työaikaan` on valittuna), mikä "
+"tarkoittaa, että hän ansaitsee vapaata **vain** tekemiltään viideltä "
+"arkipäivältä, *ei* koko seitsemän päivän viikolta."
 
 #: ../../content/applications/hr/time_off.rst:277
 msgid ""
@@ -42716,8 +43134,8 @@ msgid ""
 "time, those five days do not count toward accrual."
 msgstr ""
 "Työntekijä pitää viisi päivää vapaata käyttäen :ref:`vapaatyyppiä <time_off/"
-"time-off-types>`, jonka kentän :guilabel:`Vapaan laji` asetuksena on "
-":guilabel:`Poissaolo`. Koska suunnitelma myöntää lomaa vain tehdystä "
+"time-off-types>`, jonka kentän :guilabel:`Vapaan laji` asetuksena "
+"on :guilabel:`Poissaolo`. Koska suunnitelma myöntää lomaa vain tehdystä "
 "työajasta, näitä viittä päivää ei lasketa mukaan kertymään."
 
 #: ../../content/applications/hr/time_off.rst:284
@@ -43545,9 +43963,9 @@ msgid ""
 "<time_off/accrual-plans>` have been configured, the next step is to "
 "*allocate*, or give, time off to employees."
 msgstr ""
-"Kun :ref:`vapaatyypit <time_off/time-off-types>` ja "
-":ref:`kertymäsuunnitelmat <time_off/accrual-plans>` on määritetty, seuraava "
-"vaihe on *myöntää* tai antaa työntekijöille vapaita."
+"Kun :ref:`vapaatyypit <time_off/time-off-types>` "
+"ja :ref:`kertymäsuunnitelmat <time_off/accrual-plans>` on määritetty, "
+"seuraava vaihe on *myöntää* tai antaa työntekijöille vapaita."
 
 #: ../../content/applications/hr/time_off/allocations.rst:12
 msgid ""
@@ -43690,9 +44108,9 @@ msgid ""
 "<time_off/time-off-types>` is configured."
 msgstr ""
 ":guilabel:`Kiintiö`: Syötä työntekijöille myönnettävä vapaamäärä. Tässä "
-"kentässä aika näytetään joko yksikössä :guilabel:`Tunnit` tai "
-":guilabel:`Päivät` riippuen siitä, miten valittu :ref:`Vapaatyyppi <time_off/"
-"time-off-types>` on määritetty."
+"kentässä aika näytetään joko yksikössä :guilabel:`Tunnit` "
+"tai :guilabel:`Päivät` riippuen siitä, miten valittu :ref:`Vapaatyyppi "
+"<time_off/time-off-types>` on määritetty."
 
 #: ../../content/applications/hr/time_off/allocations.rst:60
 msgid ""
