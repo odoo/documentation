@@ -39,12 +39,6 @@ leads first.
 .. image:: manage_sales_teams/sales-team-creation.png
    :alt: The settings page for a new sales team.
 
-.. note::
-   If the **Sales** app is installed on the database, an :guilabel:`Invoicing Target` field appears
-   on the sales team form. This is the revenue target for the current month. The amount entered in
-   this field is used to populate the invoicing progress bar on the :ref:`sales team dashboard
-   <crm/manage_sales_teams/sales-team-dashboard>`.
-
 Add sales team members
 ----------------------
 
