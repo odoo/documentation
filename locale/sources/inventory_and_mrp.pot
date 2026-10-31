@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 20.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
+"POT-Creation-Date: 2026-10-30 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,6 +151,7 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:17
 #: ../../export/content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:23
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/failure_locations.rst:19
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:22
 msgid "Configuration"
 msgstr ""
 
@@ -1670,7 +1671,7 @@ msgid "A warehouse order is partially processed when scanning a package."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:233
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:254
 msgid "Editing a product line"
 msgstr ""
 
@@ -1703,12 +1704,12 @@ msgid ":guilabel:`Destination Package`: If the products should be stored in a pa
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:251
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:272
 msgid ":guilabel:`Destination Container Package`: If a package must be nested inside another (pack-in-pack), select or create the parent package. See :doc:`../../inventory/product_management/configure/pack_in_pack` for more details."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:138
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:264
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:285
 msgid "When ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
 msgstr ""
 
@@ -1761,101 +1762,117 @@ msgstr ""
 msgid "From there, the warehouse worker can continue to process products in the two receipts."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:188
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+msgid "Allocated products"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:192
+msgid "If incoming units were :doc:`allocated <../../inventory/warehouses_storage/reporting/allocation_report>` to outgoing orders, click the :icon:`fa-cog` :guilabel:`(gear)` icon in the upper corner of the receipt, then click :guilabel:`See Allocation` to open the allocation report and :ref:`print labels <inventory/allocation_report/print_labels>` for each unit."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:199
+msgid "If a :ref:`Location for allocation <inventory/allocation_report/configuration/allocation-location>` is configured on the operation type (e.g., Receipts, Manufacturing), product lines going to that location display a :icon:`fa-print` :guilabel:`(print)` icon next to the destination location. Click it to print a label for each unit on that line."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:205
+msgid "Allocated units on a barcode receipt."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
 msgid "Validating the transfer"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:211
 msgid "If not all products were scanned or manually entered from the pencil icon, click the :guilabel:`+#` button on the product line for the products being received, or scan the product, package, or product packaging barcode."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:215
 msgid "Finally, click :guilabel:`Validate`. The receipt is processed, and the **Barcode** app can be closed."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:197
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:218
 msgid "Overview of receipts in transfer to validate."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:201
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:222
 msgid "Scan barcodes for delivery orders"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:203
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:224
 msgid "To process warehouse deliveries for outgoing products, a sales order (SO) must be created to create a delivery operation to process. First, create a quotation, then confirm it to create the |SO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:207
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:228
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
 msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:230
 msgid "To process and scan barcodes for warehouse deliveries, navigate to the :menuselection:`Barcode` app."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:211
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:232
 msgid "In the **Barcode** app, a :guilabel:`Barcode Scanner` screen opens, displaying different options. To process deliveries, click the :guilabel:`Operations` button at the bottom of the screen. This opens an *Operations* overview page."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:215
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:236
 msgid "On this page, click the :guilabel:`Delivery Orders` card to view all outstanding deliveries."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:217
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:238
 msgid "Operations overview page in Barcode app dashboard."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:220
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:241
 msgid "Select the desired delivery order to process. This navigates to the barcode transfer screen."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:222
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:243
 msgid "On this screen, first scan the source location of the products to deliver. Then, review the overview of all products, packages, and packagings to process within that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation or if the whole operation should be validated at once."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:228
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:249
 msgid "To process and scan each product individually, choose a specific product line. Scan a product, package, or product packaging, or click the :guilabel:`+#` (for example, `+6`) button to indicate delivery of that product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:235
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:256
 msgid "To manually adjust quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:238
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:259
 msgid "The product that's being delivered is listed on this screen. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+6`) to automatically fill the quantity ordered from the |SO|. If the product is sold in a packaging, click the packaging button (for example, `6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract a quantity of the product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:245
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:266
 msgid "When the *Packages* feature is enabled in the **Inventory** settings, the following fields appear:"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:247
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:268
 msgid ":guilabel:`Source Package`: If outgoing products should be picked from a package in inventory, select or create the package."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:249
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:270
 msgid ":guilabel:`Destination Package`: If the products should be stored in a package before delivery, select or create the package."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:255
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:276
 msgid "The :guilabel:`Quantity in Stock` section lists the locations from which products can be picked. The selected location is the location from which the product is being pulled for delivery. Click this line to reveal a menu of additional locations to choose from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:261
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:282
 msgid "For warehouses with multiple different storage locations, putaway rules, and removal strategies, additional steps can be added for various operation types while using the **Barcode** app."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:267
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:288
 msgid "Validating the delivery"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:269
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:290
 msgid "If not all products, packages, or product packagings have been scanned or entered on the overview page, scan the products, packages, or packagings, or click the :guilabel:`+#` button on the product line for the products. Finally, click :guilabel:`Validate`. The delivery is processed, and the **Barcode** app can be closed."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:274
+#: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:295
 msgid "Overview of deliveries in transfer to validate."
 msgstr ""
 
@@ -6542,7 +6559,7 @@ msgid "Routes can define specific warehouse paths for a particular packaging typ
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure.rst:102
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:125
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:155
 msgid "Use cases"
 msgstr ""
 
@@ -12249,7 +12266,7 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:73
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:34
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:57
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:131
 #: ../../export/content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:90
 #: ../../export/content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -15219,6 +15236,10 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:161
 msgid "Use production credentials for testing instead, and cancel the test requests through the FedEx platform after testing is complete."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:165
+msgid "FedEx shipments and requests cannot be made from a staging database. You must use a production database to create shipments."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
@@ -20812,7 +20833,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:82
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:223
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:249
 msgid "For purchased products"
 msgstr ""
 
@@ -20830,7 +20851,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:97
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:164
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:230
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:256
 msgid "For manufactured products"
 msgstr ""
 
@@ -21894,300 +21915,328 @@ msgstr ""
 msgid "To do so, navigate to :menuselection:`Inventory app --> Configuration --> Operations Types`. On the dashboard, click the desired :guilabel:`Operation Type` (e.g., `Receipts` or `Manufacturing`), then verify that the :guilabel:`Show Allocation` checkbox is enabled. Enabling this option automatically displays the option to view an :ref:`allocation report <inventory/allocation_report/workflow/report>` for the specific operation."
 msgstr ""
 
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
+msgid "Optional: Set allocation location"
+msgstr ""
+
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:45
-msgid "The following outline summarizes all necessary steps for allocating a product using allocation reports:"
+msgid "Allocated units can be sent to a dedicated location separate from stock until they are delivered or consumed. To configure this option, go to the *Locations* section on the desired :guilabel:`Operation Type` form, then select an internal location in the :guilabel:`Location for allocation` field."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:48
-msgid "Verify that outgoing demand exists for the product in previously confirmed |SOs| or |MOs|. If not, :ref:`create them <inventory/allocation_report/workflow/confirm_demand>`."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:50
-msgid "If existing stock cannot fulfill the demand, create and :ref:`confirm a PO or MO <inventory/allocation_report/workflow/confirm_replenish>` to replenish the demanded products."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:52
-msgid "Open the receipt or |MO| and :ref:`use the allocation report <inventory/allocation_report/workflow/report>` to allocate products."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:54
-msgid ":ref:`Validate the incoming units <inventory/allocation_report/workflow/validate_incoming>` into stock."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:56
-msgid ":ref:`Validate the outgoing units <inventory/allocation_report/workflow/validate_outgoing>` to fulfill the original demand."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:51
+msgid "The :guilabel:`Location for allocation` field only appears when the :guilabel:`Show Allocation` option and :doc:`Storage Locations <../inventory_management/use_locations>` features are enabled."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:59
+msgid "The following outline summarizes all necessary steps for allocating a product using allocation reports:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:62
+msgid "Verify that outgoing demand exists for the product in previously confirmed |SOs| or |MOs|. If not, :ref:`create them <inventory/allocation_report/workflow/confirm_demand>`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:64
+msgid "If existing stock cannot fulfill the demand, create and :ref:`confirm a PO or MO <inventory/allocation_report/workflow/confirm_replenish>` to replenish the demanded products."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:66
+msgid "Open the receipt or |MO| and :ref:`use the allocation report <inventory/allocation_report/workflow/report>` to allocate products."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:68
+msgid ":ref:`Validate the incoming units <inventory/allocation_report/workflow/validate_incoming>` into stock."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:70
+msgid ":ref:`Validate the outgoing units <inventory/allocation_report/workflow/validate_outgoing>` to fulfill the original demand."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:73
 msgid "The process begins by ensuring that an outstanding demand for the product already exists. Confirming a |PO|/|MO| replenishes the stock necessary to meet the demand in the originating |SO|/|MO| either by purchasing it or by manufacturing it."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:63
-msgid "On the receipt from the |PO| or on the confirmed |MO|, users can open the allocation report, which displays the incoming product. Next to the product is a list of all applicable outgoing transfers (i.e., originating |SOs|/|MOs| containing the product) to which incoming units can be assigned. Assigning these units does not move any inventory. Instead, it allows the user to flexibly choose which demands to prioritize before actually receiving incoming units. When those units are received, the user can fulfill the original demands."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:71
-msgid "If multiple products are replenished through the |PO|/|MO|, the allocation report lists all products with originating |SOs|/|MOs| available for reservation."
-msgstr ""
-
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:77
-msgid "Create and confirm demand"
+msgid "On the receipt from the |PO| or on the confirmed |MO|, users can open the allocation report, which displays the incoming product. Next to the product is a list of all applicable outgoing transfers (i.e., originating |SOs|/|MOs| containing the product) to which incoming units can be assigned."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:79
-msgid "Using allocation reports for specific products requires either a previously confirmed |SO| with the product or an |MO| where the product is used as a component. If no such record exists, create it."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:82
+msgid "Allocating units does not move any inventory. Instead, it allows for specific demands to be prioritized before incoming units arrive."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:83
-msgid "To ensure Odoo can properly create allocations for purchased products, confirm that the selected products have the :guilabel:`Purchase` option selected and the :guilabel:`Product Type` set to :guilabel:`Goods`."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:87
-msgid "For manufactured products, ensure that the product has a :doc:`bill of materials <../../../manufacturing/basic_setup/bill_configuration>` configured."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:91
-msgid "Create |SOs|"
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:85
+msgid "If a :ref:`Location for allocation <inventory/allocation_report/configuration/allocation-location>` is configured, the allocated incoming quantity is sent to the specified location. The allocated units can only be picked to fulfill demand after the incoming operation has been validated."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:93
-msgid "If no confirmed |SO| exists for the product, :doc:`create it <../../../../sales/sales/sales_quotations/create_quotations>` by opening a new sales quotation form. In the order lines, ensure that the requested :guilabel:`Product` and its :guilabel:`Quantity` are specified. Then, confirm the quotation by clicking :guilabel:`Confirm Order`. This turns the quotation into a confirmed |SO| and generates a delivery order, accessible via the :icon:`fa-truck` :guilabel:`Delivery` smart button."
+msgid "Create and confirm demand"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:100
-msgid "Repeat this process if there are multiple customers demanding the product."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:95
+msgid "Using allocation reports for specific products requires either a previously confirmed |SO| with the product or an |MO| where the product is used as a component. If no such record exists, create it."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:99
+msgid "To ensure Odoo can properly create allocations for purchased products, confirm that the selected products have the :guilabel:`Purchase` option selected and the :guilabel:`Product Type` set to :guilabel:`Goods`."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:103
+msgid "For manufactured products, ensure that the product has a :doc:`bill of materials <../../../manufacturing/basic_setup/bill_configuration>` configured."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:107
+msgid "Create |SOs|"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:109
+msgid "If no confirmed |SO| exists for the product, :doc:`create it <../../../../sales/sales/sales_quotations/create_quotations>` by opening a new sales quotation form. In the order lines, ensure that the requested :guilabel:`Product` and its :guilabel:`Quantity` are specified. Then, confirm the quotation by clicking :guilabel:`Confirm Order`. This turns the quotation into a confirmed |SO| and generates a delivery order, accessible via the :icon:`fa-truck` :guilabel:`Delivery` smart button."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:116
+msgid "Repeat this process if there are multiple customers demanding the product."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:119
 msgid "Create |MOs|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:105
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:121
 msgid "If there is no confirmed |MO| with the product as a component, :ref:`create it <manufacturing/manufacturing-orders/create-mo>` by opening a new |MO| form. In the component lines, add the requested :guilabel:`Product` and the quantity :guilabel:`To Consume`, then confirm the |MO| by clicking :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:110
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:126
 msgid "Repeat this process if there are multiple |MOs| requiring the component."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:115
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:131
 msgid "Create and confirm |PO| or |MO|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:117
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:133
 msgid "After confirming existing demand for the product, replenish the necessary stock either by purchasing it through a |PO| or by manufacturing it through an |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:121
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:137
 msgid "Replenish through |PO|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:123
-msgid "To create a |PO|, navigate to the **Purchase** app and click :guilabel:`New` to create a new Request for Quotation (RfQ). On the form, add the products in demand on the customers' |SOs| by clicking :guilabel:`Add a product` in the *Products* tab and specifying the required :guilabel:`Quantity`."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:139
+msgid "To create a |PO|, navigate to the :menuselection:`Purchase` app and click :guilabel:`New` to create a new Request for Quotation (RfQ). On the form, add the products in demand on the customers' |SOs| by clicking :guilabel:`Add a product` in the *Products* tab and specifying the required :guilabel:`Quantity`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:127
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:144
 msgid "After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:130
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:147
 msgid "Replenish through |MO|"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:132
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:149
 msgid "To create an |MO|, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`. Then, click :guilabel:`New` to open a new |MO| form. Select the :guilabel:`Product` and enter the :guilabel:`Quantity` to replenish."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:136
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:153
 msgid "Finally, :guilabel:`Confirm` the |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:141
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:158
 msgid "Allocating using the report"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:143
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:160
 msgid "After confirming the replenishment for the product, open the allocation report to assign the pending incoming stock to any available originating |SOs|/|MOs| requiring the product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:146
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:163
 msgid "For confirmed |POs|, click the :icon:`fa-truck` :guilabel:`Receipt` smart button at the top of the |PO| to open the receipt for the incoming stock of the product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:149
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:166
 msgid "Then, click the :icon:`fa-list` :guilabel:`Allocation` smart button at the top."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:152
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:169
 msgid "Alternatively, to open the receipt, navigate to the **Inventory** app and click :guilabel:`(#) To Process` in the :guilabel:`Receipts` card. Then, select the appropriate receipt."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:155
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:172
 msgid "For confirmed |MOs|, the :icon:`fa-list` :guilabel:`Allocation` smart button appears directly in the |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:159
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:176
 msgid "If the :guilabel:`Allocation` smart button does not appear for an |MO|, follow the :ref:`configuration process <inventory/allocation_report/configuration>` to enable it."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:165
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:182
 msgid "Allocation report dashboard"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:167
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:184
 msgid "The allocation report displays a list of available products on the replenishing |PO|/|MO|. Next to each of these products is a list of originating |SOs|/|MOs| to which the products can be allocated."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:170
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:187
 msgid "Each row of this list displays the :guilabel:`Quantity` of reservable units out of the total demand for the product. The quantity is highlighted if it cannot be reserved for the complete demand."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:173
-msgid "The toggle button in the :guilabel:`Reserved` column allows the user to :ref:`allocate <inventory/allocation_report/workflow/report/allocate>` the specified quantity."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:191
+msgid "Quantities already reserved for an outgoing order from existing stock cannot be allocated. The report only lists the remaining unreserved quantity of each demand."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:176
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:194
+msgid "The toggle button in the :guilabel:`Assigned` column allows the user to :ref:`allocate <inventory/allocation_report/workflow/report/allocate>` the specified quantity."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:197
 msgid "A link to each |SO|/|MO| is included in the :guilabel:`For` column, along with its expected delivery :guilabel:`Date`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:180
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:201
 msgid "|SOs|/|MOs| in the allocation report are listed in chronological order of their associated delivery or scheduled date (i.e., the |SO| with the oldest delivery order or the |MO| with the oldest scheduled date appears first)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:184
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:205
 msgid "Allocation report page in Odoo Inventory."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:190
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:211
 msgid "Allocate units"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:192
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:213
 msgid "To allocate units for a product, click the toggle button in the :guilabel:`For` column in the |SO|/|MO|'s corresponding row. Click the toggle button again to undo the reservation."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:195
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:216
 msgid "Alternatively, to allocate all available units for *all* products across all |SOs|/|MOs|, click :guilabel:`Assign All` at the top."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:198
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:220
+msgid "Incoming units can also be allocated from the product's :ref:`forecasted report <inventory/forecast/report/allocate>` by clicking :guilabel:`Assign` and :guilabel:`Unassign` on each demand line."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:224
 msgid "The quantity of reservable units for each product is automatically calculated in order, starting from the oldest |SO|/|MO|. This allows users to allocate as many units as available to fulfill the quantity specified in the original demand."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:203
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:229
 msgid "For example, |SO| A demands five *Chairs* and |SO| B demands five *Chairs*. A |PO| for eight units is created. On the allocation report, |SO| A is listed first with five reservable units. The remaining three available units from this |PO| can be assigned to |SO| B, which creates a backorder due to insufficient supply."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:208
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:234
 msgid "After allocation, originating |SOs| with allocated units are automatically linked to the replenishing |PO|/|MO|. Users can access this directly from the |SO| via the :icon:`fa-credit-card` :guilabel:`Purchase` smart button or the :icon:`fa-wrench` :guilabel:`Manufacturing` smart button. Similarly, the linked |SO| can also be accessed from the |PO|/|MO| via the :icon:`fa-dollar` :guilabel:`Sale` smart button."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:217
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:243
 msgid "Validate incoming move"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:219
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:245
 msgid "After allocating the desired units, validate the incoming stock either by receiving it into inventory (for purchased products) or by producing it (for manufactured products)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:225
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:251
 msgid "If the incoming stock was purchased, navigate to the replenishing |PO| and click :guilabel:`Receive Products` or the :icon:`fa-truck` :guilabel:`Receipt` to open the receipt. Then, click :guilabel:`Validate` to receive the products into stock."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:232
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:258
 msgid "If the stock was confirmed to be manufactured, navigate to the replenishing |MO| and click :guilabel:`Produce` to produce the finished product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:235
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
 msgid "Finished products from completed |MOs| become directly available in stock in the case of :doc:`one-step <../../../manufacturing/basic_setup/one_step_manufacturing>` or :doc:`two-step <../../../manufacturing/basic_setup/two_step_manufacturing>` manufacturing. For :doc:`three-step <../../../manufacturing/basic_setup/three_step_manufacturing>` manufacturing, however, additional transfer moves must be made to transfer the product from the manufacturing location to inventory."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:241
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
 msgid "To validate the incoming transfer on the |MO|, click the :guilabel:`Transfer` smart button at the top. Then, open the relevant order and click :guilabel:`Validate` to receive the product into stock."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:247
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:273
 msgid "Validate outgoing move"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:249
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:275
 msgid "After receiving the incoming stock, fulfill the outgoing demand for the originating |SO|/|MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:252
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:278
 msgid "Fulfill |SO| order"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:254
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:280
 msgid "To fulfill the demand on an |SO|, navigate to the |SO|, then click :icon:`fa-truck` :guilabel:`Delivery` to open the delivery order. Note that the *Operations* tab is populated with a new line showing the allocated :guilabel:`Product` and its allocated :guilabel:`Quantity`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:258
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:284
 msgid "Finally, click :guilabel:`Validate` to confirm that the products have been delivered to the customer."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
 msgid "Delivery order from an allocation report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:265
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:291
 msgid "Fulfill |MO| order"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:293
 msgid "To fulfill a component demand on an |MO|, navigate to the |MO|. The replenished components in the previous step are now marked as :guilabel:`Available` for production on this |MO|. Click :guilabel:`Produce` to manufacture the final product."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:272
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:298
 msgid "The following example demonstrates how an allocation report is used to assign stock for a customer |SO| of higher priority."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:275
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:301
 msgid "Two |SOs| are created for separate customers. Customer A orders 75 units of a *Chair*. Customer B also orders 75 units of the same product but needs them as soon as possible."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:278
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:304
 msgid "No stock exists for the *Chair*, so the user creates and confirms a |PO| to replenish the product from Vendor A. This vendor can only provide 100 units of the *Chair* this week. So, the user creates and confirms another |PO| to replenish the remaining 50 units from Vendor B next week."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:282
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:308
 msgid "After confirming the |POs|, the user opens the allocation reports for each vendor's receipt. Vendor A's report lists the |SO| for Customer A with 75 reservable units, then Customer B's |SO| with 25 reservable units. Vendor B's report lists the |SO| for Customer A with 50 reservable units."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:313
 msgid "Because the user wants to prioritize Customer B's order, they want to ensure Customer B receives 75 units from Vendor A, which can guarantee faster delivery. To do so, they first open Vendor B's allocation report and assign 50 units to Customer A's |SO|. Odoo then recalculates Vendor A's allocation report, updating Customer A's previous quantity of 75 units to 25 units and Customer B's quantity to 75 units."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:293
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:319
 msgid "The user can now assign all 75 units from Vendor A to fulfill Customer B's delivery."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:298
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:324
 msgid "Print labels"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:300
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:326
 msgid "Users can print labels for allocated products to ensure that they are correctly designated to the appropriate customer."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:303
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:329
 msgid "After allocating the desired units, click :guilabel:`Print` at the top to download a PDF of the allocation report for the allocated units. The report includes a scannable barcode at the top for the receipt or |MO|."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:308
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:334
 msgid "If a :ref:`document layout <accounting/invoice/sending>` has not been configured, clicking :guilabel:`Print` opens a pop-up window for the user to configure one."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:311
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:337
 msgid "Printed report from an allocation report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:314
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:340
 msgid "If products are allocated to specific orders, users can also click :guilabel:`Print Labels` to print an individual label for each unit of the allocated products. Each label displays the name of the product, its associated |SO|/|MO| number, and its customer (for |SOs|)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:318
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:344
 msgid "Printed labels from an allocation report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:348
+msgid ":ref:`Print labels for allocated products in the Barcode app <barcode/receipts_deliveries/allocated-products>`"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/dashboards.rst:3
@@ -22658,207 +22707,223 @@ msgstr ""
 msgid "The forecast report is **only** available on products where inventory is being tracked, commonly referred to as a *storable product*."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:22
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
 msgid "Navigating the report"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:24
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:26
 msgid "The forecast report can be accessed via the **Inventory**, **Purchase**,  **Manufacturing**, and **Sales** apps."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:27
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:29
 msgid "To access the report, click the :icon:`fa-area-chart` :guilabel:`Forecasted` smart button on a product form. Alternatively, the report can be accessed from a sales order (SO) or purchase order (PO) by clicking on the :icon:`fa-area-chart` :guilabel:`(Graph)` icon next to the product, then selecting :icon:`oi-arrow-right` :guilabel:`View Forecast`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:32
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:34
 msgid "A sales order with the forecast report icon highlighted."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:35
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:37
 msgid "The forecasted report consists of a graph and a table. The graph visually represents stock movements over time. The following information is displayed:"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:38
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
 msgid ":guilabel:`On Hand`: current stock physically available in the warehouse."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:39
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
 msgid ":guilabel:`Incoming`: quantities expected from confirmed purchase orders or manufacturing orders."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:42
 msgid ":guilabel:`Outgoing`: quantities reserved for sales orders or other outgoing operations."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:43
 msgid ":guilabel:`Forecasted`: projected stock levels based on confirmed and planned operations."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:43
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:45
 msgid "An example of the chart on a forecast report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:46
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:48
 msgid "The table provides detailed metrics regarding operations, including:"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:48
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:50
 msgid ":guilabel:`Replenishment`: Shows reserved quantities, especially useful for multi-step operations."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:49
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:51
 msgid ":guilabel:`Receipt`: The date of receipt for the items."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:50
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:52
 msgid ":guilabel:`Units`: The number of units involved in each operation."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:51
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:53
 msgid ":guilabel:`Used by`: The operation the stock is allocated for."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:52
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:54
 msgid ":guilabel:`Delivery`: The scheduled or expected date of stock movement."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:53
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:55
 msgid ":guilabel:`Forecasted Inventory`: The forecasted stock levels."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:54
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:56
 msgid ":guilabel:`Forecasted with Pending`: The updated stock levels with the pending stock movements considered."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:58
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:62
 msgid "Reserve and unreserve products"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:60
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:64
 msgid "Users can reserve or unreserve products directly from the forecasted report, ensuring stock allocation aligns with operational needs."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:63
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:67
 msgid "The detailed section on a forecast report showing the replenishment and reserved stock."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:67
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:71
 msgid ":doc:`../../shipping_receiving/reservation_methods`"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:70
-msgid "Replenish products"
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:72
-msgid "Click the :guilabel:`Replenish` button at the top of the report to open the :guilabel:`Product Replenish` pop-up. From here, products can be replenished through purchase orders from vendors, or manufactured. Select the :guilabel:`Quantity`, :guilabel:`Preferred Route` and :guilabel:`Vendor`, before clicking :guilabel:`Confirm`."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:76
+msgid "Assign and unassign incoming units"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:78
-msgid "Manufacturing forecast"
+msgid "When an outgoing demand is matched with an incoming receipt or |MO|, the incoming or manufactured units can be allocated to the demand by clicking :guilabel:`Assign` on the corresponding demand line. To undo the allocation, click :guilabel:`Unassign`."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:80
-msgid "To view the availability of manufactured products, click the :guilabel:`Manufacturing Forecast` button. This displays the forecasted stock levels for raw materials, showing how much are expected to be consumed for upcoming manufacturing orders."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:81
+msgid "Allocate units on a forecast report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:84
-msgid "The manufacturing forecast identifies component shortages before they can impact manufacturing timelines, and helps to align manufacturing activities with sales demands."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:85
+msgid ":doc:`allocation_report`"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:87
-msgid "An example of the manufacturing forecast report."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:90
+msgid "Replenish products"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:91
-msgid "Update quantity"
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:93
-msgid "To manually update the quantity of a product, click :guilabel:`Update Quantity`. This opens the :guilabel:`Change Product Quantity` pop-up. Confirm the correct product variant is selected in the :guilabel:`Product` field, then enter the appropriate value in the :guilabel:`New Quantity on Hand` field. Click :guilabel:`Apply` when finished. The report then updates to reflect the new product quantity."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:92
+msgid "Click the :guilabel:`Replenish` button at the top of the report to open the :guilabel:`Product Replenish` pop-up. From here, products can be replenished through purchase orders from vendors, or manufactured. Select the :guilabel:`Quantity`, :guilabel:`Preferred Route` and :guilabel:`Vendor`, before clicking :guilabel:`Confirm`."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:100
-msgid "Multi-step reservation"
+msgid "Manufacturing forecast"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:102
-msgid "Reserved quantities for multi-step incoming and outgoing shipments are indicated on in the :guilabel:`Replenishment` column on the table of the report."
+msgid "To view the availability of manufactured products, click the :guilabel:`Manufacturing Forecast` button. This displays the forecasted stock levels for raw materials, showing how much are expected to be consumed for upcoming manufacturing orders."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:105
-msgid ":guilabel:`Stock in Transit` refers to products that have been received, but are in transit to their input or quality control locations. :guilabel:`Free Stock in Transit` refers to available products received in the input location, but not yet placed in stock."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:106
+msgid "The manufacturing forecast identifies component shortages before they can impact manufacturing timelines, and helps to align manufacturing activities with sales demands."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:110
-msgid "Operations affecting the forecast report"
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:109
+msgid "An example of the manufacturing forecast report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:112
-msgid "The forecast report is influenced by various operations, each impacting stock levels differently. Scheduled delivery dates, planned manufacturing dates, and expected arrival dates all affect the forecast of inventory."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:115
+msgid "Update quantity"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:116
-msgid "Requests for Quotation (RFQs) do not immediately impact the forecast report, as the products are not confirmed for replenishment. |POs|, however, do affect the report as the products are expected to arrive after the |PO| has been confirmed."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:117
+msgid "To manually update the quantity of a product, click :guilabel:`Update Quantity`. This opens the :guilabel:`Change Product Quantity` pop-up. Confirm the correct product variant is selected in the :guilabel:`Product` field, then enter the appropriate value in the :guilabel:`New Quantity on Hand` field. Click :guilabel:`Apply` when finished. The report then updates to reflect the new product quantity."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:120
-msgid "Confirmed |SOs| decrease the forecasted stock, adjusting the report based on the scheduled delivery date. Confirmed manufacturing orders (MOs) affect the forecasted stock for both raw materials and finished goods."
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:126
+msgid "Multi-step reservation"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:128
-msgid "Negative quantity"
+msgid "Reserved quantities for multi-step incoming and outgoing shipments are indicated on in the :guilabel:`Replenishment` column on the table of the report."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:130
-msgid "A negative forecasted quantity indicates that the projected demand exceeds the available and incoming stock at a given point in time. This could occur because the |SOs| or |MOs| require more stock than is currently available or expected, or because of delays in the shipping or manufacturing process."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:135
-msgid "Whatever the cause, when negative numbers are displayed on the forecast report, it serves as an early warning, allowing business to take preventative action. This can include:"
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:131
+msgid ":guilabel:`Stock in Transit` refers to products that have been received, but are in transit to their input or quality control locations. :guilabel:`Free Stock in Transit` refers to available products received in the input location, but not yet placed in stock."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:138
-msgid "Prioritizing specific sales or production orders."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:139
-msgid "Adjusting procurement strategies to expedite purchase orders."
+msgid "Operations affecting the forecast report"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:140
-msgid "Manage customer expectations by proactively communicating the possibility for delays."
+msgid "The forecast report is influenced by various operations, each impacting stock levels differently. Scheduled delivery dates, planned manufacturing dates, and expected arrival dates all affect the forecast of inventory."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:142
-msgid "An example of the forecast report with a negative quantity."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:146
-msgid "Split orders"
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:144
+msgid "Requests for Quotation (RFQs) do not immediately impact the forecast report, as the products are not confirmed for replenishment. |POs|, however, do affect the report as the products are expected to arrive after the |PO| has been confirmed."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:148
-msgid "In the example below, there is not currently enough stock of a product, `Cabinet with Doors` to fulfill the multiple sales orders. The current stock has been reserved for a shipment, `WH/OUT/00011`, and the remainder has been split between the two orders. The remaining stock is expected with `WH/IN/00004`. Once received, they are the separated out to cover the remaining orders."
-msgstr ""
-
-#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:154
-msgid "An example of the forecast report chart showing the split delivery for an order."
+msgid "Confirmed |SOs| decrease the forecasted stock, adjusting the report based on the scheduled delivery date. Confirmed manufacturing orders (MOs) affect the forecasted stock for both raw materials and finished goods."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:158
-msgid "Late receipt"
+msgid "Negative quantity"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:160
-msgid "The replenishment table can be used to determine whether an incoming shipment arrives in time to fulfill an order. For example, a |SO| is displayed with a :guilabel:`Delivery Date` for today for five `Cable Management Boxes`. The current on hand quantity is zero. A |PO| has been confirmed, with the expected arrival three days from today."
+msgid "A negative forecasted quantity indicates that the projected demand exceeds the available and incoming stock at a given point in time. This could occur because the |SOs| or |MOs| require more stock than is currently available or expected, or because of delays in the shipping or manufacturing process."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:165
-msgid "The forecasted quantity for today shows `-5`, because the confirmed demand is five, but the current stock on hand is zero. Since the :guilabel:`Receipt` date is *after* the :guilabel:`Delivery Date`, the shipment is late."
+msgid "Whatever the cause, when negative numbers are displayed on the forecast report, it serves as an early warning, allowing business to take preventative action. This can include:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:168
+msgid "Prioritizing specific sales or production orders."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:169
+msgid "Adjusting procurement strategies to expedite purchase orders."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:170
+msgid "Manage customer expectations by proactively communicating the possibility for delays."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:172
+msgid "An example of the forecast report with a negative quantity."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:176
+msgid "Split orders"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:178
+msgid "In the example below, there is not currently enough stock of a product, `Cabinet with Doors` to fulfill the multiple sales orders. The current stock has been reserved for a shipment, `WH/OUT/00011`, and the remainder has been split between the two orders. The remaining stock is expected with `WH/IN/00004`. Once received, they are the separated out to cover the remaining orders."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:184
+msgid "An example of the forecast report chart showing the split delivery for an order."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:188
+msgid "Late receipt"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:190
+msgid "The replenishment table can be used to determine whether an incoming shipment arrives in time to fulfill an order. For example, a |SO| is displayed with a :guilabel:`Delivery Date` for today for five `Cable Management Boxes`. The current on hand quantity is zero. A |PO| has been confirmed, with the expected arrival three days from today."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:195
+msgid "The forecasted quantity for today shows `-5`, because the confirmed demand is five, but the current stock on hand is zero. Since the :guilabel:`Receipt` date is *after* the :guilabel:`Delivery Date`, the shipment is late."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:199
 msgid "This can be an indication to either expedite the current shipment, if possible, or reschedule the delivery date for the |SO|."
 msgstr ""
 
@@ -35558,7 +35623,7 @@ msgid "Quality control points"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:11
-msgid "In Odoo, *quality control points* (QCPs), are used to automatically create :doc:`quality checks <quality_checks>` at predetermined intervals. |QCPs| can be configured to create quality checks for specific operations (manufacturing, delivery, etc.) and for specific products within those operations."
+msgid "In Odoo, *quality control points* (QCPs) are used to automatically create :doc:`quality checks <quality_checks>` at predetermined intervals. |QCPs| can be configured to create quality checks for specific operations (manufacturing, delivery, etc.) and for specific products within those operations."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:16
@@ -35589,48 +35654,48 @@ msgstr ""
 msgid "If :guilabel:`Categories` is selected, leave the :guilabel:`Categories` field blank to ensure the |QCP| applies to all categories, or select at least one category to which it should apply."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:37
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:36
 msgid "In the :guilabel:`Operations` field, select the operations that should trigger the |QCP|. For example, selecting the :guilabel:`Manufacturing` option in the :guilabel:`Operations` field creates a quality check for new manufacturing orders (MOs)."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:42
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:41
 msgid "When creating a new |QCP|, at least one operation must be listed in the :guilabel:`Operations` field. However, the :guilabel:`Products` and :guilabel:`Product Categories` fields can be left blank. If they are left blank, the |QCP| generates quality checks for every instance of the specified operations."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:47
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:46
 msgid "If the :guilabel:`Manufacturing` operation is selected in the :guilabel:`Operations` field, the :guilabel:`Work Order Operation` field appears. From this field, select a specific work order to generate quality checks for that operation, rather than the manufacturing operation in general."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:52
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:51
 msgid "A |QCP| could be configured to create quality checks for the `Assembly` work order of the `Coffee Table` product. Then, if a new |MO| is confirmed for a `Coffee Table`, the |QCP| creates a quality check specifically for the `Assembly` operation."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:56
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:55
 msgid "Select a :guilabel:`Company` for which the |QCP| should apply."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:58
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:57
 msgid "If a specific quality team member is responsible for the |QCP|, select them in the :guilabel:`Responsible` field."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:61
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:60
 msgid "The :guilabel:`Control per` field is set to one of three options that determine *when* a new quality check is created:"
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:63
 msgid ":guilabel:`Operation`: One check is requested for the specified operation, as a whole."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:65
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
 msgid ":guilabel:`Product`: One check is requested for each *unique* product included in the specified operation. For example, a delivery operation for one table and four chairs would generate two checks, since two *unique* products are included in the operation."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:68
-msgid ":guilabel:`Quantity`: A check is requested for a certain percentage of items within the specified operation. This percentage is set by selecting the :guilabel:`Partial Transfer Test` checkbox, then entering a numerical value in the :guilabel:`Percentage` field that appears. If the checkbox is not selected, one quality check is created for the full quantity."
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:67
+msgid ":guilabel:`Lot`: A check is requested for a certain percentage of items within the specified operation. Next to the :guilabel:`Partial Test` field, enter a percentage in the :guilabel:`Test (#) % of products` field. The default value is `100`, meaning one quality check is created for the full quantity."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:73
-msgid "The :guilabel:`Control Frequency` field is set to one of four options that determine *how often* a new quality check is created:"
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:72
+msgid "If the :guilabel:`Lot` option was selected for :guilabel:`Control per`, the :guilabel:`Control Frequency` field is set to one of four options that determine *how often* a new quality check is created:"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:76
@@ -35718,23 +35783,143 @@ msgid "In the :guilabel:`Team` field, specify the quality team responsible for m
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:130
-msgid "In the :guilabel:`Instructions` tab at the bottom of the form, enter instructions for how to complete the quality checks created by the |QCP|."
+msgid "In the *Instructions* tab at the bottom of the form, enter instructions for how to complete the quality checks created by the |QCP|."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:133
-msgid "In the :guilabel:`Worksheet` tab, upload a worksheet file from the device."
+msgid "In the *Attachment* tab, upload a worksheet file from the device."
 msgstr ""
 
-#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:135
-msgid "In the :guilabel:`Message If Failure` tab, include instructions for what to do if the quality check fails. For example, instruct the employee processing the quality check to create a :doc:`quality alert <quality_alerts>`."
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:136
+msgid "The *Attachment* tab only appears if the :guilabel:`Manufacturing` option is selected in the :guilabel:`Operations` field and a :guilabel:`Work Order Operation` is selected."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:139
-msgid "Use the :guilabel:`Notes` tab to provide additional information about the |QCP|, like the reason it was created. The information entered in this tab is **not** shown to the employees who process the quality checks created by the |QCP|."
+msgid "In the *Message If Failure* tab, include instructions for what to do if the quality check fails. For example, instruct the employee processing the quality check to create a :doc:`quality alert <quality_alerts>`."
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:143
+msgid "Use the *Notes* tab to provide additional information about the |QCP|, like the reason it was created. The information entered in this tab is **not** shown to the employees who process the quality checks created by the |QCP|."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:147
 msgid "A QCP configured to create Pass - Fail checks for a work order operation."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:3
+msgid "Quality rate"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:14
+msgid "In Odoo **Quality**, users can view the quality rate, or the percentage of successful quality checks across incoming transfers from vendors. This documentation covers how to access and view quality rates on vendors' contact forms, requests for quotation (RFQs) or purchase orders (POs), and quality control points (QCPs)."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:24
+msgid "To check quality rates, ensure the following are true:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:26
+msgid "The **Quality** and **Purchase** apps are installed."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:27
+msgid "The user's :doc:`access rights <../../../general/users/access_rights>` are set to :guilabel:`Quality / User` at the minimum."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:33
+msgid "View quality rates"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:35
+msgid "Quality rates can be viewed on vendors' contact forms, |RFQs| or |POs|, and |QCPs|. Each of these forms provides the option to open a customizable report showing the percentage of passing quality checks, organized by product or by vendor."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:39
+msgid "Users can access the report using one of the following options:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:41
+msgid "Via the contact form: Navigate to :menuselection:`Purchase app --> Orders --> Vendors` and select a vendor. The :icon:`fa-check` :guilabel:`Quality Rate` smart button displays the quality rate across all incoming products from the vendor. Click the button to open a specific report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:44
+msgid "Via an |RFQ| or |PO|: Open the **Purchase** app and select an order. The :icon:`fa-check` :guilabel:`Quality Rate` smart button displays the quality rate across all incoming products from the vendor. Click the button to open a specific report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:47
+msgid "Via a |QCP|: Navigate to :menuselection:`Quality app --> Quality Control --> Control Points` and select a control point. The :icon:`fa-user` :guilabel:`Suppliers` smart button displays the number of vendors with completed quality checks at the control point. Click the button to open a specific report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:53
+msgid "The control point's :guilabel:`Operations` field must be set to the `Receipts` operation type."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:56
+msgid "If the :icon:`fa-check` :guilabel:`Quality Rate` smart button does not appear on a vendor contact form, |RFQ|, or |PO|, ensure that at least one check has been performed across the vendor's incoming transfers."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:60
+msgid "Similarly, if the :icon:`fa-user` :guilabel:`Suppliers` smart button does not appear on a |QCP|, ensure that at least one check has been performed at the control point."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:66
+msgid "Quality rate report"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:68
+msgid "When opened from the contact form or the |RFQ|/|PO|, the *Quality Check Analysis* report shows a :icon:`fa-toggle-on` :guilabel:`Stacked` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)` of the vendor's :guilabel:`Quality Rate` for each product over the last 12 months."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:72
+msgid "Modify the :ref:`view <reporting/views>`, :ref:`measure <reporting/choosing-measures>`, :ref:`filters <search/custom-filters>`, or :ref:`grouping options <search/group>` to customize the report."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:77
+msgid "By default, reports accessed from the |QCP| display the rates for each vendor with quality checks at the control point, not the quality rate of each product by vendor."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:82
+msgid "In the following example, multiple products are purchased from the vendor Azure Interior. After performing quality checks, the :icon:`fa-check` :guilabel:`Quality Rate` smart button displays a quality rate of `43%`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:86
+msgid "After opening the default report from the |PO|, the following quality rates are shown for each product:"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:89
+msgid "Pedal Bin: 1 pass, 1 fail (50% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:90
+msgid "Corner Desk Left Sit: 1 pass (100% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:91
+msgid "Office Chair: 1 pass, 1 fail (50% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:92
+msgid "Large Cabinet: 1 fail (0% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:93
+msgid "Large Cabinet (Wood): 1 fail (0% checks passed)"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:95
+msgid "Therefore, the overall quality rate is `3 passed / 7 total = 43%`."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:97
+msgid "Quality Check Analysis report for a partner, grouping by product."
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:101
+msgid ":doc:`quality_checks`"
+msgstr ""
+
+#: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:102
+msgid ":doc:`quality_control_points`"
 msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/repairs.rst:8
