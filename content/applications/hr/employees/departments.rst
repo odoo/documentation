@@ -22,13 +22,18 @@ following information on the department form:
 - :guilabel:`Color`: Select a color for the department. Click the colored box to display all the
   color options. Click on a color to select it.
 
-After the form is completed, click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon to
+After the form is completed, click the :icon:`cloud_upload` :guilabel:`(Save manually)` icon to
 manually save the changes. When saved, a :guilabel:`DEPARTMENT ORGANIZATION` chart appears in the
 right of the department card, illustrating where the department lies in the organization, and how
 many employees are within each listed department.
 
 .. image:: departments/department-form.png
-   :alt: The department for with all fields filled out.
+   :alt: The department form with all fields filled out.
+
+Once the department is saved, two smart buttons appear at the top of the form: the
+:guilabel:`Employees` smart button lists the employees of the department, and the
+:guilabel:`Plans` smart button lists the :doc:`onboarding <onboarding>` and :doc:`offboarding
+<offboarding>` plans available for the department.
 
 .. note::
    The form auto-saves while data is entered, however the :guilabel:`Department Organization` chart
@@ -87,7 +92,7 @@ department card displays the following information, if available:
 List view
 ---------
 
-To view the departments in a list view, click the :icon:`fa-align-justify` :guilabel:`(list)` icon
+To view the departments in a list view, click the :icon:`reorder` :guilabel:`(List)` icon
 in the top-right corner. The departments appear in a list view, which displays the
 :guilabel:`Department Name`, :guilabel:`Company`, :guilabel:`Manager`, :guilabel:`Employees`,
 :guilabel:`Parent Department`, and :guilabel:`Color` for each department.
@@ -102,7 +107,7 @@ The departments are sorted alphabetically by :guilabel:`Department Name`, by def
 Hierarchy view
 --------------
 
-To view the departments in a hierarchy view, click the :icon:`fa-share-alt fa-rotate-90`
+To view the departments in a hierarchy view, click the :icon:`family_history`
 :guilabel:`(Hierarchy)` icon in the top-right corner. The departments appear in an organizational
 chart format, with the highest-level department at the top (typically `Executive Management`), and
 all other departments beneath it. All child departments of the first-level child departments are
