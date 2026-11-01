@@ -23,6 +23,7 @@ All these declarations are available under :menuselection:`Payroll app --> Repor
    social_security/dimona
    social_security/dmfa
    social_security/drs
+   social_security/flexi_at_work
 
 .. _payroll/l10n_be/onss_configuration:
 
@@ -104,8 +105,9 @@ does not match the schema, the declaration moves to the :guilabel:`Error` state,
 displayed on the declaration. After fixing the data, click :guilabel:`Re-Generate XML Report`.
 
 .. tip::
-   The file can be downloaded from the declaration, or with the :icon:`fa-download`
-   :guilabel:`Download` button of the list view, to upload it manually on the ONSS portal.
+   The file can be downloaded from the declaration, or with the :icon:`download`
+   :guilabel:`(Download)` button of its line in the list view, to upload it manually on the ONSS
+   portal.
 
 Send the file and follow up
 ---------------------------
