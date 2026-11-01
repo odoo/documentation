@@ -5,134 +5,120 @@ Work approvals and overtime
 Odoo's **Attendances** app requires management oversight in order to ensure all logged attendances
 are correct, especially overtime hours and incomplete shifts.
 
+Attendances have one of the following statuses:
+
+- :guilabel:`Draft`: The attendance is recorded, but not yet validated. Draft attendances are
+  **not** taken into account by the :doc:`automatic rules <overtime>`, and are not used to compute
+  the employee's pay.
+- :guilabel:`Validated`: The attendance is approved. The automatic rules apply to it, for example to
+  compute overtime.
+- :guilabel:`Refused`: The attendance is rejected, and is not taken into account.
+
+Whether attendances must be validated by an officer depends on the :guilabel:`Attendance
+Validation` :ref:`setting <attendances/modes>`. When it is set to :guilabel:`Worked days are
+automatically approved`, all attendances are validated as soon as they are recorded.
+
 .. _attendances/dashboard:
 
-Management dashboard
-====================
+Attendances to validate
+=======================
 
-All attendance records that require approval, typically due to overlapping work entries or
-unapproved time off, are managed from a centralized management dashboard. To access this, navigate
-to :menuselection:`Attendances app --> Management`.
+All attendance records that require approval are managed from a centralized list. To access it,
+navigate to :menuselection:`Attendances app --> Management --> Attendances`.
 
-The :guilabel:`Management` dashboard only displays attendance records for current employees that
-need to be approved, in a default list view. This is due to the two default filters in the search
-bar, the :guilabel:`To Approve` and :guilabel:`Active Employees`.
+The list only displays the completed attendance records (with a check out) of current employees
+that need to be validated. This is due to the two default filters in the search bar,
+:guilabel:`To Validate` and :guilabel:`Active Employees`. Remove the :guilabel:`To Validate`
+filter, or select the :guilabel:`Validated` or :guilabel:`Refused` filter, to view the other
+attendances.
 
 Each attendance record displays the following information:
 
 - :guilabel:`Employee`: The name of the employee.
 - :guilabel:`Check In`: The date and time the employee checked in.
 - :guilabel:`Check Out`: The date and time the employee checked out.
-- :guilabel:`Worked Time`: The number of worked hours the employee logged.
-- :guilabel:`Worked Extra Hours`: The amount of overtime worked.
-- :guilabel:`Extra Hours`: The total approved extra hours.
+- :guilabel:`Break Duration`: The unpaid break time taken during the attendance.
+- :guilabel:`Worked Time`: The number of worked hours the employee logged, minus the breaks.
+- :guilabel:`Status`: The status of the attendance.
 
 .. image:: management/management-dashboard.png
-   :alt: The Attendances app Management dashboard, displaying entries needing approval.
+   :alt: The list of attendances to validate.
 
 .. _attendances/approve-refuse:
 
-Approvals and refusals
-======================
+Validate or refuse attendances
+==============================
 
-Attendance records can be approved and refused directly from the :ref:`Management dashboard
-<attendances/dashboard>`. At the far-right of each record, :icon:`fa-check` :guilabel:`Approve` and
-:icon:`fa-times` :guilabel:`Refuse` buttons appear. Click the corresponding button to either approve
-or refuse the logged attendance record.
+Attendance records can be validated and refused directly from the list. At the far-right of each
+record, :icon:`fa-check` :guilabel:`Validate` and :icon:`fa-times` :guilabel:`Refuse` buttons
+appear. Click the corresponding button to either validate or refuse the logged attendance record.
+To process several records at once, tick the checkbox of each record, click the :icon:`fa-cog`
+:guilabel:`Actions` button, and select :guilabel:`Validate` or :guilabel:`Refuse`.
 
-.. note::
-   When approving or refusing attendance records from the :guilabel:`Management` dashboard, it is
-   **not** possible to view the details of the attendance record.
-
-Partial approvals
------------------
-
-It is possible to approve a portion of the logged :guilabel:`Extra Hours` and not the full amount.
-To approve only a portion of overtime, click into an attendance record to view the details.
-
-The top half of the record displays the specific check in and check out details, including the
-method used. The :guilabel:`Check In` and :guilabel:`Check Out` information in the top half of the
-form can be modified, if needed. Click into the desired field, and make any needed changes.
-
-The bottom half of the form contains the *Overtime Details* tab. This tab lists the overtime rules
-used to calculate the extra hours, along with the pay rate and status. The extra hours listed in
-this tab can be modified, allowing for partial overtime approval.
-
-Click into the :guilabel:`Extra Hours (encoded)` field of the line being modified. Enter the amount
-of hours being approved in an `HH:MM` format, then click :icon:`fa-check` :guilabel:`Approve` at the
-end of the line.
+It is also possible to click into an attendance record to view the details, and modify the check in
+and check out times or the break duration before validating it. Click :guilabel:`Validate` or
+:guilabel:`Refuse` at the top of the form.
 
 .. image:: management/record.png
-   :alt: A detailed attendance record.
+   :alt: A detailed attendance record, waiting to be validated.
 
-After editing and approving the :guilabel:`Extra Hours (encoded)` field, the status changes to
-:guilabel:`Approved`, and the :guilabel:`Extra Hours` field in the top half of the form updates to
-display the approved overtime.
+Once an attendance is validated, the :doc:`automatic rules <overtime>` apply to it. For example, if
+the employee worked more than their schedule, the overtime is recorded in a separate attendance,
+listed in the :guilabel:`Rules Outputs` tab of the validated attendance.
 
-.. important::
-   Once partial overtime is approved, it is still possible to deny overtime by clicking the
-   :icon:`fa-times` icon next to the :guilabel:`Extra Hours` field in the top half of the form, or
-   clicking :icon:`fa-times` :guilabel:`Refuse` at the end of the overtime entry in the *Overtime
-   Details* tab.
+When an attendance is refused, the attendances created from it by the automatic rules are refused as
+well. To reconsider a refused attendance, click :guilabel:`Reset to Draft`.
 
 .. note::
    Occasionally, verifying an employee's location when checking-in may be needed. The method the
-   employee checked-in to work is found on the individual record, in the :guilabel:`Mode` field.
+   employee checked-in to work is found on the individual record, in the :guilabel:`Mode` field of
+   the :guilabel:`Logs` tab.
 
    The :guilabel:`Mode` field is not modifiable, as it only logs the method the attendance record
-   was created.
+   was created. Refer to :ref:`attendances/check-in-out-details` for the possible options.
 
-   The possible options are:
+Overtime and time off
+=====================
 
-   - :guilabel:`Kiosk`: The employee physically checked in or out using a :doc:`kiosk <kiosks>`
-     device. The employee was present at the kiosk to check-in.
-   - :guilabel:`Systray`: The employee checked in or out :doc:`directly from the database
-     <check_in_check_out>`. Depending on the :guilabel:`IP Address` displayed on the detailed
-     attendance record, the employee's location at the time of check-in can be determined.
-   - :guilabel:`Manual`: The record was created manually in the **Attendances** app. This is
-     typically done by management, to add a missing record.
+Overtime is not approved separately from the attendance: it is computed by the :doc:`automatic
+rules <overtime>` when the attendance is validated. To pay overtime or convert it to time off,
+configure the rules accordingly:
 
-Convert overtime to time off
-============================
-
-Some companies allow for the conversion of overtime into time off. To convert all or a portion of
-overtime into time off, navigate to :menuselection:`Attendances app --> Management`. Click on the
-desired attendance record to view the specific attendance details.
-
-In the *Overtime Details* tab, adjust the amount of overtime being converted to time off in the
-:guilabel:`Extra Hours (encoded)` field, if necessary. Next, click the checkbox in the
-:guilabel:`Compensable as Time Off` column, indicating the overtime should be converted to time off.
-Click :icon:`fa-check` :guilabel:`Approve` at the end of the line, and the status changes to
-:guilabel:`Approved`, and the :guilabel:`Extra Hours` field in the top half of the form updates to
-reflect the approved overtime.
-
-.. image:: management/convert-time-off.png
-   :alt: An attendance record with 2 ours of overtime converted to time off.
+- To pay overtime at a specific rate, set the :guilabel:`Set Excess to` field of the rule to an
+  overtime time type, such as :guilabel:`Overtime (1.5x)`.
+- To convert overtime to time off, set the :guilabel:`Allocate` percentage and the time off type of
+  the rule. The time off is added to the employee's balance in the **Time Off** app as soon as the
+  attendance is validated.
 
 .. _attendances/create-records:
 
 Create attendance records
 =========================
 
-When necessary, users with the required :ref:`access rights <employees/work-info-tab>` are able to
+When necessary, users with the required :ref:`access rights <attendances/access-rights>` are able to
 create attendance records manually in the **Attendances** app. Some situations requiring this is
-when employees forget to check in and out for shifts, as employees cannot retroactively create
-attendance records.
+when employees forget to check in and out for shifts.
 
-To add a missing attendance record, navigate to :menuselection:`Attendances app --> Overview -->
+To add a missing attendance record, navigate to :menuselection:`Attendances app --> Management -->
 Dashboard`. Click the :guilabel:`New` button in the upper-left corner to open a *Create* pop-up
 window. Enter the following information on the form, then click :guilabel:`Save & Close`:
 
 - :guilabel:`Employee`: Select the employee the record is being created for. The signed-in user
   populates this field, by default.
-- :guilabel:`Check In`: Using the calendar, select the check in date and time, then click
-  :guilabel:`Apply`. By default, the current date is selected, and the time is set to `12:00:AM`.
-- :guilabel:`Check Out`: Using the calendar, select the check out date and time, then click
-  :guilabel:`Apply`. By default, the following date is selected, and the time is set to `12:00:AM`.
+- :guilabel:`Check In/Out`: Using the calendar, select the check in date and time, and the check out
+  date and time, then click :guilabel:`Apply`. By default, the current date is selected, from
+  `12:00 AM` to `12:00 AM` the following day.
 - :guilabel:`Worked Time`: This field is automatically populated with the difference from the
-  selected :guilabel:`Check In` and :guilabel:`Check Out` times. This field **cannot** be modified.
-- :guilabel:`Extra Hours`: This field is *not* modifiable as overtime must be :ref:`approved
-  <attendances/approve-refuse>`. This field displays zero (`00:00`) by default.
+  selected check in and check out times, minus the break duration. This field **cannot** be
+  modified.
+- :guilabel:`Time Type`: The :ref:`time type <payroll/work-entry-types>` of the attendance. By
+  default, the :guilabel:`Attendance Work Entry Type` defined in the settings is selected.
+- :guilabel:`Break Duration`: Enter the unpaid break time taken during the attendance, in an
+  `HH:MM` format.
 
 .. image:: management/new-record.png
-   :alt: An Attendances app record form, filled out for Mike Smith for January 27, 2026.
+   :alt: An Attendances app record form, filled out for Mitchell Admin.
+
+.. tip::
+   To open the employee records directly from the **Attendances** app, navigate to
+   :menuselection:`Attendances app --> Management --> Employees`.

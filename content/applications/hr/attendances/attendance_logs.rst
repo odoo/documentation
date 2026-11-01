@@ -2,58 +2,73 @@
 Attendance logs
 ===============
 
-When entering the **Attendances** application, the :guilabel:`Overview` dashboard is presented by
-default, and displays all the user's attendance logs (their check in and check out information) for
-the current day. If the user has the required :ref:`access rights <attendances/access-rights>` or is
-an :ref:`approver <attendances/approvers>` for specific employees, those employees' attendance logs
-also appear on the :guilabel:`Overview` dashboard.
+Every check-in and check-out creates an attendance log. Employees can view their own logs, while
+attendance officers and :ref:`approvers <attendances/approvers>` can view the logs of the employees
+they manage.
 
-The :guilabel:`Overview` dashboard displays the current day, segmented by hour, with the current
-hour highlighted in yellow. The appearance of the :guilabel:`Overview` dashboard is determined by
-the :ref:`working schedule <employees/schedule>` set on the employee's records. Each employee's
-working hours appear in white, while all other hours appear in gray. This allows managers to
-visually determine if an employee is working outside of their working hours.
+.. _attendances/my-attendances:
 
-Employees populate the rows, alphabetically by first name. Each attendance log displays the total
-hours along with the specific check in and check out times. The log colors indicate the following
-statuses:
+My attendances
+==============
 
-- Gray: Completed entries where the employee has checked in and out.
-- Green: Active entries where the employee checked in but has not yet checked out.
-- Red: Entries with any errors (e.g. employees have double entries, or forget to check out).
+When entering the **Attendances** application, the :guilabel:`My Attendances` dashboard is
+presented by default for users who are allowed to record their own attendances. It is also
+available at :menuselection:`Attendances app --> My Attendances`.
+
+The dashboard displays the user's attendance logs (their check in and check out information) for
+the current week, in a :icon:`fa-calendar` :guilabel:`(Calendar)` view. Each log displays the check
+in time, the :ref:`time type <payroll/work-entry-types>`, and the worked hours. The total of the
+week, per time type (for example, :guilabel:`Work` and :guilabel:`Overtime (1.5x)`), is displayed
+above the calendar. Use the :guilabel:`Time Type` filters in the side panel to show or hide time
+types.
+
+.. image:: attendance_logs/my-attendances.png
+   :alt: The My Attendances dashboard, showing a week of attendance logs and the weekly totals.
+
+Click a log to view its details in a pop-up window. If the user is allowed to modify their
+attendance, the details can be corrected directly in the pop-up window.
+
+The dashboard can also be displayed in the :icon:`fa-tasks` :guilabel:`(Gantt)`,
+:icon:`oi-view-list` :guilabel:`(List)`, :icon:`oi-view-pivot` :guilabel:`(Pivot)`, and
+:icon:`fa-area-chart` :guilabel:`(Graph)` views.
+
+.. _attendances/dashboard-overview:
+
+Attendances dashboard
+=====================
+
+To view the attendance logs of all employees, navigate to :menuselection:`Attendances app -->
+Management --> Dashboard`. The dashboard displays all employees in a :icon:`fa-tasks`
+:guilabel:`(Gantt)` view, segmented by hour, for the current day. Users who are :ref:`approvers
+<attendances/approvers>` only see the employees they manage.
+
+The appearance of the dashboard is determined by the :ref:`working schedule <employees/schedule>`
+set on the employee's records. Each employee's working hours appear in white, while all other hours
+appear in gray. This allows managers to visually determine if an employee is working outside of
+their working hours.
+
+Employees populate the rows, alphabetically. Each attendance log displays the time type
+abbreviation and the total hours, and its color depends on its time type. For example, the
+attendances created by an :doc:`automatic rule <overtime>` for overtime appear in a different color
+than regular work.
 
 .. image:: attendance_logs/overview.png
-   :alt: The overview dashboard presenting the information for the week, with the current day
-         highlighted.
+   :alt: The attendances dashboard presenting the information for the week.
 
-A color-coded bar indicates how many hours out of the total expected hours the employee has logged
-for the day. Rollover the color bar to view the details for the employee's current day. Solid colors
-indicate the logged hours (with both a start and end time), while pale colors indicate the employee
-is signed in, but has not signed out yet. Only *completed* attendance logs (records with a check in
-and check out time) appear in the summary of the logged time.
+Beneath each employee's name, a color-coded bar indicates how many hours out of the total expected
+hours the employee has logged for the period. The difference is displayed next to the employee's
+name, for example `4h 45m left`, or `+1h 15m` if the employee worked more than expected. The bar
+is green when the employee worked up to their expected hours, orange when they worked more, and red
+when they worked twice their expected hours or more.
 
-.. example::
-   Abigail Peterson is scheduled to work from 9:00 AM to 12:00 PM, then take a one-hour lunch break
-   from 12:00 PM to 1:00 PM, then work from 1:00 PM to 6:00 PM, for a total of eight hours.
+.. note::
+   The name of an employee appears in red when the employee has no active contract during the
+   displayed period.
 
-   Abigails checks in at 9:00 AM, and checks out at 12:00 PM. She logs in again at 1:00 PM. The
-   current time is 2:15 PM. The rollover information displays `3h / 8h`, indicating Abigail has
-   logged three completed working hours out of a total of eight. There is a pale green line that
-   extends past the summary block, indicating she checked in at 1:00 PM, but has not yet checked
-   out. The length of the pale green line indicates the time worked.
-
-   .. image:: attendance_logs/status-bar.png
-      :alt: The rollover green bar indicating Abigail logged 3 hours, and is currently logged in.
-
-The **Attendances** dashboard allows for changing the displayed time period, either :guilabel:`Day`,
+The dashboard allows for changing the displayed time period, either :guilabel:`Day`,
 :guilabel:`Week`, :guilabel:`Month`, :guilabel:`Quarter`, :guilabel:`Year`, or a custom time period.
 To instantly return the dashboard to the present date, click the :guilabel:`Today` button at any
 time.
-
-.. note::
-   Any attendance logs that have errors appear in red, indicating they need to be resolved by a user
-   with the proper :ref:`access rights <attendances/access-rights>` or are :ref:`approvers
-   <attendances/approvers>` for the employees with the errors.
 
 .. _attendances/filters-groups:
 
@@ -80,6 +95,9 @@ High-value filters
 
    * - Filter
      - Common use case
+   * - Draft / Validated / Refused
+     - View the attendances according to their :ref:`validation status
+       <attendances/approve-refuse>`.
    * - At Work
      - Verify employees still on-site before shutting down the building for the night, or to perform
        a head count.
@@ -87,8 +105,15 @@ High-value filters
      - View all errors to correct them prior to payroll processing.
    * - Automatically Checked-Out
      - Perform an audit to determine employees who chronically forget to check-out of work.
+   * - Overtime Entries
+     - View only the attendances created by :doc:`automatic rules <overtime>`, such as overtime.
+   * - Source Attendances
+     - View only the attendances recorded by the employees, without the attendances created by
+       automatic rules.
    * - Date
      - Limit results to a specific pay-period or audit window.
+   * - Ongoing Contract / No Active Contract
+     - Find the attendances of employees without an active contract.
    * - Active/Archived Employees
      - Switch between current staff and former employees when auditing historical data.
 
@@ -123,20 +148,27 @@ method used. These detailed attendance logs can confirm where an employee was on
 This can be useful for companies with hybrid working schedules, who may need to perform audits to
 ensure proper compliance.
 
-To view an attendance log, click on any attendance entry on the :guilabel:`Overview` dashboard, and
-the attendance log appears in a pop-up window. This log displays a summary, including the following
+To view an attendance log, click on any attendance entry on the attendances dashboard, and the
+attendance log appears in a pop-up window. This log displays a summary, including the following
 information:
 
 - :guilabel:`Employee`: The name of the employee.
-- :guilabel:`Check In`: The date and time the employee checked in.
-- :guilabel:`Check Out`: The date and time the employee checked out. This **only** appears if the
-  employee has checked out.
-- :guilabel:`Worked Time`: The amount of time the employee logged for that specific entry, in an
-  hour and minute format (HH:MM).
-- :guilabel:`Worked Extra Hours`: The unpaid overtime hours worked beyond the expected working
-  schedule for that specific entry (shows **only** when present for the employee).
-- :guilabel:`Extra Hours`: The approved overtime for that specific entry (the :guilabel:`Worked
-  Time` minus the approved :guilabel:`Worked Extra Hours`.
+- :guilabel:`Check In/Out`: The date and time the employee checked in, and the time the employee
+  checked out. The check out time **only** appears if the employee has checked out.
+- :guilabel:`Worked Time`: The amount of time the employee logged for that specific entry, minus the
+  breaks, in an hour and minute format (HH:MM).
+- :guilabel:`Time Type`: The :ref:`time type <payroll/work-entry-types>` of the attendance. By
+  default, it is the :guilabel:`Attendance Work Entry Type` defined in the :ref:`settings
+  <attendances/modes>`; attendances created by :doc:`automatic rules <overtime>` have the time type
+  defined on the rule.
+- :guilabel:`Payroll Options`: This field is only available when the **Payroll** app is installed.
+  It displays the premium pay options applied to the attendance.
+- :guilabel:`Break Duration`: The unpaid break time taken during the attendance, in an hour and
+  minute format (HH:MM). The break duration is deducted from the :guilabel:`Worked Time`.
+
+The status of the attendance (:guilabel:`Draft`, :guilabel:`Validated`, or :guilabel:`Refused`) is
+displayed in the upper-right corner, with the buttons to :ref:`validate or refuse
+<attendances/approve-refuse>` it.
 
 .. image:: attendance_logs/attendance-log.png
    :alt: The details on the attendance log pop-up window.
@@ -146,12 +178,12 @@ information:
 Check in/check out details
 --------------------------
 
-Additional detailed check in and check out information for the attendance log is available. Click
-the :icon:`fa-expand` :guilabel:`(expand)` icon in the upper-right corner of the attendance log, and
-the detailed record loads.
+Additional detailed check in and check out information for the attendance log is available to
+**Attendances** app administrators. Click the :icon:`fa-expand` :guilabel:`(expand)` icon in the
+upper-right corner of the attendance log, and the detailed record loads.
 
-The following additional information appears for both the *Check In* and *Check Out* sections, which
-appear in the expanded attendance log.
+The following additional information appears for both the *Check In* and *Check Out* sections, in
+the :guilabel:`Logs` tab of the expanded attendance log.
 
 - :guilabel:`Mode`: The attendance submission method. The available options are:
 
@@ -162,36 +194,46 @@ appear in the expanded attendance log.
   - :guilabel:`Manual`: The employee's manager or an **Attendances** app administrator
     :ref:`manually created the attendance record <attendances/create-records>`. This typically
     occurs when an employee forgets to check in or check out.
+  - :guilabel:`Automatic Check-Out`: The employee was checked out automatically, according to the
+    :guilabel:`Automatic Check-Out` :ref:`setting <attendances/modes>`.
+  - :guilabel:`Technical`: The attendance was created by Odoo to record an absence, when the
+    :guilabel:`Absence Management` :ref:`setting <attendances/modes>` is enabled.
+
+The following information is **only** recorded when the :guilabel:`Device & Location Tracking`
+:ref:`setting <attendances/modes>` is enabled, for attendances that were not created manually:
 
 - :guilabel:`IP Address`: The device's IP address used to check in or out.
 - :guilabel:`Browser`: The web browser the employee used to check in or out.
-- :guilabel:`Localisation`: The city and country associated with the computer's IP address.
+- :guilabel:`In Location` / :guilabel:`Out Location`: The city and country, based on the GPS
+  coordinates if available, or on the IP address.
 - :guilabel:`GPS Coordinates`: The coordinates when the user checked in or out. To view the
-  coordinates on a map, click the :icon:`oi-arrow-right` :guilabel:`View on Maps` button
-  beneath the GPS coordinates. This opens a map in a new browser tab, with the location pointed out.
+  coordinates on a map, click the :icon:`oi-arrow-right` :guilabel:`View on Maps` button beneath
+  the GPS coordinates. This opens a map in a new browser tab, with the location pointed out.
 
 .. image:: attendance_logs/details.png
    :alt: The detailed information for an attendance entry.
 
+.. note::
+   When the :guilabel:`Take Pictures on Check-In` setting is enabled, the picture taken at check-in
+   is posted in the chatter of the attendance log.
+
 Attendance errors
 =================
 
-Entries that contain an error appear on the overview dashboard in red. In the :icon:`fa-tasks`
-:guilabel:`(Gantt)` view, the entry appears with a red background; in the :icon:`oi-view-list`
-:guilabel:`(List)` view, the entry text appears in red.
+Entries that contain an error appear in red in the :icon:`oi-view-list` :guilabel:`(List)` view of
+the attendances dashboard. Use the :guilabel:`Errors` filter to display them.
 
 An error occurs when an employee has checked in but not checked out within 24 hours, or when a
 single check-in period exceeds 16 hours.
 
 To fix the error, the attendance entry must be modified or deleted. Click on the entry to reveal a
-pop-up containing the details for that particular entry. To modify the :guilabel:`Check In` or
-:guilabel:`Check Out` information, click on the :guilabel:`Check In` or :guilabel:`Check Out` field,
-and a calendar selector appears. Click on the desired date, then use the time selector beneath the
-calendar to select the specific time for the entry. When the information is correct, click
-:guilabel:`Apply.`
+pop-up containing the details for that particular entry. To modify the :guilabel:`Check In/Out`
+information, click on the corresponding date, and a calendar selector appears. Click on the desired
+date, then use the time selector beneath the calendar to select the specific time for the entry.
+When the information is correct, click :guilabel:`Apply`.
 
 When all the information on the pop-up is correct, click :guilabel:`Save & Close`. When the entry no
-longer has an error, the entry appears in gray instead of red.
+longer has an error, the entry no longer appears in red.
 
 To delete an entry, click the red :guilabel:`Delete` button on the pop-up window instead of making
 modifications to the entry.

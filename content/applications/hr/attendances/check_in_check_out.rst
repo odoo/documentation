@@ -6,6 +6,11 @@ Odoo's **Attendances** application allows users, who are logged into the databas
 out without needing to go into the **Attendances** application, or use a kiosk. For smaller
 companies, where every employee is also a user, this feature may be useful.
 
+.. note::
+   This feature is only available when the :guilabel:`Attendances from Backend` :ref:`setting
+   <attendances/modes>` is enabled. Otherwise, employees must check in and out with a :doc:`kiosk
+   <kiosks>`.
+
 A user can check in and/or out on the main database Odoo dashboard, or while inside any application.
 To do so, in the upper-right corner of the top main header menu, which is always visible regardless
 of what application the user is in, a :icon:`fa-circle` :guilabel:`(red circle)` or
@@ -18,65 +23,76 @@ Check in
 ========
 
 If the attendance widget circle is red, this indicates the user is not currently checked in. Click
-the :icon:`fa-circle` :guilabel:`(red circle)`, and the attendance widget appears, displaying a
-green :guilabel:`Check in` :icon:`fa-sign-in` button.
+the :icon:`fa-circle` :guilabel:`(red circle)`, and the attendance widget appears. The widget
+displays a welcome message with the user's name and the current date, the attendances already
+logged for the day (if any), and a :guilabel:`Check in` :icon:`oi-login` button.
 
 .. image:: check_in_check_out/check-in.png
-   :alt: Top right main menu with check in button highlighted.
+   :alt: The attendance widget, with one attendance logged earlier in the day and the Check in
+         button.
 
-When the user checks in from the database, the **Attendances** app logs the location details for the
-user, including the IP Address and GPS coordinates.
+Click the :guilabel:`Check in` :icon:`oi-login` button to check in. The :icon:`fa-circle`
+:guilabel:`(red circle)` in the top menu changes to green, and the button changes to a
+:guilabel:`Check out` :icon:`oi-logout` button.
 
-.. important::
-   For the **Attendances** app to log the location details, the user must allow their computer to
-   access their location information.
+Depending on the :ref:`settings <attendances/modes>`, additional information is recorded when
+checking in:
 
-If the user has not already checked in and out during the current work day, this button is the only
-visible item in the widget. If the user has previously checked in and out, a :guilabel:`Total today`
-field appears above the button, and the total amount of time that has been logged for the day
-appears in that field, in an :guilabel:`HH:MM` (hours:minutes) format.
-
-Click the :guilabel:`Check in` :icon:`fa-sign-in` button to check in. The :icon:`fa-circle`
-:guilabel:`(red circle)` in the top menu changes to green, and the widget changes appearance, as
-well. The widget updates to reflect that the user has checked in, by changing the green
-:guilabel:`Check in` :icon:`fa-sign-in` button to a yellow :guilabel:`Check out` :icon:`fa-sign-out`
-button.
+- :guilabel:`Device & Location Tracking`: The **Attendances** app logs the location details for the
+  user, including the IP address, browser, and GPS coordinates. The user's browser asks for
+  permission to access their location. If no valid location can be retrieved, a pop-up window asks
+  the user to confirm the check in anyway, by clicking :guilabel:`Proceed Anyway`.
+- :guilabel:`Take Pictures on Check-In`: The device's camera opens in the widget, and a picture of
+  the user is taken when they check in. The picture is posted in the chatter of the attendance
+  record. If the camera is not available, the check in is recorded without a picture, and a
+  notification informs the user.
 
 Click anywhere on the screen to close the attendance widget.
+
+Review the day's attendances
+============================
+
+Each check in creates a session in the attendance widget, displaying the check in and check out
+times, the :ref:`time type <payroll/work-entry-types>` abbreviation, and the duration of the
+session. An ongoing session ends with :guilabel:`Now`.
+
+Click a session to expand it and view the :guilabel:`Check In` and :guilabel:`Check Out` details,
+including the location if it was recorded. If the user is allowed to modify the attendance, the
+:guilabel:`Check In` and :guilabel:`Check Out` times (and the :guilabel:`Break` duration, if
+:guilabel:`Break Management on Checkout` is enabled) can be edited directly in the widget. Click
+:guilabel:`Save` to record the changes, or :guilabel:`Discard` to cancel them.
+
+.. note::
+   Users with the *Self Attendance Edit* :ref:`access right <attendances/access-rights>` can modify
+   their own attendances. When :ref:`attendances must be validated <attendances/modes>`, validated
+   attendances can no longer be modified by the employee.
+
+When more than one session is logged for the day, the :guilabel:`Worked` total (and the
+:guilabel:`Break` total, if break management is enabled) is displayed next to the button.
+
+.. image:: check_in_check_out/attendance-review.png
+   :alt: The attendance widget with two sessions, the ongoing one expanded for editing.
+
+.. tip::
+   When the **Timesheets** app is installed, the widget displays two tabs: :guilabel:`Timesheets`,
+   to record the time spent on tasks, and :guilabel:`Attendance`, which displays the sessions
+   described above.
 
 Check out
 =========
 
-If the user is checking out for the first time, :guilabel:`Since HH:MM (AM/PM)` appears at the top
-of the widget, with the time the user checked in populating the time field. Beneath that line, the
-hours and minutes that have elapsed since checking in are displayed in a :guilabel:`HH:MM` format.
-As time passes, this value is updated to reflect the hours and minutes that have passed since the
-user checked in.
-
-If the user has previously checked in and out, additional fields are presented. A :guilabel:`Before
-HH:MM (AM/PM)` field appears, in addition to the :guilabel:`Since HH:MM (AM/PM)` field. The times
-displayed in both of these fields match, and are populated with the most recent check in time.
-Beneath the :guilabel:`Before HH:MM (AM/PM)` field, the previously logged time is displayed, in an
-:guilabel:`HH:MM` (hours:minutes) format.
-
-In addition, beneath both of these fields, a :guilabel:`Total today` field appears. This field is
-the sum of both the :guilabel:`Before HH:MM (AM/PM)` and :guilabel:`Since HH:MM (AM/PM)` fields, and
-is the total time that is logged for the user, if they were to log out at that moment.
-
-As time passes, both the :guilabel:`Since HH:MM (AM/PM)` and :guilabel:`Total today` fields are
-updated live. To check out, click the yellow :guilabel:`Check out` :icon:`fa-sign-out` button. The
-attendance widget updates again, displaying the :guilabel:`Total today` field with the logged time,
-while the yellow :guilabel:`Check out` :icon:`fa-sign-out` button changes to a green
-:guilabel:`Check in` :icon:`fa-sign-in` button.
+To check out, click the :guilabel:`Check out` :icon:`oi-logout` button. The :icon:`fa-circle`
+:guilabel:`(green circle)` in the top menu changes to red, and the session displays its check out
+time and duration.
 
 When the user checks out from the database, the **Attendances** app logs the location details for
-the user. This information is logged **only** if the user grants permission.
+the user, if :guilabel:`Device & Location Tracking` is enabled and the user grants permission.
 
-.. image:: check_in_check_out/check-in-database-message.png
-   :alt: The pop-up that appears when an employee checks in inside the database.
+.. important::
+   If the :guilabel:`Single Check-In Attendance System` :ref:`setting <attendances/modes>` is
+   enabled, employees cannot check out from the widget: they are checked out automatically, and the
+   message `You've already checked in.` appears if they try to check out.
 
 .. tip::
-   The number of times a user can check in and check out is unlimited. Users can check in and out
-   without any time elapsing (a value of 00:00). Each time an employee logs in and out, the
-   information is stored and appears on the main **Attendances** dashboard, including check-ins and
-   check-outs with no time value.
+   The number of times a user can check in and check out is unlimited. Each time an employee checks
+   in and out, the information is stored and appears on the **Attendances** dashboards.

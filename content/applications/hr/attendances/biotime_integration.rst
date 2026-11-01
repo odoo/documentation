@@ -43,18 +43,19 @@ Fetch transactions
 ==================
 
 The devices connected to the BioTime server are referred to as *terminals*. Each attendance record
-identifies which terminal generated the transaction.
+identifies which terminal generated the transaction. To view the terminals, navigate to
+:menuselection:`Attendances app --> Configuration --> Zkteco Terminals`.
 
 BioTime stores each punch as a single check-in or check-out record, while an **Attendances** app
 record in Odoo combines both check-in and check-out information in a single record. For this reason,
 punches retrieved from BioTime are first stored separately in the database before being converted
 into **Attendances** app records.
 
-To view the fetched BioTime records, navigate to :menuselection:`Attendances app --> Overview -->
-ZKTeco Transactions`. Each ZKTeco Transaction record displays the following information:
+To view the fetched BioTime records, navigate to :menuselection:`Attendances app --> Management
+--> ZKTeco Transactions`. Each ZKTeco Transaction record displays the following information:
 
 - :guilabel:`Employee`: The employee linked to the transaction. This is matched using the
-  :guilabel:`ZKTeco employee ID` field in the *Settings* tab of the :ref:`employee form
+  :guilabel:`ZKTeco Employee ID` field in the *Settings* tab of the :ref:`employee form
   <employees/new_employee/hr-attn-pos>`. If no match is found, a warning appears in the
   :guilabel:`Processing Note` field.
 - :guilabel:`Punch Time`: The punch time recorded on the BioTime server, converted to the user's
@@ -65,11 +66,12 @@ ZKTeco Transactions`. Each ZKTeco Transaction record displays the following info
 - :guilabel:`Terminal`: The terminal, or device, that generated the transaction.
 - :guilabel:`Attendance`: The attendance record generated once the transaction is processed. This
   field is empty until processing succeeds.
-- :guilabel:`Is Processed`: Indicates whether the transaction has been converted into an attendance
+- :guilabel:`Processed`: Indicates whether the transaction has been converted into an attendance
   record.
 - :guilabel:`Processing Note`: Displays a warning when the transaction cannot be matched or
   processed, for example when no matching employee or no valid type is found.
-- :guilabel:`Zkteco Transaction`: The ID of the transaction on the BioTime server.
+- :guilabel:`Transaction ID`: The ID of the transaction on the BioTime server. This column is hidden
+  by default in the list, and is displayed on the transaction form.
 
 .. tip::
    Transactions automatically sync every 12 hours. To fetch them manually at any time, click
@@ -84,9 +86,9 @@ transaction is handled depends on its type.
 *Check-in* transactions create a new attendance record, unless the employee already has an open
 attendance record (a check-in with no matching check-out).
 
-*Check-out* transactions are linked to the earliest open attendance record found within the
-:guilabel:`Check-out Lookback` period as configured in the settings menu, using that record's
-check-out time.
+*Check-out* transactions are linked to the closest earlier open attendance record found within the
+:guilabel:`Check-out Lookback` period as configured in the settings menu, and set its check-out
+time.
 
 .. note::
    An employee **cannot** have two open attendance records at the same time.
@@ -107,8 +109,9 @@ available for a single transaction, or in bulk from the list view.
    check in again.
 
    Once a ZKTeco Transaction is processed successfully, its associated attendance record appears in
-   the transaction's Attendance field, and the attendance record's mode is set to BioTime,
-   distinguishing it from attendance entered manually or through other check-in methods.
+   the transaction's :guilabel:`Attendance` field, and the attendance record's mode is set to
+   :guilabel:`Biotime`, distinguishing it from attendance entered manually or through other check-in
+   methods.
 
    .. image:: biotime_integration/example.png
       :alt: The BioTime check-in with an error for January 28th.

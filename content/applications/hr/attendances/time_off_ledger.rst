@@ -10,10 +10,11 @@ View time off ledger report
 ===========================
 
 To view the *Time Off Ledger* report, navigate to :menuselection:`Attendances app --> Reporting -->
-Time Off Ledger`. The report displays a nested list of missing attendance hours from the last two
-months. All entries are grouped by month, then employee. Click the :icon:`fa-caret-right`
-:guilabel:`(triangle)` icon to display the list of employees, then click the :icon:`fa-caret-right`
-:guilabel:`(triangle)` icon on the individual employee to view all the detailed attendance records.
+Time Off Ledger`. The report displays a nested list of the days with missing hours (the
+:guilabel:`Missing Hours` filter) from the last two months. All entries are grouped by month, then
+employee. Click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon to display the list of
+employees, then click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon on the individual
+employee to view all the detailed records.
 
 When expanded, each individual record displays the following information:
 
@@ -24,11 +25,21 @@ When expanded, each individual record displays the following information:
   record.
 - :guilabel:`Worked Hours`: The total logged time the employee worked that day.
 - :guilabel:`Approved Time Off`: The approved hours of time off for that day.
-- :guilabel:`Difference`: The difference between the :guilabel:`Expected Hours` and the
-  :guilabel:`Worked Hours` for the employee that day.
+- :guilabel:`Difference`: The :guilabel:`Worked Hours` minus the :guilabel:`Expected Hours`, plus
+  the :guilabel:`Approved Time Off`. A negative difference appears in red.
+
+The :guilabel:`Working Schedule` and :guilabel:`Time Types` columns can be added using the
+:icon:`oi-settings-adjust` :guilabel:`(optional columns)` icon.
 
 .. image:: time_off_ledger/time-off-report.png
-   :alt: The time off report, expanded to show the missing records for Anita Oliver from July 2026.
+   :alt: The time off ledger report, expanded to show the missing records for Anita Oliver from
+         October 2026.
+
+Click a record to open it. The :guilabel:`Attendance Records` and :guilabel:`Approved Time Offs`
+tabs list the attendances and the time off taken into account for that day.
+
+The report can also be displayed in a :icon:`oi-view-pivot` :guilabel:`(Pivot)` view, to compare
+the totals per employee and per month.
 
 Resolve conflicts
 =================
