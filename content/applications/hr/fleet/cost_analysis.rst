@@ -3,26 +3,25 @@ Cost analysis report
 ====================
 
 The **Fleet** app allows for analysis on :ref:`total vehicle costs <fleet/total-costs>`, including
-both contract costs and service and repair charges. Data can be adjusted to view total costs by
-:ref:`vehicle <fleet/by-vehicle>` or :ref:`driver <fleet/by-driver>`. Additionally, costs can be
-compared with the previous year, quarter, or month, to view changes in fleet costs over time.
+both vehicle contract costs and service and repair charges. Data can be adjusted to view total costs
+by :ref:`vehicle <fleet/by-vehicle>`, :ref:`driver <fleet/by-driver>`, or :ref:`period
+<fleet/by-period>`, to view changes in fleet costs over time.
 
 .. _fleet/total-costs:
 
 Total costs
 ===========
 
-To view the *Cost Analysis Report*, navigate to :menuselection:`Fleet app --> Reporting --> Costs`.
-The default report shows a bar chart of service and contract costs for the current year, organized
-by month.
+To view the *Costs Analysis* report, navigate to :menuselection:`Fleet app --> Reporting -->
+Costs`. The default report shows a stacked bar chart of service and contract costs for the current
+year, organized by month.
 
 .. example::
-   In this report, it is possible to determine that June had the highest total costs, with almost
-   $14,000 dollars in contract and repair costs, while January had the lowest costs, with less than
-   $2,000 of contract costs and no repairs.
+   In this report, it is possible to determine that January had the highest total costs, with more
+   than $21,000 in contract costs, while September had the highest service costs.
 
    .. image:: cost_analysis/cost-analysis.png
-      :alt: The default cost analysis report showing contract and service costs.
+      :alt: The default cost analysis report showing contract and service costs per month.
 
 .. _fleet/by-vehicle:
 
@@ -38,9 +37,9 @@ into the search bar, and click :guilabel:`Vehicle` under the :icon:`oi-group` :g
 column.
 
 .. example::
-   From this report, it can be determined the `Toyota Corolla` with the license plate `STU-1718`
-   cost the most, with almost $14,000 in costs for the year. Additionally, the both `Nissan Micro`
-   vehicles and the `Ford Focus` cost the least, with under $5,000 in total costs each.
+   From this report, it can be determined the `Toyota Corolla TS` with the license plate `1-MER-001`
+   cost the most, with more than $17,000 in costs for the year, while the `Audi Q4 e-tron` cost the
+   least, with less than $1,000 in total costs.
 
    .. image:: cost_analysis/by-vehicle.png
       :alt: The cost analysis report showing annual costs by vehicle.
@@ -60,37 +59,33 @@ The report now shows the totals for both :guilabel:`Contract` and :guilabel:`Ser
 driver in the database. This allows fleet managers to see which drivers incur the most repair costs.
 
 .. example::
-   This report shows that `Sandra Elvis` had no service costs for the year, while both `Doris Cole`
-   and `David Armstrong` had almost $9,000 in repairs. While this does not explain why those two
-   drivers incurred the most costs, it is possible for the fleet manager to :ref:`investigate the
-   service records <fleet/view-services>` for those two drivers, to determine why there were such
-   high costs for the year.
+   This report shows that `Beth Evans` had few service costs for the year, while `Audrey Peterson`
+   had more than $2,000 in repairs. While this does not explain why this driver incurred the most
+   costs, it is possible for the fleet manager to :ref:`investigate the service records
+   <fleet/view-services>` for this driver, to determine why there were such high costs for the year.
 
    .. image:: cost_analysis/by-driver.png
       :alt: The cost analysis report showing costs by driver in a pivot table.
 
-Detailed comparison
-===================
+.. _fleet/by-period:
 
-All reports in the **Fleet** app are able to compare costs from previous time periods, either year,
-quarter, or month. To view a detailed cost comparison between the third and fourth quarter, open the
-default :ref:`cost analysis report <fleet/total-costs>`, then click the :icon:`oi-view-pivot`
-:guilabel:`(Pivot)` icon. Next, click into the search bar and click :guilabel:`Q4` in the
-:icon:`fa-filter` :guilabel:`Filters` column, then :guilabel:`Date: Previous Period` in the
-:icon:`fa-adjust` :guilabel:`Comparison` column.
+Cost by period
+==============
 
-The report now shows detailed contract and service costs for each vehicle, with a
-:guilabel:`Variation` column, showing increases or decreases in costs from the third and fourth
-quarter of the current year.
+To view the evolution of the contract and service costs over the year, open the default :ref:`cost
+analysis report <fleet/total-costs>`, then click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon.
+Click the :guilabel:`Total` row header to collapse it, then click it again to reveal a drop-down
+menu. Select :guilabel:`Date` in the :guilabel:`Custom Group` field. The costs are now displayed per
+month, with the :guilabel:`Contract` and :guilabel:`Service` costs in separate columns.
 
+To focus on a specific period, click into the search bar and select the desired period (such as
+:guilabel:`Q3` or :guilabel:`Q4`) under the :guilabel:`Date` filter in the :icon:`fa-filter`
+:guilabel:`Filters` column.
 
 .. example::
-   In this example, it can be determined that the `Ford Focus` had the greatest change in terms of
-   lowered total costs, with a 75.25% reduction in costs. Additionally, the `Nissan Micro` with the
-   license plate of `DEF-456` was the only vehicle with an overall increase in total costs, with an
-   increase of 41.78%.
+   In this example, the service costs increased in September and October, while the contract costs
+   stayed stable at $400 per month after January.
 
-   .. image:: cost_analysis/detailed-costs.png
-      :alt: A pivot table with a detailed cost comparison between the current and previous year.
-
+   .. image:: cost_analysis/costs-by-month.png
+      :alt: A pivot table with the contract and service costs per month.
 

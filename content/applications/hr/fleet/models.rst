@@ -13,8 +13,8 @@ Manufacturers
 
 Odoo's **Fleet** app comes preconfigured with sixty-seven commonly used car and bicycle
 manufacturers in the database, along with their logos. To view the pre-loaded manufacturers, go to
-:menuselection:`Fleet app --> Configuration --> Manufacturers`, and the :guilabel:`Manufacturers`
-dashboard loads.
+:menuselection:`Fleet app --> Configuration --> Models: Manufacturers`, and the
+:guilabel:`Manufacturers` dashboard loads.
 
 The default filter, :guilabel:`With Models`, displays only manufacturers that already have vehicle
 models. Remove the default filter to view *all* manufacturers.
@@ -23,7 +23,7 @@ Manufacturers are listed alphabetically, and each card shows how many specific :
 <fleet/models>` are configured for each particular manufacturer.
 
 .. image:: models/manufacturer.png
-   :alt: Manufacturer card with the amount of models listed.
+   :alt: Manufacturer cards with the number of models configured for each manufacturer.
 
 .. _fleet/add-manufacturers:
 
@@ -51,113 +51,111 @@ manufacturer) **must** be :ref:`added to the database <fleet/add-model>`.
 Add a model
 -----------
 
-To add a new vehicle model, navigate to :menuselection:`Fleet app --> Configuration --> Models`.
-Click :guilabel:`New` in the upper-left corner, and enter the following information on the new model
-form.
+To add a new vehicle model, navigate to :menuselection:`Fleet app --> Configuration --> Models:
+Models`. Click :guilabel:`New` in the upper-left corner, and enter the following information on the
+new model form.
 
 .. note::
-   Depending on the installed :doc:`localization <../../finance/fiscal_localizations>`, some fields
-   or sections may not appear.
+   Depending on the installed :doc:`localization <../../finance/fiscal_localizations>` and
+   applications, some fields or sections may not appear.
 
 - :guilabel:`Model name`: Enter the model name in the field.
 - :guilabel:`Manufacturer`: Using the drop-down menu, select the manufacturer. If it is not
-  configured, :ref:`add the manufacturer <fleet/add-manufacturers>`
-- :guilabel:`Vehicle Type`: Using the drop-down menu, select one of two preconfigured vehicle types,
-  either :guilabel:`Car` or :guilabel:`Bike`.
+  configured, :ref:`add the manufacturer <fleet/add-manufacturers>`.
+- :guilabel:`Vehicle Type`: Using the drop-down menu, select one of the three preconfigured vehicle
+  types: :guilabel:`Car`, :guilabel:`Bike`, or :guilabel:`Other`. The type determines which fields
+  appear on the model and vehicle forms (for example, the number of doors only appears for cars).
 
   .. important::
      Additional vehicle types can **not** be added. **Fleet** keeps them fixed to preserve its
      **Payroll** integration, where vehicles may count as employee benefits.
 
 - :guilabel:`Category`: Using the drop-down menu, select a :ref:`category <fleet/categories>` for
-  the vehicle or :ref:`create a new one <fleet/new-category>`.
+  the vehicle.
+- :guilabel:`Company`: In a multi-company database, select the company that can use this model.
+  Leave the field empty to make the model available to all companies.
 
-  .. note::
-     No categories come preconfigured in Odoo's **Fleet** app. All categories must be added to the
-     database.
+Once saved, a :guilabel:`Vehicles` smart button at the top of the form shows how
+many vehicles use this model.
 
-.. image:: models/vehicle-form-top-.png
-   :alt: A vehicle form with the name, manufacturer, type, and category filled in.
+.. image:: models/model-form.png
+   :alt: A model form for an electric SUV, with the Information tab displayed.
 
 Information tab
 ---------------
 
-In the :guilabel:`Information` tab, specify details about the car model, such as the car size,
-passenger capacity, and engine information.
+In the :guilabel:`Information` tab, specify details about the model, such as the passenger
+capacity, and engine information. These values are copied to each vehicle that uses the model,
+where they can be adjusted per vehicle.
 
 Model
 ~~~~~
 
-- :guilabel:`Model Year`: Enter the year the vehicle was manufactured.
-- :guilabel:`Seating Capacity`: Enter how many passengers the vehicle can accommodate.
-- :guilabel:`Number of Doors`: Enter the number of doors the vehicle has.
-- :guilabel:`Color`: Enter the color of the vehicle.
-- :guilabel:`Trailer Hitch`: Tick this checkbox if the vehicle has a trailer hitch installed.
+- :guilabel:`Model Year`: Select the year the model was manufactured.
+- :guilabel:`Seating Capacity`: Enter how many passengers the vehicle can accommodate. This field
+  only appears for cars.
+- :guilabel:`Number of Doors`: Enter the number of doors the vehicle has, including the trunk or
+  hatch doors, if applicable. This field only appears for cars.
+- :guilabel:`Electric Assistance`: Tick this checkbox if the bike has electric assistance. This
+  field only appears for bikes.
+
+.. note::
+   The vehicle's color and trailer hitch are recorded on each :ref:`vehicle
+   <fleet/new_vehicle/vehicle-form>`, not on the model.
 
 Salary
 ~~~~~~
 
-The :guilabel:`Salary` section **only** appears if the company has their localization setting set to
-Belgium. The cost values are all *monthly*, with the exception of the :guilabel:`Catalog Value (VAT
-Incl.)`.
+The :guilabel:`Salary` section appears when the **Payroll** app is installed, and is used when
+vehicles are offered as employee benefits.
 
-- :guilabel:`Can be requested`: Enable this checkbox if employees can request this model vehicle, if
-  a vehicle is part of their employee contract.
+- :guilabel:`Can be requested`: Enable this checkbox if employees can request this model as a new
+  vehicle, for example, through the :ref:`salary configurator
+  <recruitment/offer_job_positions/configure-package>`.
 - :guilabel:`Catalog Value (VAT Incl.)`: Enter the :abbr:`MSRP (Manufacturer's Suggested Retail
   Price)` for the vehicle at the time of purchase or lease.
-- :guilabel:`C02 fee`: Represents the carbon dioxide emission fee paid to the Belgian government.
+
+For companies located in Belgium, the following additional fields appear. The cost values are
+*monthly*, except the :guilabel:`Catalog Value (VAT Incl.)` and the :guilabel:`BIK` (yearly).
+
+- :guilabel:`CO2 Fee`: Represents the carbon dioxide emission fee paid to the Belgian government.
   This value is automatically calculated, based on Belgian laws and regulations, and **cannot** be
-  modified. The value is based on the figure entered in the :guilabel:`CO2 Emissions` field (in the
-  :guilabel:`Engine` section of the :guilabel:`Information` tab) on the vehicle form.
-
-  .. important::
-     Modifying the :guilabel:`CO2 Emissions` field adjusts the value in the :guilabel:`CO2 fee`
-     field.
-
+  modified. The value is based on the figure entered in the :guilabel:`CO₂ Emissions` field (in the
+  :guilabel:`Engine` section) and the :guilabel:`Fuel Type`. This field only appears for cars.
 - :guilabel:`Cost (Depreciated)`: Enter the monthly vehicle cost, which appears in the salary
   configurator for future employees. This value impacts the gross and net salary of the employee
-  assigned to the vehicle. This figure is depreciated over time, according to local tax laws. The
-  :guilabel:`Cost (Depreciated)` does **not** depreciate automatically on the *vehicle model*, it
-  only depreciates based on the *contract* linked to a specific vehicle.
+  assigned to the vehicle.
 - :guilabel:`Total Cost (Depreciated)`: This value is the combination of the :guilabel:`Cost
-  (Depreciated)` and the :guilabel:`C02 fee` fields. It also depreciated over time.
+  (Depreciated)` and the :guilabel:`CO2 Fee` fields.
+- :guilabel:`BIK`: The yearly benefit in kind of the vehicle, computed from the catalog value, the
+  fuel type, and the CO₂ emissions. This field only appears for cars.
 
 Engine
 ~~~~~~
 
 - :guilabel:`Fuel Type`: Using the drop-down menu, select the type of fuel the vehicle uses. The
-  default options are :guilabel:`Diesel`, :guilabel:`Gasoline`, :guilabel:`Full Hybrid`
+  default options are :guilabel:`Diesel`, :guilabel:`Gasoline`, :guilabel:`Full Hybrid`,
   :guilabel:`Plug-in Hybrid Diesel`, :guilabel:`Plug-in Hybrid Gasoline`, :guilabel:`CNG`,
   :guilabel:`LPG`, :guilabel:`Hydrogen`, or :guilabel:`Electric`.
-- :guilabel:`Range`: Enter the distance the vehicle can travel on one tank of gas, or one battery
-  charge, in miles (:guilabel:`mi`) or kilometers (:guilabel:`km`). To change the unit of distance,
-  click the drop-down next to the :guilabel:`km` or :guilabel:`mi` field, and select the desired
-  unit of distance.
-- :guilabel:`CO2 Emissions`: Enter the average carbon dioxide emissions the vehicle produces in
-  grams per kilometer (:guilabel:`g/km`) or miles (:guilabel:`g/mi`). This information is provided
-  by the car manufacturer.
+- :guilabel:`Transmission`: Using the drop-down menu, select the type of transmission:
+  :guilabel:`Manual`, :guilabel:`Semi-Automatic`, or :guilabel:`Automatic`.
+- :guilabel:`Drive Type`: Using the drop-down menu, select which wheels are driven:
+  :guilabel:`Front-Wheel Drive (FWD)`, :guilabel:`All-Wheel Drive (AWD)`, :guilabel:`Rear-Wheel
+  Drive (RWD)`, or :guilabel:`Four-Wheel Drive (4WD)`.
+- :guilabel:`Power`: Enter the power of the engine, then select the unit in the drop-down menu
+  next to the value, either :guilabel:`kW` or :guilabel:`Horsepower (hp)`.
+- :guilabel:`Range`: Enter the maximum distance the vehicle can travel on a full tank, or a full
+  battery charge. Select the unit of distance in the drop-down menu next to the value, either
+  kilometers (:guilabel:`km`) or miles (:guilabel:`mi`).
+- :guilabel:`CO₂ Emissions`: Enter the average carbon dioxide emissions the vehicle produces, in
+  grams per kilometer (:guilabel:`g/km`) or grams per mile (:guilabel:`g/mi`). This information is
+  provided by the car manufacturer.
 - :guilabel:`Emission Standard`: Enter the regulatory test procedure or guideline used to determine
-  the :guilabel:`CO2 Emissions`, such as the :abbr:`EPA (Environmental Protection Agency)` or Euro
-  6.
-- :guilabel:`Transmission`: Using the drop-down menu, select the type of transmission, either
-  :guilabel:`Manual` or :guilabel:`Automatic`.
-- :guilabel:`Power Unit`: Using the drop-down menu, select how the vehicle's power is measured,
-  either in kilowatts or horsepower.
-- :guilabel:`Power`: If the vehicle is electric or hybrid, enter the power the vehicle uses in
-  kilowatts (:guilabel:`kW`). This field only appears if :guilabel:`kW` is selected for the
-  :guilabel:`Power` field.
-- :guilabel:`Horsepower`: Enter the vehicle's horsepower (hp) in this field. This field only appears
-  if :guilabel:`Horsepower` is selected for the :guilabel:`Power` field.
-- :guilabel:`Horsepower Taxation`: Enter the amount of taxes incurred according to the engine
-  specifications. The number is dependent on the local tax laws, therefore it is recommended to
-  check with the accounting department to ensure the correct taxation amount is entered. This field
-  only appears if the :guilabel:`Power` field is set to :guilabel:`Horsepower` (which changes the
-  :guilabel:`Power` field to :guilabel:`Range`) .
-- :guilabel:`Tax Deduction`: The percentage that can be deducted from taxes is populated based on
-  the localization, and **cannot** be modified. This field only appears for certain localizations.
+  the :guilabel:`CO₂ Emissions`, such as `WLTP`, `Euro 6`, or `EPA`.
 
-.. image:: models/engines.png
-   :alt: A side-by-side comparison of the Engine section of a form, one gasoline, one electric.
+For companies located in Belgium, a :guilabel:`Tax Deduction` percentage is computed from the fuel
+type and CO₂ emissions, and **cannot** be modified. For hybrid fuel types, a :guilabel:`False
+Hybrid` checkbox also appears.
 
 Vendors tab
 -----------
@@ -181,7 +179,7 @@ vendor and create another new vendor.
    Vendors are stored in the **Contacts** application.
 
 .. image:: models/vendor.png
-   :alt: Vendor form to fill out when adding a new vendor.
+   :alt: The Vendors tab of a model form, with one vendor added.
 
 .. _fleet/categories:
 
@@ -194,7 +192,7 @@ category. Model categories are set on the :ref:`vehicle model form <fleet/add-mo
 Odoo does **not** come with any categories preconfigured; all categories **must** be added.
 
 To view any categories currently set up in the database, navigate to :menuselection:`Fleet app -->
-Configuration --> Categories`. All categories are displayed in a list view.
+Configuration --> Models: Categories`. All categories are displayed in a list view.
 
 .. _fleet/new-category:
 
