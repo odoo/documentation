@@ -19,9 +19,9 @@ Click on any :guilabel:`Skill Type` to expand the list and display the individua
 :guilabel:`Skills`. Click on any individual :guilabel:`Skill` to further expand the list and display
 all employees with that specific :guilabel:`Skill`, alphabetically.
 
-Both the :guilabel:`Skill Type` and :guilabel:`Skill` lines display a number after each listed line.
-The number indicates how many employees have the specific :guilabel:`Skill Type` or
-:guilabel:`Skill`.
+Both the :guilabel:`Skill Type` and :guilabel:`Skill` lines display the number of records after each
+listed line, indicating how many employee skills belong to the specific :guilabel:`Skill Type` or
+:guilabel:`Skill`, as well as the average :guilabel:`Level Progress` of these skills.
 
 When fully expanded, each line displays the following information:
 
@@ -37,38 +37,35 @@ When fully expanded, each line displays the following information:
    specific skill, the skill is hidden by default.
 
 .. image:: skills_inventory/skills-inventory.png
-   :alt: The Skills Inventory report expanded to show employees with Python programming skills.
+   :alt: The Skills Inventory report expanded to show employees with English language skills.
+
+.. tip::
+   Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right corner to display the
+   report as a pivot table, with the skills in rows, and the departments and employees in columns.
 
 Use case: Find Spanish-speaking employees
 =========================================
 
-An automobile company is experiencing issues with a subassembly manufactured overseas. It is
-determined that a site visit to the factory is needed to resolve the issue. Since the staff of the
-subassembly company primarily speak Spanish, and the staff of the automobile company primarily
-speak English, management wants to send an employee who speaks Spanish.
+A consulting company has a new client in Mexico, and needs to send a consultant on site. Since the
+staff of the client primarily speak Spanish, management wants to send an employee who speaks
+Spanish.
 
 The *Skills Inventory* report allows for discovering which employee speaks Spanish, and at what
 level, allowing management to make the best decision.
 
 To determine the most fluent Spanish speakers, navigate to :menuselection:`Employees app -->
-Reporting --> Skills Inventory`. Since the manufacturing department is the most qualified to handle
-manufacturing issues, someone from that department is desired. To only view employees from that
-department, click into the search bar, and click :guilabel:`Custom filter...` in the
-:icon:`fa-filter` :guilabel:`Filters` column.
-
-In the *Custom Filter* pop-up window, set the first field to :guilabel:`Department` and the last
-field to :guilabel:`Administration/Manufacturing`, then click :guilabel:`Search`.
-
-.. image:: skills_inventory/cust-filter.png
-   :alt: The custom filter to only show employees in the manufacturing department.
+Reporting --> Skills Inventory`. Since the consultants are part of the *Professional Services*
+department, someone from that department is desired. To only view employees from that department,
+type `Professional Services` in the search bar, then select :guilabel:`Search Department for:
+Professional Services`.
 
 Once the filter is active, expand :guilabel:`Languages` then expand :guilabel:`Spanish`. The
-resulting list only displays employees within the manufacturing department, with Spanish language
-skills.
+resulting list only displays employees within the *Professional Services* department, with Spanish
+language skills.
 
-In this example, it can be determined that both :guilabel:`Samantha Adams` and :guilabel:`Carol
-McArthur` both speak Spanish fluently (a :guilabel:`Level Progress` of :guilabel:`100%`) and are
-good candidates for the manufacturing trip to their subassembly manufacturer.
+In this example, it can be determined that both :guilabel:`Laura Bennett` (a :guilabel:`Level
+Progress` of :guilabel:`100%`) and :guilabel:`Sofia Ramirez` speak Spanish fluently, and are good
+candidates for the trip to the client.
 
 .. image:: skills_inventory/spanish.png
-   :alt: The report displaying employees in the manufacturing department who speak Spanish.
+   :alt: The report displaying employees in the Professional Services department who speak Spanish.

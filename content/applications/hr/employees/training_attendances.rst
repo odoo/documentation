@@ -17,7 +17,9 @@ View training attendances report
 
 To view the *Training Attendances* report, navigate to :menuselection:`Employees app --> Learning
 --> Training Attendances`. The report displays a list of all trainings for all employees, in
-descending chronological order, with the most recent training at the top.
+descending chronological order, with the most recent training at the top. The trainings can be
+filtered by company or department using the left panel, and can also be displayed in a Kanban or a
+calendar view.
 
 Each line of the report displays the following information:
 
@@ -45,9 +47,11 @@ can be done from the :ref:`employee record <employees/training_attendances/emplo
 From the employee record
 ------------------------
 
-To add training from an employee record, open the **Employees** app, click the employee's Kanban
-card, and click the *Resume* tab. On the *Resume* side of the tab, click the :guilabel:`Add` button
-and a *New Resume Line* pop-up window appears. Enter the following information for each entry:
+To add training from an employee record, navigate to :menuselection:`Employees app --> Management`,
+click the employee's Kanban card, and click the *Resume* tab. On the *Resume* side of the tab, click
+the :guilabel:`Add` button next to any resume section (or the :guilabel:`Create Resume Lines` button
+if the employee has no resume lines yet), and a *New Resume Line* pop-up window appears. Enter the
+following information for each entry:
 
 - :guilabel:`Type`: Click :guilabel:`Training` if not already selected.
 - :guilabel:`Title`: Type in the title for the training.
