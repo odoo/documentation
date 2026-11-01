@@ -2,198 +2,157 @@
 Pay runs
 ========
 
-*Pay runs* are used to generate multiple :doc:`payslips <payslips>` at once and process them in a
-group, rather than create and process individual payslips. This method not only helps the payroll
-department pay employees in less time, but it also helps keep payslips organized.
-
-Typically, a company's payroll department :ref:`creates a new pay run <payroll/new-pay-run>` for
-each salary structure, for every pay period (usually weekly, bi-weekly, or monthly). If desired, pay
-runs can be further organized by department, job position, etc.
-
-Once a pay run is made, :ref:`payslips are added to the pay run <payroll/add-payslips>`, then the
-pay run is processed, and employees are paid.
+*Pay runs* are used to generate the :doc:`payslips <payslips>` of many employees at once, for the
+same pay period, and to process them together: compute, validate, and pay. Typically, the payroll
+department creates one pay run per pay period (for example, every month), and per pay structure if
+several are used.
 
 View pay runs
 =============
 
-To view all the pay runs in the database, navigate to :menuselection:`Payroll app --> Payslips -->
-Pay Runs` to display all payslip pay runs that have been created. These payslip pay runs are
-displayed in a list view, grouped by :icon:`oi-group` :guilabel:`Status` (either :guilabel:`Ready`,
-:guilabel:`Done`, or :guilabel:`Paid`), by default.
+To view all pay runs, navigate to :menuselection:`Payroll app --> Payslips --> Pay Runs`. Each pay
+run is displayed as a card, with its name, period, number of employees, :guilabel:`Total Cost`,
+:guilabel:`Net` amount, and status:
 
-Each pay run displays the name, the dates it includes, the number of payslips, and the total
-:guilabel:`employer cost`, :guilabel:`gross`, and :guilabel:`net` amounts for all payslips.
+- :guilabel:`Ready`: The payslips are created, and can be reviewed, computed, and validated.
+- :guilabel:`Done`: All payslips are validated. The employees can be paid.
+- :guilabel:`Paid`: All payslips are paid.
 
 .. image:: pay_runs/pay-runs.png
-   :alt: View displaying all pay runs created.
+   :alt: The Pay Runs view, with pay runs in different statuses.
+
+The button on each card depends on the status of the pay run (:guilabel:`Validate`,
+:guilabel:`Pay`, :guilabel:`Correct`, or :guilabel:`Mark as Unpaid`). Click the
+:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon of a card for more actions, such as
+:guilabel:`Work times` (the worked time of the pay run, by employee and time type),
+:guilabel:`Payroll Journal` (the salary rule lines of all payslips), :guilabel:`Set to Draft`, or
+:guilabel:`Delete`.
+
+.. tip::
+   The :doc:`payroll dashboard <dashboard>` shows a card for the current pay period, with a
+   :guilabel:`Start Pay Run` button, once the pay schedule of the company is configured.
 
 .. _payroll/new-pay-run:
-
-Create a new pay run
-====================
-
-New pay runs can be created from the :ref:`Work Entry <payroll/work-entry-pay-run>`, :ref:`Employee
-Payslips <payroll/payslips-pay-run>`, or :ref:`Pay Runs <payroll/pay-runs-pay-run>` dashboards.
-
-.. _payroll/work-entry-pay-run:
-
-Work entry dashboard
---------------------
-
-To create a pay run from the work entry dashboard, navigate to :menuselection:`Payroll app --> Work
-Entries --> Work Entries`. The current time period is displayed, with the current day highlighted in
-yellow.
-
-All employees appear in a default Gantt view, with all work entries displayed. If necessary,
-navigate to the desired time period.
-
-Once all :ref:`missing work entries are added <payroll/new-work-entry>` and all :ref:`conflicts are
-resolved <payroll/conflicts>`, click the :guilabel:`Generate Pay Run` button. The pay run is created
-for all employees, with a status of :guilabel:`Ready`.
-
-.. image:: pay_runs/work-entries-pay-run.png
-   :alt: The work entries dashboard with the GeneratePay Runs button visible.
-
-.. _payroll/payslips-pay-run:
-
-Employee payslips dashboard
----------------------------
-
-To create a pay run from the payslips dashboard, navigate to :menuselection:`Payroll app -->
-Payslips --> Payslips`. All payslips for all employees are displayed in a default list view, in
-chronological order.
-
+.. _payroll/pay-runs-pay-run:
 .. _payroll/new-pay-run-pop-up:
 
-Click the :guilabel:`Pay Run` button and a :guilabel:`New Pay Run` pop-up window loads. Select the
-:guilabel:`Salary Structure` using the drop-down menu. If no :guilabel:`Salary Structure` is
-selected, the pay run applies to *all* salary structures. Next, select the :guilabel:`Pay Schedule`,
-which is *how often* employees are paid. The default options are :guilabel:`year`,
-:guilabel:`half-year`, :guilabel:`quarter`, :guilabel:`2 months`, :guilabel:`month`,
-:guilabel:`half-month`, :guilabel:`2 weeks`, :guilabel:`week`, or :guilabel:`day`.
+Create a pay run
+================
 
-Last, using the calendar selector, set the first day the pay run covers in the first blank
-:guilabel:`Period` field. The second field is automatically populated based on the selection in the
-:guilabel:`Pay Schedule` field.
+Navigate to :menuselection:`Payroll app --> Payslips --> Pay Runs`, and click :guilabel:`New`. The
+:guilabel:`New Pay Run` pop-up window can also be opened with the :guilabel:`Pay Run` button of the
+:menuselection:`Payroll app --> Payslips --> Payslips` list.
 
-.. example::
-   A company pays its employees every month. To configure the pay run for November, the
-   :guilabel:`Pay Schedule` is set to :guilabel:`month`, and the first :guilabel:`Period` field is
-   set to `Nov 1`. Once entered, the second field is automatically populated with `Nov 30`.
+Configure the following fields:
 
-   .. image:: pay_runs/new-pay-run.png
-      :alt: A monthly pay run configured for November.
+- :guilabel:`Employee Types`: Select the :ref:`employee types <payroll/gen-info>` to include, or
+  leave the field empty to include all employee types.
+- :guilabel:`Pay Structure`: Select the pay structure used to compute the payslips. Only employees
+  whose pay category includes this structure are included.
+- :guilabel:`Period`: The first and last days of the pay period.
 
-When the :guilabel:`New Pay Run` pop-up window is configured, click :guilabel:`Continue`, and the
-pop-up window changes to a :guilabel:`Select Employees` window. All employees who match the
-parameters set in the :guilabel:`New Pay Run` pop-up window appear in the list. Select the desired
-employees to add to the pay run, or click the box next to :guilabel:`Employees` to select *all*
-employees in the list.
+.. image:: pay_runs/new-pay-run.png
+   :alt: The New Pay Run pop-up window.
 
-.. image:: pay_runs/select-employees.png
-   :alt: The pay run employee selection pop-up window.
+Click :guilabel:`Continue`. Before creating the pay run, Odoo checks the employees concerned, and
+displays warnings if something needs to be reviewed first, for example:
 
-Once all desired employees are selected, click :guilabel:`Select`. The pop-up window closes, and the
-pay run appears on the screen.
+- :guilabel:`Employees to Review`: Employees whose data was modified and is not
+  :ref:`reviewed <payroll/contracts/review>` yet, or has an anomaly.
+- :guilabel:`Time Offs to Review`: Time off requests of the period that are not approved yet.
+- :guilabel:`No Time Offs`: No time off at all is recorded for the period, which might mean it was
+  not encoded.
 
-.. _payroll/pay-runs-pay-run:
+Each warning has a button to review the corresponding records. The pay run can be created anyway.
 
-Pay runs dashboard
-------------------
+Odoo then creates the pay run, with one computed payslip for each employee whose contract covers
+the period, and opens the list of its payslips.
 
-To create a pay run from the pay runs dashboard, navigate to :menuselection:`Payroll app -->
-Payslips --> Pay Runs`. Click the :guilabel:`New` button and a :guilabel:`New Pay Run` pop-up window
-loads.
+.. note::
+   The name of the pay run is generated from its period. It can be modified once the pay run is
+   opened, for example to `August 2026 - Hourly workers`.
 
- Follow the same directions as if creating a :ref:`pay run form the payslips dashboard
- <payroll/new-pay-run-pop-up>`.
-
+.. _payroll/payslips-pay-run:
 .. _payroll/add-payslips:
 
-Add a payslips to a pay run
-===========================
+Review the payslips of a pay run
+================================
 
-Once a :ref:`pay run has been created <payroll/new-pay-run>`, payslips are added as part of the pay
-run creation. If needed, additional payslips can be created individually, and added to a pay run
-after it has been created.
+Click a pay run card to open the list of its payslips. Each line displays the employee, the
+worked paid days, the :guilabel:`Total Cost`, the :guilabel:`Basic Wage`, the :guilabel:`Net
+Wage`, the :guilabel:`Status`, and the :guilabel:`Warnings` of the payslip. Click a line to open
+the payslip, and modify it if needed (see :doc:`payslips`).
 
-To add a new payslip, navigate to :menuselection:`Payroll app --> Payslips --> Payslips`. Click the
-:guilabel:`New Off-Cycle` button and a blank :guilabel:`Employee Payslips` form loads.
-:ref:`Configure the payslip form <payroll/payslips/new-payslip>`, and ensure the :guilabel:`Pay Run`
-field is populated.
+.. image:: pay_runs/pay-run-payslips.png
+   :alt: The payslips of a pay run, with their warnings.
 
-Once the form is configured, click :guilabel:`Compute Sheet` to calculate the payslip and add it to
-the selected pay run.
+The following buttons are available at the top of the list:
+
+- :guilabel:`New`: Create a :guilabel:`Payslip` in this pay run, or a new :guilabel:`Pay Run`.
+- :guilabel:`Validate`: Validate all the computed payslips of the pay run.
+- :guilabel:`More`: Access additional actions:
+
+  - :guilabel:`Test Print`: Generate the PDF of the payslips, to check them before validation.
+  - :guilabel:`Work times` and :guilabel:`Payroll Journal`: Open the worked time and the salary
+    rule lines of the pay run.
+  - :guilabel:`Re-compute Payslips`: Recompute all the draft payslips, for example after
+    correcting the worked time or adding salary inputs.
+  - :guilabel:`Add Employees`: Add employees that are missing from the pay run. Odoo lists the
+    employees who match the pay run criteria and do not have a payslip in it yet.
+  - :guilabel:`Delete`: Delete the pay run.
+
+To remove a payslip from the pay run, and process it separately, click the :guilabel:`Off-Cycle`
+button at the end of its line.
 
 .. _payroll/pay-run-process:
 
 Process a pay run
 =================
 
-After a :ref:`pay run has been created <payroll/new-pay-run>`, and :ref:`all required payslips have
-been added <payroll/add-payslips>`, the pay run must then be processed, and employees paid.
-
-Open the desired pay run by navigating to :menuselection:`Payroll app --> Payslips --> Pay Runs`,
-and clicking on the desired pay run.
-
-For a pay run to be processed, it must have a status of :guilabel:`Ready`. That means the pay run
-has been created and payslips have been added, but the payslips have *not* been processed.
-
-Click the :guilabel:`Create Draft Entry` button, then click :guilabel:`OK` in the
-:guilabel:`Confirmation` pop-up window to confirm and create a draft of all the individual payslips
-in the pay run. After this occurs, the pay run status changes to :guilabel:`Done`, and moves to the
-corresponding grouping on the :guilabel:`Pay Runs` dashboard.
-
-.. tip::
-   At any time, the pay run needs to be reverted back to a status of :guilabel:`Ready`, click the
-   :guilabel:`Revert` button. This action does **not** remove any payslips that have already been
-   added to the pay run, instead, the status changes back to :guilabel:`Ready`.
-
-   After any desired changes have been made, click :guilabel:`Create Draft Entry` and the pay run
-   status changes to :guilabel:`Done`.
-
-   It is important to note, that if any payslips in the pay run have a status of :guilabel:`Paid`,
-   the pay run **cannot** revert to a status of :guilabel:`Ready`.
-
-Once the status has changed to :guilabel:`Done`, the payments must be logged in the database. Click
-the :guilabel:`Payment Report` button, and a pop-up window loads, where the payment report details
-are entered.
-
-Using the drop-down menu, select the :guilabel:`Export Format` for the payment report. The universal
-option is :guilabel:`CSV`, while all other available options depend on the installed :doc:`payroll
-localization <payroll_localizations>`.
-
-Next, select the :guilabel:`Payment Date` using the calendar selector. This is the date the
-paychecks are issued.
-
-Some :doc:`payroll localizations <payroll_localizations>` cause a :guilabel:`Bank Journal` field to
-also appear. If visible, select the journal the payslips are logged on, using the drop-down menu.
-
-Once the pop-up window is configured, click the :guilabel:`Generate` button. The :guilabel:`Payment
-Report` button changes to a :icon:`fa-download` :guilabel:`Download (filetype)` button. To save a
-copy of the payment report, click the :icon:`fa-download` :guilabel:`Download (filetype)` button,
-select the location for the file, then click :guilabel:`Save`.
+Once all the payslips are correct, click :guilabel:`Validate`, either in the list of payslips, or
+on the card of the pay run. All the computed payslips are validated, and the pay run status changes
+to :guilabel:`Done`. If the **Accounting** app is installed, the journal entries of the payslips
+are created in draft, unless the :guilabel:`Anonymize Journal Entries` setting is enabled, in which
+case a single entry is created for the whole pay run.
 
 .. note::
-   If the screen is enlarged beyond a certain amount, the :icon:`fa-download` :guilabel:`Download
-   (filetype)` button is hidden from view. In this scenario, click the :icon:`fa-ellipsis-v`
-   :guilabel:`(vertical ellipsis)` icon to view and select the :icon:`fa-download`
-   :guilabel:`Download (filetype)` option.
+   Payroll users who are not payroll officers cannot validate a pay run with warnings or errors.
 
-After the report is created, click the :guilabel:`Mark as paid` button to mark the payslips as paid
-in the database.
+To pay the employees, click :guilabel:`Pay` on the card of the pay run. In the :guilabel:`Pay`
+pop-up window, configure the following fields:
+
+- :guilabel:`Mode`: Select :guilabel:`Manually` if the payment is made outside of Odoo, or a file
+  format to generate a payment file for the bank: :guilabel:`CSV`, or a format added by the
+  localization or by the **Payroll SEPA** setting (such as :guilabel:`NACHA` in the United States,
+  or :guilabel:`SEPA`).
+- :guilabel:`Payment Date`: The date the payment is made.
+- :guilabel:`Include Unpaid`: Tick this checkbox to also include other validated, unpaid payslips of
+  the employees in the payment.
+
+Depending on the localization, additional fields can appear, such as the :guilabel:`Bank Journal`
+used for the payment.
+
+.. image:: pay_runs/pay.png
+   :alt: The Pay pop-up window of a pay run.
+
+Click :guilabel:`Download` to download the payment file, and upload it to the bank. Once the
+payment is made, click :guilabel:`Mark as Paid`: the payslips and the pay run status change to
+:guilabel:`Paid`. The payment file remains available on the pay run card.
 
 .. tip::
-   Odoo automatically creates the name of the pay run according to the various selections made when
-   creating the pay run (salary structure, pay schedule, etc). In some situations, a company may
-   want to rename the pay runs, for better organization and a clearer understanding of what pay
-   slips are part of each pay run.
+   - To undo the payment, click :guilabel:`Mark as Unpaid` on the pay run card.
+   - To modify the payslips of a :guilabel:`Done` pay run, click the :icon:`fa-ellipsis-v`
+     :guilabel:`(vertical ellipsis)` icon of the card, then :guilabel:`Set to Draft`. This is not
+     possible once some payslips are paid.
 
-   For example, a company pays its employees monthly, for both hourly and salaried employees.
+Correct a pay run
+=================
 
-   The names for their four August 2025 pay runs are:
+If the payslips of a :guilabel:`Done` or :guilabel:`Paid` pay run are wrong, click
+:guilabel:`Correct` on the pay run card. Odoo creates a new pay run, named after the original one
+followed by `(Correction)`, which contains, for each employee, a validated refund of the original
+payslip and a new draft payslip computed with the current data. Process this correction pay run
+like any other pay run.
 
-   - `Aug 1-14 2025 - Hourly`
-   - `Aug 1-14 2025 - Salary`
-   - `Aug 15-31 2025 - Hourly`
-   - `Aug 15-31 2025 - Salary`
+To correct only some payslips, use the :guilabel:`Correct` button of the payslips instead (see
+:ref:`correct a payslip <payroll/payslips/correct>`).

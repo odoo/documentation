@@ -2,216 +2,141 @@
 Salaries
 ========
 
-In Odoo, salaries are calculated and determined by six factors: salary :ref:`structure types
-<payroll/salaries/structure-types>`, salary :ref:`structures <payroll/salaries/structures>`,
-:doc:`rules <salary_rules>`, :ref:`rule parameters <payroll/salary_rules/rule-parameters>`,
-:ref:`rule categories <payroll/salary_rules/rule-categories>`, and :ref:`salary input types
-<payroll/salaries/salary-input-types>`. Together, these determine how each employee's pay is
-calculated.
+In Odoo, the pay of each employee is computed from the following elements:
 
-Each *structure type* contains one or more *structures* within it. Each *structure* contains a set
-of *rules*, and every *rule* uses *parameters* and *categories* to define how specific amounts are
-calculated. Additional salary inputs, such as bonuses or deductions, can also be included to adjust
-the final salary.
+- A :ref:`structure type <payroll/salaries/structure-types>`, also called *pay category*, which is
+  set on the employee record, and defines the default pay frequency, working schedule, and pay
+  structure.
+- :ref:`Pay structures <payroll/salaries/structures>`, which group the salary rules used to
+  compute a type of payslip (for example, the regular monthly pay, or an end-of-year bonus).
+- :doc:`Salary rules <salary_rules>`, which compute each line of the payslip, using :ref:`rule
+  parameters <payroll/salary_rules/rule-parameters>` and :ref:`rule categories
+  <payroll/salary_rules/rule-categories>`.
+- :ref:`Salary inputs <payroll/salaries/salary-input-types>`, the variable amounts entered on the
+  employee record or on the payslip, such as commissions or deductions.
 
-When payslips are calculated, Odoo calculates the employee's worked time from their :doc:`work
-entries <work_entries>`, then applies the relevant structure, rules, and parameters from the
-employee's assigned structure type to determine their total pay.
+When a payslip is computed, Odoo calculates the employee's :doc:`worked time <work_entries>`, then
+applies each salary rule of the pay structure, in sequence, to determine the net pay.
+
+.. note::
+   The :doc:`payroll localization <payroll_localizations>` installs the structure types, pay
+   structures, and salary rules required by the legislation of the country. Use them, rather than
+   creating new ones, whenever possible.
 
 .. _payroll/salaries/structure-types:
 
 Structure types
 ===============
 
-In Odoo, a *structure type* groups related salary structures. When a contract specifies a structure
-type, **only** the structures within that type are used to calculate the employee's pay. Each
-structure type houses individual structures within them, each containing a set of rules for
-processing a timesheet entry.
-
-Structure types define key aspects of payroll configuration, including how often employees are paid,
-their working hours, the default salary structure, and whether wages are fixed (salary-based) or
-variable (hourly-based).
+A *structure type* (displayed as :guilabel:`Pay Category` on the employee record) defines the main
+payroll characteristics of a group of employees: how often they are paid, their default working
+schedule, whether their wage is fixed or hourly, and which pay structure is used by default to
+compute their payslips.
 
 .. example::
-   A structure type called `Employee` contains two different structures within it: a `Regular Pay`
-   structure which includes all the separate rules for processing regular pay, and an `End of Year
-   Bonus` structure, which includes the rules **only** for the end of year bonus. Both belong to the
-   same `Employee` structure type.
+   A structure type called `Employee` uses a `Regular Pay` structure for the monthly payslips. An
+   `End of Year Bonus` structure can be added to the same structure type, for the bonus payslips.
 
-View existing *structure types* by navigating to :menuselection:`Payroll app --> Configuration -->
-Structure Types`.
-
-Two default structure types are preconfigured in Odoo: :guilabel:`Employee` and :guilabel:`Worker`.
-
-Typically, :guilabel:`Employee` is used for salaried employees, which is why the :guilabel:`Wage
-Type` is set to :guilabel:`Fixed Wage`. :guilabel:`Worker` is typically used for employees paid by
-the hour, so the wage type is set to :guilabel:`Hourly Wage`.
-
-.. note::
-   If using a country-specific :doc:`payroll localization <payroll_localizations>`, it is
-   recommended to use the structure in the corresponding country localization document.
+To view the structure types, navigate to :menuselection:`Payroll app --> Configuration --> Salary
+--> Structure Types`. The list shows the structure types available for the country of the current
+company, such as :guilabel:`Worker` (generic, for employees paid by the hour) and the structure
+types of the installed localization.
 
 .. image:: salaries/structure-type.png
-   :alt: List of all currently configured structure types available to use.
+   :alt: The list of structure types.
 
 .. _payroll/salaries/new-structure-type:
 
-New structure type
-------------------
+Create a structure type
+-----------------------
 
-If the default structure types do not meet the company's needs, go to :menuselection:`Payroll app
---> Configuration --> Structure Types` and click :guilabel:`New` to create a custom structure type.
+Click :guilabel:`New`, and configure the following fields:
 
-.. warning::
-   When creating a new salary structure type, ensure all local and national laws are accounted for.
-   Confirm with the accounting department when configuring payroll structures, to ensure all
-   requirements are met.
-
-Proceed to enter the following information in the fields:
-
-- :guilabel:`Structure Type`: Enter the name for the new structure type, such as `Employee` or
-  `Worker`.
-- :guilabel:`Country`: Select the country that the new structure type applies to from the drop-down
-  menu.
-- :guilabel:`Wage Type`: Select the wage type for the structure:
-
-  - :guilabel:`Fixed Wage`: For salaried employees who receive the same wage every pay period.
-  - :guilabel:`Hourly Wage`: For employees paid based on hours worked during a pay period.
-
-- :guilabel:`Scheduled Pay`: Select the typical pay schedule for the new structure type using the
-  drop-down menu. This indicates how often this specific type of structure is paid out.
-- :guilabel:`Working Hours`: Select the working hours for the new structure type using the drop-down
-  menu. All available working hours for the currently selected company appear in the drop-down menu.
-  The default working hours are the :guilabel:`Standard 40 hours/week` option. If the needed working
-  hours do not appear in the list, a :ref:`new set of working hours can be created
-  <payroll/salaries/new-working-hours>`.
-- :guilabel:`Pay Structure`: Select the pay structure that falls within the new structure type using
-  the drop-down menu. This is used as the default option when generating payslips.
-- :guilabel:`Work Entry Type`: Select the work entry type used to create all work entries for the
-  employee.
+- :guilabel:`Structure Type`: The name of the structure type, such as `Employee` or `Worker`.
+- :guilabel:`Country`: The country the structure type applies to. Leave it empty for all countries.
+- :guilabel:`Wage Type`: Select :guilabel:`Fixed Wage` for salaried employees, or
+  :guilabel:`Hourly Wage` for employees paid according to the hours they work.
+- :guilabel:`Scheduled Pay`: The default pay frequency, such as :guilabel:`month` or
+  :guilabel:`week`.
+- :guilabel:`Working Hours`: The default :doc:`working schedule <working_schedules>` of the
+  employees.
+- :guilabel:`Pay Structure`: The pay structure used by default to compute the regular payslips.
+- :guilabel:`Time Type`: The :ref:`time type <payroll/work-entry-types>` used for the regular
+  working time of the employees, such as :guilabel:`Work`.
 
 .. image:: salaries/new-structure.png
-   :alt: New structure type form to fill out when creating a new structure type.
+   :alt: The form of a structure type.
+
+.. warning::
+   When creating a new structure type, ensure all local and national laws are accounted for.
+   Confirm the configuration with the accounting department.
 
 .. _payroll/salaries/new-working-hours:
 
-New working hours
------------------
-
-To make new working hours, type the name for the new working hours in the :guilabel:`Working Hours`
-field on the new structure type form, then click :guilabel:`Create and edit`. A *Create Working
-Hours* pop-up window loads. The form has two sections: a general information section, and a *Working
-Hours* tab listing all the individual working hours by day and time. When the form is completed,
-click :guilabel:`Save`.
-
-- :guilabel:`Name`: Type in the name for the new working hours. This should be descriptive and clear
-  to understand, such as `Standard 20 Hours/Week`.
-- :guilabel:`Schedule Type`: Select whether the hours are :guilabel:`Flexible` or :guilabel:`Fully
-  Fixed` by clicking the corresponding radio button. Selecting :guilabel:`Flexible` hides the
-  *Working Hours* tab and some other fields in the general information section.
-- :guilabel:`Define Amount of Hours per day`: Enable this option to base the schedule on a set
-  amount of expected hours by day, instead of set start and end times for each day. When this option
-  is modified, a *Confirmation* pop-up window appears. Click :guilabel:`Confirm` on the pop-up to
-  make the change.
-- :guilabel:`Full Time Equivalent`: The number of hours per week an employee needs to work to be
-  considered a full-time employee. Typically, this is approximately 40 hours, and this number
-  affects what types of benefits an employee can receive, based on their employment status
-  (full-time vs. part-time). This field is **not** able to be modified.
-- :guilabel:`Work Time Rate`: This percentage is auto-generated based on the configured times in the
-  *Working Hours* tab, compared to the :guilabel:`Full Time Equivalent`. This number should be
-  between `0.00%` and `100%`, so if the percentage is above `100%`, it is an indication that the
-  working times may need adjustment.
-- :guilabel:`Company`: Select the company that can use the new default working hours using the
-  drop-down menu. Leave this field blank if the hours are available for all companies.
-- :guilabel:`Timezone`: Select the time zone to be used for the new working hours using the
-  drop-down menu.
-- :guilabel:`2 Week's Calendar`: Enable this checkbox to switch from a one-week calendar to a
-  two-week calendar. When this option is modified, a *Confirmation* pop-up window appears. Click
-  :guilabel:`Switch` on the pop-up to make the change. When enabled, the presented tabs change from
-  a single *Working Hours* tab to two tabs: *Week 1 Working Hours* and *Week 2 Working Hours*.
-
-  .. important::
-     Switching the calendar between either method removes **all** current work entries.
-
-- *Working Hours* tab: This tab is where each day's specific working hours are listed, including
-  breaks. When a new working schedule is created, the *Working Hours* tab is pre-populated with a
-  default 40-hour week, with each day divided into three timed sections.
-
-  Each day includes a morning shift (8:00-12:00), a lunch break (12:00-13:00), and an afternoon
-  shift (13:00-17:00), configured using a 24-hour time format.
-
-  The average daily working hours are automatically calculated based on the schedule and appear in
-  the :guilabel:`Avg` field, along with the :guilabel:`Total` hours for the week.
-
-  To adjust any of these entries, click the desired field and modify the information using the
-  drop-down menus or type the information in directly.
-
-  Ensure the :guilabel:`Work Entry Type` field is configured for each line. This ensures the
-  **Payroll** app properly calculates all work entries.
-
-  .. note::
-     Working hours are company-specific, and cannot be shared between companies.
-
-  .. tip::
-     If the :guilabel:`2 Week's Calendar` option is enabled, ensure the various working hours for
-     both tabs (*Week 1 Working Hours* and *Week 2 Working Hours*) are correctly configured.
-
-.. image:: salaries/new-working-schedule.png
-   :alt: A new working schedule for interns that work a fifteen-hour week.
+.. tip::
+   To create a new working schedule, refer to the :doc:`working schedules <working_schedules>`
+   documentation.
 
 .. _payroll/salaries/structures:
 
-Structures
-==========
+Pay structures
+==============
 
-*Salary structures* are the different situations in which an employee could be paid within a
-specific *structure*, and are specifically defined by various rules.
+A *pay structure* is the set of salary rules used to compute a specific type of payslip. A structure
+type can have several pay structures, for example one for the regular pay, and others for bonuses
+or termination payslips.
 
-The number of structures a company needs for each structure type depends on how many different ways
-employees are paid, and how their pay is calculated. A common example of an additional structure is
-a `Bonus`.
+To view the pay structures, navigate to :menuselection:`Payroll app --> Configuration --> Salary
+--> Structures`. The structures are grouped by structure type.
 
-To view all the various structures for each structure type, go to :menuselection:`Payroll app -->
-Configuration --> Structures`.
+Open a pay structure to view and configure the following fields:
 
-Each :ref:`structure type <payroll/salaries/structure-types>` lists the various structures
-associated with it. Each structure contains a set of rules that define it.
+- :guilabel:`Employee Types`: The :ref:`employee types <payroll/gen-info>` the structure applies to.
+  Leave it empty for all employee types.
+- :guilabel:`Type`: The structure type the structure belongs to.
+- :guilabel:`Use Worked Day Lines`: Tick this checkbox to compute and display the worked time on
+  the payslips. Untick it for structures that do not depend on the worked time, such as a bonus.
+- :guilabel:`Country`: The country the structure applies to.
+- :guilabel:`Year to Date Computation`: Tick this checkbox to add a column with the amounts
+  accumulated since the beginning of the year (see the :guilabel:`YTD Reset Date` setting).
+- :guilabel:`Template`: The report used to print the payslips.
+- :guilabel:`Payslip Name`: The name given to the payslips of this structure, such as `End of the
+  year bonus`. If empty, `Salary Slip` is used.
+- :guilabel:`Hide Basic On Pdf`: Tick this checkbox to hide the basic salary on the printed
+  payslip.
+- :guilabel:`Salary Journal`: If the **Accounting** app is installed, the journal in which the
+  journal entries of the payslips are created.
 
-Odoo comes with two salary structures preconfigured: :guilabel:`Regular Pay`, housed within the
-:guilabel:`Employee` structure type, and :guilabel:`Worker Pay`, housed within the
-:guilabel:`Worker` salary structure type.
-
-Click on a structure to view its :guilabel:`Salary Rules`. These rules define how the payslip will
-be computed for the employee.
-
-.. note::
-   After installing a :doc:`payroll localization <payroll_localizations>`, relevant structures are
-   installed and appear in this list.
+The *Salary Rules* tab lists the :doc:`salary rules <salary_rules>` of the structure.
 
 .. image:: salaries/structure-regular-pay-rules.png
-   :alt: Salary structure details for Regular Pay, listing all the specific Salary Rules.
+   :alt: A pay structure, with its salary rules.
 
 .. _payroll/salaries/salary-input-types:
 
-Salary input types
-==================
+Salary inputs
+=============
 
-When creating payslips, it is sometimes necessary to add other entries for specific circumstances,
-like tips, commissions, expenses, or deductions. These other inputs can be found by navigating to
-:menuselection:`Payroll app --> Configuration --> Salary Input Types`. All universal and
-localization-specific salary input types appear in the list.
+Some amounts cannot be computed from the contract or the worked time, and must be entered for each
+employee or each payslip, such as commissions, tips, bonuses, or deductions. In Odoo, these
+*salary inputs* are salary rules configured to accept an input value: the value is entered by the
+user, then the salary rule computes its effect on the pay.
 
-.. image:: salaries/salary-input.png
-   :alt: A list of salary input types for payroll that can be selected when creating a new entry for
-         a payslip.
+On the salary rule, the :guilabel:`Inputtable on` field defines where the value is entered:
 
-If a new input type is needed that does not appear on the list, click the :guilabel:`New` button to
-create a new salary input type. Enter the :guilabel:`Description`, the :guilabel:`Code`, and select
-which structure it applies to in the :guilabel:`Availability in Structure` field.
+- :guilabel:`Employee`: The input appears as a field in the *Payroll* tab of the employee record.
+  The value applies to every payslip of the employee, until it is modified. For example, the tax
+  information of a localization is often entered this way.
+- :guilabel:`Payslip`: The input can be added on a payslip with the :guilabel:`Add Inputs` button,
+  or through a :doc:`payslip adjustment <salary_attachments>`.
 
-Enable the :guilabel:`Available in adjustments` checkbox if the input should be a salary adjustment.
+The inputs of a pay structure are grouped in *sections* on the employee record. Refer to the
+:doc:`salary rules <salary_rules>` documentation to configure them.
 
-.. important::
-   The :guilabel:`Code` is used in the salary rules to compute payslips. If the
-   :guilabel:`Availability in Structure` field is left blank, it indicates that the new input type
-   is available for all payslips and is not exclusive to a specific structure.
+.. note::
+   In previous versions of Odoo, salary inputs were configured as separate *Other Input Types*. They
+   are now part of the salary rules.
+
+.. seealso::
+   - :doc:`salary_rules`
+   - :doc:`salary_attachments`

@@ -2,211 +2,192 @@
 Contracts
 =========
 
-Every employee in Odoo is required to have a running contract in order to be paid. A contract
-outlines the terms of an employee's position, compensation, working hours, and any other relevant
-terms.
+In Odoo, an employee's contract is not a separate document: the contractual terms (contract dates,
+employee type, wage, pay category, working hours, etc.) are stored directly on the employee record,
+in the *Payroll* tab. To be included in payroll, an employee **must** have a contract start date
+covering the pay period.
 
-Contracts are created and managed in the *Payroll* tab of an :ref:`employee record
-<employees/payroll>`. Employee records can be found by navigating to :menuselection:`Payroll app -->
-Employees --> Employees`, or on the main dashboard of the **Employees** app.
+Each change to these terms is kept in a dated *version* of the employee record. The **Payroll** app
+uses the version that is valid on each day of a pay period to compute the payslip, so a salary
+change in the middle of a month, for example, is correctly prorated.
 
-.. important::
-   Contract documents (PDFs) are uploaded and organized using the **Documents** application, and are
-   signed using the **Sign** application. Ensure these applications are installed to send and sign
-   contracts. Please refer to the :doc:`../../productivity/documents` and
-   :doc:`../../productivity/sign` documentation for more information.
+Employee records can be found by navigating to :menuselection:`Payroll app --> Employees -->
+Employees`, or on the main dashboard of the **Employees** app.
+
+.. note::
+   The *Payroll* tab is visible to **Payroll** users only. Depending on the installed
+   :doc:`payroll localization <payroll_localizations>`, additional sections and fields appear in
+   this tab, such as tax or benefit information. The tab also displays the employee-level
+   :ref:`salary inputs <payroll/salaries/salary-input-types>` of the employee's pay structure.
 
 .. _payroll/new-contract:
 
-Create a contract
-=================
+Set up an employee's contract
+=============================
 
-Contracts are created by uploading a :ref:`contract template <payroll/contract-template>` and making
-any necessary modifications for the specific employee. Contract templates eliminate the need to
-configure new contracts every time an employee is hired.
+Open the employee record, then click the *Payroll* tab. To prefill the fields with standard
+values, click :guilabel:`Load a Template` in the *Contract Overview* section, select a
+:ref:`contract template <payroll/contract-template>` in the pop-up that appears, then click
+:guilabel:`Load
+Template`. The fields of the template are copied to the employee record, and can then be adjusted
+for the specific employee.
 
-Contract templates are created through the configuration menu of the **Payroll** or **Employees**
-apps and stored in the **Documents** app. If no contract templates exist, or if a new contract
-template is needed, :ref:`create a new template <payroll/contract-template>`.
-
-Having multiple contract templates allows for faster contract creation for commonly filled
-employment positions, such as full time, part time, seasonal, etc.
-
-To create a new contract from a template, open the employee record and click into the *Payroll* tab.
-Click :guilabel:`Load a Template`, and a *Contract Template Load* pop-up window appears.
-
-Using the drop-down menu, select the contract template for the employee, then click
-:guilabel:`Load`. The various fields from the template populate the corresponding fields in the
-*Payroll* tab, and the updates are recorded in the chatter. Additional sections may appear,
-depending on the contract template. Then, make any required modifications to the fields in the
-various sections of the *Payroll* tab.
-
-.. important::
-   To access contract templates, the **Salary Configurator** (`hr_contract_salary`) module **must**
-   be :ref:`installed <general/install>`. Depending on the installed :doc:`payroll localization
-   <payroll_localizations>`, different sections and fields may appear in the *Payroll* tab.
+.. image:: contracts/payroll-tab.png
+   :alt: The Contract Overview and Schedule sections of the Payroll tab of an employee record.
 
 .. _payroll/gen-info:
 
 Contract overview section
 -------------------------
 
-The only field *not* modified after loading a :ref:`contract template <payroll/contract-template>`
-is the :guilabel:`Contract` field. This field specifies the start date of the contract.
+- :guilabel:`Employee Type`: Select the type of employment, such as :guilabel:`Employee`,
+  :guilabel:`Student`, or :guilabel:`Intern`. Employee types are managed in
+  :menuselection:`Payroll app --> Configuration --> Contracts --> Employee Types`. They are used to
+  filter employees when :ref:`creating a pay run <payroll/new-pay-run>`, and some localizations
+  rely on them (for example, for social security declarations).
+- :guilabel:`Contract`: Enter the start date of the contract in the first field. If the contract
+  ends on a known date, enter it in the :guilabel:`to` field; otherwise, leave it empty
+  (:guilabel:`Indefinite`). Without a start date, the employee is considered :guilabel:`Not
+  Employed`, and is not included in pay runs.
 
-Click into the :guilabel:`Contract` field to reveal a calendar selector. Click the start date for
-the contract. Once a date is selected, a :guilabel:`to` field appears next to the start date. By
-default, :guilabel:`Indefinite` is displayed in gray, indicating the contract does not expire. If
-there is a set end date for the contract, click into the :guilabel:`Indefinite` field, and click on
-the contract end date to select it.
-
-.. note::
-   This field may remain blank if a start date is not known. Once the contract is signed, that date
-   is set as the :guilabel:`Start Date`.
-
-.. _payroll/contract-template:
-
-Create contract templates
-=========================
-
-To create a new contract template, navigate to :menuselection:`Payroll app --> Configuration -->
-Templates`, or :menuselection:`Employees app --> Configuration --> Contract Templates`. Both methods
-open the *Contract Templates* dashboard.
-
-Click the :guilabel:`New` button, and a blank contract template form loads. Configure the following
-fields in the various sections of the form:
-
-General information section
----------------------------
-
-- :guilabel:`Template Name`: Enter a brief descriptive name for the template. This should be clear
-  and easily understood, as this name appears in the **Recruitment** application, as well.
-- :guilabel:`Job`: Select the :doc:`job position <../recruitment/new_job>` the contract template
-  applies to from the drop-down menu. If blank, the template applies to all job positions.
-- :guilabel:`Department`: Select the department the contract template applies to from the drop-down
-  menu. If blank, the template applies to all departments.
-- :guilabel:`HR Responsible`: Select the employee responsible for validating contracts, using this
-  template, using the drop-down menu.
-
-Contract overview section
--------------------------
-
-- :guilabel:`Wage Type`: Select either :guilabel:`Fixed Wage` or :guilabel:`Hourly Wage` from the
-  drop-down menu. Select :guilabel:`Fixed Wage` for salaried employees, and select :guilabel:`Hourly
-  Wage` for employees who are paid based on their logged work hours.
-- :guilabel:`Pay Schedule`: Using the drop-down menu, select how often the employee is paid. The
-  default options are: :guilabel:`year`, :guilabel:`half-year`, :guilabel:`quarter`, :guilabel:`2
-  months`, :guilabel:`month`, :guilabel:`half-month`, :guilabel:`2 weeks`, :guilabel:`week`, or
-  :guilabel:`day`.
-- :guilabel:`Wage`: Enter the gross wage. The time period presented in this field  reflects what is
-  selected for the :guilabel:`Pay Schedule` field.
-
-  .. tip::
-     It is recommended to populate the :guilabel:`Yearly Cost (Real)` field *first*, since that
-     value is used to automatically calculate the :guilabel:`Wage`. If the :guilabel:`Yearly Cost
-     (Real)` is updated, the :guilabel:`Wage` field updates as well.
-
-- :guilabel:`Contract Type`: Using the drop-down menu, select one of the 18 default types of
-  contracts. This list is the same as the *employment type*.
-- :guilabel:`Pay Category`: Select one of the default pay categories using the drop-down menu. The
-  default pay categories are :guilabel:`Employee` or :guilabel:`Worker`, which are pulled from the
-  configured *salary structures* in the **Payroll** app. A :ref:`new pay category
-  <payroll/salaries/new-structure-type>` can be created, if needed.
-
-  .. note::
-     In previous versions of Odoo, the :guilabel:`Pay category` was called :guilabel:`Salary
-     Structure Types`.
-
-     To view, modify, or add pay categories, navigate to :menuselection:`Payroll app -->
-     Configuration --> Structure Types`.
-
-     The :guilabel:`Pay Category` drop-down menu displays all the available working schedules. To
-     modify or add to this list, navigate to :menuselection:`Payroll app --> Configuration -->
-     Working Schedules`. Click :guilabel:`New`, and create a new working schedule, or click on an
-     existing working schedule and make edits.
-
-Employer costs section
-----------------------
-
-- :guilabel:`Yearly Cost`: Enter the total yearly cost the employee costs the employer. When this
-  value is entered, the :guilabel:`Monthly Cost` and :guilabel:`Wage` fields are automatically
-  updated.
-- :guilabel:`Monthly Cost`: This field is **not** editable. The value is automatically populated
-  after the :guilabel:`Yearly Cost (Real)` is entered.
-
-.. important::
-   The :guilabel:`Wage`, :guilabel:`Yearly Cost`, and :guilabel:`Monthly Cost` fields are all
-   linked. If any of these fields are updated, the other two fields automatically update to reflect
-   the change. It is best practice to check these three fields if any modifications have been made,
-   to ensure they are accurate.
-
-- :guilabel:`Wage on Signature`: Enter the monthly wage in the field.
+  When a contract has an end date, a :guilabel:`New Contract` button appears next to it. Click it,
+  then select the start date of the new contract, to rehire the employee under a new contract.
+- :guilabel:`Wage Type`: Select :guilabel:`Fixed Wage` for salaried employees, or
+  :guilabel:`Hourly Wage` for employees paid according to the hours they work. When
+  :guilabel:`Hourly Wage` is selected, an :guilabel:`Hourly Wage` field appears.
+- :guilabel:`Wage`: Enter the gross wage, then select the pay frequency in the field next to it
+  (:guilabel:`month`, :guilabel:`week`, :guilabel:`2 weeks`, etc.). The frequency is the employee's
+  pay schedule, and is used to define the period of their payslips.
+- :guilabel:`Employer Cost`: The total yearly cost of the employee for the company. This field and
+  the :guilabel:`Wage` field are linked: updating one updates the other, according to the benefits
+  configured for the employee.
+- :guilabel:`Pay Category`: Select the :ref:`structure type <payroll/salaries/structure-types>` of
+  the employee, such as :guilabel:`Employee` or :guilabel:`Worker`. The pay category determines the
+  pay structure used to compute the employee's payslips. Employees without a pay category are
+  excluded from pay runs.
 
 Schedule section
 ----------------
 
-Configure the following two fields in this section, to configure when the employee is expected to
-work:
+- :guilabel:`Working Hours`: Select the :doc:`working schedule <working_schedules>` of the
+  employee. The working schedule defines the expected working time, which is the basis for the
+  :doc:`worked time <work_entries>` on the payslips.
+- :guilabel:`Attendance Based`: Tick this checkbox if the employee's worked time must come from
+  their check-ins and check-outs in the **Attendances** app instead of their working schedule. This
+  field only appears if the **Attendances** app is installed.
 
-.. _payroll/work-entry-source:
+.. _payroll/contracts/versions:
 
-- :guilabel:`Work Entry Source`: Using the drop-down menu, select how the :doc:`work entries
-  <work_entries>` are generated. This field is **required**. The options are:
+Versions of the employee record
+===============================
 
-  - :guilabel:`Working Schedule`: Work entries are generated based on the selected
-    :guilabel:`Working Schedule`.
-  - :guilabel:`Attendances`: Work entries are generated based on the employee's check-in records in
-    the **Attendances** app. (This requires the **Attendances** app to be installed).
-  - :guilabel:`Planning`: Work entries are generated based on the planned schedule for the employee
-    from the **Planning** app. (This requires the **Planning** app to be installed).
+The date displayed in the top-right corner of the employee record is the *effective date* of the
+version currently displayed. Click it to display the timeline of all versions, and to open a
+previous or future version.
 
-- :guilabel:`Working Hours`: Select one of the available :guilabel:`Working Hours` the employee is
-  expected to work, using the drop-down menu. The selected working hours determine how :doc:`work
-  entries <work_entries>` are generated, which determines the employees schedule and compensation.
-  If this field is left blank, the employee can work as many or as few hours as desired each week,
-  with no restrictions. The default options are :guilabel:`Standard 40 hours/week`, and
-  :guilabel:`Appointment Resource Default Calendar`
+To record a change that takes effect on a specific date, such as a raise or a new working schedule,
+click the :icon:`fa-plus` :guilabel:`(plus)` button next to the date, select the effective date of
+the change, then modify the fields. The previous versions remain unchanged.
 
-  .. note::
-     In previous versions of Odoo, :guilabel:`Working Hours` were called :guilabel:`Working
-     Schedules`.
+When a field used by payroll is modified on a version that is already covered by validated or paid
+payslips, Odoo asks :guilabel:`What is the effective date?` before saving:
 
-Benefits and deductions
------------------------
+- The first option, when available, is the start of the first period that has not been paid yet.
+  Selecting it creates a new version from that date, and the existing payslips stay correct.
+- :guilabel:`(current version)` modifies the current version, from its effective date. The
+  validated payslips covering this version then need to be corrected: they are flagged on the
+  :doc:`payroll dashboard <dashboard>` and on the payslips themselves.
+- :guilabel:`Specific Date` creates a new version starting on the selected date.
 
-Depending on the :doc:`payroll localization <payroll_localizations>` for the company, the remaining
-sections either vary, or may not appear at all. For example, some entries may pertain to retirement
-accounts, health insurance benefits, and commuter benefits.
+Click :guilabel:`Apply` to confirm, or :guilabel:`Discard` to cancel the change.
 
-Enter the monetary amounts or percentages to specify how much of the employee's salary goes to the
-various benefits and deductions.
+.. image:: contracts/effective-date.png
+   :alt: The pop-up window asking for the effective date of a change on an employee record.
 
-Signatories tab
----------------
-
-This tab outlines which contract template to use when creating a new contract for an employee, and
-which to use when updating an existing contract. This section also outlines which signatures are
-required.  Configure the following fields:
-
-- New Contract :guilabel:`PDF Template`: Select the default PDF that a new employee has to sign to
-  accept an offer.
-- Contract Update :guilabel:`PDF Template`: Select the default PDF that a current employee has to
-  sign to update their contract.
-
-Once a PDF contract is uploaded, the following fields appear:
-
-- :guilabel:`Contract Role`: The label of the signature field to be signed. This field is configured
-  on the PDF itself, through the **Sign** app, and cannot be modified.
-- :guilabel:`Signatory`: Using the drop-down menu, select the person who must sign for the
-  :guilabel:`Contract Role`. The default options are:
-
-  - :guilabel:`Employee`: Select this for the employee to sign the field.
-  - :guilabel:`HR Responsible`: Select this to specify the user listed as the :guilabel:`HR
-    Responsible` on the job position.
-  - :guilabel:`Specific Partner`: Select this to have a specific individual sign the contract. When
-    selected, the :guilabel:`Partner` field becomes active. Using the drop-down menu, select the
-    specific user who must sign the contract in the :guilabel:`Partner` field.
+.. note::
+   - A version linked to a payslip cannot be deleted, and a version with validated payslips cannot
+     be archived.
+   - To view all versions of all employees in a list, enable :ref:`developer mode
+     <developer-mode>`, then navigate to :menuselection:`Payroll app --> Employees --> Employee
+     Records`.
 
 .. seealso::
-   - :doc:`../../productivity/documents`
+   :ref:`Correct a payslip <payroll/payslips/correct>`
+
+.. _payroll/contracts/review:
+
+Review employee changes
+-----------------------
+
+When a user who is not a payroll officer creates an employee, or modifies one of their main
+payroll fields (wage, contract dates, pay category, etc.), the employee is marked as :guilabel:`To
+Review`. The review status is displayed in the top-right corner of the employee record.
+
+Payroll officers check the change, then click the status to set it to :guilabel:`Reviewed`, or to
+:guilabel:`Anomaly` if something must be fixed. Employees to review and employees with anomalies
+are listed on the :doc:`payroll dashboard <dashboard>`, and in the warnings displayed when
+:ref:`creating a pay run <payroll/new-pay-run>`.
+
+.. _payroll/contracts/salary-increase:
+
+Increase salaries
+=================
+
+To increase the wage of one or several employees at once, navigate to :menuselection:`Payroll app
+--> Employees --> Employees`, select the employees in the list view, then click :icon:`fa-cog`
+:guilabel:`Actions` and select :guilabel:`Salary Increase`. The action is also available in the
+:icon:`fa-cog` :guilabel:`(Actions)` menu of an employee record.
+
+In the :guilabel:`Salary Increase` pop-up window, configure the following fields:
+
+- :guilabel:`Date of Salary Increase`: The date from which the new wage applies.
+- :guilabel:`Increase Rate`: The percentage of the increase.
+- :guilabel:`Applies on`: Select :guilabel:`Full Wage` to apply the rate on the whole wage, or
+  :guilabel:`Capped Wage` to apply it on the wage up to the amount entered next to it.
+- :guilabel:`Extra Amount`: A fixed amount added to the wage, in addition to the rate.
+
+Click :guilabel:`Confirm`. Odoo creates a new version of each employee record on the selected date,
+with the increased wage, and logs the increase in the chatter. Versions after that date are
+increased as well.
+
+.. image:: contracts/salary-increase.png
+   :alt: The Salary Increase pop-up window.
+
+If the increase date is in the past and payslips have already been validated after that date, Odoo
+proposes to :ref:`correct those payslips <payroll/payslips/correct>`.
+
+.. _payroll/contract-template:
+
+Contract templates
+==================
+
+Contract templates store standard contractual terms, such as the wage, pay category, and working
+schedule of a job position. They are loaded on employee records with the :guilabel:`Load a
+Template` button, and are also used to create job offers with the **Salary Configurator**
+(`hr_contract_salary`) module.
+
+To create or modify contract templates, navigate to :menuselection:`Payroll app --> Configuration
+--> Contracts --> Templates`, then click :guilabel:`New`, or open an existing template.
+
+Configure the following fields on the template form:
+
+- :guilabel:`Template Name`: Enter a short, descriptive name, such as `Full-time developer`.
+- :guilabel:`Job` and :guilabel:`Department`: Select the job position and department the template is
+  meant for.
+- :guilabel:`HR Responsible`: Select the user responsible for the contracts created with this
+  template.
+- *Salary Information* tab: Configure the same fields as in the :ref:`Contract overview
+  <payroll/gen-info>` and *Schedule* sections of the employee's *Payroll* tab, as well as the salary
+  inputs of the selected pay category. The :guilabel:`Pay Schedule` field defines the pay frequency
+  of the wage.
+- *Signatories* tab: If the **Salary Configurator** module is installed, select the
+  :guilabel:`PDF Template` to sign for a :guilabel:`New Contract` and for a :guilabel:`Contract
+  Update`, and the person who must sign each role of the document (the :guilabel:`Employee`, the
+  :guilabel:`HR Responsible`, or a specific partner).
+
+.. image:: contracts/contract-template.png
+   :alt: A contract template form.
+
+.. seealso::
+   - :doc:`../employees/new_employee`
    - :doc:`../../productivity/sign`
