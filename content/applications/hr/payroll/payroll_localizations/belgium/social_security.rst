@@ -23,6 +23,7 @@ All these declarations are available under :menuselection:`Payroll app --> Repor
    social_security/dimona
    social_security/dmfa
    social_security/drs
+   social_security/flexi_at_work
 
 .. _payroll/l10n_be/onss_configuration:
 
