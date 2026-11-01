@@ -15,11 +15,33 @@ different templates are needed, such as department-specific appraisal templates,
 Modify appraisal templates
 ==========================
 
-If needed, changes can be made to the default template. To view the default template, navigate to
+If needed, changes can be made to the default template. To view the templates, navigate to
 :menuselection:`Appraisals app --> Configuration --> Appraisal Templates`.
 
-The default template appears in a list view, named :guilabel:`Default`. Click the template to view
-its details. Make any desired changes to the template.
+All templates appear in a list view. The default template is named :guilabel:`Default`. Click the
+template to view its details. Make any desired changes to the template.
+
+The template form contains the following fields:
+
+- :guilabel:`Short Name`: The name of the template, displayed in the :guilabel:`Template` field of
+  the appraisals.
+- :guilabel:`Company`: The company the template is available for. Leave this field empty to make the
+  template available for all companies.
+- :guilabel:`Departments`: The departments the template is available for. Leave this field empty to
+  make the template available for all departments. On an appraisal, only the templates linked to the
+  employee's department, or without any department, can be selected.
+- :guilabel:`360 Feedback Survey`: The :doc:`360 feedback <360>` surveys that can be selected when
+  asking for feedback on appraisals using this template. Leave this field empty to allow every
+  survey. This field only appears if the *360 Feedback* setting is enabled.
+- :guilabel:`Employee Feedback`: The questions the employee answers in their self-assessment.
+- :guilabel:`Manager Feedback`: The questions the appraisers answer.
+
+.. image:: appraisal_templates/template-form.png
+   :alt: The default appraisal template, with the employee and manager feedback questions.
+
+.. note::
+   Changes made to a template do not modify the feedback sections of existing appraisals. They apply
+   to the appraisals that use this template afterwards.
 
 The default template consists of the following questions:
 
@@ -47,7 +69,7 @@ The default template consists of the following questions:
 
        **My future**
 
-       **What are my short-and-long-term goals with the company and for my career?**
+       **What are my short- and long-term goals within the company and for my career?**
 
        - *Provide a short-term objective (within the next 6 months).*
        - *Provide a long-term objective (beyond 6 months).*
@@ -59,7 +81,7 @@ The default template consists of the following questions:
 
        **My feelings**
 
-       **How do I feel about the company...**
+       **How do I feel about the company?**
 
        - Company culture and values: |5-stars|
        - Internal Communication: |5-stars|
@@ -80,7 +102,7 @@ The default template consists of the following questions:
        **Evaluation**
 
        +---------------------+-----------+
-       | *Stress Resistance* | |5-stars| |
+       | *Stress Management* | |5-stars| |
        +---------------------+-----------+
        | *Time Management*   | |5-stars| |
        +---------------------+-----------+
@@ -125,28 +147,20 @@ specific feedback is needed.
    one for the on-site repair technicians.
 
 To create a new appraisal template, navigate to :menuselection:`Appraisals app --> Configuration -->
-Appraisal Templates` and click the :guilabel:`New` button in the upper-left corner. Next, configure
-the appraisal by :doc:`adding questions to the template using the rich-text editor
+Appraisal Templates` and click the :guilabel:`New` button in the upper-left corner. Enter a
+:guilabel:`Short Name`, set the :guilabel:`Company` and :guilabel:`Departments` the template is
+intended for, if needed, then write the questions in the :guilabel:`Employee Feedback` and
+:guilabel:`Manager Feedback` sections, using the :doc:`rich-text editor
 <../../essentials/html_editor>`.
 
-Additionally, a new appraisal template can be created by duplicating the default template and
-modifying the copy. To duplicate the template, navigate to :menuselection:`Appraisals app -->
+Additionally, a new appraisal template can be created by duplicating an existing template and
+modifying the copy. To duplicate a template, navigate to :menuselection:`Appraisals app -->
 Configuration --> Appraisal Templates`, then click on the template being duplicated. Click the
-:icon:`fa-gear` :guilabel:`(Actions)` icon, then click :icon:`fa-clone` :guilabel:`Duplicate`.
+:icon:`fa-cog` :guilabel:`(Actions)` icon, then click :icon:`fa-clone` :guilabel:`Duplicate`.
 
 First, rename the template, then make any desired changes.
 
-.. important::
-   Appraisal templates are housed in the **Surveys** app. Any appraisal template created *in* the
-   **Appraisals** app must be configured to be used with the **Appraisals** app, or it will *not* be
-   available for appraisals.
-
-   To ensure a new template is available for the **Appraisals** app, navigate to the **Surveys**
-   app, and click on the appraisal template.
-
-   Tick the radio button next to :guilabel:`Appraisal` at the top of the survey. This setting allows
-   the survey to be used in the **Appraisals** app, and is visible in the :guilabel:`Appraisal
-   Template` drop-down menu.
-
-   .. image:: appraisal_templates/appraisal-button.png
-      :alt: The appraisal radio button ticked on an appraisal form in the Surveys app.
+.. tip::
+   Drag and drop the templates in the list view using the :icon:`oi-draggable`
+   :guilabel:`(draggable)` icon to reorder them. The first available template in the list is
+   selected by default on new appraisals.

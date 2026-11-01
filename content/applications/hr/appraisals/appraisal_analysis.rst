@@ -13,19 +13,14 @@ promotions or increased levels of responsibility.
 
 To view the *Appraisal Analysis* report, navigate to :menuselection:`Appraisals app --> Reporting
 --> Appraisal Analysis`. On the *Appraisal Analysis* page, a report loads displaying all the
-appraisals in the database for the past 365 days, in a default stacked bar chart. Appraisals are
-grouped first by :guilabel:`Department` then :guilabel:`Final Rating`.
+appraisals created in the past 365 days, in a default stacked bar chart. Appraisals are grouped
+first by :guilabel:`Department`, then by :guilabel:`Final Rating`.
 
-The displayed ratings correspond to the configured *Evaluation Scale* options. Each rating is
-color-coded on the report. The default options for the *Evaluation Scale* are as follows:
-
-- :guilabel:`Meets expectations`: Blue
-- :guilabel:`Needs improvement`: Red
-- :guilabel:`Exceeds expectations`: Green
-- :guilabel:`Strongly Exceed Expectations`: Orange
-
-.. note::
-   If modifications are made to the *Evaluation Scale*, the colors and options may appear different.
+The displayed ratings correspond to the configured :ref:`Evaluation Scale <appraisals/rate>`
+options, and each rating has its own color on the report. Appraisals without a final rating yet
+appear as :guilabel:`None`. The default options for the *Evaluation Scale* are:
+:guilabel:`Needs improvement`, :guilabel:`Meets expectations`, :guilabel:`Exceeds expectations`, and
+:guilabel:`Strongly Exceed Expectations`.
 
 Roll over any column's segment to view the number of appraisals with the respective final rating. To
 view the specific appraisals within a segment, click on it. A list displaying each employee's
@@ -33,12 +28,12 @@ view the specific appraisals within a segment, click on it. A list displaying ea
 every appraisal appears. Return to the *Appraisal Analysis* report by clicking the breadcrumb menu.
 
 The default report includes appraisals that have been scheduled but not completed (appraisals with a
-status of *Confirmed* or *To Confirm*). To **only** view completed appraisals, click into the search
+status of *Draft* or *Ongoing*). To **only** view completed appraisals, click into the search
 bar, then click :guilabel:`Done` in the :icon:`fa-filter` :guilabel:`Filters` column. The report
 reloads, displaying only completed appraisals with a final rating.
 
 To view only appraisals for the signed-in user's team, click into the search bar and click
-:guilabel:`My Team` in the :icon:`fa-filter` :guilabel:`Filters` column. This report only displays
+:guilabel:`My team` in the :icon:`fa-filter` :guilabel:`Filters` column. This report only displays
 the employees the user manages. This allows the user to better understand their team's performance
 by showing how many employees are performing either above or below expectations.
 
