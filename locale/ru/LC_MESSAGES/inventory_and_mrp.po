@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-30 17:31+0000\n"
-"PO-Revision-Date: 2026-10-31 12:36+0000\n"
+"PO-Revision-Date: 2026-11-01 05:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-20-doc/"
 "inventory_and_mrp/ru/>\n"
@@ -70407,6 +70407,11 @@ msgid ""
 "default value is `100`, meaning one quality check is created for the full "
 "quantity."
 msgstr ""
+":guilabel:`Партия`: запрашивается проверка для определенного процента "
+"товаров в рамках указанной операции. Рядом с полем :guilabel:`Частичная "
+"проверка` введите процент в поле :guilabel:`Проверить (#) % товаров`. "
+"Значение по умолчанию — `100`, что означает создание одной проверки качества "
+"для всего количества."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:72
 msgid ""
@@ -70414,6 +70419,10 @@ msgid ""
 "the :guilabel:`Control Frequency` field is set to one of four options that "
 "determine *how often* a new quality check is created:"
 msgstr ""
+"Если для параметра :guilabel:`Партия` был выбран вариант :guilabel:`Контроль "
+"за`, то для поля :guilabel:`Частота контроля` устанавливается один из "
+"четырех вариантов, определяющих, *как часто* создается новая проверка "
+"качества:"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:76
 msgid ""
@@ -70613,7 +70622,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:133
 msgid "In the *Attachment* tab, upload a worksheet file from the device."
-msgstr ""
+msgstr "На вкладке *Вложения* загрузите файл с рабочим листом с устройства."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:136
 msgid ""
@@ -70621,6 +70630,9 @@ msgid ""
 "selected in the :guilabel:`Operations` field and a :guilabel:`Work Order "
 "Operation` is selected."
 msgstr ""
+"Вкладка *Вложения* появляется только в том случае, если в поле "
+":guilabel:`Производство` выбрана опция :guilabel:`Операции` и выбрана "
+":guilabel:`Операция производственного задания`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:139
 msgid ""
@@ -70628,6 +70640,9 @@ msgid ""
 "quality check fails. For example, instruct the employee processing the "
 "quality check to create a :doc:`quality alert <quality_alerts>`."
 msgstr ""
+"На вкладке *Сообщение при сбое* укажите инструкции на случай, если проверка "
+"качества не пройдена. Например, поручите сотруднику, выполняющему проверку "
+"качества, создать :doc:`предупреждение о качестве <quality_alerts>`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:143
 msgid ""
@@ -70635,6 +70650,10 @@ msgid ""
 "the reason it was created. The information entered in this tab is **not** "
 "shown to the employees who process the quality checks created by the |QCP|."
 msgstr ""
+"Используйте вкладку *Заметки*, чтобы предоставить дополнительную информацию "
+"о |QCP|, например, причину его создания. Информация, введенная на этой "
+"вкладке, **не** отображается сотрудникам, которые обрабатывают проверки "
+"качества, созданные с помощью |QCP|."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:147
 msgid ""
@@ -70645,7 +70664,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:3
 msgid "Quality rate"
-msgstr ""
+msgstr "Уровень качества"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:14
 msgid ""
@@ -70655,24 +70674,34 @@ msgid ""
 "contact forms, requests for quotation (RFQs) or purchase orders (POs), and "
 "quality control points (QCPs)."
 msgstr ""
+"В модуле Odoo **Качество** пользователи могут просматривать уровень "
+"качества, то есть процент успешных проверок качества по входящим поставкам "
+"от поставщиков. В этой документации рассказывается, как получить доступ к "
+"уровням качества и просматривать их в карточках контактов поставщиков, "
+"запросах коммерческих предложений (RFQ) или заказах на закупку (PO), а также "
+"в точках контроля качества (QCP)."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:24
 msgid "To check quality rates, ensure the following are true:"
 msgstr ""
+"Чтобы проверить уровень качества, убедитесь в соблюдении следующих условий:"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:26
 msgid "The **Quality** and **Purchase** apps are installed."
-msgstr ""
+msgstr "Установлены приложения **Качество** и **Закупка**."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:27
 msgid ""
 "The user's :doc:`access rights <../../../general/users/access_rights>` are "
 "set to :guilabel:`Quality / User` at the minimum."
 msgstr ""
+"Для прав доступа пользователя установлена как минимум роль :doc:`права "
+"доступа <../../../general/users/access_rights>` со значением "
+":guilabel:`Качество / Пользователь`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:33
 msgid "View quality rates"
-msgstr ""
+msgstr "Просмотр уровней качества"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:35
 msgid ""
@@ -70681,10 +70710,15 @@ msgid ""
 "showing the percentage of passing quality checks, organized by product or by "
 "vendor."
 msgstr ""
+"Уровни качества можно просматривать в карточках контактов поставщиков, "
+"|RFQs| или |POs|, а также |QCPs|. Каждая из этих форм предоставляет "
+"возможность открыть настраиваемый отчет, показывающий процент успешных "
+"проверок качества, организованный по товару или поставщику."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:39
 msgid "Users can access the report using one of the following options:"
 msgstr ""
+"Пользователи могут получить доступ к отчету одним из следующих способов:"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:41
 msgid ""
@@ -70693,6 +70727,10 @@ msgid ""
 "Rate` smart button displays the quality rate across all incoming products "
 "from the vendor. Click the button to open a specific report."
 msgstr ""
+"Через карточку контакта: перейдите в :menuselection:`Приложение Закупка --> "
+"Заказы --> Поставщики` и выберите поставщика. Смарт-кнопка :icon:`fa-check` "
+":guilabel:`Уровень качества` отображает уровень качества всех входящих "
+"товаров от данного поставщика. Нажмите на кнопку, чтобы открыть отчет."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:44
 msgid ""
@@ -70701,6 +70739,10 @@ msgid ""
 "quality rate across all incoming products from the vendor. Click the button "
 "to open a specific report."
 msgstr ""
+"Через |RFQ| или |PO|: откройте приложение **Закупка** и выберите заказ. "
+"Смарт-кнопка :icon:`fa-check` :guilabel:`Уровень качества` отображает "
+"уровень качества всех входящих товаров от данного поставщика. Нажмите на "
+"кнопку, чтобы открыть отчет."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:47
 msgid ""
@@ -70710,12 +70752,19 @@ msgid ""
 "completed quality checks at the control point. Click the button to open a "
 "specific report."
 msgstr ""
+"Через |QCP|: перейдите в :menuselection:`Приложение Качество --> Контроль "
+"качества --> Контрольные точки` и выберите контрольную точку. Смарт-кнопка "
+":icon:`fa-user` :guilabel:`Поставщики` отображает количество поставщиков, "
+"завершивших проверки качества в этой контрольной точке. Нажмите на кнопку, "
+"чтобы открыть отчет."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:53
 msgid ""
 "The control point's :guilabel:`Operations` field must be set to the "
 "`Receipts` operation type."
 msgstr ""
+"В поле контрольной точки :guilabel:`Операции` должен быть выбран тип "
+"операции `Поступления`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:56
 msgid ""
@@ -70723,6 +70772,9 @@ msgid ""
 "appear on a vendor contact form, |RFQ|, or |PO|, ensure that at least one "
 "check has been performed across the vendor's incoming transfers."
 msgstr ""
+"Если смарт-кнопка :icon:`fa-check` :guilabel:`Коэффициент качества` не "
+"отображается в форме контакта поставщика, |RFQ| или |PO|, убедитесь, что для "
+"входящих трансферов поставщика была проведена хотя бы одна проверка."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:60
 msgid ""
@@ -70730,6 +70782,9 @@ msgid ""
 "not appear on a |QCP|, ensure that at least one check has been performed at "
 "the control point."
 msgstr ""
+"Аналогично, если смарт-кнопка :icon:`fa-user` :guilabel:`Поставщики` не "
+"отображается на |QCP|, убедитесь, что в контрольной точке была проведена "
+"хотя бы одна проверка."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:66
 msgid "Quality rate report"
