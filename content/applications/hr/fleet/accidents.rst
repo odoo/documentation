@@ -11,9 +11,9 @@ for one possible method to monitor accidents and repair costs.
 Structure
 =========
 
-For this use case, go to :menuselection:`Fleet app --> Fleet --> Services`. On the :ref:`service
-form <fleet/service-form>`, two :ref:`service types <fleet/new-type>` are created: `Accident -
-Driver's Fault` and `Accident - No Fault`.
+For this use case, two :ref:`service types <fleet/new-type>` are created: `Accident - Driver
+Fault` and `Accident - No Fault`. Create them in :menuselection:`Fleet app --> Configuration -->
+Services: Service Types`, or directly from a :ref:`service form <fleet/service-form>`.
 
 This setup records repairs associated with accidents and organizes them by fault.
 
@@ -49,20 +49,14 @@ Enter the following information on the form:
 
 - :guilabel:`Description`: enter the description of repairs needed to fully repair the vehicle, such
   as `Bodywork`, `Windshield Replacement`, or `Replacement Bumper, Tires, and Windows`.
-- :guilabel:`Service Type`: for this example, select either `Accident - Driver's Fault` or `Accident
+- :guilabel:`Service Type`: for this example, select either `Accident - Driver Fault` or `Accident
   - No Fault`, depending on the situation.
 
-  When entering either of these two :guilabel:`Service Types` for the first time, type in the new
-  service type, then click :guilabel:`Create (new service type)`. A :guilabel:`Create Service Type`
-  pop-up window appears, with the new service type populating the :guilabel:`Name` field. In the
-  :guilabel:`Category` field, select :guilabel:`Service` from the drop-down menu, then click the
-  :guilabel:`Save & Close` button.
-
-  Once an accident service type has been added to the database, it is available to select from the
-  drop-down menu in the :guilabel:`Service Type` field.
+  If an accident service type does not exist yet, type in the new service type, then click
+  :guilabel:`Create "(new service type)"`. Once an accident service type has been added to the
+  database, it is available to select from the drop-down menu in the :guilabel:`Service Type`
+  field.
 - :guilabel:`Date`: using the calendar popover window, select the date the accident occurred.
-  Navigate to the desired month using the :icon:`fa-chevron-left` :icon:`fa-chevron-right`
-  :guilabel:`(arrow)` icons, then click the date to select it.
 - :guilabel:`Cost`: leave this field blank, as the repair cost is not yet known.
 - :guilabel:`Vendor`: select the vendor performing the repairs using the drop-down menu. If the
   vendor has not already been entered in the system, type in the vendor name, and click either
@@ -77,21 +71,21 @@ Enter the following information on the form:
 - :guilabel:`Odometer Value`: enter the odometer reading when the accident occurred. The units of
   measure are either in kilometers (:guilabel:`km`) or miles (:guilabel:`mi`), depending on how the
   selected vehicle was configured.
-- :guilabel:`NOTES`: enter the specific details of the accident at the bottom of the service form,
+- :guilabel:`Notes`: enter the specific details of the accident at the bottom of the service form,
   such as `Hit a deer` or `Rear-ended at an intersection while stopped`.
 
 Odoo provides the ability to attach any important paperwork, such as repair estimates and police
-reports, to the service record. To do so, click the :icon:`fa-paperclip` :guilabel:`(paperclip)`
+reports, to the service record. To do so, click the :icon:`attach_file` :guilabel:`(Attach files)`
 icon, located in the *chatter* of the form, and a file explorer pop-up window appears. Navigate to
 the desired record, and click :guilabel:`Open` to upload the file.
 
   .. note::
      Once a file is added to a service record, a :guilabel:`Files` section appears in the *chatter*.
-     To attach more records, click :icon:`fa-plus-square` :guilabel:`Attach files` to add more
+     To attach more records, click :icon:`add` :guilabel:`Attach files` to add more
      documents.
 
 .. image:: accidents/service-form.png
-   :alt: Enter the information for an accident repair.
+   :alt: A service form for a windshield replacement after an accident.
 
 Service stages
 ==============
@@ -110,7 +104,7 @@ In Odoo's **Fleet** app, there are four default service stages:
       The repair is in-process, but not yet complete. The estimate for repairs is listed in the
       :guilabel:`Cost` field.
 
-   .. tab:: Completed
+   .. tab:: Done
 
       All repairs listed on the service form have been completed. The :guilabel:`Cost` field is
       updated to reflect the final total cost charged for the repairs.
@@ -133,7 +127,7 @@ Services`. Next, click on the individual service record to open the detailed ser
 desired stage in the top-right corner, above the service form, to change the status.
 
 .. image:: accidents/running.png
-   :alt: The stages as seen from the service form.
+   :alt: The stages of a service, with the Running stage selected.
 
 .. _fleet/Kanban:
 
@@ -141,16 +135,16 @@ Kanban view
 -----------
 
 Open the main *Services* dashboard, by navigating to :menuselection:`Fleet app --> Fleet -->
-Services`. First, click the :icon:`oi-view-kanban` :guilabel:`Kanban` icon in the top-right of the
-screen, which organizes all repairs by vehicle.
+Services`. First, click the :icon:`oi_view-kanban` :guilabel:`(Kanban)` icon in the top-right of the
+screen.
 
-Next, remove the default :guilabel:`Service Type` filter in the search bar. Upon doing so, all
-services appear in a Kanban view, organized by their respective :guilabel:`Status`.
+Next, remove the default :guilabel:`Service Type` grouping in the search bar. Upon doing so, all
+services appear in a Kanban view, organized by their respective stage.
 
 Drag-and-drop the service record to the desired stage.
 
 .. image:: accidents/drag-n-drop.png
-   :alt: The Kanban view of stages, with a card being dragged and dropped to the Running stage.
+   :alt: The Kanban view of services, organized by stage.
 
 Accident reporting
 ==================
@@ -169,8 +163,8 @@ Services dashboard
 ------------------
 
 Navigate to :menuselection:`Fleet app --> Fleet --> Services` to view the :guilabel:`Services`
-dashboard. All service records are displayed in a :icon:`oi-view-list` :guilabel:`(List)` view,
-grouped alphabetically, by :guilabel:`Service Type`.
+dashboard. All service records are displayed in a :icon:`reorder` :guilabel:`(List)` view,
+grouped alphabetically by :guilabel:`Service Type`.
 
 The two service types created for accident tracking appear in the list: :guilabel:`Accident - Driver
 Fault` and :guilabel:`Accident - No Fault`.
@@ -188,7 +182,7 @@ beneath each grouping title.
    exists yet.
 
    .. image:: accidents/group-accidents.png
-      :alt: Accident services, with the total costs highlighted.
+      :alt: Accident services grouped by service type, with the total cost of each group.
 
 .. note::
    The total :guilabel:`Cost` calculates **all** costs on the repair form, including estimated
@@ -200,15 +194,15 @@ beneath each grouping title.
 Reporting dashboard
 -------------------
 
-Navigate to :menuselection:`Fleet app --> Reporting --> Costs` to view the :menuselection:`Cost
-Analysis` report. This report displays a  :icon:`fa-bar-chart` :guilabel:`(Bar Chart)` of all
+Navigate to :menuselection:`Fleet app --> Reporting --> Costs` to view the *Costs Analysis*
+report. This report displays a :icon:`bar_chart` :guilabel:`(Bar Chart)` of all
 :guilabel:`Contract` and :guilabel:`Service` costs for the current year, organized by month
-(:guilabel:`Date : (year)`), by default. The :guilabel:`Sum`, represented by a gray dotted line, is
-the combined total of both the :guilabel:`Contract` and :guilabel:`Service` costs.
+(:guilabel:`Date: (year)`), by default. The :guilabel:`Sum`, represented by a line, is the combined
+total of both the :guilabel:`Contract` and :guilabel:`Service` costs.
 
-To view the total cost by vehicle, click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Bar)`
-icon at the right of the search bar, revealing a drop-down menu. Click :guilabel:`Vehicle` in the
-:icon:`oi-group` :guilabel:`Group By` column, and the data is organized by vehicle.
+To view the total cost by vehicle, click the :icon:`arrow_drop_down` :guilabel:`(Toggle Search
+Panel)` icon at the right of the search bar, revealing a drop-down menu. Click :guilabel:`Vehicle`
+in the :icon:`stacks_f` :guilabel:`Group By` column, and the data is organized by vehicle.
 
 This displays the true cost for each vehicle, including both the contract cost (such as the monthly
 vehicle lease cost) and all service costs, including all accidents. Hover over a column to reveal a
@@ -219,8 +213,8 @@ complete view of the vehicle cost.
    :alt: The Cost Analysis report, displaying total costs by vehicle.
 
 To view the individual cost details for both contract costs and repairs, click the
-:icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner of the :guilabel:`Cost
-Analysis` dashboard. This displays each vehicle on a separate line, and displays the
+:icon:`oi_view-pivot` :guilabel:`(Pivot)` icon in the top-right corner of the *Costs
+Analysis* dashboard. This displays each vehicle on a separate line, and displays the
 :guilabel:`Contract` cost and :guilabel:`Service` cost, as well as the :guilabel:`Total` cost.
 
 .. image:: accidents/fleet-pivot.png
@@ -228,8 +222,8 @@ Analysis` dashboard. This displays each vehicle on a separate line, and displays
          the total.
 
 .. note::
-   The :icon:`oi-view-pivot` :guilabel:`(Pivot)` view organizes the data by vehicle, by default,
-   therefore grouping the data by :guilabel:`Vehicle` is not required. If this filer is already
+   The :icon:`oi_view-pivot` :guilabel:`(Pivot)` view organizes the data by vehicle, by default,
+   therefore grouping the data by :guilabel:`Vehicle` is not required. If this grouping is already
    activated, it does not affect the presented data.
 
 Manage accident repairs
@@ -240,37 +234,28 @@ records in the :guilabel:`New` and :guilabel:`Running` stages can be time-saving
 large number of records in the *Services* dashboard.
 
 Navigate to :menuselection:`Fleet app --> Fleet --> Services`, where all service requests are
-organized by :guilabel:`Service Type`. Next, click the :icon:`fa-caret-down` :guilabel:`(Toggle
-Search Panel)` icon at the right of the search bar, revealing a drop-down menu. Click :guilabel:`Add
-Custom Filter` in the :icon:`fa-filter` :guilabel:`Filters` column, and a :guilabel:`Add Custom
-Filter` pop-up window appears.
+organized by :guilabel:`Service Type`. Next, click the :icon:`arrow_drop_down` :guilabel:`(Toggle
+Search Panel)` icon at the right of the search bar, revealing a drop-down menu. Click
+:guilabel:`Custom Filter...` in the :icon:`filter_alt_f` :guilabel:`Filters` column, and a
+:guilabel:`Custom Filter` pop-up window appears.
 
-Three drop-down fields need to be configured on the pop-up window.
+Configure the rule on the pop-up window as follows:
 
-In the first field, scroll down, and select :guilabel:`Stage`.
+- In the first field, select :guilabel:`Stage`.
+- In the second field, select :guilabel:`is in`.
+- In the third field, select both :guilabel:`New` and :guilabel:`Running`.
 
-Leave the second field set to :guilabel:`=`.
-
-Select :guilabel:`Running` from the drop-down menu in the last field.
-
-Next, click the :icon:`fa-plus` :guilabel:`(plus)` icon to the right of the last field, and an
-identical rule appears beneath the current rule.
-
-Then, change :guilabel:`Running` to :guilabel:`New` in the third field of the second rule, leaving
-the other fields as-is.
-
-Click the :guilabel:`Add` button at the bottom to add the new custom filter.
+Click the :guilabel:`Search` button to apply the new custom filter.
 
 .. image:: accidents/custom-filters.png
-   :alt: The filter settings to be added to only display new and running services.
+   :alt: The custom filter settings to only display new and running services.
 
 This slight modification only presents services in the :guilabel:`New` and :guilabel:`Running`
 stages. This is a helpful report for a company managing a high number of repairs at any given time.
 
 To have this report appear as the default report when opening the :guilabel:`Services` dashboard,
-click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` icon at the far-right of the
-search bar. Next, click :guilabel:`Save current search`, beneath the :icon:`fa-star`
-:guilabel:`Favorites` column, which reveals another drop-down column beneath it. Tick the checkbox
-beside :guilabel:`Default Filter`, then click :guilabel:`Save`. Then, this customized
+click the search bar to open the search options. Next, click :guilabel:`Save search`, beneath the
+:icon:`star_f` :guilabel:`Favorites` column, which reveals additional options beneath it. Tick the
+checkbox beside :guilabel:`Default filter`, then click :guilabel:`Save`. Then, this customized
 :guilabel:`Services` dashboard appears, by default, any time the :guilabel:`Services` dashboard is
 accessed.
