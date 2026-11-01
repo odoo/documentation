@@ -28,30 +28,37 @@ Time off request fields
 
 Enter the following information on the *New Time Off* pop-up request form:
 
-- :icon:`label` :guilabel:`(Time Off Type)`: Select the type of time off being requested.
+- :icon:`label` :guilabel:`(Time Type)`: Select the type of time off being requested. Only the
+  time types the employee can currently request are proposed: time types that do not require an
+  allocation, and time types for which the employee has a valid allocation with a remaining
+  balance (or allowing a negative balance).
 - :icon:`schedule` :guilabel:`(Dates)`: Click into the first date field and using the calendar
   selector, select the start date for the time off request. Set the second field to the end date for
   the request. When requesting time off for a single day, set both fields to the same date. If
-  applicable, set the start and end times for the request. Depending on how the selected
-  :guilabel:`Time Off Type` is configured, additional fields may appear. Specify when the time off
-  is being requested for a :guilabel:`Full Day`, the :guilabel:`Morning`, or the
-  :guilabel:`Afternoon`. These options appear as either buttons or a drop-down selection.
+  applicable, set the start and end times for the request. Depending on the :guilabel:`Duration
+  Type` of the selected :doc:`time type <time_off_types>`, additional fields may appear:
+
+  - For a time type requested in half days, specify if the time off is requested for a
+    :guilabel:`Full Day`, the :guilabel:`Morning`, or the :guilabel:`Afternoon`. When the request
+    covers several days, select instead if it starts in the :guilabel:`Morning` or the
+    :guilabel:`Afternoon` of the first day, and ends in the :guilabel:`Morning` or the
+    :guilabel:`Afternoon` of the last day.
+  - For a time type requested in custom hours, select the start and end times of the request.
 - :icon:`edit_f` :guilabel:`(Description)`: Enter a description for the time off request. This
   should include any details that managers and approvers may need to approve the request, such as
   `Sick with the flu` or `Family wedding`.
-- :icon:`fa-paperclip` :guilabel:`Attach File`: This field **only** appears if the :guilabel:`Time
-  Off Type` selected is :ref:`configured to require documentation <time_off/time-off-config>`. Click
-  the :icon:`fa-paperclip` :guilabel:`Attach File` button, and a file explorer window appears.
-  Navigate to the desired file, select it, then click the :guilabel:`Open` button. The file is
-  listed on the *New Time Off* pop-up window. Only one file can be attached.
+- :icon:`fa-paperclip` :guilabel:`Attach File`: To attach a document to the request, such as a
+  medical certificate, click the :icon:`fa-paperclip` :guilabel:`Attach File` button, and a file
+  explorer window appears. Navigate to the desired file, select it, then click the :guilabel:`Open`
+  button. The file is listed on the *New Time Off* pop-up window.
 
   .. note::
-     If the *Time Off Type* requires documentation, such as a doctor's note, :guilabel:`Required`
-     appears in red text next to the :icon:`fa-paperclip` :guilabel:`Attach File` button.
+     If the time type is :ref:`configured to expect a supporting document
+     <time_off/time-off-config>`, such as a doctor's note, :guilabel:`Required` appears in red text
+     next to the :icon:`fa-paperclip` :guilabel:`Attach File` button.
 
 .. image:: request_time_off/sick-request.png
-   :alt: A time off request form filled out for an employee home sick, with a doctor's note
-         attached.
+   :alt: A new time off request for sick time off, with a supporting document required.
 
 Expanded time off request fields
 --------------------------------
@@ -61,7 +68,7 @@ icon in the corner to view the request in a full-page view.
 
 In the full-page view, additional fields may appear. If the employee has any approved time off for
 the current year, it appears in a gray :guilabel:`Summary (year)` box. The summary box lists all
-time off types, and the total amount of time scheduled.
+time types, and the total amount of time scheduled.
 
 If the time off request overlaps with another employee in the same department, a blue
 :guilabel:`(Department) Overlaps` summary appears. This box shows how many other employees have time
@@ -69,7 +76,7 @@ off scheduled for the same time period. Click :icon:`east` :guilabel:`View Overl
 calendar view, displaying the overlaps.
 
 .. image:: request_time_off/full-page-request.png
-   :alt: A time off request in full-page view, showing two summary boxes.
+   :alt: A time off request in full-page view, showing the summary of the year.
 
 .. tip::
    A :icon:`calendar_today` :guilabel:`Calendar` smart button appears at the top of this view. Click
@@ -80,6 +87,3 @@ calendar view, displaying the overlaps.
    time off request form, stating :guilabel:`Only (#.#) day(s) available` in red text. This aids
    employees if they are unaware of their time off balances, and attempt to request more time than
    they have, and can adjust the request before submitting it.
-
-   .. image:: request_time_off/not-enough-time.png
-      :alt: A warning note stating the request is for more days than the user has available.

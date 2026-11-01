@@ -21,12 +21,12 @@ policy compliance, and plan coverage for upcoming absences. To view a list of em
 requests, navigate to :menuselection:`Time Off app --> Reporting --> by Employee`.
 
 The default report presents the current year's data in a pivot table, with the months populating the
-columns, and the employees populating the rows. The report displays the various time off taken by
-each employee, with a status of either *Approved* or *To Approve*, the amount of time off used for
-each month (the :guilabel:`Duration (Days)`), and the various totals.
+columns, and the employees, then their time types, populating the rows. The report displays the
+various time off taken by each employee, the amount of time off used for each month (the
+:guilabel:`Number Of Days`), and the various totals.
 
 .. note::
-   All time off is calculated in days, including time off types configured to be taken in hours.
+   All time off is calculated in days, including time types configured to be taken in hours.
    Odoo automatically converts all time off hours into their day equivalent. For example, two hours
    of time off is presented as `0.25` days.
 
@@ -42,34 +42,33 @@ By type
 =======
 
 Viewing company-wide time off by type can help managers determine if employees are using their time
-off, which types are used more than others, and can spot any trends. High totals in certain time off
+off, which types are used more than others, and can spot any trends. High totals in certain time
 types, like sick time off, can indicate health or morale concerns.
 
-To view a graph of all time off, organized by time off type, navigate to :menuselection:`Time Off
-app --> Reporting --> by Type`. This shows all time off requests with a status of *Approved* or *To
-Approve* in a default bar chart.
+To view a graph of all time off, organized by time type, navigate to :menuselection:`Time Off app
+--> Reporting --> by Type`. This shows all time off requests and allocations with a status of
+*Approved* or *To Approve* in a default bar chart.
 
-Each time off type displays three columns of information:
+Each time type displays three columns of information:
 
-- :guilabel:`Allocation`: This blue-colored bar indicates the total amount of time off allocated to
-  employees.
-- :guilabel:`Time Off`: This red-colored bar indicates the amount of time off requested, including
-  both past and scheduled future time off, for both approved and pending requests.
-- :guilabel:`Balance`: This green-colored bar indicates the total balance of unused time off.
+- :guilabel:`Allocation`: This bar indicates the total amount of time off allocated to employees.
+- :guilabel:`Time Off`: This bar indicates the amount of time off requested, including both past
+  and scheduled future time off, for both approved and pending requests.
+- :guilabel:`Balance`: This bar indicates the total balance of unused time off.
 
 .. note::
-   If the time off type is configured to not require an allocation, the :guilabel:`Allocation`
-   column does *not* appear.
+   If the time type is configured to not require an allocation, the :guilabel:`Allocation` and
+   :guilabel:`Balance` columns do *not* appear.
 
 .. image:: reporting/bar-chart.png
-   :alt: The various time off types in a bar chart.
+   :alt: The various time types in a bar chart.
 
 Hover over a column to view the total :guilabel:`Duration (Days)` and click on a bar to view a
 detailed list of all the individual records for that bar.
 
 Each request is listed, with the following information displayed: the :guilabel:`Employee`,
-:guilabel:`Number of Days`, :guilabel:`Request Type`, :guilabel:`Start Date`, :guilabel:`End Date`,
-:guilabel:`Status`, and the :guilabel:`Description`.
+:guilabel:`Number of Days`, :guilabel:`Number of Hours`, :guilabel:`Request Type`,
+:guilabel:`Start Date`, :guilabel:`End Date`, :guilabel:`Status`, and the :guilabel:`Description`.
 
 The report can be displayed in other ways, as well. Click the corresponding button option in the
 top-right corner of the page to view the data in that way. The various options are a
@@ -85,16 +84,21 @@ detailed information on the reports, and their various options, refer to the :do
 Balance
 =======
 
-When some time off types have restrictions, such as rollover rules and balance limits, viewing time
+When some time types have restrictions, such as rollover rules and balance limits, viewing time
 off balances can help managers and time off approvers see a high-level overview of time off. If
-certain employees have time off that will expire soon, they can be infomred and adjust their
+certain employees have time off that will expire soon, they can be informed and adjust their
 schedules accordingly.
 
 To view all time off balances for the current year, navigate to :menuselection:`Time Off app -->
 Reporting --> Balance`. The *Balance* report shows all time off balances in a default pivot table.
-The employees populate the rows, while the various time off types populate the columns.
+The companies, then their employees, populate the rows, while the various time types populate the
+columns.
 
-Each time off type displays the :guilabel:`Number of Days` and :guilabel:`Number of Hours` remaining
+.. note::
+   The *Balance* report is only available to users with *Administrator* access rights for the
+   **Time Off** app.
+
+Each time type displays the :guilabel:`Number of Days` and :guilabel:`Number of Hours` remaining
 for the following:
 
 - :guilabel:`Left`: The remaining amount of time off for the year.
