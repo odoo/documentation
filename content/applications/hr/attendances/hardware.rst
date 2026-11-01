@@ -3,7 +3,7 @@ Hardware
 ========
 
 Employees who are **not** database users, and therefore, do **not** have access to the
-**Attendances** app, must sign in and out of work using a kiosk. The following are the physical
+**Attendances** app, must check in and out of work using a kiosk. The following are the physical
 requirements for setting up a kiosk.
 
 Kiosk devices
@@ -12,7 +12,7 @@ Kiosk devices
 A kiosk is a self-service station, where employees can :ref:`check in and out of work
 <attendances/kiosk-mode-entry>` with either a :ref:`badge <attendances/hardware/badges>` or an
 :ref:`RFID key fob <attendances/hardware/rfid>`. Typically, these devices are dedicated as kiosks
-only, but any device with an internet browser is able to be set up as a kiosk.
+only, but any device with an internet browser can be set up as a kiosk.
 
 A kiosk is used by navigating to the webpage specified in the :ref:`configuration
 <attendances/kiosk-settings>` section of the **Attendances** app.
@@ -34,21 +34,22 @@ Kiosks are set up using one of the following types of devices:
 Badges
 ======
 
-Badges are a way for employees to quickly sign in and out from a kiosk, as badges are scanned by the
-kiosk's camera to identify the employee.
+Badges can be scanned by the kiosk's camera to check in or check out an employee.
 
 To generate a badge, first navigate to the :menuselection:`Employees app`. Next, click on the
-desired employee card to open the employee's form, then click the :guilabel:`Settings` tab.
+desired employee card to open the employee's form, then click the *Settings* tab.
 
-Under the :guilabel:`ATTENDANCE/POINT OF SALE/MANUFACTURING` section, there is a :guilabel:`Badge
-ID` field. If this field is blank, click :guilabel:`Generate` at the end of the :guilabel:`Badge ID`
-line, and the field is automatically populated with a new badge ID number. Then, click
-:guilabel:`Print Badge` at the end of the badge ID number to create a PDF file of the badge.
+#. Under the *ATTENDANCE/POINT OF SALE* section (*ATTENDANCE/POINT OF SALE/MANUFACTURING* if the
+   **Manufacturing** app is installed), locate the :guilabel:`RFID/Badge Number` field.
+#. (optional) To use an existing badge or RFID key fob, click :guilabel:`Read a badge`, and scan
+   it.
+#. If the field is blank, click :guilabel:`Generate` to populate it with a new badge number.
+#. Click :guilabel:`Print Badge` to create a PDF of the badge.
 
-If a badge ID number is already present on the employee form, there is no :guilabel:`Generate`
-button, only a :guilabel:`Print Badge` button.
+If a badge number is already present on the employee form, there is no :guilabel:`Generate` button,
+only a :guilabel:`Print Badge` button.
 
-The employee's badge contains the employee's photo, name, job position, company logo, and a barcode
+The employee's badge contains their photo, name, job position, company logo, and a barcode
 that can be scanned at a kiosk to check in and out.
 
 Badges can be printed for employees using any thermal or inkjet printer.
@@ -71,8 +72,7 @@ scan badges.
 Kiosks work with most USB barcode scanners. Bluetooth barcode scanners are also supported for
 devices without USB ports, or if a wireless connection is desired.
 
-Follow the manufacturer's instructions on the barcode scanner to properly connect the barcode
-scanner to the kiosk device.
+Follow the manufacturer's instructions to connect the barcode scanner to the kiosk device.
 
 .. tip::
    If the barcode scanner is connected directly to a computer, it :doc:`must be configured
@@ -86,8 +86,9 @@ scanner to the kiosk device.
 RFID key fob readers
 ====================
 
-Instead of using a :ref:`badge <attendances/hardware/badges>`, employees can scan a personal RFID
-key fob with an RFID reader to check in and out of work.
+Instead of using a :ref:`badge <attendances/hardware/badges>`, employees can scan a personal
+:abbr:`RFID (Radio Frequency Identification)` key fob with an RFID reader to check in and out of
+work.
 
 It is **required** to purchase *both* RFID key fobs and an RFID reader to use this method to check
 in and out. Follow the manufacturer's directions to install the RFID reader, and set up the RFID key
