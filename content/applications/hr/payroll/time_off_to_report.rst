@@ -1,77 +1,78 @@
-==================
-Time off to report
-==================
+=====================
+Time off and payslips
+=====================
 
-Payroll is often processed a few days before the end of a pay period, so that employees can be paid
-in a timely manner. When work schedules are predictable, this method often works. However, sometimes
-employees take time off unexpectedly, especially sick time. When this occurs, there can be
-discrepancies in payroll that must be addressed.
-
-.. example::
-   The payroll department for a medium-sized company processes paychecks every two weeks, on
-   Wednesdays. Each employee is paid on the Friday after.
-
-   One employee is sick on the last Thursday and Friday of the two-week pay period. Since they have
-   automatically generated work entries based on their working schedule, and payroll is processed on
-   Wednesdays, the paycheck they receive incorrectly states that they were paid for a regular work
-   day for all ten days of the two-week pay period.
-
-   Instead of cancelling the paycheck and reissuing it, causing delays for the employee and more
-   work for the payroll department, Odoo allows for the deferral of the time off taken, to the
-   following pay period.
-
-   This ensures all time off balances are correct, and the employee is properly compensated for
-   their time.
+Approved time off is automatically included in the :doc:`worked time <work_entries>` of the
+payslips. However, payroll is often processed a few days before the end of the pay period, and
+employees sometimes take unexpected time off, such as sick days, after their payslip has been
+validated, or even paid. Odoo detects these situations, so the payslip can be corrected.
 
 .. _payroll/time-off-dashboard:
 
-Time off dashboard
-==================
+Time off overview
+=================
 
-When time off requests are submitted for a time period that was already processed on a payslip, the
-time off requests appear in the *Time Off* page of the **Payroll** app. To access this, navigate to
-:menuselection:`Payroll app --> Work Entries --> Time Off to Report`.
+To view the time off of all employees, navigate to :menuselection:`Payroll app --> Time Offs`. The
+time off is displayed in a Gantt view, by employee, with the expected working hours of each
+employee for the displayed period. Use the arrows and the scale selector to navigate to the pay
+period.
 
-The :guilabel:`Time Off` page default filter is :guilabel:`To Defer`, and displays all requests with
-a :guilabel:`Payslip State` of :guilabel:`To defer to next payslip`. This is because the employee
-was *already paid* for that time as worked time, and it was logged as regular time spent at work.
+Click a time off to view its details, or click an empty cell to create a time off for an employee.
+The :guilabel:`Time Type` of the time off determines how it is paid. Some time types allow
+:guilabel:`Options`, additional salary rule categories that payroll users can select on the time off
+(see :ref:`time types <payroll/new-work-entry-type>`).
 
-.. image:: time_off_to_report/time-off-to-report.png
-   :alt: A list of all time off requests that were not approved before payslips were generated.
+.. image:: time_off_to_report/time-offs.png
+   :alt: The Time Offs Gantt view of the Payroll app.
 
-Defer multiple time off entries
-===============================
+.. tip::
+   Before starting a pay run, make sure all the time off requests of the period are approved or
+   refused. The time off that is still waiting for approval is listed in the warnings displayed when
+   :ref:`creating a pay run <payroll/new-pay-run>`.
 
-In order to keep the employee's time off balances correct, the time off request **must** be applied
-to the following pay period. This not only ensures time off request balances are current, it also
-eliminates the need to redo work entries, cancel paychecks, and reissue paychecks.
+Time off approved before the payslip is validated
+=================================================
 
-To select the work entries to defer, tick the box to the left of the work entry line on the
-:ref:`Time Off page <payroll/time-off-dashboard>`. To select all work entries in the list, tick the
-box to the left of the :guilabel:`Employee` column title, at the top of the list.
+As long as a payslip is in the :guilabel:`Draft` status, approving, refusing, or cancelling a time
+off of the same employee and period automatically updates the payslip. No action is needed.
 
-Once any work entry is selected, two buttons appear at the top of the report: a :guilabel:`(#)
-selected` button, and an :icon:`fa-gear` :guilabel:`Actions` button. The :guilabel:`(#) selected`
-button indicates how many entries are currently selected.
+.. _payroll/time-off-to-report/after-validation:
 
-When all the desired work entries are selected, click the :icon:`fa-gear` :guilabel:`Actions`
-button, and a menu appears with several choices. Click :guilabel:`Defer to Next Month` in the list,
-and all selected entries are deferred to the following month.
+Time off approved after the payslip is validated
+================================================
 
-Defer individual time off entries
-=================================
+When a time off is approved for a period already covered by a validated or paid payslip, the
+payslip is **not** modified. Instead:
 
-Time off requests appearing on the :ref:`Time Off page <payroll/time-off-dashboard>` can be deferred
-individually. Click on an individual time off request, and the details for that request load.
+- The time off displays the warning :guilabel:`Payslip for the month is already validated.`
+- The payslip displays the warning :guilabel:`A time off has been modified.`
 
-The specific details for the time off request appear on the left-hand side, and all of the
-employee's submitted time off requests appear on the right-hand side (including the request in the
-details on the left-hand side).
+.. image:: time_off_to_report/time-off-to-correct.png
+   :alt: A time off with the warning that the payslip of the month is already validated.
 
-To defer the time off request to the next payslip, click the :guilabel:`Report to Next Month` button
-in the upper-left corner. Once processed, the :guilabel:`Report to Next Month` button disappears,
-and the :guilabel:`Payslip State` changes from :guilabel:`To defer to next payslip` to
-:guilabel:`Computed in Current Payslip`.
+.. example::
+   The payslips of July are validated and paid on July 28. An employee is sick on July 30 and 31.
+   The sick days are approved on August 1: the July payslip still counts these two days as worked
+   time, and must be corrected.
 
-.. image:: time_off_to_report/single-defer.png
-   :alt: The time off details for an individual request that needs to be deferred.
+To correct the payslip, click :guilabel:`Correct Payslip` on the time off, or :guilabel:`Update
+Payslip` on the payslip. The :guilabel:`Payslip Correction` pop-up window opens.
+
+.. image:: time_off_to_report/payslip-correction.png
+   :alt: The Payslip Correction pop-up window.
+
+If several payslips of the employee are affected, select whether to :guilabel:`Correct this payslip
+only` or to :guilabel:`Correct all affected payslips`, then click one of the following buttons:
+
+- :guilabel:`Correct`: Odoo cancels the original payslip with a validated *refund* payslip (with
+  negative amounts), and creates a new draft payslip for the same period, computed with the
+  approved time off. Both payslips are added to a new pay run, named `Correction (MM/YY)` followed
+  by the pay structure. Process this pay run like any other :doc:`pay run <pay_runs>`: the employee
+  receives, or pays back, the difference.
+- :guilabel:`Revert only`: Odoo only creates the refund payslip, in a `Revert` pay run.
+- :guilabel:`Keep it as is`: The payslip is kept unchanged, and is no longer proposed for
+  correction.
+
+.. seealso::
+   - :ref:`Correct a payslip <payroll/payslips/correct>`
+   - :doc:`../time_off`
