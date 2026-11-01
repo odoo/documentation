@@ -4,14 +4,14 @@ New employees
 
 When a new employee is hired, the first step is to create a new employee record. This record is a
 centralized place where all important information about the employee is stored, including
-:ref:`general information <employees/general-info>`, :ref:`job history and skills
-<employees/resume>`, :ref:`various work information <employees/work-info-tab>`, :ref:`personal
-details <employees/private-info>`, :ref:`payroll-related information <employees/payroll>`, and
+:ref:`general information <employees/general-info>`, :ref:`contract and payroll information
+<employees/payroll>`, :ref:`job history and skills <employees/resume>`, :ref:`various work
+information <employees/work-info-tab>`, :ref:`personal details <employees/private-info>`, and
 various :ref:`settings <employees/hr-settings>` that affect integrations with other apps in the
 database.
 
-To begin, open the :menuselection:`Employees` app, then click the :guilabel:`New` button in the
-corner. Doing so reveals a blank employee form.
+To begin, navigate to :menuselection:`Employees app --> Management`, then click the
+:guilabel:`New` button in the upper-left corner. Doing so reveals a blank employee form.
 
 Proceed to fill out the required information, along with any additional details.
 
@@ -32,29 +32,67 @@ General information
 Fill out the following employee details in the top section of the employee form.
 
 - :guilabel:`Employee's Name`: Enter the employee's name. This field is required.
-- :icon:`fa-envelope` :guilabel:`(Work Email)`: Enter the employee's work email address.
+- :icon:`fa-envelope` :guilabel:`(Work Email)`: Enter the employee's work email address. If an
+  internal user of the database, not yet linked to an employee of the company, uses this email
+  address, the employee is automatically linked to that user.
 - :icon:`fa-phone` :guilabel:`(Work Phone)`: Enter the employee's work phone number.
 - :icon:`fa-mobile` :guilabel:`(Work Mobile)`: Enter the employee's work mobile number.
 - :icon:`fa-tag` :guilabel:`(Tags)`: Select any tags from the drop-down menu to add relevant tags to
   the employee. Any tag can be created in this field by typing it in. Once created, the new tag is
   available for all employee records. There is no limit to the amount of tags that can be added on
   an employee form.
-- :guilabel:`Photo`: Upload a photo of the employee in the photo placeholder.
+- :guilabel:`Photo`: Upload a photo of the employee in the photo placeholder. If no photo is added,
+  an avatar with the employee's initial is generated.
 
 .. image:: new_employee/gen-info.png
-   :alt: The top-half of a new employee form, all filled out.
+   :alt: The top section of an employee form, with the versions timeline in the upper-right corner.
+
+.. _employees/form-header:
+
+Employee form header
+--------------------
+
+Once the employee record is saved, the following elements appear at the top of the form:
+
+- :guilabel:`Invite`: Creates a user for the employee and sends an invitation to the
+  :guilabel:`Work Email` address. Refer to the :ref:`Invite the employee <employees/invite-user>`
+  section for more information. This button is hidden once the employee is linked to a user.
+- *User status*: A badge displays whether the employee has access to the database:
+  :guilabel:`Not Invited`, :guilabel:`Invited`, :guilabel:`Confirmed`, or :guilabel:`Archived`.
+  Click the badge to access related actions, such as :guilabel:`Resend Invitation`, :guilabel:`Copy
+  Invitation Link`, :guilabel:`Reset Password`, or :guilabel:`Deactivate`.
+- *Versions timeline*: The dates in the upper-right corner are the start dates of the versions of
+  the employee record. Each time contractual information changes (wage, working hours, job, etc.),
+  a new version can be created with an effective date, so the history of the employee's terms is
+  kept. Click a date to display the employee record as it was on that date, or click the
+  :icon:`fa-plus` :guilabel:`(plus)` button to create a new version. Versions are explained in
+  detail in the :doc:`contracts <../payroll/contracts>` documentation.
+- *Smart buttons*: Depending on the installed apps, smart buttons give access to the employee's
+  documents, appraisals, goals, payslips, time off, timesheets, company cars, and more. The
+  :guilabel:`History` smart button, under :guilabel:`More`, lists all the versions of the employee
+  record.
+
+.. note::
+   If the **Payroll** app is installed, a badge in the upper-right corner of the employee form
+   indicates whether the latest changes to the employee's contractual information have been
+   :guilabel:`Reviewed`. Refer to the :doc:`contracts <../payroll/contracts>` documentation for more
+   information.
 
 .. _employees/payroll:
 
 Payroll tab
 ===========
 
+The *Payroll* tab holds the employee's contractual information: contract dates, wage, working
+hours, etc. These fields are stored on the current *version* of the employee record, so their
+changes can be tracked over time.
+
 Depending on the installed :doc:`payroll localization <../payroll/payroll_localizations>`, the
 sections and fields in this tab may vary considerably. Due to the specific nature of localizations
 and the variety of information that may be requested in this tab, it is recommended to check with
 the accounting department to fill out this section correctly.
 
-The *Contract overview* and *Schedule* sections are the **only** universal sections for all payroll
+The *Contract Overview* and *Schedule* sections are the **only** universal sections for all payroll
 localizations. All other sections in the *Payroll* tab are country-specific.
 
 .. seealso::
@@ -63,9 +101,21 @@ localizations. All other sections in the *Payroll* tab are country-specific.
 Contract overview
 -----------------
 
-This section contains all the various details from the employee contract. Refer to the
-:doc:`contracts <../payroll/contracts>` document for detailed information on creating and modifying
-employee contracts.
+This section contains the employee's contractual terms:
+
+- :guilabel:`Load a Template`: Copies the values of a contract template to the employee record.
+- :guilabel:`Employee Type`: The type of employment, such as :guilabel:`Employee`,
+  :guilabel:`Student`, or :guilabel:`Freelancer`.
+- :guilabel:`Contract`: The start and end dates of the employee's contract. Leave the end date
+  empty for an indefinite contract.
+- :guilabel:`Wage Type`: :guilabel:`Fixed Wage` or :guilabel:`Hourly Wage`.
+- :guilabel:`Wage`: The gross wage, followed by the pay frequency.
+- :guilabel:`Employer Cost`: The yearly cost of the employee for the company.
+- :guilabel:`Pay Category`: The kind of employee, used to determine the default salary structure in
+  the **Payroll** app.
+
+Refer to the :doc:`contracts <../payroll/contracts>` documentation for detailed information on
+setting up and modifying the employee's contract.
 
 .. _employees/schedule:
 
@@ -75,48 +125,37 @@ Schedule
 This section defines when the employee is expected to work. Configure the following fields:
 
 - :guilabel:`Working Hours`: Select the hours the employee is expected to work using the drop-down
-  menu. By default, a :guilabel:`Standard 40 hours/week` working schedule is selected. If the
-  **Timesheets** app is installed, an :guilabel:`Appointment Resource Default Calendar` option is
-  also available.
+  menu. By default, the company's working hours, defined in the :ref:`Employees app settings
+  <employees/settings>`, are selected. Only working schedules without a company, or belonging to
+  the employee's company (or to its parent company), are available.
 
   .. note::
-    :guilabel:`Working Hours` are related to a company's working schedules, and an employee
-    **cannot** have working hours that are outside of a company's working schedule.
+     If an employee's working hours are not configured as a working schedule, new working schedules
+     can be added, or existing working schedules can be modified.
 
-    Each individual working schedule is company-specific. For multi-company databases, each company
-    **must** have its own working hours set.
+     Working hours can be modified in both the **Employees** and **Payroll** apps, where they are
+     referred to as :guilabel:`Working Schedules`.
 
-    If an employee's working hours are not configured as a working schedule for the company, new
-    working schedules can be added, or existing working schedules can be modified.
-
-    Working hours can be modified in both the **Employees** and **Payroll** apps, where they are
-    referred to as :guilabel:`Working Schedules`.
-
-    For more information on how to create or modify :guilabel:`Working Schedules`, refer to the
-    :doc:`working schedules <../payroll/working_schedules>` documentation.
-
-    After the new working hours are created, or an existing one is modified, the :guilabel:`Working
-    Hours` can be selected on the employee form.
+     For more information on how to create or modify :guilabel:`Working Schedules`, refer to the
+     :doc:`working hours <working_hours>` documentation.
 
   .. important::
      The :guilabel:`Working Hours` field is **required** and cannot be left blank. For employees
      with no fixed schedule, :ref:`create a new fully-flexible working schedule
      <payroll/new-working-schedule>`, then select it.
 
-  .. seealso::
-     :doc:`Working hours <working_hours>`
-
-- :guilabel:`Attendance Based`: Click this checkbox to have payslips created using the employee's
-  badge records when signing in and out of work in an :ref:`attendance kiosk
-  <attendances/kiosk-mode-entry>`. If left unchecked, Odoo uses the employee's selected
-  :guilabel:`Working Hours` to create work entries when processing payroll.
+- :guilabel:`Attendance Based`: Tick this checkbox to compute the employee's payslips from their
+  attendance records, for example when they :ref:`check in and out at an attendance kiosk
+  <attendances/kiosk-mode-entry>`. If left unchecked, the employee's :guilabel:`Working Hours`
+  are used to compute their worked time. Time off is always taken into account. The default value
+  of this checkbox is defined by the :guilabel:`Default Tracking` setting.
 
 Payslip adjustments tab
 =======================
 
-This *Payslip Adjustments* tab houses **all** additional payslip adjustments, including :doc:`salary
-adjustments <../payroll/salary_attachments>`, child support, commissions, tips, bonuses, expense
-reimbursements, and any other deduction taken out of the employee's paycheck.
+The *Payslip Adjustments* tab houses **all** additional payslip adjustments, including
+:doc:`salary adjustments <../payroll/salary_attachments>`, child support, commissions, tips,
+bonuses, expense reimbursements, and any other deduction taken out of the employee's paycheck.
 
 Add each individual :ref:`payslip adjustment <payroll/salary_attachments/create>` to this tab.
 
@@ -141,19 +180,21 @@ Work
   .. example::
      Specific details can be added in the :guilabel:`Job Title` field, if desired.
 
-     For example, a sales representative position configured as :guilabel:`Sales Associate` in the
+     For example, a consultant position configured as :guilabel:`Consultant` in the
      **Recruitment** app can be selected for the :guilabel:`Job Position` field.
 
-     The :guilabel:`Job Title` field can be more specific, such as `Sales Associate - Europe` if the
-     employee is focused solely on European sales.
+     The :guilabel:`Job Title` field can be more specific, such as `Consultant - Retail Clients` if
+     the employee is focused solely on retail clients.
 
      .. image:: new_employee/job-title-fields.png
         :alt: Both job position fields entered but with different information.
 
 - :guilabel:`Manager`: Select the employee's manager using the drop-down menu.
 - :guilabel:`Next Appraisal Date`: If the **Appraisals** app is installed, this field displays the
-  next scheduled appraisal for the employee. This field is set to six months from the employee's
-  contract date, by default.
+  date of the next appraisal for the employee, computed from the appraisal plan. If an appraisal is
+  already in progress, :guilabel:`Ongoing` is displayed instead.
+
+.. _employees/work-location:
 
 Location
 --------
@@ -161,26 +202,30 @@ Location
 This section states where the employee is expected to work on any given workday.
 
 Using the drop-down menu, select the typical place the employee works from in the :guilabel:`Usual
-Work Location` field. The default options are :icon:`fa-home` :guilabel:`Home`, :icon:`fa-building`
-:guilabel:`Office`, or :icon:`fa-map-marker` :guilabel:`Other`. This field is **required**.
+Work Location` field. By default, :guilabel:`Home`, :guilabel:`Office`, and :guilabel:`Other`
+locations are available.
+
+Below the :guilabel:`Usual Work Location` field is a list of the days of the week. To indicate that
+the employee works from another location on a specific day, select that location in the
+corresponding field. Leave the field blank (:guilabel:`Unspecified`) to use the :guilabel:`Usual
+Work Location`. The location of the day is reflected on the employee's Kanban card.
 
 .. tip::
-   To create a new location, type the location in the field, click :guilabel:`Create and edit`, and
-   a *Create Usual Work Location* pop-up form loads.
+   To create a new location, type the location in the field, click :guilabel:`Create and edit...`,
+   and a *Create Usual Work Location* pop-up form loads.
 
-   The entered name populates the :guilabel:`Work Location` field, but can be modified. Select the
-   :guilabel:`Work Address` using the drop-down menu. Click the corresponding button to select the
-   :guilabel:`Location Type`. In a multi-company database, a :guilabel:`Company` field appears, and
-   is populated with the current company by default but can be modified if needed.
+   The entered name populates the :guilabel:`Name` field, but can be modified. Click the
+   corresponding button to select the :guilabel:`Location Type`: :guilabel:`Home`,
+   :guilabel:`Office`, or :guilabel:`Other`. Unless the location is the employee's home, select the
+   :guilabel:`Work Address` using the drop-down menu. In a multi-company database, a
+   :guilabel:`Company` field appears, and is populated with the current company by default but can
+   be modified if needed.
 
    Click :guilabel:`Save` when the form is complete. The window closes, and the newly configured
    location appears in the field.
 
-Below the :guilabel:`Usual Work Location` field is a list of the days of the week. For each day of
-the work week, select where the employee works that day using the drop-down menu. The selected
-location is reflected on the employee's Kanban card, indicating their location that day.
-
-Leave the field blank (:guilabel:`Unspecified`) for non-working days, such as Saturday and Sunday.
+   Work locations can also be managed by navigating to :menuselection:`Employees app -->
+   Configuration --> Employee --> Work Locations`.
 
 .. image:: new_employee/location.png
    :alt: A new work location form with all fields filled out.
@@ -193,9 +238,10 @@ Enter any relevant notes in this field.
 Organization chart
 ------------------
 
-The related departments appear in this section, illustrating where in the company the employee
+The employee's managers appear in this section, illustrating where in the company the employee
 works. The numbers to the right of each person listed indicates how many direct or indirect reports
-each employee has.
+each employee has. Click :guilabel:`Full Chart` to open the organization chart of the whole company,
+centered on the employee.
 
 .. note::
    After a :guilabel:`Department` is selected, the department's configured manager automatically
@@ -206,24 +252,26 @@ each employee has.
 
 .. _employees/resume:
 
-Resumé tab
+Resume tab
 ==========
 
-Resumé
+Resume
 ------
 
-Enter the employee's work history in the *Resumé* tab. Each resumé line must be entered
+Enter the employee's work history in the *Resume* tab. Each resume line must be entered
 individually. When creating an entry for the first time, click the :guilabel:`Create Resume Lines`
-button, and a *New Resumé Line* form appears. After an entry is added, the :guilabel:`Create Resume
-Lines` button is replaced with an :guilabel:`ADD` button. Enter the following information for each
-entry:
+button, and a *New Resume Line* form appears. Once a section, such as *Education*, contains an
+entry, an :guilabel:`Add` button appears next to it, to add another entry to that section. Enter
+the following information for each entry:
 
-- :guilabel:`Type`: Click the corresponding button to reflect the *type* of experience being added.
-  The available options are :guilabel:`Other Experience`, :guilabel:`Education`,
-  :guilabel:`Training`, or :guilabel:`Internal Certification`.
-- :guilabel:`Title`: Type in the title from the previous work experience.
-- :guilabel:`Duration`: Enter the start and end dates for the work experience using the calendar
-  module in the corresponding fields.
+- *Type*: Click the corresponding button to reflect the *type* of experience being added. The
+  default options are :guilabel:`Other Experience`, :guilabel:`Education`, :guilabel:`Training`,
+  :guilabel:`Side Projects`, and :guilabel:`Internal Certification`.
+- :guilabel:`Title`: Type in the title of the experience, such as the name of the previous
+  employer.
+- :guilabel:`Duration`: Enter the start and end dates for the experience using the calendar
+  selector in the corresponding fields. Leave the end date empty (:guilabel:`Forever`) for an
+  ongoing experience.
 - :guilabel:`Certificate`: If there is a relevant certificate to attach, click the :icon:`fa-upload`
   :guilabel:`(Upload)` icon, select the desired file, and click :guilabel:`Select`. The file name
   appears in the field, not an image of the certificate.
@@ -231,32 +279,33 @@ entry:
 
 Once all the information is entered, click the :guilabel:`Save & Close` button if there is only one
 entry to add, or click the :guilabel:`Save & New` button to save the current entry and create
-another resumé line.
+another resume line.
 
 .. image:: new_employee/resume-lines.png
-   :alt: A resumé entry form with all the information populated.
+   :alt: A resume entry form with all the information populated.
 
 .. note::
-   After the new employee form is saved, the current position and company is automatically added to
-   the *Resumé* tab, with the end date listed as `Current`.
+   The employee's experience in the company is automatically added at the top of the *Resume* tab,
+   based on their contract dates and job positions, with the end date listed as `Current` for the
+   ongoing contract.
 
 .. _employees/skills:
 
 Skills & certifications
 -----------------------
 
-An employee's skills and certifications can be entered in the *Resumé* tab in the same manner that a
-resumé line is created.
+An employee's skills and certifications can be entered in the *Resume* tab, in the *Skills &
+Certifications* section.
 
 To add a skill to an employee record, the skill type must first be configured. By default, Odoo
-comes with two :guilabel:`Skill Types` preconfigured: *Languages* and *Soft Skills*.
+comes with several :guilabel:`Skill Types` preconfigured, such as *Languages* and *Soft Skills*.
 :ref:`Configure the rest of the skill types <employees/skill-types>` before adding any skills to the
 employee record.
 
 When adding the first skill to an employee record, a :guilabel:`Pick a skill from the list` button
-appears in the *Skills* section of the *Resumé* tab. Click the :guilabel:`Pick a skill from the
-list` button, and a blank *Update Skills* pop-up window loads. Configure the following information
-for each skill:
+appears in the *Skills & Certifications* section of the *Resume* tab. Click the :guilabel:`Pick a
+skill from the list` button, and a blank *Update Skills* pop-up window loads. Configure the
+following information for each skill:
 
 - :guilabel:`Category`: Select a :ref:`skill type <employees/skill-types>` by clicking it.
 - :guilabel:`Skill`: After selecting the :guilabel:`Category`, all corresponding skills associated
@@ -273,13 +322,22 @@ for each skill:
   :guilabel:`Category` appear. Click on a :guilabel:`Skill Level` to select it. Skill levels can be
   created and modified from the :ref:`Skill Types <employees/skill-types>` dashboard.
 
+If the selected category is a certification, the :guilabel:`Validity` dates and a
+:guilabel:`Certificate` field also appear. Refer to the :ref:`Certifications tab
+<employees/certifications>` section for more information.
+
 Click the :guilabel:`Save & Close` button if there is only one skill to add, or click the
 :guilabel:`Save & New` button to save the current entry and immediately add another skill.
 
-At any point, a new line can be added by clicking the :guilabel:`Add` button.
+Once a skill is added, the skills are grouped by skill type, and an :guilabel:`Add` button appears
+next to each skill type of the employee, to add another skill of the same type.
 
 .. image:: new_employee/skills.png
    :alt: A skill form with the information filled out.
+
+When the level of a skill is changed, Odoo keeps the previous level in the employee's skill
+history. Click :icon:`fa-line-chart` :guilabel:`Timeline` in the *Skills & Certifications* section
+to view the evolution of the employee's skill levels over time in the *Skills Report*.
 
 .. important::
    Only users with :guilabel:`Officer: Manage all employees` or :guilabel:`Administrator` rights for
@@ -291,12 +349,8 @@ Skill types
 ~~~~~~~~~~~
 
 To add a skill to an employee's form, the :guilabel:`Skill Types` must be configured. Navigate to
-:menuselection:`Employees app --> Configuration --> Skill Types` to view the currently configured
-skill types and create new skill types.
-
-.. note::
-   The default skill of :guilabel:`Languages` is preconfigured with twenty-one skills, and the
-   default :guilabel:`Soft Skills` is preconfigured with fifteen skills.
+:menuselection:`Employees app --> Configuration --> Employee --> Skill Types` to view the currently
+configured skill types and create new skill types.
 
 Click the :guilabel:`New` button in the corner, and a new *Skill Type* form loads. Fill out the
 following details for the new skill type. Repeat this for all the needed skill types.
@@ -305,9 +359,9 @@ following details for the new skill type. Repeat this for all the needed skill t
   more specific skills and should be generic.
 - :guilabel:`Color`: Click on the existing color to view the available colors. Click the desired
   color to select it.
-- :guilabel:`Certification`: Click the toggle to indicate the skill is a certification. The toggle
-  turns green, indicating it is active and the skill can be added to the :ref:`certifications
-  <employees/certifications>` tab.
+- :guilabel:`Certification`: Click the toggle to indicate the skills of this type are
+  certifications. The toggle turns green, and the skills can then be added to the
+  :ref:`certifications <employees/certifications>` tab, with a validity period.
 - :guilabel:`Skills`: Click :guilabel:`Add a line` and enter the :guilabel:`Name` for the new skill,
   then repeat for all other needed skills.
 - :guilabel:`Levels`: Click :guilabel:`Add a line`, and enter a :guilabel:`Name` and
@@ -322,17 +376,16 @@ following details for the new skill type. Repeat this for all the needed skill t
      colored circle next to :guilabel:`Color`, and select yellow. Then, in the :guilabel:`Skills`
      field, enter `Algebra`, `Calculus`, and `Trigonometry`. Next, in the :guilabel:`Levels` field,
      enter `Beginner`, `Intermediate`, and `Expert`, with the :guilabel:`Progress` listed as `25`,
-     `50`, and `100`, respectively. Click :guilabel:`Set Default` on the `Beginner` line to set this
-     as the default skill level.
+     `50`, and `100`, respectively. Click the :guilabel:`Default Level` toggle on the `Beginner`
+     line to set this as the default skill level.
 
      .. image:: new_employee/math-skills.png
         :alt: A skill form for a Math skill type, with all the information entered.
 
 .. tip::
-   Once the form is completely filled out, click the :icon:`fa-cloud-upload` :guilabel:`(Save
-   manually)` icon at the top of the screen, and the :guilabel:`Levels` rearrange in descending
-   order, with the highest level at the top, and the lowest at the bottom, regardless of the default
-   level and the order they were entered.
+   Once the form is saved, the :guilabel:`Levels` are sorted by :guilabel:`Progress`, with the
+   highest level at the top, and the lowest at the bottom, regardless of the default level and the
+   order they were entered.
 
 .. _employees/certifications:
 
@@ -355,9 +408,12 @@ The tab lists each :guilabel:`Certification` in a line, and displays the validit
 To add a certification, click :guilabel:`Add a line` in the *Certifications* tab and a blank *Create
 Certification* pop-up window loads. Enter the following information on the form:
 
+- :guilabel:`Category`: Click on the type of certification being added. This field only appears
+  if several skill types are configured as certifications.
 - :guilabel:`Skill`: Click on the specific certification being added.
 - :guilabel:`Validity`: Click into the two fields, and select the start and end dates for the
-  certification, using the calendar selector.
+  certification, using the calendar selector. Leave the second field empty if the certification
+  does not expire.
 - :guilabel:`Certificate`: If a proof of certification document is available, such as a course
   completion certificate, it can be added in this field. Click the :icon:`fa-upload`
   :guilabel:`(Upload)` icon, navigate to the file, and click :guilabel:`Select`.
@@ -366,7 +422,7 @@ When the form is complete, click :guilabel:`Save & New` to add the certification
 :guilabel:`Save & Close` to add the certification and close the pop-up window.
 
 .. image:: new_employee/certifications.png
-   :alt: The certification pop-up with everything configured for a Fire Safety Course certification.
+   :alt: The certification pop-up with everything configured for a Scrum Master certification.
 
 .. _employees/private-info:
 
@@ -396,8 +452,19 @@ Fill out the following fields in this section:
 
 - :guilabel:`Email`: Enter the employee's personal email address.
 - :guilabel:`Phone`: Enter the employee's personal phone number.
-- :guilabel:`Bank Accounts`: Enter the bank account number using the drop-down menu. If the bank
-  account does not exist, :ref:`create a new bank account <employees/add-bank>` and select it.
+- :guilabel:`Bank Accounts`: Select the employee's bank accounts using the drop-down menu. If the
+  bank account does not exist, :ref:`create a new bank account <employees/add-bank>` and select it.
+  An employee can have several bank accounts.
+
+  When the employee has one bank account, :guilabel:`Trusted` or :guilabel:`Untrusted` is displayed
+  next to it. Click the :icon:`fa-toggle-off` :guilabel:`(toggle)` icon to trust or distrust the
+  account.
+
+  When the employee has several bank accounts, click :guilabel:`Salary Allocation` to define how
+  the salary is split between them. In the *Bank Account Allocations* pop-up window, drag the bank
+  accounts to order them by priority (the first one is the primary account), enter the
+  :guilabel:`Amount` and its :guilabel:`Type` (a fixed amount or a percentage) for each account,
+  enable the :guilabel:`Trusted` toggle of each trusted account, then click :guilabel:`Save`.
 
 .. _employees/add-bank:
 
@@ -406,21 +473,21 @@ Add a bank account
 
 When an employee is added to the database, their bank account must also be added to pay them using
 the **Payroll** app. To add a new bank account, click into the :guilabel:`Bank Accounts` field in
-the *Private Contact* section, then click :guilabel:`Create`.
+the *Private Contact* section, then click :guilabel:`Create...`.
 
 A blank *Create Bank Accounts* pop-up window loads. Enter the following information on the form:
 
 - :guilabel:`Account Number`: Enter the bank account number in this field.
 - :guilabel:`Clearing Number`: The default name for this field is :guilabel:`Clearing Number` but
-  may be different depending on the installed :doc:`payroll localization
-  <../payroll/payroll_localizations>`. Using the drop-down menu, select the country-specific name
-  for this field. For example, the United States displays :guilabel:`Routing Number` while the
-  United Kingdom displays :guilabel:`Sort Code`. Next, enter the corresponding code in this field.
+  may be different depending on the country of the company. For example, the United States
+  displays :guilabel:`Routing Number` while the United Kingdom displays :guilabel:`Sort Code`.
+  Enter the corresponding code in this field.
 - :guilabel:`BIC/SWIFT`: Enter the Bank Identifier Code in this field. This is used for
   international wire transfers.
 - :guilabel:`Bank Account Type`: Select the kind of account being added. The options are
   :guilabel:`Checking` or :guilabel:`Savings`.
-- :guilabel:`Holder Name`: Enter the account holder's name in this field.
+- :guilabel:`Holder Name`: The employee's name populates this field by default. Modify it if the
+  account holder's name is different.
 - :guilabel:`Trust bank account`: Click the toggle so it appears green, indicating it is a trusted
   bank account.
 - :guilabel:`Company`: This field only appears in a multi-company environment. Select a company to
@@ -440,8 +507,8 @@ A blank *Create Bank Accounts* pop-up window loads. Enter the following informat
    :guilabel:`Trusted`. Having an untrusted bank account for an employee causes an error in the
    **Payroll** application when processing direct deposits.
 
-   If issuing paper checks or paying via cash, the :guilabel:`Bank` field does not need to be
-   configured.
+   If issuing paper checks or paying via cash, the :guilabel:`Bank Accounts` field does not need to
+   be configured.
 
 Personal information
 --------------------
@@ -453,6 +520,8 @@ purposes. Fill out the following fields in this section:
   entered in the :ref:`general information section <employees/general-info>` populates this field.
   This is the name that typically is used for filing taxes.
 - :guilabel:`Birthday`: Select the birthday of the employee using the calendar selector.
+- :guilabel:`Show Birthday To Employees`: Once a birthday is entered, enable this toggle to display
+  the employee's birthday to the other employees.
 - :guilabel:`Place of Birth`: Enter both the city or town the employee was born in the first field,
   and select the country in the second field using the drop-down menu.
 - :guilabel:`Sex`: Select the employee's legal sex recognized by the state from the drop-down menu.
@@ -476,13 +545,15 @@ the following fields in this section:
 - :guilabel:`Non-resident`: Click this checkbox if the employee is not a legal resident of the
   country where they are employed.
 - :guilabel:`Identification No`: Enter the employee's national identification number issued by the
-  government in this field. Some examples are Aadhaar, :abbr:`SIN (Social Insurance Number)`,
-  :abbr:`SSN (Social Security Number)`, or :abbr:`NIN (National Identification Number)`.
-- :guilabel:`Passport No`: Enter the employee's passport number.
+  government in this field. Some examples are Aadhaar, :abbr:`SIN (Social Insurance Number)`, or
+  :abbr:`NIN (National Identification Number)`.
+- :guilabel:`Passport No`: Enter the employee's passport number. When entered, an :guilabel:`Expires
+  on` field appears. Select the date the passport expires using the calendar selector.
 
 .. note::
    Depending on the installed :doc:`payroll localization <../payroll/payroll_localizations>`,
-   additional fields may appear in this section.
+   additional fields may appear in this section, such as the :guilabel:`US: Social Security Number`
+   field for the United States.
 
 Visa & work permit
 ------------------
@@ -495,6 +566,9 @@ Enter the applicable following fields in this section:
   field appears. Select the date the visa expires using the calendar selector.
 - :guilabel:`Work Permit No`: Enter the employee's work permit number. When entered, an
   :guilabel:`Expires on` field appears. Select the date the work permit expires using the calendar.
+  Before the work permit expires, a to-do activity is scheduled for the employee's
+  :ref:`HR Responsible <employees/approvers>`, according to the :guilabel:`Work Permit Expiration
+  Notice Period` defined in the :ref:`settings <employees/settings>`.
 - :guilabel:`Document`: click the :icon:`fa-upload` :guilabel:`(Upload)` icon, then navigate to the
   work permit or visa file in the file explorer, and click :guilabel:`Select` to upload it.
 
@@ -507,7 +581,7 @@ Emergency contact
 
 This section details the person to contact in the event of an emergency. Enter the following fields:
 
-- :guilabel:`Contact`: Enter the emergency contact's name.
+- :guilabel:`Contact Name`: Enter the emergency contact's name.
 - :guilabel:`Phone`: Enter the emergency contact's phone number. It is recommended to enter a phone
   number that the person has the most access to, typically a mobile phone.
 
@@ -519,7 +593,8 @@ Location
 The *Location* section is visible for all employees, and does not require any other apps to be
 installed for this section to be visible. Enter the following information in this section:
 
-- :guilabel:`Private Address`: Enter the employee's current home address in this field.
+- :guilabel:`Private Address`: Enter the employee's current home address in the street, city,
+  state, ZIP, and country fields. The country of the company is selected by default.
 - :guilabel:`Home-Work Distance`: Enter the number of miles or kilometers the employee commutes to
   work, in one direction. The unit of measure can be changed from kilometers (:guilabel:`km`) to
   miles (:guilabel:`mi`) using the drop-down menu. This field is **only** required if the employee
@@ -577,10 +652,18 @@ The documents that can be uploaded are:
      Employees must use the :doc:`Expenses app <../../finance/expenses>` to request reimbursement
      for expenses, or define compensation in the *Payslip Adjustments* tab.
 
+End of collaboration tab
+========================
+
+The *End of Collaboration* tab only appears once the :ref:`end of collaboration
+<employees/end-of-collaboration>` of the employee has been registered. It displays the end reason,
+the dismissal date, and the date on which the employee is archived.
+
 Badges tab
 ==========
 
-The *Badges* tab is where all earned and awarded :doc:`badges <badges>` are housed.
+The *Badges* tab is where all earned and awarded :doc:`badges <badges>` are housed. This tab only
+appears if the employee is linked to a :ref:`user <employees/hr-settings>`.
 
 .. _employees/hr-settings:
 
@@ -595,7 +678,9 @@ User
 
 - :guilabel:`User`: If desired, select a user in the database to link to this employee using the
   drop-down menu, or :ref:`create a new user <employees/new-user>`.
-- :guilabel:`Timezone`: Select the timezone for the employee using the drop-down menu.
+- :guilabel:`Timezone`: Select the timezone for the employee using the drop-down menu. This field is
+  required, and is used to compute the employee's working hours. If the employee is linked to a
+  user, the timezone is kept in sync with the user's timezone.
 
 .. _employees/new-user:
 
@@ -606,9 +691,8 @@ If the new employee also needs access to the database, click into the drop-down 
 :guilabel:`User` field. Click :icon:`fa-envelope-o` :guilabel:`Invite teammates via email` and an
 *Invite teammates* pop-up window appears.
 
-The employee name populates the :guilabel:`Name` field by default. The :guilabel:`Email Address`,
-:guilabel:`Phone`, :guilabel:`Company`, and :guilabel:`photo` fields are populated with the
-corresponding fields from the :ref:`general information <employees/general-info>` section of form.
+The pop-up window displays the employee's name, as well as the work email, work phone, and company
+from the :ref:`general information <employees/general-info>` section of the form.
 
 Click the :guilabel:`Send Invitation` button, an email is sent, and a notification briefly appears.
 
@@ -631,26 +715,24 @@ Off** app is not installed, the :guilabel:`Time Off` approvers field does not ap
 selection can be made for each field.
 
 .. important::
-   Only users with *Administrator* rights for the corresponding human resources role appear in the
-   drop-down menu.
+   Only users with the corresponding approval rights appear in the drop-down menus.
 
    To check these rights, navigate to :menuselection:`Settings app --> Users & Companies --> Users`,
-   and click on a user. Scroll to the *Human Resources* section in the *Access Rights* tab, and
-   check the :guilabel:`Employees` settings.
+   and click on a user. Check the settings of the respective app in the *Access Rights* tab.
 
 - :guilabel:`HR Responsible`: Select the user responsible for validating the employee's contracts
-  using the drop-down menu.
+  using the drop-down menu. This field is required.
 - :guilabel:`Expense`: Select the user responsible for approving all expenses for the employee using
-  the drop-down menu.
+  the drop-down menu. If left empty, expenses are approved by the department manager or the
+  employee's manager, or are automatically validated if there is none (:guilabel:`Auto-validation`).
 - :guilabel:`Time Off`: Select the user responsible for approving all time off requests from this
-  employee using the drop-down menu.
+  employee using the drop-down menu. If left empty, the approval is done by a **Time Off**
+  administrator or approver.
 - :guilabel:`Timesheet`: Select the user responsible for approving all the employee's timesheet
-  entries using the drop-down menu.
-- :guilabel:`Attendance`: Select the user responsible for approving all attendance entries for the
-  employee using the drop-down menu.
-
-.. tip::
-   If any approver field is left empty, the approval is done by an Administrator or Approver.
+  entries using the drop-down menu. If left empty, the approval is done by a **Timesheets**
+  administrator or a user with access to all timesheets.
+- :guilabel:`Attendance`: Select the user who can access and edit the attendance records of the
+  employee in the **Attendances** app, using the drop-down menu.
 
 Planning
 --------
@@ -668,11 +750,13 @@ the employee can be assigned in the **Planning** app.
 Application settings
 --------------------
 
-This section affects the **Manufacturing** app. Enter the following information in this section.
+This section affects the **Manufacturing** and **Timesheets** apps. Enter the following information
+in this section.
 
 - :guilabel:`Hourly Cost`: Enter the hourly cost for the employee, in a `##.##` format. This cost is
   factored in when the employee is working at a :doc:`work center
-  <../../inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers>`.
+  <../../inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers>`, and to value
+  the employee's timesheets.
 
   .. note::
      Manufacturing costs are added to the costs for producing a product if the value of the
@@ -681,11 +765,11 @@ This section affects the **Manufacturing** app. Enter the following information 
 
 .. _employees/new_employee/hr-attn-pos:
 
-Attendance/Point of Sale/Manufacturing
---------------------------------------
+Attendance/Point of Sale
+------------------------
 
 This section determines how employees sign in to the **Attendances**, **Point Of Sale**, and
-**Manufacturing** apps, and only appears if any of those apps are installed.
+**Manufacturing** apps.
 
 - :guilabel:`PIN Code`: Enter the employee's PIN code in this field. This code is used to sign in
   and out of **Attendances** app kiosks, the **Point Of Sale** app, and the **Manufacturing** app's
@@ -714,10 +798,15 @@ Export
 This section is used when exporting data to a third party. Enter the relevant code in the
 :guilabel:`External Code` field.
 
+.. _employees/invite-user:
+
 Invite the employee
 ===================
 
 After the employee is created, click the :guilabel:`Invite` button in the top corner of the employee
-record. An email is sent to the address entered in the :icon:`fa-envelope` :guilabel:`(Work Email)`
-field in the :ref:`General Information <employees/general-info>` section, and a notification stating
-`Notification. A signup link was sent by email` briefly appears.
+record. A user is created for the employee, an email is sent to the address entered in the
+:icon:`fa-envelope` :guilabel:`(Work Email)` field in the :ref:`General Information
+<employees/general-info>` section, and a notification stating `A signup link was sent by email`
+briefly appears.
+
+The user status badge then displays :guilabel:`Invited`, until the employee accepts the invitation.

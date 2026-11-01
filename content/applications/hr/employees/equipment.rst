@@ -8,7 +8,9 @@ of important information regarding the equipment, such as serial numbers, warran
 maintenance history.
 
 .. note::
-   To track employee equipment, the **Maintenance** app *must* be installed.
+   To track employee equipment, the **Maintenance** app *must* be installed. The
+   :guilabel:`Equipment` smart button is only visible to users with the *Equipment Manager* access
+   rights for the **Maintenance** app.
 
 .. _employees/equipment:
 
@@ -16,12 +18,13 @@ Individual employee equipment
 =============================
 
 Employee equipment is tracked on the employee record. To view all equipment currently assigned to an
-employee, navigate to the :menuselection:`Employees` app, and click on the desired employee record.
+employee, navigate to :menuselection:`Employees app --> Management`, and click on the desired
+employee record.
 
-At the top of the record, an :icon:`fa-cubes` :guilabel:`Equipment Count` smart button appears, with
+At the top of the record, an :guilabel:`Equipment` smart button appears, with
 a number indicating how many, if any, items are currently assigned to that employee.
 
-Click the :icon:`fa-cubes` :guilabel:`Equipment Count` smart button, and all equipment currently
+Click the :guilabel:`Equipment` smart button, and all equipment currently
 assigned to the employee appears in individual Kanban cards.
 
 Each Kanban card displays the equipment's name and model on the first line, followed by the serial
@@ -61,8 +64,8 @@ equipment.
 Add equipment to an employee record
 ===================================
 
-To add equipment to an employee's record, open the :menuselection:`Employees` app, click on the
-desired employee record, then click the :icon:`fa-cubes` :guilabel:`Equipment Count` smart button at
+To add equipment to an employee's record, navigate to :menuselection:`Employees app --> Management`,
+click on the desired employee record, then click the :guilabel:`Equipment` smart button at
 the top.
 
 All equipment currently assigned to the employee appears in individual Kanban cards. To add a new
@@ -76,8 +79,8 @@ employee's equipment.
    Instead of filling out a new :guilabel:`Equipment` form for the same item, a form can be
    duplicated, then updated.
 
-   On the :guilabel:`Equipment` form, click the :icon:`fa-gear` :guilabel:`(Actions)` icon in the
-   upper-left corner, then select :icon:`fa-clone` :guilabel:`Duplicate`.
+   On the :guilabel:`Equipment` form, click the :icon:`fa-gear` :guilabel:`(Actions)` icon next to
+   the record name, then select :icon:`fa-clone` :guilabel:`Duplicate`.
 
    An identical form appears, with *all* the information filled out, except for the
    :guilabel:`Serial Number`.
@@ -87,3 +90,7 @@ employee's equipment.
 
    .. image:: equipment/equipment-form.png
       :alt: A duplicate equipment form with all the information filled out except the serial number.
+
+.. note::
+   When the :doc:`end of collaboration <archive>` of an employee is applied, all their equipment is
+   automatically unassigned.

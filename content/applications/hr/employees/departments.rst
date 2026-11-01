@@ -28,7 +28,12 @@ right of the department card, illustrating where the department lies in the orga
 many employees are within each listed department.
 
 .. image:: departments/department-form.png
-   :alt: The department for with all fields filled out.
+   :alt: The department form with all fields filled out.
+
+Once the department is saved, two smart buttons appear at the top of the form: the
+:guilabel:`Employees` smart button lists the employees of the department, and the
+:guilabel:`Plans` smart button lists the :doc:`onboarding <onboarding>` and :doc:`offboarding
+<offboarding>` plans available for the department.
 
 .. note::
    The form auto-saves while data is entered, however the :guilabel:`Department Organization` chart

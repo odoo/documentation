@@ -17,6 +17,10 @@ Properly configuring the settings in the **Employees** app ensures the dashboard
 employee's real-time attendance and work location—data that drives payroll accuracy, capacity
 planning, and compliance reporting.
 
+HR officers manage employee records from :menuselection:`Employees app --> Management`. All users
+can consult their colleagues' public information, such as their job position, department, and
+work contact details, in :menuselection:`Employees app --> Directory`.
+
 .. cards::
 
    .. card:: New employees
@@ -69,10 +73,10 @@ planning, and compliance reporting.
 
       Take care of employee assets and documents when collaboration ends.
 
-   .. card:: Archive employees
+   .. card:: End of collaboration
       :target: employees/archive
 
-      Ensure employee records are correctly handled collaboration ends.
+      Register an employee's departure and archive their employee record.
 
    .. card:: Training attendances
       :target: employees/training_attendances
@@ -86,6 +90,24 @@ Settings
 
 To view and configure the available settings, navigate to :menuselection:`Employees app -->
 Configuration --> Settings`.
+
+Work organization
+-----------------
+
+- :guilabel:`Company Working Hours`: Using the drop-down menu, select the default working schedule
+  of the company, such as :guilabel:`40 hours/week`. This schedule is selected by default on new
+  employees. Click the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon to open and modify the
+  working schedule.
+
+  The available working hours listed are the same as the configured :doc:`working schedules
+  <employees/working_hours>`. Working hours can be created and modified from both the **Payroll**
+  and **Employees** apps.
+- :guilabel:`Company Timezone`: Select the timezone of the company. It is used by default for new
+  employees.
+- :guilabel:`Default Tracking`: Tick this checkbox if the employees' payslips are computed from
+  their attendance records by default. This sets the default value of the :ref:`Attendance Based
+  <employees/schedule>` checkbox of new employees. This setting is only available if the
+  **Attendances** and **Payroll** apps are installed.
 
 Employees
 ---------
@@ -107,49 +129,26 @@ Employees
     the specified corporate IP addresses. Enter the IP addresses in the :guilabel:`IP Addresses`
     field, separating each address with a comma.
 
-- :guilabel:`Skills Management`: Enable this option to display the :ref:`resumé tab
+- :guilabel:`Skills Management`: Enable this option to display the :ref:`resume tab
   <employees/resume>` on employee profiles. This allows for the display of :ref:`work experience
   <employees/resume>`, :ref:`skills <employees/skills>`, and :doc:`certifications
   <employees/certifications>`.
 
-Work organization
------------------
-
-Using the drop-down menu, select the default :guilabel:`Company Working Hours`. The default options
-are a :guilabel:`Standard 40 hours/week` or an :guilabel:`Appointment Resource Default Calendar`.
-
-The available working hours listed are the same as the configured :doc:`working schedules
-<payroll/working_schedules>` in the **Payroll** app. Working hours can be created and modified from
-both the **Payroll** and **Employees** apps.
-
 Contract
 --------
 
-Define the number of days in advance that a manager is notified about an upcoming contract or work
-permit expiration in the respective :guilabel:`Contract Expiration Notice Period` and
-:guilabel:`Work Permit Expiration Notice Period` fields.
+Define the number of days in advance that the employee's HR responsible is notified, with a to-do
+activity, about an upcoming contract or work permit expiration in the respective
+:guilabel:`Contract Expiration Notice Period` and :guilabel:`Work Permit Expiration Notice Period`
+fields.
 
 Salary configurator
 -------------------
 
-Define how long an offer remains valid when extending a job offer or changing a salary. Enter the
+Define how long an offer remains valid when sending a salary package to an employee. Enter the
 duration, in days, in the :guilabel:`Salary Package Configurator` field.
 
 This field only appears if the **Salary Configurator** module is installed.
-
-Extra time off allocation
--------------------------
-
-During salary package negotiations, enable the checkbox in this section if additional time off
-requests are allowed. When enabled, select the :doc:`Time Off Type <time_off/time_off_types>`
-created for the additional days using the drop-down menu.
-
-The default available options are :guilabel:`Paid Time Off`, :guilabel:`Compensatory Days`, and
-:guilabel:`Extra Time Off`. If other time off types are configured in the **Time Off** app, they are
-available in the drop-down menu.
-
-This field only appears if the **Salary Configurator** module is installed.
-
 
 .. toctree::
    :titlesonly:
