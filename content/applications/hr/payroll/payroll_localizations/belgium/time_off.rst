@@ -2,7 +2,46 @@
 Time off and working schedules
 ==============================
 
-This page covers Belgian time off rules and how they impact payroll.
+This page covers the Belgian time off rules handled by Odoo, and how time off and working schedule
+changes impact Belgian payslips.
+
+In Odoo, every kind of time off (paid time off, sickness, unemployment, etc.) is a *time type*. The
+time off requests and allocations of the **Time Off** app, the working schedules, and the
+attendances are converted into *worked days* lines on the payslip, according to their time type.
+
+.. _payroll/l10n_be/time_types:
+
+Belgian time types
+==================
+
+The Belgian payroll localization comes with its own set of time types, restricted to the
+companies located in Belgium. Their codes follow the format of the main Belgian social
+secretariats (for example, `016.00` for the legal leave of employees, `013.00` for the
+guaranteed monthly wage in case of illness, or `147.00` for time credit).
+
+To view them, navigate to :menuselection:`Time Off app --> Configuration --> Time Types`, or
+:menuselection:`Payroll app --> Configuration --> Time Management --> Time Types`.
+
+On top of the standard time type settings, the :guilabel:`Payroll` tab of a Belgian time type
+contains:
+
+- :guilabel:`Time Credit`: the time type reduces the working time of the employee as part of a
+  working time reorganisation (time credit, parental leave, etc.). See
+  :ref:`payroll/l10n_be/working_schedule_change`.
+- :guilabel:`Declarations` section: the codes used to declare the time type to the social security
+  (:guilabel:`DMFA` code, :guilabel:`e-Gov 3.0 Code`), the :guilabel:`DRS trigger` and
+  :guilabel:`DRS Nature` used for the electronic declarations of social risks, and an
+  :guilabel:`External` code, used in the :ref:`time entries export
+  <payroll/l10n_be/work_entries_exports>`.
+
+The :guilabel:`Description` tab explains in which case the time type should be used.
+
+.. image:: time_off/belgian-time-type.png
+   :alt: The Payroll tab of the Belgian legal leave time type.
+
+.. tip::
+   In the time types list view, the :guilabel:`Computed in Holiday Rights` filter shows the time
+   types that are assimilated to worked time for the computation of the holiday pay.
 
 .. _payroll/l10n_be/time_off:
 
@@ -14,584 +53,428 @@ Time off
 Legal time off
 --------------
 
-This guide provides an overview of the basic rules governing legal holiday entitlements in Belgium
-for employers using Odoo.
+In Belgium, the paid time off of a year (the *vacation year*) depends on the time worked during
+the previous year (the *holiday exercise*). A full year of work in the previous year gives four
+weeks of paid time off in the employee's current working schedule: 20 days for a 5-day week, 16
+days for a 4-day week, etc.
+
+The legal time off of employees uses the :guilabel:`Legal leave employee` (`016.00`) time type.
+The time off of the manual workers, paid by their holiday fund, uses the :guilabel:`Annual
+holiday (workers)` (`142.00`) time type.
+
+.. _payroll/l10n_be/legal_time_off_computation:
 
 Holiday entitlement calculation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Your holiday entitlement for the current year (N) is determined by the number of months worked in
-Belgium during the previous year (N-1).
+Odoo computes the entitlement in hours, then converts it into days:
 
-**Calculation details:**
+#. For each period of the reference year covered by a contract, the share of the year worked is
+   the number of working days of the period (Monday to Saturday) divided by the number of working
+   days of the whole year. This share, multiplied by four weeks of the hours per week of the
+   working schedule of the period, gives the accrued hours.
+#. Each period is capped at the hours per week of the working schedule of the next year, so that
+   an employee moving to a part-time schedule does not receive more hours than four weeks of their
+   new schedule.
+#. The hours are converted into days with the hours per day of the next year's working schedule,
+   rounded down to the nearest half day, and capped at four weeks of the working days per week of
+   that schedule.
 
-- Employees earn **2 days of leave per month** based on a 6-day work week.
-- The entitlement is adjusted for a 5-day work week: :math:`(\text{Total Days} \div 6) \times 5`.
-
-.. example::
-   If an employee worked **7 months** in the previous year (N-1):
-
-   - **6-day work week:** :math:`7 \times 2 = 14 \text{ days}`
-   - **5-day work week:** :math:`14 \div 6 \times 5 = 11.67 \text{ days}`
-
-**Partial Month Calculation:**
-
-- Worked **1st to 10th**: Full month counted.
-- Worked **11th to 19th**: Half month counted.
-- Worked **20th onwards**: Month not counted.
-
-**Rounding Rules:**
-
-- Less than **0.35**: Round to **0**.
-- Between **0.35 - 0.74**: Round to **0.5**.
-- **0.75 and above**: Round to **1**.
-
-For a full-time employee, this typically results in **11.5 days of legal holiday** entitlement.
-
-Maximum holiday entitlement
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Employees are entitled to a maximum of **4 weeks** of holiday based on their working schedule. If an
-employee switches between full-time and part-time work, their entitlement is adjusted accordingly.
-
-**Calculation details:**
-
-- **5-day work week**: :math:`4 \times 5 = 20 \text{ days}`
-- **4-day work week**: :math:`4 \times 4 = 16 \text{ days}`
-- **3-day work week**: :math:`4 \times 3 = 12 \text{ days}`
+For a new employee, the paid time off still due by a previous employer, as stated on their
+:ref:`holiday attestations <payroll/l10n_be/holiday_pay_recovery>`, is added to the
+computation.
 
 .. example::
-   If an employee joined **Odoo on January 1, 2024**, and plans to switch to a **3-day work week
-   from April 1, 2024**:
+   Kevin Desmet starts on March 2, 2026, with a full-time schedule of 38 hours per week (7.6 hours
+   per day). The year 2026 has 313 working days (Monday to Saturday), 262 of which are covered by
+   his contract:
 
-   **Step 1: Calculate holiday entitlement for 2024**
+   - Accrued hours: :math:`262 \div 313 \times 4 \times 38 = 127.23` hours
+   - Paid time off for 2027: :math:`127.23 \div 7.6 = 16.74` days, rounded down to **16.5 days**
 
-   - The employee worked **9 months in 2023**.
-   - **6-day work week basis**: :math:`9 \times 2 = 18 \text{ days}`
-   - Adjusted for **5-day work week**: :math:`18 \div 6 \times 5 = 15 \text{ days}`
+   Olivier Lemaire works full time (38 hours per week) until October 31, 2026, then 4/5 (30.4
+   hours per week, four days a week) from November 1, 2026. His 2026 periods are capped at 30.4
+   hours per week, which gives 121.6 hours, or **16 days** of 7.6 hours: the maximum for a 4-day
+   week.
 
-   **Step 2: Verify maximum holiday entitlement**
+.. note::
+   The computation is based on the periods under contract. Check the result for the employees who
+   had absences that are not assimilated to worked time (for example, unpaid leave), and adapt the
+   :guilabel:`To Allocate` column if needed.
 
-   - For a **5-day work week**, the maximum entitlement is **20 days**.
-   - Since the employee is entitled to **15 days**, they remain within the limit.
-
-   **Step 3: Adjust entitlement for the new work schedule**
-
-   - From April 1, 2024, the employee moves to a **3-day work week**.
-   - Maximum entitlement for a **3-day work week**: :math:`3 \times 4 = 12 \text{ days}`.
-   - If no leave is taken before April 1, the employee may take up to **12 days** from
-     their 15-day entitlement.
-   - The **remaining 3 days** will be settled at the end of the year.
-
-This ensures compliance with Belgian legal leave regulations and allows employers to manage holiday
-entitlements effectively within Odoo.
+.. _payroll/l10n_be/legal_time_off_allocation:
 
 Legal time off allocation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is possible to generate the legal time off for all your employees at the beginning of a new
-year using the wizard in :menuselection:`Payroll app --> Reporting --> Belgium --> Paid Time Off
-Allocation`.
+At the end of a year, generate the legal time off of the next year for all employees with the
+*Paid Time Off Allocation* tool. To open it, go to the **Employees** app, select the employees in
+the list view, click the :icon:`fa-cog` :guilabel:`Actions` button, and select :guilabel:`Paid
+Time Off Allocation`. When some employees have no allocation for the current year, the
+:guilabel:`Employees require paid time off allocation` warning of the **Payroll** app dashboard
+also opens it, with its :guilabel:`Review` button.
 
-Based on your employees occupation over last year, the number of available time off is pre-computed
-for each employee.
+Select the :guilabel:`Reference Period`: the year worked. The allocations are created for the
+following year. For each employee, the list shows:
+
+- :guilabel:`Attestations`: the remaining days from the holiday attestations of a previous
+  employer.
+- :guilabel:`Accrued Days`: the paid time off computed for the period. Hover over the value to see
+  the details of the worked periods and of the holiday attestations.
+- :guilabel:`Future Working Schedule`: the working schedule used to convert the hours into days.
+- :guilabel:`Allocated`: the paid time off already allocated for the next year.
+- :guilabel:`To Allocate`: the paid time off that will be allocated. This value can be edited.
+- :guilabel:`To Postpone (N+1)` and :guilabel:`To Postpone (N+2)`: the postponed paid time off,
+  only shown when some days are postponed. See :ref:`payroll/l10n_be/postponed_time_off`.
 
 .. image:: time_off/paid-time-off-allocation-01.png
-   :alt: Paid Time Off Allocation Wizard.
+   :alt: The Paid Time Off Allocation tool, with the paid time off of 2026 for each employee.
 
-Once validated, a draft allocation is generated for each single employee, waiting a manual
-confirmation that can be done in batch.
+Click :guilabel:`Generate Allocations` to create the allocations, valid from January 1 to
+December 31 of the next year. Click :guilabel:`Refresh` to compute the values again.
+
+The legal time off (and the postponed time off) is tracked both in days and in hours: taking a day
+off consumes one day, and the real number of hours of that day in the employee's schedule. The
+number of hours is shown next to the number of days on the allocation. A negative balance in
+hours is reported on the leave request and on the payslip, with the :guilabel:`Negative Leave
+Balance` warning.
 
 .. image:: time_off/paid-time-off-allocation-02.png
-   :alt: Paid Time Off Allocations.
+   :alt: A legal leave allocation of 17 days, or 129.2 hours.
+
+.. _payroll/l10n_be/postponed_time_off:
+
+Postponed paid time off
+~~~~~~~~~~~~~~~~~~~~~~~
+
+An employee who could not take their paid time off before the end of the year because of an
+absence (for example, a sickness in December) can carry it over to the next year:
+
+- On the December payslip of an employee who was absent in December and still has some legal time
+  off, the :guilabel:`Days of Paid Time Off remaining` warning appears. Click :guilabel:`Postpone`
+  to add the remaining days to the payslip, as the :guilabel:`Remaining Postponed Time Off (N-1)`
+  input.
+- If the employee was absent for the whole year, the same warning proposes to postpone again the
+  days already postponed from the previous year, as the :guilabel:`Remaining Postponed Time Off
+  (N-2)` input.
+
+The *Paid Time Off Allocation* tool then creates the allocations of the :guilabel:`Carried over
+leave (incapacity)` (`142.24`) and :guilabel:`Carried over leave (incapacity) - Counter Year-2`
+(`142.26`) time types for these days.
+
+For a new employee, the days postponed at a previous employer are encoded in the
+:guilabel:`Postponed Paid Time Off` section of the :guilabel:`Holiday Attests` tab of the employee
+form.
 
 .. _payroll/l10n_be/european_time_off:
 
 European time off
 -----------------
 
-How does it work?
-~~~~~~~~~~~~~~~~~
+Employees who start working in Belgium, or who come back after an interruption, have no or few
+legal holidays during their first year. After three months of work in a year, they can take
+*European time off* (*additional holidays*), with the :guilabel:`European Time Off` (`142.20`)
+time type, allocated manually.
 
-If you were not subject to Belgian ONSS contributions before joining our company and do not have
-entitlement to legal holidays, or if your entitlement is incomplete, you can apply for European
-leave.
+The days of European time off are paid as an advance on the double holiday pay of the next year.
+This amount is deducted from:
 
-To qualify for European leave in a given year, you must work for at least 3 months during that year,
-whether with us or another employer. Once you have met this requirement, you will earn 5 days of
-European leave. Subsequently, you will accumulate additional days of vacation each month as follows:
-
-- After 3 months: 5 days
-- After 4 months: 7 days
-- After 5 months: 9 days
-- After 6 months: 10 days
-- After 7 months: 12 days
-- After 8 months: 14 days
-- After 9 months: 15 days
-- After 10 months: 17 days
-- After 11 months: 19 days
+- the :doc:`double holiday pay <annual_payments>` of the following year,
+- or, if the employee leaves the company, the :ref:`holiday pay paid upon departure
+  <payroll/l10n_be/holiday_attests>`.
 
 .. important::
-   The total of legal leave and European leave cannot exceed 20 days per year. You must use all your
-   legal holidays before taking European leave.
+   Legal time off must be used before European time off. European time off expires on December 31
+   of the year it is earned.
 
-   European leave entitlement expires on December 31st of the year it is earned and cannot be
-   carried over to the following year. To qualify for European leave in a new year, you must
-   complete another 3 months of work.
+Other time off
+--------------
 
-How are these days paid?
-~~~~~~~~~~~~~~~~~~~~~~~~
+Youth and senior holidays
+   Young workers (under 25) and workers aged 50 and over who do not have a full legal time off
+   entitlement can get :guilabel:`Youth Holiday` (`142.99`) and :guilabel:`Senior Holiday`
+   (`142.49`) allocations. Odoo prevents creating these allocations while the employee still has
+   legal time off available, and shows an eligibility warning on the allocation when the age
+   condition is not met, or when a young worker has less than one month of seniority at the start
+   of the allocation.
 
-European leaves are paid holidays taken in advance of your "Double Holiday Pay" (the June extra pay)
-for the following year. Essentially, the more European leave days you take in a given year, the less
-you will receive as June extra pay in the following year.
+Circumstantial leave
+   Short leaves for family events or civic duties (marriage, death, communion, court duty, etc.)
+   use a single :guilabel:`Circumstancial leave` (`007.00`) time type. Select the event in the
+   :guilabel:`Options` field of the leave request or allocation. The maximum duration depends on
+   the event and on the joint committee: when an allocation exceeds it, a warning appears on the
+   allocation, and the :guilabel:`Allocation(s) Exceeding Allowed Duration` warning appears on
+   the **Payroll** app dashboard.
+
+Public holidays
+   Public holidays use the :guilabel:`Public holiday` (`006.00`) time type. When a company holiday
+   created in :menuselection:`Time Off app --> Configuration --> Company Holidays` falls on a day
+   that is not worked in the company's working schedule (for example, a Sunday), Odoo opens the
+   :guilabel:`Public Holiday Compensation` wizard, to give the employees a replacement day with
+   the :guilabel:`Public Holiday Compensation` (`006.15`) time type. The public holidays worked by
+   the employee use the :guilabel:`Worked public holiday` (`006.49`, to be recovered) and
+   :guilabel:`Worked public holiday ( no recovery)` (`006.48`) time types.
+
+Temporary unemployment
+   Temporary unemployment for economic reasons uses the :guilabel:`Economic unemployment`
+   (`137.00`) time type for manual workers, and :guilabel:`Economic temporarly unemployment`
+   (`137.20`) for employees and artists. Odoo blocks the time type that does not match the
+   employee. Other time types cover unemployment due to bad weather (`151.00`), technical reasons
+   (`152.00`), or force majeure (`156.50`). The public holidays that occur during a temporary
+   unemployment are paid with dedicated time types. The related declarations to the unemployment
+   sector are described in the :doc:`social security <social_security>` documentation.
 
 .. _payroll/l10n_be/sick_time_off:
 
 Sick time off and relapse
 =========================
 
-In Belgium, sick leave is managed according to two main regimes:
+In Belgium, the employer pays the *guaranteed salary* during the first days of an incapacity to
+work. After that period, the mutual insurance company pays benefits to the employee.
 
-- **With guaranteed salary**: The employer continues to pay the worker's salary for a specified
-  period.
-- **Without guaranteed salary**: The worker receives benefits from the mutual insurance company
-  after the guaranteed salary period.
+To record a sickness, create a time off request with the :guilabel:`Guaranted monthly wage
+illness` (`013.00`) time type. When the request is approved, Odoo automatically splits it into
+several time off, according to the legal periods:
 
-Sick leave with guaranteed salary
----------------------------------
+- **Employees**: the first 30 calendar days are paid by the employer (`013.00`). The following
+  days are not paid (:guilabel:`days of illness after 30th day`, `122.00`).
+- **Manual workers, and employees with a fixed-term contract of less than three months**: the
+  first week is paid at 100% (`010.00`), the second week is partially paid (`082.00` for manual
+  workers, `072.01` for employees), the third and fourth weeks are partially paid (`072.00`), and
+  the following days are not paid (`122.00`). Without one month of seniority, the days are not
+  paid.
+- After 12 months of incapacity, the days use the :guilabel:`Days of illness after 12 months`
+  (`123.00`) time type.
 
-The guaranteed salary is a period during which the employer continues to pay the salary of the
-worker who is unable to work.
+.. example::
+   Charlotte Hermans, an employee, is sick from August 3 to September 11, 2026 (40 calendar days).
+   When approved, the request is split into a paid time off from August 3 to September 1 (30
+   calendar days, `013.00`) and an unpaid time off from September 2 to September 11 (10 calendar
+   days, `122.00`).
 
-**Employees**: The employer pays 100% of the salary during the first full month of incapacity.
-After this period, if the incapacity continues, the worker falls under the mutual insurance regime.
+During a progressive resumption of work (a working schedule with the :guilabel:`Reintegration
+journey < 12 months` time type, `122.04`), a new incapacity for an ordinary illness is not paid by
+the employer.
 
-Sick leave without guaranteed salary
-------------------------------------
+Work accidents use the :guilabel:`Guaranted weekly wage industrial accident` (`009.00`) time type,
+which is split in the same way, without any relapse.
 
-After the guaranteed salary period, the ONEM (National Employment Office) or the mutual insurance
-company takes over.
+.. note::
+   - The first day of a sickness can be flagged as without a medical certificate, with the
+     :guilabel:`Missing Certificate` option of the time off. Only one day per time off, and two
+     days per calendar year, are allowed: the payroll warnings report the other cases.
+   - After 8 weeks of consecutive sickness, Odoo schedules an activity for the HR responsible of
+     the employee, to contact the occupational medicine.
+   - The :guilabel:`Employee on Mutual Health (> 30 days Illness)` warning of the **Payroll** app
+     dashboard lists the employees whose guaranteed salary is over.
 
-- **Long-term illness**: An incapacity lasting more than 30 days leads to benefits from the mutual
-  insurance company.
-- **Relapse**: If a worker returns to work and then becomes ill again for the same reason within
-  14 days, this may be considered a relapse, and the rules for guaranteed salary may be adjusted.
+.. _payroll/l10n_be/sickness_relapse:
 
-Management in Odoo
-------------------
+Relapse
+-------
 
-In Odoo, sick leave is automatically managed if the absences are related to the *Sick Time Off*
-work entry type.
+If an employee falls sick again within a short period after going back to work (14 days before
+2026, 56 days since January 1, 2026), the new sickness is a *relapse*: it continues the guaranteed
+salary period of the previous sickness, instead of starting a new one.
 
-- **Recording time off**: The employee records their absence through the **Time Off** module.
-- **Automation of work entries**: If the request is approved, Odoo automatically generates the
-  corresponding Work Entries.
-- **Impact on payroll**: The guaranteed salary is automatically calculated according to the rules
-  configured based on the worker's status (employee).
-- **Compensation after the guaranteed salary**: Once the guaranteed salary period has expired, Odoo
-  adjusts the Work Entries to reflect the transition to the mutual insurance company.
+On a sick time off request, the :guilabel:`Sickness Relapse` field shows the previous sicknesses
+that can be linked. Odoo selects the previous sickness automatically when it ends the day before
+the new one; otherwise, select it manually before approving the request. The field is also
+available when creating time off from the Gantt view.
 
-Thus, Odoo ensures a smooth and compliant management of sick leave according to Belgian regulations.
+.. image:: time_off/sickness-relapse.png
+   :alt: A sickness linked to a previous sickness in the Sickness Relapse field.
+
+.. example::
+   Charlotte Hermans falls sick again from September 28 to October 2, 2026, and the time off is
+   linked to her previous sickness. Since her 30 days of guaranteed salary are already used, the
+   whole relapse uses the unpaid `122.00` time type.
 
 .. _payroll/l10n_be/holiday_pay_recovery:
 
 Holiday pay recovery
 ====================
 
-This document explains how Odoo calculates the recovery of holiday pay (both simple and double) for
-employees in Belgium who have changed employers. When an employee moves from one company to another,
-their previous employer may have already paid their holiday pay for the previous year. This amount
-needs to be recovered by the new employer, and this guide outlines how this is managed in Odoo.
+When an employee leaves a company, their employer pays the *exit holiday pay*: the simple and
+double holiday pay for the paid time off that the employee will take in the next year, at their
+new employer. The previous employer gives a *holiday attestation* to the employee.
 
-Understanding holiday pay in Belgium
-------------------------------------
-
-In Belgium, employees are entitled to annual leave and corresponding holiday pay, which consists of:
-
-- **Simple holiday pay**: Regular salary payments for the days of leave taken.
-- **Double holiday pay**: An additional payment, typically equal to approximately 92% of the gross
-  monthly salary, given when employees take their annual leave.
-
-When an employee changes jobs, their previous employer may have already paid these amounts. To avoid
-double payment, the new employer needs to recover the amounts already paid.
-
-Recovery of simple holiday pay
-------------------------------
-
-The recovery of simple holiday pay in Odoo is based on the following criteria:
-
-#. The recovery applies if the employee has taken leave in the current year and their previous
-   employer already paid the holiday pay.
-#. The calculation considers the number of leave days taken and the hours worked per week.
-#. The recovery process is split into:
-
-   - **Year N**: The current year's holiday pay recovery.
-   - **Year N-1**: The recovery of holiday pay from the previous year.
-
-The system checks:
-
-- If the employee's first contract date with the company was in the previous year.
-- If the employee has a pending holiday pay recovery amount.
-- If the recovery has not already been processed.
-- If the employee has taken annual leave.
-
-If all conditions are met, Odoo calculates the amount to be deducted from the payroll to account
-for the holiday pay already received from the previous employer.
-
-Recovery of double holiday pay
-------------------------------
-
-The recovery of double holiday pay follows these steps:
-
-#. The system verifies the employee's contract and determines their employment duration.
-#. The gross salary is calculated based on the employee's contract.
-#. The number of months worked in the previous year is identified.
-#. A threshold amount is computed as follows:
-
-   .. math::
-      :class: overflow-scroll
-
-      \text{Threshold} = \text{Current monthly salary} \times \text{Months worked in previous year}
-      \times \text{Occupation rate} \times 7.67%
-
-   If the amount on the holiday certificate from the previous employer is lower than this threshold,
-   no limit applies.
-
-#. The system recovers the lower of:
-
-   - The calculated threshold.
-   - The actual amount paid by the previous employer.
-
-If the employee has worked for more than 12 months in the current company, no double holiday pay
-needs to be recovered.
-
-How to configure in Odoo
-------------------------
-
-In the employee form view, under the :guilabel:`Settings` tab, you can enter the various amounts
-from holiday attests provided by the new employee.
-
-.. image:: time_off/holiday-pay-recovery-01.png
-   :alt: Holiday Pay Recovery Configuration.
-
-For simple holiday pay recovery, you need to enter:
-
-- The :guilabel:`Number of days` for paid leave
-- The :guilabel:`Amount to recover` by the employee
+When the employee takes this paid time off at their new employer, they would receive their salary
+a second time. The new employer must therefore recover the holiday pay already paid by the
+previous employer.
 
 .. note::
-   The :guilabel:`Recovered Amount` field displays the amount already recovered.
+   The holiday attestations described here are those received *from a previous employer*. The
+   attestations issued to an employee who leaves the company are described in
+   :ref:`payroll/l10n_be/holiday_attests`.
 
-For double holiday pay recovery, you must enter a **line for each employer's holiday attest**. Each
-line should include:
+Encode the holiday attestations
+-------------------------------
 
-- The :guilabel:`# Months` (number of months) the employee worked for that employer
-- The :guilabel:`Amount` provided to the employee
-- The :guilabel:`Occupational Rate`
+Open the employee form, and go to the :guilabel:`Holiday Attests` tab. Click :guilabel:`Add
+Holiday Attestation`, and fill in the information of the certificate:
 
-Odoo uses this data to compute a **recovery limit**. If the employee now has a lower salary, the
-full amount cannot be recovered.
+- :guilabel:`Worked As`: :guilabel:`Employee` or :guilabel:`Worker`. The holiday pay of manual
+  workers is paid by their holiday fund: Odoo deducts the solidarity contribution of the holiday
+  fund from the amounts, and computes the days with the official conversion table of the holiday
+  funds.
+- :guilabel:`From`: the period worked at the previous employer. Both dates must be in the same
+  year.
+- :guilabel:`Work rate (Q/S)`: the hours worked per week (Q) and the reference hours per week of
+  a full-time worker (S) at the previous employer.
+- :guilabel:`Working days`: the number of days worked per week at the previous employer.
+- :guilabel:`Assimilated`: the number of days worked and assimilated (sickness, public holidays,
+  etc.), as stated on the certificate.
+- :guilabel:`Remaining Holiday(s)`: the number of days of paid time off still to be taken.
+- :guilabel:`Simple Holiday Pay` and :guilabel:`Double Holiday Pay`: the amounts paid by the
+  previous employer. For a worker, enter the total amount instead.
+
+.. image:: time_off/holiday-pay-recovery-01.png
+   :alt: A holiday attestation with 17 remaining days, and the amounts to recover.
+
+From these values and the current working schedule of the employee, Odoo computes:
+
+- :guilabel:`Paid holiday`: the days (and hours) of paid time off to allocate for the year
+  following the attestation, capped at four weeks prorated by the assimilated days, and at the
+  lower of the previous and current hours per week. When the attestation is saved, Odoo creates
+  the allocation of legal time off. If the employee already has a legal time off allocation for
+  that year, select it in the :guilabel:`Existing Allocations` field to resize it instead of
+  creating a new one.
+- :guilabel:`To recover` (simple holiday pay): the amount paid by the previous employer, capped at
+  7.67% of the current daily wage multiplied by the assimilated days, and prorated when the
+  employee now works less.
+- :guilabel:`To recover` (double holiday pay): the amount paid by the previous employer, capped at
+  92% of the current monthly wage (and of the average variable salary) multiplied by the share of
+  the year worked.
+- :guilabel:`Recovered`: the amounts already recovered on the validated payslips. Click the amount
+  to open the payslips.
+
+.. example::
+   Kevin Desmet joins the company on March 2, 2026, with a holiday attestation for 2025: 252
+   assimilated days in a full-time 5-day week, 17 remaining days, 2,350.00 € of simple holiday
+   pay, and 2,160.00 € of double holiday pay. His wage is 3,500.00 € for 38 hours per week.
+
+   - Maximum hours: :math:`252 \times 4 \times 38 \div (5 \times 52) = 147.32` hours
+   - Paid holiday: :math:`17 \div 5 \times 38 = 129.2` hours, or **17 days** of 7.6 hours
+   - Simple holiday pay to recover: the lowest of 2,350.00 € and :math:`161.54 \times 252
+     \times 7.67\% = 3,122.25` €, so **2,350.00 €**
+   - Double holiday pay to recover: the lowest of 2,160.00 € and :math:`92\% \times 3,500.00
+     \times 252 \div 260 = 3,120.92` €, so **2,160.00 €**
+
+Recovery on the payslips
+------------------------
+
+The simple holiday pay is recovered on the monthly payslips, each time the employee takes legal
+time off: the :guilabel:`Holiday Pay Recovery` line deducts 90% of the salary of the days off,
+within the limit of the amount to recover. In December, or on the last payslip of the employee,
+the :guilabel:`Holiday Pay Regularization` line adjusts the total recovered amount to the salary
+of the days actually taken, within the same limit.
+
+.. example::
+   Kevin Desmet takes 10 days of legal time off in July 2026. His payslip pays 1,615.38 € for
+   these days, and the :guilabel:`Holiday Pay Recovery` line deducts :math:`90\% \times 1,615.38 =
+   1,453.84` €.
+
+The double holiday pay is recovered on the :doc:`double holiday pay <annual_payments>` payslip of
+the following year, with the :guilabel:`Double Holiday Pay Recovery` line.
 
 .. tip::
-   Be careful not to mix holiday attests for the current year (N) and the previous year (N-1).
-
-For simple holiday pay recovery, the system deducts the amount from each legal time-off period
-until:
-
-#. The **total amount** has been fully recovered, or
-#. The **number of time-off days** has been matched (if the employee's current salary is lower than
-   before).
-
-.. image:: time_off/holiday-pay-recovery-02.png
-   :alt: Holiday Pay Recovery Simple Payslip.
-
-Once the **payslip** is validated and paid, the recovered simple holiday pay is reflected in the
-employee form view.
-
-.. image:: time_off/holiday-pay-recovery-03.png
-   :alt: Holiday Pay Recovery Simple Amount.
-
-On the double holiday payslip, click :guilabel:`Compute Double Pay Recovery` to open a wizard that
-helps calculate the recoverable amount.
-
-In the :guilabel:`Double Pay Recovery Computation` wizard, you'll find:
-
-- The relevant holiday attests listed in the :guilabel:`Occupation Lines`
-- The :guilabel:`Double Pay To Recover` amount based on the threshold
-
-This amount is **editable** if manual adjustments are needed.
-
-.. image:: time_off/holiday-pay-recovery-05.png
-   :alt: Holiday Pay Recovery Double Wizard.
-
-Once validated, the double pay recovery is applied to the payslip.
-
-.. image:: time_off/holiday-pay-recovery-06.png
-   :alt: Holiday Pay Recovery Double Amount.
-
-Odoo automates the recovery of both **simple** and **double** holiday pay, ensuring compliance with
-**Belgian labor laws**. By analyzing contract details, employment duration, and past payments, Odoo
-calculates the necessary deductions and prevents duplicate holiday pay payments.
+   Do not mix the holiday attestations of different years: the attestation of year N-1 gives the
+   paid time off and the recovery of year N.
 
 .. _payroll/l10n_be/working_schedule_change:
 
 Working schedule change
 =======================
 
-This guide explains how to modify an employee's working time schedule in the Belgian payroll module
-of Odoo. Changing an employee's working hours affects their wage calculation, time-off allocation,
-and contract terms.
+Changing the working schedule of a Belgian employee affects their wage and their paid time off.
+In Odoo, the change is done directly on the employee form:
 
-Steps to change an employee's working schedule
-----------------------------------------------
-
-#. Navigate to the employee's contract (:menuselection:`Payroll app --> Contracts`), and select the
-   contract of the employee whose working schedule you want to modify.
-#. Click on :icon:`fa-cog` :guilabel:`(Action)` and select :guilabel:`Working Schedule Change`. The
-   wizard displays the current contract details and allows you to set new working time parameters.
-#. Set the new working schedule:
-
-   - Choose the new :guilabel:`Working Schedule` from the available resource calendars.
-   - Define the :guilabel:`Start Date` for the change (mandatory).
-   - If applicable, specify an :guilabel:`End Date`.
-   - If the :guilabel:`Part Time` checkbox is selected, any difference between the reference
-     calendar and the employee's new calendar will be covered using the *Absence Work Entry Type*.
-     This ensures that the employee's monthly salary remains the same, regardless of the number of
-     absence days in a given month. This setup is required for configuring *Time Credit*, *Parental
-     Leave*, or *Medical Half-Time* correctly.
-
-#. Adjust the employee's wage:
-
-   - The wizard automatically computes the full-time equivalent wage based on the new working
-     schedule.
-   - You can review and modify the new wage if necessary.
-
-#. Manage time off allocation:
-
-   - Select the relevant :guilabel:`Time Off Type`.
-   - Odoo automatically adjusts the employee's time-off entitlement based on the new working
-     schedule using the following formula:
-
-     .. math::
-        :class: overflow-scroll
-
-        \text{New Time Off Allocation} = \max(\min(\text{ Computed Allocation},
-        \text{ Max Allocation}) + \text{ Leaves Taken}, \text{ Leaves Taken})
-
-     - **Computed Allocation** is the expected leave allocation based on the new schedule.
-     - **Max Allocation** is the maximum number of days allowed under the new working time.
-     - **Leaves Taken** ensures the employee does not receive fewer days than already used.
-
-#. Decide on a follow-up contract
-
-   - If the working time change is temporary, you can enable :guilabel:`Post Change Contract
-     Creation` to automatically create a contract that resumes the previous working schedule after
-     the specified end date.
-
-#. Validate the changes
-
-   - Click :guilabel:`Validate` to apply the new working schedule.
-   - If the new schedule is the same as the current one, an error will be displayed.
-   - The system will create a new contract with the updated working time and wage.
-   - If a previous contract existed, it will be closed with an end date before the new contract
-     begins.
-
-Result
-------
-
-- The employee's new working schedule is recorded.
-- Wage and time-off entitlements are adjusted accordingly.
-- A follow-up contract is created if applicable.
+#. Open the employee form. If the change starts at a later date than the current version of the
+   employee, first create a new version of the employee at the date of the change.
+#. In the :guilabel:`Payroll` tab, select the new schedule in the :guilabel:`Working Hours`
+   field.
+#. If the employee already has a contract and at least one payslip, the :guilabel:`Working
+   Schedule Change` wizard opens.
 
 .. image:: time_off/working-schedule-change-03.png
-   :alt: Working Schedule Change New Contracts.
+   :alt: The Working Schedule Change wizard, from full time to a time credit 4/5.
+
+In the wizard:
+
+- :guilabel:`From` and :guilabel:`To`: the period of the new schedule. Set an end date for a
+  temporary change (for example, a time credit of one year): Odoo then creates another version
+  after the end date, which restores the current schedule and wage.
+- :guilabel:`Adapt Allocation`: the new number of days of the legal time off allocation covering
+  the start date. When the work rate decreases, the remaining days are prorated with the new rate
+  and rounded to the nearest half day, and the days already taken are kept. When the work rate
+  increases, Odoo computes the allocation again with the new schedule, within the maximum of four
+  weeks of the new schedule. The value can be edited, or the box unticked to keep the allocation
+  as is.
+- :guilabel:`Adapt Wage`: the new wage, prorated with the new work rate. The days of time credit
+  are not deducted from the wage, which is prorated on the payslips instead.
+
+Click :guilabel:`Confirm`. Odoo creates (or updates) the version of the employee starting at the
+:guilabel:`From` date, with the new schedule and wage, and updates the allocation, with a message
+in its chatter. When the change starts in the
+future, the allocation is updated at the start date.
+
+.. example::
+   Olivier Lemaire moves from 38 hours per week to a time credit 4/5 on November 1, 2026. His 2026
+   allocation is 20 days, of which 4 are taken. The 16 remaining days are prorated to :math:`16
+   \times 80\% = 12.8` days, rounded to 13 days: the new allocation is :math:`4 + 13 = 17` days.
+
+Time credit and other working time reorganisations
+--------------------------------------------------
+
+Time credit, parental leave, medical part-time work, and other reorganisations of the working
+time are configured in the working schedule: the days or hours that are not worked use a time type
+with the :guilabel:`Time Credit` option (for example, :guilabel:`Time credit (with/no motif)`,
+`147.00`, or :guilabel:`Parental leave`, `147.05`), instead of being removed from the schedule.
+
+Odoo then:
+
+- excludes these periods from the working time of the employee,
+- sets the matching :guilabel:`Working Time Reorganisation` measure on the working schedule (for
+  example, *[4] Partial Career Break (ONEm/WSE)*), shown as a tag on the employee form and as a
+  :guilabel:`WRT` badge next to the wage,
+- keeps the full-time wage on the employee, and prorates it on the payslips.
+
+For a part-time employee, the :guilabel:`Part-time` field of the employee form defines the
+unemployment rights of the employee, as declared to the social security.
 
 .. _payroll/l10n_be/work_entries_exports:
 
-Work entries exports
-====================
+Time entries export
+===================
 
-What are work entries?
-----------------------
+Odoo can export the time entries of the employees (worked time and time off, per day and per time
+type) to a :file:`.csv` file, for example to send them to an external payroll provider.
 
-In the context of payroll, *work entries* typically refer to records or documentation related to an
-employee's work hours and earnings for a specific pay period. These entries are crucial for
-accurately calculating and processing employee compensation.
+.. note::
+   The exports dedicated to specific social secretariats (SD Worx, Partena, Group S, UCM, Acerta)
+   no longer exist. They are replaced by this standard export.
 
-Work entries in the context of payroll are essential for both employees and employers. They provide
-a transparent and accurate record of an employee's compensation and deductions, ensuring that
-employees are paid correctly and that tax and legal requirements are met. Payroll software and
-systems are commonly used to manage and automate these work entries, making the payroll process more
-efficient and accurate.
+To export the time entries:
 
-Main concepts
--------------
+#. Go to the **Employees** app, and select the employees in the list view.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` button, and select :guilabel:`Export Time
+   Entries`.
+#. Select the :guilabel:`Month` and the :guilabel:`Year`, and click :guilabel:`Export`.
 
-General
-~~~~~~~
+The file contains one line per employee, day, and time type, separated by semicolons. For Belgian
+companies, the columns are: :guilabel:`Date`, :guilabel:`Company`, :guilabel:`Company External
+Code`, :guilabel:`Name` and :guilabel:`Code` of the time type, :guilabel:`External Code` of the
+time type, :guilabel:`Employee Name`, :guilabel:`Employee Ext. Code`, :guilabel:`NISS`, and
+:guilabel:`Duration` (in hours).
 
-In Odoo, work entries mainly refer to *time entries* (attendance tracking), these are work entries
-that consist of time records, which include the number of hours worked by an employee during a
-given pay period. These entries may specify regular working hours, overtime hours, and any other
-relevant time-related information, such as breaks, paid time off, unpaid time off, parental leave,
-credit-time, etc.
+.. example::
+   `10/01/2026;My Belgian Company;;Work;002.00;;Kevin Desmet;;88092306193;7.60`
 
-Work entries serve a dual role in payroll management. First, they enable organizations to
-independently compute employee payslips. Second, they facilitate the transmission of pertinent data
-to external payroll service providers, who then use this information to calculate and generate the
-payslips.
+The external codes identify the records in the system of the external provider:
 
-Work entries
-~~~~~~~~~~~~
-
-- They have a Name: used to identify the type of entry (e.g., Attendance, Paid Time Off, etc.).
-- They have a Payroll Code: used in Odoo's salary rules computations
-- They have an External Code: used to provide the correct Work Entry code to an external payroll
-  service provider.
-- They are generated based on the configuration of the contract and the time off types
-- They have a duration, a start and end date, a state and are always linked to an employee.
-
-Work entry types
-~~~~~~~~~~~~~~~~
-
-- They are the main source of configuration for your work entries. Thanks to your different types
-  of work entries, you'll be able to differentiate the time records of your employees.
-- They have a name.
-- They contain a code, external code, payroll code and a color for visual tracking.
-- They allow other types of configurations such as how they are displayed in payslips, decide
-  whether this type of work entry should be considered as paid or unpaid (eg. unpaid leave), decide
-  whether this type of work entry has a link with time off, is valid for some advantages or how it
-  should be reflected in your reporting.
-
-Time off types
-~~~~~~~~~~~~~~
-
-As mentioned above, since work entry types can be linked to a time off type, you are also able to
-define the work entry type for each time-off type. On the time off type you have a many2one
-relation with the work entry type.
-
-Steps to generate the work entries of your staff
-------------------------------------------------
-
-#. Create all the employees
-#. Create a contract and set its status to :guilabel:`Running` for each employee.
-
-   In the contract, choose the :guilabel:`Work Entry Source`. It tells the system how work entries
-   for an employee should be generated. It can be based on:
-
-   - :guilabel:`Working Schedule`: Odoo uses the predefined working hours and days set in the
-     employee's working schedule to generate work entries. This is useful for regular, predictable
-     shifts.
-   - :guilabel:`Attendances`: Work entries are generated from the employee's attendance records
-     (i.e., when they check-in and check-out).
-   - :guilabel:`Planning`: Work entries are created based on the validated shifts or slots allocated
-     to the employee in the **Planning** app (often used for scheduling roles like retail shifts,
-     restaurants, etc.).
-
-#. Generate the work entries each month
-
-   Odoo automatically creates the work entries in the **Payroll** app based on the work entry source
-   of the contract and the different time-offs taken. You can edit the work entries manually. You
-   can always decide to regenerate work entries manually but be careful if you already made some
-   manual changes, Odoo will regenerate the work entries based on what it knows (e.g., your working
-   schedule and time off).
-#. Managing conflicts
-
-   Conflicts are pointing to entries that can't be validated without your intervention. This means
-   you'll have to qualify the entry and decide which is the correct entry to be defined for the time
-   period if you want to be able to generate the payslip or validate the entries. Conflicts arise
-   when there are overlapping entries or when Odoo detects that there is a time off request still
-   pending for validation. For instance, if an employee is marked as attending work and at the same
-   time there's a paid leave request to be validated for the same period, that's a conflict.
-
-   Conflicts can be managed by filtering on the conflicting entries and resolving the discrepancy.
-   Since **Odoo 16.4**, Odoo filters by default on conflicting entries. For prior versions, you can
-   still filter manually on conflicting entries or use the conflicting menu item.
-#. Once the conflict is resolved you can either proceed to generate the payslips for your employees
-   or export your work entries to the right entity.
-
-Export work entries
--------------------
-
-.. tip::
-   This section is about exporting work entries to SD Worx, but the configuration and behavior is
-   similar for other exports to Partena, Group S and UCM.
-
-Introduction
-~~~~~~~~~~~~
-
-This sheet is here to help you learn how Odoo's **SD Worx** (`l10n_be_hr_payroll_sd_worx`) module
-simplifies payroll by enabling easy export of work entries. This guide provides quick steps to
-generate :file:`.txt` files for direct import into SD Worx calendars, saving time and ensuring
-accuracy.
-
-First and foremost, it's important to understand there is no direct integration between Odoo and
-SD Worx. There is no automatic exchange of information, either way. Odoo does not communicate
-directly with SD Worx, and the reverse is also true.
-
-How does it work?
-~~~~~~~~~~~~~~~~~
-
-In reality, Odoo provides a standardized export in .txt format for employees' work entries,
-allowing the generation of a file that conforms to a specific format for inputting these entries
-into the SD Worx software.
-
-What does it mean in terms of data management?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Since there is no direct integration between both systems, it implies that certain data will need
-to be manually entered into both systems. For instance, when you create a new employee in Odoo,
-you'll also need to manually create the employee in SD Worx (and vice versa). This manual data
-entry requirement extends to various aspects such as contracts, work schedules, salary details,
-and personal information about employees.
-
-Essentially, all the information necessary for SD Worx to calculate salaries and generate payslips
-must be manually inputted into both systems.
-
-What's the advantage of exporting to SD worx?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Odoo is an integrated software that can comprehensively handle all variable payroll elements,
-including employee personal information, contract details, various time-off types, and other work
-entry categories. Through Odoo's integration capabilities, you can access all this crucial data in
-one centralized location, making it easily accessible for your HR team and employees.
-
-This integration not only ensures data accuracy but also maintains consistency, reducing the
-likelihood of errors when transmitting work entry information to your external payroll provider.
-With the module in place, a single click generates a :file:`.txt` file that's ready for direct
-import into SD Worx, streamlining the entire data transmission process.
-
-Steps to set up the SD Worx module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. important::
-   You must be logged into a Belgian company for the following steps to work.
-
-#. :ref:`install <general/install>` the **Belgium - Payroll - Export to SD Worx**
-   (`l10n_be_hr_payroll_sd_worx`) module.
-#. Go to :menuselection:`Payroll app --> Configuration --> Settings` to fill in the :guilabel:`SD
-   Worx code` field. This is the company's SD Worx code, you get it directly from the SD worx
-   software. When you create a company, it has a unique identifier which you need to set in the
-   field.
-#. For each employee, under the :guilabel:`Settings` tab, fill in the :guilabel:`SDWorx code` field.
-#. For work entry types, under the :guilabel:`Settings` tab, fill in the :guilabel:`SDWorx code`
-   field as well.
-
-You can now export your work entries in the SD Worx :file:`.txt` format by opening the wizard under
-:menuselection:`Payroll app --> Reporting --> Belgium --> Export Work Entries to SDWorx`.
-
-The file contains a series of lines such as the following line of text:
-`1111110000024K2023042370100360`
-
-Each line represents a work entry, and the structure is outlined below:
-
-- `111111` -> Company SD Worx code
-- `0000024` -> Employee SD Worx code
-- `K` -> Delimiter
-- `20230423` -> Date
-- `7010` -> SD Worx work entry code
-- `0360` -> Duration (edited)
-
-Once the :file:`.txt` file is exported, it can be directly imported in this format into the SD Worx
-software. Doing so updates the calendars of each collaborator.
+- Company: the :guilabel:`External Code` field of the company form.
+- Employee: the :guilabel:`External Code` field, in the :guilabel:`Export` section of the
+  :guilabel:`Settings` tab of the employee form.
+- Time type: the :guilabel:`External` field, in the :guilabel:`Declarations` section of the
+  :guilabel:`Payroll` tab of the time type.
