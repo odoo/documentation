@@ -24,9 +24,10 @@ lunch accounts are replenished.
    Some examples of how money can be organized and transferred within a company:
 
    - Cash is handed to the **Lunch** app manager, who then updates the user's account.
-   - Money is automatically deducted from the user's paychecks, then the **Lunch** app manager
-     updates the account when paychecks are issued. This requires :ref:`adding a salary attachment
-     <payroll/payslips/salary-inputs>` for the user's payslip in the **Payroll** app.
+   - Money is deducted from the user's payslips, then the **Lunch** app manager updates the account
+     when payslips are issued. This requires creating a :doc:`payslip adjustment
+     <../payroll/salary_attachments>` for the employee in the **Payroll** app. The **Lunch** app
+     does **not** create this deduction automatically.
    - Companies can sell "lunch tickets" at a set price (for example, one ticket costs $5.00). Users
      can purchase tickets from a **Lunch** app manager, who then updates the user's account.
 
@@ -45,7 +46,7 @@ displaying each record's :guilabel:`Date`, :guilabel:`User`, :guilabel:`Descript
 :guilabel:`Amount` column.
 
 .. image:: user-accounts/cash.png
-   :alt: The list view of all cash moves.
+   :alt: The Cash Moves list, with the funds added to the users' lunch accounts.
 
 Add funds
 ---------
@@ -55,16 +56,18 @@ the :guilabel:`Cash Moves` dashboard.
 
 A blank :guilabel:`Cash Moves` form loads. Enter the following information on the form:
 
-- :guilabel:`User`: Select the user depositing cash into their account from the drop-down menu. If
+- :guilabel:`User`: Select the user depositing cash into their account from the drop-down menu. This
+  field is **required**. If
   the user is not in the database, they can be created by typing their name in the :guilabel:`User`
   field, and clicking either :guilabel:`Create "user"` or :guilabel:`Create and edit...` to create
   the user and edit the :guilabel:`Create User` form.
 - :guilabel:`Date`: Select the date the transaction occurred using the calendar popover.
-- :guilabel:`Amount`: Enter the amount being added to the lunch account.
+- :guilabel:`Amount`: Enter the amount being added to the lunch account. A negative amount can be
+  entered to withdraw money from the account.
 - :guilabel:`Description`: Enter a brief description of the transaction.
 
 .. image:: user-accounts/cash-move-form.png
-   :alt: The cash move form filled out for a transaction of $25.00.
+   :alt: The cash move form filled out for a payment of $50.00 for ten lunch tickets.
 
 Control Accounts
 ================
@@ -75,7 +78,7 @@ app, including all cash deposits and purchases. To access this dashboard, naviga
 
 Transactions are grouped :guilabel:`By Employee`, and listed alphabetically by the user's first
 name. Their available balance is displayed in the :guilabel:`Amount` column. This takes into account
-all deposits and transactions to their lunch account.
+all deposits and the orders with an :guilabel:`Ordered` or :guilabel:`Received` status.
 
 Individual transactions are hidden in the default view. To view all transactions for a specific
 user, click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon to the left of their name to
@@ -85,7 +88,7 @@ Each line includes the transaction :guilabel:`Date`, :guilabel:`User`, :guilabel
 :guilabel:`Amount`.
 
 .. image:: user-accounts/control-accounts.png
-   :alt: The Control Accounts dashboard with two employee's transactions expanded.
+   :alt: The Control Accounts list grouped by user, with the transactions of one user expanded.
 
 .. important::
    The :guilabel:`Control Accounts` dashboard is a view-only list of transactions within the
