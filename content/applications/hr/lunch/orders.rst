@@ -7,63 +7,72 @@ Orders
 The **Lunch** app lets employees place lunch orders, see what is available each day, and check their
 account balance, all from one place.
 
-When the **Lunch** application is opened, the :guilabel:`Order Your Lunch` dashboard loads. This
+When the **Lunch** app is opened, the *Order Your Lunch* dashboard loads. This
 view is also accessible by navigating to :menuselection:`Lunch app --> My Lunch --> New Order`.
 
-The :guilabel:`Order Your Lunch` dashboard provides a summary of lunch offerings, the user's account
-information, and the current day's orders, along with their statuses.
+The *Order Your Lunch* dashboard provides a summary of lunch offerings, the user's account
+information, and their upcoming orders, along with their statuses.
 
 Order Your Lunch
 ================
 
-On the main :guilabel:`Order Your Lunch` dashboard, all the necessary information needed to place an
-order is visible. The default filter is for the current day (example: :icon:`fa-filter`
-:guilabel:`Wednesday`), which shows only products that can be purchased that day, based on the
-:ref:`vendor's availability <lunch/availability>`.
+On the main *Order Your Lunch* dashboard, all the necessary information needed to place an
+order is visible.
 
-The left-side of the dashboard displays the various :guilabel:`Categories` of products available,
-along with the :guilabel:`Vendors` supplying the products. To the right of each line is a number,
-indicating how many products are associated with that category or vendor.
+One side of the dashboard displays the various :icon:`restaurant` :guilabel:`Categories` of products
+available, along with the :icon:`local-shipping` :guilabel:`Vendors` supplying the products. At the
+end of each line is a number, indicating how many products are associated with that category or
+vendor.
 
 To filter the products by categories or vendors, click the checkbox next to the desired category or
 vendor to view only items within those selections. Multiple selections can be made in each section.
 
 .. note::
-   If multiple selections are made, **only** products that fall under **all** the selected options
-   are shown.
+   If selections are made in both sections, **only** products that match both the selected
+   categories **and** vendors are shown.
 
-The right side of the dashboard, which serves as an account hub, displays the user, their location,
-the current date, their account balance (located in the :icon:`fa-money` :guilabel:`Available
-Balance` field), and order details for the current day, if any orders have been placed.
+The middle section displays the products of the vendors available for the selected :ref:`location
+<lunch/select-location>`, in a default Kanban view. Each product card displays the name, price,
+vendor, photo, and description of the product. If the product is configured as new, it also displays
+a green :guilabel:`New` tag. Click the :icon:`star` :guilabel:`(Add to Favorites)` icon on a product
+card to mark it as a favorite.
 
-The middle section displays all the products in a default Kanban view. Each product card displays
-the name, cost, vendor, photo, and description of the product. If the product is configured as new,
-it also displays a green :guilabel:`New` tag.
+The other side of the dashboard, which serves as an account hub, displays any :ref:`alert
+<lunch/alerts>` configured for the user's location, the user, their location, the selected date,
+their :guilabel:`Passed orders`, their account balance (in the :icon:`payments` :guilabel:`Available
+Balance` field), and the details of their current order, if any products have been added.
 
 .. image:: orders/dashboard.png
-   :alt: The Lunch app dashboard.
+   :alt: The Lunch app dashboard, with the product cards and the user's current order.
 
 .. note::
    Anywhere a vendor's name is listed in the **Lunch** app, such as on Kanban product cards, their
    phone number is listed, as well.
 
-Placing orders
+.. tip::
+   **Lunch** managers can place orders on behalf of another user.
+
+   Click the user's name at the top of the account hub, and select the user from the drop-down menu.
+   The account hub then displays that user's balance and orders.
+
+Place an order
 ==============
 
-To place a lunch order, navigate to the main :guilabel:`Order Your Lunch` dashboard by either
+To place a lunch order, navigate to the main *Order Your Lunch* dashboard by either
 opening the **Lunch** app or by navigating to :menuselection:`Lunch app --> My Lunch --> New Order`.
+
+.. _lunch/select-location:
 
 Select the location
 -------------------
 
-Ensure the location set in the account hub on the right-side of the :guilabel:`Order Your Lunch`
+Ensure the location set in the account hub on the side of the *Order Your Lunch*
 dashboard is correct. Click the :guilabel:`Location` drop-down menu to view all **Lunch** app
-locations, and select the user's current location (or the location the user wants their lunch
-delivered to).
+locations, and select the location the user wants their lunch delivered to.
 
 .. important::
    The user's work schedule, which indicates where they work each day, is **not** reflected in the
-   :guilabel:`Location` field. Every available location must be configured in the **lunch** app, and
+   :guilabel:`Location` field. Every available location must be configured in the **Lunch** app, and
    all locations are available to all users in the database, regardless of work location. This way,
    users can order lunch and have it delivered to the location where they *will be* during
    lunchtime.
@@ -79,18 +88,23 @@ The **Lunch** app allows for placing orders not only for the current day, but al
 future meals. This feature allows users to plan meals in advance, without having to place daily
 orders.
 
-Click the date on the right side of the :guilabel:`Order Your Lunch` dashboard to open a calendar
+Click the date on the side of the *Order Your Lunch* dashboard to open a calendar
 pop-up window. Click on the desired date to select it. Any products added are for delivery on the
 selected date.
 
-Multiple products with multiple delivery dates can be ordered at once; each day does not need to be
-processed separately.
+When a date is selected, a filter for the corresponding day of the week (for example,
+:guilabel:`Monday`) is added to the search bar, and only the products of the vendors :ref:`available
+on that day <lunch/availability>` are displayed.
+
+.. tip::
+   Multiple products with multiple delivery dates can be ordered at once; each day does not need to
+   be processed separately.
 
 Add products to an order
 ------------------------
 
-From the :guilabel:`Order Your Lunch` dashboard, click on a desired product to add it to an order;
-it appears in the *Configure Your Order* pop-up window.
+From the :guilabel:`Order Your Lunch` dashboard, click on the desired product to add it to an order,
+and a *Configure Your Order* pop-up window loads.
 
 At the top of the pop-up window is the product image, name, and price. Beneath that, there are
 potential :guilabel:`Extras` fields that showcase any :ref:`extra items or options <lunch/extras>`,
@@ -105,11 +119,12 @@ Beneath the :guilabel:`Extras` field is the :guilabel:`Description` of the produ
 :guilabel:`Notes` field. The :guilabel:`Notes` field is used to enter vital information that is then
 sent to the vendor regarding the order, such as any special requests or food allergies.
 
-When all selections for the product have been made, click the :guilabel:`Add To Cart` button in the
-lower-left of the pop-up window. To cancel the order, click the :guilabel:`Discard` button.
+When all selections for the product have been made, click the :guilabel:`Add To Cart` button, or
+click the :guilabel:`Discard` button to cancel the item and close the pop-up window.
 
-.. image:: orders/cheese-dog.png
-   :alt: The pop-up window for a personal pizza, with all the extras selected.
+.. image:: orders/configure-order.png
+   :alt: The Configure Your Order pop-up window for a personal pizza, with toppings and a free
+         beverage selected.
 
 Errors
 ~~~~~~
@@ -123,17 +138,20 @@ vendors :ref:`operating hours <lunch/outside-hours>`.
 Insufficient funds
 ******************
 
-If the price for the item in the :guilabel:`Configure Your Order` pop-up window exceeds the
+If the price for the item in the *Configure Your Order* pop-up window exceeds the
 :guilabel:`Available Balance` for the user, the following error appears:
 
 `Your wallet does not contain enough money to order that. To add some money to your wallet, please
 contact your lunch manager.`
 
 Additionally, the :guilabel:`Add To Cart` button is hidden, and only the :guilabel:`Discard` button
-appears.
+appears. The :ref:`overdraft <lunch/settings>` configured in the settings is taken into account.
 
 If this error appears, the user must :doc:`add funds to their lunch account <user-accounts>` through
 a **Lunch** app administrator before placing the order.
+
+.. image:: orders/insufficient.png
+   :alt: The error that appears when attempting to order an item with insufficient funds.
 
 .. _lunch/incomplete:
 
@@ -146,21 +164,21 @@ is possible to receive an error when attempting to add products to the cart.
 An error occurs when a configured product **requires** the user to select an option in the
 :guilabel:`Extras` field, but the user neglects to make one.
 
-When this occurs, a :guilabel:`Validation Error` pop-up window appears. The error is briefly
-explained in the pop-up window. Click :guilabel:`Close` to close the window, and make any necessary
-changes to the :guilabel:`Configure Your Order` pop-up window.
+When this occurs, a *Validation Error* pop-up window appears. The error is briefly
+explained in the pop-up window. Click :guilabel:`Close` to close the window, and make all necessary
+changes to the *Configure Your Order* pop-up window.
 
 .. example::
-   The vendor, The Pizza Palace, provides a free beverage with any purchase. Their products are
-   configured so that a beverage selection is **required** in the :guilabel:`Extras` field *before*
-   adding one of their products to the cart.
+   The vendor, Sushi Shop, provides a free beverage with any entree. Their extras are
+   configured so that **exactly one** beverage must be selected *before* adding one of their
+   products to the cart.
 
-   If a selection is **not** made, an error occurs. The message that appears is `You have to order
-   one and only one Free Beverage with Purchase`.
+If a selection is **not** made, an error occurs. The message that appears is: `You have to order
+one and only one Free Beverage with Entree`.
 
-   .. image:: orders/error.png
-      :alt: The :guilabel:`Validation Error` pop-up window with the specific error for the free
-            beverage displayed.
+.. image:: orders/error.png
+   :alt: The *Validation Error* pop-up window with the specific error for the free beverage
+         displayed.
 
 .. _lunch/outside-hours:
 
@@ -168,49 +186,51 @@ Outside vendor hours
 ********************
 
 Each vendor in the **Lunch** app has their :ref:`availability <lunch/availability>` configured, with
-both their operating hours as well as the deadline for sending orders via email.
+both the days they are open, and, for vendors receiving orders by email, the :ref:`time at which
+orders are sent <lunch/orders>`.
 
-If a user clicks on a product for a vendor who is either closed or whose order window is closed, the
-following message appears on the *Configure Your Product* pop-up window: `The orders for this vendor
-have already been sent.`
+If a user clicks on a product for the current day from a vendor who is either closed today, or whose
+orders have already been emailed, the following message appears on the *Configure Your Order* pop-up
+window: `The orders for this vendor have already been sent.` The :guilabel:`Add To Cart` button is
+hidden.
 
 Click the :guilabel:`Discard` button, and make a selection from another vendor.
 
 Order summary
 -------------
 
-When items are added to an order, the items appear in the :guilabel:`Your Order` summary, located on
-the right-side of the :guilabel:`Order Your Lunch` dashboard.
+When items are added to an order, the items appear in the :guilabel:`Your Order` summary, located to
+the side of the *Order Your Lunch* dashboard.
 
-Each product is listed in its own Kanban card, with the product name, the user's location, any
-extras added, the quantity, a status tag, the delivery date for the order, and the total amount.
+Each product is listed in its own card, with the product name, a status tag, any notes, the
+delivery location and date, any extras added, the quantity, and the total amount. The section lists
+all the user's orders for the current day and the following days, regardless of the date selected
+in the account hub.
 
 The available tags that can be displayed for each item in the :guilabel:`Your Order` section are:
 
-- :guilabel:`To Order`: The product has been added to the cart, but has not been purchased yet by
-  the user yet. This tag appears in gray.
+- :guilabel:`To Order`: The product has been added to the cart, but has not been purchased by the
+  user yet. This tag appears in gray.
 - :guilabel:`Ordered`: The product has been purchased by the user and is waiting to be sent to the
   vendor by a **Lunch** app manager. This tag appears in purple.
 
-Product quantities can be adjusted by clicking the :icon:`fa-plus` :guilabel:`(plus)` or
-:icon:`fa-minus` :guilabel:`(minus)` icons beneath the listed product. The product price adjusts in
-real-time to reflect the cost for the currently selected quantity of the product.
-
-.. image:: orders/your-order.png
-   :alt: The 'Your Orders' section of the dashboard, with purchasing information.
+Product quantities can be adjusted by clicking the :icon:`add` :guilabel:`(Increase quantity)` or
+:icon:`remove` :guilabel:`(Decrease quantity)` icons on the product card. The product price adjusts
+in real-time to reflect the cost for the currently selected quantity of the product.
 
 Beneath the :guilabel:`Your Order` section is a summary of the purchasing information, including the
 following:
 
-- :guilabel:`Total`: This field displays the total amount for the entire day's lunch order,
-  including all items already ordered, received, and all pending orders.
-- :guilabel:`Already Paid`: This field indicates how much has been paid that day towards the
-  :guilabel:`Total` amount.
-- :guilabel:`To Pay`: This field displays how much of the remaining :guilabel:`Total` amount must be
-  paid in order to place the currently configured order (items with a tag of :guilabel:`To Order`).
+- :guilabel:`Total`: This field displays the total amount of all the listed orders, including both
+  paid and pending ones.
+- :guilabel:`Already Paid`: This field indicates how much of the :guilabel:`Total` amount has
+  already been paid.
+- :guilabel:`To Pay`: This field displays the amount that must be paid in order to place the
+  currently configured order (items with a tag of :guilabel:`To Order`).
 
-.. image:: orders/summary.png
-   :alt: The various account totals for the user's account.
+.. image:: orders/your-order.png
+   :alt: The account hub with the Your Order section, listing a product to order and an ordered
+         product, and the order totals.
 
 .. tip::
    Users can place multiple orders throughout the day, and are not restricted to a single lunch
@@ -225,40 +245,42 @@ Cancel an order
 ---------------
 
 Orders can be cancelled at any time, as long as the orders have **not** been sent to the vendor. All
-orders that appear in the :guilabel:`Your Order` section can be cancelled. All orders that have been
-sent appear in the :guilabel:`Passed orders` section, and are ineligible for cancellation.
+orders that appear in the :guilabel:`Your Order` section can be cancelled, and the amount already
+paid is credited back to the user's account.
 
 Orders can be cancelled in two ways, :ref:`individually <lunch/cancel-one>`, or :ref:`in bulk
 <lunch/cancel-all>`.
 
 .. tip::
-   To check and ensure an order is cancelled, navigate to :menuselection:`Lunch app --> My Lunch -->
-   My Order History`. A gray :guilabel:`Cancelled` icon appears next to any cancelled orders.
+   All orders that have been sent appear in the :guilabel:`Passed orders` section, and are
+   ineligible for cancellation.
 
 .. _lunch/cancel-one:
 
 Cancel an individual item
 -------------------------
 
-On the :guilabel:`Order Your Lunch` dashboard, click the :icon:`fa-minus` :guilabel:`(minus)` icon
-beneath the desired product in the :guilabel:`Your Order` section, until the quantity is zero. The
-order is cancelled, and the product disappears from the :guilabel:`Your Order` section.
+On the *Order Your Lunch* dashboard, click the :icon:`remove` :guilabel:`(Decrease
+quantity)` icon on the desired product in the :guilabel:`Your Order` section, until the quantity is
+zero. The order is cancelled, and the product disappears from the :guilabel:`Your Order` section.
 
 .. _lunch/cancel-all:
 
 Cancel all items
 ----------------
 
-All items in the :guilabel:`Your Order` section of the :guilabel:`Order Your Lunch` dashboard can be
-cancelled at one time. Click the :guilabel:`Clear Order` button at the bottom of the right-side of
-the dashboard, and all products are cancelled.
+All items in the :guilabel:`Your Order` section of the *Order Your Lunch* dashboard can be
+cancelled at one time. Click the :guilabel:`Clear Order` button at the bottom of the
+dashboard, and all products are canceled and removed from the order.
 
 Submit an order
 ---------------
 
-To place the order, click the :guilabel:`Order Now` button on the right side of the :guilabel:`Order
-Your Lunch` dashboard, located at the bottom. The user is charged the amount that is displayed in
-the :guilabel:`To Pay` field, and the cost is deducted from their **Lunch** account balance.
+To place the order, click the :guilabel:`Order Now` button at the bottom of the order summary
+section on the far side of the *Order Your Lunch* dashboard. The user is charged the amount
+displayed in the :guilabel:`To Pay` field, and the cost is deducted from their **Lunch** account
+balance. The :guilabel:`Order Now` button only appears when the order contains products with a
+:guilabel:`To Order` tag.
 
 Once the order is placed, the tags for the purchased items in the :guilabel:`Your Order` section
 change from gray :guilabel:`To Order` tags to purple :guilabel:`Ordered` tags.
@@ -267,24 +289,25 @@ Track an order
 --------------
 
 When orders have been sent to the vendors, the products move to the :guilabel:`Passed orders`
-section, located on the right-side of the :guilabel:`Order Your Lunch` dashboard. All
-:guilabel:`Passed orders` are collapsed, by default. Click the :icon:`fa-chevron-down`
-:guilabel:`(expand)` icon and all past orders appear in their own Kanban card.
+section, located above the :icon:`payments` :guilabel:`Available Balance` on the far side of the
+*Order Your Lunch* dashboard. The number next to :guilabel:`Passed orders` indicates how many
+products it contains. All :guilabel:`Passed orders` are collapsed, by default. Click
+:guilabel:`Passed orders` to expand the section, and all past orders appear in their own card.
 
-Each Kanban card displays the product name, cost, and delivery location and date for the product.
+Each card displays the quantity, product name, cost, delivery location, and date for the product.
 
-Additionally, each Kanban card has one of the following status tags:
+Additionally, each card has one of the following status tags:
 
-- :guilabel:`Ordered`: This tag appears in blue and indicates the order was sent to the vendor, but
-  has not been received yet.
+- :guilabel:`Sent`: This tag appears in blue and indicates the order was sent to the vendor, but has
+  not been received yet.
 - :guilabel:`Received`: This tag appears in green, and indicates that the order has arrived at the
   location, and has been verified by the **Lunch** app administrator.
 
 Receive an order
 ----------------
 
-When orders are received at the delivery location, the **Lunch** app manager confirms them, and a
-notification is sent to the employee who ordered the food via email.
+When orders are received at the delivery location, the **Lunch** app manager :ref:`confirms them
+<lunch/confirm-orders>`, then :ref:`notifies <lunch/notify>` the employee who ordered the food.
 
 My Orders
 =========
@@ -292,49 +315,53 @@ My Orders
 To view a full list of all orders placed in the **Lunch** app for the currently signed-in user,
 navigate to :menuselection:`Lunch app --> My Lunch --> My Order History`. This navigates to the
 :guilabel:`My Orders` dashboard. The data is filtered by :guilabel:`My Orders` and grouped by
-:guilabel:`Order Date: Day`, by default, both of which are located in the search bar.
+:guilabel:`Order Date: Day`, by default.
 
 All products appear in a list view, organized by date. The list displays the :guilabel:`Order Date`,
 :guilabel:`Vendor`, :guilabel:`Product`, :guilabel:`Extras`, :guilabel:`Notes`, :guilabel:`User`,
 :guilabel:`Lunch Location`, :guilabel:`Price`, and :guilabel:`Status` information. If in a
 multi-company database, a :guilabel:`Company` column also appears.
 
+The :guilabel:`Status` of each product is one of the following: :guilabel:`To Order` (orange),
+:guilabel:`Ordered` (red), :guilabel:`Sent` (blue), :guilabel:`Received` (green), or
+:guilabel:`Cancelled` (gray).
+
 The total cost for each day's orders is displayed on the top line containing the order date. At the
 bottom of the list, beneath all the lines, the overall total amount paid for all the orders appears,
 under the :guilabel:`Price` column.
 
-At the end of each product line with a status of :guilabel:`Ordered`, :guilabel:`To Order`, or
-:guilabel:`Sent`, a :icon:`fa-times` :guilabel:`Cancel` button appears. Click :icon:`fa-times`
-:guilabel:`Cancel` to cancel that product order. Once a product order has been cancelled, the money
-paid for that product is refunded and appears in the user's account.
+At the end of each product line with a status of :guilabel:`Received`, a :icon:`history`
+:guilabel:`Re-order` button appears, provided the vendor is available on the current day and the
+user's balance is sufficient. Click :icon:`history` :guilabel:`Re-order` to instantly reorder
+that same product, with the same extras, if applicable. The new order appears in the list, under the
+current date, and the product is paid for, with money deducted from the user's account.
 
-At the end of each product line with a status of :guilabel:`Received`, a :icon:`fa-history`
-:guilabel:`Re-order` button appears. Click :icon:`fa-history` :guilabel:`Re-order` to instantly
-reorder that same product, with the same extras, if applicable. The new order appears in the list,
-under the current date, and the product is paid for, with money deducted from the user's account.
-
-Any order with a status of :guilabel:`Cancelled` has a :icon:`fa-undo` :guilabel:`Reset` button at
-the end of the line. To un-cancel and order, click the :icon:`fa-undo` :guilabel:`Reset` button, and
-the product status changes to :guilabel:`Ordered`.
+.. note::
+   For users with *Administrator* rights on the **Lunch** app, the list also displays the buttons
+   used to :doc:`manage orders <management>`: :icon:`close` :guilabel:`Cancel`, :icon:`check`
+   :guilabel:`Confirm`, :icon:`undo` :guilabel:`Reset` (to restore a cancelled order to the
+   :guilabel:`Ordered` status), and :icon:`mail_f` :guilabel:`Send Notification`. When an order is
+   cancelled, the money paid for that product is refunded to the user's account.
 
 .. image:: orders/my-orders.png
-   :alt: The list view that appears when navigating to the My Orders dashboard.
+   :alt: The My Orders list, grouped by order date, with the status of each ordered product.
 
 My Account
 ==========
 
 To view a summary of all transactions in the user's account, navigate to :menuselection:`Lunch app
---> My Lunch --> My Account History`. Doing so reveals the :guilabel:`My Account` dashboard.
+--> My Lunch --> My Account History`. Doing so reveals the *My Account* dashboard.
 
-The default presentation of the :guilabel:`My Account` dashboard displays all entries, from newest
+The default presentation of the *My Account* dashboard displays all entries, from newest
 to oldest. The :guilabel:`Date`, :guilabel:`Description`, and :guilabel:`Amount` are the only fields
 displayed in the list.
 
 Entries with a negative figure listed in the :guilabel:`Amount` column represent products purchased
 in the **Lunch** app. These appear in a `$-XX.XX` format.
 
-Entries with a positive balance either represent funds added to the user's lunch account, or
-cancelled orders that were eventually refunded to the user. These appear in a `$XX.XX` format.
+Entries with a positive figure represent funds added to the user's lunch account. These appear in a
+`$XX.XX` format. Canceled orders do not appear in this list, as their amount is no longer deducted
+from the balance.
 
 .. image:: orders/my-account.png
-   :alt: The 'My Account' dashboard with the entry for adding funds to the user's lunch account.
+   :alt: The My Account list, with lunch orders and funds added to the user's lunch account.
