@@ -1,164 +1,122 @@
-==================
-Salary adjustments
-==================
+===================
+Payslip adjustments
+===================
 
-Salary adjustments are portions of earnings taken directly out of a payslip for a specific purpose,
-whether voluntary or required.
+*Payslip adjustments* are amounts added to, or deducted from, an employee's payslips, outside of
+their regular salary. They are used for one-time amounts, such as a bonus or a commission, and for
+recurring amounts, such as child support, a wage garnishment, union dues, or a bonus divided into
+several payments.
 
-When the deduction is voluntary, they are typically considered *deductions*. When the deduction is
-court-ordered, or involuntary, it is sometimes referred to as a *wage garnishment*. In Odoo, these
-are all universally called *salary adjustments*.
-
-Note that salary adjustments can also be used to give recurring amounts of money to employees, like
-a bonus divided into multiple payments.
+Each payslip adjustment is linked to a *salary rule* of the employee's pay structure. While the
+adjustment is running, its amount is automatically added as a :ref:`salary input
+<payroll/payslips/salary-inputs>` to the employee's payslips, and the salary rule computes its
+effect on the pay (for example, as a taxable allowance, or as a deduction from the net salary).
 
 .. _payroll/salary_attachments/types:
 
-Salary adjustment types
-=======================
+Available adjustments
+=====================
 
-To view the currently configured salary adjustment types, navigate to :menuselection:`Payroll app
---> Configuration --> Salary Input Types`, and the *Salary Input Types* dashboard loads. This
-displays *all* other salary inputs, not only the various salary adjustments.
-
-The three default salary adjustment types and uses that appear in this list are:
-
-- :guilabel:`Attachment of Salary`: Used primarily for voluntary regular payments from the
-  employee's wages, such as paying into a savings program, charity contributions, union dues, etc.
-- :guilabel:`Assignment of Salary`: Used primarily for legally enforceable orders requiring part of
-  an employee's wages to be paid to another party. This is typically used when repaying debts,
-  court-ordered judgments, etc.
-- :guilabel:`Child Support`: Used for any child support payments.
-
-Each salary adjustment type displays the :guilabel:`Description` of the adjustment type and the
-:guilabel:`Code` used when calculating payslips. If it is restricted to a specific salary structure,
-it is listed in the :guilabel:`Availability in Structure` column.
-
-.. image:: salary_attachments/adjustment-types.png
-   :alt: The default salary adjustment types.
-
-Create new salary adjustment types
-----------------------------------
+The adjustments that can be used depend on the employee's pay structure: only the salary rules of
+this structure that accept a payslip input are available (see :ref:`salary inputs
+<payroll/salaries/salary-input-types>`). For example, the United States pay structure provides,
+among others, :guilabel:`Commission`, :guilabel:`Bonus`, :guilabel:`Child Support`,
+:guilabel:`Attachment of Salary`, :guilabel:`Assignment of Salary`, :guilabel:`Deduction`, and
+:guilabel:`Reimbursement`.
 
 .. danger::
-   Upon installation of the **Payroll** application, the preconfigured default salary adjustment
-   types are linked to a variety of rules that are linked to various salary structures, as well as
-   the installed :ref:`localization package <fiscal_localizations/packages>`.
-
-   It is **not** recommended to alter or modify **any** of the preconfigured salary adjustment
-   types, especially if they have been previously used on payslips in the database. Doing so may
-   affect various salary rules and can prevent the creation of payslips.
-
-   A new salary adjustment type *can* be created, but this should only be done when absolutely
-   necessary. A salary adjustment type **must** be linked to a salary rule to be considered in the
-   salary computation.
-
-To make a new type of salary adjustment, navigate to :menuselection:`Payroll app --> Configuration
---> Salary Input Types`. Click the :guilabel:`New` button on the *Salary Input Types* dashboard, and
-a blank *Salary Input Types* form loads. Configure the following fields on the form:
-
-- :guilabel:`Description`: Enter a description for the new salary adjustment type.
-- :guilabel:`Available in adjustments`: This option **must** be enabled to indicate the input type
-  is available to use as a *salary adjustment*. When enabled, additional fields appear on the form.
-- :guilabel:`Is quantity?`: Leave this option unchecked, as it removes the ability to enter a set
-  monetary amount.
-- :guilabel:`No end date by default`: Enable this option if the adjustment is indefinite, such as an
-  attachment to pay regular fees such as dues or licenses. Do not select this if the adjustment is
-  based on a total amount that must be reached, such as a court settlement repayment.
-- :guilabel:`Code`: Enter a code to be used in the salary rules to compute payslips.
-- :guilabel:`Availability in Structure`: If the salary adjustment type should **only** be used in a
-  specific payroll structure, use the drop-down menu to select the structure.
-
-.. _payroll/salary_attachments/dashboard:
-
-Salary adjustment dashboard
-===========================
-
-To view the currently configured salary adjustments, navigate to :menuselection:`Payroll app -->
-Employees --> Salary Adjustments`, and the *Salary Adjustment* dashboard loads.
-
-All salary adjustments appear in a list view. Each salary adjustment displays the name of the
-:guilabel:`Employees`, the :guilabel:`Start Date`, a descriptive :guilabel:`Note`, the salary
-adjustment :guilabel:`Type`, and the :guilabel:`Amount`. An :guilabel:`Until` column appears as
-well, which details when the salary adjustment ends, either a monetary amount to be reached, or
-:guilabel:`Indefinite` if the adjustment has no end.
-
-At the end of each line is a status tag, with a green :guilabel:`Running` tag for active
-adjustments, or a gray :guilabel:`Closed` tag for adjustments that have ended.
-
-.. image:: salary_attachments/salary-adjustment-dashboard.png
-   :alt: The salary adjustment dashboard with all running and closed adjustments.
+   The salary rules provided by the :doc:`payroll localization <payroll_localizations>` are
+   configured according to the local legislation. Modifying them can result in wrong payslips. Only
+   create new input rules when absolutely necessary, and check them with the accounting department.
 
 .. _payroll/salary_attachments/create:
 
-Create salary adjustments
-=========================
+Create a payslip adjustment
+===========================
 
-To create a new salary adjustment, click the :guilabel:`New` button on the :ref:`Salary Adjustment
-dashboard <payroll/salary_attachments/dashboard>`, and a blank *Salary Adjustment* form loads. Enter
-the following information on the form:
+Open the employee record, from :menuselection:`Payroll app --> Employees --> Employees`, and click
+the *Payslip Adjustments* tab. The running adjustments of the employee are displayed as cards.
 
-- :guilabel:`Employees`: Select the desired employees using the drop-down menu. Multiple employees
-  can be listed in this field **only** if all the other field values are identical.
-- :guilabel:`Type`: Select the specific :ref:`salary adjustment type
-  <payroll/salary_attachments/types>` using the drop-down menu.
-- :guilabel:`Payslip Amount`: Enter the amount taken out of each paycheck in this field.
-- :guilabel:`Negative Value`: Enable this checkbox if the salary adjustment is taken into account as
-  a negative value.
-- :guilabel:`Duration`: Select the length of time for the salary adjustment. The options are:
+.. image:: salary_attachments/employee-tab.png
+   :alt: The Payslip Adjustments tab of an employee record.
 
-  - :guilabel:`One Time`: Only one payment is taken from the employee's paycheck.
-  - :guilabel:`Limited`: The employee is paying a specific monetary amount in total, divided up
-    among multiple paychecks. The salary adjustment automatically ends once the specified total is
-    paid.
-  - :guilabel:`Unlimited`: The employee is making recurring payments towards something with no end
-    point, such as contributions to a retirement fund, or a donation to a charity.
-  - :guilabel:`from`: Using the calendar selector, select the date the salary adjustment goes into
-    effect.
+Click :guilabel:`Add Adjustment`, and configure the following fields in the pop-up window:
 
-  .. note::
-     If the :guilabel:`Duration` field is set to :guilabel:`Limited`, an :guilabel:`until (amount)
-     paid` field appears. Enter the monetary amount that must be reached to end the salary
-     adjustment.
+- :guilabel:`Salary Rule`: Select the type of adjustment, such as :guilabel:`Commission` or
+  :guilabel:`Child Support`. When the salary rule includes instructions, they are displayed below
+  this field.
+- :guilabel:`Amount`: The amount to add to each payslip, in the unit of the salary rule (usually a
+  monetary amount).
+- :guilabel:`Start Date`: The first day from which the adjustment is applied.
+- :guilabel:`Repeat`: Leave this checkbox empty for a one-time adjustment, applied on the next
+  payslip only. Tick it to apply the amount on every payslip, :guilabel:`Until` the date entered
+  next to it, or until the end of the contract if no date is entered.
+- :guilabel:`Payslip Description`: An optional reason or reference, such as the number of a court
+  order. The description is displayed on the payslip input.
 
-- :guilabel:`Note`: Enter a short description of the salary adjustment.
+For seizures of salary (such as attachments or assignments of salary), additional fields appear to
+enter the bank account of the beneficiary, so the seized amount can be included in the payment
+file.
+
+Then, click :guilabel:`Save & Close`.
 
 .. image:: salary_attachments/salary-adjustment-form.png
-   :alt: The salary adjustment form with all fields filled out.
+   :alt: A payslip adjustment form for a recurring child support deduction.
 
-If creating salary adjustments for multiple employees on a single salary adjustment form, after the
-form is filled out, click the :guilabel:`Create Individual Attachments` button. This creates
-separate salary adjustments for each of the employees listed in the :guilabel:`Employees` field.
+.. tip::
+   The payslip adjustments that apply to a payslip are displayed with the :icon:`content_copy`
+   :guilabel:`Payslip Adjustments` smart button of the payslip.
 
-After the individual salary adjustments have been created for multiple employees, the screen loads a
-list view of the newly created individual salary adjustments. All the salary adjustments have a
-status of :guilabel:`Running`, since they are currently active.
+Create adjustments for several employees
+----------------------------------------
 
-Manage salary adjustments
-=========================
+To create the same adjustment for several employees at once, for example a bonus, navigate to
+:menuselection:`Payroll app --> Employees --> Employees`, switch to the list view, select the
+employees, then click the :guilabel:`Payslip Adjustment` button at the top of the list.
 
-Salary adjustments that have a set amount due in total are automatically closed once the *Until*
-amount entered on the :ref:`salary adjustment form <payroll/salary_attachments/create>` has been
-paid in full. For all other salary adjustments, it is necessary to manually close the adjustment to
-stop taking money out of future paychecks.
+In the :guilabel:`Generate Multiple Payslip Adjustments` pop-up window, configure the same fields
+as above (the :guilabel:`Payslip Amount` is the amount for each employee), then click
+:guilabel:`Create`. One adjustment is created for each selected employee.
 
-If a salary adjustment has been fulfilled or the employee no longer wishes to contribute voluntary
-funds, the record must be manually updated. To change the status, open the *Salary Adjustment*
-dashboard by opening the :ref:`Salary Adjustment dashboard <payroll/salary_attachments/dashboard>`.
+.. image:: salary_attachments/multiple-employees.png
+   :alt: The Generate Multiple Payslip Adjustments pop-up window.
 
-Click on the record to update, and the detailed *Salary Adjustment* form loads. On the individual
-record, click the :guilabel:`Mark as Completed` button in the corner, and the status changes to
-:guilabel:`Closed`.
+.. _payroll/salary_attachments/dashboard:
+
+View all payslip adjustments
+============================
+
+To view the payslip adjustments of all employees, enable :ref:`developer mode <developer-mode>`,
+then navigate to :menuselection:`Payroll app --> Employees --> Payslip Adjustments`.
+
+Each line displays the :guilabel:`Employee`, whether the adjustment is repeated, the
+:guilabel:`Start Date`, the :guilabel:`Payslip Description`, the :guilabel:`Salary Rule`, the
+:guilabel:`Amount`, and the status: :guilabel:`Running` or :guilabel:`Done`.
+
+.. image:: salary_attachments/salary-adjustment-dashboard.png
+   :alt: The list of all payslip adjustments.
+
+Manage payslip adjustments
+==========================
+
+A one-time adjustment is marked as :guilabel:`Done` once its amount is fully paid, when the payslip
+that includes it is marked as paid. If only part of the amount could be paid, the
+:guilabel:`Paid Amount` and the :guilabel:`Remaining Amount` are displayed on the adjustment, and
+the remaining amount is applied on the next payslips. A recurring adjustment is no longer applied to
+the payslips that start after its :guilabel:`Until` date.
+
+To stop an adjustment before its end, for example when an employee no longer contributes to a
+voluntary program, open it, then click :guilabel:`Done`. To apply it again, click
+:guilabel:`Running`.
+
+.. note::
+   If an adjustment is modified, created, or closed after the payslips of the period were computed,
+   a warning is displayed on the affected payslips, so they can be recomputed.
 
 .. example::
-   The following is an example of when a payroll manager may need to manually change a salary
-   adjustment from :guilabel:`Running` to :guilabel:`Closed`.
-
-   Rose Smith has a salary adjustment for a lawsuit settlement, where she is required to pay
-   $3,000.00. A salary adjustment is created that takes $250.00 a month out of Rose's paycheck to go
-   towards this settlement payment.
-
-   After six months, Rose has paid $1,500.00 from her salary. She receives a tax refund and uses the
-   money to pay off the remainder of the lawsuit settlement. After sending the relevant
-   documentation to the payroll manager, showing the settlement has been paid in full, the payroll
-   manager manually changes the status of her salary adjustment to :guilabel:`Closed`.
+   An employee has a court-ordered deduction of $250.00 per month until the end of the year. A
+   recurring :guilabel:`Attachment of Salary` adjustment is created, with an :guilabel:`Amount` of
+   `250.00`, the first day of the next month as :guilabel:`Start Date`, and December 31 as
+   :guilabel:`Until` date. The deduction is applied on each of their payslips until December. If
+   the employee pays off the remaining amount in another way, the payroll manager clicks
+   :guilabel:`Done` on the adjustment.

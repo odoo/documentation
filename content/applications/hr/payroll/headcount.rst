@@ -2,59 +2,56 @@
 Headcount report
 ================
 
-The *Headcount* report in the **Payroll** app shows the number of employees on payroll and allows
-headcount comparisons between different periods of time.
+The *Headcount* report lists the employees under contract at a specific date, or during a period,
+with their department, job, and wage. Saved headcount reports allow comparing the headcount between
+different periods. This report is available when the **Payroll** app is installed.
 
 Create a headcount report
 =========================
 
-Create a headcount report to see the number of employees at a specific time or compare headcounts
-across periods.
+Navigate to :menuselection:`Employees app --> Reporting --> Headcount` and click :guilabel:`New`.
+Configure the following fields:
 
-To create a headcount report, navigate to :menuselection:`Payroll app --> Reporting --> Headcount`
-and click :guilabel:`New`.
+- :guilabel:`Company`: The company of the report. This field only appears in multi-company
+  databases.
+- :guilabel:`From`: The start date of the report. The current date populates this field by default.
+- :guilabel:`To`: The end date of the report. Leave it empty to count the employees at the
+  :guilabel:`From` date only.
 
-- :guilabel:`Report name`: The name is generated automatically as `Headcount for (Company Name) on
-  the (YYYY-MM-DD)` and **cannot** be modified.
-- :guilabel:`Company`: The company is automatically populated (works in both single and
-  multi-company databases).
-- :guilabel:`From`: Using the calendar selector, select the start date for the report. The current
-  date populates this field by default.
-- :guilabel:`To`: Using the calendar selector, select the end date for the report.
+The name of the report is generated automatically, in the format `Headcount for (Company) from
+(date) to (date)`, or `Headcount for (Company) on the (date)` when the :guilabel:`To` field is
+empty, and can be modified.
 
-Next, click :guilabel:`Populate` to generate the report.
-
-At the top of the form, an :icon:`fa-users` :guilabel:`Employees` smart button appears. Clicking the
-button displays the total number of employees for the selected period.
+Next, click :guilabel:`Populate` to generate the report. The :icon:`group_f`
+:guilabel:`Employees` smart button displays the number of employees under contract during the
+period. Click :guilabel:`Populate` again to update the report, for example after a change in the
+employee records.
 
 .. image:: headcount/new-headcount.png
-   :alt: A headcount report created on October 22, 2026 for 2026.
+   :alt: A headcount report for September 2026.
 
 View all headcount reports
 ==========================
 
-See how the company headcount has changed over time by viewing all headcount reports in a list view.
-
-To view all headcount reports, navigate to :menuselection:`Payroll app --> Reporting --> Headcount`.
+To view all saved headcount reports, navigate to :menuselection:`Employees app --> Reporting -->
+Headcount`. Each line displays the name of the report, the user who created it, the date of the
+last update, and the number of employees.
 
 View employees in a headcount
 -----------------------------
 
-To get an overall view of employees and their salary impact on the company, view all employee
-records of a specific headcount report.
-
-To view the employees of a specific headcount report, click the :icon:`fa-users`
-:guilabel:`Employees` smart button at the top of a headcount report.
-
-All employees from the headcount appear in a list view, grouped by :guilabel:`Department`.
+Click the :icon:`group_f` :guilabel:`Employees` smart button of a headcount report to view its
+employees in a list, grouped by :guilabel:`Department`. Click a department to expand it.
 
 - :guilabel:`Employee`: The employee's full name.
-- :guilabel:`Department`: The department their job position is in.
-- :guilabel:`Job Title`: Their specific role.
-- :guilabel:`Employer Cost`: How much the company pays the employee each pay period.
-- :guilabel:`Wage On Payroll`: The monetary amount on payroll reports.
+- :guilabel:`Department`: The department of the employee.
+- :guilabel:`Job Title`: The job position of the employee.
+- :guilabel:`Employer Cost`: The cost of the employee for the company. This column only appears if
+  the **Salary Configurator** module is installed.
+- :guilabel:`Wage On Payroll`: The wage of the employee on payroll.
 
-Click on any department to expand the list and view the employees.
+The :guilabel:`Employee Type` and :guilabel:`Working Rate` columns can be added with the
+:icon:`tune` :guilabel:`(Optional columns)` icon.
 
 .. image:: headcount/employee-list.png
-   :alt: The headcount report showing expanded departments.
+   :alt: The employees of a headcount report, grouped by department.
