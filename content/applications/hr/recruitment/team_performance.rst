@@ -33,17 +33,14 @@ Pivot table view
 For a more detailed view of the information in the *Team Performance* report, click the
 :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon. This displays all the information in a pivot table.
 
-In this view, the recruiters populate the rows, while the columns are populated with the number of
-applicants in each stage. Each column displays the total number of applicants who are still
-:guilabel:`In Progress`, have been :guilabel:`Hired`, or have been :guilabel:`Refused`. The last
-column, :guilabel:`Applications`, is the total number of applicants across all stages for that
-recruiter.
+In this view, the recruiters populate the rows, while the columns display the number of applicants
+who are still :guilabel:`In Progress`, have been :guilabel:`Refused`, or have been
+:guilabel:`Hired`. The last column, :guilabel:`Applications`, is the total number of applicants for
+that recruiter.
 
-In this example, there are 59 applicants in total. Of those 59, 17 have been hired, 18 have been
-refused, and 24 are still in the recruitment process.
-
-Based on the data presented, :guilabel:`John Doe` is the most successful recruiter, with a total of
-eight hires, while :guilabel:`Carol Bishop` has the fewest hires, with only three.
+Comparing the number of :guilabel:`Hired` applicants to the total number of
+:guilabel:`Applications` of each recruiter helps identify the most successful recruiters, and the
+recruiters who may need support.
 
 .. image:: team_performance/team-perf-pivot.png
    :alt: The detailed pivot table view.

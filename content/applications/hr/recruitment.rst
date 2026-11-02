@@ -21,9 +21,9 @@ The flow described in this document is Odoo's default configuration, but it can 
 suit any recruitment process.
 
 .. note::
-   Stages apply to all job positions unless :ref:`marked as job-specific
-   <recruitment/customize-stages>`. Changes to stages (e.g., additions, deletions) affect all
-   positions unless explicitly scoped.
+   Stages apply to all job positions and all companies unless they are :ref:`limited to specific
+   job positions or to a company <recruitment/edit-stage>`. Changes to stages (e.g., additions,
+   deletions) affect all positions unless explicitly scoped.
 
 .. _recruitment/settings:
 
@@ -38,8 +38,12 @@ Job posting
 -----------
 
 The *Job Posting* section of the settings page specifies where job positions can be posted. To post
-job positions on the website, enable the :guilabel:`Online Posting` option. There is also an option
-to post to :ref:`job boards <recruitment/post-job/boards>`.
+job positions on the website, enable the :guilabel:`Online Posting` option.
+
+To post job positions on :ref:`job boards <recruitment/post-job/boards>`, click the
+:icon:`fa-arrow-right` :guilabel:`Activate Job Board` link in the :guilabel:`Job Board` setting.
+This opens the list of available job board modules (such as *Job Board - Monster.com*), which can be
+activated from there.
 
 Process
 -------
@@ -74,9 +78,12 @@ templates.
 Salary package configurator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When sending an offer to an applicant, an expiration date can be set on the offer. Enter the number
-of days an offer is valid for in the :guilabel:`days` field. After the set amount of days has
-passed, if the applicant has not accepted the offer, the offer is no longer available.
+This setting is available when the *Salary Configurator* module is installed. It defines the
+validity duration of the salary package requests sent to new applicants. Enter the number of days
+in the :guilabel:`days` field.
+
+.. seealso::
+   :doc:`recruitment/offer_job_positions`
 
 In-app purchases
 ----------------
@@ -134,12 +141,20 @@ View job positions
 ==================
 
 To access the Kanban view for a job position, navigate to the main :menuselection:`Recruitment` app
-dashboard, which is the default view when opening the application. All job positions appear on the
-main dashboard. Click a job position card to navigate to the Kanban view for all applicants for that
-particular job position.
+dashboard (:menuselection:`Recruitment app --> Applications --> By Job Positions`), which is the
+default view when opening the application. All job positions appear on the main dashboard, with
+their number of :guilabel:`new applications`, applications :guilabel:`in progress`, and employees
+:guilabel:`to recruit`. Click a job position card to navigate to the Kanban view for all applicants
+for that particular job position.
 
 .. image:: recruitment/dashboard.png
    :alt: Main dashboard view of all job positions.
+
+.. tip::
+   To view all applications across job positions, navigate to :menuselection:`Recruitment app -->
+   Applications --> All Applications`. To manage applicants that are kept for future job openings,
+   navigate to :menuselection:`Recruitment app --> Applications --> By Talent Pools` (see
+   :doc:`recruitment/talent_pools`).
 
 Inside the job application, the Kanban stages appear, with all the applicants populated in their
 respective columns, indicating what stage they are currently in. In Odoo, six default stages are
@@ -152,33 +167,31 @@ configured:
 - :doc:`Contract Proposal <recruitment/offer_job_positions>`
 - :ref:`Contract Signed <recruitment/offer_job_positions/contract-signed>`
 
-The last column, :guilabel:`Contract Signed`, is folded by default. Folded columns appear gray, and
-the applicants in it are hidden from view. To expand the folded stage and view the applicant cards
-for that column, click anywhere on the thin gray column that says the stage name and the column
-expands, revealing the applicants.
+The last column, :guilabel:`Contract Signed`, is folded by default. Folded columns appear as a thin
+vertical column with the stage name, and the applicants in it are hidden from view. To expand the
+folded stage and view the applicant cards for that column, click anywhere on the thin column that
+says the stage name and the column expands, revealing the applicants.
 
 .. image:: recruitment/stages.png
-   :alt: Expand a folded column by clicking on it in the Kanban view.
+   :alt: The applications of a job position, with the Contract Signed stage folded.
 
 Each stage has a color-coded bar beneath the stage name, providing status information for the
-applicants in that specific stage. The status colors are:
+applicants in that specific stage. The statuses are:
 
-- :guilabel:`Gray`: The applicant is still in progress at the current stage and is neither ready nor
-  blocked from the next stage.
-- :guilabel:`Green`: The applicant is ready to move to the next stage.
-- :guilabel:`Yellow`: The applicant is waiting for something before a decision can be made.
-- :guilabel:`Red`: The applicant is blocked from moving to the next stage.
+- :guilabel:`In Progress` (gray): The applicant is still in progress at the current stage and is
+  neither ready nor blocked from the next stage.
+- :guilabel:`Ready` (green): The applicant is ready to move to the next stage.
+- :guilabel:`Waiting` (yellow): The applicant is waiting for something before a decision can be
+  made.
+- :guilabel:`Blocked` (red): The applicant is blocked from moving to the next stage.
 
 The status for each card is set manually. To set the status, click on the small circle in the corner
 of the applicant card. A status pop-up window appears. Click on the desired status for the
-applicant.
+applicant. When the applicant moves to another stage, the status is reset to :guilabel:`In
+Progress`.
 
 .. image:: recruitment/status-dots.png
    :alt: The applicant card statuses, and status bar.
-
-.. tip::
-   The names for the four status colors (`In Progress`, `Ready for Next Stage`, `Waiting`,and
-   `Blocked`) :ref:`can be modified <recruitment/modify-stages>`, if desired.
 
 .. _recruitment/customize-stages:
 
@@ -194,11 +207,12 @@ To create a new stage, hover to the right of the :guilabel:`Contract Signed` sta
 :guilabel:`Add Stage` option. Click :guilabel:`Add Stage` and a new column appears. Enter the title
 for the new stage in the blank box at the top of the new stage, then click the :icon:`fa-check`
 button. The new column appears, and another new stage appears. If no new stages are needed, click
-the :icon:`fa-multiply` button in the new stage to close the new stage. Once the stage is created,
+the :icon:`fa-times` button in the new stage to close the new stage. Once the stage is created,
 click and drag the stage to move it to the desired position in the workflow.
 
-.. image:: recruitment/new-stage.png
-   :alt: A new stage added, along with a second stage ready to be named.
+.. tip::
+   All stages can also be managed from a list, by navigating to :menuselection:`Recruitment app -->
+   Configuration --> Job Positions --> Stages`, in :ref:`developer mode <developer-mode>`.
 
 .. _recruitment/modify-stages:
 
@@ -206,14 +220,18 @@ Modify stage
 ------------
 
 To modify the settings of a stage, hover over the name of the stage, and a :icon:`fa-cog`
-:guilabel:`(Settings)` icon appears in the upper corner. Click the :icon:`fa-cog`
-:guilabel:`(Settings)` icon, then click :icon:`fa-pencil` :guilabel:`Edit` from the resulting
-drop-down menu. An *Edit: (Stage)* pop-up window appears. Make any desired modifications in the
-pop-up window, then click :guilabel:`Save` when done.
+:guilabel:`(Settings)` icon appears next to it. Click the :icon:`fa-cog` :guilabel:`(Settings)` icon,
+then click :icon:`fa-pencil` :guilabel:`Edit` from the resulting drop-down menu. An *Edit: (Stage)*
+pop-up window appears. Make any desired modifications in the pop-up window, then click
+:guilabel:`Save` when done.
 
 .. image:: recruitment/gear.png
    :alt: The gear icon that appears when a column name is moused over, and the drop-down menu it
          displays when clicked.
+
+The drop-down menu also contains the :guilabel:`Fold` option, to fold the column in the current
+view, the :guilabel:`Automations` option, to :doc:`automate actions <../studio/automated_actions>`
+when applicants enter the stage, and the :guilabel:`Delete` option.
 
 .. _recruitment/edit-stage:
 
@@ -221,8 +239,7 @@ Edit stage
 ~~~~~~~~~~
 
 The *Edit: (Stage)* form is where the stage's settings are configured. The only required field is
-the :guilabel:`Stage Name`. modify the stage as desired, then click :guilabel:`Save` to save the
-changes.
+the stage name. Modify the stage as desired, then click :guilabel:`Save` to save the changes.
 
 The fields to be populated or modified are:
 
@@ -230,29 +247,35 @@ The fields to be populated or modified are:
 - :guilabel:`Email Template`: Select an :ref:`email template <recruitment/templates>` to be used
   from the drop-down menu. If a template is selected, when the applicant card enters the stage, an
   email is automatically sent to the applicant using the selected template.
-- :guilabel:`Folded in Kanban`: Check the box to have the stage appear folded (hidden) at all times
-  in the default view.
 - :guilabel:`Hired Stage`: Check the box if this stage indicates that the applicant is hired. When
   an applicant's card enters this stage, the card displays a :guilabel:`Hired` banner in the upper
-  right corner. If this box is checked, this stage is used to determine the hire date of an
-  applicant.
-- :guilabel:`Job Specific`: If the stage only applies to specific job positions, select the job
-  positions from the drop-down menu. Multiple job positions can be selected.
-- :guilabel:`Show in Referrals`: Check the box if this stage should be seen in the **Referrals**
-  application, and allow the referrer to accrue points when a referral of theirs reaches this stage.
-  The **Referrals** app must be installed to use this option.
-- :guilabel:`Points`: If :guilabel:`Show in Referrals` is enabled, this field appears. Enter the
-  number of points the employee earns when an applicant moves to this stage.
-- :guilabel:`Days to rot`: Enter the number of days that pass before the applicant is considered
-  stale. Enter `0` to disable this.
-- :guilabel:`Tooltips` section: There are four preconfigured status labels (colored circles) for
-  each applicant's card, indicating its status. These colors are displayed at the top of each stage
-  to reflect the statuses of the applicants in the stage. The *names* for the label can be modified,
-  but the label itself (the color) cannot. The default names and labels are: :guilabel:`In Progress`
-  (gray), :guilabel:`Blocked` (red), :guilabel:`Waiting` (yellow),  and :guilabel:`Ready for Next
-  Stage` (green).
+  right corner, and the date is used as the applicant's hire date.
+
+  .. warning::
+     Unchecking :guilabel:`Hired Stage` on a stage that contains hired applicants removes their hire
+     date and hired status.
+
+- :guilabel:`Rotting in`: Enter the number of days without any activity (record update, message, or
+  completed activity) after which an applicant in this stage is considered stale. Stale applicants
+  are highlighted on the Kanban view, with the number of days since the last activity. Enter `0` to
+  disable this. This field is hidden for hired stages.
+- :guilabel:`Show to Referrer`: Check the box if this stage should be seen in the **Referrals**
+  application. When a referred applicant reaches this stage, the referrer earns the number of points
+  entered in the :guilabel:`Award (#) points` field. The **Referrals** app must be installed to use
+  this option.
+- :guilabel:`Job Positions`: If the stage only applies to specific job positions, select the job
+  positions from the drop-down menu. Multiple job positions can be selected. Leave the field empty
+  to show the stage for all positions.
+- :guilabel:`Fold by Default`: Check the box to have the stage appear folded in the Kanban view.
+- :guilabel:`Company`: If the stage only applies to one company, select it. Leave the field empty to
+  make the stage available to all companies.
 - :guilabel:`Requirements` section: Enter any internal notes for this stage explaining any
   requirements of the stage.
+
+.. note::
+   The names of the four applicant statuses (:guilabel:`In Progress`, :guilabel:`Ready`,
+   :guilabel:`Waiting`, and :guilabel:`Blocked`) are the same for all stages, and cannot be
+   modified.
 
 Delete stage
 ------------
@@ -276,7 +299,7 @@ Email templates
 To communicate with the applicant, Odoo has several preconfigured email templates that can be used.
 The preconfigured email templates and when to use them are as follows:
 
-- :guilabel:`Recruitment: Applicant Acknowledgement`: This template is used to let the applicant
+- :guilabel:`Recruitment: Application Acknowledgement`: This template is used to let the applicant
   know their application was received. This email is automatically sent out once the applicant is in
   the :guilabel:`New` stage.
 - :guilabel:`Recruitment: Interest`: This template is used to let the applicant know that their
@@ -287,10 +310,13 @@ The preconfigured email templates and when to use them are as follows:
   and consideration.
 - :guilabel:`Recruitment: Refuse`: This template is used when an applicant is no longer being
   considered for the position.
-- :guilabel:`Recruitment: Schedule Interview`: This template is used to let the applicant know that
-  they have passed the :guilabel:`Initial Qualification` stage, and they will soon be contacted to
-  set up an interview with the recruiter. This email is automatically sent out once the applicant is
-  in the :guilabel:`Initial Qualification` stage.
+- :guilabel:`Recruitment: Schedule interview`: This template invites the applicant to book an
+  interview slot in the recruiting team's agenda. It is only available when the **Appointments**
+  app is installed. Refer to the :ref:`applicant scheduled interviews
+  <recruitment/schedule_interviews/applicant-scheduled>` documentation.
+
+When the *Salary Configurator* module is installed, the :guilabel:`Recruitment: Your Salary Package`
+template is used to :doc:`send offers <recruitment/offer_job_positions>` to applicants.
 
 .. note::
    Email templates can be created, modified, and deleted to suit the needs of a business. For more
@@ -299,13 +325,9 @@ The preconfigured email templates and when to use them are as follows:
 To manually send an email, click :guilabel:`Send message` in the chatter. A text box appears, as
 well as the applicant's email address. Enter the message in the text box.
 
-.. image:: recruitment/full-composer.png
-   :alt: Send an email from the chatter.
-
-Click the :icon:`fa-expand` :guilabel:`(Open Full composer)` icon in the bottom corner of the *Send
-Message* tab in the chatter. A *Compose Email* pop-up window loads, with the :guilabel:`To` and
-:guilabel:`Subject` fields pre-populated. The applicant's email address is entered in the
-:guilabel:`To` field, and the :guilabel:`Subject` is `(Applicant's Name)`.
+Click the :icon:`fa-expand` :guilabel:`(Open Full Composer)` icon in the text box. A pop-up window
+loads, with the :guilabel:`To` and :guilabel:`Subject` fields pre-populated. The applicant is
+entered in the :guilabel:`To` field.
 
 To use a preconfigured email template, click the :icon:`fa-ellipsis-v` :guilabel:`(Templates)` icon
 in the bottom of the window. Select the email template to use from the drop-down menu.
@@ -320,7 +342,7 @@ body may change.
    preconfigured in Odoo, but if they are not configured for the recruitment application, they do
    not appear in the list of available templates.
 
-If any attachments need to be added, click the :icon:`fa-paperclip` :guilabel:`(Add Attachment)`
+If any attachments need to be added, click the :icon:`fa-paperclip` :guilabel:`(Attach files)`
 button at the bottom of the window. Navigate to the file to be attached, then click :guilabel:`Open`
 to attach it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` icon at the
 end of the attachment.
@@ -328,18 +350,14 @@ end of the attachment.
 If any changes need to be made to the email, edit the body of the email. If the edits should be
 saved to be used in the future, the email can be saved as a new template. Click the
 :icon:`fa-ellipsis-v` :guilabel:`(Templates)` button in the bottom of the window, and select
-:guilabel:`Save as Template`. Options are presented to either overwrite an existing template, or
-save a new template. Click on an existing template name to overwrite that template, or click
-:guilabel:`Save as Template` to save a new template. A *Create a Mail Template* pop-up window loads.
-Enter a name for the template in the :guilabel:`Template Name` field, then click :guilabel:`Save
-Template`.
+:guilabel:`Save as Template`. To edit or delete existing templates, select :guilabel:`Manage
+Templates` instead.
 
 To send the email, click :guilabel:`Send`. The email is sent to the applicant and the email appears
 in the chatter.
 
 .. image:: recruitment/send-email.png
-   :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
-         preconfigured template.
+   :alt: The full composer pop-up window, with the list of email templates displayed.
 
 .. toctree::
    :titlesonly:
@@ -348,6 +366,7 @@ in the chatter.
    recruitment/post_job
    recruitment/recruitment_flow
    recruitment/add_applicants
+   recruitment/talent_pools
    recruitment/schedule_interviews
    recruitment/offer_job_positions
    recruitment/refuse_applicant

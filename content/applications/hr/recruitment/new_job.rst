@@ -5,13 +5,16 @@ Job positions
 In Odoo's **Recruitment** application, all job positions are shown on the default *Job Positions*
 dashboard, which includes both active and inactive positions.
 
-Each job position is shown in an individual Kanban card. If the job position is active, and
-candidates can apply, a green :guilabel:`Published` banner appears in the top-right corner of the
-card.
+Each job position is shown on an individual line, with the number of new applications,
+applications in progress, and employees to recruit. If the job position is published on the
+website, and applicants can apply, a green :guilabel:`Published` banner appears in the top-right
+corner of the card. If the publication is planned for a later date, a :guilabel:`Scheduled` banner
+appears instead.
 
 View submitted applications by clicking anywhere on a job position card, except the
 :icon:`fa-clock-o` :guilabel:`(Activities)` icon, the :guilabel:`Job Page` button, or the
-:guilabel:`Configure` button.
+:guilabel:`Configure` button. Click the :icon:`fa-star-o` :guilabel:`(Favorite)` icon next to the
+job position name to display it at the top of the dashboard.
 
 .. image:: new_job/jobs.png
    :alt: Main dashboard view of Recruitment app showing all job positions.
@@ -52,7 +55,20 @@ Once the job position has been :ref:`created <recruitment/new_job/create-job-pos
 must be configured. On the main **Recruitment** app dashboard, click the :guilabel:`Configure`
 button at the end of the Kanban card, and the detailed job position form loads.
 
-Configure the *Details*, *Summary*, *Application Info*, and *Trackers* tabs, as described below.
+Configure the *Details*, *Summary*, *Application Info*, *Trackers*, and *Job Boards* tabs, as
+described below.
+
+The following buttons appear at the top of the form:
+
+- :guilabel:`Matching Talents`: Create applications for this job position from existing
+  :doc:`talents <talent_pools>`.
+- :guilabel:`Promote`: Send an email to employees, inviting them to refer people for this job
+  position. This button only appears when the **Referrals** app is installed, and the job position
+  is published.
+
+The smart buttons give access to the job position's :guilabel:`Applications`,
+:guilabel:`Documents`, current :guilabel:`Employees`, and to the job page on the website
+(:guilabel:`Go to Website`).
 
 Details tab
 ~~~~~~~~~~~
@@ -60,8 +76,8 @@ Details tab
 All the basic details about the job position are housed in the *Details* tab.
 
 None of the fields are required, but it is important to configure and populate the
-:guilabel:`Department`, :guilabel:`Job Location`, and :guilabel:`Employment Type` fields, as they
-are all visible to prospective applicants on the website.
+:guilabel:`Department`, :guilabel:`Job Location`, and :guilabel:`Employee Type` fields, as they are
+all visible to prospective applicants on the website.
 
 .. note::
    Some fields listed below may not appear depending on the installed apps and database
@@ -74,15 +90,30 @@ Enter the information in the following sections.
 Hiring process section
 **********************
 
-- :guilabel:`Recruiter`: Select the person responsible for recruiting this role.
+- :guilabel:`Recruiter`: Select the person responsible for recruiting this role. Only employees
+  whose user has access rights to the **Recruitment** app can be selected.
+- :guilabel:`Published`: When the job position is ready to be published on the website, click the
+  :guilabel:`Published` toggle to publish the job position. The toggle changes to green, indicating
+  the listing is live on the website. To publish the job position automatically at a later date,
+  leave the toggle disabled, and select the date and time in the :guilabel:`Publish On` field next
+  to it. A :guilabel:`Scheduled` banner then appears on the job position card. Click
+  :guilabel:`Unschedule` to cancel the planned publication.
+- :guilabel:`Target`: Enter the number of employees to be hired for this position.
 - :guilabel:`Interviewers`: Select who should perform the interviews. Multiple people can be
-  selected.
-- :guilabel:`Interview Form`: Select an interview form that applicants fill out prior to their
-  interview.
+  selected. Interviewers can access the applications of this job position.
+- :guilabel:`Interview Form`: Select an interview form that applicants fill out during the
+  recruitment process. This field only appears if the :ref:`Send Interview Survey
+  <recruitment/settings>` setting is enabled.
 - :guilabel:`Email Alias`: Enter an email address to which applicants can send a resumé. Once
   emailed, Odoo automatically creates an application for them. If an email was entered when creating
   the job position, this field is populated.
-- :guilabel:`Website`: Select the website the job is published on.
+- :guilabel:`Tags`: Select tags to categorize the job position, such as `Multi-Site` or
+  `Cross-Departmental`. Job tags are managed in :menuselection:`Recruitment app --> Configuration -->
+  Job Positions --> Job Tags`.
+- :guilabel:`Website`: Select the website the job is published on. Leave the field empty to publish
+  the job position on all websites.
+
+.. _recruitment/new_job/job-posting:
 
 Job section
 ***********
@@ -91,47 +122,40 @@ Job section
   multi-company database.
 - :guilabel:`Department`: Select the relevant department for the job position. This is visible on
   the website.
-- :guilabel:`Job Location`: Select the physical address for the job. If the job position is remote,
-  leave this field blank. This is visible on the website.
-
-.. _recruitment/new_job/job-posting:
-
-Job posting section
-*******************
-
-- :guilabel:`Published`: When the job position is ready to be published on the website, click the
-  :guilabel:`Published` toggle to publish the job position. The toggle changes to green, indicating
-  the listing is live on the website.
-- :guilabel:`Target`: Enter the number of employees to be hired for this position.
-- :guilabel:`Expected Skills`: Select all the desired skills for the job position in this field. To
-  add a skill, click the :icon:`fa-plus` :guilabel:`(plus sign)` icon, and select the *Category*,
-  *Skill*, and *Skill Level* for each skill added. The skills presented are :ref:`configured in the
-  Employees app <employees/skills>`.
-- :guilabel:`Expected Degree`: Select the level of education desired, using the drop-down menu. The
-  default options are: :guilabel:`Graduate`, :guilabel:`Bachelor Degree`, :guilabel:`Master Degree`,
-  and :guilabel:`Doctoral Degree`.
 - :guilabel:`Salary Range`: Enter both the minimum and maximum salaries offered for the position in
-  the two fields. Then, set the last field to the time-frame for the salary range. The default
+  the two fields. Then, set the last field to the time-frame for the salary range. The available
   options are :guilabel:`Hour`, :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Bi-Week`,
   :guilabel:`Month`, and :guilabel:`Year`.
+- :guilabel:`Job Location`: Select the physical address for the job. Only the addresses of the
+  company are available. If the job position is remote, leave this field blank. This is visible on
+  the website.
+- :guilabel:`Expected Degree`: Select the level of education desired, using the drop-down menu.
+  Degrees are managed in :menuselection:`Recruitment app --> Configuration --> Applications -->
+  Degrees`.
+- :guilabel:`Expected Skills`: Select all the desired skills for the job position in this field. To
+  add a skill, click the :icon:`fa-plus` :guilabel:`(plus sign)` icon, and select the skill and
+  skill level for each skill added. The skills presented are :ref:`configured in the Employees app
+  <employees/skills>`. The expected skills and degree are used to compute the matching score of
+  the applicants.
 
 Contract section
 ****************
 
-- :guilabel:`Employment Type`: Select what type of position the job is, using the drop-down menu.
-  The default options are :guilabel:`Permanent`, :guilabel:`Temporary`, :guilabel:`Interim`,
-  :guilabel:`Seasonal`, :guilabel:`Full-Time`, :guilabel:`Part-Time`, :guilabel:`Intern`,
-  :guilabel:`Student`, :guilabel:`Apprenticeship`, :guilabel:`Thesis`, :guilabel:`Statutory`, and
-  :guilabel:`Employee`. Depending on the installed localization, other options may be available.
-  This is visible on the website.
-- :guilabel:`Working Schedule`: Select the working schedule for the job position. Odoo provides one
-  working schedule by default, :guilabel:`Standard 40 hours/week`, but all working schedules in the
-  database are available.
-- :guilabel:`Contract Template`: Select a contract template to be used when offering the job to a
-  candidate.
+- :guilabel:`Employee Type`: Select the type of employee to be hired, such as :guilabel:`Employee`,
+  :guilabel:`Student`, :guilabel:`Intern`, or :guilabel:`Interim`. Depending on the installed
+  localization, other options may be available. This is visible on the website. Employee types are
+  managed in :menuselection:`Recruitment app --> Configuration --> Job Positions --> Employee
+  Types`.
+- :guilabel:`Working Schedule`: Select the working schedule for the job position.
+- :guilabel:`Contract Template`: Select the contract template used to :doc:`generate offers
+  <offer_job_positions>` for this job position. This field only appears when the *Salary
+  Configurator* module is installed.
+
+To add custom fields to the job position, click the :icon:`fa-ellipsis-v` :guilabel:`(Actions)`
+icon next to the job position name, then click :guilabel:`Edit Properties`.
 
 .. image:: new_job/details.png
-   :alt: The job information details in the Recruitment tab.
+   :alt: The Details tab of a job position form.
 
 Summary tab
 ~~~~~~~~~~~
@@ -140,9 +164,6 @@ Enter the complete job description in the *Summary* tab. This description is vis
 and should convey any relevant information for the position that is **not** covered or explained in
 the *Details* tab. This may include information such as specific tasks the job requires, any
 required past experience, or uncommon benefits or compensation.
-
-.. image:: new_job/summary.png
-   :alt: The summary of the position in the Job Summary tab.
 
 .. _recruitment/new_job/application_info:
 
@@ -158,7 +179,7 @@ of the business:
 
 - :guilabel:`Time to Answer`: The number of days before the applicant is contacted. :guilabel:`2
   open days` populates this field by default.
-- :guilabel:`Process`: The various stages the candidate goes through during the recruitment process.
+- :guilabel:`Process`: The various stages the applicant goes through during the recruitment process.
   By default, two process steps are visible: :guilabel:`1 Phone Call` and :guilabel:`1 Onsite
   Interview`.
 - :guilabel:`Days to get an Offer`: The number of days before the applicant should expect an offer
@@ -190,19 +211,19 @@ appears at the top of the list. Configure the following fields for each tracker:
 
 - :guilabel:`Campaign`: Select the :ref:`campaign <marketing/social-campaigns/new-campaign>` the job
   position falls under using the drop-down menu.
-- :guilabel:`Source`: Select where the tracker was used using the drop-down menu. There are ten
-  default options, such as :guilabel:`Search engine`, :guilabel:`Newsletter`, and
-  :guilabel:`LinkedIn`, but more may be available depending on the installed applications and
-  created events.
-- :guilabel:`Medium`: Select the method used to share the tracker from a list of ten default
-  options, such as :guilabel:`Banner`, :guilabel:`Email`, and :guilabel:`Google Adwords`.
-- :guilabel:`Tracker URL`: Once the :guilabel:`Campaign`, :guilabel:`Source`, and :guilabel:`Medium`
-  are defined, Odoo automatically creates the corresponding tracking link. Click :guilabel:`URL`
-  :icon:`fa-clipboard` to copy the link to the clipboard, then share the link where appropriate.
-- :guilabel:`Email`: Once the :guilabel:`Campaign`, :guilabel:`Source`, and :guilabel:`Medium` are
-  defined, Odoo automatically creates the corresponding email. Click :guilabel:`Email`
-  :icon:`fa-clipboard` to copy the email address to the clipboard, then share the email where
-  appropriate.
+- :guilabel:`Medium`: Select the method used to share the tracker, such as :guilabel:`Banner`,
+  :guilabel:`Email`, or :guilabel:`Social Media`.
+- :guilabel:`Tracker URL`: Once the line is saved, Odoo automatically creates the corresponding
+  tracking link. Click :guilabel:`URL` :icon:`fa-clipboard` to copy the link to the clipboard, then
+  share the link where appropriate.
+- :guilabel:`Source`: Enter where the tracker is used, such as `LinkedIn` or `Job fair`. The source
+  cannot be modified once the line is saved.
+- :guilabel:`Email`: If an alias domain is configured, Odoo automatically creates a dedicated email
+  address for the tracker. Click :guilabel:`Email` :icon:`fa-clipboard` to copy the email address to
+  the clipboard, then share the email where appropriate.
+
+Applications received through a tracker link or email are tagged with the corresponding source,
+medium, and campaign, which are used in the :doc:`source_analysis` report.
 
 .. image:: new_job/trackers.png
    :alt: The list of all tracked links for the job position.
@@ -211,7 +232,8 @@ Job boards tab
 ~~~~~~~~~~~~~~
 
 The *Job Boards* tab is automatically populated as the job position is :ref:`shared on a job board
-<recruitment/post-job/boards>`. As each listing is created, the information appears in this tab.
+<recruitment/post-job/boards>`. As each listing is created, its job board, start and end dates,
+apply method, and status appear in this tab.
 
 .. seealso::
    :doc:`post_job`

@@ -22,28 +22,27 @@ Offer Analysis`. By default, the report displays offer data for all job position
 The default filter is :guilabel:`Last 365 Days Offers`, showing information for the last 365 days.
 
 Job positions are listed on the x-axis, with color-coded blocks showing the number of offers in each
-stage along the y-axis. Hover over a stage to view the number of offers in that stage for the job
-position. The stages are color-coded as follows:
+status along the y-axis. Hover over a block to view the number of offers in that status for the job
+position. The possible statuses are:
 
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
 
-   * - Color
-     - Status
+   * - Status
      - Description
-   * - Red
-     - In progress
-     - The offer was sent to the employee but the offer is unsigned by all parties.
-   * - Orange
-     - Partially signed
-     - A minimum of one person has signed the contract, but other signatures are required.
-   * - Green
-     - Fully signed
-     - The offer was accepted and all parties have signed the contract.
-   * - Blue
-     - Refused
-     - The offer was refused by the applicant.
+   * - In Progress
+     - The offer was created, but no one has signed it yet.
+   * - Partially Signed
+     - The applicant has signed the offer, but other signatures are required.
+   * - Fully Signed
+     - The offer was accepted, and all parties have signed it.
+   * - Expired
+     - The offer expiration date passed before the offer was signed.
+   * - Refused
+     - The offer was refused.
+   * - Cancelled
+     - The offer was cancelled.
 
 .. image:: offer_analysis/offer-analysis.png
    :alt: A bar chart view of the Offer Analysis report.

@@ -17,8 +17,10 @@ To access the *Source Analysis* report, navigate to :menuselection:`Recruitment 
 --> Source Analysis`.
 
 This presents the data for the last 365 days in a default :icon:`fa-database` :guilabel:`(Stacked)`
-:icon:`fa-bar-chart` :guilabel:`(Bar Chart)` view. It shows the amount of applicants by source and
-separated by status (:guilabel:`In Progress`, :guilabel:`Hired`, and :guilabel:`Refused`),
+:icon:`fa-bar-chart` :guilabel:`(Bar Chart)` view. It shows the amount of applicants by source,
+separated by status (:guilabel:`In Progress`, :guilabel:`Refused`, and :guilabel:`Hired`), along
+with a line showing the total (:guilabel:`Sum`) for each source. Applicants without a source are
+grouped in the :guilabel:`None` column.
 
 Hover the cursor over any color-coded section of a column to view the specific numbers for that
 status column.
@@ -35,13 +37,15 @@ display further details.
 
 To view the *Source Analysis* report in a pivot table, click the :icon:`oi-view-pivot`
 :guilabel:`(Pivot)` icon in the corner. The data is presented in a pivot table, with rows populated
-by sources, and columns populated by stages.
+by sources, and columns populated by the number of applications :guilabel:`In Progress`,
+:guilabel:`Refused`, and :guilabel:`Hired`, along with the total number of
+:guilabel:`Applications`.
 
 To expand this chart to show what specific job positions the applicants applied to from each source,
 click the :icon:`fa-plus-square` :guilabel:`Total` box above the columns to reveal a drop-down menu,
 and click :guilabel:`Job Position`.
 
-Each column is then grouped by the job position, such as *Accountant* or *Carpenter*. Each job
+Each column is then grouped by the job position, such as *Consultant* or *Trainee*. Each job
 position displays a separate count for applications :guilabel:`In Progress`, :guilabel:`Refused`, or
 :guilabel:`Hired`, and an :guilabel:`Applications` column which displays the total count of all
 statuses.
@@ -70,8 +74,8 @@ the specific metrics for the mediums for that source.
    If a medium has **not** been set for any applicants, the medium does not appear in the drop-down
    rows beneath the source.
 
-   For example, if no applicants applied with the medium *Google Adwords*, that medium does **not**
-   appear beneath the *Search engine* source row.
+   For example, if no applicants applied with the medium *Banner*, that medium does **not** appear
+   beneath the *Search engine* source row.
 
 .. image:: source_analysis/medium.png
    :alt: The source rows, expanded to also show the medium for each source.
