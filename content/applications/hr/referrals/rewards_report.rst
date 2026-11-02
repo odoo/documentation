@@ -16,17 +16,17 @@ Reward analysis
 
 To view the *Reward Analysis* report, navigate to :menuselection:`Referrals app --> Reporting -->
 Rewards`. This opens the :guilabel:`Reward Analysis` report in a default stacked
-(:icon:`fa-database`) bar chart (:icon:`fa-bar-chart`).
+(:icon:`fa-database`) bar chart (:icon:`fa-bar-chart`), filtered on the current month.
 
 The X-axis is populated with the various rewards, while the Y-axis is populated with the number of
-rewards redeemed by employees. All employees who have redeemed rewards appear in their own
-identifying color.
+rewards redeemed by employees (:guilabel:`Rewarded Employees`). All employees who have redeemed
+rewards appear in their own identifying color.
 
-This report shows that :guilabel:`Chocolate Covered Nuts` are the most desired reward, with 23
-distributed to employees. It can also be determined that employees do not often request the
-:guilabel:`Sweatshirt`, :guilabel:`Backpack`, :guilabel:`Tablet`, and :guilabel:`Electric Bicycle`;
-therefore, inventory for those items does not need to be as high as the :guilabel:`Chocolate Covered
-Nuts`.
+The rewards with the highest bars are the most requested. Rewards that are rarely requested may not
+need to be kept in stock in the same quantities.
+
+.. important::
+   Only **Referrals** :ref:`administrators <referrals/access-rights>` have access to this report.
 
 .. image:: rewards_report/reward-report.png
-   :alt: The rewards report showing the chocolate covered nuts as the most requested.
+   :alt: The rewards report showing the number of mugs and gift cards bought by each employee.

@@ -9,15 +9,15 @@ Alerts remain on the main **Referrals** dashboard for the specified amount of ti
 individual alert.
 
 .. image:: alerts/alerts.png
-   :alt: Two alert banners appear above the user's photo.
+   :alt: An alert banner appears above the user's photo.
 
 .. _referrals/create-alert:
 
 Create an alert
 ===============
 
-Only users with *Administrator* access rights for the **Recruitment** app can create alerts. To add
-a new alert, navigate to the :menuselection:`Referrals app --> Configuration --> Alerts`.
+Only **Referrals** :ref:`administrators <referrals/access-rights>` can create alerts. To add a new
+alert, navigate to :menuselection:`Referrals app --> Configuration --> Referrals --> Alerts`.
 
 Click :guilabel:`New` to open a blank alert form. Enter the following information on the form:
 
