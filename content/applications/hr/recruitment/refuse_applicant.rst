@@ -17,6 +17,12 @@ is done in one of two ways:
 At the top of the applicant's card, there are several buttons. Click the one labeled
 :guilabel:`Refuse`.
 
+.. tip::
+   An applicant can also be refused from the Kanban view of the *Applications* page: click the
+   :icon:`more_vert` :guilabel:`(Dropdown menu)` icon on the applicant card, then click
+   :guilabel:`Refuse`. To refuse several applicants at once, select them in the list view, then
+   click :guilabel:`Refuse` at the top of the list.
+
 .. _recruitment/refuse-reasons:
 
 Refuse reasons
@@ -26,6 +32,7 @@ Refuse reasons
 refusal reason email templates to the applicant.
 
 Clicking :guilabel:`Refuse` on an applicant's form makes the *Refuse Reason* pop-up window appear.
+The available refuse reasons are displayed as buttons at the top of the pop-up window.
 
 The default refuse reasons in Odoo, and their corresponding :ref:`refusal email
 <recruitment/refuse_applicant/send-refusal-email>` templates, are:
@@ -54,8 +61,8 @@ Create or modify refuse reasons
 -------------------------------
 
 To view and configure refuse reasons, navigate to :menuselection:`Recruitment app --> Configuration
---> Refuse Reasons`. Doing so reveals the *Refuse Reasons* page, where all the existing refusal
-reasons are listed.
+--> Applications --> Refuse Reasons`. Doing so reveals the *Refuse Reasons* page, where all the
+existing refusal reasons are listed.
 
 To create a new refuse reason from the *Refuse Reasons* page, click the :guilabel:`New` button. A
 blank line appears at the bottom of the list, with an empty field present in the
@@ -73,7 +80,7 @@ If a new email template is desired, type in the name for the new template in the
 The :guilabel:`Template Name` field is populated with the name entered in the :guilabel:`Email
 Template` column by default, but can be modified if desired. Enter the email :guilabel:`Subject` in
 the corresponding field, and add the email content in the *Body* tab. To include attachments, click
-the *Options* tab, and add the attachment using the :icon:`fa-paperclip` :guilabel:`Attachments`
+the *Options* tab, and add the attachment using the :icon:`attach_file` :guilabel:`Attachments`
 button. To assign an :guilabel:`Owner` for the template, select a user in the drop-down menu. Enter
 a :guilabel:`Template Description` in the corresponding field.
 
@@ -96,20 +103,31 @@ The new template appears in the new refuse reason :guilabel:`Email Template` fie
 Send refusal email
 ==================
 
-After clicking the :guilabel:`Refuse` button on an applicant form, a :ref:`refuse reason
-<recruitment/refuse-reasons>` is selected from the *Refuse Reason* pop-up window.
+After clicking the :guilabel:`Refuse` button on an applicant form, select a :ref:`refuse reason
+<recruitment/refuse-reasons>` at the top of the *Refuse Reason* pop-up window.
 
-The applicant's email address automatically populates the :guilabel:`Applicant` field. The
-:guilabel:`Subject` and email body are populated according to the corresponding email
+The applicant's name appears in the :guilabel:`Applicant` field. If the selected refuse reason has
+an email template, the :guilabel:`Send Email` toggle is enabled, and the :guilabel:`Subject` and
+email body are populated according to the corresponding email template, with the applicant's
+information already filled in. When refusing a single applicant, the email can be modified before
+it is sent, and attachments can be added using the :icon:`attach_file` :guilabel:`Attachments`
+button. To send the email later, click the :icon:`schedule` :guilabel:`(Send Later)` icon, and
+select the date and time.
 
 To send the refusal email to the applicant, click :guilabel:`Refuse` at the bottom of the *Refuse
 Reason* pop-up window. The refusal email is sent to the applicant, and a red :guilabel:`Refused`
-banner appears on the applicant's card in the corner.
+banner appears on the applicant's card in the corner. Any offer sent to the applicant that is not
+yet refused is also marked as refused.
 
 .. tip::
    If an application should be refused but an email should **not** be sent (if, for example, the
    application was spam), click the :guilabel:`Send Email` toggle to deactivate it, and click
    :guilabel:`Refuse` at the bottom of the *Refuse Reason* pop-up window.
+
+.. note::
+   When several applicants are refused at once, the email is generated from the template for each
+   applicant when it is sent. In this case, the email body can only be modified by users with the
+   rights to edit email templates.
 
 .. image:: refuse_applicant/refuse.png
    :alt: The refuse reason pop-up window, with the email subject and body populated.
@@ -117,17 +135,20 @@ banner appears on the applicant's card in the corner.
 Refuse duplicate applicant
 --------------------------
 
-Occasionally, applicants apply multiple times for the same job position. When this occurs, it is
-possible to refuse all their applications at once, instead of individually.
+Occasionally, applicants apply multiple times, for the same or for different job positions. When
+this occurs, it is possible to refuse all their applications at once, instead of individually.
 
-In this situation, a :guilabel:`Refuse Duplicate Applications` toggle appears on the *Refuse Reason*
-pop-up window. Enable the toggle, and a :guilabel:`Duplicate Applications` field appears beneath it,
-listing the applicant's name for each duplicate application in the system.
+Odoo considers applications as duplicates when they share the same email address, phone number, or
+LinkedIn profile, and are still in progress. In this situation, a :guilabel:`Refuse Duplicate
+Applications` toggle appears on the *Refuse Reason* pop-up window. Enable
+the toggle, and a :guilabel:`Duplicate Applications` field appears beneath it, listing the
+applicant's name for each duplicate application in the system. Remove any application that should
+not be refused from this field.
 
-To refuse *all* applications for that applicant, click the :guilabel:`Refuse` button.
+To refuse *all* the listed applications for that applicant, click the :guilabel:`Refuse` button.
 
-The applicant is only sent one email, and all their applications for the job position are marked as
-*Refused*.
+The applicant is only sent one email, all the listed applications are marked as *Refused*, and a
+note linking to the original application is logged in the chatter of each duplicate.
 
 .. image:: refuse_applicant/duplicates.png
    :alt: Duplicate applications refused in one email.
@@ -147,12 +168,11 @@ By job position
 To view the refused applicants for a specific job position, navigate to :menuselection:`Recruitment
 app --> Applications --> By Job Positions`, then click the desired job position Kanban card.
 
-On the *Applications* page, click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button
-in the search bar, then click :guilabel:`Refused` in the :icon:`fa-filter` :guilabel:`Filters`
-column.
+On the *Applications* page, click the search bar, then click :guilabel:`Refused` in the
+:icon:`filter_alt_f` :guilabel:`Filters` column.
 
 All applicants that have been refused for the job position appear in the stage they were in when
-they were refused, and all other applicants are hidden.
+they were refused, with a red :guilabel:`Refused` banner, and all other applicants are hidden.
 
 .. image:: refuse_applicant/refused-by-job.png
    :alt: All applicants refused for a job position.
@@ -165,13 +185,23 @@ All refused applicants
 To view all refused applicants across all job positions, navigate to :menuselection:`Recruitment app
 --> Applications --> All Applications`. Every applicant record is displayed in a default list view.
 
-Click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in the search bar, then
-click :guilabel:`Refused` in the :icon:`fa-funnel` :guilabel:`Filters` column.
+Click the search bar, then click :guilabel:`Refused` in the :icon:`filter_alt_f` :guilabel:`Filters`
+column.
 
-All applicants that have been refused appear, with the text in red. Along with the applicant's
-:guilabel:`Name`, the date they :guilabel:`Applied on`, the :guilabel:`Job Position`,
-:guilabel:`Stage` they were in when refused, their :guilabel:`Matching` percentage, any
-:guilabel:`Tags`, and the :guilabel:`Recruiter` responsible for the job position are listed.
+All applicants that have been refused appear, with the text in red. By default, the applicant's
+:guilabel:`Name`, :guilabel:`Matching Score`, :guilabel:`Matching Factors`, :guilabel:`Missing
+Factors`, :guilabel:`Recruiter`, and :guilabel:`Availability` are listed. Click the
+:icon:`tune` :guilabel:`(Optional columns)` icon to display other columns, such as the
+:guilabel:`Job Position`, :guilabel:`Stage`, or :guilabel:`Refuse Reason`.
 
 .. image:: refuse_applicant/refused-list.png
    :alt: All applicants refused for all job positions.
+
+.. _recruitment/refuse_applicant/restore:
+
+Restore a refused applicant
+===========================
+
+To reconsider a refused applicant, open the applicant's form, then click :guilabel:`Restore`. The
+refuse reason is removed, and the applicant is moved back to the first stage of the job position's
+pipeline.
