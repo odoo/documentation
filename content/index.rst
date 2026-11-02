@@ -9,5 +9,6 @@ Odoo Documentation
 
     applications
     administration
+    industries
     developer
     contributing
