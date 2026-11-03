@@ -1,5 +1,5 @@
 ========
-Journals
+*Journals
 ========
 
 Journal entries are recorded in different **journals** to maintain an organized record of a
