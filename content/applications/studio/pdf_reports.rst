@@ -10,15 +10,14 @@ quotations, etc.) or :ref:`create new ones <studio/pdf-reports/create>`.
 Default layout
 ==============
 
-The default layout of reports is managed outside Studio. Go to :menuselection:`Settings`, then, in
+The default layout of reports is managed outside Studio. Go to the **Settings** app then, in
 the :guilabel:`Companies` section of the main page, click :guilabel:`Configure Document Layout`.
 Layout settings are company-specific but apply to all reports.
 
 .. tip::
-   You can see how the different settings affect the report layout in the report preview on the
-   right side of the :guilabel:`Configure your document layout` window. When creating or editing a
-   report, you can see a preview of the report by clicking :guilabel:`Print preview` on the left
-   side of the screen.
+   A preview on the right side of the :guilabel:`Configure your document layout` window shows how
+   the different settings affect the report layout. When creating or editing a report using Studio,
+   a preview can be displayed by enabling :guilabel:`Preview` at the top-left of the screen.
 
 Use the following settings:
 
@@ -86,10 +85,10 @@ Use the following settings:
 
 .. _studio/pdf-reports/default-layout-logo:
 
-- :guilabel:`Company logo`: Click the :guilabel:`Edit` button to upload or change the logo. This
-  adds the logo to the company’s record on the *Company* model, which you can access by going to
-  :menuselection:`Settings` and then clicking :guilabel:`Update Info` in the :guilabel:`Companies`
-  section.
+- :guilabel:`Company logo`: Hover over the image and click :icon:`fa-pencil` :guilabel:`(Edit)` to
+  upload or change the logo. This adds the logo to the company’s record on the *Company* model,
+  which can be accessed via the Settings app by clicking :guilabel:`Update Info` in the
+  :guilabel:`Companies` section.
 
 .. _studio/pdf-reports/default-layout-colors:
 
@@ -124,6 +123,22 @@ Use the following settings:
   .. note::
      Other paper formats may be available depending on which apps or modules you have installed, for
      example, label sheets for the Inventory app or event badges for the Events app.
+
+- :guilabel:`Tax ID`: The tax identification number of the company, if applicable. This field
+  contains the value of the :guilabel:`Tax ID` field in the company's record on the *Company* model.
+  This may be the company's tax identification number, `/` to indicate that the company has no tax
+  identification number, or blank. Updating this field updates the value on the company's record,
+  and vice versa.
+
+- :guilabel:`Bank Account Number`: The bank account to which the invoice amount should be paid. This
+  field contains the :guilabel:`Bank Account Number` indicated in the company's main bank journal.
+  Updating this field updates the value in the company's main bank journal, and vice versa.
+
+- :guilabel:`QR Code`: If the company is located in a country for which the :doc:`EPC QR code
+  feature <../finance/accounting/customer_invoices/epc_qr_code>` is available, enabling this option
+  adds an EPC QR code to invoices. This option can also be updated in
+  :menuselection:`Accounting --> Configuration --> Settings`, in the :guilabel:`Customer Payments`
+  section.
 
 .. _studio/pdf-reports/create:
 
@@ -174,8 +189,8 @@ report or model.
 .. important::
    It is strongly recommended to **duplicate** the standard report and make changes in the
    duplicated version. To duplicate a report, hover the mouse pointer on the top right corner
-   of the report, click the :icon:`fa-ellipsis-vertical` (:guilabel:`vertical ellipsis`) icon, and
-   then select :guilabel:`Duplicate`.
+   of the report, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon, and then
+   select :guilabel:`Duplicate`.
 
    .. image:: pdf_reports/duplicate-report.png
       :alt: Duplicating a PDF report
@@ -203,7 +218,9 @@ to:
   <studio/pdf-reports/XML-editing>`.
 - :guilabel:`Reset report`: to discard all changes made to the report and reset it to its standard
   version.
-- :guilabel:`Print preview`: to generate and download a report preview.
+
+To generate a preview of the report, enable :guilabel:`Preview` at the top-left of the screen. In
+preview mode, click :guilabel:`Print` to download the preview.
 
 .. _studio/pdf-reports/report-editor:
 
