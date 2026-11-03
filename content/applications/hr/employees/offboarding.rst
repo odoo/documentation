@@ -10,7 +10,7 @@ specific departments or divisions, that have different requirements and steps fr
 offboarding plan.
 
 In addition to an offboarding plan, the employee record must be :doc:`updated to reflect their
-departure <archive>`, log the reason why they left, and close any open activities associated with
+departure <departures>`, log the reason why they left, and close any open activities associated with
 the employee.
 
 .. _employees/offboarding:
