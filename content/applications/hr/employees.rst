@@ -64,10 +64,10 @@ planning, and compliance reporting.
 
       Take care of employee assets and documents when collaboration ends.
 
-   .. card:: Archive employees
-      :target: employees/archive
+   .. card:: Employee departures
+      :target: employees/departures
 
-      Ensure employee records are correctly handled collaboration ends.
+      Ensure employee records are correctly handled after collaboration ends.
 
    .. card:: Training attendances
       :target: employees/training_attendances
@@ -158,5 +158,5 @@ This field only appears if the **Salary Configurator** module is installed.
    employees/equipment
    employees/skills_inventory
    employees/offboarding
-   employees/archive
+   employees/departures
    employees/training_attendances
