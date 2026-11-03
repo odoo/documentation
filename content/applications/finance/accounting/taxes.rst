@@ -334,3 +334,4 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
    taxes/avatax
    taxes/eu_distance_selling
    taxes/B2B_B2C
+   taxes/tax_on_margin
