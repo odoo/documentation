@@ -100,6 +100,15 @@ Every time an |IAP| service is used, the prepaid credits for that service are sp
 the purchase of more credits when there are not enough credits left to continue using a service.
 Email alerts can also be set up for when :ref:`credits are low <in_app_purchase/low-credits>`.
 
+.. note::
+   |IAP| services do **not** work on :doc:`neutralized databases
+   <../../administration/neutralized_database>`, such as duplicates, test backups, and Odoo.sh
+   staging and development databases. Their |IAP| accounts are disabled to prevent spending the
+   production database's credits. To use a service on such a database anyway, activate the
+   :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings app --> Technical --> IAP
+   --> IAP Accounts`, and remove `+disabled` from the end of the account's token. Credits used this
+   way are taken from the same account as the production database.
+
 Credits are purchased in *Packs* from the `Odoo IAP Catalog
 <https://iap.odoo.com/iap/all-in-app-services>`_, and pricing is specific to each service.
 
