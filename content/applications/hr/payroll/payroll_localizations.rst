@@ -195,6 +195,13 @@ Payroll localization modules are available for the countries listed below.
 
       Payroll localization
 
+   .. card:: Uzbekistan
+      :target: payroll_localizations/uzbekistan
+      :image: payroll_localizations/uz.png
+      :alt: Uzbekistan
+
+      Payroll localization
+
 .. note::
    New countries are frequently added to this list, as Odoo keeps expanding and improving existing
    localizations and related documentation.
@@ -251,4 +258,5 @@ documentation, which covers how to set up companies.
    payroll_localizations/turkey
    payroll_localizations/united_arab_emirates
    payroll_localizations/united_states
+   payroll_localizations/uzbekistan
    payroll_localizations/employment_hero
