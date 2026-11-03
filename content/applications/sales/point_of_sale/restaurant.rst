@@ -31,14 +31,8 @@ orders:
    and managing bookings.
 
 .. seealso::
-   :doc:`restaurant/urban_piper`
-
-   .. card:: APAC food delivery integrations
-      :target: restaurant/APAC_food_delivery
-      :large:
-
-      Integrate with popular APAC food delivery platforms, allowing for synchronizing orders,
-      updating menus, managing store details directly from the POS.
+   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`Order management for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/default:
 
@@ -193,9 +187,14 @@ To enable and configure the bookings, follow these steps:
    resource can handle.
 
 .. tip::
-   To accommodate a booking that exceeds the capacity of a single table, click the
-   :icon:`fa-cubes` (:guilabel:`Resources`) icon in the :guilabel:`Appointment Type` form, select
-   a table, and add additional tables in the :guilabel:`Linked Resource` field to merge them.
+   - To accommodate a booking that exceeds the capacity of a single table, click the
+     :icon:`fa-cubes` :guilabel:`Resources` smart button above the :guilabel:`Appointment Type`
+     form, select a table, and add additional tables in the :guilabel:`Linked Resource` field to
+     merge them.
+   - To offer the possibility to book a table directly from a Google search, click the
+     :guilabel:`Google Bookings` tab in the :guilabel:`Appointment type` form, configure the
+     :ref:`Google Reserve Merchant <appointments/google-reserve/setup>` field, then click
+     :guilabel:`Synchronize with Google Reserve`.
 
 .. seealso::
    :doc:`/applications/productivity/appointments`
@@ -266,7 +265,7 @@ To process an order from the POS register, follow these steps:
 .. seealso::
    - :doc:`extra/preparation`
    - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
-   - :doc:`Ordermangement for APAC food delivery <restaurant/APAC_food_delivery>`
+   - :doc:`Order management for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/floors/transfer:
 
