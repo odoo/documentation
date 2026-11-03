@@ -95,8 +95,9 @@ buttons:
      :guilabel:`Table Selector` automatically confirms the table's occupancy.
    - To order free physical QR codes adapted to the floor plan, activate the :doc:`QR menu
      <extra/self_order>` setting, then click  :icon:`fa-qrcode` :guilabel:`Get QR Codes` in the
-     :guilabel:`Floor plan` view. This `offer <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_
-     is available worldwide and for all subscription types.
+     :guilabel:`Floor plan` view. This `offer
+     <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_ is available worldwide and for
+     all subscription types.
 
 .. example::
    .. image:: restaurant/floor-plan.png
@@ -222,9 +223,14 @@ To enable and configure bookings, follow these steps:
    resource can handle.
 
 .. tip::
-   To accommodate a booking that exceeds the capacity of a single table, click the :icon:`fa-cubes`
-   (:guilabel:`Resources`) icon in the :guilabel:`Appointment Type` form, select a table, and add
-   additional tables in the :guilabel:`Linked Resource` field to merge them.
+   - To accommodate a booking that exceeds the capacity of a single table, click the
+     :icon:`fa-cubes` :guilabel:`Resources` smart button above the :guilabel:`Appointment Type`
+     form, select a table, and add additional tables in the :guilabel:`Linked Resource` field to
+     merge them.
+   - To offer the possibility to book a table directly from a Google search, click the
+     :guilabel:`Google Bookings` tab in the :guilabel:`Appointment type` form, configure the
+     :ref:`Google Reserve Merchant <appointments/google-reserve/setup>` field, then click
+     :guilabel:`Synchronize with Google Reserve`.
 
 .. seealso::
    :doc:`/applications/productivity/appointments`
