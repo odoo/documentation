@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-30 17:31+0000\n"
-"PO-Revision-Date: 2026-11-02 07:33+0000\n"
+"PO-Revision-Date: 2026-11-04 09:33+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/inventory_and_mrp/zh_Hans/>\n"
@@ -64,6 +64,8 @@ msgid ""
 "can only access the **Barcode** app (or other apps available to light "
 "users). Light users do not have access to the **Inventory** app."
 msgstr ""
+"**条形码**应用是面向基础版用户的应用之一。基础版用户只能使用**条形码**应用（"
+"或其他面向基础版用户的应用）。基础版用户无法使用**库存**应用。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode.rst:20
 msgid "`Odoo Tutorials: Barcode <https://www.odoo.com/slides/barcode-30>`_"
@@ -2805,7 +2807,7 @@ msgstr "此后，仓库员可以继续处理这两个收货单中的产品。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
 msgid "Allocated products"
-msgstr ""
+msgstr "已分配产品"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:192
 msgid ""
@@ -2816,6 +2818,10 @@ msgid ""
 "and :ref:`print labels <inventory/allocation_report/print_labels>` for each "
 "unit."
 msgstr ""
+"如果入库单位已 :doc:`分配<../../inventory/warehouses_storage/reporting/"
+"allocation_report>` 给出库订单，请点击收据右上角的 :icon:`fa-cog` :guilabel: "
+"`(齿轮)` 图标，然后点击 :guilabel:`查看分配` 以打开分配报告，并为每个单位 "
+":ref:`打印标签 <inventory/allocation_report/print_labels>`。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:199
 msgid ""
@@ -2825,10 +2831,14 @@ msgid ""
 "display a :icon:`fa-print` :guilabel:`(print)` icon next to the destination "
 "location. Click it to print a label for each unit on that line."
 msgstr ""
+"如果在操作类型（例如“收货”、“生产”）上配置了 :ref:`分配地点 <inventory/"
+"allocation_report/configuration/allocation-location>`，则流向该地点的产品线在"
+"目标地点旁边会显示一个 :icon:`fa-print` :guilabel:`(打印)` 图标。点击该图标即"
+"可为该产品线上的每件商品打印标签。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:205
 msgid "Allocated units on a barcode receipt."
-msgstr ""
+msgstr "条形码收货上的已分配单位。"
 
 #: ../../export/content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:209
 msgid "Validating the transfer"
@@ -8849,7 +8859,7 @@ msgstr "多项库存操作会在不创建库存移动的情况下更改数量或
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:307
 msgid "Updating product costs"
-msgstr ""
+msgstr "更新产品成本"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:309
 msgid ""
@@ -8858,6 +8868,8 @@ msgid ""
 "old cost and the new cost, multiplied by the quantity on hand. The quantity "
 "itself does not change."
 msgstr ""
+"手动修改产品成本会对当前现有库存数量重新估值。价值会根据旧成本与新成本的差额"
+"乘以现有库存数量相应增加或减少，库存数量本身不会发生变化。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:316
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:3
@@ -8881,13 +8893,13 @@ msgstr ""
 msgid ""
 "A counted quantity **higher** than expected produces an *inbound* move and "
 "*increases* inventory value."
-msgstr ""
+msgstr "如果实物盘点数量**高于**预期，则会产生*入库*操作，并*增加*库存价值。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:326
 msgid ""
 "A counted quantity **lower** than expected produces an *outbound* move and "
 "*decreases* inventory value."
-msgstr ""
+msgstr "如果实物盘点数量**低于**预期，则会产生*出库*操作，并*减少*库存价值。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:329
 msgid ""
@@ -8914,6 +8926,10 @@ msgid ""
 "negative stock value is included in :ref:`stock variation <accounting/"
 "inventory-valuation/inventory-valuation-report>` in the **Accounting** app."
 msgstr ""
+"当商品在入库记录尚未生成前就被售出时，库存会变为负数，且出库操作没有相应的入"
+"库操作作为依据。Odoo 会按该产品的最后已知成本对出库操作进行估值。负库存值将计"
+"入 **会计** 应用中的 :ref:`库存变动 <accounting/inventory-valuation/"
+"inventory-valuation-report>`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:345
 msgid ""
@@ -8921,10 +8937,12 @@ msgid ""
 "that arrive are acquired at a different price, Odoo modifies the value of "
 "the outbound move to match the actual cost."
 msgstr ""
+"收货单录入后，负值问题将自动解决。如果到货单元的采购价格不同，Odoo 会调整出库"
+"单的金额，使其与实际成本一致。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:351
 msgid "Adjusting the value of a move"
-msgstr ""
+msgstr "调整移动价值"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:353
 msgid ""
@@ -8935,6 +8953,10 @@ msgid ""
 "value and a description explaining the reason, and applies to that move "
 "alone."
 msgstr ""
+"如果某次搬运在操作时估值有误，可以通过在 :ref:`搬运分析 <inventory/"
+"operations_valuation/moves-analysis>` 报告中使用 :guilabel:`调整估值` 操作，"
+"来更正该次已完成的搬运所记录的估值。更正时需输入新数值及说明原因的描述，且该"
+"更正仅适用于该次搬运。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:363
 msgid ""
@@ -8943,10 +8965,13 @@ msgid ""
 "and :ref:`Stock report <inventory/operations_valuation/stock-report>` in the "
 "**Inventory** app."
 msgstr ""
+"库存变动及相关估值影响可在**库存**应用中的 :ref:`库存移动分析 <inventory/"
+"operations_valuation/moves-analysis>` 和 :ref:`库存报告 <inventory/"
+"operations_valuation/stock-report>` 中查看。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:368
 msgid ":ref:`changes-in-19`"
-msgstr ""
+msgstr ":ref:`changes-in-19`"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:373
 msgid "Moves Analysis"
@@ -8962,6 +8987,11 @@ msgid ""
 "valuation`. It also includes an :guilabel:`Aging Report` favorite for "
 "tracking remaining quantity and value by month."
 msgstr ""
+":doc:`../warehouses_storage/reporting/moves_analysis` 列出了各项调拨操作，包"
+"括其起始位置、目的地、数量和价值，以及库存中剩余的 :guilabel:`剩余数量` 和 "
+":guilabel:`剩余价值`。如 :ref:`inventory/operations_valuation/adjust-"
+"valuation` 中所述，也可通过此报告更正单次调拨的价值。该报告还包含一个名为 "
+":guilabel:`存货周转报告` 的收藏项，用于按月追踪剩余数量和价值。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:384
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:3
@@ -8976,6 +9006,9 @@ msgid ""
 "value of stock at an earlier date can be viewed using "
 "the :guilabel:`Inventory at Date` option."
 msgstr ""
+":doc:`../warehouses_storage/reporting/stock` 列出了各产品的当前库存量。该页面"
+"还显示了 :guilabel:`单价` 和 :guilabel:`总价值`，点击这些字段可查看更多详细信"
+"息。通过 :guilabel:`特定日期库存` 选项，可以查看该日期之前的库存价值。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.rst:391
 msgid ""
@@ -8984,6 +9017,9 @@ msgid ""
 "inventory valuation for a specific warehouse, select the warehouse using "
 "the :guilabel:`Warehouses` filter in the side panel."
 msgstr ""
+"默认的 *库存* 报表视图会对整个公司进行数据计算，即使产品库存分散在多个仓库中"
+"也是如此。若要查看特定仓库的库存估值，请在侧边栏中使用 :guilabel:`仓库` 筛选"
+"器选择该仓库。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:3
 msgid "Account for scrapped goods"
@@ -11543,7 +11579,7 @@ msgstr ""
 msgid ""
 "To mark a product as untracked, select :guilabel:`None` in "
 "the :guilabel:`Tracking` field."
-msgstr ""
+msgstr "要将产品标记为不追踪，请在 :guilabel:`追踪` 字段中选择 :guilabel:`无`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:119
 msgid ""
@@ -12746,6 +12782,10 @@ msgid ""
 "the :guilabel:`Tracking` field, select either :guilabel:`By Unique Serial "
 "Number` or :guilabel:`By Lots`."
 msgstr ""
+"若要通过批次号或序列号进行追踪，或配置有效期信息，产品在*基本信息*选项卡下，"
+"其 :guilabel:`产品类型` *必须* 设置为 :guilabel:`商品`。然后，在 "
+":guilabel:`追踪` 字段中，选择 :guilabel:`按唯一序列号` 或 :guilabel:`按批"
+"次`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:57
 msgid ""
@@ -12753,6 +12793,8 @@ msgid ""
 "the :guilabel:`Traceability` section. Select the :guilabel:`Expiration Date` "
 "checkbox."
 msgstr ""
+"然后，点击*库存*分页，向下滚动至 :guilabel:`可追溯性` 部分。选中 "
+":guilabel:`有效期` 复选框。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:61
 msgid ""
@@ -12868,6 +12910,8 @@ msgid ""
 "From here, click the :guilabel:`Details` link located on the of the product "
 "line. When clicked, a *Detailed Operations* popup appears."
 msgstr ""
+"在此处，点击位于产品行末尾的 :guilabel:`详细信息` 链接。点击后，将弹出一个 "
+"*详细操作* 窗口。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:112
 msgid ""
@@ -13443,6 +13487,8 @@ msgid ""
 "numbers in the list, leave the :guilabel:`Keep current lines` option "
 "unchecked."
 msgstr ""
+"选中 :guilabel:`保留当前行` 复选框，可在 *详细操作* 弹出窗口中生成 *额外的* "
+"批号。若要替换列表中的批号，请保持 :guilabel:`保留当前行` 选项未勾选。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:133
 msgid "Finally, click :guilabel:`Generate`."
@@ -13514,6 +13560,9 @@ msgid ""
 "side of the product that is tracked by lot numbers. Clicking that icon opens "
 "a *Detailed Operations* pop-up window."
 msgstr ""
+"点击 :guilabel:`发货` 智能按钮可打开发货单表单，在此表单中可选择用于发货的批"
+"号。在 :guilabel:`操作` 选项卡中，单击由批号进行追踪的该产品旁边的 "
+":guilabel:`详细信息` 链接。单击该图标将打开一个 *详细操作* 弹出窗口。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:165
 msgid ""
@@ -13553,6 +13602,9 @@ msgid ""
 "window. Finally, click the :guilabel:`Validate` button on the |DO| to "
 "deliver the products."
 msgstr ""
+"重复上述步骤，选择足够数量的批次以满足 :guilabel:`需求`，然后点击 "
+":guilabel:`保存` 关闭弹出窗口。最后，点击 |DO| 上的 :guilabel:`验证` 按钮以交"
+"付产品。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:185
 msgid "Popup for source lot number on sales order."
@@ -13568,6 +13620,8 @@ msgid ""
 "Serial Numbers` page by going to :menuselection:`Inventory app --> Products "
 "--> Lots/Serial Numbers`."
 msgstr ""
+"通过导航至 :menuselection:`库存应用 --> 产品 --> 批次/序列号`，可在 "
+":guilabel:`批次/序列号` 页面管理和查看产品的现有批次号。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:197
 msgid ""
@@ -13587,12 +13641,12 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:204
 msgid "Show the Lots/Serial Numbers page."
-msgstr ""
+msgstr "显示“批次/序列号”页面。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:207
 msgid ""
 "Display lot numbers, grouped by products, on the *Lots/Serial Numbers* page."
-msgstr ""
+msgstr "在\\ *批次/序列号*\\ 页面上显示按产品分组的批次号。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:212
 msgid "Modify lot"
@@ -13603,6 +13657,8 @@ msgid ""
 "Clicking a lot from the *Lots/Serial Numbers* page reveals a separate page "
 "where additional information can be provided about the lot."
 msgstr ""
+"在 *批次/序列号* 页面中点击一个批次，将显示一个独立页面，可在该页面中提供有关"
+"此批次的附加信息。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:218
 msgid ""
@@ -13612,6 +13668,9 @@ msgid ""
 "the :guilabel:`Lot/Serial Number` field and changing the generated number to "
 "the desired number."
 msgstr ""
+"填写完 :guilabel:`产品` 字段后，Odoo 会自动生成一个新的 :guilabel:`批次/序列"
+"号`，该编号将紧跟在最近生成的编号之后。不过，您可以通过点击 :guilabel:`批次/"
+"序列号` 字段下方的行，将生成的编号修改为所需的编号。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:223
 msgid "On the lot number form, the following fields can be modified:"
@@ -13671,6 +13730,9 @@ msgid ""
 "top-left of the page, then select :icon:`fa-cogs` :guilabel:`Edit "
 "Properties` from the drop-down menu."
 msgstr ""
+"若要为批次添加自定义字段以增强可追溯性，请通过批次编号表单添加属性。点击页面"
+"左上角的 :icon:`fa-cog` :guilabel:`(齿轮)` 图标，然后从下拉菜单中选择 "
+":icon:`fa-cogs` :guilabel:`编辑属性`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:248
 msgid ""
@@ -13694,13 +13756,15 @@ msgstr "在批号表格上显示 \"添加属性\" 按钮。"
 msgid ""
 "Continue adding properties by clicking the :icon:`fa-plus` :guilabel:`Add "
 "Property` link on the product form."
-msgstr ""
+msgstr "点击产品表单中的 :icon:`fa-plus` :guilabel:`添加属性` 链接，继续添加属性。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:260
 msgid ""
 "Be sure to save the properties by clicking :icon:`fa-cogs` :guilabel:`Save "
 "Properties` in the :icon:`fa-cog` :guilabel:`(cog)` menu."
 msgstr ""
+"请务必通过点击 :icon:`fa-cogs` :guilabel:`保存属性` 来保存属性，该选项位于 "
+":icon:`fa-cog` :guilabel:`(齿轮)` 菜单中。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:264
 msgid ""
@@ -13724,13 +13788,13 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:274
 msgid ""
 "Select a :guilabel:`Product` to which the new lot number will be assigned."
-msgstr ""
+msgstr "选择一个 :guilabel:`产品`，新批号将分配给该产品。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:276
 msgid ""
 "The :guilabel:`Lot/Serial Number` field automatically populates with the "
 "next available lot number."
-msgstr ""
+msgstr ":guilabel:`批次/序列号`字段会自动填入下一个可用的批次号。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:279
 msgid ""
@@ -13755,7 +13819,7 @@ msgstr ""
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:289
 msgid ""
 "The lot number, `000001`, is created for the product, `Cable Management Box`."
-msgstr ""
+msgstr "为产品`线缆管理盒`创建了批号`000001`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:291
 msgid "New lot number creation form with assigned product."
@@ -13802,6 +13866,9 @@ msgid ""
 "numbers to be created during this operation type. Choose :guilabel:`Use "
 "Existing ones` if only existing lot numbers can be selected."
 msgstr ""
+"在操作类型表单中，在 :guilabel:`批次/序列号` 部分下，选中 :guilabel:`创建新批"
+"次号` 复选框，以启用在此操作类型中创建新批次号的功能。如果只能选择现有的批次"
+"号，请选择 :guilabel:`使用现有批次号`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:313
 msgid "Enabled traceability setting on operations type form."
@@ -15710,6 +15777,9 @@ msgid ""
 "track of consignment products and quantities the same as any other product, "
 "since it occupies space and moves through the warehouse like other products."
 msgstr ""
+"对某个地点实际存储物品的追踪并不取决于其所有权归属。仓库运营（拣货、补货、周"
+"期盘点）需要像对待其他产品一样，对寄售产品及其数量进行追踪，因为它们与其他产"
+"品一样占用空间，并在仓库内流动。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:98
 msgid ""
@@ -15720,6 +15790,10 @@ msgid ""
 "Valuation* report or *Aging report*. Only the vendor, who retains ownership "
 "until the sale, records its value as inventory."
 msgstr ""
+"另一方面，估值与会计核算不纳入统计，因为受托方（收货方）并不实际拥有寄售库存"
+"所有权。受托方从未采购该寄售库存，且在售出之前无需向供应商支付货款，因此该类"
+"产品**不会**体现在**库存估值报表**或**账龄报表**中。仅保留所有权直至售出的供"
+"应商，才会将该批货物作为存货入账核算。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:108
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:3
@@ -15779,6 +15853,10 @@ msgid ""
 "the :guilabel:`Owner` column is populated with the owner of those products, "
 "or the original vendor who supplied the products in the first place."
 msgstr ""
+"通过导航至 :menuselection:`库存 --> 报表 --> 库存报表`，查看 :guilabel:`现有"
+"库存`仪表板。在此报表中，除了各仓库的库存数量外，还会显示所有现有库存的 "
+":guilabel:`仓库位置`。对于寄售产品，:guilabel:`所有者` 列中显示的是这些产品的"
+"所有者，即最初供应这些产品的原始供应商。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:5
 msgid ""
@@ -27309,19 +27387,19 @@ msgstr ":guilabel:`开票策略`\\ : 选择其中一个选项。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:129
 msgid "In the :guilabel:`SendCloud Configuration` tab:"
-msgstr ""
+msgstr "在 :guilabel:`SendCloud 配置` 选项卡中："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
 msgid "Enter the :guilabel:`Sendcloud Public Key`."
-msgstr ""
+msgstr "输入 :guilabel:`Sendcloud 公开金钥`。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid "Enter the :guilabel:`Sendcloud Secret Key`."
-msgstr ""
+msgstr "输入\\ :guilabel:`Sendcloud 私密金钥`\\ 。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:133
 msgid "Enter the :guilabel:`Ship From` location."
-msgstr ""
+msgstr "输入\\ :guilabel:`发货自`\\ 地点。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:138
 msgid "Pickup points"
@@ -27344,20 +27422,22 @@ msgid ""
 "*Options* section in the *SendCloud Configuration* tab, "
 "enable :guilabel:`Use Sendcloud Locations` feature."
 msgstr ""
+"要启用此功能，请转到配送方式表单，在 SendCloud 配置选项卡的“选项”部分下，启"
+"用 :guilabel:`使用 SendCloud 配送点` 功能。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:148
 msgid "Once enabled, the pickup point selection is available through:"
-msgstr ""
+msgstr "启用后，可通过以下方式选择取货点："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:150
 msgid ""
 "The **Website** app on the *Delivery method* page during the online checkout "
 "process."
-msgstr ""
+msgstr "在线结账过程中，**网站**应用的*配送方式*页面。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:152
 msgid "The Delivery method page with Sendcloud option selected."
-msgstr ""
+msgstr "已选择 Sendcloud 选项的\\ *Delivery method*\\ （运送方式）页面。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:155
 msgid ""
@@ -36625,6 +36705,8 @@ msgid ""
 "incoming stock (either purchased or manufactured) for outgoing demands, such "
 "as sales orders (SOs) or components on manufacturing orders (MOs)."
 msgstr ""
+"在 Odoo 中，用户可通过分配报表，手动将入库库存（采购或生产入库）预留给出库需"
+"求，例如销售订单（SO）或制造订单（MO）所需组件。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:17
 msgid ""
@@ -36633,6 +36715,8 @@ msgid ""
 "prioritize specific outgoing orders over other competing demands, especially "
 "when existing stock for a product does not adequately fulfill those demands."
 msgstr ""
+"Odoo 默认会根据计划日期，自动将现有库存预留给出库需求。但有时用户需要手动优先"
+"处理特定出库订单，优先于其他竞争需求，尤其是当现有库存不足以满足全部需求时。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:22
 msgid ""
@@ -36641,6 +36725,8 @@ msgid ""
 "a manufacturing order (MO) to fulfill either an |SO| containing the "
 "purchased product or an |MO| with the product as a component."
 msgstr ""
+"本文档介绍如何使用分配报表，将采购订单（PO）或制造订单（MO）的入库产品，手动"
+"分配给包含该采购产品的 |SO|，或是将该产品作为组件的 |MO|，以满足出库需求。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:31
 msgid ""
@@ -36648,6 +36734,8 @@ msgid ""
 "(e.g., receipts generated from |POs|). However, for some operations, users "
 "must manually enable the feature."
 msgstr ""
+"默认情况下，分配报表对入库移动（例如由 |PO| 生成的收货单）自动启用。但部分业"
+"务场景下，用户需要手动开启该功能。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:34
 msgid ""
@@ -36658,10 +36746,14 @@ msgid ""
 "automatically displays the option to view an :ref:`allocation report "
 "<inventory/allocation_report/workflow/report>` for the specific operation."
 msgstr ""
+"要执行此操作，请导航至 :menuselection:`库存应用 --> 配置 --> 操作类型`。在仪"
+"表板上，点击所需的 :guilabel:`操作类型`（例如 `收货` 或 `生产`），然后确认 "
+":guilabel:`显示分配` 复选框已勾选。启用此选项后，系统会自动显示查看该特定操作"
+"的 :ref:`分配报告 <inventory/allocation_report/workflow/report>` 的选项。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:43
 msgid "Optional: Set allocation location"
-msgstr ""
+msgstr "可选：设置分配位置"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:45
 msgid ""
@@ -36670,6 +36762,9 @@ msgid ""
 "*Locations* section on the desired :guilabel:`Operation Type` form, then "
 "select an internal location in the :guilabel:`Location for allocation` field."
 msgstr ""
+"已分配的单位可在交付或消耗前，发送到一个与库存分开的专用位置。要配置此选项，"
+"请转到所需 :guilabel:`操作类型` 表单中的 *位置* 部分，然后在 :guilabel:`分配"
+"位置` 字段中选择一个内部位置。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:51
 msgid ""
@@ -36677,12 +36772,15 @@ msgid ""
 "the :guilabel:`Show Allocation` option and :doc:`Storage Locations <../"
 "inventory_management/use_locations>` features are enabled."
 msgstr ""
+"只有在启用了 :guilabel:`显示分配` 选项和 :doc:`存储位置 <../"
+"inventory_management/use_locations>` 功能时，:guilabel:`分配位置` 字段才会显"
+"示。"
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:59
 msgid ""
 "The following outline summarizes all necessary steps for allocating a "
 "product using allocation reports:"
-msgstr ""
+msgstr "以下概要总结了使用分配报告对产品进行分配所需的所有步骤："
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:62
 msgid ""
