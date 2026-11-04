@@ -446,6 +446,39 @@ module.
    - PostgreSQL - Transaction Isolation - `Repeatable Read
      <https://www.postgresql.org/docs/current/transaction-iso.html#XACT-REPEATABLE-READ>`_
 
+.. _reference/external_api/reports:
+
+Reports
+=======
+
+Reports are rendered by the web interface, not by the JSON-2 API. The ``/report/pdf`` and
+``/report/html`` routes require an authenticated session, and :ref:`API keys
+<reference/external_api/api_key>` are not accepted there: calling them with a ``bearer`` token
+returns the login page with an HTTP 200 status rather than a PDF. Client code should therefore
+check that the response starts with ``%PDF`` before writing it to a file.
+
+Report rendering methods are private (``_render_qweb_pdf``) and, as such, cannot be called remotely
+either. See :ref:`reference/orm/model` for the meaning of private methods.
+
+To download a report without an interactive session, use the record's portal access token, which
+the portal routes accept. For a sales order:
+
+.. code-block:: bash
+
+   # 1. Read the record's portal token
+   curl -X POST "https://mycompany.example.com/json/2/sale.order/read" \
+        -H "Authorization: bearer $API_KEY" \
+        -H "Content-Type: application/json" \
+        -d '{"ids": [42], "fields": ["access_token"]}'
+
+   # 2. Download the PDF through the portal route
+   curl -o quotation.pdf \
+        "https://mycompany.example.com/my/orders/42?access_token=$TOKEN&report_type=pdf&download=true"
+
+The same pattern applies to invoices (``/my/invoices/<id>``) and to any other document shared in
+the customer portal. Documents that are not shared in the portal can only be printed from the web
+interface, or stored on the record by configuring the report's *Attachment* field.
+
 .. _reference/external_api/code_example:
 
 Code Example
