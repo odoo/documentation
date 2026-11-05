@@ -2,7 +2,7 @@
 India
 =====
 
-.. _india/installation:
+.. _localizations/india/installation:
 
 Installation
 ============
@@ -22,26 +22,26 @@ localization:
      - Default :ref:`fiscal localization package <fiscal_localizations/packages>`
    * - :guilabel:`Indian E-invoicing`
      - `l10n_in_edi`
-     - :ref:`Indian e-invoicing integration <india/e-invoicing>`
+     - :ref:`Indian e-invoicing integration <localizations/india/e-invoicing>`
    * - :guilabel:`Indian E-waybill`
      - `l10n_in_ewaybill`
-     - :ref:`Indian E-way bill integration <india/e-waybill>`
+     - :ref:`Indian E-way bill integration <localizations/india/e-waybill>`
    * - :guilabel:`Indian E-waybill Stock`
      - `l10n_in_ewaybill_stock`
-     - :ref:`E-waybill creation from the Inventory app <india/e-waybill-stock>`
+     - :ref:`E-waybill creation from the Inventory app <localizations/india/e-waybill-stock>`
    * - :guilabel:`Indian - Accounting Reports`
      - `l10n_in_reports`
-     - Adds the :ref:`Indian GST Return filing <india/gstr>` and the :ref:`Indian
-       Tax reports <india/gstr_reports>`.
+     - Adds the :ref:`Indian GST Return filing <localizations/india/gstr>` and the :ref:`Indian
+       Tax reports <localizations/india/gstr_reports>`.
    * - :guilabel:`Indian - Bill Of Entry`
      - `l10n_in_boe`
-     - :ref:`Bill of Entry (BOE) <india/bill-of-entry>` support for imports and customs duty landed
+     - :ref:`Bill of Entry (BOE) <localizations/india/bill-of-entry>` support for imports and customs duty landed
        costs.
 
 .. seealso::
    :doc:`Indian Payroll localization documentation <../../hr/payroll/payroll_localizations/india>`
 
-.. _india/company:
+.. _localizations/india/company:
 
 Company
 -------
@@ -55,25 +55,25 @@ To configure your company information, open the **Settings** app, scroll down to
 - :guilabel:`PAN`: essential for determining the type of taxpayer.
 - :guilabel:`GSTIN`: necessary for generating e-Invoices, E-waybills and filing GST returns.
 
-.. _india/gsp_configuration:
+.. _localizations/india/gsp_configuration:
 
 GSP configuration
 -----------------
 
-To use the :ref:`e-Invoicing <india/e-invoicing>`, :ref:`E-Way bill <india/e-waybill>`, and
-:ref:`GST return filing <india/gstr>` services in Odoo, configure :guilabel:`BVM IT Consulting
+To use the :ref:`e-Invoicing <localizations/india/e-invoicing>`, :ref:`E-Way bill <localizations/india/e-waybill>`, and
+:ref:`GST return filing <localizations/india/gstr>` services in Odoo, configure :guilabel:`BVM IT Consulting
 Services India Private Limited` as the :abbr:`GSP (GST Suvidha Provider)`. To do so,
 follow these steps :
 
 #. If needed :ref:`Upgrade <general/upgrade>` the :guilabel:`Indian - Accounting` (`l10n_in`) module.
 #. Go to :menuselection:`Accounting --> Configuration --> Settings`.
 #. Scroll down to the :guilabel:`Select GSP Provider` section, and set the :guilabel:`GSP` field to :guilabel:`BVM IT Consulting`.
-#. :ref:`Log into the NIC e-invoice portal <india/e-invoicing-api>` and
-   :ref:`NIC E-Way bill portal <india/e-waybill-api>` and create a new API user for each.
+#. :ref:`Log into the NIC e-invoice portal <localizations/india/e-invoicing-api>` and
+   :ref:`NIC E-Way bill portal <localizations/india/e-waybill-api>` and create a new API user for each.
 #. Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll down to
-   the :guilabel:`Indian Integration` section, and enter the new :guilabel:`Username` and :guilabel:`Password` for the :ref:`e-Invoicing <india/e-invoicing-configuration>` and :ref:`E-Way bill <india/e-waybill-configuration>` features.
+   the :guilabel:`Indian Integration` section, and enter the new :guilabel:`Username` and :guilabel:`Password` for the :ref:`e-Invoicing <localizations/india/e-invoicing-configuration>` and :ref:`E-Way bill <localizations/india/e-waybill-configuration>` features.
 
-.. _india/indian-configuration:
+.. _localizations/india/indian-configuration:
 
 Indian Configuration
 ====================
@@ -85,18 +85,23 @@ Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration
 .. image:: india/indian-integration.png
    :alt: Indian Integration Section
 
-- :guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <india/tds-tcs-threshold>`
+- :guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <localizations/india/tds-tcs-threshold>`
   functionality along with account-based TDS/TCS section suggestions.
-- :guilabel:`Registered Under GST`: Select this if your business is registered under GST to access
-  GST-related features, including e-invoice, e-waybill, GST e-filing, fetch vendor e-invoiced
-  document and check GST number status.
-- :guilabel:`E-Invoicing`: Connects to the :ref:`e-invoice <india/e-invoicing>` :abbr:`NIC
+- :guilabel:`GST Registration Details`: Select a :guilabel:`Registration Type` as per your applicability:
+
+  - :guilabel:`Regular Scheme`: Select this option if the business is registered as a regular GST taxpayer.
+  - :guilabel:`Composition Scheme`: Select this option if the business has opted for the :ref:`GST Composition
+    Scheme <localizations/india/composition>`.
+  - Leave the field empty if the business is not registered under GST (Unregistered).
+
+  Once a registration type is selected, enter the company's :guilabel:`GST Number`.
+- :guilabel:`E-Invoicing`: Connects to the :ref:`e-invoice <localizations/india/e-invoicing>` :abbr:`NIC
   (National Informatics Center)` portal to submit invoices.
-- :guilabel:`E-Way bill`: Connects to the :ref:`e-waybill <india/e-waybill>` :abbr:`NIC
+- :guilabel:`E-Way bill`: Connects to the :ref:`e-waybill <localizations/india/e-waybill>` :abbr:`NIC
   (National Informatics Center)` portal to generate e-waybills.
 - :guilabel:`GST E-Filing & Matching`: Enable the feature to facilitate :ref:`GST return filing
-  <india/gstr>` and connect with the GST portal to submit GSTR-1 and retrieve GSTR-2B.
-- :guilabel:`Check GST Number Status`: Enable to verify :ref:`GSTIN Status <india/gstin_status>`.
+  <localizations/india/gstr>` and connect with the GST portal to submit GSTR-1 and retrieve GSTR-2B.
+- :guilabel:`Check GST Number Status`: Enable to verify :ref:`GSTIN Status <localizations/india/gstin_status>`.
 - :guilabel:`Fetch Vendor E-Invoiced Document`: Helps in creating draft vendor bills using
   e-invoice data submitted by vendors on GST portal.
 
@@ -105,24 +110,118 @@ Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration
    production environment. If you want to use the testing environment then keep the checkbox
    unchecked.
 
-.. _india/e-invoicing:
+.. _localizations/india/composition:
+
+GST Composition Scheme
+----------------------
+
+The **GST Composition Scheme** is a simplified tax mechanism for small taxpayers whose aggregate
+turnover does not exceed the limit set by the government (₹1.5 crore for suppliers of goods and ₹50
+lakh for service providers). Unlike regular taxpayers, composition dealers:
+
+- Pay tax at a fixed percentage of their turnover;
+- Cannot claim :abbr:`ITC (Input Tax Credit)` on their purchases;
+- Cannot collect tax from their customers or issue tax invoices. They issue a **Bill of Supply**
+  instead;
+- Cannot make inter-state outward supplies of goods.
+
+Composition dealers file the following returns:
+
+- **CMP-08**: quarterly statement used to declare and pay tax, due by the **18th of the month
+  following the quarter**.
+- **GSTR-4**: annual return, due by **30th April following the end of the financial year**.
+
+.. _localizations/india/composition-configuration:
+
+Configuration
+~~~~~~~~~~~~~
+
+To register a company under the composition scheme, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll down to the
+   :guilabel:`Indian Integration` section.
+#. Under the :guilabel:`GST Registration Details` setting, set the :guilabel:`Registration Type` to
+   :guilabel:`Composition Scheme`.
+#. Enter the company's :guilabel:`GST Number`.
+#. Select the applicable composition :guilabel:`Tax Rate`:
+
+   - :guilabel:`1% for Manufacturers and Traders`
+   - :guilabel:`5% for Restaurants`
+   - :guilabel:`6% for Service Providers`
+
+#. Click :guilabel:`Save`.
+
+When the :guilabel:`Composition Scheme` is selected, Odoo automatically:
+
+- Activates the taxes applicable to composition dealers: the purchase taxes without input tax
+  credit (:guilabel:`(No ITC)`), the reverse charge purchase taxes, and the nil-rated, exempt, and
+  non-GST taxes. All other GST taxes are archived;
+- Removes the default sales tax and sets :guilabel:`5% GST P (No ITC)` as the default purchase
+  tax;
+- Hides features that do not apply to composition dealers: :guilabel:`E-Invoicing`,
+  :guilabel:`Fetch Vendor E-Invoiced Document`, :guilabel:`Disable B2C HSN Reporting`, and
+  :guilabel:`HSN/SAC Validation`;
+- Sets the tax return periodicity to quarterly if the :guilabel:`Indian - Accounting Reports`
+  (`l10n_in_reports`) module is :doc:`installed <../../general/apps_modules>`.
+
+.. note::
+   The :guilabel:`E-Way bill`, :ref:`Check GST Number Status <localizations/india/gstin_status>`, and :ref:`GST
+   return filing <localizations/india/composition-returns>` features remain available for composition dealers.
+
+.. _localizations/india/composition-sales:
+
+Customer invoices
+~~~~~~~~~~~~~~~~~
+
+As composition dealers cannot collect tax from customers, leave the :guilabel:`Taxes` field empty
+on customer invoice lines. The tax due is computed on the turnover using the composition
+:guilabel:`Tax Rate` in the :ref:`CMP-08 report <localizations/india/cmp-08_report>`.
+
+When printed, the invoice PDF report is titled **Bill of Supply** and includes the mention
+**Composition Taxable Person - Not Eligible to Collect Tax on Supplies** in the footer.
+
+.. image:: india/composition-bill-of-supply.png
+   :alt: Bill of Supply issued by a composition dealer
+
+.. important::
+   Customer invoices with GST taxes or with an inter-state place of supply are flagged by the
+   :ref:`CMP-08 validation checks <localizations/india/cmp-08>`.
+
+.. _localizations/india/composition-purchases:
+
+Vendor bills
+~~~~~~~~~~~~
+
+As composition dealers cannot claim input tax credit, use the :guilabel:`(No ITC)` taxes on vendor
+bills (e.g., :guilabel:`5% GST P (No ITC)`). The GST amount is added to the cost of the purchased
+goods or services instead of being recorded as a recoverable tax.
+
+For purchases subject to the reverse charge mechanism, use the reverse charge purchase taxes. The
+tax payable on these purchases is reported in the :ref:`CMP-08 report <localizations/india/cmp-08_report>`.
+
+.. _localizations/india/e-invoicing:
 
 e-Invoice system
 ================
 
 Odoo is compliant with the **Indian Goods and Services Tax (GST) e-Invoice system** requirements.
 
+.. note::
+   The e-Invoice system is not available for companies registered under the :ref:`GST Composition
+   Scheme <localizations/india/composition>`, as composition dealers issue a **Bill of Supply** instead of a tax
+   invoice.
+
 Setup
 -----
 
-.. _india/e-invoicing-api:
+.. _localizations/india/e-invoicing-api:
 
 NIC e-Invoice registration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice portal to get your
 **API credentials**. You need these credentials to :ref:`configure your Odoo Accounting app
-<india/e-invoicing-configuration>`.
+<localizations/india/e-invoicing-configuration>`.
 
 #. Log in to the `NIC e-Invoice portal <https://einvoice1.gst.gov.in/>`_ by clicking
    :guilabel:`Login` and entering your :guilabel:`Username` and :guilabel:`Password`;
@@ -144,24 +243,24 @@ You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice por
    .. image:: india/submit-api-registration-details.png
       :alt: Submit API specific Username and Password
 
-.. _india/e-invoicing-configuration:
+.. _localizations/india/e-invoicing-configuration:
 
 Configuration in Odoo
 ~~~~~~~~~~~~~~~~~~~~~
 
-To enable the e-Invoice service in Odoo, :ref:`activate <india/indian-configuration>` the
+To enable the e-Invoice service in Odoo, :ref:`activate <localizations/india/indian-configuration>` the
 :guilabel:`E-Invoicing` feature and enter the :guilabel:`Username` and :guilabel:`Password`
 previously set for the API.
 
-Additionally, make sure the :ref:`GSP field is configured <india/gsp_configuration>` in the
+Additionally, make sure the :ref:`GSP field is configured <localizations/india/gsp_configuration>` in the
 Accounting settings.
 
-.. _india/e-invoicing-workflow:
+.. _localizations/india/e-invoicing-workflow:
 
 Workflow
 --------
 
-.. _india/generate-e-invoice:
+.. _localizations/india/generate-e-invoice:
 
 Generate e-Invoice
 ~~~~~~~~~~~~~~~~~~
@@ -176,7 +275,7 @@ JSON-signed file of the invoice to the NIC e-Invoice portal.
 .. note::
    - You can find the JSON-signed file and check the e-Invoicing status in the chatter.
 
-.. _india/invoice-pdf-report:
+.. _localizations/india/invoice-pdf-report:
 
 Invoice PDF report
 ~~~~~~~~~~~~~~~~~~
@@ -188,7 +287,7 @@ and QR code. These certify that the invoice is a valid fiscal document.
 .. image:: india/invoice-report.png
    :alt: IRN and QR code
 
-.. _india/edi-cancellation:
+.. _localizations/india/edi-cancellation:
 
 e-Invoice cancellation
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -200,7 +299,7 @@ Remarks`.
 .. note::
    - You can find the e-Invoicing status in the chatter.
 
-.. _india/e-invoice-negative-lines:
+.. _localizations/india/e-invoice-negative-lines:
 
 Management of negative lines in e-Invoices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,7 +341,7 @@ automatically by Odoo.
    accurate calculations based on the HSN Code and GST rate. This ensures a more straightforward and
    standardized representation in the E-invoice records.
 
-.. _india/price-adjustment-credit-debit-notes:
+.. _localizations/india/price-adjustment-credit-debit-notes:
 
 Managing price adjustment credit/debit notes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -267,7 +366,7 @@ In the :guilabel:`Other Info` tab of the credit or debit note, select the approp
 
   - reports both the quantity and unit price as zero in the e-Invoice, while the taxable value and
     GST amounts are reported as usual;
-  - excludes the note's quantity from the HSN summary in the :ref:`GSTR-1 return <india/gstr-1>`;
+  - excludes the note's quantity from the HSN summary in the :ref:`GSTR-1 return <localizations/india/gstr-1>`;
   - leaves the invoiced quantity of the related sales order unchanged.
 
 .. example::
@@ -281,7 +380,7 @@ In the :guilabel:`Other Info` tab of the credit or debit note, select the approp
      quantity and unit price as zero, with a taxable value of ₹500 and GST of ₹90. The HSN quantity
      in GSTR-1 is not affected, and the sales order still shows 10 units invoiced.
 
-.. _india/verify-e-invoice:
+.. _localizations/india/verify-e-invoice:
 
 GST e-Invoice verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -303,26 +402,26 @@ website itself.
    .. image:: india/signed-invoice.png
       :alt: verified e-invoice
 
-.. _india/e-waybill:
+.. _localizations/india/e-waybill:
 
 E-Way bill
 ==========
 
-.. _india/e-waybill-setup:
+.. _localizations/india/e-waybill-setup:
 
 Setup
 -----
 
 Odoo is compliant with the **Indian Goods and Services Tax (GST) E-waybill system** requirements.
 
-.. _india/e-waybill-api:
+.. _localizations/india/e-waybill-api:
 
 API registration on NIC E-Way bill
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You must register on the :abbr:`NIC (National Informatics Centre)` E-Way bill portal to create your
 **API credentials**. You need these credentials to :ref:`configure your Odoo Accounting app
-<india/e-waybill-configuration>`.
+<localizations/india/e-waybill-configuration>`.
 
 #. Log in to the `NIC E-Way bill portal <https://ewaybillgst.gov.in/>`_ by clicking
    :guilabel:`Login` and entering your :guilabel:`Username` and :guilabel:`Password`;
@@ -343,23 +442,23 @@ You must register on the :abbr:`NIC (National Informatics Centre)` E-Way bill po
    .. image:: india/e-waybill-registration-details.png
       :alt: Submit GSP API registration details
 
-.. _india/e-waybill-configuration:
+.. _localizations/india/e-waybill-configuration:
 
 Configuration in Odoo
 ~~~~~~~~~~~~~~~~~~~~~
 
-To enable the E-Way bill service in Odoo, :ref:`activate <india/indian-configuration>` the
+To enable the E-Way bill service in Odoo, :ref:`activate <localizations/india/indian-configuration>` the
 :guilabel:`E-Way bill` feature and enter the :guilabel:`Username` and :guilabel:`Password`.
 
-Additionally, make sure the :ref:`GSP field is configured <india/gsp_configuration>` in the
+Additionally, make sure the :ref:`GSP field is configured <localizations/india/gsp_configuration>` in the
 Accounting settings.
 
-.. _india/e-waybill-workflow:
+.. _localizations/india/e-waybill-workflow:
 
 Workflow
 --------
 
-.. _india/generate-e-waybill:
+.. _localizations/india/generate-e-waybill:
 
 Generate E-Way bill
 ~~~~~~~~~~~~~~~~~~~
@@ -379,7 +478,7 @@ You can print the invoice PDF report once you have submitted the E-Way bill. The
 .. image:: india/e-waybill-invoice-report.png
    :alt: E-way bill acknowledgment number and date
 
-.. _india/e-waybill-cancellation:
+.. _localizations/india/e-waybill-cancellation:
 
 E-Way bill cancellation
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -395,14 +494,14 @@ To cancel an E-Way bill, click :guilabel:`e-Waybill` on the related invoice/bill
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
      the government portal. You can check the JSON file in the chatter.
 
-.. _india/e-waybill-stock:
+.. _localizations/india/e-waybill-stock:
 
 E-waybill creation from receipts and delivery orders
 ----------------------------------------------------
 
 .. note::
    Make sure the **E-Way bill Stock** module is :ref:`installed <general/install>` and
-   the :ref:`E-Way bill setup <india/e-waybill-setup>` is complete.
+   the :ref:`E-Way bill setup <localizations/india/e-waybill-setup>` is complete.
 
 To create E-Way bills from :doc:`receipts and deliveries
 </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations>` in the Inventory
@@ -429,7 +528,7 @@ app, follow these steps:
 To print the E-waybill or the challan, click the :icon:`fa-cog` :guilabel:`(gear)` icon and select
 :icon:`fa-print` :guilabel:`Ewaybill / Delivery Challan`.
 
-.. _india/gstin_status:
+.. _localizations/india/gstin_status:
 
 Indian Check GSTIN Status
 =========================
@@ -449,12 +548,12 @@ the :icon:`fa-refresh` (:guilabel:`refresh`) button next to the :guilabel:`GST S
 A notification is displayed to confirm the status update and the GSTIN status and verification date
 are logged in the contact's chatter.
 
-.. _india/gstr:
+.. _localizations/india/gstr:
 
 Indian GST Return filing
 ========================
 
-.. _india/gstr_api:
+.. _localizations/india/gstr_api:
 
 Enable API access
 -----------------
@@ -480,35 +579,43 @@ To file GST Returns in Odoo, you must first enable API access on the GST portal.
 #. Doing so enables a :guilabel:`Duration` drop-down menu. Select the :guilabel:`Duration` of your
    preference, and click :guilabel:`Confirm`.
 
-.. _india/gstr_configuration:
+.. _localizations/india/gstr_configuration:
 
 Indian GST Service In Odoo
 --------------------------
 
-Once you have enabled the :ref:`API access <india/gstr_api>` on the GST portal, :ref:`activate
-<india/indian-configuration>` the :guilabel:`GST E-Filing & Matching Feature` to start using GST
-Service. Then, in the :guilabel:`Registered Under GST` section, fill in the required :guilabel:`GST
-Username`.
+Once you have enabled the :ref:`API access <localizations/india/gstr_api>` on the GST portal, :ref:`activate
+<localizations/india/indian-configuration>` the :guilabel:`GST E-Filing & Matching Feature` to start using GST
+Service. Then, in the :guilabel:`GST Registration Details` setting, fill in the required
+:guilabel:`GST Username`.
 
    .. image:: india/gst-setup.png
       :alt: Please enter your GST portal Username as Username
 
-Additionally, make sure the :ref:`GSP field is configured <india/gsp_configuration>` in the
+Additionally, make sure the :ref:`GSP field is configured <localizations/india/gsp_configuration>` in the
 Accounting settings.
 
-.. _india/gstr_workflow:
+.. _localizations/india/gstr_workflow:
 
 File-in GST Return
 ------------------
 
 To file a GST return, make sure the :ref:`GST E-Filing & Matching Feature
-<india/indian-configuration>` is enabled. Then, go to the Accounting dashboard and click
+<localizations/india/indian-configuration>` is enabled. Then, go to the Accounting dashboard and click
 :guilabel:`Tax Returns` on the :guilabel:`Tax Returns` journal. In the
 :guilabel:`Accounting Periods` window, fill in the following fields.
 
 - :guilabel:`Opening Date`: Starting date from which tax return periods are created.
 - :guilabel:`Fiscal Year End`: End date of the fiscal year (e.g., :guilabel:`31 March`).
 - :guilabel:`GSTIN Periodicity`: Frequency of return filing (e.g., :guilabel:`Monthly`).
+
+.. note::
+   Odoo generates the returns based on the company's :guilabel:`Registration Type`:
+
+   - :guilabel:`Regular Scheme`: :ref:`GSTR-1 <localizations/india/gstr-1>` and :ref:`GSTR-2B <localizations/india/gstr-2b>`
+     returns.
+   - :guilabel:`Composition Scheme`: :ref:`CMP-08 <localizations/india/cmp-08>` and :ref:`GSTR-4
+     <localizations/india/gstr-4>` returns.
 
 .. tip::
    Alternatively, go to :menuselection:`Accounting --> Reporting --> Tax Report`, click
@@ -520,7 +627,7 @@ To file a GST return, make sure the :ref:`GST E-Filing & Matching Feature
    :menuselection:`Accounting --> Reporting --> Tax Report`, click :icon:`fa-book`
    :guilabel:`Report:` and select :guilabel:`GSTR-2B`, and click :guilabel:`Reconcile`.
 
-.. _india/gstr-1:
+.. _localizations/india/gstr-1:
 
 Filing GSTR-1 tax return
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -601,7 +708,7 @@ To file a GSTR-1 tax return, follow these steps:
    .. important::
       Once a return is marked as **Filed**, it cannot be reset or filed again.
 
-.. _india/gstr-2b:
+.. _localizations/india/gstr-2b:
 
 Receive GSTR-2B tax reconciliation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -642,12 +749,105 @@ Receive GSTR-2B tax reconciliation
    The :guilabel:`Complete` stage in the progress bar turns green, finalizing the bill
    reconciliation.
 
-.. _india/gstr_reports:
+.. _localizations/india/composition-returns:
+
+GST returns for composition dealers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Companies registered under the :ref:`GST Composition Scheme <localizations/india/composition>` file the
+:guilabel:`CMP-08` statement every quarter and the :guilabel:`GSTR-4` return every financial year.
+These returns are available in :menuselection:`Accounting --> Accounting --> Tax Returns` once the
+:ref:`GST E-Filing & Matching feature <localizations/india/indian-configuration>` is enabled.
+
+.. image:: india/composition-tax-returns.png
+   :alt: CMP-08 and GSTR-4 returns of a composition dealer
+
+.. important::
+   Odoo does not send the :guilabel:`CMP-08` and :guilabel:`GSTR-4` returns to the GST portal. Use
+   Odoo to review and validate the data, then file the return on the `GST portal
+   <https://services.gst.gov.in/services/login>`_.
+
+.. _localizations/india/cmp-08:
+
+Filing CMP-08 statement
+***********************
+
+To file a CMP-08 statement, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Accounting --> Tax Returns` and select :guilabel:`CMP-08` as
+:guilabel:`Return Type` for the desired quarter.
+
+   .. note::
+      The CMP-08 statement must be filed by the **18th of the month following the quarter**.
+
+#. Odoo automatically performs validation checks to ensure compliance with the composition scheme
+   rules:
+
+   .. note::
+      The following types of validation issues can be raised:
+
+      - :guilabel:`Apply Appropriate Sale Tax`: Regular GST rates are not applicable on sales for composition dealers.
+      - :guilabel:`No Inter State Sale`: Composition dealers cannot make sales outside their home
+        state.
+
+   Click on any individual check to view and correct the related invoices. Once all checks are
+   reviewed, click :guilabel:`Validate`.
+
+#. Click :guilabel:`CMP-08` to review the :ref:`report <localizations/india/cmp-08_report>`. If applicable, click
+   the amounts of the :guilabel:`3.4 Interest, Late Fee, Penalty and Others (Manual)` line to enter
+   them manually.
+
+#. Pay the :guilabel:`3.3 Tax Payable` amount and file the CMP-08 statement on the GST portal.
+
+#. Click :guilabel:`Submit` to mark the return as submitted. Odoo attaches a PDF copy of the report
+   to the return.
+
+.. _localizations/india/gstr-4:
+
+Filing GSTR-4 annual return
+***************************
+
+To file a GSTR-4 annual return, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Accounting --> Tax Returns` and click the
+:guilabel:`GSTR-4` return for the desired financial year.
+
+   .. note::
+      The GSTR-4 return must be filed by **30th June following the end of the financial year**.
+
+#. Odoo automatically performs validation checks:
+
+   .. note::
+
+      - :guilabel:`All CMP-08 Filled`: All four :ref:`CMP-08 statements <localizations/india/cmp-08>` of the
+        financial year must be submitted before filing the GSTR-4 return.
+      - :guilabel:`Missing GST Treatment Type`: A GST treatment must be set on all invoices and bills.
+        Click the check to open the list of related contacts and set their :guilabel:`GST Treatment`.
+
+   Once all checks are reviewed, click :guilabel:`Validate`.
+
+#. Click :guilabel:`GSTR-4` to review the :ref:`report <localizations/india/gstr-4_report>`. If applicable, click
+   the amounts of the :guilabel:`(Manual)` lines (i.e., advances paid or adjusted, interest, and
+   late fees) to enter them manually.
+
+#. File the GSTR-4 return on the GST portal.
+
+#. Click :guilabel:`Submit` to mark the return as submitted. Odoo attaches a PDF copy of the report
+   to the return.
+
+.. _localizations/india/gstr_reports:
 
 Tax reports
 ===========
 
-.. _india/gstr-1_report:
+The available GST reports depend on the company's :ref:`Registration Type <localizations/india/indian-configuration>`:
+
+- :guilabel:`Regular Scheme`: :ref:`GSTR-1 <localizations/india/gstr-1_report>`, :ref:`GSTR-2B
+  <localizations/india/gstr-2b_report>`, and :ref:`GSTR-3B <localizations/india/gstr-3b_report>` reports.
+- :guilabel:`Composition Scheme`: :ref:`CMP-08 <localizations/india/cmp-08_report>` and :ref:`GSTR-4
+  <localizations/india/gstr-4_report>` reports.
+
+.. _localizations/india/gstr-1_report:
 
 GSTR-1 report
 -------------
@@ -659,7 +859,7 @@ The :guilabel:`GSTR-1` report is divided into sections. It displays the :guilabe
    .. image:: india/gst-gstr-1-report.png
       :alt: GSTR-1 Report
 
-.. _india/gstr-2b_report:
+.. _localizations/india/gstr-2b_report:
 
 GSTR-2B report
 --------------
@@ -671,7 +871,7 @@ The :guilabel:`GSTR-2` report is divided into sections. It displays the :guilabe
    .. image:: india/gst-gstr-2b-report.png
       :alt: GSTR-2B Report
 
-.. _india/gstr-3b_report:
+.. _localizations/india/gstr-3b_report:
 
 GSTR-3B report
 --------------
@@ -686,6 +886,56 @@ The :guilabel:`GSTR-3B` report contains different sections:
    .. image:: india/gst-gstr-3b-report.png
       :alt: GSTR-3B Report
 
+.. _localizations/india/cmp-08_report:
+
+CMP-08 report
+-------------
+
+The :guilabel:`CMP-08` report is used by :ref:`composition dealers <localizations/india/composition>` to declare
+the tax payable for the quarter. It displays the :guilabel:`Base` amount, :abbr:`IGST (Integrated
+Goods and Services Tax)`, :abbr:`CGST (Central Goods and Services Tax)`, :guilabel:`SGST/UTGST`,
+and :guilabel:`CESS` for each section:
+
+- :guilabel:`3.1 Taxable Outward Supplies`: Intra-state sales without GST taxes. The CGST and SGST
+  amounts are computed by applying the composition :guilabel:`Tax Rate` to the turnover, split
+  equally between CGST and SGST.
+- :guilabel:`3.2 Inward Supplies attracting Reverse Charge including Import of Services`: Purchases
+  subject to the reverse charge mechanism, including the import of services.
+- :guilabel:`3.3 Tax Payable`: Sum of the :guilabel:`3.1` and :guilabel:`3.2` lines.
+- :guilabel:`3.4 Interest, Late Fee, Penalty and Others (Manual)`: Interest, late fees, and
+  penalties, to be entered manually.
+
+.. example::
+   A trader registered under the composition scheme with the :guilabel:`1% for Manufacturers and
+   Traders` tax rate makes intra-state sales of ₹10,00,000 during the quarter. The
+   :guilabel:`3.1 Taxable Outward Supplies` line displays a :guilabel:`Base` amount of ₹10,00,000,
+   a CGST amount of ₹5,000, and an SGST amount of ₹5,000.
+
+.. image:: india/cmp-08-report.png
+   :alt: CMP-08 Report
+
+.. _localizations/india/gstr-4_report:
+
+GSTR-4 report
+-------------
+
+The :guilabel:`GSTR-4` report is the annual return of :ref:`composition dealers
+<localizations/india/composition>`. It displays the :guilabel:`Base` amount, :abbr:`IGST (Integrated Goods and
+Services Tax)`, :abbr:`CGST (Central Goods and Services Tax)`, :guilabel:`SGST/UTGST`, and
+:guilabel:`CESS` for each section:
+
+- :guilabel:`4. Inward Supplies`: Purchases from registered persons (with and without reverse
+  charge), from unregistered persons, and import of services.
+- :guilabel:`5. Debit/Credit Notes (Inward Supplies)`: Debit and credit notes received from
+  registered and unregistered persons.
+- :guilabel:`6. Tax on Outward Supplies`: Turnover and tax payable on sales for the financial year.
+- :guilabel:`8. Advance Paid/Adjusted`: Advances paid and adjusted, to be entered manually.
+- :guilabel:`11. Interest, Late fee, Penalty and Others`: Interest and late fees, to be entered
+  manually.
+
+.. image:: india/gstr-4-report.png
+   :alt: GSTR-4 Report
+
 Profit and Loss (IN) report
 ---------------------------
 
@@ -696,7 +946,7 @@ goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`
    .. image:: india/profit-and-loss-report.png
       :alt: Profit and Loss report
 
-.. _india/tds-tcs-threshold:
+.. _localizations/india/tds-tcs-threshold:
 
 TDS/TCS threshold alert
 =======================
@@ -789,7 +1039,7 @@ In Odoo, the aggregate total is calculated for partners sharing the same PAN num
    -  The aggregate total for all customers (XYZ Enterprise - GJ, MH, DL) sharing the PAN number
       ABCPX1234E across all branches is ₹200,000.
 
-.. _india/bill-of-entry:
+.. _localizations/india/bill-of-entry:
 
 Bill of Entry (BOE)
 ===================
