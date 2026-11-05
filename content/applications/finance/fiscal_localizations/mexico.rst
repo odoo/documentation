@@ -137,9 +137,9 @@ modules in Odoo:
 #. Have a `Certificado de Sello Digital / Digital Seal Certificate
    <https://www.gob.mx/sat/acciones-y-programas/ certificado-de-sello-digital>`_ (CSD).
 #. Choose a |PAC|. Currently, Odoo works with the following |PAC|\s: `Solución Factible
-   <https://solucionfactible.com/contenido/productos/timbrado/general#dos>`_, `Quadrum
-   <https://cfdiquadrum.com.mx/odoo/>`_, and `SW Sapien - Smarter Web
-   <https://info.sw.com.mx/sw-smarter-odoo>`_.
+   <https://solucionfactible.com/contenido/productos/timbrado/general#dos>`_,
+   `Quadrum <https://cfdiquadrum.com.mx/odoo/>`_, and
+   `SW Sapien - Smarter Web <https://integracionodoo.sw.com.mx>`_.
 
 .. _l10n/mx/company:
 
