@@ -19,7 +19,7 @@ To train employees using eLearning courses, the **eLearning** app must be :ref:`
    Courses can be :ref:`created <employees/create>` either through the **Employees** app *or* the
    **eLearning** app.
 
-First, navigate to :menuselection:`Employees app --> Learning --> eLearning`, and the
+First, navigate to :menuselection:`Employees app --> Learning --> Courses --> eLearning`, and the
 :guilabel:`eLearning Courses` dashboard loads. All currently configured courses appear in a list
 view. Each course displays the following information:
 
@@ -43,13 +43,13 @@ Create an eLearning course
 --------------------------
 
 No courses come preconfigured in the **Employees** app. Courses must be created, in either the
-**Empoyees** app or the **eLearning** app.
+**Employees** app or the **eLearning** app.
 
 .. note::
    Once a course is available, it is accessible from both apps.
 
-To create an eLearning course, navigate to :menuselection:`Employees app --> Learning -->
-eLearning`. Click the :guilabel:`New` button in the upper-left corner, and a blank *eLearning
+To create an eLearning course, navigate to :menuselection:`Employees app --> Learning --> Courses
+--> eLearning`. Click the :guilabel:`New` button in the upper-left corner, and a blank *eLearning
 Course* form loads.
 
 Follow the directions for :ref:`creating a course <elearning/course-creation>`, including adding the
@@ -67,7 +67,8 @@ Invite employees
 ----------------
 
 From the :guilabel:`eLearning Courses` dashboard, invite employees to take a course. Navigate to
-:menuselection:`Employees app --> Learning --> eLearning`, click on the desired course from the
+:menuselection:`Employees app --> Learning --> Courses --> eLearning`, click on the desired course
+from the
 list, and the course form loads. Click the :guilabel:`Add Attendees` button and an *Enroll Attendees
 to (Course Title)* pop-up window loads.
 
@@ -79,7 +80,7 @@ employees in the database are available in this list.
    :guilabel:`Search more...`.
 
    In the *Search: Recipients* pop-up window that loads, filter the results by clicking into the
-   search box and selecting :guilabel:`Employees` in the :icon:`fa-filter` :guilabel:`Filters`
+   search box and selecting :guilabel:`Employees` in the :icon:`filter_alt_f` :guilabel:`Filters`
    column. Only employees are presented, excluding other companies or vendors. Click the checkbox to
    the left of the :guilabel:`Name` column to select all employees.
 
@@ -90,14 +91,14 @@ Make any desired changes to the email, attach any necessary files, then click :g
 invite the employees.
 
 Once the invitation is sent, the recipients appear in the attendees list. Click the
-:icon:`fa-graduation-cap` :guilabel:`Attendees` smart button to view all invited attendees.
+:icon:`school` :guilabel:`Attendees` smart button to view all invited attendees.
 
 Once the employee completes the eLearning course, the training appears on their employee record, in
 the :ref:`Resume <employees/resume>` tab.
 
 .. note::
    Alternatively, click the :guilabel:`Invite` button, and an *Invite Attendees to (Course Name)*
-   pop-up window loads. Copy the course link by clicking the :icon:`fa-clipboard` :guilabel:`(Copy)`
+   pop-up window loads. Copy the course link by clicking the :icon:`assignment` :guilabel:`(Copy)`
    icon to copy the link and send it to employees. Or, click the :guilabel:`Send Email` toggle to
    :ref:`email employees <employees/invite>`.
 
@@ -113,15 +114,15 @@ The **Employees** app can also track in-person training. These can take any form
 interactive training. To create onsite training courses, the **Events** app must be :ref:`installed
 <general/install>`.
 
-Onsite training can be created either through the **Employees** app *or* the **Events** app. All
-courses created appear in both apps.
+Onsite training can be created either through the **Employees** app *or* the **Events** app.
 
 .. note::
-   Once an onsite training is available, it is accessible from both apps.
+   The **Employees** app only displays the events with at least one employee registered as an
+   attendee. All events remain accessible from the **Events** app.
 
 To view all currently configured onsite courses navigate to :menuselection:`Employees app -->
-Learning --> Onsite`, and the :guilabel:`Onsite Courses` dashboard loads. All onsite courses appear
-in a default Kanban view, organized by stage.
+Learning --> Courses --> Onsite`, and the :guilabel:`Onsite Courses` dashboard loads. All onsite
+courses appear in a default Kanban view, organized by stage.
 
 Click on an onsite training card to view the details.
 
@@ -130,9 +131,9 @@ Click on an onsite training card to view the details.
 Create an onsite course
 -----------------------
 
-To create a new onsite training, navigate to :menuselection:`Employees app --> Learning --> Onsite`.
-Click the :guilabel:`New` button in the top-left corner and a blank *Onsite Courses* event form
-loads.
+To create a new onsite training, navigate to :menuselection:`Employees app --> Learning --> Courses
+--> Onsite`. Click the :guilabel:`New` button in the top-left corner and a blank *Onsite Courses*
+event form loads.
 
 :ref:`Fill out the event form <events/event-form>` to configure the onsite training course. When
 completed, the option to publish it to the website is available, if desired. This option is only
@@ -144,11 +145,16 @@ Invite employees
 ----------------
 
 Once the onsite training is configured, the next step is to invite employees. Navigate to
-:menuselection:`Employees app --> Learning --> Onsite` and click on the course Kanban card. Click
-the :guilabel:`Invite` button in the upper-left corner, and a blank mailing form loads.
+:menuselection:`Employees app --> Learning --> Courses --> Onsite` and click on the course Kanban
+card. Click the :guilabel:`Invite` button in the upper-left corner, and a blank mailing form loads.
 
-The form only allows for inviting employees via :guilabel:`Email`. The :guilabel:`Subject` is
-`Event: (Event Title)` by default, and can be changed if desired.
+.. note::
+   The :guilabel:`Invite` button is only available if the **Email Marketing** app is installed.
+   Employees can also be registered directly in the *Attendees* of the event.
+
+Employees are invited via :guilabel:`Email` by default. If the **SMS Marketing** app is installed,
+an :guilabel:`SMS` option is also available in the :guilabel:`Mailing Type` field. The
+:guilabel:`Subject` is `Event: (Event Title)` by default, and can be changed if desired.
 
 Next, add the employees to the :ref:`Recipients <email_marketing/recipients>` in the respective
 field, then create the :ref:`body of the email <email_marketing/mail_body>`.
