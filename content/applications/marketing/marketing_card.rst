@@ -164,7 +164,7 @@ Configure mailing
 -----------------
 
 To configure the campaign mailing, click :guilabel:`Send`. On a separate page, users configure the
-:ref:`email form <email_marketing/create_email>` to filter or specify recipients and customize the
+:ref:`email form <email_marketing/create-mailing>` to filter or specify recipients and customize the
 body of the message.
 
 .. image:: marketing_card/send-cards-form.png

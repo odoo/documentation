@@ -107,7 +107,7 @@ The structure below will be generated:
   │   ├── __init__.py
   │   └── models.py
   ├── security
-  │   ├── ir.model.access.csv
+  │   ├── ir.access.csv
   │   └── models.py
   └── views
       ├── templates.xml
@@ -130,7 +130,7 @@ Uncomment the following files:
 
   .. code-block:: python
 
-     # 'security/ir.model.access.csv',
+     # 'security/ir.access.csv',
 
 .. _odoo-sh/module/module-structure/manually:
 

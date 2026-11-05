@@ -279,7 +279,6 @@ On the sales journal form, enter the :guilabel:`Journal Name` and :guilabel:`Typ
 unique :guilabel:`Short Code` in the :guilabel:`Journals Entries` tab. Then, configure the following
 data in the :guilabel:`Advanced Settings` tab:
 
-- :guilabel:`Electronic invoicing`: enable UBL 2.1 (Colombia).
 - :guilabel:`Invoicing Resolution`: resolution number issued by |DIAN| to the company via their test
   set.
 - :guilabel:`Resolution Date`: initial effective date of the resolution.

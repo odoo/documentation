@@ -145,10 +145,11 @@ needs.
 
 .. cards::
 
-   .. card:: Custom routes
+   .. card:: Routes
       :target: daily_operations/use_routes
 
-      Define tailored receiving or delivery workflows to meet specific business needs
+      Use routes to automate multi-step reception, delivery, and additional stock movement between
+      locations
 
 .. toctree::
    :titlesonly:

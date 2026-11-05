@@ -14,7 +14,7 @@ Master the web framework
 
     master_odoo_web_framework/*
 
-This tutorial is designed for those who have completed the :doc:`discover_js_framework` tutorial and
+This tutorial is designed for those who have completed the :doc:`client_framework_101` tutorial and
 are looking to deepen their knowledge of the web framework. It is organized in four independent
 projects, each focusing on different features of Odoo.
 

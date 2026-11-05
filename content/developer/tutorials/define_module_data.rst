@@ -91,7 +91,7 @@ If your work tree looks like this:
   │   ├── *.py
   │   └── __init__.py
   ├── security
-  │   └── ir.model.access.csv
+  │   └── ir.access.csv
   ├── views
   │   └── estate_property_offer_views.xml
   ├── __init__.py
@@ -109,7 +109,7 @@ Your manifest should look like this:
           ...
       ],
       "data": [
-          "security/ir.model.access.csv",  # CSV and XML files are loaded at the same place
+          "security/ir.access.csv",  # CSV and XML files are loaded at the same place
           "views/estate_property_offer_views.xml",  # Views are data too
           "data/master_data.xml",  # Split the data in multiple files depending on the model
       ],

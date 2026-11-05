@@ -5,12 +5,12 @@
 Security in Odoo
 ================
 
-Aside from manually managing access using custom code, Odoo provides two main
-data-driven mechanisms to manage or restrict access to data.
+Aside from manually managing access using custom code, Odoo provides one main
+data-driven mechanism to manage or restrict access to data.
 
-Both mechanisms are linked to specific users through *groups*: a user belongs
-to any number of groups, and security mechanisms are associated to groups,
-thus applying security mechanisms to users.
+This mechanism is linked to specific users through *groups*: a user belongs
+to any number of groups, and security rules are associated to groups,
+thus applying security rules to users.
 
 .. class:: res.groups
 
@@ -19,41 +19,40 @@ thus applying security mechanisms to users.
         serves as user-readable identification for the group (spells out the
         role / purpose of the group)
 
-    .. attribute:: category_id
+    .. attribute:: privilege_id
 
-        The *module category*, serves to associate groups with an Odoo App
+        The *scope*, serves to associate groups with an Odoo App
         (~a set of related business models) and convert them into an exclusive
         selection in the user form.
 
         .. todo:: clarify & document special cases & relationship between
-                  groups & categories better
+                  groups & scopes better
 
     .. attribute:: implied_ids
 
-        Other groups to set on the user alongside this one. This is a
-        convenience pseudo-inheritance relationship: it's possible to
-        explicitly remove implied groups from a user without removing the
-        implier.
+        Other groups the user should be considered to belong to.
+        A user *explicitly* belongs to its assigned groups, and *implicitly*
+        belongs to all the groups directly or indirectly implied by its assigned groups.
 
     .. attribute:: comment
 
-        Additional notes on the group e.g.
+        Additional notes on the group, mostly for documentation purpose.
 
-.. _reference/security/acl:
+.. _reference/security/access:
 
 Access Rights
 =============
 
-*Grants* access to an entire model for a given set of operations. If no access
+*Grants* access to records in a model for a given set of operations. If no access
 rights matches an operation on a model for a user (through their group), the
 user doesn't have access.
 
 Access rights are additive, a user's accesses are the union of the accesses
-they get through all their groups e.g. given a user who is part of group A
+they get through all their groups, e.g., given a user who is part of group A
 granting read and create access and a group B granting update access, the user
 will have all three of create, read, and update.
 
-.. class:: ir.model.access
+.. class:: ir.access
 
     .. attribute:: name
 
@@ -61,60 +60,24 @@ will have all three of create, read, and update.
 
     .. attribute:: model_id
 
-        The model whose access the ACL controls.
+        The model to which the access applies.
 
     .. attribute:: group_id
 
-        The :class:`res.groups` to which the accesses are granted, an empty
-        :attr:`group_id` means the ACL is granted to *every user*
-        (non-employees e.g. portal or public users).
+        The :class:`res.groups` to which the accesses are granted.
+        An empty :attr:`group_id` means the access is actually a *restriction*
+        applied to *every user*.
 
-    The :samp:`perm_{method}` attributes grant the corresponding CRUD access
-    when set, they are all unset by default.
+    .. attribute:: operation
 
-    .. attribute:: perm_create
-    .. attribute:: perm_read
-    .. attribute:: perm_write
-    .. attribute:: perm_unlink
+        Which operation(s) the access applies to, a subset of create, read,
+        update, delete given as a subsequence of the string ``"crud"``. For
+        instance, ``"r"`` stands for "read", and ``"cd"`` stands for "create,
+        delete".
 
-.. _reference/security/rules:
+    .. attribute:: domain
 
-Record Rules
-============
-
-Record rules are *conditions* which must be satisfied in order for an operation
-to be allowed. Record rules are evaluated record-by-record, following access
-rights.
-
-Record rules are default-allow: if access rights grant access and no rule
-applies to the operation and model for the user, the access is granted.
-
-.. class:: ir.rule
-
-    .. attribute:: name
-
-        The description of the rule.
-
-    .. attribute:: model_id
-
-        The model to which the rule applies.
-
-    .. attribute:: groups
-
-        The :class:`res.groups` to which access is granted (or not). Multiple
-        groups can be specified. If no group is specified, the rule is *global*
-        which is treated differently than "group" rules (see below).
-
-    .. attribute:: global
-
-        Computed on the basis of :attr:`groups`, provides easy access to the
-        global status (or not) of the rule.
-
-    .. attribute:: domain_force
-
-        A predicate specified as a :ref:`domain <reference/orm/domains>`, the
-        rule allows the selected operations if the domain matches the record,
-        and forbids it otherwise.
+        A predicate specified as a :ref:`domain <reference/orm/domains>`.
 
         The domain is a *python expression* which can use the following
         variables:
@@ -131,34 +94,42 @@ applies to the operation and model for the user, the access is granted.
             company ids (not a recordset), see
             :ref:`howto/company/security` for more details.
 
-    The :samp:`perm_{method}` have completely different semantics than for
-    :class:`ir.model.access`: for rules, they specify which operation the rules
-    applies *for*. If an operation is not selected, then the rule is not checked
-    for it, as if the rule did not exist.
+.. _reference/security/rules:
 
-    All operations are selected by default.
+Domain
+------
 
-    .. attribute:: perm_create
-    .. attribute:: perm_read
-    .. attribute:: perm_write
-    .. attribute:: perm_unlink
+The ``domain`` of access rights are *conditions* which must be satisfied in
+order for an operation to be allowed. When its ``domain`` is not set, an access
+right actually applies to *all records* of the model, just like if the domain
+was ``[]`` (which is always true).
+
+A user can perform some operation on a given record if the user has an access
+right in one of its (explicit and implicit) groups for the record's model and
+operation, such that the record satisfies the access right's domain.
 
 .. _reference/security/rules/global:
 
 Global rules versus group rules
 -------------------------------
 
-There is a large difference between global and group rules in how they compose
-and combine:
+The access rights were ``group_id`` is not set behave as *restrictions*, and
+apply to *all users*. That's why they are called *global rules*.
+
+In order to perform some operation on a given record, the record must satisfy
+the domains of *all* the global rules for that model and operation.
+
+As a consequence, there is a large difference between global and group access
+rights in how they compose and combine:
 
 * Global rules *intersect*, if two global rules apply then *both* must be
   satisfied for the access to be granted, this means adding global rules always
   restricts access further.
-* Group rules *unify*, if two group rules apply then *either* can be
+* Group rules *unify*, if two group rules apply then *any of them* must be
   satisfied for the access to be granted. This means adding group rules can
   expand access, but not beyond the bounds defined by global rules.
-* The global and group rulesets *intersect*, which means the first group rule
-  being added to a given global ruleset will restrict access.
+* The global and group rulesets *intersect*, which means that a global rule can
+  prevent some access which would be otherwise granted by a group rule.
 
 .. danger::
 

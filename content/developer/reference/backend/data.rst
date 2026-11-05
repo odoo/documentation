@@ -318,7 +318,7 @@ XML data files are flexible and self-descriptive, but very verbose when
 creating a number of simple records of the same model in bulk.
 
 For this case, data files can also use csv_, this is often the case for
-:ref:`access rights <reference/security/acl>`:
+:ref:`access rights <reference/security/access>`:
 
 * the file name is :file:`{model_name}.csv`
 * the first row lists the fields to write, with the special field ``id``

@@ -2,12 +2,15 @@
 Import vendor pricelist
 =======================
 
-Set vendor prices to auto-populate requests for quotations (RFQs) or purchase orders (POs) with the
-unit price, once the product is added, which reduces errors and saves time.
+.. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
+.. |PO| replace:: :abbr:`PO (Purchase Order)`
 
-In Odoo, vendor pricelists can be :ref:`added individually <purchase/products/pricelist>` on the
-product form, or :ref:`imported in bulk <purchase/products/import-pricelist>`, via an XLSX or CSV
-file.
+In the **Purchase** app, users can add vendor pricelists to products to automatically populate
+requests for quotation (RfQs) or purchase orders (POs) with their unit price, quantity, and lead
+time.
+
+Vendor pricelists can be :ref:`added individually <purchase/products/pricelist>` on the product
+form, or :ref:`imported in bulk <purchase/products/import-pricelist>`, via an XLSX or CSV file.
 
 .. important::
    Please review this :doc:`import guide <../../../essentials/export_import_data>` before uploading
@@ -21,18 +24,29 @@ On product form
 To manually add the vendor price on the product form, go to the :menuselection:`Purchase app -->
 Products --> Products`, and click the desired product.
 
-.. note::
+.. tip::
    Product forms are accessible from multiple apps, such as **Sales**, **Inventory**, and
    **Manufacturing**.
 
-In the :guilabel:`Purchase` tab of the product form, input the vendor and their price, to have this
-information auto-populate on a request for quotation each time the product is listed.
+In the *Purchase* tab of the product form, enter the :guilabel:`Vendor`, :guilabel:`Unit Price`, and
+:guilabel:`Quantity` of the product to auto-populate this information on an |RfQ|.
 
-.. seealso::
-   :ref:`Vendor pricelist on product form <purchase/manage_deals/vendor-pricelist>`
+.. note::
+   Confirming a |PO| does **not** automatically create a vendor pricelist line. When a vendor has no
+   pricelist for the product, the |RfQ| uses the price, discount, and lead time from that vendor's
+   most recently confirmed |PO| line.
 
 .. image:: pricelist/product-form-pricelist.png
    :alt: Vendor pricelist on product form.
+
+.. tip::
+   To compare the last prices each vendor charged, click the :icon:`fa-credit-card`
+   :guilabel:`(Purchased)` smart button on the product form, or :icon:`fa-dollar` :guilabel:`Price
+   Comparison` smart button on a |PO| (if applicable). Records are grouped by product, then by
+   vendor.
+
+.. seealso::
+   :ref:`Vendor pricelist on product form <purchase/manage_deals/vendor-pricelist>`
 
 .. _purchase/products/import-pricelist:
 
@@ -43,7 +57,7 @@ To import vendor pricelists, ensure the XLSX or CSV file is accurately completed
 obtain a correctly formatted template, including product names, references, and vendor details, is
 to first :ref:`export a pricelist <purchase/products/export-price>` from the database.
 
-Modify the exported file, as needed, then import it back into the Odoo database.
+Modify the exported file as needed, then import it back into the Odoo database.
 
 .. _purchase/products/export-price:
 
@@ -52,35 +66,32 @@ Export pricelist
 
 To export a pricelist, go to :menuselection:`Purchase app --> Configuration --> Vendor Pricelists`.
 
-On the page, tick the checkbox(es) for the desired vendor pricelists.
+On the page, select the checkboxes for the desired vendor pricelists. Then, click the :icon:`fa-cog`
+:guilabel:`Actions` button that appears, and choose :icon:`fa-upload` :guilabel:`Export` from the
+drop-down menu.
 
-Then, click the :icon:`fa-cog` :guilabel:`Actions` button that appears, and choose :icon:`fa-upload`
-:guilabel:`Export` from the drop-down menu.
-
-.. image:: pricelist/export.png
-   :alt: Show selected exported fields, with the Export button visible.
-
-In the resulting pop-up window, fields listed under the :guilabel:`Fields to export` section are
-included in the exported file. To add more fields, find the desired field in the
-:guilabel:`Available fields` section, and click the :icon:`fa-plus` :guilabel:`(plus)` icon to the
-right of the field.
+In the resulting pop-up window, fields from the *Fields to export* section are included in the
+exported file. To add more fields, find the desired field in the *Available fields* section, and
+click the :icon:`fa-plus` :guilabel:`(plus)` icon next to the field.
 
 .. note::
-   To update to existing records, tick the :guilabel:`I want to update data (import-compatible
-   export)` checkbox, and refer to the section on the :ref:`External ID
+   Toggle the :icon:`fa-toggle-on` :guilabel:`Updatable fields only` option to filter the *Available
+   fields* to modifiable fields only. Refer to the section on the :ref:`External ID
    <purchase/products/external-id>` field.
 
    For details on commonly-used fields for importing vendor pricelists, see the :ref:`Common fields
    <purchase/products/common-fields>` section.
 
-Select the desired :guilabel:`Export Format`: :guilabel:`XLSX` or :guilabel:`CSV`.
-
-To save the selected fields as a template, click the :guilabel:`Template` field, and select
-:guilabel:`New template` from the drop-down menu. Type the name of the new template, and click the
-:icon:`fa-floppy-o` :guilabel:`(save)` icon. After that, the template is a selectable option when
-clicking the :guilabel:`Template` field.
+Select the desired export :guilabel:`Format`: :guilabel:`Excel Workbook (.xlsx)` or :guilabel:`Plain
+Text (csv)`.
 
 Finally, click :guilabel:`Export`.
+
+.. tip::
+   To save the current list of *Fields to export* as a template, click the :icon:`oi-cloud-upload`
+   :guilabel:`(Save as export template)`. In the resulting text field, set the template name, then
+   click :icon:`fa-check` :guilabel:`(save)` to save or :icon:`fa-xmark` :guilabel:`(cancel)` to
+   cancel.
 
 .. note::
    With :ref:`developer mode <developer-mode>` turned on, the column names of the exported file
@@ -98,9 +109,13 @@ Finally, click :guilabel:`Export`.
 External ID
 ~~~~~~~~~~~
 
-*External ID* is a unique identifier used to update existing vendor pricelists. Without it, imported
-records create new entries, instead of updating existing ones. Including this field in the XLSX or
-CSV, indicates the line replaces an existing vendor pricelist in the Odoo database.
+An *External ID* is a unique identifier used to update existing vendor pricelists. Without it,
+imported records create new entries instead of updating existing ones. Including this field in the
+XLSX or CSV indicates the line replaces an existing vendor pricelist in the Odoo database.
+
+With the :icon:`fa-toggle-on` :guilabel:`Updatable fields only` option toggled, select the
+:guilabel:`External ID` field from the list of *Available fields*. Exporting the data creates a file
+with an additional column containing the external ID.
 
 .. example::
    .. figure:: pricelist/duplicate-values.png
@@ -108,14 +123,6 @@ CSV, indicates the line replaces an existing vendor pricelist in the Odoo databa
 
       `Ready Mat` appears twice because the external ID was omitted during the price update from
       `$790` to `$780`.
-
-To look-up the :guilabel:`External ID` for a vendor pricelist, tick the :guilabel:`I want to update
-data (import-compatible export)` checkbox at the top of the :guilabel:`Export Data` pop-up window.
-
-.. note::
-   Selecting :guilabel:`External ID` from the :guilabel:`Available fields` section with the
-   :guilabel:`I want to update data (import-compatible export)` checkbox ticked results in an export
-   file with two columns containing the external ID.
 
 .. _purchase/products/common-fields:
 
@@ -178,18 +185,18 @@ With a template downloaded, fill out the XLSX or CSV file with the necessary inf
 inputting everything, import the file back into the Odoo database, by going to
 :menuselection:`Purchase app --> Configuration --> Vendor Pricelists`.
 
-On the page, click the :icon:`fa-cog` :guilabel:`(gear)` icon in the top-left corner. In the
-drop-down menu that appears, click :guilabel:`Import records`.
+On the page, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select :icon:`fa-download`
+:guilabel:`Import`.
 
-Then, click :guilabel:`Upload File` in the upper-left corner, and after selecting the XLSX or CSV
-file, confirm the correct fields, and click :guilabel:`Import`.
+On the page, click :guilabel:`Upload`, and select the XLSX or CSV file. Verify the :guilabel:`File
+Column` and :guilabel:`Odoo Field` fields are correct, then click :guilabel:`Import`.
+
+.. image:: pricelist/supplier-pricelist-example.png
+   :alt: File mapping screen.
 
 .. seealso::
    - :doc:`../../../essentials/export_import_data`
    - :ref:`Common fields <purchase/products/common-fields>`
-
-.. image:: pricelist/supplier-pricelist-example.png
-   :alt: Upload file screen.
 
 Formatting import file
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -244,9 +251,6 @@ An import file is created to do the following:
      - [E-COM09] Large Desk
      - 7
      - Azure Interior
-
-.. note::
-   The *technical field name* was used to create this information.
 
 .. note::
    Download the sample files for reference:

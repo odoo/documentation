@@ -313,6 +313,8 @@ the post at that specific date and time on the pre-determined social media accou
    Doing so, locks in that specific date/time for Odoo to send the post, and it changes the status
    of the post to :guilabel:`Scheduled`.
 
+.. _social_marketing/social_posts/push-notifications:
+
 Push Notification Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -77,7 +77,7 @@ models.
 
 Concerning *security*, three main files should be used:
 
-- First one is the definition of access rights done in a :file:`ir.model.access.csv` file.
+- First one is the definition of access rights done in a :file:`ir.access.csv` file.
 - User groups are defined in :file:`<module>_groups.xml`.
 - Record rules are defined in :file:`<model>_security.xml`.
 
@@ -85,7 +85,7 @@ Concerning *security*, three main files should be used:
 
     addons/plant_nursery/
     |-- security/
-    |   |-- ir.model.access.csv
+    |   |-- ir.access.csv
     |   |-- plant_nursery_groups.xml
     |   |-- plant_nursery_security.xml
     |   |-- plant_order_security.xml
@@ -222,7 +222,7 @@ The complete tree of our Odoo module therefore looks like
     |   |-- plant_order_reports.xml (report actions, paperformat, ...)
     |   |-- plant_order_templates.xml (xml report templates)
     |-- security/
-    |   |-- ir.model.access.csv
+    |   |-- ir.access.csv
     |   |-- plant_nursery_groups.xml
     |   |-- plant_nursery_security.xml
     |   |-- plant_order_security.xml
@@ -322,10 +322,6 @@ Use the following pattern :
   like :samp:`{<model_name>}_action_view_{<view_type>}`.
 * For a group: :samp:`{<module_name>}_group_{<group_name>}` where *group_name*
   is the name of the group, generally 'user', 'manager', ...
-* For a rule: :samp:`{<model_name>}_rule_{<concerned_group>}` where
-  *concerned_group* is the short name of the concerned group ('user'
-  for the 'model_name_group_user', 'public' for public user, 'company'
-  for multi-company rules, ...).
 
 Name should be identical to xml id with dots replacing underscores. Actions
 should have a real naming as it is used as display name.
@@ -369,14 +365,6 @@ should have a real naming as it is used as display name.
 
     <!-- security -->
     <record id="module_name_group_user" model="res.groups">
-        ...
-    </record>
-
-    <record id="model_name_rule_public" model="ir.rule">
-        ...
-    </record>
-
-    <record id="model_name_rule_company" model="ir.rule">
         ...
     </record>
 

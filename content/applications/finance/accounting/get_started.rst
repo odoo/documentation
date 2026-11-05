@@ -160,6 +160,12 @@ depending on the journal's configuration. By default, no journal entries are cre
 To configure a journal to create payments, set :ref:`outstanding payments accounts
 <accounting/journals/outstanding-accounts>` on the journal's payment methods.
 
+.. note::
+   To get started with electronic invoicing, follow the two setup links on the :guilabel:`Sales`
+   journal card located on the :guilabel:`Accounting` dashboard: configuring your company data and
+   activating the e-invoicing system. Note that specific requirements may vary depending on your
+   :doc:`fiscal localization <../fiscal_localizations>`.
+
 .. _accounting/get_started/fiscal-positions:
 
 Fiscal positions
@@ -275,8 +281,8 @@ The following primary accounting configurations are crucial to successfully sett
 records. The majority of these are found in the Accounting settings and accessible via
 :menuselection:`Accounting --> Configuration --> Settings`.
 
-- :doc:`Company information <../../general/companies>`, such as its name, address, logo, phone, and
-  email address
+- :doc:`Company information <../../general/companies>`, such as its name, address, tax ID, company
+  ID, logo, phone, and email address
 - :ref:`accounting/tax-returns/periodicity`
 - :guilabel:`Rounding Method`: Choose whether the total tax amount is rounded per line or per tax
   in the :guilabel:`Taxes` section of the Accounting settings.

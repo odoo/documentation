@@ -148,15 +148,14 @@ Partially complete the MO
 To produce a partial quantity of the manufacturing order, enter the number in the
 :guilabel:`Quantity` field at the top of the manufacturing order, then click :guilabel:`Produce`. If
 the quantity of consumed materials does not match the quantity of products produced, a
-:guilabel:`Consumption Warning` pop-up window appears. Click :guilabel:`Confirm` to keep the
-existing quantity of consumed materials, or click :guilabel:`Update Quantities & Validate` to match
-the consumed quantities to the partial MO quantity of products produced.
+*Consumption Warning* pop-up window appears. Click :guilabel:`Confirm` to keep the existing quantity
+of consumed materials, or click :guilabel:`Update Quantities & Validate` to match the consumed
+quantities to the partial MO quantity of products produced.
 
-Click :guilabel:`Close Production` in the :guilabel:`You produced less than the initial demand`
-pop-up window, and a second :guilabel:`Consumption Warning` pop-up window appears. Click
-:guilabel:`Confirm` to keep the existing quantity of consumed materials, or click :guilabel:`Update
-Quantities & Validate` to match the consumed quantities to the full MO quantity of products
-produced.
+Click :guilabel:`Close Production` in the *You produced less than the initial demand* pop-up window,
+and a second *Consumption Warning* pop-up window appears. Click :guilabel:`Confirm` to keep the
+existing quantity of consumed materials, or click :guilabel:`Update Quantities & Validate` to match
+the consumed quantities to the full MO quantity of products produced.
 
 The |MO| is marked as :guilabel:`Done` and the manufactured products are registered into inventory.
 
@@ -313,7 +312,8 @@ track. In the *General Information* tab, update the :guilabel:`Tracking` field.
 
 The default :guilabel:`Tracking` setting is :guilabel:`By Quantity`, which only tracks the quantity
 on hand. Select :guilabel:`By Lots` to track the product using lot numbers, or :guilabel:`By Unique
-Serial Number` to track the product using serial numbers.
+Serial Number` to track the product using serial numbers. To specify that a product should not be
+tracked, select :guilabel:`None` in the :guilabel:`Tracking` field.
 
 Doing so enables the :guilabel:`Lot/Serial Number` field on an |MO| or the :guilabel:`Register
 Production` instruction on a work order operation.

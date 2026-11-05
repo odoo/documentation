@@ -23,13 +23,9 @@ To track a product using lots or serial numbers, begin by navigating to :menusel
 --> Configuration --> Settings`, then scroll down to the :guilabel:`Traceability` section, and tick
 the :guilabel:`Lots & Serial Numbers` checkbox. Finally, click :guilabel:`Save` to save the change.
 
-Next, click on :menuselection:`Products --> Products`, and select a product to track. Make sure the
-:guilabel:`Track Inventory` checkbox is ticked in the :guilabel:`General Information` tab. Since lot
-and serial number functionality is enabled, a drop-down menu appears next to the ticked checkbox.
-
-Click on the :guilabel:`Track Inventory` drop-down menu. By default, :guilabel:`By Quantity` is
-selected, which only tracks the quantity on hand. Select :guilabel:`By Lots` to track the product
-using lot numbers, or :guilabel:`By Unique Serial Number` to track the product using serial numbers.
+Next, click on :menuselection:`Manufacturing app --> Products --> Products`, and open a product to
+track. In the :guilabel:`Tracking` field, select :guilabel:`By Lots` to track the product using lot
+numbers, or :guilabel:`By Unique Serial Number` to track the product using serial numbers.
 
 .. seealso::
    - :doc:`Lots <../../inventory/product_management/product_tracking/lots>`
@@ -110,8 +106,8 @@ Manufacture multiple units
       |MOs|, each containing one unit of the chair. The |MOs| are titled `WH/MO/00109-001` and
       `WH/MO/00109-002`.
 
-To assign serial numbers to each unit of an |MO|, click :guilabel:`Produce` to open the
-:guilabel:`Batch Production` pop-up window.
+To assign serial numbers to each unit of an |MO|, click :guilabel:`Produce` to open the *Batch
+Production* pop-up window.
 
 The :guilabel:`First Lot/SN` field of the pop-up window is auto-filled with the next available
 serial number. The :guilabel:`Number of SN` field defaults to the number of units being

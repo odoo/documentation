@@ -16,3 +16,4 @@ Human resources
    hr/recruitment
    hr/referrals
    hr/lunch
+   hr/approvals

@@ -43,9 +43,6 @@ Spreadsheet templates allow you to quickly create spreadsheets without starting 
 example, you could create a template for a monthly budget report or a quarterly sales commission
 report.
 
-.. note::
-   Templates are available to all users on the database.
-
 .. _spreadsheet/get-started/templates-create:
 
 Create a template
@@ -60,13 +57,17 @@ To create a template:
 #. From the menu bar, click :menuselection:`File -->` :icon:`os-save` :menuselection:`Save as
    template`. Modify the default :guilabel:`Template Name` if needed and click :guilabel:`Confirm`.
 
+.. tip::
+   - It is also possible to create a template by :ref:`making a copy of an existing template and
+     editing it <spreadsheet/get-started/templates-manage>`.
+   - By default, templates are available to all users on the database. To restrict the use of a
+     template, define the relevant :ref:`user groups <access-rights/groups>` in the :ref:`template
+     settings <spreadsheet/get-started/templates-manage>`.
+
 .. important::
    Once a spreadsheet is saved as a template, any further changes to the open spreadsheet are
-   saved only in that spreadsheet. To make changes to the template, you need to :ref:`edit
-   the template <spreadsheet/get-started/templates-manage>`.
-
-You can also create a template by :ref:`making a copy of an existing template and editing it
-<spreadsheet/get-started/templates-manage>`.
+   saved only in that spreadsheet. To make changes to the template, :ref:`edit the template
+   <spreadsheet/get-started/templates-manage>`.
 
 .. _spreadsheet/get-started/templates-use:
 
@@ -94,16 +95,19 @@ templates in the database.
 
 Various actions are possible:
 
+- Control access to a template by clicking into the :guilabel:`Access Groups` field, then
+  deleting :ref:`user groups <access-rights/groups>` or selecting user groups from the dropdown, as
+  relevant.
+
 - Copy an existing template by clicking :icon:`fa-clone` :guilabel:`Make a copy` at the right of
   the screen. The new template appears at the bottom of the list. Click the :guilabel:`Name` to
   edit it.
 
 - Edit an existing template (including one you just copied) by clicking :icon:`fa-pencil`
-  :guilabel:`Edit`, then making the required changes. Modifications are
-  automatically saved.
+  :guilabel:`Edit`, then making the required changes. Modifications are automatically saved.
 
-- Delete a template by ticking the checkbox next to it, clicking :icon:`fa-cog`
-  :guilabel:`Actions`, then :guilabel:`Delete`.
+- Delete a template by ticking the checkbox next to it, clicking :icon:`fa-cog` :guilabel:`Actions`,
+  then :guilabel:`Delete`.
 
 .. _spreadsheet/get-started/upload-files:
 
@@ -124,12 +128,98 @@ Spreadsheet. To do so:
 
 The file can now be fully edited in Odoo Spreadsheet.
 
+.. _spreadsheet/get-started/manage-sheets:
+
+Navigate and manage sheets
+==========================
+
+.. _spreadsheet/get-started/manage-sheets-navigate:
+
+Navigate between sheets
+-----------------------
+
+When a spreadsheet contains more sheets than can be shown in the bottom bar, the following methods
+can be used to access a sheet:
+
+- Click the :icon:`fa-bars` :guilabel:`(menu)` icon in the bottom bar to see a list of all the
+  sheets present in the spreadsheet, then click on a sheet name to open it.
+- Scroll left or right using the :icon:`fa-caret-right` or :icon:`fa-caret-left`
+  :guilabel:`(right or left caret)` icons in the bottom bar until the desired sheet tab is visible,
+  then click the tab to open the sheet.
+
+.. _spreadsheet/get-started/manage-sheets-basic:
+
+Basic sheet actions
+-------------------
+
+Users with :guilabel:`Editor` rights to a spreadsheet have various options for managing the
+spreadsheet's sheets from the bottom bar:
+
+- :icon:`fa-plus` :guilabel:`(plus)`: adds a new sheet to the right of the active sheet.
+- Click the :icon:`fa-caret-down` :guilabel:`(down caret)` on a sheet's tab or right-click the
+  tab to open a menu with the following options:
+
+  - :icon:`fa-trash` :guilabel:`Delete`: deletes the sheet, after requiring confirmation.
+  - :icon:`fa-eye-slash` :guilabel:`Hide sheet`: :ref:`hides the sheet
+    <spreadsheet/get-started/manage-sheets-hide>` from the bottom bar and makes it inaccessible to
+    users with only :guilabel:`Viewer` rights.
+  - :icon:`fa-clone` :guilabel:`Duplicate`: creates a copy of the sheet beside the original sheet.
+  - :icon:`os-rename-sheet` :guilabel:`Rename`: makes the name of the sheet directly editable in its
+    tab.
+
+    .. tip::
+       Alternatively, double-click the sheet's tab to edit the sheet name directly.
+
+  - :icon:`os-paint-format` :guilabel:`Change tab color`: select an existing or custom color to add
+    a colored bar to the bottom of the sheet's tab. Tab colors appear as dots beside the sheet name
+    when using the :icon:`fa-bars` :guilabel:`(menu)` icon to see a list of all sheets in the
+    spreadsheet.
+  - :guilabel:`Change grid color`: select an existing or custom color to change the color of the
+    grid of the individual sheet.
+  - :icon:`os-move-sheet-right` :guilabel:`Move sheet right` or :icon:`os-move-sheet-left`
+    :guilabel:`Move sheet left`: moves the sheet one position to the right or left.
+
+    .. tip::
+       Alternatively, click and drag a sheet's tab to the desired position.
+
+.. _spreadsheet/get-started/manage-sheets-protect:
+
+Lock sheets
+-----------
+
+Users with :guilabel:`Editor` rights can lock sheets to prevent accidental modifications to the
+sheet's data.
+
+To do so, click the :icon:`fa-caret-down` :guilabel:`(down caret)` on a sheet's tab or right-click
+the tab, then click :icon:`fa-lock` :guilabel:`Lock sheet`.
+
+Any user with :guilabel:`Editor` rights can unlock the sheet by clicking :guilabel:`Unlock sheet`
+from the bottom bar menu.
+
+.. _spreadsheet/get-started/manage-sheets-hide:
+
+Hide sheets
+-----------
+
+Users with :guilabel:`Editor` rights can hide sheets that should not be visible, for example, if
+data is not ready to be shared or is being used only for calculations by other sheets.
+
+To do so, click the :icon:`fa-caret-down` :guilabel:`(down caret)` on a sheet's tab or right-click
+the tab, then click :icon:`fa-eye-slash` :guilabel:`Hide sheet`.
+
+The sheet is then removed from the bottom bar, but still included, with its name grayed out, in the
+list of all sheets accessible via the :icon:`fa-bars` :guilabel:`(menu)` icon. Users with:
+
+- :guilabel:`Viewer` rights cannot open a hidden sheet.
+- :guilabel:`Editor` rights can open a hidden sheet via the :icon:`fa-bars` :guilabel:`(menu)` icon;
+  this restores the sheet's tab on the bottom bar.
+
 .. _spreadsheet/get-started/manage-spreadsheets:
 
 Manage spreadsheets
 ===================
 
-Users with :guilabel:`Editor` rights to a specific spreadsheet have various options for managing the
+Users with :guilabel:`Editor` rights to a spreadsheet have various options for managing the
 spreadsheet via the :guilabel:`File` menu:
 
 - :icon:`os-copy-file` :guilabel:`Make a copy`: creates a duplicate of the current spreadsheet with

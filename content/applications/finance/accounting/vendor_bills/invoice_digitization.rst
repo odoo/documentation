@@ -156,37 +156,8 @@ Purchase order matching
 
 When a digitized vendor bill is recognized by :abbr:`OCR (optical character recognition)`, Odoo
 searches the database for a matching purchase order. If found, the vendor bill can be manually
-matched with the existing open purchase order lines.
-
-Once a vendor bill has been :ref:`uploaded <accounting/bill-digitization/vendor-bills-upload>` and
-:ref:`digitized <accounting/bill-digitization/digitization>`, click the :guilabel:`Purchase
-matching` smart button to access the :guilabel:`Purchase matching` list view, displaying all
-purchase order lines linked to the vendor assigned to the vendor bill. Then, select the relevant
-purchase order lines and the draft vendor bill (shown in grey), and click :guilabel:`Match`.
-
-.. tip::
-   In the :guilabel:`Purchase Matching` list view, update the :guilabel:`Quantity` and
-   :guilabel:`Price` in the purchase order lines, if necessary.
-
-If there is no existing purchase order related to the vendor of the uploaded vendor bill, a new
-purchase order can be directly created from the vendor bill lines. To do so, follow these steps:
-
-#. Once the vendor bill is uploaded, make sure the :guilabel:`Vendor` field is filled in with the
-   correct vendor.
-#. Click the :guilabel:`Purchase matching` smart button, select the draft vendor bill in the list
-   (shown in grey), and click :guilabel:`Add to PO`.
-#. In the :guilabel:`Add to Purchase Order` window, start typing in the :guilabel:`Purchase Order`
-   field and select :guilabel:`Create and edit`.
-#. In the :guilabel:`Create Purchase Order` window, select the vendor assigned to the vendor bill,
-   then complete all :ref:`required fields <purchase/manage_deals/create-new-rfq>` and click
-   :guilabel:`Confirm`.
-#. In the :guilabel:`Purchase Matching` list view, select the relevant purchase order lines and the
-   draft vendor bill (shown in grey), and click :guilabel:`Match`.
-
-.. Note::
-   If any information required for the purchase order fields is missing, click :guilabel:`Save and
-   Close` in the :guilabel:`Create Purchase Order` window. Then, open the Purchase app to fill in
-   the fields and :ref:`confirm the purchase order <purchase/manage_deals/confirm-order>`.
+:ref:`matched with the existing open purchase order lines
+<accounting/vendor_bills/vendor-bills-matching-po>`.
 
 .. tip::
    - Electronic vendor bills with embedded XML ensure more accurate and efficient processing.

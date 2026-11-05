@@ -88,8 +88,8 @@ Then, click the *Purchase* tab and specify a :guilabel:`Vendor` and a :guilabel:
 product.
 
 .. important::
-   For purchased products, users **must** specify a vendor in order for Odoo to properly generate an
-   |RFQ|.
+   For purchased products, users **must** specify a vendor or have at least one confirmed |PO| for
+   the product in order for Odoo to properly generate an |RFQ|.
 
 .. _inventory/mto/configure-mto-product/manufactured:
 

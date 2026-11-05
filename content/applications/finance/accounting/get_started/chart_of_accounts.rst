@@ -7,7 +7,8 @@ transactions in the general ledger of an organization. The chart of accounts can
 :menuselection:`Accounting --> Configuration --> Chart of Accounts`.
 
 When browsing your chart of accounts, you can sort the accounts by :guilabel:`Code`,
-:guilabel:`Account Name`, or :guilabel:`Type`, but other options are available in the drop-down menu
+:guilabel:`Account Name`, or :guilabel:`Type`, but other options are available in the drop-down
+menu.
 
 .. image:: chart_of_accounts/drop-down.png
    :alt: Drop-down toggle button
@@ -158,6 +159,13 @@ To display your **Trial Balance** report with your account groups, go to :menuse
 
 .. image:: chart_of_accounts/chart-of-accounts-groups.png
    :alt: Account Groups in the Trial Balance in Odoo Accounting
+
+Currency
+--------
+
+Selecting a :guilabel:`Currency` restricts the journal items targeting the account to the selected
+currency, and identifies the account for potential unrealized gain/loss adjustments. If no currency
+is selected, journal items in any currency can target the account.
 
 Allow reconciliation
 --------------------

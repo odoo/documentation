@@ -1,18 +1,25 @@
+.. meta::
+   :description: Configure the Odoo Shopee Connector, from the required Shopee Seller and Shopee
+                 Open accounts to authorizing Odoo access, registering the account, and creating the
+                 Shopee shop. The page also covers how synchronized Shopee orders and product taxes
+                 are handled in Odoo, and how to add new marketplaces that synchronize
+                 automatically.
+
 ==============================
 Shopee Connector configuration
 ==============================
 
-Odoo allows users to synchronize with Shopee Seller account in the database, but users **must**
+Odoo allows users to synchronize with a Shopee Seller account in the database, but users **must**
 have a registered **Shopee Seller account** and a **Shopee Open account** prior to completing the
 configuration.
 
 Set up an Open Shopee account by first going to the `Shopee Open Platform
-<https://open.shopee.com/>`_, and click the :guilabel:`Get Access (Now)` button located in the
-middle of the page.
+<https://open.shopee.com/>`_ and click the :guilabel:`Get Access (Now)` button located in the middle
+of the page.
 
 Use the `Open Shopee Developer Guide <https://open.shopee.com/developer-guide/12>`_, and follow the
-registration process. Once all done, proceed to follow the instructions below to register and link
-the Open Shopee account in Odoo.
+registration process. Once everything done, proceed to follow the instructions below to register and
+link the Open Shopee account in Odoo.
 
 .. important::
    Shopee Open Platform access and seller account requirements are **regionally specific**. This
@@ -28,15 +35,14 @@ the Open Shopee account in Odoo.
      within a specific time frame or a certain seller tier (e.g., Mall, Preferred, Managed) to
      access the Open Platform.
 
-   **Action Required:**
+   **Actions Required:**
 
    #. Identify your Shopee region.
-   #. Locate the official Shopee documentation for your region.
-      `Open Shopee Developer Guide <https://open.shopee.com/developer-guide/12>`_
-   #. Carefully review the requirements for seller accounts and Open Platform access in your
-      region.
-   #. Ensure your Shopee account meets all the necessary criteria *before* proceeding with the
-      Odoo Shopee Connector configuration.
+   #. Locate the official Shopee documentation for your region. `Open the Shopee Developer Guide
+      <https://open.shopee.com/developer-guide/12>`_
+   #. Carefully review the requirements for seller accounts and Open Platform access in your region.
+   #. Ensure your Shopee account meets all the necessary criteria *before* proceeding with the Odoo
+      Shopee Connector configuration.
 
 .. _shopee/setup:
 
@@ -49,14 +55,14 @@ Connect Shopee seller account to Odoo
 Then connect your Shopee Open account by navigating to :menuselection:`Sales app --> Configuration
 --> Shopee --> Accounts`.
 
-From here, click :guilabel:`New` to create to link a new Shopee account.
+From here, click :guilabel:`New` to create and link a new Shopee account.
 
 Then, in the :guilabel:`Credentials` tab, select the appropriate :guilabel:`API Endpoint` from the
 drop-down menu.
 
 .. note::
-   Shopee offers several API endpoints for production and testing. Selecting the correct endpoint
-   is crucial for successful integration. Choose the endpoint that corresponds to your marketplace
+   Shopee offers several API endpoints for production and testing. Selecting the correct endpoint is
+   crucial for successful integration. Choose the endpoint that corresponds to your marketplace
    location.
 
    - :guilabel:`Shopee Production Endpoint (Singapore)`: This is the primary endpoint for sellers in
@@ -74,8 +80,8 @@ drop-down menu.
      is specifically for testing integrations related to the China-specific production endpoint.
      **Do not use this endpoint for production.**
 
-After selecting the correct API Endpoint in the :guilabel:`Credentials` form, input your Open
-Shopee :guilabel:`Partner ID` and :guilabel:`Partner Key` in the corresponding fields. Then click
+After selecting the correct API Endpoint in the :guilabel:`Credentials` form, input your Open Shopee
+:guilabel:`Partner ID` and :guilabel:`Partner Key` in the corresponding fields. Then click
 :guilabel:`Save And Authorize`.
 
 .. important::
@@ -89,20 +95,19 @@ Shopee :guilabel:`Partner ID` and :guilabel:`Partner Key` in the corresponding f
    #. **Select your app:** Choose the specific app you want to synchronize with Odoo (either your
       test app or your production app).
    #. **Find your credentials:** Within the app details, you'll find your Partner ID and Partner
-      Key. These are the values you'll need to copy and paste into the corresponding fields in
-      Odoo.
+      Key. These are the values you'll need to copy and paste into the corresponding fields in Odoo.
 
 .. note::
-   - **Copy carefully:** Copy the Partner ID and Partner Key accurately, without any extra spaces
-     or characters. These are case-sensitive.
+   - **Copy carefully:** Copy the Partner ID and Partner Key accurately, without any extra spaces or
+     characters. These are case-sensitive.
    - **Keep your key secure:** Your Partner Key is sensitive information. Do not share it with
      anyone. Treat it like a password.
 
 Authorization and account registration
 ======================================
 
-After entering connecting the :ref:`Shoppe Seller account to Odoo <shopee/setup>`, the authorization
-process begins.
+After connecting the :ref:`Shopee Seller account to Odoo <shopee/setup>`, the authorization process
+begins.
 
 Shopee seller account selection/login
 -------------------------------------
@@ -142,18 +147,17 @@ After the redirection, you should perform the following steps within Odoo:
    inventory between Odoo and Shopee. Enable the :guilabel:`Synchronize Inventory` option to
    automatically push stock updates from Odoo to Shopee. Disabling this option prevents automatic
    inventory updates.
-#. **Assign a Default Sales Team:** Assign a default sales team to your Shopee account in Odoo.
-   This helps with reporting and order management.
+#. **Assign a Default Sales Team:** Assign a default sales team to your Shopee account in Odoo. This
+   helps with reporting and order management.
 
 With the Shopee account successfully registered, the marketplaces available with this specific
-account can later be synchronized the exact same way, and listed under the :guilabel:`Shops`
-button.
+account can later be synchronized the exact same way and listed under the :guilabel:`Shops` button.
 
 Shopee orders in Odoo
 =====================
 
 When a Shopee order is synchronized, only lines for items are created on the sales order in Odoo.
-Each one represents one for the product that was sold on Shopee.
+Each one represents one product that was sold on Shopee.
 
 .. image:: setup/shopee-sales-odoo.png
    :alt: Shopee synchronized sale order in Odoo.
@@ -166,8 +170,8 @@ The selection of a database product for a sales order item is done by matching i
 :guilabel:`Internal Reference` (a customizable product reference identifier in Odoo, like `FURN001`)
 with the Shopee *SKU*.
 
-If no database product with a matching internal reference is found for a given
-:guilabel:`Shopee SKU`, then a default database product, *Shopee Item*.
+If no database product with a matching internal reference is found for a given :guilabel:`Shopee
+SKU`, then a default database product, *Shopee Item*, is used.
 
 .. note::
    To modify default products, activate the :ref:`developer mode <developer-mode>`, and navigate to
@@ -178,14 +182,14 @@ Product tax configuration
 =========================
 
 To allow for tax reporting of Shopee sales with Odoo, the taxes applied to the sales order items are
-those set on the product, or determined by the :doc:`fiscal position
+those set on the product or determined by the :doc:`fiscal position
 <../../../finance/fiscal_localizations>`.
 
-Make sure to have the correct taxes set on your products in Odoo, or have it done by a fiscal
-position, to avoid discrepancies in the subtotals between *Shopee Seller Central* and Odoo.
+Make sure to have the correct taxes set on your products in Odoo, or have them determined by a
+fiscal position, to avoid discrepancies in the subtotals between *Shopee Seller Central* and Odoo.
 
 .. note::
-   As shopee does not necessarily apply the same taxes as those configured in Odoo, it may happen
+   As Shopee does not necessarily apply the same taxes as those configured in Odoo, it may happen
    that order totals differ by a few cents between Odoo and *Shopee Seller Central*. Those
    differences can be resolved with a write-off when reconciling the payments in Odoo.
 

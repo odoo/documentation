@@ -8,7 +8,7 @@ Quality control points
 .. |QCP| replace:: :abbr:`QCP (Quality Control Point)`
 .. |QCPs| replace:: :abbr:`QCPs (Quality Control Points)`
 
-In Odoo, *quality control points* (QCPs), are used to automatically create :doc:`quality checks
+In Odoo, *quality control points* (QCPs) are used to automatically create :doc:`quality checks
 <quality_checks>` at predetermined intervals. |QCPs| can be configured to create quality checks for
 specific operations (manufacturing, delivery, etc.) and for specific products within those
 operations.
@@ -30,9 +30,8 @@ In the :guilabel:`Apply to` field, specify whether the |QCP| should apply to eit
 
 - If :guilabel:`Products` is selected, leave the :guilabel:`Products` field blank to ensure the
   |QCP| applies to all products, or select at least one product to which it should apply.
-- If :guilabel:`Categories` is selected, leave the :guilabel:`Categories` field blank to
-  ensure the |QCP| applies to all categories, or select at least one category to which it should
-  apply.
+- If :guilabel:`Categories` is selected, leave the :guilabel:`Categories` field blank to ensure the
+  |QCP| applies to all categories, or select at least one category to which it should apply.
 
 In the :guilabel:`Operations` field, select the operations that should trigger the |QCP|. For
 example, selecting the :guilabel:`Manufacturing` option in the :guilabel:`Operations` field creates
@@ -65,13 +64,14 @@ check is created:
 - :guilabel:`Product`: One check is requested for each *unique* product included in the specified
   operation. For example, a delivery operation for one table and four chairs would generate two
   checks, since two *unique* products are included in the operation.
-- :guilabel:`Quantity`: A check is requested for a certain percentage of items within the specified
-  operation. This percentage is set by selecting the :guilabel:`Partial Transfer Test` checkbox,
-  then entering a numerical value in the :guilabel:`Percentage` field that appears. If the checkbox
-  is not selected, one quality check is created for the full quantity.
+- :guilabel:`Lot`: A check is requested for a certain percentage of items within the specified
+  operation. Next to the :guilabel:`Partial Test` field, enter a percentage in the :guilabel:`Test
+  (#) % of products` field. The default value is `100`, meaning one quality check is created for the
+  full quantity.
 
-The :guilabel:`Control Frequency` field is set to one of four options that determine *how often* a
-new quality check is created:
+If the :guilabel:`Lot` option was selected for :guilabel:`Control per`, the :guilabel:`Control
+Frequency` field is set to one of four options that determine *how often* a new quality check is
+created:
 
 - :guilabel:`All`: A quality check is requested every time the conditions of the |QCP| are met.
 - :guilabel:`Randomly`: A quality check is randomly requested for a certain percentage of
@@ -127,17 +127,21 @@ selected:
 In the :guilabel:`Team` field, specify the quality team responsible for managing the |QCP| and the
 quality checks it creates.
 
-In the :guilabel:`Instructions` tab at the bottom of the form, enter instructions for how to
-complete the quality checks created by the |QCP|.
+In the *Instructions* tab at the bottom of the form, enter instructions for how to complete the
+quality checks created by the |QCP|.
 
-In the :guilabel:`Worksheet` tab, upload a worksheet file from the device.
+In the *Attachment* tab, upload a worksheet file from the device.
 
-In the :guilabel:`Message If Failure` tab, include instructions for what to do if the quality check
-fails. For example, instruct the employee processing the quality check to create a :doc:`quality
-alert <quality_alerts>`.
+.. note::
+   The *Attachment* tab only appears if the :guilabel:`Manufacturing` option is selected in the
+   :guilabel:`Operations` field and a :guilabel:`Work Order Operation` is selected.
 
-Use the :guilabel:`Notes` tab to provide additional information about the |QCP|, like the reason it
-was created. The information entered in this tab is **not** shown to the employees who process the
+In the *Message If Failure* tab, include instructions for what to do if the quality check fails. For
+example, instruct the employee processing the quality check to create a :doc:`quality alert
+<quality_alerts>`.
+
+Use the *Notes* tab to provide additional information about the |QCP|, like the reason it was
+created. The information entered in this tab is **not** shown to the employees who process the
 quality checks created by the |QCP|.
 
 .. image:: quality_control_points/qcp-form.png

@@ -33,6 +33,10 @@ localization:
      - `l10n_in_reports`
      - Adds the :ref:`Indian GST Return filing <india/gstr>` and the :ref:`Indian
        Tax reports <india/gstr_reports>`.
+   * - :guilabel:`Indian - Bill Of Entry`
+     - `l10n_in_boe`
+     - :ref:`Bill of Entry (BOE) <india/bill-of-entry>` support for imports and customs duty landed
+       costs.
 
 .. seealso::
    :doc:`Indian Payroll localization documentation <../../hr/payroll/payroll_localizations/india>`
@@ -784,3 +788,79 @@ In Odoo, the aggregate total is calculated for partners sharing the same PAN num
    -  **Aggregate total** = 50,000 + 30,000 + 40,000 + 20,000 + 60,000 = ₹200,000
    -  The aggregate total for all customers (XYZ Enterprise - GJ, MH, DL) sharing the PAN number
       ABCPX1234E across all branches is ₹200,000.
+
+.. _india/bill-of-entry:
+
+Bill of Entry (BOE)
+===================
+
+A Bill of Entry (:abbr:`BOE (Bill of Entry)`) is a legal document filed by importers with the
+customs department to declare imported goods, assessable values, customs duties, and import taxes.
+In Odoo, creating a Bill of Entry generates a customs vendor bill and allocates customs duties to
+the related stock receipts using landed costs.
+
+.. note::
+   - Make sure the :guilabel:`Indian - Bill Of Entry` (`l10n_in_boe`) module is :ref:`installed
+     <general/install>`.
+   - The imported products must use the :guilabel:`First In First Out (FIFO)` or :guilabel:`Average
+     Cost (AVCO)` costing method.
+
+To create a Bill of Entry, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Vendors --> Bills` and open a posted vendor bill with its
+   :guilabel:`GST Treatment` set to :guilabel:`Overseas` (or select multiple posted overseas vendor
+   bills for the same vendor and currency from the list view, and click :menuselection:`Action -->
+   Bill of Entry`).
+#. :ref:`Match the relevant purchase order to the vendor bill <accounting/vendor_bills/vendor-bills-matching-po>`.
+#. Click :guilabel:`Bill Of Entry` to open the wizard and fill in the required details:
+
+   - :guilabel:`Transfers`: Select the validated (:guilabel:`Done`) incoming stock receipts linked
+     to the purchase.
+   - :guilabel:`Currency`: Verify the document currency and conversion rate if it differs from the
+     company currency.
+   - :guilabel:`Bill of Entry Number`, :guilabel:`Bill of Entry Date`, and :guilabel:`Port Code`.
+
+#. In the :guilabel:`Lines` tab, review the :guilabel:`Assessable Value` for each product line,
+   enter the :guilabel:`Custom Duty`, and select the applicable purchase :guilabel:`Taxes`.
+#. Click :guilabel:`Confirm`.
+
+A draft Bill of Entry vendor bill is created for the customs duty and import tax, and a linked
+landed cost record is generated to allocate the customs duty across the selected transfers.
+
+.. example::
+   Goods are imported into India, valued at $10,000 on an assessable value basis, with the following
+   details:
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 40 20 20 20
+
+      * - **Particulars**
+        - **Date**
+        - **Exchange Rate (CBIC)**
+        - **Basic Customs Duty Rate**
+      * - Date of submission of Bill of Entry
+        - 25th February 2018
+        - ₹58/USD
+        - 10%
+      * - Date of entry inwards granted to the vessel
+        - 5th March 2018
+        - ₹58.75/USD
+        - 12%
+
+   - **Relevant rate of duty**: 12% (the rate on the date of submission of the Bill of Entry or the
+     date of entry inwards granted to the vessel, whichever is later).
+   - **Exchange rate**: ₹58 per USD (the CBIC rate as on the date of submission of the Bill of
+     Entry).
+   - **Assessable Value** = ₹5,80,000 (USD 10,000 × ₹58)
+   - **Basic Customs Duty** = ₹69,600 (₹5,80,000 × 12%)
+   - **10% Social Welfare Surcharge** = ₹6,960 (₹69,600 × 10%)
+   - **Custom Duty** (entered in the BOE wizard) = ₹76,560 (₹69,600 + ₹6,960)
+   - **Taxable Amount** = ₹6,56,560 (₹5,80,000 + ₹76,560)
+   - **IGST (18%)** = ₹1,18,181 (18% on ₹6,56,560)
+   - **Total Customs Duty including IGST** = ₹1,94,741 (₹76,560 + ₹1,18,181)
+
+   The corresponding Bill of Entry wizard is shown below:
+
+   .. image:: india/boe-wizard.png
+      :alt: Bill of Entry wizard with an assessable value of ₹5,80,000 and customs duty of ₹76,560.

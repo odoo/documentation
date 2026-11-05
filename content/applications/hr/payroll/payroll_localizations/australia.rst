@@ -864,7 +864,7 @@ When payslips are submitted to |ATO| you will see 2 options:
 
 .. seealso::
    - :ref:`ABA files for batch payments <australia/aba>`
-   - :ref:`How to pay, refund and print payslips <payroll/new-payslip>`
+   - :ref:`How to pay, refund and print payslips <payroll/payslips/new-payslip>`
 
 Super contributions
 -------------------

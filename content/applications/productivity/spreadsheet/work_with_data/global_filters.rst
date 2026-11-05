@@ -78,7 +78,8 @@ To configure global filters in a spreadsheet:
 .. tip::
    To pin the :guilabel:`Filters` panel so another panel, such as the :guilabel:`Filter properties`
    panel, can be opened beside it, click :menuselection:`View -->` :icon:`fa-thumb-tack`
-   :menuselection:`Pin the side panel` from the menu bar.
+   :menuselection:`Pin the side panel` from the menu bar. To unpin a panel, click the
+   :icon:`fa-thumb-tack` :guilabel:`(pin)` icon at the top right of the panel.
 
 .. _spreadsheet/global-filters/create-types:
 

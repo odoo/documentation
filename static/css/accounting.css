@@ -2,41 +2,24 @@
 main.index .toctree-wrapper > .row:first-child > .col-md-3 {
     margin: 0 !important;
 }
+main.o_has_code_column {
+    min-width: 0;
+}
 .doc-aside {
     border: 1px solid #d5d5d5;
     background-color: #f8f8f8;
     padding: 0 !important;
     font-size: 14px;
 }
-.doc-aside p{
+.doc-aside p {
     padding: .5rem;
 }
+
 .intro-list {
     margin-top: 1em;
 }
 .intro-list p {
     margin: 0;
-    cursor: pointer;
-}
-
-.related {
-    background-color: hsl(317deg 16% 90%) !important;
-    border: 1px solid #000000 !important;
-    transition: .3s;
-}
-.secondary {
-    background-color: hsl(180deg 67% 94%) !important;
-    transition: .3s;
-}
-.highlight-op {
-    background-color: hsl(317deg 16% 90%) !important;
-    transition: .3s;
-}
-
-label:hover,
-label:hover,
-.highlighter-list li:hover {
-    background-color: hsl(0, 0%, 94%);
     cursor: pointer;
 }
 
@@ -50,54 +33,85 @@ label:hover,
     border: 1px solid transparent;
 }
 
-.accounts-table h4, .accounts-table h5 {
+.accounts-table p {
+    margin: 0;
+    padding: 0;
+}
+
+.accounts-table dd {
+    margin-bottom: 0;
+}
+
+.accounts-table .line-block {
+    margin: 0;
+}
+
+.accounts-table .account-title, .accounts-table .account-total {
     font-weight: 700;
     text-transform: uppercase;
     padding: .5rem;
 }
 
-.accounts-table h4 {
+.accounts-table .account-title {
+    font-size: 20px;
     text-align: center;
 }
 /* table root */
-.accounts-table > div {
+.accounts-table > .accounts-table-container {
     display: flex;
+    padding: 0;
     border: 1px solid transparent;
 }
 /* P&L & Balance Sheet columns */
-.accounts-table > div > div {
+.accounts-table > .accounts-table-container > .container {
     flex: 1;
+    min-width: 0;
     padding: .5rem;
     border: 1px solid transparent;
 }
 
-.accounts-table > div > div:first-child {
-    border-right: 1px solid #d5d5d5
+.accounts-table > .accounts-table-container > .container:first-child {
+    border-right: 1px solid #d5d5d5;
+}
+
+@media (max-width: 767px) {
+    .accounts-table > div {
+        flex-direction: column;
+    }
+
+    .accounts-table > .accounts-table-container > .container:first-child {
+        border-right: 0;
+        border-bottom: 1px solid #d5d5d5;
+    }
 }
 
 /* sections */
-.accounts-table > div > div div {
+.accounts-table > div > div div.container {
     display: flex;
     flex-direction: column;
     border: 1px solid transparent;
 }
 
-.accounts-table > div > div div > h5 {
+.accounts-table > div > div div > .account-total {
     order: 99;
+    border: 1px solid transparent;
     border-top: 1px solid #d5d5d5;
     border-bottom: 1px solid #d5d5d5;
     /*text-transform: uppercase;*/
     /*padding: 0.3em 0;*/
     /*border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 10 / 3px 0 3px;*/
 }
-.accounts-table > div > div div div > h5 {
+.accounts-table > div > div div div > .account-total {
     /* slightly smaller than normal 14px h5 size */
     font-size: 12.5px;
     /*border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 5;*/
 }
-.accounts-table dt {
+.accounts-table dt, .accounts-table .primary-retained {
     font-weight: 700;
     padding: 0 .5rem;
+}
+.accounts-table .primary-retained {
+    border: 1px solid transparent;
 }
 .accounts-table dt span {
     font-style: italic;
@@ -106,12 +120,9 @@ label:hover,
     font-style: normal;
 }
 
-/* 3-column (thing, debit, credit) tables */
-/* 2nd and 3rd th & td of each row right-aligned and 1/4th width */
-.d-c-table tr > :nth-child(2),
-.d-c-table tr > :nth-child(3) {
-    width: 25%;
-    text-align: right;
+.chart-of-accounts-example > .highlights {
+    font-style: italic;
+    font-weight: 700;
 }
 
 @media (min-width: 992px) {
@@ -132,16 +143,12 @@ label:hover,
         background-color: #eee !important;
         color: #7A436B !important;
     }
-    .chart-of-accounts .highlight-op {
-        background-color: #030035;
-        border-bottom: 1px solid #000000 !important;
-    }
 }
-.entries-listing {
+.journal-entries-cheat-sheet.container {
+    padding: 0;
+}
+.journal-entries .entries-listing.container {
     padding: .5rem;
-}
-.journal-entries .entries-listing p {
-    font-style: italic;
 }
 
 #reconciliation .reconciliation-example div.buttons {

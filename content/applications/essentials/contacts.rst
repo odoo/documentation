@@ -30,9 +30,11 @@ Enter the name of the contact in the :guilabel:`Name (company or person)` field.
 In the :icon:`fa-envelope` :guilabel:`Email` field, enter the email address with the domain. In the
 :icon:`fa-phone` :guilabel:`Phone` field, enter the contact's phone number. Enter the
 :guilabel:`Address` of the contact. Finally, enter the :guilabel:`Tax Identification Number (TIN)`
-the contact uses for tax and accounting purposes. If the contact is not subject to taxation, a `/`
-may be entered in this field. If it's necessary to add the DUNS number to the contact, this can be
-added by clicking the :icon:`fa-plus` (:guilabel:`plus`) button.
+(also called the :guilabel:`VAT` in some :doc:`fiscal localizations
+<../finance/fiscal_localizations>` the contact uses for tax and accounting purposes. If the contact
+is not subject to taxation, a `/` may be entered in this field. If it's necessary to add the DUNS
+number or any other identification number to the contact, this can be added by clicking the
+:icon:`fa-plus` (:guilabel:`plus`) button.
 
 Additional fields
 -----------------

@@ -14,8 +14,8 @@ Odoo supports every major version in two phases:
 - **Extended support** begins when standard support ends and requires an additional fee. It is
   available only on Odoo.sh (for a limited number of versions) and on-premise (for any version).
 
-Both phases include helpdesk support, bug fixes, and security updates. During extended support,
-fixes are provided only where technically feasible.
+Security updates are only provided during standard support. Both phases include helpdesk support and
+bug fixes. During extended support, fixes are provided only where technically feasible.
 
 .. note::
    - **SaaS versions** (also called *Online* versions) are released every two to three months. They

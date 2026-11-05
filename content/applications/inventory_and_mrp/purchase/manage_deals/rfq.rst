@@ -25,10 +25,10 @@ one by selecting :guilabel:`New`. Doing so opens the product form, where sales a
 can be configured.
 
 To configure purchasable products, enable the :guilabel:`Purchase` checkbox under the product name.
-Next, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` route.
+Next, go to the *Inventory* tab and enable the :guilabel:`Buy` route.
 
 .. important::
-   The :guilabel:`Inventory` tab and routes are only visible if using the :doc:`Inventory app
+   The *Inventory* tab and routes are only visible if using the :doc:`Inventory app
    <../../inventory>`.
 
 .. seealso::
@@ -38,18 +38,17 @@ Next, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` route.
 .. image:: rfq/product-vendor-pricelist-config.png
    :alt: Required configuration for purchasable products.
 
-
 .. _purchase/manage_deals/vendor-pricelist:
 
 Vendor pricelist
 ----------------
 
-In the :guilabel:`Purchase` tab of the product form, click :guilabel:`Add a line` to input the
-vendor and their price, to have this information auto-populate on an |RFQ| each time the product is
-listed.
+To have the vendor and their price auto-populate on an |RFQ| each time the product is listed, open the *Purchase* tab of the product form and click :guilabel:`Add a line` to enter the information.
 
-.. seealso::
-   :doc:`../products/pricelist`
+.. note::
+   Confirming a |PO| does **not** automatically create a vendor pricelist line. When a vendor has no
+   pricelist for the product, the |RFQ| uses the price, discount, and lead time from that vendor's
+   most recently confirmed |PO| line.
 
 Default columns include :guilabel:`Quantity`, :guilabel:`Unit Price`, and :guilabel:`Delivery Lead
 Time`, but other columns, like :guilabel:`Vendor Product Code` or :guilabel:`Discount (%)`, can also
@@ -57,13 +56,16 @@ be enabled.
 
 To enable or disable columns, click the :icon:`oi-settings-adjust` :guilabel:`(additional options)`
 icon on the right side of the header row to reveal a drop-down menu of additional columns that can
-be added (or removed) from the :guilabel:`Purchase` tab.
+be added (or removed) from the *Purchase* tab.
 
 .. note::
    Alternatively, prices and delivery lead times for existing products can be added by going to
    :menuselection:`Purchase app --> Configuration --> Vendor Pricelists`. Click :guilabel:`New` in
    the top-left corner. In the :guilabel:`Vendor` section of the pricelist form that appears, add
    the product information as it pertains to the vendor.
+
+.. seealso::
+   :doc:`../products/pricelist`
 
 .. _purchase/manage_deals/group-rfqs:
 
@@ -210,8 +212,8 @@ order is to be shipped directly to the end customer. When :guilabel:`Dropship` i
 Products tab
 ~~~~~~~~~~~~
 
-In the :guilabel:`Products` tab, add the products to be ordered. Click :guilabel:`Add a product`,
-and type in the product name, or select the item from the drop-down menu.
+In the *Products* tab, add the products to be ordered. Click :guilabel:`Add a product`, and type in
+the product name, or select the item from the drop-down menu.
 
 To create a new product and add it, type the new product name in the :guilabel:`Product` column,
 select :guilabel:`Create [product name]` from the resulting drop-down menu and manually add the unit

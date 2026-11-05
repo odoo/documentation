@@ -327,9 +327,14 @@ Use the `command` markup to highlight a command.
 Icons
 -----
 
-Use the `icon` markup to add the class name of an icon. Three icon sets are used in Odoo:
-`FontAwesome4 <https://fontawesome.com/v4/icons/>`_ (`fa-*`), :ref:`Odoo UI <ui/odoo-ui-icons>`
-(`oi-*`), and :ref:`Odoo Spreadsheet <ui/odoo-spreadsheet-icons>` (`os-*`) icons.
+Use the `icon` markup to add an icon. Four icon sets are used in Odoo:
+
+- :ref:`Material Symbols <ui/material-symbols>`: use the icon name without a prefix (e.g.,
+  `settings`). Only the icons listed on the :doc:`Material Symbols subset
+  </developer/reference/user_interface/icons/material_symbols_odoo_subset>` page are available.
+- :ref:`Odoo UI <ui/odoo-ui-icons>` (`oi-*`)
+- :ref:`Odoo Spreadsheet <ui/odoo-spreadsheet-icons>` (`os-*`)
+- `FontAwesome4 <https://fontawesome.com/v4/icons/>`_ (`fa-*`)
 
 Follow the icon with its tooltip (when possible) or its name as a :ref:`contributing/rst/guilabel`
 in brackets as a descriptor, unless it is immediately followed by a :ref:`UI element
@@ -338,13 +343,13 @@ in brackets as a descriptor, unless it is immediately followed by a :ref:`UI ele
 .. list-table::
   :class: o-showcase-table
 
-  * - | The graph view is represented by the :icon:`fa-area-chart` (:guilabel:`Graph`) icon.
+  * - | The graph view is represented by the :icon:`area_chart` (:guilabel:`Graph`) icon.
       | The pivot view is represented by the :icon:`oi-view-pivot` (:guilabel:`Pivot`) icon.
       | Click :icon:`os-global-filters` :guilabel:`Filters` at the top right of the spreadsheet.
 
   * - .. code-block:: text
 
-         | The graph view is represented by the :icon:`fa-area-chart` (:guilabel:`Graph`) icon.
+         | The graph view is represented by the :icon:`area_chart` (:guilabel:`Graph`) icon.
          | The pivot view is represented by the :icon:`oi-view-pivot` (:guilabel:`Pivot`) icon.
          | Click :icon:`os-global-filters` :guilabel:`Filters` at the top right of the spreadsheet.
 

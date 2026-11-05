@@ -37,6 +37,9 @@ either:
 .. image:: reconciliation/bank-card.png
    :alt: Reaching the bank reconciliation tool from the accounting dashboard
 
+.. seealso::
+   :ref:`Bank Reconciliation Summary report <accounting/reporting/bank-reconciliation>`
+
 The :guilabel:`Bank Matching` view is composed of lines for each transaction of the journal with the
 newest displayed first. Each transaction has a date, a label, a partner (if set), :ref:`action
 buttons <accounting/reconciliation/action-buttons>`, and the transaction amount. Each line has

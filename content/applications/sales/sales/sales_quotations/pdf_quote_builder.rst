@@ -48,6 +48,7 @@ information directly on the website.
       Set up the PDF headers and footers for products. These appear on sales quotes and online store
       pages.
 
+.. _sales/pdf_quote_builder/configuration:
 
 Configuration
 =============

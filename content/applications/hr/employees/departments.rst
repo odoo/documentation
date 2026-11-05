@@ -64,11 +64,11 @@ department card displays the following information, if available:
 - :guilabel:`Employees`: The number of employees within the department.
 - :guilabel:`Appraisals`: The number of appraisals scheduled for employees in the department.
 - :guilabel:`Time Off Requests`: The number of unapproved time off requests for employees in the
-  department :ref:`awaiting approval <time_off/manage-time-off>` . This **only** appears if there
-  are requests to approve.
+  department :ref:`awaiting approval <time_off/management/manage-time-off>` . This **only** appears
+  if there are requests to approve.
 - :guilabel:`Allocation Requests`: The number of unapproved allocation requests for employees in the
-  department :ref:`awaiting approval <time_off/manage-allocations>`. This **only** appears if there
-  are requests to approve.
+  department :ref:`awaiting approval <time_off/management/manage-allocations>`. This **only**
+  appears if there are requests to approve.
 - :guilabel:`New Applicants`: The number of :ref:`new applicants <recruitment/recruitment_flow/new>`
   for a position within the department. This **only** appears if there are new applicants.
 - :guilabel:`Expenses`: The number of employees in the department with :doc:`open expenses to

@@ -230,12 +230,12 @@ Income account modification on draft down payments
    available on the draft invoice. Please note, the income account on posted down payments
    **cannot** be modified.
 
-Navigate to the invoice to be modified by going to :menuselection:`Sales app --> Orders --> Orders`.
-Open an order, then click the :guilabel:`Invoices` smart button. Open an invoice, click the
-drop-down arrow on the entry in the :guilabel:`Account` column and click :guilabel:`Search more...`
-to bring up the *Search: Account* form. In this form, a different account can be chosen from the
-list of pre-existing accounts. A new account can also be created by clicking the :guilabel:`New`
-button.
+Navigate to the invoice to be modified by going to :menuselection:`Sales app --> Orders -->
+Quotations`. Open an order, then click the :guilabel:`Invoices` smart button. Open an invoice, click
+the drop-down arrow on the entry in the :guilabel:`Account` column and click :guilabel:`Search
+more...` to bring up the *Search: Account* form. In this form, a different account can be chosen
+from the list of pre-existing accounts. A new account can also be created by clicking the
+:guilabel:`New` button.
 
 .. image:: down_payment/income-account.png
    :alt: The Search:Account form with existing accounts displayed and a button to create a new

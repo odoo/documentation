@@ -5,9 +5,11 @@ Warehouses
 In the Odoo *Inventory* app, a *warehouse* is a physical space with an address for storing items,
 such as a storage facility, distribution center, or physical store.
 
-Each database has a pre-configured warehouse with the company's address. Users can set up multiple
+Each database has a preconfigured warehouse with the company's address. Users can set up multiple
 warehouses, and :doc:`create stock moves <../../shipping_receiving/daily_operations/use_routes>`
 between them.
+
+.. _inventory/warehouses/configuration:
 
 Configuration
 =============
@@ -69,6 +71,5 @@ the warehouse form, which contains the following fields:
    :doc:`Use inventory adjustments to add stock to new warehouses <count_products>`
 
 .. image:: warehouses/warehouse-form.png
-   :align: center
    :alt: Example warehouse form.
 

@@ -49,10 +49,10 @@ Archive a company
 
 To archive a company, follow these steps:
 
-#. In the Settings app, navigate to the :guilabel:`Companies` section and click
-   :icon:`oi-arrow-right` :guilabel:`Manage Companies`.
+#. Navigate to :menuselection:`Settings app --> Users & Companies --> Companies`.
 #. In the :guilabel:`Companies` list view, select the company to be archived.
-#. Click the :icon:`fa-cog` :guilabel:`Actions` menu and select :guilabel:`Archive`.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` button and select :icon:`fa-archive`
+   :guilabel:`Archive`.
 #. Click :guilabel:`Archive` to confirm.
 
 .. _general/multi-company/multi-company-environment:
@@ -123,11 +123,11 @@ specific company, set the :guilabel:`Company` field on the record's form.
 Inter-company transactions
 ==========================
 
-The :guilabel:`Inter-Company Transactions` feature allows one company in the database to sell or
-purchase goods and services from another company within the same database. For inter-company
-transactions, :ref:`product records are shared <general/multi-company/shared-and-unshared-records>`
-among the involved companies. Depending on the configuration settings, counterpart documents for
-orders and invoices can be automatically generated and synchronized.
+The *inter-company transactions* feature allows one company in the database to sell or purchase
+goods and services from another company within the same database. For inter-company transactions,
+:ref:`product records are shared <general/multi-company/shared-and-unshared-records>` among the
+involved companies. Depending on the configuration settings, counterpart documents for orders and
+invoices can be automatically generated and synchronized.
 
 .. warning::
    To handle inter-company transactions correctly, :doc:`general
@@ -136,44 +136,60 @@ orders and invoices can be automatically generated and synchronized.
    :doc:`localizations <../../finance/fiscal_localizations>`.
 
 To activate inter-company transactions, select the relevant company in the :ref:`company selector
-<general/multi-company/company-selector>`, open the **Settings** app, navigate to the
-:guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and click
-:guilabel:`Save`. Then, select the options to create a counterpart for the selected company:
+<general/multi-company/company-selector>`, open the :menuselection:`Settings` app, navigate to the
+*Companies* section, enable :guilabel:`Inter-Company Transactions`, and click :guilabel:`Save`.
+Then, select the options to create a counterpart for the selected company:
 
-- :guilabel:`Create Vendor Bills`: Automatically create a bill/refund when a company confirms
-  an invoice/credit note for the selected company.
-- :guilabel:`Create Sales Orders`: Automatically create a quotation (drafted sales order) when a
-  purchase order is confirmed for the selected company.
-- :guilabel:`Create Purchase Orders`: Automatically create a request for quotation (drafted purchase
-  order) using the selected company warehouse in the :guilabel:`Use Warehouse` field when a sales
-  order is confirmed for the selected company.
-- :guilabel:`Synchronize Stock Moves`: Automatically synchronize stock moves between companies when
-  fulfilling or receiving deliveries for the selected company.
+- :guilabel:`Create Vendor Bills`: Automatically create a bill or refund in the selected purchase
+  journal when another company confirms an invoice or credit note for the selected company. Select
+  the checkbox to display the :guilabel:`in Journal` drop-down menu.
+- :guilabel:`Create Sales Orders`: Automatically create a sales order when another company confirms
+  a purchase order with the selected company. The warehouse is based on the delivery address.
+- :guilabel:`Create Purchase Orders`: Automatically create a purchase order when another company
+  confirms a sales order with the selected company. The warehouse is based on the receipt address.
 
-To automatically validate the records, select :guilabel:`Validated`. This setting applies to all of
-the inter-company transaction options.
+In the :guilabel:`Create as` field, select :guilabel:`Draft` to create the counterpart documents as
+drafts, or :guilabel:`Validated` to automatically validate them. This setting applies to all of the
+inter-company transaction options.
+
+.. tip::
+   With :doc:`../developer_mode` enabled, the :guilabel:`Synchronize Transfers from SO/PO` option
+   also appears. When a sales or purchase order is confirmed with another company, Odoo links the
+   delivery of one company with the corresponding receipt of the other.
 
 .. note::
-   The :guilabel:`Use Warehouse` field appears if :guilabel:`Create Sales Orders` or
-   :guilabel:`Create Purchase Orders` is selected. However, Odoo does not automatically create
-   warehouses for additional companies created after the initial database setup. Warehouses for each
-   company must be created manually.
-
-Inter-company transaction settings can also be accessed and modified by going to
-:menuselection:`Settings --> Users & Companies --> Companies` and selecting the company. Enable
-:doc:`../developer_mode` and the :guilabel:`Inter-Company Transactions` tab appears.
+   Odoo does not automatically create warehouses for additional companies created after the initial
+   database setup. Warehouses for each company must be created manually.
 
 .. example::
-   :guilabel:`Create Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
-   posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
+   :guilabel:`Create Vendor Bills`: When an invoice for :guilabel:`Customer` `JS Store US` is posted
+   on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
 
-   :guilabel:`Create Purchase Orders`: when a sales order for :guilabel:`Customer` `JS Store US` is
+   :guilabel:`Create Purchase Orders`: When a sales order for :guilabel:`Customer` `JS Store US` is
    confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created (and
-   confirmed if the :guilabel:`Create and validate` option is selected).
+   confirmed if :guilabel:`Validated` is selected in the :guilabel:`Create as` field).
 
 .. seealso::
    - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
    - :doc:`../../finance/accounting/get_started/multi_currency`
+
+.. _general/multi-company/inter-company-stock:
+
+Inter-company stock transfers
+-----------------------------
+
+Stock can also be moved between companies without creating inter-company sales or purchase orders:
+
+- :ref:`Resupply a warehouse from another company's warehouse
+  <inventory/resupply_warehouses/inter-company>`, using :abbr:`MTO (Make to Order)` or reordering
+  rules.
+- On a sales order, set the :guilabel:`Warehouse` to another company's warehouse to deliver the
+  customer's order from there.
+- On a purchase order, set the :guilabel:`Deliver To` field to another company's receipt operation
+  type to buy in one company and receive the products in another.
+
+Only the warehouses and operation types of the companies selected in the :ref:`company selector
+<general/multi-company/company-selector>` are available.
 
 .. _general/multi-company/interco-clearing:
 
@@ -204,12 +220,12 @@ Configuration
 
 .. important::
    The :guilabel:`Intercompany Payment - Account` (`account_payment_interco`) module must be
-   :ref:`installed <general/install>`, and the :guilabel:`Inter-Company Transactions` feature must be
-   enabled **in each company** that is involved for the :guilabel:`Intercompany Clearing` fields to
-   appear in the Accounting settings.
+   :ref:`installed <general/install>`, and the :guilabel:`Inter-Company Transactions` feature must
+   be enabled **in each company** that is involved for the :guilabel:`Intercompany Clearing` fields
+   to appear in the Accounting settings.
 
 #. Go to :menuselection:`Accounting --> Configuration --> Settings`.
-#. Scroll down to the :guilabel:`Default Accounts` section.
+#. Scroll down to the *Default Accounts* section.
 #. Under :guilabel:`Intercompany Clearing`, define the following fields for company that is
    currently active:
 

@@ -357,8 +357,9 @@ displayed: the card number, expiration date, and security code. When done, close
 clicking :guilabel:`X`.
 
 .. tip::
-   Android users can add their virtual expense cards `to a Google wallet
-   <https://support.google.com/wallet/answer/12058983?hl=en>`_.
+   Android users can add their virtual expense cards `to a Google Wallet
+   <https://support.google.com/wallet/answer/12058983?hl=en>`_. Currently, IOS users **cannot** add
+   their expense cards to an Apple Wallet.
 
 Lost cards
 ==========

@@ -104,6 +104,11 @@ the maximum number of attendees allowed in the resulting field.
 
 .. _events/additional-event-configs:
 
+.. note::
+   If the :doc:`IoT <../../../general/iot>` app is installed, the :guilabel:`96x82mm (Badge Printer)` option is also
+   displayed. This badge format requires an EPSON ColorWorks printer linked to an :doc:`IoT Box
+   <../../../general/iot/iot_box>`, and is designed for Nakagawa 96x82mm butterfly-style badge paper.
+
 Additional event configurations
 ===============================
 
@@ -387,8 +392,8 @@ To send event invites to potential attendees, navigate to the desired event form
 :menuselection:`Events app --> Events` and click the desired event. On the event form, click the
 :guilabel:`Invite` button.
 
-Doing so reveals a blank :ref:`email form <email_marketing/create_email>`. Customize the message by
-specifying a mailing type, subject, recipients, and the mail body.
+Doing so reveals a blank :ref:`email form <email_marketing/create-mailing>`. Customize the message
+by specifying a mailing type, subject, recipients, and the mail body.
 
 .. tip::
    Sending emails from Odoo is subject to a daily limit, which, by default, is 200. To learn more

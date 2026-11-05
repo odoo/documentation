@@ -5,8 +5,8 @@ Routes and push/pull rules
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 .. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
 .. |MO| replace:: :abbr:`MO (Manufacturing Order)`
-.. |VEND| replace:: `Partners/Vendors`
-.. |CUST| replace:: `Partners/Customers`
+.. |VEND| replace:: `Vendors`
+.. |CUST| replace:: `Customers`
 .. |ST| replace:: `<WH>/Stock`
 .. |QC| replace:: `<WH>/Quality Control`
 .. |IN| replace:: `<WH>/Input`
@@ -23,7 +23,7 @@ products based on specific conditions. They can be configured to create advanced
 - Helping rental management automate return moves for rented products.
 
 .. seealso::
-   - `Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_
+   - `Odoo Tutorials: Push & Pull Rules <https://www.youtube.com/watch?v=qkhDUezyZuc>`_
    - :doc:`Standard routes in Odoo <../daily_operations>`
 
 .. _inventory/routes/config:
@@ -189,6 +189,16 @@ Unlike standard warehouse routes, these routes are **not** applied automatically
 manually :ref:`applied <inventory/routes/apply>` to individual products, product categories, or
 other records.
 
+.. note::
+   By default, the *Buy* and *Manufacture* routes are automatically applied under the following
+   conditions:
+
+   - *Buy*: The product has a specified :ref:`vendor <purchase/manage_deals/vendor-pricelist>`.
+   - *Manufacture*: The product has a :doc:`Bill of Materials
+     <../../../manufacturing/basic_setup/bill_configuration>`.
+
+   These routes, however, can still be made selectable.
+
 .. list-table::
    :width: 100 %
    :widths: 30 70
@@ -198,33 +208,48 @@ other records.
      - Description
    * - :doc:`Replenish on Order (MTO) <../../warehouses_storage/replenishment/mto>`
      - Triggers a replenishment for each order instead of using existing stock. Used together with
-       the *Buy* or *Manufacture* route. Archived by default.
+       the *Buy* or *Manufacture* route.
    * - Buy
      - Creates an |RfQ| when products need to be replenished. Requires the **Purchase** app.
    * - Manufacture
      - Creates an |MO| when products need to be replenished. Requires the **Manufacturing** app.
    * - :doc:`Dropship <dropshipping>`
-     - Has a vendor ship products directly to the customer.
+     - Has a vendor ship products directly to the customer or to a subcontractor, if applicable.
    * - :doc:`Resupply Subcontractor on Order
        <../../../manufacturing/subcontracting/subcontracting_resupply>`
      - Sends components to the subcontractor when a subcontracted product is ordered. The components
        are sent from stock through the warehouse's *Resupply Subcontractor* route.
-   * - :doc:`Dropship Subcontractor on Order
-       <../../../manufacturing/subcontracting/subcontracting_dropship>`
-     - Has a vendor deliver components directly to the subcontractor.
 
 .. _inventory/routes/apply:
 
 Applying routes
 ===============
 
-Routes can be manually assigned to products, product categories, packagings, shipping methods, and
-sales order lines. This is only required for :ref:`additional routes <inventory/routes/reference>`,
-such as *Replenish on Order (MTO)*, *Buy*, *Manufacture*, or *Dropship*.
+Routes can be manually assigned to products, product categories, package types, shipping methods,
+and sales order lines. This is only required for :ref:`additional routes
+<inventory/routes/reference>`, such as *Replenish on Order (MTO)*, *Buy*, *Manufacture*, or
+*Dropship*.
 
 .. important::
    In order to apply routes on these forms, they must first be :ref:`made selectable
    <inventory/routes/manage/visibility>`.
+
+When routes are applied in multiple places, Odoo selects the route that can handle the product's
+next step. It checks routes in the following order:
+
+#. :ref:`On the sales order line <inventory/routes/apply/so-lines>`. If none, check the order's
+   :ref:`shipping method <inventory/routes/apply/shipping-methods>`.
+#. :ref:`On the package type <inventory/routes/apply/package-types>` of the order line's selected
+   packaging unit.
+#. :ref:`On the product <inventory/routes/apply/products>` and/or on its :ref:`product category
+   <inventory/routes/apply/product-categories>`.
+#. On the warehouse.
+
+.. example::
+   A warehouse uses 3-step deliveries. The *Pallet* package type has a route that ships directly
+   from stock. A sales order for two *Pallets* of a product ships in one step, using the package
+   type's route. A sales order for twelve *Units* of the same product follows the warehouse's 3-step
+   route.
 
 .. _inventory/routes/apply/products:
 
@@ -242,26 +267,44 @@ or more :guilabel:`Routes` in the *Operations* section.
 .. image:: use_routes/route-product.png
    :alt: Routes on a product form.
 
+.. _inventory/routes/apply/product-categories:
+
 On product categories
 ---------------------
 
 To assign routes to a product category, navigate to :menuselection:`Inventory app --> Configuration
---> Product Categories` and select the product category. On the category form, select one or more
-:guilabel:`Routes` in the *Logistics* section.
+--> Product Categories` and select the product category. In the *Logistics* section, select one or
+more :guilabel:`Routes`.
 
 .. image:: use_routes/route-category.png
    :alt: Routes on a product category form.
 
-On product packagings
----------------------
+.. _inventory/routes/apply/package-types:
 
-To assign routes to a product packaging, navigate to :menuselection:`Inventory app --> Products -->
-Products` and select the product. On the product form, select the *Inventory* tab. In the
-*Packaging* section, existing packagings are listed. By default, the route column is hidden. To
-enable it, click the :icon:`oi-settings-adjust` :guilabel:`(Optional Columns)` icon, then select
+On package types
+----------------
+
+To assign routes to a package type, navigate to :menuselection:`Inventory app --> Configuration -->
+Package Types` and select the package type. On the *Configuration* tab, select one or more
 :guilabel:`Routes`.
 
-In the newly added column, select one or more routes on a packaging line.
+Any packagings configured with this package type also inherit its routes. These
+:guilabel:`Packagings` can be selected in the *Sales* tab of a product form. When this product
+appears on a sales or purchase order line, its transfer flow follows the selected routes on the
+package type.
+
+When this packaging is selected as the :guilabel:`Unit` on a sales or purchase order line, the
+transfer follows the package type's routes.
+
+.. note::
+   The :guilabel:`Package Type` field on a packaging requires the :guilabel:`Packages` and
+   :guilabel:`Units of Measure & Packagings` settings. Routes on package types require the
+   :guilabel:`Multi-Step Routes` setting.
+
+.. seealso::
+   :doc:`../../product_management/configure/packaging`
+
+.. _inventory/routes/apply/shipping-methods:
 
 On shipping methods
 -------------------
@@ -276,13 +319,15 @@ To assign routes to a shipping method, navigate to :menuselection:`Inventory app
 .. seealso::
    :ref:`inventory/shipping_receiving/shipping-route`
 
+.. _inventory/routes/apply/so-lines:
+
 On sales order lines
 --------------------
 
 To assign routes to a sales order line, open the **Sales** app and select the sales quotation.
 Existing lines are listed in the *Order Lines* tab. By default, the route column is hidden. To
 enable it, click the :icon:`oi-settings-adjust` :guilabel:`(Optional Columns)` icon, then select
-:guilabel:`Route`.
+:guilabel:`Routes`.
 
 In the newly-added column, select one or more routes on an order line.
 
@@ -327,8 +372,8 @@ following options:
   configured with a route, every product in the category inherits the route's rules.
 - :guilabel:`Products`: Allow routes to be selectable on a *Products* form. The configured product
   inherits the route's rules.
-- :guilabel:`Packagings`: Allow routes to be selectable on a *Product Packaging* form. When
-  configured with a packaging, all orders with the chosen packaging inherit the route's rules.
+- :guilabel:`Package Type`: Allow routes to be selectable on a *Package Type* form. All products
+  configured with this packaging type inherit the route's rules.
 - :guilabel:`Shipping Methods`: Allow routes to be selectable on a *Delivery Methods* form. When
   applied on a carrier, all orders with the chosen shipping method inherit the route's rules.
 - :guilabel:`Warehouses`: Select the warehouses for which this route should be used as the default

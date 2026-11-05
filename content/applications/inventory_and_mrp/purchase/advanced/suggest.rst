@@ -15,10 +15,10 @@ First, ensure that the **Purchase**, **Inventory**, and **Sales** apps are :ref:
 <inventory/delivery/one-step>` for each product to be considered for replenishment. This ensures
 there is a past delivery record the system can use to calculate average daily demand.
 
-Similarly, a vendor must be added to the :ref:`vendor pricelist
-<purchase/manage_deals/vendor-pricelist>` with a purchase price for each product. The *Suggest*
-feature is vendor-specific, so each product needs a matching vendor for accurate purchase quantity
-and price calculations.
+Additionally, each product must include a vendor on its :ref:`vendor pricelist
+<purchase/manage_deals/vendor-pricelist>`, or at least one confirmed purchase order (PO) from that
+vendor. The *Suggest* feature is vendor-specific, so each product needs a matching vendor for
+accurate purchase quantity and price calculations.
 
 Finally, products to be used with the *Suggest* feature must have their *Product Type* set to
 *Goods* and be :ref:`Tracked by quantity <inventory/product_management/manufacture>`. This ensures

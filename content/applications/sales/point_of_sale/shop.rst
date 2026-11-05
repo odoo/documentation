@@ -86,6 +86,8 @@ The system instantly creates a delivery order from the warehouse to the shipping
 .. Note::
    The selected customer must have referenced an address in the system for products to be shipped.
 
+.. _pos/shop/barcodes:
+
 Barcodes
 ========
 

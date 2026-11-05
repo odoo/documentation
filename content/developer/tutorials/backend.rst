@@ -1078,17 +1078,20 @@ specific fields on a view or object using the field's groups attribute.
 Access rights
 -------------
 
-Access rights are defined as records of the model ``ir.model.access``. Each
-access right is associated to a model, a group (or no group for global
-access), and a set of permissions: read, write, create, unlink. Such access
+Access rights are defined as records of the model ``ir.access``. Each
+access right is associated to a model, a group (or no group for global access
+restriction), a set of operations (create, read, update, delete), and an
+optional domain. Such access
 rights are usually created by a CSV file named after its model:
-``ir.model.access.csv``.
+``ir.access.csv``.
 
 .. code-block:: text
 
-   id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-   access_idea_idea,idea.idea,model_idea_idea,base.group_user,1,1,1,0
-   access_idea_vote,idea.vote,model_idea_vote,base.group_user,1,1,1,0
+   id,name,model_id,group_id/id,operation,domain
+   access_idea_idea,idea.idea,model_idea_idea,base.group_user,cru,
+   access_idea_vote_read,idea.vote,model_idea_vote,base.group_user,r,
+   access_idea_vote_delete,idea.vote,model_idea_vote,base.group_user,d,"[('state', '=', 'cancel')]"
+   access_idea_vote_update,idea.vote,model_idea_vote,base.group_user,cu,"[('user_id', '=', user.id)]"
 
 .. exercise:: Add access control through the Odoo interface
 
@@ -1103,35 +1106,17 @@ rights are usually created by a CSV file named after its model:
      OpenAcademy models
    * Make *Session* and *Course* readable by all users
 
-Record rules
-------------
+An access rights record gives access to a subset of records of the given model.
+Its *domain* specifies to which records the access rights are given.
 
-A record rule restricts the access rights to a subset of records of the given
-model. A rule is a record of the model ``ir.rule``, and is associated to a
-model, a number of groups (many2many field), permissions to which the
-restriction applies, and a domain. The domain specifies to which records the
-access rights are limited.
+In the example above, the access right ``access_idea_vote_delete`` prevents the
+deletion of votes that are not in state ``'cancel'``, while the access right
+``access_idea_vote_update`` prevents users from creating or updating votes that
+are not theirs.
 
-Here is an example of a rule that prevents the deletion of leads that are not
-in state ``cancel``. Notice that the value of the field ``groups`` must follow
-the same convention as the method :meth:`~odoo.models.Model.write` of the ORM.
+.. exercise:: Access rights domain
 
-.. code-block:: xml
-
-   <record id="delete_cancelled_only" model="ir.rule">
-       <field name="name">Only cancelled leads may be deleted</field>
-       <field name="model_id" ref="crm.model_crm_lead"/>
-       <field name="groups" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
-       <field name="perm_read" eval="0"/>
-       <field name="perm_write" eval="0"/>
-       <field name="perm_create" eval="0"/>
-       <field name="perm_unlink" eval="1" />
-       <field name="domain_force">[('state','=','cancel')]</field>
-   </record>
-
-.. exercise:: Record rule
-
-   Add a record rule for the model Course and the group
+   Modify an access right for the model Course and the group
    "OpenAcademy / Manager", that restricts ``write`` and ``unlink`` accesses
    to the responsible of a course. If a course has no responsible, all users
    of the group must be able to modify it.

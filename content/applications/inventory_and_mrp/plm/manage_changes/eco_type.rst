@@ -29,6 +29,9 @@ collaborators and stakeholders only view and assist with relevant |BOM| improvem
    .. image:: eco_type/eco-type-example.png
       :alt: Example of several custom ECO types.
 
+Two default |ECO| types are available: :guilabel:`Product Revision` and :guilabel:`New Product
+Introduction`.
+
 .. _plm/eco_type/create-type:
 
 Create an ECO type
@@ -40,10 +43,10 @@ Types`.
 Create a new ECO type by clicking :guilabel:`New`. On the new :guilabel:`ECO Types` form, fill in
 the following information:
 
-- :guilabel:`Name`: the name of the |ECO| type, which will organize all of the |ECOs| of this *type*
+- :guilabel:`Name`: The name of the |ECO| type, which will organize all of the |ECOs| of this *type*
   in a project.
-- :guilabel:`Email Alias`: if this optional field is filled, emails submitted to this email address
-  automatically generate |ECOs| in the left-most stage of this |ECO| type.
+- :guilabel:`Email Alias`: If this optional field is filled, emails submitted to this email address
+  automatically generate |ECOs| in the first stage of this |ECO| type.
 
 .. example::
    The `Formulation change` |ECO| type is used to organize and track related |ECOs| in a single
@@ -66,10 +69,11 @@ On the form for each |ECO| type, edit the :guilabel:`Name` or :guilabel:`Email A
 Stages
 ======
 
-Within the :guilabel:`Engineering Change Orders` Kanban view for a specific |ECO| type, *stages* are
-milestones used to identify the progress of the |ECO| before the changes are ready to be applied. By
-default, Odoo uses `New`, `In Progress`, `Validated`, and `Effective`, but these are fully
-customizable to the specific life cycle of an |ECO| type.
+Within the *Engineering Change Orders* Kanban view for a specific |ECO| type, *stages* are
+milestones used to identify the progress of the |ECO| before the changes are ready to be applied.
+The default |ECO| types use the `New`, `In Progress`, `Validated`, and `Effective` stages. New |ECO|
+types do not contain any stages by default. In all cases, stages are fully customizable to the
+specific life cycle of an |ECO| type.
 
 .. image:: eco_type/eco-stage-defaults.png
    :alt: Default stages for an ECO type.
@@ -98,13 +102,12 @@ Verification stages
 -------------------
 
 To configure a verification stage, hover over the intended stage, and select the :icon:`fa-gear`
-:guilabel:`(Actions)`. Then, click :guilabel:`Edit` to open a pop-up window and check the box for
-:guilabel:`Allow to apply changes`.
+:guilabel:`(Actions)`. Then, click :guilabel:`Edit` to open a pop-up window and select the
+:guilabel:`Allow to apply changes` checkbox.
 
-Next, add an approver in the :guilabel:`Approvers` section, by clicking :guilabel:`Add a line`, and
-specifying the :guilabel:`Role` of the reviewer, the :guilabel:`User`, and an :guilabel:`Approval
-Type` of :guilabel:`Is required to approve`. See :ref:`more about approval types.
-<plm/approvals/approval-type>`
+Next, add an approver in the :guilabel:`Approvals` section by clicking :guilabel:`Add a line`, and
+specifying the :guilabel:`Role` of the reviewer, the :guilabel:`User`, and an :ref:`Approval
+Type <plm/approvals/approval-type>` of :guilabel:`Is required to approve`.
 
 The approver listed is automatically notified when |ECOs| are dropped in the stage specified in the
 pop-up window. Once finished, click :guilabel:`Save & Close`.
@@ -120,13 +123,13 @@ Closing stages
 Click an |ECO| type from :menuselection:`PLM app --> Overview` to open the Kanban view of |ECOs| of
 this type.
 
-To configure a closing stage that applies |BOM|, edit the stage and tick the boxes for
-:guilabel:`Folded in kanban view`, :guilabel:`Allow to apply changes`, and :guilabel:`Final Stage`.
+To configure a closing stage that applies |BOM|, edit the stage and select the :guilabel:`Folded in
+kanban view`, :guilabel:`Allow to apply changes`, and :guilabel:`Final Stage` checkboxes.
 When ECO cards are placed in a stage that will *Allow to apply changes*, then any |BOM| and
 operations changes validated in the |ECOs| will immediately be put into effect. To create a
-cancelled stage, create or edit a stage and tick the boxes for :guilabel:`Folded in kanban view` and
-:guilabel:`Final Stage`. |ECOs| in this stage are removed from the pipeline, but will not make
-changes.
+cancelled stage, create or edit a stage and select the :guilabel:`Folded in kanban view` and
+:guilabel:`Final Stage` checkboxes. |ECOs| in this stage are removed from the pipeline, but will not
+make changes.
 
 .. example::
    The closing stage, `Effective` is configured by checking the :guilabel:`Folded in kanban view`,
