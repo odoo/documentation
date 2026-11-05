@@ -50,6 +50,8 @@ After the agent has responded, hover over the response to do one of the followin
    .. image:: ai/open-in-discuss.png
       :alt: The header of a conversation window with the open in discuss option visible.
 
+.. _ia/ia-button:
+
 AI button
 ---------
 
