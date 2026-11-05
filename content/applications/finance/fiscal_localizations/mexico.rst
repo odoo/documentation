@@ -134,7 +134,7 @@ modules in Odoo:
 #. Choose a |PAC|. Currently, Odoo works with the following |PAC|\s: `Solución Factible
    <https://solucionfactible.com/contenido/productos/timbrado/general#dos>`_,
    `Quadrum <https://cfdiquadrum.com.mx/odoo/>`_, and
-   `SW Sapien - Smarter Web <https://info.sw.com.mx/sw-smarter-odoo>`_.
+   `SW Sapien - Smarter Web <https://integracionodoo.sw.com.mx>`_.
 
 .. _l10n/mx/company:
 
