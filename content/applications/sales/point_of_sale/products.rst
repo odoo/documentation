@@ -468,6 +468,15 @@ follow the next steps:
       .. image:: products/office-combo.png
          :scale: 60%
 
+.. important::
+   It is not possible to set up :guilabel:`Sales Taxes` for product combos because the :doc:`taxes
+   <../../finance/accounting/taxes>` are calculated automatically when a product combo is :ref:`sold
+   at the POS register <pos/use/sell>`. For each selected :ref:`combo choice product
+   <pos/products/combo-choices>`, the related combo choice :guilabel:`Combo Price` determines the
+   portion of the combo's total price subject to that :doc:`product's taxes
+   <../../finance/accounting/taxes/tax_computation>`. After each portion is taxed with the selected
+   product taxes, all taxes are totaled.
+
 .. _pos/products/stock-management:
 
 Stock management
