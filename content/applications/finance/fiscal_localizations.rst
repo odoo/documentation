@@ -96,7 +96,7 @@ Fiscal localization modules are available for the countries listed below.
 - :doc:`Indonesia <fiscal_localizations/indonesia>`
 - :doc:`Italy <fiscal_localizations/italy>`
 - Ivory Coast
-- Japan
+- :doc:`Japan <fiscal_localizations/japan>`
 - :doc:`Jordan <fiscal_localizations/jordan>`
 - Kazakhstan
 - :doc:`Kenya <fiscal_localizations/kenya>`
@@ -178,6 +178,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/india
    fiscal_localizations/indonesia
    fiscal_localizations/italy
+   fiscal_localizations/japan
    fiscal_localizations/jordan
    fiscal_localizations/kenya
    fiscal_localizations/luxembourg
