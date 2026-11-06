@@ -2,14 +2,12 @@
 Batch picking
 =============
 
-.. _inventory/misc/batch_picking:
-
 *Batch picking* enables a single picker to handle multiple orders at once, reducing the number of
 times needed to navigate to a warehouse location. When picking in batches, orders are grouped and
 consolidated into a picking list. After the picking, the batch is taken to an output location, where
 the products are sorted into their respective delivery packages.
 
-Since orders *must* be sorted at the output location after being picked, this picking method suits
+Because orders *must* be sorted at the output location after being picked, this picking method suits
 businesses with a few products that are ordered often. Storing high-demand items in easily
 accessible locations can increase the number of orders that are fulfilled efficiently.
 
@@ -21,15 +19,15 @@ Configuration
 =============
 
 To activate the batch picking option, begin by going to :menuselection:`Inventory app -->
-Configuration --> Settings`. Under the :guilabel:`Operations` section, check the :guilabel:`Batch,
-Wave & Cluster Transfers` box.
+Configuration --> Settings`. Under the *Operations* section, select the :guilabel:`Batch, Wave &
+Cluster Transfers` checkbox.
 
 .. image:: batch/batch-transfer-checkbox.png
    :alt: Enable the batch transfers in Inventory Settings.
 
-Since batch picking is a method to optimize the *pick* operation in Odoo, the :guilabel:`Storage
-Locations` and :guilabel:`Multi-Step Routes` options under the :guilabel:`Warehouse` heading must
-also be checked on this settings page. When finished, click :guilabel:`Save`.
+Because batch picking is a method to optimize the *pick* operation in Odoo, the :guilabel:`Storage
+Locations` and :guilabel:`Multi-Step Routes` options under the *Warehouse* heading must also be
+selected on this settings page. When finished, click :guilabel:`Save`.
 
 .. image:: batch/locations-routes-checkbox.png
    :alt: Enable Storage Locations and Multi-Step Routes in the Inventory Settings.
@@ -41,13 +39,13 @@ also be checked on this settings page. When finished, click :guilabel:`Save`.
 Create batch transfers
 ======================
 
-To manually group transfers directly from the :menuselection:`Inventory app`, hover over the desired
-operation type from the :guilabel:`Inventory Overview` menu (e.g., the :guilabel:`Receipts` Kanban
-card), click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then select
-:guilabel:`Prepare Batch`.
+To manually group transfers directly from the :menuselection:`Inventory` app, click the
+:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon on the *Inventory Overview* menu. For
+example, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the *Receipts*
+Kanban card, then select :guilabel:`Prepare Batch`.
 
 .. image:: batch/prepare-batch.png
-   :alt: The Inventory dashboard with the Prepare Batch option highlighted.
+   :alt: A Receipts Kanban card with the vertical ellipsis menu open.
 
 On the batch transfer form, fill out the following fields accordingly:
 
@@ -62,29 +60,31 @@ On the batch transfer form, fill out the following fields accordingly:
    To learn more about the :guilabel:`Dock Location`, :guilabel:`Vehicle`, and :guilabel:`Vehicle
    Category` fields, see :doc:`dispatch management system <../setup_configuration/dispatch>`.
 
-Next, in the *Transfers* tab, click :guilabel:`Add a line` to open the *Add: Transfers* window.
+.. _inventory/batch/create:
 
-If the :guilabel:`Operation Type` field is filled, the list will filter transfer records matching
-the selected :guilabel:`Operation Type`.
+Batch transfers
+---------------
 
-Click :guilabel:`Create New` to create a new transfer. Click :guilabel:`Select` to add the selected
-transfers to the batch picking.
+To batch transfers, in the *Transfers* tab, click :guilabel:`Add a transfer` to open the *Add:
+Transfers* window. If the :guilabel:`Operation Type` field is filled, the list will filter transfer
+records matching the selected :guilabel:`Operation Type`.
 
-Once the transfer records are selected, click :guilabel:`Confirm` to confirm the batch picking.
+1. Select transfers to add.
+#. Click :guilabel:`Select` to add the selected transfers to the batch picking.
+#. Click :guilabel:`Confirm` to confirm the batch picking.
 
 .. example::
-   A new batch transfer is assigned to the :guilabel:`Responsible`, `Joel Willis`, for the `Pick`
-   :guilabel:`Operation Type`. The :guilabel:`Scheduled Date` is set to `August 11`.
+   A new batch transfer is assigned to the :guilabel:`Responsible`, `Joel Willis`, for the
+   `Receipts` :guilabel:`Operation Type`. The :guilabel:`Scheduled Date` is set to `October 14`.
 
    .. image:: batch/batch-transfer-form.png
-      :alt: View of *Batch Transfers* form.
+      :alt: View of Batch Transfers form.
 
-   Clicking the :guilabel:`Add a line` button opens the *Add:Transfers* window, displaying only
-   pickings. This is because the :guilabel:`Operation Type` was set to `Pick` on the batch transfer
-   form.
+   Clicking :guilabel:`Add a transfer` opens the *Add: Transfers* window, displaying only pickings.
+   This is because the :guilabel:`Operation Type` was set to `Pick` on the batch transfer form.
 
-   Click the checkbox to the side of the transfers, `WH/PICK/00001` and `WH/PICK/00002`, to include
-   them in the new transfer. Then, click the :guilabel:`Select` button to close the *Add:Transfers*
+   Click the checkbox to the side of the transfers, `WH/IN/00004` and `WH/IN/00005`, to include
+   them in the new transfer. Then, click the :guilabel:`Select` button to close the *Add: Transfers*
    window.
 
    .. image:: batch/add-transfers-window.png
@@ -93,7 +93,7 @@ Once the transfer records are selected, click :guilabel:`Confirm` to confirm the
 .. _inventory/warehouses_storage/add-batch-transfers:
 
 Add batch from transfers list
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Another method of creating batch transfers is available using the :guilabel:`Add to batch` option in
 a list. Navigate to the :menuselection:`Inventory app --> Operations` drop-down menu, and select any
@@ -102,31 +102,45 @@ of the :guilabel:`Transfers` to open a filtered list of transfers.
 .. image:: batch/transfers-drop-down.png
    :alt: Show all transfer types in a drop-down menu.
 
-On the transfers list, select the checkbox to the left of the selected transfers to add to a batch.
-Next, navigate to the :icon:`fa-cog` :guilabel:`Actions` button and click :guilabel:`Add to batch`
-from the resulting drop-down menu.
+1. On the transfers list, select the checkbox to the side of the transfers to add to a batch.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` button and select :guilabel:`Add to batch` from the
+   drop-down menu.
 
-.. image:: batch/add-to-batch.png
-   :alt: Click Add to batch from the Actions button.
+   .. image:: batch/add-to-batch.png
+      :alt: Click Add to batch from the Actions button.
 
-Doing so opens an *Add to batch* pop-up window, wherein the employee :guilabel:`Responsible` for the
-picking can be assigned.
+   Doing so opens an *Add to batch* pop-up window.
 
-Choose from the two radio options to add to :guilabel:`an existing batch transfer` or create
-:guilabel:`a new batch transfer`.
+#. Select the employee :guilabel:`Responsible` for the picking.
+#. Choose from the two radio options to add to :guilabel:`an existing batch transfer` or create
+   :guilabel:`a new batch transfer`.
+#. Add a :guilabel:`Description` for this batch.
 
-Add a :guilabel:`Description` for this batch.
+   .. tip::
+      The :guilabel:`Description` field can be used to add additional information to help workers
+      identify the source of the batch, where to place the batch, what shipping containers to use,
+      etc.
 
-.. tip::
-   The :guilabel:`Description` field can be used to add additional information to help workers
-   identify the source of the batch, where to place the batch, what shipping containers to use, etc.
-
-To create a batch to be processed at a later time, select the :guilabel:`Draft` checkbox.
-
-Conclude the process by clicking :guilabel:`Confirm`.
+#. To create a batch to be processed at a later time, select the :guilabel:`Draft` checkbox.
+#. Conclude the process by clicking :guilabel:`Confirm`.
 
 .. image:: batch/add-to-batch-window.png
-   :alt: Show *Add to batch* window to create a batch transfer.
+   :alt: Show Add to batch window to create a batch transfer.
+
+Add move lines to batch
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Single moves can be added to a batch.
+
+1. Open an existing batch transfer, or :ref:`create a new one <inventory/batch/create>`.
+#. In the *Transfers* tab, click :guilabel:`Add a move line`. The *Add: Move Lines* window opens.
+#. Select one or more moves to add to the batch transfer.
+#. Click :guilabel:`Add to Batch`.
+
+.. image:: batch/add-move-lines.png
+   :alt: Add individual moves to the batch transfer.
+
+.. _inventory/batch/automatic:
 
 Automatic batches
 -----------------
@@ -138,22 +152,34 @@ option is defined on the *operation type* level.
    In a multi-step delivery process, the picking operation can be grouped by customer, while the
    shipping operation can be organized by carrier and destination country.
 
-To enable *Automatic Batches*, navigate to :menuselection:`Inventory app --> Configuration -->
-Operation Types`, and select the desired operation type (e.g., :guilabel:`Delivery`,
-:guilabel:`Pick`, etc.). Select the :guilabel:`Automatic Batches` checkbox. Then, select one or more
-:guilabel:`Batch Grouping` criteria by selecting the appropriate checkbox. Even if more than one
-grouping option is selected, only one batch is created.
+To enable *automatic batches*, navigate to :menuselection:`Inventory app --> Configuration -->
+Operations Types`, and select the desired operation type (e.g., :guilabel:`Delivery Orders`,
+:guilabel:`Receipts`, etc.).
 
-Batches can be automatically generated based on the following criteria:
+1. In the *Batch transfers* section, select :guilabel:`Automatic` in the :guilabel:`Batch Creation`
+   field.
+#. Specify the :guilabel:`Maximum` number of :guilabel:`Transfers`, :guilabel:`Lines`, or
+   :guilabel:`kg` that a batch should adhere to.
+#. Select :guilabel:`Auto-confirm` to automatically confirm batches that are automatically created.
+#. Select one or more criteria that batches should be grouped by in the :guilabel:`Grouping by`
+   field by selecting the appropriate checkbox. Only one batch is created, even when multiple
+   grouping options are selected.
 
-- :guilabel:`Contact`
-- :guilabel:`Carrier`
-- :guilabel:`Destination Country`
-- :guilabel:`Source Location`
-- :guilabel:`Destination Location`
+   Batches can be automatically generated based on the following criteria:
+
+   - :guilabel:`Contact`
+   - :guilabel:`Product`
+   - :guilabel:`Product Category` (select categories to group)
+   - :guilabel:`Carrier`
+   - :guilabel:`Destination Country`
+   - :guilabel:`General Source Location` (source location of the transfer)
+   - :guilabel:`Product Source Location` (location found in the :guilabel:`Moves` smart button for a
+     product)
+   - :guilabel:`Destination Location`
+   - :guilabel:`Date if same` (choose from :guilabel:`Day` or :guilabel:`Week`)
 
 .. image:: batch/auto-batch-grouping.png
-   :alt: The Batch and Wave Transfers settings page with the Auto batch grouping criteria visible.
+   :alt: The Batch section with the auto batch grouping criteria visible.
 
 Process batch transfer
 ======================
@@ -162,44 +188,81 @@ Handle batch transfers in the :menuselection:`Inventory app --> Operations --> B
 page.
 
 .. tip::
-   Be certain the batch transfer is complete when the :guilabel:`Validate` button is highlighted in
-   purple. If the :guilabel:`Reserve` button is highlighted instead, that means there are items in
-   the batch that are currently *not* available in-stock.
+   To process a batch transfer, it must be *confirmed*. The :guilabel:`Validate` button is
+   highlighted in purple if the order is confirmed and all items are available. If the
+   :guilabel:`Reserve` button is highlighted instead, there are items in the batch that are
+   currently *not* available in-stock.
 
-To view the complete product list, select the desired batch transfer. In the *Operations* tab, the
-:guilabel:`Quantity` column indicates the required quantity for the order. The :guilabel:`Reserved`
-column shows the available stock to fulfill the order. Lastly, the :guilabel:`Picked` column
-specifies the products that have been picked and are ready for the next step.
+To view the complete product list, open the desired batch transfer. In the *Operations* tab, the
+:guilabel:`Quantity` column indicates the required quantity for the order. The :guilabel:`Demand`
+column lists the amount required to completely fulfill the order. Lastly, the :guilabel:`Picked`
+column specifies the products that have been picked and are ready for the next step.
 
 To display the :guilabel:`Picked` column, click the :icon:`oi-settings-adjust` :guilabel:`(settings
 adjust)` icon at the top corner of the *Operations* tab, then select :guilabel:`Picked`.
 
 .. example::
-   The product, `Office Lamp`, is out of stock (its :guilabel:`Quantity` is `0.00`), and its
-   :guilabel:`Demand` cannot be fulfilled.
+   The product, `Desk Organizer`, is out of stock (its :guilabel:`Quantity` is `0.00`). The `Office
+   Chair` and `Flipover` products do not have enough stock to fulfill the order.
 
    Click the :guilabel:`Reserve` button to search the stock again for available products.
 
    .. image:: batch/operations-tab.png
       :alt: Show unavailable reserved quantities in the Operations tab.
 
+Alternatively, process batch orders using the :menuselection:`Barcode` app.
+
+.. seealso::
+   :doc:`../../../barcode/operations/receipts_deliveries`
+
 Create a back order
 -------------------
 
 On the batch transfer form, if the :guilabel:`Quantity` of the product is *less* than the
-:guilabel:`Reserved` quantity, a *Create Backorder?* pop-up window appears when the
-:guilabel:`Validate` button is clicked.
+:guilabel:`Demand` quantity, a *Create Backorder?* pop-up window appears when clicking
+:guilabel:`Validate`.
 
-Clicking the :guilabel:`Create Backorder` button automatically creates a back order for the
-unfulfilled products.
+- Click :guilabel:`Create Backorder` to create a back order for the unfulfilled products.
 
-.. note::
-   When creating a new back order, the transfers that have **not** been validated in the batch will
-   be removed from it.
+  .. note::
+     When creating a new back order, the transfers that have **not** been validated in the batch will
+     be removed from it.
 
-Click :guilabel:`No Backorder` to finish the picking *without* creating a back order.
-
-Click :guilabel:`Discard` to cancel the validation and return to the batch transfer form.
+- Click :guilabel:`No Backorder` to finish the picking *without* creating a back order.
+- Click :guilabel:`Discard` to cancel the validation and return to the batch transfer form.
 
 .. image:: batch/create-backorder.png
    :alt: Show the Create Backorder pop-up.
+
+Example: Batching by carrier
+============================
+
+Stealthy Wood uses multiple carriers to ship their products worldwide. Each carrier has its own
+pickup window during which they will visit the warehouse and load orders to be shipped.
+
+FedEx, for example, arrives at the warehouse at 11:00 AM every day and leaves by 12:00 PM. The
+picking coordinator, therefore, wants to ensure that all FedEx shipments for that day are ready by
+10:30 AM so that they can be loaded onto the truck quickly. A local truck handles local deliveries,
+and UPS and USPS also arrive during the day.
+
+To accommodate these schedules, Stealthy Wood wants to organize its shifts around carrier pickups.
+The shift manager navigates to :menuselection:`Inventory app --> Configuration --> Operations
+Types` and opens the :guilabel:`Delivery Orders` operation type. They scroll to the *Batch
+Transfers* section and set the :guilabel:`Batch Creation` option to :guilabel:`Automatic`. Then,
+they opt to group by :guilabel:`Carrier`. They only want employees to pick 5 orders at a time, so
+they set the :guilabel:`Maximum` number of :guilabel:`Transfers` to `5`.
+
+.. image:: batch/transfer-by-carrier-automatic.png
+   :alt: Stealthy Wood's automatic batching settings.
+
+The day before orders are due to go out, the shift manager navigates to :menuselection:`Inventory
+app --> Operations --> Batch Transfers`. They change the view to the :icon:`view_timeline`
+:guilabel:`(Gantt)` view. From there, they drag and drop batch orders to schedule them according to
+carrier pickup windows. Then, they click each entry in the chart to open a popover window, where
+they can click the :icon:`fa-user-plus` :guilabel:`(Assign)` icon to assign an employee to the
+picking.
+
+.. image:: batch/transfer-by-carrier-assign.png
+   :alt: Monica Light is assigned to a batch order in the Gantt view.
+
+Employees use the :menuselection:`Barcode` app to process the batch orders.
