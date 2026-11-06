@@ -468,6 +468,14 @@ follow the next steps:
       .. image:: products/office-combo.png
          :scale: 60%
 
+.. important::
+   The :guilabel:`Sales Taxes` field is hidden in product combos because product combo :doc:`taxes
+   <../../finance/accounting/taxes>` are calculated automatically based on the selected :ref:`combo
+   choices <pos/products/combo-choices>`. For each selected combo choice product, the
+   :guilabel:`Combo Price` of the related combo choice is used to determine the portion of the
+   combo's total price that is taxed :doc:`based on the product's taxes
+   <../../finance/accounting/taxes/tax_computation>`, and all taxes are then added up.
+
 .. _pos/products/stock-management:
 
 Stock management
