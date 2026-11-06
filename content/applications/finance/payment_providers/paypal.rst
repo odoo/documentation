@@ -50,6 +50,38 @@ Configuration in Odoo
    is :guilabel:`Published`.
 #. Configure the remaining options as desired.
 
+.. _payment_providers/paypal/apple-pay:
+
+Apple Pay setup
+===============
+
+From the PayPal Developer Dashboard:
+
+#. Log in to the `PayPal Developer Dashboard <https://developer.paypal.com/dashboard/>`_ with your
+   live PayPal account.
+#. Use the :guilabel:`Sandbox`/:guilabel:`Live` toggle to select the environment you're registering
+   the domain for.
+#. Go to :guilabel:`Apps & Credentials`.
+#. Select your app.
+#. Scroll down to :menuselection:`Features --> Accept payments --> Advanced Credit and Debit Card
+   Payments`.
+#. Check whether :guilabel:`Apple Pay` is enabled. If it isn't, select the :guilabel:`Apple Pay`
+   checkbox, then select :guilabel:`Save`.
+#. Select the :guilabel:`Manage` link in the :guilabel:`Apple Pay` section.
+#. Select :guilabel:`Add Domain` and enter your domain name.
+#. Select :guilabel:`Register Domain`. If registration fails, confirm that the domain association
+   file is live and saved in the correct location on your live site.
+
+From the PayPal account:
+
+#. Log in at `https://www.paypal.com <https://www.paypal.com>`_ (or
+   `https://www.sandbox.paypal.com <https://www.sandbox.paypal.com>`_ for Sandbox).
+#. Go to `https://www.paypal.com/businessmanage/account/payments
+   <https://www.paypal.com/businessmanage/account/payments>`_ (or
+   `https://www.sandbox.paypal.com/businessmanage/account/payments
+   <https://www.sandbox.paypal.com/businessmanage/account/payments>`_ for Sandbox).
+#. Select :guilabel:`Manage Apple Pay` in the :guilabel:`Apple Pay` section.
+
 .. _payment_providers/paypal/testing:
 
 Testing
