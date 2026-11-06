@@ -7,15 +7,15 @@ the food needs to be configured.
 
 To add a new vendor, first navigate to :menuselection:`Lunch app --> Configuration --> Vendors`.
 Here, all currently configured vendors for the **Lunch** app appear in a default Kanban view. To
-change to a list view, click the :icon:`oi-view-list` :guilabel:`(List)` icon in the top-right
+change to a list view, click the :icon:`reorder` :guilabel:`(List)` icon in the top-right
 corner.
 
 .. note::
-   No vendors are preconfigured in the **Lunch** app, so all vendors **must** be added to the
-   database.
+   Only a placeholder vendor, named :guilabel:`Lunch Supplier`, is created when the **Lunch** app is
+   installed. The actual vendors **must** be added to the database.
 
-A placeholder :guilabel:`Lunch Supplier` card appears on the :guilabel:`Vendors` dashboard, by
-default. Click on this card, and configure the following fields on the vendor form:
+Click on the :guilabel:`Lunch Supplier` card to configure it, and fill in the following sections of
+the vendor form:
 
 - :ref:`Vendor information <lunch/vendor-info>`
 - :ref:`Availability <lunch/availability>`
@@ -30,7 +30,7 @@ top-left corner, and configure the new lunch supplier form. Repeat for all neede
 Vendor information
 ==================
 
-- :guilabel:`Vendor`: Enter a name for the vendor in this field.
+- :guilabel:`Vendor`: Enter a name for the vendor in this field (for example, `The Pizza Palace`).
 - :guilabel:`Vendor` (beneath the line for vendor name): Using the drop-down menu, select the
   corresponding vendor in the **Contacts** app. If the vendor has not already been created, type in
   the vendor name, and click :guilabel:`Create "new vendor name"` to add them. Alternatively, click
@@ -46,14 +46,21 @@ Vendor information
      application.
 
 - :guilabel:`Address`: Enter the vendor's address in the various fields.
-- :guilabel:`Email`: Enter the vendor's email in this field.
-- :guilabel:`Phone`: Enter the vendor's phone number in this field.
+- :guilabel:`Email`: Enter the vendor's email in this field. This field is **required** if orders
+  are sent by :guilabel:`Email` (see the :ref:`Orders <lunch/orders>` section).
+- :guilabel:`Phone`: Enter the vendor's phone number in this field. This field is **required** if
+  orders are placed by :guilabel:`Phone`. The phone number is displayed next to the vendor's name
+  throughout the **Lunch** app.
 - :guilabel:`Company`: If this vendor is only available to a specific company, select the company
   from the drop-down menu. If this field is left blank, the vendor's items are available to **all**
   companies. This field **only** appears in a multi-company database.
 
+.. note::
+   The vendor's name and contact details are stored on the vendor's contact record: modifying them
+   on the vendor form also updates the contact in the **Contacts** app.
+
 .. image:: vendors/vendor-info.png
-   :alt: The top portion of the vendor form filled out.
+   :alt: The top portion of a vendor form, with the vendor's address, email, and phone number.
 
 .. _lunch/availability:
 
@@ -66,8 +73,7 @@ week the vendor is available.
 
 By default, Monday through Friday are ticked.
 
-.. image:: vendors/availability.png
-   :alt: The default view of the availability section, with Mon-Fri enabled.
+Products from a vendor can only be ordered for the days the vendor is available.
 
 .. _lunch/orders:
 
@@ -78,10 +84,11 @@ The :guilabel:`ORDERS` section of the vendor form details which locations the ve
 for, in addition to how and when orders are placed and received.
 
 - :guilabel:`Delivery`: Using the drop-down menu, select :guilabel:`Delivery` if the vendor delivers
-  to the office, or select :guilabel:`No Delivery` if orders must be picked up.
-- :guilabel:`Location`: Select which locations are able to order from this vendor. Multiple
-  locations can be selected. If this field is left blank, **all** locations can order from the
-  vendor.
+  to the office, or select :guilabel:`No Delivery` (default) if orders must be picked up.
+- :guilabel:`Location`: Select which :ref:`locations <lunch/locations>` are able to order from this
+  vendor. Multiple locations can be selected. If this field is left blank, **all** locations can
+  order from the vendor. On the :doc:`Order Your Lunch <orders>` dashboard, users only see the
+  products of the vendors available for their selected location.
 
   .. note::
      An `HQ Office` location is created by default when creating a database, and is available to
@@ -90,12 +97,16 @@ for, in addition to how and when orders are placed and received.
 - :guilabel:`Send Order By`: Click the radio button to select how orders are sent to the vendor. The
   available options are :guilabel:`Phone` or :guilabel:`Email`.
 - :guilabel:`Order Time`: This field **only** appears if :guilabel:`Email` is selected in the
-  :guilabel:`Send Order By` field. Enter the time that an order must be emailed for it to be
-  accepted. Enter the time in the following format: `HH:MM`. Then select either :guilabel:`AM` or
-  :guilabel:`PM` from the drop-down menu, next to the time field.
+  :guilabel:`Send Order By` field. Enter the time, in the 24-hour `HH:MM` format (for example,
+  `11:30`), at which the day's orders are automatically emailed to the vendor. After this time,
+  users can no longer order from this vendor for the current day.
+
+  .. note::
+     When orders are placed by :guilabel:`Phone`, the **Lunch** manager calls the vendor, then
+     :ref:`marks the orders as sent <lunch/send-orders>` in the **Lunch** app.
 
 .. image:: vendors/orders.png
-   :alt: The orders section of a vendor form, with all fields filled out.
+   :alt: The Availability and Orders sections of a vendor form, with orders sent by email at 11:30.
 
 .. _lunch/extras:
 
@@ -106,9 +117,10 @@ When ordering an item in the **Lunch** app, optional extra items, sometimes refe
 *add-ons*, can be shown. These can be configured in any manner that suits the products being
 offered.
 
-By default, Odoo allows for three types of extra items, which can be thought of as *categories*. By
-default, the first type (or *category*) of add-ons is labeled `Extras`, the second is labeled
-`Beverages`, and the third is labeled `Extra Label 3`.
+Odoo allows for three types of extra items, which can be thought of as *categories*. By default, the
+first type (or *category*) of add-ons is labeled `Extras`, the second is labeled `Beverages`, and
+the third is labeled `Extra Label 3`. An extra category without any items is not displayed when
+ordering.
 
 .. important::
    When configuring the extras, it is important to keep in mind that all the extras configured
@@ -149,12 +161,9 @@ or condiments.
    is set to `Toppings`, and the :guilabel:`Extra 1 Quantity` is set to :guilabel:`None or More`.
    The various toppings are then added, with their corresponding costs.
 
-   .. image:: vendors/extras.png
-      :alt: The first of the extras configured for pizza toppings.
-
    The pizzeria also offers a free beverage with any purchase. To set this up, the :guilabel:`Extra
-   2 Label` is set to `Beverages`, and the :guilabel:`Extra 2 Quantity` is set to :guilabel:`Only
-   One`. The various beverage choices are added, and the cost for each remains zero.
+   2 Label` is set to `Free Beverage with Purchase`, and the :guilabel:`Extra 2 Quantity` is set to
+   :guilabel:`Only One`. The various beverage choices are added, and the cost for each remains zero.
 
-   .. image:: vendors/beverages.png
-      :alt: The second of the extras configured for a free beverage with purchase.
+   .. image:: vendors/extras.png
+      :alt: The extras of a pizzeria, with paid toppings and a free beverage with purchase.
