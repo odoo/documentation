@@ -37,8 +37,8 @@ The Odoo *Sales* application also makes it possible to add a deadline expiration
 templates.
 
 To add a deadline expiration date to a quotation template, navigate to :menuselection:`Sales app -->
-Configuration --> Quotation Templates`, and either select the desired quotation template to which a
-deadline should be added, or click :guilabel:`New` to build a new quotation template from scratch.
+Configuration --> Templates`, and either select the desired quotation template to which a deadline
+should be added, or click :guilabel:`New` to build a new quotation template from scratch.
 
 On the quotation template form, add a specific number of days to the :guilabel:`Quotation expires
 after` field, located beneath the quotation template name. The number of days represents how long
