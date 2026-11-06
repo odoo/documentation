@@ -216,9 +216,14 @@ To enable and configure bookings, follow these steps:
    resource can handle.
 
 .. tip::
-   To accommodate a booking that exceeds the capacity of a single table, click the :icon:`fa-cubes`
-   (:guilabel:`Resources`) icon in the :guilabel:`Appointment Type` form, select a table, and add
-   additional tables in the :guilabel:`Linked Resource` field to merge them.
+   - To accommodate a booking that exceeds the capacity of a single table, click the
+     :icon:`fa-cubes` :guilabel:`Resources` smart button above the :guilabel:`Appointment Type`
+     form, select a table, and add additional tables in the :guilabel:`Linked Resource` field to
+     merge them.
+   - To offer the possibility to book a table directly from a Google search, click the
+     :guilabel:`Google Bookings` tab in the :guilabel:`Appointment type` form, configure the
+     :ref:`Google Reserve Merchant <appointments/google-reserve/setup>` field, then click
+     :guilabel:`Synchronize with Google Reserve`.
 
 .. seealso::
    :doc:`/applications/productivity/appointments`
