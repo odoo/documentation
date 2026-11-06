@@ -387,6 +387,13 @@ follow the next steps:
       .. image:: products/office-combo.png
          :scale: 60%
 
+.. important::
+   The individual :ref:`combo choice products <pos/products/combo-choices>` determine the product
+   combo :doc:`taxes <../../finance/accounting/taxes>`. Therefore, it is not possible to define
+   specific :guilabel:`Sales Taxes` on product combos. The :guilabel:`Combo Price` sets the
+   discounted price for each combo choice product, and the :doc:`product's taxes
+   <../../finance/accounting/taxes/tax_computation>` are then applied to that price.
+
 .. _pos/products/stock-management:
 
 Stock management
