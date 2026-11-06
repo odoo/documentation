@@ -35,7 +35,8 @@ Resumé
 ------
 
 If a resumé was attached to the online application, it appears in the *Files* section of the
-chatter, and is also stored in the **Documents** application.
+chatter. If the **Documents** app is installed, it is also stored in the **Documents**
+application.
 
 To find the recruitment documents, navigate to the main :menuselection:`Documents` app dashboard,
 and click the :guilabel:`Recruitment` folder on the side. All recruitment documents are stored
@@ -43,7 +44,7 @@ within that folder.
 
 .. note::
    Depending on the browser zoom level, or size of the browser screen, the resumé may appear below
-   the main applicant card information as a PDF link, or on the right side as an image.
+   the main applicant card information, or on the right side of the form as a preview.
 
 Send interview
 --------------
@@ -52,11 +53,13 @@ At any point in the hiring process, an interview can be sent to the applicant to
 information. These interviews are custom-made, and can be formatted in a variety of ways.
 
 The **Surveys** application is required to send interviews to an applicant, so it **must** be
-installed.
+installed, by enabling the :ref:`Send Interview Survey <recruitment/settings>` setting.
 
 Odoo uses the term *interview*, but these can be thought of as questionnaires, surveys, tests,
-certifications, etc. :doc:`Custom interviews <new_job>` can be formatted to suit each individual job
-position's needs.
+certifications, etc. The interview sent to an applicant is the :guilabel:`Interview Form` set on the
+:ref:`job position <recruitment/new_job/hiring-process>`, and can be formatted to suit each
+individual job position's needs. All interview forms are listed in :menuselection:`Recruitment app
+--> Configuration --> Interviews`.
 
 .. example::
    A job position for a computer programmer could have an interview in the form of a programming
@@ -66,67 +69,62 @@ position's needs.
 
 To send an interview to an applicant, first open the applicant's card from the *Applications* page
 to view the detailed applicant information. In the top corner of the applicant's card, click the
-:guilabel:`Send Interview` button.
+:guilabel:`Send Interview` button. This button only appears if an :guilabel:`Interview Form` is set
+on the applicant's job position.
 
-If the applicant's card has an email address on file, a *Send an interview* pop-up window appears,
-with the :guilabel:`Recipients`, :guilabel:`Subject`, and email body populated.
+A *Send interviews* pop-up window appears, with the applicant in the :guilabel:`To` field, and the
+:guilabel:`Subject` and email body populated.
 
 .. note::
-   To send an email to an applicant, there **must** be an :guilabel:`Email` address on the
-   applicant's card.
+   To send an email to an applicant, there **must** be an email address on the applicant's card.
 
-   If an email address is missing on the applicant's card, when the :guilabel:`Send Interview`
-   button is clicked and the *Send an interview* pop-up window loads, a second pop-up window appears
-   under the :guilabel:`Recipients` field. This pop-up window displays `What's the email address of
-   (applicant name)?` along with a field to enter the email address. Once entered, click
-   :guilabel:`Set Email`.
+   If an email address is missing on the applicant's card, the applicant's tag in the
+   :guilabel:`To` field appears in red. Click the tag, enter the email address, then save it.
 
-   The email address entered is only used to send the interview, and does **not** appear on the
-   applicant's card.
+Preconfigured :doc:`email templates <../../general/companies/email_template>` in Odoo use dynamic
+placeholders, which are automatically filled with specific data when the email is sent. For example,
+the applicant's name, the link to the interview, and the deadline are filled in when the email is
+sent.
 
-Sometimes, preconfigured :doc:`email templates <../../general/companies/email_template>` in Odoo use
-dynamic placeholders, which are automatically filled with specific data when the email is sent. For
-example, if a placeholder for the applicant's name is used, it is replaced with the actual name of
-the applicant in the email.
+The :guilabel:`Deadline` field specifies when the interview form must be completed by, and is
+populated with a date and time 15 days in the future. To modify this, click on the displayed date
+and time, and select the desired date and time. After the deadline, the interview link expires.
 
-Add the email addresses of any additional recipients for the survey in the :guilabel:`Additional
-emails` field, if more people should receive the email. If an email address is in the database as a
-contact, add that contact in the :guilabel:`Recipients` field. If an email should be sent to someone
-who is *not* in the database, and they should *not* be added as a contact, add their email address
-in the :guilabel:`Additional emails` field.
+The following buttons are available at the bottom of the pop-up window:
 
-If any attachments need to be added, click the :icon:`fa-paperclip` :guilabel:`Attachments` button,
-and a file explorer window appears. Navigate to the desired file, and click :guilabel:`Open` to
-attach it to the email. The attachment loads, and is listed above the :icon:`fa-paperclip`
-:guilabel:`Attachments` button.
-
-The :guilabel:`Answer deadline` field specifies when the interview form must be completed by, and is
-populated with a date and time two weeks in the future. To modify this, click on the displayed date
-and time, navigate to the desired date and click the date to select it. Next, select the time the
-interview is due by clicking into the displayed time, and clicking the desired new deadline.
-
-The :guilabel:`Mail Template` field is pre-populated based on the configuration for the interview. A
-different template can be chosen from the drop-down menu, if desired. If a new template is selected,
-the new email template loads in the email body.
+- :icon:`attach_file` :guilabel:`(Add Attachment)`: Add attachments to the email.
+- :icon:`more_vert` :guilabel:`(Templates)`: Select a different email template, if desired. The new
+  email template loads in the email body.
+- :icon:`schedule` :guilabel:`(Send Later)`: Send the email at a later date and time.
 
 To send the email with the interview link to the applicant, click :guilabel:`Send` at the bottom of
-the *Send an interview* pop-up window.
+the *Send interviews* pop-up window.
 
-.. image:: recruitment-flow/send-survey.png
+.. image:: recruitment_flow/send-survey.png
    :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
          preconfigured template.
+
+Once the applicant has answered the interview, an :icon:`edit_square` :guilabel:`Consult Interview`
+smart button appears on the applicant's form, to view the answers.
+
+.. tip::
+   To send interviews to several applicants at once, open the list view of the applications, select
+   the applicants, then click :guilabel:`Send Interviews` at the top of the list.
+
+.. note::
+   Interview links automatically expire when the applicant is hired, refused, archived, or deleted.
 
 .. _recruitment/recruitment_flow/qualification:
 
 Qualification
 =============
 
-If an applicant is determined to be a good potential candidate, they are moved to the
+If an applicant is determined to be a good potential fit, they are moved to the
 :guilabel:`Qualification` stage.
 
-This stage exists to sort candidates that have potential from those that do not meet the
+This stage exists to sort applicants that have potential from those that do not meet the
 requirements. No automatic actions, such as emails, are set for this stage. This stage informs the
-recruitment team to potentially set up a phone call or an interview with the candidate.
+recruitment team to potentially set up a phone call or an interview with the applicant.
 
 .. note::
    In order to move an applicant's card from one stage to another, the applicant's card can either
@@ -134,13 +132,14 @@ recruitment team to potentially set up a phone call or an interview with the can
    stage can be modified on the applicant's card.
 
    To change the stage on the applicant's card, first click the desired applicant's card from the
-   *Applications* page. The current stage for the card is highlighted at the top on a status bar,
-   above the card.
+   *Applications* page. The current stage for the card is displayed at the top of the form, with the
+   time the applicant has spent in it. Depending on the screen size, click the current stage to
+   reveal all the stages in the status bar.
 
    Click the desired stage for the card, and the stage changes. A log note indicating the stage
    change appears in the chatter, as well.
 
-  .. image:: recruitment-flow/stage-change.png
+  .. image:: recruitment_flow/stage-change.png
      :alt: Change the stage of an applicant by clicking on the desired stage at the top of the
            applicant's card.
 
@@ -159,14 +158,15 @@ Alternatively, open the desired applicant's card from the *Applications* page, a
 :guilabel:`First Interview` stage on the status bar at the top of the individual applicant's card.
 
 .. tip::
-   The :guilabel:`First Interview` stage can be modified, so when the applicant's card moves to the
-   :guilabel:`First Interview` stage, an email can be automatically sent to the applicant, stating
-   an interview is requested. In this preconfigured email template, a link to the recruiting team's
-   calendar appears, allowing the applicant to schedule their interview.
+   When the **Appointments** app is installed, the :guilabel:`First Interview` stage can be
+   modified, so when the applicant's card moves to the :guilabel:`First Interview` stage, an email
+   is automatically sent to the applicant, with a link to the recruiting team's calendar, allowing
+   the applicant to schedule their interview.
 
    :ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, and select the
-   :guilabel:`Recruitment: Schedule Interview` option in the :guilabel:`Email Template` field to
-   automate this action.
+   :guilabel:`Recruitment: Schedule interview` option in the :guilabel:`Email Template` field to
+   automate this action. Refer to the :ref:`applicant scheduled interviews
+   <recruitment/schedule_interviews/applicant-scheduled>` documentation.
 
 .. _recruitment/recruitment_flow/second-interview:
 
@@ -199,17 +199,20 @@ Proposal` stage at the top of the individual applicant's card.
 Contract signed
 ===============
 
-Once the contract has been fully signed by all parties, and the applicant has been hired, the
-applicant's card moves to the :guilabel:`Contract Signed` stage.
+Once the offer has been :ref:`fully signed by all parties
+<recruitment/offer_job_positions/contract-signed>`, the applicant is hired, and the applicant's card
+automatically moves to the :guilabel:`Contract Signed` stage.
 
-The :guilabel:`Contract Signed` is folded by default on the *Applications* page, and must be
-expanded before the applicant's card can be manually moved. Click the :icon:`fa-caret-left`
-:icon:`fa-caret-right` :guilabel:`(Unfold)` icon above the :guilabel:`Contract Signed` stage, and
-the stage expands. Next, drag and drop the applicant's card to the :guilabel:`Contract Signed` stage
-from the Kanban view, or click the :guilabel:`Contract Signed` stage at the top of the individual
-applicant's card.
+To hire an applicant without sending an offer, move the applicant's card to the :guilabel:`Contract
+Signed` stage manually, then :ref:`create the employee
+<recruitment/offer_job_positions/new-employee>`. The :guilabel:`Contract Signed` stage is folded by
+default on the *Applications* page, and must be expanded before the applicant's card can be manually
+moved. Click the :icon:`arrow_left` :icon:`arrow_right` :guilabel:`(Unfold)` icon above the
+:guilabel:`Contract Signed` stage, and the stage expands. Next, drag and drop the applicant's card
+to the :guilabel:`Contract Signed` stage from the Kanban view, or click the :guilabel:`Contract
+Signed` stage at the top of the individual applicant's card.
 
 Refused
 =======
 
-At any point in the recruitment process, a candidate can be :doc:`refused <refuse_applicant>`.
+At any point in the recruitment process, an applicant can be :doc:`refused <refuse_applicant>`.
