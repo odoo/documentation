@@ -70,6 +70,10 @@ An *agent* is configured with a **System Prompt** that defines its purpose and b
 provide the instructions and tools the agent uses to complete tasks, while **Sources** provide
 information the agent can use.
 
+.. _ai/ai_button:
+
+AI button
+---------
 .. seealso::
    :doc:`AI agents <ai/agents>`
 
