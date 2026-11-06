@@ -4,11 +4,36 @@ AI server actions
 
 .. |AI| replace:: :abbr:`AI (artificial intelligence)`
 
-|AI| server actions extend Odoo's automation framework by allowing artificial intelligence to make
-decisions during a workflow.
+Odoo |AI| can be used in automated workflows in two ways: an automated or scheduled action can
+trigger an |AI| agent to perform a task, or an AI server action can make decisions and select tools
+to execute within a workflow.
 
-They are designed for cases where logic cannot be expressed entirely through fixed conditions, but
-still requires controlled execution through standard server actions.
+These approaches serve different purposes:
+
+- *AI agent triggers*: Summon a configured :doc:`agent <agents>` to perform a task based on its
+  instructions, skills, and sources.
+- *AI server actions*: Use |AI| to interpret a prompt, evaluation a record, and select an
+  appropriate server action to execute.
+
+Trigger an AI agent
+-------------------
+
+An |AI| agent can be launched interactively by a user through an AI chat or triggered automatically
+as part of an Odoo workflow.
+
+To configure an automatic trigger, open the agent and navigate to the Trigger tab. Click :icon:`add`
+:guilabel:`Add`. On the *When should your agent be triggered?* popup, choose one of the following
+options:
+
+- *On a schedule*: Run the agent automatically according to a set frequency.
+- *Based on a Date Field*: Run the agent once per record when a specific date is reached.
+- *After creation*: Run the agent whenever a new record is created.
+- *After update*: Run the agent whenever a specified field is updated.
+
+Configure the additional options for the selected trigger, then save the agent.
+
+When the trigger conditions are met, the agent executes its instructions using its configured
+
 
 How AI server actions work
 --------------------------
@@ -122,27 +147,3 @@ To function correctly, `content` **must** be defined as an argument in tool's *U
 
 .. seealso::
    :ref:`Server Actions <reference/actions/server>`
-
-Common issues
--------------
-
-Why is the Tools field empty?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Confirm that at least one server action has :guilabel:`Use in AI` enabled.
-- Confirm that at least one tool is assigned to the same model :guilabel:`Model` as the server
-  action.
-
-Why did the tool run but nothing happened?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- The Python code exited without changes.
-- Required arguments were missing or empty.
-- Business conditions were not implemented in the tool logic.
-
-Why did the AI choose an unexpected tool?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- The prompt lacked sufficient context.
-- Multiple tools matched the same intent.
-- No constraints were enforced at the tool level.
