@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 13:33+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:34+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/hr/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -878,6 +878,7 @@ msgid ""
 msgstr "目标表单的上半部分，已为工厂安全培训目标填写完毕。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "描述选项卡"
 
@@ -2407,6 +2408,421 @@ msgstr ":doc:`Odoo 基础知识报表功能 <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "审批"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Odoo 中的 **审批** 应用程序允许员工针对各种事项提出正式请求，并让管理层能够审"
+"查请求，然后批准或拒绝它们。这将所有请求集中在一处，为所有请求提供了清晰的组"
+"织和透明度。"
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "审批类型"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr "在请求审批时，必须指定类别或*类型*。有九种预配置的审批类别可供请求使用："
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`出差`：用于请求与工作相关的差旅。"
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ":guilabel:`借用物品`：用于在特定时间内请求公司拥有或销售的实物。"
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ":guilabel:`一般审批`：用于不属于其他八种默认类型的请求。"
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`合同审批`：用于请求任何类型的外部合同，不包括\\ :doc:`员工合同 "
+"<payroll/contracts>`。"
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ":guilabel:`付款申请`：用于请求*预先批准*公司相关费用。"
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"此审批类型**仅**在请求*预先*批准公司直接支付的费用时使用。此类别**不应**用于"
+"员工寻求报销的费用。这可以通过\\ :doc:`费用应用程序 <../finance/expenses/"
+"log_expenses>`完成。"
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`汽车租赁申请`：用于请求租赁汽车。"
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`工作推荐奖励`：用于请求已获得但未通过\\ :doc:`推荐 <referrals>` 应"
+"用程序完成的工作推荐奖励。"
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ":guilabel:`补货`：用于请求办公用品、工具等与工作相关的物品。"
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ":guilabel:`创建报价请求`：用于向供应商请求物品报价。"
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "审批请求"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"要创建新的审批请求，请打开 **审批** 应用程序，点击最适合该请求的审批类型卡片"
+"上的\\ :guilabel:`新请求` 按钮，空白审批表单将会加载。填写各个部分和分页，然"
+"后点击\\ :guilabel:`提交` 以提交审批请求。"
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "一般信息部分"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr "表单的上半部分包含有关请求的所有一般信息。填写表单上半部分的以下字段："
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"下面列出的所有字段都会在\\ :guilabel:`一般审批` 类别的表单中显示。如果选择了"
+"不同的\\ :guilabel:`类别`，则会隐藏某些字段。"
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`审批主题`：该字段会自动填充所选的审批类型。对默认文本进行所需的修"
+"改，以提供有关请求的任何其他背景信息。"
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`请求所有者`：负责审批请求的人员。默认情况下，已登录的用户会填充此"
+"字段。"
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ":guilabel:`分类`：此字段中会显示所选分类，但可通过下拉菜单进行更改。"
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`日期`：使用日历选择器，设置请求的日期和时间。该字段**仅**在 "
+":guilabel:`类别` 选择 :guilabel:`付款申请` 或 :guilabel:`一般审批` 时才会显示"
+"。"
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`时间段`：使用日历选择器，在 :guilabel:`起始` 和 :guilabel:`结束` "
+"字段中设置请求的起止日期。此字段**仅**在 :guilabel:`类别`中选择了 "
+":guilabel:`出差`、:guilabel:`借阅物品`、:guilabel:`租车申请` 或 :guilabel:`一"
+"般审批` 时才会显示。"
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`位置`：输入审批请求所涉及的具体地点。该字段**仅**在 :guilabel:`类"
+"别`中选择了 :guilabel:`出差` 或 :guilabel:`一般审批` 时才会显示。"
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`联系人`：使用下拉菜单选择该请求的联系人。可用选项来自**联系人**应"
+"用。此字段**仅**在以下情况下显示：当 :guilabel:`类别` 选为 :guilabel:`合同审"
+"批`、:guilabel:`付款申请`、:guilabel:`工作推荐奖励` 或 :guilabel:`一般审批` "
+"时。"
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`数量`：请在此字段中输入所需物品的数量。该字段**仅**在为 "
+":guilabel:`类别` 选择了 :guilabel:`采购` 时才会显示。"
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`金额`：输入申请金额。此字段**仅**在 :guilabel:`类别`中选择了 "
+":guilabel:`合同审批`、:guilabel:`付款申请`、:guilabel:`采购` 或 :guilabel:`一"
+"般审批` 时才会显示。"
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`参考信息`：在此字段中输入与该请求相关的任何参考信息。该字"
+"段**仅**在 :guilabel:`类别`中选择了 :guilabel:`合同审批` 或 :guilabel:`一般审"
+"批` 时才会显示。"
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"每种审批类型在审批表单上显示的字段各不相同。这是因为每种 *审批类型* 都有其特"
+"定的必填字段。如果无法立即确定 *类型*，请点击页面顶部的 :guilabel:`新建请求` "
+"按钮，以打开通用审批请求表单。选择 :guilabel:`类别` 后，表单上相应的字段就会"
+"显示出来。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr "一份已填写的出差审批表上半部分。"
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "产品分页"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"如果请求的数据库中包含任何已配置的产品，这些产品将列在*产品*选项卡中。只有当"
+"在 :guilabel:`类别`字段中选择了 :guilabel:`借用项目`、:guilabel:`一般审批` "
+"或 :guilabel:`创建询价单` 时，该选项卡才会**显示**。"
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"要添加产品，请点击 :guilabel:`添加一行`，此时会出现一行空白行。通过下拉菜单选"
+"择所需的产品。选择后，该产品配置的 :guilabel:`描述` 会自动填入该字段"
+"。:guilabel:`数量` 的默认值为 :guilabel:`1.00`，但如有必要，可以进行修改。"
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr "在*描述*选项卡中，可输入用于说明请求的任何信息。请在此选项卡中添加相关信息。"
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "审批人分页"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"在*审批人*选项卡中，可配置负责审批该请求的人员。要添加审批人，请点击 "
+":guilabel:`添加一行`，此时会出现一行空白行。使用下拉菜单选择所需用户。对其他"
+"所有审批人重复此操作。该选项卡对用户数量没有上限。"
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr "若要表明用户**必须**批准该请求，请勾选 :guilabel:`必填` 列中的复选框。"
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr "随着用户的添加，其 :guilabel:`状态` 仍保持为 :guilabel:`新`。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr "审批人标签页，列出三名审批人，其中一名为必填。"
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "添加附件"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"所有审批申请均支持上传相关附件。如需添加附件，点击页面上方的 :guilabel:`添加"
+"附件` 按钮，将会弹出文件浏览窗口。找到目标文件并选中，点击 :guilabel:`打开` "
+"完成上传，支持同时多选多个文件。"
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"附件添加完成后，页面顶部会出现一个 :icon:`fa-book` :guilabel:`文档` 智能按钮"
+"，显示已附加的文档数量。此外，这些文档也会在聊天窗口中列出。如果屏幕足够宽，"
+"这些文档会显示在屏幕侧边。"
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "管理审批"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"请求提交后，必须由 :ref:`审批人` 选项卡 <approvals/approvers> 中列出的指定审"
+"批人进行审批。要查看待处理的审批，请导航至 :menuselection:`审批应用 --> 管理"
+"员 --> 待审审批`，系统将加载 *待审审批* 仪表板。所有待用户处理的审批将按字母"
+"顺序显示在默认列表视图中。"
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"只有用户被指定为审批人的*已提交*请求才会显示在*待审批*仪表板中。所有其他请求"
+"均保持隐藏状态。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr "所有等待批准的审批请求，用户被分配到。"
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"必须通过审批表单逐一审批各项请求。要审批某项请求，请在*待审审批*仪表板上点击"
+"该项请求，系统将加载相应的请求表单。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr "一份借用相机的请求，并显示“批准”和“拒绝”按钮。"
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"要批准该请求，请在单个审批请求表单上点击 :guilabel:`批准` 按钮，状态将变为 "
+":guilabel:`已批准`。随着用户批准该请求，其 :guilabel:`状态` 将变为 "
+":guilabel:`已批准`，且文字显示为绿色。"
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"若要拒绝该请求，请在单个审批请求表单上点击 :guilabel:`拒绝` 按钮，状态将变为 "
+":guilabel:`已拒绝`。当用户拒绝请求时，其 :guilabel:`状态` 将变为 "
+":guilabel:`已拒绝`，且文字显示为红色。"
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"在任何时候，状态为 :guilabel:`已批准` 或 :guilabel:`已拒绝` 的审批请求，均可"
+"通过点击 :guilabel:`撤回` 按钮返回 :guilabel:`已提交` 阶段。所有审批人的 "
+":guilabel:`状态` 将恢复为 :guilabel:`待审批`，且该文本将显示为橙色。"
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -16622,12 +17038,6 @@ msgstr ""
 "点击\\ :guilabel:`新建`\\ 按钮，将加载一个空白的合同模板表单。在表单的各个部"
 "分中配置以下字段："
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "一般信息部分"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -17075,8 +17485,8 @@ msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
 "users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
-"要查看特定人数报告的员工，请点击人数报告顶部的\\ :icon:`fa-users`\\ "
-":guilabel:`员工`\\ 智能按钮。"
+"要查看特定人数报告的员工，请点击人数报告顶部的\\ :icon:`fa-"
+"users`\\ :guilabel:`员工`\\ 智能按钮。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:49
 msgid ""
@@ -34254,8 +34664,8 @@ msgid ""
 "amout of paid days for their Christmas bonus."
 msgstr ""
 ":guilabel:`墨西哥：圣诞奖金` (Días de Aguinaldo)：在墨西哥，所有员工均可获得"
-"年度圣诞奖金。奖金必须至少为 15 天的工资。提供更高奖金的公司**必须**修改此值"
-"。在 Odoo 中，公司内所有员工的圣诞奖金带薪天数相同。"
+"年度圣诞奖金。奖金必须至少为 15 天的工资。提供更高奖金的公司**必须**修改此"
+"值。在 Odoo 中，公司内所有员工的圣诞奖金带薪天数相同。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:387
 msgid ""
@@ -38342,8 +38752,8 @@ msgid ""
 "These fields are **required**."
 msgstr ""
 "要更改开始或结束日期，请单击 :guilabel:`时间段` 字段中的第一个日期，以显示弹"
-"出日历。导航至所需月份，然后点击所需日期以选择该具体日期。这些字段为**必"
-"填**项。"
+"出日历。导航至所需月份，然后点击所需日期以选择该具体日期。这些字段为**必填**"
+"项。"
 
 #: ../../content/applications/hr/payroll/payslips.rst:52
 msgid ""
@@ -38457,8 +38867,8 @@ msgid ""
 "field, then enter the :guilabel:`Amount`."
 msgstr ""
 "若要手动添加额外工资项，请点击\\ :guilabel:`添加一行`\\，分页中会出现一个空白"
-"行。使用下拉菜单选择\\ :guilabel:`类型`\\。在相应字段中添加任何相关的\\ "
-":guilabel:`备注`\\，然后输入\\ :guilabel:`金额`\\。"
+"行。使用下拉菜单选择\\ :guilabel:`类型`\\。在相应字段中添加任何相关的"
+"\\ :guilabel:`备注`\\，然后输入\\ :guilabel:`金额`\\。"
 
 #: ../../content/applications/hr/payroll/payslips.rst:None
 msgid "The salary inputs tab with a salary attachment and commission added."
@@ -38472,9 +38882,9 @@ msgid ""
 "<payroll_localizations>`, such as taxes, expenses, benefit contributions, "
 "and any other items."
 msgstr ""
-"*工资计算* 分页会计算每项单独的工资规则。这包括从员工工资到与已安装的\\ "
-":doc:`薪资本地化 <payroll_localizations>`\\相关的所有扣款和津贴，例如税款、费"
-"用、福利缴款及任何其他项目。"
+"*工资计算* 分页会计算每项单独的工资规则。这包括从员工工资到与已安装的"
+"\\ :doc:`薪资本地化 <payroll_localizations>`\\相关的所有扣款和津贴，例如税"
+"款、费用、福利缴款及任何其他项目。"
 
 #: ../../content/applications/hr/payroll/payslips.rst:118
 msgid ""
@@ -38585,9 +38995,9 @@ msgid ""
 "Dashboard`. The **Payroll** app dashboard loads, including a *Warnings* "
 "section that appears in the corner of the dashboard."
 msgstr ""
-"处理工资单之前，请检查有关薪资的潜在问题。要查看所有薪资问题，请导航至\\ "
-":menuselection:`薪资应用程序 --> 仪表板`\\。**薪资**应用程序仪表板加载，包括"
-"出现在仪表板角落的 *警告* 部分。"
+"处理工资单之前，请检查有关薪资的潜在问题。要查看所有薪资问题，请导航至"
+"\\ :menuselection:`薪资应用程序 --> 仪表板`\\。**薪资**应用程序仪表板加载，包"
+"括出现在仪表板角落的 *警告* 部分。"
 
 #: ../../content/applications/hr/payroll/payslips.rst:None
 msgid "The dashboard view of the Payroll app, with the warnings box visible."
@@ -38623,8 +39033,8 @@ msgstr ""
 "在解决所有相关警告并在工资单中输入所有必要信息后，即可处理工资单。首先，工资"
 "单被\\ :ref:`验证 <payroll/payslips/validate>`\\ ，然后创建\\ :ref:`付款报告 "
 "<payroll/payslips/payment-report>`\\ ，日记账分录被\\ :ref:`过账 <payroll/"
-"payslips/post>`\\ ，最后向员工\\ :ref:`付款 <payroll/payslips/pay-employee>"
-"`\\ 。"
+"payslips/post>`\\ ，最后向员工\\ :ref:`付款 <payroll/payslips/pay-"
+"employee>`\\ 。"
 
 #: ../../content/applications/hr/payroll/payslips.rst:189
 msgid "Validate the payslip"
@@ -42022,8 +42432,8 @@ msgid ""
 "deletions) affect all positions unless explicitly scoped."
 msgstr ""
 "除非\\ :ref:`标记为特定于职位 <recruitment/customize-stages>`\\ ，否则阶段适"
-"用于所有职位。对阶段的更改（例如添加、删除）会影响所有职位，除非明确指定范围"
-"。"
+"用于所有职位。对阶段的更改（例如添加、删除）会影响所有职位，除非明确指定范"
+"围。"
 
 #: ../../content/applications/hr/recruitment.rst:33
 msgid ""
@@ -42196,8 +42606,8 @@ msgid ""
 "cards. When clicked, the résumé is scanned, and the applicant's card is "
 "updated."
 msgstr ""
-":guilabel:`仅按需数字化`：此选项仅在请求时数字化简历。申请人卡片上会出现一个 "
-":guilabel:`数字化文档` 按钮。点击后，系统将扫描简历并更新申请人卡片。"
+":guilabel:`仅按需数字化`：此选项仅在请求时数字化简历。申请人卡片上会出现一"
+"个 :guilabel:`数字化文档` 按钮。点击后，系统将扫描简历并更新申请人卡片。"
 
 #: ../../content/applications/hr/recruitment.rst:116
 msgid ""
@@ -42359,8 +42769,8 @@ msgid ""
 "`Waiting`,and `Blocked`) :ref:`can be modified <recruitment/modify-stages>`, "
 "if desired."
 msgstr ""
-"四个状态颜色（`进行中`、`已准备好进入下一阶段`、`等待中`和`已封锁`）的名称 "
-":ref:`可以修改 <recruitment/modify-stages>`（如有需要）。"
+"四个状态颜色（`进行中`、`已准备好进入下一阶段`、`等待中`和`已封锁`）的名"
+"称 :ref:`可以修改 <recruitment/modify-stages>`（如有需要）。"
 
 #: ../../content/applications/hr/recruitment.rst:186
 msgid "Customize stages"
@@ -42387,12 +42797,12 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"要创建新阶段，请将鼠标悬停在\\ :guilabel:`合同已签署`\\ 阶段的右侧，以显示\\ "
-":guilabel:`添加阶段`\\ 选项。按一下\\ :guilabel:`添加阶段`\\，会出现一个新列"
-"。在新阶段顶部的空白框中输入新阶段标题，然后按一下\\ :icon:`fa-check`\\ 按钮"
-"。新列随即出现，并且会出现另一个新阶段。如果不需要新阶段，请按一下新阶段中"
-"的\\ :icon:`fa-multiply`\\ 按钮以关闭该新阶段。阶段创建后，按一下并拖动该阶段"
-"，将其移动到工作流程中的所需位置。"
+"要创建新阶段，请将鼠标悬停在\\ :guilabel:`合同已签署`\\ 阶段的右侧，以显示"
+"\\ :guilabel:`添加阶段`\\ 选项。按一下\\ :guilabel:`添加阶段`\\，会出现一个新"
+"列。在新阶段顶部的空白框中输入新阶段标题，然后按一下\\ :icon:`fa-check`\\ 按"
+"钮。新列随即出现，并且会出现另一个新阶段。如果不需要新阶段，请按一下新阶段中"
+"的\\ :icon:`fa-multiply`\\ 按钮以关闭该新阶段。阶段创建后，按一下并拖动该阶"
+"段，将其移动到工作流程中的所需位置。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "A new stage added, along with a second stage ready to be named."
@@ -42413,10 +42823,10 @@ msgid ""
 "window, then click :guilabel:`Save` when done."
 msgstr ""
 "要修改阶段的设置，请将鼠标悬停在阶段名称上，右上角会出现一个\\ :icon:`fa-"
-"cog`\\ :guilabel:`(设置)`\\ 图标。按一下\\ :icon:`fa-cog`\\ :guilabel:`(设置)"
-"`\\ 图标，然后从产生的下拉菜单中按一下\\ :icon:`fa-pencil`\\ :guilabel:`编"
-"辑`\\。此时会出现一个 *编辑：(阶段)* 弹出窗口。在弹出窗口中进行所需的任何修改"
-"，完成后按一下\\ :guilabel:`保存`\\。"
+"cog`\\ :guilabel:`(设置)`\\ 图标。按一下\\ :icon:`fa-cog`\\ :guilabel:`(设"
+"置)`\\ 图标，然后从产生的下拉菜单中按一下\\ :icon:`fa-pencil`\\ :guilabel:`编"
+"辑`\\。此时会出现一个 *编辑：(阶段)* 弹出窗口。在弹出窗口中进行所需的任何修"
+"改，完成后按一下\\ :guilabel:`保存`\\。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -42435,8 +42845,8 @@ msgid ""
 "only required field is the :guilabel:`Stage Name`. modify the stage as "
 "desired, then click :guilabel:`Save` to save the changes."
 msgstr ""
-"*编辑：(阶段)* 表单用于配置阶段设置。唯一必需字段是\\ :guilabel:`阶段名"
-"称`\\。按需修改阶段，然后按一下\\ :guilabel:`保存`\\ 以保存更改。"
+"*编辑：(阶段)* 表单用于配置阶段设置。唯一必需字段是\\ :guilabel:`阶段名称"
+"`\\。按需修改阶段，然后按一下\\ :guilabel:`保存`\\ 以保存更改。"
 
 #: ../../content/applications/hr/recruitment.rst:227
 msgid "The fields to be populated or modified are:"
@@ -42524,18 +42934,19 @@ msgid ""
 "(red), :guilabel:`Waiting` (yellow),  and :guilabel:`Ready for Next Stage` "
 "(green)."
 msgstr ""
-":guilabel:`工具提示`\\ 部分：每张申请人卡片都有四个预配置的状态标签（彩色圆圈"
-"），用于指示其状态。这些颜色显示在每个阶段的顶部，以反映该阶段申请人的状态。"
-"可以修改标签的 *名称*，但标签本身（颜色）无法修改。默认名称和标签为：\\ "
-":guilabel:`进行中`\\ （灰色），\\ :guilabel:`已封锁`\\ （红色），\\ "
-":guilabel:`等待中`\\ （黄色），以及\\ :guilabel:`已准备好进入下一阶段`\\ （绿"
-"色）。"
+":guilabel:`工具提示`\\ 部分：每张申请人卡片都有四个预配置的状态标签（彩色圆"
+"圈），用于指示其状态。这些颜色显示在每个阶段的顶部，以反映该阶段申请人的状"
+"态。可以修改标签的 *名称*，但标签本身（颜色）无法修改。默认名称和标签为："
+"\\ :guilabel:`进行中`\\ （灰色），\\ :guilabel:`已封锁`\\ （红色），"
+"\\ :guilabel:`等待中`\\ （黄色），以及\\ :guilabel:`已准备好进入下一阶段`\\ "
+"（绿色）。"
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
 ":guilabel:`Requirements` section: Enter any internal notes for this stage "
 "explaining any requirements of the stage."
-msgstr ":guilabel:`要求`\\ 部分：输入此阶段的任何内部说明，解释该阶段的任何要求。"
+msgstr ""
+":guilabel:`要求`\\ 部分：输入此阶段的任何内部说明，解释该阶段的任何要求。"
 
 #: ../../content/applications/hr/recruitment.rst:258
 msgid "Delete stage"
@@ -42551,10 +42962,10 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "如果不再需要某个阶段，可以将其删除。要删除阶段，请将鼠标悬停在阶段名称上，然"
-"后按一下出现的\\ :icon:`fa-cog`\\ :guilabel:`(设置)`\\ 图标。按一下\\ "
-":icon:`fa-trash`\\ :guilabel:`删除`\\，此时会出现一个 *确认* 弹出警告，询问\\"
-" :guilabel:`您确定要删除此列吗？`\\ 按一下\\ :guilabel:`删除`\\ 以删除该阶段"
-"。"
+"后按一下出现的\\ :icon:`fa-cog`\\ :guilabel:`(设置)`\\ 图标。按一下"
+"\\ :icon:`fa-trash`\\ :guilabel:`删除`\\，此时会出现一个 *确认* 弹出警告，询"
+"问\\ :guilabel:`您确定要删除此列吗？`\\ 按一下\\ :guilabel:`删除`\\ 以删除该"
+"阶段。"
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -42594,8 +43005,8 @@ msgid ""
 "applicant know that their application caught the recruiter's attention, and "
 "they have been shortlisted for either a phone call or an interview."
 msgstr ""
-":guilabel:`招聘：兴趣`：此模板用于让申请人知道他们的申请引起了招聘人员的注意"
-"，已被列入电话或面试的候选名单。"
+":guilabel:`招聘：兴趣`：此模板用于让申请人知道他们的申请引起了招聘人员的注"
+"意，已被列入电话或面试的候选名单。"
 
 #: ../../content/applications/hr/recruitment.rst:285
 msgid ""
@@ -42621,8 +43032,8 @@ msgid ""
 "is in the :guilabel:`Initial Qualification` stage."
 msgstr ""
 ":guilabel:`招聘：安排面试`：此模板用于通知应聘者他们已通过\\ :guilabel:`初步"
-"筛选`\\ 阶段，招聘人员将很快与他们联系以安排面试。当应聘者进入\\ "
-":guilabel:`初步筛选`\\ 阶段时，会自动发送此电子邮件。"
+"筛选`\\ 阶段，招聘人员将很快与他们联系以安排面试。当应聘者进入\\ :guilabel:`"
+"初步筛选`\\ 阶段时，会自动发送此电子邮件。"
 
 #: ../../content/applications/hr/recruitment.rst:296
 msgid ""
@@ -44014,8 +44425,8 @@ msgid ""
 "of ten default options, such as :guilabel:`Banner`, :guilabel:`Email`, "
 "and :guilabel:`Google Adwords`."
 msgstr ""
-":guilabel:`媒介`：从十个默认选项列表中选择用于分享跟踪器的方法，例如\\ "
-":guilabel:`横幅`\\ 、\\ :guilabel:`电子邮件`\\ 和\\ :guilabel:`Google "
+":guilabel:`媒介`：从十个默认选项列表中选择用于分享跟踪器的方法，例如"
+"\\ :guilabel:`横幅`\\ 、\\ :guilabel:`电子邮件`\\ 和\\ :guilabel:`Google "
 "Adwords`\\ 。"
 
 #: ../../content/applications/hr/recruitment/new_job.rst:199
@@ -44025,10 +44436,10 @@ msgid ""
 "corresponding tracking link. Click :guilabel:`URL` :icon:`fa-clipboard` to "
 "copy the link to the clipboard, then share the link where appropriate."
 msgstr ""
-":guilabel:`跟踪器网址`：定义\\ :guilabel:`营销活动`\\ 、\\ :guilabel:`来源`\\"
-" 和\\ :guilabel:`媒介`\\ 后，Odoo 会自动创建相应的跟踪链接。点击\\ "
-":guilabel:`URL` :icon:`fa-clipboard`\\ 将链接复制到剪贴板，然后在适当的位置分"
-"享该链接。"
+":guilabel:`跟踪器网址`：定义\\ :guilabel:`营销活动`\\ 、\\ :guilabel:`来源"
+"`\\ 和\\ :guilabel:`媒介`\\ 后，Odoo 会自动创建相应的跟踪链接。点击"
+"\\ :guilabel:`URL` :icon:`fa-clipboard`\\ 将链接复制到剪贴板，然后在适当的位"
+"置分享该链接。"
 
 #: ../../content/applications/hr/recruitment/new_job.rst:202
 msgid ""
@@ -44038,9 +44449,9 @@ msgid ""
 "the email address to the clipboard, then share the email where appropriate."
 msgstr ""
 ":guilabel:`电子邮件`：一旦定义了\\ :guilabel:`营销活动`\\ 、\\ :guilabel:`来"
-"源`\\ 和\\ :guilabel:`媒介`\\ ，Odoo 会自动创建相应的电子邮件。单击\\ "
-":guilabel:`电子邮件` :icon:`fa-clipboard`\\ 将电子邮件地址复制到剪贴板，然后"
-"在适当位置分享该电子邮件。"
+"源`\\ 和\\ :guilabel:`媒介`\\ ，Odoo 会自动创建相应的电子邮件。单击"
+"\\ :guilabel:`电子邮件` :icon:`fa-clipboard`\\ 将电子邮件地址复制到剪贴板，然"
+"后在适当位置分享该电子邮件。"
 
 #: ../../content/applications/hr/recruitment/new_job.rst:None
 msgid "The list of all tracked links for the job position."
@@ -44057,8 +44468,8 @@ msgid ""
 "listing is created, the information appears in this tab."
 msgstr ""
 "当职位\\ :ref:`发布到招聘网站 <recruitment/post-job/boards>`\\ 时，\\ *招聘网"
-"站*\\ 标签页会自动填充。随着每个招聘信息的创建，相关信息都会显示在此标签页中"
-"。"
+"站*\\ 标签页会自动填充。随着每个招聘信息的创建，相关信息都会显示在此标签页"
+"中。"
 
 #: ../../content/applications/hr/recruitment/new_job.rst:217
 msgid ":doc:`post_job`"
@@ -44075,6 +44486,8 @@ msgid ""
 "activity across different job positions and track how many offers are in "
 "each stage."
 msgstr ""
+"*录用分析*报告按职位和状态对录用情况进行了分组，并提供了高层次的概览。这使招"
+"聘人员能够查看不同职位的录用动态，并跟踪每个阶段的录用数量。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:9
 msgid ""
@@ -44087,10 +44500,15 @@ msgid ""
 "gaps in the hiring process and make more informed decisions to support "
 "recruitment goals."
 msgstr ""
+"通过 *录用分析* 报告，招聘人员可以对比空缺职位数量与已发出录用通知的数量，识"
+"别录用活动较少的职位，并跟踪招聘工作的进展。例如，录用通知较少的职位可能表明"
+"需要调整招聘策略，以吸引更多合格的应聘者。通过审查各职位及不同状态下的录用数"
+"据，招聘人员可以发现招聘流程中潜在的不足，并做出更明智的决策，以达成招聘目标"
+"。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:17
 msgid "View offer analysis report"
-msgstr ""
+msgstr "查看录用分析报告"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:19
 msgid ""
@@ -44102,6 +44520,11 @@ msgid ""
 "is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
 "days."
 msgstr ""
+"若要访问\\ *录用分析*\\ 报告，请导航至\\ :menuselection:`招聘应用 --> 报"
+"告 --> 录用分析`。默认情况下，该报告会以\\  :icon:`fa-bar-chart` :guilabel:`"
+"(条形图)` 的形式显示所有职位录用数据，并按 :icon:`fa-database` :guilabel:`(堆"
+"叠)` 进行分组。默认筛选条件为\\  :guilabel:`过去 365 天的录用通知`，显示过去 "
+"365 天的相关信息。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -44110,6 +44533,8 @@ msgid ""
 "the number of offers in that stage for the job position. The stages are "
 "color-coded as follows:"
 msgstr ""
+"岗位显示在 X 轴，Y 轴以彩色色块展示各阶段的录用邀约数量。将鼠标悬停在阶段上，"
+"可查看该岗位此阶段的邀约数量。各阶段颜色编码如下："
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:32
 msgid "Color"
@@ -44130,7 +44555,7 @@ msgstr "进行中"
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:37
 msgid ""
 "The offer was sent to the employee but the offer is unsigned by all parties."
-msgstr ""
+msgstr "录用邀约已发送给员工，但尚未经各方签署。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:38
 msgid "Orange"
@@ -44144,7 +44569,7 @@ msgstr "部分签署"
 msgid ""
 "A minimum of one person has signed the contract, but other signatures are "
 "required."
-msgstr ""
+msgstr "至少已有一方签署合同，但仍需其余各方完成签署。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:41
 msgid "Green"
@@ -44156,7 +44581,7 @@ msgstr "已完成签署"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:43
 msgid "The offer was accepted and all parties have signed the contract."
-msgstr ""
+msgstr "录用邀约已被接受，且所有相关方均已签署合同。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:44
 msgid "Blue"
@@ -44169,15 +44594,15 @@ msgstr "已拒绝"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:46
 msgid "The offer was refused by the applicant."
-msgstr ""
+msgstr "申请人拒绝了该录用邀约。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:None
 msgid "A bar chart view of the Offer Analysis report."
-msgstr ""
+msgstr "录用分析报告的柱状图视图。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:52
 msgid "Use case: view offers by state"
-msgstr ""
+msgstr "使用案例：按状态查看录用邀请"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:54
 msgid ""
@@ -44186,6 +44611,8 @@ msgid ""
 "it can be difficult to keep track of all the job offers and where each offer "
 "stands."
 msgstr ""
+"一家拥有数百名员工的大型成长型企业需要持续招聘。由于需要不断填补大量职位，要"
+"跟踪所有工作邀约及每份邀约的进度会非常困难。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:58
 msgid ""
@@ -44196,6 +44623,10 @@ msgid ""
 "option in the :icon:`oi-group` :guilabel:`Group By` column. This provides a "
 "high-level overview of where all offers stand."
 msgstr ""
+"为了协助团队，可以修改*录用分析*报告，使其按州显示所有录用结果，而不是按职位"
+"显示。若要按州查看录用通知，请导航至:menuselection:`招聘应用 --> 报告 --> 录"
+"用分析`。点击搜索栏，并在 :icon:`oi-group` :guilabel:`按组分类` 列中选择 "
+":guilabel:`录用通知所在州` 选项。这将提供所有录用通知当前状态的高层级概览。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""
@@ -44203,10 +44634,12 @@ msgid ""
 "state. This is helpful when trying to finalize all open offers, or see how "
 "many were refused or completed."
 msgstr ""
+"点击某一列，以列表视图打开该特定状态下的所有录用邀请。当您需要处理所有未结录"
+"用邀请，或查看有多少邀请被拒绝或已完成时，此功能非常有用。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:None
 msgid "All offers grouped by state."
-msgstr ""
+msgstr "所有按状态分组的录用邀约。"
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:3
 msgid "Offer job positions"
@@ -44635,8 +45068,8 @@ msgid ""
 "Job positions can be shared on the :ref:`company website <recruitment/post-"
 "job/website>` or on :ref:`job boards <recruitment/post-job/boards>`."
 msgstr ""
-"工作岗位可以在\\ :ref:`公司网站 <recruitment/post-job/website>`\\ 或\\ "
-":ref:`招聘平台 <recruitment/post-job/boards>`\\ 上分享。"
+"工作岗位可以在\\ :ref:`公司网站 <recruitment/post-job/website>`\\ 或\\ :ref:`"
+"招聘平台 <recruitment/post-job/boards>`\\ 上分享。"
 
 #: ../../content/applications/hr/recruitment/post_job.rst:14
 msgid "Publish to website"
@@ -44672,19 +45105,19 @@ msgid ""
 "dashboard by navigating to :menuselection:`Recruitment app --> Applications "
 "--> By Job Positions`."
 msgstr ""
-"启用该设置后，前往\\ :menuselection:`招聘应用 --> 申请 --> 按工作岗位`\\ 打"
-"开**招聘**主仪表板。接下来，点击\\ :guilabel:`工作岗位页面`\\ 按钮，然后点击"
-"右上角的\\ :guilabel:`未发布`\\ 开关。该开关将变为绿色并显示\\ :guilabel:`已"
-"发布`\\ 。前往\\ :menuselection:`招聘应用 --> 申请 --> 按工作岗位`\\ 即可返回"
-"主仪表板。"
+"启用该设置后，前往\\ :menuselection:`招聘应用 --> 申请 --> 按工作岗位`\\ 打开"
+"**招聘**主仪表板。接下来，点击\\ :guilabel:`工作岗位页面`\\ 按钮，然后点击右"
+"上角的\\ :guilabel:`未发布`\\ 开关。该开关将变为绿色并显示\\ :guilabel:`已发"
+"布`\\ 。前往\\ :menuselection:`招聘应用 --> 申请 --> 按工作岗位`\\ 即可返回主"
+"仪表板。"
 
 #: ../../content/applications/hr/recruitment/post_job.rst:31
 msgid ""
 "When a job position is published, a green :guilabel:`Published` banner "
 "appears in the top-right corner of the job position card."
 msgstr ""
-"工作岗位发布后，工作岗位卡片的右上角会显示绿色的\\ :guilabel:`已发布`\\ 横幅"
-"。"
+"工作岗位发布后，工作岗位卡片的右上角会显示绿色的\\ :guilabel:`已发布`\\ 横"
+"幅。"
 
 #: ../../content/applications/hr/recruitment/post_job.rst:35
 msgid ""
@@ -44726,10 +45159,10 @@ msgid ""
 "and :guilabel:`Password` for Monster in the corresponding fields, then click "
 "the :guilabel:`Save` button."
 msgstr ""
-"要在 Odoo 外部的招聘平台上发布招聘信息，必须先配置招聘平台凭据。前往\\ "
-":menuselection:`招聘应用 --> 配置 --> 设置`\\ 。在 *Monster 凭据* 部分的对应"
-"字段中输入 Monster 的\\ :guilabel:`用户名`\\ 和\\ :guilabel:`密码`\\ ，然后点"
-"击\\ :guilabel:`保存`\\ 按钮。"
+"要在 Odoo 外部的招聘平台上发布招聘信息，必须先配置招聘平台凭据。前往"
+"\\ :menuselection:`招聘应用 --> 配置 --> 设置`\\ 。在 *Monster 凭据* 部分的对"
+"应字段中输入 Monster 的\\ :guilabel:`用户名`\\ 和\\ :guilabel:`密码`\\ ，然后"
+"点击\\ :guilabel:`保存`\\ 按钮。"
 
 #: ../../content/applications/hr/recruitment/post_job.rst:59
 msgid ""
@@ -44761,9 +45194,9 @@ msgid ""
 "Board* pop-up window loads. Fill out the following information in the pop-up "
 "window:"
 msgstr ""
-"前往\\ :menuselection:`招聘应用 --> 申请 --> 招聘平台发布`\\ ，点击\\ "
-":guilabel:`在招聘平台发布`\\ ，系统将加载*在招聘平台发布*弹出窗口。在弹出窗口"
-"中填写以下信息："
+"前往\\ :menuselection:`招聘应用 --> 申请 --> 招聘平台发布`\\ ，点击"
+"\\ :guilabel:`在招聘平台发布`\\ ，系统将加载*在招聘平台发布*弹出窗口。在弹出"
+"窗口中填写以下信息："
 
 #: ../../content/applications/hr/recruitment/post_job.rst:73
 msgid ""
@@ -45068,9 +45501,9 @@ msgid ""
 "on the applicant's card are filled as soon as it is created. By default, "
 "these details are required for every job position."
 msgstr ""
-"创建申请人卡片后，其上的\\ :guilabel:`申请人`、\\ :guilabel:`电子邮箱`\\ 和\\"
-" :guilabel:`电话`\\ 号码便会立即填入。默认情况下，每个工作职位都需要这些详细"
-"信息。"
+"创建申请人卡片后，其上的\\ :guilabel:`申请人`、\\ :guilabel:`电子邮箱`\\ 和"
+"\\ :guilabel:`电话`\\ 号码便会立即填入。默认情况下，每个工作职位都需要这些详"
+"细信息。"
 
 #: ../../content/applications/hr/recruitment/recruitment_flow.rst:28
 msgid ""

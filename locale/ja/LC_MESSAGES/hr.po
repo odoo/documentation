@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:34+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:35+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/hr/"
 "ja/>\n"
@@ -945,6 +945,7 @@ msgid ""
 msgstr "工場安全トレーニング目標のために入力された目標フォームの上半分。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "説明タブ"
 
@@ -2601,6 +2602,460 @@ msgstr ":doc:`Odoo の基本レポーティング <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "承認"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Odooの**承認**アプリを使用すると、従業員はさまざまな事項について正式な申請を"
+"行うことができ、管理者は申請内容を確認し、承認または却下を行うことができます"
+"。これにより、すべての申請が一元管理され、明確な組織化と透明性が確保されます"
+"。"
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "承認タイプ"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"承認を申請する際は、カテゴリ、すなわち「タイプ」を指定する必要があります。申"
+"請のために、以下の9つの事前設定された承認カテゴリが利用可能です。"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`出張`：業務に関連する出張の申請用。"
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`アイテム借用`：会社が所有または販売している物理的なアイテムを、一"
+"定期間借用するための申請用。"
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ":guilabel:`一般承認`：他の8つのデフォルトタイプに該当しない申請用。"
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`契約承認`：外部契約の申請用（\\ :doc:`雇用契約 <payroll/contracts>"
+"`を除く）。"
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ":guilabel:`支払申請`：会社関連の経費に対する*事前承認*を依頼する場合。"
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"この承認タイプは、会社が直接支払う経費について*事前*に承認を求める場合に**の"
+"み**使用されます。このカテゴリは、従業員が立替払い分を精算する目的の経費には"
+"使用**しないでください**。それについては :doc:`経費アプリ <../finance/"
+"expenses/log_expenses>`を通じて行います。"
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`レンタカー申請`：レンタカーを予約する場合。"
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`採用紹介報酬`：獲得したが :doc:`紹介 <referrals>`アプリでは完了し"
+"ていない採用紹介報酬を申請する場合。"
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`調達`：オフィス用品やツールなど、仕事関連のアイテムを申請する場合"
+"。"
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ":guilabel:`見積依頼作成`：仕入先に見積を依頼する場合。"
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "承認申請"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"新規承認申請を作成するには、**承認**アプリを開き、申請内容に最も適した承認"
+"タイプカード上の :guilabel:`新規申請` ボタンをクリックすると、空白の承認"
+"フォームが読み込まれます。各セクションとタブに記入し、:guilabel:`送信` を"
+"クリックして承認申請を提出します。"
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "一般情報セクション"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"フォームの上半分には、申請に関するすべての基本情報が含まれています。フォーム"
+"の上半分にある以下の項目に入力します："
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"以下に記載されているすべての項目は、:guilabel:`一般承認`カテゴリのフォームに"
+"表示されます。異なる :guilabel:`カテゴリ`が選択されている場合、一部の項目は非"
+"表示になります。"
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`承認件名`：このフィールドは、選択した承認タイプで自動的に入力され"
+"ます。デフォルトのテキストを必要に応じて修正し、申請に関する補足情報を入力し"
+"てください。"
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`申請オーナー`：承認申請の責任者。デフォルトで、サインインしている"
+"ユーザーがこのフィールドに入力されます。"
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`カテゴリ`：選択されたカテゴリがこのフィールドに表示されますが、"
+"ドロップダウンメニューを使用して変更可能です。"
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`日付`：カレンダーセレクタを使用して、申請の日時を設定します。この"
+"フィールドは、:guilabel:`支払申請` または :guilabel:`一般承認` が "
+":guilabel:`カテゴリ` として選択されている場合に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`期間`：カレンダーセレクタを使用して、:guilabel:`移動元` フィールド"
+"と :guilabel:`~` フィールドで申請の開始日と終了日を設定します。このフィールド"
+"は、:guilabel:`出張`、:guilabel:`物品借用`、:guilabel:`レンタカー申請`、また"
+"は :guilabel:`一般承認` が :guilabel:`カテゴリ` として選択されている場合"
+"に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`勤務場所`：承認申請の対象となる具体的な勤務場所を入力します。この"
+"フィールドは、:guilabel:`出張` または :guilabel:`一般承認` が "
+":guilabel:`カテゴリ` として選択されている場合に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`連絡先`：ドロップダウンメニューを使用して、申請の連絡先を選択しま"
+"す。利用可能なオプションは「連絡先」アプリのものです。このフィールドは"
+"、:guilabel:`契約承認`、:guilabel:`支払申請`、:guilabel:`採用紹介報酬`、また"
+"は :guilabel:`一般承認` が :guilabel:`カテゴリ` として選択されている場合"
+"に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`数量`：申請する品目数をこのフィールドに入力します。このフィールド"
+"は、:guilabel:`調達` が :guilabel:`カテゴリ` として選択されている場合に**の"
+"み**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`金額`：申請する金額を入力します。このフィールドは、:guilabel:`契約"
+"承認`、:guilabel:`支払申請`、:guilabel:`調達`、または :guilabel:`一般承認` "
+"が :guilabel:`カテゴリ` として選択されている場合に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`参照`：この申請に関連する参照情報を入力します。このフィールドは"
+"、:guilabel:`契約承認` または :guilabel:`一般承認` が :guilabel:`カテゴリ` と"
+"して選択されている場合に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"承認タイプごとに、承認フォーム上に表示されるフィールドが異なります。これは、"
+"各*承認タイプ*に固有の必須フィールドがあるためです。*タイプ*が不明な場合は、"
+"ページ上部の :guilabel:`新規申請` ボタンをクリックして、一般的な承認申請"
+"フォームを開きます。:guilabel:`カテゴリ` が選択されると、フォーム上の対応する"
+"フィールドが表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr "出張用に記入された承認フォームの上半分です。"
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "プロダクトタブ"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"データベースで設定されたプロダクトを申請する場合は、「プロダクト」タブに一覧"
+"表示されます。このタブは、:guilabel:`物品借用`、:guilabel:`一般承認`、または "
+":guilabel:`見積依頼作成` が :guilabel:`カテゴリ` フィールドで選択されている場"
+"合に**のみ**表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"プロダクトを追加するには、:guilabel:`行を追加` をクリックすると、空の行が表示"
+"されます。ドロップダウンメニューを使用して、申請するプロダクトを選択します。"
+"選択すると、プロダクトの設定済みの :guilabel:`説明` がそのフィールドに自動的"
+"に入力されます。:guilabel:`数量` はデフォルトで :guilabel:`1.00` ですが、必要"
+"に応じて更新可能です。"
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"「説明」タブは、申請を明確にするための情報を入力する場所です。関連情報をこの"
+"タブに追加してください。"
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "承認者タブ"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"「承認者」タブは、申請の承認責任者を設定する場所です。承認者を追加するには"
+"、:guilabel:`行を追加` をクリックし、空の行を表示させます。"
+"ドロップダウンメニューを使用して、目的のユーザーを選択します。他のすべての承"
+"認者に対しても繰り返します。このタブにはユーザー数の上限はありません。"
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"ユーザーが申請を**承認する必要がある**ことを示すには、:guilabel:`必須` 列の"
+"チェックボックスをクリックします。"
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"ユーザーが追加されると、その :guilabel:`ステータス` は :guilabel:`新規` のま"
+"まです。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr "3人の承認者がリストされ、1人が必須となっている承認者タブです。"
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "ドキュメントを添付"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"すべての承認リクエストには、関連ドキュメントを添付するオプションが含まれてい"
+"ます。ドキュメントを添付するには、ページ上部の :guilabel:`ドキュメントを添"
+"付` ボタンをクリックすると、ファイルエクスプローラーウィンドウが読み込まれま"
+"す。目的のファイルに移動して選択し、:guilabel:`開く` をクリックして添付します"
+"。複数のドキュメントを同時に選択して追加することも可能です。"
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"添付が完了すると、ページ上部に :icon:`fa-book` :guilabel:`ドキュメント` "
+"スマートボタンが表示され、添付されているドキュメントの数が示されます。さらに"
+"、ドキュメントはチャターにも一覧表示されます。画面の幅が十分な場合、"
+"ドキュメントは画面の横に表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "承認を管理する"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"リクエストが送信された後、:ref:`承認者タブ <approvals/approvers>`に記載されて"
+"いる必須の承認者による承認が必要です。アクション待ちの承認を確認するには"
+"、:menuselection:`承認アプリ --> マネージャー --> 要承認承認` に移動すると"
+"、*要承認承認*ダッシュボードが読み込まれます。ユーザーがアクションを行う必要"
+"のあるすべての承認が、デフォルトのリストビューでアルファベット順に表示されま"
+"す。"
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"ユーザーが承認者として割り当てられている*送信済み*リクエストのみが、*要承認承"
+"認*ダッシュボードに表示されます。その他のリクエストはすべて非表示のままです。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr "ユーザーが割り当てられている、承認待ちのすべての承認リクエスト。"
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"リクエストは、承認フォームから個別に承認する必要があります。リクエストを承認"
+"するには、*要承認承認*ダッシュボードで個別のリクエストをクリックすると、個別"
+"のリクエストフォームが読み込まれます。"
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr "カメラの借用リクエスト（承認および却下ボタンが表示されています）。"
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"リクエストを承認するには、個別の承認リクエストフォームで :guilabel:`承認` "
+"ボタンをクリックすると、ステータスが :guilabel:`承認済` に変更されます。"
+"ユーザーがリクエストを承認すると、その :guilabel:`ステータス` が "
+":guilabel:`承認済` に変更され、文字が緑色で表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"リクエストを拒否するには、個別の承認リクエストフォームで :guilabel:`却下` "
+"ボタンをクリックすると、ステータスが :guilabel:`却下済` に変更されます。"
+"ユーザーがリクエストを拒否すると、その :guilabel:`ステータス` が "
+":guilabel:`却下済` に変更され、文字が赤色で表示されます。"
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"どの時点でも、:guilabel:`承認済` または :guilabel:`却下済` の承認リクエストは"
+"、:guilabel:`送信済` ステージに戻すことができます。これには :guilabel:`取り下"
+"げ` ボタンをクリックします。すべての承認者の :guilabel:`ステータス` は "
+":guilabel:`要承認` に戻り、文字がオレンジ色で表示されます。"
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -18100,12 +18555,6 @@ msgstr ""
 "\\ :guilabel:`新規`\\ ボタンをクリックすると、空白の契約テンプレートフォーム"
 "が読み込まれます。フォームの各セクションで以下のフィールドを設定します："
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "一般情報セクション"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -18480,8 +18929,8 @@ msgid ""
 "on payroll and allows headcount comparisons between different periods of "
 "time."
 msgstr ""
-"**給与**\\ アプリの\\ *従業員数レポート*\\ には、給与対象の従業員数が表示され"
-"、異なる期間の従業員数を比較できます。"
+"**給与**\\ アプリの\\ *従業員数レポート*\\ には、給与対象の従業員数が表示さ"
+"れ、異なる期間の従業員数を比較できます。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:9
 msgid "Create a headcount report"
@@ -18508,24 +18957,32 @@ msgid ""
 ":guilabel:`Report name`: The name is generated automatically as `Headcount "
 "for (Company Name) on the (YYYY-MM-DD)` and **cannot** be modified."
 msgstr ""
+":guilabel:`レポート名`：名前は自動的に「Headcount for (Company Name) on the "
+"(YYYY-MM-DD)」として生成され、変更することは**できません**。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:19
 msgid ""
 ":guilabel:`Company`: The company is automatically populated (works in both "
 "single and multi-company databases)."
 msgstr ""
+":guilabel:`会社`：会社は自動的に入力されます（単一および"
+"マルチカンパニーデータベースの両方で機能します）。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:21
 msgid ""
 ":guilabel:`From`: Using the calendar selector, select the start date for the "
 "report. The current date populates this field by default."
 msgstr ""
+":guilabel:`移動元`：カレンダーセレクターを使用して、レポートの開始日を選択し"
+"ます。デフォルトでは、現在の日付がこのフィールドに入力されます。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:23
 msgid ""
 ":guilabel:`To`: Using the calendar selector, select the end date for the "
 "report."
 msgstr ""
+":guilabel:`移動先`：カレンダーセレクターを使用して、レポートの終了日を選択し"
+"ます。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:25
 msgid "Next, click :guilabel:`Populate` to generate the report."
@@ -18537,10 +18994,13 @@ msgid ""
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
+"フォームの上部に、\\ :icon:`fa-users` \\ :guilabel:`従業員`\\ スマートボタン"
+"が表示されます。ボタンをクリックすると、選択した期間の従業員総数が表示されま"
+"す。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:None
 msgid "A headcount report created on October 22, 2026 for 2026."
-msgstr ""
+msgstr "2026年10月22日に作成された2026年度のヘッドカウントレポート。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:34
 msgid "View all headcount reports"
@@ -18579,6 +19039,9 @@ msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
 "users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
+"特定のヘッドカウントレポートの従業員を表示するには、ヘッドカウントレポート上"
+"部にある\\ :icon:`fa-users` \\ :guilabel:`従業員`\\ スマートボタンをクリック"
+"します。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:49
 msgid ""
@@ -18598,7 +19061,7 @@ msgstr ":guilabel:`部門`: その職位が属する部門"
 
 #: ../../content/applications/hr/payroll/headcount.rst:53
 msgid ":guilabel:`Job Title`: Their specific role."
-msgstr ""
+msgstr ":guilabel:`職位`：特定の役割。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:54
 msgid ""
@@ -18608,11 +19071,11 @@ msgstr ":guilabel:`雇用主負担額`: 企業が各給与期間に従業員に�
 
 #: ../../content/applications/hr/payroll/headcount.rst:55
 msgid ":guilabel:`Wage On Payroll`: The monetary amount on payroll reports."
-msgstr ""
+msgstr ":guilabel:`給与計算上の給与`：給与計算レポート上の金額。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:57
 msgid "Click on any department to expand the list and view the employees."
-msgstr ""
+msgstr "部門をクリックすると、リストが展開され、従業員が表示されます。"
 
 #: ../../content/applications/hr/payroll/headcount.rst:None
 msgid "The headcount report showing expanded departments."
@@ -45245,8 +45708,8 @@ msgid ""
 "recruitment team with valuable insights into the applicant."
 msgstr ""
 "Odooは、応募者に関する詳細情報を収集するためにアンケート調査を応募者に送信で"
-"きます。アンケート調査は試験や質問票と考えることができ、さまざまな方法で"
-"カスタマイズして採用チームに応募者に関する貴重な洞察を提供できます。"
+"きます。アンケート調査は試験や質問票と考えることができ、さまざまな方法でカス"
+"タマイズして採用チームに応募者に関する貴重な洞察を提供できます。"
 
 #: ../../content/applications/hr/recruitment.rst:57
 msgid ""
@@ -45269,12 +45732,11 @@ msgid ""
 "the surveys list displays a :guilabel:`No Survey Found` message and presents "
 "options to create a survey from several preconfigured survey templates."
 msgstr ""
-"このリストには、**採用**\\ アプリで使用されたアンケート調査だけでなく、"
-"データベースで作成されたすべてのアンケート調査が含まれます。アンケート調査が"
-"作成されていない場合、アンケート調査リストには\\ :guilabel:`アンケート調査が"
-"見つかりません`\\ というメッセージが表示され、事前設定されたいくつかの"
-"アンケート調査テンプレートからアンケート調査を作成するオプションが表示されま"
-"す。"
+"このリストには、**採用**\\ アプリで使用されたアンケート調査だけでなく、データ"
+"ベースで作成されたすべてのアンケート調査が含まれます。アンケート調査が作成さ"
+"れていない場合、アンケート調査リストには\\ :guilabel:`アンケート調査が見つか"
+"りません`\\ というメッセージが表示され、事前設定されたいくつかのアンケート調"
+"査テンプレートからアンケート調査を作成するオプションが表示されます。"
 
 #: ../../content/applications/hr/recruitment.rst:68
 msgid ":doc:`create and edit surveys <../marketing/surveys/create>`"
@@ -45372,8 +45834,8 @@ msgstr ""
 #: ../../content/applications/hr/recruitment.rst:112
 msgid ":guilabel:`Do not digitize`: This option turns off résumé digitization."
 msgstr ""
-":guilabel:`デジタル化しない`: このオプションは履歴書デジタル化をオフにします"
-"。"
+":guilabel:`デジタル化しない`: このオプションは履歴書デジタル化をオフにしま"
+"す。"
 
 #: ../../content/applications/hr/recruitment.rst:113
 msgid ""
@@ -45532,9 +45994,9 @@ msgid ""
 "small circle in the corner of the applicant card. A status pop-up window "
 "appears. Click on the desired status for the applicant."
 msgstr ""
-"各カードのステータスは手動で設定します。ステータスを設定するには、応募者"
-"カードの隅にある小さな円をクリックします。ステータスのポップアップウィンドウ"
-"が表示されます。応募者に希望するステータスをクリックします。"
+"各カードのステータスは手動で設定します。ステータスを設定するには、応募者カー"
+"ドの隅にある小さな円をクリックします。ステータスのポップアップウィンドウが表"
+"示されます。応募者に希望するステータスをクリックします。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "The applicant card statuses, and status bar."
@@ -45546,9 +46008,9 @@ msgid ""
 "`Waiting`,and `Blocked`) :ref:`can be modified <recruitment/modify-stages>`, "
 "if desired."
 msgstr ""
-"4つのステータスカラー（`In Progress`、`Ready for Next "
-"Stage`、`Waiting`、`Blocked`）の名前は、必要に応じて :ref:`変更可能 "
-"<recruitment/modify-stages>` です。"
+"4つのステータスカラー（`In Progress`、`Ready for Next Stage`、`Waiting`、"
+"`Blocked`）の名前は、必要に応じて :ref:`変更可能 <recruitment/modify-"
+"stages>` です。"
 
 #: ../../content/applications/hr/recruitment.rst:186
 msgid "Customize stages"
@@ -45576,18 +46038,19 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"新しいステージを作成するには、:guilabel:`Contract Signed` ステージの右側に"
-"ホバーすると、:guilabel:`Add Stage` オプションが表示されます。:guilabel:`Add "
-"Stage` をクリックすると、新しい列が表示されます。新しいステージ上部の空白"
-"ボックスに新しいステージのタイトルを入力し、:icon:`fa-check` ボタンをクリック"
-"します。新しい列が表示され、さらに別の新しいステージが表示されます。新しい"
-"ステージが不要な場合は、新しいステージ内の :icon:`fa-multiply` ボタンを"
-"クリックして閉じます。ステージが作成されたら、クリック＆ドラッグで"
-"ワークフロー内の希望する位置にステージを移動させます。"
+"新しいステージを作成するには、:guilabel:`Contract Signed` ステージの右側にホ"
+"バーすると、:guilabel:`Add Stage` オプションが表示されます。:guilabel:`Add "
+"Stage` をクリックすると、新しい列が表示されます。新しいステージ上部の空白ボッ"
+"クスに新しいステージのタイトルを入力し、:icon:`fa-check` ボタンをクリックしま"
+"す。新しい列が表示され、さらに別の新しいステージが表示されます。新しいステー"
+"ジが不要な場合は、新しいステージ内の :icon:`fa-multiply` ボタンをクリックして"
+"閉じます。ステージが作成されたら、クリック＆ドラッグでワークフロー内の希望す"
+"る位置にステージを移動させます。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "A new stage added, along with a second stage ready to be named."
-msgstr "新しいステージが追加され、同時に次の名前を設定できるステージも準備されます。"
+msgstr ""
+"新しいステージが追加され、同時に次の名前を設定できるステージも準備されます。"
 
 #: ../../content/applications/hr/recruitment.rst:206
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:184
@@ -45604,11 +46067,11 @@ msgid ""
 "window, then click :guilabel:`Save` when done."
 msgstr ""
 "ステージの設定を変更するには、ステージ名にホバーすると、上隅に :icon:`fa-"
-"cog` :guilabel:`(Settings)` アイコンが表示されます。:icon:`fa-cog` "
-":guilabel:`(Settings)` アイコンをクリックし、ドロップダウンメニューから "
-":icon:`fa-pencil` :guilabel:`Edit` をクリックします。*Edit: (Stage)* "
-"ポップアップウィンドウが表示されます。ポップアップウィンドウで必要な修正を行"
-"い、完了したら :guilabel:`Save` をクリックします。"
+"cog` :guilabel:`(Settings)` アイコンが表示されます。:icon:`fa-"
+"cog` :guilabel:`(Settings)` アイコンをクリックし、ドロップダウンメニューか"
+"ら :icon:`fa-pencil` :guilabel:`Edit` をクリックします。*Edit: (Stage)* ポッ"
+"プアップウィンドウが表示されます。ポップアップウィンドウで必要な修正を行い、"
+"完了したら :guilabel:`Save` をクリックします。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -45629,9 +46092,9 @@ msgid ""
 "only required field is the :guilabel:`Stage Name`. modify the stage as "
 "desired, then click :guilabel:`Save` to save the changes."
 msgstr ""
-"*Edit: (Stage)* フォームでは、ステージの設定が行えます。必須フィールドは "
-":guilabel:`Stage Name` のみです。ステージを希望通りに修正し"
-"、:guilabel:`Save` をクリックして変更を保存します。"
+"*Edit: (Stage)* フォームでは、ステージの設定が行えます。必須フィールド"
+"は :guilabel:`Stage Name` のみです。ステージを希望通りに修正"
+"し、:guilabel:`Save` をクリックして変更を保存します。"
 
 #: ../../content/applications/hr/recruitment.rst:227
 msgid "The fields to be populated or modified are:"
@@ -45726,19 +46189,19 @@ msgid ""
 msgstr ""
 ":guilabel:`Tooltips` セクション: 各応募者のカードには、ステータスを示す4つの"
 "事前設定済みステータスラベル（色付きの円）があります。これらの色は各ステージ"
-"の上部に表示され、ステージ内の応募者のステータスを反映します。ラベルの*名"
-"前*は変更できますが、ラベルそのもの（色）は変更できません。デフォルトの名前と"
-"ラベルは、:guilabel:`In Progress`（グレー）、:guilabel:`Blocked`（赤）"
-"、:guilabel:`Waiting`（黄）、そして :guilabel:`Ready for Next Stage`（緑）で"
-"す。"
+"の上部に表示され、ステージ内の応募者のステータスを反映します。ラベルの*名前*"
+"は変更できますが、ラベルそのもの（色）は変更できません。デフォルトの名前とラ"
+"ベルは、:guilabel:`In Progress`（グレー）、:guilabel:`Blocked`"
+"（赤）、:guilabel:`Waiting`（黄）、そして :guilabel:`Ready for Next Stage`"
+"（緑）です。"
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
 ":guilabel:`Requirements` section: Enter any internal notes for this stage "
 "explaining any requirements of the stage."
 msgstr ""
-":guilabel:`Requirements` セクション: このステージの要件を説明するための内部"
-"メモをこのステージに入力します。"
+":guilabel:`Requirements` セクション: このステージの要件を説明するための内部メ"
+"モをこのステージに入力します。"
 
 #: ../../content/applications/hr/recruitment.rst:258
 msgid "Delete stage"
@@ -45792,8 +46255,8 @@ msgid ""
 "automatically sent out once the applicant is in the :guilabel:`New` stage."
 msgstr ""
 ":guilabel:`Recruitment: Applicant Acknowledgement`: このテンプレートは、応募"
-"者の申請を受け付けたことを知らせるために使用されます。このメールは、応募者が "
-":guilabel:`New` ステージに入ると自動的に送信されます。"
+"者の申請を受け付けたことを知らせるために使用されます。このメールは、応募者"
+"が :guilabel:`New` ステージに入ると自動的に送信されます。"
 
 #: ../../content/applications/hr/recruitment.rst:282
 msgid ""
@@ -45831,10 +46294,10 @@ msgid ""
 "with the recruiter. This email is automatically sent out once the applicant "
 "is in the :guilabel:`Initial Qualification` stage."
 msgstr ""
-":guilabel:`採用：面接予定`：このテンプレートは、応募者が:guilabel:`初期審"
-"査`\\ ステージを通過したこと、そして採用担当者との面接設定のため間もなく連絡"
-"があることを知らせるために使用されます。このメールは、応募者が:guilabel:`初期"
-"審査`\\ ステージになると自動的に送信されます。"
+":guilabel:`採用：面接予定`：このテンプレートは、応募者が:guilabel:`初期審査"
+"`\\ ステージを通過したこと、そして採用担当者との面接設定のため間もなく連絡が"
+"あることを知らせるために使用されます。このメールは、応募者が:guilabel:`初期審"
+"査`\\ ステージになると自動的に送信されます。"
 
 #: ../../content/applications/hr/recruitment.rst:296
 msgid ""
@@ -45852,9 +46315,9 @@ msgid ""
 "text box appears, as well as the applicant's email address. Enter the "
 "message in the text box."
 msgstr ""
-"手動でメールを送信するには、チャッター内の :guilabel:`Send message` を"
-"クリックします。テキストボックスと応募者のメールアドレスが表示されます。"
-"テキストボックスにメッセージを入力します。"
+"手動でメールを送信するには、チャッター内の :guilabel:`Send message` をクリッ"
+"クします。テキストボックスと応募者のメールアドレスが表示されます。テキスト"
+"ボックスにメッセージを入力します。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "Send an email from the chatter."
@@ -45876,6 +46339,9 @@ msgid ""
 "v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
+"事前設定済みのメールテンプレートを使用するには、ウィンドウ下部にある "
+":icon:`fa-ellipsis-v`\\ :guilabel:`(テンプレート)`\\ アイコンをクリックします"
+"。ドロップダウンメニューから使用するメールテンプレートを選択します。"
 
 #: ../../content/applications/hr/recruitment.rst:313
 msgid ""
@@ -45910,6 +46376,11 @@ msgid ""
 "it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
 "icon at the end of the attachment."
 msgstr ""
+"添付ファイルを追加する必要がある場合は、ウィンドウ下部にある :icon:`fa-"
+"paperclip`\\ :guilabel:`(添付を追加)`\\ ボタンをクリックします。添付する"
+"ファイルまで移動し、:guilabel:`開く` をクリックして添付します。添付ファイルを"
+"削除するには、添付ファイルの最後にある :icon:`fa-times`\\ :guilabel:`(削除)"
+"`\\ アイコンをクリックします。"
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -45923,12 +46394,24 @@ msgid ""
 "Mail Template* pop-up window loads. Enter a name for the template in "
 "the :guilabel:`Template Name` field, then click :guilabel:`Save Template`."
 msgstr ""
+"メールに変更を加える必要がある場合は、メールの本文を編集します。編集内容を将"
+"来使用するために保存する場合は、新しいテンプレートとして保存できます。"
+"ウィンドウ下部の :icon:`fa-ellipsis-v`\\ :guilabel:`(テンプレート)`\\ ボタン"
+"をクリックし、:guilabel:`テンプレートとして保存` を選択します。既存の"
+"テンプレートを上書きするか、新しいテンプレートとして保存するかのオプションが"
+"表示されます。既存のテンプレートを上書きするにはテンプレート名をクリックし、"
+"新しいテンプレートとして保存するには :guilabel:`テンプレートとして保存` を"
+"クリックします。*メールテンプレートを作成*ポップアップウィンドウが読み込まれ"
+"ます。:guilabel:`テンプレート名` フィールドにテンプレート名を入力し"
+"、:guilabel:`テンプレートを保存` をクリックします。"
 
 #: ../../content/applications/hr/recruitment.rst:337
 msgid ""
 "To send the email, click :guilabel:`Send`. The email is sent to the "
 "applicant and the email appears in the chatter."
 msgstr ""
+"メールを送信するには、:guilabel:`送信` をクリックします。メールが応募者に送信"
+"され、チャターに表示されます。"
 
 #: ../../content/applications/hr/recruitment.rst:None
 #: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
@@ -47394,6 +47877,9 @@ msgid ""
 "activity across different job positions and track how many offers are in "
 "each stage."
 msgstr ""
+"*オファー分析*レポートは、募集職種とステータスごとにグループ化された、求人"
+"オファーの概要を提供します。これにより、採用担当者は様々な募集職種にわたる"
+"オファー活動を確認し、各ステージに何件のオファーがあるかを追跡できます。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:9
 msgid ""
@@ -47406,10 +47892,17 @@ msgid ""
 "gaps in the hiring process and make more informed decisions to support "
 "recruitment goals."
 msgstr ""
+"*オファー分析*レポートを使用して、採用担当者は求人数とオファー数を比較したり"
+"、オファー活動が少ない職種を特定したり、採用活動の進捗状況を監視したりできま"
+"す。例えば、オファー数が少ない職種は、より適格な応募者を集めるために採用戦略"
+"を調整する必要があることを示している可能性があります。職種やステータスごとの"
+"オファーデータをレビューすることで、採用プロセスにおける潜在的なギャップを特"
+"定し、採用目標を支援するためのより情報に基づいた意思決定を行うことができます"
+"。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:17
 msgid "View offer analysis report"
-msgstr ""
+msgstr "オファー分析レポートを表示"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:19
 msgid ""
@@ -47421,6 +47914,12 @@ msgid ""
 "is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
 "days."
 msgstr ""
+"*オファー分析*レポートにアクセスするには、:menuselection:`採用アプリ --> "
+"レポート --> オファー分析` に移動します。デフォルトでは、レポートは全募集職種"
+"のオファーデータを :icon:`fa-bar-chart`\\ :guilabel:`(棒グラフ)` で"
+"、:icon:`fa-database`\\ :guilabel:`(積み上げ)` グループで表示します。"
+"デフォルトのフィルタは :guilabel:`過去365日のオファー` で、過去365日間の情報"
+"を表示します。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -47429,6 +47928,10 @@ msgid ""
 "the number of offers in that stage for the job position. The stages are "
 "color-coded as follows:"
 msgstr ""
+"募集職種がX軸にリストされ、Y軸に沿って各ステージのオファー数が色分けされた"
+"ブロックで表示されます。ステージにカーソルを合わせると、その募集職種のその"
+"ステージにおけるオファー数が表示されます。ステージは以下のように色分けされて"
+"います。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:32
 msgid "Color"
@@ -47449,7 +47952,7 @@ msgstr "進行中"
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:37
 msgid ""
 "The offer was sent to the employee but the offer is unsigned by all parties."
-msgstr ""
+msgstr "オファーは従業員に送信されましたが、すべての当事者が署名していません。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:38
 msgid "Orange"
@@ -47463,7 +47966,7 @@ msgstr "一部署名済"
 msgid ""
 "A minimum of one person has signed the contract, but other signatures are "
 "required."
-msgstr ""
+msgstr "少なくとも1人が契約書に署名していますが、他の署名が必要です。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:41
 msgid "Green"
@@ -47475,7 +47978,7 @@ msgstr "署名完了"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:43
 msgid "The offer was accepted and all parties have signed the contract."
-msgstr ""
+msgstr "オファーは承諾され、すべての当事者が契約書に署名しました。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:44
 msgid "Blue"
@@ -47488,15 +47991,15 @@ msgstr "否認"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:46
 msgid "The offer was refused by the applicant."
-msgstr ""
+msgstr "オファーは応募者によって辞退されました。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:None
 msgid "A bar chart view of the Offer Analysis report."
-msgstr ""
+msgstr "オファー分析レポートの棒グラフビュー。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:52
 msgid "Use case: view offers by state"
-msgstr ""
+msgstr "使用例：ステータス別にオファーを表示"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:54
 msgid ""
@@ -47505,6 +48008,9 @@ msgid ""
 "it can be difficult to keep track of all the job offers and where each offer "
 "stands."
 msgstr ""
+"数百人の従業員を抱える成長中の大企業では、常に採用を行っています。継続的に埋"
+"めている役割が多いため、すべての求人オファーを追跡し、各オファーがどのような"
+"状態にあるかを把握することは困難な場合があります。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:58
 msgid ""
@@ -47515,6 +48021,12 @@ msgid ""
 "option in the :icon:`oi-group` :guilabel:`Group By` column. This provides a "
 "high-level overview of where all offers stand."
 msgstr ""
+"チームを支援するために、*オファー分析* レポートを変更し、募集職種別ではなく"
+"ステータス別にすべてのオファーを表示できます。ステータス別にオファーを表示す"
+"るには、 :menuselection:`採用アプリ --> レポーティング --> オファー分析` に移"
+"動します。検索バーをクリックし、 :guilabel:`オファーのステータス` オプション"
+"を :icon:`oi-group` :guilabel:`グループ化` カラムから選択します。これにより、"
+"すべてのオファーの現在の状況を包括的に把握できます。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""
@@ -47522,10 +48034,13 @@ msgid ""
 "state. This is helpful when trying to finalize all open offers, or see how "
 "many were refused or completed."
 msgstr ""
+"カラムをクリックすると、その特定のステータスにあるすべてのオファーの"
+"リストビューが開きます。これは、すべての未完了のオファーを確定させようとする"
+"際や、辞退または完了したオファーの数を確認する際に役立ちます。"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:None
 msgid "All offers grouped by state."
-msgstr ""
+msgstr "ステータスごとにグループ化されたすべてのオファー。"
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:3
 msgid "Offer job positions"

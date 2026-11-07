@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:35+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:35+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hebrew <https://translate.odoo.com/projects/odoo-19-doc/hr/"
 "he/>\n"
 "Language: he\n"
@@ -914,6 +914,7 @@ msgid ""
 msgstr "החצי העליון של טופס המטרות, מאוכלס עבור מטרת הדרכת בטיחות במפעל."
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "לשונית תיאור"
 
@@ -2510,6 +2511,448 @@ msgstr ":doc:`דיווח יסודות Odoo <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "אישורים"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"אפליקציית ה-**Approvals** ב-Odoo מאפשרת לעובדים להגיש בקשות רשמיות למגוון "
+"דברים, ומעניקה להנהלה את היכולת לבחון את הבקשות ולאחר מכן לאשר או לסרב להן. "
+"הדבר שומר על כל הבקשות במיקום מרכזי אחד, ומספק ארגון ושקיפות ברורים לכל "
+"הבקשות."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "סוגי אישור"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"בעת הגשת בקשת אישור, יש לציין את הקטגוריה, או את ה*סוג*. ישנן תשע קטגוריות "
+"אישור מוגדרות מראש שזמינות להגשת בקשות:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`נסיעת עסקים`: לבקשת נסיעות הקשורות לעבודה."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`השאלת פריטים`: לבקשת פריטים פיזיים שהחברה מחזיקה או מוכרת, לפרק "
+"זמן מוגדר."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`אישור כללי`: לבקשות שאינן מתאימות לאף אחד משמונת הסוגים המוגדרים "
+"כברירת מחדל."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`אישור חוזה`: לבקשת כל סוג של חוזה חיצוני, לא כולל :doc:`חוזי "
+"עובדים <payroll/contracts>`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ":guilabel:`בקשת תשלום`: לבקשת *אישור מראש* עבור הוצאות הקשורות לחברה."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"סוג אישור זה משמש **רק** בעת הגשת בקשה לאישור *מראש* עבור הוצאה שהחברה משלמת "
+"ישירות. אין להשתמש בקטגוריה זו עבור הוצאות שעובדים מבקשים עבורן החזר. פעולה "
+"זו מתבצעת דרך אפליקציית ה-:doc:`Expenses <../finance/expenses/log_expenses>`."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`בקשת השכרת רכב`: לבקשת השכרת רכב."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`פרס הפניית מועמד`: לבקשת פרסים על הפניית מועמדים שהרווחת אך לא "
+"הושלמו דרך אפליקציית ה-:doc:`Referrals <referrals>`."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`רכש`: משמש לבקשת פריטים הקשורים לעבודה כגון ציוד משרדי, כלים וכו'."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`יצירת הצעות מחיר (RFQ)`: משמש לבקשת הצעת מחיר עבור פריטים מספק."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "בקשות אישור"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"כדי ליצור בקשת אישור חדשה, פתח את אפליקציית ה-**Approvals**, לחץ על כפתור ה-"
+":guilabel:`New Request` בכרטיס סוג האישור המתאים ביותר לבקשה, וטופס אישור "
+"ריק ייטען. מלא את החלקים והלשוניות השונים, ולאחר מכן לחץ על "
+":guilabel:`Submit` כדי להגיש את הבקשה לאישור."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "קטע מידע כללי"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"החצי העליון של הטופס מכיל את כל המידע הכללי לגבי הבקשה. מלא את השדות הבאים "
+"בחצי העליון של הטופס:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"כל השדות המפורטים להלן מופיעים בטופס עבור קטגוריית ה-:guilabel:`General "
+"Approval`. אם נבחרת :guilabel:`Category` אחרת, חלק מהשדות מוסתרים."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`נושא האישור`: שדה זה מאוכלס אוטומטית בסוג האישור שנבחר. בצע את כל "
+"השינויים הרצויים בטקסט המוגדר כברירת מחדל כדי לספק הקשר נוסף לבקשה."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`בעל הבקשה`: האדם האחראי על בקשת האישור. המשתמש המחובר מאכלס שדה "
+"זה כברירת מחדל."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`קטגוריה`: הקטגוריה שנבחרה מופיעה בשדה זה, אך ניתן לשנות אותה "
+"באמצעות התפריט הנפתח."
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`תאריך`: באמצעות בורר לוח השנה, הגדירו את התאריך והשעה שעבורם "
+"מיועדת הבקשה. שדה זה מופיע **רק** אם נבחרה אפשרות של :guilabel:`בקשת תשלום` "
+"או :guilabel:`אישור כללי` עבור ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`תקופה`: באמצעות בורר לוח השנה, הגדירו את תאריכי ההתחלה והסיום "
+"עבור הבקשה בשדות :guilabel:`מאת` ו-:guilabel:`עד`. שדה זה מופיע **רק** אם "
+"נבחרה אפשרות של :guilabel:`נסיעת עסקים`, :guilabel:`השאלת פריטים`, "
+":guilabel:`בקשת השכרת רכב`, או :guilabel:`אישור כללי` עבור "
+"ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`מיקום`: הזינו את המיקום הספציפי שעבורו מיועדת בקשת האישור. שדה זה "
+"מופיע **רק** אם נבחרה אפשרות של :guilabel:`נסיעת עסקים` או :guilabel:`אישור "
+"כללי` עבור ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`איש קשר`: בחרו את איש הקשר עבור הבקשה באמצעות התפריט הנפתח. "
+"האפשרויות הזמינות מגיעות מאפליקציית **אנשי קשר**. שדה זה מופיע **רק** אם "
+"נבחרה אפשרות של :guilabel:`אישור חוזה`, :guilabel:`בקשת תשלום`, "
+":guilabel:`פרס הפניית מועמד`, או :guilabel:`אישור כללי` עבור "
+"ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`כמות`: הזינו את מספר הפריטים המבוקשים בשדה זה. שדה זה מופיע "
+"**רק** אם נבחרה אפשרות של :guilabel:`רכש` עבור ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`סכום`: הזינו את הסכום המבוקש. שדה זה מופיע **רק** אם נבחרה אפשרות "
+"של :guilabel:`אישור חוזה`, :guilabel:`בקשת תשלום`, :guilabel:`רכש`, או "
+":guilabel:`אישור כללי` עבור ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`סימוכין`: הזינו כל סימוכין רלוונטי עבור הבקשה בשדה זה. שדה זה "
+"מופיע **רק** אם נבחרה אפשרות של :guilabel:`אישור חוזה` או :guilabel:`אישור "
+"כללי` עבור ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"כל סוג אישור מציג שדות שונים בטופס האישור. זאת כיוון שלכל *סוג אישור* יש "
+"שדות חובה משלו. אם ה*סוג* אינו ידוע מיידית, לחצו על כפתור ה:guilabel:`בקשה "
+"חדשה` בחלק העליון של הדף כדי לפתוח טופס בקשת אישור כללי. ברגע שנבחר "
+"ה:guilabel:`קטגוריה`, השדות המתאימים יופיעו בטופס."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr "החצי העליון של טופס אישור שמולא עבור נסיעת עסקים."
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "לשונית מוצר"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"אם מבוקשים מוצרים מוגדרים במסד הנתונים, הם מופיעים בלשונית *מוצרים*. לשונית "
+"זו מופיעה **רק** אם נבחרה אפשרות של :guilabel:`השאלת פריטים`, "
+":guilabel:`אישור כללי`, או :guilabel:`צור בקשות להצעת מחיר` בשדה "
+"ה:guilabel:`קטגוריה`."
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"כדי להוסיף מוצר, לחצו על :guilabel:`הוסף שורה` ושורה ריקה תופיע. באמצעות "
+"התפריט הנפתח, בחרו את המוצר המבוקש. לאחר הבחירה, ה:guilabel:`תיאור` המוגדר "
+"של המוצר ימלא אוטומטית את השדה. ה:guilabel:`כמות` היא :guilabel:`1.00` "
+"כברירת מחדל, אך ניתן לעדכן אותה במידת הצורך."
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"לשונית *תיאור* היא המקום בו מוזן כל מידע להבהרת הבקשה. הוסיפו כל מידע "
+"רלוונטי בלשונית זו."
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "לשונית מאשר(ים)"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"לשונית *מאשרים* היא המקום בו מוגדרים האנשים האחראים על אישור הבקשה. כדי "
+"להוסיף מאשר, לחצו על :guilabel:`הוסף שורה`, ושורה ריקה תופיע. באמצעות התפריט "
+"הנפתח, בחרו את המשתמש הרצוי. חזרו על הפעולה עבור כל שאר המאשרים. אין הגבלה "
+"על מספר המשתמשים בלשונית זו."
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"כדי לציין שמשתמש **חייב** לאשר את הבקשה, סמנו את תיבת הסימון בעמודת "
+":guilabel:`נדרש`."
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr "ככל שמשתמשים מתווספים, ה:guilabel:`סטטוס` שלהם נשאר :guilabel:`חדש`."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr "לשונית המאשרים עם שלושה מאשרים רשומים, ואחד נדרש."
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "צרף מסמכים"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"כל בקשות האישור כוללות אפשרות לצרף מסמכים רלוונטיים. כדי לצרף מסמך, לחצו על "
+"כפתור :guilabel:`צרף מסמך` בראש הדף, וחלון סייר קבצים ייטען. נווטו לקובץ "
+"הרצוי, בחרו אותו, ולאחר מכן לחצו על :guilabel:`פתח` כדי לצרף אותו. ניתן "
+"לבחור ולהוסיף מספר מסמכים בו-זמנית."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"לאחר הצירוף, כפתור חכם :icon:`fa-book` :guilabel:`מסמכים` מופיע בראש הדף, "
+"ומציין כמה מסמכים מצורפים. בנוסף, המסמכים מפורטים ב-chatter. אם המסך רחב "
+"מספיק, המסמכים יופיעו בצד המסך."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "ניהול אישורים"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"לאחר הגשת הבקשות, עליהן לקבל אישור מהמאשרים הנדרשים המפורטים ב-:ref:`לשונית "
+"מאשר(ים) <approvals/approvers>`. כדי להציג אישורים הממתינים לפעולה, נווטו אל "
+":menuselection:`אפליקציית אישורים --> מנהל --> אישורים לבדיקה`, ולוח הבקרה "
+"*אישורים לבדיקה* ייטען. כל האישורים הממתינים לפעולת המשתמש מופיעים בסדר "
+"אלפביתי בתצוגת רשימה המוגדרת כברירת מחדל."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"רק בקשות *שהוגשו* שהמשתמש מוגדר עבורן כמאשר מופיעות בלוח הבקרה *אישורים "
+"לבדיקה*. כל שאר הבקשות נשארות מוסתרות."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr "כל בקשות האישור הממתינות לאישור, שהמשתמש מוקצה להן."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"יש לאשר בקשות באופן פרטני מטופס האישורים. כדי לאשר בקשה, לחצו על הבקשה "
+"הספציפית בלוח הבקרה *אישורים לבדיקה* וטופס הבקשה האישי ייטען."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr "בקשה להשאיל מצלמה, כאשר כפתורי אישור וסירוב מוצגים."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"כדי לאשר את הבקשה, לחצו על כפתור :guilabel:`אשר` בטופס בקשת האישור האישי, "
+"והסטטוס ישתנה ל-:guilabel:`אושר`. כאשר משתמשים מאשרים את הבקשה, ה-"
+":guilabel:`סטטוס` שלהם משתנה ל-:guilabel:`אושר` והטקסט מופיע בצבע ירוק."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"כדי לסרב לבקשה, לחצו על כפתור :guilabel:`סרב` בטופס בקשת האישור האישי, "
+"והסטטוס ישתנה ל-:guilabel:`סורב`. כאשר משתמש מסרב לבקשה, ה-:guilabel:`סטטוס` "
+"שלה משתנה ל-:guilabel:`סורב` והטקסט מופיע בצבע אדום."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"בכל שלב, ניתן להחזיר בקשות אישור שהן או :guilabel:`אושר` או :guilabel:`סורב` "
+"לשלב :guilabel:`הוגש` על ידי לחיצה על כפתור :guilabel:`משיכה`. ה-"
+":guilabel:`סטטוס` עבור כל המאשרים חוזר ל-:guilabel:`לאישור`, והטקסט מופיע "
+"בצבע כתום."
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -17362,12 +17805,6 @@ msgstr ""
 "לחץ על הלחצן :guilabel:`חדש`, וטופס תבנית חוזה ריק ייטען. הגדר את השדות "
 "הבאים בקטעים השונים של הטופס:"
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "קטע מידע כללי"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -17838,8 +18275,8 @@ msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
 "users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
-"כדי להציג את העובדים של דוח מצבת כוח אדם ספציפי, יש ללחוץ על הכפתור החכם "
-":icon:`fa-users` :guilabel:`עובדים` בראש דוח מצבת כוח האדם."
+"כדי להציג את העובדים של דוח מצבת כוח אדם ספציפי, יש ללחוץ על הכפתור "
+"החכם :icon:`fa-users` :guilabel:`עובדים` בראש דוח מצבת כוח האדם."
 
 #: ../../content/applications/hr/payroll/headcount.rst:49
 msgid ""
@@ -43843,8 +44280,8 @@ msgid ""
 "any changes are made, click the :guilabel:`Save` button in the corner."
 msgstr ""
 "לפני יצירת משרת עבודה ב-Odoo, יש להגדיר את ההגדרות הדרושות עבור אפליקציית "
-"ה**גיוס**. כדי להציג ולערוך את ההגדרות, יש לנווט אל "
-":menuselection:`אפליקציית גיוס --> תצורה --> הגדרות`. לאחר ביצוע שינויים "
+"ה**גיוס**. כדי להציג ולערוך את ההגדרות, יש לנווט "
+"אל :menuselection:`אפליקציית גיוס --> תצורה --> הגדרות`. לאחר ביצוע שינויים "
 "כלשהם, יש ללחוץ על כפתור ה-:guilabel:`שמירה` בפינה."
 
 #: ../../content/applications/hr/recruitment.rst:38
@@ -43910,9 +44347,9 @@ msgid ""
 "options to create a survey from several preconfigured survey templates."
 msgstr ""
 "רשימה זו כוללת את כל הסקרים שנוצרו במסד הנתונים, לא רק סקרים המשמשים "
-"באפליקציית **גיוס**. אם לא נוצרו סקרים, רשימת הסקרים מציגה הודעה "
-":guilabel:`לא נמצא סקר`, ומציגה אפשרויות ליצירת סקר ממספר תבניות סקר מוגדרות "
-"מראש."
+"באפליקציית **גיוס**. אם לא נוצרו סקרים, רשימת הסקרים מציגה "
+"הודעה :guilabel:`לא נמצא סקר`, ומציגה אפשרויות ליצירת סקר ממספר תבניות סקר "
+"מוגדרות מראש."
 
 #: ../../content/applications/hr/recruitment.rst:68
 msgid ":doc:`create and edit surveys <../marketing/surveys/create>`"
@@ -44079,10 +44516,10 @@ msgid ""
 "dashboard. Click a job position card to navigate to the Kanban view for all "
 "applicants for that particular job position."
 msgstr ""
-"כדי לגשת לתצוגת ה-Kanban של משרה, נווט אל לוח הבקרה הראשי של אפליקציית "
-":menuselection:`גיוס`, שהוא תצוגת ברירת המחדל בעת פתיחת האפליקציה. כל המשרות "
-"מופיעות בלוח הבקרה הראשי. לחץ על כרטיס משרה כדי לנווט לתצוגת ה-Kanban עבור "
-"כל המועמדים לאותה משרה ספציפית."
+"כדי לגשת לתצוגת ה-Kanban של משרה, נווט אל לוח הבקרה הראשי של "
+"אפליקציית :menuselection:`גיוס`, שהוא תצוגת ברירת המחדל בעת פתיחת האפליקציה. "
+"כל המשרות מופיעות בלוח הבקרה הראשי. לחץ על כרטיס משרה כדי לנווט לתצוגת "
+"ה-Kanban עבור כל המועמדים לאותה משרה ספציפית."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "Main dashboard view of all job positions."
@@ -44192,8 +44629,8 @@ msgid ""
 "if desired."
 msgstr ""
 "ניתן לשנות את השמות של ארבעת צבעי הסטטוס (`בתהליך`, `מוכן לשלב הבא`, "
-"`בהמתנה` ו-`חסום`) במידת הצורך :ref:`ניתן לשינוי <recruitment/modify-stages>"
-"`."
+"`בהמתנה` ו-`חסום`) במידת הצורך :ref:`ניתן לשינוי <recruitment/modify-"
+"stages>`."
 
 #: ../../content/applications/hr/recruitment.rst:186
 msgid "Customize stages"
@@ -44221,10 +44658,10 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"כדי ליצור שלב חדש, רחף מימין לשלב :guilabel:`חוזה חתום`, פעולה שתחשוף אפשרות "
-":guilabel:`הוסף שלב`. לחץ על :guilabel:`הוסף שלב` ועמודה חדשה תופיע. הזן את "
-"הכותרת עבור השלב החדש בתיבה הריקה בראש השלב החדש, ולאחר מכן לחץ על כפתור "
-":icon:`fa-check`. העמודה החדשה תופיע, ושלב חדש נוסף יופיע. אם אין צורך "
+"כדי ליצור שלב חדש, רחף מימין לשלב :guilabel:`חוזה חתום`, פעולה שתחשוף "
+"אפשרות :guilabel:`הוסף שלב`. לחץ על :guilabel:`הוסף שלב` ועמודה חדשה תופיע. "
+"הזן את הכותרת עבור השלב החדש בתיבה הריקה בראש השלב החדש, ולאחר מכן לחץ על "
+"כפתור :icon:`fa-check`. העמודה החדשה תופיע, ושלב חדש נוסף יופיע. אם אין צורך "
 "בשלבים חדשים נוספים, לחץ על כפתור :icon:`fa-multiply` בשלב החדש כדי לסגור "
 "אותו. ברגע שהשלב נוצר, לחץ וגרור את השלב כדי להעביר אותו למיקום הרצוי בתהליך "
 "העבודה."
@@ -44247,11 +44684,12 @@ msgid ""
 "(Stage)* pop-up window appears. Make any desired modifications in the pop-up "
 "window, then click :guilabel:`Save` when done."
 msgstr ""
-"כדי לשנות את הגדרות השלב, רחף מעל שם השלב, וסמל :icon:`fa-cog` :guilabel:`"
-"(הגדרות)` יופיע בפינה העליונה. לחץ על סמל :icon:`fa-cog` :guilabel:`(הגדרות)"
-"`, ולאחר מכן לחץ על :icon:`fa-pencil` :guilabel:`עריכה` מתפריט הנפתח שיתקבל. "
-"יופיע חלון קופץ *עריכה: (שלב)*. בצע את השינויים הרצויים בחלון הקופץ, ולאחר "
-"מכן לחץ על :guilabel:`שמור` בסיום."
+"כדי לשנות את הגדרות השלב, רחף מעל שם השלב, וסמל :icon:`fa-"
+"cog` :guilabel:`(הגדרות)` יופיע בפינה העליונה. לחץ על סמל :icon:`fa-"
+"cog` :guilabel:`(הגדרות)`, ולאחר מכן לחץ על :icon:`fa-"
+"pencil` :guilabel:`עריכה` מתפריט הנפתח שיתקבל. יופיע חלון קופץ *עריכה: "
+"(שלב)*. בצע את השינויים הרצויים בחלון הקופץ, ולאחר מכן לחץ "
+"על :guilabel:`שמור` בסיום."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -44272,9 +44710,9 @@ msgid ""
 "only required field is the :guilabel:`Stage Name`. modify the stage as "
 "desired, then click :guilabel:`Save` to save the changes."
 msgstr ""
-"טופס *ערוך: (שלב)* הוא המקום שבו מוגדרות הגדרות השלב. השדה היחיד הנדרש הוא "
-":guilabel:`שם השלב`. שנה את השלב כרצונך ולאחר מכן לחץ על :guilabel:`שמור` "
-"כדי לשמור את השינויים."
+"טופס *ערוך: (שלב)* הוא המקום שבו מוגדרות הגדרות השלב. השדה היחיד הנדרש "
+"הוא :guilabel:`שם השלב`. שנה את השלב כרצונך ולאחר מכן לחץ "
+"על :guilabel:`שמור` כדי לשמור את השינויים."
 
 #: ../../content/applications/hr/recruitment.rst:227
 msgid "The fields to be populated or modified are:"
@@ -44366,9 +44804,9 @@ msgstr ""
 ":guilabel:`תיאורי כלים` סעיף: קיימות ארבע תוויות סטטוס מוגדרות מראש (עיגולים "
 "צבעוניים) עבור הכרטיס של כל מועמד, המציינות את הסטטוס שלו. צבעים אלו מוצגים "
 "בראש כל שלב כדי לשקף את הסטטוסים של המועמדים בשלב זה. ניתן לשנות את *השמות* "
-"של התווית, אך לא את התווית עצמה (הצבע). השמות ותוויות ברירת המחדל הם: "
-":guilabel:`בתהליך` (אפור), :guilabel:`חסום` (אדום), :guilabel:`ממתין` (צהוב)"
-", ו- :guilabel:`מוכן לשלב הבא` (ירוק)."
+"של התווית, אך לא את התווית עצמה (הצבע). השמות ותוויות ברירת המחדל "
+"הם: :guilabel:`בתהליך` (אפור), :guilabel:`חסום` (אדום), :guilabel:`ממתין` "
+"(צהוב), ו- :guilabel:`מוכן לשלב הבא` (ירוק)."
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
@@ -44392,10 +44830,10 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "אם שלב אינו נחוץ עוד, ניתן למחוק אותו. כדי למחוק שלב, העבר את העכבר מעל שם "
-"השלב ולחץ על סמל :icon:`fa-cog` :guilabel:`(הגדרות)` שמופיע. לחץ על "
-":icon:`fa-trash` :guilabel:`מחק` ותופיע הודעת אזהרה קופצת של *אישור*, השואלת "
-":guilabel:`האם אתה בטוח שברצונך למחוק עמודה זו?` לחץ על :guilabel:`מחק` כדי "
-"למחוק את השלב."
+"השלב ולחץ על סמל :icon:`fa-cog` :guilabel:`(הגדרות)` שמופיע. לחץ "
+"על :icon:`fa-trash` :guilabel:`מחק` ותופיע הודעת אזהרה קופצת של *אישור*, "
+"השואלת :guilabel:`האם אתה בטוח שברצונך למחוק עמודה זו?` לחץ "
+"על :guilabel:`מחק` כדי למחוק את השלב."
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -44428,8 +44866,8 @@ msgid ""
 "automatically sent out once the applicant is in the :guilabel:`New` stage."
 msgstr ""
 ":guilabel:`גיוס: אישור קבלת מועמדות`: תבנית זו משמשת כדי להודיע למועמד "
-"שהמועמדות שלו התקבלה. דוא\"ל זה נשלח אוטומטית ברגע שהמועמד נמצא בשלב ה- "
-":guilabel:`חדש`."
+"שהמועמדות שלו התקבלה. דוא\"ל זה נשלח אוטומטית ברגע שהמועמד נמצא בשלב "
+"ה- :guilabel:`חדש`."
 
 #: ../../content/applications/hr/recruitment.rst:282
 msgid ""
@@ -44464,10 +44902,10 @@ msgid ""
 "with the recruiter. This email is automatically sent out once the applicant "
 "is in the :guilabel:`Initial Qualification` stage."
 msgstr ""
-":guilabel:`גיוס: תזמון ראיון`: תבנית זו משמשת ליידע את המועמד כי עבר את שלב "
-":guilabel:`הסינון הראשוני`, ובקרוב ייצרו איתו קשר לתיאום ראיון עם המגייס. "
-"הודעת דוא\"ל זו נשלחת אוטומטית לאחר שהמועמד נמצא בשלב :guilabel:`הסינון "
-"הראשוני`."
+":guilabel:`גיוס: תזמון ראיון`: תבנית זו משמשת ליידע את המועמד כי עבר את "
+"שלב :guilabel:`הסינון הראשוני`, ובקרוב ייצרו איתו קשר לתיאום ראיון עם "
+"המגייס. הודעת דוא\"ל זו נשלחת אוטומטית לאחר שהמועמד נמצא "
+"בשלב :guilabel:`הסינון הראשוני`."
 
 #: ../../content/applications/hr/recruitment.rst:296
 msgid ""
@@ -44501,9 +44939,9 @@ msgid ""
 "Name)`."
 msgstr ""
 "לחץ על סמל :icon:`fa-expand` :guilabel:`(פתח עורך מלא)` בפינה התחתונה של "
-"הכרטיסייה *שלח הודעה* בצ'אט. ייפתח חלון קופץ של *כתיבת דוא\"ל*, עם השדות "
-":guilabel:`אל` ו- :guilabel:`נושא` שמולאו מראש. כתובת הדוא\"ל של המועמד "
-"מוזנת בשדה :guilabel:`אל`, וה- :guilabel:`נושא` הוא `(שם המועמד)`."
+"הכרטיסייה *שלח הודעה* בצ'אט. ייפתח חלון קופץ של *כתיבת דוא\"ל*, עם "
+"השדות :guilabel:`אל` ו- :guilabel:`נושא` שמולאו מראש. כתובת הדוא\"ל של "
+"המועמד מוזנת בשדה :guilabel:`אל`, וה- :guilabel:`נושא` הוא `(שם המועמד)`."
 
 #: ../../content/applications/hr/recruitment.rst:310
 msgid ""
@@ -44511,8 +44949,8 @@ msgid ""
 "v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
-"כדי להשתמש בתבנית דוא\"ל מוגדרת מראש, לחץ על סמל :icon:`fa-ellipsis-v` "
-":guilabel:`(תבניות)` בתחתית החלון. בחר את תבנית הדוא\"ל שבה ברצונך להשתמש "
+"כדי להשתמש בתבנית דוא\"ל מוגדרת מראש, לחץ על סמל :icon:`fa-ellipsis-"
+"v` :guilabel:`(תבניות)` בתחתית החלון. בחר את תבנית הדוא\"ל שבה ברצונך להשתמש "
 "מתוך התפריט הנפתח."
 
 #: ../../content/applications/hr/recruitment.rst:313
@@ -44547,10 +44985,10 @@ msgid ""
 "it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
 "icon at the end of the attachment."
 msgstr ""
-"אם יש להוסיף קבצים מצורפים, לחץ על כפתור :icon:`fa-paperclip` :guilabel:`"
-"(הוסף קובץ מצורף)` בתחתית החלון. נווט לקובץ המצורף ולחץ על :guilabel:`פתח` "
-"כדי לצרף אותו. כדי למחוק קובץ מצורף, לחץ על סמל :icon:`fa-times` :guilabel:`"
-"(מחק)` בקצה הקובץ המצורף."
+"אם יש להוסיף קבצים מצורפים, לחץ על כפתור :icon:`fa-"
+"paperclip` :guilabel:`(הוסף קובץ מצורף)` בתחתית החלון. נווט לקובץ המצורף "
+"ולחץ על :guilabel:`פתח` כדי לצרף אותו. כדי למחוק קובץ מצורף, לחץ על "
+"סמל :icon:`fa-times` :guilabel:`(מחק)` בקצה הקובץ המצורף."
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -46036,10 +46474,10 @@ msgid ""
 "days."
 msgstr ""
 "כדי לגשת לדוח *ניתוח הצעות*, יש לנווט אל :menuselection:`אפליקציית גיוס --> "
-"דיווח --> ניתוח הצעות`. כברירת מחדל, הדוח מציג נתוני הצעות עבור כל המשרות ב-"
-":icon:`fa-bar-chart` :guilabel:`(תרשים עמודות)` עם קבוצות :icon:`fa-"
-"database` :guilabel:`(מוערמות)`. המסנן המוגדר כברירת מחדל הוא "
-":guilabel:`הצעות 365 הימים האחרונים`, המציג מידע עבור 365 הימים האחרונים."
+"דיווח --> ניתוח הצעות`. כברירת מחדל, הדוח מציג נתוני הצעות עבור כל המשרות "
+"ב-:icon:`fa-bar-chart` :guilabel:`(תרשים עמודות)` עם קבוצות :icon:`fa-"
+"database` :guilabel:`(מוערמות)`. המסנן המוגדר כברירת מחדל "
+"הוא :guilabel:`הצעות 365 הימים האחרונים`, המציג מידע עבור 365 הימים האחרונים."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -46140,10 +46578,10 @@ msgid ""
 "high-level overview of where all offers stand."
 msgstr ""
 "כדי לסייע לצוות, ניתן לשנות את דוח *ניתוח הצעות* כדי להציג את כל ההצעות לפי "
-"מצב, במקום לפי משרה. כדי להציג הצעות לפי מצב, יש לנווט אל "
-":menuselection:`אפליקציית גיוס --> דיווח --> ניתוח הצעות`. לחץ על שורת "
-"החיפוש ובחר באפשרות :guilabel:`מצב הצעה` בעמודה :icon:`oi-group` "
-":guilabel:`קבץ לפי`. זה מספק סקירה כללית של מצב כל ההצעות."
+"מצב, במקום לפי משרה. כדי להציג הצעות לפי מצב, יש לנווט "
+"אל :menuselection:`אפליקציית גיוס --> דיווח --> ניתוח הצעות`. לחץ על שורת "
+"החיפוש ובחר באפשרות :guilabel:`מצב הצעה` בעמודה :icon:`oi-"
+"group` :guilabel:`קבץ לפי`. זה מספק סקירה כללית של מצב כל ההצעות."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""

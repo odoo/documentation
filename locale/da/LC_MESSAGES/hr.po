@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:34+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-19-doc/hr/"
 "da/>\n"
 "Language: da\n"
@@ -983,6 +983,7 @@ msgstr ""
 "továrně."
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "Fanen Beskrivelse"
 
@@ -2710,6 +2711,490 @@ msgstr ":doc:`Odoo essentials rapportering <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Godkendelser"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"**Godkendelser**-appen i Odoo giver medarbejdere mulighed for at foretage "
+"officielle anmodninger om en række forskellige ting, hvilket giver ledelsen "
+"mulighed for at gennemse anmodninger og derefter enten godkende eller afvise "
+"dem. Dette holder alle anmodninger på ét centraliseret sted, hvilket giver "
+"klar organisering og gennemsigtighed for alle anmodninger."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Godkendelsestyper"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Når man anmoder om en godkendelse, skal kategorien, eller *typen*, angives. "
+"Der er ni forudkonfigurerede godkendelseskategorier til rådighed til at "
+"foretage anmodninger:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ""
+":guilabel:`Forretningsrejse`: Til anmodning om arbejdsrelaterede rejser."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Låne genstande`: Til anmodning om fysiske genstande, som "
+"virksomheden ejer eller sælger, i en bestemt tidsperiode."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Generel godkendelse`: Til anmodninger, der ikke passer ind i "
+"nogen af de otte andre standardtyper."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Kontraktgodkendelse`: Til anmodning om enhver form for ekstern "
+"kontrakt, eksklusive :doc:`medarbejderkontrakter <payroll/contracts>`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Betalingsansøgning`: Til anmodning om *forhåndsgodkendelse* til "
+"arbejdsrelaterede udgifter."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Denne godkendelsestype bruges **kun**, når der anmodes om godkendelse *på "
+"forhånd* til en udgift, som virksomheden betaler direkte. Denne kategori bør "
+"**ikke** bruges til udgifter, som medarbejdere søger refusion for. Dette "
+"gøres via :doc:`Udgifter-appen <../finance/expenses/log_expenses>`."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`Biludlejningsansøgning`: Til anmodning om en udlejningsbil."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Bonus for henvisning`: Til anmodning om bonusser for "
+"henvisninger, der blev optjent, men ikke gennemført via :doc:`Henvisninger "
+"<referrals>`-appen."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Indkøb`: Bruges til at anmode om arbejdsrelaterede genstande "
+"såsom kontorartikler, værktøj osv."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Opret udbud`: Bruges til at anmode om et tilbud på varer fra en "
+"leverandør."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Godkendelsesanmodninger"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"For at oprette en ny godkendelsesanmodning skal du åbne **Godkendelser**-"
+"appen, klikke på knappen :guilabel:`Ny anmodning` på det "
+"godkendelsestypekort, der passer bedst til anmodningen, hvorefter en tom "
+"godkendelsesformular indlæses. Udfyld de forskellige sektioner og faner, og "
+"klik derefter på :guilabel:`Indsend` for at indsende anmodningen til "
+"godkendelse."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "Sektion for generelle oplysninger"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"Den øverste halvdel af formularen indeholder alle generelle oplysninger "
+"vedrørende anmodningen. Udfyld følgende felter i den øverste halvdel af "
+"formularen:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Alle felter angivet nedenfor vises på formularen for kategorien "
+":guilabel:`Generel godkendelse`. Hvis en anden :guilabel:`Kategori` vælges, "
+"skjules nogle felter."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Godkendelsesemne`: Dette felt udfyldes automatisk med den valgte "
+"godkendelsestype. Foretag eventuelle ønskede ændringer i standardteksten for "
+"at give yderligere kontekst til anmodningen."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Anmodningsejer`: Personen med ansvar for godkendelsesanmodningen. "
+"Den bruger, der er logget ind, udfylder som standard dette felt."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`Kategori`: Den valgte kategori vises i dette felt, men kan ændres "
+"ved hjælp af rullemenuen."
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Dato`: Brug kalendervælgeren til at indstille den dato og det "
+"tidspunkt, som anmodningen vedrører. Dette felt vises **kun**, hvis "
+":guilabel:`Betalingsansøgning` eller :guilabel:`Generel godkendelse` er "
+"valgt for :guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Periode`: Brug kalendervælgeren til at indstille start- og "
+"slutdatoer for anmodningen i felterne :guilabel:`Fra` og :guilabel:`til`. "
+"Dette felt vises **kun**, hvis :guilabel:`Forretningsrejse`, :guilabel:`Lån "
+"genstande`, :guilabel:`Biludlejningsansøgning` eller :guilabel:`Generel "
+"godkendelse` er valgt for :guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Placering`: Angiv den specifikke lokation, som "
+"godkendelsesanmodningen vedrører. Dette felt vises **kun**, hvis "
+":guilabel:`Forretningsrejse` eller :guilabel:`Generel godkendelse` er valgt "
+"for :guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Kontakt`: Vælg kontaktpunktet for anmodningen ved hjælp af "
+"rullemenuen. De tilgængelige muligheder er fra appen **Kontakter**. Dette "
+"felt vises **kun**, hvis :guilabel:`Kontraktgodkendelse`, "
+":guilabel:`Betalingsansøgning`, :guilabel:`Jobhenvisningsbonus`, eller "
+":guilabel:`Generel godkendelse` er valgt for :guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Mængde`: Angiv antallet af genstande, der anmodes om i dette "
+"felt. Dette felt vises **kun**, hvis :guilabel:`Indkøb` er valgt for "
+":guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Beløb`: Angiv det beløb, der anmodes om. Dette felt vises "
+"**kun**, hvis :guilabel:`Kontraktgodkendelse`, "
+":guilabel:`Betalingsansøgning`, :guilabel:`Indkøb`, eller :guilabel:`Generel "
+"godkendelse` er valgt for :guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Reference`: Angiv enhver relevant reference for anmodningen i "
+"dette felt. Dette felt vises **kun**, hvis :guilabel:`Kontraktgodkendelse` "
+"eller :guilabel:`Generel godkendelse` er valgt for :guilabel:`Kategori`."
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"Hver godkendelsestype præsenterer forskellige felter i "
+"godkendelsesformularen. Dette skyldes, at hver *godkendelsestype* har sine "
+"egne påkrævede felter. Hvis *typen* ikke kendes med det samme, skal du "
+"klikke på knappen :guilabel:`Ny anmodning` øverst på siden for at åbne en "
+"generisk anmodningsformular. Når :guilabel:`Kategori` er valgt, vises de "
+"tilsvarende felter i formularen."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr ""
+"Den øverste halvdel af en godkendelsesformular udfyldt til en "
+"forretningsrejse."
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "Produkt-fane"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"Hvis der anmodes om konfigurerede produkter i databasen, er de angivet under "
+"fanen *Produkter*. Denne fane vises **kun**, hvis :guilabel:`Lån genstande`, "
+":guilabel:`Generel godkendelse`, eller :guilabel:`Opret RFQ'er` er valgt i "
+"feltet :guilabel:`Kategori` field."
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"For at tilføje et produkt skal du klikke på :guilabel:`Tilføj en linje`, "
+"hvorefter en tom linje vises. Brug rullemenuen til at vælge det produkt, der "
+"anmodes om. Når det er valgt, udfyldes det pågældende felt automatisk med "
+"produktets konfigurerede :guilabel:`Beskrivelse`. :guilabel:`Mængde` er som "
+"standard :guilabel:`1,00`, men kan opdateres om nødvendigt."
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"Fanen *Beskrivelse* er der, hvor alle oplysninger til afklaring af "
+"anmodningen indtastes. Tilføj relevante oplysninger under denne fane."
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "Fane for godkender(e)"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"Fanen *Godkender(e)* er der, hvor personerne, der er ansvarlige for at "
+"godkende anmodningen, konfigureres. For at tilføje en godkender skal du "
+"klikke på :guilabel:`Tilføj en linje`, hvorefter en tom linje vises. Brug "
+"rullemenuen til at vælge den ønskede bruger. Gentag dette for alle andre "
+"godkendere. Der er intet maksimalt antal brugere for denne fane."
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"For at angive, at en bruger **skal** godkende anmodningen, skal du markere "
+"afkrydsningsfeltet i kolonnen :guilabel:`Påkrævet`."
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"Efterhånden som brugere tilføjes, forbliver deres :guilabel:`Status` som "
+":guilabel:`Ny`."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+"Fanen for godkendere med tre godkendere opført, hvoraf den ene er påkrævet."
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "Vedhæft dokumenter"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Alle godkendelsesanmodninger inkluderer muligheden for at vedhæfte relevante "
+"dokumenter. For at vedhæfte et dokument skal du klikke på knappen "
+":guilabel:`Vedhæft dokument` \\u00fverst på siden, hvorefter et "
+"filstifindervindue indlæses. Naviger til den ønskede fil, vælg den, og klik "
+"derefter på :guilabel:`Åbn` for at vedhæfte den. Flere dokumenter kan vælges "
+"og tilføjes på samme tid."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Når det er vedhæftet, vises en :icon:`fa-book` :guilabel:`Dokumenter` "
+"intelligent knap øverst på siden, som angiver, hvor mange dokumenter der er "
+"vedhæftet. Desuden er dokumenterne angivet i chatteren. Hvis skærmen er bred "
+"nok, vises dokumenterne i siden af skærmen."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Administrer godkendelser"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Når anmodninger er indsendt, skal de godkendes af de påkrævede godkendere, "
+"der er anført i fanen :ref:`Godkender(e) <approvals/approvers>`. For at se "
+"godkendelser, der afventer handling, skal du navigere til "
+":menuselection:`Godkendelser app --> Administrator --> Godkendelser til "
+"gennemgang`, hvorefter dashboardet *Godkendelser til gennemgang* indlæses. "
+"Alle godkendelser, der afventer handling fra brugeren, vises alfabetisk på "
+"en standard listevisning."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"Kun *indsendte* anmodninger, hvor brugeren er tildelt som godkender, vises i "
+"dashboardet *Godkendelser til gennemgang*. Alle andre anmodninger forbliver "
+"skjulte."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+"Alle godkendelsesanmodninger, der afventer godkendelse, som brugeren er "
+"tildelt."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Anmodninger skal godkendes individuelt fra godkendelsesformularen. For at "
+"godkende en anmodning skal du klikke på den individuelle anmodning i "
+"dashboardet *Godkendelser til gennemgang*, hvorefter formularen for den "
+"individuelle anmodning indlæses."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr ""
+"En anmodning om at låne et kamera, hvor knapperne Godkend og Afvis vises."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"For at godkende anmodningen skal du klikke på knappen :guilabel:`Godkend` på "
+"formularen for den individuelle godkendelsesanmodning, hvorefter status "
+"ændres til :guilabel:`Godkendt`. Efterhånden som brugere godkender "
+"anmodningen, ændres deres :guilabel:`Status` til :guilabel:`Godkendt`, og "
+"teksten vises grøn."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"For at afvise anmodningen skal du klikke på knappen :guilabel:`Afvis` på "
+"formularen for den individuelle godkendelsesanmodning, hvorefter status "
+"ændres til :guilabel:`Afvist`. Når en bruger afviser en anmodning, ændres "
+"dens :guilabel:`Status` til :guilabel:`Afvist`, og teksten vises rød."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"På ethvert tidspunkt kan godkendelsesanmodninger, der enten er "
+":guilabel:`Godkendt` eller :guilabel:`Afvist`, vende tilbage til stadiet "
+":guilabel:`Indsendt` ved at klikke på knappen :guilabel:`Annuller`. "
+":guilabel:`Status` for alle godkendere bliver igen :guilabel:`Til "
+"godkendelse`, og teksten vises orange."
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -18662,12 +19147,6 @@ msgid ""
 msgstr ""
 "Klik på knappen :guilabel:`Ny`, så indlæses en tom kontraktskabelonformular. "
 "Konfigurer følgende felter i de forskellige sektioner af formularen:"
-
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "Sektion for generelle oplysninger"
 
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
@@ -47188,7 +47667,8 @@ msgstr ""
 #: ../../content/applications/hr/recruitment.rst:170
 msgid ""
 ":guilabel:`Red`: The applicant is blocked from moving to the next stage."
-msgstr ":guilabel:`Rød`: ansøgeren er blokeret fra at gå videre til næste fase."
+msgstr ""
+":guilabel:`Rød`: ansøgeren er blokeret fra at gå videre til næste fase."
 
 #: ../../content/applications/hr/recruitment.rst:172
 msgid ""
@@ -47241,10 +47721,10 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"For at oprette et nyt stadie, skal du holde musen over til højre for "
-":guilabel:`Kontrakt underskrevet` stadiet, hvilket fremhæver en "
-":guilabel:`Tilføj stadie` indstilling. Klik på :guilabel:`Tilføj stadie` og "
-"en ny kolonne vises. Indtast titlen for det nye stadie i det tomme felt "
+"For at oprette et nyt stadie, skal du holde musen over til højre "
+"for :guilabel:`Kontrakt underskrevet` stadiet, hvilket fremhæver "
+"en :guilabel:`Tilføj stadie` indstilling. Klik på :guilabel:`Tilføj stadie` "
+"og en ny kolonne vises. Indtast titlen for det nye stadie i det tomme felt "
 "øverst i det nye stadie, og klik derefter på :icon:`fa-check` knappen. Den "
 "nye kolonne vises, og endnu et nyt stadie vises. Hvis der ikke er brug for "
 "flere stadier, skal du klikke på :icon:`fa-multiply` knappen i det nye "
@@ -47273,11 +47753,11 @@ msgid ""
 msgstr ""
 "For at ændre indstillingerne for et stadie, skal du holde musen over navnet "
 "på stadiet, hvorefter et :icon:`fa-cog` :guilabel:`(Indstillinger)` ikon "
-"vises i det øverste hjørne. Klik på :icon:`fa-cog` :guilabel:`(Indstillinger)"
-"` ikonet, og klik derefter på :icon:`fa-pencil` :guilabel:`Rediger` fra den "
-"resulterende rullemenu. Et *Rediger: (Stadie)* pop op-vindue vises. Foretag "
-"de ønskede ændringer i pop op-vinduet, og klik derefter på :guilabel:`Gem` "
-"når du er færdig."
+"vises i det øverste hjørne. Klik på :icon:`fa-"
+"cog` :guilabel:`(Indstillinger)` ikonet, og klik derefter på :icon:`fa-"
+"pencil` :guilabel:`Rediger` fra den resulterende rullemenu. Et *Rediger: "
+"(Stadie)* pop op-vindue vises. Foretag de ønskede ændringer i pop op-"
+"vinduet, og klik derefter på :guilabel:`Gem` når du er færdig."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -47400,8 +47880,8 @@ msgstr ""
 "status. Disse farver vises øverst i hvert stadie for at afspejle ansøgernes "
 "status i stadiet. *Navnene* på etiketten kan ændres, men selve etiketten "
 "(farven) kan ikke. Standardnavnene og etiketterne er: :guilabel:`I gang` "
-"(grå), :guilabel:`Blokeret` (rød), :guilabel:`Venter` (gul), og "
-":guilabel:`Klar til næste stadie` (grøn)."
+"(grå), :guilabel:`Blokeret` (rød), :guilabel:`Venter` (gul), "
+"og :guilabel:`Klar til næste stadie` (grøn)."
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
@@ -47425,11 +47905,11 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "Hvis et stadie ikke længere er nødvendigt, kan det slettes. For at slette et "
-"stadie, skal du holde musen over navnet på stadiet og klikke på det "
-":icon:`fa-cog` :guilabel:`(Indstillinger)` ikon, der vises. Klik på "
-":icon:`fa-trash` :guilabel:`Slet` og en *Bekræftelse* pop op-advarsel vises, "
-"som spørger :guilabel:`Er du sikker på, at du vil slette denne kolonne?` "
-"Klik på :guilabel:`Slet` for at slette stadiet."
+"stadie, skal du holde musen over navnet på stadiet og klikke på "
+"det :icon:`fa-cog` :guilabel:`(Indstillinger)` ikon, der vises. Klik "
+"på :icon:`fa-trash` :guilabel:`Slet` og en *Bekræftelse* pop op-advarsel "
+"vises, som spørger :guilabel:`Er du sikker på, at du vil slette denne "
+"kolonne?` Klik på :guilabel:`Slet` for at slette stadiet."
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -47505,8 +47985,8 @@ msgstr ""
 ":guilabel:`Ansættelse: Planlæg samtale`: denne skabelon bruges til at lade "
 "ansøgeren vide, at de har bestået :guilabel:`Indledende kvalifikation`-"
 "trinnet, og at de snart vil blive kontaktet for at aftale en samtale med "
-"rekruttøren. Denne e-mail sendes automatisk, når ansøgeren er i "
-":guilabel:`Indledende kvalifikation`-trinnet."
+"rekruttøren. Denne e-mail sendes automatisk, når ansøgeren er "
+"i :guilabel:`Indledende kvalifikation`-trinnet."
 
 #: ../../content/applications/hr/recruitment.rst:296
 msgid ""
@@ -47544,8 +48024,8 @@ msgstr ""
 "Klik på ikonet :icon:`fa-expand` :guilabel:`Åbn fuld editor` i det nederste "
 "hjørne af fanen *Send besked* i chatteren. Et *Skriv e-mail*-pop op-vindue "
 "indlæses med felterne :guilabel:`Til` og :guilabel:`Emne` udfyldt på "
-"forhånd. Ansøgerens e-mailadresse indtastes i feltet :guilabel:`Til`, og "
-":guilabel:`Emne` er `(Ansøgerens navn)`."
+"forhånd. Ansøgerens e-mailadresse indtastes i feltet :guilabel:`Til`, "
+"og :guilabel:`Emne` er `(Ansøgerens navn)`."
 
 #: ../../content/applications/hr/recruitment.rst:310
 msgid ""
@@ -47553,9 +48033,9 @@ msgid ""
 "v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
-"For at bruge en forudkonfigureret e-mailskabelon skal du klikke på ikonet "
-":icon:`fa-ellipsis-v` :guilabel:`(Skabeloner)` i bunden af vinduet. Vælg den "
-"e-mailskabelon, der skal bruges, fra rullemenuen."
+"For at bruge en forudkonfigureret e-mailskabelon skal du klikke på "
+"ikonet :icon:`fa-ellipsis-v` :guilabel:`(Skabeloner)` i bunden af vinduet. "
+"Vælg den e-mailskabelon, der skal bruges, fra rullemenuen."
 
 #: ../../content/applications/hr/recruitment.rst:313
 msgid ""
@@ -47591,11 +48071,11 @@ msgid ""
 "it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
 "icon at the end of the attachment."
 msgstr ""
-"Hvis der skal tilføjes bilag, skal du klikke på knappen :icon:`fa-paperclip` "
-":guilabel:`(Tilføj bilag)` i bunden af vinduet. Naviger til filen, der skal "
-"vedhæftes, og klik derefter på :guilabel:`Åbn` for at vedhæfte den. For at "
-"slette et bilag skal du klikke på ikonet :icon:`fa-times` :guilabel:`(Slet)` "
-"for enden af bilaget."
+"Hvis der skal tilføjes bilag, skal du klikke på knappen :icon:`fa-"
+"paperclip` :guilabel:`(Tilføj bilag)` i bunden af vinduet. Naviger til "
+"filen, der skal vedhæftes, og klik derefter på :guilabel:`Åbn` for at "
+"vedhæfte den. For at slette et bilag skal du klikke på ikonet :icon:`fa-"
+"times` :guilabel:`(Slet)` for enden af bilaget."
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -47611,14 +48091,14 @@ msgid ""
 msgstr ""
 "Hvis der skal foretages ændringer i e-mailen, skal du redigere brødteksten i "
 "e-mailen. Hvis rettelserne skal gemmes til fremtidig brug, kan e-mailen "
-"gemmes som en ny skabelon. Klik på knappen :icon:`fa-ellipsis-v` :guilabel:`"
-"(Skabeloner)` i bunden af vinduet og vælg :guilabel:`Gem som skabelon`. Der "
-"vises muligheder for enten at overskrive en eksisterende skabelon eller "
-"gemme en ny skabelon. Klik på navnet på en eksisterende skabelon for at "
-"overskrive den, eller klik på :guilabel:`Gem som skabelon` for at gemme en "
-"ny skabelon. Et *Opret e-mailskabelon*-pop op-vindue indlæses. Indtast et "
-"navn til skabelonen i feltet :guilabel:`Skabelonnavn`, og klik derefter på "
-":guilabel:`Gem skabelon`."
+"gemmes som en ny skabelon. Klik på knappen :icon:`fa-ellipsis-"
+"v` :guilabel:`(Skabeloner)` i bunden af vinduet og vælg :guilabel:`Gem som "
+"skabelon`. Der vises muligheder for enten at overskrive en eksisterende "
+"skabelon eller gemme en ny skabelon. Klik på navnet på en eksisterende "
+"skabelon for at overskrive den, eller klik på :guilabel:`Gem som skabelon` "
+"for at gemme en ny skabelon. Et *Opret e-mailskabelon*-pop op-vindue "
+"indlæses. Indtast et navn til skabelonen i feltet :guilabel:`Skabelonnavn`, "
+"og klik derefter på :guilabel:`Gem skabelon`."
 
 #: ../../content/applications/hr/recruitment.rst:337
 msgid ""
@@ -49171,12 +49651,13 @@ msgid ""
 "is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
 "days."
 msgstr ""
-"For at få adgang til rapporten *Tilbudsanalyse* skal du navigere til "
-":menuselection:`Ansættelse-app --> Rapportering --> Tilbudsanalyse`. Som "
+"For at få adgang til rapporten *Tilbudsanalyse* skal du navigere "
+"til :menuselection:`Ansættelse-app --> Rapportering --> Tilbudsanalyse`. Som "
 "standard viser rapporten tilbudsdata for alle stillinger i et :icon:`fa-bar-"
-"chart` :guilabel:`(Søjlediagram)` med :icon:`fa-database` :guilabel:`"
-"(Stablet)` grupper. Standardfilteret er :guilabel:`Tilbud de sidste 365 "
-"dage`, der viser oplysninger for de sidste 365 dage."
+"chart` :guilabel:`(Søjlediagram)` med :icon:`fa-"
+"database` :guilabel:`(Stablet)` grupper. Standardfilteret "
+"er :guilabel:`Tilbud de sidste 365 dage`, der viser oplysninger for de "
+"sidste 365 dage."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -49286,10 +49767,10 @@ msgstr ""
 "For at hjælpe teamet kan rapporten *Tilbudsanalyse* tilpasses, så den viser "
 "alle tilbud efter status i stedet for efter stilling. For at se tilbud efter "
 "status, naviger til :menuselection:`Ansættelse-app --> Rapportering --> "
-"Tilbudsanalyse`. Klik i søgefeltet og vælg indstillingen "
-":guilabel:`Tilbudsstatus` i kolonnen :icon:`oi-group` :guilabel:`Gruppér "
-"efter`. Dette giver et overblik på højt niveau over, hvor alle tilbud "
-"befinder sig."
+"Tilbudsanalyse`. Klik i søgefeltet og vælg "
+"indstillingen :guilabel:`Tilbudsstatus` i kolonnen :icon:`oi-"
+"group` :guilabel:`Gruppér efter`. Dette giver et overblik på højt niveau "
+"over, hvor alle tilbud befinder sig."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""

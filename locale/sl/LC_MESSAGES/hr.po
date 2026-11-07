@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:33+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:35+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19-doc/hr/"
 "sl/>\n"
@@ -977,6 +977,7 @@ msgstr ""
 "varnost v tovarni."
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "Zavihek Opis"
 
@@ -2669,6 +2670,439 @@ msgstr ":doc:`Osnove poročanja Odoo <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Odobritve"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Aplikacija **Odobritve** v Odoo zaposlenim omogoča podajanje uradnih "
+"zahtevkov za najrazličneje stvari, vodstvu pa omogoča, da zahteve pregleda "
+"ter jih nato odobri ali zavrne. Vse zahteve so tako zbrane na enem "
+"centralnem mestu, kar zagotavlja preglednost in jasnost organizacije za vse "
+"zahteve."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Vrste odobritev"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Pri zahtevanju odobritve je treba določiti kategorijo oziroma *vrsto*. Na "
+"voljo je devet vnaprej konfiguriranih kategorij odobritev za oddajo "
+"zahtevkov:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ""
+":guilabel:`Poslovno potovanje`: Za zahtevke v zvezi s službenimi potovanji."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Izposoja predmetov`: Za zahtevanje fizičnih predmetov v lasti "
+"podjetja ali tistih, ki jih podjetje prodaja, za določeno obdobje."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Splošna odobritev`: Za zahtevke, ki ne sodijo v nobeno od ostalih "
+"osmih privzetih vrst."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Odobritev pogodbe`: Za zahtevanje katere koli vrste zunanje "
+"pogodbe, razen :doc:`pogodb zaposlenih <payroll/contracts>`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Zahtevek za plačilo`: Za zahtevanje *predhodne odobritve* za "
+"stroške, povezane s podjetjem."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Ta vrsta odobritve se uporablja **izključno** takrat, ko vnaprej zahtevate "
+"odobritev za strošek, ki ga podjetje plača neposredno. Ta kategorija se "
+"**ne** sme uporabljati za stroške, za katere zaposleni zahtevajo povračilo. "
+"To se izvede v aplikaciji :doc:`Stroški <../finance/expenses/log_expenses>`."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`Zahtevek za najem vozila`: Za zahtevanje najema vozila."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Nagrada za napotitev`: Za zahtevanje nagrad za napotitve "
+"zaposlenih, ki so bile pridobljene, vendar niso bile zaključene prek "
+"aplikacije :doc:`Napotitve <referrals>`."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Oskrba`: Uporablja se za zahtevanje delovnih pripomočkov, kot so "
+"pisarniški material, orodje itd."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Ustvari zahtevek za ponudbo`: Uporablja se za zahtevanje ponudbe "
+"za izdelke od dobavitelja."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Zahtevki za odobritev"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"Za ustvarjanje novega zahtevka za odobritev odprite aplikacijo "
+"**Odobritve**, kliknite gumb :guilabel:`Nov zahtevek` na kartici vrste "
+"odobritve, ki najbolje ustreza vašemu zahtevku, in naložite prazen obrazec "
+"za odobritev. Izpolnite ustrezne razdelke in zavihke, nato kliknite "
+":guilabel:`Oddaj`, da zahtevek oddate v odobritev."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "Razdelek splošnih informacij"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"Zgornja polovica obrazca vsebuje vse splošne informacije o zahtevku. V "
+"zgornji polovici obrazca izpolnite naslednja polja:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Vsa spodaj navedena polja se prikažejo na obrazcu za kategorijo "
+":guilabel:`Splošna odobritev`. Če je izbrana druga :guilabel:`Kategorija`, "
+"so nekatera polja skrita."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Zadeva odobritve`: To polje se samodejno izpolni z izbrano vrsto "
+"odobritve. Privzeto besedilo lahko spremenite in tako dodate dodatne "
+"podrobnosti za zahtevek."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Lastnik zahtevka`: Oseba, odgovorna za zahtevek za odobritev. To "
+"polje se privzeto izpolni s prijavljenim uporabnikom."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`Kategorija`: V tem polju je prikazana izbrana kategorija, ki pa "
+"jo lahko spremenite s spustnim menijem."
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Datum`: S koledarskim izbirnikom nastavite datum in čas, za "
+"katerega je zahtevek. To polje se prikaže **samo**, če je za "
+":guilabel:`Zahtevek za plačilo` ali :guilabel:`Splošna odobritev` izbrana "
+":guilabel:`Kategorija`."
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Obdobje`: S koledarskim izbirnikom nastavite začetni in končni "
+"datum zahtevka v poljih :guilabel:`Od` in :guilabel:`do`. To polje se "
+"prikaže **samo**, če je za :guilabel:`Poslovna pot`, :guilabel:`Izposoja "
+"predmetov`, :guilabel:`Zahtevek za najem vozila` ali :guilabel:`Splošna "
+"odobritev` izbrana :guilabel:`Kategorija`."
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Lokacija`: Vnesite določeno lokacijo, za katero je zahtevek za "
+"odobritev. To polje se prikaže **samo**, če je za :guilabel:`Poslovna pot` "
+"ali :guilabel:`Splošna odobritev` izbrana :guilabel:`Kategorija`."
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr ""
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Vse zahteve za odobritev vključujejo možnost prilaganja ustreznih "
+"dokumentov. Za prilagajanje dokumenta kliknite gumb :guilabel:`Priloži "
+"dokument` na vrhu strani, da se odpre okno raziskovalca datotek. Pomaknite "
+"se do željene datoteke, jo izberite in nato kliknite :guilabel:`Odpri`, da "
+"jo priložite. Hkrati lahko izberete in dodate več dokumentov."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Ko so dokumenti priloženi, se na vrhu strani prikaže pametni gumb :icon:`fa-"
+"book` :guilabel:`Dokumenti`, ki prikazuje število priloženih dokumentov. "
+"Poleg tega so dokumenti navedeni v razpravi (chatter). Če je zaslon dovolj "
+"širok, se dokumenti prikažejo na strani zaslona."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Upravljanje odobritev"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Po oddaji morajo biti zahteve odobrene s strani zahtevanih odobriteljev, "
+"navedenih na :ref:`zavihku Odobritelj(i) <approvals/approvers>`. Če si "
+"želite ogledati odobritve, ki čakajo na dejanje, se pomaknite na "
+":menuselection:`Aplikacija Odobritve --> Upravitelj --> Odobritve za "
+"pregled`, in naložila se bo nadzorna plošča *Odobritve za pregled*. Vse "
+"odobritve, ki čakajo na dejanje uporabnika, so privzeto prikazane na seznamu "
+"po abecednem vrstnem redu."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"Na nadzorni plošči *Odobritve za pregled* so prikazane le *oddane* zahteve, "
+"za katere je uporabnik določen kot odobritelj. Vse druge zahteve ostanejo "
+"skrite."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+"Vse zahteve za odobritev, ki čakajo na odobritev in za katere je uporabnik "
+"določen."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Zahteve je treba odobriti posamično v obrazcu za odobritev. Za odobritev "
+"zahteve kliknite na posamezno zahtevo na nadzorni plošči *Odobritve za "
+"pregled*, da se naloži obrazec posamezne zahteve."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr ""
+"Zahteva za izposojo fotoaparata, s prikazanima gumboma Odobri in Zavrni."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"Za odobritev zahteve kliknite gumb :guilabel:`Odobri` na obrazcu posamezne "
+"zahteve za odobritev; status se spremeni v :guilabel:`Odobreno`. Ko "
+"uporabniki odobrijo zahtevo, se njihov :guilabel:`Status` spremeni v "
+":guilabel:`Odobreno`, besedilo pa se obarva zeleno."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"Za zavrnitev zahteve kliknite gumb :guilabel:`Zavrni` na obrazcu posamezne "
+"zahteve za odobritev; status se spremeni v :guilabel:`Zavrnjeno`. Ko "
+"uporabnik zavrne zahtevo, se njen :guilabel:`Status` spremeni v "
+":guilabel:`Zavrnjeno`, besedilo pa se obarva rdeče."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"Zahteve za odobritev, ki so :guilabel:`Odobrene` ali :guilabel:`Zavrnjene`, "
+"se lahko kadarkoli vrnejo v fazo :guilabel:`Oddano` s klikom na gumb "
+":guilabel:`Prekliči`. :guilabel:`Status` za vse odobritelje se povrne v "
+":guilabel:`Za odobritev`, besedilo pa se obarva oranžno."
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -18408,12 +18842,6 @@ msgstr ""
 "Kliknite gumb :guilabel:`Novo` in naloži se prazen obrazec predloge pogodbe. "
 "Konfigurirajte naslednja polja v različnih razdelkih obrazca:"
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "Razdelek splošnih informacij"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -18862,9 +19290,9 @@ msgid ""
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"Na vrhu obrazca se prikaže pametni gumb :icon:`fa-users` "
-":guilabel:`Zaposleni`. S klikom na gumb se prikaže skupno število zaposlenih "
-"za izbrano obdobje."
+"Na vrhu obrazca se prikaže pametni gumb :icon:`fa-"
+"users` :guilabel:`Zaposleni`. S klikom na gumb se prikaže skupno število "
+"zaposlenih za izbrano obdobje."
 
 #: ../../content/applications/hr/payroll/headcount.rst:None
 msgid "A headcount report created on October 22, 2026 for 2026."
@@ -42437,9 +42865,9 @@ msgid ""
 "field, then enter the :guilabel:`Amount`."
 msgstr ""
 "Če želite ročno dodati dodaten vnos plače, kliknite :guilabel:`Dodaj "
-"vrstico`, da se v zavihku prikaže prazna vrstica. V spustnem meniju izberite "
-":guilabel:`Vrsta`. V ustrezno polje vnesite morebitne :guilabel:`Opombe`, "
-"nato pa vnesite :guilabel:`Znesek`."
+"vrstico`, da se v zavihku prikaže prazna vrstica. V spustnem meniju "
+"izberite :guilabel:`Vrsta`. V ustrezno polje vnesite "
+"morebitne :guilabel:`Opombe`, nato pa vnesite :guilabel:`Znesek`."
 
 #: ../../content/applications/hr/payroll/payslips.rst:None
 msgid "The salary inputs tab with a salary attachment and commission added."
@@ -42464,8 +42892,9 @@ msgid ""
 "the :guilabel:`Compute Sheet` button in the corner, and the *Salary "
 "Computation* tab is populated."
 msgstr ""
-"Ob prvem ustvarjanju plačilne liste je ta zavihek prazen. Kliknite gumb "
-":guilabel:`Izračunaj list` v kotu, da se zavihek *Obračun plače* napolni."
+"Ob prvem ustvarjanju plačilne liste je ta zavihek prazen. Kliknite "
+"gumb :guilabel:`Izračunaj list` v kotu, da se zavihek *Obračun plače* "
+"napolni."
 
 #: ../../content/applications/hr/payroll/payslips.rst:121
 msgid ""
@@ -46445,8 +46874,8 @@ msgstr ""
 "Preden ustvarite delovno mesto v sistemu Odoo, konfigurirajte potrebne "
 "nastavitve za aplikacijo **Zaposlovanje**. Če si želite ogledati in urediti "
 "nastavitve, se pomaknite na :menuselection:`Aplikacija Zaposlovanje --> "
-"Konfiguracija --> Nastavitve`. Po vseh opravljenih spremembah kliknite gumb "
-":guilabel:`Shrani` v kotu."
+"Konfiguracija --> Nastavitve`. Po vseh opravljenih spremembah kliknite "
+"gumb :guilabel:`Shrani` v kotu."
 
 #: ../../content/applications/hr/recruitment.rst:38
 msgid "Job posting"
@@ -46517,10 +46946,10 @@ msgstr ""
 "Ta seznam vključuje vse anketne vprašalnike, ki so bili ustvarjeni v "
 "podatkovni bazi, ne samo anketnih vprašalnikov, ki se uporabljajo v "
 "aplikaciji **Zaposlovanje**. Če še ni bil ustvarjen noben anketni "
-"vprašalnik, se v seznamu anketnih vprašalnikov prikaže sporočilo "
-":guilabel:`Anketnega vprašalnika ni bilo mogoče najti` in ponudi možnosti za "
-"ustvarjanje anketnega vprašalnika iz več vnaprej konfiguriranih predlog "
-"anketnih vprašalnikov."
+"vprašalnik, se v seznamu anketnih vprašalnikov prikaže "
+"sporočilo :guilabel:`Anketnega vprašalnika ni bilo mogoče najti` in ponudi "
+"možnosti za ustvarjanje anketnega vprašalnika iz več vnaprej konfiguriranih "
+"predlog anketnih vprašalnikov."
 
 #: ../../content/applications/hr/recruitment.rst:68
 msgid ":doc:`create and edit surveys <../marketing/surveys/create>`"
@@ -46634,9 +47063,9 @@ msgid ""
 "updated."
 msgstr ""
 ":guilabel:`Digitaliziraj samo na zahtevo`: Ta možnost digitalizira "
-"življenjepise samo, ko je zahtevano. Na karticah kandidatov se pojavi gumb "
-":guilabel:`Digitaliziraj dokument`. Ob kliku se življenjepis optično prebere "
-"in kartica kandidata se posodobi."
+"življenjepise samo, ko je zahtevano. Na karticah kandidatov se pojavi "
+"gumb :guilabel:`Digitaliziraj dokument`. Ob kliku se življenjepis optično "
+"prebere in kartica kandidata se posodobi."
 
 #: ../../content/applications/hr/recruitment.rst:116
 msgid ""
@@ -46779,7 +47208,8 @@ msgstr ""
 
 #: ../../content/applications/hr/recruitment.rst:168
 msgid ":guilabel:`Green`: The applicant is ready to move to the next stage."
-msgstr ":guilabel:`Zelena`: kandidat je pripravljen za prehod v naslednjo fazo."
+msgstr ""
+":guilabel:`Zelena`: kandidat je pripravljen za prehod v naslednjo fazo."
 
 #: ../../content/applications/hr/recruitment.rst:169
 msgid ""
@@ -46844,14 +47274,14 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"Za ustvarjanje nove stopnje se premaknite desno od stopnje "
-":guilabel:`Contract Signed`, kjer se prikaže možnost :guilabel:`Add Stage`. "
-"Kliknite :guilabel:`Add Stage` in prikaže se nov stolpec. V prazno polje na "
-"vrhu nove stopnje vnesite naslov nove stopnje, nato kliknite gumb :icon:`fa-"
-"check`. Prikaže se nov stolpec in nova stopnja. Če ne potrebujete novih "
-"stopenj, kliknite gumb :icon:`fa-multiply` v novi stopnji, da jo zaprete. Ko "
-"je stopnja ustvarjena, jo s klikom in vlečenjem premaknite na željen položaj "
-"v poteku dela."
+"Za ustvarjanje nove stopnje se premaknite desno od "
+"stopnje :guilabel:`Contract Signed`, kjer se prikaže možnost :guilabel:`Add "
+"Stage`. Kliknite :guilabel:`Add Stage` in prikaže se nov stolpec. V prazno "
+"polje na vrhu nove stopnje vnesite naslov nove stopnje, nato kliknite "
+"gumb :icon:`fa-check`. Prikaže se nov stolpec in nova stopnja. Če ne "
+"potrebujete novih stopenj, kliknite gumb :icon:`fa-multiply` v novi stopnji, "
+"da jo zaprete. Ko je stopnja ustvarjena, jo s klikom in vlečenjem premaknite "
+"na željen položaj v poteku dela."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "A new stage added, along with a second stage ready to be named."
@@ -46876,8 +47306,8 @@ msgstr ""
 "zgornjem kotu se prikaže ikona :icon:`fa-cog` :guilabel:`(Settings)`. "
 "Kliknite ikono :icon:`fa-cog` :guilabel:`(Settings)`, nato v spustnem meniju "
 "izberite :icon:`fa-pencil` :guilabel:`Edit`. Prikaže se pojavno okno *Uredi: "
-"(Stopnja)*. V pojavnem oknu izvedite željene spremembe, nato kliknite "
-":guilabel:`Save`."
+"(Stopnja)*. V pojavnem oknu izvedite željene spremembe, nato "
+"kliknite :guilabel:`Save`."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -46997,9 +47427,9 @@ msgstr ""
 "oznake (obarvani krogi) za kartico vsakega kandidata, ki prikazujejo njegov "
 "status. Te barve so prikazane na vrhu vsake stopnje, da odražajo status "
 "kandidatov v tej stopnji. *Imena* za oznako se lahko spremenijo, same oznake "
-"(barve) pa ne. Privzeta imena in oznake so: :guilabel:`In Progress` (siva), "
-":guilabel:`Blocked` (rdeča), :guilabel:`Waiting` (rumena) in "
-":guilabel:`Ready for Next Stage` (zelena)."
+"(barve) pa ne. Privzeta imena in oznake so: :guilabel:`In Progress` "
+"(siva), :guilabel:`Blocked` (rdeča), :guilabel:`Waiting` (rumena) "
+"in :guilabel:`Ready for Next Stage` (zelena)."
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
@@ -47023,10 +47453,11 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "If a stage is no longer needed, the stage can be deleted. To delete a stage, "
-"hover over the name of the stage, and click the :icon:`fa-cog` :guilabel:`"
-"(Settings)` icon that appears. Click :icon:`fa-trash` :guilabel:`Delete` and "
-"a *Confirmation* pop-up warning appears, asking :guilabel:`Are you sure you "
-"want to delete this column?` Click :guilabel:`Delete` to delete the stage."
+"hover over the name of the stage, and click the :icon:`fa-"
+"cog` :guilabel:`(Settings)` icon that appears. Click :icon:`fa-"
+"trash` :guilabel:`Delete` and a *Confirmation* pop-up warning appears, "
+"asking :guilabel:`Are you sure you want to delete this column?` "
+"Click :guilabel:`Delete` to delete the stage."
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -47102,8 +47533,8 @@ msgstr ""
 ":guilabel:`Zaposlovanje: Načrtovanje razgovora`: ta predloga se uporabi, da "
 "kandidata obvestite, da je prestal fazo :guilabel:`Začetna kvalifikacija` in "
 "da ga bodo kmalu kontaktirali, da se dogovori za razgovor z zaposlitveno "
-"službo. Ta e-pošta se samodejno pošlje, ko je kandidat v fazi "
-":guilabel:`Začetna kvalifikacija`."
+"službo. Ta e-pošta se samodejno pošlje, ko je kandidat v "
+"fazi :guilabel:`Začetna kvalifikacija`."
 
 #: ../../content/applications/hr/recruitment.rst:296
 msgid ""
@@ -47140,9 +47571,9 @@ msgid ""
 msgstr ""
 "Kliknite ikono :icon:`fa-expand` :guilabel:`(Odpri celoten urejevalnik)` v "
 "spodnjem kotu zavihka *Pošlji sporočilo* v klepetu. Odpre se pojavno okno "
-"*Sestavi e-pošto* s predizpolnjenimi polji :guilabel:`Za` in "
-":guilabel:`Zadeva`. E-poštni naslov kandidata je vnesen v polje "
-":guilabel:`Za`, zadeva :guilabel:`Zadeva` pa je `(Ime kandidata)`."
+"*Sestavi e-pošto* s predizpolnjenimi polji :guilabel:`Za` "
+"in :guilabel:`Zadeva`. E-poštni naslov kandidata je vnesen v "
+"polje :guilabel:`Za`, zadeva :guilabel:`Zadeva` pa je `(Ime kandidata)`."
 
 #: ../../content/applications/hr/recruitment.rst:310
 msgid ""
@@ -47150,9 +47581,9 @@ msgid ""
 "v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
-"Če želite uporabiti vnaprej konfigurirano e-poštno predlogo, kliknite ikono "
-":icon:`fa-ellipsis-v` :guilabel:`(Predloge)` na dnu okna. V spustnem meniju "
-"izberite e-poštno predlogo, ki jo želite uporabiti."
+"Če želite uporabiti vnaprej konfigurirano e-poštno predlogo, kliknite "
+"ikono :icon:`fa-ellipsis-v` :guilabel:`(Predloge)` na dnu okna. V spustnem "
+"meniju izberite e-poštno predlogo, ki jo želite uporabiti."
 
 #: ../../content/applications/hr/recruitment.rst:313
 msgid ""
@@ -47187,10 +47618,11 @@ msgid ""
 "it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
 "icon at the end of the attachment."
 msgstr ""
-"Če je treba dodati priloge, kliknite gumb :icon:`fa-paperclip` :guilabel:`"
-"(Dodaj prilogo)` na dnu okna. Poiščite datoteko, ki jo želite priložiti, in "
-"kliknite :guilabel:`Odpri`, da jo priložite. Če želite izbrisati prilogo, "
-"kliknite ikono :icon:`fa-times` :guilabel:`(Izbriši)` na koncu priloge."
+"Če je treba dodati priloge, kliknite gumb :icon:`fa-"
+"paperclip` :guilabel:`(Dodaj prilogo)` na dnu okna. Poiščite datoteko, ki jo "
+"želite priložiti, in kliknite :guilabel:`Odpri`, da jo priložite. Če želite "
+"izbrisati prilogo, kliknite ikono :icon:`fa-times` :guilabel:`(Izbriši)` na "
+"koncu priloge."
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -47206,13 +47638,13 @@ msgid ""
 msgstr ""
 "Če želite v e-poštnem sporočilu karkoli spremeniti, uredite vsebino e-pošte. "
 "Če želite spremembe shraniti za prihodnjo uporabo, lahko e-pošto shranite "
-"kot novo predlogo. Kliknite gumb :icon:`fa-ellipsis-v` :guilabel:`(Predloge)"
-"` na dnu okna in izberite :guilabel:`Shrani kot predlogo`. Na voljo imate "
-"možnosti, da prepišete obstoječo predlogo ali shranite novo predlogo. "
-"Kliknite ime obstoječe predloge, da jo prepišete, ali kliknite "
-":guilabel:`Shrani kot predlogo`, da shranite novo predlogo. Odpre se pojavno "
-"okno *Ustvari e-poštno predlogo*. V polje :guilabel:`Ime predloge` vnesite "
-"ime predloge in kliknite :guilabel:`Shrani predlogo`."
+"kot novo predlogo. Kliknite gumb :icon:`fa-ellipsis-"
+"v` :guilabel:`(Predloge)` na dnu okna in izberite :guilabel:`Shrani kot "
+"predlogo`. Na voljo imate možnosti, da prepišete obstoječo predlogo ali "
+"shranite novo predlogo. Kliknite ime obstoječe predloge, da jo prepišete, "
+"ali kliknite :guilabel:`Shrani kot predlogo`, da shranite novo predlogo. "
+"Odpre se pojavno okno *Ustvari e-poštno predlogo*. V polje :guilabel:`Ime "
+"predloge` vnesite ime predloge in kliknite :guilabel:`Shrani predlogo`."
 
 #: ../../content/applications/hr/recruitment.rst:337
 msgid ""
@@ -48760,12 +49192,13 @@ msgid ""
 "is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
 "days."
 msgstr ""
-"Za dostop do poročila *Analiza ponudb* se pomaknite na "
-":menuselection:`Zaposlovanje --> Poročanje --> Analiza ponudb`. Poročilo "
+"Za dostop do poročila *Analiza ponudb* se pomaknite "
+"na :menuselection:`Zaposlovanje --> Poročanje --> Analiza ponudb`. Poročilo "
 "privzeto prikazuje podatke o ponudbah za vsa delovna mesta v :icon:`fa-bar-"
-"chart` :guilabel:`(Palični grafikon)` z :icon:`fa-database` :guilabel:`"
-"(Naloženo)` skupinami. Privzeti filter je :guilabel:`Ponudbe zadnjih 365 "
-"dni`, ki prikazuje informacije za zadnjih 365 dni."
+"chart` :guilabel:`(Palični grafikon)` z :icon:`fa-"
+"database` :guilabel:`(Naloženo)` skupinami. Privzeti filter "
+"je :guilabel:`Ponudbe zadnjih 365 dni`, ki prikazuje informacije za zadnjih "
+"365 dni."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -48872,9 +49305,9 @@ msgstr ""
 "Za pomoč ekipi lahko poročilo *Analiza ponudb* spremenite tako, da prikaže "
 "vse ponudbe po stanju namesto po delovnem mestu. Za ogled ponudb po stanju "
 "se pomaknite na :menuselection:`Aplikacija Zaposlovanje --> Poročanje --> "
-"Analiza ponudb`. Kliknite v iskalno vrstico in izberite možnost "
-":guilabel:`Stanje ponudbe` v stolpcu :icon:`oi-group` :guilabel:`Združi po`. "
-"To omogoča pregled nad stanjem vseh ponudb."
+"Analiza ponudb`. Kliknite v iskalno vrstico in izberite "
+"možnost :guilabel:`Stanje ponudbe` v stolpcu :icon:`oi-"
+"group` :guilabel:`Združi po`. To omogoča pregled nad stanjem vseh ponudb."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""

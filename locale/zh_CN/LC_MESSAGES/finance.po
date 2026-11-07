@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
 "PO-Revision-Date: 2026-10-31 13:33+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -4462,10 +4462,10 @@ msgid ""
 "fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, and "
 "more, can be added or modified in the :guilabel:`Other Info` tab."
 msgstr ""
-":guilabel:`日记账项目` 选项卡显示创建的会计分录。其他发票信息，如 "
-":guilabel:`客户参考编号`、:guilabel:`付款参考编号`、:doc:`财务规则 <taxes/"
-"fiscal_positions>`、:doc:`Incoterms <customer_invoices/incoterms>` 等，可在 "
-":guilabel:`其他信息` 标签中添加或修改。"
+":guilabel:`日记账项目` 选项卡显示创建的会计分录。其他发票信息，如 :guilabel:`"
+"客户参考编号`、:guilabel:`付款参考编号`、:doc:`财务规则 <taxes/"
+"fiscal_positions>`、:doc:`Incoterms <customer_invoices/incoterms>` 等，可"
+"在 :guilabel:`其他信息` 标签中添加或修改。"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:168
 msgid ""
@@ -4613,9 +4613,9 @@ msgid ""
 "click :guilabel:`Send`. The :guilabel:`Send` window displays the number of "
 "selected invoices to send by email."
 msgstr ""
-"要发送多张发票，请转至 :menuselection:`会计 --> 客户 --> 发票`，在 "
-":guilabel:`发票`列表视图中选中它们，然后点击 :guilabel:`发送`。:guilabel:`发"
-"送`窗口将显示待通过电子邮件发送的已选发票数量。"
+"要发送多张发票，请转至 :menuselection:`会计 --> 客户 --> 发票`，"
+"在 :guilabel:`发票`列表视图中选中它们，然后点击 :guilabel:`发送`。:guilabel:`"
+"发送`窗口将显示待通过电子邮件发送的已选发票数量。"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:237
 msgid ""
@@ -17295,200 +17295,12 @@ msgstr "盎格鲁-撒克逊永续制升级流程"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:274
 msgid ""
-"In Odoo 19, the stock input/output accounts are no longer used. Any non-zero "
-"balances in stock interim accounts must be transferred to the :ref:`stock "
-"valuation account <accounting/inventory-valuation/valuation-account>` via "
-"journal entry to maintain accurate inventory values after migration. This "
-"rebalancing can be performed :ref:`before <accounting/inventory-valuation/"
-"upgrade-process-server-action>` or :ref:`after <accounting/inventory-"
-"valuation/upgrade-process-manual>` upgrading to Odoo 19."
+"Upgrading from Odoo 18 to Odoo 19 automatically handles the stock interim "
+"account rebalancing process during the database migration. The migration "
+"script automatically transfers non-zero balances from the legacy stock input/"
+"output accounts to the stock valuation account, eliminating the need for "
+"manual journal entries or server actions."
 msgstr ""
-"在 Odoo 19 中，不再使用库存入库/出库科目。迁移后，库存过渡科目中的任何非零余"
-"额都必须通过日记账分录结转至\\ :ref:`库存估值科目 <accounting/inventory-"
-"valuation/valuation-account>`\\ ，以保持准确的库存价值。可在升级至 Odoo 19 "
-"\\ :ref:`之前 <accounting/inventory-valuation/upgrade-process-server-"
-"action>`\\ 或\\ :ref:`之后 <accounting/inventory-valuation/upgrade-process-"
-"manual>`\\ 执行此重新平衡。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:281
-msgid ""
-"Before upgrading, review received purchase or sales orders that are not yet "
-"linked to vendor bills or invoices, and post any existing draft bills/"
-"invoices to reduce the open balance."
-msgstr ""
-"升级前，请检查尚未关联至供应商账单或客户发票的已收采购订单或销售订单，并将所"
-"有现有的草稿账单/发票过账，以减少未结余额。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:285
-msgid ""
-"It is recommended to implement the change **after** upgrading to Odoo 19, "
-"because a server action identifies the open balance in the :guilabel:`Stock "
-"Interim` accounts and automatically applies the change."
-msgstr ""
-"建议在升级至 Odoo 19 **之后**实施此项变更，因为服务器操作会识别\\ :guilabel:`"
-"库存过渡`\\ 科目中的未结余额并自动应用变更。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:290
-msgid ""
-"Account structures and valuation scenarios differ across companies. Review "
-"these steps with an accountant or an Odoo inventory valuation expert to "
-"ensure the setup aligns with the company's specific setup."
-msgstr ""
-"各公司的会计科目结构和估值方案各有不同。请与会计师或 Odoo 库存估值专家一起审"
-"查这些步骤，以确保配置符合公司的具体情况。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:297
-msgid "Option 1: Server action journal entry"
-msgstr "选项 1：服务器操作日记账分录"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:300
-msgid ""
-"Use a test database created during the upgrade process first, and verify "
-"the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
-"Valuation report <accounting/inventory-valuation/inventory-valuation-"
-"report>` to ensure accuracy."
-msgstr ""
-"请先使用在升级过程中创建的测试数据库，并验证\\ :doc:`库存报表 <../../../"
-"inventory_and_mrp/inventory/warehouses_storage/reporting/stock>`\\ 、科目和"
-"\\ :ref:`库存估值报表 <accounting/inventory-valuation/inventory-valuation-"
-"report>`\\ ，以确保准确性。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:305
-msgid ""
-"After upgrading to Odoo 19, the server action must be applied to each "
-"company to balance any non-zero :guilabel:`Stock Interim` accounts:"
-msgstr ""
-"升级至 Odoo 19 后，必须对每个公司应用该服务器操作，以平衡任何非零的"
-"\\ :guilabel:`库存中转`\\ 科目："
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:308
-msgid ""
-"Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
-"click the relevant company."
-msgstr ""
-"前往\\ :menuselection:`设置 --> 用户与公司 --> 公司`\\ 并点击相关公司。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:310
-msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`Stock "
-"Valuation rebalance interim Accounts`. A draft journal entry is "
-"automatically generated to balance the open amount."
-msgstr ""
-"点击\\ :icon:`fa-cog` :guilabel:`（齿轮）`\\ 图标，然后选择\\ :guilabel:`库存"
-"估值重新平衡中转科目`\\ 。系统将自动生成草稿日记账分录以平衡未结金额。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:312
-msgid ""
-"Review the draft journal entry amounts, edit them if necessary, then "
-"click :guilabel:`Post`."
-msgstr ""
-"核对草稿日记账分录金额，必要时进行修改，然后点击\\ :guilabel:`过账`\\ 。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:313
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:346
-msgid ""
-"Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
-"accounts are balanced to zero and that the remaining amount is recorded in "
-"the :guilabel:`Stock valuation` account."
-msgstr ""
-"检查总账以确认\\ :guilabel:`库存中转`\\ 科目已平衡至零，且剩余金额已记录在"
-"\\ :guilabel:`库存估值`\\ 科目中。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:315
-msgid ""
-"Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
-"and :ref:`generate an inventory variation entry <accounting/inventory-"
-"valuation/closing-entry>`. The increased value on the :ref:`Valuation "
-"account <accounting/inventory-valuation/valuation-account>` is then "
-"transferred to the :ref:`Variation account <accounting/inventory-valuation/"
-"variation-account>`, which is a new type of interim account."
-msgstr ""
-"前往\\ :menuselection:`会计 --> 审查 --> 库存估值`\\ 并\\ :ref:`生成库存变动"
-"分录 <accounting/inventory-valuation/closing-entry>`\\ 。\\ :ref:`估值科目 "
-"<accounting/inventory-valuation/valuation-account>`\\ 上的增加值随后会结转至"
-"\\ :ref:`变动科目 <accounting/inventory-valuation/variation-account>`\\ ，该"
-"科目属于一种新型中转科目。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:320
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is required and the Bill to "
-"Receive or |GRNI| account, etc., needs updating."
-msgstr ""
-"（可选）生成\\ :ref:`应计分录 <accounting/inventory-valuation/accrual-"
-"entries>`\\ ，前提是需要进行会计结账且待收账单或\\ |GRNI|\\ 科目等需要更新。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:325
-msgid ""
-"Journal entries can also be created manually if needed, using the same "
-"process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
-"upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
-"manual>`."
-msgstr ""
-"如有需要，也可以手动创建日记账分录，采用平衡\\ :guilabel:`库存中转`\\ 科目的"
-"相同流程，具体如\\ :ref:`升级至 Odoo 19 之前 <accounting/inventory-valuation/"
-"upgrade-process-manual>`\\ 所述。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:332
-msgid "Option 2: Manual journal entry"
-msgstr "选项 2：手动日记账分录"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:334
-msgid "To create the manual journal entry, follow these steps:"
-msgstr "若要创建手动日记账分录，请按照以下步骤操作："
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:336
-msgid ""
-"If all vendor bills or invoices can't be created for all the received "
-"purchase/sales orders before the upgrade, follow these steps:"
-msgstr ""
-"如果在升级前无法为所有已接收的采购/销售订单创建供应商账单或发票，请按照以下步"
-"骤操作："
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:339
-msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
-msgstr "请前往\\ :menuselection:`会计 --> 报表 --> 总账簿`。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:340
-msgid ""
-"Identify the open balance in the :guilabel:`Stock Interim` accounts and "
-"create a journal entry that debits/credits:"
-msgstr "确认\\ :guilabel:`库存暂记`科目中的未结余额，并创建一笔借/贷记录的日记账录："
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:343
-msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
-msgstr "包含未结余额的\\ :guilabel:`库存暂记`科目"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:344
-msgid "The :guilabel:`Stock Valuation` account"
-msgstr "\\ :guilabel:`库存估值`科目"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:349
-msgid ""
-"After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --> "
-"Inventory Valuation` and :ref:`generate an inventory variation entry "
-"<accounting/inventory-valuation/closing-entry>`. The increased value on "
-"the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
-"account>` is then transferred to the :ref:`Variation account <accounting/"
-"inventory-valuation/variation-account>`, which is a new type of interim "
-"account."
-msgstr ""
-"升级至 Odoo 19 后，请前往\\ :menuselection:`会计 --> 审核 --> 库存估值`并\\ "
-":ref:`生成库存变动记录 <accounting/inventory-valuation/closing-entry>`。\\ "
-":ref:`估值科目 <accounting/inventory-valuation/valuation-account>`上的增加价"
-"值随后会转移至\\ :ref:`变动科目 <accounting/inventory-valuation/variation-"
-"account>`，这是一种新的暂记科目类型。"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:355
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is needed and the Bill to Receive "
-"or |GRNI| account, etc., must be up to date."
-msgstr ""
-"如果需要会计关帐，并且应收账单或\\ :ref:`应计账录 <accounting/inventory-"
-"valuation/accrual-entries>`科目等必须保持最新状态，则可选择生成\\ |GRNI|科目"
-"等。"
 
 #: ../../content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -18524,10 +18336,10 @@ msgid ""
 "of a bank or cash journal."
 msgstr ""
 "Odoo 提供多种支付方式，以允许针对不同类型的支付进行不同配置。支付方式包括手工"
-"支付（如现金）、\\ :doc:`支票 <payments/pay_checks>`，以及批量支付文件（如\\ "
-":ref:`NACHA <l10n_us/ach-electronic-transfers>`和\\ :doc:`SEPA <payments/"
-"sepa_payments>`）。可在银行或现金日记账录的\\ :guilabel:`待收款`和\\ "
-":guilabel:`待付款`标签页中配置支付方式。"
+"支付（如现金）、\\ :doc:`支票 <payments/pay_checks>`，以及批量支付文件（如"
+"\\ :ref:`NACHA <l10n_us/ach-electronic-transfers>`和\\ :doc:`SEPA <payments/"
+"sepa_payments>`）。可在银行或现金日记账录的\\ :guilabel:`待收款`和"
+"\\ :guilabel:`待付款`标签页中配置支付方式。"
 
 #: ../../content/applications/finance/accounting/payments.rst:35
 msgid ":doc:`../../sales/point_of_sale/payment_methods` for Point of Sale"
@@ -18545,8 +18357,8 @@ msgid ""
 "to simplify :ref:`group <accounting/payments/group-payments>` payments."
 msgstr ""
 "可以在联系人中设置首选支付方式，以便在为该联系人创建支付时自动选择该方式。在"
-"搜索栏中，可以按\\ :guilabel:`支付方式`对发票和账单进行分组，以简化\\ "
-":ref:`分组 <accounting/payments/group-payments>`支付。"
+"搜索栏中，可以按\\ :guilabel:`支付方式`对发票和账单进行分组，以简化\\ :ref:`"
+"分组 <accounting/payments/group-payments>`支付。"
 
 #: ../../content/applications/finance/accounting/payments.rst:46
 msgid ""
@@ -18721,7 +18533,8 @@ msgstr "无未结账款"
 msgid ""
 "If no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` "
 "are configured:"
-msgstr "如果未配置\\ :ref:`未结科目 <accounting/journals/outstanding-accounts>`："
+msgstr ""
+"如果未配置\\ :ref:`未结科目 <accounting/journals/outstanding-accounts>`："
 
 #: ../../content/applications/finance/accounting/payments.rst:119
 msgid "No journal entry is created."
@@ -19021,8 +18834,8 @@ msgid ""
 "Then, :ref:`reconciling <accounting/reconciliation/access>` the payment with "
 "the bank transaction completes the payment workflow."
 msgstr ""
-"然后，将付款与银行交易进行\\ :ref:`对账 <accounting/reconciliation/access>`\\"
-" 即可完成付款流程。"
+"然后，将付款与银行交易进行\\ :ref:`对账 <accounting/reconciliation/"
+"access>`\\ 即可完成付款流程。"
 
 #: ../../content/applications/finance/accounting/payments.rst:251
 #: ../../content/applications/finance/accounting/payments.rst:397
@@ -19058,8 +18871,8 @@ msgid ""
 "Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
 "在验证发票/账单时，如果该特定客户或供应商存在未清付款，发票/账单顶部会出现蓝"
-"色横幅。要将其与发票或账单匹配，请点击\\ :guilabel:`添加`\\ （位于\\ "
-":guilabel:`未清贷项`\\ 或\\ :guilabel:`未清借项`\\ 下）。"
+"色横幅。要将其与发票或账单匹配，请点击\\ :guilabel:`添加`\\ （位于"
+"\\ :guilabel:`未清贷项`\\ 或\\ :guilabel:`未清借项`\\ 下）。"
 
 #: ../../content/applications/finance/accounting/payments.rst:0
 msgid "Shows the Add option to reconcile an invoice or a bill with a payment."
@@ -19106,9 +18919,9 @@ msgid ""
 "the :guilabel:`Customer Invoices` or :guilabel:`Vendor Bills` journals, and "
 "select :guilabel:`Payments Matching`."
 msgstr ""
-"点击\\ :icon:`fa-ellipsis-v`\\ （\\ :guilabel:`省略号`\\ ）按钮，从\\ "
-":guilabel:`客户发票`\\ 或\\ :guilabel:`供应商账单`\\ 日记账中选择\\ "
-":guilabel:`付款匹配`\\ 。"
+"点击\\ :icon:`fa-ellipsis-v`\\ （\\ :guilabel:`省略号`\\ ）按钮，从"
+"\\ :guilabel:`客户发票`\\ 或\\ :guilabel:`供应商账单`\\ 日记账中选择"
+"\\ :guilabel:`付款匹配`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:306
 msgid ""
@@ -19293,9 +19106,9 @@ msgid ""
 msgstr ""
 "\\ :guilabel:`付款匹配`\\ 工具会打开所有未对账的日记账项目，并允许逐一处理，"
 "匹配所有付款和日记账项目。前往\\ :menuselection:`会计 --> 会计 --> 对账`\\ ，"
-"或者前往\\ :guilabel:`会计仪表板`\\ ，点击\\ :icon:`fa-ellipsis-v`\\ （\\ "
-":guilabel:`省略号`\\ ）按钮，从\\ :guilabel:`销售`\\ 或\\ :guilabel:`采购`\\ "
-"日记账中选择\\ :guilabel:`付款匹配`\\ 。"
+"或者前往\\ :guilabel:`会计仪表板`\\ ，点击\\ :icon:`fa-ellipsis-v`\\ "
+"（\\ :guilabel:`省略号`\\ ）按钮，从\\ :guilabel:`销售`\\ 或\\ :guilabel:`采"
+"购`\\ 日记账中选择\\ :guilabel:`付款匹配`\\ 。"
 
 #: ../../content/applications/finance/accounting/payments.rst:407
 msgid ""
@@ -21363,7 +21176,8 @@ msgid ""
 "Reporting filters and options vary on a per-report basis. The following "
 "buttons and options are common to most reports and are located in the top "
 "bar of the report:"
-msgstr "报表筛选和选项因报表而异。以下按钮和选项适用于大多数报表，位于报表顶部栏中："
+msgstr ""
+"报表筛选和选项因报表而异。以下按钮和选项适用于大多数报表，位于报表顶部栏中："
 
 #: ../../content/applications/finance/accounting/reporting.rst:180
 msgid ""
@@ -21411,8 +21225,8 @@ msgstr ""
 "条目类型\\ 筛选器，由\\ :icon:`fa-sliders`\\ :guilabel:`（筛选器）`\\ 图标和"
 "默认设置（例如\\ :guilabel:`仅已过账条目，权责发生制`）标识。使用此筛选器确定"
 "报表中应包含哪种类型的日记账分录（例如：已过账或草稿），以及会计核算方法类型"
-"（例如：权责发生制或\\ :ref:`收付实现制 <accounting/cash-basis/report-filter>"
-"`）。"
+"（例如：权责发生制或\\ :ref:`收付实现制 <accounting/cash-basis/report-"
+"filter>`）。"
 
 #: ../../content/applications/finance/accounting/reporting.rst:194
 msgid ""
@@ -21421,8 +21235,8 @@ msgid ""
 "Horizontally`, which keeps the report within the screen's fold and "
 "eliminates the need to scroll."
 msgstr ""
-"此筛选器还包括显示选项，例如\\ :guilabel:`隐藏零值行`（可移除报表中的零值行）"
-"，或\\ :guilabel:`水平拆分`（可将报表保持在屏幕视窗内，无需滚动）。"
+"此筛选器还包括显示选项，例如\\ :guilabel:`隐藏零值行`（可移除报表中的零值"
+"行），或\\ :guilabel:`水平拆分`（可将报表保持在屏幕视窗内，无需滚动）。"
 
 #: ../../content/applications/finance/accounting/reporting.rst:198
 msgid ""
@@ -21432,10 +21246,10 @@ msgid ""
 "numbers (e.g., :guilabel:`In $`), thousands (e.g., :guilabel:`In K$`), or "
 "millions (e.g., :guilabel:`In M$`)."
 msgstr ""
-"小数\\ 选项，默认包含分数的数字，由您的本地货币图标标识（例如\\ "
-":guilabel:`以 .$ 计算`）。使用下拉菜单中的其他选项，可将报表中的数字格式化为"
-"整数（例如\\ :guilabel:`以 $ 计算`）、千位（例如\\ :guilabel:`以 K$ 计算`）或"
-"百万（例如\\ :guilabel:`以 M$ 计算`）。"
+"小数\\ 选项，默认包含分数的数字，由您的本地货币图标标识（例如\\ :guilabel:`"
+"以 .$ 计算`）。使用下拉菜单中的其他选项，可将报表中的数字格式化为整数（例如"
+"\\ :guilabel:`以 $ 计算`）、千位（例如\\ :guilabel:`以 K$ 计算`）或百万（例如"
+"\\ :guilabel:`以 M$ 计算`）。"
 
 #: ../../content/applications/finance/accounting/reporting.rst:None
 msgid "Reporting filters."
@@ -21450,8 +21264,8 @@ msgid ""
 "report-filter>`."
 msgstr ""
 "启用\\ :ref:`开发者模式 <developer-mode>`后，顶部栏中会出现\\ :doc:`报表自定"
-"义 <reporting/customize>`\\ 选项，由\\ :icon:`fa-cogs`\\ :guilabel:`（齿轮"
-"）`\\ 图标表示。该选项允许（例如）添加\\ :ref:`收付实现制筛选器 <accounting/"
+"义 <reporting/customize>`\\ 选项，由\\ :icon:`fa-cogs`\\ :guilabel:`（齿轮）"
+"`\\ 图标表示。该选项允许（例如）添加\\ :ref:`收付实现制筛选器 <accounting/"
 "cash-basis/report-filter>`。"
 
 #: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:3
@@ -24042,7 +23856,14 @@ msgstr ""
 msgid "General configuration"
 msgstr "常规配置"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:28
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:29
+msgid ""
+"To access the :guilabel:`Intrastat` option, make sure "
+"the :guilabel:`Intrastat Reports` `(account_intrastat)` module "
+"is :doc:`installed </applications/general/apps_modules>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:32
 msgid ""
 "Enable the Intrastat report by going to :menuselection:`Accounting --> "
 "Configuration --> Settings`. Under the :guilabel:`Customer Invoices` "
@@ -24052,11 +23873,11 @@ msgstr ""
 "在 :guilabel:`客户发票` 部分，勾选 :guilabel:`Intrastat`，然后 :guilabel:`保"
 "存`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:35
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:39
 msgid "Default transaction codes: invoice and refund"
 msgstr "默认交易代码：发票和退款"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:37
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:41
 msgid ""
 "You can set a default :ref:`transaction code <intrastat/transaction-code>` "
 "for all newly created invoice and refund transactions. "
@@ -24070,11 +23891,11 @@ msgstr ""
 "择 :guilabel:`默认发票交易代码` 和/或 :guilabel:`默认退款交易代码`，然"
 "后 :guilabel:`保存`。该代码将自动设置到所有相应的发票行。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:45
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:49
 msgid "Region code"
 msgstr "地区代码"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:47
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:51
 msgid ""
 "The region code is **only used by Belgian companies**. "
 "Under :menuselection:`Accounting --> Configuration --> Settings`, select "
@@ -24084,7 +23905,7 @@ msgstr ""
 "地区代码**仅用于比利时公司**。在 :menuselection:`会计 --> 配置 --> 设置` 下，"
 "选择公司所在的 :guilabel:`公司 Intrastat 地区`，然后 :guilabel:`保存`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:52
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:56
 msgid ""
 "If your warehouses are located in more than one region, you can define the "
 "region code at the level of each warehouse instead. To do so, go "
@@ -24099,22 +23920,22 @@ msgstr ""
 msgid "Adding the Intrastat region to a warehouse"
 msgstr "将 Intrastat 地区添加到仓库"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:63
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:67
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:694
 msgid "Product configuration"
 msgstr "产品配置"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:65
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:69
 msgid ""
 "All products must be properly configured to be included in the Intrastat "
 "report."
 msgstr "所有产品都必须正确配置，才能列入 Intrastat 报告。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:70
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:74
 msgid "Commodity code"
 msgstr "商品代码"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:72
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:76
 msgid ""
 "Commodity codes are internationally recognized reference numbers used to "
 "classify goods depending on their **nature**. Intrastat uses the `Combined "
@@ -24125,7 +23946,7 @@ msgstr ""
 "Intrastat 使用 `组合命名法 <https://taxation-customs.ec.europa.eu/customs-4/"
 "calculation-customs-duties/customs-tariff/combined-nomenclature_en>`_。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:75
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
 msgid ""
 "To add a commodity code, go to :menuselection:`Accounting --> Customers --> "
 "Products` and select a product. Under the :guilabel:`Accounting` tab, set "
@@ -24134,7 +23955,7 @@ msgstr ""
 "要添加商品代码，请进入 :menuselection:`会计 --> 客户 --> 产品` 并选择产品。"
 "在 :guilabel:`会计` 选项卡下，设置产品的 :guilabel:`商品代码`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:83
 msgid ""
 "`National Bank of Belgium - Intrastat commodity codes <https://www.nbb.be/en/"
 "statistics/foreign-trade/nomenclature-and-codes>`_"
@@ -24142,11 +23963,11 @@ msgstr ""
 "`比利时国家银行 - Intrastat 商品编码<https://www.nbb.be/en/statistics/"
 "foreign-trade/nomenclature-and-codes>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:85
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:89
 msgid "Quantity: weight and supplementary unit"
 msgstr "数量：重量和附加单位"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:87
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
 msgid ""
 "Depending on the nature of the goods, it is necessary to specify either the "
 "product's weight in kilos (without packaging) or the product's supplementary "
@@ -24156,7 +23977,7 @@ msgstr ""
 "根据货物的性质，有必要说明产品的重量单位（公斤，不含包装）或产品的补充单位，"
 "如平方米（`m2`）、件数（`p/st`）、升（`l`）或克（`g`）。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:95
 msgid ""
 "To add a product's weight or supplementary unit, go "
 "to :menuselection:`Accounting --> Customers --> Products` and select a "
@@ -24168,11 +23989,11 @@ msgstr ""
 "择产品。在 :guilabel:`会计` 标签下，根据商品代码集，填写商品的 :guilabel:`重"
 "量` 或其 :guilabel:`附加单位`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:98
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:102
 msgid "Country of origin"
 msgstr "原产国家/地区"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:100
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:104
 msgid ""
 "To add the product's country of origin, go to :menuselection:`Accounting --> "
 "Customers --> Products` and select a product. Under "
@@ -24181,21 +24002,21 @@ msgstr ""
 "要添加产品的原产国家/地区，请转到 :menuselection:`会计 --> 客户 --> 产品` 并"
 "选择产品。在 :guilabel:`会计` 选项卡下，设置 :guilabel:`原产国家/地区`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:106
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:110
 msgid "Invoices and bills configuration"
 msgstr "发票与账单配置"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:108
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:112
 msgid ""
 "Once products are properly configured, several settings must be configured "
 "on the invoices and bills you create."
 msgstr "正确配置产品后，还必须在创建的发票和账单上配置若干设置。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:114
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:118
 msgid "Transaction code"
 msgstr "交易代码"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:116
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:120
 msgid ""
 "Transaction codes are used to identify a transaction's nature. :ref:`Default "
 "transaction codes <intrastat/default-transaction-codes>` can be set for "
@@ -24204,7 +24025,7 @@ msgstr ""
 "交易代码用于识别交易的性质。 :ref:`默认交易代码 <intrastat/default-"
 "transaction-codes>` 可以为发票和退款交易设置。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:119
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:123
 msgid ""
 "To set a transaction code on an invoice line, create an invoice or a bill, "
 "click the columns selection button, tick :guilabel:`Intrastat`, and use the "
@@ -24218,7 +24039,7 @@ msgstr ""
 msgid "Adding the Intrastat column to an invoice or bill"
 msgstr "在发票或账单中添加 Intrastat 栏"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:128
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:132
 msgid ""
 "`National Bank of Belgium - Intrastat: Nature of transactions from January "
 "2022 <https://www.nbb.be/doc/dd/onegate/data/"
@@ -24227,11 +24048,11 @@ msgstr ""
 "`比利时国家银行 - Intrastat：2022 年 1 月起适用的交易性质 <https://"
 "www.nbb.be/doc/dd/onegate/data/new_natures_of_transaction_2022_en.pdf>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:134
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:138
 msgid "Partner country"
 msgstr "合作伙伴国家/地区"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:136
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
 msgid ""
 "The partner country represents the vendor's country for bills and the "
 "customer's country for invoices. It is automatically filled in using the "
@@ -24240,7 +24061,7 @@ msgstr ""
 "“合作伙伴国家/地区” 是指供应商开立账单或向客户开立发票时，使用的国家/地区。它"
 "会根据联络人的 :guilabel:`国家/地区` 字段的资料自动填写。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:144
 msgid ""
 "To edit the partner country manually, create an invoice or a bill, click "
 "the :guilabel:`Other Info` tab, and select the :guilabel:`Intrastat Country`."
@@ -24248,17 +24069,17 @@ msgstr ""
 "要手动编辑合作伙伴国家/地区，请创建发票或账单，点击 :guilabel:`其他信息` 选项"
 "卡，然后选择 :guilabel:`Intrastat 国家/地区`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:146
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:150
 msgid "Transport code"
 msgstr "运输代码"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:148
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:152
 msgid ""
 "The transport code identifies the presumed **mode of transport** used to "
 "send the goods (arrival or dispatch)."
 msgstr "运输代码用作识别运输货物（收货或发货）的假定**运输方式**。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:151
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:155
 msgid ""
 "To add the transport code, create an invoice or a bill, go to "
 "the :guilabel:`Other info` tab, and select the :guilabel:`Intrastat "
@@ -24267,11 +24088,11 @@ msgstr ""
 "要新增运输代码，请创建发票或账单，进入 :guilabel:`其他信息` 标签，选"
 "择 :guilabel:`Intrastat 运输模式`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:157
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:161
 msgid "Value of the goods"
 msgstr "货物价值"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:159
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:163
 msgid ""
 "The value of a good is the untaxed :guilabel:`Subtotal` (:guilabel:`Price` "
 "multiplied by :guilabel:`Quantity`) of an invoice line."
@@ -24279,11 +24100,11 @@ msgstr ""
 "货物价值，等于发票资料行的未含税 :guilabel:`小计` （:guilabel:`价格` 乘"
 "以 :guilabel:`数量` ）。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:165
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:169
 msgid "Partner configuration"
 msgstr "合作伙伴配置"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:167
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:171
 msgid ""
 "Two fields from the partner's contact form are used with "
 "Intrastat: :guilabel:`VAT` and :guilabel:`Country`. The country can "
@@ -24293,11 +24114,11 @@ msgstr ""
 "和 :guilabel:`国家/地区`。国家可以是发票或账单上的 :ref:`手动设置 <intrastat/"
 "partner-country>`。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:172
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:176
 msgid "Generate the Intrastat report"
 msgstr "生成 Intrastat 报告"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:174
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:178
 msgid ""
 "Generate the report by going to :menuselection:`Accounting --> Reporting --> "
 "Audit Reports: Intrastat Report`. It is automatically computed based on "
@@ -24312,29 +24133,29 @@ msgstr ""
 "configuration>`，以及 :ref:`合作伙伴 <intrastat/partner>` 中的信息自动计算"
 "的。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:180
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
 msgid ""
 "Export the report as a PDF, XLSX, or XML file to post it to your legal "
 "administration."
 msgstr "将报告导出为 PDF、XLSX 或 XML 文件，以便发布到您的法律管理部门。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:182
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:186
 msgid ""
 "Each report line refers to a single invoice line and contains the following "
 "information:"
 msgstr "每个报告行指一个发票行，包含以下信息："
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:188
 msgid "Invoice or bill reference number;"
 msgstr "发票或账单编号；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:185
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
 msgid ""
 "System, which is a code automatically generated depending on whether the "
 "document is an invoice (dispatch) or a bill (arrival);"
 msgstr "系统是根据文档是发票（发货）还是账单（到货）自动生成的代码。"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:187
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
 msgid ""
 ":ref:`Country <intrastat/partner-country>`, which is the vendor's country "
 "for arrivals and the customer's country for dispatches;"
@@ -24342,45 +24163,45 @@ msgstr ""
 ":ref:`国家/地区 <intrastat/partner-country>`，即到达时为供应商所在国家/地区，"
 "发出时为客户所在国家/地区；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
 msgid ":ref:`Transaction Code <intrastat/transaction-code>`;"
 msgstr ":ref:`交易代码 <intrastat/transaction-code>`；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:190
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
 msgid ""
 "(If your company is located in Belgium) :ref:`Region Code <intrastat/region-"
 "code>`;"
 msgstr "(如果您的公司位于比利时）:ref:`地区代码 <intrastat/region-code>`；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
 msgid ":ref:`Commodity Code <intrastat/commodity-code>`;"
 msgstr ":ref:`商品代码 <intrastat/commodity-code>`；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:192
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
 msgid ":ref:`Origin Country <intrastat/origin-country>`;"
 msgstr ":ref:`原产国家/地区 <intrastat/origin-country>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
 msgid ":ref:`Partner VAT <intrastat/partner>`;"
 msgstr ":ref:`合作伙伴增值税 <intrastat/partner>`；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
 msgid ":ref:`Transport Code <intrastat/transport-code>`;"
 msgstr ":ref:`运输代码 <intrastat/transport-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:199
 msgid ":doc:`Incoterm Code <../customer_invoices/incoterms>`;"
 msgstr ":doc:`国际贸易术语代码 <../customer_invoices/incoterms>`；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:200
 msgid ":ref:`Weight <intrastat/quantity>`;"
 msgstr ":ref:`重量/数量 <intrastat/quantity>`；"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:201
 msgid ":ref:`Supplementary Units <intrastat/quantity>`; and"
 msgstr ":ref:`补充单位 <intrastat/quantity>`；及"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:202
 msgid ""
 ":ref:`Value <intrastat/value>`, which is always expressed in euros even if "
 "the original invoice or bill used another currency."
@@ -37064,8 +36885,8 @@ msgid ""
 ":ref:`Argentinean eCommerce <localizations/argentina/ecommerce-electronic-"
 "invoicing>`"
 msgstr ""
-":ref:`阿根廷电子商务 <localizations/argentina/ecommerce-electronic-invoicing>"
-"`"
+":ref:`阿根廷电子商务 <localizations/argentina/ecommerce-electronic-"
+"invoicing>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:44
 msgid "`l10n_ar_website_sale`"
@@ -37083,7 +36904,8 @@ msgstr ""
 msgid ""
 ":ref:`Argentina - Payment Withholdings <localizations/argentina/payment-"
 "withholdings>`"
-msgstr ":ref:`阿根廷 - 付款预扣 <localizations/argentina/payment-withholdings>`"
+msgstr ""
+":ref:`阿根廷 - 付款预扣 <localizations/argentina/payment-withholdings>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:48
 msgid "`l10n_ar_withholding`"
@@ -38188,8 +38010,8 @@ msgid ""
 "either:"
 msgstr ""
 "要设置\\ :guilabel:`传输模式`，请前往\\ :menuselection:`会计 --> 配置 --> 设"
-"置`，向下滚动至\\ :guilabel:`阿根廷本地化`\\ 部分。然后，在\\ "
-":guilabel:`MiPyME FCE 默认传输选项`\\ 部分，选择以下其中一项："
+"置`，向下滚动至\\ :guilabel:`阿根廷本地化`\\ 部分。然后，在"
+"\\ :guilabel:`MiPyME FCE 默认传输选项`\\ 部分，选择以下其中一项："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:567
 msgid ":guilabel:`SCA - TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA`"
@@ -38293,8 +38115,8 @@ msgid ""
 "obtained for an invoice number previously sent to |ARCA|. To retrieve this "
 "information, follow these steps:"
 msgstr ""
-"出于审计和排查故障的目的，可以获取先前发送至\\ |ARCA|\\ 的发票号码的详细信息"
-"。要检索此信息，请按以下步骤操作："
+"出于审计和排查故障的目的，可以获取先前发送至\\ |ARCA|\\ 的发票号码的详细信"
+"息。要检索此信息，请按以下步骤操作："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:614
 msgid ""
@@ -38307,9 +38129,9 @@ msgid ""
 "relevant :guilabel:`Journal`, :guilabel:`Document Type`, "
 "and :guilabel:`Number`. Then, click :guilabel:`Get Invoice Detail`."
 msgstr ""
-"在\\ :guilabel:`在 ARCA 中查询发票`\\ 窗口中，选择相关的\\ :guilabel:`日记"
-"账`\\ 、\\ :guilabel:`单据类型`\\ 和\\ :guilabel:`编号`\\ 。然后，点击\\ "
-":guilabel:`获取发票详情`\\ 。"
+"在\\ :guilabel:`在 ARCA 中查询发票`\\ 窗口中，选择相关的\\ :guilabel:`日记账"
+"`\\ 、\\ :guilabel:`单据类型`\\ 和\\ :guilabel:`编号`\\ 。然后，点击"
+"\\ :guilabel:`获取发票详情`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:None
 msgid "Details of invoice consulted in ARCA."
@@ -38323,8 +38145,8 @@ msgid ""
 "select :guilabel:`Get Last Invoice` as the :guilabel:`Type`."
 msgstr ""
 "要检索 ARCA 中特定\\ :guilabel:`单据类型`\\ 和 POS\\ :guilabel:`编号`\\ 所使"
-"用的最后一个编号，并以此参考排查 Odoo 与 ARCA 之间序列同步可能出现的任何问题"
-"，请选择\\ :guilabel:`获取最后一张发票`\\ 作为\\ :guilabel:`类型`\\ 。"
+"用的最后一个编号，并以此参考排查 Odoo 与 ARCA 之间序列同步可能出现的任何问"
+"题，请选择\\ :guilabel:`获取最后一张发票`\\ 作为\\ :guilabel:`类型`\\ 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:632
 msgid ""
@@ -38334,8 +38156,8 @@ msgid ""
 "argentina/contact-arca>` of Issuer and Customer, but it can be changed if "
 "necessary."
 msgstr ""
-"根据为供应商账单选择的采购日记账，\\ :guilabel:`单据类型`\\ 字段现在为必填项"
-"。该值会根据开具方和客户的\\ :ref:`ARCA 责任类型 <localizations/argentina/"
+"根据为供应商账单选择的采购日记账，\\ :guilabel:`单据类型`\\ 字段现在为必填"
+"项。该值会根据开具方和客户的\\ :ref:`ARCA 责任类型 <localizations/argentina/"
 "contact-arca>`\\ 自动填充，但如有必要也可以进行更改。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:636
@@ -61726,14 +61548,15 @@ msgid ""
 "G03 Tremol control unit integration to report taxes to the Kenya Revenue "
 "Authority (KRA) through the Tax Invoice Management System (TIMS)"
 msgstr ""
-"G03 Tremol 控制单元集成，用于通过税务发票管理系统（TIMS）向肯尼亚税务局（KRA"
-"）申报税费"
+"G03 Tremol 控制单元集成，用于通过税务发票管理系统（TIMS）向肯尼亚税务局"
+"（KRA）申报税费"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:51
 msgid ""
 ":doc:`Kenyan Payroll localization documentation <../../hr/payroll/"
 "payroll_localizations/kenya>`"
-msgstr ":doc:`肯尼亚工资单本地化文档 <../../hr/payroll/payroll_localizations/kenya>`"
+msgstr ""
+":doc:`肯尼亚工资单本地化文档 <../../hr/payroll/payroll_localizations/kenya>`"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:56
 msgid "eTIMS"
@@ -64441,7 +64264,8 @@ msgstr ""
 msgid ""
 ":doc:`Mexican Payroll localization documentation <../../hr/payroll/"
 "payroll_localizations/mexico>`"
-msgstr ":doc:`墨西哥工资单本地化文档 <../../hr/payroll/payroll_localizations/mexico>`"
+msgstr ""
+":doc:`墨西哥工资单本地化文档 <../../hr/payroll/payroll_localizations/mexico>`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:91
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:123
@@ -77109,7 +76933,8 @@ msgstr "阿联酋本地化套件提供以下关键功能，以确保符合当地
 msgid ""
 ":ref:`Chart of accounts <localizations/uae/coa>`: a predefined structure "
 "aligned with UAE accounting standards"
-msgstr ":ref:`会计科目表 <localizations/uae/coa>`：符合阿联酋会计准则的预定义结构"
+msgstr ""
+":ref:`会计科目表 <localizations/uae/coa>`：符合阿联酋会计准则的预定义结构"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:51
 msgid ""
@@ -86259,6 +86084,184 @@ msgid ""
 msgstr ""
 "使用在 :ref:`payment_providers/xendit/configure_dashboard` 步骤中保存的信息填"
 "写 :guilabel:`秘钥` 和 :guilabel:`网络钩子令牌` 字段。"
+
+#~ msgid ""
+#~ "In Odoo 19, the stock input/output accounts are no longer used. Any non-"
+#~ "zero balances in stock interim accounts must be transferred to "
+#~ "the :ref:`stock valuation account <accounting/inventory-valuation/"
+#~ "valuation-account>` via journal entry to maintain accurate inventory "
+#~ "values after migration. This rebalancing can be performed :ref:`before "
+#~ "<accounting/inventory-valuation/upgrade-process-server-action>` "
+#~ "or :ref:`after <accounting/inventory-valuation/upgrade-process-manual>` "
+#~ "upgrading to Odoo 19."
+#~ msgstr ""
+#~ "在 Odoo 19 中，不再使用库存入库/出库科目。迁移后，库存过渡科目中的任何非零"
+#~ "余额都必须通过日记账分录结转至\\ :ref:`库存估值科目 <accounting/inventory-"
+#~ "valuation/valuation-account>`\\ ，以保持准确的库存价值。可在升级至 Odoo "
+#~ "19 \\ :ref:`之前 <accounting/inventory-valuation/upgrade-process-server-"
+#~ "action>`\\ 或\\ :ref:`之后 <accounting/inventory-valuation/upgrade-"
+#~ "process-manual>`\\ 执行此重新平衡。"
+
+#~ msgid ""
+#~ "Before upgrading, review received purchase or sales orders that are not "
+#~ "yet linked to vendor bills or invoices, and post any existing draft bills/"
+#~ "invoices to reduce the open balance."
+#~ msgstr ""
+#~ "升级前，请检查尚未关联至供应商账单或客户发票的已收采购订单或销售订单，并将"
+#~ "所有现有的草稿账单/发票过账，以减少未结余额。"
+
+#~ msgid ""
+#~ "It is recommended to implement the change **after** upgrading to Odoo 19, "
+#~ "because a server action identifies the open balance in "
+#~ "the :guilabel:`Stock Interim` accounts and automatically applies the "
+#~ "change."
+#~ msgstr ""
+#~ "建议在升级至 Odoo 19 **之后**实施此项变更，因为服务器操作会识别"
+#~ "\\ :guilabel:`库存过渡`\\ 科目中的未结余额并自动应用变更。"
+
+#~ msgid ""
+#~ "Account structures and valuation scenarios differ across companies. "
+#~ "Review these steps with an accountant or an Odoo inventory valuation "
+#~ "expert to ensure the setup aligns with the company's specific setup."
+#~ msgstr ""
+#~ "各公司的会计科目结构和估值方案各有不同。请与会计师或 Odoo 库存估值专家一起"
+#~ "审查这些步骤，以确保配置符合公司的具体情况。"
+
+#~ msgid "Option 1: Server action journal entry"
+#~ msgstr "选项 1：服务器操作日记账分录"
+
+#~ msgid ""
+#~ "Use a test database created during the upgrade process first, and verify "
+#~ "the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
+#~ "warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
+#~ "Valuation report <accounting/inventory-valuation/inventory-valuation-"
+#~ "report>` to ensure accuracy."
+#~ msgstr ""
+#~ "请先使用在升级过程中创建的测试数据库，并验证\\ :doc:`库存报表 <../../../"
+#~ "inventory_and_mrp/inventory/warehouses_storage/reporting/stock>`\\ 、科目"
+#~ "和\\ :ref:`库存估值报表 <accounting/inventory-valuation/inventory-"
+#~ "valuation-report>`\\ ，以确保准确性。"
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, the server action must be applied to each "
+#~ "company to balance any non-zero :guilabel:`Stock Interim` accounts:"
+#~ msgstr ""
+#~ "升级至 Odoo 19 后，必须对每个公司应用该服务器操作，以平衡任何非零的"
+#~ "\\ :guilabel:`库存中转`\\ 科目："
+
+#~ msgid ""
+#~ "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
+#~ "click the relevant company."
+#~ msgstr ""
+#~ "前往\\ :menuselection:`设置 --> 用户与公司 --> 公司`\\ 并点击相关公司。"
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cog` :guilabel:`(gear)` icon and "
+#~ "select :guilabel:`Stock Valuation rebalance interim Accounts`. A draft "
+#~ "journal entry is automatically generated to balance the open amount."
+#~ msgstr ""
+#~ "点击\\ :icon:`fa-cog` :guilabel:`（齿轮）`\\ 图标，然后选择\\ :guilabel:`"
+#~ "库存估值重新平衡中转科目`\\ 。系统将自动生成草稿日记账分录以平衡未结金额。"
+
+#~ msgid ""
+#~ "Review the draft journal entry amounts, edit them if necessary, then "
+#~ "click :guilabel:`Post`."
+#~ msgstr ""
+#~ "核对草稿日记账分录金额，必要时进行修改，然后点击\\ :guilabel:`过账`\\ 。"
+
+#~ msgid ""
+#~ "Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
+#~ "accounts are balanced to zero and that the remaining amount is recorded "
+#~ "in the :guilabel:`Stock valuation` account."
+#~ msgstr ""
+#~ "检查总账以确认\\ :guilabel:`库存中转`\\ 科目已平衡至零，且剩余金额已记录在"
+#~ "\\ :guilabel:`库存估值`\\ 科目中。"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
+#~ "and :ref:`generate an inventory variation entry <accounting/inventory-"
+#~ "valuation/closing-entry>`. The increased value on the :ref:`Valuation "
+#~ "account <accounting/inventory-valuation/valuation-account>` is then "
+#~ "transferred to the :ref:`Variation account <accounting/inventory-"
+#~ "valuation/variation-account>`, which is a new type of interim account."
+#~ msgstr ""
+#~ "前往\\ :menuselection:`会计 --> 审查 --> 库存估值`\\ 并\\ :ref:`生成库存变"
+#~ "动分录 <accounting/inventory-valuation/closing-entry>`\\ 。\\ :ref:`估值科"
+#~ "目 <accounting/inventory-valuation/valuation-account>`\\ 上的增加值随后会"
+#~ "结转至\\ :ref:`变动科目 <accounting/inventory-valuation/variation-"
+#~ "account>`\\ ，该科目属于一种新型中转科目。"
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is required and the "
+#~ "Bill to Receive or |GRNI| account, etc., needs updating."
+#~ msgstr ""
+#~ "（可选）生成\\ :ref:`应计分录 <accounting/inventory-valuation/accrual-"
+#~ "entries>`\\ ，前提是需要进行会计结账且待收账单或\\ |GRNI|\\ 科目等需要更"
+#~ "新。"
+
+#~ msgid ""
+#~ "Journal entries can also be created manually if needed, using the same "
+#~ "process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
+#~ "upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
+#~ "manual>`."
+#~ msgstr ""
+#~ "如有需要，也可以手动创建日记账分录，采用平衡\\ :guilabel:`库存中转`\\ 科目"
+#~ "的相同流程，具体如\\ :ref:`升级至 Odoo 19 之前 <accounting/inventory-"
+#~ "valuation/upgrade-process-manual>`\\ 所述。"
+
+#~ msgid "Option 2: Manual journal entry"
+#~ msgstr "选项 2：手动日记账分录"
+
+#~ msgid "To create the manual journal entry, follow these steps:"
+#~ msgstr "若要创建手动日记账分录，请按照以下步骤操作："
+
+#~ msgid ""
+#~ "If all vendor bills or invoices can't be created for all the received "
+#~ "purchase/sales orders before the upgrade, follow these steps:"
+#~ msgstr ""
+#~ "如果在升级前无法为所有已接收的采购/销售订单创建供应商账单或发票，请按照以"
+#~ "下步骤操作："
+
+#~ msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
+#~ msgstr "请前往\\ :menuselection:`会计 --> 报表 --> 总账簿`。"
+
+#~ msgid ""
+#~ "Identify the open balance in the :guilabel:`Stock Interim` accounts and "
+#~ "create a journal entry that debits/credits:"
+#~ msgstr ""
+#~ "确认\\ :guilabel:`库存暂记`科目中的未结余额，并创建一笔借/贷记录的日记账"
+#~ "录："
+
+#~ msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
+#~ msgstr "包含未结余额的\\ :guilabel:`库存暂记`科目"
+
+#~ msgid "The :guilabel:`Stock Valuation` account"
+#~ msgstr "\\ :guilabel:`库存估值`科目"
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --"
+#~ "> Inventory Valuation` and :ref:`generate an inventory variation entry "
+#~ "<accounting/inventory-valuation/closing-entry>`. The increased value on "
+#~ "the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
+#~ "account>` is then transferred to the :ref:`Variation account <accounting/"
+#~ "inventory-valuation/variation-account>`, which is a new type of interim "
+#~ "account."
+#~ msgstr ""
+#~ "升级至 Odoo 19 后，请前往\\ :menuselection:`会计 --> 审核 --> 库存估值`并"
+#~ "\\ :ref:`生成库存变动记录 <accounting/inventory-valuation/closing-"
+#~ "entry>`。\\ :ref:`估值科目 <accounting/inventory-valuation/valuation-"
+#~ "account>`上的增加价值随后会转移至\\ :ref:`变动科目 <accounting/inventory-"
+#~ "valuation/variation-account>`，这是一种新的暂记科目类型。"
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is needed and the "
+#~ "Bill to Receive or |GRNI| account, etc., must be up to date."
+#~ msgstr ""
+#~ "如果需要会计关帐，并且应收账单或\\ :ref:`应计账录 <accounting/inventory-"
+#~ "valuation/accrual-entries>`科目等必须保持最新状态，则可选择生成\\ |GRNI|科"
+#~ "目等。"
 
 #~ msgid ":doc:`/applications/finance/accounting/customer_invoices/overview`"
 #~ msgstr ":doc:`/applications/finance/accounting/customer_invoices/overview`"

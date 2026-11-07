@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
 "PO-Revision-Date: 2026-10-31 11:36+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -4679,9 +4679,9 @@ msgid ""
 "to :guilabel:`To Invoice`, ensuring all selected orders share the same "
 "invoicing address and the same delivery address."
 msgstr ""
-"Vælg de relevante salgsordrer med :guilabel:`Faktureringsstatus` sat til "
-":guilabel:`Til fakturering`, og sørg for, at alle valgte ordrer deler den "
-"samme faktureringsadresse og den samme leveringsadresse."
+"Vælg de relevante salgsordrer med :guilabel:`Faktureringsstatus` sat "
+"til :guilabel:`Til fakturering`, og sørg for, at alle valgte ordrer deler "
+"den samme faktureringsadresse og den samme leveringsadresse."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:66
 msgid "Click :guilabel:`Create Invoices`."
@@ -4693,9 +4693,9 @@ msgid ""
 "the :guilabel:`Consolidated Billing` option enabled, and set "
 "the :guilabel:`Timesheets Period`, if needed."
 msgstr ""
-"I vinduet :guilabel:`Opret faktura(er)`, hold indstillingen "
-":guilabel:`Samlet fakturering` aktiveret, og indstil "
-":guilabel:`Tidsregistreringsperiode`, hvis det er nødvendigt."
+"I vinduet :guilabel:`Opret faktura(er)`, hold "
+"indstillingen :guilabel:`Samlet fakturering` aktiveret, og "
+"indstil :guilabel:`Tidsregistreringsperiode`, hvis det er nødvendigt."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:69
 msgid "Click :guilabel:`Create Draft`."
@@ -4898,10 +4898,10 @@ msgid ""
 "more, can be added or modified in the :guilabel:`Other Info` tab."
 msgstr ""
 "Fanen :guilabel:`Posteringer` viser de oprettede regnskabsposteringer. "
-"Yderligere fakturainformation såsom :guilabel:`Kundereference`, "
-":guilabel:`Betalingsreference`, :doc:`Skattepositioner <taxes/"
-"fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>` og mere "
-"kan tilføjes eller ændres i fanen :guilabel:`Andre oplysninger`."
+"Yderligere fakturainformation "
+"såsom :guilabel:`Kundereference`, :guilabel:`Betalingsreference`, :doc:`Skattepositioner "
+"<taxes/fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>` og "
+"mere kan tilføjes eller ændres i fanen :guilabel:`Andre oplysninger`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:168
 msgid ""
@@ -19166,223 +19166,12 @@ msgstr "Opgraderingsproces for angelsaksisk løbende"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:274
 msgid ""
-"In Odoo 19, the stock input/output accounts are no longer used. Any non-zero "
-"balances in stock interim accounts must be transferred to the :ref:`stock "
-"valuation account <accounting/inventory-valuation/valuation-account>` via "
-"journal entry to maintain accurate inventory values after migration. This "
-"rebalancing can be performed :ref:`before <accounting/inventory-valuation/"
-"upgrade-process-server-action>` or :ref:`after <accounting/inventory-"
-"valuation/upgrade-process-manual>` upgrading to Odoo 19."
+"Upgrading from Odoo 18 to Odoo 19 automatically handles the stock interim "
+"account rebalancing process during the database migration. The migration "
+"script automatically transfers non-zero balances from the legacy stock input/"
+"output accounts to the stock valuation account, eliminating the need for "
+"manual journal entries or server actions."
 msgstr ""
-"I Odoo 19 anvendes lagertilgangs- og lagerafgangskonti ikke længere. "
-"Eventuelle ikke-nulstillede saldi på mellemliggende lagerkonti skal "
-"overføres til :ref:`lagerværdikontoen <accounting/inventory-valuation/"
-"valuation-account>` via en finanspostering for at opretholde nøjagtige "
-"lagerværdier efter migreringen. Denne genafstemning kan udføres :ref:`før "
-"<accounting/inventory-valuation/upgrade-process-server-action>` "
-"eller :ref:`efter <accounting/inventory-valuation/upgrade-process-manual>` "
-"opgradering til Odoo 19."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:281
-msgid ""
-"Before upgrading, review received purchase or sales orders that are not yet "
-"linked to vendor bills or invoices, and post any existing draft bills/"
-"invoices to reduce the open balance."
-msgstr ""
-"Før opgradering bør du gennemgå modtagne indkøbs- eller salgsordrer, som "
-"endnu ikke er knyttet til leverandørregninger eller fakturaer, og bogføre "
-"eventuelle eksisterende kladderegninger/-fakturaer for at reducere den åbne "
-"saldo."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:285
-msgid ""
-"It is recommended to implement the change **after** upgrading to Odoo 19, "
-"because a server action identifies the open balance in the :guilabel:`Stock "
-"Interim` accounts and automatically applies the change."
-msgstr ""
-"Det anbefales at implementere ændringen **efter** opgradering til Odoo 19, "
-"fordi en serverhandling identificerer den åbne saldo på kontiene "
-"for :guilabel:`Mellemliggende lager` og automatisk anvender ændringen."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:290
-msgid ""
-"Account structures and valuation scenarios differ across companies. Review "
-"these steps with an accountant or an Odoo inventory valuation expert to "
-"ensure the setup aligns with the company's specific setup."
-msgstr ""
-"Kontoplaner og værdiansættelsesscenarier varierer fra virksomhed til "
-"virksomhed. Gennemgå disse trin sammen med en revisor eller en Odoo-ekspert "
-"i lagerværdiansættelse for at sikre, at opsætningen stemmer overens med "
-"virksomhedens specifikke konfiguration."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:297
-msgid "Option 1: Server action journal entry"
-msgstr "Mulighed 1: Finanspostering via serverhandling"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:300
-msgid ""
-"Use a test database created during the upgrade process first, and verify "
-"the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
-"Valuation report <accounting/inventory-valuation/inventory-valuation-"
-"report>` to ensure accuracy."
-msgstr ""
-"Brug først en testdatabase oprettet under opgraderingsprocessen, og "
-"kontrollér :doc:`Lagerrapport <../../../inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/stock>`, konti "
-"og :ref:`Lagerværdiansættelsesrapport <accounting/inventory-valuation/"
-"inventory-valuation-report>` for at sikre nøjagtighed."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:305
-msgid ""
-"After upgrading to Odoo 19, the server action must be applied to each "
-"company to balance any non-zero :guilabel:`Stock Interim` accounts:"
-msgstr ""
-"Efter opgradering til Odoo 19 skal serverhandlingen udføres for hver "
-"virksomhed for at udligne eventuelle ikke-nulstillede konti "
-"for :guilabel:`Mellemliggende lager`:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:308
-msgid ""
-"Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
-"click the relevant company."
-msgstr ""
-"Gå til :menuselection:`Indstillinger --> Brugere og virksomheder --> "
-"Virksomheder`, og klik på den relevante virksomhed."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:310
-msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`Stock "
-"Valuation rebalance interim Accounts`. A draft journal entry is "
-"automatically generated to balance the open amount."
-msgstr ""
-"Klik på ikonet :icon:`fa-cog` :guilabel:`(tandhjul)`, og "
-"vælg :guilabel:`Genafstem mellemliggende konti for lagerværdiansættelse`. "
-"Der genereres automatisk en kladdefinanspostering til at udligne det åbne "
-"beløb."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:312
-msgid ""
-"Review the draft journal entry amounts, edit them if necessary, then "
-"click :guilabel:`Post`."
-msgstr ""
-"Gennemgå beløbene på kladdefinansposteringen, rediger dem om nødvendigt, og "
-"klik derefter på :guilabel:`Bogfør`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:313
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:346
-msgid ""
-"Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
-"accounts are balanced to zero and that the remaining amount is recorded in "
-"the :guilabel:`Stock valuation` account."
-msgstr ""
-"Tjek finansbogen for at bekræfte, at kontiene for :guilabel:`Mellemliggende "
-"lager` er udlignet til nul, og at det resterende beløb er bogført på kontoen "
-"for :guilabel:`Lagerværdiansættelse`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:315
-msgid ""
-"Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
-"and :ref:`generate an inventory variation entry <accounting/inventory-"
-"valuation/closing-entry>`. The increased value on the :ref:`Valuation "
-"account <accounting/inventory-valuation/valuation-account>` is then "
-"transferred to the :ref:`Variation account <accounting/inventory-valuation/"
-"variation-account>`, which is a new type of interim account."
-msgstr ""
-"Gå til :menuselection:`Regnskab --> Gennemgang --> Lagerværdiansættelse`, "
-"og :ref:`opret en lagerafvigelsespostering <accounting/inventory-valuation/"
-"closing-entry>`. Den øgede værdi på :ref:`Værdiansættelseskonto <accounting/"
-"inventory-valuation/valuation-account>` overføres derefter "
-"til :ref:`Variationskonto <accounting/inventory-valuation/variation-"
-"account>`, som er en ny type mellemregningskonto."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:320
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is required and the Bill to "
-"Receive or |GRNI| account, etc., needs updating."
-msgstr ""
-"Du kan eventuelt oprette :ref:`periodiseringsposteringer <accounting/"
-"inventory-valuation/accrual-entries>`, hvis der kræves en "
-"regnskabsafslutning, og kontoen for Bill to Receive eller |GRNI| osv. skal "
-"opdateres."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:325
-msgid ""
-"Journal entries can also be created manually if needed, using the same "
-"process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
-"upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
-"manual>`."
-msgstr ""
-"Finansposteringer kan også oprettes manuelt, hvis det er nødvendigt, ved "
-"hjælp af samme proces til udligning af kontiene "
-"for :guilabel:`Mellemliggende lager` :ref:`før opgradering til Odoo 19 "
-"<accounting/inventory-valuation/upgrade-process-manual>`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:332
-msgid "Option 2: Manual journal entry"
-msgstr "Mulighed 2: Manuel finanspostering"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:334
-msgid "To create the manual journal entry, follow these steps:"
-msgstr "Følg disse trin for at oprette den manuelle finanspostering:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:336
-msgid ""
-"If all vendor bills or invoices can't be created for all the received "
-"purchase/sales orders before the upgrade, follow these steps:"
-msgstr ""
-"Hvis det ikke er muligt at oprette alle leverandørfakturaer eller fakturaer "
-"for alle modtagne indkøbs-/salgsordrer inden opgraderingen, skal du følge "
-"disse trin:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:339
-msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
-msgstr "Gå til :menuselection:`Bogføring --> Rapportering --> Hovedbog`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:340
-msgid ""
-"Identify the open balance in the :guilabel:`Stock Interim` accounts and "
-"create a journal entry that debits/credits:"
-msgstr ""
-"Find den åbne saldo på :guilabel:`Lager interim`-kontiene, og opret en "
-"journalpost, der debiterer/krediterer:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:343
-msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
-msgstr ""
-":guilabel:`Lager interim`-kontoen/-kontiene, der indeholder den åbne saldo"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:344
-msgid "The :guilabel:`Stock Valuation` account"
-msgstr ":guilabel:`Lagervurdering`-kontoen"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:349
-msgid ""
-"After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --> "
-"Inventory Valuation` and :ref:`generate an inventory variation entry "
-"<accounting/inventory-valuation/closing-entry>`. The increased value on "
-"the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
-"account>` is then transferred to the :ref:`Variation account <accounting/"
-"inventory-valuation/variation-account>`, which is a new type of interim "
-"account."
-msgstr ""
-"Efter opgradering til Odoo 19 skal du gå til :menuselection:`Bogføring --> "
-"Gennemgang --> Lagervurdering` og :ref:`generere en lagervariationspostering "
-"<accounting/inventory-valuation/closing-entry>`. Den forøgede værdi "
-"på :ref:`Vurderingskonto <accounting/inventory-valuation/valuation-account>` "
-"overføres derefter til :ref:`Variationskonto <accounting/inventory-valuation/"
-"variation-account>`, som er en ny type mellemkonto."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:355
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is needed and the Bill to Receive "
-"or |GRNI| account, etc., must be up to date."
-msgstr ""
-"Generer eventuelt :ref:`periodiseringsposteringer <accounting/inventory-"
-"valuation/accrual-entries>`, hvis der er behov for en regnskabsafslutning, "
-"og kontoen Faktura til modtagelse eller |GRNI| osv. skal være opdateret."
 
 #: ../../content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -26663,7 +26452,14 @@ msgstr ""
 msgid "General configuration"
 msgstr "Generel konfiguration"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:28
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:29
+msgid ""
+"To access the :guilabel:`Intrastat` option, make sure "
+"the :guilabel:`Intrastat Reports` `(account_intrastat)` module "
+"is :doc:`installed </applications/general/apps_modules>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:32
 msgid ""
 "Enable the Intrastat report by going to :menuselection:`Accounting --> "
 "Configuration --> Settings`. Under the :guilabel:`Customer Invoices` "
@@ -26673,11 +26469,11 @@ msgstr ""
 "Konfiguration --> Indstillinger`. Under afsnittet :guilabel:`Kundefakturaer` "
 "skal du markere :guilabel:`Intrastat` og derefter :guilabel:`Gem`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:35
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:39
 msgid "Default transaction codes: invoice and refund"
 msgstr "Standard transaktionskoder: faktura og kreditnota"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:37
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:41
 msgid ""
 "You can set a default :ref:`transaction code <intrastat/transaction-code>` "
 "for all newly created invoice and refund transactions. "
@@ -26694,11 +26490,11 @@ msgstr ""
 "derefter :guilabel:`Gem`. Koden vil automatisk blive indstillet på alle "
 "respektive fakturalinjer."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:45
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:49
 msgid "Region code"
 msgstr "Regionskode"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:47
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:51
 msgid ""
 "The region code is **only used by Belgian companies**. "
 "Under :menuselection:`Accounting --> Configuration --> Settings`, select "
@@ -26710,7 +26506,7 @@ msgstr ""
 "vælge den :guilabel:`Virksomhedens Intrastat-region`, hvor virksomheden er "
 "placeret, og derefter :guilabel:`Gem`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:52
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:56
 msgid ""
 "If your warehouses are located in more than one region, you can define the "
 "region code at the level of each warehouse instead. To do so, go "
@@ -26726,12 +26522,12 @@ msgstr ""
 msgid "Adding the Intrastat region to a warehouse"
 msgstr "Tilføjelse af Intrastat-regionen til et lager"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:63
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:67
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:694
 msgid "Product configuration"
 msgstr "Produktkonfiguration"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:65
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:69
 msgid ""
 "All products must be properly configured to be included in the Intrastat "
 "report."
@@ -26739,11 +26535,11 @@ msgstr ""
 "Alle produkter skal være korrekt konfigureret for at blive inkluderet i "
 "Intrastat-rapporten."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:70
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:74
 msgid "Commodity code"
 msgstr "Varekode"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:72
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:76
 msgid ""
 "Commodity codes are internationally recognized reference numbers used to "
 "classify goods depending on their **nature**. Intrastat uses the `Combined "
@@ -26755,7 +26551,7 @@ msgstr ""
 "kombinerede nomenklatur <https://taxation-customs.ec.europa.eu/customs-4/"
 "calculation-customs-duties/customs-tariff/combined-nomenclature_en>`_."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:75
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
 msgid ""
 "To add a commodity code, go to :menuselection:`Accounting --> Customers --> "
 "Products` and select a product. Under the :guilabel:`Accounting` tab, set "
@@ -26765,7 +26561,7 @@ msgstr ""
 "Kunder --> Produkter` og vælge et produkt. Under fanen :guilabel:`Regnskab` "
 "skal du indstille produktets :guilabel:`Varekode`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:83
 msgid ""
 "`National Bank of Belgium - Intrastat commodity codes <https://www.nbb.be/en/"
 "statistics/foreign-trade/nomenclature-and-codes>`_"
@@ -26773,11 +26569,11 @@ msgstr ""
 "`National Bank of Belgium - Intrastat varekoder <https://www.nbb.be/en/"
 "statistics/foreign-trade/nomenclature-and-codes>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:85
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:89
 msgid "Quantity: weight and supplementary unit"
 msgstr "Mængde: vægt og supplerende enhed"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:87
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
 msgid ""
 "Depending on the nature of the goods, it is necessary to specify either the "
 "product's weight in kilos (without packaging) or the product's supplementary "
@@ -26788,7 +26584,7 @@ msgstr ""
 "kilo (uden emballage) eller produktets supplerende enhed, såsom kvadratmeter "
 "(`m2`), antal styk (`p/st`), liter (`l`) eller gram (`g`)."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:95
 msgid ""
 "To add a product's weight or supplementary unit, go "
 "to :menuselection:`Accounting --> Customers --> Products` and select a "
@@ -26802,11 +26598,11 @@ msgstr ""
 "udfyld enten produktets :guilabel:`Vægt` eller dets :guilabel:`Supplerende "
 "enheder`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:98
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:102
 msgid "Country of origin"
 msgstr "Oprindelsesland"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:100
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:104
 msgid ""
 "To add the product's country of origin, go to :menuselection:`Accounting --> "
 "Customers --> Products` and select a product. Under "
@@ -26816,11 +26612,11 @@ msgstr ""
 "> Kunder --> Produkter` og vælg et produkt. Under "
 "fanen :guilabel:`Regnskab`, indstil :guilabel:`Oprindelsesland`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:106
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:110
 msgid "Invoices and bills configuration"
 msgstr "Konfiguration af fakturaer og regninger"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:108
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:112
 msgid ""
 "Once products are properly configured, several settings must be configured "
 "on the invoices and bills you create."
@@ -26828,11 +26624,11 @@ msgstr ""
 "Når produkter er korrekt konfigureret, skal flere indstillinger konfigureres "
 "på de fakturaer og regninger, du opretter."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:114
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:118
 msgid "Transaction code"
 msgstr "Transaktionskode"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:116
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:120
 msgid ""
 "Transaction codes are used to identify a transaction's nature. :ref:`Default "
 "transaction codes <intrastat/default-transaction-codes>` can be set for "
@@ -26842,7 +26638,7 @@ msgstr ""
 "art. :ref:`Standardtransaktionskoder <intrastat/default-transaction-codes>` "
 "kan indstilles for faktura- og kreditnotatransaktioner."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:119
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:123
 msgid ""
 "To set a transaction code on an invoice line, create an invoice or a bill, "
 "click the columns selection button, tick :guilabel:`Intrastat`, and use the "
@@ -26857,7 +26653,7 @@ msgstr ""
 msgid "Adding the Intrastat column to an invoice or bill"
 msgstr "Tilføjelse af Intrastat-kolonnen til en faktura eller regning"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:128
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:132
 msgid ""
 "`National Bank of Belgium - Intrastat: Nature of transactions from January "
 "2022 <https://www.nbb.be/doc/dd/onegate/data/"
@@ -26867,11 +26663,11 @@ msgstr ""
 "2022 <https://www.nbb.be/doc/dd/onegate/data/"
 "new_natures_of_transaction_2022_en.pdf>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:134
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:138
 msgid "Partner country"
 msgstr "Partnerland"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:136
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
 msgid ""
 "The partner country represents the vendor's country for bills and the "
 "customer's country for invoices. It is automatically filled in using the "
@@ -26881,7 +26677,7 @@ msgstr ""
 "for fakturaer. Det udfyldes automatisk ved hjælp af landet, der er angivet i "
 "kontaktens felt :guilabel:`Land`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:144
 msgid ""
 "To edit the partner country manually, create an invoice or a bill, click "
 "the :guilabel:`Other Info` tab, and select the :guilabel:`Intrastat Country`."
@@ -26889,11 +26685,11 @@ msgstr ""
 "For at redigere partnerlandet manuelt, opret en faktura eller en regning, "
 "klik på fanen :guilabel:`Anden info`, og vælg :guilabel:`Intrastat-land`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:146
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:150
 msgid "Transport code"
 msgstr "Transportkode"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:148
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:152
 msgid ""
 "The transport code identifies the presumed **mode of transport** used to "
 "send the goods (arrival or dispatch)."
@@ -26901,7 +26697,7 @@ msgstr ""
 "Transportkoden identificerer den formodede **transportform**, der bruges til "
 "at sende varerne (ankomst eller afsendelse)."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:151
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:155
 msgid ""
 "To add the transport code, create an invoice or a bill, go to "
 "the :guilabel:`Other info` tab, and select the :guilabel:`Intrastat "
@@ -26910,11 +26706,11 @@ msgstr ""
 "For at tilføje transportkoden, opret en faktura eller en regning, gå til "
 "fanen :guilabel:`Anden info`, og vælg :guilabel:`Intrastat-transportform`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:157
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:161
 msgid "Value of the goods"
 msgstr "Varernes værdi"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:159
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:163
 msgid ""
 "The value of a good is the untaxed :guilabel:`Subtotal` (:guilabel:`Price` "
 "multiplied by :guilabel:`Quantity`) of an invoice line."
@@ -26922,11 +26718,11 @@ msgstr ""
 "Værdien af en vare er den ubeskattede :guilabel:`Subtotal` (:guilabel:`Pris` "
 "ganget med :guilabel:`Antal`) for en fakturalinje."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:165
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:169
 msgid "Partner configuration"
 msgstr "Partnerkonfiguration"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:167
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:171
 msgid ""
 "Two fields from the partner's contact form are used with "
 "Intrastat: :guilabel:`VAT` and :guilabel:`Country`. The country can "
@@ -26936,11 +26732,11 @@ msgstr ""
 "Intrastat: :guilabel:`Moms` og :guilabel:`Land`. Landet kan :ref:`indstilles "
 "manuelt <intrastat/partner-country>` på fakturaen eller regningen."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:172
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:176
 msgid "Generate the Intrastat report"
 msgstr "Generér Intrastat-rapporten"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:174
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:178
 msgid ""
 "Generate the report by going to :menuselection:`Accounting --> Reporting --> "
 "Audit Reports: Intrastat Report`. It is automatically computed based on "
@@ -26956,7 +26752,7 @@ msgstr ""
 "configuration>`, :ref:`fakturaer og regninger <intrastat/invoice-bill-"
 "configuration>`, og :ref:`partnere <intrastat/partner>`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:180
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
 msgid ""
 "Export the report as a PDF, XLSX, or XML file to post it to your legal "
 "administration."
@@ -26964,7 +26760,7 @@ msgstr ""
 "Eksportér rapporten som en PDF-, XLSX- eller XML-fil for at indsende den til "
 "din juridiske administration."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:182
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:186
 msgid ""
 "Each report line refers to a single invoice line and contains the following "
 "information:"
@@ -26972,11 +26768,11 @@ msgstr ""
 "Hver rapportlinje refererer til en enkelt fakturalinje og indeholder "
 "følgende oplysninger:"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:188
 msgid "Invoice or bill reference number;"
 msgstr "Faktura- eller regningsreferencenummer;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:185
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
 msgid ""
 "System, which is a code automatically generated depending on whether the "
 "document is an invoice (dispatch) or a bill (arrival);"
@@ -26984,7 +26780,7 @@ msgstr ""
 "System, som er en kode, der automatisk genereres afhængigt af, om dokumentet "
 "er en faktura (afsendelse) eller en regning (ankomst);"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:187
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
 msgid ""
 ":ref:`Country <intrastat/partner-country>`, which is the vendor's country "
 "for arrivals and the customer's country for dispatches;"
@@ -26992,11 +26788,11 @@ msgstr ""
 ":ref:`Land <intrastat/partner-country>`, som er leverandørens land for "
 "ankomster og kundens land for afsendelser;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
 msgid ":ref:`Transaction Code <intrastat/transaction-code>`;"
 msgstr ":ref:`Transaktionskode <intrastat/transaction-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:190
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
 msgid ""
 "(If your company is located in Belgium) :ref:`Region Code <intrastat/region-"
 "code>`;"
@@ -27004,35 +26800,35 @@ msgstr ""
 "(Hvis din virksomhed er placeret i Belgien) :ref:`Regionskode <intrastat/"
 "region-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
 msgid ":ref:`Commodity Code <intrastat/commodity-code>`;"
 msgstr ":ref:`Varekode <intrastat/commodity-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:192
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
 msgid ":ref:`Origin Country <intrastat/origin-country>`;"
 msgstr ":ref:`Oprindelsesland <intrastat/origin-country>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
 msgid ":ref:`Partner VAT <intrastat/partner>`;"
 msgstr ":ref:`Partner-moms <intrastat/partner>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
 msgid ":ref:`Transport Code <intrastat/transport-code>`;"
 msgstr ":ref:`Transportkode <intrastat/transport-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:199
 msgid ":doc:`Incoterm Code <../customer_invoices/incoterms>`;"
 msgstr ":doc:`Incoterm-kode <../customer_invoices/incoterms>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:200
 msgid ":ref:`Weight <intrastat/quantity>`;"
 msgstr ":ref:`Vægt <intrastat/quantity>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:201
 msgid ":ref:`Supplementary Units <intrastat/quantity>`; and"
 msgstr ":ref:`Supplerende enheder <intrastat/quantity>`; og"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:202
 msgid ""
 ":ref:`Value <intrastat/value>`, which is always expressed in euros even if "
 "the original invoice or bill used another currency."
@@ -86515,8 +86311,8 @@ msgid ""
 "the :menuselection:`Accounting --> Reporting` menu:"
 msgstr ""
 "Udover de :doc:`generiske rapporter <../accounting/reporting>` er følgende "
-"rapporter tilgængelige for amerikansk lokalisering under menuen "
-":menuselection:`Bogføring --> Rapportering`:"
+"rapporter tilgængelige for amerikansk lokalisering under "
+"menuen :menuselection:`Bogføring --> Rapportering`:"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:271
 msgid ""
@@ -94640,6 +94436,207 @@ msgstr ""
 "Udfyld felterne :guilabel:`Hemmelig nøgle` og :guilabel:`Webhook-token` med "
 "oplysningerne gemt i trin :ref:`payment_providers/xendit/"
 "configure_dashboard`."
+
+#~ msgid ""
+#~ "In Odoo 19, the stock input/output accounts are no longer used. Any non-"
+#~ "zero balances in stock interim accounts must be transferred to "
+#~ "the :ref:`stock valuation account <accounting/inventory-valuation/"
+#~ "valuation-account>` via journal entry to maintain accurate inventory "
+#~ "values after migration. This rebalancing can be performed :ref:`before "
+#~ "<accounting/inventory-valuation/upgrade-process-server-action>` "
+#~ "or :ref:`after <accounting/inventory-valuation/upgrade-process-manual>` "
+#~ "upgrading to Odoo 19."
+#~ msgstr ""
+#~ "I Odoo 19 anvendes lagertilgangs- og lagerafgangskonti ikke længere. "
+#~ "Eventuelle ikke-nulstillede saldi på mellemliggende lagerkonti skal "
+#~ "overføres til :ref:`lagerværdikontoen <accounting/inventory-valuation/"
+#~ "valuation-account>` via en finanspostering for at opretholde nøjagtige "
+#~ "lagerværdier efter migreringen. Denne genafstemning kan udføres :ref:`før "
+#~ "<accounting/inventory-valuation/upgrade-process-server-action>` "
+#~ "eller :ref:`efter <accounting/inventory-valuation/upgrade-process-"
+#~ "manual>` opgradering til Odoo 19."
+
+#~ msgid ""
+#~ "Before upgrading, review received purchase or sales orders that are not "
+#~ "yet linked to vendor bills or invoices, and post any existing draft bills/"
+#~ "invoices to reduce the open balance."
+#~ msgstr ""
+#~ "Før opgradering bør du gennemgå modtagne indkøbs- eller salgsordrer, som "
+#~ "endnu ikke er knyttet til leverandørregninger eller fakturaer, og bogføre "
+#~ "eventuelle eksisterende kladderegninger/-fakturaer for at reducere den "
+#~ "åbne saldo."
+
+#~ msgid ""
+#~ "It is recommended to implement the change **after** upgrading to Odoo 19, "
+#~ "because a server action identifies the open balance in "
+#~ "the :guilabel:`Stock Interim` accounts and automatically applies the "
+#~ "change."
+#~ msgstr ""
+#~ "Det anbefales at implementere ændringen **efter** opgradering til Odoo "
+#~ "19, fordi en serverhandling identificerer den åbne saldo på kontiene "
+#~ "for :guilabel:`Mellemliggende lager` og automatisk anvender ændringen."
+
+#~ msgid ""
+#~ "Account structures and valuation scenarios differ across companies. "
+#~ "Review these steps with an accountant or an Odoo inventory valuation "
+#~ "expert to ensure the setup aligns with the company's specific setup."
+#~ msgstr ""
+#~ "Kontoplaner og værdiansættelsesscenarier varierer fra virksomhed til "
+#~ "virksomhed. Gennemgå disse trin sammen med en revisor eller en Odoo-"
+#~ "ekspert i lagerværdiansættelse for at sikre, at opsætningen stemmer "
+#~ "overens med virksomhedens specifikke konfiguration."
+
+#~ msgid "Option 1: Server action journal entry"
+#~ msgstr "Mulighed 1: Finanspostering via serverhandling"
+
+#~ msgid ""
+#~ "Use a test database created during the upgrade process first, and verify "
+#~ "the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
+#~ "warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
+#~ "Valuation report <accounting/inventory-valuation/inventory-valuation-"
+#~ "report>` to ensure accuracy."
+#~ msgstr ""
+#~ "Brug først en testdatabase oprettet under opgraderingsprocessen, og "
+#~ "kontrollér :doc:`Lagerrapport <../../../inventory_and_mrp/inventory/"
+#~ "warehouses_storage/reporting/stock>`, konti "
+#~ "og :ref:`Lagerværdiansættelsesrapport <accounting/inventory-valuation/"
+#~ "inventory-valuation-report>` for at sikre nøjagtighed."
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, the server action must be applied to each "
+#~ "company to balance any non-zero :guilabel:`Stock Interim` accounts:"
+#~ msgstr ""
+#~ "Efter opgradering til Odoo 19 skal serverhandlingen udføres for hver "
+#~ "virksomhed for at udligne eventuelle ikke-nulstillede konti "
+#~ "for :guilabel:`Mellemliggende lager`:"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
+#~ "click the relevant company."
+#~ msgstr ""
+#~ "Gå til :menuselection:`Indstillinger --> Brugere og virksomheder --> "
+#~ "Virksomheder`, og klik på den relevante virksomhed."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cog` :guilabel:`(gear)` icon and "
+#~ "select :guilabel:`Stock Valuation rebalance interim Accounts`. A draft "
+#~ "journal entry is automatically generated to balance the open amount."
+#~ msgstr ""
+#~ "Klik på ikonet :icon:`fa-cog` :guilabel:`(tandhjul)`, og "
+#~ "vælg :guilabel:`Genafstem mellemliggende konti for lagerværdiansættelse`. "
+#~ "Der genereres automatisk en kladdefinanspostering til at udligne det åbne "
+#~ "beløb."
+
+#~ msgid ""
+#~ "Review the draft journal entry amounts, edit them if necessary, then "
+#~ "click :guilabel:`Post`."
+#~ msgstr ""
+#~ "Gennemgå beløbene på kladdefinansposteringen, rediger dem om nødvendigt, "
+#~ "og klik derefter på :guilabel:`Bogfør`."
+
+#~ msgid ""
+#~ "Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
+#~ "accounts are balanced to zero and that the remaining amount is recorded "
+#~ "in the :guilabel:`Stock valuation` account."
+#~ msgstr ""
+#~ "Tjek finansbogen for at bekræfte, at kontiene "
+#~ "for :guilabel:`Mellemliggende lager` er udlignet til nul, og at det "
+#~ "resterende beløb er bogført på kontoen "
+#~ "for :guilabel:`Lagerværdiansættelse`."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
+#~ "and :ref:`generate an inventory variation entry <accounting/inventory-"
+#~ "valuation/closing-entry>`. The increased value on the :ref:`Valuation "
+#~ "account <accounting/inventory-valuation/valuation-account>` is then "
+#~ "transferred to the :ref:`Variation account <accounting/inventory-"
+#~ "valuation/variation-account>`, which is a new type of interim account."
+#~ msgstr ""
+#~ "Gå til :menuselection:`Regnskab --> Gennemgang --> Lagerværdiansættelse`, "
+#~ "og :ref:`opret en lagerafvigelsespostering <accounting/inventory-"
+#~ "valuation/closing-entry>`. Den øgede værdi på :ref:`Værdiansættelseskonto "
+#~ "<accounting/inventory-valuation/valuation-account>` overføres derefter "
+#~ "til :ref:`Variationskonto <accounting/inventory-valuation/variation-"
+#~ "account>`, som er en ny type mellemregningskonto."
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is required and the "
+#~ "Bill to Receive or |GRNI| account, etc., needs updating."
+#~ msgstr ""
+#~ "Du kan eventuelt oprette :ref:`periodiseringsposteringer <accounting/"
+#~ "inventory-valuation/accrual-entries>`, hvis der kræves en "
+#~ "regnskabsafslutning, og kontoen for Bill to Receive eller |GRNI| osv. "
+#~ "skal opdateres."
+
+#~ msgid ""
+#~ "Journal entries can also be created manually if needed, using the same "
+#~ "process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
+#~ "upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
+#~ "manual>`."
+#~ msgstr ""
+#~ "Finansposteringer kan også oprettes manuelt, hvis det er nødvendigt, ved "
+#~ "hjælp af samme proces til udligning af kontiene "
+#~ "for :guilabel:`Mellemliggende lager` :ref:`før opgradering til Odoo 19 "
+#~ "<accounting/inventory-valuation/upgrade-process-manual>`."
+
+#~ msgid "Option 2: Manual journal entry"
+#~ msgstr "Mulighed 2: Manuel finanspostering"
+
+#~ msgid "To create the manual journal entry, follow these steps:"
+#~ msgstr "Følg disse trin for at oprette den manuelle finanspostering:"
+
+#~ msgid ""
+#~ "If all vendor bills or invoices can't be created for all the received "
+#~ "purchase/sales orders before the upgrade, follow these steps:"
+#~ msgstr ""
+#~ "Hvis det ikke er muligt at oprette alle leverandørfakturaer eller "
+#~ "fakturaer for alle modtagne indkøbs-/salgsordrer inden opgraderingen, "
+#~ "skal du følge disse trin:"
+
+#~ msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
+#~ msgstr "Gå til :menuselection:`Bogføring --> Rapportering --> Hovedbog`."
+
+#~ msgid ""
+#~ "Identify the open balance in the :guilabel:`Stock Interim` accounts and "
+#~ "create a journal entry that debits/credits:"
+#~ msgstr ""
+#~ "Find den åbne saldo på :guilabel:`Lager interim`-kontiene, og opret en "
+#~ "journalpost, der debiterer/krediterer:"
+
+#~ msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
+#~ msgstr ""
+#~ ":guilabel:`Lager interim`-kontoen/-kontiene, der indeholder den åbne saldo"
+
+#~ msgid "The :guilabel:`Stock Valuation` account"
+#~ msgstr ":guilabel:`Lagervurdering`-kontoen"
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --"
+#~ "> Inventory Valuation` and :ref:`generate an inventory variation entry "
+#~ "<accounting/inventory-valuation/closing-entry>`. The increased value on "
+#~ "the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
+#~ "account>` is then transferred to the :ref:`Variation account <accounting/"
+#~ "inventory-valuation/variation-account>`, which is a new type of interim "
+#~ "account."
+#~ msgstr ""
+#~ "Efter opgradering til Odoo 19 skal du gå til :menuselection:`Bogføring --"
+#~ "> Gennemgang --> Lagervurdering` og :ref:`generere en "
+#~ "lagervariationspostering <accounting/inventory-valuation/closing-entry>`. "
+#~ "Den forøgede værdi på :ref:`Vurderingskonto <accounting/inventory-"
+#~ "valuation/valuation-account>` overføres derefter "
+#~ "til :ref:`Variationskonto <accounting/inventory-valuation/variation-"
+#~ "account>`, som er en ny type mellemkonto."
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is needed and the "
+#~ "Bill to Receive or |GRNI| account, etc., must be up to date."
+#~ msgstr ""
+#~ "Generer eventuelt :ref:`periodiseringsposteringer <accounting/inventory-"
+#~ "valuation/accrual-entries>`, hvis der er behov for en "
+#~ "regnskabsafslutning, og kontoen Faktura til modtagelse eller |GRNI| osv. "
+#~ "skal være opdateret."
 
 #~ msgid ":doc:`/applications/finance/accounting/customer_invoices/overview`"
 #~ msgstr ":doc:`/applications/finance/accounting/customer_invoices/overview`"

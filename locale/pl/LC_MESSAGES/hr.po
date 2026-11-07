@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:35+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:35+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-19-doc/hr/"
 "pl/>\n"
 "Language: pl\n"
@@ -976,6 +976,7 @@ msgstr ""
 "Górna połowa formularza celów, wypełniona dla celu szkolenia BHP w fabryce."
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "Zakładka Opis"
 
@@ -2703,6 +2704,490 @@ msgstr ":doc:`Podstawy raportowania w Odoo <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Akceptacje"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Aplikacja **Zatwierdzenia** w Odoo pozwala pracownikom na składanie "
+"oficjalnych wniosków o różne rzeczy, dając kierownictwu możliwość "
+"przeglądania wniosków, a następnie ich zatwierdzania lub odrzucania. Dzięki "
+"temu wszystkie wnioski znajdują się w jednej, scentralizowanej lokalizacji, "
+"co zapewnia przejrzystą organizację i transparentność dla wszystkich "
+"wniosków."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Typy akceptacji"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Podczas tworzenia wniosku o zatwierdzenie należy określić kategorię, czyli "
+"*typ*. Dostępnych jest dziewięć wstępnie skonfigurowanych kategorii "
+"zatwierdzeń, dla których można składać wnioski:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`Podróż służbowa`: Do wnioskowania o wyjazdy służbowe."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Wypożyczenie przedmiotów`: Do wnioskowania o przedmioty fizyczne, "
+"które firma posiada lub sprzedaje, na określony czas."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Zatwierdzenie ogólne`: Do wniosków, które nie pasują do żadnego z "
+"ośmiu innych domyślnych typów."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Zatwierdzenie umowy`: Do wnioskowania o wszelkiego rodzaju umowy "
+"zewnętrzne, z wyłączeniem :doc:`umów pracowniczych <payroll/contracts>`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Wniosek o płatność`: Do wnioskowania o *wstępną zgodę* na wydatki "
+"związane z firmą."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Ten typ zatwierdzenia jest **używany wyłącznie** w przypadku wnioskowania o "
+"zgodę *z wyprzedzeniem* na wydatek opłacany bezpośrednio przez firmę. Ta "
+"kategoria **nie powinna** być używana do wydatków, o których zwrot ubiegają "
+"się pracownicy. Odbywa się to za pośrednictwem aplikacji :doc:`Wydatki <../"
+"finance/expenses/log_expenses>`."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ""
+":guilabel:`Wniosek o wynajem samochodu`: Do wnioskowania o wynajem samochodu."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Nagroda za polecenie pracownika`: Do wnioskowania o nagrody za "
+"polecenie pracownika, które zostały zarobione, ale nie zostały sfinalizowane "
+"za pośrednictwem aplikacji :doc:`Polecenia <referrals>`."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Zaopatrzenie`: Używane do wnioskowania o przedmioty związane z "
+"pracą, takie jak materiały biurowe, narzędzia itp."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Utwórz zapytanie ofertowe`: Używane do wnioskowania o ofertę na "
+"przedmioty od dostawcy."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Wnioski o zatwierdzenie"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"Aby utworzyć nowy wniosek o zatwierdzenie, otwórz aplikację "
+"**Zatwierdzenia**, kliknij przycisk :guilabel:`Nowy wniosek` na karcie typu "
+"zatwierdzenia, która najlepiej pasuje do wniosku, a załaduje się pusty "
+"formularz zatwierdzenia. Wypełnij różne sekcje i zakładki, a następnie "
+"kliknij :guilabel:`Wyślij`, aby przesłać wniosek do zatwierdzenia."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "Sekcja informacji ogólnych"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"Górna połowa formularza zawiera wszystkie ogólne informacje dotyczące "
+"wniosku. Wypełnij następujące pola w górnej części formularza:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Wszystkie wymienione poniżej pola pojawiają się w formularzu dla kategorii "
+":guilabel:`Zatwierdzenie ogólne`. Jeśli wybrano inną :guilabel:`Kategorię`, "
+"niektóre pola są ukryte."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Temat zatwierdzenia`: To pole jest automatycznie wypełniane "
+"wybranym typem zatwierdzenia. Wprowadź pożądane zmiany w domyślnym tekście, "
+"aby zapewnić dodatkowy kontekst dla wniosku."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Właściciel wniosku`: Osoba odpowiedzialna za wniosek o "
+"zatwierdzenie. Zalogowany użytkownik domyślnie wypełnia to pole."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`Kategoria`: Wybrana kategoria pojawia się w tym polu, ale można "
+"ją zmienić za pomocą menu rozwijanego."
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Data`: Używając selektora kalendarza, ustaw datę i godzinę, "
+"której dotyczy wniosek. To pole pojawia się **tylko** wtedy, gdy wybrano "
+":guilabel:`Wniosek o płatność` lub :guilabel:`Zgoda ogólna` dla pola "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Okres`: Używając selektora kalendarza, ustaw datę rozpoczęcia i "
+"zakończenia wniosku w polach :guilabel:`Od` oraz :guilabel:`do`. To pole "
+"pojawia się **tylko** wtedy, gdy wybrano :guilabel:`Podróż służbowa`, "
+":guilabel:`Wypożyczenie przedmiotów`, :guilabel:`Wniosek o wynajem "
+"samochodu` lub :guilabel:`Zgoda ogólna` dla pola :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Lokalizacja`: Wprowadź konkretną lokalizację, której dotyczy "
+"wniosek o zatwierdzenie. To pole pojawia się **tylko** wtedy, gdy wybrano "
+":guilabel:`Podróż służbowa` lub :guilabel:`Zgoda ogólna` dla pola "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Kontakt`: Wybierz punkt kontaktowy dla wniosku za pomocą menu "
+"rozwijanego. Dostępne opcje pochodzą z aplikacji **Kontakty**. To pole "
+"pojawia się **tylko** wtedy, gdy wybrano :guilabel:`Zatwierdzenie umowy`, "
+":guilabel:`Wniosek o płatność`, :guilabel:`Nagroda za polecenie pracownika` "
+"lub :guilabel:`Zgoda ogólna` dla pola :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Ilość`: Wprowadź w tym polu liczbę wnioskowanych pozycji. To pole "
+"pojawia się **tylko** wtedy, gdy wybrano :guilabel:`Zaopatrzenie` dla pola "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Kwota`: Wprowadź wnioskowaną kwotę. To pole pojawia się **tylko** "
+"wtedy, gdy wybrano :guilabel:`Zatwierdzenie umowy`, :guilabel:`Wniosek o "
+"płatność`, :guilabel:`Zaopatrzenie`, lub :guilabel:`Zgoda ogólna` dla pola "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Odniesienie`: Wprowadź wszelkie istotne odniesienia dla wniosku w "
+"tym polu. To pole pojawia się **tylko** wtedy, gdy wybrano "
+":guilabel:`Zatwierdzenie umowy` lub :guilabel:`Zgoda ogólna` dla pola "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"Każdy rodzaj zatwierdzenia prezentuje różne pola w formularzu zatwierdzania. "
+"Wynika to z faktu, że każdy *rodzaj zatwierdzenia* ma własne wymagane pola. "
+"Jeśli *rodzaj* nie jest od razu znany, kliknij przycisk :guilabel:`Nowy "
+"wniosek` u góry strony, aby otworzyć ogólny formularz wniosku o "
+"zatwierdzenie. Po wybraniu :guilabel:`Kategoria`, pojawią się odpowiednie "
+"pola formularza."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr "Górna część formularza zatwierdzania wypełniona dla podróży służbowej."
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "Karta produktu"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"Jeśli wnioskowane są jakiekolwiek skonfigurowane produkty w bazie danych, są "
+"one wymienione w karcie *Produkty*. Ta karta pojawia się **tylko** wtedy, "
+"gdy wybrano :guilabel:`Wypożyczenie przedmiotów`, :guilabel:`Zgoda ogólna`, "
+"lub :guilabel:`Utwórz zapytania ofertowe` w polu :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"Aby dodać produkt, kliknij :guilabel:`Dodaj linię`, a pojawi się pusta "
+"linia. Za pomocą menu rozwijanego wybierz wnioskowany produkt. Po wybraniu, "
+"skonfigurowany w produkcie :guilabel:`Opis` automatycznie wypełni to pole. "
+":guilabel:`Ilość` jest domyślnie ustawiona na :guilabel:`1.00`, ale można ją "
+"w razie potrzeby zaktualizować."
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"Karta *Opis* służy do wprowadzania wszelkich informacji wyjaśniających "
+"wniosek. Dodaj wszelkie istotne informacje w tej karcie."
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "Karta Zatwierdzający"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"Karta *Zatwierdzający* służy do konfigurowania osób odpowiedzialnych za "
+"zatwierdzenie wniosku. Aby dodać osobę zatwierdzającą, kliknij "
+":guilabel:`Dodaj linię`, a pojawi się pusta linia. Za pomocą menu "
+"rozwijanego wybierz żądanego użytkownika. Powtórz dla wszystkich pozostałych "
+"osób zatwierdzających. Nie ma ograniczenia co do liczby użytkowników dla tej "
+"karty."
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"Aby wskazać, że użytkownik **musi** zatwierdzić wniosek, kliknij pole wyboru "
+"w kolumnie :guilabel:`Wymagane`."
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"W miarę dodawania użytkowników, ich :guilabel:`Status` pozostaje "
+":guilabel:`Nowy`."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+"Karta zatwierdzających z trzema wymienionymi osobami zatwierdzającymi, z "
+"których jedna jest wymagana."
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "Dołącz dokumenty"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Wszystkie wnioski o zatwierdzenie zawierają opcję dołączenia odpowiednich "
+"dokumentów. Aby dołączyć dokument, kliknij przycisk :guilabel:`Dołącz "
+"dokument` u góry strony, a załaduje się okno eksploratora plików. Przejdź do "
+"wybranego pliku, zaznacz go, a następnie kliknij :guilabel:`Otwórz`, aby go "
+"dołączyć. Można zaznaczyć i dodać wiele dokumentów jednocześnie."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Po dołączeniu, u góry strony pojawi się inteligentny przycisk :icon:`fa-"
+"book` :guilabel:`Dokumenty`, wskazujący liczbę dołączonych dokumentów. "
+"Ponadto dokumenty są wymienione w komunikatorze. Jeśli ekran jest "
+"wystarczająco szeroki, dokumenty pojawiają się z boku ekranu."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Zarządzanie akceptacjami"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Po przesłaniu wniosków muszą one zostać zatwierdzone przez wymaganych "
+"zatwierdzających wymienionych w :ref:`zakładce Zatwierdzający <approvals/"
+"approvers>`. Aby wyświetlić zatwierdzenia oczekujące na działanie, przejdź "
+"do :menuselection:`Aplikacja Zatwierdzenia --> Menedżer --> Zatwierdzenia do "
+"przeglądu`, a załaduje się konsola *Zatwierdzenia do przeglądu*. Wszystkie "
+"zatwierdzenia oczekujące na działanie użytkownika pojawiają się "
+"alfabetycznie w domyślnym widoku listy."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"W konsoli *Zatwierdzenia do przeglądu* pojawiają się tylko *przesłane* "
+"wnioski, dla których użytkownik jest wyznaczony jako zatwierdzający. "
+"Wszystkie inne wnioski pozostają ukryte."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+"Wszystkie wnioski o zatwierdzenie oczekujące na zatwierdzenie, do których "
+"przypisany jest użytkownik."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Wnioski muszą być zatwierdzane indywidualnie z poziomu formularza "
+"zatwierdzenia. Aby zatwierdzić wniosek, kliknij poszczególny wniosek w "
+"konsoli *Zatwierdzenia do przeglądu*, aby załadować formularz wniosku."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr ""
+"Wniosek o wypożyczenie aparatu z widocznymi przyciskami Zatwierdź i Odrzuć."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"Aby zatwierdzić wniosek, kliknij przycisk :guilabel:`Zatwierdź` na "
+"formularzu indywidualnego wniosku o zatwierdzenie, a status zmieni się na "
+":guilabel:`Zatwierdzone`. Gdy użytkownicy zatwierdzają wniosek, ich "
+":guilabel:`Status` zmienia się na :guilabel:`Zatwierdzone`, a tekst zmienia "
+"kolor na zielony."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"Aby odrzucić wniosek, kliknij przycisk :guilabel:`Odrzuć` na formularzu "
+"indywidualnego wniosku o zatwierdzenie, a status zmieni się na "
+":guilabel:`Odrzucone`. Gdy użytkownik odrzuca wniosek, jego "
+":guilabel:`Status` zmienia się na :guilabel:`Odrzucone`, a tekst zmienia "
+"kolor na czerwony."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"W dowolnym momencie wnioski o zatwierdzenie, które są "
+":guilabel:`Zatwierdzone` lub :guilabel:`Odrzucone`, mogą powrócić do etapu "
+":guilabel:`Przesłane` po kliknięciu przycisku :guilabel:`Wycofaj`. "
+":guilabel:`Status` wszystkich zatwierdzających zmienia się z powrotem na "
+":guilabel:`Do zatwierdzenia`, a tekst zmienia kolor na pomarańczowy."
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -10295,9 +10780,9 @@ msgid ""
 "be :doc:`updated to reflect their departure <archive>`, log the reason why "
 "they left, and close any open activities associated with the employee."
 msgstr ""
-"Oprócz planu offboardingu, rekord pracownika musi zostać "
-":doc:`zaktualizowany, aby odzwierciedlić jego odejście <archive>`, należy "
-"również odnotować powód odejścia i zamknąć wszelkie otwarte działania "
+"Oprócz planu offboardingu, rekord pracownika musi "
+"zostać :doc:`zaktualizowany, aby odzwierciedlić jego odejście <archive>`, "
+"należy również odnotować powód odejścia i zamknąć wszelkie otwarte działania "
 "powiązane z pracownikiem."
 
 #: ../../content/applications/hr/employees/offboarding.rst:19
@@ -18734,12 +19219,6 @@ msgstr ""
 "formularz szablonu umowy. Skonfiguruj następujące pola w różnych sekcjach "
 "formularza:"
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "Sekcja informacji ogólnych"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -19195,9 +19674,9 @@ msgid ""
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"U góry formularza pojawia się inteligentny przycisk :icon:`fa-users` "
-":guilabel:`Pracownicy`. Kliknięcie przycisku wyświetla całkowitą liczbę "
-"pracowników w wybranym okresie."
+"U góry formularza pojawia się inteligentny przycisk :icon:`fa-"
+"users` :guilabel:`Pracownicy`. Kliknięcie przycisku wyświetla całkowitą "
+"liczbę pracowników w wybranym okresie."
 
 #: ../../content/applications/hr/payroll/headcount.rst:None
 msgid "A headcount report created on October 22, 2026 for 2026."
@@ -43140,8 +43619,8 @@ msgid ""
 "desired month, and click on the desired day to select that specific date. "
 "These fields are **required**."
 msgstr ""
-"Aby zmienić datę rozpoczęcia lub zakończenia, kliknij pierwszą datę w polu "
-":guilabel:`Okres`, aby wyświetlić wyskakujący kalendarz. Przejdź do "
+"Aby zmienić datę rozpoczęcia lub zakończenia, kliknij pierwszą datę w "
+"polu :guilabel:`Okres`, aby wyświetlić wyskakujący kalendarz. Przejdź do "
 "wybranego miesiąca i kliknij odpowiedni dzień, aby wybrać konkretną datę. "
 "Pola te są **wymagane**."
 
@@ -43235,9 +43714,9 @@ msgid ""
 "adjustments <salary_attachments>` and other additional inputs such as tips, "
 "bonuses, etc."
 msgstr ""
-"Karta *Składniki wynagrodzenia* automatycznie wyświetla wszystkie bieżące "
-":doc:`korekty wynagrodzenia <salary_attachments>` oraz inne dodatkowe "
-"składniki, takie jak napiwki, premie itp."
+"Karta *Składniki wynagrodzenia* automatycznie wyświetla wszystkie "
+"bieżące :doc:`korekty wynagrodzenia <salary_attachments>` oraz inne "
+"dodatkowe składniki, takie jak napiwki, premie itp."
 
 #: ../../content/applications/hr/payroll/payslips.rst:95
 msgid "Each salary input lists:"
@@ -47732,10 +48211,10 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"Aby utworzyć nowy etap, najedź kursorem na prawo od etapu "
-":guilabel:`Podpisano umowę`, aby odsłonić opcję :guilabel:`Dodaj etap`. "
-"Kliknij :guilabel:`Dodaj etap`, a pojawi się nowa kolumna. Wpisz tytuł "
-"nowego etapu w pustym polu na górze nowego etapu, a następnie kliknij "
+"Aby utworzyć nowy etap, najedź kursorem na prawo od "
+"etapu :guilabel:`Podpisano umowę`, aby odsłonić opcję :guilabel:`Dodaj "
+"etap`. Kliknij :guilabel:`Dodaj etap`, a pojawi się nowa kolumna. Wpisz "
+"tytuł nowego etapu w pustym polu na górze nowego etapu, a następnie kliknij "
 "przycisk :icon:`fa-check`. Pojawi się nowa kolumna i kolejny nowy etap. "
 "Jeśli nie potrzeba więcej nowych etapów, kliknij przycisk :icon:`fa-"
 "multiply` w nowym etapie, aby go zamknąć. Po utworzeniu etapu kliknij i "
@@ -47761,10 +48240,11 @@ msgid ""
 msgstr ""
 "Aby zmodyfikować ustawienia etapu, najedź kursorem na nazwę etapu, a w "
 "górnym rogu pojawi się ikona :icon:`fa-cog` :guilabel:`(Ustawienia)`. "
-"Kliknij ikonę :icon:`fa-cog` :guilabel:`(Ustawienia)`, a następnie kliknij "
-":icon:`fa-pencil` :guilabel:`Edytuj` z wynikającego menu rozwijanego. Pojawi "
-"się wyskakujące okno *Edytuj: (Etap)*. Wprowadź żądane zmiany w wyskakującym "
-"oknie, a następnie kliknij :guilabel:`Zapisz` po zakończeniu."
+"Kliknij ikonę :icon:`fa-cog` :guilabel:`(Ustawienia)`, a następnie "
+"kliknij :icon:`fa-pencil` :guilabel:`Edytuj` z wynikającego menu "
+"rozwijanego. Pojawi się wyskakujące okno *Edytuj: (Etap)*. Wprowadź żądane "
+"zmiany w wyskakującym oknie, a następnie kliknij :guilabel:`Zapisz` po "
+"zakończeniu."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid ""
@@ -47885,10 +48365,10 @@ msgstr ""
 "etykiety statusu (kolorowe kółka) dla karty każdego kandydata, wskazujące "
 "jego status. Te kolory są wyświetlane u góry każdego etapu, aby "
 "odzwierciedlać statusy kandydatów na danym etapie. *Nazwy* etykiet można "
-"modyfikować, ale samej etykiety (koloru) nie. Domyślne nazwy i etykiety to: "
-":guilabel:`W toku` (szary), :guilabel:`Zablokowany` (czerwony), "
-":guilabel:`Oczekujący` (żółty) oraz :guilabel:`Gotowy do kolejnego etapu` "
-"(zielony)."
+"modyfikować, ale samej etykiety (koloru) nie. Domyślne nazwy i etykiety "
+"to: :guilabel:`W toku` (szary), :guilabel:`Zablokowany` "
+"(czerwony), :guilabel:`Oczekujący` (żółty) oraz :guilabel:`Gotowy do "
+"kolejnego etapu` (zielony)."
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
@@ -47912,10 +48392,11 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "Jeśli etap nie jest już potrzebny, można go usunąć. Aby usunąć etap, najedź "
-"kursorem na jego nazwę i kliknij ikonę :icon:`fa-cog` :guilabel:`(Ustawienia)"
-"`, która się pojawi. Kliknij :icon:`fa-trash` :guilabel:`Usuń`, a pojawi się "
-"wyskakujące okienko *Potwierdzenie* z ostrzeżeniem: :guilabel:`Czy na pewno "
-"chcesz usunąć tę kolumnę?` Kliknij :guilabel:`Usuń`, aby usunąć etap."
+"kursorem na jego nazwę i kliknij ikonę :icon:`fa-"
+"cog` :guilabel:`(Ustawienia)`, która się pojawi. Kliknij :icon:`fa-"
+"trash` :guilabel:`Usuń`, a pojawi się wyskakujące okienko *Potwierdzenie* z "
+"ostrzeżeniem: :guilabel:`Czy na pewno chcesz usunąć tę kolumnę?` "
+"Kliknij :guilabel:`Usuń`, aby usunąć etap."
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -48033,9 +48514,9 @@ msgstr ""
 "Kliknij ikonę :icon:`fa-expand` :guilabel:`(Otwórz pełny edytor)` w dolnym "
 "rogu karty *Wyślij wiadomość* na czacie. Wczyta się wyskakujące okno "
 "*Tworzenie wiadomości e-mail* z wstępnie uzupełnionymi polami :guilabel:`Do` "
-"i :guilabel:`Temat`. Adres e-mail kandydata zostanie wprowadzony w polu "
-":guilabel:`Do`, a :guilabel:`Temat` będzie miał postać `(Imię i nazwisko "
-"kandydata)`."
+"i :guilabel:`Temat`. Adres e-mail kandydata zostanie wprowadzony w "
+"polu :guilabel:`Do`, a :guilabel:`Temat` będzie miał postać `(Imię i "
+"nazwisko kandydata)`."
 
 #: ../../content/applications/hr/recruitment.rst:310
 msgid ""
@@ -48043,9 +48524,9 @@ msgid ""
 "v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
-"Aby skorzystać z wstępnie skonfigurowanego szablonu e-mail, kliknij ikonę "
-":icon:`fa-ellipsis-v` :guilabel:`(Szablony)` u dołu okna. Wybierz szablon "
-"wiadomości e-mail do użycia z menu rozwijanego."
+"Aby skorzystać z wstępnie skonfigurowanego szablonu e-mail, kliknij "
+"ikonę :icon:`fa-ellipsis-v` :guilabel:`(Szablony)` u dołu okna. Wybierz "
+"szablon wiadomości e-mail do użycia z menu rozwijanego."
 
 #: ../../content/applications/hr/recruitment.rst:313
 msgid ""
@@ -48081,11 +48562,11 @@ msgid ""
 "it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
 "icon at the end of the attachment."
 msgstr ""
-"Jeśli musisz dodać załączniki, kliknij przycisk :icon:`fa-paperclip` "
-":guilabel:`(Dodaj załącznik)` u dołu okna. Przejdź do pliku, który chcesz "
-"załączyć, a następnie kliknij :guilabel:`Otwórz`, aby go załączyć. Aby "
-"usunąć załącznik, kliknij ikonę :icon:`fa-times` :guilabel:`(Usuń)` na końcu "
-"załącznika."
+"Jeśli musisz dodać załączniki, kliknij przycisk :icon:`fa-"
+"paperclip` :guilabel:`(Dodaj załącznik)` u dołu okna. Przejdź do pliku, "
+"który chcesz załączyć, a następnie kliknij :guilabel:`Otwórz`, aby go "
+"załączyć. Aby usunąć załącznik, kliknij ikonę :icon:`fa-"
+"times` :guilabel:`(Usuń)` na końcu załącznika."
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -48102,13 +48583,13 @@ msgstr ""
 "Jeśli w wiadomości e-mail należy wprowadzić jakiekolwiek zmiany, wyedytuj "
 "treść wiadomości. Jeśli chcesz zapisać edycje do wykorzystania w "
 "przyszłości, wiadomość e-mail można zapisać jako nowy szablon. Kliknij "
-"przycisk :icon:`fa-ellipsis-v` :guilabel:`(Szablony)` u dołu okna i wybierz "
-":guilabel:`Zapisz jako szablon`. Masz do wyboru nadpisanie istniejącego "
-"szablonu lub zapisanie nowego. Kliknij nazwę istniejącego szablonu, aby go "
-"nadpisać, lub kliknij :guilabel:`Zapisz jako szablon`, aby zapisać nowy "
-"szablon. Wczyta się wyskakujące okno *Utwórz szablon wiadomości*. Wpisz "
-"nazwę szablonu w polu :guilabel:`Nazwa szablonu`, a następnie kliknij "
-":guilabel:`Zapisz szablon`."
+"przycisk :icon:`fa-ellipsis-v` :guilabel:`(Szablony)` u dołu okna i "
+"wybierz :guilabel:`Zapisz jako szablon`. Masz do wyboru nadpisanie "
+"istniejącego szablonu lub zapisanie nowego. Kliknij nazwę istniejącego "
+"szablonu, aby go nadpisać, lub kliknij :guilabel:`Zapisz jako szablon`, aby "
+"zapisać nowy szablon. Wczyta się wyskakujące okno *Utwórz szablon "
+"wiadomości*. Wpisz nazwę szablonu w polu :guilabel:`Nazwa szablonu`, a "
+"następnie kliknij :guilabel:`Zapisz szablon`."
 
 #: ../../content/applications/hr/recruitment.rst:337
 msgid ""
@@ -49690,13 +50171,13 @@ msgid ""
 "is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
 "days."
 msgstr ""
-"Aby uzyskać dostęp do raportu *Analiza ofert*, przejdź do "
-":menuselection:`Rekrutacja --> Raportowanie --> Analiza ofert`. Domyślnie "
-"raport wyświetla dane dotyczące ofert dla wszystkich stanowisk w formie "
-":icon:`fa-bar-chart` :guilabel:`(Wykres słupkowy)` z grupami :icon:`fa-"
-"database` :guilabel:`(Skumulowane)`. Domyślnym filtrem jest "
-":guilabel:`Oferty z ostatnich 365 dni`, pokazujący informacje z ostatnich "
-"365 dni."
+"Aby uzyskać dostęp do raportu *Analiza ofert*, przejdź "
+"do :menuselection:`Rekrutacja --> Raportowanie --> Analiza ofert`. Domyślnie "
+"raport wyświetla dane dotyczące ofert dla wszystkich stanowisk w "
+"formie :icon:`fa-bar-chart` :guilabel:`(Wykres słupkowy)` z "
+"grupami :icon:`fa-database` :guilabel:`(Skumulowane)`. Domyślnym filtrem "
+"jest :guilabel:`Oferty z ostatnich 365 dni`, pokazujący informacje z "
+"ostatnich 365 dni."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -49803,8 +50284,8 @@ msgstr ""
 "Aby wspomóc zespół, raport *Analiza ofert* można zmodyfikować tak, aby "
 "wyświetlał wszystkie oferty według stanu, zamiast według stanowiska. Aby "
 "wyświetlić oferty według stanu, przejdź do :menuselection:`Rekrutacja --> "
-"Raportowanie --> Analiza ofert`. Kliknij pasek wyszukiwania i wybierz opcję "
-":guilabel:`Stan oferty` w kolumnie :icon:`oi-group` :guilabel:`Grupuj "
+"Raportowanie --> Analiza ofert`. Kliknij pasek wyszukiwania i wybierz "
+"opcję :guilabel:`Stan oferty` w kolumnie :icon:`oi-group` :guilabel:`Grupuj "
 "według`. Zapewnia to ogólny przegląd stanu wszystkich ofert."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64

@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:34+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:34+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-19-doc/"
 "finance/id/>\n"
@@ -4538,10 +4538,10 @@ msgid ""
 msgstr ""
 "Tergantung pada skenario bisnis tertentu, Odoo mengotomatiskan pembuatan "
 "faktur pelanggan dengan menghasilkan draft faktur langsung dari dokumen "
-"sumber, seperti :ref:`order penjualan <accounting/invoice/invoice-from-sales>"
-"`, :ref:`langganan berulang <accounting/invoice/invoice-from-subscriptions>"
-"`, :ref:`order eCommerce <accounting/invoice/invoice-from-ecommerce>` atau "
-":ref:`order POS <accounting/invoice/invoice-from-pos>`."
+"sumber, seperti :ref:`order penjualan <accounting/invoice/invoice-from-"
+"sales>`, :ref:`langganan berulang <accounting/invoice/invoice-from-"
+"subscriptions>`, :ref:`order eCommerce <accounting/invoice/invoice-from-"
+"ecommerce>` atau :ref:`order POS <accounting/invoice/invoice-from-pos>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:38
 #: ../../content/applications/finance/accounting/get_started/journals.rst:206
@@ -4838,8 +4838,8 @@ msgid ""
 "more, can be added or modified in the :guilabel:`Other Info` tab."
 msgstr ""
 "Tab :guilabel:`Item Jurnal` menampilkan entri akuntansi yang dibuat. "
-"Informasi faktur tambahan seperti :guilabel:`Referensi Pelanggan`, "
-":guilabel:`Referensi Pembayaran`, :doc:`Posisi Fiskal <taxes/"
+"Informasi faktur tambahan seperti :guilabel:`Referensi "
+"Pelanggan`, :guilabel:`Referensi Pembayaran`, :doc:`Posisi Fiskal <taxes/"
 "fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, dan "
 "lainnya dapat ditambahkan atau diubah pada tab :guilabel:`Info Lain`."
 
@@ -5007,8 +5007,8 @@ msgid ""
 "click :guilabel:`Send`. The :guilabel:`Send` window displays the number of "
 "selected invoices to send by email."
 msgstr ""
-"Untuk mengirim beberapa faktur, buka :menuselection:`Akuntansi --> "
-"Pelanggan --> Faktur`, pilih dari tampilan daftar di :guilabel:`Faktur` dan "
+"Untuk mengirim beberapa faktur, buka :menuselection:`Akuntansi --> Pelanggan "
+"--> Faktur`, pilih dari tampilan daftar di :guilabel:`Faktur` dan "
 "klik :guilabel:`Kirim`. Jendela :guilabel:`Kirim` menampilkan jumlah faktur "
 "yang dipilih untuk dikirim melalui email."
 
@@ -19082,217 +19082,12 @@ msgstr "Proses upgrade untuk Anglo-Saxon Perpetual"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:274
 msgid ""
-"In Odoo 19, the stock input/output accounts are no longer used. Any non-zero "
-"balances in stock interim accounts must be transferred to the :ref:`stock "
-"valuation account <accounting/inventory-valuation/valuation-account>` via "
-"journal entry to maintain accurate inventory values after migration. This "
-"rebalancing can be performed :ref:`before <accounting/inventory-valuation/"
-"upgrade-process-server-action>` or :ref:`after <accounting/inventory-"
-"valuation/upgrade-process-manual>` upgrading to Odoo 19."
+"Upgrading from Odoo 18 to Odoo 19 automatically handles the stock interim "
+"account rebalancing process during the database migration. The migration "
+"script automatically transfers non-zero balances from the legacy stock input/"
+"output accounts to the stock valuation account, eliminating the need for "
+"manual journal entries or server actions."
 msgstr ""
-"Pada Odoo 19, akun masuk/keluar stok tidak lagi digunakan. Saldo bukan nol "
-"pada akun interim stok harus ditransfer ke :ref:`akun penilaian persediaan "
-"<accounting/inventory-valuation/valuation-account>` melalui entri jurnal "
-"untuk menjaga keakuratan nilai persediaan setelah migrasi. Penyeimbangan "
-"ulang ini dapat dilakukan :ref:`sebelum <accounting/inventory-valuation/"
-"upgrade-process-server-action>` atau :ref:`setelah <accounting/inventory-"
-"valuation/upgrade-process-manual>` melakukan upgrade ke Odoo 19."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:281
-msgid ""
-"Before upgrading, review received purchase or sales orders that are not yet "
-"linked to vendor bills or invoices, and post any existing draft bills/"
-"invoices to reduce the open balance."
-msgstr ""
-"Sebelum melakukan upgrade, tinjau pesanan pembelian atau penjualan yang "
-"telah diterima yang belum ditautkan ke tagihan vendor atau faktur, dan "
-"posting draf tagihan/faktur yang ada untuk mengurangi saldo terbuka."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:285
-msgid ""
-"It is recommended to implement the change **after** upgrading to Odoo 19, "
-"because a server action identifies the open balance in the :guilabel:`Stock "
-"Interim` accounts and automatically applies the change."
-msgstr ""
-"Disarankan untuk menerapkan perubahan ini **setelah** melakukan upgrade ke "
-"Odoo 19, karena tindakan server akan mengidentifikasi saldo terbuka pada "
-"akun :guilabel:`Interim Stok` dan menerapkan perubahannya secara otomatis."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:290
-msgid ""
-"Account structures and valuation scenarios differ across companies. Review "
-"these steps with an accountant or an Odoo inventory valuation expert to "
-"ensure the setup aligns with the company's specific setup."
-msgstr ""
-"Struktur akun dan skenario penilaian berbeda-beda di setiap perusahaan. "
-"Tinjau langkah-langkah ini bersama akuntan atau pakar penilaian persediaan "
-"Odoo untuk memastikan konfigurasi selaras dengan pengaturan spesifik "
-"perusahaan."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:297
-msgid "Option 1: Server action journal entry"
-msgstr "Opsi 1: Entri jurnal tindakan server"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:300
-msgid ""
-"Use a test database created during the upgrade process first, and verify "
-"the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
-"Valuation report <accounting/inventory-valuation/inventory-valuation-"
-"report>` to ensure accuracy."
-msgstr ""
-"Gunakan database uji coba yang dibuat selama proses upgrade terlebih dahulu, "
-"lalu verifikasi :doc:`Laporan stok <../../../inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/stock>`, akun, dan :ref:`Laporan Penilaian "
-"Persediaan <accounting/inventory-valuation/inventory-valuation-report>` "
-"untuk memastikan keakuratannya."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:305
-msgid ""
-"After upgrading to Odoo 19, the server action must be applied to each "
-"company to balance any non-zero :guilabel:`Stock Interim` accounts:"
-msgstr ""
-"Setelah melakukan upgrade ke Odoo 19, tindakan server harus diterapkan ke "
-"setiap perusahaan untuk menyeimbangkan akun :guilabel:`Interim Stok` yang "
-"bukan nol:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:308
-msgid ""
-"Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
-"click the relevant company."
-msgstr ""
-"Buka :menuselection:`Pengaturan --> Pengguna & Perusahaan --> Perusahaan` "
-"dan klik perusahaan yang relevan."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:310
-msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`Stock "
-"Valuation rebalance interim Accounts`. A draft journal entry is "
-"automatically generated to balance the open amount."
-msgstr ""
-"Klik ikon :icon:`fa-cog` :guilabel:`(roda gigi)` dan "
-"pilih :guilabel:`Penyeimbangan ulang Akun interim Penilaian Stok`. Draf "
-"entri jurnal akan dibuat secara otomatis untuk menyeimbangkan jumlah terbuka."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:312
-msgid ""
-"Review the draft journal entry amounts, edit them if necessary, then "
-"click :guilabel:`Post`."
-msgstr ""
-"Tinjau jumlah pada draf entri jurnal, ubah bila diperlukan, lalu "
-"klik :guilabel:`Posting`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:313
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:346
-msgid ""
-"Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
-"accounts are balanced to zero and that the remaining amount is recorded in "
-"the :guilabel:`Stock valuation` account."
-msgstr ""
-"Periksa Buku Besar Umum untuk memastikan bahwa akun :guilabel:`Interim Stok` "
-"seimbang menjadi nol dan jumlah yang tersisa dicatat di "
-"akun :guilabel:`Penilaian stok`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:315
-msgid ""
-"Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
-"and :ref:`generate an inventory variation entry <accounting/inventory-"
-"valuation/closing-entry>`. The increased value on the :ref:`Valuation "
-"account <accounting/inventory-valuation/valuation-account>` is then "
-"transferred to the :ref:`Variation account <accounting/inventory-valuation/"
-"variation-account>`, which is a new type of interim account."
-msgstr ""
-"Buka :menuselection:`Akuntansi --> Tinjauan --> Penilaian Persediaan` "
-"dan :ref:`buat entri variasi persediaan <accounting/inventory-valuation/"
-"closing-entry>`. Nilai yang meningkat pada :ref:`Akun penilaian <accounting/"
-"inventory-valuation/valuation-account>` kemudian ditransfer ke :ref:`Akun "
-"variasi <accounting/inventory-valuation/variation-account>`, yang merupakan "
-"tipe baru dari akun interim."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:320
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is required and the Bill to "
-"Receive or |GRNI| account, etc., needs updating."
-msgstr ""
-"Secara opsional, buat :ref:`entri akrual <accounting/inventory-valuation/"
-"accrual-entries>` jika penutupan buku diperlukan dan akun Bill to Receive "
-"atau |GRNI|, dsb., perlu diperbarui."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:325
-msgid ""
-"Journal entries can also be created manually if needed, using the same "
-"process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
-"upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
-"manual>`."
-msgstr ""
-"Entri jurnal juga dapat dibuat secara manual jika diperlukan, menggunakan "
-"proses yang sama untuk menyeimbangkan akun :guilabel:`Interim "
-"Stok` :ref:`sebelum melakukan upgrade ke Odoo 19 <accounting/inventory-"
-"valuation/upgrade-process-manual>`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:332
-msgid "Option 2: Manual journal entry"
-msgstr "Opsi 2: Entri jurnal manual"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:334
-msgid "To create the manual journal entry, follow these steps:"
-msgstr "Untuk membuat entri jurnal manual, ikuti langkah-langkah berikut:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:336
-msgid ""
-"If all vendor bills or invoices can't be created for all the received "
-"purchase/sales orders before the upgrade, follow these steps:"
-msgstr ""
-"Jika semua tagihan vendor atau faktur tidak dapat dibuat untuk semua order "
-"pembelian/sales yang diterima sebelum upgrade, ikuti langkah-langkah berikut:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:339
-msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
-msgstr "Buka :menuselection:`Akuntansi --> Pelaporan --> Buku Besar`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:340
-msgid ""
-"Identify the open balance in the :guilabel:`Stock Interim` accounts and "
-"create a journal entry that debits/credits:"
-msgstr ""
-"Identifikasi saldo terbuka di akun :guilabel:`Stok Sementara` dan buat entri "
-"jurnal yang mendebet/mengkredit:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:343
-msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
-msgstr "Akun :guilabel:`Stok Sementara` yang memuat saldo terbuka"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:344
-msgid "The :guilabel:`Stock Valuation` account"
-msgstr "Akun :guilabel:`Valuasi Stok` "
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:349
-msgid ""
-"After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --> "
-"Inventory Valuation` and :ref:`generate an inventory variation entry "
-"<accounting/inventory-valuation/closing-entry>`. The increased value on "
-"the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
-"account>` is then transferred to the :ref:`Variation account <accounting/"
-"inventory-valuation/variation-account>`, which is a new type of interim "
-"account."
-msgstr ""
-"Setelah meningkatkan ke Odoo 19, buka :menuselection:`Akuntansi --> "
-"Tinjauan --> Valuasi Persediaan` dan :ref:`buat entri variasi persediaan "
-"<accounting/inventory-valuation/closing-entry>`. Peningkatan nilai pada "
-":ref:`Akun valuasi <accounting/inventory-valuation/valuation-account>` "
-"kemudian ditransfer ke :ref:`Akun variasi <accounting/inventory-valuation/"
-"variation-account>`, yang merupakan jenis akun sementara baru."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:355
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is needed and the Bill to Receive "
-"or |GRNI| account, etc., must be up to date."
-msgstr ""
-"Secara opsional, buat :ref:`entri akrual <accounting/inventory-valuation/"
-"accrual-entries>` jika penutupan akuntansi diperlukan dan akun Bill to "
-"Receive atau |GRNI| dsb., harus diperbarui."
 
 #: ../../content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -20753,9 +20548,9 @@ msgid ""
 "More payment information is also accessible by clicking the :icon:`fa-info-"
 "circle` :guilabel:`(information icon)` and clicking :guilabel:`view`."
 msgstr ""
-"Informasi pembayaran lebih lanjut juga dapat diakses dengan mengeklik "
-":icon:`fa-info-circle` :guilabel:`(ikon informasi)` dan mengeklik "
-":guilabel:`lihat`."
+"Informasi pembayaran lebih lanjut juga dapat diakses dengan "
+"mengeklik :icon:`fa-info-circle` :guilabel:`(ikon informasi)` dan "
+"mengeklik :guilabel:`lihat`."
 
 #: ../../content/applications/finance/accounting/payments.rst:148
 msgid ""
@@ -20826,8 +20621,8 @@ msgid ""
 msgstr ""
 "Untuk mengaktifkan pembayaran online, buka :menuselection:`Akuntansi --> "
 "Konfigurasi --> Pengaturan`, gulir ke bawah ke bagian :guilabel:`Pembayaran "
-"Pelanggan` untuk mengaktifkan :guilabel:`Pembayaran Online Faktur`, dan klik "
-":guilabel:`Simpan`."
+"Pelanggan` untuk mengaktifkan :guilabel:`Pembayaran Online Faktur`, dan "
+"klik :guilabel:`Simpan`."
 
 #: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
@@ -20838,8 +20633,8 @@ msgid ""
 msgstr ""
 "Setelah membuat faktur, klik :guilabel:`Kirim` untuk mengirimkannya melalui "
 "email ke pelanggan, yang menerima email dengan tautan untuk melihat faktur "
-"di portal pelanggan mereka. Dari sana, mereka dapat mengeklik "
-":guilabel:`Bayar Sekarang` untuk memilih :ref:`Penyedia Pembayaran "
+"di portal pelanggan mereka. Dari sana, mereka dapat "
+"mengeklik :guilabel:`Bayar Sekarang` untuk memilih :ref:`Penyedia Pembayaran "
 "<payment_providers/online_providers>`."
 
 #: ../../content/applications/finance/accounting/payments.rst:180
@@ -26563,7 +26358,17 @@ msgstr ""
 msgid "General configuration"
 msgstr "Konfigurasi umum"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:28
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:29
+msgid ""
+"To access the :guilabel:`Intrastat` option, make sure "
+"the :guilabel:`Intrastat Reports` `(account_intrastat)` module "
+"is :doc:`installed </applications/general/apps_modules>`."
+msgstr ""
+"Untuk mengakses opsi :guilabel:`Intrastat`, pastikan modul "
+":guilabel:`Laporan Intrastat` `(account_intrastat)` :doc:`sudah terinstal </"
+"applications/general/apps_modules>`."
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:32
 msgid ""
 "Enable the Intrastat report by going to :menuselection:`Accounting --> "
 "Configuration --> Settings`. Under the :guilabel:`Customer Invoices` "
@@ -26573,11 +26378,11 @@ msgstr ""
 "Konfigurasi --> Pengaturan`. Di bawah bagian :guilabel:`Faktur Pelanggan`, "
 "centang :guilabel:`Intrastat` kemudian :guilabel:`Simpan`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:35
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:39
 msgid "Default transaction codes: invoice and refund"
 msgstr "Kode transaksi default: faktur dan pengembalian"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:37
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:41
 msgid ""
 "You can set a default :ref:`transaction code <intrastat/transaction-code>` "
 "for all newly created invoice and refund transactions. "
@@ -26593,11 +26398,11 @@ msgstr ""
 "transaksi pengembalian default` kemudian :guilabel:`Simpan`. Kode akan "
 "ditetapkan secara otomatis pada semua baris faktur terkait."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:45
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:49
 msgid "Region code"
 msgstr "Kode wilayah"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:47
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:51
 msgid ""
 "The region code is **only used by Belgian companies**. "
 "Under :menuselection:`Accounting --> Configuration --> Settings`, select "
@@ -26609,7 +26414,7 @@ msgstr ""
 "pilih :guilabel:`Wilayah Intrastat Perusahaan` tempat perusahaan berada "
 "kemudian :guilabel:`Simpan`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:52
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:56
 msgid ""
 "If your warehouses are located in more than one region, you can define the "
 "region code at the level of each warehouse instead. To do so, go "
@@ -26625,12 +26430,12 @@ msgstr ""
 msgid "Adding the Intrastat region to a warehouse"
 msgstr "Menambahkan wilayah Intrastat ke gudang"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:63
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:67
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:694
 msgid "Product configuration"
 msgstr "Konfigurasi produk"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:65
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:69
 msgid ""
 "All products must be properly configured to be included in the Intrastat "
 "report."
@@ -26638,11 +26443,11 @@ msgstr ""
 "Semua produk harus dikonfigurasi dengan benar agar dapat disertakan dalam "
 "laporan Intrastat."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:70
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:74
 msgid "Commodity code"
 msgstr "Kode komoditas"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:72
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:76
 msgid ""
 "Commodity codes are internationally recognized reference numbers used to "
 "classify goods depending on their **nature**. Intrastat uses the `Combined "
@@ -26655,7 +26460,7 @@ msgstr ""
 "customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/"
 "combined-nomenclature_en>`_."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:75
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
 msgid ""
 "To add a commodity code, go to :menuselection:`Accounting --> Customers --> "
 "Products` and select a product. Under the :guilabel:`Accounting` tab, set "
@@ -26665,7 +26470,7 @@ msgstr ""
 "Pelanggan --> Produk` dan pilih produk. Di bawah tab :guilabel:`Akuntansi`, "
 "atur :guilabel:`Kode Komoditas` produk."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:83
 msgid ""
 "`National Bank of Belgium - Intrastat commodity codes <https://www.nbb.be/en/"
 "statistics/foreign-trade/nomenclature-and-codes>`_"
@@ -26673,11 +26478,11 @@ msgstr ""
 "`National Bank of Belgium - Kode komoditas Intrastat <https://www.nbb.be/en/"
 "statistics/foreign-trade/nomenclature-and-codes>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:85
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:89
 msgid "Quantity: weight and supplementary unit"
 msgstr "Kuantitas: berat dan unit tambahan"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:87
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
 msgid ""
 "Depending on the nature of the goods, it is necessary to specify either the "
 "product's weight in kilos (without packaging) or the product's supplementary "
@@ -26688,7 +26493,7 @@ msgstr ""
 "(tanpa kemasan) atau unit tambahan produk, seperti meter persegi (`m2`), "
 "jumlah item (`p/st`), liter (`l`), atau gram (`g`)."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:95
 msgid ""
 "To add a product's weight or supplementary unit, go "
 "to :menuselection:`Accounting --> Customers --> Products` and select a "
@@ -26701,11 +26506,11 @@ msgstr ""
 "Di bawah tab :guilabel:`Akuntansi`, tergantung pada kode komoditas yang "
 "ditetapkan, isi :guilabel:`Berat` produk atau :guilabel:`Unit Tambahan`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:98
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:102
 msgid "Country of origin"
 msgstr "Negara asal"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:100
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:104
 msgid ""
 "To add the product's country of origin, go to :menuselection:`Accounting --> "
 "Customers --> Products` and select a product. Under "
@@ -26715,11 +26520,11 @@ msgstr ""
 "Pelanggan --> Produk` dan pilih produk. Di bawah tab :guilabel:`Akuntansi`, "
 "atur :guilabel:`Negara Asal`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:106
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:110
 msgid "Invoices and bills configuration"
 msgstr "Konfigurasi faktur dan tagihan"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:108
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:112
 msgid ""
 "Once products are properly configured, several settings must be configured "
 "on the invoices and bills you create."
@@ -26727,11 +26532,11 @@ msgstr ""
 "Setelah produk dikonfigurasi dengan benar, beberapa pengaturan harus "
 "dikonfigurasi pada faktur dan tagihan yang Anda buat."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:114
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:118
 msgid "Transaction code"
 msgstr "Kode transaksi"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:116
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:120
 msgid ""
 "Transaction codes are used to identify a transaction's nature. :ref:`Default "
 "transaction codes <intrastat/default-transaction-codes>` can be set for "
@@ -26741,7 +26546,7 @@ msgstr ""
 "transaksi default <intrastat/default-transaction-codes>` dapat diatur untuk "
 "transaksi faktur dan pengembalian dana."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:119
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:123
 msgid ""
 "To set a transaction code on an invoice line, create an invoice or a bill, "
 "click the columns selection button, tick :guilabel:`Intrastat`, and use the "
@@ -26756,7 +26561,7 @@ msgstr ""
 msgid "Adding the Intrastat column to an invoice or bill"
 msgstr "Menambahkan kolom Intrastat ke faktur atau tagihan"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:128
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:132
 msgid ""
 "`National Bank of Belgium - Intrastat: Nature of transactions from January "
 "2022 <https://www.nbb.be/doc/dd/onegate/data/"
@@ -26766,11 +26571,11 @@ msgstr ""
 "2022 <https://www.nbb.be/doc/dd/onegate/data/"
 "new_natures_of_transaction_2022_en.pdf>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:134
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:138
 msgid "Partner country"
 msgstr "Negara mitra"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:136
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
 msgid ""
 "The partner country represents the vendor's country for bills and the "
 "customer's country for invoices. It is automatically filled in using the "
@@ -26780,7 +26585,7 @@ msgstr ""
 "faktur. Ini diisi secara otomatis menggunakan negara yang ditetapkan di "
 "bidang :guilabel:`Negara` kontak."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:144
 msgid ""
 "To edit the partner country manually, create an invoice or a bill, click "
 "the :guilabel:`Other Info` tab, and select the :guilabel:`Intrastat Country`."
@@ -26788,11 +26593,11 @@ msgstr ""
 "Untuk mengedit negara mitra secara manual, buat faktur atau tagihan, klik "
 "tab :guilabel:`Info Lain`, dan pilih :guilabel:`Negara Intrastat`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:146
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:150
 msgid "Transport code"
 msgstr "Kode transportasi"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:148
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:152
 msgid ""
 "The transport code identifies the presumed **mode of transport** used to "
 "send the goods (arrival or dispatch)."
@@ -26800,7 +26605,7 @@ msgstr ""
 "Kode transportasi mengidentifikasi **mode transportasi** yang diperkirakan "
 "digunakan untuk mengirim barang (kedatangan atau pengiriman)."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:151
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:155
 msgid ""
 "To add the transport code, create an invoice or a bill, go to "
 "the :guilabel:`Other info` tab, and select the :guilabel:`Intrastat "
@@ -26809,11 +26614,11 @@ msgstr ""
 "Untuk menambahkan kode transportasi, buat faktur atau tagihan, buka "
 "tab :guilabel:`Info lain`, dan pilih :guilabel:`Mode Transportasi Intrastat`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:157
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:161
 msgid "Value of the goods"
 msgstr "Nilai barang"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:159
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:163
 msgid ""
 "The value of a good is the untaxed :guilabel:`Subtotal` (:guilabel:`Price` "
 "multiplied by :guilabel:`Quantity`) of an invoice line."
@@ -26821,11 +26626,11 @@ msgstr ""
 "Nilai barang adalah :guilabel:`Subtotal` tanpa pajak (:guilabel:`Harga` "
 "dikalikan dengan :guilabel:`Kuantitas`) dari baris faktur."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:165
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:169
 msgid "Partner configuration"
 msgstr "Konfigurasi mitra"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:167
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:171
 msgid ""
 "Two fields from the partner's contact form are used with "
 "Intrastat: :guilabel:`VAT` and :guilabel:`Country`. The country can "
@@ -26835,11 +26640,11 @@ msgstr ""
 "Intrastat: :guilabel:`PPN` dan :guilabel:`Negara`. Negara dapat :ref:`diatur "
 "secara manual <intrastat/partner-country>` pada faktur atau tagihan."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:172
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:176
 msgid "Generate the Intrastat report"
 msgstr "Buat laporan Intrastat"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:174
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:178
 msgid ""
 "Generate the report by going to :menuselection:`Accounting --> Reporting --> "
 "Audit Reports: Intrastat Report`. It is automatically computed based on "
@@ -26855,7 +26660,7 @@ msgstr ""
 "configuration>`, :ref:`faktur dan tagihan <intrastat/invoice-bill-"
 "configuration>`, serta :ref:`mitra <intrastat/partner>`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:180
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
 msgid ""
 "Export the report as a PDF, XLSX, or XML file to post it to your legal "
 "administration."
@@ -26863,7 +26668,7 @@ msgstr ""
 "Ekspor laporan sebagai file PDF, XLSX, atau XML untuk mengirimkannya ke "
 "administrasi hukum Anda."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:182
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:186
 msgid ""
 "Each report line refers to a single invoice line and contains the following "
 "information:"
@@ -26871,11 +26676,11 @@ msgstr ""
 "Setiap baris laporan merujuk pada satu baris faktur dan berisi informasi "
 "berikut:"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:188
 msgid "Invoice or bill reference number;"
 msgstr "Nomor referensi faktur atau tagihan;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:185
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
 msgid ""
 "System, which is a code automatically generated depending on whether the "
 "document is an invoice (dispatch) or a bill (arrival);"
@@ -26883,7 +26688,7 @@ msgstr ""
 "Sistem, yang merupakan kode yang dihasilkan secara otomatis tergantung "
 "apakah dokumen tersebut adalah faktur (pengiriman) atau tagihan (kedatangan);"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:187
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
 msgid ""
 ":ref:`Country <intrastat/partner-country>`, which is the vendor's country "
 "for arrivals and the customer's country for dispatches;"
@@ -26891,11 +26696,11 @@ msgstr ""
 ":ref:`Negara <intrastat/partner-country>`, yaitu negara vendor untuk "
 "kedatangan dan negara pelanggan untuk pengiriman;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
 msgid ":ref:`Transaction Code <intrastat/transaction-code>`;"
 msgstr ":ref:`Kode Transaksi <intrastat/transaction-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:190
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
 msgid ""
 "(If your company is located in Belgium) :ref:`Region Code <intrastat/region-"
 "code>`;"
@@ -26903,35 +26708,35 @@ msgstr ""
 "(Jika perusahaan Anda berlokasi di Belgia) :ref:`Kode Wilayah <intrastat/"
 "region-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
 msgid ":ref:`Commodity Code <intrastat/commodity-code>`;"
 msgstr ":ref:`Kode Komoditas <intrastat/commodity-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:192
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
 msgid ":ref:`Origin Country <intrastat/origin-country>`;"
 msgstr ":ref:`Negara Asal <intrastat/origin-country>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
 msgid ":ref:`Partner VAT <intrastat/partner>`;"
 msgstr ":ref:`PPN Mitra <intrastat/partner>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
 msgid ":ref:`Transport Code <intrastat/transport-code>`;"
 msgstr ":ref:`Kode Transportasi <intrastat/transport-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:199
 msgid ":doc:`Incoterm Code <../customer_invoices/incoterms>`;"
 msgstr ":doc:`Kode Incoterm <../customer_invoices/incoterms>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:200
 msgid ":ref:`Weight <intrastat/quantity>`;"
 msgstr ":ref:`Berat <intrastat/quantity>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:201
 msgid ":ref:`Supplementary Units <intrastat/quantity>`; and"
 msgstr ":ref:`Unit Tambahan <intrastat/quantity>`; dan"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:202
 msgid ""
 ":ref:`Value <intrastat/value>`, which is always expressed in euros even if "
 "the original invoice or bill used another currency."
@@ -42060,8 +41865,8 @@ msgid ""
 "For exportation documents, complete the :guilabel:`Incoterm` field in "
 "the :guilabel:`Accounting` section of the :guilabel:`Other Info` tab."
 msgstr ""
-"Untuk dokumen ekspor, lengkapi kolom :guilabel:`Incoterm` di bagian "
-":guilabel:`Akuntansi` pada tab :guilabel:`Info Lainnya`."
+"Untuk dokumen ekspor, lengkapi kolom :guilabel:`Incoterm` di "
+"bagian :guilabel:`Akuntansi` pada tab :guilabel:`Info Lainnya`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:521
 msgid "Fiscal bond"
@@ -42179,10 +41984,10 @@ msgid ""
 "the :guilabel:`Default MiPyME FCE Transmission Option` section, select "
 "either:"
 msgstr ""
-"Untuk menyiapkan :guilabel:`Mode Transmisi`, buka "
-":menuselection:`Akuntansi --> Konfigurasi --> Pengaturan` dan gulir ke bawah "
-"ke bagian :guilabel:`Lokalisasi Argentina`. Kemudian, di bagian "
-":guilabel:`Opsi Transmisi FCE MiPyME Default` bagian, pilih salah satu:"
+"Untuk menyiapkan :guilabel:`Mode Transmisi`, buka :menuselection:`Akuntansi "
+"--> Konfigurasi --> Pengaturan` dan gulir ke bawah ke "
+"bagian :guilabel:`Lokalisasi Argentina`. Kemudian, di bagian :guilabel:`Opsi "
+"Transmisi FCE MiPyME Default` bagian, pilih salah satu:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:567
 msgid ":guilabel:`SCA - TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA`"
@@ -42198,9 +42003,9 @@ msgid ""
 "the :guilabel:`Other Info` tab, update the :guilabel:`FCE: Transmission "
 "Mode` field in the :guilabel:`Invoice` section before confirming the invoice."
 msgstr ""
-"Untuk mengubah mode transmisi, akses formulir faktur terkait dan, di tab "
-":guilabel:`Info Lainnya`, perbarui kolom :guilabel:`FCE: Mode Transmisi` di "
-"bagian :guilabel:`Faktur` sebelum mengonfirmasi faktur."
+"Untuk mengubah mode transmisi, akses formulir faktur terkait dan, di "
+"tab :guilabel:`Info Lainnya`, perbarui kolom :guilabel:`FCE: Mode Transmisi` "
+"di bagian :guilabel:`Faktur` sebelum mengonfirmasi faktur."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:574
 msgid ""
@@ -94430,6 +94235,202 @@ msgstr ""
 "Isi bidang :guilabel:`Secret Key` dan :guilabel:`Webhook Token` dengan "
 "informasi yang disimpan pada langkah :ref:`payment_providers/xendit/"
 "configure_dashboard`."
+
+#~ msgid ""
+#~ "In Odoo 19, the stock input/output accounts are no longer used. Any non-"
+#~ "zero balances in stock interim accounts must be transferred to "
+#~ "the :ref:`stock valuation account <accounting/inventory-valuation/"
+#~ "valuation-account>` via journal entry to maintain accurate inventory "
+#~ "values after migration. This rebalancing can be performed :ref:`before "
+#~ "<accounting/inventory-valuation/upgrade-process-server-action>` "
+#~ "or :ref:`after <accounting/inventory-valuation/upgrade-process-manual>` "
+#~ "upgrading to Odoo 19."
+#~ msgstr ""
+#~ "Pada Odoo 19, akun masuk/keluar stok tidak lagi digunakan. Saldo bukan "
+#~ "nol pada akun interim stok harus ditransfer ke :ref:`akun penilaian "
+#~ "persediaan <accounting/inventory-valuation/valuation-account>` melalui "
+#~ "entri jurnal untuk menjaga keakuratan nilai persediaan setelah migrasi. "
+#~ "Penyeimbangan ulang ini dapat dilakukan :ref:`sebelum <accounting/"
+#~ "inventory-valuation/upgrade-process-server-action>` atau :ref:`setelah "
+#~ "<accounting/inventory-valuation/upgrade-process-manual>` melakukan "
+#~ "upgrade ke Odoo 19."
+
+#~ msgid ""
+#~ "Before upgrading, review received purchase or sales orders that are not "
+#~ "yet linked to vendor bills or invoices, and post any existing draft bills/"
+#~ "invoices to reduce the open balance."
+#~ msgstr ""
+#~ "Sebelum melakukan upgrade, tinjau pesanan pembelian atau penjualan yang "
+#~ "telah diterima yang belum ditautkan ke tagihan vendor atau faktur, dan "
+#~ "posting draf tagihan/faktur yang ada untuk mengurangi saldo terbuka."
+
+#~ msgid ""
+#~ "It is recommended to implement the change **after** upgrading to Odoo 19, "
+#~ "because a server action identifies the open balance in "
+#~ "the :guilabel:`Stock Interim` accounts and automatically applies the "
+#~ "change."
+#~ msgstr ""
+#~ "Disarankan untuk menerapkan perubahan ini **setelah** melakukan upgrade "
+#~ "ke Odoo 19, karena tindakan server akan mengidentifikasi saldo terbuka "
+#~ "pada akun :guilabel:`Interim Stok` dan menerapkan perubahannya secara "
+#~ "otomatis."
+
+#~ msgid ""
+#~ "Account structures and valuation scenarios differ across companies. "
+#~ "Review these steps with an accountant or an Odoo inventory valuation "
+#~ "expert to ensure the setup aligns with the company's specific setup."
+#~ msgstr ""
+#~ "Struktur akun dan skenario penilaian berbeda-beda di setiap perusahaan. "
+#~ "Tinjau langkah-langkah ini bersama akuntan atau pakar penilaian "
+#~ "persediaan Odoo untuk memastikan konfigurasi selaras dengan pengaturan "
+#~ "spesifik perusahaan."
+
+#~ msgid "Option 1: Server action journal entry"
+#~ msgstr "Opsi 1: Entri jurnal tindakan server"
+
+#~ msgid ""
+#~ "Use a test database created during the upgrade process first, and verify "
+#~ "the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
+#~ "warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
+#~ "Valuation report <accounting/inventory-valuation/inventory-valuation-"
+#~ "report>` to ensure accuracy."
+#~ msgstr ""
+#~ "Gunakan database uji coba yang dibuat selama proses upgrade terlebih "
+#~ "dahulu, lalu verifikasi :doc:`Laporan stok <../../../inventory_and_mrp/"
+#~ "inventory/warehouses_storage/reporting/stock>`, akun, dan :ref:`Laporan "
+#~ "Penilaian Persediaan <accounting/inventory-valuation/inventory-valuation-"
+#~ "report>` untuk memastikan keakuratannya."
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, the server action must be applied to each "
+#~ "company to balance any non-zero :guilabel:`Stock Interim` accounts:"
+#~ msgstr ""
+#~ "Setelah melakukan upgrade ke Odoo 19, tindakan server harus diterapkan ke "
+#~ "setiap perusahaan untuk menyeimbangkan akun :guilabel:`Interim Stok` yang "
+#~ "bukan nol:"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
+#~ "click the relevant company."
+#~ msgstr ""
+#~ "Buka :menuselection:`Pengaturan --> Pengguna & Perusahaan --> Perusahaan` "
+#~ "dan klik perusahaan yang relevan."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cog` :guilabel:`(gear)` icon and "
+#~ "select :guilabel:`Stock Valuation rebalance interim Accounts`. A draft "
+#~ "journal entry is automatically generated to balance the open amount."
+#~ msgstr ""
+#~ "Klik ikon :icon:`fa-cog` :guilabel:`(roda gigi)` dan "
+#~ "pilih :guilabel:`Penyeimbangan ulang Akun interim Penilaian Stok`. Draf "
+#~ "entri jurnal akan dibuat secara otomatis untuk menyeimbangkan jumlah "
+#~ "terbuka."
+
+#~ msgid ""
+#~ "Review the draft journal entry amounts, edit them if necessary, then "
+#~ "click :guilabel:`Post`."
+#~ msgstr ""
+#~ "Tinjau jumlah pada draf entri jurnal, ubah bila diperlukan, lalu "
+#~ "klik :guilabel:`Posting`."
+
+#~ msgid ""
+#~ "Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
+#~ "accounts are balanced to zero and that the remaining amount is recorded "
+#~ "in the :guilabel:`Stock valuation` account."
+#~ msgstr ""
+#~ "Periksa Buku Besar Umum untuk memastikan bahwa akun :guilabel:`Interim "
+#~ "Stok` seimbang menjadi nol dan jumlah yang tersisa dicatat di "
+#~ "akun :guilabel:`Penilaian stok`."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
+#~ "and :ref:`generate an inventory variation entry <accounting/inventory-"
+#~ "valuation/closing-entry>`. The increased value on the :ref:`Valuation "
+#~ "account <accounting/inventory-valuation/valuation-account>` is then "
+#~ "transferred to the :ref:`Variation account <accounting/inventory-"
+#~ "valuation/variation-account>`, which is a new type of interim account."
+#~ msgstr ""
+#~ "Buka :menuselection:`Akuntansi --> Tinjauan --> Penilaian Persediaan` "
+#~ "dan :ref:`buat entri variasi persediaan <accounting/inventory-valuation/"
+#~ "closing-entry>`. Nilai yang meningkat pada :ref:`Akun penilaian "
+#~ "<accounting/inventory-valuation/valuation-account>` kemudian ditransfer "
+#~ "ke :ref:`Akun variasi <accounting/inventory-valuation/variation-"
+#~ "account>`, yang merupakan tipe baru dari akun interim."
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is required and the "
+#~ "Bill to Receive or |GRNI| account, etc., needs updating."
+#~ msgstr ""
+#~ "Secara opsional, buat :ref:`entri akrual <accounting/inventory-valuation/"
+#~ "accrual-entries>` jika penutupan buku diperlukan dan akun Bill to Receive "
+#~ "atau |GRNI|, dsb., perlu diperbarui."
+
+#~ msgid ""
+#~ "Journal entries can also be created manually if needed, using the same "
+#~ "process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
+#~ "upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
+#~ "manual>`."
+#~ msgstr ""
+#~ "Entri jurnal juga dapat dibuat secara manual jika diperlukan, menggunakan "
+#~ "proses yang sama untuk menyeimbangkan akun :guilabel:`Interim "
+#~ "Stok` :ref:`sebelum melakukan upgrade ke Odoo 19 <accounting/inventory-"
+#~ "valuation/upgrade-process-manual>`."
+
+#~ msgid "Option 2: Manual journal entry"
+#~ msgstr "Opsi 2: Entri jurnal manual"
+
+#~ msgid "To create the manual journal entry, follow these steps:"
+#~ msgstr "Untuk membuat entri jurnal manual, ikuti langkah-langkah berikut:"
+
+#~ msgid ""
+#~ "If all vendor bills or invoices can't be created for all the received "
+#~ "purchase/sales orders before the upgrade, follow these steps:"
+#~ msgstr ""
+#~ "Jika semua tagihan vendor atau faktur tidak dapat dibuat untuk semua "
+#~ "order pembelian/sales yang diterima sebelum upgrade, ikuti langkah-"
+#~ "langkah berikut:"
+
+#~ msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
+#~ msgstr "Buka :menuselection:`Akuntansi --> Pelaporan --> Buku Besar`."
+
+#~ msgid ""
+#~ "Identify the open balance in the :guilabel:`Stock Interim` accounts and "
+#~ "create a journal entry that debits/credits:"
+#~ msgstr ""
+#~ "Identifikasi saldo terbuka di akun :guilabel:`Stok Sementara` dan buat "
+#~ "entri jurnal yang mendebet/mengkredit:"
+
+#~ msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
+#~ msgstr "Akun :guilabel:`Stok Sementara` yang memuat saldo terbuka"
+
+#~ msgid "The :guilabel:`Stock Valuation` account"
+#~ msgstr "Akun :guilabel:`Valuasi Stok` "
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --"
+#~ "> Inventory Valuation` and :ref:`generate an inventory variation entry "
+#~ "<accounting/inventory-valuation/closing-entry>`. The increased value on "
+#~ "the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
+#~ "account>` is then transferred to the :ref:`Variation account <accounting/"
+#~ "inventory-valuation/variation-account>`, which is a new type of interim "
+#~ "account."
+#~ msgstr ""
+#~ "Setelah meningkatkan ke Odoo 19, buka :menuselection:`Akuntansi --> "
+#~ "Tinjauan --> Valuasi Persediaan` dan :ref:`buat entri variasi persediaan "
+#~ "<accounting/inventory-valuation/closing-entry>`. Peningkatan nilai "
+#~ "pada :ref:`Akun valuasi <accounting/inventory-valuation/valuation-"
+#~ "account>` kemudian ditransfer ke :ref:`Akun variasi <accounting/inventory-"
+#~ "valuation/variation-account>`, yang merupakan jenis akun sementara baru."
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is needed and the "
+#~ "Bill to Receive or |GRNI| account, etc., must be up to date."
+#~ msgstr ""
+#~ "Secara opsional, buat :ref:`entri akrual <accounting/inventory-valuation/"
+#~ "accrual-entries>` jika penutupan akuntansi diperlukan dan akun Bill to "
+#~ "Receive atau |GRNI| dsb., harus diperbarui."
 
 #~ msgid ":doc:`/applications/finance/accounting/customer_invoices/overview`"
 #~ msgstr ":doc:`/applications/finance/accounting/customer_invoices/overview`"

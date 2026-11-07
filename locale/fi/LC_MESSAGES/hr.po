@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:33+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:35+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-19-doc/hr/"
 "fi/>\n"
 "Language: fi\n"
@@ -977,6 +977,7 @@ msgstr ""
 "varten."
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "Kuvaus-välilehti"
 
@@ -2699,6 +2700,483 @@ msgstr ":doc:`Odoo essentials reporting <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Hyväksynnät"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"Odoon **Hyväksynnät**-sovelluksen avulla työntekijät voivat tehdä virallisia "
+"pyyntöjä eri asioista, jolloin johto voi tarkastella pyyntöjä ja joko "
+"hyväksyä tai hylätä ne. Tämä pitää kaikki pyynnöt yhdessä keskitetyssä "
+"paikassa, mikä tarjoaa selkeän organisaation ja läpinäkyvyyden kaikille "
+"pyynnöille."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Hyväksyntätyypit"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Hyväksyntää pyydettäessä on määritettävä kategoria eli *tyyppi*. Pyyntöjä "
+"varten on käytettävissä yhdeksän esimääritettyä hyväksyntäkategoriaa:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`Työmatka`: Työhön liittyvien matkojen pyytämiseen."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Lainaa tuotteita`: Yrityksen omistamien tai myymien fyysisten "
+"tuotteiden lainaamiseen määrätyksi ajaksi."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Yleinen hyväksyntä`: Pyynnöille, jotka eivät sovi mihinkään "
+"kahdeksasta muusta oletustyypistä."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Sopimushyväksyntä`: Minkä tahansa ulkoisen sopimuksen "
+"pyytämiseen, lukuun ottamatta :doc:`työntekijäsopimuksia <payroll/contracts>"
+"`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Maksusovellus`: *Ennakkohyväksynnän* pyytämiseen yritykseen "
+"liittyville kuluille."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Tätä hyväksyntätyyppiä käytetään **vain**, kun pyydetään hyväksyntää "
+"*etukäteen* kululle, jonka yritys maksaa suoraan. Tätä kategoriaa **ei** "
+"tule käyttää kuluihin, joista työntekijät hakevat korvausta. Se tehdään "
+":doc:`Kulut-sovelluksen <../finance/expenses/log_expenses>` kautta."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`Autonvuokraushakemus`: Vuokra-auton pyytämiseen."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Työsuosittelupalkkio`: Työsuosittelupalkkioiden pyytämiseen, "
+"jotka on ansaittu, mutta joita ei ole suoritettu :doc:`Suosittelut "
+"<referrals>` -sovelluksen kautta."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Hankinta`: Käytetään työhön liittyvien tuotteiden, kuten "
+"toimistotarvikkeiden, työkalujen jne. pyytämiseen."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Luo tarjouspyyntöjä`: Käytetään tarjouksen pyytämiseen "
+"tavarantoimittajalta."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Hyväksyntäpyynnöt"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"Luodaksesi uuden hyväksyntäpyynnön, avaa **Hyväksynnät**-sovellus, klikkaa "
+":guilabel:`Uusi pyyntö` -painiketta siinä hyväksyntätyypin kortissa, joka "
+"parhaiten vastaa pyyntöä, ja tyhjä hyväksyntälomake latautuu. Täytä eri "
+"osiot ja välilehdet ja klikkaa sitten :guilabel:`Lähetä` lähettääksesi "
+"pyynnön hyväksyttäväksi."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "Yleistietojen osio"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"Lomakkeen yläosa sisältää kaikki pyyntöä koskevat yleiset tiedot. Täytä "
+"seuraavat kentät lomakkeen yläosassa:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Kaikki alla luetellut kentät näkyvät lomakkeessa :guilabel:`Yleinen "
+"hyväksyntä` -kategorialle. Jos eri :guilabel:`Kategoria` on valittu, jotkin "
+"kentät ovat piilotettuina."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Hyväksynnän aihe`: Tämä kenttä täytetään automaattisesti "
+"valitulla hyväksyntätyypillä. Tee haluamasi muutokset oletustekstiin "
+"antaaksesi lisätietoja pyynnöstä."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Pyyntötyöntekijä`: Hyväksyntäpyynnöstä vastaava henkilö. "
+"Kirjautunut käyttäjä täyttää tämän kentän oletuksena."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`Kategoria`: Valittu kategoria näkyy tässä kentässä, mutta sitä "
+"voi muuttaa avattavan valikon avulla."
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Päivämäärä`: Määritä pyynnön päivämäärä ja kellonaika "
+"kalenterivalitsimella. Tämä kenttä näkyy **vain**, jos kohdassa "
+":guilabel:`Maksusovellus` tai :guilabel:`Yleinen hyväksyntä` on valittuna "
+"kohdalle :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Jakso`: Määritä pyynnön aloitus- ja lopetuspäivät "
+"kalenterivalitsimella kenttiin :guilabel:`Alkaen` ja :guilabel:`Päättyen`. "
+"Tämä kenttä näkyy **vain**, jos kohdalle :guilabel:`Työmatka`, "
+":guilabel:`Lainaatko tuotteita`, :guilabel:`Autonvuokraushakemus` tai "
+":guilabel:`Yleinen hyväksyntä` on valittu kohdassa :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Sijainti`: Kirjoita hyväksyntäpyynnön kohteena oleva sijainti. "
+"Tämä kenttä näkyy **vain**, jos kohdalle :guilabel:`Työmatka` tai "
+":guilabel:`Yleinen hyväksyntä` on valittu kohdassa :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Yhteyshenkilö`: Valitse pyynnön yhteyshenkilö avattavasta "
+"valikosta. Käytettävissä olevat vaihtoehdot tulevat **Yhteystiedot**-"
+"sovelluksesta. Tämä kenttä näkyy **vain**, jos kohdalle "
+":guilabel:`Sopimuksen hyväksyntä`, :guilabel:`Maksusovellus`, "
+":guilabel:`Työpaikkasuosituspalkkio` tai :guilabel:`Yleinen hyväksyntä` on "
+"valittu kohdassa :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Määrä`: Syötä tähän kenttään pyydettyjen nimikkeiden lukumäärä. "
+"Tämä kenttä näkyy **vain**, jos kohdalle :guilabel:`Hankinta` on valittu "
+"kohdassa :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Summa`: Syötä pyydetty summa. Tämä kenttä näkyy **vain**, jos "
+"kohdalle :guilabel:`Sopimuksen hyväksyntä`, :guilabel:`Maksusovellus`, "
+":guilabel:`Hankinta` tai :guilabel:`Yleinen hyväksyntä` on valittu kohdassa "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Viite`: Syötä tähän kenttään kaikki pyyntöön liittyvät "
+"viitetiedot. Tämä kenttä näkyy **vain**, jos kohdalle :guilabel:`Sopimuksen "
+"hyväksyntä` tai :guilabel:`Yleinen hyväksyntä` on valittu kohdassa "
+":guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"Jokainen hyväksyntätyyppi tuo näkyviin erilaisia kenttiä "
+"hyväksyntälomakkeella. Tämä johtuu siitä, että jokaisella "
+"*hyväksyntätyypillä* on omat vaaditut kenttänsä. Jos *tyyppi* ei ole heti "
+"tiedossa, napsauta sivun yläreunassa olevaa :guilabel:`Uusi pyyntö`-"
+"painiketta avataksesi yleisen hyväksyntäpyyntölomakkeen. Kun "
+":guilabel:`Kategoria` on valittu, lomakkeen vastaavat kentät tulevat "
+"näkyviin."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr "Hyväksyntälomakkeen yläosa täytettynä työmatkaa varten."
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "Tuotteet-välilehti"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"Jos pyynnössä on mukana tietokantaan määritettyjä tuotteita, ne on lueteltu "
+"*Tuotteet*-välilehdellä. Tämä välilehti näkyy **vain**, jos kohdalle "
+":guilabel:`Lainaatko tuotteita`, :guilabel:`Yleinen hyväksyntä` tai "
+":guilabel:`Luo tarjouspyyntöjä` on valittu kentässä :guilabel:`Kategoria`."
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"Lisätäksesi tuotteen napsauta :guilabel:`Lisää rivi`, jolloin näkyviin tulee "
+"tyhjä rivi. Valitse avattavasta valikosta pyydettävä tuote. Kun tuote on "
+"valittu, sen määritetty :guilabel:`Kuvaus` täyttyy automaattisesti kyseiseen "
+"kenttään. :guilabel:`Määrä` on oletusarvoisesti :guilabel:`1.00`, mutta sitä "
+"voidaan tarvittaessa muuttaa."
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"*Kuvaus*-välilehdelle syötetään kaikki pyyntöä selventävät tiedot. Lisää "
+"tälle välilehdelle kaikki asiaankuuluvat tiedot."
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "Hyväksyjät-välilehti"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"*Hyväksyjät*-välilehdellä määritetään henkilöt, jotka vastaavat pyynnön "
+"hyväksymisestä. Lisätäksesi hyväksyjän napsauta :guilabel:`Lisää rivi`, "
+"jolloin näkyviin tulee tyhjä rivi. Valitse haluamasi käyttäjä avattavasta "
+"valikosta. Toista nämä vaiheet kaikille muille hyväksyjille. Tällä "
+"välilehdellä käyttäjien määrää ei ole rajoitettu."
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"Jos haluat osoittaa, että käyttäjän **on pakko** hyväksyä pyyntö, valitse "
+"valintaruutu :guilabel:`Vaadittu`-sarakkeesta."
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"Kun käyttäjiä lisätään, heidän :guilabel:`Tila` pysyy tilassa "
+":guilabel:`Uusi`."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+"Hyväksyjät-välilehti, jossa on kolme hyväksyjää, joista yksi on vaadittu."
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "Liitä asiakirjat"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Kaikkiin hyväksyntäpyyntöihin sisältyy mahdollisuus liittää olennaisia "
+"asiakirjoja. Jos haluat liittää asiakirjan, napsauta sivun yläreunassa "
+"olevaa :guilabel:`Liitä asiakirja` -painiketta, jolloin tiedostoselain "
+"latautuu. Siirry haluamaasi tiedostoon, valitse se ja napsauta "
+":guilabel:`Avaa` liittääksesi sen. Useita asiakirjoja voidaan valita ja "
+"lisätä samanaikaisesti."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Kun asiakirjat on liitetty, sivun yläreunaan ilmestyy :icon:`fa-book` "
+":guilabel:`Asiakirjat` -älypainike, joka osoittaa liitettyjen asiakirjojen "
+"määrän. Lisäksi asiakirjat luetellaan chatterissa. Jos näyttö on riittävän "
+"leveä, asiakirjat näkyvät näytön sivussa."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Hallinnoi hyväksyntöjä"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Kun pyynnöt on lähetetty, ne on hyväksyttävä tarvittavilla hyväksyjillä, "
+"jotka on lueteltu :ref:`Hyväksyjät-välilehdellä <approvals/approvers>`. "
+"Nähdäksesi toimenpiteitä odottavat hyväksynnät, siirry kohtaan "
+":menuselection:`Hyväksynnät-sovellus --> Esimies --> Hyväksyttävät "
+"hyväksynnät`, jolloin *Hyväksyttävät hyväksynnät* -koontinäyttö latautuu. "
+"Kaikki käyttäjän toimenpiteitä odottavat hyväksynnät näkyvät "
+"aakkosjärjestyksessä oletusluettelonäkymässä."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"Vain *lähetetyt* pyynnöt, joissa käyttäjä on määritetty hyväksyjäksi, "
+"näkyvät *Hyväksyttävät hyväksynnät* -koontinäytöllä. Kaikki muut pyynnöt "
+"pysyvät piilotettuina."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr "Kaikki hyväksyntää odottavat pyynnöt, joihin käyttäjä on nimetty."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Pyynnöt on hyväksyttävä yksitellen hyväksyntälomakkeelta. Hyväksyäksesi "
+"pyynnön napsauta yksittäistä pyyntöä *Hyväksyttävät hyväksynnät* -"
+"koontinäytöllä, jolloin yksittäinen pyyntölomake latautuu."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr "Kameran lainauspyyntö, jossa näkyvät Hyväksy- ja Hylkää-painikkeet."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"Hyväksyäksesi pyynnön napsauta :guilabel:`Hyväksy` -painiketta yksittäisellä "
+"hyväksyntäpyyntölomakkeella, jolloin tila muuttuu muotoon "
+":guilabel:`Hyväksytty`. Kun käyttäjät hyväksyvät pyynnön, heidän "
+":guilabel:`Tilansa` muuttuu muotoon :guilabel:`Hyväksytty` ja teksti näkyy "
+"vihreänä."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"Hylätäksesi pyynnön napsauta :guilabel:`Hylkää` -painiketta yksittäisellä "
+"hyväksyntäpyyntölomakkeella, jolloin tila muuttuu muotoon "
+":guilabel:`Hylätty`. Kun käyttäjä hylkää pyynnön, sen :guilabel:`Tila` "
+"muuttuu muotoon :guilabel:`Hylätty` ja teksti näkyy punaisena."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"Milloin tahansa hyväksyntäpyynnöt, jotka ovat joko :guilabel:`Hyväksytty` "
+"tai :guilabel:`Hylätty`, voivat palata takaisin :guilabel:`Lähetetty` -"
+"vaiheeseen napsauttamalla :guilabel:`Peruuta` -painiketta. Kaikkien "
+"hyväksyjien :guilabel:`Tila` palaa takaisin tilaan :guilabel:`Odottaa "
+"hyväksyntää`, ja teksti näkyy oranssina."
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -18701,12 +19179,6 @@ msgstr ""
 "Napsauta :guilabel:`Uusi`-painiketta, jolloin latautuu tyhjä "
 "sopimuspohjalomake. Määritä seuraavat kentät lomakkeen eri osissa:"
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "Yleistietojen osio"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -19162,8 +19634,8 @@ msgid ""
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"Lomakkeen yläosassa näkyy :icon:`fa-users` :guilabel:`Työntekijät` -"
-"älypainike. Painikkeen klikkaaminen näyttää valitun ajanjakson "
+"Lomakkeen yläosassa näkyy :icon:`fa-users` :guilabel:`Työntekijät` "
+"-älypainike. Painikkeen klikkaaminen näyttää valitun ajanjakson "
 "työntekijöiden kokonaismäärän."
 
 #: ../../content/applications/hr/payroll/headcount.rst:None
@@ -19208,8 +19680,8 @@ msgid ""
 "To view the employees of a specific headcount report, click the :icon:`fa-"
 "users` :guilabel:`Employees` smart button at the top of a headcount report."
 msgstr ""
-"Voit tarkastella tietyn henkilöstömääräraportin työntekijöitä klikkaamalla "
-":icon:`fa-users` :guilabel:`Työntekijät` -älypainiketta "
+"Voit tarkastella tietyn henkilöstömääräraportin työntekijöitä "
+"klikkaamalla :icon:`fa-users` :guilabel:`Työntekijät` -älypainiketta "
 "henkilöstömääräraportin yläosassa."
 
 #: ../../content/applications/hr/payroll/headcount.rst:49
@@ -46984,8 +47456,8 @@ msgid ""
 "<recruitment/customize-stages>`. Changes to stages (e.g., additions, "
 "deletions) affect all positions unless explicitly scoped."
 msgstr ""
-"Vaiheet koskevat kaikkia työpaikkoja, ellei niitä ole :ref:`merkitty "
-"työ­kohtaisiksi <recruitment/customize-stages>`. Vaiheiden muutokset (esim. "
+"Vaiheet koskevat kaikkia työpaikkoja, ellei niitä ole :ref:`merkitty työ­"
+"kohtaisiksi <recruitment/customize-stages>`. Vaiheiden muutokset (esim. "
 "lisäykset, poistot) vaikuttavat kaikkiin työpaikkoihin, ellei niitä ole "
 "nimenomaisesti rajattu."
 
@@ -46998,8 +47470,8 @@ msgid ""
 msgstr ""
 "Ennen kuin luot työpaikan Odoossa, määritä tarvittavat asetukset "
 "**Rekrytointi**-sovellukselle. Voit tarkastella ja muokata asetuksia "
-"siirtymällä kohtaan :menuselection:`Rekrytointi-sovellus --> "
-"Konfigurointi --> Asetukset`. Kun olet tehnyt muutokset, klikkaa kulmassa "
+"siirtymällä kohtaan :menuselection:`Rekrytointi-sovellus --> Konfigurointi --"
+"> Asetukset`. Kun olet tehnyt muutokset, klikkaa kulmassa "
 "olevaa :guilabel:`Tallenna` -painiketta."
 
 #: ../../content/applications/hr/recruitment.rst:38
@@ -47249,11 +47721,11 @@ msgid ""
 "dashboard. Click a job position card to navigate to the Kanban view for all "
 "applicants for that particular job position."
 msgstr ""
-"Päästäksesi työpaikan Kanban-näkymään, siirry pääsovelluksen "
-":menuselection:`Rekrytointi`-koontinäyttöön, joka on oletusnäkymä sovellusta "
-"avattaessa. Kaikki avoimet työpaikat näkyvät pääkoontinäytössä. Napsauta "
-"työpaikkakorttia siirtyäksesi kyseisen työpaikan kaikkien hakijoiden Kanban-"
-"näkymään."
+"Päästäksesi työpaikan Kanban-näkymään, siirry "
+"pääsovelluksen :menuselection:`Rekrytointi`-koontinäyttöön, joka on "
+"oletusnäkymä sovellusta avattaessa. Kaikki avoimet työpaikat näkyvät "
+"pääkoontinäytössä. Napsauta työpaikkakorttia siirtyäksesi kyseisen työpaikan "
+"kaikkien hakijoiden Kanban-näkymään."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "Main dashboard view of all job positions."
@@ -47406,9 +47878,9 @@ msgstr ""
 "Napsauta :guilabel:`Add Stage`, niin uusi sarake ilmestyy. Syötä uuden "
 "vaiheen otsikko vaiheen yläreunassa olevaan tyhjään ruutuun ja napsauta "
 "sitten :icon:`fa-check`-painiketta. Uusi sarake ilmestyy, ja toinen uusi "
-"vaihe tulee näkyviin. Jos uusia vaiheita ei tarvita, napsauta uuden vaiheen "
-":icon:`fa-multiply`-painiketta sulkeaksesi sen. Kun vaihe on luotu, voit "
-"siirtää sen haluamaasi kohtaan työnkulussa napsauttamalla ja vetämällä."
+"vaihe tulee näkyviin. Jos uusia vaiheita ei tarvita, napsauta uuden "
+"vaiheen :icon:`fa-multiply`-painiketta sulkeaksesi sen. Kun vaihe on luotu, "
+"voit siirtää sen haluamaasi kohtaan työnkulussa napsauttamalla ja vetämällä."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "A new stage added, along with a second stage ready to be named."
@@ -47552,9 +48024,9 @@ msgstr ""
 "tilamerkintää (värikkäitä ympyröitä), jotka osoittavat sen tilan. Nämä värit "
 "näkyvät kunkin vaiheen yläosassa heijastamaan vaiheessa olevien hakijoiden "
 "tiloja. Merkinnän *nimiä* voi muokata, mutta itse merkintää (väriä) ei. "
-"Oletusnimet ja -värit ovat: :guilabel:`In Progress` (harmaa), "
-":guilabel:`Blocked` (punainen), :guilabel:`Waiting` (keltainen) ja "
-":guilabel:`Ready for Next Stage` (vihreä)."
+"Oletusnimet ja -värit ovat: :guilabel:`In Progress` "
+"(harmaa), :guilabel:`Blocked` (punainen), :guilabel:`Waiting` (keltainen) "
+"ja :guilabel:`Ready for Next Stage` (vihreä)."
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
@@ -47578,11 +48050,11 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "Jos vaihetta ei enää tarvita, se voidaan poistaa. Poista vaihe siirtämällä "
-"hiiri vaiheen nimen päälle ja napsauttamalla ilmestyvää :icon:`fa-cog` "
-":guilabel:`(Settings)`-kuvaketta. Napsauta :icon:`fa-trash` "
-":guilabel:`Delete`, jolloin näkyviin tulee *Confirmation*-varoitus, joka "
-"kysyy :guilabel:`Are you sure you want to delete this column?` Poista vaihe "
-"napsauttamalla :guilabel:`Delete`."
+"hiiri vaiheen nimen päälle ja napsauttamalla ilmestyvää :icon:`fa-"
+"cog` :guilabel:`(Settings)`-kuvaketta. Napsauta :icon:`fa-"
+"trash` :guilabel:`Delete`, jolloin näkyviin tulee *Confirmation*-varoitus, "
+"joka kysyy :guilabel:`Are you sure you want to delete this column?` Poista "
+"vaihe napsauttamalla :guilabel:`Delete`."
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -47679,9 +48151,9 @@ msgid ""
 "text box appears, as well as the applicant's email address. Enter the "
 "message in the text box."
 msgstr ""
-"Jos haluat lähettää sähköpostin manuaalisesti, napsauta keskusteluikkunassa "
-":guilabel:`Send message`. Tekstikenttä ja hakijan sähköpostiosoite tulevat "
-"näkyviin. Kirjoita viesti tekstikenttään."
+"Jos haluat lähettää sähköpostin manuaalisesti, napsauta "
+"keskusteluikkunassa :guilabel:`Send message`. Tekstikenttä ja hakijan "
+"sähköpostiosoite tulevat näkyviin. Kirjoita viesti tekstikenttään."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "Send an email from the chatter."
@@ -47697,11 +48169,11 @@ msgid ""
 "Name)`."
 msgstr ""
 "Napsauta :icon:`fa-expand` :guilabel:`(Avaa täysi muokkain)`-kuvaketta "
-"chatterin *Lähetä viesti* -välilehden alakulmassa. *Kirjoita sähköposti* -"
-"ponnahdusikkuna latautuu, ja sen :guilabel:`Vastaanottaja`- ja "
-":guilabel:`Aihe`-kentät on esitäytetty. Hakijan sähköpostiosoite syötetään "
-":guilabel:`Vastaanottaja`-kenttään, ja :guilabel:`Aihe` on `(Applicant's "
-"Name)`."
+"chatterin *Lähetä viesti* -välilehden alakulmassa. *Kirjoita sähköposti* "
+"-ponnahdusikkuna latautuu, ja sen :guilabel:`Vastaanottaja`- "
+"ja :guilabel:`Aihe`-kentät on esitäytetty. Hakijan sähköpostiosoite "
+"syötetään :guilabel:`Vastaanottaja`-kenttään, ja :guilabel:`Aihe` on "
+"`(Applicant's Name)`."
 
 #: ../../content/applications/hr/recruitment.rst:310
 msgid ""
@@ -47749,8 +48221,8 @@ msgid ""
 msgstr ""
 "Jos liitteitä on lisättävä, napsauta :icon:`fa-paperclip` :guilabel:`(Lisää "
 "liite)`-painiketta ikkunan alareunassa. Siirry liitettävään tiedostoon ja "
-"napsauta :guilabel:`Avaa` liittääksesi sen. Poistaaksesi liitteen, napsauta "
-":icon:`fa-times` :guilabel:`(Poista)`-kuvaketta liitteen kohdalla."
+"napsauta :guilabel:`Avaa` liittääksesi sen. Poistaaksesi liitteen, "
+"napsauta :icon:`fa-times` :guilabel:`(Poista)`-kuvaketta liitteen kohdalla."
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -47766,14 +48238,15 @@ msgid ""
 msgstr ""
 "Jos sähköpostiin on tehtävä muutoksia, muokkaa sähköpostin runkoa. Jos "
 "muokkaukset halutaan tallentaa tulevaa käyttöä varten, sähköposti voidaan "
-"tallentaa uutena pohjana. Napsauta :icon:`fa-ellipsis-v` :guilabel:`(Pohjat)"
-"`-painiketta ikkunan alareunassa ja valitse :guilabel:`Tallenna pohjana`. "
-"Sinulle tarjotaan vaihtoehtoja joko korvata olemassa oleva pohja tai "
-"tallentaa uusi pohja. Napsauta olemassa olevan pohjan nimeä korvataksesi "
-"kyseisen pohjan, tai napsauta :guilabel:`Tallenna pohjana` tallentaaksesi "
-"uuden pohjan. *Luo sähköpostipohja* -ponnahdusikkuna latautuu. Syötä "
-"pohjalle nimi :guilabel:`Pohjan nimi`-kenttään ja napsauta sitten "
-":guilabel:`Tallenna pohja`."
+"tallentaa uutena pohjana. Napsauta :icon:`fa-ellipsis-"
+"v` :guilabel:`(Pohjat)`-painiketta ikkunan alareunassa ja "
+"valitse :guilabel:`Tallenna pohjana`. Sinulle tarjotaan vaihtoehtoja joko "
+"korvata olemassa oleva pohja tai tallentaa uusi pohja. Napsauta olemassa "
+"olevan pohjan nimeä korvataksesi kyseisen pohjan, tai "
+"napsauta :guilabel:`Tallenna pohjana` tallentaaksesi uuden pohjan. *Luo "
+"sähköpostipohja* -ponnahdusikkuna latautuu. Syötä pohjalle "
+"nimi :guilabel:`Pohjan nimi`-kenttään ja napsauta sitten :guilabel:`Tallenna "
+"pohja`."
 
 #: ../../content/applications/hr/recruitment.rst:337
 msgid ""
@@ -49324,12 +49797,13 @@ msgid ""
 "is :guilabel:`Last 365 Days Offers`, showing information for the last 365 "
 "days."
 msgstr ""
-"Pääset *Tarjousanalyysi*-raporttiin navigoimalla kohtaan "
-":menuselection:`Rekrytointi --> Raportointi --> Tarjousanalyysi`. Oletuksena "
-"raportti näyttää kaikkien työpaikkojen tarjoustiedot :icon:`fa-bar-chart` "
-":guilabel:`(Pylväskaavio)`-muodossa, jossa on :icon:`fa-database` :guilabel:`"
-"(Pinottu)`-ryhmät. Oletussuodatin on :guilabel:`Tarjoukset viimeisten 365 "
-"päivän ajalta`, joka näyttää tiedot viimeisten 365 päivän ajalta."
+"Pääset *Tarjousanalyysi*-raporttiin navigoimalla "
+"kohtaan :menuselection:`Rekrytointi --> Raportointi --> Tarjousanalyysi`. "
+"Oletuksena raportti näyttää kaikkien työpaikkojen tarjoustiedot :icon:`fa-"
+"bar-chart` :guilabel:`(Pylväskaavio)`-muodossa, jossa on :icon:`fa-"
+"database` :guilabel:`(Pinottu)`-ryhmät. Oletussuodatin "
+"on :guilabel:`Tarjoukset viimeisten 365 päivän ajalta`, joka näyttää tiedot "
+"viimeisten 365 päivän ajalta."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -49410,11 +49884,11 @@ msgstr "Hakija hylkäsi tarjouksen."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:None
 msgid "A bar chart view of the Offer Analysis report."
-msgstr ""
+msgstr "Pylväskaavionäkymä tarjousanalyysiraportista."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:52
 msgid "Use case: view offers by state"
-msgstr ""
+msgstr "Käyttötapaus: tarkastele tarjouksia tilan mukaan"
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:54
 msgid ""
@@ -49423,6 +49897,9 @@ msgid ""
 "it can be difficult to keep track of all the job offers and where each offer "
 "stands."
 msgstr ""
+"Suuri, kasvava yritys, jolla on satoja työntekijöitä, rekrytoi jatkuvasti. "
+"Koska täytettäviä työtehtäviä on paljon, voi olla vaikeaa pysyä ajan tasalla "
+"kaikista työtarjouksista ja niiden vaiheista."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:58
 msgid ""
@@ -49433,6 +49910,13 @@ msgid ""
 "option in the :icon:`oi-group` :guilabel:`Group By` column. This provides a "
 "high-level overview of where all offers stand."
 msgstr ""
+"Tiimin avuksi *Tarjousanalyysi*-raporttia voidaan muokata näyttämään kaikki "
+"tarjoukset tilan mukaan työtehtävän sijaan. Tarkastellaksesi tarjouksia "
+"tilan mukaan, siirry kohtaan :menuselection:`Rekrytointi-sovellus --> "
+"Raportointi --> Tarjousanalyysi`. Klikkaa hakupalkkia ja valitse "
+":guilabel:`Tarjouksen tila` -vaihtoehto :icon:`oi-group` "
+":guilabel:`Ryhmittele` -sarakkeesta. Tämä tarjoaa yleiskuvan siitä, missä "
+"vaiheessa kaikki tarjoukset ovat."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""
@@ -49440,10 +49924,14 @@ msgid ""
 "state. This is helpful when trying to finalize all open offers, or see how "
 "many were refused or completed."
 msgstr ""
+"Klikkaa saraketta avataksesi luettelonäkymän kaikista kyseisessä tilassa "
+"olevista tarjouksista. Tämä on hyödyllistä, kun haluat viedä päätökseen "
+"kaikki avoimet tarjoukset tai nähdä, kuinka monta tarjousta on hylätty tai "
+"suoritettu loppuun."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:None
 msgid "All offers grouped by state."
-msgstr ""
+msgstr "Kaikki tarjoukset ryhmiteltynä tilan mukaan."
 
 #: ../../content/applications/hr/recruitment/offer_job_positions.rst:3
 msgid "Offer job positions"

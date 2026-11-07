@@ -37,11 +37,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
 "PO-Revision-Date: 2026-10-31 13:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
-"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
-"19-doc/finance/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
+"odoo-19-doc/finance/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4765,8 +4765,8 @@ msgid ""
 msgstr ""
 "Este método de faturamento é comumente usado por empresas de serviços que "
 "faturam principalmente com base em tempo e materiais. Em contrapartida, "
-"empresas de serviços que faturam a preço fixo normalmente seguem um "
-":ref:`processo de pedido de venda padrão <accounting/invoice/invoice-from-"
+"empresas de serviços que faturam a preço fixo normalmente seguem "
+"um :ref:`processo de pedido de venda padrão <accounting/invoice/invoice-from-"
 "sales>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:93
@@ -4829,8 +4829,8 @@ msgid ""
 "Draft invoices can be created manually from the :guilabel:`Sales` journal in "
 "the :guilabel:`Accounting Dashboard`."
 msgstr ""
-"Faturas em rascunho podem ser criadas manualmente a partir do diário de "
-":guilabel:`Vendas` no :guilabel:`Painel Financeiro`."
+"Faturas em rascunho podem ser criadas manualmente a partir do diário "
+"de :guilabel:`Vendas` no :guilabel:`Painel Financeiro`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:128
 msgid ""
@@ -4853,12 +4853,12 @@ msgid ""
 "future invoices, update the values on the contact record."
 msgstr ""
 ":guilabel:`Cliente`: quando um cliente é selecionado, o Odoo extrai "
-"automaticamente informações do registro do cliente, como endereço de fatura, "
-":doc:`termos de pagamento preferenciais <customer_invoices/payment_terms>`, "
-":doc:`posições fiscais <taxes/fiscal_positions>`, conta a receber e muito "
-"mais para a fatura. Para alterar esses valores para esta fatura específica, "
-"edite-os diretamente na fatura. Para aplicá-los a futuras faturas, atualize "
-"os valores no registro de contato."
+"automaticamente informações do registro do cliente, como endereço de "
+"fatura, :doc:`termos de pagamento preferenciais <customer_invoices/"
+"payment_terms>`, :doc:`posições fiscais <taxes/fiscal_positions>`, conta a "
+"receber e muito mais para a fatura. Para alterar esses valores para esta "
+"fatura específica, edite-os diretamente na fatura. Para aplicá-los a futuras "
+"faturas, atualize os valores no registro de contato."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:137
 msgid ""
@@ -4950,8 +4950,8 @@ msgid ""
 "more, can be added or modified in the :guilabel:`Other Info` tab."
 msgstr ""
 "A aba :guilabel:`Itens do Diário` exibe os lançamentos contábeis criados. "
-"Informações adicionais da fatura, como :guilabel:`Referência do Cliente`, "
-":guilabel:`Referência de Pagamento`, :doc:`Posições Fiscais <taxes/"
+"Informações adicionais da fatura, como :guilabel:`Referência do "
+"Cliente`, :guilabel:`Referência de Pagamento`, :doc:`Posições Fiscais <taxes/"
 "fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>` e muito "
 "mais, podem ser adicionadas ou modificadas na aba :guilabel:`Outras "
 "Informações`."
@@ -5122,11 +5122,10 @@ msgid ""
 "click :guilabel:`Send`. The :guilabel:`Send` window displays the number of "
 "selected invoices to send by email."
 msgstr ""
-"Para enviar várias faturas, vá para :menuselection:`Financeiro --> "
-"Clientes --> Faturas`, selecione-as na visualização de lista de "
-":guilabel:`Faturas` e clique em :guilabel:`Enviar`. A janela "
-":guilabel:`Enviar` exibe o número de faturas selecionadas para enviar por e-"
-"mail."
+"Para enviar várias faturas, vá para :menuselection:`Financeiro --> Clientes "
+"--> Faturas`, selecione-as na visualização de lista de :guilabel:`Faturas` e "
+"clique em :guilabel:`Enviar`. A janela :guilabel:`Enviar` exibe o número de "
+"faturas selecionadas para enviar por e-mail."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:237
 msgid ""
@@ -6025,8 +6024,8 @@ msgid ""
 "scenario by making it easy to specify which address to use for each case."
 msgstr ""
 "As empresas costumam ter vários locais, e é comum que uma fatura de cliente "
-"seja enviada para um endereço e a entrega seja enviada para outro. O recurso "
-":doc:`Endereços do cliente <../../../sales/sales/sales_quotations/"
+"seja enviada para um endereço e a entrega seja enviada para outro. O "
+"recurso :doc:`Endereços do cliente <../../../sales/sales/sales_quotations/"
 "different_addresses>` do Odoo foi projetado para lidar com esse cenário, "
 "facilitando a especificação de qual endereço usar para cada caso."
 
@@ -19366,223 +19365,12 @@ msgstr "Processo de atualização para o método perpétuo anglo-saxão"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:274
 msgid ""
-"In Odoo 19, the stock input/output accounts are no longer used. Any non-zero "
-"balances in stock interim accounts must be transferred to the :ref:`stock "
-"valuation account <accounting/inventory-valuation/valuation-account>` via "
-"journal entry to maintain accurate inventory values after migration. This "
-"rebalancing can be performed :ref:`before <accounting/inventory-valuation/"
-"upgrade-process-server-action>` or :ref:`after <accounting/inventory-"
-"valuation/upgrade-process-manual>` upgrading to Odoo 19."
+"Upgrading from Odoo 18 to Odoo 19 automatically handles the stock interim "
+"account rebalancing process during the database migration. The migration "
+"script automatically transfers non-zero balances from the legacy stock input/"
+"output accounts to the stock valuation account, eliminating the need for "
+"manual journal entries or server actions."
 msgstr ""
-"No Odoo 19, as contas de entrada/saída de estoque não são mais usadas. "
-"Quaisquer saldos diferentes de zero em contas intermediárias de estoque "
-"devem ser transferidos para a :ref:`conta de valoração de estoque "
-"<accounting/inventory-valuation/valuation-account>` por meio de lançamento "
-"contábil para manter valores de estoque precisos após a migração. Esse "
-"rebalanceamento pode ser realizado :ref:`antes <accounting/inventory-"
-"valuation/upgrade-process-server-action>` ou :ref:`depois <accounting/"
-"inventory-valuation/upgrade-process-manual>` de atualizar para o Odoo 19."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:281
-msgid ""
-"Before upgrading, review received purchase or sales orders that are not yet "
-"linked to vendor bills or invoices, and post any existing draft bills/"
-"invoices to reduce the open balance."
-msgstr ""
-"Antes de atualizar, revise os pedidos de compra ou venda recebidos que ainda "
-"não estejam vinculados a faturas de fornecedor ou faturas de cliente e lance "
-"quaisquer rascunhos de fatura existentes para reduzir o saldo em aberto."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:285
-msgid ""
-"It is recommended to implement the change **after** upgrading to Odoo 19, "
-"because a server action identifies the open balance in the :guilabel:`Stock "
-"Interim` accounts and automatically applies the change."
-msgstr ""
-"Recomenda-se implementar a alteração **depois** de atualizar para o Odoo 19, "
-"porque uma ação de servidor identifica o saldo em aberto nas contas "
-"de :guilabel:`Estoque intermediário` e aplica a alteração automaticamente."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:290
-msgid ""
-"Account structures and valuation scenarios differ across companies. Review "
-"these steps with an accountant or an Odoo inventory valuation expert to "
-"ensure the setup aligns with the company's specific setup."
-msgstr ""
-"As estruturas de contas e os cenários de valoração diferem entre as "
-"empresas. Revise essas etapas com um contador ou um especialista em "
-"valoração de inventário do Odoo para garantir que a configuração esteja "
-"alinhada à configuração específica da empresa."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:297
-msgid "Option 1: Server action journal entry"
-msgstr "Opção 1: Lançamento contábil por ação de servidor"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:300
-msgid ""
-"Use a test database created during the upgrade process first, and verify "
-"the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
-"Valuation report <accounting/inventory-valuation/inventory-valuation-"
-"report>` to ensure accuracy."
-msgstr ""
-"Primeiro, use uma base de dados de teste criada durante o processo de "
-"atualização e verifique o :doc:`Relatório de estoque <../../../"
-"inventory_and_mrp/inventory/warehouses_storage/reporting/stock>`, as contas "
-"e o :ref:`Relatório de valoração de inventário <accounting/inventory-"
-"valuation/inventory-valuation-report>` para garantir a exatidão."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:305
-msgid ""
-"After upgrading to Odoo 19, the server action must be applied to each "
-"company to balance any non-zero :guilabel:`Stock Interim` accounts:"
-msgstr ""
-"Após atualizar para o Odoo 19, a ação de servidor deve ser aplicada a cada "
-"empresa para balancear as contas de :guilabel:`Estoque intermediário` com "
-"saldo diferente de zero:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:308
-msgid ""
-"Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
-"click the relevant company."
-msgstr ""
-"Acesse :menuselection:`Configurações --> Usuários e empresas --> Empresas` e "
-"clique na empresa relevante."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:310
-msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`Stock "
-"Valuation rebalance interim Accounts`. A draft journal entry is "
-"automatically generated to balance the open amount."
-msgstr ""
-"Clique no ícone :icon:`fa-cog` :guilabel:`(engrenagem)` e "
-"selecione :guilabel:`Valoração de estoque rebalancear contas "
-"intermediárias`. Um lançamento contábil em rascunho é gerado automaticamente "
-"para balancear o valor em aberto."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:312
-msgid ""
-"Review the draft journal entry amounts, edit them if necessary, then "
-"click :guilabel:`Post`."
-msgstr ""
-"Revise os valores do lançamento contábil em rascunho, edite-os se necessário "
-"e clique em :guilabel:`Lançar`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:313
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:346
-msgid ""
-"Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
-"accounts are balanced to zero and that the remaining amount is recorded in "
-"the :guilabel:`Stock valuation` account."
-msgstr ""
-"Verifique o Livro Razão para confirmar que as contas de :guilabel:`Estoque "
-"intermediário` estão com saldo zerado e que o valor restante está registrado "
-"na conta de :guilabel:`Valoração de estoque`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:315
-msgid ""
-"Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
-"and :ref:`generate an inventory variation entry <accounting/inventory-"
-"valuation/closing-entry>`. The increased value on the :ref:`Valuation "
-"account <accounting/inventory-valuation/valuation-account>` is then "
-"transferred to the :ref:`Variation account <accounting/inventory-valuation/"
-"variation-account>`, which is a new type of interim account."
-msgstr ""
-"Acesse :menuselection:`Financeiro --> Revisão --> Valoração de inventário` "
-"e :ref:`gere um lançamento de variação de inventário <accounting/inventory-"
-"valuation/closing-entry>`. O valor aumentado na :ref:`conta de valoração "
-"<accounting/inventory-valuation/valuation-account>` é então transferido para "
-"a :ref:`conta de variação <accounting/inventory-valuation/variation-"
-"account>`, que é um novo tipo de conta intermediária."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:320
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is required and the Bill to "
-"Receive or |GRNI| account, etc., needs updating."
-msgstr ""
-"Opcionalmente, gere :ref:`lançamentos de competência <accounting/inventory-"
-"valuation/accrual-entries>` se for necessário um fechamento contábil e a "
-"conta Faturas a receber ou |GRNI|, etc., precisar de atualização."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:325
-msgid ""
-"Journal entries can also be created manually if needed, using the same "
-"process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
-"upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
-"manual>`."
-msgstr ""
-"Os lançamentos contábeis também podem ser criados manualmente, se "
-"necessário, usando o mesmo processo para equilibrar as contas "
-":guilabel:`Intermediária de estoque` :ref:`antes de atualizar para o Odoo 19 "
-"<accounting/inventory-valuation/upgrade-process-manual>`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:332
-msgid "Option 2: Manual journal entry"
-msgstr "Opção 2: Lançamento contábil manual"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:334
-msgid "To create the manual journal entry, follow these steps:"
-msgstr "Para criar o lançamento contábil manual, siga estas etapas:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:336
-msgid ""
-"If all vendor bills or invoices can't be created for all the received "
-"purchase/sales orders before the upgrade, follow these steps:"
-msgstr ""
-"Se não for possível criar todas as faturas de fornecedor ou de cliente para "
-"todos os pedidos de compra/venda recebidos antes da atualização, siga estas "
-"etapas:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:339
-msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
-msgstr "Acesse :menuselection:`Contabilidade --> Relatórios --> Livro-razão`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:340
-msgid ""
-"Identify the open balance in the :guilabel:`Stock Interim` accounts and "
-"create a journal entry that debits/credits:"
-msgstr ""
-"Identifique o saldo em aberto nas contas :guilabel:`Intermediária de "
-"estoque` e crie um lançamento contábil que debite/credite:"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:343
-msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
-msgstr ""
-"A(s) conta(s) :guilabel:`Intermediária de estoque` que contém o saldo em "
-"aberto"
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:344
-msgid "The :guilabel:`Stock Valuation` account"
-msgstr "A conta de :guilabel:`Valoração de estoque`."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:349
-msgid ""
-"After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --> "
-"Inventory Valuation` and :ref:`generate an inventory variation entry "
-"<accounting/inventory-valuation/closing-entry>`. The increased value on "
-"the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
-"account>` is then transferred to the :ref:`Variation account <accounting/"
-"inventory-valuation/variation-account>`, which is a new type of interim "
-"account."
-msgstr ""
-"Após atualizar para o Odoo 19, acesse :menuselection:`Contabilidade --> "
-"Revisão --> Valoração de estoque` e :ref:`gere um lançamento de variação de "
-"estoque <accounting/inventory-valuation/closing-entry>`. O valor aumentado "
-"na :ref:`Conta de valoração <accounting/inventory-valuation/valuation-"
-"account>` é então transferido para a :ref:`Conta de variação <accounting/"
-"inventory-valuation/variation-account>`, que é um novo tipo de conta "
-"provisória."
-
-#: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:355
-msgid ""
-"Optionally, generate :ref:`accrual entries <accounting/inventory-valuation/"
-"accrual-entries>` if an accounting closing is needed and the Bill to Receive "
-"or |GRNI| account, etc., must be up to date."
-msgstr ""
-"Opcionalmente, gere :ref:`lançamentos de competência <accounting/inventory-"
-"valuation/accrual-entries>` se um fechamento contábil for necessário e a "
-"conta Fatura a Receber ou |GRNI|, etc., precisar estar atualizada."
 
 #: ../../content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -26941,7 +26729,14 @@ msgstr ""
 msgid "General configuration"
 msgstr "Configuração geral"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:28
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:29
+msgid ""
+"To access the :guilabel:`Intrastat` option, make sure "
+"the :guilabel:`Intrastat Reports` `(account_intrastat)` module "
+"is :doc:`installed </applications/general/apps_modules>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:32
 msgid ""
 "Enable the Intrastat report by going to :menuselection:`Accounting --> "
 "Configuration --> Settings`. Under the :guilabel:`Customer Invoices` "
@@ -26951,11 +26746,11 @@ msgstr ""
 "Configuração --> Definições`. Na seção :guilabel:`Faturas de clientes`, "
 "marque :guilabel:`Intrastat` e, em seguida, :guilabel:`Salvar`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:35
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:39
 msgid "Default transaction codes: invoice and refund"
 msgstr "Códigos de transação padrão: fatura e reembolso"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:37
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:41
 msgid ""
 "You can set a default :ref:`transaction code <intrastat/transaction-code>` "
 "for all newly created invoice and refund transactions. "
@@ -26972,11 +26767,11 @@ msgstr ""
 "seguida, :guilabel:`Salvar`. O código será definido automaticamente em todas "
 "as respectivas linhas da fatura."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:45
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:49
 msgid "Region code"
 msgstr "Código da região"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:47
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:51
 msgid ""
 "The region code is **only used by Belgian companies**. "
 "Under :menuselection:`Accounting --> Configuration --> Settings`, select "
@@ -26988,7 +26783,7 @@ msgstr ""
 "a :guilabel:`Empresa Região Intrastat` em que a empresa está localizada e, "
 "em seguida, :guilabel:`Salvar`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:52
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:56
 msgid ""
 "If your warehouses are located in more than one region, you can define the "
 "region code at the level of each warehouse instead. To do so, go "
@@ -27005,12 +26800,12 @@ msgstr ""
 msgid "Adding the Intrastat region to a warehouse"
 msgstr "Adixionar a região Intrastat a um armazém"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:63
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:67
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:694
 msgid "Product configuration"
 msgstr "Configuração do produto"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:65
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:69
 msgid ""
 "All products must be properly configured to be included in the Intrastat "
 "report."
@@ -27018,11 +26813,11 @@ msgstr ""
 "Todos os produtos devem ser configurados corretamente para serem incluídos "
 "no relatório do Intrastat."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:70
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:74
 msgid "Commodity code"
 msgstr "Código de commodity"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:72
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:76
 msgid ""
 "Commodity codes are internationally recognized reference numbers used to "
 "classify goods depending on their **nature**. Intrastat uses the `Combined "
@@ -27035,7 +26830,7 @@ msgstr ""
 "customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/"
 "combined-nomenclature_en>`_."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:75
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
 msgid ""
 "To add a commodity code, go to :menuselection:`Accounting --> Customers --> "
 "Products` and select a product. Under the :guilabel:`Accounting` tab, set "
@@ -27046,7 +26841,7 @@ msgstr ""
 "aba :guilabel:`Financeiro`, defina o :guilabel:`Código de commodity` do "
 "produto."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:83
 msgid ""
 "`National Bank of Belgium - Intrastat commodity codes <https://www.nbb.be/en/"
 "statistics/foreign-trade/nomenclature-and-codes>`_"
@@ -27054,11 +26849,11 @@ msgstr ""
 "`Banco Nacional da Bélgica - Códigos de commodities Intrastat <https://"
 "www.nbb.be/en/statistics/foreign-trade/nomenclature-and-codes>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:85
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:89
 msgid "Quantity: weight and supplementary unit"
 msgstr "Quantidade: peso e unidade suplementar"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:87
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
 msgid ""
 "Depending on the nature of the goods, it is necessary to specify either the "
 "product's weight in kilos (without packaging) or the product's supplementary "
@@ -27069,7 +26864,7 @@ msgstr ""
 "produto em quilos (sem embalagem) ou a unidade suplementar do produto, como "
 "metro quadrado (`m²`), número de itens (`p/st`), litro (`l`) ou grama (`g`)."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:91
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:95
 msgid ""
 "To add a product's weight or supplementary unit, go "
 "to :menuselection:`Accounting --> Customers --> Products` and select a "
@@ -27083,11 +26878,11 @@ msgstr ""
 "commodities, preencha o :guilabel:`Peso` ou as :guilabel:`Unidades "
 "suplementares` do produto."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:98
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:102
 msgid "Country of origin"
 msgstr "País de origem"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:100
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:104
 msgid ""
 "To add the product's country of origin, go to :menuselection:`Accounting --> "
 "Customers --> Products` and select a product. Under "
@@ -27097,11 +26892,11 @@ msgstr ""
 "para :menuselection:`Financeiro --> Clientes --> Produtos` e selecione um "
 "produto. Na aba :guilabel:`Financeiro`, defina o :guilabel:`País de origem`"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:106
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:110
 msgid "Invoices and bills configuration"
 msgstr "Configuração de faturas e contas"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:108
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:112
 msgid ""
 "Once products are properly configured, several settings must be configured "
 "on the invoices and bills you create."
@@ -27109,11 +26904,11 @@ msgstr ""
 "Depois que os produtos forem configurados corretamente, várias configurações "
 "deverão ser definidas nas faturas e contas que você criar."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:114
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:118
 msgid "Transaction code"
 msgstr "Código de transação"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:116
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:120
 msgid ""
 "Transaction codes are used to identify a transaction's nature. :ref:`Default "
 "transaction codes <intrastat/default-transaction-codes>` can be set for "
@@ -27123,7 +26918,7 @@ msgstr ""
 "transação. :ref:`Códigos de transação padrão <intrastat/default-transaction-"
 "codes>` podem ser definidos para transações de fatura e reembolso."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:119
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:123
 msgid ""
 "To set a transaction code on an invoice line, create an invoice or a bill, "
 "click the columns selection button, tick :guilabel:`Intrastat`, and use the "
@@ -27138,7 +26933,7 @@ msgstr ""
 msgid "Adding the Intrastat column to an invoice or bill"
 msgstr "Adicionar a coluna Intrastat a uma fatura ou conta"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:128
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:132
 msgid ""
 "`National Bank of Belgium - Intrastat: Nature of transactions from January "
 "2022 <https://www.nbb.be/doc/dd/onegate/data/"
@@ -27148,11 +26943,11 @@ msgstr ""
 "janeiro de 2022<https://www.nbb.be/doc/dd/onegate/data/"
 "new_natures_of_transaction_2022_en.pdf>`_"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:134
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:138
 msgid "Partner country"
 msgstr "País parceiro"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:136
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
 msgid ""
 "The partner country represents the vendor's country for bills and the "
 "customer's country for invoices. It is automatically filled in using the "
@@ -27162,7 +26957,7 @@ msgstr ""
 "cliente para faturas. Ele é preenchido automaticamente usando o país "
 "definido no campo :guilabel:`País` do contato."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:140
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:144
 msgid ""
 "To edit the partner country manually, create an invoice or a bill, click "
 "the :guilabel:`Other Info` tab, and select the :guilabel:`Intrastat Country`."
@@ -27171,11 +26966,11 @@ msgstr ""
 "clique na aba :guilabel:`Outras informações` e selecione a "
 "opção :guilabel:`País Intrastat`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:146
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:150
 msgid "Transport code"
 msgstr "Código de transporte"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:148
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:152
 msgid ""
 "The transport code identifies the presumed **mode of transport** used to "
 "send the goods (arrival or dispatch)."
@@ -27183,7 +26978,7 @@ msgstr ""
 "O código de transporte identifica o suposto **modo de transporte** usado "
 "para enviar as mercadorias (chegada ou despacho)."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:151
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:155
 msgid ""
 "To add the transport code, create an invoice or a bill, go to "
 "the :guilabel:`Other info` tab, and select the :guilabel:`Intrastat "
@@ -27193,11 +26988,11 @@ msgstr ""
 "a aba :guilabel:`Outras informações` e selecione a opção :guilabel:`Modo de "
 "transporte Intrastat`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:157
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:161
 msgid "Value of the goods"
 msgstr "Valor das mercadorias"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:159
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:163
 msgid ""
 "The value of a good is the untaxed :guilabel:`Subtotal` (:guilabel:`Price` "
 "multiplied by :guilabel:`Quantity`) of an invoice line."
@@ -27206,11 +27001,11 @@ msgstr ""
 "(:guilabel:`Preço` multiplicado por :guilabel:`Quantidade`) de uma linha de "
 "fatura."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:165
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:169
 msgid "Partner configuration"
 msgstr "Configuração do parceiro"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:167
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:171
 msgid ""
 "Two fields from the partner's contact form are used with "
 "Intrastat: :guilabel:`VAT` and :guilabel:`Country`. The country can "
@@ -27221,11 +27016,11 @@ msgstr ""
 "ser :ref:`definido manualmente <intrastat/partner-country>` na fatura ou na "
 "conta."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:172
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:176
 msgid "Generate the Intrastat report"
 msgstr "Gerar o relatório Intrastat"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:174
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:178
 msgid ""
 "Generate the report by going to :menuselection:`Accounting --> Reporting --> "
 "Audit Reports: Intrastat Report`. It is automatically computed based on "
@@ -27241,7 +27036,7 @@ msgstr ""
 "product-configuration>`, :ref:`faturas e contas <intrastat/invoice-bill-"
 "configuration>` e :ref:`parceiros <intrastat/partner>`."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:180
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
 msgid ""
 "Export the report as a PDF, XLSX, or XML file to post it to your legal "
 "administration."
@@ -27249,7 +27044,7 @@ msgstr ""
 "Exporte o relatório como um arquivo PDF, XLSX ou XML para publicá-lo em sua "
 "administração jurídica."
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:182
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:186
 msgid ""
 "Each report line refers to a single invoice line and contains the following "
 "information:"
@@ -27257,11 +27052,11 @@ msgstr ""
 "Cada linha do relatório refere-se a uma única linha da fatura e contém as "
 "seguintes informações:"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:184
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:188
 msgid "Invoice or bill reference number;"
 msgstr "Número de referência da fatura ou conta;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:185
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
 msgid ""
 "System, which is a code automatically generated depending on whether the "
 "document is an invoice (dispatch) or a bill (arrival);"
@@ -27269,7 +27064,7 @@ msgstr ""
 "Sistema, que é um código gerado automaticamente dependendo do fato de o "
 "documento ser uma fatura (despacho) ou uma conta (chegada);"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:187
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
 msgid ""
 ":ref:`Country <intrastat/partner-country>`, which is the vendor's country "
 "for arrivals and the customer's country for dispatches;"
@@ -27277,11 +27072,11 @@ msgstr ""
 ":ref:`País <intrastat/partner-country>`, que é o país do fornecedor para "
 "chegadas e o país do cliente para envios;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:189
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
 msgid ":ref:`Transaction Code <intrastat/transaction-code>`;"
 msgstr ":ref:`Código de transação <intrastat/transaction-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:190
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
 msgid ""
 "(If your company is located in Belgium) :ref:`Region Code <intrastat/region-"
 "code>`;"
@@ -27289,35 +27084,35 @@ msgstr ""
 "(Se sua empresa estiver localizada na Bélgica) :ref:`Código da região "
 "<intrastat/region-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:191
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
 msgid ":ref:`Commodity Code <intrastat/commodity-code>`;"
 msgstr ":ref:`Código de commodity <intrastat/commodity-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:192
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
 msgid ":ref:`Origin Country <intrastat/origin-country>`;"
 msgstr ":ref:`País de origem <intrastat/origin-country>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:193
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
 msgid ":ref:`Partner VAT <intrastat/partner>`;"
 msgstr ":ref:`VAT do parceiro <intrastat/partner>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:194
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
 msgid ":ref:`Transport Code <intrastat/transport-code>`;"
 msgstr ":ref:`Código de transporte <intrastat/transport-code>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:195
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:199
 msgid ":doc:`Incoterm Code <../customer_invoices/incoterms>`;"
 msgstr ":doc:`Código Incoterm <../customer_invoices/incoterms>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:196
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:200
 msgid ":ref:`Weight <intrastat/quantity>`;"
 msgstr ":ref:`Peso <intrastat/quantity>`;"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:197
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:201
 msgid ":ref:`Supplementary Units <intrastat/quantity>`; and"
 msgstr ":ref:`Unidades suplementares <intrastat/quantity>`; e"
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:198
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:202
 msgid ""
 ":ref:`Value <intrastat/value>`, which is always expressed in euros even if "
 "the original invoice or bill used another currency."
@@ -42460,8 +42255,8 @@ msgid ""
 "been :guilabel:`Aceptado en ARCA` or :guilabel:`Aceptado con Observaciones`."
 msgstr ""
 "Assim que a fatura for lançada, as informações relacionadas a |ARCA| "
-"aparecem na fatura e o campo :guilabel:`Resultado` indica se a fatura foi "
-":guilabel:`Aceptado en ARCA` ou :guilabel:`Aceptado con Observaciones`."
+"aparecem na fatura e o campo :guilabel:`Resultado` indica se a fatura "
+"foi :guilabel:`Aceptado en ARCA` ou :guilabel:`Aceptado con Observaciones`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:446
 msgid ""
@@ -42507,9 +42302,9 @@ msgid ""
 "Inscripto`."
 msgstr ""
 ":guilabel:`Imposto excluído`: Neste caso, o valor tributado deve ser "
-"claramente identificado no relatório. Esta condição se aplica quando o "
-":guilabel:`Tipo de responsabilidade ARCA` do cliente é "
-":guilabel:`Responsable Inscripto`."
+"claramente identificado no relatório. Esta condição se aplica quando "
+"o :guilabel:`Tipo de responsabilidade ARCA` do cliente "
+"é :guilabel:`Responsable Inscripto`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:466
 msgid ""
@@ -42555,8 +42350,8 @@ msgid ""
 "the :guilabel:`Service Date` field in the :guilabel:`Other Info` tab."
 msgstr ""
 "Para faturas eletrônicas que incluem :guilabel:`Serviços`, o |ARCA| exige a "
-"informação das datas de início e fim do serviço. Para isso, preencha o campo "
-":guilabel:`Data do serviço` na aba :guilabel:`Outras informações`."
+"informação das datas de início e fim do serviço. Para isso, preencha o "
+"campo :guilabel:`Data do serviço` na aba :guilabel:`Outras informações`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:490
 msgid ""
@@ -42589,8 +42384,8 @@ msgid ""
 "- :guilabel:`Ley N° 19.640`, Odoo automatically assigns the:"
 msgstr ""
 "Quando o cliente selecionado na fatura está configurado com um |ARCA| tipo "
-"de responsabilidade :guilabel:`Cliente / Proveedor del Exterior` - "
-":guilabel:`Ley N° 19.640`, o Odoo atribui automaticamente o:"
+"de responsabilidade :guilabel:`Cliente / Proveedor del Exterior` "
+"- :guilabel:`Ley N° 19.640`, o Odoo atribui automaticamente o:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:505
 msgid ":guilabel:`Journal`: related to the exportation Web Service"
@@ -95779,6 +95574,210 @@ msgstr ""
 "Preencha os campos :guilabel:`Chave Secreta` e :guilabel:`Token de Webhook` "
 "com as informações salvas na etapa :ref:`payment_providers/xendit/"
 "configure_dashboard`."
+
+#~ msgid ""
+#~ "In Odoo 19, the stock input/output accounts are no longer used. Any non-"
+#~ "zero balances in stock interim accounts must be transferred to "
+#~ "the :ref:`stock valuation account <accounting/inventory-valuation/"
+#~ "valuation-account>` via journal entry to maintain accurate inventory "
+#~ "values after migration. This rebalancing can be performed :ref:`before "
+#~ "<accounting/inventory-valuation/upgrade-process-server-action>` "
+#~ "or :ref:`after <accounting/inventory-valuation/upgrade-process-manual>` "
+#~ "upgrading to Odoo 19."
+#~ msgstr ""
+#~ "No Odoo 19, as contas de entrada/saída de estoque não são mais usadas. "
+#~ "Quaisquer saldos diferentes de zero em contas intermediárias de estoque "
+#~ "devem ser transferidos para a :ref:`conta de valoração de estoque "
+#~ "<accounting/inventory-valuation/valuation-account>` por meio de "
+#~ "lançamento contábil para manter valores de estoque precisos após a "
+#~ "migração. Esse rebalanceamento pode ser realizado :ref:`antes <accounting/"
+#~ "inventory-valuation/upgrade-process-server-action>` ou :ref:`depois "
+#~ "<accounting/inventory-valuation/upgrade-process-manual>` de atualizar "
+#~ "para o Odoo 19."
+
+#~ msgid ""
+#~ "Before upgrading, review received purchase or sales orders that are not "
+#~ "yet linked to vendor bills or invoices, and post any existing draft bills/"
+#~ "invoices to reduce the open balance."
+#~ msgstr ""
+#~ "Antes de atualizar, revise os pedidos de compra ou venda recebidos que "
+#~ "ainda não estejam vinculados a faturas de fornecedor ou faturas de "
+#~ "cliente e lance quaisquer rascunhos de fatura existentes para reduzir o "
+#~ "saldo em aberto."
+
+#~ msgid ""
+#~ "It is recommended to implement the change **after** upgrading to Odoo 19, "
+#~ "because a server action identifies the open balance in "
+#~ "the :guilabel:`Stock Interim` accounts and automatically applies the "
+#~ "change."
+#~ msgstr ""
+#~ "Recomenda-se implementar a alteração **depois** de atualizar para o Odoo "
+#~ "19, porque uma ação de servidor identifica o saldo em aberto nas contas "
+#~ "de :guilabel:`Estoque intermediário` e aplica a alteração automaticamente."
+
+#~ msgid ""
+#~ "Account structures and valuation scenarios differ across companies. "
+#~ "Review these steps with an accountant or an Odoo inventory valuation "
+#~ "expert to ensure the setup aligns with the company's specific setup."
+#~ msgstr ""
+#~ "As estruturas de contas e os cenários de valoração diferem entre as "
+#~ "empresas. Revise essas etapas com um contador ou um especialista em "
+#~ "valoração de inventário do Odoo para garantir que a configuração esteja "
+#~ "alinhada à configuração específica da empresa."
+
+#~ msgid "Option 1: Server action journal entry"
+#~ msgstr "Opção 1: Lançamento contábil por ação de servidor"
+
+#~ msgid ""
+#~ "Use a test database created during the upgrade process first, and verify "
+#~ "the :doc:`Stock report <../../../inventory_and_mrp/inventory/"
+#~ "warehouses_storage/reporting/stock>`, accounts, and :ref:`Inventory "
+#~ "Valuation report <accounting/inventory-valuation/inventory-valuation-"
+#~ "report>` to ensure accuracy."
+#~ msgstr ""
+#~ "Primeiro, use uma base de dados de teste criada durante o processo de "
+#~ "atualização e verifique o :doc:`Relatório de estoque <../../../"
+#~ "inventory_and_mrp/inventory/warehouses_storage/reporting/stock>`, as "
+#~ "contas e o :ref:`Relatório de valoração de inventário <accounting/"
+#~ "inventory-valuation/inventory-valuation-report>` para garantir a exatidão."
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, the server action must be applied to each "
+#~ "company to balance any non-zero :guilabel:`Stock Interim` accounts:"
+#~ msgstr ""
+#~ "Após atualizar para o Odoo 19, a ação de servidor deve ser aplicada a "
+#~ "cada empresa para balancear as contas de :guilabel:`Estoque "
+#~ "intermediário` com saldo diferente de zero:"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
+#~ "click the relevant company."
+#~ msgstr ""
+#~ "Acesse :menuselection:`Configurações --> Usuários e empresas --> "
+#~ "Empresas` e clique na empresa relevante."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cog` :guilabel:`(gear)` icon and "
+#~ "select :guilabel:`Stock Valuation rebalance interim Accounts`. A draft "
+#~ "journal entry is automatically generated to balance the open amount."
+#~ msgstr ""
+#~ "Clique no ícone :icon:`fa-cog` :guilabel:`(engrenagem)` e "
+#~ "selecione :guilabel:`Valoração de estoque rebalancear contas "
+#~ "intermediárias`. Um lançamento contábil em rascunho é gerado "
+#~ "automaticamente para balancear o valor em aberto."
+
+#~ msgid ""
+#~ "Review the draft journal entry amounts, edit them if necessary, then "
+#~ "click :guilabel:`Post`."
+#~ msgstr ""
+#~ "Revise os valores do lançamento contábil em rascunho, edite-os se "
+#~ "necessário e clique em :guilabel:`Lançar`."
+
+#~ msgid ""
+#~ "Check the General Ledger to confirm that the :guilabel:`Stock Interim` "
+#~ "accounts are balanced to zero and that the remaining amount is recorded "
+#~ "in the :guilabel:`Stock valuation` account."
+#~ msgstr ""
+#~ "Verifique o Livro Razão para confirmar que as contas "
+#~ "de :guilabel:`Estoque intermediário` estão com saldo zerado e que o valor "
+#~ "restante está registrado na conta de :guilabel:`Valoração de estoque`."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Accounting --> Review --> Inventory Valuation` "
+#~ "and :ref:`generate an inventory variation entry <accounting/inventory-"
+#~ "valuation/closing-entry>`. The increased value on the :ref:`Valuation "
+#~ "account <accounting/inventory-valuation/valuation-account>` is then "
+#~ "transferred to the :ref:`Variation account <accounting/inventory-"
+#~ "valuation/variation-account>`, which is a new type of interim account."
+#~ msgstr ""
+#~ "Acesse :menuselection:`Financeiro --> Revisão --> Valoração de "
+#~ "inventário` e :ref:`gere um lançamento de variação de inventário "
+#~ "<accounting/inventory-valuation/closing-entry>`. O valor aumentado "
+#~ "na :ref:`conta de valoração <accounting/inventory-valuation/valuation-"
+#~ "account>` é então transferido para a :ref:`conta de variação <accounting/"
+#~ "inventory-valuation/variation-account>`, que é um novo tipo de conta "
+#~ "intermediária."
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is required and the "
+#~ "Bill to Receive or |GRNI| account, etc., needs updating."
+#~ msgstr ""
+#~ "Opcionalmente, gere :ref:`lançamentos de competência <accounting/"
+#~ "inventory-valuation/accrual-entries>` se for necessário um fechamento "
+#~ "contábil e a conta Faturas a receber ou |GRNI|, etc., precisar de "
+#~ "atualização."
+
+#~ msgid ""
+#~ "Journal entries can also be created manually if needed, using the same "
+#~ "process for balancing :guilabel:`Stock Interim` accounts :ref:`before "
+#~ "upgrading to Odoo 19 <accounting/inventory-valuation/upgrade-process-"
+#~ "manual>`."
+#~ msgstr ""
+#~ "Os lançamentos contábeis também podem ser criados manualmente, se "
+#~ "necessário, usando o mesmo processo para equilibrar as "
+#~ "contas :guilabel:`Intermediária de estoque` :ref:`antes de atualizar para "
+#~ "o Odoo 19 <accounting/inventory-valuation/upgrade-process-manual>`."
+
+#~ msgid "Option 2: Manual journal entry"
+#~ msgstr "Opção 2: Lançamento contábil manual"
+
+#~ msgid "To create the manual journal entry, follow these steps:"
+#~ msgstr "Para criar o lançamento contábil manual, siga estas etapas:"
+
+#~ msgid ""
+#~ "If all vendor bills or invoices can't be created for all the received "
+#~ "purchase/sales orders before the upgrade, follow these steps:"
+#~ msgstr ""
+#~ "Se não for possível criar todas as faturas de fornecedor ou de cliente "
+#~ "para todos os pedidos de compra/venda recebidos antes da atualização, "
+#~ "siga estas etapas:"
+
+#~ msgid "Go to :menuselection:`Accounting --> Reporting --> General Ledger`."
+#~ msgstr ""
+#~ "Acesse :menuselection:`Contabilidade --> Relatórios --> Livro-razão`."
+
+#~ msgid ""
+#~ "Identify the open balance in the :guilabel:`Stock Interim` accounts and "
+#~ "create a journal entry that debits/credits:"
+#~ msgstr ""
+#~ "Identifique o saldo em aberto nas contas :guilabel:`Intermediária de "
+#~ "estoque` e crie um lançamento contábil que debite/credite:"
+
+#~ msgid "The :guilabel:`Stock Interim` account(s) containing the open balance"
+#~ msgstr ""
+#~ "A(s) conta(s) :guilabel:`Intermediária de estoque` que contém o saldo em "
+#~ "aberto"
+
+#~ msgid "The :guilabel:`Stock Valuation` account"
+#~ msgstr "A conta de :guilabel:`Valoração de estoque`."
+
+#~ msgid ""
+#~ "After upgrading to Odoo 19, go to :menuselection:`Accounting --> Review --"
+#~ "> Inventory Valuation` and :ref:`generate an inventory variation entry "
+#~ "<accounting/inventory-valuation/closing-entry>`. The increased value on "
+#~ "the :ref:`Valuation account <accounting/inventory-valuation/valuation-"
+#~ "account>` is then transferred to the :ref:`Variation account <accounting/"
+#~ "inventory-valuation/variation-account>`, which is a new type of interim "
+#~ "account."
+#~ msgstr ""
+#~ "Após atualizar para o Odoo 19, acesse :menuselection:`Contabilidade --> "
+#~ "Revisão --> Valoração de estoque` e :ref:`gere um lançamento de variação "
+#~ "de estoque <accounting/inventory-valuation/closing-entry>`. O valor "
+#~ "aumentado na :ref:`Conta de valoração <accounting/inventory-valuation/"
+#~ "valuation-account>` é então transferido para a :ref:`Conta de variação "
+#~ "<accounting/inventory-valuation/variation-account>`, que é um novo tipo "
+#~ "de conta provisória."
+
+#~ msgid ""
+#~ "Optionally, generate :ref:`accrual entries <accounting/inventory-"
+#~ "valuation/accrual-entries>` if an accounting closing is needed and the "
+#~ "Bill to Receive or |GRNI| account, etc., must be up to date."
+#~ msgstr ""
+#~ "Opcionalmente, gere :ref:`lançamentos de competência <accounting/"
+#~ "inventory-valuation/accrual-entries>` se um fechamento contábil for "
+#~ "necessário e a conta Fatura a Receber ou |GRNI|, etc., precisar estar "
+#~ "atualizada."
 
 #~ msgid ":doc:`/applications/finance/accounting/customer_invoices/overview`"
 #~ msgstr ":doc:`/applications/finance/accounting/customer_invoices/overview`"

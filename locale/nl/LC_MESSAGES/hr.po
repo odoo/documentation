@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 17:32+0000\n"
-"PO-Revision-Date: 2026-10-31 11:35+0000\n"
+"POT-Creation-Date: 2026-11-06 17:32+0000\n"
+"PO-Revision-Date: 2026-11-07 11:33+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19-doc/hr/nl/>"
 "\n"
@@ -997,6 +997,7 @@ msgstr ""
 "fabrieksopleidingsdoel voor veiligheid."
 
 #: ../../content/applications/hr/appraisals/goals.rst:67
+#: ../../content/applications/hr/approvals.rst:113
 msgid "Description tab"
 msgstr "Tabblad Omschrijving"
 
@@ -2756,6 +2757,501 @@ msgstr ":doc:`Rapportage in Odoo: de basis <../../essentials/reporting>`"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/hr/approvals.rst:5
+msgid "Approvals"
+msgstr "Goedkeuringen"
+
+#: ../../content/applications/hr/approvals.rst:7
+msgid ""
+"The **Approvals** app in Odoo allows employees to make official requests for "
+"a variety of things, allowing management the ability to review requests and "
+"then either approve or refuse them. This keeps all requests in one "
+"centralized location, providing clear organization and transparency for all "
+"requests."
+msgstr ""
+"De **Goedkeuringen**-app in Odoo stelt werknemers in staat officiële "
+"aanvragen in te dienen voor verschillende zaken, waarbij het management de "
+"mogelijkheid krijgt om aanvragen te beoordelen en vervolgens goed of af te "
+"keuren. Dit houdt alle aanvragen op één centrale locatie, wat zorgt voor "
+"duidelijke organisatie en transparantie voor alle aanvragen."
+
+#: ../../content/applications/hr/approvals.rst:15
+msgid "Approval types"
+msgstr "Goedkeuringstypes"
+
+#: ../../content/applications/hr/approvals.rst:17
+msgid ""
+"When requesting an approval, the category, or *type*, must be specified. "
+"There are nine preconfigured approval categories available to make requests "
+"for:"
+msgstr ""
+"Wanneer je een goedkeuring aanvraagt, moet de categorie, of *type*, worden "
+"opgegeven. Er zijn negen vooraf geconfigureerde goedkeuringscategorieën "
+"beschikbaar waarvoor aanvragen kunnen worden ingediend:"
+
+#: ../../content/applications/hr/approvals.rst:20
+msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgstr ":guilabel:`Zakenreis`: voor het aanvragen van werkgerelateerde reizen."
+
+#: ../../content/applications/hr/approvals.rst:21
+msgid ""
+":guilabel:`Borrow Items`: For requesting physical items the company owns or "
+"sells, for a specified period of time."
+msgstr ""
+":guilabel:`Artikelen lenen`: voor het aanvragen van fysieke artikelen die "
+"eigendom zijn van of verkocht worden door het bedrijf, voor een bepaalde "
+"periode."
+
+#: ../../content/applications/hr/approvals.rst:23
+msgid ""
+":guilabel:`General Approval`: For requests that do not fit in any of the "
+"eight other default types."
+msgstr ""
+":guilabel:`Algemene goedkeuring`: voor aanvragen die niet onder een van de "
+"andere acht standaardtypen vallen."
+
+#: ../../content/applications/hr/approvals.rst:25
+msgid ""
+":guilabel:`Contract Approval`: For requesting any type of external contract, "
+"excluding :doc:`employee contracts <payroll/contracts>`."
+msgstr ""
+":guilabel:`Contractgoedkeuring`: voor het aanvragen van elk type extern "
+"contract, met uitzondering van :doc:`werknemerscontracten <payroll/contracts>"
+"`."
+
+#: ../../content/applications/hr/approvals.rst:27
+msgid ""
+":guilabel:`Payment Application`: For requesting *prior approval* for company-"
+"related expenses."
+msgstr ""
+":guilabel:`Betalingsaanvraag`: voor het vooraf aanvragen van *goedkeuring* "
+"voor werkgerelateerde (on)kosten."
+
+#: ../../content/applications/hr/approvals.rst:30
+msgid ""
+"This approval type is **only** used when requesting approval *in advance* "
+"for an expense the company directly pays for. This category should **not** "
+"be used for expenses employees are seeking reimbursement for. That is done "
+"through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
+msgstr ""
+"Dit goedkeuringstype wordt **alleen** gebruikt wanneer je *vooraf* "
+"goedkeuring vraagt voor (on)kosten die direct door het bedrijf worden "
+"betaald. Deze categorie mag **niet** worden gebruikt voor (on)kosten "
+"waarvoor werknemers een vergoeding zoeken. Dat gebeurt via de :doc:`(On)"
+"kosten-app <../finance/expenses/log_expenses>`."
+
+#: ../../content/applications/hr/approvals.rst:35
+msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
+msgstr ":guilabel:`Aanvraag huurauto`: voor het aanvragen van een huurauto."
+
+#: ../../content/applications/hr/approvals.rst:36
+msgid ""
+":guilabel:`Job Referral Award`: For requesting job referral awards that were "
+"earned but not completed through the :doc:`Referrals <referrals>` app."
+msgstr ""
+":guilabel:`Bonus voor aanbeveling`: voor het aanvragen van bonussen voor "
+"aanbevelingen die zijn verdiend, maar niet zijn afgehandeld via de "
+":doc:`Aanbevelingen <referrals>`-app."
+
+#: ../../content/applications/hr/approvals.rst:38
+msgid ""
+":guilabel:`Procurement`: Used for requesting work-related items such as "
+"office supplies, tools, etc."
+msgstr ""
+":guilabel:`Inkoop`: gebruikt voor het aanvragen van werkgerelateerde "
+"artikelen zoals kantoorbenodigdheden, gereedschap, enz."
+
+#: ../../content/applications/hr/approvals.rst:40
+msgid ""
+":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
+"vendor."
+msgstr ""
+":guilabel:`Offerteaanvragen maken`: gebruikt voor het aanvragen van een "
+"prijsopgave voor artikelen bij een leverancier."
+
+#: ../../content/applications/hr/approvals.rst:45
+msgid "Approval requests"
+msgstr "Goedkeuringsaanvragen"
+
+#: ../../content/applications/hr/approvals.rst:47
+msgid ""
+"To create a new approval request, open the **Approvals** app, click "
+"the :guilabel:`New Request` button on the approval type card that best fits "
+"the request, and a blank approval form loads. Fill out the various sections "
+"and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgstr ""
+"Om een nieuwe goedkeuringsaanvraag te maken, open je de **Goedkeuringen**-"
+"app, klik je op de knop :guilabel:`Nieuwe aanvraag` op de kaart van het "
+"goedkeuringstype dat het beste bij de aanvraag past, en er wordt een leeg "
+"goedkeuringsformulier geladen. Vul de verschillende secties en tabbladen in "
+"en klik vervolgens op :guilabel:`Verzenden` om de aanvraag voor goedkeuring "
+"in te dienen."
+
+#: ../../content/applications/hr/approvals.rst:52
+#: ../../content/applications/hr/payroll/contracts.rst:80
+#: ../../content/applications/hr/payroll/work_entries.rst:252
+#: ../../content/applications/hr/time_off/time_off_types.rst:35
+msgid "General information section"
+msgstr "Sectie algemene informatie"
+
+#: ../../content/applications/hr/approvals.rst:54
+msgid ""
+"The top half of the form contains all of the general information regarding "
+"the request. Fill out the following fields in the top half of the form:"
+msgstr ""
+"De bovenste helft van het formulier bevat alle algemene informatie over de "
+"aanvraag. Vul de volgende velden in de bovenste helft van het formulier in:"
+
+#: ../../content/applications/hr/approvals.rst:58
+msgid ""
+"All the fields listed below appear on the form for the :guilabel:`General "
+"Approval` category. If a different :guilabel:`Category` is selected, some "
+"fields are hidden."
+msgstr ""
+"Alle onderstaande velden verschijnen op het formulier voor de categorie "
+":guilabel:`Algemene goedkeuring`. Als een andere :guilabel:`Categorie` wordt "
+"geselecteerd, worden sommige velden verborgen."
+
+#: ../../content/applications/hr/approvals.rst:61
+msgid ""
+":guilabel:`Approval Subject`: This field is automatically populated with the "
+"selected approval type. Make any desired modifications to the default text "
+"to provide any additional context for the request."
+msgstr ""
+":guilabel:`Onderwerp goedkeuring`: dit veld wordt automatisch ingevuld met "
+"het geselecteerde goedkeuringstype. Breng de gewenste wijzigingen aan in de "
+"standaardtekst om extra context voor de aanvraag te bieden."
+
+#: ../../content/applications/hr/approvals.rst:64
+msgid ""
+":guilabel:`Request Owner`: The person responsible for the approval request. "
+"The signed-in user populates this field by default."
+msgstr ""
+":guilabel:`Eigenaar aanvraag`: de persoon die verantwoordelijk is voor de "
+"goedkeuringsaanvraag. De aangemelde gebruiker vult dit veld standaard in."
+
+#: ../../content/applications/hr/approvals.rst:66
+msgid ""
+":guilabel:`Category`: The selected category appears in this field but can be "
+"changed using the drop-down menu."
+msgstr ""
+":guilabel:`Categorie`: De geselecteerde categorie verschijnt in dit veld, "
+"maar kan worden gewijzigd via het vervolgkeuzemenu."
+
+#: ../../content/applications/hr/approvals.rst:68
+msgid ""
+":guilabel:`Date`: Using the calendar selector, set the date and time the "
+"request is for. This field **only** appears if :guilabel:`Payment "
+"Application` or :guilabel:`General Approval` is selected for "
+"the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Datum`: Gebruik de agendaselector om de datum en tijd van het "
+"verzoek in te stellen. Dit veld verschijnt **alleen** als "
+":guilabel:`Betalingsaanvraag` of :guilabel:`Algemene goedkeuring` is "
+"geselecteerd voor de :guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:71
+msgid ""
+":guilabel:`Period`: Using the calendar selector, set the start and end dates "
+"for the request in the :guilabel:`From` and :guilabel:`to` fields. This "
+"field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow "
+"Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
+"is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Periode`: Gebruik de agendaselector om de begin- en einddatum "
+"voor het verzoek in te stellen in de velden :guilabel:`Van` en "
+":guilabel:`tot`. Dit veld verschijnt **alleen** als :guilabel:`Zakenreis`, "
+":guilabel:`Items lenen`, :guilabel:`Auto huren-aanvraag` of "
+":guilabel:`Algemene goedkeuring` is geselecteerd voor de "
+":guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:75
+msgid ""
+":guilabel:`Location`: Enter the specific location the approval request is "
+"for. This field **only** appears if :guilabel:`Business Trip` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Locatie`: Voer de specifieke locatie in waarvoor de "
+"goedkeuringsaanvraag geldt. Dit veld verschijnt **alleen** als "
+":guilabel:`Zakenreis` of :guilabel:`Algemene goedkeuring` is geselecteerd "
+"voor de :guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:78
+msgid ""
+":guilabel:`Contact`: Select the point of contact for the request using the "
+"drop-down menu. The available options are from the **Contacts** app. This "
+"field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
+"Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Contact`: Selecteer het aanspreekpunt voor het verzoek via het "
+"vervolgkeuzemenu. De beschikbare opties zijn afkomstig uit de app "
+"**Contacten**. Dit veld verschijnt **alleen** als "
+":guilabel:`Contractgoedkeuring`, :guilabel:`Betalingsaanvraag`, "
+":guilabel:`Verwijzingsbonus` of :guilabel:`Algemene goedkeuring` is "
+"geselecteerd voor de :guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:82
+msgid ""
+":guilabel:`Quantity`: Enter the number of items being requested in this "
+"field. This field **only** appears if :guilabel:`Procurement` is selected "
+"for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Hoeveelheid`: Voer het aantal gevraagde items in dit veld in. Dit "
+"veld verschijnt **alleen** als :guilabel:`Inkoop` is geselecteerd voor de "
+":guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:84
+msgid ""
+":guilabel:`Amount`: Enter the amount being requested. This field **only** "
+"appears if :guilabel:`Contract Approval`, :guilabel:`Payment "
+"Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
+"selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Bedrag`: Voer het gevraagde bedrag in. Dit veld verschijnt "
+"**alleen** als :guilabel:`Contractgoedkeuring`, "
+":guilabel:`Betalingsaanvraag`, :guilabel:`Inkoop` of :guilabel:`Algemene "
+"goedkeuring` is geselecteerd voor de :guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:87
+msgid ""
+":guilabel:`Reference`: Enter any relevant reference for the request in this "
+"field. This field **only** appears if :guilabel:`Contract Approval` "
+"or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+msgstr ""
+":guilabel:`Referentie`: Voer in dit veld een relevante referentie voor het "
+"verzoek in. Dit veld verschijnt **alleen** als "
+":guilabel:`Contractgoedkeuring` of :guilabel:`Algemene goedkeuring` is "
+"geselecteerd voor de :guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:92
+msgid ""
+"Each approval type presents different fields on the approval form. This is "
+"because each *approval type* has its own required fields. If the *type* is "
+"not immediately known, click the :guilabel:`New Request` button at the top "
+"of the page to open a generic request for approval form. Once "
+"the :guilabel:`Category` is selected, the corresponding fields on the form "
+"appear."
+msgstr ""
+"Elk goedkeuringstype toont verschillende velden op het "
+"goedkeuringsformulier. Dit komt omdat elk *goedkeuringstype* zijn eigen "
+"verplichte velden heeft. Als het *type* niet direct bekend is, klik dan op "
+"de knop :guilabel:`Nieuw verzoek` bovenaan de pagina om een algemeen "
+"formulier voor goedkeuringsverzoeken te openen. Zodra de "
+":guilabel:`Categorie` is geselecteerd, verschijnen de bijbehorende velden op "
+"het formulier."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The top-half of an approval form fillled out for a business trip."
+msgstr ""
+"De bovenste helft van een goedkeuringsformulier ingevuld voor een zakenreis."
+
+#: ../../content/applications/hr/approvals.rst:101
+msgid "Product tab"
+msgstr "Tabblad Product"
+
+#: ../../content/applications/hr/approvals.rst:103
+msgid ""
+"If any configured products in the database are being requested, they are "
+"listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow "
+"Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
+"selected in the :guilabel:`Category` field."
+msgstr ""
+"Als er geconfigureerde producten in de database worden aangevraagd, worden "
+"deze vermeld op het tabblad *Producten*. Dit tabblad verschijnt **alleen** "
+"als :guilabel:`Items lenen`, :guilabel:`Algemene goedkeuring` of "
+":guilabel:`Offerteaanvragen aanmaken` is geselecteerd in het veld "
+":guilabel:`Categorie`."
+
+#: ../../content/applications/hr/approvals.rst:107
+msgid ""
+"To add a product, click :guilabel:`Add a line` and a blank line appears. "
+"Using the drop-down menu, select the product being requested. Once selected, "
+"the product's configured :guilabel:`Description` automatically populates "
+"that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
+"be updated if necessary."
+msgstr ""
+"Om een product toe te voegen, klik op :guilabel:`Een regel toevoegen` en er "
+"verschijnt een lege regel. Selecteer het gevraagde product via het "
+"vervolgkeuzemenu. Zodra het is geselecteerd, wordt de geconfigureerde "
+":guilabel:`Omschrijving` van het product automatisch in dat veld ingevuld. "
+"De :guilabel:`Hoeveelheid` staat standaard op :guilabel:`1.00`, maar kan "
+"indien nodig worden bijgewerkt."
+
+#: ../../content/applications/hr/approvals.rst:115
+msgid ""
+"The *Description* tab is where any information to clarify the request is "
+"entered. Add any relevant information in this tab."
+msgstr ""
+"Op het tabblad *Omschrijving* wordt alle informatie ingevoerd die nodig is "
+"om het verzoek te verduidelijken. Voeg relevante informatie toe op dit "
+"tabblad."
+
+#: ../../content/applications/hr/approvals.rst:121
+msgid "Approver(s) tab"
+msgstr "Tabblad Goedkeurder(s)"
+
+#: ../../content/applications/hr/approvals.rst:123
+msgid ""
+"The *Approvers(s)* tab is where the people responsible for approving the "
+"request are configured. To add an approver, click :guilabel:`Add a line`, "
+"and a blank line appears. Using the drop-down menu, select the desired user. "
+"Repeat for all other approvers. There is no maximum number of users for this "
+"tab."
+msgstr ""
+"Op het tabblad *Goedkeurder(s)* worden de personen geconfigureerd die "
+"verantwoordelijk zijn voor het goedkeuren van het verzoek. Om een "
+"goedkeurder toe te voegen, klik op :guilabel:`Een regel toevoegen` en er "
+"verschijnt een lege regel. Selecteer de gewenste gebruiker via het "
+"vervolgkeuzemenu. Herhaal dit voor alle overige goedkeurders. Er is geen "
+"maximumaantal gebruikers voor dit tabblad."
+
+#: ../../content/applications/hr/approvals.rst:128
+msgid ""
+"To indicate a user **must** approve the request, click the checkbox in "
+"the :guilabel:`Required` column."
+msgstr ""
+"Om aan te geven dat een gebruiker het verzoek **moet** goedkeuren, klik op "
+"het selectievakje in de kolom :guilabel:`Vereist`."
+
+#: ../../content/applications/hr/approvals.rst:131
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+msgstr ""
+"Naarmate gebruikers worden toegevoegd, blijft hun :guilabel:`Status` op "
+":guilabel:`Nieuw` staan."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "The approvers tab with thre approvers listed, and one required."
+msgstr ""
+"Het tabblad goedkeurders met drie goedkeurders vermeld, waarvan één "
+"verplicht."
+
+#: ../../content/applications/hr/approvals.rst:137
+msgid "Attach documents"
+msgstr "Documenten bijvoegen"
+
+#: ../../content/applications/hr/approvals.rst:139
+msgid ""
+"All approval requests include the option to attach relevant documents. To "
+"attach a document, click the :guilabel:`Attach Document` button at the top "
+"of the page, and a file explorer window loads. Navigate to the desired file, "
+"select it, then click :guilabel:`Open` to attach it. Multiple documents can "
+"be selected and added at the same time."
+msgstr ""
+"Alle goedkeuringsaanvragen bevatten de optie om relevante documenten bij te "
+"voegen. Om een document bij te voegen, klik op de knop :guilabel:`Document "
+"bijvoegen` bovenaan de pagina en er wordt een bestandsverkenner geopend. "
+"Navigeer naar het gewenste bestand, selecteer het en klik op "
+":guilabel:`Openen` om het bij te voegen. Meerdere documenten kunnen "
+"tegelijkertijd worden geselecteerd en toegevoegd."
+
+#: ../../content/applications/hr/approvals.rst:144
+msgid ""
+"Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears "
+"at the top of the page, indicating how many documents are attached. "
+"Additionally, the documents are listed in the chatter. If the screen is wide "
+"enough, the documents appear on the side of the screen."
+msgstr ""
+"Eenmaal bijgevoegd, verschijnt er een :icon:`fa-book` :guilabel:`Documenten` "
+"slimme knop bovenaan de pagina die aangeeft hoeveel documenten er zijn "
+"bijgevoegd. Daarnaast worden de documenten vermeld in de chatter. Als het "
+"scherm breed genoeg is, verschijnen de documenten aan de zijkant van het "
+"scherm."
+
+#: ../../content/applications/hr/approvals.rst:151
+msgid "Manage approvals"
+msgstr "Beheer goedkeuringen"
+
+#: ../../content/applications/hr/approvals.rst:153
+msgid ""
+"After requests are submitted, they must be approved by the required "
+"approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To "
+"view approvals awaiting action, navigate to :menuselection:`Approvals app --"
+"> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard "
+"loads. All approvals awaiting action by the user appear alphabetically in a "
+"default list view."
+msgstr ""
+"Nadat aanvragen zijn ingediend, moeten ze worden goedgekeurd door de "
+"vereiste goedkeurders die worden vermeld in het :ref:`Tabblad Goedkeurder(s) "
+"<approvals/approvers>`. Om goedkeuringen te bekijken die op actie wachten, "
+"navigeer naar :menuselection:`Goedkeuringen-app --> Manager --> "
+"Goedkeuringen te beoordelen` en het dashboard *Goedkeuringen te beoordelen* "
+"wordt geladen. Alle goedkeuringen die op actie van de gebruiker wachten, "
+"verschijnen alfabetisch in een standaard lijstweergave."
+
+#: ../../content/applications/hr/approvals.rst:160
+msgid ""
+"Only *submitted* requests that the user is assigned as an approver for "
+"appear in the *Approvals to Review* dashboard. All other requests remain "
+"hidden."
+msgstr ""
+"Alleen *ingediende* aanvragen waarvoor de gebruiker als goedkeurder is "
+"toegewezen, verschijnen in het dashboard *Goedkeuringen te beoordelen*. Alle "
+"andere aanvragen blijven verborgen."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+"Alle goedkeuringsaanvragen die wachten op goedkeuring, waaraan de gebruiker "
+"is toegewezen."
+
+#: ../../content/applications/hr/approvals.rst:166
+msgid ""
+"Requests must be individually approved from the approvals form. To approve a "
+"request, click the individual request on the *Approvals to Review* dashboard "
+"and the individual request form loads."
+msgstr ""
+"Aanvragen moeten individueel worden goedgekeurd vanuit het "
+"goedkeuringsformulier. Om een aanvraag goed te keuren, klik op de "
+"individuele aanvraag op het dashboard *Goedkeuringen te beoordelen* en het "
+"individuele aanvraagformulier wordt geladen."
+
+#: ../../content/applications/hr/approvals.rst:None
+msgid ""
+"A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgstr ""
+"Een aanvraag om een camera te lenen, met de knoppen Goedkeuren en Weigeren "
+"zichtbaar."
+
+#: ../../content/applications/hr/approvals.rst:172
+msgid ""
+"To approve the request, click the :guilabel:`Approve` button on the "
+"individual approval request form, and the status changes "
+"to :guilabel:`Approved`. As users approve the request, "
+"their :guilabel:`Status` changes to :guilabel:`Approved` and the text "
+"appears green."
+msgstr ""
+"Om de aanvraag goed te keuren, klik op de knop :guilabel:`Goedkeuren` op het "
+"individuele goedkeuringsaanvraagformulier en de status verandert in "
+":guilabel:`Goedgekeurd`. Terwijl gebruikers de aanvraag goedkeuren, "
+"verandert hun :guilabel:`Status` in :guilabel:`Goedgekeurd` en de tekst "
+"wordt groen."
+
+#: ../../content/applications/hr/approvals.rst:176
+msgid ""
+"To deny the request, click the :guilabel:`Refuse` button on the individual "
+"approval request form, and the status changes to :guilabel:`Refused`. When a "
+"user refuses a request, its :guilabel:`Status` changes "
+"to :guilabel:`Refused` and the text appears red."
+msgstr ""
+"Om de aanvraag te weigeren, klik op de knop :guilabel:`Weigeren` op het "
+"individuele goedkeuringsaanvraagformulier en de status verandert in "
+":guilabel:`Geweigerd`. Wanneer een gebruiker een aanvraag weigert, verandert "
+"de :guilabel:`Status` in :guilabel:`Geweigerd` en de tekst wordt rood."
+
+#: ../../content/applications/hr/approvals.rst:180
+msgid ""
+"At any point, approval requests that are either :guilabel:`Approved` "
+"or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by "
+"clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all "
+"approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+msgstr ""
+"Op elk gewenst moment kunnen goedkeuringsaanvragen die ofwel "
+":guilabel:`Goedgekeurd` of :guilabel:`Geweigerd` zijn, terugkeren naar de "
+"fase :guilabel:`Ingediend` door op de knop :guilabel:`Intrekken` te klikken. "
+"De :guilabel:`Status` voor alle goedkeurders wordt teruggezet naar "
+":guilabel:`Te goedkeuren` en de tekst wordt oranje."
 
 #: ../../content/applications/hr/attendances.rst:5
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:974
@@ -19095,12 +19591,6 @@ msgstr ""
 "wordt geladen. Configureer de volgende velden in de verschillende secties "
 "van het formulier:"
 
-#: ../../content/applications/hr/payroll/contracts.rst:80
-#: ../../content/applications/hr/payroll/work_entries.rst:252
-#: ../../content/applications/hr/time_off/time_off_types.rst:35
-msgid "General information section"
-msgstr "Sectie algemene informatie"
-
 #: ../../content/applications/hr/payroll/contracts.rst:82
 msgid ""
 ":guilabel:`Template Name`: Enter a brief descriptive name for the template. "
@@ -19567,9 +20057,9 @@ msgid ""
 "button appears. Clicking the button displays the total number of employees "
 "for the selected period."
 msgstr ""
-"Bovenaan het formulier verschijnt een :icon:`fa-users` "
-":guilabel:`Werknemers` slimme knop. Door op de knop te klikken wordt het "
-"totaal aantal werknemers voor de geselecteerde periode weergegeven."
+"Bovenaan het formulier verschijnt een :icon:`fa-"
+"users` :guilabel:`Werknemers` slimme knop. Door op de knop te klikken wordt "
+"het totaal aantal werknemers voor de geselecteerde periode weergegeven."
 
 #: ../../content/applications/hr/payroll/headcount.rst:None
 msgid "A headcount report created on October 22, 2026 for 2026."
@@ -43856,9 +44346,9 @@ msgid ""
 "adjustments <salary_attachments>` and other additional inputs such as tips, "
 "bonuses, etc."
 msgstr ""
-"Het tabblad *Salarisinput* toont automatisch alle lopende "
-":doc:`salarisaanpassingen <salary_attachments>` en andere aanvullende inputs "
-"zoals fooien, bonussen, enz."
+"Het tabblad *Salarisinput* toont automatisch alle "
+"lopende :doc:`salarisaanpassingen <salary_attachments>` en andere "
+"aanvullende inputs zoals fooien, bonussen, enz."
 
 #: ../../content/applications/hr/payroll/payslips.rst:95
 msgid "Each salary input lists:"
@@ -48010,9 +48500,9 @@ msgid ""
 msgstr ""
 "Configureer voordat je een vacature aanmaakt in Odoo de nodige instellingen "
 "voor de app **Werving & Selectie**. Om de instellingen te bekijken en te "
-"bewerken, navigeer naar :menuselection:`Werving & Selectie --> "
-"Configuratie --> Instellingen`. Klik na het aanbrengen van wijzigingen op de "
-":guilabel:`Opslaan` knop in de hoek."
+"bewerken, navigeer naar :menuselection:`Werving & Selectie --> Configuratie "
+"--> Instellingen`. Klik na het aanbrengen van wijzigingen op "
+"de :guilabel:`Opslaan` knop in de hoek."
 
 #: ../../content/applications/hr/recruitment.rst:38
 msgid "Job posting"
@@ -48418,15 +48908,15 @@ msgid ""
 "close the new stage. Once the stage is created, click and drag the stage to "
 "move it to the desired position in the workflow."
 msgstr ""
-"Om een nieuwe fase aan te maken, beweeg je de muis naar rechts naast de "
-":guilabel:`Contract ondertekend` fase om de optie :guilabel:`Fase toevoegen` "
-"te zien. Klik op :guilabel:`Fase toevoegen` en er verschijnt een nieuwe "
-"kolom. Voer de titel voor de nieuwe fase in het lege vak bovenaan de nieuwe "
-"fase in en klik vervolgens op de :icon:`fa-check` knop. De nieuwe kolom "
-"verschijnt en er verschijnt nog een nieuwe fase. Als er geen nieuwe fases "
-"nodig zijn, klik dan op de :icon:`fa-multiply` knop in de nieuwe fase om "
-"deze te sluiten. Zodra de fase is aangemaakt, klik en sleep je de fase naar "
-"de gewenste positie in de workflow."
+"Om een nieuwe fase aan te maken, beweeg je de muis naar rechts naast "
+"de :guilabel:`Contract ondertekend` fase om de optie :guilabel:`Fase "
+"toevoegen` te zien. Klik op :guilabel:`Fase toevoegen` en er verschijnt een "
+"nieuwe kolom. Voer de titel voor de nieuwe fase in het lege vak bovenaan de "
+"nieuwe fase in en klik vervolgens op de :icon:`fa-check` knop. De nieuwe "
+"kolom verschijnt en er verschijnt nog een nieuwe fase. Als er geen nieuwe "
+"fases nodig zijn, klik dan op de :icon:`fa-multiply` knop in de nieuwe fase "
+"om deze te sluiten. Zodra de fase is aangemaakt, klik en sleep je de fase "
+"naar de gewenste positie in de workflow."
 
 #: ../../content/applications/hr/recruitment.rst:None
 msgid "A new stage added, along with a second stage ready to be named."
@@ -48450,9 +48940,9 @@ msgid ""
 msgstr ""
 "Om de instellingen van een fase te wijzigen, beweeg je de muis over de naam "
 "van de fase en verschijnt er een :icon:`fa-cog` :guilabel:`(Instellingen)` "
-"icoon in de bovenste hoek. Klik op het :icon:`fa-cog` :guilabel:`"
-"(Instellingen)` icoon en klik vervolgens op :icon:`fa-pencil` "
-":guilabel:`Bewerken` in het vervolgkeuzemenu. Er verschijnt een pop-"
+"icoon in de bovenste hoek. Klik op het :icon:`fa-"
+"cog` :guilabel:`(Instellingen)` icoon en klik vervolgens op :icon:`fa-"
+"pencil` :guilabel:`Bewerken` in het vervolgkeuzemenu. Er verschijnt een pop-"
 "upvenster *Bewerken: (Fase)*. Breng de gewenste wijzigingen aan in het pop-"
 "upvenster en klik op :guilabel:`Opslaan` wanneer je klaar bent."
 
@@ -48580,9 +49070,9 @@ msgstr ""
 "status aangeven. Deze kleuren worden bovenaan elke fase weergegeven om de "
 "status van de sollicitanten in die fase te weerspiegelen. De *namen* voor "
 "het label kunnen worden gewijzigd, maar het label zelf (de kleur) niet. De "
-"standaardnamen en labels zijn: :guilabel:`In uitvoering` (grijs), "
-":guilabel:`Geblokkeerd` (rood), :guilabel:`Wachten` (geel) en "
-":guilabel:`Klaar voor volgende fase` (groen)."
+"standaardnamen en labels zijn: :guilabel:`In uitvoering` "
+"(grijs), :guilabel:`Geblokkeerd` (rood), :guilabel:`Wachten` (geel) "
+"en :guilabel:`Klaar voor volgende fase` (groen)."
 
 #: ../../content/applications/hr/recruitment.rst:254
 msgid ""
@@ -48606,11 +49096,12 @@ msgid ""
 "Click :guilabel:`Delete` to delete the stage."
 msgstr ""
 "Als een fase niet langer nodig is, kan deze worden verwijderd. Om een fase "
-"te verwijderen, beweeg je de muis over de naam van de fase en klik je op het "
-":icon:`fa-cog` :guilabel:`(Instellingen)` icoon dat verschijnt. Klik op "
-":icon:`fa-trash` :guilabel:`Verwijderen` en er verschijnt een *Bevestiging* "
-"pop-upwaarschuwing met de vraag :guilabel:`Weet je zeker dat je deze kolom "
-"wilt verwijderen?` Klik op :guilabel:`Verwijderen` om de fase te verwijderen."
+"te verwijderen, beweeg je de muis over de naam van de fase en klik je op "
+"het :icon:`fa-cog` :guilabel:`(Instellingen)` icoon dat verschijnt. Klik "
+"op :icon:`fa-trash` :guilabel:`Verwijderen` en er verschijnt een "
+"*Bevestiging* pop-upwaarschuwing met de vraag :guilabel:`Weet je zeker dat "
+"je deze kolom wilt verwijderen?` Klik op :guilabel:`Verwijderen` om de fase "
+"te verwijderen."
 
 #: ../../content/applications/hr/recruitment.rst:267
 msgid ""
@@ -48647,8 +49138,8 @@ msgid ""
 msgstr ""
 ":guilabel:`Werving: Bevestiging sollicitatie`: Dit sjabloon wordt gebruikt "
 "om de sollicitant te laten weten dat hun sollicitatie is ontvangen. Deze e-"
-"mail wordt automatisch verzonden zodra de sollicitant zich in de "
-":guilabel:`Nieuw` fase bevindt."
+"mail wordt automatisch verzonden zodra de sollicitant zich in "
+"de :guilabel:`Nieuw` fase bevindt."
 
 #: ../../content/applications/hr/recruitment.rst:282
 msgid ""
@@ -48732,8 +49223,8 @@ msgstr ""
 "de onderste hoek van het tabblad *Bericht verzenden* in de chatter. Er wordt "
 "een pop-upvenster *E-mail opstellen* geladen, met de velden :guilabel:`Aan` "
 "en :guilabel:`Onderwerp` al ingevuld. Het e-mailadres van de sollicitant "
-"wordt ingevoerd in het veld :guilabel:`Aan` en het :guilabel:`Onderwerp` is `"
-"(Naam sollicitant)`."
+"wordt ingevoerd in het veld :guilabel:`Aan` en het :guilabel:`Onderwerp` is "
+"`(Naam sollicitant)`."
 
 #: ../../content/applications/hr/recruitment.rst:310
 msgid ""
@@ -48741,6 +49232,9 @@ msgid ""
 "v` :guilabel:`(Templates)` icon in the bottom of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
+"Om een vooraf geconfigureerd e-mailsjabloon te gebruiken, klik je op het "
+":icon:`fa-ellipsis-v` :guilabel:`(Sjablonen)` icoon onderaan het venster. "
+"Selecteer het te gebruiken e-mailsjabloon in het vervolgkeuzemenu."
 
 #: ../../content/applications/hr/recruitment.rst:313
 msgid ""
@@ -48777,6 +49271,12 @@ msgid ""
 "it. To delete an attachment, click the :icon:`fa-times` :guilabel:`(Delete)` "
 "icon at the end of the attachment."
 msgstr ""
+"Als er bijlagen moeten worden toegevoegd, klik je op de :icon:`fa-paperclip` "
+":guilabel:`(Bijlage toevoegen)` knop onderaan het venster. Navigeer naar het "
+"bestand dat moet worden bijgevoegd en klik vervolgens op :guilabel:`Openen` "
+"om het bij te voegen. Om een bijlage te verwijderen, klik je op het "
+":icon:`fa-times` :guilabel:`(Verwijderen)` icoon aan het einde van de "
+"bijlage."
 
 #: ../../content/applications/hr/recruitment.rst:328
 msgid ""
@@ -48790,12 +49290,25 @@ msgid ""
 "Mail Template* pop-up window loads. Enter a name for the template in "
 "the :guilabel:`Template Name` field, then click :guilabel:`Save Template`."
 msgstr ""
+"Als er wijzigingen aan de e-mail moeten worden aangebracht, bewerk dan de "
+"inhoud van de e-mail. Als de wijzigingen moeten worden opgeslagen voor "
+"toekomstig gebruik, kan de e-mail worden opgeslagen als een nieuw sjabloon. "
+"Klik op de :icon:`fa-ellipsis-v` :guilabel:`(Sjablonen)` knop onderaan het "
+"venster en selecteer :guilabel:`Opslaan als sjabloon`. Er worden opties "
+"weergegeven om een bestaand sjabloon te overschrijven of een nieuw sjabloon "
+"op te slaan. Klik op de naam van een bestaand sjabloon om dat sjabloon te "
+"overschrijven, of klik op :guilabel:`Opslaan als sjabloon` om een nieuw "
+"sjabloon op te slaan. Er wordt een *E-mailsjabloon maken* pop-upvenster "
+"geladen. Voer een naam in voor het sjabloon in het veld "
+":guilabel:`Sjabloonnaam` en klik vervolgens op :guilabel:`Sjabloon opslaan`."
 
 #: ../../content/applications/hr/recruitment.rst:337
 msgid ""
 "To send the email, click :guilabel:`Send`. The email is sent to the "
 "applicant and the email appears in the chatter."
 msgstr ""
+"Om de e-mail te verzenden, klik je op :guilabel:`Verzenden`. De e-mail wordt "
+"naar de sollicitant verzonden en verschijnt in de chatter."
 
 #: ../../content/applications/hr/recruitment.rst:None
 #: ../../content/applications/hr/recruitment/recruitment_flow.rst:None
@@ -50374,10 +50887,11 @@ msgid ""
 msgstr ""
 "Navigeer naar :menuselection:`Werving --> Rapportage --> Aanbiedingsanalyse` "
 "om het rapport *Aanbiedingsanalyse* te openen. Standaard toont het rapport "
-"aanbiedingsgegevens voor alle functies in een :icon:`fa-bar-chart` "
-":guilabel:`(Staafdiagram)` met :icon:`fa-database` :guilabel:`(Gestapeld)` "
-"groepen. Het standaardfilter is :guilabel:`Aanbiedingen laatste 365 dagen`, "
-"met informatie voor de laatste 365 dagen."
+"aanbiedingsgegevens voor alle functies in een :icon:`fa-bar-"
+"chart` :guilabel:`(Staafdiagram)` met :icon:`fa-"
+"database` :guilabel:`(Gestapeld)` groepen. Het standaardfilter "
+"is :guilabel:`Aanbiedingen laatste 365 dagen`, met informatie voor de "
+"laatste 365 dagen."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:24
 msgid ""
@@ -50487,9 +51001,10 @@ msgstr ""
 "Om het team te helpen, kan het rapport *Aanbodanalyse* worden aangepast om "
 "alle aanbiedingen per status weer te geven, in plaats van per functie. Om "
 "aanbiedingen per status te bekijken, ga naar :menuselection:`Werving app --> "
-"Rapportage --> Aanbodanalyse`. Klik in de zoekbalk en selecteer de optie "
-":guilabel:`Status aanbod` in de kolom :icon:`oi-group` :guilabel:`Groeperen "
-"op`. Dit biedt een globaal overzicht van de status van alle aanbiedingen."
+"Rapportage --> Aanbodanalyse`. Klik in de zoekbalk en selecteer de "
+"optie :guilabel:`Status aanbod` in de kolom :icon:`oi-"
+"group` :guilabel:`Groeperen op`. Dit biedt een globaal overzicht van de "
+"status van alle aanbiedingen."
 
 #: ../../content/applications/hr/recruitment/offer_analysis.rst:64
 msgid ""
