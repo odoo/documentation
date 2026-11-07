@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-23 17:32+0000\n"
-"PO-Revision-Date: 2026-10-22 00:33+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"POT-Creation-Date: 2026-11-06 17:33+0000\n"
+"PO-Revision-Date: 2026-11-07 12:37+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/administration/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -7321,7 +7321,7 @@ msgid ""
 msgstr "首先，開啟 Odoo 配置檔案（`odoo.conf` 或 `odoorc`（隱藏檔案））。"
 
 #: ../../export/content/administration/on_premise/deploy.rst:775
-#: ../../export/content/administration/on_premise/packages.rst:130
+#: ../../export/content/administration/on_premise/packages.rst:134
 #: ../../export/content/administration/on_premise/source.rst:70
 #: ../../export/content/administration/on_premise/source.rst:136
 #: ../../export/content/administration/on_premise/source.rst:161
@@ -7331,7 +7331,7 @@ msgstr "首先，開啟 Odoo 配置檔案（`odoo.conf` 或 `odoorc`（隱藏檔
 #: ../../export/content/administration/on_premise/source.rst:350
 #: ../../export/content/administration/on_premise/source.rst:458
 #: ../../export/content/administration/on_premise/source.rst:527
-#: ../../export/content/administration/on_premise/source.rst:590
+#: ../../export/content/administration/on_premise/source.rst:594
 msgid "Windows"
 msgstr "Windows"
 
@@ -7353,7 +7353,7 @@ msgstr ""
 #: ../../export/content/administration/on_premise/source.rst:280
 #: ../../export/content/administration/on_premise/source.rst:401
 #: ../../export/content/administration/on_premise/source.rst:518
-#: ../../export/content/administration/on_premise/source.rst:580
+#: ../../export/content/administration/on_premise/source.rst:584
 msgid "Linux"
 msgstr "Linux"
 
@@ -7850,7 +7850,7 @@ msgstr ""
 "Odoo 需要 `PostgreSQL <https://www.postgresql.org/>`_ 伺服器才能正常運作。"
 
 #: ../../export/content/administration/on_premise/packages.rst:34
-#: ../../export/content/administration/on_premise/packages.rst:70
+#: ../../export/content/administration/on_premise/packages.rst:74
 #: ../../export/content/administration/on_premise/source.rst:408
 msgid "Debian/Ubuntu"
 msgstr "Debian / Ubuntu"
@@ -7865,8 +7865,8 @@ msgstr ""
 "行以下命令以安裝 PostgreSQL 伺服器："
 
 #: ../../export/content/administration/on_premise/packages.rst:44
-#: ../../export/content/administration/on_premise/packages.rst:80
-#: ../../export/content/administration/on_premise/packages.rst:114
+#: ../../export/content/administration/on_premise/packages.rst:84
+#: ../../export/content/administration/on_premise/packages.rst:118
 msgid "Fedora"
 msgstr "Fedora"
 
@@ -7884,37 +7884,47 @@ msgid ""
 "manually in `version 0.12.6 <https://github.com/wkhtmltopdf/packaging/"
 "releases/tag/0.12.6.1-3>`_ for it to support headers and footers. Check out "
 "the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for "
-"more details on the various versions."
+"more details on the various versions. To draw emojis in PDF reports, "
+"`wkhtmltopdf` needs a black-and-white emoji font, as it cannot draw color "
+"ones. On Debian/Ubuntu, the `fonts-symbola` package covers the emojis up to "
+"2017. For the recent ones, put the :file:`NotoEmoji-Regular.ttf` file of "
+"`Noto Emoji <https://fonts.google.com/noto/specimen/Noto+Emoji>`_ in "
+"the :file:`/usr/local/share/fonts` folder."
 msgstr ""
-"`wkhtmltopdf` 不透過 **pip** 安裝，必須手動安裝 `version 0.12.6 <https://"
-"github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ 才能支援頁首和頁"
-"尾。有關各版本的詳細資訊，請參閱 `wkhtmltopdf wiki <https://github.com/odoo/"
-"odoo/wiki/Wkhtmltopdf>`_。"
+"`wkhtmltopdf` 並非透過 **pip** 安裝，必須手動安裝 <https://github.com/"
+"wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`0.12.6 版本`_，才能支援頁首與"
+"頁尾。請參閱 `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/"
+"Wkhtmltopdf>`_ 以了解不同版本的更多詳細資訊。若要在 PDF 報表中繪製表情符號"
+"，`wkhtmltopdf` 需要一種黑白表情符號字型，因為它無法繪製彩色表情符號。在 "
+"Debian/Ubuntu 上，`fonts-symbola` 套件涵蓋了 2017 年以前的表情符號。若要使用"
+"較新的表情符號，請將 :file:`NotoEmoji-Regular.ttf` 檔案（來自 `Noto Emoji "
+"<https://fonts.google.com/noto/specimen/Noto+Emoji>`_）放入 :file:`/usr/"
+"local/share/fonts` 資料夾中。"
 
-#: ../../export/content/administration/on_premise/packages.rst:63
+#: ../../export/content/administration/on_premise/packages.rst:67
 msgid "Repository"
 msgstr "儲存庫"
 
-#: ../../export/content/administration/on_premise/packages.rst:65
+#: ../../export/content/administration/on_premise/packages.rst:69
 msgid ""
 "Odoo S.A. provides a repository that can be used to install the "
 "**Community** edition by executing the following commands:"
 msgstr "Odoo S.A. 提供可用於安裝**社群版**的儲存庫，執行以下命令："
 
-#: ../../export/content/administration/on_premise/packages.rst:78
+#: ../../export/content/administration/on_premise/packages.rst:82
 msgid ""
 "Use the usual `apt-get upgrade` command to keep the installation up-to-date."
 msgstr "使用常規的 `apt-get upgrade` 指令來保持安裝的最新狀態。"
 
-#: ../../export/content/administration/on_premise/packages.rst:90
+#: ../../export/content/administration/on_premise/packages.rst:94
 msgid "Currently, there is no nightly repository for the Enterprise edition."
 msgstr "目前企業版沒有每夜建置版本庫。"
 
-#: ../../export/content/administration/on_premise/packages.rst:93
+#: ../../export/content/administration/on_premise/packages.rst:97
 msgid "Distribution package"
 msgstr "發行套件"
 
-#: ../../export/content/administration/on_premise/packages.rst:95
+#: ../../export/content/administration/on_premise/packages.rst:99
 msgid ""
 "Instead of using the repository, packages for both the **Community** and "
 "**Enterprise** editions can be downloaded from the `Odoo download page "
@@ -7923,11 +7933,11 @@ msgstr ""
 "除了使用版本庫之外，**社群版**和**企業版**的套件都可以從 `Odoo 下載頁面 "
 "<https://www.odoo.com/page/download>`_ 下載。"
 
-#: ../../export/content/administration/on_premise/packages.rst:100
+#: ../../export/content/administration/on_premise/packages.rst:104
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: ../../export/content/administration/on_premise/packages.rst:103
+#: ../../export/content/administration/on_premise/packages.rst:107
 msgid ""
 "Odoo 20 'deb' package currently supports `Ubuntu Noble (24.04LTS) <https://"
 "releases.ubuntu.com/noble>`_."
@@ -7935,7 +7945,7 @@ msgstr ""
 "Odoo 20 的「deb」套件目前支援\\ `Ubuntu Noble (24.04LTS) <https://"
 "releases.ubuntu.com/noble>`_。"
 
-#: ../../export/content/administration/on_premise/packages.rst:106
+#: ../../export/content/administration/on_premise/packages.rst:110
 msgid ""
 "Once downloaded, execute the following commands **as root** to install Odoo "
 "as a service, create the necessary PostgreSQL user, and automatically start "
@@ -7944,17 +7954,17 @@ msgstr ""
 "下載後，以 **root 身分**執行以下指令來將 Odoo 安裝為服務、建立必要的 "
 "PostgreSQL 使用者，並自動啟動伺服器："
 
-#: ../../export/content/administration/on_premise/packages.rst:117
+#: ../../export/content/administration/on_premise/packages.rst:121
 msgid "Odoo 20 'rpm' package supports Fedora 42."
 msgstr "Odoo 20 的「rpm」套件支援 Fedora 42。"
 
-#: ../../export/content/administration/on_premise/packages.rst:119
+#: ../../export/content/administration/on_premise/packages.rst:123
 msgid ""
 "Once downloaded, the package can be installed using the 'dnf' package "
 "manager:"
 msgstr "下載後，可使用 dnf 套件管理工具安裝該套件："
 
-#: ../../export/content/administration/on_premise/packages.rst:133
+#: ../../export/content/administration/on_premise/packages.rst:137
 msgid ""
 "Windows packaging is offered for the convenience of testing or running "
 "single-user local instances but production deployment is discouraged due to "
@@ -7964,7 +7974,7 @@ msgstr ""
 "Windows 套件的提供是為了方便測試或執行單使用者本機實例，但不建議用於生產環境"
 "部署，因為在 Windows 平台上部署 Odoo 存在許多限制和風險。"
 
-#: ../../export/content/administration/on_premise/packages.rst:137
+#: ../../export/content/administration/on_premise/packages.rst:141
 msgid ""
 "Download the installer from the `nightly server <https://nightly.odoo.com>`_ "
 "(Community only) or the Windows installer from the `Odoo download page "
@@ -7973,11 +7983,11 @@ msgstr ""
 "從 `每夜建置伺服器 <https://nightly.odoo.com>`_（僅限社群版）或從 `Odoo 下載"
 "頁面 <https://www.odoo.com/page/download>`_ 下載 Windows 安裝程式（任何版本。"
 
-#: ../../export/content/administration/on_premise/packages.rst:140
+#: ../../export/content/administration/on_premise/packages.rst:144
 msgid "Execute the downloaded file."
 msgstr "執行下載的檔案。"
 
-#: ../../export/content/administration/on_premise/packages.rst:143
+#: ../../export/content/administration/on_premise/packages.rst:147
 msgid ""
 "On Windows 8 and later, a warning titled *Windows protected your PC* may be "
 "displayed. Click **More Info** and then **Run anyway** to proceed."
@@ -7985,18 +7995,18 @@ msgstr ""
 "在 Windows 8 及更高版本上，可能會顯示標題為 *Windows 已保護您的電腦* 的警告。"
 "按一下 **更多資訊**，然後按一下 **仍要執行** 以繼續。"
 
-#: ../../export/content/administration/on_premise/packages.rst:146
+#: ../../export/content/administration/on_premise/packages.rst:150
 msgid ""
 "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ "
 "prompt."
 msgstr ""
 "接受 `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ 提示。"
 
-#: ../../export/content/administration/on_premise/packages.rst:147
+#: ../../export/content/administration/on_premise/packages.rst:151
 msgid "Go through the installation steps."
 msgstr "依照安裝步驟進行。"
 
-#: ../../export/content/administration/on_premise/packages.rst:149
+#: ../../export/content/administration/on_premise/packages.rst:153
 msgid "Odoo launches automatically at the end of the installation."
 msgstr "Odoo 在安裝結束時會自動啟動。"
 
@@ -8121,7 +8131,7 @@ msgstr "使用 SSH 複製"
 #: ../../export/content/administration/on_premise/source.rst:315
 #: ../../export/content/administration/on_premise/source.rst:481
 #: ../../export/content/administration/on_premise/source.rst:539
-#: ../../export/content/administration/on_premise/source.rst:601
+#: ../../export/content/administration/on_premise/source.rst:605
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -8558,11 +8568,11 @@ msgstr ""
 "使用套件管理工具，下載並安裝 **nodejs** 。（套件管理工具： `Homebrew "
 "<https://brew.sh/>`_ 、 `MacPorts <https://www.macports.org>`_ ）。"
 
-#: ../../export/content/administration/on_premise/source.rst:558
+#: ../../export/content/administration/on_premise/source.rst:562
 msgid "Running Odoo"
 msgstr "運行 Odoo"
 
-#: ../../export/content/administration/on_premise/source.rst:560
+#: ../../export/content/administration/on_premise/source.rst:564
 msgid ""
 "Once all dependencies are set up, Odoo can be launched by running `odoo-"
 "bin`, the command-line interface of the server. It is located at the root of "
@@ -8571,7 +8581,7 @@ msgstr ""
 "所有相依套件設定完成後，可以透過執行 `odoo-bin` 來啟動 Odoo，這是伺服器的命令"
 "列介面，位於 Odoo Community 目錄的根目錄。"
 
-#: ../../export/content/administration/on_premise/source.rst:563
+#: ../../export/content/administration/on_premise/source.rst:567
 msgid ""
 "To configure the server, either specify :ref:`command-line arguments "
 "<reference/cmdline/server>` or a :ref:`configuration file <reference/cmdline/"
@@ -8580,7 +8590,7 @@ msgstr ""
 "若要配置伺服器，可以指定:ref:`命令列引數 <reference/cmdline/server>`或:ref:`"
 "配置檔案 <reference/cmdline/config>`。"
 
-#: ../../export/content/administration/on_premise/source.rst:567
+#: ../../export/content/administration/on_premise/source.rst:571
 msgid ""
 "For the Enterprise edition, add the path to the `enterprise` add-ons to the "
 "`addons-path` argument. Note that it must come before the other paths in "
@@ -8589,24 +8599,24 @@ msgstr ""
 "對於 Enterprise 版本，請將 `enterprise` 附加元件的路徑加入至 `addons-path` 引"
 "數。請注意，它必須位於 `addons-path` 中其他路徑之前，附加元件才能正確載入。"
 
-#: ../../export/content/administration/on_premise/source.rst:571
+#: ../../export/content/administration/on_premise/source.rst:575
 msgid "Common necessary configurations are:"
 msgstr "通常必須提供的配置包括："
 
-#: ../../export/content/administration/on_premise/source.rst:573
+#: ../../export/content/administration/on_premise/source.rst:577
 msgid "PostgreSQL user and password."
 msgstr "PostgreSQL 使用者名稱及密碼。"
 
-#: ../../export/content/administration/on_premise/source.rst:574
+#: ../../export/content/administration/on_premise/source.rst:578
 msgid "Custom addon paths beyond the defaults to load custom modules."
 msgstr "除了預設路徑外，用於載入自訂模組的自訂附加元件路徑。"
 
-#: ../../export/content/administration/on_premise/source.rst:576
+#: ../../export/content/administration/on_premise/source.rst:580
 msgid "A typical way to run the server would be:"
 msgstr "執行伺服器的典型方式為："
 
-#: ../../export/content/administration/on_premise/source.rst:587
-#: ../../export/content/administration/on_premise/source.rst:608
+#: ../../export/content/administration/on_premise/source.rst:591
+#: ../../export/content/administration/on_premise/source.rst:612
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, and "
 "`mydb` is the name of the PostgreSQL database."
@@ -8614,7 +8624,7 @@ msgstr ""
 "其中 `CommunityPath` 是 Odoo Community 安裝路徑，`mydb` 是 PostgreSQL 資料庫"
 "名稱。"
 
-#: ../../export/content/administration/on_premise/source.rst:597
+#: ../../export/content/administration/on_premise/source.rst:601
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, "
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password, "
@@ -8623,7 +8633,7 @@ msgstr ""
 "其中 `CommunityPath` 是 Odoo Community 安裝路徑，`dbuser` 是 PostgreSQL 登入"
 "名稱，`dbpassword` 是 PostgreSQL 密碼，`mydb` 是 PostgreSQL 資料庫名稱。"
 
-#: ../../export/content/administration/on_premise/source.rst:611
+#: ../../export/content/administration/on_premise/source.rst:615
 msgid ""
 "After the server has started (the INFO log `odoo.modules.loading: Modules "
 "loaded.` is printed), open http://localhost:8069 in a web browser and log "
@@ -8634,13 +8644,13 @@ msgstr ""
 "頁瀏覽器中開啟 http://localhost:8069，並使用基本管理員帳戶登入 Odoo 資料庫："
 "使用 `admin` 作為電子郵件，再次使用 `admin` 作為密碼。"
 
-#: ../../export/content/administration/on_premise/source.rst:616
+#: ../../export/content/administration/on_premise/source.rst:620
 msgid ""
 "From there, create and manage new :doc:`users <../../applications/general/"
 "users>`."
 msgstr "接著，建立和管理新的:doc:`使用者 <../../applications/general/users>`。"
 
-#: ../../export/content/administration/on_premise/source.rst:617
+#: ../../export/content/administration/on_premise/source.rst:621
 msgid ""
 "The user account used to log into Odoo's web interface differs from "
 "the :option:`--db_user <odoo-bin -r>` CLI argument."
@@ -8648,7 +8658,7 @@ msgstr ""
 "用於登入 Odoo 網頁介面的使用者帳戶與 :option:`--db_user <odoo-bin -r>` CLI 引"
 "數不同。"
 
-#: ../../export/content/administration/on_premise/source.rst:621
+#: ../../export/content/administration/on_premise/source.rst:625
 msgid ""
 ":doc:`The list of CLI arguments for odoo-bin </developer/reference/cli>`"
 msgstr ":doc:`odoo-bin 的 CLI 引數列表 </developer/reference/cli>`"
@@ -10127,6 +10137,18 @@ msgstr ":doc:`Odoo.sh 使用說明 <odoo_sh>`"
 #: ../../export/content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`受支援的 Odoo 版本 <standard_extended_support>`"
+
+#~ msgid ""
+#~ "`wkhtmltopdf` is not installed through **pip** and must be installed "
+#~ "manually in `version 0.12.6 <https://github.com/wkhtmltopdf/packaging/"
+#~ "releases/tag/0.12.6.1-3>`_ for it to support headers and footers. Check "
+#~ "out the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/"
+#~ "Wkhtmltopdf>`_ for more details on the various versions."
+#~ msgstr ""
+#~ "`wkhtmltopdf` 不透過 **pip** 安裝，必須手動安裝 `version 0.12.6 <https://"
+#~ "github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ 才能支援頁首和"
+#~ "頁尾。有關各版本的詳細資訊，請參閱 `wkhtmltopdf wiki <https://github.com/"
+#~ "odoo/odoo/wiki/Wkhtmltopdf>`_。"
 
 #~ msgid "Add"
 #~ msgstr "加入"
