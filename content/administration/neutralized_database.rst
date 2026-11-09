@@ -26,6 +26,7 @@ Here is a non-exhaustive list of the deactivated features:
 - all planned actions (e.g., automatic invoicing of subscriptions, mass mailing, etc.)
 - outgoing emails
 - bank synchronization
+- calendar synchronization
 - payment providers
 - delivery methods
 - :abbr:`IAP (In-App Purchase)` tokens
