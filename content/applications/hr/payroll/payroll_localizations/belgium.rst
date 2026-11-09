@@ -834,9 +834,28 @@ triggers the necessary actions to update the dimona status accordingly.
 Technical configuration (outside Odoo)
 **************************************
 
-Regarding the technical configuration, everything is described in the module information with all
-the technical prerequisites. If your customer or partner need further assistance with that, they
-need to contact their IT department or representatives as this is not part of Odoo configuration.
+Regarding the technical configuration, here are the technical prerequisites needed to enable the
+automated Dimona declarations:
+
+- You need a Belgian Government Compliant Digital Certificate, delivered by Global
+  Sign. See: https://shop.globalsign.com/en/belgian-government-services
+- Generate certificate files from your SSL certificate (.pfx file) that are needed to create
+  a technical user (.cer file) and to authenticate remotely to the ONSS (.pem) file. On a UNIX
+  system, you may use the following commands:
+
+  - PFX → CRT: `openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys -clcerts`
+  - CRT → CER: `openssl x509 -inform pem -in my_cert.crt -outform der -out my_cert.cer`
+  - PFX → PEM: `openssl pkcs12 -in my_cert.pfx -out my_cert.pem -nodes`
+
+- Before you can use the social security REST web service, you must create an account
+  for yourself or for your client and configure the security. (The whole procedure is
+  available at https://www.rest-documentation.socialsecurity.be/)
+
+- At the end of the procedure, you should receive a "ONSS Expeditor Number", you may
+  encode in in the payroll Settings, with the .pem file and the related password, if any.
+
+If your customer or partner needs further assistance with this, they should contact their IT
+department or representatives, as this is not part of Odoo's configuration.
 
 Functional configuration (within Odoo)
 **************************************
@@ -852,6 +871,61 @@ the following:
   more information)
 - :guilabel:`PEM Certificate`, :guilabel:`PEM Passphare`, :guilabel:`KEY file`: check the module
   information for explanation
+
+Automatic DmfA Signature
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Prerequisites:
+--------------
+
+- You need a Belgian Government Compliant Digital Certificate, delivered by Global
+  Sign. See: https://shop.globalsign.com/en/belgian-government-services
+
+- Generate certificate files from your SSL certificate (.pfx file) that are needed to create
+  a technical user (.cer file) and to authenticate remotely to the ONSS (.pem) file. On a UNIX
+  system, you may use the following commands:
+
+  - PFX -> CRT: openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys -clcerts
+
+  - CRT -> CER: openssl x509 -inform pem -in my_cert.crt -outform der -out my_cert.cer
+
+  - PFX -> PEM: openssl pkcs12 -in my_cert.pfx -out my_cert.pem -nodes
+
+  - PFX -> KEY: openssl pkcs12 -in my_cert.pfx -out my_cert.key -nocerts
+
+- Before you can use the social security SFTP service, you must create an account
+  for yourself or for your client and configure the security. (The whole procedure is
+  available at https://www.socialsecurity.be/site_fr/general/helpcentre/batch/sftp/previewstep.htm)
+
+  - Create a technical user + Activate a SFTP channel: Your client must now create a technical user in the Access management
+    online service. The follow this procedure: https://www.socialsecurity.be/site_fr/general/helpcentre/rest/
+
+  - Configure your SFTP client: https://www.socialsecurity.be/site_fr/employer/applics/dmfa/batch/home.htm
+
+  - At the end of the procedure, you should have received a "ONSS Expeditor Number", you may
+    encode in in the payroll Settings, with the .pem file and the related password, if any.
+
+- Configuration note: The .pfx certificate should be set on the payroll configuration.
+
+Synchronize DmfA to ONSS portal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Automates the synchronization of DmfA ONSS declarations
+to the official Belgian SFTP portal.
+
+- Upload the FO, FS, and GO files to the correct ONSS environment folder
+  (IN, INTEST, INTEST-S).
+- Poll the OUT folders (OUT, OUTTEST, OUTTEST-S) for returned files.
+- Link received files to the corresponding declarations and employees
+  when applicable.
+
+Technical features include:
+- Secure connection using a private key and technical user credentials.
+- XML file parsing for ACRF and notification files.
+- Error handling and logging for missing directories or malformed files.
+
+This feature ensures compliance with ONSS electronic declaration
+requirements and reduces manual interaction with the SFTP portal.
 
 .. _payroll/l10n_be/dmfa:
 
