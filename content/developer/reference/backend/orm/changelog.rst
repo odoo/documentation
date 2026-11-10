@@ -4,6 +4,19 @@
 Changelog
 =========
 
+Odoo Online version 20.1
+========================
+
+- ``unlink()`` processes ``ondelete`` cascades in the ORM: ``@api.ondelete``
+  methods are called on cascade-deleted records too, the new ``_delete_extra()``
+  method returns additional records to delete, and only the fields referring to
+  the deleted records are flushed.
+  ``Many2oneReference`` fields support ``ondelete`` (``'set null'``,
+  ``'restrict'``, ``'cascade'``, ``'ignore'`` or a callable for a subset of
+  models).
+  See `#237614 <https://github.com/odoo/odoo/pull/237614>`_
+  and `#292869 <https://github.com/odoo/odoo/pull/292869>`_.
+
 Odoo version 20.0
 =================
 
