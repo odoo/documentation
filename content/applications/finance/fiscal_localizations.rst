@@ -189,6 +189,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/romania
    fiscal_localizations/saudi_arabia
    fiscal_localizations/singapore
+   fiscal_localizations/slovakia
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/taiwan
