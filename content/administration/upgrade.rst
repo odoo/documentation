@@ -1,9 +1,11 @@
+:show-content:
+
 =======
 Upgrade
 =======
 
 An upgrade involves moving a database from an older version to a newer supported version (e.g., from
-Odoo 16.0 to Odoo 18.0). Regular upgrades are crucial as each version offers new features, bug
+Odoo 18.0 to Odoo 20.0). Regular upgrades are crucial as each version offers new features, bug
 fixes, and security patches. Using a :doc:`supported version <standard_extended_support>` is
 strongly recommended. Each major version is supported for three years.
 
@@ -13,9 +15,9 @@ Depending on the hosting type and Odoo version used, a database upgrade can be *
 
    .. group-tab:: Odoo Online
 
-      - If a database is on a **major version** (e.g., 16.0, 17.0, 18.0), an upgrade is mandatory
+      - If a database is on a **major version** (e.g., 18.0, 19.0, 20.0), an upgrade is mandatory
         every two years.
-      - If a database is on a **minor version** (e.g., 17.1, 17.2, 17.4), an upgrade is mandatory
+      - If a database is on a **minor version** (e.g., 19.1, 19.2, 19.4), an upgrade is mandatory
         a few weeks after the next version is released. Minor versions are usually released every
         two months.
 
@@ -79,15 +81,13 @@ Upgrading in a nutshell
 #. Thoroughly test the upgraded database (see :ref:`testing the new version of the database
    <upgrade-testing>`).
 #. Report any issue encountered during the testing to Odoo by going to the `Support page and
-   selecting "An issue related to my future upgrade (I am testing an upgrade)"
-   <https://www.odoo.com/help?stage=migration>`_.
+   selecting "Upgrade issue (in a test database)" <https://www.odoo.com/help?stage=migration>`_.
 #. Once all issues are resolved and you are confident that the upgraded database can be used as
    your main database without any issues, plan the upgrade of your production database.
 #. Request the upgrade for the production database, rendering it unavailable for the time it takes
    to complete the process (see :ref:`upgrading the production database <upgrade-production>`).
 #. Report any issue encountered during the upgrade to Odoo by going to the `Support page and
-   selecting "An issue related to my upgrade (production)"
-   <https://www.odoo.com/help?stage=post_upgrade>`_.
+   selecting "Upgrade issue(production)" <https://www.odoo.com/help?stage=post_upgrade>`_.
 
 .. _upgrade-request-test:
 
@@ -138,12 +138,12 @@ database. However, depending on the hosting type, you can upgrade from the comma
 
       The **latest production daily automatic backup** is then sent to the Upgrade platform.
 
-      Once the upgrade platform is done upgrading the backup and uploading it on the branch, it is
-      put in a **special mode**: each time a **commit is pushed** on the branch, a **restore
-      operation** of the upgraded backup and an **update of all the custom modules** occur. This
-      allows you to test your custom modules on a pristine copy of the upgraded database. The log
-      file of the upgrade process can be found in your newly upgraded staging build by going to
-      :file:`~/logs/upgrade.log`.
+      Once it has been processed by the Odoo Upgrade platform and transferred back to Odoo.sh, the
+      branch will switch to a special **"Update on commit"** mode: each time a **commit is pushed**
+      on the branch, a **restore operation** of the upgraded backup and an **update of all the
+      custom modules** occur. This allows you to test your custom modules on a pristine copy of the
+      upgraded database. The log file of the upgrade process can be found in your newly upgraded
+      staging build by going to :file:`~/logs/upgrade.log`.
 
       .. important::
          In databases where custom modules are installed, their source code must be up-to-date with
@@ -226,8 +226,8 @@ day-to-day activities by a change in views, behavior, or an error message once t
 live.
 
 .. note::
-   Test databases are neutralized, and some features are disabled to prevent them from impacting the
-   production database:
+   Test databases are :doc:`neutralized<./neutralized_database>`, and some features are disabled to
+   prevent them from impacting the production database:
 
    #. Scheduled actions are disabled.
    #. Outgoing mail servers are disabled by archiving the existing ones and adding a fake one.
@@ -278,8 +278,8 @@ working correctly and to get more familiar with the new version.
    This list is **not** exhaustive. Extend the example to your other apps based on your use of Odoo.
 
 If you face an issue while testing your upgraded test database, you can request the assistance of
-Odoo by going to the `Support page and selecting "An issue related to my future upgrade (I am
-testing an upgrade)" <https://www.odoo.com/help?stage=migration>`_. In any case, it is essential to
+Odoo by going to the `Support page and selecting "Upgrade issue (in a test database)"
+<https://www.odoo.com/help?stage=migration>`_. In any case, it is essential to
 report any problem encountered during the testing to fix it before upgrading your production
 database.
 
@@ -351,10 +351,20 @@ few exceptions.
       upgraded source code.
       If there are no custom modules, the upgrade process is triggered immediately.
 
+      As soon as the upgrade process is triggered, a backup is created from the production database
+      and it's sent to the Upgrade platform. The backup can be found in the :guilabel:`Backups` tab
+      and can be restored on a staging branch if a copy of the production database pre-upgrade is
+      needed to compare results with the previous version or check data, without any impact on
+      production.
+
+      .. image:: upgrade/odoo-sh-upgrade-backup.png
+         :alt: View from the backup tab
+
       .. important::
-         The database is unavailable throughout the process. If anything goes wrong, the platform
-         automatically reverts the upgrade, as it would be for a regular update. In case of success,
-         a backup of the database before the upgrade is created.
+         The database is **unavailable** throughout the process.
+
+         If anything goes wrong, the platform automatically reverts the upgrade, as it would be for
+         a regular update, by restoring the previous successful build.
 
       The update of your custom modules must be successful to complete the entire upgrade process.
       Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in
@@ -383,7 +393,7 @@ few exceptions.
          filestore before deploying the new version.
 
 In case of an issue with your production database, you can request the assistance of Odoo by going
-to the `Support page and selecting "An issue related to my upgrade (production)"
+to the `Support page and selecting "Upgrade issue(production)"
 <https://www.odoo.com/help?stage=post_upgrade>`_.
 
 .. _upgrade-sla:
@@ -430,3 +440,7 @@ The following upgrade-related services are **not** included:
 .. seealso::
    - :doc:`Odoo.sh documentation <odoo_sh>`
    - :doc:`Supported Odoo versions <standard_extended_support>`
+
+.. toctree::
+
+   upgrade/upgrade_faq
