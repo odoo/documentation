@@ -332,12 +332,15 @@ company's financial data:
 - :guilabel:`Bank`: Allow bank account validation.
 
 .. Note::
-   Adding an accountant as a new user in :doc:`Odoo Online <../../administration/odoo_online>` is
-   free if the accountant has an Odoo account registered with the same email address as the one
-   listed for the company user. However, :doc:`Odoo.sh <../../administration/odoo_sh>` and
-   :doc:`Odoo On-premise <../../administration/on_premise>` may involve extra charges for each
-   additional user. For more pricing information, see
-   `Odoo's pricing <https://www.odoo.com/pricing-plan>`_.
+   - Adding an accountant as a new user in :doc:`Odoo Online <../../administration/odoo_online>` is
+     free for accountants that belong to the firms that are on the list of firms `registered with
+     Odoo <https://www.odoo.com/accounting-firms>`_. It is important that the new user's email
+     address matches the email address used when the firm registered with Odoo.
+   - Accounting firms can be added to the list of registered firms by completing the `Accountant
+     Partner Program Signup <https://www.odoo.com/accounting-firms/register>`_
+   - :doc:`Odoo.sh <../../administration/odoo_sh>` and :doc:`Odoo On-premise
+     <../../administration/on_premise>` do involve extra charges for each additional user, including
+     accountants.
 
 For a multi-company environment, set the appropriate :ref:`access <users/multi-companies>`.
 
