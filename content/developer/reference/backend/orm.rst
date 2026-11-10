@@ -1122,6 +1122,8 @@ Unlink
 
 .. automethod:: Model.unlink
 
+.. automethod:: Model._delete_extra
+
 .. _reference/orm/records/info:
 
 Record(set) information
