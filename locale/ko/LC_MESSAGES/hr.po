@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-30 17:31+0000\n"
-"PO-Revision-Date: 2026-10-31 10:33+0000\n"
-"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
+"PO-Revision-Date: 2026-11-11 04:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/hr/"
 "ko/>\n"
 "Language: ko\n"
@@ -2443,6 +2443,10 @@ msgid ""
 "centralized location, providing clear organization and transparency for all "
 "requests."
 msgstr ""
+"Odoo의 **전자결재 관리** 앱은 임직원이 다양한 항목에 대해 공적인 요청을 "
+"하고, 관리자가 이 요청을 검토하여 승인 또는 반려할 수 있도록 합니다. 이를 "
+"통해 모든 요청을 한 곳에 중앙 관리함으로써 모든 요청의 명확한 정리 및 "
+"투명성을 보장합니다."
 
 #: ../../content/applications/hr/approvals.rst:15
 msgid "Approval types"
@@ -2454,34 +2458,40 @@ msgid ""
 "There are nine preconfigured approval categories available to make requests "
 "for:"
 msgstr ""
+"전자결재를 요청할 때는 카테고리, 또는 *유형*을 지정해야 합니다. 요청 가능한 "
+"9개의 사전 구성된 전자결재 카테고리는 다음과 같습니다."
 
 #: ../../content/applications/hr/approvals.rst:20
 msgid ":guilabel:`Business trip`: For requesting work-related travel."
-msgstr ""
+msgstr ":guilabel:`출장`: 업무 관련 출장 요청용."
 
 #: ../../content/applications/hr/approvals.rst:21
 msgid ""
 ":guilabel:`Borrow Items`: For requesting physical items the company owns or "
 "sells, for a specified period of time."
 msgstr ""
+":guilabel:`물품 대여`: 회사가 소유 또는 판매하는 물품을 지정된 기간 동안 "
+"대여하도록 요청하는 용도."
 
 #: ../../content/applications/hr/approvals.rst:23
 msgid ""
 ":guilabel:`General Approval`: For requests that do not fit in any of the "
 "eight other default types."
-msgstr ""
+msgstr ":guilabel:`일반 전자결재`: 8개의 다른 기본 유형에 해당하지 않는 요청 용도."
 
 #: ../../content/applications/hr/approvals.rst:25
 msgid ""
 ":guilabel:`Contract Approval`: For requesting any type of external contract, "
 "excluding :doc:`employee contracts <payroll/contracts>`."
 msgstr ""
+":guilabel:`계약 승인`: :doc:`임직원 계약 <payroll/contracts>`을(를) 제외한 "
+"모든 외부 계약 요청 용도."
 
 #: ../../content/applications/hr/approvals.rst:27
 msgid ""
 ":guilabel:`Payment Application`: For requesting *prior approval* for company-"
 "related expenses."
-msgstr ""
+msgstr ":guilabel:`지불 신청`: 회사 관련 경비에 대한 *사전 승인*을 요청하는 용도."
 
 #: ../../content/applications/hr/approvals.rst:30
 msgid ""
@@ -2490,32 +2500,38 @@ msgid ""
 "be used for expenses employees are seeking reimbursement for. That is done "
 "through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
 msgstr ""
+"이 전자결재 유형은 회사가 직접 지불하는 경비에 대해 *사전에* 승인을 요청할 "
+"때만 **유일하게** 사용됩니다. 이 카테고리는 임직원이 회사로부터 대여금을 "
+"받아야 하는 경비에는 사용해서는 **안 됩니다**. 그런 경우는 :doc:`경비 <../"
+"finance/expenses/log_expenses>`앱을 통해 처리합니다."
 
 #: ../../content/applications/hr/approvals.rst:35
 msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
-msgstr ""
+msgstr ":guilabel:`렌탈 차량 신청`: 렌탈 차량 요청 용도."
 
 #: ../../content/applications/hr/approvals.rst:36
 msgid ""
 ":guilabel:`Job Referral Award`: For requesting job referral awards that were "
 "earned but not completed through the :doc:`Referrals <referrals>` app."
 msgstr ""
+":guilabel:`직원 추천 보상`: :doc:`채용 추천 <referrals>` 앱을 통해 완료되지 "
+"않은 채용 추천 보상 요청 용도."
 
 #: ../../content/applications/hr/approvals.rst:38
 msgid ""
 ":guilabel:`Procurement`: Used for requesting work-related items such as "
 "office supplies, tools, etc."
-msgstr ""
+msgstr ":guilabel:`조달`: 사무용품, 도구 등 업무 관련 물품 요청 용도."
 
 #: ../../content/applications/hr/approvals.rst:40
 msgid ""
 ":guilabel:`Create RFQ's`: Used for requesting a quote for items from a "
 "vendor."
-msgstr ""
+msgstr ":guilabel:`견적서 생성`: 판매처에서 물품에 대한 견적을 요청하는 용도."
 
 #: ../../content/applications/hr/approvals.rst:45
 msgid "Approval requests"
-msgstr ""
+msgstr "전자결재 요청"
 
 #: ../../content/applications/hr/approvals.rst:47
 msgid ""
@@ -2524,6 +2540,10 @@ msgid ""
 "the request, and a blank approval form loads. Fill out the various sections "
 "and tabs, then click :guilabel:`Submit` to submit the request for approval."
 msgstr ""
+"새 전자결재 요청을 생성하려면 **전자결재 관리** 앱을 열고, 요청에 가장 "
+"적합한 전자결재 카드에서 :guilabel:`새 요청` 버튼을 클릭하면 빈 전자결재 "
+"양식이 불러오입니다. 다양한 항목과 탭을 작성한 후, :guilabel:`제출`을(를) "
+"클릭하여 승인 요청을 제출합니다."
 
 #: ../../content/applications/hr/approvals.rst:52
 #: ../../content/applications/hr/payroll/contracts.rst:50
@@ -2536,6 +2556,8 @@ msgid ""
 "The top half of the form contains all of the general information regarding "
 "the request. Fill out the following fields in the top half of the form:"
 msgstr ""
+"양식의 상단 부분에는 요청과 관련된 모든 일반 정보가 포함되어 있습니다. 양식 "
+"상단의 다음 필드를 작성하세요:"
 
 #: ../../content/applications/hr/approvals.rst:58
 msgid ""
@@ -2543,6 +2565,8 @@ msgid ""
 "Approval` category. If a different :guilabel:`Category` is selected, some "
 "fields are hidden."
 msgstr ""
+"아래 나열된 모든 필드는 :guilabel:`일반 승인` 카테고리 양식에 표시됩니다. "
+"다른 :guilabel:`카테고리`가 선택되면 일부 필드는 숨겨집니다."
 
 #: ../../content/applications/hr/approvals.rst:61
 msgid ""
@@ -2550,18 +2574,24 @@ msgid ""
 "selected approval type. Make any desired modifications to the default text "
 "to provide any additional context for the request."
 msgstr ""
+":guilabel:`승인 제목`: 이 필드는 선택한 승인 유형으로 자동 채워집니다. "
+"요청에 대한 추가 컨텍스트를 제공하려면 기본 텍스트를 필요에 따라 수정하세요."
 
 #: ../../content/applications/hr/approvals.rst:64
 msgid ""
 ":guilabel:`Request Owner`: The person responsible for the approval request. "
 "The signed-in user populates this field by default."
 msgstr ""
+":guilabel:`요청 소유자`: 승인 요청의 책임자입니다. 로그인한 사용자가 "
+"기본으로 이 필드에 표시됩니다."
 
 #: ../../content/applications/hr/approvals.rst:66
 msgid ""
 ":guilabel:`Category`: The selected category appears in this field but can be "
 "changed using the drop-down menu."
 msgstr ""
+":guilabel:`범주`: 선택한 범주가 이 필드에 나타나지만 드롭다운 메뉴를 "
+"사용하여 변경할 수 있습니다."
 
 #: ../../content/applications/hr/approvals.rst:68
 msgid ""
@@ -2570,6 +2600,9 @@ msgid ""
 "Application` or :guilabel:`General Approval` is selected for "
 "the :guilabel:`Category`."
 msgstr ""
+":guilabel:`날짜`: 캘린더 선택기를 사용하여 요청 날짜와 시간을 설정합니다. 이 "
+"필드는 :guilabel:`결제 신청` 또는 :guilabel:`일반 승인`이(가) "
+":guilabel:`범주`(으)로 선택된 경우에만 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:71
 msgid ""
@@ -2579,6 +2612,11 @@ msgid ""
 "Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` "
 "is selected for the :guilabel:`Category`."
 msgstr ""
+":guilabel:`기간`: 캘린더 선택기를 사용하여 :guilabel:`시작` 및 "
+":guilabel:`종료` 필드에서 요청의 시작 및 종료 날짜를 설정합니다. 이 필드는 "
+":guilabel:`출장`, :guilabel:`물품 대여`, :guilabel:`차량 렌트 신청` 또는 "
+":guilabel:`일반 승인`이(가) :guilabel:`범주`(으)로 선택된 경우에만 "
+"나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:75
 msgid ""
@@ -2586,6 +2624,9 @@ msgid ""
 "for. This field **only** appears if :guilabel:`Business Trip` "
 "or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
+":guilabel:`위치`: 승인 요청의 특정 위치를 입력합니다. 이 필드는 "
+":guilabel:`출장` 또는 :guilabel:`일반 승인`이(가) :guilabel:`범주`(으)로 "
+"선택된 경우에만 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:78
 msgid ""
@@ -2595,6 +2636,11 @@ msgid ""
 "Application`, :guilabel:`Job Referral Award`, or :guilabel:`General "
 "Approval` is selected for the :guilabel:`Category`."
 msgstr ""
+":guilabel:`연락처`: 드롭다운 메뉴를 사용하여 요청에 대한 연락처를 "
+"선택합니다. 사용 가능한 옵션은 **연락처** 앱에서 가져옵니다. 이 필드는 "
+":guilabel:`계약 승인`, :guilabel:`결제 신청`, :guilabel:`사내 추천 보상` "
+"또는 :guilabel:`일반 승인`이(가) :guilabel:`범주`(으)로 선택된 경우에만 "
+"나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:82
 msgid ""
@@ -2602,6 +2648,8 @@ msgid ""
 "field. This field **only** appears if :guilabel:`Procurement` is selected "
 "for the :guilabel:`Category`."
 msgstr ""
+":guilabel:`수량`: 이 필드에 요청할 품목 수를 입력합니다. 이 필드는 "
+":guilabel:`조달`이(가) :guilabel:`범주`(으)로 선택된 경우에만 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:84
 msgid ""
@@ -2610,6 +2658,9 @@ msgid ""
 "Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is "
 "selected for the :guilabel:`Category`."
 msgstr ""
+":guilabel:`금액`: 요청할 금액을 입력합니다. 이 필드는 :guilabel:`계약 승인`, "
+":guilabel:`결제 신청`, :guilabel:`조달` 또는 :guilabel:`일반 승인`이(가) "
+":guilabel:`범주`(으)로 선택된 경우에만 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:87
 msgid ""
@@ -2617,6 +2668,9 @@ msgid ""
 "field. This field **only** appears if :guilabel:`Contract Approval` "
 "or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
+":guilabel:`참조`: 이 필드에 요청과 관련된 참조 사항을 입력합니다. 이 필드는 "
+":guilabel:`계약 승인` 또는 :guilabel:`일반 승인`이(가) :guilabel:`범주`(으)"
+"로 선택된 경우에만 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:92
 msgid ""
@@ -2627,14 +2681,18 @@ msgid ""
 "the :guilabel:`Category` is selected, the corresponding fields on the form "
 "appear."
 msgstr ""
+"각 승인 유형은 승인 양식에 서로 다른 필드를 제공합니다. 이는 각 *승인 "
+"유형*마다 필수 입력 필드가 다르기 때문입니다. *유형*을 즉시 알 수 없는 경우, "
+"페이지 상단의 :guilabel:`새 요청` 버튼을 클릭하여 일반 승인 요청 양식을 "
+"엽니다. :guilabel:`범주`를 선택하면 양식의 해당 필드가 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:None
 msgid "The top-half of an approval form fillled out for a business trip."
-msgstr ""
+msgstr "출장을 위해 작성된 승인 양식의 상단 절반입니다."
 
 #: ../../content/applications/hr/approvals.rst:101
 msgid "Product tab"
-msgstr ""
+msgstr "품목 탭"
 
 #: ../../content/applications/hr/approvals.rst:103
 msgid ""
@@ -2643,6 +2701,9 @@ msgid ""
 "Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is "
 "selected in the :guilabel:`Category` field."
 msgstr ""
+"데이터베이스에 구성된 품목을 요청하는 경우 *품목* 탭에 나열됩니다. 이 탭은 "
+":guilabel:`물품 대여`, :guilabel:`일반 승인` 또는 :guilabel:`견적 요청 "
+"생성`이(가) :guilabel:`범주` 필드에서 선택된 경우에만 나타납니다."
 
 #: ../../content/applications/hr/approvals.rst:107
 msgid ""
@@ -2652,6 +2713,10 @@ msgid ""
 "that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can "
 "be updated if necessary."
 msgstr ""
+"품목을 추가하려면 :guilabel:`줄 추가`를 클릭하면 빈 줄이 나타납니다. "
+"드롭다운 메뉴를 사용하여 요청할 품목을 선택합니다. 선택하면 품목에 구성된 "
+":guilabel:`설명`이(가) 해당 필드에 자동으로 채워집니다. :guilabel:`수량`은"
+"(는) 기본적으로 :guilabel:`1.00`이지만 필요에 따라 업데이트할 수 있습니다."
 
 #: ../../content/applications/hr/approvals.rst:113
 #: ../../content/applications/hr/payroll/salaries.rst:240
@@ -2663,10 +2728,12 @@ msgid ""
 "The *Description* tab is where any information to clarify the request is "
 "entered. Add any relevant information in this tab."
 msgstr ""
+"*설명* 탭은 요청을 명확하게 하기 위한 정보를 입력하는 곳입니다. 이 탭에 관련 "
+"정보를 추가하세요."
 
 #: ../../content/applications/hr/approvals.rst:121
 msgid "Approver(s) tab"
-msgstr ""
+msgstr "승인자 탭"
 
 #: ../../content/applications/hr/approvals.rst:123
 msgid ""
@@ -2676,24 +2743,30 @@ msgid ""
 "Repeat for all other approvers. There is no maximum number of users for this "
 "tab."
 msgstr ""
+"*승인자* 탭은 요청 승인을 담당할 사람을 구성하는 곳입니다. 승인자를 "
+"추가하려면 :guilabel:`줄 추가`를 클릭하면 빈 줄이 나타납니다. 드롭다운 "
+"메뉴를 사용하여 원하는 사용자를 선택합니다. 다른 모든 승인자에 대해서도 "
+"반복합니다. 이 탭에는 사용자 수 제한이 없습니다."
 
 #: ../../content/applications/hr/approvals.rst:128
 msgid ""
 "To indicate a user **must** approve the request, click the checkbox in "
 "the :guilabel:`Required` column."
 msgstr ""
+"사용자가 요청을 **반드시** 승인해야 함을 나타내려면 :guilabel:`필수` 열의 "
+"확인란을 클릭합니다."
 
 #: ../../content/applications/hr/approvals.rst:131
 msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
-msgstr ""
+msgstr "사용자가 추가되면 해당 :guilabel:`상태`는 :guilabel:`신규` 상태로 유지됩니다."
 
 #: ../../content/applications/hr/approvals.rst:None
 msgid "The approvers tab with thre approvers listed, and one required."
-msgstr ""
+msgstr "3명의 승인자가 나열되고 그중 1명이 필수인 승인자 탭입니다."
 
 #: ../../content/applications/hr/approvals.rst:137
 msgid "Attach documents"
-msgstr ""
+msgstr "문서 첨부"
 
 #: ../../content/applications/hr/approvals.rst:139
 msgid ""
