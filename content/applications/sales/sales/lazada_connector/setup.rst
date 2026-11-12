@@ -9,6 +9,7 @@ configure your account, synchronize your product catalog, and prepare your shop 
 Prerequisites
 =============
 
+
 Before configuring the **Lazada Connector**, ensure you have:
 
 - A Lazada Seller account

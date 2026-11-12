@@ -21,6 +21,13 @@ Use the `Open Shopee Developer Guide <https://open.shopee.com/developer-guide/12
 registration process. Once everything done, proceed to follow the instructions below to register and
 link the Open Shopee account in Odoo.
 
+Make sure an Odoo integration from a Shopee account is configured for live/ production use: Go to
+`App list <https://open.shopee.com/console/app>`_ after logging in to the Open Platform, then
+select "Add New APP" if no app is created with its app category set to "EPR System", and "Go Live"
+once it is sumbitted. During this process, make sure that "PII Necessity", database, and other 
+servers declarations are turned off/ marked as unavailable, and that the "Live Redirect URL Domain"
+is provided withan Odoo database domain. (E.g. https://your-domain-here.odoo.com/) 
+
 .. important::
    Shopee Open Platform access and seller account requirements are **regionally specific**. This
    means the rules, qualifications, and processes differ from country to country. Before proceeding
