@@ -345,6 +345,7 @@ Refer to the following pages for detailed, country-specific information:
 - :doc:`Norway <electronic_invoicing/norway>`
 - :doc:`Peru <electronic_invoicing/peru>`
 - :doc:`Romania <electronic_invoicing/romania>`
+- :doc:`Slovakia <electronic_invoicing/slovakia>`
 - :doc:`Spain <electronic_invoicing/spain>`
 - :doc:`Spain - Basque Country <electronic_invoicing/basque_country>`
 - :doc:`Uruguay <electronic_invoicing/uruguay>`
