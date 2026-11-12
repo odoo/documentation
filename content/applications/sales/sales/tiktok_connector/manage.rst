@@ -49,9 +49,7 @@ Order synchronization
 Orders are automatically fetched from TikTok Shop and synchronized in Odoo at regular intervals.
 
 - Synchronization Scope: Only orders with status :guilabel:`AWAITING_SHIPMENT` or
-  :guilabel:`AWAITING_COLLECTION` are fetched, as these require shipping action.
-- Processing Intervals: Sync orders and Webhooks of order status changes are processed every 5
-  minutes. Shipping labels are processed every 15 minutes. Inventory is processed every 30 minutes.
+  :guilabel:`AWAITING_COLLECTION` are fetched, as they require fulfillment action.
 - Status Updates: When an order is canceled on TikTok Shop, its status updates in Odoo. However,
   canceling an order in Odoo does not reflect on TikTok Shop.
 - Customer Creation: For each synchronized order, Odoo uses the buying identifier to search for
@@ -60,16 +58,20 @@ Orders are automatically fetched from TikTok Shop and synchronized in Odoo at re
   carrier found by :guilabel:`Internal Reference` or name, respectively.
 
 .. note::
-   Only orders requiring shipment are synchronized. Orders with statuses :guilabel:`SHIPPED`,
-   :guilabel:`CANCEL`, :guilabel:`UNPAID`, or :guilabel:`COMPLETED` are excluded during
+   Only orders requiring shipment are synchronized. Orders with other statuses are excluded during
    synchronization.
 
 Force synchronization
 =====================
 
+By default, Odoo will only fetch Tiktok's orders that were updated or created after the last 
+synchronization time.
+
 To synchronize an order whose status hasn't changed since the last synchronization, navigate to
 :menuselection:`Sales --> Configuration --> Shops` and click the target TikTok Shop. Modify the
-:guilabel:`Last Order Synchronization` date to a date prior to the order's last status change.
+:guilabel:`Last Order Synchronization` date to a date prior to the order's creation time.
+
+`Developer mode<../../../general/developer_mode>` needs to be turned on for the operation.
 Finally, click the :guilabel:`Sync Orders` button to trigger immediate synchronization.
 
 Manage deliveries in FBM
@@ -89,6 +91,7 @@ the :menuselection:`Inventory` app, a sales order, and a customer record, upon s
 TikTok Shop delivery statuses
 -----------------------------
 
+- :guilabel:`On Hold`:  The order is not confirmed for shipment arrangement.
 - :guilabel:`Awaiting Shipment`: The order is ready for shipment arrangement.
 - :guilabel:`Awaiting Collection`: The seller has arranged shipment and received a tracking number
   from the logistics provider.

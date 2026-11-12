@@ -60,19 +60,19 @@ customer hasn't been previously imported from Shopee or doesn't already exist in
 
 .. note::
    The principal of the synchronization is to *only fetch orders that needs to be shipped*
-   (i.e., `SHIPPED`, `CANCEL`, `UNPAID`, `COMPLETED`).
+   (i.e., `SHIPPED`, `CANCEL`, `UNPAID`, `COMPLETED` are not  FBM statuses Odoo processes).
 
 Force synchronization
 =====================
 
-In order to force the synchronization of an order, whose status has **not** changed since the
-previous synchronization:
+By default, Odoo will only fetch Shopee orders that were updated or created after the last 
+synchronization time, in order to force the synchronization of an order whose status has **not**
+been changed since the previous synchronization, navigate to the Shopee account in Odoo 
+:menuselection:`Sales app --> Configuration --> Shopee --> Account --> Shop`. Modify the date for
+:guilabel:`Last Order Sync` under :guilabel:`Orders Follow-up`.
 
-Then, navigate to the Shopee account in Odoo :menuselection:`Sales app --> Configuration --> Shopee
---> Account --> Shop`. Modify the date for :guilabel:`Last Order Sync` under :guilabel:`Orders
-Follow-up`.
-
-Be sure to pick a date that occurs prior to the last status change of the desired order to
+`Developer mode<../../../general/developer_mode>` needs to be turned on for the operation;
+Be sure to pick a date that occurs prior to the  creation time of the desired order to
 synchronize and save. This will ensure synchronization occurs correctly.
 
 Manage deliveries in :abbr:`FBM (Fulfilled by Merchant)`

@@ -52,17 +52,19 @@ Orders are automatically fetched from Lazada and synchronized in Odoo at regular
 
 .. note::
    Only orders requiring shipment are synchronized. Orders with statuses :guilabel:`SHIPPED`,
-   :guilabel:`CANCEL`, :guilabel:`UNPAID`, or :guilabel:`COMPLETED` are excluded during
+   :guilabel:`CANCEL`, :guilabel:`UNPAID`, or :guilabel:`COMPLETED`, etc, are excluded during
    synchronization.
 
 Force synchronization
 =====================
 
-To synchronize an order whose status hasn't changed since the last synchronization:
+By default, Odoo will only fetch Lazada orders that were updated or created after the last 
+synchronization time. To synchronize an order whose status hasn't changed since the last
+synchronization:
 
 1. Navigate to :menuselection:`Sales app --> Configuration --> Lazada --> Shops`.
 2. Select the Lazada Shop and modify the :guilabel:`Last Order Sync` date under
-   :guilabel:`Synchronization Information` to a date prior to the order's last status change.
+   :guilabel:`Synchronization Information` to a date prior to the order's creation time.
 3. Save to trigger synchronization.
 
 .. tip::
