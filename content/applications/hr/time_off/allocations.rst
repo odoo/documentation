@@ -8,10 +8,11 @@ employee works, through an :doc:`accrual plan <accrual_plans>`.
 Once :doc:`time off types <time_off_types>` and accrual plans have been configured, the next step is
 to *allocate*, or give, time off to employees.
 
-The *Allocations* page of the **Time Off** app is **only** visible to users who have either *Time
-Off Officer* or *Administrator* access rights for the **Time Off** application. For more information
-on access rights, refer to the :doc:`access rights <../../general/users/access_rights/>`
-documentation.
+.. important::
+   The :guilabel:`Management` menu, which is how the *Allocations* page is accessed, is **only**
+   visible to users who have either *Time Off Officer* or *Administrator* access rights for the
+   **Time Off** application. For more information on access rights, refer to the :doc:`access rights
+   <../../general/users/access_rights/>` documentation.
 
 .. _time_off/allocation-form:
 
@@ -167,11 +168,9 @@ main :ref:`Time Off dashboard <time_off/dashboard-allocation>` or the :ref:`My A
 
 .. note::
    Both options open a new *Allocation Request* form, but when requested from the main **Time Off**
-   *Dashboard*, the form appears in a pop-up window, and the *Validity Period* field does **not**
-   appear.
-
-   When requested from the *My Allocations* dashboard, the screen navigates to a new allocation
-   request page instead of presenting a pop-up window.
+   *Dashboard*, the form appears in a pop-up window. When requested from the *My Allocations*
+   dashboard, the screen navigates to a new allocation request page instead of presenting a pop-up
+   window.
 
 .. _time_off/dashboard-allocation:
 
@@ -215,6 +214,12 @@ Enter the following information on the *Allocation Request* form:
   second field displays :guilabel:`No Limit`. To change the time frame for the request, click on the
   date, and select the desired date on the calendar popover. If there is an expiration date for the
   request, select the end date in the second field.
+
+  .. note::
+     This field is **only** visible to users who have either *Time Off Officer* or *Administrator*
+     access rights for the **Time Off** application. For more information on access rights, refer to
+     the :doc:`access rights <../../general/users/access_rights/>` documentation.
+
 - :guilabel:`Allocation`: Enter the amount of time being requested in this field. The format is
   presented in either :guilabel:`Days` or :guilabel:`Hours`, depending on how the :guilabel:`Time
   Off Type` is configured. Once this field is populated, the name of the allocation request is
