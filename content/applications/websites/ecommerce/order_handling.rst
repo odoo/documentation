@@ -28,10 +28,10 @@ records.
 The dashboard at the top of the :guilabel:`Orders` page provides a summary of the orders and
 includes the following filter buttons:
 
-- :guilabel:`To Fulfill`: confirmed and paid orders (i.e., :ref:`sales orders
-  <ecommerce/handling/sales-sales-order>`)
 - :guilabel:`To Confirm`: unpaid and unconfirmed orders (i.e., :ref:`sent but unconfirmed quotations
   <ecommerce/handling/sales-quotation-sent>`)
+- :guilabel:`To Fulfill`: confirmed and paid orders (i.e., :ref:`sales orders
+  <ecommerce/handling/sales-sales-order>`)
 - :guilabel:`To Invoice`: confirmed orders that are ready for invoicing but have not necessarily
   been fulfilled (i.e., :ref:`sales orders <ecommerce/handling/sales-sales-order>`)
 
@@ -101,19 +101,57 @@ To enable abandoned cart reminders:
 #. In the :guilabel:`eCommerce` section, enable :guilabel:`Follow up abandoned carts`.
 #. Set the time delay after which the reminder email is sent in the :guilabel:`Send after` field,
    then click :guilabel:`Save`.
-#. If needed, click the :icon:`fa-arrow-right` :guilabel:`Customize Abandoned Email Template`
-   link to customize the :doc:`email template </applications/general/companies/email_template>`.
+#. If needed, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) icon to customize the
+   :doc:`email template </applications/general/companies/email_template>`.
+
+.. tip::
+   If the :doc:`WhatsApp app </applications/productivity/whatsapp>` is :ref:`installed
+   <general/install>`, you can also select a :ref:`WhatsApp template
+   <productivity/whatsapp/templates>` and click the :icon:`fa-arrow-right` (:guilabel:`Internal
+   link`) icon to customize it. To send a WhatsApp message, customers must have a mobile phone
+   number set.
 
 To view all abandoned carts, go to :menuselection:`Website --> eCommerce --> Orders` and remove
-the :guilabel:`Confirmed` filter. Open the :icon:`fa-caret-down` dropdown menu and, under
-:guilabel:`Filters`, select :guilabel:`Abandoned`.
+the :guilabel:`Confirmed` filter. Then, click the :guilabel:`Search...` bar and, under
+:icon:`fa-filter` :guilabel:`Filters`, select :guilabel:`Abandoned`.
 
 .. note::
-   - To receive reminders, customers must have entered their contact details during
-     checkout or be logged in when adding items to the cart. Without the customer details, it
-     remains a :ref:`quotation <ecommerce/handling/sales>` with no follow-up.
+   - To receive reminders, customers must have entered their contact details during checkout or be
+     logged in when adding items to the cart. Without the customer details, it remains a
+     :ref:`quotation <ecommerce/handling/sales>` with no follow-up.
    - Abandoned cart reminders are only sent for carts created after the feature is enabled.
      Existing abandoned carts are not affected.
+
+.. _ecommerce/order_handling/withdrawal-request:
+
+Withdrawal requests
+-------------------
+
+Add a withdrawal request form to your website to allow customers to easily request the cancellation
+of an order by entering their email address and order number.
+
+.. note::
+   Providing a clearly visible withdrawal request button is mandatory for businesses in the European
+   Union to comply with the `EU Directive 2023/2673
+   <https://eur-lex.europa.eu/eli/dir/2023/2673/oj/eng>`_.
+
+To configure it, follow these steps:
+
+#. Go to the page on which the form should be added.
+#. Open the website builder.
+#. Add the :guilabel:`Contact & Forms` :ref:`building block <website/building_blocks/add>`.
+#. Choose the :guilabel:`Request Withdrawal` :ref:`action <building_blocks/forms/action>`.
+#. Enter the :guilabel:`Recipient Emails` that should receive the withdrawal requests. Multiple
+   email addresses can be entered, separated by commas.
+#. Customize the form :ref:`fields <building_blocks/forms/fields>` and the :ref:`button
+   <website/elements/buttons>`.
+
+When a customer submits a withdrawal request, the specified recipients receive an email
+notification. The request is also logged in the chatter of the corresponding order, where you can
+review it and :guilabel:`Cancel` the order if appropriate.
+
+.. note::
+   The order must have been confirmed to send the request.
 
 .. _ecommerce/handling/rating-request:
 
@@ -124,7 +162,6 @@ Once an order is confirmed, you can automatically send customers a rating reques
 leave a review for the products they purchased.
 
 To enable automated rating requests:
-
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
 #. In the :guilabel:`eCommerce` section, enable :guilabel:`Request ratings`.
@@ -147,7 +184,7 @@ Delivery
      </applications/sales/subscriptions>` products.
 
 Once a sales order is confirmed, a delivery order is automatically created. To access it, click
-the :icon:`fa-truck` :guilabel:`Delivery` smart button on the sales order.
+the :icon:`local_shipping` :guilabel:`Delivery` smart button on the sales order.
 
 The next step is preparing e-commerce orders in the warehouse. Depending on order volume, refill and
 stock management strategies, or available resources, different :doc:`stock handling flows
@@ -250,7 +287,7 @@ be generated manually or automatically.
 To automate invoicing:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
-#. In the :guilabel:`eCommerce` section, enable :guilabel:`Automatic Invoice`.
+#. In the :guilabel:`eCommerce` section, enable :guilabel:`Automatic Invoicing`.
 #. Select the relevant :guilabel:`Email Template`, then click :guilabel:`Save`.
 #. If needed, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) icon next to the template
    name to customize the :doc:`email template </applications/general/companies/email_template>`.
