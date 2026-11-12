@@ -21,13 +21,10 @@ The following modules are installed automatically with the Turkish localization:
    * - :guilabel:`Türkiye - Accounting`
      - `l10n_tr`
      - Base Turkish :ref:`fiscal localization package <fiscal_localizations/packages>` complete with
-       the Turkish chart of accounts, taxes, financial reports, and fiscal positions
+       the Turkish chart of accounts, taxes, financial reports, and fiscal positions.
    * - :guilabel:`Türkiye - Accounting Reports`
      - `l10n_tr_reports`
      - Türkiye-specific tax and profit and loss reporting.
-   * - :guilabel:`Türkiye - e-Irsaliye (e-Dispatch)`
-     - `l10n_tr_nilvera_edispatch`
-     - Enables the generation and upload of e-Dispatch files
 
 Additionally, the following modules must be manually :ref:`installed <general/install>` in order to
 use the :ref:`localizations/turkiye/nilvera` for managing electronic documents:
@@ -42,13 +39,29 @@ use the :ref:`localizations/turkiye/nilvera` for managing electronic documents:
    * - :guilabel:`Türkiye - Nilvera`
      - `l10n_tr_nilvera`
      - Integration module enabling communication with Nilvera and enabling the generation of
-       e-Ledger files
+       e-Ledger files.
+   * - :guilabel:`Türkiye - Nilvera/Base VAT`
+     - `l10n_tr_nilvera_base_vat`
+     - Module bridging Nilvera and the base VAT integration.
    * - :guilabel:`Türkiye - Nilvera E-Invoice`
      - `l10n_tr_nilvera_einvoice`
      - For sending and receiving basic scenario electronic invoices to/from Nilvera.
    * - :guilabel:`Türkiye - Nilvera E-Invoice Extended`
      - `l10n_tr_nilvera_einvoice_extended`
-     - Enhances the e-invoice module, enabling support for multiple invoice types and scenarios
+     - Enhances the e-invoice module, enabling support for multiple invoice types and scenarios.
+   * - :guilabel:`Türkiye - Nilvera E-Invoice Commercial and Return`
+     - `l10n_tr_gib_invoice_scenarios`
+     - Enables invoice scenarios and types for Turkish e-Invoicing compliance, such as commercial
+       invoicing scenarios, return and withholding return invoice types, etc.
+   * - :guilabel:`Türkiye - e-Irsaliye (e-Dispatch)`
+     - `l10n_tr_nilvera_edispatch`
+     - Enables the generation and upload of e-Dispatch files.
+   * - :guilabel:`Türkiye - Payroll`
+     - `l10n_tr_hr_payroll`
+     - Includes the necessary rules for Türkiye.
+   * - :guilabel:`Türkiye - Payroll with Accounting`
+     - `l10n_tr_hr_payroll_account`
+     - Contains the necessary accounting data for the Türkiye payroll rules.
 
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
@@ -123,86 +136,6 @@ functionalities of the Nilvera integration include:
 - storing transmitted XML and PDF versions for auditing
 - :ref:`creating and uploading e-dispatch XML to and from Nilvera <localizations/turkiye/dispatch>`
 
-.. _localizations/turkiye/contacts:
-
-Company and contacts
-====================
-
-Before activating the Türkiye localization, ensure the following information is correctly configured
-in your company's contact record:
-
-.. important::
-   To access all of these fields, go to the company's contact record in the Contacts application or
-   by going to :menuselection:`Accounting --> Customers --> Customers`, removing the
-   :guilabel:`Customer Invoices` filter, and selecting the company's contact record. This is
-   different from accessing the company record itself through the general settings.
-
-- :guilabel:`Company Name`: Must match the |GİB| registration
-- :guilabel:`Turkish Tax Office`: Registered tax office
-- :guilabel:`Tax ID`: VKN/TCKN - 10 digits for companies, 11 for individuals
-- :guilabel:`Address`: Complete legal address
-- :guilabel:`Country`: Registered country
-- :guilabel:`Tags`: Enter the Mersis number as a tag and set the :guilabel:`Category` to
-  :guilabel:`MERSISNO`.
-- :guilabel:`eInvoice format`: Türkiye (UBL TR 1.2)
-- :guilabel:`Alias`: Alias acquired from Nilvera
-
-.. note::
-   - The :guilabel:`eInvoice format` is set automatically based on the contact's country. To edit
-     this field, enable :ref:`developer mode <developer-mode>` to display the field and then
-     manually adjust it.
-   - The :guilabel:`Alias` field is only visible once the company's :guilabel:`Nilvera Status`
-     is :guilabel:`E-Invoice`.
-
-For each customer and vendor:
-
-- Ensure the :guilabel:`Address`, :guilabel:`City`, :guilabel:`State`, :guilabel:`Country`,
-  :guilabel:`Tax ID`, and :guilabel:`eInvoice format` are configured.
-- If the partner is not registered for e-invoicing, Odoo automatically defaults to e-Archive.
-
-.. _localizations/turkiye/tax-creation:
-
-Tax creation
-============
-
-Create exception reasons
-------------------------
-
-To create additional exception reasons, follow these steps:
-
-#. Enable :ref:`developer mode <developer-mode>` and navigate to :menuselection:`Accounting -->
-   Configuration --> GIB Codes`.
-#. Click the :guilabel:`New` button.
-#. Enter a :guilabel:`Reason` and a :guilabel:`Reason Code` that match the values in `Nilvera's
-   documentation <https://developer.nilvera.com/kod-listeleri>`_.
-#. Select the corresponding code type:
-
-   - :guilabel:`Withholding` for withholding tax reasons
-   - :guilabel:`Exception` for tax-exempt reasons
-   - :guilabel:`Export exception` for export exception reasons
-   - :guilabel:`Export registration` for export-registered reasons
-#. For :guilabel:`Withholding` reasons, enter the corresponding percentage.
-
-Create withholding taxes
-------------------------
-
-#. Navigate to :menuselection:`Accounting --> Configuration --> Taxes`.
-#. Click the :guilabel:`New` button to first create the base tax.
-#. Set the :doc:`Tax Computation <../accounting/taxes/tax_computation>` to :guilabel:`Percentage`,
-   and set the :guilabel:`Withholding Tax Reason` field that appears for taxes of this type.
-#. Complete the other mandatory fields of the form (:guilabel:`Tax Name`, :guilabel:`Tax Type`,
-   :guilabel:`Amount`, etc.).
-#. Create additional taxes with :doc:`Tax Computation <../accounting/taxes/tax_computation>` set to
-   :guilabel:`Group of Taxes`. These group taxes should be composed of the base tax created in the
-   previous steps and additional percentage taxes.
-
-.. tip::
-   The :guilabel:`WH 20%` tax illustrates this configuration. To use a different withholding reason,
-   duplicate the base tax, update the reason, and replace the old base tax in duplicated group
-   taxes.
-
-.. _localizations/turkiye/nilvera:
-
 Nilvera integration
 ===================
 
@@ -218,23 +151,49 @@ The integration handles:
 Supported document types
 ------------------------
 
-- e-Invoice
+.. tabs::
 
-  - Basic scenario and public scenario
+   .. tab:: e-Invoice
 
-    - Sales
-    - Withholding
-    - Registered for export
-    - Tax exempt
-  - Export scenario
+      The Turkish localization supports the following scenarios and types:
 
-- e-Archive invoice
+      .. tabs::
 
-  - Sales
-  - Withholding
-  - Registered for export
-  - Tax exempt
-- e-Dispatch note
+         .. tab:: Basic scenario
+
+            - Sales
+            - Withholding
+            - Registered for export
+            - Tax exempt
+
+         .. tab:: Public scenario
+
+            - Sales
+            - Withholding
+            - Tax exempt
+            - Return and Withholding Return
+
+         .. tab:: Export scenario
+
+            test
+
+         .. tab:: Commercial scenario
+
+            - Sales
+            - Withholding
+            - Registered for export
+            - Tax exempt
+
+   .. tab:: e-Archive
+
+      - Sales
+      - Withholding
+      - Registered for export
+      - Tax exempt
+
+   .. tab:: e-Dispatch note
+
+      test
 
 Configuration
 -------------
@@ -439,3 +398,83 @@ e-Ledger compliance
 
 - Sequential numbering must be maintained consistently across the e-Ledger to ensure data integrity
   and compliance.
+
+.. _localizations/turkiye/contacts:
+
+Company and contacts
+====================
+
+Before activating the Türkiye localization, ensure the following information is correctly configured
+in your company's contact record:
+
+.. important::
+   To access all of these fields, go to the company's contact record in the Contacts application or
+   by going to :menuselection:`Accounting --> Customers --> Customers`, removing the
+   :guilabel:`Customer Invoices` filter, and selecting the company's contact record. This is
+   different from accessing the company record itself through the general settings.
+
+- :guilabel:`Company Name`: Must match the |GİB| registration
+- :guilabel:`Turkish Tax Office`: Registered tax office
+- :guilabel:`Tax ID`: VKN/TCKN - 10 digits for companies, 11 for individuals
+- :guilabel:`Address`: Complete legal address
+- :guilabel:`Country`: Registered country
+- :guilabel:`Tags`: Enter the Mersis number as a tag and set the :guilabel:`Category` to
+  :guilabel:`MERSISNO`.
+- :guilabel:`eInvoice format`: Türkiye (UBL TR 1.2)
+- :guilabel:`Alias`: Alias acquired from Nilvera
+
+.. note::
+   - The :guilabel:`eInvoice format` is set automatically based on the contact's country. To edit
+     this field, enable :ref:`developer mode <developer-mode>` to display the field and then
+     manually adjust it.
+   - The :guilabel:`Alias` field is only visible once the company's :guilabel:`Nilvera Status`
+     is :guilabel:`E-Invoice`.
+
+For each customer and vendor:
+
+- Ensure the :guilabel:`Address`, :guilabel:`City`, :guilabel:`State`, :guilabel:`Country`,
+  :guilabel:`Tax ID`, and :guilabel:`eInvoice format` are configured.
+- If the partner is not registered for e-invoicing, Odoo automatically defaults to e-Archive.
+
+.. _localizations/turkiye/tax-creation:
+
+Tax creation
+============
+
+Create exception reasons
+------------------------
+
+To create additional exception reasons, follow these steps:
+
+#. Enable :ref:`developer mode <developer-mode>` and navigate to :menuselection:`Accounting -->
+   Configuration --> GIB Codes`.
+#. Click the :guilabel:`New` button.
+#. Enter a :guilabel:`Reason` and a :guilabel:`Reason Code` that match the values in `Nilvera's
+   documentation <https://developer.nilvera.com/kod-listeleri>`_.
+#. Select the corresponding code type:
+
+   - :guilabel:`Withholding` for withholding tax reasons
+   - :guilabel:`Exception` for tax-exempt reasons
+   - :guilabel:`Export exception` for export exception reasons
+   - :guilabel:`Export registration` for export-registered reasons
+#. For :guilabel:`Withholding` reasons, enter the corresponding percentage.
+
+Create withholding taxes
+------------------------
+
+#. Navigate to :menuselection:`Accounting --> Configuration --> Taxes`.
+#. Click the :guilabel:`New` button to first create the base tax.
+#. Set the :doc:`Tax Computation <../accounting/taxes/tax_computation>` to :guilabel:`Percentage`,
+   and set the :guilabel:`Withholding Tax Reason` field that appears for taxes of this type.
+#. Complete the other mandatory fields of the form (:guilabel:`Tax Name`, :guilabel:`Tax Type`,
+   :guilabel:`Amount`, etc.).
+#. Create additional taxes with :doc:`Tax Computation <../accounting/taxes/tax_computation>` set to
+   :guilabel:`Group of Taxes`. These group taxes should be composed of the base tax created in the
+   previous steps and additional percentage taxes.
+
+.. tip::
+   The :guilabel:`WH 20%` tax illustrates this configuration. To use a different withholding reason,
+   duplicate the base tax, update the reason, and replace the old base tax in duplicated group
+   taxes.
+
+.. _localizations/turkiye/nilvera:
