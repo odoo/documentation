@@ -21,13 +21,10 @@ The following modules are installed automatically with the Turkish localization:
    * - :guilabel:`Türkiye - Accounting`
      - `l10n_tr`
      - Base Turkish :ref:`fiscal localization package <fiscal_localizations/packages>` complete with
-       the Turkish chart of accounts, taxes, financial reports, and fiscal positions
+       the Turkish chart of accounts, taxes, financial reports, and fiscal positions.
    * - :guilabel:`Türkiye - Accounting Reports`
      - `l10n_tr_reports`
      - Türkiye-specific tax and profit and loss reporting.
-   * - :guilabel:`Türkiye - e-Irsaliye (e-Dispatch)`
-     - `l10n_tr_nilvera_edispatch`
-     - Enables the generation and upload of e-Dispatch files
 
 Additionally, the following modules must be manually :ref:`installed <general/install>` in order to
 use the :ref:`localizations/turkiye/nilvera` for managing electronic documents:
@@ -42,13 +39,29 @@ use the :ref:`localizations/turkiye/nilvera` for managing electronic documents:
    * - :guilabel:`Türkiye - Nilvera`
      - `l10n_tr_nilvera`
      - Integration module enabling communication with Nilvera and enabling the generation of
-       e-Ledger files
+       e-Ledger files.
+   * - :guilabel:`Türkiye - Nilvera/Base VAT`
+     - `l10n_tr_nilvera_base_vat`
+     - Module bridging Nilvera and the base VAT integration.
    * - :guilabel:`Türkiye - Nilvera E-Invoice`
      - `l10n_tr_nilvera_einvoice`
      - For sending and receiving basic scenario electronic invoices to/from Nilvera.
    * - :guilabel:`Türkiye - Nilvera E-Invoice Extended`
      - `l10n_tr_nilvera_einvoice_extended`
-     - Enhances the e-invoice module, enabling support for multiple invoice types and scenarios
+     - Enhances the e-invoice module, enabling support for multiple invoice types and scenarios.
+   * - :guilabel:`Türkiye - Nilvera E-Invoice Commercial and Return`
+     - `l10n_tr_gib_invoice_scenarios`
+     - Enables invoice scenarios and types for Turkish e-Invoicing compliance, such as commercial
+       invoicing scenarios, return and withholding return invoice types, etc.
+   * - :guilabel:`Türkiye - e-Irsaliye (e-Dispatch)`
+     - `l10n_tr_nilvera_edispatch`
+     - Enables the generation and upload of e-Dispatch files.
+   * - :guilabel:`Türkiye - Payroll`
+     - `l10n_tr_hr_payroll`
+     - Includes the necessary rules for Türkiye.
+   * - :guilabel:`Türkiye - Payroll with Accounting`
+     - `l10n_tr_hr_payroll_account`
+     - Contains the necessary accounting data for the Türkiye payroll rules.
 
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
@@ -105,10 +118,48 @@ localization is installed.
    can be generated, such as for :ref:`withholding tax reasons <localizations/turkiye/tax-creation>`
    that do not exist yet in the database.
 
+.. _localizations/turkiye/tax-creation:
+
+Create exception reasons
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To create additional exception reasons, follow these steps:
+
+#. Enable :ref:`developer mode <developer-mode>` and navigate to :menuselection:`Accounting -->
+   Configuration --> GIB Codes`.
+#. Click the :guilabel:`New` button.
+#. Enter a :guilabel:`Reason` and a :guilabel:`Reason Code` that match the values in `Nilvera's
+   documentation <https://developer.nilvera.com/kod-listeleri>`_.
+#. Select the corresponding code type:
+
+   - :guilabel:`Withholding` for withholding tax reasons
+   - :guilabel:`Exception` for tax-exempt reasons
+   - :guilabel:`Export exception` for export exception reasons
+   - :guilabel:`Export registration` for export-registered reasons
+#. For :guilabel:`Withholding` reasons, enter the corresponding percentage.
+
+Create withholding taxes
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Navigate to :menuselection:`Accounting --> Configuration --> Taxes`.
+#. Click the :guilabel:`New` button to first create the base tax.
+#. Set the :doc:`Tax Computation <../accounting/taxes/tax_computation>` to :guilabel:`Percentage`,
+   and set the :guilabel:`Withholding Tax Reason` field that appears for taxes of this type.
+#. Complete the other mandatory fields of the form (:guilabel:`Tax Name`, :guilabel:`Tax Type`,
+   :guilabel:`Amount`, etc.).
+#. Create additional taxes with :doc:`Tax Computation <../accounting/taxes/tax_computation>` set to
+   :guilabel:`Group of Taxes`. These group taxes should be composed of the base tax created in the
+   previous steps and additional percentage taxes.
+
+.. tip::
+   The :guilabel:`WH 20%` tax illustrates this configuration. To use a different withholding reason,
+   duplicate the base tax, update the reason, and replace the old base tax in duplicated group
+   taxes.
+
 .. _localizations/turkiye/eds:
 
-Electronic document solutions
------------------------------
+Electronic document solution
+----------------------------
 
 The Turkish localization ensures compliance with the |GİB|'s requirements for e-invoice, e-archive,
 e-dispatch, and e-ledger processes.
@@ -117,11 +168,229 @@ Through the Nilvera integration, Odoo enables the automated transmission, recept
 of e-documents in accordance with the |GİB|'s electronic document standards. The main
 functionalities of the Nilvera integration include:
 
-- :ref:`creating and validating e-archives and e-invoices <localizations/turkiye/send>` directly
-  from Odoo
-- :ref:`receiving and processing responses from Nilvera/GİB <localizations/turkiye/receive>`
-- storing transmitted XML and PDF versions for auditing
-- :ref:`creating and uploading e-dispatch XML to and from Nilvera <localizations/turkiye/dispatch>`
+- :ref:`Creating and validating e-archives and e-invoices <localizations/turkiye/invoices-send>`
+  directly from Odoo.
+- :ref:`Receiving and processing responses from Nilvera/GİB
+  <localizations/turkiye/invoices-receive>`.
+- Storing transmitted XML and PDF versions for auditing.
+- :ref:`Creating and uploading e-dispatch XML to and from Nilvera <localizations/turkiye/dispatch>`.
+
+.. _localizations/turkiye/nilvera:
+
+Nilvera integration
+~~~~~~~~~~~~~~~~~~~
+
+Supported document types
+************************
+
+.. tabs::
+
+   .. tab:: e-Invoice
+
+      The Turkish localization supports the following scenarios and types:
+
+      .. tabs::
+
+         .. tab:: Basic scenario
+
+            - Sales
+            - Withholding
+            - Registered for export
+            - Tax exempt
+
+         .. tab:: Public scenario
+
+            - Sales
+            - Withholding
+            - Tax exempt
+            - Return and Withholding Return
+
+         .. tab:: Export scenario
+
+            Odoo supports export scenarios.
+
+         .. tab:: Commercial scenario
+
+            - Sales
+            - Withholding
+            - Registered for export
+            - Tax exempt
+
+   .. tab:: e-Archive
+
+      - Sales
+      - Withholding
+      - Registered for export
+      - Tax exempt
+
+   .. tab:: e-Dispatch note
+
+      Odoo supports e-Dispatch notes.
+
+Configuration
+*************
+
+The `Nilvera documentation <https://test-setup.obs.tr-west-1.myhuaweicloud.com/odoo/Nilvera_Odoo_Integration_Information.pdf>`_
+provides instructions for accessing the sandbox and generating the API credentials.
+
+To configure the Nilvera integration with your database, follow these steps:
+
+#. Make sure the :guilabel:`Türkiye - Nilvera` module is :ref:`installed <general/install>`.
+#. Navigate to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the
+   :guilabel:`Türkiye Electronic Integrations` section.
+#. Configure:
+
+   - :guilabel:`Nilvera API credentials` (generated in Nilvera)
+   - :guilabel:`Incoming Invoices Journal` (i.e., :guilabel:`Purchases`)
+
+To configure your customer contact records to be able to send them e-invoices via Nilvera, follow
+these steps:
+
+#. Navigate to :menuselection:`Accounting --> Customers --> Customers`.
+#. Remove the :guilabel:`Customer Invoices` filter (if necessary), and select the partner to contact
+   via Nilvera.
+#. Open the :guilabel:`Accounting` tab and click :guilabel:`Verify` next to :guilabel:`Nilvera
+   Status`.
+
+.. _localizations/turkiye/invoices:
+
+e-Invoices
+**********
+
+e-Invoice/e-Archive is a government-approved digital invoice system that replaces traditional paper
+invoices, allowing businesses to issue, transmit, and store invoices electronically in compliance
+with Turkish tax regulations. While e-Invoices are for customers who are registered with the |GİB|,
+e-Archives can be sent to customers who are not registered with the |GİB|, ensuring senders can
+comply with government regulations even when dealing with foreign customers or B2C workflows.
+
+.. _localizations/turkiye/invoices-send:
+
+Sending e-Invoices via Nilvera
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To send an e-Invoice/e-Archive, follow these steps:
+
+#. Make sure the :guilabel:`Türkiye - Nilvera E-Invoice` and :guilabel:`Türkiye - Nilvera E-Invoice
+   Extended` modules are :ref:`installed <general/install>`.
+#. When :ref:`creating a customer invoice <accounting/invoice/creation>`, after selecting a
+   :guilabel:`Customer`,
+
+   - if the customer's :guilabel:`Nilvera Status` is :guilabel:`e-Archive`, two fields will appear:
+
+     - :guilabel:`Is GIB Export`: used for product export invoices to partners outside of Türkiye
+     - :guilabel:`Invoice Type`: determines the type of invoice
+   - if the customer's :guilabel:`Nilvera Status` is :guilabel:`e-Invoice`, the
+     :guilabel:`Invoice Scenario` field will appear: Select the scenario of the invoice to be sent
+     to the |GİB|.
+#. :ref:`Send <accounting/invoice/sending>` the invoice, and ensure :guilabel:`by Nilvera` is
+   selected to issue an e-invoice.
+
+.. _localizations/turkiye/invoices-receive:
+
+Update Nilvera status
+^^^^^^^^^^^^^^^^^^^^^
+
+To update the :guilabel:`Nilvera Status` of invoices in Odoo, follow these steps:
+
+#. Open the :guilabel:`Accounting Dashboard`.
+#. Click on the :guilabel:`Sales` journal.
+#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then click :guilabel:`Refresh e-Invoices
+   Status`. This action updates the :guilabel:`Nilvera Status` field on each invoice.
+
+.. _localizations/turkiye/invoices-fetch:
+
+Fetch e-Invoice PDFs
+^^^^^^^^^^^^^^^^^^^^
+
+There are two methods to fetch PDFs of e-invoices:
+
+#. From the invoice list view:
+
+   #. Go to :menuselection:`Accounting --> Customers --> Invoices`.
+   #. Select one or multiple invoices.
+   #. Click :guilabel:`Fetch Nilvera PDF`.
+#. From an invoice form view: Once the :guilabel:`Nilvera Status` is :guilabel:`Successful`, click
+   the :guilabel:`Fetch Nilvera PDF` button.
+
+.. _localizations/turkiye/receive-purchase:
+
+Receive purchase e-Invoices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To fetch e-invoices generated in Nilvera and received by your company:
+
+#. Open the :guilabel:`Accounting Dashboard`.
+#. Click on the :guilabel:`Purchase` journal.
+#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then click :guilabel:`Fetch e-invoices`. The
+   received e-invoices are created as vendor bills in :guilabel:`Draft` status.
+
+.. _localizations/turkiye/fetch-bill:
+
+Fetch PDFs of bills generated in Odoo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For vendor bills that were created in Odoo, PDF retrieval works the same way as for customer
+invoices:
+
+#. Go to :menuselection:`Accounting --> Vendors --> Bills`.
+#. Select one or multiple vendor bills.
+#. Click the :guilabel:`Fetch Nilvera PDF` button.
+
+.. _localizations/turkiye/invoices-cancel:
+
+Cancel Nilvera e-Invoices
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once an e-Invoice is confirmed and sent via Nilvera, you can cancel it by opening the invoice and
+clicking :guilabel:`Request Nilvera cancellation. The status will change from :guilabel:`Posted` to
+:guilabel:`Cancelled`.
+
+.. _localizations/turkiye/dispatch:
+
+e-Dispatch files
+****************
+
+.. _localizations/turkiye/dispatch-generate:
+
+Generate e-Dispatch files
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The e-Dispatch is an electronic document that replaces traditional paper delivery notes, allowing
+businesses to digitally issue, transmit, and track shipment details for goods in transit. In Odoo,
+users can generate e-Dispatch documents as XML and upload them through the Nilvera integration,
+ensuring compliant and traceable delivery operations.
+
+#. Navigate to :menuselection:`Inventory --> Operations --> Deliveries`.
+#. Open an existing delivery order or create a new one.
+#. Once a :guilabel:`Delivery Address` is selected, fill in the necessary information in the
+   :guilabel:`e-Dispatch` tab that appears.
+#. #. Once the delivery order is validated, click the :guilabel:`Generate GİB e-Dispatch (XML)`
+   button that appears to generate the XML file.
+#. Download the generated file attached to the delivery order and upload it to Nilvera for
+   processing.
+
+.. _localizations/turkiye/dispatch-upload:
+
+Upload e-Dispatch files
+^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Download the received e-Dispatch XML from Nilvera.
+#. Navigate to :menuselection:`Inventory --> Operations --> Receipts`.
+#. Click the :guilabel:`Upload e-Receipt (XML)` button and select the downloaded file.
+
+.. _localizations/turkiye/e-ledger:
+
+Generate e-Ledger
+*****************
+
+The e-Ledger is an electronic system that enables businesses to digitally store and submit their
+accounting records to the government for tax and regulatory compliance. In Odoo, users can generate
+the e-Ledger as a zipped CSV file and report company records seamlessly through the Nilvera
+integration.
+
+#. Navigate to :menuselection:`Accounting --> Reporting --> General Ledger`.
+#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon.
+#. Click :guilabel:`Generate e-Ledger` to generate the file and download it to your computer.
 
 .. _localizations/turkiye/contacts:
 
@@ -160,241 +429,19 @@ For each customer and vendor:
   :guilabel:`Tax ID`, and :guilabel:`eInvoice format` are configured.
 - If the partner is not registered for e-invoicing, Odoo automatically defaults to e-Archive.
 
-.. _localizations/turkiye/tax-creation:
-
-Tax creation
-============
-
-Create exception reasons
-------------------------
-
-To create additional exception reasons, follow these steps:
-
-#. Enable :ref:`developer mode <developer-mode>` and navigate to :menuselection:`Accounting -->
-   Configuration --> GIB Codes`.
-#. Click the :guilabel:`New` button.
-#. Enter a :guilabel:`Reason` and a :guilabel:`Reason Code` that match the values in `Nilvera's
-   documentation <https://developer.nilvera.com/kod-listeleri>`_.
-#. Select the corresponding code type:
-
-   - :guilabel:`Withholding` for withholding tax reasons
-   - :guilabel:`Exception` for tax-exempt reasons
-   - :guilabel:`Export exception` for export exception reasons
-   - :guilabel:`Export registration` for export-registered reasons
-#. For :guilabel:`Withholding` reasons, enter the corresponding percentage.
-
-Create withholding taxes
-------------------------
-
-#. Navigate to :menuselection:`Accounting --> Configuration --> Taxes`.
-#. Click the :guilabel:`New` button to first create the base tax.
-#. Set the :doc:`Tax Computation <../accounting/taxes/tax_computation>` to :guilabel:`Percentage`,
-   and set the :guilabel:`Withholding Tax Reason` field that appears for taxes of this type.
-#. Complete the other mandatory fields of the form (:guilabel:`Tax Name`, :guilabel:`Tax Type`,
-   :guilabel:`Amount`, etc.).
-#. Create additional taxes with :doc:`Tax Computation <../accounting/taxes/tax_computation>` set to
-   :guilabel:`Group of Taxes`. These group taxes should be composed of the base tax created in the
-   previous steps and additional percentage taxes.
-
-.. tip::
-   The :guilabel:`WH 20%` tax illustrates this configuration. To use a different withholding reason,
-   duplicate the base tax, update the reason, and replace the old base tax in duplicated group
-   taxes.
-
-.. _localizations/turkiye/nilvera:
-
-Nilvera integration
-===================
-
-Odoo integrates with Nilvera, a |GİB|-approved electronic document intermediary, to manage
-e-invoice, e-archive, e-dispatch, and e-ledger processes.
-
-The integration handles:
-
-- XML data generation in a |GİB|-compliant format
-- secure transmission to Nilvera
-- synchronization of documents and statuses within Odoo.
-
-Supported document types
-------------------------
-
-- e-Invoice
-
-  - Basic scenario and public scenario
-
-    - Sales
-    - Withholding
-    - Registered for export
-    - Tax exempt
-  - Export scenario
-
-- e-Archive invoice
-
-  - Sales
-  - Withholding
-  - Registered for export
-  - Tax exempt
-- e-Dispatch note
-
-Configuration
--------------
-
-The `Nilvera documentation <https://test-setup.obs.tr-west-1.myhuaweicloud.com/odoo/Nilvera_Odoo_Integration_Information.pdf>`_
-provides instructions for accessing the sandbox and generating the API credentials.
-
-To configure the Nilvera integration with your database, follow these steps:
-
-#. Make sure the :guilabel:`Türkiye - Nilvera` module is :ref:`installed <general/install>`.
-#. Navigate to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the
-   :guilabel:`Türkiye Electronic Integrations` section.
-#. Configure:
-
-   - :guilabel:`Nilvera API credentials` (generated in Nilvera)
-   - :guilabel:`Incoming Invoices Journal` (i.e., :guilabel:`Purchases`)
-
-To configure your customer contact records to be able to send them e-invoices via Nilvera, follow
-these steps:
-
-#. Navigate to :menuselection:`Accounting --> Customers --> Customers`.
-#. Remove the :guilabel:`Customer Invoices` filter (if necessary), and select the partner to contact
-   via Nilvera.
-#. Open the :guilabel:`Accounting` tab and click :guilabel:`Verify` next to :guilabel:`Nilvera
-   Status`.
-
-.. _localizations/turkiye/send:
-
-Send e-Invoices via Nilvera
----------------------------
-
-e-Invoice/e-Archive is a government-approved digital invoice system that replaces traditional paper
-invoices, allowing businesses to issue, transmit, and store invoices electronically in compliance
-with Turkish tax regulations. While e-Invoices are for customers who are registered with the |GİB|,
-e-Archives can be sent to customers who are not registered with the |GİB|, ensuring senders can
-comply with government regulations even when dealing with foreign customers or B2C workflows.
-
-To send an e-Invoice/e-Archive, follow these steps:
-
-#. Make sure the :guilabel:`Türkiye - Nilvera E-Invoice` and :guilabel:`Türkiye - Nilvera E-Invoice
-   Extended` modules are :ref:`installed <general/install>`.
-#. When :ref:`creating a customer invoice <accounting/invoice/creation>`, after selecting a
-   :guilabel:`Customer`,
-
-   - if the customer's :guilabel:`Nilvera Status` is :guilabel:`e-Archive`, two fields will appear:
-
-     - :guilabel:`Is GIB Export`: used for product export invoices to partners outside of Türkiye
-     - :guilabel:`Invoice Type`: determines the type of invoice
-   - if the customer's :guilabel:`Nilvera Status` is :guilabel:`e-Invoice`, the
-     :guilabel:`Invoice Scenario` field will appear: Select the scenario of the invoice to be sent
-     to the |GİB|.
-#. :ref:`Send <accounting/invoice/sending>` the invoice, and ensure :guilabel:`by Nilvera` is
-   selected to issue an e-invoice.
-
-.. _localizations/turkiye/receive:
-
-Receive e-Invoices via Nilvera
-------------------------------
-
-Update Nilvera status
-~~~~~~~~~~~~~~~~~~~~~
-
-To update the :guilabel:`Nilvera Status` of invoices in Odoo, follow these steps:
-
-#. Open the :guilabel:`Accounting Dashboard`.
-#. Click on the :guilabel:`Sales` journal.
-#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then click :guilabel:`Refresh e-Invoices
-   Status`. This action updates the :guilabel:`Nilvera Status` field on each invoice.
-
-.. _localizations/turkiye/fetch-invoice:
-
-Fetch e-invoice PDFs
-~~~~~~~~~~~~~~~~~~~~
-
-There are two methods to fetch PDFs of e-invoices:
-
-#. From the invoice list view:
-
-   #. Go to :menuselection:`Accounting --> Customers --> Invoices`.
-   #. Select one or multiple invoices.
-   #. Click the :guilabel:`Fetch Nilvera PDF`
-#. From an invoice form view: Once the :guilabel:`Nilvera Status` is :guilabel:`Successful`, click
-   the :guilabel:`Fetch Nilvera PDF` button.
-
-.. _localizations/turkiye/receive-purchase:
-
-Receive purchase e-invoices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To fetch e-invoices generated in Nilvera and received by your company:
-
-#. Open the :guilabel:`Accounting Dashboard`.
-#. Click on the :guilabel:`Purchase` journal.
-#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then click :guilabel:`Fetch e-invoices`. The
-   received e-invoices are created as vendor bills in :guilabel:`Draft` status.
-
-.. _localizations/turkiye/fetch-bill:
-
-Fetch PDFs of bills generated in Odoo
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For vendor bills that were created in Odoo, PDF retrieval works the same way as for customer
-invoices:
-
-#. Go to :menuselection:`Accounting --> Vendors --> Bills`.
-#. Select one or multiple vendor bills.
-#. Click the :guilabel:`Fetch Nilvera PDF` button.
-
-.. _localizations/turkiye/e-ledger:
-
-Generate e-Ledger
------------------
-
-The e-Ledger is an electronic system that enables businesses to digitally store and submit their
-accounting records to the government for tax and regulatory compliance. In Odoo, users can generate
-the e-Ledger as a zipped CSV file and report company records seamlessly through the Nilvera
-integration.
-
-#. Navigate to :menuselection:`Accounting --> Reporting --> General Ledger`.
-#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon.
-#. Click :guilabel:`Generate e-Ledger` to generate the file and download it to your computer.
-
-.. _localizations/turkiye/dispatch:
-
-Manage e-Dispatch files
------------------------
-
-Generate e-Dispatch files
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The e-Dispatch is an electronic document that replaces traditional paper delivery notes, allowing
-businesses to digitally issue, transmit, and track shipment details for goods in transit. In Odoo,
-users can generate e-Dispatch documents as XML and upload them through the Nilvera integration,
-ensuring compliant and traceable delivery operations.
-
-#. Navigate to :menuselection:`Inventory --> Operations --> Deliveries`.
-#. Open an existing delivery order or create a new one.
-#. Once a :guilabel:`Delivery Address` is selected, fill in the necessary information in the
-   :guilabel:`e-Dispatch` tab that appears.
-#. #. Once the delivery order is validated, click the :guilabel:`Generate GİB e-Dispatch (XML)`
-   button that appears to generate the XML file.
-#. Download the generated file attached to the delivery order and upload it to Nilvera for
-   processing.
-
-Upload e-Dispatch files
-~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Download the received e-Dispatch XML from Nilvera.
-#. Navigate to :menuselection:`Inventory --> Operations --> Receipts`.
-#. Click the :guilabel:`Upload e-Receipt (XML)` button and select the downloaded file.
+.. _localizations/turkiye/compliance:
 
 Mandatory compliance information
---------------------------------
+================================
 
 The following rules are mandatory for all users of the Türkiye localization integration. Compliance
 with these requirements is essential for the legal validity of e-Documents issued through the |GİB|
 via Nilvera.
 
+.. _localizations/turkiye/structure:
+
 Document numbering structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 - All generated invoices and dispatch documents must follow a specific numbering structure: `three
   alphanumeric characters` + `document year` + `sequential number`.
@@ -411,8 +458,10 @@ Document numbering structure
    - :doc:`../accounting/customer_invoices/sequence`
    - :doc:`../accounting/vendor_bills/sequence`
 
+.. _localizations/turkiye/sequence:
+
 Sequential number gaps
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 - If a sequence number is skipped, the previous missing numbers must be issued within 7 days.
 
@@ -422,14 +471,18 @@ Sequential number gaps
 
 - No sequence number can remain unissued beyond this period.
 
+.. _localizations/turkiye/discounts:
+
 Discount rules
-~~~~~~~~~~~~~~
+--------------
 
 - Global discounts (discounts shown as a separate invoice line) cannot be issued.
 - All discounts must be applied at the product line level within the invoice.
 
+.. _localizations/turkiye/e-ledger-compliance:
+
 e-Ledger compliance
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 - The first issued invoice must represent the opening balance for the accounting period.
 - All subsequent invoices must follow the sequential numbering pattern:
