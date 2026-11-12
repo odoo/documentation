@@ -24,16 +24,20 @@ changes.
 
 Once the setting has been enabled, open the main **Recruitment** dashboard by navigating to
 :menuselection:`Recruitment app --> Applications --> By Job Positions`. Next, click the
-:guilabel:`Job Page` button, then click the :guilabel:`Unpublished` toggle in the upper-right
-corner. The toggle becomes green and displays :guilabel:`Published`. Return to the main dashboard by
-navigating to :menuselection:`Recruitment app --> Applications --> By Job Positions`.
+:guilabel:`Job Page` button to open the job position page on the website, then click the
+:guilabel:`Unpublished` toggle in the upper-right corner. The toggle becomes green and displays
+:guilabel:`Published`. Return to the main dashboard by navigating to :menuselection:`Recruitment app
+--> Applications --> By Job Positions`.
 
 When a job position is published, a green :guilabel:`Published` banner appears in the top-right
 corner of the job position card.
 
 .. tip::
    Alternatively, click the :guilabel:`Configure` button on a job position card, then click the
-   :guilabel:`Published` toggle in the *Job Posting* section of the *Details* tab.
+   :guilabel:`Published` toggle in the *Hiring Process* section of the *Details* tab. To publish the
+   job position at a later date, select the date and time in the :guilabel:`Publish On` field
+   instead. The job position card then displays a :guilabel:`Scheduled` banner until the job
+   position is published.
 
 .. _recruitment/post-job/boards:
 
@@ -41,25 +45,28 @@ Post on job boards
 ==================
 
 Posting a job on a job board is an effective way to reach a wider audience and attract more
-candidates.
+applicants.
 
 .. note::
-   Currently, Odoo only supports directly posting to Monster.com. Check back frequently for more
-   updates, as more job boards are added.
+   Currently, Odoo only supports directly posting to Monster.com.
 
 Job board credentials
 ---------------------
 
-To publish a job listing onto a job board outside of Odoo, the job board credentials must be
-configured first. Navigate to :menuselection:`Recruitment app --> Configuration --> Settings`. In
-the *Monster Credentials* section, enter the :guilabel:`Username` and :guilabel:`Password` for
-Monster in the corresponding fields, then click the :guilabel:`Save` button.
+To publish a job listing onto a job board outside of Odoo, the job board module must be activated,
+and the job board credentials must be configured.
 
-.. note::
-   When installing the **Recruitment** app, the following modules are automatically installed: *Job
-   Board - Monster.com*, *Job Board - Monster.com (Skills)*, and *Job Board - Monster.com
-   (Website)*. If any of these modules are *not* installed, :doc:`install them
-   <../../general/apps_modules>` from the main **Apps** app.
+Navigate to :menuselection:`Recruitment app --> Configuration --> Settings`. In the *Job Posting*
+section, click the :icon:`east` :guilabel:`Activate Job Board` link of the :guilabel:`Job Board`
+setting. The list of available job board modules opens. Click :guilabel:`Activate` on the
+*Job Board - Monster.com* module. The *Job Board - Monster.com (Skills)* and
+*Job Board - Monster.com (Website)* modules are then automatically installed as well, if the
+applicants' skills and the website job pages are used in the database.
+
+Once the module is installed, return to :menuselection:`Recruitment app --> Configuration -->
+Settings`. In the *Monster Credentials* setting, enter the :guilabel:`Username` and
+:guilabel:`Password` for Monster in the corresponding fields, then click the :guilabel:`Save`
+button.
 
 Publish on job board
 --------------------
@@ -67,7 +74,7 @@ Publish on job board
 Once the credentials have been configured for the job board, it is possible to post a job position.
 
 Navigate to :menuselection:`Recruitment app --> Applications --> Job Boards Posts`, click
-:guilabel:`Publish on Jobs Board`, and a *Publish on a Job Board* pop-up window loads. Fill out the
+:guilabel:`Publish on Jobs Board`, and a *Publish on Job Board* pop-up window loads. Fill out the
 following information in the pop-up window:
 
 - :guilabel:`Job`: Select the job position being shared using the drop-down menu.
@@ -76,7 +83,7 @@ following information in the pop-up window:
   positions within a specific industry.
 - :guilabel:`Job Board`: Select the job board being posted to with the drop-down menu.
 - :guilabel:`Apply Method`: Click the desired radio button to determine how applicants apply for the
-  position. The two options are:
+  position. This field only appears when the **Website** app is installed. The two options are:
 
   - :guilabel:`Send an Email`: Select this for applicants to apply for the job via email.
   - :guilabel:`Redirect to company's website`: Select this for applicants to apply for the job via
@@ -97,14 +104,12 @@ following information in the pop-up window:
   any desired changes to it in this section. This is what appears on the job board.
 
   .. tip::
-     Click the :guilabel:`Generate Description` (:icon:`fa-magic` :guilabel:`AI`) to use AI to edit
-     or create the job description.
+     Click the :guilabel:`Generate Description` (:icon:`wand_stars` :guilabel:`AI`) button to use
+     AI to edit or create the job description. This button only appears when the **Website** app is
+     installed.
 
 Once the listing is ready, click the :guilabel:`Post` button. After the post has been published to a
 job board, the *Job Boards Posts* page reloads, and the new post appears in a Kanban card.
-
-.. image:: post_job/job-board.png
-   :alt: A job board listing form filled out.
 
 Job board emails
 ~~~~~~~~~~~~~~~~
@@ -128,14 +133,14 @@ and pulls applicant information from the email when creating an applicant record
    create an applicant record for `John Doe`.
 
 To view the currently configured job board emails, navigate to :menuselection:`Recruitment app -->
-Configuration --> Emails`. Three emails come preconfigured in the database: :guilabel:`LinkedIn`,
-:guilabel:`Jobsdb`, and :guilabel:`Indeed`.
+Configuration --> Job Boards --> Emails`. Three emails come preconfigured in the database:
+:guilabel:`Linkedin`, :guilabel:`Jobsdb`, and :guilabel:`Indeed`.
 
 Create job board emails
 ***********************
 
 To create a new job board email, navigate to :menuselection:`Recruitment app --> Configuration -->
-Emails`. Click the :guilabel:`New` button, and a blank *Emails* form loads.
+Job Boards --> Emails`. Click the :guilabel:`New` button, and a blank *Emails* form loads.
 
 Enter the :guilabel:`Name` for the platform, such as `Glassdoor`, in the corresponding field. Next,
 enter the email address the applications come from in the :guilabel:`Email` field. Last, enter the
@@ -145,8 +150,8 @@ View job board listings
 -----------------------
 
 To view all the job positions that have been posted to a job board, navigate to
-:menuselection:`Recruitment --> Applications --> Job Boards Posts`. This presents the :guilabel:`Job
-Boards Posts` dashboard and all job board postings.
+:menuselection:`Recruitment app --> Applications --> Job Boards Posts`. This presents the
+:guilabel:`Job Boards Posts` dashboard and all job board postings.
 
 Each listing is displayed in an individual Kanban card, with the following information:
 
@@ -159,7 +164,6 @@ Each listing is displayed in an individual Kanban card, with the following infor
 - :guilabel:`To`: The date the listing is removed from the job board.
 - :guilabel:`User Icon`: The icon of the user who posted the listing.
 
-Click on any Kanban card to view the details for the specific job board listing.
-
-.. image:: post_job/posts.png
-   :alt: All job positions posted to a job board.
+Click on any Kanban card to view the details for the specific job board listing. The job board
+posts of a job position are also listed in the *Job Boards* tab of the :doc:`job position form
+<new_job>`, and are accessible from its :icon:`newspaper` :guilabel:`Job Board` smart button.
