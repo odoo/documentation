@@ -34,17 +34,19 @@ Availability
 
 Expense cards are currently available for the following countries:
 
-+-------------+-------------+-------------+-------------+
-| Austria     | Belgium     | Croatia     | Cyprus      |
-+-------------+-------------+-------------+-------------+
-| Estonia     | Finland     | France      | Germany     |
-+-------------+-------------+-------------+-------------+
-| Greece      | Ireland     | Italy       | Latvia      |
-+-------------+-------------+-------------+-------------+
-| Lithuania   | Luxembourg  | Malta       | Netherlands |
-+-------------+-------------+-------------+-------------+
-| Portugal    | Slovakia    | Slovenia    | Spain       |
-+-------------+-------------+-------------+-------------+
++----------------+------------------+-------------+-------------+
+| Austria        | Belgium          | Croatia     | Cyprus      |
++----------------+------------------+-------------+-------------+
+| England        | Estonia          | Finland     | France      |
++----------------+------------------+-------------+-------------+
+| Germany        | Greece           | Ireland     | Italy       |
++----------------+------------------+-------------+-------------+
+| Latvia         | Lithuania        | Luxembourg  | Malta       |
++----------------+------------------+-------------+-------------+
+| Netherlands    | Northern Ireland | Portugal    | Scotland    |
++----------------+------------------+-------------+-------------+
+| Slovakia       | Slovenia         | Spain       | Wales       |
++----------------+------------------+-------------+-------------+
 
 Only companies located in one of these countries are able to create and use expense cards.
 
