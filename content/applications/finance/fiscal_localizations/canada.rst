@@ -330,8 +330,12 @@ EFT - electronic transfers
 
 In Canada, Electronic Funds Transfer (EFT) refers to the digital transfer of funds between different
 bank accounts, largely replacing traditional paper-based transactions. :abbr:`EFT (Electronic Funds
-Transfers)` is the primary system used by businesses to automate payroll, pay suppliers, and collect
-recurring payments.
+Transfers)` is the primary system used by businesses to automate payroll and pay suppliers.
+
+.. important::
+   Odoo only supports outgoing :abbr:`EFT (Electronic Funds Transfer)` payments, such as paying
+   vendor bills. Collecting customer payments via :abbr:`EFT (Electronic Funds Transfer)` is not
+   supported yet.
 
 .. _localizations/canada/cpa005:
 
@@ -339,7 +343,8 @@ CPA005 file
 ~~~~~~~~~~~
 
 CPA005 is a standardized file format used by Canadian banks to process batched financial
-transactions, primarily for :abbr:`EFT (Electronic Funds Transfers)`.
+transactions, primarily for :abbr:`EFT (Electronic Funds Transfers)`. In Odoo, CPA005 files are
+generated for outgoing vendor payments only.
 
 .. note::
    Make sure to :ref:`install <general/install>` the :guilabel:`CPA005 Payments`
