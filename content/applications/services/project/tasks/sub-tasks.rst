@@ -40,8 +40,13 @@ Once the new sub-task is created, the following changes occur in the parent task
 - The :guilabel:`Timesheets` tab includes a breakdown of time spent on the parent task as well as
   sub-tasks.
 
+Sub-task visibility
+===================
+
 Click :guilabel:`View` to open the sub-task you created. The sub-task form is identical to the
-:ref:`task form <task_creation/task-configuration>`.
+:ref:`task form <task_creation/task-configuration>`. Click the :icon:`see_records` (:guilabel:`See records`) to make
+the sub-task visible in your pipeline.
+
 
 .. tip::
 
