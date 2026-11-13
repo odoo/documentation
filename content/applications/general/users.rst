@@ -258,3 +258,4 @@ In the *Access Rights* tab, under the *Roles* section, configure the :guilabel:`
    users/google
    users/azure
    users/ldap
+   users/light_users
