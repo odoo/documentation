@@ -164,6 +164,7 @@ Once a localization has been installed, configure the following fields:
    payroll/salary_attachments
    payroll/payslips
    payroll/pay_runs
+   payroll/warnings
    payroll/commissions
    payroll/headcount
    payroll/work_entry_analysis
