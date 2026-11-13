@@ -15,11 +15,12 @@ Create rewards
 Rewards are the only configurations needed when setting up the **Referrals** application.
 
 .. important::
-   Only users with :doc:`Administrator rights <../../general/users/access_rights>` for the
-   **Recruitment** application can create or modify rewards.
+   Only **Referrals** :ref:`administrators <referrals/access-rights>` can create rewards. A
+   :guilabel:`Gift Responsible` can modify the rewards they are responsible for.
 
-To add rewards, navigate to :menuselection:`Referrals app --> Configuration --> Rewards`. Click
-:guilabel:`New`, and a reward form loads. Enter the following information on the form:
+To add rewards, navigate to :menuselection:`Referrals app --> Configuration --> Referrals -->
+Rewards`. Click :guilabel:`New`, and a reward form loads. Enter the following information on the
+form:
 
 - :guilabel:`Product Name`: Enter the name as it should appear for the reward. This field is
   required.
@@ -30,21 +31,23 @@ To add rewards, navigate to :menuselection:`Referrals app --> Configuration --> 
   it is required.
 
   .. example::
-     A database set up for three different companies offers a gift card as a reward. In the database,
-     there are three separate rewards listed for a gift card, one for each of the three companies.
+     A database set up for three different companies offers a gift card as a reward. In the
+     database, there are three separate rewards listed for a gift card, one for each of the three
+     companies.
 
 - :guilabel:`Gift Responsible`: Select the person responsible for procuring and delivering the
-  reward to the recipient using the drop-down menu. This person is alerted when the reward is bought
-  in the **Referrals** app, so they know when to deliver the reward to the recipient.
-- :guilabel:`Photo`: Add a photo of the reward, which appears on the rewards page.
+  reward to the recipient using the drop-down menu. This person receives an activity when the reward
+  is bought in the **Referrals** app, so they know when to deliver the reward to the recipient.
+- :guilabel:`Image`: Add a photo of the reward, in the image field in the top-right corner of the
+  form. The photo appears on the rewards page.
 - :guilabel:`Description` tab: Type in the description for the reward. This is visible on the reward
-  card, beneath the title. This field is required.
+  card, beneath the photo. This field is required.
 
 .. image:: rewards/rewards.png
    :alt: A filled out reward form with all details entered.
 
 .. important::
-   It is advised to enter a :guilabel:`Cost` and add a :guilabel:`Photo`. If a cost is not entered,
+   It is advised to enter a :guilabel:`Cost` and add an image. If a cost is not entered,
    the default cost is listed as zero, which would list the reward as free in the reward shop. If a
    photo is not selected, a placeholder icon is displayed on the rewards page.
 
@@ -61,20 +64,19 @@ dashboard. All the configured rewards are listed in individual reward cards.
 
 The required point amount needed to purchase a reward is listed in the top-right corner of the card.
 
-If the user has enough points to purchase a reward, a :icon:`fa-shopping-basket` :guilabel:`Buy`
+If the user has enough points to purchase a reward, a :icon:`shopping_basket` :guilabel:`Buy`
 button appears at the bottom of the reward card. If they do not have enough points for a reward, the
-reward card displays :guilabel:`You need another (x) points to buy this`, instead of a
-:icon:`fa-shopping-basket` :guilabel:`Buy` button.
+reward card displays the number of points still needed, instead of a :icon:`shopping_basket`
+:guilabel:`Buy` button.
 
-Click the :icon:`fa-shopping-basket` :guilabel:`Buy` button on a reward to purchase it. A
+Click the :icon:`shopping_basket` :guilabel:`Buy` button on a reward to purchase it. A
 *Confirmation* pop-up window appears, asking if the user is sure they want to purchase the reward.
-Click :guilabel:`Ok` to purchase the item, or :guilabel:`Cancel` to close the window, and cancel the
-purchase.
+Click :guilabel:`Ok` to purchase the item, or :guilabel:`Discard` to close the window, and cancel
+the purchase.
 
 After :guilabel:`Ok` is clicked, the pop-up window closes, and the points used to purchase the
 reward are subtracted from the user's available points. The rewards presented are now updated to
 reflect the user's current available points.
 
 .. image:: rewards/redeem-rewards.png
-   :alt: Buy button appears below a mug and backpack reward, while the bicycle reward states how
-         many more reward points are needed to redeem.
+   :alt: Buy buttons appear below the mug and gift card rewards.
