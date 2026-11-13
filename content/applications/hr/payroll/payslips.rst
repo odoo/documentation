@@ -171,8 +171,9 @@ including a *Warnings* section that appears in the corner of the dashboard.
 .. image:: payslips/warnings.png
    :alt: The dashboard view of the Payroll app, with the warnings box visible.
 
-Warnings are grouped by type, such as `Employees Without Running Contracts` or `Employees Without
-Bank account Number`. Click on a warning to view all entries associated with that specific issue.
+Warnings are grouped by type, such as `Missing Bank Account`. Click the button on a warning to view
+all entries associated with that specific issue. Refer to the :doc:`warnings` documentation for
+more information.
 
 If the warnings are not resolved at any point in the payslip processing process, an error may occur.
 Errors appear in a pop-up window, providing details for each error and how to resolve them.
