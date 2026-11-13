@@ -40,12 +40,15 @@ Once the new sub-task is created, the following changes occur in the parent task
 - The :guilabel:`Timesheets` tab includes a breakdown of time spent on the parent task as well as
   sub-tasks.
 
-Click :guilabel:`View` to open the sub-task you created. The sub-task form is identical to the
-:ref:`task form <task_creation/task-configuration>`.
-
 .. tip::
 
  - A **smart button** allows to navigate back to the :guilabel:`Parent task`.
  - The :guilabel:`Sub-tasks` tab allows for further creation of sub-tasks.
  - Selecting a :guilabel:`Project` will trigger this sub-task to be displayed in the Kanban view of
    the selected project.
+
+Sub-task visibility
+===================
+
+To display all sub-tasks in a project’s tasks view, click the top bar :icon:`oi-settings-adjust`(:guilabel:`sliders`)
+button and select Show Sub-Tasks.
