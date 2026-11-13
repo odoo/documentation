@@ -137,7 +137,7 @@ Then, create worksheet templates:
      <planning/field-service/worksheet-shift>`.
    - A default worksheet template can also be assigned to a specific service. To do so, configure
      the service product to automatically :ref:`create a shift <planning/shifts-sales-orders>` from
-     sales orders that contain it, then select the relevant :guilabel:`Worksheet`
+     sales orders that contain it, then enable :guilabel:`Plan Services`, and select the relevant :guilabel:`Worksheet`
      :icon:`fa-building-o` in the :guilabel:`General Information` tab of the product form.
 
 .. _planning/field-service/worksheet-shift:
