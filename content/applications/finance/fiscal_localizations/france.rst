@@ -149,16 +149,13 @@ To activate the e-invoicing and e-reporting features, follow these configuration
 #. Make sure the :guilabel:`France - E-Invoicing (Approved Platform)` (`l10n_fr_pdp`) module is
    :doc:`installed </applications/general/apps_modules>`.
 #. In the **Accounting** or **Invoicing** app, go to :menuselection:`Configuration --> Settings`,
-   scroll down to the :guilabel:`French Electronic Invoicing` section, and click :guilabel:`Activate
+   scroll down to the :guilabel:`Approved Platform` section, and click :guilabel:`Activate
    Electronic Invoicing`.
 #. In the :guilabel:`Send via French electronic invoicing` window, fill in the :guilabel:`Email`
    field with the email address of a legal representative and click :guilabel:`Authenticate`:
 
-   - In the pop-up window, click :guilabel:`Begin authentication`.
-   - In the :guilabel:`Accessing the legal representatives of your company` window, click
-     :guilabel:`Check status`, then select your name in the :guilabel:`Please select who you are`
-     list, and :guilabel:`Confirm`.
-   - To verify your identity, click :icon:`oi-launch` :guilabel:`Open authentication page`.
+   - In the pop-up window, select your name in the :guilabel:`Please select who you are` list, and
+     click :guilabel:`Begin authentication`.
    - In the :guilabel:`Authentication` window, click :guilabel:`Receive a code`, then enter the
      5-digit code received by email and :guilabel:`Confirm`.
    - In the :guilabel:`Identity verification` window, click :guilabel:`Next`.
@@ -179,12 +176,13 @@ To activate the e-invoicing and e-reporting features, follow these configuration
 
    Authentication is then successful, and the page can be closed.
 
-#. In the :guilabel:`Send via French electronic invoicing` window, click :guilabel:`Refresh`.
-#. Verify that the :guilabel:`Identifier` field is filled in with your :abbr:`SIREN (Système
-   d'identification du répertoire des entreprises, Business Directory Identification System)`
-   number and click :guilabel:`Validate Registration`.
-#. Your French e-invoicing ID is now ready to send and receive e-invoices and credit notes. Enable
-   the following options, as needed:
+.. note::
+   Registration in the `annuaire de la facturation électronique (electronic invoicing directory)
+   <https://facturation.chorus-pro.gouv.fr/annuaire/#/>`_ is effective **the day after** the
+   configuration is completed.
+
+4. Your French e-invoicing ID is ready to send and receive e-invoices and credit notes. Enable the
+   following options, as needed:
 
    - :guilabel:`Incoming Invoices Journal`: Automatically set, update if necessary.
    - :guilabel:`Enable e-reporting & sending of invoices to the PPF`: Enable this option if
@@ -192,10 +190,6 @@ To activate the e-invoicing and e-reporting features, follow these configuration
      <localizations/france/b2b-b2c>`.
    - :guilabel:`E-Reporting Periodicity`: Set the periodicity of the :ref:`e-reporting
      <localizations/france/e-invoicing-fac-elec-reporting>`.
-
-Registration in the `annuaire de la facturation électronique (electronic invoicing directory)
-<https://facturation.chorus-pro.gouv.fr/annuaire/#/>`_ is effective the day after the configuration
-is completed.
 
 .. tip::
    To disconnect from the e-invoicing network, click :guilabel:`Remove from Approved Platform`.
@@ -408,9 +402,9 @@ To submit invoices to Chorus Pro, configure the relevant customers' contact form
 #. In the :guilabel:`Accounting` tab, fill in the following fields in the :guilabel:`Customer
    Invoices` section:
 
-   - :guilabel:`eInvoice format`: Select :guilabel:`BIS Billing 3.0`.
-   - Make sure :guilabel:`France SIRET` is selected in the next field, then type `11000201100044`,
-     the reference used by Chorus Pro.
+   - :guilabel:`eInvoice format`: Select :guilabel:`EU Standard (Peppol Bis 3.0)`.
+   - In the field below, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to select
+     :guilabel:`France SIRET`, then type `11000201100044`, the reference used by Chorus Pro.
 
 .. _localizations/france/e-invoicing-choruspro-invoices:
 
@@ -472,7 +466,7 @@ File formats
 ************
 
 .. note::
-   - FEC files must be in CSV format, as XML format is not supported.
+   - FEC files must be in TXT format, as XML format is not supported.
    - The FEC CSV file is a plain text file structured as a data table. The first line serves as the
      header, defining the list of fields for each entry, and each following line represents a single
      accounting entry without any specific order.
