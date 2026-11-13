@@ -31,7 +31,7 @@ The following ePOS printers are directly compatible with Odoo without needing an
 - Epson TM-m10/ m50/ m50ii/ m55
 - Epson TM-H6000IV-DT (Receipt printer only)
 - Epson TM-T70II-DT
-- Epson TM-T88V-DT/ T88VI/ T88VII 
+- Epson TM-T88V-DT/ T88VI/ T88VII
 - Epson TM-L90-i
 - Epson TM-T20III or later
 - Epson TM-T70-i
@@ -67,7 +67,7 @@ be compatible with Odoo:
 - Epson TM-U220/ U330 family (incompatible ePOS software)
 - Epson TM-L100 family
 - Epson TM-T20X/ T82X, etc: most model number with an 'X' that comes after, or any Epson model in a
-serial/ parallel/ USB-only configuration.
+  serial/ parallel/ USB-only configuration.
 
 .. important::
    - Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK Javascript protocol
