@@ -64,7 +64,7 @@ Orders are automatically fetched from TikTok Shop and synchronized in Odoo at re
 Force synchronization
 =====================
 
-By default, Odoo will only fetch Tiktok's orders that were updated or created after the last 
+By default, Odoo will only fetch Tiktok's orders that were updated or created after the last
 synchronization time.
 
 To synchronize an order whose status hasn't changed since the last synchronization, navigate to

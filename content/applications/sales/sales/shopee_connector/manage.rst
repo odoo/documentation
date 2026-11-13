@@ -65,9 +65,9 @@ customer hasn't been previously imported from Shopee or doesn't already exist in
 Force synchronization
 =====================
 
-By default, Odoo will only fetch Shopee orders that were updated or created after the last 
+By default, Odoo will only fetch Shopee orders that were updated or created after the last
 synchronization time, in order to force the synchronization of an order whose status has **not**
-been changed since the previous synchronization, navigate to the Shopee account in Odoo 
+been changed since the previous synchronization, navigate to the Shopee account in Odoo
 :menuselection:`Sales app --> Configuration --> Shopee --> Account --> Shop`. Modify the date for
 :guilabel:`Last Order Sync` under :guilabel:`Orders Follow-up`.
 
