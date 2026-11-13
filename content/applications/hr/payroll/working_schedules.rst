@@ -2,78 +2,68 @@
 Working schedules
 =================
 
-In Odoo, *working schedules* determine the hours employees are expected to work, according to their
-:doc:`contract <contracts>`, and informs the **Payroll** app how to compute work entries, ultimately
-affecting salaries and payslips. It is necessary to ensure all working schedules for employees are
-configured in the database.
+In Odoo, *working schedules* define the hours employees are expected to work. The working schedule
+selected on the :doc:`employee record <contracts>` is the basis of the :doc:`worked time
+<work_entries>` computed on the payslips: each hour of the schedule counts as worked time, unless
+it is covered by a time off or a public holiday.
 
-To view the currently configured working schedules, navigate to :menuselection:`Payroll app -->
-Configuration --> Working Schedules`, and the *Working Schedules* dashboard loads.
+To view the working schedules, navigate to :menuselection:`Payroll app --> Configuration --> Time
+Management --> Working Schedules`. Each line displays the name of the schedule, a preview of the
+hours per day of the week, and its :guilabel:`Work Time Rate` compared to a full-time schedule.
 
 .. image:: working_schedules/working-schedules.png
-   :alt: All working schedules available to use currently set up in the database for the company.
-
-.. note::
-   In Odoo's **Payroll** app, *working schedules* are referred to as *working hours* in :ref:`salary
-   structures <payroll/salaries/structure-types>`.
+   :alt: The list of working schedules.
 
 .. _payroll/new-working-schedule:
 
-New working schedule
-====================
+Create a working schedule
+=========================
 
-To create a new working schedule, navigate to :menuselection:`Payroll app --> Configuration -->
-Working Schedules`, click :guilabel:`New`, and a blank *Working Schedules* form loads. The form has
-two sections, a general information section and a *Working Hours* tab listing out all the individual
-working hours by day and time.
+Click :guilabel:`New`, and configure the following fields:
 
-Fill out the following information on the top-half of the form:
+- Name: Enter a clear name, such as `Part-time 20 hours/week`.
+- :guilabel:`Company`: The company that uses this schedule.
+- :guilabel:`Reference Calendar`: The full-time schedule used to compute the work time rate of this
+  schedule. If empty, the default working schedule of the company is used.
+- :guilabel:`Calendar Type`: Select one of the following options:
 
-- :guilabel:`Name`: Type in the name for the new default working schedule. This should be
-  descriptive and clear to understand, such as `Standard 20 Hours/Week`. The placeholder name
-  `Working Hours of (Company)` populates this field by default.
-- :guilabel:`Schedule Type`: Click the radio button next to :guilabel:`Flexible` indicating a
-  flexible schedule, or :guilabel:`Fully Fixed` for a set schedule with specific working hours. If
-  :guilabel:`Flexible` is selected, the *Working Hours* tab is hidden.
-- :guilabel:`Define Amount of Hours per day`: Enable this option to have specific start and end
-  working times.
-- :guilabel:`Full Time Equivalent`: The amount of hours an employee must work each week to be
-  considered a full time employee. This field **cannot** be modified, and is determined by the
-  country the company is located in.
-- :guilabel:`Work Time Rate`: The percentage of hours compared to the full time schedule. The
-  percentage is auto-generated based on the :guilabel:`Full Time Equivalent` and the working hours
-  configured in the *Working Hours* tab. This number should be between `0.00%` and `100%`, so if the
-  percentage is above `100%`, it is an indication that the working times may need adjustment.
-- :guilabel:`Company`: Select the company that can use these new default working hours from the
-  drop-down menu. A blank field indicates it is available for all companies.
-- :guilabel:`2 Week's Calendar`: Enable this option to switch from a one-week calendar to a two-week
-  calendar. When enabled, two tabs appear: *Week 1 Working Hours* and *Week 2 Working Hours*.
+  - :guilabel:`Fixed`: The same weekly pattern repeats every week. The working time is defined by
+    the lines of the schedule.
+  - :guilabel:`Variable`: The working time is set on specific dates, in a calendar, for example for
+    a rotation over several weeks.
+  - :guilabel:`Undefined`: There are no predefined working hours. The employee can work whenever
+    they want, optionally up to the :guilabel:`Hours per Week` and :guilabel:`Days per Week`
+    entered on the schedule. Use this type for employees without a fixed schedule.
 
-Next, configure the individual hours in the *Working Hours* tab. This tab lists the specific working
-hours for each day, including breaks.
+- :guilabel:`Hours per Week` and :guilabel:`Days per Week`: Computed from the lines for a fixed
+  schedule, entered manually for the other types. The average number of hours per day is displayed
+  next to the hours per week.
 
-The default presented working hours are for a 40-hour work week, with each day divided into three
-timed sections. Every day has morning (8:00-12:00), lunch (12:00-13:00), and evening (13:00-17:00)
-hours configured.
+For a fixed schedule, add one line per working day, with the :guilabel:`Day of Week` and the number
+of :guilabel:`Hours`. The total of the week is displayed below the lines.
 
-.. note::
-   The :guilabel:`Work from` and :guilabel:`Work to` times **must** be in a 24-hour format. For
-   example, `2:00 PM` is entered as `14:00`.
+Additional columns can be displayed with the :icon:`tune` :guilabel:`(Optional columns)` icon:
 
-Update the :guilabel:`Name` of each shift, if desired. Modify the :guilabel:`Day of Week`,
-:guilabel:`Day Period`, and :guilabel:`Work Entry Type` selections by clicking into the drop-down
-menus in each column and making the desired selection. The :guilabel:`Work from`, and
-:guilabel:`Work to` columns are modified by typing in the time.
+- :guilabel:`Work from` and :guilabel:`Work to`: The start and end times of the working period,
+  when the schedule must define precise hours (for example, morning and afternoon on separate
+  lines).
+- :guilabel:`Time Type`: The :ref:`time type <payroll/work-entry-types>` of the hours of this line.
+  If empty, the time type of the employee's structure type is used (usually :guilabel:`Work`). Only
+  time types available for working schedules can be selected.
+- :guilabel:`Payroll Options`: If the time type allows options, such as :ref:`premium pay
+  <payroll/salary_rules/rule-categories>`, the options applied to the hours of this line.
 
 .. image:: working_schedules/new-working-hours.png
-   :alt: New working schedule form.
+   :alt: A fixed working schedule of 40 hours per week, with the optional columns displayed.
+
+The :icon:`light_mode` :guilabel:`Public Holidays` and :icon:`person` :guilabel:`Employees` smart
+buttons of the form show the public holidays that apply to the schedule, and the employees who use
+it.
 
 .. tip::
-   If the working hours are not consistent each week, and the hours are on a bi-weekly schedule
-   instead, enable the :guilabel:`Switch to 2 week calendar` checkbox on the new *Working Schedules*
-   form. This changes the single *Working Hours* tab to two tabs, a *Week 1 Working Hours* and a
-   *Week 2 Working Hours* tab, where the working times can be adjusted.
+   Public holidays are managed in :menuselection:`Payroll app --> Configuration --> Time Management
+   --> Company Holidays`. Refer to the :doc:`../time_off/public_holidays` documentation.
 
-   .. image:: working_schedules/2-weeks.png
-      :alt: A working schedule set to a two week schedule.
-
+.. seealso::
+   - :doc:`work_entries`
+   - :doc:`contracts`
