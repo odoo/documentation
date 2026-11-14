@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 20.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -550,7 +550,7 @@ msgid "The top half of the goals form, populated for a factory safety training g
 msgstr ""
 
 #: ../../export/content/applications/hr/appraisals/goals.rst:67
-#: ../../export/content/applications/hr/approvals.rst:113
+#: ../../export/content/applications/hr/approvals.rst:130
 msgid "Description tab"
 msgstr ""
 
@@ -1359,11 +1359,11 @@ msgid "Approval types"
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:17
-msgid "When requesting an approval, the category, or *type*, must be specified. There are nine preconfigured approval categories available to make requests for:"
+msgid "When requesting an approval, the category, or *type*, must be specified. The following approval categories are preconfigured:"
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:20
-msgid ":guilabel:`Business trip`: For requesting work-related travel."
+msgid ":guilabel:`Business Trip`: For requesting work-related travel."
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:21
@@ -1371,190 +1371,298 @@ msgid ":guilabel:`Borrow Items`: For requesting physical items the company owns 
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:23
-msgid ":guilabel:`General Approval`: For requests that do not fit in any of the eight other default types."
+msgid ":guilabel:`General Approval`: For requests that do not fit in any of the other categories."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:25
+#: ../../export/content/applications/hr/approvals.rst:24
 msgid ":guilabel:`Contract Approval`: For requesting any type of external contract, excluding :doc:`employee contracts <payroll/contracts>`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:27
+#: ../../export/content/applications/hr/approvals.rst:26
 msgid ":guilabel:`Payment Application`: For requesting *prior approval* for company-related expenses."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:30
+#: ../../export/content/applications/hr/approvals.rst:29
 msgid "This approval type is **only** used when requesting approval *in advance* for an expense the company directly pays for. This category should **not** be used for expenses employees are seeking reimbursement for. That is done through the :doc:`Expenses app <../finance/expenses/log_expenses>`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:35
+#: ../../export/content/applications/hr/approvals.rst:34
 msgid ":guilabel:`Car Rental Application`: For requesting a rental car."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:36
+#: ../../export/content/applications/hr/approvals.rst:35
 msgid ":guilabel:`Job Referral Award`: For requesting job referral awards that were earned but not completed through the :doc:`Referrals <referrals>` app."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:38
+#: ../../export/content/applications/hr/approvals.rst:37
 msgid ":guilabel:`Procurement`: Used for requesting work-related items such as office supplies, tools, etc."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:40
-msgid ":guilabel:`Create RFQ's`: Used for requesting a quote for items from a vendor."
+#: ../../export/content/applications/hr/approvals.rst:39
+msgid ":guilabel:`Create RFQ's`: Used for requesting a quote for items from a vendor. This only appears if the **Purchase** app is installed."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:45
-msgid "Approval requests"
+#: ../../export/content/applications/hr/approvals.rst:42
+msgid "If necessary, approval categories can be :ref:`modified or created <approvals/categories>`."
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:47
-msgid "To create a new approval request, open the **Approvals** app, click the :guilabel:`New Request` button on the approval type card that best fits the request, and a blank approval form loads. Fill out the various sections and tabs, then click :guilabel:`Submit` to submit the request for approval."
+msgid "Approval requests"
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:52
+#: ../../export/content/applications/hr/approvals.rst:49
+msgid "The **Approvals** app dashboard displays a card for each approval category. To create a new approval request, open the **Approvals** app, click the :guilabel:`New Request` button on the approval category card that best fits the request, and a blank approval form loads. Fill out the following sections and tabs on the form, then :ref:`submit the request <approvals/submit>`."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:55
+msgid "If the category is not immediately known, click the :guilabel:`New Request` button in the upper-left corner of the dashboard to open a generic request form. Once the :guilabel:`Category` is selected, the corresponding fields on the form appear."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:59
+msgid "For users with the *Officer: Approve all requests* access right, the :guilabel:`To Review` button on each card displays the number of submitted requests of that category waiting for the current user's approval. Click it to open these requests."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:64
 #: ../../export/content/applications/hr/payroll/contracts.rst:80
 #: ../../export/content/applications/hr/payroll/work_entries.rst:252
 #: ../../export/content/applications/hr/time_off/time_off_types.rst:34
 msgid "General information section"
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:54
+#: ../../export/content/applications/hr/approvals.rst:66
 msgid "The top half of the form contains all of the general information regarding the request. Fill out the following fields in the top half of the form:"
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:58
-msgid "All the fields listed below appear on the form for the :guilabel:`General Approval` category. If a different :guilabel:`Category` is selected, some fields are hidden."
+#: ../../export/content/applications/hr/approvals.rst:70
+msgid "All the fields listed below, except :guilabel:`Quantity`, appear on the form for the :guilabel:`General Approval` category. If a different :guilabel:`Category` is selected, some fields are hidden, according to the :ref:`category configuration <approvals/categories>`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:61
-msgid ":guilabel:`Approval Subject`: This field is automatically populated with the selected approval type. Make any desired modifications to the default text to provide any additional context for the request."
+#: ../../export/content/applications/hr/approvals.rst:74
+msgid ":guilabel:`Approval Subject`: Enter a short title for the request, such as `Customer Visit in Chicago`. If the category uses an automated sequence, this field is filled automatically with a reference number when the request is saved."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:64
+#: ../../export/content/applications/hr/approvals.rst:77
 msgid ":guilabel:`Request Owner`: The person responsible for the approval request. The signed-in user populates this field by default."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:66
-msgid ":guilabel:`Category`: The selected category appears in this field but can be changed using the drop-down menu."
+#: ../../export/content/applications/hr/approvals.rst:79
+msgid ":guilabel:`Category`: The selected category appears in this field, but can be changed using the drop-down menu, as long as the request is not submitted."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:68
+#: ../../export/content/applications/hr/approvals.rst:81
 msgid ":guilabel:`Date`: Using the calendar selector, set the date and time the request is for. This field **only** appears if :guilabel:`Payment Application` or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:71
-msgid ":guilabel:`Period`: Using the calendar selector, set the start and end dates for the request in the :guilabel:`From` and :guilabel:`to` fields. This field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
+#: ../../export/content/applications/hr/approvals.rst:84
+msgid ":guilabel:`Period`: Using the calendar selector, set the start and end dates and times for the request. This field **only** appears if :guilabel:`Business Trip`, :guilabel:`Borrow Items`, :guilabel:`Car Rental Application`, or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:75
+#: ../../export/content/applications/hr/approvals.rst:88
 msgid ":guilabel:`Location`: Enter the specific location the approval request is for. This field **only** appears if :guilabel:`Business Trip` or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:78
+#: ../../export/content/applications/hr/approvals.rst:91
 msgid ":guilabel:`Contact`: Select the point of contact for the request using the drop-down menu. The available options are from the **Contacts** app. This field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment Application`, :guilabel:`Job Referral Award`, or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:82
-msgid ":guilabel:`Quantity`: Enter the number of items being requested in this field. This field **only** appears if :guilabel:`Procurement` is selected for the :guilabel:`Category`."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:84
-msgid ":guilabel:`Amount`: Enter the amount being requested. This field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:87
-msgid ":guilabel:`Reference`: Enter any relevant reference for the request in this field. This field **only** appears if :guilabel:`Contract Approval` or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:92
-msgid "Each approval type presents different fields on the approval form. This is because each *approval type* has its own required fields. If the *type* is not immediately known, click the :guilabel:`New Request` button at the top of the page to open a generic request for approval form. Once the :guilabel:`Category` is selected, the corresponding fields on the form appear."
+#: ../../export/content/applications/hr/approvals.rst:95
+msgid ":guilabel:`Company`: The currently logged-in company populates this field by default, and **cannot** be changed. This field **only** appears in multi-company databases."
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:97
-msgid "The top-half of an approval form fillled out for a business trip."
+msgid ":guilabel:`Quantity`: Enter the number of items being requested in this field. This field **only** appears if :guilabel:`Procurement` is selected for the :guilabel:`Category`. For categories with products, the quantity is set on each line of the *Products* tab instead."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:101
-msgid "Product tab"
+#: ../../export/content/applications/hr/approvals.rst:100
+msgid ":guilabel:`Amount`: Enter the amount being requested. This field **only** appears if :guilabel:`Contract Approval`, :guilabel:`Payment Application`, :guilabel:`Procurement`, or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:103
-msgid "If any configured products in the database are being requested, they are listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is selected in the :guilabel:`Category` field."
+msgid ":guilabel:`Reference`: Enter any relevant reference for the request in this field. This field **only** appears if :guilabel:`Contract Approval` or :guilabel:`General Approval` is selected for the :guilabel:`Category`."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:107
-msgid "To add a product, click :guilabel:`Add a line` and a blank line appears. Using the drop-down menu, select the product being requested. Once selected, the product's configured :guilabel:`Description` automatically populates that field. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can be updated if necessary."
+#: ../../export/content/applications/hr/approvals.rst:108
+msgid "Each approval type presents different fields on the approval form. This is because each *approval type* has its own required fields. If the *type* is not immediately known, click the :guilabel:`New Request` button at the top of the page to open a generic request for approval form. Once the :guilabel:`Category` is selected, the corresponding fields on the form appear."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:115
-msgid "The *Description* tab is where any information to clarify the request is entered. Add any relevant information in this tab."
+#: ../../export/content/applications/hr/approvals.rst:113
+msgid "The top half of an approval form filled out for a business trip."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:121
-msgid "Approver(s) tab"
+#: ../../export/content/applications/hr/approvals.rst:117
+msgid "Products tab"
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:119
+msgid "If any configured products in the database are being requested, they must be listed in the *Products* tab. This tab **only** appears if :guilabel:`Borrow Items`, :guilabel:`General Approval`, or :guilabel:`Create RFQ's` is selected in the :guilabel:`Category` field."
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:123
-msgid "The *Approvers(s)* tab is where the people responsible for approving the request are configured. To add an approver, click :guilabel:`Add a line`, and a blank line appears. Using the drop-down menu, select the desired user. Repeat for all other approvers. There is no maximum number of users for this tab."
+msgid "To add a product, click :guilabel:`Add a line` and a blank line appears. Using the drop-down menu, select the product being requested. Once selected, the product's name and :guilabel:`Internal Reference` code populate both the :guilabel:`Products` and :guilabel:`Description` fields. Update the :guilabel:`Description` field, if desired. The :guilabel:`Quantity` is :guilabel:`1.00` by default, but can be updated if necessary."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:128
+#: ../../export/content/applications/hr/approvals.rst:132
+msgid "The *Description* tab is where any information to clarify the request is entered. Add any relevant information in this tab."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:138
+msgid "Approver(s) tab"
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:140
+msgid "The *Approver(s)* tab lists the people responsible for approving the request. The approvers configured on the :ref:`approval category <approvals/categories>` populate this tab by default."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:143
+msgid "To add an approver, click :guilabel:`Add a line`, and a blank line appears. Using the drop-down menu, select the desired user. Repeat for all other approvers. There is no maximum number of users for this tab. Only internal users can be selected as approvers."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:147
 msgid "To indicate a user **must** approve the request, click the checkbox in the :guilabel:`Required` column."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:131
-msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`."
+#: ../../export/content/applications/hr/approvals.rst:150
+msgid "As users are added, their :guilabel:`Status` remains :guilabel:`New`. Once the request is submitted, the :guilabel:`Status` changes to :guilabel:`To Approve`, and each approver receives an activity to approve the request. Approvers can approve the request in any order."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:133
-msgid "The approvers tab with thre approvers listed, and one required."
+#: ../../export/content/applications/hr/approvals.rst:154
+msgid "The Approver(s) tab with two approvers listed, one of them required."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:137
+#: ../../export/content/applications/hr/approvals.rst:158
 msgid "Attach documents"
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:139
+#: ../../export/content/applications/hr/approvals.rst:160
 msgid "All approval requests include the option to attach relevant documents. To attach a document, click the :guilabel:`Attach Document` button at the top of the page, and a file explorer window loads. Navigate to the desired file, select it, then click :guilabel:`Open` to attach it. Multiple documents can be selected and added at the same time."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:144
-msgid "Once attached, a :icon:`fa-book` :guilabel:`Documents` smart button appears at the top of the page, indicating how many documents are attached. Additionally, the documents are listed in the chatter. If the screen is wide enough, the documents appear on the side of the screen."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:151
-msgid "Manage approvals"
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:153
-msgid "After requests are submitted, they must be approved by the required approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To view approvals awaiting action, navigate to :menuselection:`Approvals app --> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard loads. All approvals awaiting action by the user appear alphabetically in a default list view."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:160
-msgid "Only *submitted* requests that the user is assigned as an approver for appear in the *Approvals to Review* dashboard. All other requests remain hidden."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:163
-msgid "All approval requests waiting for approval, the user is assigned to."
-msgstr ""
-
-#: ../../export/content/applications/hr/approvals.rst:166
-msgid "Requests must be individually approved from the approvals form. To approve a request, click the individual request on the *Approvals to Review* dashboard and the individual request form loads."
+#: ../../export/content/applications/hr/approvals.rst:165
+msgid "Once attached, a :icon:`book` :guilabel:`Documents` smart button appears at the top of the page, indicating how many documents are attached. Additionally, the documents are listed in the chatter."
 msgstr ""
 
 #: ../../export/content/applications/hr/approvals.rst:169
-msgid "A request to borrow a camera, with the Approve and Refuse buttons showing."
+msgid "Some categories, such as :guilabel:`General Approval`, require at least one document. When submitting a request with missing documentation, an *Invalid Operation* pop-up window loads."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:172
-msgid "To approve the request, click the :guilabel:`Approve` button on the individual approval request form, and the status changes to :guilabel:`Approved`. As users approve the request, their :guilabel:`Status` changes to :guilabel:`Approved` and the text appears green."
+#: ../../export/content/applications/hr/approvals.rst:175
+msgid "Submit request"
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:176
-msgid "To deny the request, click the :guilabel:`Refuse` button on the individual approval request form, and the status changes to :guilabel:`Refused`. When a user refuses a request, its :guilabel:`Status` changes to :guilabel:`Refused` and the text appears red."
+#: ../../export/content/applications/hr/approvals.rst:177
+msgid "Once the form is complete and all tabs are configured, click :guilabel:`Submit` to submit the request. The status changes to :guilabel:`Submitted`, and the request appears on the *Approvals to Review* dashboard."
 msgstr ""
 
-#: ../../export/content/applications/hr/approvals.rst:180
-msgid "At any point, approval requests that are either :guilabel:`Approved` or :guilabel:`Refused` can return to the :guilabel:`Submitted` stage by clicking the :guilabel:`Withdraw` button. The :guilabel:`Status` for all approvers reverts to :guilabel:`To Approve`, and the text appears orange."
+#: ../../export/content/applications/hr/approvals.rst:181
+msgid "To modify the request after it is submitted, click :guilabel:`Cancel` to cancel the submitted request, then click :guilabel:`Back To Draft` to modify the record. Once all changes are made, click :guilabel:`Submit` to submit it again."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:186
+msgid "Approved requests cannot be deleted, but they can be archived."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:191
+msgid "Manage approvals"
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:193
+msgid "After requests are submitted, they must be approved by the approvers listed in the :ref:`Approver(s) tab <approvals/approvers>`. To view approvals awaiting action, navigate to :menuselection:`Approvals app --> Manager --> Approvals to Review`, and the *Approvals to Review* dashboard loads. All approvals awaiting action by the user appear in a default list view."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:198
+msgid "All approval requests waiting for approval, the user is assigned to."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:202
+msgid "Only *submitted* requests that the user is assigned as an approver for appear in the *Approvals to Review* dashboard. To view all requests, navigate to :menuselection:`Approvals app --> Manager --> All Approvals`. Requests created by the current user are listed in :menuselection:`Approvals app --> My Approvals --> My Requests`."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:207
+msgid "To approve or refuse a request, click the individual request on the *Approvals to Review* dashboard and the individual request form loads. Requests can also be approved or refused directly from the :guilabel:`Approval` activity displayed in the chatter."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:211
+msgid "A request to borrow conference chairs, with the Approve and Refuse buttons showing."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:214
+msgid "To approve the request, click the :guilabel:`Approve` button on the individual approval request form. In the *Approver(s)* tab, the approver's :guilabel:`Status` changes to :guilabel:`Approved`, and the text appears green. The request's status changes to :guilabel:`Approved` once all required approvers, and at least the :guilabel:`Minimum Approval` number of approvers set on the category, have approved it."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:220
+msgid "To deny the request, click the :guilabel:`Refuse` button on the individual approval request form. The approver's :guilabel:`Status` changes to :guilabel:`Refused`, and the text appears red. As soon as one approver refuses the request, the request's status changes to :guilabel:`Refused`."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:224
+msgid "An approver who already approved or refused a request can click the :guilabel:`Withdraw` button to cancel their decision. Their :guilabel:`Status` changes back to :guilabel:`To Approve`."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:228
+msgid "Users with the *Officer: Approve all requests* access right for the **Approvals** app can approve a request without waiting for the approvers. On the *Approvals to Review* dashboard, click the checkbox next to the desired request, click the :icon:`settings_f` :guilabel:`Actions` button, then :guilabel:`Force Approval`. Alternatively, on the individual request record, click the :icon:`more_vert` :guilabel:`(Actions)` icon, then :guilabel:`Force Approval`."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:237
+msgid "Configure approval categories"
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:239
+msgid "To modify an approval category, or create a new one, navigate to :menuselection:`Approvals app --> Configuration --> Approval Categories`. The *Approval Categories* dashboard loads, with all currently configured categories in a list view. Click on a category to open it, or click :guilabel:`New` to create a new one."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:244
+msgid "Fill out the following fields in the top of the form:"
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:247
+msgid "Some fields only appear if the related app is installed."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:249
+msgid ":guilabel:`Approval Category`: The name of the category, displayed on the dashboard card."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:250
+msgid ":guilabel:`Description`: A short description of the category."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:251
+msgid ":guilabel:`Create RFQ's`: Click this checkbox to have the request create a quote request."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:252
+msgid ":guilabel:`Automated Sequence`: Click this checkbox to automatically generate the :guilabel:`Approval Subject` for the requests. When selected, a :guilabel:`Prefix Code` field appears. Enter a code to use when submitting requests."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:255
+msgid ":guilabel:`Company`: The company the category belongs to. This field only appears in multi-company databases."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:258
+msgid "In the *Configuration* section of the *Options* tab, select whether each field of the request form is :guilabel:`Required`, :guilabel:`Optional`, or not displayed (:guilabel:`None`): :guilabel:`Document`, :guilabel:`Contact`, :guilabel:`Date`, :guilabel:`Period`, :guilabel:`Product`, :guilabel:`Quantity`, :guilabel:`Amount`, :guilabel:`Reference`, and :guilabel:`Location`. The :guilabel:`Document` option can only be :guilabel:`Required` or :guilabel:`Optional`."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:265
+msgid "In the *Approvers* section, configure who approves the requests for the category:"
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:267
+msgid ":guilabel:`Employee's Manager`: Click this checkbox to add the manager of the request owner as a required approver for every request."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:269
+msgid "User list: Click :guilabel:`Add a line` to add a default approver, and click the :guilabel:`Required` checkbox if their approval is mandatory."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:271
+msgid ":guilabel:`Minimum Approval`: Enter the number of approvals needed to approve the request. A warning appears if this number is greater than the number of default approvers."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:274
+msgid "The Business Trip approval category form, with its options and approvers."
+msgstr ""
+
+#: ../../export/content/applications/hr/approvals.rst:278
+msgid "To add custom fields to the requests of a category, open one of its requests, click the :icon:`more_vert` :guilabel:`(Actions)` icon, then click :icon:`settings_applications` :guilabel:`Edit Properties`. The new properties appear on all the requests of this category."
 msgstr ""
 
 #: ../../export/content/applications/hr/attendances.rst:5
@@ -1614,7 +1722,7 @@ msgstr ""
 #: ../../export/content/applications/hr/attendances.rst:63
 #: ../../export/content/applications/hr/attendances/biotime_integration.rst:23
 #: ../../export/content/applications/hr/attendances/kiosks.rst:22
-#: ../../export/content/applications/hr/frontdesk.rst:15
+#: ../../export/content/applications/hr/frontdesk.rst:14
 #: ../../export/content/applications/hr/payroll/payroll_localizations/belgium.rst:956
 #: ../../export/content/applications/hr/payroll/payroll_localizations/egypt.rst:10
 #: ../../export/content/applications/hr/payroll/payroll_localizations/employment_hero.rst:16
@@ -1830,7 +1938,7 @@ msgid "Verify employees still on-site before shutting down the building for the 
 msgstr ""
 
 #: ../../export/content/applications/hr/attendances/attendance_logs.rst:86
-#: ../../export/content/applications/hr/lunch/orders.rst:115
+#: ../../export/content/applications/hr/lunch/orders.rst:130
 msgid "Errors"
 msgstr ""
 
@@ -2457,7 +2565,6 @@ msgid "Click anywhere on the screen to close the attendance widget."
 msgstr ""
 
 #: ../../export/content/applications/hr/attendances/check_in_check_out.rst:48
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:175
 msgid "Check out"
 msgstr ""
 
@@ -3643,8 +3750,8 @@ msgstr ""
 #: ../../export/content/applications/hr/employees/certifications.rst:24
 #: ../../export/content/applications/hr/employees/offboarding.rst:91
 #: ../../export/content/applications/hr/fleet/accidents.rst:48
-#: ../../export/content/applications/hr/frontdesk.rst:35
-#: ../../export/content/applications/hr/lunch/products.rst:12
+#: ../../export/content/applications/hr/frontdesk.rst:33
+#: ../../export/content/applications/hr/lunch/products.rst:16
 msgid "Enter the following information on the form:"
 msgstr ""
 
@@ -5152,6 +5259,7 @@ msgid "The *Badges* tab is where all earned and awarded :doc:`badges <badges>` a
 msgstr ""
 
 #: ../../export/content/applications/hr/employees/new_employee.rst:588
+#: ../../export/content/applications/hr/frontdesk.rst:51
 msgid "Settings tab"
 msgstr ""
 
@@ -7386,265 +7494,228 @@ msgid "Frontdesk"
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk.rst:7
-msgid "The Odoo **Frontdesk** application provides a way for visitors to check in to a building or location, and alert the person they are meeting about their arrival. Additionally, they can request a preconfigured beverage to be brought to them, while they wait."
+msgid "The Odoo **Frontdesk** application provides a way for visitors to check in to a building or location, and alert the person they are meeting about their arrival."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:11
+#: ../../export/content/applications/hr/frontdesk.rst:10
 msgid "This application is ideal for businesses that do **not** have someone working at a reception desk, or locations **without** a designated waiting area available to guests and visitors."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:17
-msgid "The first item to configure with the **Frontdesk** application is the station, followed by any drink selections that might optionally be offered."
+#: ../../export/content/applications/hr/frontdesk.rst:16
+msgid "The only item to configure in the **Frontdesk** application is the *station*."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:23
+#: ../../export/content/applications/hr/frontdesk.rst:21
 msgid "Stations"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:25
-msgid "In Odoo's **Frontdesk** application, a *Station* can be thought of as any location where someone can sign in and wait for an employee. This is typically some form of waiting room, such as a lobby. Each station has a kiosk where visitors check in."
+#: ../../export/content/applications/hr/frontdesk.rst:23
+msgid "In Odoo's **Frontdesk** application, a *station* can be thought of as any location where someone can sign in and wait for an employee. This is typically some form of waiting room, such as a lobby. Each station has a kiosk where visitors check in."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:29
+#: ../../export/content/applications/hr/frontdesk.rst:27
 msgid "When setting up the **Frontdesk** application, a minimum of one station **must** be configured, but there is no limit to how many stations can be created and configured."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:32
-msgid "To create a station, navigate to :menuselection:`Frontdesk app --> Configuration --> Stations`, and click :guilabel:`New`. When clicked, a blank frontdesk form appears."
+#: ../../export/content/applications/hr/frontdesk.rst:30
+msgid "To create a station, navigate to :menuselection:`Frontdesk app --> Stations`, and click :guilabel:`New`. When clicked, a blank station form appears."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:35
+msgid ":guilabel:`Frontdesk Name`: Enter a name for the specific frontdesk location. This should be short and identifiable, such as `Reception Desk` or `Main Lobby`. This field is required."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk.rst:37
-msgid ":guilabel:`Frontdesk Name`: enter a name for the specific frontdesk location. This should be short and identifiable, such as `Reception Desk` or `Main Lobby`. This field is required in order to create a station."
+msgid ":guilabel:`Responsibles`: Select the users who are notified in the **Discuss** app every time a visitor checks in at the station. Multiple users can be selected. This field is required."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:40
-msgid ":guilabel:`Responsibles`: select the person (or persons) who are alerted when a visitor checks in using this specific frontdesk. Multiple selections can be entered. This field is required in order to create a station."
+#: ../../export/content/applications/hr/frontdesk.rst:39
+msgid ":guilabel:`Company`: The company the station belongs to. This field only appears in multi-company databases."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:43
-msgid ":guilabel:`Kiosk URL`: this field auto-populates once the frontdesk form is saved, with at least the :guilabel:`Frontdesk Name` and :guilabel:`Responsibles` fields filled. To save manually, click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon located at the top of the form."
+#: ../../export/content/applications/hr/frontdesk.rst:41
+msgid ":guilabel:`Kiosk URL`: This field is automatically populated when the station is saved. This URL is one way the station's kiosk is accessed. Click the :icon:`assignment` :guilabel:`(Copy)` icon at the end of the URL to copy it."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:47
-msgid "Once saved, a URL is generated in the :guilabel:`Kiosk URL` field. This URL is one way the frontdesk kiosk is accessed."
+#: ../../export/content/applications/hr/frontdesk.rst:44
+msgid ":guilabel:`Image`: Hover over the image placeholder in the corner of the form, and click the :icon:`edit_f` :guilabel:`(Edit)` icon that appears. Navigate to the desired image file, then click :guilabel:`Open` to select it. The selected image is used as the kiosk background."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:50
-msgid "To access the kiosk, click the :guilabel:`Copy` button at the end of the URL, and navigate to that URL in a web browser. This URL opens that specific station's frontdesk sign-in page."
+#: ../../export/content/applications/hr/frontdesk.rst:55
+msgid ":guilabel:`Host Selection`: Enable this option to allow the visitor to select and notify the person they are visiting (the *host*). By default, all the employees of the company can be selected. To restrict the list, select the available employees in the :guilabel:`Select Hosts` field that appears when this option is enabled."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:54
-msgid "To add an image/photo to a frontdesk form, hover over the :guilabel:`(camera with a '+' sign)` icon in the top-right of the form to reveal a :icon:`fa-pencil` :guilabel:`(Edit)` icon."
+#: ../../export/content/applications/hr/frontdesk.rst:59
+msgid ":guilabel:`Self Check-In`: Enable this option to display a QR code on the kiosk welcome screen, which allows guests to check in using their mobile device. This option is recommended for a busy kiosk with multiple guests checking in at any time."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:57
-#: ../../export/content/applications/hr/frontdesk.rst:171
-#: ../../export/content/applications/hr/frontdesk.rst:186
-msgid "Click on the :icon:`fa-pencil` :guilabel:`(Edit)` icon to open a file explorer, navigate to the desired image/photo file, then click :guilabel:`Open` to select it."
+#: ../../export/content/applications/hr/frontdesk.rst:62
+msgid ":guilabel:`Guest Details`: Enable this option to request additional information when a guest checks in. Click the checkbox next to :guilabel:`Email`, :guilabel:`Phone`, or :guilabel:`Organization` to require the corresponding information upon check-in. When this option is disabled, guests only enter their name."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:60
-msgid "The image selected for the station photo appears as the background image for the station kiosk."
+#: ../../export/content/applications/hr/frontdesk.rst:66
+msgid ":guilabel:`Host Notifications`: To notify hosts *in addition to* the default **Discuss** app notification, click the checkbox next to one of the following options:"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:63
-msgid "Options tab"
+#: ../../export/content/applications/hr/frontdesk.rst:69
+msgid ":guilabel:`Notify by email`: An email is sent to the host's work email, using the template selected in the field that appears after enabling this option. By default, :guilabel:`Frontdesk Email Template` is selected."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:67
-msgid ":guilabel:`Host Selection`: if the visitor is attending a meeting, this option allows the visitor to select the meeting host from a presented list, and notify that individual. When enabled, additional fields appear, as detailed below."
+#: ../../export/content/applications/hr/frontdesk.rst:72
+msgid ":guilabel:`Notify by SMS`: An SMS is sent to the host's work phone, using the template selected in the field that appears after enabling this option. By default, :guilabel:`Frontdesk SMS Template` is selected."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:70
-msgid ":guilabel:`Authenticate Guest`: if additional information is required when a guest checks in, enable this option, and select which of the following are required:"
+#: ../../export/content/applications/hr/frontdesk.rst:76
+msgid ":guilabel:`Auto-Checkout`: Enter the duration after which checked-in visitors are automatically checked out, in a `##h ##m` format. Set this field to `0h` to disable automatic check-out."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:73
-msgid ":guilabel:`Email`: select whether the guest's email address is :guilabel:`Required`, :guilabel:`Optional`, or if the information is not requested at all (:guilabel:`None`)."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:75
-msgid ":guilabel:`Phone`: select whether the guest's phone number is :guilabel:`Required`, :guilabel:`Optional`, or if the information is not requested at all (:guilabel:`None`)."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:77
-msgid ":guilabel:`Organization`: select whether the guest's organization is :guilabel:`Required`, :guilabel:`Optional`, or if the information is not requested at all (:guilabel:`None`)."
+#: ../../export/content/applications/hr/frontdesk.rst:78
+msgid ":guilabel:`Privacy Notice`: Enter a short summary of how visitors' personal data is processed. This text is displayed at the bottom of the kiosk welcome screen."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk.rst:80
-msgid ":guilabel:`Theme`: select the color mode of the kiosk. Choose either :guilabel:`Light` or :guilabel:`Dark`. The :guilabel:`Light` selection displays a pale gray background on the kiosk, whereas the :guilabel:`Dark` selection displays a dark gray and black background."
+msgid ":guilabel:`Privacy Notice Details`: Enter the full privacy notice, covering data storage, rights, and contact information. Visitors can display this text by clicking :guilabel:`Read more` on the kiosk."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:83
-msgid ":guilabel:`Self Check-In`: enable this option to present a check-in QR code on the kiosk. The QR code allows guests to check in using their mobile device, instead of using the kiosk. This option is recommended for a busy kiosk with multiple guests checking in at any time."
+#: ../../export/content/applications/hr/frontdesk.rst:85
+msgid "The host notification options are only useful if :ref:`Host Selection <frontdesk/host>` is enabled. If no host is selected, only the station's :guilabel:`Responsibles` are notified."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:86
-msgid ":guilabel:`Offer Drinks`: enable this option to offer guests a drink upon check in. If this option is enabled, it is necessary to :ref:`configure the drinks being offered <frontdesk/drinks>`, via the :guilabel:`Configure Drinks` link that appears when the option is enabled. Once all drink options are configured, select each drink to be offered using the drop-down menu."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:92
-msgid "The following options are only visible in the :guilabel:`Options` tab if the :ref:`Host Selection <frontdesk/host>` option is enabled."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:95
-msgid ":guilabel:`Notify by email`: enable this option to have an email sent to the person the guest is visiting upon check in. When enabled, an :guilabel:`Email Template` field appears beneath, with the default :guilabel:`Frontdesk Email Template` selected."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:99
-msgid "To change the default email template, click the drop-down menu in the :guilabel:`Email Template` field, then select another email template."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:102
-msgid "To modify the currently selected template, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon at the end of the line, and make any edits to the template."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:104
-msgid ":guilabel:`Notify by SMS`: enable this option to have an SMS (text) message sent to the person the guest is visiting upon check in. When enabled, an :guilabel:`SMS Template` field appears beneath, with the default :guilabel:`Frontdesk SMS Template` selected."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:108
-msgid "To change the default SMS template, click the drop-down menu in the :guilabel:`SMS Template` field, and select another SMS template."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:111
-msgid "To modify the currently selected template, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon at the end of the line, and make any desired edits to the content of the template. The SMS message may have a maximum of 242 characters, which fits in 4 SMS (UNICODE) messages."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:114
-msgid ":guilabel:`Notify by Discuss`: this option is enabled by default when the :guilabel:`Host Selection` option is enabled. This option opens a **Discuss** application message window with the person the guest is visiting upon check in."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:118
-msgid "When enabled, a default message appears for the person the guest is visiting. The **Discuss** application **must** be installed in order for this option to work."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:122
-msgid "*Discuss* is installed by default when creating an Odoo database, and does not count towards billing. As long as the *Discuss* application is not intentionally uninstalled, the :guilabel:`Notify by Discuss` option works."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:127
-msgid "The default message format for the :guilabel:`Notify by Discuss` option is: `(Frontdesk Station) Check-In: (Guest Name) (Guest Phone Number) (Organization) to meet (Name of employee).`"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:130
-msgid "An example of how that might appear in a **Discuss** message is: `Main Lobby Check-In: John Doe (555-555-5555) (Odoo, Inc.) to meet Marc Demo.`"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:133
-msgid "Frontdesk station form with all the information filled out."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:137
+#: ../../export/content/applications/hr/frontdesk.rst:89
 msgid "Side Message tab"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:139
-msgid "Enter any desired text to appear on the station kiosk after a guest has checked in, such as a welcome greeting or any necessary instructions. The text appears on the confirmation page, on the right side of the screen after a guest has completed the check-in process."
+#: ../../export/content/applications/hr/frontdesk.rst:91
+msgid "Enter any desired text to appear on the station kiosk after a guest has checked in, such as a welcome greeting or any necessary instructions. The text appears on the confirmation page, on the right side of the screen, after a guest has completed the check-in process."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:146
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:139
-msgid "Drinks"
+#: ../../export/content/applications/hr/frontdesk.rst:95
+msgid "Frontdesk station form with all the information filled out."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:148
-msgid "After a station is created, the next step is to configure the drinks to offer visitors, if desired."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:151
-msgid "This step is **not** necessary or required for the **Frontdesk** application to work, and only needs to be configured if drinks are offered to guests."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:154
-msgid "To add a drink option, navigate to :menuselection:`Frontdesk app --> Configuration --> Drinks`, and click :guilabel:`New`. Doing so reveals a blank drink form to configure."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:157
-msgid "Enter the following information on the drink form:"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:159
-msgid ":guilabel:`Drink Name`: type the name of the drink option in this field. This field is required."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:160
-msgid ":guilabel:`People to Notify`: use the drop-down menu in this field to select who is notified when the drink is selected. Multiple people can be entered in this field. This field is required."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:162
-msgid ":guilabel:`Sequence`: enter a numerical value in this field to indicate where in the list of drink options this specific option appears. The lower the number, the higher on the list the drink appears. For example, entering the number one would place that drink at the top of the list, and appear first in the sequence."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:168
-#: ../../export/content/applications/hr/frontdesk.rst:183
-msgid "To add an image/photo to a drink form, hover over the :guilabel:`(camera with a '+' sign)` icon in the top-right of the form to reveal a :icon:`fa-pencil` :guilabel:`(Edit)` icon."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:174
-#: ../../export/content/applications/hr/frontdesk.rst:189
-msgid "The image selected now appears in the picture field, and is set as the image for the drink."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:176
-msgid "Drink form with the information filled out for an espresso."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:180
+#: ../../export/content/applications/hr/frontdesk.rst:101
 msgid "Station dashboard"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:194
+#: ../../export/content/applications/hr/frontdesk.rst:103
+msgid "The *Stations* dashboard displays all station cards along with some basic information. To access the dashboard, navigate to :menuselection:`Frontdesk app --> Stations`. Each station card displays the following information:"
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:107
+msgid ":icon:`star` :guilabel:`(Add to Favorites)`: Click this icon to select the station as a favorite, click it again to deselect it."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:109
+msgid ":guilabel:`Frontdesk Name`: The name of the station."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:110
+msgid ":guilabel:`Open Desk`: A button to open the station's :ref:`kiosk <frontdesk/kiosk>`."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:111
+msgid ":guilabel:`# On Site`: The number of visitors currently checked in at this station, displayed only when at least one visitor is on site. Click to open the visitors list."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:113
+msgid ":guilabel:`Last Check-In`: How long ago the last visitor still on site checked in."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:114
+msgid ":guilabel:`Responsibles`: The avatars of the users responsible for the station."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:116
+msgid "Click on a card to view a list of all the visitors to the station, including past visitors."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:119
+msgid "To modify a station, click the :icon:`more_vert` :guilabel:`(Dropdown menu)` icon on its card, then click :guilabel:`Configuration`, and the station form loads."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:122
+msgid "The Stations dashboard, with a card for each station."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:128
 msgid "Kiosk setup"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:196
-msgid "Set up each kiosk for use after configuring the various stations. It is recommended to use a dedicated device for each frontdesk kiosk, such as a tablet."
+#: ../../export/content/applications/hr/frontdesk.rst:130
+msgid "Set up each kiosk for use after configuring the related station. It is recommended to use a dedicated device for each frontdesk kiosk, such as a tablet."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:199
-msgid "Navigate to the kiosk in one of two ways:"
+#: ../../export/content/applications/hr/frontdesk.rst:133
+msgid "Navigate to the kiosk in one of the following ways:"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:201
-msgid "Navigate to the main **Frontdesk** application dashboard, and click the :guilabel:`Open Desk` button on the desired station card. The kiosk loads in a new browser tab."
+#: ../../export/content/applications/hr/frontdesk.rst:135
+msgid "Navigate to the :ref:`Stations dashboard <frontdesk/dashboard>`, click the :guilabel:`Open Desk` button on the corresponding station card, and the kiosk loads in the current browser tab."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:203
-msgid "Navigate to :menuselection:`Frontdesk app --> Configuration --> Stations`, and click on the desired station. Then, click the :guilabel:`Copy` button at the end of the :guilabel:`Kiosk URL` line, and paste the URL into a new browser tab or window."
+#: ../../export/content/applications/hr/frontdesk.rst:137
+msgid "Open the station form, and click the :guilabel:`Open Kiosk` button. A *Frontdesk* pop-up window loads, displaying the kiosk URL to open on the kiosk device, and an :guilabel:`Install App` button to install the kiosk as an application on the device."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:208
-msgid "Once a frontdesk kiosk is accessed, either with the :guilabel:`Open Desk` button or the :guilabel:`Kiosk URL`, the user is *automatically signed out of the database* on that specific device."
+#: ../../export/content/applications/hr/frontdesk.rst:140
+msgid "Copy the :guilabel:`Kiosk URL` from the station form, and paste it into a browser on the kiosk device."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:212
+#: ../../export/content/applications/hr/frontdesk.rst:144
+msgid "Once a frontdesk kiosk is accessed, the user is *automatically signed out of the database* on that specific device."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:147
 msgid "This is a security measure designed to prevent unauthorized access to the database."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:215
+#: ../../export/content/applications/hr/frontdesk.rst:152
+msgid "Visitor check-in"
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:154
+msgid "When a visitor arrives, the *Your Information* section of the kiosk welcome screen is filled out. All visitors are required to enter their :guilabel:`Name`, and depending on the :ref:`configuration <frontdesk/settings-tab>`, an :guilabel:`Email`, :guilabel:`Phone`, and :guilabel:`Company` field may also appear."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:159
+msgid "If the :guilabel:`Host Selection` option is enabled, the visitor clicks :icon:`stacks` :guilabel:`Browse All Hosts` in the *Select Host* section, and a list of hosts appears. The visitor clicks the person they are visiting, then clicks :guilabel:`Continue`."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:163
+msgid "If the :guilabel:`Host Selection` option is disabled, the visitor clicks :guilabel:`Check In`."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:165
+msgid "The kiosk welcome screen, with the visitor information filled out and a host selected."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:168
+msgid "A confirmation screen appears, displaying the station's side message. The visitor is recorded as checked in, and the station's responsibles and the host are notified."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:172
+msgid "If the selected host is taking time off, the visitor is informed that their host is unavailable via email or SMS, depending on how the :ref:`station is configured <frontdesk/settings-tab>`."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:176
+msgid "If :guilabel:`Self Check-In` is enabled, visitors can instead scan the QR code displayed in the top-right corner of the welcome screen with their mobile device, and fill out the same information on their phone, in the language selected on the kiosk."
+msgstr ""
+
+#: ../../export/content/applications/hr/frontdesk.rst:181
 #: ../../export/content/applications/hr/time_off.rst:50
 #: ../../export/content/applications/hr/time_off/reporting.rst:3
 msgid "Reporting"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:217
-msgid "The **Frontdesk** application has two reports available: :guilabel:`Visitors` and :guilabel:`Drinks`."
+#: ../../export/content/applications/hr/frontdesk.rst:183
+msgid "To analyze visits, navigate to :menuselection:`Frontdesk app --> Visitors`, remove the default filters, and click the :icon:`bar_chart` :guilabel:`(Graph)` or :icon:`oi_view-pivot` :guilabel:`(Pivot)` icon in the corner. By default, the graph displays the number of visitors by station."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:220
-msgid "To access either of these reports, navigate to :menuselection:`Frontdesk app --> Reporting` to reveal a drop-down menu containing the options: :guilabel:`Visitors` and :guilabel:`Drinks`."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:223
-msgid "The :guilabel:`Visitors` report displays the number of visitors by month, for the current year. The :guilabel:`Drinks` report shows how many total requests were made for each drink."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk.rst:226
+#: ../../export/content/applications/hr/frontdesk.rst:188
 msgid "As with all reports in Odoo, the filters and groups can be modified to show other metrics, as well."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk.rst:229
+#: ../../export/content/applications/hr/frontdesk.rst:191
 msgid ":doc:`frontdesk/visitors`"
 msgstr ""
 
@@ -7653,7 +7724,7 @@ msgid "Visitors"
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:5
-msgid "In the Odoo **Frontdesk** application, a *visitor* refers to any non-employee (e.g., repair person, job candidate, auditor, etc.). Visitor arrivals and departures can be logged for security purposes, ensuring an accurate record of who is on the premises."
+msgid "In the Odoo **Frontdesk** application, a *visitor* refers to any non-employee (e.g., repair person, job candidate, auditor, etc.). Visitor arrivals and departures are typically logged for security purposes, ensuring an accurate record of who is on the premises at any given time."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:12
@@ -7661,226 +7732,114 @@ msgid "Visitor list"
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:14
-msgid "To access a complete list of checked-in visitors, navigate to :menuselection:`Frontdesk app --> Visitors`."
+msgid "To access the list of all visitors for all stations, navigate to :menuselection:`Frontdesk app --> Visitors`. By default, the list only displays visitors who are currently checked in (:guilabel:`Checked-In` and :guilabel:`Date: MMM DD` filters are active). Remove these filters in the search bar to view all visitors."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:18
-msgid "By default, the :guilabel:`Planned or Checked-In` and :guilabel:`Today` filters appear in the :guilabel:`Search...` bar."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:19
+msgid "The list of checked-in visitors of the day."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:21
-msgid "All visitors are presented in a list view, with the following details that were entered upon check in:"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:24
-msgid ":guilabel:`Name`: the guest's name."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:22
+msgid "All visitors are presented in a default list view, with the following details that were entered upon check in:"
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:25
-msgid ":guilabel:`Visitor Company`: the company the guest represents."
+msgid ":guilabel:`Name`: The guest's name."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:26
-msgid ":guilabel:`Phone`: the guest's phone number."
+msgid ":guilabel:`Visitor Company`: The company the guest represents."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:27
-msgid ":guilabel:`Drinks`\\*: the drink the guest requested."
+msgid ":guilabel:`Phone`: The guest's phone number."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:28
-msgid ":guilabel:`Host`: who the guest is waiting to see."
+msgid ":guilabel:`Host`: The employee the guest is visiting."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:29
-msgid ":guilabel:`CheckIn`: the date and time the guest checked in."
+msgid ":guilabel:`CheckIn`: The date and time the guest checked in."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:30
-msgid ":guilabel:`Checkout`\\*: the date and time the guest checked out. In the default view, only guests with a :guilabel:`Checked-In` or :guilabel:`Planned` status are visible. Guests with check-out times are only visible if the :guilabel:`Today` filter is removed."
+msgid ":guilabel:`Duration`: The amount of time the guest has been checked in."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:33
-msgid ":guilabel:`Duration`: the amount of time the guest has been checked in for."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:31
+msgid ":guilabel:`Station`: The station the guest checked in at."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:34
-msgid ":guilabel:`Station`: the location of where the guest checked in."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:32
+msgid ":guilabel:`Status`: The status of the guest. All guests in this list have a status of :guilabel:`Checked-In`."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:35
-msgid ":guilabel:`Status`: the status of the guest. The options are :guilabel:`Checked-In`, :guilabel:`Planned`, :guilabel:`Checked-Out`, or :guilabel:`Cancelled`."
+msgid "When a guest leaves, click the :guilabel:`Check out` button at the end of their line to log the date and time they left. To check out several guests at once, click the checkbox next to each guest, click the :icon:`settings_f` :guilabel:`Actions` button, then click :guilabel:`Check out`."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:37
-msgid ":guilabel:`Email`\\*: the guest's email address."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:39
+msgid "If the :guilabel:`Auto-Checkout` feature is enabled on the :ref:`station <frontdesk/settings-tab>`, guests are automatically checked out once the configured duration has passed."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:38
-msgid ":guilabel:`Company`\\*: the company the guest is there to visit. This field is only available if in a multi-company database."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:43
+msgid "Click the :guilabel:`Print Badge` button at the end of a checked-in guest's line to download a PDF file of the visitor's badge. The badge displays the date and time the visitor checked in, the visitor's name and company, who they are visiting, and the logo of the company they are visiting."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:41
-msgid "\\* These fields are not visible in the default :guilabel:`Visitor` list. These must be enabled using the :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon in the top-right corner of the list."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:50
+msgid "Register a visitor manually"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:45
-msgid "To the far-right of the titled columns on the :guilabel:`Visitors` page, there is an untitled column, where a guest's status can be updated."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:48
-msgid "When a guest leaves, click the available :guilabel:`Check out` button to update the guest's record, and log the date and time they left."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:51
-msgid "If a scheduled guest arrives, and they did not check in using a **Frontdesk** kiosk, they can be checked in from this list, by clicking the available :guilabel:`Check in` button to log the date and time they arrived."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:55
-msgid "Beside the untitled status column, a :guilabel:`Drink Served` button appears, but only if that particular visitor requested a drink."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:52
+msgid "If a guest arrives and does not check in using a kiosk, they can be registered from the backend. Navigate to :menuselection:`Frontdesk app --> Visitors`, click :guilabel:`New`, and a blank visitor form loads. Enter the guest's information on the visitor form, including their :guilabel:`Name`, :guilabel:`Phone`, :guilabel:`Email`, and :guilabel:`Visitor Company`, the :guilabel:`Station`, and the :guilabel:`Host Name`."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:58
-msgid "When their drink has been served, click the :guilabel:`Drink Served` button to indicate the drink has been delivered to the guest. Once clicked, that button disappears."
+msgid "The guest is checked in as soon as the record is saved, and the station's responsibles and the host are notified, as with a kiosk check-in."
 msgstr ""
 
 #: ../../export/content/applications/hr/frontdesk/visitors.rst:61
-msgid "On the far-right of the line, a :guilabel:`Print Badge` button appears for *planned* visitors **only**. Click this button to download a PDF file of the visitor's badge. The badge displays the date and time the visitor checked in, the visitor's name and company, who they are visiting, and the logo of the company they are visiting."
+msgid "A visitor form, with the email sent to the host in the chatter."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:67
-msgid "The PDF badge can be printed onto adhesive labels for the visitor to wear, or onto paper that can be placed into a plastic badge holder."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:64
+msgid "To check out a guest from their form, click the :guilabel:`Check out` button in the upper-left corner. The notifications sent to the host are logged in the chatter of the visitor form."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:70
-msgid "The full list of currently checked in visitors, with the drinks to be served highlighted."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:73
-msgid "If any column is not visible, or if a visible column is preferred to be hidden, click the :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon, located at the end of the top line. Doing so, reveals a drop-down menu of column options to enable or disable. A :icon:`fa-check` :guilabel:`(check)` icon indicates the column is visible."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:81
-msgid "Planned visitors"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:83
-msgid "When guests are expected, such as job candidates, government officials, or new suppliers, it can be helpful to enter the visitor information in advance. When the visitors arrive, they can utilize the *Quick Check In* option on the kiosk, rather than entering all their information manually upon arrival."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:88
-msgid "Enter expected guest information in advance by creating a planned guest in the **Frontdesk** app."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:90
-msgid "To create a planned guest, navigate to :menuselection:`Frontdesk app --> Visitors`, and click :guilabel:`New`. Then, enter the same information as any other :ref:`visitor <frontdesk/list>` on the guest form that appears. The only required fields are the visitor's :guilabel:`Name` and the :guilabel:`Station` at which they are expected to arrive."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:96
-msgid "If a guest is planned in advance, they must be checked in from the list on the :guilabel:`Visitors` page in the **Frontdesk** application (:menuselection:`Frontdesk app --> Visitors`). If a planned guest checks in using a kiosk, they are checked in separately from their planned visitor entry, and their planned visitor entry remains listed as :guilabel:`Planned`."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:101
-msgid "The :guilabel:`Planned` status of a planned guest **only** changes to :guilabel:`Checked-In` when they are checked in *inside* the application's :guilabel:`Visitors` list."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:104
-msgid "If a guest does check in using a kiosk, ensure all records are current, and the list of guests that are currently on-site is correct. Be sure to check in and/or check out the correct entries, so the visitors list correctly reflects who is currently on the premises."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:108
-msgid "Ensure planned guests are informed that they should **not** check in using the kiosk if they are listed as a planned guest in advance."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:112
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:68
 msgid "Visitor flow"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:115
-msgid "Visitor check in"
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:70
+msgid "When a visitor arrives at a facility, they approach a :ref:`Frontdesk kiosk <frontdesk/kiosk>`, and enter their information. If the station allows it, they select the host they are visiting. See :ref:`frontdesk/visitor-flow` for details."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:117
-msgid "When a visitor arrives at a facility, they approach a :ref:`Frontdesk kiosk <frontdesk/kiosk>`, and click :guilabel:`Check in`. The information requested from the visitor is what was configured for that specific **Frontdesk** station. If any information is required, the field displays a red asterisk (\\*). The visitor **must** enter the required information in order to check in."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:74
+msgid "Once the visitor is checked in, the following people are notified:"
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:122
-msgid "Once all the information is entered, the visitor taps the :guilabel:`Check In` button."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:76
+msgid "The station's :guilabel:`Responsibles` receive a message from OdooBot in the **Discuss** app, such as `Frontdesk Check-In: John Smith ((644)-169-1353) (Smith LLP) to meet Marc Demo`."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:125
-msgid "At any point in the check-in process, if ten seconds pass with no selection, the kiosk returns to the main welcome screen."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:78
+msgid "The host, if they have a user account, receives a **Discuss** message stating that the visitor just checked in."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:129
-msgid "Planned visitor check in"
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:80
+msgid "The host receives an email and/or an SMS, depending on the station's :guilabel:`Host Notifications` settings."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:131
-msgid "When a :ref:`planned visitor <frontdesk/planned>` arrives at a facility, they first approach a :ref:`Frontdesk kiosk <frontdesk/kiosk>`. If there are planned visitors for that day, a :guilabel:`Quick Check In` panel appears on the right-side of the kiosk, asking :guilabel:`Are you one of these people?` Beneath the question is a list of all visitors schedule to arrive that day."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:84
+msgid "The **Discuss** app is installed by default when creating an Odoo database, and does not count towards billing. As long as the **Discuss** application is not intentionally uninstalled, the notifications work."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:136
-msgid "Click on the corresponding name in the list to check-in."
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:89
+msgid "Visitors do **not** check themselves out when they leave. It is important for **Frontdesk** users to check out visitors for accurate record-keeping."
 msgstr ""
 
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:141
-msgid "If drinks were configured for the station, after tapping :guilabel:`Check In`, a registration confirmation screen loads, along with the question: :guilabel:`Do you want something to drink?`"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:144
-msgid "The visitor can tap either :guilabel:`Yes, please`, or :guilabel:`No, thank you`."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:146
-msgid "If they select :guilabel:`Yes, please`, a drink selection screen appears, and the preconfigured options are listed. The visitor then taps the desired selection, or, if they do not want anything, they can tap the :guilabel:`Nothing, thanks` button at the bottom of the screen."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:150
-msgid "If a drink selection was made, a :guilabel:`Thank you for registering! Your drink is on the way.` message appears."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:154
-msgid "Notifications"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:156
-msgid "Once the visitor has checked in, the person they are visiting, and any other users who were configured to be notified when check-ins occur at the kiosk, are notified. The notification is either by email, SMS message, a *Discuss* chat, or any combination of those three options."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:160
-msgid "If the visitor requested a drink, the users configured as the :guilabel:`People to Notify` on the drink form are notified, via the *Discuss* application. The message that appears is: :guilabel:`(Visitor Name) just checked-in. They requested (Drink Name).`"
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:164
-msgid "Once the drink has been delivered to the guest, the person who delivered the drink is responsible for marking the drink as delivered."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:167
-msgid "To mark a drink as delivered, navigate to :menuselection:`Frontdesk app --> Stations`, and choose the desired station card displaying :guilabel:`(#) Drinks to serve`."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:170
-msgid "This opens a list of all the visitors checked in at that station, and are waiting for a drink. Click the :guilabel:`Drink Served` button at the end of the line for the visitor who was served. Once they are marked as having their drink served, the visitor disappears from the list."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:177
-msgid "Once the visitor has completed their business, and has left the premises, it is important to check them out for accurate record keeping."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:180
-msgid "To check visitors out properly, navigate to :menuselection:`Frontdesk app --> Stations`, and choose the desired station card displaying :guilabel:`(#) Drinks to serve`. Doing so opens a list of all the visitors who are currently checked-in at that station."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:184
-msgid "Click the :guilabel:`Check out` button near the end of the line for the visitor who left. Once they are marked as checked-out, the visitor disappears from the list."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:188
-msgid "Visitors do **not** check themselves out when they leave. It is important for **Frontdesk** users to check out visitors for accurate record keeping."
-msgstr ""
-
-#: ../../export/content/applications/hr/frontdesk/visitors.rst:191
+#: ../../export/content/applications/hr/frontdesk/visitors.rst:92
 msgid "Always have an accurate list of who is on the premises at any given time. This is important for security purposes, and in the case of an emergency."
 msgstr ""
 
@@ -7905,148 +7864,120 @@ msgid "Configure the following:"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch.rst:27
-msgid ":guilabel:`Lunch Overdraft`: Enter the maximum overdraft amount for employees. The currency format is determined by the localization setting of the company."
+msgid ":guilabel:`Lunch Overdraft`: Enter the maximum negative balance employees can reach in the :guilabel:`Overdraft` field. The default value of `0.00` means employees can only order what their :doc:`lunch account <lunch/user-accounts>` balance covers. The currency is the company's currency."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:29
-msgid ":guilabel:`Reception notification`: Set the message users receive via the **Discuss** app when their food has been delivered. The default message `Your lunch has been delivered. Enjoy your meal!` populates this field, but can be modified, if desired."
+#: ../../export/content/applications/hr/lunch.rst:30
+msgid ":guilabel:`Reception notification`: Set the message users receive when a **Lunch** manager :ref:`notifies them that their order has been delivered <lunch/notify>`. The default message `Your lunch has been delivered. Enjoy your meal!` populates this field, but can be modified, if desired."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:34
-msgid "Translation support"
+#: ../../export/content/applications/hr/lunch.rst:35
+msgid "Both settings are defined per company."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:36
-msgid "If a database has multiple languages installed, many forms in the **Lunch** application have the option of entering translations for various fields."
+#: ../../export/content/applications/hr/lunch.rst:38
+msgid "If several languages are :doc:`installed <../general/users/language>` in the database, the :guilabel:`Reception notification` message, as well as the names and descriptions of products, the names of product categories, and the names and messages of alerts, can be translated. Click the language code (for example, :guilabel:`EN`) displayed next to the field to open the translation pop-up window, enter the text for each language, then click :guilabel:`Save`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:39
-msgid "If translations are available to be configured, a language code appears next to a translatable field on a form. To add translations for that field, click the two letter language code (for example, :guilabel:`EN` for English) and a translation pop-up window appears."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:43
-msgid "The image below is an example for the :guilabel:`Reception notification` field in the settings menu."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:45
-msgid "Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. Click the :guilabel:`EN` in the top-right of the text box beneath the :guilabel:`Reception notification` section. A :guilabel:`Translate: company_lunch_notify_message` pop-up window loads with the option to enter a translation for the other languages used by the database."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:50
-msgid "The first column lists the different languages in alphabetical order, with the currently selected language in bold. The second column has the currently configured message in each column. The last column in the far-right provides a text box to type in a translation for each language."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:54
-msgid "Enter the text that should appear for each language, then click :guilabel:`Save`."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:56
-msgid "The translation text box with the current language at the top and translations below."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:62
+#: ../../export/content/applications/hr/lunch.rst:47
 msgid "Locations"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:64
+#: ../../export/content/applications/hr/lunch.rst:49
 msgid "By default, Odoo creates an `HQ Office` location when the **Lunch** application is installed. If a company has more than one location, they must be configured."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:67
-msgid "To add a location, navigate to :menuselection:`Lunch app --> Configuration --> Locations`. The currently configured locations appear in a list view. Click the :guilabel:`New` button in the top-left corner and a blank line appears beneath the last location in the list."
+#: ../../export/content/applications/hr/lunch.rst:52
+msgid "To add a location, navigate to :menuselection:`Lunch app --> Configuration --> Locations`. The currently configured locations appear in a list view. Click the :guilabel:`New` button in the corner and a blank line appears beneath the last location in the list."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:71
-msgid "Enter the name of the location in the field. Next, click into the :guilabel:`Address` field to the right of the name, and enter the location's address. It is possible to enter multiple lines in the address field."
+#: ../../export/content/applications/hr/lunch.rst:56
+msgid "Enter the name of the location in the :guilabel:`Location Name` field. Next, click into the :guilabel:`Address` field and enter the location's specific address. It is possible to enter multiple lines in the address field. In a multi-company database, select the :guilabel:`Company` the location belongs to."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:75
+#: ../../export/content/applications/hr/lunch.rst:61
 msgid "Repeat this for all locations that need to be added."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:77
-msgid "A list view of the locations with the new button highlighted."
+#: ../../export/content/applications/hr/lunch.rst:63
+msgid "The list of lunch locations, with their names, addresses, and companies."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:81
+#: ../../export/content/applications/hr/lunch.rst:69
 #: ../../export/content/applications/hr/referrals/alerts.rst:3
 msgid "Alerts"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:83
+#: ../../export/content/applications/hr/lunch.rst:71
 msgid "It is possible to set up alerts that can either be displayed in the **Lunch** app, or be sent to specific employees via the **Discuss** app."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:86
-msgid "No alerts are preconfigured by default. To set up an alert, navigate to :menuselection:`Lunch app --> Configuration --> Alerts`. Click the :guilabel:`New` button in the top-left corner and a blank lunch alert form loads. Enter the following information on the form:"
+#: ../../export/content/applications/hr/lunch.rst:74
+msgid "To set up an alert, navigate to :menuselection:`Lunch app --> Configuration --> Alerts`. Click the :guilabel:`New` button in the corner and a blank lunch alert form loads. Enter the following information on the form:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:90
-msgid ":guilabel:`Alert Name`: Enter a name for the alert. This should be short and descriptive, such as `New Lunch Vendor` or `Order by 11:00 AM`. This field is **required**."
+#: ../../export/content/applications/hr/lunch.rst:78
+msgid ":guilabel:`Alert Name`: Enter a name for the alert. This should be short and descriptive, such as `New Lunch Vendor` or `Order by 11:30`. This field is **required**."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:92
+#: ../../export/content/applications/hr/lunch.rst:80
 msgid ":guilabel:`Display`: Select how the alert is shown. The options are:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:94
-msgid ":guilabel:`Alert in app`: The alert is visible on the main **Lunch** app dashboard, in an orange box, above the user's name on the right side of the dashboard."
+#: ../../export/content/applications/hr/lunch.rst:82
+msgid ":guilabel:`Alert in app`: The alert is visible on the main **Lunch** app dashboard, in an orange box, above the user's name on the dashboard."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:96
-msgid ":guilabel:`Chat notification`: The alert is sent to users via the **Discuss** app in a chat window. If this option is selected, the following additional field appears:"
+#: ../../export/content/applications/hr/lunch.rst:84
+msgid ":guilabel:`Chat notification`: The alert is sent to users as a notification, received in their **Discuss** inbox or by email, depending on their notification preferences. If this option is selected, the following additional field appears:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:99
+#: ../../export/content/applications/hr/lunch.rst:88
 msgid ":guilabel:`Recipients`: Select who receives the chat alert. The options are: :guilabel:`Everyone`, :guilabel:`Employee who ordered last week`, :guilabel:`Employee who ordered last month`, or :guilabel:`Employee who ordered last year`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:103
-msgid ":guilabel:`Location`: Select the locations the alert appears for using the drop-down menu. Multiple locations can be selected. This field is **required**, therefore, if the alert applies to all locations, select all the locations from the drop-down menu. If this field is left blank, the alert will **not** be displayed."
+#: ../../export/content/applications/hr/lunch.rst:93
+msgid ":guilabel:`Location`: Select the locations the alert appears for using the drop-down menu. Multiple locations can be selected. This field is **required**. If the alert applies to all locations, select all the locations from the drop-down menu. Chat notifications are only sent to users whose last lunch location is one of the selected locations."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:107
+#: ../../export/content/applications/hr/lunch.rst:97
 msgid ":guilabel:`Show Until`: If the alert should expire on a specific date, select the date from the calendar picker."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:109
+#: ../../export/content/applications/hr/lunch.rst:99
 msgid ":guilabel:`Active`: This option is enabled (appears green) by default. To turn off the alert, click the toggle so that it no longer appears green."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:111
+#: ../../export/content/applications/hr/lunch.rst:101
 msgid ":guilabel:`Message`: Enter the alert message in this field. This field is **required**."
 msgstr ""
 
+#: ../../export/content/applications/hr/lunch.rst:102
+msgid "Days of the week: Click the days of the week the alert is visible or sent. By default, all seven days are ticked. If :guilabel:`Chat notification` is selected for the :guilabel:`Display` option, a :guilabel:`Notification Time` field appears beneath the days of the week. Enter the time the chat message is sent, in the 24-hour `HH:MM` format (for example, `10:30`)."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch.rst:107
+msgid "An alert form filled out for a chat notification sent at 10:30 on weekdays, asking\n"
+"employees to order before 11:30."
+msgstr ""
+
 #: ../../export/content/applications/hr/lunch.rst:112
-msgid ":guilabel:`Notification Time`: Select the days of the week the alert is visible or sent. By default, all seven days are active. Click on a checkbox to change the setting from active to inactive."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:117
-msgid "If :guilabel:`Chat notification` was selected for the :guilabel:`Display` option, a time field appears beneath the :guilabel:`Notification Time` block. Enter the time the chat message is sent. Next, select if the time is either :guilabel:`AM` or :guilabel:`PM` using the drop-down menu to the right of the time field."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:122
-msgid "An alert form with all of the information filled out for a chat alert sent at 10:30 AM,\n"
-"asking employees to submit orders by 11:30 AM."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch.rst:127
 msgid ":doc:`lunch/vendors`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:128
+#: ../../export/content/applications/hr/lunch.rst:113
 msgid ":doc:`lunch/products`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:129
+#: ../../export/content/applications/hr/lunch.rst:114
 msgid ":doc:`lunch/orders`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:130
+#: ../../export/content/applications/hr/lunch.rst:115
 msgid ":doc:`lunch/user-accounts`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch.rst:131
+#: ../../export/content/applications/hr/lunch.rst:116
 msgid ":doc:`lunch/management`"
 msgstr ""
 
@@ -8063,223 +7994,232 @@ msgid "Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:14
-msgid "To manage the **Lunch** app, users need the appropriate :guilabel:`Administrator` rights. These can be set by navigating to the :menuselection:`Settings app` and selecting :guilabel:`Manage Users`. Then, click on the desired user to view their access rights."
+msgid "To manage the **Lunch** app, users need the :guilabel:`Administrator` access rights for the **Lunch** app (the other level, :guilabel:`User : Order your meal`, only allows users to order). These can be set by navigating to the :menuselection:`Settings app` and selecting :guilabel:`Manage Users`. Then, click on the desired user to view their access rights."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:18
+#: ../../export/content/applications/hr/lunch/management.rst:19
 msgid "For more information on access rights, refer to the :doc:`Access rights <../../general/users/access_rights/>` documentation."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:22
+#: ../../export/content/applications/hr/lunch/management.rst:23
 msgid "Only users with administration rights are able to view the :guilabel:`Manager` and :guilabel:`Configuration` menus in the **Lunch** application."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:28
+#: ../../export/content/applications/hr/lunch/management.rst:29
 msgid "Today's Orders"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:30
+#: ../../export/content/applications/hr/lunch/management.rst:31
 msgid "To view and manage the orders for the day, navigate to :menuselection:`Lunch app --> Manager --> Today's Orders`. All orders for the day are presented in a list view on the :guilabel:`Today's Orders` dashboard, with a filter for :guilabel:`Today`, and grouped by :guilabel:`Vendor`, by default."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:35
-#: ../../export/content/applications/hr/lunch/management.rst:157
+#: ../../export/content/applications/hr/lunch/management.rst:36
+#: ../../export/content/applications/hr/lunch/management.rst:173
 msgid "The following information appears in the list:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:37
-#: ../../export/content/applications/hr/lunch/management.rst:159
+#: ../../export/content/applications/hr/lunch/management.rst:38
+#: ../../export/content/applications/hr/lunch/management.rst:175
 msgid ":guilabel:`Order Date`: the date the order was placed."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:38
-#: ../../export/content/applications/hr/lunch/management.rst:160
+#: ../../export/content/applications/hr/lunch/management.rst:39
+#: ../../export/content/applications/hr/lunch/management.rst:176
 msgid ":guilabel:`Vendor`: the vendor the product is being ordered from."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:39
-#: ../../export/content/applications/hr/lunch/management.rst:161
+#: ../../export/content/applications/hr/lunch/management.rst:40
+#: ../../export/content/applications/hr/lunch/management.rst:177
 msgid ":guilabel:`Product`: the specific product ordered."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:40
-#: ../../export/content/applications/hr/lunch/management.rst:162
+#: ../../export/content/applications/hr/lunch/management.rst:41
+#: ../../export/content/applications/hr/lunch/management.rst:178
 msgid ":guilabel:`Extras`: any extras selected for the product."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:41
-#: ../../export/content/applications/hr/lunch/management.rst:163
+#: ../../export/content/applications/hr/lunch/management.rst:42
+#: ../../export/content/applications/hr/lunch/management.rst:179
 msgid ":guilabel:`Notes`: any information needed to be sent to the vendor."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:42
-#: ../../export/content/applications/hr/lunch/management.rst:164
+#: ../../export/content/applications/hr/lunch/management.rst:43
+#: ../../export/content/applications/hr/lunch/management.rst:180
 msgid ":guilabel:`User`: the user who ordered the product."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:43
-#: ../../export/content/applications/hr/lunch/management.rst:165
+#: ../../export/content/applications/hr/lunch/management.rst:44
+#: ../../export/content/applications/hr/lunch/management.rst:181
 msgid ":guilabel:`Lunch Location`: where the product is set to be delivered."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:44
-#: ../../export/content/applications/hr/lunch/management.rst:166
+#: ../../export/content/applications/hr/lunch/management.rst:45
+#: ../../export/content/applications/hr/lunch/management.rst:182
 msgid ":guilabel:`Price`: the total price for the product, including all extras."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:45
-#: ../../export/content/applications/hr/lunch/management.rst:167
+#: ../../export/content/applications/hr/lunch/management.rst:46
+#: ../../export/content/applications/hr/lunch/management.rst:183
 msgid ":guilabel:`Status`: the current status of the product."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:46
-#: ../../export/content/applications/hr/lunch/management.rst:168
+#: ../../export/content/applications/hr/lunch/management.rst:47
+#: ../../export/content/applications/hr/lunch/management.rst:184
 msgid ":guilabel:`Company`: the company under which the order was placed. This only appears in a multi-company database."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:49
-msgid "The list that appears in the Today's Orders dashboard, with the filters and top column\n"
-"names highlighted."
+#: ../../export/content/applications/hr/lunch/management.rst:50
+msgid "The :guilabel:`Status` of each product is one of the following: :guilabel:`To Order` (orange, the product was added to the user's cart but not ordered yet), :guilabel:`Ordered` (red), :guilabel:`Sent` (blue), :guilabel:`Received` (green), or :guilabel:`Cancelled` (gray)."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:56
+#: ../../export/content/applications/hr/lunch/management.rst:54
+msgid "The Today's Orders list, grouped by vendor, with the Send Orders button and ordered\n"
+"products."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:61
 msgid "Cancel orders"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:58
-msgid "All users can cancel an order, not only managers of the **Lunch** app."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/management.rst:60
-msgid "To cancel an order from a vendor, individual products **must** be cancelled one at a time."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/management.rst:62
-msgid "On the :guilabel:`Today's Orders` dashboard, a :icon:`fa-times` :guilabel:`Cancel` button is shown at the far-right of each product line that can be cancelled. Click the :icon:`fa-times` :guilabel:`Cancel` button to cancel the order for that individual product."
+#: ../../export/content/applications/hr/lunch/management.rst:63
+msgid "Users can cancel their own orders from the :ref:`Order Your Lunch <lunch/cancel-one>` dashboard, as long as the orders have not been sent to the vendor. **Lunch** managers can cancel any order that has not been received yet."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:67
-msgid "Only products with a red :guilabel:`Status` tag of :guilabel:`Ordered` can be cancelled."
+msgid "To cancel an order from a vendor, individual products **must** be cancelled one at a time."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:69
-msgid "Order lines with the cancel button highlighted."
+msgid "On the :guilabel:`Today's Orders` dashboard, a :icon:`close` :guilabel:`Cancel` button is shown at the far-right of each product line that can be cancelled (products with a :guilabel:`To Order`, :guilabel:`Ordered`, or :guilabel:`Sent` status). Click the :icon:`close` :guilabel:`Cancel` button to cancel the order for that individual product. The amount paid for the product is credited back to the user's lunch account."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:75
+msgid "To restore a cancelled order, click the :icon:`undo` :guilabel:`Reset` button at the end of its line. The product status changes back to :guilabel:`Ordered`."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:81
 msgid "Send orders"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:77
+#: ../../export/content/applications/hr/lunch/management.rst:83
 msgid "The first step in managing the **Lunch** app is to send the orders to the vendors."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:79
-msgid "When orders are ready to be sent, the manager responsible for sending orders **must** send the orders to the vendor, outside of the database (call, online order, etc.)."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/management.rst:82
-msgid "Once orders have been placed with the vendors, click the :guilabel:`Send Orders` button that appears next to each vendor's name and phone number."
-msgstr ""
-
 #: ../../export/content/applications/hr/lunch/management.rst:85
-msgid "Once sent, the :guilabel:`Send Orders` button changes to a :guilabel:`Confirm Orders` button, and the :guilabel:`Status` column is updated from red :guilabel:`Ordered` tags to blue :guilabel:`Sent` tags, indicating the order has been sent to the vendor. Users who have placed orders in the **Lunch** app rely on the :guilabel:`Status` tags to track their orders."
+msgid "The :guilabel:`Send Orders` button appears next to the vendor's name and phone number when the vendor has products with an :guilabel:`Ordered` status for the current day. Products with a :guilabel:`To Order` status have not been paid for by the user, and are not sent."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:90
-msgid "A vendor's order with the X Cancel and Send Orders buttons highlighted."
+#: ../../export/content/applications/hr/lunch/management.rst:89
+msgid "How orders reach the vendor depends on the vendor's :ref:`Send Order By <lunch/orders>` setting:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:96
-msgid "Confirm orders"
+#: ../../export/content/applications/hr/lunch/management.rst:91
+msgid ":guilabel:`Phone`: The manager responsible for sending orders **must** send the orders to the vendor, outside of the database (call, online order, etc.). Once orders have been placed with the vendor, click the :guilabel:`Send Orders` button."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:94
+msgid ":guilabel:`Email`: The day's orders are automatically emailed to the vendor at the configured :guilabel:`Order Time`. To email them without waiting for the :guilabel:`Order Time`, click the :guilabel:`Send Orders` button."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:98
-msgid "After orders have been sent to the vendor, the next step is to confirm the orders after they have been delivered."
+msgid "Once sent, the :guilabel:`Send Orders` button changes to a :guilabel:`Confirm Orders` button, and the :guilabel:`Status` column is updated from red :guilabel:`Ordered` tags to blue :guilabel:`Sent` tags, indicating the order has been sent to the vendor. Users who have placed orders in the **Lunch** app rely on the :guilabel:`Status` tags to track their orders."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:101
-msgid "On the :guilabel:`Today's Orders` dashboard, click the :guilabel:`Confirm Orders` button that appears next to the vendor's name and phone number."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/management.rst:104
-msgid "Once confirmed, the :guilabel:`Confirm Orders` button disappears, and the :guilabel:`Status` column is updated from blue :guilabel:`Sent` tags to green :guilabel:`Received` tags, indicating the vendor has delivered the orders."
+#: ../../export/content/applications/hr/lunch/management.rst:106
+msgid "Confirm orders"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:108
-msgid "In addition, the :icon:`fa-times` :guilabel:`Cancel` button at the end of each product line changes to a :icon:`fa-envelope` :guilabel:`Send Notification` button."
+msgid "After orders have been sent to the vendor, the next step is to confirm the orders after they have been delivered."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:111
-msgid "If needed, instead of confirming all of the individual products from a vendor, individual products can be confirmed one at a time. To confirm an individual product, click the :icon:`fa-check` :guilabel:`Confirm` button at the end of the individual product line. When confirming individual products with this method, the :guilabel:`Confirm Orders` button remains on the vendor line."
+msgid "On the :guilabel:`Today's Orders` dashboard, click the :guilabel:`Confirm Orders` button that appears next to the vendor's name and phone number."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:116
-msgid "The Today's Orders dashboard, with the two different ways to confirm an order highlighted."
+#: ../../export/content/applications/hr/lunch/management.rst:114
+msgid "Once confirmed, the :guilabel:`Confirm Orders` button disappears, and the :guilabel:`Status` column is updated from blue :guilabel:`Sent` tags to green :guilabel:`Received` tags, indicating the vendor has delivered the orders."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:120
-msgid "A vendor receives an order for three pizzas, and an order of garlic knots. When the delivery is made to the company, the **Lunch** manager notices the garlic knots are missing."
+#: ../../export/content/applications/hr/lunch/management.rst:118
+msgid "In addition, the :icon:`close` :guilabel:`Cancel` button at the end of each product line changes to a :icon:`mail_f` :guilabel:`Send Notification` button."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:123
-msgid "The manager first marks the three pizzas as received, by individually confirming the products with the :icon:`fa-check` :guilabel:`Confirm`  button at the end of each product line."
+#: ../../export/content/applications/hr/lunch/management.rst:121
+msgid "If needed, instead of confirming all of the individual products from a vendor, individual products can be confirmed one at a time. To confirm an individual product, click the :icon:`check` :guilabel:`Confirm` button at the end of the individual product line. When confirming individual products with this method, the :guilabel:`Confirm Orders` button remains on the vendor line."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:126
-msgid "Later, when the vendor delivers the garlic knots, the manager can either click the :icon:`fa-check` :guilabel:`Confirm`  button at the end of the line for the garlic knots, or click the :guilabel:`Confirm Orders` button that appears next to the vendor's name and phone number."
+msgid "It is also possible to tick the checkbox of several product lines, and click the :guilabel:`Receive` button that appears at the top of the list."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:129
+msgid "The Today's Orders list after sending the orders, with the Confirm Orders button, a\n"
+"received product, and sent products."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/management.rst:134
+msgid "A vendor receives an order for three pizzas, and an order of garlic knots. When the delivery is made to the company, the **Lunch** manager notices the garlic knots are missing."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:137
+msgid "The manager first marks the three pizzas as received, by individually confirming the products with the :icon:`check` :guilabel:`Confirm`  button at the end of each product line."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:140
+msgid "Later, when the vendor delivers the garlic knots, the manager can either click the :icon:`check` :guilabel:`Confirm`  button at the end of the line for the garlic knots, or click the :guilabel:`Confirm Orders` button that appears next to the vendor's name and phone number."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/management.rst:148
 msgid "Notify employees"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:136
+#: ../../export/content/applications/hr/lunch/management.rst:150
 msgid "After products are received, and the orders are confirmed, the employees **must** be informed that their orders have been delivered, and are ready to be picked up."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:139
+#: ../../export/content/applications/hr/lunch/management.rst:153
 msgid "Unlike sending and confirming orders, notifications must be sent individually, and cannot be sent in a batch."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:142
-msgid "To notify the user their product has arrived, click the :icon:`fa-envelope` :guilabel:`Send Notification` button at the end of each product line. An email is sent to the user informing them their products have been delivered."
+#: ../../export/content/applications/hr/lunch/management.rst:156
+msgid "To notify the user their product has arrived, click the :icon:`mail_f` :guilabel:`Send Notification` button at the end of each product line. The user receives the :ref:`Reception notification <lunch/settings>` message configured in the settings, in their **Discuss** inbox or by email, depending on their notification preferences. Once the notification is sent, the button disappears from the line."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:149
+#: ../../export/content/applications/hr/lunch/management.rst:165
 msgid "Control Vendors"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:151
+#: ../../export/content/applications/hr/lunch/management.rst:167
 msgid "All orders for all vendors, both past and present, can be found in the *Control Vendors* dashboard. To access these records, navigate to :menuselection:`Lunch app --> Manager --> Control Vendors`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:154
+#: ../../export/content/applications/hr/lunch/management.rst:170
 msgid "All orders appear in a list view, grouped alphabetically by :guilabel:`Vendor`. The list loads with all vendors expanded to show all order lines for every vendor, by default."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:171
+#: ../../export/content/applications/hr/lunch/management.rst:187
 msgid "Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <lunch/send-orders>`, :ref:`confirmed <lunch/confirm-orders>` upon arrival, and :ref:`employees can be notified <lunch/notify>` using the same method as on the :ref:`Today's Orders <lunch/todays-orders>` dashboard."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:176
-msgid "A list view of all the orders as seen in the Control Vendors dashboard."
+#: ../../export/content/applications/hr/lunch/management.rst:192
+msgid "The Control Vendors list, with the orders of every vendor grouped by vendor."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:180
+#: ../../export/content/applications/hr/lunch/management.rst:196
 msgid "The difference between the :ref:`Today's Orders <lunch/todays-orders>` dashboard and the :ref:`Control Vendors <lunch/control_vendors>` dashboard is that the *Today's Orders* dashboard **only** displays orders for the current day, while the :guilabel:`Control Vendors` dashboard displays **all** orders made in the **Lunch** app."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:186
+#: ../../export/content/applications/hr/lunch/management.rst:202
 msgid ":doc:`../lunch`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/management.rst:187
+#: ../../export/content/applications/hr/lunch/management.rst:203
 msgid ":doc:`user-accounts`"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:5
-#: ../../export/content/applications/hr/lunch/vendors.rst:75
+#: ../../export/content/applications/hr/lunch/vendors.rst:82
 msgid "Orders"
 msgstr ""
 
@@ -8288,11 +8228,11 @@ msgid "The **Lunch** app lets employees place lunch orders, see what is availabl
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:10
-msgid "When the **Lunch** application is opened, the :guilabel:`Order Your Lunch` dashboard loads. This view is also accessible by navigating to :menuselection:`Lunch app --> My Lunch --> New Order`."
+msgid "When the **Lunch** app is opened, the *Order Your Lunch* dashboard loads. This view is also accessible by navigating to :menuselection:`Lunch app --> My Lunch --> New Order`."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:13
-msgid "The :guilabel:`Order Your Lunch` dashboard provides a summary of lunch offerings, the user's account information, and the current day's orders, along with their statuses."
+msgid "The *Order Your Lunch* dashboard provides a summary of lunch offerings, the user's account information, and their upcoming orders, along with their statuses."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:17
@@ -8300,364 +8240,378 @@ msgid "Order Your Lunch"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:19
-msgid "On the main :guilabel:`Order Your Lunch` dashboard, all the necessary information needed to place an order is visible. The default filter is for the current day (example: :icon:`fa-filter` :guilabel:`Wednesday`), which shows only products that can be purchased that day, based on the :ref:`vendor's availability <lunch/availability>`."
+msgid "On the main *Order Your Lunch* dashboard, all the necessary information needed to place an order is visible."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:24
-msgid "The left-side of the dashboard displays the various :guilabel:`Categories` of products available, along with the :guilabel:`Vendors` supplying the products. To the right of each line is a number, indicating how many products are associated with that category or vendor."
+#: ../../export/content/applications/hr/lunch/orders.rst:22
+msgid "One side of the dashboard displays the various :icon:`restaurant` :guilabel:`Categories` of products available, along with the :icon:`local-shipping` :guilabel:`Vendors` supplying the products. At the end of each line is a number, indicating how many products are associated with that category or vendor."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:28
+#: ../../export/content/applications/hr/lunch/orders.rst:27
 msgid "To filter the products by categories or vendors, click the checkbox next to the desired category or vendor to view only items within those selections. Multiple selections can be made in each section."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:32
-msgid "If multiple selections are made, **only** products that fall under **all** the selected options are shown."
+#: ../../export/content/applications/hr/lunch/orders.rst:31
+msgid "If selections are made in both sections, **only** products that match both the selected categories **and** vendors are shown."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:35
-msgid "The right side of the dashboard, which serves as an account hub, displays the user, their location, the current date, their account balance (located in the :icon:`fa-money` :guilabel:`Available Balance` field), and order details for the current day, if any orders have been placed."
+#: ../../export/content/applications/hr/lunch/orders.rst:34
+msgid "The middle section displays the products of the vendors available for the selected :ref:`location <lunch/select-location>`, in a default Kanban view. Each product card displays the name, price, vendor, photo, and description of the product. If the product is configured as new, it also displays a green :guilabel:`New` tag. Click the :icon:`star` :guilabel:`(Add to Favorites)` icon on a product card to mark it as a favorite."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:39
-msgid "The middle section displays all the products in a default Kanban view. Each product card displays the name, cost, vendor, photo, and description of the product. If the product is configured as new, it also displays a green :guilabel:`New` tag."
+#: ../../export/content/applications/hr/lunch/orders.rst:40
+msgid "The other side of the dashboard, which serves as an account hub, displays any :ref:`alert <lunch/alerts>` configured for the user's location, the user, their location, the selected date, their :guilabel:`Passed orders`, their account balance (in the :icon:`payments` :guilabel:`Available Balance` field), and the details of their current order, if any products have been added."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:43
-msgid "The Lunch app dashboard."
+#: ../../export/content/applications/hr/lunch/orders.rst:45
+msgid "The Lunch app dashboard, with the product cards and the user's current order."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:47
+#: ../../export/content/applications/hr/lunch/orders.rst:49
 msgid "Anywhere a vendor's name is listed in the **Lunch** app, such as on Kanban product cards, their phone number is listed, as well."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:51
-msgid "Placing orders"
-msgstr ""
-
 #: ../../export/content/applications/hr/lunch/orders.rst:53
-msgid "To place a lunch order, navigate to the main :guilabel:`Order Your Lunch` dashboard by either opening the **Lunch** app or by navigating to :menuselection:`Lunch app --> My Lunch --> New Order`."
+msgid "**Lunch** managers can place orders on behalf of another user."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:57
-msgid "Select the location"
+#: ../../export/content/applications/hr/lunch/orders.rst:55
+msgid "Click the user's name at the top of the account hub, and select the user from the drop-down menu. The account hub then displays that user's balance and orders."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:59
-msgid "Ensure the location set in the account hub on the right-side of the :guilabel:`Order Your Lunch` dashboard is correct. Click the :guilabel:`Location` drop-down menu to view all **Lunch** app locations, and select the user's current location (or the location the user wants their lunch delivered to)."
+msgid "Place an order"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:65
-msgid "The user's work schedule, which indicates where they work each day, is **not** reflected in the :guilabel:`Location` field. Every available location must be configured in the **lunch** app, and all locations are available to all users in the database, regardless of work location. This way, users can order lunch and have it delivered to the location where they *will be* during lunchtime."
+#: ../../export/content/applications/hr/lunch/orders.rst:61
+msgid "To place a lunch order, navigate to the main *Order Your Lunch* dashboard by either opening the **Lunch** app or by navigating to :menuselection:`Lunch app --> My Lunch --> New Order`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:71
+#: ../../export/content/applications/hr/lunch/orders.rst:67
+msgid "Select the location"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:69
+msgid "Ensure the location set in the account hub on the side of the *Order Your Lunch* dashboard is correct. Click the :guilabel:`Location` drop-down menu to view all **Lunch** app locations, and select the location the user wants their lunch delivered to."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:74
+msgid "The user's work schedule, which indicates where they work each day, is **not** reflected in the :guilabel:`Location` field. Every available location must be configured in the **Lunch** app, and all locations are available to all users in the database, regardless of work location. This way, users can order lunch and have it delivered to the location where they *will be* during lunchtime."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:80
 msgid "For example, an employee works in the factory and has a lunch meeting with their supervisor at the main office, two blocks away. The employee selects the main office as their location in the **Lunch** app, and their order is delivered to the main office rather than the factory."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:76
+#: ../../export/content/applications/hr/lunch/orders.rst:85
 msgid "Select the date"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:78
+#: ../../export/content/applications/hr/lunch/orders.rst:87
 msgid "The **Lunch** app allows for placing orders not only for the current day, but also for ordering future meals. This feature allows users to plan meals in advance, without having to place daily orders."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:82
-msgid "Click the date on the right side of the :guilabel:`Order Your Lunch` dashboard to open a calendar pop-up window. Click on the desired date to select it. Any products added are for delivery on the selected date."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:86
-msgid "Multiple products with multiple delivery dates can be ordered at once; each day does not need to be processed separately."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:90
-msgid "Add products to an order"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:92
-msgid "From the :guilabel:`Order Your Lunch` dashboard, click on a desired product to add it to an order; it appears in the *Configure Your Order* pop-up window."
+#: ../../export/content/applications/hr/lunch/orders.rst:91
+msgid "Click the date on the side of the *Order Your Lunch* dashboard to open a calendar pop-up window. Click on the desired date to select it. Any products added are for delivery on the selected date."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:95
-msgid "At the top of the pop-up window is the product image, name, and price. Beneath that, there are potential :guilabel:`Extras` fields that showcase any :ref:`extra items or options <lunch/extras>`, such as toppings or drinks. Click the checkbox next to any desired extras present in the :guilabel:`Extras` fields to add them to the order."
+msgid "When a date is selected, a filter for the corresponding day of the week (for example, :guilabel:`Monday`) is added to the search bar, and only the products of the vendors :ref:`available on that day <lunch/availability>` are displayed."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:100
-msgid "Each extra option is organized by a category, complete with its name and price. As extras are selected, the displayed price at the top of the pop-up window updates to reflect all current selections."
+msgid "Multiple products with multiple delivery dates can be ordered at once; each day does not need to be processed separately."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:104
+msgid "Add products to an order"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:106
+msgid "From the :guilabel:`Order Your Lunch` dashboard, click on the desired product to add it to an order, and a *Configure Your Order* pop-up window loads."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:109
+msgid "At the top of the pop-up window is the product image, name, and price. Beneath that, there are potential :guilabel:`Extras` fields that showcase any :ref:`extra items or options <lunch/extras>`, such as toppings or drinks. Click the checkbox next to any desired extras present in the :guilabel:`Extras` fields to add them to the order."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:114
+msgid "Each extra option is organized by a category, complete with its name and price. As extras are selected, the displayed price at the top of the pop-up window updates to reflect all current selections."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:118
 msgid "Beneath the :guilabel:`Extras` field is the :guilabel:`Description` of the product, followed by a :guilabel:`Notes` field. The :guilabel:`Notes` field is used to enter vital information that is then sent to the vendor regarding the order, such as any special requests or food allergies."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:108
-msgid "When all selections for the product have been made, click the :guilabel:`Add To Cart` button in the lower-left of the pop-up window. To cancel the order, click the :guilabel:`Discard` button."
+#: ../../export/content/applications/hr/lunch/orders.rst:122
+msgid "When all selections for the product have been made, click the :guilabel:`Add To Cart` button, or click the :guilabel:`Discard` button to cancel the item and close the pop-up window."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:111
-msgid "The pop-up window for a personal pizza, with all the extras selected."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:117
-msgid "There can be several reasons why an order cannot be placed: a :ref:`lack of funds <lunch/insufficient-funds>`, an :ref:`incomplete order <lunch/incomplete>`, or being outside the vendors :ref:`operating hours <lunch/outside-hours>`."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:124
-msgid "Insufficient funds"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:126
-msgid "If the price for the item in the :guilabel:`Configure Your Order` pop-up window exceeds the :guilabel:`Available Balance` for the user, the following error appears:"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:129
-msgid "`Your wallet does not contain enough money to order that. To add some money to your wallet, please contact your lunch manager.`"
+#: ../../export/content/applications/hr/lunch/orders.rst:125
+msgid "The Configure Your Order pop-up window for a personal pizza, with toppings and a free\n"
+"beverage selected."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:132
-msgid "Additionally, the :guilabel:`Add To Cart` button is hidden, and only the :guilabel:`Discard` button appears."
+msgid "There can be several reasons why an order cannot be placed: a :ref:`lack of funds <lunch/insufficient-funds>`, an :ref:`incomplete order <lunch/incomplete>`, or being outside the vendors :ref:`operating hours <lunch/outside-hours>`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:135
-msgid "If this error appears, the user must :doc:`add funds to their lunch account <user-accounts>` through a **Lunch** app administrator before placing the order."
+#: ../../export/content/applications/hr/lunch/orders.rst:139
+msgid "Insufficient funds"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:141
+msgid "If the price for the item in the *Configure Your Order* pop-up window exceeds the :guilabel:`Available Balance` for the user, the following error appears:"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:144
+msgid "`Your wallet does not contain enough money to order that. To add some money to your wallet, please contact your lunch manager.`"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:147
+msgid "Additionally, the :guilabel:`Add To Cart` button is hidden, and only the :guilabel:`Discard` button appears. The :ref:`overdraft <lunch/settings>` configured in the settings is taken into account."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:150
+msgid "If this error appears, the user must :doc:`add funds to their lunch account <user-accounts>` through a **Lunch** app administrator before placing the order."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:153
+msgid "The error that appears when attempting to order an item with insufficient funds."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:159
 msgid "Incomplete orders"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:143
+#: ../../export/content/applications/hr/lunch/orders.rst:161
 msgid "Depending on how the various :ref:`extras <lunch/configure-extras>` are configured for a vendor, it is possible to receive an error when attempting to add products to the cart."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:146
+#: ../../export/content/applications/hr/lunch/orders.rst:164
 msgid "An error occurs when a configured product **requires** the user to select an option in the :guilabel:`Extras` field, but the user neglects to make one."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:149
-msgid "When this occurs, a :guilabel:`Validation Error` pop-up window appears. The error is briefly explained in the pop-up window. Click :guilabel:`Close` to close the window, and make any necessary changes to the :guilabel:`Configure Your Order` pop-up window."
+#: ../../export/content/applications/hr/lunch/orders.rst:167
+msgid "When this occurs, a *Validation Error* pop-up window appears. The error is briefly explained in the pop-up window. Click :guilabel:`Close` to close the window, and make all necessary changes to the *Configure Your Order* pop-up window."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:154
-msgid "The vendor, The Pizza Palace, provides a free beverage with any purchase. Their products are configured so that a beverage selection is **required** in the :guilabel:`Extras` field *before* adding one of their products to the cart."
+#: ../../export/content/applications/hr/lunch/orders.rst:172
+msgid "The vendor, Sushi Shop, provides a free beverage with any entree. Their extras are configured so that **exactly one** beverage must be selected *before* adding one of their products to the cart."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:158
-msgid "If a selection is **not** made, an error occurs. The message that appears is `You have to order one and only one Free Beverage with Purchase`."
+#: ../../export/content/applications/hr/lunch/orders.rst:176
+msgid "If a selection is **not** made, an error occurs. The message that appears is: `You have to order one and only one Free Beverage with Entree`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:161
-msgid "The :guilabel:`Validation Error` pop-up window with the specific error for the free\n"
-"beverage displayed."
+#: ../../export/content/applications/hr/lunch/orders.rst:179
+msgid "The *Validation Error* pop-up window with the specific error for the free beverage\n"
+"displayed."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:168
+#: ../../export/content/applications/hr/lunch/orders.rst:186
 msgid "Outside vendor hours"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:170
-msgid "Each vendor in the **Lunch** app has their :ref:`availability <lunch/availability>` configured, with both their operating hours as well as the deadline for sending orders via email."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:173
-msgid "If a user clicks on a product for a vendor who is either closed or whose order window is closed, the following message appears on the *Configure Your Product* pop-up window: `The orders for this vendor have already been sent.`"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:177
-msgid "Click the :guilabel:`Discard` button, and make a selection from another vendor."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:180
-msgid "Order summary"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:182
-msgid "When items are added to an order, the items appear in the :guilabel:`Your Order` summary, located on the right-side of the :guilabel:`Order Your Lunch` dashboard."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:185
-msgid "Each product is listed in its own Kanban card, with the product name, the user's location, any extras added, the quantity, a status tag, the delivery date for the order, and the total amount."
-msgstr ""
-
 #: ../../export/content/applications/hr/lunch/orders.rst:188
-msgid "The available tags that can be displayed for each item in the :guilabel:`Your Order` section are:"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:190
-msgid ":guilabel:`To Order`: The product has been added to the cart, but has not been purchased yet by the user yet. This tag appears in gray."
+msgid "Each vendor in the **Lunch** app has their :ref:`availability <lunch/availability>` configured, with both the days they are open, and, for vendors receiving orders by email, the :ref:`time at which orders are sent <lunch/orders>`."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:192
-msgid ":guilabel:`Ordered`: The product has been purchased by the user and is waiting to be sent to the vendor by a **Lunch** app manager. This tag appears in purple."
+msgid "If a user clicks on a product for the current day from a vendor who is either closed today, or whose orders have already been emailed, the following message appears on the *Configure Your Order* pop-up window: `The orders for this vendor have already been sent.` The :guilabel:`Add To Cart` button is hidden."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:195
-msgid "Product quantities can be adjusted by clicking the :icon:`fa-plus` :guilabel:`(plus)` or :icon:`fa-minus` :guilabel:`(minus)` icons beneath the listed product. The product price adjusts in real-time to reflect the cost for the currently selected quantity of the product."
+#: ../../export/content/applications/hr/lunch/orders.rst:197
+msgid "Click the :guilabel:`Discard` button, and make a selection from another vendor."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:199
-msgid "The 'Your Orders' section of the dashboard, with purchasing information."
+#: ../../export/content/applications/hr/lunch/orders.rst:200
+msgid "Order summary"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:202
-msgid "Beneath the :guilabel:`Your Order` section is a summary of the purchasing information, including the following:"
+msgid "When items are added to an order, the items appear in the :guilabel:`Your Order` summary, located to the side of the *Order Your Lunch* dashboard."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:205
-msgid ":guilabel:`Total`: This field displays the total amount for the entire day's lunch order, including all items already ordered, received, and all pending orders."
+msgid "Each product is listed in its own card, with the product name, a status tag, any notes, the delivery location and date, any extras added, the quantity, and the total amount. The section lists all the user's orders for the current day and the following days, regardless of the date selected in the account hub."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:207
-msgid ":guilabel:`Already Paid`: This field indicates how much has been paid that day towards the :guilabel:`Total` amount."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:209
-msgid ":guilabel:`To Pay`: This field displays how much of the remaining :guilabel:`Total` amount must be paid in order to place the currently configured order (items with a tag of :guilabel:`To Order`)."
+#: ../../export/content/applications/hr/lunch/orders.rst:210
+msgid "The available tags that can be displayed for each item in the :guilabel:`Your Order` section are:"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:212
-msgid "The various account totals for the user's account."
+msgid ":guilabel:`To Order`: The product has been added to the cart, but has not been purchased by the user yet. This tag appears in gray."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:216
-msgid "Users can place multiple orders throughout the day, and are not restricted to a single lunch order per day. Multiple orders might need to be placed, due to users forgetting to add items to an order, or because there are multiple meals available for purchase for the office (not just lunch), and so on."
+#: ../../export/content/applications/hr/lunch/orders.rst:214
+msgid ":guilabel:`Ordered`: The product has been purchased by the user and is waiting to be sent to the vendor by a **Lunch** app manager. This tag appears in purple."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:217
+msgid "Product quantities can be adjusted by clicking the :icon:`add` :guilabel:`(Increase quantity)` or :icon:`remove` :guilabel:`(Decrease quantity)` icons on the product card. The product price adjusts in real-time to reflect the cost for the currently selected quantity of the product."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:221
-msgid "Depending on the various vendors, and how the vendors and products are configured, it is possible to order breakfast, lunch, dinner, coffee, and snacks."
+msgid "Beneath the :guilabel:`Your Order` section is a summary of the purchasing information, including the following:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:225
-msgid "Cancel an order"
+#: ../../export/content/applications/hr/lunch/orders.rst:224
+msgid ":guilabel:`Total`: This field displays the total amount of all the listed orders, including both paid and pending ones."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:227
-msgid "Orders can be cancelled at any time, as long as the orders have **not** been sent to the vendor. All orders that appear in the :guilabel:`Your Order` section can be cancelled. All orders that have been sent appear in the :guilabel:`Passed orders` section, and are ineligible for cancellation."
+#: ../../export/content/applications/hr/lunch/orders.rst:226
+msgid ":guilabel:`Already Paid`: This field indicates how much of the :guilabel:`Total` amount has already been paid."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:228
+msgid ":guilabel:`To Pay`: This field displays the amount that must be paid in order to place the currently configured order (items with a tag of :guilabel:`To Order`)."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:231
-msgid "Orders can be cancelled in two ways, :ref:`individually <lunch/cancel-one>`, or :ref:`in bulk <lunch/cancel-all>`."
+msgid "The account hub with the Your Order section, listing a product to order and an ordered\n"
+"product, and the order totals."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:235
-msgid "To check and ensure an order is cancelled, navigate to :menuselection:`Lunch app --> My Lunch --> My Order History`. A gray :guilabel:`Cancelled` icon appears next to any cancelled orders."
+#: ../../export/content/applications/hr/lunch/orders.rst:236
+msgid "Users can place multiple orders throughout the day, and are not restricted to a single lunch order per day. Multiple orders might need to be placed, due to users forgetting to add items to an order, or because there are multiple meals available for purchase for the office (not just lunch), and so on."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:241
+msgid "Depending on the various vendors, and how the vendors and products are configured, it is possible to order breakfast, lunch, dinner, coffee, and snacks."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:245
+msgid "Cancel an order"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:247
+msgid "Orders can be cancelled at any time, as long as the orders have **not** been sent to the vendor. All orders that appear in the :guilabel:`Your Order` section can be cancelled, and the amount already paid is credited back to the user's account."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:251
+msgid "Orders can be cancelled in two ways, :ref:`individually <lunch/cancel-one>`, or :ref:`in bulk <lunch/cancel-all>`."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:255
+msgid "All orders that have been sent appear in the :guilabel:`Passed orders` section, and are ineligible for cancellation."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:261
 msgid "Cancel an individual item"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:243
-msgid "On the :guilabel:`Order Your Lunch` dashboard, click the :icon:`fa-minus` :guilabel:`(minus)` icon beneath the desired product in the :guilabel:`Your Order` section, until the quantity is zero. The order is cancelled, and the product disappears from the :guilabel:`Your Order` section."
+#: ../../export/content/applications/hr/lunch/orders.rst:263
+msgid "On the *Order Your Lunch* dashboard, click the :icon:`remove` :guilabel:`(Decrease quantity)` icon on the desired product in the :guilabel:`Your Order` section, until the quantity is zero. The order is cancelled, and the product disappears from the :guilabel:`Your Order` section."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:250
+#: ../../export/content/applications/hr/lunch/orders.rst:270
 msgid "Cancel all items"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:252
-msgid "All items in the :guilabel:`Your Order` section of the :guilabel:`Order Your Lunch` dashboard can be cancelled at one time. Click the :guilabel:`Clear Order` button at the bottom of the right-side of the dashboard, and all products are cancelled."
+#: ../../export/content/applications/hr/lunch/orders.rst:272
+msgid "All items in the :guilabel:`Your Order` section of the *Order Your Lunch* dashboard can be cancelled at one time. Click the :guilabel:`Clear Order` button at the bottom of the dashboard, and all products are canceled and removed from the order."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:257
+#: ../../export/content/applications/hr/lunch/orders.rst:277
 msgid "Submit an order"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:259
-msgid "To place the order, click the :guilabel:`Order Now` button on the right side of the :guilabel:`Order Your Lunch` dashboard, located at the bottom. The user is charged the amount that is displayed in the :guilabel:`To Pay` field, and the cost is deducted from their **Lunch** account balance."
+#: ../../export/content/applications/hr/lunch/orders.rst:279
+msgid "To place the order, click the :guilabel:`Order Now` button at the bottom of the order summary section on the far side of the *Order Your Lunch* dashboard. The user is charged the amount displayed in the :guilabel:`To Pay` field, and the cost is deducted from their **Lunch** account balance. The :guilabel:`Order Now` button only appears when the order contains products with a :guilabel:`To Order` tag."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:263
+#: ../../export/content/applications/hr/lunch/orders.rst:285
 msgid "Once the order is placed, the tags for the purchased items in the :guilabel:`Your Order` section change from gray :guilabel:`To Order` tags to purple :guilabel:`Ordered` tags."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:267
+#: ../../export/content/applications/hr/lunch/orders.rst:289
 msgid "Track an order"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:269
-msgid "When orders have been sent to the vendors, the products move to the :guilabel:`Passed orders` section, located on the right-side of the :guilabel:`Order Your Lunch` dashboard. All :guilabel:`Passed orders` are collapsed, by default. Click the :icon:`fa-chevron-down` :guilabel:`(expand)` icon and all past orders appear in their own Kanban card."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:274
-msgid "Each Kanban card displays the product name, cost, and delivery location and date for the product."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:276
-msgid "Additionally, each Kanban card has one of the following status tags:"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:278
-msgid ":guilabel:`Ordered`: This tag appears in blue and indicates the order was sent to the vendor, but has not been received yet."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:280
-msgid ":guilabel:`Received`: This tag appears in green, and indicates that the order has arrived at the location, and has been verified by the **Lunch** app administrator."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:284
-msgid "Receive an order"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:286
-msgid "When orders are received at the delivery location, the **Lunch** app manager confirms them, and a notification is sent to the employee who ordered the food via email."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:290
-msgid "My Orders"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:292
-msgid "To view a full list of all orders placed in the **Lunch** app for the currently signed-in user, navigate to :menuselection:`Lunch app --> My Lunch --> My Order History`. This navigates to the :guilabel:`My Orders` dashboard. The data is filtered by :guilabel:`My Orders` and grouped by :guilabel:`Order Date: Day`, by default, both of which are located in the search bar."
+#: ../../export/content/applications/hr/lunch/orders.rst:291
+msgid "When orders have been sent to the vendors, the products move to the :guilabel:`Passed orders` section, located above the :icon:`payments` :guilabel:`Available Balance` on the far side of the *Order Your Lunch* dashboard. The number next to :guilabel:`Passed orders` indicates how many products it contains. All :guilabel:`Passed orders` are collapsed, by default. Click :guilabel:`Passed orders` to expand the section, and all past orders appear in their own card."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:297
-msgid "All products appear in a list view, organized by date. The list displays the :guilabel:`Order Date`, :guilabel:`Vendor`, :guilabel:`Product`, :guilabel:`Extras`, :guilabel:`Notes`, :guilabel:`User`, :guilabel:`Lunch Location`, :guilabel:`Price`, and :guilabel:`Status` information. If in a multi-company database, a :guilabel:`Company` column also appears."
+msgid "Each card displays the quantity, product name, cost, delivery location, and date for the product."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:302
-msgid "The total cost for each day's orders is displayed on the top line containing the order date. At the bottom of the list, beneath all the lines, the overall total amount paid for all the orders appears, under the :guilabel:`Price` column."
+#: ../../export/content/applications/hr/lunch/orders.rst:299
+msgid "Additionally, each card has one of the following status tags:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:306
-msgid "At the end of each product line with a status of :guilabel:`Ordered`, :guilabel:`To Order`, or :guilabel:`Sent`, a :icon:`fa-times` :guilabel:`Cancel` button appears. Click :icon:`fa-times` :guilabel:`Cancel` to cancel that product order. Once a product order has been cancelled, the money paid for that product is refunded and appears in the user's account."
+#: ../../export/content/applications/hr/lunch/orders.rst:301
+msgid ":guilabel:`Sent`: This tag appears in blue and indicates the order was sent to the vendor, but has not been received yet."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:311
-msgid "At the end of each product line with a status of :guilabel:`Received`, a :icon:`fa-history` :guilabel:`Re-order` button appears. Click :icon:`fa-history` :guilabel:`Re-order` to instantly reorder that same product, with the same extras, if applicable. The new order appears in the list, under the current date, and the product is paid for, with money deducted from the user's account."
+#: ../../export/content/applications/hr/lunch/orders.rst:303
+msgid ":guilabel:`Received`: This tag appears in green, and indicates that the order has arrived at the location, and has been verified by the **Lunch** app administrator."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:316
-msgid "Any order with a status of :guilabel:`Cancelled` has a :icon:`fa-undo` :guilabel:`Reset` button at the end of the line. To un-cancel and order, click the :icon:`fa-undo` :guilabel:`Reset` button, and the product status changes to :guilabel:`Ordered`."
+#: ../../export/content/applications/hr/lunch/orders.rst:307
+msgid "Receive an order"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:309
+msgid "When orders are received at the delivery location, the **Lunch** app manager :ref:`confirms them <lunch/confirm-orders>`, then :ref:`notifies <lunch/notify>` the employee who ordered the food."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:313
+msgid "My Orders"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:315
+msgid "To view a full list of all orders placed in the **Lunch** app for the currently signed-in user, navigate to :menuselection:`Lunch app --> My Lunch --> My Order History`. This navigates to the :guilabel:`My Orders` dashboard. The data is filtered by :guilabel:`My Orders` and grouped by :guilabel:`Order Date: Day`, by default."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:320
-msgid "The list view that appears when navigating to the My Orders dashboard."
+msgid "All products appear in a list view, organized by date. The list displays the :guilabel:`Order Date`, :guilabel:`Vendor`, :guilabel:`Product`, :guilabel:`Extras`, :guilabel:`Notes`, :guilabel:`User`, :guilabel:`Lunch Location`, :guilabel:`Price`, and :guilabel:`Status` information. If in a multi-company database, a :guilabel:`Company` column also appears."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:324
-msgid "My Account"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/orders.rst:326
-msgid "To view a summary of all transactions in the user's account, navigate to :menuselection:`Lunch app --> My Lunch --> My Account History`. Doing so reveals the :guilabel:`My Account` dashboard."
+#: ../../export/content/applications/hr/lunch/orders.rst:325
+msgid "The :guilabel:`Status` of each product is one of the following: :guilabel:`To Order` (orange), :guilabel:`Ordered` (red), :guilabel:`Sent` (blue), :guilabel:`Received` (green), or :guilabel:`Cancelled` (gray)."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:329
-msgid "The default presentation of the :guilabel:`My Account` dashboard displays all entries, from newest to oldest. The :guilabel:`Date`, :guilabel:`Description`, and :guilabel:`Amount` are the only fields displayed in the list."
+msgid "The total cost for each day's orders is displayed on the top line containing the order date. At the bottom of the list, beneath all the lines, the overall total amount paid for all the orders appears, under the :guilabel:`Price` column."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/orders.rst:333
+msgid "At the end of each product line with a status of :guilabel:`Received`, a :icon:`history` :guilabel:`Re-order` button appears, provided the vendor is available on the current day and the user's balance is sufficient. Click :icon:`history` :guilabel:`Re-order` to instantly reorder that same product, with the same extras, if applicable. The new order appears in the list, under the current date, and the product is paid for, with money deducted from the user's account."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:340
+msgid "For users with *Administrator* rights on the **Lunch** app, the list also displays the buttons used to :doc:`manage orders <management>`: :icon:`close` :guilabel:`Cancel`, :icon:`check` :guilabel:`Confirm`, :icon:`undo` :guilabel:`Reset` (to restore a cancelled order to the :guilabel:`Ordered` status), and :icon:`mail_f` :guilabel:`Send Notification`. When an order is cancelled, the money paid for that product is refunded to the user's account."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:346
+msgid "The My Orders list, grouped by order date, with the status of each ordered product."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:350
+msgid "My Account"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:352
+msgid "To view a summary of all transactions in the user's account, navigate to :menuselection:`Lunch app --> My Lunch --> My Account History`. Doing so reveals the *My Account* dashboard."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:355
+msgid "The default presentation of the *My Account* dashboard displays all entries, from newest to oldest. The :guilabel:`Date`, :guilabel:`Description`, and :guilabel:`Amount` are the only fields displayed in the list."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/orders.rst:359
 msgid "Entries with a negative figure listed in the :guilabel:`Amount` column represent products purchased in the **Lunch** app. These appear in a `$-XX.XX` format."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:336
-msgid "Entries with a positive balance either represent funds added to the user's lunch account, or cancelled orders that were eventually refunded to the user. These appear in a `$XX.XX` format."
+#: ../../export/content/applications/hr/lunch/orders.rst:362
+msgid "Entries with a positive figure represent funds added to the user's lunch account. These appear in a `$XX.XX` format. Canceled orders do not appear in this list, as their amount is no longer deducted from the balance."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/orders.rst:339
-msgid "The 'My Account' dashboard with the entry for adding funds to the user's lunch account."
+#: ../../export/content/applications/hr/lunch/orders.rst:366
+msgid "The My Account list, with lunch orders and funds added to the user's lunch account."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/products.rst:3
@@ -8668,75 +8622,75 @@ msgstr ""
 msgid "Odoo's **Lunch** app does *not* come with any products preconfigured. The individual products being offered must first be configured before orders can be placed."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:8
-msgid "To add and configure products for the **Lunch** app, navigate to :menuselection:`Lunch app --> Configuration --> Products`. Next, click the :guilabel:`New` button in the top-left corner, and a blank product form loads."
+#: ../../export/content/applications/hr/lunch/products.rst:9
+msgid "It is recommended to first :doc:`configure the vendors <vendors>`, as all products **must** be linked to a vendor."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:14
+#: ../../export/content/applications/hr/lunch/products.rst:12
+msgid "To add and configure products for the **Lunch** app, navigate to :menuselection:`Lunch app --> Configuration --> Products`. Next, click the :guilabel:`New` button in the corner, and a blank product form loads."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/products.rst:18
 msgid ":guilabel:`Product Name`: Enter the name for the product. This field is **required**."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:15
+#: ../../export/content/applications/hr/lunch/products.rst:19
 msgid ":guilabel:`Product Category`: Using the drop-down menu, select the :ref:`category <lunch/product-categories>` this product falls under. This field is **required**."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:17
-msgid ":guilabel:`Vendor`: Using the drop-down menu, select the vendor that supplies this product. This field is **required**."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/products.rst:19
-msgid ":guilabel:`Price`: Enter the price for the product. The currency is determined by the company's localization."
-msgstr ""
-
 #: ../../export/content/applications/hr/lunch/products.rst:21
-msgid ":guilabel:`Description`: Enter a description of the product in this field. This description appears beneath the product photo when users are viewing the day's options."
+msgid ":guilabel:`Vendor`: Using the drop-down menu, select the :doc:`vendor <vendors>` that supplies this product. This field is **required**."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/products.rst:23
-msgid ":guilabel:`New Until`: Using the calendar popover, select the date on which the product is no longer labeled as new. Until this date, a green `New` tag appears on the product."
+msgid ":guilabel:`Price`: Enter the price for the product. The currency is determined by the company's localization. This field is **required**."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/products.rst:25
-msgid ":guilabel:`Company`: Using the drop-down menu, select the companies this product is available for. If this field is left blank, this product does **not** appear for **any** company."
+msgid ":guilabel:`New Until`: Using the calendar popover, select the date until which the product is labeled as new. Until this date, a green :guilabel:`New` tag appears on the product."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/products.rst:27
-msgid "**Image**: Hover over the image box in the top-right corner of the form, and click the :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears. A file explorer pop-up window appears. Navigate to the image, then click :guilabel:`Open`."
+msgid ":guilabel:`Company`: Select the company the product is available to using the drop-down menu. This field **only** appears in a multi-company database. If this field is left blank, the product is available to **all** companies."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:31
-msgid "A product form filled out for a nine inch pizza."
+#: ../../export/content/applications/hr/lunch/products.rst:30
+msgid ":guilabel:`Description`: Enter a description of the product in this field. This description appears on the product card when users are viewing the available options."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/products.rst:32
+msgid "**Image**: Hover over the image box in the corner of the form, and click the :icon:`edit_f` :guilabel:`(Edit)` icon that appears. A file explorer pop-up window appears. Navigate to the image, then click :guilabel:`Select`. If no image is set, the image of the product category is displayed."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/products.rst:37
+msgid "A product form filled out for a personal pepperoni pizza."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/products.rst:43
 msgid "Product categories"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:39
+#: ../../export/content/applications/hr/lunch/products.rst:45
 msgid "Product categories organize the offerings in the **Lunch** app, and allows users to filter offerings when reviewing the menu for the day."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:42
-msgid "To add or modify categories, navigate to :menuselection:`Lunch app --> Configuration: Product Categories`. The available categories appear in a list view."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/products.rst:45
-msgid "In the **Lunch** app, there are four default categories: :guilabel:`Sandwich`, :guilabel:`Pizza`, :guilabel:`Burger`, and :guilabel:`Drinks`."
-msgstr ""
-
 #: ../../export/content/applications/hr/lunch/products.rst:48
-msgid "To add a new category, click the :guilabel:`New` button in the top-left corner, and a blank category form loads."
+msgid "To add or modify categories, navigate to :menuselection:`Lunch app --> Configuration --> Product Categories`. The available categories appear in a list view. Four default categories come preconfigured: :guilabel:`Sandwich`, :guilabel:`Pizza`, :guilabel:`Burger`, and :guilabel:`Drinks`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:51
-msgid "Enter a name in the :guilabel:`Product Category` field. If the category is company-specific and should only appear for a certain company, select the :guilabel:`Company` from the drop-down menu."
+#: ../../export/content/applications/hr/lunch/products.rst:52
+msgid "To add a new category, click the :guilabel:`New` button in the corner, and a blank category form loads."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:54
-msgid "If desired, add a photo for the category. Hover over the image box in the top-right, and click the :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears. This opens a file explorer pop-up window. Navigate to the image, then click :guilabel:`Open`."
+#: ../../export/content/applications/hr/lunch/products.rst:55
+msgid "Enter a name in the :guilabel:`Product Category` field. If the category is company-specific and should only appear for a certain company, select the :guilabel:`Company` from the drop-down menu. This field **only** appears in a multi-company database. If this field is left blank, the category is visible to all companies."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/products.rst:58
+#: ../../export/content/applications/hr/lunch/products.rst:60
+msgid "If desired, add a photo for the category. Hover over the image box in the corner and click the :icon:`edit_f` :guilabel:`(Edit)` icon that appears. This opens a file explorer pop-up window. Navigate to the image, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/products.rst:64
 msgid "The category form, with the fields filled out for a Soup category."
 msgstr ""
 
@@ -8749,7 +8703,7 @@ msgid "In Odoo's **Lunch** application, users pay for products directly from the
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/user-accounts.rst:10
-msgid "To add funds and manage user accounts, the user must have *Administrator* :doc:`access rights <../../general/users/access_rights/>` for the **Lunch** application. Access rights can be managed by navigating to the :menuselection:`Settings app` app and clicking :icon:`oi-arrow-right` :guilabel:`Manage Users`. Click on a user to view their individual access rights."
+msgid "To add funds and manage user accounts, the user must have *Administrator* :doc:`access rights <../../general/users/access_rights/>` for the **Lunch** application. Access rights can be managed by navigating to the :menuselection:`Settings app` and clicking :icon:`east` :guilabel:`Manage Users`. Click on a user to view their individual access rights."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/user-accounts.rst:15
@@ -8761,7 +8715,7 @@ msgid "Odoo's **Lunch** application **only** allows for manual entries of cash e
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/user-accounts.rst:24
-msgid "Some examples of how money can be organized and transferred within a company:"
+msgid "Some examples of how lunch money can be organized and transferred within a company:"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/user-accounts.rst:26
@@ -8769,94 +8723,94 @@ msgid "Cash is handed to the **Lunch** app manager, who then updates the user's 
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/user-accounts.rst:27
-msgid "Money is automatically deducted from the user's paychecks, then the **Lunch** app manager updates the account when paychecks are issued. This requires :ref:`adding a salary attachment <payroll/payslips/salary-inputs>` for the user's payslip in the **Payroll** app."
+msgid "Money is deducted from the user's payslips, then the **Lunch** app manager updates the account when payslips are issued. This requires creating a :doc:`payslip adjustment <../payroll/salary_attachments>` for the employee in the **Payroll** app. The **Lunch** app does **not** create this deduction automatically."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:30
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:31
 msgid "Companies can sell \"lunch tickets\" at a set price (for example, one ticket costs $5.00). Users can purchase tickets from a **Lunch** app manager, who then updates the user's account."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:36
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:37
 msgid "Cash Moves"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:38
-msgid "To add funds to user accounts, each cash move must be individually logged. To view all cash move records, or create a new cash move, navigate to :menuselection:`Lunch app --> Manager --> Cash Moves`. Doing so reveals the :guilabel:`Cash Moves` dashboard."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:39
+msgid "To add funds to user accounts, each cash move must be individually logged. To view all cash move records, or create a new cash move, navigate to :menuselection:`Lunch app --> Manager --> Cash Moves`. Doing so reveals the *Cash Moves* dashboard."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:42
-msgid "On the :guilabel:`Cash Moves` dashboard, all cash moves are presented in a default list view, displaying each record's :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, and :guilabel:`Amount`. The total of all the cash moves is displayed at the bottom of the :guilabel:`Amount` column."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:43
+msgid "On the *Cash Moves* dashboard, all cash moves are presented in a default list view, displaying each record's :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, and :guilabel:`Amount`. The total of all the cash moves is displayed at the bottom of the :guilabel:`Amount` column."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:47
-msgid "The list view of all cash moves."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:48
+msgid "The Cash Moves list, with the funds added to the users' lunch accounts."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:51
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:52
 msgid "Add funds"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:53
-msgid "To add funds to a lunch account, click the :guilabel:`New` button, located in the top-left corner of the :guilabel:`Cash Moves` dashboard."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:54
+msgid "To add funds to a lunch account, click the :guilabel:`New` button, located in the upper corner of the :guilabel:`Cash Moves` dashboard."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:56
-msgid "A blank :guilabel:`Cash Moves` form loads. Enter the following information on the form:"
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:57
+msgid "A blank *Lunch Cashmove* form loads. Enter the following information on the form:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:58
-msgid ":guilabel:`User`: Select the user depositing cash into their account from the drop-down menu. If the user is not in the database, they can be created by typing their name in the :guilabel:`User` field, and clicking either :guilabel:`Create \"user\"` or :guilabel:`Create and edit...` to create the user and edit the :guilabel:`Create User` form."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:59
+msgid ":guilabel:`User`: Select the user depositing cash into their account from the drop-down menu. The signed-in user populates this field by default. This field is **required**."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:62
-msgid ":guilabel:`Date`: Select the date the transaction occurred using the calendar popover."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:61
+msgid ":guilabel:`Date`: Select the date the transaction occurred using the calendar popover. The current date populates this field by default."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/user-accounts.rst:63
-msgid ":guilabel:`Amount`: Enter the amount being added to the lunch account."
+msgid ":guilabel:`Amount`: Enter the amount being added to the lunch account. A negative amount can be entered to withdraw money from the account."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:64
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:65
 msgid ":guilabel:`Description`: Enter a brief description of the transaction."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:66
-msgid "The cash move form filled out for a transaction of $25.00."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:67
+msgid "The cash move form filled out for a payment of $50.00 for ten lunch tickets."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:70
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:71
 msgid "Control Accounts"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:72
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:73
 msgid "The main *Control Accounts* dashboard provides an overview of every transaction in the **Lunch** app, including all cash deposits and purchases. To access this dashboard, navigate to :menuselection:`Lunch app --> Manager --> Control Accounts.`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:76
-msgid "Transactions are grouped :guilabel:`By Employee`, and listed alphabetically by the user's first name. Their available balance is displayed in the :guilabel:`Amount` column. This takes into account all deposits and transactions to their lunch account."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:77
+msgid "Transactions are grouped :guilabel:`By Employee`, and listed alphabetically by the user's first name. Their available balance is displayed in the :guilabel:`Amount` column. This takes into account all deposits and the orders with an :guilabel:`Ordered`, :guilabel:`Sent`, or :guilabel:`Received` status."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:80
-msgid "Individual transactions are hidden in the default view. To view all transactions for a specific user, click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon to the left of their name to expand the full list of transactions associated with their lunch account."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:82
+msgid "Individual transactions are hidden in the default view. To view all transactions for a specific user, click the :icon:`arrow_right` :guilabel:`(right arrow)` icon next to their name to expand the full list of transactions associated with their lunch account."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:84
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:86
 msgid "Each line includes the transaction :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, and :guilabel:`Amount`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:87
-msgid "The Control Accounts dashboard with two employee's transactions expanded."
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:89
+msgid "The Control Accounts list grouped by user, with the transactions of one user expanded."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:91
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:93
 msgid "The :guilabel:`Control Accounts` dashboard is a view-only list of transactions within the **Lunch** app, and does **not** allow modifications to be made to any records listed."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:94
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:96
 msgid "Cash moves can be modified through the :ref:`Cash Moves <lunch/cash-moves>` dashboard, only."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/user-accounts.rst:96
+#: ../../export/content/applications/hr/lunch/user-accounts.rst:98
 msgid "Product-related records **cannot** be modified."
 msgstr ""
 
@@ -8865,199 +8819,203 @@ msgid "Vendors"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:5
-msgid "Before :doc:`products can be added <products>` to the **Lunch** app, the restaurants that provide the food needs to be configured."
+msgid "Before :doc:`products can be added <products>` to the **Lunch** app, the restaurants, referred to in Odoo as *vendors*, that provide the food need to be configured."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:8
-msgid "To add a new vendor, first navigate to :menuselection:`Lunch app --> Configuration --> Vendors`. Here, all currently configured vendors for the **Lunch** app appear in a default Kanban view. To change to a list view, click the :icon:`oi-view-list` :guilabel:`(List)` icon in the top-right corner."
+msgid "To add a new vendor, first navigate to :menuselection:`Lunch app --> Configuration --> Vendors`. Here, all currently configured vendors for the **Lunch** app appear in a default Kanban view."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:14
-msgid "No vendors are preconfigured in the **Lunch** app, so all vendors **must** be added to the database."
+#: ../../export/content/applications/hr/lunch/vendors.rst:12
+msgid "A placeholder vendor named :guilabel:`Lunch Supplier` is created when the **Lunch** app is installed, but is not completely configured and has no information other than the placeholder name. The actual vendors **must** be added to the database before the **Lunch** app can be used."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:17
-msgid "A placeholder :guilabel:`Lunch Supplier` card appears on the :guilabel:`Vendors` dashboard, by default. Click on this card, and configure the following fields on the vendor form:"
+#: ../../export/content/applications/hr/lunch/vendors.rst:16
+msgid "Click the :guilabel:`Lunch Supplier` card to configure it, and fill in the following sections of the vendor form:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:20
+#: ../../export/content/applications/hr/lunch/vendors.rst:19
 msgid ":ref:`Vendor information <lunch/vendor-info>`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:21
+#: ../../export/content/applications/hr/lunch/vendors.rst:20
 msgid ":ref:`Availability <lunch/availability>`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:22
+#: ../../export/content/applications/hr/lunch/vendors.rst:21
 msgid ":ref:`Orders <lunch/orders>`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:23
+#: ../../export/content/applications/hr/lunch/vendors.rst:22
 msgid ":ref:`Extras <lunch/extras>`"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:25
-msgid "After the first vendor is configured, add more vendors by clicking the :guilabel:`New` button in the top-left corner, and configure the new lunch supplier form. Repeat for all needed vendors."
+#: ../../export/content/applications/hr/lunch/vendors.rst:24
+msgid "After the first vendor is configured, add more vendors by clicking the :guilabel:`New` button in the corner, and configure the new lunch supplier form. Repeat for all needed vendors."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:31
+#: ../../export/content/applications/hr/lunch/vendors.rst:30
 msgid "Vendor information"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:33
-msgid ":guilabel:`Vendor`: Enter a name for the vendor in this field."
+#: ../../export/content/applications/hr/lunch/vendors.rst:32
+msgid "The vendor information section houses the vendor's various contact information."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:34
+msgid ":guilabel:`Vendor`: Enter a name for the vendor in this field (for example, `The Pizza Palace`)."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:35
 msgid ":guilabel:`Vendor` (beneath the line for vendor name): Using the drop-down menu, select the corresponding vendor in the **Contacts** app. If the vendor has not already been created, type in the vendor name, and click :guilabel:`Create \"new vendor name\"` to add them. Alternatively, click :guilabel:`Create and edit...` to create the vendor and edit the vendor contact form. The vendor contact form allows for more details to be entered, such as contact information."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:41
+#: ../../export/content/applications/hr/lunch/vendors.rst:42
 msgid "If a selection is made to the drop-down :guilabel:`Vendor` field, the :guilabel:`Vendor` text field (above, for the vendor's name) updates with the name of the vendor chosen from the drop-down menu."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:45
+#: ../../export/content/applications/hr/lunch/vendors.rst:46
 msgid "The list of vendors that is presented in the drop-down menu is pulled from the **Contacts** application."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:48
+#: ../../export/content/applications/hr/lunch/vendors.rst:49
 msgid ":guilabel:`Address`: Enter the vendor's address in the various fields."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:49
-msgid ":guilabel:`Email`: Enter the vendor's email in this field."
-msgstr ""
-
 #: ../../export/content/applications/hr/lunch/vendors.rst:50
-msgid ":guilabel:`Phone`: Enter the vendor's phone number in this field."
+msgid ":guilabel:`Email`: Enter the vendor's email in this field. This field is **required** if orders are sent by :guilabel:`Email` (see the :ref:`Orders <lunch/orders>` section)."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:51
-msgid ":guilabel:`Company`: If this vendor is only available to a specific company, select the company from the drop-down menu. If this field is left blank, the vendor's items are available to **all** companies. This field **only** appears in a multi-company database."
+#: ../../export/content/applications/hr/lunch/vendors.rst:52
+msgid ":guilabel:`Phone`: Enter the vendor's phone number in this field. This field is **required** if orders are placed by :guilabel:`Phone`. The phone number is displayed next to the vendor's name throughout the **Lunch** app."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:55
-msgid "The top portion of the vendor form filled out."
+msgid ":guilabel:`Company`: If this vendor is only available to a specific company, select the company from the drop-down menu. If this field is left blank, the vendor's items are available to **all** companies. This field **only** appears in a multi-company database."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:61
-msgid "Availability"
+#: ../../export/content/applications/hr/lunch/vendors.rst:60
+msgid "The vendor's name and contact details are stored on the vendor's record in the **Contacts** app. Modifying information on the vendor form also updates the contact in the **Contacts** app."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:63
-msgid "The :guilabel:`AVAILABILITY` section presents a table with two rows. The days of the week populate the top row, and the bottom row has checkboxes. Tick the corresponding checkbox for each day of the week the vendor is available."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:67
-msgid "By default, Monday through Friday are ticked."
+msgid "The top portion of a vendor form, with the vendor's address, email, and phone number."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:69
-msgid "The default view of the availability section, with Mon-Fri enabled."
+msgid "Availability"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:71
+msgid "The *Availability* section presents a table with two rows. The days of the week populate the top row, and the bottom row has checkboxes. Click the corresponding checkbox for each day of the week the vendor is available."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:75
+msgid "By default, Monday through Friday are ticked."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:77
-msgid "The :guilabel:`ORDERS` section of the vendor form details which locations the vendor is available for, in addition to how and when orders are placed and received."
+msgid "Products from a vendor can only be ordered for the days the vendor is available."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:80
-msgid ":guilabel:`Delivery`: Using the drop-down menu, select :guilabel:`Delivery` if the vendor delivers to the office, or select :guilabel:`No Delivery` if orders must be picked up."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:82
-msgid ":guilabel:`Location`: Select which locations are able to order from this vendor. Multiple locations can be selected. If this field is left blank, **all** locations can order from the vendor."
+#: ../../export/content/applications/hr/lunch/vendors.rst:84
+msgid "The *Orders* section of the vendor form details which locations the vendor is available for, in addition to how and when orders are placed and received."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:87
-msgid "An `HQ Office` location is created by default when creating a database, and is available to select from the list."
+msgid ":guilabel:`Delivery`: Using the drop-down menu, select :guilabel:`Delivery` if the vendor delivers to the office, or select :guilabel:`No Delivery` (the default option) if orders must be picked up."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:90
+#: ../../export/content/applications/hr/lunch/vendors.rst:89
+msgid ":guilabel:`Location`: Select which :ref:`locations <lunch/locations>` can place orders from this vendor. Multiple locations can be selected. If this field is left blank, **all** locations can order from the vendor. On the :doc:`Order Your Lunch <orders>` dashboard, users only see the products of the vendors available for their selected location."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:94
 msgid ":guilabel:`Send Order By`: Click the radio button to select how orders are sent to the vendor. The available options are :guilabel:`Phone` or :guilabel:`Email`."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:92
-msgid ":guilabel:`Order Time`: This field **only** appears if :guilabel:`Email` is selected in the :guilabel:`Send Order By` field. Enter the time that an order must be emailed for it to be accepted. Enter the time in the following format: `HH:MM`. Then select either :guilabel:`AM` or :guilabel:`PM` from the drop-down menu, next to the time field."
+#: ../../export/content/applications/hr/lunch/vendors.rst:96
+msgid ":guilabel:`Order Time`: This field **only** appears if :guilabel:`Email` is selected in the :guilabel:`Send Order By` field. Enter the time, in the 24-hour `HH:MM` format (for example, `11:30`), at which the day's orders are emailed to the vendor. After this time, users can no longer order from this vendor for the current day."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:97
-msgid "The orders section of a vendor form, with all fields filled out."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:103
-msgid "Extras"
+#: ../../export/content/applications/hr/lunch/vendors.rst:102
+msgid "When orders are placed by :guilabel:`Phone`, the **Lunch** manager calls the vendor, then :ref:`marks the orders as sent <lunch/send-orders>` in the **Lunch** app."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:105
+msgid "The Availability and Orders sections of a vendor form, with orders sent by email at 11:30."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:111
+msgid "Extras"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:113
 msgid "When ordering an item in the **Lunch** app, optional extra items, sometimes referred to as *add-ons*, can be shown. These can be configured in any manner that suits the products being offered."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:109
-msgid "By default, Odoo allows for three types of extra items, which can be thought of as *categories*. By default, the first type (or *category*) of add-ons is labeled `Extras`, the second is labeled `Beverages`, and the third is labeled `Extra Label 3`."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:114
-msgid "When configuring the extras, it is important to keep in mind that all the extras configured appear for **every item** offered by the vendor. That means that only items which apply to **all** products from the vendor should be added."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:121
-msgid "Configure extras"
+#: ../../export/content/applications/hr/lunch/vendors.rst:117
+msgid "Odoo allows for three types of extra items, which can be thought of as *categories*. By default, the first type (or *category*) of add-ons is labeled `Extras`, the second is labeled `Beverages`, and the third is labeled `Extra Label 3`. Any extra category without any configured items is **not** displayed when ordering."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:123
-msgid "Enter the following information for each of the three available extra sections:"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:125
-msgid ":guilabel:`Extra (#) Label`: Enter a name for the type of extra, such as `Toppings`. This can be thought of as a *category*."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:127
-msgid ":guilabel:`Extra (#) Quantity`: Select how the extras are selected. The options are:"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:129
-msgid ":guilabel:`None or More`: Select this option if the user is not required to make a selection."
+msgid "When configuring the extras, it is important to keep in mind that all the extras configured appear for **every item** offered by the vendor. Only items that apply to **all** products from the vendor should be added."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:130
-msgid ":guilabel:`One or More`: Select this option to **require** the user to make **at least one** selection."
+msgid "Configure extras"
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:132
+msgid "Enter the following information for each of the three available extra sections:"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:134
+msgid ":guilabel:`Extra (#) Label`: Enter a name for the type of extra, such as `Toppings`. This can be thought of as a *category*."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:136
+msgid ":guilabel:`Extra (#) Quantity`: Select how the extras are selected. The options are:"
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:138
+msgid ":guilabel:`None or More`: Select this option if the user is not required to make a selection."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:139
+msgid ":guilabel:`One or More`: Select this option to **require** the user to make **at least one** selection."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:141
 msgid ":guilabel:`Only One`: Select this option to **require** the user to make **only one** selection."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:135
+#: ../../export/content/applications/hr/lunch/vendors.rst:144
 msgid "Add extras"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:137
+#: ../../export/content/applications/hr/lunch/vendors.rst:146
 msgid "After the labels and quantities have been configured for an extra category, the individual extra items must be added for each category."
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:140
-msgid "Click :guilabel:`Add a line` at the bottom of the list that appears on the right-hand side of the extra category. Enter the :guilabel:`Name` and :guilabel:`Price` for each item being added. The price can remain at `$0.00` if there is no cost. This is common for items like disposable silverware or condiments."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:146
-msgid "For a pizzeria that only offers personal pizzas, see their extras configured as follows:"
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:148
-msgid "The first extra is configured for the various toppings they offer. The :guilabel:`Extra 1 Label` is set to `Toppings`, and the :guilabel:`Extra 1 Quantity` is set to :guilabel:`None or More`. The various toppings are then added, with their corresponding costs."
-msgstr ""
-
-#: ../../export/content/applications/hr/lunch/vendors.rst:152
-msgid "The first of the extras configured for pizza toppings."
+#: ../../export/content/applications/hr/lunch/vendors.rst:149
+msgid "Click :guilabel:`Add a line` at the bottom of the list that appears on the side of the extra category. Enter the :guilabel:`Name` and :guilabel:`Price` for each item being added. If the extra is free, leave the price at `$0.00`. This is common for items like disposable silverware, condiments, or straws."
 msgstr ""
 
 #: ../../export/content/applications/hr/lunch/vendors.rst:155
-msgid "The pizzeria also offers a free beverage with any purchase. To set this up, the :guilabel:`Extra 2 Label` is set to `Beverages`, and the :guilabel:`Extra 2 Quantity` is set to :guilabel:`Only One`. The various beverage choices are added, and the cost for each remains zero."
+msgid "A pizzeria only offers personal pizzas, and customers select their toppings. Their extras are configured as follows:"
 msgstr ""
 
-#: ../../export/content/applications/hr/lunch/vendors.rst:159
-msgid "The second of the extras configured for a free beverage with purchase."
+#: ../../export/content/applications/hr/lunch/vendors.rst:158
+msgid "The first extra is configured for the various toppings they offer. The :guilabel:`Extra 1 Label` is set to `Toppings`, and the :guilabel:`Extra 1 Quantity` is set to :guilabel:`None or More`. The various toppings are then added, with their corresponding costs."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:162
+msgid "The pizzeria also offers a free beverage with any purchase. To set this up, the :guilabel:`Extra 2 Label` is set to `Free Beverage with Purchase`, and the :guilabel:`Extra 2 Quantity` is set to :guilabel:`Only One`. The various beverage choices are added, and the cost for each remains zero."
+msgstr ""
+
+#: ../../export/content/applications/hr/lunch/vendors.rst:166
+msgid "The extras of a pizzeria, with paid toppings and a free beverage with purchase."
 msgstr ""
 
 #: ../../export/content/applications/hr/payroll.rst:5
