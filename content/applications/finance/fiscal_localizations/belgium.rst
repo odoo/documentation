@@ -831,37 +831,29 @@ allows customers to make payments through the Bancontact network by scanning a Q
 Bancontact Pro account configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To allow payments through Bancontact Pay, create and configure a `Bancontact Pro
-<https://www.bancontact.com/en/professional/what-is-bancontact-pro>`_ merchant account. To do so,
-access the `Bancontact Pro website
-<https://www.bancontact.com/en/professional/our-solutions/integrated-solution>`_, click
-:guilabel:`Log in`, then follow the instructions. To find the automatically-generated API key and
-PPID, follow the next
-steps:
+To create and configure a Bancontact Pro merchant account, follow the next steps:
 
-#. Go to :guilabel:`Admin Centre` and enter the OPT (One-Time Password) received via email.
+#. Go to the `Bancontact Professional website <https://www.bancontact.com/en/professional>`_.
+#. Scroll down to the :guilabel:`Our solutions` section and choose the desired solution.
+#. Select :guilabel:`New customer`.
+#. Fill in the Bancontact Pro merchant contract.
+
+.. note::
+   - Once the contract is activated, a welcome e-mail is sent with an invitation to the Bancontact
+     Pro Portal.
+   - Merchants that already have a contract with Bancontact Pro can simply log into the Bancontact
+     Pro Portal and retrieve the API key and PPID.
+
+Then, to find the automatically-generated API key and PPID, follow the next steps:
+
+#. Go to :guilabel:`Admin Centre` and enter the OPT (One-Time Password) received via email or log
+   in with existing credentials.
 #. Go to :guilabel:`Shops and products`.
-#. Find the relevant shop/product.
+#. Find the relevant shop or product.
 #. Select :guilabel:`API Key management`. The portal shows options to view or renew the API key and
    PPID.
 #. Copy them and save them for the :ref:`payment method configuration in Odoo
    <belgium/pos/bancontact-method>`.
-
-Then, go to the :guilabel:`QR codes` section and choose the desired solution for QR code generation:
-
-   - :guilabel:`Display`: `Generate a unique QR code
-     <https://docs.bancontactpro.com/guides/instore/ondisplay052025v4>`_ for each transaction
-     and display it on the cashier's screen and, if available, on the :ref:`customer display
-     <pos/hardware_network/display-configuration>`.
-   - :guilabel:`Static QR Code`: `Associate the QR code with the payment method
-     <https://docs.bancontactpro.com/guides/instore/staticqr052025v4>`_, download the sticker, print
-     it, and place it near the register. Use a separate sticker per register, as a simultaneous
-     payment from another register would overwrite the previous one before it is scanned.
-
-.. note::
-   When a payment request is sent to a QR code sticker, the required amount is automatically
-   associated with the sticker using the PPID and the sticker's unique identifier, allowing
-   customers to scan the code and complete the payment.
 
 .. _belgium/pos/bancontact-method:
 
