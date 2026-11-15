@@ -103,7 +103,7 @@ def check_heading_spacing(file, lines, options=None):
             if lno_before_heading >= 0 and lines[lno_before_heading] != '\n':
                 # Heading doesn't have to be preceded by a blank line if on first line of the file.
                 yield heading_lno + 1, "the heading should be preceded by a blank line"
-            if lines[heading_lno + 2] != '\n':
+            if heading_lno + 2 >= len(lines) or lines[heading_lno + 2] != '\n':
                 yield heading_lno + 1, "the heading should be followed by a blank line"
 
 
