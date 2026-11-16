@@ -2,15 +2,15 @@
 Products
 ========
 
-Odoo eCommerce allows you to :ref:`create products <ecommerce/products/product-creation>` and
-manage their :ref:`visibility <ecommerce/products/publish-products>` on the website. Products can be
+Odoo eCommerce allows you to :ref:`create products <ecommerce/products/product-creation>` and manage
+their :ref:`visibility <ecommerce/products/publish-products>` on the website. Products can be
 :ref:`configured <ecommerce/products/product-configuration>` in various ways, including adding
 :ref:`product images and videos <ecommerce/products/images>`, creating :ref:`product
 combinations <ecommerce/products/combos>`, implementing :ref:`cross-selling and upselling strategies
 <ecommerce/products/cross_upselling>`, attaching :ref:`digital files
 <ecommerce/products/digital-files>`, :ref:`translating <ecommerce/products/translation>`
-product information, :ref:`managing stock <ecommerce/products/stock-management>`, and
-setting :ref:`packaging options <ecommerce/products/stock-management/packagings>`.
+product information, :ref:`managing stock <ecommerce/products/stock-management>`, and setting
+:ref:`packaging options <ecommerce/products/stock-management/packagings>`.
 
 .. _ecommerce/products/product-creation:
 
@@ -18,7 +18,7 @@ Product creation
 ================
 
 To create a product from the frontend, go to the Website app, click :guilabel:`New`
-:icon:`fa-caret-down` in the top-right corner, then select :guilabel:`Product`. Enter the product
+:icon:`arrow_drop_down` in the top-right corner, then select :guilabel:`Product`. Enter the product
 name and other relevant details, such as the :guilabel:`Barcode`, :guilabel:`Sales Price`, default
 :guilabel:`Sales Taxes`, and a :ref:`Website Category <ecommerce/categories_variants/categories>`,
 then add an image. Once you click :guilabel:`Save`, you are redirected to the product page where you
@@ -33,11 +33,11 @@ click :guilabel:`Product` in the top-right corner to access the backend product 
 
    - Configure a new product by clicking :guilabel:`New`, or
    - :doc:`Import product data </applications/sales/sales/products_prices/products/import>` by
-     clicking the :icon:`fa-cog` (:guilabel:`gear`) icon next to :guilabel:`Products`. Then:
+     clicking the :icon:`more_vert` (:guilabel:`Actions`) icon next to :guilabel:`Products`. Then:
 
-     - Select :icon:`fa-download` :ref:`Import <essentials/export_import_data/import-data>`, then
+     - Select :icon:`download` :ref:`Import <essentials/export_import_data/import-data>`, then
        click :guilabel:`Upload` to import an XLSX or CSV file from your device; or
-     - Click :icon:`fa-globe` :ref:`Import from website <website_creation/import>` to import the
+     - Click :icon:`public` :ref:`Import from website <website_creation/import>` to import the
        product catalog from an existing external website.
 
 .. seealso::
@@ -55,7 +55,7 @@ To publish a product, access the product page on the website and switch the togg
 :guilabel:`Unpublished` to :guilabel:`Published`.
 
 .. tip::
-   - To access the product page from the product form in the backend, click the :icon:`fa-globe`
+   - To access the product page from the product form in the backend, click the :icon:`public`
      :guilabel:`Go to Website` smart button.
    - To publish products from the backend, navigate to the :guilabel:`eCommerce` tab of the
      :ref:`product form <ecommerce/products/product-form>`, then go to the :guilabel:`Shop` section
@@ -65,8 +65,8 @@ To publish a product, access the product page on the website and switch the togg
 To publish multiple products at once, follow these steps:
 
 #. Go to :menuselection:`Website --> eCommerce --> Products`.
-#. Remove the :guilabel:`Published` filter and switch to the :guilabel:`List` view.
-#. Click the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) icon on the far right of the view and
+#. Remove the :guilabel:`Published` filter and switch to the :icon:`reorder` :guilabel:`List` view.
+#. Click the :icon:`tune` (:guilabel:`dropdown toggle`) icon on the far right of the view and
    enable :guilabel:`Is Published`.
 #. Click the :guilabel:`Is Published` column to re-order it by *published* or *unpublished*
    products.
@@ -80,8 +80,8 @@ To publish multiple products at once, follow these steps:
    When managing multiple websites, the availability of a product on each website can be set from
    the :ref:`product form <ecommerce/products/product-form>`. Navigate to the :guilabel:`eCommerce`
    tab, then in the :guilabel:`Shop` section, select the :guilabel:`Website` where the product
-   should be available. Leave the field blank to make the product available on *all* websites.
-   You can make a product available on either *one* website or *all* websites, but selecting only
+   should be available. Leave the field blank to make the product available on *all* websites. You
+   can make a product available on either *one* website or *all* websites, but selecting only
    *some* websites is not possible. To sell the product on multiple specific websites without
    making it available on all of them, **duplicate** the product for each website and assign the
    corresponding website to each duplicate.
@@ -96,7 +96,25 @@ Product configuration
 To add general information to a product, navigate to :menuselection:`Website --> eCommerce -->
 Products` and select the relevant product. You can configure various options, such as choosing a
 :doc:`product type </applications/inventory_and_mrp/inventory/product_management/configure/type>`,
-adding :doc:`variants and categories <categories_variants>`, or defining :doc:`prices <prices>`.
+adding :ref:`variants <ecommerce/categories_variants/product-variants>`, or defining :doc:`prices
+<prices>`.
+
+Additional e-commerce-specific options can be configured in the :guilabel:`Shop` section of the
+:guilabel:`eCommerce` tab:
+
+- Restrict the product to a :ref:`website <ecommerce/products/website-availability>`.
+- Assign one or more :ref:`categories <ecommerce/categories_variants/categories>` to the product.
+- Select a :ref:`ribbon <ecommerce/products/additional_features/product-highlight>` to highlight the
+  product on the website.
+- Define a :guilabel:`Minimum Quantity` per order:
+
+  - For regular products: The specified minimum quantity is automatically preselected in the
+    :ref:`quantity selector <ecommerce_design/product_page/buttons>` on the :doc:`product page
+    <../ecommerce_design/product_page>`.
+  - For :doc:`rental products <../../../sales/rental>`: A minimum rental period can be defined, such
+    as a minimum stay duration. The date selector automatically takes this value into account. If
+    the customer selects a shorter rental period, the :ref:`Add to cart button
+    <ecommerce/checkout/add-to-cart>` is not clickable until a valid period is selected.
 
 .. _ecommerce/products/description:
 
@@ -107,9 +125,9 @@ description. Use Odoo's :doc:`rich-text editor </applications/essentials/html_ed
 the content.
 
 .. tip::
-   - Click the :icon:`fa-globe` :guilabel:`Go to Website` smart button to access the frontend
-     product page and :doc:`customize <../ecommerce_design/product_page>` it using the :doc:`website
-     editor <../../website/web_design>`.
+   - Click the :icon:`public` :guilabel:`Go to Website` smart button to access the frontend product
+     page and :doc:`customize <../ecommerce_design/product_page>` it using the :doc:`website editor
+     <../../website/web_design>`.
    - Product descriptions can also be generated using :doc:`AI </applications/productivity/ai>`. To
      do so, type `/` in the :guilabel:`Long description` section and select :guilabel:`AI` to
      open the :doc:`AI agent </applications/productivity/ai/agents>`.
@@ -121,10 +139,11 @@ Product images and videos
 
 To add media items, such as images and videos, navigate to the :ref:`product form
 <ecommerce/products/product-form>` and go to the :guilabel:`eCommerce` tab. In the :guilabel:`Media`
-section, click :guilabel:`Add Media`. In the :guilabel:`Select a media` pop-up window:
+section, click :icon:`add` :guilabel:`Add Media`. In the :guilabel:`Select a media` pop-up window:
 
 - To add an image, select an image, click :guilabel:`Add URL` or :guilabel:`Upload an image` in the
-  :guilabel:`Images` tab.
+  :guilabel:`Images` tab. You can also use :doc:`AI </applications/productivity/ai>` to create
+  images.
 - To add a video, navigate to the :guilabel:`Videos` tab, paste a video URL, or :ref:`embed HTML
   code <website/building_blocks/embed_code>`. Then, enable the relevant :ref:`video options
   <website/elements/videos>`.
@@ -132,19 +151,30 @@ section, click :guilabel:`Add Media`. In the :guilabel:`Select a media` pop-up w
 Once the media is selected, click :guilabel:`Add`.
 
 .. tip::
-   :ref:`Customize product images and videos <ecommerce/product_page/image-customization>` using
-   the :doc:`website editor <../../website/web_design>` from the frontend.
+   :ref:`Customize product images and videos <ecommerce/product_page/image-customization>` using the
+   :doc:`website editor <../../website/web_design>` from the frontend.
 
 .. _ecommerce/products/combos:
 
 Product combos
 --------------
 
-:ref:`Product combinations <pos/products/combos>` allow users to configure a
-set of related products to buy as a bundle. To :ref:`configure combos <pos/products/combo-choices>`,
-go to :menuselection:`Website --> eCommerce --> Combo Choices`. Once finished and published,
-customers can choose the combo when adding the product to the cart. Depending on the configuration,
-certain items may incur an additional charge.
+:ref:`Product combinations <pos/products/combos>` allow users to configure a set of related products
+to buy as a bundle. To :ref:`configure combos <pos/products/combos>`, go to :menuselection:`Website
+--> eCommerce --> Products`, :ref:`create <pos/products/combo-creation>` a product and set its
+:doc:`Product Type </applications/inventory_and_mrp/inventory/product_management/configure/type>` to
+:guilabel:`Combo`. Then, click the :guilabel:`Combo Choices` field to select from the available
+choices. To :ref:`create new combo choices <pos/products/combo-choices>`, click :guilabel:`Search
+more...`, then :guilabel:`Create New` or type the combo's name and click :guilabel:`Create and
+edit...`.
+
+.. tip::
+   To duplicate or remove a combo choice, click the :icon:`expand_content` (:guilabel:`expand`)
+   button in the :guilabel:`Create Combo Choices` pop-up window, and click the :icon:`more_vert`
+   (:guilabel:`Actions`) button next to the combo name.
+
+Once finished and published, customers can choose the combo when adding the product to the cart.
+Depending on the configuration, certain items may incur an additional charge.
 
 .. image:: products/combo-choice.png
    :alt: Add the combo product to the cart.
@@ -185,10 +215,6 @@ corresponding :guilabel:`Optional Products`, :guilabel:`Accessory Products`, and
       .. image:: products/accessory-products.png
          :alt: Suggested accessories at checkout during cart review
 
-      .. note::
-         To hide this section, open the :doc:`website editor <../../website/web_design>`, go to the
-         :guilabel:`Style` tab, and toggle the :guilabel:`Suggested Accessories` switch off.
-
    .. tab:: Alternative products
 
       Alternative products are displayed at the bottom of the :doc:`product page
@@ -217,7 +243,7 @@ Digital files
 
 It is possible to link digital files, such as certificates, eBooks, or user manuals, to the
 products. To do so, go to the :ref:`product form <ecommerce/products/product-form>` and click the
-:icon:`fa-file-text-o` :guilabel:`Documents` smart button. Then, click :guilabel:`Upload` to upload
+:icon:`article` :guilabel:`Documents` smart button. Then, click :guilabel:`Upload` to upload
 a file directly, or for additional options, click :guilabel:`New`. Choose the :guilabel:`Type` of
 attachment:
 
@@ -229,15 +255,14 @@ attachment:
 
 These documents can be made available:
 
-- On the product page (before checkout): Set the :guilabel:`Sales visibility` field to
-  :guilabel:`Hidden` and enable :guilabel:`Publish on website`.
+- On the product page (before checkout): Set the :guilabel:`Accessible` field to :guilabel:`On
+  Product Page`.
 - In the :doc:`customer portal </applications/general/users/user_portals>` on the confirmed sales
-  order (after checkout): Set the :guilabel:`Sales visibility` field to :guilabel:`On confirmed
-  order` and disable :guilabel:`Publish on website`.
+  order (after checkout): Set the :guilabel:`Accessible` field to :guilabel:`On Order Confirmation`.
 
 .. tip::
-   In :ref:`Kanban <studio/views/multiple-records/kanban>` view, click the :icon:`fa-ellipsis-v`
-   (:guilabel:`dropdown menu`) in the top-right corner of the document card to :guilabel:`Edit`,
+   In :ref:`Kanban <studio/views/multiple-records/kanban>` view, click the :icon:`more_vert`
+   (:guilabel:`Actions`) menu in the top-right corner of the document card to :guilabel:`Edit`,
    :guilabel:`Delete`, or :guilabel:`Download` the document.
 
 .. _ecommerce/products/translation:
@@ -257,7 +282,7 @@ are identifiable by their language abbreviation (e.g., `EN`) next to the field, 
    Having untranslated content on a web page may be detrimental to the user experience and
    :doc:`SEO </applications/websites/website/structure/seo>`. To avoid this, use the
    :ref:`Translate <translate/translate>` feature to translate any remaining untranslated content
-   on the page.
+   on the :doc:`product page <../ecommerce_design/product_page>`.
 
 .. seealso::
    :doc:`Website languages and translations
@@ -290,7 +315,7 @@ so, go to the product form and ensure the :ref:`Track inventory option
 <inventory/product_management/tracking-inventory>` is enabled.
 
 .. note::
-   When the :doc:`Inventory app </applications/inventory_and_mrp/inventory>` is installed, and
+   When the :doc:`Inventory app </applications/inventory_and_mrp/inventory>` is installed and
    :ref:`lots and serial numbers are enabled <inventory/product_management/enable-lot-serial>`,
    select an option from the :guilabel:`Tracking` dropdown menu.
 
@@ -306,10 +331,10 @@ default message `Out of Stock` is displayed on the product page when the item is
    - To display the stock level on the product page, the :guilabel:`Product Type` field on the
      :ref:`product form <ecommerce/products/product-form>` must be set to :guilabel:`Goods` or
      :guilabel:`Combo`.
-   - A :icon:`fa-envelope-o` (:guilabel:`envelope`) :guilabel:`Get notified when back in stock`
-     button appears on the product page when an item is out of stock. Customers can click
-     the link to enter their email address and receive a notification once the item is back
-     in stock.
+   - A :icon:`mail` :guilabel:`Notify me` button appears on the product page when an item is out of
+     stock. Logged-in customers can click it to subscribe, while non-logged-in customers must enter
+     their email address and click :guilabel:`Subscribe`. Once the product is back in stock,
+     subscribed customers automatically receive a notification.
    - You can also add an :ref:`out-of-stock ribbon or badge
      <ecommerce/products/additional_features/product-highlight>` in the :guilabel:`Shop` section of
      the :guilabel:`eCommerce` tab on the :ref:`product form <ecommerce/products/product-form>`.
@@ -320,11 +345,10 @@ default message `Out of Stock` is displayed on the product page when the item is
      form.
 
 .. example::
-   Currently, the `Boko Chair` is not available in any warehouses. However, customers can click
-   the :icon:`fa-envelope-o` (:guilabel:`envelope`) :guilabel:`Get notified when back in
-   stock` link to receive a notification as soon as the product becomes available again. A custom
-   :guilabel:`Out-of-Stock Message` can also be added to inform customers that the item will be
-   replenished.
+   Currently, the `Office Chair` is not available in any warehouses. However, customers can click
+   the :icon:`mail` :guilabel:`Notify me` button to receive a notification as soon as the product
+   becomes available again. A custom :guilabel:`Out-of-Stock Message`, `Back in stock soon`, is
+   displayed to inform customers that the item will be replenished.
 
    .. image:: products/out-of-stock.png
       :alt: Example of a product that is out of stock, but which will be available again.
@@ -337,6 +361,23 @@ default message `Out of Stock` is displayed on the product page when the item is
    ensures that any item sold on the website is converted into the corresponding stocked item in
    the delivery order.
 
+.. _ecommerce/products/unpublish-out-of-stock:
+
+Unpublish out-of-stock products
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to automatically unpublish products that are out of stock. To enable this feature, go
+to :menuselection:`Website --> Configuration --> Settings`, scroll down to the :guilabel:`eCommerce`
+section, enable :guilabel:`Unpublish out-of-stock products`, and click :guilabel:`Save`.
+
+.. note::
+   - The :ref:`Continue Selling / Sell when Out-of-Stock option
+     <ecommerce/products/stock-management>` must be disabled for automatic unpublishing to work.
+   - Products with :ref:`variants <ecommerce/categories_variants/product-variants>` are unpublished
+     only when all variants are out of stock.
+   - Products with multiple :ref:`packaging <ecommerce/products/stock-management/packagings>` sizes
+     are unpublished as soon as the smallest packaging size is out of stock.
+
 .. _ecommerce/products/stock-management/packagings:
 
 Packagings
@@ -344,10 +385,10 @@ Packagings
 
 To offer different product pack sizes to customers on the e-commerce, configure product
 :doc:`packagings
-</applications/inventory_and_mrp/inventory/product_management/configure/packaging>`. Then go to
-the :ref:`product form <ecommerce/products/product-form>` and navigate to the
-:guilabel:`Sales` tab. Under :guilabel:`Upsell & cross-sell`, add as many package types as needed
-in the :guilabel:`Packagings` field. The available package types are displayed on the e-commerce
+</applications/inventory_and_mrp/inventory/product_management/configure/packaging>`. Then go to the
+:ref:`product form <ecommerce/products/product-form>` and navigate to the :guilabel:`Sales` tab.
+Under :guilabel:`Upsell & cross-sell`, add as many package types as needed in the
+:guilabel:`Packagings` field. The available package types are displayed on the e-commerce
 :doc:`product page <../ecommerce_design/product_page>`.
 
 .. image:: products/product-packagings.png
@@ -356,7 +397,7 @@ in the :guilabel:`Packagings` field. The available package types are displayed o
 .. tip::
    - It is also possible to add packagings to a specific :ref:`product variant
      <ecommerce/categories_variants/product-variants>`. To do so, go to the product form, click the
-     :icon:`fa-sitemap` :guilabel:`Variants` :ref:`smart button
+     :icon:`graph_2` :guilabel:`Variants` :ref:`smart button
      <products/variants/variants-smart-button>`, and select the relevant product variant. Under
      :guilabel:`Sales`, add as many package types as needed in the :guilabel:`Packagings` field.
    - To prevent selected packaging units from being sold on the e-commerce, go to
