@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
-"PO-Revision-Date: 2026-11-07 12:33+0000\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
+"PO-Revision-Date: 2026-11-14 12:37+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/it/>\n"
@@ -180,7 +180,7 @@ msgstr ""
 "documentazione correlata."
 
 #: ../../export/content/applications/productivity/ai.rst:64
-#: ../../export/content/applications/productivity/ai/agents.rst:3
+#: ../../export/content/applications/productivity/ai/agents.rst:8
 #: ../../export/content/applications/productivity/ai/support_operations.rst:28
 msgid "AI agents"
 msgstr "Agenti AI"
@@ -262,320 +262,266 @@ msgstr ""
 msgid ":doc:`AI MCP server <ai/mcp_server>`"
 msgstr ":doc:`Server MCP IA <ai/mcp_server>`"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:7
+#: ../../export/content/applications/productivity/ai/agents.rst:-1
 msgid ""
-"An |AI| agent is a smart virtual assistant in Odoo that can understand "
-"natural language, perform tasks, and assist users by interacting with Odoo "
-"tools. Agents are a core component of the |AI| structure in Odoo. Each agent "
-"has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set "
-"of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its "
-"behavior."
+"AI agents in Odoo are virtual assistants that understand natural-language "
+"requests and perform tasks. Learn how agents use instructions, skills, "
+"tools, and knowledge sources, and how to create and configure a new agent."
 msgstr ""
-"Un agente |AI| è un assistente virtuale intelligente in Odoo in grado di "
-"comprendere il linguaggio naturale, svolgere compiti e assistere gli utenti "
-"interagendo con gli strumenti di Odoo. Gli agenti sono un componente "
-"fondamentale della struttura |AI| in Odoo. Ogni agente ha uno scopo "
-"definito, un :ref:`prompt <ai/agents/prompts-in-odoo>`, e un insieme "
-"di :ref:`competenze <ai/topics>` e :ref:`strumenti <ai/tools>` che ne "
-"guidano il comportamento."
+"Gli agenti AI in Odoo sono assistenti virtuali in grado di comprendere "
+"richieste in linguaggio naturale ed eseguire attività. Scopri come gli "
+"agenti utilizzano istruzioni, competenze, strumenti e fonti di Knowledge, e "
+"come creare e configurare un nuovo agente."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:12
+#: ../../export/content/applications/productivity/ai/agents.rst:13
 msgid ""
-"When interacting with an |AI| agent, the conversation interface may display "
-"intermediate status messages while a request is being processed."
+"An |AI| agent is a virtual assistant in Odoo that can understand natural-"
+"language requests, access information, and perform tasks using the tools "
+"available to it. Agents can be configured for specific roles and can be used "
+"interactively or as part of automated workflows."
 msgstr ""
-"Quando si interagisce con un agente |AI|, l'interfaccia di conversazione può "
-"visualizzare messaggi di stato intermedi durante l'elaborazione di una "
-"richiesta."
+"Un |AI| agente è un assistente virtuale in Odoo in grado di comprendere "
+"richieste in linguaggio naturale, accedere a informazioni ed eseguire "
+"attività utilizzando gli strumenti a sua disposizione. Gli agenti possono "
+"essere configurati per ruoli specifici e utilizzati in modo interattivo o "
+"come parte di flussi di lavoro automatizzati."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:15
+#: ../../export/content/applications/productivity/ai/agents.rst:17
+msgid "Agents are built from four main components:"
+msgstr "Gli agenti sono costituiti da quattro componenti principali:"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:19
 msgid ""
-"These messages reflect the current step of the interaction, such as "
-"analyzing the request, consulting sources, or preparing an action, before "
-"the final response is generated."
+"*Instructions* define the agent's purpose, behavior, and responsibilities."
 msgstr ""
-"Questi messaggi riflettono la fase corrente dell'interazione, come l'analisi "
-"della richiesta, la consultazione delle fonti o la preparazione di "
-"un'azione, prima che venga generata la risposta finale."
+"*Istruzioni* definiscono lo scopo, il comportamento e le responsabilità "
+"dell'agente."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:18
-msgid "An Agent analyzing a user request."
-msgstr "Un agente che analizza la richiesta di un utente."
+#: ../../export/content/applications/productivity/ai/agents.rst:20
+msgid ""
+"*Knowledge* provides information the agent can use when completing tasks."
+msgstr ""
+"*Knowledge* fornisce informazioni che l'agente può utilizzare durante il "
+"completamento delle attività."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Skills* and *Sources*."
+msgid ""
+"*Skills and tools* define what the agent can do. Skills provide instructions "
+"for specific tasks, while tools allow the agent to perform actions in Odoo."
 msgstr ""
-"Gli agenti sono composti da due componenti principali, le *Competenze* e le "
-"*Fonti*."
+"*Competenze e strumenti* definiscono ciò che l'agente può fare. Le "
+"competenze forniscono istruzioni per attività specifiche, mentre gli "
+"strumenti consentono all'agente di eseguire azioni in Odoo."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:23
 msgid ""
-"*Skills* are the instructions and roles that inform the agent of what tasks "
-"they need to complete. *Tools* are assigned to skills, and are the actual "
-"functions the agent can utilize to perform tasks."
+"*Triggers* determine when the agent is invoked, such as when a user starts a "
+"conversation or when an automated or scheduled action calls the agent."
 msgstr ""
-"Le *Competenze* sono le istruzioni e i ruoli che indicano all'agente quali "
-"compiti deve completare. Gli *Strumenti* sono assegnati alle competenze e "
-"rappresentano le funzioni effettive che l'agente può utilizzare per eseguire "
-"le attività."
+"*Trigger* determinano quando l'agente viene invocato, ad esempio quando un "
+"utente avvia una conversazione o quando un'azione automatizzata o "
+"programmata richiama l'agente."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:26
-msgid ""
-"*Sources* provide the agent with the information they need to complete their "
-"tasks."
-msgstr ""
-"Le *Fonti* forniscono all'agente le informazioni necessarie per completare "
-"le proprie attività."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:29
+#: ../../export/content/applications/productivity/ai/agents.rst:27
 msgid ""
 "While many |AI| features can be used in Odoo without the **AI** application, "
-"creating and customizing agents requires that the **AI** application is "
-"installed."
+"creating and customizing agents requires the **AI** application be installed."
 msgstr ""
-"Sebbene molte funzionalità AI possano essere utilizzate in Odoo senza "
+"Sebbene molte funzionalità |AI| possano essere utilizzate in Odoo senza "
 "l'applicazione **AI**, la creazione e la personalizzazione degli agenti "
-"richiede che l'applicazione **AI** sia installata."
+"richiedono che l'applicazione **AI** sia installata."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:30
+msgid ""
+"Odoo |AI| uses In-app purchases (IAP) for AI requests. For more information "
+"on using |IAP| credits, including how to purchase additional credits, visit "
+"the `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>`_."
+msgstr ""
+"Odoo |AI| utilizza gli acquisti in-app (IAP) per le richieste AI. Per "
+"ulteriori informazioni sull'utilizzo dei crediti |IAP|, incluso come "
+"acquistare crediti aggiuntivi, visita il sito `Odoo AI IAP <https://"
+"iap.odoo.com/iap/in-app-services/867>`_."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
-msgid "AI prompts in Odoo"
-msgstr "Prompt AI in Odoo"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:37
-msgid ""
-"Before working with |AI| agents, it is important to understand some basic "
-"concepts regarding |AI| prompts."
-msgstr ""
-"Prima di lavorare con gli agenti |AI|, è importante comprendere alcuni "
-"concetti di base relativi ai prompt |AI|."
+msgid "Agent structure"
+msgstr "Struttura dell'agente"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:40
-msgid ""
-"An |AI| prompt is a set of written instructions or context given to an |AI| "
-"model that tells it how to respond to a request, or what role to take. "
-"Prompts can define:"
-msgstr ""
-"Un prompt AI è un insieme di istruzioni scritte o di contesto fornito a un "
-"modello AI che gli indica come rispondere a una richiesta o quale ruolo "
-"assumere. I prompt possono definire:"
+msgid "Instructions"
+msgstr "Istruzioni"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:43
-msgid "the tone, style, and persona of the |AI| model"
-msgstr "il tono, lo stile e la personalità del modello AI"
+#: ../../export/content/applications/productivity/ai/agents.rst:42
+msgid "Instructions define the agent's overall role, purpose, and behavior."
+msgstr ""
+"Le istruzioni definiscono il ruolo, lo scopo e il comportamento generali "
+"dell'agente."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:44
-msgid "the scope of what the model can do"
-msgstr "l'ambito di ciò che il modello può fare"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:45
-msgid "the type of output expected from the request"
-msgstr "il tipo di output previsto dalla richiesta"
+msgid ""
+"Each AI agent is assigned a *System Prompt* that provides its main "
+"instructions. It can define the agent's responsibilities, constraints, and "
+"how it should respond to requests."
+msgstr ""
+"A ogni agente AI viene assegnato un *System Prompt* che fornisce le "
+"istruzioni principali. Può definire le responsabilità, i vincoli e le "
+"modalità di risposta dell'agente alle richieste."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:47
 msgid ""
-"In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
-"agent's overall role, purpose, and behavior. It acts as the core mission "
-"statement of the agent, and drives all interactions. During a conversation, "
-"the system prompts and skill instructions are continuously applied. They "
-"influence how the agent interprets messages, selects tools, uses sources, "
-"and determines whether additional actions are required before responding."
+"Each :ref:`Skill <ai/agents/skills>` also includes its own prompt-like "
+"component, called *Instructions*. Instructions are skill-specific guidelines "
+"that refine how the agent behaves in a given context or workflow and how it "
+"interacts with the Odoo framework."
 msgstr ""
-"In Odoo, a ogni agente |AI| viene assegnato un *Prompt di sistema*, che ne "
-"definisce il ruolo generale, lo scopo e il comportamento. Funge da missione "
-"principale dell'agente e guida tutte le interazioni. Durante una "
-"conversazione, i prompt di sistema e le istruzioni delle competenze vengono "
-"applicati costantemente. Influenzano il modo in cui l'agente interpreta i "
-"messaggi, seleziona gli strumenti, utilizza le fonti e determina se sono "
-"necessarie ulteriori azioni prima di rispondere."
+"Ogni :ref:`Competenza <ai/agents/skills>` include anche il proprio "
+"componente simile a un prompt, chiamato *Istruzioni*. Le istruzioni sono "
+"linee guida specifiche per la competenza che perfezionano il modo in cui "
+"l'agente si comporta in un determinato contesto o flusso di lavoro e come "
+"interagisce con il framework di Odoo."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:53
-msgid ""
-"Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, "
-"called *Instructions*. Instructions are skill-specific guidelines that "
-"refine how the agent behaves within a certain context or workflow, and how "
-"it interacts within the Odoo framework."
-msgstr ""
-"Ogni :ref:`Competenza <ai/topics>` include anche un componente simile a un "
-"prompt, chiamato *Istruzioni*. Le istruzioni sono linee guida specifiche per "
-"la competenza che definiscono come l'agente deve comportarsi all'interno di "
-"un determinato contesto o flusso di lavoro e come interagisce all'interno "
-"del framework di Odoo."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:57
+#: ../../export/content/applications/productivity/ai/agents.rst:51
 msgid "Instructions often include:"
 msgstr "Le istruzioni spesso includono:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:59
+#: ../../export/content/applications/productivity/ai/agents.rst:53
 msgid "A purpose, or what the skill covers."
 msgstr "Uno scopo, ovvero ciò che la competenza copre."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:60
+#: ../../export/content/applications/productivity/ai/agents.rst:54
 msgid "Rules or constraints for the agent to follow when assigned this skill."
 msgstr ""
 "Regole o vincoli che l'agente deve seguire quando gli viene assegnata questa "
 "competenza."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:61
-msgid "Step-by-step workflows for how to complete a specific action."
-msgstr ""
-"Flussi di lavoro passo dopo passo su come completare un'azione specifica"
+#: ../../export/content/applications/productivity/ai/agents.rst:55
+msgid "Step-by-step workflows for completing a specific action."
+msgstr "Flussi di lavoro dettagliati per completare un'azione specifica."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:62
+#: ../../export/content/applications/productivity/ai/agents.rst:56
 msgid "Technical details needed to complete any actions."
 msgstr "Dettagli tecnici necessari per completare qualsiasi azione"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:65
-msgid "Agent structure"
-msgstr "Struttura dell'agente"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:70
+#: ../../export/content/applications/productivity/ai/agents.rst:61
 msgid "Skills"
 msgstr "Competenze"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:72
+#: ../../export/content/applications/productivity/ai/agents.rst:63
 msgid ""
-"*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that "
-"define how an agent behaves within a specific context. Essentially, the "
-"skills define what an agent can do within the database. Skills guide "
-"conversations, telling the agent what it can do, how it can do it, and when "
-"it should do it."
+"*Skills* define specific tasks an agent can perform. Each *Skill* includes "
+"instructions that guide the agent through the task and can have one or more "
+"tools assigned to it."
 msgstr ""
-"Le *Competenze* sono una raccolta di istruzioni e :ref:`strumenti <ai/"
-"tools>` che definiscono il comportamento di un agente all'interno di un "
-"contesto specifico. In sostanza, le competenze stabiliscono cosa può fare un "
-"agente all'interno del database. Guidano le conversazioni, indicando "
-"all'agente cosa può fare, come può farlo e quando deve farlo."
+"*Competenze* definiscono le attività specifiche che un agente può eseguire. "
+"Ogni *Competenza* include istruzioni che guidano l'agente attraverso "
+"l'attività e può avere uno o più strumenti assegnati ad essa."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:67
+msgid ""
+"If an agent is not assigned any Skills, it can **only** provide information. "
+"It **cannot** complete tasks or make changes to the database."
+msgstr ""
+"Se a un agente non viene assegnata alcuna competenza, può **solo** fornire "
+"informazioni. **Non** può completare attività o apportare modifiche al "
+"database."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:70
+msgid ""
+"Multiple *Skills* can be assigned to the same agent, allowing it to perform "
+"different types of tasks."
+msgstr ""
+"È possibile assegnare più *Competenze* allo stesso agente, consentendogli di "
+"eseguire diversi tipi di attività."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:76
+msgid "Agent tools"
+msgstr "Strumenti dell'agente"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:78
 msgid ""
-"If an agent is not assigned any Skills, it is **only** able to provide "
-"information. It **cannot** complete tasks or make changes to the database."
+"*Tools* are the functions an agent can perform in Odoo. Each agent has the "
+"following tools available:"
 msgstr ""
-"Se a un agente non viene assegnata alcuna competenza, è in grado **solo** di "
-"fornire informazioni. **Non può** completare attività né apportare modifiche "
-"al database."
+"*Strumenti* sono le funzioni che un agente può eseguire in Odoo. Ogni agente "
+"ha a disposizione i seguenti strumenti:"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:81
 msgid ""
-"Within each skill is a detailed prompt, which provides the agent with more "
-"in-depth instructions on how to perform the tasks associated with that "
-"skill, define the boundaries of its behavior, and determine how it should "
-"interpret user intent. These prompts ensure that the agent follows a "
-"consistent reasoning pattern and uses the appropriate tools to generate "
-"accurate, context-aware responses."
+"*Generate image*: A collection of tools to support image generation. Load "
+"this skill when the user asks to generate or enhance an image."
 msgstr ""
-"All'interno di ciascuna competenza si trova un prompt dettagliato che "
-"fornisce all'agente istruzioni più approfondite su come eseguire le attività "
-"associate a tale competenza, definire i limiti del suo comportamento e "
-"stabilire in che modo interpretare l'intento dell'utente. Questi prompt "
-"garantiscono che l'agente segua un modello di ragionamento coerente e "
-"utilizzi gli strumenti appropriati per generare risposte accurate e "
-"contestualizzate."
+"*Genera immagine*: una raccolta di strumenti per supportare la generazione "
+"di immagini. Carica questa competenza quando l'utente richiede di generare o "
+"migliorare un'immagine."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:83
+msgid "*Web Search*: Enable the Agent to explore the internet in real time."
+msgstr "*Ricerca web*: abilita l'agente a esplorare Internet in tempo reale."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:84
+msgid ""
+"*Self Update*: Allows an agent to identify missing or incomplete "
+"instructions and *Skills* and propose or make changes to its configuration."
+msgstr ""
+"*Auto-aggiornamento*: consente a un agente di identificare istruzioni e "
+"*Competenze* mancanti o incomplete e di proporre o apportare modifiche alla "
+"propria configurazione."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:87
-msgid "The following skills are preconfigured in the **AI** app:"
-msgstr "Le seguenti competenze sono preconfigurate nell'app **IA**:"
+msgid ""
+"To enable a tool on an agent, click the *Skills* tab, then slide the "
+"appropriate toggle to green."
+msgstr ""
+"Per abilitare uno strumento su un agente, fare clic sulla scheda "
+"*Competenze*, quindi far scorrere l'interruttore appropriato su verde."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:89
-msgid ""
-":guilabel:`View Builder`: Supports the interpretation of a user query to "
-"open the appropriate Odoo view with a set of tools necessary to perform the "
-"search. Natural language queries can also include time-based grouping "
-"instructions. This allows agents to group results by time intervals such as "
-"day, month, or year when querying records."
-msgstr ""
-":guilabel:`Costruttore di viste`: supporta l'interpretazione della richiesta "
-"di un utente per aprire la vista Odoo appropriata con una serie di strumenti "
-"necessari per eseguire la ricerca. Le richieste in linguaggio naturale "
-"possono includere anche istruzioni di raggruppamento temporale. Ciò consente "
-"agli agenti di raggruppare i risultati in base a intervalli di tempo come "
-"giorno, mese o anno durante la ricerca dei record."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:93
-msgid ""
-":guilabel:`Information retrieval`: A collection of tools to retrieve "
-"information about the models."
-msgstr ""
-":guilabel:`Recupero informazioni`: una raccolta di strumenti per recuperare "
-"informazioni sui modelli."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:94
-msgid ":guilabel:`Update Records`: Tools to update records."
-msgstr ":guilabel:`Aggiorna record`: strumenti per aggiornare record."
+msgid "The tools on an AI agent, with some enabled."
+msgstr "Gli strumenti su un agente AI, con alcuni abilitati."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:95
-msgid ":guilabel:`Create Records`: Tools to create records."
-msgstr ":guilabel:`Crea record`: strumenti per creare record."
+msgid "Subagents"
+msgstr "Agenti secondari"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:96
+#: ../../export/content/applications/productivity/ai/agents.rst:97
 msgid ""
-":guilabel:`Generate Images`: A collection of tools to support image "
-"generation. Load this skill when the user asks to generate or enhance an "
-"image."
+"An agent can use other |AI| agents as *subagents* to handle specialized "
+"tasks. When a user submits a request, the main agent can determine whether "
+"to delegate part of the task to a subagent based on its purpose and "
+"capabilities."
 msgstr ""
-":guilabel:`Genera immagini`: una raccolta di strumenti a supporto della "
-"generazione di immagini. Carica questa competenza quando l'utente chiede di "
-"generare o migliorare un'immagine."
+"Un agente può utilizzare altri |AI| agenti come *subagenti* per gestire "
+"attività specializzate. Quando un utente invia una richiesta, l'agente "
+"principale può determinare se delegare parte dell'attività a un subagente in "
+"base al suo scopo e alle sue capacità."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:98
+#: ../../export/content/applications/productivity/ai/agents.rst:101
 msgid ""
-":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
-"time."
+"Subagents allow an agent to delegate specific tasks to specialized agents "
+"rather than handling every request itself. The main agent can then use the "
+"subagent's results as part of its response."
 msgstr ""
-":guilabel:`Ricerca web`: consente all'agente di esplorare Internet in tempo "
-"reale."
+"I subagenti consentono a un agente di delegare attività specifiche ad agenti "
+"specializzati invece di gestire ogni richiesta autonomamente. L'agente "
+"principale può quindi utilizzare i risultati del subagente come parte della "
+"propria risposta."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:99
-msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
-msgstr ""
-":guilabel:`Costruttore sito web`: strumenti per modificare le pagine del "
-"sito web Odoo."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:100
+#: ../../export/content/applications/productivity/ai/agents.rst:104
 msgid ""
-":guilabel:`Create Leads`: A collection of tools to support automated lead "
-"creation. This skill is **only** available if the **CRM** app is installed."
+"To assign a subagent, click on the *Skills* tab, scroll to the *Subagents* "
+"section, then click :icon:`add` :guilabel:`Add`. Then, select from the list "
+"of existing agents, or click :guilabel:`Create New` to create a new one."
 msgstr ""
-":guilabel:`Crea lead`: una raccolta di strumenti a supporto della creazione "
-"automatica di lead. Questa competenza è disponibile **solo** se l'app "
-"**CRM** è installata."
+"Per assegnare un subagente, fare clic sulla scheda *Competenze*, scorrere "
+"fino alla sezione *Subagenti*, quindi fare clic su :icon:`add` "
+":guilabel:`Aggiungi`. Quindi, selezionare dall'elenco degli agenti esistenti "
+"o fare clic su :guilabel:`Crea nuovo` per crearne uno nuovo."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:103
-msgid ""
-"Within each skill is a set of :guilabel:`Instructions`, which act as a "
-"prompt and provide guidance for the structure of the interaction, and one or "
-"more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can "
-"perform."
-msgstr ""
-"All'interno di ciascuna competenza si trova una serie "
-"di :guilabel:`Istruzioni`, che fungono da prompt e forniscono indicazioni "
-"sulla struttura dell'interazione, e uno o più :ref:`Strumenti IA <ai/"
-"tools>`, che indicano le funzioni che l'agente può eseguire."
+#: ../../export/content/applications/productivity/ai/agents.rst:109
+#: ../../export/content/applications/productivity/knowledge.rst:3
+msgid "Knowledge"
+msgstr "Knowledge"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:110
-msgid "Tools"
-msgstr "Utensili"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:112
-msgid ""
-"*Tools* are the functions the agent can perform in Odoo. These include "
-"actions like creating a lead or opening a view. Tools extend the purpose of "
-"the agent beyond conversations, they enable real actions. The available "
-"tools in a database vary based on the applications installed. "
-"Multiple :guilabel:`AI Tools` can be assigned to a single skill."
-msgstr ""
-"Gli *Strumenti* sono le funzioni che l'agente può eseguire in Odoo. "
-"Includono azioni come la creazione di un lead o l'apertura di una vista. Gli "
-"strumenti estendono lo scopo dell'agente oltre le conversazioni, consentendo "
-"azioni reali. Gli strumenti disponibili in un database variano in base alle "
-"applicazioni installate. È possibile assegnare più :guilabel:`Strumenti IA` "
-"a una singola competenza."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:120
-msgid "Sources"
-msgstr "Fonti"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:122
+#: ../../export/content/applications/productivity/ai/agents.rst:111
 msgid ""
 "Sources are the data the agent can refer to when generating responses or "
 "completing tasks. Sources are indexed so the agent can retrieve relevant "
@@ -586,7 +532,7 @@ msgstr ""
 "indicizzate in modo che l'agente possa recuperare informazioni rilevanti "
 "quando un utente pone una domanda."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:126
+#: ../../export/content/applications/productivity/ai/agents.rst:115
 msgid ""
 "An agent designed to answer customer support questions has **Knowledge** "
 "articles included as sources, which include frequently asked questions."
@@ -594,332 +540,41 @@ msgstr ""
 "Un agente progettato per rispondere a domande di assistenza clienti ha "
 "articoli **Knowledge** inclusi come fonti, che includono domande frequenti."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:129
+#: ../../export/content/applications/productivity/ai/agents.rst:118
 msgid "Sources can be in the following formats:"
 msgstr "Le fonti possono essere nei seguenti formati:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:131
-msgid "PDFs"
-msgstr "PDF"
+#: ../../export/content/applications/productivity/ai/agents.rst:120
+msgid "Files uploaded to the agent"
+msgstr "File caricati sull'agente"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:121
+msgid "Links to webpages"
+msgstr "Link a pagine web"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:122
+msgid "Documents (uploaded in the :doc:`Documents <../documents>` application)"
+msgstr "Documenti (caricati nell'applicazione :doc:`Documenti <../documents>`)"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:123
+msgid ":doc:`Knowledge <../knowledge>` app articles"
+msgstr ":doc:`Knowledge <../knowledge>` articoli dell'app"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:126
+msgid ""
+"If the :guilabel:`Restrict answers to Sources` option is enabled on an "
+"agent, the agent can **only** utilize information from the uploaded and "
+"active sources."
+msgstr ""
+"Se l'opzione :guilabel:`Limita risposte alle fonti` è abilitata su un "
+"agente, quest'ultimo può utilizzare **solo** le informazioni provenienti "
+"dalle fonti caricate e attive."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:130
+msgid "Reprocessing sources"
+msgstr "Rielaborazione delle fonti"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:132
-msgid "Weblinks"
-msgstr "Link web"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:133
-msgid "Documents (uploaded in the **Documents** application)"
-msgstr "Documenti (caricati nell'applicazione **Documenti**)"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:134
-msgid "**Knowledge** app articles"
-msgstr "Articoli dell'applicazione **Knowledge**"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:137
-msgid ""
-"If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
-"agent can **only** utilize information from the uploaded and active sources."
-msgstr ""
-"Se l'opzione :guilabel:`Limita alle fonti` è abilitata su un agente, "
-"l'agente può utilizzare **solo** informazioni dalle fonti caricate e attive."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:141
-msgid "Uploaded files"
-msgstr "File caricati"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:143
-msgid ""
-"During a conversation with an |AI| agent, additional context can be provided "
-"by uploading files. Files are temporarily treated as sources for the ongoing "
-"discussion. The agent can use their content to answer questions, summarize "
-"information, or extract relevant details."
-msgstr ""
-"Durante una conversazione con un agente |AI|, è possibile fornire ulteriore "
-"contesto caricando dei file. I file vengono temporaneamente considerati come "
-"fonti per la discussione in corso. L'agente può utilizzarne il contenuto per "
-"rispondere alle domande, riassumere informazioni o estrarre dettagli "
-"rilevanti."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:147
-msgid ""
-"The provided files only influence the current conversation, unless they are "
-"explicitly added as sources on the agent."
-msgstr ""
-"I file forniti influenzano solo la conversazione corrente, a meno che non "
-"vengano esplicitamente aggiunti come fonti per l'agente."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:150
-msgid ""
-"To attach a file in a conversation, click the :icon:`fa-plus-"
-"circle` :guilabel:`(plus circle)` icon in the message window, then "
-"click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
-"window, select one or more files to attach, then click :guilabel:`Open`."
-msgstr ""
-"Per allegare un file in una conversazione, fare clic sull'icona :icon:`fa-"
-"plus-circle` :guilabel:`(più cerchiato)` nella finestra del messaggio, "
-"quindi fare clic su :icon:`fa-paperclip` :guilabel:`Allega file`. Nella "
-"finestra di selezione file, scegliere uno o più file da allegare, quindi "
-"fare clic su :guilabel:`Apri`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:155
-msgid ""
-"A manager finds a receipt for supplies and is unsure whether it has already "
-"been submitted to the **Expenses** app for reimbursement. They open a "
-"conversation with the *Ask AI* agent and enter the following prompt:"
-msgstr ""
-"Un responsabile trova una ricevuta per delle forniture e non è sicuro se sia "
-"già stata registrata nell'app **Spese** per il rimborso. Apre una "
-"conversazione con l'agente *Chiedi all'IA* e inserisce il seguente prompt:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:159
-msgid "`Can you open the expense that matches this receipt?`"
-msgstr "`Puoi aprire la spesa corrispondente a questa ricevuta?`"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:161
-msgid ""
-"They attach the receipt to the message. After the agent analyzes the "
-"attachment, it opens the view to the correct expense."
-msgstr ""
-"L'utente allega la ricevuta al messaggio. Dopo che l'agente ha analizzato "
-"l'allegato, apre la vista della spesa corretta."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:164
-msgid "Add alt text."
-msgstr "Aggiungi testo alternativo."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:168
-msgid "Gain insights from previewed files"
-msgstr "Ottenere informazioni dai file in anteprima"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:170
-msgid ""
-"When a document is open in preview mode, |AI| agents can use the content of "
-"the previewed file as context for the conversation."
-msgstr ""
-"Quando un documento è aperto in modalità anteprima, gli agenti |AI| possono "
-"utilizzare il contenuto del file visualizzato in anteprima come contesto per "
-"la conversazione."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:173
-msgid ""
-"First, navigate to the :menuselection:`Documents` app and click a document "
-"to preview it. Click the |AI| icon at the top of the page to open "
-"the :guilabel:`Ask AI` chat window. From here, click one of the default "
-"prompts to use them, or enter a custom one in the message window."
-msgstr ""
-"Innanzitutto, accedere all'app :menuselection:`Documenti` e fare clic su un "
-"documento per visualizzarne l'anteprima. Fare clic sull'icona |AI| nella "
-"parte superiore della pagina per aprire la finestra di "
-"chat :guilabel:`Chiedi all'IA`. Da qui, fare clic su uno dei prompt "
-"predefiniti per utilizzarlo oppure inserirne uno personalizzato nella "
-"finestra dei messaggi."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:177
-msgid ""
-"In this case, the agent's responses are grounded in the file currently being "
-"previewed, in combination with any other sources assigned to the agent."
-msgstr ""
-"In questo caso, le risposte dell'agente si basano sul file attualmente "
-"visualizzato in anteprima, insieme alle altre fonti assegnate all'agente."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:183
-msgid "Create a new agent"
-msgstr "Crea un nuovo agente"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:185
-msgid ""
-"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
-"click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
-"description, if desired."
-msgstr ""
-"Per creare un nuovo agente |AI|, accedere all'app :menuselection:`IA` e fare "
-"clic su :guilabel:`Nuovo`. Inserire un :guilabel:`Nome agente`, quindi "
-"aggiungere una breve descrizione, se desiderato."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:189
-msgid ""
-"Before creating a new agent, it is recommended to have a clear use case in "
-"mind. This helps when writing out the :guilabel:`System Prompt`, and "
-"assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
-msgstr ""
-"Prima di creare un nuovo agente, si raccomanda di avere un caso d'uso ben "
-"chiaro. Questo aiuta nella stesura del :guilabel:`Prompt di sistema` e "
-"nell'assegnazione di :guilabel:`Competenze` e :guilabel:`Strumenti IA`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:193
-msgid ""
-"Next, select a :guilabel:`Response Style`. This manages the overall tone the "
-"agent uses when responding to an inquiry. Choose from one of the following "
-"options:"
-msgstr ""
-"Successivamente, selezionare uno :guilabel:`Stile di risposta`. Questo "
-"gestisce il tono generale che l'agente utilizza quando risponde a una "
-"richiesta. Scegliere una delle seguenti opzioni:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:196
-msgid ""
-":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
-"clear, direct answers with a moderate level of detail."
-msgstr ""
-":guilabel:`Standard`: mantiene un tono equilibrato e professionale. Fornisce "
-"risposte chiare e dirette con un livello di dettaglio moderato."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:198
-msgid ""
-":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
-"responses. Explores multiple perspectives, acknowledges subtleties, and uses "
-"precise, academic language where appropriate."
-msgstr ""
-":guilabel:`Sfumato`: fornisce risposte sofisticate e profondamente "
-"contestualizzate. Esplora molteplici punti di vista, coglie le sfumature e "
-"utilizza un linguaggio accademico e preciso dove appropriato."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:201
-msgid ""
-":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
-"Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
-"dynamic structure to keep the user interested."
-msgstr ""
-":guilabel:`Vivace e creativo`: incisivo, brillante e altamente coinvolgente. "
-"Privilegia la brevità e l'arguzia. Utilizza un linguaggio espressivo, "
-"metafore e una struttura dinamica per mantenere vivo l'interesse dell'utente."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:203
-msgid ""
-":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
-"soundness above all else. Breaks down complex steps, cites reasoning "
-"clearly, and verifies every claim. Adopts a meticulous and formal tone."
-msgstr ""
-":guilabel:`Lento e rigoroso`: dà priorità assoluta alla massima precisione e "
-"alla solidità logica. Scompone passaggi complessi, esplicita chiaramente il "
-"ragionamento e verifica ogni affermazione. Adotta un tono meticoloso e "
-"formale."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:207
-msgid ""
-"Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
-"**only** respond based on the provided resources."
-msgstr ""
-"Selezionare la casella di controllo :guilabel:`Limita alle fonti` per fare "
-"in modo che l'agente risponda **solo** in base alle risorse fornite."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:210
-msgid ""
-"Next, select one or more :guilabel:`Skills` for the agent. As explained "
-"above, :ref:`Skills <ai/topics>` include both instructions and tools that "
-"guide the agent in helping users complete a task."
-msgstr ""
-"Successivamente, selezionare una o più :guilabel:`Competenze` per l'agente. "
-"Come spiegato in precedenza, le :ref:`competenze <ai/topics>` includono sia "
-"istruzioni che strumenti che guidano l'agente nell'aiutare gli utenti a "
-"completare un'attività."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:214
-msgid ""
-"Enter a :guilabel:`System Prompt` with detailed instructions for the agent "
-"as to their role and responsibilities."
-msgstr ""
-"Inserire un :guilabel:`Prompt di sistema` con istruzioni dettagliate per "
-"l'agente riguardo al suo ruolo e alle sue responsabilità."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:217
-msgid "A new agent form with the required information."
-msgstr "Un nuovo modulo agente con le informazioni richieste."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:221
-msgid ""
-"The specificity and length of the :guilabel:`System Prompt` can vary, "
-"depending on the use case for the agent. Use the preconfigured agents as an "
-"example of the possible information."
-msgstr ""
-"La specificità e la lunghezza del :guilabel:`Prompt di sistema` possono "
-"variare, a seconda del caso d'uso per l'agente. Utilizzare gli agenti "
-"preconfigurati come esempio delle possibili informazioni."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:224
-msgid ""
-"If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
-"tab, then click :guilabel:`Add a source`."
-msgstr ""
-"Se sono necessarie *Fonti* per l'agente, scorrere fino alla "
-"scheda :guilabel:`Fonti`, quindi fare clic su :guilabel:`Aggiungi una fonte`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:227
-msgid "Select a format:"
-msgstr "Selezionare un formato:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:229
-msgid ""
-":guilabel:`Upload a File`: Select the appropriate file from the explorer "
-"window, and click :guilabel:`Open`."
-msgstr ""
-":guilabel:`Carica un file`: selezionare il file desiderato dalla finestra di "
-"esplorazione file e fare clic su :guilabel:`Apri`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:231
-msgid ""
-":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, "
-"paste one link per line. Click :guilabel:`Save`."
-msgstr ""
-":guilabel:`Aggiungi un link`: incollare l'URL. È possibile aggiungere più "
-"link contemporaneamente incollando un link per riga. Fare clic "
-"su :guilabel:`Salva`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:233
-msgid ""
-":guilabel:`Add from Documents` (uploaded in the **Documents** application): "
-"Click the checkbox next to one or more documents, then "
-"click :guilabel:`Select`."
-msgstr ""
-":guilabel:`Aggiungi da Documenti` (caricati nell'applicazione "
-"**Documenti**): selezionare la casella accanto a uno o più documenti, quindi "
-"fare clic su :guilabel:`Seleziona`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:235
-msgid ""
-":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
-"articles, then click :guilabel:`Select`."
-msgstr ""
-":guilabel:`Aggiungi da Knowledge`: selezionare la casella accanto a uno o "
-"più articoli, quindi fare clic su :guilabel:`Seleziona`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:238
-msgid ""
-"Once a source is added, the :guilabel:`Status` field updates to reflect its "
-"current status. The source is ready when the status changes from "
-"*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate "
-"the source."
-msgstr ""
-"Una volta aggiunta una fonte, il campo :guilabel:`Stato` si aggiorna per "
-"riflettere il suo stato attuale. La fonte è pronta quando lo stato cambia da "
-"*In elaborazione* a *Indicizzato*. Spostare "
-"l'interruttore :guilabel:`Attivo` per attivare la fonte."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:242
-msgid "A list of sources for an agent, each denoted with their format."
-msgstr ""
-"Un elenco di fonti per un agente, ciascuna indicata con il proprio formato."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:246
-msgid ""
-"If a source fails to upload, it could be the result of a conflict with the "
-"selected provider."
-msgstr ""
-"Se il caricamento di una fonte non va a buon fine, potrebbe trattarsi di un "
-"conflitto con il fornitore selezionato."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:248
-msgid ""
-"Click the :guilabel:`Test` button to open a conversation window and test the "
-"new agent."
-msgstr ""
-"Fare clic sul pulsante :guilabel:`Test` per aprire una finestra di "
-"conversazione e testare il nuovo agente."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:251
-msgid "Manually reprocessing sources"
-msgstr "Rielaborare manualmente le fonti"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:253
 msgid ""
 "If the content of a source changes after it has been indexed, it may be "
 "necessary to reprocess the source so that agents use the most recent "
@@ -933,29 +588,166 @@ msgstr ""
 "avviata manualmente e fa sì che i documenti, i link o gli articoli di "
 "Knowledge aggiornati si riflettano nelle future risposte dell'agente."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:258
-msgid ""
-"To reprocess a source, navigate to the :menuselection:`AI` app. Select an |"
-"AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical ellipsis)` icon, then "
-"click :guilabel:`Configuration`."
-msgstr ""
-"Per rielaborare una fonte, accedere all'app :menuselection:`IA`. Selezionare "
-"un agente |AI| e, nella scheda kanban, fare clic sull'icona :icon:`fa-"
-"ellipsis-v` :guilabel:`(puntini verticali)`, quindi fare clic "
-"su :guilabel:`Configurazione`."
+#: ../../export/content/applications/productivity/ai/agents.rst:137
+msgid "To reprocess a source:"
+msgstr "Per rielaborare una fonte:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:262
-msgid ""
-"On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to "
-"any source that should be updated."
+#: ../../export/content/applications/productivity/ai/agents.rst:139
+msgid "Navigate to the :menuselection:`AI` app and select an |AI| agent."
 msgstr ""
-"Nella scheda *Fonti*, fare clic su :guilabel:`Rielabora` :icon:`fa-refresh` "
-"accanto a qualsiasi fonte da aggiornare."
+"Passare all'applicazione :menuselection:`AI` e selezionare un agente |AI|."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:265
-msgid "AI agent sources with the reprocess icon visible."
-msgstr "Fonti dell'agente IA con l'icona di rielaborazione visibile."
+#: ../../export/content/applications/productivity/ai/agents.rst:140
+msgid "Click the *Knowledge* tab, and select a source."
+msgstr "Fare clic sulla scheda *Knowledge* e selezionare una fonte."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:141
+msgid ""
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the "
+"source."
+msgstr ""
+"Fare clic sull'icona :icon:`fa-ellipsis-v` :guilabel:`(puntini di "
+"sospensione verticali)` per la fonte."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:142
+msgid "On the menu, click :guilabel:`Reprocess`."
+msgstr "Nel menu, fare clic su :guilabel:`Rielabora`."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:144
+msgid "The Knowledge tab of an agent, with the Reprocess option visible."
+msgstr "La scheda Knowledge di un agente, con l'opzione Rielabora visibile."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:148
+msgid "Triggers"
+msgstr "Trigger"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:150
+msgid ""
+"An agent can be triggered in different ways depending on how it is used."
+msgstr ""
+"Un agente può essere attivato in modi diversi a seconda di come viene "
+"utilizzato."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:152
+msgid ""
+"Agents can be launched interactively by users through an AI chat. They can "
+"also be triggered automatically by automated actions and scheduled actions, "
+"allowing agents to participate in automated workflows."
+msgstr ""
+"Gli agenti possono essere lanciati in modo interattivo dagli utenti tramite "
+"una chat AI. Possono anche essere attivati automaticamente da azioni "
+"automatizzate e pianificate, consentendo agli agenti di partecipare a flussi "
+"di lavoro automatizzati."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:156
+msgid ""
+"To add a trigger to an agent, navigate to the *Trigger* tab and "
+"click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
+"triggered?* popup, choose from one of the following options:"
+msgstr ""
+"Per aggiungere un trigger a un agente, passare alla scheda *Trigger* e fare "
+"clic su :icon:`add` :guilabel:`Aggiungi`. Nel popup *Quando deve essere "
+"attivato l'agente?*, scegliere una delle seguenti opzioni:"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:159
+msgid "*On a schedule*: Runs automatically according to a set frequency."
+msgstr ""
+"*Su pianificazione*: viene eseguito automaticamente secondo una frequenza "
+"impostata."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:160
+msgid ""
+"*Based on a Date Field*: Runs once per record, as soon as a specific date is "
+"reached."
+msgstr ""
+"*Basato su un campo data*: viene eseguito una volta per record, non appena "
+"viene raggiunta una data specifica."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:161
+msgid "*After creation*: Runs whenever a new record is added."
+msgstr ""
+"*Dopo la creazione*: viene eseguito ogni volta che viene aggiunto un nuovo "
+"record."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:162
+msgid "*After update*: Runs whenever a specific field is updated."
+msgstr ""
+"*Dopo l'aggiornamento*: viene eseguito ogni volta che viene aggiornato un "
+"campo specifico."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:165
+msgid ""
+"If unsure which option is best for a particular use case, click "
+"the :guilabel:`I need help to choose` option at the bottom of the popup. "
+"This opens a conversation with the *Odoo AI* agent. The agent then walks "
+"through the specifics of the use case to help select the best option."
+msgstr ""
+"Se non si è sicuri di quale opzione sia la migliore per un caso d'uso "
+"particolare, fare clic sull'opzione :guilabel:`Ho bisogno di aiuto per "
+"scegliere` in fondo al popup. Si aprirà una conversazione con l'agente *Odoo "
+"AI*. L'agente esaminerà quindi le specifiche del caso d'uso per aiutare a "
+"selezionare l'opzione migliore."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:170
+msgid "See :doc:`AI server actions <server-actions>` for more information."
+msgstr ""
+"Vedere :doc:`Azioni server AI <server-actions>` per maggiori informazioni."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:175
+msgid "Create a new agent"
+msgstr "Crea un nuovo agente"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:177
+msgid ""
+"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+"click :guilabel:`New`. Enter an agent name, then add a short description, if "
+"desired."
+msgstr ""
+"Per creare un nuovo |AI| agente, passare all'app :menuselection:`AI` e fare "
+"clic su :guilabel:`Nuovo`. Inserire il nome dell'agente, quindi aggiungere "
+"una breve descrizione, se desiderato."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:181
+msgid ""
+"Before creating a new agent, it is recommended to have a clear use case in "
+"mind. This helps when writing out the *Instructions* and assigning the "
+"*Skills*."
+msgstr ""
+"Prima di creare un nuovo agente, si consiglia di avere in mente un caso "
+"d'uso chiaro. Ciò è utile quando si scrivono le *Istruzioni* e si assegnano "
+"le *Competenze*."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:184
+msgid ""
+"On the *Instructions* tab, enter a system prompt with detailed instructions "
+"for the agent as to their role and responsibilities."
+msgstr ""
+"Nella scheda *Istruzioni*, inserire un prompt di sistema con istruzioni "
+"dettagliate per l'agente in merito al suo ruolo e alle sue responsabilità."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:187
+msgid "A new agent form."
+msgstr "Un modulo per un nuovo agente."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:190
+msgid ""
+"On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As "
+"explained above, :ref:`Skills <ai/agents/skills>` include both instructions "
+"and tools that guide the agent in helping users complete a task."
+msgstr ""
+"Nella scheda *Competenze*, selezionare una o più :guilabel:`Competenze` per "
+"l'agente. Come spiegato in precedenza, le :ref:`Competenze <ai/agents/skills>"
+"` includono sia istruzioni che strumenti che guidano l'agente nell'aiutare "
+"gli utenti a completare un'attività."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:194
+msgid ""
+"Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit "
+"the agent to **only** respond based on the provided resources."
+msgstr ""
+"Far scorrere l'interruttore :guilabel:`Limita le risposte alle fonti` su "
+"attivo per limitare l'agente a rispondere **solo** in base alle risorse "
+"fornite."
 
 #: ../../export/content/applications/productivity/ai/apikeys.rst:3
 msgid "AI API keys"
@@ -2557,10 +2349,10 @@ msgstr "L'agente non può rispondere con elevata sicurezza."
 #: ../../export/content/applications/productivity/ai/live-chat.rst:86
 msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
-"Creation* :ref:`skill <ai/topics>`."
+"Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"Quando una di queste condizioni viene soddisfatta, l'agente attiva "
-"la :ref:`competenza <ai/topics>` *Creazione lead*."
+"Quando una di queste condizioni è soddisfatta, l'agente attiva la "
+":ref:`competenza <ai/agents/skills>` di creazione lead."
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -4543,13 +4335,13 @@ msgstr ""
 #: ../../export/content/applications/productivity/ai/support_operations.rst:87
 msgid ""
 "Users may also define *skills*, which grant the agent permission to perform "
-"specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as "
-"record creation or automation triggers."
+"specific actions. :ref:`Skills <ai/agents/skills>` allow advanced scenarios "
+"such as record creation or automation triggers."
 msgstr ""
-"Gli utenti possono anche definire le *competenze*, che concedono all'agente "
-"l'autorizzazione a eseguire azioni specifiche. Le :ref:`competenze <ai/"
-"topics>` consentono scenari avanzati come la creazione di record o "
-"l'attivazione di automazioni."
+"Gli utenti possono anche definire *competenze*, che concedono all'agente il "
+"permesso di eseguire azioni specifiche. Le :ref:`Competenze <ai/agents/"
+"skills>` consentono scenari avanzati come la creazione di record o trigger "
+"di automazione."
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:90
 msgid "An example support AI agent."
@@ -14311,10 +14103,6 @@ msgid ""
 msgstr ""
 ":doc:`Digitalizzazione documenti basata su AI <../finance/accounting/"
 "vendor_bills/invoice_digitization>`"
-
-#: ../../export/content/applications/productivity/knowledge.rst:3
-msgid "Knowledge"
-msgstr "Knowledge"
 
 #: ../../export/content/applications/productivity/knowledge.rst:5
 msgid ""
@@ -33766,16 +33554,16 @@ msgid ""
 "With the relevant graph view open in your database, "
 "click :guilabel:`Spreadsheet`."
 msgstr ""
-"Con la vista grafico pertinente aperta nel database, fare clic su "
-":guilabel:`Foglio di calcolo`."
+"Con la vista grafico pertinente aperta nel database, fare clic "
+"su :guilabel:`Foglio di calcolo`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:8
 msgid ""
 "In the :guilabel:`Insert in Spreadsheet` window, edit the :guilabel:`Graph "
 "name` if needed."
 msgstr ""
-"Nella finestra :guilabel:`Inserisci nel foglio di calcolo`, modificare il "
-":guilabel:`Nome grafico` se necessario."
+"Nella finestra :guilabel:`Inserisci nel foglio di calcolo`, modificare "
+"il :guilabel:`Nome grafico` se necessario."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:10
 msgid ""
@@ -33793,8 +33581,8 @@ msgid ""
 "folder."
 msgstr ""
 "Quando si inserisce un grafico in un nuovo foglio di calcolo, questo viene "
-"salvato nell'app **Documenti** nella cartella personale :icon:`storage` "
-":guilabel:`Il mio Drive` personal folder."
+"salvato nell'app **Documenti** nella cartella "
+"personale :icon:`storage` :guilabel:`Il mio Drive` personal folder."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:17
 msgid "Click :guilabel:`Insert`."
@@ -36718,8 +36506,8 @@ msgid ""
 "Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` "
 "from the menu bar."
 msgstr ""
-"Fare clic su :menuselection:`Inserisci -->` :icon:`bar_chart` "
-":menuselection:`Grafico` dalla barra dei menu."
+"Fare clic su :menuselection:`Inserisci --"
+">` :icon:`bar_chart` :menuselection:`Grafico` dalla barra dei menu."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:23
 msgid ""
@@ -36752,8 +36540,8 @@ msgid ""
 "further customized via the chart properties, which open in a panel to the "
 "right of the spreadsheet."
 msgstr ""
-"Un grafico :ref:`creato manualmente <spreadsheet/charts/create>` o "
-":doc:`inserito da una vista grafico Odoo <../insert/insert_chart>` può "
+"Un grafico :ref:`creato manualmente <spreadsheet/charts/create>` "
+"o :doc:`inserito da una vista grafico Odoo <../insert/insert_chart>` può "
 "essere ulteriormente personalizzato tramite le proprietà del grafico, che si "
 "aprono in un pannello a destra del foglio di calcolo."
 
@@ -36782,9 +36570,9 @@ msgid ""
 "click :icon:`edit_square` :guilabel:`Edit`."
 msgstr ""
 "Per qualsiasi grafico, creato manualmente o inserito da una vista Odoo, "
-"passare il mouse sopra il grafico, fare clic sull'icona :icon:`more_vert` "
-":guilabel:`(menu)`, quindi fare clic su :icon:`edit_square` "
-":guilabel:`Modifica`."
+"passare il mouse sopra il grafico, fare clic "
+"sull'icona :icon:`more_vert` :guilabel:`(menu)`, quindi fare clic "
+"su :icon:`edit_square` :guilabel:`Modifica`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:50
 msgid ""
@@ -36792,8 +36580,8 @@ msgid ""
 "menu bar, then select the relevant chart from "
 "the :icon:`bar_chart` :guilabel:`Charts` section."
 msgstr ""
-"Per un grafico inserito da una vista grafico Odoo, fare clic su "
-":guilabel:`Dati` sulla barra dei menu, quindi selezionare il grafico "
+"Per un grafico inserito da una vista grafico Odoo, fare clic "
+"su :guilabel:`Dati` sulla barra dei menu, quindi selezionare il grafico "
 "pertinente dalla sezione :icon:`bar_chart` :guilabel:`Grafici` ."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:56
@@ -37356,8 +37144,8 @@ msgid ""
 "a :guilabel:`See more link`."
 msgstr ""
 "La sezione :guilabel:`Annotazione` consente l'aggiunta di :guilabel:`Testo` "
-"per fornire contesto o informazioni aggiuntive sul grafico e/o un "
-":guilabel:`link vedi altro`."
+"per fornire contesto o informazioni aggiuntive sul grafico e/o "
+"un :guilabel:`link vedi altro`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:302
 msgid ""
@@ -37366,8 +37154,9 @@ msgid ""
 "corner."
 msgstr ""
 "Le annotazioni aggiunte a un grafico possono essere visualizzate passando il "
-"mouse sopra il grafico, quindi facendo clic sull'icona :icon:`info` "
-":guilabel:`(Informazioni grafico)` nell'angolo in alto a destra."
+"mouse sopra il grafico, quindi facendo clic "
+"sull'icona :icon:`info` :guilabel:`(Informazioni grafico)` nell'angolo in "
+"alto a destra."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:308
 msgid "Data Series"
@@ -37403,9 +37192,9 @@ msgid ""
 "determine whether the series is shown as a :guilabel:`Bar` "
 "or :guilabel:`Line`."
 msgstr ""
-":guilabel:`Tipo di serie`: per ogni serie di dati di un grafico "
-":guilabel:`Combinato`, determinare se la serie viene mostrata come "
-":guilabel:`Barra` o :guilabel:`Linea`."
+":guilabel:`Tipo di serie`: per ogni serie di dati di un "
+"grafico :guilabel:`Combinato`, determinare se la serie viene mostrata "
+"come :guilabel:`Barra` o :guilabel:`Linea`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:318
 msgid ""
@@ -37429,12 +37218,12 @@ msgid ""
 "charts/design-color>`."
 msgstr ""
 ":guilabel:`Linea di tendenza`: con la serie di dati pertinente selezionata, "
-"abilitare :guilabel:`Mostra linea di tendenza`, quindi selezionare il "
-":guilabel:`Tipo` di linea di tendenza: :guilabel:`Lineare`, "
-":guilabel:`Esponenziale`, :guilabel:`Polinomiale`, :guilabel:`Logaritmica` o "
-":guilabel:`Media mobile`. Per modificare il colore della linea di tendenza, "
-"fare clic sul punto colorato, quindi :ref:`scegliere il colore desiderato "
-"<spreadsheet/charts/design-color>`."
+"abilitare :guilabel:`Mostra linea di tendenza`, quindi selezionare "
+"il :guilabel:`Tipo` di linea di "
+"tendenza: :guilabel:`Lineare`, :guilabel:`Esponenziale`, :guilabel:`Polinomiale`, :guilabel:`Logaritmica` "
+"o :guilabel:`Media mobile`. Per modificare il colore della linea di "
+"tendenza, fare clic sul punto colorato, quindi :ref:`scegliere il colore "
+"desiderato <spreadsheet/charts/design-color>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:330
 msgid "Axes"
@@ -37443,7 +37232,8 @@ msgstr "Assi"
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:332
 msgid ""
 "The :guilabel:`Axes` section allows the following elements to be modified:"
-msgstr "La sezione :guilabel:`Assi` consente di modificare i seguenti elementi:"
+msgstr ""
+"La sezione :guilabel:`Assi` consente di modificare i seguenti elementi:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:334
 msgid ""
@@ -37529,8 +37319,9 @@ msgid ""
 "Hover over a chart, then click the :icon:`more_vert` :guilabel:`(menu)` icon "
 "to reveal the following options:"
 msgstr ""
-"Passare il mouse su un grafico, quindi fare clic sull'icona "
-":icon:`more_vert` :guilabel:`(menu)` per rivelare le seguenti opzioni:"
+"Passare il mouse su un grafico, quindi fare clic "
+"sull'icona :icon:`more_vert` :guilabel:`(menu)` per rivelare le seguenti "
+"opzioni:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:377
 msgid ""
@@ -42657,13 +42448,11 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:110
 msgid ""
-"A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/"
-"simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-"
-"time>` field."
+"A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time "
+"<studio/fields/simple-fields-date-time>` field."
 msgstr ""
-"Un filtro :guilabel:`Data` può corrispondere solo a un campo :ref:`Data "
-"<studio/fields/simple-fields-date>` o :ref:`Data e ora <studio/fields/simple-"
-"fields-date-time>`."
+"Un filtro :guilabel:`Data` può corrispondere solo a un campo :ref:`Data o "
+"Data e ora <studio/fields/simple-fields-date-time>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:113
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:150
@@ -47163,6 +46952,594 @@ msgstr ""
 "Per altri errori, consultare la Developer Suite di Meta per i `codici di "
 "errore di WhatsApp <https://developers.facebook.com/documentation/business-"
 "messaging/whatsapp/support/error-codes>`__."
+
+#~ msgid ""
+#~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
+#~ "natural language, perform tasks, and assist users by interacting with "
+#~ "Odoo tools. Agents are a core component of the |AI| structure in Odoo. "
+#~ "Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-"
+#~ "odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/"
+#~ "tools>` that guide its behavior."
+#~ msgstr ""
+#~ "Un agente |AI| è un assistente virtuale intelligente in Odoo in grado di "
+#~ "comprendere il linguaggio naturale, svolgere compiti e assistere gli "
+#~ "utenti interagendo con gli strumenti di Odoo. Gli agenti sono un "
+#~ "componente fondamentale della struttura |AI| in Odoo. Ogni agente ha uno "
+#~ "scopo definito, un :ref:`prompt <ai/agents/prompts-in-odoo>`, e un "
+#~ "insieme di :ref:`competenze <ai/topics>` e :ref:`strumenti <ai/tools>` "
+#~ "che ne guidano il comportamento."
+
+#~ msgid ""
+#~ "When interacting with an |AI| agent, the conversation interface may "
+#~ "display intermediate status messages while a request is being processed."
+#~ msgstr ""
+#~ "Quando si interagisce con un agente |AI|, l'interfaccia di conversazione "
+#~ "può visualizzare messaggi di stato intermedi durante l'elaborazione di "
+#~ "una richiesta."
+
+#~ msgid ""
+#~ "These messages reflect the current step of the interaction, such as "
+#~ "analyzing the request, consulting sources, or preparing an action, before "
+#~ "the final response is generated."
+#~ msgstr ""
+#~ "Questi messaggi riflettono la fase corrente dell'interazione, come "
+#~ "l'analisi della richiesta, la consultazione delle fonti o la preparazione "
+#~ "di un'azione, prima che venga generata la risposta finale."
+
+#~ msgid "An Agent analyzing a user request."
+#~ msgstr "Un agente che analizza la richiesta di un utente."
+
+#~ msgid "Agents are formed of two main components, *Skills* and *Sources*."
+#~ msgstr ""
+#~ "Gli agenti sono composti da due componenti principali, le *Competenze* e "
+#~ "le *Fonti*."
+
+#~ msgid ""
+#~ "*Skills* are the instructions and roles that inform the agent of what "
+#~ "tasks they need to complete. *Tools* are assigned to skills, and are the "
+#~ "actual functions the agent can utilize to perform tasks."
+#~ msgstr ""
+#~ "Le *Competenze* sono le istruzioni e i ruoli che indicano all'agente "
+#~ "quali compiti deve completare. Gli *Strumenti* sono assegnati alle "
+#~ "competenze e rappresentano le funzioni effettive che l'agente può "
+#~ "utilizzare per eseguire le attività."
+
+#~ msgid ""
+#~ "*Sources* provide the agent with the information they need to complete "
+#~ "their tasks."
+#~ msgstr ""
+#~ "Le *Fonti* forniscono all'agente le informazioni necessarie per "
+#~ "completare le proprie attività."
+
+#~ msgid ""
+#~ "While many |AI| features can be used in Odoo without the **AI** "
+#~ "application, creating and customizing agents requires that the **AI** "
+#~ "application is installed."
+#~ msgstr ""
+#~ "Sebbene molte funzionalità AI possano essere utilizzate in Odoo senza "
+#~ "l'applicazione **AI**, la creazione e la personalizzazione degli agenti "
+#~ "richiede che l'applicazione **AI** sia installata."
+
+#~ msgid "AI prompts in Odoo"
+#~ msgstr "Prompt AI in Odoo"
+
+#~ msgid ""
+#~ "Before working with |AI| agents, it is important to understand some basic "
+#~ "concepts regarding |AI| prompts."
+#~ msgstr ""
+#~ "Prima di lavorare con gli agenti |AI|, è importante comprendere alcuni "
+#~ "concetti di base relativi ai prompt |AI|."
+
+#~ msgid ""
+#~ "An |AI| prompt is a set of written instructions or context given to an |"
+#~ "AI| model that tells it how to respond to a request, or what role to "
+#~ "take. Prompts can define:"
+#~ msgstr ""
+#~ "Un prompt AI è un insieme di istruzioni scritte o di contesto fornito a "
+#~ "un modello AI che gli indica come rispondere a una richiesta o quale "
+#~ "ruolo assumere. I prompt possono definire:"
+
+#~ msgid "the tone, style, and persona of the |AI| model"
+#~ msgstr "il tono, lo stile e la personalità del modello AI"
+
+#~ msgid "the scope of what the model can do"
+#~ msgstr "l'ambito di ciò che il modello può fare"
+
+#~ msgid "the type of output expected from the request"
+#~ msgstr "il tipo di output previsto dalla richiesta"
+
+#~ msgid ""
+#~ "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
+#~ "agent's overall role, purpose, and behavior. It acts as the core mission "
+#~ "statement of the agent, and drives all interactions. During a "
+#~ "conversation, the system prompts and skill instructions are continuously "
+#~ "applied. They influence how the agent interprets messages, selects tools, "
+#~ "uses sources, and determines whether additional actions are required "
+#~ "before responding."
+#~ msgstr ""
+#~ "In Odoo, a ogni agente |AI| viene assegnato un *Prompt di sistema*, che "
+#~ "ne definisce il ruolo generale, lo scopo e il comportamento. Funge da "
+#~ "missione principale dell'agente e guida tutte le interazioni. Durante una "
+#~ "conversazione, i prompt di sistema e le istruzioni delle competenze "
+#~ "vengono applicati costantemente. Influenzano il modo in cui l'agente "
+#~ "interpreta i messaggi, seleziona gli strumenti, utilizza le fonti e "
+#~ "determina se sono necessarie ulteriori azioni prima di rispondere."
+
+#~ msgid ""
+#~ "Each :ref:`Skill <ai/topics>` also includes its own prompt-like "
+#~ "component, called *Instructions*. Instructions are skill-specific "
+#~ "guidelines that refine how the agent behaves within a certain context or "
+#~ "workflow, and how it interacts within the Odoo framework."
+#~ msgstr ""
+#~ "Ogni :ref:`Competenza <ai/topics>` include anche un componente simile a "
+#~ "un prompt, chiamato *Istruzioni*. Le istruzioni sono linee guida "
+#~ "specifiche per la competenza che definiscono come l'agente deve "
+#~ "comportarsi all'interno di un determinato contesto o flusso di lavoro e "
+#~ "come interagisce all'interno del framework di Odoo."
+
+#~ msgid "Step-by-step workflows for how to complete a specific action."
+#~ msgstr ""
+#~ "Flussi di lavoro passo dopo passo su come completare un'azione specifica"
+
+#~ msgid ""
+#~ "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` "
+#~ "that define how an agent behaves within a specific context. Essentially, "
+#~ "the skills define what an agent can do within the database. Skills guide "
+#~ "conversations, telling the agent what it can do, how it can do it, and "
+#~ "when it should do it."
+#~ msgstr ""
+#~ "Le *Competenze* sono una raccolta di istruzioni e :ref:`strumenti <ai/"
+#~ "tools>` che definiscono il comportamento di un agente all'interno di un "
+#~ "contesto specifico. In sostanza, le competenze stabiliscono cosa può fare "
+#~ "un agente all'interno del database. Guidano le conversazioni, indicando "
+#~ "all'agente cosa può fare, come può farlo e quando deve farlo."
+
+#~ msgid ""
+#~ "If an agent is not assigned any Skills, it is **only** able to provide "
+#~ "information. It **cannot** complete tasks or make changes to the database."
+#~ msgstr ""
+#~ "Se a un agente non viene assegnata alcuna competenza, è in grado **solo** "
+#~ "di fornire informazioni. **Non può** completare attività né apportare "
+#~ "modifiche al database."
+
+#~ msgid ""
+#~ "Within each skill is a detailed prompt, which provides the agent with "
+#~ "more in-depth instructions on how to perform the tasks associated with "
+#~ "that skill, define the boundaries of its behavior, and determine how it "
+#~ "should interpret user intent. These prompts ensure that the agent follows "
+#~ "a consistent reasoning pattern and uses the appropriate tools to generate "
+#~ "accurate, context-aware responses."
+#~ msgstr ""
+#~ "All'interno di ciascuna competenza si trova un prompt dettagliato che "
+#~ "fornisce all'agente istruzioni più approfondite su come eseguire le "
+#~ "attività associate a tale competenza, definire i limiti del suo "
+#~ "comportamento e stabilire in che modo interpretare l'intento dell'utente. "
+#~ "Questi prompt garantiscono che l'agente segua un modello di ragionamento "
+#~ "coerente e utilizzi gli strumenti appropriati per generare risposte "
+#~ "accurate e contestualizzate."
+
+#~ msgid "The following skills are preconfigured in the **AI** app:"
+#~ msgstr "Le seguenti competenze sono preconfigurate nell'app **IA**:"
+
+#~ msgid ""
+#~ ":guilabel:`View Builder`: Supports the interpretation of a user query to "
+#~ "open the appropriate Odoo view with a set of tools necessary to perform "
+#~ "the search. Natural language queries can also include time-based grouping "
+#~ "instructions. This allows agents to group results by time intervals such "
+#~ "as day, month, or year when querying records."
+#~ msgstr ""
+#~ ":guilabel:`Costruttore di viste`: supporta l'interpretazione della "
+#~ "richiesta di un utente per aprire la vista Odoo appropriata con una serie "
+#~ "di strumenti necessari per eseguire la ricerca. Le richieste in "
+#~ "linguaggio naturale possono includere anche istruzioni di raggruppamento "
+#~ "temporale. Ciò consente agli agenti di raggruppare i risultati in base a "
+#~ "intervalli di tempo come giorno, mese o anno durante la ricerca dei "
+#~ "record."
+
+#~ msgid ""
+#~ ":guilabel:`Information retrieval`: A collection of tools to retrieve "
+#~ "information about the models."
+#~ msgstr ""
+#~ ":guilabel:`Recupero informazioni`: una raccolta di strumenti per "
+#~ "recuperare informazioni sui modelli."
+
+#~ msgid ":guilabel:`Update Records`: Tools to update records."
+#~ msgstr ":guilabel:`Aggiorna record`: strumenti per aggiornare record."
+
+#~ msgid ":guilabel:`Create Records`: Tools to create records."
+#~ msgstr ":guilabel:`Crea record`: strumenti per creare record."
+
+#~ msgid ""
+#~ ":guilabel:`Generate Images`: A collection of tools to support image "
+#~ "generation. Load this skill when the user asks to generate or enhance an "
+#~ "image."
+#~ msgstr ""
+#~ ":guilabel:`Genera immagini`: una raccolta di strumenti a supporto della "
+#~ "generazione di immagini. Carica questa competenza quando l'utente chiede "
+#~ "di generare o migliorare un'immagine."
+
+#~ msgid ""
+#~ ":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
+#~ "time."
+#~ msgstr ""
+#~ ":guilabel:`Ricerca web`: consente all'agente di esplorare Internet in "
+#~ "tempo reale."
+
+#~ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
+#~ msgstr ""
+#~ ":guilabel:`Costruttore sito web`: strumenti per modificare le pagine del "
+#~ "sito web Odoo."
+
+#~ msgid ""
+#~ ":guilabel:`Create Leads`: A collection of tools to support automated lead "
+#~ "creation. This skill is **only** available if the **CRM** app is "
+#~ "installed."
+#~ msgstr ""
+#~ ":guilabel:`Crea lead`: una raccolta di strumenti a supporto della "
+#~ "creazione automatica di lead. Questa competenza è disponibile **solo** se "
+#~ "l'app **CRM** è installata."
+
+#~ msgid ""
+#~ "Within each skill is a set of :guilabel:`Instructions`, which act as a "
+#~ "prompt and provide guidance for the structure of the interaction, and one "
+#~ "or more :ref:`AI Tools <ai/tools>`, which indicate the functions the "
+#~ "agent can perform."
+#~ msgstr ""
+#~ "All'interno di ciascuna competenza si trova una serie "
+#~ "di :guilabel:`Istruzioni`, che fungono da prompt e forniscono indicazioni "
+#~ "sulla struttura dell'interazione, e uno o più :ref:`Strumenti IA <ai/"
+#~ "tools>`, che indicano le funzioni che l'agente può eseguire."
+
+#~ msgid "Tools"
+#~ msgstr "Utensili"
+
+#~ msgid ""
+#~ "*Tools* are the functions the agent can perform in Odoo. These include "
+#~ "actions like creating a lead or opening a view. Tools extend the purpose "
+#~ "of the agent beyond conversations, they enable real actions. The "
+#~ "available tools in a database vary based on the applications installed. "
+#~ "Multiple :guilabel:`AI Tools` can be assigned to a single skill."
+#~ msgstr ""
+#~ "Gli *Strumenti* sono le funzioni che l'agente può eseguire in Odoo. "
+#~ "Includono azioni come la creazione di un lead o l'apertura di una vista. "
+#~ "Gli strumenti estendono lo scopo dell'agente oltre le conversazioni, "
+#~ "consentendo azioni reali. Gli strumenti disponibili in un database "
+#~ "variano in base alle applicazioni installate. È possibile assegnare "
+#~ "più :guilabel:`Strumenti IA` a una singola competenza."
+
+#~ msgid "Sources"
+#~ msgstr "Fonti"
+
+#~ msgid "PDFs"
+#~ msgstr "PDF"
+
+#~ msgid "Weblinks"
+#~ msgstr "Link web"
+
+#~ msgid "Documents (uploaded in the **Documents** application)"
+#~ msgstr "Documenti (caricati nell'applicazione **Documenti**)"
+
+#~ msgid "**Knowledge** app articles"
+#~ msgstr "Articoli dell'applicazione **Knowledge**"
+
+#~ msgid ""
+#~ "If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
+#~ "agent can **only** utilize information from the uploaded and active "
+#~ "sources."
+#~ msgstr ""
+#~ "Se l'opzione :guilabel:`Limita alle fonti` è abilitata su un agente, "
+#~ "l'agente può utilizzare **solo** informazioni dalle fonti caricate e "
+#~ "attive."
+
+#~ msgid "Uploaded files"
+#~ msgstr "File caricati"
+
+#~ msgid ""
+#~ "During a conversation with an |AI| agent, additional context can be "
+#~ "provided by uploading files. Files are temporarily treated as sources for "
+#~ "the ongoing discussion. The agent can use their content to answer "
+#~ "questions, summarize information, or extract relevant details."
+#~ msgstr ""
+#~ "Durante una conversazione con un agente |AI|, è possibile fornire "
+#~ "ulteriore contesto caricando dei file. I file vengono temporaneamente "
+#~ "considerati come fonti per la discussione in corso. L'agente può "
+#~ "utilizzarne il contenuto per rispondere alle domande, riassumere "
+#~ "informazioni o estrarre dettagli rilevanti."
+
+#~ msgid ""
+#~ "The provided files only influence the current conversation, unless they "
+#~ "are explicitly added as sources on the agent."
+#~ msgstr ""
+#~ "I file forniti influenzano solo la conversazione corrente, a meno che non "
+#~ "vengano esplicitamente aggiunti come fonti per l'agente."
+
+#~ msgid ""
+#~ "To attach a file in a conversation, click the :icon:`fa-plus-"
+#~ "circle` :guilabel:`(plus circle)` icon in the message window, then "
+#~ "click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
+#~ "window, select one or more files to attach, then click :guilabel:`Open`."
+#~ msgstr ""
+#~ "Per allegare un file in una conversazione, fare clic sull'icona :icon:`fa-"
+#~ "plus-circle` :guilabel:`(più cerchiato)` nella finestra del messaggio, "
+#~ "quindi fare clic su :icon:`fa-paperclip` :guilabel:`Allega file`. Nella "
+#~ "finestra di selezione file, scegliere uno o più file da allegare, quindi "
+#~ "fare clic su :guilabel:`Apri`."
+
+#~ msgid ""
+#~ "A manager finds a receipt for supplies and is unsure whether it has "
+#~ "already been submitted to the **Expenses** app for reimbursement. They "
+#~ "open a conversation with the *Ask AI* agent and enter the following "
+#~ "prompt:"
+#~ msgstr ""
+#~ "Un responsabile trova una ricevuta per delle forniture e non è sicuro se "
+#~ "sia già stata registrata nell'app **Spese** per il rimborso. Apre una "
+#~ "conversazione con l'agente *Chiedi all'IA* e inserisce il seguente prompt:"
+
+#~ msgid "`Can you open the expense that matches this receipt?`"
+#~ msgstr "`Puoi aprire la spesa corrispondente a questa ricevuta?`"
+
+#~ msgid ""
+#~ "They attach the receipt to the message. After the agent analyzes the "
+#~ "attachment, it opens the view to the correct expense."
+#~ msgstr ""
+#~ "L'utente allega la ricevuta al messaggio. Dopo che l'agente ha analizzato "
+#~ "l'allegato, apre la vista della spesa corretta."
+
+#~ msgid "Add alt text."
+#~ msgstr "Aggiungi testo alternativo."
+
+#~ msgid "Gain insights from previewed files"
+#~ msgstr "Ottenere informazioni dai file in anteprima"
+
+#~ msgid ""
+#~ "When a document is open in preview mode, |AI| agents can use the content "
+#~ "of the previewed file as context for the conversation."
+#~ msgstr ""
+#~ "Quando un documento è aperto in modalità anteprima, gli agenti |AI| "
+#~ "possono utilizzare il contenuto del file visualizzato in anteprima come "
+#~ "contesto per la conversazione."
+
+#~ msgid ""
+#~ "First, navigate to the :menuselection:`Documents` app and click a "
+#~ "document to preview it. Click the |AI| icon at the top of the page to "
+#~ "open the :guilabel:`Ask AI` chat window. From here, click one of the "
+#~ "default prompts to use them, or enter a custom one in the message window."
+#~ msgstr ""
+#~ "Innanzitutto, accedere all'app :menuselection:`Documenti` e fare clic su "
+#~ "un documento per visualizzarne l'anteprima. Fare clic sull'icona |AI| "
+#~ "nella parte superiore della pagina per aprire la finestra di "
+#~ "chat :guilabel:`Chiedi all'IA`. Da qui, fare clic su uno dei prompt "
+#~ "predefiniti per utilizzarlo oppure inserirne uno personalizzato nella "
+#~ "finestra dei messaggi."
+
+#~ msgid ""
+#~ "In this case, the agent's responses are grounded in the file currently "
+#~ "being previewed, in combination with any other sources assigned to the "
+#~ "agent."
+#~ msgstr ""
+#~ "In questo caso, le risposte dell'agente si basano sul file attualmente "
+#~ "visualizzato in anteprima, insieme alle altre fonti assegnate all'agente."
+
+#~ msgid ""
+#~ "To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+#~ "click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
+#~ "description, if desired."
+#~ msgstr ""
+#~ "Per creare un nuovo agente |AI|, accedere all'app :menuselection:`IA` e "
+#~ "fare clic su :guilabel:`Nuovo`. Inserire un :guilabel:`Nome agente`, "
+#~ "quindi aggiungere una breve descrizione, se desiderato."
+
+#~ msgid ""
+#~ "Before creating a new agent, it is recommended to have a clear use case "
+#~ "in mind. This helps when writing out the :guilabel:`System Prompt`, and "
+#~ "assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
+#~ msgstr ""
+#~ "Prima di creare un nuovo agente, si raccomanda di avere un caso d'uso ben "
+#~ "chiaro. Questo aiuta nella stesura del :guilabel:`Prompt di sistema` e "
+#~ "nell'assegnazione di :guilabel:`Competenze` e :guilabel:`Strumenti IA`."
+
+#~ msgid ""
+#~ "Next, select a :guilabel:`Response Style`. This manages the overall tone "
+#~ "the agent uses when responding to an inquiry. Choose from one of the "
+#~ "following options:"
+#~ msgstr ""
+#~ "Successivamente, selezionare uno :guilabel:`Stile di risposta`. Questo "
+#~ "gestisce il tono generale che l'agente utilizza quando risponde a una "
+#~ "richiesta. Scegliere una delle seguenti opzioni:"
+
+#~ msgid ""
+#~ ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
+#~ "clear, direct answers with a moderate level of detail."
+#~ msgstr ""
+#~ ":guilabel:`Standard`: mantiene un tono equilibrato e professionale. "
+#~ "Fornisce risposte chiare e dirette con un livello di dettaglio moderato."
+
+#~ msgid ""
+#~ ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
+#~ "responses. Explores multiple perspectives, acknowledges subtleties, and "
+#~ "uses precise, academic language where appropriate."
+#~ msgstr ""
+#~ ":guilabel:`Sfumato`: fornisce risposte sofisticate e profondamente "
+#~ "contestualizzate. Esplora molteplici punti di vista, coglie le sfumature "
+#~ "e utilizza un linguaggio accademico e preciso dove appropriato."
+
+#~ msgid ""
+#~ ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
+#~ "Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
+#~ "dynamic structure to keep the user interested."
+#~ msgstr ""
+#~ ":guilabel:`Vivace e creativo`: incisivo, brillante e altamente "
+#~ "coinvolgente. Privilegia la brevità e l'arguzia. Utilizza un linguaggio "
+#~ "espressivo, metafore e una struttura dinamica per mantenere vivo "
+#~ "l'interesse dell'utente."
+
+#~ msgid ""
+#~ ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
+#~ "soundness above all else. Breaks down complex steps, cites reasoning "
+#~ "clearly, and verifies every claim. Adopts a meticulous and formal tone."
+#~ msgstr ""
+#~ ":guilabel:`Lento e rigoroso`: dà priorità assoluta alla massima "
+#~ "precisione e alla solidità logica. Scompone passaggi complessi, esplicita "
+#~ "chiaramente il ragionamento e verifica ogni affermazione. Adotta un tono "
+#~ "meticoloso e formale."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
+#~ "**only** respond based on the provided resources."
+#~ msgstr ""
+#~ "Selezionare la casella di controllo :guilabel:`Limita alle fonti` per "
+#~ "fare in modo che l'agente risponda **solo** in base alle risorse fornite."
+
+#~ msgid ""
+#~ "Next, select one or more :guilabel:`Skills` for the agent. As explained "
+#~ "above, :ref:`Skills <ai/topics>` include both instructions and tools that "
+#~ "guide the agent in helping users complete a task."
+#~ msgstr ""
+#~ "Successivamente, selezionare una o più :guilabel:`Competenze` per "
+#~ "l'agente. Come spiegato in precedenza, le :ref:`competenze <ai/topics>` "
+#~ "includono sia istruzioni che strumenti che guidano l'agente nell'aiutare "
+#~ "gli utenti a completare un'attività."
+
+#~ msgid ""
+#~ "Enter a :guilabel:`System Prompt` with detailed instructions for the "
+#~ "agent as to their role and responsibilities."
+#~ msgstr ""
+#~ "Inserire un :guilabel:`Prompt di sistema` con istruzioni dettagliate per "
+#~ "l'agente riguardo al suo ruolo e alle sue responsabilità."
+
+#~ msgid "A new agent form with the required information."
+#~ msgstr "Un nuovo modulo agente con le informazioni richieste."
+
+#~ msgid ""
+#~ "The specificity and length of the :guilabel:`System Prompt` can vary, "
+#~ "depending on the use case for the agent. Use the preconfigured agents as "
+#~ "an example of the possible information."
+#~ msgstr ""
+#~ "La specificità e la lunghezza del :guilabel:`Prompt di sistema` possono "
+#~ "variare, a seconda del caso d'uso per l'agente. Utilizzare gli agenti "
+#~ "preconfigurati come esempio delle possibili informazioni."
+
+#~ msgid ""
+#~ "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
+#~ "tab, then click :guilabel:`Add a source`."
+#~ msgstr ""
+#~ "Se sono necessarie *Fonti* per l'agente, scorrere fino alla "
+#~ "scheda :guilabel:`Fonti`, quindi fare clic su :guilabel:`Aggiungi una "
+#~ "fonte`."
+
+#~ msgid "Select a format:"
+#~ msgstr "Selezionare un formato:"
+
+#~ msgid ""
+#~ ":guilabel:`Upload a File`: Select the appropriate file from the explorer "
+#~ "window, and click :guilabel:`Open`."
+#~ msgstr ""
+#~ ":guilabel:`Carica un file`: selezionare il file desiderato dalla finestra "
+#~ "di esplorazione file e fare clic su :guilabel:`Apri`."
+
+#~ msgid ""
+#~ ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at "
+#~ "once, paste one link per line. Click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`Aggiungi un link`: incollare l'URL. È possibile aggiungere più "
+#~ "link contemporaneamente incollando un link per riga. Fare clic "
+#~ "su :guilabel:`Salva`."
+
+#~ msgid ""
+#~ ":guilabel:`Add from Documents` (uploaded in the **Documents** "
+#~ "application): Click the checkbox next to one or more documents, then "
+#~ "click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`Aggiungi da Documenti` (caricati nell'applicazione "
+#~ "**Documenti**): selezionare la casella accanto a uno o più documenti, "
+#~ "quindi fare clic su :guilabel:`Seleziona`."
+
+#~ msgid ""
+#~ ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
+#~ "articles, then click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`Aggiungi da Knowledge`: selezionare la casella accanto a uno o "
+#~ "più articoli, quindi fare clic su :guilabel:`Seleziona`."
+
+#~ msgid ""
+#~ "Once a source is added, the :guilabel:`Status` field updates to reflect "
+#~ "its current status. The source is ready when the status changes from "
+#~ "*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to "
+#~ "activate the source."
+#~ msgstr ""
+#~ "Una volta aggiunta una fonte, il campo :guilabel:`Stato` si aggiorna per "
+#~ "riflettere il suo stato attuale. La fonte è pronta quando lo stato cambia "
+#~ "da *In elaborazione* a *Indicizzato*. Spostare "
+#~ "l'interruttore :guilabel:`Attivo` per attivare la fonte."
+
+#~ msgid "A list of sources for an agent, each denoted with their format."
+#~ msgstr ""
+#~ "Un elenco di fonti per un agente, ciascuna indicata con il proprio "
+#~ "formato."
+
+#~ msgid ""
+#~ "If a source fails to upload, it could be the result of a conflict with "
+#~ "the selected provider."
+#~ msgstr ""
+#~ "Se il caricamento di una fonte non va a buon fine, potrebbe trattarsi di "
+#~ "un conflitto con il fornitore selezionato."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test` button to open a conversation window and test "
+#~ "the new agent."
+#~ msgstr ""
+#~ "Fare clic sul pulsante :guilabel:`Test` per aprire una finestra di "
+#~ "conversazione e testare il nuovo agente."
+
+#~ msgid "Manually reprocessing sources"
+#~ msgstr "Rielaborare manualmente le fonti"
+
+#~ msgid ""
+#~ "To reprocess a source, navigate to the :menuselection:`AI` app. Select an "
+#~ "|AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical ellipsis)` icon, then "
+#~ "click :guilabel:`Configuration`."
+#~ msgstr ""
+#~ "Per rielaborare una fonte, accedere all'app :menuselection:`IA`. "
+#~ "Selezionare un agente |AI| e, nella scheda kanban, fare clic "
+#~ "sull'icona :icon:`fa-ellipsis-v` :guilabel:`(puntini verticali)`, quindi "
+#~ "fare clic su :guilabel:`Configurazione`."
+
+#~ msgid ""
+#~ "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next "
+#~ "to any source that should be updated."
+#~ msgstr ""
+#~ "Nella scheda *Fonti*, fare clic su :guilabel:`Rielabora` :icon:`fa-"
+#~ "refresh` accanto a qualsiasi fonte da aggiornare."
+
+#~ msgid "AI agent sources with the reprocess icon visible."
+#~ msgstr "Fonti dell'agente IA con l'icona di rielaborazione visibile."
+
+#~ msgid ""
+#~ "When one of these conditions is met, the agent activates the *Lead "
+#~ "Creation* :ref:`skill <ai/topics>`."
+#~ msgstr ""
+#~ "Quando una di queste condizioni viene soddisfatta, l'agente attiva "
+#~ "la :ref:`competenza <ai/topics>` *Creazione lead*."
+
+#~ msgid ""
+#~ "Users may also define *skills*, which grant the agent permission to "
+#~ "perform specific actions. :ref:`Skills <ai/topics>` allow advanced "
+#~ "scenarios such as record creation or automation triggers."
+#~ msgstr ""
+#~ "Gli utenti possono anche definire le *competenze*, che concedono "
+#~ "all'agente l'autorizzazione a eseguire azioni specifiche. "
+#~ "Le :ref:`competenze <ai/topics>` consentono scenari avanzati come la "
+#~ "creazione di record o l'attivazione di automazioni."
+
+#~ msgid ""
+#~ "A :guilabel:`Date` filter can only match against a :ref:`Date <studio/"
+#~ "fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-"
+#~ "fields-date-time>` field."
+#~ msgstr ""
+#~ "Un filtro :guilabel:`Data` può corrispondere solo a un campo :ref:`Data "
+#~ "<studio/fields/simple-fields-date>` o :ref:`Data e ora <studio/fields/"
+#~ "simple-fields-date-time>`."
 
 #~ msgid "To insert a chart from an Odoo database into an Odoo spreadsheet:"
 #~ msgstr ""

@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
-"PO-Revision-Date: 2026-11-07 12:38+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
+"PO-Revision-Date: 2026-11-14 12:37+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/productivity/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -153,7 +153,7 @@ msgid ""
 msgstr "有關使用這些功能的資訊，請參閱相關文件。"
 
 #: ../../export/content/applications/productivity/ai.rst:64
-#: ../../export/content/applications/productivity/ai/agents.rst:3
+#: ../../export/content/applications/productivity/ai/agents.rst:8
 #: ../../export/content/applications/productivity/ai/support_operations.rst:28
 msgid "AI agents"
 msgstr "AI 人工智慧代理"
@@ -230,274 +230,209 @@ msgstr ""
 msgid ":doc:`AI MCP server <ai/mcp_server>`"
 msgstr ":doc:`AI MCP 伺服器 <ai/mcp_server>`"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:7
+#: ../../export/content/applications/productivity/ai/agents.rst:-1
 msgid ""
-"An |AI| agent is a smart virtual assistant in Odoo that can understand "
-"natural language, perform tasks, and assist users by interacting with Odoo "
-"tools. Agents are a core component of the |AI| structure in Odoo. Each agent "
-"has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set "
-"of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its "
-"behavior."
+"AI agents in Odoo are virtual assistants that understand natural-language "
+"requests and perform tasks. Learn how agents use instructions, skills, "
+"tools, and knowledge sources, and how to create and configure a new agent."
 msgstr ""
-"一個\\ |AI|\\ 代理是 Odoo 中的智慧型虛擬助理，它能理解自然語言、執行任務，並"
-"透過與 Odoo 工具互動來協助使用者。代理是 Odoo 中\\ |AI|\\ 結構的核心組件。每"
-"個代理都有明確的目標、\\ :ref:`提示 <ai/agents/prompts-in-odoo>`，以及一組引"
-"導其行為的\\ :ref:`技能 <ai/topics>`\\ 和\\ :ref:`工具 <ai/tools>`。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:12
+#: ../../export/content/applications/productivity/ai/agents.rst:13
 msgid ""
-"When interacting with an |AI| agent, the conversation interface may display "
-"intermediate status messages while a request is being processed."
-msgstr "與\\ |AI|\\ 代理互動時，對話介面可能會在處理請求時顯示中間狀態訊息。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:15
-msgid ""
-"These messages reflect the current step of the interaction, such as "
-"analyzing the request, consulting sources, or preparing an action, before "
-"the final response is generated."
+"An |AI| agent is a virtual assistant in Odoo that can understand natural-"
+"language requests, access information, and perform tasks using the tools "
+"available to it. Agents can be configured for specific roles and can be used "
+"interactively or as part of automated workflows."
 msgstr ""
-"在產生最終回應之前，這些訊息會反映互動目前的步驟，例如分析請求、查詢來源或準"
-"備執行動作。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:18
-msgid "An Agent analyzing a user request."
-msgstr "代理正在分析使用者請求。"
+#: ../../export/content/applications/productivity/ai/agents.rst:17
+msgid "Agents are built from four main components:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:19
+msgid ""
+"*Instructions* define the agent's purpose, behavior, and responsibilities."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:20
+msgid ""
+"*Knowledge* provides information the agent can use when completing tasks."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Skills* and *Sources*."
-msgstr "代理由兩個主要組件組成：*技能* 與 *來源*。"
+msgid ""
+"*Skills and tools* define what the agent can do. Skills provide instructions "
+"for specific tasks, while tools allow the agent to perform actions in Odoo."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:23
 msgid ""
-"*Skills* are the instructions and roles that inform the agent of what tasks "
-"they need to complete. *Tools* are assigned to skills, and are the actual "
-"functions the agent can utilize to perform tasks."
+"*Triggers* determine when the agent is invoked, such as when a user starts a "
+"conversation or when an automated or scheduled action calls the agent."
 msgstr ""
-"*技能* 是告知代理需完成哪些任務的指令與角色。*工具* 會指派給技能，是代理可用"
-"於執行任務的實際功能。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:26
-msgid ""
-"*Sources* provide the agent with the information they need to complete their "
-"tasks."
-msgstr "*來源*\\ 為代理提供完成任務所需的資訊。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:29
+#: ../../export/content/applications/productivity/ai/agents.rst:27
 msgid ""
 "While many |AI| features can be used in Odoo without the **AI** application, "
-"creating and customizing agents requires that the **AI** application is "
-"installed."
+"creating and customizing agents requires the **AI** application be installed."
 msgstr ""
-"雖然許多 AI 功能可以在 Odoo 中使用而無需\\ **AI**\\ 應用程式，但建立和自訂代"
-"理需要安裝\\ **AI**\\ 應用程式。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:30
+msgid ""
+"Odoo |AI| uses In-app purchases (IAP) for AI requests. For more information "
+"on using |IAP| credits, including how to purchase additional credits, visit "
+"the `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>`_."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
-msgid "AI prompts in Odoo"
-msgstr "Odoo 中的 AI 提示"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:37
-msgid ""
-"Before working with |AI| agents, it is important to understand some basic "
-"concepts regarding |AI| prompts."
-msgstr ""
-"在開始使用\\ |AI|\\ 代理之前，務必了解有關\\ |AI|\\ 提示的一些基本概念。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:40
-msgid ""
-"An |AI| prompt is a set of written instructions or context given to an |AI| "
-"model that tells it how to respond to a request, or what role to take. "
-"Prompts can define:"
-msgstr ""
-"AI 提示是一組書面指令或上下文，提供給 AI 模型，告訴它如何回應請求或扮演什麼角"
-"色。提示可以定義："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:43
-msgid "the tone, style, and persona of the |AI| model"
-msgstr "AI 模型的語氣、風格和角色"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:44
-msgid "the scope of what the model can do"
-msgstr "模型可以執行的範圍"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:45
-msgid "the type of output expected from the request"
-msgstr "請求期望的輸出類型"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:47
-msgid ""
-"In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
-"agent's overall role, purpose, and behavior. It acts as the core mission "
-"statement of the agent, and drives all interactions. During a conversation, "
-"the system prompts and skill instructions are continuously applied. They "
-"influence how the agent interprets messages, selects tools, uses sources, "
-"and determines whether additional actions are required before responding."
-msgstr ""
-"在 Odoo 中，每個\\ |AI|\\ 代理都會被指派一個「系統提示」，這定義了代理的整體"
-"角色、目標與行為。它充當代理的核心使命宣言，並驅動所有互動。在對話過程中，系"
-"統提示與技能指令會持續套用。它們會影響代理如何解讀訊息、選擇工具、使用來源，"
-"並在回應前判斷是否需要採取額外動作。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:53
-msgid ""
-"Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, "
-"called *Instructions*. Instructions are skill-specific guidelines that "
-"refine how the agent behaves within a certain context or workflow, and how "
-"it interacts within the Odoo framework."
-msgstr ""
-"每個\\ :ref:`技能 <ai/topics>`\\ 也包含其自身的提示式組件，稱為「說明」。說明"
-"是技能專屬的指導方針，用於修正代理在特定情境或工作流程中的行為方式，以及它在 "
-"Odoo 框架內的互動方式。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:57
-msgid "Instructions often include:"
-msgstr "指示通常包括："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:59
-msgid "A purpose, or what the skill covers."
-msgstr "一個目標，或該技能所涵蓋的範圍。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:60
-msgid "Rules or constraints for the agent to follow when assigned this skill."
-msgstr "代理在被指派此技能時須遵循的規則或限制。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:61
-msgid "Step-by-step workflows for how to complete a specific action."
-msgstr "如何完成特定操作的逐步工作流程"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:62
-msgid "Technical details needed to complete any actions."
-msgstr "完成任何動作所需的技術細節"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:65
 msgid "Agent structure"
 msgstr "代理結構"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:70
+#: ../../export/content/applications/productivity/ai/agents.rst:40
+msgid "Instructions"
+msgstr "指示"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:42
+msgid "Instructions define the agent's overall role, purpose, and behavior."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:44
+msgid ""
+"Each AI agent is assigned a *System Prompt* that provides its main "
+"instructions. It can define the agent's responsibilities, constraints, and "
+"how it should respond to requests."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:47
+msgid ""
+"Each :ref:`Skill <ai/agents/skills>` also includes its own prompt-like "
+"component, called *Instructions*. Instructions are skill-specific guidelines "
+"that refine how the agent behaves in a given context or workflow and how it "
+"interacts with the Odoo framework."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:51
+msgid "Instructions often include:"
+msgstr "指示通常包括："
+
+#: ../../export/content/applications/productivity/ai/agents.rst:53
+msgid "A purpose, or what the skill covers."
+msgstr "一個目標，或該技能所涵蓋的範圍。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:54
+msgid "Rules or constraints for the agent to follow when assigned this skill."
+msgstr "代理在被指派此技能時須遵循的規則或限制。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:55
+msgid "Step-by-step workflows for completing a specific action."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:56
+msgid "Technical details needed to complete any actions."
+msgstr "完成任何動作所需的技術細節"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:61
 msgid "Skills"
 msgstr "技能"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:72
+#: ../../export/content/applications/productivity/ai/agents.rst:63
 msgid ""
-"*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that "
-"define how an agent behaves within a specific context. Essentially, the "
-"skills define what an agent can do within the database. Skills guide "
-"conversations, telling the agent what it can do, how it can do it, and when "
-"it should do it."
+"*Skills* define specific tasks an agent can perform. Each *Skill* includes "
+"instructions that guide the agent through the task and can have one or more "
+"tools assigned to it."
 msgstr ""
-"*技能* 是指令與\\ :ref:`工具 <ai/tools>`\\ 的集合，用於定義代理在特定情境中的"
-"行為方式。基本上，技能定義了代理可以在資料庫中執行什麼操作。技能會引導對話，"
-"告訴代理它可以做什麼、如何做，以及何時該做。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:67
+msgid ""
+"If an agent is not assigned any Skills, it can **only** provide information. "
+"It **cannot** complete tasks or make changes to the database."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:70
+msgid ""
+"Multiple *Skills* can be assigned to the same agent, allowing it to perform "
+"different types of tasks."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:76
+msgid "Agent tools"
+msgstr "代理工具"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:78
 msgid ""
-"If an agent is not assigned any Skills, it is **only** able to provide "
-"information. It **cannot** complete tasks or make changes to the database."
-msgstr ""
-"若未為代理指派任何技能，該代理\\ **僅**\\ 能提供資訊。它\\ **無法**\\ 完成任"
-"務或對資料庫進行變更。"
+"*Tools* are the functions an agent can perform in Odoo. Each agent has the "
+"following tools available:"
+msgstr "*工具* 是代理在 Odoo 中可以執行的功能。每個代理都有以下可用工具："
 
 #: ../../export/content/applications/productivity/ai/agents.rst:81
 msgid ""
-"Within each skill is a detailed prompt, which provides the agent with more "
-"in-depth instructions on how to perform the tasks associated with that "
-"skill, define the boundaries of its behavior, and determine how it should "
-"interpret user intent. These prompts ensure that the agent follows a "
-"consistent reasoning pattern and uses the appropriate tools to generate "
-"accurate, context-aware responses."
+"*Generate image*: A collection of tools to support image generation. Load "
+"this skill when the user asks to generate or enhance an image."
 msgstr ""
-"每個技能中都包含詳細的提示詞，為代理提供更深入的指示，說明如何執行與該技能關"
-"聯的任務、定義其行為界限，並確定應如何解讀使用者意圖。這些提示詞可確保代理遵"
-"循一致的推理模式，並使用適當的工具來產生準確且具脈絡感知的回覆。"
+"*生成圖片*：一系列用於支援圖片生成的工具。當使用者要求生成或增強圖片時，載入"
+"此技能。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:83
+msgid "*Web Search*: Enable the Agent to explore the internet in real time."
+msgstr "*網路搜尋*：啟用代理以即時瀏覽網際網路。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:84
+msgid ""
+"*Self Update*: Allows an agent to identify missing or incomplete "
+"instructions and *Skills* and propose or make changes to its configuration."
+msgstr ""
+"*自我更新*：允許代理識別遺漏或不完整的指令與 *技能*，並對其配置提出或進行變更"
+"。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:87
-msgid "The following skills are preconfigured in the **AI** app:"
-msgstr "以下技能已在\\ **AI**\\ 應用程式中預先設定："
+msgid ""
+"To enable a tool on an agent, click the *Skills* tab, then slide the "
+"appropriate toggle to green."
+msgstr "要在代理上啟用工具，請按一下 *技能* 分頁，然後將相應的切換鍵滑動至綠色。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:89
-msgid ""
-":guilabel:`View Builder`: Supports the interpretation of a user query to "
-"open the appropriate Odoo view with a set of tools necessary to perform the "
-"search. Natural language queries can also include time-based grouping "
-"instructions. This allows agents to group results by time intervals such as "
-"day, month, or year when querying records."
-msgstr ""
-":guilabel:`檢視畫面建立器`：支援解讀使用者查詢，以便透過執行搜尋所需的一組工"
-"具開啟相應的 Odoo 檢視畫面。自然語言查詢亦可包含以時間為準的分組指示。這讓代"
-"理在查詢記錄時，能夠按日、月或年等時間區間對結果進行分組。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:93
-msgid ""
-":guilabel:`Information retrieval`: A collection of tools to retrieve "
-"information about the models."
-msgstr ":guilabel:`資訊檢索`：用於檢索有關模型資訊的工具集合。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:94
-msgid ":guilabel:`Update Records`: Tools to update records."
-msgstr ":guilabel:`更新記錄`：用於更新記錄的工具。"
+msgid "The tools on an AI agent, with some enabled."
+msgstr "AI 代理上的工具，其中一些已啟用。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:95
-msgid ":guilabel:`Create Records`: Tools to create records."
-msgstr ":guilabel:`建立記錄`：用於建立記錄的工具。"
+msgid "Subagents"
+msgstr "子代理"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:96
+#: ../../export/content/applications/productivity/ai/agents.rst:97
 msgid ""
-":guilabel:`Generate Images`: A collection of tools to support image "
-"generation. Load this skill when the user asks to generate or enhance an "
-"image."
+"An agent can use other |AI| agents as *subagents* to handle specialized "
+"tasks. When a user submits a request, the main agent can determine whether "
+"to delegate part of the task to a subagent based on its purpose and "
+"capabilities."
 msgstr ""
-":guilabel:`產生圖片`：支援圖片產生的一組工具。當使用者要求產生或增強圖片時，"
-"載入此技能。"
+"代理可以使用其他\\ |AI|\\ 代理作為 *子代理* 來處理專門任務。當使用者提交要求"
+"時，主代理可根據其目的和能力，決定是否要將任務的一部分委派給子代理。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:98
+#: ../../export/content/applications/productivity/ai/agents.rst:101
 msgid ""
-":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
-"time."
-msgstr ":guilabel:`網路搜尋`：讓代理能夠即時探索網際網路。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:99
-msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
-msgstr ":guilabel:`網站建立器`：用於編輯 Odoo 網站頁面的工具。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:100
-msgid ""
-":guilabel:`Create Leads`: A collection of tools to support automated lead "
-"creation. This skill is **only** available if the **CRM** app is installed."
+"Subagents allow an agent to delegate specific tasks to specialized agents "
+"rather than handling every request itself. The main agent can then use the "
+"subagent's results as part of its response."
 msgstr ""
-":guilabel:`建立潛在商機`：支援自動建立潛在商機的一組工具。此技能\\ **僅**\\ "
-"在安裝了\\ **CRM**\\ 應用程式時可用。"
+"子代理允許代理將特定任務委派給專業代理，而不是自己處理每一個要求。主代理隨後"
+"可以使用子代理的結果作為其回應的一部分。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:103
+#: ../../export/content/applications/productivity/ai/agents.rst:104
 msgid ""
-"Within each skill is a set of :guilabel:`Instructions`, which act as a "
-"prompt and provide guidance for the structure of the interaction, and one or "
-"more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can "
-"perform."
+"To assign a subagent, click on the *Skills* tab, scroll to the *Subagents* "
+"section, then click :icon:`add` :guilabel:`Add`. Then, select from the list "
+"of existing agents, or click :guilabel:`Create New` to create a new one."
 msgstr ""
-"每個技能中都包含一組\\ :guilabel:`指示`\\ ，作為提示詞並為互動結構提供指引；"
-"以及一個或多個\\ :ref:`AI 工具 <ai/tools>`\\ ，指出代理可執行的功能。"
+"要指派子代理，請按一下\\ *技能*\\ 分頁，滾動至\\ *子代理*\\ 區塊，然後按一"
+"下\\ :icon:`add`\\ :guilabel:`加入`。然後，從現有代理清單中選擇，或按一下\\ "
+":guilabel:`建立新代理`\\ 以建立新代理。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:110
-msgid "Tools"
-msgstr "工具"
+#: ../../export/content/applications/productivity/ai/agents.rst:109
+#: ../../export/content/applications/productivity/knowledge.rst:3
+msgid "Knowledge"
+msgstr "知識庫"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:112
-msgid ""
-"*Tools* are the functions the agent can perform in Odoo. These include "
-"actions like creating a lead or opening a view. Tools extend the purpose of "
-"the agent beyond conversations, they enable real actions. The available "
-"tools in a database vary based on the applications installed. "
-"Multiple :guilabel:`AI Tools` can be assigned to a single skill."
-msgstr ""
-"*工具*\\ 是代理可在 Odoo 中執行的功能。這些功能包括建立潛在商機或開啟檢視畫面"
-"等操作。工具將代理的用途擴展到對話之外，讓其能夠採取實際行動。資料庫中可用的"
-"工具視乎已安裝的應用程式而有所不同。單一技能可指派多個\\ :guilabel:`AI 工具"
-"`\\ 。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:120
-msgid "Sources"
-msgstr "原始程式碼"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:122
+#: ../../export/content/applications/productivity/ai/agents.rst:111
 msgid ""
 "Sources are the data the agent can refer to when generating responses or "
 "completing tasks. Sources are indexed so the agent can retrieve relevant "
@@ -506,7 +441,7 @@ msgstr ""
 "來源是代理程式在產生回應或完成任務時可以參考的資料。來源會被索引，以便當使用"
 "者提出問題時，代理程式可以檢索相關資訊。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:126
+#: ../../export/content/applications/productivity/ai/agents.rst:115
 msgid ""
 "An agent designed to answer customer support questions has **Knowledge** "
 "articles included as sources, which include frequently asked questions."
@@ -514,298 +449,40 @@ msgstr ""
 "設計用於回答客戶支援問題的代理程式將\\ **知識庫**\\ 文章作為來源，其中包括常"
 "見問題。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:129
+#: ../../export/content/applications/productivity/ai/agents.rst:118
 msgid "Sources can be in the following formats:"
 msgstr "來源可以是以下格式："
 
-#: ../../export/content/applications/productivity/ai/agents.rst:131
-msgid "PDFs"
-msgstr "PDF"
+#: ../../export/content/applications/productivity/ai/agents.rst:120
+msgid "Files uploaded to the agent"
+msgstr "上載至代理的檔案"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:132
-msgid "Weblinks"
+#: ../../export/content/applications/productivity/ai/agents.rst:121
+msgid "Links to webpages"
 msgstr "網頁連結"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:133
-msgid "Documents (uploaded in the **Documents** application)"
-msgstr "文件（在\\ **文件**\\ 應用程式中上載）"
+#: ../../export/content/applications/productivity/ai/agents.rst:122
+msgid "Documents (uploaded in the :doc:`Documents <../documents>` application)"
+msgstr "文件（上載至\\ :doc:`文件 <../documents>`\\ 應用程式）"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:134
-msgid "**Knowledge** app articles"
-msgstr "\\ **知識庫**\\ 應用程式文章"
+#: ../../export/content/applications/productivity/ai/agents.rst:123
+msgid ":doc:`Knowledge <../knowledge>` app articles"
+msgstr ":doc:`知識庫 <../knowledge>`\\ 應用程式文章"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:137
+#: ../../export/content/applications/productivity/ai/agents.rst:126
 msgid ""
-"If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
-"agent can **only** utilize information from the uploaded and active sources."
+"If the :guilabel:`Restrict answers to Sources` option is enabled on an "
+"agent, the agent can **only** utilize information from the uploaded and "
+"active sources."
 msgstr ""
-"如果在代理程式上啟用\\ :guilabel:`限制於來源`\\ 選項，則代理程式\\ **僅**\\ "
-"能利用來自已上載且啟用的來源的資訊。"
+"如果在代理上啟用了\\ :guilabel:`限制回答來源`\\ 選項，代理\\ **僅\\**\\ 能使"
+"用來自上載並且處於使用中的來源的資訊。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:141
-msgid "Uploaded files"
-msgstr "已上傳的檔案"
+#: ../../export/content/applications/productivity/ai/agents.rst:130
+msgid "Reprocessing sources"
+msgstr "重新處理來源"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:143
-msgid ""
-"During a conversation with an |AI| agent, additional context can be provided "
-"by uploading files. Files are temporarily treated as sources for the ongoing "
-"discussion. The agent can use their content to answer questions, summarize "
-"information, or extract relevant details."
-msgstr ""
-"在與\\ |AI|\\ 代理對話期間，可透過上傳檔案來提供額外脈絡。檔案會暫時被視為當"
-"前討論的來源。代理可使用其內容來回答問題、總結資訊或擷取相關細節。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:147
-msgid ""
-"The provided files only influence the current conversation, unless they are "
-"explicitly added as sources on the agent."
-msgstr "提供的檔案僅會影響目前的對話，除非已將其明確新增為代理的來源。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:150
-msgid ""
-"To attach a file in a conversation, click the :icon:`fa-plus-"
-"circle` :guilabel:`(plus circle)` icon in the message window, then "
-"click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
-"window, select one or more files to attach, then click :guilabel:`Open`."
-msgstr ""
-"若要在對話中附加檔案，請按一下訊息視窗中的\\ :icon:`fa-plus-"
-"circle` :guilabel:`（圓圈加號）`\\ 圖示，然後按一下\\ :icon:`fa-"
-"paperclip` :guilabel:`附加檔案`\\ 。在檔案瀏覽器視窗中，選取一個或多個要附加"
-"的檔案，然後按一下\\ :guilabel:`開啟`\\ 。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:155
-msgid ""
-"A manager finds a receipt for supplies and is unsure whether it has already "
-"been submitted to the **Expenses** app for reimbursement. They open a "
-"conversation with the *Ask AI* agent and enter the following prompt:"
-msgstr ""
-"經理找到了一張用品收據，但不確定是否已提交至\\ **費用**\\ 應用程式申請報銷。"
-"他們開啟與\\ *Ask AI*\\ 代理的對話，並輸入以下提示詞："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:159
-msgid "`Can you open the expense that matches this receipt?`"
-msgstr "`你能開啟與此收據相符的費用嗎？`"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:161
-msgid ""
-"They attach the receipt to the message. After the agent analyzes the "
-"attachment, it opens the view to the correct expense."
-msgstr "他們將收據附加至訊息中。代理在分析附件後，會開啟相應費用的檢視畫面。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:164
-msgid "Add alt text."
-msgstr "加入替代文字。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:168
-msgid "Gain insights from previewed files"
-msgstr "從預覽檔案獲取見解"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:170
-msgid ""
-"When a document is open in preview mode, |AI| agents can use the content of "
-"the previewed file as context for the conversation."
-msgstr ""
-"當文件在預覽模式下開啟時，\\ |AI|\\ 代理可以使用預覽檔案的內容作為對話背景資"
-"訊。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:173
-msgid ""
-"First, navigate to the :menuselection:`Documents` app and click a document "
-"to preview it. Click the |AI| icon at the top of the page to open "
-"the :guilabel:`Ask AI` chat window. From here, click one of the default "
-"prompts to use them, or enter a custom one in the message window."
-msgstr ""
-"首先，前往\\ :menuselection:`文件`\\ 應用程式，並按一下文件以進行預覽。按一下"
-"頁面頂端的\\ |AI|\\ 圖示，開啟\\ :guilabel:`詢問 AI`\\ 對話視窗。在此處按一下"
-"其中一個預設提示以使用，或在訊息視窗中輸入自訂提示。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:177
-msgid ""
-"In this case, the agent's responses are grounded in the file currently being "
-"previewed, in combination with any other sources assigned to the agent."
-msgstr ""
-"在此情況下，代理的回應將以目前預覽的檔案為依據，並結合指派給代理的任何其他來"
-"源。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:183
-msgid "Create a new agent"
-msgstr "建立新代理程式"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:185
-msgid ""
-"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
-"click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
-"description, if desired."
-msgstr ""
-"若要建立新的\\ |AI|\\ 代理，請前往\\ :menuselection:`AI`\\ 應用程式並按一下"
-"\\ :guilabel:`新增`。輸入\\ :guilabel:`代理名稱`，然後視需要新增簡短說明。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:189
-msgid ""
-"Before creating a new agent, it is recommended to have a clear use case in "
-"mind. This helps when writing out the :guilabel:`System Prompt`, and "
-"assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
-msgstr ""
-"在建立新代理之前，建議先構想好明確的使用情境。這有助於編寫\\ :guilabel:`系統"
-"提示`，以及指派\\ :guilabel:`技能`\\ 與\\ :guilabel:`AI 工具`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:193
-msgid ""
-"Next, select a :guilabel:`Response Style`. This manages the overall tone the "
-"agent uses when responding to an inquiry. Choose from one of the following "
-"options:"
-msgstr ""
-"接下來，選擇\\ :guilabel:`回應風格`\\ 。這會管理代理程式在回應查詢時使用的整"
-"體語氣。從以下選項中選擇："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:196
-msgid ""
-":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
-"clear, direct answers with a moderate level of detail."
-msgstr ""
-":guilabel:`標準`：保持平衡且專業的語氣。提供清晰、直接且詳細程度適中的回答。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:198
-msgid ""
-":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
-"responses. Explores multiple perspectives, acknowledges subtleties, and uses "
-"precise, academic language where appropriate."
-msgstr ""
-":guilabel:`細緻`：提供精緻且深度符合情境的回應。探討多種觀點，體察細微差異，"
-"並在適當之處使用精確、學術性的語言。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:201
-msgid ""
-":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
-"Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
-"dynamic structure to keep the user interested."
-msgstr ""
-":guilabel:`活潑創意`：生動有力且極具吸引力。注重簡潔與機智。使用豐富的表達語"
-"言、隱喻以及動態結構來吸引使用者。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:203
-msgid ""
-":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
-"soundness above all else. Breaks down complex steps, cites reasoning "
-"clearly, and verifies every claim. Adopts a meticulous and formal tone."
-msgstr ""
-":guilabel:`深入嚴謹`：將絕對精確與邏輯嚴密置於首位。拆解複雜步驟，清楚引用推"
-"理過程，並驗證每項論點。採用細緻嚴謹的正式語氣。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:207
-msgid ""
-"Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
-"**only** respond based on the provided resources."
-msgstr ""
-"勾選\\ :guilabel:`僅限於來源`\\ 核取方塊，限制代理\\ **僅**\\ 根據提供的資源"
-"進行回應。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:210
-msgid ""
-"Next, select one or more :guilabel:`Skills` for the agent. As explained "
-"above, :ref:`Skills <ai/topics>` include both instructions and tools that "
-"guide the agent in helping users complete a task."
-msgstr ""
-"接下來，為代理選擇一項或多項\\ :guilabel:`技能`\\ 。如上文所述，\\ :ref:`技"
-"能 <ai/topics>`\\ 包含指引與工具，可引導代理協助使用者完成任務。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:214
-msgid ""
-"Enter a :guilabel:`System Prompt` with detailed instructions for the agent "
-"as to their role and responsibilities."
-msgstr "輸入\\ :guilabel:`系統提示`\\ ，詳細說明代理的角色和職責。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:217
-msgid "A new agent form with the required information."
-msgstr "包含必填資訊的新代理表單。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:221
-msgid ""
-"The specificity and length of the :guilabel:`System Prompt` can vary, "
-"depending on the use case for the agent. Use the preconfigured agents as an "
-"example of the possible information."
-msgstr ""
-":guilabel:`系統提示`\\ 的具體性和長度可能因代理的使用情況而異。請參考預先設定"
-"的代理作為可能資訊的範例。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:224
-msgid ""
-"If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
-"tab, then click :guilabel:`Add a source`."
-msgstr ""
-"如果代理需要*資料來源*，請捲動至\\ :guilabel:`資料來源`\\ 分頁，然後按一下"
-"\\ :guilabel:`加入資料來源`\\ 。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:227
-msgid "Select a format:"
-msgstr "選取格式："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:229
-msgid ""
-":guilabel:`Upload a File`: Select the appropriate file from the explorer "
-"window, and click :guilabel:`Open`."
-msgstr ""
-":guilabel:`上傳檔案`：在檔案總管視窗中選取相應檔案，然後按一下\\ :guilabel:`"
-"開啟`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:231
-msgid ""
-":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, "
-"paste one link per line. Click :guilabel:`Save`."
-msgstr ""
-":guilabel:`新增連結`：貼上網址。可一次新增多個連結，每行貼上一個連結。按一下"
-"\\ :guilabel:`儲存`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:233
-msgid ""
-":guilabel:`Add from Documents` (uploaded in the **Documents** application): "
-"Click the checkbox next to one or more documents, then "
-"click :guilabel:`Select`."
-msgstr ""
-":guilabel:`從文件新增`（已在\\ **文件**\\ 應用程式中上傳）：勾選一或多份文件"
-"旁的核取方塊，然後按一下\\ :guilabel:`選取`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:235
-msgid ""
-":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
-"articles, then click :guilabel:`Select`."
-msgstr ""
-":guilabel:`從知識庫新增`：勾選一或多篇文章旁的核取方塊，然後按一下"
-"\\ :guilabel:`選取`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:238
-msgid ""
-"Once a source is added, the :guilabel:`Status` field updates to reflect its "
-"current status. The source is ready when the status changes from "
-"*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate "
-"the source."
-msgstr ""
-"加入資料來源後，\\ :guilabel:`狀態`\\ 欄位會更新以反映其目前狀態。當狀態從*處"
-"理中*變更為*已索引*時，資料來源即準備就緒。滑動\\ :guilabel:`啟用`\\ 切換開關"
-"以啟用資料來源。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:242
-msgid "A list of sources for an agent, each denoted with their format."
-msgstr "代理的資料來源清單，每個來源均標示其格式。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:246
-msgid ""
-"If a source fails to upload, it could be the result of a conflict with the "
-"selected provider."
-msgstr "若來源上傳失敗，可能是與所選提供者發生衝突所致。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:248
-msgid ""
-"Click the :guilabel:`Test` button to open a conversation window and test the "
-"new agent."
-msgstr "按一下\\ :guilabel:`測試`\\ 按鈕以開啟對話視窗並測試新代理。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:251
-msgid "Manually reprocessing sources"
-msgstr "手動重新處理來源"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:253
+#: ../../export/content/applications/productivity/ai/agents.rst:132
 msgid ""
 "If the content of a source changes after it has been indexed, it may be "
 "necessary to reprocess the source so that agents use the most recent "
@@ -817,28 +494,125 @@ msgstr ""
 "訊。重新處理可手動觸發，並確保更新後的文件、連結或知識庫文章能反映在未來的代"
 "理回應中。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:258
-msgid ""
-"To reprocess a source, navigate to the :menuselection:`AI` app. Select an |"
-"AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical ellipsis)` icon, then "
-"click :guilabel:`Configuration`."
-msgstr ""
-"若要重新處理來源，請導覽至\\ :menuselection:`AI 人工智慧`\\ 應用程式。選擇一"
-"個\\ |AI|\\ 代理，並在看板卡片上按一下\\ :icon:`fa-ellipsis-"
-"v`\\ :guilabel:`(垂直省略符號)`\\ 圖示，然後按一下\\ :guilabel:`配置`。"
+#: ../../export/content/applications/productivity/ai/agents.rst:137
+msgid "To reprocess a source:"
+msgstr "要重新處理來源："
 
-#: ../../export/content/applications/productivity/ai/agents.rst:262
-msgid ""
-"On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to "
-"any source that should be updated."
-msgstr ""
-"在「來源」分頁上，按一下應更新之來源旁的\\ :guilabel:`重新處理`\\ :icon:`fa-"
-"refresh`\\ 。"
+#: ../../export/content/applications/productivity/ai/agents.rst:139
+msgid "Navigate to the :menuselection:`AI` app and select an |AI| agent."
+msgstr "導航至\\ :menuselection:`AI 人工智能`\\ 應用程式並選擇一個\\ |AI|\\ 代理。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:265
-msgid "AI agent sources with the reprocess icon visible."
-msgstr "顯示有重新處理圖示的 AI 代理來源。"
+#: ../../export/content/applications/productivity/ai/agents.rst:140
+msgid "Click the *Knowledge* tab, and select a source."
+msgstr "按一下 *知識庫* 分頁，並選擇一個來源。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:141
+msgid ""
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the "
+"source."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:142
+msgid "On the menu, click :guilabel:`Reprocess`."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:144
+msgid "The Knowledge tab of an agent, with the Reprocess option visible."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:148
+msgid "Triggers"
+msgstr "觸發器"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:150
+msgid ""
+"An agent can be triggered in different ways depending on how it is used."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:152
+msgid ""
+"Agents can be launched interactively by users through an AI chat. They can "
+"also be triggered automatically by automated actions and scheduled actions, "
+"allowing agents to participate in automated workflows."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:156
+msgid ""
+"To add a trigger to an agent, navigate to the *Trigger* tab and "
+"click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
+"triggered?* popup, choose from one of the following options:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:159
+msgid "*On a schedule*: Runs automatically according to a set frequency."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:160
+msgid ""
+"*Based on a Date Field*: Runs once per record, as soon as a specific date is "
+"reached."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:161
+msgid "*After creation*: Runs whenever a new record is added."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:162
+msgid "*After update*: Runs whenever a specific field is updated."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:165
+msgid ""
+"If unsure which option is best for a particular use case, click "
+"the :guilabel:`I need help to choose` option at the bottom of the popup. "
+"This opens a conversation with the *Odoo AI* agent. The agent then walks "
+"through the specifics of the use case to help select the best option."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:170
+msgid "See :doc:`AI server actions <server-actions>` for more information."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:175
+msgid "Create a new agent"
+msgstr "建立新代理程式"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:177
+msgid ""
+"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+"click :guilabel:`New`. Enter an agent name, then add a short description, if "
+"desired."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:181
+msgid ""
+"Before creating a new agent, it is recommended to have a clear use case in "
+"mind. This helps when writing out the *Instructions* and assigning the "
+"*Skills*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:184
+msgid ""
+"On the *Instructions* tab, enter a system prompt with detailed instructions "
+"for the agent as to their role and responsibilities."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:187
+msgid "A new agent form."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:190
+msgid ""
+"On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As "
+"explained above, :ref:`Skills <ai/agents/skills>` include both instructions "
+"and tools that guide the agent in helping users complete a task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:194
+msgid ""
+"Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit "
+"the agent to **only** respond based on the provided resources."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/apikeys.rst:3
 msgid "AI API keys"
@@ -2265,10 +2039,8 @@ msgstr "代理無法以高度信心回應。"
 #: ../../export/content/applications/productivity/ai/live-chat.rst:86
 msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
-"Creation* :ref:`skill <ai/topics>`."
+"Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"當符合上述任一條件時，代理會啟動\\ *建立潛在商機*\\ :ref:`技能 <ai/"
-"topics>`\\ 。"
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -4044,9 +3816,11 @@ msgstr ""
 #: ../../export/content/applications/productivity/ai/support_operations.rst:87
 msgid ""
 "Users may also define *skills*, which grant the agent permission to perform "
-"specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as "
-"record creation or automation triggers."
+"specific actions. :ref:`Skills <ai/agents/skills>` allow advanced scenarios "
+"such as record creation or automation triggers."
 msgstr ""
+"使用者也可以定義\\ *技能*，這會授權代理人執行特定動作。\\ :ref:`技能 <ai/"
+"agents/skills>`可以實現進階場景，例如記錄建立或自動化觸發器。"
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:90
 msgid "An example support AI agent."
@@ -12722,10 +12496,6 @@ msgid ""
 msgstr ""
 ":doc:`AI 人工智慧驅動的文件數位化 <../finance/accounting/vendor_bills/"
 "invoice_digitization>`"
-
-#: ../../export/content/applications/productivity/knowledge.rst:3
-msgid "Knowledge"
-msgstr "知識庫"
 
 #: ../../export/content/applications/productivity/knowledge.rst:5
 msgid ""
@@ -30095,7 +29865,8 @@ msgstr "在您的資料庫中開啟相關的圖表檢視，按一下\\ :guilabel
 msgid ""
 "In the :guilabel:`Insert in Spreadsheet` window, edit the :guilabel:`Graph "
 "name` if needed."
-msgstr "在\\ :guilabel:`插入試算表`\\ 視窗中，視需要編輯\\ :guilabel:`圖表名稱`\\ 。"
+msgstr ""
+"在\\ :guilabel:`插入試算表`\\ 視窗中，視需要編輯\\ :guilabel:`圖表名稱`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:10
 msgid ""
@@ -30111,8 +29882,8 @@ msgid ""
 "the **Documents** app in the :icon:`storage` :guilabel:`My Drive` personal "
 "folder."
 msgstr ""
-"將圖表插入至新試算表時，試算表會儲存於\\ :icon:`storage`\\ **檔案**應用程式"
-"中\\ :guilabel:`我的雲端硬碟`\\ 個人資料夾內。"
+"將圖表插入至新試算表時，試算表會儲存於\\ :icon:`storage`\\ **檔案**應用程式中"
+"\\ :guilabel:`我的雲端硬碟`\\ 個人資料夾內。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:17
 msgid "Click :guilabel:`Insert`."
@@ -30138,9 +29909,9 @@ msgid ""
 "database. In the example, clicking on :guilabel:`Marc Demo` opens the list "
 "view of all sales by this salesperson that match the domain of the chart."
 msgstr ""
-"按一下圖表中的資料點，即可在資料庫中開啟相關的列表檢視。在此範例中，按一下\\ "
-":guilabel:`Marc Demo`\\，即可開啟該名銷售人員的所有銷售列表檢視，這些銷售皆符"
-"合圖表的篩選範圍。"
+"按一下圖表中的資料點，即可在資料庫中開啟相關的列表檢視。在此範例中，按一下"
+"\\ :guilabel:`Marc Demo`\\，即可開啟該名銷售人員的所有銷售列表檢視，這些銷售"
+"皆符合圖表的篩選範圍。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:31
 msgid "A clickable link to an Odoo menu plus clickable data point"
@@ -32687,8 +32458,8 @@ msgid ""
 "charts/create>` or :doc:`inserted directly from an Odoo graph view <../"
 "insert/insert_chart>`."
 msgstr ""
-"圖表可以\\ :ref:`根據試算表資料手動建立 <spreadsheet/charts/create>`\\ 或\\ "
-":doc:`直接從 Odoo 圖表檢視插入 <../insert/insert_chart>`\\ 。"
+"圖表可以\\ :ref:`根據試算表資料手動建立 <spreadsheet/charts/create>`\\ 或"
+"\\ :doc:`直接從 Odoo 圖表檢視插入 <../insert/insert_chart>`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:16
 msgid "Create a chart"
@@ -32707,8 +32478,8 @@ msgid ""
 "Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` "
 "from the menu bar."
 msgstr ""
-"按一下選單列上的\\ :menuselection:`插入 -->`\\ :icon:`bar_chart`\\ "
-":menuselection:`圖表`\\ 。"
+"按一下選單列上的\\ :menuselection:`插入 --"
+">`\\ :icon:`bar_chart`\\ :menuselection:`圖表`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:23
 msgid ""
@@ -32718,8 +32489,8 @@ msgid ""
 "configuration>` tab of the chart properties."
 msgstr ""
 "Odoo 會針對所選資料使用最合適的\\ :ref:`圖表類型 <spreadsheet/charts/"
-"customize-configuration-type>`\\；這可以在圖表屬性的\\ :icon:`tune`\\ "
-":ref:`配置 <spreadsheet/charts/customize-configuration>`\\ 分頁中進行變更。"
+"customize-configuration-type>`\\；這可以在圖表屬性的\\ :icon:`tune`\\ :ref:`"
+"配置 <spreadsheet/charts/customize-configuration>`\\ 分頁中進行變更。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:28
 msgid ""
@@ -32766,8 +32537,8 @@ msgid ""
 "click :icon:`edit_square` :guilabel:`Edit`."
 msgstr ""
 "對於任何圖表，無論是手動建立還是從 Odoo 檢視插入，請將滑鼠游標懸停在圖表上，"
-"按一下\\ :icon:`more_vert`\\ :guilabel:`(選單)`\\ 圖示，然後按一下\\ "
-":icon:`edit_square`\\ :guilabel:`編輯`\\ 。"
+"按一下\\ :icon:`more_vert`\\ :guilabel:`(選單)`\\ 圖示，然後按一下"
+"\\ :icon:`edit_square`\\ :guilabel:`編輯`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:50
 msgid ""
@@ -38316,9 +38087,8 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:110
 msgid ""
-"A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/"
-"simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-"
-"time>` field."
+"A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time "
+"<studio/fields/simple-fields-date-time>` field."
 msgstr ""
 "\\ :guilabel:`日期`\\ 篩選器僅能與\\ :ref:`日期 <studio/fields/simple-fields-"
 "date>`\\ 或\\ :ref:`日期與時間 <studio/fields/simple-fields-date-time>`\\ 欄"
@@ -42359,6 +42129,505 @@ msgstr ""
 "若為其他錯誤，請參閱 Meta 開發者套件的\\ `WhatsApp Error Codes <https://"
 "developers.facebook.com/documentation/business-messaging/whatsapp/support/"
 "error-codes>`__\\ 。"
+
+#~ msgid ""
+#~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
+#~ "natural language, perform tasks, and assist users by interacting with "
+#~ "Odoo tools. Agents are a core component of the |AI| structure in Odoo. "
+#~ "Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-"
+#~ "odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/"
+#~ "tools>` that guide its behavior."
+#~ msgstr ""
+#~ "一個\\ |AI|\\ 代理是 Odoo 中的智慧型虛擬助理，它能理解自然語言、執行任務，"
+#~ "並透過與 Odoo 工具互動來協助使用者。代理是 Odoo 中\\ |AI|\\ 結構的核心組"
+#~ "件。每個代理都有明確的目標、\\ :ref:`提示 <ai/agents/prompts-in-odoo>`，以"
+#~ "及一組引導其行為的\\ :ref:`技能 <ai/topics>`\\ 和\\ :ref:`工具 <ai/"
+#~ "tools>`。"
+
+#~ msgid ""
+#~ "When interacting with an |AI| agent, the conversation interface may "
+#~ "display intermediate status messages while a request is being processed."
+#~ msgstr ""
+#~ "與\\ |AI|\\ 代理互動時，對話介面可能會在處理請求時顯示中間狀態訊息。"
+
+#~ msgid ""
+#~ "These messages reflect the current step of the interaction, such as "
+#~ "analyzing the request, consulting sources, or preparing an action, before "
+#~ "the final response is generated."
+#~ msgstr ""
+#~ "在產生最終回應之前，這些訊息會反映互動目前的步驟，例如分析請求、查詢來源或"
+#~ "準備執行動作。"
+
+#~ msgid "An Agent analyzing a user request."
+#~ msgstr "代理正在分析使用者請求。"
+
+#~ msgid "Agents are formed of two main components, *Skills* and *Sources*."
+#~ msgstr "代理由兩個主要組件組成：*技能* 與 *來源*。"
+
+#~ msgid ""
+#~ "*Skills* are the instructions and roles that inform the agent of what "
+#~ "tasks they need to complete. *Tools* are assigned to skills, and are the "
+#~ "actual functions the agent can utilize to perform tasks."
+#~ msgstr ""
+#~ "*技能* 是告知代理需完成哪些任務的指令與角色。*工具* 會指派給技能，是代理可"
+#~ "用於執行任務的實際功能。"
+
+#~ msgid ""
+#~ "*Sources* provide the agent with the information they need to complete "
+#~ "their tasks."
+#~ msgstr "*來源*\\ 為代理提供完成任務所需的資訊。"
+
+#~ msgid ""
+#~ "While many |AI| features can be used in Odoo without the **AI** "
+#~ "application, creating and customizing agents requires that the **AI** "
+#~ "application is installed."
+#~ msgstr ""
+#~ "雖然許多 AI 功能可以在 Odoo 中使用而無需\\ **AI**\\ 應用程式，但建立和自訂"
+#~ "代理需要安裝\\ **AI**\\ 應用程式。"
+
+#~ msgid "AI prompts in Odoo"
+#~ msgstr "Odoo 中的 AI 提示"
+
+#~ msgid ""
+#~ "Before working with |AI| agents, it is important to understand some basic "
+#~ "concepts regarding |AI| prompts."
+#~ msgstr ""
+#~ "在開始使用\\ |AI|\\ 代理之前，務必了解有關\\ |AI|\\ 提示的一些基本概念。"
+
+#~ msgid ""
+#~ "An |AI| prompt is a set of written instructions or context given to an |"
+#~ "AI| model that tells it how to respond to a request, or what role to "
+#~ "take. Prompts can define:"
+#~ msgstr ""
+#~ "AI 提示是一組書面指令或上下文，提供給 AI 模型，告訴它如何回應請求或扮演什"
+#~ "麼角色。提示可以定義："
+
+#~ msgid "the tone, style, and persona of the |AI| model"
+#~ msgstr "AI 模型的語氣、風格和角色"
+
+#~ msgid "the scope of what the model can do"
+#~ msgstr "模型可以執行的範圍"
+
+#~ msgid "the type of output expected from the request"
+#~ msgstr "請求期望的輸出類型"
+
+#~ msgid ""
+#~ "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
+#~ "agent's overall role, purpose, and behavior. It acts as the core mission "
+#~ "statement of the agent, and drives all interactions. During a "
+#~ "conversation, the system prompts and skill instructions are continuously "
+#~ "applied. They influence how the agent interprets messages, selects tools, "
+#~ "uses sources, and determines whether additional actions are required "
+#~ "before responding."
+#~ msgstr ""
+#~ "在 Odoo 中，每個\\ |AI|\\ 代理都會被指派一個「系統提示」，這定義了代理的整"
+#~ "體角色、目標與行為。它充當代理的核心使命宣言，並驅動所有互動。在對話過程"
+#~ "中，系統提示與技能指令會持續套用。它們會影響代理如何解讀訊息、選擇工具、使"
+#~ "用來源，並在回應前判斷是否需要採取額外動作。"
+
+#~ msgid ""
+#~ "Each :ref:`Skill <ai/topics>` also includes its own prompt-like "
+#~ "component, called *Instructions*. Instructions are skill-specific "
+#~ "guidelines that refine how the agent behaves within a certain context or "
+#~ "workflow, and how it interacts within the Odoo framework."
+#~ msgstr ""
+#~ "每個\\ :ref:`技能 <ai/topics>`\\ 也包含其自身的提示式組件，稱為「說明」。"
+#~ "說明是技能專屬的指導方針，用於修正代理在特定情境或工作流程中的行為方式，以"
+#~ "及它在 Odoo 框架內的互動方式。"
+
+#~ msgid "Step-by-step workflows for how to complete a specific action."
+#~ msgstr "如何完成特定操作的逐步工作流程"
+
+#~ msgid ""
+#~ "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` "
+#~ "that define how an agent behaves within a specific context. Essentially, "
+#~ "the skills define what an agent can do within the database. Skills guide "
+#~ "conversations, telling the agent what it can do, how it can do it, and "
+#~ "when it should do it."
+#~ msgstr ""
+#~ "*技能* 是指令與\\ :ref:`工具 <ai/tools>`\\ 的集合，用於定義代理在特定情境"
+#~ "中的行為方式。基本上，技能定義了代理可以在資料庫中執行什麼操作。技能會引導"
+#~ "對話，告訴代理它可以做什麼、如何做，以及何時該做。"
+
+#~ msgid ""
+#~ "If an agent is not assigned any Skills, it is **only** able to provide "
+#~ "information. It **cannot** complete tasks or make changes to the database."
+#~ msgstr ""
+#~ "若未為代理指派任何技能，該代理\\ **僅**\\ 能提供資訊。它\\ **無法**\\ 完成"
+#~ "任務或對資料庫進行變更。"
+
+#~ msgid ""
+#~ "Within each skill is a detailed prompt, which provides the agent with "
+#~ "more in-depth instructions on how to perform the tasks associated with "
+#~ "that skill, define the boundaries of its behavior, and determine how it "
+#~ "should interpret user intent. These prompts ensure that the agent follows "
+#~ "a consistent reasoning pattern and uses the appropriate tools to generate "
+#~ "accurate, context-aware responses."
+#~ msgstr ""
+#~ "每個技能中都包含詳細的提示詞，為代理提供更深入的指示，說明如何執行與該技能"
+#~ "關聯的任務、定義其行為界限，並確定應如何解讀使用者意圖。這些提示詞可確保代"
+#~ "理遵循一致的推理模式，並使用適當的工具來產生準確且具脈絡感知的回覆。"
+
+#~ msgid "The following skills are preconfigured in the **AI** app:"
+#~ msgstr "以下技能已在\\ **AI**\\ 應用程式中預先設定："
+
+#~ msgid ""
+#~ ":guilabel:`View Builder`: Supports the interpretation of a user query to "
+#~ "open the appropriate Odoo view with a set of tools necessary to perform "
+#~ "the search. Natural language queries can also include time-based grouping "
+#~ "instructions. This allows agents to group results by time intervals such "
+#~ "as day, month, or year when querying records."
+#~ msgstr ""
+#~ ":guilabel:`檢視畫面建立器`：支援解讀使用者查詢，以便透過執行搜尋所需的一組"
+#~ "工具開啟相應的 Odoo 檢視畫面。自然語言查詢亦可包含以時間為準的分組指示。這"
+#~ "讓代理在查詢記錄時，能夠按日、月或年等時間區間對結果進行分組。"
+
+#~ msgid ""
+#~ ":guilabel:`Information retrieval`: A collection of tools to retrieve "
+#~ "information about the models."
+#~ msgstr ":guilabel:`資訊檢索`：用於檢索有關模型資訊的工具集合。"
+
+#~ msgid ":guilabel:`Update Records`: Tools to update records."
+#~ msgstr ":guilabel:`更新記錄`：用於更新記錄的工具。"
+
+#~ msgid ":guilabel:`Create Records`: Tools to create records."
+#~ msgstr ":guilabel:`建立記錄`：用於建立記錄的工具。"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Images`: A collection of tools to support image "
+#~ "generation. Load this skill when the user asks to generate or enhance an "
+#~ "image."
+#~ msgstr ""
+#~ ":guilabel:`產生圖片`：支援圖片產生的一組工具。當使用者要求產生或增強圖片"
+#~ "時，載入此技能。"
+
+#~ msgid ""
+#~ ":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
+#~ "time."
+#~ msgstr ":guilabel:`網路搜尋`：讓代理能夠即時探索網際網路。"
+
+#~ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
+#~ msgstr ":guilabel:`網站建立器`：用於編輯 Odoo 網站頁面的工具。"
+
+#~ msgid ""
+#~ ":guilabel:`Create Leads`: A collection of tools to support automated lead "
+#~ "creation. This skill is **only** available if the **CRM** app is "
+#~ "installed."
+#~ msgstr ""
+#~ ":guilabel:`建立潛在商機`：支援自動建立潛在商機的一組工具。此技能\\ **僅"
+#~ "**\\ 在安裝了\\ **CRM**\\ 應用程式時可用。"
+
+#~ msgid ""
+#~ "Within each skill is a set of :guilabel:`Instructions`, which act as a "
+#~ "prompt and provide guidance for the structure of the interaction, and one "
+#~ "or more :ref:`AI Tools <ai/tools>`, which indicate the functions the "
+#~ "agent can perform."
+#~ msgstr ""
+#~ "每個技能中都包含一組\\ :guilabel:`指示`\\ ，作為提示詞並為互動結構提供指"
+#~ "引；以及一個或多個\\ :ref:`AI 工具 <ai/tools>`\\ ，指出代理可執行的功能。"
+
+#~ msgid "Tools"
+#~ msgstr "工具"
+
+#~ msgid ""
+#~ "*Tools* are the functions the agent can perform in Odoo. These include "
+#~ "actions like creating a lead or opening a view. Tools extend the purpose "
+#~ "of the agent beyond conversations, they enable real actions. The "
+#~ "available tools in a database vary based on the applications installed. "
+#~ "Multiple :guilabel:`AI Tools` can be assigned to a single skill."
+#~ msgstr ""
+#~ "*工具*\\ 是代理可在 Odoo 中執行的功能。這些功能包括建立潛在商機或開啟檢視"
+#~ "畫面等操作。工具將代理的用途擴展到對話之外，讓其能夠採取實際行動。資料庫中"
+#~ "可用的工具視乎已安裝的應用程式而有所不同。單一技能可指派多個"
+#~ "\\ :guilabel:`AI 工具`\\ 。"
+
+#~ msgid "Sources"
+#~ msgstr "原始程式碼"
+
+#~ msgid "PDFs"
+#~ msgstr "PDF"
+
+#~ msgid "Weblinks"
+#~ msgstr "網頁連結"
+
+#~ msgid "Documents (uploaded in the **Documents** application)"
+#~ msgstr "文件（在\\ **文件**\\ 應用程式中上載）"
+
+#~ msgid "**Knowledge** app articles"
+#~ msgstr "\\ **知識庫**\\ 應用程式文章"
+
+#~ msgid ""
+#~ "If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
+#~ "agent can **only** utilize information from the uploaded and active "
+#~ "sources."
+#~ msgstr ""
+#~ "如果在代理程式上啟用\\ :guilabel:`限制於來源`\\ 選項，則代理程式\\ **僅"
+#~ "**\\ 能利用來自已上載且啟用的來源的資訊。"
+
+#~ msgid "Uploaded files"
+#~ msgstr "已上傳的檔案"
+
+#~ msgid ""
+#~ "During a conversation with an |AI| agent, additional context can be "
+#~ "provided by uploading files. Files are temporarily treated as sources for "
+#~ "the ongoing discussion. The agent can use their content to answer "
+#~ "questions, summarize information, or extract relevant details."
+#~ msgstr ""
+#~ "在與\\ |AI|\\ 代理對話期間，可透過上傳檔案來提供額外脈絡。檔案會暫時被視為"
+#~ "當前討論的來源。代理可使用其內容來回答問題、總結資訊或擷取相關細節。"
+
+#~ msgid ""
+#~ "The provided files only influence the current conversation, unless they "
+#~ "are explicitly added as sources on the agent."
+#~ msgstr "提供的檔案僅會影響目前的對話，除非已將其明確新增為代理的來源。"
+
+#~ msgid ""
+#~ "To attach a file in a conversation, click the :icon:`fa-plus-"
+#~ "circle` :guilabel:`(plus circle)` icon in the message window, then "
+#~ "click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
+#~ "window, select one or more files to attach, then click :guilabel:`Open`."
+#~ msgstr ""
+#~ "若要在對話中附加檔案，請按一下訊息視窗中的\\ :icon:`fa-plus-"
+#~ "circle` :guilabel:`（圓圈加號）`\\ 圖示，然後按一下\\ :icon:`fa-"
+#~ "paperclip` :guilabel:`附加檔案`\\ 。在檔案瀏覽器視窗中，選取一個或多個要附"
+#~ "加的檔案，然後按一下\\ :guilabel:`開啟`\\ 。"
+
+#~ msgid ""
+#~ "A manager finds a receipt for supplies and is unsure whether it has "
+#~ "already been submitted to the **Expenses** app for reimbursement. They "
+#~ "open a conversation with the *Ask AI* agent and enter the following "
+#~ "prompt:"
+#~ msgstr ""
+#~ "經理找到了一張用品收據，但不確定是否已提交至\\ **費用**\\ 應用程式申請報"
+#~ "銷。他們開啟與\\ *Ask AI*\\ 代理的對話，並輸入以下提示詞："
+
+#~ msgid "`Can you open the expense that matches this receipt?`"
+#~ msgstr "`你能開啟與此收據相符的費用嗎？`"
+
+#~ msgid ""
+#~ "They attach the receipt to the message. After the agent analyzes the "
+#~ "attachment, it opens the view to the correct expense."
+#~ msgstr ""
+#~ "他們將收據附加至訊息中。代理在分析附件後，會開啟相應費用的檢視畫面。"
+
+#~ msgid "Add alt text."
+#~ msgstr "加入替代文字。"
+
+#~ msgid "Gain insights from previewed files"
+#~ msgstr "從預覽檔案獲取見解"
+
+#~ msgid ""
+#~ "When a document is open in preview mode, |AI| agents can use the content "
+#~ "of the previewed file as context for the conversation."
+#~ msgstr ""
+#~ "當文件在預覽模式下開啟時，\\ |AI|\\ 代理可以使用預覽檔案的內容作為對話背景"
+#~ "資訊。"
+
+#~ msgid ""
+#~ "First, navigate to the :menuselection:`Documents` app and click a "
+#~ "document to preview it. Click the |AI| icon at the top of the page to "
+#~ "open the :guilabel:`Ask AI` chat window. From here, click one of the "
+#~ "default prompts to use them, or enter a custom one in the message window."
+#~ msgstr ""
+#~ "首先，前往\\ :menuselection:`文件`\\ 應用程式，並按一下文件以進行預覽。按"
+#~ "一下頁面頂端的\\ |AI|\\ 圖示，開啟\\ :guilabel:`詢問 AI`\\ 對話視窗。在此"
+#~ "處按一下其中一個預設提示以使用，或在訊息視窗中輸入自訂提示。"
+
+#~ msgid ""
+#~ "In this case, the agent's responses are grounded in the file currently "
+#~ "being previewed, in combination with any other sources assigned to the "
+#~ "agent."
+#~ msgstr ""
+#~ "在此情況下，代理的回應將以目前預覽的檔案為依據，並結合指派給代理的任何其他"
+#~ "來源。"
+
+#~ msgid ""
+#~ "To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+#~ "click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
+#~ "description, if desired."
+#~ msgstr ""
+#~ "若要建立新的\\ |AI|\\ 代理，請前往\\ :menuselection:`AI`\\ 應用程式並按一"
+#~ "下\\ :guilabel:`新增`。輸入\\ :guilabel:`代理名稱`，然後視需要新增簡短說"
+#~ "明。"
+
+#~ msgid ""
+#~ "Before creating a new agent, it is recommended to have a clear use case "
+#~ "in mind. This helps when writing out the :guilabel:`System Prompt`, and "
+#~ "assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
+#~ msgstr ""
+#~ "在建立新代理之前，建議先構想好明確的使用情境。這有助於編寫\\ :guilabel:`系"
+#~ "統提示`，以及指派\\ :guilabel:`技能`\\ 與\\ :guilabel:`AI 工具`。"
+
+#~ msgid ""
+#~ "Next, select a :guilabel:`Response Style`. This manages the overall tone "
+#~ "the agent uses when responding to an inquiry. Choose from one of the "
+#~ "following options:"
+#~ msgstr ""
+#~ "接下來，選擇\\ :guilabel:`回應風格`\\ 。這會管理代理程式在回應查詢時使用的"
+#~ "整體語氣。從以下選項中選擇："
+
+#~ msgid ""
+#~ ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
+#~ "clear, direct answers with a moderate level of detail."
+#~ msgstr ""
+#~ ":guilabel:`標準`：保持平衡且專業的語氣。提供清晰、直接且詳細程度適中的回"
+#~ "答。"
+
+#~ msgid ""
+#~ ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
+#~ "responses. Explores multiple perspectives, acknowledges subtleties, and "
+#~ "uses precise, academic language where appropriate."
+#~ msgstr ""
+#~ ":guilabel:`細緻`：提供精緻且深度符合情境的回應。探討多種觀點，體察細微差"
+#~ "異，並在適當之處使用精確、學術性的語言。"
+
+#~ msgid ""
+#~ ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
+#~ "Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
+#~ "dynamic structure to keep the user interested."
+#~ msgstr ""
+#~ ":guilabel:`活潑創意`：生動有力且極具吸引力。注重簡潔與機智。使用豐富的表達"
+#~ "語言、隱喻以及動態結構來吸引使用者。"
+
+#~ msgid ""
+#~ ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
+#~ "soundness above all else. Breaks down complex steps, cites reasoning "
+#~ "clearly, and verifies every claim. Adopts a meticulous and formal tone."
+#~ msgstr ""
+#~ ":guilabel:`深入嚴謹`：將絕對精確與邏輯嚴密置於首位。拆解複雜步驟，清楚引用"
+#~ "推理過程，並驗證每項論點。採用細緻嚴謹的正式語氣。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
+#~ "**only** respond based on the provided resources."
+#~ msgstr ""
+#~ "勾選\\ :guilabel:`僅限於來源`\\ 核取方塊，限制代理\\ **僅**\\ 根據提供的資"
+#~ "源進行回應。"
+
+#~ msgid ""
+#~ "Next, select one or more :guilabel:`Skills` for the agent. As explained "
+#~ "above, :ref:`Skills <ai/topics>` include both instructions and tools that "
+#~ "guide the agent in helping users complete a task."
+#~ msgstr ""
+#~ "接下來，為代理選擇一項或多項\\ :guilabel:`技能`\\ 。如上文所述，\\ :ref:`"
+#~ "技能 <ai/topics>`\\ 包含指引與工具，可引導代理協助使用者完成任務。"
+
+#~ msgid ""
+#~ "Enter a :guilabel:`System Prompt` with detailed instructions for the "
+#~ "agent as to their role and responsibilities."
+#~ msgstr "輸入\\ :guilabel:`系統提示`\\ ，詳細說明代理的角色和職責。"
+
+#~ msgid "A new agent form with the required information."
+#~ msgstr "包含必填資訊的新代理表單。"
+
+#~ msgid ""
+#~ "The specificity and length of the :guilabel:`System Prompt` can vary, "
+#~ "depending on the use case for the agent. Use the preconfigured agents as "
+#~ "an example of the possible information."
+#~ msgstr ""
+#~ ":guilabel:`系統提示`\\ 的具體性和長度可能因代理的使用情況而異。請參考預先"
+#~ "設定的代理作為可能資訊的範例。"
+
+#~ msgid ""
+#~ "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
+#~ "tab, then click :guilabel:`Add a source`."
+#~ msgstr ""
+#~ "如果代理需要*資料來源*，請捲動至\\ :guilabel:`資料來源`\\ 分頁，然後按一下"
+#~ "\\ :guilabel:`加入資料來源`\\ 。"
+
+#~ msgid "Select a format:"
+#~ msgstr "選取格式："
+
+#~ msgid ""
+#~ ":guilabel:`Upload a File`: Select the appropriate file from the explorer "
+#~ "window, and click :guilabel:`Open`."
+#~ msgstr ""
+#~ ":guilabel:`上傳檔案`：在檔案總管視窗中選取相應檔案，然後按一下"
+#~ "\\ :guilabel:`開啟`。"
+
+#~ msgid ""
+#~ ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at "
+#~ "once, paste one link per line. Click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`新增連結`：貼上網址。可一次新增多個連結，每行貼上一個連結。按一"
+#~ "下\\ :guilabel:`儲存`。"
+
+#~ msgid ""
+#~ ":guilabel:`Add from Documents` (uploaded in the **Documents** "
+#~ "application): Click the checkbox next to one or more documents, then "
+#~ "click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`從文件新增`（已在\\ **文件**\\ 應用程式中上傳）：勾選一或多份文"
+#~ "件旁的核取方塊，然後按一下\\ :guilabel:`選取`。"
+
+#~ msgid ""
+#~ ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
+#~ "articles, then click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`從知識庫新增`：勾選一或多篇文章旁的核取方塊，然後按一下"
+#~ "\\ :guilabel:`選取`。"
+
+#~ msgid ""
+#~ "Once a source is added, the :guilabel:`Status` field updates to reflect "
+#~ "its current status. The source is ready when the status changes from "
+#~ "*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to "
+#~ "activate the source."
+#~ msgstr ""
+#~ "加入資料來源後，\\ :guilabel:`狀態`\\ 欄位會更新以反映其目前狀態。當狀態從"
+#~ "*處理中*變更為*已索引*時，資料來源即準備就緒。滑動\\ :guilabel:`啟用`\\ 切"
+#~ "換開關以啟用資料來源。"
+
+#~ msgid "A list of sources for an agent, each denoted with their format."
+#~ msgstr "代理的資料來源清單，每個來源均標示其格式。"
+
+#~ msgid ""
+#~ "If a source fails to upload, it could be the result of a conflict with "
+#~ "the selected provider."
+#~ msgstr "若來源上傳失敗，可能是與所選提供者發生衝突所致。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test` button to open a conversation window and test "
+#~ "the new agent."
+#~ msgstr "按一下\\ :guilabel:`測試`\\ 按鈕以開啟對話視窗並測試新代理。"
+
+#~ msgid "Manually reprocessing sources"
+#~ msgstr "手動重新處理來源"
+
+#~ msgid ""
+#~ "To reprocess a source, navigate to the :menuselection:`AI` app. Select an "
+#~ "|AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical ellipsis)` icon, then "
+#~ "click :guilabel:`Configuration`."
+#~ msgstr ""
+#~ "若要重新處理來源，請導覽至\\ :menuselection:`AI 人工智慧`\\ 應用程式。選擇"
+#~ "一個\\ |AI|\\ 代理，並在看板卡片上按一下\\ :icon:`fa-ellipsis-"
+#~ "v`\\ :guilabel:`(垂直省略符號)`\\ 圖示，然後按一下\\ :guilabel:`配置`。"
+
+#~ msgid ""
+#~ "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next "
+#~ "to any source that should be updated."
+#~ msgstr ""
+#~ "在「來源」分頁上，按一下應更新之來源旁的\\ :guilabel:`重新處理"
+#~ "`\\ :icon:`fa-refresh`\\ 。"
+
+#~ msgid "AI agent sources with the reprocess icon visible."
+#~ msgstr "顯示有重新處理圖示的 AI 代理來源。"
+
+#~ msgid ""
+#~ "When one of these conditions is met, the agent activates the *Lead "
+#~ "Creation* :ref:`skill <ai/topics>`."
+#~ msgstr ""
+#~ "當符合上述任一條件時，代理會啟動\\ *建立潛在商機*\\ :ref:`技能 <ai/"
+#~ "topics>`\\ 。"
+
+#~ msgid ""
+#~ "A :guilabel:`Date` filter can only match against a :ref:`Date <studio/"
+#~ "fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-"
+#~ "fields-date-time>` field."
+#~ msgstr ""
+#~ "\\ :guilabel:`日期`\\ 篩選器僅能與\\ :ref:`日期 <studio/fields/simple-"
+#~ "fields-date>`\\ 或\\ :ref:`日期與時間 <studio/fields/simple-fields-date-"
+#~ "time>`\\ 欄位進行比對。"
 
 #~ msgid "To insert a chart from an Odoo database into an Odoo spreadsheet:"
 #~ msgstr "若要將來自 Odoo 資料庫的圖表插入 Odoo 試算表："

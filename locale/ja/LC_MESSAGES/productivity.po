@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
-"PO-Revision-Date: 2026-11-12 07:47+0000\n"
-"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
+"PO-Revision-Date: 2026-11-17 10:39+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/ja/>\n"
 "Language: ja\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/productivity.rst:5
 msgid "Productivity"
@@ -173,7 +173,7 @@ msgid ""
 msgstr "これらの機能の使用方法については、関連ドキュメントを参照してください。"
 
 #: ../../export/content/applications/productivity/ai.rst:64
-#: ../../export/content/applications/productivity/ai/agents.rst:3
+#: ../../export/content/applications/productivity/ai/agents.rst:8
 #: ../../export/content/applications/productivity/ai/support_operations.rst:28
 msgid "AI agents"
 msgstr "AIエージェント"
@@ -255,302 +255,221 @@ msgstr ""
 msgid ":doc:`AI MCP server <ai/mcp_server>`"
 msgstr ":doc:`AI MCPサーバー <ai/mcp_server>`"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:7
+#: ../../export/content/applications/productivity/ai/agents.rst:-1
 msgid ""
-"An |AI| agent is a smart virtual assistant in Odoo that can understand "
-"natural language, perform tasks, and assist users by interacting with Odoo "
-"tools. Agents are a core component of the |AI| structure in Odoo. Each agent "
-"has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set "
-"of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its "
-"behavior."
+"AI agents in Odoo are virtual assistants that understand natural-language "
+"requests and perform tasks. Learn how agents use instructions, skills, "
+"tools, and knowledge sources, and how to create and configure a new agent."
 msgstr ""
-"Odooの\\ |AI|\\ エージェントは、自然言語を理解し、タスクを実行し、Odooツール"
-"を操作してユーザを支援するスマートな仮想アシスタントです。エージェントは、"
-"Odooの\\ |AI|\\ 構造の中核となるコンポーネントです。各エージェントには、定義"
-"された目的、\\ :ref:`プロンプト <ai/agents/prompts-in-odoo>`\\ 、そしてその動"
-"作を導く一連の\\ :ref:`スキル <ai/topics>`\\ および\\ :ref:`ツール <ai/"
-"tools>`\\ が備わっています。"
+"OdooのAIエージェントは、自然言語によるリクエストを理解してタスクを実行する"
+"バーチャルアシスタントです。エージェントが指示、スキル、ツール、知識ソースを"
+"どのように使用するか、また新しいエージェントを作成・設定する方法について学び"
+"ます。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:12
+#: ../../export/content/applications/productivity/ai/agents.rst:13
 msgid ""
-"When interacting with an |AI| agent, the conversation interface may display "
-"intermediate status messages while a request is being processed."
+"An |AI| agent is a virtual assistant in Odoo that can understand natural-"
+"language requests, access information, and perform tasks using the tools "
+"available to it. Agents can be configured for specific roles and can be used "
+"interactively or as part of automated workflows."
 msgstr ""
-"\\ |AI|\\ エージェントとやり取りする際、リクエストの処理中に会話インターフェ"
-"イスに中間ステータスメッセージが表示されることがあります。"
+"Odooの |AI| エージェントは、自然言語のリクエストを理解し、情報にアクセスし、"
+"利用可能なツールを使用してタスクを実行できるバーチャルアシスタントです。"
+"エージェントは特定の役割に合わせて設定でき、対話形式で、または自動化された"
+"ワークフローの一部として使用できます。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:15
+#: ../../export/content/applications/productivity/ai/agents.rst:17
+msgid "Agents are built from four main components:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:19
 msgid ""
-"These messages reflect the current step of the interaction, such as "
-"analyzing the request, consulting sources, or preparing an action, before "
-"the final response is generated."
+"*Instructions* define the agent's purpose, behavior, and responsibilities."
 msgstr ""
-"これらのメッセージは、最終的な回答が生成される前の、リクエストの分析、ソース"
-"の参照、アクションの準備など、やり取りの現在のステップを反映しています。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:18
-msgid "An Agent analyzing a user request."
-msgstr "ユーザのリクエストを分析するエージェント。"
+#: ../../export/content/applications/productivity/ai/agents.rst:20
+msgid ""
+"*Knowledge* provides information the agent can use when completing tasks."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Skills* and *Sources*."
+msgid ""
+"*Skills and tools* define what the agent can do. Skills provide instructions "
+"for specific tasks, while tools allow the agent to perform actions in Odoo."
 msgstr ""
-"エージェントは、\\ *スキル*\\ と\\ *ソース*\\ という2つの主要コンポーネントで"
-"構成されています。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:23
 msgid ""
-"*Skills* are the instructions and roles that inform the agent of what tasks "
-"they need to complete. *Tools* are assigned to skills, and are the actual "
-"functions the agent can utilize to perform tasks."
+"*Triggers* determine when the agent is invoked, such as when a user starts a "
+"conversation or when an automated or scheduled action calls the agent."
 msgstr ""
-"\\ *スキル*\\ は、エージェントが完了する必要のあるタスクを伝える指示や役割で"
-"す。\\ *ツール*\\ はスキルに割り当てられ、エージェントがタスクを実行するため"
-"に利用できる実際の機能です。"
+"*トリガー*は、ユーザーが会話を開始した時や、自動化されたアクションまたは"
+"スケジュールされたアクションがエージェントを呼び出した時など、エージェントが"
+"いつ呼び出されるかを決定します。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:26
-msgid ""
-"*Sources* provide the agent with the information they need to complete their "
-"tasks."
-msgstr ""
-"*ソース* はエージェントがタスクを実行するために必要な情報を提供します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:29
+#: ../../export/content/applications/productivity/ai/agents.rst:27
 msgid ""
 "While many |AI| features can be used in Odoo without the **AI** application, "
-"creating and customizing agents requires that the **AI** application is "
-"installed."
+"creating and customizing agents requires the **AI** application be installed."
 msgstr ""
-"多くのAI機能は **AI** アプリを使用しなくても Odoo で利用できますが、エージェ"
-"ントの作成やカスタマイズには **AI** アプリのインストールが必要です。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:30
+msgid ""
+"Odoo |AI| uses In-app purchases (IAP) for AI requests. For more information "
+"on using |IAP| credits, including how to purchase additional credits, visit "
+"the `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>`_."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
-msgid "AI prompts in Odoo"
-msgstr "OdooのAIプロンプト"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:37
-msgid ""
-"Before working with |AI| agents, it is important to understand some basic "
-"concepts regarding |AI| prompts."
-msgstr ""
-"\\ |AI|\\ エージェントを使用する前に、\\ |AI|\\ プロンプトに関する基本的な概"
-"念を理解しておくことが重要です。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:40
-msgid ""
-"An |AI| prompt is a set of written instructions or context given to an |AI| "
-"model that tells it how to respond to a request, or what role to take. "
-"Prompts can define:"
-msgstr ""
-"AIプロンプトとは、AIモデルに対して「どのように応答すべきか」「どのような役割"
-"を担うべきか」を指示するために与える文章(指示や状況説明)のことです。プロンプ"
-"トでは次のような内容を定義できます:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:43
-msgid "the tone, style, and persona of the |AI| model"
-msgstr "AIモデルの口調、文体、ペルソナ"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:44
-msgid "the scope of what the model can do"
-msgstr "モデルが実行できる範囲"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:45
-msgid "the type of output expected from the request"
-msgstr "リクエストに対して期待される出力のタイプ"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:47
-msgid ""
-"In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
-"agent's overall role, purpose, and behavior. It acts as the core mission "
-"statement of the agent, and drives all interactions. During a conversation, "
-"the system prompts and skill instructions are continuously applied. They "
-"influence how the agent interprets messages, selects tools, uses sources, "
-"and determines whether additional actions are required before responding."
-msgstr ""
-"Odooでは、各\\ |AI|\\ エージェントに\\ *システムプロンプト*\\ が割り当てら"
-"れ、エージェントの全体的な役割、目的、動作が定義されます。これはエージェント"
-"の中核となるミッションステートメントとして機能し、すべてのやり取りを推進しま"
-"す。会話中、システムプロンプトとスキルの指示は継続的に適用されます。これら"
-"は、エージェントがメッセージを解釈し、ツールを選択し、ソースを使用し、応答前"
-"に追加のアクションが必要かどうかを判断する方法に影響を与えます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:53
-msgid ""
-"Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, "
-"called *Instructions*. Instructions are skill-specific guidelines that "
-"refine how the agent behaves within a certain context or workflow, and how "
-"it interacts within the Odoo framework."
-msgstr ""
-"各\\ :ref:`スキル <ai/topics>`\\ にも、\\ *指示*\\ と呼ばれる独自のプロンプト"
-"のようなコンポーネントが含まれています。指示はスキル固有のガイドラインであ"
-"り、特定のコンテキストやワークフロー内でのエージェントの動作や、Odooフレーム"
-"ワーク内での対話方法を細かく定義します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:57
-msgid "Instructions often include:"
-msgstr "インスラクションには通常以下が含まれています："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:59
-msgid "A purpose, or what the skill covers."
-msgstr "目的、またはスキルがカバーする内容。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:60
-msgid "Rules or constraints for the agent to follow when assigned this skill."
-msgstr "このスキルが割り当てられた際にエージェントが従うべきルールまたは制約。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:61
-msgid "Step-by-step workflows for how to complete a specific action."
-msgstr "特定のアクションを完了する方法に関する段階的なワークフロー"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:62
-msgid "Technical details needed to complete any actions."
-msgstr "アクションを実行するために必要な技術的な詳細情報"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:65
 msgid "Agent structure"
 msgstr "エージェントの構造"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:70
+#: ../../export/content/applications/productivity/ai/agents.rst:40
+msgid "Instructions"
+msgstr "指示"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:42
+msgid "Instructions define the agent's overall role, purpose, and behavior."
+msgstr "指示は、エージェントの全体的な役割、目的、および行動を定義します。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:44
+msgid ""
+"Each AI agent is assigned a *System Prompt* that provides its main "
+"instructions. It can define the agent's responsibilities, constraints, and "
+"how it should respond to requests."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:47
+msgid ""
+"Each :ref:`Skill <ai/agents/skills>` also includes its own prompt-like "
+"component, called *Instructions*. Instructions are skill-specific guidelines "
+"that refine how the agent behaves in a given context or workflow and how it "
+"interacts with the Odoo framework."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:51
+msgid "Instructions often include:"
+msgstr "インスラクションには通常以下が含まれています："
+
+#: ../../export/content/applications/productivity/ai/agents.rst:53
+msgid "A purpose, or what the skill covers."
+msgstr "目的、またはスキルがカバーする内容。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:54
+msgid "Rules or constraints for the agent to follow when assigned this skill."
+msgstr "このスキルが割り当てられた際にエージェントが従うべきルールまたは制約。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:55
+msgid "Step-by-step workflows for completing a specific action."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:56
+msgid "Technical details needed to complete any actions."
+msgstr "アクションを実行するために必要な技術的な詳細情報"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:61
 msgid "Skills"
 msgstr "スキル"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:72
+#: ../../export/content/applications/productivity/ai/agents.rst:63
 msgid ""
-"*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that "
-"define how an agent behaves within a specific context. Essentially, the "
-"skills define what an agent can do within the database. Skills guide "
-"conversations, telling the agent what it can do, how it can do it, and when "
-"it should do it."
+"*Skills* define specific tasks an agent can perform. Each *Skill* includes "
+"instructions that guide the agent through the task and can have one or more "
+"tools assigned to it."
 msgstr ""
-"\\ *スキル*\\ は、特定のコンテキスト内でエージェントがどのように動作するかを"
-"定義する指示と\\ :ref:`ツール <ai/tools>`\\ のコレクションです。基本的に、ス"
-"キルはエージェントがデータベース内で何を実行できるかを定義します。スキルは会"
-"話を導き、エージェントができること、その実行方法、および実行すべきタイミング"
-"を伝えます。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:67
+msgid ""
+"If an agent is not assigned any Skills, it can **only** provide information. "
+"It **cannot** complete tasks or make changes to the database."
+msgstr ""
+"エージェントにスキルが割り当てられていない場合、情報は **のみ** 提供できます"
+"。タスクを完了したり、データベースに変更を加えることは **できません** 。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:70
+msgid ""
+"Multiple *Skills* can be assigned to the same agent, allowing it to perform "
+"different types of tasks."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:76
+msgid "Agent tools"
+msgstr "エージェントツール"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:78
 msgid ""
-"If an agent is not assigned any Skills, it is **only** able to provide "
-"information. It **cannot** complete tasks or make changes to the database."
+"*Tools* are the functions an agent can perform in Odoo. Each agent has the "
+"following tools available:"
 msgstr ""
-"エージェントにスキルが割り当てられていない場合、情報の提供\\ **のみ**\\ が可"
-"能です。タスクを実行したり、データベースに変更を加えたりすることは\\ **できま"
-"せん**\\ 。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:81
 msgid ""
-"Within each skill is a detailed prompt, which provides the agent with more "
-"in-depth instructions on how to perform the tasks associated with that "
-"skill, define the boundaries of its behavior, and determine how it should "
-"interpret user intent. These prompts ensure that the agent follows a "
-"consistent reasoning pattern and uses the appropriate tools to generate "
-"accurate, context-aware responses."
+"*Generate image*: A collection of tools to support image generation. Load "
+"this skill when the user asks to generate or enhance an image."
 msgstr ""
-"各スキル内には詳細なプロンプトがあり、そのスキルに関連するタスクを実行する方"
-"法、動作の境界を定義する方法、ユーザの意図を解釈する方法について、エージェン"
-"トにより詳細な指示を与えます。これらのプロンプトにより、エージェントが一貫し"
-"た推論パターンに従い、適切なツールを使用して、正確でコンテキストに応じた回答"
-"を生成できるようになります。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:83
+msgid "*Web Search*: Enable the Agent to explore the internet in real time."
+msgstr ""
+"*Web Search*：エージェントがリアルタイムでインターネットを探索できるようにし"
+"ます。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:84
+msgid ""
+"*Self Update*: Allows an agent to identify missing or incomplete "
+"instructions and *Skills* and propose or make changes to its configuration."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:87
-msgid "The following skills are preconfigured in the **AI** app:"
-msgstr "\\ **AI**\\ アプリには、以下のスキルがあらかじめ設定されています:"
+msgid ""
+"To enable a tool on an agent, click the *Skills* tab, then slide the "
+"appropriate toggle to green."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:89
-msgid ""
-":guilabel:`View Builder`: Supports the interpretation of a user query to "
-"open the appropriate Odoo view with a set of tools necessary to perform the "
-"search. Natural language queries can also include time-based grouping "
-"instructions. This allows agents to group results by time intervals such as "
-"day, month, or year when querying records."
+msgid "The tools on an AI agent, with some enabled."
 msgstr ""
-":guilabel:`ビュービルダ`：検索の実行に必要なツールセットを使用して適切なOdoo"
-"ビューを開くための、ユーザクエリの解釈をサポートします。自然言語クエリには時"
-"間ベースのグループ化指示を含めることもできます。これにより、レコードを照会す"
-"る際に、エージェントが日、月、年などの時間間隔で結果をグループ化できるように"
-"なります。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:93
-msgid ""
-":guilabel:`Information retrieval`: A collection of tools to retrieve "
-"information about the models."
-msgstr ""
-":guilabel:`情報取得`: モデルに関する情報を取得するためのツールのセットです。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:94
-msgid ":guilabel:`Update Records`: Tools to update records."
-msgstr ":guilabel:`レコード更新`：レコードを更新するためのツール。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:95
-msgid ":guilabel:`Create Records`: Tools to create records."
-msgstr ":guilabel:`レコード作成`：レコードを作成するためのツール。"
+msgid "Subagents"
+msgstr "サブエージェント"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:96
+#: ../../export/content/applications/productivity/ai/agents.rst:97
 msgid ""
-":guilabel:`Generate Images`: A collection of tools to support image "
-"generation. Load this skill when the user asks to generate or enhance an "
-"image."
+"An agent can use other |AI| agents as *subagents* to handle specialized "
+"tasks. When a user submits a request, the main agent can determine whether "
+"to delegate part of the task to a subagent based on its purpose and "
+"capabilities."
 msgstr ""
-":guilabel:`画像生成`：画像生成をサポートするツールのコレクション。ユーザが画"
-"像の生成や補正を求めた場合に、このスキルを読み込みます。"
+"エージェントは、特殊なタスクを処理するために他の |AI| エージェント"
+"を*サブエージェント*として使用できます。ユーザーがリクエストを送信すると、"
+"メインエージェントは、その目的と機能に基づいて、タスクの一部を"
+"サブエージェントに委任するかどうかを判断できます。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:98
+#: ../../export/content/applications/productivity/ai/agents.rst:101
 msgid ""
-":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
-"time."
+"Subagents allow an agent to delegate specific tasks to specialized agents "
+"rather than handling every request itself. The main agent can then use the "
+"subagent's results as part of its response."
 msgstr ""
-":guilabel:`Web検索`：エージェントがリアルタイムでインターネットを探索できるよ"
-"うにします。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:99
-msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
-msgstr ""
-":guilabel:`Webサイトビルダ`：OdooのWebサイトページを編集するためのツール。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:100
+#: ../../export/content/applications/productivity/ai/agents.rst:104
 msgid ""
-":guilabel:`Create Leads`: A collection of tools to support automated lead "
-"creation. This skill is **only** available if the **CRM** app is installed."
+"To assign a subagent, click on the *Skills* tab, scroll to the *Subagents* "
+"section, then click :icon:`add` :guilabel:`Add`. Then, select from the list "
+"of existing agents, or click :guilabel:`Create New` to create a new one."
 msgstr ""
-":guilabel:`リード作成`：リードの自動作成をサポートするツールのコレクション。"
-"このスキルは、\\ **CRM**\\ アプリがインストールされている場合に\\ **のみ**\\ "
-"利用できます。"
+"サブエージェントを割り当てるには、*スキル* タブをクリックし"
+"、*サブエージェント* セクションまでスクロールして、 :icon:`add` :guilabel:`追"
+"加` をクリックします。次に、既存のエージェントのリストから選択するか、 "
+":guilabel:`新規作成` をクリックして新しいエージェントを作成します。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:103
-msgid ""
-"Within each skill is a set of :guilabel:`Instructions`, which act as a "
-"prompt and provide guidance for the structure of the interaction, and one or "
-"more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can "
-"perform."
-msgstr ""
-"各スキルには、プロンプトとして機能しやり取りの構造に関するガイダンスを提供す"
-"る\\ :guilabel:`指示`\\ と、エージェントが実行できる機能を示す1つ以上の"
-"\\ :ref:`AIツール <ai/tools>`\\ が含まれています。"
+#: ../../export/content/applications/productivity/ai/agents.rst:109
+#: ../../export/content/applications/productivity/knowledge.rst:3
+msgid "Knowledge"
+msgstr "ナレッジ"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:110
-msgid "Tools"
-msgstr "ツール"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:112
-msgid ""
-"*Tools* are the functions the agent can perform in Odoo. These include "
-"actions like creating a lead or opening a view. Tools extend the purpose of "
-"the agent beyond conversations, they enable real actions. The available "
-"tools in a database vary based on the applications installed. "
-"Multiple :guilabel:`AI Tools` can be assigned to a single skill."
-msgstr ""
-"*ツール*\\ とは、エージェントがOdoo内で実行できる機能のことです。これには、"
-"リードの作成やビューを開くなどのアクションが含まれます。ツールはエージェント"
-"の目的を会話だけに留まらず拡張し、実際のアクションを可能にします。データベー"
-"スで利用可能なツールは、インストールされているアプリケーションによって異なり"
-"ます。1つのスキルに複数の\\ :guilabel:`AIツール`\\ を割り当てることができま"
-"す。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:120
-msgid "Sources"
-msgstr "応募元"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:122
+#: ../../export/content/applications/productivity/ai/agents.rst:111
 msgid ""
 "Sources are the data the agent can refer to when generating responses or "
 "completing tasks. Sources are indexed so the agent can retrieve relevant "
@@ -560,7 +479,7 @@ msgstr ""
 "るデータのことです。ソースはインデックス化されており、ユーザが質問したとき"
 "に、エージェントが関連情報をすばやく取得できるようになっています。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:126
+#: ../../export/content/applications/productivity/ai/agents.rst:115
 msgid ""
 "An agent designed to answer customer support questions has **Knowledge** "
 "articles included as sources, which include frequently asked questions."
@@ -568,325 +487,38 @@ msgstr ""
 "カスタマーサポートの質問に回答するためのエージェントには、FAQ などを含む **ナ"
 "レッジ** 記事がソースとして設定されています。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:129
+#: ../../export/content/applications/productivity/ai/agents.rst:118
 msgid "Sources can be in the following formats:"
 msgstr "ソースは以下のフォーマットが可能です:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:131
-msgid "PDFs"
-msgstr "PDF"
+#: ../../export/content/applications/productivity/ai/agents.rst:120
+msgid "Files uploaded to the agent"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:121
+msgid "Links to webpages"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:122
+msgid "Documents (uploaded in the :doc:`Documents <../documents>` application)"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:123
+msgid ":doc:`Knowledge <../knowledge>` app articles"
+msgstr ":doc:`ナレッジ <../knowledge>` アプリの記事"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:126
+msgid ""
+"If the :guilabel:`Restrict answers to Sources` option is enabled on an "
+"agent, the agent can **only** utilize information from the uploaded and "
+"active sources."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:130
+msgid "Reprocessing sources"
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:132
-msgid "Weblinks"
-msgstr "ウェブリンク"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:133
-msgid "Documents (uploaded in the **Documents** application)"
-msgstr "ドキュメント ( **ドキュメント** アプリ内にアップロード済のもの)"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:134
-msgid "**Knowledge** app articles"
-msgstr "**ナレッジ** アプリ記事"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:137
-msgid ""
-"If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
-"agent can **only** utilize information from the uploaded and active sources."
-msgstr ""
-"エージェントで :guilabel:`ソースに限定` オプションが有効になっている場合、"
-"エージェントはアップロード済みでアクティブなソースのみを利用できます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:141
-msgid "Uploaded files"
-msgstr "アップロードされたファイル"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:143
-msgid ""
-"During a conversation with an |AI| agent, additional context can be provided "
-"by uploading files. Files are temporarily treated as sources for the ongoing "
-"discussion. The agent can use their content to answer questions, summarize "
-"information, or extract relevant details."
-msgstr ""
-"ファイルをアップロードすることで、\\ |AI|\\ エージェントとの会話中に追加のコ"
-"ンテキストを提供できます。ファイルは、進行中のディスカッションのソースとして"
-"一時的に扱われます。エージェントはその内容を使用して、質問への回答、情報の要"
-"約、関連する詳細の抽出を行うことができます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:147
-msgid ""
-"The provided files only influence the current conversation, unless they are "
-"explicitly added as sources on the agent."
-msgstr ""
-"提供されたファイルは、エージェントのソースとして明示的に追加されない限り、現"
-"在の会話にのみ影響します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:150
-msgid ""
-"To attach a file in a conversation, click the :icon:`fa-plus-"
-"circle` :guilabel:`(plus circle)` icon in the message window, then "
-"click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
-"window, select one or more files to attach, then click :guilabel:`Open`."
-msgstr ""
-"会話内でファイルを添付するには、メッセージウィンドウで\\ :icon:`fa-plus-"
-"circle` :guilabel:`(プラス円)`\\ アイコンをクリックし、次に\\ :icon:`fa-"
-"paperclip` :guilabel:`ファイルを添付`\\ をクリックします。ファイルエクスプ"
-"ローラウィンドウで、添付するファイルを1つ以上選択し、\\ :guilabel:`開く`\\ を"
-"クリックします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:155
-msgid ""
-"A manager finds a receipt for supplies and is unsure whether it has already "
-"been submitted to the **Expenses** app for reimbursement. They open a "
-"conversation with the *Ask AI* agent and enter the following prompt:"
-msgstr ""
-"ある管理者が備品の領収書を見つけましたが、精算のために\\ **経費**\\ アプリに"
-"すでに提出されているかどうかわかりません。その管理者は\\ *AIに質問*\\ エー"
-"ジェントとの会話を開き、次のプロンプトを入力します:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:159
-msgid "`Can you open the expense that matches this receipt?`"
-msgstr "`この領収書に一致する経費を開いてくれますか？`"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:161
-msgid ""
-"They attach the receipt to the message. After the agent analyzes the "
-"attachment, it opens the view to the correct expense."
-msgstr ""
-"メッセージに領収書を添付します。エージェントが添付ファイルを分析した後、適切"
-"な経費のビューが開きます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:164
-msgid "Add alt text."
-msgstr "代替テキストを追加します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:168
-msgid "Gain insights from previewed files"
-msgstr "プレビューしたファイルからインサイトを取得"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:170
-msgid ""
-"When a document is open in preview mode, |AI| agents can use the content of "
-"the previewed file as context for the conversation."
-msgstr ""
-"ドキュメントがプレビューモードで開かれている場合、\\ |AI|\\ エージェントはプ"
-"レビューされたファイルの内容を会話のコンテキストとして使用できます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:173
-msgid ""
-"First, navigate to the :menuselection:`Documents` app and click a document "
-"to preview it. Click the |AI| icon at the top of the page to open "
-"the :guilabel:`Ask AI` chat window. From here, click one of the default "
-"prompts to use them, or enter a custom one in the message window."
-msgstr ""
-"まず、\\ :menuselection:`ドキュメント`\\ アプリに移動し、ドキュメントをクリッ"
-"クしてプレビューします。ページ上部の\\ |AI|\\ アイコンをクリックして、"
-"\\ :guilabel:`AIに質問`\\ チャットウィンドウを開きます。ここから、デフォルト"
-"のプロンプトのいずれかをクリックして使用するか、メッセージウィンドウにカスタ"
-"ムプロンプトを入力します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:177
-msgid ""
-"In this case, the agent's responses are grounded in the file currently being "
-"previewed, in combination with any other sources assigned to the agent."
-msgstr ""
-"この場合、エージェントの回答は、エージェントに割り当てられている他の情報ソー"
-"スと併せて、現在プレビュー中のファイルに基づきます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:183
-msgid "Create a new agent"
-msgstr "新しいエージェントを作成"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:185
-msgid ""
-"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
-"click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
-"description, if desired."
-msgstr ""
-"新しい\\ |AI|\\ エージェントを作成するには、\\ :menuselection:`AI`\\ アプリに"
-"移動して\\ :guilabel:`新規`\\ をクリックします。\\ :guilabel:`エージェント名"
-"`\\ を入力し、必要に応じて簡単な説明を追加します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:189
-msgid ""
-"Before creating a new agent, it is recommended to have a clear use case in "
-"mind. This helps when writing out the :guilabel:`System Prompt`, and "
-"assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
-msgstr ""
-"新しいエージェントを作成する前に、明確なユースケースを想定しておくことをお勧"
-"めします。これは、\\ :guilabel:`システムプロンプト`\\ の記述や、"
-"\\ :guilabel:`スキル`\\ および\\ :guilabel:`AIツール`\\ を割り当てる際に役立"
-"ちます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:193
-msgid ""
-"Next, select a :guilabel:`Response Style`. This manages the overall tone the "
-"agent uses when responding to an inquiry. Choose from one of the following "
-"options:"
-msgstr ""
-"次に、:guilabel:`応答スタイル` を選択します。これは、エージェントが問い合わせ"
-"に応答する際の全体的な口調を管理します。次のいずれかを選択できます："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:196
-msgid ""
-":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
-"clear, direct answers with a moderate level of detail."
-msgstr ""
-":guilabel:`標準`：バランスの取れたプロフェッショナルなトーンを維持します。適"
-"度な詳細さで、明確かつ直接的な回答を提供します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:198
-msgid ""
-":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
-"responses. Explores multiple perspectives, acknowledges subtleties, and uses "
-"precise, academic language where appropriate."
-msgstr ""
-":guilabel:`ニュアンス`：洗練され、深く文脈に沿った回答を提供します。複数の視"
-"点を検討し、微妙なニュアンスを認識し、必要に応じて正確で学術的な表現を使用し"
-"ます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:201
-msgid ""
-":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
-"Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
-"dynamic structure to keep the user interested."
-msgstr ""
-":guilabel:`軽快 & クリエイティブ`：パンチがあり、活気にあふれ、引き込まれる"
-"トーンです。簡潔さと機知を重視します。表現力豊かな言葉遣いや比喩、ダイナミッ"
-"クな構成を用いて、ユーザーの興味を引きつけます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:203
-msgid ""
-":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
-"soundness above all else. Breaks down complex steps, cites reasoning "
-"clearly, and verifies every claim. Adopts a meticulous and formal tone."
-msgstr ""
-":guilabel:`慎重 & 厳密`：何よりも絶対的な正確さと論理的妥当性を最優先します。"
-"複雑な手順を分解し、根拠を明確に示し、すべての主張を検証します。緻密でフォー"
-"マルなトーンを採用します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:207
-msgid ""
-"Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
-"**only** respond based on the provided resources."
-msgstr ""
-"\\ :guilabel:`ソースに制限`\\ チェックボックスをクリックして、エージェントが"
-"提供されたリソースに基づいて**のみ**回答するように制限します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:210
-msgid ""
-"Next, select one or more :guilabel:`Skills` for the agent. As explained "
-"above, :ref:`Skills <ai/topics>` include both instructions and tools that "
-"guide the agent in helping users complete a task."
-msgstr ""
-"次に、エージェント用に1つ以上の\\ :guilabel:`スキル`\\ を選択します。前述のと"
-"おり、\\ :ref:`スキル <ai/topics>`\\ には、ユーザーのタスク完了を支援するよう"
-"エージェントを導く指示とツールの両方が含まれています。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:214
-msgid ""
-"Enter a :guilabel:`System Prompt` with detailed instructions for the agent "
-"as to their role and responsibilities."
-msgstr ""
-"エージェントの役割や責任を詳しく指示する :guilabel:`システムプロンプト` を入"
-"力します。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:217
-msgid "A new agent form with the required information."
-msgstr "必要な情報が入力された新規エージェントのフォーム。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:221
-msgid ""
-"The specificity and length of the :guilabel:`System Prompt` can vary, "
-"depending on the use case for the agent. Use the preconfigured agents as an "
-"example of the possible information."
-msgstr ""
-":guilabel:`システムプロンプト` の具体性や長さは、エージェントのユースケースに"
-"よって異なります。あらかじめ用意されているエージェントを参考に、どのような情"
-"報を含められるかを確認してください。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:224
-msgid ""
-"If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
-"tab, then click :guilabel:`Add a source`."
-msgstr ""
-"エージェントに *ソース* が必要な場合は、 :guilabel:`ソース` タブまでスクロー"
-"ルし、:guilabel:`ソースを追加` をクリックします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:227
-msgid "Select a format:"
-msgstr "フォーマットを選択:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:229
-msgid ""
-":guilabel:`Upload a File`: Select the appropriate file from the explorer "
-"window, and click :guilabel:`Open`."
-msgstr ""
-":guilabel:`ファイルをアップロード`：エクスプローラーウィンドウから適切なファ"
-"イルを選択し、\\ :guilabel:`開く`\\ をクリックします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:231
-msgid ""
-":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, "
-"paste one link per line. Click :guilabel:`Save`."
-msgstr ""
-":guilabel:`リンクを追加`：URLを貼り付けます。一度に複数のリンクを追加でき、1"
-"行に1つのリンクを貼り付けます。\\ :guilabel:`保存`\\ をクリックします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:233
-msgid ""
-":guilabel:`Add from Documents` (uploaded in the **Documents** application): "
-"Click the checkbox next to one or more documents, then "
-"click :guilabel:`Select`."
-msgstr ""
-":guilabel:`ドキュメントから追加`（\\ **ドキュメント**\\ アプリケーションで"
-"アップロード）：1つ以上のドキュメントの横にあるチェックボックスをクリックし、"
-"\\ :guilabel:`選択`\\ をクリックします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:235
-msgid ""
-":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
-"articles, then click :guilabel:`Select`."
-msgstr ""
-":guilabel:`ナレッジから追加`：1つ以上の記事の横にあるチェックボックスをクリッ"
-"クし、\\ :guilabel:`選択`\\ をクリックします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:238
-msgid ""
-"Once a source is added, the :guilabel:`Status` field updates to reflect its "
-"current status. The source is ready when the status changes from "
-"*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate "
-"the source."
-msgstr ""
-"ソースが追加されると、\\ :guilabel:`ステータス`\\ フィールドが更新され、現在"
-"のステータスが反映されます。ステータスが*処理中*から*インデックス済み*に変わ"
-"ると、ソースの準備が完了します。\\ :guilabel:`稼働中`\\ トグルをスライドして"
-"ソースを有効にします。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:242
-msgid "A list of sources for an agent, each denoted with their format."
-msgstr "エージェントのソースのリスト（各形式で表示）。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:246
-msgid ""
-"If a source fails to upload, it could be the result of a conflict with the "
-"selected provider."
-msgstr ""
-"ソースのアップロードに失敗した場合、選択したプロバイダーとの競合が原因である"
-"可能性があります。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:248
-msgid ""
-"Click the :guilabel:`Test` button to open a conversation window and test the "
-"new agent."
-msgstr ""
-":guilabel:`テスト`\\ ボタンをクリックすると、会話ウィンドウが開き、新しいエー"
-"ジェントをテストできます。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:251
-msgid "Manually reprocessing sources"
-msgstr "ソースの手動再処理"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:253
 msgid ""
 "If the content of a source changes after it has been indexed, it may be "
 "necessary to reprocess the source so that agents use the most recent "
@@ -899,29 +531,138 @@ msgstr ""
 "手動でトリガーでき、更新されたドキュメント、リンク、ナレッジ記事が今後のエー"
 "ジェントの回答に確実に反映されるようになります。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:258
-msgid ""
-"To reprocess a source, navigate to the :menuselection:`AI` app. Select an |"
-"AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical ellipsis)` icon, then "
-"click :guilabel:`Configuration`."
+#: ../../export/content/applications/productivity/ai/agents.rst:137
+msgid "To reprocess a source:"
 msgstr ""
-"ソースを再処理するには、\\ :menuselection:`AI`\\ アプリに移動します。\\ |AI|"
-"\\ エージェントを選択し、カンバンカード上の\\ :icon:`fa-ellipsis-"
-"v` :guilabel:`(縦の省略記号)`\\ アイコンをクリックして、\\ :guilabel:`設定"
-"`\\ をクリックします。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:262
-msgid ""
-"On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to "
-"any source that should be updated."
+#: ../../export/content/applications/productivity/ai/agents.rst:139
+msgid "Navigate to the :menuselection:`AI` app and select an |AI| agent."
 msgstr ""
-"\\ *ソース*\\ タブで、更新が必要なソースの横にある\\ :guilabel:`再処理"
-"` :icon:`fa-refresh`\\ をクリックします。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:265
-msgid "AI agent sources with the reprocess icon visible."
-msgstr "再処理アイコンが表示されているAIエージェントのソース。"
+#: ../../export/content/applications/productivity/ai/agents.rst:140
+msgid "Click the *Knowledge* tab, and select a source."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:141
+msgid ""
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the "
+"source."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:142
+msgid "On the menu, click :guilabel:`Reprocess`."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:144
+msgid "The Knowledge tab of an agent, with the Reprocess option visible."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:148
+msgid "Triggers"
+msgstr "トリガー"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:150
+msgid ""
+"An agent can be triggered in different ways depending on how it is used."
+msgstr "エージェントは、その使用方法に応じて異なる方法でトリガーできます。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:152
+msgid ""
+"Agents can be launched interactively by users through an AI chat. They can "
+"also be triggered automatically by automated actions and scheduled actions, "
+"allowing agents to participate in automated workflows."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:156
+msgid ""
+"To add a trigger to an agent, navigate to the *Trigger* tab and "
+"click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
+"triggered?* popup, choose from one of the following options:"
+msgstr ""
+"エージェントにトリガーを追加するには、*トリガー*タブに移動し、 :icon:`add` "
+":guilabel:`Add` をクリックします。*When should your agent be triggered? "
+"(エージェントをいつトリガーしますか?)* ポップアップで、以下のオプションから選"
+"択します。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:159
+msgid "*On a schedule*: Runs automatically according to a set frequency."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:160
+msgid ""
+"*Based on a Date Field*: Runs once per record, as soon as a specific date is "
+"reached."
+msgstr ""
+"*日付フィールドに基づく*：特定の日に達するとすぐに、レコードごとに1回実行され"
+"ます。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:161
+msgid "*After creation*: Runs whenever a new record is added."
+msgstr "*作成後*：新しいレコードが追加されるたびに実行されます。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:162
+msgid "*After update*: Runs whenever a specific field is updated."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:165
+msgid ""
+"If unsure which option is best for a particular use case, click "
+"the :guilabel:`I need help to choose` option at the bottom of the popup. "
+"This opens a conversation with the *Odoo AI* agent. The agent then walks "
+"through the specifics of the use case to help select the best option."
+msgstr ""
+"特定のユースケースに最適なオプションが不明な場合は、ポップアップの下部にある "
+":guilabel:`I need help to choose` オプションをクリックします。これにより"
+"、*Odoo AI* エージェントとの会話が開始されます。エージェントがユースケースの"
+"詳細を順を追って確認し、最適なオプションの選択をサポートします。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:170
+msgid "See :doc:`AI server actions <server-actions>` for more information."
+msgstr "詳細は :doc:`AIサーバアクション <server-actions>` を参照してください。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:175
+msgid "Create a new agent"
+msgstr "新しいエージェントを作成"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:177
+msgid ""
+"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+"click :guilabel:`New`. Enter an agent name, then add a short description, if "
+"desired."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:181
+msgid ""
+"Before creating a new agent, it is recommended to have a clear use case in "
+"mind. This helps when writing out the *Instructions* and assigning the "
+"*Skills*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:184
+msgid ""
+"On the *Instructions* tab, enter a system prompt with detailed instructions "
+"for the agent as to their role and responsibilities."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:187
+msgid "A new agent form."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:190
+msgid ""
+"On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As "
+"explained above, :ref:`Skills <ai/agents/skills>` include both instructions "
+"and tools that guide the agent in helping users complete a task."
+msgstr ""
+"*スキル* タブで、エージェント用に1つ以上の :guilabel:`スキル` を選択します。"
+"上記で説明したように、 :ref:`スキル <ai/agents/skills>` には、ユーザがタスク"
+"を完了するのを支援するための、指示とツールの両方が含まれます。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:194
+msgid ""
+"Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit "
+"the agent to **only** respond based on the provided resources."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/apikeys.rst:3
 msgid "AI API keys"
@@ -2471,10 +2212,8 @@ msgstr "エージェントが高い信頼性を持って応答できません。
 #: ../../export/content/applications/productivity/ai/live-chat.rst:86
 msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
-"Creation* :ref:`skill <ai/topics>`."
+"Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"これらの条件のいずれかが満たされると、エージェントは*リード作成*\\ :ref:`スキ"
-"ル <ai/topics>`\\ をアクティブ化します。"
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -2666,7 +2405,7 @@ msgstr ":doc:`server-actions`"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:60
 msgid "The configuration process includes the following steps:"
-msgstr ""
+msgstr "設定プロセスには以下の手順が含まれます："
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:62
 msgid ""
@@ -2686,6 +2425,8 @@ msgstr ""
 msgid ""
 ":ref:`Expose server actions <ai/mcp/expose-tools>` to the client from Odoo."
 msgstr ""
+":ref:`Expose server actions <ai/mcp/expose-tools>` を行い、Odooから"
+"クライアントにサーバーアクションを公開します。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:66
 msgid ""
@@ -3102,6 +2843,8 @@ msgid ""
 "Finally, run ``claude mcp list`` to check the connection status of the newly "
 "added server."
 msgstr ""
+"最後に、 ``claude mcp list`` を実行して、新たに追加されたサーバの接続"
+"ステータスを確認します。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:281
 msgid "Antigravity"
@@ -3123,6 +2866,9 @@ msgid ""
 "Customizations`. The *Installed MCP Servers* section lists all configured |"
 "MCP| servers along with their statuses."
 msgstr ""
+"*Antigravity 2.0* を開きます。 :menuselection:`設定 --> カスタマイズ` に移動"
+"します。*インストール済みMCPサーバ* セクションには、設定済みのすべての |MCP| "
+"サーバがそのステータスとともに一覧表示されます。"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:291
 msgid ""
@@ -3156,7 +2902,7 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:323
 msgid "Codex"
-msgstr ""
+msgstr "Codex"
 
 #: ../../export/content/applications/productivity/ai/mcp_server.rst:325
 msgid ""
@@ -4372,12 +4118,12 @@ msgstr ""
 #: ../../export/content/applications/productivity/ai/support_operations.rst:87
 msgid ""
 "Users may also define *skills*, which grant the agent permission to perform "
-"specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as "
-"record creation or automation triggers."
+"specific actions. :ref:`Skills <ai/agents/skills>` allow advanced scenarios "
+"such as record creation or automation triggers."
 msgstr ""
-"ユーザーは、エージェントに特定のアクションを実行する権限を付与する\\ *スキル"
-"*\\ を定義することもできます。\\ :ref:`スキル <ai/topics>`\\ により、レコード"
-"作成や自動化トリガーなどの高度なシナリオが可能になります。"
+"ユーザーは、エージェントが特定の操作を実行する権限を与える*スキル*を定義する"
+"こともできます。 :ref:`Skills <ai/agents/skills>` は、レコード作成や自動"
+"トリガーなどの高度なシナリオを可能にします。"
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:90
 msgid "An example support AI agent."
@@ -13798,10 +13544,6 @@ msgid ""
 msgstr ""
 ":doc:`AI-powered document digitization <../finance/accounting/vendor_bills/"
 "invoice_digitization>`"
-
-#: ../../export/content/applications/productivity/knowledge.rst:3
-msgid "Knowledge"
-msgstr "ナレッジ"
 
 #: ../../export/content/applications/productivity/knowledge.rst:5
 msgid ""
@@ -24070,6 +23812,9 @@ msgid ""
 "of the certificate of completion <sign/security/certificate-of-completion>` "
 "displayed by default on each page of the document(s)"
 msgstr ""
+" :guilabel:`Hide certificate key on pages` を有効にして、ドキュメントの各"
+"ページにデフォルトで表示される :ref:`reference of the certificate of "
+"completion <sign/security/certificate-of-completion>` を非表示にします。"
 
 #: ../../export/content/applications/productivity/sign/request_signatures.rst:584
 msgid ""
@@ -24077,6 +23822,9 @@ msgid ""
 "or :ref:`refused <sign/sign-document/decline>` by adding the relevant "
 "contact(s) or email address(es) in the :guilabel:`CC` field"
 msgstr ""
+"ドキュメントが完全に署名されたか、または :ref:`拒否 <sign/sign-document/"
+"decline>` されたときに通知を受け取る当事者を1人以上追加するには、関連する連絡"
+"先またはメールアドレスを :guilabel:`CC` フィールドに追加します"
 
 #: ../../export/content/applications/productivity/sign/request_signatures.rst:588
 msgid "add a message to the signature request email"
@@ -24352,6 +24100,8 @@ msgid ""
 "To view the details of a signature request, go to :menuselection:`Sign --> "
 "Documents --> All Documents`, then:"
 msgstr ""
+"署名リクエストの詳細を表示するには、 :menuselection:`Sign --> Documents --> "
+"All Documents` に移動してから、次を行います："
 
 #: ../../export/content/applications/productivity/sign/request_signatures.rst:705
 msgid ""
@@ -25796,7 +25546,7 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/sign/validity.rst:29
 msgid "Simple Electronic Signatures"
-msgstr ""
+msgstr "簡易電子署名"
 
 #: ../../export/content/applications/productivity/sign/validity.rst:30
 msgid "Advanced Electronic Signatures"
@@ -25815,6 +25565,11 @@ msgid ""
 "Electronic Signature**  when signing. These are useful for high-value "
 "contracts or sectors that require increased trust."
 msgstr ""
+"Odooはデフォルトで**高度な電子署名**と同等の署名を生成します。これらの署名は"
+"、eIDAS規則で規定されている通り、EUにおいて法的に有効です。より高いレベルの認"
+"証が必要な場合は、**itsme®**統合により、署名時に**認定電子署名**を使用するこ"
+"とも可能です。これらは、高額な契約や信頼性が特に求められるセクターで有用です"
+"。"
 
 #: ../../export/content/applications/productivity/sign/validity.rst:39
 msgid ""
@@ -32431,6 +32186,8 @@ msgid ""
 "With the relevant graph view open in your database, "
 "click :guilabel:`Spreadsheet`."
 msgstr ""
+"データベースで該当するグラフビューを開いた状態で、 :guilabel:`Spreadsheet` を"
+"クリックします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:8
 msgid ""
@@ -32464,10 +32221,13 @@ msgid ""
 "of the chart's :ref:`configuration and design can be customized <spreadsheet/"
 "charts/customize>`."
 msgstr ""
+"グラフはスプレッドシートの最初のシートに挿入されます。画面右側のパネルに"
+"グラフのプロパティが表示され、グラフの :ref:`構成やデザインをカスタマイズ "
+"<spreadsheet/charts/customize>` できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:24
 msgid ":ref:`Manage charts <spreadsheet/charts/manage>`"
-msgstr ""
+msgstr ":ref:`グラフの管理 <spreadsheet/charts/manage>`"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:27
 msgid ""
@@ -32475,6 +32235,10 @@ msgid ""
 "database. In the example, clicking on :guilabel:`Marc Demo` opens the list "
 "view of all sales by this salesperson that match the domain of the chart."
 msgstr ""
+"グラフ内のデータポイントをクリックすると、データベース内の関連する"
+"リストビューが開きます。例として、 :guilabel:`Marc Demo` をクリックすると、こ"
+"の販売担当者による、グラフのドメインと一致するすべての売上のリストビューが開"
+"きます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:31
 msgid "A clickable link to an Odoo menu plus clickable data point"
@@ -33031,9 +32795,9 @@ msgid ""
 "insert dynamic list` from the menu bar, then select the relevant list."
 msgstr ""
 "**データメニューから動的リストを再挿入する。** 静的リストを含むシート上で、空"
-"のセルにカーソルを置きます。メニューバーから :menuselection:`データ -->` "
-":icon:`os-insert-list` :menuselection:`動的リストを再挿入` をクリックし、関連"
-"するリストを選択します。"
+"のセルにカーソルを置きます。メニューバーから :menuselection:`データ --"
+">` :icon:`os-insert-list` :menuselection:`動的リストを再挿入` をクリックし、"
+"関連するリストを選択します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:159
 msgid "A new dynamic list appears, with the same styling as the original list."
@@ -33049,8 +32813,8 @@ msgid ""
 msgstr ""
 "また、空のセルに :ref:`動的リストの関数 <spreadsheet/insert-list/dynamic-"
 "function>`（例：`=ODOO.LIST(1)`。ここで `1` は :ref:`リストID <spreadsheet/"
-"insert-list/properties-id>`）を入力して、動的リストを再挿入することも可能です"
-"。ただしこの場合、テーブルのスタイリングは手動で再適用する必要があります。"
+"insert-list/properties-id>`）を入力して、動的リストを再挿入することも可能で"
+"す。ただしこの場合、テーブルのスタイリングは手動で再適用する必要があります。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:168
 msgid ""
@@ -33060,8 +32824,8 @@ msgid ""
 "delete the original static list."
 msgstr ""
 "データメニューまたは動的リスト関数を手動入力して動的リストを再挿入すると、静"
-"的リストと動的リストは同じデータソースを共有することになり、結果として同じ"
-"リストIDを持ちます。混乱を避けるため、元の静的リストは削除してください。"
+"的リストと動的リストは同じデータソースを共有することになり、結果として同じリ"
+"ストIDを持ちます。混乱を避けるため、元の静的リストは削除してください。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:172
 msgid ""
@@ -33105,8 +32869,8 @@ msgid ""
 "Click :menuselection:`Insert -->` :icon:`oi-view-list` :menuselection:`Odoo "
 "list` from the menu bar."
 msgstr ""
-"メニューバーから :menuselection:`挿入 -->` :icon:`oi-view-list` "
-":menuselection:`Odooリスト` をクリックします。"
+"メニューバーから :menuselection:`挿入 -->` :icon:`oi-view-"
+"list` :menuselection:`Odooリスト` をクリックします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:190
 msgid ""
@@ -33114,8 +32878,8 @@ msgid ""
 "the :guilabel:`Model` from which data should be retrieved, then "
 "click :guilabel:`Save`."
 msgstr ""
-"シートの右側にある :guilabel:`新規Odooリスト` パネルで、データを取得する "
-":guilabel:`モデル` を選択し、:guilabel:`保存` をクリックします。"
+"シートの右側にある :guilabel:`新規Odooリスト` パネルで、データを取得す"
+"る :guilabel:`モデル` を選択し、:guilabel:`保存` をクリックします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:195
 msgid ""
@@ -33127,9 +32891,9 @@ msgid ""
 msgstr ""
 "モデルのデフォルトリストがスプレッドシートの新しいシートに挿入されます。下部"
 "バーのシート名には、モデル名に続いて :ref:`リストID <spreadsheet/insert-list/"
-"properties-id>` が表示されます（例：*Sales Order (List #1)*）。"
-"スプレッドシートの右側にあるパネルには、:ref:`リストのプロパティ "
-"<spreadsheet/insert-list/properties>` が表示されます。"
+"properties-id>` が表示されます（例：*Sales Order (List #1)*）。スプレッドシー"
+"トの右側にあるパネルには、:ref:`リストのプロパティ <spreadsheet/insert-list/"
+"properties>` が表示されます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:200
 msgid ""
@@ -33535,9 +33299,9 @@ msgid ""
 "appears in the first set of quotation marks; a list of all the technical "
 "names of the fields of the related model appears."
 msgstr ""
-"新しいヘッダーセルをダブルクリックし、最初の引用符セット内に表示される"
-"フィールド名を選択して削除します。関連モデルの全フィールドの技術名のリストが"
-"表示されます。"
+"新しいヘッダーセルをダブルクリックし、最初の引用符セット内に表示されるフィー"
+"ルド名を選択して削除します。関連モデルの全フィールドの技術名のリストが表示さ"
+"れます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:385
 msgid "Add fields/columns by editing the formula"
@@ -33549,7 +33313,8 @@ msgstr "リストから適切なフィールドを選択します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:391
 msgid "Hover over the technical name of a field to reveal the field's label."
-msgstr "フィールドの技術名にカーソルを合わせると、フィールドのラベルが表示されます。"
+msgstr ""
+"フィールドの技術名にカーソルを合わせると、フィールドのラベルが表示されます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:392
 msgid ""
@@ -33562,12 +33327,12 @@ msgid ""
 "selecting :guilabel:`Customer`, then :guilabel:`Country`."
 msgstr ""
 " :ref:`リレーショナルフィールド <studio/fields/relational-fields-related-"
-"field>` を追加するには、フィールドの行にある :icon:`oi-chevron-right` "
-":guilabel:`(右矢印)` をクリックして関連フィールドのリストにアクセスします。適"
-"切なフィールドを選択するか、`.` を入力してからフィールドの技術名を入力します"
-"。例えば、*販売オーダ*モデルのリストに顧客の国を表示する列を追加するには、"
-"リレーショナルフィールド `partner_id.country` を使用します。これには "
-":guilabel:`顧客` を選択し、次に :guilabel:`国` を選択します。"
+"field>` を追加するには、フィールドの行にある :icon:`oi-chevron-"
+"right` :guilabel:`(右矢印)` をクリックして関連フィールドのリストにアクセスし"
+"ます。適切なフィールドを選択するか、`.` を入力してからフィールドの技術名を入"
+"力します。例えば、*販売オーダ*モデルのリストに顧客の国を表示する列を追加する"
+"には、リレーショナルフィールド `partner_id.country` を使用します。これに"
+"は :guilabel:`顧客` を選択し、次に :guilabel:`国` を選択します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:399
 msgid ""
@@ -33785,6 +33550,9 @@ msgid ""
 "<spreadsheet/insert-list/from-spreadsheet-default>` for that model, i.e., "
 "with default columns and a maximum of 80 records;"
 msgstr ""
+"静的リストの結果として、そのモデルのデフォルトの :ref:`動的リスト "
+"<spreadsheet/insert-list/from-spreadsheet-default>` が挿入されます（つまり、"
+"デフォルトの列で最大80レコードまで）"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:499
 msgid ""
@@ -33796,7 +33564,7 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:506
 msgid "Delete an inserted list"
-msgstr ""
+msgstr "挿入されたリストを削除する"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:508
 msgid ""
@@ -33810,6 +33578,9 @@ msgid ""
 "e.g., via keyboard commands, spreadsheet menus, or by deleting the sheet. "
 "This deletes the visual representation of the data."
 msgstr ""
+"キーボードコマンド、スプレッドシートメニュー、またはシートの削除など、推奨さ"
+"れる方法を使用して、リストを含むスプレッドシートテーブルを削除します。これに"
+"より、データの視覚的な表現が削除されます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:514
 msgid ""
@@ -33818,6 +33589,10 @@ msgid ""
 "trash` :guilabel:`Delete`. This deletes the data source of the list from the "
 "spreadsheet."
 msgstr ""
+"リストの :ref:`properties panel <spreadsheet/insert-list/properties>` から、 "
+":icon:`fa-cog` :guilabel:`(gear)` アイコンをクリックし、次に :icon:`fa-"
+"trash` :guilabel:`Delete` をクリックします。これにより、スプレッドシートから"
+"リストのデータソースが削除されます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_list.rst:519
 msgid ""
@@ -33855,6 +33630,10 @@ msgid ""
 "be pulled from any model, including models for which no pivot view is "
 "available, e.g., the *Sales Order Line* model."
 msgstr ""
+":ref:`Odooスプレッドシートから直接Odooデータを取得するピボットテーブルを挿入 "
+"<spreadsheet/pivot-tables/create>`します。このオプションを使用すると、*販売"
+"オーダ明細* モデルなど、ピボットビューが利用できないモデルを含む、任意の"
+"モデルからデータを取得できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_pivot_table.rst:15
 msgid ""
@@ -35167,6 +34946,9 @@ msgid ""
 "charts/create>` or :doc:`inserted directly from an Odoo graph view <../"
 "insert/insert_chart>`."
 msgstr ""
+"グラフは、 :ref:`スプレッドシートデータに基づいて手動で作成 <spreadsheet/"
+"charts/create>` するか、 :doc:`Odooのグラフビューから直接挿入 <../insert/"
+"insert_chart>` できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:16
 msgid "Create a chart"
@@ -35178,13 +34960,15 @@ msgstr "勘定科目表を手動で作成するには："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:20
 msgid "Select the cells containing the data to represent using a chart."
-msgstr ""
+msgstr "グラフで表示したいデータを含むセルを選択します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:21
 msgid ""
 "Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` "
 "from the menu bar."
 msgstr ""
+"メニューバーから :menuselection:`挿入 -->` :icon:`bar_chart` "
+":menuselection:`グラフ` をクリックします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:23
 msgid ""
@@ -35193,12 +34977,18 @@ msgid ""
 "the :icon:`tune` :ref:`Configuration <spreadsheet/charts/customize-"
 "configuration>` tab of the chart properties."
 msgstr ""
+"Odooは選択されたデータに最も適した :ref:`グラフタイプ <spreadsheet/charts/"
+"customize-configuration-type>` を使用します。これは、グラフプロパティの "
+":icon:`tune` :ref:`構成 <spreadsheet/charts/customize-configuration>` タブで"
+"変更できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:28
 msgid ""
 "Once the chart has been created, it can be :ref:`customized <spreadsheet/"
 "charts/customize>` via the chart properties."
 msgstr ""
+"グラフが作成されたら、グラフプロパティから :ref:`カスタマイズ <spreadsheet/"
+"charts/customize>` できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:34
 msgid "Customize charts"
@@ -35211,6 +35001,10 @@ msgid ""
 "further customized via the chart properties, which open in a panel to the "
 "right of the spreadsheet."
 msgstr ""
+" :ref:`手動で作成 <spreadsheet/charts/create>` されたか、または :doc:`Odooの"
+"グラフビューから挿入 <../insert/insert_chart>` されたグラフは、"
+"スプレッドシートの右側のパネルで開くグラフプロパティからさらにカスタマイズで"
+"きます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:40
 msgid ""
@@ -35219,6 +35013,10 @@ msgid ""
 "customize-configuration>` and :icon:`design_services` :ref:`Design "
 "<spreadsheet/charts/customize-design>` tabs respectively."
 msgstr ""
+"ここでは、 :icon:`tune` :ref:`構成 <spreadsheet/charts/customize-"
+"configuration>` および :icon:`design_services` :ref:`デザイン <spreadsheet/"
+"charts/customize-design>` タブから、グラフの構成やデザインの様々な側面をそれ"
+"ぞれ変更できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:45
 msgid "A chart's properties can be accessed at any time, as follows:"
@@ -35230,6 +35028,10 @@ msgid ""
 "over the chart, click the :icon:`more_vert` :guilabel:`(menu)` icon, then "
 "click :icon:`edit_square` :guilabel:`Edit`."
 msgstr ""
+"手動で作成されたか、またはOdooビューから挿入されたかにかかわらず、任意の"
+"グラフについて、グラフにカーソルを合わせ、 :icon:`more_vert` :guilabel:`"
+"(メニュー)` アイコンをクリックし、 :icon:`edit_square` :guilabel:`編集` を"
+"クリックします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:50
 msgid ""
@@ -35237,6 +35039,9 @@ msgid ""
 "menu bar, then select the relevant chart from "
 "the :icon:`bar_chart` :guilabel:`Charts` section."
 msgstr ""
+"Odooのグラフビューから挿入されたグラフについては、メニューバーの "
+":guilabel:`データ` をクリックし、 :icon:`bar_chart` :guilabel:`グラフ` "
+"セクションから関連するグラフを選択します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:56
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/pivot_tables.rst:105
@@ -35246,13 +35051,15 @@ msgstr "設定タプ"
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:58
 msgid ""
 "The :icon:`tune` :guilabel:`Configuration` tab includes the following fields:"
-msgstr ""
+msgstr " :icon:`tune` :guilabel:`構成` タブには以下のフィールドが含まれます："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:60
 msgid ""
 ":ref:`Chart type <spreadsheet/charts/customize-configuration-type>`: the "
 "type of chart. For a chart that has been:"
 msgstr ""
+":ref:`グラフタイプ <spreadsheet/charts/customize-configuration-type>`：グラフ"
+"のタイプ。以下のようにされたグラフの場合："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:63
 msgid "manually created, this is by default the chart type suggested by Odoo;"
@@ -35265,10 +35072,13 @@ msgid ""
 "selected in the graph view before the chart was inserted into the "
 "spreadsheet."
 msgstr ""
+"Odooのグラフビューから挿入された場合、これはデフォルトで、グラフが"
+"スプレッドシートに挿入される前にグラフビューで選択されていたグラフのタイプに"
+"なります。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:67
 msgid "Click the dropdown menu to select a different chart type."
-msgstr ""
+msgstr "ドロップダウンメニューをクリックして、別のグラフタイプを選択します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:69
 msgid ""
@@ -35278,6 +35088,10 @@ msgid ""
 "Click :icon:`east` :ref:`Edit domain <search/custom-filters>` to add or edit "
 "rules."
 msgstr ""
+":guilabel:`モデル` および :guilabel:`ドメイン`：Odooのグラフビューから挿入さ"
+"れたグラフの場合、それぞれデータが抽出されたモデルと、どのレコードを表示する"
+"かを決定するために使用されるルールです。:icon:`east` :ref:`ドメインを編集 "
+"<search/custom-filters>` をクリックしてルールを追加または編集します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:72
 msgid ""
@@ -35670,9 +35484,9 @@ msgid ""
 "also vary depending on the chart type."
 msgstr ""
 " :icon:`design_services` :guilabel:`デザイン` タブには、:ref:`グラフの種類 "
-"<spreadsheet/charts/customize-configuration-type>`に応じていくつかの"
-"セクションが含まれます。セクション内で利用可能なフィールドやオプションも、"
-"グラフの種類によって異なる場合があります。"
+"<spreadsheet/charts/customize-configuration-type>`に応じていくつかのセクショ"
+"ンが含まれます。セクション内で利用可能なフィールドやオプションも、グラフの種"
+"類によって異なる場合があります。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:268
 msgid "General"
@@ -35734,7 +35548,8 @@ msgstr ""
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:286
 msgid ""
 "To choose a color from the color selector, use one of the following methods:"
-msgstr "カラーセレクターから色を選択するには、以下のいずれかの方法を使用します。"
+msgstr ""
+"カラーセレクターから色を選択するには、以下のいずれかの方法を使用します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:288
 msgid "select one of the standard colors"
@@ -35745,8 +35560,8 @@ msgid ""
 "click the :icon:`add_circle` :guilabel:`(plus)` icon to manually select a "
 "custom color"
 msgstr ""
-" :icon:`add_circle` :guilabel:`(プラス)` アイコンをクリックして、"
-"カスタムカラーを手動で選択します"
+" :icon:`add_circle` :guilabel:`(プラス)` アイコンをクリックして、カスタムカ"
+"ラーを手動で選択します"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:290
 msgid ""
@@ -35776,8 +35591,9 @@ msgid ""
 "clicking the :icon:`info` :guilabel:`(Chart Info)` icon in the top right "
 "corner."
 msgstr ""
-"グラフに追加された注釈は、グラフにカーソルを合わせ、右上隅の:icon:`info` "
-":guilabel:`(グラフ情報)` アイコンをクリックすることで表示できます。"
+"グラフに追加された注釈は、グラフにカーソルを合わせ、右上隅"
+"の:icon:`info` :guilabel:`(グラフ情報)` アイコンをクリックすることで表示でき"
+"ます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:308
 msgid "Data Series"
@@ -35795,8 +35611,8 @@ msgid ""
 "color of the related data points on the chart by clicking on the color dot "
 "and :ref:`choosing the desired color <spreadsheet/charts/design-color>`."
 msgstr ""
-":guilabel:`系列の色`：関連するデータ系列を選択した状態で、色付きのドットを"
-"クリックし、 :ref:`希望の色を選択 <spreadsheet/charts/design-color>` すること"
+":guilabel:`系列の色`：関連するデータ系列を選択した状態で、色付きのドットをク"
+"リックし、 :ref:`希望の色を選択 <spreadsheet/charts/design-color>` すること"
 "で、チャート上の関連データポイントの色を変更できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:315
@@ -35833,12 +35649,12 @@ msgid ""
 "line, click the color dot, then :ref:`choose the desired color <spreadsheet/"
 "charts/design-color>`."
 msgstr ""
-":guilabel:`トレンドライン`：関連するデータ系列を選択した状態で、 "
-":guilabel:`トレンドラインを表示` を有効にし、トレンドラインの "
-":guilabel:`タイプ` を選択します： :guilabel:`線形`、 :guilabel:`指数`、 "
-":guilabel:`多項式`、 :guilabel:`対数`、または :guilabel:`末尾移動平均`。"
-"トレンドラインの色を変更するには、カラーのドットをクリックし、 :ref:`希望の色"
-"を選択 <spreadsheet/charts/design-color>` します。"
+":guilabel:`トレンドライン`：関連するデータ系列を選択した状態で、 :guilabel:`"
+"トレンドラインを表示` を有効にし、トレンドラインの :guilabel:`タイプ` を選択"
+"します： :guilabel:`線形`、 :guilabel:`指数`、 :guilabel:`多項式"
+"`、 :guilabel:`対数`、または :guilabel:`末尾移動平均`。トレンドラインの色を変"
+"更するには、カラーのドットをクリックし、 :ref:`希望の色を選択 <spreadsheet/"
+"charts/design-color>` します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:330
 msgid "Axes"
@@ -35855,9 +35671,9 @@ msgid ""
 "or :guilabel:`Vertical axis`. The font formatting, horizontal alignment, "
 "font size, and color of the title can be modified using the editor."
 msgstr ""
-":guilabel:`軸タイトル`： :guilabel:`水平軸` または :guilabel:`垂直軸` に"
-"タイトルを追加します。タイトルのフォント書式、水平配置、フォントサイズ、およ"
-"び色は、エディタを使用して変更できます。"
+":guilabel:`軸タイトル`： :guilabel:`水平軸` または :guilabel:`垂直軸` にタイ"
+"トルを追加します。タイトルのフォント書式、水平配置、フォントサイズ、および色"
+"は、エディタを使用して変更できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:338
 msgid ""
@@ -35898,9 +35714,9 @@ msgid ""
 "change the color of the related pie chart slice by clicking the color dot "
 "and :ref:`choosing the desired color <spreadsheet/charts/design-color>`."
 msgstr ""
-"\\ :guilabel:`円グラフのスライス`\\ セクションでは、円グラフのスライス（"
-"データのカテゴリ）の色を変更できます。関連するデータ系列を選択した状態で、"
-"カラーのドットをクリックし、 :ref:`希望の色を選択 <spreadsheet/charts/design-"
+"\\ :guilabel:`円グラフのスライス`\\ セクションでは、円グラフのスライス（デー"
+"タのカテゴリ）の色を変更できます。関連するデータ系列を選択した状態で、カラー"
+"のドットをクリックし、 :ref:`希望の色を選択 <spreadsheet/charts/design-"
 "color>` することで、関連する円グラフのスライスの色を変更します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:359
@@ -35912,9 +35728,9 @@ msgid ""
 "Sunburst, treemap, bubble, gauge, scorecard, waterfall, geo, funnel, and "
 "calendar charts have dedicated design sections."
 msgstr ""
-"サンバースト、ツリーマップ、バブル、ゲージ、スコアカード、ウォーターフォール"
-"、ジオ、ファンネル、およびカレンダーチャートには、専用の設計セクションがあり"
-"ます。"
+"サンバースト、ツリーマップ、バブル、ゲージ、スコアカード、ウォーターフォー"
+"ル、ジオ、ファンネル、およびカレンダーチャートには、専用の設計セクションがあ"
+"ります。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:367
 msgid "Manage charts"
@@ -35929,8 +35745,8 @@ msgid ""
 "Hover over a chart, then click the :icon:`more_vert` :guilabel:`(menu)` icon "
 "to reveal the following options:"
 msgstr ""
-"チャートにカーソルを合わせ、 :icon:`more_vert`\\ :guilabel:`(メニュー)`\\ "
-"アイコンをクリックすると、以下のオプションが表示されます："
+"チャートにカーソルを合わせ、 :icon:`more_vert`\\ :guilabel:`(メニュー)`\\ ア"
+"イコンをクリックすると、以下のオプションが表示されます："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:377
 msgid ""
@@ -35949,11 +35765,11 @@ msgid ""
 "spreadsheet*. Alternatively, with the chart selected, use the relevant "
 "keyboard shortcut to copy or cut the chart."
 msgstr ""
-":icon:`assignment`\\ :guilabel:`コピー`\\ または :icon:`os-cut`\\ "
-":guilabel:`切り取り`\\ をクリックし、チャートを *同じスプレッドシート内* に貼"
-"り付ける目的でコピーまたは切り取りします。または、チャートを選択した状態で、"
-"関連するキーボードショートカットを使用してチャートをコピーまたは切り取りする"
-"ことも可能です。"
+":icon:`assignment`\\ :guilabel:`コピー`\\ または :icon:`os-cut`\\ :guilabel:`"
+"切り取り`\\ をクリックし、チャートを *同じスプレッドシート内* に貼り付ける目"
+"的でコピーまたは切り取りします。または、チャートを選択した状態で、関連する"
+"キーボードショートカットを使用してチャートをコピーまたは切り取りすることも可"
+"能です。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:384
 msgid ""
@@ -36011,12 +35827,17 @@ msgid ""
 ":icon:`download` :guilabel:`Download` to download an image of the chart as a "
 "`PNG` file."
 msgstr ""
+":icon:`download` :guilabel:`ダウンロード` をクリックして、グラフの画像を "
+"`PNG` ファイルとしてダウンロードします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:406
 msgid ""
 ":icon:`delete` :guilabel:`Delete` to delete a chart from the spreadsheet. "
 "Alternatively, use the relevant keyboard command to delete a chart."
 msgstr ""
+":icon:`delete` :guilabel:`削除` をクリックして、スプレッドシートからグラフを"
+"削除します。あるいは、関連するキーボードコマンドを使用してグラフを削除します"
+"。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:410
 msgid ""
@@ -36029,7 +35850,7 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:416
 msgid "Reposition or resize charts"
-msgstr ""
+msgstr "グラフの位置変更またはサイズ変更"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:418
 msgid ""
@@ -36044,10 +35865,12 @@ msgid ""
 "Resize a chart by selecting it, then dragging the blue markers until the "
 "chart is the desired size."
 msgstr ""
+"チャートを選択して青いマーカーをドラッグし、希望のサイズになるまでチャートの"
+"サイズを変更します。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:424
 msgid "Resize a chart using the blue markers"
-msgstr ""
+msgstr "青いマーカーを使用してグラフのサイズを変更します"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/conditional_formatting.rst:3
 msgid "Conditional formatting"
@@ -40694,10 +40517,10 @@ msgid ""
 "only records where the salesperson :guilabel:`is in` the defined set of "
 "values, i.e., is `Mitchell Admin` or `Marc Demo`."
 msgstr ""
-"この例では、すべての販売担当者における販売オーダ上位10件のリストを示しており"
-"、日付グローバルフィルタによってデータが `直近30日` に絞り込まれています。\\ "
-":guilabel:`販売担当者`\\ フィールドにグローバルフィルタを適用すると、販売担当"
-"者が定義された値のセット\\ :guilabel:`に含まれる`\\ （つまり `Mitchell "
+"この例では、すべての販売担当者における販売オーダ上位10件のリストを示してお"
+"り、日付グローバルフィルタによってデータが `直近30日` に絞り込まれています。"
+"\\ :guilabel:`販売担当者`\\ フィールドにグローバルフィルタを適用すると、販売"
+"担当者が定義された値のセット\\ :guilabel:`に含まれる`\\ （つまり `Mitchell "
 "Admin` または `Marc Demo` である）レコードのみを表示できます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:29
@@ -40728,11 +40551,11 @@ msgid ""
 "filter could be set to show data from the last 30 days by default, rather "
 "than  showing all historical data."
 msgstr ""
-"必要に応じてデフォルトのフィルタ値を設定することで、スプレッドシートや"
-"ダッシュボードの読み込みが高速化され、必要に応じてさらにカスタマイズできる便"
-"利な初期ビューが提供されます。例えば、\\ :guilabel:`日付`\\ フィルタを設定し"
-"て、すべての履歴データを表示するのではなく、デフォルトで直近30日間のデータを"
-"表示することができます。"
+"必要に応じてデフォルトのフィルタ値を設定することで、スプレッドシートやダッ"
+"シュボードの読み込みが高速化され、必要に応じてさらにカスタマイズできる便利な"
+"初期ビューが提供されます。例えば、\\ :guilabel:`日付`\\ フィルタを設定して、"
+"すべての履歴データを表示するのではなく、デフォルトで直近30日間のデータを表示"
+"することができます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:44
 msgid ""
@@ -40909,13 +40732,11 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:110
 msgid ""
-"A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/"
-"simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-"
-"time>` field."
+"A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time "
+"<studio/fields/simple-fields-date-time>` field."
 msgstr ""
-"\\ :guilabel:`日付`\\ フィルターは、\\ :ref:`日付 <studio/fields/simple-"
-"fields-date>`\\ または\\ :ref:`日時 <studio/fields/simple-fields-date-"
-"time>`\\ フィールドに対してのみマッチングできます。"
+"\\ :guilabel:`日付`\\ フィルターは、 :ref:`日付または日時 <studio/fields/"
+"simple-fields-date-time>` フィールドに対してのみ照合可能です。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:113
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:150
@@ -41337,6 +41158,10 @@ msgid ""
 "over this area reveals a list of the active filters with information about "
 "the filter values used."
 msgstr ""
+"スプレッドシートに1つ以上のフィルタが適用されている場合、アクティブなフィルタ"
+"の数がスプレッドシート右上の :icon:`os-global-filters` :guilabel:`Filters` の"
+"横に表示されます。このエリアにマウスを合わせると、使用されているフィルタ値の"
+"情報とともにアクティブなフィルタのリストが表示されます。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:342
 msgid "Global filter active in a spreadsheet"
@@ -41351,10 +41176,9 @@ msgid ""
 "data` :menuselection:`Refresh all data` from the menu bar."
 msgstr ""
 "ブラウザを更新すると、すべてのグローバルフィルターが初期状態またはデフォルト"
-"値にリセットされます。適用済みのグローバルフィルターを保持したまま"
-"スプレッドシートのOdooデータを更新するには、メニューバーから "
-":menuselection:`データ -->` :icon:`os-refresh-data` :menuselection:`全データ"
-"を更新` をクリックします。"
+"値にリセットされます。適用済みのグローバルフィルターを保持したままスプレッド"
+"シートのOdooデータを更新するには、メニューバーから :menuselection:`データ --"
+">` :icon:`os-refresh-data` :menuselection:`全データを更新` をクリックします。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:352
 msgid ""
@@ -41629,6 +41453,8 @@ msgid ""
 ":guilabel:`Columns` and :guilabel:`Rows`: the :ref:`dimensions <spreadsheet/"
 "pivot-tables/dimensions>` used to group or segment data."
 msgstr ""
+":guilabel:`列` および :guilabel:`行`：データをグループ化またはセグメント化す"
+"るために使用される :ref:`寸法 <spreadsheet/pivot-tables/dimensions>`。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/pivot_tables.rst:123
 msgid ""
@@ -45235,6 +45061,567 @@ msgstr ""
 "その他のエラーについては、Meta Developer Suiteの\\ `WhatsApp Error Codes "
 "<https://developers.facebook.com/documentation/business-messaging/whatsapp/"
 "support/error-codes>`\\ __を参照してください。"
+
+#~ msgid ""
+#~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
+#~ "natural language, perform tasks, and assist users by interacting with "
+#~ "Odoo tools. Agents are a core component of the |AI| structure in Odoo. "
+#~ "Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-"
+#~ "odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/"
+#~ "tools>` that guide its behavior."
+#~ msgstr ""
+#~ "Odooの\\ |AI|\\ エージェントは、自然言語を理解し、タスクを実行し、Odooツー"
+#~ "ルを操作してユーザを支援するスマートな仮想アシスタントです。エージェント"
+#~ "は、Odooの\\ |AI|\\ 構造の中核となるコンポーネントです。各エージェントに"
+#~ "は、定義された目的、\\ :ref:`プロンプト <ai/agents/prompts-in-odoo>`\\ 、"
+#~ "そしてその動作を導く一連の\\ :ref:`スキル <ai/topics>`\\ および\\ :ref:`"
+#~ "ツール <ai/tools>`\\ が備わっています。"
+
+#~ msgid ""
+#~ "When interacting with an |AI| agent, the conversation interface may "
+#~ "display intermediate status messages while a request is being processed."
+#~ msgstr ""
+#~ "\\ |AI|\\ エージェントとやり取りする際、リクエストの処理中に会話インター"
+#~ "フェイスに中間ステータスメッセージが表示されることがあります。"
+
+#~ msgid ""
+#~ "These messages reflect the current step of the interaction, such as "
+#~ "analyzing the request, consulting sources, or preparing an action, before "
+#~ "the final response is generated."
+#~ msgstr ""
+#~ "これらのメッセージは、最終的な回答が生成される前の、リクエストの分析、ソー"
+#~ "スの参照、アクションの準備など、やり取りの現在のステップを反映しています。"
+
+#~ msgid "An Agent analyzing a user request."
+#~ msgstr "ユーザのリクエストを分析するエージェント。"
+
+#~ msgid "Agents are formed of two main components, *Skills* and *Sources*."
+#~ msgstr ""
+#~ "エージェントは、\\ *スキル*\\ と\\ *ソース*\\ という2つの主要コンポーネン"
+#~ "トで構成されています。"
+
+#~ msgid ""
+#~ "*Skills* are the instructions and roles that inform the agent of what "
+#~ "tasks they need to complete. *Tools* are assigned to skills, and are the "
+#~ "actual functions the agent can utilize to perform tasks."
+#~ msgstr ""
+#~ "\\ *スキル*\\ は、エージェントが完了する必要のあるタスクを伝える指示や役割"
+#~ "です。\\ *ツール*\\ はスキルに割り当てられ、エージェントがタスクを実行する"
+#~ "ために利用できる実際の機能です。"
+
+#~ msgid ""
+#~ "*Sources* provide the agent with the information they need to complete "
+#~ "their tasks."
+#~ msgstr ""
+#~ "*ソース* はエージェントがタスクを実行するために必要な情報を提供します。"
+
+#~ msgid ""
+#~ "While many |AI| features can be used in Odoo without the **AI** "
+#~ "application, creating and customizing agents requires that the **AI** "
+#~ "application is installed."
+#~ msgstr ""
+#~ "多くのAI機能は **AI** アプリを使用しなくても Odoo で利用できますが、エー"
+#~ "ジェントの作成やカスタマイズには **AI** アプリのインストールが必要です。"
+
+#~ msgid "AI prompts in Odoo"
+#~ msgstr "OdooのAIプロンプト"
+
+#~ msgid ""
+#~ "Before working with |AI| agents, it is important to understand some basic "
+#~ "concepts regarding |AI| prompts."
+#~ msgstr ""
+#~ "\\ |AI|\\ エージェントを使用する前に、\\ |AI|\\ プロンプトに関する基本的な"
+#~ "概念を理解しておくことが重要です。"
+
+#~ msgid ""
+#~ "An |AI| prompt is a set of written instructions or context given to an |"
+#~ "AI| model that tells it how to respond to a request, or what role to "
+#~ "take. Prompts can define:"
+#~ msgstr ""
+#~ "AIプロンプトとは、AIモデルに対して「どのように応答すべきか」「どのような役"
+#~ "割を担うべきか」を指示するために与える文章(指示や状況説明)のことです。プロ"
+#~ "ンプトでは次のような内容を定義できます:"
+
+#~ msgid "the tone, style, and persona of the |AI| model"
+#~ msgstr "AIモデルの口調、文体、ペルソナ"
+
+#~ msgid "the scope of what the model can do"
+#~ msgstr "モデルが実行できる範囲"
+
+#~ msgid "the type of output expected from the request"
+#~ msgstr "リクエストに対して期待される出力のタイプ"
+
+#~ msgid ""
+#~ "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
+#~ "agent's overall role, purpose, and behavior. It acts as the core mission "
+#~ "statement of the agent, and drives all interactions. During a "
+#~ "conversation, the system prompts and skill instructions are continuously "
+#~ "applied. They influence how the agent interprets messages, selects tools, "
+#~ "uses sources, and determines whether additional actions are required "
+#~ "before responding."
+#~ msgstr ""
+#~ "Odooでは、各\\ |AI|\\ エージェントに\\ *システムプロンプト*\\ が割り当てら"
+#~ "れ、エージェントの全体的な役割、目的、動作が定義されます。これはエージェン"
+#~ "トの中核となるミッションステートメントとして機能し、すべてのやり取りを推進"
+#~ "します。会話中、システムプロンプトとスキルの指示は継続的に適用されます。こ"
+#~ "れらは、エージェントがメッセージを解釈し、ツールを選択し、ソースを使用し、"
+#~ "応答前に追加のアクションが必要かどうかを判断する方法に影響を与えます。"
+
+#~ msgid ""
+#~ "Each :ref:`Skill <ai/topics>` also includes its own prompt-like "
+#~ "component, called *Instructions*. Instructions are skill-specific "
+#~ "guidelines that refine how the agent behaves within a certain context or "
+#~ "workflow, and how it interacts within the Odoo framework."
+#~ msgstr ""
+#~ "各\\ :ref:`スキル <ai/topics>`\\ にも、\\ *指示*\\ と呼ばれる独自のプロン"
+#~ "プトのようなコンポーネントが含まれています。指示はスキル固有のガイドライン"
+#~ "であり、特定のコンテキストやワークフロー内でのエージェントの動作や、Odooフ"
+#~ "レームワーク内での対話方法を細かく定義します。"
+
+#~ msgid "Step-by-step workflows for how to complete a specific action."
+#~ msgstr "特定のアクションを完了する方法に関する段階的なワークフロー"
+
+#~ msgid ""
+#~ "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` "
+#~ "that define how an agent behaves within a specific context. Essentially, "
+#~ "the skills define what an agent can do within the database. Skills guide "
+#~ "conversations, telling the agent what it can do, how it can do it, and "
+#~ "when it should do it."
+#~ msgstr ""
+#~ "\\ *スキル*\\ は、特定のコンテキスト内でエージェントがどのように動作するか"
+#~ "を定義する指示と\\ :ref:`ツール <ai/tools>`\\ のコレクションです。基本的"
+#~ "に、スキルはエージェントがデータベース内で何を実行できるかを定義します。ス"
+#~ "キルは会話を導き、エージェントができること、その実行方法、および実行すべき"
+#~ "タイミングを伝えます。"
+
+#~ msgid ""
+#~ "If an agent is not assigned any Skills, it is **only** able to provide "
+#~ "information. It **cannot** complete tasks or make changes to the database."
+#~ msgstr ""
+#~ "エージェントにスキルが割り当てられていない場合、情報の提供\\ **のみ**\\ が"
+#~ "可能です。タスクを実行したり、データベースに変更を加えたりすることは\\ **"
+#~ "できません**\\ 。"
+
+#~ msgid ""
+#~ "Within each skill is a detailed prompt, which provides the agent with "
+#~ "more in-depth instructions on how to perform the tasks associated with "
+#~ "that skill, define the boundaries of its behavior, and determine how it "
+#~ "should interpret user intent. These prompts ensure that the agent follows "
+#~ "a consistent reasoning pattern and uses the appropriate tools to generate "
+#~ "accurate, context-aware responses."
+#~ msgstr ""
+#~ "各スキル内には詳細なプロンプトがあり、そのスキルに関連するタスクを実行する"
+#~ "方法、動作の境界を定義する方法、ユーザの意図を解釈する方法について、エー"
+#~ "ジェントにより詳細な指示を与えます。これらのプロンプトにより、エージェント"
+#~ "が一貫した推論パターンに従い、適切なツールを使用して、正確でコンテキストに"
+#~ "応じた回答を生成できるようになります。"
+
+#~ msgid "The following skills are preconfigured in the **AI** app:"
+#~ msgstr "\\ **AI**\\ アプリには、以下のスキルがあらかじめ設定されています:"
+
+#~ msgid ""
+#~ ":guilabel:`View Builder`: Supports the interpretation of a user query to "
+#~ "open the appropriate Odoo view with a set of tools necessary to perform "
+#~ "the search. Natural language queries can also include time-based grouping "
+#~ "instructions. This allows agents to group results by time intervals such "
+#~ "as day, month, or year when querying records."
+#~ msgstr ""
+#~ ":guilabel:`ビュービルダ`：検索の実行に必要なツールセットを使用して適切な"
+#~ "Odooビューを開くための、ユーザクエリの解釈をサポートします。自然言語クエリ"
+#~ "には時間ベースのグループ化指示を含めることもできます。これにより、レコード"
+#~ "を照会する際に、エージェントが日、月、年などの時間間隔で結果をグループ化で"
+#~ "きるようになります。"
+
+#~ msgid ""
+#~ ":guilabel:`Information retrieval`: A collection of tools to retrieve "
+#~ "information about the models."
+#~ msgstr ""
+#~ ":guilabel:`情報取得`: モデルに関する情報を取得するためのツールのセットで"
+#~ "す。"
+
+#~ msgid ":guilabel:`Update Records`: Tools to update records."
+#~ msgstr ":guilabel:`レコード更新`：レコードを更新するためのツール。"
+
+#~ msgid ":guilabel:`Create Records`: Tools to create records."
+#~ msgstr ":guilabel:`レコード作成`：レコードを作成するためのツール。"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Images`: A collection of tools to support image "
+#~ "generation. Load this skill when the user asks to generate or enhance an "
+#~ "image."
+#~ msgstr ""
+#~ ":guilabel:`画像生成`：画像生成をサポートするツールのコレクション。ユーザが"
+#~ "画像の生成や補正を求めた場合に、このスキルを読み込みます。"
+
+#~ msgid ""
+#~ ":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
+#~ "time."
+#~ msgstr ""
+#~ ":guilabel:`Web検索`：エージェントがリアルタイムでインターネットを探索でき"
+#~ "るようにします。"
+
+#~ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
+#~ msgstr ""
+#~ ":guilabel:`Webサイトビルダ`：OdooのWebサイトページを編集するためのツール。"
+
+#~ msgid ""
+#~ ":guilabel:`Create Leads`: A collection of tools to support automated lead "
+#~ "creation. This skill is **only** available if the **CRM** app is "
+#~ "installed."
+#~ msgstr ""
+#~ ":guilabel:`リード作成`：リードの自動作成をサポートするツールのコレクショ"
+#~ "ン。このスキルは、\\ **CRM**\\ アプリがインストールされている場合に\\ **の"
+#~ "み**\\ 利用できます。"
+
+#~ msgid ""
+#~ "Within each skill is a set of :guilabel:`Instructions`, which act as a "
+#~ "prompt and provide guidance for the structure of the interaction, and one "
+#~ "or more :ref:`AI Tools <ai/tools>`, which indicate the functions the "
+#~ "agent can perform."
+#~ msgstr ""
+#~ "各スキルには、プロンプトとして機能しやり取りの構造に関するガイダンスを提供"
+#~ "する\\ :guilabel:`指示`\\ と、エージェントが実行できる機能を示す1つ以上の"
+#~ "\\ :ref:`AIツール <ai/tools>`\\ が含まれています。"
+
+#~ msgid "Tools"
+#~ msgstr "ツール"
+
+#~ msgid ""
+#~ "*Tools* are the functions the agent can perform in Odoo. These include "
+#~ "actions like creating a lead or opening a view. Tools extend the purpose "
+#~ "of the agent beyond conversations, they enable real actions. The "
+#~ "available tools in a database vary based on the applications installed. "
+#~ "Multiple :guilabel:`AI Tools` can be assigned to a single skill."
+#~ msgstr ""
+#~ "*ツール*\\ とは、エージェントがOdoo内で実行できる機能のことです。これに"
+#~ "は、リードの作成やビューを開くなどのアクションが含まれます。ツールはエー"
+#~ "ジェントの目的を会話だけに留まらず拡張し、実際のアクションを可能にします。"
+#~ "データベースで利用可能なツールは、インストールされているアプリケーションに"
+#~ "よって異なります。1つのスキルに複数の\\ :guilabel:`AIツール`\\ を割り当て"
+#~ "ることができます。"
+
+#~ msgid "Sources"
+#~ msgstr "応募元"
+
+#~ msgid "PDFs"
+#~ msgstr "PDF"
+
+#~ msgid "Weblinks"
+#~ msgstr "ウェブリンク"
+
+#~ msgid "Documents (uploaded in the **Documents** application)"
+#~ msgstr "ドキュメント ( **ドキュメント** アプリ内にアップロード済のもの)"
+
+#~ msgid "**Knowledge** app articles"
+#~ msgstr "**ナレッジ** アプリ記事"
+
+#~ msgid ""
+#~ "If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
+#~ "agent can **only** utilize information from the uploaded and active "
+#~ "sources."
+#~ msgstr ""
+#~ "エージェントで :guilabel:`ソースに限定` オプションが有効になっている場合、"
+#~ "エージェントはアップロード済みでアクティブなソースのみを利用できます。"
+
+#~ msgid "Uploaded files"
+#~ msgstr "アップロードされたファイル"
+
+#~ msgid ""
+#~ "During a conversation with an |AI| agent, additional context can be "
+#~ "provided by uploading files. Files are temporarily treated as sources for "
+#~ "the ongoing discussion. The agent can use their content to answer "
+#~ "questions, summarize information, or extract relevant details."
+#~ msgstr ""
+#~ "ファイルをアップロードすることで、\\ |AI|\\ エージェントとの会話中に追加の"
+#~ "コンテキストを提供できます。ファイルは、進行中のディスカッションのソースと"
+#~ "して一時的に扱われます。エージェントはその内容を使用して、質問への回答、情"
+#~ "報の要約、関連する詳細の抽出を行うことができます。"
+
+#~ msgid ""
+#~ "The provided files only influence the current conversation, unless they "
+#~ "are explicitly added as sources on the agent."
+#~ msgstr ""
+#~ "提供されたファイルは、エージェントのソースとして明示的に追加されない限り、"
+#~ "現在の会話にのみ影響します。"
+
+#~ msgid ""
+#~ "To attach a file in a conversation, click the :icon:`fa-plus-"
+#~ "circle` :guilabel:`(plus circle)` icon in the message window, then "
+#~ "click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
+#~ "window, select one or more files to attach, then click :guilabel:`Open`."
+#~ msgstr ""
+#~ "会話内でファイルを添付するには、メッセージウィンドウで\\ :icon:`fa-plus-"
+#~ "circle` :guilabel:`(プラス円)`\\ アイコンをクリックし、次に\\ :icon:`fa-"
+#~ "paperclip` :guilabel:`ファイルを添付`\\ をクリックします。ファイルエクスプ"
+#~ "ローラウィンドウで、添付するファイルを1つ以上選択し、\\ :guilabel:`開く"
+#~ "`\\ をクリックします。"
+
+#~ msgid ""
+#~ "A manager finds a receipt for supplies and is unsure whether it has "
+#~ "already been submitted to the **Expenses** app for reimbursement. They "
+#~ "open a conversation with the *Ask AI* agent and enter the following "
+#~ "prompt:"
+#~ msgstr ""
+#~ "ある管理者が備品の領収書を見つけましたが、精算のために\\ **経費**\\ アプリ"
+#~ "にすでに提出されているかどうかわかりません。その管理者は\\ *AIに質問*\\ "
+#~ "エージェントとの会話を開き、次のプロンプトを入力します:"
+
+#~ msgid "`Can you open the expense that matches this receipt?`"
+#~ msgstr "`この領収書に一致する経費を開いてくれますか？`"
+
+#~ msgid ""
+#~ "They attach the receipt to the message. After the agent analyzes the "
+#~ "attachment, it opens the view to the correct expense."
+#~ msgstr ""
+#~ "メッセージに領収書を添付します。エージェントが添付ファイルを分析した後、適"
+#~ "切な経費のビューが開きます。"
+
+#~ msgid "Add alt text."
+#~ msgstr "代替テキストを追加します。"
+
+#~ msgid "Gain insights from previewed files"
+#~ msgstr "プレビューしたファイルからインサイトを取得"
+
+#~ msgid ""
+#~ "When a document is open in preview mode, |AI| agents can use the content "
+#~ "of the previewed file as context for the conversation."
+#~ msgstr ""
+#~ "ドキュメントがプレビューモードで開かれている場合、\\ |AI|\\ エージェントは"
+#~ "プレビューされたファイルの内容を会話のコンテキストとして使用できます。"
+
+#~ msgid ""
+#~ "First, navigate to the :menuselection:`Documents` app and click a "
+#~ "document to preview it. Click the |AI| icon at the top of the page to "
+#~ "open the :guilabel:`Ask AI` chat window. From here, click one of the "
+#~ "default prompts to use them, or enter a custom one in the message window."
+#~ msgstr ""
+#~ "まず、\\ :menuselection:`ドキュメント`\\ アプリに移動し、ドキュメントをク"
+#~ "リックしてプレビューします。ページ上部の\\ |AI|\\ アイコンをクリックして、"
+#~ "\\ :guilabel:`AIに質問`\\ チャットウィンドウを開きます。ここから、デフォル"
+#~ "トのプロンプトのいずれかをクリックして使用するか、メッセージウィンドウにカ"
+#~ "スタムプロンプトを入力します。"
+
+#~ msgid ""
+#~ "In this case, the agent's responses are grounded in the file currently "
+#~ "being previewed, in combination with any other sources assigned to the "
+#~ "agent."
+#~ msgstr ""
+#~ "この場合、エージェントの回答は、エージェントに割り当てられている他の情報"
+#~ "ソースと併せて、現在プレビュー中のファイルに基づきます。"
+
+#~ msgid ""
+#~ "To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+#~ "click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
+#~ "description, if desired."
+#~ msgstr ""
+#~ "新しい\\ |AI|\\ エージェントを作成するには、\\ :menuselection:`AI`\\ アプ"
+#~ "リに移動して\\ :guilabel:`新規`\\ をクリックします。\\ :guilabel:`エージェ"
+#~ "ント名`\\ を入力し、必要に応じて簡単な説明を追加します。"
+
+#~ msgid ""
+#~ "Before creating a new agent, it is recommended to have a clear use case "
+#~ "in mind. This helps when writing out the :guilabel:`System Prompt`, and "
+#~ "assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
+#~ msgstr ""
+#~ "新しいエージェントを作成する前に、明確なユースケースを想定しておくことをお"
+#~ "勧めします。これは、\\ :guilabel:`システムプロンプト`\\ の記述や、"
+#~ "\\ :guilabel:`スキル`\\ および\\ :guilabel:`AIツール`\\ を割り当てる際に役"
+#~ "立ちます。"
+
+#~ msgid ""
+#~ "Next, select a :guilabel:`Response Style`. This manages the overall tone "
+#~ "the agent uses when responding to an inquiry. Choose from one of the "
+#~ "following options:"
+#~ msgstr ""
+#~ "次に、:guilabel:`応答スタイル` を選択します。これは、エージェントが問い合"
+#~ "わせに応答する際の全体的な口調を管理します。次のいずれかを選択できます："
+
+#~ msgid ""
+#~ ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
+#~ "clear, direct answers with a moderate level of detail."
+#~ msgstr ""
+#~ ":guilabel:`標準`：バランスの取れたプロフェッショナルなトーンを維持します。"
+#~ "適度な詳細さで、明確かつ直接的な回答を提供します。"
+
+#~ msgid ""
+#~ ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
+#~ "responses. Explores multiple perspectives, acknowledges subtleties, and "
+#~ "uses precise, academic language where appropriate."
+#~ msgstr ""
+#~ ":guilabel:`ニュアンス`：洗練され、深く文脈に沿った回答を提供します。複数の"
+#~ "視点を検討し、微妙なニュアンスを認識し、必要に応じて正確で学術的な表現を使"
+#~ "用します。"
+
+#~ msgid ""
+#~ ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
+#~ "Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
+#~ "dynamic structure to keep the user interested."
+#~ msgstr ""
+#~ ":guilabel:`軽快 & クリエイティブ`：パンチがあり、活気にあふれ、引き込まれ"
+#~ "るトーンです。簡潔さと機知を重視します。表現力豊かな言葉遣いや比喩、ダイナ"
+#~ "ミックな構成を用いて、ユーザーの興味を引きつけます。"
+
+#~ msgid ""
+#~ ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
+#~ "soundness above all else. Breaks down complex steps, cites reasoning "
+#~ "clearly, and verifies every claim. Adopts a meticulous and formal tone."
+#~ msgstr ""
+#~ ":guilabel:`慎重 & 厳密`：何よりも絶対的な正確さと論理的妥当性を最優先しま"
+#~ "す。複雑な手順を分解し、根拠を明確に示し、すべての主張を検証します。緻密で"
+#~ "フォーマルなトーンを採用します。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
+#~ "**only** respond based on the provided resources."
+#~ msgstr ""
+#~ "\\ :guilabel:`ソースに制限`\\ チェックボックスをクリックして、エージェント"
+#~ "が提供されたリソースに基づいて**のみ**回答するように制限します。"
+
+#~ msgid ""
+#~ "Next, select one or more :guilabel:`Skills` for the agent. As explained "
+#~ "above, :ref:`Skills <ai/topics>` include both instructions and tools that "
+#~ "guide the agent in helping users complete a task."
+#~ msgstr ""
+#~ "次に、エージェント用に1つ以上の\\ :guilabel:`スキル`\\ を選択します。前述"
+#~ "のとおり、\\ :ref:`スキル <ai/topics>`\\ には、ユーザーのタスク完了を支援"
+#~ "するようエージェントを導く指示とツールの両方が含まれています。"
+
+#~ msgid ""
+#~ "Enter a :guilabel:`System Prompt` with detailed instructions for the "
+#~ "agent as to their role and responsibilities."
+#~ msgstr ""
+#~ "エージェントの役割や責任を詳しく指示する :guilabel:`システムプロンプト` を"
+#~ "入力します。"
+
+#~ msgid "A new agent form with the required information."
+#~ msgstr "必要な情報が入力された新規エージェントのフォーム。"
+
+#~ msgid ""
+#~ "The specificity and length of the :guilabel:`System Prompt` can vary, "
+#~ "depending on the use case for the agent. Use the preconfigured agents as "
+#~ "an example of the possible information."
+#~ msgstr ""
+#~ ":guilabel:`システムプロンプト` の具体性や長さは、エージェントのユースケー"
+#~ "スによって異なります。あらかじめ用意されているエージェントを参考に、どのよ"
+#~ "うな情報を含められるかを確認してください。"
+
+#~ msgid ""
+#~ "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
+#~ "tab, then click :guilabel:`Add a source`."
+#~ msgstr ""
+#~ "エージェントに *ソース* が必要な場合は、 :guilabel:`ソース` タブまでスク"
+#~ "ロールし、:guilabel:`ソースを追加` をクリックします。"
+
+#~ msgid "Select a format:"
+#~ msgstr "フォーマットを選択:"
+
+#~ msgid ""
+#~ ":guilabel:`Upload a File`: Select the appropriate file from the explorer "
+#~ "window, and click :guilabel:`Open`."
+#~ msgstr ""
+#~ ":guilabel:`ファイルをアップロード`：エクスプローラーウィンドウから適切な"
+#~ "ファイルを選択し、\\ :guilabel:`開く`\\ をクリックします。"
+
+#~ msgid ""
+#~ ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at "
+#~ "once, paste one link per line. Click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`リンクを追加`：URLを貼り付けます。一度に複数のリンクを追加で"
+#~ "き、1行に1つのリンクを貼り付けます。\\ :guilabel:`保存`\\ をクリックしま"
+#~ "す。"
+
+#~ msgid ""
+#~ ":guilabel:`Add from Documents` (uploaded in the **Documents** "
+#~ "application): Click the checkbox next to one or more documents, then "
+#~ "click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`ドキュメントから追加`（\\ **ドキュメント**\\ アプリケーションで"
+#~ "アップロード）：1つ以上のドキュメントの横にあるチェックボックスをクリック"
+#~ "し、\\ :guilabel:`選択`\\ をクリックします。"
+
+#~ msgid ""
+#~ ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
+#~ "articles, then click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`ナレッジから追加`：1つ以上の記事の横にあるチェックボックスをク"
+#~ "リックし、\\ :guilabel:`選択`\\ をクリックします。"
+
+#~ msgid ""
+#~ "Once a source is added, the :guilabel:`Status` field updates to reflect "
+#~ "its current status. The source is ready when the status changes from "
+#~ "*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to "
+#~ "activate the source."
+#~ msgstr ""
+#~ "ソースが追加されると、\\ :guilabel:`ステータス`\\ フィールドが更新され、現"
+#~ "在のステータスが反映されます。ステータスが*処理中*から*インデックス済み*に"
+#~ "変わると、ソースの準備が完了します。\\ :guilabel:`稼働中`\\ トグルをスライ"
+#~ "ドしてソースを有効にします。"
+
+#~ msgid "A list of sources for an agent, each denoted with their format."
+#~ msgstr "エージェントのソースのリスト（各形式で表示）。"
+
+#~ msgid ""
+#~ "If a source fails to upload, it could be the result of a conflict with "
+#~ "the selected provider."
+#~ msgstr ""
+#~ "ソースのアップロードに失敗した場合、選択したプロバイダーとの競合が原因であ"
+#~ "る可能性があります。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test` button to open a conversation window and test "
+#~ "the new agent."
+#~ msgstr ""
+#~ ":guilabel:`テスト`\\ ボタンをクリックすると、会話ウィンドウが開き、新しい"
+#~ "エージェントをテストできます。"
+
+#~ msgid "Manually reprocessing sources"
+#~ msgstr "ソースの手動再処理"
+
+#~ msgid ""
+#~ "To reprocess a source, navigate to the :menuselection:`AI` app. Select an "
+#~ "|AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical ellipsis)` icon, then "
+#~ "click :guilabel:`Configuration`."
+#~ msgstr ""
+#~ "ソースを再処理するには、\\ :menuselection:`AI`\\ アプリに移動します。\\ |"
+#~ "AI|\\ エージェントを選択し、カンバンカード上の\\ :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(縦の省略記号)`\\ アイコンをクリックして、\\ :guilabel:`設定"
+#~ "`\\ をクリックします。"
+
+#~ msgid ""
+#~ "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next "
+#~ "to any source that should be updated."
+#~ msgstr ""
+#~ "\\ *ソース*\\ タブで、更新が必要なソースの横にある\\ :guilabel:`再処理"
+#~ "` :icon:`fa-refresh`\\ をクリックします。"
+
+#~ msgid "AI agent sources with the reprocess icon visible."
+#~ msgstr "再処理アイコンが表示されているAIエージェントのソース。"
+
+#~ msgid ""
+#~ "When one of these conditions is met, the agent activates the *Lead "
+#~ "Creation* :ref:`skill <ai/topics>`."
+#~ msgstr ""
+#~ "これらの条件のいずれかが満たされると、エージェントは*リード作成*\\ :ref:`"
+#~ "スキル <ai/topics>`\\ をアクティブ化します。"
+
+#~ msgid ""
+#~ "Users may also define *skills*, which grant the agent permission to "
+#~ "perform specific actions. :ref:`Skills <ai/topics>` allow advanced "
+#~ "scenarios such as record creation or automation triggers."
+#~ msgstr ""
+#~ "ユーザーは、エージェントに特定のアクションを実行する権限を付与する\\ *スキ"
+#~ "ル*\\ を定義することもできます。\\ :ref:`スキル <ai/topics>`\\ により、レ"
+#~ "コード作成や自動化トリガーなどの高度なシナリオが可能になります。"
+
+#~ msgid ""
+#~ "A :guilabel:`Date` filter can only match against a :ref:`Date <studio/"
+#~ "fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-"
+#~ "fields-date-time>` field."
+#~ msgstr ""
+#~ "\\ :guilabel:`日付`\\ フィルターは、\\ :ref:`日付 <studio/fields/simple-"
+#~ "fields-date>`\\ または\\ :ref:`日時 <studio/fields/simple-fields-date-"
+#~ "time>`\\ フィールドに対してのみマッチングできます。"
 
 #~ msgid "To insert a chart from an Odoo database into an Odoo spreadsheet:"
 #~ msgstr "OdooデータベースからOdooスプレッドシートにグラフを挿入するには："

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
-"PO-Revision-Date: 2026-11-07 12:34+0000\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
+"PO-Revision-Date: 2026-11-14 12:37+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/ro/>\n"
@@ -179,7 +179,7 @@ msgstr ""
 "funcționalități."
 
 #: ../../export/content/applications/productivity/ai.rst:64
-#: ../../export/content/applications/productivity/ai/agents.rst:3
+#: ../../export/content/applications/productivity/ai/agents.rst:8
 #: ../../export/content/applications/productivity/ai/support_operations.rst:28
 msgid "AI agents"
 msgstr "Agenți AI"
@@ -261,323 +261,266 @@ msgstr ""
 msgid ":doc:`AI MCP server <ai/mcp_server>`"
 msgstr ":doc:`Server MCP IA <ai/mcp_server>`"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:7
+#: ../../export/content/applications/productivity/ai/agents.rst:-1
 msgid ""
-"An |AI| agent is a smart virtual assistant in Odoo that can understand "
-"natural language, perform tasks, and assist users by interacting with Odoo "
-"tools. Agents are a core component of the |AI| structure in Odoo. Each agent "
-"has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set "
-"of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its "
-"behavior."
+"AI agents in Odoo are virtual assistants that understand natural-language "
+"requests and perform tasks. Learn how agents use instructions, skills, "
+"tools, and knowledge sources, and how to create and configure a new agent."
 msgstr ""
-"Un agent |AI| este un asistent virtual inteligent în Odoo care poate "
-"înțelege limbajul natural, poate executa sarcini și poate asista "
-"utilizatorii interacționând cu instrumentele Odoo. Agenții sunt o componentă "
-"de bază a structurii |AI| în Odoo. Fiecare agent are un scop definit, "
-"un :ref:`prompt <ai/agents/prompts-in-odoo>` și un set de :ref:`competențe "
-"<ai/topics>` și :ref:`instrumente <ai/tools>` care îi ghidează "
-"comportamentul."
+"Agenții AI din Odoo sunt asistenți virtuali care înțeleg cererile în limbaj "
+"natural și execută sarcini. Aflați cum folosesc agenții instrucțiunile, "
+"abilitățile, instrumentele și sursele de cunoștințe, precum și cum să creați "
+"și să configurați un agent nou."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:12
+#: ../../export/content/applications/productivity/ai/agents.rst:13
 msgid ""
-"When interacting with an |AI| agent, the conversation interface may display "
-"intermediate status messages while a request is being processed."
+"An |AI| agent is a virtual assistant in Odoo that can understand natural-"
+"language requests, access information, and perform tasks using the tools "
+"available to it. Agents can be configured for specific roles and can be used "
+"interactively or as part of automated workflows."
 msgstr ""
-"La interacțiunea cu un agent |AI|, interfața de conversație poate afișa "
-"mesaje intermediare de stare în timp ce o solicitare este în curs de "
-"procesare."
+"Un agent |AI| este un asistent virtual în Odoo care poate înțelege cererile "
+"în limbaj natural, accesa informații și executa sarcini folosind "
+"instrumentele pe care le are la dispoziție. Agenții pot fi configurați "
+"pentru roluri specifice și pot fi utilizați interactiv sau ca parte a unor "
+"fluxuri de lucru automatizate."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:15
+#: ../../export/content/applications/productivity/ai/agents.rst:17
+msgid "Agents are built from four main components:"
+msgstr "Agenții sunt construiți din patru componente principale:"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:19
 msgid ""
-"These messages reflect the current step of the interaction, such as "
-"analyzing the request, consulting sources, or preparing an action, before "
-"the final response is generated."
+"*Instructions* define the agent's purpose, behavior, and responsibilities."
 msgstr ""
-"Aceste mesaje reflectă etapa curentă a interacțiunii, cum ar fi analizarea "
-"solicitării, consultarea surselor sau pregătirea unei acțiuni, înainte de "
-"generarea răspunsului final."
+"*Instrucțiunile* definesc scopul, comportamentul și responsabilitățile "
+"agentului."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:18
-msgid "An Agent analyzing a user request."
-msgstr "Un agent care analizează o solicitare a utilizatorului."
+#: ../../export/content/applications/productivity/ai/agents.rst:20
+msgid ""
+"*Knowledge* provides information the agent can use when completing tasks."
+msgstr ""
+"*Cunoștințele* oferă informații pe care agentul le poate utiliza atunci când "
+"finalizează sarcini."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Skills* and *Sources*."
+msgid ""
+"*Skills and tools* define what the agent can do. Skills provide instructions "
+"for specific tasks, while tools allow the agent to perform actions in Odoo."
 msgstr ""
-"Agenții sunt formați din două componente principale: *Competențe* și *Surse*."
+"*Abilitățile și instrumentele* definesc ceea ce poate face agentul. "
+"Abilitățile oferă instrucțiuni pentru sarcini specifice, în timp ce "
+"instrumentele permit agentului să execute acțiuni în Odoo."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:23
 msgid ""
-"*Skills* are the instructions and roles that inform the agent of what tasks "
-"they need to complete. *Tools* are assigned to skills, and are the actual "
-"functions the agent can utilize to perform tasks."
+"*Triggers* determine when the agent is invoked, such as when a user starts a "
+"conversation or when an automated or scheduled action calls the agent."
 msgstr ""
-"*Competențele* reprezintă instrucțiunile și rolurile care informează agentul "
-"cu privire la sarcinile pe care trebuie să le îndeplinească. *Instrumentele* "
-"sunt atribuite competențelor și reprezintă funcțiile efective pe care "
-"agentul le poate utiliza pentru a efectua sarcini."
+"*Declanșatoarele* determină momentul în care agentul este invocat, cum ar fi "
+"atunci când un utilizator începe o conversație sau când o acțiune "
+"automatizată sau programată apelează agentul."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:26
-msgid ""
-"*Sources* provide the agent with the information they need to complete their "
-"tasks."
-msgstr ""
-"*Surse* furnizează agentului informațiile de care are nevoie pentru a-și "
-"îndeplini sarcinile."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:29
+#: ../../export/content/applications/productivity/ai/agents.rst:27
 msgid ""
 "While many |AI| features can be used in Odoo without the **AI** application, "
-"creating and customizing agents requires that the **AI** application is "
-"installed."
+"creating and customizing agents requires the **AI** application be installed."
 msgstr ""
-"Deși multe funcții AI pot fi utilizate în Odoo fără aplicația **AI**, "
-"crearea și personalizarea agenților necesită instalarea aplicației **AI**."
+"Deși multe funcționalități |AI| pot fi utilizate în Odoo fără aplicația "
+"**AI**, crearea și personalizarea agenților necesită instalarea aplicației "
+"**AI**."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:30
+msgid ""
+"Odoo |AI| uses In-app purchases (IAP) for AI requests. For more information "
+"on using |IAP| credits, including how to purchase additional credits, visit "
+"the `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>`_."
+msgstr ""
+"Odoo |AI| utilizează achiziții în aplicație (IAP) pentru cererile AI. Pentru "
+"mai multe informații despre utilizarea creditelor |IAP|, inclusiv cum să "
+"achiziționați credite suplimentare, vizitați `Odoo AI IAP <https://"
+"iap.odoo.com/iap/in-app-services/867>`_."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
-msgid "AI prompts in Odoo"
-msgstr "Prompturi AI în Odoo"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:37
-msgid ""
-"Before working with |AI| agents, it is important to understand some basic "
-"concepts regarding |AI| prompts."
-msgstr ""
-"Înainte de a lucra cu agenți |AI|, este important să înțelegeți câteva "
-"concepte de bază privind prompturile |AI|."
+msgid "Agent structure"
+msgstr "Structura agentului"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:40
-msgid ""
-"An |AI| prompt is a set of written instructions or context given to an |AI| "
-"model that tells it how to respond to a request, or what role to take. "
-"Prompts can define:"
-msgstr ""
-"Un prompt AI este un set de instrucțiuni scrise sau context oferit unui "
-"model AI care îi spune cum să răspundă la o solicitare sau ce rol să adopte. "
-"Prompturile pot defini:"
+msgid "Instructions"
+msgstr "Instrucțiuni"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:43
-msgid "the tone, style, and persona of the |AI| model"
-msgstr "tonul, stilul și personalitatea modelului AI"
+#: ../../export/content/applications/productivity/ai/agents.rst:42
+msgid "Instructions define the agent's overall role, purpose, and behavior."
+msgstr ""
+"Instrucțiunile definesc rolul general, scopul și comportamentul agentului."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:44
-msgid "the scope of what the model can do"
-msgstr "domeniul de aplicare al modelului"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:45
-msgid "the type of output expected from the request"
-msgstr "tipul de rezultat așteptat din solicitare"
+msgid ""
+"Each AI agent is assigned a *System Prompt* that provides its main "
+"instructions. It can define the agent's responsibilities, constraints, and "
+"how it should respond to requests."
+msgstr ""
+"Fiecărui agent AI îi este atribuit un *System Prompt* (solicitare de sistem) "
+"care oferă instrucțiunile sale principale. Acesta poate defini "
+"responsabilitățile agentului, constrângerile și modul în care ar trebui să "
+"răspundă la solicitări."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:47
 msgid ""
-"In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
-"agent's overall role, purpose, and behavior. It acts as the core mission "
-"statement of the agent, and drives all interactions. During a conversation, "
-"the system prompts and skill instructions are continuously applied. They "
-"influence how the agent interprets messages, selects tools, uses sources, "
-"and determines whether additional actions are required before responding."
+"Each :ref:`Skill <ai/agents/skills>` also includes its own prompt-like "
+"component, called *Instructions*. Instructions are skill-specific guidelines "
+"that refine how the agent behaves in a given context or workflow and how it "
+"interacts with the Odoo framework."
 msgstr ""
-"În Odoo, fiecărui agent |AI| îi este atribuit un *Prompt de sistem*, care "
-"definește rolul general, scopul și comportamentul agentului. Acesta "
-"acționează ca declarația principală de misiune a agentului și ghidează toate "
-"interacțiunile. În timpul unei conversații, prompturile de sistem și "
-"instrucțiunile de competență sunt aplicate continuu. Ele influențează modul "
-"în care agentul interpretează mesajele, selectează instrumentele, utilizează "
-"sursele și stabilește dacă sunt necesare acțiuni suplimentare înainte de a "
-"răspunde."
+"Fiecare :ref:`Abilitate <ai/agents/skills>` include, de asemenea, propria sa "
+"componentă de tip solicitare, numită *Instrucțiuni*. Instrucțiunile sunt "
+"ghiduri specifice abilității care rafinează modul în care agentul se "
+"comportă într-un context sau flux de lucru dat și cum interacționează cu "
+"cadrul de lucru Odoo."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:53
-msgid ""
-"Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, "
-"called *Instructions*. Instructions are skill-specific guidelines that "
-"refine how the agent behaves within a certain context or workflow, and how "
-"it interacts within the Odoo framework."
-msgstr ""
-"Fiecare :ref:`Competență <ai/topics>` include, de asemenea, o componentă de "
-"tip prompt, denumită *Instrucțiuni*. Instrucțiunile sunt recomandări "
-"specifice competenței care ajustează modul în care agentul se comportă într-"
-"un anumit context sau flux de lucru și modul în care interacționează în "
-"cadrul framework-ului Odoo."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:57
+#: ../../export/content/applications/productivity/ai/agents.rst:51
 msgid "Instructions often include:"
 msgstr "Instrucțiunile includ adesea:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:59
+#: ../../export/content/applications/productivity/ai/agents.rst:53
 msgid "A purpose, or what the skill covers."
 msgstr "Un scop, sau ceea ce acoperă competența."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:60
+#: ../../export/content/applications/productivity/ai/agents.rst:54
 msgid "Rules or constraints for the agent to follow when assigned this skill."
 msgstr ""
 "Reguli sau constrângeri pe care agentul trebuie să le urmeze atunci când îi "
 "este atribuită această competență."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:61
-msgid "Step-by-step workflows for how to complete a specific action."
-msgstr ""
-"Fluxuri de lucru pas cu pas pentru cum să finalizați o acțiune specifică"
+#: ../../export/content/applications/productivity/ai/agents.rst:55
+msgid "Step-by-step workflows for completing a specific action."
+msgstr "Fluxuri de lucru pas cu pas pentru finalizarea unei acțiuni specifice."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:62
+#: ../../export/content/applications/productivity/ai/agents.rst:56
 msgid "Technical details needed to complete any actions."
 msgstr "Detalii tehnice necesare pentru a finaliza orice acțiuni"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:65
-msgid "Agent structure"
-msgstr "Structura agentului"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:70
+#: ../../export/content/applications/productivity/ai/agents.rst:61
 msgid "Skills"
 msgstr "Aptitudini"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:72
+#: ../../export/content/applications/productivity/ai/agents.rst:63
 msgid ""
-"*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that "
-"define how an agent behaves within a specific context. Essentially, the "
-"skills define what an agent can do within the database. Skills guide "
-"conversations, telling the agent what it can do, how it can do it, and when "
-"it should do it."
+"*Skills* define specific tasks an agent can perform. Each *Skill* includes "
+"instructions that guide the agent through the task and can have one or more "
+"tools assigned to it."
 msgstr ""
-"*Competențele* reprezintă o colecție de instrucțiuni și :ref:`instrumente "
-"<ai/tools>` care definesc modul în care un agent se comportă într-un context "
-"specific. În esență, competențele definesc ceea ce un agent poate face în "
-"baza de date. Competențele ghidează conversațiile, indicând agentului ce "
-"poate face, cum poate face și când ar trebui să facă acest lucru."
+"*Abilitățile* definesc sarcini specifice pe care le poate efectua un agent. "
+"Fiecare *Abilitate* include instrucțiuni care ghidează agentul prin sarcină "
+"și pot avea unul sau mai multe instrumente alocate."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:67
+msgid ""
+"If an agent is not assigned any Skills, it can **only** provide information. "
+"It **cannot** complete tasks or make changes to the database."
+msgstr ""
+"Dacă unui agent nu îi este alocată nicio Abilitate, acesta poate **doar** să "
+"furnizeze informații. **Nu** poate finaliza sarcini sau efectua modificări "
+"în baza de date."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:70
+msgid ""
+"Multiple *Skills* can be assigned to the same agent, allowing it to perform "
+"different types of tasks."
+msgstr ""
+"Mai multe *Abilități* pot fi alocate aceluiași agent, permițându-i să "
+"execute diferite tipuri de sarcini."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:76
+msgid "Agent tools"
+msgstr "Instrumente agent"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:78
 msgid ""
-"If an agent is not assigned any Skills, it is **only** able to provide "
-"information. It **cannot** complete tasks or make changes to the database."
+"*Tools* are the functions an agent can perform in Odoo. Each agent has the "
+"following tools available:"
 msgstr ""
-"Dacă unui agent nu îi este atribuită nicio competență, acesta poate **doar** "
-"să ofere informații. **Nu** poate finaliza sarcini sau efectua modificări în "
-"baza de date."
+"*Instrumentele* sunt funcțiile pe care un agent le poate executa în Odoo. "
+"Fiecare agent are următoarele instrumente disponibile:"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:81
 msgid ""
-"Within each skill is a detailed prompt, which provides the agent with more "
-"in-depth instructions on how to perform the tasks associated with that "
-"skill, define the boundaries of its behavior, and determine how it should "
-"interpret user intent. These prompts ensure that the agent follows a "
-"consistent reasoning pattern and uses the appropriate tools to generate "
-"accurate, context-aware responses."
+"*Generate image*: A collection of tools to support image generation. Load "
+"this skill when the user asks to generate or enhance an image."
 msgstr ""
-"În cadrul fiecărei competențe se află un prompt detaliat, care oferă "
-"agentului instrucțiuni mai aprofundate despre modul de executare a "
-"sarcinilor asociate acelei competențe, definește limitele comportamentului "
-"său și stabilește modul în care ar trebui să interpreteze intenția "
-"utilizatorului. Aceste prompturi asigură faptul că agentul urmează un tipar "
-"consecvent de raționament și utilizează instrumentele adecvate pentru a "
-"genera răspunsuri precise și adaptate contextului."
+"*Generare imagine*: O colecție de instrumente pentru a sprijini generarea de "
+"imagini. Încărcați această abilitate atunci când utilizatorul solicită "
+"generarea sau îmbunătățirea unei imagini."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:83
+msgid "*Web Search*: Enable the Agent to explore the internet in real time."
+msgstr "*Căutare web*: Permite agentului să exploreze internetul în timp real."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:84
+msgid ""
+"*Self Update*: Allows an agent to identify missing or incomplete "
+"instructions and *Skills* and propose or make changes to its configuration."
+msgstr ""
+"*Autoactualizare*: Permite unui agent să identifice instrucțiunile sau "
+"*Abilitățile* lipsă sau incomplete și să propună sau să facă modificări ale "
+"configurației sale."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:87
-msgid "The following skills are preconfigured in the **AI** app:"
-msgstr "Următoarele competențe sunt preconfigurate în aplicația **AI**:"
+msgid ""
+"To enable a tool on an agent, click the *Skills* tab, then slide the "
+"appropriate toggle to green."
+msgstr ""
+"Pentru a activa un instrument pe un agent, faceți clic pe fila *Abilități*, "
+"apoi glisați comutatorul corespunzător pe verde."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:89
-msgid ""
-":guilabel:`View Builder`: Supports the interpretation of a user query to "
-"open the appropriate Odoo view with a set of tools necessary to perform the "
-"search. Natural language queries can also include time-based grouping "
-"instructions. This allows agents to group results by time intervals such as "
-"day, month, or year when querying records."
-msgstr ""
-":guilabel:`Constructor de vizualizări`: Permite interpretarea unei "
-"interogări a utilizatorului pentru a deschide vizualizarea Odoo "
-"corespunzătoare cu un set de instrumente necesare efectuării căutării. "
-"Interogările în limbaj natural pot include, de asemenea, instrucțiuni de "
-"grupare pe bază de timp. Acest lucru le permite agenților să grupeze "
-"rezultatele pe intervale de timp precum zi, lună sau an atunci când "
-"interoghează înregistrări."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:93
-msgid ""
-":guilabel:`Information retrieval`: A collection of tools to retrieve "
-"information about the models."
-msgstr ""
-":guilabel:`Recuperare de informații`: o colecție de instrumente pentru a "
-"recupera informații despre modele."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:94
-msgid ":guilabel:`Update Records`: Tools to update records."
-msgstr ""
-":guilabel:`Actualizare înregistrări`: Instrumente pentru actualizarea "
-"înregistrărilor."
+msgid "The tools on an AI agent, with some enabled."
+msgstr "Instrumentele de pe un agent AI, cu unele activate."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:95
-msgid ":guilabel:`Create Records`: Tools to create records."
-msgstr ""
-":guilabel:`Creare înregistrări`: Instrumente pentru crearea înregistrărilor."
+msgid "Subagents"
+msgstr "Subagenți"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:96
+#: ../../export/content/applications/productivity/ai/agents.rst:97
 msgid ""
-":guilabel:`Generate Images`: A collection of tools to support image "
-"generation. Load this skill when the user asks to generate or enhance an "
-"image."
+"An agent can use other |AI| agents as *subagents* to handle specialized "
+"tasks. When a user submits a request, the main agent can determine whether "
+"to delegate part of the task to a subagent based on its purpose and "
+"capabilities."
 msgstr ""
-":guilabel:`Generare imagini`: O colecție de instrumente pentru a sprijini "
-"generarea de imagini. Încărcați această competență atunci când utilizatorul "
-"solicită generarea sau îmbunătățirea unei imagini."
+"Un agent poate folosi alți |AI| agenți ca *subagenți* pentru a gestiona "
+"sarcini specializate. Când un utilizator trimite o solicitare, agentul "
+"principal poate determina dacă să delege o parte din sarcină unui subagent, "
+"în funcție de scopul și capabilitățile acestuia."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:98
+#: ../../export/content/applications/productivity/ai/agents.rst:101
 msgid ""
-":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
-"time."
+"Subagents allow an agent to delegate specific tasks to specialized agents "
+"rather than handling every request itself. The main agent can then use the "
+"subagent's results as part of its response."
 msgstr ""
-":guilabel:`Căutare pe web`: Permite agentului să exploreze internetul în "
-"timp real."
+"Subagenții permit unui agent să delege sarcini specifice către agenți "
+"specializați, în loc să gestioneze singur fiecare solicitare. Agentul "
+"principal poate apoi să folosească rezultatele subagentului ca parte a "
+"răspunsului său."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:99
-msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
-msgstr ""
-":guilabel:`Constructor site web`: Instrumente pentru editarea paginilor site-"
-"ului web Odoo."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:100
+#: ../../export/content/applications/productivity/ai/agents.rst:104
 msgid ""
-":guilabel:`Create Leads`: A collection of tools to support automated lead "
-"creation. This skill is **only** available if the **CRM** app is installed."
+"To assign a subagent, click on the *Skills* tab, scroll to the *Subagents* "
+"section, then click :icon:`add` :guilabel:`Add`. Then, select from the list "
+"of existing agents, or click :guilabel:`Create New` to create a new one."
 msgstr ""
-":guilabel:`Creare piste`: O colecție de instrumente pentru a sprijini "
-"crearea automată de piste. Această competență este disponibilă **doar** dacă "
-"este instalată aplicația **CRM**."
+"Pentru a aloca un subagent, faceți clic pe fila *Abilități*, derulați până "
+"la secțiunea *Subagenți*, apoi faceți clic pe :icon:`add` "
+":guilabel:`Adaugă`. Apoi, selectați din lista de agenți existenți sau faceți "
+"clic pe :guilabel:`Creează nou` pentru a crea unul nou."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:103
-msgid ""
-"Within each skill is a set of :guilabel:`Instructions`, which act as a "
-"prompt and provide guidance for the structure of the interaction, and one or "
-"more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can "
-"perform."
-msgstr ""
-"În cadrul fiecărei competențe se află un set de :guilabel:`Instrucțiuni`, "
-"care acționează ca un prompt și oferă îndrumări pentru structura "
-"interacțiunii, precum și unul sau mai multe :ref:`Instrumente AI <ai/"
-"tools>`, care indică funcțiile pe care le poate îndeplini agentul."
+#: ../../export/content/applications/productivity/ai/agents.rst:109
+#: ../../export/content/applications/productivity/knowledge.rst:3
+msgid "Knowledge"
+msgstr "Cunoștințe"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:110
-msgid "Tools"
-msgstr "Unelte"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:112
-msgid ""
-"*Tools* are the functions the agent can perform in Odoo. These include "
-"actions like creating a lead or opening a view. Tools extend the purpose of "
-"the agent beyond conversations, they enable real actions. The available "
-"tools in a database vary based on the applications installed. "
-"Multiple :guilabel:`AI Tools` can be assigned to a single skill."
-msgstr ""
-"*Instrumentele* sunt funcțiile pe care agentul le poate îndeplini în Odoo. "
-"Acestea includ acțiuni precum crearea unei piste sau deschiderea unei "
-"vizualizări. Instrumentele extind scopul agentului dincolo de conversații, "
-"făcând posibile acțiuni reale. Instrumentele disponibile într-o bază de date "
-"variază în funcție de aplicațiile instalate. Mai "
-"multe :guilabel:`Instrumente AI` pot fi atribuite unei singure competențe."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:120
-msgid "Sources"
-msgstr "Surse"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:122
+#: ../../export/content/applications/productivity/ai/agents.rst:111
 msgid ""
 "Sources are the data the agent can refer to when generating responses or "
 "completing tasks. Sources are indexed so the agent can retrieve relevant "
@@ -588,7 +531,7 @@ msgstr ""
 "agentul să poată recupera informații relevante când un utilizator pune o "
 "întrebare."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:126
+#: ../../export/content/applications/productivity/ai/agents.rst:115
 msgid ""
 "An agent designed to answer customer support questions has **Knowledge** "
 "articles included as sources, which include frequently asked questions."
@@ -596,329 +539,42 @@ msgstr ""
 "Un agent conceput pentru a răspunde la întrebări de asistență clienți are "
 "articole din **Knowledge** incluse ca surse, care includ întrebări frecvente."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:129
+#: ../../export/content/applications/productivity/ai/agents.rst:118
 msgid "Sources can be in the following formats:"
 msgstr "Sursele pot fi în următoarele formate:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:131
-msgid "PDFs"
-msgstr "PDF-uri"
+#: ../../export/content/applications/productivity/ai/agents.rst:120
+msgid "Files uploaded to the agent"
+msgstr "Fiȟiere încărcate pe agent"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:121
+msgid "Links to webpages"
+msgstr "Linkuri către pagini web"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:122
+msgid "Documents (uploaded in the :doc:`Documents <../documents>` application)"
+msgstr ""
+"Documente (încărcate în aplicația :doc:`Documente <../documents>` aplicația)"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:123
+msgid ":doc:`Knowledge <../knowledge>` app articles"
+msgstr ":doc:`Cunoțințe <../knowledge>` articole din aplicație"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:126
+msgid ""
+"If the :guilabel:`Restrict answers to Sources` option is enabled on an "
+"agent, the agent can **only** utilize information from the uploaded and "
+"active sources."
+msgstr ""
+"Dacă opțiunea :guilabel:`Restricționează răspunsurile la surse` este "
+"activată pe un agent, acesta poate folosi **doar** informații din sursele "
+"încărcate și active."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:130
+msgid "Reprocessing sources"
+msgstr "Reprocesarea surselor"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:132
-msgid "Weblinks"
-msgstr "Link-uri web"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:133
-msgid "Documents (uploaded in the **Documents** application)"
-msgstr "Documente (încărcate în aplicația **Documente**)"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:134
-msgid "**Knowledge** app articles"
-msgstr "Articole din aplicația **Knowledge**"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:137
-msgid ""
-"If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
-"agent can **only** utilize information from the uploaded and active sources."
-msgstr ""
-"Dacă opțiunea :guilabel:`Restricționare la surse` este activată pe un agent, "
-"agentul poate utiliza **numai** informații din sursele încărcate și active."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:141
-msgid "Uploaded files"
-msgstr "Fișiere încărcate"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:143
-msgid ""
-"During a conversation with an |AI| agent, additional context can be provided "
-"by uploading files. Files are temporarily treated as sources for the ongoing "
-"discussion. The agent can use their content to answer questions, summarize "
-"information, or extract relevant details."
-msgstr ""
-"În timpul unei conversații cu un agent |AI|, se poate oferi context "
-"suplimentar prin încărcarea de fișiere. Fișierele sunt tratate temporar ca "
-"surse pentru discuția în curs. Agentul poate folosi conținutul acestora "
-"pentru a răspunde la întrebări, a rezuma informații sau a extrage detalii "
-"relevante."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:147
-msgid ""
-"The provided files only influence the current conversation, unless they are "
-"explicitly added as sources on the agent."
-msgstr ""
-"Fișierele furnizate influențează doar conversația curentă, cu excepția "
-"cazului în care sunt adăugate explicit ca surse pentru agent."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:150
-msgid ""
-"To attach a file in a conversation, click the :icon:`fa-plus-"
-"circle` :guilabel:`(plus circle)` icon in the message window, then "
-"click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
-"window, select one or more files to attach, then click :guilabel:`Open`."
-msgstr ""
-"Pentru a atașa un fișier într-o conversație, faceți clic pe "
-"pictograma :icon:`fa-plus-circle` :guilabel:`(plus în cerc)` din fereastra "
-"de mesaj, apoi faceți clic pe :icon:`fa-paperclip` :guilabel:`Atașează "
-"fișiere`. În fereastra exploratorului de fișiere, selectați unul sau mai "
-"multe fișiere de atașat, apoi faceți clic pe :guilabel:`Deschide`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:155
-msgid ""
-"A manager finds a receipt for supplies and is unsure whether it has already "
-"been submitted to the **Expenses** app for reimbursement. They open a "
-"conversation with the *Ask AI* agent and enter the following prompt:"
-msgstr ""
-"Un manager găsește o chitanță pentru consumabile și nu este sigur dacă a "
-"fost trimisă deja în aplicația **Cheltuieli** pentru rambursare. Deschide o "
-"conversație cu agentul *Ask AI* și introduce următorul prompt:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:159
-msgid "`Can you open the expense that matches this receipt?`"
-msgstr "`Poți deschide cheltuiala care corespunde acestei chitanțe?`"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:161
-msgid ""
-"They attach the receipt to the message. After the agent analyzes the "
-"attachment, it opens the view to the correct expense."
-msgstr ""
-"Atașează chitanța la mesaj. După ce agentul analizează atașamentul, deschide "
-"vizualizarea către cheltuiala corectă."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:164
-msgid "Add alt text."
-msgstr "Adăugați text alternativ."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:168
-msgid "Gain insights from previewed files"
-msgstr "Obțineți informații din fișierele previzualizate"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:170
-msgid ""
-"When a document is open in preview mode, |AI| agents can use the content of "
-"the previewed file as context for the conversation."
-msgstr ""
-"Când un document este deschis în modul de previzualizare, agenții |AI| pot "
-"utiliza conținutul fișierului previzualizat drept context pentru conversație."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:173
-msgid ""
-"First, navigate to the :menuselection:`Documents` app and click a document "
-"to preview it. Click the |AI| icon at the top of the page to open "
-"the :guilabel:`Ask AI` chat window. From here, click one of the default "
-"prompts to use them, or enter a custom one in the message window."
-msgstr ""
-"Mai întâi, navigați la aplicația :menuselection:`Documente` și faceți clic "
-"pe un document pentru a-l previzualiza. Faceți clic pe pictograma |AI| din "
-"partea de sus a paginii pentru a deschide fereastra de "
-"chat :guilabel:`Întrebați AI`. De aici, faceți clic pe una dintre "
-"solicitările implicite pentru a o utiliza sau introduceți una personalizată "
-"în fereastra de mesaje."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:177
-msgid ""
-"In this case, the agent's responses are grounded in the file currently being "
-"previewed, in combination with any other sources assigned to the agent."
-msgstr ""
-"În acest caz, răspunsurile agentului se bazează pe fișierul previzualizat în "
-"mod curent, în combinație cu orice alte surse atribuite agentului."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:183
-msgid "Create a new agent"
-msgstr "Creare agent nou"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:185
-msgid ""
-"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
-"click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
-"description, if desired."
-msgstr ""
-"Pentru a crea un nou agent |AI|, navigați la aplicația :menuselection:`AI` "
-"și faceți clic pe :guilabel:`Nou`. Introduceți un :guilabel:`Nume agent`, "
-"apoi adăugați o scurtă descriere, dacă doriți."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:189
-msgid ""
-"Before creating a new agent, it is recommended to have a clear use case in "
-"mind. This helps when writing out the :guilabel:`System Prompt`, and "
-"assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
-msgstr ""
-"Înainte de a crea un nou agent, se recomandă să aveți în vedere un caz clar "
-"de utilizare. Acest lucru ajută la redactarea :guilabel:`Prompt de sistem` "
-"și la atribuirea :guilabel:`Competențe` și :guilabel:`Instrumente AI`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:193
-msgid ""
-"Next, select a :guilabel:`Response Style`. This manages the overall tone the "
-"agent uses when responding to an inquiry. Choose from one of the following "
-"options:"
-msgstr ""
-"Apoi, selectați un :guilabel:`Stil de răspuns`. Acesta gestionează tonul "
-"general pe care îl folosește agentul atunci când răspunde la o solicitare. "
-"Alegeți dintre următoarele opțiuni:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:196
-msgid ""
-":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
-"clear, direct answers with a moderate level of detail."
-msgstr ""
-":guilabel:`Standard`: Menține un ton echilibrat și profesional. Oferă "
-"răspunsuri clare și directe, cu un nivel moderat de detaliu."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:198
-msgid ""
-":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
-"responses. Explores multiple perspectives, acknowledges subtleties, and uses "
-"precise, academic language where appropriate."
-msgstr ""
-":guilabel:`Nuanțat`: Oferă răspunsuri sofisticate și profund "
-"contextualizate. Explorează perspective multiple, ține cont de subtilități "
-"și folosește un limbaj precis, academic, acolo unde este cazul."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:201
-msgid ""
-":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
-"Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
-"dynamic structure to keep the user interested."
-msgstr ""
-":guilabel:`Spontan și creativ`: Energic, vibrant și foarte captivant. "
-"Prioritizează concizia și spiritul ascuțit. Folosește un limbaj expresiv, "
-"metafore și o structură dinamică pentru a menține interesul utilizatorului."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:203
-msgid ""
-":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
-"soundness above all else. Breaks down complex steps, cites reasoning "
-"clearly, and verifies every claim. Adopts a meticulous and formal tone."
-msgstr ""
-":guilabel:`Lent și riguros`: Prioritizează precizia absolută și soliditatea "
-"logică mai presus de orice. Detaliază pașii complecși, citează clar "
-"argumentele și verifică fiecare afirmație. Adoptă un ton meticulos și formal."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:207
-msgid ""
-"Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
-"**only** respond based on the provided resources."
-msgstr ""
-"Bifați caseta de selectare :guilabel:`Restricționează la surse` pentru a "
-"limita agentul să răspundă **doar** pe baza resurselor furnizate."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:210
-msgid ""
-"Next, select one or more :guilabel:`Skills` for the agent. As explained "
-"above, :ref:`Skills <ai/topics>` include both instructions and tools that "
-"guide the agent in helping users complete a task."
-msgstr ""
-"Apoi, selectați una sau mai multe :guilabel:`Competențe` pentru agent. Așa "
-"cum s-a explicat mai sus, :ref:`Skills <ai/topics>` includ atât "
-"instrucțiuni, cât și instrumente care ghidează agentul în asistarea "
-"utilizatorilor pentru finalizarea unei sarcini."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:214
-msgid ""
-"Enter a :guilabel:`System Prompt` with detailed instructions for the agent "
-"as to their role and responsibilities."
-msgstr ""
-"Introduceți un :guilabel:`Prompt de sistem` cu instrucțiuni detaliate pentru "
-"agent privind rolul și responsabilitățile acestuia."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:217
-msgid "A new agent form with the required information."
-msgstr "Un formular nou de agent cu informațiile necesare."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:221
-msgid ""
-"The specificity and length of the :guilabel:`System Prompt` can vary, "
-"depending on the use case for the agent. Use the preconfigured agents as an "
-"example of the possible information."
-msgstr ""
-"Specificitatea și lungimea câmpului :guilabel:`Prompt de sistem` pot varia, "
-"în funcție de cazul de utilizare al agentului. Utilizați agenții "
-"preconfigurați ca exemplu pentru informațiile posibile."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:224
-msgid ""
-"If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
-"tab, then click :guilabel:`Add a source`."
-msgstr ""
-"Dacă sunt necesare *Surse* pentru agent, derulați până la "
-"fila :guilabel:`Surse`, apoi faceți clic pe :guilabel:`Adaugă o sursă`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:227
-msgid "Select a format:"
-msgstr "Selectați un format:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:229
-msgid ""
-":guilabel:`Upload a File`: Select the appropriate file from the explorer "
-"window, and click :guilabel:`Open`."
-msgstr ""
-":guilabel:`Încărcați un fișier`: Selectați fișierul corespunzător din "
-"fereastra exploratorului și faceți clic pe :guilabel:`Deschide`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:231
-msgid ""
-":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, "
-"paste one link per line. Click :guilabel:`Save`."
-msgstr ""
-":guilabel:`Adăugați un link`: Lipiți adresa URL. Se pot adăuga mai multe "
-"linkuri simultan, lipind câte un link pe fiecare rând. Faceți clic "
-"pe :guilabel:`Salvați`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:233
-msgid ""
-":guilabel:`Add from Documents` (uploaded in the **Documents** application): "
-"Click the checkbox next to one or more documents, then "
-"click :guilabel:`Select`."
-msgstr ""
-":guilabel:`Adăugați din Documente` (încărcate în aplicația **Documente**): "
-"Bifați caseta de selectare din dreptul unuia sau mai multor documente, apoi "
-"faceți clic pe :guilabel:`Selectați`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:235
-msgid ""
-":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
-"articles, then click :guilabel:`Select`."
-msgstr ""
-":guilabel:`Adăugați din Cunoștințe`: Bifați caseta de selectare din dreptul "
-"unuia sau mai multor articole, apoi faceți clic pe :guilabel:`Selectați`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:238
-msgid ""
-"Once a source is added, the :guilabel:`Status` field updates to reflect its "
-"current status. The source is ready when the status changes from "
-"*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate "
-"the source."
-msgstr ""
-"Odată adăugată o sursă, câmpul :guilabel:`Stare` se actualizează pentru a "
-"reflecta starea curentă a acesteia. Sursa este gata atunci când starea se "
-"schimbă din *În procesare* în *Indexat*. Glisați "
-"comutatorul :guilabel:`Activ` pentru a activa sursa."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:242
-msgid "A list of sources for an agent, each denoted with their format."
-msgstr "O listă de surse pentru un agent, fiecare indicată cu formatul său."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:246
-msgid ""
-"If a source fails to upload, it could be the result of a conflict with the "
-"selected provider."
-msgstr ""
-"Dacă o sursă nu se poate încărca, acest lucru poate fi rezultatul unui "
-"conflict cu furnizorul selectat."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:248
-msgid ""
-"Click the :guilabel:`Test` button to open a conversation window and test the "
-"new agent."
-msgstr ""
-"Faceți clic pe butonul :guilabel:`Testează` pentru a deschide o fereastră de "
-"conversație și a testa noul agent."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:251
-msgid "Manually reprocessing sources"
-msgstr "Reprocesarea manuală a surselor"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:253
 msgid ""
 "If the content of a source changes after it has been indexed, it may be "
 "necessary to reprocess the source so that agents use the most recent "
@@ -932,29 +588,162 @@ msgstr ""
 "reflectarea documentelor, linkurilor sau articolelor din baza de cunoștințe "
 "actualizate în răspunsurile viitoare ale agentului."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:258
-msgid ""
-"To reprocess a source, navigate to the :menuselection:`AI` app. Select an |"
-"AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical ellipsis)` icon, then "
-"click :guilabel:`Configuration`."
-msgstr ""
-"Pentru a reprocesa o sursă, navigați la aplicația :menuselection:`AI`. "
-"Selectați un agent |AI| și, pe cardul kanban, faceți clic pe "
-"pictograma :icon:`fa-ellipsis-v` :guilabel:`(puncte de suspensie "
-"verticale)`, apoi faceți clic pe :guilabel:`Configurare`."
+#: ../../export/content/applications/productivity/ai/agents.rst:137
+msgid "To reprocess a source:"
+msgstr "Pentru a reprocesa o sursă:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:262
-msgid ""
-"On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to "
-"any source that should be updated."
-msgstr ""
-"În fila *Surse*, faceți clic pe :guilabel:`Reprocesează` :icon:`fa-refresh` "
-"lângă orice sursă care trebuie actualizată."
+#: ../../export/content/applications/productivity/ai/agents.rst:139
+msgid "Navigate to the :menuselection:`AI` app and select an |AI| agent."
+msgstr "Navigați la aplicația :menuselection:`AI` și selectați un agent |AI|."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:265
-msgid "AI agent sources with the reprocess icon visible."
-msgstr "Sursele agentului AI cu pictograma de reprocesare vizibilă."
+#: ../../export/content/applications/productivity/ai/agents.rst:140
+msgid "Click the *Knowledge* tab, and select a source."
+msgstr "Faceți clic pe fila *Cunoțințe* și selectați o sursă."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:141
+msgid ""
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the "
+"source."
+msgstr ""
+"Faceți clic pe pictograma :icon:`fa-ellipsis-v` :guilabel:`(elipsă verticală)"
+"` pentru sursa respectivă."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:142
+msgid "On the menu, click :guilabel:`Reprocess`."
+msgstr "Din meniu, faceți clic pe :guilabel:`Reprocesare`."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:144
+msgid "The Knowledge tab of an agent, with the Reprocess option visible."
+msgstr "Fila Cunoțințe a unui agent, cu opțiunea Reprocesare vizibilă."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:148
+msgid "Triggers"
+msgstr "Declanșatoare"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:150
+msgid ""
+"An agent can be triggered in different ways depending on how it is used."
+msgstr ""
+"Un agent poate fi declanșat în diferite moduri, în funcție de modul în care "
+"este utilizat."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:152
+msgid ""
+"Agents can be launched interactively by users through an AI chat. They can "
+"also be triggered automatically by automated actions and scheduled actions, "
+"allowing agents to participate in automated workflows."
+msgstr ""
+"Agenții pot fi lansați interactiv de utilizatori printr-un chat AI. Aceștia "
+"pot fi, de asemenea, declanșați automat prin acțiuni automatizate și acțiuni "
+"programate, permițând agenților să participe la fluxuri de lucru "
+"automatizate."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:156
+msgid ""
+"To add a trigger to an agent, navigate to the *Trigger* tab and "
+"click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
+"triggered?* popup, choose from one of the following options:"
+msgstr ""
+"Pentru a adăuga un declanșator unui agent, navigați la fila *Trigger* și "
+"faceți clic pe :icon:`add` :guilabel:`Adaugă`. În fereastra pop-up *When "
+"should your agent be triggered?*, alegeți una dintre următoarele opțiuni:"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:159
+msgid "*On a schedule*: Runs automatically according to a set frequency."
+msgstr "*Programat*: Rulează automat conform unei frecvențe stabilite."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:160
+msgid ""
+"*Based on a Date Field*: Runs once per record, as soon as a specific date is "
+"reached."
+msgstr ""
+"*Bazat pe un câmp de dată*: Rulează o singură dată per înregistrare, imediat "
+"ce o anumită dată este atinsă."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:161
+msgid "*After creation*: Runs whenever a new record is added."
+msgstr ""
+"*După creare*: Rulează ori de câte ori este adăugată o înregistrare nouă."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:162
+msgid "*After update*: Runs whenever a specific field is updated."
+msgstr ""
+"*După actualizare*: Rulează ori de câte ori un câmp specific este actualizat."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:165
+msgid ""
+"If unsure which option is best for a particular use case, click "
+"the :guilabel:`I need help to choose` option at the bottom of the popup. "
+"This opens a conversation with the *Odoo AI* agent. The agent then walks "
+"through the specifics of the use case to help select the best option."
+msgstr ""
+"Dacă nu sunteți sigur care opțiune este cea mai potrivită pentru un anumit "
+"caz de utilizare, faceți clic pe opțiunea :guilabel:`Am nevoie de ajutor "
+"pentru a alege` din partea de jos a ferestrei pop-up. Aceasta deschide o "
+"conversație cu agentul *Odoo AI*. Agentul va parcurge apoi specificul "
+"cazului de utilizare pentru a ajuta la selectarea celei mai bune opțiuni."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:170
+msgid "See :doc:`AI server actions <server-actions>` for more information."
+msgstr ""
+"Consultați :doc:`Acțiuni server AI <server-actions>` pentru mai multe "
+"informații."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:175
+msgid "Create a new agent"
+msgstr "Creare agent nou"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:177
+msgid ""
+"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+"click :guilabel:`New`. Enter an agent name, then add a short description, if "
+"desired."
+msgstr ""
+"Pentru a crea un agent nou |AI|, navigați la aplicația :menuselection:`AI` "
+"și faceți clic pe :guilabel:`Nou`. Introduceți un nume pentru agent, apoi "
+"adăugați o scurtă descriere, dacă doriți."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:181
+msgid ""
+"Before creating a new agent, it is recommended to have a clear use case in "
+"mind. This helps when writing out the *Instructions* and assigning the "
+"*Skills*."
+msgstr ""
+"Înainte de a crea un agent nou, se recomandă să aveți un caz de utilizare "
+"clar în minte. Acest lucru ajută la scrierea *Instrucțiunilor* și la "
+"atribuirea *Abilităților*."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:184
+msgid ""
+"On the *Instructions* tab, enter a system prompt with detailed instructions "
+"for the agent as to their role and responsibilities."
+msgstr ""
+"În fila *Instrucțiuni*, introduceți un prompt de sistem cu instrucțiuni "
+"detaliate pentru agent cu privire la rolul și responsabilitățile sale."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:187
+msgid "A new agent form."
+msgstr "Un formular nou de agent."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:190
+msgid ""
+"On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As "
+"explained above, :ref:`Skills <ai/agents/skills>` include both instructions "
+"and tools that guide the agent in helping users complete a task."
+msgstr ""
+"În fila *Abilități*, selectați una sau mai multe :guilabel:`Abilități` "
+"pentru agent. Așa cum s-a explicat mai sus, :ref:`Abilități <ai/agents/"
+"skills>` includ atât instrucțiuni, cât și instrumente care ghidează agentul "
+"în asistarea utilizatorilor pentru finalizarea unei sarcini."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:194
+msgid ""
+"Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit "
+"the agent to **only** respond based on the provided resources."
+msgstr ""
+"Glisați comutatorul :guilabel:`Restricționează răspunsurile la Sursă` pe "
+"activ pentru a limita agentul să răspundă **doar** pe baza resurselor "
+"furnizate."
 
 #: ../../export/content/applications/productivity/ai/apikeys.rst:3
 msgid "AI API keys"
@@ -2553,10 +2342,10 @@ msgstr "Agentul nu poate răspunde cu grad ridicat de încredere."
 #: ../../export/content/applications/productivity/ai/live-chat.rst:86
 msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
-"Creation* :ref:`skill <ai/topics>`."
+"Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"Când una dintre aceste condiții este îndeplinită, agentul "
-"activează :ref:`competența <ai/topics>` de *creare de piste*."
+"Când una dintre aceste condiții este îndeplinită, agentul activează "
+":ref:`abilitatea <ai/agents/skills>` de *Creare pistă*."
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -4536,13 +4325,13 @@ msgstr ""
 #: ../../export/content/applications/productivity/ai/support_operations.rst:87
 msgid ""
 "Users may also define *skills*, which grant the agent permission to perform "
-"specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as "
-"record creation or automation triggers."
+"specific actions. :ref:`Skills <ai/agents/skills>` allow advanced scenarios "
+"such as record creation or automation triggers."
 msgstr ""
-"Utilizatorii pot defini, de asemenea, *competențe*, care acordă agentului "
-"permisiunea de a efectua acțiuni specifice. :ref:`Competențele <ai/topics>` "
-"permit scenarii avansate, cum ar fi crearea de înregistrări sau declanșatori "
-"de automatizare."
+"Utilizatorii pot defini, de asemenea, *abilități*, care oferă agentului "
+"permisiunea de a efectua acțiuni specifice. :ref:`Abilități <ai/agents/"
+"skills>` permit scenarii avansate, cum ar fi crearea de înregistrări sau "
+"declanșatoare de automatizare."
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:90
 msgid "An example support AI agent."
@@ -14294,10 +14083,6 @@ msgid ""
 msgstr ""
 ":doc:`Digitalizarea documentelor bazată pe inteligență artificială <../"
 "finance/accounting/vendor_bills/invoice_digitization>`"
-
-#: ../../export/content/applications/productivity/knowledge.rst:3
-msgid "Knowledge"
-msgstr "Cunoștințe"
 
 #: ../../export/content/applications/productivity/knowledge.rst:5
 msgid ""
@@ -33690,16 +33475,16 @@ msgid ""
 "With the relevant graph view open in your database, "
 "click :guilabel:`Spreadsheet`."
 msgstr ""
-"Cu vizualizarea graficului relevant deschisă în baza de date, faceți clic pe "
-":guilabel:`Foaie de calcul`."
+"Cu vizualizarea graficului relevant deschisă în baza de date, faceți clic "
+"pe :guilabel:`Foaie de calcul`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:8
 msgid ""
 "In the :guilabel:`Insert in Spreadsheet` window, edit the :guilabel:`Graph "
 "name` if needed."
 msgstr ""
-"În fereastra :guilabel:`Inserare în foaie de calcul`, editați "
-":guilabel:`Nume grafic` dacă este necesar."
+"În fereastra :guilabel:`Inserare în foaie de calcul`, "
+"editați :guilabel:`Nume grafic` dacă este necesar."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:10
 msgid ""
@@ -33717,8 +33502,8 @@ msgid ""
 "folder."
 msgstr ""
 "Când inserați o diagramă într-o foaie de calcul nouă, foaia de calcul este "
-"salvată în aplicația **Documente** în dosarul personal :icon:`storage` "
-":guilabel:`Unitatea mea` ."
+"salvată în aplicația **Documente** în dosarul "
+"personal :icon:`storage` :guilabel:`Unitatea mea` ."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:17
 msgid "Click :guilabel:`Insert`."
@@ -36605,8 +36390,8 @@ msgid ""
 "Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` "
 "from the menu bar."
 msgstr ""
-"Faceți clic pe :menuselection:`Inserare -->` :icon:`bar_chart` "
-":menuselection:`Diagramă` din bara de meniu."
+"Faceți clic pe :menuselection:`Inserare --"
+">` :icon:`bar_chart` :menuselection:`Diagramă` din bara de meniu."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:23
 msgid ""
@@ -36639,8 +36424,8 @@ msgid ""
 "further customized via the chart properties, which open in a panel to the "
 "right of the spreadsheet."
 msgstr ""
-"O diagramă care a fost :ref:`creată manual <spreadsheet/charts/create>` sau "
-":doc:`inserată dintr-o vizualizare grafic Odoo <../insert/insert_chart>` "
+"O diagramă care a fost :ref:`creată manual <spreadsheet/charts/create>` "
+"sau :doc:`inserată dintr-o vizualizare grafic Odoo <../insert/insert_chart>` "
 "poate fi personalizată ulterior prin intermediul proprietăților diagramei, "
 "care se deschid într-un panou în partea dreaptă a foii de calcul."
 
@@ -36652,9 +36437,10 @@ msgid ""
 "<spreadsheet/charts/customize-design>` tabs respectively."
 msgstr ""
 "Aici, este posibil să modificați diverse aspecte ale configurației și "
-"designului diagramei prin intermediul taburilor :icon:`tune` "
-":ref:`Configurare <spreadsheet/charts/customize-configuration>` și "
-":icon:`design_services` :ref:`Design <spreadsheet/charts/customize-design>` ."
+"designului diagramei prin intermediul "
+"taburilor :icon:`tune` :ref:`Configurare <spreadsheet/charts/customize-"
+"configuration>` și :icon:`design_services` :ref:`Design <spreadsheet/charts/"
+"customize-design>` ."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:45
 msgid "A chart's properties can be accessed at any time, as follows:"
@@ -36668,8 +36454,8 @@ msgid ""
 msgstr ""
 "Pentru orice diagramă, fie că este creată manual sau inserată dintr-o "
 "vizualizare Odoo, treceți cu mouse-ul peste diagramă, faceți clic pe "
-"pictograma :icon:`more_vert` :guilabel:`(meniu)` , apoi faceți clic pe "
-":icon:`edit_square` :guilabel:`Editare`."
+"pictograma :icon:`more_vert` :guilabel:`(meniu)` , apoi faceți clic "
+"pe :icon:`edit_square` :guilabel:`Editare`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:50
 msgid ""
@@ -36677,8 +36463,8 @@ msgid ""
 "menu bar, then select the relevant chart from "
 "the :icon:`bar_chart` :guilabel:`Charts` section."
 msgstr ""
-"Pentru o diagramă inserată dintr-o vizualizare grafic Odoo, faceți clic pe "
-":guilabel:`Date` în bara de meniu, apoi selectați diagrama relevantă din "
+"Pentru o diagramă inserată dintr-o vizualizare grafic Odoo, faceți clic "
+"pe :guilabel:`Date` în bara de meniu, apoi selectați diagrama relevantă din "
 "secțiunea :icon:`bar_chart` :guilabel:`Diagrame`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:56
@@ -37236,8 +37022,8 @@ msgid ""
 "a :guilabel:`See more link`."
 msgstr ""
 "Secțiunea :guilabel:`Adnotare` permite adăugarea de :guilabel:`Text` pentru "
-"a oferi context sau informații suplimentare despre diagramă și/sau un "
-":guilabel:`link Aflați mai multe`."
+"a oferi context sau informații suplimentare despre diagramă și/sau "
+"un :guilabel:`link Aflați mai multe`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:302
 msgid ""
@@ -37246,8 +37032,9 @@ msgid ""
 "corner."
 msgstr ""
 "Adnotările adăugate la o diagramă pot fi vizualizate trecând cu mouse-ul "
-"peste diagramă, apoi făcând clic pe pictograma :icon:`info` :guilabel:`"
-"(Informații diagramă)` din colțul din dreapta sus."
+"peste diagramă, apoi făcând clic pe "
+"pictograma :icon:`info` :guilabel:`(Informații diagramă)` din colțul din "
+"dreapta sus."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:308
 msgid "Data Series"
@@ -37282,9 +37069,9 @@ msgid ""
 "determine whether the series is shown as a :guilabel:`Bar` "
 "or :guilabel:`Line`."
 msgstr ""
-":guilabel:`Tip serie`: Pentru fiecare serie de date a unei diagrame "
-":guilabel:`Combo`, stabiliți dacă seria este afișată ca :guilabel:`Bară` sau "
-":guilabel:`Linie`."
+":guilabel:`Tip serie`: Pentru fiecare serie de date a unei "
+"diagrame :guilabel:`Combo`, stabiliți dacă seria este afișată "
+"ca :guilabel:`Bară` sau :guilabel:`Linie`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:318
 msgid ""
@@ -37308,9 +37095,9 @@ msgid ""
 "charts/design-color>`."
 msgstr ""
 ":guilabel:`Linie de tendință`: Cu seria de date relevantă selectată, "
-"activați :guilabel:`Afișare linie de tendință`, apoi selectați "
-":guilabel:`Tip` de linie de tendință: :guilabel:`Liniară`, "
-":guilabel:`Exponențială`, :guilabel:`Polinomială`, :guilabel:`Logaritmică` "
+"activați :guilabel:`Afișare linie de tendință`, apoi "
+"selectați :guilabel:`Tip` de linie de "
+"tendință: :guilabel:`Liniară`, :guilabel:`Exponențială`, :guilabel:`Polinomială`, :guilabel:`Logaritmică` "
 "sau :guilabel:`Medie mobilă`. Pentru a schimba culoarea liniei de tendință, "
 "dați clic pe punctul de culoare, apoi :ref:`alegeți culoarea dorită "
 "<spreadsheet/charts/design-color>`."
@@ -37330,8 +37117,8 @@ msgid ""
 "or :guilabel:`Vertical axis`. The font formatting, horizontal alignment, "
 "font size, and color of the title can be modified using the editor."
 msgstr ""
-":guilabel:`Titlu axă`: Adăugați un titlu la :guilabel:`Axa orizontală` sau "
-":guilabel:`Axa verticală`. Formatarea fontului, alinierea orizontală, "
+":guilabel:`Titlu axă`: Adăugați un titlu la :guilabel:`Axa orizontală` "
+"sau :guilabel:`Axa verticală`. Formatarea fontului, alinierea orizontală, "
 "dimensiunea fontului și culoarea titlului pot fi modificate folosind "
 "editorul."
 
@@ -37408,8 +37195,9 @@ msgid ""
 "Hover over a chart, then click the :icon:`more_vert` :guilabel:`(menu)` icon "
 "to reveal the following options:"
 msgstr ""
-"Treceți cu mouse-ul peste o diagramă, apoi dați clic pe pictograma "
-":icon:`more_vert` :guilabel:`(meniu)` pentru a afișa următoarele opțiuni:"
+"Treceți cu mouse-ul peste o diagramă, apoi dați clic pe "
+"pictograma :icon:`more_vert` :guilabel:`(meniu)` pentru a afișa următoarele "
+"opțiuni:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:377
 msgid ""
@@ -37428,9 +37216,9 @@ msgid ""
 "spreadsheet*. Alternatively, with the chart selected, use the relevant "
 "keyboard shortcut to copy or cut the chart."
 msgstr ""
-":icon:`assignment` :guilabel:`Copiere` sau :icon:`os-cut` "
-":guilabel:`Decupare` pentru a copia sau decupa o diagramă cu intenția de a o "
-"lipi *în același tabel*. Alternativ, cu diagrama selectată, utilizați "
+":icon:`assignment` :guilabel:`Copiere` sau :icon:`os-"
+"cut` :guilabel:`Decupare` pentru a copia sau decupa o diagramă cu intenția "
+"de a o lipi *în același tabel*. Alternativ, cu diagrama selectată, utilizați "
 "comanda rapidă de la tastatură relevantă pentru a copia sau decupa diagrama."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:384
@@ -42504,13 +42292,11 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:110
 msgid ""
-"A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/"
-"simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-"
-"time>` field."
+"A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time "
+"<studio/fields/simple-fields-date-time>` field."
 msgstr ""
-"Un filtru :guilabel:`Dată` poate corespunde doar unui câmp :ref:`Dată "
-"<studio/fields/simple-fields-date>` sau :ref:`Dată și oră <studio/fields/"
-"simple-fields-date-time>`."
+"Un filtru :guilabel:`Dată` poate corespunde doar unui câmp de tip :ref:`Dată "
+"sau Dată și oră <studio/fields/simple-fields-date-time>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:113
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:150
@@ -46995,6 +46781,602 @@ msgstr ""
 "Pentru alte erori, consultați Developer Suite de la Meta pentru `Coduri de "
 "eroare WhatsApp <https://developers.facebook.com/documentation/business-"
 "messaging/whatsapp/support/error-codes>`__."
+
+#~ msgid ""
+#~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
+#~ "natural language, perform tasks, and assist users by interacting with "
+#~ "Odoo tools. Agents are a core component of the |AI| structure in Odoo. "
+#~ "Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-"
+#~ "odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/"
+#~ "tools>` that guide its behavior."
+#~ msgstr ""
+#~ "Un agent |AI| este un asistent virtual inteligent în Odoo care poate "
+#~ "înțelege limbajul natural, poate executa sarcini și poate asista "
+#~ "utilizatorii interacționând cu instrumentele Odoo. Agenții sunt o "
+#~ "componentă de bază a structurii |AI| în Odoo. Fiecare agent are un scop "
+#~ "definit, un :ref:`prompt <ai/agents/prompts-in-odoo>` și un set "
+#~ "de :ref:`competențe <ai/topics>` și :ref:`instrumente <ai/tools>` care îi "
+#~ "ghidează comportamentul."
+
+#~ msgid ""
+#~ "When interacting with an |AI| agent, the conversation interface may "
+#~ "display intermediate status messages while a request is being processed."
+#~ msgstr ""
+#~ "La interacțiunea cu un agent |AI|, interfața de conversație poate afișa "
+#~ "mesaje intermediare de stare în timp ce o solicitare este în curs de "
+#~ "procesare."
+
+#~ msgid ""
+#~ "These messages reflect the current step of the interaction, such as "
+#~ "analyzing the request, consulting sources, or preparing an action, before "
+#~ "the final response is generated."
+#~ msgstr ""
+#~ "Aceste mesaje reflectă etapa curentă a interacțiunii, cum ar fi "
+#~ "analizarea solicitării, consultarea surselor sau pregătirea unei acțiuni, "
+#~ "înainte de generarea răspunsului final."
+
+#~ msgid "An Agent analyzing a user request."
+#~ msgstr "Un agent care analizează o solicitare a utilizatorului."
+
+#~ msgid "Agents are formed of two main components, *Skills* and *Sources*."
+#~ msgstr ""
+#~ "Agenții sunt formați din două componente principale: *Competențe* și "
+#~ "*Surse*."
+
+#~ msgid ""
+#~ "*Skills* are the instructions and roles that inform the agent of what "
+#~ "tasks they need to complete. *Tools* are assigned to skills, and are the "
+#~ "actual functions the agent can utilize to perform tasks."
+#~ msgstr ""
+#~ "*Competențele* reprezintă instrucțiunile și rolurile care informează "
+#~ "agentul cu privire la sarcinile pe care trebuie să le îndeplinească. "
+#~ "*Instrumentele* sunt atribuite competențelor și reprezintă funcțiile "
+#~ "efective pe care agentul le poate utiliza pentru a efectua sarcini."
+
+#~ msgid ""
+#~ "*Sources* provide the agent with the information they need to complete "
+#~ "their tasks."
+#~ msgstr ""
+#~ "*Surse* furnizează agentului informațiile de care are nevoie pentru a-și "
+#~ "îndeplini sarcinile."
+
+#~ msgid ""
+#~ "While many |AI| features can be used in Odoo without the **AI** "
+#~ "application, creating and customizing agents requires that the **AI** "
+#~ "application is installed."
+#~ msgstr ""
+#~ "Deși multe funcții AI pot fi utilizate în Odoo fără aplicația **AI**, "
+#~ "crearea și personalizarea agenților necesită instalarea aplicației **AI**."
+
+#~ msgid "AI prompts in Odoo"
+#~ msgstr "Prompturi AI în Odoo"
+
+#~ msgid ""
+#~ "Before working with |AI| agents, it is important to understand some basic "
+#~ "concepts regarding |AI| prompts."
+#~ msgstr ""
+#~ "Înainte de a lucra cu agenți |AI|, este important să înțelegeți câteva "
+#~ "concepte de bază privind prompturile |AI|."
+
+#~ msgid ""
+#~ "An |AI| prompt is a set of written instructions or context given to an |"
+#~ "AI| model that tells it how to respond to a request, or what role to "
+#~ "take. Prompts can define:"
+#~ msgstr ""
+#~ "Un prompt AI este un set de instrucțiuni scrise sau context oferit unui "
+#~ "model AI care îi spune cum să răspundă la o solicitare sau ce rol să "
+#~ "adopte. Prompturile pot defini:"
+
+#~ msgid "the tone, style, and persona of the |AI| model"
+#~ msgstr "tonul, stilul și personalitatea modelului AI"
+
+#~ msgid "the scope of what the model can do"
+#~ msgstr "domeniul de aplicare al modelului"
+
+#~ msgid "the type of output expected from the request"
+#~ msgstr "tipul de rezultat așteptat din solicitare"
+
+#~ msgid ""
+#~ "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
+#~ "agent's overall role, purpose, and behavior. It acts as the core mission "
+#~ "statement of the agent, and drives all interactions. During a "
+#~ "conversation, the system prompts and skill instructions are continuously "
+#~ "applied. They influence how the agent interprets messages, selects tools, "
+#~ "uses sources, and determines whether additional actions are required "
+#~ "before responding."
+#~ msgstr ""
+#~ "În Odoo, fiecărui agent |AI| îi este atribuit un *Prompt de sistem*, care "
+#~ "definește rolul general, scopul și comportamentul agentului. Acesta "
+#~ "acționează ca declarația principală de misiune a agentului și ghidează "
+#~ "toate interacțiunile. În timpul unei conversații, prompturile de sistem "
+#~ "și instrucțiunile de competență sunt aplicate continuu. Ele influențează "
+#~ "modul în care agentul interpretează mesajele, selectează instrumentele, "
+#~ "utilizează sursele și stabilește dacă sunt necesare acțiuni suplimentare "
+#~ "înainte de a răspunde."
+
+#~ msgid ""
+#~ "Each :ref:`Skill <ai/topics>` also includes its own prompt-like "
+#~ "component, called *Instructions*. Instructions are skill-specific "
+#~ "guidelines that refine how the agent behaves within a certain context or "
+#~ "workflow, and how it interacts within the Odoo framework."
+#~ msgstr ""
+#~ "Fiecare :ref:`Competență <ai/topics>` include, de asemenea, o componentă "
+#~ "de tip prompt, denumită *Instrucțiuni*. Instrucțiunile sunt recomandări "
+#~ "specifice competenței care ajustează modul în care agentul se comportă "
+#~ "într-un anumit context sau flux de lucru și modul în care interacționează "
+#~ "în cadrul framework-ului Odoo."
+
+#~ msgid "Step-by-step workflows for how to complete a specific action."
+#~ msgstr ""
+#~ "Fluxuri de lucru pas cu pas pentru cum să finalizați o acțiune specifică"
+
+#~ msgid ""
+#~ "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` "
+#~ "that define how an agent behaves within a specific context. Essentially, "
+#~ "the skills define what an agent can do within the database. Skills guide "
+#~ "conversations, telling the agent what it can do, how it can do it, and "
+#~ "when it should do it."
+#~ msgstr ""
+#~ "*Competențele* reprezintă o colecție de instrucțiuni și :ref:`instrumente "
+#~ "<ai/tools>` care definesc modul în care un agent se comportă într-un "
+#~ "context specific. În esență, competențele definesc ceea ce un agent poate "
+#~ "face în baza de date. Competențele ghidează conversațiile, indicând "
+#~ "agentului ce poate face, cum poate face și când ar trebui să facă acest "
+#~ "lucru."
+
+#~ msgid ""
+#~ "If an agent is not assigned any Skills, it is **only** able to provide "
+#~ "information. It **cannot** complete tasks or make changes to the database."
+#~ msgstr ""
+#~ "Dacă unui agent nu îi este atribuită nicio competență, acesta poate "
+#~ "**doar** să ofere informații. **Nu** poate finaliza sarcini sau efectua "
+#~ "modificări în baza de date."
+
+#~ msgid ""
+#~ "Within each skill is a detailed prompt, which provides the agent with "
+#~ "more in-depth instructions on how to perform the tasks associated with "
+#~ "that skill, define the boundaries of its behavior, and determine how it "
+#~ "should interpret user intent. These prompts ensure that the agent follows "
+#~ "a consistent reasoning pattern and uses the appropriate tools to generate "
+#~ "accurate, context-aware responses."
+#~ msgstr ""
+#~ "În cadrul fiecărei competențe se află un prompt detaliat, care oferă "
+#~ "agentului instrucțiuni mai aprofundate despre modul de executare a "
+#~ "sarcinilor asociate acelei competențe, definește limitele "
+#~ "comportamentului său și stabilește modul în care ar trebui să "
+#~ "interpreteze intenția utilizatorului. Aceste prompturi asigură faptul că "
+#~ "agentul urmează un tipar consecvent de raționament și utilizează "
+#~ "instrumentele adecvate pentru a genera răspunsuri precise și adaptate "
+#~ "contextului."
+
+#~ msgid "The following skills are preconfigured in the **AI** app:"
+#~ msgstr "Următoarele competențe sunt preconfigurate în aplicația **AI**:"
+
+#~ msgid ""
+#~ ":guilabel:`View Builder`: Supports the interpretation of a user query to "
+#~ "open the appropriate Odoo view with a set of tools necessary to perform "
+#~ "the search. Natural language queries can also include time-based grouping "
+#~ "instructions. This allows agents to group results by time intervals such "
+#~ "as day, month, or year when querying records."
+#~ msgstr ""
+#~ ":guilabel:`Constructor de vizualizări`: Permite interpretarea unei "
+#~ "interogări a utilizatorului pentru a deschide vizualizarea Odoo "
+#~ "corespunzătoare cu un set de instrumente necesare efectuării căutării. "
+#~ "Interogările în limbaj natural pot include, de asemenea, instrucțiuni de "
+#~ "grupare pe bază de timp. Acest lucru le permite agenților să grupeze "
+#~ "rezultatele pe intervale de timp precum zi, lună sau an atunci când "
+#~ "interoghează înregistrări."
+
+#~ msgid ""
+#~ ":guilabel:`Information retrieval`: A collection of tools to retrieve "
+#~ "information about the models."
+#~ msgstr ""
+#~ ":guilabel:`Recuperare de informații`: o colecție de instrumente pentru a "
+#~ "recupera informații despre modele."
+
+#~ msgid ":guilabel:`Update Records`: Tools to update records."
+#~ msgstr ""
+#~ ":guilabel:`Actualizare înregistrări`: Instrumente pentru actualizarea "
+#~ "înregistrărilor."
+
+#~ msgid ":guilabel:`Create Records`: Tools to create records."
+#~ msgstr ""
+#~ ":guilabel:`Creare înregistrări`: Instrumente pentru crearea "
+#~ "înregistrărilor."
+
+#~ msgid ""
+#~ ":guilabel:`Generate Images`: A collection of tools to support image "
+#~ "generation. Load this skill when the user asks to generate or enhance an "
+#~ "image."
+#~ msgstr ""
+#~ ":guilabel:`Generare imagini`: O colecție de instrumente pentru a sprijini "
+#~ "generarea de imagini. Încărcați această competență atunci când "
+#~ "utilizatorul solicită generarea sau îmbunătățirea unei imagini."
+
+#~ msgid ""
+#~ ":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
+#~ "time."
+#~ msgstr ""
+#~ ":guilabel:`Căutare pe web`: Permite agentului să exploreze internetul în "
+#~ "timp real."
+
+#~ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
+#~ msgstr ""
+#~ ":guilabel:`Constructor site web`: Instrumente pentru editarea paginilor "
+#~ "site-ului web Odoo."
+
+#~ msgid ""
+#~ ":guilabel:`Create Leads`: A collection of tools to support automated lead "
+#~ "creation. This skill is **only** available if the **CRM** app is "
+#~ "installed."
+#~ msgstr ""
+#~ ":guilabel:`Creare piste`: O colecție de instrumente pentru a sprijini "
+#~ "crearea automată de piste. Această competență este disponibilă **doar** "
+#~ "dacă este instalată aplicația **CRM**."
+
+#~ msgid ""
+#~ "Within each skill is a set of :guilabel:`Instructions`, which act as a "
+#~ "prompt and provide guidance for the structure of the interaction, and one "
+#~ "or more :ref:`AI Tools <ai/tools>`, which indicate the functions the "
+#~ "agent can perform."
+#~ msgstr ""
+#~ "În cadrul fiecărei competențe se află un set de :guilabel:`Instrucțiuni`, "
+#~ "care acționează ca un prompt și oferă îndrumări pentru structura "
+#~ "interacțiunii, precum și unul sau mai multe :ref:`Instrumente AI <ai/"
+#~ "tools>`, care indică funcțiile pe care le poate îndeplini agentul."
+
+#~ msgid "Tools"
+#~ msgstr "Unelte"
+
+#~ msgid ""
+#~ "*Tools* are the functions the agent can perform in Odoo. These include "
+#~ "actions like creating a lead or opening a view. Tools extend the purpose "
+#~ "of the agent beyond conversations, they enable real actions. The "
+#~ "available tools in a database vary based on the applications installed. "
+#~ "Multiple :guilabel:`AI Tools` can be assigned to a single skill."
+#~ msgstr ""
+#~ "*Instrumentele* sunt funcțiile pe care agentul le poate îndeplini în "
+#~ "Odoo. Acestea includ acțiuni precum crearea unei piste sau deschiderea "
+#~ "unei vizualizări. Instrumentele extind scopul agentului dincolo de "
+#~ "conversații, făcând posibile acțiuni reale. Instrumentele disponibile "
+#~ "într-o bază de date variază în funcție de aplicațiile instalate. Mai "
+#~ "multe :guilabel:`Instrumente AI` pot fi atribuite unei singure competențe."
+
+#~ msgid "Sources"
+#~ msgstr "Surse"
+
+#~ msgid "PDFs"
+#~ msgstr "PDF-uri"
+
+#~ msgid "Weblinks"
+#~ msgstr "Link-uri web"
+
+#~ msgid "Documents (uploaded in the **Documents** application)"
+#~ msgstr "Documente (încărcate în aplicația **Documente**)"
+
+#~ msgid "**Knowledge** app articles"
+#~ msgstr "Articole din aplicația **Knowledge**"
+
+#~ msgid ""
+#~ "If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
+#~ "agent can **only** utilize information from the uploaded and active "
+#~ "sources."
+#~ msgstr ""
+#~ "Dacă opțiunea :guilabel:`Restricționare la surse` este activată pe un "
+#~ "agent, agentul poate utiliza **numai** informații din sursele încărcate "
+#~ "și active."
+
+#~ msgid "Uploaded files"
+#~ msgstr "Fișiere încărcate"
+
+#~ msgid ""
+#~ "During a conversation with an |AI| agent, additional context can be "
+#~ "provided by uploading files. Files are temporarily treated as sources for "
+#~ "the ongoing discussion. The agent can use their content to answer "
+#~ "questions, summarize information, or extract relevant details."
+#~ msgstr ""
+#~ "În timpul unei conversații cu un agent |AI|, se poate oferi context "
+#~ "suplimentar prin încărcarea de fișiere. Fișierele sunt tratate temporar "
+#~ "ca surse pentru discuția în curs. Agentul poate folosi conținutul "
+#~ "acestora pentru a răspunde la întrebări, a rezuma informații sau a "
+#~ "extrage detalii relevante."
+
+#~ msgid ""
+#~ "The provided files only influence the current conversation, unless they "
+#~ "are explicitly added as sources on the agent."
+#~ msgstr ""
+#~ "Fișierele furnizate influențează doar conversația curentă, cu excepția "
+#~ "cazului în care sunt adăugate explicit ca surse pentru agent."
+
+#~ msgid ""
+#~ "To attach a file in a conversation, click the :icon:`fa-plus-"
+#~ "circle` :guilabel:`(plus circle)` icon in the message window, then "
+#~ "click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
+#~ "window, select one or more files to attach, then click :guilabel:`Open`."
+#~ msgstr ""
+#~ "Pentru a atașa un fișier într-o conversație, faceți clic pe "
+#~ "pictograma :icon:`fa-plus-circle` :guilabel:`(plus în cerc)` din "
+#~ "fereastra de mesaj, apoi faceți clic pe :icon:`fa-"
+#~ "paperclip` :guilabel:`Atașează fișiere`. În fereastra exploratorului de "
+#~ "fișiere, selectați unul sau mai multe fișiere de atașat, apoi faceți clic "
+#~ "pe :guilabel:`Deschide`."
+
+#~ msgid ""
+#~ "A manager finds a receipt for supplies and is unsure whether it has "
+#~ "already been submitted to the **Expenses** app for reimbursement. They "
+#~ "open a conversation with the *Ask AI* agent and enter the following "
+#~ "prompt:"
+#~ msgstr ""
+#~ "Un manager găsește o chitanță pentru consumabile și nu este sigur dacă a "
+#~ "fost trimisă deja în aplicația **Cheltuieli** pentru rambursare. Deschide "
+#~ "o conversație cu agentul *Ask AI* și introduce următorul prompt:"
+
+#~ msgid "`Can you open the expense that matches this receipt?`"
+#~ msgstr "`Poți deschide cheltuiala care corespunde acestei chitanțe?`"
+
+#~ msgid ""
+#~ "They attach the receipt to the message. After the agent analyzes the "
+#~ "attachment, it opens the view to the correct expense."
+#~ msgstr ""
+#~ "Atașează chitanța la mesaj. După ce agentul analizează atașamentul, "
+#~ "deschide vizualizarea către cheltuiala corectă."
+
+#~ msgid "Add alt text."
+#~ msgstr "Adăugați text alternativ."
+
+#~ msgid "Gain insights from previewed files"
+#~ msgstr "Obțineți informații din fișierele previzualizate"
+
+#~ msgid ""
+#~ "When a document is open in preview mode, |AI| agents can use the content "
+#~ "of the previewed file as context for the conversation."
+#~ msgstr ""
+#~ "Când un document este deschis în modul de previzualizare, agenții |AI| "
+#~ "pot utiliza conținutul fișierului previzualizat drept context pentru "
+#~ "conversație."
+
+#~ msgid ""
+#~ "First, navigate to the :menuselection:`Documents` app and click a "
+#~ "document to preview it. Click the |AI| icon at the top of the page to "
+#~ "open the :guilabel:`Ask AI` chat window. From here, click one of the "
+#~ "default prompts to use them, or enter a custom one in the message window."
+#~ msgstr ""
+#~ "Mai întâi, navigați la aplicația :menuselection:`Documente` și faceți "
+#~ "clic pe un document pentru a-l previzualiza. Faceți clic pe pictograma |"
+#~ "AI| din partea de sus a paginii pentru a deschide fereastra de "
+#~ "chat :guilabel:`Întrebați AI`. De aici, faceți clic pe una dintre "
+#~ "solicitările implicite pentru a o utiliza sau introduceți una "
+#~ "personalizată în fereastra de mesaje."
+
+#~ msgid ""
+#~ "In this case, the agent's responses are grounded in the file currently "
+#~ "being previewed, in combination with any other sources assigned to the "
+#~ "agent."
+#~ msgstr ""
+#~ "În acest caz, răspunsurile agentului se bazează pe fișierul previzualizat "
+#~ "în mod curent, în combinație cu orice alte surse atribuite agentului."
+
+#~ msgid ""
+#~ "To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+#~ "click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
+#~ "description, if desired."
+#~ msgstr ""
+#~ "Pentru a crea un nou agent |AI|, navigați la "
+#~ "aplicația :menuselection:`AI` și faceți clic pe :guilabel:`Nou`. "
+#~ "Introduceți un :guilabel:`Nume agent`, apoi adăugați o scurtă descriere, "
+#~ "dacă doriți."
+
+#~ msgid ""
+#~ "Before creating a new agent, it is recommended to have a clear use case "
+#~ "in mind. This helps when writing out the :guilabel:`System Prompt`, and "
+#~ "assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
+#~ msgstr ""
+#~ "Înainte de a crea un nou agent, se recomandă să aveți în vedere un caz "
+#~ "clar de utilizare. Acest lucru ajută la redactarea :guilabel:`Prompt de "
+#~ "sistem` și la atribuirea :guilabel:`Competențe` și :guilabel:`Instrumente "
+#~ "AI`."
+
+#~ msgid ""
+#~ "Next, select a :guilabel:`Response Style`. This manages the overall tone "
+#~ "the agent uses when responding to an inquiry. Choose from one of the "
+#~ "following options:"
+#~ msgstr ""
+#~ "Apoi, selectați un :guilabel:`Stil de răspuns`. Acesta gestionează tonul "
+#~ "general pe care îl folosește agentul atunci când răspunde la o "
+#~ "solicitare. Alegeți dintre următoarele opțiuni:"
+
+#~ msgid ""
+#~ ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
+#~ "clear, direct answers with a moderate level of detail."
+#~ msgstr ""
+#~ ":guilabel:`Standard`: Menține un ton echilibrat și profesional. Oferă "
+#~ "răspunsuri clare și directe, cu un nivel moderat de detaliu."
+
+#~ msgid ""
+#~ ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
+#~ "responses. Explores multiple perspectives, acknowledges subtleties, and "
+#~ "uses precise, academic language where appropriate."
+#~ msgstr ""
+#~ ":guilabel:`Nuanțat`: Oferă răspunsuri sofisticate și profund "
+#~ "contextualizate. Explorează perspective multiple, ține cont de "
+#~ "subtilități și folosește un limbaj precis, academic, acolo unde este "
+#~ "cazul."
+
+#~ msgid ""
+#~ ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
+#~ "Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
+#~ "dynamic structure to keep the user interested."
+#~ msgstr ""
+#~ ":guilabel:`Spontan și creativ`: Energic, vibrant și foarte captivant. "
+#~ "Prioritizează concizia și spiritul ascuțit. Folosește un limbaj expresiv, "
+#~ "metafore și o structură dinamică pentru a menține interesul "
+#~ "utilizatorului."
+
+#~ msgid ""
+#~ ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
+#~ "soundness above all else. Breaks down complex steps, cites reasoning "
+#~ "clearly, and verifies every claim. Adopts a meticulous and formal tone."
+#~ msgstr ""
+#~ ":guilabel:`Lent și riguros`: Prioritizează precizia absolută și "
+#~ "soliditatea logică mai presus de orice. Detaliază pașii complecși, "
+#~ "citează clar argumentele și verifică fiecare afirmație. Adoptă un ton "
+#~ "meticulos și formal."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
+#~ "**only** respond based on the provided resources."
+#~ msgstr ""
+#~ "Bifați caseta de selectare :guilabel:`Restricționează la surse` pentru a "
+#~ "limita agentul să răspundă **doar** pe baza resurselor furnizate."
+
+#~ msgid ""
+#~ "Next, select one or more :guilabel:`Skills` for the agent. As explained "
+#~ "above, :ref:`Skills <ai/topics>` include both instructions and tools that "
+#~ "guide the agent in helping users complete a task."
+#~ msgstr ""
+#~ "Apoi, selectați una sau mai multe :guilabel:`Competențe` pentru agent. "
+#~ "Așa cum s-a explicat mai sus, :ref:`Skills <ai/topics>` includ atât "
+#~ "instrucțiuni, cât și instrumente care ghidează agentul în asistarea "
+#~ "utilizatorilor pentru finalizarea unei sarcini."
+
+#~ msgid ""
+#~ "Enter a :guilabel:`System Prompt` with detailed instructions for the "
+#~ "agent as to their role and responsibilities."
+#~ msgstr ""
+#~ "Introduceți un :guilabel:`Prompt de sistem` cu instrucțiuni detaliate "
+#~ "pentru agent privind rolul și responsabilitățile acestuia."
+
+#~ msgid "A new agent form with the required information."
+#~ msgstr "Un formular nou de agent cu informațiile necesare."
+
+#~ msgid ""
+#~ "The specificity and length of the :guilabel:`System Prompt` can vary, "
+#~ "depending on the use case for the agent. Use the preconfigured agents as "
+#~ "an example of the possible information."
+#~ msgstr ""
+#~ "Specificitatea și lungimea câmpului :guilabel:`Prompt de sistem` pot "
+#~ "varia, în funcție de cazul de utilizare al agentului. Utilizați agenții "
+#~ "preconfigurați ca exemplu pentru informațiile posibile."
+
+#~ msgid ""
+#~ "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
+#~ "tab, then click :guilabel:`Add a source`."
+#~ msgstr ""
+#~ "Dacă sunt necesare *Surse* pentru agent, derulați până la "
+#~ "fila :guilabel:`Surse`, apoi faceți clic pe :guilabel:`Adaugă o sursă`."
+
+#~ msgid "Select a format:"
+#~ msgstr "Selectați un format:"
+
+#~ msgid ""
+#~ ":guilabel:`Upload a File`: Select the appropriate file from the explorer "
+#~ "window, and click :guilabel:`Open`."
+#~ msgstr ""
+#~ ":guilabel:`Încărcați un fișier`: Selectați fișierul corespunzător din "
+#~ "fereastra exploratorului și faceți clic pe :guilabel:`Deschide`."
+
+#~ msgid ""
+#~ ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at "
+#~ "once, paste one link per line. Click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`Adăugați un link`: Lipiți adresa URL. Se pot adăuga mai multe "
+#~ "linkuri simultan, lipind câte un link pe fiecare rând. Faceți clic "
+#~ "pe :guilabel:`Salvați`."
+
+#~ msgid ""
+#~ ":guilabel:`Add from Documents` (uploaded in the **Documents** "
+#~ "application): Click the checkbox next to one or more documents, then "
+#~ "click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`Adăugați din Documente` (încărcate în aplicația "
+#~ "**Documente**): Bifați caseta de selectare din dreptul unuia sau mai "
+#~ "multor documente, apoi faceți clic pe :guilabel:`Selectați`."
+
+#~ msgid ""
+#~ ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
+#~ "articles, then click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`Adăugați din Cunoștințe`: Bifați caseta de selectare din "
+#~ "dreptul unuia sau mai multor articole, apoi faceți clic "
+#~ "pe :guilabel:`Selectați`."
+
+#~ msgid ""
+#~ "Once a source is added, the :guilabel:`Status` field updates to reflect "
+#~ "its current status. The source is ready when the status changes from "
+#~ "*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to "
+#~ "activate the source."
+#~ msgstr ""
+#~ "Odată adăugată o sursă, câmpul :guilabel:`Stare` se actualizează pentru a "
+#~ "reflecta starea curentă a acesteia. Sursa este gata atunci când starea se "
+#~ "schimbă din *În procesare* în *Indexat*. Glisați "
+#~ "comutatorul :guilabel:`Activ` pentru a activa sursa."
+
+#~ msgid "A list of sources for an agent, each denoted with their format."
+#~ msgstr "O listă de surse pentru un agent, fiecare indicată cu formatul său."
+
+#~ msgid ""
+#~ "If a source fails to upload, it could be the result of a conflict with "
+#~ "the selected provider."
+#~ msgstr ""
+#~ "Dacă o sursă nu se poate încărca, acest lucru poate fi rezultatul unui "
+#~ "conflict cu furnizorul selectat."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test` button to open a conversation window and test "
+#~ "the new agent."
+#~ msgstr ""
+#~ "Faceți clic pe butonul :guilabel:`Testează` pentru a deschide o fereastră "
+#~ "de conversație și a testa noul agent."
+
+#~ msgid "Manually reprocessing sources"
+#~ msgstr "Reprocesarea manuală a surselor"
+
+#~ msgid ""
+#~ "To reprocess a source, navigate to the :menuselection:`AI` app. Select an "
+#~ "|AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical ellipsis)` icon, then "
+#~ "click :guilabel:`Configuration`."
+#~ msgstr ""
+#~ "Pentru a reprocesa o sursă, navigați la aplicația :menuselection:`AI`. "
+#~ "Selectați un agent |AI| și, pe cardul kanban, faceți clic pe "
+#~ "pictograma :icon:`fa-ellipsis-v` :guilabel:`(puncte de suspensie "
+#~ "verticale)`, apoi faceți clic pe :guilabel:`Configurare`."
+
+#~ msgid ""
+#~ "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next "
+#~ "to any source that should be updated."
+#~ msgstr ""
+#~ "În fila *Surse*, faceți clic pe :guilabel:`Reprocesează` :icon:`fa-"
+#~ "refresh` lângă orice sursă care trebuie actualizată."
+
+#~ msgid "AI agent sources with the reprocess icon visible."
+#~ msgstr "Sursele agentului AI cu pictograma de reprocesare vizibilă."
+
+#~ msgid ""
+#~ "When one of these conditions is met, the agent activates the *Lead "
+#~ "Creation* :ref:`skill <ai/topics>`."
+#~ msgstr ""
+#~ "Când una dintre aceste condiții este îndeplinită, agentul "
+#~ "activează :ref:`competența <ai/topics>` de *creare de piste*."
+
+#~ msgid ""
+#~ "Users may also define *skills*, which grant the agent permission to "
+#~ "perform specific actions. :ref:`Skills <ai/topics>` allow advanced "
+#~ "scenarios such as record creation or automation triggers."
+#~ msgstr ""
+#~ "Utilizatorii pot defini, de asemenea, *competențe*, care acordă agentului "
+#~ "permisiunea de a efectua acțiuni specifice. :ref:`Competențele <ai/"
+#~ "topics>` permit scenarii avansate, cum ar fi crearea de înregistrări sau "
+#~ "declanșatori de automatizare."
+
+#~ msgid ""
+#~ "A :guilabel:`Date` filter can only match against a :ref:`Date <studio/"
+#~ "fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-"
+#~ "fields-date-time>` field."
+#~ msgstr ""
+#~ "Un filtru :guilabel:`Dată` poate corespunde doar unui câmp :ref:`Dată "
+#~ "<studio/fields/simple-fields-date>` sau :ref:`Dată și oră <studio/fields/"
+#~ "simple-fields-date-time>`."
 
 #~ msgid "To insert a chart from an Odoo database into an Odoo spreadsheet:"
 #~ msgstr ""

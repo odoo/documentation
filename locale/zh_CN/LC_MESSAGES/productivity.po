@@ -25,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
-"PO-Revision-Date: 2026-11-07 12:35+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
+"PO-Revision-Date: 2026-11-17 10:39+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/productivity/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/productivity.rst:5
 msgid "Productivity"
@@ -179,7 +179,7 @@ msgid ""
 msgstr "有关使用这些功能的信息，请参阅相关文档。"
 
 #: ../../export/content/applications/productivity/ai.rst:64
-#: ../../export/content/applications/productivity/ai/agents.rst:3
+#: ../../export/content/applications/productivity/ai/agents.rst:8
 #: ../../export/content/applications/productivity/ai/support_operations.rst:28
 msgid "AI agents"
 msgstr "AI 助手"
@@ -255,274 +255,209 @@ msgstr ""
 msgid ":doc:`AI MCP server <ai/mcp_server>`"
 msgstr ":doc:`AI MCP 服务器 <ai/mcp_server>`"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:7
+#: ../../export/content/applications/productivity/ai/agents.rst:-1
 msgid ""
-"An |AI| agent is a smart virtual assistant in Odoo that can understand "
-"natural language, perform tasks, and assist users by interacting with Odoo "
-"tools. Agents are a core component of the |AI| structure in Odoo. Each agent "
-"has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set "
-"of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its "
-"behavior."
+"AI agents in Odoo are virtual assistants that understand natural-language "
+"requests and perform tasks. Learn how agents use instructions, skills, "
+"tools, and knowledge sources, and how to create and configure a new agent."
 msgstr ""
-"Odoo 中的\\ |AI|\\ 代理是一种智能虚拟助手，能够理解自然语言、执行任务，并通过"
-"与 Odoo 工具交互来协助用户。代理是 Odoo 中\\ |AI|\\ 结构的核心组件。每个代理"
-"都有明确的用途、\\ :ref:`提示词 <ai/agents/prompts-in-odoo>`\\ 以及一组用于指"
-"导其行为的\\ :ref:`技能 <ai/topics>`\\ 和\\ :ref:`工具 <ai/tools>`\\ 。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:12
+#: ../../export/content/applications/productivity/ai/agents.rst:13
 msgid ""
-"When interacting with an |AI| agent, the conversation interface may display "
-"intermediate status messages while a request is being processed."
-msgstr "与\\ |AI|\\ 代理交互时，对话界面可能会在处理请求时显示中间状态消息。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:15
-msgid ""
-"These messages reflect the current step of the interaction, such as "
-"analyzing the request, consulting sources, or preparing an action, before "
-"the final response is generated."
+"An |AI| agent is a virtual assistant in Odoo that can understand natural-"
+"language requests, access information, and perform tasks using the tools "
+"available to it. Agents can be configured for specific roles and can be used "
+"interactively or as part of automated workflows."
 msgstr ""
-"这些消息反映了在生成最终回复前交互的当前步骤，例如分析请求、查阅来源或准备操"
-"作。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:18
-msgid "An Agent analyzing a user request."
-msgstr "代理正在分析用户请求。"
+#: ../../export/content/applications/productivity/ai/agents.rst:17
+msgid "Agents are built from four main components:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:19
+msgid ""
+"*Instructions* define the agent's purpose, behavior, and responsibilities."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:20
+msgid ""
+"*Knowledge* provides information the agent can use when completing tasks."
+msgstr "*知识库*\\ 为代理提供在完成任务时可使用的信息。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Skills* and *Sources*."
-msgstr "代理主要由两个部分组成：\\ *技能*\\ 和\\ *来源*\\ 。"
+msgid ""
+"*Skills and tools* define what the agent can do. Skills provide instructions "
+"for specific tasks, while tools allow the agent to perform actions in Odoo."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:23
 msgid ""
-"*Skills* are the instructions and roles that inform the agent of what tasks "
-"they need to complete. *Tools* are assigned to skills, and are the actual "
-"functions the agent can utilize to perform tasks."
+"*Triggers* determine when the agent is invoked, such as when a user starts a "
+"conversation or when an automated or scheduled action calls the agent."
 msgstr ""
-"*技能*\\ 是告知代理需要完成哪些任务的指令和角色。\\ *工具*\\ 分配给技能，是代"
-"理可用于执行任务的实际功能。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:26
-msgid ""
-"*Sources* provide the agent with the information they need to complete their "
-"tasks."
-msgstr "*来源*为助手提供完成任务所需的信息。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:29
+#: ../../export/content/applications/productivity/ai/agents.rst:27
 msgid ""
 "While many |AI| features can be used in Odoo without the **AI** application, "
-"creating and customizing agents requires that the **AI** application is "
-"installed."
+"creating and customizing agents requires the **AI** application be installed."
 msgstr ""
-"虽然许多 AI 功能可以在不安装**AI**应用的情况下于 Odoo 中使用，但创建和自定义"
-"助手则需要安装**AI**应用。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:30
+msgid ""
+"Odoo |AI| uses In-app purchases (IAP) for AI requests. For more information "
+"on using |IAP| credits, including how to purchase additional credits, visit "
+"the `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>`_."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
-msgid "AI prompts in Odoo"
-msgstr "Odoo 中的 AI 提示"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:37
-msgid ""
-"Before working with |AI| agents, it is important to understand some basic "
-"concepts regarding |AI| prompts."
-msgstr ""
-"在使用\\ |AI|\\ 代理之前，了解有关\\ |AI|\\ 提示词的一些基本概念非常重要。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:40
-msgid ""
-"An |AI| prompt is a set of written instructions or context given to an |AI| "
-"model that tells it how to respond to a request, or what role to take. "
-"Prompts can define:"
-msgstr ""
-"AI 提示是一组提供给 AI 模型的书面指令或上下文，用于告知它如何响应请求或扮演什"
-"么角色。提示可以定义："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:43
-msgid "the tone, style, and persona of the |AI| model"
-msgstr "AI 模型的语气、风格和角色设定"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:44
-msgid "the scope of what the model can do"
-msgstr "模型能够执行的操作范围"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:45
-msgid "the type of output expected from the request"
-msgstr "请求期望的输出类型"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:47
-msgid ""
-"In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
-"agent's overall role, purpose, and behavior. It acts as the core mission "
-"statement of the agent, and drives all interactions. During a conversation, "
-"the system prompts and skill instructions are continuously applied. They "
-"influence how the agent interprets messages, selects tools, uses sources, "
-"and determines whether additional actions are required before responding."
-msgstr ""
-"在 Odoo 中，每个\\ |AI|\\ 代理都会分配一个\\ *系统提示词*\\ ，用于定义代理的"
-"总体角色、用途和行为。它作为代理的核心使命宣言，并驱动所有交互。在对话期间，"
-"系统提示词和技能指令会被持续应用。它们会影响代理如何解读消息、选择工具、使用"
-"来源，以及在回复之前是否需要执行其他操作。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:53
-msgid ""
-"Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, "
-"called *Instructions*. Instructions are skill-specific guidelines that "
-"refine how the agent behaves within a certain context or workflow, and how "
-"it interacts within the Odoo framework."
-msgstr ""
-"每个\\ :ref:`技能 <ai/topics>`\\ 也包含其自身类似提示词的组件，称为\\ *指令"
-"*\\ 。指令是针对特定技能的指引，用于规范代理在特定上下文或工作流中的行为方"
-"式，以及它在 Odoo 框架内的交互方式。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:57
-msgid "Instructions often include:"
-msgstr "指令通常包括："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:59
-msgid "A purpose, or what the skill covers."
-msgstr "用途，即该技能涵盖的内容。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:60
-msgid "Rules or constraints for the agent to follow when assigned this skill."
-msgstr "分配此技能时代理应遵循的规则或约束。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:61
-msgid "Step-by-step workflows for how to complete a specific action."
-msgstr "如何完成特定操作的分步工作流程"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:62
-msgid "Technical details needed to complete any actions."
-msgstr "完成任何操作所需的技术细节"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:65
 msgid "Agent structure"
 msgstr "助手结构"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:70
+#: ../../export/content/applications/productivity/ai/agents.rst:40
+msgid "Instructions"
+msgstr "说明"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:42
+msgid "Instructions define the agent's overall role, purpose, and behavior."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:44
+msgid ""
+"Each AI agent is assigned a *System Prompt* that provides its main "
+"instructions. It can define the agent's responsibilities, constraints, and "
+"how it should respond to requests."
+msgstr ""
+"每个 AI 代理都会分配一个\\ *系统提示词*\\ ，用于提供其主要指令。它可以定义代"
+"理的职责、约束条件以及如何响应请求。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:47
+msgid ""
+"Each :ref:`Skill <ai/agents/skills>` also includes its own prompt-like "
+"component, called *Instructions*. Instructions are skill-specific guidelines "
+"that refine how the agent behaves in a given context or workflow and how it "
+"interacts with the Odoo framework."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:51
+msgid "Instructions often include:"
+msgstr "指令通常包括："
+
+#: ../../export/content/applications/productivity/ai/agents.rst:53
+msgid "A purpose, or what the skill covers."
+msgstr "用途，即该技能涵盖的内容。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:54
+msgid "Rules or constraints for the agent to follow when assigned this skill."
+msgstr "分配此技能时代理应遵循的规则或约束。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:55
+msgid "Step-by-step workflows for completing a specific action."
+msgstr "完成特定操作的分步工作流。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:56
+msgid "Technical details needed to complete any actions."
+msgstr "完成任何操作所需的技术细节"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:61
 msgid "Skills"
 msgstr "技能"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:72
+#: ../../export/content/applications/productivity/ai/agents.rst:63
 msgid ""
-"*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that "
-"define how an agent behaves within a specific context. Essentially, the "
-"skills define what an agent can do within the database. Skills guide "
-"conversations, telling the agent what it can do, how it can do it, and when "
-"it should do it."
+"*Skills* define specific tasks an agent can perform. Each *Skill* includes "
+"instructions that guide the agent through the task and can have one or more "
+"tools assigned to it."
 msgstr ""
-"*技能*\\ 是指令和\\ :ref:`工具 <ai/tools>`\\ 的集合，用于定义代理在特定上下文"
-"中的行为方式。从本质上讲，技能定义了代理在数据库中可以执行的操作。技能引导对"
-"话，告知代理它可以做什么、如何做以及何时做。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:67
+msgid ""
+"If an agent is not assigned any Skills, it can **only** provide information. "
+"It **cannot** complete tasks or make changes to the database."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:70
+msgid ""
+"Multiple *Skills* can be assigned to the same agent, allowing it to perform "
+"different types of tasks."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:76
+msgid "Agent tools"
+msgstr "代理工具"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:78
 msgid ""
-"If an agent is not assigned any Skills, it is **only** able to provide "
-"information. It **cannot** complete tasks or make changes to the database."
-msgstr ""
-"如果未给代理分配任何技能，它\\ **仅**\\ 能提供信息。它\\ **无法**\\ 完成任务"
-"或对数据库进行更改。"
+"*Tools* are the functions an agent can perform in Odoo. Each agent has the "
+"following tools available:"
+msgstr "*工具*是代理可以在 Odoo 中执行的功能。每个代理都可以使用以下工具："
 
 #: ../../export/content/applications/productivity/ai/agents.rst:81
 msgid ""
-"Within each skill is a detailed prompt, which provides the agent with more "
-"in-depth instructions on how to perform the tasks associated with that "
-"skill, define the boundaries of its behavior, and determine how it should "
-"interpret user intent. These prompts ensure that the agent follows a "
-"consistent reasoning pattern and uses the appropriate tools to generate "
-"accurate, context-aware responses."
+"*Generate image*: A collection of tools to support image generation. Load "
+"this skill when the user asks to generate or enhance an image."
 msgstr ""
-"每个技能中都包含详细的提示词，为智能体提供关于如何执行与该技能相关任务的更深"
-"入说明、界定其行为边界，并确定应如何理解用户意图。这些提示词确保智能体遵循一"
-"致的推理模式，并使用适当的工具生成准确且具有上下文感知能力的回复。"
+"*生成图像*：一系列用于支持图像生成的工具。当用户要求生成或增强图像时，请加载"
+"此技能。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:83
+msgid "*Web Search*: Enable the Agent to explore the internet in real time."
+msgstr "*网络搜索*：使代理能够实时探索互联网。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:84
+msgid ""
+"*Self Update*: Allows an agent to identify missing or incomplete "
+"instructions and *Skills* and propose or make changes to its configuration."
+msgstr "*自我更新*：允许代理识别缺失或不完整的指令和*技能*，并提出或进行配置更改。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:87
-msgid "The following skills are preconfigured in the **AI** app:"
-msgstr "以下技能已在\\ **AI**\\ 应用中预配置："
+msgid ""
+"To enable a tool on an agent, click the *Skills* tab, then slide the "
+"appropriate toggle to green."
+msgstr "要在代理上启用工具，请点击*技能*标签，然后将相应的开关滑动至绿色。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:89
-msgid ""
-":guilabel:`View Builder`: Supports the interpretation of a user query to "
-"open the appropriate Odoo view with a set of tools necessary to perform the "
-"search. Natural language queries can also include time-based grouping "
-"instructions. This allows agents to group results by time intervals such as "
-"day, month, or year when querying records."
-msgstr ""
-":guilabel:`视图构建器`：支持解析用户查询，利用执行搜索所需的一组工具打开相应"
-"的 Odoo 视图。自然语言查询还可以包含基于时间的分组指令。这允许智能体在查询记"
-"录时按日、月或年等时间间隔对结果进行分组。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:93
-msgid ""
-":guilabel:`Information retrieval`: A collection of tools to retrieve "
-"information about the models."
-msgstr ":guilabel:`信息检索`：一套用于检索模型信息的工具集合。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:94
-msgid ":guilabel:`Update Records`: Tools to update records."
-msgstr ":guilabel:`更新记录`：用于更新记录的工具。"
+msgid "The tools on an AI agent, with some enabled."
+msgstr "AI 代理上的工具，其中一些已启用。"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:95
-msgid ":guilabel:`Create Records`: Tools to create records."
-msgstr ":guilabel:`创建记录`：用于创建记录的工具。"
+msgid "Subagents"
+msgstr "子代理"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:96
+#: ../../export/content/applications/productivity/ai/agents.rst:97
 msgid ""
-":guilabel:`Generate Images`: A collection of tools to support image "
-"generation. Load this skill when the user asks to generate or enhance an "
-"image."
+"An agent can use other |AI| agents as *subagents* to handle specialized "
+"tasks. When a user submits a request, the main agent can determine whether "
+"to delegate part of the task to a subagent based on its purpose and "
+"capabilities."
 msgstr ""
-":guilabel:`生成图像`：支持图像生成的一组工具。当用户请求生成或优化图像时，加"
-"载此技能。"
+"代理可以使用其他\\ |AI|\\ 代理作为*子代理*来处理专门任务。当用户提交请求时，"
+"主代理可根据请求的目的和能力，确定是否将任务的一部分委派给子代理。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:98
+#: ../../export/content/applications/productivity/ai/agents.rst:101
 msgid ""
-":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
-"time."
-msgstr ":guilabel:`网页搜索`：使智能体能够实时浏览互联网。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:99
-msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
-msgstr ":guilabel:`网站构建器`：用于编辑 Odoo 网站页面的工具。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:100
-msgid ""
-":guilabel:`Create Leads`: A collection of tools to support automated lead "
-"creation. This skill is **only** available if the **CRM** app is installed."
+"Subagents allow an agent to delegate specific tasks to specialized agents "
+"rather than handling every request itself. The main agent can then use the "
+"subagent's results as part of its response."
 msgstr ""
-":guilabel:`创建线索`：支持自动创建线索的一组工具。此技能\\ **仅**\\ 在安装了"
-"\\ **CRM**\\ 应用时可用。"
+"子代理允许代理将特定任务委派给专业代理，而不是自己处理每一个请求。然后，主代"
+"理可以使用子代理的结果作为其响应的一部分。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:103
+#: ../../export/content/applications/productivity/ai/agents.rst:104
 msgid ""
-"Within each skill is a set of :guilabel:`Instructions`, which act as a "
-"prompt and provide guidance for the structure of the interaction, and one or "
-"more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can "
-"perform."
+"To assign a subagent, click on the *Skills* tab, scroll to the *Subagents* "
+"section, then click :icon:`add` :guilabel:`Add`. Then, select from the list "
+"of existing agents, or click :guilabel:`Create New` to create a new one."
 msgstr ""
-"每个技能中都包含一组\\ :guilabel:`指令`\\ （用作提示词并为交互结构提供指"
-"导），以及一个或多个\\ :ref:`AI 工具 <ai/tools>`\\ （指示智能体可以执行的功"
-"能）。"
+"要指派子代理，请点击*技能*标签，滚动至*子代理*节，然后点击\\ :icon:`add`\\ "
+":guilabel:`添加`。然后，从现有代理列表中进行选择，或点击\\ :guilabel:`创建新"
+"建`以创建一个新代理。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:110
-msgid "Tools"
-msgstr "工具"
+#: ../../export/content/applications/productivity/ai/agents.rst:109
+#: ../../export/content/applications/productivity/knowledge.rst:3
+msgid "Knowledge"
+msgstr "知识"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:112
-msgid ""
-"*Tools* are the functions the agent can perform in Odoo. These include "
-"actions like creating a lead or opening a view. Tools extend the purpose of "
-"the agent beyond conversations, they enable real actions. The available "
-"tools in a database vary based on the applications installed. "
-"Multiple :guilabel:`AI Tools` can be assigned to a single skill."
-msgstr ""
-"*工具*\\ 是智能体在 Odoo 中可以执行的功能，包括创建线索或打开视图等操作。工具"
-"将智能体的用途扩展到对话之外，使其能够执行实际操作。数据库中可用的工具因已安"
-"装的应用而异。单个技能可以分配多个\\ :guilabel:`AI 工具`\\ 。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:120
-msgid "Sources"
-msgstr "来源"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:122
+#: ../../export/content/applications/productivity/ai/agents.rst:111
 msgid ""
 "Sources are the data the agent can refer to when generating responses or "
 "completing tasks. Sources are indexed so the agent can retrieve relevant "
@@ -531,7 +466,7 @@ msgstr ""
 "来源是助手在生成响应或完成任务时可以引用的数据。来源会被建立索引，以便当用户"
 "提问时，助手能够检索到相关信息。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:126
+#: ../../export/content/applications/productivity/ai/agents.rst:115
 msgid ""
 "An agent designed to answer customer support questions has **Knowledge** "
 "articles included as sources, which include frequently asked questions."
@@ -539,298 +474,40 @@ msgstr ""
 "一个旨在回答客户支持问题的助手，其来源中包含了**知识库**文章，这些文章包含常"
 "见问题解答。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:129
+#: ../../export/content/applications/productivity/ai/agents.rst:118
 msgid "Sources can be in the following formats:"
 msgstr "来源可以采用以下格式："
 
-#: ../../export/content/applications/productivity/ai/agents.rst:131
-msgid "PDFs"
-msgstr "PDF"
+#: ../../export/content/applications/productivity/ai/agents.rst:120
+msgid "Files uploaded to the agent"
+msgstr "上传至代理的文件"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:121
+msgid "Links to webpages"
+msgstr "网页链接"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:122
+msgid "Documents (uploaded in the :doc:`Documents <../documents>` application)"
+msgstr "文档（上传至\\ :doc:`文档 <../documents>`\\ 应用）"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:123
+msgid ":doc:`Knowledge <../knowledge>` app articles"
+msgstr ":doc:`知识库 <../knowledge>`\\ 应用文章"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:126
+msgid ""
+"If the :guilabel:`Restrict answers to Sources` option is enabled on an "
+"agent, the agent can **only** utilize information from the uploaded and "
+"active sources."
+msgstr ""
+"如果代理上启用了\\ :guilabel:`限制回答源`\\ 选项，则该代理**只能**使用来自已"
+"上传且已激活源的信息。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:130
+msgid "Reprocessing sources"
+msgstr "重新处理源"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:132
-msgid "Weblinks"
-msgstr "网站链接"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:133
-msgid "Documents (uploaded in the **Documents** application)"
-msgstr "文件（上传到**文件管理**应用程序中）"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:134
-msgid "**Knowledge** app articles"
-msgstr "**知识库**应用文章"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:137
-msgid ""
-"If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
-"agent can **only** utilize information from the uploaded and active sources."
-msgstr ""
-"如果在助手上启用了 :guilabel:`限制使用来源` 选项，则该助手只能利用已上传且处"
-"于活动状态的来源中的信息。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:141
-msgid "Uploaded files"
-msgstr "上传的文件"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:143
-msgid ""
-"During a conversation with an |AI| agent, additional context can be provided "
-"by uploading files. Files are temporarily treated as sources for the ongoing "
-"discussion. The agent can use their content to answer questions, summarize "
-"information, or extract relevant details."
-msgstr ""
-"在与\\ |AI|\\ 智能体对话期间，可以通过上传文件提供额外上下文。文件会被临时作"
-"为当前讨论的来源。智能体可以使用其内容来回答问题、总结信息或提取相关细节。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:147
-msgid ""
-"The provided files only influence the current conversation, unless they are "
-"explicitly added as sources on the agent."
-msgstr "提供的文件仅影响当前对话，除非已明确将其添加为智能体的来源。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:150
-msgid ""
-"To attach a file in a conversation, click the :icon:`fa-plus-"
-"circle` :guilabel:`(plus circle)` icon in the message window, then "
-"click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
-"window, select one or more files to attach, then click :guilabel:`Open`."
-msgstr ""
-"要在对话中附加文件，请单击消息窗口中的\\ :icon:`fa-plus-circle` :guilabel:`"
-"（圆圈加号）`\\ 图标，然后单击\\ :icon:`fa-paperclip` :guilabel:`附加文件"
-"`\\ 。在文件资源管理器窗口中，选择要附加的一个或多个文件，然后单击"
-"\\ :guilabel:`打开`\\ 。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:155
-msgid ""
-"A manager finds a receipt for supplies and is unsure whether it has already "
-"been submitted to the **Expenses** app for reimbursement. They open a "
-"conversation with the *Ask AI* agent and enter the following prompt:"
-msgstr ""
-"经理找到了一张用品收据，但不确定是否已提交至\\ **费用**\\ 应用进行报销。他们"
-"与\\ *Ask AI*\\ 智能体开启对话，并输入以下提示词："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:159
-msgid "`Can you open the expense that matches this receipt?`"
-msgstr "`你能打开与此收据匹配的费用吗？`"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:161
-msgid ""
-"They attach the receipt to the message. After the agent analyzes the "
-"attachment, it opens the view to the correct expense."
-msgstr "他们将收据附加到消息中。智能体在分析附件后，会打开对应费用的视图。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:164
-msgid "Add alt text."
-msgstr "添加替代文本。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:168
-msgid "Gain insights from previewed files"
-msgstr "从预览文件中获取洞察"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:170
-msgid ""
-"When a document is open in preview mode, |AI| agents can use the content of "
-"the previewed file as context for the conversation."
-msgstr ""
-"当文档以预览模式打开时，\\ |AI|\\ 代理可以使用预览文件的内容作为对话的上下"
-"文。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:173
-msgid ""
-"First, navigate to the :menuselection:`Documents` app and click a document "
-"to preview it. Click the |AI| icon at the top of the page to open "
-"the :guilabel:`Ask AI` chat window. From here, click one of the default "
-"prompts to use them, or enter a custom one in the message window."
-msgstr ""
-"首先，前往\\ :menuselection:`文档`\\ 应用并点击文档进行预览。点击页面顶部的"
-"\\ |AI|\\ 图标以打开\\ :guilabel:`咨询 AI`\\ 聊天窗口。在此处，点击其中一个默"
-"认提示词即可使用，也可以在消息窗口中输入自定义提示词。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:177
-msgid ""
-"In this case, the agent's responses are grounded in the file currently being "
-"previewed, in combination with any other sources assigned to the agent."
-msgstr ""
-"在这种情况下，代理的回复将基于当前正在预览的文件，并结合分配给该代理的任何其"
-"他来源。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:183
-msgid "Create a new agent"
-msgstr "创建新助手"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:185
-msgid ""
-"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
-"click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
-"description, if desired."
-msgstr ""
-"若要创建新的\\ |AI|\\ 代理，请前往\\ :menuselection:`AI`\\ 应用并点击"
-"\\ :guilabel:`新建`。输入\\ :guilabel:`代理名称`，然后根据需要添加简短描述。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:189
-msgid ""
-"Before creating a new agent, it is recommended to have a clear use case in "
-"mind. This helps when writing out the :guilabel:`System Prompt`, and "
-"assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
-msgstr ""
-"在创建新代理之前，建议明确具体的用例。这有助于编写\\ :guilabel:`系统提示词`，"
-"以及分配\\ :guilabel:`技能`\\ 和\\ :guilabel:`AI 工具`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:193
-msgid ""
-"Next, select a :guilabel:`Response Style`. This manages the overall tone the "
-"agent uses when responding to an inquiry. Choose from one of the following "
-"options:"
-msgstr ""
-"接下来，选择一个 :guilabel:`响应风格`。这用于管理助手在回应询问时的整体语气。"
-"从以下选项中选择："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:196
-msgid ""
-":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
-"clear, direct answers with a moderate level of detail."
-msgstr ""
-":guilabel:`标准`：保持平衡、专业的语调。提供清晰、直接的回答，并具有适度的详"
-"细程度。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:198
-msgid ""
-":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
-"responses. Explores multiple perspectives, acknowledges subtleties, and uses "
-"precise, academic language where appropriate."
-msgstr ""
-":guilabel:`细致`：提供成熟且高度结合上下文的回复。探讨多个视角，捕捉微妙之"
-"处，并在适当时使用精确的学术语言。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:201
-msgid ""
-":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
-"Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
-"dynamic structure to keep the user interested."
-msgstr ""
-":guilabel:`生动与创意`：短小精悍、生动且极具吸引力。注重简练与机智。使用富有"
-"表现力的语言、隐喻和动态结构来保持用户的兴趣。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:203
-msgid ""
-":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
-"soundness above all else. Breaks down complex steps, cites reasoning "
-"clearly, and verifies every claim. Adopts a meticulous and formal tone."
-msgstr ""
-":guilabel:`从容与严谨`：将绝对的精确性和逻辑严密性置于首位。分解复杂步骤，清"
-"晰引用推理过程，并核实每一项主张。采用严谨正式的语调。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:207
-msgid ""
-"Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
-"**only** respond based on the provided resources."
-msgstr ""
-"勾选\\ :guilabel:`仅限来源`\\ 复选框，以限制代理\\ **仅**\\ 根据所提供的资源"
-"进行回复。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:210
-msgid ""
-"Next, select one or more :guilabel:`Skills` for the agent. As explained "
-"above, :ref:`Skills <ai/topics>` include both instructions and tools that "
-"guide the agent in helping users complete a task."
-msgstr ""
-"接下来，为代理选择一项或多项\\ :guilabel:`技能`。如上所述，\\ :ref:`技能 <ai/"
-"topics>`\\ 包括指导代理帮助用户完成任务的说明和工具。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:214
-msgid ""
-"Enter a :guilabel:`System Prompt` with detailed instructions for the agent "
-"as to their role and responsibilities."
-msgstr "输入 :guilabel:`系统提示`，其中包含关于助手角色和职责的详细说明。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:217
-msgid "A new agent form with the required information."
-msgstr "包含所需信息的新建助手表单。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:221
-msgid ""
-"The specificity and length of the :guilabel:`System Prompt` can vary, "
-"depending on the use case for the agent. Use the preconfigured agents as an "
-"example of the possible information."
-msgstr ""
-":guilabel:`系统提示` 的具体程度和长度可以有所不同，这取决于助手的使用场景。可"
-"以参考预配置的助手作为可能包含信息的示例。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:224
-msgid ""
-"If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
-"tab, then click :guilabel:`Add a source`."
-msgstr ""
-"如果助手需要*来源*，请滚动到 :guilabel:`来源` 选项卡，然后点击 :guilabel:`添"
-"加来源`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:227
-msgid "Select a format:"
-msgstr "选择格式："
-
-#: ../../export/content/applications/productivity/ai/agents.rst:229
-msgid ""
-":guilabel:`Upload a File`: Select the appropriate file from the explorer "
-"window, and click :guilabel:`Open`."
-msgstr ""
-":guilabel:`上传文件`：从文件资源管理器窗口中选择相应的文件，然后点击"
-"\\ :guilabel:`打开`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:231
-msgid ""
-":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, "
-"paste one link per line. Click :guilabel:`Save`."
-msgstr ""
-":guilabel:`添加链接`：粘贴网址。可以一次添加多个链接，每行粘贴一个链接。点击"
-"\\ :guilabel:`保存`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:233
-msgid ""
-":guilabel:`Add from Documents` (uploaded in the **Documents** application): "
-"Click the checkbox next to one or more documents, then "
-"click :guilabel:`Select`."
-msgstr ""
-":guilabel:`从文档添加`（在\\ **文档**\\ 应用程序中上传）：勾选一个或多个文档"
-"旁边的复选框，然后点击\\ :guilabel:`选择`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:235
-msgid ""
-":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
-"articles, then click :guilabel:`Select`."
-msgstr ""
-":guilabel:`从知识库添加`：勾选一篇文章或多篇文章旁边的复选框，然后点击"
-"\\ :guilabel:`选择`。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:238
-msgid ""
-"Once a source is added, the :guilabel:`Status` field updates to reflect its "
-"current status. The source is ready when the status changes from "
-"*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate "
-"the source."
-msgstr ""
-"添加来源后，:guilabel:`状态` 字段会更新以反映其当前状态。当状态从处理中变为已"
-"索引时，来源即准备就绪。滑动 :guilabel:`启用` 开关以激活该来源。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:242
-msgid "A list of sources for an agent, each denoted with their format."
-msgstr "助手的来源列表，每个来源都标明了其格式。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:246
-msgid ""
-"If a source fails to upload, it could be the result of a conflict with the "
-"selected provider."
-msgstr "如果来源上传失败，可能是由于与所选提供商发生冲突。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:248
-msgid ""
-"Click the :guilabel:`Test` button to open a conversation window and test the "
-"new agent."
-msgstr "点击 :guilabel:`测试` 按钮打开对话窗口，测试新助手。"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:251
-msgid "Manually reprocessing sources"
-msgstr "手动重新处理来源"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:253
 msgid ""
 "If the content of a source changes after it has been indexed, it may be "
 "necessary to reprocess the source so that agents use the most recent "
@@ -842,28 +519,129 @@ msgstr ""
 "信息。重新处理可以手动触发，并确保更新后的文档、链接或知识库文章反映在未来的"
 "代理回复中。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:258
-msgid ""
-"To reprocess a source, navigate to the :menuselection:`AI` app. Select an |"
-"AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical ellipsis)` icon, then "
-"click :guilabel:`Configuration`."
-msgstr ""
-"若要重新处理来源，请前往\\ :menuselection:`AI`\\ 应用。选择一个\\ |AI|\\ 代"
-"理，并在看板卡片上点击\\ :icon:`fa-ellipsis-v` :guilabel:`（垂直省略号）`\\ "
-"图标，然后点击\\ :guilabel:`配置`。"
+#: ../../export/content/applications/productivity/ai/agents.rst:137
+msgid "To reprocess a source:"
+msgstr "要重新处理源："
 
-#: ../../export/content/applications/productivity/ai/agents.rst:262
-msgid ""
-"On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to "
-"any source that should be updated."
-msgstr ""
-"在\\ *来源*\\ 选项卡上，单击需要更新的任何来源旁的\\ :guilabel:`重新处理"
-"` :icon:`fa-refresh`\\ 。"
+#: ../../export/content/applications/productivity/ai/agents.rst:139
+msgid "Navigate to the :menuselection:`AI` app and select an |AI| agent."
+msgstr "导航至\\ :menuselection:`AI`\\ 应用，并选择一个\\ |AI|\\ 代理。"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:265
-msgid "AI agent sources with the reprocess icon visible."
-msgstr "显示重新处理图标的 AI 智能体来源。"
+#: ../../export/content/applications/productivity/ai/agents.rst:140
+msgid "Click the *Knowledge* tab, and select a source."
+msgstr "点击*知识库*标签，然后选择一个源。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:141
+msgid ""
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the "
+"source."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:142
+msgid "On the menu, click :guilabel:`Reprocess`."
+msgstr "在菜单中，点击\\ :guilabel:`重新处理`\\ 。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:144
+msgid "The Knowledge tab of an agent, with the Reprocess option visible."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:148
+msgid "Triggers"
+msgstr "触发器"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:150
+msgid ""
+"An agent can be triggered in different ways depending on how it is used."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:152
+msgid ""
+"Agents can be launched interactively by users through an AI chat. They can "
+"also be triggered automatically by automated actions and scheduled actions, "
+"allowing agents to participate in automated workflows."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:156
+msgid ""
+"To add a trigger to an agent, navigate to the *Trigger* tab and "
+"click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
+"triggered?* popup, choose from one of the following options:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:159
+msgid "*On a schedule*: Runs automatically according to a set frequency."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:160
+msgid ""
+"*Based on a Date Field*: Runs once per record, as soon as a specific date is "
+"reached."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:161
+msgid "*After creation*: Runs whenever a new record is added."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:162
+msgid "*After update*: Runs whenever a specific field is updated."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:165
+msgid ""
+"If unsure which option is best for a particular use case, click "
+"the :guilabel:`I need help to choose` option at the bottom of the popup. "
+"This opens a conversation with the *Odoo AI* agent. The agent then walks "
+"through the specifics of the use case to help select the best option."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:170
+msgid "See :doc:`AI server actions <server-actions>` for more information."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:175
+msgid "Create a new agent"
+msgstr "创建新助手"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:177
+msgid ""
+"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+"click :guilabel:`New`. Enter an agent name, then add a short description, if "
+"desired."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:181
+msgid ""
+"Before creating a new agent, it is recommended to have a clear use case in "
+"mind. This helps when writing out the *Instructions* and assigning the "
+"*Skills*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:184
+msgid ""
+"On the *Instructions* tab, enter a system prompt with detailed instructions "
+"for the agent as to their role and responsibilities."
+msgstr ""
+"在\\ *指令*\\ 选项卡上，输入系统提示词，其中包含有关代理角色和职责的详细说明"
+"。"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:187
+msgid "A new agent form."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:190
+msgid ""
+"On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As "
+"explained above, :ref:`Skills <ai/agents/skills>` include both instructions "
+"and tools that guide the agent in helping users complete a task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/agents.rst:194
+msgid ""
+"Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit "
+"the agent to **only** respond based on the provided resources."
+msgstr ""
+"将\\ :guilabel:`仅根据来源回答`\\ 开关切换为激活状态，以限制代理\\ **仅**\\ "
+"根据所提供的资源进行回复。"
 
 #: ../../export/content/applications/productivity/ai/apikeys.rst:3
 msgid "AI API keys"
@@ -2282,9 +2060,8 @@ msgstr "坐席无法对问题做出高置信度答复。"
 #: ../../export/content/applications/productivity/ai/live-chat.rst:86
 msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
-"Creation* :ref:`skill <ai/topics>`."
+"Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"当满足这些条件之一时，代理会激活\\ *线索创建*\\ :ref:`技能 <ai/topics>`\\ 。"
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -4064,11 +3841,11 @@ msgstr ""
 #: ../../export/content/applications/productivity/ai/support_operations.rst:87
 msgid ""
 "Users may also define *skills*, which grant the agent permission to perform "
-"specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as "
-"record creation or automation triggers."
+"specific actions. :ref:`Skills <ai/agents/skills>` allow advanced scenarios "
+"such as record creation or automation triggers."
 msgstr ""
-"用户还可以定义\\ *技能*\\ ，以授予智能体执行特定操作的权限。\\ :ref:`技能 "
-"<ai/topics>`\\ 支持创建记录或自动化触发器等高级应用场景。"
+"用户还可以定义\\ *技能*\\ ，这会授予代理执行特定操作的权限。\\ :ref:`技能 "
+"<ai/agents/skills>`\\ 允许实现记录创建或自动化触发器等高级场景。"
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:90
 msgid "An example support AI agent."
@@ -4953,7 +4730,7 @@ msgstr ""
 msgid ""
 "In the :guilabel:`Availabilities` tab, ensure at least one time window "
 "appears."
-msgstr ""
+msgstr "在\\ :guilabel:`可用时间`\\ 选项卡中，确保至少显示一个时间段。"
 
 #: ../../export/content/applications/productivity/appointments/appointment_types.rst:294
 msgid ""
@@ -12618,10 +12395,6 @@ msgid ""
 msgstr ""
 ":doc:`人工智能驱动的文档数字化<../finance/accounting/vendor_bills/"
 "invoice_digitization>`"
-
-#: ../../export/content/applications/productivity/knowledge.rst:3
-msgid "Knowledge"
-msgstr "知识"
 
 #: ../../export/content/applications/productivity/knowledge.rst:5
 msgid ""
@@ -29860,8 +29633,8 @@ msgid ""
 "the **Documents** app in the :icon:`storage` :guilabel:`My Drive` personal "
 "folder."
 msgstr ""
-"将图表插入新电子表格时，该电子表格会保存在\\ \"**文档**\"\\ 应用程序的\\ "
-":icon:`storage`\\ :guilabel:`我的驱动器`\\ 个人文件夹中。"
+"将图表插入新电子表格时，该电子表格会保存在\\ \"**文档**\"\\ 应用程序的"
+"\\ :icon:`storage`\\ :guilabel:`我的驱动器`\\ 个人文件夹中。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:17
 msgid "Click :guilabel:`Insert`."
@@ -29888,9 +29661,9 @@ msgid ""
 "database. In the example, clicking on :guilabel:`Marc Demo` opens the list "
 "view of all sales by this salesperson that match the domain of the chart."
 msgstr ""
-"点击图表中的数据点可打开数据库中的相关列表视图。在此示例中，点击\\ "
-":guilabel:`Marc Demo`\\ 会打开由该销售人员所有的销售列表视图，且该视图匹配图"
-"表的域。"
+"点击图表中的数据点可打开数据库中的相关列表视图。在此示例中，点击"
+"\\ :guilabel:`Marc Demo`\\ 会打开由该销售人员所有的销售列表视图，且该视图匹配"
+"图表的域。"
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:31
 msgid "A clickable link to an Odoo menu plus clickable data point"
@@ -32427,8 +32200,8 @@ msgid ""
 "charts/create>` or :doc:`inserted directly from an Odoo graph view <../"
 "insert/insert_chart>`."
 msgstr ""
-"图表可以\\ :ref:`根据电子表格数据手动创建 <spreadsheet/charts/create>`\\ 或\\"
-" :doc:`直接从 Odoo 图表视图插入 <../insert/insert_chart>`。"
+"图表可以\\ :ref:`根据电子表格数据手动创建 <spreadsheet/charts/create>`\\ 或"
+"\\ :doc:`直接从 Odoo 图表视图插入 <../insert/insert_chart>`。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:16
 msgid "Create a chart"
@@ -32447,8 +32220,8 @@ msgid ""
 "Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` "
 "from the menu bar."
 msgstr ""
-"点击菜单栏上的\\ :menuselection:`插入 -->`\\ :icon:`bar_chart`\\ "
-":menuselection:`图表`。"
+"点击菜单栏上的\\ :menuselection:`插入 --"
+">`\\ :icon:`bar_chart`\\ :menuselection:`图表`。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:23
 msgid ""
@@ -32481,8 +32254,8 @@ msgid ""
 "right of the spreadsheet."
 msgstr ""
 "对于\\ :ref:`手动创建 <spreadsheet/charts/create>`\\ 或\\ :doc:`从 Odoo 图表"
-"视图插入 <../insert/insert_chart>`\\ 的图表，通过图表属性还可进行进一步自定义"
-"，该属性会在电子表格右侧的面板中打开。"
+"视图插入 <../insert/insert_chart>`\\ 的图表，通过图表属性还可进行进一步自定"
+"义，该属性会在电子表格右侧的面板中打开。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:40
 msgid ""
@@ -32505,9 +32278,9 @@ msgid ""
 "over the chart, click the :icon:`more_vert` :guilabel:`(menu)` icon, then "
 "click :icon:`edit_square` :guilabel:`Edit`."
 msgstr ""
-"对于任何图表（无论是手动创建还是从 Odoo 视图插入），将鼠标悬停在图表上，点"
-"击\\ :icon:`more_vert`\\ :guilabel:`(菜单)`\\ 图标，然后点击\\ "
-":icon:`edit_square`\\ :guilabel:`编辑`。"
+"对于任何图表（无论是手动创建还是从 Odoo 视图插入），将鼠标悬停在图表上，点击"
+"\\ :icon:`more_vert`\\ :guilabel:`(菜单)`\\ 图标，然后点击"
+"\\ :icon:`edit_square`\\ :guilabel:`编辑`。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:50
 msgid ""
@@ -32515,8 +32288,8 @@ msgid ""
 "menu bar, then select the relevant chart from "
 "the :icon:`bar_chart` :guilabel:`Charts` section."
 msgstr ""
-"对于从 Odoo 图表视图插入的图表，点击菜单栏上的\\ :guilabel:`数据`，然后从\\ "
-":icon:`bar_chart`\\ :guilabel:`图表`\\ 部分中选择相关图表。"
+"对于从 Odoo 图表视图插入的图表，点击菜单栏上的\\ :guilabel:`数据`，然后从"
+"\\ :icon:`bar_chart`\\ :guilabel:`图表`\\ 部分中选择相关图表。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:56
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/pivot_tables.rst:105
@@ -32533,8 +32306,8 @@ msgid ""
 ":ref:`Chart type <spreadsheet/charts/customize-configuration-type>`: the "
 "type of chart. For a chart that has been:"
 msgstr ""
-":ref:`图表类型 <spreadsheet/charts/customize-configuration-type>`：图表的类型"
-"。对于以下情况的图表："
+":ref:`图表类型 <spreadsheet/charts/customize-configuration-type>`：图表的类"
+"型。对于以下情况的图表："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:63
 msgid "manually created, this is by default the chart type suggested by Odoo;"
@@ -32573,7 +32346,7 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:75
 msgid "Depending on the chart type, other fields may also be displayed."
-msgstr ""
+msgstr "根据图表类型，可能还会显示其他字段。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:80
 msgid "Chart types"
@@ -32877,7 +32650,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Bubble`: Visualizes multi-dimensional data across categories "
 "using circle size and position."
-msgstr ""
+msgstr ":guilabel:`气泡图`：利用圆形的大小和位置直观展示跨类别的多维数据。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:230
 msgid "Gauge chart icon"
@@ -33029,6 +32802,8 @@ msgid ""
 "clicking the :icon:`info` :guilabel:`(Chart Info)` icon in the top right "
 "corner."
 msgstr ""
+"悬停在图表上，然后点击右上角的\\ :icon:`info` :guilabel:`(图表信息)`\\ 图标，"
+"即可查看添加到图表中的注释。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:308
 msgid "Data Series"
@@ -33046,6 +32821,8 @@ msgid ""
 "color of the related data points on the chart by clicking on the color dot "
 "and :ref:`choosing the desired color <spreadsheet/charts/design-color>`."
 msgstr ""
+":guilabel:`系列颜色`：选中相关数据系列后，点击颜色圆点并\\ :ref:`选择所需颜"
+"色 <spreadsheet/charts/design-color>`\\ ，即可更改图表上相关数据点的颜色。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:315
 msgid ":guilabel:`Series name`: Edit the name of a data series, if needed."
@@ -33057,6 +32834,8 @@ msgid ""
 "determine whether the series is shown as a :guilabel:`Bar` "
 "or :guilabel:`Line`."
 msgstr ""
+":guilabel:`系列类型`：对于\\ :guilabel:`组合`\\ 图表的每个数据系列，确定将该"
+"系列显示为\\ :guilabel:`柱状图`\\ 还是\\ :guilabel:`折线图`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:318
 msgid ""
@@ -33078,6 +32857,11 @@ msgid ""
 "line, click the color dot, then :ref:`choose the desired color <spreadsheet/"
 "charts/design-color>`."
 msgstr ""
+":guilabel:`趋势线`：选中相关数据系列后，启用\\ :guilabel:`显示趋势线`\\ ，然"
+"后选择趋势线的\\ :guilabel:`类型`\\ ：\\ :guilabel:`线性`\\ 、\\ "
+":guilabel:`指数`\\ 、\\ :guilabel:`多项式`\\ 、\\ :guilabel:`对数`\\ 或\\ "
+":guilabel:`移动平均`\\ 。要更改趋势线的颜色，请点击颜色圆点，然后\\ :ref:`选"
+"择所需颜色 <spreadsheet/charts/design-color>`\\ 。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:330
 msgid "Axes"
@@ -33099,7 +32883,7 @@ msgstr ""
 msgid ""
 "For horizontal or vertical axes that display numerical scales, it is also "
 "possible to modify the following elements:"
-msgstr ""
+msgstr "对于显示数值刻度的水平轴或垂直轴，还可以修改以下元素："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:341
 msgid ""
@@ -33114,6 +32898,8 @@ msgid ""
 ":guilabel:`Gridlines`: By default, only major horizonal/vertical gridlines "
 "are shown. Enable minor horizonal/vertical gridlines if desired."
 msgstr ""
+":guilabel:`网格线`：默认情况下，仅显示主要水平/垂直网格线。如有需要，可启用次"
+"要水平/垂直网格线。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:350
 msgid "Pie Slice"
@@ -33126,6 +32912,9 @@ msgid ""
 "change the color of the related pie chart slice by clicking the color dot "
 "and :ref:`choosing the desired color <spreadsheet/charts/design-color>`."
 msgstr ""
+"在\\ :guilabel:`饼图切片`\\ 部分可以修改饼图切片（或数据类别）的颜色。选中相"
+"关数据系列后，点击颜色圆点并\\ :ref:`选择所需颜色 <spreadsheet/charts/design-"
+"color>`\\ 即可更改相关饼图切片的颜色。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:359
 msgid "Other chart type-specific sections"
@@ -33150,6 +32939,8 @@ msgid ""
 "Hover over a chart, then click the :icon:`more_vert` :guilabel:`(menu)` icon "
 "to reveal the following options:"
 msgstr ""
+"将鼠标悬停在图表上，然后点击\\ :icon:`more_vert` :guilabel:`(菜单)`\\ 图标以"
+"显示以下选项："
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:377
 msgid ""
@@ -33183,6 +32974,10 @@ msgid ""
 "remains up-to-date, and :ref:`clicking on a data point <spreadsheet/insert/"
 "accessing-data>` opens the related list view in the database."
 msgstr ""
+"对于从 Odoo 图表视图插入的图表，以这种方式复制/剪切并粘贴图表可保持\\ "
+":ref:`图表与数据库之间的关联 <spreadsheet/insert/data-sources>`\\ 。粘贴后的"
+"图表中的数据将保持最新状态，并且\\ :ref:`点击数据点 <spreadsheet/insert/"
+"accessing-data>`\\ 会打开数据库中相关的列表视图。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:394
 msgid ""
@@ -33203,6 +32998,8 @@ msgid ""
 "image of a chart implies there is no longer any link between the chart and "
 "the database."
 msgstr ""
+"对于从 Odoo 图表视图插入的图表，复制并粘贴其静态图像意味着该图表与数据库之间"
+"不再有任何关联。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:404
 msgid ""
@@ -33235,6 +33032,9 @@ msgid ""
 "carousels, hold `CTRL` or `SHIFT` (or `Command`), select the items, then "
 "drag them to the desired position."
 msgstr ""
+"将图表拖动到所需位置，即可在同一工作表中重新定位图表；若要一次重新定位多个项"
+"目（例如图像、图表或轮播），请按住 `CTRL` 或 `SHIFT`（或 `Command`），选择这"
+"些项目，然后将它们拖动到所需位置。"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:422
 msgid ""
@@ -38060,13 +37860,12 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:110
 msgid ""
-"A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/"
-"simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-"
-"time>` field."
+"A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time "
+"<studio/fields/simple-fields-date-time>` field."
 msgstr ""
 "\\ :guilabel:`日期`\\ 过滤器只能匹配\\ :ref:`日期 <studio/fields/simple-"
-"fields-date>`\\ 或\\ :ref:`日期时间 <studio/fields/simple-fields-date-"
-"time>`\\ 字段。"
+"fields-date>`\\ 或\\ :ref:`日期时间 <studio/fields/simple-fields-date-time>"
+"`\\ 字段。"
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:113
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:150
@@ -42096,6 +41895,512 @@ msgstr ""
 "对于其他错误，请参阅 Meta 开发者套件中的\"WhatsApp 错误代码\\ <https://"
 "developers.facebook.com/documentation/business-messaging/whatsapp/support/"
 "error-codes>\"。"
+
+#~ msgid ""
+#~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
+#~ "natural language, perform tasks, and assist users by interacting with "
+#~ "Odoo tools. Agents are a core component of the |AI| structure in Odoo. "
+#~ "Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-"
+#~ "odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/"
+#~ "tools>` that guide its behavior."
+#~ msgstr ""
+#~ "Odoo 中的\\ |AI|\\ 代理是一种智能虚拟助手，能够理解自然语言、执行任务，并"
+#~ "通过与 Odoo 工具交互来协助用户。代理是 Odoo 中\\ |AI|\\ 结构的核心组件。每"
+#~ "个代理都有明确的用途、\\ :ref:`提示词 <ai/agents/prompts-in-odoo>`\\ 以及"
+#~ "一组用于指导其行为的\\ :ref:`技能 <ai/topics>`\\ 和\\ :ref:`工具 <ai/"
+#~ "tools>`\\ 。"
+
+#~ msgid ""
+#~ "When interacting with an |AI| agent, the conversation interface may "
+#~ "display intermediate status messages while a request is being processed."
+#~ msgstr ""
+#~ "与\\ |AI|\\ 代理交互时，对话界面可能会在处理请求时显示中间状态消息。"
+
+#~ msgid ""
+#~ "These messages reflect the current step of the interaction, such as "
+#~ "analyzing the request, consulting sources, or preparing an action, before "
+#~ "the final response is generated."
+#~ msgstr ""
+#~ "这些消息反映了在生成最终回复前交互的当前步骤，例如分析请求、查阅来源或准备"
+#~ "操作。"
+
+#~ msgid "An Agent analyzing a user request."
+#~ msgstr "代理正在分析用户请求。"
+
+#~ msgid "Agents are formed of two main components, *Skills* and *Sources*."
+#~ msgstr "代理主要由两个部分组成：\\ *技能*\\ 和\\ *来源*\\ 。"
+
+#~ msgid ""
+#~ "*Skills* are the instructions and roles that inform the agent of what "
+#~ "tasks they need to complete. *Tools* are assigned to skills, and are the "
+#~ "actual functions the agent can utilize to perform tasks."
+#~ msgstr ""
+#~ "*技能*\\ 是告知代理需要完成哪些任务的指令和角色。\\ *工具*\\ 分配给技能，"
+#~ "是代理可用于执行任务的实际功能。"
+
+#~ msgid ""
+#~ "*Sources* provide the agent with the information they need to complete "
+#~ "their tasks."
+#~ msgstr "*来源*为助手提供完成任务所需的信息。"
+
+#~ msgid ""
+#~ "While many |AI| features can be used in Odoo without the **AI** "
+#~ "application, creating and customizing agents requires that the **AI** "
+#~ "application is installed."
+#~ msgstr ""
+#~ "虽然许多 AI 功能可以在不安装**AI**应用的情况下于 Odoo 中使用，但创建和自定"
+#~ "义助手则需要安装**AI**应用。"
+
+#~ msgid "AI prompts in Odoo"
+#~ msgstr "Odoo 中的 AI 提示"
+
+#~ msgid ""
+#~ "Before working with |AI| agents, it is important to understand some basic "
+#~ "concepts regarding |AI| prompts."
+#~ msgstr ""
+#~ "在使用\\ |AI|\\ 代理之前，了解有关\\ |AI|\\ 提示词的一些基本概念非常重要。"
+
+#~ msgid ""
+#~ "An |AI| prompt is a set of written instructions or context given to an |"
+#~ "AI| model that tells it how to respond to a request, or what role to "
+#~ "take. Prompts can define:"
+#~ msgstr ""
+#~ "AI 提示是一组提供给 AI 模型的书面指令或上下文，用于告知它如何响应请求或扮"
+#~ "演什么角色。提示可以定义："
+
+#~ msgid "the tone, style, and persona of the |AI| model"
+#~ msgstr "AI 模型的语气、风格和角色设定"
+
+#~ msgid "the scope of what the model can do"
+#~ msgstr "模型能够执行的操作范围"
+
+#~ msgid "the type of output expected from the request"
+#~ msgstr "请求期望的输出类型"
+
+#~ msgid ""
+#~ "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
+#~ "agent's overall role, purpose, and behavior. It acts as the core mission "
+#~ "statement of the agent, and drives all interactions. During a "
+#~ "conversation, the system prompts and skill instructions are continuously "
+#~ "applied. They influence how the agent interprets messages, selects tools, "
+#~ "uses sources, and determines whether additional actions are required "
+#~ "before responding."
+#~ msgstr ""
+#~ "在 Odoo 中，每个\\ |AI|\\ 代理都会分配一个\\ *系统提示词*\\ ，用于定义代理"
+#~ "的总体角色、用途和行为。它作为代理的核心使命宣言，并驱动所有交互。在对话期"
+#~ "间，系统提示词和技能指令会被持续应用。它们会影响代理如何解读消息、选择工"
+#~ "具、使用来源，以及在回复之前是否需要执行其他操作。"
+
+#~ msgid ""
+#~ "Each :ref:`Skill <ai/topics>` also includes its own prompt-like "
+#~ "component, called *Instructions*. Instructions are skill-specific "
+#~ "guidelines that refine how the agent behaves within a certain context or "
+#~ "workflow, and how it interacts within the Odoo framework."
+#~ msgstr ""
+#~ "每个\\ :ref:`技能 <ai/topics>`\\ 也包含其自身类似提示词的组件，称为\\ *指"
+#~ "令*\\ 。指令是针对特定技能的指引，用于规范代理在特定上下文或工作流中的行为"
+#~ "方式，以及它在 Odoo 框架内的交互方式。"
+
+#~ msgid "Step-by-step workflows for how to complete a specific action."
+#~ msgstr "如何完成特定操作的分步工作流程"
+
+#~ msgid ""
+#~ "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` "
+#~ "that define how an agent behaves within a specific context. Essentially, "
+#~ "the skills define what an agent can do within the database. Skills guide "
+#~ "conversations, telling the agent what it can do, how it can do it, and "
+#~ "when it should do it."
+#~ msgstr ""
+#~ "*技能*\\ 是指令和\\ :ref:`工具 <ai/tools>`\\ 的集合，用于定义代理在特定上"
+#~ "下文中的行为方式。从本质上讲，技能定义了代理在数据库中可以执行的操作。技能"
+#~ "引导对话，告知代理它可以做什么、如何做以及何时做。"
+
+#~ msgid ""
+#~ "If an agent is not assigned any Skills, it is **only** able to provide "
+#~ "information. It **cannot** complete tasks or make changes to the database."
+#~ msgstr ""
+#~ "如果未给代理分配任何技能，它\\ **仅**\\ 能提供信息。它\\ **无法**\\ 完成任"
+#~ "务或对数据库进行更改。"
+
+#~ msgid ""
+#~ "Within each skill is a detailed prompt, which provides the agent with "
+#~ "more in-depth instructions on how to perform the tasks associated with "
+#~ "that skill, define the boundaries of its behavior, and determine how it "
+#~ "should interpret user intent. These prompts ensure that the agent follows "
+#~ "a consistent reasoning pattern and uses the appropriate tools to generate "
+#~ "accurate, context-aware responses."
+#~ msgstr ""
+#~ "每个技能中都包含详细的提示词，为智能体提供关于如何执行与该技能相关任务的更"
+#~ "深入说明、界定其行为边界，并确定应如何理解用户意图。这些提示词确保智能体遵"
+#~ "循一致的推理模式，并使用适当的工具生成准确且具有上下文感知能力的回复。"
+
+#~ msgid "The following skills are preconfigured in the **AI** app:"
+#~ msgstr "以下技能已在\\ **AI**\\ 应用中预配置："
+
+#~ msgid ""
+#~ ":guilabel:`View Builder`: Supports the interpretation of a user query to "
+#~ "open the appropriate Odoo view with a set of tools necessary to perform "
+#~ "the search. Natural language queries can also include time-based grouping "
+#~ "instructions. This allows agents to group results by time intervals such "
+#~ "as day, month, or year when querying records."
+#~ msgstr ""
+#~ ":guilabel:`视图构建器`：支持解析用户查询，利用执行搜索所需的一组工具打开相"
+#~ "应的 Odoo 视图。自然语言查询还可以包含基于时间的分组指令。这允许智能体在查"
+#~ "询记录时按日、月或年等时间间隔对结果进行分组。"
+
+#~ msgid ""
+#~ ":guilabel:`Information retrieval`: A collection of tools to retrieve "
+#~ "information about the models."
+#~ msgstr ":guilabel:`信息检索`：一套用于检索模型信息的工具集合。"
+
+#~ msgid ":guilabel:`Update Records`: Tools to update records."
+#~ msgstr ":guilabel:`更新记录`：用于更新记录的工具。"
+
+#~ msgid ":guilabel:`Create Records`: Tools to create records."
+#~ msgstr ":guilabel:`创建记录`：用于创建记录的工具。"
+
+#~ msgid ""
+#~ ":guilabel:`Generate Images`: A collection of tools to support image "
+#~ "generation. Load this skill when the user asks to generate or enhance an "
+#~ "image."
+#~ msgstr ""
+#~ ":guilabel:`生成图像`：支持图像生成的一组工具。当用户请求生成或优化图像时，"
+#~ "加载此技能。"
+
+#~ msgid ""
+#~ ":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
+#~ "time."
+#~ msgstr ":guilabel:`网页搜索`：使智能体能够实时浏览互联网。"
+
+#~ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
+#~ msgstr ":guilabel:`网站构建器`：用于编辑 Odoo 网站页面的工具。"
+
+#~ msgid ""
+#~ ":guilabel:`Create Leads`: A collection of tools to support automated lead "
+#~ "creation. This skill is **only** available if the **CRM** app is "
+#~ "installed."
+#~ msgstr ""
+#~ ":guilabel:`创建线索`：支持自动创建线索的一组工具。此技能\\ **仅**\\ 在安装"
+#~ "了\\ **CRM**\\ 应用时可用。"
+
+#~ msgid ""
+#~ "Within each skill is a set of :guilabel:`Instructions`, which act as a "
+#~ "prompt and provide guidance for the structure of the interaction, and one "
+#~ "or more :ref:`AI Tools <ai/tools>`, which indicate the functions the "
+#~ "agent can perform."
+#~ msgstr ""
+#~ "每个技能中都包含一组\\ :guilabel:`指令`\\ （用作提示词并为交互结构提供指"
+#~ "导），以及一个或多个\\ :ref:`AI 工具 <ai/tools>`\\ （指示智能体可以执行的"
+#~ "功能）。"
+
+#~ msgid "Tools"
+#~ msgstr "工具"
+
+#~ msgid ""
+#~ "*Tools* are the functions the agent can perform in Odoo. These include "
+#~ "actions like creating a lead or opening a view. Tools extend the purpose "
+#~ "of the agent beyond conversations, they enable real actions. The "
+#~ "available tools in a database vary based on the applications installed. "
+#~ "Multiple :guilabel:`AI Tools` can be assigned to a single skill."
+#~ msgstr ""
+#~ "*工具*\\ 是智能体在 Odoo 中可以执行的功能，包括创建线索或打开视图等操作。"
+#~ "工具将智能体的用途扩展到对话之外，使其能够执行实际操作。数据库中可用的工具"
+#~ "因已安装的应用而异。单个技能可以分配多个\\ :guilabel:`AI 工具`\\ 。"
+
+#~ msgid "Sources"
+#~ msgstr "来源"
+
+#~ msgid "PDFs"
+#~ msgstr "PDF"
+
+#~ msgid "Weblinks"
+#~ msgstr "网站链接"
+
+#~ msgid "Documents (uploaded in the **Documents** application)"
+#~ msgstr "文件（上传到**文件管理**应用程序中）"
+
+#~ msgid "**Knowledge** app articles"
+#~ msgstr "**知识库**应用文章"
+
+#~ msgid ""
+#~ "If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
+#~ "agent can **only** utilize information from the uploaded and active "
+#~ "sources."
+#~ msgstr ""
+#~ "如果在助手上启用了 :guilabel:`限制使用来源` 选项，则该助手只能利用已上传且"
+#~ "处于活动状态的来源中的信息。"
+
+#~ msgid "Uploaded files"
+#~ msgstr "上传的文件"
+
+#~ msgid ""
+#~ "During a conversation with an |AI| agent, additional context can be "
+#~ "provided by uploading files. Files are temporarily treated as sources for "
+#~ "the ongoing discussion. The agent can use their content to answer "
+#~ "questions, summarize information, or extract relevant details."
+#~ msgstr ""
+#~ "在与\\ |AI|\\ 智能体对话期间，可以通过上传文件提供额外上下文。文件会被临时"
+#~ "作为当前讨论的来源。智能体可以使用其内容来回答问题、总结信息或提取相关细"
+#~ "节。"
+
+#~ msgid ""
+#~ "The provided files only influence the current conversation, unless they "
+#~ "are explicitly added as sources on the agent."
+#~ msgstr "提供的文件仅影响当前对话，除非已明确将其添加为智能体的来源。"
+
+#~ msgid ""
+#~ "To attach a file in a conversation, click the :icon:`fa-plus-"
+#~ "circle` :guilabel:`(plus circle)` icon in the message window, then "
+#~ "click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
+#~ "window, select one or more files to attach, then click :guilabel:`Open`."
+#~ msgstr ""
+#~ "要在对话中附加文件，请单击消息窗口中的\\ :icon:`fa-plus-"
+#~ "circle` :guilabel:`（圆圈加号）`\\ 图标，然后单击\\ :icon:`fa-"
+#~ "paperclip` :guilabel:`附加文件`\\ 。在文件资源管理器窗口中，选择要附加的一"
+#~ "个或多个文件，然后单击\\ :guilabel:`打开`\\ 。"
+
+#~ msgid ""
+#~ "A manager finds a receipt for supplies and is unsure whether it has "
+#~ "already been submitted to the **Expenses** app for reimbursement. They "
+#~ "open a conversation with the *Ask AI* agent and enter the following "
+#~ "prompt:"
+#~ msgstr ""
+#~ "经理找到了一张用品收据，但不确定是否已提交至\\ **费用**\\ 应用进行报销。他"
+#~ "们与\\ *Ask AI*\\ 智能体开启对话，并输入以下提示词："
+
+#~ msgid "`Can you open the expense that matches this receipt?`"
+#~ msgstr "`你能打开与此收据匹配的费用吗？`"
+
+#~ msgid ""
+#~ "They attach the receipt to the message. After the agent analyzes the "
+#~ "attachment, it opens the view to the correct expense."
+#~ msgstr "他们将收据附加到消息中。智能体在分析附件后，会打开对应费用的视图。"
+
+#~ msgid "Add alt text."
+#~ msgstr "添加替代文本。"
+
+#~ msgid "Gain insights from previewed files"
+#~ msgstr "从预览文件中获取洞察"
+
+#~ msgid ""
+#~ "When a document is open in preview mode, |AI| agents can use the content "
+#~ "of the previewed file as context for the conversation."
+#~ msgstr ""
+#~ "当文档以预览模式打开时，\\ |AI|\\ 代理可以使用预览文件的内容作为对话的上下"
+#~ "文。"
+
+#~ msgid ""
+#~ "First, navigate to the :menuselection:`Documents` app and click a "
+#~ "document to preview it. Click the |AI| icon at the top of the page to "
+#~ "open the :guilabel:`Ask AI` chat window. From here, click one of the "
+#~ "default prompts to use them, or enter a custom one in the message window."
+#~ msgstr ""
+#~ "首先，前往\\ :menuselection:`文档`\\ 应用并点击文档进行预览。点击页面顶部"
+#~ "的\\ |AI|\\ 图标以打开\\ :guilabel:`咨询 AI`\\ 聊天窗口。在此处，点击其中"
+#~ "一个默认提示词即可使用，也可以在消息窗口中输入自定义提示词。"
+
+#~ msgid ""
+#~ "In this case, the agent's responses are grounded in the file currently "
+#~ "being previewed, in combination with any other sources assigned to the "
+#~ "agent."
+#~ msgstr ""
+#~ "在这种情况下，代理的回复将基于当前正在预览的文件，并结合分配给该代理的任何"
+#~ "其他来源。"
+
+#~ msgid ""
+#~ "To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+#~ "click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
+#~ "description, if desired."
+#~ msgstr ""
+#~ "若要创建新的\\ |AI|\\ 代理，请前往\\ :menuselection:`AI`\\ 应用并点击"
+#~ "\\ :guilabel:`新建`。输入\\ :guilabel:`代理名称`，然后根据需要添加简短描"
+#~ "述。"
+
+#~ msgid ""
+#~ "Before creating a new agent, it is recommended to have a clear use case "
+#~ "in mind. This helps when writing out the :guilabel:`System Prompt`, and "
+#~ "assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
+#~ msgstr ""
+#~ "在创建新代理之前，建议明确具体的用例。这有助于编写\\ :guilabel:`系统提示词"
+#~ "`，以及分配\\ :guilabel:`技能`\\ 和\\ :guilabel:`AI 工具`。"
+
+#~ msgid ""
+#~ "Next, select a :guilabel:`Response Style`. This manages the overall tone "
+#~ "the agent uses when responding to an inquiry. Choose from one of the "
+#~ "following options:"
+#~ msgstr ""
+#~ "接下来，选择一个 :guilabel:`响应风格`。这用于管理助手在回应询问时的整体语"
+#~ "气。从以下选项中选择："
+
+#~ msgid ""
+#~ ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
+#~ "clear, direct answers with a moderate level of detail."
+#~ msgstr ""
+#~ ":guilabel:`标准`：保持平衡、专业的语调。提供清晰、直接的回答，并具有适度的"
+#~ "详细程度。"
+
+#~ msgid ""
+#~ ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
+#~ "responses. Explores multiple perspectives, acknowledges subtleties, and "
+#~ "uses precise, academic language where appropriate."
+#~ msgstr ""
+#~ ":guilabel:`细致`：提供成熟且高度结合上下文的回复。探讨多个视角，捕捉微妙之"
+#~ "处，并在适当时使用精确的学术语言。"
+
+#~ msgid ""
+#~ ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
+#~ "Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
+#~ "dynamic structure to keep the user interested."
+#~ msgstr ""
+#~ ":guilabel:`生动与创意`：短小精悍、生动且极具吸引力。注重简练与机智。使用富"
+#~ "有表现力的语言、隐喻和动态结构来保持用户的兴趣。"
+
+#~ msgid ""
+#~ ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
+#~ "soundness above all else. Breaks down complex steps, cites reasoning "
+#~ "clearly, and verifies every claim. Adopts a meticulous and formal tone."
+#~ msgstr ""
+#~ ":guilabel:`从容与严谨`：将绝对的精确性和逻辑严密性置于首位。分解复杂步骤，"
+#~ "清晰引用推理过程，并核实每一项主张。采用严谨正式的语调。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
+#~ "**only** respond based on the provided resources."
+#~ msgstr ""
+#~ "勾选\\ :guilabel:`仅限来源`\\ 复选框，以限制代理\\ **仅**\\ 根据所提供的资"
+#~ "源进行回复。"
+
+#~ msgid ""
+#~ "Next, select one or more :guilabel:`Skills` for the agent. As explained "
+#~ "above, :ref:`Skills <ai/topics>` include both instructions and tools that "
+#~ "guide the agent in helping users complete a task."
+#~ msgstr ""
+#~ "接下来，为代理选择一项或多项\\ :guilabel:`技能`。如上所述，\\ :ref:`技能 "
+#~ "<ai/topics>`\\ 包括指导代理帮助用户完成任务的说明和工具。"
+
+#~ msgid ""
+#~ "Enter a :guilabel:`System Prompt` with detailed instructions for the "
+#~ "agent as to their role and responsibilities."
+#~ msgstr "输入 :guilabel:`系统提示`，其中包含关于助手角色和职责的详细说明。"
+
+#~ msgid "A new agent form with the required information."
+#~ msgstr "包含所需信息的新建助手表单。"
+
+#~ msgid ""
+#~ "The specificity and length of the :guilabel:`System Prompt` can vary, "
+#~ "depending on the use case for the agent. Use the preconfigured agents as "
+#~ "an example of the possible information."
+#~ msgstr ""
+#~ ":guilabel:`系统提示` 的具体程度和长度可以有所不同，这取决于助手的使用场"
+#~ "景。可以参考预配置的助手作为可能包含信息的示例。"
+
+#~ msgid ""
+#~ "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
+#~ "tab, then click :guilabel:`Add a source`."
+#~ msgstr ""
+#~ "如果助手需要*来源*，请滚动到 :guilabel:`来源` 选项卡，然后点击 :guilabel:`"
+#~ "添加来源`。"
+
+#~ msgid "Select a format:"
+#~ msgstr "选择格式："
+
+#~ msgid ""
+#~ ":guilabel:`Upload a File`: Select the appropriate file from the explorer "
+#~ "window, and click :guilabel:`Open`."
+#~ msgstr ""
+#~ ":guilabel:`上传文件`：从文件资源管理器窗口中选择相应的文件，然后点击"
+#~ "\\ :guilabel:`打开`。"
+
+#~ msgid ""
+#~ ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at "
+#~ "once, paste one link per line. Click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`添加链接`：粘贴网址。可以一次添加多个链接，每行粘贴一个链接。点"
+#~ "击\\ :guilabel:`保存`。"
+
+#~ msgid ""
+#~ ":guilabel:`Add from Documents` (uploaded in the **Documents** "
+#~ "application): Click the checkbox next to one or more documents, then "
+#~ "click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`从文档添加`（在\\ **文档**\\ 应用程序中上传）：勾选一个或多个文"
+#~ "档旁边的复选框，然后点击\\ :guilabel:`选择`。"
+
+#~ msgid ""
+#~ ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
+#~ "articles, then click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`从知识库添加`：勾选一篇文章或多篇文章旁边的复选框，然后点击"
+#~ "\\ :guilabel:`选择`。"
+
+#~ msgid ""
+#~ "Once a source is added, the :guilabel:`Status` field updates to reflect "
+#~ "its current status. The source is ready when the status changes from "
+#~ "*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to "
+#~ "activate the source."
+#~ msgstr ""
+#~ "添加来源后，:guilabel:`状态` 字段会更新以反映其当前状态。当状态从处理中变"
+#~ "为已索引时，来源即准备就绪。滑动 :guilabel:`启用` 开关以激活该来源。"
+
+#~ msgid "A list of sources for an agent, each denoted with their format."
+#~ msgstr "助手的来源列表，每个来源都标明了其格式。"
+
+#~ msgid ""
+#~ "If a source fails to upload, it could be the result of a conflict with "
+#~ "the selected provider."
+#~ msgstr "如果来源上传失败，可能是由于与所选提供商发生冲突。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test` button to open a conversation window and test "
+#~ "the new agent."
+#~ msgstr "点击 :guilabel:`测试` 按钮打开对话窗口，测试新助手。"
+
+#~ msgid "Manually reprocessing sources"
+#~ msgstr "手动重新处理来源"
+
+#~ msgid ""
+#~ "To reprocess a source, navigate to the :menuselection:`AI` app. Select an "
+#~ "|AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical ellipsis)` icon, then "
+#~ "click :guilabel:`Configuration`."
+#~ msgstr ""
+#~ "若要重新处理来源，请前往\\ :menuselection:`AI`\\ 应用。选择一个\\ |AI|\\ "
+#~ "代理，并在看板卡片上点击\\ :icon:`fa-ellipsis-v` :guilabel:`（垂直省略号）"
+#~ "`\\ 图标，然后点击\\ :guilabel:`配置`。"
+
+#~ msgid ""
+#~ "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next "
+#~ "to any source that should be updated."
+#~ msgstr ""
+#~ "在\\ *来源*\\ 选项卡上，单击需要更新的任何来源旁的\\ :guilabel:`重新处理"
+#~ "` :icon:`fa-refresh`\\ 。"
+
+#~ msgid "AI agent sources with the reprocess icon visible."
+#~ msgstr "显示重新处理图标的 AI 智能体来源。"
+
+#~ msgid ""
+#~ "When one of these conditions is met, the agent activates the *Lead "
+#~ "Creation* :ref:`skill <ai/topics>`."
+#~ msgstr ""
+#~ "当满足这些条件之一时，代理会激活\\ *线索创建*\\ :ref:`技能 <ai/"
+#~ "topics>`\\ 。"
+
+#~ msgid ""
+#~ "Users may also define *skills*, which grant the agent permission to "
+#~ "perform specific actions. :ref:`Skills <ai/topics>` allow advanced "
+#~ "scenarios such as record creation or automation triggers."
+#~ msgstr ""
+#~ "用户还可以定义\\ *技能*\\ ，以授予智能体执行特定操作的权限。\\ :ref:`技能 "
+#~ "<ai/topics>`\\ 支持创建记录或自动化触发器等高级应用场景。"
+
+#~ msgid ""
+#~ "A :guilabel:`Date` filter can only match against a :ref:`Date <studio/"
+#~ "fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-"
+#~ "fields-date-time>` field."
+#~ msgstr ""
+#~ "\\ :guilabel:`日期`\\ 过滤器只能匹配\\ :ref:`日期 <studio/fields/simple-"
+#~ "fields-date>`\\ 或\\ :ref:`日期时间 <studio/fields/simple-fields-date-"
+#~ "time>`\\ 字段。"
 
 #~ msgid "To insert a chart from an Odoo database into an Odoo spreadsheet:"
 #~ msgstr "将 Odoo 数据库中的图表插入电子表格的操作流程："

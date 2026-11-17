@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 17:33+0000\n"
-"PO-Revision-Date: 2026-11-07 12:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-11-13 17:31+0000\n"
+"PO-Revision-Date: 2026-11-17 10:39+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/sv/>\n"
 "Language: sv\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/productivity.rst:5
 msgid "Productivity"
@@ -176,7 +176,7 @@ msgstr ""
 "funktioner."
 
 #: ../../export/content/applications/productivity/ai.rst:64
-#: ../../export/content/applications/productivity/ai/agents.rst:3
+#: ../../export/content/applications/productivity/ai/agents.rst:8
 #: ../../export/content/applications/productivity/ai/support_operations.rst:28
 msgid "AI agents"
 msgstr "AI-agenter"
@@ -256,307 +256,262 @@ msgstr ""
 msgid ":doc:`AI MCP server <ai/mcp_server>`"
 msgstr ":doc:`AI MCP-server <ai/mcp_server>`"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:7
+#: ../../export/content/applications/productivity/ai/agents.rst:-1
 msgid ""
-"An |AI| agent is a smart virtual assistant in Odoo that can understand "
-"natural language, perform tasks, and assist users by interacting with Odoo "
-"tools. Agents are a core component of the |AI| structure in Odoo. Each agent "
-"has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set "
-"of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its "
-"behavior."
+"AI agents in Odoo are virtual assistants that understand natural-language "
+"requests and perform tasks. Learn how agents use instructions, skills, "
+"tools, and knowledge sources, and how to create and configure a new agent."
 msgstr ""
-"En |AI|-agent är en smart virtuell assistent i Odoo som kan förstå naturligt "
-"språk, utföra uppgifter och hjälpa användare genom att interagera med Odoo-"
-"verktyg. Agenter är en central del av |AI|-strukturen i Odoo. Varje agent "
-"har ett definierat syfte, en :ref:`prompt <ai/agents/prompts-in-odoo>` samt "
-"en uppsättning :ref:`färdigheter <ai/topics>` och :ref:`verktyg <ai/tools>` "
-"som styr dess beteende."
+"AI-agenter i Odoo är virtuella assistenter som förstår förfrågningar på "
+"naturligt språk och utför arbetsuppgifter. Lär dig hur agenter använder "
+"instruktioner, kompetenser, verktyg och kunskapskällor, samt hur du skapar "
+"och konfigurerar en ny agent."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:12
+#: ../../export/content/applications/productivity/ai/agents.rst:13
 msgid ""
-"When interacting with an |AI| agent, the conversation interface may display "
-"intermediate status messages while a request is being processed."
+"An |AI| agent is a virtual assistant in Odoo that can understand natural-"
+"language requests, access information, and perform tasks using the tools "
+"available to it. Agents can be configured for specific roles and can be used "
+"interactively or as part of automated workflows."
 msgstr ""
-"Vid interaktion med en |AI|-agent kan konversationsgränssnittet visa "
-"mellanliggande statusmeddelanden medan en förfrågan behandlas."
+"En |AI|-agent är en virtuell assistent i Odoo som kan förstå förfrågningar "
+"på naturligt språk, få åtkomst till information och utföra arbetsuppgifter "
+"med hjälp av de verktyg som finns tillgängliga för den. Agenter kan "
+"konfigureras för specifika roller och kan användas interaktivt eller som en "
+"del av automatiserade arbetsflöden."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:15
+#: ../../export/content/applications/productivity/ai/agents.rst:17
+msgid "Agents are built from four main components:"
+msgstr "Agenter är uppbyggda av fyra huvudkomponenter:"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:19
 msgid ""
-"These messages reflect the current step of the interaction, such as "
-"analyzing the request, consulting sources, or preparing an action, before "
-"the final response is generated."
-msgstr ""
-"Dessa meddelanden visar det aktuella steget i interaktionen, till exempel "
-"att analysera förfrågan, konsultera källor eller förbereda en åtgärd, innan "
-"det slutliga svaret genereras."
+"*Instructions* define the agent's purpose, behavior, and responsibilities."
+msgstr "*Instruktioner* definierar agentens syfte, beteende och ansvarsområden."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:18
-msgid "An Agent analyzing a user request."
-msgstr "En agent som analyserar en användarförfrågan."
+#: ../../export/content/applications/productivity/ai/agents.rst:20
+msgid ""
+"*Knowledge* provides information the agent can use when completing tasks."
+msgstr ""
+"*Kunskap* ger information som agenten kan använda när den utför "
+"arbetsuppgifter."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Skills* and *Sources*."
-msgstr "Agenter består av två huvudkomponenter: *färdigheter* och *källor*."
+msgid ""
+"*Skills and tools* define what the agent can do. Skills provide instructions "
+"for specific tasks, while tools allow the agent to perform actions in Odoo."
+msgstr ""
+"*Kompetenser och verktyg* definierar vad agenten kan göra. Kompetenser ger "
+"instruktioner för specifika arbetsuppgifter, medan verktyg gör det möjligt "
+"för agenten att utföra åtgärder i Odoo."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:23
 msgid ""
-"*Skills* are the instructions and roles that inform the agent of what tasks "
-"they need to complete. *Tools* are assigned to skills, and are the actual "
-"functions the agent can utilize to perform tasks."
+"*Triggers* determine when the agent is invoked, such as when a user starts a "
+"conversation or when an automated or scheduled action calls the agent."
 msgstr ""
-"*Färdigheter* är de instruktioner och roller som informerar agenten om vilka "
-"uppgifter den behöver slutföra. *Verktyg* tilldelas färdigheter och är de "
-"faktiska funktioner som agenten kan använda för att utföra uppgifter."
+"*Utlösare* avgör när agenten anropas, till exempel när en användare startar "
+"en konversation eller när en automatiserad eller schemalagd åtgärd anropar "
+"agenten."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:26
-msgid ""
-"*Sources* provide the agent with the information they need to complete their "
-"tasks."
-msgstr ""
-"*Källor* förser agenten med den information de behöver för att slutföra sina "
-"uppgifter."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:29
+#: ../../export/content/applications/productivity/ai/agents.rst:27
 msgid ""
 "While many |AI| features can be used in Odoo without the **AI** application, "
-"creating and customizing agents requires that the **AI** application is "
-"installed."
+"creating and customizing agents requires the **AI** application be installed."
 msgstr ""
-"Även om många AI-funktioner kan användas i Odoo utan **AI**-applikationen, "
-"kräver att skapa och anpassa agenter att **AI**-applikationen är installerad."
+"Även om många funktioner i |AI| kan användas i Odoo utan applikationen "
+"**AI**, kräver skapande och anpassning av agenter att applikationen **AI** "
+"är installerad."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:30
+msgid ""
+"Odoo |AI| uses In-app purchases (IAP) for AI requests. For more information "
+"on using |IAP| credits, including how to purchase additional credits, visit "
+"the `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>`_."
+msgstr ""
+"Odoo |AI| använder köp i appen (IAP) för AI-förfrågningar. För mer "
+"information om hur du använder |IAP|-kreditpoäng, inklusive hur du köper "
+"ytterligare kreditpoäng, besök `Odoo AI IAP <https://iap.odoo.com/iap/in-app-"
+"services/867>`_."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
-msgid "AI prompts in Odoo"
-msgstr "AI-promptar i Odoo"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:37
-msgid ""
-"Before working with |AI| agents, it is important to understand some basic "
-"concepts regarding |AI| prompts."
-msgstr ""
-"Innan du arbetar med |AI|-agenter är det viktigt att förstå några "
-"grundläggande begrepp gällande |AI|-promptar."
+msgid "Agent structure"
+msgstr "Agentstruktur"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:40
-msgid ""
-"An |AI| prompt is a set of written instructions or context given to an |AI| "
-"model that tells it how to respond to a request, or what role to take. "
-"Prompts can define:"
-msgstr ""
-"En AI-prompt är en uppsättning skriftliga instruktioner eller sammanhang som "
-"ges till en AI-modell som talar om hur den ska svara på en förfrågan, eller "
-"vilken roll den ska ta. Promptar kan definiera:"
+msgid "Instructions"
+msgstr "Instruktioner"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:43
-msgid "the tone, style, and persona of the |AI| model"
-msgstr "tonläge, stil och persona för AI-modellen"
+#: ../../export/content/applications/productivity/ai/agents.rst:42
+msgid "Instructions define the agent's overall role, purpose, and behavior."
+msgstr ""
+"Instruktioner definierar agentens övergripande roll, syfte och beteende."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:44
-msgid "the scope of what the model can do"
-msgstr "tillämpningsområdet för vad modellen kan göra"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:45
-msgid "the type of output expected from the request"
-msgstr "typen av förväntad resultat från förfrågan"
+msgid ""
+"Each AI agent is assigned a *System Prompt* that provides its main "
+"instructions. It can define the agent's responsibilities, constraints, and "
+"how it should respond to requests."
+msgstr ""
+"Varje AI-agent tilldelas en *systemuppmaning* som ger dess huvudsakliga "
+"instruktioner. Den kan definiera agentens ansvarsområden, begränsningar och "
+"hur den ska svara på förfrågningar."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:47
 msgid ""
-"In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
-"agent's overall role, purpose, and behavior. It acts as the core mission "
-"statement of the agent, and drives all interactions. During a conversation, "
-"the system prompts and skill instructions are continuously applied. They "
-"influence how the agent interprets messages, selects tools, uses sources, "
-"and determines whether additional actions are required before responding."
+"Each :ref:`Skill <ai/agents/skills>` also includes its own prompt-like "
+"component, called *Instructions*. Instructions are skill-specific guidelines "
+"that refine how the agent behaves in a given context or workflow and how it "
+"interacts with the Odoo framework."
 msgstr ""
-"I Odoo tilldelas varje |AI|-agent en *systemprompt*, som definierar agentens "
-"övergripande roll, syfte och beteende. Den fungerar som agentens centrala "
-"uppdragsbeskrivning och styr alla interaktioner. Under en konversation "
-"tillämpas systemprompten och färdighetsinstruktionerna kontinuerligt. De "
-"påverkar hur agenten tolkar meddelanden, väljer verktyg, använder källor och "
-"avgör om ytterligare åtgärder krävs innan den svarar."
+"Varje :ref:`kompetens <ai/agents/skills>` innehåller också en egen "
+"uppmaningsliknande komponent, kallad *Instruktioner*. Instruktioner är "
+"kompetensspecifika riktlinjer som förfinar hur agenten beter sig i ett visst "
+"sammanhang eller arbetsflöde och hur den interagerar med Odoo-ramverket."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:53
-msgid ""
-"Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, "
-"called *Instructions*. Instructions are skill-specific guidelines that "
-"refine how the agent behaves within a certain context or workflow, and how "
-"it interacts within the Odoo framework."
-msgstr ""
-"Varje :ref:`färdighet <ai/topics>` innehåller också en egen promptliknande "
-"komponent som kallas *Instruktioner*. Instruktioner är färdighetsspecifika "
-"riktlinjer som förfinar hur agenten beter sig inom ett visst sammanhang "
-"eller arbetsflöde och hur den interagerar inom Odoo-ramverket."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:57
+#: ../../export/content/applications/productivity/ai/agents.rst:51
 msgid "Instructions often include:"
 msgstr "Instruktioner inkluderar ofta:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:59
+#: ../../export/content/applications/productivity/ai/agents.rst:53
 msgid "A purpose, or what the skill covers."
 msgstr "Ett syfte, eller vad färdigheten omfattar."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:60
+#: ../../export/content/applications/productivity/ai/agents.rst:54
 msgid "Rules or constraints for the agent to follow when assigned this skill."
 msgstr ""
 "Regler eller begränsningar som agenten ska följa när den tilldelas denna "
 "färdighet."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:61
-msgid "Step-by-step workflows for how to complete a specific action."
-msgstr "Steg-för-steg-arbetsflöden för hur man slutför en specifik åtgärd"
+#: ../../export/content/applications/productivity/ai/agents.rst:55
+msgid "Step-by-step workflows for completing a specific action."
+msgstr "Steg-för-steg-arbetsflöden för att slutföra en specifik åtgärd."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:62
+#: ../../export/content/applications/productivity/ai/agents.rst:56
 msgid "Technical details needed to complete any actions."
 msgstr "Tekniska detaljer som behövs för att slutföra eventuella åtgärder"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:65
-msgid "Agent structure"
-msgstr "Agentstruktur"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:70
+#: ../../export/content/applications/productivity/ai/agents.rst:61
 msgid "Skills"
 msgstr "Kompetenser"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:72
+#: ../../export/content/applications/productivity/ai/agents.rst:63
 msgid ""
-"*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that "
-"define how an agent behaves within a specific context. Essentially, the "
-"skills define what an agent can do within the database. Skills guide "
-"conversations, telling the agent what it can do, how it can do it, and when "
-"it should do it."
+"*Skills* define specific tasks an agent can perform. Each *Skill* includes "
+"instructions that guide the agent through the task and can have one or more "
+"tools assigned to it."
 msgstr ""
-"*Färdigheter* är en samling instruktioner och :ref:`verktyg <ai/tools>` som "
-"definierar hur en agent beter sig inom ett specifikt sammanhang. I grund och "
-"botten definierar färdigheterna vad en agent kan göra i databasen. "
-"Färdigheter vägleder konversationer och talar om för agenten vad den kan "
-"göra, hur den kan göra det och när den bör göra det."
+"*Kompetenser* definierar specifika arbetsuppgifter som en agent kan utföra. "
+"Varje *kompetens* innehåller instruktioner som vägleder agenten genom "
+"uppgiften och kan ha ett eller flera verktyg tilldelade till sig."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:67
+msgid ""
+"If an agent is not assigned any Skills, it can **only** provide information. "
+"It **cannot** complete tasks or make changes to the database."
+msgstr ""
+"Om en agent inte har tilldelats några kompetenser kan den **endast** "
+"tillhandahålla information. Den kan **inte** slutföra arbetsuppgifter eller "
+"göra ändringar i databasen."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:70
+msgid ""
+"Multiple *Skills* can be assigned to the same agent, allowing it to perform "
+"different types of tasks."
+msgstr ""
+"Flera *kompetenser* kan tilldelas samma agent, vilket gör att den kan utföra "
+"olika typer av arbetsuppgifter."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:76
+msgid "Agent tools"
+msgstr "Agentverktyg"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:78
 msgid ""
-"If an agent is not assigned any Skills, it is **only** able to provide "
-"information. It **cannot** complete tasks or make changes to the database."
+"*Tools* are the functions an agent can perform in Odoo. Each agent has the "
+"following tools available:"
 msgstr ""
-"Om en agent inte tilldelas några färdigheter kan den **endast** "
-"tillhandahålla information. Den kan **inte** slutföra uppgifter eller göra "
-"ändringar i databasen."
+"*Verktyg* är de funktioner som en agent kan utföra i Odoo. Varje agent har "
+"följande verktyg tillgängliga:"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:81
 msgid ""
-"Within each skill is a detailed prompt, which provides the agent with more "
-"in-depth instructions on how to perform the tasks associated with that "
-"skill, define the boundaries of its behavior, and determine how it should "
-"interpret user intent. These prompts ensure that the agent follows a "
-"consistent reasoning pattern and uses the appropriate tools to generate "
-"accurate, context-aware responses."
+"*Generate image*: A collection of tools to support image generation. Load "
+"this skill when the user asks to generate or enhance an image."
 msgstr ""
-"Inom varje färdighet finns en detaljerad prompt, som ger agenten mer "
-"ingående instruktioner om hur uppgifterna kopplade till den färdigheten ska "
-"utföras, fastställer gränserna för dess beteende och avgör hur den ska tolka "
-"användarens avsikt. Dessa promptar säkerställer att agenten följer ett "
-"konsekvent resonemangsmönster och använder lämpliga verktyg för att generera "
-"korrekta och sammanhangsmedvetna svar."
+"*Skapa bild*: En samling verktyg för att stödja bildgenerering. Läs in denna "
+"kompetens när användaren ber om att skapa eller förbättra en bild."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:83
+msgid "*Web Search*: Enable the Agent to explore the internet in real time."
+msgstr ""
+"*Webbsökning*: Gör det möjligt för agenten att utforska internet i realtid."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:84
+msgid ""
+"*Self Update*: Allows an agent to identify missing or incomplete "
+"instructions and *Skills* and propose or make changes to its configuration."
+msgstr ""
+"*Självuppdatering*: Gör det möjligt för en agent att identifiera saknade "
+"eller ofullständiga instruktioner och *Färdigheter* samt föreslå eller "
+"utföra ändringar i dess konfiguration."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:87
-msgid "The following skills are preconfigured in the **AI** app:"
-msgstr "Följande färdigheter är förkonfigurerade i appen **AI**:"
+msgid ""
+"To enable a tool on an agent, click the *Skills* tab, then slide the "
+"appropriate toggle to green."
+msgstr ""
+"För att aktivera ett verktyg på en agent, klicka på fliken *Färdigheter* och "
+"skjut sedan lämplig växel till grön."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:89
-msgid ""
-":guilabel:`View Builder`: Supports the interpretation of a user query to "
-"open the appropriate Odoo view with a set of tools necessary to perform the "
-"search. Natural language queries can also include time-based grouping "
-"instructions. This allows agents to group results by time intervals such as "
-"day, month, or year when querying records."
-msgstr ""
-":guilabel:`Vybyggare`: Stöder tolkning av en användarförfrågan för att öppna "
-"lämplig Odoo-vy med en uppsättning verktyg som krävs för att utföra "
-"sökningen. Förfrågningar på naturligt språk kan även innehålla tidsbaserade "
-"grupperingsinstruktioner. Detta gör att agenter kan gruppera resultat efter "
-"tidsintervall som dag, månad eller år vid sökning i poster."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:93
-msgid ""
-":guilabel:`Information retrieval`: A collection of tools to retrieve "
-"information about the models."
-msgstr ""
-":guilabel:`Informationshämtning`: en samling verktyg för att hämta "
-"information om modellerna."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:94
-msgid ":guilabel:`Update Records`: Tools to update records."
-msgstr ":guilabel:`Uppdatera poster`: Verktyg för att uppdatera poster."
+msgid "The tools on an AI agent, with some enabled."
+msgstr "Verktygen på en AI-agent, med vissa aktiverade."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:95
-msgid ":guilabel:`Create Records`: Tools to create records."
-msgstr ":guilabel:`Skapa poster`: Verktyg för att skapa poster."
+msgid "Subagents"
+msgstr "Underagenter"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:96
+#: ../../export/content/applications/productivity/ai/agents.rst:97
 msgid ""
-":guilabel:`Generate Images`: A collection of tools to support image "
-"generation. Load this skill when the user asks to generate or enhance an "
-"image."
+"An agent can use other |AI| agents as *subagents* to handle specialized "
+"tasks. When a user submits a request, the main agent can determine whether "
+"to delegate part of the task to a subagent based on its purpose and "
+"capabilities."
 msgstr ""
-":guilabel:`Generera bilder`: En samling verktyg för att stödja "
-"bildgenerering. Ladda denna färdighet när användaren ber om att generera "
-"eller förbättra en bild."
+"En agent kan använda andra |AI| agenter som *underagenter* för att hantera "
+"specialiserade arbetsuppgifter. När en användare skickar en förfrågan kan "
+"huvudagenten avgöra om delar av arbetsuppgiften ska delegeras till en "
+"underagent baserat på dess syfte och kapacitet."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:98
+#: ../../export/content/applications/productivity/ai/agents.rst:101
 msgid ""
-":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
-"time."
+"Subagents allow an agent to delegate specific tasks to specialized agents "
+"rather than handling every request itself. The main agent can then use the "
+"subagent's results as part of its response."
 msgstr ""
-":guilabel:`Webbsökning`: Gör det möjligt för agenten att utforska internet i "
-"realtid."
+"Underagenter gör det möjligt för en agent att delegera specifika "
+"arbetsuppgifter till specialiserade agenter istället för att hantera varje "
+"förfrågan själv. Huvudagenten kan sedan använda underagentens resultat som "
+"en del av sitt svar."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:99
-msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
-msgstr ":guilabel:`Webbplatsbyggare`: Verktyg för att redigera Odoo-webbsidor."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:100
+#: ../../export/content/applications/productivity/ai/agents.rst:104
 msgid ""
-":guilabel:`Create Leads`: A collection of tools to support automated lead "
-"creation. This skill is **only** available if the **CRM** app is installed."
+"To assign a subagent, click on the *Skills* tab, scroll to the *Subagents* "
+"section, then click :icon:`add` :guilabel:`Add`. Then, select from the list "
+"of existing agents, or click :guilabel:`Create New` to create a new one."
 msgstr ""
-":guilabel:`Skapa leads`: En samling verktyg för att stödja automatiskt "
-"skapande av leads. Denna färdighet är **endast** tillgänglig om appen "
-"**CRM** är installerad."
+"För att tilldela en underagent, klicka på fliken *Färdigheter*, scrolla till "
+"sektionen *Underagenter*, och klicka sedan på :icon:`add` :guilabel:`Lägg "
+"till`. Välj sedan från listan över befintliga agenter, eller klicka på "
+":guilabel:`Skapa ny` för att skapa en ny."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:103
-msgid ""
-"Within each skill is a set of :guilabel:`Instructions`, which act as a "
-"prompt and provide guidance for the structure of the interaction, and one or "
-"more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can "
-"perform."
-msgstr ""
-"Inom varje färdighet finns en uppsättning :guilabel:`Instruktioner`, som "
-"fungerar som en prompt och ger vägledning för interaktionens struktur, samt "
-"ett eller flera :ref:`AI-verktyg <ai/tools>`, som anger de funktioner som "
-"agenten kan utföra."
+#: ../../export/content/applications/productivity/ai/agents.rst:109
+#: ../../export/content/applications/productivity/knowledge.rst:3
+msgid "Knowledge"
+msgstr "Kunskap"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:110
-msgid "Tools"
-msgstr "Verktyg"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:112
-msgid ""
-"*Tools* are the functions the agent can perform in Odoo. These include "
-"actions like creating a lead or opening a view. Tools extend the purpose of "
-"the agent beyond conversations, they enable real actions. The available "
-"tools in a database vary based on the applications installed. "
-"Multiple :guilabel:`AI Tools` can be assigned to a single skill."
-msgstr ""
-"*Verktyg* är de funktioner som agenten kan utföra i Odoo. Dessa omfattar "
-"åtgärder som att skapa ett lead eller öppna en vy. Verktyg utökar agentens "
-"syfte bortom konversationer – de möjliggör verkliga åtgärder. De "
-"tillgängliga verktygen i en databas varierar beroende på vilka appar som är "
-"installerade. Flera :guilabel:`AI-verktyg` kan tilldelas en och samma "
-"färdighet."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:120
-msgid "Sources"
-msgstr "Källor"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:122
+#: ../../export/content/applications/productivity/ai/agents.rst:111
 msgid ""
 "Sources are the data the agent can refer to when generating responses or "
 "completing tasks. Sources are indexed so the agent can retrieve relevant "
@@ -566,7 +521,7 @@ msgstr ""
 "slutför arbetsuppgifter. Källor indexeras så att agenten kan hämta relevant "
 "information när en användare ställer en fråga."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:126
+#: ../../export/content/applications/productivity/ai/agents.rst:115
 msgid ""
 "An agent designed to answer customer support questions has **Knowledge** "
 "articles included as sources, which include frequently asked questions."
@@ -574,329 +529,41 @@ msgstr ""
 "En agent som är utformad för att svara på kundtjänstfrågor har artiklar från "
 "**Kunskap** inkluderade som källor, vilka innehåller vanliga frågor och svar."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:129
+#: ../../export/content/applications/productivity/ai/agents.rst:118
 msgid "Sources can be in the following formats:"
 msgstr "Källor kan vara i följande format:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:131
-msgid "PDFs"
-msgstr "PDF-filer"
+#: ../../export/content/applications/productivity/ai/agents.rst:120
+msgid "Files uploaded to the agent"
+msgstr "Filer som laddats upp till agenten"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:121
+msgid "Links to webpages"
+msgstr "Länkar till webbsidor"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:122
+msgid "Documents (uploaded in the :doc:`Documents <../documents>` application)"
+msgstr "Dokument (uppladdade i applikationen :doc:`Dokument <../documents>`)"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:123
+msgid ":doc:`Knowledge <../knowledge>` app articles"
+msgstr ":doc:`Kunskap <../knowledge>` applikationsartiklar"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:126
+msgid ""
+"If the :guilabel:`Restrict answers to Sources` option is enabled on an "
+"agent, the agent can **only** utilize information from the uploaded and "
+"active sources."
+msgstr ""
+"Om alternativet :guilabel:`Begränsa svar till källor` är aktiverat på en "
+"agent, kan agenten **endast** använda information från de uppladdade och "
+"aktiva källorna."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:130
+msgid "Reprocessing sources"
+msgstr "Ombearbetning av källor"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:132
-msgid "Weblinks"
-msgstr "Webblänkar"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:133
-msgid "Documents (uploaded in the **Documents** application)"
-msgstr "Dokument (uppladdade i **Dokument**-applikationen)"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:134
-msgid "**Knowledge** app articles"
-msgstr "Artiklar från **Kunskap**-appen"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:137
-msgid ""
-"If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
-"agent can **only** utilize information from the uploaded and active sources."
-msgstr ""
-"Om alternativet :guilabel:`Begränsa till Källor` är aktiverat på en agent, "
-"kan agenten **endast** använda information från de uppladdade och aktiva "
-"källorna."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:141
-msgid "Uploaded files"
-msgstr "Uppladdade filer"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:143
-msgid ""
-"During a conversation with an |AI| agent, additional context can be provided "
-"by uploading files. Files are temporarily treated as sources for the ongoing "
-"discussion. The agent can use their content to answer questions, summarize "
-"information, or extract relevant details."
-msgstr ""
-"Under en konversation med en |AI|-agent kan ytterligare sammanhang ges genom "
-"att ladda upp filer. Filer behandlas tillfälligt som källor för den pågående "
-"diskussionen. Agenten kan använda deras innehåll för att svara på frågor, "
-"sammanfatta information eller extrahera relevanta detaljer."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:147
-msgid ""
-"The provided files only influence the current conversation, unless they are "
-"explicitly added as sources on the agent."
-msgstr ""
-"De tillhandahållna filerna påverkar endast den aktuella konversationen, "
-"såvida de inte uttryckligen läggs till som källor på agenten."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:150
-msgid ""
-"To attach a file in a conversation, click the :icon:`fa-plus-"
-"circle` :guilabel:`(plus circle)` icon in the message window, then "
-"click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
-"window, select one or more files to attach, then click :guilabel:`Open`."
-msgstr ""
-"För att bifoga en fil i en konversation klickar du på ikonen :icon:`fa-plus-"
-"circle` :guilabel:`(pluscirkel)` i meddelandefönstret och klickar sedan "
-"på :icon:`fa-paperclip` :guilabel:`Bifoga filer`. I filutforskaren väljer du "
-"en eller flera filer att bifoga och klickar sedan på :guilabel:`Öppna`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:155
-msgid ""
-"A manager finds a receipt for supplies and is unsure whether it has already "
-"been submitted to the **Expenses** app for reimbursement. They open a "
-"conversation with the *Ask AI* agent and enter the following prompt:"
-msgstr ""
-"En chef hittar ett kvitto på förbrukningsmaterial och är osäker på om det "
-"redan har skickats in till appen **Utlägg** för ersättning. Chefen öppnar en "
-"konversation med agenten *Fråga AI* och anger följande prompt:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:159
-msgid "`Can you open the expense that matches this receipt?`"
-msgstr "`Kan du öppna det utlägg som matchar detta kvitto?`"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:161
-msgid ""
-"They attach the receipt to the message. After the agent analyzes the "
-"attachment, it opens the view to the correct expense."
-msgstr ""
-"Chefen bifogar kvittot till meddelandet. Efter att agenten har analyserat "
-"bilagan öppnar den vyn för rätt utlägg."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:164
-msgid "Add alt text."
-msgstr "Lägg till alternativtext."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:168
-msgid "Gain insights from previewed files"
-msgstr "Få insikter från förhandsgranskade filer"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:170
-msgid ""
-"When a document is open in preview mode, |AI| agents can use the content of "
-"the previewed file as context for the conversation."
-msgstr ""
-"När ett dokument är öppet i förhandsgranskningsläge kan |AI|-agenter använda "
-"innehållet i den förhandsgranskade filen som kontext för konversationen."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:173
-msgid ""
-"First, navigate to the :menuselection:`Documents` app and click a document "
-"to preview it. Click the |AI| icon at the top of the page to open "
-"the :guilabel:`Ask AI` chat window. From here, click one of the default "
-"prompts to use them, or enter a custom one in the message window."
-msgstr ""
-"Navigera först till appen :menuselection:`Dokument` och klicka på ett "
-"dokument för att förhandsgranska det. Klicka på ikonen |AI| högst upp på "
-"sidan för att öppna chattfönstret :guilabel:`Fråga AI`. Härifrån kan du "
-"klicka på ett av standardförslagen för att använda det, eller ange ett "
-"anpassat i meddelandefönstret."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:177
-msgid ""
-"In this case, the agent's responses are grounded in the file currently being "
-"previewed, in combination with any other sources assigned to the agent."
-msgstr ""
-"I det här fallet baseras agentens svar på filen som förhandsgranskas just "
-"nu, i kombination med eventuella andra källor som tilldelats agenten."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:183
-msgid "Create a new agent"
-msgstr "Skapa en ny agent"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:185
-msgid ""
-"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
-"click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
-"description, if desired."
-msgstr ""
-"För att skapa en ny |AI|-agent, navigera till appen :menuselection:`AI` och "
-"klicka på :guilabel:`Ny`. Ange ett :guilabel:`Agentnamn`, och lägg sedan "
-"till en kort beskrivning om så önskas."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:189
-msgid ""
-"Before creating a new agent, it is recommended to have a clear use case in "
-"mind. This helps when writing out the :guilabel:`System Prompt`, and "
-"assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
-msgstr ""
-"Innan du skapar en ny agent rekommenderas det att ha ett tydligt "
-"användningsområde i åtanke. Detta underlättar när du "
-"formulerar :guilabel:`Systemprompt` och tilldelar :guilabel:`Färdigheter` "
-"och :guilabel:`AI-verktyg`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:193
-msgid ""
-"Next, select a :guilabel:`Response Style`. This manages the overall tone the "
-"agent uses when responding to an inquiry. Choose from one of the following "
-"options:"
-msgstr ""
-"Välj sedan en :guilabel:`Svarsstil`. Detta hanterar den övergripande ton som "
-"agenten använder när den svarar på en förfrågan. Välj bland följande "
-"alternativ:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:196
-msgid ""
-":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
-"clear, direct answers with a moderate level of detail."
-msgstr ""
-":guilabel:`Standard`: Upprätthåller en balanserad och professionell ton. Ger "
-"tydliga, direkta svar med en måttlig detaljnivå."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:198
-msgid ""
-":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
-"responses. Explores multiple perspectives, acknowledges subtleties, and uses "
-"precise, academic language where appropriate."
-msgstr ""
-":guilabel:`Nyanserad`: Ger sofistikerade och djupt kontextualiserade svar. "
-"Utforskar flera perspektiv, uppmärksammar finesser och använder ett exakt, "
-"akademiskt språk där det är lämpligt."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:201
-msgid ""
-":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
-"Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
-"dynamic structure to keep the user interested."
-msgstr ""
-":guilabel:`Snabb & kreativ`: Kärnfull, levande och mycket engagerande. "
-"Prioriterar korthet och kvickhet. Använder uttrycksfullt språk, metaforer "
-"och en dynamisk struktur för att hålla användaren intresserad."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:203
-msgid ""
-":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
-"soundness above all else. Breaks down complex steps, cites reasoning "
-"clearly, and verifies every claim. Adopts a meticulous and formal tone."
-msgstr ""
-":guilabel:`Långsam & noggrann`: Prioriterar absolut precision och logisk "
-"stringens framför allt annat. Bryter ner komplexa steg, motiverar resonemang "
-"tydligt och verifierar varje påstående. Tillämpar en noggrann och formell "
-"ton."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:207
-msgid ""
-"Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
-"**only** respond based on the provided resources."
-msgstr ""
-"Markera kryssrutan :guilabel:`Begränsa till källor` för att begränsa agenten "
-"till att **endast** svara baserat på de tillhandahållna resurserna."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:210
-msgid ""
-"Next, select one or more :guilabel:`Skills` for the agent. As explained "
-"above, :ref:`Skills <ai/topics>` include both instructions and tools that "
-"guide the agent in helping users complete a task."
-msgstr ""
-"Välj därefter en eller flera :guilabel:`Färdigheter` för agenten. Som "
-"förklarats ovan inkluderar :ref:`Färdigheter <ai/topics>` både instruktioner "
-"och verktyg som vägleder agenten i att hjälpa användare att slutföra en "
-"uppgift."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:214
-msgid ""
-"Enter a :guilabel:`System Prompt` with detailed instructions for the agent "
-"as to their role and responsibilities."
-msgstr ""
-"Ange en :guilabel:`Systemuppmaning` med detaljerade instruktioner för "
-"agenten om deras roll och ansvarsområden."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:217
-msgid "A new agent form with the required information."
-msgstr "Ett nytt agentformulär med obligatorisk information."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:221
-msgid ""
-"The specificity and length of the :guilabel:`System Prompt` can vary, "
-"depending on the use case for the agent. Use the preconfigured agents as an "
-"example of the possible information."
-msgstr ""
-"Specificitet och längd för :guilabel:`Systemprompt` kan variera, beroende på "
-"användningsfallet för agenten. Använd de förkonfigurerade agenterna som "
-"exempel på möjlig information."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:224
-msgid ""
-"If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
-"tab, then click :guilabel:`Add a source`."
-msgstr ""
-"Om *Källor* behövs för agenten, rulla till fliken :guilabel:`Källor` och "
-"klicka sedan på :guilabel:`Lägg till en källa`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:227
-msgid "Select a format:"
-msgstr "Välj ett format:"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:229
-msgid ""
-":guilabel:`Upload a File`: Select the appropriate file from the explorer "
-"window, and click :guilabel:`Open`."
-msgstr ""
-":guilabel:`Ladda upp en fil`: Välj lämplig fil i utforskarfönstret och "
-"klicka på :guilabel:`Öppna`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:231
-msgid ""
-":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, "
-"paste one link per line. Click :guilabel:`Save`."
-msgstr ""
-":guilabel:`Lägg till en länk`: Klistra in webbadressen. Flera länkar kan "
-"läggas till samtidigt, klistra in en länk per rad. Klicka "
-"på :guilabel:`Spara`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:233
-msgid ""
-":guilabel:`Add from Documents` (uploaded in the **Documents** application): "
-"Click the checkbox next to one or more documents, then "
-"click :guilabel:`Select`."
-msgstr ""
-":guilabel:`Lägg till från Dokument` (uppladdade i applikationen "
-"**Dokument**): Markera kryssrutan bredvid ett eller flera dokument och "
-"klicka sedan på :guilabel:`Välj`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:235
-msgid ""
-":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
-"articles, then click :guilabel:`Select`."
-msgstr ""
-":guilabel:`Lägg till från Kunskapsbas`: Markera kryssrutan bredvid en eller "
-"flera artiklar och klicka sedan på :guilabel:`Välj`."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:238
-msgid ""
-"Once a source is added, the :guilabel:`Status` field updates to reflect its "
-"current status. The source is ready when the status changes from "
-"*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate "
-"the source."
-msgstr ""
-"När en källa har lagts till uppdateras fältet :guilabel:`Status` för att "
-"återspegla dess aktuella status. Källan är klar när statusen ändras från "
-"*Bearbetas* till *Indexerad*. Dra i reglaget :guilabel:`Aktiv` för att "
-"aktivera källan."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:242
-msgid "A list of sources for an agent, each denoted with their format."
-msgstr "En lista över källor för en agent, var och en märkt med sitt format."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:246
-msgid ""
-"If a source fails to upload, it could be the result of a conflict with the "
-"selected provider."
-msgstr ""
-"Om en källa inte kan laddas upp kan det bero på en konflikt med den valda "
-"leverantören."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:248
-msgid ""
-"Click the :guilabel:`Test` button to open a conversation window and test the "
-"new agent."
-msgstr ""
-"Klicka på knappen :guilabel:`Testa` för att öppna ett samtalsfönster och "
-"testa den nya agenten."
-
-#: ../../export/content/applications/productivity/ai/agents.rst:251
-msgid "Manually reprocessing sources"
-msgstr "Ombearbeta källor manuellt"
-
-#: ../../export/content/applications/productivity/ai/agents.rst:253
 msgid ""
 "If the content of a source changes after it has been indexed, it may be "
 "necessary to reprocess the source so that agents use the most recent "
@@ -909,29 +576,155 @@ msgstr ""
 "Ombearbetning kan utlösas manuellt och säkerställer att uppdaterade "
 "dokument, länkar eller kunskapsartiklar återspeglas i framtida agentsvar."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:258
-msgid ""
-"To reprocess a source, navigate to the :menuselection:`AI` app. Select an |"
-"AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertical ellipsis)` icon, then "
-"click :guilabel:`Configuration`."
-msgstr ""
-"För att ombearbeta en källa, navigera till appen :menuselection:`AI`. Välj "
-"en |AI|-agent och klicka på ikonen :icon:`fa-ellipsis-"
-"v` :guilabel:`(vertikal ellips)` på kanban-kortet, och klicka sedan "
-"på :guilabel:`Konfiguration`."
+#: ../../export/content/applications/productivity/ai/agents.rst:137
+msgid "To reprocess a source:"
+msgstr "För att ombearbeta en källa:"
 
-#: ../../export/content/applications/productivity/ai/agents.rst:262
-msgid ""
-"On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to "
-"any source that should be updated."
-msgstr ""
-"På fliken *Källor* klickar du på :guilabel:`Bearbeta igen` :icon:`fa-"
-"refresh` bredvid den källa som ska uppdateras."
+#: ../../export/content/applications/productivity/ai/agents.rst:139
+msgid "Navigate to the :menuselection:`AI` app and select an |AI| agent."
+msgstr "Navigera till applikationen :menuselection:`AI` och välj en |AI| agent."
 
-#: ../../export/content/applications/productivity/ai/agents.rst:265
-msgid "AI agent sources with the reprocess icon visible."
-msgstr "AI-agentkällor med ikonen för att bearbeta igen synlig."
+#: ../../export/content/applications/productivity/ai/agents.rst:140
+msgid "Click the *Knowledge* tab, and select a source."
+msgstr "Klicka på fliken *Kunskap* och välj en källa."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:141
+msgid ""
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon for the "
+"source."
+msgstr ""
+"Klicka på ikonen :icon:`fa-ellipsis-v` :guilabel:`(vertikal ellips)` för "
+"källan."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:142
+msgid "On the menu, click :guilabel:`Reprocess`."
+msgstr "På menyn, klicka på :guilabel:`Bearbeta om`."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:144
+msgid "The Knowledge tab of an agent, with the Reprocess option visible."
+msgstr "Agentens flik Kunskap, med alternativet Bearbeta om synligt."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:148
+msgid "Triggers"
+msgstr "Triggers"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:150
+msgid ""
+"An agent can be triggered in different ways depending on how it is used."
+msgstr "En agent kan utlösas på olika sätt beroende på hur den används."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:152
+msgid ""
+"Agents can be launched interactively by users through an AI chat. They can "
+"also be triggered automatically by automated actions and scheduled actions, "
+"allowing agents to participate in automated workflows."
+msgstr ""
+"Agenter kan startas interaktivt av användare via en AI-chatt. De kan också "
+"utlösas automatiskt av automatiserade åtgärder och schemalagda åtgärder, "
+"vilket gör att agenter kan delta i automatiserade arbetsflöden."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:156
+msgid ""
+"To add a trigger to an agent, navigate to the *Trigger* tab and "
+"click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
+"triggered?* popup, choose from one of the following options:"
+msgstr ""
+"För att lägga till en utlösare till en agent, navigera till fliken "
+"*Utlösare* och klicka :icon:`add` :guilabel:`Lägg till`. I popup-fönstret "
+"*När ska din agent utlösas?*, välj ett av följande alternativ:"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:159
+msgid "*On a schedule*: Runs automatically according to a set frequency."
+msgstr "*Enligt schema*: Körs automatiskt enligt en inställd frekvens."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:160
+msgid ""
+"*Based on a Date Field*: Runs once per record, as soon as a specific date is "
+"reached."
+msgstr ""
+"*Baserat på ett datumfält*: Körs en gång per post, så snart ett specifikt "
+"datum nås."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:161
+msgid "*After creation*: Runs whenever a new record is added."
+msgstr "*Efter skapande*: Körs när en ny post läggs till."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:162
+msgid "*After update*: Runs whenever a specific field is updated."
+msgstr "*Efter uppdatering*: Körs när ett specifikt fält uppdateras."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:165
+msgid ""
+"If unsure which option is best for a particular use case, click "
+"the :guilabel:`I need help to choose` option at the bottom of the popup. "
+"This opens a conversation with the *Odoo AI* agent. The agent then walks "
+"through the specifics of the use case to help select the best option."
+msgstr ""
+"Om du är osäker på vilket alternativ som passar bäst för ett visst "
+"användningsfall, klicka på alternativet :guilabel:`Jag behöver hjälp med att "
+"välja` längst ner i popup-fönstret. Detta öppnar en konversation med agenten "
+"*Odoo AI*. Agenten går sedan igenom detaljerna i användningsfallet för att "
+"hjälpa till att välja det bästa alternativet."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:170
+msgid "See :doc:`AI server actions <server-actions>` for more information."
+msgstr "Se :doc:`AI-serveråtgärder <server-actions>` för mer information."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:175
+msgid "Create a new agent"
+msgstr "Skapa en ny agent"
+
+#: ../../export/content/applications/productivity/ai/agents.rst:177
+msgid ""
+"To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+"click :guilabel:`New`. Enter an agent name, then add a short description, if "
+"desired."
+msgstr ""
+"För att skapa en ny |AI| agent, navigera till appen :menuselection:`AI` och "
+"klicka :guilabel:`Ny`. Ange ett namn på agenten och lägg till en kort "
+"beskrivning om så önskas."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:181
+msgid ""
+"Before creating a new agent, it is recommended to have a clear use case in "
+"mind. This helps when writing out the *Instructions* and assigning the "
+"*Skills*."
+msgstr ""
+"Innan du skapar en ny agent rekommenderas det att du har ett tydligt "
+"användningsfall i åtanke. Detta hjälper när du skriver *Instruktioner* och "
+"tilldelar *Kompetenser*."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:184
+msgid ""
+"On the *Instructions* tab, enter a system prompt with detailed instructions "
+"for the agent as to their role and responsibilities."
+msgstr ""
+"På fliken *Instruktioner*, ange en systemuppmaning med detaljerade "
+"instruktioner för agenten om dess roll och ansvarsområden."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:187
+msgid "A new agent form."
+msgstr "Ett formulär för en ny agent."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:190
+msgid ""
+"On the *Skills* tab, select one or more :guilabel:`Skills` for the agent. As "
+"explained above, :ref:`Skills <ai/agents/skills>` include both instructions "
+"and tools that guide the agent in helping users complete a task."
+msgstr ""
+"På fliken *Kompetenser*, välj en eller flera :guilabel:`Kompetenser` för "
+"agenten. Som förklarats ovan, inkluderar :ref:`Kompetenser <ai/agents/skills>"
+"` både instruktioner och verktyg som vägleder agenten i att hjälpa användare "
+"att utföra en arbetsuppgift."
+
+#: ../../export/content/applications/productivity/ai/agents.rst:194
+msgid ""
+"Slide the :guilabel:`Restrict answers to Sources` toggle to active to limit "
+"the agent to **only** respond based on the provided resources."
+msgstr ""
+"Skjut reglaget :guilabel:`Begränsa svar till källor` till aktivt för att "
+"begränsa agenten till att **endast** svara baserat på de tillhandahållna "
+"resurserna."
 
 #: ../../export/content/applications/productivity/ai/apikeys.rst:3
 msgid "AI API keys"
@@ -2501,10 +2294,10 @@ msgstr "Agenten kan inte svara med hög säkerhet."
 #: ../../export/content/applications/productivity/ai/live-chat.rst:86
 msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
-"Creation* :ref:`skill <ai/topics>`."
+"Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"När ett av dessa villkor är uppfyllt aktiverar agenten *Lead "
-"Creation*-:ref:`färdigheten <ai/topics>`."
+"När ett av dessa villkor är uppfyllt, aktiverar agenten :ref:`kompetensen "
+"<ai/agents/skills>` *Leadgenerering*."
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -4458,12 +4251,12 @@ msgstr ""
 #: ../../export/content/applications/productivity/ai/support_operations.rst:87
 msgid ""
 "Users may also define *skills*, which grant the agent permission to perform "
-"specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as "
-"record creation or automation triggers."
+"specific actions. :ref:`Skills <ai/agents/skills>` allow advanced scenarios "
+"such as record creation or automation triggers."
 msgstr ""
-"Användare kan också definiera *färdigheter*, vilket ger agenten behörighet "
-"att utföra specifika åtgärder. :ref:`Färdigheter <ai/topics>` möjliggör "
-"avancerade scenarier som att skapa poster eller utlösa automatiseringar."
+"Användare kan också definiera *kompetenser*, som ger agenten tillstånd att "
+"utföra specifika åtgärder. :ref:`Kompetenser <ai/agents/skills>` möjliggör "
+"avancerade scenarier som skapande av poster eller automatiseringsutlösare."
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:90
 msgid "An example support AI agent."
@@ -14009,10 +13802,6 @@ msgid ""
 msgstr ""
 ":doc:`AI-driven digitalisering av dokument <../finance/accounting/"
 "vendor_bills/invoice_digitization>`"
-
-#: ../../export/content/applications/productivity/knowledge.rst:3
-msgid "Knowledge"
-msgstr "Kunskap"
 
 #: ../../export/content/applications/productivity/knowledge.rst:5
 msgid ""
@@ -33104,8 +32893,8 @@ msgid ""
 "With the relevant graph view open in your database, "
 "click :guilabel:`Spreadsheet`."
 msgstr ""
-"Med den relevanta grafvyn öppen i din databas, klicka på "
-":guilabel:`Kalkylark`."
+"Med den relevanta grafvyn öppen i din databas, klicka "
+"på :guilabel:`Kalkylark`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:8
 msgid ""
@@ -33145,8 +32934,9 @@ msgid ""
 "charts/customize>`."
 msgstr ""
 "Diagram infogas på det första bladet i kalkylarket. En panel på höger sida "
-"av skärmen visar diagrammets egenskaper, där olika aspekter av diagrammets "
-":ref:`konfiguration och design kan anpassas <spreadsheet/charts/customize>`."
+"av skärmen visar diagrammets egenskaper, där olika aspekter av "
+"diagrammets :ref:`konfiguration och design kan anpassas <spreadsheet/charts/"
+"customize>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/insert/insert_chart.rst:24
 msgid ":ref:`Manage charts <spreadsheet/charts/manage>`"
@@ -35952,8 +35742,8 @@ msgid ""
 "Click :menuselection:`Insert -->` :icon:`bar_chart` :menuselection:`Chart` "
 "from the menu bar."
 msgstr ""
-"Klicka på :menuselection:`Infoga -->` :icon:`bar_chart` "
-":menuselection:`Diagram` från menyraden."
+"Klicka på :menuselection:`Infoga --"
+">` :icon:`bar_chart` :menuselection:`Diagram` från menyraden."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:23
 msgid ""
@@ -35963,9 +35753,9 @@ msgid ""
 "configuration>` tab of the chart properties."
 msgstr ""
 "Odoo använder den mest lämpliga :ref:`diagramtypen <spreadsheet/charts/"
-"customize-configuration-type>` för vald data; detta kan ändras i fliken "
-":icon:`tune` :ref:`Konfiguration <spreadsheet/charts/customize-configuration>"
-"` under diagramegenskaper."
+"customize-configuration-type>` för vald data; detta kan ändras i "
+"fliken :icon:`tune` :ref:`Konfiguration <spreadsheet/charts/customize-"
+"configuration>` under diagramegenskaper."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:28
 msgid ""
@@ -36014,8 +35804,9 @@ msgid ""
 "click :icon:`edit_square` :guilabel:`Edit`."
 msgstr ""
 "För alla diagram, oavsett om de skapats manuellt eller infogats från en Odoo-"
-"vy, håll muspekaren över diagrammet, klicka på ikonen :icon:`more_vert` "
-":guilabel:`(meny)`, klicka sedan på :icon:`edit_square` :guilabel:`Redigera`."
+"vy, håll muspekaren över diagrammet, klicka på "
+"ikonen :icon:`more_vert` :guilabel:`(meny)`, klicka sedan "
+"på :icon:`edit_square` :guilabel:`Redigera`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:50
 msgid ""
@@ -36024,8 +35815,8 @@ msgid ""
 "the :icon:`bar_chart` :guilabel:`Charts` section."
 msgstr ""
 "För ett diagram som infogats från en Odoo-grafvy, klicka på :guilabel:`Data` "
-"på menyraden och välj sedan det relevanta diagrammet från avsnittet "
-":icon:`bar_chart` :guilabel:`Diagram`."
+"på menyraden och välj sedan det relevanta diagrammet från "
+"avsnittet :icon:`bar_chart` :guilabel:`Diagram`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:56
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/pivot_tables.rst:105
@@ -36035,7 +35826,8 @@ msgstr "Fliken Konfiguration"
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:58
 msgid ""
 "The :icon:`tune` :guilabel:`Configuration` tab includes the following fields:"
-msgstr "Fliken :icon:`tune` :guilabel:`Konfiguration` innehåller följande fält:"
+msgstr ""
+"Fliken :icon:`tune` :guilabel:`Konfiguration` innehåller följande fält:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:60
 msgid ""
@@ -36073,8 +35865,8 @@ msgid ""
 msgstr ""
 ":guilabel:`Modell` och :guilabel:`Domän`: för ett diagram som infogats från "
 "en Odoo-grafvy, modellen från vilken datan har extraherats respektive "
-"reglerna som används för att avgöra vilka handlingar som visas. Klicka på "
-":icon:`east` :ref:`Redigera domän <search/custom-filters>` för att lägga "
+"reglerna som används för att avgöra vilka handlingar som visas. Klicka "
+"på :icon:`east` :ref:`Redigera domän <search/custom-filters>` för att lägga "
 "till eller redigera regler."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:72
@@ -36546,7 +36338,8 @@ msgstr ""
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:286
 msgid ""
 "To choose a color from the color selector, use one of the following methods:"
-msgstr "För att välja en färg från färgväljaren, använd en av följande metoder:"
+msgstr ""
+"För att välja en färg från färgväljaren, använd en av följande metoder:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:288
 msgid "select one of the standard colors"
@@ -36579,8 +36372,8 @@ msgid ""
 "a :guilabel:`See more link`."
 msgstr ""
 "Sektionen :guilabel:`Anteckning` möjliggör tillägg av :guilabel:`Text` för "
-"att ge sammanhang eller ytterligare information om diagrammet och/eller en "
-":guilabel:`Länk för mer information`."
+"att ge sammanhang eller ytterligare information om diagrammet och/eller "
+"en :guilabel:`Länk för mer information`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:302
 msgid ""
@@ -36589,8 +36382,8 @@ msgid ""
 "corner."
 msgstr ""
 "Anteckningar som lagts till i ett diagram kan visas genom att hålla "
-"muspekaren över diagrammet och sedan klicka på ikonen :icon:`info` "
-":guilabel:`(Diagraminfo)` i det övre högra hörnet."
+"muspekaren över diagrammet och sedan klicka på "
+"ikonen :icon:`info` :guilabel:`(Diagraminfo)` i det övre högra hörnet."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:308
 msgid "Data Series"
@@ -36610,8 +36403,8 @@ msgid ""
 "and :ref:`choosing the desired color <spreadsheet/charts/design-color>`."
 msgstr ""
 ":guilabel:`Seriefärg`: Med relevant dataserie vald kan du ändra färgen på "
-"relaterade datapunkter i diagrammet genom att klicka på färgpunkten och "
-":ref:`välja önskad färg <spreadsheet/charts/design-color>`."
+"relaterade datapunkter i diagrammet genom att klicka på färgpunkten "
+"och :ref:`välja önskad färg <spreadsheet/charts/design-color>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:315
 msgid ":guilabel:`Series name`: Edit the name of a data series, if needed."
@@ -36647,12 +36440,12 @@ msgid ""
 "line, click the color dot, then :ref:`choose the desired color <spreadsheet/"
 "charts/design-color>`."
 msgstr ""
-":guilabel:`Trendlinje`: Med relevant dataserie vald, aktivera "
-":guilabel:`Visa trendlinje` och välj sedan :guilabel:`Typ` av trendlinje: "
-":guilabel:`Linjär`, :guilabel:`Exponentiell`, :guilabel:`Polynomisk`, "
-":guilabel:`Logaritmisk` eller :guilabel:`Glidande medelvärde`. För att ändra "
-"färgen på trendlinjen, klicka på färgpunkten och :ref:`välj önskad färg "
-"<spreadsheet/charts/design-color>`."
+":guilabel:`Trendlinje`: Med relevant dataserie vald, "
+"aktivera :guilabel:`Visa trendlinje` och välj sedan :guilabel:`Typ` av "
+"trendlinje: :guilabel:`Linjär`, :guilabel:`Exponentiell`, :guilabel:`Polynomisk`, :guilabel:`Logaritmisk` "
+"eller :guilabel:`Glidande medelvärde`. För att ändra färgen på trendlinjen, "
+"klicka på färgpunkten och :ref:`välj önskad färg <spreadsheet/charts/design-"
+"color>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:330
 msgid "Axes"
@@ -36661,7 +36454,8 @@ msgstr "Axlar"
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:332
 msgid ""
 "The :guilabel:`Axes` section allows the following elements to be modified:"
-msgstr "Sektionen :guilabel:`Axlar` gör det möjligt att ändra följande element:"
+msgstr ""
+"Sektionen :guilabel:`Axlar` gör det möjligt att ändra följande element:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:334
 msgid ""
@@ -36742,8 +36536,8 @@ msgid ""
 "Hover over a chart, then click the :icon:`more_vert` :guilabel:`(menu)` icon "
 "to reveal the following options:"
 msgstr ""
-"Hovra över ett diagram och klicka sedan på ikonen :icon:`more_vert` "
-":guilabel:`(meny)` för att visa följande alternativ:"
+"Hovra över ett diagram och klicka sedan på "
+"ikonen :icon:`more_vert` :guilabel:`(meny)` för att visa följande alternativ:"
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:377
 msgid ""
@@ -36752,8 +36546,8 @@ msgid ""
 "be :ref:`customized <spreadsheet/charts/customize>`."
 msgstr ""
 ":icon:`edit_square` :guilabel:`Redigera` för att öppna diagrammets "
-"egenskaper, där olika aspekter av diagrammets konfiguration och design kan "
-":ref:`anpassas <spreadsheet/charts/customize>`."
+"egenskaper, där olika aspekter av diagrammets konfiguration och design "
+"kan :ref:`anpassas <spreadsheet/charts/customize>`."
 
 #: ../../export/content/applications/productivity/spreadsheet/visualize_data/charts.rst:380
 msgid ""
@@ -41812,13 +41606,11 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:110
 msgid ""
-"A :guilabel:`Date` filter can only match against a :ref:`Date <studio/fields/"
-"simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-"
-"time>` field."
+"A :guilabel:`Date` filter can only match against a :ref:`Date or Date & Time "
+"<studio/fields/simple-fields-date-time>` field."
 msgstr ""
-"Ett :guilabel:`Datum`filter kan endast matcha mot ett :ref:`Datum <studio/"
-"fields/simple-fields-date>`- eller :ref:`Datum & tid <studio/fields/simple-"
-"fields-date-time>`fält."
+"Ett :guilabel:`Datum`-filter kan endast matchas mot ett :ref:`Datum eller "
+"Datum och tid <studio/fields/simple-fields-date-time>`-fält."
 
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:113
 #: ../../export/content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:150
@@ -46215,6 +46007,582 @@ msgstr ""
 "För andra fel, se Metas Developer Suite för `WhatsApp Error Codes <https://"
 "developers.facebook.com/documentation/business-messaging/whatsapp/support/"
 "error-codes>`__."
+
+#~ msgid ""
+#~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
+#~ "natural language, perform tasks, and assist users by interacting with "
+#~ "Odoo tools. Agents are a core component of the |AI| structure in Odoo. "
+#~ "Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-"
+#~ "odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/"
+#~ "tools>` that guide its behavior."
+#~ msgstr ""
+#~ "En |AI|-agent är en smart virtuell assistent i Odoo som kan förstå "
+#~ "naturligt språk, utföra uppgifter och hjälpa användare genom att "
+#~ "interagera med Odoo-verktyg. Agenter är en central del av |AI|-strukturen "
+#~ "i Odoo. Varje agent har ett definierat syfte, en :ref:`prompt <ai/agents/"
+#~ "prompts-in-odoo>` samt en uppsättning :ref:`färdigheter <ai/topics>` "
+#~ "och :ref:`verktyg <ai/tools>` som styr dess beteende."
+
+#~ msgid ""
+#~ "When interacting with an |AI| agent, the conversation interface may "
+#~ "display intermediate status messages while a request is being processed."
+#~ msgstr ""
+#~ "Vid interaktion med en |AI|-agent kan konversationsgränssnittet visa "
+#~ "mellanliggande statusmeddelanden medan en förfrågan behandlas."
+
+#~ msgid ""
+#~ "These messages reflect the current step of the interaction, such as "
+#~ "analyzing the request, consulting sources, or preparing an action, before "
+#~ "the final response is generated."
+#~ msgstr ""
+#~ "Dessa meddelanden visar det aktuella steget i interaktionen, till exempel "
+#~ "att analysera förfrågan, konsultera källor eller förbereda en åtgärd, "
+#~ "innan det slutliga svaret genereras."
+
+#~ msgid "An Agent analyzing a user request."
+#~ msgstr "En agent som analyserar en användarförfrågan."
+
+#~ msgid "Agents are formed of two main components, *Skills* and *Sources*."
+#~ msgstr "Agenter består av två huvudkomponenter: *färdigheter* och *källor*."
+
+#~ msgid ""
+#~ "*Skills* are the instructions and roles that inform the agent of what "
+#~ "tasks they need to complete. *Tools* are assigned to skills, and are the "
+#~ "actual functions the agent can utilize to perform tasks."
+#~ msgstr ""
+#~ "*Färdigheter* är de instruktioner och roller som informerar agenten om "
+#~ "vilka uppgifter den behöver slutföra. *Verktyg* tilldelas färdigheter och "
+#~ "är de faktiska funktioner som agenten kan använda för att utföra "
+#~ "uppgifter."
+
+#~ msgid ""
+#~ "*Sources* provide the agent with the information they need to complete "
+#~ "their tasks."
+#~ msgstr ""
+#~ "*Källor* förser agenten med den information de behöver för att slutföra "
+#~ "sina uppgifter."
+
+#~ msgid ""
+#~ "While many |AI| features can be used in Odoo without the **AI** "
+#~ "application, creating and customizing agents requires that the **AI** "
+#~ "application is installed."
+#~ msgstr ""
+#~ "Även om många AI-funktioner kan användas i Odoo utan **AI**-"
+#~ "applikationen, kräver att skapa och anpassa agenter att **AI**-"
+#~ "applikationen är installerad."
+
+#~ msgid "AI prompts in Odoo"
+#~ msgstr "AI-promptar i Odoo"
+
+#~ msgid ""
+#~ "Before working with |AI| agents, it is important to understand some basic "
+#~ "concepts regarding |AI| prompts."
+#~ msgstr ""
+#~ "Innan du arbetar med |AI|-agenter är det viktigt att förstå några "
+#~ "grundläggande begrepp gällande |AI|-promptar."
+
+#~ msgid ""
+#~ "An |AI| prompt is a set of written instructions or context given to an |"
+#~ "AI| model that tells it how to respond to a request, or what role to "
+#~ "take. Prompts can define:"
+#~ msgstr ""
+#~ "En AI-prompt är en uppsättning skriftliga instruktioner eller sammanhang "
+#~ "som ges till en AI-modell som talar om hur den ska svara på en förfrågan, "
+#~ "eller vilken roll den ska ta. Promptar kan definiera:"
+
+#~ msgid "the tone, style, and persona of the |AI| model"
+#~ msgstr "tonläge, stil och persona för AI-modellen"
+
+#~ msgid "the scope of what the model can do"
+#~ msgstr "tillämpningsområdet för vad modellen kan göra"
+
+#~ msgid "the type of output expected from the request"
+#~ msgstr "typen av förväntad resultat från förfrågan"
+
+#~ msgid ""
+#~ "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the "
+#~ "agent's overall role, purpose, and behavior. It acts as the core mission "
+#~ "statement of the agent, and drives all interactions. During a "
+#~ "conversation, the system prompts and skill instructions are continuously "
+#~ "applied. They influence how the agent interprets messages, selects tools, "
+#~ "uses sources, and determines whether additional actions are required "
+#~ "before responding."
+#~ msgstr ""
+#~ "I Odoo tilldelas varje |AI|-agent en *systemprompt*, som definierar "
+#~ "agentens övergripande roll, syfte och beteende. Den fungerar som agentens "
+#~ "centrala uppdragsbeskrivning och styr alla interaktioner. Under en "
+#~ "konversation tillämpas systemprompten och färdighetsinstruktionerna "
+#~ "kontinuerligt. De påverkar hur agenten tolkar meddelanden, väljer "
+#~ "verktyg, använder källor och avgör om ytterligare åtgärder krävs innan "
+#~ "den svarar."
+
+#~ msgid ""
+#~ "Each :ref:`Skill <ai/topics>` also includes its own prompt-like "
+#~ "component, called *Instructions*. Instructions are skill-specific "
+#~ "guidelines that refine how the agent behaves within a certain context or "
+#~ "workflow, and how it interacts within the Odoo framework."
+#~ msgstr ""
+#~ "Varje :ref:`färdighet <ai/topics>` innehåller också en egen "
+#~ "promptliknande komponent som kallas *Instruktioner*. Instruktioner är "
+#~ "färdighetsspecifika riktlinjer som förfinar hur agenten beter sig inom "
+#~ "ett visst sammanhang eller arbetsflöde och hur den interagerar inom Odoo-"
+#~ "ramverket."
+
+#~ msgid "Step-by-step workflows for how to complete a specific action."
+#~ msgstr "Steg-för-steg-arbetsflöden för hur man slutför en specifik åtgärd"
+
+#~ msgid ""
+#~ "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` "
+#~ "that define how an agent behaves within a specific context. Essentially, "
+#~ "the skills define what an agent can do within the database. Skills guide "
+#~ "conversations, telling the agent what it can do, how it can do it, and "
+#~ "when it should do it."
+#~ msgstr ""
+#~ "*Färdigheter* är en samling instruktioner och :ref:`verktyg <ai/tools>` "
+#~ "som definierar hur en agent beter sig inom ett specifikt sammanhang. I "
+#~ "grund och botten definierar färdigheterna vad en agent kan göra i "
+#~ "databasen. Färdigheter vägleder konversationer och talar om för agenten "
+#~ "vad den kan göra, hur den kan göra det och när den bör göra det."
+
+#~ msgid ""
+#~ "If an agent is not assigned any Skills, it is **only** able to provide "
+#~ "information. It **cannot** complete tasks or make changes to the database."
+#~ msgstr ""
+#~ "Om en agent inte tilldelas några färdigheter kan den **endast** "
+#~ "tillhandahålla information. Den kan **inte** slutföra uppgifter eller "
+#~ "göra ändringar i databasen."
+
+#~ msgid ""
+#~ "Within each skill is a detailed prompt, which provides the agent with "
+#~ "more in-depth instructions on how to perform the tasks associated with "
+#~ "that skill, define the boundaries of its behavior, and determine how it "
+#~ "should interpret user intent. These prompts ensure that the agent follows "
+#~ "a consistent reasoning pattern and uses the appropriate tools to generate "
+#~ "accurate, context-aware responses."
+#~ msgstr ""
+#~ "Inom varje färdighet finns en detaljerad prompt, som ger agenten mer "
+#~ "ingående instruktioner om hur uppgifterna kopplade till den färdigheten "
+#~ "ska utföras, fastställer gränserna för dess beteende och avgör hur den "
+#~ "ska tolka användarens avsikt. Dessa promptar säkerställer att agenten "
+#~ "följer ett konsekvent resonemangsmönster och använder lämpliga verktyg "
+#~ "för att generera korrekta och sammanhangsmedvetna svar."
+
+#~ msgid "The following skills are preconfigured in the **AI** app:"
+#~ msgstr "Följande färdigheter är förkonfigurerade i appen **AI**:"
+
+#~ msgid ""
+#~ ":guilabel:`View Builder`: Supports the interpretation of a user query to "
+#~ "open the appropriate Odoo view with a set of tools necessary to perform "
+#~ "the search. Natural language queries can also include time-based grouping "
+#~ "instructions. This allows agents to group results by time intervals such "
+#~ "as day, month, or year when querying records."
+#~ msgstr ""
+#~ ":guilabel:`Vybyggare`: Stöder tolkning av en användarförfrågan för att "
+#~ "öppna lämplig Odoo-vy med en uppsättning verktyg som krävs för att utföra "
+#~ "sökningen. Förfrågningar på naturligt språk kan även innehålla "
+#~ "tidsbaserade grupperingsinstruktioner. Detta gör att agenter kan gruppera "
+#~ "resultat efter tidsintervall som dag, månad eller år vid sökning i poster."
+
+#~ msgid ""
+#~ ":guilabel:`Information retrieval`: A collection of tools to retrieve "
+#~ "information about the models."
+#~ msgstr ""
+#~ ":guilabel:`Informationshämtning`: en samling verktyg för att hämta "
+#~ "information om modellerna."
+
+#~ msgid ":guilabel:`Update Records`: Tools to update records."
+#~ msgstr ":guilabel:`Uppdatera poster`: Verktyg för att uppdatera poster."
+
+#~ msgid ":guilabel:`Create Records`: Tools to create records."
+#~ msgstr ":guilabel:`Skapa poster`: Verktyg för att skapa poster."
+
+#~ msgid ""
+#~ ":guilabel:`Generate Images`: A collection of tools to support image "
+#~ "generation. Load this skill when the user asks to generate or enhance an "
+#~ "image."
+#~ msgstr ""
+#~ ":guilabel:`Generera bilder`: En samling verktyg för att stödja "
+#~ "bildgenerering. Ladda denna färdighet när användaren ber om att generera "
+#~ "eller förbättra en bild."
+
+#~ msgid ""
+#~ ":guilabel:`Web Search`: Enable the Agent to explore the internet in real "
+#~ "time."
+#~ msgstr ""
+#~ ":guilabel:`Webbsökning`: Gör det möjligt för agenten att utforska "
+#~ "internet i realtid."
+
+#~ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
+#~ msgstr ""
+#~ ":guilabel:`Webbplatsbyggare`: Verktyg för att redigera Odoo-webbsidor."
+
+#~ msgid ""
+#~ ":guilabel:`Create Leads`: A collection of tools to support automated lead "
+#~ "creation. This skill is **only** available if the **CRM** app is "
+#~ "installed."
+#~ msgstr ""
+#~ ":guilabel:`Skapa leads`: En samling verktyg för att stödja automatiskt "
+#~ "skapande av leads. Denna färdighet är **endast** tillgänglig om appen "
+#~ "**CRM** är installerad."
+
+#~ msgid ""
+#~ "Within each skill is a set of :guilabel:`Instructions`, which act as a "
+#~ "prompt and provide guidance for the structure of the interaction, and one "
+#~ "or more :ref:`AI Tools <ai/tools>`, which indicate the functions the "
+#~ "agent can perform."
+#~ msgstr ""
+#~ "Inom varje färdighet finns en uppsättning :guilabel:`Instruktioner`, som "
+#~ "fungerar som en prompt och ger vägledning för interaktionens struktur, "
+#~ "samt ett eller flera :ref:`AI-verktyg <ai/tools>`, som anger de "
+#~ "funktioner som agenten kan utföra."
+
+#~ msgid "Tools"
+#~ msgstr "Verktyg"
+
+#~ msgid ""
+#~ "*Tools* are the functions the agent can perform in Odoo. These include "
+#~ "actions like creating a lead or opening a view. Tools extend the purpose "
+#~ "of the agent beyond conversations, they enable real actions. The "
+#~ "available tools in a database vary based on the applications installed. "
+#~ "Multiple :guilabel:`AI Tools` can be assigned to a single skill."
+#~ msgstr ""
+#~ "*Verktyg* är de funktioner som agenten kan utföra i Odoo. Dessa omfattar "
+#~ "åtgärder som att skapa ett lead eller öppna en vy. Verktyg utökar "
+#~ "agentens syfte bortom konversationer – de möjliggör verkliga åtgärder. De "
+#~ "tillgängliga verktygen i en databas varierar beroende på vilka appar som "
+#~ "är installerade. Flera :guilabel:`AI-verktyg` kan tilldelas en och samma "
+#~ "färdighet."
+
+#~ msgid "Sources"
+#~ msgstr "Källor"
+
+#~ msgid "PDFs"
+#~ msgstr "PDF-filer"
+
+#~ msgid "Weblinks"
+#~ msgstr "Webblänkar"
+
+#~ msgid "Documents (uploaded in the **Documents** application)"
+#~ msgstr "Dokument (uppladdade i **Dokument**-applikationen)"
+
+#~ msgid "**Knowledge** app articles"
+#~ msgstr "Artiklar från **Kunskap**-appen"
+
+#~ msgid ""
+#~ "If the :guilabel:`Restrict to Sources` option is enabled on an agent, the "
+#~ "agent can **only** utilize information from the uploaded and active "
+#~ "sources."
+#~ msgstr ""
+#~ "Om alternativet :guilabel:`Begränsa till Källor` är aktiverat på en "
+#~ "agent, kan agenten **endast** använda information från de uppladdade och "
+#~ "aktiva källorna."
+
+#~ msgid "Uploaded files"
+#~ msgstr "Uppladdade filer"
+
+#~ msgid ""
+#~ "During a conversation with an |AI| agent, additional context can be "
+#~ "provided by uploading files. Files are temporarily treated as sources for "
+#~ "the ongoing discussion. The agent can use their content to answer "
+#~ "questions, summarize information, or extract relevant details."
+#~ msgstr ""
+#~ "Under en konversation med en |AI|-agent kan ytterligare sammanhang ges "
+#~ "genom att ladda upp filer. Filer behandlas tillfälligt som källor för den "
+#~ "pågående diskussionen. Agenten kan använda deras innehåll för att svara "
+#~ "på frågor, sammanfatta information eller extrahera relevanta detaljer."
+
+#~ msgid ""
+#~ "The provided files only influence the current conversation, unless they "
+#~ "are explicitly added as sources on the agent."
+#~ msgstr ""
+#~ "De tillhandahållna filerna påverkar endast den aktuella konversationen, "
+#~ "såvida de inte uttryckligen läggs till som källor på agenten."
+
+#~ msgid ""
+#~ "To attach a file in a conversation, click the :icon:`fa-plus-"
+#~ "circle` :guilabel:`(plus circle)` icon in the message window, then "
+#~ "click :icon:`fa-paperclip` :guilabel:`Attach Files`. In the file explorer "
+#~ "window, select one or more files to attach, then click :guilabel:`Open`."
+#~ msgstr ""
+#~ "För att bifoga en fil i en konversation klickar du på ikonen :icon:`fa-"
+#~ "plus-circle` :guilabel:`(pluscirkel)` i meddelandefönstret och klickar "
+#~ "sedan på :icon:`fa-paperclip` :guilabel:`Bifoga filer`. I filutforskaren "
+#~ "väljer du en eller flera filer att bifoga och klickar sedan "
+#~ "på :guilabel:`Öppna`."
+
+#~ msgid ""
+#~ "A manager finds a receipt for supplies and is unsure whether it has "
+#~ "already been submitted to the **Expenses** app for reimbursement. They "
+#~ "open a conversation with the *Ask AI* agent and enter the following "
+#~ "prompt:"
+#~ msgstr ""
+#~ "En chef hittar ett kvitto på förbrukningsmaterial och är osäker på om det "
+#~ "redan har skickats in till appen **Utlägg** för ersättning. Chefen öppnar "
+#~ "en konversation med agenten *Fråga AI* och anger följande prompt:"
+
+#~ msgid "`Can you open the expense that matches this receipt?`"
+#~ msgstr "`Kan du öppna det utlägg som matchar detta kvitto?`"
+
+#~ msgid ""
+#~ "They attach the receipt to the message. After the agent analyzes the "
+#~ "attachment, it opens the view to the correct expense."
+#~ msgstr ""
+#~ "Chefen bifogar kvittot till meddelandet. Efter att agenten har analyserat "
+#~ "bilagan öppnar den vyn för rätt utlägg."
+
+#~ msgid "Add alt text."
+#~ msgstr "Lägg till alternativtext."
+
+#~ msgid "Gain insights from previewed files"
+#~ msgstr "Få insikter från förhandsgranskade filer"
+
+#~ msgid ""
+#~ "When a document is open in preview mode, |AI| agents can use the content "
+#~ "of the previewed file as context for the conversation."
+#~ msgstr ""
+#~ "När ett dokument är öppet i förhandsgranskningsläge kan |AI|-agenter "
+#~ "använda innehållet i den förhandsgranskade filen som kontext för "
+#~ "konversationen."
+
+#~ msgid ""
+#~ "First, navigate to the :menuselection:`Documents` app and click a "
+#~ "document to preview it. Click the |AI| icon at the top of the page to "
+#~ "open the :guilabel:`Ask AI` chat window. From here, click one of the "
+#~ "default prompts to use them, or enter a custom one in the message window."
+#~ msgstr ""
+#~ "Navigera först till appen :menuselection:`Dokument` och klicka på ett "
+#~ "dokument för att förhandsgranska det. Klicka på ikonen |AI| högst upp på "
+#~ "sidan för att öppna chattfönstret :guilabel:`Fråga AI`. Härifrån kan du "
+#~ "klicka på ett av standardförslagen för att använda det, eller ange ett "
+#~ "anpassat i meddelandefönstret."
+
+#~ msgid ""
+#~ "In this case, the agent's responses are grounded in the file currently "
+#~ "being previewed, in combination with any other sources assigned to the "
+#~ "agent."
+#~ msgstr ""
+#~ "I det här fallet baseras agentens svar på filen som förhandsgranskas just "
+#~ "nu, i kombination med eventuella andra källor som tilldelats agenten."
+
+#~ msgid ""
+#~ "To create a new |AI| agent, navigate to the :menuselection:`AI` app and "
+#~ "click :guilabel:`New`. Enter an :guilabel:`Agent Name`, then add a short "
+#~ "description, if desired."
+#~ msgstr ""
+#~ "För att skapa en ny |AI|-agent, navigera till appen :menuselection:`AI` "
+#~ "och klicka på :guilabel:`Ny`. Ange ett :guilabel:`Agentnamn`, och lägg "
+#~ "sedan till en kort beskrivning om så önskas."
+
+#~ msgid ""
+#~ "Before creating a new agent, it is recommended to have a clear use case "
+#~ "in mind. This helps when writing out the :guilabel:`System Prompt`, and "
+#~ "assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
+#~ msgstr ""
+#~ "Innan du skapar en ny agent rekommenderas det att ha ett tydligt "
+#~ "användningsområde i åtanke. Detta underlättar när du "
+#~ "formulerar :guilabel:`Systemprompt` och tilldelar :guilabel:`Färdigheter` "
+#~ "och :guilabel:`AI-verktyg`."
+
+#~ msgid ""
+#~ "Next, select a :guilabel:`Response Style`. This manages the overall tone "
+#~ "the agent uses when responding to an inquiry. Choose from one of the "
+#~ "following options:"
+#~ msgstr ""
+#~ "Välj sedan en :guilabel:`Svarsstil`. Detta hanterar den övergripande ton "
+#~ "som agenten använder när den svarar på en förfrågan. Välj bland följande "
+#~ "alternativ:"
+
+#~ msgid ""
+#~ ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides "
+#~ "clear, direct answers with a moderate level of detail."
+#~ msgstr ""
+#~ ":guilabel:`Standard`: Upprätthåller en balanserad och professionell ton. "
+#~ "Ger tydliga, direkta svar med en måttlig detaljnivå."
+
+#~ msgid ""
+#~ ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized "
+#~ "responses. Explores multiple perspectives, acknowledges subtleties, and "
+#~ "uses precise, academic language where appropriate."
+#~ msgstr ""
+#~ ":guilabel:`Nyanserad`: Ger sofistikerade och djupt kontextualiserade "
+#~ "svar. Utforskar flera perspektiv, uppmärksammar finesser och använder ett "
+#~ "exakt, akademiskt språk där det är lämpligt."
+
+#~ msgid ""
+#~ ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. "
+#~ "Prioritizes brevity and wit. Uses expressive language, metaphors, and a "
+#~ "dynamic structure to keep the user interested."
+#~ msgstr ""
+#~ ":guilabel:`Snabb & kreativ`: Kärnfull, levande och mycket engagerande. "
+#~ "Prioriterar korthet och kvickhet. Använder uttrycksfullt språk, metaforer "
+#~ "och en dynamisk struktur för att hålla användaren intresserad."
+
+#~ msgid ""
+#~ ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical "
+#~ "soundness above all else. Breaks down complex steps, cites reasoning "
+#~ "clearly, and verifies every claim. Adopts a meticulous and formal tone."
+#~ msgstr ""
+#~ ":guilabel:`Långsam & noggrann`: Prioriterar absolut precision och logisk "
+#~ "stringens framför allt annat. Bryter ner komplexa steg, motiverar "
+#~ "resonemang tydligt och verifierar varje påstående. Tillämpar en noggrann "
+#~ "och formell ton."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to "
+#~ "**only** respond based on the provided resources."
+#~ msgstr ""
+#~ "Markera kryssrutan :guilabel:`Begränsa till källor` för att begränsa "
+#~ "agenten till att **endast** svara baserat på de tillhandahållna "
+#~ "resurserna."
+
+#~ msgid ""
+#~ "Next, select one or more :guilabel:`Skills` for the agent. As explained "
+#~ "above, :ref:`Skills <ai/topics>` include both instructions and tools that "
+#~ "guide the agent in helping users complete a task."
+#~ msgstr ""
+#~ "Välj därefter en eller flera :guilabel:`Färdigheter` för agenten. Som "
+#~ "förklarats ovan inkluderar :ref:`Färdigheter <ai/topics>` både "
+#~ "instruktioner och verktyg som vägleder agenten i att hjälpa användare att "
+#~ "slutföra en uppgift."
+
+#~ msgid ""
+#~ "Enter a :guilabel:`System Prompt` with detailed instructions for the "
+#~ "agent as to their role and responsibilities."
+#~ msgstr ""
+#~ "Ange en :guilabel:`Systemuppmaning` med detaljerade instruktioner för "
+#~ "agenten om deras roll och ansvarsområden."
+
+#~ msgid "A new agent form with the required information."
+#~ msgstr "Ett nytt agentformulär med obligatorisk information."
+
+#~ msgid ""
+#~ "The specificity and length of the :guilabel:`System Prompt` can vary, "
+#~ "depending on the use case for the agent. Use the preconfigured agents as "
+#~ "an example of the possible information."
+#~ msgstr ""
+#~ "Specificitet och längd för :guilabel:`Systemprompt` kan variera, beroende "
+#~ "på användningsfallet för agenten. Använd de förkonfigurerade agenterna "
+#~ "som exempel på möjlig information."
+
+#~ msgid ""
+#~ "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` "
+#~ "tab, then click :guilabel:`Add a source`."
+#~ msgstr ""
+#~ "Om *Källor* behövs för agenten, rulla till fliken :guilabel:`Källor` och "
+#~ "klicka sedan på :guilabel:`Lägg till en källa`."
+
+#~ msgid "Select a format:"
+#~ msgstr "Välj ett format:"
+
+#~ msgid ""
+#~ ":guilabel:`Upload a File`: Select the appropriate file from the explorer "
+#~ "window, and click :guilabel:`Open`."
+#~ msgstr ""
+#~ ":guilabel:`Ladda upp en fil`: Välj lämplig fil i utforskarfönstret och "
+#~ "klicka på :guilabel:`Öppna`."
+
+#~ msgid ""
+#~ ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at "
+#~ "once, paste one link per line. Click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`Lägg till en länk`: Klistra in webbadressen. Flera länkar kan "
+#~ "läggas till samtidigt, klistra in en länk per rad. Klicka "
+#~ "på :guilabel:`Spara`."
+
+#~ msgid ""
+#~ ":guilabel:`Add from Documents` (uploaded in the **Documents** "
+#~ "application): Click the checkbox next to one or more documents, then "
+#~ "click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`Lägg till från Dokument` (uppladdade i applikationen "
+#~ "**Dokument**): Markera kryssrutan bredvid ett eller flera dokument och "
+#~ "klicka sedan på :guilabel:`Välj`."
+
+#~ msgid ""
+#~ ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more "
+#~ "articles, then click :guilabel:`Select`."
+#~ msgstr ""
+#~ ":guilabel:`Lägg till från Kunskapsbas`: Markera kryssrutan bredvid en "
+#~ "eller flera artiklar och klicka sedan på :guilabel:`Välj`."
+
+#~ msgid ""
+#~ "Once a source is added, the :guilabel:`Status` field updates to reflect "
+#~ "its current status. The source is ready when the status changes from "
+#~ "*Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to "
+#~ "activate the source."
+#~ msgstr ""
+#~ "När en källa har lagts till uppdateras fältet :guilabel:`Status` för att "
+#~ "återspegla dess aktuella status. Källan är klar när statusen ändras från "
+#~ "*Bearbetas* till *Indexerad*. Dra i reglaget :guilabel:`Aktiv` för att "
+#~ "aktivera källan."
+
+#~ msgid "A list of sources for an agent, each denoted with their format."
+#~ msgstr ""
+#~ "En lista över källor för en agent, var och en märkt med sitt format."
+
+#~ msgid ""
+#~ "If a source fails to upload, it could be the result of a conflict with "
+#~ "the selected provider."
+#~ msgstr ""
+#~ "Om en källa inte kan laddas upp kan det bero på en konflikt med den valda "
+#~ "leverantören."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test` button to open a conversation window and test "
+#~ "the new agent."
+#~ msgstr ""
+#~ "Klicka på knappen :guilabel:`Testa` för att öppna ett samtalsfönster och "
+#~ "testa den nya agenten."
+
+#~ msgid "Manually reprocessing sources"
+#~ msgstr "Ombearbeta källor manuellt"
+
+#~ msgid ""
+#~ "To reprocess a source, navigate to the :menuselection:`AI` app. Select an "
+#~ "|AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertical ellipsis)` icon, then "
+#~ "click :guilabel:`Configuration`."
+#~ msgstr ""
+#~ "För att ombearbeta en källa, navigera till appen :menuselection:`AI`. "
+#~ "Välj en |AI|-agent och klicka på ikonen :icon:`fa-ellipsis-"
+#~ "v` :guilabel:`(vertikal ellips)` på kanban-kortet, och klicka sedan "
+#~ "på :guilabel:`Konfiguration`."
+
+#~ msgid ""
+#~ "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next "
+#~ "to any source that should be updated."
+#~ msgstr ""
+#~ "På fliken *Källor* klickar du på :guilabel:`Bearbeta igen` :icon:`fa-"
+#~ "refresh` bredvid den källa som ska uppdateras."
+
+#~ msgid "AI agent sources with the reprocess icon visible."
+#~ msgstr "AI-agentkällor med ikonen för att bearbeta igen synlig."
+
+#~ msgid ""
+#~ "When one of these conditions is met, the agent activates the *Lead "
+#~ "Creation* :ref:`skill <ai/topics>`."
+#~ msgstr ""
+#~ "När ett av dessa villkor är uppfyllt aktiverar agenten *Lead "
+#~ "Creation*-:ref:`färdigheten <ai/topics>`."
+
+#~ msgid ""
+#~ "Users may also define *skills*, which grant the agent permission to "
+#~ "perform specific actions. :ref:`Skills <ai/topics>` allow advanced "
+#~ "scenarios such as record creation or automation triggers."
+#~ msgstr ""
+#~ "Användare kan också definiera *färdigheter*, vilket ger agenten "
+#~ "behörighet att utföra specifika åtgärder. :ref:`Färdigheter <ai/topics>` "
+#~ "möjliggör avancerade scenarier som att skapa poster eller utlösa "
+#~ "automatiseringar."
+
+#~ msgid ""
+#~ "A :guilabel:`Date` filter can only match against a :ref:`Date <studio/"
+#~ "fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-"
+#~ "fields-date-time>` field."
+#~ msgstr ""
+#~ "Ett :guilabel:`Datum`filter kan endast matcha mot ett :ref:`Datum <studio/"
+#~ "fields/simple-fields-date>`- eller :ref:`Datum & tid <studio/fields/"
+#~ "simple-fields-date-time>`fält."
 
 #~ msgid "To insert a chart from an Odoo database into an Odoo spreadsheet:"
 #~ msgstr ""
