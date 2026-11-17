@@ -87,19 +87,25 @@ Balance
 
 When some time off types have restrictions, such as rollover rules and balance limits, viewing time
 off balances can help managers and time off approvers see a high-level overview of time off. If
-certain employees have time off that will expire soon, they can be infomred and adjust their
+certain employees have time off that will expire soon, they can be informed and adjust their
 schedules accordingly.
 
-To view all time off balances for the current year, navigate to :menuselection:`Time Off app -->
-Reporting --> Balance`. The *Balance* report shows all time off balances in a default pivot table.
-The employees populate the rows, while the various time off types populate the columns.
+To view the current time off balance for each employee, navigate to :menuselection:`Time Off app -->
+Reporting --> Balance`. The *Balance* report shows each employee's current time off situation in a
+default pivot table. The employees populate the rows, while the time off types populate the columns.
 
-Each time off type displays the :guilabel:`Number of Days` and :guilabel:`Number of Hours` remaining
-for the following:
+Each time off type displays the :guilabel:`Number of Days` and :guilabel:`Number of Hours` for the
+following:
 
-- :guilabel:`Left`: The remaining amount of time off for the year.
-- :guilabel:`Planned`: The amount of time off scheduled for the remainder of the year.
-- :guilabel:`Taken`: The amount of time off already taken for the year.
+- :guilabel:`Allocated`: The total amount of time off currently allocated to the employee for that
+  type.
+- :guilabel:`Left`: The remaining balance, after deducting any time off taken against that
+  allocation.
+
+.. note::
+   The *Balance* report always reflects the employee's current situation, not a fixed year. Only
+   allocations that are active today are counted, and time off taken is deducted only from the
+   allocation(s) it actually overlaps.
 
 .. image:: reporting/balance.png
    :alt: The various time off balances, in a pivot table.
