@@ -3,75 +3,101 @@ Unbuild orders
 ==============
 
 .. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
+.. |MO| replace:: :abbr:`MO (manufacturing order)`
 
 In some cases, it is necessary to dismantle manufactured products into their individual components.
 This may be required if too many units of a product were built, or if the components of one product
 must be reclaimed to use in the manufacturing of another.
 
-In Odoo *Manufacturing*, products can be dismantled, and their components returned to inventory,
+In Odoo **Manufacturing**, products can be dismantled and their components returned to inventory
 using *unbuild orders*. By using unbuild orders to accomplish this task, inventory counts for the
-finished product and its components remain accurate, based on the quantity of products dismantled,
+finished product and its components remain accurate based on the quantity of products dismantled
 and the quantity of components reclaimed.
 
 Create unbuild order
 ====================
 
+A new unbuild order can be created in two ways: :ref:`From a manufacturing order
+<manufacturing/unbuild_orders/mo>` and by :ref:`using the Unbuild Orders page
+<manufacturing/unbuild_orders/u-o-page>`.
+
+.. _manufacturing/unbuild_orders/mo:
+
+From the manufacturing order
+----------------------------
+
+Create an unbuild order from a manufacturing order (MO):
+
+1. Navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`.
+#. Open an |MO| to unbuild.
+#. Click the :icon:`more_vert` :guilabel:`(Actions)` icon at the top of the screen and select
+   :guilabel:`Unbuild`.
+#. :ref:`Complete the form <manufacturing/unbuild_orders/complete-form>`.
+
+.. _manufacturing/unbuild_orders/u-o-page:
+
+Use the Unbuild Orders page
+---------------------------
+
 A new unbuild order can be created by navigating to :menuselection:`Manufacturing app --> Operations
 --> Unbuild Orders`, and clicking :guilabel:`New`.
 
-Begin filling out the new unbuild order by selecting a :guilabel:`Product` to unbuild. After doing
-so, the :guilabel:`Bill of Material` field auto-populates with the corresponding bill of materials
-(BoM). If a different |BoM| should be used, click on the :guilabel:`Bill of Material` field, and
-select it from the drop-down menu.
+Then, :ref:`complete the form <manufacturing/unbuild_orders/complete-form>`.
 
-Alternatively, a specific |BoM| can be selected in the :guilabel:`Bill of Material` field before
-selecting a product, which causes the corresponding product to auto-populate in the
-:guilabel:`Product` field.
+.. _manufacturing/unbuild_orders/complete-form:
 
-Next, specify the :guilabel:`Quantity` of the product that is being unbuilt.
+Complete the form
+-----------------
 
-If the product being unbuilt was originally manufactured in a specific manufacturing order (MO),
-select it in the :guilabel:`Manufacturing Order` field.
+Begin filling out the unbuild order.
 
-In the :guilabel:`Source Location` field, select the location where the product being unbuilt is
-currently stored.
+1. If necessary, specify a :guilabel:`Product` and :guilabel:`Bill of Materials`:
 
-In the :guilabel:`Destination Location` field, select the location where the reclaimed components
-are stored after the unbuild order is completed.
+   - If creating an unbuild order from an |MO|, the :guilabel:`Product` and :guilabel:`Bill of
+     Material` fields are completed already.
+   - If working from the *Unbuild Orders* page, begin filling out the new unbuild order by selecting
+     a :guilabel:`Product` to unbuild. After doing so, the :guilabel:`Bill of Material` field
+     auto-populates with the corresponding bill of materials (BoM). If a different |BoM| should be
+     used, click on the :guilabel:`Bill of Material` field, and select it from the drop-down menu.
+   - Alternatively, a specific |BoM| can be selected in the :guilabel:`Bill of Material` field
+     before selecting a product, which causes the corresponding product to auto-populate in the
+     :guilabel:`Product` field.
 
-If the *Lots & Serial Numbers* feature is enabled in the settings of the *Inventory* app, a
-:guilabel:`Lot/Serial Number` field appears on the unbuild order, which can be used to specify the
-lot(s) or serial number(s) of the product being unbuilt, if any are assigned.
-
-If the Odoo database has been configured with multiple companies, a :guilabel:`Company` field
-appears on the unbuild order, which can be used to specify the company that owns the product being
-unbuilt.
-
-Finally, once the product has been unbuilt, click the :guilabel:`Unbuild` button at the top of the
-order to confirm that it has been completed.
+#. Specify the :guilabel:`Quantity` of the product that is being unbuilt.
+#. If the product being unbuilt was originally manufactured in a specific |MO|, select it in the
+   :guilabel:`Manufacturing Order` field.
+#. In the :guilabel:`Source Location` field, select the location where the product being unbuilt is
+   currently stored.
+#. In the :guilabel:`Destination Location` field, select the location where the reclaimed components
+   are stored after the unbuild order is completed.
+#. If the *Lots & Serial Numbers* feature is enabled in the settings of the **Inventory** app, a
+   :guilabel:`Lot/Serial Number` field appears on the unbuild order, which can be used to specify
+   the lots or serial numbers of the product being unbuilt, if any are assigned.
+#. If the Odoo database has been configured with multiple companies, a :guilabel:`Company` field
+   appears on the unbuild order. Use this field to specify the company that owns the product being
+   unbuilt.
+#. After the product has been unbuilt, click the :guilabel:`Unbuild` button at the top of the order
+   to confirm that it has been completed.
 
 .. image:: unbuild_orders/unbuild-order.png
-   :align: center
-   :alt: A filled-out unbuild order.
+   :alt: A completed unbuild order form.
 
 .. warning::
    While it is possible to create unbuild orders for products that have zero (or fewer) units
-   on-hand, this is not advised, since it can lead to inventory inconsistencies.
+   on-hand, this is not advised because it can lead to inventory inconsistencies.
 
    If an unbuild order is created for a product with zero (or fewer) units on-hand, a pop-up window
-   appears, warning the user that there is an insufficient quantity to unbuild.
+   appears to warn the user that there is an insufficient quantity to unbuild.
 
-   To ignore the warning, and proceed with the unbuild order, click :guilabel:`Confirm` at the
+   To ignore the warning and proceed with the unbuild order, click :guilabel:`Confirm` at the
    bottom of the pop-up window. To return to the unconfirmed unbuild order, click
-   :guilabel:`Discard`, instead.
+   :guilabel:`Discard` instead.
 
    .. image:: unbuild_orders/insufficient-quantity.png
-      :align: center
-      :alt: The insufficient quantity pop-up that appears after trying to confirm an unbuild order
-            for a product with zero or fewer units on hand.
+      :alt: The insufficient quantity pop-up.
 
-After completing an unbuild order, inventory counts automatically update, based on the quantity of
-products unbuilt, and the quantity of components reclaimed.
+After completing an unbuild order, inventory counts automatically update based on the quantity of
+products unbuilt and the quantity of components reclaimed.
 
 .. example::
    A `Coat Rack` product is comprised of one `Wooden Pole` component and six `Wooden Dowel`
