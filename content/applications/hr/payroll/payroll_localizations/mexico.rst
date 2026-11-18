@@ -34,12 +34,8 @@ localization:
      - - hr_payroll
        - hr_work_entry_holidays
        - hr_payroll_holidays
-     - Adds the required fields to manage employee payroll and time off data.
-   * - :guilabel:`Mexico - Payroll CFDI`
-     - `l10n_mx_hr_payroll_account_edi`
-     - - l10n_mx_hr_payroll_account
-       - l10n_mx_edi
-     - Adds the ability to sign |CFDI| payroll documents with the government.
+     - Adds the required fields to manage employee payroll and time off data and the ability to sign
+      |CFDI| payroll documents with the government.
    * - :guilabel:`Mexico - Payroll with Accounting`
      - `l10n_mx_hr_payroll_account`
      - - hr_payroll_account
