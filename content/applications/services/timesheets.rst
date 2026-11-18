@@ -48,7 +48,7 @@ follow these steps:
 #. Go to the Project app.
 #. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on the relevant project's
    card and select :guilabel:`Settings`.
-#. Go to the :guilabel:`Settings` tab and scroll down to the :guilabel:`Time management` section.
+#. Go to the :guilabel:`Settings` tab and scroll down to the :guilabel:`Time Billing` section.
 #. Enable :guilabel:`Timesheets`.
 
 .. seealso::
@@ -179,20 +179,6 @@ can be invoiced to the customer.
 Click :guilabel:`Save` when finished.
 
  .. _timesheets/timesheets/project-helpdesk:
-
-From Project tasks and Helpdesk tickets
----------------------------------------
-
-Timesheets can also be logged directly within the Project and Helpdesk apps. To do so, access the
-relevant task or ticket, then:
-
-- Either click the :guilabel:`Start` button to start recording time on the task, then click
-  :guilabel:`Stop` to stop the timer. In the popup, edit the :guilabel:`Time Spent` if needed, then
-  :guilabel:`Describe your activity` and click :guilabel:`Log Time` to record the entry or
-  :guilabel:`Resume Timer` to continue tracking time on the task or ticket.
-
-- Or go to the :guilabel:`Timesheets` tab, click :guilabel:`Add a line`, and
-  :ref:`fill in the fields <timesheets/timesheets/log-manually>`.
 
 .. seealso::
    `Odoo Tutorials: Project and Timesheets
