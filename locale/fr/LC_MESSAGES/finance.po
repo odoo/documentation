@@ -74,8 +74,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 11:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-11-19 23:22+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19-doc/"
 "finance/fr/>\n"
 "Language: fr\n"
@@ -83,7 +83,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../content/applications/finance.rst:5
 msgid "Finance"
@@ -4703,7 +4703,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:15
 msgid ":ref:`accounting/invoice/invoice-from-orders`"
-msgstr ""
+msgstr ":ref:`accounting/invoice/invoice-from-orders`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:16
 msgid ":ref:`accounting/invoice/creation`"
@@ -4732,7 +4732,7 @@ msgstr ":ref:`accounting/invoice/reporting`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:26
 msgid "Invoice from orders"
-msgstr ""
+msgstr "Facturer depuis les commandes"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:28
 msgid ""
@@ -4744,6 +4744,13 @@ msgid ""
 "ecommerce>` or :ref:`point of sale orders <accounting/invoice/invoice-from-"
 "pos>`."
 msgstr ""
+"Selon le scénario commercial spécifique, Odoo automatise la création des "
+"factures clients en générant des factures brouillons directement à partir "
+"des documents sources, tels que les :ref:`commandes clients <accounting/"
+"invoice/invoice-from-sales>`, les :ref:`abonnements récurrents <accounting/"
+"invoice/invoice-from-subscriptions>`, les :ref:`commandes eCommerce "
+"<accounting/invoice/invoice-from-ecommerce>` ou les :ref:`commandes du Point "
+"de Vente <accounting/invoice/invoice-from-pos>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:38
 #: ../../content/applications/finance/accounting/get_started/journals.rst:206
@@ -4760,12 +4767,18 @@ msgid ""
 "Standard sales workflows convert approved quotations into sales orders, "
 "which then generate draft invoices. The different invoicing options are:"
 msgstr ""
+"Les flux de travail de vente standard convertissent les devis approuvés en "
+"commandes client, qui génèrent ensuite des factures brouillon. Les "
+"différentes options de facturation sont :"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:43
 msgid ""
 "Invoicing manually: Manually create draft invoices directly from the sales "
 "order using the :guilabel:`Create Invoice` button."
 msgstr ""
+"Facturation manuelle : créer manuellement des factures brouillons "
+"directement depuis la commande client à l'aide du bouton :guilabel:`Créer "
+"une facture`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:45
 msgid ""
@@ -4773,6 +4786,10 @@ msgid ""
 "invoicing/invoicing_policy>`, :guilabel:`Ordered quantities` invoicing "
 "(before delivery) or :guilabel:`Delivered quantities` invoicing."
 msgstr ""
+"Selon la :doc:`politique de facturation configurée <../../sales/sales/"
+"invoicing/invoicing_policy>`, la facturation des :guilabel:`Quantités "
+"commandées` (avant livraison) ou la facturation des :guilabel:`Quantités "
+"livrées`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:50
 msgid ""
@@ -4780,30 +4797,43 @@ msgid ""
 "or services, with options to charge the entire order, specific lines, or "
 "fixed/percentage advance payments."
 msgstr ""
+"Avec la facturation manuelle, les commerciaux peuvent créer des factures "
+"personnalisées pour des produits ou services, avec des options pour facturer "
+"la totalité de la commande, des lignes spécifiques ou des acomptes fixes/en "
+"pourcentage."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:52
 msgid ""
 "Invoices can be generated directly from the :doc:`Repairs app </applications/"
 "inventory_and_mrp/repairs>` sales orders to invoice after-sales services."
 msgstr ""
+"Les factures peuvent être générées directement à partir des commandes client "
+"de l':doc:`application Réparations </applications/inventory_and_mrp/repairs>"
+"` pour facturer les services après-vente."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:56
 msgid ""
 "To create a consolidated invoice for all sales orders linked to the same "
 "customer, follow these steps:"
 msgstr ""
+"Pour créer une facture consolidée pour toutes les commandes clients liées au "
+"même client, suivre ces étapes :"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:59
 msgid ""
 "Go to :menuselection:`Sales --> Orders --> Orders`, and use the search bar "
 "to :guilabel:`Group By` :guilabel:`Customer`."
 msgstr ""
+"Allez à :menuselection:`Ventes --> Commandes --> Commandes` et utilisez la "
+"barre de recherche pour :guilabel:`Grouper par` :guilabel:`Client`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:61
 msgid ""
 "Click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to expand the "
 "list of sales orders for the desired customer."
 msgstr ""
+"Cliquez sur l'icône :icon:`fa-caret-down` :guilabel:`(flèche vers le bas)` "
+"pour développer la liste des commandes client pour le client souhaité."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:63
 msgid ""
@@ -4811,10 +4841,14 @@ msgid ""
 "to :guilabel:`To Invoice`, ensuring all selected orders share the same "
 "invoicing address and the same delivery address."
 msgstr ""
+"Sélectionner les commandes clients concernées dont le :guilabel:`Statut de "
+"facturation` est défini sur :guilabel:`À facturer`. S'assurer que toutes les "
+"commandes sélectionnées partagent la même adresse de facturation et la même "
+"adresse de livraison."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:66
 msgid "Click :guilabel:`Create Invoices`."
-msgstr ""
+msgstr "Cliquer sur :guilabel:`Create`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:67
 msgid ""
@@ -4822,14 +4856,17 @@ msgid ""
 "the :guilabel:`Consolidated Billing` option enabled, and set "
 "the :guilabel:`Timesheets Period`, if needed."
 msgstr ""
+"Dans la fenêtre :guilabel:`Créer facture(s)`, gardez l'option "
+":guilabel:`Facturation consolidée` activée et définissez la "
+":guilabel:`Période des feuilles de temps`, si nécessaire."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:69
 msgid "Click :guilabel:`Create Draft`."
-msgstr ""
+msgstr "Cliquer sur :guilabel:`Create`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:72
 msgid ":doc:`../../sales/sales/invoicing/proforma`"
-msgstr ""
+msgstr ":doc:`../../sales/sales/invoicing`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:77
 msgid "Contracts"
@@ -4840,6 +4877,9 @@ msgid ""
 "Under the terms of a contract with a customer, invoices can be generated "
 "periodically or at the end of the contract based on the following:"
 msgstr ""
+"Selon les conditions d'un contrat avec un client, les factures peuvent être "
+"générées périodiquement ou à la fin du contrat sur la base des éléments "
+"suivants :"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:82
 msgid ""
@@ -4847,12 +4887,17 @@ msgid ""
 "Based on recorded hours and materials used, as documented in timesheets or "
 "purchase records."
 msgstr ""
+":doc:`Temps et matériaux <../../sales/sales/invoicing/time_materials>` : "
+"Basé sur les heures enregistrées et les matériaux utilisés, tels que "
+"documentés dans les feuilles de temps ou les enregistrements d'achats."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:84
 msgid ""
 "Fixed products/services: Based on predefined products or services as "
 "outlined in a sales order linked to the contract."
 msgstr ""
+"Produits/services fixes : Basé sur des produits ou services prédéfinis tels "
+"que décrits dans une commande client liée au contrat."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:88
 msgid ""
@@ -4861,10 +4906,15 @@ msgid ""
 "invoice at a fixed price typically follow a :ref:`standard sales order "
 "process <accounting/invoice/invoice-from-sales>`."
 msgstr ""
+"Cette méthode de facturation est couramment utilisée par les entreprises de "
+"services qui facturent principalement sur une base de temps et de matériaux. "
+"En revanche, les entreprises de services qui facturent à un prix fixe "
+"suivent généralement un :ref:`processus de commande client standard "
+"<accounting/invoice/invoice-from-sales>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:93
 msgid ":doc:`../../sales/sales/invoicing/milestone`"
-msgstr ""
+msgstr ":doc:`../../sales/sales/invoicing`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:98
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1549
@@ -4878,6 +4928,10 @@ msgid ""
 "period and specific services or products included are defined in the "
 "configured recurring plans."
 msgstr ""
+"Les factures pour les :doc:`abonnements <../../sales/subscriptions>` ou les "
+"contrats récurrents sont générées automatiquement à intervalles réguliers. "
+"La période de facturation ainsi que les services ou produits spécifiques "
+"inclus sont définis dans les plans récurrents configurés."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:107
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:779
@@ -4891,6 +4945,8 @@ msgid ""
 "Invoices for :ref:`ecommerce orders <ecommerce/handling/invoices>` are "
 "generated once the order has been fully paid."
 msgstr ""
+"Les factures pour les :ref:`commandes eCommerce <ecommerce/handling/invoices>"
+"` sont générées une fois que la commande a été intégralement payée."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:115
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:159
@@ -4903,16 +4959,21 @@ msgid ""
 "pos_invoices>` can be generated for :ref:`registered customers <pos/use/"
 "customers>`."
 msgstr ""
+"Les factures des :doc:`commandes du Point de Vente <../../sales/"
+"point_of_sale/use/pos_invoices>` peuvent être générées pour les "
+":ref:`clients enregistrés <pos/use/customers>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:123
 msgid "Manual invoice creation"
-msgstr ""
+msgstr "Création de facture depuis le backend"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:125
 msgid ""
 "Draft invoices can be created manually from the :guilabel:`Sales` journal in "
 "the :guilabel:`Accounting Dashboard`."
 msgstr ""
+"Des factures brouillons peuvent être créées manuellement depuis le journal "
+":guilabel:`Ventes` dans le :guilabel:`Tableau de bord comptable`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:128
 msgid ""
@@ -4934,6 +4995,14 @@ msgid ""
 "this specific invoice, edit them directly on the invoice. To apply them for "
 "future invoices, update the values on the contact record."
 msgstr ""
+":guilabel:`Client` : Lorsqu'un client est sélectionné, Odoo récupère "
+"automatiquement les informations depuis la fiche client comme l'adresse de "
+"facturation, les :doc:`conditions de paiement préférées <customer_invoices/"
+"payment_terms>`, les :doc:`positions fiscales <taxes/fiscal_positions>`, le "
+"compte de créance et plus encore sur la facture. Pour modifier ces valeurs "
+"pour cette facture spécifique, modifiez-les directement sur la facture. Pour "
+"les modifier pour les futures factures, changez les valeurs sur la fiche "
+"contact."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:137
 msgid ""
@@ -5059,6 +5128,11 @@ msgid ""
 "on the invoice configuration. On confirmation, Odoo assigns each invoice a "
 "unique number from a defined :doc:`sequence <customer_invoices/sequence>`."
 msgstr ""
+"Cliquez sur :guilabel:`Confirmer` lorsque la facture est complète. Le statut "
+"de la facture passe à :guilabel:`Comptabilisée`, et une pièce comptable est "
+"générée en fonction de la configuration de la facture. Lors de la "
+"confirmation, Odoo attribue à chaque facture un numéro unique issu d'une "
+":doc:`séquence <customer_invoices/sequence>` définie."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:185
 msgid ""
@@ -5211,6 +5285,11 @@ msgid ""
 "process from being triggered manually again, as exceptionally large batches "
 "may take some time to complete."
 msgstr ""
+"Après avoir cliqué sur :guilabel:`Envoyer`, une bannière est ajoutée aux "
+"factures sélectionnées pour indiquer qu'elles font partie d'un lot d'envoi "
+"en cours. Cela permet d'éviter que le processus ne soit déclenché "
+"manuellement à nouveau, car des lots exceptionnellement volumineux peuvent "
+"prendre un certain temps à être traités."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:241
 msgid ""
@@ -6095,6 +6174,12 @@ msgid ""
 "sales_quotations/different_addresses>` feature is designed to handle this "
 "scenario by making it easy to specify which address to use for each case."
 msgstr ""
+"Les entreprises ont souvent plusieurs sites, et il est courant qu'une "
+"facture client doive être envoyée à une adresse tandis que la livraison doit "
+"être effectuée à une autre. La fonctionnalité :doc:`Adresses client <../../"
+"../sales/sales/sales_quotations/different_addresses>` d'Odoo est conçue pour "
+"gérer ce scénario en facilitant la spécification de l'adresse à utiliser "
+"dans chaque cas."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:13
 msgid ""
@@ -19787,6 +19872,12 @@ msgid ""
 "output accounts to the stock valuation account, eliminating the need for "
 "manual journal entries or server actions."
 msgstr ""
+"La mise à niveau d'Odoo 18 vers Odoo 19 gère automatiquement le processus de "
+"rééquilibrage du compte d'attente de stock pendant la migration de la base "
+"de données. Le script de migration transfère automatiquement les soldes non "
+"nuls des anciens comptes d'entrée/sortie de stock vers le compte de "
+"valorisation des stocks, éliminant ainsi le besoin de pièces comptables "
+"manuelles ou d'actions serveur."
 
 #: ../../content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
@@ -38247,7 +38338,7 @@ msgstr "Chypre"
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:40
 msgid "England"
-msgstr ""
+msgstr "Angleterre"
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:40
 #: ../../content/applications/finance/fiscal_localizations.rst:82
@@ -38319,7 +38410,7 @@ msgstr "Portugal"
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:46
 msgid "Scotland"
-msgstr ""
+msgstr "Écosse"
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:48
 #: ../../content/applications/finance/fiscal_localizations.rst:134
@@ -38338,7 +38429,7 @@ msgstr "Espagne"
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:48
 msgid "Wales"
-msgstr ""
+msgstr "Pays de Galles"
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:51
 msgid ""
@@ -72760,6 +72851,10 @@ msgid ""
 "general#dos>`_, `Quadrum <https://cfdiquadrum.com.mx/odoo/>`_, and `SW "
 "Sapien - Smarter Web <https://integracionodoo.sw.com.mx>`_."
 msgstr ""
+"Choisir un |PAC|. Actuellement, Odoo fonctionne avec les |PAC| suivants : "
+"`Solución Factible <https://solucionfactible.com/contenido/productos/"
+"timbrado/general#dos>`_, `Quadrum <https://cfdiquadrum.com.mx/odoo/>`_ et "
+"`SW Sapien - Smarter Web <https://integracionodoo.sw.com.mx>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:149
 msgid ""

@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-06 17:32+0000\n"
-"PO-Revision-Date: 2026-11-07 11:34+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-11-19 23:22+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-19-doc/"
 "studio/ru/>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../content/applications/studio.rst:6
 msgid "Studio"
@@ -2968,7 +2968,7 @@ msgstr "Пример поля «Денежное» вместе с полем «
 
 #: ../../content/applications/studio/fields.rst:184
 msgid "Date (`date`) and Datetime (`datetime`)"
-msgstr ""
+msgstr "Дата (`date`) и Дата и время (`datetime`)"
 
 #: ../../content/applications/studio/fields.rst:186
 msgid ""
@@ -2987,6 +2987,13 @@ msgid ""
 "intervention or a project task. If the field is a :guilabel:`Datetime` "
 "field, a start time and end time are also displayed."
 msgstr ""
+":ref:`Диапазон дат <studio/fields/simple-fields-date-time-range>`: "
+"отображает в одной строке период времени, заданный датой начала и датой "
+"окончания. Для диапазона дат можно сделать обе даты обязательными (например, "
+"для многодневного мероприятия) или разрешить указывать только дату начала "
+"либо окончания (например, для выездного обслуживания или задачи проекта). "
+"Если используется поле :guilabel:`Дата и время`, также отображаются время "
+"начала и время окончания."
 
 #: ../../content/applications/studio/fields.rst:195
 msgid ""
@@ -2994,10 +3001,13 @@ msgid ""
 "selected date (e.g., *In 5 days*), based on the current date and time. This "
 "field should be set to :guilabel:`Readonly`."
 msgstr ""
+":guilabel:`Оставшиеся дни`: отображает количество дней, оставшихся до "
+"выбранной даты (например, *Через 5 дней*), на основе текущей даты и времени. "
+"Для этого поля следует включить параметр :guilabel:`Только для чтения`."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Examples of Date and Datetime fields"
-msgstr ""
+msgstr "Примеры полей «Дата» и «Дата и время»"
 
 #: ../../content/applications/studio/fields.rst:206
 msgid ""
@@ -3005,6 +3015,9 @@ msgid ""
 "some :ref:`specific properties <studio/fields/properties-date-datetime>` are "
 "available for :guilabel:`Date` and :guilabel:`Datetime` fields."
 msgstr ""
+"Помимо :ref:`общих свойств <studio/fields/properties>`, доступны также "
+"некоторые :ref:`специфические свойства <studio/fields/properties-date-"
+"datetime>` для полей :guilabel:`Дата` и :guilabel:`Дата и время`."
 
 #: ../../content/applications/studio/fields.rst:213
 msgid "Date Range (`daterange`)"
@@ -3027,6 +3040,10 @@ msgid ""
 "fields/simple-fields-date-time>`, or one created specifically for this "
 "purpose."
 msgstr ""
+"другое поле, выбранное в качестве даты начала *или* даты окончания. Это "
+"базовое поле может представлять собой существующее :ref:`поле «Дата» или «"
+"Дата и время» <studio/fields/simple-fields-date-time>` или поле, созданное "
+"специально для этой цели."
 
 #: ../../content/applications/studio/fields.rst:222
 msgid "To add a date range:"
@@ -3209,7 +3226,7 @@ msgstr "Файл (`binary`)"
 
 #: ../../content/applications/studio/fields.rst:300
 msgid "The :guilabel:`File` field is used to upload any type of file."
-msgstr ""
+msgstr "Поле :guilabel:`Файл` используется для загрузки файлов любого типа."
 
 #: ../../content/applications/studio/fields.rst:302
 msgid ""
@@ -3237,7 +3254,7 @@ msgstr "Примеры полей \"Файл\" с различными видж�
 
 #: ../../content/applications/studio/fields.rst:316
 msgid "Image (`image`)"
-msgstr ""
+msgstr "Изображение (`image`)"
 
 #: ../../content/applications/studio/fields.rst:318
 msgid ""
@@ -3309,7 +3326,7 @@ msgstr "Пример поля Priority"
 
 #: ../../content/applications/studio/fields.rst:353
 msgid "Signature (`signature`)"
-msgstr ""
+msgstr "Подпись (`signature`)"
 
 #: ../../content/applications/studio/fields.rst:355
 msgid ""
@@ -3330,6 +3347,12 @@ msgid ""
 "the model only). The signature is then automatically generated using the "
 "data from the selected field."
 msgstr ""
+"Чтобы при создании подписи пользователям был доступен вариант "
+":guilabel:`Авто`, выберите одно из доступных полей в параметре "
+":guilabel:`Предварительно заполнить` (только :ref:`Many2One <studio/fields/"
+"relational-fields-many2one>` и :ref:`Связанное поле <studio/fields/"
+"relational-fields-related-field>` в текущей модели). После этого подпись "
+"будет автоматически сгенерирована на основе данных из выбранного поля."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Example of a Signature field"
@@ -3351,6 +3374,8 @@ msgid ""
 "It is also possible to add AI capabilities to a newly added field via "
 "the :ref:`field properties <studio/fields/properties-general>`."
 msgstr ""
+"Возможности ИИ можно также добавить в новое поле через :ref:`свойства поля "
+"<studio/fields/properties-general>`."
 
 #: ../../content/applications/studio/fields.rst:387
 msgid "Relational fields"
@@ -3955,6 +3980,13 @@ msgid ""
 "the :guilabel:`Field Selector` to tell Odoo AI which fields to check for "
 "context. Click :guilabel:`Save & Generate`."
 msgstr ""
+":guilabel:`ИИ`: Чтобы добавить возможности ИИ для автоматической генерации "
+"значения поля с помощью промпта, включите параметр :guilabel:`ИИ`. После "
+"перезагрузки страницы браузера нажмите на появившееся поле "
+":guilabel:`Промпт` и введите промпт; введите `/`, чтобы открыть "
+":guilabel:`Инструменты ИИ-промптов`, и используйте :guilabel:`Выбор поля`, "
+"чтобы указать ИИ Odoo, какие поля учитывать в качестве контекста. Нажмите "
+":guilabel:`Сохранить и сгенерировать`."
 
 #: ../../content/applications/studio/fields.rst:660
 msgid ""
@@ -4015,6 +4047,8 @@ msgid ""
 ":guilabel:`Default value`: To display a default value in a field when a "
 "record is created, enter a value."
 msgstr ""
+":guilabel:`Значение по умолчанию`: Чтобы при создании записи в поле "
+"отображалось значение по умолчанию, введите его."
 
 #: ../../content/applications/studio/fields.rst:684
 msgid ""
@@ -4037,7 +4071,7 @@ msgstr ""
 
 #: ../../content/applications/studio/fields.rst:693
 msgid "Properties for Date and Datetime fields"
-msgstr ""
+msgstr "Свойства полей «Дата» и «Дата и время»"
 
 #: ../../content/applications/studio/fields.rst:695
 msgid ""
@@ -4121,6 +4155,9 @@ msgid ""
 ":guilabel:`Show date`: This property is enabled by default "
 "for :guilabel:`Datetime` fields. Disable this property to show only the time."
 msgstr ""
+":guilabel:`Показывать дату`: Это свойство включено по умолчанию для полей "
+":guilabel:`Дата и время`. Отключите это свойство, чтобы отображалось только "
+"время."
 
 #: ../../content/applications/studio/fields.rst:727
 msgid ""

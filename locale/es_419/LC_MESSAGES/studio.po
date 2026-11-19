@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-06 17:32+0000\n"
-"PO-Revision-Date: 2026-11-07 11:33+0000\n"
+"PO-Revision-Date: 2026-11-19 23:22+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/studio/es_419/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../content/applications/studio.rst:6
 msgid "Studio"
@@ -2721,6 +2721,8 @@ msgid ""
 ":ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that "
 "already exist on a model, to any view of that model;"
 msgstr ""
+":ref:`agregar campos existentes, <studio/fields/add-existing>` es decir, "
+"campos que ya existen en un modelo, a cualquier vista de ese modelo;"
 
 #: ../../content/applications/studio/fields.rst:18
 msgid ":ref:`modify a field's properties <studio/fields/modify>`; or"
@@ -3069,7 +3071,7 @@ msgstr ""
 
 #: ../../content/applications/studio/fields.rst:184
 msgid "Date (`date`) and Datetime (`datetime`)"
-msgstr ""
+msgstr "Fecha (`date`) y fecha y hora (`datetime`)"
 
 #: ../../content/applications/studio/fields.rst:186
 msgid ""
@@ -3078,6 +3080,11 @@ msgid ""
 "time on a clock; if no time is set, the time of the user's local device is "
 "automatically used."
 msgstr ""
+"El campo :guilabel:`Fecha` se utiliza para seleccionar una fecha en un "
+"calendario. El campo :guilabel:`Fecha y hora` se utiliza para seleccionar "
+"una fecha en un calendario y una hora en un reloj; si no se establece "
+"ninguna hora, se utiliza automáticamente la hora del dispositivo local del "
+"usuario."
 
 #: ../../content/applications/studio/fields.rst:190
 msgid ""
@@ -3088,6 +3095,14 @@ msgid ""
 "intervention or a project task. If the field is a :guilabel:`Datetime` "
 "field, a start time and end time are also displayed."
 msgstr ""
+":ref:`Rango de fechas <studio/fields/simple-fields-date-time-range>`: "
+"muestra un periodo definido por una fecha de inicio y una fecha de fin en "
+"una sola línea. Un rango de fechas puede tener una fecha de inicio y una de "
+"fin obligatorias, por ejemplo, para un evento de varios días, o permitir una "
+"fecha de inicio o de fin opcional, por ejemplo, para una intervención de "
+"servicio externo o una tarea de proyecto. Si el campo es un campo "
+":guilabel:`Fecha y hora`, también se muestran la hora de inicio y la hora de "
+"fin."
 
 #: ../../content/applications/studio/fields.rst:195
 msgid ""
@@ -3095,10 +3110,13 @@ msgid ""
 "selected date (e.g., *In 5 days*), based on the current date and time. This "
 "field should be set to :guilabel:`Readonly`."
 msgstr ""
+":guilabel:`Días restantes`: muestra la cantidad de días restantes antes de "
+"la fecha seleccionada (por ejemplo, *En 5 días*), según la fecha y hora "
+"actuales. Este campo debe configurarse como :guilabel:`Solo lectura`."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Examples of Date and Datetime fields"
-msgstr ""
+msgstr "Ejemplos de campos de fecha y fecha y hora"
 
 #: ../../content/applications/studio/fields.rst:206
 msgid ""
@@ -3106,6 +3124,10 @@ msgid ""
 "some :ref:`specific properties <studio/fields/properties-date-datetime>` are "
 "available for :guilabel:`Date` and :guilabel:`Datetime` fields."
 msgstr ""
+"Además de las :ref:`propiedades generales <studio/fields/properties>`, hay "
+"algunas :ref:`propiedades específicas <studio/fields/properties-date-"
+"datetime>` disponibles para los campos :guilabel:`Fecha` y :guilabel:`Fecha "
+"y hora`."
 
 #: ../../content/applications/studio/fields.rst:213
 msgid "Date Range (`daterange`)"
@@ -3113,13 +3135,15 @@ msgstr "Rango de fecha (`daterange`)"
 
 #: ../../content/applications/studio/fields.rst:215
 msgid "Adding a date range requires two fields:"
-msgstr ""
+msgstr "Agregar un rango de fechas requiere dos campos:"
 
 #: ../../content/applications/studio/fields.rst:217
 msgid ""
 "a :guilabel:`Date` or :guilabel:`Datetime` field with the :guilabel:`Date "
 "Range` widget set"
 msgstr ""
+"un campo :guilabel:`Fecha` o :guilabel:`Fecha y hora` con el widget "
+":guilabel:`Rango de fechas` establecido"
 
 #: ../../content/applications/studio/fields.rst:218
 msgid ""
@@ -3128,6 +3152,10 @@ msgid ""
 "fields/simple-fields-date-time>`, or one created specifically for this "
 "purpose."
 msgstr ""
+"otro campo que se selecciona como fecha de inicio *o* fecha de fin. Este "
+"campo subyacente puede ser un :ref:`campo Fecha o Fecha y hora <studio/"
+"fields/simple-fields-date-time>` existente, o uno creado específicamente "
+"para este propósito."
 
 #: ../../content/applications/studio/fields.rst:222
 msgid "To add a date range:"
@@ -3138,6 +3166,9 @@ msgid ""
 "Identify the existing :guilabel:`Date` or :guilabel:`Datetime` field to use "
 "as the underlying start/end date field, or add a new one. If the date range:"
 msgstr ""
+"Identifica el campo :guilabel:`Fecha` o :guilabel:`Fecha y hora` existente "
+"para usar como campo de fecha de inicio/fin subyacente, o agrega uno nuevo. "
+"Si el rango de fechas:"
 
 #: ../../content/applications/studio/fields.rst:227
 msgid ""
@@ -3171,6 +3202,8 @@ msgid ""
 "Add a :guilabel:`Date` or :guilabel:`Datetime` field and set "
 "the :guilabel:`Widget` field to :guilabel:`Date Range`."
 msgstr ""
+"Agrega un campo :guilabel:`Fecha` o :guilabel:`Fecha y hora` y establece el "
+"campo :guilabel:`Widget` en :guilabel:`Rango de fechas`."
 
 #: ../../content/applications/studio/fields.rst:238
 msgid "Enter an appropriate :guilabel:`Label`."
@@ -3190,6 +3223,8 @@ msgid ""
 "If the date range should always have a start *and* end date, "
 "enable :guilabel:`Always range`."
 msgstr ""
+"Si el rango de fechas siempre debe tener una fecha de inicio *y* una fecha "
+"de fin, activa :guilabel:`Siempre un rango`."
 
 #: ../../content/applications/studio/fields.rst:242
 msgid ""
@@ -3198,6 +3233,10 @@ msgid ""
 "properties-date-datetime>` as needed, then click :guilabel:`Close` in the "
 "upper right corner of the screen."
 msgstr ""
+"Actualiza otras :ref:`propiedades generales <studio/fields/properties>` o "
+"las :ref:`propiedades específicas para los campos Fecha y Fecha y hora "
+"<studio/fields/properties-date-datetime>` según sea necesario y luego haz "
+"clic en :guilabel:`Cerrar` en la esquina superior derecha de la pantalla."
 
 #: ../../content/applications/studio/fields.rst:249
 msgid "Checkbox (`boolean`)"
@@ -3314,6 +3353,8 @@ msgstr "Archivo (`binary`)"
 #: ../../content/applications/studio/fields.rst:300
 msgid "The :guilabel:`File` field is used to upload any type of file."
 msgstr ""
+"El campo :guilabel:`Archivo` se utiliza para cargar cualquier tipo de "
+"archivo."
 
 #: ../../content/applications/studio/fields.rst:302
 msgid ""
@@ -3341,7 +3382,7 @@ msgstr ""
 
 #: ../../content/applications/studio/fields.rst:316
 msgid "Image (`image`)"
-msgstr ""
+msgstr "Imagen (`image`)"
 
 #: ../../content/applications/studio/fields.rst:318
 msgid ""
@@ -3413,7 +3454,7 @@ msgstr "Captura de pantalla de un ejemplo de un campo de prioridad."
 
 #: ../../content/applications/studio/fields.rst:353
 msgid "Signature (`signature`)"
-msgstr ""
+msgstr "Firma (`signature`)"
 
 #: ../../content/applications/studio/fields.rst:355
 msgid ""
@@ -3424,6 +3465,12 @@ msgid ""
 "have the same effects as described under :ref:`File <studio/fields/simple-"
 "fields-file>`."
 msgstr ""
+"El campo :guilabel:`Firma` se utiliza para firmar el formulario de forma "
+"electrónica. Este tipo de campo es un :ref:`campo Archivo <studio/fields/"
+"simple-fields-file>` con el widget :guilabel:`Firma` seleccionado de forma "
+"predeterminada. Por lo tanto, los widgets :guilabel:`Archivo`, "
+":guilabel:`Imagen` y :guilabel:`Visor de PDF` tienen los mismos efectos que "
+"los descritos en :ref:`Archivo <studio/fields/simple-fields-file>`."
 
 #: ../../content/applications/studio/fields.rst:361
 msgid ""
@@ -3434,6 +3481,12 @@ msgid ""
 "the model only). The signature is then automatically generated using the "
 "data from the selected field."
 msgstr ""
+"Para ofrecer a los usuarios la opción :guilabel:`Automático` cuando deban "
+"dibujar su firma, selecciona uno de los campos :guilabel:`Prellenar con` "
+"disponibles (:ref:`Many2One <studio/fields/relational-fields-many2one>`, y "
+":ref:`Campo relacionado <studio/fields/relational-fields-related-field>` "
+"solo en el modelo). De este modo, la firma se genera automáticamente con los "
+"datos del campo seleccionado."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Example of a Signature field"

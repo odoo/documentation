@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 11:33+0000\n"
+"PO-Revision-Date: 2026-11-19 23:22+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19-doc/"
 "finance/nl/>\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../content/applications/finance.rst:5
 msgid "Finance"
@@ -4605,7 +4605,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:15
 msgid ":ref:`accounting/invoice/invoice-from-orders`"
-msgstr ""
+msgstr ":ref:`accounting/invoice/invoice-from-orders`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:16
 msgid ":ref:`accounting/invoice/creation`"
@@ -4634,7 +4634,7 @@ msgstr ":ref:`accounting/invoice/reporting`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:26
 msgid "Invoice from orders"
-msgstr ""
+msgstr "Vanuit orders factureren"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:28
 msgid ""
@@ -4646,6 +4646,13 @@ msgid ""
 "ecommerce>` or :ref:`point of sale orders <accounting/invoice/invoice-from-"
 "pos>`."
 msgstr ""
+"Afhankelijk van het specifieke bedrijfsscenario automatiseert Odoo het "
+"aanmaken van verkoopfacturen door rechtstreeks conceptfacturen te genereren "
+"uit brondocumenten, zoals :ref:`verkooporders <accounting/invoice/invoice-"
+"from-sales>`, :ref:`terugkerende abonnementen <accounting/invoice/invoice-"
+"from-subscriptions>`, :ref:`e-commerceorders <accounting/invoice/invoice-"
+"from-ecommerce>` of :ref:`orders uit het kassasysteem <accounting/invoice/"
+"invoice-from-pos>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:38
 #: ../../content/applications/finance/accounting/get_started/journals.rst:206
@@ -4662,12 +4669,17 @@ msgid ""
 "Standard sales workflows convert approved quotations into sales orders, "
 "which then generate draft invoices. The different invoicing options are:"
 msgstr ""
+"Standaard verkoopworkflows zetten goedgekeurde offertes om in verkooporders, "
+"die vervolgens conceptfacturen genereren. De verschillende facturatieopties "
+"zijn:"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:43
 msgid ""
 "Invoicing manually: Manually create draft invoices directly from the sales "
 "order using the :guilabel:`Create Invoice` button."
 msgstr ""
+"Handmatig factureren: Maak rechtstreeks vanuit de verkooporder handmatig "
+"conceptfacturen aan met de knop :guilabel:`Factuur aanmaken`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:45
 msgid ""
@@ -4675,6 +4687,10 @@ msgid ""
 "invoicing/invoicing_policy>`, :guilabel:`Ordered quantities` invoicing "
 "(before delivery) or :guilabel:`Delivered quantities` invoicing."
 msgstr ""
+"Afhankelijk van het :doc:`geconfigureerde facturatiebeleid <../../sales/"
+"sales/invoicing/invoicing_policy>`, facturatie op basis van "
+":guilabel:`Bestelde hoeveelheden` (vóór levering) of facturatie op basis van "
+":guilabel:`Geleverde hoeveelheden`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:50
 msgid ""
@@ -4682,30 +4698,43 @@ msgid ""
 "or services, with options to charge the entire order, specific lines, or "
 "fixed/percentage advance payments."
 msgstr ""
+"Met handmatige facturatie kunnen verkopers aangepaste verkoopfacturen "
+"aanmaken voor producten of diensten, met opties om de volledige order, "
+"specifieke regels of vaste of procentuele voorschotten in rekening te "
+"brengen."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:52
 msgid ""
 "Invoices can be generated directly from the :doc:`Repairs app </applications/"
 "inventory_and_mrp/repairs>` sales orders to invoice after-sales services."
 msgstr ""
+"Verkoopfacturen kunnen rechtstreeks worden gegenereerd vanuit de "
+"verkooporders van de :doc:`Reparaties-app </applications/inventory_and_mrp/"
+"repairs>` om dienst na verkoop te factureren."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:56
 msgid ""
 "To create a consolidated invoice for all sales orders linked to the same "
 "customer, follow these steps:"
 msgstr ""
+"Volg deze stappen om een geconsolideerde factuur aan te maken voor alle "
+"verkooporders die aan dezelfde klant zijn gekoppeld:"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:59
 msgid ""
 "Go to :menuselection:`Sales --> Orders --> Orders`, and use the search bar "
 "to :guilabel:`Group By` :guilabel:`Customer`."
 msgstr ""
+"Ga naar :menuselection:`Verkoop --> Orders --> Orders` en gebruik de "
+"zoekbalk om te :guilabel:`Groeperen op` :guilabel:`Klant`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:61
 msgid ""
 "Click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to expand the "
 "list of sales orders for the desired customer."
 msgstr ""
+"Klik op het icoon :icon:`fa-caret-down` :guilabel:`(pijl omlaag)` om de "
+"lijst met verkooporders voor de gewenste klant uit te vouwen."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:63
 msgid ""
@@ -4713,10 +4742,13 @@ msgid ""
 "to :guilabel:`To Invoice`, ensuring all selected orders share the same "
 "invoicing address and the same delivery address."
 msgstr ""
+"Selecteer de relevante verkooporders waarvan de :guilabel:`Factuurstatus` is "
+"ingesteld op :guilabel:`Te factureren` en zorg ervoor dat alle geselecteerde "
+"orders hetzelfde factuuradres en hetzelfde afleveradres hebben."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:66
 msgid "Click :guilabel:`Create Invoices`."
-msgstr ""
+msgstr "Klik op :guilabel:`Facturen aanmaken`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:67
 msgid ""
@@ -4724,14 +4756,17 @@ msgid ""
 "the :guilabel:`Consolidated Billing` option enabled, and set "
 "the :guilabel:`Timesheets Period`, if needed."
 msgstr ""
+"Laat in het venster :guilabel:`Factu(u)r(en) aanmaken` de optie "
+":guilabel:`Geconsolideerde facturatie` ingeschakeld en stel indien nodig de "
+":guilabel:`Periode urenstaten` in."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:69
 msgid "Click :guilabel:`Create Draft`."
-msgstr ""
+msgstr "Klik op :guilabel:`Concept aanmaken`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:72
 msgid ":doc:`../../sales/sales/invoicing/proforma`"
-msgstr ""
+msgstr ":doc:`../../sales/sales/invoicing/proforma`"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:77
 msgid "Contracts"
@@ -4742,6 +4777,9 @@ msgid ""
 "Under the terms of a contract with a customer, invoices can be generated "
 "periodically or at the end of the contract based on the following:"
 msgstr ""
+"Volgens de voorwaarden van een contract met een klant kunnen verkoopfacturen "
+"periodiek of aan het einde van het contract worden gegenereerd op basis van "
+"het volgende:"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:82
 msgid ""
@@ -4749,12 +4787,17 @@ msgid ""
 "Based on recorded hours and materials used, as documented in timesheets or "
 "purchase records."
 msgstr ""
+":doc:`Tijd en materialen <../../sales/sales/invoicing/time_materials>`: Op "
+"basis van geregistreerde uren en gebruikte materialen, zoals vastgelegd in "
+"urenstaten of inkoopgegevens."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:84
 msgid ""
 "Fixed products/services: Based on predefined products or services as "
 "outlined in a sales order linked to the contract."
 msgstr ""
+"Vaste producten/diensten: Op basis van vooraf gedefinieerde producten of "
+"diensten zoals vermeld in een verkooporder die aan het contract is gekoppeld."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:88
 msgid ""
@@ -4763,6 +4806,11 @@ msgid ""
 "invoice at a fixed price typically follow a :ref:`standard sales order "
 "process <accounting/invoice/invoice-from-sales>`."
 msgstr ""
+"Deze facturatiemethode wordt vaak gebruikt door dienstverlenende bedrijven "
+"die voornamelijk op basis van tijd en materialen factureren. "
+"Dienstverlenende bedrijven die tegen een vaste prijs factureren, volgen "
+"daarentegen doorgaans een :ref:`standaard verkooporderproces <accounting/"
+"invoice/invoice-from-sales>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:93
 msgid ":doc:`../../sales/sales/invoicing/milestone`"
