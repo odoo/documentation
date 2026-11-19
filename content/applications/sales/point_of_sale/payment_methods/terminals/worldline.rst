@@ -1,12 +1,16 @@
-=========
-Worldline
-=========
+===================
+Worldline (IoT Box)
+===================
 
 `Worldline <https://worldline.com/>`_ offers payment solutions through :doc:`payment terminals
 <../terminals>` to handle customer transactions.
 
+.. seealso::
+   To connect a Worldline terminal through the Worldline cloud without an IoT gateway, refer to the
+   :doc:`Worldline API <worldline_api>` documentation.
+
 .. important::
-   - Connecting a Worldline payment terminal to Odoo requires an :doc:`IoT system
+   - Connecting a Worldline payment terminal to Odoo requires an :doc:`IoT gateway
      </applications/general/iot/connect>`.
    - Worldline is only available in **Belgium**, **the Netherlands**, and **Luxembourg** with Odoo.
    - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the **Yomani XR**
@@ -19,7 +23,7 @@ Worldline configuration
 =======================
 
 First, enable the Worldline payment terminal in the :ref:`POS settings <pos/use/settings>` under
-:guilabel:`Payment Terminals`. Then :doc:`connect the IoT system to Odoo
+:guilabel:`Payment Terminals`. Then :doc:`connect the IoT gateway to Odoo
 </applications/general/iot/connect>` and follow these steps on the terminal:
 
 #. **Configure the ECR protocol**:
@@ -52,7 +56,7 @@ The terminal is now active and displays the **Read card** screen.
    for the :doc:`Windows virtual IoT </applications/general/iot>`.
 
 .. tip::
-   To check the terminal's connection status, open the IoT app and click the :ref:`IoT system's
+   To check the terminal's connection status, open the IoT app and click the :ref:`IoT gateway's
    card <iot/connect/IoT-form>`.
    Then, click the :guilabel:`Test` button: a test transaction is sent to the terminal to
    to ensure the connection is properly established.
