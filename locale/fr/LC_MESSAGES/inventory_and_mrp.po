@@ -36,8 +36,8 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-30 17:31+0000\n"
-"PO-Revision-Date: 2026-10-31 12:35+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-11-19 23:38+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-20-doc/"
 "inventory_and_mrp/fr/>\n"
 "Language: fr\n"
@@ -45,7 +45,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/inventory_and_mrp.rst:5
 msgid "Supply Chain"
@@ -42215,6 +42215,10 @@ msgid ""
 "or MO <inventory/allocation_report/workflow/confirm_replenish>` to replenish "
 "the demanded products."
 msgstr ""
+"Si le stock existant ne permet pas de répondre à la demande, créer et "
+":ref:`confirmer un bon de commande ou un ordre de fabrication <inventory/"
+"allocation_report/workflow/confirm_replenish>` pour réapprovisionner les "
+"produits demandés."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:66
 msgid ""
@@ -42227,12 +42231,16 @@ msgid ""
 ":ref:`Validate the incoming units <inventory/allocation_report/workflow/"
 "validate_incoming>` into stock."
 msgstr ""
+":ref:`Valider les unités entrantes <inventory/allocation_report/workflow/"
+"validate_incoming>` en stock."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:70
 msgid ""
 ":ref:`Validate the outgoing units <inventory/allocation_report/workflow/"
 "validate_outgoing>` to fulfill the original demand."
 msgstr ""
+":ref:`Valider les unités sortantes <inventory/allocation_report/workflow/"
+"validate_outgoing>` pour répondre à la demande initiale."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:73
 msgid ""
@@ -42241,6 +42249,10 @@ msgid ""
 "meet the demand in the originating |SO|/|MO| either by purchasing it or by "
 "manufacturing it."
 msgstr ""
+"Le processus commence par s'assurer qu'une demande en cours existe déjà pour "
+"le produit. La confirmation d'un |PO|/|MO| permet de réapprovisionner le "
+"stock nécessaire pour répondre à la demande dans le |SO|/|MO| d'origine, "
+"soit en l'achetant, soit en le fabriquant."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:77
 msgid ""
@@ -42657,6 +42669,9 @@ msgid ""
 "If the stock was confirmed to be manufactured, navigate to the replenishing |"
 "MO| and click :guilabel:`Produce` to produce the finished product."
 msgstr ""
+"Si la fabrication du stock a été confirmée, accéder à l'|MO| de "
+"réapprovisionnement et cliquer sur :guilabel:`Produire` pour fabriquer le "
+"produit fini."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:261
 msgid ""
@@ -42668,6 +42683,14 @@ msgid ""
 "manufacturing, however, additional transfer moves must be made to transfer "
 "the product from the manufacturing location to inventory."
 msgstr ""
+"Les produits finis issus des |MOs| terminés deviennent directement "
+"disponibles en stock dans le cas d'une fabrication :doc:`en une étape <../../"
+"../manufacturing/basic_setup/one_step_manufacturing>` ou :doc:`en deux "
+"étapes <../../../manufacturing/basic_setup/two_step_manufacturing>`. Pour la "
+"fabrication :doc:`en trois étapes <../../../manufacturing/basic_setup/"
+"three_step_manufacturing>`, toutefois, des mouvements de transfert "
+"supplémentaires doivent être effectués pour transférer le produit de "
+"l'emplacement de fabrication vers l'inventaire."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:267
 msgid ""
@@ -42675,6 +42698,9 @@ msgid ""
 "the :guilabel:`Transfer` smart button at the top. Then, open the relevant "
 "order and click :guilabel:`Validate` to receive the product into stock."
 msgstr ""
+"Pour valider le transfert entrant sur l'|MO|, cliquer sur le bouton "
+"intelligent :guilabel:`Transfert` en haut. Ensuite, ouvrir l'ordre concerné "
+"et cliquer sur :guilabel:`Valider` pour réceptionner le produit en stock."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:273
 msgid "Validate outgoing move"
@@ -42708,7 +42734,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:287
 msgid "Delivery order from an allocation report."
-msgstr ""
+msgstr "Bon de livraison issu d'un rapport d'allocation."
 
 #: ../../export/content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.rst:291
 msgid "Fulfill |MO| order"
@@ -72679,6 +72705,11 @@ msgid ""
 "bar-chart` :guilabel:`(Bar Chart)` of the vendor's :guilabel:`Quality Rate` "
 "for each product over the last 12 months."
 msgstr ""
+"Lorsqu'il est ouvert depuis la fiche de contact ou le |RFQ|/|PO|, le rapport "
+"*Analyse des contrôles qualité* affiche un :icon:`fa-toggle-on` "
+":guilabel:`Empilé` :icon:`fa-bar-chart` :guilabel:`(Graphique à barres)` du "
+":guilabel:`Taux de qualité` du fournisseur pour chaque produit au cours des "
+"12 derniers mois."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:72
 msgid ""
@@ -72693,6 +72724,9 @@ msgid ""
 "vendor with quality checks at the control point, not the quality rate of "
 "each product by vendor."
 msgstr ""
+"Par défaut, les rapports consultés depuis le |QCP| affichent les taux de "
+"chaque fournisseur ayant des contrôles qualité au point de contrôle, et non "
+"le taux de qualité de chaque produit par fournisseur."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:82
 msgid ""
@@ -72701,12 +72735,18 @@ msgid ""
 "check` :guilabel:`Quality Rate` smart button displays a quality rate of "
 "`43%`."
 msgstr ""
+"Dans l'exemple suivant, plusieurs produits sont achetés auprès du "
+"fournisseur Azure Interior. Après avoir effectué des contrôles qualité, le "
+"bouton intelligent :icon:`fa-check` :guilabel:`Taux de qualité` affiche un "
+"taux de qualité de `43%`."
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:86
 msgid ""
 "After opening the default report from the |PO|, the following quality rates "
 "are shown for each product:"
 msgstr ""
+"Après avoir ouvert le rapport par défaut depuis le |PO|, les taux de qualité "
+"suivants s'affichent pour chaque produit :"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:89
 msgid "Pedal Bin: 1 pass, 1 fail (50% checks passed)"
@@ -72722,11 +72762,11 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:92
 msgid "Large Cabinet: 1 fail (0% checks passed)"
-msgstr ""
+msgstr "Grande armoire : 1 échec (0 % de contrôles réussis)"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:93
 msgid "Large Cabinet (Wood): 1 fail (0% checks passed)"
-msgstr ""
+msgstr "Grande armoire (Bois) : 1 échec (0 % de contrôles réussis)"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:95
 msgid "Therefore, the overall quality rate is `3 passed / 7 total = 43%`."
@@ -72738,7 +72778,7 @@ msgstr ""
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:101
 msgid ":doc:`quality_checks`"
-msgstr ""
+msgstr ":doc:`quality_checks`"
 
 #: ../../export/content/applications/inventory_and_mrp/quality/quality_management/quality_rate.rst:102
 msgid ":doc:`quality_control_points`"
