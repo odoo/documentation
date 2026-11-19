@@ -110,12 +110,19 @@ const _generateFallbackUrls = async (targetUrl) => {
         let version = '';
         let language = '';
         const originalPathParts = [];
-        for (let fragment of urlObject.pathname.split('/').reverse()) {
+        const pathParts = urlObject.pathname.split('/');
+        const versionPattern = /^(?:saas-)?\d{2}\.\d$|^master$/;
+        const versionIndex = pathParts.findIndex(part => versionPattern.test(part));
+        for (let i = pathParts.length - 1; i >= 0; i--) {
+            const fragment = pathParts[i];
             if (fragment.length > 0) {
-                if (fragment.match(/^(?:saas-)?\d{2}\.\d$|^master$/)) {
+                if (versionPattern.test(fragment)) {
                     // Try to match the version before considering the fragment part of the path.
                     version = fragment;
-                } else if (fragment.match(/^[a-z]{2}(?:_[A-Z]{2})?$/)) {
+                } else if (
+                    fragment.match(/^[a-z]{2}(?:_[A-Z]{2})?$/)
+                    && (versionIndex === -1 || i === versionIndex + 1)
+                ) {
                     // Try to match the language before considering the fragment part of the path.
                     language = fragment;
                 } else if (version || language) {
