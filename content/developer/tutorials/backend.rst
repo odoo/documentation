@@ -330,10 +330,10 @@ is implied by the root element of the ``arch`` field:
 
    The ``arch`` field must thus be declared as ``type="xml"`` to be parsed correctly.
 
-list views
+List views
 ----------
 
-list views, also called list views, display records in a tabular form.
+List views display records in a tabular form.
 
 Their root element is ``<list>``. The simplest form of the list view simply
 lists all the fields to display in the table (each field as a column):
@@ -845,10 +845,10 @@ and ``message`` is the error message.
 Advanced Views
 ==============
 
-list views
+List views
 ----------
 
-list views can take supplementary attributes to further customize their
+List views can take supplementary attributes to further customize their
 behavior:
 
 ``decoration-{$name}``
