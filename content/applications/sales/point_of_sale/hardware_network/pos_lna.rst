@@ -20,6 +20,9 @@ from the browser and without requiring an :doc:`SSL certificate <epos_ssc>`.
    The ePOS printer must have a **static IP address**; otherwise, it may become unreachable. The
    static IP should be configured through the router.
 
+.. seealso::
+   `Local Network Access (video tutorial) <https://www.youtube.com/watch?v=FwOAZlOo1hQ>`_
+
 Activation
 ==========
 
