@@ -56,7 +56,11 @@ will have all three of create, read, and update.
 
     .. attribute:: name
 
-        The purpose or role of the group.
+        Human-readable name of the access, describing what it grants or restricts.
+
+    .. attribute:: active
+
+        Only active accesses are taken into account.
 
     .. attribute:: model_id
 
@@ -113,7 +117,7 @@ operation, such that the record satisfies the access right's domain.
 Global rules versus group rules
 -------------------------------
 
-The access rights were ``group_id`` is not set behave as *restrictions*, and
+The access rights where ``group_id`` is not set behave as *restrictions*, and
 apply to *all users*. That's why they are called *global rules*.
 
 In order to perform some operation on a given record, the record must satisfy
@@ -145,7 +149,7 @@ An ORM :class:`~odoo.fields.Field` can have a ``groups`` attribute
 providing a list of groups (as a comma-separated string of
 :term:`external identifiers`).
 
-If the current user is not in one of the listed groups, he will not have
+If the current user is not in one of the listed groups, they will not have
 access to the field:
 
 * restricted fields are automatically removed from requested views
@@ -217,10 +221,10 @@ less secure.
     auction_lots_ids = [x[0] for x in self.env.cr.fetchall()]
 
     # nearly there
-    auction_lots_ids = [x[x] for x in self.env.execute_query(SQL("""
+    auction_lots_ids = [x[0] for x in self.env.execute_query(SQL("""
         SELECT id FROM auction_lots
         WHERE auction_id IN %s AND state = %s AND obj_price > 0
-    """, tuple(ids), 'draft'))
+    """, tuple(ids), 'draft'))]
 
     # better
     auction_lots_ids = self.search([('auction_id','in',ids), ('state','=','draft'), ('obj_price','>',0)])
@@ -285,7 +289,7 @@ Building the domains
 --------------------
 
 Domains are represented as lists and are serializable.
-You would be tented to manipulate these lists directly, however it can
+You would be tempted to manipulate these lists directly, however it can
 introduce subtle issues where the user could inject a domain if the input is
 not normalized.
 Use :class:`~odoo.fields.Domain` to handle safely the manipulation
@@ -308,25 +312,29 @@ of domains.
 Unescaped field content
 -----------------------
 
-When rendering content using JavaScript and XML, one may be tempted to use
-a ``t-raw`` to display rich-text content. This should be avoided as a frequent
+When rendering content using JavaScript and XML, one may be tempted to wrap
+rich-text content in :func:`markup` so that ``t-out`` does not escape it. This
+should be avoided as a frequent
 `XSS <https://en.wikipedia.org/wiki/Cross-site_scripting>`_ vector.
 
 It is very hard to control the integrity of the data from the computation until
-the final integration in the browser DOM. A ``t-raw`` that is correctly escaped
+the final integration in the browser DOM. A ``markup`` that is correctly escaped
 at the time of introduction may no longer be safe at the next bugfix or
 refactoring.
 
 .. code-block:: javascript
 
-    QWeb.render('insecure_template', {
-        info_message: "You have an <strong>important</strong> notification",
+    import { markup } from "@odoo/owl";
+    import { renderToString } from "@web/core/utils/render";
+
+    renderToString('insecure_template', {
+        info_message: markup("You have an <strong>important</strong> notification"),
     })
 
 .. code-block:: xml
 
     <div t-name="insecure_template">
-        <div id="information-bar"><t t-raw="info_message" /></div>
+        <div id="information-bar"><t t-out="info_message" /></div>
     </div>
 
 The above code may feel safe as the message content is controlled but is a bad
@@ -336,16 +344,16 @@ evolves in the future.
 .. code-block:: javascript
 
     // XSS possible with unescaped user provided content !
-    QWeb.render('insecure_template', {
-        info_message: "You have an <strong>important</strong> notification on " \
-            + "the product <strong>" + product.name + "</strong>",
+    renderToString('insecure_template', {
+        info_message: markup("You have an <strong>important</strong> notification on "
+            + "the product <strong>" + product.name + "</strong>"),
     })
 
 While formatting the template differently would prevent such vulnerabilities.
 
 .. code-block:: javascript
 
-    QWeb.render('secure_template', {
+    renderToString('secure_template', {
         message: "You have an important notification on the product:",
         subject: product.name
     })
@@ -370,7 +378,7 @@ Creating safe content using :class:`~markupsafe.Markup`
 
 See the `official documentation <https://markupsafe.palletsprojects.com/>`_ for
 explanations, but the big advantage of
-:class:`~markupsafe.Markup` is that it's a very rich type overrinding
+:class:`~markupsafe.Markup` is that it's a very rich type overriding
 :class:`str` operations to *automatically escape parameters*.
 
 This means that it's easy to create *safe* html snippets by using
@@ -518,7 +526,7 @@ contain patterns that are not safe. That's why `fields.Html` and
 `tools.html_sanitize()` have options to fine-tune the level of sanitization for
 styles, etc. Those options have to be carefully considered depending on where
 the data comes from, and the desired features. The sanitization safety is
-balanced against sanitization breakages: the safer the sanitisation the more
+balanced against sanitization breakages: the safer the sanitization the more
 likely it is to break things.
 
 .. code-block:: python
