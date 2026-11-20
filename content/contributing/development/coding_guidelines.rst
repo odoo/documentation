@@ -412,22 +412,21 @@ PEP8 options
 ------------
 
 Using a linter can help show syntax and semantic warnings or errors. Odoo
-source code tries to respect Python standard, but some of them can be ignored.
-
-- E501: line too long
-- E301: expected 1 blank line, found 0
-- E302: expected 2 blank lines, found 1
+source code is checked with `ruff <https://docs.astral.sh/ruff/>`_, configured
+by the :file:`ruff.toml` file at the root of the Odoo repository. Line length
+(E501) is not enforced.
 
 Imports
 -------
 
 The imports are ordered as
 
-#. External libraries (one per line sorted and split in python stdlib)
+#. Python standard library
+#. Third-party libraries
 #. Imports of ``odoo`` submodules
 #. Imports from Odoo addons (rarely, and only if necessary)
 
-Inside these 3 groups, the imported lines are alphabetically sorted.
+Inside these 4 groups, the imported lines are alphabetically sorted.
 
 .. code-block:: python
 
@@ -436,13 +435,17 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
     import re
     import time
     from datetime import datetime
-    # 2 : imports of odoo
-    from odoo import Command, _, api, fields, models # ASCIIbetically ordered
+
+    # 2 : imports of third-party libraries
+    from lxml import etree
+
+    # 3 : imports of odoo
+    from odoo import Command, api, fields, models  # ASCIIbetically ordered
     from odoo.fields import Domain
-    from odoo.tools.safe_eval import safe_eval as eval
-    # 3 : imports from odoo addons
-    from odoo.addons.web.controllers.main import login_redirect
-    from odoo.addons.website.models.website import slug
+    from odoo.tools import safe_eval
+
+    # 4 : imports from odoo addons
+    from odoo.addons.web.controllers.utils import ensure_db
 
 Idiomatics of Programming (Python)
 ----------------------------------
