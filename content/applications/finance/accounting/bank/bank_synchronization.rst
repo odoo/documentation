@@ -14,7 +14,7 @@ banks.
 
 .. tip::
    To check if your bank is compatible with Odoo, go to `Odoo Accounting Features
-   <https://www.odoo.com/app/accounting-features#part_5>`_, and click :guilabel:`See list of
+   <https://www.odoo.com/app/accounting-features#table_of_content_heading_5>`_, and click :guilabel:`See list of
    supported institutions` in the :guilabel:`Bank & Cash` section.
 
 .. seealso::
