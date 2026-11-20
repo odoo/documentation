@@ -452,6 +452,18 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="cell_merge" aria-hidden="true"></i>
+              <code class="pb-3">cell_merge</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="center_focus_weak" aria-hidden="true"></i>
+              <code class="pb-3">center_focus_weak</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="chat_bubble" aria-hidden="true"></i>
               <code class="pb-3">chat_bubble</code>
           </div>
@@ -644,6 +656,18 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="crop_landscape" aria-hidden="true"></i>
+              <code class="pb-3">crop_landscape</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="crown" aria-hidden="true"></i>
+              <code class="pb-3">crown</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="currency_bitcoin" aria-hidden="true"></i>
               <code class="pb-3">currency_bitcoin</code>
           </div>
@@ -790,6 +814,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="drag_indicator" aria-hidden="true"></i>
               <code class="pb-3">drag_indicator</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="drive_file_move" aria-hidden="true"></i>
+              <code class="pb-3">drive_file_move</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -992,6 +1022,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="folder_check" aria-hidden="true"></i>
+              <code class="pb-3">folder_check</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="folder_open" aria-hidden="true"></i>
               <code class="pb-3">folder_open</code>
           </div>
@@ -1046,6 +1082,42 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_h1" aria-hidden="true"></i>
+              <code class="pb-3">format_h1</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_h2" aria-hidden="true"></i>
+              <code class="pb-3">format_h2</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_h3" aria-hidden="true"></i>
+              <code class="pb-3">format_h3</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_h4" aria-hidden="true"></i>
+              <code class="pb-3">format_h4</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_h5" aria-hidden="true"></i>
+              <code class="pb-3">format_h5</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_h6" aria-hidden="true"></i>
+              <code class="pb-3">format_h6</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="format_image_front" aria-hidden="true"></i>
               <code class="pb-3">format_image_front</code>
           </div>
@@ -1054,6 +1126,18 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="format_image_inline_left" aria-hidden="true"></i>
               <code class="pb-3">format_image_inline_left</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_image_left" aria-hidden="true"></i>
+              <code class="pb-3">format_image_left</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="format_image_right" aria-hidden="true"></i>
+              <code class="pb-3">format_image_right</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -1234,6 +1318,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="hourglass_top" aria-hidden="true"></i>
               <code class="pb-3">hourglass_top</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="how_to_vote" aria-hidden="true"></i>
+              <code class="pb-3">how_to_vote</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -1496,6 +1586,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="money_bag" aria-hidden="true"></i>
+              <code class="pb-3">money_bag</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="more_horiz" aria-hidden="true"></i>
               <code class="pb-3">more_horiz</code>
           </div>
@@ -1592,6 +1688,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="package_2" aria-hidden="true"></i>
+              <code class="pb-3">package_2</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="pan_tool_alt" aria-hidden="true"></i>
               <code class="pb-3">pan_tool_alt</code>
           </div>
@@ -1658,8 +1760,20 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="phone_forwarded" aria-hidden="true"></i>
+              <code class="pb-3">phone_forwarded</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="phone_in_talk" aria-hidden="true"></i>
               <code class="pb-3">phone_in_talk</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="phone_paused" aria-hidden="true"></i>
+              <code class="pb-3">phone_paused</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -1766,6 +1880,18 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="receipt_long" aria-hidden="true"></i>
+              <code class="pb-3">receipt_long</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="recenter" aria-hidden="true"></i>
+              <code class="pb-3">recenter</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="recycling" aria-hidden="true"></i>
               <code class="pb-3">recycling</code>
           </div>
@@ -1814,6 +1940,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="resize" aria-hidden="true"></i>
+              <code class="pb-3">resize</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="restaurant" aria-hidden="true"></i>
               <code class="pb-3">restaurant</code>
           </div>
@@ -1834,6 +1966,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="rocket_launch" aria-hidden="true"></i>
               <code class="pb-3">rocket_launch</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="rotate_right" aria-hidden="true"></i>
+              <code class="pb-3">rotate_right</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -1864,6 +2002,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="science" aria-hidden="true"></i>
               <code class="pb-3">science</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="screen_rotation_alt" aria-hidden="true"></i>
+              <code class="pb-3">screen_rotation_alt</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -1924,6 +2068,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="settings_applications" aria-hidden="true"></i>
               <code class="pb-3">settings_applications</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="shadow" aria-hidden="true"></i>
+              <code class="pb-3">shadow</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -2138,6 +2288,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="storefront" aria-hidden="true"></i>
+              <code class="pb-3">storefront</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="streetview" aria-hidden="true"></i>
               <code class="pb-3">streetview</code>
           </div>
@@ -2216,6 +2372,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="table" aria-hidden="true"></i>
+              <code class="pb-3">table</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="table_chart" aria-hidden="true"></i>
               <code class="pb-3">table_chart</code>
           </div>
@@ -2230,6 +2392,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="tag" aria-hidden="true"></i>
               <code class="pb-3">tag</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="task" aria-hidden="true"></i>
+              <code class="pb-3">task</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -2264,8 +2432,20 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="timer" aria-hidden="true"></i>
+              <code class="pb-3">timer</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="title" aria-hidden="true"></i>
               <code class="pb-3">title</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="today" aria-hidden="true"></i>
+              <code class="pb-3">today</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
@@ -2378,6 +2558,12 @@ Material Symbols - Subset
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="video_call" aria-hidden="true"></i>
+              <code class="pb-3">video_call</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="video_file" aria-hidden="true"></i>
               <code class="pb-3">video_file</code>
           </div>
@@ -2410,6 +2596,12 @@ Material Symbols - Subset
           <div class="card text-center small">
               <i class="oi fs-1 p-3" data-icon="view_module" aria-hidden="true"></i>
               <code class="pb-3">view_module</code>
+          </div>
+      </div>
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center small">
+              <i class="oi fs-1 p-3" data-icon="view_timeline" aria-hidden="true"></i>
+              <code class="pb-3">view_timeline</code>
           </div>
       </div>
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
