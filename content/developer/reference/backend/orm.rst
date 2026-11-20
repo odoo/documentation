@@ -173,7 +173,7 @@ into a compatible type:
 
     To parse date/datetimes coming from external sources::
 
-        fields.Date.to_date(self._context.get('date_from'))
+        fields.Date.to_date(self.env.context.get('date_from'))
 
 Date / Datetime comparison best practices:
 
