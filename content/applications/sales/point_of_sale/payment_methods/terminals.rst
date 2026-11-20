@@ -45,7 +45,8 @@ To activate a payment terminal and allow payments to be processed through it, fo
       - :doc:`Stripe <terminals/stripe>`
       - :doc:`Tyro <terminals/tyro>`
       - :doc:`Viva.com <terminals/viva_com>`
-      - :doc:`Worldline <terminals/worldline>`
+      - :doc:`Worldline (IoT Box) <terminals/worldline>`
+      - :doc:`Worldline API <terminals/worldline_api>`
 
 .. _pos/terminals/terminal-use:
 
@@ -82,3 +83,4 @@ Once the transaction is successful, the payment is automatically validated in th
    terminals/tyro
    terminals/viva_com
    terminals/worldline
+   terminals/worldline_api
