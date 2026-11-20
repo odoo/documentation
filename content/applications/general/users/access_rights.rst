@@ -198,17 +198,23 @@ The group form contains multiple tabs for managing all elements of the group. In
 .. image:: access_rights/groups-form.png
    :alt: Tabs in the Groups form to modify the settings of the group.
 
+The smart buttons at the top of the form are meant to audit everything the group grants, directly
+or through the groups it implies: :guilabel:`Implied Groups`, :guilabel:`Implied Users`,
+:guilabel:`Implied Rights`, :guilabel:`Implied Menus`, and :guilabel:`Implied Views`. Click a smart
+button to list the corresponding records.
+
+- :guilabel:`Dependencies` tab: the :guilabel:`Implies` field lists the groups that users of this
+  group are automatically added to. The :guilabel:`Implied by` field lists the groups whose users are
+  automatically added to this group.
+
+  .. example::
+     For example, if the group *Sales/Administrator* implies the group *Website/Restricted Editor*,
+     then any users added to the *Sales/Administrator* group automatically receive access to the
+     *Website/Restricted Editor* group, as well.
+
 - :guilabel:`Users` tab: lists the current users in the group. Users listed in black have
   administrative rights. Users without administrative access appear in blue. Click :guilabel:`Add a
   line` to add users to this group.
-- :guilabel:`Inherited` tab: Inherited means that users added to this group are automatically added
-  to the groups listed on this tab. Click :guilabel:`Add a line` to add inherited groups.
-
-  .. example::
-     For example, if the group *Sales/Administrator* lists the group *Website/Restricted Editor* in
-     its :guilabel:`Inherited` tab, then any users added to the *Sales/Administrator* group
-     automatically receive access to the *Website/Restricted Editor* group, as well.
-
 - :guilabel:`Menus` tab: defines which models the group can have access to. Click :guilabel:`Add a
   line` to add a specific menu.
 - :guilabel:`Views` tab: lists which views in Odoo the group has access to. Click :guilabel:`Add a
