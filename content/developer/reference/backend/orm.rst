@@ -691,14 +691,14 @@ Environment
 
 .. autoclass:: Environment
 
-.. code-block:: bash
+.. code-block:: pycon
 
     >>> records.env
     <Environment object ...>
     >>> records.env.uid
     3
     >>> records.env.user
-    res.user(3)
+    res.users(3)
     >>> records.env.cr
     <Cursor object ...>
 
@@ -706,11 +706,11 @@ When creating a recordset from an other recordset, the environment is
 inherited. The environment can be used to get an empty recordset in an
 other model, and query that model:
 
-.. code-block:: bash
+.. code-block:: pycon
 
     >>> self.env['res.partner']
     res.partner()
-    >>> self.env['res.partner'].search([('is_company', '=', True), ('customer', '=', True)])
+    >>> self.env['res.partner'].search([('is_company', '=', True)])
     res.partner(7, 18, 12, 14, 17, 19, 8, 31, 26, 16, 13, 20, 30, 22, 29, 15, 23, 28, 74)
 
 Some lazy properties are available to access the environment (contextual) data:
