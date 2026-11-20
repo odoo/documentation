@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 14:38+0000\n"
+"PO-Revision-Date: 2026-11-20 20:29+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-20-doc/"
 "finance/uk/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/finance.rst:5
 msgid "Finance"
@@ -19375,6 +19375,8 @@ msgid ""
 "This process is only mandatory if upgrading from Odoo 19 to Odoo 20. It is "
 "handled automatically when upgrading from Odoo 18 to Odoo 20."
 msgstr ""
+"Цей процес є обов'язковим лише в разі оновлення з Odoo 19 до Odoo 20. Під "
+"час оновлення з Odoo 18 до Odoo 20 він виконується автоматично."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:278
 msgid ""
@@ -19386,6 +19388,14 @@ msgid ""
 "upgrade-process-server-action>` or :ref:`after <accounting/inventory-"
 "valuation/upgrade-process-manual>` upgrading to Odoo 20."
 msgstr ""
+"В Odoo 20 рахунки надходження та списання запасів більше не "
+"використовуються. Усі ненульові залишки на проміжних рахунках запасів "
+"необхідно перенести на :ref:`рахунок оцінки запасів <accounting/inventory-"
+"valuation/valuation-account>` за допомогою запису журналу, щоб зберегти "
+"точні значення вартості запасів після міграції. Це балансування можна "
+"виконати :ref:`до <accounting/inventory-valuation/upgrade-process-server-"
+"action>` або :ref:`після <accounting/inventory-valuation/upgrade-process-"
+"manual>` оновлення до Odoo 20."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:285
 msgid ""
@@ -19404,6 +19414,9 @@ msgid ""
 "because a server action identifies the open balance in the :guilabel:`Stock "
 "Interim` accounts and automatically applies the change."
 msgstr ""
+"Рекомендується внести цю зміну **після** оновлення до Odoo 20, оскільки "
+"серверна дія визначає відкритий залишок на рахунках :guilabel:`Проміжний "
+"складський` і автоматично застосовує зміну."
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:294
 msgid ""
@@ -19438,6 +19451,9 @@ msgid ""
 "After upgrading to Odoo 20, the server action must be applied to each "
 "company to balance any non-zero :guilabel:`Stock Interim` accounts:"
 msgstr ""
+"Після оновлення до Odoo 20 серверну дію необхідно застосувати до кожної "
+"компанії, щоб збалансувати всі ненульові рахунки :guilabel:`Проміжний "
+"складський`:"
 
 #: ../../export/content/applications/finance/accounting/get_started/inventory_valuation.rst:312
 msgid ""
@@ -78327,6 +78343,9 @@ msgid ""
 "> Journal Entries` and create a new entry. Add all the amounts to modify and "
 "balance the debits and credits for each one."
 msgstr ""
+"Щоб згенерувати цей XML-файл, перейдіть до :menuselection:`Бухоблік --> "
+"Бухоблік --> Записи журналу` і створіть новий запис. Додайте всі суми, які "
+"потрібно змінити, та збалансуйте дебет і кредит для кожної з них."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1375
 msgid ""
@@ -78337,6 +78356,13 @@ msgid ""
 "generate the XML file, click the :icon:`fa-cog` (:guilabel:`gear`) icon, "
 "then select :guilabel:`SAT (XML)`."
 msgstr ""
+"Потім перейдіть на вкладку :guilabel:`Інша інформація` і встановіть "
+"прапорець :guilabel:`Закриття 13-го місяця`. За потреби перейдіть до "
+":menuselection:`Бухоблік --> Звітність --> Оборотно-сальдова відомість` і "
+"виберіть дату :guilabel:`13-й місяць`, щоб відобразити загальну суму за рік "
+"з урахуванням усіх додавань із запису журналу. Щоб згенерувати XML-файл, "
+"натисніть значок :icon:`fa-cog` (:guilabel:`шестірня`) і виберіть "
+":guilabel:`SAT (XML)`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1386
 msgid ""
@@ -78345,10 +78371,14 @@ msgid ""
 "automatically, exporting the general ledger is enough to comply with |SAT| "
 "audits and tax refunds."
 msgstr ""
+"Згідно із законом, усі операції в Мексиці мають фіксуватися в цифровому "
+"вигляді. Оскільки базові записи журналу для всіх рахунків-фактур і платежів "
+"створюються автоматично, експорту головної книги достатньо для проходження "
+"аудитів |SAT| та отримання податкових відшкодувань."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1391
 msgid "The report can be filtered by period or by journal."
-msgstr ""
+msgstr "Звіт можна фільтрувати за періодом або за журналом."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1393
 msgid ""
@@ -78357,6 +78387,10 @@ msgid ""
 "click :guilabel:`XML (Polizas)`. Then, select one of the "
 "four :guilabel:`Export` types:"
 msgstr ""
+"Щоб створити XML-файл, перейдіть до :menuselection:`Бухоблік --> "
+"Звітність --> Головна книга`, натисніть значок :icon:`fa-cog` "
+"(:guilabel:`шестірня`) і натисніть :guilabel:`XML (Polizas)`. Потім виберіть "
+"один із чотирьох типів :guilabel:`Експорт`:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1397
 msgid ":guilabel:`Tax audit`"
@@ -78381,6 +78415,10 @@ msgid ""
 "goods` and :guilabel:`Compensation`, add the :guilabel:`Process Number`, "
 "also provided by the |SAT|."
 msgstr ""
+"Для :guilabel:`Податкова перевірка` та :guilabel:`Аудиторська сертифікація` "
+"додайте :guilabel:`Номер замовлення`, наданий |SAT|. Для "
+":guilabel:`Повернення товарів` та :guilabel:`Компенсація` додайте "
+":guilabel:`Номер процесу`, також наданий |SAT|."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1407
 msgid ""
@@ -78423,6 +78461,10 @@ msgid ""
 "desired month, click the :icon:`fa-cog` (:guilabel:`gear`) icon, and "
 "select :guilabel:`DIOT (txt)`."
 msgstr ""
+"Щоб завантажити звіт |DIOT| у вигляді TXT-файлу, перейдіть до "
+":menuselection:`Бухоблік --> Звітність --> Податковий звіт`. Виберіть "
+"потрібний місяць, натисніть значок :icon:`fa-cog` (:guilabel:`шестірня`) і "
+"виберіть :guilabel:`DIOT (txt)`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1430
 msgid ""
@@ -78431,6 +78473,10 @@ msgid ""
 "base name go on the base of the tax. All the lines of a VAT tax **must** "
 "contain at least one tax grid."
 msgstr ""
+"Під час створення нових податків у базі даних доступні два типи тегів. Теги, "
+"що містять `tax`, відносяться до розподілу податку, а теги з назвою бази — "
+"до бази оподаткування. Усі рядки податку ПДВ **повинні** містити принаймні "
+"одну податкову сітку."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1435
 msgid ""
@@ -78438,6 +78484,9 @@ msgid ""
 "the :guilabel:`Accounting` tab of each vendor to prevent validation errors. "
 "Make sure foreign customers have their :guilabel:`Country` set."
 msgstr ""
+"Поле :guilabel:`Тип операції` має бути заповнене на вкладці "
+":guilabel:`Бухоблік` кожного постачальника, щоб уникнути помилок перевірки. "
+"Переконайтеся, що для іноземних клієнтів указано :guilabel:`Країна`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1439
 msgid ""
@@ -78445,6 +78494,9 @@ msgid ""
 "part of the global operations under the generic VAT `XAXX010101000` in the "
 "final TXT file."
 msgstr ""
+"Вибір :guilabel:`87 - Глобальні операції` об'єднує всіх постачальників, які "
+"беруть участь у глобальних операціях, під загальним ІПН `XAXX010101000` у "
+"фінальному TXT-файлі."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1445
 msgid "Accounting reports"
@@ -78456,6 +78508,9 @@ msgid ""
 "loss <l10n/mx/profit-loss>` reports follow the Mexican financial reporting "
 "standards."
 msgstr ""
+"Звіти :ref:`баланс <l10n/mx/balance-sheet>` та :ref:`звіт про прибутки та "
+"збитки <l10n/mx/profit-loss>` відповідають мексиканським стандартам "
+"фінансової звітності."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1455
 msgid ""
@@ -78463,6 +78518,9 @@ msgid ""
 "liabilities, and equity, which reflect the current financial state of the "
 "company."
 msgstr ""
+"Цей звіт базується на стандарті NIF B-6 і поділяється на активи, "
+"зобов'язання та власний капітал, що відображають поточний фінансовий стан "
+"компанії."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1463
 msgid ""
@@ -78470,10 +78528,13 @@ msgid ""
 "operating expenses, comprehensive financial results (RIF), and taxes, which "
 "help identify the net profit or the financial position of a company."
 msgstr ""
+"Цей звіт базується на стандарті NIF B-3 і поділяється на доходи, операційні "
+"витрати, сукупні фінансові результати (RIF) і податки, що допомагають "
+"визначити чистий прибуток або фінансовий стан компанії."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1470
 msgid "Foreign trade"
-msgstr ""
+msgstr "Зовнішня торгівля"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1472
 msgid ""
@@ -78482,10 +78543,14 @@ msgid ""
 "to the `SAT regulations <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/"
 "complemento_comercio_exterior.htm>`_, such as:"
 msgstr ""
+"Зовнішня торгівля — це доповнення до звичайного рахунку-фактури, яке додає "
+"значення як до XML-, так і до PDF-файлів рахунків-фактур, виставлених "
+"іноземному клієнту, відповідно до `правил SAT <http://omawww.sat.gob.mx/"
+"tramitesyservicios/Paginas/complemento_comercio_exterior.htm>`_, зокрема:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1476
 msgid "The specific address of the receiver and of the sender"
-msgstr ""
+msgstr "Точна адреса отримувача та відправника"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1477
 msgid "A :guilabel:`Tariff Fraction` that identifies the type of product"
@@ -78594,21 +78659,25 @@ msgid ""
 "In the resulting XML and PDF files, the :guilabel:`Tax ID` is automatically "
 "replaced by the generic VAT for foreign transactions, `XEXX010101000`."
 msgstr ""
+"В отриманих файлах XML та PDF :guilabel:`Податковий номер` автоматично "
+"замінюється на загальний ПДВ для закордонних операцій, `XEXX010101000`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1545
 msgid ""
 "All products involved in foreign trade require four additional fields, two "
 "of which are exclusive to foreign trade:"
 msgstr ""
+"Для всіх товарів, залучених до зовнішньої торгівлі, потрібні чотири "
+"додаткові поля, два з яких призначені виключно для зовнішньої торгівлі:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1548
 msgid ":guilabel:`Reference` (:guilabel:`General Information` tab)"
-msgstr ""
+msgstr ":guilabel:`Референс` (вкладка :guilabel:`Загальна інформація`)"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1549
 msgid ""
 ":guilabel:`Weight` (:guilabel:`Inventory` tab): Must be greater than `0`."
-msgstr ""
+msgstr ":guilabel:`Вага` (вкладка :guilabel:`Склад`): має бути більшим за `0`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1550
 msgid ""
@@ -78616,12 +78685,18 @@ msgid ""
 "`VUCEM tariff fraction classifier <https://www.ventanillaunica.gob.mx/vucem/"
 "Clasificador.html>`_ to find the correct value."
 msgstr ""
+":guilabel:`Тарифна фракція` (вкладка :guilabel:`Бухгалтерський облік`): "
+"зверніться до `класифікатора тарифних фракцій VUCEM <https://"
+"www.ventanillaunica.gob.mx/vucem/Clasificador.html>`_, щоб знайти правильне "
+"значення."
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1553
 msgid ""
 ":guilabel:`UMT Aduana` (:guilabel:`Accounting` tab): Must match "
 "the :guilabel:`Tariff Fraction`"
 msgstr ""
+":guilabel:`UMT Aduana` (вкладка :guilabel:`Бухгалтерський облік`): має "
+"відповідати полю :guilabel:`Тарифна фракція`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1555
 msgid "Required foreign trade product fields."
@@ -97049,31 +97124,35 @@ msgstr "Банківський рахунок"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:465
 msgid "To activate QR banking for a bank account:"
-msgstr ""
+msgstr "Щоб активувати QR-банкінг для банківського рахунку:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:467
 msgid ":ref:`Activate developer mode <developer-mode/activation>`."
-msgstr ""
+msgstr ":ref:`Активуйте режим розробника <developer-mode/activation>`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:468
 msgid ""
 "Go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and "
 "select the bank account."
 msgstr ""
+"Перейдіть до :menuselection:`Контакти --> Конфігурація --> Банківські "
+"рахунки` та виберіть банківський рахунок."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:469
 msgid "Fill in the following fields:"
-msgstr ""
+msgstr "Заповніть такі поля:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:472
 msgid ""
 ":guilabel:`BIC/SWIFT`: Input the Bank Identification Number (BIN) in the "
 "format: Country Code [4 letters] + Bank Code [2 letters], eg: 970416 for ACB."
 msgstr ""
+":guilabel:`BIC/SWIFT`: введіть ідентифікаційний номер банку (BIN) у форматі: "
+"код країни [4 літери] + код банку [2 літери], наприклад: 970416 для ACB."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:474
 msgid ":guilabel:`Partner`"
-msgstr ""
+msgstr ":guilabel:`Партнер`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:477
 msgid ""
@@ -97081,18 +97160,25 @@ msgid ""
 "the :ref:`Company <localizations/vietnam/company>` record. Once the correct "
 "Partner is selected, the :guilabel:`Payment QR Settings` tab will appear."
 msgstr ""
+"У полі :guilabel:`Партнер` має бути вказано поточну компанію, налаштовану в "
+"записі :ref:`Компанія <localizations/vietnam/company>`. Коли вибрано "
+"правильного партнера, з'явиться вкладка :guilabel:`Налаштування QR-платежів`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:481
 msgid ""
 "Next, navigate to the :guilabel:`Payment QR Settings` tab and configure the "
 "following fields:"
 msgstr ""
+"Далі перейдіть на вкладку :guilabel:`Налаштування QR-платежів` і налаштуйте "
+"такі поля:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:483
 msgid ""
 ":guilabel:`Account Identifier Type`: select the method used to identify the "
 "merchant account (e.g., Bank Account)."
 msgstr ""
+":guilabel:`Тип ідентифікатора рахунку`: виберіть спосіб ідентифікації "
+"рахунку продавця (наприклад, банківський рахунок)."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:485
 msgid ""
@@ -97132,10 +97218,13 @@ msgid ""
 "the :guilabel:`Recipient Bank` is configured, as it's required to configure "
 "QR codes."
 msgstr ""
+"Під час створення нового рахунку-фактури відкрийте вкладку :guilabel:`Інша "
+"інформація` і переконайтеся, що налаштовано поле :guilabel:`Банк "
+"одержувача`. Це необхідно для налаштування QR-кодів."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:509
 msgid "Generate QR codes on POS Interface"
-msgstr ""
+msgstr "Генерування QR-кодів в інтерфейсі Точки продажу"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:511
 msgid ""
@@ -97143,18 +97232,23 @@ msgid ""
 "Configuration > Payment Methods` and click :guilabel:`New` to create a "
 "method called `QR Code`, and fill in the following fields:"
 msgstr ""
+"Щоб налаштувати оплату за допомогою QR-коду, перейдіть до "
+":menuselection:`Точка продажу > Налаштування > Способи оплати` та натисніть "
+":guilabel:`Новий`, щоб створити спосіб під назвою `QR-код`, і заповніть такі "
+"поля:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:515
 msgid ":guilabel:`Journal`: Assign the appropriate :guilabel:`Bank` journal."
-msgstr ""
+msgstr ":guilabel:`Журнал`: призначте відповідний журнал :guilabel:`Банк`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:516
 msgid ":guilabel:`Integration`: Select :guilabel:`Bank App (QR Code)`."
 msgstr ""
+":guilabel:`Інтеграція`: виберіть :guilabel:`Банківський застосунок (QR-код)`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:517
 msgid ":guilabel:`QR Code Format`: Choose :guilabel:`VietQR Code`."
-msgstr ""
+msgstr ":guilabel:`Формат QR-коду`: виберіть :guilabel:`Код VietQR`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:520
 msgid ""
@@ -97162,14 +97256,17 @@ msgid ""
 "and ensure the :guilabel:`QR Code` payment method is selected for the "
 "specific Point of Sale under the :guilabel:`Payment` section."
 msgstr ""
+"Перейдіть до :menuselection:`Точка продажу --> Конфігурація --> "
+"Налаштування` і переконайтеся, що метод оплати :guilabel:`QR-код` вибрано "
+"для потрібної точки продажу в розділі :guilabel:`Оплата`."
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:527
 msgid "Generate QR codes on eCommerce"
-msgstr ""
+msgstr "Генерування QR-кодів в електронній комерції"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:529
 msgid "To generate QR codes, follow these steps:"
-msgstr ""
+msgstr "Щоб згенерувати QR-коди, виконайте такі дії:"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:531
 msgid "Navigate to :menuselection:`Website --> Configuration --> Payments`."

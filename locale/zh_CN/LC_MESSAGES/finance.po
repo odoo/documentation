@@ -59,7 +59,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 14:38+0000\n"
+"PO-Revision-Date: 2026-11-20 20:29+0000\n"
 "Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-20-doc/finance/zh_Hans/>\n"
@@ -68,7 +68,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/finance.rst:5
 msgid "Finance"
@@ -22062,6 +22062,8 @@ msgid ""
 "your automation using other transaction details. Here are some business case "
 "examples:"
 msgstr ""
+"如果您的公司不使用数字科目代码（例如在美国），请将\\ :guilabel:`科目前缀`\\ "
+"字段留空，并使用其他交易明细来触发自动化。以下是一些业务场景示例："
 
 #: ../../export/content/applications/finance/accounting/reporting/analytic_accounting.rst:219
 msgid ""
@@ -22085,24 +22087,28 @@ msgid ""
 "Result: Whenever a vendor bill is entered for an item in that category, the "
 "costs are automatically split without requiring a GL account number."
 msgstr ""
+"结果：每当为该类别中的项目录入供应商账单时，系统会自动分摊成本，无需提供总账"
+"科目编号。"
 
 #: ../../export/content/applications/finance/accounting/reporting/analytic_accounting.rst:228
 msgid ""
 "You want to distribute shared cloud infrastructure costs across internal "
 "teams whenever a bill arrives from a specific vendor."
-msgstr ""
+msgstr "每当收到特定供应商的账单时，您希望将共享云基础设施成本分摊到各个内部团队。"
 
 #: ../../export/content/applications/finance/accounting/reporting/analytic_accounting.rst:231
 msgid ""
 "Setup: Leave :guilabel:`Accounts Prefixes` empty. Set :guilabel:`Partner` to "
 "`Amazon Web Services`."
 msgstr ""
+"设置：将\\ :guilabel:`科目前缀`\\ 留空。将\\ :guilabel:`合作伙伴`\\ 设为 "
+"`Amazon Web Services`。"
 
 #: ../../export/content/applications/finance/accounting/reporting/analytic_accounting.rst:233
 msgid ""
 ":guilabel:`Analytic Distribution`: Set `30% Customer Operations` and `70% "
 "Internal IT`."
-msgstr ""
+msgstr ":guilabel:`分析分配`：设置 `30% 客户运营` 和 `70% 内部 IT`。"
 
 #: ../../export/content/applications/finance/accounting/reporting/analytic_accounting.rst:234
 msgid ""
@@ -54167,6 +54173,8 @@ msgid ""
 "manually <../accounting/customer_invoices>`, must contain the following data "
 "and, once validated, are sent to the SRI:"
 msgstr ""
+"客户发票作为\\ :doc:`通过销售订单或手动创建 <../accounting/customer_invoices>"
+"`\\ 的电子单据，必须包含以下数据，验证后将发送至 SRI："
 
 #: ../../export/content/applications/finance/fiscal_localizations/ecuador.rst:443
 msgid ""
@@ -61016,7 +61024,7 @@ msgstr "印度集成部分"
 msgid ""
 ":guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <india/tds-tcs>` "
 "functionality."
-msgstr ""
+msgstr ":guilabel:`TDS/TCS`：激活此项以启用\\ :ref:`TDS/TCS <india/tds-tcs>`\\ 功能。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:89
 msgid ""
@@ -62188,7 +62196,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:647
 msgid "TDS and TCS"
-msgstr ""
+msgstr "TDS 和 TCS"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:649
 msgid ""
@@ -62199,6 +62207,10 @@ msgid ""
 "button, either as soon as the invoice or bill is confirmed or together with "
 "the payment. TDS can also be deducted on advance payments."
 msgstr ""
+":abbr:`TDS (源泉扣缴税)`\\ 和\\ :abbr:`TCS (源泉代收税)`\\ 是印度所得税法规定"
+"的税务条款。TCS 由卖方在发票金额之外另行收取，而 TDS 则由付款方从应付金额中扣"
+"除。在 Odoo 中，您可以使用\\ :guilabel:`付款`\\ 按钮记录 TDS，既可在确认发票"
+"或账单时立即记录，也可随付款一并记录。此外，预付款也可扣除 TDS。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:659
 msgid ""
@@ -62218,7 +62230,7 @@ msgstr ""
 msgid ""
 "The TAN is issued by the Income Tax Department and must be quoted on all TDS/"
 "TCS returns, challans, and certificates."
-msgstr ""
+msgstr "TAN 由所得税部门签发，必须在所有 TDS/TCS 纳税申报表、缴款单和证明中注明。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:668
 msgid ""
@@ -62231,13 +62243,15 @@ msgstr ""
 msgid ""
 ":guilabel:`TDS Journal`: Select the miscellaneous journal used to record TDS "
 "entries."
-msgstr ""
+msgstr ":guilabel:`TDS 日记账`：选择用于记录 TDS 分录的杂项日记账。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:672
 msgid ""
 ":guilabel:`TDS Control Account`: Select the account used on TDS base lines. "
 "By default, the :guilabel:`TDS (Withholding Control)` account is used."
 msgstr ""
+":guilabel:`TDS 控制科目`：选择 TDS 税基行使用的科目。默认情况下，使用\\ "
+":guilabel:`TDS（代扣控制）`\\ 科目。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:682
 msgid ""
@@ -62245,6 +62259,9 @@ msgid ""
 "To view them, go to :menuselection:`Accounting --> Configuration --> Taxes` "
 "and search for `TDS` or `TCS`. Open a tax to review the following options:"
 msgstr ""
+"TDS 和 TCS 税项已根据《所得税法》各章节预先配置。要查看这些税项，请前往\\ "
+":menuselection:`会计 --> 配置 --> 税项`\\ 并搜索 `TDS` 或 `TCS`。打开任一税项"
+"即可查看以下选项："
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:686
 msgid ""
@@ -62252,6 +62269,8 @@ msgid ""
 "affect the amount due of the invoice or bill. Instead, it is deducted using "
 "the :guilabel:`Pay` button."
 msgstr ""
+":guilabel:`预扣`\\ （在 TDS 税项上启用）：预扣税不会影响发票或账单的应付金额"
+"，而是通过\\ :guilabel:`付款`\\ 按钮扣除。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:688
 msgid ""
@@ -62259,6 +62278,8 @@ msgid ""
 "available on TDS purchase taxes): Select a sequence to automatically number "
 "the TDS lines when TDS is deducted."
 msgstr ""
+":guilabel:`TDS 序列`（位于\\ :guilabel:`高级选项`\\ 选项卡中，仅适用于 TDS 采"
+"购税）：选择一个序列，以便在扣除 TDS 时自动为 TDS 明细行编号。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:691
 msgid ""
@@ -62278,6 +62299,8 @@ msgid ""
 "TCS is computed on the amount including GST. Disabled on TDS taxes, so that "
 "TDS is computed on the amount excluding GST."
 msgstr ""
+":guilabel:`受先前税款影响的税基`：对 TCS 税启用，以便按含 GST 的金额计算 TCS"
+"。对 TDS 税禁用，以便按不含 GST 的金额计算 TDS。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:700
 msgid ""
@@ -62293,7 +62316,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:708
 msgid "Apply TCS on customer invoices"
-msgstr ""
+msgstr "在客户发票上应用 TCS"
 
 #: ../../export/content/applications/finance/fiscal_localizations/india.rst:710
 msgid ""
@@ -68287,7 +68310,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:172
 msgid ":guilabel:`Tax ID`: enter `IVD920810GU2`"
-msgstr ""
+msgstr ":guilabel:`税号`：输入 `IVD920810GU2`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:174
 msgid ""
@@ -68295,6 +68318,9 @@ msgid ""
 "the :guilabel:`MX Electronic invoicing` section, select :guilabel:`General "
 "de Ley Personas Morales` in the :guilabel:`Fiscal Regime` field."
 msgstr ""
+"在\\ :menuselection:`会计 --> 配置 --> 设置`\\ 中，在\\ :guilabel:`墨西哥电子"
+"发票`\\ 部分下，选择\\ :guilabel:`General de Ley Personas Morales`\\ 作为\\ "
+":guilabel:`税收制度`\\ 字段的值。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:183
 msgid ""
@@ -68303,6 +68329,8 @@ msgid ""
 "except for the ZIP code. If an |RFC| is set on the branch, the branch "
 "information is used instead."
 msgstr ""
+"分支机构允许母公司管理多个品牌。从分支机构开具发票时，除邮政编码外，其余开票"
+"信息均取自母公司。如果为分支机构设置了\\ |RFC|，则改用分支机构的信息。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:187
 msgid ""
@@ -68310,12 +68338,14 @@ msgid ""
 "purposes. By default, the regime is inherited from the parent company; if a "
 "regime is explicitly set on the branch, the regime of that branch applies."
 msgstr ""
+"用于开票的每种税收制度也需要一个单独的分支机构。默认情况下，分支机构会继承母"
+"公司的税收制度；如果在分支机构上明确设置了税收制度，则适用该分支机构的制度。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:197
 msgid ""
 ":ref:`Install <general/install>` the **Contacts** app to access contact "
 "records."
-msgstr ""
+msgstr ":ref:`安装 <general/install>`\\ **联系人**\\ 应用以访问联系人记录。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:199
 msgid ""
@@ -68325,6 +68355,10 @@ msgid ""
 "code, :guilabel:`State`, and :guilabel:`Country`, as well as the |RFC| in "
 "the :guilabel:`Tax ID` field."
 msgstr ""
+"要创建可开具发票的联系人，请打开联系人应用并点击\\ :guilabel:`新建`。然后，输"
+"入联系人姓名和完整\\ :guilabel:`地址`，包括\\ :guilabel:`邮编`、:guilabel:`省"
+"份`\\ 和\\ :guilabel:`国家/地区`，以及将\\ |RFC|\\ 填入\\ :guilabel:`税号`\\ "
+"字段。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:204
 msgid ""
@@ -68332,6 +68366,9 @@ msgid ""
 "registered with the |SAT|. The :guilabel:`Fiscal Regime` must also be set in "
 "the :guilabel:`Sales & Purchase` tab."
 msgstr ""
+"与公司本身一样，所有联系人都必须拥有在\\ |SAT|\\ 注册的企业名称"
+"。:guilabel:`税务制度`\\ 也必须在\\ :guilabel:`销售与采购`\\ 选项卡中进行设置"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:208
 msgid ""
@@ -68415,13 +68452,15 @@ msgstr ""
 msgid ""
 "Local taxes are generated in a separate node of the XML file and are not "
 "validated by the |PAC|."
-msgstr ""
+msgstr "地方税在 XML 文件的单独节点中生成，且不由\\ |PAC|\\ 验证。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:261
 msgid ""
 "Quotas and custom formulas require the :guilabel:`Define Taxes as Python "
 "Code` module. See :ref:`Custom formula <taxes/computation/python-code>`."
 msgstr ""
+"定额和自定义公式需要\\ :guilabel:`将税项定义为 Python 代码`\\ 模块。请参阅\\ "
+":ref:`自定义公式 <taxes/computation/python-code>`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:267
 msgid "Tax object"
@@ -68431,13 +68470,13 @@ msgstr "征税对象"
 msgid ""
 "|CFDI| 4.0 requires the XML file to include a tax breakdown as specified by "
 "regulation. The XML file can include eight possible values:"
-msgstr ""
+msgstr "|CFDI| 4.0 要求 XML 文件按法规要求包含税费明细。XML 文件可包含八个可能的值："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:272
 msgid ""
 "`01`: No tax object. This value is automatically assigned if the invoice "
 "line does not include taxes."
-msgstr ""
+msgstr "`01`：非征税对象。如果发票明细行不包含税项，系统会自动分配此值。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:274
 msgid ""
@@ -68452,17 +68491,17 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:276
 msgid "`04`: Tax object, no tax applied. This value must be added manually."
-msgstr ""
+msgstr "`04`：应税对象，不适用税费。此值必须手动添加。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:277
 msgid "`05`: Tax object, VAT for PODEBI. This value must be added manually."
-msgstr ""
+msgstr "`05`：应税对象，PODEBI 增值税。此值必须手动添加。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:278
 msgid ""
 "`06`: VAT object, no VAT forwarded. Select this value when there is an ISR "
 "withholding and no VAT tax."
-msgstr ""
+msgstr "`06`：增值税对象，未转嫁增值税。当存在 ISR 预扣税且无增值税时，请选择此值。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:280
 msgid ""
@@ -68526,6 +68565,8 @@ msgid ""
 "invoicing portal <l10n/mx/pos/portal>`, the customer decides whether to "
 "include the |IEPS| breakdown."
 msgstr ""
+"使用\\ :ref:`电子商务开票 <l10n/mx/ecommerce>`\\ 或\\ :ref:`自助开票门户 "
+"<l10n/mx/pos/portal>`\\ 时，客户可自行决定是否包含\\ |IEPS|\\ 明细。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:322
 msgid "Other tax configurations"
@@ -68541,6 +68582,11 @@ msgid ""
 "Efectivo` is used in the journal entry for tax reclassifications. **Do not "
 "delete this account.**"
 msgstr ""
+"墨西哥本地化采用\\ :doc:`收付实现制税费 <../accounting/taxes/cash_basis>`。登"
+"记付款后，税款会从\\ *收付实现制过渡科目*\\ 转入相关税费记录的\\ "
+":guilabel:`定义`\\ 选项卡中设置的科目。税基科目\\ :guilabel:`899.01.99 Base "
+"Imponible de Impuestos en Base a Flujo de Efectivo`\\ 用于税费重分类的日记账"
+"分录。**请勿删除此科目。**"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:333
 msgid "Withholdings"
@@ -68550,7 +68596,7 @@ msgstr "预扣税"
 msgid ""
 "By default, withholdings are included using special distributions to "
 "allocate VAT."
-msgstr ""
+msgstr "默认情况下，系统会使用特殊分配方式包含预扣税，以分摊增值税。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:337
 msgid ""
@@ -68559,6 +68605,9 @@ msgid ""
 "positions <../accounting/taxes/fiscal_positions>` is recommended so that the "
 "cash basis entry splits the distribution properly."
 msgstr ""
+"登记供应商账单时，请同时包含预扣税及其对应的增值税，以确保账务准确。建议使"
+"用\\ :doc:`财务状况 <../accounting/taxes/fiscal_positions>`，以便收付实现制分"
+"录能够正确拆分分配比例。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:342
 msgid ""
@@ -68566,6 +68615,8 @@ msgid ""
 "corresponds to a `16% VAT 2/3 H`. Both taxes must be applied together to "
 "reflect the accurate accounting."
 msgstr ""
+"对于金额为\\ `10000 MXN`\\ 的租赁供应商账单，`10.67%`\\ 的租赁预扣税对应\\ "
+"`16% VAT 2/3 H`。这两种税费必须同时应用，才能准确反映账务情况。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:345
 msgid "Cash basis entry with the VAT split between paid and due."
@@ -68702,6 +68753,8 @@ msgid ""
 "Set the :guilabel:`Certificate scope` to :guilabel:`CFDI (CSD)` for a "
 "digital seal certificate, or to :guilabel:`E Firma (FIEL)` for an e.firma."
 msgstr ""
+"如果是数字印章证书，请将\\ :guilabel:`证书范围`\\ 设为\\ :guilabel:`CFDI "
+"(CSD)`；如果是 e.firma，请设为\\ :guilabel:`E Firma (FIEL)`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:421
 msgid ""
@@ -68743,13 +68796,15 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:440
 msgid "Password: `12345678a`"
-msgstr ""
+msgstr "密码：`12345678a`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:452
 msgid ""
 "The invoicing process is based on version 4.0 of the |SAT|'s `Annex 20 "
 "<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_."
 msgstr ""
+"开票流程基于\\ |SAT|\\ 的\\ `附件 20 <http://omawww.sat.gob.mx/"
+"tramitesyservicios/Paginas/anexo_20.htm>`_\\ 4.0 版本。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:460
 msgid ""
@@ -68757,6 +68812,8 @@ msgid ""
 "customer_invoices>`. The document can still be modified while it is in "
 "draft. Some fields automatically use values from the sales order or contact."
 msgstr ""
+"要开始开票，请\\ :doc:`创建客户发票 <../accounting/customer_invoices>`。单据"
+"在草稿状态下仍可修改。部分字段会自动使用销售订单或联系人中的值。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:464
 msgid "Review the following fields:"
@@ -68814,6 +68871,9 @@ msgid ""
 "the :guilabel:`Send` window, enable the :guilabel:`CFDI` checkbox, and "
 "click :guilabel:`Send` to submit it to the |PAC|."
 msgstr ""
+"确认客户发票后，点击\\ :guilabel:`发送`。在\\ :guilabel:`发送`\\ 窗口中，勾"
+"选\\ :guilabel:`CFDI`\\ 复选框，然后点击\\ :guilabel:`发送`\\ 将其提交至\\ "
+"|PAC|。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:488
 msgid ""
@@ -68821,6 +68881,9 @@ msgid ""
 "field appears on the document, and the XML file is displayed both in "
 "the :guilabel:`CFDI` tab and as an attachment in the chatter."
 msgstr ""
+"一旦\\ |PAC|\\ 返回已签名的单据，单据上就会显示\\ :guilabel:`财政编号`\\ 字段"
+"，同时 XML 文件也会显示在\\ :guilabel:`CFDI`\\ 选项卡中，并作为附件显示在沟通"
+"栏中。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:493
 msgid ""
@@ -68828,27 +68891,33 @@ msgid ""
 "the :guilabel:`by Email` and :guilabel:`CFDI` checkboxes send the XML and "
 "PDF files together."
 msgstr ""
+"如果客户联系人记录中包含电子邮件地址，同时勾选\\ :guilabel:`通过电子邮件`\\ "
+"和\\ :guilabel:`CFDI`\\ 复选框将一并发送 XML 和 PDF 文件。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:496
 msgid ""
 ":ref:`To download the PDF file locally <l10n/mx/printed-representation>`, "
 "click :guilabel:`Print`."
 msgstr ""
+":ref:`要将 PDF 文件下载到本地 <l10n/mx/printed-representation>`，请点击\\ "
+":guilabel:`打印`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:499
 msgid "To download the PDF file locally, click :guilabel:`Print`."
-msgstr ""
+msgstr "要将 PDF 文件下载到本地，请点击\\ :guilabel:`打印`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:502
 msgid ""
 "Clicking :guilabel:`Update SAT` refreshes the :guilabel:`SAT status` field, "
 "which confirms whether the XML file is :guilabel:`Validated` with the |SAT|."
 msgstr ""
+"点击\\ :guilabel:`更新 SAT`\\ 会刷新\\ :guilabel:`SAT 状态`\\ 字段，以确认 "
+"XML 文件是否显示为\\ :guilabel:`已验证`（在\\ |SAT|\\ 中）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:505
 msgid ""
 "In a testing environment, the :guilabel:`Not Found` message commonly appears."
-msgstr ""
+msgstr "在测试环境中，通常会显示\\ :guilabel:`未找到`\\ 消息。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:508
 msgid ""
@@ -69482,6 +69551,8 @@ msgid ""
 "On the newly created transaction line, click the :icon:`fa-ellipsis-v` "
 "(:guilabel:`vertical ellipsis`) icon and select :guilabel:`Reconcile`."
 msgstr ""
+"在新创建的交易行上，点击\\ :icon:`fa-ellipsis-v`\\ （\\ :guilabel:`垂直省略"
+"号`\\ ）图标，然后选择\\ :guilabel:`核销`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:824
 msgid ""
@@ -69649,6 +69720,10 @@ msgid ""
 "Invoice` to create a new draft invoice. This new draft invoice replaces the "
 "previous invoice, along with the related |CFDI|."
 msgstr ""
+"在\\ :guilabel:`请求取消 CFDI`\\ 弹窗中，选择\\ :guilabel:`01 - 开具有误的单"
+"据（带关联单据）`\\ 作为\\ :guilabel:`原因`\\ 字段的选项，然后点击\\ "
+":guilabel:`创建替代发票`\\ 以创建新的草稿发票。该新草稿发票将替代之前的发票及"
+"其关联的\\ |CFDI|\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:907
 msgid ""
@@ -69668,6 +69743,10 @@ msgid ""
 "complete the cancellation; it **does not** mean that the cancellation reason "
 "was :guilabel:`04 - Nominative operation related to the global invoice`."
 msgstr ""
+"使用\\ :guilabel:`01 - 开具有误的发票（带关联单据）`\\ 取消原因时，\\ `04|`\\"
+" 前缀会出现在\\ :guilabel:`税务流水号`\\ 字段中。这是一个用于完成取消的内部前"
+"缀；它\\ **并非**\\ 意味着取消原因为\\ :guilabel:`04 - 与汇总发票相关的记名操"
+"作`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:921
 msgid "Cancellation reasons 02, 03, and 04"
@@ -69678,6 +69757,8 @@ msgid ""
 "In the :guilabel:`Request CFDI Cancellation` pop-up window, select the "
 "desired cancellation :guilabel:`Reason` and click :guilabel:`Confirm`."
 msgstr ""
+"在\\ :guilabel:`请求取消 CFDI`\\ 弹窗中，选择所需的取消\\ :guilabel:`原因`\\ "
+"，然后点击\\ :guilabel:`确认`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:926
 msgid ""
@@ -69685,6 +69766,8 @@ msgid ""
 "Replacement Invoice` button is replaced by a :guilabel:`Confirm` button that "
 "requests the cancellation immediately."
 msgstr ""
+"对于取消原因\\ `02`\\ 、\\ `03`\\ 和\\ `04`\\ ，\\ :guilabel:`创建替代发票`\\"
+" 按钮将被替换为\\ :guilabel:`确认`\\ 按钮，点击后将立即请求取消。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:929
 msgid ""
@@ -69692,16 +69775,20 @@ msgid ""
 "the :guilabel:`CFDI` tab, where both the current :guilabel:`State` "
 "and :guilabel:`Cancellation Reason` are available."
 msgstr ""
+"随后系统会在\\ :guilabel:`CFDI`\\ 选项卡中生成带有原因明细行的发票取消记录，"
+"您可在其中查看当前的\\ :guilabel:`状态`\\ 和\\ :guilabel:`取消原因`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:932
 msgid "Cancellation reason and state in the CFDI tab."
-msgstr ""
+msgstr "CFDI 选项卡中的取消原因和状态。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:936
 msgid ""
 "If the :guilabel:`SAT Status` goes back to :guilabel:`Validated`, it can be "
 "due to one of the following reasons:"
 msgstr ""
+"如果\\ :guilabel:`SAT 状态`\\ 恢复为\\ :guilabel:`已验证`\\ ，可能是由以下原"
+"因之一导致的："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:939
 msgid ""
@@ -69710,12 +69797,15 @@ msgid ""
 "another invoice linked through the :guilabel:`CFDI Origin` field or a "
 "payment complement. In that case, cancel the related document first."
 msgstr ""
+"在\\ `SAT 网站 <https://www.sat.gob.mx/home>`_\\ 上，该发票被标记为\\ *No "
+"Cancelable*\\ ，因为它有关联的有效单据，可能是通过\\ :guilabel:`CFDI 来源`\\ "
+"字段关联的另一张发票，也可能是付款补充凭证。在这种情况下，请先取消关联单据。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:943
 msgid ""
 "The cancellation request is still being processed by the |SAT|. In that "
 "case, wait a few minutes and try again."
-msgstr ""
+msgstr "取消请求仍在由\\ |SAT|\\ 处理中。在此情况下，请等待几分钟后再试。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:945
 msgid ""
@@ -69724,12 +69814,17 @@ msgid ""
 "servicios_disponibles.html>`_. This can take up to 72 hours. If the "
 "cancellation request is rejected, repeat the process."
 msgstr ""
+"最终客户仍需在其\\ `Buzón Tributario <http://omawww.sat.gob.mx/"
+"BuzonTributario/Paginas/servicios_disponibles.html>`_\\ 中拒绝或接受取消请求"
+"。这最多可能需要 72 小时。如果取消请求被拒绝，请重复此流程。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:950
 msgid ""
 "`Tool to validate the status of Mexican electronic documents (CFDI) <https://"
 "verificacfdi.facturaelectronica.sat.gob.mx/>`_"
 msgstr ""
+"`用于验证墨西哥电子单据（CFDI）状态的工具 <https://"
+"verificacfdi.facturaelectronica.sat.gob.mx/>`_"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:956
 msgid "Cancellation acknowledgment"
@@ -69741,6 +69836,8 @@ msgid ""
 "click :guilabel:`Print` on the corresponding cancellation line in "
 "the :guilabel:`CFDI` tab of the invoice form."
 msgstr ""
+"要在取消后打印\\ |PAC|\\ 关于\\ |CFDI|\\ 的取消回执，请点击\\ :guilabel:`打"
+"印`\\ ，该按钮位于发票表单\\ :guilabel:`CFDI`\\ 选项卡中的对应取消行上。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:961
 msgid ""
@@ -69748,6 +69845,8 @@ msgid ""
 "click :guilabel:`Update SAT` on the invoice form. When a payment is "
 "reviewed, the invoice status is updated accordingly."
 msgstr ""
+"要在 PDF 中包含当前的\\ :guilabel:`SAT 状态`\\ ，请点击发票表单上的\\ "
+":guilabel:`更新 SAT`\\ 。审核付款后，发票状态会相应更新。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:964
 msgid "Cancellation acknowledgment example."
@@ -69759,6 +69858,8 @@ msgid ""
 "successfully, but it is *not* definitive proof that the |CFDI| has been "
 "fully canceled."
 msgstr ""
+"取消确认回执仅证实取消请求已成功提交，但\\ *并非*\\ |CFDI|\\ 已完全取消的最终"
+"凭证。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:974
 msgid "Invoicing special use cases"
@@ -69779,11 +69880,11 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:984
 msgid "`01`: Nota de crédito"
-msgstr ""
+msgstr "`01`：贷项凭证"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:985
 msgid "`02`: Nota de débito de los documentos relacionados"
-msgstr ""
+msgstr "`02`：关联单据的借项凭证"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:986
 msgid "`03`: Devolución de mercancía sobre facturas o traslados previos"
@@ -69855,6 +69956,8 @@ msgid ""
 "Using separate :doc:`bank accounts for each currency <../accounting/bank/"
 "foreign_currency>` is highly recommended."
 msgstr ""
+"强烈建议单独设置\\ :doc:`各币种银行账户 <../accounting/bank/foreign_currency>"
+"`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1031
 msgid ""
@@ -69871,6 +69974,11 @@ msgid ""
 "negative lines are translated in the XML file as regular :doc:`discounts "
 "<../../sales/sales/products_prices/prices/pricing>`."
 msgstr ""
+"发送给\\ |PAC|\\ 的电子单据不能包含负数行，否则可能会触发错误。因此，在使用\\"
+" :doc:`礼品卡 <../../sales/sales/products_prices/ewallets_giftcards>`\\ 或\\ "
+":doc:`忠诚度计划 <../../sales/sales/products_prices/loyalty_discount>`\\ 时，"
+"产生的负数行在 XML 文件中会转换为常规的\\ :doc:`折扣 <../../sales/sales/"
+"products_prices/prices/pricing>`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1045
 msgid ""
@@ -69902,6 +70010,8 @@ msgid ""
 "a payment is received for a good or a service whose product, price, or both "
 "have not been fully determined."
 msgstr ""
+"预付款在墨西哥是一种常见做法。它主要用于收到针对某项商品或服务的付款，但该商"
+"品或服务的具体产品、价格或两者均尚未完全确定的情况。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1064
 msgid ""
@@ -70021,6 +70131,9 @@ msgid ""
 "operations and is added before the invoice is signed. Only a limited number "
 "of complements are available, and some are included by default."
 msgstr ""
+"附加信息（addenda）是添加到发票 XML 文件中的一段代码，用于提供超出法定要求的"
+"额外信息，在发票签名后添加。补充信息（complement）是用于申报特定税务操作的税"
+"务附加内容，在发票签名之前添加。可用的补充信息数量有限，其中部分为默认包含。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1136
 msgid ""
@@ -70035,6 +70148,10 @@ msgid ""
 "Complementos (MX)` and click :guilabel:`New` to enter the code to be "
 "injected. Fields beyond the standard ones may be required."
 msgstr ""
+"附加信息和补充信息都可以包含在 XML 文件中。要添加它们，请前往\\ "
+":menuselection:`会计 --> 配置 --> 附加信息与补充信息 (MX)`\\ ，点击\\ "
+":guilabel:`新建`\\ ，然后输入要注入的代码。可能需要填写标准字段之外的其他字段"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1144
 msgid ""
@@ -70058,7 +70175,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1155
 msgid "More than one node can be added per contact or per invoice."
-msgstr ""
+msgstr "每个联系人或每张发票都可以添加多个节点。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1160
 msgid "CFDI to public"
@@ -70070,6 +70187,8 @@ msgid ""
 "by an invoice. If the customer does not require an invoice or has no |RFC|, "
 "a *CFDI to public*, also known as a nominative invoice, must be created."
 msgstr ""
+"墨西哥政府要求所销售的任何商品或服务都必须有发票作为凭证。如果客户不需要发票"
+"或没有\\ |RFC|\\ ，则必须创建\\ *面向公众的 CFDI*\\ （也称为记名发票）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1166
 msgid ""
@@ -70086,7 +70205,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1170
 msgid ":guilabel:`ZIP` code: the ZIP code of the company"
-msgstr ""
+msgstr ":guilabel:`邮编`\\ 代码：公司的邮政编码"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1171
 msgid ":guilabel:`Usage`: `S01 - Without Fiscal Effects`"
@@ -70196,6 +70315,10 @@ msgid ""
 "select all the posted invoices again and, from the same :icon:`fa-"
 "cog` :guilabel:`Actions` menu, select :guilabel:`Create Global Invoice`."
 msgstr ""
+"在显示的草稿发票列表中选中所有发票，点击\\ :icon:`fa-cog` :guilabel:`操作`\\ "
+"，然后选择\\ :guilabel:`确认分录`\\ 。接着，再次选中所有已过账发票，从同一"
+"个\\ :icon:`fa-cog` :guilabel:`操作`\\ 菜单中选择\\ :guilabel:`创建全局发"
+"票`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1243
 msgid ""
@@ -70216,11 +70339,11 @@ msgstr ""
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1252
 msgid ""
 "Months 1 to 12: standard month number, e.g., January is 1 and February is 2"
-msgstr ""
+msgstr "1 至 12 月：标准月份数字，例如 1 月为 1，2 月为 2"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1253
 msgid "January and February: 13"
-msgstr ""
+msgstr "1 月和 2 月：13"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1254
 msgid "March and April: 14"
@@ -70240,7 +70363,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1258
 msgid "November and December: 18"
-msgstr ""
+msgstr "11 月和 12 月：18"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1260
 msgid ""
@@ -70248,12 +70371,14 @@ msgid ""
 "information is already available in the database and is not meant to be seen "
 "by customers."
 msgstr ""
+"通过这种方式创建的全局发票不包含 PDF 附件，因为其信息已存储在数据库中，且无需"
+"展示给客户。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1264
 msgid ""
 "Selecting the date 01/12/2026 with the monthly periodicity declares month 12 "
 "and year 2026."
-msgstr ""
+msgstr "选择日期 01/12/2026 并设置按月周期，将申报 2026 年 12 月。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1265
 msgid ""
@@ -70265,13 +70390,15 @@ msgstr ""
 msgid ""
 "Selecting the date 01/12/2026 with the daily periodicity declares month 12 "
 "and year 2026."
-msgstr ""
+msgstr "选择日期 01/12/2026 并设置按日周期，将申报 2026 年 12 月。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1269
 msgid ""
 "Click :guilabel:`Show` in the :guilabel:`CFDI` tab to display the list of "
 "all related invoices."
 msgstr ""
+"点击\\ :guilabel:`显示`\\ （在\\ :guilabel:`CFDI`\\ 选项卡中），即可显示所有"
+"相关发票的列表。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1270
 msgid ""
@@ -70290,6 +70417,9 @@ msgid ""
 "accounting records and entries electronically, and to submit accounting "
 "information monthly through the |SAT| website."
 msgstr ""
+"在墨西哥，\\ `电子会计 <https://www.sat.gob.mx/aplicacion/42150/envia-tu-"
+"contabilidad-electronica>`_\\ 是指以电子方式保存会计记录和分录，并每月通过\\ "
+"|SAT|\\ 网站提交会计信息的义务。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1283
 msgid "It consists of three main XML files:"
@@ -70297,13 +70427,13 @@ msgstr "它由三个主要 XML 文件组成："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1285
 msgid "The updated list of the chart of accounts currently in use"
-msgstr ""
+msgstr "当前使用的最新科目表列表"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1286
 msgid ""
 "A monthly trial balance, plus a closing entry report, also known as the "
 "*trial balance month 13*"
-msgstr ""
+msgstr "月度试算平衡表及期末结账分录报表（也称为\\ *第 13 月试算平衡表*\\ ）"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1287
 msgid ""
@@ -70325,6 +70455,8 @@ msgid ""
 "In addition, the |DIOT| can be generated: a report of the vendors' journal "
 "entries involving IVA taxes, which can be exported as a TXT file."
 msgstr ""
+"此外，还可以生成\\ |DIOT|\\ ：这是一份包含供应商涉及 IVA 税费的日记账分录的报"
+"表，可导出为 TXT 文件。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1297
 msgid "The following modules must be installed to use these reports:"
@@ -70377,19 +70509,23 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1324
 msgid "`102.01.99`, `401.01.001`, and `401.01.001.16` are valid account codes."
-msgstr ""
+msgstr "`102.01.99`、`401.01.001`\\ 和\\ `401.01.001.16`\\ 是有效的科目代码。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1326
 msgid ""
 "The structure is validated when a new account is created "
 "in :menuselection:`Accounting --> Configuration --> Chart of Accounts`."
 msgstr ""
+"在\\ :menuselection:`会计 --> 配置 --> 会计科目表`\\ 中创建新科目时，系统会验"
+"证该结构。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1329
 msgid ""
 "Once all the accounts are created, make sure the correct :guilabel:`Tags` "
 "are added, as they mark the nature of the account."
 msgstr ""
+"创建所有科目后，请确保添加正确的\\ :guilabel:`标签`\\ ，因为它们用于标明科目"
+"的性质。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1332
 msgid ""
@@ -70398,6 +70534,9 @@ msgid ""
 "for the reports. Accounts without a parent are level 1 accounts, accounts "
 "below them are level 2, and so on."
 msgstr ""
+"由于科目存在基于上级科目的层级结构，请为每个科目设置适当的\\ :guilabel:`上级"
+"科目`\\ ，以便为报表建立层级。没有上级科目的为 1 级科目，其下属科目为 2 级，"
+"依此类推。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1337
 msgid ""
@@ -70459,6 +70598,8 @@ msgid ""
 "The *month 13* report is a closing balance sheet that shows the adjustments "
 "or movements made in the accounting to close the year."
 msgstr ""
+"*第 13 个月*\\ 报告是一份期末资产负债表，显示了会计中为年终结账所做的调整或变"
+"动。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1372
 msgid ""
@@ -70466,6 +70607,8 @@ msgid ""
 "> Journal Entries` and create a new entry. Add all the amounts to modify and "
 "balance the debits and credits for each one."
 msgstr ""
+"要生成此 XML 文件，请前往\\ :menuselection:`会计 --> 会计 --> 日记账分录`\\ "
+"并创建一条新分录。添加所有要修改的金额，并平衡每项金额的借方和贷方。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1375
 msgid ""
@@ -70487,7 +70630,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1391
 msgid "The report can be filtered by period or by journal."
-msgstr ""
+msgstr "该报告可按期间或按日记账进行筛选。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1393
 msgid ""
@@ -70496,6 +70639,9 @@ msgid ""
 "click :guilabel:`XML (Polizas)`. Then, select one of the "
 "four :guilabel:`Export` types:"
 msgstr ""
+"要创建 XML 文件，请前往\\ :menuselection:`会计 --> 报告 --> 总账`\\ ，点击\\ "
+":icon:`fa-cog`\\ （\\ :guilabel:`齿轮`\\ ）图标，然后点击\\ :guilabel:`XML "
+"(Polizas)`\\ 。接着，选择四种\\ :guilabel:`导出`\\ 类型之一："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1397
 msgid ":guilabel:`Tax audit`"
@@ -70520,6 +70666,10 @@ msgid ""
 "goods` and :guilabel:`Compensation`, add the :guilabel:`Process Number`, "
 "also provided by the |SAT|."
 msgstr ""
+"对于\\ :guilabel:`税务审计`\\ 和\\ :guilabel:`审计认证`\\ ，请添加\\ "
+":guilabel:`指令编号`\\ ，该编号由\\ |SAT|\\ 提供。对于\\ :guilabel:`退货`\\ "
+"和\\ :guilabel:`补偿`\\ ，请添加\\ :guilabel:`流程编号`\\ ，该编号同样由\\ "
+"|SAT|\\ 提供。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1407
 msgid ""
@@ -70554,6 +70704,9 @@ msgid ""
 "The :guilabel:`VAT`, :guilabel:`Country`, and :guilabel:`Type of operation` "
 "fields are mandatory for all vendors."
 msgstr ""
+"交易文件包含供应商账单上登记的付款总额，并按相应的增值税（IVA）类型分列。对于"
+"所有供应商，:guilabel:`增值税`、:guilabel:`国家/地区`和\\ :guilabel:`操作类"
+"型`\\ 字段均为必填项。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1426
 msgid ""
@@ -70562,6 +70715,9 @@ msgid ""
 "desired month, click the :icon:`fa-cog` (:guilabel:`gear`) icon, and "
 "select :guilabel:`DIOT (txt)`."
 msgstr ""
+"要将\\ |DIOT|\\ 报告下载为 TXT 文件，请前往\\ :menuselection:`会计 --> 报"
+"告 --> 税务报告`。选择所需月份，点击\\ :icon:`fa-cog`（:guilabel:`齿轮`）图标"
+"，然后选择\\ :guilabel:`DIOT (txt)`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1430
 msgid ""
@@ -70570,6 +70726,9 @@ msgid ""
 "base name go on the base of the tax. All the lines of a VAT tax **must** "
 "contain at least one tax grid."
 msgstr ""
+"在数据库中创建新税项时，有两种类型的标签可用。包含\\ `tax`\\ 的标签用于税额分"
+"配，而带有基数名称的标签用于计税基数。增值税的所有明细行都\\ **必须**\\ 至少"
+"包含一个税务网格。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1435
 msgid ""
@@ -70577,6 +70736,8 @@ msgid ""
 "the :guilabel:`Accounting` tab of each vendor to prevent validation errors. "
 "Make sure foreign customers have their :guilabel:`Country` set."
 msgstr ""
+"每个供应商的\\ :guilabel:`操作类型`\\ 字段都必须在\\ :guilabel:`会计`\\ 标签"
+"页中填写，以防止验证错误。请确保已为国外客户设置\\ :guilabel:`国家/地区`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1439
 msgid ""
@@ -70584,6 +70745,8 @@ msgid ""
 "part of the global operations under the generic VAT `XAXX010101000` in the "
 "final TXT file."
 msgstr ""
+"选择\\ :guilabel:`87 - 汇总业务`\\ 会将属于汇总业务的所有供应商合并到最终 "
+"TXT 文件中的通用增值税号\\ `XAXX010101000`\\ 下。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1445
 msgid "Accounting reports"
@@ -70601,7 +70764,7 @@ msgid ""
 "This report is based on the NIF B-6 standard and is divided into assets, "
 "liabilities, and equity, which reflect the current financial state of the "
 "company."
-msgstr ""
+msgstr "该报告基于 NIF B-6 标准，分为资产、负债和股本，反映公司当前的财务状况。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1463
 msgid ""
@@ -70609,6 +70772,8 @@ msgid ""
 "operating expenses, comprehensive financial results (RIF), and taxes, which "
 "help identify the net profit or the financial position of a company."
 msgstr ""
+"该报告基于 NIF B-3 标准，分为收入、营业费用、综合财务结果（RIF）和税项，有助"
+"于确定公司的净利润或财务状况。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1470
 msgid "Foreign trade"
@@ -70621,6 +70786,9 @@ msgid ""
 "to the `SAT regulations <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/"
 "complemento_comercio_exterior.htm>`_, such as:"
 msgstr ""
+"对外贸易是常规发票的补充信息，根据\\ `SAT 法规 <http://omawww.sat.gob.mx/"
+"tramitesyservicios/Paginas/complemento_comercio_exterior.htm>`_\\ ，它会在开"
+"具给境外客户的发票的 XML 和 PDF 文件中添加相关数值，例如："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1476
 msgid "The specific address of the receiver and of the sender"
@@ -70817,6 +70985,9 @@ msgid ""
 "create a :doc:`pricelist <../../sales/sales/products_prices/prices/pricing>` "
 "in the foreign currency."
 msgstr ""
+"外贸发票需要将产品价格换算为外币（例如美元）。因此，:ref:`必须启用多币种和自"
+"动汇率 <l10n/mx/multicurrency>`。要换算产品价格，请创建一个外币\\ :doc:`价格"
+"表 <../../sales/sales/products_prices/prices/pricing>`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1574
 msgid ""
@@ -70832,12 +71003,16 @@ msgid ""
 "to get the expected rate. Add the rate manually to the day prior if it is "
 "needed sooner."
 msgstr ""
+"汇率存在一天的延迟，因此新数据库需要两天时间才能获取预期汇率。如果急需使用，"
+"请手动将汇率添加到前一天。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1582
 msgid ""
 "Finally, confirm the invoice as a regular invoice and click :guilabel:`Send` "
 "to sign it via |CFDI|."
 msgstr ""
+"最后，将其作为常规发票确认，并点击\\ :guilabel:`发送`\\ 以通过\\ |CFDI|\\ 进"
+"行签署。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1587
 msgid "Invoicing services"
@@ -70847,13 +71022,13 @@ msgstr "服务开票"
 msgid ""
 "Services and merchandise can be invoiced together on the same invoice if the "
 "service is set up correctly. To do so, proceed as follows:"
-msgstr ""
+msgstr "只要服务设置正确，服务和商品就可以开具在同一张发票上。具体操作如下："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1592
 msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Products` and open the "
 "relevant service form."
-msgstr ""
+msgstr "前往\\ :menuselection:`会计 --> 客户 --> 产品`\\ 并打开相关的服务表单。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1593
 msgid ""
@@ -70861,18 +71036,23 @@ msgid ""
 "click the :icon:`east` (:guilabel:`internal link`) icon of "
 "the :guilabel:`UMT Aduana` field."
 msgstr ""
+"在\\ :guilabel:`会计`\\ 选项卡的\\ :guilabel:`UNSPSC`\\ 部分下，点击\\ "
+":icon:`east`\\ （\\ :guilabel:`内部链接`\\ ）图标（位于\\ :guilabel:`UMT "
+"Aduana`\\ 字段中）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1595
 msgid ""
 "Verify that either the :guilabel:`UNSPSC Category` is set to :guilabel:`E48 "
 "service unit` or the :guilabel:`Customs code` is set to `99`."
 msgstr ""
+"请确认\\ :guilabel:`UNSPSC 类别`\\ 已设置为\\ :guilabel:`E48 服务单位`\\ ，"
+"或\\ :guilabel:`海关代码`\\ 已设置为\\ `99`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1598
 msgid ""
 "Invoicing with either of these codes sets the service price to `0` for "
 "customs declarations."
-msgstr ""
+msgstr "使用上述任一代码开具发票时，报关时的服务价格将设为\\ `0`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1605
 msgid ""
@@ -70882,6 +71062,9 @@ msgid ""
 "receipt tickets that enable *self-invoicing* through a dedicated portal, as "
 "well as global invoices."
 msgstr ""
+"墨西哥本地化的\\ :doc:`POS <../../sales/point_of_sale>`\\ 适配功能支持直接从 "
+"POS 收银台创建符合\\ |SAT|\\ 要求的发票。它还支持创建可通过专用门户进行\\ *自"
+"助开票*\\ 的小票，以及汇总发票。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1613
 msgid "Point of sale flow"
@@ -70895,6 +71078,9 @@ msgid ""
 "invoicing account` to handle the accounting of the invoices created from the "
 "self-invoicing portal."
 msgstr ""
+"除了标准的\\ :ref:`POS 配置 <pos/use/settings>`\\ 之外，墨西哥本地化还要求为"
+"每种付款方式配置正确的\\ :guilabel:`付款方式`\\ 和\\ :guilabel:`重新开票科"
+"目`\\ ，以处理通过自助开票门户创建的发票的会计核算。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1621
 msgid ""
@@ -70902,12 +71088,14 @@ msgid ""
 "and debit card, and assigns the :guilabel:`402.04.01 Re-invoicing` account "
 "as the default re-invoicing account."
 msgstr ""
+"默认情况下，系统会为现金、信用卡和借记卡创建预配置的付款方式，并将\\ "
+":guilabel:`402.04.01 重新开票`\\ 科目指定为默认重新开票科目。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1624
 msgid ""
 "While :ref:`selling from the POS register <pos/use/sell>`, follow these "
 "steps:"
-msgstr ""
+msgstr "在\\ :ref:`通过 POS 收银台销售 <pos/use/sell>`\\ 时，请按照以下步骤操作："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1626
 msgid ""
@@ -70915,12 +71103,16 @@ msgid ""
 "invoicing information, such as the |RFC| or the :guilabel:`Fiscal Regime`, "
 "can be reviewed and modified directly within the session."
 msgstr ""
+"点击\\ :guilabel:`客户`\\ 以创建或选择客户。您可以直接在会话中查看和修改客户"
+"的发票信息，例如\\ |RFC|\\ 或\\ :guilabel:`税务制度`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1629
 msgid ""
 "Click :guilabel:`Payment`, then click :icon:`fa-file-text-"
 "o` :guilabel:`Invoice`."
 msgstr ""
+"点击\\ :guilabel:`付款`\\ ，然后点击\\ :icon:`fa-file-text-o` :guilabel:`发"
+"票`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1630
 msgid ""
@@ -70928,18 +71120,20 @@ msgid ""
 "the :guilabel:`Usage` and define whether the document is a CFDI to public. "
 "Then click :guilabel:`Ok`."
 msgstr ""
+"在\\ :guilabel:`其他发票信息`\\ 窗口中，选择\\ :guilabel:`用途`，并设置单据是"
+"否为面向公众的 CFDI。然后点击\\ :guilabel:`确定`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1632
 msgid ""
 "Select the payment method, then click :guilabel:`Validate` to complete the "
 "order."
-msgstr ""
+msgstr "选择付款方式，然后点击\\ :guilabel:`验证`\\ 以完成订单。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1633
 msgid ""
 "The PDF file is then downloaded, and the invoice and receipt are emailed to "
 "the final customer."
-msgstr ""
+msgstr "随后系统会下载 PDF 文件，并通过电子邮件将发票和收据发送给最终客户。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1636
 msgid ""
@@ -70948,34 +71142,44 @@ msgid ""
 "o` :guilabel:`Invoice` to open the same menu for the :guilabel:`Usage` "
 "and :guilabel:`CFDI to public` fields."
 msgstr ""
+"要从订单创建发票，请前往\\ :guilabel:`订单`\\ 菜单，选择订单，点击\\ "
+":guilabel:`加载订单`，再点击\\ :icon:`fa-file-text-o` :guilabel:`发票`\\ 以打"
+"开同一菜单，设置\\ :guilabel:`用途`\\ 和\\ :guilabel:`面向公众的 CFDI`\\ 字段"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1640
 msgid "Invoice configuration in the Point of Sale."
-msgstr ""
+msgstr "POS 中的发票配置。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1643
 msgid ""
 "To sign a credit note automatically, click :icon:`fa-file-text-"
 "o` :guilabel:`Invoice` when processing a :ref:`refund <pos/use/refund>`."
 msgstr ""
+"要自动签发贷项通知单，请点击\\ :icon:`fa-file-text-o` :guilabel:`发票`\\ （在"
+"处理\\ :ref:`退款 <pos/use/refund>`\\ 时）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1647
 msgid ""
 "Credit notes for returned products contain the relation type :guilabel:`03 - "
 "Devolución de mercancía sobre facturas o traslados previos`."
 msgstr ""
+"退货产品的贷项通知单包含关联类型\\ :guilabel:`03 - Devolución de mercancía "
+"sobre facturas o traslados previos`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1651
 msgid ""
 "In the Mexican localization, positive and negative lines cannot be mixed in "
 "a POS session."
-msgstr ""
+msgstr "在墨西哥本地化中，同一个 POS 会话中不能混用正数和负数明细行。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1652
 msgid ""
 "If a |SAT| validation error occurs, the customer receives a :doc:`pro-forma "
 "invoice <../../sales/sales/invoicing/proforma>` instead."
 msgstr ""
+"如果发生\\ |SAT|\\ 验证错误，客户将改为收到\\ :doc:`形式发票 <../../sales/"
+"sales/invoicing/proforma>`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1658
 msgid "Self-invoicing portal"
@@ -70986,6 +71190,8 @@ msgid ""
 "If the final customer does not request an invoice during checkout, a receipt "
 "with a QR code or URL can be provided instead. To do so, proceed as follows:"
 msgstr ""
+"如果最终客户在结账时未索取发票，可以改为提供带有二维码或网址的收据。为此，请"
+"按以下步骤操作："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1663
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
@@ -70993,7 +71199,7 @@ msgstr "前往 :menuselection:`销售点 --> 配置 --> 设置`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1664
 msgid "Select the point of sale."
-msgstr ""
+msgstr "选择 POS。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1665
 msgid "Scroll to the :guilabel:`Bills & Receipts` section."
@@ -71017,6 +71223,8 @@ msgid ""
 "can add their fiscal information, including the :guilabel:`Usage` "
 "and :guilabel:`Fiscal Regime`."
 msgstr ""
+"扫描二维码或访问该网址的客户将进入一个菜单，可在其中添加其税务信息，包括\\ "
+":guilabel:`用途`\\ 和\\ :guilabel:`税务制度`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1673
 msgid ""
@@ -71024,16 +71232,18 @@ msgid ""
 "to handle reversals of sales entries when invoices are requested, and serves "
 "as the sales account for new invoices."
 msgstr ""
+"在会话的日记账分录中，当客户请求开具发票时，所选的重新开票科目用于处理销售分"
+"录的冲销，并作为新发票的销售科目。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1677
 msgid ":ref:`Refunds in the Point of Sale <pos/use/refund>`"
-msgstr ""
+msgstr ":ref:`POS 中的退款 <pos/use/refund>`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1684
 msgid ""
 "As with regular sales orders, global invoices can be created from the POS "
 "register."
-msgstr ""
+msgstr "与常规销售订单一样，您也可以从 POS 收银台创建全局发票。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1686
 msgid "To do so, follow these steps:"
@@ -71042,31 +71252,37 @@ msgstr "为此，请按照以下步骤操作："
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1688
 msgid ""
 "Make sure no customer and no invoice option are selected in the payment menu."
-msgstr ""
+msgstr "确保在付款菜单中未选择任何客户和发票选项。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1689
 msgid ""
 "Click the :icon:`fa-bars` (:guilabel:`menu`) icon, then :icon:`fa-angle-"
 "left` :guilabel:`Backend`."
 msgstr ""
+"点击\\ :icon:`fa-bars`\\ （\\ :guilabel:`菜单`\\ ）图标，然后点击\\ "
+":icon:`fa-angle-left` :guilabel:`后台`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1691
 msgid ""
 "Go to :menuselection:`Point of Sale --> Orders --> Orders` and select all "
 "the orders to invoice."
 msgstr ""
+"前往\\ :menuselection:`POS --> 订单 --> 订单`，然后选择所有需要开具发票的订单"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1692
 msgid ""
 "Click :icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Create "
 "Global Invoice`."
-msgstr ""
+msgstr "点击\\ :icon:`fa-cog` :guilabel:`操作`，然后选择\\ :guilabel:`创建汇总发票`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1693
 msgid ""
 "As with :ref:`sales orders <l10n/mx/global-invoice/sales-flow>`, select "
 "appropriate :guilabel:`Periodicity`, then click :guilabel:`Create`."
 msgstr ""
+"与\\ :ref:`销售订单 <l10n/mx/global-invoice/sales-flow>`\\ 相同，选择合适的\\"
+" :guilabel:`周期`，然后点击\\ :guilabel:`创建`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1695
 msgid ""
@@ -71074,6 +71290,8 @@ msgid ""
 "from the :guilabel:`CFDI` tab, where the invoice can also be canceled if "
 "needed."
 msgstr ""
+"随后，每个选定订单都会附带一个 XML 文件。您可以在\\ :guilabel:`CFDI`\\ 选项卡"
+"中下载这些文件，如有需要，也可在此处取消发票。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1698
 msgid ""
@@ -71083,6 +71301,10 @@ msgid ""
 "to :guilabel:`Paid`, select the order, and "
 "click :icon:`picture_as_pdf` :guilabel:`Invoice`."
 msgstr ""
+"如果汇总发票上的某个订单必须开具给特定客户，仍然可以发送该发票。为此，请打开 "
+"POS 收银台并点击\\ :guilabel:`订单`。然后，将\\ :guilabel:`有效`\\ 筛选器更改"
+"为\\ :guilabel:`已付款`，选择该订单，然后点击\\ :icon:`picture_as_pdf` "
+":guilabel:`发票`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1704
 msgid ""
@@ -71090,10 +71312,12 @@ msgid ""
 "address. The address is determined by the one set on the POS invoice "
 "journal, so a warning is displayed when attempting to invoice two addresses."
 msgstr ""
+"与常规发票一样，汇总发票只能按实际地址分组。该地址由 POS 发票日记账中设置的地"
+"址决定，因此当尝试为两个地址开具发票时，系统会显示警告。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1709
 msgid ":ref:`Total rounding <l10n/mx/invoices/total-rounding>`"
-msgstr ""
+msgstr ":ref:`总计舍入 <l10n/mx/invoices/total-rounding>`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1716
 msgid ""
@@ -71104,6 +71328,10 @@ msgid ""
 "customers via email, and grants them access to their PDF files from the "
 "customer portal."
 msgstr ""
+"墨西哥本地化中的\\ :doc:`电子商务 <../../websites/ecommerce>`\\ 适配功能在结"
+"账流程中添加了一个步骤，用于创建符合\\ |SAT|\\ 要求的发票。它会收集客户的税务"
+"数据，在付款处理完成后自动签发发票，通过电子邮件将文件发送给客户，并允许客户"
+"从客户门户访问其 PDF 文件。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1724
 msgid "eCommerce flow"
@@ -71114,18 +71342,20 @@ msgid ""
 "During the checkout process, an :guilabel:`Invoicing info` step is added, "
 "which asks :guilabel:`Do you need an invoice?`:"
 msgstr ""
+"在结账流程中，系统会添加一个\\ :guilabel:`发票信息`\\ 步骤，询问\\ "
+":guilabel:`您需要发票吗？`："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1729
 msgid ""
 "Clicking :guilabel:`I don't need an invoice` skips the step and proceeds to "
 "the payment."
-msgstr ""
+msgstr "点击\\ :guilabel:`我不需要发票`\\ 将跳过此步骤并直接进入付款。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1730
 msgid ""
 "Clicking :guilabel:`Yes` displays the fiscal fields, which are all required "
 "to issue the invoice:"
-msgstr ""
+msgstr "点击\\ :guilabel:`是`\\ 会显示税务字段，这些字段都是开具发票所必需的："
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1732
 msgid ":guilabel:`RFC`"
@@ -71172,6 +71402,9 @@ msgid ""
 "if :guilabel:`Automatic Invoicing` is enabled; otherwise, the sales order "
 "keeps the information without being invoiced."
 msgstr ""
+"如果客户未申请发票，销售订单将标记为\\ :guilabel:`面向公众的 CFDI`。:ref:`面"
+"向公众的 CFDI <l10n/mx/cfdi>`\\ 发票仅在启用\\ :guilabel:`自动开具发票`\\ 时"
+"创建；否则，销售订单将保留该信息而不开具发票。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1759
 msgid ""
@@ -71433,6 +71666,10 @@ msgid ""
 "and serial numbers to make sure they are the desired values. Then, "
 "click :guilabel:`Validate` on the delivery order."
 msgstr ""
+"接下来，:ref:`创建销售订单 <sales/create_quotations/create-quotation>`\\ 并\\"
+" :ref:`确认订单 <sales/create_quotations/send-and-confirm>`。点击\\ "
+":guilabel:`交货`\\ 智能按钮，仔细检查分配的批次和序列号，确保其符合预期。然后"
+"，点击交货单上的\\ :guilabel:`验证`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1894
 msgid ""
@@ -71466,6 +71703,8 @@ msgid ""
 "XML and PDF files are generated with or without ground transport, and "
 "materials treated as *dangerous hazards* are processed."
 msgstr ""
+"无论是否使用陆路运输，系统都会生成 XML 和 PDF 文件，并处理被视为\\ *危险品*\\"
+" 的物料。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1917
 msgid ""
@@ -71534,6 +71773,9 @@ msgid ""
 "Destination` exceeds 30 km: Additional configurations for contacts, vehicle "
 "setups, and products are needed and are included in the XML and PDF files."
 msgstr ""
+"使用\\ :guilabel:`联邦运输`\\ （适用于\\ :guilabel:`到目的地的距离`\\ 超过 "
+"30 公里的情况）：您需要对联系人、车辆设置和产品进行额外配置，这些配置将包含"
+"在 XML 和 PDF 文件中。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/mexico.rst:1959
 msgid "Contacts and vehicles"
@@ -77890,11 +78132,11 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:20
 msgid ":guilabel:`Republic of Korea - Accounting`"
-msgstr ""
+msgstr ":guilabel:`韩国 - 会计`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:21
 msgid "`l10n_kr`"
-msgstr ""
+msgstr "`l10n_kr`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:22
 msgid ""
@@ -77905,25 +78147,25 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:25
 msgid ":guilabel:`Republic of Korea - Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`韩国 - 会计报表`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:26
 msgid "`l10n_kr_reports`"
-msgstr ""
+msgstr "`l10n_kr_reports`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:27
 msgid ""
 "This module includes the Balance Sheet and Profit and Loss reports, and the "
 "VAT returns for South Korea."
-msgstr ""
+msgstr "此模块包含韩国的资产负债表、损益表以及增值税申报表。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:29
 msgid ":guilabel:`Republic of Korea - Sales`"
-msgstr ""
+msgstr ":guilabel:`韩国 - 销售`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:30
 msgid "`l10n_kr_sale`"
-msgstr ""
+msgstr "`l10n_kr_sale`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:31
 msgid ""
@@ -77931,6 +78173,8 @@ msgid ""
 "proof_of_issuance>` to sales orders. It is installed automatically when "
 "the :guilabel:`Sales` app is installed."
 msgstr ""
+"此模块可将\\ :ref:`开具凭证 <localizations/south_korea/proof_of_issuance>`\\ "
+"添加到销售订单中。安装\\ :guilabel:`销售`\\ 应用时，系统会自动安装此模块。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:44
 msgid ""
@@ -78509,14 +78753,16 @@ msgid ""
 "To access the South Korean VAT reports, go to :menuselection:`Accounting --> "
 "Reporting --> Tax Report`, and select one of the following:"
 msgstr ""
+"要访问韩国增值税报告，请前往\\ :menuselection:`会计 --> 报告 --> 税务报告`，"
+"然后选择以下任一项："
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:328
 msgid ":guilabel:`VAT Report - General Taxpayer`"
-msgstr ""
+msgstr ":guilabel:`增值税报告 - 一般纳税人`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:329
 msgid ":guilabel:`VAT Report - Simplified Taxpayer`"
-msgstr ""
+msgstr ":guilabel:`增值税报告 - 简易纳税人`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:332
 msgid ""
@@ -78525,42 +78771,55 @@ msgid ""
 "computed must be entered manually by clicking the :icon:`fa-"
 "pencil` :guilabel:`(pencil)` icon next to the amount."
 msgstr ""
+"系统会根据应用于交易的税项和税表网格自动填写报告，并计算总计行。对于无法计算"
+"的金额，您必须点击金额旁边的\\ :icon:`fa-pencil` :guilabel:`（铅笔）`\\ 图标"
+"手动输入。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:336
 msgid ""
 "Each report has its own :doc:`tax return <../accounting/reporting/"
 "tax_returns>`:"
 msgstr ""
+"每份报告都有各自的\\ :doc:`纳税申报表 <../accounting/reporting/tax_returns>"
+"`："
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:338
 msgid ""
 ":guilabel:`VAT Return`: for general taxpayers, quarterly by default. It is "
 "active by default."
 msgstr ""
+":guilabel:`增值税申报表`：适用于一般纳税人，默认按季度申报。该项默认处于启用"
+"状态。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:339
 msgid ""
 ":guilabel:`VAT Return (Simplified Taxpayer)`: for simplified taxpayers, "
 "yearly by default. It is inactive by default."
 msgstr ""
+":guilabel:`增值税申报表（简易纳税人）`：适用于简易纳税人，默认按年申报。该项"
+"默认处于停用状态。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:342
 msgid ""
 "To use the simplified taxpayer return instead of the general one, follow "
 "these steps:"
-msgstr ""
+msgstr "如需使用简易纳税人申报表而非一般纳税人申报表，请按以下步骤操作："
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:345
 msgid ""
 "In the :guilabel:`Tax Return Periodicity` section, "
 "click :icon:`east` :guilabel:`Configure your tax returns`."
 msgstr ""
+"在\\ :guilabel:`纳税申报周期`\\ 部分，点击\\ :icon:`east` :guilabel:`配置您的"
+"纳税申报表`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:347
 msgid ""
 "Enable the :guilabel:`Active` toggle for :guilabel:`VAT Return (Simplified "
 "Taxpayer)` and disable the one for :guilabel:`VAT Return`."
 msgstr ""
+"启用\\ :guilabel:`有效`\\ 开关以用于\\ :guilabel:`增值税申报表（简易纳税人"
+"）`，并停用\\ :guilabel:`增值税申报表`\\ 的该开关。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:355
 msgid ""
@@ -78568,6 +78827,8 @@ msgid ""
 "provider is available for South Korea. It allows businesses to accept a wide "
 "variety of local payment methods online."
 msgstr ""
+"韩国地区支持使用\\ :doc:`Toss Payments <../payment_providers/tosspayments>`\\"
+" 支付服务商。它支持企业在线接受多种本地支付方式。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:363
 msgid ""
@@ -78577,6 +78838,10 @@ msgid ""
 "from the :ref:`contact <localizations/south_korea/contacts>`, and copied to "
 "the invoices created from the order."
 msgstr ""
+"安装“销售”应用后，\\ :ref:`开具凭证 <localizations/south_korea/"
+"proof_of_issuance>`\\ 字段也会显示在销售订单的\\ :guilabel:`其他信息`\\ 选项"
+"卡中。该字段默认从\\ :ref:`联系人 <localizations/south_korea/contacts>`\\ 自"
+"动填充，并复制到由该订单创建的发票中。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/south_korea.rst:368
 msgid ""
@@ -78584,6 +78849,9 @@ msgid ""
 "of issuance are invoiced separately, as they are reported in different boxes "
 "of the :ref:`VAT report <localizations/south_korea/accounting/tax_report>`."
 msgstr ""
+"一次为多个销售订单开具发票时，由于不同的开具凭证需在\\ :ref:`增值税报告 "
+"<localizations/south_korea/accounting/tax_report>`\\ 的不同栏目中申报，具有不"
+"同开具凭证的订单将分开开票。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/spain.rst:10
 msgid ""
@@ -86330,15 +86598,15 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:26
 msgid ":guilabel:`Vietnam - Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`越南 - 会计报告`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:27
 msgid "`l10n_vn_reports`"
-msgstr ""
+msgstr "`l10n_vn_reports`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:28
 msgid "Vietnam-specific financial and tax reports."
-msgstr ""
+msgstr "适用于越南的财务和税务报告。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:30
 msgid ""
@@ -86346,6 +86614,8 @@ msgid ""
 "install>` to use the :ref:`localizations/vietnam/sinvoice` integration for "
 "managing electronic documents:"
 msgstr ""
+"此外，必须先\\ :ref:`安装 <general/install>`\\ 以下模块，才能使用\\ "
+":ref:`localizations/vietnam/sinvoice`\\ 集成来管理电子文档："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:39
 msgid ":guilabel:`Vietnam - E-invoicing`"
@@ -86357,23 +86627,23 @@ msgstr "`l10n_vn_edi_viettel`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:41
 msgid "Integration module enabling the generation of electronic invoices."
-msgstr ""
+msgstr "用于启用电子发票生成的集成模块。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:42
 msgid ":guilabel:`Vietnam - POS E-invoicing`"
-msgstr ""
+msgstr ":guilabel:`越南 - POS 电子发票`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:43
 msgid "`l10n_vn_edi_viettel_pos`"
-msgstr ""
+msgstr "`l10n_vn_edi_viettel_pos`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:44
 msgid "For sending and receiving electronic invoices in Point of Sale."
-msgstr ""
+msgstr "用于在 POS 中发送和接收电子发票。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:45
 msgid ":guilabel:`Vietnam - Delivery E-invoicing`"
-msgstr ""
+msgstr ":guilabel:`越南 - 交货电子发票`"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:46
 msgid "`l10n_vn_edi_viettel_stock`"
@@ -86390,30 +86660,34 @@ msgid ""
 "reporting, and a predefined chart of accounts tailored to Vietnam's "
 "standards."
 msgstr ""
+"越南本地化套件可确保企业遵守越南财税和会计法规。它包含用于管理税费、电子发票"
+"、报表的工具，以及符合越南标准的预定义会计科目表。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:63
 msgid ""
 "The Vietnam localization package provides the following key features to "
 "ensure compliance with local fiscal and accounting regulations:"
-msgstr ""
+msgstr "越南本地化套件提供以下核心功能，以确保遵守当地财税和会计法规："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:66
 msgid ""
 ":ref:`localizations/vietnam/coa`: a predefined structure tailored to "
 "Vietnamese Accounting Standards (VAS)"
-msgstr ""
+msgstr ":ref:`localizations/vietnam/coa`：符合越南会计准则（VAS）的预定义结构"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:68
 msgid ""
 ":ref:`localizations/vietnam/reporting`: pre-configured Vietnamese Accounting "
 "reports"
-msgstr ""
+msgstr ":ref:`localizations/vietnam/reporting`：预配置的越南会计报表"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:69
 msgid ""
 ":ref:`localizations/vietnam/taxes`: pre-configured tax rates, including "
 "standard VAT, zero-rated, and exempt options"
 msgstr ""
+":ref:`localizations/vietnam/taxes`：预配置税率，包括标准增值税、零税率和免税"
+"选项"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:71
 msgid ""
@@ -86470,7 +86744,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:108
 msgid "Vietnamese version of reports"
-msgstr ""
+msgstr "越南版报告"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:116
 msgid ""
@@ -86479,30 +86753,35 @@ msgid ""
 "additional taxes, navigate to :menuselection:`Accounting --> Configuration --"
 "> Taxes`."
 msgstr ""
+":doc:`税率 <../accounting/taxes>`\\ 会在安装越南本地化模块时自动创建并配置。"
+"要管理现有税率或配置其他税率，请前往\\ :menuselection:`会计 --> 配置 --> 税"
+"率`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:120
 msgid ""
 "The following categories of taxes are installed and linked to the relevant "
 "accounts:"
-msgstr ""
+msgstr "系统会安装以下类别的税率，并将其关联至相关科目："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:122
 msgid ""
 "**Sales VAT Taxes**: 10%, 8%, 5%, 0%, VAT Exemption, and Not declared and "
 "pay VAT (KKKTT)."
-msgstr ""
+msgstr "**销售增值税**：10%、8%、5%、0%、免征增值税以及不申报和缴纳增值税（KKKTT）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:123
 msgid ""
 "**Local Purchase VAT Taxes**: 10%, 8%, 5%, 0%, and VAT Exemption, including "
 "deductible and non-deductible options."
-msgstr ""
+msgstr "**本地采购增值税**：10%、8%、5%、0% 和免征增值税，包括可抵扣和不可抵扣选项。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:125
 msgid ""
 "**Purchase VAT Taxes on imported goods**: 10%, 8%, 5%, 0%, and VAT "
 "Exemption, including deductible and non-deductible options."
 msgstr ""
+"**进口货物采购增值税**：10%、8%、5%、0% 及免征增值税，包含可抵扣与不可抵扣选"
+"项。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:129
 msgid ""
@@ -86511,6 +86790,8 @@ msgid ""
 "ensuring the unit price includes all costs and fees to form the correct "
 "taxable base."
 msgstr ""
+"请勿将进口增值税直接添加到原始采购订单或供应商账单中。请专门为进口增值税单独"
+"创建一张供应商账单，并确保单价包含所有成本和费用，以构成正确的计税基础。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:138
 msgid ""
@@ -86518,6 +86799,8 @@ msgid ""
 "to :menuselection:`Accounting --> Reporting --> Tax Report`. The following "
 "reports are available:"
 msgstr ""
+"要访问越南本地化套件提供的税务报表，请前往\\ :menuselection:`会计 --> 报"
+"告 --> 税务报表`。可用的报表如下："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:141
 msgid ""
@@ -86526,6 +86809,9 @@ msgid ""
 "method, including **Appendix 142**, which details the specific goods and "
 "services that are eligible for the statutory VAT rate reduction."
 msgstr ""
+":guilabel:`税务申报表 - 01/GTGT (VN)`：适用于从事生产经营活动并采用抵扣法计税"
+"的纳税人，其中包含\\ **附表 142**，详细列明了符合法定增值税降税条件的特定货物"
+"和服务。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:144
 msgid ""
@@ -86533,6 +86819,8 @@ msgid ""
 "all sales and purchase invoices issued within a specific period, detailing "
 "the untaxed amounts, VAT amounts, and other relevant information."
 msgstr ""
+":guilabel:`销售/采购税务报告（越南）`：提供特定期间内开具的所有销售和采购发票"
+"的完整列表，详细列出不含税金额、增值税额及其他相关信息。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:164
 msgid ":guilabel:`Tax ID`: tax identification number."
@@ -86821,6 +87109,8 @@ msgid ""
 "Ensure the :guilabel:`Vietnam - E-invoicing` (`l10n_vn_edi_viettel`) module "
 "is installed from the :guilabel:`Apps` menu."
 msgstr ""
+"请确保\\ :guilabel:`越南 - 电子发票`（`l10n_vn_edi_viettel`）模块已从\\ "
+":guilabel:`应用`\\ 菜单安装。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:291
 msgid ""
@@ -86829,32 +87119,37 @@ msgid ""
 "Integration` section, fill in your SInvoice :guilabel:`Username` "
 "and :guilabel:`Password`."
 msgstr ""
+"要将 Odoo 与 SInvoice 连接，请前往\\ :menuselection:`会计 --> 配置 --> 设"
+"置`\\ 。在\\ :guilabel:`越南电子发票集成`\\ 部分，填写您的 SInvoice "
+":guilabel:`用户名`\\ 和\\ :guilabel:`密码`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:295
 msgid ""
 "Click :guilabel:`Fetch Symbols` to retrieve the list of available invoice "
 "symbols from your SInvoice account."
-msgstr ""
+msgstr "点击\\ :guilabel:`获取符号`\\ ，从您的 SInvoice 账户检索可用发票符号列表。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:298
 msgid "Once the list is fetched, assign your default symbols:"
-msgstr ""
+msgstr "获取列表后，分配您的默认符号："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:300
 msgid ""
 "Select a :guilabel:`Default Symbol` to generate a prefix for standard "
 "invoice numbers managed in SInvoice."
-msgstr ""
+msgstr "选择\\ :guilabel:`默认符号`\\ ，为在 SInvoice 中管理的标准发票号码生成前缀。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:302
 msgid ""
 "Select a :guilabel:`Default PoS Symbol` to assign a global default prefix "
 "for all Point of Sale locations if needed."
 msgstr ""
+"如有需要，请选择\\ :guilabel:`默认 POS 符号`\\ ，为所有 POS 门店分配全局默认"
+"前缀。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:308
 msgid "Sending invoices to SInvoice on Invoicing app"
-msgstr ""
+msgstr "在发票应用中将发票发送至 SInvoice"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:310
 msgid ""
@@ -86875,6 +87170,11 @@ msgid ""
 "and :guilabel:`SInvoice Number` fields are also updated. The same "
 "information is available on SInvoice."
 msgstr ""
+"发票成功提交至 SInvoice 后，\\ :guilabel:`SInvoice 状态`\\ 字段（位于发票\\ "
+":guilabel:`电子发票`\\ 选项卡中）将更新为\\ :guilabel:`已发送`\\ "
+"。:guilabel:`SInvoice 符号`\\ 、\\ :guilabel:`开具日期`\\ 、\\ :guilabel:`密"
+"钥`\\ 和\\ :guilabel:`SInvoice 编号`\\ 字段也会随之更新。SInvoice 上也会显示"
+"相同的信息。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:320
 msgid "Replacement or adjustment invoices"
@@ -86942,7 +87242,7 @@ msgstr ""
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:345
 msgid "Sending invoices to SInvoice on POS Interface"
-msgstr ""
+msgstr "在 POS 界面将发票发送至 SInvoice"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:348
 msgid ""
@@ -86952,6 +87252,10 @@ msgid ""
 "process for SInvoice and Odoo is identical to the :ref:`standard e-invoicing "
 "workflow <localizations/vietnam/sinvoice-invoicing-app>`."
 msgstr ""
+"请确保已安装\\ :guilabel:`越南 - 电子发票` (`l10n_vn_edi_viettel`) 和\\ "
+":guilabel:`越南 - POS 电子发票` (`l10n_vn_edi_viettel_pos`) 模块（可在\\ "
+":guilabel:`应用`\\ 菜单中安装）。SInvoice 和 Odoo 的配置流程与\\ :ref:`标准电"
+"子发票工作流 <localizations/vietnam/sinvoice-invoicing-app>`\\ 相同。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:353
 msgid ""
@@ -86960,10 +87264,13 @@ msgid ""
 "of Sale --> Configuration --> Settings`. This feature sends Point of Sale "
 "invoices to SInvoice in real time and can be disabled at any time."
 msgstr ""
+"安装\\ :guilabel:`越南 - POS 电子发票`\\ 模块后，系统会自动启用\\ "
+":guilabel:`自动发送至 SInvoice`\\ ，该选项位于\\ :menuselection:`POS --> 配"
+"置 --> 设置`\\ 下。此功能会实时将 POS 发票发送至 SInvoice，且可随时禁用。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:358
 msgid "The following options are available for assigning symbols:"
-msgstr ""
+msgstr "可使用以下选项来分配符号："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:360
 msgid ""
@@ -86971,6 +87278,8 @@ msgid ""
 "navigate to :menuselection:`Accounting --> Configuration --> Settings` and "
 "scroll down to the :guilabel:`Vietnamese E-invoice Integration` section."
 msgstr ""
+"要为所有 POS 业务设置全局默认符号，请导航至\\ :menuselection:`会计 --> 配"
+"置 --> 设置`\\ ，然后向下滚动至\\ :guilabel:`越南电子发票集成`\\ 部分。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:363
 msgid ""
@@ -86978,10 +87287,12 @@ msgid ""
 "that individual Point of Sale to select a default symbol that overrides the "
 "global setting."
 msgstr ""
+"要为特定门店分配唯一符号，请修改该单个 POS 的设置，以选择一个覆盖全局设置的默"
+"认符号。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:366
 msgid "To create a Point of Sale order and send the invoice to SInvoice:"
-msgstr ""
+msgstr "要创建 POS 订单并将发票发送至 SInvoice："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:368
 msgid ""
@@ -86989,22 +87300,24 @@ msgid ""
 "in Customer` is selected by default, but a specific customer can be assigned "
 "if necessary."
 msgstr ""
+"创建 POS 订单并将产品添加到购物车。系统默认选择\\ :guilabel:`散客`\\ ，如有需"
+"要，也可以指定特定客户。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:370
 msgid ""
 "Proceed to the payment screen. The :guilabel:`Invoice` option is selected "
 "automatically."
-msgstr ""
+msgstr "前往付款界面。系统会自动选中\\ :guilabel:`发票`\\ 选项。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:371
 msgid "Select a payment method and click :guilabel:`Validate`."
-msgstr ""
+msgstr "选择付款方式，然后点击\\ :guilabel:`验证`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:373
 msgid ""
 "Upon validation, the invoice is automatically generated and submitted "
 "directly to SInvoice."
-msgstr ""
+msgstr "验证后，系统将自动生成发票并直接提交至 SInvoice。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:375
 msgid ""
@@ -87012,6 +87325,8 @@ msgid ""
 "active orders --> Paid`, select the relevant order, and "
 "click :guilabel:`Print Tax Invoice`."
 msgstr ""
+"要打印 SInvoice 文件，请前往\\ :menuselection:`订单 --> 所有活跃订单 --> 已付"
+"款`\\ ，选择相关订单，然后点击\\ :guilabel:`打印税务发票`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:379
 msgid ""
@@ -87019,6 +87334,8 @@ msgid ""
 "appears. To identify the cause of the failure, check the log note on the "
 "specific invoice in the backend."
 msgstr ""
+"如果 POS 发票未能发送至 SInvoice，系统会显示一条弹出消息。要查看失败原因，请"
+"在后台检查该发票的日志备注。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:381
 msgid ""
@@ -87048,10 +87365,12 @@ msgid ""
 "SInvoice. This refund process can also be completed in the backend using the "
 "standard credit note workflow."
 msgstr ""
+"系统会自动开具贷项通知单，并将调整信息传输至 SInvoice。此退款流程也可以在后台"
+"使用标准贷项通知单工作流完成。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:398
 msgid "Sending Electronic Internal Transfer Notes on Inventory app"
-msgstr ""
+msgstr "在库存应用中发送电子内部调拨单"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:401
 msgid ""
@@ -87062,6 +87381,10 @@ msgid ""
 "the :ref:`standard e-invoicing workflow <localizations/vietnam/sinvoice-"
 "invoicing-app>`."
 msgstr ""
+"请确保已安装\\ :guilabel:`越南 - 电子发票` (`l10n_vn_edi_viettel`) 和\\ "
+":guilabel:`越南 - 交货电子发票` (`l10n_vn_edi_viettel_stock`) 模块（可在\\ "
+":guilabel:`应用`\\ 菜单中安装）。SInvoice 和 Odoo 的初始配置流程与\\ :ref:`标"
+"准电子发票工作流 <localizations/vietnam/sinvoice-invoicing-app>`\\ 相同。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:406
 msgid ""
@@ -87070,54 +87393,57 @@ msgid ""
 "locations. These electronic documents function similarly to standard e-"
 "invoices and must be pre-configured in SInvoice."
 msgstr ""
+":guilabel:`电子内部调拨单`\\ 是在内部库位、分支机构或中转库位之间调拨货物时所"
+"必需的单据。这类电子单据的功能与标准电子发票相似，必须在 SInvoice 中预先配置"
+"。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:410
 msgid "To enable electronic internal transfer notes for internal movements:"
-msgstr ""
+msgstr "要为内部移动启用电子内部调拨单："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:412
 msgid "Navigate to :menuselection:`Inventory --> Configuration --> Settings`."
-msgstr ""
+msgstr "前往\\ :menuselection:`库存 --> 配置 --> 设置`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:413
 msgid ""
 "In the :guilabel:`Operations` section, enable :guilabel:`Send Transfer Note "
 "to SInvoice`."
-msgstr ""
+msgstr "在\\ :guilabel:`操作`\\ 部分，启用\\ :guilabel:`发送调拨单至 SInvoice`\\ 。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:414
 msgid ""
 "Enter a :guilabel:`Default Symbol` to be used globally for all internal "
 "deliveries."
-msgstr ""
+msgstr "输入一个\\ :guilabel:`默认符号`\\ ，以便全局用于所有内部交货。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:415
 msgid ""
 "(Optional) To assign a specific symbol to an individual warehouse that "
 "overrides the global default:"
-msgstr ""
+msgstr "（可选）要为单个仓库分配特定符号以覆盖全局默认值："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:418
 msgid ""
 "Navigate to :menuselection:`Inventory --> Configuration --> Warehouses` and "
 "select the warehouse."
-msgstr ""
+msgstr "前往\\ :menuselection:`库存 --> 配置 --> 仓库`\\ 并选择该仓库。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:420
 msgid ""
 "Under the :guilabel:`Warehouse Configuration` tab, locate the :guilabel:`E-"
 "Transfer Note` section."
-msgstr ""
+msgstr "在\\ :guilabel:`仓库配置`\\ 选项卡下，找到\\ :guilabel:`电子调拨单`\\ 部分。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:422
 msgid ""
 "Enter a :guilabel:`Default Symbol`. Leave this field blank to fall back to "
 "the global default symbol."
-msgstr ""
+msgstr "输入\\ :guilabel:`默认符号`\\ 。若将此字段留空，系统将回退使用全局默认符号。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:425
 msgid "To send an internal transfer note to SInvoice:"
-msgstr ""
+msgstr "要将内部调拨单发送至 SInvoice："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:427
 msgid "Open an internal transfer record."
@@ -87183,7 +87509,7 @@ msgstr "银行账户"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:465
 msgid "To activate QR banking for a bank account:"
-msgstr ""
+msgstr "要为银行账户启用二维码银行功能："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:467
 msgid ":ref:`Activate developer mode <developer-mode/activation>`."
@@ -87232,7 +87558,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Identifier Value`: enter the corresponding value (such as the "
 "account number)."
-msgstr ""
+msgstr ":guilabel:`标识符值`：输入相应的值（例如账号）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:487
 msgid ""
@@ -87244,7 +87570,7 @@ msgstr "启用 :guilabel:`包括参考资料` 可在二维码中包含发票号�
 msgid ""
 "Once all the information has been reviewed, enable the :guilabel:`Trust bank "
 "account` toggle at the top of the form."
-msgstr ""
+msgstr "审核所有信息后，启用表单顶部的\\ :guilabel:`受信任银行账户`\\ 开关。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:492
 msgid ""
@@ -87264,10 +87590,12 @@ msgid ""
 "the :guilabel:`Recipient Bank` is configured, as it's required to configure "
 "QR codes."
 msgstr ""
+"创建新发票时，打开\\ :guilabel:`其他信息`\\ 选项卡，并确保已配置\\ "
+":guilabel:`收款银行`。这是配置二维码的必要条件。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:509
 msgid "Generate QR codes on POS Interface"
-msgstr ""
+msgstr "在 POS 界面生成二维码"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:511
 msgid ""
@@ -87275,18 +87603,20 @@ msgid ""
 "Configuration > Payment Methods` and click :guilabel:`New` to create a "
 "method called `QR Code`, and fill in the following fields:"
 msgstr ""
+"要配置二维码付款选项，请前往\\ :menuselection:`POS > 配置 > 付款方式`，点击\\"
+" :guilabel:`新建`\\ 创建名为 `二维码` 的付款方式，并填写以下字段："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:515
 msgid ":guilabel:`Journal`: Assign the appropriate :guilabel:`Bank` journal."
-msgstr ""
+msgstr ":guilabel:`日记账`：分配相应的\\ :guilabel:`银行`\\ 日记账。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:516
 msgid ":guilabel:`Integration`: Select :guilabel:`Bank App (QR Code)`."
-msgstr ""
+msgstr ":guilabel:`集成`：选择\\ :guilabel:`银行应用（二维码）`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:517
 msgid ":guilabel:`QR Code Format`: Choose :guilabel:`VietQR Code`."
-msgstr ""
+msgstr ":guilabel:`二维码格式`：选择\\ :guilabel:`VietQR 二维码`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:520
 msgid ""
@@ -87294,34 +87624,38 @@ msgid ""
 "and ensure the :guilabel:`QR Code` payment method is selected for the "
 "specific Point of Sale under the :guilabel:`Payment` section."
 msgstr ""
+"前往\\ :menuselection:`POS --> 配置 --> 设置`，确保已为特定 POS 选中\\ "
+":guilabel:`二维码`\\ 付款方式（位于\\ :guilabel:`付款`\\ 部分下）。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:527
 msgid "Generate QR codes on eCommerce"
-msgstr ""
+msgstr "在电子商务中生成二维码"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:529
 msgid "To generate QR codes, follow these steps:"
-msgstr ""
+msgstr "要生成二维码，请按以下步骤操作："
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:531
 msgid "Navigate to :menuselection:`Website --> Configuration --> Payments`."
-msgstr ""
+msgstr "前往\\ :menuselection:`网站 --> 配置 --> 付款`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:532
 msgid "Click the :guilabel:`Wire Transfer` payment provider card."
-msgstr ""
+msgstr "点击\\ :guilabel:`电汇`\\ 付款服务商卡片。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:533
 msgid ""
 "Check the :guilabel:`Enable QR Codes` feature, and select a "
 "trusted :guilabel:`Bank Account`."
 msgstr ""
+"勾选\\ :guilabel:`启用二维码`\\ 功能，并选择一个受信任的\\ :guilabel:`银行账"
+"户`。"
 
 #: ../../export/content/applications/finance/fiscal_localizations/vietnam.rst:534
 msgid ""
 "Click :icon:`fa-eye-slash` :guilabel:`Unpublished` to publish the payment "
 "provider."
-msgstr ""
+msgstr "点击\\ :icon:`fa-eye-slash` :guilabel:`未发布`\\ 以发布该付款服务商。"
 
 #: ../../export/content/applications/finance/payment_providers.rst:34
 msgid ""
