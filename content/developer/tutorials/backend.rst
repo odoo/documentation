@@ -732,11 +732,11 @@ float, string), or a function taking a recordset and returning a value::
 .. note::
    The object ``self.env`` gives access to request parameters and other useful things:
 
-    - ``self.env.cr`` or ``self._cr`` is the database *cursor* object; it is
-      used for querying the database
-    - ``self.env.uid`` or ``self._uid`` is the current user's database id
+    - ``self.env.cr`` is the database *cursor* object; it is used for querying
+      the database
+    - ``self.env.uid`` is the current user's database id
     - ``self.env.user`` is the current user's record
-    - ``self.env.context`` or ``self._context`` is the context dictionary
+    - ``self.env.context`` is the context dictionary
     - ``self.env.ref(xml_id)`` returns the record corresponding to an XML id
     - ``self.env[model_name]`` returns an instance of the given model
 
@@ -1183,7 +1183,7 @@ the action is "bound" to.
    #. Define a form view for the wizard.
    #. Add the action to launch it in the context of the *Session* model.
    #. Define a default value for the session field in the wizard; use the
-      context parameter ``self._context`` to retrieve the current session.
+      context parameter ``self.env.context`` to retrieve the current session.
 
 .. exercise:: Register attendees
 
