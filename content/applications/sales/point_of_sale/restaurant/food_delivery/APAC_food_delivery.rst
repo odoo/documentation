@@ -140,8 +140,8 @@ linking it directly to a point of sale.
    localization settings.
 
 .. seealso::
-   - :doc:`../../sales/products_prices/prices/pricing`
-   - :doc:`../payment_methods`
+   - :doc:`../../../sales/products_prices/prices/pricing`
+   - :doc:`../../payment_methods`
    - :ref:`pos/products/categories`
 
 .. _pos/apac/gofood/configuration/menusync:

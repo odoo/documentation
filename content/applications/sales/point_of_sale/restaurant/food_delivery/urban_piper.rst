@@ -36,7 +36,7 @@ Supported providers and locations:
              Luxembourg, Poland, Slovakia, Spain, Switzerland, Netherlands, United Kingdom
          * - `Keeta <https://www.keeta-global.com/AE/en>`_
            - Bahrain, Brazil, Hong Kong (China), Kuwait, Qatar, Saudi Arabia, United Arab Emirates
-         * - `UberEats <https://www.ubereats.com>`_
+         * - `Uber Eats <https://www.ubereats.com>`_
            - Argentina, Australia, Belgium, Canada, Chile, Costa Rica, Denmark, Dominican Republic,
              Ecuador, El Salvador, Finland, France, Germany, Guatemala, Ireland, Italy, Japan,
              Kenya, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Panama, Poland, Portugal,
@@ -231,7 +231,7 @@ To make multiple products available for food delivery at once,
 .. note::
    - Currently, UrbanPiper does not support combo products.
    - As a workaround, create a product and define combo choices as :doc:`Attributes & Variants
-     <../../sales/products_prices/products/variants>`.
+     <../../../sales/products_prices/products/variants>`.
 
 Synchronization
 ---------------
