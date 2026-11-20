@@ -25,10 +25,10 @@ Monthly odometer values
 =======================
 
 To view the *Odometer Analysis* report, navigate to :menuselection:`Fleet app --> Reporting -->
-Odometers`. The default report shows a line chart of the odometer values, grouped by month, then
-vehicle category.
+Odometers`. The default report shows a line chart of the :guilabel:`Mileage Delta`, grouped by
+month, then vehicle category.
 
-The mileage shown is the odometer value *per month*, not the :ref:`total accumulated mileage
+The mileage shown is the distance driven *per month*, not the :ref:`total accumulated mileage
 <fleet/odometers/by-vehicle>` each month. This report allows managers to see which vehicle
 categories are being driven the most on a monthly basis.
 
@@ -39,11 +39,12 @@ driven for employee vehicles may be compared to the expected mileage according t
 :ref:`home-work distance <employees/location>` configured on employee records.
 
 .. example::
-   In this report, it is possible to determine that the *Delivery Trucks* have both the highest and
-   most consistent mileage, month to month.
+   In this report, it is possible to determine that the *Compact* cars are driven the most nearly
+   every month, while the *Sedan* cars, in use since March, are driven about 800 to 1,200 km per
+   month.
 
    .. image:: odometers/odometers-monthly.png
-      :alt: The total odometer value per month for all vehicles.
+      :alt: The mileage driven per month for each vehicle category.
 
 .. _fleet/odometers/by-vehicle:
 
@@ -52,18 +53,22 @@ Total odometer values
 
 To view the total odometer value for all vehicles in the fleet, open the *Odometer Analysis* report
 by navigating to :menuselection:`Fleet app --> Reporting --> Odometers`. Click on the
-:guilabel:`Measures` button, and select :guilabel:`Odometer Value` from the drop-down menu.
+:guilabel:`Mileage Delta` measure button, and select :guilabel:`Odometer Value` from the drop-down
+menu.
 
 This presents all the odometer values, grouped by month and category. This allows companies to learn
-which vehicle type logs the most miles, and is therefore on the road or in use the most. This
-information may aid managers in determining which vehicles add the most value and should be kept,
-and which vehicles should be retired.
+which vehicle type logs the most kilometers or miles, and is therefore on the road or in use the
+most. This information may aid managers in determining which vehicles add the most value and should
+be kept, and which vehicles should be retired.
+
+To view the values per vehicle instead of per category, click into the search bar, remove the
+default grouping, then select :guilabel:`Date` and :guilabel:`Vehicle` under the :icon:`stacks_f`
+:guilabel:`Group By` column. To view the readings as a table, click the :icon:`reorder`
+:guilabel:`(List)` icon.
 
 .. example::
-   In this report, it can be determined that the *Delivery Trucks* (the blue line in the graph)
-   drive the most miles each month, more than double the combined mileage of the other vehicles. The
-   *Repair Vans* and *Employee Cars* both drive a comparable amount of miles each month, with
-   *Employee Cars* logging slightly more miles, overall.
+   In this report, it can be determined that the *Compact* cars (the blue line in the graph) have
+   logged the most kilometers overall, about twice as many as the *Sedan* cars.
 
-     .. image:: odometers/odometer-total.png
-        :alt: The odometer report showing total odometer values, by month and category.
+   .. image:: odometers/odometer-total.png
+      :alt: The odometer report showing total odometer values, by month and category.

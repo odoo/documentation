@@ -36,11 +36,13 @@ The fields on the form are:
   <fleet/new-type>`.
 
   .. important::
-     Only one :guilabel:`Service Type` comes preconfigured in Odoo: :guilabel:`Vendor Bill`.
+     No service types come preconfigured in the **Fleet** app. When the **Accounting** app is
+     installed, a :guilabel:`Vendor Bill` service type is added, and is used for services
+     :ref:`created from vendor bills <fleet/link-bills>`.
 
 - :guilabel:`Date`: Using the calendar selector, select the date the service was provided, or is
-  scheduled to be performed. Navigate to the desired month using the :icon:`oi-chevron-left`
-  :icon:`oi-chevron-right` :guilabel:`(arrow)` icons, then click on the date to select it.
+  scheduled to be performed. For services that last several days, also select the end date of the
+  service in the same calendar selector.
 - :guilabel:`Cost`: Enter the estimated cost of the service, if available. If the service is for a
   future repair, this field should be left blank. This field is updated as estimates are received,
   and again, when the final repair cost is known.
@@ -58,18 +60,23 @@ The fields on the form are:
   the selected vehicle was configured.
 
   .. tip::
-     To change from kilometers to miles, or vice versa, click the :icon:`oi-arrow-right`
-     :guilabel:`(Internal Link)` icon to the right of the vehicle selected in the :guilabel:`Vehicle`
-     field.
+     To change from kilometers to miles, or vice versa, click the :icon:`arrow_forward`
+     :guilabel:`(Internal link)` icon to the right of the vehicle selected in the
+     :guilabel:`Vehicle` field.
 
      Change the unit of measure, then navigate back to the service form, via the breadcrumb links.
      The unit of measure is then updated in the :guilabel:`Odometer Value` field.
 
-- :guilabel:`NOTES`: Enter any notes for the repair at the bottom of the service form. For example,
+- :guilabel:`Notes`: Enter any notes for the repair at the bottom of the service form. For example,
   this can include estimate details or parts being replaced.
 
 .. image:: service/new-service.png
-   :alt: Enter the information for a new service. The required fields are Service Type and Vehicle.
+   :alt: A service form for a winter tire fitting.
+
+.. tip::
+   When the **Accounting** app is installed, click the :icon:`edit_square` :guilabel:`New Service's
+   Bill` smart button on a saved service to create a draft vendor bill for the selected
+   :guilabel:`Vendor`, pre-filled with the vehicle, the description, and the cost of the service.
 
 .. _fleet/link-bills:
 
@@ -85,7 +92,7 @@ To link a vendor bill to a service and create a service record, first open the *
 and click :guilabel:`Purchases` on the dashboard. Click the vendor bill for the repair to open the
 bill details.
 
-In the *Invoice Lines* tab, click the :icon:`oi-settings-adjust` :guilabel:`(additional options)`
+In the *Invoice Lines* tab, click the :icon:`tune` :guilabel:`(Optional columns)`
 icon to reveal a drop-down menu. Click the checkbox next to :guilabel:`Vehicle`, then click away to
 close the drop-down menu.
 
@@ -97,48 +104,51 @@ Click into the :guilabel:`Vehicle` field and select the vehicle the service was 
    on the bill, then add the vehicle.
 
 .. image:: service/vendor-bill.png
-   :alt: A vendor bill with the vehicle selected on it.
+   :alt: A vendor bill with the vehicle displayed under the account of the invoice line.
 
-Once the :guilabel:`Vehicle` field is populated, open the *Services* dashboard by navigating to
-:menuselection:`Fleet app --> Fleet --> Services`. The :guilabel:`Service Type` is listed as
-:guilabel:`Vendor Bill`, by default. The record must be updated to keep accurate service records.
+Once the :guilabel:`Vehicle` field is populated, click :guilabel:`Confirm` to post the bill. When
+the bill is confirmed, a service record is created for each invoice line with a vehicle.
+
+Open the *Services* dashboard by navigating to :menuselection:`Fleet app --> Fleet --> Services`.
+The :guilabel:`Service Type` of the new service is :guilabel:`Vendor Bill`, by default. The record
+must be updated to keep accurate service records.
 
 Click on the new :guilabel:`Vendor Bill` record to view the service details. Click the
 :guilabel:`Service Type` field to reveal a drop-down menu of all available service types, and select
 the correct type of service. If necessary, :ref:`create a new service type <fleet/new-type>`.
 
-On the service record, a :icon:`fa-pencil-square-o` :guilabel:`Service's Bill` smart button appears
-at the top. Click the :icon:`fa-pencil-square-o` :guilabel:`Service's Bill` smart button to view the
-corresponding vendor bill.
+On the service record, a :icon:`edit_square` :guilabel:`Service's Bill` smart button appears at the
+top. Click the :icon:`edit_square` :guilabel:`Service's Bill` smart button to view the corresponding
+vendor bill. The :guilabel:`Cost` of the service comes from the bill, and can only be modified on
+the bill.
+
+.. image:: service/service-bill.png
+   :alt: A service created from a vendor bill, with the Service's Bill smart button.
 
 .. tip::
-   The text color in the :icon:`fa-pencil-square-o` :guilabel:`Service's Bill` smart button
-   indicates the *status* of the bill. Green text indicates the bill is confirmed or paid, orange
-   text indicates it is still a draft.
+   The text color in the :icon:`edit_square` :guilabel:`Service's Bill` smart button indicates the
+   *status* of the bill. Green text indicates the bill is confirmed, orange text indicates it is
+   still a draft.
 
 .. _fleet/new-type:
 
 Create service type
 ===================
 
-The **only** method to create service types is from a :ref:`service form <fleet/service-form>`.
+To view and create service types, navigate to :menuselection:`Fleet app --> Configuration -->
+Services: Service Types`. Click :guilabel:`New`, and a new line appears at the bottom of the list.
+Enter the :guilabel:`Name` of the service type. In a multi-company database, select a
+:guilabel:`Company` to restrict the service type to that company, or leave the field empty to make
+it available to all companies.
 
-On the :ref:`service form <fleet/service-form>`, type in the name of the new :guilabel:`Service
-Type` in the corresponding field. Then, click :guilabel:`Create and edit...`, and a
-:guilabel:`Create Service Type` pop-up form appears.
+Service types can also be created directly from a :ref:`service form <fleet/service-form>`. Type in
+the name of the new :guilabel:`Service Type` in the corresponding field, then click
+:guilabel:`Create "(service type)"`, or :guilabel:`Create and edit...` to open a :guilabel:`Create
+Service Type` pop-up form. Click :guilabel:`Save & Close` when done.
 
-The service type entered on the service form automatically populates the :guilabel:`Name` field,
-which can be modified, if desired.
-
-Then, select the :guilabel:`Category` for the new service type from the drop-down menu in that
-field. The two default options to choose from are :guilabel:`Contract` or :guilabel:`Service`.
-Additional categories **cannot** be created.
-
-If the service applies to **only** contracts or services, select the corresponding
-:guilabel:`Category`. If the service applies to **both** contracts *and* services, leave this field
-blank.
-
-When done, click :guilabel:`Save & Close`.
+.. note::
+   Types of vehicle contracts, such as `Leasing` or `Omnium`, are configured separately, in
+   :menuselection:`Fleet app --> Configuration --> Contracts: Contract Types`.
 
 .. _fleet/new-vendor:
 
@@ -170,8 +180,8 @@ each service type appears in parentheses after the name of the service type.
 
 Each service listed displays the following information:
 
-- :guilabel:`Date`: The date that the service, or repair, was performed (or requested to be
-  performed).
+- :guilabel:`Start of Service` and :guilabel:`End of Service`: The dates that the service, or
+  repair, was performed (or requested to be performed).
 - :guilabel:`Description`: A short description of the specific type of service, or repair, performed
   to clarify the specific service.
 - :guilabel:`Service Type`: The type of service, or repair, performed. This is selected from a list
