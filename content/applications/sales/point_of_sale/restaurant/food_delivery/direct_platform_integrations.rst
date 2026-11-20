@@ -1,14 +1,10 @@
-==================
-APAC food delivery
-==================
+============================
+Direct platform integrations
+============================
 
-Point of Sale provides integrations with popular APAC food delivery platforms, allowing for
-synchronizing orders, updating menus, and managing store details directly from the POS.
-
-Supported providers:
-
-- :ref:`GoFood <pos/apac/gofood>`
-- GrabFood
+Connect Odoo Point of Sale directly to supported food delivery platforms to receive orders, update
+menus, and manage store details from the POS interface. Odoo supports direct integrations with APAC
+platforms :ref:`GoFood <pos/apac/gofood>` and GrabFood.
 
 .. important::
    A valid account with each delivery provider is required before proceeding.
@@ -123,7 +119,7 @@ linking it directly to a point of sale.
 #. Fill in the :guilabel:`External ID` field with the Outlet ID retrieved from the :ref:`GoBiz
    Developer Portal <pos/apac/gofood/configuration/portal>`.
 
-   .. image:: APAC_food_delivery/gofood_outletid.png
+   .. image:: direct_platform_integrations/gofood_outletid.png
       :alt: Outlet ID
 
 #. Select the related :guilabel:`Point of Sale` and the :guilabel:`Service Hours` (see
@@ -140,8 +136,8 @@ linking it directly to a point of sale.
    localization settings.
 
 .. seealso::
-   - :doc:`../../sales/products_prices/prices/pricing`
-   - :doc:`../payment_methods`
+   - :doc:`../../../sales/products_prices/prices/pricing`
+   - :doc:`../../payment_methods`
    - :ref:`pos/products/categories`
 
 .. _pos/apac/gofood/configuration/menusync:
@@ -186,7 +182,7 @@ orders, open the orders' list view by:
 #. Clicking the :icon:`oi-food-delivery` (:guilabel:`delivery bag`) icon for online orders and
    :guilabel:`New`.
 
-   .. image:: APAC_food_delivery/gofood_order_receipt.png
+   .. image:: direct_platform_integrations/gofood_order_receipt.png
       :alt: Cart button
 
    .. note::
