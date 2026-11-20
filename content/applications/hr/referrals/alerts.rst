@@ -9,15 +9,15 @@ Alerts remain on the main **Referrals** dashboard for the specified amount of ti
 individual alert.
 
 .. image:: alerts/alerts.png
-   :alt: Two alert banners appear above the user's photo.
+   :alt: An alert banner appears above the user's photo.
 
 .. _referrals/create-alert:
 
 Create an alert
 ===============
 
-Only users with *Administrator* access rights for the **Recruitment** app can create alerts. To add
-a new alert, navigate to the :menuselection:`Referrals app --> Configuration --> Alerts`.
+Only **Referrals** :ref:`administrators <referrals/access-rights>` can create alerts. To add a new
+alert, navigate to :menuselection:`Referrals app --> Configuration --> Referrals --> Alerts`.
 
 Click :guilabel:`New` to open a blank alert form. Enter the following information on the form:
 
@@ -57,8 +57,9 @@ instead of waiting for users to view the alert when they open the **Referrals** 
 After :ref:`creating an alert <referrals/create-alert>`, click the :guilabel:`Send Mail` button
 above the alert form. This causes a :guilabel:`Send Mail` pop-up window to load.
 
-The currently configured users populate the :guilabel:`User` field, and the :guilabel:`Subject` is
-populated with `New Alert In Referrals App`, by default.
+All the users of the current company with access to the **Referrals** app populate the
+:guilabel:`Users` field, and the :guilabel:`Subject` is populated with `New Alert In Referrals App`,
+by default.
 
 The :guilabel:`Body` is populated with `A new alert has been added to the Referrals app! Check your
 dashboard now!`, with the word `dashboard` linked to the **Referrals** app dashboard.
@@ -70,7 +71,7 @@ Dismiss an alert
 
 It is possible to dismiss an alert, if a user does not wish to see a specific alert again.
 
-To dismiss an alert, click the :icon:`fa-times` :guilabel:`(remove)` icon on the far-right side of
+To dismiss an alert, click the :icon:`close` :guilabel:`(close)` icon on the far-right side of
 the alert on the **Referrals** app dashboard, to remove the alert.
 
 This prevents the alert from appearing again, even when opening the **Referrals** app for the first
