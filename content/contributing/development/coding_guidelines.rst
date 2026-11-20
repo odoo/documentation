@@ -75,20 +75,19 @@ models.
     |   |-- plant_order.py (another main model)
     |   |-- res_partner.py (inherited Odoo model)
 
-Concerning *security*, three main files should be used:
+Concerning *security*, two main files should be used:
 
-- First one is the definition of access rights done in a :file:`ir.access.csv` file.
-- User groups are defined in :file:`<module>_groups.xml`.
-- Record rules are defined in :file:`<model>_security.xml`.
+- Access rights, including the restrictions by domain (formerly record rules),
+  are rows of the :file:`ir.access.csv` file.
+- User groups and other security records are defined in
+  :file:`<module>_security.xml`.
 
 .. code-block:: text
 
     addons/plant_nursery/
     |-- security/
     |   |-- ir.access.csv
-    |   |-- plant_nursery_groups.xml
     |   |-- plant_nursery_security.xml
-    |   |-- plant_order_security.xml
 
 Concerning *views*, backend views should be split like models and suffixed
 by ``_views.xml``. Backend views are list, form, kanban, activity, graph, pivot, ..
@@ -136,19 +135,19 @@ generators.
     |   |-- __init__.py (optional, imports custom generators)
     |   |-- generators.py (optional custom generators)
 
-Concerning *controllers*, generally all controllers belong to a single controller
-contained in a file named ``<module_name>.py``. An old convention in Odoo is to
-name this file ``main.py`` but it is considered as outdated. If you need to inherit
-an existing controller from another module do it in ``<inherited_module_name>.py``.
-For example adding portal controller in an application is done in ``portal.py``.
+Concerning *controllers*, split them by feature, each in a file named after it.
+An old convention in Odoo is to name the file ``main.py`` but it is considered
+as outdated. If you need to inherit an existing controller from another module
+do it in ``<inherited_module_name>.py``. For example adding portal controller
+in an application is done in ``portal.py``.
 
 .. code-block:: text
 
     addons/plant_nursery/
     |-- controllers/
-    |   |-- plant_nursery.py
+    |   |-- plant_order.py
     |   |-- portal.py (inheriting portal/controllers/portal.py)
-    |   |-- main.py (deprecated, replaced by plant_nursery.py)
+    |   |-- main.py (deprecated, replaced by feature-named files)
 
 Concerning *static files*, Javascript files follow globally the same logic as
 python models. Each component should be in its own file with a meaningful name.
@@ -200,7 +199,7 @@ The complete tree of our Odoo module therefore looks like
     |-- __manifest__.py
     |-- controllers/
     |   |-- __init__.py
-    |   |-- plant_nursery.py
+    |   |-- plant_order.py
     |   |-- portal.py
     |-- data/
     |   |-- plant_nursery_data.xml
@@ -223,9 +222,7 @@ The complete tree of our Odoo module therefore looks like
     |   |-- plant_order_templates.xml (xml report templates)
     |-- security/
     |   |-- ir.access.csv
-    |   |-- plant_nursery_groups.xml
     |   |-- plant_nursery_security.xml
-    |   |-- plant_order_security.xml
     |-- static/
     |   |-- img/
     |   |   |-- my_little_kitten.png
@@ -254,7 +251,8 @@ The complete tree of our Odoo module therefore looks like
     |   |--make_plant_order_views.xml
 
 .. note:: File names should only contain ``[a-z0-9_]`` (lowercase
-          alphanumerics and ``_``)
+          alphanumerics and ``_``), except CSV data files, which are named
+          after their model (e.g. :file:`ir.access.csv`)
 
 .. warning:: Use correct file permissions : folder 755 and file 644.
 
@@ -299,6 +297,7 @@ Odoo supports custom tags acting as syntactic sugar:
 
 - menuitem: use it as a shortcut to declare a ``ir.ui.menu``
 - template: use it to declare a QWeb View requiring only the ``arch`` section of the view.
+- asset: use it to declare an ``ir.asset`` record.
 
 These tags are preferred over the *record* notation.
 
@@ -322,6 +321,9 @@ Use the following pattern :
   like :samp:`{<model_name>}_action_view_{<view_type>}`.
 * For a group: :samp:`{<module_name>}_group_{<group_name>}` where *group_name*
   is the name of the group, generally 'user', 'manager', ...
+* For an access row (``ir.access.csv``): :samp:`access_{<model_name>}_{<group_name>}`
+  for a row granting access to a group, and :samp:`{<model_name>}_rule_{<detail>}`
+  for a group-less restriction (for example ``_rule_company``).
 
 Name should be identical to xml id with dots replacing underscores. Actions
 should have a real naming as it is used as display name.
@@ -340,7 +342,7 @@ should have a real naming as it is used as display name.
     </record>
 
     <!-- actions -->
-    <record id="model_name_action" model="ir.act.window">
+    <record id="model_name_action" model="ir.actions.act_window">
         <field name="name">Model Main Action</field>
         ...
     </record>
@@ -599,8 +601,17 @@ Programming in Odoo
 
 - Avoid to create generators and decorators: only use the ones provided by
   the Odoo API.
+- Methods are private (``_`` prefix) by default. A public method can be called
+  through RPC with arbitrary records and arguments: make one only when it must
+  be called from outside (buttons, external API), and check its inputs.
+  Decorate with ``@api.private`` an existing public method that must not be
+  callable over RPC. See :ref:`reference/security/pitfalls`.
 - As in python, use ``filtered``, ``mapped``, ``sorted``, ... methods to
   ease code reading and performance.
+- Use ``sudo()`` only for the narrowest operation that needs it, never to hide
+  an access error, and add a comment saying why. Never ``sudo()`` a write,
+  create or search whose model, records, values or domain come from the
+  request. See :ref:`reference/security/pitfalls`.
 
 Propagate the context
 ~~~~~~~~~~~~~~~~~~~~~
@@ -686,12 +697,12 @@ answer to the RPC client, approximately like this:
 
 .. code-block:: python
 
-    def execute(self, db_name, uid, obj, method, *args, **kw):
-        db, pool = pooler.get_db_and_pool(db_name)
+    def execute(registry, uid, ...):
         # create transaction cursor
-        cr = db.cursor()
+        cr = registry.cursor()
         try:
-            res = pool.execute_cr(cr, uid, obj, method, *args, **kw)
+            env = api.Environment(cr, uid, {})
+            do_stuff(env, ...)
             cr.commit() # all good, we commit
         except Exception:  # try to be more specific
             cr.rollback() # error, rollback everything atomically
@@ -734,7 +745,7 @@ in the following situations:
   creating custom models
 - in reports: the ``commit()`` is handled by the framework too, so you can
   update the database even from within a report
-- within *models.Transient* methods: these methods are called exactly like
+- within *models.TransientModel* methods: these methods are called exactly like
   regular *models.Model* ones, within a transaction and with the corresponding
   ``cr.commit()/rollback()`` at the end
 - etc. (see general rule above if you are in doubt!)
@@ -875,6 +886,16 @@ In general in Odoo, when manipulating strings, prefer ``%`` over ``.format()``
 of position (when multiple variables have to be replaced). This makes the
 translation easier for the community translators.
 
+With ``_()``, named placeholders are given as keyword arguments, so translators
+can reorder them. List arguments are joined according to the language (for
+instance "a, b and c"): do not ``', '.join()`` them yourself.
+
+.. code-block:: python
+
+    error = _("%(count)s records imported by %(user)s",
+              count=len(records), user=self.env.user.name)
+    error = _("Missing fields: %s", missing_field_names)
+
 Symbols and Conventions
 -----------------------
 
@@ -917,8 +938,8 @@ Symbols and Conventions
     - Onchange method : the onchange method pattern is *_onchange_<field_name>*
     - Constraint method : the constraint method pattern is *_check_<constraint_name>*
     - Action method : an object action method is prefix with *action_*.
-      Since it uses only one record, add ``self.ensure_one()``
-      at the beginning of the method.
+      If it needs a single record (e.g. one that opens its form), add
+      ``self.ensure_one()`` at the beginning of the method.
 
 - In a Model attribute order should be
     #. Private attributes (``_name``, ``_description``, ``_inherit``, ...)
@@ -945,9 +966,9 @@ Symbols and Conventions
 
         # Fields declaration
         name = fields.Char(string='Name', default=_default_name)
-        seats_reserved = fields.Integer(string='Reserved Seats', store=True
+        seats_reserved = fields.Integer(string='Reserved Seats', store=True,
             readonly=True, compute='_compute_seats')
-        seats_available = fields.Integer(string='Available Seats', store=True
+        seats_available = fields.Integer(string='Available Seats', store=True,
             readonly=True, compute='_compute_seats')
         price = fields.Integer(string='Price')
         event_type = fields.Selection(string="Type", selection='_selection_type')
@@ -971,7 +992,7 @@ Symbols and Conventions
             ...
 
         # CRUD methods (and name_search, _search, ...) overrides
-        @api.model
+        @api.model_create_multi
         def create(self, vals_list):
             ...
 
