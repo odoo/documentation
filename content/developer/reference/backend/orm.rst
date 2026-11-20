@@ -11,8 +11,6 @@ ORM API
 
    orm/changelog
 
-.. automodule:: odoo.models
-
 .. _reference/orm/models:
 .. _reference/orm/model:
 
@@ -75,6 +73,7 @@ value::
     .. autoattribute:: _inherits
 
     .. autoattribute:: _rec_name
+    .. autoattribute:: _rec_names_search
     .. autoattribute:: _order
 
     .. autoattribute:: _check_company_auto
@@ -106,6 +105,15 @@ TransientModel
    .. autoattribute:: _transient_max_count
    .. autoattribute:: _transient_max_hours
 
+CachedModel
+-----------
+
+.. autoclass:: odoo.models.CachedModel
+   :members: get_all
+
+   .. autoattribute:: _cached_data_domain
+   .. autoattribute:: _cached_data_fields
+
 .. _reference/fields:
 .. _reference/orm/fields:
 
@@ -134,13 +142,15 @@ Basic fields
 Advanced fields
 ---------------
 
-.. autoclass:: Html()
-
 .. autoclass:: Monetary()
 
 .. autoclass:: Selection()
 
 .. autoclass:: Text()
+
+.. autoclass:: Html()
+
+.. autoclass:: Json()
 
 .. _reference/fields/date:
 
@@ -226,8 +236,6 @@ Pseudo-relational fields
 
 .. autoclass:: Many2oneReference()
 
-.. _reference/fields/compute:
-
 Binary fields
 ~~~~~~~~~~~~~
 
@@ -237,16 +245,23 @@ of the data into memory until it is needed. Binary fields will always return
 that object.
 You can instantiate it with :func:`~odoo.tools.binary.BinaryBytes`.
 
-When using :func:`odoo.orm.models.BaseModel.read`, a base64-encoded string is
-read.  When writing a binary field, you can:
+When using :meth:`~odoo.models.Model.read`, a binary field is read as a dict
+``{'content': <base64-encoded str>, 'size': <int>, 'filename': <str>}``, where
+``filename`` is omitted when not set.
+When writing a binary field, you can:
 
 * write a ``BinaryValue``: general case
-* write ``bytes`` on the ``raw`` field: backward compatiblity
+* write ``bytes`` on the ``raw`` field: backward compatibility
 * write base64-encoded ``str``: value coming from RPC
+* write a dict ``{'content': ..., 'filename': ...}``: ``content`` accepts any of
+  the values above; ``filename`` is optional, and can be written alone to
+  rename the file of a single record
 
 .. autoclass:: Binary()
 
 .. autoclass:: Image()
+
+.. _reference/fields/compute:
 
 Computed fields
 ~~~~~~~~~~~~~~~
@@ -279,12 +294,24 @@ it uses the values of other *fields*, it should specify those fields using
   parameter. The value is a method name returning a
   :ref:`reference/orm/domains`. ::
 
-    upper_name = field.Char(compute='_compute_upper', search='_search_upper')
+    upper_name = fields.Char(compute='_compute_upper', search='_search_upper')
 
     def _search_upper(self, operator, value):
         if operator == 'like':
             operator = 'ilike'
         return Domain('name', operator, value)
+
+* alternatively, a non-stored computed field can be given an SQL expression
+  with the ``compute_sql`` parameter, which makes it searchable, groupable and
+  sortable like a stored field. ::
+
+    total = fields.Float(
+        compute='_compute_total', compute_sql='_compute_sql_total',
+        compute_sudo=False,  # must be set explicitly
+    )
+
+    def _compute_sql_total(self, table):
+        return SQL("%s * (1 + %s)", table.value, table.tax)
 
 * computed fields are readonly by default. To allow *setting* values on a
   computed field, use the ``inverse`` parameter.
@@ -295,12 +322,14 @@ it uses the values of other *fields*, it should specify those fields using
 
     def _get_document(self):
         for record in self:
-            with open(record.get_document_path) as f:
+            with open(record.get_document_path()) as f:
                 record.document = f.read()
+
     def _set_document(self):
         for record in self:
-            if not record.document: continue
-            with open(record.get_document_path()) as f:
+            if not record.document:
+                continue
+            with open(record.get_document_path(), 'w') as f:
                 f.write(record.document)
 
 * multiple fields can be computed at the same time by the same method, just
@@ -413,14 +442,21 @@ Automatic fields
 
     If length of current recordset is 1, return id of unique record in it.
 
-    Raise an Error otherwise.
+    Return ``False`` if the recordset is empty, and raise a :class:`ValueError`
+    if it contains more than one record.
 
 .. attribute:: Model.display_name
 
     Name :class:`field <odoo.fields.Char>` displayed by default in the web client
 
     By default, it equals to :attr:`~odoo.models.BaseModel._rec_name` value field
-    but the behavior can be customized by overriding :attr:`~odoo.models.BaseModel._compute_display_name`
+    but the behavior can be customized by overriding
+    :meth:`~odoo.models.Model._compute_display_name` and
+    :meth:`~odoo.models.Model._search_display_name`.
+
+.. automethod:: Model._compute_display_name
+
+.. automethod:: Model._search_display_name
 
 .. _reference/fields/automatic/log_access:
 
@@ -487,8 +523,8 @@ behavior is desired:
 
 .. attribute:: Model.state
 
-  lifecycle stages of the object, used by the ``states`` attribute on
-  :class:`fields <odoo.fields.Field>`.
+  lifecycle stages of the object. Unless ``copy=True`` is set explicitly, a
+  field named ``state`` is not copied by :meth:`~odoo.models.Model.copy`.
 
   :class:`~odoo.fields.Selection`
 
@@ -513,12 +549,12 @@ behavior is desired:
 
   Main field name used for Odoo multi-company behavior.
 
-  Used by `:meth:~odoo.models._check_company` to check multi company consistency.
+  Used by :meth:`~odoo.models.Model._check_company` to check multi-company consistency.
   Defines whether a record is shared between companies (no value) or only
   accessible by the users of a given company.
 
   :class:`~odoo.fields.Many2one`
-  :type: :class:`~odoo.addons.base.models.res_company`
+  :type: :class:`~odoo.addons.base.models.res_company.ResCompany`
 
 Constraints and indexes
 =======================
@@ -631,9 +667,9 @@ records. Without prefetching, the loop would make 2000 queries to the database.
 With prefetching, only one query is made::
 
     for partner in partners:
-        print partner.name          # first pass prefetches 'name' and 'lang'
+        print(partner.name)         # first pass prefetches 'name' and 'lang'
                                     # (and other fields) on all 'partners'
-        print partner.lang
+        print(partner.lang)
 
 The prefetching also works on *secondary records*: when relational fields are
 read, their values (which are records) are  subscribed for future prefetching.
@@ -659,7 +695,7 @@ Method decorators
 =================
 
 .. automodule:: odoo.api
-    :members: depends, depends_context, constrains, onchange, autovacuum, model, model_create_multi, private, ondelete
+    :members: depends, depends_context, constrains, onchange, autovacuum, model, model_create_multi, private, readonly, ondelete
 
 .. .. currentmodule:: odoo.api
 
@@ -669,18 +705,6 @@ Method decorators
 .. .. autodata:: constrains
 .. .. autodata:: onchange
 .. .. autodata:: autovacuum
-
-.. todo:: With sphinx 2.0 : autodecorator
-
-.. todo:: Add in Views reference
-  * It is possible to suppress the trigger from a specific field by adding
-  ``on_change="0"`` in a view::
-
-    <field name="name" on_change="0"/>
-
-  will not trigger any interface update when the field is edited by the user,
-  even if there are function fields or explicit onchange depending on that
-  field.
 
 .. _reference/orm/environment:
 
@@ -719,16 +743,16 @@ Some lazy properties are available to access the environment (contextual) data:
 .. autoattribute:: Environment.user
 .. autoattribute:: Environment.company
 .. autoattribute:: Environment.companies
+.. autoattribute:: Environment.tz
+.. autoattribute:: Environment.website
 
 Useful environment methods
 --------------------------
 
 .. automethod:: Environment.ref
-.. automethod:: Environment.is_superuser
-.. automethod:: Environment.is_admin
-.. automethod:: Environment.is_system
 .. automethod:: Environment.execute_query
     :noindex:
+.. automethod:: Environment._
 
 Altering the environment
 ------------------------
@@ -758,7 +782,7 @@ joins) or for performance reasons::
     self.env.cr.execute("some_sql", params)
 
 .. warning::
-    Executing raw SQL bypasses the ORM and, by consequent, Odoo security rules.
+    Executing raw SQL bypasses the ORM and, consequently, Odoo security rules.
     Please make sure your queries are sanitized when using user input and prefer using
     ORM utilities if you don't really need to use SQL queries.
 
@@ -768,8 +792,9 @@ The recommended way to build SQL queries is to use the wrapper object
 
     .. automethod:: SQL.identifier
 
-:func:`~odoo.api.Environment.execute_query` environment method allows to flush
-(see later), execute and fetch results at once.  To translate model fields into
+:meth:`~odoo.api.Environment.execute_query` and
+:meth:`~odoo.api.Environment.execute_query_dict` environment methods allow
+flushing (see later), execute and fetch results at once.  To translate model fields into
 SQL, and build queries, a useful abstraction is provided in
 
 .. autoclass:: odoo.models.Query
@@ -806,13 +831,13 @@ called *flushing* and performs the expected database updates.
         # make sure that 'partner_id' is up-to-date in database
         self.env['model'].flush_model(['partner_id'])
 
-        self.env.cr.execute(SQL("SELECT id FROM model WHERE partner_id IN %s", ids))
+        self.env.cr.execute(SQL("SELECT id FROM model WHERE partner_id IN %s", tuple(partner_ids)))
         ids = [row[0] for row in self.env.cr.fetchall()]
 
 Before every SQL query, one has to flush the data needed for that query. There
 are three levels for flushing, each with its own API. One can flush either
 everything, all the records of a model, or some specific records. Because
-delaying updates improves performance in general, we recommend to be *specific*
+delaying updates improves performance in general, we recommend being *specific*
 when flushing.
 
 .. automethod:: odoo.api.Environment.flush_all
@@ -822,6 +847,8 @@ when flushing.
 .. automethod:: Model.flush_recordset
 
 .. automethod:: odoo.api.Environment.execute_query
+
+.. automethod:: odoo.api.Environment.execute_query_dict
 
 When using the Query builder and ``execute_query``, model flushes are done based
 on the metadata in the ``SQL``.
@@ -849,12 +876,12 @@ SQL, but not ``SELECT`` (which simply reads the database).
         # get name and country name for all records, flushing and joins are
         # done automatically
         query = Query(self.env['model'])
-        self.env.execute_query(query.select(SQL(query.table.name, query.table.country_id.name)))
+        self.env.execute_query(query.select(query.table.name, query.table.country_id.name))
 
 Just like flushing, one can invalidate either the whole cache, the cache of all
 the records of a model, or the cache of specific records. One can even
 invalidate specific fields on some records or all records of a model. As the
-cache improves performance in general, we recommend to be *specific* when
+cache improves performance in general, we recommend being *specific* when
 invalidating.
 
 .. automethod:: odoo.api.Environment.invalidate_all
@@ -905,7 +932,8 @@ Common ORM methods
 Create/Update
 -------------
 
-.. todo:: api.model_create_multi information
+``create`` is decorated with :func:`~odoo.api.model_create_multi`: it accepts
+a dict or a list of dicts.
 
 .. automethod:: Model.create
 
@@ -1039,6 +1067,13 @@ A domain can be a simple condition ``(field_expr, operator, value)`` where:
     ``any!`` (and ``not any!``)
         like ``any``, but bypasses access checks.
 
+    ``access``
+        matches the records on which the current user can perform the
+        operation given as ``value`` (``'read'``, ``'write'``, ``'create'`` or
+        ``'unlink'``). The ``field_expr`` must be ``id`` (the records
+        themselves) or a :class:`~odoo.fields.Many2one` field (the referenced
+        records), e.g. ``('partner_id', 'access', 'write')``.
+
 * ``value``
     variable type, must be comparable (through ``operator``) to the named
     field.
@@ -1078,13 +1113,10 @@ and you can negate 1 using ``'!'`` (NOT).
     # will output:
     # ['&', ('name', '=', 'abc'), ('phone', 'like', '7620')]
 
-.. automethod:: odoo.fields.Domain.iter_conditions
-
-.. automethod:: odoo.fields.Domain.map_conditions
-
-.. automethod:: odoo.fields.Domain.optimize
-
-.. automethod:: odoo.fields.Domain.validate
+.. autoclass:: odoo.fields.Domain
+   :special-members: __new__
+   :members: AND, OR, custom, is_true, is_false, iter_conditions,
+       map_conditions, optimize, optimize_full, validate
 
 .. _reference/orm/dynamic_values:
 
@@ -1131,19 +1163,48 @@ Record(set) information
 
 .. autoattribute:: Model.ids
 
-.. attribute:: env
+.. attribute:: Model.env
 
     Returns the environment of the given recordset.
 
     :type: :class:`~odoo.api.Environment`
-
-.. todo:: Environment documentation
 
 .. automethod:: Model.exists
 
 .. automethod:: Model.ensure_one
 
 .. automethod:: Model.get_metadata
+
+Access rights
+-------------
+
+These methods check the :ref:`access rights <reference/security/access>` of the
+current user, given an operation among ``'read'``, ``'write'``, ``'create'``
+and ``'unlink'``. They always succeed in superuser mode.
+
+.. automethod:: Model.check_access
+
+.. automethod:: Model.has_access
+
+.. automethod:: Model._filtered_access
+
+Access to fields is restricted by their ``groups`` attribute (see
+:ref:`reference/security/fields`); it can be checked for the ``'read'`` and
+``'write'`` operations with:
+
+.. automethod:: Model.check_field_access
+
+.. automethod:: Model.has_field_access
+
+Locking
+-------
+
+Records can be locked in the database to prevent concurrent transactions from
+modifying them until the current transaction ends.
+
+.. automethod:: Model.lock_for_update
+
+.. automethod:: Model.try_lock_for_update
 
 .. _reference/orm/records/operations:
 
@@ -1171,7 +1232,7 @@ various set operations, returning new recordsets.
 
 Recordsets are iterable so the usual Python tools are available for
 transformation (:func:`python:map`, :func:`python:sorted`,
-:func:`~python:itertools.ifilter`, ...) however these return either a
+:func:`python:filter`, ...) however these return either a
 :class:`python:list` or an :term:`python:iterator`, removing the ability to
 call methods on their result, or to use set operations.
 
@@ -1209,6 +1270,8 @@ Grouping
 ~~~~~~~~
 
 .. automethod:: Model.grouped
+
+.. automethod:: Model.partitioned
 
 .. _reference/orm/inheritance:
 
@@ -1321,8 +1384,8 @@ The third inheritance mechanism provides more flexibility (it can be altered
 at runtime) but less power: using the :attr:`~odoo.models.Model._inherits`
 a model *delegates* the lookup of any field not found on the current model
 to "children" models. The delegation is performed via
-:class:`~odoo.fields.Reference` fields automatically set up on the parent
-model.
+:class:`~odoo.fields.Many2one` fields declared on the current model (one per
+parent, see also ``delegate=True``).
 
 The main difference is in the meaning. When using Delegation, the model
 **has one** instead of **is one**, turning the relationship in a composition
@@ -1401,6 +1464,7 @@ For instance, the second class below only adds a tooltip on the field
 .. code-block:: python
 
     class FirstFoo(models.Model):
+        _name = 'first.foo'
         state = fields.Selection([...], required=True)
 
     class FirstFoo(models.Model):
@@ -1418,4 +1482,4 @@ Error management
 ================
 
 .. automodule:: odoo.exceptions
-    :members: AccessDenied, AccessError, CacheMiss, MissingError, RedirectWarning, UserError, ValidationError
+    :members: AccessDenied, AccessError, CacheMiss, ConcurrencyError, LockError, MissingError, RedirectWarning, UserError, ValidationError
