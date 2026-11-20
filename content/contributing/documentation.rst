@@ -246,8 +246,8 @@ Contributing to the documentation
       #. Write a `redirect rule
          <https://github.com/odoo/documentation/tree/{BRANCH}/redirects/MANUAL.md>`_ for every RST
          file that were renamed.
-      #. Build the documentation with :command:`make`. Then, open :file:`_build/index.html` in a web
-         browser to browse the documentation with your changes.
+      #. Build the documentation with :command:`make`. Then, open :file:`_build/html/index.html` in
+         a web browser to browse the documentation with your changes.
 
          .. tip::
             Use :command:`make help` to learn about other useful commands.
@@ -283,7 +283,7 @@ Contributing to the documentation
             <https://github.com/odoo/documentation/compare>`_.
          #. Select **{CURRENT_BRANCH}** for the base.
          #. Click on :guilabel:`compare across forks`.
-         #. Select **<your_github_account>/odoo** for the head repository. Replace
+         #. Select **<your_github_account>/documentation** for the head repository. Replace
             `<your_github_account>` with the name of the GitHub account on which you created the
             fork. Skip this step if you work at Odoo.
          #. Review your changes and click on the :guilabel:`Create pull request` button.
