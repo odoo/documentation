@@ -40,13 +40,16 @@ kiosk's camera to identify the employee.
 To generate a badge, first navigate to the :menuselection:`Employees app`. Next, click on the
 desired employee card to open the employee's form, then click the :guilabel:`Settings` tab.
 
-Under the :guilabel:`ATTENDANCE/POINT OF SALE/MANUFACTURING` section, there is a :guilabel:`Badge
-ID` field. If this field is blank, click :guilabel:`Generate` at the end of the :guilabel:`Badge ID`
-line, and the field is automatically populated with a new badge ID number. Then, click
-:guilabel:`Print Badge` at the end of the badge ID number to create a PDF file of the badge.
+Under the :guilabel:`ATTENDANCE/POINT OF SALE` section (:guilabel:`ATTENDANCE/POINT OF
+SALE/MANUFACTURING` if the **Manufacturing** app is installed), there is a :guilabel:`RFID/Badge
+Number` field. If this field is blank, click :guilabel:`Generate` at the end of the
+:guilabel:`RFID/Badge Number` line, and the field is automatically populated with a new badge
+number. To use an existing badge or RFID key fob instead, click :guilabel:`Read a badge`, and scan
+it. Then, click :guilabel:`Print Badge` at the end of the badge number to create a PDF file of the
+badge.
 
-If a badge ID number is already present on the employee form, there is no :guilabel:`Generate`
-button, only a :guilabel:`Print Badge` button.
+If a badge number is already present on the employee form, there is no :guilabel:`Generate` button,
+only a :guilabel:`Print Badge` button.
 
 The employee's badge contains the employee's photo, name, job position, company logo, and a barcode
 that can be scanned at a kiosk to check in and out.
