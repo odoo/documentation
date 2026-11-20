@@ -5,9 +5,7 @@ Colombia
 .. |DIAN| replace:: :abbr:`DIAN (Dirección de Impuestos y Aduanas Nacionales)`
 .. |NIT| replace:: :abbr:`NIT (El Número de Identificación Tributaria)`
 
-Odoo's Colombian localization package provides accounting, fiscal, and legal features for databases
-in Colombia - such as chart of accounts, taxes, and electronic invoicing. The localization has the
-following `prerequisites
+The Colombian localization has the following `prerequisites
 <https://micrositios.dian.gov.co/sistema-de-facturacion-electronica/que-requieres-para-factura-electronicamente/>`_
 when using the `DIAN Own Software
 <https://micrositios.dian.gov.co/sistema-de-facturacion-electronica/como-puedes-facturar-electronicamente/>`_
@@ -30,18 +28,10 @@ solution with Odoo:
    - :doc:`Documentation on e-invoicing's legality and compliance in Colombia
      <../accounting/customer_invoices/electronic_invoicing/colombia>`
 
-.. _localization/colombia/configuration:
+Modules
+=======
 
-Configuration
-=============
-
-.. _localization/colombia/modules:
-
-Modules installation
---------------------
-
-:ref:`Install <general/install>` the following modules to get all the features of the Colombian
-localization:
+The following modules are installed automatically with the Colombian localization:
 
 .. list-table::
    :header-rows: 1
@@ -55,63 +45,94 @@ localization:
      - Default :ref:`fiscal localization package <fiscal_localizations/packages>`. This module adds
        the base accounting features for the Colombian localization: chart of accounts, taxes,
        withholdings, and identification document type.
+   * - :guilabel:`Colombian - Accounting Reports`
+     - `l10n_co_reports`
+     - This module includes accounting reports for sending certifications to suppliers for
+       withholdings applied.
+   * - :guilabel:`Colombian - Point of Sale`
+     - `l10n_co_pos`
+     - This module includes **Point of Sale** receipts for Colombian localization.
+   * - :guilabel:`E-Commerce Colombian Localization`
+     - `l10n_co_edi_website_sale`
+     - Specific e-commerce localization module.
    * - :guilabel:`Electronic invoicing for Colombia with DIAN`
      - `l10n_co_dian`
      - This module includes the features required for integration with the |DIAN| as its own
        software, and adds the ability to generate electronic invoices and support documents based on
        |DIAN| regulations.
-   * - :guilabel:`Colombian - Accounting Reports`
-     - `l10n_co_reports`
-     - This module includes accounting reports for sending certifications to suppliers for
-       withholdings applied.
    * - :guilabel:`Electronic invoicing for Colombia with Carvajal`
      - `l10n_co_edi`
      - This module includes the features required for integration with Carvajal. Adds the ability to
        generate the electronic invoices and support documents, based on |DIAN| regulations.
-   * - :guilabel:`Colombian - Point of Sale`
-     - `l10n_co_pos`
-     - This module includes **Point of Sale** receipts for Colombian localization.
+   * - :guilabel:`Mandate invoicing for Colombia`
+     - `l10n_co_edi_mandate`
+     - EDI Mandate invoicing extension
 
-.. _localization/colombia/configuration/company:
+Additionally, the following modules must be manually :ref:`installed <general/install>`:
 
-Company information
--------------------
+.. list-table::
+   :header-rows: 1
+   :widths: 25 30 50
 
-To configure your company information:
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Electronic invoicing for POS in Colombia`
+     - `l10n_co_edi_pos`
+     - This module enables electronic invoicing directly within the POS application, supporting the
+       generation of both customer invoices and credit notes. It automatically appends required
+       fiscal data and QR codes to POS receipts and includes the daily sales report mandated by
+       DIAN.
 
-#. Access your company's contact form:
+.. note::
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually :doc:`installed
+   <../../general/apps_modules>`.
 
-   - Go to the :guilabel:`Contacts` app and search for your company or;
-   - Go to the :guilabel:`Settings` app, activate the :ref:`developer mode <developer-mode>`, and in
-     the :guilabel:`Companies` section, click :guilabel:`Update Info`. Then, in the
-     :guilabel:`Contact` field, click on the company name.
+.. _localizations/colombia/loc-review:
 
-#. Configure the following information:
+Localization overview
+=====================
 
-   - :guilabel:`Company Name`.
-   - :guilabel:`Address`: Including :guilabel:`City`, :guilabel:`Department`, and :guilabel:`ZIP`
-     code.
-   - :guilabel:`Identification Number`: Select the :guilabel:`Identification Type` (:guilabel:`NIT`,
-     :guilabel:`Cédula de Ciudadanía`, :guilabel:`Registro Civil`, etc.). When the
-     :guilabel:`Identification Type` is :guilabel:`NIT`, the
-     :guilabel:`Identification Number` **must** have the *verification digit* at the end of the ID
-     prefixed by a hyphen (`-`).
+The Colombian localization package ensures compliance with Colombian fiscal and accounting
+regulations. It includes tools for managing taxes, fiscal positions, reporting, and a predefined
+chart of accounts tailored to Colombia’s standards.
 
-#. Go to the :guilabel:`Sales & Purchase` tab and configure the :guilabel:`Fiscal Information`:
+The Colombian localization package provides the following key features to ensure compliance with
+local fiscal and accounting regulations:
 
-   - :guilabel:`Obligaciones y Responsabilidades`: Select the fiscal responsibility for the company.
-     (:guilabel:`O-13` Gran Contribuyente, :guilabel:`O-15` Autorretenedor,
-     :guilabel:`O-23` Agente de retención IVA, :guilabel:`O-47` Regimen de tributación simple,
-     :guilabel:`R-99-PN` No Aplica).
-   - :guilabel:`Gran Contribuyente`: If the company is *Gran Contribuyente*, enable this option.
-   - :guilabel:`Fiscal Regimen`: Select the Tribute Name for the company (:guilabel:`IVA`,
-     :guilabel:`INC`, :guilabel:`IVA e INC`, or :guilabel:`No Aplica`)
-   - :guilabel:`Commercial Name`: If the company uses a specific commercial name and it needs to be
-     displayed in the invoice.
+- :ref:`Chart of accounts <localization/colombia/chart-of-accounts>`: a predefined structure
+  tailored to Colombian accounting standards
+- :ref:`Taxes <localization/colombia/taxes>`: pre-configured tax rates, including standard VAT,
+  zero-rated, and exempt options.
+- :ref:`Reporting <localization/colombia/reports>`
 
-.. tip::
-   The data configured in the :guilabel:`Fiscal Information` section is printed in the valid fiscal
-   PDF reports.
+.. _localization/colombia/chart-of-accounts:
+
+Chart of accounts
+-----------------
+
+The :doc:`chart of accounts </applications/finance/accounting/get_started/chart_of_accounts>` is
+installed by default as part of the localization module. The accounts are mapped automatically in
+taxes, default account payable, and default account receivable. The chart of accounts for Colombia
+is based on the PUC (Plan Unico de Cuentas).
+
+.. _localization/colombia/taxes:
+
+Taxes
+-----
+
+To create or modify taxes, go to :menuselection:`Accounting --> Configuration --> Taxes`, and select
+the related tax.
+
+If sales transactions include products with taxes, configure the :guilabel:`Value Type` field in the
+:guilabel:`Advanced Options` tab. Retention tax types (:guilabel:`ICA`, :guilabel:`IVA`,
+:guilabel:`Fuente`) are also included. This configuration is used to display taxes correctly on the
+invoice.
+
+.. image:: colombia/dian-taxes-configuration.png
+   :alt: Specific tax configurations per DIAN regulations.
+
 
 .. _localization/colombia/einvoice-configuration:
 
@@ -180,50 +201,21 @@ scroll to the :guilabel:`Colombian Electronic Invoicing` section. Then, follow t
    `Configuración de Facturación Electrónica - Localización de Colombia
    <https://www.youtube.com/watch?v=bzweMwTEbfY&list=PL1-aSABtP6ABxZshems3snMjx7bj_7ZsZ&index=3>`_.
 
-.. _localization/colombia/master-data:
-
-Master data
------------
-
-.. _localization/colombia/contacts:
-
-Contacts
-~~~~~~~~
-
-Configure the following fields on the :doc:`contact form <../../essentials/contacts>`:
-
-- :guilabel:`Identification Number` (VAT): Select the identification number type and enter the
-  identification number. If the identification number type is :guilabel:`NIT`, the identification
-  number must include the verification digit at the end, prefixed by a hyphen (`-`).
-- :ref:`Fiscal Information fields <localization/colombia/configuration/company>` in the
-  :guilabel:`Sales & Purchase` tab.
-
 .. _localization/colombia/products:
 
 Products
-~~~~~~~~
+--------
 
 Access the product's form via :menuselection:`Accounting --> Customers --> Products` and ensure
 that either the :guilabel:`UNSPSC Category` field (found in the :guilabel:`Accounting tab`) or the
 :guilabel:`Internal Reference` field (in the :guilabel:`General Information` tab) is configured.
 
-.. _localization/colombia/taxes:
+.. _localization/colombia/journals:
 
-Taxes
-~~~~~
+Journals
+--------
 
-To create or modify taxes, go to :menuselection:`Accounting --> Configuration --> Taxes`, and select
-the related tax.
-
-If sales transactions include products with taxes, configure the :guilabel:`Value Type` field in the
-:guilabel:`Advanced Options` tab. Retention tax types (:guilabel:`ICA`, :guilabel:`IVA`,
-:guilabel:`Fuente`) are also included. This configuration is used to display taxes correctly on the
-invoice.
-
-.. image:: colombia/dian-taxes-configuration.png
-   :alt: Specific tax configurations per DIAN regulations.
-
-.. _localization/colombia/co-journals:
+.. _localization/colombia/sales-journals:
 
 Sales journals
 ~~~~~~~~~~~~~~
@@ -270,22 +262,62 @@ Purchase journals
 Once the |DIAN| has assigned the official sequence and prefix for the *support document* related to
 vendor bills, the purchase journals related to their supporting documents need to be updated in
 Odoo. The process is similar to the configuration of the :ref:`sales journals
-<localization/colombia/co-journals>`.
+<localization/colombia/sales-journals>`.
 
 .. seealso::
    For more information on support document journals using the Carvajal solution, review the
    `Documento Soporte - Localización de Colombia video
    <https://www.youtube.com/watch?v=UmYsFcD7xzE&list=PL1-aSABtP6ABxZshems3snMjx7bj_7ZsZ&index=8>`_.
 
-.. _localization/colombia/chart-of-accounts:
+.. _localization/colombia/reports:
 
-Chart of accounts
-~~~~~~~~~~~~~~~~~
+Financial reports
+-----------------
 
-The :doc:`chart of accounts </applications/finance/accounting/get_started/chart_of_accounts>` is
-installed by default as part of the localization module. The accounts are mapped automatically in
-taxes, default account payable, and default account receivable. The chart of accounts for Colombia
-is based on the PUC (Plan Unico de Cuentas).
+.. _localization/colombia/certificado-ica:
+
+Certificado de Retención en ICA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This report is a certification to vendors for withholdings made for the Colombian Industry and
+Commerce (ICA) tax. The report can be found under :menuselection:`Accounting --> Reporting -->
+Colombian Statements --> Certificado de Retención en ICA`.
+
+Click the :icon:`fa-cog` :guilabel:`(gear)` icon to display options to :guilabel:`Download Excel`
+and :guilabel:`Copy to Documents`.
+
+.. image:: colombia/retencion-ica-dian.png
+   :alt: Certificado de Retención en ICA report in Odoo Accounting.
+
+.. _localization/colombia/certificado-iva:
+
+Certificado de Retención en IVA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This report issues a certificate on the amount withheld from vendors for VAT withholding. The report
+can be found under :menuselection:`Accounting --> Reporting --> Colombian Statements --> Certificado
+de Retención en IVA`.
+
+Click the :icon:`fa-cog` :guilabel:`(gear)` icon to display options to :guilabel:`Download Excel`
+and :guilabel:`Copy to Documents`.
+
+.. image:: colombia/retencion-iva-dian.png
+   :alt: Certificado de Retención en IVA report in Odoo Accounting.
+
+.. _localization/colombia/certificado-fuente:
+
+Certificado de Retención en la Fuente
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This certificate is issued to partners for the withholding tax that they have made. The report can
+be found under :menuselection:`Accounting --> Reporting --> Colombian Statements --> Certificado de
+Retención en Fuente`.
+
+Click the :icon:`fa-cog` :guilabel:`(gear)` icon to display options to :guilabel:`Download Excel`
+and :guilabel:`Copy to Documents`.
+
+.. image:: colombia/retencion-fuente-dian.png
+   :alt: Certificado de Retención en Fuente report in Odoo Accounting.
 
 .. _localization/colombia/workflows:
 
@@ -303,8 +335,61 @@ To enable automatic exchange rate updates, follow these steps:
 #. Select an :guilabel:`Interval` for how frequently the currency rate should be automatically
    updated.
 
-Main workflows
-==============
+.. _localization/colombia/configuration/company-contacts:
+
+Company and contacts
+====================
+
+To configure your company information:
+
+#. Access your company's contact form:
+
+   - Go to the :guilabel:`Contacts` app and search for your company or;
+   - Go to the :guilabel:`Settings` app, activate the :ref:`developer mode <developer-mode>`, and in
+     the :guilabel:`Companies` section, click :guilabel:`Update Info`. Then, in the
+     :guilabel:`Contact` field, click on the company name.
+
+#. Configure the following information:
+
+   - :guilabel:`Company Name`.
+   - :guilabel:`Address`: Including :guilabel:`City`, :guilabel:`Department`, and :guilabel:`ZIP`
+     code.
+   - :guilabel:`Identification Number`: Select the :guilabel:`Identification Type` (:guilabel:`NIT`,
+     :guilabel:`Cédula de Ciudadanía`, :guilabel:`Registro Civil`, etc.). When the
+     :guilabel:`Identification Type` is :guilabel:`NIT`, the
+     :guilabel:`Identification Number` **must** have the *verification digit* at the end of the ID
+     prefixed by a hyphen (`-`).
+
+#. Go to the :guilabel:`Sales & Purchase` tab and configure the :guilabel:`Fiscal Information`:
+
+   - :guilabel:`Obligaciones y Responsabilidades`: Select the fiscal responsibility for the company.
+     (:guilabel:`O-13` Gran Contribuyente, :guilabel:`O-15` Autorretenedor,
+     :guilabel:`O-23` Agente de retención IVA, :guilabel:`O-47` Regimen de tributación simple,
+     :guilabel:`R-99-PN` No Aplica).
+   - :guilabel:`Gran Contribuyente`: If the company is *Gran Contribuyente*, enable this option.
+   - :guilabel:`Fiscal Regimen`: Select the Tribute Name for the company (:guilabel:`IVA`,
+     :guilabel:`INC`, :guilabel:`IVA e INC`, or :guilabel:`No Aplica`)
+   - :guilabel:`Commercial Name`: If the company uses a specific commercial name and it needs to be
+     displayed in the invoice.
+
+   .. note::
+      The :guilabel:`Fiscal Information` fields should also be configured on :doc:`contacts form
+      <../../essentials/contacts>`
+
+   .. tip::
+      The data configured in the :guilabel:`Fiscal Information` section is printed in the valid
+      fiscal PDF reports.
+
+Configure the following fields on the :doc:`contact form <../../essentials/contacts>`:
+
+- :guilabel:`Identification Number` (VAT): Select the identification number type and enter the
+  identification number. If the identification number type is :guilabel:`NIT`, the identification
+  number must include the verification digit at the end, prefixed by a hyphen (`-`).
+
+.. _localization/colombia/accounting:
+
+Accounting
+==========
 
 .. _localization/colombia/electronic-invoices:
 
@@ -336,7 +421,7 @@ Invoice creation
 
 Electronic invoices are generated and sent to both the |DIAN| and the customer. These documents can
 be created from the sales order or manually generated. To create a new invoice, go to
-:menuselection:`Accounting --> Costumers --> Invoices`, and select :guilabel:`Create`. On the
+:menuselection:`Accounting --> Customers --> Invoices`, and select :guilabel:`Create`. On the
 invoice form, configure the following fields:
 
 - :guilabel:`Customer`: customer's information.
@@ -457,9 +542,16 @@ automatically sent to Carvajal.
 Common errors
 -------------
 
-During the XML validation, the most common errors are related to missing :ref:`master data
-<localization/colombia/master-data>`. In such cases, a validation error message is displayed and
-sending is blocked.
+During the XML validation, the most common errors are related to missing master data, such as:
+
+- :ref:`Chart of accounts <localization/colombia/chart-of-accounts>`
+- :ref:`Taxes <localization/colombia/taxes>`
+- :ref:`Products <localization/colombia/products>`
+- :ref:`Sales journals <localization/colombia/sales-journals>`
+- :ref:`Purchase journals <localization/colombia/purchase-journals>`
+- :ref:`Contacts <localization/colombia/configuration/company-contacts>`
+
+In such cases, a validation error message is displayed and sending is blocked.
 
 If the invoice was sent and set as *Rejected* by the |DIAN|, the error messages are visible by
 clicking the :icon:`fa-info-circle` :guilabel:`(info circle)` icon next to the :guilabel:`Status`
@@ -470,55 +562,119 @@ solutions to apply before re-sending.
    :alt: Example of error messages on rejected invoices.
 
 After the master data or other issues are corrected, it is possible to reprocess the XML again. Do
-so by following the :ref:`electronic invoice sending <localization/colombia/send-electronic-invoice>`
-flow.
+so by following the :ref:`electronic invoice sending
+<localization/colombia/send-electronic-invoice>` flow.
 
-.. _localization/colombia/reports:
+.. _localization/colombia/pos:
 
-Financial reports
-=================
+Point of Sale
+=============
 
-.. _localization/colombia/certificado-ica:
+.. _localization/colombia/pos-einvoicing:
 
-Certificado de Retención en ICA
--------------------------------
+Point of Sale electronic invoicing
+----------------------------------
 
-This report is a certification to vendors for withholdings made for the Colombian Industry and
-Commerce (ICA) tax. The report can be found under :menuselection:`Accounting --> Reporting -->
-Colombian Statements --> Certificado de Retención en ICA`.
+.. note::
+   Make sure to :ref:`install <general/install>` the :guilabel:`Electronic Invoicing for POS in
+   Colombia` (`l10n_co_edi_pos`) module.
 
-Click the :icon:`fa-cog` :guilabel:`(gear)` icon to display options to :guilabel:`Download Excel`
-and :guilabel:`Copy to Documents`.
+The :guilabel:`Electronic Invoicing for POS in Colombia` module enables the following features and
+configurations:
 
-.. image:: colombia/retencion-ica-dian.png
-   :alt: Certificado de Retención en ICA report in Odoo Accounting.
+- Generate and send electronic invoicing documents from the *Point of Sale* app.
+- Support the required fiscal fields for contacts created in the *Point of Sale* app.
+- Set a :guilabel:`POS Serial Number` per point of sale.
+- Follow the status of the document sent to the :abbr:`DIAN (Dirección de Impuestos y Aduanas
+  Nacionales)` directly from the *Point of Sale* order.
+- Print the required fiscal data and QR in ticket format.
+- Generate the daily sales report with the fiscal required data mandated by DIAN.
 
-.. _localization/colombia/certificado-iva:
+For the module to function correctly, the master data configurations, such as :ref:`Chart of
+accounts <localization/colombia/chart-of-accounts>`, :ref:`Taxes <localization/colombia/taxes>`,
+:ref:`Products <localization/colombia/products>`, :ref:`Sales journals
+<localization/colombia/sales-journals>`, :ref:`Purchase journals
+<localization/colombia/purchase-journals>`, and :ref:`Contacts
+<localization/colombia/configuration/company-contacts>`, should already be completed.
 
-Certificado de Retención en IVA
--------------------------------
+.. _localization/colombia/pos-einvoicing-config:
 
-This report issues a certificate on the amount withheld from vendors for VAT withholding. The report
-can be found under :menuselection:`Accounting --> Reporting --> Colombian Statements --> Certificado
-de Retención en IVA`.
+Configuration
+~~~~~~~~~~~~~
 
-Click the :icon:`fa-cog` :guilabel:`(gear)` icon to display options to :guilabel:`Download Excel`
-and :guilabel:`Copy to Documents`.
+To configure the *Point of Sale*, follow these steps:
 
-.. image:: colombia/retencion-iva-dian.png
-   :alt: Certificado de Retención en IVA report in Odoo Accounting.
+#. Navigate to :menuselection:`Point of Sale --> Configuration --> Settings`.
+#. In the yellow banner at the top, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon
+   and select the relevant :guilabel:`Point of Sale`.
+#. In the :guilabel:`PoS serial number` field, enter the unique serial number assigned to this
+   specific point of sale and its daily sales reports.
+#. In the :guilabel:`Accounting` section, under :guilabel:`Default Journals`, select the default
+   journals used for the *Point of Sale* orders and invoices:
 
-.. _localization/colombia/certificado-fuente:
+   - :guilabel:`Orders`: Select the electronic invoicing sales journal used in the *Accounting* app
+     to generate invoices from the POS to customers who provide their fiscal data.
+   - :guilabel:`Credit Notes`: Select the journal used to generate credit notes during the refund
+     process.
+   - :guilabel:`Final Consumer Invoices`: Select the electronic invoicing sales journal used to
+     generate invoices to the *Consumidor Final* contact (for customers who do not request an
+     invoice).
 
-Certificado de Retención en la Fuente
--------------------------------------
+.. _localization/colombia/pos-einvoicing-customer-journal:
 
-This certificate is issued to partners for the withholding tax that they have made. The report can
-be found under :menuselection:`Accounting --> Reporting --> Colombian Statements --> Certificado de
-Retención en Fuente`.
+Final Consumer journal
+~~~~~~~~~~~~~~~~~~~~~~
 
-Click the :icon:`fa-cog` :guilabel:`(gear)` icon to display options to :guilabel:`Download Excel`
-and :guilabel:`Copy to Documents`.
+Sales to *Consumidor Final* (customers who do not request an invoice) require a dedicated journal
+with its own resolution.
 
-.. image:: colombia/retencion-fuente-dian.png
-   :alt: Certificado de Retención en Fuente report in Odoo Accounting.
+Configure the journal using the specific :ref:`sales journal steps
+<localization/colombia/sales-journals>`. In the :guilabel:`Advanced Settings` tab, under the
+:guilabel:`Resolución DIAN` section, enable the :guilabel:`Journal for Final Consumer POS` checkbox.
+
+This enables a new sequence for this journal, which will be used as the :guilabel:`DIAN number
+sequence` for each POS order.
+
+.. _localization/colombia/pos-einvoicing-payment-methods:
+
+Payment methods
+~~~~~~~~~~~~~~~
+
+Each payment method used in the *Point of Sale* must be mapped to a payment method recognized by the
+:abbr:`DIAN (Dirección de Impuestos y Aduanas Nacionales)`.
+
+To do so, go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`, select a
+payment method, and select the best :guilabel:`Payment Option` for reporting when this method is
+used for an order.
+
+.. important::
+   Repeat this process for each payment method available in the *Point of Sale*.
+
+.. _localization/colombia/pos-einvoicing-invoicing-flow:
+
+Invoicing flow
+~~~~~~~~~~~~~~
+
+By default, the *Consumidor Final* contact is selected as the customer when initiating any POS
+order. An existing client can also be selected, or a new one can be created.
+
+Once the order is validated, the electronic document is automatically generated and sent to the
+:abbr:`DIAN (Dirección de Impuestos y Aduanas Nacionales)`, using one of the following methods:
+
+- The :guilabel:`Final Consumer Invoices journal`: When the assigned customer is the *Consumidor
+  Final* contact.
+- The :guilabel:`Orders journal`: When the assigned customer is a specific company or person.
+
+When the sending process is complete, the printed ticket includes the fiscal data and a QR code
+that serves as a physical representation of the accepted electronic invoice.
+
+To track the status of the sent document, go to :menuselection:`Point of Sale --> Orders -->
+Orders` and open the form view. The following fields will be available:
+
+- The :guilabel:`DIAN Name` field shows the official sequence number of the electronic document.
+- The DIAN tab is used for :ref:`electronic invoice sending features
+  <localization/colombia/send-electronic-invoice>`.
+
+.. note::
+   If the POS order has a company or person contact assigned, an invoice is generated in the
+   **Accounting** app for the order.
