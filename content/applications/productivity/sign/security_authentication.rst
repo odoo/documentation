@@ -176,11 +176,11 @@ authentication via Aadhaar is required.
 Itsme®
 ------
 
-Itsme® authentication allows signers in **the European Union**, **the United Kingdom**, **Iceland**
-and **Norway** to prove their identity.
+Itsme® authentication allows signers in **the European Union**, **the United Kingdom**, **Iceland**,
+**Norway**, to prove their identity.
 
-To enable authentication with itsme®, go to :menuselection:`Sign --> Configuration
---> Settings`, then enable :guilabel:`Identify with itsme®`.
+To enable authentication with itsme®, go to :menuselection:`Sign --> Configuration--> Settings`,
+then enable :guilabel:`Identify with itsme®`.
 
 To require signer authentication via itsme®:
 
