@@ -1,7 +1,6 @@
 .. meta::
-   :description: Explains how to configure quotation settings, create a quotation and fill in its
-                 Order Lines, Optional Products, and Other Info tabs, and send it to a customer for
-                 confirmation.
+   :description: Explains how to configure quotation settings, add order lines and optional
+                 products, and send a quotation to a customer for confirmation.
 
 =================
 Create quotations
@@ -170,17 +169,15 @@ Beneath the product lines, there are buttons that can be clicked to apply any of
    - :doc:`../products_prices/prices/pricing`
    - :doc:`../../../essentials/product_catalog`
 
-Optional Products tab
----------------------
+.. _sales/create_quotations/optional-product-sections:
 
-Open the :guilabel:`Optional Products` tab to select related products that can be presented to the
-customer, which may result in an increased sale.
+Optional product sections
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For example, if the customer wants to buy a car, an optional product that could be offered is a
-*Trailer Hitch*.
-
-.. seealso::
-  :doc:`optional_products`
+To offer optional products on a quotation, use an optional section in the :guilabel:`Order Lines`
+tab. First :ref:`add an optional section
+<sales/optional_products/optional-product-sections-in-quotations>` and then add the products to the
+section.
 
 Other Info tab
 --------------
