@@ -16,6 +16,15 @@ Odoo Online version 20.1
   models).
   See `#237614 <https://github.com/odoo/odoo/pull/237614>`_
   and `#292869 <https://github.com/odoo/odoo/pull/292869>`_.
+- New ``Model.partitioned()`` to split a recordset by predicates.
+  See `#293366 <https://github.com/odoo/odoo/pull/293366>`_.
+- New field attributes ``ui_readonly``, ``ui_required`` and ``ui_domain``.
+  See `#302515 <https://github.com/odoo/odoo/pull/302515>`_
+  and `#292770 <https://github.com/odoo/odoo/pull/292770>`_.
+- Shared test data companies and users (``--with-test-data``).
+  See `#284989 <https://github.com/odoo/odoo/pull/284989>`_.
+- Persistent signed file cache of compiled QWeb code.
+  See `#302905 <https://github.com/odoo/odoo/pull/302905>`_.
 
 Odoo version 20.0
 =================
