@@ -147,13 +147,13 @@ can access from the top menu.
 .. image:: performance/speedscope_modes.png
    :align: center
 
-- The :guilabel:`Combined` view shows all the SQL queries and traces merged togethers.
-- The :guilabel:`Combined no context` view shows the same result but ignores the saved execution
-  context <performance/profiling/enable>`.
+- The :guilabel:`Combined` view shows all the SQL queries and traces merged together.
+- The :guilabel:`Combined no context` view shows the same result but ignores the saved
+  :ref:`execution context <performance/profiling/enable>`.
 - The :guilabel:`sql (no gap)` view shows all the SQL queries as if they were executed one after
   another, without any Python logic. This is useful for optimizing SQL only.
 - The :guilabel:`sql (density)` view shows only all the SQL queries, leaving gap between them. This
-  can be useful to spot if eiter SQL or Python code is the problem, and to identify zones in where
+  can be useful to spot if either SQL or Python code is the problem, and to identify zones where
   many small queries could be batched.
 - The :guilabel:`frames` view shows the results of only the :ref:`periodic collector
   <performance/profiling/collectors/periodic>`.
@@ -186,7 +186,7 @@ There are currently three collectors available in Odoo:
    * - :ref:`SQL collector <performance/profiling/collectors/sql>`
      - :guilabel:`Record sql`
      - `sql`
-     - `SqlCollector`
+     - `SQLCollector`
    * - :ref:`Periodic collector <performance/profiling/collectors/periodic>`
      - :guilabel:`Record traces`
      - `traces_async`
@@ -220,8 +220,8 @@ Periodic collector
 ~~~~~~~~~~~~~~~~~~
 
 This collector runs in a separate thread and saves the stack trace of the analysed thread at every
-interval. The interval (by default 10 ms) can be defined through the :guilabel:`Interval` option in
-the user interface, or the `interval` parameter in Python code.
+interval. The interval (by default 1 ms) can be defined through the :guilabel:`Interval` option in
+the user interface, or the `interval` parameter (in seconds) in Python code.
 
 .. warning::
    If the interval is set at a very low value, profiling long requests will generate memory issues.
@@ -337,7 +337,7 @@ When working with recordsets, it is almost always better to batch operations.
    .. code-block:: python
 
       for record_id in record_ids:
-          model.browse(record_id)
+          record = model.browse(record_id)
           record.foo  # One query is executed per record.
 
    Instead, browse the entire recordset first.
@@ -349,15 +349,36 @@ When working with recordsets, it is almost always better to batch operations.
       for record in records:
           record.foo  # One query is executed for the entire recordset.
 
-   We can verify that the records are prefetched in batch by reading the field `prefetch_ids` which
-   includes each of the record ids.browsing all records together is unpractical,
+   We can verify that the records are prefetched in batch by reading the field
+   `_prefetch_ids`, which includes each of the record ids.
 
-   If needed, the `with_prefetch` method can be used to disable batch prefetching:
+   If browsing all records together is impractical, the `with_prefetch` method
+   can be used to keep batch prefetching on records browsed individually:
 
    .. code-block:: python
 
       for values in values_list:
           message = self.browse(values['id']).with_prefetch(self.ids)
+
+.. example::
+   To search records and read some of their fields, use `search_fetch` to do both in one query
+   instead of a search followed by one query to read the fields.
+
+   .. rst-class:: bad-example
+   .. code-block:: python
+
+      for record in model.search(domain):
+          record.foo  # One more query to read 'foo'.
+
+   .. rst-class:: good-example
+   .. code-block:: python
+
+      for record in model.search_fetch(domain, ['foo']):
+          record.foo  # Already loaded, no query.
+
+   On existing records, `records.fetch(['foo', 'bar'])` loads the given fields in one query.
+
+   You can call ``search_fetch`` without the field names argument to fetch all prefetchable fields.
 
 .. _performance/good_practices/algorithmic_complexity:
 
@@ -371,15 +392,15 @@ data correctly.
 
 .. example::
    For a given problem, let's consider a naive algorithm crafted with two nested loops for which the
-   complexity in in O(n²).
+   complexity is in O(n²).
 
    .. rst-class:: bad-example
    .. code-block:: python
 
       for record in self:
           for result in results:
-              if results['id'] == record.id:
-                  record.foo = results['foo']
+              if result['id'] == record.id:
+                  record.foo = result['foo']
                   break
 
    Assuming that all results have a different id, we can prepare the data to reduce the complexity.
@@ -428,12 +449,15 @@ data correctly.
 Use indexes
 -----------
 
-Database indexes can help fasten search operations, be it from a search in the or through the user
-interface.
+Database indexes can help speed up search operations, be it from a search in the code or through the
+user interface.
 
 .. code-block:: python
 
    name = fields.Char(string="Name", index=True)
+
+`index` also accepts `'btree_not_null'` (a smaller index for mostly-NULL columns) and `'trigram'`
+(for `ilike` searches). Use `models.Index` for an index on several columns.
 
 .. warning::
    Be careful not to index every field as indexes consume space and impact on performance when

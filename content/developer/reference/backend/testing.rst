@@ -47,13 +47,24 @@ The test runner will simply run any test case, as described in the official
 `unittest documentation`_, but Odoo provides a number of utilities and helpers
 related to testing Odoo content (modules, mainly):
 
+.. autoclass:: odoo.tests.BaseCase
+    :members: assertQueries, assertRecordValues
+
 .. autoclass:: odoo.tests.TransactionCase
     :members: browse_ref, ref
 
 .. autoclass:: odoo.tests.HttpCase
-    :members: browse_ref, ref, url_open, browser_js
+    :members: browse_ref, ref, url_open, browser_js, start_tour
 
 .. autofunction:: odoo.tests.tagged
+
+.. autofunction:: odoo.tests.users
+
+.. autofunction:: odoo.tests.warmup
+
+Most module tests inherit from ``odoo.addons.base.tests.common.BaseCommon``
+(a :class:`~odoo.tests.TransactionCase` with a few common records and helpers)
+rather than from :class:`~odoo.tests.TransactionCase` directly.
 
 The most common situation is to use
 :class:`~odoo.tests.TransactionCase` and test a property of a model
@@ -115,7 +126,7 @@ running tests.
 Subclasses of :class:`odoo.tests.BaseCase` (usually through
 :class:`~odoo.tests.TransactionCase` or
 :class:`~odoo.tests.HttpCase`) are automatically tagged with
-``standard`` and ``at_install`` by default.
+``standard`` and ``post_install`` by default.
 
 Invocation
 ~~~~~~~~~~
@@ -176,20 +187,10 @@ ones:
 
     $ odoo-bin --test-tags 'standard,-slow'
 
-When you write a test that does not inherit from the
-:class:`~odoo.tests.BaseCase`, this test will not have the default tags,
-you have to add them explicitly to have the test included in the default test
-suite.  This is a common issue when using a simple ``unittest.TestCase`` as
-they're not going to get run:
-
-.. code-block:: python
-
-    import unittest
-    from odoo.tests import tagged
-
-    @tagged('standard', 'post_install')
-    class SmallTest(unittest.TestCase):
-        ...
+Test classes must inherit from :class:`~odoo.tests.BaseCase` (in practice
+:class:`~odoo.tests.TransactionCase` or :class:`~odoo.tests.HttpCase`).
+Classes deriving directly from ``unittest.TestCase`` are not collected by the
+Odoo test loader, even when tagged.
 
 Besides tags you can also specify specific modules, classes or functions to
 test. The full syntax of the format accepted by :option:`--test-tags <odoo-bin --test-tags>`
@@ -230,7 +231,7 @@ Special tags
   :class:`~odoo.tests.BaseCase` are implicitly tagged standard.
   :option:`--test-tags <odoo-bin --test-tags>` also defaults to ``standard``.
 
-  That means untagged test will be executed by default when tests are enabled.
+  That means untagged tests will be executed by default when tests are enabled.
 
 - ``post_install``: Means that the test will be executed after all the modules
   are installed. This is a default implicit tag.
@@ -238,8 +239,8 @@ Special tags
 - ``at_install``: Means that the test will be executed right after the module
   installation and before other modules are installed.
 
-  This should be used seldomly as it prevents test runs from being parallelized
-  on runbot. A valuable addition is a comment above to test to explain why it
+  This should be used seldom as it prevents test runs from being parallelized
+  on runbot. A valuable addition is a comment above the test to explain why it
   needs to be run before other modules are installed.
 
   Note that this is *exclusive* with ``post_install`` so ``at_install`` is
@@ -302,8 +303,8 @@ Integration Testing
 Testing Python code and JS code separately is very useful, but it does not prove that the web client
 and the server work together.  In order to do that, we can write another kind of test: tours.  A
 tour is a mini scenario of some interesting business flow.  It explains a sequence of steps that
-should be followed.  The test runner will then create a PhantomJs browser, point it to the proper
-url and simulate the click and inputs, according to the scenario.
+should be followed.  The test runner will then start a headless Chrome browser, point it to the
+proper URL and simulate the clicks and inputs, according to the scenario.
 
 Writing a test tour
 -------------------
@@ -353,17 +354,19 @@ Javascript
 
    .. code-block:: javascript
 
-      import tour from 'web_tour.tour';
-      tour.register('rental_product_configurator_tour', {
-          url: '/web',  // Here, you can specify any other starting url
-      }, [
-          // Your sequence of steps
-      ]);
+      import { registry } from "@web/core/registry";
+
+      registry.category("web_tour.tours").add('rental_product_configurator_tour', {
+          url: '/odoo',  // Here, you can specify any other starting url
+          steps: () => [
+              // Your sequence of steps
+          ],
+      });
 
 #. Add any step you want.
 
 Every step contains at least a trigger. You can either use the `predefined steps
-<{GITHUB_PATH}/addons/web_tour/static/src/tour_service/tour_utils.js#L426>`_ or write your own personalized
+<{GITHUB_PATH}/addons/web_tour/static/src/tour_utils.js>`_ or write your own personalized
 step.
 
 Here are some example of steps:
@@ -373,7 +376,7 @@ Here are some example of steps:
    .. code-block:: javascript
 
       // First step
-      tour.stepUtils.showAppsMenuItem(),
+      stepUtils.showAppsMenuItem(),  // import { stepUtils } from "@web_tour/tour_utils";
       // Second step
       {
          trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
@@ -491,7 +494,7 @@ Python
 ~~~~~~
 
 To start a tour from a python test, make the class inherit from
-:class:`~odoo.tests.HTTPCase`, and call `start_tour`:
+:class:`~odoo.tests.HttpCase`, and call `start_tour`:
 
 .. code-block:: python
 
