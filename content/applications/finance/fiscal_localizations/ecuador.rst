@@ -473,12 +473,26 @@ Filling out a credit note follows the same process as completing an :ref:`invoic
 Customer debit note
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`Customer debit notes <accounting/credit_notes/issue-debit-note>` are electronic documents sent
-to the SRI once validated. They can only be registered from a validated (posted) invoice.
+:ref:`Customer debit notes <accounting/credit_notes/issue-debit-note>` are electronically sent to
+the SRI once validated, and can only be created from confirmed invoices.
 
-In the :guilabel:`Use Specific Journal` of the :guilabel:`Create Debit Note` window, select the
-printer point for the credit note or leave it empty to use the same journal as the original
-invoice.
+To create a debit note, follow these steps:
+
+#. Open a confirmed invoice, click the :icon:`fa-cog` :guilabel:`(Actions)` button, and then
+   :guilabel:`Debit Note`.
+#. Fill in the fields:
+
+   - :guilabel:`Reason`: The reason for the debit note.
+   - :guilabel:`Debit Note Date`: The debit note's creation date.
+   - :guilabel:`Copy Lines`: Select this option if you need to register a debit note with the same
+     lines of invoice.
+   - :guilabel:`Use Specific Journal`: Select a journal to use it for this action, or leave blank
+     to default to the entry's original journal.
+
+#. When done, click :guilabel:`Create Debit Note` to create the debit note.
+
+Review the debit note, change information if required (e.g., :guilabel:`Amount`,
+:guilabel:`Product`, etc.), and click :guilabel:`Confirm` to post the debit note.
 
 .. _localizations/ecuador/customer-withholdings:
 
