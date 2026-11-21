@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 12:37+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-11-20 17:31+0000\n"
+"PO-Revision-Date: 2026-11-21 15:38+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/vi/>\n"
 "Language: vi\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/productivity.rst:5
 msgid "Productivity"
@@ -687,9 +687,9 @@ msgid ""
 "click :guilabel:`New`. Enter an agent name, then add a short description, if "
 "desired."
 msgstr ""
-"Để tạo một |AI| tác nhân mới, hãy điều hướng đến ứng dụng "
-":menuselection:`AI` và nhấp vào :guilabel:`Mới`. Nhập tên tác nhân, sau đó "
-"thêm mô tả ngắn nếu muốn."
+"Để tạo một |AI| tác nhân mới, hãy điều hướng đến ứng "
+"dụng :menuselection:`AI` và nhấp vào :guilabel:`Mới`. Nhập tên tác nhân, sau "
+"đó thêm mô tả ngắn nếu muốn."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:181
 msgid ""
@@ -2292,8 +2292,8 @@ msgid ""
 "When one of these conditions is met, the agent activates the *Lead "
 "Creation* :ref:`skill <ai/agents/skills>`."
 msgstr ""
-"Khi một trong những điều kiện này được đáp ứng, tác nhân sẽ kích hoạt "
-":ref:`kỹ năng <ai/agents/skills>` *Tạo khách hàng tiềm năng*."
+"Khi một trong những điều kiện này được đáp ứng, tác nhân sẽ kích "
+"hoạt :ref:`kỹ năng <ai/agents/skills>` *Tạo khách hàng tiềm năng*."
 
 #: ../../export/content/applications/productivity/ai/live-chat.rst:90
 msgid "Lead creation skill"
@@ -3697,155 +3697,256 @@ msgstr ""
 msgid ":doc:`../mcp_server`"
 msgstr ":doc:`../mcp_server`"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:3
+#: ../../export/content/applications/productivity/ai/server-actions.rst:-1
+msgid ""
+"Use Odoo AI in automated workflows. Learn how to trigger AI agents "
+"automatically and how AI server actions evaluate records and select tools to "
+"execute, with a document sorting example and guidance on choosing the right "
+"approach."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:8
 msgid "AI server actions"
 msgstr "Hành động máy chủ AI"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:7
+#: ../../export/content/applications/productivity/ai/server-actions.rst:12
 msgid ""
-"|AI| server actions extend Odoo's automation framework by allowing "
-"artificial intelligence to make decisions during a workflow."
+"Odoo |AI| can be used in automated workflows in two ways: an automated or "
+"scheduled action can trigger an |AI| agent to perform a task, or an AI "
+"server action can make decisions and select tools to execute within a "
+"workflow."
 msgstr ""
-"Hành động máy chủ |AI| mở rộng khung tự động hóa của Odoo bằng cách cho phép "
-"trí tuệ nhân tạo đưa ra quyết định trong quy trình làm việc."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:10
-msgid ""
-"They are designed for cases where logic cannot be expressed entirely through "
-"fixed conditions, but still requires controlled execution through standard "
-"server actions."
-msgstr ""
-"Chúng được thiết kế cho các trường hợp khi logic không thể được biểu thị "
-"hoàn toàn thông qua các điều kiện cố định, nhưng vẫn yêu cầu thực thi có "
-"kiểm soát thông qua các hành động máy chủ tiêu chuẩn."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:14
-msgid "How AI server actions work"
-msgstr "Cách hoạt động của hành động máy chủ AI"
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:16
-msgid ""
-"AI-driven workflows in Odoo are built around a clear separation of "
-"responsibilities between the |AI| server action, or *the Manager*, and the "
-"tool, or *the Worker*."
+msgid "These approaches serve different purposes:"
 msgstr ""
-"Quy trình làm việc dựa trên AI trong Odoo được xây dựng dựa trên sự phân "
-"tách rõ ràng các trách nhiệm giữa hành động máy chủ |AI|, hay *Người quản "
-"lý*, và công cụ, hay *Người thực thi*."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:18
+msgid ""
+"*AI agent triggers*: Summon a configured :doc:`agent <agents>` to perform a "
+"task based on its instructions, Skills, and Sources."
+msgstr ""
+"*Trình kích hoạt tác nhân AI*: Gọi một :doc:`tác nhân <agents>` đã cấu hình "
+"để thực hiện tác vụ dựa trên hướng dẫn, kỹ năng và nguồn của tác nhân đó."
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:20
-msgid "AI server action: the manager"
-msgstr "Hành động máy chủ AI: người quản lý"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:22
 msgid ""
-"An |AI| server action acts as a decision maker, or a manager. It reads the "
-"record and its context. It interprets the |AI| prompt. And it decides which "
-"tool to call, and what arguments to use."
+"*AI server actions*: Use |AI| to interpret a prompt, evaluate a record, and "
+"select an appropriate server action to execute."
 msgstr ""
-"Hành động máy chủ |AI| hoạt động như một người ra quyết định, hay một người "
-"quản lý. Nó đọc bản ghi và ngữ cảnh của nó. Nó diễn giải lời nhắc |AI|. Và "
-"nó quyết định công cụ nào sẽ gọi và đối số nào sẽ sử dụng."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:25
+#: ../../export/content/applications/productivity/ai/server-actions.rst:24
+msgid "Trigger an AI agent"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:26
 msgid ""
-"The server action does not enforce business rules, modify records directly, "
-"or guarantee the correctness of the operation. Its role is limited to "
-"decision-making."
+"An |AI| agent can be launched interactively by a user through an AI chat or "
+"triggered automatically as part of an Odoo workflow."
 msgstr ""
-"Hành động máy chủ không thực thi các quy tắc kinh doanh, sửa đổi trực tiếp "
-"bản ghi hoặc đảm bảo tính chính xác của thao tác. Vai trò của nó chỉ giới "
-"hạn ở việc ra quyết định."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:31
-msgid "AI tool: the worker"
-msgstr "Công cụ AI: người thực thi"
+#: ../../export/content/applications/productivity/ai/server-actions.rst:29
+msgid ""
+"To configure an automatic trigger, open the agent and navigate to the "
+"*Trigger* tab. Click :icon:`add` :guilabel:`Add`. On the *When should your "
+"agent be triggered?* pop-up, choose one of the following options:"
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:33
 msgid ""
-"A tool is a standard server action with the *Use in AI* option enabled in "
-"its *Usage* tab. Tools contain all execution logic and perform record "
-"updates, moves, or writes. Tools **must** enforce business rules explicitly "
-"in Python code."
+"*On a schedule*: Run the agent automatically according to a set frequency."
 msgstr ""
-"Công cụ là một hành động máy chủ tiêu chuẩn với tùy chọn *Sử dụng trong AI* "
-"được bật trong tab *Sử dụng*. Công cụ chứa toàn bộ logic thực thi và thực "
-"hiện cập nhật, di chuyển hoặc ghi bản ghi. Công cụ **phải** thực thi các quy "
-"tắc nghiệp vụ một cách rõ ràng trong mã Python."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:37
+#: ../../export/content/applications/productivity/ai/server-actions.rst:34
 msgid ""
-"If a tool is called by the |AI| server action, it will execute "
-"unconditionally, unless the code itself prevents it."
+"*Based on a Date Field*: Run the agent once per record when a specific date "
+"is reached."
 msgstr ""
-"Nếu một công cụ được gọi bởi hành động máy chủ |AI|, nó sẽ thực thi vô điều "
-"kiện, trừ khi chính mã ngăn chặn nó."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:35
+msgid "*After creation*: Run the agent whenever a new record is created."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:36
+msgid "*After update*: Run the agent whenever a specified field is updated."
+msgstr ""
+"*Sau khi cập nhật*: Chạy tác nhân bất cứ khi nào một trường được chỉ định "
+"được cập nhật."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:38
+msgid ""
+"Configure the additional options for the selected trigger, then save the "
+"agent."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:41
+msgid ""
+"For long-running tasks, such as extensive web searches, use a scheduled "
+"trigger rather than an immediate, event-driven trigger. This allows the task "
+"to run in the background instead of blocking the user interface while the "
+"operation executes."
+msgstr ""
+"Đối với các tác vụ chạy lâu, chẳng hạn như tìm kiếm web chuyên sâu, hãy dùng "
+"trình kích hoạt theo lịch trình thay vì trình kích hoạt tức thời theo sự "
+"kiện. Điều này cho phép tác vụ chạy ở chế độ nền thay vì làm chặn giao diện "
+"người dùng trong khi thao tác thực thi."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:45
+msgid ""
+"When the trigger conditions are met, the agent executes the instructions "
+"using its configured Skills, Tools, and Sources."
+msgstr ""
+"Khi các điều kiện kích hoạt được đáp ứng, tác nhân sẽ thực thi hướng dẫn "
+"bằng các kỹ năng, công cụ và nguồn đã cấu hình."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:49
+msgid ""
+"Agents triggered automatically perform their tasks directly, without "
+"requesting user approval before creating or updating records. Configure the "
+"agent's instructions and available tools carefully, particularly when the "
+"workflow can modify important business data."
+msgstr ""
+"Các tác nhân được kích hoạt tự động sẽ thực hiện trực tiếp tác vụ của chúng "
+"mà không yêu cầu người dùng phê duyệt trước khi tạo hoặc cập nhật bản ghi. "
+"Hãy cấu hình cẩn thận hướng dẫn và các công cụ khả dụng của tác nhân, đặc "
+"biệt là khi quy trình làm việc có thể sửa đổi dữ liệu kinh doanh quan trọng."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:54
+msgid "How AI server actions work"
+msgstr "Cách hoạt động của hành động máy chủ AI"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:56
+msgid ""
+"|AI| server actions extend Odoo's automation framework by allowing |AI| to "
+"make decisions during a workflow. They are useful when a task requires "
+"interpreting information or selecting an appropriate action, but the actual "
+"execution should remain controlled by standard server actions."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:60
+msgid "AI-driven workflows use two components: *the Manager* and *the Worker*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:63
+msgid "AI server action: the manager"
+msgstr "Hành động máy chủ AI: người quản lý"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:65
+msgid "An |AI| server action acts as a decision-maker, or Manager. It:"
+msgstr ""
+"Tác vụ máy chủ |AI| đóng vai trò là người ra quyết định, hoặc người quản lý. "
+"Tác vụ này:"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:67
+msgid "Reads the record and its context."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:68
+msgid "Interprets the AI prompt."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:69
+msgid "Selects an appropriate tool."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:70
+msgid "Provides the arguments required by the selected tool."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:72
+msgid ""
+"The Manager does not enforce business rules or execute the underlying "
+"operation itself. Its role is limited to deciding which tool to call and "
+"what arguments to provide."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:78
+msgid "AI tool: the worker"
+msgstr "Công cụ AI: người thực thi"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:80
+msgid ""
+"A *Tool* is a standard server action configured for use by |AI|. To make a "
+"server action available as a tool, enable the *Use in AI* option in its "
+"*Usage* tab."
+msgstr ""
+"*Công cụ* là một tác vụ máy chủ tiêu chuẩn được cấu hình để |AI| sử dụng. Để "
+"tác vụ máy chủ có thể dùng làm công cụ, hãy bật tùy chọn *Sử dụng trong AI* "
+"trong tab *Sử dụng* của tác vụ đó."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:83
+msgid ""
+"Tools contain the execution logic and perform operations such as updating "
+"records, moving documents, or writing data."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:86
+msgid ""
+"The tool must enforce any required business rules in its own execution "
+"logic. When called by the server action, it executes without requesting "
+"additional user approval, unless its code explicitly prevents the operation."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:91
 msgid "AI server action workflow"
 msgstr "Quy trình hành động máy chủ AI"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:43
+#: ../../export/content/applications/productivity/ai/server-actions.rst:93
 msgid "The |AI| server action workflow follows this sequence:"
 msgstr "Quy trình hành động máy chủ |AI| tuân theo trình tự sau:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:45
+#: ../../export/content/applications/productivity/ai/server-actions.rst:95
 msgid "A record triggers an |AI| server action."
 msgstr "Một bản ghi kích hoạt hành động máy chủ |AI|."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:46
-msgid "The |AI| prompt is evaluated, using the record as context."
-msgstr "Lời nhắc |AI| được đánh giá, sử dụng bản ghi làm ngữ cảnh."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:47
-msgid "The |AI| selects one of the available tools."
-msgstr "|AI| chọn một trong các công cụ khả dụng."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:48
-msgid "The |AI| provides arguments expected by the tool."
-msgstr "|AI| cung cấp các đối số mà công cụ mong đợi."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:49
-msgid "The selected tool executes its Python code."
-msgstr "Công cụ được chọn thực thi mã Python của nó."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:52
-msgid ""
-"|AI| server actions work without custom logic only when the underlying "
-"behavior already exists in Odoo, such as moving a document to a folder. In "
-"these cases, the |AI| selects parameters, and Odoo executes the action."
+#: ../../export/content/applications/productivity/ai/server-actions.rst:96
+msgid "The server action evaluates the prompt using the record as context."
 msgstr ""
-"Hành động máy chủ |AI| hoạt động mà không cần logic tùy chỉnh chỉ khi hành "
-"vi cơ bản đã tồn tại trong Odoo, chẳng hạn như di chuyển tài liệu đến thư "
-"mục. Trong những trường hợp này, |AI| chọn các tham số và Odoo thực thi hành "
-"động."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:57
-msgid "Use case walkthrough"
-msgstr "Hướng dẫn trường hợp sử dụng"
+#: ../../export/content/applications/productivity/ai/server-actions.rst:97
+msgid "The server action selects an available tool."
+msgstr "Tác vụ máy chủ chọn một công cụ khả dụng."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:59
+#: ../../export/content/applications/productivity/ai/server-actions.rst:98
+msgid "The server action supplies the arguments required by the tool."
+msgstr "Tác vụ máy chủ cung cấp các đối số mà công cụ yêu cầu."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:99
+msgid "The tool executes its configured logic."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:102
+msgid ""
+"|AI| server actions do not automatically enforce business rules or validate "
+"whether an operation is appropriate. The server action must contain the "
+"necessary checks and safeguards. If a server action is called, its execution "
+"logic runs unless the code itself prevents the operation."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:107
+msgid "Use case: Sort documents in the Inbox"
+msgstr "Trường hợp sử dụng: Phân loại tài liệu trong Hộp thư đến"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:109
 msgid ""
 "The *Auto-sort documents in Inbox* example demonstrates the full |AI| Server "
 "Action pattern. Navigate to the *Server Actions* menu by going "
-"to :menuselection:`Settings --> Technical --> Server Actions`."
+"to :menuselection:`Settings --> Technical --> Server Actions`. Then search "
+"for `Auto-sort documents in Inbox`."
 msgstr ""
-"Ví dụ *Tự động phân loại tài liệu trong Hộp thư đến* minh họa đầy đủ mẫu "
-"Hành động máy chủ |AI|. Điều hướng đến menu *Hành động máy chủ* bằng cách "
-"vào :menuselection:`Cài đặt --> Kỹ thuật --> Hành động máy chủ`."
+"Ví dụ *Tự động phân loại tài liệu trong Hộp thư đến* minh họa đầy đủ mô hình "
+"tác vụ máy chủ |AI|. Điều hướng đến menu *Tác vụ máy chủ* bằng cách đi tới "
+":menuselection:`Cài đặt --> Kỹ thuật --> Tác vụ máy chủ`. Sau đó, tìm kiếm "
+"`Tự động phân loại tài liệu trong Hộp thư đến`."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:64
+#: ../../export/content/applications/productivity/ai/server-actions.rst:114
 msgid ""
-"This server action is designed to review documents for their content, and "
-"add tags. The action itself does **not** move documents or add tags, it only "
+"This server action is designed to review documents for their content and add "
+"tags. The action itself does **not** move documents or add tags. It only "
 "decides which tool should be used, based on the documents' content."
 msgstr ""
-"Hành động máy chủ này được thiết kế để xem xét tài liệu về nội dung của "
-"chúng và thêm thẻ. Bản thân hành động **không** di chuyển tài liệu hoặc thêm "
-"thẻ, nó chỉ quyết định công cụ nào nên được sử dụng, dựa trên nội dung của "
-"tài liệu."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:68
+#: ../../export/content/applications/productivity/ai/server-actions.rst:118
 msgid ""
 "The :guilabel:`Model` for the action is listed as *Document*, and "
 "the :guilabel:`Type` is *AI*."
@@ -3853,56 +3954,53 @@ msgstr ""
 ":guilabel:`Mô hình` cho hành động được liệt kê là *Tài liệu*, "
 "và :guilabel:`Loại` là *AI*."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:70
+#: ../../export/content/applications/productivity/ai/server-actions.rst:120
 msgid "The record for the Auto-sort documents in inbox server action."
 msgstr ""
 "Bản ghi cho hành động máy chủ Tự động phân loại tài liệu trong hộp thư đến."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:73
+#: ../../export/content/applications/productivity/ai/server-actions.rst:123
 msgid ""
 "The prompt for this action provides context about the document, as well as "
-"intent of the action."
+"the intent of the action."
 msgstr ""
-"Lời nhắc cho hành động này cung cấp ngữ cảnh về tài liệu, cũng như ý định "
-"của hành động."
+"Lời nhắc cho tác vụ này cung cấp ngữ cảnh về tài liệu cũng như mục đích của "
+"tác vụ."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:75
+#: ../../export/content/applications/productivity/ai/server-actions.rst:125
 msgid ""
-"The :guilabel:`Tool` field includes several actions that may be taken based "
+"The :guilabel:`Tools` field includes several actions that may be taken based "
 "on this prompt, including moving a document, adding tags, or creating "
 "invoices or bills."
 msgstr ""
-"Trường :guilabel:`Công cụ` bao gồm một số hành động có thể được thực hiện "
-"dựa trên lời nhắc này, bao gồm di chuyển tài liệu, thêm thẻ hoặc tạo hóa đơn "
-"hoặc phiếu chi."
+"Trường :guilabel:`Công cụ` bao gồm một số tác vụ có thể được thực hiện dựa "
+"trên lời nhắc này, bao gồm di chuyển tài liệu, thêm thẻ hoặc tạo hóa đơn bán "
+"hàng hay hóa đơn mua hàng."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:79
+#: ../../export/content/applications/productivity/ai/server-actions.rst:129
 msgid ""
-"*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
-"*Execute Code* server actions, meaning they trigger python code."
+"*AI Tool: Link Document to Vehicle*, *AI Tool: Move to Folder*, and *AI "
+"Tool: Rename File* are all *Execute Code* server actions, meaning they "
+"trigger Python code."
 msgstr ""
-"*AI: Thêm thẻ*, *AI: Di chuyển đến thư mục* và *AI: Đổi tên tài liệu* đều là "
-"hành động máy chủ *Thực thi mã*, có nghĩa là chúng kích hoạt mã python."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:82
+#: ../../export/content/applications/productivity/ai/server-actions.rst:132
 msgid ""
 "For example, if the action determines, based on the content of the document, "
-"that the most appropriate tool is *AI: Move to Folder*, the Python code "
+"that the most appropriate tool is *AI Tool: Move to Folder*, the Python code "
 "performs the following operation:"
 msgstr ""
-"Ví dụ, nếu hành động xác định, dựa trên nội dung của tài liệu, rằng công cụ "
-"phù hợp nhất là *AI: Di chuyển đến thư mục*, mã Python thực hiện thao tác "
-"sau:"
+"Ví dụ: nếu tác vụ xác định dựa trên nội dung của tài liệu rằng công cụ phù "
+"hợp nhất là *Công cụ AI: Chuyển vào thư mục*, mã Python sẽ thực hiện thao "
+"tác sau:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:89
+#: ../../export/content/applications/productivity/ai/server-actions.rst:139
 msgid ""
-"This code, executes unconditionally when called and performs the move using "
+"This code executes unconditionally when called and performs the move using "
 "an existing method."
 msgstr ""
-"Mã này thực thi vô điều kiện khi được gọi và thực hiện di chuyển bằng một "
-"phương thức hiện có."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:92
+#: ../../export/content/applications/productivity/ai/server-actions.rst:142
 msgid ""
 "The |AI| does not infer arguments from the Python code or from the method "
 "signature. Instead, arguments passed to a tool are determined entirely by "
@@ -3912,7 +4010,7 @@ msgstr ""
 "vào đó, các đối số được truyền cho công cụ được xác định hoàn toàn bởi cấu "
 "hình của công cụ."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:95
+#: ../../export/content/applications/productivity/ai/server-actions.rst:145
 msgid ""
 "For the *AI: Move to Folder* tool, the Python code expects a variable named "
 "`folder_id`. The |AI| knows to provide `folder_id` because it is explicitly "
@@ -3928,7 +4026,7 @@ msgstr ""
 "Cột :guilabel:`Tên` dưới *Lược đồ AI* phải khớp chính xác với tên biến được "
 "sử dụng trong mã Python."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:101
+#: ../../export/content/applications/productivity/ai/server-actions.rst:151
 msgid ""
 "The |AI| uses the argument description to understand what the parameter "
 "represents, what type of value is expected, and when it is appropriate to "
@@ -3937,7 +4035,7 @@ msgstr ""
 "|AI| sử dụng mô tả đối số để hiểu tham số đại diện cho gì, loại giá trị nào "
 "được mong đợi và khi nào thích hợp để cung cấp nó."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:104
+#: ../../export/content/applications/productivity/ai/server-actions.rst:154
 msgid ""
 "If an argument is not defined in the Usage tab, the AI cannot provide it, "
 "even if the Python code references it."
@@ -3945,15 +4043,11 @@ msgstr ""
 "Nếu một đối số không được định nghĩa trong tab Sử dụng, AI không thể cung "
 "cấp nó, ngay cả khi mã Python tham chiếu đến nó."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:107
-msgid "The usage tab of the AI move to folder server action."
-msgstr "Tab sử dụng của server action AI di chuyển đến thư mục."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:111
+#: ../../export/content/applications/productivity/ai/server-actions.rst:158
 msgid "Creating custom AI tools"
 msgstr "Tạo công cụ AI tùy chỉnh"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:113
+#: ../../export/content/applications/productivity/ai/server-actions.rst:160
 msgid ""
 "The same pattern in the *Auto-sort documents in Inbox* example above can be "
 "implemented using standard Odoo logic. For example, to create an action that "
@@ -3965,71 +4059,93 @@ msgstr ""
 "tạo một hành động có thể cập nhật mô tả tác vụ, một hành động *Thực thi Mã* "
 "có thể được tạo với mã sau:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:121
-msgid ""
-"To function correctly, `content` **must** be defined as an argument in "
-"tool's *Usage* tab."
+#: ../../export/content/applications/productivity/ai/server-actions.rst:168
+msgid "To make the action available to an AI server action:"
 msgstr ""
-"Để hoạt động chính xác, `content` **phải** được định nghĩa như một đối số "
-"trong tab *Sử dụng* của công cụ."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:124
+#: ../../export/content/applications/productivity/ai/server-actions.rst:170
+msgid "Open the server action's Usage tab."
+msgstr "Mở tab Sử dụng của tác vụ máy chủ."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:171
+msgid "Enable *Use in AI*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:172
+msgid "Define an argument named `content` in the |AI| Schema."
+msgstr "Định nghĩa một đối số có tên `content` trong lược đồ |AI|."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:173
+msgid ""
+"Provide a description explaining what content the server action should "
+"supply."
+msgstr "Cung cấp mô tả giải thích nội dung mà tác vụ máy chủ cần cung cấp."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:174
+msgid "Save the server action."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:177
+msgid "Choose the right approach"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:179
+msgid ""
+"Both |AI| agent triggers and |AI| server actions use |AI| in automated "
+"workflows, but the appropriate choice depends on the task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:182
+msgid "Use an |AI| agent trigger when:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:184
+msgid ""
+"The task requires a specialized agent with configured instructions, Skills, "
+"and Sources."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:185
+msgid "The agent needs to perform a flexible or multi-step task."
+msgstr "Tác nhân cần thực hiện một tác vụ linh hoạt hoặc gồm nhiều bước."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:186
+msgid "The task should run automatically or on a schedule."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:187
+msgid ""
+"The agent needs to evaluate information and determine how to complete a task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:189
+msgid "Use an |AI| server action when:"
+msgstr "Sử dụng tác vụ máy chủ |AI| khi:"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:191
+msgid ""
+"The task requires |AI| to interpret a prompt and select from a defined set "
+"of tools."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:192
+msgid "The operation has a specific execution method and defined arguments."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:193
+msgid ""
+"|AI| needs to make a decision within an existing server action workflow."
+msgstr "|AI| cần đưa ra quyết định trong một quy trình tác vụ máy chủ hiện có."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:194
+msgid ""
+"The execution logic should be handled by standard server actions or custom "
+"Python code."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:197
 msgid ":ref:`Server Actions <reference/actions/server>`"
 msgstr ":ref:`Server Actions <reference/actions/server>`"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:127
-msgid "Common issues"
-msgstr "Các vấn đề thường gặp"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:130
-msgid "Why is the Tools field empty?"
-msgstr "Tại sao trường Công cụ lại trống?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:132
-msgid ""
-"Confirm that at least one server action has :guilabel:`Use in AI` enabled."
-msgstr ""
-"Xác nhận rằng ít nhất một server action đã bật :guilabel:`Sử dụng trong AI`."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:133
-msgid ""
-"Confirm that at least one tool is assigned to the same "
-"model :guilabel:`Model` as the server action."
-msgstr ""
-"Xác nhận rằng ít nhất một công cụ được gán cho cùng một mô "
-"hình :guilabel:`Model` như server action."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:137
-msgid "Why did the tool run but nothing happened?"
-msgstr "Tại sao công cụ đã chạy nhưng không có gì xảy ra?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:139
-msgid "The Python code exited without changes."
-msgstr "Mã Python đã thoát mà không có thay đổi."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:140
-msgid "Required arguments were missing or empty."
-msgstr "Các đối số bắt buộc bị thiếu hoặc trống."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:141
-msgid "Business conditions were not implemented in the tool logic."
-msgstr "Các điều kiện nghiệp vụ không được triển khai trong logic công cụ."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:144
-msgid "Why did the AI choose an unexpected tool?"
-msgstr "Tại sao AI lại chọn một công cụ không mong đợi?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:146
-msgid "The prompt lacked sufficient context."
-msgstr "Câu lệnh thiếu ngữ cảnh đầy đủ."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:147
-msgid "Multiple tools matched the same intent."
-msgstr "Nhiều công cụ khớp với cùng một ý định."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:148
-msgid "No constraints were enforced at the tool level."
-msgstr "Không có ràng buộc nào được thực thi ở cấp độ công cụ."
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:3
 msgid "AI in support workflows"
@@ -24067,9 +24183,9 @@ msgid ""
 "or :ref:`refused <sign/sign-document/decline>` by adding the relevant "
 "contact(s) or email address(es) in the :guilabel:`CC` field"
 msgstr ""
-"thông báo cho một hoặc nhiều bên khi tài liệu được ký kết đầy đủ hoặc "
-":ref:`từ chối <sign/sign-document/decline>` bằng cách thêm (những) liên hệ "
-"hoặc địa chỉ email có liên quan vào trường :guilabel:`CC` "
+"thông báo cho một hoặc nhiều bên khi tài liệu được ký kết đầy đủ "
+"hoặc :ref:`từ chối <sign/sign-document/decline>` bằng cách thêm (những) liên "
+"hệ hoặc địa chỉ email có liên quan vào trường :guilabel:`CC` "
 
 #: ../../export/content/applications/productivity/sign/request_signatures.rst:588
 msgid "add a message to the signature request email"
@@ -24369,9 +24485,9 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` icon on the relevant signature request's "
 "card, and select :guilabel:`Details`."
 msgstr ""
-"chuyển sang chế độ xem Kanban, nhấp vào biểu tượng :icon:`fa-ellipsis-v` "
-":guilabel:`(dấu ba chấm dọc)` trên thẻ của yêu cầu chữ ký có liên quan, rồi "
-"chọn :guilabel:`Chi tiết`."
+"chuyển sang chế độ xem Kanban, nhấp vào biểu tượng :icon:`fa-ellipsis-"
+"v` :guilabel:`(dấu ba chấm dọc)` trên thẻ của yêu cầu chữ ký có liên quan, "
+"rồi chọn :guilabel:`Chi tiết`."
 
 #: ../../export/content/applications/productivity/sign/request_signatures.rst:709
 msgid "Using the buttons at the top of the form, you can:"
@@ -45616,6 +45732,203 @@ msgstr ""
 "Đối với các lỗi khác, xem Bộ công cụ nhà phát triển của Meta về `Mã lỗi "
 "WhatsApp <https://developers.facebook.com/documentation/business-messaging/"
 "whatsapp/support/error-codes>`__."
+
+#~ msgid ""
+#~ "|AI| server actions extend Odoo's automation framework by allowing "
+#~ "artificial intelligence to make decisions during a workflow."
+#~ msgstr ""
+#~ "Hành động máy chủ |AI| mở rộng khung tự động hóa của Odoo bằng cách cho "
+#~ "phép trí tuệ nhân tạo đưa ra quyết định trong quy trình làm việc."
+
+#~ msgid ""
+#~ "They are designed for cases where logic cannot be expressed entirely "
+#~ "through fixed conditions, but still requires controlled execution through "
+#~ "standard server actions."
+#~ msgstr ""
+#~ "Chúng được thiết kế cho các trường hợp khi logic không thể được biểu thị "
+#~ "hoàn toàn thông qua các điều kiện cố định, nhưng vẫn yêu cầu thực thi có "
+#~ "kiểm soát thông qua các hành động máy chủ tiêu chuẩn."
+
+#~ msgid ""
+#~ "AI-driven workflows in Odoo are built around a clear separation of "
+#~ "responsibilities between the |AI| server action, or *the Manager*, and "
+#~ "the tool, or *the Worker*."
+#~ msgstr ""
+#~ "Quy trình làm việc dựa trên AI trong Odoo được xây dựng dựa trên sự phân "
+#~ "tách rõ ràng các trách nhiệm giữa hành động máy chủ |AI|, hay *Người quản "
+#~ "lý*, và công cụ, hay *Người thực thi*."
+
+#~ msgid ""
+#~ "An |AI| server action acts as a decision maker, or a manager. It reads "
+#~ "the record and its context. It interprets the |AI| prompt. And it decides "
+#~ "which tool to call, and what arguments to use."
+#~ msgstr ""
+#~ "Hành động máy chủ |AI| hoạt động như một người ra quyết định, hay một "
+#~ "người quản lý. Nó đọc bản ghi và ngữ cảnh của nó. Nó diễn giải lời nhắc |"
+#~ "AI|. Và nó quyết định công cụ nào sẽ gọi và đối số nào sẽ sử dụng."
+
+#~ msgid ""
+#~ "The server action does not enforce business rules, modify records "
+#~ "directly, or guarantee the correctness of the operation. Its role is "
+#~ "limited to decision-making."
+#~ msgstr ""
+#~ "Hành động máy chủ không thực thi các quy tắc kinh doanh, sửa đổi trực "
+#~ "tiếp bản ghi hoặc đảm bảo tính chính xác của thao tác. Vai trò của nó chỉ "
+#~ "giới hạn ở việc ra quyết định."
+
+#~ msgid ""
+#~ "A tool is a standard server action with the *Use in AI* option enabled in "
+#~ "its *Usage* tab. Tools contain all execution logic and perform record "
+#~ "updates, moves, or writes. Tools **must** enforce business rules "
+#~ "explicitly in Python code."
+#~ msgstr ""
+#~ "Công cụ là một hành động máy chủ tiêu chuẩn với tùy chọn *Sử dụng trong "
+#~ "AI* được bật trong tab *Sử dụng*. Công cụ chứa toàn bộ logic thực thi và "
+#~ "thực hiện cập nhật, di chuyển hoặc ghi bản ghi. Công cụ **phải** thực thi "
+#~ "các quy tắc nghiệp vụ một cách rõ ràng trong mã Python."
+
+#~ msgid ""
+#~ "If a tool is called by the |AI| server action, it will execute "
+#~ "unconditionally, unless the code itself prevents it."
+#~ msgstr ""
+#~ "Nếu một công cụ được gọi bởi hành động máy chủ |AI|, nó sẽ thực thi vô "
+#~ "điều kiện, trừ khi chính mã ngăn chặn nó."
+
+#~ msgid "The |AI| prompt is evaluated, using the record as context."
+#~ msgstr "Lời nhắc |AI| được đánh giá, sử dụng bản ghi làm ngữ cảnh."
+
+#~ msgid "The |AI| selects one of the available tools."
+#~ msgstr "|AI| chọn một trong các công cụ khả dụng."
+
+#~ msgid "The |AI| provides arguments expected by the tool."
+#~ msgstr "|AI| cung cấp các đối số mà công cụ mong đợi."
+
+#~ msgid "The selected tool executes its Python code."
+#~ msgstr "Công cụ được chọn thực thi mã Python của nó."
+
+#~ msgid ""
+#~ "|AI| server actions work without custom logic only when the underlying "
+#~ "behavior already exists in Odoo, such as moving a document to a folder. "
+#~ "In these cases, the |AI| selects parameters, and Odoo executes the action."
+#~ msgstr ""
+#~ "Hành động máy chủ |AI| hoạt động mà không cần logic tùy chỉnh chỉ khi "
+#~ "hành vi cơ bản đã tồn tại trong Odoo, chẳng hạn như di chuyển tài liệu "
+#~ "đến thư mục. Trong những trường hợp này, |AI| chọn các tham số và Odoo "
+#~ "thực thi hành động."
+
+#~ msgid "Use case walkthrough"
+#~ msgstr "Hướng dẫn trường hợp sử dụng"
+
+#~ msgid ""
+#~ "The *Auto-sort documents in Inbox* example demonstrates the full |AI| "
+#~ "Server Action pattern. Navigate to the *Server Actions* menu by going "
+#~ "to :menuselection:`Settings --> Technical --> Server Actions`."
+#~ msgstr ""
+#~ "Ví dụ *Tự động phân loại tài liệu trong Hộp thư đến* minh họa đầy đủ mẫu "
+#~ "Hành động máy chủ |AI|. Điều hướng đến menu *Hành động máy chủ* bằng cách "
+#~ "vào :menuselection:`Cài đặt --> Kỹ thuật --> Hành động máy chủ`."
+
+#~ msgid ""
+#~ "This server action is designed to review documents for their content, and "
+#~ "add tags. The action itself does **not** move documents or add tags, it "
+#~ "only decides which tool should be used, based on the documents' content."
+#~ msgstr ""
+#~ "Hành động máy chủ này được thiết kế để xem xét tài liệu về nội dung của "
+#~ "chúng và thêm thẻ. Bản thân hành động **không** di chuyển tài liệu hoặc "
+#~ "thêm thẻ, nó chỉ quyết định công cụ nào nên được sử dụng, dựa trên nội "
+#~ "dung của tài liệu."
+
+#~ msgid ""
+#~ "The prompt for this action provides context about the document, as well "
+#~ "as intent of the action."
+#~ msgstr ""
+#~ "Lời nhắc cho hành động này cung cấp ngữ cảnh về tài liệu, cũng như ý định "
+#~ "của hành động."
+
+#~ msgid ""
+#~ "The :guilabel:`Tool` field includes several actions that may be taken "
+#~ "based on this prompt, including moving a document, adding tags, or "
+#~ "creating invoices or bills."
+#~ msgstr ""
+#~ "Trường :guilabel:`Công cụ` bao gồm một số hành động có thể được thực hiện "
+#~ "dựa trên lời nhắc này, bao gồm di chuyển tài liệu, thêm thẻ hoặc tạo hóa "
+#~ "đơn hoặc phiếu chi."
+
+#~ msgid ""
+#~ "*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
+#~ "*Execute Code* server actions, meaning they trigger python code."
+#~ msgstr ""
+#~ "*AI: Thêm thẻ*, *AI: Di chuyển đến thư mục* và *AI: Đổi tên tài liệu* đều "
+#~ "là hành động máy chủ *Thực thi mã*, có nghĩa là chúng kích hoạt mã python."
+
+#~ msgid ""
+#~ "For example, if the action determines, based on the content of the "
+#~ "document, that the most appropriate tool is *AI: Move to Folder*, the "
+#~ "Python code performs the following operation:"
+#~ msgstr ""
+#~ "Ví dụ, nếu hành động xác định, dựa trên nội dung của tài liệu, rằng công "
+#~ "cụ phù hợp nhất là *AI: Di chuyển đến thư mục*, mã Python thực hiện thao "
+#~ "tác sau:"
+
+#~ msgid ""
+#~ "This code, executes unconditionally when called and performs the move "
+#~ "using an existing method."
+#~ msgstr ""
+#~ "Mã này thực thi vô điều kiện khi được gọi và thực hiện di chuyển bằng một "
+#~ "phương thức hiện có."
+
+#~ msgid "The usage tab of the AI move to folder server action."
+#~ msgstr "Tab sử dụng của server action AI di chuyển đến thư mục."
+
+#~ msgid ""
+#~ "To function correctly, `content` **must** be defined as an argument in "
+#~ "tool's *Usage* tab."
+#~ msgstr ""
+#~ "Để hoạt động chính xác, `content` **phải** được định nghĩa như một đối số "
+#~ "trong tab *Sử dụng* của công cụ."
+
+#~ msgid "Common issues"
+#~ msgstr "Các vấn đề thường gặp"
+
+#~ msgid "Why is the Tools field empty?"
+#~ msgstr "Tại sao trường Công cụ lại trống?"
+
+#~ msgid ""
+#~ "Confirm that at least one server action has :guilabel:`Use in AI` enabled."
+#~ msgstr ""
+#~ "Xác nhận rằng ít nhất một server action đã bật :guilabel:`Sử dụng trong "
+#~ "AI`."
+
+#~ msgid ""
+#~ "Confirm that at least one tool is assigned to the same "
+#~ "model :guilabel:`Model` as the server action."
+#~ msgstr ""
+#~ "Xác nhận rằng ít nhất một công cụ được gán cho cùng một mô "
+#~ "hình :guilabel:`Model` như server action."
+
+#~ msgid "Why did the tool run but nothing happened?"
+#~ msgstr "Tại sao công cụ đã chạy nhưng không có gì xảy ra?"
+
+#~ msgid "The Python code exited without changes."
+#~ msgstr "Mã Python đã thoát mà không có thay đổi."
+
+#~ msgid "Required arguments were missing or empty."
+#~ msgstr "Các đối số bắt buộc bị thiếu hoặc trống."
+
+#~ msgid "Business conditions were not implemented in the tool logic."
+#~ msgstr "Các điều kiện nghiệp vụ không được triển khai trong logic công cụ."
+
+#~ msgid "Why did the AI choose an unexpected tool?"
+#~ msgstr "Tại sao AI lại chọn một công cụ không mong đợi?"
+
+#~ msgid "The prompt lacked sufficient context."
+#~ msgstr "Câu lệnh thiếu ngữ cảnh đầy đủ."
+
+#~ msgid "Multiple tools matched the same intent."
+#~ msgstr "Nhiều công cụ khớp với cùng một ý định."
+
+#~ msgid "No constraints were enforced at the tool level."
+#~ msgstr "Không có ràng buộc nào được thực thi ở cấp độ công cụ."
 
 #~ msgid ""
 #~ "*Sources* provide the agent with the information they need to complete "

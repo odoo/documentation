@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 12:37+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-11-20 17:31+0000\n"
+"PO-Revision-Date: 2026-11-21 15:38+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
 "20-doc/productivity/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/productivity.rst:5
 msgid "Productivity"
@@ -652,9 +652,9 @@ msgid ""
 "click :icon:`add` :guilabel:`Add`. On the *When should your agent be "
 "triggered?* popup, choose from one of the following options:"
 msgstr ""
-"Para adicionar um gatilho a um agente, vá até a aba *Gatilho* e clique "
-":icon:`add` :guilabel:`Adicionar`. No pop-up *Quando seu agente deve ser "
-"acionado?*, escolha uma das seguintes opções:"
+"Para adicionar um gatilho a um agente, vá até a aba *Gatilho* e "
+"clique :icon:`add` :guilabel:`Adicionar`. No pop-up *Quando seu agente deve "
+"ser acionado?*, escolha uma das seguintes opções:"
 
 #: ../../export/content/applications/productivity/ai/agents.rst:159
 msgid "*On a schedule*: Runs automatically according to a set frequency."
@@ -3768,157 +3768,286 @@ msgstr ""
 msgid ":doc:`../mcp_server`"
 msgstr ":doc:`../mcp_server`"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:3
+#: ../../export/content/applications/productivity/ai/server-actions.rst:-1
+msgid ""
+"Use Odoo AI in automated workflows. Learn how to trigger AI agents "
+"automatically and how AI server actions evaluate records and select tools to "
+"execute, with a document sorting example and guidance on choosing the right "
+"approach."
+msgstr ""
+"Use o Odoo IA em fluxos de trabalho automatizados. Saiba como acionar "
+"agentes de IA automaticamente e como as ações de servidor de IA avaliam "
+"registros e selecionam ferramentas para executar, com um exemplo de "
+"classificação de documentos e orientações para escolher a abordagem certa."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:8
 msgid "AI server actions"
 msgstr "Ações de servidor de IA"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:7
+#: ../../export/content/applications/productivity/ai/server-actions.rst:12
 msgid ""
-"|AI| server actions extend Odoo's automation framework by allowing "
-"artificial intelligence to make decisions during a workflow."
+"Odoo |AI| can be used in automated workflows in two ways: an automated or "
+"scheduled action can trigger an |AI| agent to perform a task, or an AI "
+"server action can make decisions and select tools to execute within a "
+"workflow."
 msgstr ""
-"As ações de servidor |AI| estendem a estrutura de automação do Odoo "
-"permitindo que a inteligência artificial tome decisões durante um fluxo de "
-"trabalho."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:10
-msgid ""
-"They are designed for cases where logic cannot be expressed entirely through "
-"fixed conditions, but still requires controlled execution through standard "
-"server actions."
-msgstr ""
-"Elas são projetadas para casos em que a lógica não pode ser expressa "
-"inteiramente por meio de condições fixas, mas ainda requer execução "
-"controlada por meio de ações de servidor padrão."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:14
-msgid "How AI server actions work"
-msgstr "Como funcionam as ações de servidor de IA"
+"O Odoo |AI| pode ser usado em fluxos de trabalho automatizados de duas "
+"maneiras: uma ação automatizada ou agendada pode acionar um agente de |AI| "
+"para realizar uma tarefa, ou uma ação de servidor de IA pode tomar decisões "
+"e selecionar ferramentas para executar dentro de um fluxo de trabalho."
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:16
-msgid ""
-"AI-driven workflows in Odoo are built around a clear separation of "
-"responsibilities between the |AI| server action, or *the Manager*, and the "
-"tool, or *the Worker*."
+msgid "These approaches serve different purposes:"
 msgstr ""
-"Os fluxos de trabalho orientados por IA no Odoo são construídos em torno de "
-"uma clara separação de responsabilidades entre a ação de servidor |AI|, ou "
-"*o Gerente*, e a ferramenta, ou *o Executor*."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:18
+msgid ""
+"*AI agent triggers*: Summon a configured :doc:`agent <agents>` to perform a "
+"task based on its instructions, Skills, and Sources."
+msgstr ""
+"*Acionadores de agente de IA*: invoque um :doc:`agente <agents>` configurado "
+"para executar uma tarefa com base em suas instruções, habilidades e fontes."
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:20
-msgid "AI server action: the manager"
-msgstr "Ação de servidor de IA: o gerente"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:22
 msgid ""
-"An |AI| server action acts as a decision maker, or a manager. It reads the "
-"record and its context. It interprets the |AI| prompt. And it decides which "
-"tool to call, and what arguments to use."
+"*AI server actions*: Use |AI| to interpret a prompt, evaluate a record, and "
+"select an appropriate server action to execute."
 msgstr ""
-"Uma ação de servidor |AI| atua como um tomador de decisões, ou um gerente. "
-"Ela lê o registro e seu contexto. Ela interpreta o prompt |AI|. E ela decide "
-"qual ferramenta chamar e quais argumentos usar."
+"*Ações de servidor de IA*: use a |AI| para interpretar um prompt, avaliar um "
+"registro e selecionar uma ação de servidor adequada para executar."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:25
+#: ../../export/content/applications/productivity/ai/server-actions.rst:24
+msgid "Trigger an AI agent"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:26
 msgid ""
-"The server action does not enforce business rules, modify records directly, "
-"or guarantee the correctness of the operation. Its role is limited to "
-"decision-making."
+"An |AI| agent can be launched interactively by a user through an AI chat or "
+"triggered automatically as part of an Odoo workflow."
 msgstr ""
-"A ação de servidor não impõe regras de negócio, não modifica registros "
-"diretamente nem garante a correção da operação. Seu papel é limitado à "
-"tomada de decisões."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:31
-msgid "AI tool: the worker"
-msgstr "Ferramenta de IA: o executor"
+#: ../../export/content/applications/productivity/ai/server-actions.rst:29
+msgid ""
+"To configure an automatic trigger, open the agent and navigate to the "
+"*Trigger* tab. Click :icon:`add` :guilabel:`Add`. On the *When should your "
+"agent be triggered?* pop-up, choose one of the following options:"
+msgstr ""
+"Para configurar um acionador automático, abra o agente e acesse a aba "
+"*Acionador*. Clique em :icon:`add` :guilabel:`Adicionar`. No pop-up *Quando "
+"seu agente deve ser acionado?*, escolha uma das seguintes opções:"
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:33
 msgid ""
-"A tool is a standard server action with the *Use in AI* option enabled in "
-"its *Usage* tab. Tools contain all execution logic and perform record "
-"updates, moves, or writes. Tools **must** enforce business rules explicitly "
-"in Python code."
+"*On a schedule*: Run the agent automatically according to a set frequency."
 msgstr ""
-"Uma ferramenta é uma ação de servidor padrão com a opção *Usar em IA* "
-"habilitada em sua aba *Uso*. As ferramentas contêm toda a lógica de execução "
-"e realizam atualizações, movimentações ou gravações de registros. As "
-"ferramentas **devem** impor regras de negócio explicitamente em código "
-"Python."
+"*Em um agendamento*: execute o agente automaticamente de acordo com uma "
+"frequência definida."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:37
+#: ../../export/content/applications/productivity/ai/server-actions.rst:34
 msgid ""
-"If a tool is called by the |AI| server action, it will execute "
-"unconditionally, unless the code itself prevents it."
+"*Based on a Date Field*: Run the agent once per record when a specific date "
+"is reached."
 msgstr ""
-"Se uma ferramenta for chamada pela ação de servidor |AI|, ela será executada "
-"incondicionalmente, a menos que o próprio código a impeça."
+"*Com base em um campo de data*: execute o agente uma vez por registro quando "
+"uma data específica for atingida."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:35
+msgid "*After creation*: Run the agent whenever a new record is created."
+msgstr ""
+"*Após a criação*: execute o agente sempre que um novo registro for criado."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:36
+msgid "*After update*: Run the agent whenever a specified field is updated."
+msgstr ""
+"*Após a atualização*: execute o agente sempre que um campo especificado for "
+"atualizado."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:38
+msgid ""
+"Configure the additional options for the selected trigger, then save the "
+"agent."
+msgstr ""
+"Configure as opções adicionais do acionador selecionado e salve o agente."
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:41
+msgid ""
+"For long-running tasks, such as extensive web searches, use a scheduled "
+"trigger rather than an immediate, event-driven trigger. This allows the task "
+"to run in the background instead of blocking the user interface while the "
+"operation executes."
+msgstr ""
+"Use um acionador agendado em vez de um acionador imediato orientado a "
+"eventos para tarefas de longa duração, como pesquisas extensas na web. Isso "
+"permite que a tarefa seja executada em segundo plano, sem bloquear a "
+"interface do usuário durante a execução da operação."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:45
+msgid ""
+"When the trigger conditions are met, the agent executes the instructions "
+"using its configured Skills, Tools, and Sources."
+msgstr ""
+"Quando as condições do acionador são atendidas, o agente executa as "
+"instruções usando suas habilidades, ferramentas e fontes configuradas."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:49
+msgid ""
+"Agents triggered automatically perform their tasks directly, without "
+"requesting user approval before creating or updating records. Configure the "
+"agent's instructions and available tools carefully, particularly when the "
+"workflow can modify important business data."
+msgstr ""
+"Agentes acionados automaticamente executam suas tarefas de forma direta, sem "
+"solicitar aprovação do usuário antes de criar ou atualizar registros. "
+"Configure com cuidado as instruções e as ferramentas disponíveis do agente, "
+"especialmente quando o fluxo de trabalho puder modificar dados comerciais "
+"importantes."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:54
+msgid "How AI server actions work"
+msgstr "Como funcionam as ações de servidor de IA"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:56
+msgid ""
+"|AI| server actions extend Odoo's automation framework by allowing |AI| to "
+"make decisions during a workflow. They are useful when a task requires "
+"interpreting information or selecting an appropriate action, but the actual "
+"execution should remain controlled by standard server actions."
+msgstr ""
+"|AI| ações de servidor ampliam a estrutura de automação do Odoo, permitindo "
+"que a |AI| tome decisões durante um fluxo de trabalho. Elas são úteis quando "
+"uma tarefa exige a interpretação de informações ou a seleção de uma ação "
+"adequada, mas a execução real deve permanecer controlada por ações de "
+"servidor padrão."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:60
+msgid "AI-driven workflows use two components: *the Manager* and *the Worker*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:63
+msgid "AI server action: the manager"
+msgstr "Ação de servidor de IA: o gerente"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:65
+msgid "An |AI| server action acts as a decision-maker, or Manager. It:"
+msgstr ""
+"Uma ação do servidor de |AI| atua como um tomador de decisões ou gerente. "
+"Ela:"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:67
+msgid "Reads the record and its context."
+msgstr "Lê o registro e seu contexto."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:68
+msgid "Interprets the AI prompt."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:69
+msgid "Selects an appropriate tool."
+msgstr "Seleciona uma ferramenta adequada."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:70
+msgid "Provides the arguments required by the selected tool."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:72
+msgid ""
+"The Manager does not enforce business rules or execute the underlying "
+"operation itself. Its role is limited to deciding which tool to call and "
+"what arguments to provide."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:78
+msgid "AI tool: the worker"
+msgstr "Ferramenta de IA: o executor"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:80
+msgid ""
+"A *Tool* is a standard server action configured for use by |AI|. To make a "
+"server action available as a tool, enable the *Use in AI* option in its "
+"*Usage* tab."
+msgstr ""
+"Uma *ferramenta* é uma ação do servidor padrão configurada para uso pela "
+"|AI|. Para disponibilizar uma ação do servidor como ferramenta, habilite a "
+"opção *Usar em IA* na aba *Uso*."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:83
+msgid ""
+"Tools contain the execution logic and perform operations such as updating "
+"records, moving documents, or writing data."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:86
+msgid ""
+"The tool must enforce any required business rules in its own execution "
+"logic. When called by the server action, it executes without requesting "
+"additional user approval, unless its code explicitly prevents the operation."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:91
 msgid "AI server action workflow"
 msgstr "Fluxo de trabalho da ação de servidor de IA"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:43
+#: ../../export/content/applications/productivity/ai/server-actions.rst:93
 msgid "The |AI| server action workflow follows this sequence:"
 msgstr "O fluxo de trabalho da ação de servidor |AI| segue esta sequência:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:45
+#: ../../export/content/applications/productivity/ai/server-actions.rst:95
 msgid "A record triggers an |AI| server action."
 msgstr "Um registro aciona uma ação de servidor |AI|."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:46
-msgid "The |AI| prompt is evaluated, using the record as context."
-msgstr "O prompt |AI| é avaliado, usando o registro como contexto."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:47
-msgid "The |AI| selects one of the available tools."
-msgstr "A |AI| seleciona uma das ferramentas disponíveis."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:48
-msgid "The |AI| provides arguments expected by the tool."
-msgstr "A |AI| fornece os argumentos esperados pela ferramenta."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:49
-msgid "The selected tool executes its Python code."
-msgstr "A ferramenta selecionada executa seu código Python."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:52
-msgid ""
-"|AI| server actions work without custom logic only when the underlying "
-"behavior already exists in Odoo, such as moving a document to a folder. In "
-"these cases, the |AI| selects parameters, and Odoo executes the action."
+#: ../../export/content/applications/productivity/ai/server-actions.rst:96
+msgid "The server action evaluates the prompt using the record as context."
 msgstr ""
-"As ações de servidor |AI| funcionam sem lógica personalizada somente quando "
-"o comportamento subjacente já existe no Odoo, como mover um documento para "
-"uma pasta. Nesses casos, a |AI| seleciona os parâmetros e o Odoo executa a "
-"ação."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:57
-msgid "Use case walkthrough"
-msgstr "Passo a passo do caso de uso"
+#: ../../export/content/applications/productivity/ai/server-actions.rst:97
+msgid "The server action selects an available tool."
+msgstr "A ação do servidor seleciona uma ferramenta disponível."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:59
+#: ../../export/content/applications/productivity/ai/server-actions.rst:98
+msgid "The server action supplies the arguments required by the tool."
+msgstr "A ação do servidor fornece os argumentos exigidos pela ferramenta."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:99
+msgid "The tool executes its configured logic."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:102
+msgid ""
+"|AI| server actions do not automatically enforce business rules or validate "
+"whether an operation is appropriate. The server action must contain the "
+"necessary checks and safeguards. If a server action is called, its execution "
+"logic runs unless the code itself prevents the operation."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:107
+msgid "Use case: Sort documents in the Inbox"
+msgstr "Caso de uso: classificar documentos na caixa de entrada"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:109
 msgid ""
 "The *Auto-sort documents in Inbox* example demonstrates the full |AI| Server "
 "Action pattern. Navigate to the *Server Actions* menu by going "
-"to :menuselection:`Settings --> Technical --> Server Actions`."
+"to :menuselection:`Settings --> Technical --> Server Actions`. Then search "
+"for `Auto-sort documents in Inbox`."
 msgstr ""
-"O exemplo *Auto-organizar documentos na caixa de entrada* demonstra o padrão "
-"completo de Ação de Servidor |AI|. Navegue até o menu *Ações de servidor* "
-"indo para :menuselection:`Configurações --> Técnico --> Ações de servidor`."
+"O exemplo *Classificar documentos automaticamente na caixa de entrada* "
+"demonstra o padrão completo de ação do servidor de |AI|. Navegue até o menu "
+"*Ações do servidor* acessando :menuselection:`Configurações --> Técnico --> "
+"Ações do servidor`. Em seguida, pesquise por `Classificar documentos "
+"automaticamente na caixa de entrada`."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:64
+#: ../../export/content/applications/productivity/ai/server-actions.rst:114
 msgid ""
-"This server action is designed to review documents for their content, and "
-"add tags. The action itself does **not** move documents or add tags, it only "
+"This server action is designed to review documents for their content and add "
+"tags. The action itself does **not** move documents or add tags. It only "
 "decides which tool should be used, based on the documents' content."
 msgstr ""
-"Esta ação de servidor foi projetada para revisar documentos quanto ao seu "
-"conteúdo e adicionar tags. A ação em si **não** move documentos ou adiciona "
-"tags, ela apenas decide qual ferramenta deve ser usada, com base no conteúdo "
-"dos documentos."
+"Essa ação de servidor foi projetada para revisar o conteúdo dos documentos e "
+"adicionar marcadores. A ação em si **não** move documentos nem adiciona "
+"marcadores. Ela apenas decide qual ferramenta deve ser usada, com base no "
+"conteúdo dos documentos."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:68
+#: ../../export/content/applications/productivity/ai/server-actions.rst:118
 msgid ""
 "The :guilabel:`Model` for the action is listed as *Document*, and "
 "the :guilabel:`Type` is *AI*."
@@ -3926,57 +4055,56 @@ msgstr ""
 "O :guilabel:`Modelo` da ação está listado como *Documento*, e "
 "o :guilabel:`Tipo` é *IA*."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:70
+#: ../../export/content/applications/productivity/ai/server-actions.rst:120
 msgid "The record for the Auto-sort documents in inbox server action."
 msgstr ""
 "O registro da ação de servidor Auto-organizar documentos na caixa de entrada."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:73
+#: ../../export/content/applications/productivity/ai/server-actions.rst:123
 msgid ""
 "The prompt for this action provides context about the document, as well as "
-"intent of the action."
+"the intent of the action."
 msgstr ""
-"O prompt para esta ação fornece contexto sobre o documento, bem como a "
-"intenção da ação."
+"O prompt dessa ação fornece contexto sobre o documento, bem como a intenção "
+"da ação."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:75
+#: ../../export/content/applications/productivity/ai/server-actions.rst:125
 msgid ""
-"The :guilabel:`Tool` field includes several actions that may be taken based "
+"The :guilabel:`Tools` field includes several actions that may be taken based "
 "on this prompt, including moving a document, adding tags, or creating "
 "invoices or bills."
 msgstr ""
-"O campo :guilabel:`Ferramenta` inclui várias ações que podem ser executadas "
-"com base neste prompt, incluindo mover um documento, adicionar tags ou criar "
-"faturas ou contas."
+"O campo :guilabel:`Ferramentas` inclui várias ações que podem ser executadas "
+"com base nesse prompt, como mover um documento, adicionar marcadores ou "
+"criar faturas ou contas."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:79
+#: ../../export/content/applications/productivity/ai/server-actions.rst:129
 msgid ""
-"*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
-"*Execute Code* server actions, meaning they trigger python code."
+"*AI Tool: Link Document to Vehicle*, *AI Tool: Move to Folder*, and *AI "
+"Tool: Rename File* are all *Execute Code* server actions, meaning they "
+"trigger Python code."
 msgstr ""
-"*IA: Adicionar Tags*, *IA: Mover para Pasta* e *IA: Renomear Documento* são "
-"todas ações de servidor *Executar Código*, o que significa que acionam "
-"código python."
+"*Ferramenta de IA: vincular documento ao veículo*, *Ferramenta de IA: mover "
+"para pasta* e *Ferramenta de IA: renomear arquivo* são todas ações de "
+"servidor do tipo *Executar código*, ou seja, acionam código Python."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:82
+#: ../../export/content/applications/productivity/ai/server-actions.rst:132
 msgid ""
 "For example, if the action determines, based on the content of the document, "
-"that the most appropriate tool is *AI: Move to Folder*, the Python code "
+"that the most appropriate tool is *AI Tool: Move to Folder*, the Python code "
 "performs the following operation:"
 msgstr ""
 "Por exemplo, se a ação determinar, com base no conteúdo do documento, que a "
-"ferramenta mais apropriada é *IA: Mover para Pasta*, o código Python executa "
-"a seguinte operação:"
+"ferramenta mais adequada é *Ferramenta de IA: mover para pasta*, o código "
+"Python executará a seguinte operação:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:89
+#: ../../export/content/applications/productivity/ai/server-actions.rst:139
 msgid ""
-"This code, executes unconditionally when called and performs the move using "
+"This code executes unconditionally when called and performs the move using "
 "an existing method."
 msgstr ""
-"Este código é executado incondicionalmente quando chamado e realiza a "
-"movimentação usando um método existente."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:92
+#: ../../export/content/applications/productivity/ai/server-actions.rst:142
 msgid ""
 "The |AI| does not infer arguments from the Python code or from the method "
 "signature. Instead, arguments passed to a tool are determined entirely by "
@@ -3986,7 +4114,7 @@ msgstr ""
 "vez disso, os argumentos passados para uma ferramenta são determinados "
 "inteiramente pela configuração da ferramenta."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:95
+#: ../../export/content/applications/productivity/ai/server-actions.rst:145
 msgid ""
 "For the *AI: Move to Folder* tool, the Python code expects a variable named "
 "`folder_id`. The |AI| knows to provide `folder_id` because it is explicitly "
@@ -4002,7 +4130,7 @@ msgstr ""
 "IA`. A coluna :guilabel:`Nome` em *Esquema IA* deve corresponder exatamente "
 "ao nome da variável usada no código Python."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:101
+#: ../../export/content/applications/productivity/ai/server-actions.rst:151
 msgid ""
 "The |AI| uses the argument description to understand what the parameter "
 "represents, what type of value is expected, and when it is appropriate to "
@@ -4011,7 +4139,7 @@ msgstr ""
 "A |AI| usa a descrição do argumento para entender o que o parâmetro "
 "representa, que tipo de valor é esperado e quando é apropriado fornecê-lo."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:104
+#: ../../export/content/applications/productivity/ai/server-actions.rst:154
 msgid ""
 "If an argument is not defined in the Usage tab, the AI cannot provide it, "
 "even if the Python code references it."
@@ -4019,15 +4147,11 @@ msgstr ""
 "Se um argumento não estiver definido na aba Uso, a IA não poderá fornecê-lo, "
 "mesmo que o código Python faça referência a ele."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:107
-msgid "The usage tab of the AI move to folder server action."
-msgstr "A aba de uso da ação de servidor de IA para mover para pasta."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:111
+#: ../../export/content/applications/productivity/ai/server-actions.rst:158
 msgid "Creating custom AI tools"
 msgstr "Criando ferramentas de IA personalizadas"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:113
+#: ../../export/content/applications/productivity/ai/server-actions.rst:160
 msgid ""
 "The same pattern in the *Auto-sort documents in Inbox* example above can be "
 "implemented using standard Odoo logic. For example, to create an action that "
@@ -4039,72 +4163,102 @@ msgstr ""
 "exemplo, para criar uma ação que possa atualizar uma descrição de tarefa, "
 "uma ação *Executar Código* poderia ser criada com o seguinte código:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:121
-msgid ""
-"To function correctly, `content` **must** be defined as an argument in "
-"tool's *Usage* tab."
+#: ../../export/content/applications/productivity/ai/server-actions.rst:168
+msgid "To make the action available to an AI server action:"
 msgstr ""
-"Para funcionar corretamente, `content` **deve** ser definido como um "
-"argumento na aba *Uso* da ferramenta."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:124
+#: ../../export/content/applications/productivity/ai/server-actions.rst:170
+msgid "Open the server action's Usage tab."
+msgstr "Abra a aba Uso da ação do servidor."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:171
+msgid "Enable *Use in AI*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:172
+msgid "Define an argument named `content` in the |AI| Schema."
+msgstr "Defina um argumento chamado `content` no esquema de |AI|."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:173
+msgid ""
+"Provide a description explaining what content the server action should "
+"supply."
+msgstr ""
+"Forneça uma descrição explicando qual conteúdo a ação do servidor deve "
+"fornecer."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:174
+msgid "Save the server action."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:177
+msgid "Choose the right approach"
+msgstr "Escolha a abordagem certa"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:179
+msgid ""
+"Both |AI| agent triggers and |AI| server actions use |AI| in automated "
+"workflows, but the appropriate choice depends on the task."
+msgstr ""
+"Tanto os acionadores de agente de |AI| quanto as ações de servidor de |AI| "
+"usam |AI| em fluxos de trabalho automatizados, mas a escolha adequada "
+"depende da tarefa."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:182
+msgid "Use an |AI| agent trigger when:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:184
+msgid ""
+"The task requires a specialized agent with configured instructions, Skills, "
+"and Sources."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:185
+msgid "The agent needs to perform a flexible or multi-step task."
+msgstr "O agente precisa executar uma tarefa flexível ou com várias etapas."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:186
+msgid "The task should run automatically or on a schedule."
+msgstr "A tarefa deve ser executada automaticamente ou conforme um agendamento."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:187
+msgid ""
+"The agent needs to evaluate information and determine how to complete a task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:189
+msgid "Use an |AI| server action when:"
+msgstr "Use uma ação do servidor de |AI| quando:"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:191
+msgid ""
+"The task requires |AI| to interpret a prompt and select from a defined set "
+"of tools."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:192
+msgid "The operation has a specific execution method and defined arguments."
+msgstr "A operação tem um método de execução específico e argumentos definidos."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:193
+msgid ""
+"|AI| needs to make a decision within an existing server action workflow."
+msgstr ""
+"|AI| precisa tomar uma decisão dentro de um fluxo de trabalho de ação do "
+"servidor existente."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:194
+msgid ""
+"The execution logic should be handled by standard server actions or custom "
+"Python code."
+msgstr ""
+"A lógica de execução deve ser tratada por ações de servidor padrão ou código "
+"Python personalizado."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:197
 msgid ":ref:`Server Actions <reference/actions/server>`"
 msgstr ":ref:`Ações de Servidor <reference/actions/server>`"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:127
-msgid "Common issues"
-msgstr "Problemas comuns"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:130
-msgid "Why is the Tools field empty?"
-msgstr "Por que o campo Ferramentas está vazio?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:132
-msgid ""
-"Confirm that at least one server action has :guilabel:`Use in AI` enabled."
-msgstr ""
-"Confirme que pelo menos uma ação de servidor tem :guilabel:`Usar na IA` "
-"ativado."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:133
-msgid ""
-"Confirm that at least one tool is assigned to the same "
-"model :guilabel:`Model` as the server action."
-msgstr ""
-"Confirme que pelo menos uma ferramenta está atribuída ao mesmo "
-"modelo :guilabel:`Modelo` da ação de servidor."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:137
-msgid "Why did the tool run but nothing happened?"
-msgstr "Por que a ferramenta foi executada mas nada aconteceu?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:139
-msgid "The Python code exited without changes."
-msgstr "O código Python foi encerrado sem alterações."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:140
-msgid "Required arguments were missing or empty."
-msgstr "Argumentos obrigatórios estavam ausentes ou vazios."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:141
-msgid "Business conditions were not implemented in the tool logic."
-msgstr "Condições de negócio não foram implementadas na lógica da ferramenta."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:144
-msgid "Why did the AI choose an unexpected tool?"
-msgstr "Por que a IA escolheu uma ferramenta inesperada?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:146
-msgid "The prompt lacked sufficient context."
-msgstr "O prompt não tinha contexto suficiente."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:147
-msgid "Multiple tools matched the same intent."
-msgstr "Várias ferramentas corresponderam à mesma intenção."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:148
-msgid "No constraints were enforced at the tool level."
-msgstr "Nenhuma restrição foi aplicada no nível da ferramenta."
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:3
 msgid "AI in support workflows"
@@ -46687,6 +46841,208 @@ msgstr ""
 "Para outros erros, consulte o Developer Suite da Meta para `Códigos de erro "
 "do WhatsApp <https://developers.facebook.com/documentation/business-"
 "messaging/whatsapp/support/error-codes>`__."
+
+#~ msgid ""
+#~ "|AI| server actions extend Odoo's automation framework by allowing "
+#~ "artificial intelligence to make decisions during a workflow."
+#~ msgstr ""
+#~ "As ações de servidor |AI| estendem a estrutura de automação do Odoo "
+#~ "permitindo que a inteligência artificial tome decisões durante um fluxo "
+#~ "de trabalho."
+
+#~ msgid ""
+#~ "They are designed for cases where logic cannot be expressed entirely "
+#~ "through fixed conditions, but still requires controlled execution through "
+#~ "standard server actions."
+#~ msgstr ""
+#~ "Elas são projetadas para casos em que a lógica não pode ser expressa "
+#~ "inteiramente por meio de condições fixas, mas ainda requer execução "
+#~ "controlada por meio de ações de servidor padrão."
+
+#~ msgid ""
+#~ "AI-driven workflows in Odoo are built around a clear separation of "
+#~ "responsibilities between the |AI| server action, or *the Manager*, and "
+#~ "the tool, or *the Worker*."
+#~ msgstr ""
+#~ "Os fluxos de trabalho orientados por IA no Odoo são construídos em torno "
+#~ "de uma clara separação de responsabilidades entre a ação de servidor |"
+#~ "AI|, ou *o Gerente*, e a ferramenta, ou *o Executor*."
+
+#~ msgid ""
+#~ "An |AI| server action acts as a decision maker, or a manager. It reads "
+#~ "the record and its context. It interprets the |AI| prompt. And it decides "
+#~ "which tool to call, and what arguments to use."
+#~ msgstr ""
+#~ "Uma ação de servidor |AI| atua como um tomador de decisões, ou um "
+#~ "gerente. Ela lê o registro e seu contexto. Ela interpreta o prompt |AI|. "
+#~ "E ela decide qual ferramenta chamar e quais argumentos usar."
+
+#~ msgid ""
+#~ "The server action does not enforce business rules, modify records "
+#~ "directly, or guarantee the correctness of the operation. Its role is "
+#~ "limited to decision-making."
+#~ msgstr ""
+#~ "A ação de servidor não impõe regras de negócio, não modifica registros "
+#~ "diretamente nem garante a correção da operação. Seu papel é limitado à "
+#~ "tomada de decisões."
+
+#~ msgid ""
+#~ "A tool is a standard server action with the *Use in AI* option enabled in "
+#~ "its *Usage* tab. Tools contain all execution logic and perform record "
+#~ "updates, moves, or writes. Tools **must** enforce business rules "
+#~ "explicitly in Python code."
+#~ msgstr ""
+#~ "Uma ferramenta é uma ação de servidor padrão com a opção *Usar em IA* "
+#~ "habilitada em sua aba *Uso*. As ferramentas contêm toda a lógica de "
+#~ "execução e realizam atualizações, movimentações ou gravações de "
+#~ "registros. As ferramentas **devem** impor regras de negócio "
+#~ "explicitamente em código Python."
+
+#~ msgid ""
+#~ "If a tool is called by the |AI| server action, it will execute "
+#~ "unconditionally, unless the code itself prevents it."
+#~ msgstr ""
+#~ "Se uma ferramenta for chamada pela ação de servidor |AI|, ela será "
+#~ "executada incondicionalmente, a menos que o próprio código a impeça."
+
+#~ msgid "The |AI| prompt is evaluated, using the record as context."
+#~ msgstr "O prompt |AI| é avaliado, usando o registro como contexto."
+
+#~ msgid "The |AI| selects one of the available tools."
+#~ msgstr "A |AI| seleciona uma das ferramentas disponíveis."
+
+#~ msgid "The |AI| provides arguments expected by the tool."
+#~ msgstr "A |AI| fornece os argumentos esperados pela ferramenta."
+
+#~ msgid "The selected tool executes its Python code."
+#~ msgstr "A ferramenta selecionada executa seu código Python."
+
+#~ msgid ""
+#~ "|AI| server actions work without custom logic only when the underlying "
+#~ "behavior already exists in Odoo, such as moving a document to a folder. "
+#~ "In these cases, the |AI| selects parameters, and Odoo executes the action."
+#~ msgstr ""
+#~ "As ações de servidor |AI| funcionam sem lógica personalizada somente "
+#~ "quando o comportamento subjacente já existe no Odoo, como mover um "
+#~ "documento para uma pasta. Nesses casos, a |AI| seleciona os parâmetros e "
+#~ "o Odoo executa a ação."
+
+#~ msgid "Use case walkthrough"
+#~ msgstr "Passo a passo do caso de uso"
+
+#~ msgid ""
+#~ "The *Auto-sort documents in Inbox* example demonstrates the full |AI| "
+#~ "Server Action pattern. Navigate to the *Server Actions* menu by going "
+#~ "to :menuselection:`Settings --> Technical --> Server Actions`."
+#~ msgstr ""
+#~ "O exemplo *Auto-organizar documentos na caixa de entrada* demonstra o "
+#~ "padrão completo de Ação de Servidor |AI|. Navegue até o menu *Ações de "
+#~ "servidor* indo para :menuselection:`Configurações --> Técnico --> Ações "
+#~ "de servidor`."
+
+#~ msgid ""
+#~ "This server action is designed to review documents for their content, and "
+#~ "add tags. The action itself does **not** move documents or add tags, it "
+#~ "only decides which tool should be used, based on the documents' content."
+#~ msgstr ""
+#~ "Esta ação de servidor foi projetada para revisar documentos quanto ao seu "
+#~ "conteúdo e adicionar tags. A ação em si **não** move documentos ou "
+#~ "adiciona tags, ela apenas decide qual ferramenta deve ser usada, com base "
+#~ "no conteúdo dos documentos."
+
+#~ msgid ""
+#~ "The prompt for this action provides context about the document, as well "
+#~ "as intent of the action."
+#~ msgstr ""
+#~ "O prompt para esta ação fornece contexto sobre o documento, bem como a "
+#~ "intenção da ação."
+
+#~ msgid ""
+#~ "The :guilabel:`Tool` field includes several actions that may be taken "
+#~ "based on this prompt, including moving a document, adding tags, or "
+#~ "creating invoices or bills."
+#~ msgstr ""
+#~ "O campo :guilabel:`Ferramenta` inclui várias ações que podem ser "
+#~ "executadas com base neste prompt, incluindo mover um documento, adicionar "
+#~ "tags ou criar faturas ou contas."
+
+#~ msgid ""
+#~ "*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
+#~ "*Execute Code* server actions, meaning they trigger python code."
+#~ msgstr ""
+#~ "*IA: Adicionar Tags*, *IA: Mover para Pasta* e *IA: Renomear Documento* "
+#~ "são todas ações de servidor *Executar Código*, o que significa que "
+#~ "acionam código python."
+
+#~ msgid ""
+#~ "For example, if the action determines, based on the content of the "
+#~ "document, that the most appropriate tool is *AI: Move to Folder*, the "
+#~ "Python code performs the following operation:"
+#~ msgstr ""
+#~ "Por exemplo, se a ação determinar, com base no conteúdo do documento, que "
+#~ "a ferramenta mais apropriada é *IA: Mover para Pasta*, o código Python "
+#~ "executa a seguinte operação:"
+
+#~ msgid ""
+#~ "This code, executes unconditionally when called and performs the move "
+#~ "using an existing method."
+#~ msgstr ""
+#~ "Este código é executado incondicionalmente quando chamado e realiza a "
+#~ "movimentação usando um método existente."
+
+#~ msgid "The usage tab of the AI move to folder server action."
+#~ msgstr "A aba de uso da ação de servidor de IA para mover para pasta."
+
+#~ msgid ""
+#~ "To function correctly, `content` **must** be defined as an argument in "
+#~ "tool's *Usage* tab."
+#~ msgstr ""
+#~ "Para funcionar corretamente, `content` **deve** ser definido como um "
+#~ "argumento na aba *Uso* da ferramenta."
+
+#~ msgid "Common issues"
+#~ msgstr "Problemas comuns"
+
+#~ msgid "Why is the Tools field empty?"
+#~ msgstr "Por que o campo Ferramentas está vazio?"
+
+#~ msgid ""
+#~ "Confirm that at least one server action has :guilabel:`Use in AI` enabled."
+#~ msgstr ""
+#~ "Confirme que pelo menos uma ação de servidor tem :guilabel:`Usar na IA` "
+#~ "ativado."
+
+#~ msgid ""
+#~ "Confirm that at least one tool is assigned to the same "
+#~ "model :guilabel:`Model` as the server action."
+#~ msgstr ""
+#~ "Confirme que pelo menos uma ferramenta está atribuída ao mesmo "
+#~ "modelo :guilabel:`Modelo` da ação de servidor."
+
+#~ msgid "Why did the tool run but nothing happened?"
+#~ msgstr "Por que a ferramenta foi executada mas nada aconteceu?"
+
+#~ msgid "The Python code exited without changes."
+#~ msgstr "O código Python foi encerrado sem alterações."
+
+#~ msgid "Required arguments were missing or empty."
+#~ msgstr "Argumentos obrigatórios estavam ausentes ou vazios."
+
+#~ msgid "Business conditions were not implemented in the tool logic."
+#~ msgstr ""
+#~ "Condições de negócio não foram implementadas na lógica da ferramenta."
+
+#~ msgid "Why did the AI choose an unexpected tool?"
+#~ msgstr "Por que a IA escolheu uma ferramenta inesperada?"
+
+#~ msgid "The prompt lacked sufficient context."
+#~ msgstr "O prompt não tinha contexto suficiente."
+
+#~ msgid "Multiple tools matched the same intent."
+#~ msgstr "Várias ferramentas corresponderam à mesma intenção."
+
+#~ msgid "No constraints were enforced at the tool level."
+#~ msgstr "Nenhuma restrição foi aplicada no nível da ferramenta."
 
 #~ msgid ""
 #~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "

@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 17:31+0000\n"
-"PO-Revision-Date: 2026-11-14 12:37+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-11-20 17:31+0000\n"
+"PO-Revision-Date: 2026-11-21 15:38+0000\n"
+"Last-Translator: OpenAI <noreply-mt-openai@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-20-doc/"
 "productivity/sl/>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../export/content/applications/productivity.rst:5
 msgid "Productivity"
@@ -329,8 +329,8 @@ msgid ""
 msgstr ""
 "Odoo |AI| uporablja nakupe v aplikaciji (IAP) za zahteve AI. Za več "
 "informacij o uporabi |IAP| kreditov, vključno s tem, kako kupiti dodatne "
-"kredite, obiščite `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/867>"
-"`_."
+"kredite, obiščite `Odoo AI IAP <https://iap.odoo.com/iap/in-app-services/"
+"867>`_."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:35
 msgid "Agent structure"
@@ -662,7 +662,8 @@ msgstr ""
 
 #: ../../export/content/applications/productivity/ai/agents.rst:170
 msgid "See :doc:`AI server actions <server-actions>` for more information."
-msgstr "Za več informacij glejte :doc:`strežniška dejanja AI <server-actions>`."
+msgstr ""
+"Za več informacij glejte :doc:`strežniška dejanja AI <server-actions>`."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:175
 msgid "Create a new agent"
@@ -674,9 +675,9 @@ msgid ""
 "click :guilabel:`New`. Enter an agent name, then add a short description, if "
 "desired."
 msgstr ""
-"Za ustvarjanje novega |AI| agenta se pomaknite v aplikacijo "
-":menuselection:`AI` in kliknite :guilabel:`Novo`. Vnesite ime agenta in po "
-"želji dodajte kratek opis."
+"Za ustvarjanje novega |AI| agenta se pomaknite v "
+"aplikacijo :menuselection:`AI` in kliknite :guilabel:`Novo`. Vnesite ime "
+"agenta in po želji dodajte kratek opis."
 
 #: ../../export/content/applications/productivity/ai/agents.rst:181
 msgid ""
@@ -3682,154 +3683,253 @@ msgstr ""
 msgid ":doc:`../mcp_server`"
 msgstr ":doc:`../mcp_server`"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:3
+#: ../../export/content/applications/productivity/ai/server-actions.rst:-1
+msgid ""
+"Use Odoo AI in automated workflows. Learn how to trigger AI agents "
+"automatically and how AI server actions evaluate records and select tools to "
+"execute, with a document sorting example and guidance on choosing the right "
+"approach."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:8
 msgid "AI server actions"
 msgstr "Strežniška dejanja AI"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:7
+#: ../../export/content/applications/productivity/ai/server-actions.rst:12
 msgid ""
-"|AI| server actions extend Odoo's automation framework by allowing "
-"artificial intelligence to make decisions during a workflow."
+"Odoo |AI| can be used in automated workflows in two ways: an automated or "
+"scheduled action can trigger an |AI| agent to perform a task, or an AI "
+"server action can make decisions and select tools to execute within a "
+"workflow."
 msgstr ""
-"Strežniška dejanja |AI| razširjajo ogrodje Odoo za avtomatizacijo tako, da "
-"omogočajo umetni inteligenci sprejemanje odločitev med potekom dela."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:10
-msgid ""
-"They are designed for cases where logic cannot be expressed entirely through "
-"fixed conditions, but still requires controlled execution through standard "
-"server actions."
-msgstr ""
-"Zasnovana so za primere, kjer logike ni mogoče v celoti izraziti s fiksnimi "
-"pogoji, vendar še vedno zahteva nadzorovano izvajanje prek standardnih "
-"strežniških dejanj."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:14
-msgid "How AI server actions work"
-msgstr "Kako delujejo strežniška dejanja AI"
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:16
-msgid ""
-"AI-driven workflows in Odoo are built around a clear separation of "
-"responsibilities between the |AI| server action, or *the Manager*, and the "
-"tool, or *the Worker*."
+msgid "These approaches serve different purposes:"
 msgstr ""
-"Delovni tokovi, ki jih poganja AI, so v Odoo zgrajeni okoli jasne razdelitve "
-"odgovornosti med strežniškim dejanjem |AI| oziroma *Upraviteljem* in orodjem "
-"oziroma *Delavcem*."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:18
+msgid ""
+"*AI agent triggers*: Summon a configured :doc:`agent <agents>` to perform a "
+"task based on its instructions, Skills, and Sources."
+msgstr ""
+"*Sprožilci agenta AI*: prikličite nastavljenega :doc:`agenta <agents>` za "
+"izvedbo opravila na podlagi njegovih navodil, veščin in virov."
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:20
-msgid "AI server action: the manager"
-msgstr "Dejanje strežnika AI: upravitelj"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:22
 msgid ""
-"An |AI| server action acts as a decision maker, or a manager. It reads the "
-"record and its context. It interprets the |AI| prompt. And it decides which "
-"tool to call, and what arguments to use."
+"*AI server actions*: Use |AI| to interpret a prompt, evaluate a record, and "
+"select an appropriate server action to execute."
 msgstr ""
-"Dejanje strežnika |AI| deluje kot odločevalec ali upravitelj. Prebere zapis "
-"in njegov kontekst. Interpretira poziv |AI|. In odloči, katero orodje "
-"poklicati ter katere argumente uporabiti."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:25
+#: ../../export/content/applications/productivity/ai/server-actions.rst:24
+msgid "Trigger an AI agent"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:26
 msgid ""
-"The server action does not enforce business rules, modify records directly, "
-"or guarantee the correctness of the operation. Its role is limited to "
-"decision-making."
+"An |AI| agent can be launched interactively by a user through an AI chat or "
+"triggered automatically as part of an Odoo workflow."
 msgstr ""
-"Dejanje strežnika ne uveljavlja poslovnih pravil, ne spreminja zapisov "
-"neposredno in ne zagotavlja pravilnosti operacije. Njegova vloga je omejena "
-"na odločanje."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:31
-msgid "AI tool: the worker"
-msgstr "Orodje AI: izvajalec"
+#: ../../export/content/applications/productivity/ai/server-actions.rst:29
+msgid ""
+"To configure an automatic trigger, open the agent and navigate to the "
+"*Trigger* tab. Click :icon:`add` :guilabel:`Add`. On the *When should your "
+"agent be triggered?* pop-up, choose one of the following options:"
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:33
 msgid ""
-"A tool is a standard server action with the *Use in AI* option enabled in "
-"its *Usage* tab. Tools contain all execution logic and perform record "
-"updates, moves, or writes. Tools **must** enforce business rules explicitly "
-"in Python code."
+"*On a schedule*: Run the agent automatically according to a set frequency."
 msgstr ""
-"Orodje je standardno dejanje strežnika z omogočeno možnostjo *Uporabi v AI* "
-"na zavihku *Uporaba*. Orodja vsebujejo vso logiko izvajanja ter izvajajo "
-"posodobitve, premike ali zapise zapisov. Orodja **morajo** eksplicitno "
-"uveljavljati poslovna pravila v kodi Python."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:37
+#: ../../export/content/applications/productivity/ai/server-actions.rst:34
 msgid ""
-"If a tool is called by the |AI| server action, it will execute "
-"unconditionally, unless the code itself prevents it."
+"*Based on a Date Field*: Run the agent once per record when a specific date "
+"is reached."
 msgstr ""
-"Če dejanje strežnika |AI| pokliče orodje, se bo to izvedlo brezpogojno, "
-"razen če koda sama tega ne prepreči."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:35
+msgid "*After creation*: Run the agent whenever a new record is created."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:36
+msgid "*After update*: Run the agent whenever a specified field is updated."
+msgstr ""
+"*Po posodobitvi*: zaženite agenta vsakič, ko je posodobljeno določeno polje."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:38
+msgid ""
+"Configure the additional options for the selected trigger, then save the "
+"agent."
+msgstr ""
 
 #: ../../export/content/applications/productivity/ai/server-actions.rst:41
+msgid ""
+"For long-running tasks, such as extensive web searches, use a scheduled "
+"trigger rather than an immediate, event-driven trigger. This allows the task "
+"to run in the background instead of blocking the user interface while the "
+"operation executes."
+msgstr ""
+"Za dolgotrajna opravila, kot so obsežna spletna iskanja, uporabite "
+"načrtovani sprožilec namesto takojšnjega sprožilca na podlagi dogodka. Tako "
+"se opravilo izvaja v ozadju in med izvajanjem operacije ne blokira "
+"uporabniškega vmesnika."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:45
+msgid ""
+"When the trigger conditions are met, the agent executes the instructions "
+"using its configured Skills, Tools, and Sources."
+msgstr ""
+"Ko so izpolnjeni pogoji sprožilca, agent izvede navodila z uporabo "
+"nastavljenih veščin, orodij in virov."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:49
+msgid ""
+"Agents triggered automatically perform their tasks directly, without "
+"requesting user approval before creating or updating records. Configure the "
+"agent's instructions and available tools carefully, particularly when the "
+"workflow can modify important business data."
+msgstr ""
+"Samodejno sproženi agenti svoja opravila izvedejo neposredno, ne da bi pred "
+"ustvarjanjem ali posodabljanjem zapisov zahtevali odobritev uporabnika. "
+"Skrbno nastavite navodila agenta in razpoložljiva orodja, zlasti kadar lahko "
+"delovni tok spreminja pomembne poslovne podatke."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:54
+msgid "How AI server actions work"
+msgstr "Kako delujejo strežniška dejanja AI"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:56
+msgid ""
+"|AI| server actions extend Odoo's automation framework by allowing |AI| to "
+"make decisions during a workflow. They are useful when a task requires "
+"interpreting information or selecting an appropriate action, but the actual "
+"execution should remain controlled by standard server actions."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:60
+msgid "AI-driven workflows use two components: *the Manager* and *the Worker*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:63
+msgid "AI server action: the manager"
+msgstr "Dejanje strežnika AI: upravitelj"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:65
+msgid "An |AI| server action acts as a decision-maker, or Manager. It:"
+msgstr "Dejanje strežnika |AI| deluje kot odločevalec oziroma vodja. Dejanje:"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:67
+msgid "Reads the record and its context."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:68
+msgid "Interprets the AI prompt."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:69
+msgid "Selects an appropriate tool."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:70
+msgid "Provides the arguments required by the selected tool."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:72
+msgid ""
+"The Manager does not enforce business rules or execute the underlying "
+"operation itself. Its role is limited to deciding which tool to call and "
+"what arguments to provide."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:78
+msgid "AI tool: the worker"
+msgstr "Orodje AI: izvajalec"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:80
+msgid ""
+"A *Tool* is a standard server action configured for use by |AI|. To make a "
+"server action available as a tool, enable the *Use in AI* option in its "
+"*Usage* tab."
+msgstr ""
+"*Orodje* je standardno dejanje strežnika, nastavljeno tako, da ga uporablja "
+"|AI|. Da bo dejanje strežnika na voljo kot orodje, na njegovem zavihku "
+"*Uporaba* omogočite možnost *Uporabi v AI*."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:83
+msgid ""
+"Tools contain the execution logic and perform operations such as updating "
+"records, moving documents, or writing data."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:86
+msgid ""
+"The tool must enforce any required business rules in its own execution "
+"logic. When called by the server action, it executes without requesting "
+"additional user approval, unless its code explicitly prevents the operation."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:91
 msgid "AI server action workflow"
 msgstr "Potek dela dejanja strežnika AI"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:43
+#: ../../export/content/applications/productivity/ai/server-actions.rst:93
 msgid "The |AI| server action workflow follows this sequence:"
 msgstr "Potek dela dejanja strežnika |AI| sledi temu zaporedju:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:45
+#: ../../export/content/applications/productivity/ai/server-actions.rst:95
 msgid "A record triggers an |AI| server action."
 msgstr "Zapis sproži dejanje strežnika |AI|."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:46
-msgid "The |AI| prompt is evaluated, using the record as context."
-msgstr "Poziv |AI| se ovrednoti z uporabo zapisa kot konteksta."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:47
-msgid "The |AI| selects one of the available tools."
-msgstr "|AI| izbere eno od razpoložljivih orodij."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:48
-msgid "The |AI| provides arguments expected by the tool."
-msgstr "|AI| zagotovi argumente, ki jih orodje pričakuje."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:49
-msgid "The selected tool executes its Python code."
-msgstr "Izbrano orodje izvede svojo kodo Python."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:52
-msgid ""
-"|AI| server actions work without custom logic only when the underlying "
-"behavior already exists in Odoo, such as moving a document to a folder. In "
-"these cases, the |AI| selects parameters, and Odoo executes the action."
+#: ../../export/content/applications/productivity/ai/server-actions.rst:96
+msgid "The server action evaluates the prompt using the record as context."
 msgstr ""
-"Dejanja strežnika |AI| delujejo brez logike po meri samo, ko osnovno "
-"obnašanje že obstaja v Odoo, na primer premikanje dokumenta v mapo. V teh "
-"primerih |AI| izbere parametre, Odoo pa izvede dejanje."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:57
-msgid "Use case walkthrough"
-msgstr "Predstavitev primera uporabe"
+#: ../../export/content/applications/productivity/ai/server-actions.rst:97
+msgid "The server action selects an available tool."
+msgstr "Dejanje strežnika izbere razpoložljivo orodje."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:59
+#: ../../export/content/applications/productivity/ai/server-actions.rst:98
+msgid "The server action supplies the arguments required by the tool."
+msgstr "Dejanje strežnika posreduje argumente, ki jih zahteva orodje."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:99
+msgid "The tool executes its configured logic."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:102
+msgid ""
+"|AI| server actions do not automatically enforce business rules or validate "
+"whether an operation is appropriate. The server action must contain the "
+"necessary checks and safeguards. If a server action is called, its execution "
+"logic runs unless the code itself prevents the operation."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:107
+msgid "Use case: Sort documents in the Inbox"
+msgstr "Primer uporabe: razvrščanje dokumentov v mapi Prejeto"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:109
 msgid ""
 "The *Auto-sort documents in Inbox* example demonstrates the full |AI| Server "
 "Action pattern. Navigate to the *Server Actions* menu by going "
-"to :menuselection:`Settings --> Technical --> Server Actions`."
+"to :menuselection:`Settings --> Technical --> Server Actions`. Then search "
+"for `Auto-sort documents in Inbox`."
 msgstr ""
-"Primer *Samodejno razvrsti dokumente v mapi Prejeto* prikazuje celoten "
-"vzorec dejanja strežnika |AI|. Do menija *Dejanja strežnika* se pomaknite "
-"tako, da greste na :menuselection:`Nastavitve --> Tehnično --> Dejanja "
-"strežnika`."
+"Primer *Samodejno razvrščanje dokumentov v mapi Prejeto* prikazuje celoten "
+"vzorec dejanja strežnika |AI|. Pomaknite se v meni *Dejanja strežnika*, tako "
+"da odprete :menuselection:`Nastavitve --> Tehnično --> Dejanja strežnika`. "
+"Nato poiščite `Auto-sort documents in Inbox`."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:64
+#: ../../export/content/applications/productivity/ai/server-actions.rst:114
 msgid ""
-"This server action is designed to review documents for their content, and "
-"add tags. The action itself does **not** move documents or add tags, it only "
+"This server action is designed to review documents for their content and add "
+"tags. The action itself does **not** move documents or add tags. It only "
 "decides which tool should be used, based on the documents' content."
 msgstr ""
-"To dejanje strežnika je zasnovano za pregled vsebine dokumentov in dodajanje "
-"oznak. Dejanje samo **ne** premika dokumentov ali dodaja oznak, temveč samo "
-"odloči, katero orodje naj se uporabi, glede na vsebino dokumentov."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:68
+#: ../../export/content/applications/productivity/ai/server-actions.rst:118
 msgid ""
 "The :guilabel:`Model` for the action is listed as *Document*, and "
 "the :guilabel:`Type` is *AI*."
@@ -3837,54 +3937,50 @@ msgstr ""
 ":guilabel:`Model` za dejanje je naveden kot *Dokument*, :guilabel:`Vrsta` pa "
 "je *AI*."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:70
+#: ../../export/content/applications/productivity/ai/server-actions.rst:120
 msgid "The record for the Auto-sort documents in inbox server action."
 msgstr "Zapis dejanja strežnika Samodejno razvrsti dokumente v mapi Prejeto."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:73
+#: ../../export/content/applications/productivity/ai/server-actions.rst:123
 msgid ""
 "The prompt for this action provides context about the document, as well as "
-"intent of the action."
+"the intent of the action."
 msgstr "Poziv za to dejanje zagotavlja kontekst o dokumentu ter namen dejanja."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:75
+#: ../../export/content/applications/productivity/ai/server-actions.rst:125
 msgid ""
-"The :guilabel:`Tool` field includes several actions that may be taken based "
+"The :guilabel:`Tools` field includes several actions that may be taken based "
 "on this prompt, including moving a document, adding tags, or creating "
 "invoices or bills."
 msgstr ""
-"Polje :guilabel:`Orodje` vključuje več dejanj, ki se lahko izvedejo na "
+"Polje :guilabel:`Orodja` vključuje več dejanj, ki jih je mogoče izvesti na "
 "podlagi tega poziva, vključno s premikanjem dokumenta, dodajanjem oznak ali "
-"ustvarjanjem računov ali predračunov."
+"ustvarjanjem izdanih oziroma prejetih računov."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:79
+#: ../../export/content/applications/productivity/ai/server-actions.rst:129
 msgid ""
-"*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
-"*Execute Code* server actions, meaning they trigger python code."
+"*AI Tool: Link Document to Vehicle*, *AI Tool: Move to Folder*, and *AI "
+"Tool: Rename File* are all *Execute Code* server actions, meaning they "
+"trigger Python code."
 msgstr ""
-"*AI: Dodaj oznake*, *AI: Premakni v mapo* in *AI: Preimenuj dokument* so vsa "
-"strežniška dejanja tipa *Izvedi kodo*, kar pomeni, da sprožijo pythonovo "
-"kodo."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:82
+#: ../../export/content/applications/productivity/ai/server-actions.rst:132
 msgid ""
 "For example, if the action determines, based on the content of the document, "
-"that the most appropriate tool is *AI: Move to Folder*, the Python code "
+"that the most appropriate tool is *AI Tool: Move to Folder*, the Python code "
 "performs the following operation:"
 msgstr ""
-"Na primer, če dejanje na podlagi vsebine dokumenta določi, da je "
-"najprimernejše orodje *AI: Premakni v mapo*, pythonova koda izvede naslednjo "
-"operacijo:"
+"Če dejanje na podlagi vsebine dokumenta na primer ugotovi, da je "
+"najprimernejše orodje *Orodje AI: premik v mapo*, koda Python izvede "
+"naslednjo operacijo:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:89
+#: ../../export/content/applications/productivity/ai/server-actions.rst:139
 msgid ""
-"This code, executes unconditionally when called and performs the move using "
+"This code executes unconditionally when called and performs the move using "
 "an existing method."
 msgstr ""
-"Ta koda se izvede brezpogojno, ko je klicana, in izvede premik z uporabo "
-"obstoječe metode."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:92
+#: ../../export/content/applications/productivity/ai/server-actions.rst:142
 msgid ""
 "The |AI| does not infer arguments from the Python code or from the method "
 "signature. Instead, arguments passed to a tool are determined entirely by "
@@ -3894,7 +3990,7 @@ msgstr ""
 "tega so argumenti, posredovani orodju, v celoti določeni s konfiguracijo "
 "orodja."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:95
+#: ../../export/content/applications/productivity/ai/server-actions.rst:145
 msgid ""
 "For the *AI: Move to Folder* tool, the Python code expects a variable named "
 "`folder_id`. The |AI| knows to provide `folder_id` because it is explicitly "
@@ -3910,7 +4006,7 @@ msgstr ""
 "Stolpec :guilabel:`Ime` pod *Shema AI* se mora popolnoma ujemati z imenom "
 "spremenljivke, uporabljeno v pythonovi kodi."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:101
+#: ../../export/content/applications/productivity/ai/server-actions.rst:151
 msgid ""
 "The |AI| uses the argument description to understand what the parameter "
 "represents, what type of value is expected, and when it is appropriate to "
@@ -3919,7 +4015,7 @@ msgstr ""
 "|AI| uporablja opis argumenta za razumevanje, kaj parameter predstavlja, "
 "kakšna vrsta vrednosti se pričakuje in kdaj je primerno, da ga zagotovi."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:104
+#: ../../export/content/applications/productivity/ai/server-actions.rst:154
 msgid ""
 "If an argument is not defined in the Usage tab, the AI cannot provide it, "
 "even if the Python code references it."
@@ -3927,15 +4023,11 @@ msgstr ""
 "Če argument ni definiran na zavihku Uporaba, ga AI ne more zagotoviti, tudi "
 "če se nanj sklicuje pythonova koda."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:107
-msgid "The usage tab of the AI move to folder server action."
-msgstr "Zavihek uporabe strežniškega dejanja AI premakni v mapo."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:111
+#: ../../export/content/applications/productivity/ai/server-actions.rst:158
 msgid "Creating custom AI tools"
 msgstr "Ustvarjanje orodij AI po meri"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:113
+#: ../../export/content/applications/productivity/ai/server-actions.rst:160
 msgid ""
 "The same pattern in the *Auto-sort documents in Inbox* example above can be "
 "implemented using standard Odoo logic. For example, to create an action that "
@@ -3947,72 +4039,96 @@ msgstr ""
 "ustvarjanje dejanja, ki lahko posodobi opis opravila, se lahko ustvari "
 "dejanje *Izvedi kodo* z naslednjo kodo:"
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:121
-msgid ""
-"To function correctly, `content` **must** be defined as an argument in "
-"tool's *Usage* tab."
+#: ../../export/content/applications/productivity/ai/server-actions.rst:168
+msgid "To make the action available to an AI server action:"
 msgstr ""
-"Da deluje pravilno, **mora** biti `content` definiran kot argument na "
-"zavihku *Uporaba* orodja."
 
-#: ../../export/content/applications/productivity/ai/server-actions.rst:124
+#: ../../export/content/applications/productivity/ai/server-actions.rst:170
+msgid "Open the server action's Usage tab."
+msgstr "Odprite zavihek Uporaba dejanja strežnika."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:171
+msgid "Enable *Use in AI*."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:172
+msgid "Define an argument named `content` in the |AI| Schema."
+msgstr "Določite argument z imenom `content` v shemi |AI|."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:173
+msgid ""
+"Provide a description explaining what content the server action should "
+"supply."
+msgstr ""
+"Navedite opis, ki pojasnjuje, kakšno vsebino naj zagotovi dejanje strežnika."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:174
+msgid "Save the server action."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:177
+msgid "Choose the right approach"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:179
+msgid ""
+"Both |AI| agent triggers and |AI| server actions use |AI| in automated "
+"workflows, but the appropriate choice depends on the task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:182
+msgid "Use an |AI| agent trigger when:"
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:184
+msgid ""
+"The task requires a specialized agent with configured instructions, Skills, "
+"and Sources."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:185
+msgid "The agent needs to perform a flexible or multi-step task."
+msgstr "Agent mora izvesti prilagodljivo ali večstopenjsko opravilo."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:186
+msgid "The task should run automatically or on a schedule."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:187
+msgid ""
+"The agent needs to evaluate information and determine how to complete a task."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:189
+msgid "Use an |AI| server action when:"
+msgstr "Uporabite dejanje strežnika |AI|, kadar:"
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:191
+msgid ""
+"The task requires |AI| to interpret a prompt and select from a defined set "
+"of tools."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:192
+msgid "The operation has a specific execution method and defined arguments."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:193
+msgid ""
+"|AI| needs to make a decision within an existing server action workflow."
+msgstr ""
+"|AI| mora sprejeti odločitev znotraj obstoječega delovnega toka dejanja "
+"strežnika."
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:194
+msgid ""
+"The execution logic should be handled by standard server actions or custom "
+"Python code."
+msgstr ""
+
+#: ../../export/content/applications/productivity/ai/server-actions.rst:197
 msgid ":ref:`Server Actions <reference/actions/server>`"
 msgstr ":ref:`Strežniška dejanja <reference/actions/server>`"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:127
-msgid "Common issues"
-msgstr "Pogoste težave"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:130
-msgid "Why is the Tools field empty?"
-msgstr "Zakaj je polje Orodja prazno?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:132
-msgid ""
-"Confirm that at least one server action has :guilabel:`Use in AI` enabled."
-msgstr ""
-"Potrdite, da ima vsaj eno strežniško dejanje omogočeno "
-"možnost :guilabel:`Uporabi v AI`."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:133
-msgid ""
-"Confirm that at least one tool is assigned to the same "
-"model :guilabel:`Model` as the server action."
-msgstr ""
-"Potrdite, da je vsaj eno orodje dodeljeno istemu modelu :guilabel:`Model` "
-"kot strežniško dejanje."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:137
-msgid "Why did the tool run but nothing happened?"
-msgstr "Zakaj se je orodje zagnalo, a se ni zgodilo nič?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:139
-msgid "The Python code exited without changes."
-msgstr "Pythonova koda se je zaključila brez sprememb."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:140
-msgid "Required arguments were missing or empty."
-msgstr "Zahtevani argumenti so manjkali ali so bili prazni."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:141
-msgid "Business conditions were not implemented in the tool logic."
-msgstr "Poslovni pogoji niso bili implementirani v logiko orodja."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:144
-msgid "Why did the AI choose an unexpected tool?"
-msgstr "Zakaj je UI izbral nepričakovano orodje?"
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:146
-msgid "The prompt lacked sufficient context."
-msgstr "Poziv ni vseboval zadostnega konteksta."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:147
-msgid "Multiple tools matched the same intent."
-msgstr "Več orodij se je ujemalo z istim namenom."
-
-#: ../../export/content/applications/productivity/ai/server-actions.rst:148
-msgid "No constraints were enforced at the tool level."
-msgstr "Na ravni orodja niso bile uveljavljene nobene omejitve."
 
 #: ../../export/content/applications/productivity/ai/support_operations.rst:3
 msgid "AI in support workflows"
@@ -45827,6 +45943,203 @@ msgstr ""
 "Za druge napake glejte Metino Developer Suite za `WhatsApp Error Codes "
 "<https://developers.facebook.com/documentation/business-messaging/whatsapp/"
 "support/error-codes>`__."
+
+#~ msgid ""
+#~ "|AI| server actions extend Odoo's automation framework by allowing "
+#~ "artificial intelligence to make decisions during a workflow."
+#~ msgstr ""
+#~ "Strežniška dejanja |AI| razširjajo ogrodje Odoo za avtomatizacijo tako, "
+#~ "da omogočajo umetni inteligenci sprejemanje odločitev med potekom dela."
+
+#~ msgid ""
+#~ "They are designed for cases where logic cannot be expressed entirely "
+#~ "through fixed conditions, but still requires controlled execution through "
+#~ "standard server actions."
+#~ msgstr ""
+#~ "Zasnovana so za primere, kjer logike ni mogoče v celoti izraziti s "
+#~ "fiksnimi pogoji, vendar še vedno zahteva nadzorovano izvajanje prek "
+#~ "standardnih strežniških dejanj."
+
+#~ msgid ""
+#~ "AI-driven workflows in Odoo are built around a clear separation of "
+#~ "responsibilities between the |AI| server action, or *the Manager*, and "
+#~ "the tool, or *the Worker*."
+#~ msgstr ""
+#~ "Delovni tokovi, ki jih poganja AI, so v Odoo zgrajeni okoli jasne "
+#~ "razdelitve odgovornosti med strežniškim dejanjem |AI| oziroma "
+#~ "*Upraviteljem* in orodjem oziroma *Delavcem*."
+
+#~ msgid ""
+#~ "An |AI| server action acts as a decision maker, or a manager. It reads "
+#~ "the record and its context. It interprets the |AI| prompt. And it decides "
+#~ "which tool to call, and what arguments to use."
+#~ msgstr ""
+#~ "Dejanje strežnika |AI| deluje kot odločevalec ali upravitelj. Prebere "
+#~ "zapis in njegov kontekst. Interpretira poziv |AI|. In odloči, katero "
+#~ "orodje poklicati ter katere argumente uporabiti."
+
+#~ msgid ""
+#~ "The server action does not enforce business rules, modify records "
+#~ "directly, or guarantee the correctness of the operation. Its role is "
+#~ "limited to decision-making."
+#~ msgstr ""
+#~ "Dejanje strežnika ne uveljavlja poslovnih pravil, ne spreminja zapisov "
+#~ "neposredno in ne zagotavlja pravilnosti operacije. Njegova vloga je "
+#~ "omejena na odločanje."
+
+#~ msgid ""
+#~ "A tool is a standard server action with the *Use in AI* option enabled in "
+#~ "its *Usage* tab. Tools contain all execution logic and perform record "
+#~ "updates, moves, or writes. Tools **must** enforce business rules "
+#~ "explicitly in Python code."
+#~ msgstr ""
+#~ "Orodje je standardno dejanje strežnika z omogočeno možnostjo *Uporabi v "
+#~ "AI* na zavihku *Uporaba*. Orodja vsebujejo vso logiko izvajanja ter "
+#~ "izvajajo posodobitve, premike ali zapise zapisov. Orodja **morajo** "
+#~ "eksplicitno uveljavljati poslovna pravila v kodi Python."
+
+#~ msgid ""
+#~ "If a tool is called by the |AI| server action, it will execute "
+#~ "unconditionally, unless the code itself prevents it."
+#~ msgstr ""
+#~ "Če dejanje strežnika |AI| pokliče orodje, se bo to izvedlo brezpogojno, "
+#~ "razen če koda sama tega ne prepreči."
+
+#~ msgid "The |AI| prompt is evaluated, using the record as context."
+#~ msgstr "Poziv |AI| se ovrednoti z uporabo zapisa kot konteksta."
+
+#~ msgid "The |AI| selects one of the available tools."
+#~ msgstr "|AI| izbere eno od razpoložljivih orodij."
+
+#~ msgid "The |AI| provides arguments expected by the tool."
+#~ msgstr "|AI| zagotovi argumente, ki jih orodje pričakuje."
+
+#~ msgid "The selected tool executes its Python code."
+#~ msgstr "Izbrano orodje izvede svojo kodo Python."
+
+#~ msgid ""
+#~ "|AI| server actions work without custom logic only when the underlying "
+#~ "behavior already exists in Odoo, such as moving a document to a folder. "
+#~ "In these cases, the |AI| selects parameters, and Odoo executes the action."
+#~ msgstr ""
+#~ "Dejanja strežnika |AI| delujejo brez logike po meri samo, ko osnovno "
+#~ "obnašanje že obstaja v Odoo, na primer premikanje dokumenta v mapo. V teh "
+#~ "primerih |AI| izbere parametre, Odoo pa izvede dejanje."
+
+#~ msgid "Use case walkthrough"
+#~ msgstr "Predstavitev primera uporabe"
+
+#~ msgid ""
+#~ "The *Auto-sort documents in Inbox* example demonstrates the full |AI| "
+#~ "Server Action pattern. Navigate to the *Server Actions* menu by going "
+#~ "to :menuselection:`Settings --> Technical --> Server Actions`."
+#~ msgstr ""
+#~ "Primer *Samodejno razvrsti dokumente v mapi Prejeto* prikazuje celoten "
+#~ "vzorec dejanja strežnika |AI|. Do menija *Dejanja strežnika* se pomaknite "
+#~ "tako, da greste na :menuselection:`Nastavitve --> Tehnično --> Dejanja "
+#~ "strežnika`."
+
+#~ msgid ""
+#~ "This server action is designed to review documents for their content, and "
+#~ "add tags. The action itself does **not** move documents or add tags, it "
+#~ "only decides which tool should be used, based on the documents' content."
+#~ msgstr ""
+#~ "To dejanje strežnika je zasnovano za pregled vsebine dokumentov in "
+#~ "dodajanje oznak. Dejanje samo **ne** premika dokumentov ali dodaja oznak, "
+#~ "temveč samo odloči, katero orodje naj se uporabi, glede na vsebino "
+#~ "dokumentov."
+
+#~ msgid ""
+#~ "The prompt for this action provides context about the document, as well "
+#~ "as intent of the action."
+#~ msgstr ""
+#~ "Poziv za to dejanje zagotavlja kontekst o dokumentu ter namen dejanja."
+
+#~ msgid ""
+#~ "The :guilabel:`Tool` field includes several actions that may be taken "
+#~ "based on this prompt, including moving a document, adding tags, or "
+#~ "creating invoices or bills."
+#~ msgstr ""
+#~ "Polje :guilabel:`Orodje` vključuje več dejanj, ki se lahko izvedejo na "
+#~ "podlagi tega poziva, vključno s premikanjem dokumenta, dodajanjem oznak "
+#~ "ali ustvarjanjem računov ali predračunov."
+
+#~ msgid ""
+#~ "*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
+#~ "*Execute Code* server actions, meaning they trigger python code."
+#~ msgstr ""
+#~ "*AI: Dodaj oznake*, *AI: Premakni v mapo* in *AI: Preimenuj dokument* so "
+#~ "vsa strežniška dejanja tipa *Izvedi kodo*, kar pomeni, da sprožijo "
+#~ "pythonovo kodo."
+
+#~ msgid ""
+#~ "For example, if the action determines, based on the content of the "
+#~ "document, that the most appropriate tool is *AI: Move to Folder*, the "
+#~ "Python code performs the following operation:"
+#~ msgstr ""
+#~ "Na primer, če dejanje na podlagi vsebine dokumenta določi, da je "
+#~ "najprimernejše orodje *AI: Premakni v mapo*, pythonova koda izvede "
+#~ "naslednjo operacijo:"
+
+#~ msgid ""
+#~ "This code, executes unconditionally when called and performs the move "
+#~ "using an existing method."
+#~ msgstr ""
+#~ "Ta koda se izvede brezpogojno, ko je klicana, in izvede premik z uporabo "
+#~ "obstoječe metode."
+
+#~ msgid "The usage tab of the AI move to folder server action."
+#~ msgstr "Zavihek uporabe strežniškega dejanja AI premakni v mapo."
+
+#~ msgid ""
+#~ "To function correctly, `content` **must** be defined as an argument in "
+#~ "tool's *Usage* tab."
+#~ msgstr ""
+#~ "Da deluje pravilno, **mora** biti `content` definiran kot argument na "
+#~ "zavihku *Uporaba* orodja."
+
+#~ msgid "Common issues"
+#~ msgstr "Pogoste težave"
+
+#~ msgid "Why is the Tools field empty?"
+#~ msgstr "Zakaj je polje Orodja prazno?"
+
+#~ msgid ""
+#~ "Confirm that at least one server action has :guilabel:`Use in AI` enabled."
+#~ msgstr ""
+#~ "Potrdite, da ima vsaj eno strežniško dejanje omogočeno "
+#~ "možnost :guilabel:`Uporabi v AI`."
+
+#~ msgid ""
+#~ "Confirm that at least one tool is assigned to the same "
+#~ "model :guilabel:`Model` as the server action."
+#~ msgstr ""
+#~ "Potrdite, da je vsaj eno orodje dodeljeno istemu modelu :guilabel:`Model` "
+#~ "kot strežniško dejanje."
+
+#~ msgid "Why did the tool run but nothing happened?"
+#~ msgstr "Zakaj se je orodje zagnalo, a se ni zgodilo nič?"
+
+#~ msgid "The Python code exited without changes."
+#~ msgstr "Pythonova koda se je zaključila brez sprememb."
+
+#~ msgid "Required arguments were missing or empty."
+#~ msgstr "Zahtevani argumenti so manjkali ali so bili prazni."
+
+#~ msgid "Business conditions were not implemented in the tool logic."
+#~ msgstr "Poslovni pogoji niso bili implementirani v logiko orodja."
+
+#~ msgid "Why did the AI choose an unexpected tool?"
+#~ msgstr "Zakaj je UI izbral nepričakovano orodje?"
+
+#~ msgid "The prompt lacked sufficient context."
+#~ msgstr "Poziv ni vseboval zadostnega konteksta."
+
+#~ msgid "Multiple tools matched the same intent."
+#~ msgstr "Več orodij se je ujemalo z istim namenom."
+
+#~ msgid "No constraints were enforced at the tool level."
+#~ msgstr "Na ravni orodja niso bile uveljavljene nobene omejitve."
 
 #~ msgid ""
 #~ "An |AI| agent is a smart virtual assistant in Odoo that can understand "
