@@ -7,8 +7,8 @@ Data Files
 
 Odoo is greatly data-driven, and a big part of modules definition is thus
 the definition of the various records it manages: UI (menus and views),
-security (access rights and record rules), reports and plain data are all
-defined via records.
+security (:ref:`access rights <reference/security/access>`), reports and plain
+data are all defined via records.
 
 Structure
 =========
@@ -49,6 +49,10 @@ of operations defined previously
             <operation/>
         </odoo>
 
+If the ``odoo`` or ``data`` element has the attribute ``auto_sequence`` set to
+1, the records it contains without an explicit ``sequence`` get increasing
+sequences (10, 20, ...) in the order of the file.
+
 Core operations
 ===============
 
@@ -75,6 +79,10 @@ following attributes:
     in update mode whether the record should be created if it doesn't exist
 
     Requires an :term:`external id`, defaults to ``True``.
+    When the external id belongs to another module, it defaults to ``False``:
+    the record must already exist unless ``forcecreate="1"`` is given.
+``uid``
+    :term:`external id` of the user to create or update the record as
 
 ``field``
 ---------
@@ -120,9 +128,9 @@ Nothing
     ``char``
         sets the field content directly as the field's value without
         alterations
-    ``base64``
-        base64_-encodes the field's content, useful combined with the ``file``
-        *attribute* to load e.g. image data into attachments
+    ``bytes``
+        loads the content of the file given by the ``file`` *attribute* as
+        binary data, e.g. to load image data into attachments
     ``int``
         converts the field's content to an integer and sets it as the field's
         value
@@ -139,10 +147,11 @@ Nothing
     attributes simply evaluates whatever Python expression it is provided and
     sets the result as the field's value.
 
-    The evaluation context contains various modules (``time``, ``datetime``,
-    ``timedelta``, ``relativedelta``), a function to resolve :term:`external
-    identifiers` (``ref``) and the model object for the current field if
-    applicable (``obj``)
+    The evaluation context contains various modules and helpers (``time``,
+    ``datetime``, ``timedelta``, ``relativedelta``, ``pytz``, ``Command``),
+    the major Odoo ``version``, a function to resolve :term:`external
+    identifiers` (``ref``) and, if applicable, the ``browse`` method of the
+    model of the current field (``obj``)
 
 ``delete``
 ----------
@@ -170,6 +179,13 @@ the model and the name of the method to call.
 Parameters can be provided using ``eval`` (should evaluate to a sequence of
 parameters to call the method with) or ``value`` elements (see ``list``
 values).
+
+Named ``value`` elements (``<value name="...">``) are passed as keyword
+arguments, and a ``context`` keyword argument is applied to the model with
+``with_context``. Unless the method is decorated with
+:func:`~odoo.api.model`, the first parameter is the list of record ids to call
+it on. Inside a ``noupdate`` block, the function is only called when the module
+is installed, not when it is updated.
 
 .. code-block:: xml
 
@@ -320,7 +336,8 @@ creating a number of simple records of the same model in bulk.
 For this case, data files can also use csv_, this is often the case for
 :ref:`access rights <reference/security/access>`:
 
-* the file name is :file:`{model_name}.csv`
+* the file name is :file:`{model_name}.csv`; anything after a ``-`` is ignored,
+  e.g. :file:`ir.access-portal.csv` also loads ``ir.access`` records
 * the first row lists the fields to write, with the special field ``id``
   for :term:`external identifiers` (used for creation or update)
 * each row thereafter creates a new record
@@ -347,5 +364,4 @@ For each row (record):
 * the third column is the ``name`` field for ``res.country.state``
 * the fourth column is the ``code`` field for ``res.country.state``
 
-.. _base64: https://tools.ietf.org/html/rfc3548.html#section-3
 .. _csv: https://en.wikipedia.org/wiki/Comma-separated_values
