@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 17:33+0000\n"
+"POT-Creation-Date: 2026-11-20 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7912,67 +7912,151 @@ msgid "`Setting up click triggers on Google <https://support.google.com/tagmanag
 msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:3
-msgid "Link tracker"
+msgid "Link tracking"
 msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:5
-msgid "The link tracker is used to create tracked links to measure the effectiveness of marketing campaigns, making it easier to identify which channels drive the most traffic and make more informed decisions."
+msgid "**Odoo Link Tracker** allows you to create shortened, trackable URLs to measure the effectiveness of :ref:`marketing campaigns <marketing_automation/marketing_automation/campaigns>` or monitor individual day-to-day interactions such as sending personal offers. By adding tracking parameters to URLs, you can easily identify exactly which channels, platforms, or specific emails drive traffic to the website and make more data-driven decisions."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:9
-msgid "To create and manage tracked links, :ref:`install <general/install>` the :guilabel:`Link Tracker` (`website links`) module."
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:12
+msgid "To create and manage tracked links, the :guilabel:`Link Tracker` (`website_links`) module must be :ref:`installed <general/install>`. The module is then visible on the main Odoo dashboard when :ref:`developer mode <developer-mode>` is activated."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:15
-msgid "Create traceable URLs"
-msgstr ""
-
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:17
-msgid "To create and manage tracked links, navigate to :menuselection:`Website --> Site --> Link Tracker`. Fill in the following information and click :guilabel:`Generate tracked link` to create a tracking URL."
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:19
+msgid "Create trackable URLs"
 msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:21
-msgid ":guilabel:`URL`: The URL that is the target of the campaign. It is automatically populated with the URL used to access the menu."
-msgstr ""
-
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:23
-msgid ":guilabel:`Campaign`: The specific campaign the link should be associated with. This parameter is used to distinguish the different campaigns."
+msgid "To create and manage tracked links, navigate to the page you want to track. Then, go to :menuselection:`Website --> Site --> Link Tracker`. Under :guilabel:`Create a Link tracker`, fill in the following information:"
 msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:25
-msgid ":guilabel:`Medium`: The medium describes the category or method through which the visitor arrives at your site, such as organic search, paid search, social media ad, email, etc."
+msgid ":guilabel:`Target Link`: The destination URL the website visitor is sent to after clicking a tracked link. This field is automatically populated with the URL of the page from which the :guilabel:`Link Tracker` menu item was accessed."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:27
-msgid ":guilabel:`Source`: The source identifies the specific platform or website that referred the visitor, such as a search engine, newsletter, or website."
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:28
+msgid ":guilabel:`Campaign`: The specific campaign the link should be associated with."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:None
-msgid "Create a link tracker URL"
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:29
+msgid ":guilabel:`Medium`: The channel or method through which visitors reach the target link, such as organic search, paid search, social media ads, or email."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:34
-msgid "The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are :abbr:`UTM (Urchin Tracking Module)` parameters incorporated in the tracked URL. These can be used, for example, to customize the :ref:`visibility <website/visibility/conditions>` of website building blocks."
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:31
+msgid ":guilabel:`Source`: The specific platform, website, or channel that directs visitors to your website, such as a search engine, newsletter, or referral website."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:39
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:33
+msgid ":guilabel:`Name`: A descriptive name for the tracked link, making it easier to identify and manage."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:37
+msgid "The parameters :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are optional."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:40
+msgid "You can create new campaigns, mediums, and sources in two ways:"
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:42
+msgid "**On the link tracker creation page**: Enter the desired name and click :guilabel:`Create option`."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:44
+msgid "**From the backend**: Activate :ref:`developer mode <developer-mode>`, navigate to the Link Tracker module, go to :menuselection:`UTMS`, select the relevant menu item, and click :guilabel:`New`. You can also edit existing parameters. In addition, you can assign a :guilabel:`Responsible` person and add :guilabel:`Tags` for :guilabel:`Campaigns`."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:49
+msgid "The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are :abbr:`UTM (Urchin Tracking Module)` :ref:`parameters <crm/marketing_attribution/add-utm-parameters>` embedded in the tracked URL. Beyond analytics, Odoo allows you to use these parameters to customize the :ref:`visibility <website/visibility/conditions>` of website building blocks."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:54
+msgid "Once completed, click :guilabel:`Generate Link Tracker` to create a shortened tracking URL. Then, click the :icon:`fa-files-o` :guilabel:`Copy` button to copy the URL and use it in the relevant campaign."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:59
+msgid "To measure the performance of a link directing visitors to a new blog post from the monthly newsletter, generate a tracked link directly from the blog post page as follows:"
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:62
+msgid "Create the :guilabel:`Campaign` and name it `Boost traffic` to identify the campaign's primary objective."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:64
+msgid "Set the :guilabel:`Source` to `Newsletter October` to identify the newsletter as the traffic source."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:66
+msgid "As the newsletter is distributed by email, set the :guilabel:`Medium` to `Email`."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:67
+msgid "The :guilabel:`Name` is `Blog Post - October Newsletter Blast` to easily identify the tracked link in a larger campaign."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:70
+msgid "Generate the tracked link and include it in the newsletter to monitor its performance."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:0
+msgid "Example of a link tracker."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:79
 msgid "Tracked links overview"
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:41
-msgid "To get an overview of your tracked links, go to :menuselection:`Website --> Site --> Link Tracker` and scroll down to :guilabel:`Your tracked links` section."
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:81
+msgid "To view all tracked links, navigate to :menuselection:`Website --> Site --> Link Tracker` and scroll down to the :guilabel:`Your tracked links` section."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:84
+msgid "This dashboard provides a quick overview of the tracked links, including their total number of :guilabel:`clicks` and the associated campaign, medium, and source parameters."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:87
+msgid "Additionally, you can perform the following actions:"
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:89
+msgid ":guilabel:`Copy` the link to share it with your audience."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:90
+msgid "Click :guilabel:`Visit Link` :icon:`fa-external-link` to open the destination page associated with the tracked URL."
 msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:None
-msgid "Get an overview of all the links you track."
+msgid "Example of the tracked links overview."
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:48
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:99
 msgid "Statistics"
 msgstr ""
 
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:50
-msgid "To measure the performance of tracked links, click the track link and scroll down to the :guilabel:`Statistics` section to get an overview of the number of clicks for the tracked link. By default, the graph shows the total number of clicks. You can change the period to :guilabel:`Last Month` or :guilabel:`Last Week` using the options on the right side of the heading."
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:101
+msgid "To analyze the performance of a tracked link, click the name of the tracked link and scroll down to the :guilabel:`Statistics` section. The following charts become available once the tracked link has been clicked at least once:"
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:105
+msgid "A line chart showing the number of clicks over time."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:106
+msgid "A pie chart showing the countries from which visitors clicked the tracked link."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:108
+msgid "Use the options at the top right of the :guilabel:`Statistics` section to display data for the :guilabel:`Last Month`, the :guilabel:`Last Week`, or :guilabel:`All Time`."
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:112
+msgid ":ref:`Link tracker for Marketing Automation <marketing_automation/understanding_metrics/link-statistics>`"
+msgstr ""
+
+#: ../../content/applications/websites/website/reporting/link_tracker.rst:114
+msgid ":doc:`Analyze visitors' behavior <analytics>`"
 msgstr ""
 
 #: ../../content/applications/websites/website/structure.rst:9
