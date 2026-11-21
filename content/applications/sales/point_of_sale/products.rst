@@ -96,8 +96,8 @@ Sale` tab on the product form to configure the following POS-specific options:
 - In the :guilabel:`Upsell & cross-sell` section, enable :guilabel:`POS Optional Products` to
   suggest :doc:`optional products <../sales/sales_quotations/optional_products>` when :ref:`adding
   items to the cart <pos/use/sell>` in the POS register.
-- If applicable, configure :doc:`Urpan Piper <restaurant/urban_piper>` and/or decide if the
-  product is :guilabel:`Available for Platform Orders`, such as GrabFood or GoFood.
+- If applicable, configure :doc:`Urpan Piper <restaurant/food_delivery/urban_piper>` and/or decide
+  if the product is :guilabel:`Available for Platform Orders`, such as GrabFood or GoFood.
 
 Above that, you can configure additional options, such as :ref:`product variants
 <pos/products/variants>`, :ref:`product tags <pos/products/tags>`, :ref:`product and category images
@@ -266,8 +266,8 @@ To manage POS categories, follow these steps:
      drinks`).
    - Define a :guilabel:`Color` for display in the POS register.
    - Add an image if needed.
-   - If :doc:`online food delivery platforms <restaurant/urban_piper>` are configured in your
-     database, indicate their :guilabel:`Service Hours`.
+   - If :doc:`online food delivery platforms <restaurant/food_delivery/urban_piper>` are configured
+     in your database, indicate their :guilabel:`Service Hours`.
 
 After creating POS product categories, assign them to specific products on the :ref:`product form
 <pos/products/creation>`.
