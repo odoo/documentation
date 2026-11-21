@@ -6,116 +6,57 @@ UrbanPiper
 It consolidates orders from all connected platforms into a single interface, simplifying the
 delivery process.
 
-Supported providers and locations:
+Supported providers:
 
-.. tabs::
+.. list-table::
+   :widths: 25 25 25 25
+   :class: table-striped
 
-   .. tab:: Global and multi-region providers
+   * - `Careem <https://www.careem.com/en-AE>`_
+     - `Cari <https://www.cariapp.com>`_
+     - `ChowNow <https://get.chownow.com>`_
+     - `Deliveroo <https://deliveroo.co>`_
+   * - `DiDi Food <https://www.didi-food.com/>`_
+     - `DoorDash <https://www.doordash.com>`_
+     - `EatEasy <https://www.eateasy.ae>`_
+     - `Enqueue <https://enqueue.tech>`_
+   * - `FoodZapp <https://spryntz.com>`_
+     - `Glovo <https://glovoapp.com/en>`_
+     - `Grubhub <https://www.grubhub.com>`_
+     - `HungerStation <https://hungerstation.com/sa-en>`_
+   * - `HungryPanda <https://www.hungrypanda.co>`_
+     - `InstaShop <http://instashop.com>`_
+     - `Jahez <https://www.jahez.net/index-en.html>`_
+     - `Just Eat <https://www.just-eat.com>`_
+   * - `Keeta <https://www.keeta-global.com/AE/en>`_
+     - `Mr Mandoob <https://mrmandoob.com>`_
+     - `Mrsool <https://mrsool.co>`_
+     - `Ninja <https://ananinja.com/sa/en>`_
+   * - `NoonFood <https://food.noon.com/uae-en>`_
+     - `Postmates <https://www.postmates.com>`_
+     - `Radyes <https://lyveglobal.com/>`_
+     - `Rafeeq <https://www.gorafeeq.com/en>`_
+   * - `Rappi <https://www.rappi.com>`_
+     - `SkipTheDishes <https://www.skipthedishes.com/en>`_
+     - `Smiles <https://smiles.ae>`_
+     - `Snoonu <https://www.snoonu.com>`_
+   * - `Swiggy <https://www.swiggy.com>`_
+     - `Talabat <https://www.talabat.com/uae>`_
+     - `Talabna <https://talabnapp.com/>`_
+     - `The Chefz <https://thechefz.co>`_
+   * - `ToYou <https://toyou.io>`_
+     - `Uber Eats <https://www.ubereats.com>`_
+     - `Wolt <https://wolt.com>`_
+     - `Zomato <https://www.zomato.com>`_
+   * - `Zyda <https://zyda.com>`_
+     -
+     -
+     -
 
-      .. list-table::
-         :header-rows: 1
-         :stub-columns: 1
-         :widths: 25 75
-         :class: table-striped
-
-         * - Providers
-           - Locations
-         * - `Deliveroo <https://deliveroo.co>`_
-           - Belgium, France, Ireland, Italy, Kuwait, United Arab Emirates, United Kingdom
-         * - `DoorDash <https://www.doordash.com>`_
-           - Australia, Canada, United States
-         * - `Glovo <https://glovoapp.com/en>`_
-           - Armenia, Bosnia and Herzegovina, Bulgaria, Croatia, Côte d'Ivoire, Georgia, Italy,
-             Kazakhstan, Kenya, Kyrgyzstan, Moldova, Montenegro, Morocco, Nigeria, Poland, Portugal,
-             Romania, Serbia, Spain, Tunisia, Uganda, Ukraine
-         * - `HungryPanda <https://www.hungrypanda.co>`_
-           - Australia, Canada, France, Italy, Japan, New Zealand, Singapore, South Korea, United
-             Kingdom, United States
-         * - `Just Eat <https://www.just-eat.com>`_
-           - Austria, Belgium, Bulgaria, Canada, Denmark, Germany, Ireland, Israel, Italy,
-             Luxembourg, Poland, Slovakia, Spain, Switzerland, Netherlands, United Kingdom
-         * - `Keeta <https://www.keeta-global.com/AE/en>`_
-           - Bahrain, Brazil, Hong Kong (China), Kuwait, Qatar, Saudi Arabia, United Arab Emirates
-         * - `UberEats <https://www.ubereats.com>`_
-           - Argentina, Australia, Belgium, Canada, Chile, Costa Rica, Denmark, Dominican Republic,
-             Ecuador, El Salvador, Finland, France, Germany, Guatemala, Ireland, Italy, Japan,
-             Kenya, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Panama, Poland, Portugal,
-             South Africa, Spain, Sri Lanka, Sweden, Switzerland, Taiwan (ROC), United Kingdom,
-             United States
-         * - `Wolt <https://wolt.com>`_
-           - Albania, Austria, Azerbaijan, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark,
-             Estonia, Finland, Georgia, Germany, Greece, Hungary, Iceland, Israel, Japan, Kazakhstan,
-             Kosovo, Latvia, Lithuania, Luxembourg, Malta, North Macedonia, Norway, Poland, Romania,
-             Serbia, Slovakia, Slovenia, Sweden, Uzbekistan
-
-   .. tab:: Regional and national providers: Americas
-
-      .. list-table::
-         :header-rows: 1
-         :stub-columns: 1
-         :widths: 25 75
-         :class: table-striped
-
-         * - Providers
-           - Locations
-         * - `Grubhub <https://www.grubhub.com>`_
-           - United States
-         * - `Postmates <https://www.postmates.com>`_
-           - Puerto Rico, United States
-         * - `ChowNow <https://get.chownow.com>`_
-           - Canada, United States
-         * - `Rappi <https://www.rappi.com>`_
-           - Argentina, Brazil, Chile, Colombia, Costa Rica, Ecuador, Mexico, Peru, Uruguay
-         * - `SkipTheDishes <https://www.skipthedishes.com/en>`_
-           - Canada (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador,
-             Northwest Territories, Nova Scotia, Ontario, Prince Edward Island, Quebec,
-             Saskatchewan, Yukon)
-
-   .. tab:: Regional and national providers: Middle East and North Africa
-
-      .. list-table::
-         :header-rows: 1
-         :stub-columns: 1
-         :widths: 25 75
-         :class: table-striped
-
-         * - Providers
-           - Locations
-         * - `Careem <https://www.careem.com/en-AE>`_
-           - Egypt, Kuwait, Morocco, United Arab Emirates
-         * - `Cari <https://www.cariapp.com>`_
-           - Kuwait, Saudi Arabia, United Arab Emirates
-         * - `EatEasy <https://www.eateasy.ae>`_
-           - United Arab Emirates
-         * - `HungerStation <https://hungerstation.com/sa-en>`_
-           - Saudi Arabia (115+ regions)
-         * - `Jahez <https://www.jahez.net/index-en.html>`_
-           - Bahrain, Kuwait, Saudi Arabia
-         * - `Mrsool <https://mrsool.co>`_
-           - Bahrain, Egypt, Saudi Arabia
-         * - `Ninja <https://ananinja.com/sa/en>`_
-           - Bahrain, Kuwait, Qatar
-         * - `NoonFood <https://food.noon.com/uae-en>`_
-           - Saudi Arabia, United Arab Emirates
-         * - `Rafeeq <https://www.gorafeeq.com/en>`_
-           - Qatar
-         * - `Talabat <https://www.talabat.com/uae>`_
-           - Bahrain, Egypt, Iraq, Jordan, Kuwait, Oman, Qatar, Saudi Arabia, United Arab Emirates
-
-   .. tab:: Regional and national providers: Asia and Oceania
-
-      .. list-table::
-         :header-rows: 1
-         :stub-columns: 1
-         :widths: 25 75
-         :class: table-striped
-
-         * - Providers
-           - Locations
-         * - `Swiggy <https://www.swiggy.com>`_
-           - India
-         * - `Zomato <https://www.zomato.com>`_
-           - India
+.. important::
+   To connect a delivery platform that is not listed above, check the
+   `UrbanPiper integrations <https://www.urbanpiper.com/integrations>`_ page.
+   If the platform is listed there, reach out to the account manager linked to your Odoo database.
 
 .. _pos/urban_piper/configuration:
 
@@ -161,57 +102,74 @@ UrbanPiper credentials
 .. image:: urban_piper/urban-piper-api.png
    :alt: Atlas API access
 
-Point of Sale
--------------
+UrbanPiper Store
+----------------
 
-#. Enable the :guilabel:`Urban Piper` setting:
+Each point of sale is linked to a dedicated UrbanPiper store record that centralizes credentials,
+aggregators, pricing, and schedule-related settings.
 
-   #. Go to the :ref:`POS settings <pos/use/settings>`.
-   #. Scroll down to the :guilabel:`Food Delivery Connector` section.
-   #. Check the :guilabel:`Urban Piper` setting.
+#. Go to :menuselection:`Point of Sale --> Configuration --> UrbanPiper --> Stores`.
+#. Click :guilabel:`New`.
+#. On the store form:
 
-#. Set up UrbanPiper:
+   #. Enter a :guilabel:`Name`.
+   #. Select the :guilabel:`Point of Sale` that will receive online orders.
+   #. Keep the generated :guilabel:`POS Store ID` which links Odoo Store to UrbanPiper.
+   #. Select a :ref:`Preset<pos/urban_piper/Preset>`.
+   #. Set the :guilabel:`Preparation Time`.
+   #. Optionally upload an :guilabel:`Order Notification Sound` in `.mp3` format.
+   #. If the company is based in India, choose the appropriate :guilabel:`Tax Type`.
+#. Open the :guilabel:`Credentials` tab and enter your :ref:`UrbanPiper credentials
+   <pos/urban_piper/credentials>`.
+#. Open the :guilabel:`Aggregators` tab and add one line per delivery platform.
 
-   #. Fill in the :guilabel:`Username` and :guilabel:`Api Key` fields with your :ref:`UrbanPiper
-      credentials <pos/urban_piper/credentials>`.
-   #. Select the desired delivery providers in the :guilabel:`Food Delivery Platforms` field under
-      the :guilabel:`Urban Piper Location` section (i.e., Zomato, Uber Eats).
-#. Save the settings.
-#. Click the :guilabel:`+ Create Store` button. Doing so creates a new location on the UrbanPiper
-   Atlas platform.
+   - Use :guilabel:`Pricelist` to apply platform-specific pricing during menu synchronization.
+   - Disable :guilabel:`Create Customer` if Odoo should not create customer records for orders
+     received from the aggregator. In this case, Odoo will use the default customer of the
+     aggregator.
+
+#. Open the :guilabel:`Store Info` tab and confirm the :guilabel:`City`.
+#. Save, then click :guilabel:`Create Store`.
 
 .. note::
-   - The :guilabel:`Pricelist` and :guilabel:`Fiscal Position` fields are automatically selected
-     after saving.
-   - A successful store creation triggers a notification.
-   - The store creation process may take 2–3 minutes to reflect changes on the UrbanPiper Atlas
-     platform.
-   - The store is automatically named after your point of sale name.
+   - A point of sale can only be linked to one UrbanPiper store.
+   - Once the store is created, you can update it using the :guilabel:`Update Store` button.
+   - Store creation may take 2 to 3 minutes to appear in UrbanPiper Atlas.
 
 .. image:: urban_piper/create-store.png
-   :alt: Food delivery connector settings
+   :alt: UrbanPiper store configuration in Point of Sale settings
 
-Store timings
--------------
+.. _pos/urban_piper/Preset:
 
-Configure the store timings to define when the delivery services are available:
+Preset
+------
 
-#. Navigate to :menuselection:`Point of Sale --> Configuration --> Store Timings`.
-#. Add a new timing record by clicking :guilabel:`New` to add a line, or edit an existing line.
-#. Fill in the :guilabel:`Week Day`, :guilabel:`Starting Hour`, :guilabel:`Ending Hour`,
-   and :guilabel:`Point of Sale associated with this timing` columns.
+The store's :guilabel:`Preset` controls the default settings applied to incoming online orders.
+
+#. Select or create a preset dedicated to online food delivery store.
+#. Open the linked Preset by clicking the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon
+   to the right of the field.
+#. Configure the preset as needed:
+
+   - Set the :guilabel:`Pricelist` to change the product prices on the UrbanPiper menu.
+   - Set the :guilabel:`Fiscal Position`.
+   - If needed, enable :guilabel:`Manage orders by time` and configure the :guilabel:`Schedule`.
+
+.. tip::
+   Restaurant databases include an :guilabel:`Online Delivery` preset by default.
 
 Products
 --------
 
 To make products available individually,
 
-#. Go to :menuselection:`Point of Sale --> Products --> Products`.
+#. Navigate to the :guilabel:`UrbanPiper Store` and click the :icon:`fa-bars` :guilabel:`Menu` smart button.
 #. Select any product to open its product form.
 #. Go to the :guilabel:`Point of Sale` tab.
-#. Complete the :guilabel:`Urban Piper` section:
+#. Complete the :guilabel:`UrbanPiper` section:
 
-   - Fill in the :guilabel:`Available on Food Delivery` with the desired POS.
+   - Select one or more :guilabel:`UrbanPiper Stores`.
+   - Select the :guilabel:`Aggregators` where the product should be published.
    - Optionally, set up the :guilabel:`Meal Type` field and enable the :guilabel:`Is Recommended`
      and :guilabel:`Is Alcoholic` buttons.
 
@@ -220,10 +178,9 @@ To make products available individually,
 
 To make multiple products available for food delivery at once,
 
-#. Go to :menuselection:`Point of Sale --> Products --> Products`.
-#. Click the list icon (:icon:`oi-view-list`) to switch to the list view.
+#. Open the :guilabel:`product` list view.
 #. Select the products.
-#. Enter the desired POS in the :guilabel:`Available on Food Delivery` column.
+#. Enter the desired Stores in the :guilabel:`UrbanPiper Stores` column.
 
 .. image:: urban_piper/product-list.png
    :alt: Product list
@@ -233,17 +190,18 @@ To make multiple products available for food delivery at once,
    - As a workaround, create a product and define combo choices as :doc:`Attributes & Variants
      <../../sales/products_prices/products/variants>`.
 
+.. _pos/urban_piper/synchronization:
+
 Synchronization
 ---------------
 
 To make products available on food delivery platforms, synchronize with your UrbanPiper account:
 
-#. Go to the :ref:`POS settings <pos/use/settings>`.
-#. Scroll down the :guilabel:`Food Delivery Connector` section.
-#. Click the :guilabel:`Sync Menu` button.
+#. Open the UrbanPiper store.
+#. Click :guilabel:`Sync Menu`.
 
-   - The :guilabel:`Last Sync on` timestamp below the :guilabel:`Create Store` and :guilabel:`Sync
-     Menu` buttons updates.
+   - A Chatter note will appear confirming :guilabel:`Store menu successfully synced on UrbanPiper`,
+     along with the time of the menu sync.
 
 .. note::
    - A successful synchronization triggers a notification.
@@ -253,32 +211,38 @@ To make products available on food delivery platforms, synchronize with your Urb
 Go live
 -------
 
-#. `Go to the Locations tab <https://atlas.urbanpiper.com/locations>`_ of your Atlas account.
-#. Select the location to activate, then click :guilabel:`Request to go Live`.
+#. `Go to your Atlas account <https://atlas.urbanpiper.com>`_ and navigate to :menuselection:`All
+   Apps --> Settings --> Platforms`.
+#. In the :guilabel:`Integrations` tab, select the platform to activate (e.g., :guilabel:`Swiggy`).
+   The platform's :guilabel:`Request to go live` page opens, listing the status of every storefront
+   for that platform.
+#. Click :guilabel:`Create Request`.
 
    .. image:: urban_piper/go-live.png
-      :alt: Request to go live button in the locations tab of the Atlas account
+      :alt: Request to go live page of a platform in the Atlas account
 
-#. In the popup window:
+#. On the :guilabel:`Map Storefronts` page:
 
-   #. Select the platform(s) to activate and click :guilabel:`Next`.
-   #. Enter the :guilabel:`Platform ID` and :guilabel:`Platform URL` in the corresponding fields to
-      establish the connection between the platform and UrbanPiper.
-   #. Click the :guilabel:`Request to Go Live` button.
+   #. Find the storefront to activate, using the search bar if needed, and tick its checkbox.
+   #. Enter the storefront's :guilabel:`Platform ID` and :guilabel:`Restaurant URL` to establish the
+      connection between the platform and UrbanPiper.
+   #. Click :guilabel:`Publish & Activate Store`.
 
    .. image:: urban_piper/go-live-parameters.png
       :alt: Go live parameters
 
    .. note::
-      To find the location's :guilabel:`Platform ID` and :guilabel:`Platform URL`,
+      To find the storefront's :guilabel:`Platform ID` and :guilabel:`Restaurant URL`,
 
       #. Click the location to open its setup form.
       #. The location's parameters are available in the :guilabel:`HUB` tab.
-#. Verify that your location is live:
 
-   #. `Go to the Locations tab <https://atlas.urbanpiper.com/locations>`_ of your Atlas account.
-   #. Select any provider in the :guilabel:`Assoc. platform(s)` column to review the status of that
-      platform for this location.
+#. UrbanPiper verifies the associated menus, which may take a minute or two, then initiates the
+   go-live request on the selected platform.
+#. Verify that your storefront is live by going back to :menuselection:`All Apps --> Settings -->
+   Platforms`, selecting the platform, and checking the :guilabel:`Status` column of the
+   :guilabel:`Storefront Status Overview` table.
+
 
 Order flow
 ==========
