@@ -12,8 +12,7 @@ counters for upcoming and total meetings or bookings.
 
 Each appointment type has two action buttons on the right:
 
-- :guilabel:`Share`: Click this button to copy the appointment link to the clipboard, which can be
-  shared.
+- :guilabel:`Preview`: Click this button to preview the appointment website page
 - :guilabel:`Configure`: Click this to open the appointment type form to edit its settings.
 
 Published appointment types display a :guilabel:`Published` ribbon. Unpublished types do not have a
