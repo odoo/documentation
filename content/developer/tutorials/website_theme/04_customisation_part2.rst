@@ -71,7 +71,7 @@ that can be animated and customized with different colors.
 
       <!-- Text-image block & Background shape -->
       <section class="s_text_image o_cc o_cc3 o_colored_level pt120 pb96"
-      data-snippet="s_image_text" data-name="Image - Text" style="background-color: rgb(41, 128, 187);"
+      data-snippet="s_image_text" style="background-color: rgb(41, 128, 187);"
       data-oe-shape-data="{'shape': 'website_airproof/waves/01', 'colors': {'c1': '#BBE1FA'}, 'flip': ['x']}">
          <div class="o_we_shape o_website_airproof_waves_01 o_we_flip_x" style="background-image:
          url('/html_editor/shape/website_airproof%2Fwaves%2F01.svg?c1=%23BBE1FA');
@@ -193,7 +193,6 @@ that, add the gradient to the website builder so that the client can easily reus
 
          <!-- Latest products section -->
          <section data-snippet="s_dynamic_snippet_products"
-            data-name="Products"
             class="..."
             data-custom-template-data="{}"
             data-number-of-records="16"

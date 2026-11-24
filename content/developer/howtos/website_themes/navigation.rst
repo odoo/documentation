@@ -179,33 +179,33 @@ can re-use the template structure in the `mega_menu_content` field like any stat
                      <div class="col-12 col-sm py-2 text-center">
                            <h4 class="o_default_snippet_text">First Menu</h4>
                            <nav class="nav flex-column">
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 3</a>
                            </nav>
                      </div>
                      <div class="col-12 col-sm py-2 text-center">
                            <h4 class="o_default_snippet_text">Second Menu</h4>
                            <nav class="nav flex-column">
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 3</a>
                            </nav>
                      </div>
                      <div class="col-12 col-sm py-2 text-center">
                            <h4 class="o_default_snippet_text">Third Menu</h4>
                            <nav class="nav flex-column">
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 3</a>
                            </nav>
                      </div>
                      <div class="col-12 col-sm py-2 text-center">
                            <h4 class="o_default_snippet_text">Last Menu</h4>
                            <nav class="nav flex-column">
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text">Menu Item 3</a>
                            </nav>
                      </div>
                   </div>
