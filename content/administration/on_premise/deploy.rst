@@ -288,7 +288,7 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
 .. code-block:: nginx
 
   #odoo server
-  upstream odoo {
+  upstream odoo.mycompany.com {
     server 127.0.0.1:8069;
   }
   upstream odoochat {
@@ -330,7 +330,7 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
       proxy_pass http://odoochat;
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection $connection_upgrade;
-      proxy_set_header X-Forwarded-Host $http_host;
+      proxy_set_header X-Forwarded-Host $host;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header X-Forwarded-Proto $scheme;
       proxy_set_header X-Real-IP $remote_addr;
@@ -342,12 +342,12 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
     # Redirect requests to odoo backend server
     location / {
       # Add Headers for odoo proxy mode
-      proxy_set_header X-Forwarded-Host $http_host;
+      proxy_set_header X-Forwarded-Host $host;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header X-Forwarded-Proto $scheme;
       proxy_set_header X-Real-IP $remote_addr;
       proxy_redirect off;
-      proxy_pass http://odoo;
+      proxy_pass http://odoo.mycompany.com;
 
       add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
       proxy_cookie_flags session_id samesite=lax secure;  # requires nginx 1.19.8
