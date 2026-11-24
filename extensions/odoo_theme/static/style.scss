@@ -1047,15 +1047,7 @@ span:target + h4 {
         --o-alert-icon: '#{$i-info}';
         --o-alert-code-border-color: tint-color($info, 30%);
 
-        $background: shift-color($info, $alert-bg-scale);
-        $border: shift-color($info, $alert-border-scale);
-        $color: shift-color($info, $alert-color-scale);
-
-        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-            $color: mix($info, color-contrast($background), abs($alert-color-scale));
-        }
-
-        @include alert-variant($background, $border, $color);
+        @include o-alert-variant($info);
     }
 
     // Note
@@ -1079,15 +1071,7 @@ span:target + h4 {
         --o-alert-icon: '#{$i-lightbulb}';
         --o-alert-code-border-color: #{$o-gray-border};
 
-        $background: $o-gray-bg;
-        $border: shift-color($primary, $alert-border-scale);
-        $color: shift-color($primary, $alert-color-scale);
-
-        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-            $color: mix($primary, color-contrast($background), abs($alert-color-scale));
-        }
-
-        @include alert-variant($background, $border, $color);
+        @include o-alert-variant($primary, $o-gray-bg);
     }
 
     // Example
@@ -1122,15 +1106,7 @@ span:target + h4 {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    $background: $gray-200;
-    $border: shift-color($accordion-color, $alert-border-scale);
-    $color: shift-color($accordion-color, $alert-color-scale);
-
-    @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-        $color: mix($dark, color-contrast($background), abs($alert-color-scale));
-    }
-
-    @include alert-variant($background, $border, $color);
+    @include o-alert-variant($accordion-color, $gray-200);
 
     .accordion-button {
         &::after {
