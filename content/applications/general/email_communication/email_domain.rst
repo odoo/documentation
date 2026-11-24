@@ -148,5 +148,9 @@ To fully test the configuration, use the `Mail-Tester <https://www.mail-tester.c
 gives a full overview of the content and configuration in one sent email. Mail-Tester can also be
 used to configure records for other, lesser-known providers.
 
+To see where that email actually ends up, `Email Spam Tester <https://email-spam-tester.com/>`_ runs
+similar checks on one sent message and also reports whether Gmail, Yahoo and other mailbox providers
+delivered it to the inbox or to spam.
+
 .. seealso::
    `Using Mail-Tester to set SPF Records for specific carriers <https://www.mail-tester.com/spf/>`_
