@@ -1005,6 +1005,12 @@ span:target + h4 {
 .alert {
     border-width: 0 0 0 $alert-border-width;
 
+    @each $state, $color in $theme-colors {
+        &.alert-#{$state} {
+            @include o-alert-variant($color);
+        }
+    }
+
     > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
         border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
         background-color: $white !important;
