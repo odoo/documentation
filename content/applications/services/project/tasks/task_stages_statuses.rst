@@ -1,75 +1,55 @@
 ========================
-Task stages and statuses
+Étapes et statuts des tâches
 ========================
 
-Task stages
-===========
+Étapes des tâches
+=================
 
-Task stages are displayed as columns in the project's Kanban view, and allow you to update the
-progress of its tasks with a drag-and-drop. In most projects, the stages will be akin to **New**,
-**In progress**, **Backlog**, etc.
+Les étapes des tâches sont affichées sous forme de colonnes dans la vue Kanban du projet et permettent de mettre à jour l'avancement des tâches par glisser-déposer. Dans la plupart des projets, les étapes seront similaires à **Nouveau**, **En cours**, **Backlog**, etc.
 
-By default, task stages are project-specific but can be shared across multiple projects that follow
-the same workflow.
+Par défaut, les étapes des tâches sont spécifiques à un projet, mais peuvent être partagées entre plusieurs projets suivant le même flux de travail.
 
-Creating task stages
---------------------
+Création d'étapes de tâches
+---------------------------
 
-Odoo Project doesn’t provide default stages but instead allows you to create custom stages tailored
-to your specific business needs. You are prompted to do so immediately after :ref:`creating a new
-project <project_management/configuration>`.
+Odoo Projet ne fournit pas d'étapes par défaut, mais permet plutôt de créer des étapes personnalisées adaptées à vos besoins métiers spécifiques. Vous êtes invité à le faire immédiatement après la :ref:`création d'un nouveau projet <project_management/configuration>`.
 
-To create a stage, type its name into the :guilabel:`Stage...` field, then click :guilabel:`Add`.
+Pour créer une étape, saisissez son nom dans le champ :guilabel:`Étape...`, puis cliquez sur :guilabel:`Ajouter`.
 
 .. tip::
-   Click :guilabel:`See examples` to find ideas for stage names applicable to your line of business.
+   Cliquez sur :guilabel:`Voir les exemples` pour trouver des idées de noms d'étapes applicables à votre secteur d'activité.
 
-Editing task stages
--------------------
+Édition des étapes de tâches
+----------------------------
 
-To edit the task stage, click the :icon:`fa-cog` (:guilabel:`cog`) icon next to its name. From
-there, click one of the following:
+Pour modifier une étape de tâche, cliquez sur l'icône :icon:`fa-cog` (:guilabel:`rouage`) à côté de son nom. À partir de là, cliquez sur l'une des options suivantes :
 
- - :guilabel:`Fold`: to hide the task stage and all of the tasks in this stage from the Kanban view.
- - :guilabel:`Edit`:
+ - :guilabel:`Replier` : pour masquer l'étape de tâche et toutes les tâches de cette étape dans la vue Kanban.
+ - :guilabel:`Modifier` :
 
-   - :guilabel:`Name`: to change the name of the stage.
-   - :guilabel:`SMS/Email Template`: to automatically send an email or SMS notification to the
-     customer when a task reaches this stage.
-   - :guilabel:`Folded in Kanban`: to hide the task stage and all of the tasks in this stage from
-     the Kanban view.
-   - :guilabel:`Projects`: to share this task stage between several projects.
-   - :guilabel:`Automations`: to create :doc:`custom rules that trigger automatic actions
-     <../../../studio/automated_actions>` (e.g., creating activities, adding followers, or sending
-     webhook notifications). Note that this will activate Studio in your database, which may impact
-     your pricing plan.
-
- - :guilabel:`Delete`: to delete this stage.
- - :guilabel:`Archive/Unarchive all`: to archive or unarchive all of the tasks in this stage.
+   - :guilabel:`Nom` : pour changer le nom de l'étape.
+   - :guilabel:`Modèle SMS/Email` : pour envoyer automatiquement une notification par email ou SMS au client lorsqu'une tâche atteint cette étape.
+   - :guilabel:`Replié` : pour masquer l'étape de tâche et toutes les tâches de cette étape dans la vue Kanban.
+   - :guilabel:`Projets` : pour partager cette étape de tâche entre plusieurs projets.
+ 
+ - :guilabel:`Automatisations` : pour créer des :doc:`règles personnalisées déclenchant des actions automatiques <../../../studio/automated_actions>` (par exemple, créer des activités, ajouter des suiveurs ou envoyer des notifications via webhook). Notez que cela activera Studio dans votre base de données, ce qui peut avoir un impact sur votre forfait tarifaire.
+ - :guilabel:`Supprimer` : pour supprimer cette étape.
+ - :guilabel:`Archiver/Tout désarchiver` : pour archiver ou désarchiver toutes les tâches de cette étape.
 
 .. _project/tasks/task_stages_statuses/statuses:
 
-Task statuses
-=============
+Statuts des tâches
+==================
 
-Task statuses are used to track the status of tasks within the Kanban stage, as well as to close the
-task when it’s done or canceled. Unlike Kanban stages, they cannot be customized; five task statuses
-exist in Odoo and are used as follows:
+Les statuts des tâches permettent de suivre l'état des tâches au sein de l'étape Kanban, ainsi que de clore la tâche lorsqu'elle est terminée ou annulée. Contrairement aux étapes Kanban, ils ne peuvent pas être personnalisés ; cinq statuts de tâche existent dans Odoo et sont utilisés comme suit :
 
- - :guilabel:`In Progress`: this is the default state of all tasks, meaning that work required for
-   the task to move to the next Kanban stage is ongoing.
- - :guilabel:`Changes Requested`: to highlight that changes, either requested by the customer or
-   internally, are needed before the task is moved to the next Kanban stage.
- - :guilabel:`Approved`: to highlight that the task is ready to be moved to the next stage.
- - :guilabel:`Canceled`: to cancel the task.
- - :guilabel:`Done`: to close the task once it's been completed.
+ - :guilabel:`En cours` : il s'agit de l'état par défaut de toutes les tâches, indiquant que le travail nécessaire pour passer à l'étape Kanban suivante est en cours.
+ - :guilabel:`Changements demandés` : pour indiquer que des modifications, demandées par le client ou en interne, sont nécessaires avant que la tâche ne passe à l'étape Kanban suivante.
+ - :guilabel:`Approuvé` : pour indiquer que la tâche est prête à passer à l'étape suivante.
+ - :guilabel:`Annulé` : pour annuler la tâche.
+ - :guilabel:`Terminé` : pour clore la tâche une fois qu'elle est achevée.
 
 .. note::
 
-   - The :guilabel:`Changes Requested` and :guilabel:`Approved` task statuses are cleared as soon as
-     the task is moved to another Kanban stage. The task status reverts to the default :guilabel:`In
-     Progress` status so that :guilabel:`Changes Requested` or :guilabel:`Approved` status can be
-     applied again once the necessary work has been completed in this Kanban stage.
-   - The :guilabel:`Done` and :guilabel:`Canceled` statuses are independent from the Kanban stage.
-     Once a task is marked as :guilabel:`Done` or :guilabel:`Canceled`, it is closed. If needed, it
-     can be reopened by changing its status.
+   - Les statuts de tâche :guilabel:`Changements demandés` et :guilabel:`Approuvé` sont réinitialisés dès que la tâche est déplacée vers une autre étape Kanban. Le statut de la tâche revient au statut par défaut :guilabel:`En cours`, de sorte que les statuts :guilabel:`Changements demandés` ou :guilabel:`Approuvé` puissent être réappliqués une fois le travail nécessaire terminé dans cette étape Kanban.
+   - Les statuts :guilabel:`Terminé` et :guilabel:`Annulé` sont indépendants de l'étape Kanban. Une fois qu'une tâche est marquée comme :guilabel:`Terminé` ou :guilabel:`Annulé`, elle est close. Si nécessaire, elle peut être rouverte en modifiant son statut.
