@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>{{ payment.number }}</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; font-size: 13px; direction: rtl; }
+.voucher { max-width: 750px; margin: 20px auto; padding: 30px; border: 1px solid #ccc; }
+.header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 20px; }
+.header h1 { font-size: 20px; margin-bottom: 5px; }
+.header h2 { font-size: 16px; color: #555; }
+.info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.info-table td { padding: 6px 10px; border: 1px solid #ddd; }
+.info-table td:first-child { background: #f5f5f5; font-weight: bold; width: 30%; }
+.amount-box { border: 3px solid #333; border-radius: 8px; text-align: center; padding: 20px; margin: 20px 0; }
+.amount-box .label { font-size: 14px; color: #555; }
+.amount-box .value { font-size: 32px; font-weight: bold; color: #333; margin: 8px 0; }
+.description { background: #f9f9f9; border: 1px solid #ddd; padding: 12px; margin-bottom: 20px; border-radius: 4px; }
+.signatures { display: flex; justify-content: space-around; margin-top: 60px; }
+.sig-box { text-align: center; width: 160px; }
+.sig-line { border-top: 1px solid #333; padding-top: 8px; margin-top: 50px; font-size: 12px; }
+@media print { body { margin: 0; } }
+</style>
+</head>
+<body onload="window.print()">
+<div class="voucher">
+  <div class="header">
+    <h1>{{ 'سند صرف' if payment.payment_type == 'outbound' else 'سند قبض' }}</h1>
+    <h2>{{ payment.number }}</h2>
+  </div>
+  <table class="info-table">
+    <tr><td>التاريخ</td><td>{{ payment.date.strftime('%Y/%m/%d') }}</td><td>الخزينة</td><td>{{ payment.treasury.name if payment.treasury else '-' }}</td></tr>
+    <tr><td>المستفيد</td><td>{{ payment.beneficiary or '-' }}</td><td>طريقة الدفع</td><td>{{ payment.method_label }}</td></tr>
+    {% if payment.check_number %}<tr><td>رقم الشيك</td><td>{{ payment.check_number }}</td><td>تاريخ الشيك</td><td>{{ payment.check_date.strftime('%Y/%m/%d') if payment.check_date else '-' }}</td></tr>{% endif %}
+    {% if payment.reference %}<tr><td>المرجع</td><td colspan="3">{{ payment.reference }}</td></tr>{% endif %}
+  </table>
+  <div class="amount-box">
+    <div class="label">المبلغ</div>
+    <div class="value">{{ payment.amount | currency }}</div>
+  </div>
+  <div class="description"><strong>البيان: </strong>{{ payment.description }}</div>
+  {% if payment.notes %}<div class="description"><strong>ملاحظات: </strong>{{ payment.notes }}</div>{% endif %}
+  <div class="signatures">
+    <div class="sig-box"><div class="sig-line">المستلم</div></div>
+    <div class="sig-box"><div class="sig-line">أمين الخزينة<br>{% if payment.done_by %}<small>{{ payment.done_by }}</small>{% endif %}</div></div>
+    <div class="sig-box"><div class="sig-line">المراجعة</div></div>
+    <div class="sig-box"><div class="sig-line">الاعتماد<br>{% if payment.confirmed_by %}<small>{{ payment.confirmed_by }}</small>{% endif %}</div></div>
+  </div>
+</div>
+</body>
+</html>

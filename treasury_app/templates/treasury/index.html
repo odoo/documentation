@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}الخزائن - نظام إدارة الخزينة{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0"><i class="bi bi-bank me-2"></i>الخزائن</h4>
+    <a href="{{ url_for('treasury.new') }}" class="btn btn-primary">
+        <i class="bi bi-plus-circle me-1"></i>خزينة جديدة
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الكود</th>
+                        <th>النوع</th>
+                        <th>المسؤول</th>
+                        <th class="text-end">الرصيد</th>
+                        <th class="text-center">الحالة</th>
+                        <th class="text-center">إجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for treasury in treasuries %}
+                    <tr>
+                        <td>
+                            <a href="{{ url_for('treasury.show', id=treasury.id) }}" class="fw-semibold text-decoration-none">
+                                {{ treasury.name }}
+                            </a>
+                        </td>
+                        <td><code>{{ treasury.code }}</code></td>
+                        <td>
+                            {% if treasury.treasury_type == 'cash' %}
+                                <i class="bi bi-cash-coin text-success me-1"></i>نقدي
+                            {% else %}
+                                <i class="bi bi-building text-info me-1"></i>بنكي
+                            {% endif %}
+                        </td>
+                        <td>{{ treasury.responsible or '-' }}</td>
+                        <td class="text-end fw-bold
+                            {% if treasury.balance < 0 %}text-danger
+                            {% elif treasury.balance > 0 %}text-success
+                            {% else %}text-muted{% endif %}">
+                            {{ treasury.balance | currency }}
+                        </td>
+                        <td class="text-center">
+                            {% if treasury.state == 'open' %}
+                                <span class="badge bg-success"><i class="bi bi-unlock-fill me-1"></i>مفتوحة</span>
+                            {% else %}
+                                <span class="badge bg-danger"><i class="bi bi-lock-fill me-1"></i>مغلقة</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <a href="{{ url_for('treasury.show', id=treasury.id) }}" class="btn btn-sm btn-outline-primary" title="عرض">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                            <a href="{{ url_for('treasury.edit', id=treasury.id) }}" class="btn btn-sm btn-outline-secondary" title="تعديل">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="7" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-4 d-block mb-2"></i>
+                            لا توجد خزائن مسجلة بعد.
+                            <a href="{{ url_for('treasury.new') }}">أضف خزينة جديدة</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% if treasuries %}
+                <tfoot class="table-light fw-bold">
+                    <tr>
+                        <td colspan="4">الإجمالي</td>
+                        <td class="text-end
+                            {% set total = treasuries | sum(attribute='balance') %}
+                            {% if total < 0 %}text-danger{% elif total > 0 %}text-success{% endif %}">
+                            {{ treasuries | sum(attribute='balance') | currency }}
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                </tfoot>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

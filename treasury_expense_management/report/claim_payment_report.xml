@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_claim_payment" model="ir.actions.report">
+        <field name="name">سند الصرف / القبض</field>
+        <field name="model">treasury.claim.payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">treasury_expense_management.report_claim_payment_template</field>
+        <field name="report_file">treasury_expense_management.report_claim_payment_template</field>
+        <field name="binding_model_id" ref="model_treasury_claim_payment"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+    <!-- List Report Action -->
+    <record id="action_report_claim_payments_list" model="ir.actions.act_window">
+        <field name="name">تقرير السندات</field>
+        <field name="res_model">treasury.claim.payment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <template id="report_claim_payment_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page" style="direction: rtl; font-family: Arial, sans-serif;">
+
+                        <!-- Header -->
+                        <div class="row mb-4">
+                            <div class="col-12 text-center">
+                                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px;">
+                                    <t t-if="doc.payment_type == 'outbound'">سند صرف</t>
+                                    <t t-else="">سند قبض</t>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <!-- Payment Info -->
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td><strong>رقم السند:</strong></td>
+                                        <td><span t-field="doc.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>التاريخ:</strong></td>
+                                        <td><span t-field="doc.date"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>الخزينة:</strong></td>
+                                        <td><span t-field="doc.treasury_id.name"/></td>
+                                    </tr>
+                                    <tr t-if="doc.reference">
+                                        <td><strong>المرجع:</strong></td>
+                                        <td><span t-field="doc.reference"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table class="table table-sm table-borderless">
+                                    <tr t-if="doc.partner_id">
+                                        <td><strong>المورد / الجهة:</strong></td>
+                                        <td><span t-field="doc.partner_id.name"/></td>
+                                    </tr>
+                                    <tr t-if="doc.employee_id">
+                                        <td><strong>الموظف:</strong></td>
+                                        <td><span t-field="doc.employee_id.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>طريقة الدفع:</strong></td>
+                                        <td><span t-field="doc.payment_method"/></td>
+                                    </tr>
+                                    <tr t-if="doc.check_number">
+                                        <td><strong>رقم الشيك:</strong></td>
+                                        <td><span t-field="doc.check_number"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Amount Box -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div style="border: 2px solid #333; padding: 15px; text-align: center; background-color: #f9f9f9;">
+                                    <h3>المبلغ</h3>
+                                    <h1><span t-field="doc.amount"
+                                              t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/></h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <strong>البيان: </strong>
+                                <span t-field="doc.description"/>
+                            </div>
+                        </div>
+
+                        <!-- Related Claim -->
+                        <div class="row mb-3" t-if="doc.claim_id">
+                            <div class="col-12">
+                                <strong>المطالبة المرتبطة: </strong>
+                                <span t-field="doc.claim_id.name"/>
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="row mb-3" t-if="doc.notes">
+                            <div class="col-12">
+                                <strong>ملاحظات: </strong>
+                                <span t-field="doc.notes"/>
+                            </div>
+                        </div>
+
+                        <!-- Signatures -->
+                        <div class="row mt-5">
+                            <div class="col-3 text-center">
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    المستلم
+                                </div>
+                            </div>
+                            <div class="col-3 text-center">
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    أمين الخزينة
+                                </div>
+                            </div>
+                            <div class="col-3 text-center">
+                                <t t-if="doc.confirmed_by">
+                                    <span t-field="doc.confirmed_by.name"/>
+                                </t>
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    المراجعة
+                                </div>
+                            </div>
+                            <div class="col-3 text-center">
+                                <t t-if="doc.done_by">
+                                    <span t-field="doc.done_by.name"/>
+                                </t>
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    الاعتماد
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

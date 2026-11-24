@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_payment_claim" model="ir.actions.report">
+        <field name="name">مطالبة السداد</field>
+        <field name="model">treasury.payment.claim</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">treasury_expense_management.report_payment_claim_template</field>
+        <field name="report_file">treasury_expense_management.report_payment_claim_template</field>
+        <field name="binding_model_id" ref="model_treasury_payment_claim"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+    <!-- List Report Action -->
+    <record id="action_report_payment_claims_list" model="ir.actions.act_window">
+        <field name="name">تقرير المطالبات</field>
+        <field name="res_model">treasury.payment.claim</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <template id="report_payment_claim_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page" style="direction: rtl; font-family: Arial, sans-serif;">
+                        <!-- Header -->
+                        <div class="row mb-4">
+                            <div class="col-12 text-center">
+                                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px;">
+                                    <t t-if="doc.claim_type == 'vendor'">مطالبة سداد مورد</t>
+                                    <t t-else="">مطالبة مصاريف</t>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <!-- Claim Info -->
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td><strong>رقم المطالبة:</strong></td>
+                                        <td><span t-field="doc.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>التاريخ:</strong></td>
+                                        <td><span t-field="doc.date"/></td>
+                                    </tr>
+                                    <tr t-if="doc.due_date">
+                                        <td><strong>تاريخ الاستحقاق:</strong></td>
+                                        <td><span t-field="doc.due_date"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table class="table table-sm table-borderless">
+                                    <tr t-if="doc.partner_id">
+                                        <td><strong>المورد:</strong></td>
+                                        <td><span t-field="doc.partner_id.name"/></td>
+                                    </tr>
+                                    <tr t-if="doc.employee_id">
+                                        <td><strong>الموظف:</strong></td>
+                                        <td><span t-field="doc.employee_id.name"/></td>
+                                    </tr>
+                                    <tr t-if="doc.vendor_ref">
+                                        <td><strong>رقم فاتورة المورد:</strong></td>
+                                        <td><span t-field="doc.vendor_ref"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>الحالة:</strong></td>
+                                        <td><span t-field="doc.state"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <strong>البيان: </strong>
+                                <span t-field="doc.description"/>
+                            </div>
+                        </div>
+
+                        <!-- Claim Lines -->
+                        <table class="table table-bordered table-sm">
+                            <thead style="background-color: #f0f0f0;">
+                                <tr>
+                                    <th class="text-center">م</th>
+                                    <th>البيان</th>
+                                    <th>الحساب</th>
+                                    <th class="text-center">الكمية</th>
+                                    <th class="text-center">سعر الوحدة</th>
+                                    <th class="text-center">الإجمالي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="doc.line_ids" t-as="line">
+                                    <td class="text-center"><t t-esc="line_index + 1"/></td>
+                                    <td><span t-field="line.description"/></td>
+                                    <td><span t-field="line.account_id.name"/></td>
+                                    <td class="text-center"><span t-field="line.quantity"/></td>
+                                    <td class="text-center"><span t-field="line.unit_price"/></td>
+                                    <td class="text-center"><span t-field="line.subtotal"/></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" class="text-left"><strong>المجموع الفرعي:</strong></td>
+                                    <td class="text-center"><span t-field="doc.subtotal"/></td>
+                                </tr>
+                                <tr t-if="doc.tax_amount">
+                                    <td colspan="5" class="text-left"><strong>الضريبة:</strong></td>
+                                    <td class="text-center"><span t-field="doc.tax_amount"/></td>
+                                </tr>
+                                <tr style="background-color: #f0f0f0;">
+                                    <td colspan="5" class="text-left"><strong>الإجمالي:</strong></td>
+                                    <td class="text-center"><strong><span t-field="doc.total_amount"/></strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <!-- Signatures -->
+                        <div class="row mt-5">
+                            <div class="col-4 text-center">
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    مقدم الطلب
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    المراجعة
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <t t-if="doc.approved_by">
+                                    <span t-field="doc.approved_by.name"/>
+                                </t>
+                                <div style="border-top: 1px solid #333; padding-top: 5px; margin-top: 40px;">
+                                    الاعتماد
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

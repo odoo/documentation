@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}نظام إدارة الخزينة والعهدة{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="{{ url_for('dashboard') }}">
+            <i class="bi bi-safe2-fill me-2"></i>الخزينة والعهدة
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-bank"></i> الخزائن
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('treasury.index') }}">كل الخزائن</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('treasury.new') }}">خزينة جديدة</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-briefcase"></i> العهد
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('custody.index') }}">كل العهد</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('custody.new') }}">عهدة جديدة</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('custody.index', state='confirmed') }}">معتمدة</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('custody.index', state='paid') }}">مصروفة</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-file-earmark-text"></i> المطالبات
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('claims.index') }}">كل المطالبات</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('claims.new', type='vendor') }}">مطالبة مورد جديدة</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('claims.new', type='expense') }}">مطالبة مصاريف جديدة</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('claims.index', type='vendor') }}">مطالبات الموردين</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('claims.index', type='expense') }}">مطالبات المصاريف</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('claims.index', state='submitted') }}">بانتظار الاعتماد</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-receipt"></i> السندات
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('payments.index') }}">كل السندات</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('payments.new') }}">سند جديد</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('payments.index', type='outbound') }}">سندات الصرف</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('payments.index', type='inbound') }}">سندات القبض</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-bar-chart"></i> التقارير
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('reports.treasury_report') }}">تقرير الخزائن</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('reports.claims_report') }}">تقرير المطالبات</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('reports.payments_report') }}">تقرير السندات</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('reports.custodies_report') }}">تقرير العهد</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Messages -->
+<div class="container-fluid mt-2">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            <i class="bi bi-{% if category == 'success' %}check-circle{% elif category == 'danger' %}x-circle{% elif category == 'warning' %}exclamation-triangle{% else %}info-circle{% endif %}-fill me-2"></i>
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endfor %}
+    {% endwith %}
+</div>
+
+<!-- Content -->
+<div class="container-fluid py-3">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- Footer -->
+<footer class="bg-light border-top py-2 mt-4 text-center text-muted small">
+    نظام إدارة الخزينة والعهدة &copy; {{ now.year if now else 2026 }}
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

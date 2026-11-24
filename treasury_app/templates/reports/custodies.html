@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}تقرير العهد{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between mb-3">
+  <h5 class="mb-0"><i class="bi bi-briefcase me-2 text-info"></i>تقرير العهد</h5>
+  <button onclick="window.print()" class="btn btn-outline-secondary btn-sm no-print"><i class="bi bi-printer me-1"></i>طباعة</button>
+</div>
+<div class="mb-3 d-flex gap-2 no-print">
+  <a href="{{ url_for('reports.custodies_report') }}" class="btn btn-sm {{ 'btn-dark' if not state else 'btn-outline-dark' }}">الكل</a>
+  <a href="{{ url_for('reports.custodies_report', state='confirmed') }}" class="btn btn-sm {{ 'btn-primary' if state == 'confirmed' else 'btn-outline-primary' }}">معتمدة</a>
+  <a href="{{ url_for('reports.custodies_report', state='paid') }}" class="btn btn-sm {{ 'btn-warning' if state == 'paid' else 'btn-outline-warning' }}">مصروفة</a>
+  <a href="{{ url_for('reports.custodies_report', state='cleared') }}" class="btn btn-sm {{ 'btn-success' if state == 'cleared' else 'btn-outline-success' }}">مسواة</a>
+</div>
+<div class="card border-0 shadow-sm">
+  <div class="table-responsive">
+    <table class="table table-sm table-hover mb-0">
+      <thead class="table-light"><tr><th>الرقم</th><th>الموظف</th><th>القسم</th><th>التاريخ</th><th>الاستحقاق</th><th>الخزينة</th><th class="text-end">المبلغ</th><th class="text-end">المصروف</th><th class="text-end">المتبقي</th><th>الحالة</th></tr></thead>
+      <tbody>
+        {% for c in custodies %}
+        <tr><td><a href="{{ url_for('custody.show', id=c.id) }}">{{ c.number }}</a></td><td>{{ c.employee }}</td><td>{{ c.department or '-' }}</td><td>{{ c.date | ar_date }}</td><td class="{{ 'text-danger' if c.due_date and c.due_date < now.date() and c.state not in ('cleared','cancelled') else '' }}">{{ c.due_date | ar_date or '-' }}</td><td>{{ c.treasury.name if c.treasury else '-' }}</td><td class="text-end">{{ c.amount | currency }}</td><td class="text-end">{{ c.total_expenses | currency }}</td><td class="text-end {{ 'text-danger' if c.remaining < 0 else '' }}">{{ c.remaining | currency }}</td><td><span class="badge bg-{{ c.state_color }}">{{ c.state_label }}</span></td></tr>
+        {% else %}
+        <tr><td colspan="10" class="text-center text-muted py-3">لا توجد عهد</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

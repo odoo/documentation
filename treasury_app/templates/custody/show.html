@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block title %}عهدة {{ custody.number }}{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="mb-0"><i class="bi bi-briefcase me-2"></i>عهدة: {{ custody.number }}</h5>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('custody.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-right me-1"></i>عودة</a>
+        {% if custody.state == 'draft' %}
+        <a href="{{ url_for('custody.edit', id=custody.id) }}" class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil me-1"></i>تعديل</a>
+        <form method="POST" action="{{ url_for('custody.confirm', id=custody.id) }}" class="d-inline">
+            <button class="btn btn-primary btn-sm"><i class="bi bi-check-circle me-1"></i>اعتماد</button>
+        </form>
+        <form method="POST" action="{{ url_for('custody.cancel', id=custody.id) }}" class="d-inline" onsubmit="return confirm('إلغاء العهدة؟')">
+            <button class="btn btn-outline-danger btn-sm"><i class="bi bi-x-circle me-1"></i>إلغاء</button>
+        </form>
+        {% elif custody.state == 'confirmed' %}
+        <form method="POST" action="{{ url_for('custody.pay', id=custody.id) }}" class="d-inline" onsubmit="return confirm('صرف العهدة بمبلغ {{ custody.amount | currency }}؟')">
+            <button class="btn btn-success btn-sm"><i class="bi bi-cash me-1"></i>صرف العهدة</button>
+        </form>
+        <form method="POST" action="{{ url_for('custody.cancel', id=custody.id) }}" class="d-inline" onsubmit="return confirm('إلغاء؟')">
+            <button class="btn btn-outline-danger btn-sm"><i class="bi bi-x-circle me-1"></i>إلغاء</button>
+        </form>
+        {% elif custody.state == 'paid' %}
+        <form method="POST" action="{{ url_for('custody.clear', id=custody.id) }}" class="d-inline" onsubmit="return confirm('تسوية العهدة؟')">
+            <button class="btn btn-info btn-sm text-white"><i class="bi bi-check2-all me-1"></i>تسوية العهدة</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white fw-bold"><i class="bi bi-person me-2"></i>بيانات العهدة</div>
+            <div class="card-body">
+                <dl class="info-list">
+                    <dt>الحالة</dt>
+                    <dd><span class="badge bg-{{ custody.state_color }} fs-6">{{ custody.state_label }}</span></dd>
+                    <dt>الموظف</dt><dd>{{ custody.employee }}</dd>
+                    <dt>القسم</dt><dd>{{ custody.department or '-' }}</dd>
+                    <dt>الخزينة</dt><dd>{{ custody.treasury.name }}</dd>
+                    <dt>تاريخ العهدة</dt><dd>{{ custody.date | ar_date }}</dd>
+                    <dt>تاريخ الاستحقاق</dt><dd>{{ custody.due_date | ar_date if custody.due_date else '-' }}</dd>
+                    <dt>الغرض</dt><dd>{{ custody.purpose }}</dd>
+                    {% if custody.notes %}<dt>ملاحظات</dt><dd>{{ custody.notes }}</dd>{% endif %}
+                    {% if custody.state == 'cleared' %}
+                    <dt>تاريخ التسوية</dt><dd>{{ custody.clearance_date | ar_date }}</dd>
+                    {% endif %}
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white fw-bold"><i class="bi bi-calculator me-2"></i>المبالغ</div>
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <div class="text-muted small">مبلغ العهدة</div>
+                    <div class="fs-4 fw-bold text-primary">{{ custody.amount | currency }}</div>
+                </div>
+                <div class="mb-3">
+                    <div class="text-muted small">إجمالي المصروفات</div>
+                    <div class="fs-5 fw-bold text-warning">{{ custody.total_expenses | currency }}</div>
+                </div>
+                <div class="progress custody-progress mb-3">
+                    <div class="progress-bar {% if custody.total_expenses > custody.amount %}bg-danger{% else %}bg-success{% endif %}"
+                         style="width: {{ [100, (custody.total_expenses / custody.amount * 100) if custody.amount else 0] | min }}%"></div>
+                </div>
+                <div>
+                    <div class="text-muted small">{% if custody.remaining >= 0 %}المتبقي{% else %}فرق إضافي{% endif %}</div>
+                    <div class="fs-5 fw-bold {% if custody.remaining >= 0 %}text-success{% else %}text-danger{% endif %}">
+                        {{ custody.remaining | abs | currency }}
+                        {% if custody.remaining < 0 %}<small class="d-block text-danger">(تجاوز)</small>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-white fw-bold"><i class="bi bi-receipt me-2"></i>سند الصرف</div>
+            <div class="card-body">
+                {% if custody.payment_id %}
+                <a href="{{ url_for('payments.show', id=custody.payment_id) }}" class="btn btn-outline-success w-100">
+                    <i class="bi bi-receipt me-1"></i>عرض سند الصرف
+                </a>
+                {% else %}
+                <div class="text-muted text-center py-3">لا يوجد سند صرف بعد</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if custody.state == 'paid' %}
+<div class="card border-0 shadow-sm mt-3">
+    <div class="card-header bg-white fw-bold d-flex justify-content-between">
+        <span><i class="bi bi-list-ul me-2"></i>المصروفات</span>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('custody.add_expense', id=custody.id) }}" class="row g-2 mb-3 border-bottom pb-3">
+            <div class="col-md-2"><input type="date" name="date" class="form-control form-control-sm" required value="{{ now.strftime('%Y-%m-%d') if now else '' }}"></div>
+            <div class="col-md-3"><input type="text" name="description" class="form-control form-control-sm" placeholder="البيان" required></div>
+            <div class="col-md-2"><input type="text" name="account" class="form-control form-control-sm" placeholder="الحساب"></div>
+            <div class="col-md-2"><input type="number" name="amount" class="form-control form-control-sm" placeholder="المبلغ" step="0.01" min="0.01" required></div>
+            <div class="col-md-2"><input type="text" name="notes" class="form-control form-control-sm" placeholder="ملاحظات"></div>
+            <div class="col-md-1"><button type="submit" class="btn btn-primary btn-sm w-100"><i class="bi bi-plus"></i></button></div>
+        </form>
+        {% if custody.expenses %}
+        <table class="table table-sm table-hover">
+            <thead class="table-light">
+                <tr><th>التاريخ</th><th>البيان</th><th>الحساب</th><th class="text-end">المبلغ</th><th>ملاحظات</th><th></th></tr>
+            </thead>
+            <tbody>
+                {% for e in custody.expenses %}
+                <tr>
+                    <td>{{ e.date | ar_date }}</td>
+                    <td>{{ e.description }}</td>
+                    <td>{{ e.account or '-' }}</td>
+                    <td class="text-end fw-bold">{{ e.amount | currency }}</td>
+                    <td>{{ e.notes or '-' }}</td>
+                    <td>
+                        <form method="POST" action="{{ url_for('custody.delete_expense', id=custody.id, exp_id=e.id) }}" class="d-inline" onsubmit="return confirm('حذف؟')">
+                            <button class="btn btn-sm btn-outline-danger py-0"><i class="bi bi-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot class="table-light">
+                <tr><td colspan="3" class="fw-bold">الإجمالي</td><td class="text-end fw-bold">{{ custody.total_expenses | currency }}</td><td colspan="2"></td></tr>
+            </tfoot>
+        </table>
+        {% else %}
+        <div class="text-center text-muted py-3">لا توجد مصروفات بعد</div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}

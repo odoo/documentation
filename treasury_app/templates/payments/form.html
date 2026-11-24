@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}سند جديد{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h5 class="mb-0"><i class="bi bi-receipt me-2 text-success"></i>إنشاء سند صرف / قبض</h5>
+  <a href="{{ url_for('payments.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-right me-1"></i>رجوع</a>
+</div>
+{% if claim %}
+<div class="alert alert-info"><i class="bi bi-info-circle me-2"></i>سند مرتبط بالمطالبة: <strong>{{ claim.number }}</strong> — {{ claim.type_label }} — المتبقي: <strong>{{ claim.residual | currency }}</strong></div>
+{% endif %}
+<div class="card border-0 shadow-sm">
+  <div class="card-body">
+    <form method="POST">
+      {% if claim %}<input type="hidden" name="claim_id" value="{{ claim.id }}">{% endif %}
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">نوع السند *</label>
+          <div class="d-flex gap-3 mt-1">
+            <div class="form-check"><input class="form-check-input" type="radio" name="payment_type" value="outbound" id="r_out" {{ 'checked' if not claim or True else '' }}><label class="form-check-label text-danger fw-semibold" for="r_out">سند صرف</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="payment_type" value="inbound" id="r_in"><label class="form-check-label text-success fw-semibold" for="r_in">سند قبض</label></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">التاريخ *</label>
+          <input type="date" name="date" class="form-control" value="{{ today }}" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">الخزينة *</label>
+          <select name="treasury_id" class="form-select" required>
+            <option value="">-- اختر الخزينة --</option>
+            {% for t in treasuries %}<option value="{{ t.id }}">{{ t.name }} ({{ t.balance | currency(t.currency) }})</option>{% endfor %}
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">المستفيد / الجهة</label>
+          <input type="text" name="beneficiary" class="form-control" value="{{ claim.vendor or claim.employee if claim else '' }}">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">المبلغ *</label>
+          <input type="number" name="amount" class="form-control" value="{{ claim.residual if claim else '' }}" min="0.01" step="0.01" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">البيان *</label>
+          <textarea name="description" class="form-control" rows="2" required>{{ claim.description if claim else '' }}</textarea>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">طريقة الدفع</label>
+          <select name="payment_method" id="payment_method" class="form-select" onchange="togglePaymentFields()">
+            <option value="cash">نقدي</option>
+            <option value="check">شيك</option>
+            <option value="transfer">تحويل بنكي</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">المرجع</label>
+          <input type="text" name="reference" class="form-control">
+        </div>
+        <div id="check-fields" class="col-md-8 d-none">
+          <div class="row g-2">
+            <div class="col-6"><label class="form-label">رقم الشيك</label><input type="text" name="check_number" class="form-control"></div>
+            <div class="col-6"><label class="form-label">تاريخ الشيك</label><input type="date" name="check_date" class="form-control"></div>
+          </div>
+        </div>
+        <div id="transfer-fields" class="col-md-4 d-none">
+          <label class="form-label">رقم التحويل</label>
+          <input type="text" name="transfer_ref" class="form-control">
+        </div>
+        <div class="col-12">
+          <label class="form-label">ملاحظات</label>
+          <textarea name="notes" class="form-control" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="mt-3 d-flex gap-2">
+        <button type="submit" class="btn btn-success"><i class="bi bi-save me-1"></i>حفظ السند</button>
+        <a href="{{ url_for('payments.index') }}" class="btn btn-outline-secondary">إلغاء</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const today = new Date().toISOString().split('T')[0];
+document.querySelector('[name="date"]').value = today;
+</script>
+{% endblock %}
