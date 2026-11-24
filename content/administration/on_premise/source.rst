@@ -1,4 +1,4 @@
-==============
+.==============
 Source install
 ==============
 
@@ -118,7 +118,7 @@ Prepare
 Python
 ~~~~~~
 
-Odoo requires **Python 3.10** or later to run.
+Odoo requires **Python 3.10.12** or later to run.
 
 .. versionchanged:: 17
     Minimum requirement updated from Python 3.7 to Python 3.10.
