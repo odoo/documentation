@@ -10,10 +10,15 @@ electronic signatures in Germany.
 Legal framework for electronic signatures in Germany
 ====================================================
 
-In Germany, electronic signatures are regulated under `eIDAS Regulation No. 910/2014
-<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG>`_ and
-the `Trust Services Act <https://www.gesetze-im-internet.de/vdg/BJNR274510017.html>`_. The law
-establishes the legal basis for acknowledging electronic records, contracts, and digital signatures.
+In Germany, electronic signatures are regulated under the
+`EU eIDAS Regulation 910/2014, as amended by eIDAS 2.0 (Regulation (EU) 2024/1183) <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910>`_,
+the `Vertrauensdienstegesetz (VDG 2017) <https://www.gesetze-im-internet.de/vdg/>`_, and the
+`BGB §§ 126-126b (Schriftform) <https://www.gesetze-im-internet.de/bgb/__126.html>`_.
+
+The EU eIDAS framework, together with national trust-services legislation, governs electronic
+signatures and certification requirements. Certain categories of documents are subject to strict
+statutory written-form rules and may require a qualified electronic signature.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -71,4 +76,4 @@ not be suitable or legally recognized in Germany:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

@@ -11,9 +11,15 @@ Legal framework for electronic signatures in Algeria
 ====================================================
 
 In Algeria, electronic signatures are regulated under the `Civil Code
-<https://www.wipo.int/wipolex/en/legislation/details/14774>`_ and the Law 15 04 of Electronic
-Signature. The law establishes the legal basis for acknowledging electronic records, contracts, and
-digital signatures. The key points of the law include:
+<https://www.wipo.int/wipolex/en/legislation/details/14774>`_ the `Law 15 04 of Electronic
+Signature <https://www.joradp.dz/FTP/jo-francais/2015/F2015006.pdf>`_ and the
+`Decree 16-142/2016 on conservation of electronically signed documents <https://www.joradp.dz/FTP/jo-francais/2016/F2016030.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures. Oversight
+is carried out by Autorité Nationale de Certification Electronique (ANCE), under the Prime
+Minister's Office.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +76,4 @@ not be suitable or legally recognized in Algeria:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

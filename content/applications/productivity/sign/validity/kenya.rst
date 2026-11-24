@@ -10,9 +10,15 @@ electronic signatures in Kenya.
 Legal framework for electronic signatures in Kenya
 ==================================================
 
-In Kenya, electronic signatures are regulated under the `Information and Communications Act <https://kenyalaw.org/kl/fileadmin/pdfdownloads/Acts/KenyaInformationandCommunicationsAct(No2of1998).pdf>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In Kenya, electronic signatures are regulated under the
+`Kenya Information and Communications Act
+<https://kenyalaw.org/kl/fileadmin/pdfdownloads/Acts/KenyaInformationandCommunicationsAct_Cap411A.pdf>`_
+and the `Business Laws (Amendment) Act 2020
+<https://kenyalaw.org/kl/fileadmin/pdfdownloads/Acts/2020/BusinessLaws_AmendmentAct_No.1of2020.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +75,4 @@ not be suitable or legally recognized in Kenya:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

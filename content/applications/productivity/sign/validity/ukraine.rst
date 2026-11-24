@@ -10,9 +10,12 @@ electronic signatures in Ukraine.
 Legal framework for electronic signatures in Ukraine
 ====================================================
 
-In Ukraine, electronic signatures are regulated under the Law of Ukraine No. 852-IV "On Electronic
-Digital Signature. The law establishes the legal basis for acknowledging electronic records,
-contracts, and digital signatures. The key points of the law include:
+In Ukraine, electronic signatures are regulated under the
+`Law No. 2155-VIII on Electronic Trust Services <https://zakon.rada.gov.ua/laws/show/2155-19>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +72,4 @@ not be suitable or legally recognized in Ukraine:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

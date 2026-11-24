@@ -10,14 +10,15 @@ electronic signatures in the United Kingdom.
 Legal framework for electronic signatures in the United Kingdom
 ===============================================================
 
-In the United Kingdom, electronic signatures are regulated under Electronic Communications Act
-(ECA), and the `UK version <https://ico.org.uk/for-organisations/guide-to-eidas/>`_ of Regulation
-(EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic
-identification and trust services for electronic transactions in the internal market (eIDAS) as
-amended by the `Electronic Identification and Trust Services for Electronic Transactions
-<https://www.legislation.gov.uk/uksi/2019/89/made>`_ (Amendment) (EU Exit) Regulations 2019 (SI
-2019/89) (the “UK eIDAS Regulation”). The law provides the foundation for the use and legal
-recognition of electronic signatures. The key points of the law include:
+In the United Kingdom, electronic signatures are regulated under the
+`Electronic Communications Act 2000 <https://www.legislation.gov.uk/ukpga/2000/7/contents>`_ and the
+`UK eIDAS (retained Regulation 910/2014) <https://www.legislation.gov.uk/eur/2014/910/contents>`_.
+
+The EU eIDAS framework, together with national trust-services legislation, governs electronic
+signatures and certification requirements. UK law retains the EU eIDAS tier structure (simple,
+advanced, and qualified electronic signatures) for domestic use.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -76,4 +77,4 @@ not be suitable or legally recognized in the United Kingdom:
    cases meet all legal requirements. Compliance with additional industry-specific regulations may
    also be necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*

@@ -10,9 +10,15 @@ electronic signatures in Angola.
 Legal framework for electronic signatures in Angola
 ===================================================
 
-In Angola, electronic signatures are regulated under the Presidential Decree 312/2018 and Executive
-Order 74/2019. The law establishes the legal basis for acknowledging electronic records, contracts,
-and digital signatures. The key points of the law include:
+In Angola, electronic signatures are regulated under the
+`Law No. 23/11 of 20 June 2011 on Electronic Communications and Information Society Services <http://www.mtti.gov.ao/>`_
+and the `Presidential Decree No. 202/11 of 22 July 2011 (IT and Information Society Regulation) <http://www.mtti.gov.ao/>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+This framework is relatively recent and case law is still developing.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -72,4 +78,4 @@ not be suitable or legally recognized in Angola:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

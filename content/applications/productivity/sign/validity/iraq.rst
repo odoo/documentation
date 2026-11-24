@@ -10,10 +10,14 @@ electronic signatures in Iraq.
 Legal framework for electronic signatures in Iraq
 =================================================
 
-In Iraq, electronic signatures are regulated under the `Electronic Signature and Electronic
-transactions Law No. 78 Of 2012 <https://www.itu.int/en/ITU-T/Workshops-and-Seminars/bsg/201712/Documents/2.Halah%20Al-Rubaye.pdf>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In Iraq, electronic signatures are regulated under the
+`Electronic Signature and Electronic Transactions Law No. 78/2012 <https://www.investpromo.gov.iq/>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+This framework is relatively recent and case law is still developing.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -73,4 +77,4 @@ not be suitable or legally recognized in Iraq:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

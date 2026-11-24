@@ -10,8 +10,12 @@ electronic signatures in Oman.
 Legal framework for electronic signatures in Oman
 =================================================
 
-In Oman, electronic signatures are regulated under the Electronic Transactions Law. The law
-establishes the legal basis for acknowledging electronic records, contracts, and digital signatures.
+In Oman, electronic signatures are regulated under the
+`Electronic Transactions Law Royal Decree No. 69/2008
+<https://www.tra.gov.om/uploads/MOCI%20Law%2069%202008.pdf>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
 The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
@@ -69,4 +73,4 @@ not be suitable or legally recognized in Oman:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
