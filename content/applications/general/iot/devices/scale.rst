@@ -11,7 +11,7 @@ To connect a scale to the IoT system, use a USB cable. In some cases, you may ne
 adapter to complete the connection. If the scale is `compatible with an IoT system
 <https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is
 automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box
-or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`.
+or :ref:`restart Windows virtual IoT <iot/windows_iot/restart>`.
 
 .. note::
    If the scale still does not function, it might not be `compatible with the Odoo IoT
@@ -55,5 +55,5 @@ Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow th
 
 #. Press **>0<**.
 #. Press **>0<** again to :guilabel:`SAVE`; the scale restarts.
-#. Reboot the :doc:`IoT box <../iot_box>` or :ref:`restart the Windows virtual IoT service
+#. Reboot the :doc:`IoT box <../iot_box>` or :ref:`restart Windows virtual IoT
    <iot/windows_iot/restart>`. The scale should then appear as `Toledo 8217`.

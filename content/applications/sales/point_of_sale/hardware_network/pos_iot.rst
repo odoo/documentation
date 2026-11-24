@@ -21,7 +21,7 @@ To set up an IoT connection between the physical devices and the point of sale, 
 
 #. Download the Odoo IoT app.
 #. Set up the :ref:`Odoo IoT Box <iot/iot_box/network>` or :ref:`Windows virtual IoT
-   <iot/windows-iot/installation>`.
+   <iot/windows_iot/installation>`.
 #. Connect the desired device(s) to the IoT gateway:
 
    - :ref:`Belgian blackbox <belgium/fdm>`

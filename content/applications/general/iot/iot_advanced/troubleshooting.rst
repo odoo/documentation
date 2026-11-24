@@ -15,8 +15,8 @@ following circumstances:
 - The IoT system is already connected to an Odoo database. :ref:`Disconnect it from the database
   <iot/connect/disconnect>`.
 - The :ref:`pairing code <iot/connect/pairing-code>` display time has expired. Restart the :ref:`IoT
-  box <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT service <iot/windows_iot/restart>` to
-  generate and display the pairing code.
+  box <iot/iot-box/homepage>` or :ref:`Windows virtual IoT <iot/windows_iot/restart>` to generate
+  and display the pairing code.
 
 The IoT system does not connect to the database
 -----------------------------------------------
@@ -26,7 +26,7 @@ not appear after a few minutes:
 
 - Verify that the IoT system can reach the database and the server does not use a multi-database
   environment.
-- Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT service
+- Restart the :ref:`IoT box <iot/iot-box/homepage>` or :ref:`Windows virtual IoT
   <iot/windows_iot/restart>`.
 
 The IoT system is connected to the Odoo database but cannot be reached
@@ -35,21 +35,15 @@ The IoT system is connected to the Odoo database but cannot be reached
 Verify that the IoT system and the computer running the Odoo database are connected to the same
 network and :ref:`update the DNS settings <iot/troubleshooting/dns>` if necessary.
 
-The Windows virtual IoT's homepage cannot be accessed from another device
--------------------------------------------------------------------------
-
-- Ensure the device is connected to the same network as the Windows virtual IoT.
-- Check the :ref:`iot/windows-iot/firewall`.
-
 The IoT system does not work after an Odoo upgrade
 --------------------------------------------------
 
-Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT service
+Restart the :ref:`IoT box <iot/iot-box/homepage>` or :ref:`Windows virtual IoT
 <iot/windows_iot/restart>`.
 
 If the issue persists, :ref:`update its image <iot/updating_iot/image-code>` by flashing the IoT
 box's card or :ref:`uninstalling the Windows virtual IoT program <iot/windows_iot/uninstall>` and
-:ref:`reinstalling the virtual IoT package <iot/windows-iot/installation>`.
+:ref:`reinstalling the virtual IoT package <iot/windows_iot/installation>`.
 
 .. _iot/troubleshooting/dns:
 
@@ -116,7 +110,7 @@ Missing credentials
 The contract and/or database :abbr:`UUID (Universal Unique Identifier)` is missing from the IoT.
 
 Verify that both values are correctly configured. To update them, :ref:`access the IoT box's
-<iot/iot-box/homepage>` or :ref:`Windows virtual IoT's homepage <iot/windows-iot/homepage>`,
+<iot/iot-box/homepage>` or :ref:`Windows virtual IoT's homepage <iot/windows_iot/homepage>`,
 click the :icon:`fa-cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credentials`.
 
 .. note::
@@ -124,7 +118,7 @@ click the :icon:`fa-cogs` (:guilabel:`cogs`) button, then click :guilabel:`Crede
      the developer mode <developer-mode>`, click the IoT system's card in the IoT app, and click
      :guilabel:`Download logs` on the :ref:`IoT system's form <iot/connect/IoT-form>`.
      To define the log levels recorded in the IoT system's log file, :ref:`access the IoT box's
-     <iot/windows-iot/homepage>` or :ref:`Windows virtual IoT's <iot/iot-box/homepage>` homepage,
+     <iot/windows_iot/homepage>` or :ref:`Windows virtual IoT's <iot/iot-box/homepage>` homepage,
      click the :icon:`fa-cogs` (:guilabel:`cogs`) button, then :guilabel:`Log level` at the
      bottom of the page.
    - To address network-related issues, contact your system or network administrator; these issues

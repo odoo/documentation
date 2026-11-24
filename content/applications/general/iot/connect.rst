@@ -46,7 +46,7 @@ Connection using a pairing code
 
 .. note::
    - The pairing code is valid for up to 2 hours after the IoT gateway powers on. If the code is no
-     longer valid, restart the IoT Box or :ref:`restart the Windows virtual IoT service
+     longer valid, restart the IoT Box or :ref:`restart Windows virtual IoT
      <iot/windows_iot/restart>` to display another pairing code. Alternatively, connect the IoT
      gateway to the database using a :ref:`connection token <iot/connect/token>`.
    - The pairing code is not displayed if the IoT gateway is already connected to a database (e.g.,
@@ -91,7 +91,7 @@ Connection using a connection token
 #. In the :guilabel:`Searching for an IoT Box` popup that opens, click :guilabel:`Offline pairing`.
 #. In the :guilabel:`Pair an IoT Box offline` popup that opens, copy the :guilabel:`Token`.
 #. Access the :ref:`IoT Box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's
-   <iot/windows-iot/homepage>` homepage.
+   <iot/windows_iot/homepage>` homepage.
 #. In the :icon:`fa-link` :guilabel:`Odoo database connected` section, click :guilabel:`Configure`.
 #. Paste the token into the :guilabel:`Server Token` field and click :guilabel:`Connect`.
 
@@ -117,7 +117,7 @@ IoT gateway form
 
 Click the card to open the IoT gateway's form, which lists the :doc:`devices <devices>` connected
 to the IoT gateway and provides access to the :ref:`IoT Box's <iot/iot-box/homepage>` or
-:ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage.
+:ref:`Windows virtual IoT's <iot/windows_iot/homepage>` homepage.
 
 .. tip::
    - Enable the :ref:`developer mode <developer-mode>` to access the IoT gateway's
@@ -142,7 +142,7 @@ To disconnect the IoT gateway from a database, follow these steps:
    Alternatively:
 
    #. Access the :ref:`IoT Box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's
-      <iot/windows-iot/homepage>` homepage.
+      <iot/windows_iot/homepage>` homepage.
    #. Click :guilabel:`Configure` in the :icon:`fa-link` :guilabel:`Odoo database connected`
       section.
    #. Click :guilabel:`Disconnect` in the popup that opens.

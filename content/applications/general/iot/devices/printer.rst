@@ -175,7 +175,7 @@ follows:
 
       #. `Add or install the printer in Windows.
          <https://support.microsoft.com/en-us/windows/hardware/printer/add-or-install-a-printer-in-windows>`_
-      #. Restart the :ref:`Windows virtual IoT service <iot/windows_iot/restart>`.
+      #. Restart :ref:`Windows virtual IoT <iot/windows_iot/restart>`.
 
       .. seealso::
          `Fix printer connection and printing problems in Windows

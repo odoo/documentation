@@ -49,9 +49,10 @@ First, enable the Worldline or the Axepta BNP Paribas payment terminal in the :r
 
 The terminal is now active and displays the **Read card** screen.
 
-.. important::
-   The `9050` port must be added as a :ref:`Windows Firewall exception <iot/windows-iot/firewall>`
-   for the :doc:`Windows virtual IoT </applications/general/iot>`.
+.. note::
+   To connect the terminal to :doc:`Windows virtual IoT </applications/general/iot/windows_iot>` on
+   a Windows computer with a third-party firewall, ensure the third-party firewall allows incoming
+   TCP connections on port `9050`.
 
 .. tip::
    To check the terminal's connection status, open the IoT app and click the :ref:`IoT system's
@@ -82,4 +83,4 @@ To connect the Worldline terminal with Odoo Point of Sale, follow these steps:
    - If a setup uses separate cashier and customer payment terminals, :ref:`configure
      <pos/worldline/configuration>` the cashier terminal first.
    - To prevent connection loss, set a fixed IP address on the IoT Box’s router or :ref:`restart
-     the virtual IoT server <iot/windows_iot/restart>`.
+     Windows virtual IoT <iot/windows_iot/restart>`.

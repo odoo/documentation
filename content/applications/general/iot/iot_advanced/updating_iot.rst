@@ -41,4 +41,4 @@ the Windows virtual IoT package.
    .. group-tab:: Windows virtual IoT
 
       :ref:`Uninstall the program <iot/windows_iot/uninstall>` and
-      :ref:`reinstall <iot/windows-iot/installation>` the latest package.
+      :ref:`reinstall <iot/windows_iot/installation>` the latest package.
