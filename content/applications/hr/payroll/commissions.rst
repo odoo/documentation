@@ -14,8 +14,8 @@ employee. In Odoo, a commission payslip is referred to as a *warrant payslip*.
 Create warrant payslips
 =======================
 
-Warrant payslips are generated directly from the :guilabel:`Payslips Batches` dashboard, which is
-accessed by navigating to :menuselection:`Payroll app --> Payslips --> Batches`.
+Warrant payslips are generated directly from the :guilabel:`Pay runs` dashboard, which is accessed
+by navigating to :menuselection:`Payroll app --> Payslips --> Pay Runs`.
 
 First, click the :guilabel:`Generate Warrant Payslips` button in the top-left corner. Doing so
 reveals a :guilabel:`Generate Warrant Payslips` pop-up window, in which the necessary information
