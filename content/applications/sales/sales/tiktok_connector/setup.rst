@@ -47,16 +47,15 @@ integration, log in to the *TikTok Shop Partner Center*, navigate to :menuselect
 on the sidebar. Click :guilabel:`Manage` next to the app name.
 Choose :guilabel:`Custom` as the :guilabel:`App & service type`. Select :guilabel:`eCommerce
 Management / Connectors` as the :guilabel:`Service category`. Enter the name of the app and market.
-Ensure :guilabel:`Enable API` is ON. Enter the redirect URL as `https://<your database url>.odoo.co
-m/tiktok/return_from_authorization`.
+Ensure :guilabel:`Enable API` is ON. Enter the redirect URL as `https://<your database url>.odoo.com/tiktok/return_from_authorization`.
 
 .. image:: setup/tiktok-shop-partner-center-app-information.png
    :alt: App and service type configuration settings in TikTok Shop.
 
-Go to :guilabel:`Manage API` in the created app.
+Go to :guilabel:`Manage Scope` in the created app.
 
-.. image:: setup/tiktok-shop-partner-center-manage-api.png
-   :alt: Manage API button under the basic information section.
+.. image:: setup/tiktok-shop-partner-center-manage-scope.png
+   :alt: Manage Scope button under the basic information section.
 
 Make sure to enable these services:
 
