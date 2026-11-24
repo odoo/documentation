@@ -598,8 +598,11 @@ main.container-fluid {
 .toctree-wrapper {
     %toctree-custom-link {
         > a:not([href="#"]){
-            --o-link-color: #{$o-gray-color};
-            --o-link-hover-color: #{$primary};
+            --#{$prefix}link-color-rgb: #{to-rgb($o-gray-color)};
+
+            &:hover {
+                --#{$prefix}link-color-rgb: #{to-rgb($primary)};
+            }
 
             &:after {
                 content: ' #{$i-link}';
