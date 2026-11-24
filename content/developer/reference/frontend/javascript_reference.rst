@@ -1391,19 +1391,13 @@ Many2many Tags (`many2many_tags`)
 
             <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" />
 
-    - `no_edit_color`: set to `true` to remove the possibility to change the color of the tags
-      (default: `false`).
+    - `on_tag_click`: defines the behavior when a tag is clicked: `edit_color` to open the color picker
+      if color_field is filled or `open_form` to open the related form view
+      (default: `do_nothing`).
 
         .. code-block:: xml
 
-            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_edit_color': true}" />
-
-    - `edit_tags`: set to `true` to add the possibility to update tag related record by clicking on the tags.
-      (default: `false`).
-
-        .. code-block:: xml
-
-            <field name="category_id" widget="many2many_tags" options="{'edit_tags': true}" />
+            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'on_tag_click': 'edit_color'}" />
 
     - `tag_limit`: Number of tags to display. Set to 0 to always display all tags.
       (default: `8`).
