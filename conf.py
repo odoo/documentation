@@ -315,6 +315,7 @@ languages_names = {
     'pl': 'PL',
     'pt_BR': 'PT',
     'ro': 'RO',
+    'sl': 'SL',
     'sv': 'SV',
     'th': 'TH',
     'uk': 'UA',
