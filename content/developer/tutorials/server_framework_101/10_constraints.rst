@@ -40,8 +40,8 @@ Simple example:
 .. code-block:: python
 
     _check_percentage = models.Constraint(
-        'CHECK(percentage >= 0 AND percentage <= 100)',
-        'The percentage of an analytic distribution should be between 0 and 100.',
+        'CHECK(percentage >= 0 AND percentage <= 1)',
+        'The percentage of an analytic distribution should be between 0 and 100%.',
     )
 
 .. exercise:: Add SQL constraints.
