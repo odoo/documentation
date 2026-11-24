@@ -5,7 +5,7 @@ Work approvals and overtime
 Odoo's **Attendances** app requires management oversight in order to ensure all logged attendances
 are correct, especially overtime hours and incomplete shifts.
 
-.. _attendances/dashboard:
+.. _attendances/management/dashboard:
 
 Management dashboard
 ====================
@@ -30,50 +30,56 @@ Each attendance record displays the following information:
 .. image:: management/management-dashboard.png
    :alt: The Attendances app Management dashboard, displaying entries needing approval.
 
-.. _attendances/approve-refuse:
+.. _attendances/management/approve-refuse:
 
 Approvals and refusals
 ======================
 
 Attendance records can be approved and refused directly from the :ref:`Management dashboard
-<attendances/dashboard>`. At the far-right of each record, :icon:`fa-check` :guilabel:`Approve` and
-:icon:`fa-times` :guilabel:`Refuse` buttons appear. Click the corresponding button to either approve
-or refuse the logged attendance record.
+<attendances/management/approve-dashboard>`, or on the :ref:`individual attendance record
+<attendances/management/approve-individual>`.
+
+.. _attendances/management/approve-dashboard:
+
+From the dashboard
+------------------
+
+On the :ref:`Management dashbaord <attendances/management/dashboard>`, :icon:`fa-check`
+:guilabel:`Approve` and :icon:`fa-times` :guilabel:`Refuse` buttons appear at the end of each
+attendane record.
+
+Click the corresponding button to either approve or refuse the attendance record.
 
 .. note::
-   When approving or refusing attendance records from the :guilabel:`Management` dashboard, it is
-   **not** possible to view the details of the attendance record.
+   When approving or refusing attendance records from the *Management* dashboard, it is **not**
+   possible to view the details of the attendance record.
 
-Partial approvals
------------------
+.. _attendances/management/approve-individual:
 
-It is possible to approve a portion of the logged :guilabel:`Extra Hours` and not the full amount.
-To approve only a portion of overtime, click into an attendance record to view the details.
+From the individual record
+--------------------------
+
+To approve individual attendance records, click the record on the :ref:`Management dashbaord
+<attendances/management/dashboard>` and the detailed attendance log loads.
 
 The top half of the record displays the specific check in and check out details, including the
-method used. The :guilabel:`Check In` and :guilabel:`Check Out` information in the top half of the
-form can be modified, if needed. Click into the desired field, and make any needed changes.
+method used. The bottom half of the form contains the *Overtime Details* tab. This tab lists the
+overtime rules used to calculate the extra hours, along with the pay rate and status.
 
-The bottom half of the form contains the *Overtime Details* tab. This tab lists the overtime rules
-used to calculate the extra hours, along with the pay rate and status. The extra hours listed in
-this tab can be modified, allowing for partial overtime approval.
+Click the :icon:`fa-check` :guilabel:`(Approve)` icon at the end of the :guilabel:`Validated Extra
+Hours` field in the top-half of the form, or click :icon:`fa-check` :guilabel:`Approve` in the
+*Overtime Details* tab.
 
-Click into the :guilabel:`Extra Hours (encoded)` field of the line being modified. Enter the amount
-of hours being approved in an `HH:MM` format, then click :icon:`fa-check` :guilabel:`Approve` at the
-end of the line.
+ After approving the record, the status changes to :guilabel:`Approved`'
 
-.. image:: management/record.png
-   :alt: A detailed attendance record.
-
-After editing and approving the :guilabel:`Extra Hours (encoded)` field, the status changes to
-:guilabel:`Approved`, and the :guilabel:`Extra Hours` field in the top half of the form updates to
-display the approved overtime.
+.. image:: management/individual.png
+   :alt: An individual attendance record where overtime cna be approved or refused.
 
 .. important::
-   Once partial overtime is approved, it is still possible to deny overtime by clicking the
-   :icon:`fa-times` icon next to the :guilabel:`Extra Hours` field in the top half of the form, or
-   clicking :icon:`fa-times` :guilabel:`Refuse` at the end of the overtime entry in the *Overtime
-   Details* tab.
+   Once overtime is approved, it is still possible to deny overtime by clicking the :icon:`fa-times`
+   icon next to the :guilabel:`Validated Extra Hours` field in the top half of the form, or clicking
+   :icon:`fa-times` :guilabel:`Refuse` at the end of the overtime entry in the *Overtime Details*
+   tab.
 
 .. note::
    Occasionally, verifying an employee's location when checking-in may be needed. The method the
@@ -99,17 +105,15 @@ Some companies allow for the conversion of overtime into time off. To convert al
 overtime into time off, navigate to :menuselection:`Attendances app --> Management`. Click on the
 desired attendance record to view the specific attendance details.
 
-In the *Overtime Details* tab, adjust the amount of overtime being converted to time off in the
-:guilabel:`Extra Hours (encoded)` field, if necessary. Next, click the checkbox in the
-:guilabel:`Compensable as Time Off` column, indicating the overtime should be converted to time off.
-Click :icon:`fa-check` :guilabel:`Approve` at the end of the line, and the status changes to
-:guilabel:`Approved`, and the :guilabel:`Extra Hours` field in the top half of the form updates to
-reflect the approved overtime.
+In the *Overtime Details* tab, click the checkbox in the :guilabel:`Compensable as Time Off` column,
+indicating the overtime should be converted to time off. Click :icon:`fa-check` :guilabel:`Approve`
+at the end of the line, and the status changes to :guilabel:`Approved`, and the :guilabel:`Extra
+Hours` field in the top half of the form updates to reflect the approved overtime.
 
 .. image:: management/convert-time-off.png
    :alt: An attendance record with 2 ours of overtime converted to time off.
 
-.. _attendances/create-records:
+.. _attendances/management/create-records:
 
 Create attendance records
 =========================
@@ -131,8 +135,9 @@ window. Enter the following information on the form, then click :guilabel:`Save 
   :guilabel:`Apply`. By default, the following date is selected, and the time is set to `12:00:AM`.
 - :guilabel:`Worked Time`: This field is automatically populated with the difference from the
   selected :guilabel:`Check In` and :guilabel:`Check Out` times. This field **cannot** be modified.
-- :guilabel:`Extra Hours`: This field is *not* modifiable as overtime must be :ref:`approved
-  <attendances/approve-refuse>`. This field displays zero (`00:00`) by default.
+- :guilabel:`Validated Extra Hours`: This field is *not* modifiable as overtime must be
+  :ref:`approved <attendances/management/approve-refuse>`. This field displays zero (`00:00`) by
+  default.
 
 .. image:: management/new-record.png
    :alt: An Attendances app record form, filled out for Mike Smith for January 27, 2026.
