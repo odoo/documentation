@@ -1,3 +1,5 @@
+.. _quote-calculator: https://youtu.be/W_0-gUc87WI?si=GMIuIMXP9-lOPtob
+
 .. meta::
    :description: This page describes creating and configuring reusable quotation templates in Odoo
                  **Sales**, applying a template when generating a new quotation, and mass cancelling
@@ -53,7 +55,9 @@ corner. Doing so reveals a blank quotation template form that can be customized.
 .. image:: quote_template/blank-quotation-form.png
    :alt: Create a new quotation template on Odoo Sales.
 
-Start by entering a name for the template in the :guilabel:`Quotation Template` field.
+Start by entering a name for the template in the :guilabel:`Quotation Template` field. If needed,
+create or select an existing spreadsheet to do complex calculations for the template in the
+:guilabel:`Quote calculator` field.
 
 Then, in the :guilabel:`Quotation Validity` field, designate how many days the quotation template
 will remain valid for, or leave the field on the default `0` to keep the template valid
@@ -228,3 +232,4 @@ appears. To complete the cancellation, click the :guilabel:`Cancel` button.
 .. seealso::
    - :doc:`get_signature_to_validate`
    - :doc:`get_paid_to_validate`
+   - `Tutorial: Quote Calculator Basics <quote-calculator_>`_
