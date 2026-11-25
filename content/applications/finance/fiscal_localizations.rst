@@ -86,7 +86,7 @@ Fiscal localization modules are available for the countries listed below.
 - Gabon
 - :doc:`Germany <fiscal_localizations/germany>`
 - Guinea
-- Greece
+- :doc:`Greece <fiscal_localizations/greece>`
 - :doc:`Guatemala <fiscal_localizations/guatemala>`
 - Guinea-Bissau
 - Honduras
@@ -173,6 +173,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/egypt
    fiscal_localizations/france
    fiscal_localizations/germany
+   fiscal_localizations/greece
    fiscal_localizations/guatemala
    fiscal_localizations/hong_kong
    fiscal_localizations/hungary
