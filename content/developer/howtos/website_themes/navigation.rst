@@ -229,7 +229,7 @@ can re-use the template structure in the `mega_menu_content` field like any stat
      - The default content of the mega menu
 
 Beside that, you might need to create something more visually advanced with a custom template.
-Feel free to check how the `standard templates <{GITHUB_PATH}/addons/website/views/snippets/s_mega_menu_odoo_menu.xml>`_
+Feel free to check how the `standard templates <{GITHUB_PATH}/addons/website/views/snippets/s_mega_menu_multi_menus.xml>`_
 are built in the Odoo source code.
 
 .. _website_themes/navigation/mega_menu/custom:
