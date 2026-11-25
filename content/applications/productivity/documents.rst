@@ -90,44 +90,67 @@ To create a sub-folder, select the parent folder first, then follow the same ste
    Some folders and sub-folders are created automatically based on the :ref:`file centralization
    settings <documents/file-centralization>`.
 
-To manage a folder or sub-folder, select it and click the :icon:`fa-cog` (:guilabel:`Actions`)
-icon above the tree. The following options are available in the menu:
+To manage a folder or sub-folder:
 
-- :icon:`fa-download` :guilabel:`Download`: Download the folder as a .zip file, including its files
-  and sub-folders.
-- :icon:`fa-pencil-square-o` :guilabel:`Rename`: Modify the folder's name.
-- :icon:`fa-share-alt` :guilabel:`Share`: :ref:`Share the folder and manage its access rights
-  <documents/access-rights>`.
-- :icon:`fa-star-o` :guilabel:`Add star`: Mark a folder as a favorite for quicker access. This
-  setting is user-specific and does not affect other users' workspaces. You can then use the
-  :ref:`Starred filter <search/favorites>` to navigate to your favorite folders quickly.
-- :icon:`fa-info-circle` :guilabel:`Info & Tags`: View the folder's :ref:`details
-  <documents/details-panel>` and chatter.
-- :icon:`fa-trash` :guilabel:`Move to trash`: Move the folder and its content to the :ref:`trash
-  <documents/deletion-delay>`.
-- :icon:`fa-cog` :guilabel:`Actions on Select`: Define the server actions that are available (as
+Click the ellipsis :icon:`fa-ellipsis-v` :guilabel:`ellipsis` icon. The following options are
+available:
+
+- :icon:`fa-downlaod` :guilabel:`Export`.
+- :guilabel:`Action`: Define the server actions that are available (as
   buttons) for the files in the folder. Click an action to add or remove it. Click
   :guilabel:`Add Custom Action` to :ref:`create a new one <reference/actions/server>`.
-- :icon:`fa-cog` :guilabel:`Automations`: Create :doc:`automation rules
+- :guilabel:`Automations`: Create :doc:`automation rules
   </applications/studio/automated_actions>`.
+- :guilabel:`AI Auto-sort`: Use Odoo AI to automatically organize the files in the folder and
+  trigger actions based on the provided AI prompt. Add the corresponding actions for your prompt in
+  the lower section of the popup. This option requires the **Odoo AI** app to be installed.
+- :guilabel:`Spreadsheet`.
+- :guilabel:`Dashboard`.
+- :guilabel:`Knowledge`.
 
   .. important::
      Setting up automation rules requires activating :doc:`/applications/studio`, which may impact
      your `pricing plan <https://www.odoo.com/pricing>`_.
 
-- :guilabel:`AI Auto-sort`: Use Odoo AI to automatically organize the files in the folder and
-  trigger actions based on the provided AI prompt. Add the corresponding actions for your prompt in
-  the lower section of the popup. This option requires the **Odoo AI** app to be installed.
+
+Select the folder or sub-folder and click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`)
+icon. The following options are available in the menu:
+
+- :guilabel:`New Folder`: Create a new folder or sub-folder
+- :guilabel:`Download`: Download the folder as a .zip file, including its files
+  and sub-folders.
+- :icon:`fa-share-alt` :guilabel:`Share`: :ref:`Share the folder and manage its access rights
+  <documents/access-rights>`.
+- :guilabel:`Rename`: Modify the folder's name.
+- :guilabel:`Move`: Move a folder to another section or to another folder.
+- :guilabel:`Duplicate`: Duplifcate a folder in a desired section or folder.
+- :icon:`fa-star-o` :guilabel:`Add star`: Mark a folder as a favorite for quicker access. This
+  setting is user-specific and does not affect other users' workspaces. You can then use the
+  :ref:`Starred filter <search/favorites>` to navigate to your favorite folders quickly.
+- :guilabel:`Create shortcut`
+- :icon:`fa-paperclip`:guilabel:`Copy link`: to use the link and access the folder
+- :guilabel:`Search in Folder`: to search into the folder and its content
+- :icon:`fa-trash` :guilabel:`Trash`: Move the folder and its content to the :ref:`trash
+  <documents/deletion-delay>`.
+
 
 .. tip::
    Switch to the list view to:
 
-   - manage multiple folders at once.
+   - Manage multiple folders at once.
    - :icon:`fa-upload` :guilabel:`Export` or :icon:`oi-view-list` :guilabel:`Insert in spreadsheet`
      one or multiple folders.
-   - quickly execute actions such as :guilabel:`Share`, :guilabel:`Download`, :guilabel:`Rename`,
-     etc. Hover over a folder line and click the corresponding icon at the end of the line to
-     perform the desired action.
+   - Quickly execute actions such as:
+
+     - :icon:`fa-search` :guilabel:`Search in Folder`,
+     - :icon:`fa-share-alt` :guilabel:`Share`,
+     - :icon:`fa-odwnload` :guilabel:`Download`,
+     - :icon:`fa-pencil` :guilabel:`Rename`,
+     - :icon:`fa-info-circle` :guilabel:`Details`,
+     - :icon:`fa-sign-in` :guilabel:`Go inside`.
+
+     Hover over a folder line and click the corresponding icon at the end of the line to perform the
+     desired action.
 
 .. _documents/documents:
 
@@ -135,7 +158,7 @@ Files
 =====
 
 To upload a file, select the desired folder in the tree, click :guilabel:`New`, and select
-:guilabel:`Upload`.
+:icon:`fa-upload` :guilabel:`Upload`.
 
 .. tip::
    - On Odoo Online databases, each uploaded file must not exceed 64MB.
@@ -145,9 +168,17 @@ To upload a file, select the desired folder in the tree, click :guilabel:`New`, 
 URL links
 ---------
 
-To add a link to a URL (e.g., a video) and make it accessible from a folder, click :guilabel:`New`
-and select :guilabel:`Link`. Enter the :guilabel:`URL`, add a :guilabel:`Name`, and select the
-appropriate :guilabel:`Folder`.
+To make a link accessible from a folder:
+
+- Click :guilabel:`New`, then click :guilabel:`Link`.
+- Enter the :guilabel:`URL`.
+- Add a :guilabel:`Name`.
+- Select the appropriate :guilabel:`Folder`.
+
+.. note::
+
+   If a folder was selected before clicking :guilabel:`New`, the folder is automatically selected
+   in the :guilabel:`Add Url` pop-up window.
 
 .. _documents/spreadsheet:
 
@@ -164,44 +195,47 @@ Managing files
 
 Several buttons are available in the top bar when opening a file:
 
-- the :icon:`fa-cog` :guilabel:`Actions` menu, which includes the options described below
-- :guilabel:`Share`: to :ref:`share the file and manage its access rights <documents/access-rights>`
+- :guilabel:`AI` button: `Ask AI`
+- The :icon:`fa-cog` :guilabel:`Actions` menu, which includes the options described below
+- :guilabel:`Sort With AI`
 - :guilabel:`Download`
-- any :ref:`buttons defined for the folder <documents/folders>`
+- :guilabel:`Share`: to :ref:`share the file and manage its access rights <documents/access-rights>`
+- :guilabel:`More`: shows any :ref:`buttons defined for the folder <documents/folders>`
 
 The following options are available in the :icon:`fa-cog` :guilabel:`Actions` menu:
 
-- :icon:`fa-files-o` :guilabel:`Duplicate`: Create a copy of the file. In the popup, select or
+- :guilabel:`Rename`
+- :guilabel:`Move`: Move the file to another folder. In the popup, select or create the destination
+  folder, then click :guilabel:`Move to` *destination folder's name*.
+- :guilabel:`Duplicate`: Create a copy of the file. In the popup, select or
   create the destination folder, then click :guilabel:`Duplicate in` *destination folder's name*.
-- :icon:`fa-trash` :guilabel:`Move to Trash`: Move the file to the :ref:`trash
-  <documents/deletion-delay>`.
-- :icon:`fa-pencil-square-o` :guilabel:`Rename`
-- :icon:`fa-info-circle` :guilabel:`Info & tags`: View the file's :ref:`details
-  <documents/details-panel>` and chatter.
-- :icon:`fa-sign-in` :guilabel:`Move`: Move the file to another folder. In the popup, select or
-  create the destination folder, then click :guilabel:`Move to` *destination folder's name*.
-- :icon:`fa-external-link-square` :guilabel:`Create shortcut`: A shortcut is a pointer to a file,
+- :icon:`fa-star-o` :guilabel:`Add star`: Mark a file as a favorite for quicker access
+- :guilabel:`Create shortcut`: A shortcut is a pointer to a file,
   allowing access from multiple folders without duplicating the file. In the popup, select or
   create the destination folder, then click :guilabel:`Create a shortcut in` *destination
   folder's name*.
-- :icon:`fa-history` :guilabel:`Manage versions`: View all versions of the file in upload order,
-  download a specific version, or upload a new one as needed.
-- :icon:`fa-lock` :guilabel:`Lock`: Protect the file from any modifications.
 - :icon:`fa-link` :guilabel:`Copy Links`: Copy the file's URL for sharing. Access is controlled
   based on the file's :ref:`access rights <documents/access-rights>`.
-- :icon:`fa-scissors` :guilabel:`Split PDF`: :ref:`Split a PDF file <documents/pdfs>`.
+- :guilabel:`Split PDF`: :ref:`Split a PDF file <documents/pdfs>`.
+- :guilabel:`Manage versions`: View all versions of the file in upload order,
+  download a specific version, or upload a new one as needed.
+- :guilabel:`Lock`: Protect the file from any modifications.
+- :icon:`fa-trash` :guilabel:`Trash`: Move the file to the :ref:`trash
+  <documents/deletion-delay>`.
 
 .. tip::
-   - You can use folder-specific :ref:`email aliases <documents/email-aliases>` to automatically
+   - Use folder-specific :ref:`email aliases <documents/email-aliases>` to automatically
      save files sent to the alias into the corresponding folder.
    - Switch to the list view to:
 
-     - manage multiple files at once.
+     - Manage multiple files at once.
      - :icon:`fa-upload` :guilabel:`Export` or :icon:`oi-view-list` :guilabel:`Insert in spreadsheet`
        one or multiple files.
-     - quickly perform actions such as :guilabel:`Share`, :guilabel:`Download`, :guilabel:`Rename`,
+     - Quickly perform actions such as :guilabel:`Share`, :guilabel:`Download`, :guilabel:`Rename`,
        etc. Hover over a file line and click the corresponding icon at the end of the line to
        perform the desired action.
+   - Click the :icon:`fa-info-circle` :guilabel:`Info & tags` icon to view the file's
+     :ref:`details <documents/details-panel>` and chatter.
 
 .. _documents/pdfs:
 
@@ -209,8 +243,8 @@ Splitting and merging PDFs
 --------------------------
 
 To divide a PDF into individual or groups of pages, open the PDF, click the :icon:`fa-cog`
-:guilabel:`Actions` button, and select :icon:`fa-scissors` :guilabel:`Split PDF`. Click the
-:icon:`fa-scissors` (:guilabel:`scissors`) icon between pages to remove a split if needed, then
+:guilabel:`Actions` button, and select :guilabel:`Split PDF`. Click the :icon:`fa-scissors`
+(:guilabel:`scissors`) icon between pages to remove a split if needed, then
 click :guilabel:`Split` to confirm.
 
 .. image:: documents/split-pdf.png
@@ -220,18 +254,21 @@ To merge PDF files, follow these steps:
 
 #. Navigate to the folder containing the files you want to merge.
 #. Hold down **Ctrl** and click the relevant files.
-#. Click the :icon:`fa-cog` :guilabel:`Actions` button and select :icon:`fa-scissors`
-   :guilabel:`Merge PDFs`.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` button and select :guilabel:`Merge PDFs`.
 #. If needed, click :guilabel:`Add file` to browse and select a PDF file from your computer.
 #. Click the :icon:`fa-scissors` (:guilabel:`scissors`) icon between the files.
 #. Click :guilabel:`Split` to merge them.
 
 .. note::
-   The original PDFs are replaced by the merged version.
+   - The original PDFs are replaced by the merged version.
+   - Spreadsheets and images can not be merged.
 
 .. tip::
-   - Press **Shift + S** to add or remove all splits between pages.
-   - To delete a specific page, select the page, then click :guilabel:`Delete`.
+
+   - Press **Shift + S** to select all the pages then press **Ctrl + S** to add or remove all splits
+     between pages.
+   - To delete a specific page, select the page, then click the :icon:`fa-trash` (:guilabel:`trash`)
+     icon to :guilabel:`Delete` the page.
 
 .. _documents/request:
 
@@ -242,7 +279,7 @@ Request files from users as a reminder for them to upload specific files. To do 
 steps:
 
 #. Click :guilabel:`New` and select :guilabel:`Request`.
-#. Enter a :guilabel:`Document Name` and select the person you're requesting it from in the
+#. Enter a :guilabel:`Document Name` and select the contact to request it from in the
    :guilabel:`Request To` field.
 #. If needed, set a :guilabel:`Due Date In`, edit the :guilabel:`Folder` where the file should be
    added, add :guilabel:`Tags`, and write a :guilabel:`Message`.
@@ -254,46 +291,34 @@ click the placeholder to upload it.
 .. tip::
    You can also request a document from the :ref:`list of scheduled activities <activities/all>`.
 
-To see the list of all requested files, switch to the Activity view of the Documents app and go to
-the :guilabel:`Requested Document` column. Click a requested file's date to view its details.
-You can then:
+To see the list of all requested files, switch to the :guilabel:`Activity` view of the Documents app
+and go to the :guilabel:`Document` column. Click a requested file to view its details:
 
-- Upload a file using the :icon:`fa-upload` (:guilabel:`upload`) button;
-- Edit the activity using the :icon:`fa-pencil` (:guilabel:`edit`) button;
-- Cancel the activity using the :icon:`fa-remove` (:guilabel:`cancel`) button;
-- Send a reminder email. Click :guilabel:`Preview` to preview the content of the reminder email
-  if needed, then :guilabel:`Send Now`.
+- Upload a file using the :icon:`fa-upload` (:guilabel:`upload`) button.
+- Edit the activity using the :icon:`fa-pencil` (:guilabel:`edit`) button.
 
-To send a reminder email for all requested files, click the :icon:`fa-ellipsis-v`
-(:guilabel:`ellipsis`) icon in the :guilabel:`Requested Document` column and select
-:guilabel:`Document Request: Reminder`.
-
-.. image:: documents/reminder-email.png
-   :alt: Send a reminder email from the Activity view
+.. image:: documents/request-activity.png
+   :alt: Activity view
 
 .. _documents/details-panel:
 
 Details panel
 =============
 
-To view a folder's or file's information and tags, select the folder or file, then click the
-:icon:`fa-cog` icon (for folders) or :icon:`fa-cog` :guilabel:`Actions` button (for files) and
-select :icon:`fa-info-circle` :guilabel:`Info & Tags`.
-
-.. tip::
-   Alternatively, for folders, you can also click the :icon:`fa-info-circle`
-   (:guilabel:`Info & Tags`) button in the upper-right corner next to the view icons.
+to view a folder's or a file's information, first click the :icon:`fa-info-circle`
+(:guilabel:`Info & Tags`) button in the upper-right corner next to the view icons, then click the
+folder or the file.
 
 The details panel allows the following:
 
-- Change the file's folder or the folder's name.
+- Change the file's or the folder's name.
 - View the file's or folder's size and the folder's item count.
 - Change the file's or folder's owner and contact. By default, the person who creates a file or
   folder is set as its owner and granted full access rights to it. To change it, select the
   required user from the dropdown list. The contact is a person who only has :guilabel:`Viewer`
   :ref:`access rights <documents/access-rights>` to the file or folder, e.g., an existing supplier
   in the database.
-- Access the :doc:`chatter </applications/essentials/activities>`.
+- Access the :doc:`chatter </applications/essentials/activities>` of the file or the folder.
 
 To close the details panel, click the :icon:`fa-remove` (:guilabel:`remove`) button in the
 upper-right corner.
@@ -323,7 +348,7 @@ folder. To set up an email alias for a folder, follow these steps:
 
 .. note::
    Emails sent to the alias without attachments are converted into files, using the email subject as
-   the file name.
+   the file name, or the name and email address of the sender if there is no subject.
 
 .. seealso::
    :doc:`/applications/general/email_communication/email_servers_inbound`
@@ -335,8 +360,7 @@ Tags
 
 Tags help organize and categorize files, making it easier to search and filter them.
 To configure tags for files, go to :menuselection:`Documents --> Configuration --> Tags`. Click
-:guilabel:`New` to create a new tag. Enter the :guilabel:`Tag Name`, select a :guilabel:`Color`, and
-optionally add a :guilabel:`Tooltip` that appears when hovering over the tag.
+:guilabel:`New` to create a new tag. Enter the :guilabel:`Tag Name`, select a :guilabel:`Color`.
 
 To add tags to a file, open the file, click the :icon:`fa-cog` :guilabel:`Actions`, select
 :icon:`fa-info-circle` :guilabel:`Info & Tags`, and then, in the details panel, select a tag from
@@ -349,9 +373,10 @@ the :guilabel:`Tags` dropdown menu (identifiable by its placeholder :guilabel:`A
 Linked records
 --------------
 
-To link the file to a specific record, select the appropriate model from the :guilabel:`Linked to`
-dropdown menu (identifiable by its placeholder :guilabel:`No linked model`), then select the
-desired record.
+To link the file to a specific record, open it, click the :icon:`fa-cog` :guilabel:`Actions`, select
+:icon:`fa-info-circle` :guilabel:`Info & Tags`, then select the appropriate model from the
+:guilabel:`Linked to` dropdown menu (identifiable by its placeholder :guilabel:`No linked model`),
+then select the desired record.
 
 .. note::
    If :ref:`file centralization <documents/file-centralization>` is enabled for a specific app,
