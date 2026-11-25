@@ -105,3 +105,10 @@ parties will bear the charges through the :guilabel:`Charge Bearer` field.
 
 .. seealso::
    :doc:`../accounting/bank/bank_synchronization`
+
+Vendor bill digitization using OCR
+==================================
+
+When scanning Swiss QR-bills with :doc:`AI-powered document digitization
+<../accounting/vendor_bills/invoice_digitization>`, Odoo automatically creates a new vendor if one
+does not already exist in the database, using the details extracted from the QR code.

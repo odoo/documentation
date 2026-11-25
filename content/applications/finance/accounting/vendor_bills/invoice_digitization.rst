@@ -131,10 +131,10 @@ related field(s) to edit them, or click :guilabel:`Reload AI data` to refresh th
 Then, click :guilabel:`Confirm` to post the document.
 
 .. tip::
-   Once a document has been digitized, the :guilabel:`Vendor` field remains empty if the vendor
-   doesn't exist in the database. To add it, click the :icon:`fa-caret-down` :guilabel:`(down arrow)`
-   in the :guilabel:`Vendor` field; the vendor name appears highlighted in the document preview on
-   the right. Click it to open a new vendor form with the name pre-filled.
+   Once a document has been digitized, if the vendor does not yet exist in the database but the OCR
+   identified a VAT number in the document, the vendor can be created using the :doc:`partner
+   autocomplete </applications/sales/crm/optimize/partner_autocomplete>` service for additional
+   :doc:`IAP credits </applications/essentials/in_app_purchase>`.
 
 .. note::
    The following vendor bill fields are recognized by OCR:
@@ -143,11 +143,9 @@ Then, click :guilabel:`Confirm` to post the document.
      Reference` (only in the Belgian +++xxx/xxxx/xxxxx+++ format), :guilabel:`Recipient Bank`,
      :guilabel:`Due Date`, and the currency (in a :doc:`multi-currency
      <../get_started/multi_currency>` environment and if the currency is activated).
-   - From the :guilabel:`Invoices Lines` tab: :guilabel:`Product` description/label,
+   - From the :guilabel:`Invoice Lines` tab: :guilabel:`Product` description/label,
      :guilabel:`Quantity`, unit :guilabel:`Price`, :guilabel:`Taxes` (if the :ref:`tax is activated
-     <taxes/list_activation>`; this field is not recognized by OCR for the :doc:`Indian
-     localization <../../fiscal_localizations/india>`), :guilabel:`Untaxed Amount`, and
-     :guilabel:`Total`.
+     <taxes/list_activation>`), :guilabel:`Untaxed Amount`, and :guilabel:`Total`.
 
 .. _accounting/bill-digitization/vendor-bills-matching-po:
 
