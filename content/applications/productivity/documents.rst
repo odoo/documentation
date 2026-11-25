@@ -90,26 +90,44 @@ To create a sub-folder, select the parent folder first, then follow the same ste
    Some folders and sub-folders are created automatically based on the :ref:`file centralization
    settings <documents/file-centralization>`.
 
-To manage a folder or sub-folder, select it and click the :icon:`fa-cog` (:guilabel:`Actions`)
-icon above the tree. The following options are available in the menu:
+To manage a folder or sub-folder:
 
-- :icon:`fa-download` :guilabel:`Download`: Download the folder as a .zip file, including its files
-  and sub-folders.
-- :icon:`fa-pencil-square-o` :guilabel:`Rename`: Modify the folder's name.
-- :icon:`fa-share-alt` :guilabel:`Share`: :ref:`Share the folder and manage its access rights
-  <documents/access-rights>`.
-- :icon:`fa-star-o` :guilabel:`Add star`: Mark a folder as a favorite for quicker access. This
-  setting is user-specific and does not affect other users' workspaces. You can then use the
-  :ref:`Starred filter <search/favorites>` to navigate to your favorite folders quickly.
-- :icon:`fa-info-circle` :guilabel:`Info & Tags`: View the folder's :ref:`details
-  <documents/details-panel>` and chatter.
-- :icon:`fa-trash` :guilabel:`Move to trash`: Move the folder and its content to the :ref:`trash
-  <documents/deletion-delay>`.
-- :icon:`fa-cog` :guilabel:`Actions on Select`: Define the server actions that are available (as
+Click the ellipsis :icon:`fa-ellipsis-v` :guilabel:`ellipsis` icon. The following options are
+avaiable:
+
+- :icon:`fa-downlaod` :guilabel:`Export`
+- :guilabel:`Action`: Define the server actions that are available (as
   buttons) for the files in the folder. Click an action to add or remove it. Click
   :guilabel:`Add Custom Action` to :ref:`create a new one <reference/actions/server>`.
 - :icon:`fa-cog` :guilabel:`Automations`: Create :doc:`automation rules
   </applications/studio/automated_actions>`.
+- :guilabel:`Automations`
+- :guilabel:`AI Auto-sort`
+- :guilabel:`Spreadsheet`
+- :guilabel:`Dashboard`
+- :guilabe:`Knowledge`
+
+Select the folder or sub-folder and click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`)
+icon. The following options are available in the menu:
+
+- :guilabel:`New Folder`: Create a new folder or sub-folder
+- :icon:`fa-download` :guilabel:`Download`: Download the folder as a .zip file, including its files
+  and sub-folders.
+- :icon:`fa-share-alt` :guilabel:`Share`: :ref:`Share the folder and manage its access rights
+  <documents/access-rights>`.
+- :guilabel:`Rename`: Modify the folder's name.
+- :guilabel:`Move`: Move a folder to another section or to another folder.
+- :guilabel:`Duplicate`: Duplifcate a folder in a desired section or folder.
+- :icon:`fa-star-o` :guilabel:`Add star`: Mark a folder as a favorite for quicker access. This
+  setting is user-specific and does not affect other users' workspaces. You can then use the
+  :ref:`Starred filter <search/favorites>` to navigate to your favorite folders quickly.
+- :icon:`fa-info-circle` :guilabel:`Info & Tags`: View the folder's :ref:`details
+  <documents/details-panel>` and chatter.T
+- :guilabel:`Create shortcut`
+- :icon:`fa-paperclip`:guilabel:`Copy link`: to use the link and access the folder
+- :guilabel:`Search in Folder`: to search into the folder and its content
+- :icon:`fa-trash` :guilabel:`Trash`: Move the folder and its content to the :ref:`trash
+  <documents/deletion-delay>`.
 
   .. important::
      Setting up automation rules requires activating :doc:`/applications/studio`, which may impact
