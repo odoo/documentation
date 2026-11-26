@@ -879,6 +879,7 @@ article.doc-body {
 //------------------------------------------------------------------------------
 
 div[class^="highlight-"] {
+    position: relative;
     margin-bottom: map-get($spacers, 4);
     border: $border-width solid var(--#{$prefix}border-color);
     border-radius: .75rem;
@@ -898,6 +899,12 @@ div[class^="highlight-"] {
         letter-spacing: normal;
         white-space: pre;
         overflow: auto;
+    }
+
+    // Without header, the copy button floats over the first line.
+    > .o_copy_code {
+        @include o-position-absolute($top: .75rem, $right: 10px);
+        background-color: var(--#{$prefix}body-bg);
     }
 
     .lineno, .linenos {

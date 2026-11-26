@@ -10,29 +10,29 @@
     };
 
     document.addEventListener('DOMContentLoaded', () => {
-        // Add a header with the language and a copy button to the code blocks. The code blocks of
-        // code tabs share the header of the tabs.
+        // Add a copy button to the code blocks, in a header with their caption (often a file name)
+        // or language, if any. The code blocks of code tabs share the header of the tabs.
         document.querySelectorAll('div[class^="highlight-"]').forEach(codeBlock => {
             const pre = codeBlock.querySelector('pre');
             if (!pre || codeBlock.parentElement.matches('.sphinx-tabs-panel.code-tab')) {
                 return;
             }
-            const header = document.createElement('div');
-            header.classList.add('o_code_header');
-            // The caption of the code block (often a file name), or else its language.
-            const caption = codeBlock.parentElement.querySelector(':scope > .code-block-caption');
+            const copyButton = _createCopyButton(() => _getCode(pre));
+            let label = codeBlock.parentElement.querySelector(':scope > .code-block-caption');
             const languageName = LANGUAGE_NAMES[codeBlock.className.match(/highlight-(\S+)/)[1]];
-            if (caption) {
-                caption.classList.add('o_code_language');
-                header.append(caption);
-            } else if (languageName) {
-                const label = document.createElement('span');
-                label.classList.add('o_code_language');
+            if (!label && languageName) {
+                label = document.createElement('span');
                 label.textContent = languageName;
-                header.append(label);
             }
-            header.append(_createCopyButton(() => _getCode(pre)));
-            codeBlock.prepend(header);
+            if (label) {
+                const header = document.createElement('div');
+                header.classList.add('o_code_header');
+                label.classList.add('o_code_language');
+                header.append(label, copyButton);
+                codeBlock.prepend(header);
+            } else {
+                codeBlock.prepend(copyButton);
+            }
         });
         document.querySelectorAll('.sphinx-tabs').forEach(tabs => {
             const panels = [...tabs.children].filter(child => child.matches('.sphinx-tabs-panel'));
