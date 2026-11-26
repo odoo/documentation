@@ -884,8 +884,6 @@ Finances Publiques)` through Odoo. To do so, follow these steps:
    report).
 #. Click :guilabel:`Submit`, or in the :guilabel:`Tax Return` view, click the :guilabel:`Tax Report
    (FR)` button, then the :icon:`fa-cog` (:guilabel:`gear`) icon, and select :guilabel:`EDI VAT`.
-#. In the :guilabel:`EDI VAT` window, make sure a valid VAT :guilabel:`ROF` (Référence d’Obligation
-   Fiscale) is entered.
 #. If needed, enable the :guilabel:`Add express mention` option and include a comment.
 #. - If payment to :abbr:`DGFIP (Direction Générale des Finances Publiques)` is required:
 
