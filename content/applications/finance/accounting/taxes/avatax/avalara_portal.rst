@@ -61,7 +61,10 @@ Filter transactions on the :guilabel:`Transactions` page, by setting the :guilab
   :guilabel:`Committed`, :guilabel:`Uncommitted`, or :guilabel:`Locked`.
 - :guilabel:`Document Code`: any of the following options, :guilabel:`Exactly match`,
   :guilabel:`Starts with`, or :guilabel:`Contains`.
-- :guilabel:`Customer/Vendor Code`: the customer/vendor code in Odoo (e.g. `Contact18`).
+- :guilabel:`Customer/Vendor Code`: found on the customer's :doc:`contact
+  </applications/essentials/contacts>` form in Odoo, in the :guilabel:`Sales & Purchase` tab. The
+  :guilabel:`Avalara Code` field (e.g., `Contact 18`) corresponds to the :guilabel:`Customer/Vendor
+  Code`.
 - :guilabel:`Country`: the country this tax was calculated in; this is a text field.
 - :guilabel:`Region`: the region of the country, which varies based on the :guilabel:`Country`
   selection.
@@ -224,6 +227,10 @@ Tax exemption certificates for customers can be added into the Avalara managemen
 *AvaTax* is aware of which customers may be exempt from paying certain taxes. To add an *exception
 certificate* navigate to :menuselection:`Exemptions --> Customer certificates`. From there, click on
 the :icon:`fa-plus` :guilabel:`Add a certificate` to configure an exemption.
+
+.. tip::
+   To ship at a *tax exempt* delivery address of subsidiary company, the :guilabel:`Customer code`
+   in Avatax must match the :guilabel:`Avalara Code` in Odoo of the subsidiary's **parent** company.
 
 .. warning::
    An Avalara subscription to Exemption Certificate Management (ECM) is required in order to attach
