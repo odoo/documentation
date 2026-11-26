@@ -1,114 +1,97 @@
+{%- set essentials = [
+    ('applications/essentials/stages', 'view_kanban', _("Stages")),
+    ('applications/essentials/activities', 'event_available', _("Activities")),
+    ('applications/essentials/search', 'filter_list', _("Search, filter, and group records")),
+    ('applications/essentials/export_import_data', 'swap_vert', _("Export and import data")),
+    ('applications/essentials/keyboard_shortcuts', 'keyboard', _("Keyboard shortcuts")),
+] %}
+{%- set section_cards = {
+    'applications': (
+        'menu_book',
+        _("User guides and configuration tutorials for every Odoo application."),
+        _("Browse user docs"),
+    ),
+    'administration': (
+        'database',
+        _("Hosting options, upgrades, support, and administration of your database."),
+        _("Manage your database"),
+    ),
+    'developer': (
+        'code',
+        _("Tutorials, how-to guides, and the reference for the Odoo framework."),
+        _("Start developing"),
+    ),
+    'contributing': (
+        'handshake',
+        _("Guidelines for contributing to the Odoo source code and documentation."),
+        _("Start contributing"),
+    ),
+} %}
+{%- set apps = [
+    ('applications/finance/accounting', _("Accounting"), _("Invoicing, payments, taxes, and financial reports.")),
+    ('applications/inventory_and_mrp/inventory', _("Inventory"), _("Stock, warehouses, routes, and shipping.")),
+    ('applications/inventory_and_mrp/manufacturing', _("Manufacturing"), _("Bills of materials, work orders, and planning.")),
+    ('applications/sales/point_of_sale', _("Point of Sale"), _("Shops and restaurants, online or offline.")),
+] %}
 <div id="o_content">
-    <section class="o_content_fw_banner">
-        <h1 class="text-white">{{ _("Odoo Documentation") }}</h1>
-    </section>
-    <section>
-        <div class="row gx-lg-5">
-            <div class="col-lg-6">
-                <h2><a href="{{ pathto('applications') }}">{{ _("User Docs") }}</a></h2>
-                <p class="text-dark">{{ _("Discover our guide to help you use and configure the platform, by applications.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Apps") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('applications/finance/accounting') }}" class="stretched-link">
-                            {{ _("Accounting") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/inventory_and_mrp/inventory') }}" class="stretched-link">
-                            {{ _("Inventory") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/inventory_and_mrp/manufacturing') }}" class="stretched-link">
-                            {{ _("Manufacturing") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/sales/point_of_sale') }}" class="stretched-link">
-                            {{ _("Point of Sale") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Install and Maintain") }}</a></h2>
-                <p class="text-dark">{{ _("Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href=" {{ pathto('administration/deployment/install') }} " class="stretched-link">
-                            {{ _("Installing Odoo") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('administration/maintain/update') }}" class="stretched-link">
-                            {{ _("Bugfix updates") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('administration/upgrade') }}" class="stretched-link">
-                            {{ _("Upgrading Odoo") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('administration/odoo_sh/overview/introduction') }}" class="stretched-link">
-                            {{ _("Odoo.sh: The Odoo Cloud Platform") }}
-                        </a>
-                    </li>
-                </ul>
+    <h1>{{ _("Odoo Documentation") }}</h1>
+    <section class="o_overview_hero d-grid gap-3">
+        <div class="o_overview_hero_intro">
+            <h2 class="h3">{{ _("Get started with Odoo") }}</h2>
+            <p>{{ _("Learn the basics shared by every app: records, views, search, activities, and reporting.") }}</p>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="{{ pathto('applications/essentials') }}" class="o_cta btn btn-dark">{{ _("Odoo essentials") }}</a>
+                <a href="https://www.odoo.com/trial" class="o_cta btn btn-light">{{ _("Try Odoo for free") }}</a>
             </div>
         </div>
-        <div class="row gx-lg-5">
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><a href="{{ pathto('developer') }}">{{ _("Developer") }}</a></h2>
-                <p class="text-dark">{{ _("Learn to develop in Odoo with the developer tutorials and framework references.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('developer/tutorials') }}" class="stretched-link">
-                            {{ _("Tutorials") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('developer/howtos') }}" class="stretched-link">
-                            {{ _("How-to guides") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('developer/reference') }}" class="stretched-link">
-                            {{ _("Reference") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('developer/reference/external_api') }}" class="stretched-link">
-                            {{ _("External API") }}
-                        </a>
-                    </li>
-                </ul>
+        <ul class="o_overview_hero_links list-unstyled m-0">
+            {%- for docname, icon, label in essentials %}
+                <li>
+                    <a href="{{ pathto(docname) }}" class="d-flex align-items-center">
+                        <i class="o_icon" data-icon="{{ icon }}" aria-hidden="true"></i>
+                        {{- label }}
+                        <i class="o_icon ms-auto" data-icon="arrow_forward" aria-hidden="true"></i>
+                    </a>
+                </li>
+            {%- endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>{{ _("Browse the documentation") }}</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+            {%- for docname, title in sections if docname in section_cards %}
+                {%- set icon, description, link_label = section_cards[docname] %}
+                <div class="col">
+                    <a href="{{ pathto(docname) }}" class="o_card d-block h-100">
+                        <i class="o_icon" data-icon="{{ icon }}" aria-hidden="true"></i>
+                        <h3>{{ title|e }}</h3>
+                        <p>{{ description }}</p>
+                        <span class="o_card_link">
+                            {{- link_label }}
+                            <i class="o_icon" data-icon="arrow_forward" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
+            {%- endfor %}
+        </div>
+    </section>
+    <section>
+        <div class="d-flex align-items-end justify-content-between gap-3">
+            <div class="o_overview_apps_title">
+                <h2>{{ _("Popular apps") }}</h2>
+                <p>{{ _("The most visited user guides.") }}</p>
             </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><a href="{{ pathto('contributing') }}">{{ _("Contributing") }}</a></h2>
-                <p class="text-dark">{{ _("You want to contribute to Odoo but don't know where to start? The tutorials and guidelines are there to help you make Odoo even better.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('contributing/development/coding_guidelines') }}" class="stretched-link">
-                            {{ _("Coding guidelines") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('contributing/documentation') }}" class="stretched-link">
-                            {{ _("Documentation") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('contributing/documentation/content_guidelines') }}" class="stretched-link">
-                            {{ _("Content guidelines") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <a href="{{ pathto('applications') }}" class="o_overview_all_apps">{{ _("View all apps") }}</a>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+            {%- for docname, title, description in apps %}
+                <div class="col">
+                    <a href="{{ pathto(docname) }}" class="o_card d-block h-100">
+                        <h3>{{ title }}</h3>
+                        <p>{{ description }}</p>
+                    </a>
+                </div>
+            {%- endfor %}
         </div>
     </section>
     {# If changelog exists import it here}

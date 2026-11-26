@@ -48,27 +48,7 @@
 {%- endblock %}
 
 {%- block header %}
-    <noscript>
-        <nav class="o_side_nav border-end">
-            {%- include "layout_templates/menu.html" %}
-        </nav>
-    </noscript>
-    {# Shown when the JS has properly set all the classes on the TOC elements #}
-    <nav id="o_menu" class="o_side_nav">
-        <div class="o_mobile-overlay" data-bs-toggle="collapse" data-bs-target="#o_menu"></div>
-        <div class="o_side_nav-inner border-end">
-            {%- if 'hide-page-toc' not in meta %}
-                {# Shown when the JS has properly set all the classes on the TOC elements #}
-                <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden>
-                    {%- include "layout_templates/page_toc.html" %}
-                </aside>
-            {%- endif %}
-            <div id="o_main_toctree" class="o_main_toc mt-3" hidden>
-                {%- include "layout_templates/menu.html" %}
-            </div>
-        </div>
-    </nav>
-    <header class="o_headers">
+    <header class="o_headers sticky-top">
         {%- include "layout_templates/header.html" %}
     </header>
 {%- endblock %}
@@ -76,6 +56,16 @@
 {%- block content %}
     <div id="wrap">
         {%- include "layout_templates/assets.html" %}
+        <nav id="o_menu" class="o_side_nav offcanvas-lg offcanvas-start" tabindex="-1">
+            {%- if 'hide-page-toc' not in meta %}
+                <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc">
+                    {%- include "layout_templates/page_toc.html" %}
+                </aside>
+            {%- endif %}
+            <div id="o_main_toctree" class="o_main_toc">
+                {%- include "layout_templates/menu.html" %}
+            </div>
+        </nav>
         {%- set main_classes = [] %}
         {%- if pagename == master_doc %}  {# The current page is the homepage #}
             {%- set main_classes = main_classes + ['o_index'] %}
@@ -108,19 +98,13 @@
                     <div role="main"> {# Beacon used by the Sphinx search to know where to look for a string #}
                         {%- block body %} {%- endblock %}
                     </div>
-                    {%- if github_link and pagename != 'search' and not pagename.startswith('legal') %}
-                        <a href="{{ github_link(mode='edit') }}"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> {%- trans %}Edit on GitHub{%- endtrans %}
-                        </a>
-                    {%- endif %}
                 </article>
             {%- endif %}
         </main>
         {%- if 'hide-page-toc' not in meta %}
-            {# Shown when the JS has properly set all the classes on the TOC elements #}
-            <aside id="o_page_toc" class="o_page_toc" hidden>
+            <aside id="o_page_toc" class="o_page_toc">
                 {%- include "layout_templates/page_toc.html" %}
+                {%- include "layout_templates/page_actions.html" %}
             </aside>
         {%- endif %}
     </div>

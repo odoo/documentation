@@ -21,3 +21,35 @@
 
 // Material Symbols font family variable (single source of truth)
 $ms-font-family: 'Material Symbols Outlined';
+
+// Icons of the theme itself (header, navigation, alerts, code blocks), with the optical size and
+// weight axes. Downloaded from:
+// https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0,0&icon_names=arrow_forward,arrow_outward,call_made,check,close,code,content_copy,dangerous,dark_mode,database,edit,error,event_available,expand_more,filter_list,handshake,info,keyboard,language,lightbulb,link,menu,menu_book,search,sunny,swap_vert,view_kanban,warning
+@font-face {
+    font-family: 'Material Symbols Theme';
+    font-style: normal;
+    font-weight: 300 500;
+    font-display: block;
+    src: url('lib/material_symbols/material_symbols_theme.woff2') format('woff2');
+}
+
+@mixin o-icon {
+    display: inline-block;
+    font-family: 'Material Symbols Theme';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    direction: ltr;
+    font-feature-settings: "liga" 1;
+}
+
+.o_icon {
+    @include o-icon;
+
+    &::before {
+        content: attr(data-icon);
+    }
+}

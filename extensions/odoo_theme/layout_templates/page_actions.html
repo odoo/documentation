@@ -1,0 +1,20 @@
+{%- if pagename != 'search' and not pagename.startswith('legal') %}
+    <div class="o_page_actions">
+        {%- if sourcename %}
+            <button
+                type="button"
+                class="o_copy_page"
+                data-source="{{ pathto('_sources/' + sourcename, 1) }}"
+            >
+                <i class="o_icon" data-icon="content_copy" aria-hidden="true"></i>
+                {{- _("Copy page") }}
+            </button>
+        {%- endif %}
+        {%- if github_link %}
+            <a href="{{ github_link(mode='edit') }}">
+                <i class="o_icon" data-icon="edit" aria-hidden="true"></i>
+                {%- trans %}Edit on GitHub{%- endtrans %}
+            </a>
+        {%- endif %}
+    </div>
+{%- endif %}
