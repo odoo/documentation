@@ -159,11 +159,13 @@ Toggle the following options on/off to enable or disable features across all pro
      products and customize the section.
    - :ref:`Show Available Quantity <ecommerce/products/stock-management>`: Display the
      available product quantity when the quantity falls below a specified threshold.
+   - :ref:`Minimum Quantity <ecommerce/products/product-form>`: Define the minimum order quantity,
+     which will be automatically preselected in the :ref:`quantity selector
+     <ecommerce_design/product_page/buttons>`.
    - :ref:`Out-of-Stock Message <ecommerce/products/stock-management>`: Display a
      customized message for products that are out of stock.
-   - :ref:`Get notified when back in stock <ecommerce/products/stock-management>`:
-     Customers can insert their email address to receive a notification when the item is back in
-     stock.
+   - :ref:`Notify me <ecommerce/products/stock-management>`: Customers can subscribe to receive a
+     notification when the item is back in stock.
    - :guilabel:`Product Page Extra Fields`: To enable specific extra fields for the product page,
      enable the :doc:`developer mode </applications/general/developer_mode>`. Then, go to
      :menuselection:`Website --> Configuration --> Websites`, select the relevant website,
