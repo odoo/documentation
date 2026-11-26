@@ -105,6 +105,15 @@ body {
     display: inline-flex;
     align-items: center;
     height: 36px;
+
+    small {
+        display: flex;
+    }
+
+    .o_icon {
+        font-size: 18px;
+        font-weight: $font-weight-medium;
+    }
 }
 
 .o_logo_dark, [data-bs-theme="dark"] .o_logo_light {
@@ -124,8 +133,8 @@ header.o_headers {
 
     .o_main_header {
         gap: map-get($spacers, 3);
-        height: $o-header-height;
         padding: 0 map-get($spacers, 3);
+        height: $o-header-height;
 
         .o_logo_wrapper {
             @include media-breakpoint-up(lg) {
@@ -232,8 +241,8 @@ header.o_headers {
                 text-decoration: none;
 
                 &.active {
-                    box-shadow: inset 0 -2px 0 currentColor;
                     color: var(--#{$prefix}emphasis-color);
+                    box-shadow: inset 0 -2px 0 currentColor;
                 }
             }
         }
@@ -326,9 +335,9 @@ aside.o_page_toc {
         top: $o-headers-height;
         display: none;
         flex-direction: column;
+        padding: map-get($spacers, 5) map-get($spacers, 3) map-get($spacers, 5) 0;
         height: fit-content;
         max-height: calc(100vh - #{$o-headers-height});
-        padding: map-get($spacers, 5) map-get($spacers, 3) map-get($spacers, 5) 0;
 
         @include media-breakpoint-up(xl) {
             display: flex;
@@ -407,7 +416,7 @@ aside.o_page_toc {
         }
     }
 
-    .o_page_toc_nav:not([hidden]) + .o_page_actions {
+    .o_page_toc_nav:where(:not([hidden])) + .o_page_actions {
         margin-top: map-get($spacers, 4);
         border-top: $border-width solid var(--#{$prefix}border-color);
         padding-top: map-get($spacers, 3);
@@ -464,8 +473,8 @@ main.container-fluid {
     $-padding-x: map-get($spacers, 4);
 
     position: relative;
-    max-width: calc(#{$o-content-max-width} + #{$-padding-x * 2});
     padding: map-get($spacers, 5) $-padding-x;
+    max-width: calc(#{$o-content-max-width} + #{$-padding-x * 2});
 
     @include media-breakpoint-up(lg) {
         grid-column: 2 / -1;
@@ -497,7 +506,7 @@ main.container-fluid {
         margin-top: 1.75rem;
     }
 
-    h2:not(.h3) {
+    h2:where(:not(.h3)) {
         margin-bottom: map-get($spacers, 3);
     }
 
@@ -529,8 +538,8 @@ main.container-fluid {
             }
 
             p {
-                max-width: 25rem;
                 margin-bottom: map-get($spacers, 4);
+                max-width: 25rem;
                 color: var(--o-text-muted);
             }
 
@@ -601,6 +610,7 @@ main.container-fluid {
     border: $border-width solid var(--#{$prefix}border-color);
     border-radius: .75rem;
     padding: 1.25rem;
+    font-size: .9375rem;
     font-weight: $font-weight-normal;
     text-decoration: none;
     transition: border-color .15s, background-color .15s;
@@ -618,6 +628,7 @@ main.container-fluid {
 
     h3 {
         margin-bottom: map-get($spacers, 1);
+        font-size: 1rem;
     }
 
     p {
@@ -638,6 +649,7 @@ main.container-fluid {
 
         .o_icon {
             font-size: 18px;
+            font-weight: $font-weight-medium;
         }
     }
 }
@@ -879,13 +891,13 @@ div[class^="highlight-"] {
 
     pre {
         display: block;
-        overflow: auto;
-        white-space: pre;
         margin: 0;
         padding: map-get($spacers, 3) 1.25rem;
         font-size: .8125rem;
         line-height: 22px;
         letter-spacing: normal;
+        white-space: pre;
+        overflow: auto;
     }
 
     .lineno, .linenos {
@@ -907,7 +919,6 @@ div[class^="highlight-"] {
 .o_code_header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom: $border-width solid var(--#{$prefix}border-color);
     padding: 0 10px;
     height: 48px;
@@ -922,10 +933,10 @@ div[class^="highlight-"] {
 }
 
 .o_copy_code {
+    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
     margin-left: auto;
     border: 0;
     border-radius: .375rem;
@@ -1334,19 +1345,19 @@ span:target + h4 {
     position: relative;
     margin-bottom: map-get($spacers, 4);
     border: $border-width solid var(--#{$prefix}border-color);
-    padding: 0;
     border-radius: .75rem;
+    padding: 0;
     background-color: var(--#{$prefix}body-bg);
 
     // The header of the tabs, as a track of segments
     > div[role="tablist"] {
         display: inline-flex;
         gap: 2px;
-        max-width: calc(100% - 20px);
         margin: 8px 10px;
         border: 0;
         border-radius: 10px;
         padding: 3px;
+        max-width: calc(100% - 20px);
         background-color: var(--o-surface-active);
         overflow-x: auto;
     }
@@ -1385,8 +1396,8 @@ span:target + h4 {
 
         &[aria-selected="true"] {
             background-color: var(--#{$prefix}body-bg);
-            box-shadow: 0 1px 2px rgba($black, .08), 0 0 0 1px rgba($black, .04);
             color: var(--#{$prefix}emphasis-color);
+            box-shadow: 0 1px 2px rgba($black, .08), 0 0 0 1px rgba($black, .04);
             cursor: default;
         }
     }
@@ -1399,10 +1410,8 @@ span:target + h4 {
         margin: 0;
         border: 0;
         border-top: $border-width solid var(--#{$prefix}border-color);
-        border-radius: 0;
         padding: map-get($spacers, 3) 1.25rem;
         background: none;
-        color: inherit;
 
         &:focus {
             outline: none;

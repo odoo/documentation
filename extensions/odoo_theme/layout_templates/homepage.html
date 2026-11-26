@@ -28,10 +28,26 @@
     ),
 } %}
 {%- set apps = [
-    ('applications/finance/accounting', _("Accounting"), _("Invoicing, payments, taxes, and financial reports.")),
-    ('applications/inventory_and_mrp/inventory', _("Inventory"), _("Stock, warehouses, routes, and shipping.")),
-    ('applications/inventory_and_mrp/manufacturing', _("Manufacturing"), _("Bills of materials, work orders, and planning.")),
-    ('applications/sales/point_of_sale', _("Point of Sale"), _("Shops and restaurants, online or offline.")),
+    (
+        'applications/finance/accounting',
+        _("Accounting"),
+        _("Invoicing, payments, taxes, and financial reports."),
+    ),
+    (
+        'applications/inventory_and_mrp/inventory',
+        _("Inventory"),
+        _("Stock, warehouses, routes, and shipping."),
+    ),
+    (
+        'applications/inventory_and_mrp/manufacturing',
+        _("Manufacturing"),
+        _("Bills of materials, work orders, and planning."),
+    ),
+    (
+        'applications/sales/point_of_sale',
+        _("Point of Sale"),
+        _("Shops and restaurants, online or offline."),
+    ),
 ] %}
 <div id="o_content">
     <h1>{{ _("Odoo Documentation") }}</h1>
@@ -40,8 +56,14 @@
             <h2 class="h3">{{ _("Get started with Odoo") }}</h2>
             <p>{{ _("Learn the basics shared by every app: records, views, search, activities, and reporting.") }}</p>
             <div class="d-flex flex-wrap gap-2">
-                <a href="{{ pathto('applications/essentials') }}" class="o_cta btn btn-dark">{{ _("Odoo essentials") }}</a>
-                <a href="https://www.odoo.com/trial" class="o_cta btn btn-light">{{ _("Try Odoo for free") }}</a>
+                <a
+                    href="{{ pathto('applications/essentials') }}"
+                    class="o_cta btn btn-dark"
+                >{{ _("Odoo essentials") }}</a>
+                <a
+                    href="https://www.odoo.com/trial"
+                    class="o_cta btn btn-light"
+                >{{ _("Try Odoo for free") }}</a>
             </div>
         </div>
         <ul class="o_overview_hero_links list-unstyled m-0">
@@ -81,7 +103,10 @@
                 <h2>{{ _("Popular apps") }}</h2>
                 <p>{{ _("The most visited user guides.") }}</p>
             </div>
-            <a href="{{ pathto('applications') }}" class="o_overview_all_apps">{{ _("View all apps") }}</a>
+            <a
+                href="{{ pathto('applications') }}"
+                class="o_overview_all_apps"
+            >{{ _("View all apps") }}</a>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
             {%- for docname, title, description in apps %}
