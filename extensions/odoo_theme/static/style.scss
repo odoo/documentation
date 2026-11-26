@@ -20,6 +20,14 @@
     --o-code-lineno-color: #9A9CA5;
 }
 
+@include color-mode(dark) {
+    --o-text-secondary: #{$body-color-dark};
+    --o-text-muted: #{$body-secondary-color-dark};
+    --o-border-strong: #{$gray-600};
+    --o-surface-active: #{mix($gray-700, $gray-800)};
+    --o-code-lineno-color: #{$body-tertiary-color-dark};
+}
+
 div.related[role="navigation"] {
     display: none;
 }
@@ -80,6 +88,14 @@ body {
     line-height: 1;
 }
 
+.o_color_mode_toggle .o_icon::before {
+    content: 'sunny';
+
+    [data-bs-theme="dark"] & {
+        content: 'dark_mode';
+    }
+}
+
 .o_cta {
     --#{$prefix}btn-padding-y: 0;
     --#{$prefix}btn-padding-x: 1rem;
@@ -89,6 +105,14 @@ body {
     display: inline-flex;
     align-items: center;
     height: 36px;
+}
+
+.o_logo_dark, [data-bs-theme="dark"] .o_logo_light {
+    display: none;
+}
+
+[data-bs-theme="dark"] .o_logo_dark {
+    display: inline;
 }
 
 //------------------------------------------------------------------------------
@@ -577,7 +601,6 @@ main.container-fluid {
     border: $border-width solid var(--#{$prefix}border-color);
     border-radius: .75rem;
     padding: 1.25rem;
-    color: var(--o-text-muted);
     font-weight: $font-weight-normal;
     text-decoration: none;
     transition: border-color .15s, background-color .15s;
@@ -599,6 +622,7 @@ main.container-fluid {
 
     p {
         margin-bottom: .75rem;
+        color: var(--o-text-muted);
 
         &:last-child {
             margin-bottom: 0;
@@ -705,18 +729,12 @@ main.container-fluid {
 
 .toctree-wrapper {
     %toctree-custom-link {
-        > a:not([href="#"]){
-            --#{$prefix}link-color-rgb: #{to-rgb($o-gray-color)};
-
-            &:hover {
-                --#{$prefix}link-color-rgb: #{to-rgb($primary)};
-            }
-
-            &:after {
-                content: ' #{$i-link}';
-                @include o-inline-icon(auto, baseline, 0.7em, $font-weight-bold);
-                color: $primary;
-            }
+        > a:not([href="#"]):after {
+            @include o-icon;
+            content: 'link';
+            margin-left: .3em;
+            color: var(--o-text-muted);
+            font-size: .7em;
         }
     }
 
@@ -734,7 +752,7 @@ main.container-fluid {
             margin-top: $o-padding-m;
             margin-bottom: $o-margin-s;
             padding-bottom: $o-padding-xs;
-            border-bottom: 1px solid $o-gray-border;
+            border-bottom: 1px solid var(--#{$prefix}border-color);
             @include font-size($h2-font-size);
             font-weight: $font-weight-bolder;
         }
@@ -746,7 +764,7 @@ main.container-fluid {
     }
 
     a[href="#"] {
-        color: $o-gray-color;
+        color: var(--#{$prefix}emphasis-color);
         font-weight: $font-weight-bold;
         pointer-events: none;
         cursor: default;
@@ -762,7 +780,7 @@ article.doc-body {
 
     // Search items highlighted
     span.highlighted {
-        background-color: lighten($warning, 15%);
+        background-color: var(--#{$prefix}highlight-bg);
     }
 
     section {
@@ -964,11 +982,11 @@ ol ol {
 //File
     &.file {
         padding-right: .4rem;
-        background-color: $blue-100;
+        background-color: var(--#{$prefix}info-bg-subtle);
         font-family: $font-family-base;
         font-weight: $font-weight-medium;
         font-style: italic;
-        color: $blue-700;
+        color: var(--#{$prefix}info-text-emphasis);
     }
 }
 
@@ -976,7 +994,7 @@ ol ol {
 .dfn{
     @include font-size($font-size-sm);
     line-height: 1;
-    color: $blue-600;
+    color: var(--#{$prefix}info-text-emphasis);
     font-weight: $font-weight-bold;
 
     &:before {
@@ -985,10 +1003,9 @@ ol ol {
         width: 15px;
         height: 15px;
         margin: 0 .1rem;
-        border: 2px solid $blue-600;
+        border: 2px solid currentColor;
         border-radius: 20px;
         text-align: center;
-        color: $blue-600;
         font-size: 12px;
         font-weight: $font-weight-bolder;
         font-style: normal;
@@ -1044,14 +1061,14 @@ dl.py, dl.js, dl.o-definition-list {
         margin-top: -0.075rem;
         padding-left: $o-padding-s;
         padding-top: $o-padding-xs;
-        border-left: 3px solid $o-literals-border;
+        border-left: 3px solid var(--#{$prefix}secondary-bg);
     }
 
     &.class em.property {
         font-size: $font-size-sm;
 
         &:first-child {
-            border-bottom: 3px solid $o-literals-border;
+            border-bottom: 3px solid var(--#{$prefix}secondary-bg);
         }
 
         &:not(:first-child) {
@@ -1065,7 +1082,7 @@ dl.py, dl.js, dl.o-definition-list {
 // within the References (ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#odoo.fields.Field)
 dl.field-list {
     padding: .5rem;
-    border: 1px solid $o-gray-border;
+    border: 1px solid var(--o-border-strong);
     @include font-size($font-size-sm);
 
     @include media-breakpoint-down(lg) {
@@ -1127,7 +1144,7 @@ span.viewcode-link {
     thead th {
         position: sticky;
         z-index: 2;
-        background-color: $white;
+        background-color: var(--#{$prefix}body-bg);
         top: $o-headers-height;
     }
 }
@@ -1145,10 +1162,10 @@ span:target + h4 {
 
 @keyframes highlight-fade {
     0% {
-        background-color: lighten($warning, 15%);
+        background-color: var(--#{$prefix}highlight-bg);
     }
     50% {
-        background-color: lighten($warning, 15%);
+        background-color: var(--#{$prefix}highlight-bg);
     }
     100% {
         background-color: transparent;
@@ -1230,6 +1247,12 @@ span:target + h4 {
         --o-alert-icon: 'dangerous';
         --o-alert-icon-color: #D92D20;
     }
+
+    @each $state in info, success, warning, danger {
+        [data-bs-theme="dark"] &.alert-#{$state} {
+            --o-alert-icon-color: var(--#{$prefix}#{$state}-text-emphasis);
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -1237,7 +1260,13 @@ span:target + h4 {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    @include o-alert-variant($accordion-color, $gray-200);
+    --#{$prefix}alert-bg: var(--#{$prefix}secondary-bg);
+    --#{$prefix}accordion-color: var(--#{$prefix}body-color);
+    --#{$prefix}accordion-bg: transparent;
+    --#{$prefix}accordion-btn-color: var(--#{$prefix}emphasis-color);
+    --#{$prefix}accordion-active-color: var(--#{$prefix}emphasis-color);
+
+    display: block;
 
     .accordion-button {
         &::after {
@@ -1263,7 +1292,7 @@ span:target + h4 {
         }
 
         code, div[class^="highlight"] {
-            border-color: tint-color($dark, 50%);
+            border-color: var(--o-border-strong);
 
             &:first-child:last-child {
                 margin-bottom: 0;
@@ -1290,6 +1319,10 @@ span:target + h4 {
     &:hover .card {
         border-color: var(--o-border-strong);
         background-color: var(--#{$prefix}tertiary-bg);
+    }
+
+    .card-text {
+        color: var(--o-text-muted);
     }
 }
 
@@ -1415,7 +1448,7 @@ footer {
     .o_get_help {
         padding-top: $o-padding-l;
         padding-bottom: $o-padding-l;
-        background: $o-gray-bg;
+        background: var(--#{$prefix}secondary-bg);
 
         @include media-breakpoint-up(lg) {
             padding-left: calc(#{$o-side-nav-width} + #{$o-padding-l})
@@ -1423,8 +1456,18 @@ footer {
 
         h4 {
             margin-bottom: $o-margin-s;
-            color: $secondary;
+            color: var(--#{$prefix}emphasis-color);
             font-weight: $font-weight-bolder;
+        }
+
+        .btn-outline-secondary {
+            --#{$prefix}btn-color: var(--#{$prefix}emphasis-color);
+            --#{$prefix}btn-border-color: var(--o-border-strong);
+            --#{$prefix}btn-hover-color: var(--#{$prefix}emphasis-color);
+            --#{$prefix}btn-hover-bg: var(--o-surface-active);
+            --#{$prefix}btn-hover-border-color: var(--o-border-strong);
+            --#{$prefix}btn-active-color: var(--#{$prefix}emphasis-color);
+            --#{$prefix}btn-active-bg: var(--o-surface-active);
         }
 
     }

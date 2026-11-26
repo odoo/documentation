@@ -1,7 +1,8 @@
 <div class="o_main_header d-flex align-items-center border-bottom">
     <div class="o_logo_wrapper flex-shrink-0">
         <a href="{{ pathto(master_doc) }}" class="o_logo">
-            <img src="{{ pathto('_static/img/logos/odoo_logo.svg', 1) }}" alt="Odoo"/>
+            <img class="o_logo_light" src="{{ pathto('_static/img/logos/odoo_logo.svg', 1) }}" alt="Odoo"/>
+            <img class="o_logo_dark" src="{{ pathto('_static/img/odoo_logo_white.png', 1) }}" alt="Odoo"/>
             <span>docs</span>
         </a>
     </div>
@@ -15,6 +16,15 @@
             {{- _('Try Odoo') }}<small><i class="o_icon" data-icon="call_made" aria-hidden="true"></i></small>
         </a>
         {%- include "layout_templates/language_switcher.html" %}
+        <button
+            type="button"
+            class="o_color_mode_toggle o_icon_button btn"
+            title="{{ _('Dark mode') }}"
+            aria-label="{{ _('Dark mode') }}"
+            aria-pressed="false"
+        >
+            <i class="o_icon" aria-hidden="true"></i>
+        </button>
     </div>
 </div>
 <nav class="o_subheader d-flex border-bottom">
