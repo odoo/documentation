@@ -20,6 +20,14 @@
     --o-code-lineno-color: #{$gray-500};
 }
 
+@include color-mode(dark) {
+    --o-text-secondary: #B3B4B8;
+    --o-text-muted: #{$body-secondary-color-dark};
+    --o-border-strong: #56575E;
+    --o-surface-active: #{mix($link-color-dark, $body-bg-dark, 15%)};
+    --o-code-lineno-color: #6E6F77;
+}
+
 div.related[role="navigation"] {
     display: none;
 }
@@ -66,6 +74,12 @@ body {
     --#{$prefix}btn-disabled-border-color: transparent;
 }
 
+@include color-mode(dark) {
+    .btn-primary {
+        @include button-variant($o-primary-dark, $o-primary-dark);
+    }
+}
+
 .o_icon_button {
     --#{$prefix}btn-padding-x: .5rem;
     --#{$prefix}btn-padding-y: .5rem;
@@ -76,6 +90,14 @@ body {
     color: var(--#{$prefix}emphasis-color);
     font-size: 20px;
     line-height: 1;
+}
+
+.o_color_mode_toggle .o_icon::before {
+    content: 'sunny';
+
+    [data-bs-theme="dark"] & {
+        content: 'dark_mode';
+    }
 }
 
 .o_cta {
@@ -97,6 +119,14 @@ body {
         font-size: 18px;
         font-weight: $font-weight-medium;
     }
+}
+
+.o_logo_dark, [data-bs-theme="dark"] .o_logo_light {
+    display: none;
+}
+
+[data-bs-theme="dark"] .o_logo_dark {
+    display: inline;
 }
 
 //------------------------------------------------------------------------------
@@ -1278,6 +1308,12 @@ span:target + h4 {
     &.alert-danger {
         --o-alert-icon: 'dangerous';
         --o-alert-icon-color: #D23F3A;
+    }
+
+    @each $state in info, success, warning, danger {
+        [data-bs-theme="dark"] &.alert-#{$state} {
+            --o-alert-icon-color: var(--#{$prefix}#{$state}-text-emphasis);
+        }
     }
 }
 

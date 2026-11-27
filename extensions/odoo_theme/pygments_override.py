@@ -35,6 +35,40 @@ class OdooStyle(Style):
         Error: '#82071E',
     }
 
+
+class OdooDarkStyle(Style):
+    """ Dark style of the code blocks, after the colors of GitHub. """
+
+    background_color = '#0D1117'
+    highlight_color = '#433E2A'
+
+    styles = {
+        Token: '#E6EDF3',
+        Comment: '#8B949E',
+        Keyword: '#FF7B72',
+        Operator.Word: '#FF7B72',
+        Name.Class: '#D2A8FF',
+        Name.Function: '#D2A8FF',
+        Name.Decorator: '#D2A8FF',
+        Name.Exception: '#D2A8FF',
+        Name.Builtin: '#79C0FF',
+        Name.Variable: '#FFA657',
+        Name.Attribute: '#79C0FF',
+        Name.Tag: '#7EE787',
+        String: '#A5D6FF',
+        Number: '#79C0FF',
+        Generic.Heading: 'bold #79C0FF',
+        Generic.Subheading: 'bold #79C0FF',
+        Generic.Deleted: 'bg:#490202 #FFA198',
+        Generic.Inserted: 'bg:#04260F #7EE787',
+        Generic.Emph: 'italic',
+        Generic.Strong: 'bold',
+        Generic.Prompt: '#8B949E',
+        Generic.Output: '#8B949E',
+        Generic.Error: '#FFA198',
+        Error: '#FFA198',
+    }
+
 import sys
 import types
 

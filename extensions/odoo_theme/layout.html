@@ -1,6 +1,18 @@
 {%- extends "basic/layout.html" %}
 {%- set html5_doctype = True %}
 
+{%- block extrahead %}
+    {{- super() }}
+    {# Apply the color mode before the page is painted, see color_mode.js #}
+    <script>
+        document.documentElement.dataset.bsTheme = (() => {
+            try {
+                return localStorage.getItem('o_color_mode');
+            } catch {}
+        })() || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    </script>
+{%- endblock %}
+
 {%- block css %}
     {{ super() }}
     {%- if 'custom-css' in meta %} {# Allow custom css style import for specific pages #}

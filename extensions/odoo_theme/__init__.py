@@ -1,5 +1,8 @@
+import os
+
 from docutils import nodes
 from docutils.parsers.rst import roles
+from pygments.formatters import HtmlFormatter
 from sphinx import addnodes
 from sphinx.environment.adapters import toctree
 
@@ -18,6 +21,10 @@ def setup(app):
     app.add_js_file('js/page_toc.js')
     app.add_js_file('js/switchers.js')
     app.add_js_file('js/copy.js')
+    app.add_js_file('js/color_mode.js')
+
+    app.add_css_file('pygments_dark.css')
+    app.connect('build-finished', write_dark_pygments_style)
 
     roles.register_canonical_role('icon', icon_role)
 
@@ -29,6 +36,18 @@ def setup(app):
 def set_missing_meta(app, pagename, templatename, context, doctree):
     if context.get('meta') is None:  # Pages without title (used with `include::`) have no meta
         context['meta'] = {}
+
+
+def write_dark_pygments_style(app, exception):
+    """ Write the style of the code blocks in Bootstrap's dark color mode. """
+    if exception or app.builder.format != 'html':
+        return
+    selector = '[data-bs-theme="dark"] .highlight'
+    style_defs = HtmlFormatter(style=pygments_override.OdooDarkStyle).get_style_defs(selector)
+    # Pygments >= 2.7 adds unscoped rules for the line numbers, already styled by the theme.
+    style_defs = '\n'.join(line for line in style_defs.splitlines() if line.startswith(selector))
+    with open(os.path.join(app.builder.outdir, '_static', 'pygments_dark.css'), 'w') as file:
+        file.write(style_defs + '\n')
 
 
 def add_sections(app, pagename, templatename, context, doctree):
