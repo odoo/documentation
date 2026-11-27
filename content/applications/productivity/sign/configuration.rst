@@ -11,19 +11,20 @@ Sign's general settings, available via :menuselection:`Sign --> Configuration --
 you to:
 
 - add :ref:`Default Terms & Conditions <sign/configuration/settings-t-and-c>` to the signature
-  request email
+  request email.
 - :guilabel:`Manage template access`; once enabled, it is possible to restrict access to a template
   to specific user groups when :ref:`creating or editing the template
-  <sign/request-signatures/templates>`
+  <sign/request-signatures/templates>`.
 - enable the following additional authentication methods, manage the service, and buy credits:
 
-  - :ref:`Aadhaar eSign <sign/security/authentication-aadhaar>` (available in India)
+  - :ref:`Aadhaar eSign <sign/security/authentication-aadhaar>` (available in India).
   - :ref:`itsme® <sign/security/authentication-itsme>` (available in the EU, the UK, Norway, and
-    Iceland)
-
-- manage authentication via SMS and :ref:`buy credits <in_app_purchase/credits>`
+    Iceland).
+- enable :ref:`sending requests via WhatsApp <sign/configuration/whatsapp>` and managing WhatsApp
+  templates (requests, completions and refusals templates).
+- manage authentication via SMS and :ref:`buy credits <in_app_purchase/credits>`.
 - upload a `.p12` or `.pfx` file containing a personal digital certificate, allowing you to add a
-  :ref:`cryptographic, or digital, signature <sign/security/cryptographic>` to a document
+  :ref:`cryptographic, or digital, signature <sign/security/cryptographic>` to a document.
 
 .. _sign/configuration/settings-t-and-c:
 
@@ -63,6 +64,29 @@ To add default terms and conditions to signature requests:
    :guilabel:`Communication` section of the template :guilabel:`Configuration` when creating or
    editing the template.
 
+.. _sign/configuration/whatsapp:
+
+Send requests via WhatsApp
+--------------------------
+
+Use :doc:`WhatsApp <../../../applications/productivity/whatsapp>` to send signature requests to the signers.
+
+To enable the feature:
+
+#. Go to :menuselection:`Sign --> Configuration --> Settings` and activate
+   :guilabel:`Send Requests through WhatsApp`,
+#. Select a :guilabel:`Request template`, a :guilabel:`Completion Template` and a
+   :guilabel:`Refusal Template`.
+
+ .. Note::
+
+    - With multi-companies, each company can work with different templates.
+      Switch company, then select the desired templates for the requests, the completions and the
+      refusals.
+    - Ensure the contact has a phone number using WhatsApp recorded on its contact form.
+    - Ensure a :ref:`phone number <productivity/whatsapp/add-phone-number>` is recorded in the
+      WhatsApps settings in Odoo.
+
 .. _sign/configuration/fields:
 
 Fields
@@ -92,8 +116,8 @@ To create or edit a field:
    - :guilabel:`Placeholder`: Optionally, specify a placeholder text that provides the signer with a
      hint or example :ref:`during the signing process <sign/sign-document/signature-request>`. If
      this field is left blank, the :guilabel:`Field Name` is used as placeholder text.
-   - :guilabel:`Tip`: Add a tip that will be displayed inside an arrow to the left
-     of the document during the signing process to help the signer understand what action to take
+   - :guilabel:`Tip`: Add a tip that will be displayed inside an arrow to the left of the document
+     during the signing process to help the signer understand what action to take
      (e.g., "Sign here").
    - :guilabel:`Mandatory`: Enable the checkbox to make the field mandatory by default.
    - :guilabel:`Read Only`: Enable the checkbox to make the field read-only by default.
@@ -103,8 +127,12 @@ To create or edit a field:
         manually when :ref:`adding the field to a document <sign/request-signatures/add-fields>`.
 
    - For :guilabel:`Text`, :guilabel:`Multiline Text`, and :guilabel:`Date` fields only, use the
-     :guilabel:`Linked to` field to :ref:`configure auto-completion
+     fields :guilabel:`Linked to` and :guilabel:`field` to :ref:`configure auto-completion
      <sign/configuration/auto-fill>` so the field is auto-completed during the signing process.
+
+     .. tip::
+        Tick the :guilabel:`Update field` box to ensure that the information entered during signing
+        is automatically updated in the corresponding field of the relevant Odoo record.
 
 .. _sign/configuration/field-types:
 
