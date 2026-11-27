@@ -11,22 +11,24 @@ from sphinx.writers.html5 import HTML5Translator
 
 ADMONITION_MAPPING = {
     'note': 'alert-primary',
+    'seealso': 'alert-primary',
+    'example': 'alert-primary',
+    'exercise': 'alert-primary',
 
-    'tip': 'alert-tip',
+    'important': 'alert-info',
 
-    'seealso': 'alert-secondary',
+    'tip': 'alert-success',
 
     'warning': 'alert-warning',
     'attention': 'alert-warning',
     'caution': 'alert-warning',
-    'important': 'alert-warning',
 
     'danger': 'alert-danger',
     'error': 'alert-danger',
-
-    'example': 'alert-success',
-    'exercise': 'alert-dark',
 }  # The alert classes have been replaced by default BS classes to reduce number of scss lines.
+
+# Interactive sessions, whose lines are not numbered.
+SESSION_LANGUAGES = ('console', 'doscon', 'pycon')
 
 
 class BootstrapTranslator(HTML5Translator):
@@ -109,9 +111,7 @@ class BootstrapTranslator(HTML5Translator):
     # admonition [name] -> alert-[name]
     # Enforce presence of [name]-title as class on the <p> containing the title
     def visit_admonition(self, node, name=''):
-        node_classes = ["alert"]
-        if name:
-            node_classes.append(ADMONITION_MAPPING[name])
+        node_classes = ["alert", ADMONITION_MAPPING[name] if name else 'alert-primary']
         self.body.append(self.starttag(
             node, 'div', CLASS=" ".join(node_classes)))
         if name:
@@ -143,6 +143,16 @@ class BootstrapTranslator(HTML5Translator):
         node['classes'].append('o_code')
         return super().visit_literal(node)
 
+    def visit_literal_block(self, node):
+        """ Override to number the lines of the code blocks that have several. """
+        if (
+            node.rawsource == node.astext()  # Not a parsed literal, which is not highlighted
+            and '\n' in node.rawsource.strip()
+            and node.get('language') not in SESSION_LANGUAGES
+        ):
+            node['linenos'] = True
+        return super().visit_literal_block(node)
+
     def visit_literal_strong(self, node):
         """ Override to add the class `o_code` to all `command` roles. """
         if 'command' in node['classes']:
@@ -163,4 +173,11 @@ class BootstrapTranslator(HTML5Translator):
         if 'align' in node:
             classes.append('align-%s' % node['align'])
         tag = self.starttag(node, 'table', CLASS=' '.join(classes))
+        if 'table-sticky-header' not in node['classes']:  # Sticky headers need the page to scroll
+            self.body.append('<div class="table-responsive">')
         self.body.append(tag)
+
+    def depart_table(self, node):
+        super().depart_table(node)
+        if 'table-sticky-header' not in node['classes']:
+            self.body.append('</div>\n')

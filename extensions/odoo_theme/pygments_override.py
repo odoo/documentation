@@ -1,42 +1,38 @@
 from pygments.style import Style
-from pygments.token import Keyword, Name, Comment, String, Error, \
-    Number, Other, Whitespace, Generic
+from pygments.token import Comment, Error, Generic, Keyword, Name, Number, Operator, String, Token
+
 
 class OdooStyle(Style):
-    """
-    Style inspired by SAS' enhanced program editor. Note This is not
-    meant to be a complete style. It's merely meant to mimic SAS'
-    program editor syntax highlighting.
-    :copyright: Copyright 2006-2021 by the Pygments team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
-    """
+    """ Light style of the code blocks, after the colors of GitHub. """
 
-    default_style = ''
-
-    background_color = '#F8F8F8'
-    highlight_color = '#EAEAEA'
+    background_color = '#FFFFFF'
+    highlight_color = '#FFF8C5'
 
     styles = {
-        Whitespace: '#bbbbbb',
-        Comment: 'italic #8c8c8c',
-        String: '#800080',
-        Number: 'bold',
-        Other: 'bg:#ffffe0',
-        Keyword: '#2c2cff',
-        Keyword.Reserved: 'bold #353580',
-        Keyword.Constant: 'bold',
-        Name.Builtin: '#2c2cff',
-        Name.Function: 'bold italic',
-        Name.Class: "bold #0000FF",
-        Name.Namespace: "bold #0000FF",
-        Name.Exception: 'bg:#e3d2d2 #a61717',
-        Name.Variable: 'bold #2c2cff',
-        Name.Attribute: '#2c2cff',
-        Name.Tag: "bold #008000",
-        Generic: '#2c2cff',
-        Generic.Emph: '#008800',
-        Generic.Error: '#d30202',
-        Error: 'bg:#ffe2e2 #a61717'
+        Token: '#1F2328',
+        Comment: '#59636E',
+        Keyword: '#CF222E',
+        Operator.Word: '#CF222E',
+        Name.Class: '#8250DF',
+        Name.Function: '#8250DF',
+        Name.Decorator: '#8250DF',
+        Name.Exception: '#8250DF',
+        Name.Builtin: '#0550AE',
+        Name.Variable: '#953800',
+        Name.Attribute: '#0550AE',
+        Name.Tag: '#116329',
+        String: '#0A3069',
+        Number: '#0550AE',
+        Generic.Heading: 'bold #0550AE',
+        Generic.Subheading: 'bold #0550AE',
+        Generic.Deleted: 'bg:#FFEBE9 #82071E',
+        Generic.Inserted: 'bg:#DAFBE1 #116329',
+        Generic.Emph: 'italic',
+        Generic.Strong: 'bold',
+        Generic.Prompt: '#59636E',
+        Generic.Output: '#59636E',
+        Generic.Error: '#82071E',
+        Error: '#82071E',
     }
 
 import sys

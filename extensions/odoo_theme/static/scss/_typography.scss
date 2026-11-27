@@ -5,8 +5,7 @@
 //------------------------------------------------------------------------------
 // Fonts
 //------------------------------------------------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @font-face {
   font-family: 'icomoon';
   src: url('fonts/icomoon.woff2') format('woff2'),
@@ -23,28 +22,99 @@
   font-display: block;
 }
 
+//------------------------------------------------------------------------------
+// Tracking
+//------------------------------------------------------------------------------
+// Tracking of Inter for each font size in px, from its dynamic metrics
+// (-.0223 + .185 * e^(-.1745 * size) em): https://d.rsms.me/inter-website/v3/dynmetrics/
+$o-inter-tracking: (
+    13: -.003em,
+    14: -.006em,
+    16: -.011em,
+    18: -.014em,
+    22: -.018em,
+    26: -.02em,
+);
+
+// Return the tracking of a font size in rem, or in em of a 16px parent. A letter spacing becomes a
+// length on the element declaring it and is inherited as is, so each rule setting a font size sets
+// its tracking too.
+@function o-tracking($font-size) {
+    $size: $font-size / ($font-size * 0 + 1) * 16;
+    @if not map-has-key($o-inter-tracking, $size) {
+        @error "No tracking for #{$size}px in $o-inter-tracking";
+    }
+    @return map-get($o-inter-tracking, $size);
+}
+
 html body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: o-tracking($font-size-base);
+}
+
+// Browsers reset the tracking of form controls.
+button, input, select, textarea {
+    letter-spacing: inherit;
+}
+
+// The tracking of Inter doesn't apply to monospace fonts.
+code, kbd, pre, samp {
+    letter-spacing: normal;
 }
 
 //------------------------------------------------------------------------------
 // Headings
 //------------------------------------------------------------------------------
-// Increase Inter's readability when used for huge titles.
-@for $i from 1 through 4 {
-    .display-#{$i}, h#{$i}, .h#{$i} {
-        letter-spacing: (3 - $i) * -0.01em; // eg: display-1 -> -0.02em;
-    }
+// Line heights on a 4px grid.
+h1, .h1 {
+    line-height: (32 / 26);
+    letter-spacing: o-tracking($h1-font-size);
+}
+
+h2, .h2 {
+    line-height: (28 / 22);
+    letter-spacing: o-tracking($h2-font-size);
+}
+
+h3, .h3 {
+    line-height: (24 / 18);
+    letter-spacing: o-tracking($h3-font-size);
+}
+
+h4, .h4 {
+    line-height: 1.5;
+    letter-spacing: o-tracking($h4-font-size);
+}
+
+h5, .h5, h6, .h6 {
+    line-height: (20 / 14);
+    letter-spacing: o-tracking($h5-font-size);
+}
+
+// No smaller size is left for h6, so its color sets it apart from h5.
+h6, .h6 {
+    color: var(--o-text-secondary);
+}
+
+.lead {
+    line-height: (28 / 18);
+    letter-spacing: o-tracking($lead-font-size);
+    color: var(--o-text-muted);
+}
+
+small, .small {
+    line-height: (20 / 13);
+    letter-spacing: o-tracking($small-font-size);
 }
 
 //------------------------------------------------------------------------------
 // Font Styling
 //------------------------------------------------------------------------------
 b, strong{
-    font-weight: $font-weight-bolder;
+    font-weight: $font-weight-bold;
 }
 
 a {
-    font-weight: var(--o-link-fontweight, #{$font-weight-bold});
+    font-weight: var(--o-link-fontweight, #{$font-weight-medium});
 }

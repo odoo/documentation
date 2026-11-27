@@ -10,12 +10,14 @@ def setup(app):
     app.set_translator('html', translator.BootstrapTranslator)
 
     app.connect('html-page-context', set_missing_meta)
+    app.connect('html-page-context', add_sections)
 
     app.add_js_file('js/utils.js')  # Keep in first position
     app.add_js_file('js/layout.js')
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
     app.add_js_file('js/switchers.js')
+    app.add_js_file('js/copy.js')
 
     roles.register_canonical_role('icon', icon_role)
 
@@ -27,6 +29,53 @@ def setup(app):
 def set_missing_meta(app, pagename, templatename, context, doctree):
     if context.get('meta') is None:  # Pages without title (used with `include::`) have no meta
         context['meta'] = {}
+
+
+def add_sections(app, pagename, templatename, context, doctree):
+    """ Add the sections of the documentation (the entries of the root toctree) to the context.
+
+    Each section is a tab of the header, and the side navigation only holds the toctree of the
+    section of the page. Pages outside of the sections (the homepage, the search page...) belong to
+    the "Overview" tab.
+    """
+    env = app.env
+    sections = env.toctree_includes.get(app.config.root_doc, [])
+    ancestors = toctree.TocTree(env).get_toctree_ancestors(pagename)
+    current_section = ancestors[-1] if ancestors and ancestors[-1] in sections else None
+    context['sections'] = [(section, env.titles[section].astext()) for section in sections]
+    context['current_section'] = current_section
+    context['section_toctree'] = lambda: _render_section_toctree(
+        app, pagename, current_section, collapse=bool(context.get('collapse_menu'))
+    )
+
+
+def _render_section_toctree(app, pagename, section, collapse):
+    """ Render the toctrees of a section page, as seen from `pagename`.
+
+    The entries with children are flagged with the class `o_menu_group`, as they are shown as the
+    titles of their children's group.
+    """
+    adapter = toctree.TocTree(app.env)
+    resolved_toctrees = [
+        adapter.resolve(
+            pagename, app.builder, toctree_node, maxdepth=-1,  # Ignore the `maxdepth` option.
+            titles_only=True, collapse=collapse, includehidden=False,
+        )
+        for toctree_node in app.env.get_doctree(section).traverse(addnodes.toctree)
+    ]
+    resolved_toctrees = [resolved_toctree for resolved_toctree in resolved_toctrees if resolved_toctree]
+    if not resolved_toctrees:
+        return ''
+    result = resolved_toctrees[0]
+    for resolved_toctree in resolved_toctrees[1:]:
+        result.extend(resolved_toctree.children)
+    for bullet_list in result.children:
+        if not isinstance(bullet_list, nodes.bullet_list):  # The caption of the toctree
+            continue
+        for list_item in bullet_list.children:
+            if any(isinstance(child, nodes.bullet_list) for child in list_item.children):
+                list_item['classes'].append('o_menu_group')
+    return app.builder.render_partial(result)['fragment']
 
 class Monkey:
     """ Replace patched method of an object by a new method receiving the old one in argument. """

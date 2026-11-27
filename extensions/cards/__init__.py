@@ -86,12 +86,12 @@ class Card(SphinxDirective):
         div_card += div_card_body
 
         title_nodes, _ = self.state.inline_text(self.arguments[0], self.lineno)
-        h4_title = H4('', *title_nodes, classes=['card-title', 'text-primary', 'mb-1'])
+        h4_title = H4('', *title_nodes, classes=['card-title', 'mb-1'])
         set_source_info(self, h4_title)
         div_card_body += h4_title
 
         text_nodes, _ = self.state.inline_text('\n'.join(self.content), self.lineno)
-        p_card_text = nodes.paragraph('', *text_nodes, classes=['card-text', 'text-dark', 'fw-normal'])
+        p_card_text = nodes.paragraph('', *text_nodes, classes=['card-text', 'fw-normal'])
         set_source_info(self, p_card_text)
         div_card_body += p_card_text
 

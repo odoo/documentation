@@ -1,12 +1,18 @@
-{# Global TOC of the doc #}
-{#
-    See: https://www.sphinx-doc.org/en/master/templating.html#toctree
-    collapse: Whether only menu items included in the breadcrumb should be rendered
-    title_only: Whether menu items for content pages (without toctree) should be hidden
-    includehidden: Whether menu items of pages inside a hidden toctree should be rendered
-#}
+{# Navigation of the current section, or of the "Overview" tab for pages outside of sections #}
 {#
     `collapse_menu` is passed directly to Jinja with sphinx-build's option `-A collapse_menu=True`.
-    It it evaluated as a string, so what we're really evaluating here is `collapse_menu != None`.
+    When set, only the entries on the path of the current page are rendered below the groups.
 #}
-{{ toctree(collapse=collapse_menu, titles_only=True, includehidden=False)}}
+{%- if current_section %}
+    <ul>
+        <li class="toctree-l1">
+            <a
+                href="{{ pathto(current_section) }}"
+                class="reference internal {{ 'current' if pagename == current_section else '' }}"
+            >{{ _("Overview") }}</a>
+        </li>
+    </ul>
+    {{ section_toctree() }}
+{%- else %}
+    {%- include "layout_templates/overview_menu.html" %}
+{%- endif %}

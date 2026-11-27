@@ -1,23 +1,43 @@
-<div class="o_main_header border-bottom d-flex align-items-center">
-    <div class="o_logo_wrapper">
-      <a href="{{ pathto(master_doc) }}" class="o_logo">
-          <img src="{{ pathto('_static/img/logos/odoo_logo.svg', 1) }}" height="20" alt="Odoo"/>
-          <span>docs</span>
-      </a>
+<div class="o_main_header d-flex align-items-center border-bottom">
+    <div class="o_logo_wrapper flex-shrink-0">
+        <a href="{{ pathto(master_doc) }}" class="o_logo">
+            <img src="{{ pathto('_static/img/logos/odoo_logo.svg', 1) }}" alt="Odoo"/>
+            <span>docs</span>
+        </a>
     </div>
-    <div class="d-flex flex-grow-1">
-        {%- include "layout_templates/searchbox.html" %}
-        <a class="btn btn-primary fw_bold ms-auto d-none d-lg-inline-block" href="https://odoo.com/trial">{{ _('Try Odoo for FREE') }}</a>
-    </div>
-</div>
-<div class="o_subheader border-bottom d-flex">
-    <div class="o_side_nav_toggler_wrapper border-end d-flex d-lg-none">
-        <button class="h-100 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#o_menu" aria-label="Toggle navigation">
-            <i class="i-sidepanel"></i>
-        </button>
-    </div>
-    <div class="d-flex justify-content-end ms-auto">
-        {%- include "layout_templates/language_switcher.html" %}
+    {%- include "layout_templates/searchbox.html" %}
+    <div class="d-flex align-items-center gap-2">
         {%- include "layout_templates/version_switcher.html" %}
+        <a
+            href="https://www.odoo.com/trial"
+            class="o_cta btn btn-primary d-none d-lg-inline-flex gap-1"
+        >
+            {{- _('Try Odoo') }}<small><i class="o_icon" data-icon="call_made" aria-hidden="true"></i></small>
+        </a>
+        {%- include "layout_templates/language_switcher.html" %}
     </div>
 </div>
+<nav class="o_subheader d-flex border-bottom">
+    <button
+        type="button"
+        class="o_side_nav_toggler d-lg-none border-0 border-end px-3"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#o_menu"
+        aria-controls="o_menu"
+        aria-label="{{ _('Toggle navigation') }}"
+    >
+        <i class="o_icon" data-icon="menu" aria-hidden="true"></i>
+    </button>
+    <ul class="o_sections nav flex-nowrap mx-auto overflow-x-auto">
+        {%- for docname, title in [(master_doc, _('Overview'))] + sections %}
+            {%- set is_active = docname == (current_section or master_doc) %}
+            <li class="nav-item">
+                <a
+                    href="{{ pathto(docname) }}"
+                    class="nav-link {{ 'active' if is_active else '' }}"
+                    {{- ' aria-current="page"' if docname == pagename else '' }}
+                >{{ title|e }}</a>
+            </li>
+        {%- endfor %}
+    </ul>
+</nav>

@@ -5,15 +5,16 @@
 
 // Colors
 $white:                                     #FFFFFF;
-$gray-100:                                  #F8F8F8 !default;
-$gray-200:                                  #F2F2F2 !default;
-$gray-300:                                  #DEE2E6 !default;
-$gray-400:                                  #D5D5D5 !default;
-$gray-500:                                  #ADB5BD !default;
-$gray-600:                                  #888888 !default;
-$gray-700:                                  #707070 !default;
-$gray-800:                                  #343A40 !default;
-$gray-900:                                  #282F33 !default;
+// The grays and the status colors of Odoo's "Frost" design.
+$gray-100:                                  #F8F9FA;
+$gray-200:                                  #E7EBED;
+$gray-300:                                  #DEE2E6;
+$gray-400:                                  #CED4DA;
+$gray-500:                                  #ADB5BD;
+$gray-600:                                  #6C757D;
+$gray-700:                                  #495057;
+$gray-800:                                  #343A40;
+$gray-900:                                  #212529;
 
 $blue:                                      #77b5d1;
 $purple:                                    #714B67;
@@ -23,33 +24,53 @@ $orange:                                    #f39c1e;
 $green:                                     #519161;
 $teal:                                      #017e84;
 
-$primary:                                   $teal;
+$primary:                                   $purple;
 $secondary:                                 $purple;
 $light:                                     $gray-100;
 $dark:                                      $gray-900;
-$success:                                   $green;
-$info:                                      $blue;
-$warning:                                   $orange;
-$danger:                                    $red;
+$success:                                   #00A945;
+$info:                                      #17A2B8;
+$warning:                                   #F59E0B;
+$danger:                                    #EF4444;
 
 $body-secondary-color:                      $gray-600;
+$body-tertiary-bg:                          $gray-100;
+$headings-color:                            #000;
+// As in Frost, the brand color is for the primary buttons and the teal is for actions: links,
+// focus and selection.
+$link-color:                                $teal;
+$component-active-bg:                       $teal;
+$focus-ring-color:                          rgba($teal, .25);
 
-// Borders
-$border-radius:                             .25rem;
-$border-radius-sm:                          .2rem;
+$success-bg-subtle:                         tint-color($success, 90%);
+$info-bg-subtle:                            tint-color($info, 90%);
+$warning-bg-subtle:                         tint-color($warning, 90%);
+$danger-bg-subtle:                          tint-color($danger, 90%);
+
+// Borders, with the radii of Frost
+$border-radius:                             .375rem;
+$border-radius-sm:                          .25rem;
+$border-radius-lg:                          .5rem;
+$border-radius-xl:                          .75rem;
 
 // Fonts
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:                    "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !default;
+$font-family-sans-serif:                    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-monospace:                     ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-// Change scale from Major Third to Major Second (ref: https://type-scale.com/)
 $font-size-base:                            1rem;
-$h1-font-size:                              $font-size-base * 1.802 !default;
-$h2-font-size:                              $font-size-base * 1.602 !default;
-$h3-font-size:                              $font-size-base * 1.424 !default;
-$h4-font-size:                              $font-size-base * 1.266 !default;
-$h5-font-size:                              $font-size-base * 1.125 !default;
-$h6-font-size:                              $font-size-base !default;
+$line-height-base:                          1.6;
+$h1-font-size:                              $font-size-base * 1.625;
+$h2-font-size:                              $font-size-base * 1.375;
+$h3-font-size:                              $font-size-base * 1.125;
+$h4-font-size:                              $font-size-base;
+$h5-font-size:                              $font-size-base * .875;
+$h6-font-size:                              $h5-font-size;
+$headings-font-weight:                      600;
+$lead-font-size:                            $font-size-base * 1.125;
+$lead-font-weight:                          400;
+$small-font-size:                           .8125em;
+$code-font-size:                            .875em;
 
 
 $font-weight-lighter:         200;
@@ -60,16 +81,14 @@ $font-weight-bold:            600;
 $font-weight-bolder:          700;
 
 // Tables
-$table-color:                               var(--bs-body-color);
+$table-color:                               var(--o-text-secondary);
+$table-cell-padding-y:                      .75rem;
+$table-cell-padding-x:                      1rem;
 $table-bg:                                  transparent;
 
 // Images
 
 $thumbnail-padding:                         .5rem;
-
-// Links
-$link-decoration:             none;
-$link-hover-decoration:       underline;
 
 // Buttons
 // For each of Bootstrap's buttons, define text, background, and border color.
@@ -113,8 +132,7 @@ $accordion-icon-active-color:               $accordion-button-active-color;
 $accordion-icon-transform:                  rotate(0deg) !default;
 
 //Alert
-$alert-border-width:                        3px;
-$alert-border-radius:                       0 3px 3px 0;
+$alert-border-radius:                       $border-radius-xl;
 
 // Card
 $card-cap-bg:                               transparent;
