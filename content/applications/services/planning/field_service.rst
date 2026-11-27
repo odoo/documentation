@@ -325,3 +325,8 @@ click :guilabel:`Sign Report` to collect the customer's :ref:`signature
    interventions, go to :menuselection:`Planning --> Configuration --> Settings`, ensure the
    :guilabel:`Billing` and :guilabel:`Products` features are activated, enable :guilabel:`Hide
    prices on customer report`, and :guilabel:`Save`.
+
+.. toctree::
+   :titlesonly:
+
+   field_service/field_service_equipment
