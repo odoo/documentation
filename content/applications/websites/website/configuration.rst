@@ -13,4 +13,5 @@ Configuration
    configuration/translate
    configuration/multi_website
    configuration/spam_protection
+   configuration/bot_protection
    configuration/cdn
