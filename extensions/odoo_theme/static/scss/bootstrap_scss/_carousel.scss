@@ -42,7 +42,6 @@
   display: block;
 }
 
-/* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%);
@@ -52,8 +51,6 @@
 .active.carousel-item-start {
   transform: translateX(-100%);
 }
-
-/* rtl:end:ignore */
 
 
 //
@@ -98,8 +95,12 @@
   align-items: center; // 2. vertically center contents
   justify-content: center; // 3. horizontally center contents
   width: $carousel-control-width;
+  padding: 0;
   color: $carousel-control-color;
   text-align: center;
+  background: none;
+  filter: var(--#{$prefix}carousel-control-icon-filter);
+  border: 0;
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
@@ -132,25 +133,17 @@
   background-size: 100% 100%;
 }
 
-/* rtl:options: {
-  "autoRename": true,
-  "stringMap":[ {
-    "name"    : "prev-next",
-    "search"  : "prev",
-    "replace" : "next"
-  } ]
-} */
 .carousel-control-prev-icon {
-  background-image: escape-svg($carousel-control-prev-icon-bg);
+  background-image: escape-svg($carousel-control-prev-icon-bg) #{"/*rtl:" + escape-svg($carousel-control-next-icon-bg) + "*/"};
 }
 .carousel-control-next-icon {
-  background-image: escape-svg($carousel-control-next-icon-bg);
+  background-image: escape-svg($carousel-control-next-icon-bg) #{"/*rtl:" + escape-svg($carousel-control-prev-icon-bg) + "*/"};
 }
 
-// Optional indicator pips
+// Optional indicator pips/controls
 //
-// Add an ordered list with the following class and add a list item for each
-// slide your carousel holds.
+// Add a container (such as a list) with the following class and add an item (ideally a focusable control,
+// like a button) with data-bs-target for each slide your carousel holds.
 
 .carousel-indicators {
   position: absolute;
@@ -160,23 +153,25 @@
   z-index: 2;
   display: flex;
   justify-content: center;
-  padding-left: 0; // override <ol> default
+  padding: 0;
   // Use the .carousel-control's width as margin so we don't overlay those
   margin-right: $carousel-control-width;
+  margin-bottom: 1rem;
   margin-left: $carousel-control-width;
-  list-style: none;
 
-  li {
+  [data-bs-target] {
     box-sizing: content-box;
     flex: 0 1 auto;
     width: $carousel-indicator-width;
     height: $carousel-indicator-height;
+    padding: 0;
     margin-right: $carousel-indicator-spacer;
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
-    background-color: $carousel-indicator-active-bg;
+    background-color: var(--#{$prefix}carousel-indicator-active-bg);
     background-clip: padding-box;
+    border: 0;
     // Use transparent borders to increase the hit area by 10px on top and bottom.
     border-top: $carousel-indicator-hit-area-height solid transparent;
     border-bottom: $carousel-indicator-hit-area-height solid transparent;
@@ -196,28 +191,36 @@
 
 .carousel-caption {
   position: absolute;
-  right: (100% - $carousel-caption-width) / 2;
+  right: (100% - $carousel-caption-width) * .5;
   bottom: $carousel-caption-spacer;
-  left: (100% - $carousel-caption-width) / 2;
+  left: (100% - $carousel-caption-width) * .5;
   padding-top: $carousel-caption-padding-y;
   padding-bottom: $carousel-caption-padding-y;
-  color: $carousel-caption-color;
+  color: var(--#{$prefix}carousel-caption-color);
   text-align: center;
 }
 
 // Dark mode carousel
 
+@mixin carousel-dark() {
+  --#{$prefix}carousel-indicator-active-bg: #{$carousel-indicator-active-bg-dark};
+  --#{$prefix}carousel-caption-color: #{$carousel-caption-color-dark};
+  --#{$prefix}carousel-control-icon-filter: #{$carousel-control-icon-filter-dark};
+}
+
 .carousel-dark {
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: $carousel-dark-control-icon-filter;
-  }
+  @include carousel-dark();
+}
 
-  .carousel-indicators li {
-    background-color: $carousel-dark-indicator-active-bg;
-  }
+:root,
+[data-bs-theme="light"] {
+  --#{$prefix}carousel-indicator-active-bg: #{$carousel-indicator-active-bg};
+  --#{$prefix}carousel-caption-color: #{$carousel-caption-color};
+  --#{$prefix}carousel-control-icon-filter: #{$carousel-control-icon-filter};
+}
 
-  .carousel-caption {
-    color: $carousel-dark-caption-color;
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+    @include carousel-dark();
   }
 }

@@ -20,6 +20,21 @@
     background: mix($startColor, $endColor);
     background: linear-gradient($deg, $startColor $startOffset, $endColor $endOffset);
 }
+// Alerts
+// ------------------------------------------------------------------
+
+@mixin o-alert-variant($color, $background: tint-color($color, 80%)) {
+    $text-color: shade-color($color, 40%);
+
+    @if (contrast-ratio($background, $text-color) < $min-contrast-ratio) {
+        $text-color: mix($color, color-contrast($background), 40%);
+    }
+
+    --#{$prefix}alert-color: #{$text-color};
+    --#{$prefix}alert-bg: #{$background};
+    --#{$prefix}alert-border-color: #{$color};
+}
+
 //-- add icon
 
 @mixin o-inline-icon($margin, $v-align: middle, $font-size: 1.5rem, $font-weight: $font-weight-normal) {

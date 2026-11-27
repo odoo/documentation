@@ -3,8 +3,6 @@
 @import "scss/bootstrap_overridden";
 @import "scss/bootstrap_scss/bootstrap";
 @import "scss/_variables";
-@import "scss/_utilities_extended";
-@import "scss/bootstrap_scss/utilities/_api.scss";
 @import "scss/_mixins";
 @import "scss/_typography";
 @import "scss/_iconfont";
@@ -48,6 +46,12 @@ body {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
+}
+
+:where(.btn) {
+    --#{$prefix}btn-focus-shadow-rgb: var(--#{$prefix}primary-rgb);
+    --#{$prefix}btn-active-border-color: transparent;
+    --#{$prefix}btn-disabled-border-color: transparent;
 }
 
 //------------------------------------------------------------------------------
@@ -266,7 +270,7 @@ header {
         > .o_toc_entry_wrapper {
             a, i {
                 color: $secondary;
-                font-weight: $o-font-weight-medium;
+                font-weight: $font-weight-medium;
             }
         }
 
@@ -592,8 +596,11 @@ main.container-fluid {
 .toctree-wrapper {
     %toctree-custom-link {
         > a:not([href="#"]){
-            --o-link-color: #{$o-gray-color};
-            --o-link-hover-color: #{$primary};
+            --#{$prefix}link-color-rgb: #{to-rgb($o-gray-color)};
+
+            &:hover {
+                --#{$prefix}link-color-rgb: #{to-rgb($primary)};
+            }
 
             &:after {
                 content: ' #{$i-link}';
@@ -826,7 +833,7 @@ ol ol {
         padding-right: .4rem;
         background-color: $blue-100;
         font-family: $font-family-base;
-        font-weight: $o-font-weight-medium;
+        font-weight: $font-weight-medium;
         font-style: italic;
         color: $blue-700;
     }
@@ -957,6 +964,10 @@ span.viewcode-link {
     margin-left: .3rem;
 }
 
+.table > thead > :last-child > * {
+    border-bottom-color: currentcolor;
+}
+
 // Table with sticky header (for long tables)
 // Offset top by header height so table header sticks below the site header
 .table-sticky-header  {
@@ -1005,6 +1016,12 @@ span:target + h4 {
 .alert {
     border-width: 0 0 0 $alert-border-width;
 
+    @each $state, $color in $theme-colors {
+        &.alert-#{$state} {
+            @include o-alert-variant($color);
+        }
+    }
+
     > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
         border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
         background-color: $white !important;
@@ -1047,15 +1064,7 @@ span:target + h4 {
         --o-alert-icon: '#{$i-info}';
         --o-alert-code-border-color: tint-color($info, 30%);
 
-        $background: shift-color($info, $alert-bg-scale);
-        $border: shift-color($info, $alert-border-scale);
-        $color: shift-color($info, $alert-color-scale);
-
-        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-            $color: mix($info, color-contrast($background), abs($alert-color-scale));
-        }
-
-        @include alert-variant($background, $border, $color);
+        @include o-alert-variant($info);
     }
 
     // Note
@@ -1079,15 +1088,7 @@ span:target + h4 {
         --o-alert-icon: '#{$i-lightbulb}';
         --o-alert-code-border-color: #{$o-gray-border};
 
-        $background: $o-gray-bg;
-        $border: shift-color($primary, $alert-border-scale);
-        $color: shift-color($primary, $alert-color-scale);
-
-        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-            $color: mix($primary, color-contrast($background), abs($alert-color-scale));
-        }
-
-        @include alert-variant($background, $border, $color);
+        @include o-alert-variant($primary, $o-gray-bg);
     }
 
     // Example
@@ -1122,15 +1123,7 @@ span:target + h4 {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    $background: $gray-200;
-    $border: shift-color($accordion-color, $alert-border-scale);
-    $color: shift-color($accordion-color, $alert-color-scale);
-
-    @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-        $color: mix($dark, color-contrast($background), abs($alert-color-scale));
-    }
-
-    @include alert-variant($background, $border, $color);
+    @include o-alert-variant($accordion-color, $gray-200);
 
     .accordion-button {
         &::after {
