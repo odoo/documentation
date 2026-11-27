@@ -192,3 +192,57 @@ Odoo handles both cases automatically. When a credit note is created that brings
 outstanding amount of the original invoice to **0.00**, Odoo identifies this as a Storno operation.
 This classification is then automatically communicated in the electronic reporting to NAV 3.0,
 ensuring compliance without manual intervention.
+
+.. _localizations/hungary/edit-accounts:
+
+Changing the accounts of an invoice sent to NAV 3.0
+---------------------------------------------------
+
+Once an invoice has been sent to NAV 3.0, it can no longer be reset to draft. However, the account
+and the :ref:`analytic distribution <accounting/analytic_accounting/distribution-mass>` of its
+journal items are not sent to NAV 3.0 and can still be changed, for example to move the receivable
+of a foreign customer to the right account:
+
+#. Go to :menuselection:`Accounting --> Review --> Journal Items` and search for the invoice number.
+#. Select the journal items that need to be updated:
+
+   - Accounts: Click the :guilabel:`Account` field of a selected line, select the desired account,
+     and click :guilabel:`Update`.
+   - Analytic distribution: Click the :guilabel:`Analytic Distribution` field of a selected line,
+     add the required distribution in the :guilabel:`Analytic` column, then click the
+     :icon:`oi-close` :guilabel:`(cross)` and :guilabel:`Update`.
+
+.. note::
+   This list can edit several lines at once; only one field can be edited on the selected lines, and
+   the same change is applied to all of them.
+
+.. _localizations/hungary/technical-annulment:
+
+Technical annulment
+-------------------
+
+A technical annulment withdraws an invoice sent to NAV 3.0 because the data sent was technically
+wrong, e.g., an erroneous invoice number or issue date. To correct the content of an invoice
+(amounts, quantities, customer), issue a
+:ref:`credit note <localizations/hungary/storno-credit-notes>` instead.
+
+#. Activate the :ref:`developer mode <developer-mode>`.
+#. Open the invoice. Its :guilabel:`NAV 3.0 status` must be :guilabel:`Confirmed` or
+   :guilabel:`Confirmed with warnings`.
+#. Click :guilabel:`Request Cancel`.
+#. In the :guilabel:`Technical Annulment` window, select the :guilabel:`Annulment Code`
+   (:guilabel:`ERRATIC_DATA`, :guilabel:`ERRATIC_INVOICE_NUMBER`, or
+   :guilabel:`ERRATIC_INVOICE_ISSUE_DATE`), enter the :guilabel:`Annulment Reason`, and click
+   :guilabel:`Request Annulment`.
+#. Log in to the `government's portal <https://onlineszamla.nav.gov.hu/home>`_ and approve the
+   technical annulment. Until then, the invoice's NAV 3.0 status is :guilabel:`Cancellation request
+   pending`.
+#. In Odoo, click :guilabel:`Update Status` on the invoice, or wait for the scheduled status update.
+
+Once the annulment is approved, the invoice's NAV 3.0 status becomes :guilabel:`Cancelled` and the
+invoice is cancelled in Odoo. It can then be reset to draft, corrected, confirmed, and sent to
+NAV 3.0 again. The XML file of the annulled invoice is kept in the chatter.
+
+.. note::
+   Annulling an original invoice also annuls its credit notes and debit notes in NAV 3.0. If the
+   annulment is rejected on the portal, the invoice stays valid.
